@@ -1025,7 +1025,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (lh_opt == 1 && aq_mob_quest_level > 1) continue;                        // solo
     if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
     if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
-    if (lh_opt == 4 && (aq_mob_quest_level < 2 || aq_mob_quest_level > 4)) continue;   // mid
+    if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
+                        aq_mob_quest_level > 4 ||                               // Note: There are almost as many AQ 2s as there are 3s and 4s combined,
+                       (aq_mob_quest_level == 2 && chance(50)))) continue;      //       so we'll skip half of them for mid. Adjust as needed.
 
     int aq_mob_vnum = aq_mob_master_list[i][0];
 
