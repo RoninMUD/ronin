@@ -226,7 +226,7 @@ mar_queen_attack (CHAR *ch, CHAR *vic, int type)
     case MAR_QUEEN_ATTACK_CLAW_2:
     case MAR_QUEEN_ATTACK_CLAW_3:
     case MAR_QUEEN_ATTACK_CLAW_4:
-      act("$n slashes $N with $s long,sharp claws.",FALSE,ch,0,vic,TO_NOTVICT);
+      act("$n slashes $N with $s long, sharp claws.",FALSE,ch,0,vic,TO_NOTVICT);
       act("$n slashes you with $s long, sharp claws.",FALSE,ch,0,vic,TO_VICT);
       act("You slash $N with your long, sharp claws.",FALSE,ch,0,vic,TO_CHAR);
       spell_poison (GET_LEVEL (ch), ch, vic, 0);

@@ -693,21 +693,21 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 2807, 0 }, /* negress */
     { 2912, 0 }, /* fire newt leader */
     { 2915, 0 }, /* phoenix */
-    { 2916, 0 }, /* lizard (an enormous lizard) */
-    { 3730, 0 }, /* sister (Mayor's Sister) */
+    { 2916, 0 }, /* lizard  */
+    { 3730, 0 }, /* sister */
     { 4515, 0 }, /* troll large crab herder */
     { 4517, 0 }, /* tilik small pixie */
     { 4704, 0 }, /* Halfling Zombie */
     { 4809, 0 }, /* bright wizard */
     { 4811, 0 }, /* grey wizard */
-    { 5303, 0 }, /* captain (Griffon Captain) */
+    { 5303, 0 }, /* captain */
     { 6000, 0 }, /* john lumberjack */
     { 6114, 0 }, /* queen spider */
     { 6115, 0 }, /* shargugh brownie */
     { 7009, 0 }, /* gnoll chieftain */
     { 7315, 0 }, /* bandit leader */
     { 7324, 0 }, /* nomad male */
-    { 7334, 0 }, /* fido dog (A scruffy Fido) */
+    { 7334, 0 }, /* fido dog */
     { 7401, 0 }, /* guard beast */
     { 8206, 0 }, /* whale */
     { 8321, 0 }, /* boy cabin john thomas */
@@ -724,9 +724,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 508, 1 }, /* Tea Master */
     { 542, 1 }, /* tengu leaflet */
     { 702, 1 }, /* small fairy */
-    { 805, 1 }, /* Mummy (First Ancient Mummy) */
-    { 806, 1 }, /* mummy (Second Ancient Mummy) */
-    { 807, 1 }, /* mummy (Third Ancient Mummy) */
+    { 805, 1 }, /* Mummy */
+    { 806, 1 }, /* mummy */
+    { 807, 1 }, /* mummy */
     { 1307, 1 }, /* overlord */
     { 1602, 1 }, /* turtle giant sea */
     { 1604, 1 }, /* chimp chmipanzee */
@@ -749,6 +749,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 4806, 1 }, /* averland */
     { 4807, 1 }, /* ostermark */
     { 4808, 1 }, /* middenheim */
+    { 4826, 1 }, /* queen cow matriarch bovine statue */
     { 5158, 1 }, /* rock elemental */
     { 5407, 1 }, /* stheno gorgon */
     { 5408, 1 }, /* euryale gorgon */
@@ -765,8 +766,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 8506, 1 }, /* worm sand */
     { 8508, 1 }, /* lost fisherman */
     { 8509, 1 }, /* kingfisher bird */
-    { 8607, 1 }, /* knight (The Knight with Three Heads) */
-    { 8615, 1 }, /* rabbit (a Cute Little Rabbit) */
+    { 8607, 1 }, /* knight */
+    { 8615, 1 }, /* rabbit */
     { 9010, 1 }, /* elf chief elven guard */
     { 9012, 1 }, /* elf elven champion master */
     { 9505, 1 }, /* wolf queen */
@@ -789,7 +790,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27113, 1 }, /* cannibal warrior */
     { 27651, 1 }, /* king monkey monkeys */
     { 27662, 1 }, /* blood goddess */
-    { 4826, 1 }, /* queen cow matriarch bovine statue */
+    { 204, 2 },  /* bugbear chief humanoid */
+    { 403, 2 }, /* kobold supervisor giant */
     { 555, 2 }, /* Oni lesser */
     { 596, 2 }, /* monk priest sohei */
     { 713, 2 }, /* troll mother */
@@ -797,8 +799,12 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 715, 2 }, /* troll mother */
     { 716, 2 }, /* troll mother */
     { 804, 2 }, /* Tut */
+    { 922, 2 }, /* leader rebel zan */
+    { 1915, 2 }, /* thrag beastman master */
     { 2029, 2 }, /* bear ursa major */
     { 2030, 2 }, /* cassiopeia queen */
+    { 2031, 2 }, /* cepheus king */
+    { 2032, 2 }, /* polaris polar star */
     { 2809, 2 }, /* doctor */
     { 4110, 2 }, /* morian protector guard guardian */
     { 4484, 2 }, /* first lieutenant jobs */
@@ -806,11 +812,14 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 5414, 2 }, /* aeacus */
     { 5415, 2 }, /* radamanthus */
     { 5416, 2 }, /* minos */
+    { 5418, 2 }, /* hecate */
+    { 5420, 2 }, /* hades king */
+    { 5425, 2 }, /* mass blob */
     { 5593, 2 }, /* black skeleton */
     { 5705, 2 }, /* golem statue stone akinra */
     { 7501, 2 }, /* pirate first mate */
     { 8360, 2 }, /* alchemist mad yuri madman */
-    { 8406, 2 }, /* dragon (The Flying Dragon) */
+    { 8406, 2 }, /* dragon */
     { 9504, 2 }, /* wolf king */
     { 10017, 2 }, /* Calcifer */
     { 10417, 2 }, /* genschleng were crocodile werecrocodile */
@@ -820,10 +829,13 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 12003, 2 }, /* ant gatemaster guard */
     { 12008, 2 }, /* dragon guard */
     { 12014, 2 }, /* cobra king */
+    { 12023, 2 }, /* stone big */
     { 12026, 2 }, /* ancient crocodile cro */
     { 12209, 2 }, /* gigantic mushroom mus */
     { 12905, 2 }, /* mystic great */
     { 12911, 2 }, /* kansatsu mystic brother elder */
+    { 12914, 2 }, /* genshi mystic brother elder */
+    { 12915, 2 }, /* kyoki mystic brother elder */
     { 12916, 2 }, /* yagyu mystic brother elder */
     { 13011, 2 }, /* owlbear */
     { 14000, 2 }, /* ghost father man figure */
@@ -835,9 +847,13 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 16804, 2 }, /* hunter arctic man squat */
     { 17300, 2 }, /* crystal golem statue warrior */
     { 17301, 2 }, /* phasteus cat tiger */
+    { 19011, 2 }, /* man-eater bear slagbjoern */
     { 20163, 2 }, /* priest zen */
     { 20183, 2 }, /* Sensei Ryo */
     { 20840, 2 }, /* Cloaker Lord */
+    { 20901, 2 }, /* blarf Hero */
+    { 20923, 2 }, /* tweef king Vandimar */
+    { 20924, 2 }, /* tweef queen Larienne */
     { 21201, 2 }, /* cave ogre monster */
     { 21209, 2 }, /* terral castle guard */
     { 21218, 2 }, /* grydon guard gates castle */
@@ -851,25 +867,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27699, 2 }, /* El Diablo */
     { 27700, 2 }, /* Mountain Yeti */
     { 28502, 2 }, /* minotaur bull man */
-    { 12023, 2 }, /* stone big */
-    { 5418, 2 }, /* hecate */
-    { 5420, 2 }, /* hades king */
-    { 5425, 2 }, /* mass blob */
-    { 20901, 2 }, /* blarf Hero */
-    { 20923, 2 }, /* tweef king Vandimar */
-    { 20924, 2 }, /* tweef queen Larienne */
-    { 922, 2 }, /* leader rebel zan */
-    { 1915, 2 }, /* thrag beastman master */
-    { 2030, 2 }, /* cepheus king */
-    { 2032, 2 }, /* polaris polar star */
-    { 12915, 2 }, /* genshi mystic brother elder */
-    { 12915, 2 }, /* kyoki mystic brother elder */
-    { 12916, 2 }, /* yagyu mystic brother elder */
-    { 204, 2 },  /* bugbear chief humanoid */
-    { 403, 2 }, /* kobold supervisor giant */
-    { 19011, 2 }, /* man-eater bear slagbjoern */
     { 701, 3 }, /* racti troll hermit */
     { 706, 3 }, /* juktoa troll foreman */
+    { 1261, 3 }, /* salamander sal */
+    { 2702, 3 }, /* marikith elder */
     { 3919, 3 }, /* celestial dragon */
     { 4447, 3 }, /* Gentle ben filthy inmate */
     { 4463, 3 }, /* doctor jacobs */
@@ -887,15 +888,24 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 12005, 3 }, /* dragon ancient huge dra anc */
     { 12009, 3 }, /* lost adventurer */
     { 12021, 3 }, /* ettin wizard mage ett */
+    { 12025, 3 }, /* huge purple worm */
     { 12201, 3 }, /* cleric ettin et cl */
     { 13017, 3 }, /* tree ant treeant */
+    { 14509, 3 }, /* priest arak */
     { 16508, 3 }, /* wax knight bill janitor */
     { 17001, 3 }, /* atropos doctor agent */
     { 17003, 3 }, /* sand beast pile */
     { 20130, 3 }, /* warhorse skeletal */
     { 21109, 3 }, /* root tree large */
     { 21207, 3 }, /* aldrene bard lady singer */
+    { 21223, 3 }, /* thief morian thug */
+    { 21319, 3 }, /* ogre magi celil-gandil */
+    { 21320, 3 }, /* ogre magi fumbor */
+    { 21321, 3 }, /* ogre magi meldur */
+    { 21322, 3 }, /* ogre magi anawyn */
     { 21334, 3 }, /* bugbear bug bear */
+    { 23007, 3 }, /* hydra cryohydra snake */
+    { 23009, 3 }, /* polar bear glacial */
     { 24903, 3 }, /* druid protector */
     { 26403, 3 }, /* guide */
     { 26404, 3 }, /* seeress mistress */
@@ -904,17 +914,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27102, 3 }, /* Damoclese the Gladiator */
     { 27106, 3 }, /* lord bundolo */
     { 27715, 3 }, /* gelugon guardian guard demon */
-    { 1261, 3 }, /* salamander sal */
-    { 12025, 3 }, /* huge purple worm */
-    { 21223, 3 }, /* thief morian thug */
-    { 2702, 3 }, /* marikith elder */
-    { 21319, 3 }, /* ogre magi celil-gandil */
-    { 21320, 3 }, /* ogre magi fumbor */
-    { 21321, 3 }, /* ogre magi meldur */
-    { 21322, 3 }, /* ogre magi anawyn */
-    { 23007, 3 }, /* hydra cryohydra snake */
-    { 23009, 3 }, /* polar bear glacial */
-    { 14509, 3 }, /* priest arak */
+    { 209, 4 }, /* lookout vagabond scout leader */
     { 501, 4 }, /* Oni Greater */
     { 540, 4 }, /* Tanoshi Wrestler */
     { 552, 4 }, /* Sojobo tengu king */
@@ -938,6 +938,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 12811, 4 }, /* mankey pet */
     { 12904, 4 }, /* mystic ultimate */
     { 13501, 4 }, /* oglozt greater */
+    { 14205, 4 }, /* fred gatekeeper */
     { 14508, 4 }, /* eduard magistrate wererat grotesque rat */
     { 16515, 4 }, /* gorgo fur beast */
     { 17005, 4 }, /* marten man */
@@ -948,6 +949,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 20129, 4 }, /* Spectral Warlord */
     { 20165, 4 }, /* black panther */
     { 21203, 4 }, /* king morian moria ruler mandrial */
+    { 25000, 4 }, /* demi lich */
     { 25018, 4 }, /* elemental water prince */
     { 25019, 4 }, /* earth elemental king */
     { 25020, 4 }, /* air elemental lord */
@@ -958,9 +960,6 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 27105, 4 }, /* cannibal witchdoctor */
     { 27720, 4 }, /* myrdon thief rogue master */
     { 27721, 4 }, /* shadowraith ninja assassin jal pur */
-    { 25000, 4 }, /* demi lich */
-    { 14205, 4 }, /* fred gatekeeper */
-    { 209, 4 }, /* lookout vagabond scout leader */
     { 700, 5 }, /* sakdul large troll gypsy */
     { 4600, 5 }, /* Neuron Beast Strands */
     { 5105, 5 }, /* drow apprentice */
@@ -977,36 +976,37 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     { 17010, 5 }, /* minion lesser */
     { 17308, 5 }, /* marcus wizard mage */
     { 20145, 5 }, /* Shogun Warlord Samurai */
+    { 21204, 5 }, /* adrel sage magic */
+    { 21205, 5 }, /* ulric advisor */
     { 21210, 5 }, /* priest high dark man */
+    { 21323, 5 }, /* ogre sorcerer eowadriendir */
     { 21332, 5 }, /* otyugh stench garbage pile vines */
     { 25002, 5 }, /* death crimson */
     { 25013, 5 }, /* kalas */
     { 26402, 5 }, /* emir malik */
     { 26482, 5 }, /* magus */
     { 27712, 5 }, /* bebilith stalker purple spider insect */
-    { 21204, 5 }, /* adrel sage magic */
-    { 21205, 5 }, /* ulric advisor */
-    { 21323, 5 }, /* ogre sorcerer eowadriendir */
     { 5125, 6 }, /* drow matron mother third */
     { 5126, 6 }, /* drow matron mother fourth */
     { 5127, 6 }, /* drow matron mother second */
     { 5132, 6 }, /* drow leader varrn */
     { 5553, 6 }, /* Garaek drow drider overseer */
+    { 5574, 6 }, /* colossal wyrm */
     { 5901, 6 }, /* drow leader rezik */
     { 7703, 6 }, /* typik lizard shaman reptile */
+    { 13502, 6 }, /* demon reptilian reptile */
     { 14501, 6 }, /* keira banshee ghost */
+    { 14503, 6 }, /* ardaan inquisitor warrior */
     { 17002, 6 }, /* vermilion king */
     { 17342, 6 }, /* troll cook chef */
     { 20107, 6 }, /* Raiden */
-    { 25010, 6 }, /* kraken */
-    { 13502, 6 }, /* demon reptilian reptile */
-    { 5574, 6 }, /* colossal wyrm */
-    { 26583, 6 }, /* guru */
-    { 27722, 6 }, /* shomed nomad hero tarion desert */
-    { 14503, 6 }, /* ardaan inquisitor warrior */
     { 23001, 6 }, /* remorhaz ice burrower */
+    { 25001, 6 }, /* keftab */
+    { 25010, 6 }, /* kraken */
+    { 26583, 6 }, /* guru */
     { 26706, 6 }, /* creature large hideous mutated rat yeti human */
-    { 26707, 6 } /* observer tower mage old man */
+    { 26707, 6 }, /* observer tower mage old man */
+    { 27722, 6 } /* shomed nomad hero tarion desert */
   };
 
   struct aq_mob_list_t {
@@ -1025,7 +1025,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (lh_opt == 1 && aq_mob_quest_level > 1) continue;                        // solo
     if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
     if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
-    if (lh_opt == 4 && (aq_mob_quest_level < 2 || aq_mob_quest_level > 4)) continue;   // mid
+    if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
+                        aq_mob_quest_level > 4 ||                               // Note: There are 77 AQ 2s, 47 AQ 3s and 46 AQ 4s, so
+                       (aq_mob_quest_level == 2 && chance(40)))) continue;      //       we'll skip 40% of them for mid. Adjust as needed.
 
     int aq_mob_vnum = aq_mob_master_list[i][0];
 
