@@ -22,6 +22,13 @@
 #include <stdint.h>
 #include <limits.h>
 
+#ifndef OLD_RNG
+
+#include <stdint.h>
+#include <bsd/stdlib.h>
+
+#endif
+
 #include "structs.h"
 #include "constants.h"
 #include "utils.h"
@@ -37,39 +44,7 @@
 extern FILE *logfile;
 void update_pos( struct char_data *ch );
 
-/* Yet another random number generator - Ranger March 10, 98 */
-
-/* Back to the old Ranger March 12, 98
-#define      ran_m  (unsigned long)2147483647
-#define      ran_q  (unsigned long)127773
-#define      ran_a (unsigned int)16807
-#define      ran_r (unsigned int)2836
-
-static unsigned long ran_seed;
-
-void slongrand(unsigned long initial_seed)
-{
-  ran_seed = initial_seed;
-}
-
-unsigned long longrand(void)
-{
-   register int lo, hi, test;
-
-    hi   = ran_seed/ran_q;
-    lo   = ran_seed%ran_q;
-
-    test = ran_a*lo - ran_r*hi;
-
-    if (test > 0)
-          ran_seed = test;
-    else
-      ran_seed = test+ ran_m;
-
-    return ran_seed;
-}
-
-*/
+#ifdef OLD_RNG
 
 #define MULT 16807
 #define RANMAX 2147483647L
@@ -110,14 +85,75 @@ long longrand(void)
       return randomnum;
 }
 
-int MIN(int a, int b)
+/* Creates a random number in interval [from, to] (inclusive). */
+int number(int from, int to)
 {
-      return a < b ? a:b;
+  int randnum = 0, temp = 0;
+  char buf[MSL];
+
+  if (from > to)
+  {
+    temp = from;
+    from = to;
+    to = temp;
+  }
+
+  randnum=(int)((longrand() % (to - from + 1)) + from);
+  if (randnum < from || randnum > to)
+  {
+    snprintf(buf, sizeof(buf), "WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d", from, to, randnum);
+    log_s(buf);
+  }
+
+  return randnum;
 }
 
-int MAX(int a, int b)
-{
-      return a > b ? a:b;
+#else
+
+/* Creates a random number in interval [from, to] (inclusive). */
+int number(int from, int to) {
+  int temp = 0;
+
+  if (from > to) {
+    temp = from;
+    from = to;
+    to = temp;
+  }
+
+  return arc4random_uniform(to - from + 1) + from;
+}
+
+#endif
+
+/* Returns true based on the odds out of 100 of success. */
+bool chance(int num) {
+  if (number(1, 100) <= num) return TRUE;
+  return FALSE;
+}
+
+/* Simulates a dice roll. */
+int dice(int num_dice, int size_dice) {
+  int r = 0, sum = 0, temp = 0;
+
+  if (num_dice < 1 || size_dice < 1) return 0;
+
+  for (r = 1; r <= num_dice; r++) {
+    temp = number(num_dice, size_dice);
+
+    if ((INT_MAX - sum) <= temp) return INT_MAX;
+
+    sum += temp;
+  }
+
+  return sum;
+}
+
+int MIN(int a, int b) {
+  return a < b ? a : b;
+}
+
+int MAX(int a, int b) {
+  return a > b ? a : b;
 }
 
 char *PERS(CHAR *ch, CHAR*vict)
@@ -185,37 +221,6 @@ char *ENDCHCLR(CHAR *ch) {
   }
   return colorcode2;
 }
-
-/* Creates a random number in interval [from, to] (inclusive) */
-int number(int from, int to)
-{
-  int randnum = 0, temp = 0;
-  char buf[MSL];
-
-  if (from > to)
-  {
-    temp = from;
-    from = to;
-    to = temp;
-  }
-
-  randnum=(int)((longrand() % (to - from + 1)) + from);
-  if (randnum < from || randnum > to)
-  {
-    snprintf(buf, sizeof(buf), "WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d", from, to, randnum);
-    log_s(buf);
-  }
-
-  return randnum;
-}
-
-bool chance(int num)
-{
-  if(number(1,100)<=num) return TRUE;
-
-  return FALSE;
-}
-
 
 /* 50% chance when victim level is the same as the attacker.
    100% chance when victim level is 10 levels or less than the attacker.
@@ -505,18 +510,6 @@ int COUNT_RENTABLE_CONTENTS(struct obj_data *obj)
     if(IS_RENTABLE(tmp))
       i++;
   return(i);
-}
-
-/* simulates dice roll */
-int dice(int number, int size)
-{
-  int r = 0, sum = 0;
-
-  if (number < 1 || size < 1) return 0;
-
-  for (r = 1; r <= number; r++) sum += ((random() % size)+1);
-
-  return sum;
 }
 
 /* Create a duplicate of a string */
@@ -1855,7 +1848,11 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
 void shuffle_int_array(int *array, size_t num_elems) {
   if (num_elems > 1)   {
     for (size_t i = 0; i < num_elems - 1; i++) {
+#ifdef OLD_RNG
       size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+#else
+      size_t j = i + arc4random_uniform(num_elems - i);
+#endif
       int t = array[j];
       array[j] = array[i];
       array[i] = t;
@@ -1868,7 +1865,11 @@ void shuffle_int_array(int *array, size_t num_elems) {
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
   if (num_elems > 1)   {
     for (size_t i = 0; i < num_elems - 1; i++) {
+#ifdef OLD_RNG
       size_t j = i + rand() / (RAND_MAX / (num_elems - i) + 1);
+#else
+      size_t j = i + arc4random_uniform(num_elems - i);
+#endif
       int t0 = array[j][0];
       int t1 = array[j][1];
       array[j][0] = array[i][0];
