@@ -138,7 +138,7 @@ int dice(int num_dice, int size_dice) {
   if (num_dice < 1 || size_dice < 1) return 0;
 
   for (r = 1; r <= num_dice; r++) {
-    temp = number(num_dice, size_dice);
+    temp = number(1, size_dice);
 
     if ((INT_MAX - sum) <= temp) return INT_MAX;
 
