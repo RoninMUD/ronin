@@ -1039,7 +1039,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
   int quest_level = -1;
 
   /* Search our list of eligibile VNums for an AQ mob, starting at the head of the shuffled 2D array. */
-  for (int i = 0; i < aq_mob_num && !quest_mob; i++) {
+  for (int i = 0; i < aq_mob_num; i++) {
     int temp_aq_mob_vnum = aq_mob_temp_list[i][0];
     int temp_aq_mob_quest_level = aq_mob_temp_list[i][1];
 
@@ -1063,8 +1063,14 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
       int temp_aq_mob_eligible_num = 0;
 
       /* Search the list of all characters and see if this VNum is eligible (nobody else is on a quest for it). */
-      for (CHAR *temp_mob = character_list; temp_mob && !(temp_mob->questowner) && (temp_aq_mob_eligible_num < temp_aq_mob_num_in_game); temp_mob = temp_mob->next) {
+      for (CHAR *temp_mob = character_list; temp_mob && (temp_aq_mob_eligible_num < temp_aq_mob_num_in_game); temp_mob = temp_mob->next) {
         if (temp_mob->nr_v != temp_aq_mob_vnum) continue;
+
+        /* This VNum was not eligible (it's already assigned to somebody), so break out of the loop. */
+        if (temp_mob->questowner) {
+          temp_aq_mob_eligible_num = 0;
+          break;
+        }
 
         temp_aq_mob_eligible_num++;
       }
@@ -1079,14 +1085,22 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
       for (CHAR *temp_mob = character_list; temp_mob && (temp_aq_mob_num < pick); temp_mob = temp_mob->next) {
         if (temp_mob->nr_v != temp_aq_mob_vnum) continue;
 
-        temp_aq_mob = temp_mob;
-
         temp_aq_mob_num++;
+
+        /* We found the mob we're looking for, so assign it to temp_aq_mob and break out of the loop. */
+        if (temp_aq_mob_num == pick) {
+          temp_aq_mob = temp_mob;
+          break;
+        }
       }
     }
 
-    quest_mob = temp_aq_mob;
-    quest_level = temp_aq_mob_quest_level;
+    /* If we found what we're looking for, assign the mob and it's quest level, then break out of the main loop. */
+    if (temp_aq_mob) {
+      quest_mob = temp_aq_mob;
+      quest_level = temp_aq_mob_quest_level;
+      break;
+    }
   }
 
   if (quest_mob && quest_level >= 0) {
