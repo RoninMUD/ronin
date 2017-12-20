@@ -368,7 +368,13 @@ int main(int argc, char **argv)
 
   log_f("Using %s as data directory.", g_datadir);
 
+#ifdef OLD_RNG
+
+  srand(time(NULL));
   slongrand(time(0));
+
+#endif
+
   run_the_game(port);
   return(0);
 }
