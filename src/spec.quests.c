@@ -1240,6 +1240,28 @@ int hemp_grinch(CHAR *grinch, CHAR *vict, int cmd, char *buf)
 
 /* END - Christmas Quest 2009 specs */
 
+#define BOBA_SANTA  26300
+#define BOBA_SANTA2 26310
+
+int boba_santa(CHAR *santa, CHAR *vict, int cmd, char *buf) {
+  //if (cmd) return FALSE;
+
+  if (cmd == MSG_DIE) {
+    send_to_room("Fuck\n\r", CHAR_REAL_ROOM(santa));
+    CHAR *santa2 = read_mobile(BOBA_SANTA2, VIRTUAL);
+
+    if (!santa2) return FALSE;
+
+    char_to_room(santa2, CHAR_REAL_ROOM(santa));
+
+    do_yell(santa2, "Ho ho ho! Thank you mortals! Christmas has been saved!", CMD_YELL);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 void assign_quests (void) {
   int i;
   assign_mob(XALTH_MOB1, xalth_mob);
@@ -1269,5 +1291,7 @@ void assign_quests (void) {
   assign_mob(HEMP_ELF, hemp_elf);
   assign_mob(HEMP_REINDEER, hemp_reindeer);
 	assign_mob(HEMP_GRINCH, hemp_grinch);
+
+  assign_mob(BOBA_SANTA, boba_santa);
 }
 
