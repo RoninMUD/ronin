@@ -229,6 +229,8 @@ void do_email(CHAR *ch, char *argument, int cmd);
 void do_idname(CHAR *ch, char *argument, int cmd);
 void do_gf(CHAR *ch, char *argument, int cmd);
 
+void do_special_move(struct char_data *ch, char *arg, int cmd);
+
 /* Utility things */
 
 int do_simple_move(CHAR *ch, int cmd, int following,int spec_check);
