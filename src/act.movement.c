@@ -29,9 +29,9 @@
 
 int hit_limit(struct char_data *ch);
 int special(struct char_data *ch, int cmd, char *arg);
-struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
-                             struct obj_data *list);
+struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name, struct obj_data *list);
 void stop_follower(struct char_data *ch);
+void do_special_move(struct char_data *ch, char *arg, int cmd);
 
 void dt_cry(CHAR *ch)
 {
@@ -1383,7 +1383,6 @@ void do_knock(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-void do_keyword_enter(struct char_data *ch, int door);
 void do_enter(struct char_data *ch, char *argument, int cmd) {
   int door;
   char buf[MAX_INPUT_LENGTH], tmp[MAX_STRING_LENGTH];
@@ -1400,7 +1399,7 @@ void do_enter(struct char_data *ch, char *argument, int cmd) {
           if (!str_cmp(EXIT(ch, door)->keyword, buf))
             {
             if(IS_SET(EXIT(ch, door)->exit_info, EX_ENTER))
-              do_keyword_enter(ch,door);
+              do_special_move(ch, buf, CMD_ENTER);
             else
               do_move(ch, "", ++door);
             return;
@@ -2163,330 +2162,181 @@ void do_move_keyword(struct char_data *ch, char *argument, int cmd)
   }
 }
 
-void do_climb(struct char_data *ch, char *argument, int cmd)
-{
-  int door, other_room;
-  char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
-  OBJ *wall=0;
+#define DIR_TYPE_CLIMB  0
+#define DIR_TYPE_JUMP   1
+#define DIR_TYPE_CRAWL  2
+#define DIR_TYPE_ENTER  3
 
-  argument_interpreter(argument, type, dir);
+#define DIR_SINGULAR    0
+#define DIR_PLURAL      1
+#define DIR_ADVERB_PRE  2
+#define DIR_ADVERB_POST 3
 
-  if (!*type) {
-    send_to_char("Climb what?\n\r", ch);
+const char * special_move_str[][4] = {
+  {"climb", "climbs", " ", " " },
+  {"jump", "jumps", " ", " " },
+  {"crawl", "crawls", " in ", " through " },
+  {"enter", "enters", " ", " "},
+};
+
+const int special_move_mv[] = {
+  6,
+  10,
+  3,
+  3,
+};
+
+void do_special_move(struct char_data *ch, char *arg, int cmd) {
+  char buf[MSL];
+
+  int dir_type = -1;
+  bool up_down = FALSE;
+
+  switch (cmd) {
+    case CMD_CLIMB:
+      dir_type = DIR_TYPE_CLIMB;
+      up_down = TRUE;
+      break;
+    case CMD_JUMP:
+      dir_type = DIR_TYPE_JUMP;
+      break;
+    case CMD_CRAWL:
+      dir_type = DIR_TYPE_CRAWL;
+      break;
+    case CMD_ENTER:
+      dir_type = DIR_TYPE_ENTER;
+      break;
+    default:
+      sprintf(buf, "WIZINFO: Invalid cmd sent to do_special_move, cmd = %d", cmd);
+      wizlog(buf, LEVEL_WIZ, 6);
+      return;
+      break;
+  }
+
+  if (dir_type < 0) {
+    sprintf(buf, "WIZINFO: Invalid dir type in do_special_move, dir_type = %d", dir_type);
+    wizlog(buf, LEVEL_WIZ, 6);
     return;
   }
+
+  char type[MIL];
+  char dir[MIL];
+
+  argument_interpreter(arg, type, dir);
+
+  if (!*type) {
+    snprintf(buf, sizeof(buf), "%s%s", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
+    CAP(buf);
+    strcat(buf, "what?\n\r");
+    return;
+  }
+
+  int door = -1;
 
   if ((door = find_door(ch, type, dir)) < 0) return;
 
-  if (!IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB)) {
-     send_to_char("You can't climb that.\n\r", ch);
-     return;
+  bool can_go = FALSE;
+
+  switch (dir_type) {
+    case DIR_TYPE_CLIMB:
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB)) can_go = TRUE;
+      break;
+    case DIR_TYPE_JUMP:
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP)) can_go = TRUE;
+      break;
+    case DIR_TYPE_CRAWL:
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL)) can_go = TRUE;
+      break;
+    case DIR_TYPE_ENTER:
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_ENTER)) can_go = TRUE;
+      break;
   }
 
-  if(GET_MOVE(ch)<7 && !IS_NPC(ch)) {
-    send_to_char("You are too exhausted.\n\r",ch);
+  if (!can_go) {
+    snprintf(buf, sizeof(buf), "You can't %s%sthat.\n\r", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
+    send_to_char(buf, ch);
     return;
   }
 
-  if(GET_POS(ch)==POSITION_RIDING) {
-    send_to_char("You must dismount first.\n\r",ch);
+  if (GET_MOVE(ch) < special_move_mv[dir_type] && !IS_NPC(ch)) {
+    send_to_char("You are too exhausted.\n\r", ch);
     return;
   }
 
-  if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-    send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-  if((wall=get_obj_room(WALL_THORNS,EXIT(ch, door)->to_room_v))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
+  if (GET_POS(ch) == POSITION_RIDING) {
+    send_to_char("You must dismount first.\n\r", ch);
     return;
   }
 
   if (!EXIT(ch, door)->keyword) {
-    sprintf(buf,"WIZINFO: Error in do_climb, no keyword on exit, room %d",CHAR_VIRTUAL_ROOM(ch));
+    sprintf(buf, "WIZINFO: Error in do_special_move, no keyword on exit, room %d", CHAR_VIRTUAL_ROOM(ch));
     wizlog(buf, LEVEL_WIZ, 6);
     return;
   }
 
-  other_room = EXIT(ch, door)->to_room_r;
+  if (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v))) {
+    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
+    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    return;
+  }  
+
+  int other_room = EXIT(ch, door)->to_room_r;
+
   if (other_room == NOWHERE || other_room == real_room(0)) {
-    sprintf(buf,"WIZINFO: Error in do_climb, exit points to NULL or VOID, room %d",CHAR_VIRTUAL_ROOM(ch));
+    sprintf(buf, "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
     wizlog(buf, LEVEL_WIZ, 6);
     return;
   }
 
-  if(IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room)>0 && IS_MORTAL(ch)) {
+  if (IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room) > 0 && IS_MORTAL(ch)) {
     send_to_char("It's too narrow to go there.\n\r", ch);
     return;
   }
 
-  if(IS_SET(world[other_room].room_flags, FLYING) && !CHAOSMODE && IS_MORTAL(ch) && !IS_AFFECTED(ch,AFF_FLY)) {
-    send_to_char("You are not flying.\n\r",ch);    
+  if (IS_SET(world[other_room].room_flags, FLYING) && !CHAOSMODE && IS_MORTAL(ch) && !IS_AFFECTED(ch, AFF_FLY)) {
+    send_to_char("You are not flying.\n\r", ch);
     return;
-  }  /* Linerfix - 101702 */
+  }
 
-  GET_MOVE(ch) -= 6;
-  if(door==UP || door==DOWN) {
-    sprintf(buf,"$n climbs %s the $F.",dirs[door]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword,TO_ROOM);
-    sprintf(buf,"You climb %s the $F.",dirs[door]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword,TO_CHAR);
+  GET_MOVE(ch) -= special_move_mv[dir_type];
+
+  if (up_down && (door == UP || door == DOWN)) {
+    snprintf(buf, sizeof(buf), "$n %s %s the $F.", special_move_str[dir_type][DIR_PLURAL], dirs[door]);
+    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    snprintf(buf, sizeof(buf), "You %s %s the $F.", special_move_str[dir_type][DIR_SINGULAR], dirs[door]);
+    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
   }
   else {
-    act("$n climbs the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_ROOM);
-    act("You climb the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_CHAR);
+    snprintf(buf, sizeof(buf), "$n %s%sthe $F.", special_move_str[dir_type][DIR_PLURAL], special_move_str[dir_type][DIR_ADVERB_POST]);
+    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    snprintf(buf, sizeof(buf), "You %s%sthe $F.", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_POST]);
+    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
   }
 
   char_from_room(ch);
   char_to_room(ch, other_room);
 
-  if (!IS_AFFECTED(ch, AFF_SNEAK))
-    act("$n has arrived.", 2, ch, 0,0, TO_ROOM);
+  if (!IS_AFFECTED(ch, AFF_SNEAK)) {
+    act("$n has arrived.", 2, ch, 0, 0, TO_ROOM);
+  }
 
-  do_look(ch, "\0",15);
+  do_look(ch, "\0", CMD_LOOK);
 
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_ENTER,"")) return;
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "\0")) return;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP))
-   GET_MOVE(ch)=0;
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) GET_MOVE(ch) = 0;
 
-  if(dt_or_hazard(ch)) return;
+  dt_or_hazard(ch);
 }
 
-void do_jump(struct char_data *ch, char *argument, int cmd)
-{
-  int door, other_room;
-  char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
-  OBJ *wall=0;
-
-  argument_interpreter(argument, type, dir);
-
-  if (!*type) {
-    send_to_char("Jump what?\n\r", ch);
-    return;
-  }
-
-  if ((door = find_door(ch, type, dir)) < 0) return;
-
-  if (!IS_SET(EXIT(ch, door)->exit_info, EX_JUMP)) {
-     send_to_char("You can't jump that.\n\r", ch);
-     return;
-  }
-
-  if(GET_MOVE(ch)<11 && !IS_NPC(ch)) {
-    send_to_char("You are too exhausted.\n\r",ch);
-    return;
-  }
-
-  if(GET_POS(ch)==POSITION_RIDING) {
-    send_to_char("You must dismount first.\n\r",ch);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-    send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,EXIT(ch, door)->to_room_v))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if (!EXIT(ch, door)->keyword) {
-    sprintf(buf,"WIZINFO: Error in do_jump, no keyword on exit, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  other_room = EXIT(ch, door)->to_room_r;
-  if (other_room == NOWHERE || other_room == real_room(0)) {
-    sprintf(buf,"WIZINFO: Error in do_jump, exit points to NULL or VOID, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  if(IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room)>0 && IS_MORTAL(ch)) {
-    send_to_char("It's too narrow to go there.\n\r", ch);
-    return;
-  }
-
-  if(IS_SET(world[other_room].room_flags, FLYING) && !CHAOSMODE && IS_MORTAL(ch) && !IS_AFFECTED(ch,AFF_FLY)) {
-    send_to_char("You are not flying.\n\r",ch);
-    return;
-  }  /* Linerfix - 101702 */    
-
-  GET_MOVE(ch) -= 10;
-  act("$n jumps the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_ROOM);
-  act("You jump the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_CHAR);
-
-  char_from_room(ch);
-  char_to_room(ch, other_room);
-
-  if (!IS_AFFECTED(ch, AFF_SNEAK))
-    act("$n has arrived.", 2, ch, 0,0, TO_ROOM);
-
-  do_look(ch, "\0",15);
-
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_ENTER,"")) return;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP))
-   GET_MOVE(ch)=0;
-
-  if(dt_or_hazard(ch)) return;
+void do_climb(struct char_data *ch, char *argument, int cmd) {
+  do_special_move(ch, argument, cmd);
 }
 
-void do_crawl(struct char_data *ch, char *argument, int cmd)
-{
-  int door, other_room;
-  char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
-  OBJ *wall=0;
-
-  argument_interpreter(argument, type, dir);
-
-  if (!*type) {
-    send_to_char("Crawl in what?\n\r", ch);
-    return;
-  }
-
-  if ((door = find_door(ch, type, dir)) < 0) return;
-
-  if (!IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL)) {
-     send_to_char("You can't crawl in that.\n\r", ch);
-     return;
-  }
-
-  if(GET_MOVE(ch)<4 && !IS_NPC(ch)) {
-    send_to_char("You are too exhausted.\n\r",ch);
-    return;
-  }
-
-  if(GET_POS(ch)==POSITION_RIDING) {
-    send_to_char("You must dismount first.\n\r",ch);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-    send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-    damage(ch,ch,10,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,EXIT(ch, door)->to_room_v))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if (!EXIT(ch, door)->keyword) {
-    sprintf(buf,"WIZINFO: Error in do_crawl, no keyword on exit, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  other_room = EXIT(ch, door)->to_room_r;
-  if (other_room == NOWHERE || other_room == real_room(0)) {
-    sprintf(buf,"WIZINFO: Error in do_crawl, exit points to NULL or VOID, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  if(IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room)>0 && IS_MORTAL(ch)) {
-    send_to_char("It's too narrow to go there.\n\r", ch);
-    return;
-  }
-
-  if(IS_SET(world[other_room].room_flags, FLYING) && !CHAOSMODE && IS_MORTAL(ch) && !IS_AFFECTED(ch,AFF_FLY)) {
-    send_to_char("You are not flying.\n\r",ch);    
-    return;
-  }  /* Linerfix - 101702 */
-
-  GET_MOVE(ch) -= 3;
-  act("$n crawls through the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_ROOM);
-  act("You crawl through the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_CHAR);
-
-  char_from_room(ch);
-  char_to_room(ch, other_room);
-
-  if (!IS_AFFECTED(ch, AFF_SNEAK))
-    act("$n has arrived.", 2, ch, 0,0, TO_ROOM);
-
-  do_look(ch, "\0",15);
-
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_ENTER,"")) return;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP))
-   GET_MOVE(ch)=0;
-
-  if(dt_or_hazard(ch)) return;
+void do_jump(struct char_data *ch, char *argument, int cmd) {
+  do_special_move(ch, argument, cmd);
 }
 
-void do_keyword_enter(struct char_data *ch, int door)
-{
-  int other_room;
-  char buf[MAX_STRING_LENGTH];
-  OBJ *wall=0;
-
-  if(GET_MOVE(ch)<4 && !IS_NPC(ch)) {
-    send_to_char("You are too exhausted.\n\r",ch);
-    return;
-  }
-
-  if(GET_POS(ch)==POSITION_RIDING) {
-    send_to_char("You must dismount first.\n\r",ch);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-    send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-    damage(ch,ch,10,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if((wall=get_obj_room(WALL_THORNS,EXIT(ch, door)->to_room_v))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-    return;
-  }
-
-  if (!EXIT(ch, door)->keyword) {
-    sprintf(buf,"WIZINFO: Error in do_keyword_enter, no keyword on exit, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  other_room = EXIT(ch, door)->to_room_r;
-  if (other_room == NOWHERE || other_room == real_room(0)) {
-    sprintf(buf,"WIZINFO: Error in do_keyword_enter, exit points to NULL or VOID, room %d",CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
-    return;
-  }
-
-  if(IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room)>0 && IS_MORTAL(ch)) {
-    send_to_char("It's too narrow to go there.\n\r", ch);
-    return;
-  }
-
-  GET_MOVE(ch) -= 3;
-  act("$n enters the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_ROOM);
-  act("You enter the $F.", 0, ch, 0, EXIT(ch, door)->keyword,TO_CHAR);
-
-  char_from_room(ch);
-  char_to_room(ch, other_room);
-
-  if (!IS_AFFECTED(ch, AFF_SNEAK))
-    act("$n has arrived.", 2, ch, 0,0, TO_ROOM);
-
-  do_look(ch, "\0",15);
-
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_ENTER,"")) return;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP))
-   GET_MOVE(ch)=0;
-
-  if(dt_or_hazard(ch)) return;
+void do_crawl(struct char_data *ch, char *argument, int cmd) {
+  do_special_move(ch, argument, cmd);
 }

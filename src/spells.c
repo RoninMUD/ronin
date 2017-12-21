@@ -6,42 +6,42 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "structs.h"
+
 #include "constants.h"
-#include "utils.h"
+#include "structs.h"
 #include "comm.h"
 #include "db.h"
-#include "interpreter.h"
-#include "spells.h"
 #include "handler.h"
-#include "utility.h"
+#include "interpreter.h"
 #include "limits.h"
+#include "utility.h"
+#include "utils.h"
+#include "spells.h"
 #include "subclass.h"
 
-void magic_heal(CHAR *ch, int spell, int heal, bool overheal)
-{
+/* Extern functions */
+
+void magic_heal(CHAR *ch, int spell, int heal, bool overheal) {
   if (!ch) return;
 
-  if (!IS_NPC(ch) && check_subclass(ch, SC_BANDIT, 3))
-  {
-    heal = heal + ((heal * number(10, 15)) / 100);
-  }
-
-  if (!overheal)
-  {
-    heal = MIN(heal, GET_MAX_HIT(ch) - GET_HIT(ch));
-  }
-
-  if (affected_by_spell(ch, SPELL_DEGENERATE) &&
-      (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
+  /* Degenerate */
+  if (affected_by_spell(ch, SPELL_DEGENERATE) && (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", ch);
+
     return;
   }
 
-  GET_HIT(ch) = GET_HIT(ch) + heal;
-}
+  /* Adrenaline Rush */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 3)) {
+    heal += ((heal * number(10, 15)) / 100);
+  }
 
-/* Extern functions */
+  if (!overheal) {
+    heal = MIN(heal, (GET_MAX_HIT(ch) - GET_HIT(ch)));
+  }
+
+  GET_HIT(ch) = (GET_HIT(ch) + heal);
+}
 
 void cast_burning_hands(ubyte level,CHAR *ch,char *arg,int type,
 			CHAR *victim, OBJ *tar_obj )

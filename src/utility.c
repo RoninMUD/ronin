@@ -851,34 +851,40 @@ is_wearing_obj (struct char_data *ch, int virtual, int loc) {
   return FALSE;
 }
 
-void
-drain_mana_hit_mv( struct char_data *ch , struct char_data *vict ,
-              int mana , int hit , int mv ,
-              bool add_m , bool add_hp , bool add_mv ) {
-  int MIN( int a , int b );
-  int MAX( int a , int b );
+void drain_mana_hit_mv(struct char_data *ch, struct char_data *vict, int mana, int hit, int mv, bool add_m, bool add_hp, bool add_mv) {
+  int MIN(int a, int b);
+  int MAX(int a, int b);
+  int damage(struct char_data *ch, struct char_data *victim, int dmg, int attack_type, int damage_type);
+
   int mana_gained, hp_gained, mv_gained;
 
-  if( mana ) {
-    mana_gained = MIN( mana, GET_MANA(vict) );
-    GET_MANA( vict ) = MAX( 0 , GET_MANA( vict ) - mana_gained );
-    if( add_m )
-      GET_MANA( ch ) = MIN( GET_MAX_MANA( ch ) , GET_MANA( ch ) + mana_gained );
-  }      /* Linerfix - 062902, mana can't go over max */
+  if (mana) {
+    mana_gained = MIN(mana, GET_MANA(vict));
 
-  if( hit ) {
-    hp_gained = MIN( hit, GET_HIT(vict) );
-    GET_HIT( vict ) = MAX( 0 , GET_HIT( vict ) - hp_gained );
-    if( add_hp )
-      GET_HIT( ch ) = MIN( GET_MAX_HIT( ch ) , GET_HIT( ch ) + hp_gained );
-  }      /* Linerfix - 062902, hit can't go over max */
+    GET_MANA(vict) = MAX(0, GET_MANA(vict) - mana);
 
-  if( mv ) {
-    mv_gained = MIN( mv, GET_MOVE(vict) );
-    GET_MOVE( vict ) = MAX( 0 , GET_MOVE( vict ) - mv );
-    if( add_mv )
-      GET_MOVE( ch ) = MIN( GET_MAX_MOVE( ch ) , GET_MOVE( ch ) + mv_gained );
-  }      /* Linerfix - 062902, move can't go over max */
+    if (add_m) {
+      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + mana_gained);
+    }
+  }
+
+  if (hit) {
+    hp_gained = damage(ch, vict, hit, TYPE_UNDEFINED, DAM_MAGICAL);
+
+    if (add_hp) {
+      GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + hp_gained);
+    }
+  }
+
+  if (mv) {
+    mv_gained = MIN(mv, GET_MOVE(vict));
+
+    GET_MOVE(vict) = MAX(0, GET_MOVE(vict) - mv);
+
+    if (add_mv) {
+      GET_MOVE(ch) = MIN(GET_MAX_MOVE(ch), GET_MOVE(ch) + mv_gained);
+    }
+  }
 }
 
 struct char_data

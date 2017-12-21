@@ -242,7 +242,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
     act("$n tries to backfist $N but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n tries to backfist you but fails.", FALSE, ch, 0, victim, TO_VICT);
 
-    damage(ch, victim, 0, SKILL_BACKFIST, DAM_SKILL);
+    damage(ch, victim, 0, SKILL_BACKFIST, DAM_NO_BLOCK);
   }
   else {
     set_pos = stack_position(victim, POSITION_STUNNED);
@@ -1261,7 +1261,7 @@ void do_batter(CHAR *ch, char *arg, int cmd)
 
   check = number(1, 131) - GET_DEX_APP(ch);
 
-  if (check > ch->skills[SKILL_BATTER].learned)
+  if (check > GET_LEARNED(ch, SKILL_BATTER))
   {
     act("$n tried to batter $N, but misses.", FALSE, ch, NULL, victim, TO_NOTVICT);
     act("$N tried to batter you, but misses.", FALSE, ch, NULL, victim, TO_VICT);
@@ -1360,7 +1360,7 @@ void do_charge(struct char_data *ch, char *argument, int cmd) {
 
   percent = number(1, 131);
 
-  if (percent > ch->skills[SKILL_CHARGE].learned) {
+  if (percent > GET_LEARNED(ch, SKILL_CHARGE)) {
     act("You try to lead a charge against $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$N tries to lead a charge against you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
     act("$n tries to lead a charge against $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -1559,7 +1559,7 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     act("With a primal yell, $n banzai charges you.", FALSE, ch, 0, victim, TO_VICT);
     act("With a primal yell, $n banzai charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    damage(ch, victim, number(200, 300), SKILL_BANZAI, DAM_SKILL);
+    damage(ch, victim, number(200, 300), SKILL_BANZAI, DAM_PHYSICAL);
 
     // check again for hit
     check = number(1, 101) - GET_DEX_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
@@ -2062,7 +2062,7 @@ void do_evasion(CHAR *ch, char *argument, int cmd)
   {
     af.type = SKILL_EVASION;
     af.duration = -1;
-    af.modifier = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? -4 : -5;
+    af.modifier = -5;
     af.location = APPLY_HITROLL;
     af.bitvector = AFF_NONE;
     af.bitvector2 = AFF_NONE;
