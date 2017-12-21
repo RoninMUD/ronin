@@ -54,6 +54,7 @@ void dhit(CHAR *ch, CHAR *victim, int type);
 void thit(CHAR *ch, CHAR *victim, int type);
 void qhit(CHAR *ch, CHAR *victim, int type);
 
+int calc_max_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon);
 int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon);
 
 int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg);
@@ -1912,15 +1913,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Crusader SC1: Righteousness */
-  if (dmg > 0 &&
-      damage_type == DAM_PHYSICAL &&
-      affected_by_spell(ch, SPELL_RIGHTEOUSNESS) &&
-      IS_GOOD(ch) &&
-      IS_EVIL(victim)) {
-    dmg += dice(1, 6);
-  }
-
   /* Invulnerability */
   if (IS_AFFECTED(victim, AFF_INVUL)) {
     /* Reduce DAM_PHYSICAL damage less than 20 to 0. */
@@ -1967,7 +1959,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       act("You are scorched by $N's mantle of darkness as you get too close!", FALSE, ch, 0, victim, TO_CHAR);
     }
     else {
-      max_reflect = GET_LEVEL(victim) * 2;
+      max_reflect = calc_max_hit_damage(victim, ch, EQ(victim, WIELD));
 
       if (IS_AFFECTED(victim, AFF_FURY)) {
         max_reflect *= 2;
@@ -1976,15 +1968,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         max_reflect = lround(max_reflect * 1.5);
       }
 
-      if (max_reflect > 0 &&
-          affected_by_spell(victim, SPELL_RIGHTEOUSNESS) &&
-          IS_GOOD(victim) &&
-          IS_EVIL(ch)) {
-        max_reflect += dice(1, 6);
-      }
-
-      reflect = MIN(max_reflect, dmg / 10);
+      reflect = MIN(max_reflect, lround(dmg * 0.10));
       reflect = MAX(reflect, GET_LEVEL(victim) / 5);
+
       dmg = MAX(0, dmg - reflect);
 
       act("Your mantle of darkness reflects some of $n's damage back to $m.", FALSE, ch, 0, victim, TO_VICT);
@@ -1999,21 +1985,17 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       attack_type >= TYPE_HIT &&
       attack_type <= TYPE_SLICE &&
       affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
-    max_reflect = calc_hit_damage(victim, ch, GET_WEAPON(victim));
+    max_reflect = calc_max_hit_damage(victim, ch, EQ(victim, WIELD));
 
     if (IS_AFFECTED(victim, AFF_FURY)) {
       max_reflect *= 2;
     }
-
-    if (max_reflect > 0 &&
-        damage_type == DAM_PHYSICAL &&
-        affected_by_spell(victim, SPELL_RIGHTEOUSNESS) &&
-        IS_GOOD(victim) &&
-        IS_EVIL(ch)) {
-      max_reflect += dice(1, 6);
+    else if (affected_by_spell(victim, SPELL_RAGE)) {
+      max_reflect = lround(max_reflect * 1.5);
     }
 
-    reflect = MIN(max_reflect, dmg / 4);
+    reflect = MIN(max_reflect, lround(dmg * 0.25));
+
     dmg = MAX(0, dmg - reflect);
 
     act("Some of $n's damage is reflected to $m.", 0, ch, 0, 0, TO_ROOM);
@@ -2053,7 +2035,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Constitution Damage Reduction */
-  dmg = lround(dmg * (1.0 - (con_app[GET_CON(victim)].reduct / 100.0)));
+  if (IS_MORTAL(victim)) {
+    dmg = lround(dmg * (1.0 - (con_app[GET_CON(victim)].reduct / 100.0)));
+  }
 
   /* Sanctuary and Templar SC5: Fortification */
   if (IS_AFFECTED(victim, AFF_SANCTUARY)) {
@@ -2076,7 +2060,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Bandit SC5: Evasion */
-  if ((damage_type == DAM_PHYSICAL || damage_type == DAM_SKILL) && affected_by_spell(victim, SKILL_EVASION)) {
+  if (affected_by_spell(victim, SKILL_EVASION) &&
+      (damage_type == DAM_PHYSICAL || damage_type == DAM_SKILL)) {
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
       dmg = lround(dmg * 0.80); /* 20% reduction when Chaotic. */
     }
@@ -2086,7 +2071,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Ronin SC1: Combat Zen grants half damage from poison. */
-  if (damage_type == DAM_POISON &&
+  if (IS_MORTAL(victim) &&
+      damage_type == DAM_POISON &&
       check_subclass(victim, SC_RONIN, 1)) {
     dmg = lround(dmg * 0.50);
   }
@@ -2847,6 +2833,78 @@ int calc_position_damage(int position, int damage)
   return dam;
 }
 
+int calc_max_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon) {
+  int dam = 0;
+
+  if (!weapon)
+  {
+    if (IS_NPC(ch))
+    {
+      dam += ch->specials.damnodice * ch->specials.damsizedice;
+    }
+    else
+    {
+      if (GET_CLASS(ch) == CLASS_NINJA)
+      {
+        /* Combat Zen */
+        if (check_subclass(ch, SC_RONIN, 1))
+          dam += 4 * 9;
+        else if (GET_LEVEL(ch) > 27)
+          dam += 5 * 4;
+        else if (GET_LEVEL(ch) > 24)
+          dam += 6 * 3;
+        else if (GET_LEVEL(ch) > 19)
+          dam += 3 * 6;
+        else if (GET_LEVEL(ch) > 15)
+          dam += 4 * 4;
+        else if (GET_LEVEL(ch) > 10)
+          dam += 3 * 4;
+        else if (GET_LEVEL(ch) > 5)
+          dam += 2 * 6;
+        else if (GET_LEVEL(ch) > 2)
+          dam += 2 * 5;
+        else
+          dam += 1 * 8;
+      }
+      else
+      {
+        dam += 1 * 2;
+      }
+    }
+  }
+  else
+  {
+    dam += OBJ_VALUE1(weapon) * OBJ_VALUE2(weapon);
+    dam += wpn_extra(ch, victim, weapon); /* Cheating here; just using the average for this rarer case. */
+  }
+
+  dam += calc_damroll(ch);
+
+  dam += close_combat_bonus(ch, 0);
+
+  if (affected_by_spell(ch, SPELL_RIGHTEOUSNESS) &&
+      IS_GOOD(ch) &&
+      IS_EVIL(victim)) {
+    dam += 1 * 6;
+  }
+
+  dam = calc_position_damage(GET_POS(victim), dam);
+
+  /* Didn't miss, so not less than 1 damage. */
+  dam = MAX(1, dam);
+
+  if (affected_by_spell(ch, SKILL_DEFEND) &&
+      !affected_by_spell(ch, SKILL_BERSERK)) {
+    dam = 1;
+  }
+
+  if (affected_by_spell(ch, SPELL_CLARITY)) {
+    dam = 0;
+  }
+
+  return dam;
+}
+
 int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon)
 {
   int dam = 0;
@@ -2894,7 +2952,14 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon)
   }
 
   dam += calc_damroll(ch);
+
   dam += close_combat_bonus(ch, 0);
+
+  if (affected_by_spell(ch, SPELL_RIGHTEOUSNESS) &&
+      IS_GOOD(ch) &&
+      IS_EVIL(victim)) {
+    dam += dice(1, 6);
+  }
 
   dam = calc_position_damage(GET_POS(victim), dam);
 
@@ -3585,7 +3650,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         break;
 
       case SKILL_FEINT:
-        /* Because defiler no longer has shadows, Feint results in a doubled return attack */
+        /* Because defiler no longer has shadows, Feint results in a doubled return attack. */
         dam *= 2;
         damage(ch, victim, dam, attack_type, DAM_PHYSICAL);
         break;

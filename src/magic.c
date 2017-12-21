@@ -3406,7 +3406,6 @@ void spell_power_word_kill (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int align_drain = 0;
   int dam = 0;
-  int vict_orig_hp = 0;
   int heal = 0;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
@@ -3431,7 +3430,7 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  dam = MIN(GET_LEVEL(ch), 50);
+  dam = MIN(GET_LEVEL(ch), LEVEL_MORT);
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     dam *= 5;
@@ -3440,18 +3439,11 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     dam *= 9;
   }
 
-  if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dam *= 1.1;
-
-  vict_orig_hp = GET_HIT(victim);
-
-  damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_MAGICAL);
-
-  if (victim) {
-    heal = vict_orig_hp - MAX(GET_HIT(victim), 0);
+  if (affected_by_spell(ch, SPELL_BLACKMANTLE)) {
+    dam *= 1.1;
   }
-  else {
-    heal = vict_orig_hp;
-  }
+
+  heal = damage(ch, victim, dam, SPELL_VAMPIRIC, DAM_MAGICAL);
 
   if (heal > 0) {
     magic_heal(ch, SPELL_VAMPIRIC, heal, TRUE);
@@ -4010,29 +4002,40 @@ void spell_dispel_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   act("The white aura around $n's body fades.", TRUE, victim, 0, 0, TO_ROOM);
 }
 
-void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  struct affected_type_5 *aff,*tmp;
 
-  if (victim->affected)
-    {
-    for(aff = victim->affected; aff; aff = tmp) {
-      tmp=aff->next;
-      if(aff) {
-        if(aff->type==SKILL_HOSTILE || aff->type==SKILL_DEFEND ||
-           aff->type==SKILL_BERSERK || aff->type==SKILL_FADE ||
-           aff->type==SKILL_EVASION || /* Used to be Cover */
-           aff->type==SKILL_FRENZY || (aff->type==SPELL_BLESS && aff->duration==-1))
-          continue;
-        affect_from_char(victim, aff->type);
-      }
-      else break;
-    }
-    send_to_char("Done.\n\r", ch);
-    act("You have been disenchanted by $N!", FALSE, victim, 0, ch, TO_CHAR);
+void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  AFF *aff = NULL;
+  AFF *tmp_aff = NULL;
+  bool disenchanted = FALSE;
+
+  if (!(victim->affected)) {
+    if (victim == ch) {
+      send_to_char("You aren't affected by any magic.\n\r", ch);
     }
     else {
-    send_to_char("That person isn't affected by any spell.\n\r",ch);
- }
+      send_to_char("That person isn't affected by any magic.\n\r", ch);
+    }
+  }
+  else {
+    for (aff = victim->affected; aff; aff = tmp_aff) {
+      tmp_aff = aff->next;
+
+      if (aff->duration == -1) continue;
+
+      affect_from_char(victim, aff->type);
+
+      disenchanted = TRUE;
+    }
+
+    if (disenchanted) {
+      if (victim == ch) {
+        send_to_char("You disenchant yourself.\n\r", ch);
+      }
+      else {
+        act("You have been disenchanted by $N!", FALSE, victim, 0, ch, TO_CHAR);
+      }
+    }
+  }
 }
 
 

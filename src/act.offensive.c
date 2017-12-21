@@ -406,7 +406,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
 
       act("You have been kicked by $n.", FALSE, ch, 0, tmp_victim, TO_VICT);
 
-      damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), MIN(GET_LEVEL(ch) * 2, 60)), TYPE_UNDEFINED, DAM_SKILL);
+      damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), MIN(GET_LEVEL(ch) * 2, 60)), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
 
     auto_learn_skill(ch, SKILL_SPIN_KICK);
@@ -653,8 +653,6 @@ void do_ambush(struct char_data *ch, char *argument, int cmd) {
     hit(ch, victim, SKILL_AMBUSH);
     WAIT_STATE(ch, PULSE_VIOLENCE * 3);
   }
-
-
 }
 
 
@@ -818,7 +816,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   if ((get_weapon_type(GET_WEAPON(ch)) != TYPE_PIERCE) &&
       (get_weapon_type(GET_WEAPON(ch)) != TYPE_STING)) {
-    send_to_char("Only piercing weapons can be used to stab someone in the back.\n\r", ch);
+    send_to_char("Only pointy weapons can be used to stab someone in the back.\n\r", ch);
 
     return;
   }
@@ -1846,7 +1844,7 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     act("$n tries to disembowel you, but stumbles over $s own feet! You attack back!", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to disembowel $N, but stumbles over $s own feet! $N attacks back!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_SKILL);
+    damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_PHYSICAL);
   }
   else {
     if ((IS_NPC(victim) && IS_IMMUNE(ch, IMMUNE_DISEMBOWEL)) ||
@@ -1855,14 +1853,14 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
       act("You avoid $n's pitiful attack and strike back at $m!", FALSE, ch, 0, victim, TO_VICT);
       act("$N avoids $n's pitiful attack and strikes back at $m!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_SKILL);
+      damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
     else {
       act("Your savage attack causes $N's innards to spill out!", FALSE, ch, 0, victim, TO_CHAR);
       act("$n's savage attack causes your innards to spill out!", FALSE, ch, 0, victim, TO_VICT);
       act("$n's savage attack causes $N's innards to spill out!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, ((GET_MAX_HIT(victim) * 100) / 7), SKILL_DISEMBOWEL, DAM_SKILL);
+      damage(ch, victim, ((GET_MAX_HIT(victim) * 100) / 7), SKILL_DISEMBOWEL, DAM_PHYSICAL);
 
       auto_learn_skill(ch, SKILL_DISEMBOWEL);
 
@@ -2086,7 +2084,7 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
 
         dmg = MAX(lround(((GET_LEVEL(ch) * 2) * factor)), 10);
 
-        damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), dmg), TYPE_UNDEFINED, DAM_SKILL);
+        damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), dmg), TYPE_UNDEFINED, DAM_PHYSICAL);
       }
     }
     else {
