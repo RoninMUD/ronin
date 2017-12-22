@@ -8553,7 +8553,7 @@ Usage      : cast 'blood lust' (self only)
 Level      : level 50 anti-paladin
 Save       : none
 Duration   : 3 ticks
-Mana cost  : 100
+Mana cost  : 50
 
 While affected by Blood Lust, the Anti-Paladin hungers for blood, and
 will randomly bite their victims during combat.  Each bite has the

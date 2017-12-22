@@ -422,5 +422,91 @@ A
 52 8
 T
 14000
+#26479
+die lucky opal black~
+A lucky, black opal die~
+An die made of black opal is lying here, emanating power!~
+invalid~
+9 134218051 16385
+3 0 0 0
+1 1000000 150000
+10
+X
+~
+321 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 2
+B
+16778240
+#26480
+die lucky ruby~
+A lucky, ruby die~
+A die, encrusted with rubies, is laying here, radiating power!~
+~
+9 134218051 16385
+3 0 0 0
+1 10000000 150000
+10
+X
+~
+321 0 0
+M
+~
+~
+~
+~
+A
+19 5
+B
+1028
+#26481
+die lucky sapphire~
+A lucky, sapphire die~
+A die made of sapphire is lying here, humming with power!~
+~
+9 134218051 16385
+3 0 0 0
+1 10000000 150000
+10
+X
+~
+321 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 3
+B
+1040
+#26482
+die unlucky fuzzy~
+An unlucky, fuzzy die~
+A die made of fuzzy is lying here, being all fuzzy and stuff.~
+~
+9 134218071 1
+0 0 0 0
+1 10000000 150000
+10
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+B
+33792
 #0
 $~
