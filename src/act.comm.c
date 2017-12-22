@@ -474,18 +474,6 @@ void do_title(CHAR *ch, char *arg, int cmd)
 		return;
 	}
 
-	/* Check for '(' or ')' since we don't allow those in player titles (unless set by an immortal). */
-	for (i = 0; i < strlen(arg); i++)
-	{
-		if (arg[i] == '(' ||
-			arg[i] == ')')
-		{
-			send_to_char("Sorry, but your title cannot contain the ( or ) characters.\n\r", ch);
-
-			return;
-		}
-	}
-
 	/* Set the player's title to default if so requested with the 'def' or 'default' arguments,
 	   otherwise set it to the argument specified. */
 	if (!strcmp(arg, "def") ||
