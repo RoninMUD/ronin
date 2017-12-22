@@ -738,5 +738,53 @@ conjures up the demons of hell to aid him in killing you.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#26483
+uber mustafa~
+Uber Mustafa~
+Uber Mustafa stands in the corner, murmuring to himself as he counts his coin.
+~
+Uber Mustafa is a shark and a cheat.  Those who turn down his offer or
+game wind up beaten or broken.  Those who accept often wind up pennieless
+or in indentured servitude.  Rumor has it, he has an army of ruffians at
+his beck and call, eagerly awaiting him to owe them a favor, or reduce
+their debt.
+~
+16458 268697768 -350 Y
+60 -25 -30 200d3+25000 1d44+100
+20000000 250000000
+8 8 1
+69 0 20d10+10000 7
+9 2 10 0
+1 2 10 130
+1 5 10 236
+1 6 5 187
+1 2 20 218
+1 2 10 141
+11 5 10 68
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#26484
+hooligan~
+A Hooligan~
+A Hooligan is here, looking to pilfer some coin or chip.
+~
+The Hooligans are known ruffians of Uber Mustafa.  Often performing violent
+acts for the man for a handful of poker chips, coin, or even a simple favor.
+They are not to be trusted, and should be avoided at all costs!
+~
+536870986 268697608 -350 Y
+50 -10 -25 200d3+7500 10d10+150
+100000 800000
+8 8 1
+69 0 20d10+100 5
+1 2 20 100
+3 2 20 0
+7 2 20 0
+4 2 20 0
+9 2 20 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~

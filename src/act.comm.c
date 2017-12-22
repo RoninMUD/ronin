@@ -446,8 +446,6 @@ void do_setcolor(CHAR *ch, char *arg, int cmd)
    Re-written by Night, 12/11/2011 */
 void do_title(CHAR *ch, char *arg, int cmd)
 {
-	int i = 0;
-
 	if (IS_NPC(ch))
 	{
 		send_to_char("NPCs can't change their titles!\n\r", ch);
