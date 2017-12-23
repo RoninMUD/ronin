@@ -210,7 +210,8 @@ int point_update_hit(CHAR *ch)
 
   if (affected_by_spell(ch, SPELL_INCENDIARY_CLOUD))
   {
-    damage(ch, ch, 100, SPELL_INCENDIARY_CLOUD, DAM_NO_BLOCK);
+    act("The cloud of fire enveloping you burns you to the core...", FALSE, ch, 0, 0, TO_CHAR);
+    damage(ch, ch, 100, SPELL_INCENDIARY_CLOUD, DAM_NO_BLOCK_NO_FLEE);
 
     if (CHAR_REAL_ROOM(ch) == NOWHERE) return 0;
   }
