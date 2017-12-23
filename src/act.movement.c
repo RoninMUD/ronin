@@ -2228,6 +2228,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     snprintf(buf, sizeof(buf), "%s%s", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
     CAP(buf);
     strcat(buf, "what?\n\r");
+    send_to_char(buf, ch);
     return;
   }
 
