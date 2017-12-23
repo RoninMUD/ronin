@@ -15,6 +15,8 @@ and lining, the only evidence of the massive battle raging outside.
 3 2 25 0
 10 2 20 0
 0 2 9 935
+R
+4
 K
 0 0 0 0 0 0 0
 #26301
@@ -35,6 +37,8 @@ semblence of sanity has left her as she charges forward wildly.
 1 2 23 135
 1 2 25 141
 0 2 9 885
+R
+4
 K
 0 5 26302 26300 26303 26305 26301
 #26302
@@ -56,6 +60,8 @@ comes from his breath, as little globs of spittle fly from his mouth.
 1 2 22 109
 1 2 25 119
 0 0 1 992
+R
+4
 K
 0 0 0 0 26303 26304 0
 #26303
@@ -76,6 +82,8 @@ it to buckle and warp.
 9 2 25 0
 1 2 22 109
 0 0 1 739
+R
+4
 K
 0 0 26303 0 0 26304 0
 #26304
@@ -98,6 +106,8 @@ he looks to be trying to impale something on his remaining antler.
 7 1 20 0
 7 2 8 0
 0 2 0 885
+R
+4
 K
 0 0 0 26302 0 5 0
 #26305
@@ -119,6 +129,8 @@ wildly. The stench rising from within makes you want to scream!
 1 3 22 80
 1 3 40 100
 0 2 9 875
+R
+4
 K
 0 26300 26301 0 0 5 0
 #26306
@@ -142,6 +154,8 @@ is a threat to the big man's time table.
 4 2 25 0
 7 2 15 0
 0 2 9 755
+R
+4
 K
 0 5 0 0 0 0 0
 #26310
@@ -153,7 +167,7 @@ Massive tummy jiggling and shaking, Santa fills his red coat to the
 bursting point. Small red stains ruin the perfect white of the cuffs
 and lining, the only evidence of the massive battle raging outside.
 ~
-2 0 0 Y
+10 0 0 Y
 56 -36 -25 200d400+100000 1d1+0
 1 1
 8 8 1
