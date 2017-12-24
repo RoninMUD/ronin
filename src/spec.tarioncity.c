@@ -1089,7 +1089,7 @@ int tc_lair_spec(int room, CHAR *ch, int cmd, char *arg) {
             send_to_char("No way! You are fighting for your life!\n\r", ch);
             break;
           default:
-            do_simple_move(ch,dir,0,0);
+            do_simple_move(ch,dir,0);
             return TRUE;
             break;
         }

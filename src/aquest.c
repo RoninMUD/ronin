@@ -84,100 +84,105 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
                 order    - request an order (solo/low/mid/high optional)\n\r\
                 list     - list things to buy\n\r\
                 buy      - buy things with quest points\n\r";
-  int option=0;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  int option = 0;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
-  if(is_abbrev(arg,"quit")) option=QUEST_QUIT;
-  if(is_abbrev(arg,"request")) option=QUEST_REQUEST;
-  if(is_abbrev(arg,"complete")) option=QUEST_COMPLETE;
-  if(is_abbrev(arg,"info")) option=QUEST_STATUS;
-  if(is_abbrev(arg,"list")) option=QUEST_LIST;
-  if(is_abbrev(arg,"buy")) option=QUEST_BUY;
-  if(is_abbrev(arg,"card")) option=QUEST_CARD;
-  if(is_abbrev(arg,"order")) option=QUEST_ORDER;
 
-  switch(option) {
+  if (is_abbrev(arg, "quit")) option = QUEST_QUIT;
+  if (is_abbrev(arg, "request")) option = QUEST_REQUEST;
+  if (is_abbrev(arg, "complete")) option = QUEST_COMPLETE;
+  if (is_abbrev(arg, "info")) option = QUEST_STATUS;
+  if (is_abbrev(arg, "list")) option = QUEST_LIST;
+  if (is_abbrev(arg, "buy")) option = QUEST_BUY;
+  if (is_abbrev(arg, "card")) option = QUEST_CARD;
+  if (is_abbrev(arg, "order")) option = QUEST_ORDER;
+
+  switch (option) {
     case QUEST_STATUS:
-      if(ch->quest_status==QUEST_NONE) {
-        send_to_char("You are not currently on any quest.\n\r",ch);
-        if(ch->ver3.time_to_quest)
-          sprintf(buf,"You must wait %d ticks to start another.\n\r",ch->ver3.time_to_quest);
+      if (ch->quest_status == QUEST_NONE) {
+        send_to_char("You are not currently on any quest.\n\r", ch);
+        if (ch->ver3.time_to_quest)
+          sprintf(buf, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
         else
-          sprintf(buf,"You can start another at any time.\n\r");
-        send_to_char(buf,ch);
+          sprintf(buf, "You can start another at any time.\n\r");
+        send_to_char(buf, ch);
         return;
       }
 
-      if(ch->quest_status==QUEST_RUNNING) {
-        if(ch->questmob)
-          sprintf(buf,"You are on a quest to kill %s, for %d point(s).  You have %d ticks left.\n\r",GET_SHORT(ch->questmob),ch->quest_level,ch->ver3.time_to_quest);
-        else if(ch->questobj)
-        {
-          if(V_OBJ(ch->questobj) == 35)
-            sprintf(buf,"You are on a quest to recover %d %s, for %d point(s). You have %d ticks left.\n\r",aq_card[ch->quest_level-1],OBJ_SHORT(ch->questobj),ch->quest_level,ch->ver3.time_to_quest);
+      if (ch->quest_status == QUEST_RUNNING) {
+        if (ch->questmob)
+          sprintf(buf, "You are on a quest to kill %s, for %d point(s).  You have %d ticks left.\n\r", GET_SHORT(ch->questmob), ch->quest_level, ch->ver3.time_to_quest);
+        else if (ch->questobj) {
+          if (V_OBJ(ch->questobj) == 35)
+            sprintf(buf, "You are on a quest to recover %d %s, for %d point(s). You have %d ticks left.\n\r", aq_card[ch->quest_level - 1], OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
           else
-            sprintf(buf,"You are on a quest to recover %s, for %d point(s). You have %d ticks left.\n\r",OBJ_SHORT(ch->questobj),ch->quest_level,ch->ver3.time_to_quest);
+            sprintf(buf, "You are on a quest to recover %s, for %d point(s). You have %d ticks left.\n\r", OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
         }
         else
-          sprintf(buf,"You are on a quest to do something, dunno what it is.\n\r");
-        send_to_char(buf,ch);
+          sprintf(buf, "You are on a quest to do something, dunno what it is.\n\r");
+        send_to_char(buf, ch);
         return;
       }
 
-      if(ch->quest_status==QUEST_COMPLETED) {
-        send_to_char("You have completed your quest.  Return to the quest giver for credit.\n\r",ch);
+      if (ch->quest_status == QUEST_COMPLETED) {
+        send_to_char("You have completed your quest.  Return to the quest giver for credit.\n\r", ch);
         return;
       }
 
-      if(ch->quest_status==QUEST_FAILED) {
-        send_to_char("You have failed your quest for some reason.\n\r",ch);
-        if(ch->ver3.time_to_quest)
-          sprintf(buf,"You must wait %d ticks to start another.\n\r",ch->ver3.time_to_quest);
+      if (ch->quest_status == QUEST_FAILED) {
+        send_to_char("You have failed your quest for some reason.\n\r", ch);
+        if (ch->ver3.time_to_quest)
+          sprintf(buf, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
         else
-          sprintf(buf,"You can start another at any time.\n\r");
-        send_to_char(buf,ch);
+          sprintf(buf, "You can start another at any time.\n\r");
+        send_to_char(buf, ch);
         return;
       }
       break;
-
     case QUEST_QUIT:
-      if(ch->quest_status==QUEST_NONE)
-        send_to_char("You aren't on any quest.\n\r",ch);
-      else if(ch->quest_status==QUEST_FAILED) {
-        ch->questgiver=0;
-        if(ch->questobj) ch->questobj->owned_by=0;
-        ch->questobj=0;
-        if(ch->questmob) ch->questmob->questowner=0;
-        ch->questmob=0;
-        ch->quest_status=QUEST_NONE;
-        ch->quest_level=0;
-        printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
+      if (ch->quest_status == QUEST_NONE)
+        send_to_char("You aren't on any quest.\n\r", ch);
+      else if (ch->quest_status == QUEST_FAILED) {
+        ch->questgiver = 0;
+        if (ch->questobj)
+          ch->questobj->owned_by = 0;
+        ch->questobj = 0;
+        if (ch->questmob)
+          ch->questmob->questowner = 0;
+        ch->questmob = 0;
+        ch->quest_status = QUEST_NONE;
+        ch->quest_level = 0;
+        printf_to_char(ch, "You have failed your quest, you can start another in %d ticks.\n\r", ch->ver3.time_to_quest);
       }
       else {
-        ch->questgiver=0;
-        if(ch->questobj)
-        {
-          if(V_OBJ(ch->questobj) == 35)
+        ch->questgiver = 0;
+        if (ch->questobj) {
+          if (V_OBJ(ch->questobj) == 35)
             aqcard_cleanup(ch->ver3.id);
           else
-            ch->questobj->owned_by=0;
+            ch->questobj->owned_by = 0;
         }
-        ch->questobj=0;
-        if(ch->questmob) ch->questmob->questowner=0;
-        ch->questmob=0;
-        ch->quest_status=QUEST_NONE;
-        ch->quest_level=0;
+        ch->questobj = 0;
+        if (ch->questmob)
+          ch->questmob->questowner = 0;
+        ch->questmob = 0;
+        ch->quest_status = QUEST_NONE;
+        ch->quest_level = 0;
 #ifndef TESTSITE
-        if(GET_LEVEL(ch)<LEVEL_IMM) ch->ver3.time_to_quest=25;
-        else ch->ver3.time_to_quest=0;
+        if (GET_LEVEL(ch) < LEVEL_IMM)
+          ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
+        else
+          ch->ver3.time_to_quest = 0;
 #else
-        ch->ver3.time_to_quest=0;
+        ch->ver3.time_to_quest = 0;
 #endif
-        printf_to_char(ch,"There, you have quit your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
+        printf_to_char(ch, "There, you have quit your quest, you can start another in %d ticks.\n\r", ch->ver3.time_to_quest);
       }
       return;
       break;
@@ -186,15 +191,15 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
     case QUEST_LIST:
     case QUEST_BUY:
     case QUEST_CARD:
-      send_to_char("You must return to your guildmaster.\n\r",ch);
+      send_to_char("You must return to your guildmaster.\n\r", ch);
       return;
       break;
     case QUEST_ORDER:
-      send_to_char("You'll have to find someone who has those.\n\r",ch);
+      send_to_char("You'll have to find someone who has those.\n\r", ch);
       return;
       break;
     default:
-      send_to_char(usage,ch);
+      send_to_char(usage, ch);
       return;
       break;
   }
@@ -637,6 +642,7 @@ $N tells you, 'Current Quest Items available for Purchase:'\n\r\
                world[target].zone == world[real_room(3000)].zone ||  /* Northern Midgaard Update */
                world[target].zone == world[real_room(0)].zone || /* Void & Limbo */
                world[target].zone == world[real_room(1212)].zone || /* Immort */
+               world[target].zone == world[real_room(17500)].zone || /* Red Dragon Volcano */
                world[target].zone == world[real_room(25300)].zone || /* Hell 1 */
                world[target].zone == world[real_room(25400)].zone || /* Hell 2 */
                world[target].zone == world[real_room(25500)].zone || /* Hell 3 */
@@ -868,8 +874,8 @@ const int aq_mob_master_list[][2] = {
   { 28502, 2 }, /* minotaur bull man */
   { 701, 3 }, /* racti troll hermit */
   { 706, 3 }, /* juktoa troll foreman */
-  { 1261, 3 }, /* salamander sal */
-  { 2702, 3 }, /* marikith elder */
+  //{ 1261, 3 }, /* salamander sal */
+  //{ 2702, 3 }, /* marikith elder */
   { 3919, 3 }, /* celestial dragon */
   { 4447, 3 }, /* Gentle ben filthy inmate */
   { 4463, 3 }, /* doctor jacobs */
@@ -880,7 +886,7 @@ const int aq_mob_master_list[][2] = {
   { 4601, 3 }, /* gigantic eye */
   { 4605, 3 }, /* worm heart */
   { 4608, 3 }, /* nose hair */
-  { 4706, 3 }, /* Garbage Golem */
+  //{ 4706, 3 }, /* Garbage Golem */
   { 6201, 3 }, /* the Unholy Deacon */
   { 8361, 3 }, /* wind dust elemental */
   { 11712, 3 }, /* master pagoda */
@@ -892,9 +898,8 @@ const int aq_mob_master_list[][2] = {
   { 13017, 3 }, /* tree ant treeant */
   { 14509, 3 }, /* priest arak */
   { 16508, 3 }, /* wax knight bill janitor */
-  { 17001, 3 }, /* atropos doctor agent */
-  { 17003, 3 }, /* sand beast pile */
-  { 20130, 3 }, /* warhorse skeletal */
+  //{ 17001, 3 }, /* atropos doctor agent */
+  //{ 17003, 3 }, /* sand beast pile */
   { 21109, 3 }, /* root tree large */
   { 21207, 3 }, /* aldrene bard lady singer */
   { 21223, 3 }, /* thief morian thug */
@@ -903,7 +908,7 @@ const int aq_mob_master_list[][2] = {
   { 21321, 3 }, /* ogre magi meldur */
   { 21322, 3 }, /* ogre magi anawyn */
   { 21334, 3 }, /* bugbear bug bear */
-  { 23007, 3 }, /* hydra cryohydra snake */
+  //{ 23007, 3 }, /* hydra cryohydra snake */
   { 23009, 3 }, /* polar bear glacial */
   { 24903, 3 }, /* druid protector */
   { 26403, 3 }, /* guide */
@@ -922,8 +927,8 @@ const int aq_mob_master_list[][2] = {
   { 4469, 4 }, /* animate skeleton */
   { 4472, 4 }, /* Voldra Sage */
   { 4612, 4 }, /* Kitzanti Captain Dark Purple */
-  { 4703, 4 }, /* voodoo doll */
-  { 4707, 4 }, /* Cleric Werra Garbage */
+  //{ 4703, 4 }, /* voodoo doll */
+  //{ 4707, 4 }, /* Cleric Werra Garbage */
   { 5801, 4 }, /* slaphoff kender captain */
   { 6273, 4 }, /* ant lion */
   { 6298, 4 }, /* cave bear */
@@ -938,22 +943,23 @@ const int aq_mob_master_list[][2] = {
   { 12904, 4 }, /* mystic ultimate */
   { 13501, 4 }, /* oglozt greater */
   { 14205, 4 }, /* fred gatekeeper */
-  { 14508, 4 }, /* eduard magistrate wererat grotesque rat */
+  //{ 14508, 4 }, /* eduard magistrate wererat grotesque rat */
   { 16515, 4 }, /* gorgo fur beast */
-  { 17005, 4 }, /* marten man */
-  { 17006, 4 }, /* maerlyn sorcerer wizard */
-  { 17007, 4 }, /* oracle spirit */
+  //{ 17005, 4 }, /* marten man */
+  //{ 17006, 4 }, /* maerlyn sorcerer wizard */
+  //{ 17007, 4 }, /* oracle spirit */
   { 17330, 4 }, /* dwarf smith prisoner ragar */
   { 20108, 4 }, /* Miyamoto Musashi */
   { 20129, 4 }, /* Spectral Warlord */
+  { 20130, 4 }, /* warhorse skeletal */
   { 20165, 4 }, /* black panther */
   { 21203, 4 }, /* king morian moria ruler mandrial */
-  { 25000, 4 }, /* demi lich */
   { 25018, 4 }, /* elemental water prince */
   { 25019, 4 }, /* earth elemental king */
   { 25020, 4 }, /* air elemental lord */
   { 25021, 4 }, /* fire elemental sultan */
   { 25035, 4 }, /* demon balor */
+  { 25040, 4 }, /* death lord */
   { 26401, 4 }, /* vizier */
   { 26481, 4 }, /* healer */
   { 27105, 4 }, /* cannibal witchdoctor */
@@ -962,7 +968,9 @@ const int aq_mob_master_list[][2] = {
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
   { 5105, 5 }, /* drow apprentice */
+  { 5106, 5 }, /* drow weaponmaster zarc */
   { 5107, 5 }, /* drow matron mother lower */
+  { 5109, 5 }, /* illithid */
   { 5140, 5 }, /* spider sentry first */
   { 5177, 5 }, /* Dgarzah Drow rogue Leader */
   { 5184, 5 }, /* spider sentry third */
@@ -970,9 +978,9 @@ const int aq_mob_master_list[][2] = {
   { 5191, 5 }, /* spider sentry second */
   { 5596, 5 }, /* myconid king mushroom */
   { 11326, 5 }, /* vampire strahd count */
-  { 13019, 5 }, /* elf elven master beastmaster */
-  { 17004, 5 }, /* twixt bard man master */
-  { 17010, 5 }, /* minion lesser */
+  //{ 17004, 5 }, /* twixt bard man master */
+  //{ 17010, 5 }, /* minion lesser */
+  { 17306, 5 }, /* pit fiend */
   { 17308, 5 }, /* marcus wizard mage */
   { 20145, 5 }, /* Shogun Warlord Samurai */
   { 21204, 5 }, /* adrel sage magic */
@@ -980,11 +988,14 @@ const int aq_mob_master_list[][2] = {
   { 21210, 5 }, /* priest high dark man */
   { 21323, 5 }, /* ogre sorcerer eowadriendir */
   { 21332, 5 }, /* otyugh stench garbage pile vines */
+  { 25000, 5 }, /* demi lich */
   { 25002, 5 }, /* death crimson */
+  { 25010, 5 }, /* kraken */
   { 25013, 5 }, /* kalas */
   { 26402, 5 }, /* emir malik */
   { 26482, 5 }, /* magus */
   { 27712, 5 }, /* bebilith stalker purple spider insect */
+  { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */
   { 5127, 6 }, /* drow matron mother second */
@@ -994,18 +1005,19 @@ const int aq_mob_master_list[][2] = {
   { 5901, 6 }, /* drow leader rezik */
   { 7703, 6 }, /* typik lizard shaman reptile */
   { 13502, 6 }, /* demon reptilian reptile */
-  { 14501, 6 }, /* keira banshee ghost */
+  //{ 14501, 6 }, /* keira banshee ghost */
   { 14503, 6 }, /* ardaan inquisitor warrior */
-  { 17002, 6 }, /* vermilion king */
+  //{ 11514, 6 }, /* wyvern */
+  { 13019, 6 }, /* elf elven master beastmaster */
+  //{ 17002, 6 }, /* vermilion king */
   { 17342, 6 }, /* troll cook chef */
   { 20107, 6 }, /* Raiden */
-  { 23001, 6 }, /* remorhaz ice burrower */
+  //{ 23001, 6 }, /* remorhaz ice burrower */
   { 25001, 6 }, /* keftab */
-  { 25010, 6 }, /* kraken */
   { 26583, 6 }, /* guru */
   { 26706, 6 }, /* creature large hideous mutated rat yeti human */
   { 26707, 6 }, /* observer tower mage old man */
-  { 27722, 6 }, /* shomed nomad hero tarion desert */
+  //{ 27722, 6 }, /* shomed nomad hero tarion desert */
 };
 
 int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
@@ -1023,8 +1035,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
     if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
     if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
-                        aq_mob_quest_level > 4 ||                               // Note: There are 77 AQ 2s, 47 AQ 3s and 46 AQ 4s, so
-                       (aq_mob_quest_level == 2 && chance(40)))) continue;      //       we'll skip 40% of them for mid. Adjust as needed.
+                        aq_mob_quest_level > 4 ||                               // Note: There are 77 AQ 2s, 40 AQ 3s and 40 AQ 4s, so
+                       (aq_mob_quest_level == 2 && chance(48)))) continue;      //       skip 48% of the 2s for mid. Adjust as needed.
 
     aq_mob_temp_list[aq_mob_num][0] = aq_mob_vnum;
     aq_mob_temp_list[aq_mob_num][1] = aq_mob_quest_level;
@@ -1044,10 +1056,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     int temp_aq_mob_quest_level = aq_mob_temp_list[i][1];
 
     int temp_aq_mob_proto_index = real_mobile(temp_aq_mob_vnum);
-    if (temp_aq_mob_proto_index < 0) continue; // this mob is not loaded in the world
+    if (temp_aq_mob_proto_index < 0) continue; // This mob is not loaded in the world.
 
     int temp_aq_mob_num_in_game = mob_proto_table[temp_aq_mob_proto_index].number;
-    if (temp_aq_mob_num_in_game < 1) continue; // sanity check
+    if (temp_aq_mob_num_in_game < 1) continue; // Sanity check.
 
     CHAR *temp_aq_mob = NULL;
 
@@ -1055,8 +1067,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
       /* If there's only one in the game, we can just grab it from the list with get_ch_world(). */
       temp_aq_mob = get_ch_world(temp_aq_mob_vnum);
 
-      if (!temp_aq_mob) continue; // sanity check
-      if (temp_aq_mob->questowner) continue; // not eligible, continue through the list
+      /* This VNum was not eligible (it's already assigned to somebody, or this mob is already fighting someone), so continue the main loop. */
+      if (!temp_aq_mob || temp_aq_mob->questowner || (GET_OPPONENT(temp_aq_mob) && !IS_NPC(GET_OPPONENT(temp_aq_mob)))) continue;
     }
     else {
       /* More than one AQ mob of this VNum exists. We'll need to see if the VNum is eligible and if so, get one of the mobs. */
@@ -1064,9 +1076,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
 
       /* Search the list of all characters and see if this VNum is eligible (nobody else is on a quest for it). */
       for (CHAR *temp_mob = character_list; temp_mob && (temp_aq_mob_eligible_num < temp_aq_mob_num_in_game); temp_mob = temp_mob->next) {
-        if (temp_mob->nr_v != temp_aq_mob_vnum) continue;
+        if (temp_mob->nr_v != temp_aq_mob_vnum) continue; // Not the right VNum.
+        if (GET_OPPONENT(temp_aq_mob) && !IS_NPC(GET_OPPONENT(temp_aq_mob))) continue; // This mob is already fighting someone.
 
-        /* This VNum was not eligible (it's already assigned to somebody), so break out of the loop. */
+        /* This VNum was not eligible (it's already assigned to somebody, or the mob is already fighting a mortal), so break out of the loop. */
         if (temp_mob->questowner) {
           temp_aq_mob_eligible_num = 0;
           break;

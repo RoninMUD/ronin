@@ -2057,8 +2057,6 @@ void send_to_char(char *messg, struct char_data *ch) {
   send_to_char_by_type(messg,ch,0);
 }
 
-
-
 void printf_to_char(CHAR *ch, char *fmt, ...)
 {
   char buf [MSL];
@@ -2132,6 +2130,67 @@ void send_to_room_except_two
       send_to_char(messg, i);
 }
 
+
+int same_group(struct char_data *ch1, struct char_data *ch2) {
+  struct char_data *group_leader = NULL;
+
+  /* If we don't get two characters, there can be no valid compairson. */
+  if (!ch1 || !ch2) return FALSE;
+
+  /* A character is always in their own group. */
+  if (ch1 == ch2) return TRUE;
+
+  /* Mobs are never in a group. */
+  if (IS_NPC(ch1) || IS_NPC(ch2)) return FALSE;
+
+  /* If neither character is grouped, they cannot be in the same group. */
+  if (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP)) return FALSE;
+
+  /* If neither character has a group leader, they cannot be in the same group. */
+  if (!(ch1->master) && !(ch2->master)) return FALSE;
+
+  /* Get the first character's group leader, if they have one.
+     Otherwise, they must be the leader. */
+  if (ch1->master) group_leader = ch1->master;
+  else group_leader = ch1;
+
+  /* If the second character's group leader isn't the first character's group
+     leader, they cannot be in the same group. */
+  if (ch2->master != group_leader) return FALSE;
+
+  return TRUE;
+}
+
+void send_to_group(char *messg, struct char_data *ch, int same_room) {
+  struct char_data *group_leader = NULL;
+  struct char_data *group_member = NULL;
+  struct follow_type *follower = NULL;
+
+  if (ch->master) {
+    /* Get the group leader. */
+    group_leader = ch->master;
+  }
+  else {
+    /* The acting character is the leader (or there is no group leader). */
+    group_leader = ch;
+  }
+
+  /* Don't send to the character if they're the group leader.
+     Use send_to_char explicitly. */
+  if (group_leader != ch) {
+    send_to_char(messg, group_leader);
+  }
+
+  /* Loop through all of the group members of group_leader's group and apply the affect to them. */
+  for (follower = group_leader->followers; follower; follower = follower->next) {
+    group_member = follower->follower;
+
+    if (!group_member || (group_member == ch) || !IS_AFFECTED(group_member, AFF_GROUP) || (same_room && !SAME_ROOM(group_member, ch))) continue;
+
+    send_to_char(messg, group_member);
+  }
+}
+
 /* higher-level communication */
 void act_by_type(
   char *str,
@@ -2168,10 +2227,11 @@ void act_by_type(
 
   for (; to; to = to->next_in_room) {
     if (hide_invisible == 2 && IS_SET(to->specials.pflag, PLR_SUPERBRF)) continue;
+    if (type == TO_GROUP && (to == ch || !same_group(to, ch))) continue;
 
     if (to->desc &&
         ((to != ch) || (type == TO_CHAR)) &&
-        (CAN_SEE(to, ch) || !hide_invisible) &&
+        (!hide_invisible || CAN_SEE(to, ch)) &&
         (type == TO_CHAR || type == TO_VICT || GET_POS(to) != POSITION_SLEEPING) &&
         !((type == TO_NOTVICT) && (to == (struct char_data *) vict_obj))) {
 

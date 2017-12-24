@@ -217,12 +217,12 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
     stop_riding(ch,ch->specials.riding);
   }
 
+  ch->ver3.time_to_quest=MAX(ch->ver3.time_to_quest - 40, 5);
   if(ch->quest_status==QUEST_FAILED) {
     printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
   }
   if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
-    send_to_char("Your quest has been automatically ended, you can start another in 30 ticks.\n\r",ch);
-    ch->ver3.time_to_quest=30;
+    printf_to_char(ch,"Your quest has been automatically ended, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
   }
   ch->questgiver=0;
   if(ch->questobj)

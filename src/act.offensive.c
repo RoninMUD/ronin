@@ -1014,7 +1014,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
           rider = TRUE;
         }
 
-        if ((die = do_simple_move(ch, attempt, FALSE, 1)) == 1) {
+        if ((die = do_simple_move(ch, attempt, 1)) == 1) {
           /* The escape has succeded */
           send_to_char("You flee head over heels.\n\r", ch);
           if ((rider) || (mount)) {
@@ -1082,7 +1082,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
       /* Liner Jan 03, adding flee exp loss tables to vary exp loss depending on level
       differences in ch and ch->specials.fighting */
 
-      if ((die = do_simple_move(ch, attempt, FALSE, 1)) == 1) {
+      if ((die = do_simple_move(ch, attempt, 1)) == 1) {
         /* The escape has succeeded */
         if (ch->specials.fighting) { /* Another check */
           if (GET_LEVEL(ch) > GET_LEVEL(ch->specials.fighting)) {
