@@ -3776,7 +3776,7 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       vict->questowner->questmob=0;
       vict->questowner->quest_status=QUEST_FAILED;
       vict->questowner->quest_level=0;
-      vict->questowner->ver3.time_to_quest=25;
+      vict->questowner->ver3.time_to_quest=2;
       printf_to_char(vict->questowner,"Your victim has been disintegrated, you have failed your quest! You can start another in %d ticks.\n\r",vict->questowner->ver3.time_to_quest);
       vict->questowner=0;
     }

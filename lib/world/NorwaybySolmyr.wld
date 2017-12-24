@@ -146,13 +146,13 @@ This way will lead you to the southern shores of the lake.
 ~
 0 -1 19005
 E
-w west wall~
+west~
 The steep wall of rock towers over you, several hundred meters
 high. There is no way anyone could climb this wall without
 breaking their necks.
 ~
 E
-west~
+w west wall~
 The steep wall of rock towers over you, several hundred meters
 high. There is no way anyone could climb this wall without
 breaking their necks.
@@ -377,11 +377,10 @@ The path leads north towards the rivershore.
 ~
 0 -1 19015
 E
-storehouse stabbur~
-   The storehouse is erected on pillars to keep mice, rats
-and other vermin from eating and contaminating the food
-stored inside.  The building is also locked up to prevent
-strangers from entering the storehouse.
+house farmhouse~
+   The farmhouse is made of wood and is painted dark brown.
+There are a few windows on each side of the house. An open door
+in the southern wall makes it possible to enter the house.
 ~
 E
 barn~
@@ -392,10 +391,11 @@ are closed, but you can enter the barn through the opening
 of a door in the west wall of the barn.
 ~
 E
-house farmhouse~
-   The farmhouse is made of wood and is painted dark brown.
-There are a few windows on each side of the house. An open door
-in the southern wall makes it possible to enter the house.
+storehouse stabbur~
+   The storehouse is erected on pillars to keep mice, rats
+and other vermin from eating and contaminating the food
+stored inside.  The building is also locked up to prevent
+strangers from entering the storehouse.
 ~
 S
 #19017

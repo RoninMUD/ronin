@@ -116,436 +116,471 @@ int dt_or_hazard(CHAR *ch) {
 
 int special(struct char_data *ch, int cmd, char *arg);
 int signal_room(int room, CHAR *ch, int cmd, char *arg);
-int do_simple_move(struct char_data *ch, int cmd, int following,int spec_check)
-     /* Assumes,
-      1. That there is no master and no followers.
-      2. That the direction exists.
+int do_simple_move(struct char_data *ch, int cmd, int spec_check)
+/* Assumes,
+1. That there is no master and no followers.
+2. That the direction exists.
 
-      Returns :
-      1 : If succes.
-      0 : If fail
-      -1 : If dead.
-
-        added mount moving with rider - Ranger Aug 96
-      */
+Returns:
+  1 : If success.
+  0 : If failure.
+ -1 : If dead.
+*/
 {
-  char tmp[80];
-  int was_in;
-  int org_room;
-  int need_movement;
-  int percent;
-  int encumb_modifier;
-  struct obj_data *obj;
-  struct char_data *victim=0;
-  bool has_boat=FALSE;
-  bool riding=FALSE, mount_move=FALSE; /* For stables Ranger April 96 */
-  struct char_data *i;
-  struct char_data *owner;
-  OBJ *wall=0;
-
-  int can_carry_weight;
-  int carrying_weight;
-
-  if(spec_check) {
-    if (special(ch, cmd+1, ""))  /* Check for special routines (North is 1) */
-    return(FALSE);
-  }
-
-  if(affected_by_spell(ch, SKILL_PRAY) && GET_LEVEL(ch)<LEVEL_IMM) {
-    send_to_char("You are deep in prayer, unable to follow.\n\r",ch);
-    return(FALSE);
-  }
-
-  if(affected_by_spell(ch, SKILL_MEDITATE) && GET_LEVEL(ch)<LEVEL_IMM) {
-    if((CHAOSMODE && duration_of_spell(ch,SKILL_MEDITATE)>9) ||
-     duration_of_spell(ch,SKILL_MEDITATE)>30) {
-      send_to_char("You are deep in meditation, unable to follow.\n\r",ch);
-      return(FALSE);
-    }
-  }
-
-  carrying_weight = IS_CARRYING_W(ch);
-  can_carry_weight= CAN_CARRY_W(ch);
-
-  encumb_modifier = 1;
-  if (carrying_weight >= can_carry_weight)
-    encumb_modifier = 2;
-  if (carrying_weight >= 3*can_carry_weight/2)
-    encumb_modifier = 3;
-  if (carrying_weight >= 2*can_carry_weight)
-    encumb_modifier = 4;
-  if (carrying_weight >= 5*can_carry_weight/2)
-    encumb_modifier = 5;
-  if (carrying_weight == 3*can_carry_weight)
-    encumb_modifier = 6;
-
-  org_room = CHAR_REAL_ROOM(ch); /* Moved up - Ranger */
-
-  if(!world[org_room].dir_option[cmd]) return FALSE;
-  if(world[org_room].dir_option[cmd]->to_room_r==NOWHERE) return FALSE;
-  need_movement = encumb_modifier*(movement_loss[world[org_room].sector_type]+
-    movement_loss[world[world[org_room].dir_option[cmd]->to_room_r].sector_type]) / 2 ;
-
-  if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-    send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
+  /* Check for special routines (North is 1) */
+  if (spec_check && special(ch, cmd + 1, "")) {
     return FALSE;
   }
 
-  if((wall=get_obj_room(WALL_THORNS,world[world[org_room].dir_option[cmd]->to_room_r].number))) {
+  if (!IS_IMMORTAL(ch) &&
+      affected_by_spell(ch, SKILL_PRAY)) {
+    send_to_char("You are deep in prayer, unable to follow.\n\r", ch);
+    return FALSE;
+  }
+
+  if (!IS_IMMORTAL(ch) &&
+      (affected_by_spell(ch, SKILL_MEDITATE) &&
+      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 30)))) {
+    send_to_char("You are deep in meditation, unable to follow.\n\r", ch);
+    return FALSE;
+  }
+
+  if (!world[CHAR_REAL_ROOM(ch)].dir_option[cmd] ||
+       world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == NOWHERE ||
+       world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == real_room(0)) return FALSE;
+
+  /* Check for Wall of Thorns. */
+  if (!IS_IMMORTAL(ch) &&
+      (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) ||
+       get_obj_room(WALL_THORNS, world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].number))) {
     send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-    damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
+    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
     return FALSE;
   }
 
-  /* Check for tunnel flee escape */
-  if(IS_SET(world[world[org_room].dir_option[cmd]->to_room_r].room_flags, TUNNEL) &&
-     !CHAOSMODE && count_mortals_real_room(world[org_room].dir_option[cmd]->to_room_r)>0 &&
-     IS_MORTAL(ch)) {
+  /* Check for tunnel flee escape. */
+  if (IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, TUNNEL) &&
+      IS_MORTAL(ch) &&
+      count_mortals_real_room(world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r) > 0 &&
+      !CHAOSMODE) {
     send_to_char("It's too narrow to go there.\n\r", ch);
     return FALSE;
   }
 
-  /* Check for exit being a flying room - Ranger July 97 */
-  if(IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags,FLYING) && IS_MORTAL(ch)) {
-    if(cmd==UP) {
-      if(ch->specials.riding) {
-        if(!IS_SET(ch->specials.riding->specials.act,ACT_FLY)) {
-          send_to_char("Your mount isn't capable of flight.\n\r",ch);
+  /* Check if exit is a flying room. */
+  if (IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, FLYING) &&
+      !IS_IMMORTAL(ch)) {
+    if (cmd == UP) {
+      if (ch->specials.riding) {
+        if (!IS_SET(ch->specials.riding->specials.act, ACT_FLY)) {
+          send_to_char("Your mount isn't capable of flight.\n\r", ch);
           return FALSE;
         }
-        if(!IS_AFFECTED(ch->specials.riding,AFF_FLY)) {
-          send_to_char("Your mount isn't flying.\n\r",ch);
+        if (!IS_AFFECTED(ch->specials.riding, AFF_FLY)) {
+          send_to_char("Your mount isn't flying.\n\r", ch);
           return FALSE;
         }
       }
-      else if(IS_MORTAL(ch)) {
-        send_to_char("You need a flying mount to gain altitude.\n\r",ch);
+      else if (IS_MORTAL(ch)) {
+        send_to_char("You need a flying mount to gain altitude.\n\r", ch);
         return FALSE;
       }
     }
-    if(!ch->specials.riding) {
-      if(!IS_AFFECTED(ch,AFF_FLY)) {
-        send_to_char("You are not flying.\n\r",ch);
-        if(ch->specials.rider) send_to_char("Your mount is not flying.\n\r",ch->specials.rider);
+
+    if (ch->specials.riding) {
+      if (!IS_AFFECTED(ch->specials.riding, AFF_FLY)) {
+        send_to_char("Your mount isn't flying.\n\r", ch);
         return FALSE;
       }
     }
     else {
-      if(!IS_AFFECTED(ch->specials.riding,AFF_FLY)) {
-        send_to_char("Your mount is not flying.\n\r",ch);
+      if (!IS_AFFECTED(ch, AFF_FLY)) {
+        send_to_char("You are not flying.\n\r", ch);
+        if (ch->specials.rider) {
+          send_to_char("Your mount is not flying.\n\r", ch->specials.rider);
+        }
         return FALSE;
       }
     }
   }
 
-  if((world[org_room].sector_type == SECT_WATER_NOSWIM) ||
-      (world[world[org_room].dir_option[cmd]->to_room_r].sector_type == SECT_WATER_NOSWIM)) {
-    /* See if char is carrying a boat */
-    for (obj=ch->carrying; obj; obj=obj->next_content)
-      if (obj->obj_flags.type_flag == ITEM_BOAT) has_boat = TRUE;
-    /* Below changed from affected_by_spell Ranger April 96 */
-    if (IS_AFFECTED(ch, AFF_FLY) || GET_CLASS(ch) == CLASS_NINJA) has_boat=TRUE;
-    if (ch->equipment[WEAR_FEET]) {
-      if (ch->equipment[WEAR_FEET]->obj_flags.type_flag == ITEM_BOAT)
+  /* Check to see if they have a boat, or can swim. */
+  if ((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM ||
+       world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type == SECT_WATER_NOSWIM) &&
+      !IS_IMMORTAL(ch)) {
+    bool has_boat = FALSE;
+
+    /* If they're flying, or they're a ninja, they have a boat. */
+    if (IS_AFFECTED(ch, AFF_FLY) || GET_CLASS(ch) == CLASS_NINJA) has_boat = TRUE;
+
+    /* Check if they are carrying a boat. */
+    for (struct obj_data *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+      if (tmp_obj->obj_flags.type_flag == ITEM_BOAT) {
         has_boat = TRUE;
+        break;
+      }
     }
 
-    if(ch->specials.riding) {
-       has_boat = FALSE;
-       riding=TRUE;
-       victim=ch->specials.riding;
-       for(obj=victim->carrying; obj; obj=obj->next_content)
-         if(obj->obj_flags.type_flag == ITEM_BOAT) has_boat=TRUE;
-       if (IS_AFFECTED(victim, AFF_FLY)) has_boat=TRUE;
-       if (IS_SET(victim->specials.act, ACT_FLY)) has_boat=TRUE;
-       if (victim->equipment[WEAR_FEET]) {
-         if (victim->equipment[WEAR_FEET]->obj_flags.type_flag == ITEM_BOAT) has_boat = TRUE;
-       }
-    }
+    /* Check if their boots are a boat. */
+    if (ch->equipment[WEAR_FEET] && ch->equipment[WEAR_FEET]->obj_flags.type_flag == ITEM_BOAT) has_boat = TRUE;
 
-    if(GET_LEVEL(ch)>=LEVEL_IMM) has_boat=TRUE;
-
-    if ((!has_boat) && (riding)) {
-       send_to_char("Your mount needs a boat to go there.\n\r",ch);
-       return(FALSE);
+    /* Check if their mount has a boat, or can fly. etc. */
+    if (!has_boat && ch->specials.riding) {
+      for (struct obj_data *tmp_obj = ch->specials.riding->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+        if (tmp_obj->obj_flags.type_flag == ITEM_BOAT) {
+          has_boat = TRUE;
+          break;
+        }
+      }
+      if (IS_AFFECTED(ch->specials.riding, AFF_FLY)) has_boat = TRUE;
+      if (IS_SET(ch->specials.riding->specials.act, ACT_FLY)) has_boat = TRUE;
+      if (ch->specials.riding->equipment[WEAR_FEET] && ch->specials.riding->equipment[WEAR_FEET]->obj_flags.type_flag == ITEM_BOAT) has_boat = TRUE;
     }
 
     if (!has_boat) {
-       send_to_char("You need a boat to go there.\n\r", ch);
-       return(FALSE);
+      if (ch->specials.riding) {
+        send_to_char("Your mount needs a boat to go there.\n\r", ch);
+      }
+      else {
+        send_to_char("You need a boat to go there.\n\r", ch);
+      }
+      return FALSE;
     }
   }
 
-  /* More Stable Mods - Ranger April 96 */
-  if(ch->specials.riding) {
-    riding=TRUE;
-    victim=ch->specials.riding;
-    need_movement=1;
-    if(IS_SET(victim->specials.act,ACT_MOUNT)) {
-      need_movement=3;
-      /* Check for bridle */
-      if(victim->equipment[WEAR_NECK_1]) {
-         if(V_OBJ(victim->equipment[WEAR_NECK_1])==3900) need_movement--;
+  int carrying_weight = IS_CARRYING_W(ch);
+  int can_carry_weight = CAN_CARRY_W(ch);
+
+  int encumb_modifier = 1;
+
+  if (carrying_weight >= can_carry_weight)
+    encumb_modifier = 2;
+  if (carrying_weight >= 3 * can_carry_weight / 2)
+    encumb_modifier = 3;
+  if (carrying_weight >= 2 * can_carry_weight)
+    encumb_modifier = 4;
+  if (carrying_weight >= 5 * can_carry_weight / 2)
+    encumb_modifier = 5;
+  if (carrying_weight == 3 * can_carry_weight)
+    encumb_modifier = 6;
+
+  int need_movement = encumb_modifier * (movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type] +
+                      movement_loss[world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type]) / 2;
+
+  /* Handle riding. */
+  if (ch->specials.riding) {
+    need_movement = 1;
+    if (IS_SET(ch->specials.riding->specials.act, ACT_MOUNT)) {
+      need_movement = 3;
+      /* Check for bridle. */
+      if (ch->specials.riding->equipment[WEAR_NECK_1]) {
+        if (V_OBJ(ch->specials.riding->equipment[WEAR_NECK_1]) == 3900) need_movement--;
       }
-      else if (victim->equipment[WEAR_NECK_2]) {
-         if(V_OBJ(victim->equipment[WEAR_NECK_2])==3900) need_movement--;
+      else if (ch->specials.riding->equipment[WEAR_NECK_2]) {
+        if (V_OBJ(ch->specials.riding->equipment[WEAR_NECK_2]) == 3900) need_movement--;
       }
-      /* Check for saddle */
-      if(victim->equipment[WEAR_BODY]) {
-        if(V_OBJ(victim->equipment[WEAR_BODY])==3904 ) need_movement--;
+      /* Check for saddle. */
+      if (ch->specials.riding->equipment[WEAR_BODY]) {
+        if (V_OBJ(ch->specials.riding->equipment[WEAR_BODY]) == 3904) need_movement--;
       }
     }
   }
 
-  /* Combat Zen */
-  if (!(check_subclass(ch, SC_RONIN, 1) && chance(50))) {
-    if ((IS_AFFECTED(ch, AFF_PARALYSIS) ||
-       IS_AFFECTED(ch, AFF_HOLD)) && (!riding)) {
-      send_to_char("You are paralyzed, you can't move.\n\r",ch);
-      return(FALSE);
-    }
+  /* Check for Paralaysis and Hold Person. */
+  if ((IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)) &&
+      !IS_IMMORTAL(ch) &&
+      !(ch->specials.riding) &&
+      /* Combat Zen */
+      !(check_subclass(ch, SC_RONIN, 1) && chance(50))) {
+    send_to_char("You are paralyzed! You can't move!\n\r",ch);
+    return FALSE;
   }
 
-  if(GET_MOVE(ch)<need_movement && !IS_NPC(ch)) {
-    if(!following) send_to_char("You are too exhausted.\n\r",ch);
-    else send_to_char("You are too exhausted to follow.\n\r",ch);
-    return(FALSE);
-  }
-
-  if (GET_CLASS(ch) == CLASS_NINJA && !IS_AFFECTED(ch, AFF_FLY)
-      && (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM)
-      && !(GET_POS(ch)==POSITION_RIDING))
-    GET_POS(ch) = POSITION_SWIMMING;
-
-  if(GET_LEVEL(ch)<LEVEL_IMM && !IS_NPC(ch))
-    GET_MOVE(ch) -= need_movement;
-
-  if (GET_POS(ch) == POSITION_SWIMMING) {
-    if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-       snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
+  if (IS_MORTAL(ch) && GET_MOVE(ch) < need_movement) {
+    if (ch->master) {
+      send_to_char("You are too exhausted to follow.\n\r", ch);
     }
     else {
-      snprintf(tmp, sizeof(tmp), "$n swims %s.", dirs[cmd]);
+      send_to_char("You are too exhausted.\n\r", ch);
     }
-    act(tmp, 2, ch, 0, 0, TO_ROOM);
+    return FALSE;
   }
-  else if (GET_POS(ch)==POSITION_RIDING) {
-    mount_move=FALSE;
-    org_room = CHAR_REAL_ROOM(ch);
-    victim=0;
-    if(ch->specials.riding) {
-      victim=ch->specials.riding;
-      if((GET_POS(victim)==POSITION_FLYING) ||
-         (GET_POS(victim)==POSITION_STANDING) ||
-         (GET_POS(victim) == POSITION_SWIMMING)) mount_move=TRUE;
+
+  /* Subtract their movement points. */
+  if (IS_MORTAL(ch)) {
+    GET_MOVE(ch) -= need_movement;
+  }
+
+  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM &&
+      !IS_IMMORTAL(ch) &&
+      GET_CLASS(ch) == CLASS_NINJA &&
+      !IS_AFFECTED(ch, AFF_FLY) &&
+      GET_POS(ch) != POSITION_RIDING) {
+    GET_POS(ch) = POSITION_SWIMMING;
+  }
+
+  char buf[MSL];
+
+  if (IS_AFFECTED(ch, AFF_FLY)) {
+    if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+      snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
-    if (!mount_move) {
-       send_to_char("Your mount isn't able to move.\n\r",ch);
-       return(FALSE);
+    else {
+      snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
     }
-    snprintf(tmp, sizeof(tmp), "$n rides %s.", dirs[cmd]);
-    if (victim) {
-       if (GET_POS(victim)==POSITION_FLYING) snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
+    act(buf, 2, ch, 0, 0, TO_ROOM);
+  }
+  else if (GET_POS(ch) == POSITION_SWIMMING) {
+    if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+      snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
-    act(tmp, 2, ch, 0, 0, TO_ROOM);
+    else {
+      snprintf(buf, sizeof(buf), "$n swims %s.", dirs[cmd]);
+    }
+    act(buf, 2, ch, 0, 0, TO_ROOM);
+  }
+  else if (GET_POS(ch) == POSITION_RIDING) {
+    if (ch->specials.riding &&
+        (GET_POS(ch->specials.riding) != POSITION_FLYING) &&
+        (GET_POS(ch->specials.riding) != POSITION_STANDING) &&
+        (GET_POS(ch->specials.riding) != POSITION_SWIMMING)) {
+      send_to_char("Your mount isn't able to move.\n\r", ch);
+      return FALSE;
+    }
+    
+    if (ch->specials.riding && GET_POS(ch->specials.riding) == POSITION_FLYING) {
+      snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
+    }
+    else {
+      snprintf(buf, sizeof(buf), "$n rides %s.", dirs[cmd]);
+    }
+    act(buf, 2, ch, 0, 0, TO_ROOM);
   }
   else if (ch->specials.rider) {
-    owner=ch->specials.rider;
-    for(i = world[CHAR_REAL_ROOM(ch)].people; i ; i = i->next_in_room) {
-      if(!(CAN_SEE(i,owner)) && (i!=owner) ) {
-        snprintf(tmp, sizeof(tmp), "$n leaves %s.", dirs[cmd]);
-        if(GET_POS(ch)==POSITION_FLYING) snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
-        act(tmp, 2, ch, 0, i, TO_VICT);
+    for (struct char_data *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
+      if (CAN_SEE(tmp_ch, ch->specials.rider) && (tmp_ch != ch->specials.rider)) {
+        if (GET_POS(ch) == POSITION_FLYING) {
+          snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
+        }
+        else {
+          snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
+        }
+        act(buf, 2, ch, 0, tmp_ch, TO_VICT);
       }
     }
   }
-  else if (!IS_AFFECTED(ch, AFF_SNEAK) && !IS_AFFECTED(ch, AFF_FLY)) {
-    if(ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-      snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
+  else {
+    if (!IS_IMMORTAL(ch) && GET_HIT(ch) < (hit_limit(ch) / 10)) {
+      snprintf(buf, sizeof(buf), "$n crawls %s.", dirs[cmd]);
     }
     else {
-      snprintf(tmp, sizeof(tmp), "$n leaves %s.", dirs[cmd]);
-      if(GET_HIT(ch) < (hit_limit(ch)/10)) snprintf(tmp, sizeof(tmp), "$n crawls %s.", dirs[cmd]);
+      if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+        snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+      }
+      else {
+        snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
+      }
     }
-    act(tmp, 2, ch, 0,0,TO_ROOM);
-  }
-  else if (IS_AFFECTED(ch, AFF_FLY)) {
-    if (ch->player.poofout && GET_LEVEL(ch)<LEVEL_IMM) {
-       snprintf(tmp, sizeof(tmp), "%s %s.", ch->player.poofout, dirs[cmd]);
+
+    if (IS_AFFECTED(ch, AFF_SNEAK)) {
+      act(buf, 2, ch, 0, 0, TO_GROUP);
     }
     else {
-      snprintf(tmp, sizeof(tmp), "$n flies %s.", dirs[cmd]);
+      act(buf, 2, ch, 0, 0, TO_ROOM);
     }
-    act(tmp, 2, ch, 0, 0, TO_ROOM);
   }
-  /* If wanted hunting or scanning or blood trail, it should be added here */
-  was_in = CHAR_REAL_ROOM(ch);
 
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_LEAVE,"")) return FALSE;
-  if(!ch || CHAR_REAL_ROOM(ch)==NOWHERE) return FALSE; /* In case MSG_LEAVE kills */
+  /* If adding hunting, or scanning, or blood trail, etc.,
+     it should probably be added here. */
 
+  int was_in = CHAR_REAL_ROOM(ch);
+
+  /* Signal the room the character is moving from. */
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
+  /* In case MSG_LEAVE kills. */
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return FALSE;
+
+  /* Move the character from the old room. */
   char_from_room(ch);
+  /* Move the character to the new room. */
   char_to_room(ch, world[was_in].dir_option[cmd]->to_room_r);
 
-  if(victim) {
-    char_from_room(victim);
-    char_to_room(victim,world[was_in].dir_option[cmd]->to_room_r);
+  /* Move their mount. */
+  if (ch->specials.riding) {
+    char_from_room(ch->specials.riding);
+    char_to_room(ch->specials.riding, world[was_in].dir_option[cmd]->to_room_r);
   }
 
-  /* More stable mods - Ranger April 96 */
-  if(ch->specials.rider) {
-    owner=ch->specials.rider;
-    for(i = world[CHAR_REAL_ROOM(ch)].people; i ; i = i->next_in_room) {
-      if(!CAN_SEE(i,owner) && (i!=owner))
-        act("$n has arrived.", 2, ch, 0, i, TO_VICT);
+  /* Show arrival message, as approrpriate. */
+  if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+    snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+  }
+  else {
+    snprintf(buf, sizeof(buf), "$n has arrived.");
+  }
+
+  if (ch->specials.rider) {
+    for (struct char_data *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
+      if (CAN_SEE(tmp_ch, ch->specials.rider) && (tmp_ch != ch->specials.rider)) {
+        act(buf, 2, ch, 0, tmp_ch, TO_VICT);
+      }
     }
   }
-  else if (!IS_AFFECTED(ch, AFF_SNEAK)) {
-    if(ch->player.poofin && GET_LEVEL(ch)<LEVEL_IMM)
-      act(ch->player.poofin, 2, ch, 0,0, TO_ROOM);
-    else act("$n has arrived.", 2, ch, 0,0, TO_ROOM);
+  else {
+    if (IS_AFFECTED(ch, AFF_SNEAK)) {
+      act(buf, 2, ch, 0, 0, TO_GROUP);
+    }
+    else {
+      act(buf, 2, ch, 0, 0, TO_ROOM);
+    }
   }
 
-  do_look(ch, "\0",15);
-  if(victim) do_look(victim, "\0",15);
+  /* Do look do look for the character. */
+  do_look(ch, "\0", CMD_LOOK);
 
-  if(signal_room(CHAR_REAL_ROOM(ch),ch,MSG_ENTER,"")) return FALSE;
-  if(!ch || CHAR_REAL_ROOM(ch)==NOWHERE) return FALSE; /* In case MSG_ENTER kills */
+  /* Do look for the mount. */
+  if (ch->specials.riding) do_look(ch->specials.riding, "\0", CMD_LOOK);
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) {
-   GET_MOVE(ch)=0;
+  /* Signal the room the character just moved to. */
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return FALSE;
+  /* In case MSG_ENTER kills. */
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return FALSE;
+
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP) && !IS_IMMORTAL(ch)) {
+    send_to_char("\n\rYour movement points have been drained by the surroundings.\n\r", ch);
+    GET_MOVE(ch) = 0;
   }
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANADRAIN)) {
-    send_to_char("\n\rYour mana has been drained by the surroundings.\n\r",ch);
-    GET_MANA(ch)=0;
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANADRAIN) && !IS_IMMORTAL(ch)) {
+    send_to_char("\n\rYour mana has been drained by the surroundings.\n\r", ch);
+    GET_MANA(ch) = 0;
   }
 
-  if(dt_or_hazard(ch)) return(-1);
+  if (dt_or_hazard(ch)) return -1;
 
-  percent = number(1, 110);
+  int check = number(1, 110);
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
-     IS_NPC(ch) && GET_POS(ch) != POSITION_FLYING &&
-     (percent > (GET_LEVEL(ch) * 2))) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
+      IS_NPC(ch) &&
+      GET_POS(ch) != POSITION_FLYING &&
+      (check > (GET_LEVEL(ch) * 2))) {
     act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("You fell into a trap!\n\r",ch);
+    send_to_char("You fell into a trap!\n\r", ch);
     REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
     GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
-    return(TRUE);
+    return TRUE;
   }
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
-     IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-     !IS_NPC(ch) && GET_POS(ch) != POSITION_FLYING &&
-     (percent > (GET_LEVEL(ch) * 2))) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
+      IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
+      !IS_NPC(ch) &&
+      GET_POS(ch) != POSITION_FLYING &&
+      (check > (GET_LEVEL(ch) * 2))) {
     act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("You fell into a trap!\n\r",ch);
+    send_to_char("You fell into a trap!\n\r", ch);
     REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
     GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
-    return(TRUE);
+    return TRUE;
   }
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&   /* Chaos03 */
-     (CHAOSMODE) && IS_MORTAL(ch) && GET_POS(ch) != POSITION_FLYING &&
-     (percent > (GET_LEVEL(ch)))) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
+      CHAOSMODE &&
+      IS_MORTAL(ch) &&
+      GET_POS(ch) != POSITION_FLYING &&
+      (check > (GET_LEVEL(ch)))) {
     act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("You fell into a trap!\n\r",ch);
+    send_to_char("You fell into a trap!\n\r", ch);
     REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
     GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
-    return(TRUE);
+    return TRUE;
   }
-  return(1);
+
+  return TRUE;
 }
 
 
-void do_move(struct char_data *ch, char *argument, int cmd)
-{
-  int was_in;
-  struct follow_type *k;
-  struct follow_type *next_dude;
-  OBJ *wall=0;
-
+void do_move(struct char_data *ch, char *argument, int cmd) {
   --cmd;
 
-  if(IS_SET(ch->specials.affected_by2,AFF_SEVERED)) {
-    send_to_char("Move without legs? How?\n\r",ch);
+  if (IS_SET(ch->specials.affected_by2, AFF_SEVERED)) {
+    send_to_char("Move without legs? How?\n\r", ch);
     return;
   }
 
-  if(ch->specials.death_timer==2) {
+  if (ch->specials.death_timer == 2) {
     send_to_char("You are near certain death, you can't move!\n\r", ch);
     return;
   }
 
-
-  if (!world[CHAR_REAL_ROOM(ch)].dir_option[cmd]) {
+  if (!world[CHAR_REAL_ROOM(ch)].dir_option[cmd] ||
+      EXIT(ch, cmd)->to_room_r == NOWHERE ||
+      EXIT(ch, cmd)->to_room_r == real_room(0)) {
     send_to_char("Alas, you cannot go that way...\n\r", ch);
-  } else {          /* Direction is possible */
+    return;
+  }
 
-    if (IS_SET(EXIT(ch, cmd)->exit_info, EX_JUMP) ||
-        IS_SET(EXIT(ch, cmd)->exit_info, EX_CLIMB) ||
-        IS_SET(EXIT(ch, cmd)->exit_info, EX_ENTER) ||
-        IS_SET(EXIT(ch, cmd)->exit_info, EX_CRAWL)) {
-      send_to_char("Alas, you cannot go that way...\n\r", ch);
+  if (IS_SET(EXIT(ch, cmd)->exit_info, EX_CLIMB) ||
+      IS_SET(EXIT(ch, cmd)->exit_info, EX_JUMP) ||
+      IS_SET(EXIT(ch, cmd)->exit_info, EX_CRAWL) ||
+      IS_SET(EXIT(ch, cmd)->exit_info, EX_ENTER)) {
+    send_to_char("Alas, you cannot go that way...\n\r", ch);
+    return;
+  }
+
+  if (IS_AFFECTED(ch, AFF_CHARM) && ch->master && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->master)) {
+    send_to_char("The thought of leaving your master makes you weep.\n\r", ch);
+    act("$n bursts into tears.", FALSE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+
+  if (IS_NPC(ch) && ch->specials.rider && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->specials.rider)) {
+    send_to_char("You don't want to leave your master.\n\r", ch);
+    return;
+  }
+
+  if (!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, cmd)->to_room_v)))) {
+    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
+    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    return;
+  }
+
+  if (IS_SET(EXIT(ch, cmd)->exit_info, EX_CLOSED)) {
+    if (EXIT(ch, cmd)->keyword) {
+      printf_to_char(ch, "The %s seems to be closed.\n\r", fname(EXIT(ch, cmd)->keyword));
+    }
+    else {
+      send_to_char("It seems to be closed.\n\r", ch);
+    }
+    return;
+  }
+
+  if (IS_SET(world[EXIT(ch, cmd)->to_room_r].room_flags, TUNNEL) &&
+    IS_MORTAL(ch) &&
+    count_mortals_real_room(EXIT(ch, cmd)->to_room_r) > 0 &&
+    !CHAOSMODE) {
+    send_to_char("It's too narrow to go there.\n\r", ch);
+    return;
+  }
+
+  int was_in = CHAR_REAL_ROOM(ch);
+
+  /* Move the character. */
+  if (do_simple_move(ch, cmd, 1) == 1) {
+    if (!ch) {
+      log_f("WARNING: ch doesn't exist after a movement");
       return;
     }
 
-    if((wall=get_obj_room(WALL_THORNS,CHAR_VIRTUAL_ROOM(ch)))) {
-      send_to_char("The wall of thorns blocks your way. Ouch!\n\r",ch);
-      damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-      return;
-    }
+    if (ch->followers) {
+      /* If success, move followers. */
+      for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
+        next_follower = temp_follower->next;
 
-    if (IS_SET(EXIT(ch, cmd)->exit_info, EX_CLOSED)) {
-      if (EXIT(ch, cmd)->keyword) {
-        printf_to_char(ch, "The %s seems to be closed.\n\r",fname(EXIT(ch, cmd)->keyword));
-      } else {
-        send_to_char("It seems to be closed.\n\r", ch);
-      }
-    } else if ((EXIT(ch, cmd)->to_room_r == NOWHERE ||
-                EXIT(ch, cmd)->to_room_r == real_room(0)))
-        send_to_char("Alas, you cannot go that way...\n\r", ch);
-      else if (IS_SET(world[EXIT(ch, cmd)->to_room_r].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(EXIT(ch, cmd)->to_room_r)>0 && IS_MORTAL(ch))
-        send_to_char("It's too narrow to go there.\n\r", ch);
+        if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
 
-      else if ((wall=get_obj_room(WALL_THORNS,EXIT(ch, cmd)->to_room_v))) {
-        send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-        damage(ch,ch,30,TYPE_UNDEFINED,DAM_NO_BLOCK_NO_FLEE);
-      }
-      else if (!ch->followers && !ch->master)
-        do_simple_move(ch,cmd,FALSE,1);
-      else {
-
-      if (IS_AFFECTED(ch, AFF_CHARM) && (ch->master) &&
-        (CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->master))) {
-       send_to_char("The thought of leaving your master makes you weep.\n\r", ch);
-       act("$n bursts into tears.", FALSE, ch, 0, 0, TO_ROOM);}
-      else if (ch->specials.rider && IS_NPC(ch) &&
-             (CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->specials.rider)))
-        send_to_char("You don't want to leave your master.\n\r", ch);
-      else {
-      was_in = CHAR_REAL_ROOM(ch);
-      if (do_simple_move(ch, cmd, TRUE,1) == 1) { /* Move the character */
-        if(!ch) {
-          log_f("WARNING: ch doesn't exist after a movement");
-          return;
-        }
-        if (ch->followers) {
-          /* If success move followers */
-          /* Ridden mounts now move with rider in do_simple_move - Ranger Aug 96 */
-          for(k = ch->followers; k; k = next_dude) {
-            next_dude = k->next;
-            if ((was_in == CHAR_REAL_ROOM(k->follower)) &&
-              (GET_POS(k->follower) >= POSITION_STANDING) ) {
-            act("You follow $N.", FALSE, k->follower, 0, ch, TO_CHAR);
-            cmd++;
-            send_to_char("\n\r", k->follower);
-            do_move(k->follower, argument, cmd);
-            cmd--;
-            }
-          }
-        }
-      }
+        act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
+        cmd++;
+        send_to_char("\n\r", temp_follower->follower);
+        do_move(temp_follower->follower, argument, cmd);
+        cmd--;
       }
     }
   }
@@ -2275,7 +2310,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  if (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v))) {
+  if (!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
     send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
     damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
     return;
@@ -2289,12 +2324,12 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(world[other_room].room_flags, TUNNEL) && !CHAOSMODE && count_mortals_real_room(other_room) > 0 && IS_MORTAL(ch)) {
+  if (IS_SET(world[other_room].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(other_room)) > 0 && !CHAOSMODE) {
     send_to_char("It's too narrow to go there.\n\r", ch);
     return;
   }
 
-  if (IS_SET(world[other_room].room_flags, FLYING) && !CHAOSMODE && IS_MORTAL(ch) && !IS_AFFECTED(ch, AFF_FLY)) {
+  if (IS_SET(world[other_room].room_flags, FLYING) && !IS_AFFECTED(ch, AFF_FLY) && IS_MORTAL(ch) && !CHAOSMODE) {
     send_to_char("You are not flying.\n\r", ch);
     return;
   }
@@ -2303,13 +2338,23 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   if (up_down && (door == UP || door == DOWN)) {
     snprintf(buf, sizeof(buf), "$n %s %s the $F.", special_move_str[dir_type][DIR_PLURAL], dirs[door]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    if (!IS_AFFECTED(ch, AFF_SNEAK)) {
+      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    }
+    else {
+      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_GROUP);
+    }
     snprintf(buf, sizeof(buf), "You %s %s the $F.", special_move_str[dir_type][DIR_SINGULAR], dirs[door]);
     act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
   }
   else {
     snprintf(buf, sizeof(buf), "$n %s%sthe $F.", special_move_str[dir_type][DIR_PLURAL], special_move_str[dir_type][DIR_ADVERB_POST]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    if (!IS_AFFECTED(ch, AFF_SNEAK)) {
+      act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
+    }
+    else {
+      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_GROUP);
+    }
     snprintf(buf, sizeof(buf), "You %s%sthe $F.", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_POST]);
     act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
   }
@@ -2317,8 +2362,12 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   char_from_room(ch);
   char_to_room(ch, other_room);
 
-  if (!IS_AFFECTED(ch, AFF_SNEAK)) {
-    act("$n has arrived.", 2, ch, 0, 0, TO_ROOM);
+  snprintf(buf, sizeof(buf), "$n as arrived.");
+  if (IS_AFFECTED(ch, AFF_SNEAK)) {
+    act(buf, 2, ch, 0, 0, TO_GROUP);
+  }
+  else {
+    act(buf, 2, ch, 0, 0, TO_ROOM);
   }
 
   do_look(ch, "\0", CMD_LOOK);

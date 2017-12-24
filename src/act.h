@@ -233,7 +233,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd);
 
 /* Utility things */
 
-int do_simple_move(CHAR *ch, int cmd, int following,int spec_check);
+int do_simple_move(CHAR *ch, int cmd, int spec_check);
 void do_move(CHAR *ch, char *argument, int cmd);
 void do_peek(CHAR *ch, char *argument, int cmd);
 int find_door(CHAR *ch, char *type, char *dir);

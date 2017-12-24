@@ -38,12 +38,15 @@ int signal_object(struct obj_data *obj, struct char_data *ch, int cmd, char *arg
 int signal_world(struct char_data *ch, int cmd, char* arg);
 int signal_zone(struct char_data *ch, int zone,int cmd, char*arg);
 
+void send_to_group(char *messg, struct char_data *ch, int same_room);
+void send_to_group(char *messg, struct char_data *ch, int same_room);
 
 #define TO_ROOM    0
 #define TO_VICT    1
 #define TO_NOTVICT 2
 #define TO_CHAR    3
 #define TO_OTHER   4
+#define TO_GROUP   5
 
 int write_to_descriptor(int desc, char *txt);
 void write_to_q(char *txt, struct txt_q *queue);
