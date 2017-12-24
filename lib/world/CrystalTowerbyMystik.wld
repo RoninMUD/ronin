@@ -169,12 +169,35 @@ D2
 ~
 0 -1 17305
 E
-realm~
-  In this painting you see a set of huge gates. Standing before the gates 
-is an enormous dragon being ridden by a wiry man dressed in black. The
-man looks sleazy, even in this painting. You conclude that the painter 
-was either exceptionally gifted, or exceptionally biased. The figure has 
-an ornate black shield on his left arm.~
+winterhaven~
+  The scene depicted in this painting is of the main square in what looks 
+to be a frontier town. There is a copious amount of snow on the ground,
+suggesting that this scene is in the far north. In the foreground of this 
+painting is an unlikely trio. They are a dwarf, an elf, and what looks to 
+be a Gnoll, all dressed in armor, covered by furs.  The dwarf seems to be 
+old, even by his race's standards. However, that has not seemed to have 
+affected the way he carries that notched battle-ax he is holding. He is 
+wearing a well crafted suit of dwarven chainmail and carrying a shield that 
+has seen much use.  The elf is definitely an oddity. He seems to be wearing 
+a suit of elven chain, complete with chain leggings to go with it. The 
+unusual thing is his weapons. He has two kopesh in scabbards on his hips. 
+He doesn't look strong enough to hold two of those unwieldy weapons, let 
+alone fight with them. His shoulders are covered by a cloak that would do 
+any thief justice its camouflage coloring.  The gnoll is wearing platemail 
+on his body. His weapon is a halberd that is taller than even his seven 
+foot height. His dog-like face is marred by scars that could only have 
+come from a vicious fight. He looks like the type to prefer the subtleties 
+of a bloody brawl over the intricacies of a diplomatic remark.
+~
+E
+murkwood~
+  This picture is almost unremarkable. It seem to be a scene in the depths
+of a forest, but for some reason you feel uneasy when looking at it. After 
+studying it for a few minutes, you realize that you can barely see two 
+glowing eyes in the bushes. As you look at them, your feeling of unease 
+increases. You quickly decide that the other pictures warrant more of your 
+time.
+~
 E
 Sarth~
   This picture seems to be set in front of a large stone structure. 
@@ -201,35 +224,12 @@ air. On his left arm is a medium war shield emblazoned the same as the
 second man's shield. In his right hand is a beautifully crafted mace that
 must have cost a fortune.~
 E
-murkwood~
-  This picture is almost unremarkable. It seem to be a scene in the depths
-of a forest, but for some reason you feel uneasy when looking at it. After 
-studying it for a few minutes, you realize that you can barely see two 
-glowing eyes in the bushes. As you look at them, your feeling of unease 
-increases. You quickly decide that the other pictures warrant more of your 
-time.
-~
-E
-winterhaven~
-  The scene depicted in this painting is of the main square in what looks 
-to be a frontier town. There is a copious amount of snow on the ground,
-suggesting that this scene is in the far north. In the foreground of this 
-painting is an unlikely trio. They are a dwarf, an elf, and what looks to 
-be a Gnoll, all dressed in armor, covered by furs.  The dwarf seems to be 
-old, even by his race's standards. However, that has not seemed to have 
-affected the way he carries that notched battle-ax he is holding. He is 
-wearing a well crafted suit of dwarven chainmail and carrying a shield that 
-has seen much use.  The elf is definitely an oddity. He seems to be wearing 
-a suit of elven chain, complete with chain leggings to go with it. The 
-unusual thing is his weapons. He has two kopesh in scabbards on his hips. 
-He doesn't look strong enough to hold two of those unwieldy weapons, let 
-alone fight with them. His shoulders are covered by a cloak that would do 
-any thief justice its camouflage coloring.  The gnoll is wearing platemail 
-on his body. His weapon is a halberd that is taller than even his seven 
-foot height. His dog-like face is marred by scars that could only have 
-come from a vicious fight. He looks like the type to prefer the subtleties 
-of a bloody brawl over the intricacies of a diplomatic remark.
-~
+realm~
+  In this painting you see a set of huge gates. Standing before the gates 
+is an enormous dragon being ridden by a wiry man dressed in black. The
+man looks sleazy, even in this painting. You conclude that the painter 
+was either exceptionally gifted, or exceptionally biased. The figure has 
+an ornate black shield on his left arm.~
 S
 #17309
 Laboratory~

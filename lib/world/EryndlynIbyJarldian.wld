@@ -835,8 +835,9 @@ D2
 ~
 0 -1 5138
 E
-chasm~
-You see only pitch darkness...
+bridge~
+This chained bridge looks sturdy enough to cross, though the wind seems to
+whip it around like nothing...
 ~
 E
 chained~
@@ -844,9 +845,8 @@ This chained bridge looks sturdy enough to cross, though the wind seems to
 whip it around like nothing...
 ~
 E
-bridge~
-This chained bridge looks sturdy enough to cross, though the wind seems to
-whip it around like nothing...
+chasm~
+You see only pitch darkness...
 ~
 S
 #5138
@@ -871,13 +871,13 @@ D0
 ~
 0 -1 5137
 E
+chasm~
+You see only pitch darkness...
+~
+E
 pier~
 This pier is composed entirely of glass and has chained bars that gives 
 any visitor grip against the strong winds of the chasm.
-~
-E
-chasm~
-You see only pitch darkness...
 ~
 S
 #5139

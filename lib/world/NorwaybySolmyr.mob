@@ -15,7 +15,7 @@ carrying a rusty shovel.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #19001
 fox rev~
 a red fox~
@@ -31,7 +31,7 @@ The fox is a shy animal, so he tries to keep out of your way.
 89 0 1d1+1 0
 0 0 0 0
 K
-3000 0 0 0 0 0
+3000 0 0 0 0 0 0
 #19002
 moose elg~
 a large moose~
@@ -49,7 +49,7 @@ injure or kill any big predator that tries to take it on.
 86 0 1d1+1 0
 0 0 0 0
 K
-16000 0 0 0 0 0
+16000 0 0 0 0 0 0
 #19003
 wolf ulv~
 A silvery wolf~
@@ -67,7 +67,7 @@ powerful.
 89 0 1d1+1 0
 0 0 0 0
 K
-12000 0 0 0 0 0
+12000 0 0 0 0 0 0
 #19004
 lynx gaupe~
 A lynx~
@@ -87,7 +87,7 @@ hair on their ears.
 90 0 1d1+1 0
 0 0 0 0
 K
-6000 0 0 0 0 0
+6000 0 0 0 0 0 0
 #19005
 reindeer reinsdyr~
 a reindeer~
@@ -105,7 +105,7 @@ seemingly enjoying every bite.
 86 0 1d1+1 0
 0 0 0 0
 K
-10000 0 0 0 0 0
+10000 0 0 0 0 0 0
 #19006
 roedeer deer roe raadyr~
 a roe deer~
@@ -122,7 +122,7 @@ wary of its surroundings since there are many predators around.
 86 0 1d1+1 0
 0 0 0 0
 K
-4000 0 0 0 0 0
+4000 0 0 0 0 0 0
 #19007
 bear brown bjoern~
 a brown bear~
@@ -139,7 +139,7 @@ does hunt for meat it is an awesome sight.
 86 0 1d1+1 0
 0 0 0 0
 K
-25000 0 0 0 0 0
+25000 0 0 0 0 0 0
 #19008
 lemming lemen~
 a lemming~
@@ -156,7 +156,7 @@ a very short tail.
 86 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #19009
 adder viper huggorm~
 An adder~
@@ -174,7 +174,7 @@ there is a characteristic V-shaped marking: V for Viper.
 80 0 1d1+1 0
 0 0 0 0
 K
-8000 0 0 0 0 0
+8000 0 0 0 0 0 0
 #19010
 wolverine jerv~
 A wolverine~
@@ -192,7 +192,7 @@ of winter.
 86 0 1d1+1 0
 0 0 0 0
 K
-14000 0 0 0 0 0
+14000 0 0 0 0 0 0
 #19011
 man-eater bear slagbjoern~
 a man-eater~
@@ -210,6 +210,6 @@ muscular and its paws must be two feet wide.
 86 0 1d1+1 0
 0 0 0 0
 K
-70000 908 0 0 0 0
+70000 19008 0 0 0 0 0
 #0
 $~
