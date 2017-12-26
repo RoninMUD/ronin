@@ -965,6 +965,15 @@ const int aq_mob_master_list[][2] = {
   { 27105, 4 }, /* cannibal witchdoctor */
   { 27720, 4 }, /* myrdon thief rogue master */
   { 27721, 4 }, /* shadowraith ninja assassin jal pur */
+  { 28708, 4 }, /* achilles hero immortal */
+  { 28709, 4 }, /* odysseus king hero immortal */
+  { 28710, 4 }, /* perseus hero immortal */
+  { 28711, 4 }, /* oedipus hero immortal */
+  { 28712, 4 }, /* theseus king hero immortal */
+  { 28714, 4 }, /* prometheus hero immortal */
+  { 28716, 4 }, /* agamemnon king hero immortal */
+  { 28717, 4 }, /* jason hero immortal */
+  { 28718, 4 }, /* pandora immortal */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
   { 5105, 5 }, /* drow apprentice */
@@ -1017,6 +1026,7 @@ const int aq_mob_master_list[][2] = {
   { 26583, 6 }, /* guru */
   { 26706, 6 }, /* creature large hideous mutated rat yeti human */
   { 26707, 6 }, /* observer tower mage old man */
+  { 28700, 6 }, /* icarus immortal */
   //{ 27722, 6 }, /* shomed nomad hero tarion desert */
 };
 

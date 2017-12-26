@@ -132,7 +132,7 @@ roots trip - rooms 28504 28511 28515 28516 28517
 int ench_root_room(int room, CHAR *ch, int cmd, char *arg) {
 
   if(!ch) return FALSE;
-  if(cmd >= CMD_NORTH && cmd <= CMD_DOWN && chance(40)) {
+  if(cmd >= CMD_NORTH && cmd <= CMD_DOWN && chance(20)) {
     if (IS_NPC(ch)) return FALSE;
     if(ch->specials.riding) return FALSE;
     if(!IS_AFFECTED(ch,AFF_FLY)) {
@@ -1581,7 +1581,7 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
       if(has_valor) {
         act("$n says 'You have proven your valor, but I need more from you.'",0,mob,0,0,TO_ROOM);
-        countdown=10;
+        countdown=20;
         return TRUE;
       }
     }
@@ -1594,7 +1594,7 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
       if(has_valor && has_truth) {
         act("$n says 'You have proven your honesty, but I need more from you.'",0,mob,0,0,TO_ROOM);
-        countdown=10;
+        countdown=20;
         return TRUE;
       }
       else {
@@ -1613,7 +1613,7 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
       if(has_valor && has_truth && has_courage) {
         act("$n says 'The gods have deemed you worthy, you may pass.'\n\rA golden staircase descends from the heavens and touches the ground.\n\r",0,mob,0,0,TO_ROOM);
-        countdown=5;
+        countdown=20;
         if(real_room(28542)==NOWHERE || real_room(28780)==NOWHERE ||
            !world[real_room(28542)].dir_option[UP] ||
            !world[real_room(28780)].dir_option[DOWN]) {
