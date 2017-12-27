@@ -845,9 +845,6 @@ const int aq_mob_master_list[][2] = {
   { 13011, 2 }, /* owlbear */
   { 14000, 2 }, /* ghost father man figure */
   { 14502, 2 }, /* Yorla sayer truth hag old wretched */
-  { 16507, 2 }, /* ancient wax knight faze */
-  { 16513, 2 }, /* proto-horse proto horse wax */
-  { 16526, 2 }, /* jenny consort girl */
   { 16803, 2 }, /* revenant form */
   { 16804, 2 }, /* hunter arctic man squat */
   { 17300, 2 }, /* crystal golem statue warrior */
@@ -897,7 +894,10 @@ const int aq_mob_master_list[][2] = {
   { 12201, 3 }, /* cleric ettin et cl */
   { 13017, 3 }, /* tree ant treeant */
   { 14509, 3 }, /* priest arak */
-  { 16508, 3 }, /* wax knight bill janitor */
+  { 16507, 3 }, /* ancient wax knight faze */
+  { 16508, 3 }, /* wax knight bill janitor */  
+  { 16513, 3 }, /* proto-horse proto horse wax */
+  { 16526, 3 }, /* jenny consort girl */
   //{ 17001, 3 }, /* atropos doctor agent */
   //{ 17003, 3 }, /* sand beast pile */
   { 21109, 3 }, /* root tree large */
@@ -989,7 +989,6 @@ const int aq_mob_master_list[][2] = {
   { 11326, 5 }, /* vampire strahd count */
   //{ 17004, 5 }, /* twixt bard man master */
   //{ 17010, 5 }, /* minion lesser */
-  { 17306, 5 }, /* pit fiend */
   { 17308, 5 }, /* marcus wizard mage */
   { 20145, 5 }, /* Shogun Warlord Samurai */
   { 21204, 5 }, /* adrel sage magic */
@@ -1019,6 +1018,7 @@ const int aq_mob_master_list[][2] = {
   //{ 11514, 6 }, /* wyvern */
   { 13019, 6 }, /* elf elven master beastmaster */
   //{ 17002, 6 }, /* vermilion king */
+  { 17306, 6 }, /* pit fiend */
   { 17342, 6 }, /* troll cook chef */
   { 20107, 6 }, /* Raiden */
   //{ 23001, 6 }, /* remorhaz ice burrower */
