@@ -433,7 +433,7 @@ void do_sneak(struct char_data *ch, char *argument, int cmd)
   }
   else {
     af.type       = SKILL_SNEAK;
-    af.duration   = GET_LEVEL(ch);
+    af.duration   = -1;
     af.modifier   = 0;
     af.location   = 0;
     af.bitvector  = AFF_SNEAK;

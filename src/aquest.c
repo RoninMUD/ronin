@@ -845,9 +845,6 @@ const int aq_mob_master_list[][2] = {
   { 13011, 2 }, /* owlbear */
   { 14000, 2 }, /* ghost father man figure */
   { 14502, 2 }, /* Yorla sayer truth hag old wretched */
-  { 16507, 2 }, /* ancient wax knight faze */
-  { 16513, 2 }, /* proto-horse proto horse wax */
-  { 16526, 2 }, /* jenny consort girl */
   { 16803, 2 }, /* revenant form */
   { 16804, 2 }, /* hunter arctic man squat */
   { 17300, 2 }, /* crystal golem statue warrior */
@@ -897,7 +894,10 @@ const int aq_mob_master_list[][2] = {
   { 12201, 3 }, /* cleric ettin et cl */
   { 13017, 3 }, /* tree ant treeant */
   { 14509, 3 }, /* priest arak */
-  { 16508, 3 }, /* wax knight bill janitor */
+  { 16507, 3 }, /* ancient wax knight faze */
+  { 16508, 3 }, /* wax knight bill janitor */  
+  { 16513, 3 }, /* proto-horse proto horse wax */
+  { 16526, 3 }, /* jenny consort girl */
   //{ 17001, 3 }, /* atropos doctor agent */
   //{ 17003, 3 }, /* sand beast pile */
   { 21109, 3 }, /* root tree large */
@@ -989,7 +989,6 @@ const int aq_mob_master_list[][2] = {
   { 11326, 5 }, /* vampire strahd count */
   //{ 17004, 5 }, /* twixt bard man master */
   //{ 17010, 5 }, /* minion lesser */
-  { 17306, 5 }, /* pit fiend */
   { 17308, 5 }, /* marcus wizard mage */
   { 20145, 5 }, /* Shogun Warlord Samurai */
   { 21204, 5 }, /* adrel sage magic */
@@ -1019,6 +1018,7 @@ const int aq_mob_master_list[][2] = {
   //{ 11514, 6 }, /* wyvern */
   { 13019, 6 }, /* elf elven master beastmaster */
   //{ 17002, 6 }, /* vermilion king */
+  { 17306, 6 }, /* pit fiend */
   { 17342, 6 }, /* troll cook chef */
   { 20107, 6 }, /* Raiden */
   //{ 23001, 6 }, /* remorhaz ice burrower */
@@ -1030,7 +1030,28 @@ const int aq_mob_master_list[][2] = {
   //{ 27722, 6 }, /* shomed nomad hero tarion desert */
 };
 
+static bool aq_calc_skip = FALSE;
+
 int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
+  static int skip_aq2 = 0, skip_aq4 = 0;
+
+  if (!aq_calc_skip) {
+    int aq2 = 0, aq3 = 0, aq4 = 0;
+
+    for (int i = 0; i < NUMELEMS(aq_mob_master_list); i++) {
+      int aq_mob_quest_level = aq_mob_master_list[i][1];
+
+      if (aq_mob_quest_level == 2) aq2++;
+      if (aq_mob_quest_level == 3) aq3++;
+      if (aq_mob_quest_level == 4) aq4++;
+    }
+
+    if ((aq2 > 0) && (aq2 > aq3)) skip_aq2 = ((1.0 - ((double)aq3 / (double)aq2)) * 100);
+    if ((aq4 > 0) && (aq4 > aq3)) skip_aq4 = ((1.0 - ((double)aq3 / (double)aq4)) * 100);
+
+    aq_calc_skip = TRUE;
+  }
+
   int aq_mob_temp_list[NUMELEMS(aq_mob_master_list)][2];
   int aq_mob_num = 0;
 
@@ -1045,8 +1066,9 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
     if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
     if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
-                        aq_mob_quest_level > 4 ||                               // Note: There are 77 AQ 2s, 40 AQ 3s and 40 AQ 4s, so
-                       (aq_mob_quest_level == 2 && chance(48)))) continue;      //       skip 48% of the 2s for mid. Adjust as needed.
+                        aq_mob_quest_level > 4 ||
+                      ((aq_mob_quest_level == 2 && chance(skip_aq2)) ||
+                       (aq_mob_quest_level == 4 && chance(skip_aq4))))) continue;
 
     aq_mob_temp_list[aq_mob_num][0] = aq_mob_vnum;
     aq_mob_temp_list[aq_mob_num][1] = aq_mob_quest_level;
