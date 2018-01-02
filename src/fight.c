@@ -4113,42 +4113,41 @@ void victimize_action(CHAR *ch, CHAR *vict)
 }
 
 
-void shadowstep_action(CHAR *ch, CHAR *vict)
-{
-  int check = 0, dmg = 0;
-  double multi = 2.0;
-
+void shadowstep_action(CHAR *ch, CHAR *vict) {
   if (!ch || !vict) return;
 
   if (!EQ(ch, WIELD)) return;
 
-  check = number(1, 450) - (GET_DEX_APP(ch) * 5);
+  int check = number(1, 450) - (GET_DEX_APP(ch) * 5);
 
   if (check > GET_LEARNED(ch, SKILL_SHADOWSTEP)) return;
 
+  double multi = 2.0;
+
   if (!IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK) &&
-      ((IS_DAY && OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT)))
-  {
+    ((IS_DAY && IS_OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT))) {
     check += 50;
     multi -= 0.5;
   }
 
-  if (IS_NIGHT && IS_EVIL(ch))
-  {
-    check -= 25;
-    multi += 0.5;
+  if (IS_NIGHT) {
+    check -= 15;
+    multi += 0.3;
+
+    if (IS_EVIL(ch)) {
+      check -= 10;
+      multi += 0.2;
+    }
   }
 
-  if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK))
-  {
+  if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
     check -= 25;
     multi += 0.5;
   }
 
   if (!CAN_SEE(vict, ch) ||
       affected_by_spell(ch, SPELL_IMP_INVISIBLE) ||
-      affected_by_spell(ch, SPELL_BLACKMANTLE))
-  {
+      affected_by_spell(ch, SPELL_BLACKMANTLE)) {
     check -= 25;
     multi += 0.5;
   }
@@ -4156,13 +4155,11 @@ void shadowstep_action(CHAR *ch, CHAR *vict)
   if (multi < 1.5) multi = 1.5;
   else if (multi > 3.0) multi = 3.0;
 
-  dmg = (int)((double)calc_hit_damage(ch, vict, EQ(ch, WIELD)) * multi);
-
   act("You step into the shadows and attack $N by surprise!", FALSE, ch, 0, vict, TO_CHAR);
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
-  damage(ch, vict, dmg, get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
+  damage(ch, vict, (calc_hit_damage(ch, vict, EQ(ch, WIELD)) * multi), get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
 }
 
 

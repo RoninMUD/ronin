@@ -379,7 +379,7 @@ int fly_walk(CHAR *flyer, CHAR *ch, int cmd, char *arg) {
   this_room = CHAR_REAL_ROOM(flyer);
   char_room = CHAR_REAL_ROOM(owner);
 
-  if (OUTSIDE(flyer) && (weather_info.sky>SKY_RAINING) && (GET_POS(flyer)==POSITION_FLYING)) {
+  if (IS_OUTSIDE(flyer) && (weather_info.sky>SKY_RAINING) && (GET_POS(flyer)==POSITION_FLYING)) {
      if (this_room==char_room)
         act("$n refuses to fly in this weather.", FALSE, flyer, 0, owner, TO_VICT);
      GET_POS(flyer)=POSITION_STANDING;
@@ -387,7 +387,7 @@ int fly_walk(CHAR *flyer, CHAR *ch, int cmd, char *arg) {
      return(FALSE);
   }
 
-  if (OUTSIDE(flyer) && (weather_info.sky<=SKY_RAINING) && (GET_POS(flyer)==POSITION_STANDING)
+  if (IS_OUTSIDE(flyer) && (weather_info.sky<=SKY_RAINING) && (GET_POS(flyer)==POSITION_STANDING)
       && !IS_SET(world[CHAR_REAL_ROOM(flyer)].room_flags, TUNNEL) ) {
      if (this_room==char_room)
         act("$n opens its wings and begins to fly.", FALSE, flyer, 0, owner, TO_VICT);
@@ -396,7 +396,7 @@ int fly_walk(CHAR *flyer, CHAR *ch, int cmd, char *arg) {
      return(FALSE);
   }
 
-  if ((!OUTSIDE(flyer)||IS_SET(world[CHAR_REAL_ROOM(flyer)].room_flags, TUNNEL))
+  if ((!IS_OUTSIDE(flyer)||IS_SET(world[CHAR_REAL_ROOM(flyer)].room_flags, TUNNEL))
       && (GET_POS(flyer)==POSITION_FLYING)) {
      if (this_room==char_room)
         act("$n can't fly in enclosed spaces.", FALSE, flyer, 0, owner, TO_VICT);

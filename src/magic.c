@@ -646,7 +646,7 @@ void spell_call_lightning(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 
   dam = dice(MIN(level,30), 8);
 
-  if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
+  if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
     if (saves_spell(victim, SAVING_SPELL,level))
       dam >>= 1;
 

@@ -24,8 +24,8 @@
 
 #define CREATE_ROOM 1
 #define CREATE_MOB  2
-#define CREATE_ZONE 3
-#define CREATE_OBJ  4
+#define CREATE_OBJ  3
+#define CREATE_ZONE 4
 #define CREATE_SHOP 5
 
 #define EDIT_ROOM 1
@@ -84,391 +84,424 @@ void fwrite_string(FILE *wfile,char *wstr)
     fprintf(wfile,"~\n");
 }
 
+void print_bits_to_char(const char * const *bits, CHAR *ch) {
+  if (!bits || !ch) return;
+
+  const int wrap = 70;
+  char buf[wrap + 3]; // Enough for wrap, plus "\n", "\r", and "\0".
+
+  buf[0] = 0;
+
+  for (int i = 0; *bits[i] != '\n'; i++) {
+    if ((strlen(buf) + strlen(bits[i]) + 1) > wrap) {
+      strcat(buf, "\n\r");
+      send_to_char(buf, ch);
+      buf[0] = 0;
+    }
+
+    strcat(buf, bits[i]);
+
+    if ((*bits[i + 1] != '\n') && (strlen(buf) + 1 < wrap)) {
+      strcat(buf, " ");
+    }
+  }
+
+  if (strlen(buf) > 0) {
+    strcat(buf, "\n\r");
+    send_to_char(buf, ch);
+  }
+}
+
 /* The following are new olc commands to improve area creation functionality.
 **
 ** Added by Ranger
 */
 
 int check_olc_access(CHAR *ch) {
-  if(!IS_SET(ch->new.imm_flags, WIZ_CREATE) ||
-     !IS_SET(ch->new.imm_flags, WIZ_ACTIVE) ||
-     !IS_SET(ch->new.imm_flags, WIZ_TRUST)  ||
-      IS_SET(ch->new.imm_flags, WIZ_FREEZE)) {
-    send_to_char("`iYou are not allowed to use the online creation system.`q\n\r",ch);
+  if (!IS_SET(GET_IMM_FLAGS(ch), WIZ_CREATE) ||
+      !IS_SET(GET_IMM_FLAGS(ch), WIZ_ACTIVE) ||
+      !IS_SET(GET_IMM_FLAGS(ch), WIZ_TRUST) ||
+      IS_SET(GET_IMM_FLAGS(ch), WIZ_FREEZE)) {
+    send_to_char("`iYou are not allowed to use the online creation system.`q\n\r", ch);
     return FALSE;
   }
   return TRUE;
 }
 
 int check_zone_access(CHAR *ch, int zone) {
-  if(GET_LEVEL(ch)>LEVEL_WIZ) return TRUE;
-  if(strstr(zone_table[real_zone(zone)].creators,"ALL")) return TRUE;
-  if(isname(GET_NAME(ch), zone_table[real_zone(zone)].name)) return TRUE;
-  if(strstr(zone_table[real_zone(zone)].creators,GET_NAME(ch))) return TRUE;
-  send_to_char("`iYou are not allowed to work on a zone without your name on it.`q\n\r",ch);
+  if (GET_LEVEL(ch) > LEVEL_WIZ) return TRUE;
+  if (strstr(zone_table[real_zone(zone)].creators, "ALL")) return TRUE;
+  if (isname(GET_NAME(ch), zone_table[real_zone(zone)].name)) return TRUE;
+  if (strstr(zone_table[real_zone(zone)].creators, GET_NAME(ch))) return TRUE;
+  send_to_char("`iYou are not allowed to work on a zone without your name on it.`q\n\r", ch);
+  return FALSE;
+}
+
+int check_zone_access_no_message(CHAR *ch, int zone) {
+  if (GET_LEVEL(ch) > LEVEL_WIZ) return TRUE;
+  if (strstr(zone_table[real_zone(zone)].creators, "ALL")) return TRUE;
+  if (isname(GET_NAME(ch), zone_table[real_zone(zone)].name)) return TRUE;
+  if (strstr(zone_table[real_zone(zone)].creators, GET_NAME(ch))) return TRUE;
   return FALSE;
 }
 
 int check_zone(CHAR *ch, int zone) {
-  if(real_zone(zone)==NOWHERE) {
-    send_to_char("`iThat zone doesn't exist.`q\n\r",ch);
+  if (real_zone(zone) == -1) {
+    send_to_char("`iThat zone doesn't exist.`q\n\r", ch);
     return FALSE;
   }
   return TRUE;
 }
 
-int check_room(CHAR *ch, int room) {
-  if(room==NOWHERE || room>top_of_world) {
-    send_to_char("`iThat room doesn't exist.`q\n\r",ch);
+int check_room(CHAR *ch, int real_room) {
+  if (real_room == -1 || real_room > top_of_world) {
+    send_to_char("`iThat room doesn't exist.`q\n\r", ch);
     return FALSE;
   }
   return TRUE;
 }
 
-int check_mob(CHAR *ch, int rmob) {
-  if(rmob==NOWHERE) {
-    send_to_char("`iThat mob doesn't exist.`q\n\r",ch);
+int check_mob(CHAR *ch, int real_mob) {
+  if (real_mob == -1) {
+    send_to_char("`iThat mobile doesn't exist.`q\n\r", ch);
     return FALSE;
   }
   return TRUE;
 }
 
-int check_obj(CHAR *ch, int robj) {
-  if(robj==NOWHERE) {
-    send_to_char("`iThat obj doesn't exist.`q\n\r",ch);
+int check_obj(CHAR *ch, int real_obj) {
+  if (real_obj == -1) {
+    send_to_char("`iThat object doesn't exist.`q\n\r", ch);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+int check_zone_no_message(int zone) {
+  if (real_zone(zone) == -1) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+int check_room_no_message(int real_room) {
+  if (real_room == -1 || real_room > top_of_world) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+int check_mob_no_message(int real_mob) {
+  if (real_mob == -1) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+int check_obj_no_message(int real_obj) {
+  if (real_obj == -1) {
     return FALSE;
   }
   return TRUE;
 }
 
 void do_create(CHAR* ch, char *arg, int cmd) {
-  char arg1[100]="", arg2[100]="";
-  int creation=0;
+  char usage[] = {
+    "Usage: create <room|object|mobile|zone|shop> <number>\n\r"
+  };
 
-  if(!check_olc_access(ch)) return;
-  sscanf(arg, " %s %s ", arg1, arg2);
-  if(arg1[0] != '\0') {
-    if(is_abbrev(arg1, "room"))
-      creation = CREATE_ROOM;
-    if(is_abbrev(arg1, "mobile"))
-      creation = CREATE_MOB;
-    if(is_abbrev(arg1, "object"))
-      creation = CREATE_OBJ;
-    if(is_abbrev(arg1, "zone"))
-      creation = CREATE_ZONE;
-    if(is_abbrev(arg1, "shop"))
-      creation = CREATE_SHOP;
+  if (!check_olc_access(ch)) return;
+
+  char arg1[256], arg2[256];
+
+  sscanf(arg, "%255s %255s", arg1, arg2);
+
+  if (arg1[0] == '\0' || arg2[0] == '\0') {
+    send_to_char(usage, ch);
+    return;
   }
-  switch (creation) {
-    case CREATE_ROOM:
-      create_room(ch, arg2);
-      break;
-    case CREATE_MOB:
-      create_mob(ch, arg2);
-      break;
-    case CREATE_OBJ:
-      create_obj(ch, arg2);
-      break;
-    case CREATE_ZONE:
-      create_zone(ch, arg2);
-      break;
-    case CREATE_SHOP:
-      create_shop(ch, arg2);
-      break;
-    default:
-      send_to_char("create <room|object|mobile|zone|shop> <number>", ch);
-      break;
+
+  if (is_abbrev(arg1, "room")) {
+    create_room(ch, arg2);
+  }
+  else if (is_abbrev(arg1, "mobile")) {
+    create_mob(ch, arg2);
+  }
+  else if (is_abbrev(arg1, "object")) {
+    create_obj(ch, arg2);
+  }
+  else if (is_abbrev(arg1, "zone")) {
+    create_zone(ch, arg2);
+  }
+  else if (is_abbrev(arg1, "shop")) {
+    create_shop(ch, arg2);
+  }
+  else {
+    send_to_char(usage, ch);
+    return;
   }
 }
 
 void create_zone(CHAR *ch, char *arg1) {
-  int number,index,year;
-  char buf[MIL];
-  long ct;
-  struct tm *timeStruct;
-
-  if(GET_LEVEL(ch) < LEVEL_SUP) {
-    send_to_char("You may not create a zone.\r\n",ch);
+  if (GET_LEVEL(ch) < LEVEL_SUP) {
+    send_to_char("You may not create a zone.\r\n", ch);
     return;
   }
 
-   sscanf(arg1, "%d", &number);
-   if(number==320) {
-     send_to_char("Zone # 320 is a reserved zone # used for object versions.\n\r",ch);
-     return;
-   }
-   index = real_zone(number);
-   if(index == -1)
-     {
-   index = allocate_zone(number);
-   zone_table[index].virtual      = number;
-   zone_table[index].name         = str_dup("A temporary name");
-   zone_table[index].lifespan     = 10;
-   zone_table[index].age          =  0;
-   ct=time(0);
-   timeStruct = localtime(&ct);
-   year=1900+timeStruct->tm_year;
-   sprintf(buf,"%2d%s%4d",timeStruct->tm_mday,Month[timeStruct->tm_mon],year);
-	 zone_table[index].create_date  = str_dup(buf);
-   zone_table[index].mod_date     = str_dup(buf);
-   zone_table[index].climate      = 0;
-   zone_table[index].creators     = str_dup("Unknown");
-   zone_table[index].mult_hp      = 100;
-   zone_table[index].mult_mana    = 100;
-   zone_table[index].mult_hitroll = 100;
-   zone_table[index].mult_damage  = 100;
-   zone_table[index].mult_armor   = 100;
-   zone_table[index].mult_xp      = 100;
-   zone_table[index].mult_gold    = 100;
-   zone_table[index].mult_level   = 100;
+  int zone_num = -1;
 
-	 if(index)
-     {
-     if(index != top_of_zone_table)
-       {
-       zone_table[index].top          =  number*100+99;
-       zone_table[index].bottom       =  number*100;
-       }
-     else
-       {
-       zone_table[index].top          =  number*100+99;
-       zone_table[index].bottom       =  number*100;
-       }
-     }
-   else
-     {
-       zone_table[index].top          =  number*100+99;
-       zone_table[index].bottom       =  number*100;
-     }
-   zone_table[index].reset_mode = 0;
-   CREATE(zone_table[index].cmd,struct reset_com, 1);
-   zone_table[index].cmd[0].command = 'S';
+  sscanf(arg1, "%d", &zone_num);
 
-   send_to_char("Zone created.\n\r",ch);
+  if (zone_num < 0) {
+    send_to_char("You must specify a zone number, and the number must be greater than 0.\n\r", ch);
+    return;
+  }
 
-   sprintf(buf,"%d",zone_table[index].bottom);
-   create_room(ch,buf);
-   sprintf(buf,"%d",zone_table[index].top);
-   create_room(ch,buf);
-   }
-  else
-   send_to_char("That zone already exists.\n\r", ch);
+  if (zone_num == 320) {
+    send_to_char("Zone # 320 is a reserved zone # used for object versions.\n\r", ch);
+    return;
+  }
+
+  if (real_zone(zone_num) != -1) {
+    send_to_char("That zone already exists.\n\r", ch);
+    return;
+  }
+
+  int zone_index = allocate_zone(zone_num);
+
+  zone_table[zone_index] = (const struct zone_data) { 0 };
+
+  zone_table[zone_index].virtual = zone_num;
+
+  zone_table[zone_index].name = str_dup("Temporary Zone");
+
+  zone_table[zone_index].creators = str_dup("Unknown");
+
+  zone_table[zone_index].top = ((zone_num * 100) + 99);
+  zone_table[zone_index].bottom = (zone_num * 100);
+
+  char timestamp[MSL];
+  const long ct = time(NULL);
+  struct tm *timeStruct = localtime(&ct);
+  snprintf(timestamp, sizeof(timestamp), "%2d%s%4d", timeStruct->tm_mday, Month[timeStruct->tm_mon], (timeStruct->tm_year + 1900));
+  zone_table[zone_index].create_date = str_dup(timestamp);
+  zone_table[zone_index].mod_date = str_dup(timestamp);
+
+  zone_table[zone_index].lifespan = 10;
+
+  zone_table[zone_index].mult_hp = 100;
+  zone_table[zone_index].mult_mana = 100;
+  zone_table[zone_index].mult_hitroll = 100;
+  zone_table[zone_index].mult_damage = 100;
+  zone_table[zone_index].mult_armor = 100;
+  zone_table[zone_index].mult_xp = 100;
+  zone_table[zone_index].mult_gold = 100;
+  zone_table[zone_index].mult_level = 100;
+
+  CREATE(zone_table[zone_index].cmd, struct reset_com, 1);
+  zone_table[zone_index].cmd[0].command = 'S';
+
+  char buf[MSL];
+  snprintf(buf, sizeof(buf), "%d", zone_table[zone_index].bottom);
+  create_room(ch, buf);
+  snprintf(buf, sizeof(buf), "%d", zone_table[zone_index].top);
+  create_room(ch, buf);
+
+  send_to_char("Zone created.\n\r", ch);
 }
 
 void create_room(CHAR *ch, char *arg1) {
-  int number;
-  int index;
-  int i,zone;
+  int room_num = -1;
 
-  sscanf(arg1, "%d", &number);
-  zone=number/100;
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  sscanf(arg1, "%d", &room_num);
 
-   index = real_room(number);
-   if(index == -1)
-   {
-   index = allocate_room(number);
-   world[index].number      = number;
-   world[index].name        = str_dup("A temporary name");
-   world[index].description = str_dup("A temporary description\n");
-   world[index].room_flags  = 0;
-   world[index].sector_type = 0;
-   world[index].funct       = NULL;
-   world[index].contents    = NULL;
-   world[index].people      = NULL;
-   world[index].light       = 0;
-   world[index].zone        = zone;
+  if (room_num < 0) {
+    send_to_char("You must specify a room number, and the number must be greater than 0.\n\r", ch);
+    return;
+  }
 
-   for(i=0;i<6;i++)
-     world[index].dir_option[i] = NULL;
-   world[index].ex_description = NULL;
-   /* Renumber the world to match the new real indeces */
-   renum_world();
-   send_to_char("Room created.\n\r",ch);
-   }
-  else
-   send_to_char("That room already exists.\n\r", ch);
+  int zone_num = (room_num / 100);
+
+  if (!check_zone(ch, room_num)) return;
+  if (!check_zone_access(ch, room_num)) return;
+
+  if (real_room(room_num) != -1) {
+    send_to_char("That room already exists.\n\r", ch);
+    return;
+  }
+
+  int room_index = allocate_room(room_num);
+
+  world[room_index] = (const struct room_data) { 0 };
+
+  world[room_index].number = room_num;
+  world[room_index].zone = zone_num;
+  world[room_index].name = str_dup("Temporary Room");
+  world[room_index].description = str_dup("Temporary description.\n");
+
+  renum_world();
+
+  send_to_char("Room created.\n\r", ch);
 }
 
 void create_obj(CHAR *ch, char *arg1) {
-  int virtual_nr;
-  int zone;
-  int i,loc;
+  int obj_num = -1;
 
-  sscanf(arg1, "%d", &virtual_nr);
-  zone = inzone(virtual_nr);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  sscanf(arg1, "%d", &obj_num);
 
-   i = real_object(virtual_nr);
-   if(i==-1)
-   {
-   i = allocate_obj(virtual_nr);
-   obj_proto_table[i].virtual            = virtual_nr;
-   obj_proto_table[i].name               = str_dup("nothing");
-   obj_proto_table[i].short_description  = str_dup("a bit of nothing");
-   obj_proto_table[i].description        = str_dup("There is a bit of nothing sitting here.");
-   obj_proto_table[i].action_description = NULL;
-   obj_proto_table[i].action_description_nt = NULL;
-   obj_proto_table[i].char_wear_desc     = NULL;
-   obj_proto_table[i].room_wear_desc     = NULL;
-   obj_proto_table[i].char_rem_desc      = NULL;
-   obj_proto_table[i].room_rem_desc      = NULL;
+  if (obj_num < 0) {
+    send_to_char("You must specify an object number, and the number must be greater than 0.\n\r", ch);
+    return;
+  }
 
-      /* *** numeric data *** */
+  int zone_num = inzone(obj_num);
 
-   obj_proto_table[i].obj_flags.type_flag = 0;
-   obj_proto_table[i].obj_flags.extra_flags = 0;
-   obj_proto_table[i].obj_flags.extra_flags2 = 0;
-   obj_proto_table[i].obj_flags.subclass_res = 0;
-   obj_proto_table[i].obj_flags.material = 0;
-   obj_proto_table[i].obj_flags.wear_flags = ITEM_TAKE;
-   obj_proto_table[i].obj_flags.value[0] = 0;
-   obj_proto_table[i].obj_flags.value[1] = 0;
-   obj_proto_table[i].obj_flags.value[2] = 0;
-   obj_proto_table[i].obj_flags.value[3] = 0;
-   obj_proto_table[i].obj_flags.weight = 10;
-   obj_proto_table[i].obj_flags.cost = 10;
-   obj_proto_table[i].obj_flags.cost_per_day = 10;
-   obj_proto_table[i].obj_flags.repop_percent = 10;
+  if (!check_zone(ch, zone_num)) return;
+  if (!check_zone_access(ch, zone_num)) return;
 
-   obj_proto_table[i].ex_description = 0;
-   obj_proto_table[i].obj_flags.bitvector = 0;
-   obj_proto_table[i].obj_flags.bitvector2 = 0;
-   obj_proto_table[i].obj_flags.timer = 0;
-   for (loc = 0;(loc < MAX_OBJ_AFFECT); loc++) {
-      obj_proto_table[i].affected[loc].location = APPLY_NONE;
-      obj_proto_table[i].affected[loc].modifier = 0;
-      }
-   send_to_char("Object created.\n\r",ch);
-   }
-  else
-   send_to_char("That object already exists.\n\r", ch);
+  if (real_object(obj_num) != -1) {
+    send_to_char("That object already exists.\n\r", ch);
+    return;
+  }
+
+  int obj_index = allocate_obj(obj_num);
+
+  obj_proto_table[obj_index] = (const struct obj_proto) { 0 };
+
+  obj_proto_table[obj_index].virtual = obj_num;
+
+  obj_proto_table[obj_index].name = str_dup("nothing");
+  obj_proto_table[obj_index].short_description = str_dup("a bit of nothing");
+  obj_proto_table[obj_index].description = str_dup("There is a bit of nothing here.");
+
+  SET_BIT(obj_proto_table[obj_index].obj_flags.wear_flags, ITEM_TAKE);
+
+  send_to_char("Object created.\n\r", ch);
 }
 
 void create_mob(CHAR *ch, char *arg1) {
-  int virtual_nr;
-  int i,zone;
+  int mob_num = -1;
 
-  sscanf(arg1, "%d", &virtual_nr);
-  zone = inzone(virtual_nr);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  sscanf(arg1, "%d", &mob_num);
 
-   i = real_mobile(virtual_nr);
-   if(i==-1)
-   {
-   i = allocate_mob(virtual_nr);
-   mob_proto_table[i].virtual     = virtual_nr;
-   mob_proto_table[i].name        = str_dup("primal clay blank");
-   mob_proto_table[i].short_descr = str_dup("blank of primal clay");
-   mob_proto_table[i].long_descr  = str_dup("A blank of primal clay stands here, waiting to be shaped\n\r");
-   mob_proto_table[i].description = str_dup("Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.\n\r");
+  if (mob_num < 0) {
+    send_to_char("You must specify a mobile number, and the number must be greater than 0.\n\r", ch);
+    return;
+  }
 
-   mob_proto_table[i].func = NULL;
-   /* *** Numeric data *** */
+  int zone_num = inzone(mob_num);
 
-      mob_proto_table[i].act    = 0;
-      mob_proto_table[i].number = 0;
-      SET_BIT(mob_proto_table[i].act, ACT_ISNPC);
-      mob_proto_table[i].act2=0;
-      mob_proto_table[i].affected_by = 0;
-      mob_proto_table[i].affected_by2 = 0;
-      mob_proto_table[i].alignment = 0;
-      mob_proto_table[i].level = 1;
-      mob_proto_table[i].hitroll = MIN(mob_proto_table[i].level,(20 - 1));
-      mob_proto_table[i].armor  = 100;
-      mob_proto_table[i].hp_nodice   = 1;
-      mob_proto_table[i].hp_sizedice = 1;
-      mob_proto_table[i].hp_add      = 1;
-      mob_proto_table[i].damnodice   = 1;
-      mob_proto_table[i].damsizedice = 1;
-      mob_proto_table[i].damroll     = 1;
-      mob_proto_table[i].gold = 1;
-      mob_proto_table[i].exp = 1;
-      mob_proto_table[i].position = POSITION_STANDING;
-      mob_proto_table[i].default_pos = POSITION_STANDING;
-      mob_proto_table[i].sex = SEX_MALE;
+  if (!check_zone(ch, zone_num)) return;
+  if (!check_zone_access(ch, zone_num)) return;
 
-      /* New stuff - Ranger Sept 96 */
-      mob_proto_table[i].class = 0;
-      mob_proto_table[i].immune = 0;
-      mob_proto_table[i].mana_nodice   = 1;
-      mob_proto_table[i].mana_sizedice = 1;
-      mob_proto_table[i].mana_add      = 1;
-      mob_proto_table[i].no_att = 0;
+  if (real_mobile(mob_num) != -1) {
+    send_to_char("That mobile already exists.\n\r", ch);
+    return;
+  }
 
-      /* More new stuff - Ranger March 99 */
-      mob_proto_table[i].hit_type = 0;
-      mob_proto_table[i].act2=0;
-      mob_proto_table[i].affected_by2=0;
-      mob_proto_table[i].immune2=0;
+  int mob_index = allocate_mob(mob_num);
 
-     send_to_char("Mob created.\n\r",ch);
-   }
-   else
-     send_to_char("That mobile already exists.\n\r", ch);
+  mob_proto_table[mob_index] = (const struct mob_proto) { 0 };
 
+  mob_proto_table[mob_index].virtual = mob_num;
+
+  mob_proto_table[mob_index].name = str_dup("blank primal clay");
+  mob_proto_table[mob_index].short_descr = str_dup("a blank of primal clay");
+  mob_proto_table[mob_index].long_descr = str_dup("A blank of primal clay stands here, waiting to be shaped.\n\r");
+  mob_proto_table[mob_index].description = str_dup("A blank of primal clay, waiting to be shaped.\n\r");
+
+  SET_BIT(mob_proto_table[mob_index].act, ACT_ISNPC);
+
+  mob_proto_table[mob_index].level = 1;
+
+  mob_proto_table[mob_index].hp_nodice = 1;
+  mob_proto_table[mob_index].hp_sizedice = 1;
+
+  mob_proto_table[mob_index].mana_nodice = 1;
+  mob_proto_table[mob_index].mana_sizedice = 1;
+
+  mob_proto_table[mob_index].damnodice = 1;
+  mob_proto_table[mob_index].damsizedice = 1;
+
+  mob_proto_table[mob_index].armor = 100;
+
+  mob_proto_table[mob_index].position = POSITION_STANDING;
+  mob_proto_table[mob_index].default_pos = POSITION_STANDING;
+
+  send_to_char("Mobile created.\n\r", ch);
 }
 
 void create_shop(CHAR *ch, char *arg1) {
-  int number;
-  int i,zone;
+  int shop_num = -1;
 
-  sscanf(arg1, "%d", &number);
-  zone=number/100;
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  sscanf(arg1, "%d", &shop_num);
 
-  for(i=0 ; i<number_of_shops ; i++) {
-    if(shop_index[i].keeper==number) {
+  if (shop_num < 0) {
+    send_to_char("You must specify a shop number, and the number must be greater than 0.\n\r", ch);
+    return;
+  }
+
+  int zone_num = (shop_num / 100);
+
+  if (!check_zone(ch, zone_num)) return;
+  if (!check_zone_access(ch, zone_num)) return;
+
+  for (int i = 0; i < number_of_shops; i++) {
+    if (shop_index[i].keeper == shop_num) {
       send_to_char("That shop already exists.\n\r", ch);
       return;
     }
   }
 
-  if(!number_of_shops) { /* first shop */
+  if (!number_of_shops) {
     CREATE(shop_index, struct shop_data, 1);
   }
   else {
-    if(!(shop_index=(struct shop_data*) realloc(shop_index,(number_of_shops + 1)*sizeof(struct shop_data)))) {
-      send_to_char("Unable to create shop structure (realloc).\n\r",ch);
+    if (!(shop_index = (struct shop_data*)realloc(shop_index, ((number_of_shops + 1) * sizeof(struct shop_data))))) {
+      send_to_char("Unable to create shop structure (realloc).\n\r", ch);
       return;
     }
   }
 
-  for(i=0;i<MAX_PROD;i++) {
-    shop_index[number_of_shops].producing[i]= -1;
-  }
-  shop_index[number_of_shops].profit_buy=1;
-  shop_index[number_of_shops].profit_sell=1;
+  shop_index[number_of_shops].keeper = shop_num;
 
-  for(i=0;i<MAX_TRADE;i++) {
+  for (int i = 0; i < MAX_PROD; i++) {
+    shop_index[number_of_shops].producing[i] = -1;
+  }
+
+  shop_index[number_of_shops].profit_buy = 1;
+  shop_index[number_of_shops].profit_sell = 1;
+
+  for (int i = 0; i < MAX_TRADE; i++) {
     shop_index[number_of_shops].type[i] = 0;
   }
 
   shop_index[number_of_shops].no_such_item1 = str_dup("%s What keeper says if it doesn't have the item.");
   shop_index[number_of_shops].no_such_item2 = str_dup("%s What keeper says if seller doesn't have the item.");
-  shop_index[number_of_shops].do_not_buy    = str_dup("%s What keeper says if it doesn't buy that kind of item.");
+  shop_index[number_of_shops].do_not_buy = str_dup("%s What keeper says if it doesn't buy that kind of item.");
   shop_index[number_of_shops].missing_cash1 = str_dup("%s What keeper says if it doesn't have cash to buy an item.");
-  shop_index[number_of_shops].missing_cash2 = str_dup("%s What keeper says if buyer doesn't have the cash.");
-  shop_index[number_of_shops].message_buy   = str_dup("%s What keeper says after buyer gets item (Can include %d for amount).");
-  shop_index[number_of_shops].message_sell  = str_dup("%s What keeper says after it buys a sellers item (Can include %d for amount).");
+  shop_index[number_of_shops].missing_cash2 = str_dup("%s What keeper says if buyer doesn't have the cash to buy an item.");
+  shop_index[number_of_shops].message_buy = str_dup("%s What keeper says after buyer gets item (can include %d for amount).");
+  shop_index[number_of_shops].message_sell = str_dup("%s What keeper says after it buys a sellers item (can include %d for amount).");
 
-  shop_index[number_of_shops].temper1=0;
-  shop_index[number_of_shops].temper2=0;
-  shop_index[number_of_shops].keeper=number;
-  shop_index[number_of_shops].with_who=0;
-  shop_index[number_of_shops].in_room=0;
-  shop_index[number_of_shops].open1=0;
-  shop_index[number_of_shops].close1=28;
-  shop_index[number_of_shops].open2=0;
-  shop_index[number_of_shops].close2=0;
+  shop_index[number_of_shops].temper1 = 0;
+  shop_index[number_of_shops].temper2 = 0;
+
+  shop_index[number_of_shops].with_who = 0;
+
+  shop_index[number_of_shops].in_room = 0;
+
+  shop_index[number_of_shops].open1 = 0;
+  shop_index[number_of_shops].open2 = 0;
+
+  shop_index[number_of_shops].close1 = 28;
+  shop_index[number_of_shops].close2 = 0;
+
   number_of_shops++;
 
-  send_to_char("Shop created. A mob with the same vnum as the shop must exist and\n\rthis mob must load in the room indicated in the shop structure.\n\r",ch);
-
+  send_to_char("Shop created.\n\r\
+Note: A mobile with the same virtual number as the shop must exist and\n\r\
+this mobile must load in the room indicated in the shop structure.\n\r", ch);
 }
 
 void dsearch(char *string, char *tmp);
@@ -4753,422 +4786,512 @@ void do_rezone(CHAR *ch, char *argument, int cmd) {
 }
 
 void do_rflag(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command toggles the room flags listed on/off.\n\r\n\r\
+  char usage[] = "\
+This command toggles the room flags listed on/off.\n\r\
+\n\r\
   Usage: `krflag`q <#> <list of flags>/all/none\n\r\
-     Ex: `krflag`q 1212 `iPRIVATE DEATH`q(caps not important)\n\r\
-      or `krflag `iPRIVATE DEATH`q (flags the room you're in)\n\r\n\r\
-Flags are: `iDARK, DEATH, NO_MOB, INDOORS, LAWFUL, CHAOTIC, SAFE, NO_MAGIC,\n\r\
-           TUNNEL, PRIVATE, LOCK, TRAP, ARENA, CLUB, QUIET, NO_BEAM, HAZARD,\n\r\
-           MOVETRAP, FLYING, NO_PEEK, NO_SONG, NO_REGEN, NO_QUAFF, REV_REGEN,\n\r\
-           DOUBLE_MANA, HALF_CONC, LIT, NO_ORB, QRTR_CONC, MANADRAIN, NO_SUM.`q\n\r";
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
-  int vroom,room,zone,bitpos;
-  long bit;
+     Ex: `krflag`q 1212 `iPRIVATE DEATH`q (caps not important)\n\r\
+      or `krflag `iPRIVATE DEATH`q (flags the room you're in)\n\r\
+\n\r\
+Flags are:\n\r\
+\n\r";
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
+    print_bits_to_char(room_bits, ch);
     return;
   }
 
-  if(is_number(arg)) {
-    vroom=atoi(arg);
-    argument=one_argument(argument,arg);
-    if(!*arg) {
-      send_to_char(usage,ch);
+  int room_vnum = -1;
+
+  if (is_number(arg)) {
+    room_vnum = atoi(arg);
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg) {
+      send_to_char(usage, ch);
+      print_bits_to_char(room_bits, ch);
       return;
     }
   }
   else {
-    vroom=CHAR_VIRTUAL_ROOM(ch);
+    room_vnum = CHAR_VIRTUAL_ROOM(ch);
   }
 
-  room=real_room(vroom);
-  if(!check_room(ch,room)) return;
+  int room_zone = inzone(room_vnum);
 
-  zone=inzone(vroom);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  if (!check_zone(ch, room_zone)) return;
+  if (!check_zone_access(ch, room_zone)) return;
 
-  if(!strcmp(arg,"all")) {
-    bitpos=old_search_block("\n", 0, strlen("\n"), room_bits, FALSE);
-    world[room].room_flags = (1<<(bitpos-1)) -1;
-    add_flying_room(room);
-    send_to_char("`iAll room flags added.`q\n\r",ch);
+  int room_rnum = real_room(room_vnum);
+
+  if (!check_room(ch, room_rnum)) return;
+
+  if (!strcmp(arg, "all")) {
+    int bitpos = old_search_block("\n", 0, strlen("\n"), room_bits, FALSE);
+    world[room_rnum].room_flags = ((1 << (bitpos - 1)) - 1);
+    add_flying_room(room_rnum);
+    send_to_char("`iAll room flags added.`q\n\r", ch);
     return;
   }
 
-  if(!strcmp(arg,"none")) {
-    world[room].room_flags = 0;
-    remove_flying_room(room);
-    send_to_char("`iAll room flags removed.`q\n\r",ch);
+  if (!strcmp(arg, "none")) {
+    world[room_rnum].room_flags = 0;
+    remove_flying_room(room_rnum);
+    send_to_char("`iAll room flags removed.`q\n\r", ch);
     return;
   }
 
-  while(*arg) {
-    bitpos=old_search_block(string_to_upper(arg), 0, strlen(arg), room_bits, FALSE);
-    if(bitpos!=-1) {
-      bit=(1<<(bitpos-1));
-      if(IS_SET(world[room].room_flags, bit)) {
-        REMOVE_BIT(world[room].room_flags, bit);
-        if(bit==FLYING) remove_flying_room(room);
+  while (*arg) {
+    int bit_pos = old_search_block(string_to_upper(arg), 0, strlen(arg), room_bits, FALSE);
+
+    if (bit_pos != -1) {
+      unsigned long bit = (1 << (bit_pos - 1));
+
+      if (IS_SET(world[room_rnum].room_flags, bit)) {
+        REMOVE_BIT(world[room_rnum].room_flags, bit);
+
+        if (bit == FLYING) remove_flying_room(room_rnum);
       }
       else {
-        SET_BIT(world[room].room_flags, bit);
-        if(bit==FLYING) add_flying_room(room);
+        SET_BIT(world[room_rnum].room_flags, bit);
+
+        if (bit == FLYING) add_flying_room(room_rnum);
       }
     }
     else {
-      sprintf(buf,"`kRoom flag %s not found.`q\n\r",arg);
-      send_to_char(buf,ch);
+      char buf[MSL];
+      snprintf(buf, sizeof(buf), "`kRoom flag %s not found.`q\n\r", arg);
+      send_to_char(buf, ch);
     }
-    argument=one_argument(argument,arg);
+
+    argument = one_argument(argument, arg);
   }
-  send_to_char("\n\r`iRoom flag(s) added/removed.`q\n\r",ch);
+
+  send_to_char("\n\r`iRoom flag(s) added/removed.`q\n\r", ch);
 }
 
 void do_rdelete(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command is used to delete a room from a zone.\n\r\n\r\
+  char usage[] = "\
+This command is used to delete a room from a zone.\n\r\
+\n\r\
   Usage: `krdelete`q <room number>\n\r\
-     Ex: `krdelete`q 1212\n\r\n\r\
-Anyone standing in the room, you will be moved to\n\r\
-room 1212.  Mobs and objs in the room will be purged.\n\r\
-from the game, not deleted from the zone.\n\r\n\r\
-Any existing exits to the room being deleted will be removed\n\r\
-and deleting the first or last room of the zone (00 or 99) will\n\r\
-affect the zone range.\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  CHAR *vict,*next_v;
-  OBJ *obj,*next_o;
-  int room,vroom,zone,door,i;
+     Ex: `krdelete`q 1212\n\r\
+\n\r\
+Anyone standing in the room will be moved to room 1212.\n\r\
+Mobs and objects in the room will be purged from the game,\n\r\
+but will not be deleted from the zone.\n\r\
+\n\r\
+Any existing exits to the room being deleted will be removed.\n\r";
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!is_number(arg)) {
-    send_to_char(usage,ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  vroom=atoi(arg);
-  if(vroom==1212 || vroom==0 || vroom==1) {
-    send_to_char("`iYou cannot delete that room.`q\n\r",ch);
+  int room_vnum = atoi(arg);
+
+  if (room_vnum == 0 || room_vnum == 1 || room_vnum == 1212) {
+    send_to_char("`iYou cannot delete that room.`q\n\r", ch);
     return;
   }
 
-  room=real_room(vroom);
-  if(!check_room(ch,room)) return;
+  int room_zone = inzone(room_vnum);
 
-  zone=inzone(vroom);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  if (!check_zone(ch, room_zone)) return;
+  if (!check_zone_access(ch, room_zone)) return;
 
-  /*Clean the room of chars and objects */
-  for(vict=world[room].people; vict; vict = next_v) {
-    next_v = vict->next_in_room;
-    if (IS_NPC(vict)) extract_char(vict);
-    else {
+  int room_rnum = real_room(room_vnum);
+
+  if (!check_room(ch, room_rnum)) return;
+
+  /* Move players to 1212 and purge mobiles from the room. */
+  for (CHAR *vict = world[room_rnum].people, *next_vict = NULL; vict; vict = next_vict) {
+    next_vict = vict->next_in_room;
+
+    if (!IS_NPC(vict)) {
       char_from_room(vict);
-      char_to_room(vict,real_room(1212));
-      do_look(vict,"",CMD_LOOK);
+      char_to_room(vict, real_room(1212));
+      do_look(vict, "\0", CMD_LOOK);
+    }
+    else {
+      extract_char(vict);
     }
   }
 
-  for(obj=world[room].contents; obj; obj = next_o) {
-    next_o=obj->next_content;
+  /* Purge objects from the room. */
+  for (OBJ *obj = world[room_rnum].contents, *next_obj = NULL; obj; obj = next_obj) {
+    next_obj = obj->next_content;
+
     extract_obj(obj);
   }
 
-  /* Remove any existing exits to the room */
-  for (i=0; i <= top_of_world; i++)
-    for (door = 0; door <= 5; door++)
-      if (world[i].dir_option[door])
-        if (world[i].dir_option[door]->to_room_v == vroom) {
-          if(world[i].dir_option[door]->general_description)
+  /* Remove any existing exits to the room. */
+  for (int i = 0; i <= top_of_world; i++) {
+    for (int door = NORTH; door <= DOWN; door++) {
+      if (world[i].dir_option[door]) {
+        if (world[i].dir_option[door]->to_room_v == room_vnum) {
+          if (world[i].dir_option[door]->general_description) {
             free(world[i].dir_option[door]->general_description);
-          if(world[i].dir_option[door]->keyword)
+          }
+          if (world[i].dir_option[door]->keyword) {
             free(world[i].dir_option[door]->keyword);
+          }
           free(world[i].dir_option[door]);
-          world[i].dir_option[door]= NULL;
+          world[i].dir_option[door] = NULL;
         }
+      }
+    }
+  }
 
-  /* If not top room, move all rooms that are above down by one */
-  if(room!=top_of_world)
-    memmove(&world[room], &world[room+1], sizeof(struct room_data) *(top_of_world-room));
+  /* If not the top room, move all room that are above down by one. */
+  if (room_rnum != top_of_world) {
+    memmove(&world[room_rnum], &world[room_rnum + 1], (sizeof(struct room_data) * (top_of_world - room_rnum)));
+  }
 
-  /* Clear and free the top element */
-  memset(&world[top_of_world],0, sizeof(struct room_data));
+  /* Clear and free the top room element. */
+  memset(&world[top_of_world], 0, sizeof(struct room_data));
   free(&world[top_of_world]);
-  top_of_world--;
-  renum_world(); /* Fix exits, mobs in room, objs in room */
 
-  send_to_char("`iRoom deleted.`q\n\r",ch);
+  /* Decrement the count of rooms by one. */
+  top_of_world--;
+
+  /* Fix up the world after room deletion. */
+  renum_world();
+
+  send_to_char("`iRoom deleted.`q\n\r", ch);
 }
 
 void do_mdelete(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command is used to delete a mob from a zone.\n\r\n\r\
+  char usage[] = "\
+This command is used to delete a mob from a zone.\n\r\
+\n\r\
   Usage: `kmdelete`q <mob number>\n\r\
-     Ex: `kmdelete`q 3005\n\r\n\r\
+     Ex: `kmdelete`q 3005\n\r\
+\n\r\
 Any equipment the mob has will be purged from the game,\n\r\
-not deleted from the zone.\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  CHAR *mob,*next_m;
-  OBJ *obj,*next_o;
-  int rnum,vnum,zone,i;
+but will not be deleted from the zone.\n\r";
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!is_number(arg)) {
-    send_to_char(usage,ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  vnum=atoi(arg);
-  rnum=real_mobile(vnum);
-  if(!check_mob(ch,rnum)) return;
+  int mob_vnum = atoi(arg);
 
-  zone=inzone(vnum);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  int mob_zone = inzone(mob_vnum);
 
-  /*See if mob is loaded, remove objects and purge*/
-  for(mob=character_list; mob; mob=next_m) {
-    next_m=mob->next;
-    if(IS_NPC(mob) && V_MOB(mob)==vnum) {
-      for (obj=mob->carrying; obj; obj=next_o) {
-        next_o = obj->next_content;
+  if (!check_zone(ch, mob_zone)) return;
+  if (!check_zone_access(ch, mob_zone)) return;
+
+  int mob_rnum = real_mobile(mob_vnum);
+
+  if (!check_mob(ch, mob_rnum)) return;
+
+  /* Purge any objects carried or equipped, then purge this mob from the character list. */
+  for (CHAR *mob = character_list, *next_mob = NULL; mob; mob = next_mob) {
+    next_mob = mob->next;
+
+    if (IS_NPC(mob) && V_MOB(mob) == mob_zone) {
+      for (OBJ *obj = mob->carrying, *next_obj = NULL; obj; obj = next_obj) {
+        next_obj = obj->next_content;
+
         extract_obj(obj);
       }
-      for(i=0; i < MAX_WEAR; i++) {
-        if(mob->equipment[i]) extract_obj(unequip_char(mob,i));
+
+      for (int i = 0; i < MAX_WEAR; i++) {
+        if (mob->equipment[i]) {
+          extract_obj(unequip_char(mob, i));
+        }
       }
+
       extract_char(mob);
     }
   }
 
-  /* If not top mob, move all mobs that are above down by one */
-  if(rnum!=top_of_mobt)
-    memmove(&mob_proto_table[rnum], &mob_proto_table[rnum+1], sizeof(struct char_data) *(top_of_mobt-rnum));
-
-  /* Clear and free the top element */
-  memset(&mob_proto_table[top_of_mobt],0, sizeof(struct char_data));
-  free(&mob_proto_table[top_of_mobt]);
-  top_of_mobt--;
-
-  /* Reassign real nums for existing mobs */
-  for(mob=character_list; mob; mob=next_m) {
-    next_m=mob->next;
-    if(IS_NPC(mob)) mob->nr=real_mobile(mob->nr_v);
+  /* If not the top mob, move all mobs that are above down by one. */
+  if (mob_rnum != top_of_mobt) {
+    memmove(&mob_proto_table[mob_rnum], &mob_proto_table[mob_rnum + 1], (sizeof(struct char_data) * (top_of_mobt - mob_rnum)));
   }
 
-  send_to_char("`iMob deleted.`q\n\r",ch);
+  /* Clear and free the top mob element. */
+  memset(&mob_proto_table[top_of_mobt], 0, sizeof(struct char_data));
+  free(&mob_proto_table[top_of_mobt]);
+
+  /* Decrement the count of mobs by one. */
+  top_of_mobt--;
+
+  /* Reassign real numbers for existing mobs. */
+  for (CHAR *mob = character_list, *next_mob = NULL; mob; mob = next_mob) {
+    next_mob = mob->next;
+
+    if (IS_NPC(mob)) {
+      mob->nr = real_mobile(mob->nr_v);
+    }
+  }
+
+  send_to_char("`iMob deleted.`q\n\r", ch);
 }
 
 void do_odelete(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command is used to delete an object from a zone.\n\r\n\r\
+  char usage[] = "\
+This command is used to delete an object from a zone.\n\r\
+\n\r\
   Usage: `kodelete`q <object number>\n\r\
-     Ex: `kodelete`q 2296\n\r\n\r\
+     Ex: `kodelete`q 2296\n\r\
+\n\r\
 Any equipment in the object will be purged from the game,\n\r\
-not deleted from the zone.\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  OBJ *obj,*next_o;
-  int rnum,vnum,zone;
+but will not be deleted from the zone.\n\r";
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!is_number(arg)) {
-    send_to_char(usage,ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  vnum=atoi(arg);
-  rnum=real_object(vnum);
-  if(!check_obj(ch,rnum)) return;
+  int obj_vnum = atoi(arg);
 
-  zone=inzone(vnum);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  int obj_zone = inzone(obj_vnum);
 
-  /*See if object is loaded and extract*/
-  for(obj=object_list; obj; obj=next_o) {
-    next_o=obj->next;
-    if(V_OBJ(obj)==vnum)
+  if (!check_zone(ch, obj_zone)) return;
+  if (!check_zone_access(ch, obj_zone)) return;
+
+  int obj_rnum = real_object(obj_vnum);
+
+  if (!check_obj(ch, obj_rnum)) return;
+
+  /* Purge this object from the object list. */
+  for (OBJ *obj = object_list, *next_obj = NULL; obj; obj = next_obj) {
+    next_obj = obj->next;
+
+    if (V_OBJ(obj) == obj_vnum) {
       extract_obj(obj);
+    }
   }
 
-  /* If not top obj, move all objs that are above down by one */
-  if(rnum!=top_of_objt)
-    memmove(&obj_proto_table[rnum], &obj_proto_table[rnum+1], sizeof(struct obj_data) *(top_of_objt-rnum));
+  /* If not the top object, move all objects that are above down by one. */
+  if (obj_rnum != top_of_objt) {
+    memmove(&obj_proto_table[obj_rnum], &obj_proto_table[obj_rnum + 1], (sizeof(struct obj_data) * (top_of_objt - obj_rnum)));
+  }
 
-  /* Clear and free the top element */
-  memset(&obj_proto_table[top_of_objt],0, sizeof(struct obj_data));
+  /* Clear and free the top object element. */
+  memset(&obj_proto_table[top_of_objt], 0, sizeof(struct obj_data));
   free(&obj_proto_table[top_of_objt]);
+
+  /* Decrement the count of objects by one. */
   top_of_objt--;
 
-  /*Reassign object rnums for exiting objs*/
-  for(obj=object_list; obj; obj=next_o) {
-    next_o=obj->next;
-    obj->item_number=real_object(obj->item_number_v);
+  /* Reassign real numbers for existing objects. */
+  for (OBJ *obj = object_list, *next_obj = NULL; obj; obj = next_obj) {
+    next_obj = obj->next;
+
+    obj->item_number = real_object(obj->item_number_v);
   }
 
-  send_to_char("`iObject deleted.`q\n\r",ch);
+  send_to_char("`iObject deleted.`q\n\r", ch);
 }
 
 void do_sdelete(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command is used to delete a shop from a zone.\n\r\n\r\
+  char usage[] = "\
+This command is used to delete a shop from a zone.\n\r\
+\n\r\
   Usage: `ksdelete`q <shop number>\n\r\
      Ex: `ksdelete`q 2999\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int shop=-1,vshop,zone,i;
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!is_number(arg)) {
-    send_to_char(usage,ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  vshop=atoi(arg);
-  for(i=0 ; i<number_of_shops ; i++) {
-    if(shop_index[i].keeper==vshop) {
-      shop=i;
+  int shop_vnum = atoi(arg);
+
+  int shop_zone = inzone(shop_vnum);
+
+  if (!check_zone(ch, shop_zone)) return;
+  if (!check_zone_access(ch, shop_zone)) return;
+
+  int shop_num = -1;
+
+  for (int i = 0; i < number_of_shops; i++) {
+    if (shop_index[i].keeper == shop_vnum) {
+      shop_num = i;
       break;
     }
   }
-  if(shop<0 || shop > number_of_shops) {
-    printf_to_char(ch,"Shop %d does not exist.\n\r",vshop);
+
+  if (shop_num < 0 || shop_num > number_of_shops) {
+    printf_to_char(ch, "Shop %d does not exist.\n\r", shop_vnum);
     return;
   }
 
-  zone=inzone(vshop);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  /* If not the top shop, move all shops that are above down by one. */
+  if (shop_num != number_of_shops) {
+    memmove(&shop_index[shop_num], &shop_index[shop_num + 1], (sizeof(struct shop_data) * (number_of_shops - shop_num)));
+  }
 
-  /* If not top room, move all rooms that are above down by one */
-  if(shop!=number_of_shops)
-    memmove(&shop_index[shop], &shop_index[shop+1], sizeof(struct shop_data)*(number_of_shops-shop));
+  /* Clear and free the top shop element. */
+  memset(&shop_index[number_of_shops], 0, sizeof(struct shop_data));
+  free(&shop_index[number_of_shops]);
 
-  /* Clear and free the top element */
-  memset(&shop_index[shop],0, sizeof(struct shop_data));
-  free(&shop_index[shop]);
+  /* Decrement the count of shops by one. */
   number_of_shops--;
 
-  send_to_char("`iShop deleted.`q\n\r",ch);
+  send_to_char("`iShop deleted.`q\n\r", ch);
 }
 
 void do_rlink(CHAR *ch, char *argument, int cmd) {
   char usage[]="\
-This command will link one room to another with a one way exit.\n\r\n\r\
+This command will link one room to another with a one way exit.\n\r\
+\n\r\
   Usage: `krlink`q <room1> <n/s/e/w/u/d> <room2> (room1 is optional)\n\r\
      Ex: `krlink`q 1212 d 1255\n\r\
       or `krlink`q d 1255 (standing in room 1212)\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vroom1,room1,vroom2,room2,zone,dir;
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_number(arg)) {
-    vroom1=atoi(arg);
-    argument=one_argument(argument,arg);
-    if(!*arg) {
-      send_to_char(usage,ch);
+  int vroom1 = -1;
+
+  if (is_number(arg)) {
+    vroom1 = atoi(arg);
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg) {
+      send_to_char(usage, ch);
       return;
     }
   }
   else {
-    vroom1=CHAR_VIRTUAL_ROOM(ch);
+    vroom1 = CHAR_VIRTUAL_ROOM(ch);
   }
 
-  dir=-1;
-  if(is_abbrev(arg, "north")) dir = 0;
-  if(is_abbrev(arg, "east"))  dir = 1;
-  if(is_abbrev(arg, "south")) dir = 2;
-  if(is_abbrev(arg, "west"))  dir = 3;
-  if(is_abbrev(arg, "up"))    dir = 4;
-  if(is_abbrev(arg, "down"))  dir = 5;
-  if(dir==-1) {
-    send_to_char(usage,ch);
-    return;
-  }
+  int dir = -1;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
-    return;
-  }
-
-  if(is_number(arg)) {
-    vroom2=atoi(arg);
-  }
+  if (is_abbrev(arg, "north")) { dir = 0; }
+  else if (is_abbrev(arg, "east")) { dir = 1; }
+  else if (is_abbrev(arg, "south")) { dir = 2; }
+  else if (is_abbrev(arg, "west")) { dir = 3; }
+  else if (is_abbrev(arg, "up")) { dir = 4; }
+  else if (is_abbrev(arg, "down")) { dir = 5; }
   else {
-    send_to_char(usage,ch);
+    send_to_char(usage, ch);
     return;
   }
 
-  room1=real_room(vroom1);
-  room2=real_room(vroom2);
-  if(room1==NOWHERE || room1>top_of_world) {
-    send_to_char("`iRoom 1 doesn't exist.`q\n\r",ch);
-    return;
-  }
-  if(room2==NOWHERE || room2>top_of_world) {
-    send_to_char("`iRoom 2 doesn't exist.`q\n\r",ch);
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  zone=inzone(vroom2);
-  if(zone==NOWHERE) {
-    send_to_char("`iThe zone for room 2 doesn't exist.`q\n\r",ch);
-    return;
-  }
-  zone=inzone(vroom1);
-  if(zone==NOWHERE) {
-    send_to_char("`iThat zone for room 1 doesn't exist.`q\n\r",ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!check_zone_access(ch,zone)) return;
+  int vroom2 = atoi(arg);
 
-  if(world[room1].dir_option[dir]) {
-    send_to_char("`iAn exit already exists in that direction.`q\n\r",ch);
+  int zone1 = inzone(vroom1);
+
+  if (!check_zone_no_message(zone1)) {
+    send_to_char("`iThe zone for room 1 doesn't exist.`q\n\r", ch);
     return;
   }
+ 
+  if (!check_zone_access_no_message(ch, zone1)) {
+    send_to_char("`iYou don't have permission to edit zone 1.`q\n\r", ch);
+    return;
+  }
+
+  int zone2 = inzone(vroom2);
+
+  if (!check_zone_no_message(zone2)) {
+    send_to_char("`iThe zone for room 2 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (!check_zone_access_no_message(ch, zone2)) {
+    send_to_char("`iYou don't have permission to edit zone 2.`q\n\r", ch);
+    return;
+  }
+
+  int room1 = real_room(vroom1);
+
+  if (!check_room_no_message(room1)) {
+    send_to_char("`iRoom 1 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (world[room1].dir_option[dir]) {
+    send_to_char("`iAn exit already exists in that direction.`q\n\r", ch);
+    return;
+  }
+
+  int room2 = real_room(vroom2);
+
+  if (!check_room_no_message(room2)) {
+    send_to_char("`iRoom 2 doesn't exist.`q\n\r", ch);
+    return;
+  }
+
   CREATE(world[room1].dir_option[dir], struct room_direction_data, 1);
   world[room1].dir_option[dir]->general_description = NULL;
   world[room1].dir_option[dir]->keyword = NULL;
@@ -5176,155 +5299,191 @@ This command will link one room to another with a one way exit.\n\r\n\r\
   world[room1].dir_option[dir]->to_room_r = room2;
   world[room1].dir_option[dir]->exit_info = 0;
   world[room1].dir_option[dir]->key = -1;
+
   send_to_char("\n\r`iRoom link added.`q\n\r",ch);
 }
 
 void do_runlink(CHAR *ch, char *argument, int cmd) {
   char usage[]="\
-This command will unlink one room from another, it won't unlink the other side.\n\r\n\r\
+This command will unlink one room from another, it won't unlink the other side.\n\r\
+\n\r\
   Usage: `krunlink`q <room> <n/s/e/w/u/d> (room is optional)\n\r\
-     Ex: `krunlink`q 1212 d \n\r\
+     Ex: `krunlink`q 1212 d\n\r\
       or `krunlink`q d (standing in room 1212)\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vroom1,room1,zone,dir;
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_number(arg)) {
-    vroom1=atoi(arg);
-    argument=one_argument(argument,arg);
-    if(!*arg) {
-      send_to_char(usage,ch);
+  int vroom1 = -1;
+
+  if (is_number(arg)) {
+    vroom1 = atoi(arg);
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg) {
+      send_to_char(usage, ch);
       return;
     }
   }
   else {
-    vroom1=CHAR_VIRTUAL_ROOM(ch);
+    vroom1 = CHAR_VIRTUAL_ROOM(ch);
   }
 
-  dir=-1;
-  if(is_abbrev(arg, "north")) dir = 0;
-  if(is_abbrev(arg, "east"))  dir = 1;
-  if(is_abbrev(arg, "south")) dir = 2;
-  if(is_abbrev(arg, "west"))  dir = 3;
-  if(is_abbrev(arg, "up"))    dir = 4;
-  if(is_abbrev(arg, "down"))  dir = 5;
-  if(dir==-1) {
-    send_to_char(usage,ch);
+  int dir = -1;
+
+  if (is_abbrev(arg, "north")) { dir = 0; }
+  else if (is_abbrev(arg, "east")) { dir = 1; }
+  else if (is_abbrev(arg, "south")) { dir = 2; }
+  else if (is_abbrev(arg, "west")) { dir = 3; }
+  else if (is_abbrev(arg, "up")) { dir = 4; }
+  else if (is_abbrev(arg, "down")) { dir = 5; }
+  else {
+    send_to_char(usage, ch);
     return;
   }
 
-  room1=real_room(vroom1);
-  if(!check_room(ch,room1)) return;
+  int zone1 = inzone(vroom1);
 
-  zone=inzone(vroom1);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  if (!check_zone(ch, zone1)) return;
+  if (!check_zone_access(ch, zone1)) return;
 
-  if(!world[room1].dir_option[dir]) {
-    send_to_char("`iAn exit doesn't exist in that direction.`q\n\r",ch);
+  int room1 = real_room(vroom1);
+
+  if (!check_room(ch, room1)) return;
+
+  if (!world[room1].dir_option[dir]) {
+    send_to_char("`iNo exit exists in that direction.`q\n\r", ch);
     return;
   }
-  if(world[room1].dir_option[dir]->general_description)
+
+  if (world[room1].dir_option[dir]->general_description) {
     free(world[room1].dir_option[dir]->general_description);
-  if(world[room1].dir_option[dir]->keyword)
+  }
+
+  if (world[room1].dir_option[dir]->keyword) {
     free(world[room1].dir_option[dir]->keyword);
+  }
+
   free(world[room1].dir_option[dir]);
-  world[room1].dir_option[dir]= NULL;
+
+  world[room1].dir_option[dir] = NULL;
+
   send_to_char("\n\r`iRoom unlinked.`q\n\r",ch);
 }
 
 void do_dlink(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command will link one room to another with a two way exit.\n\r\n\r\
+  char usage[] = "\
+This command will link one room to another with a two-way exit.\n\r\
+\n\r\
   Usage: `kdlink`q <room1> <n/s/e/w/u/d> <room2> (room1 is optional)\n\r\
      Ex: `kdlink`q 1212 d 1255\n\r\
       or `kdlink`q d 1255 (standing in room 1212)\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vroom1,room1,vroom2,room2,zone,dir,odir;
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_number(arg)) {
-    vroom1=atoi(arg);
-    argument=one_argument(argument,arg);
-    if(!*arg) {
-      send_to_char(usage,ch);
+  int vroom1 = -1;
+
+  if (is_number(arg)) {
+    vroom1 = atoi(arg);
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg) {
+      send_to_char(usage, ch);
       return;
     }
   }
   else {
-    vroom1=CHAR_VIRTUAL_ROOM(ch);
+    vroom1 = CHAR_VIRTUAL_ROOM(ch);
   }
 
-  dir=-1;
-  if(is_abbrev(arg, "north")) { dir = 0; odir = 2; }
-  if(is_abbrev(arg, "east"))  { dir = 1; odir = 3; }
-  if(is_abbrev(arg, "south")) { dir = 2; odir = 0; }
-  if(is_abbrev(arg, "west"))  { dir = 3; odir = 1; }
-  if(is_abbrev(arg, "up"))    { dir = 4; odir = 5; }
-  if(is_abbrev(arg, "down"))  { dir = 5; odir = 4; }
-  if(dir==-1) {
-    send_to_char(usage,ch);
-    return;
-  }
+  int dir = -1, odir = -1;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
-    return;
-  }
-
-  if(is_number(arg)) {
-    vroom2=atoi(arg);
-  }
+  if (is_abbrev(arg, "north")) { dir = 0; odir = 2; }
+  else if (is_abbrev(arg, "east")) { dir = 1; odir = 3; }
+  else if (is_abbrev(arg, "south")) { dir = 2; odir = 0; }
+  else if (is_abbrev(arg, "west")) { dir = 3; odir = 1; }
+  else if (is_abbrev(arg, "up")) { dir = 4; odir = 5; }
+  else if (is_abbrev(arg, "down")) { dir = 5; odir = 4; }
   else {
-    send_to_char(usage,ch);
+    send_to_char(usage, ch);
     return;
   }
 
-  room1=real_room(vroom1);
-  room2=real_room(vroom2);
-  if(room1==NOWHERE || room1>top_of_world) {
-    send_to_char("`iRoom 1 doesn't exist.`q\n\r",ch);
-    return;
-  }
-  if(room2==NOWHERE || room2>top_of_world) {
-    send_to_char("`iRoom 2 doesn't exist.`q\n\r",ch);
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  zone=inzone(vroom2);
-  if(zone==NOWHERE) {
-    send_to_char("`iThe zone for room 2 doesn't exist.`q\n\r",ch);
-    return;
-  }
-  zone=inzone(vroom1);
-  if(zone==NOWHERE) {
-    send_to_char("`iThat zone for room 1 doesn't exist.`q\n\r",ch);
+  if (!is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(!check_zone_access(ch,zone)) return;
+  int vroom2 = atoi(arg);
 
-  if(world[room1].dir_option[dir]) {
-    send_to_char("`iAn exit in room 1 already exists in that direction.`q\n\r",ch);
+  int zone1 = inzone(vroom1);
+
+  if (!check_zone_no_message(zone1)) {
+    send_to_char("`iThe zone for room 1 doesn't exist.`q\n\r", ch);
     return;
   }
-  if(world[room2].dir_option[odir]) {
-    send_to_char("`iAn exit in room 2 already exists in the opposite direction.`q\n\r",ch);
+ 
+  if (!check_zone_access_no_message(ch, zone1)) {
+    send_to_char("`iYou don't have permission to edit zone 1.`q\n\r", ch);
+    return;
+  }
+
+  int zone2 = inzone(vroom2);
+
+  if (!check_zone_no_message(zone2)) {
+    send_to_char("`iThe zone for room 2 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (!check_zone_access_no_message(ch, zone2)) {
+    send_to_char("`iYou don't have permission to edit zone 2.`q\n\r", ch);
+    return;
+  }
+
+  int room1 = real_room(vroom1);
+
+  if (!check_room_no_message(room1)) {
+    send_to_char("`iRoom 1 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (world[room1].dir_option[dir]) {
+    send_to_char("`iAn exit in room 1 already exists in that direction.`q\n\r", ch);
+    return;
+  }
+
+  int room2 = real_room(vroom2);
+
+  if (!check_room_no_message(room2)) {
+    send_to_char("`iRoom 2 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (world[room2].dir_option[odir]) {
+    send_to_char("`iAn exit in room 2 already exists in the opposite direction.`q\n\r", ch);
     return;
   }
 
@@ -5335,6 +5494,7 @@ This command will link one room to another with a two way exit.\n\r\n\r\
   world[room1].dir_option[dir]->to_room_r = room2;
   world[room1].dir_option[dir]->exit_info = 0;
   world[room1].dir_option[dir]->key = -1;
+
   CREATE(world[room2].dir_option[odir], struct room_direction_data, 1);
   world[room2].dir_option[odir]->general_description = NULL;
   world[room2].dir_option[odir]->keyword = NULL;
@@ -5342,91 +5502,130 @@ This command will link one room to another with a two way exit.\n\r\n\r\
   world[room2].dir_option[odir]->to_room_r = room1;
   world[room2].dir_option[odir]->exit_info = 0;
   world[room2].dir_option[odir]->key = -1;
-  send_to_char("\n\r`iDouble room link added.`q\n\r",ch);
+
+  send_to_char("\n\r`iDouble room link added.`q\n\r", ch);
 }
 
 void do_dunlink(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command will unlink one room from another, and the other side if double.\n\r\n\r\
+  char usage[] = "\
+This command will unlink one room from another, and the other side if\n\r\
+it is a two-way exit.\n\r\
+\n\r\
   Usage: `kdunlink`q <room> <n/s/e/w/u/d> (room is optional)\n\r\
-     Ex: `kdunlink`q 1212 d \n\r\
+     Ex: `kdunlink`q 1212 d\n\r\
       or `kdunlink`q d (standing in room 1212)\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vroom1,room1,vroom2,room2,zone,dir,odir;
 
-  if(!check_olc_access(ch)) return;
+  if (!check_olc_access(ch)) return;
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_number(arg)) {
-    vroom1=atoi(arg);
-    argument=one_argument(argument,arg);
-    if(!*arg) {
-      send_to_char(usage,ch);
+  int vroom1 = -1;
+
+  if (is_number(arg)) {
+    vroom1 = atoi(arg);
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg) {
+      send_to_char(usage, ch);
       return;
     }
   }
   else {
-    vroom1=CHAR_VIRTUAL_ROOM(ch);
+    vroom1 = CHAR_VIRTUAL_ROOM(ch);
   }
 
-  dir=-1;
-  if(is_abbrev(arg, "north")) { dir = 0; odir = 2; }
-  if(is_abbrev(arg, "east"))  { dir = 1; odir = 3; }
-  if(is_abbrev(arg, "south")) { dir = 2; odir = 0; }
-  if(is_abbrev(arg, "west"))  { dir = 3; odir = 1; }
-  if(is_abbrev(arg, "up"))    { dir = 4; odir = 5; }
-  if(is_abbrev(arg, "down"))  { dir = 5; odir = 4; }
-  if(dir==-1) {
-    send_to_char(usage,ch);
+  int dir = -1, odir = -1;
+
+  if (is_abbrev(arg, "north")) { dir = 0; odir = 2; }
+  else if (is_abbrev(arg, "east")) { dir = 1; odir = 3; }
+  else if (is_abbrev(arg, "south")) { dir = 2; odir = 0; }
+  else if (is_abbrev(arg, "west")) { dir = 3; odir = 1; }
+  else if (is_abbrev(arg, "up")) { dir = 4; odir = 5; }
+  else if (is_abbrev(arg, "down")) { dir = 5; odir = 4; }
+  else {
+    send_to_char(usage, ch);
     return;
   }
 
-  room1=real_room(vroom1);
-  if(!check_room(ch,room1)) return;
+  int zone1 = inzone(vroom1);
 
-  zone=inzone(vroom1);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
-
-  if(!world[room1].dir_option[dir]) {
-    send_to_char("`iAn exit doesn't exist in that direction.`q\n\r",ch);
+  if (!check_zone_no_message(zone1)) {
+    send_to_char("`iThe zone for room 1 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (!check_zone_access_no_message(ch, zone1)) {
+    send_to_char("`iYou don't have permission to edit zone 1.`q\n\r", ch);
     return;
   }
 
-  vroom2=world[room1].dir_option[dir]->to_room_v;
-  room2=real_room(vroom2);
+  int room1 = real_room(vroom1);
 
-  if(world[room1].dir_option[dir]->general_description)
+  if (!check_room_no_message(room1)) {
+    send_to_char("`iRoom 1 doesn't exist.`q\n\r", ch);
+    return;
+  }
+  if (!world[room1].dir_option[dir]) {
+    send_to_char("`iNo exit exists in that direction.`q\n\r", ch);
+    return;
+  }
+
+  int vroom2 = world[room1].dir_option[dir]->to_room_v;
+
+  if (world[room1].dir_option[dir]->general_description) {
     free(world[room1].dir_option[dir]->general_description);
-  if(world[room1].dir_option[dir]->keyword)
-    free(world[room1].dir_option[dir]->keyword);
-  free(world[room1].dir_option[dir]);
-  world[room1].dir_option[dir]= NULL;
+  }
 
-  if(room2==NOWHERE) {
-    send_to_char("`iThe other side of the exit didn't exist, removing one side only.`q\n\r",ch);
+  if (world[room1].dir_option[dir]->keyword) {
+    free(world[room1].dir_option[dir]->keyword);
+  }
+
+  free(world[room1].dir_option[dir]);
+
+  world[room1].dir_option[dir] = NULL;
+
+  int zone2 = inzone(vroom2);
+
+  if (!check_zone_no_message(zone2)) {
+    send_to_char("`iThe zone for room 2 doesn't exist, removing the first side only.`q\n\r", ch);
     return;
   }
-  if(!world[room2].dir_option[odir]) {
-    send_to_char("`iThe other side of the exit didn't exist, removing one side only.`q\n\r",ch);
+  if (!check_zone_access_no_message(ch, zone2)) {
+    send_to_char("`iYou don't have permission to edit zone 2, removing the first side only.`q\n\r", ch);
     return;
   }
-  if(world[room2].dir_option[odir]->to_room_v!=vroom1) {
-    send_to_char("`iThe opposite exit wasn't linked back to the room, removing one side only.`q\n\r",ch);
+
+  int room2 = real_room(vroom2);
+
+  if (!check_room_no_message(room2) || !world[room2].dir_option[odir]) {
+    send_to_char("`iThe other side of the exit doesn't exist, removing the first side only.`q\n\r", ch);
     return;
   }
-  if(world[room2].dir_option[odir]->general_description)
+  if (world[room2].dir_option[odir]->to_room_v != vroom1) {
+    send_to_char("`iThe other side of the exit isn't linked back to the first room, removing the first side only.`q\n\r", ch);
+    return;
+  }
+
+  if (world[room2].dir_option[odir]->general_description) {
     free(world[room2].dir_option[odir]->general_description);
-  if(world[room2].dir_option[odir]->keyword)
+  }
+
+  if (world[room2].dir_option[odir]->keyword) {
     free(world[room2].dir_option[odir]->keyword);
+  }
+
   free(world[room2].dir_option[odir]);
-  world[room2].dir_option[odir]= NULL;
-  send_to_char("\n\r`iDouble room link removed.`q\n\r",ch);
+
+  world[room2].dir_option[odir] = NULL;
+
+  send_to_char("\n\r`iDouble room link removed.`q\n\r", ch);
 }
 
 void do_rdesc(CHAR *ch, char *argument, int cmd) {
@@ -8915,235 +9114,332 @@ Spell number is only required with CAST or SKILL.\n\r\
 }
 
 void do_rlook(CHAR *ch, char *argument, int cmd) {
-  char usage[]="\
-This command displays zone reset commands by room.\n\r\n\r\
+  char usage[] = "\
+This command displays zone reset commands by room.\n\r\
+\n\r\
   Usage: `krlook`q <room#>\n\r\
-     Ex: `krlook`q 1212\n\r\n\r\
-The zone reset command must be in the same zone as the room\n\r\
-to be displayed.\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH],buf[MAX_STRING_LENGTH],buf2[MAX_STRING_LENGTH];
-  struct string_block sb;
-  struct zone_data *zone;
-  int tab = 0,i,vzone,zoneNum,cmd_no,mobile, room, vroom,object,object_to,last_mob=0,last_obj=0;
+     Ex: `krlook`q 1212\n\r\
+\n\r\
+The zone reset command must be in the same zone as the room to be\n\r\
+displayed.\n\r";
 
-  if(!check_olc_access(ch)) return;
+  char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
-    return;
+  if (!check_olc_access(ch)) return;
+
+  argument = one_argument(argument, arg);
+
+  int vroom = 0;
+
+  if (!*arg) {
+    vroom = CHAR_VIRTUAL_ROOM(ch);
   }
-
-  if(is_number(arg)) vroom=atoi(arg);
+  else if (is_number(arg)) {
+    vroom = atoi(arg);
+  }
   else {
-    send_to_char(usage,ch);
+    send_to_char(usage, ch);
     return;
   }
 
-  room=real_room(vroom);
-  if(!check_room(ch,room)) return;
-  vzone=inzone(vroom);
-  zoneNum=real_zone(vzone);
-  if(!check_zone(ch,vzone)) return;
-  if(!check_zone_access(ch,vzone)) return;
+  int room = real_room(vroom);
 
+  if (!check_room(ch, room)) return;
+
+  int vzone = inzone(vroom);
+
+  if (!check_zone(ch, vzone)) return;
+  if (!check_zone_access(ch, vzone)) return;
+
+  int zone_num = real_zone(vzone);
+  struct zone_data *zone = &zone_table[zone_num];
+
+  snprintf(buf, sizeof(buf), "Zone resets for room %d in zone %d.\n\r", vroom, vzone);
+
+  struct string_block sb;
   init_string_block(&sb);
-  zone=&zone_table[zoneNum];
 
-  sprintf(buf,"Zone resets for room %d in zone %d.\n\r",vroom,vzone);
   append_to_string_block(&sb, buf);
 
-  for(cmd_no = 0;;cmd_no++) {
-    if(zone->cmd[cmd_no].command == 'S') break;
+  for (int cmd_no = 0, tab = 0, last_mob = 0, last_obj = 0, mob = 0, obj = 0, obj_to = 0; zone->cmd[cmd_no].command != 'S'; cmd_no++) {
+    switch (zone->cmd[cmd_no].command) {
+      case 'M': /* add a mobile */
+        last_mob = 0;
+        last_obj = 0;
 
-    switch(zone->cmd[cmd_no].command) {
-      case 'M': /* read a mobile */
-        last_mob=0;
-        last_obj=0;
-        if(zone->cmd[cmd_no].arg3!=vroom) break;
-        last_mob=1;
+        if (zone->cmd[cmd_no].arg3 != vroom) break;
+
+        last_mob = 1;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
         tab = 2;
-        mobile  = real_mobile(zone->cmd[cmd_no].arg1);
-        room    = real_room(zone->cmd[cmd_no].arg3);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(mobile != -1 && room != -1 ) {
-          sprintf(buf,"Load mob %s (#%d) in %s (#%d).\n\r",mob_proto_table[mobile].name,
-                       zone->cmd[cmd_no].arg1, world[room].name, zone->cmd[cmd_no].arg3);
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        mob = real_mobile(zone->cmd[cmd_no].arg1);
+        room = real_room(zone->cmd[cmd_no].arg3);
+
+        if (mob != -1 && room != -1) {
+          snprintf(buf, sizeof(buf), "Load mob %s (#%d) in %s (#%d).\n\r",
+            mob_proto_table[mob].name,
+            zone->cmd[cmd_no].arg1,
+            world[room].name,
+            zone->cmd[cmd_no].arg3);
+
+          append_to_string_block(&sb, buf);
+
           tab += 2;
-          append_to_string_block(&sb,buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
       case 'F': /* add a follower */
-        if(!last_mob) break;
-        mobile  = real_mobile(zone->cmd[cmd_no].arg1);
-        room    = real_room(zone->cmd[cmd_no].arg3);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(mobile != -1 && room != -1 ) {
-          sprintf(buf,"Load follower %s (#%d) in %s (#%d).\n\r",mob_proto_table[mobile].name,
-                       zone->cmd[cmd_no].arg1, world[room].name, zone->cmd[cmd_no].arg3);
-          append_to_string_block(&sb,buf);
+        if (!last_mob) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        mob = real_mobile(zone->cmd[cmd_no].arg1);
+        room = real_room(zone->cmd[cmd_no].arg3);
+
+        if (mob != -1 && room != -1) {
+          snprintf(buf, sizeof(buf), "Load follower %s (#%d) in %s (#%d).\n\r",
+            mob_proto_table[mob].name,
+            zone->cmd[cmd_no].arg1,
+            world[room].name,
+            zone->cmd[cmd_no].arg3);
+
+          append_to_string_block(&sb, buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
       case 'R': /* add a mount */
-        if(!last_mob) break;
-        mobile  = real_mobile(zone->cmd[cmd_no].arg1);
-        room    = real_room(zone->cmd[cmd_no].arg3);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(mobile != -1 && room != -1 ) {
-          sprintf(buf,"Ride %s (#%d) in %s (#%d).\n\r",mob_proto_table[mobile].name,
-                       zone->cmd[cmd_no].arg1, world[room].name, zone->cmd[cmd_no].arg3);
-          append_to_string_block(&sb,buf);
+        if (!last_mob) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        mob = real_mobile(zone->cmd[cmd_no].arg1);
+        room = real_room(zone->cmd[cmd_no].arg3);
+
+        if (mob != -1 && room != -1) {
+          snprintf(buf, sizeof(buf), "Ride %s (#%d) in %s (#%d).\n\r",
+            mob_proto_table[mob].name,
+            zone->cmd[cmd_no].arg1,
+            world[room].name,
+            zone->cmd[cmd_no].arg3);
+
+          append_to_string_block(&sb, buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
-      case 'O': /* read an object */
-        last_mob=0;
-        last_obj=0;
-        if(zone->cmd[cmd_no].arg3!=vroom) break;
-        last_obj=1;
+      case 'O': /* add an object */
+        last_mob = 0;
+        last_obj = 0;
+
+        if (zone->cmd[cmd_no].arg3 != vroom) break;
+
+        last_obj = 1;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
         tab = 2;
-        object = real_object(zone->cmd[cmd_no].arg1);
-        room   = real_room(zone->cmd[cmd_no].arg3);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(object != -1 && room != -1) {
-          sprintf(buf,"Load object %s (#%d) in %s (#%d).\n\r",obj_proto_table[object].name,
-                       zone->cmd[cmd_no].arg1, world[room].name, zone->cmd[cmd_no].arg3);
-          tab+=2;
-          append_to_string_block(&sb,buf);
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        obj = real_object(zone->cmd[cmd_no].arg1);
+        room = real_room(zone->cmd[cmd_no].arg3);
+
+        if (obj != -1 && room != -1) {
+          snprintf(buf, sizeof(buf), "Load object %s (#%d) in %s (#%d).\n\r",
+            obj_proto_table[obj].name,
+            zone->cmd[cmd_no].arg1,
+            world[room].name,
+            zone->cmd[cmd_no].arg3);
+
+          append_to_string_block(&sb, buf);
+
+          tab += 2;
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
-      case 'P': /* object to object */
-        if(!last_obj) break;
-        object = real_object(zone->cmd[cmd_no].arg1);
-        object_to = real_object(zone->cmd[cmd_no].arg3);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(object != -1 && object_to != -1) {
-          sprintf(buf,"Put object %s (#%d) in it.\n\r",obj_proto_table[object].name,
-                        zone->cmd[cmd_no].arg1);
-          append_to_string_block(&sb,buf);
+      case 'P': /* put object in object */
+        if (!last_obj) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        obj = real_object(zone->cmd[cmd_no].arg1);
+        obj_to = real_object(zone->cmd[cmd_no].arg3);
+
+        if (obj != -1 && obj_to != -1) {
+          snprintf(buf, sizeof(buf), "Put object %s (#%d) in it.\n\r",
+            obj_proto_table[obj].name,
+            zone->cmd[cmd_no].arg1);
+
+          append_to_string_block(&sb, buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
-      case 'G': /* obj_to_char */
-        if(!last_mob) break;
-        object = real_object(zone->cmd[cmd_no].arg1);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(object != -1) {
-          sprintf(buf,"Give %s (#%d).\n\r",obj_proto_table[object].name,zone->cmd[cmd_no].arg1);
-          append_to_string_block(&sb,buf);
+      case 'G': /* give object */
+        if (!last_mob) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        obj = real_object(zone->cmd[cmd_no].arg1);
+
+        if (obj != -1) {
+          snprintf(buf, sizeof(buf), "Give %s (#%d).\n\r",
+            obj_proto_table[obj].name,
+            zone->cmd[cmd_no].arg1);
+
+          append_to_string_block(&sb, buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
-      case 'E': /* object to equipment list */
-        if(!last_mob) break;
-        object = real_object(zone->cmd[cmd_no].arg1);
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(object != -1) {
-          sprintf(buf,"Equip %s (#%d) in the %s (#%d) position.\n\r",obj_proto_table[object].name,
-                       zone->cmd[cmd_no].arg1,equipment_types[zone->cmd[cmd_no].arg3],zone->cmd[cmd_no].arg3);
-          append_to_string_block(&sb,buf);
+      case 'E': /* equip object */
+        if (!last_mob) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
+        }
+
+        append_to_string_block(&sb, buf);
+
+        obj = real_object(zone->cmd[cmd_no].arg1);
+
+        if (obj != -1) {
+          snprintf(buf, sizeof(buf), "Equip %s (#%d) in the %s (#%d) position.\n\r",
+            obj_proto_table[obj].name,
+            zone->cmd[cmd_no].arg1,
+            equipment_types[zone->cmd[cmd_no].arg3],
+            zone->cmd[cmd_no].arg3);
+
+          append_to_string_block(&sb, buf);
         }
         else {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
       case 'D': /* set state of door */
-        last_mob=0;
-        last_obj=0;
-        if(zone->cmd[cmd_no].arg1!=vroom) break;
-        room  = real_room(zone->cmd[cmd_no].arg1);
+        last_mob = 0;
+        last_obj = 0;
+
+        if (zone->cmd[cmd_no].arg1 != vroom) break;
+
+        snprintf(buf, sizeof(buf), "%3d) ", cmd_no);
+
         tab = 2;
-        sprintf(buf,"%3d) ",cmd_no);
-        for(i=0;i<tab;i++)
-          strcat(buf," ");
-        append_to_string_block(&sb,buf);
-        if(room == -1) {
-          append_to_string_block(&sb,"Error in reset command.\n\r");
+        for (int i = 0; i < tab; i++) {
+          strcat(buf, " ");
         }
-        else {
+
+        append_to_string_block(&sb, buf);
+
+        room = real_room(zone->cmd[cmd_no].arg1);
+
+        if (room != -1) {
           switch (zone->cmd[cmd_no].arg3) {
             case 0:
-              sprintf(buf2, "unlocked and open");
+              snprintf(buf2, sizeof(buf2), "unlocked and open");
               break;
             case 1:
-              sprintf(buf2, "unlocked, but closed");
+              snprintf(buf2, sizeof(buf2), "unlocked, but closed");
               break;
             case 2:
-              sprintf(buf2, "locked and closed");
+              snprintf(buf2, sizeof(buf2), "locked and closed");
+              break;
+            default:
+              snprintf(buf2, sizeof(buf2), "unknown door state");
               break;
           }
 
-          /* Check on door resets added by Ranger - May 96 */
-          if(!world[room].dir_option[zone->cmd[cmd_no].arg2]) {
-            sprintf(buf,"Set the door %s from room #%d to (direction doesn't exist).\n\r",
-                         dirs[zone->cmd[cmd_no].arg2], zone->cmd[cmd_no].arg1);
-            append_to_string_block(&sb,buf);
+          if (!world[room].dir_option[zone->cmd[cmd_no].arg2]) {
+            snprintf(buf, sizeof(buf), "Set the door %s from room #%d to (direction doesn't exist).\n\r",
+              dirs[zone->cmd[cmd_no].arg2],
+              zone->cmd[cmd_no].arg1);
+
+            append_to_string_block(&sb, buf);
           }
-          else if(world[room].dir_option[zone->cmd[cmd_no].arg2]->to_room_v==0) {
-            sprintf(buf,"Set the door %s from room #%d to (no room in that direction).\n\r",
-                         dirs[zone->cmd[cmd_no].arg2], zone->cmd[cmd_no].arg1);
-            append_to_string_block(&sb,buf);
+          else if (world[room].dir_option[zone->cmd[cmd_no].arg2]->to_room_v == 0) {
+            snprintf(buf, sizeof(buf), "Set the door %s from room #%d to (no room in that direction).\n\r",
+              dirs[zone->cmd[cmd_no].arg2],
+              zone->cmd[cmd_no].arg1);
+
+            append_to_string_block(&sb, buf);
           }
-          /* End of door reset check */
           else {
-            sprintf(buf,"Set the door %s from room #%d to #%d to %s.\n\r",
-                    dirs[zone->cmd[cmd_no].arg2], zone->cmd[cmd_no].arg1,
-                    world[room].dir_option[zone->cmd[cmd_no].arg2]->to_room_v,buf2);
-            append_to_string_block(&sb,buf);
+            snprintf(buf, sizeof(buf), "Set the door %s from room #%d to #%d to %s.\n\r",
+              dirs[zone->cmd[cmd_no].arg2],
+              zone->cmd[cmd_no].arg1,
+              world[room].dir_option[zone->cmd[cmd_no].arg2]->to_room_v,
+              buf2);
+
+            append_to_string_block(&sb, buf);
           }
+        }
+        else {
+          append_to_string_block(&sb, "Error in reset command.\n\r");
         }
         break;
 
       default:
-        sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",(int)zone, (int)cmd_no);
-        append_to_string_block(&sb,buf);
+        snprintf(buf, sizeof(buf), "Undefined cmd in reset table; zone %d, cmd %d.\n\r", vzone, cmd_no);
+        append_to_string_block(&sb, buf);
         break;
     }
   }
+
   page_string_block(&sb, ch);
+
   destroy_string_block(&sb);
 }
 
@@ -9248,123 +9544,1418 @@ given number or the given text. Only 30 maximum file names will be shown.\n\r\n\
   add_program(dtail, ch);
 }
 
-void do_oname(CHAR *ch, char *argument, int cmd)
-{
-  char usage[]="\
-This command changes the name of the specified object.\n\r\n\r\
-  Usage: `koname`q <obj #> (Then enter object name, ending with an @@ on the same line.)\n\r\
-     Ex: `koname`q 32535\n\r`ibracelet magic@@`q\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vobj,robj,zone;
+#define MAX_OBJ_NAME_LEN             50
+#define MAX_OBJ_SHORT_DESC_LEN       50
+#define MAX_OBJ_LONG_DESC_LEN        256
+#define MAX_OBJ_ACTION_DESC_LEN      120
+#define MAX_OBJ_ACTION_DESC_NOTE_LEN 4096
+#define MAX_OBJ_ACTION_NT_DESC_LEN   120
+#define MAX_OBJ_CHAR_WEAR_DESC_LEN   120
+#define MAX_OBJ_ROOM_WEAR_DESC_LEN   120
+#define MAX_OBJ_CHAR_REM_DESC_LEN    120
+#define MAX_OBJ_ROOM_REM_DESC_LEN    120
 
-  if(!check_olc_access(ch)) return;
+void do_oreset(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command resets an object to the default values.\n\r\
+\n\r\
+  Usage: `koreset`q <#>\n\r\
+     Ex: `koreset`q 3005\n\r";
 
-  argument=one_argument(argument,arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_number(arg)) vobj=atoi(arg);
-  else {
-    send_to_char(usage,ch);
-    return;
-  }
+  int vobj = atoi(arg);
 
-  robj=real_object(vobj);
-  if(!check_obj(ch,robj)) return;
+  int robj = real_object(vobj);
 
-  zone=inzone(vobj);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  if (!check_obj(ch, robj)) return;
 
-  send_to_char("Enter object name.  End with an @@ on the same line.\n\r",ch);
+  int zone = inzone(vobj);
 
-  obj_proto_table[robj].name[0] = 0; // clear out original name
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
 
-  // using the auto-assign functionality
-  ch->desc->str = &(obj_proto_table[robj].name); // place to assign
-  ch->desc->max_str = 50; // maxlength of input string to to accept
+  obj_proto_table[robj] = (const struct obj_proto) { 0 };
+
+  obj_proto_table[robj].virtual = vobj;
+
+  obj_proto_table[robj].name = str_dup("nothing");
+  obj_proto_table[robj].short_description = str_dup("a bit of nothing");
+  obj_proto_table[robj].description = str_dup("There is a bit of nothing here.");
+
+  SET_BIT(obj_proto_table[robj].obj_flags.wear_flags, ITEM_TAKE);
+
+  send_to_char("Object reset.\n\r", ch);
 }
 
+void do_oname(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the name of the specified object.\n\r\
+\n\r\
+  Usage: `koname`q <#>\n\r\
+     Ex: `koname`q 32535\n\r\
+\n\r";
 
-void do_owear(CHAR *ch, char *argument, int cmd)
-{
-  char usage[]="\
-This command changes the wear location of an object.\n\r\n\r\
-  Usage: `kowear`q <obj #> <add|remove> all, or a list of the following:\n\r\
-TAKE, FINGER, NECK, BODY, HEAD, LEGS, FEET, HANDS, ARMS, SHIELD, ABOUT,\n\r\
-WAIST, WRIST, WIELD, HOLD, THROW, LIGHT-SOURCE, NO_REMOVE, NO_SCAVENGE..\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH];
-  int vobj,robj,zone,remove,warn,ret;
+  if (!check_olc_access(ch)) return;
 
-  if(!check_olc_access(ch)) return;
+  char arg[MIL];
 
-  // parse out object number
-  argument=one_argument(argument,arg);
-  if(is_number(arg)) vobj=atoi(arg);
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("Enter object name.  End with an @@ on the same line.\n\r", ch);
+
+  if (obj_proto_table[robj].name) {
+    obj_proto_table[robj].name[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].name);
+  ch->desc->max_str = MAX_OBJ_NAME_LEN;
+}
+
+void do_oshort(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the short description of the specified object.\n\r\
+\n\r\
+  Usage: `koshort`q <#>\n\r\
+     Ex: `koshort`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("Enter object short description.  End with an @@ on the same line.\n\r", ch);
+
+  if (obj_proto_table[robj].short_description) {
+    obj_proto_table[robj].short_description[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].short_description);
+  ch->desc->max_str = MAX_OBJ_SHORT_DESC_LEN;
+}
+
+void do_olong(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the long description of the specified object.\n\r\
+\n\r\
+  Usage: `kolong`q <#>\n\r\
+     Ex: `kolong`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("Enter object long description.  End with an @@ on the same line.\n\r", ch);
+
+  if (obj_proto_table[robj].description) {
+    obj_proto_table[robj].description[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].description);
+  ch->desc->max_str = MAX_OBJ_LONG_DESC_LEN;
+}
+
+void do_oaction(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the action description of the specified object.\n\r\
+\n\r\
+  Usage: `koaction`q <#>\n\r\
+     Ex: `koaction`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$V for victim/you, $m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].action_description) {
+    obj_proto_table[robj].action_description[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].action_description);
+  ch->desc->max_str = (obj_proto_table[robj].obj_flags.type_flag != ITEM_NOTE) ? MAX_OBJ_ACTION_DESC_LEN : MAX_OBJ_ACTION_DESC_NOTE_LEN;
+}
+
+void do_oaction_nt(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the action_nt description of the specified object.\n\r\
+\n\r\
+  Usage: `koaction_nt`q <#>\n\r\
+     Ex: `koaction_nt`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Note: You must also define an Action Description.\n\r\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].action_description_nt) {
+    obj_proto_table[robj].action_description_nt[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].action_description_nt);
+  ch->desc->max_str = MAX_OBJ_ACTION_NT_DESC_LEN;
+}
+
+void do_ochar_wear_desc(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the char_wear_desc description of the specified object.\n\r\
+\n\r\
+  Usage: `kochar_wear_desc`q <#>\n\r\
+     Ex: `kochar_wear_desc`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Note: Define room_wear_desc as well.\n\r\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].char_wear_desc) {
+    obj_proto_table[robj].char_wear_desc[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].char_wear_desc);
+  ch->desc->max_str = MAX_OBJ_CHAR_WEAR_DESC_LEN;
+}
+
+void do_oroom_wear_desc(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the room_wear_desc description of the specified object.\n\r\
+\n\r\
+  Usage: `koroom_wear_desc`q <#>\n\r\
+     Ex: `koroom_wear_desc`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Note: Define char_wear_desc as well.\n\r\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].room_wear_desc) {
+    obj_proto_table[robj].room_wear_desc[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].room_wear_desc);
+  ch->desc->max_str = MAX_OBJ_ROOM_WEAR_DESC_LEN;
+}
+
+void do_ochar_rem_desc(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the char_rem_desc description of the specified object.\n\r\
+\n\r\
+  Usage: `kochar_rem_desc`q <#>\n\r\
+     Ex: `kochar_rem_desc`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Note: Define room_rem_desc as well.\n\r\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].char_rem_desc) {
+    obj_proto_table[robj].char_rem_desc[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].char_rem_desc);
+  ch->desc->max_str = MAX_OBJ_CHAR_REM_DESC_LEN;
+}
+
+void do_oroom_rem_desc(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command changes the room_rem_desc description of the specified object.\n\r\
+\n\r\
+  Usage: `koroom_rem_desc`q <#>\n\r\
+     Ex: `koroom_rem_desc`q 3005\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  send_to_char("\
+Note: Define char_rem_desc as well.\n\r\
+Use $n for name/you, $s for his/her/your, $e for he/she/you,\n\r\
+$m for him/her/you, $r for <name>'s/your.\n\r\
+End with an @@ on the same line.  Use @@@ to remove the description.\n\r", ch);
+
+  if (obj_proto_table[robj].room_rem_desc) {
+    obj_proto_table[robj].room_rem_desc[0] = 0;
+  }
+
+  ch->desc->str = &(obj_proto_table[robj].room_rem_desc);
+  ch->desc->max_str = MAX_OBJ_ROOM_REM_DESC_LEN;
+}
+
+void do_oextra(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command adds/removes an extra description from an object.\n\r\
+\n\r\
+  Usage: `koextra`q <#> <add/remove> <keywords> (room is optional)\n\r\
+     Ex: `koextra`q 3005 add gemstone gem\n\r\
+\n\r\
+  When removing, the full list of keywords must be used.\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  bool add = TRUE;
+
+  if (is_abbrev(arg, "add")) add = TRUE;
+  else if (is_abbrev(arg, "remove"))  add = FALSE;
   else {
-    send_to_char(usage,ch);
+    send_to_char(usage, ch);
     return;
   }
 
-  // parse out action (add/remove)
-  argument=one_argument(argument, arg);
-  if(!*arg) {
-    send_to_char(usage,ch);
+  if (!*argument) {
+    send_to_char(usage, ch);
     return;
   }
 
-  if(is_abbrev(arg, "remove")) {
-    remove = 1;
-  } else {
-    remove = 0;
+  for (; isspace(*argument); argument++);
+
+  if (add) {
+    send_to_char("\n\r`iEnter the extra description, terminate with @ on its own line.`q\n\r", ch);
+
+    struct extra_descr_data *tmp_descr = NULL;
+    CREATE(tmp_descr, struct extra_descr_data, 1);
+    tmp_descr->keyword = str_dup(argument);
+    tmp_descr->next = obj_proto_table[robj].ex_description;
+    ch->desc->str = &tmp_descr->description;
+    ch->desc->max_str = LEN_EXTRADESC_MAX;
+    obj_proto_table[robj].ex_description = tmp_descr;
+    tmp_descr = NULL;
+  }
+  else {
+    struct extra_descr_data *tmp_descr = NULL;
+    tmp_descr = obj_proto_table[robj].ex_description;
+    struct extra_descr_data **prev_descr_ptr;
+    prev_descr_ptr = &obj_proto_table[robj].ex_description;
+    bool found = FALSE;
+    while (tmp_descr) {
+      if (!strcmp(tmp_descr->keyword, argument)) {
+        *prev_descr_ptr = tmp_descr->next;
+        if (tmp_descr->description) {
+          free(tmp_descr->description);
+        }
+        if (tmp_descr->keyword) {
+          free(tmp_descr->keyword);
+        }
+        struct extra_descr_data *tmp_descr_next = NULL;
+        tmp_descr_next = tmp_descr->next;
+        free(tmp_descr);
+        tmp_descr = tmp_descr_next;
+        found = TRUE;
+
+        send_to_char("Extra description deleted.\n\r", ch);
+      }
+      else {
+        prev_descr_ptr = &tmp_descr->next;
+        tmp_descr = tmp_descr->next;
+      }
+    }
+    if (!found) {
+      send_to_char("Extra description not found.\n\r", ch);
+    }
+  }
+}
+
+void do_otype(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command sets the object's type.\n\r\
+\n\r\
+  Usage: `kotype`q <#> <type>\n\r\
+     Ex: `kotype`q 3005 `iSCROLL`q (caps not important)\n\r\
+\n\r\
+Types are:\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(item_types, ch);
+    return;
   }
 
-  robj=real_object(vobj);
-  if(!check_obj(ch,robj)) return;
+  int vobj = atoi(arg);
 
-  zone=inzone(vobj);
-  if(!check_zone(ch,zone)) return;
-  if(!check_zone_access(ch,zone)) return;
+  int robj = real_object(vobj);
 
-  warn = 0;
+  if (!check_obj(ch, robj)) return;
 
-  argument=one_argument(argument, arg);
+  int zone = inzone(vobj);
 
-  if ((*arg) && (!strcmp(arg, "all"))) {
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
 
-    if (remove) {
-      obj_proto_table[robj].obj_flags.wear_flags = 0;
-    } else {
-      obj_proto_table[robj].obj_flags.wear_flags = (ITEM_NO_SCAVENGE<<1) -1;
-      send_to_char("Done.\n\r", ch);
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
+    print_bits_to_char(item_types, ch);
+    return;
+  }
+
+  int type = old_search_block(arg, 0, strlen(arg), item_types, FALSE);
+
+  if (type == -1) {
+    char buf[MSL];
+    snprintf(buf, sizeof(buf), "`kObject type %s not found.`q\n\r", arg);
+    send_to_char(buf, ch);
+    return;
+  }
+
+  obj_proto_table[robj].obj_flags.type_flag = (type - 1);
+
+  send_to_char("\n\r`iObject type set.`q\n\r", ch);
+}
+
+void do_owear(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command toggles the object wear flags for an object on/off.\n\r\
+\n\r\
+  Usage: `kowear`q <#> <list of flags>/all/none\n\r\
+     Ex: `kowear`q 3005 `iTAKE BODY`q (caps not important)\n\r\
+\n\r\
+Wear flags are:\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(wear_bits, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!strcmp(arg, "all")) {
+    int bit_num = 0;
+    for (bit_num = 0; *wear_bits[bit_num] != '\n'; bit_num++);
+    if (bit_num) obj_proto_table[robj].obj_flags.wear_flags = ((1 << (bit_num)) - 1);
+
+    send_to_char("`iAll object wear flags added.`q\n\r", ch);
+    return;
+  }
+
+  if (!strcmp(arg, "none")) {
+    obj_proto_table[robj].obj_flags.wear_flags = 0;
+
+    send_to_char("`iAll object wear flags removed.`q\n\r", ch);
+    return;
+  }
+
+  while (*arg) {
+    int bit_pos = old_search_block(string_to_upper(arg), 0, strlen(arg), wear_bits, FALSE);
+
+    if (bit_pos != -1) {
+      unsigned long bit = (1 << (bit_pos - 1));
+
+      if (IS_SET(obj_proto_table[robj].obj_flags.wear_flags, bit)) {
+        REMOVE_BIT(obj_proto_table[robj].obj_flags.wear_flags, bit);
+      }
+      else {
+        SET_BIT(obj_proto_table[robj].obj_flags.wear_flags, bit);
+      }
+    }
+    else {
+      char buf[MSL];
+
+      snprintf(buf, sizeof(buf), "`kObject wear flag %s not found.`q\n\r", arg);
+
+      send_to_char(buf, ch);
     }
 
-  } else {
+    argument = one_argument(argument, arg);
+  }
 
-    while (*arg) {
+  send_to_char("\n\r`iObject wear flag(s) added/removed.`q\n\r", ch);
+}
 
-      str_upper(arg);
+void do_oflags(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command toggles the object flags for an object on/off.\n\r\
+\n\r\
+  Usage: `koflags`q <#> <list of flags>/all/none\n\r\
+     Ex: `koflags`q 3005 `iGLOW HUM`q (caps not important)\n\r\
+\n\r\
+Flags are:\n\r\
+\n\r";
 
-      if ((ret = old_search_block(arg, 0, strlen(arg), wear_bits, FALSE)) != -1) {
-        if (remove) {
-          obj_proto_table[robj].obj_flags.wear_flags &= ~(1<<(ret-1));
-        } else {
-          obj_proto_table[robj].obj_flags.wear_flags |=  1<<(ret-1);
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(extra_bits, ch);
+    print_bits_to_char(extra_bits2, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!strcmp(arg, "all")) {
+    int bit_num = 0;
+    for (bit_num = 0; *extra_bits[bit_num] != '\n'; bit_num++);
+    if (bit_num) obj_proto_table[robj].obj_flags.extra_flags = ((1 << (bit_num)) - 1);
+
+    int bit_num2 = 0;
+    for (bit_num2 = 0; *extra_bits2[bit_num2] != '\n'; bit_num2++);
+    if (bit_num2) obj_proto_table[robj].obj_flags.extra_flags2 = ((1 << (bit_num2)) - 1);
+
+    send_to_char("`iAll object flags added.`q\n\r", ch);
+    return;
+  }
+
+  if (!strcmp(arg, "none")) {
+    obj_proto_table[robj].obj_flags.extra_flags = 0;
+    obj_proto_table[robj].obj_flags.extra_flags2 = 0;
+
+    send_to_char("`iAll object flags removed.`q\n\r", ch);
+    return;
+  }
+
+  while (*arg) {
+    int bit_pos = old_search_block(string_to_upper(arg), 0, strlen(arg), extra_bits, FALSE);
+
+    if (bit_pos != -1) {
+      unsigned long bit = (1 << (bit_pos - 1));
+
+      if (IS_SET(obj_proto_table[robj].obj_flags.extra_flags, bit)) {
+        REMOVE_BIT(obj_proto_table[robj].obj_flags.extra_flags, bit);
+      }
+      else {
+        SET_BIT(obj_proto_table[robj].obj_flags.extra_flags, bit);
+      }
+    }
+    else {
+      int bit_pos2 = old_search_block(string_to_upper(arg), 0, strlen(arg), extra_bits2, FALSE);
+
+      if (bit_pos2 != -1) {
+        unsigned long bit2 = (1 << (bit_pos2 - 1));
+
+        if (IS_SET(obj_proto_table[robj].obj_flags.extra_flags2, bit2)) {
+          REMOVE_BIT(obj_proto_table[robj].obj_flags.extra_flags2, bit2);
         }
-      } else {
-        warn++;
+        else {
+          SET_BIT(obj_proto_table[robj].obj_flags.extra_flags2, bit2);
+        }
+      }
+      else {
+        char buf[MSL];
+
+        snprintf(buf, sizeof(buf), "`kObject flag %s not found.`q\n\r", arg);
+
+        send_to_char(buf, ch);
+      }
+    }
+
+    argument = one_argument(argument, arg);
+  }
+
+  send_to_char("\n\r`iObject flag(s) added/removed.`q\n\r", ch);
+}
+
+void do_obitvect(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command toggles the object bits for an object on/off.\n\r\
+\n\r\
+  Usage: `kobitvect`q <#> <list of flags>/all/none\n\r\
+     Ex: `kobitvect`q 3005 `iINFRAVISION FLY`q (caps not important)\n\r\
+\n\r\
+Bits are:\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(affected_bits, ch);
+    print_bits_to_char(affected_bits2, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!strcmp(arg, "all")) {
+    int bit_num = 0;
+    for (bit_num = 0; *affected_bits[bit_num] != '\n'; bit_num++);
+    if (bit_num) obj_proto_table[robj].obj_flags.bitvector = ((1 << (bit_num)) - 1);
+
+    int bit_num2 = 0;
+    for (bit_num2 = 0; *affected_bits2[bit_num2] != '\n'; bit_num2++);
+    if (bit_num2) obj_proto_table[robj].obj_flags.bitvector2 = ((1 << (bit_num2)) - 1);
+
+    send_to_char("`iAll object bits added.`q\n\r", ch);
+    return;
+  }
+
+  if (!strcmp(arg, "none")) {
+    obj_proto_table[robj].obj_flags.bitvector = 0;
+    obj_proto_table[robj].obj_flags.bitvector2 = 0;
+
+    send_to_char("`iAll object bits removed.`q\n\r", ch);
+    return;
+  }
+
+  while (*arg) {
+    int bit_pos = old_search_block(string_to_upper(arg), 0, strlen(arg), affected_bits, FALSE);
+
+    if (bit_pos != -1) {
+      unsigned long bit = (1 << (bit_pos - 1));
+
+      if (IS_SET(obj_proto_table[robj].obj_flags.bitvector, bit)) {
+        REMOVE_BIT(obj_proto_table[robj].obj_flags.bitvector, bit);
+      }
+      else {
+        SET_BIT(obj_proto_table[robj].obj_flags.bitvector, bit);
+      }
+    }
+    else {
+      int bit_pos2 = old_search_block(string_to_upper(arg), 0, strlen(arg), affected_bits2, FALSE);
+
+      if (bit_pos2 != -1) {
+        unsigned long bit2 = (1 << (bit_pos2 - 1));
+
+        if (IS_SET(obj_proto_table[robj].obj_flags.bitvector2, bit2)) {
+          REMOVE_BIT(obj_proto_table[robj].obj_flags.bitvector2, bit2);
+        }
+        else {
+          SET_BIT(obj_proto_table[robj].obj_flags.bitvector2, bit2);
+        }
+      }
+      else {
+        char buf[MSL];
+
+        snprintf(buf, sizeof(buf), "`kObject bit %s not found.`q\n\r", arg);
+
+        send_to_char(buf, ch);
+      }
+    }
+
+    argument = one_argument(argument, arg);
+  }
+
+  send_to_char("\n\r`iObject bit(s) added/removed.`q\n\r", ch);
+}
+
+void do_oweight(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command allows you to change an object's weight.\n\r\
+\n\r\
+  Usage: `koweight`q <#> <weight>\n\r\
+     Ex: `koweight`q 3005 10\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int weight = atoi(arg);
+
+  obj_proto_table[robj].obj_flags.weight = weight;
+
+  send_to_char("`iObject weight set.`q\n\r", ch);
+}
+
+void do_ocost(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command allows you to change an object's cost.\n\r\
+\n\r\
+  Usage: `kocost`q <#> <cost>\n\r\
+     Ex: `kocost`q 3005 1000\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int cost = atoi(arg);
+
+  obj_proto_table[robj].obj_flags.cost = cost;
+
+  send_to_char("`iObject cost set.`q\n\r", ch);
+}
+
+void do_orent(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command allows you to change an object's rent cost.\n\r\
+\n\r\
+  Usage: `korent`q <#> <rent>\n\r\
+     Ex: `korent`q 3005 100\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int rent = atoi(arg);
+
+  obj_proto_table[robj].obj_flags.cost_per_day = rent;
+
+  send_to_char("`iObject rent cost set.`q\n\r", ch);
+}
+
+void do_otimer(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command allows you to change an object's timer.\n\r\
+\n\r\
+  Usage: `kotimer`q <#> <timer>\n\r\
+     Ex: `kotimer`q 3005 30\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int timer = atoi(arg);
+
+  obj_proto_table[robj].obj_flags.timer = timer;
+
+  send_to_char("`iObject timer set.`q\n\r", ch);
+}
+
+void do_orepop(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command allows you to change an object's repop percent.\n\r\
+\n\r\
+  Usage: `korepop`q <#> <repop>\n\r\
+     Ex: `korepop`q 3005 60\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int repop = atoi(arg);
+
+  obj_proto_table[robj].obj_flags.repop_percent = repop;
+
+  send_to_char("`iObject repop percent set.`q\n\r", ch);
+}
+
+void do_osubclass_res(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command toggles the object subclass restrictions for an object on/off.\n\r\
+\n\r\
+  Usage: `kosubclass_res`q <#> <list of flags>/all/none\n\r\
+     Ex: `kosubclass_res`q 3005 `iANTI_ENCHANTER ANTI_DEFILER`q (caps not important)\n\r\
+\n\r\
+Subclass restrictions are:\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(subclass_res_bits, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!strcmp(arg, "all")) {
+    int bit_num = 0;
+    for (bit_num = 0; *subclass_res_bits[bit_num] != '\n'; bit_num++);
+    if (bit_num) obj_proto_table[robj].obj_flags.subclass_res = ((1 << (bit_num)) - 1);
+
+    send_to_char("`iAll object subclass restriction flags added.`q\n\r", ch);
+    return;
+  }
+
+  if (!strcmp(arg, "none")) {
+    obj_proto_table[robj].obj_flags.subclass_res = 0;
+
+    send_to_char("`iAll object subclass restriction flags removed.`q\n\r", ch);
+    return;
+  }
+
+  while (*arg) {
+    int bit_pos = old_search_block(string_to_upper(arg), 0, strlen(arg), subclass_res_bits, FALSE);
+
+    if (bit_pos != -1) {
+      unsigned long bit = (1 << (bit_pos - 1));
+
+      if (IS_SET(obj_proto_table[robj].obj_flags.subclass_res, bit)) {
+        REMOVE_BIT(obj_proto_table[robj].obj_flags.subclass_res, bit);
+      }
+      else {
+        SET_BIT(obj_proto_table[robj].obj_flags.subclass_res, bit);
+      }
+    }
+    else {
+      char buf[MSL];
+
+      snprintf(buf, sizeof(buf), "`kObject subclass restriction %s not found.`q\n\r", arg);
+
+      send_to_char(buf, ch);
+    }
+
+    argument = one_argument(argument, arg);
+  }
+
+  send_to_char("\n\r`iObject subclass restriction(s) added/removed.`q\n\r", ch);
+}
+
+void do_omaterial(CHAR *ch, char *argument, int cmd) {
+  send_to_char("`iObject material not implemented.`q\n\r", ch);
+}
+
+void do_oaffects(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command adds/removes affects from an object.\n\r\
+\n\r\
+  Usage: `koaffects`q <#> <add/remove> <affect> <value>\n\r\
+     Ex: `koaffects`q 3005 add mana 10\n\r\
+\n\r\
+Affects are:\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    print_bits_to_char(apply_types, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(usage, ch);
+    print_bits_to_char(apply_types, ch);
+    return;
+  }
+
+  bool add = TRUE;
+
+  if (is_abbrev(arg, "add")) add = TRUE;
+  else if (is_abbrev(arg, "remove"))  add = FALSE;
+  else {
+    send_to_char(usage, ch);
+    print_bits_to_char(apply_types, ch);
+    return;
+  }
+
+  char location[MIL];
+
+  argument = one_argument(argument, location);
+
+  if (!*location) {
+    send_to_char(usage, ch);
+    print_bits_to_char(apply_types, ch);
+    return;
+  }
+
+  if (add) {
+    argument = one_argument(argument, arg);
+
+    if (!*arg || !is_number(arg)) {
+      send_to_char(usage, ch);
+      print_bits_to_char(apply_types, ch);
+      return;
+    }
+
+    int value = atoi(arg);
+
+    int affect_num = old_search_block(string_to_upper(location), 0, strlen(location), apply_types, FALSE);
+
+    if (affect_num != -1) {
+      if (obj_proto_table[robj].affected[0].location == 0) {
+        obj_proto_table[robj].affected[0].location = (affect_num - 1);
+        obj_proto_table[robj].affected[0].modifier = value;
+      }
+      else if (obj_proto_table[robj].affected[1].location == 0) {
+        obj_proto_table[robj].affected[1].location = (affect_num - 1);
+        obj_proto_table[robj].affected[1].modifier = value;
+      }
+      else if (obj_proto_table[robj].affected[2].location == 0) {
+        obj_proto_table[robj].affected[2].location = (affect_num - 1);
+        obj_proto_table[robj].affected[2].modifier = value;
+      }
+      else {
+        char buf[MSL];
+        snprintf(buf, sizeof(buf), "`kMax of %d AFFECTS on each object.`q\n\r", MAX_OBJ_AFFECT);
+        send_to_char(buf, ch);
+      }
+    }
+    else {
+      char buf[MSL];
+      snprintf(buf, sizeof(buf), "`kAffect %s does not exist.`q\n\r", location);
+      send_to_char(buf, ch);
+      send_to_char("\n\rAffects are:\n\r\n\r", ch);
+      print_bits_to_char(apply_types, ch);
+    }
+  }
+  else {
+    while (*location) {
+      int affect_num = old_search_block(string_to_upper(location), 0, strlen(location), apply_types, FALSE);
+
+      if ((affect_num - 1) == obj_proto_table[robj].affected[0].location) {
+        obj_proto_table[robj].affected[0].location = 0;
+        obj_proto_table[robj].affected[0].modifier = 0;
+      }
+      else if ((affect_num - 1) == obj_proto_table[robj].affected[1].location) {
+        obj_proto_table[robj].affected[1].location = 0;
+        obj_proto_table[robj].affected[1].modifier = 0;
+      }
+      else if ((affect_num - 1) == obj_proto_table[robj].affected[2].location) {
+        obj_proto_table[robj].affected[2].location = 0;
+        obj_proto_table[robj].affected[2].modifier = 0;
+      }
+      else {
+        char buf[MSL];
+        snprintf(buf, sizeof(buf), "`kAffect %s did not exist on object.`q\n\r", location);
+        send_to_char(buf, ch);
       }
 
-      argument=one_argument(argument, arg);
+      argument = one_argument(argument, location);
     }
   }
 
-  if (warn) {
-    send_to_char("Some wear flags didn't exist.\n\r", ch);
-  } else {
-    send_to_char("Done.\n\r", ch);
+  send_to_char("\n\r`iObject affect(s) added/removed.`q\n\r", ch);
+}
+
+void do_ovalues(CHAR *ch, char *argument, int cmd) {
+  char usage[] = "\
+This command modifies the values of an object.\n\r\
+\n\r\
+  Usage: `kovalues`q <#> <value 0> <value 1> <value 2> <value 3>\n\r\
+     Ex: `kovalues`q 3005 10 0 0 0\n\r\
+\n\r\
+   Note: You must specify all values, even if they are unused.\n\r\
+\n\r";
+
+  if (!check_olc_access(ch)) return;
+
+  char arg[MIL];
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg || !is_number(arg)) {
+    send_to_char(usage, ch);
+    return;
+  }
+
+  int vobj = atoi(arg);
+
+  int robj = real_object(vobj);
+
+  if (!check_obj(ch, robj)) return;
+
+  int zone = inzone(vobj);
+
+  if (!check_zone(ch, zone)) return;
+  if (!check_zone_access(ch, zone)) return;
+
+  int val[4] = { 0 };
+
+  for (int i = 0; i < 4; i++) {
+    argument = one_argument(argument, arg);
+
+    if (!*arg || !is_number(arg)) {
+      goto print_item_value_info;
+    }
+
+    val[i] = atoi(arg);
+  }
+
+  obj_proto_table[robj].obj_flags.value[0] = val[0];
+  obj_proto_table[robj].obj_flags.value[1] = val[1];
+  obj_proto_table[robj].obj_flags.value[2] = val[2];
+  obj_proto_table[robj].obj_flags.value[3] = val[3];
+
+  send_to_char("`iObject value(s) set.`q\n\r", ch);
+  return;
+
+print_item_value_info:
+  switch (obj_proto_table[robj].obj_flags.type_flag) {
+    case ITEM_LIGHT:
+      send_to_char("For light sources: <color> <type> <hours> <not used>\n\r", ch);
+      break;
+    case ITEM_RECIPE:
+      send_to_char("For Recipes: <Creates> <Requires> <Requires> <Requires> (-1 for none)\n\r", ch);
+      break;
+    case ITEM_AQ_ORDER:
+      send_to_char("For AQ Orders: <Requires> <Requires> <Requires> <Requires> (-1 for none)\n\r", ch);
+      break;
+    case ITEM_SCROLL:
+    case ITEM_POTION:
+      send_to_char("For Scrolls and Potions: <Level> <Spell1|0> <Spell2|0> <Spell3|0>\n\r", ch);
+      break;
+    case ITEM_WAND:
+    case ITEM_STAFF:
+      send_to_char("For Staves and Wands: <Level> <Max Charges> <Charges Left> <Spell>\n\r", ch);
+      break;
+    case ITEM_2HWEAPON:
+    case ITEM_WEAPON:
+      send_to_char("For weapons: <olchelp weapon attacks> <dice damage> <dice size> <type>\n\r", ch);
+      break;
+    case ITEM_FIREWEAPON:
+      send_to_char("For guns: <license number> <bullets left> <dam dice number> <dam dice size>\n\r", ch);
+      break;
+    case ITEM_MISSILE:
+      send_to_char("For thrown weapons: <dam dice number> <dam dice size> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_ARMOR:
+      send_to_char("For armor: <AC apply (positive is better)> <unused> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_TRAP:
+      send_to_char("For traps: <spell> <damage> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_CONTAINER:
+      send_to_char("For containers: <max contains> <how locked> <key #> <corpse>\n\r", ch);
+      break;
+    case ITEM_NOTE:
+      send_to_char("For notes: <tongue> <unused> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_DRINKCON:
+      send_to_char("For drink containers: <max contains> <current contains> <liquid> <poisoned (0 = False, 1 = True)>\n\r", ch);
+      break;
+    case ITEM_BULLET:
+      send_to_char("For bullets: <unused> <unused> <gun #> <unused>\n\r", ch);
+      break;
+    case ITEM_KEY:
+      send_to_char("For keys: <keytype> <unused> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_FOOD:
+      send_to_char("For food: <feeds> <unused> <unused> <poisoned (0 = False, 1 = True)>\n\r", ch);
+      break;
+    case ITEM_MONEY:
+      send_to_char("For money: <coins> <unused> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_LOCKPICK:
+      send_to_char("For lockpicks: <# picks> <max # picks> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_BOARD:
+      send_to_char("For boards: <min read level> <min write level> <min remove level> <unused>\n\r", ch);
+      break;
+    case ITEM_SC_TOKEN:
+      send_to_char("For subclass tokens: <Subclass Points Given> <unused> <unused> <unused>\n\r", ch);
+      break;
+    case ITEM_SKIN:
+      send_to_char("For skins: <all unused> Use COST for value of skin\n\r", ch);
+      break;
   }
 }
 
@@ -9463,5 +11054,3 @@ multiplier to 100.\n\r";
       return;
   }
 }
-
-

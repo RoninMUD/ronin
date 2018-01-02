@@ -123,24 +123,24 @@ void cast_call_lightning(ubyte level, CHAR *ch, char *arg, int type,
 
   switch (type) {
   case SPELL_TYPE_SPELL:
-    if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
+    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
       spell_call_lightning(level, ch, victim, 0);
     else
       send_to_char("You fail to call upon the lightning from the sky!\n\r",ch);
     break;
   case SPELL_TYPE_POTION:
-    if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
+    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
       spell_call_lightning(level, ch, ch, 0);
     break;
   case SPELL_TYPE_SCROLL:
-    if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
+    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
       if(victim)
 	spell_call_lightning(level, ch, victim, 0);
       else if (!tar_obj) spell_call_lightning(level, ch, ch, 0);
     }
     break;
   case SPELL_TYPE_STAFF:
-    if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
+    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
       for (victim = world[CHAR_REAL_ROOM(ch)].people ;
 	   victim ; victim = tmp ) {
 	tmp = victim->next_in_room;

@@ -149,10 +149,31 @@ void do_rdelete(CHAR *ch, char *argument, int cmd);
 void do_mdelete(CHAR *ch, char *argument, int cmd);
 void do_odelete(CHAR *ch, char *argument, int cmd);
 void do_sdelete(CHAR *ch, char *argument, int cmd);
-/* Pyro */
+
 void do_oname(CHAR *ch, char *argument, int cmd);
+void do_oshort(CHAR *ch, char *argument, int cmd);
+void do_olong(CHAR *ch, char *argument, int cmd);
+void do_oaction(CHAR *ch, char *argument, int cmd);
+void do_oaction_nt(CHAR *ch, char *argument, int cmd);
+void do_ochar_wear_desc(CHAR *ch, char *argument, int cmd);
+void do_oroom_wear_desc(CHAR *ch, char *argument, int cmd);
+void do_ochar_rem_desc(CHAR *ch, char *argument, int cmd);
+void do_oroom_rem_desc(CHAR *ch, char *argument, int cmd);
+void do_oextra(CHAR *ch, char *argument, int cmd);
+void do_otype(CHAR *ch, char *argument, int cmd);
 void do_owear(CHAR *ch, char *argument, int cmd);
-/* End Pyro */
+void do_osubclass_res(CHAR *ch, char *argument, int cmd);
+void do_ovalues(CHAR *ch, char *argument, int cmd);
+void do_oflags(CHAR *ch, char *argument, int cmd);
+void do_obitvect(CHAR *ch, char *argument, int cmd);
+void do_oaffects(CHAR *ch, char *argument, int cmd);
+void do_otimer(CHAR *ch, char *argument, int cmd);
+void do_oweight(CHAR *ch, char *argument, int cmd);
+void do_orent(CHAR *ch, char *argument, int cmd);
+void do_ocost(CHAR *ch, char *argument, int cmd);
+void do_orepop(CHAR *ch, char *argument, int cmd);
+void do_omaterial(CHAR *ch, char *argument, int cmd);
+void do_oreset(CHAR *ch, char *argument, int cmd);
 
 void do_board(CHAR *ch, char *argument, int cmd);
 void do_social(CHAR *ch, char *argument, int cmd);

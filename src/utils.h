@@ -228,9 +228,8 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define OBJN(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
   fname(OBJ_NAME((obj))) : "something")
 
-#define OUTSIDE(ch) (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,INDOORS))
-#define IS_OUTSIDE(ch) (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS))
-#define IS_INDOORS(ch) (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS))
+#define IS_INDOORS(ch) (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS) || world[CHAR_REAL_ROOM(ch)].sector_type == SECT_INSIDE)
+#define IS_OUTSIDE(ch) (!IS_INDOORS(ch))
 
 #define EXIT(ch, door)  (world[CHAR_REAL_ROOM(ch)].dir_option[door])
 
