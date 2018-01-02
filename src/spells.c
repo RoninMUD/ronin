@@ -2052,7 +2052,7 @@ void cast_remove_improved_invis( ubyte level, CHAR *ch, char *arg, int type,
 
 void cast_locate_object( ubyte level, CHAR *ch, char *arg, int type,
 			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 */
+/* Mana: 50 */
 {
   switch (type) {
   case SPELL_TYPE_SPELL:
