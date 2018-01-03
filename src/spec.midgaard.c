@@ -4733,149 +4733,135 @@ int guild_guard(CHAR *mob,CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
-int membership(OBJ *obj,CHAR *ch, int cmd, char *arg)
-{
-  char buf[MAX_STRING_LENGTH];
+#define SANE_CLUB_ENTRANCE   3075
+#define LINER_CLUB_ENTRANCE  3078
+#define LEM_CLUB_ENTRANCE    3080
+#define RANGER_CLUB_ENTRANCE 3082
 
-  if ((cmd != CMD_BUY) && (cmd != CMD_LIST)) return(FALSE);
+#define CLUB_MEMBERSHIP_FEE  500000
+#define CLUB_CANCEL_FEE      100000
+
+int membership(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  char buf[MIL];
+
+  if ((cmd != CMD_BUY) && (cmd != CMD_LIST)) return FALSE;
 
   arg = one_argument(arg, buf);
 
-
-  if (cmd==CMD_LIST) {    /* List */
-    send_to_char("The membership fee are 500000 coins.\n\r", ch);
-    send_to_char("The fee to CANCEL the membership are 100000 coins.\n\r", ch);
-    return(TRUE);
+  if (cmd == CMD_LIST) {
+    snprintf(buf, sizeof(buf), "The fee to BUY a membership is %d coins.\n\r", CLUB_MEMBERSHIP_FEE);
+    send_to_char(buf, ch);
+    snprintf(buf, sizeof(buf), "The fee to CANCEL a membership is %d coins.\n\r", CLUB_CANCEL_FEE);
+    send_to_char(buf, ch);
+    return TRUE;
   }
 
+  if (!*buf) {
+    send_to_char("Buy what?\n\r", ch);
+    return TRUE;
+  }
+
+  if (!strcmp(buf, "membership")) {
+    if (GET_GOLD(ch) < CLUB_MEMBERSHIP_FEE) {
+      send_to_char("You don't have enough coins!", ch);
+      return TRUE;
+    }
+
+    if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB) ||
+        IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE) ||
+        IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE) ||
+        IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY)) {
+      send_to_char("You can only join one club!\n\r", ch);
+      return TRUE;
+    }
+
+    if (CHAR_REAL_ROOM(ch) == real_room(SANE_CLUB_ENTRANCE)) {
+      send_to_char("You are now a member of Sane's Vocal Club.\n\r", ch);
+      act("$n is now a member of Sane's Vocal Club.", FALSE, ch, 0, 0, TO_ROOM);
+      SET_BIT(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB);
+    }
+    else if (CHAR_REAL_ROOM(ch) == real_room(LINER_CLUB_ENTRANCE)) {
+      send_to_char("You are now a member of Liner's Lounge.\n\r", ch);
+      act("$n is now a member of Liner's Lounge.", FALSE, ch, 0, 0, TO_ROOM);
+      SET_BIT(GET_PFLAG(ch), PLR_LINERS_LOUNGE);
+    }
+    else if (CHAR_REAL_ROOM(ch) == real_room(LEM_CLUB_ENTRANCE)) {
+      send_to_char("You are now a member of Lem's Liqour Lounge.\n\r", ch);
+      act("$n is now a member of Lem's Liqour Lounge.", FALSE, ch, 0, 0, TO_ROOM);
+      SET_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE);
+    }
+    else if (CHAR_REAL_ROOM(ch) == real_room(RANGER_CLUB_ENTRANCE)) {
+      send_to_char("You are now a member of Ranger's Reliquary.\n\r", ch);
+      act("$n is now a member of Ranger's Reliquary.", FALSE, ch, 0, 0, TO_ROOM);
+      SET_BIT(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY);
+    }
+    else {
+      send_to_char("You aren't at the entrance of a club!\n\r", ch);
+      return TRUE;
+    }
+
+    GET_GOLD(ch) -= CLUB_MEMBERSHIP_FEE;
+
+    return TRUE;
+  }
+  else if (!strcmp(buf, "cancel")) {
+    if (GET_GOLD(ch) < CLUB_CANCEL_FEE) {
+      send_to_char("You don't have enough coins!\n\r", ch);
+      return TRUE;
+    }
+
+    if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
+      REMOVE_BIT(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY);
+    else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
+      REMOVE_BIT(GET_PFLAG(ch), PLR_LINERS_LOUNGE);
+    else if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB))
+      REMOVE_BIT(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB);
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
+      REMOVE_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE);
+    else {
+      send_to_char("But you are not a member of a club!\n\r", ch);
+      return TRUE;
+    }
+
+    GET_GOLD(ch) -= CLUB_CANCEL_FEE;
+
+    send_to_char("You are no longer a member of a club.\n\r", ch);
+    return TRUE;
+  }
   else {
-
-    if (!*buf)
-      {
-  send_to_char("Buy what?\n\r",ch);
-  return(TRUE);
-      }
-
-    if (!strcmp(buf,"membership"))
-      {  if (GET_GOLD(ch) < 500000) {
-  send_to_char("You don't have enough coins!", ch);
-  return(TRUE);
-      }
-  if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB) ||
-      IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE) ||
-      IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE) ||
-      IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY)) {
-    send_to_char("You can only join one club!\n\r", ch);
-    return(TRUE);
+    send_to_char("Buy what?\n\r", ch);
+    return TRUE;
   }
 
-  if (CHAR_REAL_ROOM(ch) == real_room(3075)) {
-    send_to_char("You are now a member of Sane's Vocal Club.\n\r", ch);
-    /*    if (ch->abilities.str == 18) {
-      ch->abilities.str_add += 20;
-      ch->tmpabilities.str_add += 20;
-      } else {
-      ch->abilities.str += 1;
-      ch->tmpabilities.str += 1;
-      } */
-    SET_BIT(ch->specials.pflag, PLR_SANES_VOCAL_CLUB);
-  }
-
-  if (CHAR_REAL_ROOM(ch) == real_room(3078)) {
-    send_to_char("You are now a member of Liner's Lounge.\n\r", ch);
-    /*    ch->abilities.intel += 1;
-      ch->tmpabilities.intel += 1; */
-    SET_BIT(ch->specials.pflag, PLR_LINERS_LOUNGE);
-  }
-
-  if (CHAR_REAL_ROOM(ch) == real_room(3080)) {
-    send_to_char("You are now a member of Lem's Liqour Lounge.\n\r", ch);
-    /*    ch->abilities.con += 1;
-      ch->tmpabilities.con += 1; */
-    SET_BIT(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE);
-  }
-
-  if (CHAR_REAL_ROOM(ch) == real_room(3082)) {
-    send_to_char("You are now a member of Ranger's Reliquary.\n\r", ch);
-    /*    ch->abilities.wis += 2;
-      ch->tmpabilities.wis += 2; */
-    SET_BIT(ch->specials.pflag, PLR_RANGERS_RELIQUARY);
-  }
-
-  GET_GOLD(ch) -= 500000;
-  act("$n is now a member of the club.", FALSE, ch, 0, 0, TO_ROOM);
-        return(TRUE); /* Added by Ranger - April 96 */
-      }
-    else if (!strcmp(buf,"cancel")) {
-      if (GET_GOLD(ch) < 100000) {
-        send_to_char("You don't have enough coins!\n\r", ch);
-        return(TRUE);
-      }
-      if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
-        REMOVE_BIT(ch->specials.pflag, PLR_RANGERS_RELIQUARY);
-      else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
-        REMOVE_BIT(ch->specials.pflag, PLR_LINERS_LOUNGE);
-      else if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB))
-        REMOVE_BIT(ch->specials.pflag, PLR_SANES_VOCAL_CLUB);
-      else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
-        REMOVE_BIT(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE);
-      else {
-        send_to_char("But you are not a member of any club!!\n\r", ch);
-        return(TRUE);
-      }
-      GET_GOLD(ch) -= 100000;
-      send_to_char("Done. You are not a member of any club now!\n\r", ch);
-      return(TRUE); /* Added by Ranger - April 96 */
-    } else
-      send_to_char("Buy what?\n\r", ch);
-      return(TRUE); /* Added by Ranger - April 96 */
-  }
   return FALSE;
 }
 
-int club_guard(CHAR *mob,CHAR *ch, int cmd, char *arg)
-{
-  char buf[256], buf2[256];
+int club_guard(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd < CMD_NORTH || cmd > CMD_WEST) return FALSE;
 
-  if (cmd>6 || cmd<1)
-    return FALSE;
-
-  strcpy(buf,  "The guard humiliates you and says 'You are not a member!!'.\n\r");
-  strcpy(buf2, "The guard humiliates $n and says 'You are not a member!!'.");
-
-  if ((GET_POS(ch) == POSITION_RIDING) &&
-      (((CHAR_REAL_ROOM(ch) == real_room(3075)) && (cmd ==CMD_WEST)) ||
-       ((CHAR_REAL_ROOM(ch) == real_room(3078)) && (cmd ==CMD_NORTH)) ||
-       ((CHAR_REAL_ROOM(ch) == real_room(3080)) && (cmd ==CMD_EAST)) ||
-       ((CHAR_REAL_ROOM(ch) == real_room(3082)) && (cmd ==CMD_SOUTH))))
-    {  send_to_char("Dismount please!\n\r", ch);
-  return(TRUE);
-      }
-
-  if ((CHAR_REAL_ROOM(ch) == real_room(3075)) && (cmd == CMD_WEST) &&
-      !IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB)) {
-    act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char(buf, ch);
-    return(TRUE);
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3078)) && (cmd == CMD_NORTH)
-       && !IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE)) {
-    act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char(buf, ch);
-    return(TRUE);
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3080)) && (cmd == CMD_EAST)
-       && !IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE)) {
-    act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char(buf, ch);
-    return(TRUE);
-  } else if ((CHAR_REAL_ROOM(ch) == real_room(3082)) && (cmd ==CMD_SOUTH)
-       && !IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY)) {
-    act(buf2, FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char(buf, ch);
-    return(TRUE);
+  if (((CHAR_REAL_ROOM(ch) == real_room(SANE_CLUB_ENTRANCE) &&
+        cmd == CMD_WEST) ||
+       (CHAR_REAL_ROOM(ch) == real_room(LINER_CLUB_ENTRANCE) &&
+        cmd == CMD_NORTH) ||
+       (CHAR_REAL_ROOM(ch) == real_room(LEM_CLUB_ENTRANCE) &&
+        cmd == CMD_EAST) ||
+       (CHAR_REAL_ROOM(ch) == real_room(RANGER_CLUB_ENTRANCE) &&
+        cmd == CMD_SOUTH))) {
+    if (!IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB) &&
+        !IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE) &&
+        !IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE) &&
+        !IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY)) {
+      send_to_char("The guard humiliates you and says, 'You are not a member of a club!'\n\r", ch);
+      act("The guard humiliates $n and says, 'You are not a member a club!'", FALSE, ch, 0, 0, TO_ROOM);
+      return TRUE;
+    }
+    else if (GET_POS(ch) == POSITION_RIDING) {
+      send_to_char("Dismount please!\n\r", ch);
+      return TRUE;
+    }
   }
 
   return FALSE;
-
 }
 
 int fido(CHAR *mob,CHAR *ch, int cmd, char *arg)
