@@ -2597,7 +2597,7 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
     "rainy",
     "lit by flashes of lightning"};
 
-  if (OUTSIDE(ch)) {
+  if (IS_OUTSIDE(ch)) {
     sprintf(buf,
       "The sky is %s and %s.\n\r",
       sky_look[weather_info.sky],
@@ -2917,15 +2917,24 @@ void do_olchelp(struct char_data *ch, char *argument, int cmd)
   }
   strcat(buf, "\n\r\n\r");
 
-  strcat(buf,"`iOBJS:`q (OLCHELP OBJECTS)\n\r");
-  for(no = 1, i = 1;cmd_info[i].cmd_text; i++) {
-    if ( GET_LEVEL(ch)>=cmd_info[i].minimum_level &&
-         cmd_info[i].minimum_level >= LEVEL_IMM &&
-         cmd_info[i].num==CMD_NEWOLCO &&
-         IS_SET(ch->new.imm_flags, WIZ_CREATE)) {
-      sprintf(buf + strlen(buf), "%-10s", cmd_info[i].cmd_text);
-      if (!(no % 7)) strcat(buf, "\n\r");
-      no++;
+  strcat(buf, "`iOBJS:`q (OLCHELP OBJECTS)\n\r");
+  for (no = 0, i = 1; cmd_info[i].cmd_text; i++) {
+    if (GET_LEVEL(ch) >= cmd_info[i].minimum_level &&
+        cmd_info[i].minimum_level >= LEVEL_IMM &&
+        cmd_info[i].num == CMD_NEWOLCO &&
+        IS_SET(ch->new.imm_flags, WIZ_CREATE)) {
+      if (strlen(cmd_info[i].cmd_text) < 10) {
+        sprintf(buf + strlen(buf), "%-10s", cmd_info[i].cmd_text);
+        no += 1;
+      }
+      else {
+        sprintf(buf + strlen(buf), "%-20s", cmd_info[i].cmd_text);
+        no += 2;
+      }
+      if (no >= 7) {
+        strcat(buf, "\n\r");
+        no = 0;
+      }
     }
   }
   strcat(buf, "\n\r\n\r");

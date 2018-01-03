@@ -2959,114 +2959,94 @@ void init_char(struct char_data *ch)
      ch->colors[15]=6;
 }
 
-/* returns the real number of the room with given virtual number */
-int real_room(int virtual)
-{
-     int bot, top, mid;
 
-     if(virtual==NOWHERE) return(-1);
+/* Returns the real number of the zone with given virtual number. */
+int real_zone(int zone_vnum) {
+  if (zone_vnum < 0) return -1;
 
-     bot = 0;
-     top = top_of_world;
+  for (int i = 0; i <= top_of_zone_table; i++) {
+    if (zone_table[i].virtual == zone_vnum) {
+      return i;
+    }
+  }
 
-     /* perform binary search on world-table */
-     for (;;)
-     {
-          mid = (bot + top) / 2;
-
-          if ((world + mid)->number == virtual)
-               return(mid);
-          if (bot >= top)
-          {
-          /*log_f("Room %d does not exist in database\n", virtual);*/
-               return(-1);
-          }
-          if ((world + mid)->number > virtual)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
-}
-
-int real_zone(int virtual)
-{
-  int i;
-  int real_zone = -1;
-    for(i=0;i<=top_of_zone_table;i++)
-      {
-      if(zone_table[i].virtual == virtual)
-          real_zone = i;
-      }
-  return real_zone;
+  return -1;
 }
 
 
+/* Returns the real number of the room with given virtual number. */
+int real_room(int room_vnum) {
+  if (room_vnum < 0) return -1;
 
+  /* Perform binary search on object table. */
+  for (int bot = 0, mid = 0, top = top_of_world;;) {
+    mid = (bot + top) / 2;
 
-/* returns the real number of the monster with given virtual number */
-int real_mobile(int virtual)
-{
-     int bot, top, mid;
-
-     bot = 0;
-     top = top_of_mobt;
-
-     /* perform binary search on mob-table */
-     for (;;)
-     {
-          mid = (bot + top) / 2;
-
-          if ((mob_proto_table + mid)->virtual == virtual)
-               return(mid);
-          if (bot >= top)
-               return(-1);
-          if ((mob_proto_table + mid)->virtual > virtual)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
+    if ((world + mid)->number == room_vnum)
+      return mid;
+    if (bot >= top)
+      return -1;
+    if ((world + mid)->number > room_vnum)
+      top = mid - 1;
+    else
+      bot = mid + 1;
+  }
 }
 
 
+/* Returns the real number of the mobile with given virtual number. */
+int real_mobile(int mob_vnum) {
+  if (mob_vnum < 0) return -1;
 
+  /* Perform binary search on mobile table. */
+  for (int bot = 0, mid = 0, top = top_of_mobt;;) {
+    mid = (bot + top) / 2;
 
-
-
-/* returns the real number of the object with given virtual number */
-int real_object(int virtual)
-{
-     int bot, top, mid;
-
-     bot = 0;
-     top = top_of_objt;
-
-     /* perform binary search on obj-table */
-     for (;;)
-     {
-          mid = (bot + top) / 2;
-
-          if ((obj_proto_table + mid)->virtual == virtual)
-               return(mid);
-          if (bot >= top)
-               return(-1);
-          if ((obj_proto_table + mid)->virtual > virtual)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
+    if ((mob_proto_table + mid)->virtual == mob_vnum)
+      return mid;
+    if (bot >= top)
+      return -1;
+    if ((mob_proto_table + mid)->virtual > mob_vnum)
+      top = mid - 1;
+    else
+      bot = mid + 1;
+  }
 }
 
 
-int inzone(int number)
-{
-int i;
-    for(i=0;i<=top_of_zone_table;i++)
-      {
-      if( number >= zone_table[i].bottom && number <= zone_table[i].top)
-           return zone_table[i].virtual;
-      }
-   return -1;
+/* Returns the real number of the object with given virtual number. */
+int real_object(int obj_vnum) {
+  if (obj_vnum < 0) return -1;
+
+  /* Perform binary search on object table. */
+  for (int bot = 0, mid = 0, top = top_of_objt;;) {
+    mid = (bot + top) / 2;
+
+    if ((obj_proto_table + mid)->virtual == obj_vnum)
+      return mid;
+    if (bot >= top)
+      return -1;
+    if ((obj_proto_table + mid)->virtual > obj_vnum)
+      top = mid - 1;
+    else
+      bot = mid + 1;
+  }
 }
+
+
+/* Returns the zone number of the room/mob/obj with given virtual number, or -1 if it doesn't/shouldn't exist. */
+int inzone(int vnum) {
+  if (vnum < 0) return -1;
+
+  for (int i = 0; i <= top_of_zone_table; i++) {
+    if (vnum >= zone_table[i].bottom && vnum <= zone_table[i].top) {
+      return zone_table[i].virtual;
+    }
+  }
+
+  return -1;
+}
+
 
 /* MAX_ID in db.h */
 void write_board(int vnum,char *heading,char *message);

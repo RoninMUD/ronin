@@ -2054,82 +2054,73 @@ if(ch->desc && messg)
 }
 
 void send_to_char(char *messg, struct char_data *ch) {
-  send_to_char_by_type(messg,ch,0);
+  send_to_char_by_type(messg, ch, 0);
 }
 
-void printf_to_char(CHAR *ch, char *fmt, ...)
-{
-  char buf [MSL];
+void printf_to_char(CHAR *ch, char *fmt, ...) {
+  char buf[MSL];
   va_list args;
-  va_start (args, fmt);
-  vsnprintf (buf, MSL, fmt, args);
-  va_end (args);
+  va_start(args, fmt);
+  vsnprintf(buf, MSL, fmt, args);
+  va_end(args);
 
-  send_to_char (buf, ch);
+  send_to_char(buf, ch);
 }
 
-void send_to_all(char *messg)
-{
+void send_to_all(char *messg) {
   struct descriptor_data *i;
 
   if (messg)
-   for (i = descriptor_list; i; i = i->next)
-    if (!i->connected)
-     send_to_char(messg, i->character);
+    for (i = descriptor_list; i; i = i->next)
+      if (!i->connected)
+        send_to_char(messg, i->character);
 }
 
-void send_to_outdoor(char *messg)
-{
+void send_to_outdoor(char *messg) {
   struct descriptor_data *i;
 
   if (messg)
-   for (i = descriptor_list; i; i = i->next)
-    if (!i->connected)
-     if (OUTSIDE(i->character) && AWAKE(i->character))
-       send_to_char(messg, i->character);
+    for (i = descriptor_list; i; i = i->next)
+      if (!i->connected)
+        if (IS_OUTSIDE(i->character) && AWAKE(i->character))
+          send_to_char(messg, i->character);
 }
 
-void send_to_except(char *messg, struct char_data *ch)
-{
+void send_to_except(char *messg, struct char_data *ch) {
   struct descriptor_data *i;
 
   if (messg)
-   for (i = descriptor_list; i; i = i->next)
-    if (ch->desc != i && !i->connected)
-      send_to_char(messg, i->character);
+    for (i = descriptor_list; i; i = i->next)
+      if (ch->desc != i && !i->connected)
+        send_to_char(messg, i->character);
 }
 
-void send_to_room(char *messg, int room)
-{
+void send_to_room(char *messg, int room) {
   struct char_data *i;
 
   if (messg)
-   for (i = world[room].people; i; i = i->next_in_room)
-    if (i->desc)
-     send_to_char(messg, i);
+    for (i = world[room].people; i; i = i->next_in_room)
+      if (i->desc)
+        send_to_char(messg, i);
 }
 
-void send_to_room_except(char *messg, int room, struct char_data *ch)
-{
+void send_to_room_except(char *messg, int room, struct char_data *ch) {
   struct char_data *i;
 
   if (messg)
-   for (i = world[room].people; i; i = i->next_in_room)
-    if (i != ch && i->desc)
-      send_to_char(messg, i);
+    for (i = world[room].people; i; i = i->next_in_room)
+      if (i != ch && i->desc)
+        send_to_char(messg, i);
 }
 
-void send_to_room_except_two
-      (char *messg, int room, struct char_data *ch1, struct char_data *ch2)
-{
+void send_to_room_except_two(char *messg, int room, struct char_data *ch1, struct char_data *ch2) {
   struct char_data *i;
 
   if (messg)
-   for (i = world[room].people; i; i = i->next_in_room)
-    if (i != ch1 && i != ch2 && i->desc)
-      send_to_char(messg, i);
+    for (i = world[room].people; i; i = i->next_in_room)
+      if (i != ch1 && i != ch2 && i->desc)
+        send_to_char(messg, i);
 }
-
 
 int same_group(struct char_data *ch1, struct char_data *ch2) {
   struct char_data *group_leader = NULL;

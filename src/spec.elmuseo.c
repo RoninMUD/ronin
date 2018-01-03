@@ -3645,7 +3645,7 @@ int mus_mittens(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     return FALSE;
   }
 
-  if(!owner || cmd != MSG_MOBACT || (world[CHAR_REAL_ROOM(owner)].sector_type != SECT_INSIDE && (time_info.month<=4 || time_info.month>10) && !OUTSIDE(owner))) return FALSE;
+  if(!owner || cmd != MSG_MOBACT || (world[CHAR_REAL_ROOM(owner)].sector_type != SECT_INSIDE && (time_info.month<=4 || time_info.month>10) && !IS_OUTSIDE(owner))) return FALSE;
   if(ROOM_SAFE(CHAR_REAL_ROOM(owner))) return FALSE;
   if(owner->specials.fighting) return FALSE;
 

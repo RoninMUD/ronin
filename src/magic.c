@@ -646,7 +646,7 @@ void spell_call_lightning(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 
   dam = dice(MIN(level,30), 8);
 
-  if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
+  if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
     if (saves_spell(victim, SAVING_SPELL,level))
       dam >>= 1;
 
@@ -1675,47 +1675,43 @@ void spell_locate_object(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if(!IS_NPC(ch)) level=MIN(level,50);
 
-  j=level>>1;
+  j=0;
 
   if(IS_SET(ch->specials.pflag, PLR_QUEST)) {
     sprintf(buf,"QSTINFO: %s casts 'locate object' %s",GET_NAME(ch),name);
     wizlog(buf,LEVEL_IMM,7);
   }
 
-  for (i = object_list; i && (j>0); i = i->next)
+  for (i = object_list; i; i = i->next)
     if (isname(name, OBJ_NAME(i)) /*&& !IS_SET(i->obj_flags.extra_flags,ITEM_ANTI_AUCTION)*/ &&
-        i->obj_flags.type_flag!=ITEM_SC_TOKEN && number(0,1) &&
-        !IS_SET(i->obj_flags.extra_flags2,ITEM_NO_LOCATE)) {
+        i->obj_flags.type_flag!=ITEM_SC_TOKEN && 
+        !IS_SET(i->obj_flags.extra_flags2,ITEM_NO_LOCATE))
+    {
 
       if(i->carried_by) {
-        sprintf(buf,"%s carried by %s.\n\r",
-    OBJ_SHORT(i),PERS(i->carried_by,ch));
+        sprintf(buf,"%s carried by %s.\n\r", OBJ_SHORT(i), PERS(i->carried_by,ch));
         send_to_char(buf,ch);
       } else if (i->in_obj) {
         if(i->in_obj->in_room==real_room(1201)) continue;
         if(i->in_obj->in_room==real_room(1204)) continue;
-        sprintf(buf,"%s in %s.\n\r",OBJ_SHORT(i),
-    OBJ_SHORT(i->in_obj));
+        sprintf(buf,"%s in %s.\n\r",OBJ_SHORT(i), OBJ_SHORT(i->in_obj));
         send_to_char(buf,ch);
       } else if (i->equipped_by) {
-  if (strlen(PERS(i->equipped_by, ch))> 0) {
-    sprintf(buf, "%s equipped by %s.\n\r",
-      OBJ_SHORT(i), PERS(i->equipped_by, ch));
-    send_to_char(buf, ch);
-  }
-    } else {
-      if(i->in_room==real_room(1201)) continue;
-      if(i->in_room==real_room(1204)) continue;
-        sprintf(buf,"%s in %s.\n\r",OBJ_SHORT(i),
-    (i->in_room == NOWHERE ? "Used but uncertain." : world[i->in_room].name));
+        if (strlen(PERS(i->equipped_by, ch))> 0) {
+          sprintf(buf, "%s equipped by %s.\n\r",
+          OBJ_SHORT(i), PERS(i->equipped_by, ch));
+          send_to_char(buf, ch);
+        }
+      } else {
+        if(i->in_room==real_room(1201)) continue;
+        if(i->in_room==real_room(1204)) continue;
+        sprintf(buf,"%s in %s.\n\r",OBJ_SHORT(i), (i->in_room == NOWHERE ? "Used but uncertain." : world[i->in_room].name));
         send_to_char(buf,ch);
       }
-      j--;
+      j++;
     }
 
   if(j==0)
-    send_to_char("You are very confused.\n\r",ch);
-  if(j==level>>1)
     send_to_char("No such object.\n\r",ch);
 }
 

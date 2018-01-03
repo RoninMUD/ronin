@@ -216,7 +216,7 @@ void do_fill(struct char_data *ch, char *argument, int cmd) {
       }
   }
 
-  if (OUTSIDE(ch) && (weather_info.sky >= SKY_RAINING)) {
+  if (IS_OUTSIDE(ch) && (weather_info.sky >= SKY_RAINING)) {
     temp->obj_flags.value[1] = temp->obj_flags.value[0];
     temp->obj_flags.value[2] = 0;
     temp->obj_flags.value[3] = 0;

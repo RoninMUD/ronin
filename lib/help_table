@@ -3745,13 +3745,12 @@ Usage       : cast 'locate object' <keyword>
 Accumulative: -
 Level       : Level 6 mage, 10 cleric, 14 ninja, 17 paladin, 10 bard.
 Duration    : Instantaneous
-Mana Cost   : 20 (cost will be higher at lower levels)
+Mana Cost   : 50 (cost will be higher at lower levels)
 
 Casting this spell will give you a chance of determining whether any specific
 object exists in the world.  The spell will always tell you if it can't find
-any at all.  If more than one object by the same name exists you will get a
-listing of any objects you succeed in locating.  The maximum number of objects
-you can simultaneously locate is your level divided by 2.
+any at all.  If more than one object by the same name exists you will see them
+all, because you're a wizard Harry!
 
 See Also: -
 #

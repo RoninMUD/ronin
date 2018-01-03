@@ -15,7 +15,7 @@ experienced what lies beyond have never returned to tell their tales.  What
 dangers lie ahead are unknown.  Will any who pass under this mighty arch live
 to talk about their experiences?  There is only one way to find out.
 ~
-267 4 0
+267 4 3
 D0
 To the north lies a river that cuts through a dark forest beyond.  The only
 way across is over a fallen log.
@@ -41,7 +41,7 @@ ragged thorns and are covered in what looks like blood.  Some kind of dark-
 green liquid oozes slowly out of the thorns, making them look very unfriendly
 to any that might disturb them.
 ~
-267 0 0
+267 0 3
 D0
 ~
 ~
@@ -56,13 +56,13 @@ D2
 ~
 0 -1 26703
 E
+branches thorns~
+The branches look dangerous if disturbed.  They cover a dark hole into a rock.
+~
+E
 hole~
 A dark hole leads beneath the rock to the east.  It is covered by a tangle of
 thick branches.
-~
-E
-branches thorns~
-The branches look dangerous if disturbed.  They cover a dark hole into a rock.
 ~
 S
 #26702
@@ -75,7 +75,7 @@ out of here is the branch-covered hole to the west.  Other than offering some
 shelter from the constant rain outside, there does not seem to be anything
 interesting in here.
 ~
-267 9 0
+267 9 5
 D3
 A thick mass of branches covers the hole entrance to the west.
 ~
@@ -98,7 +98,7 @@ side of the trail, thickening at one place.  A dark red fluid trickles out of
 the clump of grass and leaks onto the dry mud that you walk upon.  This has
 colored the mud a blend of dark red and brown.
 ~
-267 0 0
+267 0 3
 D0
 ~
 ~
@@ -126,7 +126,7 @@ is a bright-green green color that makes a striking contrast with the flower.
 The rest of the upper vegetation consists mostly of weeds and other
 uninteresting types of plants.
 ~
-267 4 0
+267 4 3
 D0
 ~
 ~
@@ -153,7 +153,7 @@ turtles surround the beach, looking quite lifeless.  To the north the path
 splits off in several directions.  The beach rolls on to the east and the west
 while the shore occupies the south.
 ~
-267 0 0
+267 0 4
 D0
 ~
 ~
@@ -181,7 +181,7 @@ way to go is back to the west.  The ocean to the south is a most beautiful
 deep-blue color and the clear skies allow a long view out across the sea.  The
 mast of a large ship can be seen a ways out in the water to the southwest.
 ~
-267 0 0
+267 0 4
 D3
 ~
 ~
@@ -196,7 +196,7 @@ way to go is back to the east.  The ocean to the south is a most beautiful
 deep-blue color and the clear skies allow a long view out across the sea.  The
 mast of a large ship can be seen a ways out in the water to the southeast.
 ~
-267 0 0
+267 0 4
 D1
 ~
 ~
@@ -210,7 +210,7 @@ many of its floorboards have begun to rot and fall apart.  It is uncertain
 whether or not this vessel would survive a trip into the open sea.  It looks
 like it hasn't been used in a very long time.
 ~
-267 4 0
+267 4 1
 D0
 ~
 ~
@@ -231,7 +231,7 @@ stands tall from the center of the ship but its sails have long since
 disappeared with the ages.  The boat has probably been stranded here for
 generation upon generation, serving as but a home for a flock of Albatross'.
 ~
-267 0 0
+267 0 1
 D0
 ~
 ~
@@ -247,7 +247,7 @@ casting dark shadows across the ground.  The leaves are a rusty brown color and
 the bark of the trees looks be to made of iron.  This place is very dark and
 quiet, any sounds being muffled by a thick mist coming from the west.
 ~
-267 0 0
+267 0 3
 D1
 ~
 ~
@@ -267,7 +267,7 @@ course.  The trail back to the east is dim and dark, overshadowed by the forest
 that grows close to it.  It is eerily silent here--the thick fog gobbling up
 any noise.
 ~
-267 0 0
+267 0 3
 D0
 The misty trail continues to the north.
 ~
@@ -287,7 +287,7 @@ out.  The fog is so dense that it becomes difficult to breath fresh air here.
 Brief glimpses of some towering shadows can be seen to the north when the mists
 clear up a little.  Where is it that this path might lead?
 ~
-267 1 0
+267 1 3
 D0
 Nothing can be made out through the mist to the north but a few tall shadows.
 ~
@@ -307,7 +307,7 @@ of the gates.  Closer inspection of the barrier reveals a series of strange
 inscriptions and markings that cover the base of the iron structure.  A solid
 wall of mist nearly conceals the path that wanders away to the south.
 ~
-267 0 0
+267 0 3
 D0
 A set of massive iron gates have been constructed to block the path to the
 north when closed and locked tight.
@@ -336,7 +336,7 @@ sounds and a sense of unease.  More mysterious writing adorns the frame around
 the door, written in an ancient language long forgotten.  The darkness from
 within the dwelling seems to permeate the area and the earth trembles!
 ~
-267 0 0
+267 0 1
 D0
 A massive door occupies the top of the steps to the north.
 ~
@@ -366,11 +366,11 @@ realize... the nightmare has just begun!
 ~
 267 655368 0
 E
-paintings~
-Nearly all of the paintings portray intense bloody battles of ages long passed,
-when mighty beasts wandered the lands and destroyed all in their paths.  Oddly
-enough, the hero-figure in nearly all of the paintings appears to be the same
-huge man, dealing death to all around him.
+furniture~
+Almost none of the furniture looks be of much practical or comfortable use.
+They are mostly sharp and hard pieces crafted from gold and other precious
+metals.  Most of these are stands and small tables that support various
+artifacts upon their surfaces.
 ~
 E
 tapestries~
@@ -379,11 +379,11 @@ appears to be some sort of family or noble crest that is of deep importance to
 the owner of this house.
 ~
 E
-furniture~
-Almost none of the furniture looks be of much practical or comfortable use.
-They are mostly sharp and hard pieces crafted from gold and other precious
-metals.  Most of these are stands and small tables that support various
-artifacts upon their surfaces.
+paintings~
+Nearly all of the paintings portray intense bloody battles of ages long passed,
+when mighty beasts wandered the lands and destroyed all in their paths.  Oddly
+enough, the hero-figure in nearly all of the paintings appears to be the same
+huge man, dealing death to all around him.
 ~
 S
 #26716
@@ -403,7 +403,7 @@ and wide apart in their majestic glory.  It is impossible to guess how long
 these trees have been growing here, but they look ancient, even compared to the
 land itself.
 ~
-267 4 0
+267 4 2
 D1
 ~
 ~
@@ -427,7 +427,7 @@ others are large and ponderous, devouring everything in their path.  A sense of
 tranquility fills this place, touching all of the life that exists here in a
 magical way.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -457,7 +457,7 @@ healing properties that aid some, but cause ill effects in others.  There is
 very little grass-cover here beneath the forest shadows.  The forest blocks
 travel to the north and the west.
 ~
-267 0 0
+267 0 2
 D1
 ~
 ~
@@ -479,7 +479,7 @@ healing properties that aid some, but cause ill effects in others.  There is
 very little grass-cover here beneath the forest shadows.  The forest blocks
 travel to the south and the west.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -511,7 +511,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -551,7 +551,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the north and the west.
 ~
-267 0 0
+267 0 2
 D1
 ~
 ~
@@ -583,7 +583,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -623,7 +623,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -663,7 +663,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the south and the west.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -695,7 +695,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the north.
 ~
-267 0 0
+267 0 2
 D1
 ~
 ~
@@ -731,7 +731,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -771,7 +771,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -811,7 +811,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -851,7 +851,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the south.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -887,7 +887,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the north.
 ~
-267 0 0
+267 0 2
 D1
 ~
 ~
@@ -923,7 +923,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -964,7 +964,7 @@ is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
    Strangely, one of the water holes here is empty.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1013,7 +1013,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field as it spreads out in every direction.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1053,7 +1053,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the south.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1089,7 +1089,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the north and the east.
 ~
-267 0 0
+267 0 2
 D2
 ~
 ~
@@ -1121,7 +1121,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the east.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1157,7 +1157,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the east.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1193,7 +1193,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the east.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1229,7 +1229,7 @@ always be full of crystal clear liquid.  All of this makes it no wonder there
 is such a large amount of animals in one place.  The forest stands tall around
 this great field to the south and the east.
 ~
-267 0 0
+267 0 2
 D0
 ~
 ~
@@ -1250,7 +1250,7 @@ standing muddy water cover the floor, making the area slick and hard to
 traverse.  This cavern seems a very desolate and grim place, filled with
 unknown dangers.  The cavern travels to the north and the south here.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1274,7 +1274,7 @@ standing muddy water cover the floor, making the area slick and hard to
 traverse.  This cavern seems a very desolate and grim place, filled with
 unknown dangers.  The cavern ends here as it comes from the north.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1289,7 +1289,7 @@ standing muddy water cover the floor, making the area slick and hard to
 traverse.  This cavern seems a very desolate and grim place, filled with
 unknown dangers.  The cavern travels to the east and the south here.
 ~
-267 9 0
+267 9 5
 D1
 ~
 ~
@@ -1308,7 +1308,7 @@ standing muddy water cover the floor, making the area slick and hard to
 traverse.  This cavern seems a very desolate and grim place, filled with
 unknown dangers.  The cavern travels to the east and the west here.
 ~
-267 9 0
+267 9 5
 D1
 ~
 ~
@@ -1328,7 +1328,7 @@ traverse.  This cavern seems a very desolate and grim place, filled with
 unknown dangers.  The cavern ends here as it comes from the west.
    A small hole in the floor is just barely visible.
 ~
-267 9 0
+267 9 5
 D3
 ~
 ~
@@ -1351,7 +1351,7 @@ almost have a life of their own, adding a sense of dread to this dark place.
 There is a hole in the ceiling that looks to be the right size for crawling
 through.  The tunnel leads to the north and the south.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1378,7 +1378,7 @@ almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel ends here at the base of a rusty metal staircase that winds up into
 darkness, farther than the eye can see.  The tunnel travels back to the south.
 ~
-267 9 0
+267 9 5
 D2
 ~
 ~
@@ -1406,7 +1406,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the south.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1427,7 +1427,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the south.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1448,7 +1448,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel splits up here, leading to the north, east and west.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1473,7 +1473,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the east and the west.
 ~
-267 9 0
+267 9 5
 D1
 ~
 ~
@@ -1494,7 +1494,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the west.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1516,7 +1516,7 @@ almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel ends here as it comes from the north.
    A small hole leads deeper down into the earth near the rear tunnel wall.
 ~
-267 9 0
+267 9 5
 D2
 ~
 ~
@@ -1537,7 +1537,7 @@ become stuck!  Whatever calls this place home has it set up as both a dwelling
 and a trap to capture its food.  The only exit appears to be back through a
 slimy hole in the ceiling.
 ~
-267 131085 0
+267 131085 5
 D4
 ~
 hole~
@@ -1665,7 +1665,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the east and the west.
 ~
-267 9 0
+267 9 5
 D1
 ~
 ~
@@ -1686,7 +1686,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the east.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1707,7 +1707,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the south.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1728,7 +1728,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel leads to the north and the south.
 ~
-267 9 0
+267 9 5
 D0
 ~
 ~
@@ -1749,7 +1749,7 @@ standing water that is several inches deep.  Shadows flicker about, seeming to
 almost have a life of their own, adding a sense of dread to this dark place.
 The tunnel ends here coming from the south.
 ~
-267 9 0
+267 9 5
 D2
 ~
 ~

@@ -1862,7 +1862,7 @@ void assign_spell_pointers(void)
   SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 26, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
   SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 8,  51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
   SPELLO( 30, 30, POSITION_FIGHTING,  9, 51, 51, 51, 12, 51, 51,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lightning_bolt);
-  SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   20, TAR_OBJ_WORLD,                                                                cast_locate_object);
+  SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
   SPELLO( 32, 30, POSITION_FIGHTING,  1, 51, 51, 51,  1, 51, 51,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_magic_missile);
   SPELLO( 33, 30, POSITION_STANDING, 51,  8, 12, 51,  6, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_EQUIP, cast_poison);
   SPELLO( 34, 30, POSITION_STANDING, 51,  6, 51, 24, 51, 20, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_evil);
