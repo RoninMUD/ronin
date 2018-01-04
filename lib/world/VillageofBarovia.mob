@@ -37,7 +37,7 @@ K
 0 0 0 0 0 0 0
 #11302
 zombie super super-zombie~
-Super-Zombie~
+a Super-Zombie~
 A slack-jawed corpse lumbers around aimlessly, groaning, arms outstretched.
 ~
 A reanimated corpse of unknown age and origin, the only certainties are its
@@ -51,6 +51,27 @@ and oldest friend.... Wait! Larry, is that you?
 536870922 268435456 0 Y
 50 -15 -10 20d1000+5000 5d100+50
 0 5000000
+8 8 0
+53 1 1d1+1 0
+0 1 0 34
+R
+4
+K
+1000000 0 0 0 0 0 0
+#11303
+zombie notsosuperzombie~
+a Not-So-Super Zombie~
+A slack-jawed corpse lumbers around aimlessly, groaning, arms outstretched.
+~
+A reanimated corpse of unknown age and origin, the only certainties are its
+mindlessness and odor. Clearly there is more to reanimation and necromancy
+than waving an enchanted pentacle about, as this zombie lacks the same oomph
+and pizzazz as the ones Strahd churned out. Still, it will serve its purpose
+well enough, onward to battle you bloated oaf.
+~
+264 270532608 0 Y
+49 -5 -10 20d1000+5000 5d50+50
+0 1
 8 8 0
 53 1 1d1+1 0
 0 1 0 34
