@@ -2508,6 +2508,8 @@ static int unicorns_entrance(int room, CHAR *ch, int cmd, char *arg) {
 /*
 ** Bud
 */
+//screw it, just make it available for everyone?
+/*
 static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   struct room_direction_data dir = {0};
   struct room_direction_data* o_dir = NULL;
@@ -2530,7 +2532,7 @@ static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   open = FALSE;
 
   return TRUE;
-}
+}*/
 
 
 #ifdef TEST_SITE
