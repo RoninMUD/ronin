@@ -2572,7 +2572,7 @@ void assign_clan(void) {
   assign_obj(27530,clan_recall_scroll);
 
   /* Bud */
-  assign_room(BUD_ACCESS, bud_entrance);
+  //assign_room(BUD_ACCESS, bud_entrance);
   assign_mob(27517, receptionist);
   assign_mob(27518, do_vault);
   //assign_obj(27526, bloodmoon_orb);
