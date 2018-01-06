@@ -2508,8 +2508,6 @@ static int unicorns_entrance(int room, CHAR *ch, int cmd, char *arg) {
 /*
 ** Bud
 */
-//screw it, just make it available for everyone?
-/*
 static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   struct room_direction_data dir = {0};
   struct room_direction_data* o_dir = NULL;
@@ -2532,7 +2530,7 @@ static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   open = FALSE;
 
   return TRUE;
-}*/
+}
 
 
 #ifdef TEST_SITE
@@ -2572,7 +2570,7 @@ void assign_clan(void) {
   assign_obj(27530,clan_recall_scroll);
 
   /* Bud */
-  //assign_room(BUD_ACCESS, bud_entrance);
+  assign_room(BUD_ACCESS, bud_entrance);
   assign_mob(27517, receptionist);
   assign_mob(27518, do_vault);
   //assign_obj(27526, bloodmoon_orb);
