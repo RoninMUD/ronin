@@ -4303,34 +4303,17 @@ With a flair of eloquence, he reapplies the disquise, and is $n again.",
 
 }
 
-int mayor(CHAR *mayor, CHAR *ch, int cmd, char *arg)
-{
+int mayor(CHAR *mayor, CHAR *ch, int cmd, char *arg) {
   static char open_path[] =
-    "W3a3003b33000c111d0d1111e333333332e22c22111221a1S.";
+    "W3A3003b33000c111d0d1111e333333332e22c22111221a1S.";
   static char close_path[] =
-    "W3a3003b33000c111d0d111CE333333332CE22c22111221a1S.";
-  /*
-     const struct social_type open_path[] = {
-     {"G",0}
-     };
+    "W3A3003b33000c111d0d1111E333333332E22c22111221a1S.";
 
-     static void *thingy = 0;
-     static int cur_line = 0;
-
-     for (i=0; i < 1; i++)
-     {
-     if (*(open_path[cur_line].cmd) == '!') {
-     i++;
-     exec_social(ch, (open_path[cur_line].cmd)+1,
-     open_path[cur_line].next_line, &cur_line, &thingy);
-     } else {
-     exec_social(ch, open_path[cur_line].cmd,
-     open_path[cur_line].next_line, &cur_line, &thingy);
-     }
-     */
   static char *path;
   static int index;
   static bool move = FALSE;
+
+  char buf[MIL];
 
   if (!move) {
     if (time_info.hours == 6) {
@@ -4344,117 +4327,115 @@ int mayor(CHAR *mayor, CHAR *ch, int cmd, char *arg)
     }
   }
 
-  if (1 && cmd == CMD_SAY && !strncmp(" promote", arg, strlen(" promote")))
-    {
+  if (cmd == CMD_SAY && !strncmp(" promote", arg, strlen(" promote"))) {
     do_say(ch, arg, CMD_SAY);
-    switch (GET_CLASS(ch))
-      {
+
+    switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
-        promote_mage(mayor,ch);
-        break;
-      case CLASS_THIEF:
-        promote_thief(mayor,ch);
-        break;
-      case CLASS_WARRIOR:
-        promote_warrior(mayor,ch);
-        break;
-      case CLASS_PALADIN:
-        promote_paladin(mayor,ch);
-        break;
-      case CLASS_BARD:
-        promote_bard(mayor,ch);
-        break;
-      case CLASS_NINJA:
-        promote_ninja(mayor,ch);
-        break;
-      case CLASS_ANTI_PALADIN:
-        promote_antipaladin(mayor,ch);
+        promote_mage(mayor, ch);
         break;
       case CLASS_CLERIC:
-        promote_cleric(mayor,ch);
+        promote_cleric(mayor, ch);
+        break;
+      case CLASS_THIEF:
+        promote_thief(mayor, ch);
+        break;
+      case CLASS_WARRIOR:
+        promote_warrior(mayor, ch);
+        break;
+      case CLASS_NINJA:
+        promote_ninja(mayor, ch);
         break;
       case CLASS_NOMAD:
-        promote_nomad(mayor,ch);
+        promote_nomad(mayor, ch);
+        break;
+      case CLASS_PALADIN:
+        promote_paladin(mayor, ch);
+        break;
+      case CLASS_ANTI_PALADIN:
+        promote_antipaladin(mayor, ch);
+        break;
+      case CLASS_BARD:
+        promote_bard(mayor, ch);
         break;
       case CLASS_COMMANDO:
-        promote_commando(mayor,ch);
+        promote_commando(mayor, ch);
         break;
-      }
-      save_char(ch,NOWHERE);
-      return TRUE;
     }
 
-  if (cmd || !move || (GET_POS(mayor) < POSITION_SLEEPING) ||
-      (GET_POS(mayor) == POSITION_FIGHTING))
+    save_char(ch, NOWHERE);
+
+    return TRUE;
+  }
+
+  if (cmd || !move || GET_POS(mayor) < POSITION_SLEEPING || GET_POS(mayor) == POSITION_FIGHTING)
     return FALSE;
 
   switch (path[index]) {
-  case '0' :
-  case '1' :
-  case '2' :
-  case '3' :
-    do_move(mayor,"",path[index]-'0'+1);
-    break;
-
-  case 'W' :
-    GET_POS(mayor) = POSITION_STANDING;
-    act("$n awakens and groans loudly.",FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'S' :
-    GET_POS(mayor) = POSITION_SLEEPING;
-    act("$n lies down and instantly falls asleep.",FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'a' :
-    act("$n says 'Hello Honey!'",FALSE,mayor,0,0,TO_ROOM);
-    act("$n smirks.",FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'b' :
-    act("$n says 'What a view! I must get something done about that dump!'",
-        FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'c' :
-    act("$n says 'Vandals! Youngsters nowadays have no respect for anything!'",
-        FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'd' :
-    act("$n says 'Good day, citizens!'", FALSE, mayor, 0,0,TO_ROOM);
-    break;
-
-  case 'e' :
-    act("$n says 'I hereby declare the bazaar open!'",FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'E' :
-    act("$n says 'I hereby declare Midgaard closed!'",FALSE,mayor,0,0,TO_ROOM);
-    break;
-
-  case 'O' :
-    do_unlock(mayor, "gate", 0);
-    do_open(mayor, "gate", 0);
-    break;
-
-  case 'C' :
-    do_close(mayor, "gate", 0);
-    do_lock(mayor, "gate", 0);
-    break;
-
-  case '.' :
-    move = FALSE;
-    break;
-
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+      do_move(mayor, "\0", path[index] - '0' + 1);
+      break;
+    case 'W':
+      GET_POS(mayor) = POSITION_STANDING;
+      act("$n awakens and groans loudly.", FALSE, mayor, 0, 0, TO_ROOM);
+      break;
+    case 'S':
+      GET_POS(mayor) = POSITION_SLEEPING;
+      act("$n lies down and instantly falls asleep.", FALSE, mayor, 0, 0, TO_ROOM);
+      break;
+    case 'a':
+      do_say(mayor, "Time for a nap!", CMD_SAY);
+      snprintf(buf, sizeof(buf), "yawn");
+      command_interpreter(mayor, buf);
+      break;
+    case 'A':
+      do_say(mayor, "Time for a walk through town!", CMD_SAY);
+      break;
+    case 'b':
+      do_say(mayor, "What a view!", CMD_SAY);
+      act("$n gazes upon the park to the south with pride.", FALSE, mayor, 0, 0, TO_ROOM);
+      break;
+    case 'c':
+      do_say(mayor, "Vandals! Youngsters nowadays have no respect for anything!", CMD_SAY);
+      snprintf(buf, sizeof(buf), "fist");
+      command_interpreter(mayor, buf);
+      break;
+    case 'd':
+      do_say(mayor, "Good day, citizens!", CMD_SAY);
+      snprintf(buf, sizeof(buf), "smile");
+      command_interpreter(mayor, buf);
+      break;
+    case 'e':
+      do_say(mayor, "May our gates welcome one and all to our fair city.", CMD_SAY);
+      act("$n looks proudly at the magnificent city gates.", FALSE, mayor, 0, 0, TO_ROOM);
+      break;
+    case 'E':
+      do_say(mayor, "Trust in the strength of these old gates keep us safe from the dangers outside.", CMD_SAY);
+      act("$n examines the sturdy city gates and nods $s head.", FALSE, mayor, 0, 0, TO_ROOM);
+      break;
+    case 'O':
+      do_unlock(mayor, "gate", 0);
+      do_open(mayor, "gate", 0);
+      break;
+    case 'C':
+      do_close(mayor, "gate", 0);
+      do_lock(mayor, "gate", 0);
+      break;
+    case '.':
+      move = FALSE;
+      break;
   }
 
   index++;
+
   return FALSE;
 }
 
 /* ********************************************************************
- *  General special procedures for mobiles                                      *
+ *  General special procedures for mobiles                            *
  ******************************************************************** */
 
 /* SOCIAL GENERAL PROCEDURES

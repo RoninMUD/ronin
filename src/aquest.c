@@ -73,7 +73,7 @@ void aqcard_cleanup(int id)
 }
 
 void do_aquest(CHAR *ch, char *argument, int cmd) {
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char arg[MAX_INPUT_LENGTH];
   char usage[]="\
 This command is used to handle automatic questing from guildmasters.\n\r\n\r\
   Usage: aquest request  - request a quest (solo/low/mid/high optional)\n\r\
@@ -108,25 +108,25 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
       if (ch->quest_status == QUEST_NONE) {
         send_to_char("You are not currently on any quest.\n\r", ch);
         if (ch->ver3.time_to_quest)
-          sprintf(buf, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
+          printf_to_char(ch, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
         else
-          sprintf(buf, "You can start another at any time.\n\r");
-        send_to_char(buf, ch);
+          printf_to_char(ch, "You can start another at any time.\n\r");
         return;
       }
 
       if (ch->quest_status == QUEST_RUNNING) {
-        if (ch->questmob)
-          sprintf(buf, "You are on a quest to kill %s, for %d point(s).  You have %d ticks left.\n\r", GET_SHORT(ch->questmob), ch->quest_level, ch->ver3.time_to_quest);
+        if (ch->questmob) {
+          printf_to_char(ch, "You are on a quest to kill %s, for %d point(s).  You have %d ticks left.\n\r", GET_SHORT(ch->questmob), ch->quest_level, ch->ver3.time_to_quest);
+          printf_to_char(ch, "%s can be found around %s.\n\r", GET_SHORT(ch->questmob), real_room(ch->quest_room_v) > 0 ? world[real_room(ch->quest_room_v)].name : "Unknown");
+        }
         else if (ch->questobj) {
           if (V_OBJ(ch->questobj) == 35)
-            sprintf(buf, "You are on a quest to recover %d %s, for %d point(s). You have %d ticks left.\n\r", aq_card[ch->quest_level - 1], OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
+            printf_to_char(ch, "You are on a quest to recover %d %s, for %d point(s). You have %d ticks left.\n\r", aq_card[ch->quest_level - 1], OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
           else
-            sprintf(buf, "You are on a quest to recover %s, for %d point(s). You have %d ticks left.\n\r", OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
+            printf_to_char(ch, "You are on a quest to recover %s, for %d point(s). You have %d ticks left.\n\r", OBJ_SHORT(ch->questobj), ch->quest_level, ch->ver3.time_to_quest);
         }
         else
-          sprintf(buf, "You are on a quest to do something, dunno what it is.\n\r");
-        send_to_char(buf, ch);
+          printf_to_char(ch, "You are on a quest to do something, dunno what it is.\n\r");
         return;
       }
 
@@ -138,10 +138,9 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
       if (ch->quest_status == QUEST_FAILED) {
         send_to_char("You have failed your quest for some reason.\n\r", ch);
         if (ch->ver3.time_to_quest)
-          sprintf(buf, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
+          printf_to_char(ch, "You must wait %d ticks to start another.\n\r", ch->ver3.time_to_quest);
         else
-          sprintf(buf, "You can start another at any time.\n\r");
-        send_to_char(buf, ch);
+          printf_to_char(ch, "You can start another at any time.\n\r");
         return;
       }
       break;
@@ -1156,6 +1155,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     ch->questmob = quest_mob;
     ch->quest_level = quest_level == 0 ? 1 : quest_level;
     ch->quest_status = QUEST_RUNNING;
+    ch->quest_room_v = CHAR_VIRTUAL_ROOM(quest_mob);
     ch->ver3.time_to_quest = 60;
 
     char buf[MSL];
@@ -1163,7 +1163,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     snprintf(buf, sizeof(buf), "$N tells you, 'Kill %s for %d quest point(s), in 60 ticks.'", GET_SHORT(quest_mob), ch->quest_level);
     act(buf, 0, ch, 0, mob, TO_CHAR);
 
-    snprintf(buf, sizeof(buf), "$N tells you, '%s can be found around %s'", GET_SHORT(quest_mob), world[CHAR_REAL_ROOM(quest_mob)].name);
+    snprintf(buf, sizeof(buf), "$N tells you, '%s can be found around %s.'", GET_SHORT(quest_mob), world[real_room(ch->quest_room_v)].name);
     act(buf, 0, ch, 0, mob, TO_CHAR);
 
     if (chance(2)) {
