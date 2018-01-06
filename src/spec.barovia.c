@@ -730,10 +730,12 @@ int jander(CHAR *mob, CHAR *ch, int cmd, char *arg)
 #define UBER_STRAHD       11300
 #define NAMELESS_ONE      11301
 #define SUPER_ZOMBIE         11302
+#define NOTSOSUPER_ZOMBIE    11303
 #define STRAHD_SPAWNROOM        11400
 #define STRAHD_BEDCHAMBER         11499
 #define STRAHD_TORTURECHAMBER         11431
 #define UBER_BOM          11300
+#define PENTACLE          11301
 #define BAVARIA_BOTTOM          11300
 #define BAVARIA_TOP         11347
 
@@ -767,7 +769,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
           if (obj && ( V_OBJ(obj) != UBER_BOM )) obj_to_char( unequip_char(uber, WEAR_WRIST_L), uber );
           else if (!obj) {
             obj=read_object(UBER_BOM, VIRTUAL);
-            if(chance(60)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_EVIL);
+            if(chance(90)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_EVIL);
             if(chance(20)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_GOOD);
             if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_PALADIN);
             if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_BARD);
@@ -880,7 +882,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       num_specs = number(0,2);
       if (IS_NIGHT) num_specs++;
       if (form == 1) num_specs++;
-      if (affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) {
+      if ((affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
         sprintf(buf, "%s growls angrily, frustratingly exposed and vulnerable here in %s sanctuary.\n\r", GET_SHORT(uber), HSHR(uber));
         send_to_room(buf, CHAR_REAL_ROOM(uber));
         num_specs+=2;
@@ -1050,7 +1052,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       {
         next_vict = vict->next_in_room;
         if ( IS_NPC(vict) || !IS_MORTAL(vict) ) continue;
-        int reward = 8;
+        int reward = 10;
         sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward > 1 ? "points" : "point");
         send_to_char(buf, vict);
         vict->ver3.quest_points += reward;
@@ -1091,7 +1093,7 @@ int super_zombie(CHAR *zombie, CHAR *ch, int cmd, char *arg)
             //this is a little awkward here, no clean way for messaging the different people appropriately, writing our own logic rather than use act()
             if (vict != vict1 && vict != vict2 && vict != zombie) {
             //result for witnesses
-              sprintf(buf, "%s lifts %s off the floor in one swift movement, then proceeds to bludgeon %s repeatedly with %s human cudgel.\n\r", GET_SHORT(zombie), GET_NAME(vict1), GET_NAME(vict2), HMHR(zombie));
+              sprintf(buf, "%s lifts %s off the floor in one swift movement, then proceeds to bludgeon %s repeatedly with its human cudgel.\n\r", GET_SHORT(zombie), GET_NAME(vict1), GET_NAME(vict2));
               send_to_char(buf, vict);
             } else if (vict == vict1) {
             //result for "bludgeoner"
@@ -1166,6 +1168,65 @@ int uber_bom(OBJ *obj, CHAR *ch, int cmd, char *argument)
   return FALSE;
 }
 
+int strahd_pentacle(OBJ *pentacle, CHAR *ch, int cmd, char *argument)
+{
+  char buf[MAX_INPUT_LENGTH];
+  struct affected_type_5 af;
+  CHAR *zombie = NULL;
+
+  //at sunset, iterate the OBJ_SPEC, mark that the sunset hour was already counted with obj_flags.timer boolean
+  ch = pentacle->equipped_by;
+  if (cmd == MSG_TICK && ch) {
+    if (time_info.hours == 21) {
+      if (pentacle->obj_flags.timer == 0) {
+        if (OBJ_SPEC(pentacle) < 20) {
+          send_to_char("A pulse of cold energy surges from the pentacle as the sun sets.\n\r", ch);
+          OBJ_SPEC(pentacle) = MIN(20, OBJ_SPEC(pentacle) + 1);
+        } else {
+          send_to_char("Twilight falls, but the pentacle cannot contain any more of the dusk's power.\n\r", ch);
+        }
+        pentacle->obj_flags.timer = 1;
+      }
+    } else {
+      //any other hour than sunset, reset the boolean "flag" to 0
+      if (pentacle->obj_flags.timer != 0) {
+        pentacle->obj_flags.timer = 0;
+      }
+    }
+  }
+
+  if (cmd == CMD_USE && ch) {
+    one_argument(argument, buf);
+    if (isname(buf, OBJ_NAME(pentacle)) && (pentacle == EQ(ch, HOLD))) {
+      if (OBJ_SPEC(pentacle) >= 10) {
+        if (count_mob_followers(ch) > 1) {
+          send_to_char("You don't seem capable of controlling more denizens of the dead at this time.\n\r",ch);
+        } else {
+          OBJ_SPEC(pentacle)-=10;
+          act("A blue unearthly light imbues $n's pentacle as $e channels the power of the dead.",0,ch,0,NULL,TO_ROOM);
+          act("Your pentacle glows with an unearthly blue light and becomes ice cold as you channel the power of the dead.",0,ch,0,NULL,TO_CHAR);
+          zombie = read_mobile(NOTSOSUPER_ZOMBIE, VIRTUAL);
+          char_to_room(zombie, CHAR_REAL_ROOM(ch));
+          send_to_room("An incredibly dimwitted zombie appears from nowhere, eager to serve its master.\n\r",CHAR_REAL_ROOM(ch));
+          add_follower(zombie, ch);
+
+          af.type        = SPELL_CHARM_PERSON;
+          af.duration    = 5;
+          af.modifier    = 0;
+          af.location    = 0;
+          af.bitvector   = AFF_CHARM;
+          af.bitvector2  = 0;
+          affect_to_char(zombie, &af);
+        }
+      } else {
+        send_to_char("How does one use a pentacle that hasn't been enchanted by the twilight?\n\r", ch);
+      }
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
 /* ******************** End of Barovia & Castle of Ravenloft ****************** */
 
 
@@ -1220,4 +1281,5 @@ void assign_barovia (void) {
   assign_obj(BAR_DECAY6  ,  decaying_eq);
   assign_obj(BAR_DECAY7  ,  decaying_eq);
   assign_obj(UBER_BOM, uber_bom);
+  assign_obj(PENTACLE, strahd_pentacle);
 }

@@ -1136,7 +1136,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
           // perform 8-13 attacks to random victims in room
           act("In the blink of an eye, $n scythes around the room with a series of quick, flashing strikes.", FALSE, uber, 0, vict, TO_ROOM);
           j = number(8,13);
-          if (affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) {
+          if ((affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
             sprintf(buf, "%s unleashes a fierce battlecry, pressing the attack in spite of %s lowered defenes.\n\r", GET_SHORT(uber), HSHR(uber));
             send_to_room(buf, CHAR_REAL_ROOM(uber));
             j+=6;
@@ -1145,7 +1145,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
             vict = get_random_victim(uber);
             if (vict) {
               act("One of $n's strikes catches you as he whirls past in a deadly flurry of motion.", FALSE, uber, 0, vict, TO_VICT);
-              damage(uber, vict, number(200,500), TYPE_UNDEFINED, DAM_NO_BLOCK);
+              damage(uber, vict, number(330,600), TYPE_UNDEFINED, DAM_NO_BLOCK);
             }
           }
           break;
@@ -1184,7 +1184,7 @@ int dm_katana(OBJ *katana, CHAR *ch, int cmd, char *argument)
     // chance to remove protective magic around target
     vict = ch->specials.fighting;
     OBJ_SPEC(katana)++;
-    spec_chance = MIN ( MAX(1, OBJ_SPEC(katana) - KATANA_CHARGE), 33 );
+    spec_chance = MIN ( MAX(0, OBJ_SPEC(katana) - KATANA_CHARGE), 33 );
     if( chance( spec_chance ) ) {
       dm_katana_cleanse(ch, vict);
       damage(ch, vict, number( 350, 500 ), TYPE_UNDEFINED, DAM_NO_BLOCK);

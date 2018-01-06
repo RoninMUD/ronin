@@ -1206,6 +1206,7 @@ struct char_data
   struct char_data *questmob;
   int quest_level;
   int quest_status;
+  int quest_room_v;
 
   struct affected_type_5 *affected;       /* affected by what spells     */
   struct enchantment_type_5 *enchantments;/* affected by what enchantments*/

@@ -251,21 +251,18 @@ int point_update_move(CHAR *ch)
   return move_gain(ch);
 }
 
-int mana_gain(CHAR *ch)
-{
+int mana_gain(CHAR *ch) {
   int gain = 0;
   int loss = 0;
   int year = 0;
 
-  if (IS_NPC(ch))
-  {
+  if (IS_NPC(ch)) {
     gain = GET_LEVEL(ch);
 
     gain += equipment_regen(ch, MANA_REGEN);
     gain += spell_regen(ch, MANA_REGEN);
 
-    if (IS_AFFECTED(ch, AFF_POISON))
-    {
+    if (IS_AFFECTED(ch, AFF_POISON)) {
       gain /= 16;
     }
 
@@ -276,15 +273,13 @@ int mana_gain(CHAR *ch)
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN))
-  {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
     if (GET_LEVEL(ch) < 16) return 0;
     else return -10;
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
-  {
+    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     gain = 1 - GET_MANA(ch);
 
     if (age(ch).year > 49) loss = -5;
@@ -313,8 +308,7 @@ int mana_gain(CHAR *ch)
 
   gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
       gain += 5;
@@ -343,8 +337,7 @@ int mana_gain(CHAR *ch)
       break;
   }
 
-  switch (GET_POS(ch))
-  {
+  switch (GET_POS(ch)) {
     case POSITION_SLEEPING:
       gain *= 2;
       break;
@@ -362,8 +355,7 @@ int mana_gain(CHAR *ch)
       break;
   }
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
     case CLASS_PALADIN:
@@ -379,26 +371,20 @@ int mana_gain(CHAR *ch)
       break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) &&
-      (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE) || IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY)))
-  {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
     gain *= 2;
   }
   else if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-           GET_LEVEL(ch) < 16)
-  {
+    GET_LEVEL(ch) < 16) {
     gain += gain / 2;
   }
 
-  if (IS_AFFECTED(ch, AFF_POISON))
-  {
+  if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1))
-    {
+    if (check_subclass(ch, SC_RONIN, 1)) {
       gain /= 8;
     }
-    else
-    {
+    else {
       gain /= 16;
     }
   }
@@ -407,10 +393,8 @@ int mana_gain(CHAR *ch)
   gain += equipment_regen(ch, MANA_REGEN);
   gain += spell_regen(ch, MANA_REGEN);
 
-  if (GET_LEVEL(ch) >= 50)
-  {
-    switch (GET_CLASS(ch))
-    {
+  if (GET_LEVEL(ch) >= 50) {
+    switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
         gain += 10;
@@ -443,16 +427,13 @@ int mana_gain(CHAR *ch)
   return gain;
 }
 
-int hit_gain(CHAR *ch)
-{
+int hit_gain(CHAR *ch) {
   int gain = 0;
   int loss = 0;
   int year = 0;
 
-  if (IS_NPC(ch))
-  {
-    switch (GET_POS(ch))
-    {
+  if (IS_NPC(ch)) {
+    switch (GET_POS(ch)) {
       case POSITION_STANDING:
       case POSITION_FLYING:
       case POSITION_RIDING:
@@ -474,15 +455,12 @@ int hit_gain(CHAR *ch)
         break;
     }
 
-    if (IS_AFFECTED(ch, AFF_POISON))
-    {
+    if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
-      if (check_subclass(ch, SC_RONIN, 1))
-      {
+      if (check_subclass(ch, SC_RONIN, 1)) {
         gain /= 4;
       }
-      else
-      {
+      else {
         gain /= 8;
       }
     }
@@ -497,15 +475,13 @@ int hit_gain(CHAR *ch)
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN))
-  {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
     if (GET_LEVEL(ch) < 16) return 0;
     else return -10;
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
-  {
+    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     gain = 1 - GET_HIT(ch);
 
     if (age(ch).year > 49) loss = -5;
@@ -519,8 +495,7 @@ int hit_gain(CHAR *ch)
     gain = MIN(gain, 0);
 
     if (check_subclass(ch, SC_WARLORD, 2) &&
-        ch->specials.fighting)
-    {
+      ch->specials.fighting) {
       gain += 50;
     }
 
@@ -542,8 +517,7 @@ int hit_gain(CHAR *ch)
 
   gain *= 2;
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_NOMAD:
       gain += 4;
       break;
@@ -574,8 +548,7 @@ int hit_gain(CHAR *ch)
       break;
   }
 
-  switch (GET_POS(ch))
-  {
+  switch (GET_POS(ch)) {
     case POSITION_SLEEPING:
       gain += gain / 2;
       break;
@@ -593,53 +566,43 @@ int hit_gain(CHAR *ch)
       break;
   }
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
       gain /= 2;
       break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) &&
-      (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB) || IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE)))
-  {
-    gain *= 3;
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
+    gain *= 2;
   }
 
   if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-      GET_LEVEL(ch) < 16)
-  {
+    GET_LEVEL(ch) < 16) {
     gain += gain / 2;
   }
 
-  if (IS_AFFECTED(ch, AFF_POISON))
-  {
+  if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1))
-    {
+    if (check_subclass(ch, SC_RONIN, 1)) {
       gain /= 4;
     }
-    else
-    {
+    else {
       gain /= 8;
     }
   }
 
   if (check_subclass(ch, SC_WARLORD, 3) &&
-      ch->specials.fighting)
-  {
+    ch->specials.fighting) {
     gain += 50;
   }
-  
+
   gain += 4 * con_app[GET_CON(ch)].regen;
   gain += equipment_regen(ch, HP_REGEN);
   gain += spell_regen(ch, HP_REGEN);
 
-  if (GET_LEVEL(ch) == 50)
-  {
-    switch (GET_CLASS(ch))
-    {
+  if (GET_LEVEL(ch) == 50) {
+    switch (GET_CLASS(ch)) {
       case CLASS_THIEF:
       case CLASS_WARRIOR:
       case CLASS_NOMAD:
@@ -670,16 +633,14 @@ int hit_gain(CHAR *ch)
     }
   }
 
-  if (affected_by_spell(ch, SPELL_TRANQUILITY))
-  {
+  if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
     gain = (gain * 12) / 10;
   }
 
   return gain;
 }
 
-int move_gain(CHAR *ch)
-{
+int move_gain(CHAR *ch) {
   int gain = 0;
   int year = 0;
 
@@ -689,16 +650,14 @@ int move_gain(CHAR *ch)
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN))
-  {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
     if (GET_LEVEL(ch) < 16) return 0;
     else return -5;
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
-      (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)))
-  {
+    (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
+    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     return 5;
   }
 
@@ -722,55 +681,51 @@ int move_gain(CHAR *ch)
     }
   }
 
-  switch (GET_POS(ch))
-  {
+  switch (GET_POS(ch)) {
     case POSITION_SLEEPING:
       gain += gain / 2;
-    break;
+      break;
 
     case POSITION_RESTING:
       gain += gain / 4;
-    break;
+      break;
 
     case POSITION_SITTING:
       gain += gain / 8;
-    break;
+      break;
+  }
+
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
+    gain *= 2;
   }
 
   if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-      GET_LEVEL(ch) < 16)
-  {
+    GET_LEVEL(ch) < 16) {
     gain += gain / 2;
   }
 
-  if (IS_AFFECTED(ch, AFF_POISON))
-  {
+  if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1))
-    {
+    if (check_subclass(ch, SC_RONIN, 1)) {
       gain /= 2;
     }
-    else
-    {
+    else {
       gain /= 4;
     }
   }
 
-  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC)
-  {
+  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC) {
     gain = GET_CON(ch) - 20;
   }
 
   return gain;
 }
 
-void advance_level(CHAR *ch)
-{
+void advance_level(CHAR *ch) {
   int gain = 0;
   int i = 0;
 
-  switch(GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
       gain = number(3, 7);   /* average 5, was 4 */
       break;
@@ -818,8 +773,7 @@ void advance_level(CHAR *ch)
 
   ch->points.max_hit += MAX(gain + con_app[GET_CON(ch)].hitp, 1);
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
     case CLASS_AVATAR:
@@ -845,15 +799,12 @@ void advance_level(CHAR *ch)
 
   ch->specials.spells_to_learn += MAX(2, wis_app[GET_WIS(ch)].bonus);
 
-  if (ch->specials.spells_to_learn < 0)
-  {
+  if (ch->specials.spells_to_learn < 0) {
     ch->specials.spells_to_learn = 127;
   }
 
-  if (GET_LEVEL(ch) >= LEVEL_IMM)
-  {
-    for (i = 0; i < 3; i++)
-    {
+  if (GET_LEVEL(ch) >= LEVEL_IMM) {
+    for (i = 0; i < 3; i++) {
       ch->specials.conditions[i] = -1;
     }
   }

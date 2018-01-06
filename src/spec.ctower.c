@@ -196,58 +196,85 @@ int mirror (int room, CHAR *ch, int cmd, char *arg) {
   return TRUE;
 }
 
-int hammer(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
-  int tooth=FALSE, mithril_bar=FALSE;
-  OBJ *tmp, *tmp_next;
-  char buf[80];
-  if(!ch) return FALSE;
-  if(!obj) return FALSE;
-
+int hammer(OBJ *obj, CHAR *ch, int cmd, char *argument) {
+  if (!ch) return FALSE;
+  if (!obj) return FALSE;
   if (cmd != CMD_USE) return FALSE;
-  if(V_ROOM(ch) !=ANVIL_ROOM) return FALSE;
-  if (!EQ(ch, HOLD) || EQ(ch,HOLD) != obj) return FALSE;
-  one_argument (argument, buf);
-  if (!isname(buf,OBJ_NAME(obj))) return FALSE;
+  if (V_ROOM(ch) != ANVIL_ROOM) return FALSE;
+  if (EQ(ch, HOLD) != obj) return FALSE;
+  if (GET_CLASS(ch) != CLASS_MAGIC_USER) return FALSE;
 
-  for (tmp = ch->carrying; tmp; tmp = tmp->next_content) {
-    if (V_OBJ(tmp) == 17395) tooth=TRUE;
-    if (V_OBJ(tmp) == 17394) mithril_bar=TRUE;
+  char buf[MIL];
+
+  one_argument(argument, buf);
+
+  if (!isname(buf, OBJ_NAME(obj))) return FALSE;
+
+  bool mithril_bar = FALSE;
+  bool tooth = FALSE;
+
+  for (OBJ *tmp_obj = ch->carrying, *next_obj = NULL; tmp_obj; tmp_obj = next_obj) {
+    next_obj = tmp_obj->next_content;
+
+    if (!mithril_bar && V_OBJ(tmp_obj) == 17394) mithril_bar = TRUE;
+    if (!tooth && V_OBJ(tmp_obj) == 17395) tooth = TRUE;
+    if (mithril_bar && tooth) break;
   }
 
-  if (tooth && mithril_bar && GET_CLASS(ch)==CLASS_MAGIC_USER) {
-    for (tmp = ch->carrying; tmp; tmp = tmp_next) {
-      tmp_next = tmp->next_content;
-      if (V_OBJ(tmp) == 17395) extract_obj(obj_from_char(tmp));
-      if (V_OBJ(tmp) == 17394) extract_obj(obj_from_char(tmp));
+  if (tooth && mithril_bar) {
+    for (OBJ *tmp_obj = ch->carrying, *next_obj = NULL; tmp_obj; tmp_obj = next_obj) {
+      next_obj = tmp_obj->next_content;
+
+      if (mithril_bar && V_OBJ(tmp_obj) == 17394) {
+        extract_obj(obj_from_char(tmp_obj));
+        mithril_bar = FALSE;
+      }
+      if (tooth && V_OBJ(tmp_obj) == 17395) {
+        extract_obj(obj_from_char(tmp_obj));
+        tooth = FALSE;
+      }
+      if (!mithril_bar && !tooth) break;
     }
-    act("$n recites a strange incantation, and in a burst of light the tooth ",1,ch,0,0,TO_ROOM);
-    act("and mithril bar fuse into a strange looking weapon.",1,ch,0,0,TO_ROOM);
-    act("You forge the Tooth and Mithril Bar into a rather unusual mystical weapon.",1,ch,0,0,TO_CHAR);
-    extract_obj(unequip_char(ch,HOLD));
-    act("Your hammer crumbles to dust after its purpose has been served.",1,ch,0,0,TO_CHAR);
-    tmp = read_object(17398,VIRTUAL);
-    obj_to_room(tmp,real_room(ANVIL_ROOM));
-  } else {
-    send_to_char("Nothing seems to happen.\n\r",ch);
+
+    act("$n recites a strange incantation, and in a burst of light the tooth\n\rand mithril bar fuse into a strange looking weapon.", FALSE, ch, 0, 0, TO_ROOM);
+    act("You forge the Tooth and Mithril Bar into a rather unusual mystical weapon.", FALSE, ch, 0, 0, TO_CHAR);
+    act("Your hammer crumbles to dust after its purpose has been served.", FALSE, ch, 0, 0, TO_CHAR);
+
+    extract_obj(unequip_char(ch, HOLD));
+    OBJ *fang = read_object(17398, VIRTUAL);
+    if (fang) obj_to_room(fang, real_room(ANVIL_ROOM));
+
     return TRUE;
   }
+  else {
+    send_to_char("Nothing seems to happen.\n\r", ch);
+
+    return TRUE;
+  }
+
   return FALSE;
 }
 
-int fang(OBJ *obj,CHAR *ch, int cmd, char *argument) {
-  CHAR *vict;
+int fang(OBJ *obj, CHAR *ch, int cmd, char *argument) {
+  if (cmd != MSG_MOBACT) return FALSE;
 
-  if(cmd != MSG_MOBACT) return FALSE;
+  CHAR *owner = obj->equipped_by;
+  if (!owner) return FALSE;
 
-  vict=obj->equipped_by;
-  if(!vict) return FALSE;
-  if(GET_LEVEL(vict)<11) return FALSE;
-  if(!vict->specials.fighting) return FALSE;
-  if(number(0,12)) return FALSE;
-  if(CHAR_REAL_ROOM(vict)!=CHAR_REAL_ROOM(vict->specials.fighting)) return FALSE;
-  act("$n's $p bursts into searing flames and engulfs $N!",FALSE,vict,obj,vict->specials.fighting,TO_ROOM);
-  act("Your fang bursts into searing flames and envelops $N!",FALSE,vict,0,vict->specials.fighting,TO_CHAR);
-  spell_fireball(GET_LEVEL(vict), vict, vict->specials.fighting, 0);
+  CHAR *vict = GET_OPPONENT(owner);
+  if (!vict) return FALSE;
+
+  if (!SAME_ROOM(owner, vict)) return FALSE;
+
+  if (GET_LEVEL(owner) < 11) return FALSE;
+
+  if (number(0, 12)) return FALSE;
+
+  act("$n's $p bursts into searing flames and engulfs $N!", FALSE, owner, obj, vict, TO_ROOM);
+  act("Your fang bursts into searing flames and envelops $N!", FALSE, owner, 0, vict, TO_CHAR);
+
+  spell_fireball(GET_LEVEL(owner), owner, vict, 0);
+
   return FALSE;
 }
 
