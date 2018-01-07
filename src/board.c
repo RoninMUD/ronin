@@ -181,33 +181,39 @@ int board(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 }
 
 void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
-  long ct;
-  struct tm *timeStruct;
-  char tmstr[20];
-  char playername[35];
-  char tempstring[75];
-
-  if (board->msg_num > MAX_MSGS - 1) {
+  if (board->msg_num > (MAX_MSGS - 1)) {
     send_to_char("The board is full already.\n\r", ch);
     return;
   }
 
-  /* skip blanks */
-  for(; isspace(*arg); arg++) ;
+  for (; isspace(*arg); arg++);
 
   if (!*arg) {
     send_to_char("You must specify a message heading.\n\r", ch);
     return;
   }
 
-  if(!check_access(ch,board)) return;
+  if (!check_access(ch, board)) return;
 
-  if(!IS_NPC(ch)) sprintf(playername,"%-16s",GET_NAME(ch));
-  else sprintf(playername,"%-16s",MOB_SHORT(ch));
-  ct=time(0);
-  timeStruct = localtime(&ct);
-  sprintf(tmstr, "%s %2d ", Months[timeStruct->tm_mon], timeStruct->tm_mday);
-  board->heading[board->msg_num] = (char *)malloc(strlen(tmstr) + strlen(arg) + 16 + 7);
+  char ch_name[16 + 1];
+
+  if (!IS_NPC(ch)) sprintf(ch_name, "%-16s", GET_NAME(ch));
+  else sprintf(ch_name, "%-16s", MOB_SHORT(ch));
+
+  char tm_str[6 + 1];
+
+  long ct = time(NULL);
+  struct tm *timeStruct = localtime(&ct);
+  snprintf(tm_str, sizeof(tm_str), "%3s %2d", Months[timeStruct->tm_mon], timeStruct->tm_mday);
+
+  int header_len = strlen(ch_name) + strlen(tm_str) + strlen(arg) + 1;
+
+  if (header_len > 80) {
+    send_to_char("Try a shorter heading.\n\r", ch);
+    return;
+  }
+
+  board->heading[board->msg_num] = (char *)malloc(strlen(ch_name) + strlen(tm_str) + strlen(arg) + 1);
 
   if (!board->heading[board->msg_num]) {
     log_f("Board: Malloc for board header failed.");
@@ -215,28 +221,26 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
     return;
   }
 
-  if (strlen(tmstr)+strlen(arg)+16+6+5 > 80) {
-    send_to_char("Try a shorter heading.\n\r", ch);
-    return;
-  }
+  char tmp_str[80 + 1];
 
-  if(board->vnumber==FEEDBACK_BOARD)
-    sprintf(tempstring, "(                ) %s : %s",tmstr, arg);
+  if (board->vnumber == FEEDBACK_BOARD)
+    snprintf(tmp_str, sizeof(tmp_str), "(%*c) %s : %s", strlen(ch_name), ' ', tm_str, arg);
   else
-    sprintf(tempstring, "(%s) %s : %s", playername, tmstr, arg);
-  strcat(tempstring,"\0");
-  strcpy(board->heading[board->msg_num], tempstring);
+    snprintf(tmp_str, sizeof(tmp_str), "(%s) %s : %s", ch_name, tm_str, arg);
+
+  strcpy(board->heading[board->msg_num], tmp_str);
 
   board->msgs[board->msg_num] = NULL;
 
   send_to_char("Write your message. Terminate with a @.\n\r\n\r", ch);
   act("$n starts to write on the board.", TRUE, ch, 0, 0, TO_ROOM);
 
-  SET_BIT(ch->specials.pflag,PLR_WRITING);
+  SET_BIT(GET_PFLAG(ch), PLR_WRITING);
   ch->desc->str = &board->msgs[board->msg_num];
   ch->desc->max_str = MAX_MESSAGE_LENGTH;
 
   board->msg_num++;
+
   save_board(board);
 }
 
