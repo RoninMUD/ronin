@@ -3771,7 +3771,7 @@ void hit(CHAR *ch, CHAR *victim, int type)
      perform it before any additional hit skill checks,
      which may fail at any point in the chain */
 
-  if (affected_by_spell(ch, SPELL_HASTE) && chance(50 + GET_DEX_APP(ch))) {
+  if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
     /* perform haste hit before any skill checks, if it misses, return */
     if (!perform_hit(ch, victim, TYPE_UNDEFINED, 2)) return;
   }
