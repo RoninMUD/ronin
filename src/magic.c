@@ -4141,7 +4141,7 @@ void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       af.duration = 5;
     af.modifier   = 0;
     af.location   = APPLY_NONE;
-    af.bitvector  = AFF_DUAL;
+    af.bitvector  = 0;
     af.bitvector2 = 0;
 
     affect_to_char(victim, &af);

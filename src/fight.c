@@ -113,7 +113,7 @@ void load_messages(void)
 
   while (*chk == 'M') {
     fscanf(f1," %d\n", &type);
-    
+
     for (i = 0; (i < MAX_MESSAGES) && (fight_messages[i].a_type != type) && (fight_messages[i].a_type); i++);
 
     if (i >= MAX_MESSAGES) {
@@ -3765,10 +3765,18 @@ void hit(CHAR *ch, CHAR *victim, int type)
 
       if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
     }
-
-    return;
   }
-  else if (affected_by_spell(ch, SKILL_BERSERK))
+
+  /* haste just adds the chance for an additional "hit"
+     perform it before any additional hit skill checks,
+     which may fail at any point in the chain */
+
+  if (affected_by_spell(ch, SPELL_HASTE) && chance(50 + GET_DEX_APP(ch))) {
+    /* perform haste hit before any skill checks, if it misses, return */
+    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 2)) return;
+  }
+
+  if (affected_by_spell(ch, SKILL_BERSERK))
   {
     if (chance(40))
     {
