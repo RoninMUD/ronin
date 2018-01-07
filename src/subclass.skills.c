@@ -1904,7 +1904,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
     skill_wait(ch, SKILL_CLOBBER, 2);
   }
   else {
-    if (!breakthrough(ch, victim, BT_INVUL)) {
+    if (FALSE /* !breakthrough(ch, victim, BT_INVUL) */) {
       act("You clobber $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_CHAR);
       act("$n tries to clobber you, but it feels more like a massage!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n clobbers $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_NOTVICT);
