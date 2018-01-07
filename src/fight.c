@@ -3773,6 +3773,8 @@ void hit(CHAR *ch, CHAR *victim, int type)
 
   if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
     /* perform haste hit before any skill checks, if it misses, return */
+    if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+    if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(victim)) return;
     if (!perform_hit(ch, victim, TYPE_UNDEFINED, 2)) return;
   }
 
