@@ -4368,13 +4368,19 @@ int mayor(CHAR *mayor, CHAR *ch, int cmd, char *arg) {
     return TRUE;
   }
 
-  if (cmd || !move || GET_POS(mayor) < POSITION_SLEEPING || GET_POS(mayor) == POSITION_FIGHTING)
+  if (cmd != MSG_MOBACT || !move || GET_POS(mayor) < POSITION_SLEEPING || GET_POS(mayor) == POSITION_FIGHTING)
     return FALSE;
 
   switch (path[index]) {
     case '0':
+      do_move(mayor, "\0", path[index] - '0' + 1);
+      break;
     case '1':
+      do_move(mayor, "\0", path[index] - '0' + 1);
+      break;
     case '2':
+      do_move(mayor, "\0", path[index] - '0' + 1);
+      break;
     case '3':
       do_move(mayor, "\0", path[index] - '0' + 1);
       break;
