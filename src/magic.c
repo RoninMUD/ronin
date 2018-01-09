@@ -4537,8 +4537,8 @@ void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     affect_to_char(victim, &af);
 
-    send_to_char("Your pulse begins to race!!\n\r", victim);
-    act("$n veins bulge and twist as $s movement speeds up!",FALSE,ch,0,0,TO_ROOM);
+    send_to_char("Your pulse begins to race!\n\r", victim);
+    act("$n's veins bulge and twist as $s movement speeds up!",FALSE,ch,0,0,TO_ROOM);
   }
 }
 
@@ -4559,7 +4559,7 @@ void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     affect_to_char(victim, &af);
 
     send_to_char("Your body writhes with a gnawing hunger for blood!\n\r", victim);
-    act("$n body writhes with a gnawing hunger for blood!",FALSE,ch,0,0,TO_ROOM);
+    act("$n's body writhes with a gnawing hunger for blood!",FALSE,ch,0,0,TO_ROOM);
   }
 }
 
