@@ -236,11 +236,10 @@ void mus_remeq(CHAR *victim, int pos) {
     if(IS_NPC(victim)) return;
     o = EQ(victim, pos);
     if(!o) return;
-    unequip_char (victim, pos);
-    obj_to_room (o, CHAR_REAL_ROOM(victim));
+    obj_to_char(unequip_char(victim, pos), victim);
     sprintf(buf,"ELWAXO: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
     log_s(buf);
-    o->log=1;
+    //o->log=1;
     save_char(victim,NOWHERE);
   }
 }
