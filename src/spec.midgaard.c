@@ -4385,12 +4385,16 @@ int mayor(CHAR *mayor, CHAR *ch, int cmd, char *arg) {
       do_move(mayor, "\0", path[index] - '0' + 1);
       break;
     case 'W':
-      GET_POS(mayor) = POSITION_STANDING;
-      act("$n awakens and groans loudly.", FALSE, mayor, 0, 0, TO_ROOM);
+      snprintf(buf, sizeof(buf), "wake");
+      command_interpreter(mayor, buf);
+      snprintf(buf, sizeof(buf), "stand");
+      command_interpreter(mayor, buf);
+      act("$n stretches and groans loudly.", FALSE, mayor, 0, 0, TO_ROOM);
       break;
     case 'S':
-      GET_POS(mayor) = POSITION_SLEEPING;
-      act("$n lies down and instantly falls asleep.", FALSE, mayor, 0, 0, TO_ROOM);
+      act("$n nods off and begins to snore loudly.", FALSE, mayor, 0, 0, TO_ROOM);
+      snprintf(buf, sizeof(buf), "sleep");
+      command_interpreter(mayor, buf);
       break;
     case 'a':
       do_say(mayor, "Time for a nap!", CMD_SAY);
