@@ -404,7 +404,8 @@ void do_donate(CHAR *ch, char *arg, int cmd)
   }
 
   OBJ_COST(obj) = 0;
-  SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AUCTION);
+
+  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_QUESTWEAR)) SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AUCTION);
 
   obj_from_char(obj);
   obj_to_room(obj, room);
