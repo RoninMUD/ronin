@@ -604,7 +604,8 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
      (tmp_obj->obj_flags.cost < MIN_OBJ_VALUE) ||
      (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_CLONE)) ||
      (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_ANTI_RENT)) ||
-     (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_ANTI_AUCTION))) {
+     (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_ANTI_AUCTION)) ||
+     (IS_SET(tmp_obj->obj_flags.wear_flags, ITEM_QUESTWEAR))) {
     act("$n tells you 'You cannot put $p in auction.'", FALSE, auctioneer, tmp_obj, ch, TO_VICT);
     return;
   }
