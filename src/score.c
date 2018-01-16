@@ -76,7 +76,7 @@ int calc_avg_damage(CHAR *ch, int weapon_slot)
     if (weapon && (OBJ_TYPE(weapon) == ITEM_WEAPON || OBJ_TYPE(weapon) == ITEM_2HWEAPON))
       damage = ((OBJ_VALUE1(weapon) * (1 + OBJ_VALUE2(weapon))) / 2);
     else
-      calc_bhd(ch);
+      damage = calc_bhd(ch);
   }
 
   return damage;
