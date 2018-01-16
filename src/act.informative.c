@@ -438,23 +438,27 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
           strcat(buffer, GET_TITLE(i));
         }
       }
-      else
-      {
+      else {
+        char mob_name[MAX_INPUT_LENGTH+1] = {0};
+
+        strncpy(mob_name, GET_SHORT(i), MAX_INPUT_LENGTH);
+        (void)(CAP(mob_name));
+
         if (ch->questmob && ch->questmob == i)
         {
           strcpy(buffer, "[TARGET] ");
-          strcat(buffer, CAP(GET_SHORT(i)));
+          strcat(buffer, mob_name);
         }
         else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
         {
           strcpy(buffer, "[");
           strcat(buffer, GET_NAME(i->questowner));
           strcat(buffer, "'s TARGET] ");
-          strcat(buffer, CAP(GET_SHORT(i)));
+          strcat(buffer, mob_name);
         }
         else
         {
-          strcpy(buffer, CAP(GET_SHORT(i)));
+          strcpy(buffer, mob_name);
         }
       }
 
