@@ -62,7 +62,7 @@ void move_inv_from_to(struct char_data *fch, struct char_data *tch);
 #define MAR_IRON_BAR_NAME               "bar long iron"
 
 #define MAR_FEATHER                     ITEM (ZONE_MAR,19)
-#define MAR_FEATHER_LIMIT               3
+#define MAR_FEATHER_LIMIT               7
 #define MAR_BARREL                      ITEM (ZONE_MAR,3)
 
 /* Locations */
