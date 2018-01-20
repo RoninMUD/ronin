@@ -21,13 +21,9 @@
 #include <math.h>
 #include <stdint.h>
 #include <limits.h>
-
-#ifndef OLD_RNG
-
 #include <stdint.h>
 #include <openssl/rand.h>
 
-#endif
 
 #include "structs.h"
 #include "constants.h"
@@ -44,73 +40,58 @@
 extern FILE *logfile;
 void update_pos( struct char_data *ch );
 
-#ifdef OLD_RNG
+/* Begin Fallback RNG Section */
 
-#define MULT 16807
-#define RANMAX 2147483647L
+/* Note: The fallback RNG exists for, as the name says, fallback
+         situations where the new RNG could fail. This should
+         never happen, but it's here just in case. */
 
-static long randomnum = 1;
+#define FALLBACK_RAN_MAX  2147483647L
+#define FALLBACK_RAN_MULT 16807
 
-void slongrand(unsigned long seed)
-{
-      randomnum = seed ? (seed & RANMAX) : 1;
+static uint32_t fallback_random_num = 1;
+
+/* Part of the fallback RNG; do not use directly. */
+void sfallback_random(uint32_t seed) {
+  fallback_random_num = seed ? (seed & FALLBACK_RAN_MAX) : 1;
 }
 
-long nextlongrand(long seed)
-{
-      unsigned long lo, hi;
+/* Part of the fallback RNG; do not use directly. */
+uint32_t fallback_random_next(uint32_t seed) {
+  uint32_t lo = FALLBACK_RAN_MULT * (long)(seed & 0xFFFF);
+  uint32_t hi = FALLBACK_RAN_MULT * (long)((unsigned long)seed >> 16);
 
-      lo = MULT * (long)(seed & 0xFFFF);
-      hi = MULT * (long)((unsigned long)seed >> 16);
-      lo += (hi & 0x7FFF) << 16;
-      if (lo > RANMAX)
-      {
-            lo &= RANMAX;
-            ++lo;
-      }
-      lo += hi >> 15;
-      if (lo > RANMAX)
-      {
-            lo &= RANMAX;
-            ++lo;
-      }
+  lo += (hi & 0x7FFF) << 16;
 
-      return (long)lo;
-}
-
-long longrand(void)
-{
-      randomnum = nextlongrand(randomnum);
-
-      return randomnum;
-}
-
-/* Creates a random number in interval [from, to] (inclusive). */
-int number(int from, int to)
-{
-  int randnum = 0, temp = 0;
-  char buf[MSL];
-
-  if (from > to)
-  {
-    temp = from;
-    from = to;
-    to = temp;
+  if (lo > FALLBACK_RAN_MAX) {
+    lo &= FALLBACK_RAN_MAX;
+    ++lo;
   }
 
-  randnum=(int)((longrand() % (to - from + 1)) + from);
-  if (randnum < from || randnum > to)
-  {
-    snprintf(buf, sizeof(buf), "WIZINFO: Random Number beyond range. From: %d To: %d  Num: %d", from, to, randnum);
-    log_s(buf);
+  lo += hi >> 15;
+
+  if (lo > FALLBACK_RAN_MAX) {
+    lo &= FALLBACK_RAN_MAX;
+    ++lo;
   }
 
-  return randnum;
+  return lo;
 }
 
-#else
+/* Part of the fallback RNG; do not use directly. */
+uint32_t fallback_random(void) {
+  fallback_random_num = fallback_random_next(fallback_random_num);
 
-/* Generates a random unsigned integer in interval [0, upper_bound] (exclusive). */
+  return fallback_random_num;
+}
+
+/* End Fallback RNG Section */
+
+/* Begin New RNG Section */
+
+/* Generates a random unsigned integer in interval [0, upper_bound] (exclusive).
+   Note: Uses OpenSSL (lcrypto).
+*/
 uint32_t random_uint32_t(uint32_t upper_bound) {
   union {
     uint32_t i;
@@ -119,8 +100,9 @@ uint32_t random_uint32_t(uint32_t upper_bound) {
 
   do {
     if (RAND_bytes(u.c, sizeof(u.c)) == -1) {
-      log_s("Failed to get random bytes (random_uint32_t).");
-      exit(1);
+      log_s("Failed to get random bytes (random_uint32_t); using fallback RNG.");
+
+      return fallback_random() % upper_bound;
     }
   } while (u.i < (-upper_bound % upper_bound));
 
@@ -138,8 +120,6 @@ int32_t number(int32_t from, int32_t to) {
   return random_uint32_t((to - from) + 1) + from;
 }
 
-#endif
-
 /* Returns true based on the odds out of 100 of success. */
 bool chance(int num) {
   if (number(1, 100) <= num) return TRUE;
@@ -155,13 +135,15 @@ int dice(int num_dice, int size_dice) {
   for (r = 1; r <= num_dice; r++) {
     temp = number(1, size_dice);
 
-    if ((INT_MAX - sum) < 0) return INT_MAX;
+    if ((INT32_MAX - sum) < 0) return INT_MAX;
 
     sum += temp;
   }
 
   return sum;
 }
+
+/* End New RNG Section */
 
 int MIN(int a, int b) {
   return a < b ? a : b;

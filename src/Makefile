@@ -15,11 +15,6 @@ ifeq ($(TYPE), chaos)
 	CFLAGS += -DCHAOS2017
 endif
 
-ifeq ($(TYPE), old_rng)
-	CFLAGS += -DOLD_RNG
-	LFLAGS -= -lcrypto
-endif
-
 #
 # Generic Rules
 #

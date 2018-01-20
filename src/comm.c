@@ -26,12 +26,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-
-#ifndef OLD_RNG
-
 #include <openssl/rand.h>
-
-#endif
 
 #include "structs.h"
 #include "constants.h"
@@ -66,7 +61,7 @@ int room_special(int room, CHAR *ch, int cmd, char *arg);
 int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 /* externs */
 
-void slongrand(unsigned long seed);
+void sfallback_random(unsigned long seed);
 void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
@@ -374,18 +369,16 @@ int main(int argc, char **argv)
 
   log_f("Using %s as data directory.", g_datadir);
 
-#ifdef OLD_RNG
-
+  /* Seed rand(). */
   srand(time(NULL));
-  slongrand(time(0));
 
-#else
+  /* Seed the Fallback RNG. */
+  sfallback_random(time(NULL));
 
+  /* Seed the New RNG. */
   if (32 != RAND_load_file("/dev/urandom", 32)) {
     log_s("Failed to read /dev/urandom for entropy (main).");
   }
-
-#endif
 
   run_the_game(port);
   return(0);
@@ -990,9 +983,14 @@ void heartbeat(int pulse) {
   }
 
   if (!(pulse % PULSE_TICK) && !GAMEHALT) { /* 1 minute */
+
+#ifndef OLD_RNG
+
     if (32 != RAND_load_file("/dev/urandom", 32)) {
       log_s("Failed to read /dev/urandom for entropy (heartbeat).");
     }
+
+#endif
 
     signal_world(NULL, MSG_TICK, "");
 
