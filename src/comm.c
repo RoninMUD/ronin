@@ -27,6 +27,12 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+#ifndef OLD_RNG
+
+#include <openssl/rand.h>
+
+#endif
+
 #include "structs.h"
 #include "constants.h"
 #include "utils.h"
@@ -372,6 +378,12 @@ int main(int argc, char **argv)
 
   srand(time(NULL));
   slongrand(time(0));
+
+#else
+
+  if (32 != RAND_load_file("/dev/urandom", 32)) {
+    log_s("Failed to read /dev/urandom for entropy (main).");
+  }
 
 #endif
 
@@ -978,8 +990,13 @@ void heartbeat(int pulse) {
   }
 
   if (!(pulse % PULSE_TICK) && !GAMEHALT) { /* 1 minute */
-    signal_world(NULL,MSG_TICK,"");
-    if(!CHAOSMODE)
+    if (32 != RAND_load_file("/dev/urandom", 32)) {
+      log_s("Failed to read /dev/urandom for entropy (heartbeat).");
+    }
+
+    signal_world(NULL, MSG_TICK, "");
+
+    if (!CHAOSMODE)
       check_token_mob();
   }
 

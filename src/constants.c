@@ -2602,6 +2602,7 @@ const char * const cleric_skills[] = {
 const char * const thief_skills[] = {
   "backstab",
   "circle",
+  "coin-toss",
   "dodge",
   "hide",
   "peek",
@@ -2609,7 +2610,6 @@ const char * const thief_skills[] = {
   "sneak",
   "steal",
   "throw",
-  "coin-toss",
   "scan",         /* Level 35 */
   "twist",        /* Level 45 */
   "cunning",      /* Level 50 */
@@ -2627,6 +2627,7 @@ const char * const thief_skills[] = {
 const char * const warrior_skills[] = {
   "bash",
   "block",
+  "disarm",
   "dual",
   "kick",
   "knock",
@@ -2669,30 +2670,30 @@ const char * const ninja_skills[] = {
 
 /* Nomad Skills */
 const char * const nomad_skills[] = {
-  "pick",
-  "throw",
-  "dodge",
-  "peek",
-  "butcher",
-  "trap",
-  "disarm",
-  "subdue",
-  "kick",
   "ambush",
-  "spin",
-  "rescue",
-  "disembowel",
-  "protect",
-  "scan",
   "awareness",
-  "camp",
-  "block", /* Used to be Sweep */
-  "defend",
   "batter",
   "berserk",
+  "block",
+  "butcher",
+  "camp",
+  "defend",
+  "disarm",
+  "disembowel",
+  "dodge",
+  "evasion",
   "frenzy",
-  "trophy", /* Used to be Scalp */
-  "evasion", /* Used to be Cover */
+  "kick",
+  "peek",
+  "pick",
+  "protect",
+  "rescue",
+  "scan",
+  "spin",
+  "subdue",
+  "throw",
+  "trap",
+  "trophy",
   "\n"
 };
 
@@ -2734,23 +2735,22 @@ const char * const anti_paladin_skills[] = {
 
 /* Avatar Skills */
 const char * const avatar_skills[] = {
-  "steal",
   "backstab",
-  "pick",
-  "rescue",
   "block",
-  "punch",
-  "parry",
-  "dual",
-  "throw",
-  "peek",
-  "trap",
-  "disarm",
-  "subdue",
   "circle",
+  "disarm",
+  "dual",
+  "parry",
+  "peek",
+  "pick",
+  "pummel"
+  "punch",
+  "rescue",
+  "steal",
+  "subdue",
+  "throw",
+  "trap",
   "triple",
-  "pummel",
-  "quad",
   "\n"
 };
 
@@ -2760,7 +2760,7 @@ const char * const bard_skills[] = {
   "peek",
   "pick",
   "throw",
-  "backflip",
+  "backflip",     /* Level 20 */
   "camp",         /* Level 35 */
   "blitz",        /* Bladesinger SC2 */
   "\n"

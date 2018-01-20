@@ -25,7 +25,7 @@
 #ifndef OLD_RNG
 
 #include <stdint.h>
-#include <bsd/stdlib.h>
+#include <openssl/rand.h>
 
 #endif
 
@@ -110,17 +110,32 @@ int number(int from, int to)
 
 #else
 
-/* Creates a random number in interval [from, to] (inclusive). */
-int number(int from, int to) {
-  int temp = 0;
+/* Generates a random unsigned integer in interval [0, upper_bound] (exclusive). */
+uint32_t random_uint32_t(uint32_t upper_bound) {
+  union {
+    uint32_t i;
+    unsigned char c[sizeof(uint32_t)];
+  } u;
 
+  do {
+    if (RAND_bytes(u.c, sizeof(u.c)) == -1) {
+      log_s("Failed to get random bytes (random_uint32_t).");
+      exit(1);
+    }
+  } while (u.i < (-upper_bound % upper_bound));
+
+  return u.i % upper_bound;
+}
+
+/* Generates a random integer in interval [from, to] (inclusive). */
+int32_t number(int32_t from, int32_t to) {
   if (from > to) {
-    temp = from;
+    int32_t temp = from;
     from = to;
     to = temp;
   }
 
-  return arc4random_uniform((to - from) + 1) + from;
+  return random_uint32_t((to - from) + 1) + from;
 }
 
 #endif
@@ -140,7 +155,7 @@ int dice(int num_dice, int size_dice) {
   for (r = 1; r <= num_dice; r++) {
     temp = number(1, size_dice);
 
-    if ((INT_MAX - sum) <= temp) return INT_MAX;
+    if ((INT_MAX - sum) < 0) return INT_MAX;
 
     sum += temp;
   }

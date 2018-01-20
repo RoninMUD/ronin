@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -g -Wall -Wno-unused-result -m32 -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
-LFLAGS = -lm -lcrypt -ldmalloc -rdynamic -lbsd
+LFLAGS = -lm -lcrypt -ldmalloc -rdynamic -lcrypto
 OBJDIR = ../obj
 BINDIR = ../bin
 TYPE ?= $(shell basename $$(dirname $$PWD))
@@ -17,7 +17,7 @@ endif
 
 ifeq ($(TYPE), old_rng)
 	CFLAGS += -DOLD_RNG
-	LFLAGS -= -lbsd
+	LFLAGS -= -lcrypto
 endif
 
 #
