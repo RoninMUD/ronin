@@ -513,7 +513,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       strcat(buf, "Sane's Vocal Club");
     else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
       strcat(buf, "Liner's Lounge");
-    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM))
       strcat(buf, "Lem's Liqour Lounge");
     else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
       strcat(buf, "Ranger's Reliquary");

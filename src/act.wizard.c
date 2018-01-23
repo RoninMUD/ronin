@@ -4745,8 +4745,8 @@ void do_club(struct char_data *ch, char *argument, int cmd)
     REMOVE_BIT(victim->specials.pflag, PLR_SANES_VOCAL_CLUB);
   else if (IS_SET(victim->specials.pflag, PLR_RANGERS_RELIQUARY))
     REMOVE_BIT(victim->specials.pflag, PLR_RANGERS_RELIQUARY);
-  else if (IS_SET(victim->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
-    REMOVE_BIT(victim->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE);
+  else if (IS_SET(victim->specials.pflag, PLR_LEMS_LIQOUR_ROOM))
+    REMOVE_BIT(victim->specials.pflag, PLR_LEMS_LIQOUR_ROOM);
 
   if (newclub == 1)
     SET_BIT(victim->specials.pflag, PLR_SANES_VOCAL_CLUB);
@@ -4755,7 +4755,7 @@ void do_club(struct char_data *ch, char *argument, int cmd)
   else if (newclub == 3)
     SET_BIT(victim->specials.pflag, PLR_RANGERS_RELIQUARY);
   else if (newclub == 4)
-    SET_BIT(victim->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE);
+    SET_BIT(victim->specials.pflag, PLR_LEMS_LIQOUR_ROOM);
 
   sprintf (club, "WIZINFO: %s set %s's club to %d",
         GET_NAME(ch), GET_NAME(victim), newclub);

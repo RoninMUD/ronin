@@ -4759,7 +4759,7 @@ int membership(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     }
 
     if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB) ||
-        IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE) ||
+        IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM) ||
         IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE) ||
         IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY)) {
       send_to_char("You can only join one club!\n\r", ch);
@@ -4779,7 +4779,7 @@ int membership(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     else if (CHAR_REAL_ROOM(ch) == real_room(LEM_CLUB_ENTRANCE)) {
       send_to_char("You are now a member of Lem's Liqour Lounge.\n\r", ch);
       act("$n is now a member of Lem's Liqour Lounge.", FALSE, ch, 0, 0, TO_ROOM);
-      SET_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE);
+      SET_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM);
     }
     else if (CHAR_REAL_ROOM(ch) == real_room(RANGER_CLUB_ENTRANCE)) {
       send_to_char("You are now a member of Ranger's Reliquary.\n\r", ch);
@@ -4807,8 +4807,8 @@ int membership(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       REMOVE_BIT(GET_PFLAG(ch), PLR_LINERS_LOUNGE);
     else if (IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB))
       REMOVE_BIT(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB);
-    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
-      REMOVE_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE);
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM))
+      REMOVE_BIT(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM);
     else {
       send_to_char("But you are not a member of a club!\n\r", ch);
       return TRUE;
@@ -4840,7 +4840,7 @@ int club_guard(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         cmd == CMD_SOUTH))) {
     if (!IS_SET(GET_PFLAG(ch), PLR_SANES_VOCAL_CLUB) &&
         !IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE) &&
-        !IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE) &&
+        !IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM) &&
         !IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY)) {
       send_to_char("The guard humiliates you and says, 'You are not a member of a club!'\n\r", ch);
       act("The guard humiliates $n and says, 'You are not a member a club!'", FALSE, ch, 0, 0, TO_ROOM);

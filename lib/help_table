@@ -7633,20 +7633,6 @@ During the winter, Rimefang will deal an additional 75 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-RIPOSTE
-
-Subclass Mercenary: Level 3 (Commando)
-
-With this skill, the Mercenary has a chance to partially deflect
-incoming attacks made against them.  The damage deflected is equal to
-20%.  Additionally, the Mercenary will strike back back at their
-opponent, performing an attack with a chance of a Dual or Triple hit.
-
-The success of this skill is dependent on how well it is practiced,
-and the character's Dexterity.
-
-See Also: SUBCLASSES MERCENARY
-#
 "INCENDIARY CLOUD"
 
 Subclass Legionnaire: Level 5 (Commando)
@@ -7667,9 +7653,24 @@ you are trying to kill it over multiple runs.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-"CLOUD OF CONFUSION"
+"IRON SKIN"
 
 Subclass Mercenary: Level 1 (Commando)
+
+Usage       : cast 'iron skin' (self only)
+Accumulative: no
+Duration    : 10
+Save        : -
+Mana Cost   : 50
+
+This defensive spell will lower the Mercenary's armor by 25, making
+them harder to hit.
+
+See Also: SUBCLASSES MERCENARY
+#
+"CLOUD OF CONFUSION"
+
+Subclass Mercenary: Level 2 (Commando)
 
 Usage       : cast 'cloud of confusion'
 Accumulative: no
@@ -7684,18 +7685,17 @@ This spell will be more effective if cast at night.
 
 See Also: SUBCLASSES MERCENARY
 #
-"IRON SKIN"
+RIPOSTE
 
-Subclass Mercenary: Level 2 (Commando)
+Subclass Mercenary: Level 3 (Commando)
 
-Usage       : cast 'iron skin' (self only)
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 50
+With this skill, the Mercenary has a chance to partially deflect
+incoming attacks made against them.  The damage deflected is equal to
+20%.  Additionally, the Mercenary will strike back back at their
+opponent, performing an attack with a chance of a Dual or Triple hit.
 
-This defensive spell will lower the Mercenary's armor by 25, making
-them harder to hit.
+The success of this skill is dependent on how well it is practiced,
+and the character's Dexterity.
 
 See Also: SUBCLASSES MERCENARY
 #
