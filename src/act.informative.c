@@ -2094,8 +2094,8 @@ char *get_club_name(CHAR *ch)
     return "Sane's Vocal Club";
   else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
     return "Liner's Lounge";
-  else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_LOUNGE))
-    return "Lem's Liqour Lounge";
+  else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_ROOM))
+    return "Lem's Liqour Room";
   else if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
     return "Ranger's Reliquary";
   else

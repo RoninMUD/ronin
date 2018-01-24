@@ -513,8 +513,8 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       strcat(buf, "Sane's Vocal Club");
     else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
       strcat(buf, "Liner's Lounge");
-    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
-      strcat(buf, "Lem's Liqour Lounge");
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM))
+      strcat(buf, "Lem's Liqour Room");
     else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
       strcat(buf, "Ranger's Reliquary");
     else
@@ -1004,8 +1004,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
       send_to_char("Sane's Vocal Club\n\r", ch);
     else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
       send_to_char("Liner's Lounge\n\r", ch);
-    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
-      send_to_char("Lem's Liqour Lounge\n\r", ch);
+    else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM))
+      send_to_char("Lem's Liqour Room\n\r", ch);
     else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
       send_to_char("Ranger's Reliquary\n\r", ch);
     else
@@ -1332,8 +1332,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
         send_to_char("You are a member of Sane's Vocal Club.\n\r", ch);
       else if (IS_SET(GET_PFLAG(ch), PLR_LINERS_LOUNGE))
         send_to_char("You are a member of Liner's Lounge.\n\r", ch);
-      else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_LOUNGE))
-        send_to_char("You are a member of Lem's Liqour Lounge.\n\r", ch);
+      else if (IS_SET(GET_PFLAG(ch), PLR_LEMS_LIQOUR_ROOM))
+        send_to_char("You are a member of Lem's Liqour Room.\n\r", ch);
       else if (IS_SET(GET_PFLAG(ch), PLR_RANGERS_RELIQUARY))
         send_to_char("You are a member of Ranger's Reliquary.\n\r", ch);
 
