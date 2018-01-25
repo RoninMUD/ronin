@@ -84,10 +84,17 @@ D3
 A cavern lies to the west.~
 ~
 0 -1 16612
+D5
+On closer inspection, the glow from under the altar reveals itself to be a
+portal to an unknown world.
+~
+altar~
+8 -1 18748
 E
 altar~
-The altar is covered with blood and rotting human flesh, better not
-look too closely.~
+The altar is covered with blood and rotting human flesh, better not look too
+closely.  A faint glow reaches your eye from underneath its massive bulk.
+~
 S
 #16615
 Tunnel in the riverbank~
@@ -203,6 +210,11 @@ A tunnel into the unknown...~
 portal~
 1 0 16621
 E
+portal~
+Glowing darkly, a grey-colored mist swirls on the other side of the
+portal, giving the impression of something trying to escape onto this
+side of reality.~
+E
 sign~
 The sign reads:
 
@@ -213,11 +225,6 @@ The sign reads:
 			 You Have Been Warned.
 
 ~
-E
-portal~
-Glowing darkly, a grey-colored mist swirls on the other side of the
-portal, giving the impression of something trying to escape onto this
-side of reality.~
 S
 #16621
 The Choking Mist~
@@ -253,11 +260,11 @@ You see only darkness below.~
 ~
 0 -1 16631
 E
-ladder~
-A rope ladder leads back up to the portal.~
-E
 mist~
 How can you look at a mist?  Wait, was that a face you just saw...??!?!?!~
+E
+ladder~
+A rope ladder leads back up to the portal.~
 S
 #16622
 The windy tunnel~
