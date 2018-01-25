@@ -3,7 +3,7 @@ doll~
 A ragged doll~
 A ragged doll is laying here.~
 ~
-0 0 1
+8 0 1
 500 -1 -1 -1
 1 500 50
 70
@@ -72,7 +72,7 @@ ring hero~
 A hero's ring~
 A powerful ring is lying here.~
 ~
-0 44623872 16387
+11 44623872 16387
 0 0 0 0
 25 25000 25000
 3
@@ -152,23 +152,6 @@ fabeled world lost in the winds of time.
 X
 ~
 64 0 0
-M
-~
-~
-~
-~
-#18799
-nothing~
-a bit of nothing~
-There is a bit of nothing sitting here.~
-invalid~
-0 0 1
-0 0 0 0
-10 10 10
-10
-X
-~
-0 0 0
 M
 ~
 ~
