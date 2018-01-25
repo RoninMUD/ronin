@@ -168,6 +168,7 @@ OBJS_RONIN_SPEC = \
 	spec.vermillion.o \
 	spec.welmar.o \
 	spec.wolf.o \
+	spec.WOT.o \
 	spec.wsewer.o \
 	spec.wyvern.o \
 	spec.zankingdom.o \
@@ -181,8 +182,7 @@ OBJS_RONIN_SPEC = \
 OBJS_RONIN_SPEC_TEST = \
 	spec.digsite.o \
 	spec.luthienIV.o \
-	spec.workbench.o \
-	spec.WOT.o
+	spec.workbench.o
 
 ifeq ($(TYPE), test)
 	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
