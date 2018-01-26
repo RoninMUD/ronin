@@ -82,7 +82,7 @@ OBJS_RONIN_BASE = \
 	mobact.o \
 	modify.o \
 	reception.o \
-	score.o \
+        score.o \
 	signals.o \
 	spec.vote.o \
 	spells.o \
@@ -182,8 +182,7 @@ OBJS_RONIN_SPEC = \
 OBJS_RONIN_SPEC_TEST = \
 	spec.digsite.o \
 	spec.luthienIV.o \
-	spec.workbench.o \
-	spec.ecanyon.o
+	spec.workbench.o
 
 ifeq ($(TYPE), test)
 	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
