@@ -128,16 +128,14 @@ bool chance(int num) {
 
 /* Simulates a dice roll. */
 int dice(int num_dice, int size_dice) {
-  int r = 0, sum = 0, temp = 0;
-
   if (num_dice < 1 || size_dice < 1) return 0;
 
-  for (r = 1; r <= num_dice; r++) {
-    temp = number(1, size_dice);
+  int sum = 0;
 
+  for (int r = 1; r <= num_dice; r++) {
     if ((INT32_MAX - sum) < 0) return INT_MAX;
 
-    sum += temp;
+    sum += number(1, size_dice);
   }
 
   return sum;
