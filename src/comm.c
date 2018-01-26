@@ -983,14 +983,9 @@ void heartbeat(int pulse) {
   }
 
   if (!(pulse % PULSE_TICK) && !GAMEHALT) { /* 1 minute */
-
-#ifndef OLD_RNG
-
     if (32 != RAND_load_file("/dev/urandom", 32)) {
       log_s("Failed to read /dev/urandom for entropy (heartbeat).");
     }
-
-#endif
 
     signal_world(NULL, MSG_TICK, "");
 
