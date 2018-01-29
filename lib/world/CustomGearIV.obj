@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1538,5 +1538,134 @@ A
 53 3
 B
 16777216
+#29666
+crown abyssal corruption esar quest~
+Crown of Abyssal Corruption~
+A crown of blackened bone lies here, tendrils of smoke wafting out of fiery cracks in its surface.~
+~
+9 150995264 17
+12 -1 -1 -1
+6 10000 10
+0
+X
+~
+0 0 0
+M
+You don a blackened bone crown, which erupts with acrid smoke as embers gleam from within.~
+$n places a blackened bone crown on $s head, acrid smoke wafting out of fiery cracks in its surface.~
+You lift the bone crown from your head, its inner fire fading as it seems to go dormant.~
+$n lifts a bone crown from $s head, its inner fire fading away as it appears to go dormant.~
+A
+1 3
+A
+13 26
+A
+19 4
+B
+524288
+#29667
+bracer iceblight esar quest~
+an Iceblight bracer~
+A steaming slab of crystalline ice lies strewn across the floor.~
+~
+11 134217729 4097
+0 0 0 0
+2 12000 10000
+0
+E
+bracer iceblight~
+Inspired after a trip to the Efreeti markets of the legendary City of
+Brass, whereupon they had purchased a bracer forged from magma, an
+adventurer sought out a particular blacksmith in the City of Union. A
+bracer wrought from the opposing element of cold was commissioned, which
+for this frost giant blacksmith was somewhat of a speciality. Crafted by
+infusing a pool of silverwater with the magic of arctic runestones, the
+blacksmith was able to forge this bracer from liquid that freezes at
+such a low temperature that it undergoes a permanent state change to a
+solid. Unable to ever naturally melt, the frozen silverwater was then
+chiseled into interlocking pieces, held together by darksteel bolts and
+further reinforced with malevolent magic, this piece of armor offers
+little in the way of protection, but can significantly bolster the
+wearer's strength at arms.
+~
+X
+~
+0 0 0
+M
+You wrap the bracer around your wrist and shudder as you are inundated with a soul chilling frost.~
+$n wraps a frozen bracer around $s wrist and shudders as a wave of cold rolls over $m.~
+You feel some warmth return to your body as you unwrap the frozen bracer from your wrist.~
+Some color returns to $s skin as $n unwraps a frozen bracer from $s wrist.~
+A
+18 2
+A
+19 4
+#29668
+scale translucent spectral wyrm esar quest~
+a Spectral Wyrm's Translucent Scale~
+A translucent scale of some draconic beast was left here unattended.~
+~
+9 64 513
+15 -1 -1 -1
+1 45000 15000
+0
+X
+~
+0 0 0
+M
+With surprising ease, you heft the draconic scale onto your arm as a rush of power flow thorugh you.~
+$n lifts a huge draconic scale onto $s arm, seemingly with little effort despite its apparent size.~
+Your shoulders slump a bit as you slide the gigantic scale off of your arm.~
+$n's shoulder slump as $e unceremoniously slides a huge draconic scale off of $s arm.~
+A
+18 2
+A
+19 4
+#29669
+bracers shadow druid esar quest~
+a pair of Shadow Druid bracers~
+A pair of leather bracers was left here, thin tendrils of shadow wafting off of them.~
+~
+9 183562240 129
+5 -1 -1 -1
+10 50000 12000
+0
+X
+~
+0 0 0
+M
+You strap the leather bracers on your forearms, tendrils of shadow stretching up to your shoulders.~
+$n straps a pair of leather bracers onto $s forearms, tendrils of shadow stretching up to $s shoulders.~
+You unbuckle the leather bracers from your arms as the shadows surrounding you suddenly vanish.~
+The shadows surrounding $n suddenly vanish as $e unbuckles a pair of leather bracers from $s arms.~
+A
+46 10
+A
+19 4
+#29670
+zantetsuken darksteel runeblade esar~
+the Darksteel Runeblade 'Zantetsuken'~
+An azure bastard sword decorated with dimly glowing runes lies here.~
+An arc of azure light trails Zantetsuken as it plunges into $V.~
+5 181460992 8193
+5 8 6 12
+32 10 89000
+0
+X
+$r bastard sword pulses a scintillating blue then fades to black.~
+64 0 0
+M
+You heft the brilliant runeblade in one hand and feel its power course through you.~
+$n hefts an azure sword in $s hand, brilliant runes flashing across the blade.~
+The runes across Zantetsuken suddenly fade to black as you release your hold on the blade.~
+$n's blade suddenly dims and goes black as $e releases $s grip on the sword.~
+A
+13 50
+A
+19 2
+A
+18 2
+B
+32
 #0
 $~
