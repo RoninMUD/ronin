@@ -57,16 +57,16 @@
 #define ECANYON_RING_BASE_HP_APPLY            0
 #define ECANYON_RING_MIN_HP_GROWTH            20
 #define ECANYON_RING_MAX_HP_GROWTH            100
-#define ECANYON_RING_MIN_GROWTH_DAMAGE        2
+#define ECANYON_RING_MIN_GROWTH_DAMAGE        20
 #define ECANYON_RING_MAX_GROWTH_DAMAGE        40
 
 #define ECANYON_BREASTPLATE_AC_AFFECT_SLOT    0
 #define ECANYON_BREASTPLATE_BASE_AC_APPLY     0
 #define ECANYON_BREASTPLATE_MIN_AC_GROWTH     -5
 #define ECANYON_BREASTPLATE_MAX_AC_GROWTH     -18
-#define ECANYON_BREASTPLATE_MIN_GROWTH_DMG    40
-#define ECANYON_BREASTPLATE_MAX_GROWTH_DMG    100
-#define ECANYON_BREASTPLATE_REMOVE_DMG        17
+#define ECANYON_BREASTPLATE_MIN_GROWTH_DMG    70
+#define ECANYON_BREASTPLATE_MAX_GROWTH_DMG    120
+#define ECANYON_BREASTPLATE_REMOVE_DMG_MULTI  50
 
 #define ECANYON_JUG_MIN_MANA_RESTORED         2
 #define ECANYON_JUG_MAX_MANA_RESTORED         12
@@ -107,20 +107,20 @@ int ecanyon_room_ECANYON_PORTAL_STONE(int room, CHAR *ch, int cmd, char *arg) {
 
       switch (CHAR_VIRTUAL_ROOM(ch)) {
         case ECANYON_ROOM_ORIGINAL_ECANYON_PORTAL:
-          //if (chance(50)) {
+          if (chance(50)) {
             teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;
-          //}
-          //else {
-          //  teleport_room = ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL;
-          //}
+          }
+          else {
+            teleport_room = ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL;
+          }
           break;
         case ECANYON_ROOM_DYING_ECANYON_PORTAL:
-          //if (chance(50)) {
+          if (chance(50)) {
             teleport_room = ECANYON_ROOM_ORIGINAL_ECANYON_PORTAL;
-          //}
-          //else {
-          //  teleport_room = ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL;
-          //}
+          }
+          else {
+            teleport_room = ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL;
+          }
           break;
         case ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL:
           if (chance(50)) {
@@ -181,35 +181,6 @@ int ecanyon_room_fire_chamber(int room, CHAR *ch, int cmd, char *arg) {
 
   return FALSE;
 }
-
-/* Mobile Specs */
-
-/* Earth Ruler generates ring/breastplate max stats at death. */
-int ecanyon_mob_difficult_earth_ruler(CHAR *mob, CHAR *ch, int cmd, char *arg) {
-  if (cmd == MSG_DIE) {
-    OBJ *obj = NULL;
-    
-    obj = EQ(mob, WEAR_FINGER_R);
-    if (obj && (V_OBJ(obj) == ECANYON_OBJ_RING) && !OBJ_SPEC(obj)) {
-      OBJ_SPEC(obj) = number(ECANYON_RING_MIN_HP_GROWTH, ECANYON_RING_MAX_HP_GROWTH);
-    }
-
-    obj = EQ(mob, WEAR_FINGER_L);
-    if (obj && (V_OBJ(obj) == ECANYON_OBJ_RING) && !OBJ_SPEC(obj)) {
-      OBJ_SPEC(obj) = number(ECANYON_RING_MIN_HP_GROWTH, ECANYON_RING_MAX_HP_GROWTH);
-    }
-
-    obj = EQ(mob, WEAR_BODY);
-    if (obj && (V_OBJ(obj) == ECANYON_OBJ_BREASTPLATE) && !OBJ_SPEC(obj)) {
-      OBJ_SPEC(obj) = number(ECANYON_BREASTPLATE_MIN_AC_GROWTH, ECANYON_BREASTPLATE_MAX_AC_GROWTH);
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
 
 /* Object Specs */
 
@@ -281,6 +252,10 @@ int ecanyon_obj_shield(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 /* Ring growth spec. */
 int ecanyon_obj_ring(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_TICK) {
+    if (!OBJ_SPEC(obj)) {
+      OBJ_SPEC(obj) = number(ECANYON_RING_MIN_HP_GROWTH, ECANYON_RING_MAX_HP_GROWTH);
+    }
+
     if (time_info.hours != 6) {
       if (OBJ_TIMER(obj)) OBJ_TIMER(obj) = 0;
 
@@ -310,15 +285,11 @@ int ecanyon_obj_ring(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     bool inflict_damage = FALSE;
 
     unequip_char(owner, eq_pos);
-
     if (obj->affected[ECANYON_RING_HP_AFFECT_SLOT].modifier < OBJ_SPEC(obj)) {
       obj->affected[ECANYON_RING_HP_AFFECT_SLOT].modifier++;
-
       inflict_damage = TRUE;
     }
-
     OBJ_TIMER(obj) = 1;
-
     equip_char(owner, obj, eq_pos);
 
     if (inflict_damage) {
@@ -347,14 +318,11 @@ int ecanyon_obj_ring(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     if (eq_pos != WEAR_FINGER_R && eq_pos != WEAR_FINGER_L) return FALSE;
 
-    int remove_damage = obj->affected[ECANYON_RING_HP_AFFECT_SLOT].modifier;
+    int remove_damage = obj->affected[ECANYON_RING_HP_AFFECT_SLOT].modifier * 2;
 
     unequip_char(owner, eq_pos);
-
     obj->affected[ECANYON_RING_HP_AFFECT_SLOT].modifier = ECANYON_RING_BASE_HP_APPLY;
-
     OBJ_TIMER(obj) = 0;
-
     equip_char(owner, obj, eq_pos);
 
     if (remove_damage) {
@@ -377,6 +345,10 @@ int ecanyon_obj_ring(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 /* Breastplate growth spec. */
 int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_TICK) {
+    if (!OBJ_SPEC(obj)) {
+      OBJ_SPEC(obj) = number(ECANYON_BREASTPLATE_MIN_AC_GROWTH, ECANYON_BREASTPLATE_MAX_AC_GROWTH);
+    }
+
     if (time_info.hours != 6) {
       if (OBJ_TIMER(obj)) OBJ_TIMER(obj) = 0;
 
@@ -394,15 +366,11 @@ int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     bool inflict_damage = FALSE;
 
     unequip_char(owner, WEAR_BODY);
-
     if (obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].modifier > OBJ_SPEC(obj)) {
       obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].modifier--;
-
       inflict_damage = TRUE;
     }
-
     OBJ_TIMER(obj) = 1;
-
     equip_char(owner, obj, WEAR_BODY);
 
     if (inflict_damage) {
@@ -426,19 +394,18 @@ int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       inflict_damage = TRUE;
     }
 
+    int remove_damage = obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].modifier;
+
     unequip_char(owner, WEAR_BODY);
-
     obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].modifier = ECANYON_BREASTPLATE_BASE_AC_APPLY;
-
     OBJ_TIMER(obj) = 0;
-
     equip_char(owner, obj, WEAR_BODY);
 
     if (inflict_damage) {
       act("You strain to tear the breastplate free from your flesh, causing yourself great pain.", FALSE, owner, 0, 0, TO_CHAR);
       act("$n seems to be in pain as $e labors to separate a stone breastplate from $s flesh. ", TRUE, owner, 0, 0, TO_ROOM);
 
-      damage(owner, owner, abs(obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].modifier * ECANYON_BREASTPLATE_REMOVE_DMG), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+      damage(owner, owner, abs(remove_damage * ECANYON_BREASTPLATE_REMOVE_DMG_MULTI), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
     }
     else {
       act("The stone breastplate shifts in your hands as you remove it.", FALSE, owner, 0, 0, TO_CHAR);
@@ -463,7 +430,7 @@ int ecanyon_obj_jug(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     if (GET_COND(ch, THIRST) > condition) {
       GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + number(ECANYON_JUG_MIN_MANA_RESTORED, ECANYON_JUG_MAX_MANA_RESTORED)));
 
-      act("You feel energized after drinking from the $p.", FALSE, ch, 0, obj, TO_CHAR);
+      act("You feel energized after drinking from $p.", FALSE, ch, obj, 0, TO_CHAR);
     }
 
     return TRUE;
@@ -478,7 +445,6 @@ void assign_ecanyon(void) {
   assign_room(ECANYON_ROOM_DYING_ECANYON_PORTAL, ecanyon_room_ECANYON_PORTAL_STONE);
   assign_room(ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL, ecanyon_room_ECANYON_PORTAL_STONE);
   assign_room(ECANYON_ROOM_DYING_FIRE_CHAMBER, ecanyon_room_fire_chamber);
-  assign_mob(ECANYON_MOB_DIFFICULT_EARTH_RULER, ecanyon_mob_difficult_earth_ruler);
   assign_obj(ECANYON_OBJ_SHIELD, ecanyon_obj_shield);
   assign_obj(ECANYON_OBJ_RING, ecanyon_obj_ring);
   assign_obj(ECANYON_OBJ_BREASTPLATE, ecanyon_obj_breastplate);
