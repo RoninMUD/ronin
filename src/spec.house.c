@@ -331,7 +331,7 @@ int New_Orb_Spec(OBJ *orb, CHAR *ch,int cmd,char *arg) {
   one_argument(arg,buf);
   if(!isname(buf,OBJ_NAME(orb))) return FALSE;
 
-  if(is_caster(ch) && orb == EQ(ch,HOLD)) {
+  if(orb == EQ(ch,HOLD)) {
     if(orb->obj_flags.value[3]) {
       send_to_char("The darkened orb seems powerless!\n\r",ch);
       return TRUE;
