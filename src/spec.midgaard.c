@@ -1571,7 +1571,7 @@ void vault_give_back(CHAR *ch, OBJ *vault_obj)
   }
 }
 
-#define VAULT_MAX 500
+#define VAULT_MAX 1000
 
 int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
 {
