@@ -1,9 +1,12 @@
 #9400
 At the foot of the mountain~
-  This is a well-traveled rocky path which gradually ascends the mountain
-ahead of you.  The top is barely visible as it is shrouded by mist.  Every
+   This is a well-traveled rocky path which gradually ascends the mountain
+ahead of you. The top is barely visible as it is shrouded by mist. Every
 now and then lightning flashes across the sky and a great thunder booms
-out accompanied by an ominous rumble from the bowels of the earth.
+out accompanied by an ominous rumble from the bowels of the earth. A
+highly polished white stone peeks out though the sand and gravel that make
+up the rest of the path. Intricately carved stone columns lay broken 
+amongst the brush on both sides of the path.
 ~
 94 0 0
 D1
@@ -69,11 +72,11 @@ D5
 ~
 0 -1 9402
 E
-heaps stones tombs~
-You are sure glad the YOU aren't under one of those piles!~
-E
 bodies body dead~
 They look as if their necks have been broken and their flesh, chewed.~
+E
+heaps stones tombs~
+You are sure glad the YOU aren't under one of those piles!~
 S
 #9404
 A Blind Curve on the Mountain Path.~

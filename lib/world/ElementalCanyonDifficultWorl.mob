@@ -1,0 +1,617 @@
+#19501
+goat muscular mountain~
+a muscular mountain goat~
+A muscular mountain goat carefully makes its way along the mountain.
+~
+You are able to clearly make out large well-defined muscles on the abnormally
+large goat.
+~
+16456 0 0 Y
+52 -8 -10 50d40+4000 4d6+180
+0 830000
+8 8 1
+86 0 0d0+0 1
+10 2 15 0
+0 0 0 0
+K
+35000 0 0 0 0 0 0
+#19502
+cyclops huge~
+a huge cyclops~
+A huge cyclops snarls at you hungrily!
+~
+This huge cyclops must be the finest specimen anywhere. He towers well above
+you, and his bulging muscles are truly impressive. The cyclops seems to be
+rather hungry. I wonder what it likes to eat?
+~
+16430 671350912 -700 Y
+70 -14 -24 4d3000+14000 50d5+80
+4000000 5100000
+8 8 0
+68 0 0d0+0 2
+7 2 5 0
+4 2 5 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19503
+elemental colossal~
+a colossal elemental~
+A colossal elemental form wanders about.
+~
+Rather large for an elemental form, Its presence is quite unsettling.
+~
+16456 0 0 Y
+56 -14 -18 20d30+12000 10d8+130
+0 2050100
+8 8 0
+65 0 20d30+2000 10
+1 2 5 5
+1 2 5 6
+1 5 5 10
+1 5 5 23
+1 2 5 26
+1 2 5 30
+1 2 5 37
+1 2 5 82
+1 6 5 1
+1 6 5 34
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19504
+guardian elemental~
+the elemental guardian~
+The Elemental Guardian of the canyon.
+~
+You can't tell which kind of elemental it is, maybe it's a bit of all of them?
+~
+33570830 262144 0 Y
+70 -16 -24 6d500+16000 10d10+100
+3800000 1900900
+8 8 0
+65 0 6d100+1000 6
+2 2 5 0
+4 2 5 0
+11 5 5 23
+11 5 5 104
+11 5 5 10
+11 2 5 37
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#19505
+elemental hulking~
+a hulking elemental~
+A hulking, rather non-descript elemental thing wanders about.
+~
+A hulking elemental, it's an odd looking thing.  What is it really?
+~
+16458 0 0 Y
+53 -14 -12 20d100+12000 10d10+120
+0 2150100
+8 8 0
+65 0 50d100+0 1
+1 5 15 10
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19506
+elemental gargantuan~
+a gargantuan elemental~
+A gargantuan-sized elemental presence can be felt here.
+~
+A gargantuan elemental, a resident of the canyon.
+~
+16458 0 10 Y
+55 -14 -20 50d100+14000 10d10+100
+0 2600100
+8 8 0
+65 0 10d10+1000 1
+1 2 15 26
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19507
+elemental substantial~
+a substantial elemental~
+A substantial elemental power blows by.
+~
+A substantial elemental, a resident of the canyon.
+~
+16458 0 20 Y
+53 -14 -16 20d60+10000 8d11+100
+0 1750999
+8 8 0
+65 0 20d11+1000 1
+1 2 10 82
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19508
+ruler earth elemental~
+the earth ruler~
+The Ruler of the Earth elementals stands before you.
+~
+He looks as old as the earth itself. He seems to know all the knowlege and
+secrets of the Earth. You can't really tell where he begins and the rock wall
+ends.
+~
+16394 268437632 0 Y
+70 -18 -28 10d200+40000 20d10+130
+8000000 11650100
+8 8 0
+65 0 10d100+4000 4
+1 5 3 104
+1 5 10 23
+1 5 3 179
+1 3 20 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19509
+ruler fire elemental~
+the fire ruler~
+The Ruler of the Fire elementals is standing here.
+~
+As you look at him he seems to blend in with the fire in his throne.
+~
+16394 134219904 0 Y
+70 -18 -18 10d200+30000 20d20+160
+2500000 10300100
+8 8 0
+65 0 20d20+5000 6
+1 2 5 5
+1 2 5 26
+1 2 5 93
+1 2 5 95
+1 5 5 106
+1 6 5 139
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19510
+ruler air elemental~
+the air ruler~
+The Ruler of the Air elementals.
+~
+As you peer at him you seem to be looking at the sky itself.
+~
+16394 264320 0 Y
+70 -14 -28 10d200+28000 20d12+190
+3000000 8670100
+8 8 0
+65 0 40d12+5000 4
+1 6 10 74
+1 6 10 98
+1 5 5 104
+1 5 15 10
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19511
+ruler elemental lightning~
+the lightning ruler~
+The Ruler of the Lightning elementals.
+~
+As you examine him there is a blinding, flash of light followed by a deafening
+boom!  You rub the spots from your, and as you finish you see the ruler standing
+over you...grinning.
+~
+16394 17049728 0 Y
+70 -15 -14 10d200+23000 16d40+100
+1900000 7700100
+8 8 0
+65 0 3d1000+5000 8
+1 2 5 6
+1 2 5 25
+1 2 5 30
+1 2 5 37
+1 2 5 109
+1 2 5 110
+1 6 5 97
+1 6 5 99
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19512
+ruler water elemental~
+the water ruler~
+The Ruler of the Water elementals.
+~
+As you look at him he changes to mist, which swirls around you.  Just as you get
+scared, it reforms into elemental form.
+~
+16394 264320 0 Y
+70 -14 -19 10d200+20000 12d15+210
+12000000 3000100
+8 8 0
+65 0 10d300+5000 3
+2 3 7 0
+4 3 7 0
+7 3 7 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19514
+puddle water elemental~
+a puddle~
+A large puddle of water elemental.
+~
+It trickles along the ground and gets your feet wet.
+~
+16456 262144 0 Y
+52 -4 -19 12d200+5000 12d15+150
+0 1000500
+8 8 0
+65 0 0d0+0 1
+4 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19515
+elemental fire flame~
+a flame~
+A large flickering flame elemental is here.
+~
+It smolders along the grass aimlessly
+~
+16456 0 0 Y
+52 -12 -10 12d200+5000 12d12+140
+0 1000500
+8 8 0
+65 0 12d200+2000 3
+1 2 5 5
+1 2 5 26
+1 2 5 93
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19516
+snowflake snow flake ice elemental~
+a large snowflake~
+A frozen, snowflake, water elemental.
+~
+It looks a little blue.
+~
+16456 0 520 Y
+51 -12 -9 6d500+5000 12d12+140
+0 1100000
+8 8 0
+65 0 10d100+1000 3
+1 2 5 8
+1 2 5 82
+1 2 5 248
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19517
+boulder rock earth stone elemental~
+a large boulder~
+A large boulder.
+~
+It seems to be a living boulder!
+~
+16456 0 0 Y
+51 -10 -25 12d200+7000 10d12+25
+0 1370100
+8 8 0
+65 0 12d12+1000 2
+10 5 5 0
+1 5 5 23
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#19518
+spark lightning energy elemental~
+a large spark~
+A large spark of electricity crackles here.
+~
+Zipping from place to place at the speed of light is tough work.
+~
+16456 0 0 Y
+51 -9 -18 12d200+5000 12d12+150
+0 1000500
+8 8 0
+65 0 4d200+2000 3
+1 2 5 6
+1 2 5 30
+1 2 5 37
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19519
+acid blob elemental~
+a large blob of acid~
+A large blob of acid eats away at the stone aimlessly.
+~
+The magical blob of acid is a cross between lightning and water.
+~
+16456 268697600 0 Y
+52 -9 -21 12d200+5000 12d12+150
+0 1000500
+8 8 0
+65 0 12d200+2000 1
+1 2 5 6
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19520
+lava beast huge~
+a huge lava beast~
+A huge lava beast spews from place to place.
+~
+The magical lava beast is a cross between fire and earth.
+~
+16456 262144 0 Y
+60 -8 -23 12d200+15000 15d15+100
+0 2660100
+8 8 0
+65 0 12d100+3000 3
+1 2 5 5
+1 5 5 23
+1 5 5 95
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19521
+mud monster elemental huge~
+a huge mud monster~
+A huge mud monster slops around.
+~
+The magical mud monster is a cross between water and earth.
+~
+16456 268697600 0 Y
+60 -9 -23 20d100+15000 12d12+30
+0 2660100
+8 8 0
+65 0 20d100+1500 1
+1 2 20 218
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19522
+mist powerful elemental~
+a powerful elemental mist~
+The air is magically misty here.
+~
+The magical mist is a cross between water and air.
+~
+16456 262144 0 Y
+52 -10 -19 12d200+8500 12d12+100
+0 1610500
+8 8 0
+65 0 12d12+1000 1
+1 2 10 82
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19523
+particle elemental~
+a particle~
+An oversized particle.
+~
+The magical manifestation of energy.
+~
+16456 0 0 Y
+50 -4 -13 20d100+3000 12d12+150
+0 650999
+8 8 0
+65 0 20d20+500 1
+1 2 5 25
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19524
+dust elemental~
+a large dust cloud~
+A large dust cloud is swirling around the room.
+~
+The magical dust cloud is a cross between air and earth.
+~
+16456 0 0 Y
+50 -4 -18 16d100+3500 12d12+130
+0 680999
+8 8 0
+65 0 16d100+500 1
+1 5 6 104
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19525
+eddie elemental~
+an eddie~
+A large eddie current swirls junk around here.
+~
+The magical eddie current is a manifestation of air elemental.
+~
+16456 262144 0 Y
+50 -4 -17 12d120+3000 12d12+170
+0 615999
+8 8 0
+65 0 12d120+1000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19526
+flame blue~
+the blue flame~
+The Blue Flame burns mysteriously here.
+~
+As you look, you see what seems to be a face and almost a humanoid figure
+somehow trapped in the fire.
+~
+16458 0 -100 Y
+65 -9 -22 10d200+17000 20d20+120
+250000 3000100
+8 8 0
+65 0 10d1000+2000 2
+1 2 10 5
+1 2 5 26
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19527
+magneto~
+the magneto~
+The Magneto considers zapping you for the heck of it.
+~
+A humanoid figure seems to be trapped in the field of magnetism.
+~
+16458 134217728 -150 Y
+65 -9 -22 10d200+15000 15d12+160
+100000 2660100
+8 8 0
+65 0 15d12+2000 3
+1 2 5 30
+1 2 5 37
+1 2 2 110
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19528
+bandit ice~
+the ice bandit~
+The Ice Bandit strikes cold fear in your heart.
+~
+A huminoid figure encased in ice but still apparently alive.
+~
+16458 786432 -250 Y
+65 -9 -22 10d200+15500 15d15+150
+300000 2750000
+8 8 0
+65 0 15d150+1000 3
+11 1 15 65
+11 5 5 68
+1 2 5 248
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19529
+rock monster~
+the rock monster~
+The Rock Monster considers you in stoney silence.
+~
+A huminoid figure trapped in stone seems alive.
+~
+16458 0 -310 Y
+65 -9 -26 10d200+20000 15d15+140
+190000 3500500
+8 8 0
+65 0 15d100+1000 4
+4 2 5 0
+7 2 5 0
+1 5 5 23
+1 5 3 179
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19530
+hurricane~
+the hurricane~
+A Hurricane rages across the sky.
+~
+A huminoid figure seems to be trapped in the rushing wind.
+~
+16458 786432 -10 Y
+65 -8 -25 15d200+16000 15d12+200
+410820 2910500
+8 8 0
+65 0 15d12+1000 1
+1 6 10 103
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19531
+magician~
+an elemental magician~
+An elemental magician seeks magical stones for a spell.
+~
+The elemental magician has come here in search of the fabled Stone of Surrender,
+which can be used to render opponents senseless.
+~
+16586 2 -50 Y
+53 -4 -2 10d100+8000 10d4+80
+80000 1400600
+8 8 2
+1 0 10d40+3000 10
+1 6 5 98
+1 6 5 1
+1 6 5 74
+1 6 5 97
+1 6 5 99
+1 1 5 248
+1 1 5 218
+1 1 5 110
+1 1 5 109
+1 1 5 82
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19532
+warrior rainbow~
+a rainbow warrior~
+A warrior of the Rainbow Cult  swears his loyalty.
+~
+The Rainbow Cult has recieved special powers for their service to the elemental
+forces.
+~
+16456 134482048 150 Y
+54 -9 -25 10d100+12000 12d12+40
+80000 4000100
+8 8 0
+11 0 10d300+0 5
+2 2 5 0
+4 2 5 0
+7 2 5 0
+9 2 5 0
+1 5 10 10
+0 0 8 0
+K
+0 0 0 0 0 0 0
+#19533
+illusionist~
+an illusionist~
+The illusionist seeks the aid of the elemental forces.
+~
+He seeks their aid for a powerful, new spell of deception.
+~
+16586 0 -50 Y
+52 -7 -9 10d200+9000 12d4+150
+19000 1650100
+8 8 0
+1 0 20d200+2000 8
+1 6 5 1
+1 6 5 34
+1 6 5 74
+1 6 5 97
+1 6 5 98
+1 6 5 99
+1 5 5 104
+1 1 5 141
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#19534
+alchemist~
+an alchemist~
+An alchemist wanders by in search of magical herbs.
+~
+Rare herbs are rumored to only grow here, within the canyon.
+~
+16584 128 -50 Y
+50 -7 -8 20d100+6000 20d10+30
+19000 2333100
+8 8 1
+1 0 20d100+3000 6
+1 2 5 248
+1 2 5 218
+1 6 5 15
+1 6 5 72
+1 6 5 74
+1 1 5 25
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~

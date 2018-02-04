@@ -1,0 +1,122 @@
+#19400
+Huge Grolem~
+A Huge Grolem~
+A Huge Grolem stands here, snapping it's beak at you.
+~
+The Grolem has knobby, hairless, gray-green skin, and is roughly the size of a
+large bear. The creature has three eyes, large claws, and a massive beak. When
+walking, the beast waddles awkwardly on it's four powerful legs, but it can
+lunge quickly at anything that gets too close.
+~
+16424 262144 -350 Y
+55 -14 -21 50d40+8000 4d6+90
+0 1480000
+8 8 1
+80 0 1d1+1 1
+6 2 8 0
+0 0 0 0
+K
+20000 0 0 0 0 0 0
+#19401
+Massive Grolem~
+A Massive Grolem~
+A Massive Grolem is here, barking loudly to the others.
+~
+The Grolem has knobby, hairless, gray-green skin, and is roughly the size of a
+large bear. The creature has three eyes, large claws, and a massive beak. When
+walking, the beast waddles awkwardly on it's four powerful legs, but it can
+lunge quickly at anything that gets too close.
+~
+16424 262144 -350 Y
+58 -14 -21 50d40+8000 4d6+110
+0 1480000
+8 8 2
+80 0 1d1+1 2
+6 2 8 0
+8 2 7 0
+0 0 0 0
+K
+30000 0 0 0 0 0 0
+#19402
+Enormous Grolem~
+An Enormous Grolem~
+An Enormous Grolem is here, awkwardly waddling in your direction.
+~
+The Grolem has knobby, hairless, gray-green skin, and is roughly the size of a
+large bear. The creature has three eyes, large claws, and a massive beak. When
+walking, the beast waddles awkwardly on it's four powerful legs, but it can
+lunge quickly at anything that gets too close.
+~
+16424 262144 -350 Y
+60 -14 -21 50d40+8000 4d6+130
+0 1480000
+8 8 1
+80 0 1d1+1 2
+6 2 8 0
+10 2 7 0
+0 0 0 0
+K
+40000 0 0 0 0 0 0
+#19403
+Mountainous Grolem~
+A Mountainous Grolem~
+A terrifying Mountainous Grolem is here, staring at you intently.
+~
+a Mountainous Grolem towers above you. The beast has knobby, hairless gray-green
+skin, and is roughly the size of an elephant. The massive creature has three
+eyes, large claws, and a massive beak. When walking the Grolem waddles awkwardly
+on it's four powerful legs, but it can lunge quickly at anything that gets too
+close.
+~
+16424 268697600 -350 Y
+70 -16 -24 2d20000+45000 100d5+120
+0 9833333
+8 8 2
+80 0 1d1+1 2
+5 2 5 0
+6 2 5 0
+0 0 0 0
+K
+5000000 19400 0 0 0 0 0
+#19404
+three eyed winged creature~
+A three eyed winged creature~
+A three eyed winged creature with a body the size of a horse is here.
+~
+The creature's head is covered with short horns. It has a long snout with hard
+ridges, and powerful jaws that look like they could shear through an arm. The
+creature has a long, graceful neck, and a long, thin tail. The winged beast is
+wrapped in leathery gray skin.
+~
+40 0 -350 Y
+53 -14 -18 12d250+6000 12d12+130
+0 1250000
+8 8 1
+80 0 12d100+1000 2
+8 2 5 0
+5 2 5 0
+0 0 0 0
+K
+38000 0 0 0 0 0 0
+#19405
+three eyed winged creature~
+A three eyed winged creature~
+A three eyed winged creature with a body the size of a horse is here.
+~
+The creature's head is covered with short horns. It has a long snout with hard
+ridges, and powerful jaws that look like they could shear through an arm. The
+creature has a long, graceful neck, and a long, thin tail. The winged beast is
+wrapped in leathery gray skin.
+~
+40 0 -350 Y
+53 -14 -18 12d250+6000 12d12+130
+0 1250000
+4 8 1
+80 0 12d100+1000 2
+8 2 5 0
+5 2 5 0
+0 0 0 0
+K
+38000 0 0 0 0 0 0
+#0
+$~

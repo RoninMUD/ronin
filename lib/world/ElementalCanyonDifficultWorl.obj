@@ -1,0 +1,481 @@
+#19501
+ring stone beloved~
+The beloved ring of stone~
+A dark band of stone which seems to absorb all the light around it lies here.~
+~
+11 134218052 3
+1 2 3 3
+7 3187304 9000
+18
+X
+~
+1024 0 0
+M
+The stone ring rumbles gently as it moves to reform around your finger.~
+$n's stone ring rumbles gently as it moves to reform around $s finger.~
+~
+~
+A
+19 3
+A
+18 1
+A
+13 0
+#19502
+breastplate living stone~
+a breastplate of living stone~
+A breastplate made of living stone rumbles gently as it moves slowly along the
+floor.~
+~
+9 134266948 9
+22 -1 -1 -1
+410 4800000 18000
+8
+X
+~
+3072 0 0
+M
+The stone breastplate rumbles gently as it shifts to mold itself around your
+body.~
+$n's stone breastplate rumbles gently as it shifts to mold itself to $s body.~
+~
+~
+A
+17 0
+A
+19 0
+A
+53 0
+#19503
+dagger blue flame~
+a blue flame dagger~
+A dagger made of fire crackles mysteriously here.~
+~
+5 242241601 8193
+7 5 8 11
+2 1800000 18000
+22
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 1
+A
+28 20
+#19504
+cape flame blue~
+a blue flame cape~
+A cape made of ethereal blue fiber lies neatly folded on the ground here.~
+~
+9 65 5
+12 -1 -1 -1
+3 10000 8500
+20
+X
+~
+512 0 0
+M
+~
+~
+~
+~
+A
+53 0
+B
+2
+#19505
+boots gale wind~
+the gale force wind boots~
+Some magical boots formed of swirling wind howl here.~
+~
+9 64 65
+9 -1 -1 -1
+1 1200000 2200
+15
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 200
+A
+18 3
+A
+19 1
+B
+16777216
+#19506
+helmet raging hurricane~
+a raging hurricane helmet~
+A helmet sized storm rages here.~
+~
+9 134217794 17
+11 -1 -1 -1
+3 3370000 6100
+37
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+19 1
+B
+2
+#19507
+sword lightning bolt~
+a crackling lightning sword~
+Electricity crackles as lightning jumps around here.~
+~
+5 138473539 8193
+8 11 3 3
+1 4370000 17000
+12
+X
+~
+2560 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+53 0
+#19508
+shield electric~
+the electric shield~
+A shield, made entirely of electricity, buzzes here.~
+~
+9 134218755 513
+19 -1 -1 -1
+1 2370000 23000
+24
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+13 -75
+A
+12 -75
+#19509
+sash cummerbund ice~
+a cummerbund made of ice~
+A cummerbund made of magical ice has been left here.~
+~
+9 134217792 2049
+8 -1 -1 -1
+38 4140230 12000
+32
+X
+~
+512 0 0
+M
+~
+~
+~
+~
+A
+53 1
+A
+19 1
+A
+12 18
+#19510
+cloak flowing water~
+a flowing cloak of water~
+A cloak fashioned from a small magical waterfall is here.~
+~
+9 213962816 1025
+18 -1 -1 -1
+168 3017573 9888
+22
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -10
+A
+39 8
+A
+19 1
+B
+40
+#19511
+amulet elemental~
+an elemental amulet~
+An amulet depicting fire,water,lightning,earth, and air lies here.~
+~
+9 134217793 5
+12 -1 -1 -1
+1 1400000 1400
+46
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 80
+A
+18 2
+A
+19 1
+#19512
+buckler rainbow~
+a rainbow buckler~
+colored light quickly spins in a tight circle here.~
+~
+9 134217793 4097
+9 -1 -1 -1
+1 800000 4800
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+52 13
+B
+16
+#19513
+bands heavy platinum arm~
+heavy platinum arm bands~
+A pair of platinum arm bands, once worn by the Cyclops, lie here.~
+~
+9 134217728 257
+12 -1 -1 -1
+140 430000 6300
+65
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 80
+A
+52 35
+A
+19 1
+#19514
+bands heavy platinum leg~
+heavy platinum leg bands~
+A pair of platinum leg bands, once worn by the Cyclops, lie here.~
+~
+9 0 33
+12 -1 -1 -1
+4 320948 1800
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 65
+A
+52 18
+A
+18 4
+#19515
+wand fire firewand~
+elemental wand of fire~
+A fire wand lies forgotten on the ground.~
+~
+3 1 16385
+50 26 13 26
+7 169000 12000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19516
+staff ice icestaff~
+an ice staff~
+A ice staff lies forgotten on the ground.~
+~
+4 1 16385
+50 30 8 82
+7 390000 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19517
+staff quake earth quakestaff earthquake~
+elemental staff of earth~
+A earthquake staff lies forgotten on the ground.~
+~
+3 1 16385
+50 18 11 23
+7 390000 2000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19518
+wand rainbow~
+elemental rainbow wand~
+A rainbow wand lies forgotten on the ground.~
+~
+3 1 16385
+45 16 14 10
+7 590000 10200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19519
+wand lightning lightningwand~
+elemental wand of lightning~
+A lightning wand lies forgotten on the ground.~
+~
+3 1 16385
+48 22 4 30
+7 390000 8200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19521
+lodestone loadstone stone~
+a lodestone~
+A dull red stone lies here amid the weeds.~
+~
+4 0 16385
+46 18 4 27
+2 500000 1750
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19523
+scroll energy~
+an energy scroll~
+A scroll of energy replacement lies here.~
+~
+2 2 16385
+50 74 -1 -1
+1 31000 1200
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19524
+jug elaborate carved water~
+an elaborately carved water jug~
+A large but surprisingly light jug of water stands here.~
+~
+17 134217793 16385
+80 80 0 0
+18 78000 1100
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19525
+dusty potion~
+dusty potion~
+A potion with bits of dust swirling around in it, is sitting here.~
+~
+10 0 16385
+50 75 15 -1
+1 100000 30000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~
