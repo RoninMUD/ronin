@@ -6968,12 +6968,12 @@ The Defiler gains a health and mana regeneration bonus of 20% for each level of
 blood in the room.  This bonus has a maximum of 100% additional regeneration.
 
 Additionally, when the Defiler is affected by the Blood Lust spell, its effects
-will trigger 10% more frequently when the caster is fighting in a room with any
-level of blood present.
+will trigger 5% more frequently.  For each level of blood in the room above
+zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
+ten.
 
 Finally, the Defiler's Backstab skill has a 10% chance on success to trigger a
-Vampiric Touch cast automatically at the target, with zero mana cost.  This
-effect can trigger only once every tick.
+Vampiric Touch cast automatically at the target, with zero mana cost.
 
 See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LUST" "VAMPIRIC TOUCH"
 #
