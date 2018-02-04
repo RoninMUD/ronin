@@ -1426,7 +1426,8 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (27) Hypnotize                     (28) Hell Fire
     (29) Improve Invisibility          (30) Power Word Kill
          Remove Improve Invisibility
-    (40) Perceive                      (50) Blood Lust
+    (40) Perceive                      (45) Blood Lust
+    (50) Rage
 #
 "CLERIC SPELLS"
 
@@ -1802,6 +1803,7 @@ Disembowel                                  Y              Y
 Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
+Hidden Blade  Y
 Kick          Y              Y         Y    Y    Y         Y
 Knock                                                      Y
 Peek          Y    Y                        Y         Y
