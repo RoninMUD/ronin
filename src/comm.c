@@ -45,6 +45,7 @@
 #include "spells.h"
 #include "reception.h"
 #include "subclass.h"
+#include "fight.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -2771,11 +2772,11 @@ void pulse_shadow_wraith(CHAR *ch) {
         }
 
         if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + (num_shadows_active * 10));
+          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
         }
 
         if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
-          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + (num_shadows_active * 10));
+          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
         }
       }
     }
@@ -2794,7 +2795,6 @@ void pulse_mantra(CHAR *ch) {
     -1
   };
 
-  bool stop = FALSE;
   int mantra_dispel = 0;
   int gain = 0;
   AFF *tmp_af = NULL;
@@ -2802,7 +2802,7 @@ void pulse_mantra(CHAR *ch) {
 
   if (!ch) return;
 
-  for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
+  for (tmp_af = ch->affected; tmp_af; tmp_af = next_af) {
     next_af = tmp_af->next;
 
     if (tmp_af->type == SKILL_MANTRA) {
@@ -2823,7 +2823,7 @@ void pulse_mantra(CHAR *ch) {
         }
       }
 
-      mantra_dispel = get_random_eligible_effect(ch, mantra_dispel_types);
+      mantra_dispel = get_random_set_effect(ch, mantra_dispel_types);
 
       if (mantra_dispel && chance(25)) {
         switch (mantra_dispel) {
@@ -2859,7 +2859,7 @@ void pulse_mantra(CHAR *ch) {
       }
 
       /* Break out of the loop, as we should only process one Mantra effect. */
-      stop = TRUE;
+      break;
     }
   }
 }
@@ -2871,6 +2871,34 @@ void pulse_adrenaline_rush(CHAR *ch) {
       GET_HIT(ch) < GET_MAX_HIT(ch) &&
       GET_OPPONENT(ch)) {
     GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
+  }
+}
+
+void pulse_wither(CHAR *ch) {
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+
+  for (AFF *tmp_af = ch->affected, *next_af = NULL; tmp_af; tmp_af = next_af) {
+    next_af = tmp_af->next;
+
+    if (tmp_af->type == SPELL_WITHER) {
+      send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
+      act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
+
+      damage(ch, ch, 75, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+      tmp_af->duration--;
+
+      if (tmp_af->duration == 0) {
+        if (*spell_wear_off_msg[tmp_af->type]) {
+          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
+        }
+
+        affect_remove(ch, tmp_af);
+      }
+
+      /* Break out of the loop, as we should only process one Wither effect. */
+      break;
+    }
   }
 }
 
@@ -2914,12 +2942,17 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
     pulse_shadow_wraith(ch);
   }
 
-  if (cmd == MSG_MOBACT && !IS_NPC(ch)) {
-    /* Mantra */
-    pulse_mantra(ch);
+  if (cmd == MSG_MOBACT) {
+    if (!IS_NPC(ch)) {
+      /* Mantra */
+      pulse_mantra(ch);
 
-    /* Adrenaline Rush */
-    pulse_adrenaline_rush(ch);
+      /* Adrenaline Rush */
+      pulse_adrenaline_rush(ch);
+    }
+
+    /* Wither */
+    pulse_wither(ch);
   }
 
   if (IS_MORTAL(ch))

@@ -1947,8 +1947,14 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  AFF af;
-  int dam = 0;
+  const int wither_effect_types[] = {
+    SPELL_BLINDNESS,
+    SPELL_CHILL_TOUCH,
+    SPELL_CURSE,
+    SPELL_PARALYSIS,
+    SPELL_POISON,
+    -1
+  };
 
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
   {
@@ -1962,52 +1968,138 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  dam = 375;
+  int dam = 350;
 
-  if (saves_spell(victim, SAVING_SPELL, level)) dam /= 2;
+  int num_effects_to_apply = chance(25) ? 2 : 1;
+
+  int effect_type = get_random_eligible_effect(victim, wither_effect_types);
+
+  if (effect_type == TYPE_UNDEFINED) {
+    num_effects_to_apply = 0;
+    dam += 100;
+  }
+
+  AFF af;
+
+  for (int i = 0; (i < num_effects_to_apply) && (effect_type != TYPE_UNDEFINED); i++, effect_type = get_random_eligible_effect(victim, wither_effect_types)) {
+    if (!victim) return;
+
+    switch (effect_type) {
+      case SPELL_BLINDNESS:
+        if (saves_spell(victim, SAVING_SPELL, level)) continue;
+
+        af.type       = SPELL_BLINDNESS;
+        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
+        af.location   = APPLY_HITROLL;
+        af.modifier   = -4;
+        af.bitvector  = AFF_BLIND;
+        af.bitvector2 = 0;
+        affect_to_char(victim, &af);
+
+        af.location   = APPLY_AC;
+        af.modifier   = +40;
+        affect_to_char(victim, &af);
+
+        act("You have been blinded!", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
+      break;
+
+      case SPELL_CHILL_TOUCH:
+        if (saves_spell(victim, SAVING_SPELL, level)) continue;
+
+        af.type       = SPELL_CHILL_TOUCH;
+        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
+        af.modifier   = -1;
+        af.location   = APPLY_STR;
+        af.bitvector  = 0;
+        af.bitvector2 = 0;
+        affect_join(victim, &af, TRUE, FALSE);
+
+        act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
+      break;
+
+      case SPELL_CURSE:
+        if (saves_spell(victim, SAVING_SPELL, level)) continue;
+
+        af.type       = SPELL_CURSE;
+        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
+        af.modifier   = -((GET_LEVEL(ch) - 3) / 9);
+        af.location   = APPLY_HITROLL;
+        af.bitvector  = AFF_CURSE;
+        af.bitvector2 = 0;
+        affect_to_char(victim, &af);
+
+        af.location   = APPLY_SAVING_PARA;
+        af.modifier   = ((GET_LEVEL(ch) - 3) / 9);
+        affect_to_char(victim, &af);
+
+        act("You feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
+      break;
+
+      case SPELL_PARALYSIS:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) ||
+            ((GET_LEVEL(victim) - 10) > GET_LEVEL(ch))) {
+          dam += 50;
+          continue;
+        }
+
+        if (saves_spell(victim, SAVING_PARA, level)) continue;
+
+        af.type       = SPELL_PARALYSIS;
+        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
+        af.bitvector  = AFF_PARALYSIS;
+        af.bitvector2 = 0;
+
+        af.location   = APPLY_AC;
+        af.modifier   = +100;
+        affect_to_char(victim, &af);
+
+        af.location   = APPLY_HITROLL;
+        af.modifier   = -5;
+        affect_to_char(victim, &af);
+
+        act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
+      break;
+
+      case SPELL_POISON:
+        if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) {
+          dam += 50;
+          continue;
+        }
+
+        if (saves_spell(victim, SAVING_PARA, level)) continue;
+
+        af.type       = SPELL_POISON;
+        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
+        af.bitvector  = AFF_POISON;
+        af.bitvector2 = 0;
+
+        af.location   = APPLY_STR;
+        af.modifier   = -3;
+        affect_join(victim, &af, FALSE, FALSE);
+
+        act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
+      break;
+    }
+  }
 
   damage(ch, victim, dam, SPELL_WITHER, DAM_MAGICAL);
 
-  if (!victim) return;
-  if (affected_by_spell(victim, AFF_PARALYSIS)) return;
-  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) return;
-  if ((GET_LEVEL(victim) - 10) > GET_LEVEL(ch)) return;
-  if (saves_spell(victim, SAVING_PARA, level + 10)) return;
+  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
 
-  /* Apply Paralysis */
-  af.type       = SPELL_PARALYSIS;
-  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
-  af.bitvector  = AFF_PARALYSIS;
+  affect_from_char(victim, SPELL_WITHER);
+
+  af.type       = SPELL_WITHER;
+  af.duration   = 4;
+  af.location   = 0;
+  af.modifier   = 0;
+  af.bitvector  = 0;
   af.bitvector2 = 0;
-
-  af.location   = APPLY_AC;
-  af.modifier   = +100;
   affect_to_char(victim, &af);
-
-  af.location   = APPLY_HITROLL;
-  af.modifier   = -5;
-  affect_to_char(victim, &af);
-
-  act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
-  act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
-
-  /* Apply Poison */
-  if (!victim) return;
-  if (affected_by_spell(victim, AFF_POISON)) return;
-  if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) return;
-  if (saves_spell(victim, SAVING_PARA, level + 10)) return;
-
-  af.type       = SPELL_POISON;
-  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : (level * 2);
-  af.bitvector  = AFF_POISON;
-  af.bitvector2 = 0;
-
-  af.location   = APPLY_STR;
-  af.modifier   = -3;
-  affect_join(victim, &af, FALSE, FALSE);
-
-  act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
-  act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
 }
 
 void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)

@@ -1783,10 +1783,40 @@ get_weapon_type_desc(OBJ *obj) {
 
 
 /* Takes a character object and an array of eligible effects and returns
-   an effect randomly from the array if the character is affected by it.
+   an effect randomly from the array if the character is not affected by it.
    If there are no eligible effects found, this returns TYPE_UNDEFINED.
    Note: You MUST terminate the array with -1 or bad things will happen. */
 int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
+  /* Count the number of elements in the list of eligible effects. */
+  int list_size = 0;
+  for (int i = 0; eligible_effects[i] != -1; list_size++, i++);
+
+  if (!list_size) return TYPE_UNDEFINED;
+
+  int eligible_ch_effects[MAX_SPL_LIST];
+  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
+
+  int num_eligible_ch_effects = 0;
+  for (int i = 0; i < list_size; i++) {
+    if (!affected_by_spell(ch, eligible_effects[i])) {
+      num_eligible_ch_effects++;
+      eligible_ch_effects[num_eligible_ch_effects - 1] = eligible_effects[i];
+    }
+  }
+
+  if (num_eligible_ch_effects > 0) {
+    return eligible_ch_effects[number(1, num_eligible_ch_effects) - 1];
+  }
+
+  return TYPE_UNDEFINED;
+}
+
+
+/* Takes a character object and an array of eligible effects and returns
+   an effect randomly from the array if the character is affected by it.
+   If there are no eligible effects found, this returns TYPE_UNDEFINED.
+   Note: You MUST terminate the array with -1 or bad things will happen. */
+int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
   AFF *af = NULL;
   int i = 0;
   int list_size = 0;
@@ -1798,11 +1828,11 @@ int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
   /* Count the number of elements in the list of eligible effects. */
   for (list_size = 0, i = 0; eligible_effects[i] != -1; list_size++, i++);
 
-  for (af = ch->affected; af; af = af->next)
-  {
+  if (!list_size) return TYPE_UNDEFINED;
+
+  for (af = ch->affected; af; af = af->next) {
     for (i = 0; i < list_size; i++) {
-      if (af->type == eligible_effects[i])
-      {
+      if (af->type == eligible_effects[i]) {
         num_eligible_ch_effects++;
         eligible_ch_effects[num_eligible_ch_effects - 1] = af->type;
       }

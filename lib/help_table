@@ -1,3 +1,18 @@
+"BLOOD LEVEL"
+
+The "blood level" of a room is an indicator of the amount of fresh blood that
+has been spilled recently in the area.  Each creature that dies in a room
+generates one blood level.  This level increases by one for each additional
+creature that dies, up to a limit of ten blood levels.  The level of blood
+in a room is indicated by a message located at the bottom of the room's
+description.
+
+The blood level of a room recedes by one level per tick as the traces of
+violence begin to fade away into macabre memory.
+
+Note: The following types of creatures do not generate blood when killed:
+animated, charmed, or mountable creatures.
+#
 "SECTOR TYPE"
 
 Every "room" in the game has a sector type that defines what kind of
@@ -6894,7 +6909,7 @@ Additionally, while affected by Desecrate, the Defiler's chance to automatically
 be hit while affected by the Rage spell is reduced from 50% to 20%.
 
 As an added bonus, the Defiler's Spirit Levy spell will restore up to 50% more
-hit points per cast.  This effect is active even when Desecrate is not.
+hit points per cast; this effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
@@ -7000,9 +7015,9 @@ or spell, just type HELP <skill/spell name>
 Level         Skill/Spell
   1           DARK PACT
   2           VICTIMIZE
-  3           SHADOW WRAITH
-  4           WITHER
-  5           DUSK REQUIEM
+  3           SHADOW WRAITH (1st and 2nd Shadow Wraith)
+  4           DUSK REQUIEM  (3rd Shadow Wraith)
+  5           WITHER        (4th Shadow Wraith)
 
 See Also: SUBCLASSES DEFILER ANTI-PALADIN
 #
@@ -7015,7 +7030,7 @@ in exchange for supernatural powers.
 
 After making this pact, the Infidel no longer requires food or drink to sustain
 themselves.  Additionally, he/she always regenerates hit points, mana, and
-movement points at an optimal rate, regardless of age. Finally, the Infidel's
+movement points at an optimal rate, regardless of age.  Finally, the Infidel's
 regeneration rates are increased at all times, and are further increased during
 the night, or in a dark room.
 
@@ -7085,29 +7100,9 @@ is created.  That is, the 1st shadow costs 100 mana, the 2nd costs 120 mana, the
 
 See Also: SUBCLASSES INFIDEL RAGE FURY
 #
-WITHER
-
-Subclass Infidel: Level 4 (Anti-Paladin)
-
-Usage       : cast 'wither' <victim>
-Accumulative: -
-Duration    : Instantaneous / Level * 2  (Paralysis, Poison)
-Save        : vs. spell for 1/2 damage / Negates (Paralysis, Poison)
-Mana Cost   : 70
-Damage Done : 375
-
-Wither is a spell that desiccates the victim, inflicting harm, and weakening it.
-This powerful spell will deal damage to the target instantly, and has a chance
-to affect the target with lasting afflictions.
-
-On a failed saving throw, the victim will be subjected to the effects of
-paralysis and poison.  Each effect receives its own save.
-
-See Also: SUBCLASSES DEFILER PARALYSIS POISON
-#
 "DUSK REQUIEM"
 
-Subclass Infidel: Level 5 (Anti-Paladin)
+Subclass Infidel: Level 4 (Anti-Paladin)
 
 Usage       : cast 'dusk requiem' <victim>
 Accumulative: No
@@ -7128,9 +7123,46 @@ combat, this spell is automatically cast with zero mana cost, inflicting half
 damage.
 
 Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
-points and mana equal to 10 x the number of shadows that existed at the time it
-expires.  For example, if the Infidel controls four shadows, this effect will
-grant 40 hit points and 40 mana when the 4th shadow's duration expires.
+points and mana equal to 10 x (the number of shadows that existed at the time it
+expires) / 2.  For example, if the Infidel controls four shadows, this effect
+will grant 80 hit points and 80 mana when the 4th shadow's duration expires.
+#
+WITHER
+
+Subclass Infidel: Level 5 (Anti-Paladin)
+
+Usage       : cast 'wither' <victim>
+Accumulative: Yes
+Duration    : Instantaneous / ~ 40 seconds (DoT) / Special (Negative Effects)
+Save        : None vs. Damage / Negates (Negative Effects)
+Mana Cost   : 75
+Damage Done : 350 / Special
+
+Wither is a spell that desiccates the victim, inflicting harm, and weakening it.
+
+This powerful spell deals damage to the target instantly, applies a damage
+over time (DoT) effect, and has a chance to affect the target with lasting
+afflictions.
+
+The damage over time effect is 75 damage inflicted approximately every 10
+seconds, for a duration of 40 seconds.  Multiple casts of Wither will refresh
+the damage over time effect to its maximum duration.
+
+This spell also applies a random effect to the target from the following list of
+negative conditions: blindness, chill touch, curse, paralysis or poison.
+
+Each effect is subject to its own saving throw.  There is a 25% chance that a
+second effect will be applied, or the same effect will be attempted again if the
+target made its saving throw.  Blindness has a duration of 2, chill touch has a
+duration of 6, and curse, paralysis and poison each have a duration equal to the
+level of the caster.
+
+If the target is immune to the chosen effect, the spell deals an additional 50
+damage instead.  Similarly, if all of the effects are already present on the
+target, Wither deals an additional 100 damage instead of applying a negative
+effect.
+
+See Also: SUBCLASSES INFIDEL BLINDNESS "CHILL TOUCH" CURSE PARALYSIS POISON
 #
 "DEMONIC THUNDER"
 

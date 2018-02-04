@@ -3977,8 +3977,6 @@ void qhit(CHAR *ch, CHAR *victim, int type)
 
 void blood_lust_action(CHAR *ch, CHAR *vict)
 {
-  int dmg = 0;
-
   if (!ch || !vict) return;
 
   int check = 20;
@@ -3990,6 +3988,8 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
   if (!chance(check)) return;
 
+  int dmg = 0;
+
   switch(number(1, 4))
   {
     case 1:
@@ -4000,7 +4000,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 60;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_PHYSICAL);
       break;
@@ -4012,7 +4014,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 40;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
       magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
@@ -4026,7 +4030,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 20;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;

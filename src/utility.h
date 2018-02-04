@@ -9,7 +9,7 @@
 
 typedef struct char_data CHAR;
 typedef struct obj_data OBJ;
-typedef struct room_data Room;
+typedef struct room_data RM;
 typedef struct enchantment_type_5 ENCH;
 typedef struct affected_type_5 AFF;
 typedef struct social_messg SOC;
@@ -141,6 +141,7 @@ int get_weapon_type(OBJ *obj);
 const char const * get_weapon_type_desc(OBJ *obj);
 
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
+int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_bit_from_mask(const int mask);
 
 void shuffle_int_array(int *array, size_t num_elems);
