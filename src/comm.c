@@ -2729,19 +2729,24 @@ int signal_room(int room, CHAR *ch,int cmd,char *arg)
 }
 
 void pulse_shadow_wraith(CHAR *ch) {
+  if (!ch) return;
+
   if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
 
-  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 1) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10)) {
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 1) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 11) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10))) {
     send_to_char("One of your shadows flickers and begins to fade from reality.\n\r", ch);
     act("One of $n's shadows flickers and begins to fade from reality.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
 
-  /* Dusk Requiem */
-  if (check_subclass(ch, SC_INFIDEL, 5)) {
-    if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) <= 0) || !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10)) {
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
+    /* Dusk Requiem */
+    if (check_subclass(ch, SC_INFIDEL, 5)) {
       if (GET_OPPONENT(ch)) {
         /* A bit of a hack here. Cast Dusk Requiem with half the caster's level to similate
-           half damage, rather than making a special function to do this. */
+            half damage, rather than making a special function to do this. */
         spell_dusk_requiem(GET_LEVEL(ch) / 2, ch, GET_OPPONENT(ch), 0);
         return;
       }
@@ -2774,11 +2779,10 @@ void pulse_shadow_wraith(CHAR *ch) {
         }
       }
     }
-  }
 
-  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) <= 0) || !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10)) {
     send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
     act("One of $n's shadows fades from reality and recedes back into the void.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
 }
 
@@ -2795,6 +2799,8 @@ void pulse_mantra(CHAR *ch) {
   int gain = 0;
   AFF *tmp_af = NULL;
   AFF *next_af = NULL;
+
+  if (!ch) return;
 
   for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
     next_af = tmp_af->next;
@@ -2859,6 +2865,8 @@ void pulse_mantra(CHAR *ch) {
 }
 
 void pulse_adrenaline_rush(CHAR *ch) {
+  if (!ch) return;
+
   if (check_subclass(ch, SC_BANDIT, 3) &&
       GET_HIT(ch) < GET_MAX_HIT(ch) &&
       GET_OPPONENT(ch)) {

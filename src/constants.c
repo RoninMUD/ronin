@@ -188,7 +188,7 @@ const char * const spell_wear_off_msg[] = {
   "Your sense of tranquility fades away.", /* 177 Tranquility */
   "!execute!",/*178*/
   "!tremor!", /*179*/
-  "You shadow dissipates.",/*180 shadow wraith*/
+  "", /* 180 Shadow Wraith */
   "!devastation!",/*181*/
   "The cloud of fire surrounding you dies out.",/*182*/
   "",/*183*/
