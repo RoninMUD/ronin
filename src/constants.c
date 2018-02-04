@@ -144,7 +144,7 @@ const char * const spell_wear_off_msg[] = {
   "!enchant armour!",
   "!disintegrate!",
   "Your head clears and you no longer feel confused.",
-  "", /* 136 Vampiric Touch */
+  "!vampiric touch!",
   "!searing orb!",
   "!clairvoyance!",
   "!firebreath!",
