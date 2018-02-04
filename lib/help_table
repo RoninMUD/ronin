@@ -7109,7 +7109,7 @@ See Also: SUBCLASSES DEFILER PARALYSIS POISON
 
 Subclass Infidel: Level 5 (Anti-Paladin)
 
-Usage       : cast 'dusk requiem' <victim.
+Usage       : cast 'dusk requiem' <victim>
 Accumulative: No
 Duration    : -
 Save        : -
