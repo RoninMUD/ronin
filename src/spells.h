@@ -181,7 +181,7 @@
 #define SKILL_SCAN                  153
 #define SPELL_MYSTIC_SWIFTNESS      154
 #define SPELL_LEGEND_LORE           155
-#define SPELL_UNUSED_156            156
+#define SKILL_HIDDEN_BLADE          156
 #define SPELL_UNUSED_157            157
 #define SPELL_UNUSED_158            158
 #define SPELL_UNUSED_159            159
@@ -274,7 +274,7 @@
 #define SPELL_SANCTIFY              244
 #define SKILL_BLITZ                 245
 #define SPELL_ORB_PROTECTION        246
-#define SKILL_UNUSED_247            247
+#define SPELL_DUSK_REQUIEM          247
 #define SPELL_FROSTBOLT             248
 #define SPELL_IRONSKIN              249
 #define SPELL_DISTORTION            250

@@ -424,6 +424,17 @@ int mana_gain(CHAR *ch) {
     }
   }
 
+  /* Bathed in Blood */
+  if (check_subclass(ch, SC_DEFILER, 4)) {
+    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
+      double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+      if (multi > 2.0) multi = 2.0;
+
+      gain *= multi;
+    }
+  }
+
   return gain;
 }
 
@@ -634,7 +645,18 @@ int hit_gain(CHAR *ch) {
   }
 
   if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-    gain = (gain * 12) / 10;
+    gain *= 1.2;
+  }
+
+  /* Bathed in Blood */
+  if (check_subclass(ch, SC_DEFILER, 4)) {
+    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
+      double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+      if (multi > 2.0) multi = 2.0;
+
+      gain *= multi;
+    }
   }
 
   return gain;

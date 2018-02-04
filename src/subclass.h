@@ -103,6 +103,8 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, O
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 
 extern int token_mob_time;
 

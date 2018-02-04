@@ -74,6 +74,7 @@ int check_sc_song_access(CHAR *ch, int s) {
 int check_sc_access(CHAR *ch, int skill)
 {
   if ((skill == SKILL_BLOCK) && (GET_CLASS(ch) == CLASS_NOMAD)) return check_subclass(ch, SC_RANGER, 3);
+  if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
 
   if (skill <= 165) return TRUE;
   if (GET_LEVEL(ch) >= LEVEL_SUP) return TRUE;
@@ -291,22 +292,19 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_FEINT:
       if (check_subclass(ch, SC_DEFILER, 3)) return TRUE;
       break;
-    case SPELL_WITHER:
-      if (check_subclass(ch, SC_DEFILER, 4)) return TRUE;
-      break;
     case SKILL_SHADOWSTEP:
       if (check_subclass(ch, SC_DEFILER, 5)) return TRUE;
       break;
     case SKILL_VICTIMIZE:
       if (check_subclass(ch, SC_INFIDEL, 2)) return TRUE;
       break;
-    case SPELL_RAGE:
+    case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 3)) return TRUE;
       break;
-    case SPELL_DEMONIC_THUNDER:
+    case SPELL_WITHER:
       if (check_subclass(ch, SC_INFIDEL, 4)) return TRUE;
       break;
-    case SPELL_SHADOW_WRAITH:
+    case SPELL_DUSK_REQUIEM:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
     case SPELL_REJUVENATION:

@@ -2728,6 +2728,64 @@ int signal_room(int room, CHAR *ch,int cmd,char *arg)
   return stop;
 }
 
+void pulse_shadow_wraith(CHAR *ch) {
+  if (!ch) return;
+
+  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
+
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 1) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 11) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10))) {
+    send_to_char("One of your shadows flickers and begins to fade from reality.\n\r", ch);
+    act("One of $n's shadows flickers and begins to fade from reality.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
+    /* Dusk Requiem */
+    if (check_subclass(ch, SC_INFIDEL, 5)) {
+      if (GET_OPPONENT(ch)) {
+        /* A bit of a hack here. Cast Dusk Requiem with half the caster's level to similate
+            half damage, rather than making a special function to do this. */
+        spell_dusk_requiem(GET_LEVEL(ch) / 2, ch, GET_OPPONENT(ch), 0);
+        return;
+      }
+      else {
+        int num_shadows_active = 0;
+
+        if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
+          /* Caster has 4 shadows. */
+          num_shadows_active = 4;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
+          /* Caster has 3 shadows. */
+          num_shadows_active = 3;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
+          /* Caster has 2 shadows. */
+          num_shadows_active = 2;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
+          /* Caster has 1 shadow. */
+          num_shadows_active = 1;
+        }
+
+        if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
+          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + (num_shadows_active * 10));
+        }
+
+        if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
+          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + (num_shadows_active * 10));
+        }
+      }
+    }
+
+    send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
+    act("One of $n's shadows fades from reality and recedes back into the void.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+}
+
 void pulse_mantra(CHAR *ch) {
   const int mantra_dispel_types[] = {
     SPELL_BLINDNESS,
@@ -2741,6 +2799,8 @@ void pulse_mantra(CHAR *ch) {
   int gain = 0;
   AFF *tmp_af = NULL;
   AFF *next_af = NULL;
+
+  if (!ch) return;
 
   for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
     next_af = tmp_af->next;
@@ -2805,6 +2865,8 @@ void pulse_mantra(CHAR *ch) {
 }
 
 void pulse_adrenaline_rush(CHAR *ch) {
+  if (!ch) return;
+
   if (check_subclass(ch, SC_BANDIT, 3) &&
       GET_HIT(ch) < GET_MAX_HIT(ch) &&
       GET_OPPONENT(ch)) {
@@ -2846,6 +2908,11 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
   }
 
   if (CHAR_REAL_ROOM(ch) == -1) return FALSE;
+
+  if (cmd == MSG_TICK && !IS_NPC(ch)) {
+    /* Shadow Wraith */
+    pulse_shadow_wraith(ch);
+  }
 
   if (cmd == MSG_MOBACT && !IS_NPC(ch)) {
     /* Mantra */

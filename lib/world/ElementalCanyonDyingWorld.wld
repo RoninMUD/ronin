@@ -1,11 +1,11 @@
 #19400
 An elaborate stone structure~
-   Everything around you has changed. The well worn path you were on moments
-ago is nowhere to be seen. You find yourself standing at the center of a large,
+   Everything around you has changed.  The well worn path you were on moments
+ago is nowhere to be seen.  You find yourself standing at the center of a large,
 polished, white stone surrounded by a ring of tall, gray columns. Each column
 is covered with hundreds, perhaps thousands of deeply incised diagrams and
-marking. The floor is so smooth, it almost glistens. It's all so overwhelming
-that you are only now realizing the world is oddly silent. There don't seem
+marking.  The floor is so smooth, it almost glistens.  It's all so overwhelming
+that you are only now realizing the world is oddly silent.  There don't seem
 to be any birds or insects anywhere, although you do see something flying
 in the distance.
 ~
@@ -22,10 +22,10 @@ S
 #19401
 The scree field~
    You are on a pile of loose stones at the base of a steep mountainside.
-Everything around you seems paler than it should be, as if seen through
-mist. Only there is no mist. The large, scree pile prevents you from seeing
-what lies ahead, but it looks like you could climb safely.
-To your west is an elaborate stone structure.
+Everything around you seems paler than it should be, as if seen through mist.
+Only there is no mist. The large, scree pile prevents you from seeing what lies
+ahead, but it looks like you could climb safely.  To your west is an elaborate
+stone structure.
 ~
 194 32768 5
 D0
@@ -45,7 +45,7 @@ S
 #19402
 The arete~
   You've made it to the top of the unstable stones that make up the scree field.
-The stone above you appears to be much more stable, but you still have a long 
+The stone above you appears to be much more stable, but you still have a long
 ways to go if you plan to climb to the top.
 ~
 194 32768 5
@@ -62,7 +62,7 @@ scree~
 S
 #19403
 Mountainside~
-The mountainside is eerily quiet.  The only sound comes from the small stones 
+The mountainside is eerily quiet.  The only sound comes from the small stones
 you send tumbling as you continue your climb.
 ~
 194 32768 5
@@ -75,18 +75,18 @@ D5
 ridge~
 11 -1 19402
 E
-bodies body dead~
-They look as if their necks have been broken and their flesh, chewed.~
-E
 heaps stones tombs~
 You are sure glad the YOU aren't under one of those piles!~
+E
+bodies body dead~
+They look as if their necks have been broken and their flesh, chewed.~
 S
 #19404
 A blind curve on the mountain~
-   This section of the mountain levels out a bit. You are nearly to the top.
+   This section of the mountain levels out a bit.  You are nearly to the top.
 From this height you can see a great distance, but there's nothing but pale,
-dead grass, and blackened, twisted trees as far as you can see.
-Above you see the final ascent.
+dead grass, and blackened, twisted trees as far as you can see.  Above you see
+the final ascent.
 ~
 194 32768 5
 D4
@@ -100,11 +100,11 @@ D5
 S
 #19405
 Vista~
-   This is a disappointing vista, overlooking a canyon. You see scorched
-pits in the western part of the canyon. Things look a little more normal
-to the northwest. You see extreme lightning damage to the northeast and 
-a pile of rubble that may have once been a cave entrance. The path
-descends to the north approaching another overlook.
+   This is a disappointing vista, overlooking a canyon.  You see scorched pits
+in the western part of the canyon.  Things look a little more normal to the
+northwest.  You see extreme lightning damage to the northeast and a pile of
+rubble that may have once been a cave entrance.  The path descends to the north
+approaching another overlook.
 ~
 194 32768 5
 D0
@@ -122,10 +122,10 @@ there have been many changes and new stuff added."~
 S
 #19406
 The overlook~
-   Something seems to live here after all. You see strange gray-green
-creatures the size of large bears wandering around the canyon. The
-hairless beasts occasionally break the silence with a grating bark. 
-A steep path descends into the canyon here.
+   Something seems to live here after all.  You see strange gray-green creatures
+the size of large bears wandering around the canyon.  The hairless beasts
+occasionally break the silence with a grating bark.  A steep path descends into
+the canyon here.
 ~
 194 32772 5
 D2
@@ -139,9 +139,8 @@ D5
 S
 #19407
 Entrance to the canyon~
-   The canyon is narrow, but seems to open up to the north. A steep 
-path, lined with small rocks and pale sickly plants, ascends out of the
-canyon here.
+   The canyon is narrow, but seems to open up to the north.  A steep path, lined
+with small rocks and pale sickly plants, ascends out of the canyon here.
 ~
 194 32768 5
 D0
@@ -155,10 +154,9 @@ D4
 S
 #19408
 The floor of the canyon~
-   The canyon floor seems to be heavily trafficked.  The stone is worn
-smooth here.  A few, scraggly trees are trying to grow here. They are 
-blackened and malformed like all the others. 
-The canyon continues north and east.
+   The canyon floor seems to be heavily trafficked.  The stone is worn smooth
+here.  A few, scraggly trees are trying to grow here.  They are blackened and
+malformed like all the others.  The canyon continues north and east.
 ~
 194 32768 5
 D0
@@ -172,12 +170,12 @@ D1
 S
 #19409
 Gateway to the canyon~
-   To the west, a path dips and winds among some soot stained pits.
-To the northeast, a path goes toward a river. Beyond that, towards the
-northeast and northwest, are rocky outcroppings which rise up from the
-canyon floor. To the east, there is a pile of rubble that looks like 
-it may have once been an entrance into the canyon wall. To the south,
-the path leads up, away, and out of the canyon.
+   To the west, a path dips and winds among some soot stained pits.  To the
+northeast, a path goes toward a river.  Beyond that, towards the northeast and
+northwest, are rocky outcroppings which rise up from the canyon floor.  To the
+east, there is a pile of rubble that looks like it may have once been an
+entrance into the canyon wall.  To the south, the path leads up, away, and out
+of the canyon.
 ~
 194 32768 5
 D0
@@ -199,9 +197,9 @@ D3
 S
 #19410
 The floor of the canyon~
-   The smooth floor of the canyon is littered with small stones and other 
-debris. The canyon floor extends north and west. To the east, a large 
-pile of stones block what may have once been the entrance to a cave.
+   The smooth floor of the canyon is littered with small stones and other
+debris.  The canyon floor extends north and west.  To the east, a large pile of
+stones block what may have once been the entrance to a cave.
 ~
 194 32768 5
 D0
@@ -209,7 +207,7 @@ D0
 ~
 0 -1 19413
 D1
-You see a small hole in the rubble you may be able to crawl through
+You see a small hole in the rubble you may be able to crawl through.
 ~
 hole~
 9 -1 19420
@@ -220,9 +218,9 @@ D3
 S
 #19411
 The floor of the canyon~
-   The canyon floor seems to be heavily trafficked.  The stone is worn
-smooth here. Dead brush lines the canyon wall here.
-The canyon continues north, east and south.
+   The canyon floor seems to be heavily trafficked.  The stone is worn smooth
+here.  Dead brush lines the canyon wall here.  The canyon continues north, east
+and south.
 ~
 194 32768 5
 D0
@@ -240,9 +238,9 @@ D2
 S
 #19412
 The floor of the canyon~
-   A few scraggly, trees and small bushes tried to grow here but failed. 
-They are blackened and malformed like all the others. The canyon floor 
-extends in all directions.
+   A few scraggly, trees and small bushes tried to grow here but failed.  They
+are blackened and malformed like all the others.  The canyon floor extends in
+all directions.
 ~
 194 32768 4
 D0
@@ -265,8 +263,8 @@ S
 #19413
 The floor of the canyon~
    Long, pale grass extends from the crevices at the base of the canyon wall.
-The canyon floor seems to be heavily trafficked.  The stone floor is worn 
-smooth. The canyon floor extends north, south, and west. A Path follows a
+The canyon floor seems to be heavily trafficked.  The stone floor is worn
+smooth.  The canyon floor extends north, south, and west.  A path follows a
 stream to the east.
 ~
 194 32768 5
@@ -289,9 +287,9 @@ D3
 S
 #19414
 The floor of the canyon~
-   The canyon floor seems to be heavily trafficked.  The stone is worn 
-smooth here. The canyon floor extends north, east, and south.  To the
-west you see heavy scorch marks.
+   The canyon floor seems to be heavily trafficked.  The stone is worn smooth
+here.  The canyon floor extends north, east, and south.  To the west you see
+heavy scorch marks.
 ~
 194 32768 5
 D0
@@ -313,9 +311,9 @@ D3
 S
 #19415
 The floor of the canyon~
-   A few scraggly, trees and small bushes tried to grow here but failed. 
-They are blackened and malformed like all the others. The canyon floor 
-extends in all directions.
+   A few scraggly, trees and small bushes tried to grow here but failed.  They
+are blackened and malformed like all the others.  The canyon floor extends in
+all directions.
 ~
 194 32768 4
 D0
@@ -337,8 +335,8 @@ D3
 S
 #19416
 The floor of the canyon~
-   The floor of the canyon is worn smooth. Dead brush lines the base 
-of the canyon wall. The Canyon floor extends north, south and west.
+   The floor of the canyon is worn smooth.  Dead brush lines the base of the
+canyon wall.  The Canyon floor extends north, south and west.
 ~
 194 32768 5
 D0
@@ -356,13 +354,13 @@ D3
 S
 #19417
 The floor of the canyon~
-The canyon walls are barren here. The stone beneath your feet has been
-worn smooth. The canyon floor extends east and south. You can climb a 
-rise in the canyon floor to the north.
+   The canyon walls are barren here.  The stone beneath your feet has been worn
+smooth.  The canyon floor extends east and south.  You can climb a rise in the
+canyon floor to the north.
 ~
 194 32768 5
 D0
-You can climb a rise in the canyon floor to the north
+You can climb a rise in the canyon floor to the north.
 ~
 rise~
 11 -1 19453
@@ -377,9 +375,8 @@ D2
 S
 #19418
 The floor of the canyon~
-   A few scraggly, trees tried to grow here but failed. They are 
-blackened and malformed like all the others. The canyon floor 
-extends east, south and west.
+   A few scraggly, trees tried to grow here but failed.  They are blackened and
+malformed like all the others.  The canyon floor extends east, south and west.
 ~
 194 32768 5
 D1
@@ -398,12 +395,12 @@ S
 #19419
 The floor of the canyon~
    Long, pale grass extends from the crevices at the base of the canyon wall.
-The canyon floor extends south and west. You can climb a rise in the 
-canyon floor to the north.
+The canyon floor extends south and west.  You can climb a rise in the canyon
+floor to the north.
 ~
 194 32768 5
 D0
-You can climb a rise in the canyon floor to the north
+You can climb a rise in the canyon floor to the north.
 ~
 rise~
 11 -1 19454
@@ -418,11 +415,10 @@ D3
 S
 #19420
 Dark cave~
-   There's a path winding east among some huge boulders, several 
-of which seem to be recently overturned. Massive furrows in the
-stone beneath you feet make finding stable footing difficult.
-It looks as though something that has grown too large for the
-cave's original opening has been trying to force it's way out.
+   There's a path winding east among some huge boulders, several of which seem
+to be recently overturned.  Massive furrows in the stone beneath you feet make
+finding stable footing difficult.  It looks as though something that has grown
+too large for the cave's original opening has been trying to force it's way out.
 ~
 194 32781 0
 D1
@@ -430,18 +426,18 @@ D1
 ~
 0 -1 19421
 D3
-You see a small hole in the rubble you may be able to crawl through
+You see a small hole in the rubble you may be able to crawl through.
 ~
 hole~
 9 -1 19410
 S
 #19421
 Darker caves~
-   The rock in the cave seems to consume light. You can barely see,
-even with a light source. Bones and beaks from the bear-like creatures
-outside litter the floor. You can't help but notice, bones thicker 
-than your leg have been sheered in half by some incredible force. The 
-cave seems to extend to the south and east.
+   The rock in the cave seems to consume light.  You can barely see, even with a
+light source. Bones and beaks from the bear-like creatures outside litter the
+floor.  You can't help but notice, bones thicker than your leg have been sheered
+in half by some incredible force.  The cave seems to extend to the south and
+east.
 ~
 194 32777 0
 D1
@@ -459,10 +455,10 @@ D3
 S
 #19422
 Darker caves~
-   The rock in the cave seems to consume light. You can barely see,
-even with a light source. If it weren't for the endless piles of
-bones reflecting light, you may not be able to see at all. The 
-cave seems to extend to the south and west.
+   The rock in the cave seems to consume light.  You can barely see, even with a
+light source.  If it weren't for the endless piles of bones reflecting light,
+you may not be able to see at all.  The cave seems to extend to the south and
+west.
 ~
 194 32777 0
 D2
@@ -476,10 +472,10 @@ D3
 S
 #19423
 Darker caves~
-   The rock in the cave seems to consume light. You can barely see,
-even with a light source. If it weren't for the endless piles of 
-bones reflecting light, you may not be able to see at all. The 
-cave seems to extend to the north, south, and east.
+   The rock in the cave seems to consume light.  You can barely see, even with a
+light source.  If it weren't for the endless piles of bones reflecting light,
+you may not be able to see at all.  The cave seems to extend to the north,
+south, and east.
 ~
 194 32777 0
 D0
@@ -497,10 +493,10 @@ D2
 S
 #19424
 Darker caves~
-   The rock in the cave seems to consume light. You can barely see,
-even with a light source. If it weren't for the endless piles of
-bones reflecting light, you may not be able to see at all. The
-cave seems to extend to the north, south, and west.
+   The rock in the cave seems to consume light.  You can barely see, even with a
+light source.  If it weren't for the endless piles of bones reflecting light,
+you may not be able to see at all.  The cave seems to extend to the north,
+south, and west.
 ~
 194 32777 0
 D0
@@ -518,12 +514,11 @@ D3
 S
 #19425
 Darkest caves~
-   The rock in the cave seems to consume light. Even magical light
-sources only illuminate about a foot ahead of you. You suddenly 
-realize the sloped floor has descended significantly, but you hadn't
-noticed due to the stifling darkness. You can no longer see them
-but the crunching beneath you feet tells you bones continue to
-litter the floor.
+   The rock in the cave seems to consume light.  Even magical light sources only
+illuminate about a foot ahead of you.  You suddenly realize the sloped floor has
+descended significantly, but you hadn't noticed due to the stifling darkness.
+You can no longer see them but the crunching beneath you feet tells you bones
+continue to litter the floor.
 ~
 194 32777 0
 D0
@@ -537,12 +532,11 @@ D1
 S
 #19426
 Darkest caves~
-   The rock in the cave seems to consume light. Even magical light
-sources only illuminate about a foot ahead of you. You suddenly 
-realize the sloped floor has descended significantly, but you hadn't
-noticed due to the stifling darkness. You can no longer see them
-but the crunching beneath you feet tells you bones continue to 
-litter the floor.
+   The rock in the cave seems to consume light.  Even magical light sources only
+illuminate about a foot ahead of you.  You suddenly realize the sloped floor has
+descended significantly, but you hadn't noticed due to the stifling darkness.
+You can no longer see them but the crunching beneath you feet tells you bones
+continue to litter the floor.
 ~
 194 32777 0
 D0
@@ -560,10 +554,9 @@ D3
 S
 #19427
 The back of the cave~
-   The rock in the cave seems to consume light. Even magical light
-sources only illuminate about a foot ahead of you. You can no 
-longer see them but the crunching beneath you feet tells you 
-bones continue to litter the floor.
+   The rock in the cave seems to consume light.  Even magical light sources only
+illuminate about a foot ahead of you.  You can no longer see them but the
+crunching beneath you feet tells you bones continue to litter the floor.
 ~
 194 32777 0
 D3
@@ -572,16 +565,15 @@ D3
 0 -1 19426
 E
 marble throne~
-The ruler notices your stare, and doesn't like it one bit!  The whole
-earth seems to shake with his emotion.
+The ruler notices your stare, and doesn't like it one bit!  The whole earth
+seems to shake with his emotion.
 ~
 S
 #19428
 By the stream~
-   You see a stream to the north. The water is surprisingly 
-clear and seems to be completely devoid of life. There's 
-no sign of fish, a tadpole, or even algae anywhere you look.
-To the west you see a T-intersection.
+   You see a stream to the north.  The water is surprisingly clear and seems to
+be completely devoid of life.  There's no sign of fish, a tadpole, or even algae
+anywhere you look.  To the west you see a T-intersection.
 ~
 194 32772 3
 D0
@@ -595,9 +587,8 @@ D3
 S
 #19429
 In the stream~
-   You are standing in clear, knee deep water. A large pond 
-stretches out to the north. The stream goes south before
-disappearing into the canyon wall.
+   You are standing in clear, knee deep water.  A large pond stretches out to
+the north.  The stream goes south before disappearing into the canyon wall.
 ~
 194 32768 6
 D0
@@ -611,10 +602,10 @@ D2
 S
 #19430
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond extends north and east from here. To the
-south a stream leads back into the main section of the canyon.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond extends north and east from here.  To the south a stream leads
+back into the main section of the canyon.
 ~
 194 32768 6
 D0
@@ -632,9 +623,9 @@ D2
 S
 #19431
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond extends north, east, and west.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond extends north, east, and west.
 ~
 194 32768 6
 D0
@@ -652,9 +643,9 @@ D3
 S
 #19432
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond continues north and west.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond continues north and west.
 ~
 194 32768 6
 D0
@@ -668,10 +659,10 @@ D3
 S
 #19433
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond stretches far to the east. There's a 
-small stream leading out of the pond to the south.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond stretches far to the east.  There's a small stream leading out
+of the pond to the south.
 ~
 194 32768 6
 D1
@@ -685,9 +676,9 @@ D2
 S
 #19434
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond continues east, west, and south.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond continues east, west, and south.
 ~
 194 32768 6
 D1
@@ -705,9 +696,9 @@ D3
 S
 #19435
 A large pond in the canyon~
-   The water is crystal clear here. You can easily see the bottom, three
-to four feet below you, but there's still no indication that anything
-lives in this water. The pond continues south and west.
+   The water is crystal clear here.  You can easily see the bottom, three to
+four feet below you, but there's still no indication that anything lives in this
+water.  The pond continues south and west.
 ~
 194 32768 6
 D2
@@ -721,10 +712,9 @@ D3
 S
 #19437
 A smouldering path~
-You tread carefully along a path which dips and turns among 
-miniature volcanoes, which once spewed lava in rivers creating
-odd stone formations. The ground is warm but not altogether
-dangerous. The path extends east and south.
+You tread carefully along a path which dips and turns among miniature volcanoes,
+which once spewed lava in rivers creating odd stone formations.  The ground is
+warm but not altogether dangerous.  The path extends east and south.
 ~
 194 32772 5
 D1
@@ -738,10 +728,9 @@ D2
 S
 #19438
 A smouldering path~
-   You tread carefully along a path which dips and turns among
-pits of fire and beds of coal. The ground to the west has been
-obscured by an old lava flow that's left the ground rippled 
-and uneven.
+   You tread carefully along a path which dips and turns among pits of fire and
+beds of coal.  The ground to the west has been obscured by an old lava flow
+that's left the ground rippled and uneven.
 ~
 194 32768 5
 D0
@@ -755,9 +744,9 @@ D3
 S
 #19439
 An old lava flow~
-   The small gnarled trees and sickly looking plants that make up the 
-sparse brush found in other parts of the canyon, burned away long 
-ago. The cooled lava flow beneath your feet continues north and east.
+   The small gnarled trees and sickly looking plants that make up the sparse
+brush found in other parts of the canyon, burned away long ago.  The cooled lava
+flow beneath your feet continues north and east.
 ~
 194 32768 5
 D0
@@ -771,10 +760,9 @@ D1
 S
 #19440
 An old lava flow~
-    The small gnarled trees and sickly looking plants that make 
-up the sparse brush found in other parts of the canyon, burned away 
-long ago. The cooled lava flow beneath your feet 
-continues north and west.
+    The small gnarled trees and sickly looking plants that make up the sparse
+brush found in other parts of the canyon, burned away long ago. The cooled lava
+flow beneath your feet continues north and west.
 ~
 194 32768 5
 D0
@@ -788,11 +776,10 @@ D3
 S
 #19441
 An old lava flow~
-   The small gnarled trees and sickly looking plants that make 
-up the sparse vegetation found in other parts of the canyon, 
-burned away long ago. The cooled lava flow beneath continues 
-north, south, and east. You feel intense heat pouring
-in from a DEADLY inferno to the west. 
+   The small gnarled trees and sickly looking plants that make up the sparse
+vegetation found in other parts of the canyon, burned away long ago.  The cooled
+lava flow beneath continues north, south, and east.  You feel intense heat
+pouring in from a DEADLY inferno to the west.
 ~
 194 32768 5
 D0
@@ -814,11 +801,10 @@ D3
 S
 #19442
 An old lava flow~
-   The small gnarled trees and sickly looking plants that make up 
-the sparse brush found in other parts of the canyon, burned away 
-long ago. The cooled lava flow beneath your feet continues 
-north, south, and west. To the east a path winds 
-around some largely inert fire pits.
+   The small gnarled trees and sickly looking plants that make up the sparse
+brush found in other parts of the canyon, burned away long ago.  The cooled lava
+flow beneath your feet continues north, south, and west.  To the east a path
+winds around some largely inert fire pits.
 ~
 194 32768 5
 D0
@@ -840,10 +826,9 @@ D3
 S
 #19443
 An old lava flow~
-   The small gnarled trees and sickly looking plants that make up 
-the sparse brush found in other parts of the canyon, burned away 
-long ago. The cooled lava flow beneath your feet 
-continues south and east.
+   The small gnarled trees and sickly looking plants that make up the sparse
+brush found in other parts of the canyon, burned away long ago.  The cooled lava
+flow beneath your feet continues south and east.
 ~
 194 32768 5
 D1
@@ -857,10 +842,9 @@ D2
 S
 #19444
 An old lava flow~
-   The small gnarled trees and sickly looking plants that make up 
-the sparse brush found in other parts of the canyon, burned away 
-long ago. The cooled lava flow beneath your feet 
-continues south and west.
+   The small gnarled trees and sickly looking plants that make up the sparse
+brush found in other parts of the canyon, burned away long ago.  The cooled lava
+flow beneath your feet continues south and west.
 ~
 194 32768 5
 D2
@@ -874,10 +858,9 @@ D3
 S
 #19445
 The fire chamber~
-   The whistle of gas forcing it's way out of the chamber walls
-combined with the roar of the flames consuming it deafen you as
-you enter the fiery chamber. Bubbling lava is exposed through
-a number of openings in the crust beneath you. 
+   The whistle of gas forcing it's way out of the chamber walls combined with
+the roar of the flames consuming it deafen you as you enter the fiery chamber.
+Bubbling lava is exposed through a number of openings in the crust beneath you.
 ~
 194 98564 0
 D1
@@ -887,10 +870,9 @@ D1
 S
 #19446
 A lightning scared pathway in the canyon~
-   The canyon walls have a deep red hue. The rock here is scorched.
-Sections of rock seem to have been blasted away by lightning. To 
-the north there is a sunken in area. A path is worn in the 
-stone floor, leading to the east.
+   The canyon walls have a deep red hue.  The rock here is scorched.  Sections
+of rock seem to have been blasted away by lightning.  To the north there is a
+sunken in area.  A path is worn in the stone floor, leading to the east.
 ~
 194 32768 4
 D0
@@ -904,9 +886,9 @@ D1
 S
 #19447
 A bowl like depression in the canyon~
-   The canyon walls have a deep red hue. The rock here is scorched,
-and sections seem to have been blasted away by lightning. A bowl
-like depression in the stone floor extends to the north and east.
+   The canyon walls have a deep red hue.  The rock here is scorched, and
+sections seem to have been blasted away by lightning.  A bowl like depression in
+the stone floor extends to the north and east.
 ~
 194 32768 4
 D0
@@ -920,11 +902,10 @@ D1
 S
 #19448
 A bowl like depression in the canyon~
-   The canyon walls have a deep red hue. The rock here is scorched,
-and sections seem to have been blasted away by lightning. To the
-south you see a narrow pathway back to the main section of the
-canyon. A bowl like depression in the stone floor extends to
-the north and west.
+   The canyon walls have a deep red hue.  The rock here is scorched, and
+sections seem to have been blasted away by lightning.  To the south you see a
+narrow pathway back to the main section of the canyon.  A bowl like depression
+in the stone floor extends to the north and west.
 ~
 194 32768 4
 D0
@@ -942,9 +923,9 @@ D3
 S
 #19449
 A bowl like depression in the canyon~
-   The canyon walls have a deep red hue. The rock here is scorched,
-and sections seem to have been blasted away by lightning. A bowl 
-like depression in the stone floor extends to the south and east.
+   The canyon walls have a deep red hue.  The rock here is scorched, and
+sections seem to have been blasted away by lightning.  A bowl like depression in
+the stone floor extends to the south and east.
 ~
 194 32768 4
 D1
@@ -958,11 +939,10 @@ D2
 S
 #19450
 A bowl like depression in the canyon~
-   The canyon walls have a deep red hue. The rock here is scorched,
-and sections seem to have been blasted away by lightning. To the
-east you see a narrow fork in the canyon that seems to be a dead 
-end. A bowl like depression in the stone floor extends to
-the south and west.
+   The canyon walls have a deep red hue.  The rock here is scorched, and
+sections seem to have been blasted away by lightning.  To the east you see a
+narrow fork in the canyon that seems to be a dead end. A bowl like depression in
+the stone floor extends to the south and west.
 ~
 194 32768 4
 D1
@@ -980,11 +960,10 @@ D3
 S
 #19451
 A dead end in the canyon~
-   You are in a small alcove. The narrow entrance seems to
-be small enough to prevent the strange bear like creatures from
-entering. The walls here share the same deep red hue as the
-bowl like depression outside however they have been spared the
-lightning damage.
+   You are in a small alcove.  The narrow entrance seems to be small enough to
+prevent the strange bear like creatures from entering.  The walls here share the
+same deep red hue as the bowl like depression outside however they have been
+spared the lightning damage.
 ~
 194 32772 4
 D3
@@ -994,8 +973,8 @@ D3
 S
 #19453
 Mesa west~
-   A well worn path continues to the west. The mesa continues to 
-the east.  Or you can climb down to the canyon floor to the south.
+   A well worn path continues to the west.  The mesa continues to the east.  Or
+you can climb down to the canyon floor to the south.
 ~
 194 32768 4
 D1
@@ -1014,8 +993,8 @@ D3
 S
 #19454
 Mesa east~
-   The mesa continues to the west. Or you can climb down to the 
-canyon floor to the south.
+   The mesa continues to the west.  Or you can climb down to the canyon floor to
+the south.
 ~
 194 32768 4
 D2
@@ -1030,10 +1009,10 @@ D3
 S
 #19455
 Nearing the Base of the Mountain~
-   The mountain descends to the west. To your east is the 
-elaborately carved stone structure that brought you to this place.
-You hear a series of short guttural barks from somewhere on the
-mountain. It's difficult to tell where they came from.
+   The mountain descends to the west.  To your east is the elaborately carved
+stone structure that brought you to this place.  You hear a series of short
+guttural barks from somewhere on the mountain.  It's difficult to tell where
+they came from.
 ~
 194 32768 5
 D0
@@ -1055,10 +1034,10 @@ D3
 S
 #19456
 Lost On The Mountain~
-   Lose dirt and stones shift beneath your feet as you weave 
-your way through the boulders scattered along the side of the
-mountain. The dead brush and short twisted black trees 
-littering the mountainside do little to keep things in place.
+   Lose dirt and stones shift beneath your feet as you weave your way through
+the boulders scattered along the side of the mountain.  The dead brush and short
+twisted black trees littering the mountainside do little to keep things in
+place.
 ~
 194 32768 5
 D0
@@ -1068,10 +1047,10 @@ D0
 S
 #19457
 Lost On The Mountain~
-   Lose dirt and stones shift beneath your feet as you weave
-your way through the boulders scattered along the side of the
-mountain. The dead brush and short twisted black trees 
-littering the mountainside do little to keep things in place.
+   Lose dirt and stones shift beneath your feet as you weave your way through
+the boulders scattered along the side of the mountain.  The dead brush and short
+twisted black trees littering the mountainside do little to keep things in
+place.
 ~
 194 32768 5
 D1
@@ -1081,10 +1060,10 @@ D1
 S
 #19458
 Lost On The Mountain~
-   Lose dirt and stones shift beneath your feet as you weave
-your way through the boulders scattered along the side of the
-mountain. The dead brush and short twisted black trees 
-littering the mountainside do little to keep things in place.
+   Lose dirt and stones shift beneath your feet as you weave your way through
+the boulders scattered along the side of the mountain.  The dead brush and
+short twisted black trees littering the mountainside do little to keep things
+in place.
 ~
 194 32768 5
 D1
@@ -1094,10 +1073,10 @@ D1
 S
 #19459
 Lost On The Mountain~
-   Lose dirt and stones shift beneath your feet as you weave
-your way through the boulders scattered along the side of the
-mountain. The dead brush and short twisted black trees 
-littering the mountainside do little to keep things in place.
+   Lose dirt and stones shift beneath your feet as you weave your way through
+the boulders scattered along the side of the mountain. The dead brush and short
+twisted black trees littering the mountainside do little to keep things in
+place.
 ~
 194 32768 5
 D1
@@ -1107,9 +1086,8 @@ D1
 S
 #19460
 Winding Through Boulders~
-   Lose dirt and stones shift beneath your feet as you weave
-your way through the boulders scattered along the side of the
-mountain.
+   Lose dirt and stones shift beneath your feet as you weave your way through
+the boulders scattered along the side of the mountain.
 ~
 194 32768 5
 D0
@@ -1127,9 +1105,8 @@ D2
 S
 #19461
 Route Around the North Side of the Mountain~
-   A rock slide has left rocks of all sizes densely packed against
-the mountainside allowing for easy travel around this section
-of mountain.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for easy travel around this section of mountain.
 ~
 194 32768 5
 D1
@@ -1143,9 +1120,8 @@ D2
 S
 #19462
 Route Around the North Side of the Mountain~
-   A rock slide has left rocks of all sizes densely packed against
-the mountainside allowing for easy travel around this section
-of mountain.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for easy travel around this section of mountain.
 ~
 194 32768 5
 D0
@@ -1159,9 +1135,8 @@ D3
 S
 #19463
 Route Around the North Side of the Mountain~
-   A rock slide has left rocks of all sizes densely packed against 
-the mountainside allowing for easy travel around this section
-of mountain. 
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for easy travel around this section of mountain.
 ~
 194 32768 5
 D1
@@ -1175,9 +1150,9 @@ D2
 S
 #19464
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.
 ~
 194 32768 5
 D1
@@ -1191,9 +1166,9 @@ D3
 S
 #19465
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.
 ~
 194 32768 5
 D0
@@ -1207,9 +1182,9 @@ D3
 S
 #19466
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.
 ~
 194 32768 5
 D1
@@ -1223,8 +1198,8 @@ D2
 S
 #19467
 The Waterfall~
-   A beautiful waterfall passes over you leaving you in a fine
-mist as the water rages towards the ground at the base of the mountain.
+   A beautiful waterfall passes over you leaving you in a fine mist as the
+water rages towards the ground at the base of the mountain.
 ~
 194 32768 5
 D0
@@ -1238,9 +1213,9 @@ D3
 S
 #19468
 Traversing the Steeply Sloping Mountainside~
-   A few loose stones tumble down the mountainside as the dirt
-and rock shifts beneath. The diseased brush you've grown accustomed
-to is no where to be seen on this section of the mountain.
+   A few loose stones tumble down the mountainside as the dirt and rock shifts
+beneath.  The diseased brush you've grown accustomed to is no where to be seen
+on this section of the mountain.
 ~
 194 32768 5
 D1
@@ -1254,9 +1229,9 @@ D2
 S
 #19469
 Traversing the Steeply Sloping Mountainside~
-   A few loose stones tumble down the mountainside as the dirt
-and rock shifts beneath. The diseased brush you've grown accustomed 
-to is no where to be seen on this section of the mountain.
+   A few loose stones tumble down the mountainside as the dirt and rock shifts
+beneath.  The diseased brush you've grown accustomed to is no where to be seen
+on this section of the mountain.
 ~
 194 32768 5
 D2
@@ -1270,9 +1245,9 @@ D3
 S
 #19470
 Traversing the Steeply Sloping Mountainside~
-   A few loose stones tumble down the mountainside as the dirt
-and rock shifts beneath. The diseased brush you've grown accustomed 
-to is no where to be seen on this section of the mountain.
+   A few loose stones tumble down the mountainside as the dirt and rock shifts
+beneath.  The diseased brush you've grown accustomed to is no where to be seen
+on this section of the mountain.
 ~
 194 32768 5
 D0
@@ -1290,9 +1265,9 @@ D2
 S
 #19471
 A Stable Ridge~
-   The ledge is just wide enough to stand on. There are a few stray 
-stones scattered about, but it's mostly clear of debris. To the 
-north, the ledge narrows before wrapping around a stone column. 
+   The ledge is just wide enough to stand on.  There are a few stray stones
+scattered about, but it's mostly clear of debris.  To the north, the ledge
+narrows before wrapping around a stone column.
 ~
 194 32768 5
 D0
@@ -1306,11 +1281,10 @@ D3
 S
 #19472
 Rounding a Large Stone Column~
-   The ground far bellow is covered with small patches of 
-pale grass, dwarfed malformed trees, and dead brush. You can't
-help but notice the plants, and sharp jagged rocks you will
-land on if you slip from the narrow ledge you're following
-around the stone column.
+   The ground far bellow is covered with small patches of pale grass, dwarfed
+malformed trees, and dead brush.  You can't help but notice the plants, and
+sharp jagged rocks you will land on if you slip from the narrow ledge you're
+following around the stone column.
 ~
 194 32768 5
 D1
@@ -1324,11 +1298,10 @@ D2
 S
 #19473
 Rounding a Large Stone Column~
-   The ground far bellow is covered with small patches of 
-pale grass, dwarfed malformed trees, and dead brush. You can't
-help but notice the plants, and sharp jagged rocks you will 
-land on if you slip from the narrow ledge you're following
-around the stone column.
+   The ground far bellow is covered with small patches of pale grass, dwarfed
+malformed trees, and dead brush.  You can't help but notice the plants, and
+sharp jagged rocks you will land on if you slip from the narrow ledge you're
+following around the stone column.
 ~
 194 32768 5
 D2
@@ -1342,10 +1315,9 @@ D3
 S
 #19474
 Traversing a Gradually Sloping Mountainside~
-   Lose dirt and stones shift beneath you as you make 
-your way across the side of the mountain. Small patches of
-dead brush and pale grass littering the mountainside 
-around you.
+   Lose dirt and stones shift beneath you as you make your way across the side
+of the mountain.  Small patches of dead brush and pale grass littering the
+mountainside around you.
 ~
 194 32768 5
 D0
@@ -1359,10 +1331,9 @@ D1
 S
 #19475
 Traversing a Gradually Sloping Mountainside~
-   Lose dirt and stones shift beneath your feet as you make 
-your way across the side of the mountain. Small patches of
-dead brush and pale grass littering the mountainside 
-around you.
+   Lose dirt and stones shift beneath your feet as you make your way across
+the side of the mountain.  Small patches of dead brush and pale grass
+littering the mountainside around you.
 ~
 194 32768 5
 D1
@@ -1376,10 +1347,9 @@ D3
 S
 #19476
 Traversing a Gradually Sloping Mountainside~
-   Lose dirt and stones shift beneath your feet as you make 
-your way across the side of the mountain. Small patches of
-dead brush and pale grass littering the mountainside 
-around you.
+   Lose dirt and stones shift beneath your feet as you make your way across
+the side of the mountain.  Small patches of dead brush and pale grass littering
+the mountainside around you.
 ~
 194 32768 5
 D2
@@ -1393,9 +1363,8 @@ D3
 S
 #19477
 A Narrow Gulch~
-A few stunted black trees pock the upper edges of the gulch. The
-gulch cutting it's way back into the mountain is quite narrow and 
-easy to cross.
+A few stunted black trees pock the upper edges of the gulch.  The gulch cutting
+it's way back into the mountain is quite narrow and easy to cross.
 ~
 194 32768 5
 D0
@@ -1413,10 +1382,9 @@ D2
 S
 #19478
 A Thicket of Disfigured Trees~
-   Oddly shaped knee high trees are loosely packed together on this
-gently sloped bit of mountainside. The black trees leave orange sap
-on your legs as you make your way through the collection of thumb
-thick trunks.
+   Oddly shaped knee high trees are loosely packed together on this gently
+sloped bit of mountainside.  The black trees leave orange sap on your legs as
+you make your way through the collection of thumb thick trunks.
 ~
 194 32768 5
 D2
@@ -1430,10 +1398,9 @@ D3
 S
 #19479
 A Thicket of Disfigured Trees~
-   Oddly shaped knee high trees are loosely packed together on this
-gently sloped bit of mountainside. The black trees leave orange sap
-on your legs as you make your way through the collection of thumb
-thick trunks.
+   Oddly shaped knee high trees are loosely packed together on this gently
+sloped bit of mountainside.  The black trees leave orange sap on your legs as
+you make your way through the collection of thumb thick trunks.
 ~
 194 32768 5
 D0
@@ -1447,10 +1414,9 @@ D2
 S
 #19480
 A Pile of Dense Rubble~
-   A rock slide has left rocks of all sizes densely packed against
-the mountainside allowing for an easy traverse north to a sickly 
-looking thicket, or south to a gully that seems small enough to
-cross safely.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for an easy traverse north to a sickly looking thicket,
+or south to a gully that seems small enough to cross safely.
 ~
 194 32768 5
 D0
@@ -1464,9 +1430,9 @@ D1
 S
 #19481
 A Pile of Dense Rubble~
-   A rock slide has left rocks of all sizes densely packed against 
-the mountainside allowing for an easy traverse north to more rubble,
-or south to a gully that seems small enough to cross safely.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for an easy traverse north to more rubble, or south to a
+gully that seems small enough to cross safely.
 ~
 194 32768 5
 D2
@@ -1480,10 +1446,9 @@ D3
 S
 #19482
 A Small Gully~
-   The gully is packed with debris from a rock slide making it a 
-shadow of it's former size. You see a sheltered cavity to the west
-housing some kind of structure. You see more rock from the slide 
-both north and south.
+   The gully is packed with debris from a rock slide making it a shadow of its
+former size.  You see a sheltered cavity to the west housing some kind of
+structure.  You see more rock from the slide both north and south.
 ~
 194 32768 5
 D0
@@ -1501,9 +1466,9 @@ D3
 S
 #19483
 A Pile of Dense Rubble~
-   A rock slide has left rocks of all sizes densely packed against 
-the mountainside allowing for an easy traverse south to more rubble,
-or north to a gully that seems small enough to cross safely.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for an easy traverse south to more rubble, or north to a
+gully that seems small enough to cross safely.
 ~
 194 32768 5
 D0
@@ -1517,11 +1482,10 @@ D2
 S
 #19484
 A Pile of Dense Rubble~
-   A rock slide has left rocks of all sizes densely packed against
-the mountainside allowing for an easy traverse south to the meadow,
-or north to more rubble. To the west you see a sheltered cavity in 
-the mountainside that doesn't seem to have been affected by the
-partial claps of the mountainside.
+   A rock slide has left rocks of all sizes densely packed against the
+mountainside allowing for an easy traverse south to the meadow, or north to more
+rubble.  To the west you see a sheltered cavity that doesn't seem to have been
+affected by the partial claps of the mountainside.
 ~
 194 32768 5
 D0
@@ -1539,9 +1503,9 @@ D3
 S
 #19485
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.
 ~
 194 32768 5
 D0
@@ -1555,9 +1519,9 @@ D1
 S
 #19486
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.
 ~
 194 32768 5
 D2
@@ -1571,10 +1535,10 @@ D3
 S
 #19487
 A Blight Stricken Meadow~
-   Pale sickly looking grass is mixed in with small oozing shrubs
-and twisted, black knee high trees. The puss like substance leaking
-from the shrubs has a strong smell that unsettles your stomach. To
-the south you see a narrow ledge that wraps around a stone column.
+   Pale sickly looking grass is mixed in with small oozing shrubs and twisted,
+black knee high trees.  The puss like substance leaking from the shrubs has a
+strong smell that unsettles your stomach.  To the south you see a narrow ledge
+that wraps around a stone column.
 ~
 194 32768 5
 D0
@@ -1592,12 +1556,11 @@ D3
 S
 #19488
 A Ledge on the South Side of the Mountain~
-   The ledge is just wide enough to stand on. There are a few stray 
-stones and some unfamiliar animal bones scattered about. To the 
-south, the ledge wraps around a stone column. To the west you see
-a cavity in the stone column, as well as more bones. To the north
-you see a sickly looking meadow on a gently sloped section of
-the mountain.
+   The ledge is just wide enough to stand on.  There are a few stray stones and
+some unfamiliar animal bones scattered about.  To the south, the ledge wraps
+around a stone column.  To the west you see a cavity in the stone column, as
+well as more bones.  To the north you see a sickly looking meadow on a gently
+sloped section of the mountain.
 ~
 194 32768 5
 D0
@@ -1615,9 +1578,9 @@ D3
 S
 #19489
 A Ledge on the South Side of the Mountain~
-   The ledge is wider here. There are a few stray stones scattered
-about including a large bolder near the edge but the ledge is largely
-clear of debris. The ledge wraps around a stone column in both directions.
+   The ledge is wider here.  There are a few stray stones scattered about
+including a large bolder near the edge but the ledge is largely clear of debris.
+The ledge wraps around a stone column in both directions.
 ~
 194 32768 5
 D0
@@ -1631,8 +1594,8 @@ D3
 S
 #19490
 A Ledge on the South Side of the Mountain~
-   There are a few stray stones on the ledge, but it's largely
-clear of debris. The ledge wraps around a stone column to the east.
+   There are a few stray stones on the ledge, but it's largely clear of debris.
+The ledge wraps around a stone column to the east.
 ~
 194 32768 5
 D1
@@ -1646,9 +1609,9 @@ D2
 S
 #19491
 Approaching a Narrow Ledge~
-   The ground is covered with rocks of all sizes. Small patches
-of pale grass, dwarfed malformed trees, and dead brush dot the
-hillside. You see a sturdy but narrow ledge to the north.
+   The ground is covered with rocks of all sizes.  Small patches of pale grass,
+dwarfed malformed trees, and dead brush dot the hillside.  You see a sturdy but
+narrow ledge to the north.
 ~
 194 32768 5
 D0
@@ -1662,9 +1625,8 @@ D3
 S
 #19492
 Scrambling Around the Mountain~
-   Lose gravel slides down the side of the mountain past small 
-patches of diseased looking brush as you struggle to find 
-stable footing.
+   Lose gravel slides down the side of the mountain past small patches of
+diseased looking brush as you struggle to find stable footing.
 ~
 194 32768 5
 D0
@@ -1678,9 +1640,9 @@ D1
 S
 #19493
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in 
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D1
@@ -1690,9 +1652,9 @@ D1
 S
 #19494
 A Nest in the Mountainside~
-   A nest large enough for a horse is built into a cavity in 
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D1
@@ -1702,9 +1664,9 @@ D1
 S
 #19495
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in 
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D1
@@ -1714,9 +1676,9 @@ D1
 S
 #19496
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in 
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D1
@@ -1726,9 +1688,9 @@ D1
 S
 #19497
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D0
@@ -1738,9 +1700,9 @@ D0
 S
 #19498
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in 
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D0
@@ -1750,9 +1712,9 @@ D0
 S
 #19499
 A Nest on the Side of the Mountain~
-   A nest large enough for a horse is built into a cavity in
-the side of the mountain. The unfamiliar bones of dozens of
-animals that were clearly larger than you decorate the area.
+   A nest large enough for a horse is built into a cavity in the side of the
+mountain.  The unfamiliar bones of dozens of animals that were clearly larger
+than you decorate the area.
 ~
 194 32768 5
 D3

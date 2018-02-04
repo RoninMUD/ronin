@@ -1899,7 +1899,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
     }
 
-    /* Infidel SC3: Rage */
+    /* Rage */
     if (!IS_AFFECTED(ch, AFF_FURY) &&
         affected_by_spell(ch, SPELL_RAGE)) {
       dmg = lround(dmg * 1.5);
@@ -2986,12 +2986,16 @@ bool try_hit(CHAR *ch, CHAR *victim)
 
   if (!ch || !victim) return FALSE;
 
-  if (!AWAKE(victim) ||
-      IS_AFFECTED(victim, AFF_FURY) ||
-      affected_by_spell(victim, SKILL_HOSTILE) ||
-      (affected_by_spell(victim, SPELL_RAGE) && chance(50)))
-  {
-    return TRUE;
+  if (!AWAKE(victim)) return TRUE;
+  if (IS_AFFECTED(victim, AFF_FURY)) return TRUE;
+  if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
+  if (affected_by_spell(victim, SPELL_RAGE)) {
+    if (affected_by_spell(victim, SPELL_DESECRATE)) {
+      if (chance(20)) return TRUE;
+    }
+    else {
+      if (chance(50)) return TRUE;
+    }
   }
 
   check = number(1, 20);
@@ -2999,7 +3003,7 @@ bool try_hit(CHAR *ch, CHAR *victim)
   if (check == 1) return FALSE; // 1 always results in a miss.
   else if (check == 20) return TRUE; // 20 always results in a hit.
 
-  if (compute_thaco(ch) - check > (compute_ac(victim) / 10)) return FALSE;
+  if ((compute_thaco(ch) - check) > (compute_ac(victim) / 10)) return FALSE;
 
   return TRUE;
 }
@@ -3741,29 +3745,23 @@ void hit(CHAR *ch, CHAR *victim, int type)
 
   if (affected_by_spell(ch, SPELL_SHADOW_WRAITH))
   {
-    dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-    if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
-
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 60)
-    {
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
     }
 
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 40)
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1))
     {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
     }
 
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 20)
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2))
     {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
+    }
 
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3))
+    {
+      dhit(ch, victim, SPELL_SHADOW_WRAITH);
     }
   }
 
@@ -3983,7 +3981,16 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
   if (!ch || !vict) return;
 
-  switch(number(1, 20))
+  int check = 20;
+
+  /* Bathed in Blood */
+  if (check_subclass(ch, SC_DEFILER, 4) && (CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
+    check += 10;
+  }
+
+  if (!chance(check)) return;
+
+  switch(number(1, 4))
   {
     case 1:
     case 2:

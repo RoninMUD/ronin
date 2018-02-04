@@ -1,12 +1,12 @@
 #19501
-beloved stone ring~
+ring stone beloved~
 The beloved ring of stone~
 A dark band of stone which seems to absorb all the light around it lies here.~
 ~
 11 134218052 3
 1 2 3 3
 7 3187304 9000
-60
+18
 X
 ~
 1024 0 0
@@ -18,32 +18,40 @@ $n's stone ring rumbles gently as it moves to reform around $s finger.~
 A
 19 3
 A
-18 3
+18 1
 A
 13 0
 #19502
 breastplate living stone~
 a breastplate of living stone~
-A breastplate made of living stone rumbles gently as it moves slowly along the floor.~
+A breastplate made of living stone rumbles gently as it moves slowly along the
+floor.~
 ~
-9 134217796 9
-24 -1 -1 -1
+9 134266948 9
+22 -1 -1 -1
 410 4800000 18000
-40
+8
 X
 ~
-0 0 0
+3072 0 0
 M
-Your stone breastplate rumbles gently as it shifts to mold itself to your body.~
+The stone breastplate rumbles gently as it shifts to mold itself around your
+body.~
 $n's stone breastplate rumbles gently as it shifts to mold itself to $s body.~
 ~
 ~
+A
+17 0
+A
+19 0
+A
+53 0
 #19503
-blue flame dagger~
-A blue flame dagger~
+dagger blue flame~
+a blue flame dagger~
 A dagger made of fire crackles mysteriously here.~
 ~
-5 242274369 8193
+5 242241601 8193
 7 5 8 11
 2 1800000 18000
 22
@@ -62,14 +70,14 @@ A
 A
 28 20
 #19504
-blue flame cape~
+cape flame blue~
 a blue flame cape~
 A cape made of ethereal blue fiber lies neatly folded on the ground here.~
 ~
 9 65 5
 12 -1 -1 -1
 3 10000 8500
-40
+20
 X
 ~
 512 0 0
@@ -79,18 +87,18 @@ M
 ~
 ~
 A
-53 5
+53 0
 B
 2
 #19505
-gale wind boots~
+boots gale wind~
 the gale force wind boots~
 Some magical boots formed of swirling wind howl here.~
 ~
 9 64 65
 9 -1 -1 -1
 1 1200000 2200
-50
+15
 X
 ~
 0 0 0
@@ -108,7 +116,7 @@ A
 B
 16777216
 #19506
-raging hurricane helmet~
+helmet raging hurricane~
 a raging hurricane helmet~
 A helmet sized storm rages here.~
 ~
@@ -131,35 +139,35 @@ A
 B
 2
 #19507
-lightning bolt sword~
+sword lightning bolt~
 a crackling lightning sword~
 Electricity crackles as lightning jumps around here.~
 ~
-5 134266947 8193
-8 10 6 3
+5 138473539 8193
+8 11 3 3
 1 4370000 17000
-48
+12
 X
 ~
-2048 0 0
+2560 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 6
+19 4
 A
 18 4
 A
-53 4
+53 0
 #19508
 shield electric~
 the electric shield~
-A shield made entirely of energy buzzes here.~
+A shield, made entirely of electricity, buzzes here.~
 ~
 9 134218755 513
-0 -1 -1 -1
+19 -1 -1 -1
 1 2370000 23000
 24
 X
@@ -171,11 +179,11 @@ M
 ~
 ~
 A
-19 3
+19 2
 A
 13 -75
 A
-17 38
+12 -75
 #19509
 sash cummerbund ice~
 a cummerbund made of ice~
@@ -194,17 +202,17 @@ M
 ~
 ~
 A
-53 4
+53 1
 A
 19 1
 A
 12 18
 #19510
-flowing water cloak~
+cloak flowing water~
 a flowing cloak of water~
 A cloak fashioned from a small magical waterfall is here.~
 ~
-9 134217792 1025
+9 213962816 1025
 18 -1 -1 -1
 168 3017573 9888
 22
@@ -248,14 +256,14 @@ A
 A
 19 1
 #19512
-rainbow buckler~
+buckler rainbow~
 a rainbow buckler~
 colored light quickly spins in a tight circle here.~
 ~
 9 134217793 4097
 9 -1 -1 -1
 1 800000 4800
-70
+25
 X
 ~
 0 0 0
@@ -271,7 +279,7 @@ A
 B
 16
 #19513
-heavy platinum arm bands~
+bands heavy platinum arm~
 heavy platinum arm bands~
 A pair of platinum arm bands, once worn by the Cyclops, lie here.~
 ~
@@ -294,7 +302,7 @@ A
 A
 19 1
 #19514
-heavy platinum leg bands~
+bands heavy platinum leg~
 heavy platinum leg bands~
 A pair of platinum leg bands, once worn by the Cyclops, lie here.~
 ~
@@ -317,7 +325,7 @@ A
 A
 18 4
 #19515
-firewand fire wand~
+wand fire firewand~
 elemental wand of fire~
 A fire wand lies forgotten on the ground.~
 ~
@@ -334,12 +342,12 @@ M
 ~
 ~
 #19516
-icestaff ice staff~
+staff ice icestaff~
 an ice staff~
 A ice staff lies forgotten on the ground.~
 ~
 4 1 16385
-50 30 8 33
+50 30 8 82
 7 390000 2000
 50
 X
@@ -351,7 +359,7 @@ M
 ~
 ~
 #19517
-quakestaff earth quake staff earthquake~
+staff quake earth quakestaff earthquake~
 elemental staff of earth~
 A earthquake staff lies forgotten on the ground.~
 ~
@@ -368,9 +376,9 @@ M
 ~
 ~
 #19518
-wind air wand~
-elemental wand of wind and air~
-A air wand lies forgotten on the ground.~
+wand rainbow~
+elemental rainbow wand~
+A rainbow wand lies forgotten on the ground.~
 ~
 3 1 16385
 45 16 14 10
@@ -385,7 +393,7 @@ M
 ~
 ~
 #19519
-lightningwand lightning wand~
+wand lightning lightningwand~
 elemental wand of lightning~
 A lightning wand lies forgotten on the ground.~
 ~
@@ -419,7 +427,7 @@ M
 ~
 ~
 #19523
-energy scroll~
+scroll energy~
 an energy scroll~
 A scroll of energy replacement lies here.~
 ~
@@ -436,7 +444,7 @@ M
 ~
 ~
 #19524
-elaborate carved water jug~
+jug elaborate carved water~
 an elaborately carved water jug~
 A large but surprisingly light jug of water stands here.~
 ~
@@ -446,20 +454,16 @@ A large but surprisingly light jug of water stands here.~
 8
 X
 ~
-1536 0 0
+0 0 0
 M
 ~
 ~
 ~
 ~
-A
-52 8
-A
-53 4
 #19525
 dusty potion~
 dusty potion~
-A potion with bits of dust swirling around in it is sitting here.~
+A potion with bits of dust swirling around in it, is sitting here.~
 ~
 10 0 16385
 50 75 15 -1

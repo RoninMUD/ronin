@@ -250,14 +250,14 @@ void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *ta
 
 void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  AFF af;
-
   if (!affected_by_spell(ch, SPELL_RAGE))
   {
     send_to_char("Rage courses through your body!\n\r", ch);
 
+    AFF af;
+
     af.type       = SPELL_RAGE;
-    af.duration   = 3;
+    af.duration   = 5;
     af.modifier   = 0;
     af.location   = 0;
     af.bitvector  = 0;
@@ -1763,95 +1763,6 @@ void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   damage(ch, victim, 600, TYPE_UNDEFINED, DAM_NO_BLOCK);
 }
 
-void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_shadow_wraith(level, ch, 0, 0);
-      break;
-    default:
-      log_f("Wrong type called in shadow wraith!");
-      break;
-  }
-}
-
-void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-  int bonus = 0;
-
-  bonus = MAX(0, (int_app[GET_INT(ch)].conc + wis_app[GET_WIS(ch)].conc) / 10);
-
-  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 60) /* 4 shadows */
-  {
-    send_to_char("You already have four shadows.\n\r", ch);
-    return;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 40) /* 3 shadows */
-  {
-    if (chance(85 - bonus))
-    {
-      send_to_char("You failed to cast another shadow.\n\r", ch);
-      return;
-    }
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 20) /* 2 shadows */
-  {
-    if (chance(70 - bonus))
-    {
-      send_to_char("You failed to cast another shadow.\n\r", ch);
-      return;
-    }
-  }
-  else if (affected_by_spell(ch, SPELL_SHADOW_WRAITH)) /* 1 shadow */
-  {
-    if (chance(55 - bonus))
-    {
-      send_to_char("You failed to cast another shadow.\n\r", ch);
-      return;
-    }
-  }
-  else
-  {
-    if (chance(40 - bonus))
-    {
-      send_to_char("You failed to cast a shadow.\n\r", ch);
-      return;
-    }
-  }
-
-  af.type       = SPELL_SHADOW_WRAITH;
-  af.duration   = 20;
-  af.modifier   = 0;
-  af.location   = 0;
-  af.bitvector  = 0;
-  af.bitvector2 = 0;
-  affect_join(ch, &af, FALSE, FALSE);
-
-  /* Shadow position is based on the new duration. */
-  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 60) /* 4 shadows */
-  {
-    send_to_char("Your shadow stretches to the west.\n\r", ch);
-    act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 40) /* 3 shadows */
-  {
-    send_to_char("Your shadow stretches to the east.\n\r", ch);
-    act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 20) /* 2 shadows */
-  {
-    send_to_char("Your shadow stretches to the south.\n\r", ch);
-    act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else /* 1 shadow */
-  {
-    send_to_char("Your shadow stretches to the north.\n\r", ch);
-    act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-}
-
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
   switch (type)
@@ -2097,4 +2008,150 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
   act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
+}
+
+void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
+{
+  switch (type)
+  {
+    case SPELL_TYPE_SPELL:
+      spell_shadow_wraith(level, ch, 0, 0);
+      break;
+    default:
+      log_f("Wrong type called in shadow wraith!");
+      break;
+  }
+}
+
+void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
+{
+  int num_shadows_active = 0;
+
+  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
+    /* Caster has 4 shadows. */
+    num_shadows_active = 4;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
+    /* Caster has 3 shadows. */
+    num_shadows_active = 3;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
+    /* Caster has 2 shadows. */
+    num_shadows_active = 2;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
+    /* Caster has 1 shadow. */
+    num_shadows_active = 1;
+  }
+
+  if (num_shadows_active >= 4 ||
+      ((num_shadows_active >= 2) && (GET_SC_LEVEL(ch) < 4)) ||
+      ((num_shadows_active >= 3) && (GET_SC_LEVEL(ch) < 5))) {
+    send_to_char("You are already controlling the maximum number of shadows you can maintain.\n\r", ch);
+    return;
+  }
+
+  int extra_mana_cost = num_shadows_active * 20;
+
+  if (GET_MANA(ch) < extra_mana_cost) {
+    send_to_char("You can't summon enough energy to manifest another shadow.\n\r", ch);
+    return;
+  }
+
+  GET_MANA(ch) -= extra_mana_cost;
+
+  AFF af;
+
+  af.type       = SPELL_SHADOW_WRAITH;
+  af.duration   = 10;
+  af.modifier   = 0;
+  af.location   = 0;
+  af.bitvector  = 0;
+  af.bitvector2 = 0;
+
+  affect_join(ch, &af, FALSE, FALSE);
+
+  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
+    /* Caster has 4 shadows. */
+    send_to_char("Your shadow stretches to the west.\n\r", ch);
+    act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
+    /* Caster has 3 shadows. */
+    send_to_char("Your shadow stretches to the east.\n\r", ch);
+    act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
+    /* Caster has 2 shadows. */
+    send_to_char("Your shadow stretches to the south.\n\r", ch);
+    act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+  else {
+    /* Caster has 1 shadow. */
+    send_to_char("Your shadow stretches to the north.\n\r", ch);
+    act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+}
+
+void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type)
+  {
+  case SPELL_TYPE_SPELL:
+    if (victim)
+      spell_dusk_requiem(level, ch, victim, 0);
+    break;
+  default:
+    log_f("Wrong type called in dusk_requiem!");
+    break;
+  }
+}
+
+void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) {
+    send_to_char("Your requiem fails to draw power from the fleeting shadows.\n\r", ch);
+    act("$n's requiem fails to draw power from the fleeting shadows.", FALSE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+
+  int num_shadows_active = 0;
+
+  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
+    /* Caster has 4 shadows. */
+    num_shadows_active = 4;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
+    /* Caster has 3 shadows. */
+    num_shadows_active = 3;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
+    /* Caster has 2 shadows. */
+    num_shadows_active = 2;
+  }
+  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
+    /* Caster has 1 shadow. */
+    num_shadows_active = 1;
+  }
+
+  int dam = MIN(250 * 4, 250 * num_shadows_active);
+
+  /* If level is < 45, the spell must be expiring in signal_char(). Inflict half damage. */
+  if (level < 45) {
+    dam /= 2;
+  }
+
+  damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
+
+  for (AFF *tmp_af = ch->affected, *next_af; tmp_af; tmp_af = next_af) {
+    next_af = tmp_af->next;
+
+    if (tmp_af->type == SPELL_SHADOW_WRAITH) {
+      if (tmp_af->duration <= 10) {
+        affect_from_char(ch, SPELL_SHADOW_WRAITH);
+      }
+      else {
+        tmp_af->duration -= 10;
+      }
+      break;
+    }
+  }
 }
