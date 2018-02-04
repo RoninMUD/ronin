@@ -827,22 +827,22 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
         act("......$n's pulse rushes with supernatural speed.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      if (duration_of_spell(i, SPELL_SHADOW_WRAITH) > 0)
+      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) >= 0)
       {
         act("......$n's shadow stretches to the north.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      if (duration_of_spell(i, SPELL_SHADOW_WRAITH) > 20)
+      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 1))
       {
         act("......$n's shadow stretches to the south.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      if (duration_of_spell(i, SPELL_SHADOW_WRAITH) > 40)
+      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 2))
       {
         act("......$n's shadow stretches to the east.", FALSE, i, 0, ch, TO_VICT);
       }
 
-      if (duration_of_spell(i, SPELL_SHADOW_WRAITH) > 60)
+      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 3))
       {
         act("......$n's shadow stretches to the west.", FALSE, i, 0, ch, TO_VICT);
       }
@@ -1874,7 +1874,10 @@ void die(CHAR *ch)
 
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_CORPSE, "")) return;
 
-  increase_blood(CHAR_REAL_ROOM(ch));
+  /* Characters affected by Animate, Charm and Subdue do not leave blood, to avoid gaming Bathed in Blood bonuses. */
+  if (!IS_AFFECTED(ch, AFF_ANIMATE) && !IS_AFFECTED(ch, AFF_CHARM) && !IS_AFFECTED(ch, AFF_SUBDUE)) {
+    increase_blood(CHAR_REAL_ROOM(ch));
+  }
 
   if (!IS_NPC(ch) && ch->specials.death_timer == 1 && GET_HIT(ch) >= 0)
   {
@@ -2201,153 +2204,153 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     /* Set a simple flag for use later that shows that there was
     some equpment worn that applied an affect. */
     if (!eq_af &&
-        (GET_OBJ_BITS(obj) || GET_OBJ_BITS2(obj))) {
+        (OBJ_BITS(obj) || OBJ_BITS2(obj))) {
       eq_af = TRUE;
     }
 
     /* affected_by */
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_BLIND) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_BLIND) &&
         IS_SET(GET_AFF(ch), AFF_BLIND)) {
       equipment[SPELL_BLINDNESS] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_INVISIBLE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_INVISIBLE) &&
         IS_SET(GET_AFF(ch), AFF_INVISIBLE)) {
       equipment[SPELL_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_DETECT_ALIGNMENT) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_DETECT_ALIGNMENT) &&
         IS_SET(GET_AFF(ch), AFF_DETECT_ALIGNMENT)) {
       equipment[SPELL_DETECT_ALIGNMENT] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_DETECT_INVISIBLE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_DETECT_INVISIBLE) &&
         IS_SET(GET_AFF(ch), AFF_DETECT_INVISIBLE)) {
       equipment[SPELL_DETECT_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_DETECT_MAGIC) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_DETECT_MAGIC) &&
         IS_SET(GET_AFF(ch), AFF_DETECT_MAGIC)) {
       equipment[SPELL_DETECT_MAGIC] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_SENSE_LIFE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_SENSE_LIFE) &&
         IS_SET(GET_AFF(ch), AFF_SENSE_LIFE)) {
       equipment[SPELL_SENSE_LIFE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_HOLD) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_HOLD) &&
         IS_SET(GET_AFF(ch), AFF_HOLD)) {
       equipment[SPELL_HOLD] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_SANCTUARY) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_SANCTUARY) &&
         IS_SET(GET_AFF(ch), AFF_SANCTUARY)) {
       equipment[SPELL_SANCTUARY] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_CONFUSION) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_CONFUSION) &&
         IS_SET(GET_AFF(ch), AFF_CONFUSION)) {
       equipment[SPELL_CONFUSION] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_CURSE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_CURSE) &&
         IS_SET(GET_AFF(ch), AFF_CURSE)) {
       equipment[SPELL_CURSE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_SPHERE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_SPHERE) &&
         IS_SET(GET_AFF(ch), AFF_SPHERE)) {
       equipment[SPELL_SPHERE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_POISON) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_POISON) &&
         IS_SET(GET_AFF(ch), AFF_POISON)) {
       equipment[SPELL_POISON] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_PROTECT_EVIL) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_PROTECT_EVIL) &&
         IS_SET(GET_AFF(ch), AFF_PROTECT_EVIL)) {
       equipment[SPELL_PROTECT_FROM_EVIL] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_PARALYSIS) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_PARALYSIS) &&
         IS_SET(GET_AFF(ch), AFF_PARALYSIS)) {
       equipment[SPELL_PARALYSIS] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_INFRAVISION) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_INFRAVISION) &&
         IS_SET(GET_AFF(ch), AFF_INFRAVISION)) {
       equipment[SPELL_INFRAVISION] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_SLEEP) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_SLEEP) &&
         IS_SET(GET_AFF(ch), AFF_SLEEP)) {
       equipment[SPELL_SLEEP] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_DODGE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_DODGE) &&
         IS_SET(GET_AFF(ch), AFF_DODGE)) {
       equipment[SKILL_DODGE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_SNEAK) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_SNEAK) &&
         IS_SET(GET_AFF(ch), AFF_SNEAK)) {
       equipment[SKILL_SNEAK] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_HIDE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_HIDE) &&
         IS_SET(GET_AFF(ch), AFF_HIDE)) {
       equipment[SKILL_HIDE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_ANIMATE) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_ANIMATE) &&
         IS_SET(GET_AFF(ch), AFF_ANIMATE)) {
       equipment[SPELL_ANIMATE_DEAD] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_CHARM) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_CHARM) &&
         IS_SET(GET_AFF(ch), AFF_CHARM)) {
       equipment[SPELL_CHARM_PERSON] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_PROTECT_GOOD) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_PROTECT_GOOD) &&
         IS_SET(GET_AFF(ch), AFF_PROTECT_GOOD)) {
       equipment[SPELL_PROTECT_FROM_GOOD] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_FLY) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_FLY) &&
         IS_SET(GET_AFF(ch), AFF_FLY)) {
       equipment[SPELL_FLY] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_IMINV) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_IMINV) &&
         IS_SET(GET_AFF(ch), AFF_IMINV)) {
       equipment[SPELL_IMP_INVISIBLE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_INVUL) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_INVUL) &&
         IS_SET(GET_AFF(ch), AFF_INVUL)) {
       equipment[SPELL_INVUL] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_DUAL) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_DUAL) &&
         IS_SET(GET_AFF(ch), AFF_DUAL)) {
       equipment[SKILL_DUAL] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS(obj), AFF_FURY) &&
+    if (IS_SET(OBJ_BITS(obj), AFF_FURY) &&
         IS_SET(GET_AFF(ch), AFF_FURY)) {
       equipment[SPELL_FURY] = TRUE;
     }
 
     /* affected_by2 */
-    if (IS_SET(GET_OBJ_BITS2(obj), AFF_TRIPLE) &&
+    if (IS_SET(OBJ_BITS2(obj), AFF_TRIPLE) &&
         IS_SET(GET_AFF2(ch), AFF_TRIPLE)) {
       equipment[SKILL_TRIPLE] = TRUE;
     }
 
-    if (IS_SET(GET_OBJ_BITS2(obj), AFF_QUAD) &&
+    if (IS_SET(OBJ_BITS2(obj), AFF_QUAD) &&
         IS_SET(GET_AFF2(ch), AFF_QUAD)) {
       equipment[SKILL_QUAD] = TRUE;
     }

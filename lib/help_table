@@ -6768,7 +6768,7 @@ do other defensive skills and may miss a little more often.
 
 The inability to dodge makes this skill much less defensive
 than the comparable Ranger subclass skill of berserk.  However,
-the benifits of getting 1.5x damage for every hit, and the
+the benefits of getting 1.5x damage for every hit, and the
 possibility of a dual now and then make up for the reduction
 in defense.
 
@@ -6806,25 +6806,54 @@ Level         Skill
 
 See Also: SUBCLASSES TRAPPER NOMAD
 #
+"HIDDEN BLADE"
+
+Class: Anti-Paladin (Level 40)
+
+On a successful Pummel, the Anti-Paladin has a chance to stab the target with a
+hidden blade.  This automatic action inflicts damage equal to twice the
+Anti-Paladin's level (up to 100 at level 50).
+
+The success of Hidden Blade is dependent on how well the skill is practiced and
+is affected by the character's dexterity modifier.  The maximum success rate
+before the dexterity modifier is applied is 25%.
+
+See Also: PUMMEL DEXTERITY
+#
 ASSASSINATE
 
 Class: Anti-Paladin (Level 45)
 
 Usage: assassinate <victim> <direction>
 
-This attack is used to quickly sneak into a room and perform a
-backstab attack on an unsuspecting victim.  An aggressive victim
-doesn't have a chance to attack first.
+This attack is used to quickly sneak into a room and perform a backstab attack
+on an unsuspecting victim.  An aggressive victim doesn't have a chance to
+attack first.
 
-The Anti-Paladin must be sneaking, or invisible, to use this
-attack and the success is dependent on how well the skill is
-practiced and the character's dexterity.
+The Anti-Paladin must be sneaking, or invisible, to use this attack and the
+success is dependent on how well the skill is practiced and the character's
+dexterity.
 
-This skill also allows a sufficiently hidden, or invisible,
-Anti-Paladin to use the backstab skill against a victim already in
-combat.
+This skill also allows a sufficiently hidden, or invisible, Anti-Paladin to use
+the Backstab skill against a victim already in combat.
 
-See Also: BACKSTAB
+See Also: BACKSTAB DEXTERITY
+#
+RAGE
+
+Usage       : cast 'rage' (self only)
+Accumulative: -
+Duration    : 5
+Level       : Level 45 anti-paladin
+Mana Cost   : 75
+
+This spell is similar to the Paladin's Fury spell.  It grants the Anti-Paladin a
+damage multiplier on every hit.  However, while Fury gives a 2x multiplier, Rage
+gives a multiplier of 1.5x.  Also, unlike Fury, there is only a 50% chance that
+an attack against a creature or player affected by Rage will be automatically
+hit.
+
+See Also: SUBCLASSES INFIDEL FURY
 #
 DEFILER
 
@@ -6837,7 +6866,7 @@ Level         Skill/Spell
   1           DESECRATE
   2           BLACKMANTLE
   3           FEINT
-  4           WITHER
+  4           BATHED IN BLOOD
   5           SHADOWSTEP
 
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
@@ -6852,20 +6881,22 @@ Duration    : 7
 Save        : -
 Mana Cost   : 70
 
-With this spell, the Defiler does the vilest thing imaginable with
-the corpse. This spell grants the Defiler a hit point regeneration
-bonus equal the level of the creature the corpse came from, and an
-armor bonus equal to half of its level.
+With this spell, the Defiler does the vilest thing imaginable with the corpse,
+desecrating it in horrific ways.
 
-While under by the effects of Desecrate, the Defiler's Spirit Levy
-spell will restore up to 50% more hit points per cast. In addition,
-when Spirit Levy is successfully used upon a corpse, the Defiler
-will receive a +2 bonus to his/her hitroll and damroll; this bonus
-effect has a duration of 2 ticks.
+This spell grants the Defiler a hit point regeneration bonus equal the level of
+the creature the corpse came from, and an armor bonus equal to half of its
+level.
+
+Additionally, while affected by Desecrate, the Defiler's chance to automatically
+be hit while affected by the Rage spell is reduced from 50% to 20%.
+
+As an added bonus, the Defiler's Spirit Levy spell will restore up to 50% more
+hit points per cast.  This effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
-See Also: SUBCLASSES DEFILER "SPIRIT LEVY" HITROLL DAMROLL
+See Also: SUBCLASSES DEFILER "SPIRIT LEVY"
 #
 BLACKMANTLE
 
@@ -6877,18 +6908,17 @@ Duration    : 9
 Save        : -
 Mana Cost   : 70
 
-While affected by this spell, up to 10% of all physical attack damage
-is reflected back to the attacker.  The Defiler cannot reflect more
-damage per attack reflected than he/she could inflict in one hit.
+While affected by this spell, up to 10% of all physical attack damage is
+reflected back to the attacker.  The Defiler cannot reflect more damage per
+attack reflected than he/she could inflict in one hit.
 
-While affected by the Blackmantle spell, the Defiler's Vampiric Touch
-spell will inflict and drain 10% more damage.  Additionally, the
-damage and drains inflicted by the Blood Lust spell is also increased
-by 10%.
+While affected by the Blackmantle spell, the Defiler's Vampiric Touch spell
+will inflict and drain 10% more damage.  Additionally, the damage and drains
+inflicted by the Blood Lust spell is also increased by 10%.
 
-A Defiler that has learned the Assassinate skill can Backstab a
-victim already in combat, as if he/she could not be seen, when
-surrounded by this mantle of darkness.
+A Defiler that has learned the Assassinate skill can Backstab a victim already
+in combat, as if he/she could not be seen, when surrounded by this mantle of
+darkness.
 
 See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" BACKSTAB
           ASSASSINATE
@@ -6910,26 +6940,25 @@ This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES DEFILER
 #
-WITHER
+"BATHED IN BLOOD"
 
 Subclass Defiler: Level 4 (Anti-Paladin)
 
-Usage       : cast 'wither' <victim>
-Accumulative: -
-Duration    : Instantaneous / Level * 2  (Paralysis, Poison)
-Save        : vs. spell for 1/2 damage / Negates (Paralysis, Poison)
-Mana Cost   : 70
-Damage Done : 375
+The Defiler's sinister powers surge in the presence of fresh blood, making
+them stronger and granting them supernatural powers.
 
-Wither is a spell that desecates the victim, inflicting harm, and
-weakening it. This powerful spell will deal damage to the target
-instantly, and has a chance to affect the target with lasting
-afflictions.
+The Defiler gains a health and mana regeneration bonus of 20% for each level of
+blood in the room.  This bonus has a maximum of 100% additional regeneration.
 
-On a failed saving throw, the victim will be subjected to the
-effects of paralysis and poison. Each effect receieves its own save.
+Additionally, when the Defiler is affected by the Blood Lust spell, its effects
+will trigger 10% more frequently when the caster is fighting in a room with any
+level of blood present.
 
-Sell Also: SUBCLASSES DEFILER PARALYSIS POISON
+Finally, the Defiler's Backstab skill has a 20% chance on success to trigger a
+Vampiric Touch cast automatically at the target, with zero mana cost.  This
+effect can trigger only once every tick.
+
+See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LUST" "VAMPIRIC TOUCH"
 #
 SHADOWSTEP
 
@@ -6937,24 +6966,23 @@ Subclass Defiler: Level 5 (Anti-Paladin)
 
 Usage: shadowstep (toggles on/off)
 
-The Defiler will occasionally step into the shadows during combat,
-only to re-appear behind his/her victim. The Defiler will attempt to
-stab the victim in the back for increased damage.  The success and
-damage output of the skill varies depending on a number of factors.
-A Defiler that cannot be seen by his/her victim receieves a benefit,
-as does a one affected by the Blackmantle spell. A Defiler fighting
-in a dark room, or during the night time will have an increased
-chance of success, and the skill will inflict more damage. Likewise,
-a Defiler attacking a victim outside during the day, or in a lit room
-will have a reduced chance of success, and the skill will inflict
-less damage.
+The Defiler will occasionally step into the shadows during combat, only to
+re-appear behind his/her victim.  The Defiler will attempt to stab the victim in
+the back for increased damage.  The success and damage output of the skill
+varies depending on a number of factors.
 
-The amount of damage inflicted ranges from 3x a normal hit for the
-most favorable conditions, to 1.5x a normal hit for the least
-favorable.
+A Defiler that cannot be seen by his/her victim receives a benefit, as does one
+affected by the Blackmantle spell.  A Defiler fighting in a dark room, or during
+the night time will have an increased chance of success, and the skill will
+inflict more damage.  Likewise, a Defiler attacking a victim outside during the
+day, or in a lit room will have a reduced chance of success, and the skill will
+inflict less damage.
 
-The success of this skill is based on how well it is practiced, and
-the character's dexterity.
+The amount of damage inflicted ranges from 3x a normal hit for the most
+favorable conditions, to 1.5x a normal hit for the least favorable.
+
+The success of this skill is based on how well it is practiced, and the
+character's dexterity.
 
 The use of this skill is automatic and can be toggled on or off.
 
@@ -6970,9 +6998,9 @@ or spell, just type HELP <skill/spell name>
 Level         Skill/Spell
   1           DARK PACT
   2           VICTIMIZE
-  3           RAGE
-  4           DEMONIC THUNDER
-  5           SHADOW WRAITH
+  3           SHADOW WRAITH
+  4           WITHER
+  5           DUSK REQUIEM
 
 See Also: SUBCLASSES DEFILER ANTI-PALADIN
 #
@@ -6980,20 +7008,19 @@ See Also: SUBCLASSES DEFILER ANTI-PALADIN
 
 Subclass Infidel: Level 1 (Anti-Paladin)
 
-The Infidel makes a deal with some dark entity, trading a portion of
-his/her soul in exchange for supernatural powers.
+The Infidel makes a deal with some dark entity, trading a portion of their soul
+in exchange for supernatural powers.
 
-After making this pact, the Infidel no longer requires food or drink
-to sustain him/herself. Additionally, he/she always regenerates
-hit points, mana, and movement points at an optimal rate, regardless
-of age. Finally, the Infidel's regeneration rates are increased at
-all times, and are further increased during the night, or in a dark
-room.
+After making this pact, the Infidel no longer requires food or drink to sustain
+themselves.  Additionally, he/she always regenerates hit points, mana, and
+movement points at an optimal rate, regardless of age. Finally, the Infidel's
+regeneration rates are increased at all times, and are further increased during
+the night, or in a dark room.
 
-This weakening of the Infidel's soul makes him/her even more vicious
-and remorseless than before the pact was made.  He/she will more
-willinglly (and successfully) backstab his/her victims, and will
-carry out assassination attacks with particular cunning and cruelty.
+This weakening of the Infidel's soul makes them even more vicious and
+remorseless than before the pact was made.  They will more willingly (and
+successfully) backstab their victims, and will carry out assassination attacks
+with particular cunning and cruelty.
 
 This is an automatic skill and is always in effect.
 
@@ -7005,24 +7032,23 @@ Subclass Infidel: Level 2 (Anti-Paladin)
 
 Usage: victimize (toggles on/off)
 
-During combat, the Infidel will randomly assault his/her victim with
-cruel attacks and depraved remarks. This victimization will take its
-toll on the target, inflicting random status ailments, such as
-penalties to armor class, hitroll and damroll.
+During combat, the Infidel will randomly assault his/her victim with cruel
+attacks and depraved remarks.  This victimization will take its toll on the
+target, inflicting random status ailments, such as penalties to armor class,
+hitroll and damroll.
 
-The armor class penalty shall be 1/4 the Infidel's level. The hitroll
-penalty shall be a random number between 3 and 5. The damroll penalty
-shall be a random percentage of the victim's damroll, between 5% and
-10%; however, the damroll penalty will never decrease a victim's base
-bare-hand or weapon-based damage. If the target has no bonus damroll,
-the hitroll penalty option shall be used instead.
+The armor class penalty shall be 1/4 the Infidel's level.  The hitroll penalty
+shall be a random number between 3 and 5.  The damroll penalty shall be a random
+percentage of the victim's damroll, between 5% and 10%; however, the damroll
+penalty will never decrease a victim's base bare-hand or weapon-based damage.
+If the target has no bonus damroll, the hitroll penalty option shall be used
+instead.
 
-The duration of these effects, and the subsequent re-application of
-another random effect is 1 tick (re-application is attempted every
-combat round, but will only succeed if the target is not already
-affected by Victimize). The effects are non-cumulative. Multiple
-Infidels can apply penalties, but only penalties of different types,
-as penalty types do not stack.
+The duration of these effects, and the subsequent re-application of another
+random effect is 1 tick (re-application is attempted every combat round, but
+will only succeed if the target is not already affected by Victimize).  The
+effects are non-cumulative.  Multiple Infidels can apply penalties, but only
+penalties of different types, as penalty types do not stack.
 
 An Infidel that has a good alignment is unable to utilize this skill.
 
@@ -7030,27 +7056,81 @@ The use of this skill is automatic and can be toggled on or off.
 
 See Also: SUBCLASSES INFIDEL "ARMOR CLASS" HITROLL DAMROLL TICK
 #
-RAGE
+"SHADOW WRAITH"
 
 Subclass Infidel: Level 3 (Anti-Paladin)
 
-Usage       : cast 'rage' (self only)
-Accumulative: -
-Duration    : 3
+Usage       : cast 'shadow wraith' (self only)
+Accumulative: Yes (up to 4 shadows at Subclass Level 5)
+Duration    : 10 / shadow
 Save        : -
-Mana Cost   : 60
+Mana Cost   : 100 (1st Shadow) / 120 (2nd) / 140 (3rd) / 160 (4th)
 
-This spell is similar to the Paladin's Fury spell.  It gives the
-Infidel a damage multiplier on every hit.  However, while Fury gives
-a 2x damage multiplier, Rage gives a multiplier of 1.5x. Also,
-unlike Fury, there is only a 50% chance that an attack against a
-creature or player affected by Rage will be automatically hit.
+The Infidel can manifest shadow wraiths by harnessing their own dark energy.
 
-See Also: SUBCLASSES INFIDEL FURY
+These wraiths attack the Infidel's target automatically, dealing a variable
+amount of damage, based on that of the caster's normal attack damage, expressed
+here as [damage].  The amount dealt varies from [damage / 6] to [damage / 2],
+with an average of [damage / 4].  Shadow damage is improved by either Rage or
+Fury, with the most effective spell being applied.
+
+Up to 2 shadows may be created at Subclass Level 3.  A 3rd shadow may be created
+at Subclass Level 4, and a 4th at Subclass Level 5.
+
+The mana cost of casting Shadow Wraith increases by 20 mana for each shadow that
+is created. That is, the 1st shadow costs 100 mana, the 2nd costs 120 mana, the
+3rd costs 140 mana, and the 4th costs 160 mana.
+
+See Also: SUBCLASSES INFIDEL RAGE FURY
 #
-"DEMONIC THUNDER"
+WITHER
 
 Subclass Infidel: Level 4 (Anti-Paladin)
+
+Usage       : cast 'wither' <victim>
+Accumulative: -
+Duration    : Instantaneous / Level * 2  (Paralysis, Poison)
+Save        : vs. spell for 1/2 damage / Negates (Paralysis, Poison)
+Mana Cost   : 70
+Damage Done : 375
+
+Wither is a spell that desiccates the victim, inflicting harm, and weakening it.
+This powerful spell will deal damage to the target instantly, and has a chance
+to affect the target with lasting afflictions.
+
+On a failed saving throw, the victim will be subjected to the effects of
+paralysis and poison.  Each effect receives its own save.
+
+See Also: SUBCLASSES DEFILER PARALYSIS POISON
+#
+"DUSK REQUIEM"
+
+Subclass Infidel: Level 5 (Anti-Paladin)
+
+Usage       : cast 'dusk requiem' <victim.
+Accumulative: No
+Duration    : -
+Save        : -
+Mana Cost   : 20
+
+The Infidel may "collapse" a shadow wraith, expending its existence to inflict
+massive damage against a foe.
+
+Casting Dusk Requiem immediately destroys the most recently cast Shadow Wraith,
+inflicting damage equal to 250 x the number of shadows the Infidel controls when
+this spell is cast.  For example, if the Infidel controls four shadows, this
+spell will inflict 1000 damage to the target.
+
+Additionally, if a shadow's duration expires while the Infidel is engaged in
+combat, this spell is automatically cast with zero mana cost, inflicting half
+damage.
+
+Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
+points and mana equal to 10 x the number of shadows that existed at the time it
+expires.  For example, if the Infidel controls four shadows, this effect will
+grant 40 hit points and 40 mana when the 4th shadow's duration expires.
+#
+"DEMONIC THUNDER"
 
 Usage       : cast 'demonic thunder' <victim>
 Accumulative: -
@@ -7058,39 +7138,13 @@ Duration    : Instantaneous (Damage) / 7 days (Curse)
 Save        : None (Damage) / Versus spell negates (Curse)
 Mana Cost   : 100
 
-The Infidel summons the sounds of the souls of the damned and focuses
-them on the victim.  The result is a huge thunder of sound that
-cannot be resisted, dealing a full 500 damage to the victim.
+The this spell summons the sounds of the souls of the damned and focuses them on
+the victim.  The result is a huge thunder of sound that cannot be resisted,
+dealing a full 500 damage to the victim.
 
-This spell also will curse the victim on a failed saving throw vs.
-spell.
+This spell also will curse the victim on a failed saving throw vs. spell.
 
-See Also: SUBCLASSES INFIDEL CURSE
-#
-"SHADOW WRAITH"
-
-Subclass Infidel: Level 5 (Anti-Paladin)
-
-Usage       : cast 'shadow wraith' (self only)
-Accumulative: Yes (up to 4 shadows)
-Duration    : 20 / shadow
-Save        : -
-Mana Cost   : 120
-
-The Infidel can attempt to create shadows of him/herself that will
-obey the Infidel's commands without question.  Up to 4 shadows may be
-created and the more shadows there are, the harder they are to
-maintain.  The success of creating the first shadow is quite high,
-but as more shadows are created, the chance of creating others
-decreases.
-
-Each shadow deals a variable amount of damage, based on that of the
-caster's normal attack damage, expressed here as [damage].  The
-amount dealt varies from [damage / 6] to [damage / 2],  with an
-average of [damage / 4].  Shadow damage is improved by either Rage or
-Fury, with the most effective spell being applied.
-
-See Also: SUBCLASSES INFIDEL RAGE FURY
+See Also: CURSE
 #
 "BLADE BARRIER"
 
@@ -8549,10 +8603,10 @@ See Also: CIRCLE
 "BLOOD LUST"
 
 Usage      : cast 'blood lust' (self only)
-Level      : level 50 anti-paladin
+Level      : level 45 anti-paladin
 Save       : none
-Duration   : 3 ticks
-Mana cost  : 50
+Duration   : 5
+Mana cost  : 75
 
 While affected by Blood Lust, the Anti-Paladin hungers for blood, and
 will randomly bite their victims during combat.  Each bite has the

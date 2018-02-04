@@ -718,6 +718,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       }
       break;
 
+      if ((skill == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40))
+      {
+        index = -2;
+      }
+
       if ((skill == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45))
       {
         index = -2;
@@ -774,6 +779,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     if ((spell > 165) &&
         check_sc_access(ch, spell) &&
         ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
+        ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
         !check_sc_master(ch, mob)) {
       act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;

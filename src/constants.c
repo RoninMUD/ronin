@@ -164,7 +164,7 @@ const char * const spell_wear_off_msg[] = {
   "!cover!",
   "Your hands slow down.",
   "!legend lore!", /* 155 */
-  "", /* 156 */
+  "!hidden blade!", /* 156 */
   "", /* 157 */
   "", /* 158 */
   "", /* 159 */
@@ -255,7 +255,7 @@ const char * const spell_wear_off_msg[] = {
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
-  "", /* 247 Used to be Assassinate */
+  "!dusk requiem!", /* 247 Dusk Requiem */
   "!frostbolt!",/*248*/
   "Your skin turns softer.",/*249*/
   "Your sphere returns to normal.",/*250*/
@@ -2726,6 +2726,7 @@ const char * const anti_paladin_skills[] = {
   "pummel",
   "sneak",
   "steal",
+  "hidden-blade", /* Level 40 */
   "assassinate",  /* Level 45 */
   "feint",        /* Defiler SC3 */
   "shadowstep",   /* Defiler SC5 Used to be Shadow-Walk */
