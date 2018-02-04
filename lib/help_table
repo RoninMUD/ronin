@@ -6975,7 +6975,8 @@ ten.
 Finally, the Defiler's Backstab skill has a 10% chance on success to trigger a
 Vampiric Touch cast automatically at the target, with zero mana cost.
 
-See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LUST" "VAMPIRIC TOUCH"
+See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
+          "VAMPIRIC TOUCH"
 #
 SHADOWSTEP
 
@@ -7091,8 +7092,8 @@ here as [damage].  The amount dealt varies from [damage / 6] to [damage / 2],
 with an average of [damage / 4].  Shadow damage is improved by either Rage or
 Fury, with the most effective spell being applied.
 
-Up to 2 shadows may be created at Subclass Level 3.  A 3rd shadow may be created
-at Subclass Level 4, and a 4th at Subclass Level 5.
+Up to 2 shadows may be created at Infidel subclass level 3.  A 3rd shadow may be
+created at subclass level 4, and a 4th at subclass level 5.
 
 The mana cost of casting Shadow Wraith increases by 20 mana for each shadow that
 is created.  That is, the 1st shadow costs 100 mana, the 2nd costs 120 mana, the

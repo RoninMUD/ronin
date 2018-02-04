@@ -301,10 +301,10 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_SHADOW_WRAITH:
       if (check_subclass(ch, SC_INFIDEL, 3)) return TRUE;
       break;
-    case SPELL_WITHER:
+    case SPELL_DUSK_REQUIEM:
       if (check_subclass(ch, SC_INFIDEL, 4)) return TRUE;
       break;
-    case SPELL_DUSK_REQUIEM:
+    case SPELL_WITHER:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
     case SPELL_REJUVENATION:
