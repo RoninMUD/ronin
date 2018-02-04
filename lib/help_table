@@ -6835,7 +6835,7 @@ The success of Hidden Blade is dependent on how well the skill is practiced and
 is affected by the character's dexterity modifier.  The maximum success rate
 before the dexterity modifier is applied is 25%.
 
-See Also: PUMMEL DEXTERITY
+See Also: ANTI-PALADIN PUMMEL DEXTERITY
 #
 ASSASSINATE
 
@@ -6905,15 +6905,16 @@ This spell grants the Defiler a hit point regeneration bonus equal the level of
 the creature the corpse came from, and an armor bonus equal to half of its
 level.
 
-Additionally, while affected by Desecrate, the Defiler's chance to automatically
-be hit while affected by the Rage spell is reduced from 50% to 20%.
+While affected by Desecrate, the Defiler's Vampiric Touch spell will inflict and
+drain 10% more damage.  Additionally, the damage and drains inflicted by the
+Blood Lust spell is also increased by 10%.
 
 As an added bonus, the Defiler's Spirit Levy spell will restore up to 50% more
-hit points per cast; this effect is active even when Desecrate is not.
+hit points per cast.  This effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
-See Also: SUBCLASSES DEFILER "SPIRIT LEVY"
+See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
 #
 BLACKMANTLE
 
@@ -6925,20 +6926,18 @@ Duration    : 9
 Save        : -
 Mana Cost   : 70
 
-While affected by this spell, up to 10% of all physical attack damage is
-reflected back to the attacker.  The Defiler cannot reflect more damage per
-attack reflected than he/she could inflict in one hit.
+While affected by this spell, up to 10% of all physical attack damage
+is reflected back to the attacker.  The Defiler cannot reflect more
+damage per attack reflected than he/she could inflict in one hit.
 
-While affected by the Blackmantle spell, the Defiler's Vampiric Touch spell
-will inflict and drain 10% more damage.  Additionally, the damage and drains
-inflicted by the Blood Lust spell is also increased by 10%.
+Additionally, the Defiler's chance to automatically be hit while
+affected by the Rage spell is reduced from 50% to 20%.
 
-A Defiler that has learned the Assassinate skill can Backstab a victim already
-in combat, as if he/she could not be seen, when surrounded by this mantle of
-darkness.
+A Defiler that has learned the Assassinate skill can Backstab a
+victim already in combat, as if he/she could not be seen, when
+surrounded by this mantle of darkness.
 
-See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" BACKSTAB
-          ASSASSINATE
+See Also: SUBCLASSES DEFILER RAGE ASSASSINATE BACKSTAB
 #
 FEINT
 
@@ -7127,6 +7126,8 @@ Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
 points and mana equal to 10 x (the number of shadows that existed at the time it
 expires) / 2.  For example, if the Infidel controls four shadows, this effect
 will grant 80 hit points and 80 mana when the 4th shadow's duration expires.
+
+See Also: SUBCLASSES INFIDEL "SHADOW WRAITH"
 #
 WITHER
 
