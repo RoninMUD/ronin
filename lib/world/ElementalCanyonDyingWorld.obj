@@ -1,5 +1,5 @@
 #19400
-Beak Shield~
+shield beak grolem mountainous~
 An Extraordinarily Large Grolem Beak~
 A massive animal beak is laying on the ground.~
 ~
@@ -7,10 +7,6 @@ A massive animal beak is laying on the ground.~
 20 -1 -1 -1
 200 4000000 55600
 10
-E
-mountainous shield grolem beak~
-mountainous shield grolem beak
-~
 X
 ~
 0 0 0
@@ -21,7 +17,5 @@ $n struggles while attempting to use a mountainous Grolem beak as a shield.~
 ~
 A
 17 0
-A
-18 2
 #0
 $~
