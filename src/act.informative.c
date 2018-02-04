@@ -1488,16 +1488,16 @@ void look_in_room(CHAR *ch, int vnum) {
 
   char *blood_messages[] = {
     "Should never see this.\n\r",
-    "There's a little blood here.\n\r",
-    "You're standing in some blood.\n\r",
-    "The blood here is flowing.\n\r",
-    "There's so much blood here it's intoxicating!\n\r",
-    "How much more blood can there be in any one place?\n\r",
-    "Such carnage. The God of Death is feasting tonight!\n\r",
-    "You are splashing around in the blood of the slain!\n\r",
-    "Even the spirits are revolted by the death and destruction!\n\r",
-    "The Gods should show some mercy and cleanse this horrid place!\n\r",
-    "So much blood has been shed here, you are drowning in it!\n\r",
+    "   There's a little blood here.\n\r",
+    "   You're standing in some blood.\n\r",
+    "   The blood here is flowing.\n\r",
+    "   There's so much blood here it's intoxicating!\n\r",
+    "   How much more blood can there be in any one place?\n\r",
+    "   Such carnage. The God of Death is feasting tonight!\n\r",
+    "   You are splashing around in the blood of the slain!\n\r",
+    "   Even the spirits are revolted by the death and destruction!\n\r",
+    "   The Gods should show some mercy and cleanse this horrid place!\n\r",
+    "   So much blood has been shed here, you are drowning in it!\n\r",
     "\n"
   };
 
