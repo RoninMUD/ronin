@@ -435,7 +435,7 @@ int mana_gain(CHAR *ch) {
     }
   }
 
-  /* Divine Wind */
+  /* Inner Peace */
   if (check_subclass(ch, SC_MYSTIC, 2)) {
     gain += 10;
   }
@@ -1167,7 +1167,7 @@ void point_update(void)
           case CLASS_ANTI_PALADIN:
             mana_regen_cap = 90;
 
-            /* Divine Wind */
+            /* Inner Peace */
             if (check_subclass(ch, SC_MYSTIC, 2)) {
               mana_regen_cap += 10;
             }

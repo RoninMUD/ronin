@@ -75,6 +75,7 @@ int check_sc_access(CHAR *ch, int skill)
 {
   if ((skill == SKILL_BLOCK) && (GET_CLASS(ch) == CLASS_NOMAD)) return check_subclass(ch, SC_RANGER, 3);
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
+  if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
 
   if (skill <= 165) return TRUE;
   if (GET_LEVEL(ch) >= LEVEL_SUP) return TRUE;

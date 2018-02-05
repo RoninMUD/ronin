@@ -1376,7 +1376,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (24) Hold Person                   (25) -
     (26) -                             (27) Convergence
     (29) Heal                          (30) Wind Slash
-    (50) Mystic Swiftness
+    (40) Divine Wind                   (50) Mystic Swiftness
 #
 "COMMANDO SPELLS"
 
@@ -1439,8 +1439,8 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (23) Iceball                       (24) Vampiric Touch
     (25) Spirit Levy                   (26) Evil Word
     (27) Hypnotize                     (28) Hell Fire
-    (29) Improve Invisibility          (30) Power Word Kill
-         Remove Improve Invisibility
+    (29) Improved Invisibility         (30) Power Word Kill
+         Remove Improved Invisibility
     (40) Perceive                      (45) Blood Lust
     (50) Rage
 #
@@ -1523,7 +1523,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (22) Animate Dead
     (23) Death Spray
     (24) Lethal Fire
-    (25) Improve Invisibility
+    (25) Improved Invisibility
          Remove Improved Invisibility
     (26) Electric Shock                (26) Power Word Kill
     (27) Clone                         (27) Disintegrate
@@ -3720,9 +3720,9 @@ Attacking while invisible will immediately break the spell.
 
 See Also: "DETECT INVISIBILITY" SONGS
 #
-"IMPROVE INVISIBILITY" IMPY
+"IMPROVED INVISIBILITY" IMPY
 
-Usage       : cast 'improve invisibility' (self only)
+Usage       : cast 'improved invisibility' (self only)
 Accumulative: No
 Level       : Level 25 mage, 29 anti-paladin.
 Duration    : Level/10 ticks
@@ -3744,7 +3744,7 @@ Mana Cost   : 20
 
 This removes your improved invisibility and is only castable on yourself.
 
-See Also: IMPROVE INVISIBILITY
+See Also: IMPROVED INVISIBILITY
 #
 FEAR
 
@@ -8251,6 +8251,24 @@ duration of 4 ticks.  The mana cost is 150.
 
 See Also: SUBCLASSES CHANTER
 #
+"DIVINE WIND"
+
+Subclass Mystic: Level 2 (Ninja)
+
+Usage       : cast 'divine wind' <victim>
+Accumulative: -
+Duration    : Instantaneous
+Level       : Level 40 ninja.
+Save        : -
+Mana Cost   : 65
+Damage      : 300
+
+This spell will inflict 300 damage to the victim with no saving throw
+and will also put the victim in the resting position.
+
+Divine Wind is a direct translation of the word "kamikaze."
+
+#
 RONIN
 
 Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each
@@ -8274,7 +8292,7 @@ skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DEBILITATE
-  2           DIVINE WIND
+  2           INNER PEACE
   3           TIGERKICK
   4           MANTRA
   5           TRANQUILITY
@@ -8338,11 +8356,11 @@ Subclass Ronin: Level 3 (Ninja)
 
 Usage: Passive Skill
 
-The Ronin has become a weapon of war, an instrument of combat. If the
-they miss their first attack, the second attack is still attempted as
-it normally would be, as is the third if affected by Mystic
-Swiftness.  This also ability applies to attacks that are dodged,
-parried or otherwise avoided.
+The Ronin has become a weapon of war, an instrument of combat. If they
+miss their first attack, the second attack is still attempted as it
+normally would be, as is the third if affected by Mystic Swiftness.
+This also ability applies to attacks that are dodged, parried or
+otherwise avoided.
 
 The Ronin also will inflict significant barehand damage to victims
 when disarmed or not wielding a weapon (this applies to either or both
@@ -8423,14 +8441,14 @@ armor increased by 10, making it miss more often and easier to hit.
 
 See Also: SUBCLASSES MYSTIC
 #
-"DIVINE WIND"
+"INNER PEACE"
 
 Subclass Mystic: Level 2 (Ninja)
 
 The winds of the gods blow through the Mystic's spirit, imparting a sense of
 Zen and tranquility upon their being.
 
-Divine Wind is a passive ability that provides the Mystic with +10 mana
+Inner Peace is a passive ability that provides the Mystic with +10 mana
 regeneration at all times.  In addition, this ability increases the Mystic's
 in-combat mana regeneration limit by 10, to a maximum of 100.
 
