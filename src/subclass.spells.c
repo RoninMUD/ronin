@@ -1956,6 +1956,9 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     -1
   };
 
+  int dam = 0;
+  AFF af;
+
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
@@ -1968,7 +1971,7 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  int dam = 350;
+  dam = 350;
 
   int num_effects_to_apply = chance(25) ? 2 : 1;
 
@@ -1979,10 +1982,22 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     dam += 100;
   }
 
-  AFF af;
+  damage(ch, victim, dam, SPELL_WITHER, DAM_MAGICAL);
 
-  for (int i = 0; (i < num_effects_to_apply) && (effect_type != TYPE_UNDEFINED); i++, effect_type = get_random_eligible_effect(victim, wither_effect_types)) {
-    if (!victim) return;
+  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
+
+  affect_from_char(victim, SPELL_WITHER);
+
+  af.type       = SPELL_WITHER;
+  af.duration   = 4;
+  af.location   = 0;
+  af.modifier   = 0;
+  af.bitvector  = 0;
+  af.bitvector2 = 0;
+  affect_to_char(victim, &af);
+
+  for (int i = 0, dam = 0; (i < num_effects_to_apply) && (effect_type != TYPE_UNDEFINED); i++, effect_type = get_random_eligible_effect(victim, wither_effect_types)) {
+    if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
 
     switch (effect_type) {
       case SPELL_BLINDNESS:
@@ -2087,19 +2102,9 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     }
   }
 
-  damage(ch, victim, dam, SPELL_WITHER, DAM_MAGICAL);
-
   if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
 
-  affect_from_char(victim, SPELL_WITHER);
-
-  af.type       = SPELL_WITHER;
-  af.duration   = 4;
-  af.location   = 0;
-  af.modifier   = 0;
-  af.bitvector  = 0;
-  af.bitvector2 = 0;
-  affect_to_char(victim, &af);
+  damage(ch, victim, dam, TYPE_UNDEFINED, DAM_MAGICAL);
 }
 
 void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)

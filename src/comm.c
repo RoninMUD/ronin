@@ -2881,10 +2881,16 @@ void pulse_wither(CHAR *ch) {
     next_af = tmp_af->next;
 
     if (tmp_af->type == SPELL_WITHER) {
-      send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
-      act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
+      if (GET_HIT(ch) > 75) {
+        send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
+        act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
 
-      damage(ch, ch, 75, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+        damage(ch, ch, 75, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+      }
+      else {
+        send_to_char("You cling to life by a thread as your body is wracked with pain!\n\r", ch);
+        act("$n clings to life by a thread as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
+      }
 
       tmp_af->duration--;
 
