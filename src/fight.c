@@ -2583,7 +2583,7 @@ int calc_hitroll(CHAR *ch)
   }
 
   /* Combat Zen */
-  if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) {
+  if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) {
     for (aff = ch->affected; aff; aff = aff->next)
     {
       if (aff->type == SPELL_BLINDNESS && aff->location == APPLY_HITROLL)
@@ -2847,7 +2847,7 @@ int calc_max_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon) {
       if (GET_CLASS(ch) == CLASS_NINJA)
       {
         /* Combat Zen */
-        if (check_subclass(ch, SC_RONIN, 1))
+        if (check_subclass(ch, SC_RONIN, 3))
           dam += 4 * 9;
         else if (GET_LEVEL(ch) > 27)
           dam += 5 * 4;
@@ -2920,7 +2920,7 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon)
       if (GET_CLASS(ch) == CLASS_NINJA)
       {
         /* Combat Zen */
-        if (check_subclass(ch, SC_RONIN, 1))
+        if (check_subclass(ch, SC_RONIN, 3))
           dam += dice(4, 9);
         else if (GET_LEVEL(ch) > 27)
           dam += dice(5, 4);
@@ -3066,7 +3066,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
       }
 
       /* Combat Zen */
-      if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+      if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
       return FALSE;
     }
@@ -3163,7 +3163,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         }
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3197,7 +3197,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         }
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3235,7 +3235,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         hit(victim, ch, SKILL_FEINT);
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3362,7 +3362,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     }
 
     /* Combat Zen */
-    if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+    if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
     return FALSE;
   }
@@ -3977,18 +3977,18 @@ void qhit(CHAR *ch, CHAR *victim, int type)
 
 void blood_lust_action(CHAR *ch, CHAR *vict)
 {
-  int dmg = 0;
-
   if (!ch || !vict) return;
 
   int check = 20;
 
   /* Bathed in Blood */
-  if (check_subclass(ch, SC_DEFILER, 4) && (CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
-    check += 10;
+  if (check_subclass(ch, SC_DEFILER, 4)) {
+    check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
   }
 
   if (!chance(check)) return;
+
+  int dmg = 0;
 
   switch(number(1, 4))
   {
@@ -4000,7 +4000,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 60;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_PHYSICAL);
       break;
@@ -4012,7 +4014,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 40;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
       magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
@@ -4026,7 +4030,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 20;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;

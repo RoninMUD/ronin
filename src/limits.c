@@ -381,7 +381,7 @@ int mana_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1)) {
+    if (check_subclass(ch, SC_RONIN, 3)) {
       gain /= 8;
     }
     else {
@@ -435,6 +435,11 @@ int mana_gain(CHAR *ch) {
     }
   }
 
+  /* Inner Peace */
+  if (check_subclass(ch, SC_MYSTIC, 2)) {
+    gain += 10;
+  }
+
   return gain;
 }
 
@@ -468,7 +473,7 @@ int hit_gain(CHAR *ch) {
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
-      if (check_subclass(ch, SC_RONIN, 1)) {
+      if (check_subclass(ch, SC_RONIN, 3)) {
         gain /= 4;
       }
       else {
@@ -595,7 +600,7 @@ int hit_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1)) {
+    if (check_subclass(ch, SC_RONIN, 3)) {
       gain /= 4;
     }
     else {
@@ -728,7 +733,7 @@ int move_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 1)) {
+    if (check_subclass(ch, SC_RONIN, 3)) {
       gain /= 2;
     }
     else {
@@ -1161,6 +1166,11 @@ void point_update(void)
           case CLASS_PALADIN:
           case CLASS_ANTI_PALADIN:
             mana_regen_cap = 90;
+
+            /* Inner Peace */
+            if (check_subclass(ch, SC_MYSTIC, 2)) {
+              mana_regen_cap += 10;
+            }
             break;
 
           default:
@@ -1168,8 +1178,8 @@ void point_update(void)
             break;
         }
 
-          mana_regen = MIN(mana_regen, mana_regen_cap - MIN(ch->points.mana_regen_tmp, mana_regen_cap));
-          mana_regen = (mana_regen * (100 - ((MAX_RANK - get_rank(ch)) * 5))) / 100;
+        mana_regen = MIN(mana_regen, mana_regen_cap - MIN(ch->points.mana_regen_tmp, mana_regen_cap));
+        mana_regen = (mana_regen * (100 - ((MAX_RANK - get_rank(ch)) * 5))) / 100;
       }
 
       GET_HIT(ch) = MIN(MAX(GET_HIT(ch) + point_update_hit(ch), 1), hit_limit(ch));

@@ -3108,8 +3108,10 @@ int mus_quaratt(CHAR *mob, CHAR* ch, int cmd, char *arg )
       cast_func = spell_wrath_ancients;
     else if( spl == SPELL_WRATH_OF_GOD )
       cast_func = spell_wrath_of_god;
-    else if( spl == SPELL_DIVINE_WIND )
-      cast_func = spell_divine_wind;
+    else if( spl == SPELL_DUSK_REQUIEM )
+      cast_func = spell_dusk_requiem;
+    else if( spl == SPELL_WITHER )
+      cast_func = spell_wither;
     else if( spl == SPELL_DEMONIC_THUNDER )
       cast_func = spell_demonic_thunder;
 

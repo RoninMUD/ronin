@@ -1880,6 +1880,12 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
 
       do_quest(collector, buf, CMD_QUEST);
 
+      // Prevent crash if CENTRAL_PROCESSING is not loaded in the world (usually just in test/dev scenarios).
+      if (real_room(CENTRAL_PROCESSING) == NOWHERE) {
+        log_s("Order junked but CENTRAL_PROCESSING is not loaded.");
+        return TRUE;
+      }
+
       // this is where it gets moved to another room to "hack" a wait timer
       // --- boots and crashes will cancel this, so be it
       obj_from_char(order);

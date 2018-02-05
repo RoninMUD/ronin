@@ -354,7 +354,10 @@ IS_AFFECTED((sub),AFF_INFRAVISION) || (GET_LEVEL(sub) > LEVEL_MORT))
 #define GET_ROOM_PEOPLE(room) (world[room].people)
 #define GET_ROOM_FLAGS(room) (world[room].room_flags)
 #define GET_OBJ_BITS(obj) (obj->obj_flags.bitvector)
+#define OBJ_BITS(obj) GET_OBJ_BITS(obj)
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
+#define OBJ_BITS2(obj) GET_OBJ_BITS2(obj)
+
 
 #define FIELD_SIZE(t,f) sizeof(((struct t*)0)->f)
 

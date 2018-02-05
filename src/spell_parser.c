@@ -1966,7 +1966,7 @@ void assign_spell_pointers(void)
   SPELLO(218, 30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_meteor);
   SPELLO(217, 30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_wall_thorns);
   SPELLO(216, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 50, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
-  SPELLO(212, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   65, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_divine_wind);
+  SPELLO(212, 30, POSITION_FIGHTING, 57, 57, 40, 57, 57, 57, 57, 57,   65, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_divine_wind);
   SPELLO(209, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_rimefang);
   SPELLO(196, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_engage);
   SPELLO(195, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_ethereal_nature);

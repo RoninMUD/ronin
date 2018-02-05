@@ -144,7 +144,7 @@ const char * const spell_wear_off_msg[] = {
   "!enchant armour!",
   "!disintegrate!",
   "Your head clears and you no longer feel confused.",
-  "", /* 136 Vampiric Touch */
+  "!vampiric touch!",
   "!searing orb!",
   "!clairvoyance!",
   "!firebreath!",
@@ -218,7 +218,7 @@ const char * const spell_wear_off_msg[] = {
   "You place yourself in a normal stance.", /*207 - defend*/
   "You place yourself in a normal stance.", /*208 - hostile*/
   "The paralyzation wears off, you can move again", /*209 - rimefang*/
-  "!wither!", /* 210 Used to be Dark Ritual */
+  "The pain coursing through your withered body begins to recede.", /* 210 Wither */
   "Your mantle of darkness fades away.",/*211*/
   "!divine wind!",/*212*/
   "!zeal!",/*213*/

@@ -2168,7 +2168,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           sprintf(buf, "      Spell/Skill : '%s'\n\r", spells[tmp_af->type - 1]);
           send_to_char(buf, ch);
 
-          if (tmp_af->type == SKILL_MANTRA) {
+          if (tmp_af->type == SKILL_MANTRA || tmp_af->type == SPELL_WITHER ) {
             sprintf(buf, "            Expires in %3d seconds (approx.)\n\r", tmp_af->duration * 10);
           }
           else {
@@ -2399,7 +2399,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           if (af_list[count].duration > longest_dur) {
             /* SKILL_MANTRA length is multiplied by 100 instead of 10
             to take into accout the ~ character. */
-            longest_dur = ((af_list[count].type == SKILL_MANTRA) ?
+            longest_dur = (((af_list[count].type == SKILL_MANTRA) || (af_list[count].type == SPELL_WITHER)) ?
                            (af_list[count].duration * 100) : af_list[count].duration);
           }
         }
@@ -2481,7 +2481,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
         else {
-          if (af_list[i].type == SKILL_MANTRA) {
+          if (af_list[i].type == SKILL_MANTRA || af_list[i].type == SPELL_WITHER) {
             snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Secs.",
                      ((longest_dur < 2) ? longest_dur : (longest_dur - 1)), (af_list[i].duration * 10));
           }

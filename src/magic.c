@@ -204,6 +204,9 @@ void spell_chill_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     af.bitvector = 0;
     af.bitvector2 = 0;
     affect_join(victim, &af, TRUE, FALSE);
+
+    act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
+    act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
   } else {
     dam >>= 1;
   }
@@ -3416,7 +3419,7 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     dam *= 9;
   }
 
-  if (affected_by_spell(ch, SPELL_BLACKMANTLE)) {
+  if (affected_by_spell(ch, SPELL_DESECRATE)) {
     dam *= 1.1;
   }
 

@@ -420,7 +420,6 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   char name[MIL];
   CHAR *victim = NULL;
   int check = 0;
-  AFF af;
 
   if (!GET_SKILLS(ch)) return;
 
@@ -496,15 +495,6 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   else {
     /* Bathed in Blood */
     if (check_subclass(ch, SC_DEFILER, 4) && !affected_by_spell(ch, SPELL_VAMPIRIC) && chance(10)) {
-      af.type       = SPELL_VAMPIRIC;
-      af.duration   = 0;
-      af.modifier   = 0;
-      af.location   = 0;
-      af.bitvector  = 0;
-      af.bitvector2 = 0;
-
-      affect_to_char(ch, &af);
-
       act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, NULL, victim, TO_CHAR);
       act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, NULL, victim, TO_VICT);
       act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, NULL, victim, TO_NOTVICT);
