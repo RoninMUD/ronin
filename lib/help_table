@@ -1655,7 +1655,7 @@ practice % on parry for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
-     throw, triple, disembowel, quad.
+        throw, triple (level 20), disembowel (level 40), quad (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1668,8 +1668,8 @@ armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick,
-     throw, coin toss, scan, twist, cunning.
+Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
+        coin toss, scan (level 35), twist (level 45), cunning (level 50)
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1700,7 +1700,7 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge peek pick backflip camp
+Skills: dodge, peek, pick, throw, backflip (level 20), camp (level 35)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1728,7 +1728,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP NINJA SPELLS to see the spells of the ninja class.
 
-Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw.
+Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1742,7 +1742,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-     subdue, throw, trap, disembowel, evasion.
+        subdue, throw, trap, disembowel, evasion (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1756,7 +1756,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP PALADIN SPELLS to see the spells of the paladin.
 
-Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray.
+Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray (level 40)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1770,7 +1770,7 @@ You can improve your spells and skills by using the practice command.
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
 Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
-     assassinate.
+        hidden blade (level 40), assassinate (level 45)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1784,7 +1784,8 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP COMMANDO SPELLS to see the spells of the commando.
 
-Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue, triple.
+Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue,
+        triple (level 20)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
