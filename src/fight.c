@@ -3982,8 +3982,8 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
   int check = 20;
 
   /* Bathed in Blood */
-  if (check_subclass(ch, SC_DEFILER, 4) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
-    check += 5 + RM_BLOOD(CHAR_REAL_ROOM(ch));
+  if (check_subclass(ch, SC_DEFILER, 4)) {
+    check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
   }
 
   if (!chance(check)) return;
