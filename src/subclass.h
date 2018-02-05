@@ -57,8 +57,8 @@ void cast_wall_thorns(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, O
 void spell_wall_thorns(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
-void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+//void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
+//void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_blackmantle(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
 void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );

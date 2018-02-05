@@ -780,42 +780,42 @@ void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   update_pos(victim);
 }
 
-void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  switch (type) {
-    case SPELL_TYPE_SPELL:
-      if (victim)
-        spell_divine_wind(level, ch, victim, 0);
-      break;
-    default:
-      log_f("Wrong type called in divine wind!");
-      break;
-  }
-}
-
-int stack_position(CHAR *ch, int target_position);
-void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  int set_pos = 0;
-
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
-    send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
-
-    return;
-  }
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
-    send_to_char("Behave yourself here please!\n\r", ch);
-
-    return;
-  }
-
-  set_pos = stack_position(victim, POSITION_RESTING);
-
-  damage(ch, victim, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
-
-  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
-    GET_POS(victim) = set_pos;
-  }
-}
+//void cast_divine_wind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+//  switch (type) {
+//    case SPELL_TYPE_SPELL:
+//      if (victim)
+//        spell_divine_wind(level, ch, victim, 0);
+//      break;
+//    default:
+//      log_f("Wrong type called in divine wind!");
+//      break;
+//  }
+//}
+//
+//int stack_position(CHAR *ch, int target_position);
+//void spell_divine_wind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+//  int set_pos = 0;
+//
+//  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+//    send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+//
+//    return;
+//  }
+//
+//  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
+//    send_to_char("Behave yourself here please!\n\r", ch);
+//
+//    return;
+//  }
+//
+//  set_pos = stack_position(victim, POSITION_RESTING);
+//
+//  damage(ch, victim, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
+//
+//  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
+//    GET_POS(victim) = set_pos;
+//  }
+//}
 
 void cast_blackmantle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {

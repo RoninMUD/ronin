@@ -8258,9 +8258,9 @@ level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
-  1           COMBAT ZEN
+  1           DUAL ASSAULT
   2           BACKFIST
-  3           DUAL ASSAULT
+  3           COMBAT ZEN
   4           BLUR
   5           BANZAI
 
@@ -8283,7 +8283,7 @@ See Also: SUBCLASSES RONIN NINJA
 #
 "DUAL ASSAULT"
 
-Subclass Ronin: Level 3 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
 Usage: assault <victim>
 
@@ -8332,30 +8332,9 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
-BLUR
-
-Subclass Ronin: Level 4 (Ninja)
-
-Usage       : cast 'blur' (self only)
-Accumulative: no
-Duration    : Level / 6
-Mana Cost   : 100
-
-The Ronin blurs out of reality, making them not only harder to hit,
-but harder to defend against. While under the effects of Blur, the
-Ronin gains the following benefits, increasing the skill check
-success of the affected skills:
-
-  -(Level / 2) to the Ronin's armor class (this is a benefit).
-  +(Level) to Dodge skill checks.
-  +(Level / 5) to Assault and Dual Assault skill checks.
-  +(Level / 10) to all other skill checks.
-
-See Also: SUBCLASSES RONIN
-#
 "COMBAT ZEN"
 
-Subclass Ronin: Level 1 (Ninja)
+Subclass Ronin: Level 3 (Ninja)
 
 Usage: Passive Skill
 
@@ -8375,6 +8354,27 @@ will not have any hit/damage penalties.
 
 Finally, the Ronin has a higher resistance to poison damage, and has a
 chance to move while affected by paralysis.
+
+See Also: SUBCLASSES RONIN
+#
+BLUR
+
+Subclass Ronin: Level 4 (Ninja)
+
+Usage       : cast 'blur' (self only)
+Accumulative: no
+Duration    : Level / 6
+Mana Cost   : 100
+
+The Ronin blurs out of reality, making them not only harder to hit,
+but harder to defend against. While under the effects of Blur, the
+Ronin gains the following benefits, increasing the skill check
+success of the affected skills:
+
+  -(Level / 2) to the Ronin's armor class (this is a benefit).
+  +(Level) to Dodge skill checks.
+  +(Level / 5) to Assault and Dual Assault skill checks.
+  +(Level / 10) to all other skill checks.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8423,6 +8423,19 @@ armor increased by 10, making it miss more often and easier to hit.
 
 See Also: SUBCLASSES MYSTIC
 #
+"DIVINE WIND"
+
+Subclass Mystic: Level 2 (Ninja)
+
+The winds of the gods blow through the Mystic's spirit, imparting a sense of
+Zen and tranquility upon their being.
+
+Divine Wind is a passive ability that provides the Mystic with +10 mana
+regeneration at all times.  In addition, this ability increases the Mystic's
+in-combat mana regeneration limit by 10, to a maximum of 100.
+
+See Also: SUBCLASSES MYSTIC REGENERATION
+#
 TIGERKICK
 
 Subclass Mystic: Level 3 (Ninja)
@@ -8446,22 +8459,6 @@ A successful Tigerkick will stun the victim for 2 rounds.
 
 The success of Tigerkick is dependent on how well the skill is
 practiced.
-
-See Also: SUBCLASSES MYSTIC
-#
-"DIVINE WIND"
-
-Subclass Mystic: Level 2 (Ninja)
-
-Usage       : cast 'divine wind' <victim>
-Save        : none
-Mana Cost   : 65
-Damage      : 300
-
-This spell will inflict 300 damage to the victim with no saving throw
-and will also put the victim in a resting position.
-
-Divine Wind is a direct translation of the word "kamikaze."
 
 See Also: SUBCLASSES MYSTIC
 #

@@ -220,7 +220,7 @@ const char * const spell_wear_off_msg[] = {
   "The paralyzation wears off, you can move again", /*209 - rimefang*/
   "The pain coursing through your withered body begins to recede.", /* 210 Wither */
   "Your mantle of darkness fades away.",/*211*/
-  "!divine wind!",/*212*/
+  "",/*212*/
   "!zeal!",/*213*/
   "!impair!",/*214*/
   "!flank!",/*215*/

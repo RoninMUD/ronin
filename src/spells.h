@@ -239,7 +239,7 @@
 #define SPELL_RIMEFANG              209
 #define SPELL_WITHER                210
 #define SPELL_BLACKMANTLE           211
-#define SPELL_DIVINE_WIND           212
+#define SPELL_UNUSED_212            212
 #define SKILL_ZEAL                  213
 #define SKILL_IMPAIR                214
 #define SKILL_FLANK                 215

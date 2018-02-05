@@ -253,9 +253,6 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_DEBILITATE:
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
-    case SPELL_DIVINE_WIND:
-      if (check_subclass(ch, SC_MYSTIC, 2)) return TRUE;
-      break;
     case SKILL_TIGERKICK:
       if (check_subclass(ch, SC_MYSTIC, 3)) return TRUE;
       break;
