@@ -88,8 +88,6 @@ M
 ~
 A
 53 0
-B
-2
 #19505
 boots gale wind~
 the gale force wind boots~
@@ -136,16 +134,14 @@ A
 18 3
 A
 19 1
-B
-2
 #19507
 sword lightning bolt~
 a crackling lightning sword~
 Electricity crackles as lightning jumps around here.~
 ~
 5 138473539 8193
-8 11 3 3
-1 4370000 17000
+8 10 4 3
+18 4370000 17000
 12
 X
 ~
@@ -156,7 +152,7 @@ M
 ~
 ~
 A
-19 4
+19 1
 A
 18 4
 A
