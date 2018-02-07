@@ -1376,7 +1376,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (24) Hold Person                   (25) -
     (26) -                             (27) Convergence
     (29) Heal                          (30) Wind Slash
-    (40) Divine Wind                   (50) Mystic Swiftness
+    (50) Mystic Swiftness
 #
 "COMMANDO SPELLS"
 
@@ -1439,8 +1439,8 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (23) Iceball                       (24) Vampiric Touch
     (25) Spirit Levy                   (26) Evil Word
     (27) Hypnotize                     (28) Hell Fire
-    (29) Improved Invisibility         (30) Power Word Kill
-         Remove Improved Invisibility
+    (29) Improve Invisibility          (30) Power Word Kill
+         Remove Improve Invisibility
     (40) Perceive                      (45) Blood Lust
     (50) Rage
 #
@@ -1523,7 +1523,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (22) Animate Dead
     (23) Death Spray
     (24) Lethal Fire
-    (25) Improved Invisibility
+    (25) Improve Invisibility
          Remove Improved Invisibility
     (26) Electric Shock                (26) Power Word Kill
     (27) Clone                         (27) Disintegrate
@@ -1655,7 +1655,7 @@ practice % on parry for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
-        throw, triple (level 20), disembowel (level 40), quad (level 50)
+     throw, triple, disembowel, quad.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1668,8 +1668,8 @@ armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
-        coin toss, scan (level 35), twist (level 45), cunning (level 50)
+Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick,
+     throw, coin toss, scan, twist, cunning.
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1700,7 +1700,7 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge, peek, pick, throw, backflip (level 20), camp (level 35)
+Skills: dodge peek pick backflip camp
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1728,7 +1728,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP NINJA SPELLS to see the spells of the ninja class.
 
-Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw
+Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1742,7 +1742,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-        subdue, throw, trap, disembowel, evasion (level 50)
+     subdue, throw, trap, disembowel, evasion.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1756,7 +1756,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP PALADIN SPELLS to see the spells of the paladin.
 
-Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray (level 40)
+Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1770,7 +1770,7 @@ You can improve your spells and skills by using the practice command.
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
 Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
-        hidden blade (level 40), assassinate (level 45)
+     assassinate.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1784,8 +1784,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP COMMANDO SPELLS to see the spells of the commando.
 
-Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue,
-        triple (level 20)
+Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue, triple.
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -3721,9 +3720,9 @@ Attacking while invisible will immediately break the spell.
 
 See Also: "DETECT INVISIBILITY" SONGS
 #
-"IMPROVED INVISIBILITY" IMPY
+"IMPROVE INVISIBILITY" IMPY
 
-Usage       : cast 'improved invisibility' (self only)
+Usage       : cast 'improve invisibility' (self only)
 Accumulative: No
 Level       : Level 25 mage, 29 anti-paladin.
 Duration    : Level/10 ticks
@@ -3745,7 +3744,7 @@ Mana Cost   : 20
 
 This removes your improved invisibility and is only castable on yourself.
 
-See Also: IMPROVED INVISIBILITY
+See Also: IMPROVE INVISIBILITY
 #
 FEAR
 
@@ -7107,20 +7106,21 @@ Subclass Infidel: Level 4 (Anti-Paladin)
 
 Usage       : cast 'dusk requiem' <victim>
 Accumulative: No
-Duration    : -
+Duration    : Instantaneous
 Save        : -
 Mana Cost   : 20
+Damage Done : 350 per shadow wraith (up to 1400 with 4 shadows)
 
 The Infidel may "collapse" a shadow wraith, expending its existence to inflict
 massive damage against a foe.
 
 Casting Dusk Requiem immediately destroys the most recently cast Shadow Wraith,
-inflicting damage equal to 250 x the number of shadows the Infidel controls when
+inflicting damage equal to 350 x the number of shadows the Infidel controls when
 this spell is cast.  For example, if the Infidel controls four shadows, this
-spell will inflict 1000 damage to the target.
+spell will inflict 1400 damage to the target.
 
 Additionally, if a shadow's duration expires while the Infidel is engaged in
-combat, this spell is automatically cast with zero mana cost, inflicting half
+combat, this spell is automatically cast with zero mana cost, inflicting double
 damage.
 
 Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
@@ -7152,18 +7152,20 @@ seconds, for a duration of 40 seconds.  Multiple casts of Wither will refresh
 the damage over time effect to its maximum duration.
 
 This spell also applies a random effect to the target from the following list of
-negative conditions: blindness, chill touch, curse, paralysis or poison.
+negative conditions: blindness, curse, paralysis or poison.
 
-Each effect is subject to its own saving throw.  There is a 25% chance that a
-second effect will be applied, or the same effect will be attempted again if the
-target made its saving throw.  Blindness has a duration of 2, chill touch has a
-duration of 6, and curse, paralysis and poison each have a duration equal to the
-level of the caster.
+There is a 25% chance that an effect will be applied every 10 seconds (each
+pulse).  This chance is reduced by 5% for each negative condition that already
+exists on the target.
 
-If the target is immune to the chosen effect, the spell deals an additional 50
-damage instead.  Similarly, if all of the effects are already present on the
-target, Wither deals an additional 100 damage instead of applying a negative
-effect.
+Blindness has a duration of 2, chill touch has a duration of 6, while curse,
+paralysis and poison each have a duration equal to the level of the caster.
+
+If the target is immune to the chosen effect, the damage over time effect deals
+an additional 50 damage instead.
+
+The damage over time effect should not, in most situations, inflict enough
+damage to kill the target, but will increasingly lead the victim toward death.
 
 See Also: SUBCLASSES INFIDEL BLINDNESS "CHILL TOUCH" CURSE PARALYSIS POISON
 #
@@ -8252,24 +8254,6 @@ duration of 4 ticks.  The mana cost is 150.
 
 See Also: SUBCLASSES CHANTER
 #
-"DIVINE WIND"
-
-Subclass Mystic: Level 2 (Ninja)
-
-Usage       : cast 'divine wind' <victim>
-Accumulative: -
-Duration    : Instantaneous
-Level       : Level 40 ninja.
-Save        : -
-Mana Cost   : 65
-Damage      : 300
-
-This spell will inflict 300 damage to the victim with no saving throw
-and will also put the victim in the resting position.
-
-Divine Wind is a direct translation of the word "kamikaze."
-
-#
 RONIN
 
 Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each
@@ -8293,7 +8277,7 @@ skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DEBILITATE
-  2           INNER PEACE
+  2           DIVINE WIND
   3           TIGERKICK
   4           MANTRA
   5           TRANQUILITY
@@ -8357,11 +8341,11 @@ Subclass Ronin: Level 3 (Ninja)
 
 Usage: Passive Skill
 
-The Ronin has become a weapon of war, an instrument of combat. If they
-miss their first attack, the second attack is still attempted as it
-normally would be, as is the third if affected by Mystic Swiftness.
-This also ability applies to attacks that are dodged, parried or
-otherwise avoided.
+The Ronin has become a weapon of war, an instrument of combat. If the
+they miss their first attack, the second attack is still attempted as
+it normally would be, as is the third if affected by Mystic
+Swiftness.  This also ability applies to attacks that are dodged,
+parried or otherwise avoided.
 
 The Ronin also will inflict significant barehand damage to victims
 when disarmed or not wielding a weapon (this applies to either or both
@@ -8442,14 +8426,14 @@ armor increased by 10, making it miss more often and easier to hit.
 
 See Also: SUBCLASSES MYSTIC
 #
-"INNER PEACE"
+"DIVINE WIND"
 
 Subclass Mystic: Level 2 (Ninja)
 
 The winds of the gods blow through the Mystic's spirit, imparting a sense of
 Zen and tranquility upon their being.
 
-Inner Peace is a passive ability that provides the Mystic with +10 mana
+Divine Wind is a passive ability that provides the Mystic with +10 mana
 regeneration at all times.  In addition, this ability increases the Mystic's
 in-combat mana regeneration limit by 10, to a maximum of 100.
 
