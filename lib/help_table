@@ -6860,9 +6860,9 @@ See Also: BACKSTAB DEXTERITY
 RAGE
 
 Usage       : cast 'rage' (self only)
-Accumulative: -
+Accumulative: No
 Duration    : 5
-Level       : Level 50 anti-paladin
+Level       : Level 50 Anti-Paladin
 Mana Cost   : 75
 
 This spell is similar to the Paladin's Fury spell.  It grants the Anti-Paladin a
@@ -6894,9 +6894,9 @@ DESECRATE
 Subclass Defiler: Level 1 (Anti-Paladin)
 
 Usage       : cast 'desecrate' <corpse>
-Accumulative: -
+Accumulative: No
 Duration    : 7
-Save        : -
+Save        : None
 Mana Cost   : 70
 
 With this spell, the Defiler does the vilest thing imaginable with the corpse,
@@ -6922,9 +6922,8 @@ BLACKMANTLE
 Subclass Defiler: Level 2 (Anti-Paladin)
 
 Usage       : cast 'blackmantle' (self only)
-Accumulative: -
+Accumulative: No
 Duration    : 9
-Save        : -
 Mana Cost   : 70
 
 While affected by this spell, up to 10% of all physical attack damage
@@ -7081,7 +7080,6 @@ Subclass Infidel: Level 3 (Anti-Paladin)
 Usage       : cast 'shadow wraith' (self only)
 Accumulative: Yes (up to 4 shadows at Subclass Level 5)
 Duration    : 10 / shadow
-Save        : -
 Mana Cost   : 100 (1st Shadow) / 120 (2nd) / 140 (3rd) / 160 (4th)
 
 The Infidel can manifest shadow wraiths by harnessing their own dark energy.
@@ -7107,8 +7105,8 @@ Subclass Infidel: Level 4 (Anti-Paladin)
 
 Usage       : cast 'dusk requiem' <victim>
 Accumulative: No
-Duration    : -
-Save        : -
+Duration    : Instantaneous
+Save        : None
 Mana Cost   : 20
 
 The Infidel may "collapse" a shadow wraith, expending its existence to inflict
@@ -7170,7 +7168,7 @@ See Also: SUBCLASSES INFIDEL BLINDNESS "CHILL TOUCH" CURSE PARALYSIS POISON
 "DEMONIC THUNDER"
 
 Usage       : cast 'demonic thunder' <victim>
-Accumulative: -
+Accumulative: No
 Duration    : Instantaneous (Damage) / 7 days (Curse)
 Save        : None (Damage) / Versus spell negates (Curse)
 Mana Cost   : 100
@@ -8257,7 +8255,7 @@ See Also: SUBCLASSES CHANTER
 Usage       : cast 'divine wind' <victim>
 Accumulative: No
 Duration    : Instantaneous
-Level       : Level 40 ninja.
+Level       : Level 40 Ninja
 Save        : None
 Mana Cost   : 65
 Damage Done : 300
@@ -8378,7 +8376,7 @@ BLUR
 Subclass Ronin: Level 4 (Ninja)
 
 Usage       : cast 'blur' (self only)
-Accumulative: no
+Accumulative: No
 Duration    : Level / 6
 Mana Cost   : 100
 
@@ -8399,7 +8397,6 @@ BANZAI
 Subclass Ronin: Level 5 (Ninja)
  
 Usage       : banzai <victim>
-Save        : -
 Mana Cost   : 75
 Damage      : 200 to 300
 
@@ -8429,9 +8426,9 @@ DEBILITATE
 Subclass Mystic: Level 1 (Ninja)
 
 Usage       : cast 'debilitate' <victim>
-Accumulative: no
+Accumulative: No
 Duration    : 5
-Save        : none
+Save        : None
 Mana Cost   : 20
 
 Anything affected by this spell has its hitroll reduced by 5, and its
@@ -8483,9 +8480,9 @@ MANTRA
 
 Subclass Mystic: Level 4 (Ninja)
 
-Usage       : mantra <victim>
-Accumulative: no
-Duration    : Instantaneous + 100 seconds.
+Usage       : mantra <target>
+Accumulative: No
+Duration    : Instantaneous + 100 seconds
 Mana Cost   : 120
 
 The Mystic channels his/her spiritual energy into a target, which
@@ -8516,7 +8513,7 @@ TRANQUILITY
 Subclass Mystic: Level 5 (Ninja)
 
 Usage       : cast 'tranquility'
-Accumulative: no
+Accumulative: -
 Duration    : 6
 Mana Cost   : 150
 
