@@ -2977,6 +2977,7 @@ int wither_pulse_action(CHAR *victim) {
         if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) ||
           ((GET_LEVEL(victim) - 10) > caster_level)) {
           dam += 50;
+          break;
         }
 
         af.type = SPELL_PARALYSIS;
@@ -3001,6 +3002,7 @@ int wither_pulse_action(CHAR *victim) {
       case SPELL_POISON:
         if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) {
           dam += 50;
+          break;
         }
 
         af.type = SPELL_POISON;
