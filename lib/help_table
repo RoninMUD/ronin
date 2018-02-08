@@ -2145,6 +2145,12 @@ gives a damage multiplier dependent on level.
 
 The chance of successfully backstabbing a person depends on how well you have
 practiced backstab at your guild. You can always backstab sleeping persons.
+
+The Anti-Paladin's Assassinate skill also allows a sufficiently hidden, or
+invisible, Anti-Paladin to use the Backstab skill against a victim already in
+combat.
+
+See Also: ASSASSINATE
 #
 BUTCHER
 
