@@ -7092,9 +7092,9 @@ The Infidel can manifest shadow wraiths by harnessing their own dark energy.
 
 These wraiths attack the Infidel's target automatically, dealing a variable
 amount of damage, based on that of the caster's normal attack damage, expressed
-here as [damage].  The amount dealt varies from [damage / 6] to [damage / 2],
-with an average of [damage / 4].  Shadow damage is improved by either Rage or
-Fury, with the most effective spell being applied.
+here as [damage].  The amount dealt varies from [damage / 6] to [damage / 2].
+Shadow damage is improved by either Rage or Fury, with the most effective spell
+being applied.
 
 Up to 2 shadows may be created at Infidel subclass level 3.  A 3rd shadow may be
 created at subclass level 4, and a 4th at subclass level 5.
@@ -7128,9 +7128,9 @@ combat, this spell is automatically cast with zero mana cost, inflicting half
 damage.
 
 Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
-points and mana equal to 10 x (the number of shadows that existed at the time it
-expires) / 2.  For example, if the Infidel controls four shadows, this effect
-will grant 80 hit points and 80 mana when the 4th shadow's duration expires.
+points and mana equal to half the mana cost of the shadow that is expiring.  For
+example, if the Infidel controls four shadows, this effect will grant 80 hit
+points and 80 mana when the 4th shadow's duration expires.
 
 See Also: SUBCLASSES INFIDEL "SHADOW WRAITH"
 #
