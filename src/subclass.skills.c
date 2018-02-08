@@ -1616,7 +1616,17 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 101) - GET_WIS_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
+  check = number(1, 101) - GET_WIS_APP(ch);
+
+  /* Inner Peace */
+  if (check_subclass(ch, SC_MYSTIC, 2)) {
+    check -= 5;
+  }
+  
+  /* The Shogun title increases concentration rate. */
+  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+    check -= 5;
+  }
 
   /* Mantra automatically fails when used on a degenerated target. */
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
@@ -1664,11 +1674,11 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
       }
     }
 
-    af.type = SKILL_MANTRA;
-    af.duration = 10;
-    af.modifier = modifier;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
+    af.type       = SKILL_MANTRA;
+    af.duration   = 10;
+    af.modifier   = modifier;
+    af.location   = APPLY_NONE;
+    af.bitvector  = AFF_NONE;
     af.bitvector2 = AFF_NONE;
 
     affect_to_char(victim, &af);
