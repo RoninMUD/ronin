@@ -1,3 +1,18 @@
+"BLOOD LEVEL"
+
+The "blood level" of a room is an indicator of the amount of fresh blood that
+has been spilled recently in the area.  Each creature that dies in a room
+generates one blood level.  This level increases by one for each additional
+creature that dies, up to a limit of ten blood levels.  The level of blood
+in a room is indicated by a message located at the bottom of the room's
+description.
+
+The blood level of a room recedes by one level per tick as the traces of
+violence begin to fade away into macabre memory.
+
+Note: The following types of creatures do not generate blood when killed:
+animated, charmed, or mountable creatures.
+#
 "SECTOR TYPE"
 
 Every "room" in the game has a sector type that defines what kind of
@@ -1361,7 +1376,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (24) Hold Person                   (25) -
     (26) -                             (27) Convergence
     (29) Heal                          (30) Wind Slash
-    (50) Mystic Swiftness
+    (40) Divine Wind                   (50) Mystic Swiftness
 #
 "COMMANDO SPELLS"
 
@@ -1424,9 +1439,10 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (23) Iceball                       (24) Vampiric Touch
     (25) Spirit Levy                   (26) Evil Word
     (27) Hypnotize                     (28) Hell Fire
-    (29) Improve Invisibility          (30) Power Word Kill
-         Remove Improve Invisibility
-    (40) Perceive                      (50) Blood Lust
+    (29) Improved Invisibility         (30) Power Word Kill
+         Remove Improved Invisibility
+    (40) Perceive                      (45) Blood Lust
+    (50) Rage
 #
 "CLERIC SPELLS"
 
@@ -1507,7 +1523,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (22) Animate Dead
     (23) Death Spray
     (24) Lethal Fire
-    (25) Improve Invisibility
+    (25) Improved Invisibility
          Remove Improved Invisibility
     (26) Electric Shock                (26) Power Word Kill
     (27) Clone                         (27) Disintegrate
@@ -1639,7 +1655,7 @@ practice % on parry for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
-     throw, triple, disembowel, quad.
+        throw, triple (level 20), disembowel (level 40), quad (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1652,8 +1668,8 @@ armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick,
-     throw, coin toss, scan, twist, cunning.
+Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
+        coin toss, scan (level 35), twist (level 45), cunning (level 50)
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1684,7 +1700,7 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge peek pick backflip camp
+Skills: dodge, peek, pick, throw, backflip (level 20), camp (level 35)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1712,7 +1728,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP NINJA SPELLS to see the spells of the ninja class.
 
-Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw.
+Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1726,7 +1742,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-     subdue, throw, trap, disembowel, evasion.
+        subdue, throw, trap, disembowel, evasion (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1740,7 +1756,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP PALADIN SPELLS to see the spells of the paladin.
 
-Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray.
+Skills: bash, block, disarm, kick, parry, pummel, rescue, spin, pray (level 40)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1754,7 +1770,7 @@ You can improve your spells and skills by using the practice command.
 Use HELP ANTI-PALADIN SPELLS to see the spells of the anti-paladin.
 
 Skills: backstab, bash, hide, kick, peek, pick, pummel, sneak, steal,
-     assassinate.
+        hidden blade (level 40), assassinate (level 45)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1768,7 +1784,8 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP COMMANDO SPELLS to see the spells of the commando.
 
-Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue, triple.
+Skills: assault, bash, dual, disarm, kick, pummel, throw, rescue,
+        triple (level 20)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1802,6 +1819,7 @@ Disembowel                                  Y              Y
 Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
+Hidden Blade  Y
 Kick          Y              Y         Y    Y    Y         Y
 Knock                                                      Y
 Peek          Y    Y                        Y         Y
@@ -3703,9 +3721,9 @@ Attacking while invisible will immediately break the spell.
 
 See Also: "DETECT INVISIBILITY" SONGS
 #
-"IMPROVE INVISIBILITY" IMPY
+"IMPROVED INVISIBILITY" IMPY
 
-Usage       : cast 'improve invisibility' (self only)
+Usage       : cast 'improved invisibility' (self only)
 Accumulative: No
 Level       : Level 25 mage, 29 anti-paladin.
 Duration    : Level/10 ticks
@@ -3727,7 +3745,7 @@ Mana Cost   : 20
 
 This removes your improved invisibility and is only castable on yourself.
 
-See Also: IMPROVE INVISIBILITY
+See Also: IMPROVED INVISIBILITY
 #
 FEAR
 
@@ -6768,7 +6786,7 @@ do other defensive skills and may miss a little more often.
 
 The inability to dodge makes this skill much less defensive
 than the comparable Ranger subclass skill of berserk.  However,
-the benifits of getting 1.5x damage for every hit, and the
+the benefits of getting 1.5x damage for every hit, and the
 possibility of a dual now and then make up for the reduction
 in defense.
 
@@ -6806,25 +6824,54 @@ Level         Skill
 
 See Also: SUBCLASSES TRAPPER NOMAD
 #
+"HIDDEN BLADE"
+
+Class: Anti-Paladin (Level 40)
+
+On a successful Pummel, the Anti-Paladin has a chance to stab the target with a
+hidden blade.  This automatic action inflicts damage equal to twice the
+Anti-Paladin's level (up to 100 at level 50).
+
+The success of Hidden Blade is dependent on how well the skill is practiced and
+is affected by the character's dexterity modifier.  The maximum success rate
+before the dexterity modifier is applied is 25%.
+
+See Also: ANTI-PALADIN PUMMEL DEXTERITY
+#
 ASSASSINATE
 
 Class: Anti-Paladin (Level 45)
 
 Usage: assassinate <victim> <direction>
 
-This attack is used to quickly sneak into a room and perform a
-backstab attack on an unsuspecting victim.  An aggressive victim
-doesn't have a chance to attack first.
+This attack is used to quickly sneak into a room and perform a backstab attack
+on an unsuspecting victim.  An aggressive victim doesn't have a chance to
+attack first.
 
-The Anti-Paladin must be sneaking, or invisible, to use this
-attack and the success is dependent on how well the skill is
-practiced and the character's dexterity.
+The Anti-Paladin must be sneaking, or invisible, to use this attack and the
+success is dependent on how well the skill is practiced and the character's
+dexterity.
 
-This skill also allows a sufficiently hidden, or invisible,
-Anti-Paladin to use the backstab skill against a victim already in
-combat.
+This skill also allows a sufficiently hidden, or invisible, Anti-Paladin to use
+the Backstab skill against a victim already in combat.
 
-See Also: BACKSTAB
+See Also: BACKSTAB DEXTERITY
+#
+RAGE
+
+Usage       : cast 'rage' (self only)
+Accumulative: No
+Duration    : 5
+Level       : Level 50 Anti-Paladin
+Mana Cost   : 75
+
+This spell is similar to the Paladin's Fury spell.  It grants the Anti-Paladin a
+damage multiplier on every hit.  However, while Fury gives a 2x multiplier, Rage
+gives a multiplier of 1.5x.  Also, unlike Fury, there is only a 50% chance that
+an attack against a creature or player affected by Rage will be automatically
+hit.
+
+See Also: SUBCLASSES INFIDEL FURY
 #
 DEFILER
 
@@ -6837,7 +6884,7 @@ Level         Skill/Spell
   1           DESECRATE
   2           BLACKMANTLE
   3           FEINT
-  4           WITHER
+  4           BATHED IN BLOOD
   5           SHADOWSTEP
 
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
@@ -6847,51 +6894,50 @@ DESECRATE
 Subclass Defiler: Level 1 (Anti-Paladin)
 
 Usage       : cast 'desecrate' <corpse>
-Accumulative: -
+Accumulative: No
 Duration    : 7
-Save        : -
+Save        : None
 Mana Cost   : 70
 
-With this spell, the Defiler does the vilest thing imaginable with
-the corpse. This spell grants the Defiler a hit point regeneration
-bonus equal the level of the creature the corpse came from, and an
-armor bonus equal to half of its level.
+With this spell, the Defiler does the vilest thing imaginable with the corpse,
+desecrating it in horrific ways.
 
-While under by the effects of Desecrate, the Defiler's Spirit Levy
-spell will restore up to 50% more hit points per cast. In addition,
-when Spirit Levy is successfully used upon a corpse, the Defiler
-will receive a +2 bonus to his/her hitroll and damroll; this bonus
-effect has a duration of 2 ticks.
+This spell grants the Defiler a hit point regeneration bonus equal the level of
+the creature the corpse came from, and an armor bonus equal to half of its
+level.
+
+While affected by Desecrate, the Defiler's Vampiric Touch spell will inflict and
+drain 10% more damage.  Additionally, the damage and drains inflicted by the
+Blood Lust spell is also increased by 10%.
+
+As an added bonus, the Defiler's Spirit Levy spell will restore up to 50% more
+hit points per cast.  This effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
-See Also: SUBCLASSES DEFILER "SPIRIT LEVY" HITROLL DAMROLL
+See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
 #
 BLACKMANTLE
 
 Subclass Defiler: Level 2 (Anti-Paladin)
 
 Usage       : cast 'blackmantle' (self only)
-Accumulative: -
+Accumulative: No
 Duration    : 9
-Save        : -
 Mana Cost   : 70
 
 While affected by this spell, up to 10% of all physical attack damage
 is reflected back to the attacker.  The Defiler cannot reflect more
 damage per attack reflected than he/she could inflict in one hit.
 
-While affected by the Blackmantle spell, the Defiler's Vampiric Touch
-spell will inflict and drain 10% more damage.  Additionally, the
-damage and drains inflicted by the Blood Lust spell is also increased
-by 10%.
+Additionally, the Defiler's chance to automatically be hit while
+affected by the Rage spell is reduced from 50% to 20%.
 
 A Defiler that has learned the Assassinate skill can Backstab a
 victim already in combat, as if he/she could not be seen, when
 surrounded by this mantle of darkness.
 
-See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" BACKSTAB
-          ASSASSINATE
+See Also: SUBCLASSES DEFILER RAGE ASSASSINATE BACKSTAB
 #
 FEINT
 
@@ -6910,26 +6956,26 @@ This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES DEFILER
 #
-WITHER
+"BATHED IN BLOOD"
 
 Subclass Defiler: Level 4 (Anti-Paladin)
 
-Usage       : cast 'wither' <victim>
-Accumulative: -
-Duration    : Instantaneous / Level * 2  (Paralysis, Poison)
-Save        : vs. spell for 1/2 damage / Negates (Paralysis, Poison)
-Mana Cost   : 70
-Damage Done : 375
+The Defiler's sinister powers surge in the presence of fresh blood, making
+them stronger and granting them supernatural powers.
 
-Wither is a spell that desecates the victim, inflicting harm, and
-weakening it. This powerful spell will deal damage to the target
-instantly, and has a chance to affect the target with lasting
-afflictions.
+The Defiler gains a health and mana regeneration bonus of 20% for each level of
+blood in the room.  This bonus has a maximum of 100% additional regeneration.
 
-On a failed saving throw, the victim will be subjected to the
-effects of paralysis and poison. Each effect receieves its own save.
+Additionally, when the Defiler is affected by the Blood Lust spell, its effects
+will trigger 5% more frequently.  For each level of blood in the room above
+zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
+ten.
 
-Sell Also: SUBCLASSES DEFILER PARALYSIS POISON
+Finally, the Defiler's Backstab skill has a 10% chance on success to trigger a
+Vampiric Touch cast automatically at the target, with zero mana cost.
+
+See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
+          "VAMPIRIC TOUCH"
 #
 SHADOWSTEP
 
@@ -6937,24 +6983,23 @@ Subclass Defiler: Level 5 (Anti-Paladin)
 
 Usage: shadowstep (toggles on/off)
 
-The Defiler will occasionally step into the shadows during combat,
-only to re-appear behind his/her victim. The Defiler will attempt to
-stab the victim in the back for increased damage.  The success and
-damage output of the skill varies depending on a number of factors.
-A Defiler that cannot be seen by his/her victim receieves a benefit,
-as does a one affected by the Blackmantle spell. A Defiler fighting
-in a dark room, or during the night time will have an increased
-chance of success, and the skill will inflict more damage. Likewise,
-a Defiler attacking a victim outside during the day, or in a lit room
-will have a reduced chance of success, and the skill will inflict
-less damage.
+The Defiler will occasionally step into the shadows during combat, only to
+re-appear behind his/her victim.  The Defiler will attempt to stab the victim in
+the back for increased damage.  The success and damage output of the skill
+varies depending on a number of factors.
 
-The amount of damage inflicted ranges from 3x a normal hit for the
-most favorable conditions, to 1.5x a normal hit for the least
-favorable.
+A Defiler that cannot be seen by his/her victim receives a benefit, as does one
+affected by the Blackmantle spell.  A Defiler fighting in a dark room, or during
+the night time will have an increased chance of success, and the skill will
+inflict more damage.  Likewise, a Defiler attacking a victim outside during the
+day, or in a lit room will have a reduced chance of success, and the skill will
+inflict less damage.
 
-The success of this skill is based on how well it is practiced, and
-the character's dexterity.
+The amount of damage inflicted ranges from 3x a normal hit for the most
+favorable conditions, to 1.5x a normal hit for the least favorable.
+
+The success of this skill is based on how well it is practiced, and the
+character's dexterity.
 
 The use of this skill is automatic and can be toggled on or off.
 
@@ -6970,9 +7015,9 @@ or spell, just type HELP <skill/spell name>
 Level         Skill/Spell
   1           DARK PACT
   2           VICTIMIZE
-  3           RAGE
-  4           DEMONIC THUNDER
-  5           SHADOW WRAITH
+  3           SHADOW WRAITH (1st and 2nd Shadow Wraith)
+  4           DUSK REQUIEM  (3rd Shadow Wraith)
+  5           WITHER        (4th Shadow Wraith)
 
 See Also: SUBCLASSES DEFILER ANTI-PALADIN
 #
@@ -6980,20 +7025,19 @@ See Also: SUBCLASSES DEFILER ANTI-PALADIN
 
 Subclass Infidel: Level 1 (Anti-Paladin)
 
-The Infidel makes a deal with some dark entity, trading a portion of
-his/her soul in exchange for supernatural powers.
+The Infidel makes a deal with some dark entity, trading a portion of their soul
+in exchange for supernatural powers.
 
-After making this pact, the Infidel no longer requires food or drink
-to sustain him/herself. Additionally, he/she always regenerates
-hit points, mana, and movement points at an optimal rate, regardless
-of age. Finally, the Infidel's regeneration rates are increased at
-all times, and are further increased during the night, or in a dark
-room.
+After making this pact, the Infidel no longer requires food or drink to sustain
+themselves.  Additionally, he/she always regenerates hit points, mana, and
+movement points at an optimal rate, regardless of age.  Finally, the Infidel's
+regeneration rates are increased at all times, and are further increased during
+the night, or in a dark room.
 
-This weakening of the Infidel's soul makes him/her even more vicious
-and remorseless than before the pact was made.  He/she will more
-willinglly (and successfully) backstab his/her victims, and will
-carry out assassination attacks with particular cunning and cruelty.
+This weakening of the Infidel's soul makes them even more vicious and
+remorseless than before the pact was made.  They will more willingly (and
+successfully) backstab their victims, and will carry out assassination attacks
+with particular cunning and cruelty.
 
 This is an automatic skill and is always in effect.
 
@@ -7005,24 +7049,23 @@ Subclass Infidel: Level 2 (Anti-Paladin)
 
 Usage: victimize (toggles on/off)
 
-During combat, the Infidel will randomly assault his/her victim with
-cruel attacks and depraved remarks. This victimization will take its
-toll on the target, inflicting random status ailments, such as
-penalties to armor class, hitroll and damroll.
+During combat, the Infidel will randomly assault his/her victim with cruel
+attacks and depraved remarks.  This victimization will take its toll on the
+target, inflicting random status ailments, such as penalties to armor class,
+hitroll and damroll.
 
-The armor class penalty shall be 1/4 the Infidel's level. The hitroll
-penalty shall be a random number between 3 and 5. The damroll penalty
-shall be a random percentage of the victim's damroll, between 5% and
-10%; however, the damroll penalty will never decrease a victim's base
-bare-hand or weapon-based damage. If the target has no bonus damroll,
-the hitroll penalty option shall be used instead.
+The armor class penalty shall be 1/4 the Infidel's level.  The hitroll penalty
+shall be a random number between 3 and 5.  The damroll penalty shall be a random
+percentage of the victim's damroll, between 5% and 10%; however, the damroll
+penalty will never decrease a victim's base bare-hand or weapon-based damage.
+If the target has no bonus damroll, the hitroll penalty option shall be used
+instead.
 
-The duration of these effects, and the subsequent re-application of
-another random effect is 1 tick (re-application is attempted every
-combat round, but will only succeed if the target is not already
-affected by Victimize). The effects are non-cumulative. Multiple
-Infidels can apply penalties, but only penalties of different types,
-as penalty types do not stack.
+The duration of these effects, and the subsequent re-application of another
+random effect is 1 tick (re-application is attempted every combat round, but
+will only succeed if the target is not already affected by Victimize).  The
+effects are non-cumulative.  Multiple Infidels can apply penalties, but only
+penalties of different types, as penalty types do not stack.
 
 An Infidel that has a good alignment is unable to utilize this skill.
 
@@ -7030,67 +7073,113 @@ The use of this skill is automatic and can be toggled on or off.
 
 See Also: SUBCLASSES INFIDEL "ARMOR CLASS" HITROLL DAMROLL TICK
 #
-RAGE
+"SHADOW WRAITH"
 
 Subclass Infidel: Level 3 (Anti-Paladin)
 
-Usage       : cast 'rage' (self only)
-Accumulative: -
-Duration    : 3
-Save        : -
-Mana Cost   : 60
+Usage       : cast 'shadow wraith' (self only)
+Accumulative: Yes (up to 4 shadows at Subclass Level 5)
+Duration    : 10 / shadow
+Mana Cost   : 100 (1st Shadow) / 120 (2nd) / 140 (3rd) / 160 (4th)
 
-This spell is similar to the Paladin's Fury spell.  It gives the
-Infidel a damage multiplier on every hit.  However, while Fury gives
-a 2x damage multiplier, Rage gives a multiplier of 1.5x. Also,
-unlike Fury, there is only a 50% chance that an attack against a
-creature or player affected by Rage will be automatically hit.
+The Infidel can manifest shadow wraiths by harnessing their own dark energy.
 
-See Also: SUBCLASSES INFIDEL FURY
+These wraiths attack the Infidel's target automatically, dealing a variable
+amount of damage, based on that of the caster's normal attack damage, expressed
+here as [damage].  The amount dealt varies from [damage / 6] to [damage / 2],
+with an average of [damage / 4].  Shadow damage is improved by either Rage or
+Fury, with the most effective spell being applied.
+
+Up to 2 shadows may be created at Infidel subclass level 3.  A 3rd shadow may be
+created at subclass level 4, and a 4th at subclass level 5.
+
+The mana cost of casting Shadow Wraith increases by 20 mana for each shadow that
+is created.  That is, the 1st shadow costs 100 mana, the 2nd costs 120 mana, the
+3rd costs 140 mana, and the 4th costs 160 mana.
+
+See Also: SUBCLASSES INFIDEL RAGE FURY
 #
-"DEMONIC THUNDER"
+"DUSK REQUIEM"
 
 Subclass Infidel: Level 4 (Anti-Paladin)
 
+Usage       : cast 'dusk requiem' <victim>
+Accumulative: No
+Duration    : Instantaneous
+Save        : None
+Mana Cost   : 20
+
+The Infidel may "collapse" a shadow wraith, expending its existence to inflict
+massive damage against a foe.
+
+Casting Dusk Requiem immediately destroys the most recently cast Shadow Wraith,
+inflicting damage equal to 250 x the number of shadows the Infidel controls when
+this spell is cast.  For example, if the Infidel controls four shadows, this
+spell will inflict 1000 damage to the target.
+
+Additionally, if a shadow's duration expires while the Infidel is engaged in
+combat, this spell is automatically cast with zero mana cost, inflicting half
+damage.
+
+Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
+points and mana equal to 10 x (the number of shadows that existed at the time it
+expires) / 2.  For example, if the Infidel controls four shadows, this effect
+will grant 80 hit points and 80 mana when the 4th shadow's duration expires.
+
+See Also: SUBCLASSES INFIDEL "SHADOW WRAITH"
+#
+WITHER
+
+Subclass Infidel: Level 5 (Anti-Paladin)
+
+Usage       : cast 'wither' <victim>
+Accumulative: Yes
+Duration    : Instantaneous / ~ 40 seconds (DoT) / Special (Negative Effects)
+Save        : None vs. Damage / Negates (Negative Effects)
+Mana Cost   : 75
+Damage Done : 350 / Special
+
+Wither is a spell that desiccates the victim, inflicting harm, and weakening it.
+
+This powerful spell deals damage to the target instantly, applies a damage
+over time (DoT) effect, and has a chance to affect the target with lasting
+afflictions.
+
+The damage over time effect is 75 damage inflicted approximately every 10
+seconds, for a duration of 40 seconds.  Multiple casts of Wither will refresh
+the damage over time effect to its maximum duration.
+
+This spell also applies a random effect to the target from the following list of
+negative conditions: blindness, chill touch, curse, paralysis or poison.
+
+Each effect is subject to its own saving throw.  There is a 25% chance that a
+second effect will be applied, or the same effect will be attempted again if the
+target made its saving throw.  Blindness has a duration of 2, chill touch has a
+duration of 6, and curse, paralysis and poison each have a duration equal to the
+level of the caster.
+
+If the target is immune to the chosen effect, the spell deals an additional 50
+damage instead.  Similarly, if all of the effects are already present on the
+target, Wither deals an additional 100 damage instead of applying a negative
+effect.
+
+See Also: SUBCLASSES INFIDEL BLINDNESS "CHILL TOUCH" CURSE PARALYSIS POISON
+#
+"DEMONIC THUNDER"
+
 Usage       : cast 'demonic thunder' <victim>
-Accumulative: -
+Accumulative: No
 Duration    : Instantaneous (Damage) / 7 days (Curse)
 Save        : None (Damage) / Versus spell negates (Curse)
 Mana Cost   : 100
 
-The Infidel summons the sounds of the souls of the damned and focuses
-them on the victim.  The result is a huge thunder of sound that
-cannot be resisted, dealing a full 500 damage to the victim.
+The this spell summons the sounds of the souls of the damned and focuses them on
+the victim.  The result is a huge thunder of sound that cannot be resisted,
+dealing a full 500 damage to the victim.
 
-This spell also will curse the victim on a failed saving throw vs.
-spell.
+This spell also will curse the victim on a failed saving throw vs. spell.
 
-See Also: SUBCLASSES INFIDEL CURSE
-#
-"SHADOW WRAITH"
-
-Subclass Infidel: Level 5 (Anti-Paladin)
-
-Usage       : cast 'shadow wraith' (self only)
-Accumulative: Yes (up to 4 shadows)
-Duration    : 20 / shadow
-Save        : -
-Mana Cost   : 120
-
-The Infidel can attempt to create shadows of him/herself that will
-obey the Infidel's commands without question.  Up to 4 shadows may be
-created and the more shadows there are, the harder they are to
-maintain.  The success of creating the first shadow is quite high,
-but as more shadows are created, the chance of creating others
-decreases.
-
-Each shadow deals a variable amount of damage, based on that of the
-caster's normal attack damage, expressed here as [damage].  The
-amount dealt varies from [damage / 6] to [damage / 2],  with an
-average of [damage / 4].  Shadow damage is improved by either Rage or
-Fury, with the most effective spell being applied.
-
-See Also: SUBCLASSES INFIDEL RAGE FURY
+See Also: CURSE
 #
 "BLADE BARRIER"
 
@@ -7633,20 +7722,6 @@ During the winter, Rimefang will deal an additional 75 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-RIPOSTE
-
-Subclass Mercenary: Level 3 (Commando)
-
-With this skill, the Mercenary has a chance to partially deflect
-incoming attacks made against them.  The damage deflected is equal to
-20%.  Additionally, the Mercenary will strike back back at their
-opponent, performing an attack with a chance of a Dual or Triple hit.
-
-The success of this skill is dependent on how well it is practiced,
-and the character's Dexterity.
-
-See Also: SUBCLASSES MERCENARY
-#
 "INCENDIARY CLOUD"
 
 Subclass Legionnaire: Level 5 (Commando)
@@ -7667,9 +7742,24 @@ you are trying to kill it over multiple runs.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-"CLOUD OF CONFUSION"
+"IRON SKIN"
 
 Subclass Mercenary: Level 1 (Commando)
+
+Usage       : cast 'iron skin' (self only)
+Accumulative: no
+Duration    : 10
+Save        : -
+Mana Cost   : 50
+
+This defensive spell will lower the Mercenary's armor by 25, making
+them harder to hit.
+
+See Also: SUBCLASSES MERCENARY
+#
+"CLOUD OF CONFUSION"
+
+Subclass Mercenary: Level 2 (Commando)
 
 Usage       : cast 'cloud of confusion'
 Accumulative: no
@@ -7684,18 +7774,17 @@ This spell will be more effective if cast at night.
 
 See Also: SUBCLASSES MERCENARY
 #
-"IRON SKIN"
+RIPOSTE
 
-Subclass Mercenary: Level 2 (Commando)
+Subclass Mercenary: Level 3 (Commando)
 
-Usage       : cast 'iron skin' (self only)
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 50
+With this skill, the Mercenary has a chance to partially deflect
+incoming attacks made against them.  The damage deflected is equal to
+20%.  Additionally, the Mercenary will strike back back at their
+opponent, performing an attack with a chance of a Dual or Triple hit.
 
-This defensive spell will lower the Mercenary's armor by 25, making
-them harder to hit.
+The success of this skill is dependent on how well it is practiced,
+and the character's Dexterity.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8161,6 +8250,21 @@ duration of 4 ticks.  The mana cost is 150.
 
 See Also: SUBCLASSES CHANTER
 #
+"DIVINE WIND"
+
+Usage       : cast 'divine wind' <victim>
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 40 Ninja
+Save        : None
+Mana Cost   : 65
+Damage Done : 300
+
+This spell will inflict 300 damage to the victim with no saving throw
+and will also put the victim in the resting position.
+
+Divine Wind is a direct translation of the phrase "kamikaze."
+#
 RONIN
 
 Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each
@@ -8168,9 +8272,9 @@ level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
-  1           COMBAT ZEN
+  1           DUAL ASSAULT
   2           BACKFIST
-  3           DUAL ASSAULT
+  3           COMBAT ZEN
   4           BLUR
   5           BANZAI
 
@@ -8184,7 +8288,7 @@ skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DEBILITATE
-  2           DIVINE WIND
+  2           INNER PEACE
   3           TIGERKICK
   4           MANTRA
   5           TRANQUILITY
@@ -8193,7 +8297,7 @@ See Also: SUBCLASSES RONIN NINJA
 #
 "DUAL ASSAULT"
 
-Subclass Ronin: Level 3 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
 Usage: assault <victim>
 
@@ -8242,12 +8346,37 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
+"COMBAT ZEN"
+
+Subclass Ronin: Level 3 (Ninja)
+
+Usage: Passive Skill
+
+The Ronin has become a weapon of war, an instrument of combat. If they
+miss their first attack, the second attack is still attempted as it
+normally would be, as is the third if affected by Mystic Swiftness.
+This also ability applies to attacks that are dodged, parried or
+otherwise avoided.
+
+The Ronin also will inflict significant barehand damage to victims
+when disarmed or not wielding a weapon (this applies to either or both
+hands).
+
+Additionally, the Ronin has the uncanny ability to rely on his/her
+other senses when the sense of sight is lost. While blind, the Ronin
+will not have any hit/damage penalties.
+
+Finally, the Ronin has a higher resistance to poison damage, and has a
+chance to move while affected by paralysis.
+
+See Also: SUBCLASSES RONIN
+#
 BLUR
 
 Subclass Ronin: Level 4 (Ninja)
 
 Usage       : cast 'blur' (self only)
-Accumulative: no
+Accumulative: No
 Duration    : Level / 6
 Mana Cost   : 100
 
@@ -8263,37 +8392,11 @@ success of the affected skills:
 
 See Also: SUBCLASSES RONIN
 #
-"COMBAT ZEN"
-
-Subclass Ronin: Level 1 (Ninja)
-
-Usage: Passive Skill
-
-The Ronin has become a weapon of war, an instrument of combat. If the
-they miss their first attack, the second attack is still attempted as
-it normally would be, as is the third if affected by Mystic
-Swiftness.  This also ability applies to attacks that are dodged,
-parried or otherwise avoided.
-
-The Ronin also will inflict significant barehand damage to victims
-when disarmed or not wielding a weapon (this applies to either or both
-hands).
-
-Additionally, the Ronin has the uncanny ability to rely on his/her
-other senses when the sense of sight is lost. While blind, the Ronin
-will not have any hit/damage penalties.
-
-Finally, the Ronin has a higher resistance to poison damage, and has a
-chance to move while affected by paralysis.
-
-See Also: SUBCLASSES RONIN
-#
 BANZAI
 
 Subclass Ronin: Level 5 (Ninja)
  
 Usage       : banzai <victim>
-Save        : -
 Mana Cost   : 75
 Damage      : 200 to 300
 
@@ -8323,15 +8426,29 @@ DEBILITATE
 Subclass Mystic: Level 1 (Ninja)
 
 Usage       : cast 'debilitate' <victim>
-Accumulative: no
+Accumulative: No
 Duration    : 5
-Save        : none
+Save        : None
 Mana Cost   : 20
 
 Anything affected by this spell has its hitroll reduced by 5, and its
 armor increased by 10, making it miss more often and easier to hit.
 
 See Also: SUBCLASSES MYSTIC
+#
+"INNER PEACE"
+
+Subclass Mystic: Level 2 (Ninja)
+
+The winds of the gods blow through the Mystic's spirit, imparting a sense of
+Zen and tranquility upon their being.
+
+Inner Peace is a passive ability that provides the Mystic with +10 mana
+regeneration at all times.  In addition, this ability increases the Mystic's
+in-combat mana regeneration limit by 10, to a maximum of 100.  Finally, this
+ability increases the Mystic's concentration rate by 5%.
+
+See Also: SUBCLASSES MYSTIC REGENERATION
 #
 TIGERKICK
 
@@ -8359,29 +8476,13 @@ practiced.
 
 See Also: SUBCLASSES MYSTIC
 #
-"DIVINE WIND"
-
-Subclass Mystic: Level 2 (Ninja)
-
-Usage       : cast 'divine wind' <victim>
-Save        : none
-Mana Cost   : 65
-Damage      : 300
-
-This spell will inflict 300 damage to the victim with no saving throw
-and will also put the victim in a resting position.
-
-Divine Wind is a direct translation of the word "kamikaze."
-
-See Also: SUBCLASSES MYSTIC
-#
 MANTRA
 
 Subclass Mystic: Level 4 (Ninja)
 
-Usage       : mantra <victim>
-Accumulative: no
-Duration    : Instantaneous + 100 seconds.
+Usage       : mantra <target>
+Accumulative: No
+Duration    : Instantaneous + 100 seconds
 Mana Cost   : 120
 
 The Mystic channels his/her spiritual energy into a target, which
@@ -8412,7 +8513,7 @@ TRANQUILITY
 Subclass Mystic: Level 5 (Ninja)
 
 Usage       : cast 'tranquility'
-Accumulative: no
+Accumulative: -
 Duration    : 6
 Mana Cost   : 150
 
@@ -8549,10 +8650,10 @@ See Also: CIRCLE
 "BLOOD LUST"
 
 Usage      : cast 'blood lust' (self only)
-Level      : level 50 anti-paladin
+Level      : level 45 anti-paladin
 Save       : none
-Duration   : 3 ticks
-Mana cost  : 50
+Duration   : 5
+Mana cost  : 75
 
 While affected by Blood Lust, the Anti-Paladin hungers for blood, and
 will randomly bite their victims during combat.  Each bite has the

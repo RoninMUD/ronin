@@ -493,6 +493,15 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
     skill_wait(ch, SKILL_BACKSTAB, 2);
   }
   else {
+    /* Bathed in Blood */
+    if (check_subclass(ch, SC_DEFILER, 4) && !affected_by_spell(ch, SPELL_VAMPIRIC) && chance(10)) {
+      act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, NULL, victim, TO_CHAR);
+      act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, NULL, victim, TO_VICT);
+      act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+      spell_vampiric_touch(GET_LEVEL(ch), ch, victim, 0);
+    }
+
     /* Assassinate */
     if (GET_OPPONENT(victim)) {
       hit(ch, victim, SKILL_ASSASSINATE);
@@ -1251,7 +1260,18 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       act("$n pummels you, and you are stunned now!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n pummels $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
+      int dam = 10;
+
+      /* Hidden Blade */
+      if ((number(1, 85) <= GET_LEARNED(ch, SKILL_HIDDEN_BLADE)) && chance(25 + GET_DEX_APP(ch))) {
+        dam = GET_LEVEL(ch) * 2;
+
+        act("You drive a hidden blade deep into $N's gut!", FALSE, ch, NULL, victim, TO_CHAR);
+        act("$n drives a hidden blade deep into your gut!", FALSE, ch, NULL, victim, TO_VICT);
+        act("$n drives a hidden blade deep into $N's gut!", FALSE, ch, NULL, victim, TO_NOTVICT);
+      }
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), dam), SKILL_PUMMEL, DAM_PHYSICAL);
 
       if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;

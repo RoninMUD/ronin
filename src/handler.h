@@ -39,9 +39,8 @@ void affect_remove( struct char_data *ch, struct affected_type_5 *af );
 void affect_from_char( struct char_data *ch, int skill);
 bool affected_by_spell( struct char_data *ch, int skill );
 int duration_of_spell( struct char_data *ch, int skill );
-void affect_join( struct char_data *ch, struct affected_type_5 *af,
-                  bool avg_dur, bool avg_mod );
-
+void affect_join( struct char_data *ch, struct affected_type_5 *af, bool avg_dur, bool avg_mod );
+struct affected_type_5 * get_affect_from_char(struct char_data *ch, int type);
 
 /* utility */
 struct obj_data *create_money( int amount );

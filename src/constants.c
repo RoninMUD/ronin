@@ -164,7 +164,7 @@ const char * const spell_wear_off_msg[] = {
   "!cover!",
   "Your hands slow down.",
   "!legend lore!", /* 155 */
-  "", /* 156 */
+  "!hidden blade!", /* 156 */
   "", /* 157 */
   "", /* 158 */
   "", /* 159 */
@@ -188,7 +188,7 @@ const char * const spell_wear_off_msg[] = {
   "Your sense of tranquility fades away.", /* 177 Tranquility */
   "!execute!",/*178*/
   "!tremor!", /*179*/
-  "You shadow dissipates.",/*180 shadow wraith*/
+  "", /* 180 Shadow Wraith */
   "!devastation!",/*181*/
   "The cloud of fire surrounding you dies out.",/*182*/
   "",/*183*/
@@ -218,7 +218,7 @@ const char * const spell_wear_off_msg[] = {
   "You place yourself in a normal stance.", /*207 - defend*/
   "You place yourself in a normal stance.", /*208 - hostile*/
   "The paralyzation wears off, you can move again", /*209 - rimefang*/
-  "!wither!", /* 210 Used to be Dark Ritual */
+  "The pain coursing through your withered body begins to recede.", /* 210 Wither */
   "Your mantle of darkness fades away.",/*211*/
   "!divine wind!",/*212*/
   "!zeal!",/*213*/
@@ -255,7 +255,7 @@ const char * const spell_wear_off_msg[] = {
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
-  "", /* 247 Used to be Assassinate */
+  "!dusk requiem!", /* 247 Dusk Requiem */
   "!frostbolt!",/*248*/
   "Your skin turns softer.",/*249*/
   "Your sphere returns to normal.",/*250*/
@@ -2726,6 +2726,7 @@ const char * const anti_paladin_skills[] = {
   "pummel",
   "sneak",
   "steal",
+  "hidden-blade", /* Level 40 */
   "assassinate",  /* Level 45 */
   "feint",        /* Defiler SC3 */
   "shadowstep",   /* Defiler SC5 Used to be Shadow-Walk */

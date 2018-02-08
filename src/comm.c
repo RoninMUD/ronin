@@ -45,6 +45,7 @@
 #include "spells.h"
 #include "reception.h"
 #include "subclass.h"
+#include "fight.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -2728,6 +2729,65 @@ int signal_room(int room, CHAR *ch,int cmd,char *arg)
   return stop;
 }
 
+void pulse_shadow_wraith(CHAR *ch) {
+  if (!ch) return;
+
+  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
+
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 1) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 11) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10))) {
+    send_to_char("One of your shadows flickers and begins to fade from reality.\n\r", ch);
+    act("One of $n's shadows flickers and begins to fade from reality.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+
+  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
+      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
+    /* Dusk Requiem */
+    if (check_subclass(ch, SC_INFIDEL, 5)) {
+      if (GET_OPPONENT(ch)) {
+        /* A bit of a hack here. Cast Dusk Requiem with caster level equal to
+            LEVEL_MORT +1 to inflict double damage, rather than making a
+            special function to do this. */
+        spell_dusk_requiem(LEVEL_MORT + 1, ch, GET_OPPONENT(ch), 0);
+        return;
+      }
+      else {
+        int num_shadows_active = 0;
+
+        if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
+          /* Caster has 4 shadows. */
+          num_shadows_active = 4;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
+          /* Caster has 3 shadows. */
+          num_shadows_active = 3;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
+          /* Caster has 2 shadows. */
+          num_shadows_active = 2;
+        }
+        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
+          /* Caster has 1 shadow. */
+          num_shadows_active = 1;
+        }
+
+        if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
+          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
+        }
+
+        if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
+          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
+        }
+      }
+    }
+
+    send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
+    act("One of $n's shadows fades from reality and recedes back into the void.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
+  }
+}
+
 void pulse_mantra(CHAR *ch) {
   const int mantra_dispel_types[] = {
     SPELL_BLINDNESS,
@@ -2736,13 +2796,14 @@ void pulse_mantra(CHAR *ch) {
     -1
   };
 
-  bool stop = FALSE;
   int mantra_dispel = 0;
   int gain = 0;
   AFF *tmp_af = NULL;
   AFF *next_af = NULL;
 
-  for (stop = FALSE, tmp_af = ch->affected; !stop && tmp_af; tmp_af = next_af) {
+  if (!ch) return;
+
+  for (tmp_af = ch->affected; tmp_af; tmp_af = next_af) {
     next_af = tmp_af->next;
 
     if (tmp_af->type == SKILL_MANTRA) {
@@ -2763,7 +2824,7 @@ void pulse_mantra(CHAR *ch) {
         }
       }
 
-      mantra_dispel = get_random_eligible_effect(ch, mantra_dispel_types);
+      mantra_dispel = get_random_set_effect(ch, mantra_dispel_types);
 
       if (mantra_dispel && chance(25)) {
         switch (mantra_dispel) {
@@ -2799,16 +2860,197 @@ void pulse_mantra(CHAR *ch) {
       }
 
       /* Break out of the loop, as we should only process one Mantra effect. */
-      stop = TRUE;
+      break;
     }
   }
 }
 
 void pulse_adrenaline_rush(CHAR *ch) {
+  if (!ch) return;
+
   if (check_subclass(ch, SC_BANDIT, 3) &&
       GET_HIT(ch) < GET_MAX_HIT(ch) &&
       GET_OPPONENT(ch)) {
     GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
+  }
+}
+
+int wither_pulse_action(CHAR *victim) {
+  const int wither_effect_types[] = {
+    SPELL_BLINDNESS,
+    SPELL_CHILL_TOUCH,
+    SPELL_CURSE,
+    SPELL_PARALYSIS,
+    SPELL_POISON,
+    -1
+  };
+
+  const int wither_pulse_damage = 75;
+  const int wither_effect_chance = 25;
+  const int wither_effect_reduction = 5;
+
+  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return 0;
+
+  int dam = wither_pulse_damage;
+
+  AFF *wither_aff;
+  
+  if (!(wither_aff = get_affect_from_char(victim, SPELL_WITHER))) return 0;
+
+  int num_eligible_effects = MAX(0, NUMELEMS(wither_effect_types) - 1);
+
+  if (num_eligible_effects <= 0) return dam;
+
+  int num_applied_effects = 0;
+
+  for (int i = 0; i < num_eligible_effects; i++) {
+    if (affected_by_spell(victim, wither_effect_types[i])) {
+      num_applied_effects++;
+    }
+  }
+
+  int effect_chance = MAX(0, (wither_effect_chance - (num_applied_effects * wither_effect_reduction)));
+
+  if (chance(effect_chance)) {
+    AFF af;
+
+    int caster_level = wither_aff->modifier;
+
+    int effect_type = get_random_eligible_effect(victim, wither_effect_types);
+
+    switch (effect_type) {
+      case SPELL_BLINDNESS:
+        af.type = SPELL_BLINDNESS;
+        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
+        af.bitvector = AFF_BLIND;
+        af.bitvector2 = 0;
+
+        af.location = APPLY_HITROLL;
+        af.modifier = -4;
+
+        affect_to_char(victim, &af);
+
+        af.location = APPLY_AC;
+        af.modifier = +40;
+
+        affect_to_char(victim, &af);
+
+        act("You have been blinded!", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
+        break;
+
+      case SPELL_CHILL_TOUCH:
+        af.type = SPELL_CHILL_TOUCH;
+        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
+        af.modifier = -1;
+        af.location = APPLY_STR;
+        af.bitvector = 0;
+        af.bitvector2 = 0;
+
+        affect_to_char(victim, &af);
+
+        act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
+        break;
+
+      case SPELL_CURSE:
+        af.type = SPELL_CURSE;
+        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
+        af.bitvector = AFF_CURSE;
+        af.bitvector2 = 0;
+
+        af.location = APPLY_HITROLL;
+        af.modifier = -((caster_level - 3) / 9);
+
+        affect_to_char(victim, &af);
+
+        af.location = APPLY_SAVING_PARA;
+        af.modifier = ((caster_level - 3) / 9);
+
+        affect_to_char(victim, &af);
+
+        act("You feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
+        break;
+
+      case SPELL_PARALYSIS:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) ||
+          ((GET_LEVEL(victim) - 10) > caster_level)) {
+          dam += 50;
+          break;
+        }
+
+        af.type = SPELL_PARALYSIS;
+        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
+        af.bitvector = AFF_PARALYSIS;
+        af.bitvector2 = 0;
+
+        af.location = APPLY_AC;
+        af.modifier = +100;
+
+        affect_to_char(victim, &af);
+
+        af.location = APPLY_HITROLL;
+        af.modifier = -5;
+
+        affect_to_char(victim, &af);
+
+        act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
+        break;
+
+      case SPELL_POISON:
+        if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) {
+          dam += 50;
+          break;
+        }
+
+        af.type = SPELL_POISON;
+        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
+        af.modifier = -3;
+        af.location = APPLY_STR;
+        af.bitvector = AFF_POISON;
+        af.bitvector2 = 0;
+
+        affect_to_char(victim, &af);
+
+        act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
+        break;
+    }
+  }
+
+  return dam;
+}
+
+void pulse_wither(CHAR *ch) {
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+
+  for (AFF *tmp_af = ch->affected, *next_af = NULL; tmp_af; tmp_af = next_af) {
+    next_af = tmp_af->next;
+
+    if (tmp_af->type == SPELL_WITHER) {
+
+      int dam = wither_pulse_action(ch);
+
+      send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
+      act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
+
+      damage(ch, ch, (GET_HIT(ch) > dam) ? dam : (GET_HIT(ch) > 1) ? ((GET_HIT(ch) / 2) - 1) : 0, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+      tmp_af->duration--;
+
+      if (tmp_af->duration == 0) {
+        if (*spell_wear_off_msg[tmp_af->type]) {
+          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
+        }
+
+        affect_remove(ch, tmp_af);
+      }
+
+      /* Break out of the loop, as we should only process one Wither effect. */
+      break;
+    }
   }
 }
 
@@ -2847,12 +3089,22 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
   if (CHAR_REAL_ROOM(ch) == -1) return FALSE;
 
-  if (cmd == MSG_MOBACT && !IS_NPC(ch)) {
-    /* Mantra */
-    pulse_mantra(ch);
+  if (cmd == MSG_TICK && !IS_NPC(ch)) {
+    /* Shadow Wraith */
+    pulse_shadow_wraith(ch);
+  }
 
-    /* Adrenaline Rush */
-    pulse_adrenaline_rush(ch);
+  if (cmd == MSG_MOBACT) {
+    if (!IS_NPC(ch)) {
+      /* Mantra */
+      pulse_mantra(ch);
+
+      /* Adrenaline Rush */
+      pulse_adrenaline_rush(ch);
+    }
+
+    /* Wither */
+    pulse_wither(ch);
   }
 
   if (IS_MORTAL(ch))

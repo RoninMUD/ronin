@@ -204,6 +204,9 @@ void spell_chill_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     af.bitvector = 0;
     af.bitvector2 = 0;
     affect_join(victim, &af, TRUE, FALSE);
+
+    act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
+    act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
   } else {
     dam >>= 1;
   }
@@ -2513,7 +2516,6 @@ void spell_recover_mana(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 /* void check_equipment(CHAR *ch); */
 void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  AFF af;
   int mob_level = 0;
   int heal = 0;
 
@@ -2535,7 +2537,8 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   heal = (mob_level * 3);
 
-  if (affected_by_spell(ch, SPELL_DESECRATE))
+  /* Desecrate */
+  if (check_subclass(ch, SC_DEFILER, 1))
   {
     heal += ((heal * number(0, 5)) / 10);
   }
@@ -2546,25 +2549,6 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   send_to_char("You absorb life energy from the dead.\n\r", ch);
   act("$n absorbs life energy from the dead.", TRUE, ch, 0, 0, TO_ROOM);
-
-  if (affected_by_spell(ch, SPELL_DESECRATE) &&
-      !affected_by_spell(ch, SPELL_SPIRIT_LEVY))
-  {
-    af.type = SPELL_SPIRIT_LEVY;
-    af.duration = 1;
-    af.bitvector = 0;
-    af.bitvector2 = 0;
-
-    af.location = APPLY_DAMROLL;
-    af.modifier = 2;
-    affect_to_char(ch, &af);
-
-    af.location = APPLY_HITROLL;
-    af.modifier = 2;
-    affect_to_char(ch, &af);
-
-    send_to_char("You are filled with a dark energy that gives you strength.\n\r", ch);
-  }
 
   extract_obj(obj);
 
@@ -3435,7 +3419,7 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     dam *= 9;
   }
 
-  if (affected_by_spell(ch, SPELL_BLACKMANTLE)) {
+  if (affected_by_spell(ch, SPELL_DESECRATE)) {
     dam *= 1.1;
   }
 
@@ -4456,11 +4440,11 @@ void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  af.type      = SPELL_PERCEIVE;
-  af.duration  = 2*level;
-  af.modifier  = 0;
-  af.location  = APPLY_NONE;
-  af.bitvector = 0;
+  af.type       = SPELL_PERCEIVE;
+  af.duration   = 2 * level;
+  af.modifier   = 0;
+  af.location   = 0;
+  af.bitvector  = 0;
   af.bitvector2 = 0;
 
   affect_to_char(victim, &af);
@@ -4482,11 +4466,11 @@ void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (!affected_by_spell(victim, SPELL_QUICK))
   {
-    af.type      = SPELL_QUICK;
-    af.duration  = 5;
-    af.modifier  = 0;
-    af.location  = 0;
-    af.bitvector = 0;
+    af.type       = SPELL_QUICK;
+    af.duration   = 5;
+    af.modifier   = 0;
+    af.location   = 0;
+    af.bitvector  = 0;
     af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
@@ -4507,11 +4491,11 @@ void spell_divine_intervention(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if ( affected_by_spell(victim, SPELL_DIVINE_INTERVENTION) )
     return;
 
-  af.type      = SPELL_DIVINE_INTERVENTION;
-  af.duration  = 8;
-  af.modifier  = 0;
-  af.location  = APPLY_NONE;
-  af.bitvector = 0;
+  af.type       = SPELL_DIVINE_INTERVENTION;
+  af.duration   = 8;
+  af.modifier   = 0;
+  af.location   = 0;
+  af.bitvector  = 0;
   af.bitvector2 = 0;
 
   affect_to_char(victim, &af);
@@ -4528,11 +4512,11 @@ void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if (!affected_by_spell(victim, SPELL_RUSH))
   {
-    af.type      = SPELL_RUSH;
-    af.duration  = 3;
-    af.modifier  = 5;
-    af.location  = APPLY_DAMROLL;
-    af.bitvector = 0;
+    af.type       = SPELL_RUSH;
+    af.duration   = 3;
+    af.modifier   = 5;
+    af.location   = APPLY_DAMROLL;
+    af.bitvector  = 0;
     af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
@@ -4549,11 +4533,11 @@ void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (!affected_by_spell(victim, SPELL_BLOOD_LUST))
   {
-     af.type      = SPELL_BLOOD_LUST;
-     af.duration  = 3;
-     af.modifier  = 0;
-     af.location  = APPLY_NONE;
-     af.bitvector = 0;
+     af.type       = SPELL_BLOOD_LUST;
+     af.duration   = 5;
+     af.modifier   = 0;
+     af.location   = 0;
+     af.bitvector  = 0;
      af.bitvector2 = 0;
 
     affect_to_char(victim, &af);
@@ -4580,7 +4564,7 @@ void spell_mystic_swiftness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     af.type       = SPELL_MYSTIC_SWIFTNESS;
     af.duration   = 4;
     af.modifier   = 0;
-    af.location   = APPLY_NONE;
+    af.location   = 0;
     af.bitvector  = 0;
     af.bitvector2 = 0;
 

@@ -1899,7 +1899,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
     }
 
-    /* Infidel SC3: Rage */
+    /* Rage */
     if (!IS_AFFECTED(ch, AFF_FURY) &&
         affected_by_spell(ch, SPELL_RAGE)) {
       dmg = lround(dmg * 1.5);
@@ -2583,7 +2583,7 @@ int calc_hitroll(CHAR *ch)
   }
 
   /* Combat Zen */
-  if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) {
+  if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) {
     for (aff = ch->affected; aff; aff = aff->next)
     {
       if (aff->type == SPELL_BLINDNESS && aff->location == APPLY_HITROLL)
@@ -2847,7 +2847,7 @@ int calc_max_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon) {
       if (GET_CLASS(ch) == CLASS_NINJA)
       {
         /* Combat Zen */
-        if (check_subclass(ch, SC_RONIN, 1))
+        if (check_subclass(ch, SC_RONIN, 3))
           dam += 4 * 9;
         else if (GET_LEVEL(ch) > 27)
           dam += 5 * 4;
@@ -2920,7 +2920,7 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon)
       if (GET_CLASS(ch) == CLASS_NINJA)
       {
         /* Combat Zen */
-        if (check_subclass(ch, SC_RONIN, 1))
+        if (check_subclass(ch, SC_RONIN, 3))
           dam += dice(4, 9);
         else if (GET_LEVEL(ch) > 27)
           dam += dice(5, 4);
@@ -2986,12 +2986,16 @@ bool try_hit(CHAR *ch, CHAR *victim)
 
   if (!ch || !victim) return FALSE;
 
-  if (!AWAKE(victim) ||
-      IS_AFFECTED(victim, AFF_FURY) ||
-      affected_by_spell(victim, SKILL_HOSTILE) ||
-      (affected_by_spell(victim, SPELL_RAGE) && chance(50)))
-  {
-    return TRUE;
+  if (!AWAKE(victim)) return TRUE;
+  if (IS_AFFECTED(victim, AFF_FURY)) return TRUE;
+  if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
+  if (affected_by_spell(victim, SPELL_RAGE)) {
+    if (affected_by_spell(victim, SPELL_DESECRATE)) {
+      if (chance(20)) return TRUE;
+    }
+    else {
+      if (chance(50)) return TRUE;
+    }
   }
 
   check = number(1, 20);
@@ -2999,7 +3003,7 @@ bool try_hit(CHAR *ch, CHAR *victim)
   if (check == 1) return FALSE; // 1 always results in a miss.
   else if (check == 20) return TRUE; // 20 always results in a hit.
 
-  if (compute_thaco(ch) - check > (compute_ac(victim) / 10)) return FALSE;
+  if ((compute_thaco(ch) - check) > (compute_ac(victim) / 10)) return FALSE;
 
   return TRUE;
 }
@@ -3062,7 +3066,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
       }
 
       /* Combat Zen */
-      if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+      if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
       return FALSE;
     }
@@ -3159,7 +3163,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         }
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3193,7 +3197,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         }
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3231,7 +3235,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
         hit(victim, ch, SKILL_FEINT);
 
         /* Combat Zen */
-        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+        if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
         return FALSE;
       }
@@ -3358,7 +3362,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num)
     }
 
     /* Combat Zen */
-    if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 1)) return TRUE;
+    if (!IS_NPC(ch) && check_subclass(ch, SC_RONIN, 3)) return TRUE;
 
     return FALSE;
   }
@@ -3741,29 +3745,23 @@ void hit(CHAR *ch, CHAR *victim, int type)
 
   if (affected_by_spell(ch, SPELL_SHADOW_WRAITH))
   {
-    dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-    if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
-
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 60)
-    {
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
     }
 
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 40)
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1))
     {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
-
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
     }
 
-    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 20)
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2))
     {
       dhit(ch, victim, SPELL_SHADOW_WRAITH);
+    }
 
-      if (CHAR_REAL_ROOM(victim) == NOWHERE || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+    if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3))
+    {
+      dhit(ch, victim, SPELL_SHADOW_WRAITH);
     }
   }
 
@@ -3979,11 +3977,20 @@ void qhit(CHAR *ch, CHAR *victim, int type)
 
 void blood_lust_action(CHAR *ch, CHAR *vict)
 {
-  int dmg = 0;
-
   if (!ch || !vict) return;
 
-  switch(number(1, 20))
+  int check = 20;
+
+  /* Bathed in Blood */
+  if (check_subclass(ch, SC_DEFILER, 4)) {
+    check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
+  }
+
+  if (!chance(check)) return;
+
+  int dmg = 0;
+
+  switch(number(1, 4))
   {
     case 1:
     case 2:
@@ -3993,7 +4000,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 60;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_PHYSICAL);
       break;
@@ -4005,7 +4014,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 40;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
       magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
@@ -4019,7 +4030,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict)
 
       dmg = 20;
 
-      if (affected_by_spell(ch, SPELL_BLACKMANTLE)) dmg *= 1.1;
+      if (affected_by_spell(ch, SPELL_DESECRATE)) {
+        dmg *= 1.1;
+      }
 
       drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;

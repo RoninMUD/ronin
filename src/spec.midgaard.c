@@ -675,6 +675,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         skill = old_search_block(ninja_skills[index], 0, strlen(ninja_skills[index]), spells, TRUE);
       }
+
+      if ((skill == SPELL_DIVINE_WIND) && (GET_LEVEL(ch) < 40))
+      {
+        index = -2;
+      }
       break;
 
     case CLASS_NOMAD:
@@ -717,6 +722,11 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), spells, TRUE);
       }
       break;
+
+      if ((skill == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40))
+      {
+        index = -2;
+      }
 
       if ((skill == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45))
       {
@@ -774,6 +784,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
     if ((spell > 165) &&
         check_sc_access(ch, spell) &&
         ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
+        ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
+        ((GET_CLASS(ch) != CLASS_NINJA) || (spell != SPELL_DIVINE_WIND)) &&
         !check_sc_master(ch, mob)) {
       act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
