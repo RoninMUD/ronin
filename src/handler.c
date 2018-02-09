@@ -411,7 +411,7 @@ void affect_total(struct char_data *ch)
 
 /* Insert an affect_type in a char_data structure
    Automatically sets apropriate bits and apply's */
-void affect_to_char( struct char_data *ch, struct affected_type_5 *af )
+void affect_to_char(struct char_data *ch, struct affected_type_5 *af)
 {
   struct affected_type_5 *affected_alloc;
 
@@ -422,68 +422,65 @@ void affect_to_char( struct char_data *ch, struct affected_type_5 *af )
   ch->affected = affected_alloc;
 
   affect_modify(ch, af->location, af->modifier,
-                af->bitvector,af->bitvector2, TRUE);
+    af->bitvector, af->bitvector2, TRUE);
   affect_total(ch);
-        check_equipment(ch);
+  check_equipment(ch);
 }
 
 /* Remove an affected_type structure from a char (called when duration
    reaches zero). Pointer *af must never be NIL! Frees mem and calls
    affect_location_apply                                                */
-void affect_remove( struct char_data *ch, struct affected_type_5 *af )
-{
+void affect_remove(struct char_data *ch, struct affected_type_5 *af) {
   struct affected_type_5 *hjp;
 
   assert(ch->affected);
 
-  affect_modify(ch, af->location, af->modifier,
-                af->bitvector,af->bitvector2, FALSE);
-
+  affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, FALSE);
 
   /* remove structure *af from linked list */
-
   if (ch->affected == af) {
     /* remove head of list */
     ch->affected = af->next;
-  } else {
-
-    for(hjp = ch->affected; (hjp->next) && (hjp->next != af); hjp = hjp->next);
+  }
+  else {
+    for (hjp = ch->affected; (hjp->next) && (hjp->next != af); hjp = hjp->next);
 
     if (hjp->next != af) {
       log_f("FATAL : Could not locate affected_type in ch->affected. (handler.c, affect_remove)");
       produce_core();
     }
+
     hjp->next = af->next; /* skip the af element */
   }
 
-  free ( af );
+  free(af);
 
   affect_total(ch);
-        check_equipment(ch);
+  check_equipment(ch);
 }
 
-void affect_from_char(CHAR *ch, int skill)
+void affect_from_char(CHAR *ch, int type)
 {
-  AFF *aff = NULL, *tmp = NULL;
+  if (!ch) return;
 
-  for (aff = ch->affected; aff; aff = tmp)
+  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff)
   {
-    tmp = aff->next;
+    tmp_aff = aff->next;
 
-    if (aff->type == skill)
+    if (aff->type == type)
     {
       affect_remove(ch, aff);
     }
   }
 }
 
-bool affected_by_spell(CHAR *ch, int skill)
+bool affected_by_spell(CHAR *ch, int type)
 {
-  AFF *aff = NULL;
+  if (!ch) return FALSE;
 
-  for (aff = ch->affected; aff; aff = aff->next)
+  for (AFF *aff = ch->affected; aff; aff = aff->next)
   {
-    if (aff->type == skill)
+    if (aff->type == type)
     {
       return TRUE;
     }
@@ -492,13 +489,13 @@ bool affected_by_spell(CHAR *ch, int skill)
   return FALSE;
 }
 
-int duration_of_spell(CHAR *ch, int skill)
+int duration_of_spell(CHAR *ch, int type)
 {
-  AFF *aff = NULL;
+  if (!ch) return 0;
 
-  for (aff = ch->affected; aff; aff = aff->next)
+  for (AFF *aff = ch->affected; aff; aff = aff->next)
   {
-    if (aff->type == skill)
+    if (aff->type == type)
     {
       return aff->duration;
     }
@@ -509,10 +506,11 @@ int duration_of_spell(CHAR *ch, int skill)
 
 void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod)
 {
-  AFF *aff = NULL;
+  if (!ch || !af) return;
+
   bool found = FALSE;
 
-  for (aff = ch->affected; aff && !found; aff = aff->next)
+  for (AFF *aff = ch->affected; aff && !found; aff = aff->next)
   {
     if (aff->type == af->type)
     {
@@ -543,16 +541,25 @@ void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod)
 
 void remove_all_affects(CHAR *ch)
 {
-  AFF *aff = NULL, *tmp = NULL;
+  if (!ch) return;
 
-  for (aff = ch->affected; aff; aff = tmp)
+  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff)
   {
-    tmp = aff->next;
+    tmp_aff = aff->next;
 
     affect_from_char(ch, aff->type);
   }
 }
 
+AFF * get_affect_from_char(CHAR *ch, int type) {
+  if (!ch) return NULL;
+
+  for (AFF *aff = ch->affected; aff; aff = aff->next) {
+    if (aff->type == type) return aff;
+  }
+
+  return NULL;
+}
 
 /* move a player out of a room */
 void char_from_room(struct char_data *ch)

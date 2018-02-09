@@ -1948,17 +1948,7 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  const int wither_effect_types[] = {
-    SPELL_BLINDNESS,
-    SPELL_CHILL_TOUCH,
-    SPELL_CURSE,
-    SPELL_PARALYSIS,
-    SPELL_POISON,
-    -1
-  };
-
-  int dam = 0;
-  AFF af;
+  int wither_pulse_action(CHAR *victim);  
 
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
   {
@@ -1972,140 +1962,24 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  dam = 350;
-
-  int num_effects_to_apply = chance(25) ? 2 : 1;
-
-  int effect_type = get_random_eligible_effect(victim, wither_effect_types);
-
-  if (effect_type == TYPE_UNDEFINED) {
-    num_effects_to_apply = 0;
-    dam += 100;
-  }
-
-  damage(ch, victim, dam, SPELL_WITHER, DAM_MAGICAL);
+  damage(ch, victim, 350, SPELL_WITHER, DAM_MAGICAL);
 
   if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
 
-  affect_from_char(victim, SPELL_WITHER);
+  if (affected_by_spell(victim, SPELL_WITHER)) {
+    affect_from_char(victim, SPELL_WITHER);
+  }
+
+  AFF af;
 
   af.type       = SPELL_WITHER;
   af.duration   = 4;
   af.location   = 0;
-  af.modifier   = 0;
+  af.modifier   = (ubyte)level;
   af.bitvector  = 0;
   af.bitvector2 = 0;
+
   affect_to_char(victim, &af);
-
-  for (int i = 0, dam = 0; (i < num_effects_to_apply) && (effect_type != TYPE_UNDEFINED); i++, effect_type = get_random_eligible_effect(victim, wither_effect_types)) {
-    if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-
-    switch (effect_type) {
-      case SPELL_BLINDNESS:
-        if (saves_spell(victim, SAVING_SPELL, level)) continue;
-
-        af.type       = SPELL_BLINDNESS;
-        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
-        af.location   = APPLY_HITROLL;
-        af.modifier   = -4;
-        af.bitvector  = AFF_BLIND;
-        af.bitvector2 = 0;
-        affect_to_char(victim, &af);
-
-        af.location   = APPLY_AC;
-        af.modifier   = +40;
-        affect_to_char(victim, &af);
-
-        act("You have been blinded!", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
-      break;
-
-      case SPELL_CHILL_TOUCH:
-        if (saves_spell(victim, SAVING_SPELL, level)) continue;
-
-        af.type       = SPELL_CHILL_TOUCH;
-        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
-        af.modifier   = -1;
-        af.location   = APPLY_STR;
-        af.bitvector  = 0;
-        af.bitvector2 = 0;
-        affect_join(victim, &af, TRUE, FALSE);
-
-        act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
-      break;
-
-      case SPELL_CURSE:
-        if (saves_spell(victim, SAVING_SPELL, level)) continue;
-
-        af.type       = SPELL_CURSE;
-        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
-        af.modifier   = -((GET_LEVEL(ch) - 3) / 9);
-        af.location   = APPLY_HITROLL;
-        af.bitvector  = AFF_CURSE;
-        af.bitvector2 = 0;
-        affect_to_char(victim, &af);
-
-        af.location   = APPLY_SAVING_PARA;
-        af.modifier   = ((GET_LEVEL(ch) - 3) / 9);
-        affect_to_char(victim, &af);
-
-        act("You feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
-      break;
-
-      case SPELL_PARALYSIS:
-        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) ||
-            ((GET_LEVEL(victim) - 10) > GET_LEVEL(ch))) {
-          dam += 50;
-          continue;
-        }
-
-        if (saves_spell(victim, SAVING_PARA, level)) continue;
-
-        af.type       = SPELL_PARALYSIS;
-        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
-        af.bitvector  = AFF_PARALYSIS;
-        af.bitvector2 = 0;
-
-        af.location   = APPLY_AC;
-        af.modifier   = +100;
-        affect_to_char(victim, &af);
-
-        af.location   = APPLY_HITROLL;
-        af.modifier   = -5;
-        affect_to_char(victim, &af);
-
-        act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
-      break;
-
-      case SPELL_POISON:
-        if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) {
-          dam += 50;
-          continue;
-        }
-
-        if (saves_spell(victim, SAVING_PARA, level)) continue;
-
-        af.type       = SPELL_POISON;
-        af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
-        af.bitvector  = AFF_POISON;
-        af.bitvector2 = 0;
-
-        af.location   = APPLY_STR;
-        af.modifier   = -3;
-        affect_join(victim, &af, FALSE, FALSE);
-
-        act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
-      break;
-    }
-  }
-
-  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-
-  damage(ch, victim, dam, TYPE_UNDEFINED, DAM_MAGICAL);
 }
 
 void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -2230,26 +2104,29 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     num_shadows_active = 1;
   }
 
-  int dam = MIN(250 * 4, 250 * num_shadows_active);
+  int dam = MIN(350 * 4, 350 * num_shadows_active);
 
-  /* If level is < 45, the spell must be expiring in signal_char(). Inflict half damage. */
-  if (level < 45) {
-    dam /= 2;
+  /* If level is > LEVEL_MORT, Shadow Wraith must be expiring in signal_char() (or an immortal cast it). Inflict double damage. */
+  if (level > LEVEL_MORT) {
+    dam *= 2;
   }
 
   damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
 
-  for (AFF *tmp_af = ch->affected, *next_af; tmp_af; tmp_af = next_af) {
-    next_af = tmp_af->next;
+  /* We only want to reduce duration if the spell was cast, not if Shadow Wraith is expiring. */
+  if (level <= LEVEL_MORT) {
+    for (AFF *tmp_af = ch->affected, *next_af; tmp_af; tmp_af = next_af) {
+      next_af = tmp_af->next;
 
-    if (tmp_af->type == SPELL_SHADOW_WRAITH) {
-      if (tmp_af->duration <= 10) {
-        affect_from_char(ch, SPELL_SHADOW_WRAITH);
+      if (tmp_af->type == SPELL_SHADOW_WRAITH) {
+        if (num_shadows_active <= 1) {
+          affect_from_char(ch, SPELL_SHADOW_WRAITH);
+        }
+        else {
+          tmp_af->duration = (num_shadows_active - 1) * 10;
+        }
+        break;
       }
-      else {
-        tmp_af->duration -= 10;
-      }
-      break;
     }
   }
 }
