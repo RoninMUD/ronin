@@ -254,6 +254,7 @@ void list_skills_to_prac(CHAR *ch)
 
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
+          else if ((number == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45)) continue;
           else
           {
@@ -721,7 +722,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), spells, TRUE);
       }
-      break;
 
       if ((skill == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40))
       {
@@ -756,7 +756,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         index = -2;
       }
-
       break;
 
     case CLASS_COMMANDO:
