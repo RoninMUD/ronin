@@ -1088,6 +1088,8 @@ mar_sting (OBJ *st, CHAR *ch, int cmd, char *arg)
       if (!(vict = get_char_room_vis (ch, buf)))
 	return FALSE;
 
+      if (GET_OPPONENT(vict)) return FALSE;
+
       if(IS_NPC(vict) && IS_SET(vict->specials.immune,IMMUNE_BACKSTAB))
         return FALSE;
 

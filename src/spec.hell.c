@@ -322,6 +322,7 @@ int Unguis (OBJ *dagger, CHAR *ch, int cmd, char *arg) {
           }/* end if getclass */
 
           if(ch->specials.fighting) return FALSE; /* added 06/03/02 */
+          if (GET_OPPONENT(vict)) return FALSE;
 
           //Skeena 6/12/11: No free damage/death spec in Museum
           if(GET_ZONE(ch) == 165) {}
