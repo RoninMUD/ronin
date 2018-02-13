@@ -2070,10 +2070,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Ronin SC1: Combat Zen grants half damage from poison. */
+  /* Ronin SC3: Combat Zen grants half damage from poison. */
   if (IS_MORTAL(victim) &&
       damage_type == DAM_POISON &&
-      check_subclass(victim, SC_RONIN, 1)) {
+      check_subclass(victim, SC_RONIN, 3)) {
     dmg = lround(dmg * 0.50);
   }
 

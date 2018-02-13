@@ -727,7 +727,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
       }
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 3)) {
+      if (check_subclass(ch, SC_RONIN, 1)) {
         if ((number(1, 151) + modifier) <= GET_LEARNED(ch, SKILL_ASSAULT)) {
           dual_assault = TRUE;
         }
@@ -737,7 +737,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
       assault = TRUE;
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 3)) {
+      if (check_subclass(ch, SC_RONIN, 1)) {
         dual_assault = TRUE;
       }
     }
@@ -755,7 +755,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
   }
 
   /* Dual Assault */
-  if (check_subclass(ch, SC_RONIN, 3)) {
+  if (check_subclass(ch, SC_RONIN, 1)) {
     if (!dual_assault) {
       act("You try to assault $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n tries to assault you, but fails.", FALSE, ch, 0, victim, TO_VICT);
