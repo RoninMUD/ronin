@@ -253,6 +253,7 @@ void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (!affected_by_spell(ch, SPELL_RAGE))
   {
     send_to_char("Rage courses through your body!\n\r", ch);
+    act("$n's eyes turn blood red, piercing with rage.", FALSE, ch, 0, 0, TO_ROOM);
 
     AFF af;
 
