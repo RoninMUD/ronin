@@ -102,7 +102,6 @@ extern char *index(const char *s, int c);
 #define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
 #define GET_ID(ch)              ((ch) ? (ch)->ver3.id : -1)
 #define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
-#define IS_MORTAL(ch)           ((ch) ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
 
 #define ROOM_SPEC(rm)           (world[(rm)].spec_tmp)
 #define RM_BLOOD(rm)            (world[rm].blood)
@@ -183,31 +182,33 @@ do {                   \
 #define ANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
 #define SANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
 
-#define IS_NPC(ch)      (ch ? IS_SET((ch)->specials.act, ACT_ISNPC) : FALSE)
-#define IS_MOB(ch)      (IS_SET((ch)->specials.act, ACT_ISNPC) && ((ch)->nr >-1))
-#define IS_MOUNT(ch)    (ch ? IS_SET((ch)->specials.act, ACT_MOUNT) : FALSE)
+#define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
+#define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
+#define IS_MOUNT(ch)       (ch ? IS_SET(ch->specials.act, ACT_MOUNT) : FALSE)
 
-#define GET_POS(ch)     ((ch)->specials.position)
+#define IS_MORTAL(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
 
-#define GET_COND(ch, i) ((ch)->specials.conditions[(i)])
+#define IS_IMMORTAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMM)) : FALSE)
+#define IS_DEITY(ch)       (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_DEI)) : FALSE)
+#define IS_TEMPORAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_TEM)) : FALSE)
+#define IS_WIZARD(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_WIZ)) : FALSE)
+#define IS_ETERNAL(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_ETE)) : FALSE)
+#define IS_SUPREME(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_SUP)) : FALSE)
+#define IS_IMPLEMENTOR(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMP)) : FALSE)
 
-#define GET_NAME(ch)    (!IS_MOB(ch) ? (ch)->player.name : MOB_NAME(ch))
-#define GET_LONG(ch)    (!IS_MOB(ch) ? "none" : MOB_LONG(ch))
-#define GET_SHORT(ch)    (!IS_MOB(ch) ? "none" : MOB_SHORT(ch))
+#define GET_POS(ch)        ((ch)->specials.position)
+#define GET_COND(ch, i)    ((ch)->specials.conditions[(i)])
 
-#define GET_DISP_NAME(ch) (!IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch))
-
-#define GET_TITLE(ch)   ((ch)->player.title)
-
-#define GET_EMAIL(ch)   ((ch)->ver3.email_addr)
-
-#define GET_LEVEL(ch)   ((ch)->player.level)
-
-#define GET_CLASS(ch)   ((ch)->player.class)
-
-#define GET_HOME(ch)    ((ch)->player.hometown)
-
-#define GET_AGE(ch)     (age(ch).year)
+#define GET_NAME(ch)       (!IS_MOB(ch) ? (ch)->player.name : MOB_NAME(ch))
+#define GET_LONG(ch)       (!IS_MOB(ch) ? "none" : MOB_LONG(ch))
+#define GET_SHORT(ch)      (!IS_MOB(ch) ? "none" : MOB_SHORT(ch))
+#define GET_DISP_NAME(ch)  (!IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch))
+#define GET_TITLE(ch)      ((ch)->player.title)
+#define GET_EMAIL(ch)      ((ch)->ver3.email_addr)
+#define GET_LEVEL(ch)      ((ch)->player.level)
+#define GET_CLASS(ch)      ((ch)->player.class)
+#define GET_HOME(ch)       ((ch)->player.hometown)
+#define GET_AGE(ch)        (age(ch).year)
 
 #define GET_STR(ch)     ((ch)->tmpabilities.str)
 #define GET_ADD(ch)     ((ch)->tmpabilities.str_add)
@@ -251,26 +252,29 @@ do {                   \
 
 /* Object And Carry related macros */
 
-#define CAN_SEE_OBJ(ch, obj)                                                                                                   \
-((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE) || (GET_LEVEL(ch) > LEVEL_MORT)) && \
- (!IS_AFFECTED((ch), AFF_BLIND)) &&                                                                                            \
- (IS_LIGHT(CHAR_REAL_ROOM(ch)) || IS_AFFECTED((ch), AFF_INFRAVISION) || (GET_LEVEL(ch) > LEVEL_MORT)))
-
 #define GET_ITEM_TYPE(obj) ((obj)->obj_flags.type_flag)
 
 #define CAN_WEAR(obj, wear_flag) (IS_SET((obj)->obj_flags.wear_flags, wear_flag))
 
-#define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
-#define CAN_CARRY_N(ch) (((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)))
+#define IS_OBJ_STAT(obj, stat) (IS_SET((obj)->obj_flags.extra_flags, stat))
 
-#define CAN_CARRY_OBJ(ch, obj)                                                                                            \
-((((IS_CARRYING_W(ch) + GETOBJ_WEIGHT(obj)) <= (3 * CAN_CARRY_W(ch))) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch))) || \
- (!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_IMM))
+#define CAN_SEE_OBJ(ch, obj) ( \
+  IS_IMMORTAL(ch) || \
+  IS_AFFECTED((ch), AFF_INFRAVISION) || \
+  ((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE)) && !IS_AFFECTED((ch), AFF_BLIND) && IS_LIGHT(CHAR_REAL_ROOM(ch))) \
+)
+
+#define CAN_CARRY_W(ch) (IS_IMMORTAL(ch) ? 10000 : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
+
+#define CAN_CARRY_N(ch) (IS_IMMORTAL(ch) ? 200 : ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)))
+
+#define CAN_CARRY_OBJ(ch, obj) ( \
+  IS_IMMORTAL(ch) || \
+  ((((IS_CARRYING_W(ch) + GETOBJ_WEIGHT(obj)) <= (3 * CAN_CARRY_W(ch))) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch)))) \
+)
 
 #define CAN_GET_OBJ(ch, obj) \
 (CAN_TAKE((ch), (obj)) && CAN_CARRY_OBJ((ch), (obj)) && CAN_SEE_OBJ((ch), (obj)))
-
-#define IS_OBJ_STAT(obj, stat) (IS_SET((obj)->obj_flags.extra_flags, stat))
 
 #define OBJS(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
   OBJ_SHORT((obj)) : "something")
@@ -344,13 +348,6 @@ do {                   \
 #define GET_THACO(ch) (thaco[GET_CLASS(ch) - 1][GET_LEVEL(ch)])
 #define CHAR_ROOM_FLAGS(ch) (world[CHAR_REAL_ROOM(ch)].room_flags)
 #define IS_CORPSE(obj) (obj ? (GET_ITEM_TYPE(obj) == ITEM_CONTAINER && obj->obj_flags.value[3]) : FALSE)
-#define IS_IMMORTAL(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMM)) : FALSE)
-#define IS_DEITY(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_DEI)) : FALSE)
-#define IS_TEMPORAL(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_TEM)) : FALSE)
-#define IS_WIZARD(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_WIZ)) : FALSE)
-#define IS_ETERNAL(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_ETE)) : FALSE)
-#define IS_SUPREME(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_SUP)) : FALSE)
-#define IS_IMPLEMENTOR(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMP)) : FALSE)
 #define S_ANA(string) (index("aeiouyAEIOUY", *string) ? "An" : "A")
 #define S_SANA(string) (index("aeiouyAEIOUY", *string) ? "an" : "a")
 #define OBJ_TIMER(obj) (obj->obj_flags.timer)
