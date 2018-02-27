@@ -421,9 +421,15 @@ int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 /* Restores a small amount of mana when a player drinks from it. */
 int ecanyon_obj_jug(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if (cmd == CMD_DRINK) {
-    CHAR *owner = OBJ_CARRIED_BY(obj) != NULL ? OBJ_CARRIED_BY(obj) : OBJ_EQUIPPED_BY(obj) != NULL ? OBJ_EQUIPPED_BY(obj) : NULL;
+    CHAR *owner = OBJ_CARRIED_BY(obj);
 
     if (!ch || !IS_MORTAL(ch) || !owner || owner != ch) return FALSE;
+
+    char buf[MIL];
+
+    one_argument(arg, buf);
+
+    if (get_obj_in_list_vis(ch, buf, ch->carrying) != obj) return FALSE;
 
     int condition = GET_COND(ch, THIRST);
 
