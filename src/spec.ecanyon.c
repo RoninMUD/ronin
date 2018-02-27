@@ -421,16 +421,18 @@ int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 /* Restores a small amount of mana when a player drinks from it. */
 int ecanyon_obj_jug(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if (cmd == CMD_DRINK) {
-    if (!ch || !IS_MORTAL(ch)) return FALSE;
+    CHAR *owner = OBJ_CARRIED_BY(obj) != NULL ? OBJ_CARRIED_BY(obj) : OBJ_EQUIPPED_BY(obj) != NULL ? OBJ_EQUIPPED_BY(obj) : NULL;
+
+    if (!ch || !IS_MORTAL(ch) || !owner || owner != ch) return FALSE;
 
     int condition = GET_COND(ch, THIRST);
 
-    do_drink(ch, arg, cmd);
+    do_drink(owner, arg, cmd);
 
-    if (GET_COND(ch, THIRST) > condition) {
-      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + number(ECANYON_JUG_MIN_MANA_RESTORED, ECANYON_JUG_MAX_MANA_RESTORED)));
+    if (GET_COND(owner, THIRST) > condition) {
+      GET_MANA(owner) = MIN(GET_MAX_MANA(owner), (GET_MANA(owner) + number(ECANYON_JUG_MIN_MANA_RESTORED, ECANYON_JUG_MAX_MANA_RESTORED)));
 
-      act("You feel energized after drinking from $p.", FALSE, ch, obj, 0, TO_CHAR);
+      act("You feel energized after drinking from $p.", FALSE, owner, obj, 0, TO_CHAR);
     }
 
     return TRUE;
