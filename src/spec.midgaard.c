@@ -54,27 +54,6 @@ struct social_type {
  *  Special procedures for rooms                                       *
  ******************************************************************** */
 
-int MAX_PRAC(CHAR *ch)
-{
-  switch(GET_CLASS(ch))
-  {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-      return 95;
-      break;
-
-    case CLASS_AVATAR:
-      return 100;
-      break;
-
-    default:
-      return 85;
-      break;
-  }
-
-  return 0;
-}
-
 void list_spells_to_prac(CHAR *ch, int listall)
 {
   struct string_block sb;
@@ -179,7 +158,6 @@ void list_skills_to_prac(CHAR *ch)
           if (number == 0) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
-          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
@@ -691,7 +669,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         skill = old_search_block(nomad_skills[index], 0, strlen(nomad_skills[index]), spells, TRUE);
       }
 
-      if (((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) ||
+      if (((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) ||
           ((skill == SKILL_EVASION) && (GET_LEVEL(ch) < 50))) {
         index = -2;
       }

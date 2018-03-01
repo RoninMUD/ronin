@@ -496,7 +496,7 @@ void auction_buy(CHAR *auctioneer, CHAR *ch, char *arg)
 
   arg = one_argument(arg, buf);
   if(!*buf) {
-    act("$n asks you 'What object do you want to buy from auction ?'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n asks you, 'What object do you want to buy from auction ?'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(!strcmp("all", buf)) {
@@ -528,28 +528,28 @@ void auction_buy(CHAR *auctioneer, CHAR *ch, char *arg)
       } /* if */
     } /* for */
     if(!found)
-      act("$n tells you 'But you haven't bid on anything yet.'", FALSE, auctioneer, 0, ch, TO_VICT);
+      act("$n tells you, 'But you haven't won anything yet.'", FALSE, auctioneer, 0, ch, TO_VICT);
     save_auction();
     save_char(ch, NOWHERE);
     return;
   } else if((number = atoi(buf)) < 0) {
-    act("$n tells you 'Please make that a positive number.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Please make that a positive number.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(number >= MAX_OBJS_AUCTION || A_Board.auc[number].status == AUCTION_FREE) {
-    act("$n tells you 'Sorry but there isn't any such lot number.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Sorry but there isn't any such lot number.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(A_Board.auc[number].status != AUCTION_SOLD) {
-    act("$n tells you 'I'm sorry, but that hasn't been sold yet.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'I'm sorry, but that hasn't been sold yet.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(strcmp(GET_NAME(ch), A_Board.auc[number].last_bidder)) {
-    act("$n tells you 'I'm sorry, but that hasn't been sold to you.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'I'm sorry, but that hasn't been sold to you.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(GET_GOLD(ch) < A_Board.auc[number].value) {
-    act("$n tells you 'I'm sorry, but you don't have enough gold on you.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'I'm sorry, but you don't have enough gold on you.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   act("$n gives you $p.", FALSE, auctioneer, A_Board.auc[number].obj, ch, TO_VICT);
@@ -585,17 +585,17 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
       break;
 
   if(number == MAX_OBJS_AUCTION) {
-    act("$n tells you 'I'm sorry, but the auction board is full.", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'I'm sorry, but the auction board is full.", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
 
   arg = one_argument(arg, buf);
   if(!*buf) {
-    act("$n asks from you 'What do you want to auction?'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n asks you, 'What do you want to auction?'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(!( tmp_obj = get_obj_in_list_vis( ch, buf, ch->carrying))) {
-    act("$n tells you 'But you don't have that item!'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'But you don't have that item!'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if((tmp_obj->obj_flags.type_flag == ITEM_FOOD) ||
@@ -606,22 +606,22 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
      (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_ANTI_RENT)) ||
      (IS_SET(tmp_obj->obj_flags.extra_flags, ITEM_ANTI_AUCTION)) ||
      (IS_SET(tmp_obj->obj_flags.wear_flags, ITEM_QUESTWEAR))) {
-    act("$n tells you 'You cannot put $p in auction.'", FALSE, auctioneer, tmp_obj, ch, TO_VICT);
+    act("$n tells you, 'You cannot put $p in auction.'", FALSE, auctioneer, tmp_obj, ch, TO_VICT);
     return;
   }
 
   arg = one_argument(arg, buf);
   if(!*buf) {
-    act("$n asks from you 'What would be the starting bid?'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n asks you, 'What would be the starting bid?'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if((start = atoi(buf)) < 1000) {
-    act("$n tells you 'Minimum bids must be over 1000 coins.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Minimum bids must be over 1000 coins.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
 
   if((start = atoi(buf)) > 50000000) {
-    act("$n tells you 'Maximum bids must be under 50000000 coins.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Maximum bids must be under 50000000 coins.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
 
@@ -673,7 +673,7 @@ void auction_collect(CHAR *auctioneer, CHAR *ch)
     }
   }
   if(!found) {
-    act("$n tells you 'But there isn't anything for you to collect.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'But there isn't anything for you to collect.'", FALSE, auctioneer, 0, ch, TO_VICT);
   } else {
     save_auction();
     save_char(ch, NOWHERE);
@@ -788,43 +788,43 @@ void do_bid(CHAR *ch, char *arg, int cmd)
   if((number = atoi(tmp)) < 0 ||
      number >= MAX_OBJS_AUCTION ||
      A_Board.auc[number].status == AUCTION_FREE) {
-    act("$n tells you 'Sorry, but there isn't such lot number.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'Sorry, but there isn't such lot number.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
   if(str_cmp(A_Board.auc[number].owner, GET_NAME(ch)) == 0) {
-    act("$n tells you 'You cannot bid on your own items.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'You cannot bid on your own items.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
   if(A_Board.auc[number].last_bidder)
    if(str_cmp(A_Board.auc[number].last_bidder, GET_NAME(ch)) == 0) {
-    act("$n tells you 'You already have the last bid on that lot.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'You already have the last bid on that lot.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
   if(A_Board.auc[number].status == AUCTION_SOLD ||
      A_Board.auc[number].status == AUCTION_COLLECT) {
-    act("$n tells you 'That lot has already been sold.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'That lot has already been sold.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
   if((amount = atoi(tmp2)) > GET_GOLD(ch)) {
-    act("$n tells you 'You don't have that much gold on you.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'You don't have that much gold on you.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
   if(!A_Board.auc[number].last_bidder && A_Board.auc[number].value > amount) {
-    sprintf(buf, "$n tells you 'Bidding starts from %d coins on that lot.'",
+    sprintf(buf, "$n tells you, 'Bidding starts from %d coins on that lot.'",
             A_Board.auc[number].value);
     act(buf, FALSE, mob, 0, ch, TO_VICT);
     return;
   }
   if (A_Board.auc[number].last_bidder && A_Board.auc[number].value >= amount) {
-    sprintf(buf, "$n tells you 'That lot already has a bid of %d coins.'",
+    sprintf(buf, "$n tells you, 'That lot already has a bid of %d coins.'",
             A_Board.auc[number].value);
     act(buf, FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
   if (A_Board.auc[number].last_bidder && A_Board.auc[number].value+1000 > amount) {
-    act("$n tells you 'You must raise the bid by at least 1000 coins.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'You must raise the bid by at least 1000 coins.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
@@ -841,8 +841,8 @@ void do_bid(CHAR *ch, char *arg, int cmd)
           OBJ_SHORT(A_Board.auc[number].obj), amount);
   do_tell(mob, buf, 19);
 
-  act("$n tells you 'You just made a bid for $p.'", FALSE, mob, A_Board.auc[number].obj, ch, TO_VICT);
-  sprintf(buf, "$n says '$N just made a new bid %d coins for lot #%d ($p).'", amount, number);
+  act("$n tells you, 'You just made a bid for $p.'", FALSE, mob, A_Board.auc[number].obj, ch, TO_VICT);
+  sprintf(buf, "$n says, '$N just made a new bid %d coins for lot #%d ($p).'", amount, number);
   act( buf, FALSE, mob, A_Board.auc[number].obj, ch, TO_ROOM);
 
   A_Board.auc[number].last_bidder = str_dup(GET_NAME(ch));
@@ -929,18 +929,18 @@ void auction_identify(CHAR *ch, char *arg, int cmd) {
   if((number = atoi(tmp)) < 0 ||
      number >= MAX_OBJS_AUCTION ||
      A_Board.auc[number].status == AUCTION_FREE) {
-    act("$n tells you 'Sorry but there isn't any such lot number.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'Sorry but there isn't any such lot number.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
   if(A_Board.auc[number].status == AUCTION_SOLD ||
      A_Board.auc[number].status == AUCTION_COLLECT) {
-    act("$n tells you 'That lot has already been sold.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'That lot has already been sold.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
   if(3500 > GET_GOLD(ch)) {
-    act("$n tells you 'Sorry but you don't have enough gold for an id.'", FALSE, mob, 0, ch, TO_VICT);
+    act("$n tells you, 'Sorry but you don't have enough gold for an id.'", FALSE, mob, 0, ch, TO_VICT);
     return;
   }
 
@@ -957,15 +957,15 @@ void auction_recover(CHAR *auctioneer, CHAR *ch, char *arg)
 
   arg = one_argument(arg, buf);
   if(!*buf) {
-    act("$n asks you 'What object do you want to recover from auction ?'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n asks you, 'What object do you want to recover from auction ?'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if((number = atoi(buf)) < 0) {
-    act("$n tells you 'Please make that a positive number.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Please make that a positive number.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   if(number >= MAX_OBJS_AUCTION || A_Board.auc[number].status == AUCTION_FREE) {
-    act("$n tells you 'Sorry but there isn't any such lot number.'", FALSE, auctioneer, 0, ch, TO_VICT);
+    act("$n tells you, 'Sorry but there isn't any such lot number.'", FALSE, auctioneer, 0, ch, TO_VICT);
     return;
   }
   act("$n gives you $p.", FALSE, auctioneer, A_Board.auc[number].obj, ch, TO_VICT);

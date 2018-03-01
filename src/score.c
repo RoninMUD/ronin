@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <stdint.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -32,55 +33,6 @@ extern int hit_gain(CHAR *ch);
 extern int mana_gain(CHAR *ch);
 extern int move_gain(CHAR *ch);
 extern int check_subclass(CHAR *ch, int sub, int lvl);
-
-int calc_bhd(CHAR *ch)
-{
-  int damage = 0;
-
-  if (GET_CLASS(ch) == CLASS_NINJA)
-  {
-    if (check_subclass(ch, SC_RONIN, 3))
-      damage = (4 * (1 + 9)) / 2;
-    else if (GET_LEVEL(ch) > 27)
-      damage = (5 * (1 + 4)) / 2;
-    else if (GET_LEVEL(ch) > 24)
-      damage = (6 * (1 + 3)) / 2;
-    else if (GET_LEVEL(ch) > 19)
-      damage = (3 * (1 + 6)) / 2;
-    else if (GET_LEVEL(ch) > 15)
-      damage = (4 * (1 + 4)) / 2;
-    else if (GET_LEVEL(ch) > 10)
-      damage = (3 * (1 + 4)) / 2;
-    else if (GET_LEVEL(ch) > 5)
-      damage = (2 * (1 + 6)) / 2;
-    else if (GET_LEVEL(ch) > 2)
-      damage = (2 * (1 + 5)) / 2;
-    else
-      damage = (1 * (1 + 8)) / 2;
-  }
-  else
-    damage = (1 * (1 + 2)) / 2;
-
-  return damage;
-}
-
-int calc_avg_damage(CHAR *ch, int weapon_slot)
-{
-  int damage = 0;
-  OBJ *weapon = NULL;
-
-  if (weapon_slot == WIELD || (weapon_slot == HOLD && GET_CLASS(ch) == CLASS_NINJA))
-  {
-    weapon = EQ(ch, weapon_slot);
-
-    if (weapon && (OBJ_TYPE(weapon) == ITEM_WEAPON || OBJ_TYPE(weapon) == ITEM_2HWEAPON))
-      damage = ((OBJ_VALUE1(weapon) * (1 + OBJ_VALUE2(weapon))) / 2);
-    else
-      damage = calc_bhd(ch);
-  }
-
-  return damage;
-}
 
 void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
 {
@@ -107,13 +59,13 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     sprintf(buf, "%sLevel: [%s%d%s]%s %s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
       CHCLR(ch, 7), ENDCHCLR(ch),
-      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
-       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
       GET_CLASS_NAME(ch) : "Undefined");
     break;
   case SCQ_SC_LEVEL:
   case SCQ_SC_NAME:
-    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
     {
     sprintf(buf, "%sSubclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
@@ -393,7 +345,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     break;
   case SCQ_MOD_AC:
     sprintf(buf, "%sArmor Class:%s %+-13d",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_MOD_AC(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch), calc_ac(ch));
     break;
   case SCQ_WIMPY_LIMIT:
     sprintf(buf, "%sWimpy Limit:%s %-13d",
@@ -433,11 +385,11 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
 
     if (GET_CLASS(ch) == CLASS_NINJA)
       sprintf(buf2, "%d / %d",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
-        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG),
+        calc_hit_damage(ch, NULL, EQ(ch, HOLD), RND_AVG));
     else
       sprintf(buf2, "%d",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG));
     strcat(buf, buf2);
     break;
   case SCQ_DAMROLL:
@@ -843,10 +795,10 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "%s\n\r", ENDCHCLR(ch));
     printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
-      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
-       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
       GET_CLASS_NAME(ch) : "Undefined");
-    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
       printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
@@ -860,17 +812,17 @@ void do_score(CHAR *ch, char *argument, int cmd)
     }
     send_to_char("\n\r\n\r", ch);
 
-    printf_to_char(ch, "%sMaximum HP: [%s%5d%s]  Mana: [%s%5d%s]  Move: [%s%5d%s]%s\n\r",
+    printf_to_char(ch, "%sMaximum HP: [%s%5d%s]   Mana: [%s%5d%s]   Move: [%s%5d%s]%s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MAX_HIT(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MAX_MANA(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MAX_MOVE(ch),
       CHCLR(ch, 7), ENDCHCLR(ch));
-    printf_to_char(ch, "%sNatural HP: [%s%5d%s]  Mana: [%s%5d%s]  Move: [%s%5d%s]%s\n\r",
+    printf_to_char(ch, "%sNatural HP: [%s%5d%s]   Mana: [%s%5d%s]   Move: [%s%5d%s]%s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_NAT_HIT(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), GET_NAT_MANA(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), GET_NAT_MOVE(ch),
       CHCLR(ch, 7), ENDCHCLR(ch));
-    printf_to_char(ch, "%sGain +- HP:  %s%+5d%s   Mana:  %s%+5d%s   Move:  %s%+5d\n\r",
+    printf_to_char(ch, "%sGain +- HP:  %s%+5d%s    Mana:  %s%+5d%s    Move:  %s%+5d\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), hit_gain(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), mana_gain(ch),
       CHCLR(ch, 7), ENDCHCLR(ch), move_gain(ch));
@@ -882,11 +834,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch));
     if (GET_CLASS(ch) == CLASS_NINJA)
       printf_to_char(ch, "%d / %d\n\r",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
-        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG),
+        calc_hit_damage(ch, NULL, EQ(ch, HOLD), RND_AVG));
     else
       printf_to_char(ch, "%d\n\r",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG));
     printf_to_char(ch, "%sSTR:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
     if (GET_LEVEL(ch) < 6)
@@ -966,7 +918,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
         CHCLR(ch, 7), ENDCHCLR(ch));
 
     printf_to_char(ch, " %sArmor Class:%s %+-13d ",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_MOD_AC(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch), calc_ac(ch));
     printf_to_char(ch, "     %sRemort XP:%s %lld (%dx)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
 
@@ -1155,6 +1107,20 @@ void do_score(CHAR *ch, char *argument, int cmd)
         break;
     }
 
+    if (GET_PROTECTOR(ch)) {
+      printf_to_char(ch, "%sYou are being protected by %s.%s\n\r",
+          CHCLR(ch, 7),
+          GET_NAME(GET_PROTECTOR(ch)) ? GET_NAME(GET_PROTECTOR(ch)) : "(null)",
+          ENDCHCLR(ch));
+    }
+
+    if (GET_PROTECTEE(ch)) {
+      printf_to_char(ch, "%sYou are protecting %s.%s\n\r",
+          CHCLR(ch, 7),
+          GET_NAME(GET_PROTECTEE(ch)) ? GET_NAME(GET_PROTECTEE(ch)) : "(null)",
+          ENDCHCLR(ch));
+    }
+
     if (IS_IMMORTAL(ch))
     {
       printf_to_char(ch, "\n\r%sInvisibility Level:%s %d\n\r",
@@ -1179,7 +1145,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       GET_AGE(ch), ((age(ch).month == 0) && (age(ch).day == 0)) ? " It's your birthday today." : "");
 
     printf_to_char(ch, "Your alignment is %d (-1000 to 1000) and your armor is %d (100 to %d).\n\r",
-      GET_ALIGNMENT(ch), GET_MOD_AC(ch), IS_NPC(ch) || affected_by_spell(ch, SKILL_DEFEND) ? -300 : -250);
+      GET_ALIGNMENT(ch), calc_ac(ch), IS_NPC(ch) || affected_by_spell(ch, SKILL_DEFEND) ? -300 : -250);
 
     if (GET_ALIGNMENT(ch) >= 750)
       send_to_char("You are saintly.\n\r", ch);
@@ -1211,11 +1177,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if (GET_CLASS(ch) == CLASS_NINJA)
       printf_to_char(ch, "Your average damage is %d / %d.\n\r",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD),
-        calc_damroll(ch) + calc_avg_damage(ch, HOLD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG),
+        calc_hit_damage(ch, NULL, EQ(ch, HOLD), RND_AVG));
     else
       printf_to_char(ch, "Your average damage is %d.\n\r",
-        calc_damroll(ch) + calc_avg_damage(ch, WIELD));
+        calc_hit_damage(ch, NULL, EQ(ch, WIELD), RND_AVG));
 
     if (GET_LEVEL(ch) > 5)
       printf_to_char(ch, "You are carrying %d weight, and the max weight without penalties is %d.\n\r",
@@ -1249,7 +1215,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "You have %d quest points.\n\r", GET_QP(ch));
     printf_to_char(ch, "You have %d subclass points.\n\r", GET_SCP(ch));
 
-    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
       printf_to_char(ch, "You are a level %d %s.\n\r",
         GET_SC_LEVEL(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
 
@@ -1389,10 +1355,10 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
       CHCLR(ch, 7), ENDCHCLR(ch),
-      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) < CLASS_FINAL) ||
-       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MAX)) ?
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
+       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
       GET_CLASS_NAME(ch) : "Undefined");
-    if (GET_SC(ch) > SC_NONE && GET_SC(ch) < SC_FINAL)
+    if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
       printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
@@ -1417,7 +1383,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch), move_gain(ch));
 
     printf_to_char(ch, " %sArmor Class:%s %+-13d ",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_MOD_AC(ch));
+      CHCLR(ch, 7), ENDCHCLR(ch), calc_ac(ch));
     printf_to_char(ch, "     %sAlignment:%s %d ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_ALIGNMENT(ch));
     if (GET_ALIGNMENT(ch) >= 750)

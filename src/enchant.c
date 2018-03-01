@@ -1616,9 +1616,9 @@ void assign_enchantments(void)
   ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,  6,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
   ENCHANTO("Regeneration"                   , ENCHANT_REGENERATION, 24,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, regeneration_enchantment);
 
-  ENCHANTO("The title of Squire"            , ENCHANT_SQUIRE      , -1,  1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, squire_enchantment);
-  ENCHANTO("The title of Swashbuckler"      , ENCHANT_SWASHBUCKLER, -1,  5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, swashbuckler_enchantment);
-  ENCHANTO("The title of Knight"            , ENCHANT_KNIGHT      , -1,  5, APPLY_SKILL_DUAL      , AFF_SENSE_LIFE      , AFF_NONE, knight_enchantment);
+  ENCHANTO("The title of Squire"            , ENCHANT_SQUIRE      , -1,  5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, squire_enchantment);
+  ENCHANTO("The title of Swashbuckler"      , ENCHANT_SWASHBUCKLER, -1,  5, APPLY_SKILL_DUAL      , AFF_NONE            , AFF_NONE, swashbuckler_enchantment);
+  ENCHANTO("The title of Knight"            , ENCHANT_KNIGHT      , -1,  5, APPLY_SKILL_TRIPLE    , AFF_SENSE_LIFE      , AFF_NONE, knight_enchantment);
 
   ENCHANTO("The title of First Sword"       , ENCHANT_FIRSTSWORD  , -1,  1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, firstsword_enchantment);
   ENCHANTO("The title of Justiciar"         , ENCHANT_JUSTICIAR   , -1,  5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, justiciar_enchantment);

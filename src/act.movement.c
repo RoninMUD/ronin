@@ -291,7 +291,7 @@ Returns:
       !IS_IMMORTAL(ch) &&
       !(ch->specials.riding) &&
       /* Combat Zen */
-      !(check_subclass(ch, SC_RONIN, 3) && chance(50))) {
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3) && chance(50))) {
     send_to_char("You are paralyzed! You can't move!\n\r",ch);
     return FALSE;
   }

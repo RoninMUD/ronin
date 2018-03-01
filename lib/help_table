@@ -1649,13 +1649,13 @@ Warriors are known to have more strength than the average character.
 This makes them better at hand-to-hand-combat, as they possess skills
 of violence and fighting unequaled by the members of any other class.
 However, they lack the ability to use magic of any sort.  Warriors
-also get 4 natural armor points for every 5 levels, and an additional
+also get 5 natural armor points for every 5 levels, and an additional
 practice % on parry for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: bash, block, dual, kick, knock, parry, punch, rescue, spin,
-        throw, triple (level 20), disembowel (level 40), quad (level 50)
+Skills: bash, block, disarm, dual, kick, knock, parry, punch, rescue,
+        spin, throw, triple (level 20), quad (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1742,7 +1742,7 @@ additional practice % on dodge for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-        subdue, throw, trap, disembowel, evasion (level 50)
+        subdue, throw, trap, disembowel (level 40), evasion (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1815,7 +1815,7 @@ Circle                                                Y
 Coin Toss                                             Y
 Cunning                                               Y
 Disarm                       Y              Y    Y
-Disembowel                                  Y              Y
+Disembowel                                  Y
 Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
@@ -1968,15 +1968,6 @@ A skill which gives an automatic third attack the during fight. The chance of it
 success depends on how well you learn it.
 
 See Also: DUAL
-#
-DISEMBOWEL
-
-Class: Nomad, Warrior (Level 40)
-
-DISEMBOWEL is a special skill which allows a Warrior or Nomad to inflict extra
-damage onto an opponent when the it is bleeding (10% health or less). There is
-a possibility of failing the disembowel, in which case the victim will strike
-back and inflict some damage to the player.
 #
 PARRY
 
@@ -4956,7 +4947,7 @@ also considered pstealing.
 SQUIRE
 
 Spell Affects  -  none
-Other Affects  -  HITROLL +1
+Other Affects  -  +5 Block
 
 With the rank listed above, you will also get a 15% regeneration rate bonus on
 hit points and movement. To obtain this rank you must earn 5000000 experience
@@ -4971,7 +4962,7 @@ See Also: RANKS
 SWASHBUCKLER
 
 Spell Affects  -  none
-Other Affects  -  +5 Block
+Other Affects  -  +5 Dual
 Required Rank  -  SQUIRE
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -4987,7 +4978,7 @@ See Also: RANKS
 KNIGHT
 
 Spell Affects  -  sense life
-Other Affects  -  +5 Dual
+Other Affects  -  +5 Triple
 Required Rank  -  SWASHBUCKLER
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -6701,31 +6692,131 @@ Class: Thief (Level 35)
 This skill allows the character to see who may be in surrounding
 rooms.
 #
-AWARENESS
+"AWARENESS"
 
+Subclass Warlord: Level 1 (Warrior)
 Subclass Ranger: Level 1 (Nomad)
-Subclass Warlord: Level 2 (Warrior)
 
-This automatic skill gives the Ranger or Warlord a heightened sense of danger,
-allowing him/her to notice when a creature is about to attack and quickly get
-in the first hit.  Awareness isn't very effective when affected by fury or
-berserk.  The success of awareness is dependent on how well the skill is
-practiced.
+Usage: awareness (toggles on/off)
 
-See Also: SUBCLASSES RANGER WARLORD
+A competent warrior is always keenly aware of every movement on the battlefield,
+taking in every threat and measuring a tactical response.  This constant
+alertness heightens the senses of the fighter and drives the rush of adrenaline
+pulsing through their veins.
+
+The active component of this subclass level is the Awareness skill, which allows
+the Warlord to always get the first hit against an opponent, even if the
+attacking creature targets another player.  This action will place the Warlord
+in the tank position automatically.  Awareness will only trigger if the Warlord
+is not already engaged in combat.  If multiple Warlords are active in the same
+room with the Awareness skill enabled, the last Warlord to enter the room will
+be the one to take action.  This ability can be toggled on/off.
+
+The success of this skill is increased by the user's Wisdom modifier.
+
+In addition, the Warlord gains a passive boost to their hit point regeneration
+rate, which is active at all times.  This increase is equal to two hit points
+per warrior class level, adding up to +100 hit point regeneration at level 50.
+
+Warlord subclass level 1 grants the warrior the capability of reaching -260
+Armor Class (AC), exceeding the normal limit of -250.
+
+Note: Ranger only gains access to the first component of this subclass level.
+
+See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 #
-PROTECT
+"PROTECT"
 
-Subclass Gladiator: Level 1 (Warrior)
+Subclass Warlord: Level 2 (Warrior)
+Subclass Ranger: Level 2 (Nomad)
 Subclass Crusader: Level 2 (Paladin)
 
-This skill gives the Gladitator or Crusader the ability to protect one member
-of their party from receiving damage. It is normally not possible to protect
-anyone while furied or berserk, but the Paladin has better control and has
-some limited success while furied.  The success of protect is dependent on how
-well the skill is practiced.
+Usage: protect <target/self>
 
-See Also: SUBCLASSES GLADIATOR CRUSADER
+The Warlord gains the Protect skill, which allows them to protect one member
+of their group from receiving damage, taking the damage themselves instead.  To
+stop protecting someone, choose a different target by using this skill again, or
+target yourself to cease protecting anyone.
+
+Additionally, the Warlord can never fail when using the Rescue skill.
+
+Finally, the Warlord receives a bonus Armor Class (AC) multiplier from the
+shield equipment slot, increasing it from a normal 2x multiplier to 3x.
+
+Warlord subclass level 2 grants the warrior the capability of reaching -270
+Armor Class (AC), exceeding the normal limit of -250.
+
+Note: Ranger and Crusader only gain access to the first component of this
+subclass level.
+
+See Also: SUBCLASSES WARLORD RESCUE DEXTERITY AC RANGER CRUSADER
+#
+"IRON FIST"
+
+Subclass Warlord: Level 3 (Warrior)
+
+Years of combat training, and resorting to punching things to resolve most
+issues, has transformed the Warlord's fists to an iron hardness.
+
+The Warlord has a 33% chance of inflicting a critical hit upon landing a
+successful Punch against an opponent.  This devastating blow will deal double
+damage and will send the victim reeling, setting them to the Stunned position.
+
+Additionally, the Warlord gains a +1 bonus to their Block skill for every 5
+warrior class levels, up to a +10 bonus at level 50.  This advantage makes it
+highly unlikely that a Warlord's opponent can flee from them in combat.
+
+Warlord subclass level 3 grants the warrior the capability of reaching -280
+Armor Class (AC), exceeding the normal limit of -250.
+
+See Also: SUBCLASSES WARLORD PUNCH BLOCK AC
+#
+"JUGGERNAUT"
+
+Subclass Warlord: Level 4 (Warrior)
+
+The Warlord is a force to be reckoned with on the battlefield, a veritable
+juggernaut of whirling blades and thick, tank-like armor.  Such a brute on
+the battle field has no problem switching from target to target, getting a
+hit in wherever they can.
+
+As a passive bonus, the Warlord has their number of successful dual, triple,
+and quad attacks increased by up to 15%, based on the Warlord's skill and
+Dexterity modifier(s).
+
+Additionally, as a right of initiation into the ranks of the Juggernauts, the
+Warlord adorns their armor with jagged spikes, occasionally harming those that
+dare get too close.  This passive bonus is active so long as the warrior is
+wearing armor.  Damage is dealt whether an attack hits or misses, and the rate
+of success of this benefit is increased by the Warlord's Dexterity modifier.
+
+Finally, the Warlord's success rate when using the Kick and Spin Kick skills is
+improved, and the input lag from using either skill is reduced to two rounds,
+regardless of success or failure.
+
+Warlord subclass level 4 grants the warrior the capability of reaching -290
+Armor Class (AC), exceeding the normal limit of -250.
+
+See Also: SUBCLASSES WARLORD DUAL TRIPLE QUAD DEXTERITY SPIN AC
+#
+"BULWARK"
+
+Subclass Warlord: Level 5 (Warrior)
+
+The weak blows of inferior combatants crash against the Warlord's nearly
+impenetrable defenses, glancing off their grand armor and deflected away by
+their mighty weapons.
+
+The Warlord gains 1% physical damage reduction for every 3 Armor Class (AC)
+point (rounded up) beyond -250, to a maximum of 16.66% at -300.
+
+In addition, the Warlord gains a 1% bonus to their Parry skill for every 5 Armor
+Class (AC) point beyond -250, to a maximum of 8.33% at -300.
+
+Warlord subclass level 5 grants the warrior the capability of reaching -300
+Armor Class (AC), exceeding the normal limit of -250.
+
+See Also: SUBCLASSES WARLORD PARRY AC
 #
 BERSERK
 
@@ -6742,7 +6833,6 @@ See Also: SUBCLASSES RANGER
 DEFEND
 
 Subclass Ranger: Level 5 (Nomad)
-Subclass Warlord: Level 4 (Warrior)
 
 While in complete defensive mode, the Ranger or Warlord completely focuses his
 mind on the movements of the creatures attacking him. This prevents the
@@ -7478,20 +7568,6 @@ This is an automatic skill and is always in effect.
 
 See also: SUBCLASSES BANDIT AC HITROLL
 #
-FLANK
-
-Subclass Gladiator: Level 3 (Warrior)
-
-The Gladiator can attempt to move to the side of
-his victim at the start of a fight to get extra
-damage in the first hit.  A successful flank will
-deal damage in the amount of level/10 times.
-The Gladiator will experience 2 rounds of lag, and
-the success of flank is dependent on how well the
-skill is practiced.  A weapon is required.
-
-See Also: SUBCLASSES GLADIATOR
-#
 "QUICK RECOVERY"
 
 Subclass Rogue: Level 5 (Thief)
@@ -7526,115 +7602,154 @@ each level, the gladiator receives a new or improved skill.  For help on each
 skill, just type HELP <name of skill>
 
 Level         Skill
-  1           PROTECT
-  2           SWITCH
-  3           FLANK
-  4           HOSTILE
-  5           HEADBUTT
+  1           FLANK
+  2           DISEMBOWEL
+  3           TACTICIAN
+  4           HEADBUTT
+  5           HOSTILE
 
 See Also: SUBCLASSES WARLORD WARRIOR
 #
 WARLORD
 
-Warlord is one of the Warrior subclasses and is broken up
-into 5 levels.  At each level, the warlord receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
+Warlord is one of the Warrior subclasses and is broken up into 5 levels.  At
+each level, the warlord receives a new or improved skill.  For help on each
+skill, just type HELP <name of skill>
 
 Level         Skill
-  1           BARRIER and TRIPLE rate increase of 10%
-  2           AWARENESS
-  3           STAMINA
-  4           DEFEND
-  5           CHARGE
+  1           AWARENESS
+  2           PROTECT
+  3           IRON FIST
+  4           JUGGERNAUT
+  5           BULWARK
 
 See Also: SUBCLASSES GLADIATOR WARRIOR
 #
-BARRIER
+FLANK
 
-Subclass Warlord: Level 1 (Warrior)
+Subclass Gladiator: Level 1 (Warrior)
 
-Barrier improves block to the point where the chance of a
-victim fleeing is reduced to 10 percent. Barrier is not
-a seperate skill and as a result doesn't need to be
-practiced.  Obviously, the improvement to block is only
-active when block is turned on.
+Usage: flank <victim>
 
-See Also: SUBCLASSES WARLORD
+Gladiators are trained in the Arena, their battle skills honed through countless
+battles against overwhelming odds.  This training has given the Gladiator the
+insight to pick the right moment to attack their opponents, giving them an edge
+in combat.
+
+The Gladiator can attempt to flank their opponent when engaging in battle.  This
+skill can be used to initiate or join combat.  Flank grants a damage multiplier
+on the Gladiator's first hit equal to (level / 10).  For example, a level 50
+Gladiator would gain a multiplier of 5x on their first hit.  This ability also
+allows for dual/triple/quad hits, as would normally be attempted during a melee
+attack.  A weapon is required.
+
+Flank can also be used to switch targets during combat, allowing the Gladiator
+to redirect their attacks at a new opponent.  While this allows them to attack
+a new target, they will continue to be attacked by anything that was attacking
+them previously.  When used in such a way, Flank does not deal increased damage
+(no additional multiplier is applied).
+
+The Gladiator will experience 2 rounds of input lag after using Flank,
+regardless of success or failure.
+
+The success of this skill is based on how well it is practiced, and the user's
+Dexterity modifier.
+
+See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD PRACTICE DEXTERITY
 #
-STAMINA
-
-Subclass Warlord: Level 3 (Warrior)
-
-During combat, the Warlord's pulse rate increases, blood pressure
-rises and adrenaline level soars.  This results in a high rate of
-regeneration allowing the Warlord to gain 50 extra hit points of
-healing each tick.
-
-See Also: SUBCLASSES WARLORD
-#
-CHARGE
-
-Subclass Warlord: Level 5 (Warrior)
-
-Usage: charge <victim>
-
-This is the ultimate group battle starting skill.  The Warlord
-commands his/her group to charge the victim as a single unit.
-This confuses the victim momentarily allowing everyone in the
-group to hit for 2x damage on their first hit.  The warlord
-is the first to hit and becomes the tank.  The order of hit is
-then from the last in the group to the first in the group.  The
-success of the charge is dependent on how well the skill is
-practiced.
-
-See Also: SUBCLASSES WARLORD
-#
-SWITCH
+DISEMBOWEL
 
 Subclass Gladiator: Level 2 (Warrior)
-Subclass Crusader: Level 3 (Paladin)
+Class: Nomad (Level 40)
 
-This skill allows the Gladiator or Crusader to switch to
-another victim during combat.  This takes great control and
-the Gladiator is unable to switch while affected by fury.  The
-Crusader does however have a chance of switching while in the
-furied state.  Switch only redirects the Gladiator/Crusader
-to hit a new victim, they continue to tank the original
-victim.  The success of switch is dependent on how well
-the skill is practiced.
+Usage: disembowel <victim>
 
-See Also: SUBCLASSES GLADIATOR "MOB SWITCH"
+Disembowel is a vicious attack that deals a single melee hit against the target,
+multiplied by between the Gladiator's level divided by 10, up to to their level
+divided by 5 (between a 5x to a 10x multiplier at level 50).
+
+This attack can only be successful when performed against a target that is
+either in an terrible or bleeding condition (20% hit points remaining, or less),
+or if the damage would cause the victim to die in one strike.  This ability is
+similar to Backstab, but is used at the end of combat, instead of the beginning.
+
+The Gladiator will experience 3 rounds of input lag after using Disembowel,
+regardless of success or failure.
+
+The success of this skill is based on how well it is practiced, and the user's
+Dexterity modifier.
+
+See Also: SUBCLASSES GLADIATOR PRACTICE DEXTERITY
+#
+TACTICIAN
+
+Subclass Gladiator: Level 3 (Warrior)
+
+A measured tactical response is often the key factor separating victory and
+defeat, even among warriors of disparate physical abilities.  A seasoned
+Gladiator observes their opponent, waiting for the right moment to dodge out
+of the way, or to strike back after a reckless blow.
+
+This ability makes the Gladiator immune to disarm attempts made by all players,
+and by all but the most cunning of creatures.
+
+Additionally, the Gladiator has a chance to avoid the following "mob attacks"
+entirely when they would otherwise hit: Kick, Pummel, Punch, Bite, Claw, Bash,
+Tailslam, Disarm, and Trample.  After avoiding such an attack, the Gladiator has
+a chance to strike back at their opponent with a free melee attack.
+
+Finally, when a Gladiator fails to avoid such an attack, the input lag inflicted
+by the impending blow is reduced by one round, to a minimum of zero.
+
+See Also: SUBCLASSES GLADIATOR DISARM
 #
 HEADBUTT
 
-Subclass Gladiator: Level 5 (Warrior)
+Subclass Gladiator: Level 4 (Warrior)
 
-For this skill the Gladiator uses his/her thick skull to
-deal 200 damage to the victim in a single motion.  In
-addition, the victim will become stunned.  The gladiator
-will experience one to three rounds of lag afterwards.  The
-success of this ability is based on how well it is practiced.
+Usage: headbutt <victim>
 
-See Also: SUBCLASSES GLADIATOR
+Nobody would accuse a Gladiator of being overly cerebral, but it is often said
+that they use their heads to solve problems.  Nothing could be more true when it
+comes to the technique utilized by the Headbutt skill.  By slamming their thick
+skulls into their opponents, they can deal a significant amount of damage.
+
+This attack will deal 240 damage to the victim in a single motion and will also
+place them into the Stunned position.
+
+The Gladiator will experience 3 rounds of input lag after a successful Headbutt,
+their vision left spinning from the mighty blow.  A failed Headbutt will result
+in 2 rounds of input lag instead.
+
+The success of this skill is based on how well it is practiced, and the user's
+Dexterity modifier.
+
+See Also: SUBCLASSES GLADIATOR PRACTICE DEXTERITY
 #
 HOSTILE
 
-Subclass Gladiator: Level 4 (Warrior)
+Subclass Gladiator: Level 5 (Warrior)
 
 Usage: hostile (toggles on/off)
 
-When affected by hostile the Gladiator has his/her number of successful
-duals, triples, and quads doubled.
+Once a Gladiator has set them selves into motion, they are driven with a single
+thought in mind: to win.  This devotion to success at any cost makes them a
+dangerous, but sometimes reckless foe upon the battlefield.
 
-Unfortunately, since the Gladiator is so intent on hitting the victim,
-the victim will never miss.  If the Gladiator is in combat, this
-cannot be turned on or off.
+When affected by the Hostile skill, the Gladiator has their number of successful
+dual, triple, and quad attacks increased by up to 40%, based on the Gladiator's
+skill and Dexterity modifier(s).
 
-Hostile also prevents the Gladiator from rescuing others or fleeing from
-combat.
+Because the Gladiator is so intent on hitting their opponent, they forgo their
+normal defensive capabilities.  This will cause their opponent to never miss a
+melee attack, regardless of the Gladiator's Armor Class (AC) or their Parry
+skill.
 
-See Also: SUBCLASSES GLADIATOR
+Hostile prevents the Gladiator from using the Rescue skill when it is enabled.
+
+Hostile can be toggled on/off, but cannot be toggled during combat.
+
+See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD DEXTERITY AC RESCUE
 #
 MERCENARY
 

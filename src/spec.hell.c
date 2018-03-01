@@ -4199,7 +4199,7 @@ void check_equipment(CHAR *ch);
 int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
   CHAR *vict,*belial,*reaper;
   ENCH *tmp_enchantment;
-  char buf[MIL], buf2[MIL], buf3[MIL], buf4[MIL];
+  char buf[MIL], buf3[MIL], buf4[MIL];
   OBJ *tmp, *tmp2;
   int stingnum, num, dmg, i, qend, spl, attack=100, pop_percent, object, sword=0, reset=1;
   struct descriptor_data *d;
@@ -4579,9 +4579,9 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
       act("You become enraged with fury, choosing to display the true power of Hell.",FALSE,lucifer,0,0,TO_CHAR);
       act("\n\rLucifer gains strength as his fury overflows !\nThe true power of Hell is revealed !\n\r",FALSE,lucifer,0,0,TO_ROOM);
       if((tmp=read_object(LUCIFER_SWORD,VIRTUAL))) {
-        obj_to_char(tmp,lucifer);
-        sprintf(buf2,"wield sword");
-        command_interpreter(lucifer,buf2);
+        lucifer->equipment[WIELD] = tmp;
+        act("$n wields $p.", TRUE, lucifer, tmp, 0, TO_ROOM);
+        act("You wield $p.", TRUE, lucifer, tmp, 0, TO_CHAR);
       }
     }
 
