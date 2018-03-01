@@ -1086,7 +1086,8 @@ int vault_access(char *vault_name, char *name)
       !strcmp("lem", name) ||
       !strcmp("liner", name) ||
       !strcmp("sane", name) ||
-      !strcmp("shun", name))
+      !strcmp("shun", name) ||
+      !strcmp("night", name))
   {
     fclose(fd);
 
