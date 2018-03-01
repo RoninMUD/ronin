@@ -8550,7 +8550,7 @@ Usage: idname <#>     (returns the name of a player with that id number)\n\r\
               <name>  (returns the id number of a player with that name)\n\r\n\r\
 SUP+ Only\n\r\
               list    (list all ids/players (large list - can cause link loss)\n\r\
-              reset   (set all to null)\n\r";
+              reset <#/all>  (set id number or all to null)\n\r";
 
   if(!check_god_access(ch,1)) return;
   argument=one_argument(argument, buf);
@@ -8561,11 +8561,25 @@ SUP+ Only\n\r\
 
   if(!strcmp(buf,"reset")) {
     if(GET_LEVEL(ch)>=LEVEL_SUP) {
-      for(i=0;i<MAX_ID;i++) {
-        strcpy(idname[i].name, "\0");
+      argument=one_argument(argument, buf);
+
+      if (!strcmp(buf, "all")) {
+        for(i=0;i<MAX_ID;i++) {
+          strcpy(idname[i].name, "\0");
+        }
+        send_to_char("All names in the id list reset.\n\r",ch);
+        write_idname();
       }
-      send_to_char("All names in the id list reset.\n\r",ch);
-      write_idname();
+      else if (is_number(buf)) {
+        idnum=atoi(buf);
+        if(idnum<0 || idnum>=MAX_ID) {
+          printf_to_char(ch,"The id number must be between 0 and %d.\n\r",MAX_ID);
+          return;
+        }
+        strcpy(idname[idnum].name, "\0");
+        printf_to_char(ch,"ID: %5d reset.\n\r",idnum);
+        write_idname();
+      }
     }
     else {
       send_to_char("You must at least be a SUP for this option.\n\r",ch);
