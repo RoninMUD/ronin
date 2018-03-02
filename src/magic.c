@@ -2538,7 +2538,7 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   heal = (mob_level * 3);
 
   /* Desecrate */
-  if (check_subclass(ch, SC_DEFILER, 1))
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 1))
   {
     heal += ((heal * number(0, 5)) / 10);
   }

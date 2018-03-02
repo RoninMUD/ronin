@@ -2092,7 +2092,7 @@ AGGLEADER, AGGRANDOM, ARM, SHIELD, OPEN-DOOR, NO_TOKEN, IGNORE-SPHERE.\r\n", ch)
          if(arg2)
          {
          tmp = atoi(arg2);
-         if(tmp >=0 && tmp <= CLASS_MAX )
+         if(tmp >=0 && tmp <= CLASS_MOB_LAST )
            {
            mob_proto_table[mob].class = tmp;
            send_to_char("Done.\n\r", ch);
@@ -7088,7 +7088,7 @@ For a list of classes use OLCHELP MOB CLASS.\n\r\n\r\
     return;
   }
 
-  if(class<0 || class>CLASS_MAX) {
+  if(class<0 || class>CLASS_MOB_LAST) {
     send_to_char(usage,ch);
     return;
   }

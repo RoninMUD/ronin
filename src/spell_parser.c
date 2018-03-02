@@ -1457,8 +1457,9 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   }
 
   /* Inner Peace */
-  if (check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
 
+  /* Focus */
   if (affected_by_spell(ch, SPELL_FOCUS)) con_amt += 100;
 
   percent=number(1,1001);

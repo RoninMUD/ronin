@@ -411,18 +411,20 @@ void affect_total(struct char_data *ch)
 
 /* Insert an affect_type in a char_data structure
    Automatically sets apropriate bits and apply's */
-void affect_to_char(struct char_data *ch, struct affected_type_5 *af)
-{
-  struct affected_type_5 *affected_alloc;
+void affect_to_char(CHAR *ch, AFF *af) {
+  if (!ch || !af) return;
 
-  CREATE(affected_alloc, struct affected_type_5, 1);
+  AFF *tmp_af;
 
-  *affected_alloc = *af;
-  affected_alloc->next = ch->affected;
-  ch->affected = affected_alloc;
+  CREATE(tmp_af, AFF, 1);
 
-  affect_modify(ch, af->location, af->modifier,
-    af->bitvector, af->bitvector2, TRUE);
+  *tmp_af = *af;
+
+  tmp_af->next = ch->affected;
+  ch->affected = tmp_af;
+
+  affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, TRUE);
+
   affect_total(ch);
   check_equipment(ch);
 }
@@ -430,27 +432,20 @@ void affect_to_char(struct char_data *ch, struct affected_type_5 *af)
 /* Remove an affected_type structure from a char (called when duration
    reaches zero). Pointer *af must never be NIL! Frees mem and calls
    affect_location_apply                                                */
-void affect_remove(struct char_data *ch, struct affected_type_5 *af) {
-  struct affected_type_5 *hjp;
-
-  assert(ch->affected);
+void affect_remove(CHAR *ch, AFF *af) {
+  if (!ch || !af || !(ch->affected)) return;
 
   affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, FALSE);
 
-  /* remove structure *af from linked list */
   if (ch->affected == af) {
-    /* remove head of list */
     ch->affected = af->next;
   }
   else {
-    for (hjp = ch->affected; (hjp->next) && (hjp->next != af); hjp = hjp->next);
+    AFF *tmp_af;
 
-    if (hjp->next != af) {
-      log_f("FATAL : Could not locate affected_type in ch->affected. (handler.c, affect_remove)");
-      produce_core();
-    }
+    for (tmp_af = ch->affected; tmp_af->next && (tmp_af->next != af); tmp_af = tmp_af->next);
 
-    hjp->next = af->next; /* skip the af element */
+    tmp_af->next = af->next;
   }
 
   free(af);
@@ -459,29 +454,23 @@ void affect_remove(struct char_data *ch, struct affected_type_5 *af) {
   check_equipment(ch);
 }
 
-void affect_from_char(CHAR *ch, int type)
-{
+void affect_from_char(CHAR *ch, int type) {
   if (!ch) return;
 
-  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff)
-  {
+  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff) {
     tmp_aff = aff->next;
 
-    if (aff->type == type)
-    {
+    if (aff->type == type) {
       affect_remove(ch, aff);
     }
   }
 }
 
-bool affected_by_spell(CHAR *ch, int type)
-{
+bool affected_by_spell(CHAR *ch, int type) {
   if (!ch) return FALSE;
 
-  for (AFF *aff = ch->affected; aff; aff = aff->next)
-  {
-    if (aff->type == type)
-    {
+  for (AFF *aff = ch->affected; aff; aff = aff->next) {
+    if (aff->type == type) {
       return TRUE;
     }
   }
@@ -489,14 +478,11 @@ bool affected_by_spell(CHAR *ch, int type)
   return FALSE;
 }
 
-int duration_of_spell(CHAR *ch, int type)
-{
+int duration_of_spell(CHAR *ch, int type) {
   if (!ch) return 0;
 
-  for (AFF *aff = ch->affected; aff; aff = aff->next)
-  {
-    if (aff->type == type)
-    {
+  for (AFF *aff = ch->affected; aff; aff = aff->next) {
+    if (aff->type == type) {
       return aff->duration;
     }
   }
@@ -504,25 +490,20 @@ int duration_of_spell(CHAR *ch, int type)
   return 0;
 }
 
-void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod)
-{
+void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod) {
   if (!ch || !af) return;
 
   bool found = FALSE;
 
-  for (AFF *aff = ch->affected; aff && !found; aff = aff->next)
-  {
-    if (aff->type == af->type)
-    {
+  for (AFF *aff = ch->affected; aff && !found; aff = aff->next) {
+    if (aff->type == af->type) {
       INC_SCHAR(af->duration, aff->duration);
-      if (avg_dur)
-      {
+      if (avg_dur) {
         af->duration /= 2;
       }
 
       INC_SCHAR(af->modifier, aff->modifier);
-      if (avg_mod)
-      {
+      if (avg_mod) {
         af->modifier /= 2;
       }
 
@@ -533,18 +514,15 @@ void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod)
     }
   }
 
-  if (!found)
-  {
+  if (!found) {
     affect_to_char(ch, af);
   }
 }
 
-void remove_all_affects(CHAR *ch)
-{
+void remove_all_affects(CHAR *ch) {
   if (!ch) return;
 
-  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff)
-  {
+  for (AFF *aff = ch->affected, *tmp_aff = NULL; aff; aff = tmp_aff) {
     tmp_aff = aff->next;
 
     affect_from_char(ch, aff->type);
@@ -559,6 +537,21 @@ AFF * get_affect_from_char(CHAR *ch, int type) {
   }
 
   return NULL;
+}
+
+void affect_apply(CHAR *ch, int af_type, int af_dur, int af_mod, int af_loc, long af_bitv, long af_bitv2) {
+  if (!ch) return;
+
+  AFF af;
+
+  af.type = af_type;
+  af.duration = af_dur;
+  af.modifier = af_mod;
+  af.location = af_loc;
+  af.bitvector = af_bitv;
+  af.bitvector2 = af_bitv2;
+
+  affect_to_char(ch, &af);
 }
 
 /* move a player out of a room */
@@ -704,33 +697,32 @@ struct obj_data *obj_from_char(struct obj_data *object)
 }
 
 
+int apply_ac(struct char_data *ch, int eq_pos) {
+  if (!ch || (eq_pos < 0)) return 0;
 
-/* Return the effect of a piece of armor in position eq_pos */
-int apply_ac(struct char_data *ch, int eq_pos)
-{
-  assert(ch->equipment[eq_pos]);
+  struct obj_data *eq = EQ(ch, eq_pos);
 
-  if (!(GET_ITEM_TYPE(ch->equipment[eq_pos]) == ITEM_ARMOR))
-    return 0;
+  if (!eq || (OBJ_TYPE(eq) != ITEM_ARMOR)) return 0;
+
+  int ac = OBJ_VALUE0(eq);
+
+  int multi = 1;
 
   switch (eq_pos) {
-
     case WEAR_BODY:
-      return (3*ch->equipment[eq_pos]->obj_flags.value[0]);
+      multi = 3;
+      break;
     case WEAR_SHIELD:
-      return (2*ch->equipment[eq_pos]->obj_flags.value[0]);
-    case WEAR_HEAD:
-    case WEAR_LEGS:
-    case WEAR_FEET:
-    case WEAR_HANDS:
-    case WEAR_ARMS:
-    case WEAR_WRIST_L:
-    case WEAR_WRIST_R:
-    case WEAR_FINGER_L:
-    case WEAR_FINGER_R:
-      return (ch->equipment[eq_pos]->obj_flags.value[0]);
+      multi = 2;
+
+      /* Protect */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 2)) {
+        multi += 1;
+      }
+      break;
   }
-  return  (ch->equipment[eq_pos]->obj_flags.value[0]);
+
+  return (ac * multi);
 }
 
 void equip_char(struct char_data *ch, struct obj_data *obj, int pos)

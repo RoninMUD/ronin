@@ -73,6 +73,7 @@ int check_sc_song_access(CHAR *ch, int s) {
 
 int check_sc_access(CHAR *ch, int skill)
 {
+  if ((skill == SKILL_DISEMBOWEL) && (GET_CLASS(ch) == CLASS_WARRIOR)) return check_subclass(ch, SC_GLADIATOR, 2);
   if ((skill == SKILL_BLOCK) && (GET_CLASS(ch) == CLASS_NOMAD)) return check_subclass(ch, SC_RANGER, 3);
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
@@ -157,12 +158,21 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SKILL_AWARENESS:
       if (check_subclass(ch, SC_RANGER, 1)) return TRUE;
-      if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
+      if (check_subclass(ch, SC_WARLORD, 1)) return TRUE;
       break;
     case SKILL_PROTECT:
+      if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
       if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
-      if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
       if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
+      break;
+    case SKILL_FLANK:
+      if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
+      break;
+    case SKILL_HEADBUTT:
+      if (check_subclass(ch, SC_GLADIATOR, 4)) return TRUE;
+      break;
+    case SKILL_HOSTILE:
+      if (check_subclass(ch, SC_GLADIATOR, 5)) return TRUE;
       break;
     case SKILL_ZEAL:
       if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
@@ -171,7 +181,6 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
       break;
     case SKILL_DEFEND:
-      if (check_subclass(ch, SC_WARLORD, 4)) return TRUE;
       if (check_subclass(ch, SC_RANGER, 5)) return TRUE;
       break;
     case SKILL_FADE:
@@ -197,23 +206,8 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_TRIP:
       if (check_subclass(ch, SC_ROGUE, 4)) return TRUE;
       break;
-    case SKILL_SWITCH:
-      if (check_subclass(ch, SC_GLADIATOR, 2)) return TRUE;
-      break;
     case SKILL_SMITE:
       if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
-      break;
-    case SKILL_FLANK:
-      if (check_subclass(ch, SC_GLADIATOR, 3)) return TRUE;
-      break;
-    case SKILL_HOSTILE:
-      if (check_subclass(ch, SC_GLADIATOR, 4)) return TRUE;
-      break;
-    case SKILL_HEADBUTT:
-      if (check_subclass(ch, SC_GLADIATOR, 5)) return TRUE;
-      break;
-    case SKILL_CHARGE:
-      if (check_subclass(ch, SC_WARLORD, 5)) return TRUE;
       break;
     case SPELL_IRONSKIN:
       if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;

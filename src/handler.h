@@ -41,6 +41,7 @@ bool affected_by_spell( struct char_data *ch, int skill );
 int duration_of_spell( struct char_data *ch, int skill );
 void affect_join( struct char_data *ch, struct affected_type_5 *af, bool avg_dur, bool avg_mod );
 struct affected_type_5 * get_affect_from_char(struct char_data *ch, int type);
+void affect_apply(struct char_data *ch, int af_type, int af_dur, int af_mod, int af_loc, long af_bitv, long af_bitv2);
 
 /* utility */
 struct obj_data *create_money( int amount );

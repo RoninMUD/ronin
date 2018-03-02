@@ -12,7 +12,6 @@
 char *fread_string(FILE *f1);
 void stop_follower(struct char_data *ch);
 void do_flee(struct char_data *ch, char *argument, int cmd);
-void hit(struct char_data *ch, struct char_data *victim, int type);
 void die(struct char_data *ch);
 void appear(struct char_data *ch);
 void load_messages(void);
@@ -28,19 +27,26 @@ void gain_exp(struct char_data *ch, int gain);
 char *replace_string(char *str, char *weapon);
 void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type, int shadow);
 void process_death(struct char_data *ch, struct char_data *victim);
+
 int damage(struct char_data *ch, struct char_data *victim, int dmg, int attack_type, int damage_type);
+
+void perform_violence(void);
+
+int calc_hitroll(struct char_data*ch);
+int calc_damroll(struct char_data *ch);
+int calc_thaco(struct char_data *ch);
+int calc_ac(struct char_data *ch);
+int calc_position_damage(int position, int dam);
+int calc_hit_damage(struct char_data *ch, struct char_data *victim, struct obj_data *weapon, int mode);
+
+int stack_position(struct char_data *ch, int target_position);
+
+bool try_hit(struct char_data *ch, struct char_data *victim);
 void hit(struct char_data *ch, struct char_data *victim, int type);
 void dhit(struct char_data *ch, struct char_data *victim, int type);
 void thit(struct char_data *ch, struct char_data *victim, int type);
 void qhit(struct char_data *ch, struct char_data *victim, int type);
-void perform_violence(void);
-int calc_hitroll(struct char_data *ch);
-int calc_damroll(struct char_data *ch);
-int calc_position_damage(int position, int dam);
-int stack_position(struct char_data *ch, int target_position);
-bool try_hit(struct char_data *ch, struct char_data *victim);
-int compute_thaco(struct char_data *ch);
-int compute_ac(struct char_data *ch);
+
 bool mob_disarm(struct char_data *mob, struct char_data *victim, bool to_ground);
 
 extern struct char_data *combat_list;

@@ -320,7 +320,7 @@ $State: Exp $
 #define CMD_WHIRLWIND          303
 #define CMD_DIRTY_TRICKS       304 /* Used to be Retreat */
 #define CMD_BACKFIST           305
-/* 306 Used to be Pray */
+#define CMD_AWARENESS          306
 #define CMD_BLITZ              307
 #define CMD_FLANK              308
 #define CMD_TRIP               309
@@ -339,7 +339,7 @@ $State: Exp $
 #define CMD_HOSTILE            322
 #define CMD_ASSASSINATE        323
 #define CMD_BATTER             324
-#define CMD_SHADOWSTEP          325 /* Used to be Shadow-Walk */
+#define CMD_SHADOWSTEP         325 /* Used to be Shadow-Walk */
 #define CMD_CHARGE             326
 #define CMD_HEADBUTT           327
 #define CMD_MANTRA             328

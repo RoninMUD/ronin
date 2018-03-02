@@ -895,6 +895,7 @@ void assign_command_pointers ( void )
   COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 30);
 
   /* Subclass commands */
+  COMMANDO("awareness" ,CMD_AWARENESS ,POSITION_FIGHTING ,do_awareness,30);
   COMMANDO("meditate" ,CMD_MEDITATE  ,POSITION_RESTING   ,do_meditate,30);
   COMMANDO("protect"  ,CMD_PROTECT   ,POSITION_STANDING  ,do_protect,30);
   COMMANDO("subclass" ,CMD_SUBCLASS  ,POSITION_DEAD      ,do_subclass,LEVEL_SUP ); /* IMP adding/removing subclasses - Ranger Dec 98 */
@@ -909,7 +910,7 @@ void assign_command_pointers ( void )
   COMMANDO("vehemence",CMD_VEHEMENCE ,POSITION_FIGHTING, do_vehemence, 30);
   COMMANDO("zeal"     ,CMD_ZEAL      ,POSITION_FIGHTING  ,do_zeal,30);
   COMMANDO("blitz"    ,CMD_BLITZ     ,POSITION_STANDING  ,do_blitz,30);
-  COMMANDO("flank"    ,CMD_FLANK     ,POSITION_STANDING  ,do_flank,30);
+  COMMANDO("flank"    ,CMD_FLANK     ,POSITION_FIGHTING  ,do_flank,30);
   COMMANDO("lunge"    ,CMD_LUNGE     ,POSITION_STANDING  ,do_lunge,30);
   /*COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);*/
   COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 30); /* Used to be Cover */
