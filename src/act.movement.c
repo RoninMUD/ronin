@@ -268,13 +268,13 @@ Returns:
 
   if (carrying_weight >= can_carry_weight)
     encumb_modifier = 2;
-  else if (carrying_weight >= 3 * can_carry_weight / 2)
+  if (carrying_weight >= 3 * can_carry_weight / 2)
     encumb_modifier = 3;
-  else if (carrying_weight >= 2 * can_carry_weight)
+  if (carrying_weight >= 2 * can_carry_weight)
     encumb_modifier = 4;
-  else if (carrying_weight >= 5 * can_carry_weight / 2)
+  if (carrying_weight >= 5 * can_carry_weight / 2)
     encumb_modifier = 5;
-  else if (carrying_weight == 3 * can_carry_weight)
+  if (carrying_weight == 3 * can_carry_weight)
     encumb_modifier = 6;
 
   int need_movement = encumb_modifier * (movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type] +
