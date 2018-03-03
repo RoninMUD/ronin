@@ -303,7 +303,7 @@ Returns:
   }
 
   /* Check for Paralaysis and Hold Person. */
-  if (!IS_MORTAL(ch) &&
+  if (!IS_IMMORTAL(ch) &&
       !GET_MOUNT(ch) &&
       (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)) &&
       /* Combat Zen */
