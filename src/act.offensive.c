@@ -1073,7 +1073,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
       CHAR *blocker = GET_OPPONENT(ch);
 
       if (!IS_NPC(blocker) && !GET_RIDER(ch)) {
-        int block_check = number(1, 101);
+        int block_check = number(1, 100);
         int block_skill = GET_LEARNED(blocker, SKILL_BLOCK);
 
         /* Iron Fist */

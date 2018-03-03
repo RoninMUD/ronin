@@ -69,73 +69,70 @@ char *one_argument(char *arg, char *buf);
 #define ATTACK_TABLE        4
 
 void
-PirateAttack (CHAR *ch, CHAR *vict, int type) {
+PirateAttack(CHAR *ch, CHAR *vict, int type) {
   int sea;
   OBJ *obj;
 
-  sea = real_room (TO_THE_SEA);
+  sea = real_room(TO_THE_SEA);
 
   switch (type) {
 
-  case ATTACK_SHOOT:
-    obj = EQ(ch, HOLD);
-    act("$n shoots straight at you with $p.",FALSE,ch,obj,vict,TO_VICT);
-    act("$n shoots straight at $N with $p.",FALSE,ch,obj,vict,TO_NOTVICT);
-    act("You shoot straight at $N with $p.",FALSE,ch,obj,vict,TO_CHAR);
-    damage (ch, vict, number(100,200), TYPE_UNDEFINED,DAM_NO_BLOCK);
-    break;
+    case ATTACK_SHOOT:
+      obj = EQ(ch, HOLD);
+      act("$n shoots straight at you with $p.", FALSE, ch, obj, vict, TO_VICT);
+      act("$n shoots straight at $N with $p.", FALSE, ch, obj, vict, TO_NOTVICT);
+      act("You shoot straight at $N with $p.", FALSE, ch, obj, vict, TO_CHAR);
+      damage(ch, vict, number(100, 200), TYPE_UNDEFINED, DAM_NO_BLOCK);
+      break;
 
-  case ATTACK_PUNCH:
-  	if (IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(ch,vict,BT_INVUL))
-  	{
-	    act("$n punches you with a left hook to the stomach. Ouch!",
-		FALSE,ch,0,vict,TO_VICT);
-	    act("$n punches $N with a left hook to the stomach. Ouch!",
-		FALSE,ch,0,vict,TO_NOTVICT);
-	    act("You punch $N with a left hook to the stomach.",
-		FALSE,ch,0,vict,TO_CHAR);
-	    damage(ch, vict, 100, SKILL_PUNCH,DAM_SKILL);
-	}
-	else
-	{
-		act("$n attempts to punch you, but just looks foolish.", FALSE, ch, 0, vict, TO_VICT);
-		act("$n attempts to punch $N, but just looks foolish.", FALSE, ch, 0, vict, TO_NOTVICT);
-		act("You attempt to punch $N, but just look foolish instead.", FALSE, ch, 0, vict, TO_CHAR);
-	}
-    break;
+    case ATTACK_PUNCH:
+      if (IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(ch, vict, BT_INVUL)) {
+        act("$n punches you with a left hook to the stomach. Ouch!",
+          FALSE, ch, 0, vict, TO_VICT);
+        act("$n punches $N with a left hook to the stomach. Ouch!",
+          FALSE, ch, 0, vict, TO_NOTVICT);
+        act("You punch $N with a left hook to the stomach.",
+          FALSE, ch, 0, vict, TO_CHAR);
+        damage(ch, vict, 100, SKILL_PUNCH, DAM_SKILL);
+      }
+      else {
+        act("$n attempts to punch you, but just looks foolish.", FALSE, ch, 0, vict, TO_VICT);
+        act("$n attempts to punch $N, but just looks foolish.", FALSE, ch, 0, vict, TO_NOTVICT);
+        act("You attempt to punch $N, but just look foolish instead.", FALSE, ch, 0, vict, TO_CHAR);
+      }
+      break;
 
-  case ATTACK_WINDOW:
-    act("$n grabs $N and throws $M through the window, into the stormy sea.",
-	FALSE,ch,0,vict,TO_NOTVICT);
-    act("$n grabs you and throws you through the window, into the stormy sea.",
-	FALSE,ch,0,vict,TO_VICT);
-    act("You grab $N and throw $M through the window, into the stormy sea.",
-	FALSE,ch,0,vict,TO_CHAR);
-    if (GET_OPPONENT(vict))
-        {
-	  if (GET_OPPONENT(GET_OPPONENT(vict)) == vict)
-	    stop_fighting(GET_OPPONENT(vict));
-	  stop_fighting(vict);
-        }
-    char_from_room(vict);
-    char_to_room(vict, sea);
-    act("$n arrives flying through the ship window.",
-	FALSE,ch,0,0,TO_ROOM);
-    break;
+    case ATTACK_WINDOW:
+      act("$n grabs $N and throws $M through the window, into the stormy sea.",
+        FALSE, ch, 0, vict, TO_NOTVICT);
+      act("$n grabs you and throws you through the window, into the stormy sea.",
+        FALSE, ch, 0, vict, TO_VICT);
+      act("You grab $N and throw $M through the window, into the stormy sea.",
+        FALSE, ch, 0, vict, TO_CHAR);
+      if (GET_OPPONENT(vict)) {
+        if (GET_OPPONENT(GET_OPPONENT(vict)) == vict)
+          stop_fighting(GET_OPPONENT(vict));
+        stop_fighting(vict);
+      }
+      char_from_room(vict);
+      char_to_room(vict, sea);
+      act("$n arrives flying through the ship window.",
+        FALSE, vict, 0, 0, TO_ROOM);
+      break;
 
-  case ATTACK_TABLE:
-    act("$n places a powerful kick on the table, and it falls on top of $N.",
-	FALSE,ch,0,vict, TO_NOTVICT);
-    act("$n places a powerful kick on the table, and it falls on top of you.",
-	FALSE,ch,0,vict, TO_VICT);
-    act("You place a powerful kick on the table, and it falls on top of $N.",
-	FALSE,ch,0,vict, TO_CHAR);
-    damage(ch, vict, number(50,100), TYPE_UNDEFINED,DAM_NO_BLOCK);
-    if (GET_OPPONENT(GET_OPPONENT(vict)) == vict)
-      stop_fighting(GET_OPPONENT(vict));
-    stop_fighting(vict);
-    WAIT_STATE(vict, 2*PULSE_VIOLENCE);
-    break;
+    case ATTACK_TABLE:
+      act("$n places a powerful kick on the table, and it falls on top of $N.",
+        FALSE, ch, 0, vict, TO_NOTVICT);
+      act("$n places a powerful kick on the table, and it falls on top of you.",
+        FALSE, ch, 0, vict, TO_VICT);
+      act("You place a powerful kick on the table, and it falls on top of $N.",
+        FALSE, ch, 0, vict, TO_CHAR);
+      damage(ch, vict, number(50, 100), TYPE_UNDEFINED, DAM_NO_BLOCK);
+      if (GET_OPPONENT(GET_OPPONENT(vict)) == vict)
+        stop_fighting(GET_OPPONENT(vict));
+      stop_fighting(vict);
+      WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+      break;
   }
 }
 

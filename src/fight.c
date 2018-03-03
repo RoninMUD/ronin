@@ -4443,7 +4443,6 @@ const mob_attact_t mob_attack_table[] = {
     .multi_to_char = "You jump high in the air and land on everyone.",
     .multi_to_vict = "You are trampled by $n.",
 
-    .vict_pos = POSITION_STUNNED,
     .vict_wait_state = 2,
 
     .mob_attack_timer = 2
