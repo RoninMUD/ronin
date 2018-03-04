@@ -1073,18 +1073,22 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
       CHAR *blocker = GET_OPPONENT(ch);
 
       if (!IS_NPC(blocker) && !GET_RIDER(ch)) {
-        int block_check = number(1, 100);
+        int block_check = number(1, 111);
         int block_skill = GET_LEARNED(blocker, SKILL_BLOCK);
+        int auto_block_chance = 0;
+
+        block_skill += GET_DEX_APP(blocker);
 
         /* Iron Fist */
         if (IS_MORTAL(blocker) && check_subclass(blocker, SC_WARLORD, 3)) {
           block_skill += (GET_LEVEL(blocker) / 5);
+          auto_block_chance = 90;
         }
 
-        if (block_check < block_skill) {
+        if ((block_check <= block_skill) || (auto_block_chance && chance(auto_block_chance))) {
           act("You tried to flee but $N blocked your way!", FALSE, ch, 0, blocker, TO_CHAR);
           act("$n tried to flee but you blocked $s way!", FALSE, ch, 0, blocker, TO_VICT);
-          act("$N tried to flee but $n blocked $S way!", FALSE, ch, 0, blocker, TO_NOTVICT);
+          act("$n tried to flee but $N blocked $s way!", FALSE, ch, 0, blocker, TO_NOTVICT);
 
           return;
         }

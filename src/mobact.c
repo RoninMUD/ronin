@@ -6,18 +6,24 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 
 #include "structs.h"
-#include "constants.h"
-#include "spells.h"
+#include "utility.h"
 #include "utils.h"
 #include "db.h"
+#include "constants.h"
 #include "comm.h"
-#include "utility.h"
 #include "handler.h"
-#include "cmd.h"
+
 #include "act.h"
+#include "cmd.h"
+#include "fight.h"
+#include "spells.h"
 #include "subclass.h"
+
+extern CHAR *combat_list;
+extern CHAR *combat_next_dude;
 
 void hit(CHAR *ch, CHAR *victim, int type);
 void do_kill(CHAR *ch, char *argument, int cmd);
@@ -253,5 +259,506 @@ void mobile_activity(CHAR *mob) {
     }
 
     do_kill(mob, GET_NAME(aggro_target), CMD_KILL);
+  }
+}
+
+bool mob_disarm(CHAR *mob, CHAR *victim, bool to_ground) {
+  const int WEAPON_WYVERN_SPUR = 11523;
+
+  if (!mob || !victim || (mob == victim) || !IS_NPC(mob) || !IS_MORTAL(victim)) return FALSE;
+
+  OBJ *weapon = EQ(victim, WIELD);
+
+  if (!weapon ||
+      (V_OBJ(weapon) == WEAPON_WYVERN_SPUR) ||
+      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL))) return FALSE;
+
+  /* Tactician */
+  if (IS_MORTAL(victim) &&
+      check_subclass(victim, SC_GLADIATOR, 3) &&
+      SAME_ROOM(mob, victim) &&
+      (GET_POS(victim) >= POSITION_FIGHTING)) {
+    if (chance(20 + GET_DEX_APP(victim))) {
+      act("$N avoids $n's disarm and attacks back!", FALSE, mob, 0, victim, TO_NOTVICT);
+      act("$N avoids your disarm and attacks back!", FALSE, mob, 0, victim, TO_CHAR);
+      act("You avoid $n's disarm and attack back!", FALSE, mob, 0, victim, TO_VICT);
+
+      hit(victim, mob, TYPE_UNDEFINED);
+    }
+    else {
+      act("$N avoids $n's disarm attempt!", FALSE, mob, 0, victim, TO_NOTVICT);
+      act("$N avoids your disarm attempt!", FALSE, mob, 0, victim, TO_CHAR);
+      act("You avoid $n's disarm attempt!", FALSE, mob, 0, victim, TO_VICT);
+    }
+
+    return FALSE;
+  }
+
+  unequip_char(victim, WIELD);
+
+  if (to_ground) {
+    char buf[MSL];
+
+    snprintf(buf, sizeof(buf), "WIZINFO: %s disarms %s's %s (Room %d)",
+      GET_NAME(mob), GET_NAME(victim), OBJ_NAME(weapon), world[CHAR_REAL_ROOM(victim)].number);
+    log_s(buf);
+
+    weapon->log = 1;
+
+    obj_to_room(weapon, CHAR_REAL_ROOM(victim));
+  }
+  else {
+    obj_to_char(weapon, victim);
+  }
+
+  save_char(victim, NOWHERE);
+
+  return TRUE;
+}
+
+typedef struct mob_attact_t {
+  char *attack_name;
+
+  char *failure_to_other;
+  char *failure_to_char;
+  char *failure_to_vict;
+
+  char *success_to_other;
+  char *success_to_char;
+  char *success_to_vict;
+
+  char *multi_to_other;
+  char *multi_to_char;
+  char *multi_to_vict;
+
+  int vict_pos;
+  int vict_wait_state;
+  
+  int mob_attack_timer;
+} mob_attact_t;
+
+const mob_attact_t mob_attack_table[] = {
+  {0},
+  {0},
+  /* ATT_KICK */
+  {
+    .attack_name = "kick",
+
+    .failure_to_other = "$n kicks $N in the solar plexus, rendering $M breathless.",
+    .failure_to_char = "Your beautiful full-circle-kick swings way over $N's head.",
+    .failure_to_vict = "$n kicks you in the solar plexus, rendering you breathless.",
+
+    .success_to_other = "$n kicks $N in the solar plexus, rendering $M breathless.",
+    .success_to_char = "You kick $N in the solar plexus, rendering $M breathless.",
+    .success_to_vict = "$n kicks you in the solar plexus, rendering you breathless.",
+
+    .multi_to_other = "$n's spin-kick has generated a big whirl.",
+    .multi_to_char = "Your spin-kick has generated a big whirl.",
+    .multi_to_vict = "You are kicked by $n.",
+
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 3
+  },
+  /* ATT_PUMMEL */
+  {
+    .attack_name = "pummel",
+
+    .failure_to_other = "$n tried to pummel $N, but missed.",
+    .failure_to_char = "You try to pummel $N, but miss and nearly hurt yourself.",
+    .failure_to_vict = "$n tried to pummel you, but missed.",
+
+    .success_to_other = "$n pummels $N, and $N is stunned now!",
+    .success_to_char = "You pummel $N, and $N is stunned now!",
+    .success_to_vict = "$n pummels you, and you are stunned now!",
+
+    .multi_to_other = "$n spins wildly about the room, pummeling like crazy.",
+    .multi_to_char = "You spin wildly about the room, pummeling like crazy.",
+    .multi_to_vict = "You are pummeled by $n.",
+
+    .vict_pos = POSITION_STUNNED,
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 2
+  },
+  /* ATT_PUNCH */
+  {
+    .attack_name = "punch",
+
+    .failure_to_other = "$n tries to punch $N with a mighty swing, but misses.",
+    .failure_to_char = "You try to punch $N with a mighty swing, but miss.",
+    .failure_to_vict = "$n tries to punch you with a mighty swing, but misses.",
+
+    .success_to_other = "$n punches $N with a blow that sends $M reeling.",
+    .success_to_char = "You punch $N with a blow that sends $M reeling.",
+    .success_to_vict = "$n punches you with a blow that sends you reeling.",
+
+    .multi_to_other = "$n spins wildly about the room, punching like crazy.",
+    .multi_to_char = "You spin wildly about the room, punching like crazy.",
+    .multi_to_vict = "You are punched by $n.",
+
+    .vict_pos = POSITION_SITTING,
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 2
+  },
+  /* ATT_BITE */
+  {
+    .attack_name = "bite",
+
+    .failure_to_other = "$n bites at $N, missing $M by a breath.",
+    .failure_to_char = "You bite at $N, missing $M by a breath.",
+    .failure_to_vict = "$n bites at you, missing you by a breath.",
+
+    .success_to_other = "$n takes a bite out of $N.",
+    .success_to_char = "You take a bite out of $N.",
+    .success_to_vict = "$n takes a bite out of you.",
+
+    .multi_to_other = "$n snaps $s jaws wildly about, biting all around $m.",
+    .multi_to_char = "You snap your jaws wildly about, biting all around you.",
+    .multi_to_vict = "You are bitten by $n.",
+
+    .vict_wait_state = 1,
+
+    .mob_attack_timer = 2
+  },
+  /* ATT_CLAW */
+  {
+    .attack_name = "claw",
+
+    .failure_to_other = "$n tries to shred $N to pieces, but claws the air instead.",
+    .failure_to_char = "You try to shred $N to pieces, but you claw the air instead.",
+    .failure_to_vict = "$n tries to shred you to pieces, but claws the air instead.",
+
+    .success_to_other = "$n rakes $N with $s claws.",
+    .success_to_char = "You rake $N with your claws.",
+    .success_to_vict = "$N rakes you with $S claws.",
+
+    .multi_to_other = "$n lashes wildly about, raking everyone with $s claws.",
+    .multi_to_char = "You lash wildly about, raking everyone with your claws.",
+    .multi_to_vict = "You are clawed by $N.",
+
+    .vict_wait_state = 3,
+
+    .mob_attack_timer = 3
+  },
+  /* ATT_BASH */
+  {
+    .attack_name = "bash",
+
+    .failure_to_other = "$N nimbly avoids $n's bash.",
+    .failure_to_char = "$N nimbly avoids your bash.",
+    .failure_to_vict = "You nimbly avoid $n's bash.",
+
+    .success_to_other = "$n's powerful bash sends $N sprawling.",
+    .success_to_char = "Your powerful bash sends $N sprawling.",
+    .success_to_vict = "$n's powerful bash sends you sprawling.",
+
+    .multi_to_other = "$n spins wildly about the room, bashing like crazy.",
+    .multi_to_char = "You spin wildly about the room, bashing like crazy.",
+    .multi_to_vict = "You are bashed by $n.",
+
+    .vict_pos = POSITION_SITTING,
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 2
+  },
+  /* ATT_TAILSLAM */
+  {
+    .attack_name = "tailslam",
+
+    .failure_to_other = "$n tries to slam $N with $s tail, but slams the ground with a thump!",
+    .failure_to_char = "You try to slam $N with your tail, but slam the ground with a thump!",
+    .failure_to_vict = "$n tries to slam you with $s tail, but slams the ground with a thump!",
+
+    .success_to_other = "$n slams $N with $s tail.",
+    .success_to_char = "You slam $N with your tail.",
+    .success_to_vict = "$n slams you with $s tail.",
+
+    .multi_to_other = "$n's spins $s tail around.",
+    .multi_to_char = "You spin your tail around.",
+    .multi_to_vict = "You are tailslammed by $n.",
+
+    .vict_pos = POSITION_STUNNED,
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 3
+  },
+  /* ATT_DISARM */
+  {
+    .attack_name = "disarm",
+
+    .failure_to_other = "$n tried to kick off $N's weapon, but failed!",
+    .failure_to_char = "You tried to kick off $N's weapon, but failed!",
+    .failure_to_vict = "$n tried to kick off your weapon, but failed!",
+
+    .success_to_other = "$n kicks off $N's weapon.",
+    .success_to_char = "You kick off $N's weapon.",
+    .success_to_vict = "$n kicks off your weapon.",
+
+    .multi_to_other = "$n spins wildly about the room.",
+    .multi_to_char = "You spin wildly about the room.",
+    .multi_to_vict = "$n kicks off your weapon.",
+
+    .mob_attack_timer = 2
+  },
+  /* ATT_TRAMPLE */
+  {
+    .attack_name = "trample",
+
+    .failure_to_other = "$n stomps around $N, failing to trample $M into the ground.",
+    .failure_to_char = "You stomp around $N, failing to trample $M into the ground.",
+    .failure_to_vict = "$n stomps around you, failing to trample you into the ground.",
+
+    .success_to_other = "$n jumps into the air and lands on $N.",
+    .success_to_char = "You jump into the air and land on $N.",
+    .success_to_vict = "$n jumps into the air and lands on you.",
+
+    .multi_to_other = "$n jumps high in the air and lands on everyone.",
+    .multi_to_char = "You jump high in the air and land on everyone.",
+    .multi_to_vict = "You are trampled by $n.",
+
+    .vict_wait_state = 2,
+
+    .mob_attack_timer = 2
+  },
+  {0}
+};
+
+CHAR * mob_attack_get_victim(CHAR *mob, int attack_type, int target_type) {
+  CHAR *victim = NULL;
+
+  switch (target_type) {
+    case TAR_BUFFER:
+      victim = GET_OPPONENT(mob);
+      break;
+    case TAR_RAN_GROUP:
+      victim = get_random_victim_fighting(mob);
+      break;
+    case TAR_RAN_ROOM:
+      victim = get_random_victim(mob);
+      break;
+    case TAR_GROUP:
+      if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
+        victim = get_random_victim_fighting(mob);
+      }
+      break;
+    case TAR_ROOM:
+      if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
+        victim = get_random_victim(mob);
+      }
+      break;
+    case TAR_SELF:
+      victim = mob;
+      break;
+    case TAR_LEADER:
+      victim = GET_OPPONENT(mob);
+
+      if (GET_MASTER(GET_OPPONENT(mob))) {
+        victim = GET_MASTER(GET_OPPONENT(mob));
+      }
+
+      if (!SAME_ROOM(mob, victim)) {
+        victim = get_random_victim_fighting(mob);
+      }
+      break;
+  }
+
+  return victim;
+}
+
+void mob_attack_spell(CHAR *mob, CHAR *victim, int spell, bool use_mana) {
+  if (!mob || !IS_NPC(mob) || !victim || (spell <= 0) || (spell >= MAX_SPL_LIST)) return;
+
+  char buf[MIL];
+
+  snprintf(buf, sizeof(buf), "'%s' %s", spells[spell - 1], GET_NAME(victim));
+
+  do_mob_cast(mob, buf, use_mana);
+}
+
+int mob_attack_calc_damage(CHAR *mob, CHAR *victim, int attack) {
+  if (!mob) return 0;
+
+  int dam = 0;
+
+  switch (attack) {
+    case ATT_KICK:
+    case ATT_BITE:
+    case ATT_CLAW:
+      dam = GET_LEVEL(mob);
+      break;
+    case ATT_PUMMEL:
+      dam = 10;
+      break;
+    case ATT_BASH:
+      dam = number(1, GET_LEVEL(mob));
+      break;
+    case ATT_PUNCH:
+    case ATT_TAILSLAM:
+    case ATT_TRAMPLE:
+      dam = GET_LEVEL(mob) * 2;
+      break;
+  }
+
+  return dam;
+}
+
+void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool multi_target) {
+  if (!mob || !IS_NPC(mob) || !victim || !IS_MORTAL(victim) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
+
+  /* Tactician */
+  if (IS_MORTAL(victim) &&
+      check_subclass(victim, SC_GLADIATOR, 3) &&
+      SAME_ROOM(mob, victim) &&
+      (GET_POS(victim) >= POSITION_FIGHTING) &&
+      chance(70 + GET_DEX_APP(victim))) {
+    char buf[MIL];
+
+    snprintf(buf, sizeof(buf), "$N avoids $n's %s and attacks back!", mob_attack_table[attack_type].attack_name);
+    act(buf, FALSE, mob, 0, victim, TO_NOTVICT);
+    snprintf(buf, sizeof(buf), "$N avoids your %s and attacks back!", mob_attack_table[attack_type].attack_name);
+    act(buf, FALSE, mob, 0, victim, TO_CHAR);
+    snprintf(buf, sizeof(buf), "You avoid $n's %s and attack back!", mob_attack_table[attack_type].attack_name);
+    act(buf, FALSE, mob, 0, victim, TO_VICT);
+
+    hit(victim, mob, TYPE_UNDEFINED);
+
+    return;
+  }
+
+  if (attack_type == ATT_DISARM) {
+    if (mob_disarm(mob, victim, FALSE)) {
+      act(mob_attack_table[attack_type].success_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
+      act(mob_attack_table[attack_type].success_to_char, FALSE, mob, 0, victim, TO_CHAR);
+      act(mob_attack_table[attack_type].success_to_vict, FALSE, mob, 0, victim, TO_VICT);
+    }
+
+    return;
+  }
+
+  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL)) {
+    if (!multi_target) {
+      act(mob_attack_table[attack_type].failure_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
+      act(mob_attack_table[attack_type].failure_to_char, FALSE, mob, 0, victim, TO_CHAR);
+    }
+
+    act(mob_attack_table[attack_type].failure_to_vict, FALSE, mob, 0, victim, TO_VICT);
+
+    damage(mob, victim, 0, TYPE_UNDEFINED, DAM_PHYSICAL);
+
+    return;
+  }
+
+  if (!multi_target) {
+    act(mob_attack_table[attack_type].success_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
+    act(mob_attack_table[attack_type].success_to_char, FALSE, mob, 0, victim, TO_CHAR);
+    act(mob_attack_table[attack_type].success_to_vict, FALSE, mob, 0, victim, TO_VICT);
+  }
+  else {
+    act(mob_attack_table[attack_type].multi_to_vict, FALSE, mob, 0, victim, TO_VICT);
+  }
+
+  damage(mob, victim, mob_attack_calc_damage(mob, victim, attack_type), TYPE_UNDEFINED, DAM_PHYSICAL);
+
+  int vict_pos = mob_attack_table[attack_type].vict_pos;
+
+  if (vict_pos) {
+    GET_POS(victim) = vict_pos;
+  }
+
+  int vict_wait_state = mob_attack_table[attack_type].vict_wait_state;
+
+  /* Tactician */
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_GLADIATOR, 3)) {
+    vict_wait_state = MAX(0, vict_wait_state - 1);
+  }
+
+  WAIT_STATE(victim, PULSE_VIOLENCE * vict_wait_state);
+}
+
+void mob_attack_skill_single_target(CHAR *mob, CHAR *victim, int attack_type) {
+  if (!mob || !IS_NPC(mob) || !victim || !IS_MORTAL(victim) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
+
+  mob_attack_skill_action(mob, victim, attack_type, FALSE);
+
+  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
+}
+
+void mob_attack_skill_multi_target(CHAR *mob, int attack_type, int target_type) {
+  if (!mob || !IS_NPC(mob) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
+
+  act(mob_attack_table[attack_type].multi_to_other, FALSE, mob, 0, 0, TO_ROOM);
+  act(mob_attack_table[attack_type].multi_to_char, FALSE, mob, 0, 0, TO_CHAR);
+
+  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(mob)].people, *next_victim = NULL; temp_victim; temp_victim = next_victim) {
+    next_victim = temp_victim->next_in_room;
+
+    if (!temp_victim || (temp_victim == mob) || !IS_MORTAL(temp_victim) || ((target_type == TAR_GROUP) && (GET_OPPONENT(temp_victim) != mob))) continue;
+
+    mob_attack_skill_action(mob, temp_victim, attack_type, TRUE);
+  }
+
+  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
+}
+
+void mob_attack(CHAR *mob) {
+  if (!mob || !IS_NPC(mob) || !MOB_NUM_ATTACKS(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob)) || (GET_POS(mob) < POSITION_FIGHTING)) return;
+
+  if (MOB_ATTACK_TIMER(mob)) {
+    MOB_ATTACK_TIMER(mob)--;
+    return;
+  }
+
+  for (int num = 0; (num < MOB_NUM_ATTACKS(mob)) && !MOB_ATTACK_TIMER(mob); num++) {
+    if (!chance(MOB_ATTACK_CHANCE(mob, num))) continue;
+
+    int attack_type = MOB_ATTACK_TYPE(mob, num);
+    int target_type = MOB_ATTACK_TARGET(mob, num);
+
+    if ((attack_type <= ATT_UNDEFINED) || (attack_type >= ATT_MAX) || (target_type <= TAR_UNDEFINED) || (target_type >= TAR_MAX)) continue;
+
+    CHAR *victim = mob_attack_get_victim(mob, attack_type, target_type);
+
+    switch (attack_type) {
+      /* "Spells" */
+      case ATT_SPELL_CAST:
+      case ATT_SPELL_SKILL:
+        if (victim) {
+          mob_attack_spell(mob, victim, MOB_ATTACK_SPELL(mob, num), (ATT_SPELL_CAST ? 1 : 0));
+        }
+        break;
+      /* "Skills" */
+      case ATT_KICK:
+      case ATT_PUMMEL:
+      case ATT_PUNCH:
+      case ATT_BITE:
+      case ATT_CLAW:
+      case ATT_BASH:
+      case ATT_TAILSLAM:
+      case ATT_DISARM:
+      case ATT_TRAMPLE:
+        if (victim) {
+          mob_attack_skill_single_target(mob, victim, attack_type);
+        }
+        else if ((target_type == TAR_GROUP) || (target_type == TAR_ROOM)) {
+          mob_attack_skill_multi_target(mob, attack_type, target_type);
+        }
+        break;
+    }
+  }
+}
+
+void perform_mob_attack(void) {
+  for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
+    combat_next_dude = ch->next_fighting;
+
+    CHAR *victim = GET_OPPONENT(ch);
+
+    assert(victim);
+
+    if (IS_NPC(ch) && AWAKE(ch) && SAME_ROOM(ch, victim)) {
+      mob_attack(ch);
+    }
   }
 }

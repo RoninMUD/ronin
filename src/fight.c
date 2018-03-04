@@ -70,17 +70,16 @@ struct attack_hit_type attack_hit_text[] =
 /* The Fight related routines */
 
 
-void appear(CHAR *ch)
-{
+void appear(CHAR *ch) {
   act("$n slowly fades into existence.", FALSE, ch, 0, 0, TO_ROOM);
 
-  if (affected_by_spell(ch, SPELL_INVISIBLE))
-  {
+  if (affected_by_spell(ch, SPELL_INVISIBLE)) {
     affect_from_char(ch, SPELL_INVISIBLE);
   }
 
   REMOVE_BIT(ch->specials.affected_by, AFF_INVISIBLE);
 }
+
 
 void load_messages(void)
 {
@@ -263,7 +262,7 @@ void stop_fighting(CHAR *ch) {
   ch->next_fighting = 0;
   ch->specials.fighting = 0;
 
-  if (ch->specials.riding && (CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->specials.riding))) {
+  if (GET_MOUNT(ch) && SAME_ROOM(ch, GET_MOUNT(ch))) {
     GET_POS(ch) = POSITION_RIDING;
   }
   else {
@@ -271,12 +270,13 @@ void stop_fighting(CHAR *ch) {
   }
 
   /* make sure player doesn't automatically fall in a must-fly area */
-  if (IS_NPC(ch) && IS_SET(ch->specials.act, ACT_FLY)) {
+  if (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY)) {
     GET_POS(ch) = POSITION_FLYING;
   }
 
   update_pos(ch);
 }
+
 
 void death_list(CHAR *ch);
 void make_corpse(CHAR *ch)
@@ -372,36 +372,41 @@ void make_corpse(CHAR *ch)
 
 /* New check for Chaotic items for deaths in Chaotic Rooms
    Ranger - Jan 97 */
+void check_chaotic(OBJ *obj, OBJ *corpse) {
+  int rnum, pos;
+  struct obj_data *tmp, *next_obj;
 
-void check_chaotic(OBJ *obj ,OBJ *corpse) {
-  int rnum,pos;
-  struct obj_data *tmp,*next_obj;
-  if (!obj) return;
+  if (!obj || !corpse) return;
 
   rnum = obj->item_number;
-  if( (rnum>0) && IS_OBJ_STAT(obj, ITEM_CHAOTIC) ) {
-    if(obj->in_obj) {
+
+  if ((rnum > 0) && IS_OBJ_STAT(obj, ITEM_CHAOTIC)) {
+    if (obj->in_obj) {
       obj_from_obj(obj);
-      obj_to_obj(obj,corpse);
+      obj_to_obj(obj, corpse);
     }
-    if(obj->carried_by) {
+
+    if (obj->carried_by) {
       obj_from_char(obj);
-      obj_to_obj(obj,corpse);
+      obj_to_obj(obj, corpse);
     }
-    if(obj->equipped_by) {
-     for(pos=0; pos<MAX_WEAR; pos++) {
-      if(obj==EQ(obj->equipped_by,pos)) {
-        obj_to_obj(unequip_char(obj->equipped_by, pos), corpse);
-        break;
+
+    if (obj->equipped_by) {
+      for (pos = 0; pos < MAX_WEAR; pos++) {
+        if (obj == EQ(obj->equipped_by, pos)) {
+          obj_to_obj(unequip_char(obj->equipped_by, pos), corpse);
+          break;
+        }
       }
-     }
     }
   }
-  for (tmp = obj->contains;tmp;tmp=next_obj) {
-    next_obj=tmp->next_content;
-    check_chaotic(tmp,corpse);
+
+  for (tmp = obj->contains; tmp; tmp = next_obj) {
+    next_obj = tmp->next_content;
+    check_chaotic(tmp, corpse);
   }
 }
+
 
 void make_chaos_corpse(CHAR *ch)
 {
@@ -457,38 +462,36 @@ void make_chaos_corpse(CHAR *ch)
   remove_all_affects(ch);
 }
 
+
 /* When ch kills victim */
+void change_alignment(CHAR *ch, CHAR *victim) {
+  if (!ch || !victim) return;
+  if ((CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) return;
 
-void change_alignment(CHAR *ch, CHAR *victim)
-{
-  int align;
+  int align = -(GET_ALIGNMENT(victim) / 10);
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) return;
-  align = (-1*GET_ALIGNMENT(victim)/10);
-  GET_ALIGNMENT(ch) += align/2;
+  GET_ALIGNMENT(ch) += align / 2;
   GET_ALIGNMENT(ch) = MAX(GET_ALIGNMENT(ch), -1000);
   GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch), 1000);
 
 }
 
-void death_cry(CHAR *ch)
-{
-  int door = 0;
 
-  /* Ranger - June 96 */
-  if (CHAR_REAL_ROOM(ch) == NOWHERE) return;
+void death_cry(CHAR *ch) {
+  if (!ch) return;
+  if ((CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
 
   act("Your blood freezes as you hear $n's death cry.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (door = 0; door <= 5; door++)
-  {
-    if (CAN_GO(ch, door))
-    {
+  for (int door = NORTH; door <= DOWN; door++) {
+    if (CAN_GO(ch, door)) {
       send_to_room("Your blood freezes as you hear someone's death cry.\n\r",
         world[CHAR_REAL_ROOM(ch)].dir_option[door]->to_room_r);
     }
   }
 }
+
 
 /*
 ** deathlist procs  - For listing a players stuff at death
@@ -633,41 +636,39 @@ void death_list(CHAR *ch)
   fclose(fl);
 }
 
-void raw_kill(CHAR *ch)
-{
-  if (ch->specials.fighting)
-  {
+
+void raw_kill(CHAR *ch) {
+  if (ch->specials.fighting) {
     stop_fighting(ch);
   }
 
   death_cry(ch);
+
   make_corpse(ch);
 
-  if (ch->quest_status == QUEST_RUNNING || ch->quest_status == QUEST_COMPLETED)
-  {
+  if (ch->questobj) {
+    ch->questobj->owned_by = 0;
+  }
+
+  if (ch->questmob) {
+    ch->questmob->questowner = 0;
+  }
+
+  if ((ch->quest_status == QUEST_RUNNING) || (ch->quest_status == QUEST_COMPLETED)) {
     ch->ver3.time_to_quest = 30;
   }
 
   ch->questgiver = 0;
-
-  if (ch->questobj)
-  {
-    ch->questobj->owned_by = 0;
-  }
   ch->questobj = 0;
-
-  if (ch->questmob)
-  {
-    ch->questmob->questowner = 0;
-  }
   ch->questmob = 0;
-
-  ch->quest_status = QUEST_NONE;
   ch->quest_level = 0;
+  ch->quest_status = QUEST_NONE;
 
   save_char(ch, NOWHERE);
+
   extract_char(ch);
 }
+
 
 CHAR *get_mount(CHAR *ch)
 {
@@ -1054,19 +1055,16 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
   }
 }
 
-char *replace_string(char *str, char *weapon)
-{
-  static char buf[256];
+
+char *replace_string(char *str, char *weapon) {
+  static char buf[MIL];
   char *cp;
 
   cp = buf;
 
-  while (*str)
-  {
-    if (*str == '#')
-    {
-      switch(*(++str))
-      {
+  while (*str) {
+    if (*str == '#') {
+      switch (*(++str)) {
         case 'W':
           while (*weapon) *(cp++) = *(weapon++);
           break;
@@ -1076,8 +1074,7 @@ char *replace_string(char *str, char *weapon)
           break;
       }
     }
-    else
-    {
+    else {
       *(cp++) = *str;
     }
 
@@ -1310,7 +1307,6 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
       "Your shadow's cataclysmic hit pulverizes $N's flesh into a fine paste.",
       "$n's shadow's cataclysmic hit pulverizes your flesh into a fine paste."
     }
-
   };
 
   if      (dam < 1)    index = 0;
@@ -1576,33 +1572,13 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   original_damage = dmg;
 
-  if (!ch || !victim) {
-    dmg = 0;
-
-    return dmg;
-  }
-
-  /* Can't damage the dead. */
-  if (!IS_ALIVE(victim)) {
-    dmg = 0;
-
-    return dmg;
-  }
-
-  /* Avoid doing damage to players not in the same room. */
-  if (!SAME_ROOM(victim, ch)) {
-    dmg = 0;
-
-    return dmg;
-  }
+  if (!ch || !victim || !IS_ALIVE(victim) || !SAME_ROOM(victim, ch)) return 0;
 
   /* No damage to victims in safe rooms. */
   if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
     send_to_char("Behave yourself here please!\n\r", ch);
 
-    dmg = 0;
-
-    return dmg;
+    return 0;
   }
 
   /* No damage to immortals. */
@@ -1627,6 +1603,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       chance(90)) {
     act("$N takes the damage meant for you!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_CHAR);
     act("You take the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_VICT);
+    act("$N takes the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_NOTVICT);
 
     victim = GET_PROTECTOR(victim);
   }
@@ -1638,10 +1615,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     WAIT_STATE(victim, PULSE_VIOLENCE * 2);
   }
 
-  /* No damage dealt by a player if they are sleeping, resting or sitting; except when ch == victim. */
-  if (victim != ch &&
+  /* No damage dealt by a player if they are sleeping, resting or sitting; except when ch == victim, or it's a mob. */
+  if ((victim != ch) &&
       !IS_NPC(ch) &&
-      (GET_POS(ch) == POSITION_SLEEPING || GET_POS(ch) == POSITION_RESTING || GET_POS(ch) == POSITION_SITTING)) {
+      ((GET_POS(ch) == POSITION_SLEEPING) || (GET_POS(ch) == POSITION_RESTING) || (GET_POS(ch) == POSITION_SITTING))) {
     dmg = 0;
   }
 
@@ -1649,44 +1626,44 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (IS_NPC(victim)) {
     /* specials.immune */
     if (GET_IMMUNE(victim) &&
-        ((attack_type == TYPE_HIT && IS_IMMUNE(victim, IMMUNE_HIT)) ||
-        (attack_type == TYPE_BLUDGEON && IS_IMMUNE(victim, IMMUNE_BLUDGEON)) ||
-        (attack_type == TYPE_PIERCE && IS_IMMUNE(victim, IMMUNE_PIERCE)) ||
-        (attack_type == TYPE_SLASH && IS_IMMUNE(victim, IMMUNE_SLASH)) ||
-        (attack_type == TYPE_WHIP && IS_IMMUNE(victim, IMMUNE_WHIP)) ||
-        (attack_type == TYPE_CLAW && IS_IMMUNE(victim, IMMUNE_CLAW)) ||
-        (attack_type == TYPE_BITE && IS_IMMUNE(victim, IMMUNE_BITE)) ||
-        (attack_type == TYPE_STING && IS_IMMUNE(victim, IMMUNE_STING)) ||
-        (attack_type == TYPE_CRUSH && IS_IMMUNE(victim, IMMUNE_CRUSH)) ||
-        (attack_type == TYPE_HACK && IS_IMMUNE(victim, IMMUNE_HACK)) ||
-        (attack_type == TYPE_CHOP && IS_IMMUNE(victim, IMMUNE_CHOP)) ||
-        (attack_type == TYPE_SLICE && IS_IMMUNE(victim, IMMUNE_SLICE)) ||
-        (damage_type == DAM_FIRE && IS_IMMUNE(victim, IMMUNE_FIRE)) ||
-        (damage_type == DAM_ELECTRIC && IS_IMMUNE(victim, IMMUNE_ELECTRIC)) ||
-        (damage_type == DAM_POISON && IS_IMMUNE(victim, IMMUNE_POISON)))) {
+        (((attack_type == TYPE_HIT) && IS_IMMUNE(victim, IMMUNE_HIT)) ||
+         ((attack_type == TYPE_BLUDGEON) && IS_IMMUNE(victim, IMMUNE_BLUDGEON)) ||
+         ((attack_type == TYPE_PIERCE) && IS_IMMUNE(victim, IMMUNE_PIERCE)) ||
+         ((attack_type == TYPE_SLASH) && IS_IMMUNE(victim, IMMUNE_SLASH)) ||
+         ((attack_type == TYPE_WHIP) && IS_IMMUNE(victim, IMMUNE_WHIP)) ||
+         ((attack_type == TYPE_CLAW) && IS_IMMUNE(victim, IMMUNE_CLAW)) ||
+         ((attack_type == TYPE_BITE) && IS_IMMUNE(victim, IMMUNE_BITE)) ||
+         ((attack_type == TYPE_STING) && IS_IMMUNE(victim, IMMUNE_STING)) ||
+         ((attack_type == TYPE_CRUSH) && IS_IMMUNE(victim, IMMUNE_CRUSH)) ||
+         ((attack_type == TYPE_HACK) && IS_IMMUNE(victim, IMMUNE_HACK)) ||
+         ((attack_type == TYPE_CHOP) && IS_IMMUNE(victim, IMMUNE_CHOP)) ||
+         ((attack_type == TYPE_SLICE) && IS_IMMUNE(victim, IMMUNE_SLICE)) ||
+         ((damage_type == DAM_FIRE) && IS_IMMUNE(victim, IMMUNE_FIRE)) ||
+         ((damage_type == DAM_ELECTRIC) && IS_IMMUNE(victim, IMMUNE_ELECTRIC)) ||
+         ((damage_type == DAM_POISON) && IS_IMMUNE(victim, IMMUNE_POISON)))) {
       dmg = 0;
     }
 
     /* specials.immune2 */
     if (GET_IMMUNE2(victim) &&
-        ((damage_type == DAM_SOUND && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
-        (damage_type == DAM_ACID && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
-        (damage_type == DAM_CHEMICAL && IS_IMMUNE2(victim, IMMUNE_CHEMICAL)) ||
-        (damage_type == DAM_ACID && IS_IMMUNE(victim, IMMUNE_ACID)))) {
+        (((damage_type == DAM_SOUND) && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
+         ((damage_type == DAM_ACID) && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
+         ((damage_type == DAM_CHEMICAL) && IS_IMMUNE2(victim, IMMUNE_CHEMICAL)) ||
+         ((damage_type == DAM_ACID) && IS_IMMUNE(victim, IMMUNE_ACID)))) {
       dmg = 0;
     }
 
     /* specials.resist */
     if (GET_RESIST(victim) &&
-        ((damage_type == DAM_FIRE && IS_RESISTANT(victim, RESIST_FIRE)) ||
-        (damage_type == DAM_ELECTRIC && IS_RESISTANT(victim, RESIST_ELECTRIC)) ||
-        (damage_type == DAM_COLD && IS_RESISTANT(victim, RESIST_COLD)) ||
-        (damage_type == DAM_SOUND && IS_RESISTANT(victim, RESIST_SOUND)) ||
-        (damage_type == DAM_CHEMICAL && IS_RESISTANT(victim, RESIST_CHEMICAL)) ||
-        (damage_type == DAM_ACID && IS_RESISTANT(victim, RESIST_ACID)) ||
-        (damage_type == DAM_MAGICAL && IS_RESISTANT(victim,  RESIST_MAGICAL)) ||
-        (damage_type == DAM_PHYSICAL && IS_RESISTANT(victim, RESIST_PHYSICAL)))) {
-      dmg = lround(dmg * (number(25, 75) / 100.0));
+        (((damage_type == DAM_FIRE) && IS_RESISTANT(victim, RESIST_FIRE)) ||
+         ((damage_type == DAM_ELECTRIC) && IS_RESISTANT(victim, RESIST_ELECTRIC)) ||
+         ((damage_type == DAM_COLD) && IS_RESISTANT(victim, RESIST_COLD)) ||
+         ((damage_type == DAM_SOUND) && IS_RESISTANT(victim, RESIST_SOUND)) ||
+         ((damage_type == DAM_CHEMICAL) && IS_RESISTANT(victim, RESIST_CHEMICAL)) ||
+         ((damage_type == DAM_ACID) && IS_RESISTANT(victim, RESIST_ACID)) ||
+         ((damage_type == DAM_MAGICAL) && IS_RESISTANT(victim,  RESIST_MAGICAL)) ||
+         ((damage_type == DAM_PHYSICAL) && IS_RESISTANT(victim, RESIST_PHYSICAL)))) {
+      dmg = lround((dmg * (number(25, 75)) / 100.0));
     }
   }
 
@@ -1696,12 +1673,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       !IS_NPC(GET_RIDER(ch)) &&
       !IS_NPC(victim) &&
       (!IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF)) &&
-      damage_type != DAM_NO_BLOCK_NO_FLEE) {
-    do_flee(ch, "", CMD_FLEE);
+      (damage_type != DAM_NO_BLOCK_NO_FLEE)) {
+    do_flee(ch, "\0", CMD_FLEE);
 
-    dmg = 0;
-
-    return dmg;
+    return 0;
   }
 
   /* Handle PvP */
@@ -1715,9 +1690,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     if (IS_SET(GET_PFLAG(ch), PLR_NOKILL)) {
       send_to_char("You can't attack other players.\n\r", ch);
 
-      dmg = 0;
-
-      return dmg;
+      return 0;
     }
     /* Flag the attacker as a killer if PKing. */
     else {
@@ -1741,9 +1714,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
     send_to_char("You can't attack mounts.\n\r", ch);
 
-    dmg = 0;
-
-    return dmg;
+    return 0;
   }
 
   /* Handle charmed NPCs that might be wielding an ANTI-MORTAL weapon. */
@@ -1753,9 +1724,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       IS_SET(OBJ_EXTRA_FLAGS(GET_WEAPON(ch)), ITEM_ANTI_MORTAL)) {
     send_to_char("Perhaps you shouldn't be using an ANTI-MORTAL weapon.\n\r", ch);
 
-    dmg = 0;
-
-    return dmg;
+    return 0;
   }
 
   /* Prevent charmed NPCs from attacking players except during Chaos. */
@@ -1766,9 +1735,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       !CHAOSMODE) {
     send_to_char("You can't harm a player!\n\r", ch);
 
-    dmg = 0;
-
-    return dmg;
+    return 0;
   }
 
   /* Start or stop people fighting. */
@@ -1813,9 +1780,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
         hit(ch, GET_MASTER(victim), TYPE_UNDEFINED);
 
-        dmg = 0;
-
-        return dmg;
+        return 0;
       }
 
       /* NPCs have a chance to switch to a mount's rider. */
@@ -1830,9 +1795,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
         hit(ch, GET_RIDER(victim), TYPE_UNDEFINED);
 
-        dmg = 0;
-
-        return dmg;
+        return 0;
       }
     }
   }
@@ -1922,18 +1885,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Enchanter SC4: Ethereal Nature */
-  if (damage_type == DAM_PHYSICAL || damage_type == DAM_SKILL) {
-    if (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) &&
-        (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == 30 ||
-         (CHAOSMODE && duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == 12))) {
-      dmg = 0;
-    }
-
-    if (affected_by_spell(ch, SPELL_ETHEREAL_NATURE) &&
-        (duration_of_spell(ch, SPELL_ETHEREAL_NATURE) == 30 ||
-         (CHAOSMODE && duration_of_spell(ch, SPELL_ETHEREAL_NATURE) == 12))) {
-      dmg = 0;
-    }
+  if (((damage_type == DAM_PHYSICAL) || (damage_type == DAM_SKILL)) &&
+      (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
+    dmg = 0;
   }
 
   /* Juggernaut */
@@ -2065,8 +2019,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Bandit SC5: Evasion */
-  if (affected_by_spell(victim, SKILL_EVASION) &&
-      (damage_type == DAM_PHYSICAL || damage_type == DAM_SKILL)) {
+  if (((damage_type == DAM_PHYSICAL) || (damage_type == DAM_SKILL)) &&
+      affected_by_spell(victim, SKILL_EVASION)) {
     if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
       dmg = lround(dmg * 0.80); /* 20% reduction when Chaotic. */
     }
@@ -2130,6 +2084,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* It's so anti-climactic. */
   GET_HIT(victim) -= dmg;
+
   update_pos(victim);
 
   /* Grant hit EXP. */
@@ -2161,6 +2116,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
 
     affect_from_char(victim, SPELL_DIVINE_INTERVENTION);
+
     update_pos(victim);
   }
 
@@ -2223,7 +2179,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           act(messages->god_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
           act(messages->god_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
           act(messages->god_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
-
           break;
         }
 
@@ -2252,7 +2207,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           act(messages->miss_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
           act(messages->miss_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
         }
-
         break;
       }
     }
@@ -2299,9 +2253,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           damage_type != DAM_NO_BLOCK_NO_FLEE) {
         do_flee(victim, "", CMD_FLEE);
 
-        if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(victim)) {
-          return dmg;
-        }
+        if (!SAME_ROOM(ch, victim)) return dmg;
       }
 
       /* Send a message if the victim received damage equal to or greater than 20% of their maximum HP. */
@@ -2322,9 +2274,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
             damage_type != DAM_NO_BLOCK_NO_FLEE) {
           do_flee(victim, "", CMD_FLEE);
 
-          if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(victim)) {
-            return dmg;
-          }
+          if (!SAME_ROOM(ch, victim)) return dmg;
         }
       }
       break;
@@ -2340,15 +2290,14 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       act("$n is rescued by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
 
       GET_WAS_IN_ROOM(victim) = CHAR_REAL_ROOM(victim);
+     
       char_from_room(victim);
       char_to_room(victim, 1);
 
       GET_POS(victim) = POSITION_STUNNED;
     }
 
-    if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(victim)) {
-      return dmg;
-    }
+    if (!SAME_ROOM(ch, victim)) return dmg;
   }
 
   /* Handle vicious. */
@@ -3177,7 +3126,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
   weapon = EQ(ch, WIELD);
 
   /* If the attacker is a Ninja and it's an even-numbered hit number, get the weapon in the HOLD position. */
-  if (!IS_NPC(ch) && GET_CLASS(ch) == CLASS_NINJA && !(hit_num % 2)) {
+  if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA) && !(hit_num % 2)) {
     weapon = EQ(ch, HOLD);
   }
 
@@ -3691,7 +3640,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 
   /* Berserk */
   if (affected_by_spell(ch, SKILL_BERSERK)) {
-    int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
+    int bonus = (!IS_NPC(ch) ? GET_DEX_APP(ch) : 0);
     int percent = 40;
 
     if (chance(percent + bonus)) {
@@ -3702,7 +3651,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 
   /* Frenzy */
   if (affected_by_spell(ch, SKILL_FRENZY)) {
-    int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
+    int bonus = (!IS_NPC(ch) ? GET_DEX_APP(ch) : 0);
     int percent = 10;
 
     if (chance(percent + bonus)) {
@@ -4182,506 +4131,6 @@ void perform_violence(void) {
     }
     else { /* Not in same room. */
       stop_fighting(ch);
-    }
-  }
-}
-
-
-bool mob_disarm(CHAR *mob, CHAR *victim, bool to_ground) {
-  const int WEAPON_WYVERN_SPUR = 11523;
-
-  if (!mob || !victim || (mob == victim) || !IS_NPC(mob) || !IS_MORTAL(victim)) return FALSE;
-
-  OBJ *weapon = EQ(victim, WIELD);
-
-  if (!weapon ||
-      (V_OBJ(weapon) == WEAPON_WYVERN_SPUR) ||
-      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL))) return FALSE;
-
-  /* Tactician */
-  if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_GLADIATOR, 3) &&
-      SAME_ROOM(mob, victim) &&
-      (GET_POS(victim) >= POSITION_FIGHTING)) {
-    if (chance(20 + GET_DEX_APP(victim))) {
-      act("$N avoids $n's disarm and attacks back!", FALSE, mob, 0, victim, TO_NOTVICT);
-      act("$N avoids your disarm and attacks back!", FALSE, mob, 0, victim, TO_CHAR);
-      act("You avoid $n's disarm and attack back!", FALSE, mob, 0, victim, TO_VICT);
-
-      hit(victim, mob, TYPE_UNDEFINED);
-    }
-    else {
-      act("$N avoids $n's disarm attempt!", FALSE, mob, 0, victim, TO_NOTVICT);
-      act("$N avoids your disarm attempt!", FALSE, mob, 0, victim, TO_CHAR);
-      act("You avoid $n's disarm attempt!", FALSE, mob, 0, victim, TO_VICT);
-    }
-
-    return FALSE;
-  }
-
-  unequip_char(victim, WIELD);
-
-  if (to_ground) {
-    char buf[MSL];
-
-    snprintf(buf, sizeof(buf), "WIZINFO: %s disarms %s's %s (Room %d)",
-      GET_NAME(mob), GET_NAME(victim), OBJ_NAME(weapon), world[CHAR_REAL_ROOM(victim)].number);
-    log_s(buf);
-
-    weapon->log = 1;
-
-    obj_to_room(weapon, CHAR_REAL_ROOM(victim));
-  }
-  else {
-    obj_to_char(weapon, victim);
-  }
-
-  save_char(victim, NOWHERE);
-
-  return TRUE;
-}
-
-typedef struct mob_attact_t {
-  char *attack_name;
-
-  char *failure_to_other;
-  char *failure_to_char;
-  char *failure_to_vict;
-
-  char *success_to_other;
-  char *success_to_char;
-  char *success_to_vict;
-
-  char *multi_to_other;
-  char *multi_to_char;
-  char *multi_to_vict;
-
-  int vict_pos;
-  int vict_wait_state;
-  
-  int mob_attack_timer;
-} mob_attact_t;
-
-const mob_attact_t mob_attack_table[] = {
-  {0},
-  {0},
-  /* ATT_KICK */
-  {
-    .attack_name = "kick",
-
-    .failure_to_other = "$n kicks $N in the solar plexus, rendering $M breathless.",
-    .failure_to_char = "Your beautiful full-circle-kick swings way over $N's head.",
-    .failure_to_vict = "$n kicks you in the solar plexus, rendering you breathless.",
-
-    .success_to_other = "$n kicks $N in the solar plexus, rendering $M breathless.",
-    .success_to_char = "You kick $N in the solar plexus, rendering $M breathless.",
-    .success_to_vict = "$n kicks you in the solar plexus, rendering you breathless.",
-
-    .multi_to_other = "$n's spin-kick has generated a big whirl.",
-    .multi_to_char = "Your spin-kick has generated a big whirl.",
-    .multi_to_vict = "You are kicked by $n.",
-
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 3
-  },
-  /* ATT_PUMMEL */
-  {
-    .attack_name = "pummel",
-
-    .failure_to_other = "$n tried to pummel $N, but missed.",
-    .failure_to_char = "You try to pummel $N, but miss and nearly hurt yourself.",
-    .failure_to_vict = "$n tried to pummel you, but missed.",
-
-    .success_to_other = "$n pummels $N, and $N is stunned now!",
-    .success_to_char = "You pummel $N, and $N is stunned now!",
-    .success_to_vict = "$n pummels you, and you are stunned now!",
-
-    .multi_to_other = "$n spins wildly about the room, pummeling like crazy.",
-    .multi_to_char = "You spin wildly about the room, pummeling like crazy.",
-    .multi_to_vict = "You are pummeled by $n.",
-
-    .vict_pos = POSITION_STUNNED,
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 2
-  },
-  /* ATT_PUNCH */
-  {
-    .attack_name = "punch",
-
-    .failure_to_other = "$n tries to punch $N with a mighty swing, but misses.",
-    .failure_to_char = "You try to punch $N with a mighty swing, but miss.",
-    .failure_to_vict = "$n tries to punch you with a mighty swing, but misses.",
-
-    .success_to_other = "$n punches $N with a blow that sends $M reeling.",
-    .success_to_char = "You punch $N with a blow that sends $M reeling.",
-    .success_to_vict = "$n punches you with a blow that sends you reeling.",
-
-    .multi_to_other = "$n spins wildly about the room, punching like crazy.",
-    .multi_to_char = "You spin wildly about the room, punching like crazy.",
-    .multi_to_vict = "You are punched by $n.",
-
-    .vict_pos = POSITION_SITTING,
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 2
-  },
-  /* ATT_BITE */
-  {
-    .attack_name = "bite",
-
-    .failure_to_other = "$n bites at $N, missing $M by a breath.",
-    .failure_to_char = "You bite at $N, missing $M by a breath.",
-    .failure_to_vict = "$n bites at you, missing you by a breath.",
-
-    .success_to_other = "$n takes a bite out of $N.",
-    .success_to_char = "You take a bite out of $N.",
-    .success_to_vict = "$n takes a bite out of you.",
-
-    .multi_to_other = "$n snaps $s jaws wildly about, biting all around $m.",
-    .multi_to_char = "You snap your jaws wildly about, biting all around you.",
-    .multi_to_vict = "You are bitten by $n.",
-
-    .vict_wait_state = 1,
-
-    .mob_attack_timer = 2
-  },
-  /* ATT_CLAW */
-  {
-    .attack_name = "claw",
-
-    .failure_to_other = "$n tries to shred $N to pieces, but claws the air instead.",
-    .failure_to_char = "You try to shred $N to pieces, but you claw the air instead.",
-    .failure_to_vict = "$n tries to shred you to pieces, but claws the air instead.",
-
-    .success_to_other = "$n rakes $N with $s claws.",
-    .success_to_char = "You rake $N with your claws.",
-    .success_to_vict = "$N rakes you with $S claws.",
-
-    .multi_to_other = "$n lashes wildly about, raking everyone with $s claws.",
-    .multi_to_char = "You lash wildly about, raking everyone with your claws.",
-    .multi_to_vict = "You are clawed by $N.",
-
-    .vict_wait_state = 3,
-
-    .mob_attack_timer = 3
-  },
-  /* ATT_BASH */
-  {
-    .attack_name = "bash",
-
-    .failure_to_other = "$N nimbly avoids $n's bash.",
-    .failure_to_char = "$N nimbly avoids your bash.",
-    .failure_to_vict = "You nimbly avoid $n's bash.",
-
-    .success_to_other = "$n's powerful bash sends $N sprawling.",
-    .success_to_char = "Your powerful bash sends $N sprawling.",
-    .success_to_vict = "$n's powerful bash sends you sprawling.",
-
-    .multi_to_other = "$n spins wildly about the room, bashing like crazy.",
-    .multi_to_char = "You spin wildly about the room, bashing like crazy.",
-    .multi_to_vict = "You are bashed by $n.",
-
-    .vict_pos = POSITION_SITTING,
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 2
-  },
-  /* ATT_TAILSLAM */
-  {
-    .attack_name = "tailslam",
-
-    .failure_to_other = "$n tries to slam $N with $s tail, but slams the ground with a thump!",
-    .failure_to_char = "You try to slam $N with your tail, but slam the ground with a thump!",
-    .failure_to_vict = "$n tries to slam you with $s tail, but slams the ground with a thump!",
-
-    .success_to_other = "$n slams $N with $s tail.",
-    .success_to_char = "You slam $N with your tail.",
-    .success_to_vict = "$n slams you with $s tail.",
-
-    .multi_to_other = "$n's spins $s tail around.",
-    .multi_to_char = "You spin your tail around.",
-    .multi_to_vict = "You are tailslammed by $n.",
-
-    .vict_pos = POSITION_STUNNED,
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 3
-  },
-  /* ATT_DISARM */
-  {
-    .attack_name = "disarm",
-
-    .failure_to_other = "$n tried to kick off $N's weapon, but failed!",
-    .failure_to_char = "You tried to kick off $N's weapon, but failed!",
-    .failure_to_vict = "$n tried to kick off your weapon, but failed!",
-
-    .success_to_other = "$n kicks off $N's weapon.",
-    .success_to_char = "You kick off $N's weapon.",
-    .success_to_vict = "$n kicks off your weapon.",
-
-    .multi_to_other = "$n spins wildly about the room.",
-    .multi_to_char = "You spin wildly about the room.",
-    .multi_to_vict = "$n kicks off your weapon.",
-
-    .mob_attack_timer = 2
-  },
-  /* ATT_TRAMPLE */
-  {
-    .attack_name = "trample",
-
-    .failure_to_other = "$n stomps around $N, failing to trample $M into the ground.",
-    .failure_to_char = "You stomp around $N, failing to trample $M into the ground.",
-    .failure_to_vict = "$n stomps around you, failing to trample you into the ground.",
-
-    .success_to_other = "$n jumps into the air and lands on $N.",
-    .success_to_char = "You jump into the air and land on $N.",
-    .success_to_vict = "$n jumps into the air and lands on you.",
-
-    .multi_to_other = "$n jumps high in the air and lands on everyone.",
-    .multi_to_char = "You jump high in the air and land on everyone.",
-    .multi_to_vict = "You are trampled by $n.",
-
-    .vict_wait_state = 2,
-
-    .mob_attack_timer = 2
-  },
-  {0}
-};
-
-CHAR * mob_attack_get_victim(CHAR *mob, int attack_type, int target_type) {
-  CHAR *victim = NULL;
-
-  switch (target_type) {
-    case TAR_BUFFER:
-      victim = GET_OPPONENT(mob);
-      break;
-    case TAR_RAN_GROUP:
-      victim = get_random_victim_fighting(mob);
-      break;
-    case TAR_RAN_ROOM:
-      victim = get_random_victim(mob);
-      break;
-    case TAR_GROUP:
-      if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
-        victim = get_random_victim_fighting(mob);
-      }
-      break;
-    case TAR_ROOM:
-      if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
-        victim = get_random_victim(mob);
-      }
-      break;
-    case TAR_SELF:
-      victim = mob;
-      break;
-    case TAR_LEADER:
-      victim = GET_OPPONENT(mob);
-
-      if (GET_MASTER(GET_OPPONENT(mob))) {
-        victim = GET_MASTER(GET_OPPONENT(mob));
-      }
-
-      if (!SAME_ROOM(mob, victim)) {
-        victim = get_random_victim_fighting(mob);
-      }
-      break;
-  }
-
-  return victim;
-}
-
-void mob_attack_spell(CHAR *mob, CHAR *victim, int spell, bool use_mana) {
-  if (!mob || !IS_NPC(mob) || !victim || (spell <= 0) || (spell >= MAX_SPL_LIST)) return;
-
-  char buf[MIL];
-
-  snprintf(buf, sizeof(buf), "'%s' %s", spells[spell - 1], GET_NAME(victim));
-
-  do_mob_cast(mob, buf, use_mana);
-}
-
-int mob_attack_calc_damage(CHAR *mob, CHAR *victim, int attack) {
-  if (!mob) return 0;
-
-  int dam = 0;
-
-  switch (attack) {
-    case ATT_KICK:
-    case ATT_BITE:
-    case ATT_CLAW:
-      dam = GET_LEVEL(mob);
-      break;
-    case ATT_PUMMEL:
-      dam = 10;
-      break;
-    case ATT_BASH:
-      dam = number(1, GET_LEVEL(mob));
-      break;
-    case ATT_PUNCH:
-    case ATT_TAILSLAM:
-    case ATT_TRAMPLE:
-      dam = GET_LEVEL(mob) * 2;
-      break;
-  }
-
-  return dam;
-}
-
-void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool multi_target) {
-  if (!mob || !IS_NPC(mob) || !victim || !IS_MORTAL(victim) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
-
-  /* Tactician */
-  if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_GLADIATOR, 3) &&
-      SAME_ROOM(mob, victim) &&
-      (GET_POS(victim) >= POSITION_FIGHTING) &&
-      chance(70 + GET_DEX_APP(victim))) {
-    char buf[MIL];
-
-    snprintf(buf, sizeof(buf), "$N avoids $n's %s and attacks back!", mob_attack_table[attack_type].attack_name);
-    act(buf, FALSE, mob, 0, victim, TO_NOTVICT);
-    snprintf(buf, sizeof(buf), "$N avoids your %s and attacks back!", mob_attack_table[attack_type].attack_name);
-    act(buf, FALSE, mob, 0, victim, TO_CHAR);
-    snprintf(buf, sizeof(buf), "You avoid $n's %s and attack back!", mob_attack_table[attack_type].attack_name);
-    act(buf, FALSE, mob, 0, victim, TO_VICT);
-
-    hit(victim, mob, TYPE_UNDEFINED);
-
-    return;
-  }
-
-  if (attack_type == ATT_DISARM) {
-    if (mob_disarm(mob, victim, FALSE)) {
-      act(mob_attack_table[attack_type].success_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
-      act(mob_attack_table[attack_type].success_to_char, FALSE, mob, 0, victim, TO_CHAR);
-      act(mob_attack_table[attack_type].success_to_vict, FALSE, mob, 0, victim, TO_VICT);
-    }
-
-    return;
-  }
-
-  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL)) {
-    if (!multi_target) {
-      act(mob_attack_table[attack_type].failure_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
-      act(mob_attack_table[attack_type].failure_to_char, FALSE, mob, 0, victim, TO_CHAR);
-    }
-
-    act(mob_attack_table[attack_type].failure_to_vict, FALSE, mob, 0, victim, TO_VICT);
-
-    damage(mob, victim, 0, TYPE_UNDEFINED, DAM_PHYSICAL);
-
-    return;
-  }
-
-  if (!multi_target) {
-    act(mob_attack_table[attack_type].success_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
-    act(mob_attack_table[attack_type].success_to_char, FALSE, mob, 0, victim, TO_CHAR);
-  }
-
-  act(mob_attack_table[attack_type].success_to_vict, FALSE, mob, 0, victim, TO_VICT);
-
-  damage(mob, victim, mob_attack_calc_damage(mob, victim, attack_type), TYPE_UNDEFINED, DAM_PHYSICAL);
-
-  int vict_pos = mob_attack_table[attack_type].vict_pos;
-
-  if (vict_pos) {
-    GET_POS(victim) = vict_pos;
-  }
-
-  int vict_wait_state = mob_attack_table[attack_type].vict_wait_state;
-
-  /* Tactician */
-  if (IS_MORTAL(victim) && check_subclass(victim, SC_GLADIATOR, 3)) {
-    vict_wait_state = MAX(0, vict_wait_state - 1);
-  }
-
-  WAIT_STATE(victim, PULSE_VIOLENCE * vict_wait_state);
-}
-
-void mob_attack_skill_single_target(CHAR *mob, CHAR *victim, int attack_type) {
-  if (!mob || !IS_NPC(mob) || !victim || !IS_MORTAL(victim) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
-
-  mob_attack_skill_action(mob, victim, attack_type, FALSE);
-
-  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
-}
-
-void mob_attack_skill_multi_target(CHAR *mob, int attack_type, int target_type) {
-  if (!mob || !IS_NPC(mob) || (attack_type < ATT_KICK) || (attack_type > ATT_TRAMPLE)) return;
-
-  act(mob_attack_table[attack_type].multi_to_other, FALSE, mob, 0, 0, TO_ROOM);
-  act(mob_attack_table[attack_type].multi_to_char, FALSE, mob, 0, 0, TO_CHAR);
-
-  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(mob)].people, *next_victim = NULL; temp_victim; temp_victim = next_victim) {
-    next_victim = temp_victim->next_in_room;
-
-    if (!temp_victim || (temp_victim == mob) || !IS_MORTAL(temp_victim) || ((target_type == TAR_GROUP) && (GET_OPPONENT(temp_victim) != mob))) continue;
-
-    mob_attack_skill_action(mob, temp_victim, attack_type, TRUE);
-  }
-
-  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
-}
-
-void mob_attack(CHAR *mob) {
-  if (!mob || !IS_NPC(mob) || !MOB_NUM_ATTACKS(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob)) || (GET_POS(mob) < POSITION_FIGHTING)) return;
-
-  if (MOB_ATTACK_TIMER(mob)) {
-    MOB_ATTACK_TIMER(mob)--;
-    return;
-  }
-
-  for (int num = 0; (num < MOB_NUM_ATTACKS(mob)) && !MOB_ATTACK_TIMER(mob); num++) {
-    if (!chance(MOB_ATTACK_CHANCE(mob, num))) continue;
-
-    int attack_type = MOB_ATTACK_TYPE(mob, num);
-    int target_type = MOB_ATTACK_TARGET(mob, num);
-
-    if ((attack_type <= ATT_UNDEFINED) || (attack_type >= ATT_MAX) || (target_type <= TAR_UNDEFINED) || (target_type >= TAR_MAX)) continue;
-
-    CHAR *victim = mob_attack_get_victim(mob, attack_type, target_type);
-
-    switch (attack_type) {
-      /* "Spells" */
-      case ATT_SPELL_CAST:
-      case ATT_SPELL_SKILL:
-        if (victim) {
-          mob_attack_spell(mob, victim, MOB_ATTACK_SPELL(mob, num), (ATT_SPELL_CAST ? 1 : 0));
-        }
-        break;
-      /* "Skills" */
-      case ATT_KICK:
-      case ATT_PUMMEL:
-      case ATT_PUNCH:
-      case ATT_BITE:
-      case ATT_CLAW:
-      case ATT_BASH:
-      case ATT_TAILSLAM:
-      case ATT_DISARM:
-      case ATT_TRAMPLE:
-        if (victim) {
-          mob_attack_skill_single_target(mob, victim, attack_type);
-        }
-        else if ((target_type == TAR_GROUP) || (target_type == TAR_ROOM)) {
-          mob_attack_skill_multi_target(mob, attack_type, target_type);
-        }
-        break;
-    }
-  }
-}
-
-void perform_mob_attack(void) {
-  for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
-    combat_next_dude = ch->next_fighting;
-
-    CHAR *victim = GET_OPPONENT(ch);
-
-    assert(victim);
-
-    if (IS_NPC(ch) && AWAKE(ch) && SAME_ROOM(ch, victim)) {
-      mob_attack(ch);
     }
   }
 }

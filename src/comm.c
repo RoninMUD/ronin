@@ -2921,6 +2921,11 @@ int wither_pulse_action(CHAR *victim) {
 
     switch (effect_type) {
       case SPELL_BLINDNESS:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_BLINDNESS))) {
+          dam += 50;
+          break;
+        }
+
         af.type = SPELL_BLINDNESS;
         af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
         af.bitvector = AFF_BLIND;
@@ -2941,6 +2946,11 @@ int wither_pulse_action(CHAR *victim) {
         break;
 
       case SPELL_CHILL_TOUCH:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_COLD))) {
+          dam += 50;
+          break;
+        }
+
         af.type = SPELL_CHILL_TOUCH;
         af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
         af.modifier = -1;
