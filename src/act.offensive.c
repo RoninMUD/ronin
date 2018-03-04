@@ -27,7 +27,6 @@
 #include "subclass.h"
 #include "enchant.h"
 
-int MAX_PRAC(CHAR *ch);
 void raw_kill(struct char_data *ch);
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
@@ -38,7 +37,7 @@ void skill_wait(CHAR *ch, int skill, int wait) {
 
   /* Quick Recovery */
   if ((wait > 1) &&
-      check_subclass(ch, SC_ROGUE, 5) &&
+      (IS_MORTAL(ch) && check_subclass(ch, SC_ROGUE, 5)) &&
       chance(number(50, 75))) {
     wait -= 1;
   }
@@ -371,6 +370,11 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
 
   check = number(1, 101) - GET_DEX_APP(ch);
 
+  /* Juggernaut */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
+    check -= 10;
+  }
+
   if (affected_by_spell(ch, SPELL_BLUR)) {
     check -= GET_LEVEL(ch) / 10;
   }
@@ -388,7 +392,14 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
       act("$n tries to do a spin-kick, but fails.", FALSE, ch, 0, 0, TO_ROOM);
     }
 
-    skill_wait(ch, SKILL_SPIN_KICK, 3);
+    int set_wait = 3;
+
+    /* Juggernaut */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
+      set_wait = 2;
+    }
+
+    skill_wait(ch, SKILL_SPIN_KICK, set_wait);
   }
   else {
     send_to_char("Your spin-kick has generated a big whirl.\n\r", ch);
@@ -411,7 +422,14 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
 
     auto_learn_skill(ch, SKILL_SPIN_KICK);
 
-    skill_wait(ch, SKILL_SPIN_KICK, 4);
+    int set_wait = 4;
+
+    /* Juggernaut */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
+      set_wait = 2;
+    }
+
+    skill_wait(ch, SKILL_SPIN_KICK, set_wait);
   }
 }
 
@@ -482,7 +500,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   }
 
   if (affected_by_spell(ch, SKILL_VEHEMENCE) ||
-      check_subclass(ch, SC_INFIDEL, 1)) {
+      (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1))) {
     check -= (5 + (GET_DEX_APP(ch) / 2));
   }
 
@@ -494,7 +512,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   }
   else {
     /* Bathed in Blood */
-    if (check_subclass(ch, SC_DEFILER, 4) && !affected_by_spell(ch, SPELL_VAMPIRIC) && chance(10)) {
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 4) && chance(10)) {
       act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, NULL, victim, TO_CHAR);
       act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, NULL, victim, TO_VICT);
       act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, NULL, victim, TO_NOTVICT);
@@ -585,7 +603,7 @@ void do_assassinate(CHAR *ch, char *argument, int cmd) {
 
   check = number(1, 111) - GET_DEX_APP(ch);
 
-  if (check_subclass(ch, SC_INFIDEL, 1)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1)) {
     check -= 5;
   }
 
@@ -727,7 +745,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
       }
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 1)) {
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 1)) {
         if ((number(1, 151) + modifier) <= GET_LEARNED(ch, SKILL_ASSAULT)) {
           dual_assault = TRUE;
         }
@@ -737,7 +755,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
       assault = TRUE;
 
       /* Dual Assault */
-      if (check_subclass(ch, SC_RONIN, 1)) {
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 1)) {
         dual_assault = TRUE;
       }
     }
@@ -755,7 +773,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
   }
 
   /* Dual Assault */
-  if (check_subclass(ch, SC_RONIN, 1)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 1)) {
     if (!dual_assault) {
       act("You try to assault $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n tries to assault you, but fails.", FALSE, ch, 0, victim, TO_VICT);
@@ -981,16 +999,8 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (CHAOSMODE && chance(25) && ch->specials.fighting && (!check_subclass(ch->specials.fighting, SC_WARLORD, 1))) {  /* Chaos03 */
-    act("$n tries to flee but fails.", TRUE, ch, 0, 0, TO_ROOM);
-    act("You try to flee but fail!", TRUE, ch, 0, 0, TO_CHAR);
-    return;
-  }
-
-
   if (affected_by_spell(ch, SKILL_BERSERK) ||
-      affected_by_spell(ch, SKILL_FRENZY) ||
-      affected_by_spell(ch, SKILL_HOSTILE)) {
+      affected_by_spell(ch, SKILL_FRENZY)) {
     act("$n tries to flee but fails.", TRUE, ch, 0, 0, TO_ROOM);
     act("You try to flee but fail!", TRUE, ch, 0, 0, TO_CHAR);
     return;
@@ -1057,21 +1067,35 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
   /* FIGHTING */
   for (i = 0; i < 6; i++) {
     attempt = number(0, 5);
+
     if (CAN_GO(ch, attempt) &&
         !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
-      if (!IS_NPC(ch->specials.fighting) && !ch->specials.rider &&
-          affected_by_spell(ch->specials.fighting, SKILL_BLOCK) &&
-          ((number(1, 101) < ch->specials.fighting->skills[SKILL_BLOCK].learned) ||
-          (check_subclass(ch->specials.fighting, SC_WARLORD, 1) && chance(90)))) {
-        act("$N tried to flee but $n blocked $S way!",
-            FALSE, ch->specials.fighting, 0, ch, TO_NOTVICT);
-        act("You tried to flee but $N blocked your way!",
-            FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
-        act("$N tried to flee but you blocked $S way!",
-            FALSE, ch->specials.fighting, 0, ch, TO_CHAR);
-        return;
+      CHAR *blocker = GET_OPPONENT(ch);
+
+      if (!IS_NPC(blocker) && !GET_RIDER(ch)) {
+        int block_check = number(1, 111);
+        int block_skill = GET_LEARNED(blocker, SKILL_BLOCK);
+        int auto_block_chance = 0;
+
+        block_skill += GET_DEX_APP(blocker);
+
+        /* Iron Fist */
+        if (IS_MORTAL(blocker) && check_subclass(blocker, SC_WARLORD, 3)) {
+          block_skill += (GET_LEVEL(blocker) / 5);
+          auto_block_chance = 90;
+        }
+
+        if ((block_check <= block_skill) || (auto_block_chance && chance(auto_block_chance))) {
+          act("You tried to flee but $N blocked your way!", FALSE, ch, 0, blocker, TO_CHAR);
+          act("$n tried to flee but you blocked $s way!", FALSE, ch, 0, blocker, TO_VICT);
+          act("$n tried to flee but $N blocked $s way!", FALSE, ch, 0, blocker, TO_NOTVICT);
+
+          return;
+        }
       }
+
       act("$n panics and attempts to flee.", TRUE, ch, 0, 0, TO_ROOM);
+
       org_room = CHAR_REAL_ROOM(ch);
       mount = FALSE;
       rider = FALSE;
@@ -1456,9 +1480,29 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
       damage(ch, victim, 0, SKILL_PUNCH, DAM_NO_BLOCK);
     }
     else {
-      set_pos = stack_position(victim, POSITION_SITTING);
+      int dam = GET_LEVEL(ch) * 2;
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_PUNCH, DAM_PHYSICAL);
+      bool iron_fist = FALSE;
+
+      /* Iron Fist */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 3) && chance(33)) {
+        dam *= 2;
+
+        set_pos = stack_position(victim, POSITION_STUNNED);
+
+        iron_fist = TRUE;
+      }
+      else {
+        set_pos = stack_position(victim, POSITION_SITTING);
+      }
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), dam), SKILL_PUNCH, DAM_PHYSICAL);
+
+      if (iron_fist) {
+        act("Your iron fist hits $N with devastating effect!", FALSE, ch, NULL, victim, TO_CHAR);
+        act("$n's iron fist hits you with devastating effect!", FALSE, ch, NULL, victim, TO_VICT);
+        act("$n's iron fist hits $N with devastating effect!", FALSE, ch, NULL, victim, TO_NOTVICT);
+      }
 
       auto_learn_skill(ch, SKILL_PUNCH);
 
@@ -1529,13 +1573,18 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_HOSTILE)) {
+  check = number(1, 101);
+
+  if ((IS_MORTAL(victim) && (GET_LEVEL(victim) <= 15)) ||      /* Anyone can rescue a player that is level 15 or below. */
+      (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 2))) { /* Protect */
+    check = 0;
+  }
+
+  if (check && IS_MORTAL(ch) && affected_by_spell(ch, SKILL_HOSTILE)) {
     send_to_char("Your hostility prevents the rescue.\n\r", ch);
 
     return;
   }
-
-  check = (IS_MORTAL(victim) && (GET_LEVEL(victim) < 16)) ? 0 : number(1, 101);
 
   if (check > GET_LEARNED(ch, SKILL_RESCUE)) {
     send_to_char("You fail the rescue.\n\r", ch);
@@ -1664,6 +1713,11 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
 
   check = ((10 - (GET_AC(victim) / 10)) * 2) + number(1, 101) - GET_DEX_APP(ch);
 
+  /* Juggernaut */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
+    check -= 5;
+  }
+
   if (affected_by_spell(ch, SPELL_BLUR)) {
     check -= GET_LEVEL(ch) / 10;
   }
@@ -1698,9 +1752,11 @@ void do_disarm(struct char_data *ch, char *argument, int cmd) {
   int percent;
   struct obj_data *wield = 0;
 
-  if ((GET_CLASS(ch) != CLASS_NOMAD) && (GET_LEVEL(ch) < LEVEL_IMM) &&
+  if ((GET_CLASS(ch) != CLASS_WARRIOR) &&
+      (GET_CLASS(ch) != CLASS_NOMAD) &&
       (GET_CLASS(ch) != CLASS_COMMANDO) &&
-      (GET_CLASS(ch) != CLASS_PALADIN) && (GET_CLASS(ch) != CLASS_AVATAR)) {
+      (GET_CLASS(ch) != CLASS_PALADIN) &&
+      (GET_CLASS(ch) != CLASS_AVATAR)) {
     send_to_char("You better leave this job to the others.\n\r", ch);
     return;
   }
@@ -1755,6 +1811,7 @@ void do_disarm(struct char_data *ch, char *argument, int cmd) {
 
   if (V_OBJ(wield) == 11523 || (ch->skills ? (percent > ch->skills[SKILL_DISARM].learned) ||
     (IS_SET(victim->specials.act, ACT_ARM) && IS_NPC(victim)) ||
+    (IS_MORTAL(ch) && check_subclass(victim, SC_GLADIATOR, 3)) || /* Tactician */
     ((GET_LEVEL(victim) - GET_LEVEL(ch)) > 5) || GET_LEVEL(victim) > 30 : percent > 100)) {
     act("You tried to kick off $N's weapon, but failed!",
         FALSE, ch, 0, victim, TO_CHAR);
@@ -1790,28 +1847,29 @@ void do_disarm(struct char_data *ch, char *argument, int cmd) {
 
 
 void do_disembowel(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-
   if (!GET_SKILLS(ch)) return;
+
+  char name[MIL];
 
   one_argument(argument, name);
 
   if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) != CLASS_WARRIOR) &&
+      !check_sc_access(ch, SKILL_DISEMBOWEL) &&
       (GET_CLASS(ch) != CLASS_NOMAD)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (((GET_CLASS(ch) != CLASS_WARRIOR) && (GET_LEVEL(ch) < 40)) ||
-      ((GET_CLASS(ch) != CLASS_NOMAD) && (GET_LEVEL(ch) < 20))) {
+  if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) == CLASS_NOMAD) &&
+      (GET_LEVEL(ch) < 40)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;
   }
+
+  CHAR *victim = NULL;
 
   if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Disembowel who?\n\r", ch);
@@ -1838,7 +1896,7 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
   }
 
   if (!IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-    send_to_char("You can't disembowel another player.\n\r", ch);
+    send_to_char("You can't disembowel another player!\n\r", ch);
 
     return;
   }
@@ -1857,40 +1915,36 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 221) - GET_DEX_APP(ch);
+  int check = number(1, 151) - GET_DEX_APP(ch);
 
-  if (check > GET_LEARNED(ch, SKILL_DISEMBOWEL)) {
-    act("You try to disembowel $N, but stumble over your own feet! $N attacks back!", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n tries to disembowel you, but stumbles over $s own feet! You attack back!", FALSE, ch, 0, victim, TO_VICT);
-    act("$n tries to disembowel $N, but stumbles over $s own feet! $N attacks back!", FALSE, ch, 0, victim, TO_NOTVICT);
+  if (IS_IMMUNE(victim, IMMUNE_DISEMBOWEL) || (check > GET_LEARNED(ch, SKILL_DISEMBOWEL))) {
+    act("$N completely avoids your attempt to spill $S guts.", FALSE, ch, 0, victim, TO_CHAR);
+    act("You completely avoid $N's attempt to spill your guts.", FALSE, ch, 0, victim, TO_VICT);
+    act("$N completely avoids $n's attempt to spill $S guts.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_PHYSICAL);
+    damage(ch, victim, 0, SKILL_DISEMBOWEL, DAM_PHYSICAL);
   }
   else {
-    if ((IS_NPC(victim) && IS_IMMUNE(ch, IMMUNE_DISEMBOWEL)) ||
-        (GET_HIT(victim) > (GET_MAX_HIT(victim) / 10))) {
-      act("$N avoids your pitiful attack and strikes back at you!", FALSE, ch, 0, victim, TO_CHAR);
-      act("You avoid $n's pitiful attack and strike back at $m!", FALSE, ch, 0, victim, TO_VICT);
-      act("$N avoids $n's pitiful attack and strikes back at $m!", FALSE, ch, 0, victim, TO_NOTVICT);
+    int multi = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5);
+    int dam = calc_hit_damage(ch, victim, EQ(ch, WIELD), RND_NRM) * multi;
 
-      damage(victim, ch, ((2 * GET_LEVEL(victim)) + 20), TYPE_UNDEFINED, DAM_PHYSICAL);
+    if ((GET_HIT(victim) > dam) && (GET_HIT(victim) > (GET_MAX_HIT(victim) * 0.2))) {
+      act("You attempt to spill $N's guts, but $E fends you off.", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n attempts to spill your guts, but you fend $m off.", FALSE, ch, 0, victim, TO_VICT);
+      act("$n attempts to spill $N's guts, but $N fends $n off.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+      damage(ch, victim, 0, SKILL_DISEMBOWEL, DAM_PHYSICAL);
     }
     else {
-      act("Your savage attack causes $N's innards to spill out!", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n's savage attack causes your innards to spill out!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n's savage attack causes $N's innards to spill out!", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("Your savage attack causes $N's guts to spill out!", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n's savage attack causes your guts to spill out!", FALSE, ch, 0, victim, TO_VICT);
+      act("$n's savage attack causes $N's guts to spill out!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, ((GET_MAX_HIT(victim) * 100) / 7), SKILL_DISEMBOWEL, DAM_PHYSICAL);
-
-      auto_learn_skill(ch, SKILL_DISEMBOWEL);
-
-      if (IS_NPC(victim)) {
-        SET_BIT(GET_IMMUNE(ch), IMMUNE_DISEMBOWEL);
-      }
+      damage(ch, victim, dam, SKILL_DISEMBOWEL, DAM_PHYSICAL);
     }
   }
 
-  skill_wait(ch, SKILL_DISEMBOWEL, 2);
+  skill_wait(ch, SKILL_DISEMBOWEL, 0);
 }
 
 

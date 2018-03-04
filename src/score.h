@@ -70,8 +70,6 @@
 #define SCQ_EDITING_ZONE   56
 #define SCQ_REMORT_MULT    57
 
-int calc_bhd(CHAR *ch);
-int calc_avg_damage(CHAR *ch, int weapon_slot);
 void score_query(CHAR *ch, int query, bool opt_text, bool new_line);
 void do_score(CHAR *ch, char *argument, int cmd);
 

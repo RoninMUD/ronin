@@ -21,6 +21,7 @@ void send_to_room(char *messg, int room);
 void send_to_room_except(char *messg, int room, struct char_data *ch);
 void send_to_room_except_two
         (char *messg, int room, struct char_data *ch1, struct char_data *ch2);
+int same_group(struct char_data *ch1, struct char_data *ch2);
 void perform_to_all(char *messg, struct char_data *ch);
 void perform_complex(struct char_data *ch1, struct char_data *ch2,
                      struct obj_data *obj1, struct obj_data *obj2,

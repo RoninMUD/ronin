@@ -2744,7 +2744,7 @@ void pulse_shadow_wraith(CHAR *ch) {
   if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
       ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
     /* Dusk Requiem */
-    if (check_subclass(ch, SC_INFIDEL, 5)) {
+    if (!IS_NPC(ch) && check_subclass(ch, SC_INFIDEL, 5)) {
       if (GET_OPPONENT(ch)) {
         /* A bit of a hack here. Cast Dusk Requiem with caster level equal to
             LEVEL_MORT +1 to inflict double damage, rather than making a
@@ -2851,7 +2851,7 @@ void pulse_mantra(CHAR *ch) {
 
       tmp_af->duration--;
 
-      if (tmp_af->duration == 0) {
+      if (tmp_af->duration <= 0) {
         if (*spell_wear_off_msg[tmp_af->type]) {
           printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
         }
@@ -2868,7 +2868,8 @@ void pulse_mantra(CHAR *ch) {
 void pulse_adrenaline_rush(CHAR *ch) {
   if (!ch) return;
 
-  if (check_subclass(ch, SC_BANDIT, 3) &&
+  if (IS_MORTAL(ch) &&
+      check_subclass(ch, SC_BANDIT, 3) &&
       GET_HIT(ch) < GET_MAX_HIT(ch) &&
       GET_OPPONENT(ch)) {
     GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
@@ -2920,6 +2921,11 @@ int wither_pulse_action(CHAR *victim) {
 
     switch (effect_type) {
       case SPELL_BLINDNESS:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_BLINDNESS))) {
+          dam += 50;
+          break;
+        }
+
         af.type = SPELL_BLINDNESS;
         af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
         af.bitvector = AFF_BLIND;
@@ -2940,6 +2946,11 @@ int wither_pulse_action(CHAR *victim) {
         break;
 
       case SPELL_CHILL_TOUCH:
+        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_COLD))) {
+          dam += 50;
+          break;
+        }
+
         af.type = SPELL_CHILL_TOUCH;
         af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
         af.modifier = -1;
@@ -3030,7 +3041,6 @@ void pulse_wither(CHAR *ch) {
     next_af = tmp_af->next;
 
     if (tmp_af->type == SPELL_WITHER) {
-
       int dam = wither_pulse_action(ch);
 
       send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
@@ -3040,7 +3050,7 @@ void pulse_wither(CHAR *ch) {
 
       tmp_af->duration--;
 
-      if (tmp_af->duration == 0) {
+      if (tmp_af->duration <= 0) {
         if (*spell_wear_off_msg[tmp_af->type]) {
           printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
         }

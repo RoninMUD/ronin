@@ -16,6 +16,10 @@ typedef unsigned short int ush_int;
 typedef char bool;
 typedef char byte;
 
+#define ROOM_MORGUE    3088
+#define ROOM_DONATION  3084
+#define ROOM_SCRAPYARD 3030
+
 #define BIT_POOF_IN  1
 #define BIT_POOF_OUT 2
 
@@ -634,7 +638,8 @@ struct room_data
 #define SC_CHANTER     20
 #define SC_LEGIONNAIRE 21 /* commando */
 #define SC_MERCENARY   22
-#define SC_FINAL       23
+#define SC_FIRST       SC_ENCHANTER
+#define SC_LAST        SC_MERCENARY
 
 /* 'class' for PC's */
 #define CLASS_NONE         0
@@ -649,7 +654,8 @@ struct room_data
 #define CLASS_AVATAR       9
 #define CLASS_BARD         10
 #define CLASS_COMMANDO     11
-#define CLASS_FINAL        12
+#define CLASS_FIRST        CLASS_MAGIC_USER
+#define CLASS_LAST         CLASS_COMMANDO
 
 /* 'class' for NPC's */
 #define CLASS_OTHER               0
@@ -703,7 +709,8 @@ struct room_data
 #define CLASS_INVERTIBRATE        98
 #define CLASS_DROW                99
 #define CLASS_STATUE              100
-#define CLASS_MAX                 100
+#define CLASS_MOB_FIRST           CLASS_LICH
+#define CLASS_MOB_LAST            CLASS_STATUE
 
 /* sex */
 #define SEX_NEUTRAL 0
@@ -1280,6 +1287,37 @@ struct death_file_u
 /* ***********************************************************************
 *  file element for object file. BEWARE: Changing it will ruin the file  *
 *********************************************************************** */
+
+#define WPN_SLAY_EVIL_BEINGS    21
+#define WPN_SLAY_NEUTRAL_BEINGS 22
+#define WPN_SLAY_GOOD_BEINGS    23
+#define WPN_CHAOTIC             30
+#define WPN_SLAY_MAGIC_USERS    30 + CLASS_MAGIC_USER
+#define WPN_SLAY_FIRST          WPN_SLAY_MAGIC_USERS
+#define WPN_SLAY_CLERICS        30 + CLASS_CLERIC
+#define WPN_SLAY_THIEVES        30 + CLASS_THIEF
+#define WPN_SLAY_WARRIORS       30 + CLASS_WARRIOR
+#define WPN_SLAY_NINJAS         30 + CLASS_NINJA
+#define WPN_SLAY_NOMADS         30 + CLASS_NOMAD
+#define WPN_SLAY_PALADINS       30 + CLASS_PALADIN
+#define WPN_SLAY_ANTI_PALADINS  30 + CLASS_ANTI_PALADIN
+#define WPN_SLAY_AVATARS        30 + CLASS_AVATAR
+#define WPN_SLAY_BARDS          30 + CLASS_BARD
+#define WPN_SLAY_COMMANDOS      30 + CLASS_COMMANDO
+#define WPN_SLAY_LAST           WPN_SLAY_COMMANDOS
+#define WPN_CLASS_MAGIC_USER    300 + CLASS_MAGIC_USER
+#define WPN_CLASS_FIRST         WPN_CLASS_MAGIC_USER
+#define WPN_CLASS_CLERIC        300 + CLASS_CLERIC
+#define WPN_CLASS_THIEF         300 + CLASS_THIEF
+#define WPN_CLASS_WARRIOR       300 + CLASS_WARRIOR
+#define WPN_CLASS_NINJA         300 + CLASS_NINJA
+#define WPN_CLASS_NOMAD         300 + CLASS_NOMAD
+#define WPN_CLASS_PALADIN       300 + CLASS_PALADIN
+#define WPN_CLASS_ANTI_PALADIN  300 + CLASS_ANTI_PALADIN
+#define WPN_CLASS_AVATAR        300 + CLASS_AVATAR
+#define WPN_CLASS_BARD          300 + CLASS_BARD
+#define WPN_CLASS_COMMANDO      300 + CLASS_COMMANDO
+#define WPN_CLASS_LAST          WPN_CLASS_COMMANDO
 
 #define MAX_OBJ_VALUE 4
 

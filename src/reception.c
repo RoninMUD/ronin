@@ -1966,7 +1966,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
   switch (GET_CLASS(ch)) {
     case CLASS_WARRIOR:
       armor=GET_LEVEL(ch)/5;
-      armor*=4;
+      armor*=5;
       ch->points.armor-=armor;
       break;
     case CLASS_NOMAD:

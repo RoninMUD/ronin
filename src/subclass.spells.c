@@ -1177,7 +1177,8 @@ void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 
 void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  extern int wpn_extra(CHAR *ch, CHAR *victim, OBJ *wielded);
+  int wpn_extra(OBJ *wielded, CHAR *ch, CHAR *victim, int mode);
+
   int dam, w_type, str_index;
   OBJ *wielded = NULL;
 
@@ -1259,7 +1260,7 @@ void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (wielded->obj_flags.type_flag == ITEM_2HWEAPON) dam = (dam*3)/2;
   dam += GET_DAMROLL(ch);
   dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
-  dam += wpn_extra(ch,victim,wielded);
+  dam += wpn_extra(wielded,ch,victim,RND_NRM);
 
   if(GET_POS(victim) < POSITION_FIGHTING)
     dam *= 1+(POSITION_FIGHTING-GET_POS(victim))/3;
@@ -1976,7 +1977,7 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   af.type       = SPELL_WITHER;
   af.duration   = 4;
   af.location   = 0;
-  af.modifier   = (ubyte)level;
+  af.modifier   = level;
   af.bitvector  = 0;
   af.bitvector2 = 0;
 

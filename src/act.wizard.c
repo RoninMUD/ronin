@@ -544,13 +544,16 @@ Usage: setflag <victim> <flag>\n\r", ch);
         send_to_char("He/She is not immortal yet, don't worry!\n\r", ch);
         return;
       }
-      if(GET_LEVEL(vict)>LEVEL_SUP &&
-         (strcmp(GET_NAME(ch),"Lem") && strcmp(GET_NAME(ch),"Ranger") &&
-          strcmp(GET_NAME(ch),"Sumo") && strcmp(GET_NAME(ch),"Liner") && 
-          strcmp(GET_NAME(ch),"Sane") && strcmp(GET_NAME(ch),"Shun")) ) {
-         send_to_char("You cannot set an IMP active.\n\r", ch);
-         return;
+
+      if (GET_LEVEL(vict) > LEVEL_SUP &&
+         (strcmp(GET_NAME(ch), "Lem") && strcmp(GET_NAME(ch), "Ranger") &&
+          strcmp(GET_NAME(ch), "Sumo") && strcmp(GET_NAME(ch), "Liner") &&
+          strcmp(GET_NAME(ch), "Sane") && strcmp(GET_NAME(ch), "Shun") &&
+          strcmp(GET_NAME(ch), "Night"))) {
+        send_to_char("You cannot set an IMP active.\n\r", ch);
+        return;
       }
+
       if(GET_LEVEL(vict)>GET_LEVEL(ch)) {
         send_to_char("You cannot set the active flag on a player of a higher level.\n\r",ch);
         return;
@@ -1088,8 +1091,8 @@ void do_password(struct char_data *ch, char *argument, int cmdnum)
          if(!strcmp(GET_NAME(ch),"Nosferatu")) {
            argument = one_argument(argument, name);
            string_to_lower(name);
-           if(!strcmp(name,"ranger") || !strcmp(name,"sumo") || !strcmp(name,"lem") || !strcmp(name,"liner") || !strcmp(name,"sane") || !strcmp(name,"shun")) {
-             send_to_char("You cannot change the password of the active IMPs.\n\r",ch);
+           if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night")) {
+             send_to_char("You cannot change the password of the active IMPs.\n\r", ch);
              return;
            }
          } else {
@@ -1106,13 +1109,14 @@ void do_password(struct char_data *ch, char *argument, int cmdnum)
          if(!check_god_access(ch,TRUE)) return;
          argument = one_argument(argument, name);
          string_to_lower(name);
-         if( (strcmp(GET_NAME(ch),"Ranger") && !strcmp(name,"ranger")) ||
-             (strcmp(GET_NAME(ch),"Sumo") && !strcmp(name,"sumo")) ||
-             (strcmp(GET_NAME(ch),"Lem") && !strcmp(name,"lem")) ||
-             (strcmp(GET_NAME(ch),"Liner") && !strcmp(name,"liner")) ||
-             (strcmp(GET_NAME(ch),"Sane") && !strcmp(name,"sane")) ||
-             (strcmp(GET_NAME(ch),"Shun") && !strcmp(name,"shun")) ) {
-           send_to_char("You cannot change the password of the active IMPs.\n\r",ch);
+         if ((strcmp(GET_NAME(ch), "Ranger") && !strcmp(name, "ranger")) ||
+           (strcmp(GET_NAME(ch), "Sumo") && !strcmp(name, "sumo")) ||
+           (strcmp(GET_NAME(ch), "Lem") && !strcmp(name, "lem")) ||
+           (strcmp(GET_NAME(ch), "Liner") && !strcmp(name, "liner")) ||
+           (strcmp(GET_NAME(ch), "Sane") && !strcmp(name, "sane")) ||
+           (strcmp(GET_NAME(ch), "Shun") && !strcmp(name, "shun")) ||
+           (strcmp(GET_NAME(ch), "Night") && !strcmp(name, "night"))) {
+           send_to_char("You cannot change the password of the active IMPs.\n\r", ch);
            return;
          }
          break;
@@ -1162,8 +1166,8 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
   }
   string_to_lower(name);
 
-  if(!strcmp(name,"ranger") || !strcmp(name,"sumo") || !strcmp(name,"lem") || !strcmp(name,"liner") || !strcmp(name,"sane") || !strcmp(name,"shun") ) {
-    send_to_char("You cannot lock the active IMPs.\n\r",ch);
+  if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night")) {
+    send_to_char("You cannot lock the active IMPs.\n\r", ch);
     return;
   }
 
@@ -4908,7 +4912,8 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
       !strcmp(GET_NAME(victim),"Ranger") ||
       !strcmp(GET_NAME(victim),"Liner") ||
       !strcmp(GET_NAME(victim),"Sane") ||
-      !strcmp(GET_NAME(victim),"Shun") )
+      !strcmp(GET_NAME(victim),"Shun") ||
+      !strcmp(GET_NAME(victim),"Night"))
   {
     send_to_char("You cannot demote the active IMPs.\n\r",ch);
     return;

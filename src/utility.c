@@ -21,7 +21,6 @@
 #include <math.h>
 #include <stdint.h>
 #include <limits.h>
-#include <stdint.h>
 #include <openssl/rand.h>
 
 
@@ -109,47 +108,120 @@ uint32_t random_uint32_t(uint32_t upper_bound) {
   return u.i % upper_bound;
 }
 
-/* Generates a random integer in interval [from, to] (inclusive). */
-int32_t number(int32_t from, int32_t to) {
+/*
+Generates a random integer in interval [from, to] (inclusive).
+
+The 'mode' parameter allows for the normal value, minimum value, maximum value,
+or the average value to be returned.
+
+Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
+*/
+int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
   if (from > to) {
     int32_t temp = from;
     from = to;
     to = temp;
   }
 
-  return random_uint32_t((to - from) + 1) + from;
+  int32_t result = 0;
+
+  switch (mode) {
+    case RND_MIN:
+      result = from;
+      break;
+    case RND_MAX:
+      result = to;
+      break;
+    case RND_AVG:
+      result = (from * to) / 2;
+      break;
+    default:
+      result = random_uint32_t((to - from) + 1) + from;
+      break;
+  }
+
+  /*char buf[MIL];
+  sprintf(buf, "%d\n\r", result);
+  DESC *listener_desc;
+  CHAR *listener;
+  for (listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
+    listener = listener_desc->character;
+
+    if (!listener) continue;
+
+    if (!listener->desc->connected) {
+      send_to_char(buf, listener);
+    }
+  }*/
+
+  return result;
 }
 
-/* Returns true based on the odds out of 100 of success. */
-bool chance(int num) {
-  if (number(1, 100) <= num) return TRUE;
-  return FALSE;
+/* Generates a random integer in interval [from, to] (inclusive). */
+int32_t number(int32_t from, int32_t to) {
+  return number_ex(from, to, RND_NRM);
+}
+
+/*
+Simulates a dice roll.
+
+The 'mode' parameter allows for the normal value, minimum value, maximum value,
+or the average value to be returned.
+
+Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
+*/
+int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode) {
+  if ((num_dice < 1) || (size_dice < 1)) return 0;
+
+  int64_t result = 0;
+
+  switch (mode) {
+    case RND_MIN:
+      result = num_dice;
+      break;
+    case RND_MAX:
+      result = num_dice * size_dice;
+      break;
+    case RND_AVG:
+      result = (num_dice * (size_dice + 1)) / 2;
+      break;
+    default:
+      for (int32_t r = 1; r <= num_dice; r++) {
+        result += number(1, size_dice);
+      }
+      break;
+  }
+
+  if (result > INT_MAX) {
+    result = INT_MAX;
+  }
+
+  return (int32_t)result;
 }
 
 /* Simulates a dice roll. */
-int dice(int num_dice, int size_dice) {
-  if (num_dice < 1 || size_dice < 1) return 0;
-
-  int sum = 0;
-
-  for (int r = 1; r <= num_dice; r++) {
-    if ((INT32_MAX - sum) < 0) return INT_MAX;
-
-    sum += number(1, size_dice);
-  }
-
-  return sum;
+int32_t dice(int32_t num_dice, int32_t size_dice) {
+  return dice_ex(num_dice, size_dice, RND_NRM);
 }
 
-/* End New RNG Section */
+/* Returns true based on the odds out of 100 of success. */
+bool chance(int32_t num) {
+  if (number(1, 100) <= num) return TRUE;
 
-int MIN(int a, int b) {
+  return FALSE;
+}
+
+/* Returns the number with the lowest value. */
+int32_t MIN(int32_t a, int32_t b) {
   return a < b ? a : b;
 }
 
-int MAX(int a, int b) {
+/* Returns the number with the highest value. */
+int32_t MAX(int32_t a, int32_t b) {
   return a > b ? a : b;
 }
+
+/* End New RNG Section */
 
 char *PERS(CHAR *ch, CHAR*vict)
 {
@@ -1619,9 +1691,14 @@ int CAN_SEE(struct char_data *ch,struct char_data *vict) {
   return TRUE;
 }
 
-int CAN_TAKE(struct char_data *ch,struct obj_data *obj) {
-  if(!IS_SET(obj->obj_flags.wear_flags, ITEM_TAKE)) return FALSE;
-  if(IS_NPC(ch) && IS_SET(obj->obj_flags.extra_flags2, ITEM_NO_TAKE_MOB)) return FALSE;
+int CAN_TAKE(struct char_data *ch, struct obj_data *obj) {
+  if (!ch || !obj) return FALSE;
+
+  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
+      (IS_NPC(ch) && IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_NO_TAKE_MOB))) {
+    return FALSE;
+  }
+
   return TRUE;
 }
 
@@ -1901,4 +1978,21 @@ void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
       array[i][1] = t1;
     }
   }
+}
+
+
+int MAX_PRAC(CHAR *ch) {
+  if (!ch || IS_NPC(ch) || !(ch->skills)) return 0;
+
+  switch (GET_CLASS(ch)) {
+    case CLASS_MAGIC_USER:
+    case CLASS_CLERIC:
+      return 95;
+    case CLASS_AVATAR:
+      return 100;
+    default:
+      return 85;
+  }
+
+  return 0;
 }

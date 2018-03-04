@@ -17,12 +17,7 @@ typedef struct descriptor_data DESC;
 typedef struct follow_type FOL;
 
 /* Common external variables */
-int MIN(int a, int b);
-int MAX(int a, int b);
-int number(int from, int to) ;
-bool chance(int num);
 bool breakthrough(CHAR *ch, CHAR *vict,int btype);
-int dice(int number, int size) ;
 char *str_dup(char *source);
 
 void WAIT_STATE(CHAR *ch,int cycle);
@@ -146,5 +141,26 @@ int get_random_set_bit_from_mask(const int mask);
 
 void shuffle_int_array(int *array, size_t num_elems);
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems);
+
+/* Begin New RNG Section */
+
+#define RND_NRM 0
+#define RND_MIN 1
+#define RND_MAX 2
+#define RND_AVG 3
+
+int32_t number_ex(int32_t from, int32_t to, int32_t mode);
+int32_t number(int32_t from, int32_t to);
+int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode);
+int32_t dice(int32_t num_dice, int32_t size_dice);
+bool chance(int32_t num);
+int32_t MIN(int32_t a, int32_t b);
+int32_t MAX(int32_t a, int32_t b);
+
+/* End New RNG Section */
+
+#define SKILL_MAX_PRAC 85
+
+int MAX_PRAC(CHAR *ch);
 
 #endif

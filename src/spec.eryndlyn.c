@@ -457,7 +457,7 @@ int sentry_three(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   }
   if(!cmd && mob->specials.fighting) {
     if(!(vict=get_random_victim(mob)) || number(0,5)) return FALSE;
-    act("With a chilling scream, $n rips a huge gash in $N's gut!",0,mob,0,vict,TO_ROOM);
+    act("With a chilling scream, $n rips a huge gash in $N's gut!",0,mob,0,vict,TO_NOTVICT);
     act("With a chilling scream, you rip a huge gash in $N's gut!",0,mob,0,vict,TO_CHAR);
     act("With a chilling scream, $n rips a huge gash in your gut!",0,mob,0,vict,TO_VICT);
     damage(mob,vict,100,TYPE_UNDEFINED,DAM_NO_BLOCK);

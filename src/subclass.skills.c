@@ -41,6 +41,35 @@ int stack_position(CHAR *ch, int target_position);
 void do_move(struct char_data *ch, char *argument, int cmd);
 void skill_wait(CHAR *ch, int skill, int wait);
 
+void do_awareness(CHAR *ch, char *argument, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_AWARENESS)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (affected_by_spell(ch, SKILL_AWARENESS)) {
+    affect_from_char(ch, SKILL_AWARENESS);
+
+    send_to_char("You relax and your sense of awareness fades.\n\r", ch);
+    act("$n relaxes and $s sense of awareness fades.", TRUE, ch, 0, 0, TO_ROOM);
+
+    return;
+  }
+
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_AWARENESS)) {
+    send_to_char("You are overwhelmed by your surroundings, nearly feeling less aware than before.\n\r", ch);
+  }
+  else {
+    affect_apply(ch, SKILL_AWARENESS, -1, 0, 0, 0, 0);
+
+    send_to_char("You become more aware of your surroundings, watching for danger.\n\r", ch);
+    act("$n becomes more aware of $s surroundings, watching for danger.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+}
+
 
 void do_meditate(CHAR *ch, char *argument, int cmd)
 {
@@ -134,10 +163,17 @@ void do_protect(CHAR *ch, char *argument, int cmd)
     return;
   }
 
+  if (IS_IMMORTAL(victim))
+  {
+    send_to_char("The gods laugh at the mere thought.\n\r", ch);
+
+    return;
+  }
+
   if (ch == victim)
   {
-    send_to_char("You just protect yourself.\n\r", ch);
-    act("$n just protects $mself.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_NOTVICT);
+    send_to_char("You now protect only yourself.\n\r", ch);
+    act("$n now protects only $mself.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_NOTVICT);
 
     if (GET_PROTECTEE(ch))
     {
@@ -747,6 +783,7 @@ void do_fade(CHAR *ch, char *argument, int cmd) {
     affect_from_char(ch, SKILL_FADE);
 
     send_to_char("You emerge from the background and into view.\n\r", ch);
+    act("$n emerges from the background and into view.", TRUE, ch, 0, 0, TO_ROOM);
 
     return;
   }
@@ -1014,6 +1051,12 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
+  if (victim == GET_OPPONENT(ch)) {
+    send_to_char("You cannot flank a target who is so focused on fighting you.\n\r", ch);
+
+    return;
+  }
+
   if (victim == ch) {
     send_to_char("Yeah... right... flank yourself...\n\r", ch);
 
@@ -1048,7 +1091,17 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
     damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
   }
   else {
-    hit(ch, victim, SKILL_FLANK);
+    if (GET_OPPONENT(ch)) {
+      act("$n turns suddenly, flanking $N deftly and swiftly.", 0, ch, 0, victim, TO_NOTVICT);
+      act("You turn suddenly, flanking $N deflty and swiftly.", 0, ch, 0, victim, TO_CHAR);
+      act("$n turns suddenly, flanking $N deftly and swifty.", 0, ch, 0, victim, TO_VICT);
+
+      stop_fighting(ch);
+      set_fighting(ch, victim);
+    }
+    else {
+      hit(ch, victim, SKILL_FLANK);
+    }
   }
 
   skill_wait(ch, SKILL_FLANK, 2);
@@ -1419,7 +1472,6 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
   CHAR *victim = NULL;
   int check = 0;
   int set_pos = 0;
-  int wait = 0;
 
   if (!GET_SKILLS(ch)) return;
 
@@ -1483,16 +1535,12 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
 
       damage(ch, victim, calc_position_damage(GET_POS(victim), 200), SKILL_HEADBUTT, DAM_PHYSICAL);
 
-      /* Can't use skill_wait() since this applies to victim. */
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
       }
     }
 
-    wait = number(1, 8);
-    wait = ((wait == 1) ? 1 : ((wait == 2 || wait == 3) ? 2 : 3));
-
-    skill_wait(ch, SKILL_HEADBUTT, wait);
+    skill_wait(ch, SKILL_HEADBUTT, 3);
   }
 }
 
@@ -1619,7 +1667,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   check = number(1, 101) - GET_WIS_APP(ch);
 
   /* Inner Peace */
-  if (check_subclass(ch, SC_MYSTIC, 2)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
     check -= 5;
   }
   

@@ -279,7 +279,7 @@ int mana_gain(CHAR *ch) {
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     gain = 1 - GET_MANA(ch);
 
     if (age(ch).year > 49) loss = -5;
@@ -298,12 +298,11 @@ int mana_gain(CHAR *ch) {
     return gain;
   }
 
-  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    /* Dark Pact */
+  year = age(ch).year;
+
+  /* Dark Pact */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
     year = 45; /* 45 is is right in the sweet spot. */
-  }
-  else {
-    year = age(ch).year;
   }
 
   gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
@@ -320,8 +319,8 @@ int mana_gain(CHAR *ch) {
 
     case CLASS_ANTI_PALADIN:
     case CLASS_COMMANDO:
-      if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        /* Dark Pact */
+      /* Dark Pact */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
         if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
           gain += 3;
         }
@@ -406,8 +405,8 @@ int mana_gain(CHAR *ch) {
       case CLASS_BARD:
       case CLASS_COMMANDO:
       case CLASS_NINJA:
-        if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          /* Dark Pact */
+        /* Dark Pact */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
           if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
             gain += 5;
           }
@@ -425,7 +424,7 @@ int mana_gain(CHAR *ch) {
   }
 
   /* Bathed in Blood */
-  if (check_subclass(ch, SC_DEFILER, 4)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 4)) {
     if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
       double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
 
@@ -436,7 +435,7 @@ int mana_gain(CHAR *ch) {
   }
 
   /* Inner Peace */
-  if (check_subclass(ch, SC_MYSTIC, 2)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
     gain += 10;
   }
 
@@ -473,7 +472,7 @@ int hit_gain(CHAR *ch) {
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
-      if (check_subclass(ch, SC_RONIN, 3)) {
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
         gain /= 4;
       }
       else {
@@ -497,7 +496,7 @@ int hit_gain(CHAR *ch) {
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     gain = 1 - GET_HIT(ch);
 
     if (age(ch).year > 49) loss = -5;
@@ -510,23 +509,22 @@ int hit_gain(CHAR *ch) {
     gain = MAX(gain, loss);
     gain = MIN(gain, 0);
 
-    if (check_subclass(ch, SC_WARLORD, 2) &&
-      ch->specials.fighting) {
-      gain += 50;
-    }
-
     gain += equipment_regen(ch, HP_REGEN);
     gain += spell_regen(ch, HP_REGEN);
+
+    /* Awareness */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
+      gain += 2 * GET_LEVEL(ch);
+    }
 
     return gain;
   }
 
-  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    /* Dark Pact */
+  year = age(ch).year;
+
+  /* Dark Pact */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
     year = 45; /* 45 is is right in the sweet spot. */
-  }
-  else {
-    year = age(ch).year;
   }
 
   gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
@@ -534,11 +532,11 @@ int hit_gain(CHAR *ch) {
   gain *= 2;
 
   switch (GET_CLASS(ch)) {
+    case CLASS_WARRIOR:
     case CLASS_NOMAD:
       gain += 4;
       break;
 
-    case CLASS_WARRIOR:
     case CLASS_COMMANDO:
       gain += 3;
       break;
@@ -547,8 +545,8 @@ int hit_gain(CHAR *ch) {
     case CLASS_ANTI_PALADIN:
     case CLASS_BARD:
     case CLASS_NINJA:
-      if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        /* Dark Pact */
+      /* Dark Pact */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
         if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
           gain += 2;
         }
@@ -600,17 +598,12 @@ int hit_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 3)) {
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       gain /= 4;
     }
     else {
       gain /= 8;
     }
-  }
-
-  if (check_subclass(ch, SC_WARLORD, 3) &&
-    ch->specials.fighting) {
-    gain += 50;
   }
 
   gain += 4 * con_app[GET_CON(ch)].regen;
@@ -631,8 +624,8 @@ int hit_gain(CHAR *ch) {
       case CLASS_AVATAR:
       case CLASS_BARD:
       case CLASS_COMMANDO:
-        if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          /* Dark Pact */
+        /* Dark Pact */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
           if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
             gain += 5;
           }
@@ -649,6 +642,12 @@ int hit_gain(CHAR *ch) {
     }
   }
 
+  /* Awareness */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
+    gain += 2 * GET_LEVEL(ch);
+  }
+
+  /* Tranquility */
   if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
     gain *= 1.2;
   }
@@ -683,23 +682,22 @@ int move_gain(CHAR *ch) {
   }
 
   if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-    (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
-    (!check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
+       !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
     return 5;
   }
 
+  year = age(ch).year;
+
+  /* Dark Pact */
   if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    /* Dark Pact */
     year = 45; /* 45 is is right in the sweet spot. */
-  }
-  else {
-    year = age(ch).year;
   }
 
   gain = graf(year, 18, 21, 24, 26, 24, 21, 18);
 
-  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    /* Dark Pact */
+  /* Dark Pact */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
     if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
       gain += 10;
     }
@@ -733,7 +731,7 @@ int move_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 3)) {
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       gain /= 2;
     }
     else {
@@ -971,11 +969,9 @@ void gain_condition(CHAR *ch, int condition, int value)
   GET_COND(ch, condition) = MAX(GET_COND(ch, condition), 0);
   GET_COND(ch, condition) = MIN(GET_COND(ch, condition), 24);
 
-  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    /* Dark Pact */
-    if (GET_COND(ch, condition) == 0) {
-      GET_COND(ch, condition) = -1;
-    }
+  /* Dark Pact */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch) && (GET_COND(ch, condition) == 0)) {
+    GET_COND(ch, condition) = -1;
   }
 
   if (GET_COND(ch, condition) == 0)
@@ -1168,7 +1164,7 @@ void point_update(void)
             mana_regen_cap = 90;
 
             /* Inner Peace */
-            if (check_subclass(ch, SC_MYSTIC, 2)) {
+            if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
               mana_regen_cap += 10;
             }
             break;

@@ -1630,853 +1630,6 @@ int he_block(int room, CHAR *ch, int cmd, char *arg)
 	return FALSE;
 }
 
-/* ISA */
-/*
-  spec.isa.c - Specs for ISAHall, by NightBoba
-
-  Written by Alan K. Miles for RoninMUD
-  Last Modification Date: 01/30/2003
-*/
-
-/* Defines */
-
-/* Rooms*/
-#define TEMPLE              3001
-#define MARKET_SQUARE       3014
-
-#define PATH_OF_DIVINITY    27850
-#define GINZUISHOU_ROAD     27853
-#define ASSASSINS_PARADISE  27844
-#define ICE_PALACE          27857
-#define TUNNEL_OF_ROOTS     27872
-
-#define FERRY               27899
-
-#define STAR_WARS           27876
-/* Mobiles */
-#define PALADIN             27810
-#define PRIEST              27811
-#define DOJO_MASTER         27814
-#define MAGE                27813
-
-#define BAKER               27802
-#define SCROLLMASTER        27800
-#define FERRYMASTER         27821
-#define CLAN_GUARD          27820
-#define MAINLAND            27828
-#define ISLAND              27827
-
-
-/* Objects */
-
-
-#define MIRROR              27840
-#define ICEFRUIT            27830
-#define SNOWBERRY           27831
-#define GHOST_APPLE         27832
-
-#define AZURE_POPPY         27833
-#define DRAGONFLOWER        27834
-#define RAZOR_THISTLE       27835
-
-#define BAD_ICEFRUIT        27810
-#define BAD_SNOWBERRY       27810
-#define BAD_GHOST_APPLE     27810
-
-
-/* Mobile Specs */
-
-/* Paladin Spec */
-int paladin_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-    if(!chance(20)) return FALSE;
-
-    if(IS_GOOD(ch))
-    {
-      act("$n, an old leathery Paladin looks at $N and nods $s head approvingly.", FALSE, mob, 0, ch, TO_ROOM);
-      act("$n, an old leathery Paladin looks at you and nods $s head approvingly.", FALSE, mob, 0, ch, TO_VICT);
-      act("You look at $N and nod your head approvingly.", FALSE, mob, 0, ch, TO_CHAR);
-
-      if(GET_AGE(ch) < GET_AGE(mob))
-      {
-        do_say(mob, "Good luck on yer travels young 'un.", CMD_SAY);
-
-        return FALSE;
-      }
-      else
-      {
-        do_say(mob, "Good luck on yer travels.", CMD_SAY);
-
-        return FALSE;
-      }
-
-      return FALSE;
-    }
-    else if(IS_EVIL(ch))
-    {
-      act("$n, an old leathery Paladin looks at $N and shakes $s head disapprovingly.", FALSE, mob, 0, ch, TO_ROOM);
-      act("$n, an old leathery Paladin looks at you and shakes $s head disapprovingly.", FALSE, mob, 0, ch, TO_VICT);
-      act("You look at $N and shake your head disapprovingly.", FALSE, mob, 0, ch, TO_CHAR);
-
-      return FALSE;
-    }
-    else
-    {
-      act("$n, an old leathery Paladin looks at $N and scratches $s head and shrugs.", FALSE, mob, 0, ch, TO_ROOM);
-      act("$n, an old leathery Paladin looks at you and scratches $s head and shrugs.", FALSE, mob, 0, ch, TO_VICT);
-      act("You look at $N and scratch your head and shrug.", FALSE, mob, 0, ch, TO_CHAR);
-
-      return FALSE;
-    }
-  }
-
-  return FALSE;
-}
-
-/* Priest Spec */
-int priest_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-    if(!chance(20)) return FALSE;
-
-    do_say(mob, "Welcome to this sanctuary.  May you find the solace that you desire.", CMD_SAY);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Dojo Master Spec */
-int dojo_master_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_MOBACT)
-  {
-    if(!GET_OPPONENT(ch)) return FALSE;
-
-    if(GET_HIT(mob) < (GET_MAX_HIT(mob) / 10))
-    {
-      stop_fighting(mob);
-      stop_fighting(ch);
-
-      do_say(mob, "That is enough for this session.  Challenge me again any time.", CMD_SAY);
-
-      GET_HIT(mob) = GET_MAX_HIT(mob);
-
-      return FALSE;
-    }
-
-    switch(number(0, 9))
-    {
-      case(0):
-      {
-        do_say(mob, "You must try harder!  Focus... you must become one with your weapon.", CMD_SAY);
-
-        return FALSE;
-      }
-      case(1):
-      {
-        do_say(mob, "That's it!  You're learning!", CMD_SAY);
-
-        return FALSE;
-      }
-      default:
-      {
-        return FALSE;
-      }
-    }
-  }
-
-  return FALSE;
-}
-
-/* Baker Spec */
-int baker_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-
-    do_say(mob, "Good Day friend, how may I help you?", CMD_SAY);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Scrollmaster Spec */
-int scrollmaster_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-
-    act("An abrupt sneeze comes from behind a pile of scrolls off in one corner.", FALSE, mob, 0, 0, TO_ROOM);
-    act("You sneeze violently!", FALSE, mob, 0, 0, TO_CHAR);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Mage Spec */
-int mage_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-    if(!chance(10)) return FALSE;
-
-    act("$n eyes $N suspiciously.", FALSE, mob, 0, ch, TO_ROOM);
-    act("$n eyes you suspiciously.", FALSE, mob, 0, ch, TO_VICT);
-    act("You eye $N suspiciously.", FALSE, mob, 0, ch, TO_CHAR);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Clan Guard Spec */
-int clan_guard_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == CMD_WEST)
-  {
-    if(!ch) return FALSE;
-
-    if(IS_NPC(ch) || !(ch->ver3.clan_num == 16))
-    {
-      act("$n blocks $N's way and pushes $M back!", TRUE, mob, 0, ch, TO_NOTVICT);
-      act("$n blocks your way and pushes you back!", FALSE, mob, 0, ch, TO_VICT);
-      act("You bock $N's way and push $M back!", FALSE, mob, 0, ch, TO_CHAR);
-
-      return TRUE;
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Ferrymaster Spec */
-int ferrymaster_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
-  static int timer = 0;
-  static int dock = 0;
-
-  if(cmd == MSG_TICK)
-  {
-    if(CHAR_REAL_ROOM(mob) != FERRY) return FALSE;
-
-    if(timer > 0)
-    {
-      timer--;
-
-      if(chance(5))
-      {
-        act("$n scampers over to one of $s cannons and sets off the charge!", TRUE, mob, 0, 0, TO_ROOM);
-        act("You scamper over to one of your cannons and set off the charge!", FALSE, mob, 0, 0, TO_CHAR);
-        send_to_room("BOOM!!!\r\n", CHAR_REAL_ROOM(mob));
-        do_say(mob, "DEATH FROM ABOVE!", CMD_SAY);
-
-        if(number(0, 1))
-        {
-          send_to_room("A volley of pink flowers and confetti is shot out to the mainland!", CHAR_REAL_ROOM(mob));
-          send_to_room("You are pelted by pink flowers and confetti as they are shot out at you from\r\n"
-                       "the the ship's cannons!\r\n", real_room(MAINLAND));
-
-          return FALSE;
-        }
-        else
-        {
-          send_to_room("A volley of pink flowers and confetti is shot out to the island!", CHAR_REAL_ROOM(mob));
-          send_to_room("You are pelted by pink flowers and confetti as they are shot out at you from\r\n"
-                       "the the ship's cannons!\r\n", real_room(ISLAND));
-
-          return FALSE;
-        }
-
-        return FALSE;
-      }
-
-      return FALSE;
-    }
-    else
-    {
-      if(world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r == real_room(MAINLAND))
-      {
-        send_to_room("The ferry pulls away from the shore, heading for the island.", real_room(MAINLAND));
-        send_to_room("The ferry pulls away from the shore, heading for the island.", CHAR_REAL_ROOM(mob));
-        do_say(mob, "Arr me mateys! We be under way to the island!", CMD_SAY);
-        act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
-
-        world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r = 0;
-
-        timer = number(1, 3);
-        dock = ISLAND;
-
-        return FALSE;
-      }
-      else if(world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r == real_room(ISLAND))
-      {
-        send_to_room("The ferry pulls away from the shore, heading for the mainland.", real_room(MAINLAND));
-        send_to_room("The ferry pulls away from the shore, heading for the mainland.", CHAR_REAL_ROOM(mob));
-        do_say(mob, "Avast ye land lubbers! We be ashore swiftly!", CMD_SAY);
-        act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
-
-        world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r = 0;
-
-        timer = number(1, 3);
-        dock = MAINLAND;
-
-        return FALSE;
-      }
-      else
-      {
-        if(dock == MAINLAND)
-        {
-          send_to_room("The ferry pulls up to the shore.", real_room(MAINLAND));
-          send_to_room("The ferry pulls up to the shore.", CHAR_REAL_ROOM(mob));
-          do_say(mob, "Land ho! Fortress is just a hop, skip and a jump to the east!", CMD_SAY);
-          act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
-          act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
-
-          world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r = real_room(MAINLAND);
-
-          return FALSE;
-        }
-        else
-        {
-          send_to_room("The ferry pulls up to the shore.", real_room(ISLAND));
-          send_to_room("The ferry pulls up to the shore.", CHAR_REAL_ROOM(mob));
-          do_say(mob, "We're gonna crash!!! Hehehe... just kidding.  ISA Castle is to the east!", CMD_SAY);
-          act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
-          act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
-
-          world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r = real_room(ISLAND);
-
-          return FALSE;
-        }
-
-        return FALSE;
-      }
-
-      return FALSE;
-    }
-
-    return FALSE;
-  }
-
-  if(cmd == MSG_MOBACT)
-  {
-    if(count_mortals_real_room(CHAR_REAL_ROOM(mob)) < 1) return FALSE;
-    if(CHAR_REAL_ROOM(mob) != FERRY) return FALSE;
-
-    switch(number(0, 19))
-    {
-      case(0):
-      {
-        do_say(mob, "Ho hum... This pirate game got boring, but now its my job!", CMD_SAY);
-        act("$n sighs.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You sigh.", FALSE, mob, 0, 0, TO_CHAR);
-      }
-      case(1):
-      {
-        do_say(mob, "I'm a very womanly pirate!", CMD_SAY);
-        act("$n twitches $s mustache.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You twitch your mustache.", FALSE, mob, 0, 0, TO_CHAR);
-      }
-      case(2):
-      {
-        do_say(mob, "Now where did I put my grog?", CMD_SAY);
-        act("$n burps.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You burps.", FALSE, mob, 0, 0, TO_CHAR);
-      }
-      case(3):
-      {
-        do_say(mob, "I finally found a good, long pole...", CMD_SAY);
-        act("$n eyes the ship's mast.", TRUE, mob, 0, 0, TO_ROOM);
-        act("You eye the ship's mast.", FALSE, mob, 0, 0, TO_CHAR);
-      }
-      case(4):
-      {
-         do_say(mob, "I'm sooo hungry!  Would you mind if I gnawed on you?", CMD_SAY);
-         act("$n licks $s lips hungrily.", TRUE, mob, 0, 0, TO_ROOM);
-         act("You lick your lips hungrily.", FALSE, mob, 0, 0, TO_CHAR);
-      }
-      default:
-      {
-        return FALSE;
-      }
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-
-/* Object Specs */
-
-/* Mirror Spec */
-int mirror_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-  char buf[MIL];
-
-  if(cmd == CMD_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-    if(!AWAKE(ch)) return FALSE;
-
-    one_argument(arg, buf);
-
-    if(!*buf) return FALSE;
-    if(!isname(buf, OBJ_NAME(obj))) return FALSE;
-
-    if(ch->specials.riding)
-    {
-      send_to_char("Dismount first.\r\n", ch);
-
-      return TRUE;
-    }
-
-    act("$n enters the mirror and disappears!", TRUE, ch, 0, 0, TO_ROOM);
-    act("You enter the mirror and disappear!", FALSE, ch, 0, 0, TO_CHAR);
-    char_from_room(ch);
-    char_to_room(ch, real_room(STAR_WARS));
-    act("$n appears in the room suddenly!", TRUE, ch, 0, 0, TO_ROOM);
-    do_look(ch, "", CMD_LOOK);
-
-    return TRUE;
-  }
-
-  return FALSE;
-}
-
-/* Fruit Spec */
-int fruit_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_TICK)
-  {
-    if(((OBJ_SPEC(obj) > 36) || (OBJ_SPEC(obj) < 36)) && (OBJ_SPEC(obj) != 0))
-    {
-      OBJ_SPEC(obj)--;
-
-      return FALSE;
-    }
-    else if(OBJ_SPEC(obj) == 36)
-    {
-      act("$p rots and turns bad!", FALSE, 0, obj, 0, TO_ROOM);
-
-      switch(V_OBJ(obj))
-      {
-        case(ICEFRUIT):
-        {
-          obj = read_object(BAD_ICEFRUIT, REAL);
-
-          return FALSE;
-          break;
-        }
-        case(SNOWBERRY):
-        {
-          obj = read_object(BAD_SNOWBERRY, REAL);
-
-          return FALSE;
-          break;
-        }
-        case(GHOST_APPLE):
-        {
-          obj = read_object(BAD_GHOST_APPLE, REAL);
-
-          return FALSE;
-          break;
-        }
-        default:
-        {
-          return FALSE;
-        }
-      }
-
-      return FALSE;
-    }
-    else
-    {
-      act("$p decays into a brown mush and then disintegrates.", FALSE, 0, obj, 0, TO_ROOM);
-      extract_obj(obj);
-
-      return FALSE;
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Flower Spec */
-int flower_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-
-  if(cmd == MSG_TICK)
-  {
-    if(obj->carried_by)
-    {
-      act("$p wilts and dies, having been picked.", FALSE, 0, obj, 0, TO_ROOM);
-      extract_obj(obj);
-
-      return FALSE;
-    }
-
-    if(OBJ_SPEC(obj) > 0)
-    {
-      OBJ_SPEC(obj)--;
-
-      return FALSE;
-    }
-    else
-    {
-      switch(V_OBJ(obj))
-      {
-        case(AZURE_POPPY):
-        {
-          act("$p melts away as its lifecycle runs out.", FALSE, 0, obj, 0, TO_ROOM);
-          extract_obj(obj);
-
-          return FALSE;
-          break;
-        }
-        case(DRAGONFLOWER):
-        {
-          act("$p slumps to the ground as its lifeless stem can no longer hold it up.", FALSE, 0, obj, 0, TO_ROOM);
-          extract_obj(obj);
-
-          return FALSE;
-          break;
-        }
-        case(RAZOR_THISTLE):
-        {
-          act("$p loses all of its spines and turns brown as it dies away.", FALSE, 0, obj, 0, TO_ROOM);
-          extract_obj(obj);
-
-          return FALSE;
-          break;
-        }
-        default:
-        {
-          return FALSE;
-        }
-      }
-
-      return FALSE;
-    }
-  }
-
-  return FALSE;
-}
-
-
-/* Room Specs */
-
-/* Path of Divinity Spec */
-int path_of_divinity_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_TICK)
-  {
-    if(count_mortals_real_room(room) < 1) return FALSE;
-    if(!chance(10)) return FALSE;
-
-    send_to_room("A loud crack sounds in the distance as a limb that can no longer bear the\r\n"
-                 "weight of snow and ice succumbs to gravity and crashes to the ground.\r\n", room);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Ginzuishou Road Spec */
-int ginzuishou_road_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-
-    send_to_char("You feel hidden eyes upon you, watching your every move.\r\n", ch);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Ice Palace Spec */
-int ice_palace_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_TICK)
-  {
-    if(count_mortals_real_room(room) < 1) return FALSE;
-    if(!chance(25)) return FALSE;
-
-    if(number(0, 1))
-    {
-      send_to_room("An audience member shakes his head in disgust and gets up to leave the arena.\r\n", room);
-
-      return FALSE;
-    }
-    else
-    {
-      send_to_room("An audience member shakes her head in disgust and gets up to leave the arena.\r\n", room);
-
-      return FALSE;
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Tunnel of Roots Spec */
-int tunnel_of_roots_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  if(cmd == MSG_TICK)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-
-    send_to_char("A tiny worm tries to burrow a nest into your skin... Ick!\r\n", ch);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Assassin's Paradise Spec */
-int assassins_paradise_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  OBJ *tmp = NULL;
-
-  if(cmd == MSG_ENTER)
-  {
-    if(!ch) return FALSE;
-    if(IS_NPC(ch)) return FALSE;
-
-    if(!(tmp = ch->equipment[WEAR_ABOUT])) return FALSE;
-    if(!isname(OBJ_NAME(tmp), "cloak")) return FALSE;
-
-    send_to_char("A small gnome fades in from the shadows.\r\n"
-                 "Qualimere says, 'May I take your cloak master?'\r\n"
-                 "Without waiting for a reply he snatches your cloak and scampers away into the shadows!\r\n"
-                 "A moment later you hear a loud crash and a series of muffled curses.\r\n"
-                 "Your cloak floats out of the darkness and lands at your feet.\r\n", ch);
-
-    equip_char(ch, tmp, WEAR_ABOUT);
-    obj_from_char(tmp);
-    obj_to_room(tmp, room);
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Fruit Spec */
-int fruit_room_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  int type = ICEFRUIT;
-  int i,num = 0;
-
-  OBJ *fruit[8];
-
-  if(cmd == MSG_ZONE_RESET)
-  {
-    if((time_info.month < 3) || (time_info.month > 10))
-    {
-      type = ICEFRUIT;
-      num = number(0, 3);
-    }
-    else if ((time_info.month > 2) && (time_info.month < 7))
-    {
-      type = SNOWBERRY;
-      num = number(2, 8);
-    }
-    else
-    {
-      type = GHOST_APPLE;
-      num = number(1, 5);
-    }
-
-    for(i = 0; i < num; i++)
-    {
-      fruit[i] = read_object(type, VIRTUAL);
-      OBJ_SPEC(fruit[i]) = 72;
-
-      obj_to_room(fruit[i], room);
-      act("$p reaches ripeness and falls to the ground.", FALSE, 0, fruit[i], 0, TO_ROOM);
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-/* Flower Spec */
-int flower_room_spec(int room, CHAR *ch, int cmd, char *arg)
-{
-  int type = ICEFRUIT;
-  int i,num = 0;
-  static int blooming = FALSE;
-
-  OBJ *flower[8];
-  OBJ *tmp = NULL, *next_content = NULL;
-
-  if(cmd == MSG_ZONE_RESET)
-  {
-    if((time_info.month < 3) || (time_info.month > 10))
-    {
-      type = AZURE_POPPY;
-      num = number(0, 2);
-    }
-    else if ((time_info.month > 2) && (time_info.month < 7))
-    {
-      type = DRAGONFLOWER;
-      num = number(3, 8);
-    }
-    else
-    {
-      type = RAZOR_THISTLE;
-      num = number(1, 3);
-    }
-
-    for(i = 0; i < num; i++)
-    {
-      flower[i] = read_object(type, VIRTUAL);
-      OBJ_SPEC(flower[i]) = 288;
-
-      obj_to_room(flower[i], room);
-      act("$p sprouts from the ground in a brilliant display of life.", FALSE, 0, flower[i], 0, TO_ROOM);
-    }
-
-    if(cmd == MSG_TICK)
-    {
-      if(IS_DAY)
-      {
-        if(blooming)
-        {
-          for(tmp = world[room].contents; tmp; tmp = next_content)
-          {
-            next_content = tmp->next_content;
-
-            if((V_OBJ(tmp) == AZURE_POPPY) || (V_OBJ(tmp) == DRAGONFLOWER))
-            {
-              act("$p reveals its petals and soaks in the light.", FALSE, 0, tmp, 0, TO_ROOM);
-            }
-          }
-
-          blooming = FALSE;
-
-          return FALSE;
-        }
-        else
-        {
-          return FALSE;
-        }
-      }
-      else
-      {
-        if(blooming)
-        {
-          return FALSE;
-        }
-        else
-        {
-          for(tmp = world[room].contents; tmp; tmp = next_content)
-          {
-            next_content = tmp->next_content;
-
-            if((V_OBJ(tmp) == AZURE_POPPY) || (V_OBJ(tmp) == DRAGONFLOWER))
-            {
-              act("$p wilts and closes its petals as the light fades.", FALSE, 0, tmp, 0, TO_ROOM);
-            }
-          }
-
-          blooming = TRUE;
-
-          return FALSE;
-        }
-
-        return FALSE;
-      }
-
-      return FALSE;
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-#define TALISMAN 27800
-#define TEMPLE 3001
-#define MARKET 3014
-#define ISA_HALL 27801
-
-int talisman_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-  CHAR *owner, *vict;
-
-  if(cmd != CMD_USE) return FALSE;
-  if(!(owner = obj->carried_by)) return FALSE;
-  if((vict = owner->specials.fighting))
-  {
-    act("$p pulses with energy but fizzles and nothing happens!", TRUE, owner, obj, 0, TO_ROOM);
-    act("$p pulses with energy but fizzles and nothing happens!", FALSE, owner, obj, 0, TO_CHAR);
-    send_to_char("(Temple recall items may only be used outside of combat.)\r\n",owner);
-
-    return TRUE;
-  }
-  if((V_ROOM(owner) != TEMPLE) || (V_ROOM(owner) != MARKET))
-  {
-    act("$p pulses with energy but fizzles and nothing happens!", TRUE, owner, obj, 0, TO_ROOM);
-    act("$p pulses with energy but fizzles and nothing happens!", FALSE, owner, obj, 0, TO_CHAR);
-    send_to_char("(Temple recall items may only be used at Temple of Midgaard and Market Square.)\r\n",owner);
-
-    return TRUE;
-  }
-
-  act("$n opens a small portal with $s $p, steps through, and dissapears!", TRUE, owner, obj, 0, TO_ROOM);
-  act("You open a small portal with your $p, step through, and dissapear!", FALSE, owner, obj, 0, TO_CHAR);
-
-  char_from_room(owner);
-  char_to_room(owner, real_room(ISA_HALL));
-  do_look(owner, "", CMD_LOOK);
-
-  act("A small portal appears in the middle of the room and out of it steps $n!", FALSE, owner, obj, 0, TO_ROOM);
-
-  return TRUE;
-}
-
 /*
 ** Unicorns
 */
@@ -2528,6 +1681,695 @@ static int bud_entrance(int room, CHAR *ch, int cmd, char *arg) {
   world[room].dir_option[UP] = o_dir;
 
   open = FALSE;
+
+  return TRUE;
+}
+
+
+/* ISA */
+/*
+  spec.isa.c - Specs for ISAHall, by NightBoba
+
+  Written by Alan K. Miles for RoninMUD
+  Last Modification Date: 01/30/2003
+*/
+
+/* Defines */
+
+#define ISA_CLAN_NUM        16
+
+
+/* Rooms*/
+#define TEMPLE              3001
+#define MARKET_SQUARE       3014
+
+#define PATH_OF_DIVINITY    27850
+#define GINZUISHOU_ROAD     27853
+#define ASSASSINS_PARADISE  27844
+#define ICE_PALACE          27857
+#define TUNNEL_OF_ROOTS     27872
+
+#define FERRY               27899
+
+#define STAR_WARS           27876
+
+
+/* Mobiles */
+#define PALADIN             27810
+#define PRIEST              27811
+#define DOJO_MASTER         27814
+#define MAGE                27813
+
+#define BAKER               27802
+#define SCROLLMASTER        27800
+#define FERRYMASTER         27821
+#define CLAN_GUARD          27820
+#define MAINLAND            27828
+#define ISLAND              27827
+
+
+/* Objects */
+#define MIRROR              27840
+#define ICEFRUIT            27830
+#define SNOWBERRY           27831
+#define GHOST_APPLE         27832
+
+#define AZURE_POPPY         27833
+#define DRAGONFLOWER        27834
+#define RAZOR_THISTLE       27835
+
+#define BAD_ICEFRUIT        27810
+#define BAD_SNOWBERRY       27810
+#define BAD_GHOST_APPLE     27810
+
+
+/* Mobile Specs */
+
+/* Paladin Spec */
+int paladin_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(20)) return FALSE;
+
+    if (IS_GOOD(ch)) {
+      act("$n looks at $N and nods $s head approvingly.", FALSE, mob, 0, ch, TO_NOTVICT);
+      act("$n looks at you and nods $s head approvingly.", FALSE, mob, 0, ch, TO_VICT);
+      act("You look at $N and nod your head approvingly.", FALSE, mob, 0, ch, TO_CHAR);
+
+      if (GET_AGE(ch) < GET_AGE(mob)) {
+        do_say(mob, "Good luck on yer travels, young 'un.", CMD_SAY);
+      }
+      else {
+        do_say(mob, "Good luck on yer travels.", CMD_SAY);
+      }
+    }
+    else if (IS_EVIL(ch)) {
+      act("$n looks at $N and shakes $s head disapprovingly.", FALSE, mob, 0, ch, TO_NOTVICT);
+      act("$n looks at you and shakes $s head disapprovingly.", FALSE, mob, 0, ch, TO_VICT);
+      act("You look at $N and shake your head disapprovingly.", FALSE, mob, 0, ch, TO_CHAR);
+    }
+    else {
+      act("$n looks at $N and scratches $s head and shrugs.", FALSE, mob, 0, ch, TO_NOTVICT);
+      act("$n looks at you and scratches $s head and shrugs.", FALSE, mob, 0, ch, TO_VICT);
+      act("You look at $N and scratch your head and shrug.", FALSE, mob, 0, ch, TO_CHAR);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Priest Spec */
+int priest_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(20)) return FALSE;
+
+    do_say(mob, "Welcome to this sanctuary.  May you find the solace that you desire.", CMD_SAY);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Dojo Master Spec */
+int dojo_master_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_MOBACT) {
+    if (!GET_OPPONENT(ch)) return FALSE;
+
+    if (GET_HIT(mob) < (GET_MAX_HIT(mob) / 10)) {
+      stop_fighting(mob);
+      stop_fighting(ch);
+
+      do_say(mob, "That is enough for this session.  Challenge me again any time.", CMD_SAY);
+
+      GET_HIT(mob) = GET_MAX_HIT(mob);
+    }
+    else {
+      switch (number(0, 9)) {
+        case 0:
+          do_say(mob, "You must try harder!  Focus...  You must become one with your weapon.", CMD_SAY);
+          break;
+        case 1:
+          do_say(mob, "That's it!  You're learning!", CMD_SAY);
+          break;
+      }
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Baker Spec */
+int baker_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+
+    char buf[MSL];
+
+    snprintf(buf, sizeof(buf), "Good %s friend, how may I help you?", (IS_DAY ? "day" : "evening"));
+
+    do_say(mob, buf, CMD_SAY);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Scrollmaster Spec */
+int scrollmaster_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(20)) return FALSE;
+
+    act("An abrupt sneeze comes from behind a pile of scrolls off in one corner.", FALSE, mob, 0, 0, TO_ROOM);
+    act("You sneeze violently!", FALSE, mob, 0, 0, TO_CHAR);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Mage Spec */
+int mage_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(10)) return FALSE;
+
+    act("$n eyes $N suspiciously.", FALSE, mob, 0, ch, TO_NOTVICT);
+    act("$n eyes you suspiciously.", FALSE, mob, 0, ch, TO_VICT);
+    act("You eye $N suspiciously.", FALSE, mob, 0, ch, TO_CHAR);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Clan Guard Spec */
+int clan_guard_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  if (cmd == CMD_WEST) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return TRUE;
+
+    if (ch->ver3.clan_num != ISA_CLAN_NUM) {
+      act("$n blocks $N's way and pushes $M back!", TRUE, mob, 0, ch, TO_NOTVICT);
+      act("$n blocks your way and pushes you back!", FALSE, mob, 0, ch, TO_VICT);
+      act("You bock $N's way and push $M back!", FALSE, mob, 0, ch, TO_CHAR);
+
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+
+/* Ferrymaster Spec */
+int ferrymaster_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  static int timer = 0;
+  static int dock = 0;
+
+  if (cmd == MSG_TICK) {
+    if (CHAR_REAL_ROOM(mob) != FERRY) return FALSE;
+
+    if (timer > 0) {
+      timer--;
+
+      if (chance(5)) {
+        act("$n scampers over to one of $s cannons and sets off the charge!", TRUE, mob, 0, 0, TO_ROOM);
+        act("You scamper over to one of your cannons and set off the charge!", FALSE, mob, 0, 0, TO_CHAR);
+        send_to_room("BOOM!!!\r\n", CHAR_REAL_ROOM(mob));
+        do_say(mob, "DEATH FROM ABOVE!", CMD_SAY);
+
+        if (number(0, 1)) {
+          send_to_room("A volley of pink flowers and confetti is shot out to the mainland!", CHAR_REAL_ROOM(mob));
+          send_to_room("You are pelted by pink flowers and confetti as they are shot out at you from\r\n"
+            "the the ship's cannons!\r\n", real_room(MAINLAND));
+
+          return FALSE;
+        }
+        else {
+          send_to_room("A volley of pink flowers and confetti is shot out to the island!", CHAR_REAL_ROOM(mob));
+          send_to_room("You are pelted by pink flowers and confetti as they are shot out at you from\r\n"
+            "the the ship's cannons!\r\n", real_room(ISLAND));
+
+          return FALSE;
+        }
+
+        return FALSE;
+      }
+
+      return FALSE;
+    }
+    else {
+      if (world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r == real_room(MAINLAND)) {
+        send_to_room("The ferry pulls away from the shore, heading for the island.", real_room(MAINLAND));
+        send_to_room("The ferry pulls away from the shore, heading for the island.", CHAR_REAL_ROOM(mob));
+        do_say(mob, "Arr me mateys! We be under way to the island!", CMD_SAY);
+        act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
+
+        world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r = 0;
+
+        timer = number(0, 1);
+        dock = ISLAND;
+
+        return FALSE;
+      }
+      else if (world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r == real_room(ISLAND)) {
+        send_to_room("The ferry pulls away from the shore, heading for the mainland.", real_room(MAINLAND));
+        send_to_room("The ferry pulls away from the shore, heading for the mainland.", CHAR_REAL_ROOM(mob));
+        do_say(mob, "Avast ye land lubbers! We be ashore swiftly!", CMD_SAY);
+        act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
+
+        world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r = 0;
+
+        timer = number(0, 1);
+        dock = MAINLAND;
+
+        return FALSE;
+      }
+      else {
+        if (dock == MAINLAND) {
+          send_to_room("The ferry pulls up to the shore.", real_room(MAINLAND));
+          send_to_room("The ferry pulls up to the shore.", CHAR_REAL_ROOM(mob));
+          do_say(mob, "Land ho! Fortress is just a hop, skip and a jump to the east!", CMD_SAY);
+          act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
+          act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
+
+          world[CHAR_REAL_ROOM(mob)].dir_option[EAST]->to_room_r = real_room(MAINLAND);
+
+          return FALSE;
+        }
+        else {
+          send_to_room("The ferry pulls up to the shore.", real_room(ISLAND));
+          send_to_room("The ferry pulls up to the shore.", CHAR_REAL_ROOM(mob));
+          do_say(mob, "We're gonna crash!!! Hehehe... just kidding!  ISA Castle is just to the east!", CMD_SAY);
+          act("$n giggles.", TRUE, mob, 0, 0, TO_ROOM);
+          act("You giggle.", FALSE, mob, 0, 0, TO_CHAR);
+
+          world[CHAR_REAL_ROOM(mob)].dir_option[WEST]->to_room_r = real_room(ISLAND);
+
+          return FALSE;
+        }
+
+        return FALSE;
+      }
+
+      return FALSE;
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_MOBACT) {
+    if (CHAR_REAL_ROOM(mob) != FERRY) return FALSE;
+
+    switch (number(0, 19)) {
+      case 0:
+        do_say(mob, "Ho hum... This pirate game got boring, but now its my job!", CMD_SAY);
+        act("$n sighs.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You sigh.", FALSE, mob, 0, 0, TO_CHAR);
+        break;
+      case 1:
+        do_say(mob, "I'm a very womanly pirate!", CMD_SAY);
+        act("$n twitches $s mustache.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You twitch your mustache.", FALSE, mob, 0, 0, TO_CHAR);
+        break;
+      case 2:
+        do_say(mob, "Now where did I put my grog?", CMD_SAY);
+        act("$n burps.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You burps.", FALSE, mob, 0, 0, TO_CHAR);
+        break;
+      case 3:
+        do_say(mob, "I finally found a good, long pole...", CMD_SAY);
+        act("$n eyes the ship's mast.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You eye the ship's mast.", FALSE, mob, 0, 0, TO_CHAR);
+        break;
+      case 4:
+        do_say(mob, "I'm sooo hungry!  Would you mind if I gnawed on you?", CMD_SAY);
+        act("$n licks $s lips hungrily.", TRUE, mob, 0, 0, TO_ROOM);
+        act("You lick your lips hungrily.", FALSE, mob, 0, 0, TO_CHAR);
+        break;
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+
+/* Object Specs */
+
+/* Mirror Spec */
+int mirror_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  char buf[MIL];
+
+  if (cmd == CMD_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!AWAKE(ch)) return FALSE;
+
+    one_argument(arg, buf);
+
+    if (!*buf) return FALSE;
+
+    if (!isname(buf, OBJ_NAME(obj))) return FALSE;
+
+    if (ch->specials.riding) {
+      send_to_char("Dismount first.\r\n", ch);
+
+      return TRUE;
+    }
+
+    act("$n enters the mirror and disappears!", TRUE, ch, 0, 0, TO_ROOM);
+    act("You enter the mirror and disappear!", FALSE, ch, 0, 0, TO_CHAR);
+    char_from_room(ch);
+    char_to_room(ch, real_room(STAR_WARS));
+    act("$n appears in the room suddenly!", TRUE, ch, 0, 0, TO_ROOM);
+    do_look(ch, "\0", CMD_LOOK);
+
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
+/* Fruit Spec */
+int fruit_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_TICK) {
+    if (((OBJ_SPEC(obj) > 36) || (OBJ_SPEC(obj) < 36)) && (OBJ_SPEC(obj) != 0)) {
+      OBJ_SPEC(obj)--;
+    }
+    else if (OBJ_SPEC(obj) == 36) {
+      act("$p rots and turns bad!", FALSE, 0, obj, 0, TO_ROOM);
+
+      switch (V_OBJ(obj)) {
+        case(ICEFRUIT):
+          obj = read_object(BAD_ICEFRUIT, VIRTUAL);
+          break;
+        case(SNOWBERRY):
+          obj = read_object(BAD_SNOWBERRY, VIRTUAL);
+          break;
+        case(GHOST_APPLE):
+          obj = read_object(BAD_GHOST_APPLE, VIRTUAL);
+          break;
+      }
+    }
+    else {
+      act("$p decays into a brown mush and then disintegrates.", FALSE, 0, obj, 0, TO_ROOM);
+
+      extract_obj(obj);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Flower Spec */
+int flower_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_TICK) {
+    if (obj->carried_by) {
+      act("$p wilts and dies, having been picked.", FALSE, obj->carried_by, obj, 0, TO_CHAR);
+
+      extract_obj(obj);
+
+      return FALSE;
+    }
+
+    if (OBJ_SPEC(obj) > 0) {
+      OBJ_SPEC(obj)--;
+
+      return FALSE;
+    }
+
+    switch (V_OBJ(obj)) {
+      case(AZURE_POPPY):
+        act("$p melts away as its lifecycle runs out.", FALSE, 0, obj, 0, TO_ROOM);
+        extract_obj(obj);
+        break;
+      case(DRAGONFLOWER):
+        act("$p slumps to the ground as its lifeless stem can no longer hold it aloft.", FALSE, 0, obj, 0, TO_ROOM);
+        extract_obj(obj);
+        break;
+      case(RAZOR_THISTLE):
+        act("$p loses all of its spines and turns brown as it dies away.", FALSE, 0, obj, 0, TO_ROOM);
+        extract_obj(obj);
+        break;
+    }
+  }
+
+  return FALSE;
+}
+
+
+/* Room Specs */
+
+/* Path of Divinity Spec */
+int path_of_divinity_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_TICK) {
+    if (!chance(10)) return FALSE;
+
+    send_to_room("\
+A loud crack sounds in the distance as a limb that can no longer bear the\r\n\
+weight of snow and ice succumbs to gravity and crashes to the ground.\r\n", room);
+  }
+
+  return FALSE;
+}
+
+/* Ginzuishou Road Spec */
+int ginzuishou_road_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(25)) return FALSE;
+
+    send_to_char("You feel hidden eyes upon you, watching your every move.\r\n", ch);
+  }
+
+  return FALSE;
+}
+
+/* Ice Palace Spec */
+int ice_palace_spec(int room, CHAR *ch, int cmd, char *arg) {
+  char buf[MSL];
+
+  if (cmd == MSG_TICK) {
+    if (!chance(25)) return FALSE;
+    if (count_mortals_real_room(room) < 1) return FALSE;
+
+    snprintf(buf, sizeof(buf), "An audience member shakes %s head in disgust and gets up to leave the arena.\n\r", (chance(50) ? "his" : "her"));
+
+    send_to_room(buf, room);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Tunnel of Roots Spec */
+int tunnel_of_roots_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_TICK) {
+    if (!chance(50)) return FALSE;
+
+    send_to_room("A tiny worm tries to burrow a nest into your skin... Ick!\r\n", room);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Assassin's Paradise Spec */
+int assassins_paradise_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ENTER) {
+    if (!ch) return FALSE;
+    if (IS_NPC(ch)) return FALSE;
+    if (!chance(5)) return FALSE;
+
+    if (EQ(ch, WEAR_ABOUT)) return FALSE;
+    if (!isname(OBJ_NAME(EQ(ch, WEAR_ABOUT)), "cloak")) return FALSE;
+
+    send_to_char("\
+A small gnome fades in from the shadows.\r\n\
+Qualimere says, 'May I take your cloak master?'\r\n\
+Without waiting for a reply, he snatches your cloak and scampers away into the shadows!\r\n\
+A moment later you hear a loud crash and a series of muffled curses.\r\n\
+Your cloak floats out of the darkness and lands at your feet.\r\n", ch);
+
+    OBJ *tmp_obj = unequip_char(ch, WEAR_ABOUT);
+    obj_from_char(tmp_obj);
+    obj_to_room(tmp_obj, room);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Fruit Spec */
+int fruit_room_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ZONE_RESET) {
+    int fruit_type = 0;
+    int fruit_num = 0;
+
+    if ((time_info.month < 3) || (time_info.month > 10)) {
+      fruit_type = ICEFRUIT;
+      fruit_num = number(0, 3);
+    }
+    else if ((time_info.month > 2) && (time_info.month < 7)) {
+      fruit_type = SNOWBERRY;
+      fruit_num = number(2, 8);
+    }
+    else {
+      fruit_type = GHOST_APPLE;
+      fruit_num = number(1, 5);
+    }
+
+    for (int i = 0; i < fruit_num; i++) {
+      OBJ *fruit = read_object(fruit_type, VIRTUAL);
+
+      OBJ_SPEC(fruit) = 72;
+
+      obj_to_room(fruit, room);
+
+      act("$p reaches ripeness and falls to the ground.", FALSE, 0, fruit, 0, TO_ROOM);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+/* Flower Spec */
+int flower_room_spec(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ZONE_RESET) {
+    int flower_type = 0;
+    int flower_num = 0;
+
+    if ((time_info.month < 3) || (time_info.month > 10)) {
+      flower_type = AZURE_POPPY;
+      flower_num = number(0, 2);
+    }
+    else if ((time_info.month > 2) && (time_info.month < 7)) {
+      flower_type = DRAGONFLOWER;
+      flower_num = number(3, 8);
+    }
+    else {
+      flower_type = RAZOR_THISTLE;
+      flower_num = number(1, 3);
+    }
+
+    for (int i = 0; i < flower_num; i++) {
+      OBJ *flower = read_object(flower_type, VIRTUAL);
+
+      OBJ_SPEC(flower) = 288;
+
+      obj_to_room(flower, room);
+
+      act("$p sprouts from the ground in a brilliant display of life.", FALSE, 0, flower, 0, TO_ROOM);
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_TICK) {
+    static int flower_blooming = FALSE;
+
+    if (IS_DAY && !flower_blooming) {
+      for (OBJ *tmp_obj = world[room].contents, *next_content = NULL; tmp_obj; tmp_obj = next_content) {
+        next_content = tmp_obj->next_content;
+
+        if ((V_OBJ(tmp_obj) == AZURE_POPPY) || (V_OBJ(tmp_obj) == DRAGONFLOWER)) {
+          act("$p reveals its petals and soaks in the light.", FALSE, 0, tmp_obj, 0, TO_ROOM);
+        }
+      }
+
+      flower_blooming = TRUE;
+    }
+    else if (IS_NIGHT && flower_blooming) {
+      for (OBJ *tmp_obj = world[room].contents, *next_content = NULL; tmp_obj; tmp_obj = next_content) {
+        next_content = tmp_obj->next_content;
+
+        if ((V_OBJ(tmp_obj) == AZURE_POPPY) || (V_OBJ(tmp_obj) == DRAGONFLOWER)) {
+          act("$p wilts and closes its petals as the light fades.", FALSE, 0, tmp_obj, 0, TO_ROOM);
+        }
+      }
+
+      flower_blooming = FALSE;
+    }
+    else {
+      flower_blooming = FALSE;
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+#define ISA_TALISMAN 27800
+#define TEMPLE       3001
+#define MARKET       3014
+#define ISA_HALL     27801
+
+int talisman_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  CHAR *owner = NULL;
+
+  if (cmd != CMD_USE) return FALSE;
+
+  if (!(owner = obj->carried_by)) return FALSE;
+
+  if (owner->ver3.clan_num != ISA_CLAN_NUM) {
+    act("$p pulses with energy but fizzles and nothing happens!", TRUE, owner, obj, 0, TO_ROOM);
+    act("$p pulses with energy but fizzles and nothing happens!", FALSE, owner, obj, 0, TO_CHAR);
+    send_to_char("(You are not authorized to use this clan item.)\n\r", owner);
+
+    return TRUE;
+  }
+
+  if (owner->specials.fighting) {
+    act("$p pulses with energy but fizzles and nothing happens!", TRUE, owner, obj, 0, TO_ROOM);
+    act("$p pulses with energy but fizzles and nothing happens!", FALSE, owner, obj, 0, TO_CHAR);
+    send_to_char("(Clan recall items may only be used outside of combat.)\n\r", owner);
+
+    return TRUE;
+  }
+
+  if ((V_ROOM(owner) != TEMPLE) && (V_ROOM(owner) != MARKET)) {
+    act("$p pulses with energy but fizzles and nothing happens!", TRUE, owner, obj, 0, TO_ROOM);
+    act("$p pulses with energy but fizzles and nothing happens!", FALSE, owner, obj, 0, TO_CHAR);
+    send_to_char("(Clan recall items may only be used at Temple of Midgaard and Market Square.)\n\r", owner);
+
+    return TRUE;
+  }
+
+  act("$n opens a small portal with $s $p, steps through, and dissapears!", TRUE, owner, obj, 0, TO_ROOM);
+  act("You open a small portal with your $p, step through, and dissapear!", FALSE, owner, obj, 0, TO_CHAR);
+
+  char_from_room(owner);
+  char_to_room(owner, real_room(ISA_HALL));
+  do_look(owner, "\0", CMD_LOOK);
+
+  act("A small portal appears in the middle of the room, and out of it steps $n!", FALSE, owner, obj, 0, TO_ROOM);
 
   return TRUE;
 }
@@ -2596,9 +2438,9 @@ void assign_clan(void) {
   assign_mob(27523,do_vault);
   assign_mob(27540,receptionist);
   assign_mob(27531,meta);
-  assign_mob(27822,receptionist); /* ISA */
-  assign_mob(27824,do_vault); /* ISA */
   /* ISA Mobiles */
+  assign_mob(27822, receptionist);
+  assign_mob(27824, do_vault);
   assign_mob(PALADIN, paladin_spec);
   assign_mob(PRIEST, priest_spec);
   assign_mob(DOJO_MASTER, dojo_master_spec);
@@ -2609,13 +2451,13 @@ void assign_clan(void) {
   assign_mob(CLAN_GUARD, clan_guard_spec);
   /* ISA Objects */
   assign_obj(MIRROR, mirror_spec);
-  assign_obj(TALISMAN, talisman_spec);
   assign_obj(ICEFRUIT, fruit_spec);
   assign_obj(SNOWBERRY, fruit_spec);
   assign_obj(GHOST_APPLE, fruit_spec);
   assign_obj(AZURE_POPPY, flower_spec);
   assign_obj(DRAGONFLOWER, flower_spec);
   assign_obj(RAZOR_THISTLE, flower_spec);
+  assign_obj(ISA_TALISMAN, talisman_spec);
   /* ISA Rooms */
   assign_room(PATH_OF_DIVINITY, path_of_divinity_spec);
   assign_room(GINZUISHOU_ROAD, ginzuishou_road_spec);
@@ -2634,6 +2476,3 @@ void assign_clan(void) {
   assign_mob(27553, receptionist);
   assign_mob(27556, meta);
 }
-
-
-

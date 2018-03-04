@@ -40,6 +40,7 @@ $State: Exp $
 */
 
 /* Subclass skill commands */
+void do_awareness(CHAR *ch, char *argument, int cmd);
 void do_victimize(CHAR *ch, char *argument, int cmd);
 void do_clobber(CHAR *ch, char *argument, int cmd);
 void do_throatstrike(CHAR *ch, char *argument, int cmd);
