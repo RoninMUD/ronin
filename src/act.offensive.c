@@ -1072,7 +1072,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
         !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
       CHAR *blocker = GET_OPPONENT(ch);
 
-      if (!IS_NPC(blocker) && !GET_RIDER(ch)) {
+      if (!IS_NPC(blocker) && affected_by_spell(blocker, SKILL_BLOCK) && !GET_RIDER(ch)) {
         int block_check = number(1, 111);
         int block_skill = GET_LEARNED(blocker, SKILL_BLOCK);
         int auto_block_chance = 0;
