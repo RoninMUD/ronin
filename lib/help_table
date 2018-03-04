@@ -1948,8 +1948,9 @@ BLOCK
 
 Class: Warrior Paladin Nomad (Ranger SC3)
 
-BLOCK will toggle block on and off. When block is on you will attempt to block
-your target and keep it from fleeing.
+BLOCK will toggle block on and off.  When block is on you will attempt to block
+your target and keep it from fleeing.  The chance of its success depends on how
+well you learn it, and your Dexterity modifier.
 #
 DUAL
 
@@ -6763,8 +6764,9 @@ successful Punch against an opponent.  This devastating blow will deal double
 damage and will send the victim reeling, setting them to the Stunned position.
 
 Additionally, the Warlord gains a +1 bonus to their Block skill for every 5
-warrior class levels, up to a +10 bonus at level 50.  This advantage makes it
-highly unlikely that a Warlord's opponent can flee from them in combat.
+warrior class levels, up to a +10 bonus at level 50.  The minimum success rate
+for a Warlord with Iron Fist is 90%.  This advantage makes it highly unlikely
+that a Warlord's opponent can flee from them in combat.
 
 Warlord subclass level 3 grants the warrior the capability of reaching -280
 Armor Class (AC), exceeding the normal limit of -250.
@@ -6776,9 +6778,7 @@ See Also: SUBCLASSES WARLORD PUNCH BLOCK AC
 Subclass Warlord: Level 4 (Warrior)
 
 The Warlord is a force to be reckoned with on the battlefield, a veritable
-juggernaut of whirling blades and thick, tank-like armor.  Such a brute on
-the battle field has no problem switching from target to target, getting a
-hit in wherever they can.
+juggernaut of whirling blades and thick, tank-like armor.
 
 As a passive bonus, the Warlord has their number of successful dual, triple,
 and quad attacks increased by up to 15%, based on the Warlord's skill and

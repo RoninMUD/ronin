@@ -117,9 +117,10 @@ int dt_or_hazard(CHAR *ch) {
 int special(struct char_data *ch, int cmd, char *arg);
 int signal_room(int room, CHAR *ch, int cmd, char *arg);
 int do_simple_move(struct char_data *ch, int cmd, int spec_check)
-/* Assumes,
-1. That there is no master and no followers.
-2. That the direction exists.
+/*
+Assumes:
+  1. That there is no master and no followers.
+  2. That the direction exists.
 
 Returns:
   1 : If success.
@@ -127,11 +128,14 @@ Returns:
  -1 : If dead.
 */
 {
+  char buf[MSL];
+
   /* Check for special routines (North is 1) */
   if (spec_check && special(ch, cmd + 1, "")) {
     return FALSE;
   }
 
+  /* Check for Pray. */
   if (!IS_IMMORTAL(ch) &&
       affected_by_spell(ch, SKILL_PRAY)) {
     send_to_char("You are deep in prayer, unable to follow.\n\r", ch);
@@ -139,6 +143,7 @@ Returns:
     return FALSE;
   }
 
+  /* Check for Meditation. */
   if (!IS_IMMORTAL(ch) &&
       (affected_by_spell(ch, SKILL_MEDITATE) &&
       (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 30)))) {
@@ -168,6 +173,16 @@ Returns:
       (count_mortals_real_room(world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r) > 0) &&
       !CHAOSMODE) {
     send_to_char("It's too narrow to go there.\n\r", ch);
+
+    return FALSE;
+  }
+
+  /* Check if mount can move. */
+  if (GET_MOUNT(ch) &&
+      (GET_POS(GET_MOUNT(ch)) != POSITION_FLYING) &&
+      (GET_POS(GET_MOUNT(ch)) != POSITION_STANDING) &&
+      (GET_POS(GET_MOUNT(ch)) != POSITION_SWIMMING)) {
+    send_to_char("Your mount is unable to move.\n\r", ch);
 
     return FALSE;
   }
@@ -237,7 +252,7 @@ Returns:
 
     /* Check if their mount has a boat, or can fly. etc. */
     if (!has_boat && GET_MOUNT(ch)) {
-      for (struct obj_data *tmp_obj = ch->specials.riding->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+      for (struct obj_data *tmp_obj = GET_MOUNT(ch)->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
         if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
           has_boat = TRUE;
           break;
@@ -261,21 +276,22 @@ Returns:
     }
   }
 
+  /* Calculate encumberance modifier. */
   int carrying_weight = IS_CARRYING_W(ch);
   int can_carry_weight = CAN_CARRY_W(ch);
 
   int encumb_modifier = 1;
 
-  if (carrying_weight >= can_carry_weight)
-    encumb_modifier = 2;
-  if (carrying_weight >= 3 * can_carry_weight / 2)
-    encumb_modifier = 3;
-  if (carrying_weight >= 2 * can_carry_weight)
-    encumb_modifier = 4;
-  if (carrying_weight >= 5 * can_carry_weight / 2)
-    encumb_modifier = 5;
-  if (carrying_weight == 3 * can_carry_weight)
+  if (carrying_weight >= 3 * can_carry_weight)
     encumb_modifier = 6;
+  else if (carrying_weight >= 5 * can_carry_weight / 2)
+    encumb_modifier = 5;
+  else if (carrying_weight >= 2 * can_carry_weight)
+    encumb_modifier = 4;
+  else if (carrying_weight >= 3 * can_carry_weight / 2)
+    encumb_modifier = 3;
+  else if (carrying_weight >= can_carry_weight)
+    encumb_modifier = 2;
 
   int need_movement = encumb_modifier * (movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type] +
                       movement_loss[world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type]) / 2;
@@ -313,7 +329,8 @@ Returns:
     return FALSE;
   }
 
-  if (IS_MORTAL(ch) && GET_MOVE(ch) < need_movement) {
+  /* Check for exhaustion. */
+  if (IS_MORTAL(ch) && (GET_MOVE(ch) < need_movement)) {
     if (GET_MASTER(ch)) {
       send_to_char("You are too exhausted to follow.\n\r", ch);
     }
@@ -337,8 +354,6 @@ Returns:
     GET_POS(ch) = POSITION_SWIMMING;
   }
 
-  char buf[MSL];
-
   if (IS_AFFECTED(ch, AFF_FLY)) {
     if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
       snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
@@ -359,17 +374,8 @@ Returns:
 
     act(buf, 2, ch, 0, 0, TO_ROOM);
   }
-  else if (GET_POS(ch) == POSITION_RIDING) {
-    if (GET_MOUNT(ch) &&
-        (GET_POS(GET_MOUNT(ch)) != POSITION_FLYING) &&
-        (GET_POS(GET_MOUNT(ch)) != POSITION_STANDING) &&
-        (GET_POS(GET_MOUNT(ch)) != POSITION_SWIMMING)) {
-      send_to_char("Your mount isn't able to move.\n\r", ch);
-
-      return FALSE;
-    }
-    
-    if (GET_MOUNT(ch) && GET_POS(GET_MOUNT(ch)) == POSITION_FLYING) {
+  else if (GET_MOUNT(ch)) {   
+    if (GET_POS(GET_MOUNT(ch)) == POSITION_FLYING) {
       snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
     }
     else {
@@ -488,40 +494,14 @@ Returns:
 
   if (dt_or_hazard(ch)) return -1;
 
-  int check = number(1, 110);
+  /* Check for Trap. */
+  int trap_check = number(1, 110);
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
-      IS_NPC(ch) &&
-      GET_POS(ch) != POSITION_FLYING &&
-      (check > (GET_LEVEL(ch) * 2))) {
-    act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("You fell into a trap!\n\r", ch);
-
-    REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
-
-    GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
-
-    return TRUE;
-  }
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
-      IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-      !IS_NPC(ch) &&
-      GET_POS(ch) != POSITION_FLYING &&
-      (check > (GET_LEVEL(ch) * 2))) {
-    act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("You fell into a trap!\n\r", ch);
-
-    REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
-
-    GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
-
-    return TRUE;
-  }
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
-      CHAOSMODE &&
-      IS_MORTAL(ch) &&
-      GET_POS(ch) != POSITION_FLYING &&
-      (check > (GET_LEVEL(ch)))) {
+      (GET_POS(ch) != POSITION_FLYING) &&
+      ((IS_NPC(ch) && (trap_check > (GET_LEVEL(ch) * 2))) ||
+       (IS_MORTAL(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && (trap_check > (GET_LEVEL(ch) * 2))) ||
+       (IS_MORTAL(ch) && CHAOSMODE && (trap_check > GET_LEVEL(ch))))) {
     act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
     send_to_char("You fell into a trap!\n\r", ch);
 
