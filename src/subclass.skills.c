@@ -1533,7 +1533,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
       act("$n slams his forehead into your face!", FALSE, ch, NULL, victim, TO_VICT);
       act("$n slams $s forehead into $N's face!", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 240), SKILL_HEADBUTT, DAM_PHYSICAL);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), 200), SKILL_HEADBUTT, DAM_PHYSICAL);
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
