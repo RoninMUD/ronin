@@ -154,6 +154,8 @@ int Ultimate (CHAR *ul, CHAR *ch, int cmd, char *arg) {
     return FALSE;
   }
 
+  if (!GET_OPPONENT(ul)) return FALSE;
+
   switch (number (1,9)) {
   case 1:
   case 2:
