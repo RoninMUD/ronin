@@ -432,11 +432,11 @@ const mob_attact_t mob_attack_table[] = {
 
     .success_to_other = "$n rakes $N with $s claws.",
     .success_to_char = "You rake $N with your claws.",
-    .success_to_vict = "$N rakes you with $S claws.",
+    .success_to_vict = "$n rakes you with $s claws.",
 
     .multi_to_other = "$n lashes wildly about, raking everyone with $s claws.",
     .multi_to_char = "You lash wildly about, raking everyone with your claws.",
-    .multi_to_vict = "You are clawed by $N.",
+    .multi_to_vict = "You are clawed by $n.",
 
     .vict_wait_state = 3,
 
