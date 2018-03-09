@@ -878,9 +878,9 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  dam = (5 * GET_LEVEL(ch));
+  dam = (number(6, 8) * GET_LEVEL(ch));
 
-  if (time_info.month <= 2 || time_info.month >= 15) dam += 75; /* Increased damage during winter. */
+  if (time_info.month <= 2 || time_info.month >= 15) dam += number(75, 100); /* Increased damage during winter. */
 
   send_to_char("An aura of frost starts to form around you.\n\r", ch);
   act("An aura of frost starts to form around $n.", FALSE, ch, 0, 0, TO_ROOM);
