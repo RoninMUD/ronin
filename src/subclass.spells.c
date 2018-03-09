@@ -2068,6 +2068,8 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 }
 
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  level = MIN(LEVEL_MORT, level); // Dusk Reqiuem has a hack for > LEVEL_MORT.
+
   switch (type)
   {
   case SPELL_TYPE_SPELL:

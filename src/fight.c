@@ -1207,105 +1207,105 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
     char *to_victim;
   } dam_shadow[] = {
     { /* 0 */
-      "$n's shadow misses $N with its hit.",
-      "Your shadow misses $N with its hit.",
-      "$n's shadow misses you with its hit."
+      "$n's shadow misses $N with its #W.",
+      "Your shadow misses $N with its #W.",
+      "$n's shadow misses you with its #W."
     },
 
     { /* > 0 */
-      "$n's shadow tickles $N with its hit.",
-      "Your shadow tickles $N as it hits $M.",
-      "$n's shadow tickles you as it hits you."
+      "$n's shadow tickles $N with its #W.",
+      "Your shadow tickles $N as it #W $M.",
+      "$n's shadow tickles you as it #W you."
     },
 
     { /* > 2 */
-      "$n's shadow barely hits $N.",
-      "Your shadow barely hits $N.",
-      "$n's shadow barely hits you."
+      "$n's shadow barely #W $N.",
+      "Your shadow barely #W $N.",
+      "$n's shadow barely #W you."
     },
 
     { /* > 4 */
-      "$n's shadow hits $N.",
-      "Your shadow hits $N.",
-      "$n's shadow hits you."
+      "$n's shadow #W $N.",
+      "Your shadow #W $N.",
+      "$n's shadow #W you."
     },
 
     { /* > 6 */
-      "$n's shadow hits $N hard.",
-      "Your shadow hits $N hard.",
-      "$n's shadow hits you hard."
+      "$n's shadow #W $N hard.",
+      "Your shadow #W $N hard.",
+      "$n's shadow #W you hard."
     },
 
     { /* > 10 */
-      "$n's shadow hits $N very hard.",
-      "Your shadow hits $N very hard.",
-      "$n's shadow hits you very hard."
+      "$n's shadow #W $N very hard.",
+      "Your shadow #W $N very hard.",
+      "$n's shadow #W you very hard."
     },
 
     { /* > 15 */
-      "$n's shadow hits $N extremely hard.",
-      "Your shadow hits $N extremely hard.",
-      "$n's shadow hits you extremely hard."
+      "$n's shadow #W $N extremely hard.",
+      "Your shadow #W $N extremely hard.",
+      "$n's shadow #W you extremely hard."
     },
 
     { /* > 20 */
-      "$n's shadow massacres $N to small fragments with its hit.",
-      "Your shadow massacres $N to small fragments with its hit.",
-      "$n's shadow massacres you to small fragments with its hit."
+      "$n's shadow massacres $N to small fragments with its #W.",
+      "Your shadow massacres $N to small fragments with its #W.",
+      "$n's shadow massacres you to small fragments with its #W."
     },
 
     { /* > 30 */
-      "$n's shadow obliterates $N with its hit.",
-      "Your shadow obliterates $N with its hit.",
-      "$n's shadow obliterates you with its hit."
+      "$n's shadow obliterates $N with its #W.",
+      "Your shadow obliterates $N with its #W.",
+      "$n's shadow obliterates you with its #W."
     },
 
     { /* > 50 */
-      "$n's shadow utterly annihilates $N with its hit.",
-      "Your shadow utterly annihilates $N with its hit.",
-      "$n's shadow utterly annihilates you with its hit."
+      "$n's shadow utterly annihilates $N with its #W.",
+      "Your shadow utterly annihilates $N with its #W.",
+      "$n's shadow utterly annihilates you with its #W."
     },
 
     { /* > 70 */
-      "$n's shadow removes chunks of flesh from $N with its hit.",
-      "Your shadow removes chunks of flesh from $N with its hit.",
-      "$n's shadow sends chunks of your flesh flying with its hit."
+      "$n's shadow removes chunks of flesh from $N with its #W.",
+      "Your shadow removes chunks of flesh from $N with its #W.",
+      "$n's shadow sends chunks of your flesh flying with its #W."
     },
 
     { /* > 100 */
-      "$n's shadow makes $N see stars with a terrific wallop from its hit.",
-      "Your shadow makes $N see stars with a terrific wallop from its hit.",
-      "$n's shadow makes you see stars with a terrific wallop from its hit."
+      "$n's shadow makes $N see stars with a terrific wallop from its #W.",
+      "Your shadow makes $N see stars with a terrific wallop from its #W.",
+      "$n's shadow makes you see stars with a terrific wallop from its #W."
     },
 
     { /* > 170 */
-      "$n's shadow's hit makes $N think twice about $S continued existence.",
-      "Your shadow's hit makes $N think twice about $S continued existence.",
-      "$n's shadow's hit makes you think twice your continued existence."
+      "$n's shadow's #W makes $N think twice about $S continued existence.",
+      "Your shadow's #W makes $N think twice about $S continued existence.",
+      "$n's shadow's #W makes you think twice your continued existence."
     },
 
     { /* > 250 */
-      "$N's bones crumble under $n's shadow's terrific hit.",
-      "$N's bones crumble under your shadow's terrific hit.",
-      "Your bones crumble under $n's shadow's terrific hit."
+      "$N's bones crumble under $n's shadow's terrific #W.",
+      "$N's bones crumble under your shadow's terrific #W.",
+      "Your bones crumble under $n's shadow's terrific #W."
     },
 
     { /* > 350 */
-      "$n's shadow's tremendous hit sends gouts of blood and gore showering from $N.",
-      "Your shadow's tremendous hit sends gouts of blood and gore showering from $N.",
-      "$n's shadow's tremendous hit sends gouts of blood and gore showering from you."
+      "$n's shadow's tremendous #W sends gouts of blood and gore showering from $N.",
+      "Your shadow's tremendous #W sends gouts of blood and gore showering from $N.",
+      "$n's shadow's tremendous #W sends gouts of blood and gore showering from you."
     },
 
     { /* > 450 */
-      "With soul shattering force, $n's shadow's hit completely devastates $N.",
-      "With soul shattering force, your shadow's hit completely devastates $N.",
-      "With soul shattering force, $n's shadow's hit completely devastates you."
+      "With soul shattering force, $n's shadow's #W completely devastates $N.",
+      "With soul shattering force, your shadow's #W completely devastates $N.",
+      "With soul shattering force, $n's shadow's #W completely devastates you."
     },
 
     { /* > 550 */
-      "$n's shadow's cataclysmic hit pulverizes $N's flesh into a fine paste.",
-      "Your shadow's cataclysmic hit pulverizes $N's flesh into a fine paste.",
-      "$n's shadow's cataclysmic hit pulverizes your flesh into a fine paste."
+      "$n's shadow's cataclysmic #W pulverizes $N's flesh into a fine paste.",
+      "Your shadow's cataclysmic #W pulverizes $N's flesh into a fine paste.",
+      "$n's shadow's cataclysmic #W pulverizes your flesh into a fine paste."
     }
   };
 
@@ -1377,7 +1377,14 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
 
   if (shadow)
   {
-    buf = replace_string(dam_shadow[index].to_char, attack_hit_text[attack_type].singular);
+    if (index != 0 && index <= 6)
+    {
+      buf = replace_string(dam_shadow[index].to_char, attack_hit_text[attack_type].plural);
+    }
+    else
+    {
+      buf = replace_string(dam_shadow[index].to_char, attack_hit_text[attack_type].singular);
+    }
   }
   else
   {
@@ -1556,6 +1563,7 @@ void process_death(CHAR *ch, CHAR *victim) {
 
 
 /* Returns the amount of damage done after any/all mitigation. */
+int get_attack_type(CHAR *ch, OBJ *weapon);
 int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   char buf[MSL];
   struct message_type *messages = NULL;
@@ -1588,7 +1596,15 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Adjust for shadow damage. */
   if (attack_type == TYPE_SHADOW) {
-    attack_type = TYPE_HIT;
+    OBJ *weapon = EQ(ch, WIELD);
+
+    if (weapon) {
+      attack_type = get_attack_type(ch, weapon);
+    }
+    else {
+      attack_type = TYPE_HIT;
+    }
+
     shadow_damage = TRUE;
   }
 
@@ -1646,8 +1662,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
     /* specials.immune2 */
     if (GET_IMMUNE2(victim) &&
-        (((damage_type == DAM_SOUND) && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
-         ((damage_type == DAM_ACID) && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
+        (((damage_type == DAM_COLD) && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
+         ((damage_type == DAM_SOUND) && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
          ((damage_type == DAM_CHEMICAL) && IS_IMMUNE2(victim, IMMUNE_CHEMICAL)) ||
          ((damage_type == DAM_ACID) && IS_IMMUNE(victim, IMMUNE_ACID)))) {
       dmg = 0;
