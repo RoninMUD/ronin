@@ -2068,7 +2068,7 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   /* If level is > LEVEL_MORT, Shadow Wraith must be expiring in signal_char() (or an immortal cast it). Inflict double damage. */
   if (level > LEVEL_MORT) {
-    dam *= 4;
+    dam *= 2;
   }
 
   damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
