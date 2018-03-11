@@ -2737,52 +2737,38 @@ void pulse_shadow_wraith(CHAR *ch) {
       ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 11) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10))) {
     send_to_char("One of your shadows flickers and begins to fade from reality.\n\r", ch);
     act("One of $n's shadows flickers and begins to fade from reality.", TRUE, ch, 0, 0, TO_ROOM);
+
     return;
   }
 
   if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
       ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
     /* Dusk Requiem */
-    if (!IS_NPC(ch) && check_subclass(ch, SC_INFIDEL, 5)) {
+    if (!IS_NPC(ch) && check_subclass(ch, SC_INFIDEL, 4)) {
       if (GET_OPPONENT(ch)) {
         /* A bit of a hack here. Cast Dusk Requiem with caster level equal to
             LEVEL_MORT +1 to inflict double damage, rather than making a
             special function to do this. */
         spell_dusk_requiem(LEVEL_MORT + 1, ch, GET_OPPONENT(ch), 0);
+
         return;
       }
       else {
-        int num_shadows_active = 0;
-
-        if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
-          /* Caster has 4 shadows. */
-          num_shadows_active = 4;
-        }
-        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
-          /* Caster has 3 shadows. */
-          num_shadows_active = 3;
-        }
-        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
-          /* Caster has 2 shadows. */
-          num_shadows_active = 2;
-        }
-        else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
-          /* Caster has 1 shadow. */
-          num_shadows_active = 1;
-        }
+        int num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
 
         if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
+          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
         }
 
         if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
-          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows_active))) / 2));
+          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
         }
       }
     }
 
     send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
     act("One of $n's shadows fades from reality and recedes back into the void.", TRUE, ch, 0, 0, TO_ROOM);
+
     return;
   }
 }
