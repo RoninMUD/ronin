@@ -1409,9 +1409,9 @@ const char * const item_types[] = {
   "SKIN",
   "TROPHY",
   "RECIPE",
-  "2FINGER",
-  "2NECK",
-  "2WRIST",
+  "UNUSED",
+  "UNUSED",
+  "UNUSED",
   "AQ_ORDER",
   "\n"
 };
@@ -1437,6 +1437,7 @@ const char *wear_bits[] = {
   "NO_REMOVE",
   "NO_SCAVENGR",
   "QUESTWEAR",
+  "2NECK",
   "\n"
 };
 

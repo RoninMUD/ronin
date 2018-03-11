@@ -951,7 +951,7 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         (inzone(V_OBJ(obj))==294) ||
         (inzone(V_OBJ(obj))==69)  ||
         (inzone(V_OBJ(obj))==10)) {
-      if((CAN_WEAR(obj,ITEM_WEAR_FINGER)) || (CAN_WEAR(obj,ITEM_WEAR_NECK)) || (CAN_WEAR(obj,ITEM_WEAR_WRIST))) {
+      if((CAN_WEAR(obj,ITEM_WEAR_FINGER)) || (CAN_WEAR(obj, ITEM_WEAR_NECK) && !CAN_WEAR(obj, ITEM_WEAR_2NECK)) || (CAN_WEAR(obj,ITEM_WEAR_WRIST))) {
         if(obj_proto_table[obj->item_number].number>9) {
           send_to_char("Only 8 clones of this object can be created.\n\r",ch);
           extract_obj(clone);

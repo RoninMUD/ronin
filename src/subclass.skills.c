@@ -71,47 +71,32 @@ void do_awareness(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_meditate(CHAR *ch, char *argument, int cmd)
-{
-  AFF af;
+void do_meditate(CHAR *ch, char *argument, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_MEDITATE))
-  {
+  if (!check_sc_access(ch, SKILL_MEDITATE)) {
     send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (GET_OPPONENT(ch))
-  {
+  if (GET_OPPONENT(ch)) {
     send_to_char("You can't meditate while fighting!\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_MEDITATE))
-  {
-    send_to_char("You're already meditating.\n\r", ch);
+  if (affected_by_spell(ch, SKILL_MEDITATE)) {
+    send_to_char("You're unable to meditate again for a while.\n\r", ch);
 
     return;
   }
 
-  if (number(0, 85) > GET_LEARNED(ch, SKILL_MEDITATE))
-  {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_MEDITATE)) {
     send_to_char("You failed to focus your thoughts.\n\r", ch);
   }
-  else
-  {
-    af.type = SKILL_MEDITATE;
-    af.duration = CHAOSMODE ? 12 : 33;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
+  else {
+    affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 33), 0, 0, 0, 0);
 
     send_to_char("You gaze inward and focus on healing.\n\r", ch);
     act("$n enters a deep trance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -119,64 +104,56 @@ void do_meditate(CHAR *ch, char *argument, int cmd)
 }
 
 
-void do_protect(CHAR *ch, char *argument, int cmd)
-{
-  char buf[MIL];
-  CHAR *victim = NULL;
+void do_protect(CHAR *ch, char *argument, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_PROTECT))
-  {
+  if (!check_sc_access(ch, SKILL_PROTECT)) {
     send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (CHAOSMODE)
-  {
+  if (CHAOSMODE) {
     send_to_char("Protect someone during Chaos? Might as well just quit now...\n\r", ch);
 
     return;
   }
 
+  char buf[MIL];
+
   one_argument(argument, buf);
 
-  if (!*buf)
-  {
+  if (!*buf) {
     send_to_char("Protect who?\n\r", ch);
 
     return;
   }
 
-  if (!(victim = get_char_room_vis(ch, buf)))
-  {
+  CHAR *victim = NULL;
+
+  if (!(victim = get_char_room_vis(ch, buf))) {
     send_to_char("That player is not here.\n\r", ch);
 
     return;
   }
 
-  if (IS_NPC(victim))
-  {
+  if (IS_NPC(victim)) {
     send_to_char("Protect a potential enemy? Impossible!\n\r", ch);
 
     return;
   }
 
-  if (IS_IMMORTAL(victim))
-  {
+  if (IS_IMMORTAL(victim)) {
     send_to_char("The gods laugh at the mere thought.\n\r", ch);
 
     return;
   }
 
-  if (ch == victim)
-  {
+  if (ch == victim) {
     send_to_char("You now protect only yourself.\n\r", ch);
     act("$n now protects only $mself.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_NOTVICT);
 
-    if (GET_PROTECTEE(ch))
-    {
+    if (GET_PROTECTEE(ch)) {
       act("$n stops protecting you.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_VICT);
 
       GET_PROTECTOR(GET_PROTECTEE(ch)) = NULL;
@@ -187,22 +164,19 @@ void do_protect(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_BERSERK))
-  {
+  if (affected_by_spell(ch, SKILL_BERSERK)) {
     send_to_char("You can't protect anyone while berserked.\n\r", ch);
 
     return;
   }
 
-  if (GET_PROTECTEE(victim))
-  {
+  if (GET_PROTECTEE(victim)) {
     act("$N is already protecting someone.", FALSE, ch, 0, victim, TO_CHAR);
 
     return;
   }
 
-  if (GET_PROTECTEE(ch))
-  {
+  if (GET_PROTECTEE(ch)) {
     act("You stop protecting $N.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_CHAR);
     act("$n stops protecting you.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_VICT);
     act("$n stops protecting $N.", FALSE, ch, 0, GET_PROTECTEE(ch), TO_NOTVICT);
@@ -211,12 +185,10 @@ void do_protect(CHAR *ch, char *argument, int cmd)
     GET_PROTECTEE(ch) = NULL;
   }
 
-  if ((number(1, 131) > GET_LEARNED(ch, SKILL_PROTECT)))
-  {
+  if ((number(1, 131) > GET_LEARNED(ch, SKILL_PROTECT))) {
     act("You failed to start protecting $N.", FALSE, ch, 0, victim, TO_CHAR);
   }
-  else
-  {
+  else {
     act("You start trying to protect $N.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n starts trying to protect you.", FALSE, ch, 0, victim, TO_VICT);
     act("$n starts trying to protect $N.", FALSE, ch, 0, victim, TO_NOTVICT);

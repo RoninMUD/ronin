@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
+#include <stdint.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -999,6 +1001,7 @@ int vault_filter(OBJ *obj,char *arg) {
   if(is_abbrev(buf, "light") && obj->obj_flags.type_flag==ITEM_LIGHT) wearable=TRUE;
   if(is_abbrev(buf, "finger"))       wear_pos   = ITEM_WEAR_FINGER;
   if(is_abbrev(buf, "neck"))         wear_pos   = ITEM_WEAR_NECK;
+  if(is_abbrev(buf, "2neck"))        wear_pos   = ITEM_WEAR_2NECK;
   if(is_abbrev(buf, "body"))         wear_pos   = ITEM_WEAR_BODY;
   if(is_abbrev(buf, "head"))         wear_pos   = ITEM_WEAR_HEAD;
   if(is_abbrev(buf, "legs"))         wear_pos   = ITEM_WEAR_LEGS;
@@ -2736,6 +2739,12 @@ A Large Diamond : 5000000 coins\n\r", ch);
       }
 
       cost = obj->obj_flags.cost;
+
+      if ((INT_MAX - GET_GOLD(ch)) < cost) {
+        send_to_char("You can't carry any more coins.\n\r", ch);
+
+        return TRUE;
+      }
 
       act("You give $p to $N.", FALSE, ch, obj, mob, TO_CHAR);
       act("$N gives you $P.", FALSE, ch, obj, mob, TO_VICT);
@@ -5124,107 +5133,89 @@ int restguard(CHAR *mob,CHAR *ch, int cmd, char *arg)
   return(FALSE);
 }
 
-int teller(OBJ *obj,CHAR *ch, int cmd, char *arg)
-{
-  char buf[MAX_STRING_LENGTH], number[MAX_STRING_LENGTH];
-  int num = 0;
+int teller(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (cmd != CMD_BALANCE && cmd != CMD_DEPOSIT && cmd != CMD_WITHDRAW) return FALSE;
 
-  if ((cmd != CMD_BALANCE) && (cmd != CMD_WITHDRAW) && (cmd != CMD_DEPOSIT)) return(FALSE);
+  if (IS_NPC(ch)) return FALSE;
 
+  if (cmd == CMD_BALANCE) {
+    printf_to_char(ch, "Your balance is %d coins.\n\r", GET_BANK(ch));
 
-  if (IS_NPC(ch))
-    return (FALSE);
+    return TRUE;
+  }
 
-  if (cmd == CMD_BALANCE)
-    {
-      sprintf(buf,"Your balance is %d coins.\n\r",ch->points.bank);
-      send_to_char(buf,ch);
-      return(TRUE);
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  if (!*buf) {
+    send_to_char("Please specify an amount.\n\r", ch);
+
+    return TRUE;
+  }
+
+  uint64_t coins = 0;
+
+  if (!strcmp(buf, "all")) {
+    if (cmd == CMD_DEPOSIT) {
+      coins = GET_GOLD(ch);
     }
-
-  if (!*arg)
-    { send_to_char("Please specify an amount.\n\r", ch);
-      return(FALSE);
+    else if (cmd == CMD_WITHDRAW) {
+      coins = GET_BANK(ch);
     }
-
-  one_argument(arg, number);
-  if (!*number) return FALSE;
-  if(!strcmp(number,"all")) {
-    if(cmd==CMD_DEPOSIT) num=GET_GOLD(ch);
-    if(cmd==CMD_WITHDRAW) num=GET_BANK(ch);
   }
   else {
-    if(!isdigit(*number)) return FALSE;
-    if (!(num = atoi(number)) ) return FALSE;
-  }
+    coins = strtoll(buf, NULL, 10);
 
-  if (num <= 0)
-    {  send_to_char("Amount must be positive.\n\r", ch);
-  return(FALSE);
-      }
+    if (coins <= 0) {
+      send_to_char("Amount must be positive.\n\r", ch);
 
-  if (cmd == CMD_DEPOSIT)
-    {
-      if (GET_GOLD(ch) < num) {
-  send_to_char("You don't have that many coins!\n\r",ch);
-  return TRUE;
-      }
-      GET_GOLD(ch) += -num;
-      ch->points.bank += num;
-      send_to_char("Ok.\n\r",ch);
       return TRUE;
     }
-  else
-    {
-      if (ch->points.bank < num) {
-  send_to_char("You don't have that many coins in the Bank!\n\r",ch);
-  return TRUE;
-      }
-      GET_GOLD(ch) += num;
-      ch->points.bank -= num;
-      send_to_char("Ok.\n\r",ch);
-      return TRUE;
+  }
+
+  if (cmd == CMD_DEPOSIT) {
+    if (GET_GOLD(ch) < coins) {
+      send_to_char("You don't have that many coins!\n\r", ch);
     }
+    else if (coins <= 0) {
+      send_to_char("You don't have any coins to deposit.\n\r", ch);
+    }
+    else if ((INT_MAX - GET_BANK(ch)) < coins) {
+      send_to_char("This would result in a gold overflow.\n\r", ch);
+    }
+    else {
+      GET_GOLD(ch) -= coins;
+      GET_BANK(ch) += coins;
+
+      printf_to_char(ch, "You deposit %lld coins.\n\r", coins);
+    }
+
+    return TRUE;
+  }
+
+  if (cmd == CMD_WITHDRAW) {
+    if (GET_BANK(ch) < coins) {
+      send_to_char("You don't have that many coins in the bank!\n\r", ch);
+    }
+    else if (coins <= 0) {
+      send_to_char("You don't have any coins to withdraw.\n\r", ch);
+    }
+    else if ((INT_MAX - GET_GOLD(ch)) < coins) {
+      send_to_char("This would result in a gold overflow.\n\r", ch);
+    }
+    else {
+      GET_BANK(ch) -= coins;
+      GET_GOLD(ch) += coins;
+
+      printf_to_char(ch, "You withdraw %lld coins.\n\r", coins);
+    }
+
+    return TRUE;
+  }
+
   return FALSE;
 }
-
-/*int insurance(OBJ *obj,CHAR *ch, int cmd, char *arg)
-{
-  char buf[MAX_STRING_LENGTH];
-  int num;
-
-  if ((cmd != CMD_LIST) && (cmd != CMD_BUY)) return(FALSE);
-  arg = one_argument(arg, buf);
-
-  if (cmd==CMD_LIST) {
-    sprintf(buf, "Your insurance fee are %d coins.", (GET_LEVEL(ch) * 5000));
-    send_to_char(buf, ch);
-    return(TRUE);
-  }
-  else {
-    if (!*buf) {
-      send_to_char("Buy what?\n\r",ch);
-      return(TRUE);
-    }
-
-    if (!strcmp(buf,"insurance")) {
-      num = (GET_LEVEL(ch) * 5000);
-      if (GET_GOLD(ch) < num) {
-  send_to_char("You don't have enough coins!", ch);
-  return(TRUE);
-      }
-
-      GET_GOLD(ch) -= num;
-      send_to_char("You have bought an insurance.\n\r", ch);
-      act("$n buys an insurance.", FALSE, ch, 0, 0, TO_ROOM);
-      SET_BIT(ch->specials.pflag, PLR_INSURANCE);
-    }
-    else
-      send_to_char("Buy what?\n\r", ch);
-  }
-  return FALSE;
-}
-*/
 
 int flower(OBJ *obj,CHAR *ch, int cmd, char *arg) {
   char obj_name[MAX_STRING_LENGTH], vict_name[MAX_STRING_LENGTH];

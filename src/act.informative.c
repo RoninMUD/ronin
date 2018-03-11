@@ -1072,37 +1072,33 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
       }
     }
 
-    if (found)
-    {
+    if (found) {
       act("\n\r$n is using:", FALSE, i, 0, ch, TO_VICT);
 
-      for (j = 0; j < MAX_WEAR; j++)
-      {
-        if (EQ(i, j))
-        {
-          if (CAN_SEE_OBJ(ch, EQ(i, j)))
-          {
-            send_to_char(where[j], ch);
-            show_obj_to_char(EQ(i, j), ch, 1, 0);
+      for (j = 0; j < MAX_WEAR; j++) {
+        OBJ *obj = EQ(i, j);
 
-            switch (j) {
-              case WEAR_NECK_1:
-                /* Emith cape uses both neck slots, similar to a 2-handed weapon. */
-                if (V_OBJ(EQ(i, j)) == EMITH_CAPE_1 || V_OBJ(EQ(i, j)) == EMITH_CAPE_2) {
-                  send_to_char(where[j], ch);
-                  send_to_char("********\n\r", ch);
-                  j++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
-                }
-                break;
-              case WIELD:
-                if (OBJ_TYPE(EQ(i, j)) == ITEM_2HWEAPON) {
-                  send_to_char(where[j], ch);
-                  send_to_char("********\n\r", ch);
-                  j++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
-                }
-                break;
+        if (!obj || !CAN_SEE_OBJ(ch, obj)) continue;
+
+        send_to_char(where[j], ch);
+        show_obj_to_char(obj, ch, 1, 0);
+
+        switch (j) {
+          case WEAR_NECK_1:
+            /* ITEM_WEAR_2NECK and Emith cape uses both neck slots, similar to a 2-handed weapon. */
+            if (CAN_WEAR(obj, ITEM_WEAR_2NECK) || (V_OBJ(obj) == EMITH_CAPE_1) || (V_OBJ(obj) == EMITH_CAPE_2)) {
+              send_to_char(where[WEAR_NECK_2], ch);
+              send_to_char("********\n\r", ch);
+              j++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
             }
-          }
+            break;
+          case WIELD:
+            if (OBJ_TYPE(obj) == ITEM_2HWEAPON) {
+              send_to_char(where[j], ch);
+              send_to_char("********\n\r", ch);
+              j++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
+            }
+            break;
         }
       }
     }
@@ -3337,8 +3333,8 @@ void do_equipment(struct char_data *ch, char *argument, int cmd)
 
       switch (equip_pos) {
         case WEAR_NECK_1:
-          /* Emith cape uses both neck slots, similar to a 2-handed weapon. */
-          if (V_OBJ(equipment) == EMITH_CAPE_1 || V_OBJ(equipment) == EMITH_CAPE_2) {
+          /* ITEM_WEAR_2NECK and Emith cape uses both neck slots, similar to a 2-handed weapon. */
+          if (CAN_WEAR(equipment, ITEM_WEAR_2NECK) || (V_OBJ(equipment) == EMITH_CAPE_1) || (V_OBJ(equipment) == EMITH_CAPE_2)) {
             send_to_char(where[WEAR_NECK_2], ch);
             send_to_char("********\n\r", ch);
             equip_pos++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */

@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -256,45 +257,55 @@ void shopping_sell( char *arg, CHAR *ch,CHAR *keeper,int shop_nr)
   if(GET_GOLD(keeper)<100000) GET_GOLD(keeper)=100000;
      /* Always have at least 100K - Ranger Feb 99 */
 
-  if (GET_GOLD(keeper)<(int) (temp1->obj_flags.cost*
-            shop_index[shop_nr].profit_sell)) {
-    sprintf(buf,shop_index[shop_nr].missing_cash1
-      ,GET_NAME(ch));
-    do_tell(keeper,buf,19);
+  int coins = (int)(temp1->obj_flags.cost * shop_index[shop_nr].profit_sell);
+
+  if (GET_GOLD(keeper) < coins) {
+    snprintf(buf, sizeof(buf), shop_index[shop_nr].missing_cash1, GET_NAME(ch));
+
+    do_tell(keeper, buf, 19);
+
+    return;
+  }
+
+  if ((INT_MAX - GET_GOLD(ch)) < coins) {
+    send_to_char("You can't carry any more coins.\n\r", ch);
+
     return;
   }
 
   act("$n sells $p.", FALSE, ch, temp1, 0, TO_ROOM);
 
-  sprintf(buf,shop_index[shop_nr].message_sell,
-    GET_NAME(ch),(int) (temp1->obj_flags.cost*
-            shop_index[shop_nr].profit_sell));
-  do_tell(keeper,buf,19);
-  sprintf(buf,"The shopkeeper now has %s.\n\r",
-    OBJ_SHORT(temp1));
-  send_to_char(buf,ch);
-  GET_GOLD(ch) += (int) (temp1->obj_flags.cost*
-       shop_index[shop_nr].profit_sell);
-  GET_GOLD(keeper) -= (int) (temp1->obj_flags.cost*
-           shop_index[shop_nr].profit_sell);
+  sprintf(buf, shop_index[shop_nr].message_sell, GET_NAME(ch), coins);
+  do_tell(keeper, buf, 19);
 
-  if(GET_ITEM_TYPE(temp1) == ITEM_TRASH) {
+  sprintf(buf, "The shopkeeper now has %s.\n\r", OBJ_SHORT(temp1));
+  send_to_char(buf, ch);
+
+  GET_GOLD(ch) += coins;
+  GET_GOLD(keeper) -= coins;
+
+  if (GET_ITEM_TYPE(temp1) == ITEM_TRASH) {
     extract_obj(temp1);
-    return;
   }
 
-  for(obj = keeper->carrying; obj; obj = obj_n) {
-    obj_n=obj->next_content;
-    if(V_OBJ(obj)==V_OBJ(temp1)) {
+  bool found = FALSE;
+
+  for (obj = keeper->carrying; obj && !found; obj = obj_n) {
+    obj_n = obj->next_content;
+
+    if (V_OBJ(obj) == V_OBJ(temp1)) {
       extract_obj(temp1);
-      return;
+
+      found = TRUE;
     }
   }
 
-  obj_from_char(temp1);
-  obj_to_char(temp1,keeper);
-  save_char(ch,NOWHERE);
-  return;
+  if (!found) {
+    obj_from_char(temp1);
+    obj_to_char(temp1, keeper);
+  }
+
+  save_char(ch, NOWHERE);
 }
 
 void shopping_value( char *arg, CHAR *ch,
