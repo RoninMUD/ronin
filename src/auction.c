@@ -20,6 +20,7 @@ May 98 - Lowered 50K to 30K
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "comm.h"
@@ -651,34 +652,47 @@ void auction_auction(CHAR *auctioneer, CHAR *ch, char *arg)
   save_char(ch, NOWHERE);
 }
 
-void auction_collect(CHAR *auctioneer, CHAR *ch)
-{
+void auction_collect(CHAR *auctioneer, CHAR *ch) {
   char buf[MAX_STRING_LENGTH];
   int found, i;
 
   found = FALSE;
-  for(i = 0; i < MAX_OBJS_AUCTION; i++) {
-    if(A_Board.auc[i].status == AUCTION_COLLECT &&
-       !str_cmp(A_Board.auc[i].owner, GET_NAME(ch))) {
-      GET_GOLD(ch) += A_Board.auc[i].value - 100;
-      sprintf(buf, "$n gives you %d coins for your lot #%d.",
-              A_Board.auc[i].value - 100, i);
+  for (i = 0; i < MAX_OBJS_AUCTION; i++) {
+    if (A_Board.auc[i].status == AUCTION_COLLECT &&
+      !str_cmp(A_Board.auc[i].owner, GET_NAME(ch))) {
+      int coins = A_Board.auc[i].value - 100;
+
+      if ((INT_MAX - GET_GOLD(ch)) < coins) {
+        send_to_char("You can't carry any more coins.\n\r", ch);
+
+        continue;
+      }
+
+      GET_GOLD(ch) += coins;
+
+      snprintf(buf, sizeof(buf), "$n gives you %d coins for your lot #%d.", coins, i);
       act(buf, FALSE, auctioneer, 0, ch, TO_VICT);
+
       free(A_Board.auc[i].owner);
+
       A_Board.auc[i].owner = 0;
       A_Board.auc[i].value = 0;
       A_Board.auc[i].status = AUCTION_FREE;
       A_Board.auc[i].time = 0;
+
       found = TRUE;
     }
   }
-  if(!found) {
+
+  if (!found) {
     act("$n tells you, 'But there isn't anything for you to collect.'", FALSE, auctioneer, 0, ch, TO_VICT);
-  } else {
+  }
+  else {
     save_auction();
     save_char(ch, NOWHERE);
   }
 }
+
 int check_god_access(CHAR *ch, int active);
 int spec_auctioneer(CHAR *auctioneer, CHAR *ch, int cmd, char *arg)
 {

@@ -2134,8 +2134,6 @@ void send_to_room_except_two(char *messg, int room, struct char_data *ch1, struc
 }
 
 int same_group(struct char_data *ch1, struct char_data *ch2) {
-  struct char_data *group_leader = NULL;
-
   /* If we don't get two characters, there can be no valid compairson. */
   if (!ch1 || !ch2) return FALSE;
 
@@ -2149,16 +2147,17 @@ int same_group(struct char_data *ch1, struct char_data *ch2) {
   if (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP)) return FALSE;
 
   /* If neither character has a group leader, they cannot be in the same group. */
-  if (!(ch1->master) && !(ch2->master)) return FALSE;
+  if (!GET_MASTER(ch1) && !GET_MASTER(ch2)) return FALSE;
 
-  /* Get the first character's group leader, if they have one.
-     Otherwise, they must be the leader. */
-  if (ch1->master) group_leader = ch1->master;
-  else group_leader = ch1;
+  /* Get the first character's group leader. */
+  CHAR *leader = GET_MASTER(ch1);
+
+  /* If the first character didn't have a group leader, they are the leader. */
+  if (!leader) leader = ch1;
 
   /* If the second character's group leader isn't the first character's group
      leader, they cannot be in the same group. */
-  if (ch2->master != group_leader) return FALSE;
+  if (GET_MASTER(ch2) != leader) return FALSE;
 
   return TRUE;
 }

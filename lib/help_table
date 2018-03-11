@@ -7828,18 +7828,17 @@ RIMEFANG
 Subclass Legionnaire: Level 2 (Commando)
 
 Usage       : cast 'rimefang'
-Accumulative: no
+Accumulative: No
 Duration    : -
-Save        : 1/2 vs. paralysis
+Save        : Save vs. Spell: 1/2 Damage, Save vs. Paralysis: Negates Paralysis
 Mana Cost   : 150
 Damage      : (6 to 8) * caster level (up to 400 at level 50)
 
-This extremely powerful room spell can cause serious damage to
-anything in the immediate vicinity.  The Legionnaire not only deals
-damage equal to five times his/her level, but also has a chance to
-paralyze his/her victims.
+This extremely powerful room attack spell can cause serious damage to anything
+in the immediate vicinity.  This spell also has a higher than normal chance to
+paralyze those hit by it, as compared to the Paralyze spell.
 
-During the winter, Rimefang will deal an additional 75 to 100 damage.
+During the winter, Rimefang will deal an additional 50 to 100 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #

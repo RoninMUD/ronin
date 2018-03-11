@@ -1099,53 +1099,75 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
     }
   } break;
 
-  case 1: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) {
-      if ((ch->equipment[WEAR_FINGER_L]) && (ch->equipment[WEAR_FINGER_R])) {
-      send_to_char("You are already wearing something on your fingers.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      if (ch->equipment[WEAR_FINGER_L]) {
-        sprintf(buffer, "You put the %s on your right finger.\n\r",
-              fname(OBJ_NAME(obj_object)));
-        send_to_char(buffer, ch);
-        show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch, obj_object, WEAR_FINGER_R);
-      } else {
-        sprintf(buffer, "You put the %s on your left finger.\n\r",
-              fname(OBJ_NAME(obj_object)));
-        send_to_char(buffer, ch);
-        show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch, obj_object, WEAR_FINGER_L);
+  case 1:
+  {
+    if (CAN_WEAR(obj_object, ITEM_WEAR_FINGER)) {
+      if (EQ(ch, WEAR_FINGER_R) && EQ(ch, WEAR_FINGER_L)) {
+        send_to_char("You are already wearing something on your fingers.\n\r", ch);
       }
+      else {
+        perform_wear(ch, obj_object, keyword);
+
+        if (EQ(ch, WEAR_FINGER_L)) {
+          printf_to_char(ch, "You put the %s on your right finger.\n\r",
+            fname(OBJ_NAME(obj_object)));
+
+          show_bitvector_wear(ch, obj_object);
+
+          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
+
+          obj_from_char(obj_object);
+          equip_char(ch, obj_object, WEAR_FINGER_R);
+        }
+        else {
+          printf_to_char(ch, "You put the %s on your left finger.\n\r",
+            fname(OBJ_NAME(obj_object)));
+
+          show_bitvector_wear(ch, obj_object);
+
+          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
+
+          obj_from_char(obj_object);
+          equip_char(ch, obj_object, WEAR_FINGER_L);
+        }
       }
-    } else {
+    }
+    else {
       send_to_char("You can't wear that on your finger.\n\r", ch);
     }
   } break;
-  case 2: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) {
-      if ((ch->equipment[WEAR_NECK_1]) && (ch->equipment[WEAR_NECK_2])) {
-      send_to_char("You can't wear any more around your neck.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      if (ch->equipment[WEAR_NECK_1]) {
-        show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch, obj_object, WEAR_NECK_2);
-      } else {
-        show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch, obj_object, WEAR_NECK_1);
+  case 2:
+  {
+    if (CAN_WEAR(obj_object, ITEM_WEAR_NECK) || CAN_WEAR(obj_object, ITEM_WEAR_2NECK)) {
+      if ((CAN_WEAR(obj_object, ITEM_WEAR_2NECK) && (EQ(ch, WEAR_NECK_1) || EQ(ch, WEAR_NECK_2)))) {
+        send_to_char("This item must be worn around the neck by itself.\n\r", ch);
       }
+      else if ((CAN_WEAR(obj_object, ITEM_WEAR_NECK) && (EQ(ch, WEAR_NECK_1) && CAN_WEAR(EQ(ch, WEAR_NECK_1), ITEM_WEAR_2NECK))) ||
+               (EQ(ch, WEAR_NECK_1) && EQ(ch, WEAR_NECK_2))) {
+        send_to_char("You can't wear any more around your neck.\n\r", ch);
       }
-    } else {
+      else {
+        perform_wear(ch, obj_object, keyword);
+
+        if (EQ(ch, WEAR_NECK_1) && !CAN_WEAR(obj_object, ITEM_WEAR_2NECK)) {
+          show_bitvector_wear(ch, obj_object);
+
+          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
+
+          obj_from_char(obj_object);
+          equip_char(ch, obj_object, WEAR_NECK_2);
+        }
+        else {
+          show_bitvector_wear(ch, obj_object);
+
+          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
+
+          obj_from_char(obj_object);
+          equip_char(ch, obj_object, WEAR_NECK_1);
+        }
+      }
+    }
+    else {
       send_to_char("You can't wear that around your neck.\n\r", ch);
     }
   } break;
@@ -1467,6 +1489,7 @@ void do_wear(struct char_data *ch, char *argument, int cmd) {
         if (CAN_WEAR(obj_object,ITEM_WEAR_SHIELD)) keyword = 14;
         if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
         if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
+        if (CAN_WEAR(obj_object,ITEM_WEAR_2NECK)) keyword = 2;
         if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
         if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
         if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;
@@ -1497,6 +1520,7 @@ void do_wear(struct char_data *ch, char *argument, int cmd) {
      if (CAN_WEAR(obj_object,ITEM_WEAR_SHIELD)) keyword = 14;
      if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
      if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
+     if (CAN_WEAR(obj_object,ITEM_WEAR_2NECK)) keyword = 2;
      if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
      if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
      if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;

@@ -865,65 +865,49 @@ void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ
   }
 }
 
-void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  int dam = 0;
-  AFF af;
-  AFF af2;
-  CHAR *tmp_victim = NULL;
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  dam = (number(6, 8) * GET_LEVEL(ch));
+  int dam = (number(6, 8) * GET_LEVEL(ch));
 
-  if (time_info.month <= 2 || time_info.month >= 15) dam += number(75, 100); /* Increased damage during winter. */
+  /* Increased damage during winter. */
+  if (time_info.month <= 2 || time_info.month >= 15) {
+    dam += number(50, 100);
+  }
 
   send_to_char("An aura of frost starts to form around you.\n\r", ch);
   act("An aura of frost starts to form around $n.", FALSE, ch, 0, 0, TO_ROOM);
 
-  af.type       = SPELL_PARALYSIS;
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-    af.duration = 1;
-  else
-    af.duration = (GET_LEVEL(ch) / 10);
-  af.modifier   = 100;
-  af.location   = APPLY_AC;
-  af.bitvector  = AFF_PARALYSIS;
-  af.bitvector2 = 0;
+  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(ch)].people, *next_victim = NULL; temp_victim; temp_victim = next_victim) {
+    next_victim = temp_victim->next_in_room;
 
-  af2 = af;
-  af2.location = APPLY_HITROLL;
-  af2.modifier = -5;
+    if (temp_victim == ch || IS_IMMORTAL(temp_victim)) continue;
 
-  for (victim = world[CHAR_REAL_ROOM(ch)].people; victim; victim = tmp_victim)
-  {
-    tmp_victim = victim->next_in_room;
+    if (IS_NPC(temp_victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim))) {
+      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_victim, TO_VICT);
 
-    if (victim == ch || IS_IMMORTAL(victim)) continue;
-
-    if (IS_NPC(victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-    {
-      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, victim, TO_VICT);
-
-      if (!IS_SET(victim->specials.immune, IMMUNE_PARALYSIS) &&
-          !IS_AFFECTED(victim, AFF_PARALYSIS) &&
-          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(victim)) &&
-          !saves_spell(victim, SAVING_PARA, level + 10)) /* Rimefang paralyze has an increased success rate. */
+      if (!IS_SET(GET_IMMUNE(temp_victim), IMMUNE_PARALYSIS) &&
+          !IS_AFFECTED(temp_victim, AFF_PARALYSIS) &&
+          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_victim)) &&
+          /* Rimefang paralyze has an increased success rate. */
+          !saves_spell(temp_victim, SAVING_PARA, (level + 10)))
       {
-        affect_to_char(victim, &af);
-        affect_to_char(victim, &af2);
+        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), 100, APPLY_AC, AFF_PARALYSIS, 0);
+        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
-        send_to_char("Your limbs freeze in place.\n\r", victim);
-        act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
+        send_to_char("Your limbs freeze in place.\n\r", temp_victim);
+        act("$n is paralyzed!", TRUE, temp_victim, 0, 0, TO_ROOM);
       }
 
-      if (saves_spell(victim, SAVING_SPELL, level)) dam /= 2;
+      if (saves_spell(temp_victim, SAVING_SPELL, level)) {
+        dam /= 2;
+      }
 
-      damage(ch, victim, dam, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage(ch, temp_victim, dam, SPELL_RIMEFANG, DAM_COLD);
     }
   }
 }
@@ -1999,33 +1983,20 @@ void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 
 void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  int num_shadows_active = 0;
-
-  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
-    /* Caster has 4 shadows. */
-    num_shadows_active = 4;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
-    /* Caster has 3 shadows. */
-    num_shadows_active = 3;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
-    /* Caster has 2 shadows. */
-    num_shadows_active = 2;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
-    /* Caster has 1 shadow. */
-    num_shadows_active = 1;
+  int num_shadows = 0;
+  
+  if (affected_by_spell(ch, SPELL_SHADOW_WRAITH)) {
+    num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
   }
 
-  if (num_shadows_active >= 4 ||
-      ((num_shadows_active >= 2) && (GET_SC_LEVEL(ch) < 4)) ||
-      ((num_shadows_active >= 3) && (GET_SC_LEVEL(ch) < 5))) {
+  if (num_shadows >= 4 ||
+      ((num_shadows >= 2) && (GET_SC_LEVEL(ch) < 4)) ||
+      ((num_shadows >= 3) && (GET_SC_LEVEL(ch) < 5))) {
     send_to_char("You are already controlling the maximum number of shadows you can maintain.\n\r", ch);
     return;
   }
 
-  int extra_mana_cost = num_shadows_active * 20;
+  int extra_mana_cost = num_shadows * 20;
 
   if (GET_MANA(ch) < extra_mana_cost) {
     send_to_char("You can't summon enough energy to manifest another shadow.\n\r", ch);
@@ -2045,25 +2016,27 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   affect_join(ch, &af, FALSE, FALSE);
 
-  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
-    /* Caster has 4 shadows. */
-    send_to_char("Your shadow stretches to the west.\n\r", ch);
-    act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
-    /* Caster has 3 shadows. */
-    send_to_char("Your shadow stretches to the east.\n\r", ch);
-    act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
-    /* Caster has 2 shadows. */
-    send_to_char("Your shadow stretches to the south.\n\r", ch);
-    act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else {
-    /* Caster has 1 shadow. */
-    send_to_char("Your shadow stretches to the north.\n\r", ch);
-    act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
+  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
+
+  num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
+
+  switch (num_shadows) {
+    case 1:
+      send_to_char("Your shadow stretches to the north.\n\r", ch);
+      act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
+      break;
+    case 2:
+      send_to_char("Your shadow stretches to the south.\n\r", ch);
+      act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
+      break;
+    case 3:
+      send_to_char("Your shadow stretches to the east.\n\r", ch);
+      act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
+      break;
+    case 4:
+      send_to_char("Your shadow stretches to the west.\n\r", ch);
+      act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
+      break;
   }
 }
 
@@ -2089,30 +2062,13 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  int num_shadows_active = 0;
+  int num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
 
-  if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 3)) {
-    /* Caster has 4 shadows. */
-    num_shadows_active = 4;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 2)) {
-    /* Caster has 3 shadows. */
-    num_shadows_active = 3;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) > (10 * 1)) {
-    /* Caster has 2 shadows. */
-    num_shadows_active = 2;
-  }
-  else if (duration_of_spell(ch, SPELL_SHADOW_WRAITH) >= 0) {
-    /* Caster has 1 shadow. */
-    num_shadows_active = 1;
-  }
-
-  int dam = MIN(350 * 4, 350 * num_shadows_active);
+  int dam = MIN(350 * 4, 350 * num_shadows);
 
   /* If level is > LEVEL_MORT, Shadow Wraith must be expiring in signal_char() (or an immortal cast it). Inflict double damage. */
   if (level > LEVEL_MORT) {
-    dam *= 2;
+    dam *= 4;
   }
 
   damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
@@ -2123,11 +2079,11 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       next_af = tmp_af->next;
 
       if (tmp_af->type == SPELL_SHADOW_WRAITH) {
-        if (num_shadows_active <= 1) {
+        if (num_shadows <= 1) {
           affect_from_char(ch, SPELL_SHADOW_WRAITH);
         }
         else {
-          tmp_af->duration = (num_shadows_active - 1) * 10;
+          tmp_af->duration = (num_shadows - 1) * 10;
         }
         break;
       }

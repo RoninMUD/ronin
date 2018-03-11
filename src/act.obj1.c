@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -162,20 +163,27 @@ void get(struct char_data *ch, struct obj_data *obj_object,
     log_s(buf);
   }
 
-  if((obj_object->obj_flags.type_flag == ITEM_MONEY) &&
-     (obj_object->obj_flags.value[0]>=1)) {
-    obj_from_char(obj_object);
-    sprintf(buffer,"There were %d coins.\n\r",
-          obj_object->obj_flags.value[0]);
-    send_to_char(buffer,ch);
-    GET_GOLD(ch) += obj_object->obj_flags.value[0];
-    if(obj_object->obj_flags.value[0] > 1000000) { /* changed min to 1mil 031803 Liner */
-      sprintf(buffer,"WIZ: Large transaction: %s gets %d coins",
-            GET_NAME(ch),obj_object->obj_flags.value[0]);
-      log_s(buffer);
+  if (OBJ_TYPE(obj_object) == ITEM_MONEY) {
+    int coins = OBJ_VALUE(obj_object, 0);
+
+    if ((INT_MAX - GET_GOLD(ch)) < coins) {
+      send_to_char("This would result in a gold overflow.\n\r", ch);
     }
-    extract_obj(obj_object);
+    else if (coins > 0) {
+      obj_from_char(obj_object);
+
+      printf_to_char(ch, "There %s %d coin%s.\n\r", (coins != 1) ? "were" : "was", coins, (coins != 1) ? "s" : "");
+
+      GET_GOLD(ch) += coins;
+
+      if (coins > 1000000) {
+        log_f("WIZ: Large transaction: %s gets %d coins", GET_NAME(ch), coins);
+      }
+
+      extract_obj(obj_object);
+    }
   }
+
   save_char(ch,NOWHERE);
 }
 
@@ -1296,39 +1304,47 @@ int give_number_object_to(struct char_data *ch, int number, char *name,
   return(total);
 }
 
-int give_coins_to(struct char_data *ch, int amount, struct char_data *vict)
-{
-  char buf[MAX_STRING_LENGTH];
+int give_coins_to(struct char_data *ch, int coins, struct char_data *vict) {
+  if ((GET_GOLD(ch) < coins) && !IS_IMMORTAL(ch)) {
+    send_to_char("You don't have that many coins!\n\r", ch);
 
-  if(GET_GOLD(ch) < amount &&
-     (IS_NPC(ch) || (GET_LEVEL(ch) < LEVEL_SUP && !IS_IMMORTAL(ch)))) {
-    send_to_char("You haven't got that many coins!\n\r",ch);
-    return(0);
+    return 0;
   }
 
-  send_to_char("Ok.\n\r",ch);
-  sprintf(buf,"%s gives you %d gold coins.\n\r", PERS(ch,vict), amount);
-  send_to_char(buf,vict);
-  act("$n gives some gold to $N.", 1, ch, 0, vict, TO_NOTVICT);
+  if ((INT_MAX - GET_GOLD(vict)) < coins) {
+    act("$N can't carry any more coins.", FALSE, ch, 0, vict, TO_CHAR);
+    act("$n tries to give you some gold, but you can't carry any more.", TRUE, ch, 0, vict, TO_VICT);
 
-  if(amount > 1000000) { /* changed min to 1 mil 031803 Liner */
-    sprintf(buf,"WIZ: Large transaction: %s gives %d coins to %s",
-          GET_NAME(ch),amount, GET_NAME(vict));
-    log_s(buf);
+    return 0;
   }
-  if(IS_IMMORTAL(ch)) {
-    sprintf(buf, "WIZINFO: (%s) gives %d coins to %s\n\r",
-            GET_NAME(ch), amount, GET_NAME(vict));
-    wizlog(buf, GET_LEVEL(ch)+1, 5);
+
+  printf_to_char(ch, "You give %s %d coin%s.\n\r", PERS(vict, ch), coins, ((coins != 1) ? "s" : ""));
+  printf_to_char(vict, "%s gives you %d gold coin%s.\n\r", PERS(ch, vict), coins, ((coins != 1) ? "s" : ""));
+  act("$n gives some gold to $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+
+  if (coins > 1000000) {
+    log_f("WIZ: Large transaction: %s gives %d coins to %s",
+      GET_NAME(ch), coins, GET_NAME(vict));
+  }
+
+  if (IS_IMMORTAL(ch)) {
+    char buf[MSL];
+
+    snprintf(buf, sizeof(buf), "WIZINFO: (%s) gives %d coins to %s\n\r",
+      GET_NAME(ch), coins, GET_NAME(vict));
+
+    wizlog(buf, GET_LEVEL(ch) + 1, 5);
     log_s(buf);
   }
 
   /* Lose gold only if you're an NPC or mortal */
-  if (IS_NPC(ch) || (GET_LEVEL(ch) < LEVEL_SUP || !IS_IMMORTAL(ch)))
-    GET_GOLD(ch) -= amount;
-  GET_GOLD(vict) += amount;
+  if (!IS_MORTAL(ch)) {
+    GET_GOLD(ch) -= coins;
+  }
+    
+  GET_GOLD(vict) += coins;
 
-  return(amount);
+  return coins;
 }
 
 void do_give(struct char_data *ch, char *argument, int cmd)
@@ -1449,92 +1465,124 @@ void do_give(struct char_data *ch, char *argument, int cmd)
   }
 }
 
-void do_split(struct char_data *ch, char *argument, int cmd) { /* Updated Dec 98 - Ranger */
-  char buf[MAX_STRING_LENGTH];
-  int no_members=0, amount;
-  struct char_data *k;
-  struct follow_type *f;
+void do_split(struct char_data *ch, char *argument, int cmd) {
+  if (!ch || IS_NPC(ch)) return;
 
-  /* Initial Checks */
-  amount = 0;
-  one_argument(argument,buf);
+  if (IS_IMMORTAL(ch)) {
+    send_to_char("Immortals shouldn't split gold.\n\r", ch);
 
-  if(!*buf) {
-    send_to_char("How much do you want to split?\n\r",ch);
     return;
   }
 
+  char buf[MIL];
+
+  one_argument(argument, buf);
+
+  if (!*buf) {
+    send_to_char("How much do you want to split?\n\r", ch);
+
+    return;
+  }
+
+  int coins = 0;
+
   if (!is_number(buf)) {
     if (!strncmp(buf, "all.coins", MAX_INPUT_LENGTH)) {
-      amount = GET_GOLD(ch);
+      coins = GET_GOLD(ch);
     }
     else {
-      send_to_char("Sorry, you can't do that!\n\r",ch);
+      send_to_char("Split what?\n\r", ch);
+
       return;
     }
   }
   else {
-    amount = atoi(buf);
+    coins = atoi(buf);
   }
 
-  if (amount<=0) {
-    send_to_char("Sorry, you can't do that!\n\r",ch);
+  if (coins <= 0) {
+    send_to_char("Amount must be positive.\n\r", ch);
+
     return;
   }
 
-  if (GET_GOLD(ch)<amount) {
-    send_to_char("You haven't got that many coins!\n\r",ch);
+  if (GET_GOLD(ch) < coins) {
+    send_to_char("You don't have that many coins.\n\r", ch);
+
     return;
   }
 
-  if (!(k=ch->master)) k=ch; /* If ch doesn't have a master, ch must be the leader */
+  CHAR *leader = ((GET_MASTER(ch)) ? GET_MASTER(ch) : ch);
 
-  /* Check for same room */
-  if(IS_AFFECTED(k, AFF_GROUP) && (CHAR_REAL_ROOM(k) == CHAR_REAL_ROOM(ch)))
-    no_members = 1;
-  else {
-    send_to_char("Your leader is not here!\n\r",ch);
-    return; /* Added by Ranger April 96 */
-  }
+  if (!SAME_ROOM(leader, ch)) {
+    send_to_char("Your leader is not here!\n\r", ch);
 
-  /* Count the number of followers */
-  for(f=k->followers; f; f=f->next)
-    if(IS_AFFECTED(f->follower, AFF_GROUP) &&
-       (CHAR_REAL_ROOM(f->follower) == CHAR_REAL_ROOM(ch)))
-      no_members++;
-
-  if(no_members==0) {
-    send_to_char("You can't split the money with yourself!\n\r",ch);
     return;
   }
 
-  amount=amount/no_members;
+  /* Make sure this is never zero. */
+  int num_members = 1;
 
-  if(IS_IMMORTAL(ch)) amount=0;
+  /* Count the number of characters in the player's group. */
+  for (FOL *follower = leader->followers; follower; follower = follower->next) {
+    CHAR *temp_ch = follower->follower;
 
-  /* Distribute to the followers */
-  for(f=k->followers; f; f=f->next) {
-    if(IS_AFFECTED(f->follower, AFF_GROUP) && (f->follower!=ch) &&
-       (CHAR_REAL_ROOM(f->follower) == CHAR_REAL_ROOM(ch))) {
-      sprintf(buf,"%s splits %d coins to the group.\n\r", GET_NAME(ch), amount);
-      send_to_char(buf,f->follower);
-      GET_GOLD(ch)-=amount;
-      GET_GOLD(f->follower)+=amount;
-      save_char(f->follower,NOWHERE);
+    if (!temp_ch || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
+
+    num_members++;
+  }
+
+  /* Take gold from ch. */
+  GET_GOLD(ch) -= coins;
+
+  /* Determine amount to split among group members. */
+  int split = coins / num_members;
+
+  /* Split coins among group members. */
+  for (FOL *follower = leader->followers; follower; follower = follower->next) {
+    CHAR *temp_ch = follower->follower;
+
+    if (!temp_ch || !IS_MORTAL(temp_ch) || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
+
+    /* Prevent gold overflow. */
+    if ((INT_MAX - GET_GOLD(temp_ch)) < split) {
+      act("$N can't carry any more coins.", FALSE, ch, 0, temp_ch, TO_CHAR);
+      send_to_char("You can't carry any more coins.\n\r", temp_ch);
+
+      continue;
+    }
+
+    printf_to_char(temp_ch, "%s splits %d coin%s to the group.\n\r", GET_NAME(ch), split, ((split != 1) ? "s" : ""));
+
+    coins -= split;
+    GET_GOLD(temp_ch) += split;
+
+    save_char(temp_ch, NOWHERE);
+  }
+
+  /* If ch wasn't the leader, give some coins to the leader. */
+  if ((ch != leader) && IS_MORTAL(leader)) {
+    /* Prevent gold overflow. */
+    if ((INT_MAX - GET_GOLD(leader)) < split) {
+      act("$N can't carry any more coins.", FALSE, ch, 0, leader, TO_CHAR);
+      send_to_char("You can't carry any more coins.\n\r", leader);
+    }
+    else {
+      coins -= split;
+      GET_GOLD(leader) += split;
+
+      printf_to_char(leader, "%s splits %d coin%s to the group.\n\r", GET_NAME(ch), split, ((split != 1) ? "s" : ""));
+
+      save_char(leader, NOWHERE);
     }
   }
 
-  /* If ch wasn't the leader, give some coins to the leader */
-  if(k!=ch) {
-    GET_GOLD(k)+=amount;
-    GET_GOLD(ch)-=amount;
-    sprintf(buf,"%s splits %d coins to the group.\n\r", GET_NAME(ch), amount);
-    send_to_char(buf,k);
-    save_char(k,NOWHERE);
+  printf_to_char(ch, "You give %d coin%s to each of your group members.\n\r", split, ((split != 1) ? "s" : ""));
+
+  /* Give any leftover coins back to ch. */
+  if (coins) {
+    GET_GOLD(ch) += coins;
   }
 
-  sprintf(buf,"You give %d coins to each of your group members.\n\r",amount);
-  send_to_char(buf,ch);
   save_char(ch, NOWHERE);
-  return;
 }
