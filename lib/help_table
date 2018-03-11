@@ -7209,12 +7209,12 @@ The Infidel may "collapse" a shadow wraith, expending its existence to inflict
 massive damage against a foe.
 
 Casting Dusk Requiem immediately destroys the most recently cast Shadow Wraith,
-inflicting damage equal to 250 x the number of shadows the Infidel controls when
+inflicting damage equal to 350 x the number of shadows the Infidel controls when
 this spell is cast.  For example, if the Infidel controls four shadows, this
-spell will inflict 1000 damage to the target.
+spell will inflict 1400 damage to the target.
 
 Additionally, if a shadow's duration expires while the Infidel is engaged in
-combat, this spell is automatically cast with zero mana cost, inflicting half
+combat, this spell is automatically cast with zero mana cost, inflicting double
 damage.
 
 Finally, if a shadow's duration expires outside of combat, the Infidel gains hit
