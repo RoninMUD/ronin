@@ -5182,7 +5182,7 @@ int teller(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       send_to_char("You don't have any coins to deposit.\n\r", ch);
     }
     else if ((INT_MAX - GET_BANK(ch)) < coins) {
-      send_to_char("This would result in a gold overflow.\n\r", ch);
+      send_to_char("Your bank account is full!\n\r", ch);
     }
     else {
       GET_GOLD(ch) -= coins;
@@ -5202,7 +5202,7 @@ int teller(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       send_to_char("You don't have any coins to withdraw.\n\r", ch);
     }
     else if ((INT_MAX - GET_GOLD(ch)) < coins) {
-      send_to_char("This would result in a gold overflow.\n\r", ch);
+      send_to_char("You can't carry any more coins.\n\r", ch);
     }
     else {
       GET_BANK(ch) -= coins;

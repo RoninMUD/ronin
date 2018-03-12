@@ -56,13 +56,13 @@ D2
 ~
 0 -1 26703
 E
-branches thorns~
-The branches look dangerous if disturbed.  They cover a dark hole into a rock.
-~
-E
 hole~
 A dark hole leads beneath the rock to the east.  It is covered by a tangle of
 thick branches.
+~
+E
+branches thorns~
+The branches look dangerous if disturbed.  They cover a dark hole into a rock.
 ~
 S
 #26702
@@ -366,11 +366,11 @@ realize... the nightmare has just begun!
 ~
 267 655368 0
 E
-furniture~
-Almost none of the furniture looks be of much practical or comfortable use.
-They are mostly sharp and hard pieces crafted from gold and other precious
-metals.  Most of these are stands and small tables that support various
-artifacts upon their surfaces.
+paintings~
+Nearly all of the paintings portray intense bloody battles of ages long passed,
+when mighty beasts wandered the lands and destroyed all in their paths.  Oddly
+enough, the hero-figure in nearly all of the paintings appears to be the same
+huge man, dealing death to all around him.
 ~
 E
 tapestries~
@@ -379,11 +379,11 @@ appears to be some sort of family or noble crest that is of deep importance to
 the owner of this house.
 ~
 E
-paintings~
-Nearly all of the paintings portray intense bloody battles of ages long passed,
-when mighty beasts wandered the lands and destroyed all in their paths.  Oddly
-enough, the hero-figure in nearly all of the paintings appears to be the same
-huge man, dealing death to all around him.
+furniture~
+Almost none of the furniture looks be of much practical or comfortable use.
+They are mostly sharp and hard pieces crafted from gold and other precious
+metals.  Most of these are stands and small tables that support various
+artifacts upon their surfaces.
 ~
 S
 #26716
