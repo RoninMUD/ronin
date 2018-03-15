@@ -1337,7 +1337,7 @@ int give_coins_to(struct char_data *ch, int coins, struct char_data *vict) {
     log_s(buf);
   }
 
-  /* Lose gold only if you're an NPC or mortal */
+  /* Lose gold only if you're not immortal. */
   if (!IS_IMMORTAL(ch)) {
     GET_GOLD(ch) -= coins;
   }
