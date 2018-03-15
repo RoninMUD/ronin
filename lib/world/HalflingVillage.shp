@@ -16,8 +16,8 @@
 %s I'm sorry, I don't buy that.~
 %s Sorry, I can't afford that.~
 %s No freebies.~
-%s What keeper says after buyer gets item (Can include %d for amount).~
-%s What keeper says after it buys a sellers item (Can include %d for amount).~
+That'll be %d.  Thank you!!!~
+I'll take it for %d!~
 0
 0
 4819
@@ -63,13 +63,13 @@
 -1
 -1
 1.250000
-0.500000
-0
-0
-0
-0
-0
-%s Don't have that, go somewhere else.~
+0.250000
+8
+9
+5
+26
+10
+invalid~
 %s Don't tempt me, unless you're willing to deliver!~
 %s Take it somewhere else.~
 %s Heh?  You're kidding right?~

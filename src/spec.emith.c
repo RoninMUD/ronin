@@ -245,6 +245,9 @@ int cape_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
   if(cmd == CMD_WEAR)
   {
+    /* If cape has been set to ITEM_WEAR_2NECK, no need for this spec. */
+    if (CAN_WEAR(obj, ITEM_WEAR_2NECK)) return FALSE;
+
     /* Don't spec if no ch. */
     if(!ch) return FALSE;
     /* Don't spec if ch is not awake. */

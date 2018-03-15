@@ -767,8 +767,8 @@ cachalot hide belt~
 A Cachalot Hide Belt~
 A hide belt is lying here.~
 ~
-9 138985472 2049
-14 -1 -1 -1
+9 138469632 2049
+14 0 0 0
 5 5000000 100000
 5
 X
@@ -779,6 +779,8 @@ M
 ~
 ~
 ~
+A
+52 15
 T
 120
 #4839
@@ -786,20 +788,22 @@ wristband white rhino rhinoceros bone wrist band~
 White Rhinoceros Bone Wristband~
 A wristband made of white rhino bones is lying here...~
 ~
-9 140009472 4097
-12 -1 -1 -1
+9 171991040 4097
+10 0 0 0
 1 6000000 75000
 4
 X
 ~
-0 0 0
+512 0 0
 M
 ~
 ~
 ~
 ~
 A
-18 2
+19 -1
+A
+18 1
 T
 120
 #4840
@@ -829,5 +833,32 @@ T
 120
 B
 25206844
+#4841
+pie cow queen queens~
+The Cow Queen's Cow Pie~
+A hardened, cow pie lies on the floor.~
+~
+9 134742359 513
+500000 -1 -1 -1
+10 0 50000
+2
+X
+~
+5 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 5
+A
+52 10
+T
+120
+B
+8396800
 #0
 $~

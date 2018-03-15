@@ -113,9 +113,9 @@ typedef char byte;
 #define ITEM_SKIN       30
 #define ITEM_TROPHY     31
 #define ITEM_RECIPE     32
-#define ITEM_2FINGER    33
-#define ITEM_2NECK      34
-#define ITEM_2WRIST     35
+#define ITEM_UNUSED_33  33
+#define ITEM_UNUSED_34  34
+#define ITEM_UNUSED_35  35
 #define ITEM_AQ_ORDER   36
 
 /* Bitvector For 'wear_flags' */
@@ -139,6 +139,7 @@ typedef char byte;
 #define ITEM_NO_REMOVE    131072
 #define ITEM_NO_SCAVENGE  262144
 #define ITEM_QUESTWEAR    524288
+#define ITEM_WEAR_2NECK   1048576
 
 /* Bitvector for 'extra_flags' */
 #define ITEM_GLOW             1
