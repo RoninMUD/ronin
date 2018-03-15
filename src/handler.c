@@ -2023,82 +2023,75 @@ struct obj_data *create_money( int amount )
 /*  **tar_ch Will be NULL if no character was found, otherwise points     */
 /* **tar_obj Will be NULL if no object was found, otherwise points        */
 /*                                                                        */
-
-int generic_find(char *arg, int bitvector, struct char_data *ch,
-                   struct char_data **tar_ch, struct obj_data **tar_obj)
-{
-  static const char * const ignore[] = {
+int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ **target_obj) {
+  const char * ignore[] = {
     "the",
     "in",
     "on",
     "at",
-    "\n" };
+    "\n"
+  };
 
-  int i;
-  char name[256];
-  bool found;
+  char name[MIL];
 
-  found = FALSE;
+  /* Eliminate spaces and "ignore" words. */
+  while (*argument) {
+    for (; *argument == ' '; argument++);
 
+    int i = 0;
 
-  /* Eliminate spaces and "ignore" words */
-  while (*arg && !found) {
+    for (; (name[i] = *(argument + i)) && (name[i] != ' '); i++);
 
-    for(; *arg == ' '; arg++)   ;
-
-    for(i=0; (name[i] = *(arg+i)) && (name[i]!=' '); i++)   ;
     name[i] = 0;
-    arg+=i;
-    if (search_block(name, ignore, TRUE) > -1)
-      found = TRUE;
 
+    argument += i;
+
+    if (search_block(name, ignore, TRUE) > -1) break;
   }
 
-  if (!name[0])
-    return(0);
+  if (!name[0]) return 0;
 
-  *tar_ch  = 0;
-  *tar_obj = 0;
-
-  if (IS_SET(bitvector, FIND_CHAR_ROOM)) {      /* Find person in room */
-    if ((*tar_ch = get_char_room_vis(ch, name))) {
-      return(FIND_CHAR_ROOM);
+  if (target_ch && IS_SET(bitvector, FIND_CHAR_ROOM)) {
+    if ((*target_ch = get_char_room_vis(ch, name))) {
+      return FIND_CHAR_ROOM;
     }
   }
 
-  if (IS_SET(bitvector, FIND_CHAR_WORLD)) {
-    if ((*tar_ch = get_char_vis(ch, name))) {
-      return(FIND_CHAR_WORLD);
+  if (target_ch && IS_SET(bitvector, FIND_CHAR_WORLD)) {
+    if ((*target_ch = get_char_vis(ch, name))) {
+      return FIND_CHAR_WORLD;
     }
   }
 
-  if (IS_SET(bitvector, FIND_OBJ_INV)) {
-    if ((*tar_obj = get_obj_in_list_vis(ch, name, ch->carrying))) {
-      return(FIND_OBJ_INV);
+  if (target_obj && IS_SET(bitvector, FIND_OBJ_INV)) {
+    if ((*target_obj = get_obj_in_list_vis(ch, name, ch->carrying))) {
+      return FIND_OBJ_INV;
     }
   }
 
-  if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
-    for(found=FALSE, i=0; i<MAX_WEAR && !found; i++)
-      if (ch->equipment[i] && isname(name,OBJ_NAME(ch->equipment[i]))) {
-        *tar_obj = ch->equipment[i];
-        found = TRUE;
-        return(FIND_OBJ_EQUIP);
+  if (target_obj && IS_SET(bitvector, FIND_OBJ_EQUIP)) {
+    for (int i = 0; i < MAX_WEAR; i++) {
+      OBJ *tmp_obj = EQ(ch, i);
+
+      if (tmp_obj && isname(name, OBJ_NAME(tmp_obj))) {
+        *target_obj = tmp_obj;
+
+        return FIND_OBJ_EQUIP;
       }
-  }
-
-  if (IS_SET(bitvector, FIND_OBJ_ROOM)) {
-    if ((*tar_obj = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents))) {
-      return(FIND_OBJ_ROOM);
     }
   }
 
-  if (IS_SET(bitvector, FIND_OBJ_WORLD)) {
-    if ((*tar_obj = get_obj_vis(ch, name))) {
-      return(FIND_OBJ_WORLD);
+  if (target_obj && IS_SET(bitvector, FIND_OBJ_ROOM)) {
+    if ((*target_obj = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents))) {
+      return FIND_OBJ_ROOM;
     }
   }
 
-  return(0);
+  if (target_obj && IS_SET(bitvector, FIND_OBJ_WORLD)) {
+    if ((*target_obj = get_obj_vis(ch, name))) {
+      return FIND_OBJ_WORLD;
+    }
+  }
+
+  return 0;
 }
-

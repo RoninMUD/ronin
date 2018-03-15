@@ -1085,15 +1085,6 @@ bool saves_spell(struct char_data *ch, sh_int type, int level)
   return (MAX(2, saving_throw) < number(1, 20));
 }
 
-
-char *skip_spaces(char *string)
-{
-  while (*string && *string == ' ') string++;
-
-  return string;
-}
-
-
 int USE_MANA(CHAR *ch, int spell_number)
 {
   int mana = 0;

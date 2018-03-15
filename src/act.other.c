@@ -1735,90 +1735,104 @@ void do_throw(struct char_data *ch, char *argument, int cmd)
 }
 
 
-void do_shoot(struct char_data *ch, char *argument, int cmd)
-{
-  struct char_data *tmp_char;
-  struct obj_data *tmp_object, *gun;
-  int a,b, dam, percent;
-  int bits;
+void do_shoot(struct char_data *ch, char *argument, int cmd) {
+  if (!ch) return;
 
-     if(ch->equipment[HOLD] == 0)
-     {
-          send_to_char("You are not holding anything.\n\r", ch);
-          return;
-     }
+  OBJ *gun = EQ(ch, HOLD);
 
-     if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE)&& (!CHAOSMODE))
-     {     send_to_char("Behave yourself here please!\n\r", ch);
-          return;
-     }
+  if (!gun) {
+    send_to_char("You are not holding anything.\n\r", ch);
 
-     gun = ch->equipment[HOLD];
+    return;
+  }
 
-     if(gun->obj_flags.type_flag==ITEM_FIREWEAPON) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE) && !CHAOSMODE) {
+    send_to_char("Behave yourself here please!\n\r", ch);
 
-          bits = generic_find(argument, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM |
-                              FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
-          if(bits) {
-               if(bits == FIND_CHAR_ROOM) {
-                    if(ch==tmp_char) {
-                      send_to_char("Shoot yourself?  You must be kidding.\n\r",ch);
-                      return;
-                    }
-                    if(gun->obj_flags.value[1] == 0)
-                    {     send_to_char("Your weapon has run out of ammunition!\n\r", ch);
-                         return;
-                    }
-                    if(gun->obj_flags.value[2] == 0)
-                    {     send_to_char("Your gun is too old to shoot anymore.\n\r", ch);
-                         return;
-                    }
+    return;
+  }
 
-                    percent = number(1, 100);
-                    if (GET_LEVEL(ch)==LEVEL_IMP)
-                        percent = 0;
-                    if(percent > 70)
-                    { act("$n fires a shot into the sky.", TRUE, ch, gun, tmp_char, TO_ROOM);
-                      act("You miss your shot at $N.", FALSE, ch, gun, tmp_char, TO_CHAR);
-                      gun->obj_flags.value[1] -= 1;
-                      WAIT_STATE(ch, PULSE_VIOLENCE);
-                      return;
-                    }
-                    act("$n shoots at $N.", TRUE, ch, gun, tmp_char, TO_NOTVICT);
-                    act("You shoot at $N.",FALSE,ch, gun, tmp_char, TO_CHAR);
-                    act("$n shoots at you.", 0, ch, gun, tmp_char, TO_VICT);
-                    gun->obj_flags.value[1] -= 1;
-                    }
-               else { send_to_char("You can't do that.\n\r", ch);
-                    return; }
+  if (OBJ_TYPE(gun) != ITEM_FIREWEAPON) {
+    send_to_char("You can't shoot that.\n\r", ch);
 
-     a = gun->obj_flags.value[2];
-     b = gun->obj_flags.value[3];
+    return;
+  }
 
-     if(!IS_NPC(ch) && GET_LEVEL(ch)==LEVEL_IMP && IS_SET(ch->new.imm_flags, WIZ_ACTIVE)) {
-       act("Your shot hits $M right between the eyes!",FALSE,ch,0,tmp_char,TO_CHAR);
-       act("$n's shot hits you right between the eyes!",FALSE,ch,0,tmp_char,TO_VICT);
-       act("$n's shot hits $N right between the eyes!",FALSE,ch,0,tmp_char,TO_NOTVICT);
-       signal_char(tmp_char,ch,MSG_DIE,"");
-       divide_experience(ch,tmp_char,1);
-       raw_kill(tmp_char);
-       return;
-     }
-     dam = dice(a, b);
-        damage(ch, tmp_char, dam, TYPE_UNDEFINED,DAM_PHYSICAL);
-     WAIT_STATE(ch, PULSE_VIOLENCE);
-     }
+  argument = skip_spaces(argument);
 
-     else  { send_to_char("Shoot who?\n\r", ch);
-          return;
-          }
-     }
+  if (!*argument && IS_IMPLEMENTOR(ch)) {
+    act("$n shoots $s gun wildly in the air!", FALSE, ch, 0, 0, TO_ROOM);
+    act("You shoot your gun wildly in the air!", FALSE, ch, 0, 0, TO_CHAR);
 
-     else { send_to_char("You can't shoot that.\n\r", ch);
-          return;
-          }
+    return;
+  }
 
+  CHAR *target = NULL;
 
+  int target_bits = generic_find(argument, FIND_CHAR_ROOM, ch, &target, NULL);
+
+  if (!target || !target_bits) {
+    send_to_char("Shoot who?\n\r", ch);
+
+    return;
+  }
+
+  if (target == ch) {
+    if (IS_IMPLEMENTOR(ch)) {
+      act("$n puts a gun to $s head and pulls the trigger!  BANG!", FALSE, ch, 0, 0, TO_ROOM);
+      act("You put a gun to your head and pull the trigger!  BANG!", FALSE, ch, 0, 0, TO_CHAR);
+    }
+    else {
+      send_to_char("Shoot yourself?  You must be kidding.\n\r", ch);
+    }
+
+    return;
+  }
+
+  if (!OBJ_VALUE(gun, 1) && !IS_IMPLEMENTOR(ch)) {
+    send_to_char("Your weapon has run out of ammunition!\n\r", ch);
+
+    return;
+  }
+
+  if (!OBJ_VALUE(gun, 2) && !IS_IMPLEMENTOR(ch)) {
+    send_to_char("Your gun is too old to shoot anymore.\n\r", ch);
+
+    return;
+  }
+
+  if (!IS_IMPLEMENTOR(ch)) {
+    OBJ_VALUE(gun, 1) -= 1;
+  }
+
+  if ((number(1, 100) > 70) && !IS_IMPLEMENTOR(ch)) {
+    act("$n fires a shot into the sky.", TRUE, ch, gun, target, TO_ROOM);
+    act("You miss your shot at $N.", FALSE, ch, gun, target, TO_CHAR);
+    
+    WAIT_STATE(ch, PULSE_VIOLENCE);
+    
+    return;
+  }
+
+  act("$n shoots at $N.", FALSE, ch, 0, target, TO_NOTVICT);
+  act("$n shoots at you.", FALSE, ch, 0, target, TO_VICT);
+  act("You shoot at $N.", FALSE, ch, 0, target, TO_CHAR);
+
+  if (IS_IMPLEMENTOR(ch) && IS_SET(GET_IMM_FLAGS(ch), WIZ_ACTIVE)) {
+    act("$n's shot hits $N right between the eyes!", FALSE, ch, 0, target, TO_NOTVICT);
+    act("$n's shot hits you right between the eyes!", FALSE, ch, 0, target, TO_VICT);
+    act("Your shot hits $M right between the eyes!", FALSE, ch, 0, target, TO_CHAR);
+
+    signal_char(target, ch, MSG_DIE, "\0");
+    divide_experience(ch, target, 1);
+    raw_kill(target);
+
+    return;
+  }
+
+  damage(ch, target, dice(OBJ_VALUE(gun, 2), OBJ_VALUE(gun, 3)), TYPE_UNDEFINED, DAM_PHYSICAL);
+
+  WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
 void do_reload(struct char_data *ch, char *argument, int cmd)

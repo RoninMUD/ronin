@@ -135,6 +135,8 @@ struct char_data *get_ch_by_id(int num);
 int get_weapon_type(OBJ *obj);
 const char const * get_weapon_type_desc(OBJ *obj);
 
+char *skip_spaces(char *string);
+
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_bit_from_mask(const int mask);
