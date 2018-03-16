@@ -1858,12 +1858,6 @@ get_weapon_type_desc(OBJ *obj) {
   return result;
 }
 
-char *skip_spaces(char *string) {
-  while (*string && *string == ' ') string++;
-
-  return string;
-}
-
 
 /* Takes a character object and an array of eligible effects and returns
    an effect randomly from the array if the character is not affected by it.
