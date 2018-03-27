@@ -3931,7 +3931,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
 
   int check = number(1, 450) - (GET_DEX_APP(ch) * 5);
 
-  if (check > GET_LEARNED(ch, SKILL_SHADOWSTEP)) return;
+  if (check > (IS_NPC(ch) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_SHADOWSTEP))) return;
 
   double multi = 2.0;
 

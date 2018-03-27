@@ -1835,48 +1835,50 @@ void do_shoot(struct char_data *ch, char *argument, int cmd) {
   WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
-void do_reload(struct char_data *ch, char *argument, int cmd)
-{
+void do_reload(struct char_data *ch, char *argument, int cmd) {
   char arg1[MAX_STRING_LENGTH];
   char arg2[MAX_STRING_LENGTH];
-  struct obj_data  *gun, *bullet;
+  struct obj_data *gun, *bullet;
 
   argument_interpreter(argument, arg1, arg2);
 
-     if(!(gun = get_obj_in_list_vis(ch, arg1, ch->carrying)))
-     {     act("You do not have that item.", FALSE, ch, 0, 0, TO_CHAR);
-          return;
-     }
+  if (!(gun = get_obj_in_list_vis(ch, arg1, ch->carrying))) {
+    act("You do not have that item.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
 
-     if(!(bullet = get_obj_in_list_vis(ch,arg2,ch->carrying))) {
-          act("You do not have that item.",FALSE,ch,0,0,TO_CHAR);
-          return;
-       }
+  if (!(bullet = get_obj_in_list_vis(ch, arg2, ch->carrying))) {
+    act("You do not have that item.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
 
 
-     if(bullet->obj_flags.value[2] != gun->obj_flags.value[0])
-     {     send_to_char("Your ammunition doesn't fit the weapon!\n\r", ch);
-          return;
-     }
+  if (bullet->obj_flags.value[2] != gun->obj_flags.value[0]) {
+    send_to_char("Your ammunition doesn't fit the weapon!\n\r", ch);
+    return;
+  }
 
-     if((gun->obj_flags.type_flag==ITEM_FIREWEAPON) &&
-          (bullet->obj_flags.type_flag==ITEM_BULLET)) {
-          if(gun->obj_flags.value[1] == bullet->obj_flags.value[3])
-               {     send_to_char("Your weapon is loaded already!\n\r", ch);
-                         return;
-               }
-          else     { act("$n reloads $p.", TRUE, ch, gun, 0, TO_ROOM);
-                 act("You reload it.", FALSE, ch, gun, 0, TO_CHAR);
-                 gun->obj_flags.value[1] = bullet->obj_flags.value[3];
-                 gun->obj_flags.cost = 0;
-                 extract_obj(bullet);
-                 if(gun->obj_flags.value[2] > 0)
-                      gun->obj_flags.value[2] -= 1;
-                 return;
-               }
-          }
-     else { send_to_char("You can't do that.\n\r", ch);
-            return; }
+  if ((gun->obj_flags.type_flag == ITEM_FIREWEAPON) &&
+    (bullet->obj_flags.type_flag == ITEM_BULLET)) {
+    if (gun->obj_flags.value[1] == bullet->obj_flags.value[3]) {
+      send_to_char("Your weapon is loaded already!\n\r", ch);
+      return;
+    }
+    else {
+      act("$n reloads $p.", TRUE, ch, gun, 0, TO_ROOM);
+      act("You reload it.", FALSE, ch, gun, 0, TO_CHAR);
+      gun->obj_flags.value[1] = bullet->obj_flags.value[3];
+      gun->obj_flags.cost = 0;
+      extract_obj(bullet);
+      if (gun->obj_flags.value[2] > 0)
+        gun->obj_flags.value[2] -= 1;
+      return;
+    }
+  }
+  else {
+    send_to_char("You can't do that.\n\r", ch);
+    return;
+  }
 
 }
 

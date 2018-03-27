@@ -1841,7 +1841,7 @@ void do_trophy(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_TROPHY)) {
+  if (number(1, 85) > (IS_NPC(ch) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_TROPHY))) {
     send_to_char("You failed to harvest a trophy from the corpse.\n\r", ch);
   }
   else {
