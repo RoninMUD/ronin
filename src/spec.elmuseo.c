@@ -3796,30 +3796,30 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 // Mukluks are 4/4 hp/mana regen in arctic, or 150mv outside of arctic
 // Also, 2dam.
-int mus_mukluks(OBJ *obj, CHAR *ch,int cmd,char *arg)
-{
-  if( !obj || !obj->equipped_by || cmd != MSG_TICK )
+int mus_mukluks(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (!obj || !obj->equipped_by || cmd != MSG_TICK)
     return FALSE;
 
   CHAR *owner = obj->equipped_by;
+  bool is_footwear = EQ(owner, WEAR_FEET) == obj;
   bool is_arctic = obj->affected[0].location == APPLY_MANA_REGEN;
   bool is_room_arctic = world[CHAR_REAL_ROOM(owner)].sector_type == SECT_ARCTIC;
 
-  if( is_arctic == is_room_arctic ) return FALSE;
+  if (!is_footwear || (is_arctic == is_room_arctic)) return FALSE;
 
-  if( is_room_arctic )
-  {
-    send_to_char( "You burrow into your mukluks for warmth.\r\n", owner );
+  unequip_char(owner, WEAR_FEET);
+
+  if (is_room_arctic) {
+    send_to_char("You burrow into your mukluks for warmth.\r\n", owner);
     obj->affected[0].location = APPLY_MANA_REGEN;
-    obj->affected[0].modifier = number(14,20);
+    obj->affected[0].modifier = number(14, 20);
     obj->affected[1].location = APPLY_HP_REGEN;
-    obj->affected[1].modifier = number(14,20);
+    obj->affected[1].modifier = number(14, 20);
     obj->affected[2].modifier = 2;
     obj->affected[2].location = APPLY_DAMROLL;
   }
-  else
-  {
-    send_to_char( "You knock the snow off your mukluks.\r\n", owner );
+  else {
+    send_to_char("You knock the snow off your mukluks.\r\n", owner);
     obj->affected[0].location = APPLY_NONE;
     obj->affected[0].modifier = 0;
     obj->affected[1].location = APPLY_MOVE;
@@ -3827,6 +3827,9 @@ int mus_mukluks(OBJ *obj, CHAR *ch,int cmd,char *arg)
     obj->affected[2].modifier = 2;
     obj->affected[2].location = APPLY_DAMROLL;
   }
+
+  equip_char(owner, obj, WEAR_FEET);
+
   return FALSE;
 }
 

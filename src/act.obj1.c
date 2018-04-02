@@ -62,7 +62,7 @@ void number_argument_interpreter(char *argument, int *number,
     if(number_ok)
       *number = atoi(first_arg);
 
-  } while( fill_word(first_arg) || number_ok);
+  } while( is_fill_word(first_arg) || number_ok);
 
   do {
     /* Find first non blank */
@@ -80,7 +80,7 @@ void number_argument_interpreter(char *argument, int *number,
     begin += look_at;
 
   }
-  while( fill_word(second_arg));
+  while( is_fill_word(second_arg));
 }
 
 int is_all_dot(char *arg, char *allbuf)
@@ -1337,7 +1337,7 @@ int give_coins_to(struct char_data *ch, int coins, struct char_data *vict) {
     log_s(buf);
   }
 
-  /* Lose gold only if you're an NPC or mortal */
+  /* Lose gold only if you're not immortal. */
   if (!IS_IMMORTAL(ch)) {
     GET_GOLD(ch) -= coins;
   }
@@ -1542,7 +1542,7 @@ void do_split(struct char_data *ch, char *argument, int cmd) {
   for (FOL *follower = leader->followers; follower; follower = follower->next) {
     CHAR *temp_ch = follower->follower;
 
-    if (!temp_ch || !IS_MORTAL(temp_ch) || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
+    if (!temp_ch || (ch == temp_ch) || !IS_MORTAL(temp_ch) || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
 
     /* Prevent gold overflow. */
     if ((INT_MAX - GET_GOLD(temp_ch)) < split) {

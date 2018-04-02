@@ -17,6 +17,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <assert.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -116,9 +117,18 @@ char *unknownCMD[] = {
   "\n\r"
   };
 
+const char * const ill_name[] = {
+  "up",
+  "down",
+  "north",
+  "south",
+  "east",
+  "west",
+  "\n"
+};
 
-const char * const fill[]=
-{ "in",
+const char * const fill[] = {
+  "in",
   "from",
   "with",
   "the",
@@ -128,84 +138,167 @@ const char * const fill[]=
   "\n"
 };
 
-const char * const ill_name[]=
-{ "up",
-  "down",
-  "north",
-  "south",
-  "east",
-  "west",
-  "\n"
-};
+/* Determine if a given string is a number. */
+bool is_number(char *string) {
+  if (!*string) return FALSE;
 
-int search_block(const char *arg, const char * const *list, bool exact)
-{
-  char buf[MAX_INPUT_LENGTH];
-  register int i,l;
+  for (int index = (*string == '-') ? 1 : 0; *(string + index) != '\0'; index++)
+    if ((*(string + index) < '0') || (*(string + index) > '9'))
+      return FALSE;
 
-  if (!arg) {
-    return -1;
-  }
+  return TRUE;
+}
 
-  strncpy(buf, arg, sizeof(buf)-1);
-  buf[sizeof(buf)-1] = '\0';
+/* Determine if a given string is an abbreviation of another. */
+bool is_abbrev(char *str1, char *str2) {
+  if (!*str1 || !*str2) return FALSE;
+
+  for (; *str1; str1++, str2++)
+    if (LOWER(*str1) != LOWER(*str2))
+      return FALSE;
+
+  return TRUE;
+}
+
+/* Determine if a given string is a fill word. */
+bool is_fill_word(char *string) {
+  return (search_block(string, fill, TRUE) >= 0);
+}
+
+/* Return argument after skipping all leading spaces. */
+char *skip_spaces(char *string) {
+  while (*string && isspace(*string)) string++;
+
+  return string;
+}
+
+/* Return index of string matched in a given list of strings. */
+int search_block(const char *string, const char * const *list, bool exact) {
+  char buf[MIL];
+  int len = 0;
+
+  assert(list);
+
+  /* Copy string into buf and null terminate. */
+  strncpy(buf, string, sizeof(buf) - 1);
+  buf[sizeof(buf) - 1] = '\0';
 
   /* Make into lower case, and get length of string */
-  for (l=0; *(buf+l); l++)
-     *(buf+l)=LOWER(*(buf+l));
+  for (len = 0; *(buf + len); len++)
+    *(buf + len) = LOWER(*(buf + len));
+
   if (exact) {
-   for(i=0; **(list+i) != '\n'; i++)
-    if (!strcmp(buf, *(list+i)))
-      return(i);
-  } else {
-    if (!l)
-      l=1; /* Avoid "" to match the first available string */
-      for(i=0; **(list+i) != '\n'; i++)
-       if (!strncmp(buf, *(list+i), l))
-   return(i);
+    for (int i = 0; **(list + i) != '\n'; i++)
+      if (!strcmp(buf, *(list + i)))
+        return i;
   }
-  return(-1);
-}
-
-int determine_command(char *command,int length)
-{
-  int i=0;
-  while(cmd_info[i].cmd_text)
-  {
-        if(!strncmp(cmd_info[i].cmd_text,command,length))
-             break;
-        i++;
-        }
-  if (!cmd_info[i].cmd_text||!length)
-      i = -1;
-  return i;
-}
-
-int old_search_block(const char *argument,int begin,int length,const char * const *list,int mode)
-{
-  int guess, found, search;
-
-  /* If the word contain 0 letters, then a match is already found */
-  found = (length < 1);
-  guess = 0;
-
-  /* Search for a match */
-  if (mode)
-    while ( NOT found AND *(list[guess]) != '\n' ) {
-      found=(length==strlen(list[guess]));
-      for (search=0;( search < length AND found );search++)
-   found=(*(argument+begin+search)== *(list[guess]+search));
-   guess++;
-    }
   else {
-   while ( NOT found AND *(list[guess]) != '\n' ) {
-  found=1;
-  for (search=0;( search < length AND found );search++)
-     found=(*(argument+begin+search)== *(list[guess]+search));
-     guess++;
-   }
+    if (!len)
+      len = 1; /* Avoid "" to match the first available string. */
+    for (int i = 0; **(list + i) != '\n'; i++)
+      if (!strncmp(buf, *(list + i), len))
+        return i;
   }
-  return ( found ? guess : -1 );
+
+  return -1;
+}
+
+/* Return index of string matched in a given list of strings. */
+int old_search_block(const char *string, int begin, int length, const char * const *list, int mode) {
+  bool found = FALSE;
+  int index = 0;
+
+  assert(begin >= 0);
+  assert(list);
+
+  if (length < 1)
+    return 0;
+
+  while (*(list[index]) != '\n') {
+    found = (mode ? (length == strlen(list[index])) : TRUE);
+
+    for (int i = 0; ((i < length) && found); i++)
+      found = (*(string + begin + i) == *(list[index] + i));
+
+    index++;
+
+    if (found)
+      return index;
+  }
+
+  return -1;
+}
+
+/* find the first sub-argument of a string, return pointer to first char in
+   primary argument, following the sub-arg                  */
+char *one_argument(char *string, char *arg) {
+  int begin = 0, index = 0;
+
+  assert(arg);
+
+  do {
+    string = skip_spaces(string);
+
+    /* Find the length of first word. */
+    for (index = 0; *(string + begin + index) > ' '; index++)
+      /* Make all letters lower case, and copy them to first_arg. */
+      *(arg + index) = LOWER(*(string + begin + index));
+
+    *(arg + index) = '\0';
+
+    begin += index;
+  } while (is_fill_word(arg));
+
+  return (string + begin);
+}
+
+/* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
+void argument_interpreter(char *string, char *arg1, char *arg2) {
+  assert(string);
+  assert(arg1);
+  assert(arg2);
+
+  string = one_argument(string, arg1);
+  string = one_argument(string, arg2);
+}
+
+/* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
+void two_arguments(char *string, char *arg1, char *arg2) {
+  argument_interpreter(string, arg1, arg2);
+}
+
+/* Fill arg1 with the first argument and substring with the rest of the provided string. */
+void half_chop(char *string, char *arg1, int len1, char *substring, int substring_len) {
+  assert(arg1);
+  assert(substring);
+
+  string = skip_spaces(string);
+  for (; *string && (len1 > 1) && !isspace(*arg1 = *string); string++, arg1++, len1--);
+  *arg1 = '\0';
+
+  string = skip_spaces(string);
+  for (; *string && (substring_len > 1) && (*substring = *string); string++, substring++, substring_len--);
+  *substring = '\0';
+}
+
+/* Fill arg1 with the first argument and substring with the rest of the provided string. */
+void chop_string(char *string, char *arg1, int len1, char *substring, int substring_len) {
+  half_chop(string, arg1, len1, substring, substring_len);
+}
+
+int determine_command(char *command, int length) {
+  int i = 0;
+
+  while (cmd_info[i].cmd_text) {
+    if (!strncmp(cmd_info[i].cmd_text, command, length))
+      break;
+    i++;
+  }
+
+  if (!cmd_info[i].cmd_text || !length)
+    i = -1;
+
+  return i;
 }
 
 void command_interpreter(CHAR *ch, char *argument)
@@ -385,127 +478,6 @@ to a different type of mud.\n\r\n\r",ch);
     }
   }
   return;
-}
-
-void argument_interpreter(char *argument,char *first_arg,char *second_arg )
-{
-  int look_at = 0, begin = 0;
-
-  do
-  {
-    /* Find first non blank */
-    for ( ;*(argument + begin ) == ' ' ; begin++);
-
-    /* Find length of first word */
-    for ( look_at=0; *(argument+begin+look_at)> ' ' ; look_at++)
-
-    /* Make all letters lower case, AND copy them to first_arg */
-    *(first_arg + look_at) = LOWER(*(argument + begin + look_at));
-
-    *(first_arg + look_at)='\0';
-    begin += look_at;
-
-  }
-  while( fill_word(first_arg));
-
-  do
-  {
-    /* Find first non blank */
-    for ( ;*(argument + begin ) == ' ' ; begin++);
-
-    /* Find length of first word */
-    for ( look_at=0; *(argument+begin+look_at)> ' ' ; look_at++)
-
-    /* Make all letters lower case, AND copy them to second_arg */
-    *(second_arg + look_at) = LOWER(*(argument + begin + look_at));
-
-    *(second_arg + look_at)='\0';
-    begin += look_at;
-
-  }
-  while( fill_word(second_arg));
-}
-
-int is_number(char *str)
-{
-  int look_at,start=0;
-
-  if(*str=='\0') return(0);
-
-  if(*str=='-') start=1;
-
-  for (look_at=start;*(str+look_at) != '\0';look_at++)
-     if ((*(str+look_at)<'0')||(*(str+look_at)>'9'))
-       return(0);
-
-  return(1);
-}
-
-int is_big_number(char *str)
-{
-  int index = 0;
-
-  if (*str == '\0') return FALSE;
-
-  for (index = (*str == '-') ? 1 : 0; *(str + index) != '\0'; index++)
-     if ((*(str + index) < '0') || (*(str + index) > '9'))
-       return FALSE;
-
-  return TRUE;
-}
-
-
-/* find the first sub-argument of a string, return pointer to first char in
-   primary argument, following the sub-arg                  */
-char *one_argument(char *argument, char *first_arg )
-{
-  int begin, look_at;
-
-  begin = 0;
-
-  do
-  {
-    /* Find first non blank */
-    for ( ;isspace(*(argument + begin)); begin++);
-
-    /* Find length of first word */
-    for (look_at=0; *(argument+begin+look_at) > ' ' ; look_at++)
-      /* Make all letters lower case, AND copy them to first_arg */
-      *(first_arg + look_at) = LOWER(*(argument + begin + look_at));
-    *(first_arg + look_at)='\0';
-    begin += look_at;
-  }
-  while (fill_word(first_arg));
-
-  return(argument+begin);
-}
-
-int fill_word(char *argument)
-{
-  return ( search_block(argument,fill,TRUE) >= 0);
-}
-
-/* determine if a given string is an abbreviation of another */
-int is_abbrev(char *arg1, char *arg2)
-{
-  if (!*arg1) return(0);
-
-  for (; *arg1; arg1++, arg2++)
-     if (LOWER(*arg1) != LOWER(*arg2))
-       return(0);
-
-  return(1);
-}
-
-/* return first 'word' plus trailing substring of input string */
-void half_chop(char *string, char *arg1,int len1,char *arg2,int len2)
-{
-  for (; *string && isspace(*string); string++); /* skip spaces */
-  for (; *string && len1>1 && !isspace(*arg1 = *string); string++, arg1++,len1--); /* assign all non space */
-  *arg1 = '\0';
-  for (; *string && isspace(*string); string++); /* skip spaces */
-  for (; *string && len2>1 && (*arg2 = *string); string++, arg2++,len2--); /* assign all non space */
-  *arg2 = '\0';
 }
 
 int obj_special(struct obj_data *obj,CHAR *ch,int cmd,char *arg)
