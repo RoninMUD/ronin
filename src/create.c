@@ -322,8 +322,8 @@ void create_room(CHAR *ch, char *arg1) {
 
   int zone_num = (room_num / 100);
 
-  if (!check_zone(ch, room_num)) return;
-  if (!check_zone_access(ch, room_num)) return;
+  if (!check_zone(ch, zone_num)) return;
+  if (!check_zone_access(ch, zone_num)) return;
 
   if (real_room(room_num) != -1) {
     send_to_char("That room already exists.\n\r", ch);
