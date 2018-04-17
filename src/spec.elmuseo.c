@@ -4484,7 +4484,7 @@ int mus_naiad(CHAR *mob, CHAR* ch, int cmd, char *arg )
         {
           if(GET_LEVEL(d->character) < LEVEL_IMM && chance(GET_AGE(d->character)))
           {
-            spell_petrify( GET_LEVEL(mob), mob, d->character, NULL );
+            spell_word_of_recall( GET_LEVEL(mob), mob, d->character, NULL );
           }
         }
       }
