@@ -179,11 +179,9 @@ int search_block(const char *string, const char * const *list, bool exact) {
 
   assert(list);
 
-  /* Copy string into buf and null terminate. */
   strncpy(buf, string, sizeof(buf) - 1);
   buf[sizeof(buf) - 1] = '\0';
 
-  /* Make into lower case, and get length of string */
   for (len = 0; *(buf + len); len++)
     *(buf + len) = LOWER(*(buf + len));
 
@@ -195,6 +193,7 @@ int search_block(const char *string, const char * const *list, bool exact) {
   else {
     if (!len)
       len = 1; /* Avoid "" to match the first available string. */
+
     for (int i = 0; **(list + i) != '\n'; i++)
       if (!strncmp(buf, *(list + i), len))
         return i;
@@ -239,9 +238,7 @@ char *one_argument(char *string, char *arg) {
   do {
     string = skip_spaces(string);
 
-    /* Find the length of first word. */
     for (index = 0; *(string + begin + index) > ' '; index++)
-      /* Make all letters lower case, and copy them to first_arg. */
       *(arg + index) = LOWER(*(string + begin + index));
 
     *(arg + index) = '\0';
