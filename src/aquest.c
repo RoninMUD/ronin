@@ -1568,7 +1568,7 @@ const int aq_obj_master_list[][2] = {
   {28720, 20}, // The Staff of Dark Influence 8
   {300, 25}, // The Talon of a Red Dragon 6
   {301, 25}, // a pair of red dragon scale boots 6
-  {572, 25}, // An oaken root wand 3
+  //{572, 25}, // An oaken root wand 3 // removing anti-rent object from order
   {2716, 25}, // The black sting of the Queen 10
   {6806, 25}, // Erishkigal's lash 9
   {21309, 25}, // A Rotting Otyugh Skin 2

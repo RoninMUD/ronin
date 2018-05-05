@@ -1188,6 +1188,16 @@ All that moshing has scrambled your brains- they're not even here!
 You try to bodyslam yourself.
 $n tries to mosh by $mself and falls to the floor.
 
+mourn 0 0
+In quiet contemplation, you mourn the loss of the dead.
+In quiet contemplation, $n mourns the loss of the dead.
+In quiet contemplation, you mourn the death of $N.
+In quiet contemplation, $n mourns the death of $N.
+In quiet contemplation, $n mourns for your death.
+In quiet contemplation, you mourn the loss of someone that's already passed on.
+In quiet contemplation, you mourn for your impending demise.
+In quiet contemplation, $n mourns for $s impending demise.
+
 mud 1 0
 Multi User Domain. So simple, and yet, so simple.
 $n is here to MUD!
@@ -2187,6 +2197,16 @@ $n thumps $s chest in pride after defeating you. Better luck next time.
 You just beat nobody! way to go!!
 You sure must be proud to have come out victorious over yourself.
 $n thumps $s chest with pride in defeating $mself.
+
+violin 0 0
+You play a sad melody on the world's smallest violin.
+$n plays a sad melody on the world's smallest violin.
+You play the world's smallest violin for $N.
+$n plays the world's smallest violin for $N.
+$n plays the world's smallest violin for you.
+You play the world's smallest violin for someone that's not here.
+You play the world's smallest violin for yourself, a tear rolling down your cheek.
+$n plays the world's smallest violin for $mself, a tear rolling down $s cheek.
 
 warcry 0 0
 You let out a loud battle cry and start dancing in circles as you prepare for battle.
