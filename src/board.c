@@ -197,23 +197,33 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
 
   char ch_name[16 + 1];
 
-  if (!IS_NPC(ch)) sprintf(ch_name, "%-16s", GET_NAME(ch));
-  else sprintf(ch_name, "%-16s", MOB_SHORT(ch));
-
-  char tm_str[6 + 1];
+  if (!IS_NPC(ch))
+    snprintf(ch_name, sizeof(ch_name), "%-16s", GET_NAME(ch));
+  else
+    snprintf(ch_name, sizeof(ch_name), "%-16s", MOB_SHORT(ch));
 
   long ct = time(NULL);
   struct tm *timeStruct = localtime(&ct);
+
+  char tm_str[6 + 1];
+
   snprintf(tm_str, sizeof(tm_str), "%3s %2d", Months[timeStruct->tm_mon], timeStruct->tm_mday);
 
-  int header_len = strlen(ch_name) + strlen(tm_str) + strlen(arg) + 1;
+  char tmp_str[MSL];
+
+  if (board->vnumber == FEEDBACK_BOARD)
+    snprintf(tmp_str, sizeof(tmp_str), "(%*c) %s : %s", strlen(ch_name), ' ', tm_str, arg);
+  else
+    snprintf(tmp_str, sizeof(tmp_str), "(%s) %s : %s", ch_name, tm_str, arg);
+
+  size_t header_len = strlen(tmp_str);
 
   if (header_len > 80) {
     send_to_char("Try a shorter heading.\n\r", ch);
     return;
   }
 
-  board->heading[board->msg_num] = (char *)malloc(strlen(ch_name) + strlen(tm_str) + strlen(arg) + 1);
+  board->heading[board->msg_num] = (char *)calloc(header_len + 1, sizeof(char));
 
   if (!board->heading[board->msg_num]) {
     log_f("Board: Malloc for board header failed.");
@@ -221,14 +231,7 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
     return;
   }
 
-  char tmp_str[80 + 1];
-
-  if (board->vnumber == FEEDBACK_BOARD)
-    snprintf(tmp_str, sizeof(tmp_str), "(%*c) %s : %s", strlen(ch_name), ' ', tm_str, arg);
-  else
-    snprintf(tmp_str, sizeof(tmp_str), "(%s) %s : %s", ch_name, tm_str, arg);
-
-  strcpy(board->heading[board->msg_num], tmp_str);
+  strncpy(board->heading[board->msg_num], tmp_str, header_len);
 
   board->msgs[board->msg_num] = NULL;
 
@@ -236,6 +239,7 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
   act("$n starts to write on the board.", TRUE, ch, 0, 0, TO_ROOM);
 
   SET_BIT(GET_PFLAG(ch), PLR_WRITING);
+
   ch->desc->str = &board->msgs[board->msg_num];
   ch->desc->max_str = MAX_MESSAGE_LENGTH;
 
