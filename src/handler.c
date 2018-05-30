@@ -1474,27 +1474,21 @@ void extract_obj(struct obj_data *obj) {
 }
 
 
-
-void update_object( struct obj_data *obj, int equipped) {
-  if (obj->obj_flags.timer > 0) {
-    if(IS_SET(obj->obj_flags.extra_flags2,ITEM_ALL_DECAY)) {
-      if(equipped) obj->obj_flags.timer -= 2;
+void update_object(struct obj_data *obj, int equipped) {
+  if ((obj->obj_flags.timer > 0) && (!(obj->in_obj) || (OBJ_TYPE(obj->in_obj) != ITEM_AQ_ORDER))) {
+    if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY)) {
+      if (equipped) obj->obj_flags.timer -= 2;
       else obj->obj_flags.timer -= 1;
     }
-    else if(IS_SET(obj->obj_flags.extra_flags2,ITEM_EQ_DECAY)) {
-      if(equipped) obj->obj_flags.timer -= 1;
+    else if (IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
+      if (equipped) obj->obj_flags.timer -= 1;
     }
-/*    else {
-      if(equipped) obj->obj_flags.timer -= 2;
-      else obj->obj_flags.timer -= 1;
-    }
-*/ /* Removed as it has no purpose other than complicating a useful
-variable for use by spec-writers on non-decaying objects */
   }
 
   if (obj->contains) update_object(obj->contains, FALSE);
   if (obj->next_content) update_object(obj->next_content, FALSE);
 }
+
 
 void update_char_objects( struct char_data *ch )
 {

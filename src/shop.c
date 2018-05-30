@@ -30,42 +30,34 @@ char *fread_string(FILE *fl);
 struct shop_data *shop_index;
 int number_of_shops=0;
 
-int is_ok(CHAR *keeper, CHAR *ch, int shop_nr)
-{
-  if (shop_index[shop_nr].open1>time_info.hours){
-    do_say(keeper, "Come back later!",17);
-    return(FALSE);
-  } else if (shop_index[shop_nr].close1<time_info.hours) {
-    if (shop_index[shop_nr].open2>time_info.hours){
-      do_say(keeper, "Sorry, we have closed, but come back later.",17);
-      return(FALSE);
-    } else if (shop_index[shop_nr].close2<time_info.hours){
-      do_say(keeper, "Sorry, come back tomorrow.",17);
-      return(FALSE);
-    };
+int is_ok(CHAR *keeper, CHAR *ch, int shop_nr) {
+  if (shop_index[shop_nr].open1 > time_info.hours) {
+    do_say(keeper, "Come back later!", CMD_SAY);
+
+    return FALSE;
+  }
+  else if (shop_index[shop_nr].close1 < time_info.hours) {
+    if (shop_index[shop_nr].open2 > time_info.hours) {
+      do_say(keeper, "Sorry, we have closed, but come back later.", CMD_SAY);
+
+      return FALSE;
+    }
+    else if (shop_index[shop_nr].close2 < time_info.hours) {
+      do_say(keeper, "Sorry, come back tomorrow.", CMD_SAY);
+
+      return FALSE;
+    }
   }
 
-  if(!CAN_SEE(keeper,ch) && IS_MORTAL(ch))
-    {
-      do_say(keeper, "I don't trade with someone I can't see!",17);
-      return(FALSE);
-    };
+  if ((IS_SET(GET_PFLAG(ch), PLR_KILL) || IS_SET(GET_PFLAG(ch), PLR_THIEF)) && IS_MORTAL(ch) && !CHAOSMODE) {
+    act("$n screams 'I don't trade with a killer or thief!'", FALSE, keeper, 0, 0, TO_ROOM);
 
-  if(!CHAOSMODE && (IS_SET(ch->specials.pflag, PLR_KILL) ||
-      IS_SET(ch->specials.pflag, PLR_THIEF)) && IS_MORTAL(ch))
-    {
-      act("$n screams 'I don't trade with a killer or thief!'",
-    FALSE,keeper,0,0,TO_ROOM);
-      hit(keeper, ch, 0);
-      return(FALSE);
-    }
+    hit(keeper, ch, 0);
 
+    return FALSE;
+  }
 
-  switch(shop_index[shop_nr].with_who){
-  case 0 : return(TRUE);
-  case 1 : return(TRUE);
-  default : return(TRUE);
-  };
+  return TRUE;
 }
 
 int trade_with(struct obj_data *item, int shop_nr)
