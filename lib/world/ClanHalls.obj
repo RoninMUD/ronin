@@ -56,18 +56,7 @@ A large stone column bearing an iron ring and chiselled writing stands here.~
 9999 10 10
 100
 E
-ring~
-It seems to be attached to some sort of mechanism, maybe you should try pulling
-it?
-~
-E
-column~
-Deeply chiselled into the surface of the stone you see the words:
-
-       "KEEP OUT - TRESPASSERS WILL BE SLAIN ON SIGHT!"
-~
-E
-stone~
+sign~
 Deeply chiselled into the surface of the stone you see the words:
 
        "KEEP OUT - TRESPASSERS WILL BE SLAIN ON SIGHT!"
@@ -79,10 +68,21 @@ Deeply chiselled into the surface of the stone you see the words:
        "KEEP OUT - TRESPASSERS WILL BE SLAIN ON SIGHT!"
 ~
 E
-sign~
+stone~
 Deeply chiselled into the surface of the stone you see the words:
 
        "KEEP OUT - TRESPASSERS WILL BE SLAIN ON SIGHT!"
+~
+E
+column~
+Deeply chiselled into the surface of the stone you see the words:
+
+       "KEEP OUT - TRESPASSERS WILL BE SLAIN ON SIGHT!"
+~
+E
+ring~
+It seems to be attached to some sort of mechanism, maybe you should try pulling
+it?
 ~
 X
 ~
@@ -153,14 +153,14 @@ A flaming gate hovers here, fire raging about and around.~
 10 10 10
 100
 E
-gate~
+flaming~
 The Fires burn bright around the circumference of the gate, flailing
 angrily as your approach.  To any Diabolik, this is an illusion, and will
 not harm.  However, to any other, it will consume them and send them into
 the flaming pit of hell.
 ~
 E
-flaming~
+gate~
 The Fires burn bright around the circumference of the gate, flailing
 angrily as your approach.  To any Diabolik, this is an illusion, and will
 not harm.  However, to any other, it will consume them and send them into
@@ -185,11 +185,11 @@ A foul demonic pentagram is here, dark flames crackling around it.~
 100
 E
 pentagram~
-The pentagram becomes much hotter as you begin inspecting it...
+The pentagram grows quite warm as you begin inspecting it...
 ~
 E
 pentagram~
-The pentagram grows quite warm as you begin inspecting it...
+The pentagram becomes much hotter as you begin inspecting it...
 ~
 X
 ~
@@ -412,19 +412,7 @@ Tempting bubble-bath waters flow over the edges of a gorgeous tub.~
 10 10 10
 100
 E
-bathtub~
-The expansive bathtub looks warm and inviting.  Only a select
-few ever enjoy her delightful bubbly waters.  The slippery
-marble and obsidian glisten from the sunlit room and entices
-you to crawl in and take a short bath.~
-E
-marble~
-The expansive bathtub looks warm and inviting.  Only a select
-few ever enjoy her delightful bubbly waters.  The slippery
-marble and obsidian glisten from the sunlit room and entices
-you to crawl in and take a short bath.~
-E
-bath~
+tub~
 The expansive bathtub looks warm and inviting.  Only a select
 few ever enjoy her delightful bubbly waters.  The slippery
 marble and obsidian glisten from the sunlit room and entices
@@ -436,7 +424,19 @@ few ever enjoy her delightful bubbly waters.  The slippery
 marble and obsidian glisten from the sunlit room and entices
 you to crawl in and take a short bath.~
 E
-tub~
+bath~
+The expansive bathtub looks warm and inviting.  Only a select
+few ever enjoy her delightful bubbly waters.  The slippery
+marble and obsidian glisten from the sunlit room and entices
+you to crawl in and take a short bath.~
+E
+marble~
+The expansive bathtub looks warm and inviting.  Only a select
+few ever enjoy her delightful bubbly waters.  The slippery
+marble and obsidian glisten from the sunlit room and entices
+you to crawl in and take a short bath.~
+E
+bathtub~
 The expansive bathtub looks warm and inviting.  Only a select
 few ever enjoy her delightful bubbly waters.  The slippery
 marble and obsidian glisten from the sunlit room and entices
