@@ -1538,6 +1538,11 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   send_to_char("A warm feeling fills your body.\n\r", victim);
 
   update_pos(victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
 }
 
 void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
@@ -1572,6 +1577,11 @@ void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   send_to_char("A healing power flows into your body.\n\r", victim);
 
   update_pos(victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
 }
 
 void spell_hold(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {

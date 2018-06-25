@@ -1297,6 +1297,11 @@ MANA MAGIC
 Mana represents the ability of a character to manipulate the magical forces in
 the world.  Mana also represents power.  The more mana your character has the
 more powerful your spellcaster is.
+
+High level characters have a chance for their spells to cost less than normal
+mana.  This increase has a higher chance and becomes larger for every level
+beyond 40 that the caster obtains, with the maximum chance and reduced cost
+applied at level 50.
 #
 HP HPS HITS HIT HITPOINTS
 
@@ -6737,7 +6742,6 @@ See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 
 Subclass Warlord: Level 2 (Warrior)
 Subclass Ranger: Level 2 (Nomad)
-Subclass Crusader: Level 2 (Paladin)
 
 Usage: protect <target/self>
 
@@ -6754,8 +6758,8 @@ shield equipment slot, increasing it from a normal 2x multiplier to 3x.
 Warlord subclass level 2 grants the warrior the capability of reaching -270
 Armor Class (AC), exceeding the normal limit of -250.
 
-Note: Ranger and Crusader only gain access to the first component of this
-subclass level.
+Note: Ranger and only gains access to the first component of this subclass
+level.
 
 See Also: SUBCLASSES WARLORD RESCUE DEXTERITY AC RANGER CRUSADER
 #
@@ -7992,7 +7996,7 @@ on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           RIGHTEOUSNESS
-  2           PROTECT
+  2           BLESSING OF SACRIFICE
   3           FOCUS
   4           ZEAL
   5           POWER OF FAITH
@@ -8076,8 +8080,8 @@ See Also: SUBCLASSES CAVALIER
 Subclass Cavalier: Level 5 (Paladin)
 
 Usage       : cast 'power of devotion' <victim>
-Accumulative: no
-Duration    : level/4
+Accumulative: No
+Duration    : Level / 4
 Save        : -
 Mana Cost   : 100
 
@@ -8094,7 +8098,7 @@ RIGHTEOUSNESS
 Subclass Crusader: Level 1 (Paladin)
 
 Usage       : cast 'righteousness' (self only)
-Accumulative: no
+Accumulative: No
 Duration    : 10
 Save        : -
 Mana Cost   : 30
@@ -8106,20 +8110,41 @@ against evil opponents.
 
 See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
 #
+"BLESSING OF SACRIFICE"
+
+Usage       : cast 'blessing of sacrifice'
+Accumulative: No
+Duration    : Instantaneous
+Save        : -
+Mana Cost   : 100
+
+This potent healing spell allows the Crusader to sacrifice 100 hit points in
+order to heal every other mortal in the room by 333 hit points.
+
+This spell will also grant the effects of the Bless spell to each character that
+is affected.
+
+Note: This spell cannot be cast if the Crusader has less than 100 hit points
+remaining.
+
+See Also: BLESS
+#
 FOCUS
 
 Subclass Crusader: Level 3 (Paladin)
 
-Usage       : cast 'focus' (self only)
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 50
+The Crusader has mastered the ability to concentrate and focus on casting magic.
 
-While affected by this spell, the Crusader is able to focus more clearly on
-spellcasting and get a concentration bonus of 10%.
+This passive ability increases the Crusader's concentration rate by 10%, to
+match that of even the most skilled casters.
 
-See Also: SUBCLASSES CRUSADER
+Additionally, when casting a sufficiently powerful healing spell, the Crusader
+will earn a small amount of positive alignment change.
+
+Finally, the Crusader has an increased chance for all spells to have reduced
+mana cost at sufficiently high caster level.
+
+See Also: SUBCLASSES CRUSADER MANA
 #
 ZEAL
 

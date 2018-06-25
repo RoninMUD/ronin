@@ -895,7 +895,7 @@ void assign_command_pointers ( void )
   COMMANDO("berserk"  ,CMD_BERSERK   ,POSITION_STANDING  ,do_berserk,30);
   COMMANDO("batter"   ,CMD_BATTER    ,POSITION_FIGHTING  ,do_batter,30);
   COMMANDO("trophy"   ,CMD_TROPHY    ,POSITION_STANDING  ,do_trophy,30); /* Used to be Scalp */
-  COMMANDO("charge"   ,CMD_CHARGE    ,POSITION_STANDING  ,do_charge,30);
+  //COMMANDO("charge"   ,CMD_CHARGE    ,POSITION_STANDING  ,do_charge,30);
   COMMANDO("headbutt" ,CMD_HEADBUTT  ,POSITION_FIGHTING  ,do_headbutt,30);
   COMMANDO("shadowstep",CMD_SHADOWSTEP ,POSITION_FIGHTING ,do_shadowstep,30); /* Used to be Shadow-Walk */
   COMMANDO("clobber", CMD_CLOBBER    ,POSITION_FIGHTING  ,do_clobber,30);

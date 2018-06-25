@@ -215,7 +215,7 @@
 #define SKILL_TROPHY                185
 #define SKILL_FRENZY                186
 #define SPELL_POWER_OF_FAITH        187
-#define SPELL_FOCUS                 188
+#define SPELL_UNUSED_188            188
 #define SPELL_POWER_OF_DEVOTION     189
 #define SPELL_WRATH_OF_GOD          190
 #define SPELL_DISRUPT_SANCT         191
@@ -228,7 +228,7 @@
 #define SKILL_BANZAI                198
 #define SKILL_HEADBUTT              199
 /* Reserved for TYPE_SUFFERING      200 */
-#define SKILL_CHARGE                201
+#define SPELL_BLESSING_OF_SACRIFICE 201
 #define SPELL_AID                   202
 #define SPELL_DEMONIC_THUNDER       203
 #define SKILL_SHADOWSTEP            204

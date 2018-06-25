@@ -209,7 +209,7 @@ const char * const spell_wear_off_msg[] = {
   "!banzai!", /*198*/
   "!headbutt!",/* 199 */
   "!skip!",/*200*/
-  "!charge!",/*201*/
+  "!blessing of sacrifice!", /* 201 */
   "You don't feel as powerful.",/*202*/
   "!demonic thunder!",/*203*/
   "!shadowstep!", /* 204 Used to be Shadow-Walk */

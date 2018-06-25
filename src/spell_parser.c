@@ -258,7 +258,7 @@ const char * const spells[] = {
   "banzai",                       /* 198 */
   "headbutt",                     /* 199 */
   "",                             /* 200 */
-  "charge",                       /* 201 */
+  "blessing of sacrifice",        /* 201 */
   "aid",                          /* 202 */
   "demonic thunder",              /* 203 */
   "shadowstep",                   /* 204 */
@@ -1451,7 +1451,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
 
   /* Focus */
-  if (affected_by_spell(ch, SPELL_FOCUS)) con_amt += 100;
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) con_amt += 100;
 
   percent=number(1,1001);
   conc=1;
@@ -1518,43 +1518,61 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
     }
   }
 
-  if(GET_LEVEL(ch) < LEVEL_IMM) {
-    mana_cost=(USE_MANA(ch, spl))*mult/10;
-    switch(GET_LEVEL(ch))
-    {
-	  case 41:
-		if(chance(10)) mana_cost = mana_cost*99/100;
-		break;
-	  case 42:
-		if(chance(11)) mana_cost = mana_cost*98/100;
-		break;
-	  case 43:
-		if(chance(12)) mana_cost = mana_cost*97/100;
-		break;
-	  case 44:
-		if(chance(13)) mana_cost = mana_cost*96/100;
-		break;
-	  case 45:
-		if(chance(15)) mana_cost = mana_cost*95/100;
-		break;
-	  case 46:
-		if(chance(17)) mana_cost = mana_cost*94/100;
-		break;
-	  case 47:
-		if(chance(19)) mana_cost = mana_cost*93/100;
-		break;
-	  case 48:
-		if(chance(21)) mana_cost = mana_cost*92/100;
-		break;
-	  case 49:
-		if(chance(23)) mana_cost = mana_cost*91/100;
-		break;
-	  case 50:
-		if(chance(25)) mana_cost = mana_cost*90/100;
-		break;
-	  default:
-		break;
-	}
+  int cost_reduction_chance = 0;
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    cost_reduction_chance += 10;
+  }
+
+  if (IS_MORTAL(ch)) {
+    mana_cost = (USE_MANA(ch, spl)) * mult / 10;
+
+    switch (GET_LEVEL(ch)) {
+    case 41:
+      cost_reduction_chance += 10;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 99 / 100;
+      break;
+    case 42:
+      cost_reduction_chance += 11;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 98 / 100;
+      break;
+    case 43:
+      cost_reduction_chance += 12;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 97 / 100;
+      break;
+    case 44:
+      cost_reduction_chance += 13;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 96 / 100;
+      break;
+    case 45:
+      cost_reduction_chance += 15;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 95 / 100;
+      break;
+    case 46:
+      cost_reduction_chance += 17;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 94 / 100;
+      break;
+    case 47:
+      cost_reduction_chance += 19;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 93 / 100;
+      break;
+    case 48:
+      cost_reduction_chance += 21;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 92 / 100;
+      break;
+    case 49:
+      cost_reduction_chance += 23;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 91 / 100;
+      break;
+    case 50:
+      cost_reduction_chance += 25;
+      if (chance(cost_reduction_chance)) mana_cost = mana_cost * 90 / 100;
+      break;
+    default:
+      break;
+    }
+
     GET_MANA(ch) -= mana_cost;
 /*
     if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANABURN)) {
@@ -1971,7 +1989,8 @@ void assign_spell_pointers(void)
   SPELLO(191, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_disrupt_sanct);
   SPELLO(190, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
   SPELLO(189, 30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
-  SPELLO(188, 30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_focus);
+  SPELLO(201, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_blessing_of_sacrifice);
+  //SPELLO(188, 30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_focus);
   SPELLO(187, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
   SPELLO(182, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_incendiary_cloud);
   SPELLO(181, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);

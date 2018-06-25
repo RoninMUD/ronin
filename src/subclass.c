@@ -260,9 +260,12 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_RIGHTEOUSNESS:
       if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
       break;
-    case SPELL_FOCUS:
-      if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
+    case SPELL_BLESSING_OF_SACRIFICE:
+      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
       break;
+    //case SPELL_FOCUS:
+    //  if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
+    //  break;
     case SPELL_POWER_OF_FAITH:
       if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
       break;

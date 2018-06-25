@@ -340,7 +340,7 @@ $State: Exp $
 #define CMD_ASSASSINATE        323
 #define CMD_BATTER             324
 #define CMD_SHADOWSTEP         325 /* Used to be Shadow-Walk */
-#define CMD_CHARGE             326
+//#define CMD_CHARGE             326
 #define CMD_HEADBUTT           327
 #define CMD_MANTRA             328
 #define CMD_BANZAI             329

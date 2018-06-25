@@ -3189,13 +3189,13 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
         damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
       break;
 
-      case SKILL_CHARGE:
-        act("$n tries to charge $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
-        act("$n tries to charge you, but misses.", FALSE, ch, 0, victim, TO_VICT);
-        act("You try to charge $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
+      //case SKILL_CHARGE:
+      //  act("$n tries to charge $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //  act("$n tries to charge you, but misses.", FALSE, ch, 0, victim, TO_VICT);
+      //  act("You try to charge $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
 
-        damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-      break;
+      //  damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
+      //break;
 
       case SKILL_ASSAULT:
         act("$n tries to assault $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -3409,25 +3409,25 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
         }
         break;
 
-      case SKILL_CHARGE:
-        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
-        {
-          act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
-          act("You try to charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
+      //case SKILL_CHARGE:
+      //  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+      //  {
+      //    act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //    act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
+      //    act("You try to charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
 
-          damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-        }
-        else
-        {
-          act("With a bloodthirsty scream, $n charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("With a bloodthirsty scream, $n charges you.", FALSE, ch, 0, victim, TO_VICT);
-          act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
+      //    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
+      //  }
+      //  else
+      //  {
+      //    act("With a bloodthirsty scream, $n charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //    act("With a bloodthirsty scream, $n charges you.", FALSE, ch, 0, victim, TO_VICT);
+      //    act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
 
-          dam *= 2;
-          damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
-        }
-        break;
+      //    dam *= 2;
+      //    damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
+      //  }
+      //  break;
 
       case SKILL_ASSAULT:
         if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))

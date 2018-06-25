@@ -87,8 +87,8 @@ void cast_wrath_of_god(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, 
 void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
 void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_focus(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
-void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+//void cast_focus(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
+//void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
 void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_devastation(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj );
@@ -105,6 +105,8 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_blessing_of_sacrifice(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_blessing_of_sacrifice(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 
 extern int token_mob_time;
 
