@@ -1587,9 +1587,9 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
 
   number_argument_interpreter(arg, &number, arg1, arg2);
 
-  if (number <= 0)
+  if (number < 1)
   {
-    act("$n tells you 'You can't store a negative number of items in your vault.'", FALSE, vault_guard, 0, ch, TO_VICT);
+    act("$n tells you 'You can't store a non-positive number of items in your vault.'", FALSE, vault_guard, 0, ch, TO_VICT);
 
     return TRUE;
   }
@@ -1699,10 +1699,19 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
   // arg1 is 'all' or was 'all.' (and is now 'all')
   if (!str_cmp(arg1, "all"))
   {
+    if (!*arg2 || str_cmp(arg2, "confirm"))
+    {
+      act("$n tells you 'You must type 'store all confirm' to store everything.'", FALSE, vault_guard, 0, ch, TO_VICT);
+
+      extract_obj(vault_obj);
+
+      return TRUE;
+    }
+
     // 'store x all.item' or 'store x all'
     if (number != 1)
     {
-      sprintf(buf, "$n tells you 'You can't store '%d all' of something.'\n\r", number);
+      sprintf(buf, "$n tells you 'You can't store '%d all' of something.'", number);
       act(buf, FALSE, vault_guard, 0, ch, TO_VICT);
 
       extract_obj(vault_obj);
