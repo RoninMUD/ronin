@@ -285,7 +285,7 @@ int check_sc_access(CHAR *ch, int skill)
       if (check_subclass(ch, SC_DEFILER, 3)) return TRUE;
       break;
     case SKILL_SHADOWSTEP:
-      if (check_subclass(ch, SC_DEFILER, 5)) return TRUE;
+      if (check_subclass(ch, SC_DEFILER, 4)) return TRUE;
       break;
     case SKILL_VICTIMIZE:
       if (check_subclass(ch, SC_INFIDEL, 2)) return TRUE;

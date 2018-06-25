@@ -235,35 +235,25 @@ void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_rage(level, ch, 0, 0);
-      break;
-    default:
-      log_f("Wrong type called in rage!");
-      break;
+void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_rage(level, ch, 0, 0);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_rage()");
   }
 }
 
-void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (!affected_by_spell(ch, SPELL_RAGE))
-  {
-    send_to_char("Rage courses through your body!\n\r", ch);
-    act("$n's eyes turn blood red, piercing with rage.", FALSE, ch, 0, 0, TO_ROOM);
+void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(ch, SPELL_RAGE)) {
+    send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
+    act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
 
-    AFF af;
+    affect_apply(ch, SPELL_RAGE, 5, 0, 0, 0, 0);
 
-    af.type       = SPELL_RAGE;
-    af.duration   = 5;
-    af.modifier   = 0;
-    af.location   = 0;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+    if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) {
+      affect_apply(ch, SPELL_BLOOD_LUST, 5, 0, 0, 0, 0);
+    }
   }
 }
 
@@ -995,35 +985,26 @@ void spell_passdoor(ubyte level, CHAR *ch, int door)
   }
 }
 
-void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      if (obj)
-        spell_desecrate(level, ch, victim, obj);
-      break;
-    default:
-      log_f("Wrong type called in desecrate!");
-      break;
+void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_desecrate(level, ch, victim, obj);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_desecrate()");
   }
 }
 
-void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int mob_level = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
-  {
+  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
     /* Object is not a corpse, or a container. */
     send_to_char("You must target a corpse.\n\r", ch);
 
     return;
   }
 
-  if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
-  {
+  if (OBJ_COST(obj) == PC_CORPSE && obj->contains) {
     /* The corpse is that of a PC and contains items (prevent griefing). */
     send_to_char("The corpse has something in it.\n\r", ch);
 
@@ -1032,24 +1013,19 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   mob_level = OBJ_VALUE2(obj);
 
-  if (!affected_by_spell(ch, SPELL_DESECRATE))
-  {
-    af.type        = SPELL_DESECRATE;
-    af.duration    = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7;
-    af.bitvector   = 0;
-    af.bitvector2  = 0;
-
-    af.location    = APPLY_AC;
-    af.modifier    = -(mob_level / 2);
-    affect_to_char(ch, &af);
-
-    af.location    = APPLY_HP_REGEN;
-    af.modifier    = mob_level;
-    affect_to_char(ch, &af);
+  if (!affected_by_spell(ch, SPELL_DESECRATE)) {
+    affect_apply(ch, SPELL_DESECRATE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7, -(mob_level / 2), APPLY_AC, 0, 0);
+    affect_apply(ch, SPELL_DESECRATE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7, mob_level, APPLY_HP_REGEN, 0, 0);
   }
 
   act("You perform vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_CHAR);
   act("$n performs vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_ROOM);
+
+  if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10))) {
+    send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
+
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
 
   extract_obj(obj);
 
@@ -2000,6 +1976,7 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (GET_MANA(ch) < extra_mana_cost) {
     send_to_char("You can't summon enough energy to manifest another shadow.\n\r", ch);
+    GET_MANA(ch) += spell_info[SPELL_SHADOW_WRAITH].min_usesmana; /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
     return;
   }
 

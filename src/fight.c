@@ -3346,6 +3346,13 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
 
             damage(ch, victim, 250, SKILL_TWIST, DAM_PHYSICAL);
           }
+
+          /* Bathed in Blood */
+          if (!IS_NPC(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(20)) {
+            send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(ch));
+
+            RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+          }
         }
         break;
 
@@ -3820,6 +3827,12 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
       drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;
   }
+
+  if (IS_MORTAL(ch) && chance(20)) {
+    send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(ch));
+
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
 }
 
 
@@ -3933,7 +3946,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
 
   if (check > (IS_NPC(ch) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_SHADOWSTEP))) return;
 
-  double multi = 2.0;
+  double multi = 1.5;
 
   if (!IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK) &&
     ((IS_DAY && IS_OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT))) {
@@ -3952,8 +3965,13 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
   }
 
   if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
-    check -= 25;
-    multi += 0.5;
+    check -= 15;
+    multi += 0.3;
+
+    if (IS_EVIL(ch)) {
+      check -= 10;
+      multi += 0.2;
+    }
   }
 
   if (!CAN_SEE(vict, ch) ||
@@ -3963,8 +3981,13 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
     multi += 0.5;
   }
 
-  if (multi < 1.5) multi = 1.5;
-  else if (multi > 3.0) multi = 3.0;
+  if (multi < 1.0) multi = 1.0;
+
+  if (check_subclass(ch, SC_DEFILER, 5)) {
+    multi += 0.5;
+  }
+
+  if (multi > 3.0) multi = 3.0;
 
   act("You step into the shadows and attack $N by surprise!", FALSE, ch, 0, vict, TO_CHAR);
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
@@ -3994,7 +4017,6 @@ int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room,
 
 
 void dirty_tricks_action(CHAR *ch, CHAR *victim) {
-  AFF af;
   ENCH ench;
   bool can_stab = TRUE;
   bool can_blind = TRUE;
@@ -4041,14 +4063,14 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
     act("$n stabs $s weapon deeply into you, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_VICT);
     act("$n stabs $s weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    ench.name = strdup("Gaping Wound");
-    ench.type = SKILL_DIRTY_TRICKS;
-    ench.duration = 0;
-    ench.location = 0;
-    ench.modifier = 0;
-    ench.bitvector = 0;
+    ench.name       = strdup("Gaping Wound");
+    ench.type       = SKILL_DIRTY_TRICKS;
+    ench.duration   = 0;
+    ench.location   = 0;
+    ench.modifier   = 0;
+    ench.bitvector  = 0;
     ench.bitvector2 = 0;
-    ench.func = dirty_tricks_enchantment;
+    ench.func       = dirty_tricks_enchantment;
 
     enchantment_to_char(victim, &ench, FALSE);
   }
@@ -4061,19 +4083,8 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
     act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
     send_to_char("You have been blinded!\n\r", victim);
 
-    af.type = SPELL_BLINDNESS;
-    af.location = APPLY_HITROLL;
-    af.modifier = -4;
-    af.duration = 0;
-    af.bitvector = AFF_BLIND;
-    af.bitvector2 = 0;
-
-    affect_to_char(victim, &af);
-
-    af.location = APPLY_AC;
-    af.modifier = +40;
-
-    affect_to_char(victim, &af);
+    affect_apply(victim, SPELL_BLINDNESS, 0, -4, APPLY_HITROLL, AFF_BLIND, 0);
+    affect_apply(victim, SPELL_BLINDNESS, 0, 40, APPLY_AC, AFF_BLIND, 0);
   }
   /* 50% Chance Stun */
   else {
@@ -4096,7 +4107,6 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
 
-        /* Can't use skill_wait() since this applies to victim. */
         WAIT_STATE(victim, PULSE_VIOLENCE);
       }
     }

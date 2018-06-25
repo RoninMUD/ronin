@@ -512,7 +512,9 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   }
   else {
     /* Bathed in Blood */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 4) && chance(10)) {
+    int room_blood_level = MIN((CHAR_REAL_ROOM(ch) == NOWHERE ? 0 : RM_BLOOD(CHAR_REAL_ROOM(ch))), 10);
+
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(10 + room_blood_level)) {
       act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, NULL, victim, TO_CHAR);
       act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, NULL, victim, TO_VICT);
       act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, NULL, victim, TO_NOTVICT);
@@ -520,7 +522,6 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
       spell_vampiric_touch(GET_LEVEL(ch), ch, victim, 0);
     }
 
-    /* Assassinate */
     if (GET_OPPONENT(victim)) {
       hit(ch, victim, SKILL_ASSASSINATE);
     }

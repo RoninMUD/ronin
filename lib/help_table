@@ -7,6 +7,9 @@ creature that dies, up to a limit of ten blood levels.  The level of blood
 in a room is indicated by a message located at the bottom of the room's
 description.
 
+Some spells and skills can also increase the blood level of a room, under
+certain conditions.
+
 The blood level of a room recedes by one level per tick as the traces of
 violence begin to fade away into macabre memory.
 
@@ -4518,8 +4521,13 @@ Level       : level 20 mage, 25 anti-paladin.
 Save        : -
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-This spell can absorb the life energy from a corpse.  The hit points
-that are recovered depend on the level of the dead monster.
+This spell can absorb the life energy from a corpse.  The hit points that are
+recovered depend on the level of the dead monster.
+
+When cast upon the corpse of a creature with a level of no less than 10 levels
+below the caster, this spell will increase the blood level of the room by one.
+
+See Also: "BLOOD LEVEL"
 #
 HARM
 
@@ -6959,7 +6967,7 @@ Usage       : cast 'rage' (self only)
 Accumulative: No
 Duration    : 5
 Level       : Level 50 Anti-Paladin
-Mana Cost   : 75
+Mana Cost   : 130
 
 This spell is similar to the Paladin's Fury spell.  It grants the Anti-Paladin a
 damage multiplier on every hit.  However, while Fury gives a 2x multiplier, Rage
@@ -6967,7 +6975,10 @@ gives a multiplier of 1.5x.  Also, unlike Fury, there is only a 50% chance that
 an attack against a creature or player affected by Rage will be automatically
 hit.
 
-See Also: SUBCLASSES INFIDEL FURY
+Rage also automatically applies the effects of the Blood Lust spell when
+successfully by Anti-Paladin characters.
+
+See Also: SUBCLASSES INFIDEL FURY "BLOOD LUST"
 #
 DEFILER
 
@@ -6980,8 +6991,8 @@ Level         Skill/Spell
   1           DESECRATE
   2           BLACKMANTLE
   3           FEINT
-  4           BATHED IN BLOOD
-  5           SHADOWSTEP
+  4           SHADOWSTEP
+  5           BATHED IN BLOOD
 
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
 #
@@ -7011,7 +7022,11 @@ hit points per cast.  This effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
+When cast upon the corpse of a creature with a level of no less than 10 levels
+below the caster, this spell will increase the blood level of the room by one.
+
 See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
+          "BLOOD LEVEL"
 #
 BLACKMANTLE
 
@@ -7052,30 +7067,9 @@ This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES DEFILER
 #
-"BATHED IN BLOOD"
-
-Subclass Defiler: Level 4 (Anti-Paladin)
-
-The Defiler's sinister powers surge in the presence of fresh blood, making
-them stronger and granting them supernatural powers.
-
-The Defiler gains a health and mana regeneration bonus of 20% for each level of
-blood in the room.  This bonus has a maximum of 100% additional regeneration.
-
-Additionally, when the Defiler is affected by the Blood Lust spell, its effects
-will trigger 5% more frequently.  For each level of blood in the room above
-zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
-ten.
-
-Finally, the Defiler's Backstab skill has a 10% chance on success to trigger a
-Vampiric Touch cast automatically at the target, with zero mana cost.
-
-See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
-          "VAMPIRIC TOUCH"
-#
 SHADOWSTEP
 
-Subclass Defiler: Level 5 (Anti-Paladin)
+Subclass Defiler: Level 4 (Anti-Paladin)
 
 Usage: shadowstep (toggles on/off)
 
@@ -7089,10 +7083,11 @@ affected by the Blackmantle spell.  A Defiler fighting in a dark room, or during
 the night time will have an increased chance of success, and the skill will
 inflict more damage.  Likewise, a Defiler attacking a victim outside during the
 day, or in a lit room will have a reduced chance of success, and the skill will
-inflict less damage.
+inflict less damage.  Defilers with a non-evil alignment have a slightly lower
+chance of triggering these automatic attacks.
 
-The amount of damage inflicted ranges from 3x a normal hit for the most
-favorable conditions, to 1.5x a normal hit for the least favorable.
+The amount of damage inflicted ranges from 1.0x a normal hit for the least
+favorable conditions, to 2.5x a normal hit for the most favorable.
 
 The success of this skill is based on how well it is practiced, and the
 character's dexterity.
@@ -7100,6 +7095,40 @@ character's dexterity.
 The use of this skill is automatic and can be toggled on or off.
 
 See Also: SUBCLASSES DEFILER BLACKMANTLE
+#
+"BATHED IN BLOOD"
+
+Subclass Defiler: Level 5 (Anti-Paladin)
+
+The Defiler's sinister powers surge in the presence of fresh blood, making
+them stronger and granting them supernatural powers.
+
+The blood level of the room will increase by one under the following conditions:
+
+- When the spells Spirit Levy and Desecrate are cast upon the corpse of a
+creature with a level of no less than 10 levels below the caster; 100% chance.
+- When a victim is bitten by a character affected by Blood Lust; 20% chance.
+- When a Defiler with the Bathed in Blood subclass ability uses the Backstab
+skill against an opponent successfully; 20% chance.
+
+The Defiler gains a health and mana regeneration bonus of 20% for each level of
+blood in the room.  This bonus has a maximum of 100% additional regeneration.
+
+Additionally, when the Defiler is affected by the Blood Lust spell, its effects
+will trigger 5% more frequently.  For each level of blood in the room above
+zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
+ten.
+
+Also, the Defiler's Backstab skill has a 10% chance on success to trigger a
+Vampiric Touch cast automatically at the target, with zero mana cost, with a 1%
+chance increase for each blood level in the room, to a maximum of 20% chance.
+
+Finally, the damage inflicted by Shadowstep attacks is increased to a minumum of
+1.5x a normal hit for the least favorable conditions, to 3.0x a normal hit for
+the most favorable.
+
+See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
+          "VAMPIRIC TOUCH" SHADOWSTEP
 #
 INFIDEL
 
@@ -8773,13 +8802,20 @@ Usage      : cast 'blood lust' (self only)
 Level      : level 45 anti-paladin
 Save       : none
 Duration   : 5
-Mana cost  : 75
+Mana cost  : 70
 
-While affected by Blood Lust, the Anti-Paladin hungers for blood, and
-will randomly bite their victims during combat.  Each bite has the
-chance to cause damage, drain hit points, or drain mana.  This drain
-will cause the victim to lose the inflicted amount of points and for
-the caster to gain them.
+While affected by Blood Lust, the Anti-Paladin hungers for blood, and will
+randomly bite their victims during combat.  Each bite has the chance to cause
+damage, drain hit points, or drain mana.  This drain will cause the victim to
+lose the inflicted amount of points and for the caster to gain them.
+
+There is a 20% chance of increasing the blood level of the room by one when a
+victim bitten.
+
+Note: The effects of this spell are automatically applied to Anti-Paladin
+characters when the Rage spell is successfully cast.
+
+See Also: "BLOOD LEVEL" RAGE
 #
 "MYSTIC SWIFTNESS"
 

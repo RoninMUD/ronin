@@ -1981,8 +1981,8 @@ void assign_spell_pointers(void)
   SPELLO(173, 30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
   SPELLO(172, 30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_debilitate);
   SPELLO(165, 30, POSITION_FIGHTING, 51, 51, 30, 51, 51, 51, 51, 51,   85, TAR_IGNORE,                                                                   cast_wind_slash);
-  SPELLO(152, 30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   75, TAR_SELF_ONLY,                                                                cast_blood_lust);
-  SPELLO(238, 30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,   75, TAR_SELF_ONLY,                                                                cast_rage);
+  SPELLO(152, 30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blood_lust);
+  SPELLO(238, 30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  130, TAR_SELF_ONLY,                                                                cast_rage);
   SPELLO(211, 30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blackmantle);
   SPELLO(206, 30, POSITION_STANDING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_OBJ_ROOM,                                                                 cast_desecrate);
   SPELLO(180, 30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_shadow_wraith);
