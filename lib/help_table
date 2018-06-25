@@ -1520,14 +1520,13 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (18) Mana Transfer                 (18) Sphere
     (18) Vampiric Touch                (18) Clairvoyance
     (19) Iceball                       (19) Dispel Magic
-    (20) Spirit Levy
+    (20) Spirit Levy                   (20) Total Recall
     (21) Hold Person                   (21) Convergence
     (21) Enchant Armour
     (22) Animate Dead
     (23) Death Spray
     (24) Lethal Fire
-    (25) Improved Invisibility
-         Remove Improved Invisibility
+    (25) Improved Invisibility         (25) Remove Improved Invisibility
     (26) Electric Shock                (26) Power Word Kill
     (27) Clone                         (27) Disintegrate
     (27) Relocate
@@ -4294,7 +4293,7 @@ See Also: -
 
 Usage       : cast 'total recall'
 Accumulative: -
-Level       : level 18 cleric.
+Level       : Level 13 bard, 18 cleric, 20 mage.
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Set in the future on the planet Mars, a man has his memory altered in order to
@@ -4788,8 +4787,8 @@ See help for:
        (9) Identify               (9) Fly
       (10) Locate Object
       (11) Cure Critic
-      (12) Fear
-      (13) Locate Character      (13) Blindness
+      (12) Fear                  (13) Blindness
+      (13) Locate Character      (13) Total Recall
       (15) Forget                (15) Satiate
       (17) Sleep                 (17) Colour Spray
       (18) Charm Person

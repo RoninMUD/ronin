@@ -1883,7 +1883,7 @@ void assign_spell_pointers(void)
   SPELLO( 80, 30, POSITION_FIGHTING, 23, 51, 51, 51, 51, 17, 51, 24,   80, TAR_IGNORE,                                                                   cast_death_spray);
   SPELLO( 81, 30, POSITION_FIGHTING, 51, 23, 51, 25, 51, 51, 51, 51,   80, TAR_IGNORE,                                                                   cast_holy_word);
   SPELLO( 82, 30, POSITION_FIGHTING, 19, 51, 51, 51, 23, 18, 51, 20,   30, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_iceball);
-  SPELLO( 83, 30, POSITION_STANDING, 51, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
+  SPELLO( 83, 30, POSITION_STANDING, 20, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
   SPELLO( 84, 30, POSITION_STANDING, 17, 20, 51, 51, 51, 16, 51, 51,   30, TAR_OBJ_INV,                                                                  cast_recharge);
   SPELLO( 85, 30, POSITION_FIGHTING, 51, 25, 51, 51, 51, 22, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
   SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7,  9, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
