@@ -7795,7 +7795,7 @@ Level         Skill/Spell
   2           CLOUD OF CONFUSION
   3           RIPOSTE
   4           TREMOR
-  5           DEVASTATION
+  5           INCENDIARY CLOUD
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7810,8 +7810,8 @@ Level         Skill/Spell
   1           LUNGE
   2           RIMEFANG
   3           CLOBBER
-  4           FROST BOLT
-  5           INCENDIARY CLOUD
+  4           SNIPE
+  5           DEVASTATION
 
 See Also: SUBCLASSES MERCENARY COMMANDO
 #
@@ -7819,7 +7819,7 @@ LUNGE
 
 Subclass Legionnaire: Level 1 (Commando)
 
-usage: lunge <target>
+Usage: lunge <target>
 
 With this skill, the Legionnaire can lunge at their target to start
 or join a fight, dealing 25% more damage than an Assault.  The user
@@ -7830,28 +7830,6 @@ The success of this skill is based on how well it is practiced, and
 the character's Dexterity.
 
 Note: A weapon is required.
-
-See Also: SUBCLASSES LEGIONNAIRE
-#
-CLOBBER
-
-Subclass Legionnaire: Level 3 (Commando)
-
-usage: clobber <target>
-
-The Legionnaire will attempt to strike an opponent with a devastating
-blow.  The damage dealt by this skill is equal to one to four times
-the user's level.  Additionally, this skill will stun, incapacitate,
-or even mortally wound a target, making the next attack made against
-the target much more effective.  The user will experience two rounds
-of lag after use.
-
-The success of this skill is based on how well it is practiced, and
-the character's Dexterity.
-
-Note: The 'stun' effect of this skill will not bring the opponent down
-below 0 hit points if it knocks them to mortally wounded, it will
-merely put them in the mortally wounded position.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7874,23 +7852,59 @@ During the winter, Rimefang will deal an additional 50 to 100 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-"INCENDIARY CLOUD"
+CLOBBER
+
+Subclass Legionnaire: Level 3 (Commando)
+
+Usage: clobber <target>
+
+The Legionnaire will attempt to strike an opponent with a devastating blow.  The
+damage dealt by this skill is equal to one to four times the user's level.
+
+Additionally, this skill will stun, incapacitate, or even mortally wound a
+target, making the next attack made against the target much more effective.  The
+user will experience two rounds of lag after use.
+
+Clobber pierces through the powerful shielding granted by Invulnerability.
+
+The success of this skill is based on how well it is practiced, and the
+character's Dexterity modifier.
+
+Note: The 'stun' effect of this skill will not bring the opponent down below 0
+hit points if it knocks them to mortally wounded, it will merely put them in the
+mortally wounded position, making them temporarily rather defenseless.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
+SNIPE
+
+Subclass Legionnaire: Level 4 (Commando)
+
+Usage: snipe (toggles on/off)
+
+The Legionnaire has honed their combat skills to near perfection.  When engaged
+in combat with an enemy that is in a weakened state (near death), the commando
+will automatically attempt to snipe their opponent with a deadly attack.  This
+attack inflicts 30 times the commando's class level, up to a maximum of 1500
+damage at level 50.  This attack is automatic and is attempted approximately
+every 10 seconds and has a fixed success rate of 20%.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
+DEVASTATION
 
 Subclass Legionnaire: Level 5 (Commando)
 
-Usage       : cast 'incendiary cloud' <target>
-Accumulative: no
-Duration    : 8
+Usage       : cast 'devastation' <victim>
+Accumulative: No
+Duration    : -
 Save        : -
 Mana Cost   : 200
-Damage      : 600 + 100 damage per tick for duration
+Damage      : 1000 to 1200
 
-This spell has two purposes.  One is to deal a high amount of damage
-in a single cast.  The other is to leave an effect that will deal
-decent damage every tick. This is accomplished with a modest 600
-damage initial attack and another 100 damage a tick for 8 ticks.  This
-spell is an effective way to prevent a creature from regenerating when
-you are trying to kill it over multiple runs.
+This powerful spell causes a bit more damage than the Mage's Thunderball spell.
+
+The Legionnaire can expect to deal 1000 to 1200 damage to their victim.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7898,14 +7912,15 @@ See Also: SUBCLASSES LEGIONNAIRE
 
 Subclass Mercenary: Level 1 (Commando)
 
-Usage       : cast 'iron skin' (self only)
-Accumulative: no
+Usage       : cast 'iron skin' <target>
+Accumulative: No
 Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This defensive spell will lower the Mercenary's armor by 25, making
-them harder to hit.
+When self-cast upon the Mercenary, this defensive spell will modify their AC by
+-25, making them harder to hit.  If cast upon a different target, the spell is
+less effective, granting only -10 AC instead.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7914,15 +7929,15 @@ See Also: SUBCLASSES MERCENARY
 Subclass Mercenary: Level 2 (Commando)
 
 Usage       : cast 'cloud of confusion'
-Accumulative: no
+Accumulative: No
 Duration    : 1d5 + 1
 Save        : -
 Mana Cost   : 100
 
-This spell affects everyone in the room not grouped with the
-Mercenary.  All victims will have their hitroll reduced by 5 to 8.
+This spell affects everyone in the room not grouped with the Mercenary.  All
+victims will have their Hitroll reduced by 5 to 8.
 
-This spell will be more effective if cast at night.
+This spell will be more effective when cast at night.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7930,13 +7945,13 @@ RIPOSTE
 
 Subclass Mercenary: Level 3 (Commando)
 
-With this skill, the Mercenary has a chance to partially deflect
-incoming attacks made against them.  The damage deflected is equal to
-20%.  Additionally, the Mercenary will strike back back at their
-opponent, performing an attack with a chance of a Dual or Triple hit.
+With this skill, the Mercenary has a chance to partially deflect incoming
+attacks made against them; the damage deflected is equal to 20% of the deflected
+attack.  Additionally, the Mercenary will strike back back at their opponent,
+performing an attack with a normal chance of a Dual or Triple hit.
 
-The success of this skill is dependent on how well it is practiced,
-and the character's Dexterity.
+The success of this skill is dependent on how well it is practiced, and the
+character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7945,7 +7960,7 @@ TREMOR
 Subclass Mercenary: Level 4 (Commando)
 
 Usage       : cast 'tremor'
-Accumulative: no
+Accumulative: No
 Duration    : -
 Save        : -
 Mana Cost   : 150
@@ -7956,20 +7971,20 @@ knocking them into a stunned state.
 
 See Also: SUBCLASSES MERCENARY
 #
-DEVASTATION
+"INCENDIARY CLOUD"
 
 Subclass Mercenary: Level 5 (Commando)
 
-Usage       : cast 'devastation' <victim>
+Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
-Duration    : -
+Duration    : Instantaneous / ~ 60 seconds (DoT)
 Save        : -
-Mana Cost   : 200
-Damage      : 1000 to 1200
+Mana Cost   : 150
+Damage      : 700 + 100 damage per 10 seconds for 60 seconds
 
-This powerful spell causes a bit more damage than the Mage's
-Thunderball spell.  The Mercenary can expect to deal 1000 to 1200
-damage to their victim.
+This powerful spell will inflict a large amount of up-front damage instantly,
+plus 100 damage per ~ 10 seconds (one pulse), for a duration of ~ 60 total
+seconds (6 total pulses).
 
 See Also: SUBCLASSES MERCENARY
 #

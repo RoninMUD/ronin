@@ -4113,6 +4113,20 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
   }
 }
 
+void snipe_action(CHAR *ch, CHAR *victim) {
+  if (!ch || !victim) return;
+
+  int dmg = GET_LEVEL(ch) * 30;
+
+  if (((GET_HIT(victim) <= (GET_MAX_HIT(victim) * 0.2)) || (GET_HIT(victim) <= dmg)) && chance(20)) {
+    act("You take advantage of $N's weakness and snipe $M with a deadly attack!", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n takes advantage of your weakness and snipes you with a deadly attack!", FALSE, ch, 0, victim, TO_VICT);
+    act("$n takes advantage of $N's weakness and snipes $m with a deadly attack!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+    damage(ch, victim, dmg, SKILL_SNIPE, DAM_PHYSICAL);
+  }
+}
+
 
 /* control the fights going on */
 void perform_violence(void) {
@@ -4142,6 +4156,7 @@ void perform_violence(void) {
       }
 
       /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
+
       if (affected_by_spell(ch, SPELL_BLOOD_LUST) && SAME_ROOM(ch, vict)) {
         blood_lust_action(ch, vict);
       }
@@ -4150,9 +4165,13 @@ void perform_violence(void) {
         victimize_action(ch, vict);
       }
 
-        /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
+      /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
       if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && chance(10) && SAME_ROOM(ch, vict)) {
         dirty_tricks_action(ch, vict);
+      }
+
+      if (affected_by_spell(ch, SKILL_SNIPE) && chance(20) && SAME_ROOM(ch, vict)) {
+        snipe_action(ch, vict);
       }
     }
     else { /* Not in same room. */

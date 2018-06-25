@@ -201,7 +201,7 @@
 #define SPELL_UNUSED_170            170
 #define SPELL_UNUSED_171            171
 #define SPELL_DEBILITATE            172
-#define SPELL_UNUSED_173            173
+#define SPELL_MANA_HEAL             173
 #define SKILL_CLOBBER               174
 #define SPELL_BLUR                  175
 #define SPELL_TRANQUILITY           177
@@ -209,13 +209,13 @@
 #define SPELL_TREMOR                179
 #define SPELL_SHADOW_WRAITH         180
 #define SPELL_DEVASTATION           181
-#define SPELL_INCENDIARY_CLOUD      182
-#define SKILL_UNUSED_183            183
+#define SPELL_INCENDIARY_CLOUD      182 /* Old Version */
+#define SKILL_SNIPE                 183
 #define SKILL_RIPOSTE               184
 #define SKILL_TROPHY                185
 #define SKILL_FRENZY                186
 #define SPELL_POWER_OF_FAITH        187
-#define SPELL_UNUSED_188            188
+#define SPELL_INCENDIARY_CLOUD_NEW  188 /* New Version */
 #define SPELL_POWER_OF_DEVOTION     189
 #define SPELL_WRATH_OF_GOD          190
 #define SPELL_DISRUPT_SANCT         191

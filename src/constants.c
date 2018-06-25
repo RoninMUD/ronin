@@ -191,12 +191,12 @@ const char * const spell_wear_off_msg[] = {
   "", /* 180 Shadow Wraith */
   "!devastation!",/*181*/
   "The cloud of fire surrounding you dies out.",/*182*/
-  "",/*183*/
+  "!snipe!",/*183*/
   "!riposte!",/*184*/
   "!trophy!",/*185*/
   "!frenzy!",/*186*/
   "!power of faith!",/*187*/
-  "Your focus lessens.",/*188*/
+  "The cloud of fire surrounding you dies out.", /* 188 Incendiary Cloud (New) */
   "The bright white aura around your body fades.",/*189*/
   "!wrath of god!",/*190*/
   "The force disrupting your white aura disappears.",/*191*/
@@ -2778,7 +2778,7 @@ const char * const commando_skills[] = {
   "triple",       /* Level 20 */
   "lunge",        /* Legionnaire SC1 */
   "clobber",      /* Legionnaire SC3 */
-  "riposte",      /* Mercenary SC3 */
+  "snipe",        /* Legionnaire SC4 */
   "\n"
 };
 

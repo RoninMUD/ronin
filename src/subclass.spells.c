@@ -523,38 +523,26 @@ void spell_distortion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_ironskin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_ironskin(level, ch, 0, 0);
-      break;
-    default:
-      log_f("Wrong type called in ironskin!");
-      break;
+void cast_ironskin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_ironskin(level, ch, victim, 0);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_ironskin()");
   }
 }
 
-void spell_ironskin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_ironskin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (affected_by_spell(victim, SPELL_IRONSKIN) &&
+      get_affect_from_char(victim, SPELL_IRONSKIN)->modifier > -25) {
+    affect_from_char(victim, SPELL_IRONSKIN);
+  }
 
-  if (!affected_by_spell(ch, SPELL_IRONSKIN))
-  {
-    send_to_char("You feel your skin harden.\n\r", ch);
-    act("$n's skin hardens and turns dark iron in color.", TRUE, ch, 0, 0, TO_ROOM);
+  if (!affected_by_spell(victim, SPELL_IRONSKIN)) {
+    send_to_char("You feel your skin harden.\n\r", victim);
+    act("$n's skin hardens and turns dark iron in color.", TRUE, victim, 0, 0, TO_ROOM);
 
-    af.type       = SPELL_IRONSKIN;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 5;
-    else
-      af.duration = 10;
-    af.modifier   = -25;
-    af.location   = APPLY_AC;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+    affect_apply(victim, SPELL_IRONSKIN, ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 5 : 10, (ch == victim) ? -25 : -10, APPLY_AC, 0, 0);
   }
 }
 
@@ -1681,54 +1669,38 @@ void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   damage(ch, victim, number(1000, 1200), SPELL_DEVASTATION, DAM_MAGICAL);
 }
 
-void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      if (victim)
-        spell_incendiary_cloud(level, ch, victim, 0);
-      break;
-    default:
-      log_f("Wrong type called in incendiary cloud!");
-      break;
+void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    if (victim) {
+      spell_incendiary_cloud(level, ch, victim, 0);
+    }
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_incendiary_cloud()");
   }
 }
 
-void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_INCENDIARY_CLOUD))
-  {
-    af.type       = SPELL_INCENDIARY_CLOUD;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-      af.duration = 2;
-    else
-      af.duration = 8;
-    af.modifier   = 0;
-    af.location   = 0;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  if (!affected_by_spell(victim, SPELL_INCENDIARY_CLOUD_NEW)) {
+    affect_apply(victim, SPELL_INCENDIARY_CLOUD_NEW, 6, 0, 0, 0, 0);
   }
 
   act("You make a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_CHAR);
   act("$n makes a gesture and a huge ball of flame envelopes you.", FALSE, ch, 0, victim, TO_VICT);
   act("$n makes a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-  damage(ch, victim, 600, TYPE_UNDEFINED, DAM_NO_BLOCK);
+
+  damage(ch, victim, 700, SPELL_INCENDIARY_CLOUD_NEW, DAM_MAGICAL);
 }
 
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)

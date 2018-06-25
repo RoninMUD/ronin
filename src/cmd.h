@@ -309,46 +309,47 @@ $State: Exp $
 #define CMD_SOCIAL             242
 #define CMD_EMAIL              243 /* Ranger - 19-Dec-03 */
 #define CMD_IDNAME             244 /* Ranger - 05-Feb-04 */
-#define CMD_CUNNING            245 /* Used to be Cover */
+#define CMD_CUNNING            245
 #define CMD_GF                 246 /* Gossip w/social action */
 #define CMD_PRAY               247
 #define CMD_COIN_TOSS          248
 
-#define CMD_MEDITATE           300 /* for subclasses */
+/* Subclasses */
+#define CMD_MEDITATE           300
 #define CMD_PROTECT            301
 #define CMD_SUBCLASS           302
 #define CMD_WHIRLWIND          303
-#define CMD_DIRTY_TRICKS       304 /* Used to be Retreat */
+#define CMD_DIRTY_TRICKS       304 
 #define CMD_BACKFIST           305
 #define CMD_AWARENESS          306
 #define CMD_BLITZ              307
 #define CMD_FLANK              308
 #define CMD_TRIP               309
 #define CMD_TIGERKICK          310
-#define CMD_EVASION            311 /* Used to be Scan */
+#define CMD_EVASION            311
 #define CMD_CAMP               312
 #define CMD_LUNGE              313
 #define CMD_SWITCH             314
 #define CMD_FADE               315
-#define CMD_SMITE              316 /* Used to be Evade */
+#define CMD_SMITE              316
 #define CMD_HEROES             317
-#define CMD_TRUSTY_STEED       318 /* Used to be Impair */
-#define CMD_ZEAL               319 /* Used to be Sweep */
+#define CMD_TRUSTY_STEED       318
+#define CMD_ZEAL               319
 #define CMD_AQUEST             320
 #define CMD_DEFEND             321
 #define CMD_HOSTILE            322
 #define CMD_ASSASSINATE        323
 #define CMD_BATTER             324
-#define CMD_SHADOWSTEP         325 /* Used to be Shadow-Walk */
-//#define CMD_CHARGE             326
+#define CMD_SHADOWSTEP         325
+#define CMD_SNIPE              326
 #define CMD_HEADBUTT           327
 #define CMD_MANTRA             328
 #define CMD_BANZAI             329
 #define CMD_BERSERK            330
 #define CMD_FRENZY             331
-#define CMD_TROPHY             332 /* Used to be Scalp */
-#define CMD_SCAN               333 /* Used to be Throatstrike */
-#define CMD_VEHEMENCE          334 /* Used to be Execute */
+#define CMD_TROPHY             332
+#define CMD_SCAN               333
+#define CMD_VEHEMENCE          334
 
 #define CMD_HUNT               335
 #define CMD_PLRAVG             336

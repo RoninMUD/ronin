@@ -135,7 +135,6 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SPELL_FROSTBOLT:
       if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
-      if (check_subclass(ch, SC_LEGIONNAIRE, 4)) return TRUE;
       break;
     case SPELL_WRATH_ANCIENTS:
       if (check_subclass(ch, SC_ARCHMAGE, 4)) return TRUE;
@@ -221,7 +220,7 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_TREMOR:
       if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
       break;
-    case SPELL_DEVASTATION:
+    case SPELL_INCENDIARY_CLOUD_NEW:
       if (check_subclass(ch, SC_MERCENARY, 5)) return TRUE;
       break;
     case SKILL_LUNGE:
@@ -233,7 +232,10 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_CLOBBER:
       if (check_subclass(ch, SC_LEGIONNAIRE, 3)) return TRUE;
       break;
-    case SPELL_INCENDIARY_CLOUD:
+    case SKILL_SNIPE:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 4)) return TRUE;
+      break;
+    case SPELL_DEVASTATION:
       if (check_subclass(ch, SC_LEGIONNAIRE, 5)) return TRUE;
       break;
     case SKILL_BACKFIST:

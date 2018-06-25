@@ -2216,6 +2216,30 @@ void do_trusty_steed(CHAR *ch, char *argument, int cmd) {
 }
 
 
+void do_snipe(CHAR *ch, char *argument, int cmd) {
+  if (!GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_SNIPE)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+    return;
+  }
+
+  if (affected_by_spell(ch, SKILL_SNIPE)) {
+    affect_from_char(ch, SKILL_SNIPE);
+    return;
+  }
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_SNIPE)) {
+    send_to_char("You're unable to concetrate well enough to make accurate headshots.\n\r", ch);
+  }
+  else {
+    affect_apply(ch, SKILL_SNIPE, -1, 0, 0, 0, 0);
+
+    send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
+  }
+}
+
+
 /* Unused for now. - Night
 void do_voidstrike(CHAR *ch, char *argument, int cmd) {
   char name[MIL];
