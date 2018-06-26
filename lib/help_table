@@ -1735,7 +1735,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP NINJA SPELLS to see the spells of the ninja class.
 
-Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw
+Skills: assault, bash, dodge, hide, kick, peek, pummel, sneak, spin, throw
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1913,7 +1913,7 @@ See Also: OPEN, CLOSE, LOCK, UNLOCK
 #
 PEEK
 
-Class: Anti-Paladin Nomad Thief Bard
+Class: Anti-Paladin Bard Ninja Nomad Thief
 
 Used to peek into the room next to you.
 

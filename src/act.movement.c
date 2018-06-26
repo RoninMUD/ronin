@@ -636,9 +636,10 @@ void do_peek(struct char_data *ch, char *argument, int cmd)
   if (!ch->desc || !ch->skills)
     return;
 
-  if ((GET_CLASS(ch) != CLASS_THIEF) && (GET_CLASS(ch) != CLASS_NOMAD) &&
-      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) && (GET_CLASS(ch) != CLASS_BARD) &&
-      (GET_CLASS(ch) != CLASS_AVATAR) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+  if ((GET_CLASS(ch) != CLASS_THIEF) && (GET_CLASS(ch) != CLASS_NINJA) &&
+      (GET_CLASS(ch) != CLASS_NOMAD) && (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
+      (GET_CLASS(ch) != CLASS_BARD) && (GET_CLASS(ch) != CLASS_AVATAR) &&
+      (GET_LEVEL(ch) < LEVEL_IMM)) {
     send_to_char("Leave this job for the others.\n\r", ch);
     return;
   }

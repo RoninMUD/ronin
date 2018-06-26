@@ -2655,6 +2655,7 @@ const char * const ninja_skills[] = {
   "dodge",
   "hide",
   "kick",
+  "peek",
   "pummel",
   "sneak",
   "spin",
