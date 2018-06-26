@@ -7399,7 +7399,6 @@ See Also: SUBCLASSES ARCHMAGE TEMPLAR
 "FROST BOLT"
 
 Subclass Archmage: Level 3 (Mage)
-Subclass Legionnaire: Level 4 (Commando)
 
 Usage       : cast 'frost bolt' <victim>
 Accumulative: no
@@ -7408,11 +7407,10 @@ Save        : -
 Mana Cost   : 50
 Damage      : 350
 
-This spell is shared by both the Archmage and the Legionnaire. It is similar to
-iceball, but the damage it produces is over double without the doubling of mana
-cost.
+This spell is similar to iceball, but the damage to casting cost ratio is much
+higher, making it a very mana-efficient attack spell.
 
-See Also: SUBCLASSES ARCHMAGE LEGIONNAIRE
+See Also: SUBCLASSES ARCHMAGE
 #
 ENGAGE
 
@@ -7947,7 +7945,7 @@ Subclass Mercenary: Level 3 (Commando)
 
 With this skill, the Mercenary has a chance to partially deflect incoming
 attacks made against them; the damage deflected is equal to 20% of the deflected
-attack.  Additionally, the Mercenary will strike back back at their opponent,
+attack.  Additionally, the Mercenary will strike back at their opponent,
 performing an attack with a normal chance of a Dual or Triple hit.
 
 The success of this skill is dependent on how well it is practiced, and the
