@@ -2248,7 +2248,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     case POSITION_DEAD:
       /* Disembowel */
       if (attack_type == SKILL_DISEMBOWEL) {
-        act("Guts spatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
+        act("Guts splatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
       }
 
       /* Handle MSG_DEAD in case it was intercepted. */
@@ -3189,13 +3189,13 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
         damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
       break;
 
-      case SKILL_CHARGE:
-        act("$n tries to charge $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
-        act("$n tries to charge you, but misses.", FALSE, ch, 0, victim, TO_VICT);
-        act("You try to charge $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
+      //case SKILL_CHARGE:
+      //  act("$n tries to charge $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //  act("$n tries to charge you, but misses.", FALSE, ch, 0, victim, TO_VICT);
+      //  act("You try to charge $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
 
-        damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-      break;
+      //  damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
+      //break;
 
       case SKILL_ASSAULT:
         act("$n tries to assault $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -3346,6 +3346,13 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
 
             damage(ch, victim, 250, SKILL_TWIST, DAM_PHYSICAL);
           }
+
+          /* Bathed in Blood */
+          if (!IS_NPC(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(20)) {
+            send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(ch));
+
+            RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+          }
         }
         break;
 
@@ -3402,25 +3409,25 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
         }
         break;
 
-      case SKILL_CHARGE:
-        if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
-        {
-          act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
-          act("You try to charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
+      //case SKILL_CHARGE:
+      //  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
+      //  {
+      //    act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //    act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
+      //    act("You try to charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
 
-          damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-        }
-        else
-        {
-          act("With a bloodthirsty scream, $n charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-          act("With a bloodthirsty scream, $n charges you.", FALSE, ch, 0, victim, TO_VICT);
-          act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
+      //    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
+      //  }
+      //  else
+      //  {
+      //    act("With a bloodthirsty scream, $n charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+      //    act("With a bloodthirsty scream, $n charges you.", FALSE, ch, 0, victim, TO_VICT);
+      //    act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
 
-          dam *= 2;
-          damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
-        }
-        break;
+      //    dam *= 2;
+      //    damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
+      //  }
+      //  break;
 
       case SKILL_ASSAULT:
         if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
@@ -3820,6 +3827,12 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
       drain_mana_hit_mv(ch, vict, dmg, 0, 0, TRUE, FALSE, FALSE);
       break;
   }
+
+  if (IS_MORTAL(ch) && chance(20)) {
+    send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(ch));
+
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
 }
 
 
@@ -3933,7 +3946,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
 
   if (check > (IS_NPC(ch) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_SHADOWSTEP))) return;
 
-  double multi = 2.0;
+  double multi = 1.5;
 
   if (!IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK) &&
     ((IS_DAY && IS_OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT))) {
@@ -3952,8 +3965,13 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
   }
 
   if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
-    check -= 25;
-    multi += 0.5;
+    check -= 15;
+    multi += 0.3;
+
+    if (IS_EVIL(ch)) {
+      check -= 10;
+      multi += 0.2;
+    }
   }
 
   if (!CAN_SEE(vict, ch) ||
@@ -3963,8 +3981,13 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
     multi += 0.5;
   }
 
-  if (multi < 1.5) multi = 1.5;
-  else if (multi > 3.0) multi = 3.0;
+  if (multi < 1.0) multi = 1.0;
+
+  if (check_subclass(ch, SC_DEFILER, 5)) {
+    multi += 0.5;
+  }
+
+  if (multi > 3.0) multi = 3.0;
 
   act("You step into the shadows and attack $N by surprise!", FALSE, ch, 0, vict, TO_CHAR);
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
@@ -3994,7 +4017,6 @@ int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room,
 
 
 void dirty_tricks_action(CHAR *ch, CHAR *victim) {
-  AFF af;
   ENCH ench;
   bool can_stab = TRUE;
   bool can_blind = TRUE;
@@ -4041,14 +4063,14 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
     act("$n stabs $s weapon deeply into you, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_VICT);
     act("$n stabs $s weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    ench.name = strdup("Gaping Wound");
-    ench.type = SKILL_DIRTY_TRICKS;
-    ench.duration = 0;
-    ench.location = 0;
-    ench.modifier = 0;
-    ench.bitvector = 0;
+    ench.name       = strdup("Gaping Wound");
+    ench.type       = SKILL_DIRTY_TRICKS;
+    ench.duration   = 0;
+    ench.location   = 0;
+    ench.modifier   = 0;
+    ench.bitvector  = 0;
     ench.bitvector2 = 0;
-    ench.func = dirty_tricks_enchantment;
+    ench.func       = dirty_tricks_enchantment;
 
     enchantment_to_char(victim, &ench, FALSE);
   }
@@ -4061,19 +4083,8 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
     act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
     send_to_char("You have been blinded!\n\r", victim);
 
-    af.type = SPELL_BLINDNESS;
-    af.location = APPLY_HITROLL;
-    af.modifier = -4;
-    af.duration = 0;
-    af.bitvector = AFF_BLIND;
-    af.bitvector2 = 0;
-
-    affect_to_char(victim, &af);
-
-    af.location = APPLY_AC;
-    af.modifier = +40;
-
-    affect_to_char(victim, &af);
+    affect_apply(victim, SPELL_BLINDNESS, 0, -4, APPLY_HITROLL, AFF_BLIND, 0);
+    affect_apply(victim, SPELL_BLINDNESS, 0, 40, APPLY_AC, AFF_BLIND, 0);
   }
   /* 50% Chance Stun */
   else {
@@ -4096,10 +4107,23 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
       if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
 
-        /* Can't use skill_wait() since this applies to victim. */
         WAIT_STATE(victim, PULSE_VIOLENCE);
       }
     }
+  }
+}
+
+void snipe_action(CHAR *ch, CHAR *victim) {
+  if (!ch || !victim) return;
+
+  int dmg = GET_LEVEL(ch) * number(25, 30);
+
+  if (((GET_HIT(victim) <= (GET_MAX_HIT(victim) * 0.2)) || (GET_HIT(victim) <= dmg)) && chance(20)) {
+    act("You take advantage of $N's weakness and snipe $M with a deadly attack!", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n takes advantage of your weakness and snipes you with a deadly attack!", FALSE, ch, 0, victim, TO_VICT);
+    act("$n takes advantage of $N's weakness and snipes $m with a deadly attack!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+    damage(ch, victim, dmg, SKILL_SNIPE, DAM_PHYSICAL);
   }
 }
 
@@ -4132,6 +4156,7 @@ void perform_violence(void) {
       }
 
       /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
+
       if (affected_by_spell(ch, SPELL_BLOOD_LUST) && SAME_ROOM(ch, vict)) {
         blood_lust_action(ch, vict);
       }
@@ -4140,9 +4165,13 @@ void perform_violence(void) {
         victimize_action(ch, vict);
       }
 
-        /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
+      /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
       if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && chance(10) && SAME_ROOM(ch, vict)) {
         dirty_tricks_action(ch, vict);
+      }
+
+      if (affected_by_spell(ch, SKILL_SNIPE) && chance(20) && SAME_ROOM(ch, vict)) {
+        snipe_action(ch, vict);
       }
     }
     else { /* Not in same room. */

@@ -864,42 +864,39 @@ void assign_command_pointers ( void )
   COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 30);
 
   /* Subclass commands */
-  COMMANDO("awareness" ,CMD_AWARENESS ,POSITION_FIGHTING ,do_awareness,30);
-  COMMANDO("meditate" ,CMD_MEDITATE  ,POSITION_RESTING   ,do_meditate,30);
-  COMMANDO("protect"  ,CMD_PROTECT   ,POSITION_STANDING  ,do_protect,30);
-  COMMANDO("subclass" ,CMD_SUBCLASS  ,POSITION_DEAD      ,do_subclass,LEVEL_SUP ); /* IMP adding/removing subclasses - Ranger Dec 98 */
-  /*COMMANDO("retreat"  ,CMD_RETREAT   ,POSITION_FIGHTING  ,do_retreat,30);*/
-  COMMANDO("backfist" ,CMD_BACKFIST  ,POSITION_FIGHTING  ,do_backfist,30);
-  COMMANDO("mantra"   ,CMD_MANTRA    ,POSITION_FIGHTING  ,do_mantra,30);
-  COMMANDO("banzai"   ,CMD_BANZAI    ,POSITION_FIGHTING  ,do_banzai,30);
-  COMMANDO("pray"     ,CMD_PRAY      ,POSITION_RESTING   ,do_pray,40);
-  COMMANDO("trusty-steed",CMD_TRUSTY_STEED,POSITION_FIGHTING,do_trusty_steed,30);
-  /*COMMANDO("evade"    ,CMD_EVADE     ,POSITION_FIGHTING  ,do_evade,30);*/
-  /*COMMANDO("impair"   ,CMD_IMPAIR    ,POSITION_FIGHTING  ,do_impair,30);*/
-  COMMANDO("vehemence",CMD_VEHEMENCE ,POSITION_FIGHTING, do_vehemence, 30);
-  COMMANDO("zeal"     ,CMD_ZEAL      ,POSITION_FIGHTING  ,do_zeal,30);
-  COMMANDO("blitz"    ,CMD_BLITZ     ,POSITION_STANDING  ,do_blitz,30);
-  COMMANDO("flank"    ,CMD_FLANK     ,POSITION_FIGHTING  ,do_flank,30);
-  COMMANDO("lunge"    ,CMD_LUNGE     ,POSITION_STANDING  ,do_lunge,30);
-  /*COMMANDO("trip"     ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);*/
-  COMMANDO("evasion"  ,CMD_EVASION   ,POSITION_STANDING  ,do_evasion, 30); /* Used to be Cover */
-  COMMANDO("tigerkick",CMD_TIGERKICK ,POSITION_FIGHTING  ,do_tigerkick,30);
-  COMMANDO("switch"   ,CMD_SWITCH    ,POSITION_FIGHTING  ,do_switch,30);
-  COMMANDO("smite"    ,CMD_SMITE     ,POSITION_FIGHTING  ,do_smite,30);
-  COMMANDO("fade"     ,CMD_FADE      ,POSITION_FIGHTING  ,do_fade,30);
-  COMMANDO("dirty-tricks",CMD_DIRTY_TRICKS,POSITION_FIGHTING,do_dirty_tricks,30);
-  COMMANDO("trip  "   ,CMD_TRIP      ,POSITION_FIGHTING  ,do_trip,30);
-  COMMANDO("defend"   ,CMD_DEFEND    ,POSITION_STANDING  ,do_defend,30);
-  COMMANDO("hostile"  ,CMD_HOSTILE   ,POSITION_STANDING  ,do_hostile,30);
-  COMMANDO("frenzy"   ,CMD_FRENZY    ,POSITION_STANDING  ,do_frenzy,30);
-  COMMANDO("berserk"  ,CMD_BERSERK   ,POSITION_STANDING  ,do_berserk,30);
-  COMMANDO("batter"   ,CMD_BATTER    ,POSITION_FIGHTING  ,do_batter,30);
-  COMMANDO("trophy"   ,CMD_TROPHY    ,POSITION_STANDING  ,do_trophy,30); /* Used to be Scalp */
-  COMMANDO("charge"   ,CMD_CHARGE    ,POSITION_STANDING  ,do_charge,30);
-  COMMANDO("headbutt" ,CMD_HEADBUTT  ,POSITION_FIGHTING  ,do_headbutt,30);
-  COMMANDO("shadowstep",CMD_SHADOWSTEP ,POSITION_FIGHTING ,do_shadowstep,30); /* Used to be Shadow-Walk */
-  COMMANDO("clobber", CMD_CLOBBER    ,POSITION_FIGHTING  ,do_clobber,30);
-  COMMANDO("victimize",CMD_VICTIMIZE ,POSITION_FIGHTING  ,do_victimize,30); /* Project Stiletto */
+  COMMANDO("subclass", CMD_SUBCLASS, POSITION_DEAD, do_subclass, LEVEL_SUP);
+
+  COMMANDO("awareness", CMD_AWARENESS, POSITION_FIGHTING, do_awareness, 30);
+  COMMANDO("meditate", CMD_MEDITATE, POSITION_RESTING, do_meditate, 30);
+  COMMANDO("protect", CMD_PROTECT, POSITION_STANDING, do_protect, 30);
+  COMMANDO("backfist", CMD_BACKFIST, POSITION_FIGHTING, do_backfist, 30);
+  COMMANDO("mantra", CMD_MANTRA, POSITION_FIGHTING, do_mantra, 30);
+  COMMANDO("banzai", CMD_BANZAI, POSITION_FIGHTING, do_banzai, 30);
+  COMMANDO("pray", CMD_PRAY, POSITION_RESTING, do_pray, 40);
+  COMMANDO("trusty-steed", CMD_TRUSTY_STEED, POSITION_FIGHTING, do_trusty_steed, 30);
+  COMMANDO("vehemence", CMD_VEHEMENCE, POSITION_FIGHTING, do_vehemence, 30);
+  COMMANDO("zeal", CMD_ZEAL, POSITION_FIGHTING, do_zeal, 30);
+  COMMANDO("blitz", CMD_BLITZ, POSITION_STANDING, do_blitz, 30);
+  COMMANDO("flank", CMD_FLANK, POSITION_FIGHTING, do_flank, 30);
+  COMMANDO("lunge", CMD_LUNGE, POSITION_STANDING, do_lunge, 30);
+  COMMANDO("evasion", CMD_EVASION, POSITION_STANDING, do_evasion, 30);
+  COMMANDO("tigerkick", CMD_TIGERKICK, POSITION_FIGHTING, do_tigerkick, 30);
+  COMMANDO("switch", CMD_SWITCH, POSITION_FIGHTING, do_switch, 30);
+  COMMANDO("smite", CMD_SMITE, POSITION_FIGHTING, do_smite, 30);
+  COMMANDO("fade", CMD_FADE, POSITION_FIGHTING, do_fade, 30);
+  COMMANDO("dirty-tricks", CMD_DIRTY_TRICKS, POSITION_FIGHTING, do_dirty_tricks, 30);
+  COMMANDO("trip  ", CMD_TRIP, POSITION_FIGHTING, do_trip, 30);
+  COMMANDO("defend", CMD_DEFEND, POSITION_STANDING, do_defend, 30);
+  COMMANDO("hostile", CMD_HOSTILE, POSITION_STANDING, do_hostile, 30);
+  COMMANDO("frenzy", CMD_FRENZY, POSITION_STANDING, do_frenzy, 30);
+  COMMANDO("berserk", CMD_BERSERK, POSITION_STANDING, do_berserk, 30);
+  COMMANDO("batter", CMD_BATTER, POSITION_FIGHTING, do_batter, 30);
+  COMMANDO("trophy", CMD_TROPHY, POSITION_STANDING, do_trophy, 30);
+  COMMANDO("headbutt", CMD_HEADBUTT, POSITION_FIGHTING, do_headbutt, 30);
+  COMMANDO("shadowstep", CMD_SHADOWSTEP, POSITION_FIGHTING, do_shadowstep, 30);
+  COMMANDO("clobber", CMD_CLOBBER, POSITION_FIGHTING, do_clobber, 30);
+  COMMANDO("victimize", CMD_VICTIMIZE, POSITION_FIGHTING, do_victimize, 30);
+  COMMANDO("snipe", CMD_SNIPE, POSITION_FIGHTING, do_snipe, 30);
   
   COMMANDO("rip"      ,CMD_RIP       ,POSITION_DEAD      ,do_rip,LEVEL_IMP ); /* Ranger - Feb 29,2000 */
 

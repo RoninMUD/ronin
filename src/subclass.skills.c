@@ -1334,109 +1334,109 @@ void do_batter(CHAR *ch, char *arg, int cmd)
 }
 
 
-void do_charge(struct char_data *ch, char *argument, int cmd) {
-  CHAR *leader, *victim;
-  struct follow_type *Followers = NULL;
-  int percent;
-  //int hps;
-  char name[256];
-
-  if (!ch->skills) return;
-  if (!check_sc_access(ch, SKILL_CHARGE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
-    return;
-  }
-
-  if (ch->specials.fighting) {
-    send_to_char("You are already fighting.\n\r", ch);
-    return;
-  }
-
-  one_argument(argument, name);
-
-  if (!(victim = get_char_room_vis(ch, name))) {
-    send_to_char("Charge who?\n\r", ch);
-    return;
-  }
-
-  if (victim == ch)
-  {
-    send_to_char("Aren't we funny today...\n\r", ch);
-    return;
-  }
-  else if (victim->specials.fighting)
-  {
-    act("$N is already fighting someone.", 0, ch, 0, victim, TO_CHAR);
-    return;
-  }
-  else if (IS_MORTAL(ch) &&
-           !IS_NPC(victim) &&
-           GET_LEVEL(victim) >= LEVEL_IMM)
-  {
-    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-    return;
-  }
-  else if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
-           !CHAOSMODE)
-  {
-    send_to_char("Behave yourself here please!\n\r", ch);
-    return;
-  }
-
-  percent = number(1, 131);
-
-  if (percent > GET_LEARNED(ch, SKILL_CHARGE)) {
-    act("You try to lead a charge against $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$N tries to lead a charge against you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
-    act("$n tries to lead a charge against $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    return;
-  }
-
-  /* find the leader */
-  if ((!IS_AFFECTED(ch, AFF_GROUP) || ch->master == NULL)) {
-    leader = ch;
-  }
-  else {
-    if (!IS_AFFECTED(ch->master, AFF_GROUP))
-      leader = ch;
-    else
-      leader = ch->master;
-  }
-
-  act("You lead a charge against $N!", FALSE, ch, 0, victim, TO_CHAR);
-  act("$N leads a charge against you!", FALSE, victim, 0, ch, TO_CHAR);
-  act("$n leads a charge against $N!", FALSE, ch, 0, victim, TO_NOTVICT);
-
-  /* charger hits */
-  //hps = GET_HIT(victim);
-  hit(ch, victim, SKILL_CHARGE);
-  WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-
-  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-  /*if(GET_HIT(victim)>=hps) return;*/ /* this is a check for a missed charge */
-
-  /* Go through the followers */
-  for (Followers = leader->followers; Followers; Followers = Followers->next)
-  {
-    if (Followers->follower->desc) /*make sure they're connected*/
-    {
-      if (IS_AFFECTED(Followers->follower, AFF_GROUP) &&
-          CHAR_REAL_ROOM(Followers->follower) == CHAR_REAL_ROOM(ch) && Followers->follower != ch)
-      {
-        send_to_char("You join in the charge!\n\r", Followers->follower);
-        hit(Followers->follower, victim, SKILL_CHARGE);
-        if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-      }
-    }
-  }
-  /* Have leader charge */
-  if (CHAR_REAL_ROOM(leader) == CHAR_REAL_ROOM(ch) && leader != ch) {
-    send_to_char("You join in the charge!\n\r", leader);
-    hit(leader, victim, SKILL_CHARGE);
-  }
-}
+//void do_charge(struct char_data *ch, char *argument, int cmd) {
+//  CHAR *leader, *victim;
+//  struct follow_type *Followers = NULL;
+//  int percent;
+//  //int hps;
+//  char name[256];
+//
+//  if (!ch->skills) return;
+//  if (!check_sc_access(ch, SKILL_CHARGE)) {
+//    send_to_char("You do not have this skill.\n\r", ch);
+//    return;
+//  }
+//
+//  if (ch->specials.fighting) {
+//    send_to_char("You are already fighting.\n\r", ch);
+//    return;
+//  }
+//
+//  one_argument(argument, name);
+//
+//  if (!(victim = get_char_room_vis(ch, name))) {
+//    send_to_char("Charge who?\n\r", ch);
+//    return;
+//  }
+//
+//  if (victim == ch)
+//  {
+//    send_to_char("Aren't we funny today...\n\r", ch);
+//    return;
+//  }
+//  else if (victim->specials.fighting)
+//  {
+//    act("$N is already fighting someone.", 0, ch, 0, victim, TO_CHAR);
+//    return;
+//  }
+//  else if (IS_MORTAL(ch) &&
+//           !IS_NPC(victim) &&
+//           GET_LEVEL(victim) >= LEVEL_IMM)
+//  {
+//    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+//    return;
+//  }
+//  else if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
+//           !CHAOSMODE)
+//  {
+//    send_to_char("Behave yourself here please!\n\r", ch);
+//    return;
+//  }
+//
+//  percent = number(1, 131);
+//
+//  if (percent > GET_LEARNED(ch, SKILL_CHARGE)) {
+//    act("You try to lead a charge against $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
+//    act("$N tries to lead a charge against you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
+//    act("$n tries to lead a charge against $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
+//    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
+//    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+//    return;
+//  }
+//
+//  /* find the leader */
+//  if ((!IS_AFFECTED(ch, AFF_GROUP) || ch->master == NULL)) {
+//    leader = ch;
+//  }
+//  else {
+//    if (!IS_AFFECTED(ch->master, AFF_GROUP))
+//      leader = ch;
+//    else
+//      leader = ch->master;
+//  }
+//
+//  act("You lead a charge against $N!", FALSE, ch, 0, victim, TO_CHAR);
+//  act("$N leads a charge against you!", FALSE, victim, 0, ch, TO_CHAR);
+//  act("$n leads a charge against $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+//
+//  /* charger hits */
+//  //hps = GET_HIT(victim);
+//  hit(ch, victim, SKILL_CHARGE);
+//  WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+//
+//  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
+//  /*if(GET_HIT(victim)>=hps) return;*/ /* this is a check for a missed charge */
+//
+//  /* Go through the followers */
+//  for (Followers = leader->followers; Followers; Followers = Followers->next)
+//  {
+//    if (Followers->follower->desc) /*make sure they're connected*/
+//    {
+//      if (IS_AFFECTED(Followers->follower, AFF_GROUP) &&
+//          CHAR_REAL_ROOM(Followers->follower) == CHAR_REAL_ROOM(ch) && Followers->follower != ch)
+//      {
+//        send_to_char("You join in the charge!\n\r", Followers->follower);
+//        hit(Followers->follower, victim, SKILL_CHARGE);
+//        if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
+//      }
+//    }
+//  }
+//  /* Have leader charge */
+//  if (CHAR_REAL_ROOM(leader) == CHAR_REAL_ROOM(ch) && leader != ch) {
+//    send_to_char("You join in the charge!\n\r", leader);
+//    hit(leader, victim, SKILL_CHARGE);
+//  }
+//}
 
 
 void do_headbutt(CHAR *ch, char *arg, int cmd) {
@@ -2212,6 +2212,30 @@ void do_trusty_steed(CHAR *ch, char *argument, int cmd) {
     affect_to_char(ch, &af);
 
     send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
+  }
+}
+
+
+void do_snipe(CHAR *ch, char *argument, int cmd) {
+  if (!GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_SNIPE)) {
+    send_to_char("You do not have this skill.\n\r", ch);
+    return;
+  }
+
+  if (affected_by_spell(ch, SKILL_SNIPE)) {
+    affect_from_char(ch, SKILL_SNIPE);
+    return;
+  }
+
+  if (number(1, 85) > GET_LEARNED(ch, SKILL_SNIPE)) {
+    send_to_char("You're unable to concetrate well enough to make accurate headshots.\n\r", ch);
+  }
+  else {
+    affect_apply(ch, SKILL_SNIPE, -1, 0, 0, 0, 0);
+
+    send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
   }
 }
 

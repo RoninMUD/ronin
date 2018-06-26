@@ -235,35 +235,25 @@ void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_rage(level, ch, 0, 0);
-      break;
-    default:
-      log_f("Wrong type called in rage!");
-      break;
+void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_rage(level, ch, 0, 0);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_rage()");
   }
 }
 
-void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (!affected_by_spell(ch, SPELL_RAGE))
-  {
-    send_to_char("Rage courses through your body!\n\r", ch);
-    act("$n's eyes turn blood red, piercing with rage.", FALSE, ch, 0, 0, TO_ROOM);
+void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(ch, SPELL_RAGE)) {
+    send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
+    act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
 
-    AFF af;
+    affect_apply(ch, SPELL_RAGE, 5, 0, 0, 0, 0);
+  }
 
-    af.type       = SPELL_RAGE;
-    af.duration   = 5;
-    af.modifier   = 0;
-    af.location   = 0;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN) && !affected_by_spell(ch, SPELL_BLOOD_LUST)) {
+    affect_apply(ch, SPELL_BLOOD_LUST, 5, 0, 0, 0, 0);
   }
 }
 
@@ -533,38 +523,26 @@ void spell_distortion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_ironskin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_ironskin(level, ch, 0, 0);
-      break;
-    default:
-      log_f("Wrong type called in ironskin!");
-      break;
+void cast_ironskin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_ironskin(level, ch, victim, 0);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_ironskin()");
   }
 }
 
-void spell_ironskin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_ironskin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (affected_by_spell(victim, SPELL_IRONSKIN) &&
+      get_affect_from_char(victim, SPELL_IRONSKIN)->modifier > -25) {
+    affect_from_char(victim, SPELL_IRONSKIN);
+  }
 
-  if (!affected_by_spell(ch, SPELL_IRONSKIN))
-  {
-    send_to_char("You feel your skin harden.\n\r", ch);
-    act("$n's skin hardens and turns dark iron in color.", TRUE, ch, 0, 0, TO_ROOM);
+  if (!affected_by_spell(victim, SPELL_IRONSKIN)) {
+    send_to_char("You feel your skin harden.\n\r", victim);
+    act("$n's skin hardens and turns dark iron in color.", TRUE, victim, 0, 0, TO_ROOM);
 
-    af.type       = SPELL_IRONSKIN;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 5;
-    else
-      af.duration = 10;
-    af.modifier   = -25;
-    af.location   = APPLY_AC;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+    affect_apply(victim, SPELL_IRONSKIN, ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 5 : 10, (ch == victim) ? -25 : -10, APPLY_AC, 0, 0);
   }
 }
 
@@ -995,35 +973,26 @@ void spell_passdoor(ubyte level, CHAR *ch, int door)
   }
 }
 
-void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      if (obj)
-        spell_desecrate(level, ch, victim, obj);
-      break;
-    default:
-      log_f("Wrong type called in desecrate!");
-      break;
+void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_desecrate(level, ch, victim, obj);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_desecrate()");
   }
 }
 
-void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int mob_level = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
-  {
+  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
     /* Object is not a corpse, or a container. */
     send_to_char("You must target a corpse.\n\r", ch);
 
     return;
   }
 
-  if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
-  {
+  if (OBJ_COST(obj) == PC_CORPSE && obj->contains) {
     /* The corpse is that of a PC and contains items (prevent griefing). */
     send_to_char("The corpse has something in it.\n\r", ch);
 
@@ -1032,24 +1001,19 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   mob_level = OBJ_VALUE2(obj);
 
-  if (!affected_by_spell(ch, SPELL_DESECRATE))
-  {
-    af.type        = SPELL_DESECRATE;
-    af.duration    = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7;
-    af.bitvector   = 0;
-    af.bitvector2  = 0;
-
-    af.location    = APPLY_AC;
-    af.modifier    = -(mob_level / 2);
-    affect_to_char(ch, &af);
-
-    af.location    = APPLY_HP_REGEN;
-    af.modifier    = mob_level;
-    affect_to_char(ch, &af);
+  if (!affected_by_spell(ch, SPELL_DESECRATE)) {
+    affect_apply(ch, SPELL_DESECRATE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7, -(mob_level / 2), APPLY_AC, 0, 0);
+    affect_apply(ch, SPELL_DESECRATE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 7, mob_level, APPLY_HP_REGEN, 0, 0);
   }
 
   act("You perform vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_CHAR);
   act("$n performs vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_ROOM);
+
+  if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10))) {
+    send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
+
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
 
   extract_obj(obj);
 
@@ -1510,35 +1474,35 @@ void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   affect_to_char(victim, &af);
 }
 
-void cast_focus(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  switch (type) {
-    case SPELL_TYPE_SPELL:
-      spell_focus(level, ch, 0, 0);
-      break;
-    default :
-      log_f("Wrong type called in focus!");
-      break;
-  }
-}
-
-void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  AFF af;
-
-  if (!affected_by_spell(ch, SPELL_FOCUS)) {
-    send_to_char("You focus your thoughts.\n\r", ch);
-
-    af.type       = SPELL_FOCUS;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 5;
-    else
-      af.duration = 10;
-    af.modifier   = 0;
-    af.location   = APPLY_NONE;
-    af.bitvector  = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-    affect_to_char(ch, &af);
-  }
-}
+//void cast_focus(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+//  switch (type) {
+//    case SPELL_TYPE_SPELL:
+//      spell_focus(level, ch, 0, 0);
+//      break;
+//    default :
+//      log_f("Wrong type called in focus!");
+//      break;
+//  }
+//}
+//
+//void spell_focus(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+//  AFF af;
+//
+//  if (!affected_by_spell(ch, SPELL_FOCUS)) {
+//    send_to_char("You focus your thoughts.\n\r", ch);
+//
+//    af.type       = SPELL_FOCUS;
+//    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
+//      af.duration = 5;
+//    else
+//      af.duration = 10;
+//    af.modifier   = 0;
+//    af.location   = APPLY_NONE;
+//    af.bitvector  = AFF_NONE;
+//    af.bitvector2 = AFF_NONE;
+//    affect_to_char(ch, &af);
+//  }
+//}
 
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
@@ -1667,6 +1631,11 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   update_pos(victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
 }
 
 void cast_devastation( ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -1700,54 +1669,38 @@ void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   damage(ch, victim, number(1000, 1200), SPELL_DEVASTATION, DAM_MAGICAL);
 }
 
-void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      if (victim)
-        spell_incendiary_cloud(level, ch, victim, 0);
-      break;
-    default:
-      log_f("Wrong type called in incendiary cloud!");
-      break;
+void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    if (victim) {
+      spell_incendiary_cloud(level, ch, victim, 0);
+    }
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_incendiary_cloud()");
   }
 }
 
-void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_INCENDIARY_CLOUD))
-  {
-    af.type       = SPELL_INCENDIARY_CLOUD;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-      af.duration = 2;
-    else
-      af.duration = 8;
-    af.modifier   = 0;
-    af.location   = 0;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  if (!affected_by_spell(victim, SPELL_INCENDIARY_CLOUD_NEW)) {
+    affect_apply(victim, SPELL_INCENDIARY_CLOUD_NEW, 6, 0, 0, 0, 0);
   }
 
   act("You make a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_CHAR);
   act("$n makes a gesture and a huge ball of flame envelopes you.", FALSE, ch, 0, victim, TO_VICT);
   act("$n makes a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-  damage(ch, victim, 600, TYPE_UNDEFINED, DAM_NO_BLOCK);
+
+  damage(ch, victim, 700, SPELL_INCENDIARY_CLOUD_NEW, DAM_MAGICAL);
 }
 
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -2000,6 +1953,8 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (GET_MANA(ch) < extra_mana_cost) {
     send_to_char("You can't summon enough energy to manifest another shadow.\n\r", ch);
+
+    GET_MANA(ch) += spell_info[SPELL_SHADOW_WRAITH].min_usesmana; /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
     return;
   }
 
@@ -2089,4 +2044,53 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       }
     }
   }
+}
+
+void cast_blessing_of_sacrifice(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (type == SPELL_TYPE_SPELL) {
+    spell_blessing_of_sacrifice(level, ch, 0, 0);
+  }
+  else {
+    log_f("Wrong 'type' called in: cast_blessing_of_sacrifice()");
+  }
+}
+
+void spell_blessing_of_sacrifice(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (GET_HIT(ch) <= 100) {
+    send_to_char("You don't have enough lifeforce remaining to cast this spell.\n\r", ch);
+
+    GET_MANA(ch) += spell_info[SPELL_BLESSING_OF_SACRIFICE].min_usesmana; /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
+    return;
+  }
+
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+    send_to_char("The chaotic energies surrounding you distort your spell!\n\r", ch);
+
+    magic_heal(ch, SPELL_BLESSING_OF_SACRIFICE, 333, FALSE);
+    return;
+  }
+
+  for (CHAR *victim = world[CHAR_REAL_ROOM(ch)].people, *tmp_ch = NULL; victim; victim = tmp_ch) {
+    tmp_ch = victim->next_in_room;
+
+    if ((victim == ch) || !IS_MORTAL(victim)) continue;
+
+    if (affected_by_spell(victim, SPELL_DEGENERATE) &&
+        (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
+      send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
+      continue;
+    }
+
+    act("$n's lifeforce flows into you, healing your wounds.", FALSE, ch, 0, victim, TO_VICT);
+
+    magic_heal(victim, SPELL_BLESSING_OF_SACRIFICE, 333, FALSE);
+    spell_bless(level, ch, victim, 0);
+  }
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
+
+  if (!IS_IMMORTAL(ch)) GET_HIT(ch) -= 100;
 }
