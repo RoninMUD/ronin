@@ -1525,7 +1525,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (18) Mana Transfer                 (18) Sphere
     (18) Vampiric Touch                (18) Clairvoyance
     (19) Iceball                       (19) Dispel Magic
-    (20) Spirit Levy                   (20) Total Recall
+    (20) Spirit Levy
     (21) Hold Person                   (21) Convergence
     (21) Enchant Armour
     (22) Animate Dead
@@ -4298,7 +4298,7 @@ See Also: -
 
 Usage       : cast 'total recall'
 Accumulative: -
-Level       : Level 13 bard, 18 cleric, 20 mage.
+Level       : Level 13 bard, 18 cleric.
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Set in the future on the planet Mars, a man has his memory altered in order to
