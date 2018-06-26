@@ -2248,7 +2248,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     case POSITION_DEAD:
       /* Disembowel */
       if (attack_type == SKILL_DISEMBOWEL) {
-        act("Guts spatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
+        act("Guts splatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
       }
 
       /* Handle MSG_DEAD in case it was intercepted. */
