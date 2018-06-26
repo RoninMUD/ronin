@@ -1916,7 +1916,7 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  int check = number(1, 151) - GET_DEX_APP(ch);
+  int check = number(1, 131) - GET_DEX_APP(ch);
 
   if (IS_IMMUNE(victim, IMMUNE_DISEMBOWEL) || (check > GET_LEARNED(ch, SKILL_DISEMBOWEL))) {
     act("$N completely avoids your attempt to spill $S guts.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1945,7 +1945,7 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     }
   }
 
-  skill_wait(ch, SKILL_DISEMBOWEL, 0);
+  skill_wait(ch, SKILL_DISEMBOWEL, 3);
 }
 
 
