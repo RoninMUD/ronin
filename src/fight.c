@@ -4116,7 +4116,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
 void snipe_action(CHAR *ch, CHAR *victim) {
   if (!ch || !victim) return;
 
-  int dmg = GET_LEVEL(ch) * 30;
+  int dmg = GET_LEVEL(ch) * number(25, 30);
 
   if (((GET_HIT(victim) <= (GET_MAX_HIT(victim) * 0.2)) || (GET_HIT(victim) <= dmg)) && chance(20)) {
     act("You take advantage of $N's weakness and snipe $M with a deadly attack!", FALSE, ch, 0, victim, TO_CHAR);
