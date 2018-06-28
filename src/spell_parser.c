@@ -1968,7 +1968,7 @@ void assign_spell_pointers(void)
   SPELLO(252, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blade_barrier);
   SPELLO(251, 30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_IGNORE,                                                                   cast_passdoor);
   SPELLO(250, 30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_distortion);
-  SPELLO(249, 30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_ironskin);
+  SPELLO(249, 30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM,                                                                cast_ironskin);
   SPELLO(248, 30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_frostbolt);
   SPELLO(246, 30, POSITION_STANDING, 30, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_orb_protection);
   SPELLO(244, 30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_sanctify);
