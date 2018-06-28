@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -397,9 +397,11 @@ $n quietly dons $s robes of office.~
 You hastily remove your robes.~
 $n hastily removes $s robes.~
 A
-19 2
+19 5
 A
-53 9
+18 5
+A
+53 15
 #29614
 armband twisted wolfram soot~
 A Twisted Wolfram Armband~
@@ -1667,5 +1669,28 @@ A
 18 2
 B
 32
+#29671
+reinforced mithril cleats cleat soot~
+Reinforced Mithril Cleats~
+A polished set of metal boots glint dully from the floor.~
+~
+9 134217728 524353
+12 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+You strap the cleats to your foot.~
+$n straps a pair of mithril cleats to $s feet.~
+You kick aside your glinting footwear.~
+$n carelessly kicks aside $s glinting footwear.~
+A
+19 5
+A
+18 5
+A
+53 15
 #0
 $~

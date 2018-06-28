@@ -2164,7 +2164,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           sprintf(buf, "      Spell/Skill : '%s'\n\r", spells[tmp_af->type - 1]);
           send_to_char(buf, ch);
 
-          if (tmp_af->type == SKILL_MANTRA || tmp_af->type == SPELL_WITHER ) {
+          if (tmp_af->type == SKILL_MANTRA || tmp_af->type == SPELL_WITHER || tmp_af->type == SPELL_INCENDIARY_CLOUD_NEW) {
             sprintf(buf, "            Expires in %3d seconds (approx.)\n\r", tmp_af->duration * 10);
           }
           else {

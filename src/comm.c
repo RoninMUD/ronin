@@ -3049,6 +3049,34 @@ void pulse_wither(CHAR *ch) {
   }
 }
 
+void pulse_incendiary_cloud_new(CHAR *ch) {
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+
+  for (AFF *tmp_af = ch->affected, *next_af = NULL; tmp_af; tmp_af = next_af) {
+    next_af = tmp_af->next;
+
+    if (tmp_af->type == SPELL_INCENDIARY_CLOUD_NEW) {
+      act("The cloud of fire enveloping you burns you to the core...", FALSE, ch, 0, 0, TO_CHAR);
+      act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
+
+      damage(ch, ch, 100, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+      tmp_af->duration--;
+
+      if (tmp_af->duration <= 0) {
+        if (*spell_wear_off_msg[tmp_af->type]) {
+          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
+        }
+
+        affect_remove(ch, tmp_af);
+      }
+    }
+
+    /* Break out of the loop, as we should only process one Wither effect. */
+    break;
+  }
+}
+
 int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 {
   /*
@@ -3100,6 +3128,9 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
     /* Wither */
     pulse_wither(ch);
+
+    /* Incendiary Cloud (New) */
+    pulse_incendiary_cloud_new(ch);
   }
 
   if (IS_MORTAL(ch))

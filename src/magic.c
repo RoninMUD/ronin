@@ -1538,6 +1538,11 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   send_to_char("A warm feeling fills your body.\n\r", victim);
 
   update_pos(victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
 }
 
 void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
@@ -1572,6 +1577,11 @@ void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   send_to_char("A healing power flows into your body.\n\r", victim);
 
   update_pos(victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
 }
 
 void spell_hold(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
@@ -2549,6 +2559,12 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   send_to_char("You absorb life energy from the dead.\n\r", ch);
   act("$n absorbs life energy from the dead.", TRUE, ch, 0, 0, TO_ROOM);
+
+  if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10))) {
+    send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
+
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
 
   extract_obj(obj);
 

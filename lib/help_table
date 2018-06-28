@@ -7,6 +7,9 @@ creature that dies, up to a limit of ten blood levels.  The level of blood
 in a room is indicated by a message located at the bottom of the room's
 description.
 
+Some spells and skills can also increase the blood level of a room, under
+certain conditions.
+
 The blood level of a room recedes by one level per tick as the traces of
 violence begin to fade away into macabre memory.
 
@@ -1294,6 +1297,11 @@ MANA MAGIC
 Mana represents the ability of a character to manipulate the magical forces in
 the world.  Mana also represents power.  The more mana your character has the
 more powerful your spellcaster is.
+
+High level characters have a chance for their spells to cost less than normal
+mana.  This increase has a higher chance and becomes larger for every level
+beyond 40 that the caster obtains, with the maximum chance and reduced cost
+applied at level 50.
 #
 HP HPS HITS HIT HITPOINTS
 
@@ -1523,8 +1531,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (22) Animate Dead
     (23) Death Spray
     (24) Lethal Fire
-    (25) Improved Invisibility
-         Remove Improved Invisibility
+    (25) Improved Invisibility         (25) Remove Improved Invisibility
     (26) Electric Shock                (26) Power Word Kill
     (27) Clone                         (27) Disintegrate
     (27) Relocate
@@ -1728,7 +1735,7 @@ You can improve your spells and skills by using the practice command.
 
 Use HELP NINJA SPELLS to see the spells of the ninja class.
 
-Skills: assault, bash, dodge, hide, kick, pummel, sneak, spin, throw
+Skills: assault, bash, dodge, hide, kick, peek, pummel, sneak, spin, throw
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1906,7 +1913,7 @@ See Also: OPEN, CLOSE, LOCK, UNLOCK
 #
 PEEK
 
-Class: Anti-Paladin Nomad Thief Bard
+Class: Anti-Paladin Bard Ninja Nomad Thief
 
 Used to peek into the room next to you.
 
@@ -4291,7 +4298,7 @@ See Also: -
 
 Usage       : cast 'total recall'
 Accumulative: -
-Level       : level 18 cleric.
+Level       : Level 13 bard, 18 cleric.
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Set in the future on the planet Mars, a man has his memory altered in order to
@@ -4518,8 +4525,13 @@ Level       : level 20 mage, 25 anti-paladin.
 Save        : -
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-This spell can absorb the life energy from a corpse.  The hit points
-that are recovered depend on the level of the dead monster.
+This spell can absorb the life energy from a corpse.  The hit points that are
+recovered depend on the level of the dead monster.
+
+When cast upon the corpse of a creature with a level of no less than 10 levels
+below the caster, this spell will increase the blood level of the room by one.
+
+See Also: "BLOOD LEVEL"
 #
 HARM
 
@@ -4780,8 +4792,8 @@ See help for:
        (9) Identify               (9) Fly
       (10) Locate Object
       (11) Cure Critic
-      (12) Fear
-      (13) Locate Character      (13) Blindness
+      (12) Fear                  (13) Blindness
+      (13) Locate Character      (13) Total Recall
       (15) Forget                (15) Satiate
       (17) Sleep                 (17) Colour Spray
       (18) Charm Person
@@ -6730,7 +6742,6 @@ See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 
 Subclass Warlord: Level 2 (Warrior)
 Subclass Ranger: Level 2 (Nomad)
-Subclass Crusader: Level 2 (Paladin)
 
 Usage: protect <target/self>
 
@@ -6747,8 +6758,8 @@ shield equipment slot, increasing it from a normal 2x multiplier to 3x.
 Warlord subclass level 2 grants the warrior the capability of reaching -270
 Armor Class (AC), exceeding the normal limit of -250.
 
-Note: Ranger and Crusader only gain access to the first component of this
-subclass level.
+Note: Ranger and only gains access to the first component of this subclass
+level.
 
 See Also: SUBCLASSES WARLORD RESCUE DEXTERITY AC RANGER CRUSADER
 #
@@ -6959,7 +6970,7 @@ Usage       : cast 'rage' (self only)
 Accumulative: No
 Duration    : 5
 Level       : Level 50 Anti-Paladin
-Mana Cost   : 75
+Mana Cost   : 130
 
 This spell is similar to the Paladin's Fury spell.  It grants the Anti-Paladin a
 damage multiplier on every hit.  However, while Fury gives a 2x multiplier, Rage
@@ -6967,7 +6978,10 @@ gives a multiplier of 1.5x.  Also, unlike Fury, there is only a 50% chance that
 an attack against a creature or player affected by Rage will be automatically
 hit.
 
-See Also: SUBCLASSES INFIDEL FURY
+Rage also automatically applies the effects of the Blood Lust spell when
+successfully by Anti-Paladin characters.
+
+See Also: SUBCLASSES INFIDEL FURY "BLOOD LUST"
 #
 DEFILER
 
@@ -6980,8 +6994,8 @@ Level         Skill/Spell
   1           DESECRATE
   2           BLACKMANTLE
   3           FEINT
-  4           BATHED IN BLOOD
-  5           SHADOWSTEP
+  4           SHADOWSTEP
+  5           BATHED IN BLOOD
 
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
 #
@@ -7011,7 +7025,11 @@ hit points per cast.  This effect is active even when Desecrate is not.
 
 This spell will destroy the corpse and anything within it.
 
+When cast upon the corpse of a creature with a level of no less than 10 levels
+below the caster, this spell will increase the blood level of the room by one.
+
 See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
+          "BLOOD LEVEL"
 #
 BLACKMANTLE
 
@@ -7052,30 +7070,9 @@ This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES DEFILER
 #
-"BATHED IN BLOOD"
-
-Subclass Defiler: Level 4 (Anti-Paladin)
-
-The Defiler's sinister powers surge in the presence of fresh blood, making
-them stronger and granting them supernatural powers.
-
-The Defiler gains a health and mana regeneration bonus of 20% for each level of
-blood in the room.  This bonus has a maximum of 100% additional regeneration.
-
-Additionally, when the Defiler is affected by the Blood Lust spell, its effects
-will trigger 5% more frequently.  For each level of blood in the room above
-zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
-ten.
-
-Finally, the Defiler's Backstab skill has a 10% chance on success to trigger a
-Vampiric Touch cast automatically at the target, with zero mana cost.
-
-See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
-          "VAMPIRIC TOUCH"
-#
 SHADOWSTEP
 
-Subclass Defiler: Level 5 (Anti-Paladin)
+Subclass Defiler: Level 4 (Anti-Paladin)
 
 Usage: shadowstep (toggles on/off)
 
@@ -7089,10 +7086,11 @@ affected by the Blackmantle spell.  A Defiler fighting in a dark room, or during
 the night time will have an increased chance of success, and the skill will
 inflict more damage.  Likewise, a Defiler attacking a victim outside during the
 day, or in a lit room will have a reduced chance of success, and the skill will
-inflict less damage.
+inflict less damage.  Defilers with a non-evil alignment have a slightly lower
+chance of triggering these automatic attacks.
 
-The amount of damage inflicted ranges from 3x a normal hit for the most
-favorable conditions, to 1.5x a normal hit for the least favorable.
+The amount of damage inflicted ranges from 1.0x a normal hit for the least
+favorable conditions, to 2.5x a normal hit for the most favorable.
 
 The success of this skill is based on how well it is practiced, and the
 character's dexterity.
@@ -7100,6 +7098,40 @@ character's dexterity.
 The use of this skill is automatic and can be toggled on or off.
 
 See Also: SUBCLASSES DEFILER BLACKMANTLE
+#
+"BATHED IN BLOOD"
+
+Subclass Defiler: Level 5 (Anti-Paladin)
+
+The Defiler's sinister powers surge in the presence of fresh blood, making
+them stronger and granting them supernatural powers.
+
+The blood level of the room will increase by one under the following conditions:
+
+- When the spells Spirit Levy and Desecrate are cast upon the corpse of a
+creature with a level of no less than 10 levels below the caster; 100% chance.
+- When a victim is bitten by a character affected by Blood Lust; 20% chance.
+- When a Defiler with the Bathed in Blood subclass ability uses the Backstab
+skill against an opponent successfully; 20% chance.
+
+The Defiler gains a health and mana regeneration bonus of 20% for each level of
+blood in the room.  This bonus has a maximum of 100% additional regeneration.
+
+Additionally, when the Defiler is affected by the Blood Lust spell, its effects
+will trigger 5% more frequently.  For each level of blood in the room above
+zero, this bonus increases by 1%, up to 15% total at the maximum blood level of
+ten.
+
+Also, the Defiler's Backstab skill has a 10% chance on success to trigger a
+Vampiric Touch cast automatically at the target, with zero mana cost, with a 1%
+chance increase for each blood level in the room, to a maximum of 20% chance.
+
+Finally, the damage inflicted by Shadowstep attacks is increased to a minumum of
+1.5x a normal hit for the least favorable conditions, to 3.0x a normal hit for
+the most favorable.
+
+See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
+          "VAMPIRIC TOUCH" SHADOWSTEP
 #
 INFIDEL
 
@@ -7367,7 +7399,6 @@ See Also: SUBCLASSES ARCHMAGE TEMPLAR
 "FROST BOLT"
 
 Subclass Archmage: Level 3 (Mage)
-Subclass Legionnaire: Level 4 (Commando)
 
 Usage       : cast 'frost bolt' <victim>
 Accumulative: no
@@ -7376,11 +7407,10 @@ Save        : -
 Mana Cost   : 50
 Damage      : 350
 
-This spell is shared by both the Archmage and the Legionnaire. It is similar to
-iceball, but the damage it produces is over double without the doubling of mana
-cost.
+This spell is similar to iceball, but the damage to casting cost ratio is much
+higher, making it a very mana-efficient attack spell.
 
-See Also: SUBCLASSES ARCHMAGE LEGIONNAIRE
+See Also: SUBCLASSES ARCHMAGE
 #
 ENGAGE
 
@@ -7763,7 +7793,7 @@ Level         Skill/Spell
   2           CLOUD OF CONFUSION
   3           RIPOSTE
   4           TREMOR
-  5           DEVASTATION
+  5           INCENDIARY CLOUD
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7778,8 +7808,8 @@ Level         Skill/Spell
   1           LUNGE
   2           RIMEFANG
   3           CLOBBER
-  4           FROST BOLT
-  5           INCENDIARY CLOUD
+  4           SNIPE
+  5           DEVASTATION
 
 See Also: SUBCLASSES MERCENARY COMMANDO
 #
@@ -7787,7 +7817,7 @@ LUNGE
 
 Subclass Legionnaire: Level 1 (Commando)
 
-usage: lunge <target>
+Usage: lunge <target>
 
 With this skill, the Legionnaire can lunge at their target to start
 or join a fight, dealing 25% more damage than an Assault.  The user
@@ -7798,28 +7828,6 @@ The success of this skill is based on how well it is practiced, and
 the character's Dexterity.
 
 Note: A weapon is required.
-
-See Also: SUBCLASSES LEGIONNAIRE
-#
-CLOBBER
-
-Subclass Legionnaire: Level 3 (Commando)
-
-usage: clobber <target>
-
-The Legionnaire will attempt to strike an opponent with a devastating
-blow.  The damage dealt by this skill is equal to one to four times
-the user's level.  Additionally, this skill will stun, incapacitate,
-or even mortally wound a target, making the next attack made against
-the target much more effective.  The user will experience two rounds
-of lag after use.
-
-The success of this skill is based on how well it is practiced, and
-the character's Dexterity.
-
-Note: The 'stun' effect of this skill will not bring the opponent down
-below 0 hit points if it knocks them to mortally wounded, it will
-merely put them in the mortally wounded position.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7842,23 +7850,59 @@ During the winter, Rimefang will deal an additional 50 to 100 damage.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-"INCENDIARY CLOUD"
+CLOBBER
+
+Subclass Legionnaire: Level 3 (Commando)
+
+Usage: clobber <target>
+
+The Legionnaire will attempt to strike an opponent with a devastating blow.  The
+damage dealt by this skill is equal to one to four times the user's level.
+
+Additionally, this skill will stun, incapacitate, or even mortally wound a
+target, making the next attack made against the target much more effective.  The
+user will experience two rounds of lag after use.
+
+Clobber pierces through the powerful shielding granted by Invulnerability.
+
+The success of this skill is based on how well it is practiced, and the
+character's Dexterity modifier.
+
+Note: The 'stun' effect of this skill will not bring the opponent down below 0
+hit points if it knocks them to mortally wounded, it will merely put them in the
+mortally wounded position, making them temporarily rather defenseless.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
+SNIPE
+
+Subclass Legionnaire: Level 4 (Commando)
+
+Usage: snipe (toggles on/off)
+
+The Legionnaire has honed their combat skills to near perfection.  When engaged
+in combat with an enemy that is in a weakened state (near death), the commando
+will automatically attempt to snipe their opponent with a deadly attack.  This
+attack inflicts 20 to 30 times the commando's class level, for a minimum of 1000
+damage, and a maximum of 1500 damage at level 50.  This attack is automatic and
+is attempted approximately every 10 seconds and has a fixed success rate of 20%.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
+DEVASTATION
 
 Subclass Legionnaire: Level 5 (Commando)
 
-Usage       : cast 'incendiary cloud' <target>
-Accumulative: no
-Duration    : 8
+Usage       : cast 'devastation' <victim>
+Accumulative: No
+Duration    : -
 Save        : -
 Mana Cost   : 200
-Damage      : 600 + 100 damage per tick for duration
+Damage      : 1000 to 1200
 
-This spell has two purposes.  One is to deal a high amount of damage
-in a single cast.  The other is to leave an effect that will deal
-decent damage every tick. This is accomplished with a modest 600
-damage initial attack and another 100 damage a tick for 8 ticks.  This
-spell is an effective way to prevent a creature from regenerating when
-you are trying to kill it over multiple runs.
+This powerful spell causes a bit more damage than the Mage's Thunderball spell.
+
+The Legionnaire can expect to deal 1000 to 1200 damage to their victim.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7866,14 +7910,15 @@ See Also: SUBCLASSES LEGIONNAIRE
 
 Subclass Mercenary: Level 1 (Commando)
 
-Usage       : cast 'iron skin' (self only)
-Accumulative: no
+Usage       : cast 'iron skin' <target>
+Accumulative: No
 Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This defensive spell will lower the Mercenary's armor by 25, making
-them harder to hit.
+When self-cast upon the Mercenary, this defensive spell will modify their AC by
+-25, making them harder to hit.  If cast upon a different target, the spell is
+less effective, granting only -10 AC instead.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7882,15 +7927,15 @@ See Also: SUBCLASSES MERCENARY
 Subclass Mercenary: Level 2 (Commando)
 
 Usage       : cast 'cloud of confusion'
-Accumulative: no
+Accumulative: No
 Duration    : 1d5 + 1
 Save        : -
 Mana Cost   : 100
 
-This spell affects everyone in the room not grouped with the
-Mercenary.  All victims will have their hitroll reduced by 5 to 8.
+This spell affects everyone in the room not grouped with the Mercenary.  All
+victims will have their Hitroll reduced by 5 to 8.
 
-This spell will be more effective if cast at night.
+This spell will be more effective when cast at night.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7898,13 +7943,13 @@ RIPOSTE
 
 Subclass Mercenary: Level 3 (Commando)
 
-With this skill, the Mercenary has a chance to partially deflect
-incoming attacks made against them.  The damage deflected is equal to
-20%.  Additionally, the Mercenary will strike back back at their
-opponent, performing an attack with a chance of a Dual or Triple hit.
+With this skill, the Mercenary has a chance to partially deflect incoming
+attacks made against them; the damage deflected is equal to 20% of the deflected
+attack.  Additionally, the Mercenary will strike back at their opponent,
+performing an attack with a normal chance of a Dual or Triple hit.
 
-The success of this skill is dependent on how well it is practiced,
-and the character's Dexterity.
+The success of this skill is dependent on how well it is practiced, and the
+character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7913,7 +7958,7 @@ TREMOR
 Subclass Mercenary: Level 4 (Commando)
 
 Usage       : cast 'tremor'
-Accumulative: no
+Accumulative: No
 Duration    : -
 Save        : -
 Mana Cost   : 150
@@ -7924,20 +7969,20 @@ knocking them into a stunned state.
 
 See Also: SUBCLASSES MERCENARY
 #
-DEVASTATION
+"INCENDIARY CLOUD"
 
 Subclass Mercenary: Level 5 (Commando)
 
-Usage       : cast 'devastation' <victim>
+Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
-Duration    : -
+Duration    : Instantaneous / ~ 60 seconds (DoT)
 Save        : -
-Mana Cost   : 200
-Damage      : 1000 to 1200
+Mana Cost   : 150
+Damage      : 700 + 100 damage per 10 seconds for 60 seconds
 
-This powerful spell causes a bit more damage than the Mage's
-Thunderball spell.  The Mercenary can expect to deal 1000 to 1200
-damage to their victim.
+This powerful spell will inflict a large amount of up-front damage instantly,
+plus 100 damage per ~ 10 seconds (one pulse), for a duration of ~ 60 total
+seconds (6 total pulses).
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7964,7 +8009,7 @@ on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           RIGHTEOUSNESS
-  2           PROTECT
+  2           BLESSING OF SACRIFICE
   3           FOCUS
   4           ZEAL
   5           POWER OF FAITH
@@ -8048,8 +8093,8 @@ See Also: SUBCLASSES CAVALIER
 Subclass Cavalier: Level 5 (Paladin)
 
 Usage       : cast 'power of devotion' <victim>
-Accumulative: no
-Duration    : level/4
+Accumulative: No
+Duration    : Level / 4
 Save        : -
 Mana Cost   : 100
 
@@ -8066,7 +8111,7 @@ RIGHTEOUSNESS
 Subclass Crusader: Level 1 (Paladin)
 
 Usage       : cast 'righteousness' (self only)
-Accumulative: no
+Accumulative: No
 Duration    : 10
 Save        : -
 Mana Cost   : 30
@@ -8078,20 +8123,40 @@ against evil opponents.
 
 See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
 #
+"BLESSING OF SACRIFICE"
+
+Usage       : cast 'blessing of sacrifice'
+Accumulative: No
+Duration    : Instantaneous
+Save        : -
+Mana Cost   : 100
+
+This potent healing spell allows the Crusader to sacrifice 100 hit points in
+order to heal every other mortal in the room by 333 hit points.
+
+This spell will also grant the effects of the Bless spell to each character that
+is affected.
+
+Note: This spell cannot be cast if the Crusader has less than 100 hit points
+remaining.
+
+See Also: BLESS
+#
 FOCUS
 
 Subclass Crusader: Level 3 (Paladin)
 
-Usage       : cast 'focus' (self only)
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 50
+The Crusader has mastered the ability to concentrate and focus on casting magic.
 
-While affected by this spell, the Crusader is able to focus more clearly on
-spellcasting and get a concentration bonus of 10%.
+This passive ability increases the Crusader's concentration rate by 5%.
 
-See Also: SUBCLASSES CRUSADER
+Additionally, when casting a sufficiently powerful healing spell, the Crusader
+will earn a small amount of positive alignment change.
+
+Finally, the Crusader has an increased chance for all spells to have reduced
+mana cost at sufficiently high caster level.
+
+See Also: SUBCLASSES CRUSADER MANA
 #
 ZEAL
 
@@ -8773,13 +8838,20 @@ Usage      : cast 'blood lust' (self only)
 Level      : level 45 anti-paladin
 Save       : none
 Duration   : 5
-Mana cost  : 75
+Mana cost  : 70
 
-While affected by Blood Lust, the Anti-Paladin hungers for blood, and
-will randomly bite their victims during combat.  Each bite has the
-chance to cause damage, drain hit points, or drain mana.  This drain
-will cause the victim to lose the inflicted amount of points and for
-the caster to gain them.
+While affected by Blood Lust, the Anti-Paladin hungers for blood, and will
+randomly bite their victims during combat.  Each bite has the chance to cause
+damage, drain hit points, or drain mana.  This drain will cause the victim to
+lose the inflicted amount of points and for the caster to gain them.
+
+There is a 20% chance of increasing the blood level of the room by one when a
+victim bitten.
+
+Note: The effects of this spell are automatically applied to Anti-Paladin
+characters when the Rage spell is successfully cast.
+
+See Also: "BLOOD LEVEL" RAGE
 #
 "MYSTIC SWIFTNESS"
 

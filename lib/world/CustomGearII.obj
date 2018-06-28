@@ -8,12 +8,12 @@ A Glittering Crimson and Gold Tattoo of a Dragon lies on the ground.~
 125 57500 3750
 4
 E
-possession~
+icon~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
 E
-icon~
+possession~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
@@ -133,7 +133,7 @@ A strange looking peice of cloth moves around on the ground.~
 19 50000 12000
 10
 E
-scarabs~
+hood~
 The hood is covered with the outlines of ancient beetles.  The outlines appear to have been painted on the cloth with gold.
 ~
 E
@@ -141,7 +141,7 @@ scarab~
 The hood is covered with the outlines of ancient beetles.  The outlines appear to have been painted on the cloth with gold.
 ~
 E
-hood~
+scarabs~
 The hood is covered with the outlines of ancient beetles.  The outlines appear to have been painted on the cloth with gold.
 ~
 X
@@ -472,12 +472,12 @@ A magnificent glowing crown lies here on the ground.~
 10 912872 91000
 9
 E
-translucent~
+helm~
 A spectacular head piece that looks to be made from the clearest of glass,
 it shines with authority and looks as if it can provide good protection.
 ~
 E
-helm~
+translucent~
 A spectacular head piece that looks to be made from the clearest of glass,
 it shines with authority and looks as if it can provide good protection.
 ~
@@ -1336,10 +1336,10 @@ A steaming bowl of pho lies on the ground, a piece of tripe still squirming in i
 20 10000 10000
 10
 E
-claw~
-Black with dried blood, and crunchy with scraps of flesh still hanging, this
-claw is disgusting, and you would drop it...if it were not obviously an item
-of tremendous talismanic power...
+pho~
+Vermicelli rice noodles flood this bowl with Flanks of rare beef,
+and dashes of nuoc mam and hot sauce swirling through it, causing your
+stomach to growl with hunger.
 ~
 E
 bowl~
@@ -1348,10 +1348,10 @@ and dashes of nuoc mam and hot sauce swirling through it, causing your
 stomach to growl with hunger.
 ~
 E
-pho~
-Vermicelli rice noodles flood this bowl with Flanks of rare beef,
-and dashes of nuoc mam and hot sauce swirling through it, causing your
-stomach to growl with hunger.
+claw~
+Black with dried blood, and crunchy with scraps of flesh still hanging, this
+claw is disgusting, and you would drop it...if it were not obviously an item
+of tremendous talismanic power...
 ~
 X
 ~
@@ -1495,17 +1495,17 @@ Here lies the renowned Moogle Suit, looking like a pile of fluff.~
 20 50000 100000
 0
 E
-kupo~
-
-You are not worthy! You die now, kupo!
-
-~
-E
 suit moogle fluff white~
   A brief look would not make you think much of this pile of fluff,
 however this is no ordinary pile of fluff..It is the Legendary Moogle Suit!
 Within are the spectacular grand kupo powers, which are really cool and
 everyone wants to have, but only you possess.
+~
+E
+kupo~
+
+You are not worthy! You die now, kupo!
+
 ~
 X
 ~
@@ -2154,11 +2154,12 @@ B
 #29884
 breastplate silvered bone soot~
 Silvered Bone Breastplate~
-A shining silvered breastplate lites in a heap.~
+A shining silvered breastplate lies in a heap.~
+wh
 ~
 9 134217729 524297
-20 0 0 0
-20 50000 100000
+30 0 0 0
+20 666666 66666
 0
 X
 ~
@@ -2169,11 +2170,13 @@ $n girds $mself for battle in a shining breastplate.~
 You remove your breastplate now that combat has passed.~
 $n removes $s breastplate now that combat has passed.~
 A
-19 3
+19 5
 A
-18 3
+18 5
 A
-53 9
+53 15
+B
+128
 #29885
 vambrace zirconium shadowkiller questwrist~
 A Zirconium Vambrace~
