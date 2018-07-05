@@ -6094,7 +6094,7 @@ const char * const prestige_perk_descriptions[] = {
   "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
   "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
   "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
-  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 26
+  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
   "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
 };
 
