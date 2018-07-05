@@ -2507,11 +2507,11 @@ Switches:
   -t | --title      Display player Title data.
   -f | --flags      Display player Flag data.
 
-Switch Example: who -c -r -f (shows who output with only Class, Rank, and Flags data).
+Switch Example: who -c -r -f (shows output with Class, Rank, and Flags data).
 
 Setting Filters:
 
-who filter [class|subclass|prestige|rank|title|flags] to toggle who filters on/off.
+who filter [class|subclass|prestige|rank|title|flags] to toggle filters on/off.
 
 Filter Example: who filter subclass (toggles Subclass data filter on/off).
 
