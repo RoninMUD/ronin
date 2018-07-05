@@ -661,7 +661,7 @@ void assign_command_pointers ( void )
   COMMANDO("load"     ,CMD_LOAD      ,POSITION_DEAD      ,do_load,LEVEL_DEI);
   COMMANDO("purge"    ,CMD_PURGE     ,POSITION_DEAD      ,do_purge,LEVEL_DEI);
   COMMANDO("shutdown" ,CMD_SHUTDOWN  ,POSITION_DEAD      ,do_shutdown,LEVEL_SUP);
-  COMMANDO("identify" ,CMD_IDENTIFY  ,POSITION_FIGHTING  ,auction_identify, 1); /* Identify in auction - Ranger May 96 */
+  COMMANDO("identify" ,CMD_IDENTIFY  ,POSITION_FIGHTING  ,do_identify, 1);
   COMMANDO("idea"     ,CMD_USEIDEA   ,POSITION_DEAD      ,do_useidea,1);
   COMMANDO("typo"     ,CMD_TYPO      ,POSITION_DEAD      ,do_typo,1);
   COMMANDO("bug"      ,CMD_USEIDEA   ,POSITION_DEAD      ,do_useidea,1);

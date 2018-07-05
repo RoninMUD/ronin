@@ -1166,7 +1166,14 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     snprintf(buf, sizeof(buf), "$N tells you, '%s can be found around %s.'", GET_SHORT(quest_mob), world[real_room(ch->quest_room_v)].name);
     act(buf, 0, ch, 0, mob, TO_CHAR);
 
-    if (chance(2)) {
+    int double_point_chance = 2;
+
+    // Prestige Perk 19
+    if (GET_PRESTIGE_PERK(ch) >= 19) {
+      double_point_chance += 2;
+    }
+
+    if (chance(double_point_chance)) {
       act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);
 
       ch->quest_level *= 2;

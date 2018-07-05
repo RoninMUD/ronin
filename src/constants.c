@@ -2784,28 +2784,28 @@ const char * const commando_skills[] = {
 };
 
 const char * const subclass_name[] = {
-  "ENCHANTER",
-  "ARCHMAGE",
-  "DRUID",
-  "TEMPLAR",
-  "ROGUE",
-  "BANDIT",
-  "WARLORD",
-  "GLADIATOR",
-  "RONIN",
-  "MYSTIC",
-  "RANGER",
-  "TRAPPER",
-  "CAVALIER",
-  "CRUSADER",
-  "DEFILER",
-  "INFIDEL",
+  "Enchanter",
+  "Archmage",
+  "Druid",
+  "Templar",
+  "Rogue",
+  "Bandit",
+  "Warlord",
+  "Gladiator",
+  "Ronin",
+  "Mystic",
+  "Ranger",
+  "Trapper",
+  "Cavalier",
+  "Crusader",
+  "Defiler",
+  "Infidel",
   "", /* Avatar */
   "", /* Avatar */
-  "BLADESINGER",
-  "CHANTER",
-  "LEGIONNAIRE",
-  "MERCENARY",
+  "Bladesinger",
+  "Chanter",
+  "Legionnaire",
+  "Mercenary",
   "\n"
 };
 

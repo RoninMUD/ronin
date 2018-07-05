@@ -181,13 +181,33 @@ int rv2_calc_remort_mult(CHAR *ch) {
     step = 250;
   }
 
-  adjust = MAX(0, GET_NAT_HIT(ch) - min) / step;
+  int prestige_hit = 0;
+
+  if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+    prestige_hit = GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+  }
+  else {
+    prestige_hit = GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
+  }
+
+  adjust = MAX(0, GET_NAT_HIT(ch) - min - prestige_hit) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
-  adjust = MAX(0, GET_NAT_MANA(ch) - min) / step;
+  int prestige_mana = 0;
+
+  if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
+    prestige_mana = GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+  }
+
+  adjust = MAX(0, GET_NAT_MANA(ch) - min - prestige_mana) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
-  return MIN(result, 24);
+  int mult = 24;
+
+  // Prestige Perk 1
+  if (GET_PRESTIGE_PERK(ch) >= 1) mult += 1;
+
+  return MIN(result, mult);
 }
 
 /* Give the player remort experience (if they deserve it), and return how much experience was given. */
@@ -448,7 +468,7 @@ long long int rv2_meta_sim(CHAR *ch)
 
 #endif
 
-  /* Calculate the amont of experience invested in ranks. */
+  /* Calculate the amount of experience invested in ranks. */
   i = 0;
   exp = 0;
   if (get_rank(ch))
@@ -813,6 +833,12 @@ struct rv2_remort_info rv2_appraise(CHAR *ch)
     }
   }
 
+  // Prestige Perk 13
+  if (GET_PRESTIGE_PERK(ch) >= 13) {
+    remort_info.qp_fee *= 0.9;
+    remort_info.scp_fee *= 0.9;
+  }
+
   return remort_info;
 }
 
@@ -905,7 +931,7 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
     }
     else if (IS_IMMORTAL(ch))
     {
-      send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
+      send_to_char("Consult with a SUP+ about remorting as an immortal.\n\r", ch);
 
       return TRUE;
     }
@@ -1262,6 +1288,17 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
       ch->points.max_mana = 0;
       ch->points.max_move = 0;
 
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        ch->points.max_hit += GET_PRESTIGE(ch) * 12;
+      }
+      else {
+        ch->points.max_hit += GET_PRESTIGE(ch) * 8;
+      }
+
+      if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
+        ch->points.max_mana += GET_PRESTIGE(ch) * 4;
+      }
+
       ch->specials.spells_to_learn = 0;
 
       advance_level(ch);
@@ -1356,6 +1393,8 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
       {
         rv2_add_enchant(ch);
       }
+
+      affect_total(ch);
 
       save_char(ch, NOWHERE);
 

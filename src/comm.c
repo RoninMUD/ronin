@@ -1986,81 +1986,68 @@ void comatose(int s)
 
 /* Only types so far are 0 - no type and 1 - combat.  For snoop brief
    Ranger Jan 99 */
-void send_to_char_by_type(char *messg, struct char_data *ch, int type)
-{
+void send_to_char_by_type(char *messg, struct char_data *ch, int type) {
+  if (!ch->desc || !messg) return;
+
 #ifdef TYPECOLOR
-/* color stuff --------------------------------------------*/
-  char *strp,*point,*i;
-  char buf[4*MSL];
-  int col,a=0;
-  buf[0]=0;
-if(ch->desc && messg)
-  {
-  for(strp=messg,point=buf;;)
-      {
-      if(*strp=='`' && ((*(strp+1)=='`')||
-                          (*(strp+1)>='a'&&*(strp+1)<='q') ||
-                          (*(strp+1)>='A'&&*(strp+1)<='Q') ))
-            {/*the check for a color code between a&q and A&Q should fix much r. schultz
-                   apr 21, 1996 */
-            col=(*(++strp))-96;
-            if(col==0)
-                  {
-                  *point='`';
-                  ++point;
-                  ++strp;
-                  }
-            else if(ch->colors[0]==1&&col>0&&col<18)
-                  {
-                  a=1;
-                  if(col==17)
-                        {
-                        col=ch->colors[1];
-                        if(!col) col=8;
-                        }
-                  i = Color2[col-1];
-                  while ((*point = *(i++)))
-                        ++point;
-                  i = BKColor2[ch->colors[13]];
-                  while ((*point = *(i++)))
-                        ++point;
-                  ++strp;
-                  }
-            else      {
-                  ++strp;
-                  }
-            }
-      else if (!(*(point++) = *(strp++)))
-                  break;
+  char *strp, *point, *i;
+  char buf[4 * MSL];
+  int col, a = 0;
+  buf[0] = 0;
+
+  for (strp = messg, point = buf;;) {
+    if (*strp == '`' && ((*(strp + 1) == '`') ||
+        (*(strp + 1) >= 'a' && *(strp + 1) <= 'q') ||
+        (*(strp + 1) >= 'A' && *(strp + 1) <= 'Q'))) {
+      col = (*(++strp)) - 96;
+      if (col == 0) {
+        *point = '`';
+        ++point;
+        ++strp;
       }
-   *(--point)='\0';
+      else if (ch->colors[0] == 1 && col > 0 && col < 18) {
+        a = 1;
+        if (col == 17) {
+          col = ch->colors[1];
+          if (!col) col = 8;
+        }
+        i = Color2[col - 1];
+        while ((*point = *(i++)))
+          ++point;
+        i = BKColor2[ch->colors[13]];
+        while ((*point = *(i++)))
+          ++point;
+        ++strp;
+      }
+      else
+        ++strp;
+    }
+    else if (!(*(point++) = *(strp++)))
+      break;
+  }
+  *(--point) = '\0';
 
-    write_to_q(buf,&ch->desc->output);
-    if(a&&ch->colors[0]&&ch->colors[1]) {
-      write_to_q(Color2[ch->colors[1]-1],&ch->desc->output);
-      write_to_q(BKColor2[ch->colors[13]],&ch->desc->output);
-    }
-    /* snooping with type - Ranger Jan 99 */
-    if(ch->desc->snoop.snoop_by) {
-      if(!IS_SET(ch->desc->snoop.snoop_by->new.imm_flags, WIZ_SNOOP_BRIEF) || type==0)
-        printf_to_char(ch->desc->snoop.snoop_by,"%% %s",buf);
-      if(a&&ch->desc->snoop.snoop_by->colors[0]&&ch->desc->snoop.snoop_by->colors[1])
-        printf_to_char(ch->desc->snoop.snoop_by,"%s%s",
-                       Color2[ch->desc->snoop.snoop_by->colors[1]-1],
-                       BKColor2[ch->desc->snoop.snoop_by->colors[13]]);
-    }
+  write_to_q(buf, &ch->desc->output);
+
+  if (a && ch->colors[0] && ch->colors[1]) {
+    write_to_q(Color2[ch->colors[1] - 1], &ch->desc->output);
+    write_to_q(BKColor2[ch->colors[13]], &ch->desc->output);
   }
 
-/* end----------------------d*/
+  if (ch->desc->snoop.snoop_by) {
+    if (!IS_SET(ch->desc->snoop.snoop_by->new.imm_flags, WIZ_SNOOP_BRIEF) || type == 0)
+      printf_to_char(ch->desc->snoop.snoop_by, "%% %s", buf);
+    if (a && ch->desc->snoop.snoop_by->colors[0] && ch->desc->snoop.snoop_by->colors[1])
+      printf_to_char(ch->desc->snoop.snoop_by, "%s%s",
+        Color2[ch->desc->snoop.snoop_by->colors[1] - 1],
+        BKColor2[ch->desc->snoop.snoop_by->colors[13]]);
+  }
 #else
-  if(ch->desc && messg) {
-    write_to_q(messg,&ch->desc->output);
+  write_to_q(messg, &ch->desc->output);
 
-    if(ch->desc->snoop.snoop_by) {
-      if(!IS_SET(ch->new.imm_flags, WIZ_SNOOP_BRIEF) || type==0)
-        printf_to_char(ch->desc->snoop.snoop_by,"%% %s",messg);
-    }
-  }
+  if (ch->desc->snoop.snoop_by)
+    if (!IS_SET(ch->new.imm_flags, WIZ_SNOOP_BRIEF) || type == 0)
+      printf_to_char(ch->desc->snoop.snoop_by, "%% %s", messg);
 #endif
 }
 
@@ -2068,11 +2055,12 @@ void send_to_char(char *messg, struct char_data *ch) {
   send_to_char_by_type(messg, ch, 0);
 }
 
-void printf_to_char(CHAR *ch, char *fmt, ...) {
+void printf_to_char(struct char_data *ch, char *messg, ...) {
   char buf[MSL];
+
   va_list args;
-  va_start(args, fmt);
-  vsnprintf(buf, MSL, fmt, args);
+  va_start(args, messg);
+  vsnprintf(buf, sizeof(buf), messg, args);
   va_end(args);
 
   send_to_char(buf, ch);

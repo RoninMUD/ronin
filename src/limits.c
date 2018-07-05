@@ -439,6 +439,11 @@ int mana_gain(CHAR *ch) {
     gain += 10;
   }
 
+  // Prestige Perk 8
+  if (GET_PRESTIGE_PERK(ch) >= 8) {
+    gain *= 1.05;
+  }
+
   return gain;
 }
 
@@ -663,6 +668,11 @@ int hit_gain(CHAR *ch) {
     }
   }
 
+  // Prestige Perk 8
+  if (GET_PRESTIGE_PERK(ch) >= 8) {
+    gain *= 1.05;
+  }
+
   return gain;
 }
 
@@ -741,6 +751,11 @@ int move_gain(CHAR *ch) {
 
   if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC) {
     gain = GET_CON(ch) - 20;
+  }
+
+  // Prestige Perk 8
+  if (GET_PRESTIGE_PERK(ch) >= 8) {
+    gain *= 1.05;
   }
 
   return gain;
@@ -1174,6 +1189,11 @@ void point_update(void)
             break;
         }
 
+        // Prestige Perk 24
+        if (GET_PRESTIGE_PERK(ch) >= 24) {
+          if (mana_regen_cap) mana_regen_cap += 5;
+        }
+
         mana_regen = MIN(mana_regen, mana_regen_cap - MIN(ch->points.mana_regen_tmp, mana_regen_cap));
         mana_regen = (mana_regen * (100 - ((MAX_RANK - get_rank(ch)) * 5))) / 100;
       }
@@ -1246,12 +1266,13 @@ void point_update(void)
       check_idling(ch);
     }
 
-    if (GET_LEVEL(ch) > LEVEL_MORT ||
-        GET_CLASS(ch) == CLASS_AVATAR)
+    if (IS_IMMORTAL(ch) ||
+        GET_CLASS(ch) == CLASS_AVATAR ||
+        GET_PRESTIGE_PERK(ch) >= 26) // Prestige Perk 26
     {
       GET_COND(ch, FULL) = -1;
       GET_COND(ch, THIRST) = -1;
-      GET_COND(ch, DRUNK) = -1;
+      if (IS_IMMORTAL(ch)) GET_COND(ch, DRUNK) = -1;
     }
     else
     {
@@ -1260,7 +1281,7 @@ void point_update(void)
       gain_condition(ch, THIRST, -1);
     }
 
-    gain_condition(ch, QUAFF, -1);
+    gain_condition(ch, QUAFF, (GET_PRESTIGE_PERK(ch) >= 26) ? -2 : -1); // Prestige Perk 26
 
     if (IS_NPC(ch) &&
         IS_AFFECTED(ch, AFF_ANIMATE) &&

@@ -69,6 +69,8 @@
 #define SCQ_WIZINV         55
 #define SCQ_EDITING_ZONE   56
 #define SCQ_REMORT_MULT    57
+#define SCQ_PRESTIGE_LEVEL 58
+#define SCQ_PRESTIGE       59
 
 void score_query(CHAR *ch, int query, bool opt_text, bool new_line);
 void do_score(CHAR *ch, char *argument, int cmd);

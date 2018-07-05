@@ -135,7 +135,14 @@ void shopping_buy( char *arg, CHAR *ch, CHAR *keeper, int shop_nr) {
     return;
   }
 
-  if(GET_GOLD(ch) < (int)(temp1->obj_flags.cost*shop_index[shop_nr].profit_buy*number) &&
+  int cost = (int)(OBJ_COST(temp1) * shop_index[shop_nr].profit_buy * number);
+
+  // Prestige Perk 16
+  if (GET_PRESTIGE_PERK(ch) >= 16) {
+    cost *= 0.95;
+  }
+
+  if(GET_GOLD(ch) < cost &&
      GET_LEVEL(ch)<LEVEL_IMM) {
     sprintf(buf, shop_index[shop_nr].missing_cash2, GET_NAME(ch));
     do_tell(keeper,buf,19);
@@ -177,7 +184,6 @@ void shopping_buy( char *arg, CHAR *ch, CHAR *keeper, int shop_nr) {
     return;
   }
 
-
   if(number>1)
     sprintf(buf,"$n buys %d*$p.",number);
   else
@@ -185,7 +191,7 @@ void shopping_buy( char *arg, CHAR *ch, CHAR *keeper, int shop_nr) {
   act(buf, FALSE, ch, temp1, 0, TO_ROOM);
 
   sprintf(buf, shop_index[shop_nr].message_buy, GET_NAME(ch),
-    (int)(temp1->obj_flags.cost*shop_index[shop_nr].profit_buy*number));
+    cost);
   do_tell(keeper,buf,19);
 
   if(number>1)
@@ -195,10 +201,9 @@ void shopping_buy( char *arg, CHAR *ch, CHAR *keeper, int shop_nr) {
   send_to_char(buf,ch);
 
   if(GET_LEVEL(ch)<LEVEL_IMM)
-    GET_GOLD(ch) -= (int)(temp1->obj_flags.cost*shop_index[shop_nr].profit_buy*number);
+    GET_GOLD(ch) -= cost;
 
-  GET_GOLD(keeper) += (int)(temp1->obj_flags.cost*
-          shop_index[shop_nr].profit_buy*number);
+  GET_GOLD(keeper) += cost;
 
   /* Test if producing shop ! */
   if(shop_producing(temp1,shop_nr)) {
@@ -344,43 +349,42 @@ void shopping_value( char *arg, CHAR *ch,
   return;
 }
 
-void shopping_list( char *arg, CHAR *ch,
-       CHAR *keeper, int shop_nr)
-{
-  char buf[MAX_STRING_LENGTH], buf2[100],buf3[100];
-  struct obj_data *temp1;
-  int found_obj;
+void shopping_list(char *arg, CHAR *ch, CHAR *keeper, int shop_nr) {
+  char buf[MSL];
+  int count = 0;
 
-  if(!(is_ok(keeper,ch,shop_nr)))
-    return;
+  if (!is_ok(keeper, ch, shop_nr)) return;
 
-  strcpy(buf,"You can buy:\n\r");
-  found_obj = FALSE;
-  if(keeper->carrying)
-    for(temp1=keeper->carrying;temp1;temp1 = temp1->next_content) {
-      if(GET_ITEM_TYPE(temp1) == ITEM_CONTAINER && temp1->obj_flags.value[3]) continue;
-      if((CAN_SEE_OBJ(ch,temp1)) && (temp1->obj_flags.cost>0)) {
-        found_obj = TRUE;
-        if(temp1->obj_flags.type_flag != ITEM_DRINKCON)
-          sprintf(buf2,"%s for %d gold coins.\n\r",(OBJ_SHORT(temp1))
-                  ,(int)(temp1->obj_flags.cost*shop_index[shop_nr].profit_buy));
-        else {
-          if (temp1->obj_flags.value[1])
-            sprintf(buf3,"%s of %s",(OBJ_SHORT(temp1)),drinks[temp1->obj_flags.value[2]]);
-          else
-            sprintf(buf3,"%s",(OBJ_SHORT(temp1)));
-          sprintf(buf2,"%s for %d gold coins.\n\r",buf3,
-                 (int)(temp1->obj_flags.cost*shop_index[shop_nr].profit_buy));
-        }
-        strcat(buf,CAP(buf2));
-      };
+  printf_to_char(ch, "You can buy:\n\r");
+
+  if (keeper->carrying) {
+    for (OBJ *tmp_obj = keeper->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+      if (OBJ_TYPE(tmp_obj) == ITEM_CONTAINER && OBJ_VALUE3(tmp_obj)) continue;
+      if (!CAN_SEE_OBJ(ch, tmp_obj) || !OBJ_COST(tmp_obj)) continue;
+
+      count++;
+
+      int cost = (int)(OBJ_COST(tmp_obj) * shop_index[shop_nr].profit_buy);
+
+      // Prestige Perk 16
+      if (GET_PRESTIGE_PERK(ch) >= 16) {
+        cost *= 0.95;
+      }
+
+      if (OBJ_TYPE(tmp_obj) == ITEM_DRINKCON) {
+        snprintf(buf, sizeof(buf), "%s of %s", OBJ_SHORT(tmp_obj), drinks[OBJ_VALUE2(tmp_obj)]);
+      }
+      else {
+        snprintf(buf, sizeof(buf), "%s", OBJ_SHORT(tmp_obj));
+      }
+
+      printf_to_char(ch, "%s for %d gold coins.\n\r", buf, cost);
     }
+  }
 
-  if(!found_obj)
-    strcat(buf,"Nothing!\n\r");
-
-  send_to_char(buf,ch);
-  return;
+  if (!count) {
+    printf_to_char(ch, "Nothing!\n\r");
+  }
 }
 
 void shopping_kill(CHAR *ch, CHAR *keeper) {
