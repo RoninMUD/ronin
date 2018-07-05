@@ -5249,7 +5249,7 @@ void do_setstat(struct char_data *ch, char *argument, int cmd)
 Syntax : setstat <victim> <field> <value> <passwd>\n\r\
 Field can be: alignment, hp, mp, mana, bank, gold, str, add, dex,\n\r\
 con, int, wis, age, xp, sex, free_rent(imp), deathlimit,\n\r\
-subpts, qpts, remort_exp, death_exp and questtime\n\r";
+subpts, qpts, prestige, remort_exp, death_exp and questtime\n\r";
   int value = 0;
   unsigned long ulValue = 0UL;
   long long int big_value = 0;
@@ -5377,6 +5377,10 @@ Usage: -1  : Restore target's Death Experience enchantment (if it's missing).\n\
   }
   if (strcmp(class, "qpts") == 0) {
     vict->ver3.quest_points = value; return;
+  }
+  if (strcmp(class, "prestige") == 0) {
+    send_to_char("Warning: You probably want to adjust hit points/mana up or down commensurate to the adjustment you just made.\n\r", ch);
+    vict->ver3.prestige = value; return;
   }
 
   if(strcmp(class,"xp")==0)

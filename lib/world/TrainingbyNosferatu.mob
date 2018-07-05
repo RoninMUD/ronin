@@ -94,5 +94,41 @@ room with her for a few moments she will heal your wounds.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#3505
+fox red~
+A fox~
+A red fox sneaks around here.
+~
+A playful, red fox is walking around.  These cute, furry
+scavengers are known to wander in town and cause mischief
+for the local shop owners.
+~
+76 557056 0 Y
+5 20 9 43d1+0 1d4+0
+0 950
+8 8 1
+89 0 0d0+0 0
+0 0 0 0
+K
+250 3501 0 0 0 0 0
+#3506
+bobcat bob cat~
+A bobcat~
+A bobcat is on the prowl here.
+~
+This bobcat is slightly larger than a big house cat and
+has a yellowly pelt like that of a lion, except with
+some black splotches.  It's doesn't look extremely
+dangerous, but it's still a feline and can get angry
+and violent when cornered.
+~
+72 0 250 Y
+5 20 8 79d1+0 1d7+0
+0 4400
+8 8 2
+90 0 0d0+0 0
+0 0 0 0
+K
+500 0 0 0 0 0 0
 #0
 $~

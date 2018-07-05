@@ -1478,12 +1478,14 @@ You see the alley.
 S
 #3049
 A muddy riverbank~
-   Grass shoots and small plants struggle to fight their way out of the muddy 
-bank. Small rivulets of water tumble and meander their way down the saturated 
-ground towards the slow moving river. The prints of numerous types of wildlife 
-dot the soft ground, water trickling in to each depression. A small stair, cut 
-from the side of the hill and lined with rock, leads from the alley above down 
-to a rickety wooden dock reaching out into the slow moving current. 
+   Grass shoots and small plants struggle to fight their way out of the muddy
+bank. Small rivulets of water tumble and meander their way down the saturated
+ground towards the slow moving river. The prints of numerous types of wildlife
+dot the soft ground, water trickling in to each depression. A small stair, cut
+from the side of the hill and lined with rock, leads from the alley above down
+to a rickety wooden dock reaching out into the slow moving current.  Strangely,
+a series of red-carpeted steps also rises from the north bank and leads to a
+shining platform several stories in the air.
 ~
 30 67108864 1
 D0
@@ -1495,6 +1497,11 @@ D2
 You see the river flowing south.~
 ~
 0 -1 16645
+D4
+A posh staircase leads to a platform above you.
+~
+~
+0 -1 3190
 S
 #3050
 Warehouse~
@@ -2714,7 +2721,7 @@ D3
 0 -1 3093
 S
 #3095
-Outside the Southern Gates of Midgaard~
+Entrance to the Training Grounds~
    The towering southern gates to Midgaard rise to the north, its iron-bound
 wooden doors only closed in times of deadly peril and extreme chaos. The city 
 walls stretch off to the distance far to the east and west. A lively brook 

@@ -61,15 +61,17 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       CHCLR(ch, 7), ENDCHCLR(ch),
       ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
-      GET_CLASS_NAME(ch) : "Undefined");
+        GET_CLASS_NAME(ch) : "Undefined");
     break;
   case SCQ_SC_LEVEL:
   case SCQ_SC_NAME:
     if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
     {
-    sprintf(buf, "%sSubclass: [%s%d%s]%s %s",
-        CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
-        CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
+      sprintf(buf, "%sSubclass: [%s%d%s]%s %s",
+        CHCLR(ch, 7), ENDCHCLR(ch),
+        GET_SC_LEVEL(ch),
+        CHCLR(ch, 7), ENDCHCLR(ch),
+        GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
     }
     else
     {
@@ -81,17 +83,23 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
   case SCQ_RANK_NAME:
     if (get_rank(ch))
     {
-      sprintf(buf2, "%s", get_rank_name(ch));
-
       sprintf(buf, "%sRank: [%s%d%s]%s %s",
-        CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
-        CHCLR(ch, 7), ENDCHCLR(ch), string_to_upper(buf2));
+        CHCLR(ch, 7), ENDCHCLR(ch),
+        get_rank(ch),
+        CHCLR(ch, 7), ENDCHCLR(ch),
+        get_rank_name(ch));
     }
     else
     {
       sprintf(buf, "%sRank:%s None",
         CHCLR(ch, 7), ENDCHCLR(ch));
     }
+    break;
+  case SCQ_PRESTIGE:
+    sprintf(buf, "%sPrestige: [%s%d%s]%s",
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      GET_PRESTIGE(ch),
+      CHCLR(ch, 7), ENDCHCLR(ch));
     break;
   case SCQ_MAX_HIT:
     if (opt_text)
@@ -722,6 +730,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "subclass_level") || is_abbrev(arg, "sc_level")) query = SCQ_SC_LEVEL;
       else if (is_abbrev(arg, "rank_name")) query = SCQ_RANK_NAME;
       else if (is_abbrev(arg, "rank_level")) query = SCQ_RANK_LEVEL;
+      else if (is_abbrev(arg, "prestige")) query = SCQ_PRESTIGE;
+      else if (is_abbrev(arg, "prestige_level")) query = SCQ_PRESTIGE_LEVEL;
       else if (is_abbrev(arg, "maximum_hit") || is_abbrev(arg, "max_hit") || is_abbrev(arg, "hit") || is_abbrev(arg, "hp")) query = SCQ_MAX_HIT;
       else if (is_abbrev(arg, "maximum_mana") || is_abbrev(arg, "max_mana") || is_abbrev(arg, "mana")) query = SCQ_MAX_MANA;
       else if (is_abbrev(arg, "maximum_movement") || is_abbrev(arg, "max_movement") || is_abbrev(arg, "movement")) query = SCQ_MAX_MOVE;
@@ -792,25 +802,25 @@ void do_score(CHAR *ch, char *argument, int cmd)
     if (!IS_NPC(ch))
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
-    printf_to_char(ch, "%s\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
+    printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
       ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
-      GET_CLASS_NAME(ch) : "Undefined");
+        GET_CLASS_NAME(ch) : "Undefined");
     if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
-      printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
+      printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
     if (get_rank(ch))
-    {
-      sprintf(buf, "%s", get_rank_name(ch));
-
-      printf_to_char(ch, "%s, Rank: [%s%d%s]%s %s",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
-        CHCLR(ch, 7), ENDCHCLR(ch), string_to_upper(buf));
-    }
-    send_to_char("\n\r\n\r", ch);
+        CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
+    if (!IS_NPC(ch))
+      printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
+        CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
+        CHCLR(ch, 7), ENDCHCLR(ch));
+    send_to_char("\n\r", ch);
 
     printf_to_char(ch, "%sMaximum HP: [%s%5d%s]   Mana: [%s%5d%s]   Move: [%s%5d%s]%s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MAX_HIT(ch),
@@ -1220,6 +1230,10 @@ void do_score(CHAR *ch, char *argument, int cmd)
         GET_SC_LEVEL(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
 
     if (!IS_NPC(ch))
+      printf_to_char(ch, "You have %d prestige.\n\r",
+        GET_PRESTIGE(ch));
+
+    if (!IS_NPC(ch))
     {
       if (IS_SET(GET_PFLAG(ch), PLR_DEPUTY))
         send_to_char("You are a Midgaard Deputy.\n\r", ch);
@@ -1351,26 +1365,28 @@ void do_score(CHAR *ch, char *argument, int cmd)
     if (!IS_NPC(ch))
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
-    printf_to_char(ch, "%s\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel: [%s%d%s]%s %s",
+    printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
       CHCLR(ch, 7), ENDCHCLR(ch),
       ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
-      GET_CLASS_NAME(ch) : "Undefined");
+        GET_CLASS_NAME(ch) : "Undefined");
     if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
-      printf_to_char(ch, "%s, Subclass: [%s%d%s]%s %s",
+      printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
     if (get_rank(ch))
     {
-      sprintf(buf, "%s", get_rank_name(ch));
-
-      printf_to_char(ch, "%s, Rank: [%s%d%s]%s %s",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
-        CHCLR(ch, 7), ENDCHCLR(ch), string_to_upper(buf));
+        CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
     }
-    send_to_char("\n\r\n\r", ch);
+    if (!IS_NPC(ch))
+      printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
+        CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
+        CHCLR(ch, 7), ENDCHCLR(ch));
+    send_to_char("\n\r", ch);
 
     printf_to_char(ch, "%sMaximum HP: [%s%5d%s]  Mana: [%s%5d%s]  Move: [%s%5d%s]%s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_MAX_HIT(ch),

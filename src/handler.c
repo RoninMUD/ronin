@@ -1476,12 +1476,29 @@ void extract_obj(struct obj_data *obj) {
 
 void update_object(struct obj_data *obj, int equipped) {
   if ((obj->obj_flags.timer > 0) && (!(obj->in_obj) || (OBJ_TYPE(obj->in_obj) != ITEM_AQ_ORDER))) {
-    if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY)) {
-      if (equipped) obj->obj_flags.timer -= 2;
-      else obj->obj_flags.timer -= 1;
-    }
-    else if (IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-      if (equipped) obj->obj_flags.timer -= 1;
+    CHAR *ch;
+    bool decay = TRUE;
+
+    if (equipped) ch = obj->equipped_by;
+    else ch = obj->carried_by;
+
+    // Prestige Perk 22
+    if (ch && ((GET_PRESTIGE_PERK(ch) >= 22) && chance(10))) decay = FALSE;
+
+    if (decay) {
+      if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY)) {
+        if (equipped) {
+          obj->obj_flags.timer -= 2;
+        }
+        else {
+          obj->obj_flags.timer -= 1;
+        }
+      }
+      else if (IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
+        if (equipped) {
+          obj->obj_flags.timer -= 1;
+        }
+      }
     }
   }
 

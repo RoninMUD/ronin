@@ -250,6 +250,7 @@ void do_playeravg(CHAR *ch, char *argument, int cmd);
 void do_email(CHAR *ch, char *argument, int cmd);
 void do_idname(CHAR *ch, char *argument, int cmd);
 void do_gf(CHAR *ch, char *argument, int cmd);
+void do_identify(CHAR *ch, char *arg, int cmd);
 
 void do_special_move(struct char_data *ch, char *arg, int cmd);
 

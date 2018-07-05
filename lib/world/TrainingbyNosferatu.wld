@@ -295,16 +295,16 @@ D1
 ~
 0 -1 3554
 E
-tree~
-     This tree is one of very few on this field. It looks proud and
-tall, yet somehow lonely. Some dead leaves surround its base and help
-paint a scene that would inspire any artist.
-~
-E
 wall~
      The wall here is partially crumbling but still quite tall and sturdy.
 You can tell that it is very old and it has been protecting this place for
 quite some time.
+~
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
 ~
 S
 #3556
@@ -399,16 +399,16 @@ D3
 ~
 0 -1 3557
 E
-tree~
-     This tree is one of very few on this field. It looks proud and
-tall, yet somehow lonely. Some dead leaves surround its base and help
-paint a scene that would inspire any artist.
-~
-E
 wall~
      The wall here is partially crumbling but still quite tall and sturdy.
 You can tell that it is very old and it has been protecting this place for
 quite some time.
+~
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
 ~
 S
 #3559
@@ -551,13 +551,49 @@ the occasional noise from an animal, this place is completely silent.
 There is an ancient looking wall made of loose stones which blocks your
 path. It surrounds you from all sides but the path you came from. This
 spot is very lovely, with one of only a few trees the field has to
-offer standing tall and proud. The only exit from here is to the north.
+offer standing tall and proud. The only exit from here is to the north to
+the field, or south to the entrance of southern Midgaard.
 ~
 35 67108864 2
 D0
 ~
 ~
 0 -1 3562
+D2
+~
+~
+0 -1 3564
+E
+wall~
+     The wall here is partially crumbling but still quite tall and sturdy.
+You can tell that it is very old and it has been protecting this place for
+quite some time.
+~
+E
+tree~
+     This tree is one of very few on this field. It looks proud and
+tall, yet somehow lonely. Some dead leaves surround its base and help
+paint a scene that would inspire any artist.
+~
+S
+#3564
+Gates to Southern Midgaard~
+     The gates to southern Midgaard are strong, and sturdy.  They are 
+traditionally left open, to welcome all comers.  This area itself is
+paved, and well kept.  It looks as if it is patrolled and maintained
+fairly regularly.  To the north there is a small field, traditionally
+used by adventureres to hone or test their skills.  To the west are
+the various parks, and large establishments of Southern Midgaard.
+~
+35 67108868 2
+D0
+~
+~
+0 -1 3563
+D3
+~
+~
+0 -1 3124
 E
 tree~
      This tree is one of very few on this field. It looks proud and

@@ -264,9 +264,14 @@ do {                   \
   ((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE)) && !IS_AFFECTED((ch), AFF_BLIND) && IS_LIGHT(CHAR_REAL_ROOM(ch))) \
 )
 
-#define CAN_CARRY_W(ch) (IS_IMMORTAL(ch) ? 10000 : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
+#define CAN_CARRY_W(ch) (\
+  IS_IMMORTAL(ch) ? 10000 : \
+  (ch->ver3.prestige >= 20) ? (int)(str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
 
-#define CAN_CARRY_N(ch) (IS_IMMORTAL(ch) ? 200 : ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)))
+#define CAN_CARRY_N(ch) (\
+  IS_IMMORTAL(ch) ? 200 : \
+  ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : \
+  (ch->ver3.prestige >= 14) ? (int)((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
 
 #define CAN_CARRY_OBJ(ch, obj) ( \
   IS_IMMORTAL(ch) || \
@@ -391,7 +396,10 @@ do {                   \
 #define GET_ROOM_FLAGS(room) (world[room].room_flags)
 #define GET_OBJ_BITS(obj) (obj->obj_flags.bitvector)
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
-#define GET_LAST_DIR(ch) (mob->specials.last_direction)
+#define GET_LAST_DIR(mob) (mob->specials.last_direction)
+#define GET_PRESTIGE(ch) (ch->ver3.prestige)
+#define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? (GET_PRESTIGE(ch) - 5 / 10) : 0)
+#define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
 
 #define FIELD_SIZE(t,f) sizeof(((struct t*)0)->f)
 

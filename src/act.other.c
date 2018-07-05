@@ -1360,7 +1360,7 @@ void do_quaff(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if((GET_COND(ch,QUAFF)>6)||GET_COND(ch,THIRST)>23)
+  if((GET_COND(ch,QUAFF)>5)/*||GET_COND(ch,THIRST)>23*/)
     {
     act("You are too full to drink any more.",FALSE,ch,0,0,TO_CHAR);
     return;
@@ -1379,7 +1379,7 @@ void do_quaff(struct char_data *ch, char *argument, int cmd)
         }
 
   gain_condition(ch,QUAFF,1);
-  gain_condition(ch,THIRST,5);
+  //gain_condition(ch,THIRST,5);
 
   for (i=1; i<4; i++)
     if(temp->obj_flags.value[i] >= 1)
@@ -2123,25 +2123,105 @@ void do_display(struct char_data *ch, char *argument, int cmd) {
 
 } /* do_display */
 
-void do_home(struct char_data *ch, char *argument, int cmd) {
+void do_identify(CHAR *ch, char *arg, int cmd) {
+  char buf[MIL];
 
-  if(!ch) return;
-  if(IS_NPC(ch)) return;
+  if (!ch || IS_NPC(ch)) return;
 
-  if(GET_LEVEL(ch)>9) {
-    send_to_char("Sorry you are too experienced to need this command, buy recalls at the magic shop.\n\r",ch);
+  arg = one_argument(arg, buf);
+
+  if (isdigit(*buf) || (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) < 9))) {
+    auction_identify(ch, buf, cmd);
+
     return;
   }
 
-  if(world[CHAR_REAL_ROOM(ch)].number==10 ||
-     world[CHAR_REAL_ROOM(ch)].number==1200) {
-    send_to_char("You cannot escape!\n\r",ch);
+  // Prestige Perk 9
+  if (IS_IMMORTAL(ch) || (GET_PRESTIGE_PERK(ch) >= 9)) {
+    const int gold_cost = 5000;
+
+    if (IS_MORTAL(ch)) {
+      if (GET_GOLD(ch) < gold_cost) {
+        send_to_char("You don't have enough gold; the gods don't work for free!\n\r", ch);
+
+        return;
+      }
+      else {
+        GET_GOLD(ch) -= gold_cost;
+      }
+
+      if (IS_SET(CHAR_ROOM_FLAGS(ch), NO_MAGIC)) {
+        send_to_char("The magic has been absorbed by your surroundings.\n\r", ch);
+
+        return;
+      }
+    }
+
+    CHAR *target;
+    OBJ *obj;
+
+    if (*buf) {
+      int bits = generic_find(buf, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP | FIND_CHAR_ROOM, ch, &target, &obj);
+
+      if (bits == 0) {
+        send_to_char("No such thing around to identify.\n\r", ch);
+
+        return;
+      }
+    }
+    else {
+      target = ch;
+    }
+
+    if (target) {
+      spell_identify(GET_LEVEL(ch), ch, target, 0);
+    }
+    else if (obj) {
+      spell_identify(GET_LEVEL(ch), ch, 0, obj);
+    }
+  }
+}
+
+void do_home(CHAR *ch, char *arg, int cmd) {
+  if (!ch || IS_NPC(ch)) return;
+
+  if (world[CHAR_REAL_ROOM(ch)].number == 10 ||
+      world[CHAR_REAL_ROOM(ch)].number == 1200) {
+    send_to_char("You can't escape!\n\r", ch);
     return;
   }
 
-  spell_word_of_recall(GET_LEVEL(ch),ch,ch,0);
-  if(GET_LEVEL(ch)==9) {
-    send_to_char("\n\rThis is your last level for free recalling.\n\rAfter this you need to buy recall scrolls from the magic shop.\n\r",ch);
+  // Prestige Perk 21
+  if (GET_PRESTIGE_PERK(ch) >= 21) {
+    const int gold_cost = 20000;
+
+    if (GET_GOLD(ch) < gold_cost) {
+      send_to_char("You don't have enough gold; the gods don't work for free!\n\r", ch);
+      return;
+    }
+    else {
+      GET_GOLD(ch) -= gold_cost;
+    }
+
+    if (IS_SET(CHAR_ROOM_FLAGS(ch), NO_MAGIC)) {
+      send_to_char("The magic has been absorbed by your surroundings.\n\r", ch);
+      return;
+    }
+
+    spell_word_of_recall(GET_LEVEL(ch), ch, ch, 0);
+
+    return;
+  }
+
+  if (GET_LEVEL(ch) > 9) {
+    send_to_char("Sorry, you are too experienced to use this command.\n\rBuy scrolls of recall at the magic shop.\n\r", ch);
+    return;
+  }
+
+  spell_word_of_recall(GET_LEVEL(ch), ch, ch, 0);
+
+  if (GET_LEVEL(ch) <10) {
+    send_to_char("\n\rPlease remember, you can only use this command if you're below level 10.\n\rIn the future, you'll need to buy scrolls of recall from the magic shop.\n\r", ch);
     return;
   }
 }

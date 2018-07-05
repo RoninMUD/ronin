@@ -580,7 +580,7 @@ void do_camp(CHAR *ch, char *argument, int cmd) {
   }
 
   if (count_mobs_real_room_except_followers(CHAR_REAL_ROOM(ch))) {
-    send_to_char("You can't camp when there are enemies in the room!\n\r", ch);
+    send_to_char("You can't camp when there are potential enemies in the room!\n\r", ch);
 
     return;
   }

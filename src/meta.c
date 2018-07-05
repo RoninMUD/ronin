@@ -30,10 +30,23 @@ int get_max_stat(CHAR *ch, int stat)
   {
     case META_HIT:
       value = ch->specials.org_hit;
+
+      if (GET_PRESTIGE(ch)) {
+        if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+          value -= GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+        }
+        else {
+          value -= GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
+        }
+      }
       break;
 
     case META_MANA:
       value = ch->specials.org_mana;
+
+      if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
+        value -= GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+      }
       break;
 
     case META_MOVE:
@@ -603,7 +616,17 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
     }
 
     exp = meta_cost(ch, choice);
-    adjust = get_meta_adjust(choice, bribe);
+
+    bool free_bribe = FALSE;
+
+    // Prestige Perk 24
+    if (GET_PRESTIGE_PERK(ch) >= 24) {
+      free_bribe = TRUE;
+
+      send_to_char("The Metaphysician tells you 'Congratulations, you got a free bribe!'\n\r", ch);
+    }
+
+    adjust = get_meta_adjust(choice, (bribe || free_bribe));
 
     if (choice == META_MOVE_UP_1 ||
         choice == META_MOVE_DOWN_1)
@@ -629,6 +652,10 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
       gold = exp * 2;
     }
 
+    if (GET_PRESTIGE_PERK(ch) >= 10) {
+      gold *= 0.95;
+    }
+
     if (gold > 0 &&
         GET_GOLD(ch) < gold)
     {
@@ -636,8 +663,14 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
       return TRUE;
     }
 
-    /* Half-price meta. */
-    if (chance(2))
+    int half_price_chance = 2;
+
+    // Prestige Perk 3
+    if (GET_PRESTIGE_PERK(ch) >= 3) {
+      half_price_chance += 1;
+    }
+
+    if (chance(half_price_chance))
     {
       send_to_char("The Metaphysician tells you 'Congratulations, you get this one half-price!'\n\r", ch);
 
