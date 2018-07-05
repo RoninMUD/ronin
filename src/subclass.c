@@ -161,7 +161,6 @@ int check_sc_access(CHAR *ch, int skill)
       break;
     case SKILL_PROTECT:
       if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
-      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
       if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
       break;
     case SKILL_FLANK:
@@ -643,7 +642,14 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       obj_to_char(obj,ch);
       return TRUE;
     }
+    
     point=obj->obj_flags.value[0];
+
+    // Prestige Perk 12
+    if ((point == 1) && (GET_PRESTIGE_PERK(ch) >= 12) && chance(10)) {
+      point = 2;
+    }
+
     if(point==1)
       sprintf(buf,"$N tells you 'Thank you.  You get a subclass point for that token.'");
     else if(point>1)

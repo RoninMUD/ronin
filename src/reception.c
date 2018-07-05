@@ -172,6 +172,11 @@ bool recep_offer(CHAR *ch,CHAR *receptionist,struct obj_cost *cost) {
     if(ch->desc->free_rent)
       cost->total_cost = 0;
 
+  // Prestige Perk 5
+  if (GET_PRESTIGE_PERK(ch) >= 5) {
+    cost->total_cost *= 0.9;
+  }
+
   sprintf(buf, "$n tells you 'It will cost you %d coins per day'", cost->total_cost);
   act(buf,FALSE,receptionist,0,ch,TO_VICT);
 
@@ -578,12 +583,18 @@ void load_char(CHAR *ch) {
 
     if((timegold<0) || IS_IMMORTAL(ch)) timegold=0; /* set rent to zero if neg away time for char */
 
+    // Prestige Perk 2
+    if ((GET_PRESTIGE_PERK(ch) >= 2) && chance(5)) {
+      timegold = 0;
+      send_to_char("You just got free rent, thanks to your prestige!\n\r", ch);
+    }
+
     rent=(long int)timegold;
     sprintf(buf,"Your rent was %d coins.\n\r", rent);
     send_to_char(buf, ch);
 
     if ((GET_GOLD(ch)-rent) < 0 && GET_LEVEL(ch)<LEVEL_IMM) {
-      sprintf(buf,"`oYou couldn't afford it! You have only %d coins.`q\n\r",GET_GOLD(ch));
+      sprintf(buf,"`oYou couldn't afford it! You only have %d coins.`q\n\r",GET_GOLD(ch));
       send_to_char(buf, ch);
       send_to_char(alertstring, ch);
       send_to_char("Checking your bank balance.  You will be charged 1.5x the outstanding balance.\n\r",ch);
@@ -591,7 +602,7 @@ void load_char(CHAR *ch) {
       GET_GOLD(ch)=0;
       if((GET_BANK(ch)-3*rent/2)<0) {
         send_to_char("You STILL couldn't afford it!\n\r", ch);
-        send_to_char("You should be ashamed about it!\n\r", ch);
+        send_to_char("You should be ashamed about that!\n\r", ch);
         GET_BANK(ch)=0;
         sprintf(buf,"%s didn't have enough for his/her rent! (%d coins)",GET_NAME(ch),rent);
         log_s(buf);

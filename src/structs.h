@@ -57,6 +57,11 @@ typedef char byte;
 #define SECS_PER_MUD_MONTH (28*SECS_PER_MUD_DAY)
 #define SECS_PER_MUD_YEAR  (17*SECS_PER_MUD_MONTH)
 
+/* prestige */
+#define PRESTIGE_MAX       255
+#define PRESTIGE_HIT_GAIN  8
+#define PRESTIGE_MANA_GAIN 4
+
 /* quest status */
 #define QUEST_NONE      0
 #define QUEST_RUNNING   1
@@ -1087,7 +1092,9 @@ struct char_ver3_data {
   byte race; /* Not used yet */
   char email_addr[80]; /* Ranger Dec 03 */
   unsigned long extra_bitvect[3]; /* Not used yet */
-  byte extra_byte[9]; /* Not used yet */
+  byte extra_byte[7]; /* Not used yet */
+  ubyte prestige;
+  ubyte who_filter; /* Filters specified for 'who' output. */
   byte sc_style; /* Which score style to display - Ranger Sept 2000 */
   int created; /* Date of creation mmddyyyy - Ranger June 98 */
   int subclass;

@@ -1224,7 +1224,14 @@ int vault_offer(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
   }
   else
   {
-    sprintf(buf, "$n tells you '$p will cost %d coins to store.'", (total_cost_of_obj(obj) * 3) / 2);
+    int storage_price = (total_cost_of_obj(obj) * 3) / 2;
+
+    // Prestige Perk 18
+    if (GET_PRESTIGE_PERK(ch) >= 18) {
+      storage_price *= 0.9;
+    }
+
+    sprintf(buf, "$n tells you '$p will cost %d coins to store.'", storage_price);
     act(buf, FALSE, vault_guard, obj, ch, TO_VICT);
   }
 
@@ -1841,6 +1848,11 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
   }
 
   storage_price = (total_cost_of_obj(vault_obj) * 3) / 2;
+
+  // Prestige Perk 18
+  if (GET_PRESTIGE_PERK(ch) >= 18) {
+    storage_price *= 0.9;
+  }
 
   sprintf(buf, "$n tells you 'That will cost %d coins.'", storage_price);
   act(buf, FALSE, vault_guard, 0, ch, TO_VICT);
@@ -2670,17 +2682,17 @@ int do_vault(CHAR *vault_guard, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
-#define BRONZE_BAR  3013
-#define SILVER_BAR  3014
-#define GOLD_BAR    3015
-#define PLATINUM_BAR    3016
-#define MITHRIL_BAR    3017
-#define DIAMOND     3018
-#define ZYCA_SILVER 10923
-#define ZYCA_BRONZE 10922
-#define ABYSS_BAR   25034
-#define DI_OPAL     27700
-#define DI_CRYSTAL  27701
+#define BRONZE_BAR   3013
+#define SILVER_BAR   3014
+#define GOLD_BAR     3015
+#define PLATINUM_BAR 3016
+#define MITHRIL_BAR  3017
+#define DIAMOND      3018
+#define ZYCA_SILVER  10923
+#define ZYCA_BRONZE  10922
+#define ABYSS_BAR    25034
+#define DI_OPAL      27700
+#define DI_CRYSTAL   27701
 
 int jeweler(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
@@ -3240,7 +3252,7 @@ void promote_mage(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_SORCERER)) {
     exp=0;
@@ -3259,6 +3271,12 @@ void promote_mage(CHAR *promoter, CHAR *ch)
     sprintf(title,"Apprentice");
     exp=5000000;
     gold=1000000;
+  }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
   }
 
   act("\
@@ -3335,7 +3353,7 @@ void promote_cleric(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_PROPHET)) {
     exp=0;
@@ -3356,6 +3374,11 @@ void promote_cleric(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
+  }
 
   act("\
 A bright light shines down from the heavens and basks\n\r\
@@ -3437,7 +3460,7 @@ void promote_ninja(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
     exp=0;
@@ -3456,6 +3479,12 @@ void promote_ninja(CHAR *promoter, CHAR *ch)
     sprintf(title,"Tsume");
     exp=5000000;
     gold=1000000;
+  }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
   }
 
   act("\
@@ -3543,7 +3572,7 @@ void promote_warrior(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_KNIGHT)) {
     exp=0;
@@ -3562,6 +3591,12 @@ void promote_warrior(CHAR *promoter, CHAR *ch)
     sprintf(title,"Squire");
     exp=5000000;
     gold=1000000;
+  }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
   }
 
   act("\
@@ -3647,7 +3682,7 @@ void promote_paladin(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50],tmptitle[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_LORDLADY)) {
     exp=0;
@@ -3670,6 +3705,12 @@ void promote_paladin(CHAR *promoter, CHAR *ch)
     sprintf(tmptitle,"First Sword");
     exp=5000000;
     gold=1000000;
+  }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
   }
 
     act("\
@@ -3770,7 +3811,7 @@ void promote_nomad(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_TAMER)) {
     exp=0;
@@ -3790,6 +3831,13 @@ void promote_nomad(CHAR *promoter, CHAR *ch)
     exp=5000000;
     gold=1000000;
   }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
+  }
+
       act("\
 A humongous bull rides up, creating a giant cloud,\n\r\
 of dust that obscures $n.  When the dust clears,\n\r\
@@ -3873,7 +3921,7 @@ void promote_antipaladin(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50],tmptitle[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) {
     exp=0;
@@ -3896,6 +3944,12 @@ void promote_antipaladin(CHAR *promoter, CHAR *ch)
     sprintf(tmptitle,"Minion of Darkness");
     exp=5000000;
     gold=1000000;
+  }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
   }
 
       act ("\
@@ -3981,7 +4035,7 @@ void promote_bard(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
     exp=0;
@@ -4001,6 +4055,13 @@ void promote_bard(CHAR *promoter, CHAR *ch)
     exp=5000000;
     gold=1000000;
   }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
+  }
+
       act("\
 $n grabs a small flute from $s belt and starts playing a merry tune.\n\r\
 The mesmerizing notes flow forth from the flute, bringing tears to your\n\r\
@@ -4093,7 +4154,7 @@ void promote_commando(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_COMMANDER)) {
     exp=0;
@@ -4113,6 +4174,13 @@ void promote_commando(CHAR *promoter, CHAR *ch)
     exp=5000000;
     gold=1000000;
   }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
+  }
+
       act("\
 $n screams 'INCOMING!' and throws you to the ground.  When you try to\n\r\
 get up, you realise you've been saved by the legendary commando, Ahnohld.",
@@ -4204,7 +4272,7 @@ void promote_thief(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
   struct enchantment_type_5 ench;
-  int exp=0,gold;
+  int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_ASSASSIN)) {
     exp=0;
@@ -4224,6 +4292,13 @@ void promote_thief(CHAR *promoter, CHAR *ch)
     exp=5000000;
     gold=1000000;
   }
+
+  // Prestige Perk 4
+  if (GET_PRESTIGE_PERK(ch) >= 4) {
+    exp *= 0.9;
+    gold *= 0.9;
+  }
+
       act("\
 As $n sheds $s superb disguise, you see that $e in fact is The Shadow,\n\r\
 a master thief with a legendary reputation. He looks at you as your peer.",
@@ -5993,6 +6068,254 @@ int gear_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return FALSE;
 }
 
+
+const char * const prestige_perk_descriptions[] = {
+  "1x increased maximum remort experience multiplier.",                                             // Prestige Perk 1
+  "5% chance for free rent, determined after logging in.",                                          // Prestige Perk 2
+  "1% increased chance for half-price metas.",                                                      // Prestige Perk 3
+  "10% experience and gold discount on rank purchases.",                                            // Prestige Perk 4
+  "10% discount on rent cost.",                                                                     // Prestige Perk 5
+  "1x increased maximum death experience multiplier.",                                              // Prestige Perk 6
+  "50% chance to avoid entering a death trap or hazard, setting your movement to zero.",            // Prestige Perk 7
+  "5% increased hit point, mana, and movement regeneration rate.",                                  // Prestige Perk 8
+  "Identify command now available for 5,000 coins; acts as if you recited a scroll.",               // Prestige Perk 9
+  "5% discount on bribes at the metaphysician.",                                                    // Prestige Perk 10
+  "1% less permanent experience loss upon death.",                                                  // Prestige Perk 11
+  "10% chance that a 1 point token is worth 2 subclass points.",                                    // Prestige Perk 12
+  "10% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 13
+  "10% increase in number of items that can be carried.",                                           // Prestige Perk 14
+  "Instant passage to Daimyo on a new airship located above the Midgaard docks.",                   // Prestige Perk 15
+  "5% discount on items purchased from shops.",                                                     // Prestige Perk 16
+  "10% chance to maintain existing rank upon death.",                                               // Prestige Perk 17
+  "10% discount on vault storage costs.",                                                           // Prestige Perk 18
+  "2% increased chance for double-point auto quest.",                                               // Prestige Perk 19
+  "10% increase in amount of weight that can be carried.",                                          // Prestige Perk 20
+  "Home command now available for 20,000 coins; acts as if you recited a scroll.",                  // Prestige Perk 21
+  "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
+  "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
+  "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
+  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 26
+  "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
+};
+
+
+int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  const int EXP_REQUIRED = 100000000;
+  const int GOLD_REQUIRED = 20000000;
+
+  if (!mob || !ch || IS_NPC(ch)) return FALSE;
+
+  if (cmd == CMD_LIST) {
+    printf_to_char(ch, "\
+Your Prestige: %d\n\r\n\r\
+A + symbol to the left of the perk description indicates that you've earned its benefits.\n\r\n\r\
+Lvl   Perk Description\n\r\
+---   ----------------\n\r", GET_PRESTIGE(ch));
+
+    for (int i = 1; i <= NUMELEMS(prestige_perk_descriptions); i++) {
+      int perk_level = 5 + (10 * (i - 1));
+      printf_to_char(ch, "%3d %s %s\n\r", perk_level, (GET_PRESTIGE_PERK(ch) >= perk_level) ? "+" : " ", prestige_perk_descriptions[i - 1]);
+    }
+
+    return TRUE;
+  }
+
+  if (cmd == CMD_UNKNOWN) {
+    if (IS_NPC(ch)) return FALSE;
+
+    char buf[MIL];
+
+    arg = one_argument(arg, buf);
+
+    if (!strcmp(buf, "earn")) {
+      arg = one_argument(arg, buf);
+
+      if (strcmp(buf, "prestige")) {
+        snprintf(buf, sizeof(buf), "$n tells you 'You've gotta type the words 'earn prestige' if you want me to recognize your deeds.'");
+        act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+        return TRUE;
+      }
+
+      if (IS_IMMORTAL(ch)) {
+        send_to_char("Consult with a SUP+ about earning Prestige as an immortal.\n\r", ch);
+
+        return TRUE;
+      }
+
+      if (GET_PRESTIGE(ch) == PRESTIGE_MAX) {
+        snprintf(buf, sizeof(buf), "$n tells you 'You've already attained the highest level of prestige!'");
+        act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+        return TRUE;
+      }
+
+      bool enough_exp = (GET_EXP(ch) >= EXP_REQUIRED);
+      bool enough_gold = (GET_GOLD(ch) >= GOLD_REQUIRED);
+
+      if (!enough_exp && !enough_gold) {
+        snprintf(buf, sizeof(buf), "$n tells you 'You need at least %d experience points and %d gold coins to earn the next level of prestige.'", EXP_REQUIRED, GOLD_REQUIRED);
+        act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+        return TRUE;
+      }
+      else if (!enough_exp) {
+        snprintf(buf, sizeof(buf), "$n tells you 'You need at least %d experience points to earn the next level of prestige.'", EXP_REQUIRED);
+        act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+        return TRUE;
+      }
+      else if (!enough_gold) {
+        snprintf(buf, sizeof(buf), "$n tells you 'You need at least %d gold coins to earn the next level of prestige.'", GOLD_REQUIRED);
+        act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+        return TRUE;
+      }
+
+      GET_EXP(ch) -= EXP_REQUIRED;
+      GET_GOLD(ch) -= GOLD_REQUIRED;
+
+      GET_PRESTIGE(ch) = MAX(GET_PRESTIGE(ch) + 1, PRESTIGE_MAX);
+
+      ch->points.max_hit += PRESTIGE_HIT_GAIN;
+
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        ch->points.max_hit += PRESTIGE_MANA_GAIN;
+      }
+      else {
+        ch->points.max_mana += PRESTIGE_MANA_GAIN;
+      }
+
+      snprintf(buf, sizeof(buf), "$n tells you 'Congratulations %s, your prestige has increased!  You've earned quite the reputation!'", GET_NAME(ch) ? GET_NAME(ch) : "(null)");
+      act(buf, FALSE, mob, 0, ch, TO_VICT);
+
+      affect_total(ch);
+
+      save_char(ch, NOWHERE);
+
+      return TRUE;
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+int wesley_zeppelin(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  const char *vip_msg[] = {
+    "says",
+    "states",
+    "remarks",
+    "exclaims",
+    "chimes",
+  };
+
+  const char *rif_msg[] = {
+    "says",
+    "quips",
+    "mutters",
+    "grunts",
+    "scoffs",
+  };
+
+  const int dest_room = 500;
+
+  char buf[MIL];
+
+  if (cmd == MSG_MOBACT) {
+    if (!chance(20) || CHAOSMODE) return FALSE;
+
+    int num_vip = 0, num_all = 0;
+
+    for (CHAR *temp_ch = world[CHAR_REAL_ROOM(mob)].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+      if (!IS_MORTAL(temp_ch)) continue;
+
+      if (GET_PRESTIGE_PERK(temp_ch) >= 15) num_vip++;
+
+      num_all++;
+    }
+
+    if (num_vip) {
+      const char *msg = vip_msg[number(0, NUMELEMS(vip_msg) - 1)];
+
+      switch (number(1, 3)) {
+      case 1:
+        snprintf(buf, sizeof(buf), "$n %s 'A VIP!  Well met!  We are prepared to take off at any moment.  Just say the word 'ready', and off we go!'", msg);
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      case 2:
+        snprintf(buf, sizeof(buf), "$n %s 'Ah, an esteemed member!  Good %s to you.  No sooner shall the word 'ready' leave your lips and you'll be on your way!'", msg, IS_DAY ? "day" : "evening");
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      case 3:
+        snprintf(buf, sizeof(buf), "$n %s 'Make yourself comfortable aboard our magnificent vessel.  We are 'ready' and willing to depart at your liesure.'", msg);
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      }
+    }
+    else if (num_all) {
+      const char *msg = rif_msg[number(0, NUMELEMS(rif_msg) - 1)];
+
+      switch (number(1, 3)) {
+      case 1:
+        snprintf(buf, sizeof(buf), "$n %s 'Who is this riffraff?  Begone.  There is nothing for you here.'", msg);
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      case 2:
+        snprintf(buf, sizeof(buf), "$n %s 'I'm afraid access to our fine zeppelins is reserved for a more... exclusive clientele.'", msg);
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      case 3:
+        snprintf(buf, sizeof(buf), "$n %s 'I don't believe the expression 'when pigs fly' was referring to today...'", msg);
+        act(buf, FALSE, mob, 0, 0, TO_ROOM);
+        break;
+      }
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == CMD_SAY) {
+    arg = one_argument(arg, buf);
+
+    if (strcmp(buf, "ready")) return FALSE;
+
+    if (GET_PRESTIGE_PERK(ch) >= 15) {
+      act("$n says 'Your wish is our command.  Enjoy your flight!'", FALSE, mob, 0, 0, TO_ROOM);
+
+      for (CHAR *temp_ch = world[CHAR_REAL_ROOM(mob)].people, *next_ch; temp_ch; temp_ch = next_ch) {
+        next_ch = temp_ch->next_in_room;
+
+        if (!IS_MORTAL(temp_ch)) continue;
+
+        act("You embark upon the sleek metallic zeppelin and are whisked away to your destination.", FALSE, temp_ch, 0, 0, TO_CHAR);
+        act("$n embarks upon a sleek metallic zeppelin and is whisked away to $s destination.", TRUE, temp_ch, 0, 0, TO_ROOM);
+        
+        char_from_room(temp_ch);
+        char_to_room(temp_ch, real_room(dest_room));
+
+        act("You disembark from the magnificent zeppelin moments after it swoops from the sky to drop off its passengers.", FALSE, temp_ch, 0, 0, TO_CHAR);
+        act("$n disembarks from a magnificent zeppelin moments after it swoops from the sky to drop off its passengers.", TRUE, temp_ch, 0, 0, TO_ROOM);
+
+        do_look(temp_ch, "", CMD_LOOK);
+      }
+    }
+    else {
+      const char *msg = rif_msg[number(0, NUMELEMS(rif_msg) - 1)];
+
+      snprintf(buf, sizeof(buf), "$n %s 'Our services are for VIPs and their guests only.  Please take your business elsewhere.'", msg);
+      act(buf, FALSE, mob, 0, 0, TO_ROOM);
+    }
+
+    send_to_room("The zeppelin lifts high into the air and is gone in a moment,\n\rleaving behind a wake of powerful energy that trails away into the clouds.\n\r", real_room(dest_room));
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
  /**********************************************************************\
  |* End Of the Special procedures for Midgaard                         *|
  \**********************************************************************/
@@ -6064,4 +6387,6 @@ void assign_midgaard (void) {
   assign_room(2072, newbie_warn);
   assign_room(10,   jail_room);
   assign_mob(GEAR_GYSPY, gear_gypsy);
+  assign_mob(3040, saga_prestige);
+  assign_mob(3110, wesley_zeppelin);
 }

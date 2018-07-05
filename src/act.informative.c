@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <arpa/inet.h>
 #include <math.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -1794,10 +1795,6 @@ void do_exits(struct char_data *ch, char *argument, int cmd) {
     send_to_char("None.\n\r", ch);
 }
 
-void increase_blood(int rm) {
-  RM_BLOOD(rm) = MIN(RM_BLOOD(rm) + 1, 10);
-}
-
 /* Remove the Immortalis' Grace enchant. */
 void imm_grace_remove_enchant(CHAR *ch)
 {
@@ -1847,7 +1844,14 @@ int gain_death_exp(CHAR *ch, int exp)
 {
   if (!GET_DEATH_EXP(ch)) return 0;
 
-  exp *= DEATH_EXP_MULTIPLIER;
+  int mult = DEATH_EXP_MULTIPLIER;
+
+  // Prestige Perk 6
+  if (GET_PRESTIGE_PERK(ch) >= 6) {
+    mult += 1;
+  }
+
+  exp *= mult;
 
   if (exp > GET_DEATH_EXP(ch)) exp = GET_DEATH_EXP(ch);
 
@@ -1872,7 +1876,7 @@ void die(CHAR *ch)
 
   /* Characters affected by Animate, Charm and Subdue do not leave blood, to avoid gaming Bathed in Blood bonuses. */
   if (!IS_AFFECTED(ch, AFF_ANIMATE) && !IS_AFFECTED(ch, AFF_CHARM) && !IS_AFFECTED(ch, AFF_SUBDUE)) {
-    increase_blood(CHAR_REAL_ROOM(ch));
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(CHAR_REAL_ROOM(ch) + 1, 10);
   }
 
   if (!IS_NPC(ch) && ch->specials.death_timer == 1 && GET_HIT(ch) >= 0)
@@ -1928,12 +1932,27 @@ void die(CHAR *ch)
 
   act("The Reaper appears and escorts $n to the afterlife!", FALSE, ch, 0, 0, TO_ROOM);
 
-  if (!IS_NPC(ch) && (GET_NAT_MANA(ch) > mana_loss_limit[GET_CLASS(ch) - 1]))
+  int prestige_mana = 0;
+
+  if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
+    prestige_mana = GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+  }
+
+  if (!IS_NPC(ch) && ((GET_NAT_MANA(ch) - prestige_mana) > mana_loss_limit[GET_CLASS(ch) - 1]))
   {
     mana_chk = TRUE;
   }
 
-  if (!IS_NPC(ch) && (GET_NAT_HIT(ch) > hit_loss_limit[GET_CLASS(ch) - 1]))
+  int prestige_hit = 0;
+
+  if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+    prestige_hit = GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+  }
+  else {
+    prestige_hit = GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
+  }
+
+  if (!IS_NPC(ch) && ((GET_NAT_HIT(ch) - prestige_hit) > hit_loss_limit[GET_CLASS(ch) - 1]))
   {
     hit_chk = TRUE;
   }
@@ -1944,13 +1963,15 @@ void die(CHAR *ch)
     factor = number(2, 5);
   }
 
-  if (mana_chk || hit_chk  || death_chk)
+  if (mana_chk || hit_chk  ||
+      (death_chk && ((GET_NAT_MANA(ch) - prestige_mana) > 0)) ||
+      (death_chk && ((GET_NAT_HIT(ch) - prestige_hit) > 0)))
   {
     send_to_char("\n\r\n\rThe Reaper demands his toll for your passage through the underworld.\n\r", ch);
     send_to_char("Your soul burns as he tears some lifeforce from you.\n\r", ch);
 
-    mana_diff = GET_NAT_MANA(ch) - mana_loss_limit[GET_CLASS(ch) - 1];
-    hit_diff = GET_NAT_HIT(ch) - hit_loss_limit[GET_CLASS(ch) - 1];
+    mana_diff = GET_NAT_MANA(ch) - mana_loss_limit[GET_CLASS(ch) - 1] - prestige_mana;
+    hit_diff = GET_NAT_HIT(ch) - hit_loss_limit[GET_CLASS(ch) - 1] - prestige_hit;
     mana_diff = MAX(mana_diff, 0);
     hit_diff = MAX(hit_diff, 0);
 
@@ -2057,12 +2078,19 @@ void die(CHAR *ch)
     }
     else
     {
-      send_to_char("\n\rThe Reaper intones 'You may keep your current experience, but\n\r\after level six you will begin to lose half of it at death.'\n\r", ch);
+      send_to_char("\n\rThe Reaper intones 'You may keep your current experience, but\n\r\after level six you will begin to lose some of it at death.'\n\r", ch);
     }
 
     if (death_exp)
     {
-      death_exp = lround((double)death_exp * DEATH_EXP_PERCENT);
+      int mult = DEATH_EXP_PERCENT;
+
+      // Prestige Perk 11
+      if (GET_PRESTIGE_PERK(ch) >= 11) {
+        mult += 0.01;
+      }
+
+      death_exp = lround((double)death_exp * mult);
 
       GET_DEATH_EXP(ch) += death_exp;
       imm_grace_add_enchant(ch);
@@ -2958,23 +2986,403 @@ void do_olchelp(struct char_data *ch, char *argument, int cmd)
   page_string(ch->desc, buf, 1);
 }
 
-char *header_types[] = {
-  "--",
-  "Mu",
-  "Cl",
-  "Th",
-  "Wa",
-  "Ni",
-  "No",
-  "Pa",
-  "Ap",
-  "Av",
-  "Ba",
-  "Co",
+
+const char *immortal_abbrevs[] = {
+  "IMM", /* Immortal */
+  "DEI", /* Deity */
+  "TEM", /* Temporal */
+  "WIZ", /* Wizard */
+  "ETE", /* Eternal */
+  "SUP", /* Supreme */
+  "IMP", /* Implementor */
 };
 
+const char *class_abbrevs[] = {
+  "--",
+  "Mu", /* Magic-User */
+  "Cl", /* Cleric */
+  "Th", /* Thief */
+  "Wa", /* Warrior */
+  "Ni", /* Ninja */
+  "No", /* Nomad */
+  "Pa", /* Paladin */
+  "Ap", /* Anti-Paladin */
+  "Av", /* Avatar */
+  "Ba", /* Bard */
+  "Co", /* Commando */
+};
+
+const char *subclass_abbrevs[] = {
+  "--",
+  "En", /* Enchanter */
+  "Ar", /* Archmage */
+  "Dr", /* Druid */
+  "Te", /* Templar */
+  "Rg", /* Rogue */
+  "Bt", /* Bandit */
+  "Wl", /* Warlord */
+  "Gl", /* Gladiator */
+  "Rn", /* Ronin */
+  "My", /* Mystic */
+  "Ra", /* Ranger */
+  "Tr", /* Trapper */
+  "Ca", /* Cavalier */
+  "Cr", /* Crusader */
+  "De", /* Defiler */
+  "In", /* Infidel */
+  "--", /* Avatar1 */
+  "--", /* Avatar2 */
+  "Bl", /* Bladesinger */
+  "Ch", /* Chanter */
+  "Le", /* Legionnaire */
+  "Me", /* Mercenary */
+};
+
+#define WHO_FLT_CLASS    (1 << 0)
+#define WHO_FLT_SUBCLASS (1 << 1)
+#define WHO_FLT_RANK     (1 << 2)
+#define WHO_FLT_PRESTIGE (1 << 3)
+#define WHO_FLT_TITLE    (1 << 4)
+#define WHO_FLT_FLAGS    (1 << 5)
+
+void do_who(CHAR *ch, char *arg, int cmd) {
+  char buf[MSL], buf2[MIL];
+  int count = 0;
+
+  arg = one_argument(arg, buf);
+
+  if (is_abbrev(buf, "help")) {
+    goto who_help;
+  }
+
+  if (is_abbrev(buf, "filter")) {
+    arg = one_argument(arg, buf);
+
+    if (!*buf) {
+      snprintf(buf2, sizeof(buf2), "Who Filters:");
+      if (!GET_WHO_FILTER(ch)) {
+        strcat(buf2, " None");
+      }
+      else {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_CLASS)) {
+          strcat(buf2, " Class");
+        }
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_SUBCLASS)) {
+          strcat(buf2, " Subclass");
+        }
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_PRESTIGE)) {
+          strcat(buf2, " Prestige");
+        }
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_RANK)) {
+          strcat(buf2, " Rank");
+        }
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_TITLE)) {
+          strcat(buf2, " Title");
+        }
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_FLAGS)) {
+          strcat(buf2, " Flags");
+        }
+      }
+      printf_to_char(ch, "%s\n\r", buf2);
+
+      return;
+    }
+
+    if (is_abbrev(buf, "help")) {
+      goto who_help;
+    }
+
+    for (char *who_filter = buf; *who_filter; arg = one_argument(arg, who_filter)) {
+      if (is_abbrev(buf, "class") || is_abbrev(buf, "level")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_CLASS)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_CLASS);
+          printf_to_char(ch, "Who filter set to include Class and Level data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_CLASS);
+          printf_to_char(ch, "Who filter set to exclude Class and Level data.\n\r");
+        }
+      }
+      else if (is_abbrev(buf, "subclass")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_SUBCLASS)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_SUBCLASS);
+          printf_to_char(ch, "Who filter set to include Subclass data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_SUBCLASS);
+          printf_to_char(ch, "Who filter set to exclude Subclass data.\n\r");
+        }
+      }
+      else if (is_abbrev(buf, "rank")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_RANK)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_RANK);
+          printf_to_char(ch, "Who filter set to include Rank data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_RANK);
+          printf_to_char(ch, "Who filter set to exclude Rank data.\n\r");
+        }
+      }
+      else if (is_abbrev(buf, "prestige")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_PRESTIGE)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_PRESTIGE);
+          printf_to_char(ch, "Who filter set to include Prestige data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_PRESTIGE);
+          printf_to_char(ch, "Who filter set to exclude Prestige data.\n\r");
+        }
+      }
+      else if (is_abbrev(buf, "title")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_TITLE)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_TITLE);
+          printf_to_char(ch, "Who filter set to include Title data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_TITLE);
+          printf_to_char(ch, "Who filter set to exclude Title data.\n\r");
+        }
+      }
+      else if (is_abbrev(buf, "flags")) {
+        if (IS_SET(GET_WHO_FILTER(ch), WHO_FLT_FLAGS)) {
+          REMOVE_BIT(GET_WHO_FILTER(ch), WHO_FLT_FLAGS);
+          printf_to_char(ch, "Who filter set to include Flag data.\n\r");
+        }
+        else {
+          SET_BIT(GET_WHO_FILTER(ch), WHO_FLT_FLAGS);
+          printf_to_char(ch, "Who filter set to exclude Flag data.\n\r");
+        }
+      }
+      else {
+        printf_to_char(ch, "Unknown filter '%s'.  Type 'who --help' for usage info.\n\r", buf);
+      }
+    }
+
+    return;
+  }
+
+  bool use_temp_filter = FALSE;
+  ubyte temp_filter = UCHAR_MAX;
+
+  int min_level = 0, max_level = 0;
+  char *p;
+
+  for (char *who_switch = buf; *who_switch; arg = one_argument(arg, who_switch)) {
+    if (isdigit(*(who_switch))) {
+      p = strchr(who_switch, '-');
+
+      if (p) {
+        snprintf(buf2, sizeof(buf2), "%.*s", strcspn(who_switch, "-"), who_switch);
+
+        min_level = MAX(1, atoi(buf2));
+        max_level = MIN(LEVEL_IMP, atoi(p + 1));
+      }
+      else {
+        min_level = MAX(1, atoi(who_switch));
+        max_level = LEVEL_IMP;
+      }
+
+      if (min_level > max_level) {
+        printf_to_char(ch, "Minimum level must be greater than maximum level; disabling level filter.\n\r");
+
+        min_level = 0;
+        max_level = 0;
+      }
+
+      continue;
+    }
+
+    if (*who_switch != '-') continue;
+
+    ++who_switch;
+
+    if (*who_switch  == '-') ++who_switch;
+
+    if (is_abbrev(who_switch, "class") || is_abbrev(who_switch, "level")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_CLASS);
+    }
+    else if (is_abbrev(who_switch, "subclass")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_SUBCLASS);
+    }
+    else if (is_abbrev(who_switch, "prestige")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_PRESTIGE);
+    }
+    else if (is_abbrev(who_switch, "rank")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_RANK);
+    }
+    else if (is_abbrev(who_switch, "title")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_TITLE);
+    }
+    else if (is_abbrev(who_switch, "flags")) {
+      REMOVE_BIT(temp_filter, WHO_FLT_FLAGS);
+    }
+    else if (is_abbrev(who_switch, "help")) {
+      goto who_help;
+    }
+    else {
+      printf_to_char(ch, "Unknown switch '%s'.  Type 'who help' or 'who -h' for usage info.\n\r", who_switch);
+    }
+
+    use_temp_filter = TRUE;
+  }
+
+  send_to_char("Players\n\r-------\n\r", ch);
+
+  for (DESC *d = descriptor_list; d; d = d->next) {
+    buf[0] = '\0';
+
+    if (d->connected != CON_PLYNG) continue;
+
+    CHAR *c = d->original ? d->original : d->character;
+
+    if (IS_IMMORTAL(c) && !CAN_SEE(ch, c)) continue;
+    if ((min_level > 1 && (GET_LEVEL(c) < min_level)) || (max_level > 1 && (GET_LEVEL(c) > max_level))) continue;
+
+    bool add_space = FALSE;
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_CLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_CLASS, temp_filter))) {
+      snprintf(buf2, sizeof(buf2), "[%2d %2s]",
+        GET_LEVEL(c), class_abbrevs[GET_CLASS(c)]);
+      strcat(buf, buf2);
+
+      add_space = TRUE;
+    }
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, temp_filter))) {
+      if (GET_SC_LEVEL(c)) {
+        snprintf(buf2, sizeof(buf2), "[%d %2s]",
+          GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
+      }
+      else {
+        snprintf(buf2, sizeof(buf2), "[- --]");
+      }
+      strcat(buf, buf2);
+
+      add_space = TRUE;
+    }
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
+      snprintf(buf2, sizeof(buf2), "[%3d Pr]",
+        GET_PRESTIGE(c));
+      strcat(buf, buf2);
+
+      add_space = TRUE;
+    }
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_RANK, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_RANK, temp_filter))) {
+      if (add_space) {
+        snprintf(buf2, sizeof(buf2), " ");
+      }
+      else {
+        buf2[0] = '\0';
+      }
+
+      signal_char(c, ch, MSG_SHOW_PRETITLE, buf2);
+      strcat(buf, buf2);
+
+      add_space = FALSE;
+    }
+
+    snprintf(buf2, sizeof(buf2), "%s%s",
+      add_space ? " " : "",
+      GET_NAME(c) ? GET_NAME(c) : "(null)");
+    strcat(buf, buf2);
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_TITLE, GET_WHO_FILTER(ch))) && GET_TITLE(c)) {
+      snprintf(buf2, sizeof(buf2), " %s%s",
+        GET_TITLE(c), ENDCHCLR(ch));
+      strcat(buf, buf2);
+    }
+
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_FLAGS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_FLAGS, temp_filter))) {
+      if (IS_SET(GET_PFLAG(c), PLR_KILL)) {
+        strcat(buf, " (killer)");
+      }
+
+      if (IS_SET(GET_PFLAG(c), PLR_THIEF)) {
+        strcat(buf, " (thief)");
+      }
+
+      if (IS_SET(GET_PFLAG(c), PLR_KILL)) {
+        strcat(buf, " (deputy)");
+      }
+
+      if (IS_SET(GET_PFLAG(c), PLR_NOMESSAGE)) {
+        strcat(buf, " (deaf)");
+      }
+
+      if (IS_SET(GET_PFLAG(c), PLR_QUEST)) {
+        strcat(buf, " (quest)");
+      }
+
+      if (IS_AFFECTED(c, AFF_INVISIBLE)) {
+        strcat(buf, " (invis)");
+      }
+
+      if (IS_AFFECTED(c, AFF_IMINV)) {
+        strcat(buf, " (impy)");
+      }
+
+      if (IS_SET(GET_IMM_FLAGS(ch), WIZ_QUEST) && (GET_LEVEL(ch) > GET_LEVEL(c))) {
+        strcat(buf, " (wq)");
+      }
+    }
+
+    if (GET_WIZINV(c) > 1) {
+      snprintf(buf2, sizeof(buf2), " (i%d)", GET_WIZINV(c));
+      strcat(buf, buf2);
+    }
+
+    printf_to_char(ch, "%s\n\r", buf);
+
+    count++;
+  }
+
+  printf_to_char(ch, "\n\rThere %s %d visible player%s connected.\n\r",
+    count > 1 ? "are" : "is",
+    count,
+    count > 1 ? "s" : "");
+
+  printf_to_char(ch, "With a boot time high of %d player%s.\n\r",
+    max_connects,
+    max_connects > 1 ? "s" : "");
+
+  if (IS_IMMORTAL(ch))
+    printf_to_char(ch, "%d player%s %s connected since boot.\n\r",
+      total_connects,
+      total_connects > 1 ? "s" : "",
+      total_connects > 1 ? "have" : "has");
+
+  return;
+
+who_help:
+  printf_to_char(ch, "\
+Usage:\n\r\
+\n\r\
+who [-c|-s|-p|-r|-t|-f] [min_level][-[max_level]]\n\r\
+\n\r\
+Switches:\n\r\
+  -c | --class\n\r\
+  -l | --level      Display player Class and Level data.\n\r\
+  -s | --subclass   Display player Subclass data.\n\r\
+  -p | --prestige   Display player Prestige data.\n\r\
+  -r | --rank       Display player Rank data.\n\r\
+  -t | --title      Display player Title data.\n\r\
+  -f | --flags      Display player Flag data.\n\r\
+\n\r\
+Switch Example: who -c -r -f (shows who output with only Class, Rank, and Flags data).\n\r\
+\n\r\
+Setting Filters:\n\r\
+\n\r\
+who filter [class|subclass|prestige|rank|title|flags] to toggle who filters on/off.\n\r\
+\n\r\
+Filter Example: who filter subclass (toggles Subclass data filter on/off).\n\r");
+
+  return;
+}
+
 /* who class not working atm - Ranger Nov 97 */
-void do_who(struct char_data *ch, char *argument, int cmd) {
+void do_who_old(struct char_data *ch, char *argument, int cmd) {
   struct descriptor_data *d;
   char buf[MAX_STRING_LENGTH], name[256], *p;
   char   f = 1,m = 1;
@@ -3275,7 +3683,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
      else
       sprintf(line, "#%2d [%2d %2s] %-12s %-12s %2d ",
               d->descriptor, d->character->player.level,
-              header_types[d->character->player.class],
+              class_abbrevs[d->character->player.class],
               GET_NAME(d->character),connected_types[d->connected],
               timer);
       if (*d->host!='\0')
@@ -3750,150 +4158,195 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   char buf[MSL], buf2[MSL];
   char name[MSL],host[50];
   int days, hours, mins, secs;
-  int version,class,level,subclass=0,subclass_level;
+  int version,class,level,subclass=0,subclass_level,prestige=0;
   struct char_file_u_5 char_info_5;
   struct char_file_u_4 char_info_4;
   struct char_file_u_2 char_info_2;
 
-  one_argument( argument, name);
+  one_argument(argument, name);
 
-  if(!*name) {
-    send_to_char("Whois who ?\n\r", ch);
+  if (!*name) {
+    send_to_char("Whois who?\n\r", ch);
     return;
   }
 
   for (d = descriptor_list; d; d = d->next) {
-    if(d->character && d->character->player.name &&
-       isname(name, d->character->player.name) && CAN_SEE(ch, d->character)) {
-      if(GET_LEVEL(d->character) >= LEVEL_IMM && !IS_NPC(d->character)) {
-        sprintf(buf, "%s is %s.\n\r",GET_NAME(d->character),
-                immortal_types[GET_LEVEL(d->character) - LEVEL_IMM]);
-        send_to_char(buf, ch);
+    if (d->character &&
+        GET_NAME(d->character) &&
+        isname(name, GET_NAME(d->character)) &&
+        CAN_SEE(ch, d->character)) {
+      if (IS_IMMORTAL(d->character)) {
+        printf_to_char(ch, "%s is %s %s.\n\r",
+          GET_NAME(d->character),
+          index("aeiouyAEIOUY", *(immortal_types[GET_LEVEL(d->character) - LEVEL_IMM])) ? "an" : "a",
+          immortal_types[GET_LEVEL(d->character) - LEVEL_IMM]);
       }
       else {
-        sprintf(buf, "%s is level %d %s.\n\r", GET_NAME(d->character),
-                GET_LEVEL(d->character), pc_class_types[(int)GET_CLASS(d->character)]);
-        send_to_char(buf, ch);
+        printf_to_char(ch, "%s is a level %d %s.\n\r",
+          GET_NAME(d->character),
+          GET_LEVEL(d->character),
+          pc_class_types[(int)GET_CLASS(d->character)]);
       }
-      if(d->character->ver3.subclass) {
-        sprintf(buf, "Subclass: %s Level: %d.\n\r",subclass_name[d->character->ver3.subclass-1],d->character->ver3.subclass_level);
-        send_to_char(buf,ch);
+
+      if (GET_SC(d->character)) {
+        printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+          subclass_name[GET_SC(d->character) - 1],
+          GET_SC_LEVEL(d->character));
       }
-      if(d->host) {
-        buf2[0]=0;
-        sscanf(&d->host[strlen(d->host)-5],"%*[^.].%s",buf2);
-        if(is_number(buf2)) {
+
+      if (GET_PRESTIGE(d->character)) {
+        printf_to_char(ch, "Prestige: %d\n\r", GET_PRESTIGE(d->character));
+      }
+
+      if (d->host) {
+        buf2[0] = 0;
+
+        sscanf(&d->host[strlen(d->host) - 5], "%*[^.].%s", buf2);
+
+        if (is_number(buf2)) {
           send_to_char("Last logged from numeric address.\n\r", ch);
-        } else {
-          sprintf(buf, "Last logged from *.%s.\n\r", buf2);
-          send_to_char(buf, ch);
+        }
+        else {
+          printf_to_char(ch, "Last logged from *.%s.\n\r", buf2);
         }
       }
-      else send_to_char("Last logged from Unknown place.\n\r", ch);
-      if(d->character->specials.timer && GET_LEVEL(d->character)<LEVEL_IMM) {
-        sprintf(buf, "Idle: %d minute(s).\n\r",d->character->specials.timer);
-        send_to_char(buf,ch);
+      else {
+        send_to_char("Last logged from unknown.\n\r", ch);
       }
+
+      if (!IS_IMMORTAL(d->character) && d->character->specials.timer) {
+        printf_to_char(ch, "Idle: %d minute%s.\n\r",
+          d->character->specials.timer,
+          d->character->specials.timer == 1 ? "" : "s");
+      }
+
       return;
     }
   }
 
   string_to_lower(name);
-  sprintf(buf,"rent/%c/%s.dat",UPPER(name[0]),name);
-  if(!(fl=fopen(buf,"rb"))) {
+  sprintf(buf, "rent/%c/%s.dat", UPPER(name[0]), name);
+
+  if (!(fl = fopen(buf, "rb"))) {
     send_to_char("You didn't find anyone by that name.\n\r", ch);
     return;
   }
 
-  version=char_version(fl);
+  version = char_version(fl);
 
-  switch(version) {
-    case 2:
-      memset(&char_info_2,0,sizeof(char_info_2));
-      if(fread(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
-        log_s("Error reading rent file (do_whois).");
-        fclose(fl);
-        return;
-      }
+  switch (version) {
+  case 2:
+    memset(&char_info_2, 0, sizeof(char_info_2));
+    if (fread(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
+      log_s("Error reading rent file (do_whois).");
       fclose(fl);
-      class=(int)char_info_2.class;
-      level=char_info_2.level;
-      secs=time(0)-char_info_2.last_update;
-      sprintf(host,"%s",char_info_2.new.host);
-      break;
-    case 3:
-      memset(&char_info_4,0,sizeof(char_info_4));
-      if(fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_s("Error reading rent file (do_whois).");
-        fclose(fl);
-        return;
-      }
-      fclose(fl);
-      class=(int)char_info_4.class;
-      subclass=char_info_4.ver3.subclass;
-      subclass_level=char_info_4.ver3.subclass_level;
-      level=char_info_4.level;
-      if(level>=31) level=LEVEL_IMM;
-      secs=time(0)-char_info_4.last_update;
-      sprintf(host,"%s",char_info_4.new.host);
-      break;
-    case 4:
-      memset(&char_info_4,0,sizeof(char_info_4));
-      if(fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
-        log_s("Error reading rent file (do_whois).");
-        fclose(fl);
-        return;
-      }
-      fclose(fl);
-      class=(int)char_info_4.class;
-      subclass=char_info_4.ver3.subclass;
-      subclass_level=char_info_4.ver3.subclass_level;
-      level=char_info_4.level;
-      secs=time(0)-char_info_4.last_update;
-      sprintf(host,"%s",char_info_4.new.host);
-      break;
-    case 5:
-      memset(&char_info_5,0,sizeof(char_info_5));
-      if(fread(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
-        log_s("Error reading rent file (do_whois).");
-        fclose(fl);
-        return;
-      }
-      fclose(fl);
-      class=(int)char_info_5.class;
-      subclass=char_info_5.ver3.subclass;
-      subclass_level=char_info_5.ver3.subclass_level;
-      level=char_info_5.level;
-      secs=time(0)-char_info_5.last_update;
-      sprintf(host,"%s",char_info_5.new.host);
-      break;
-    default:
-      log_s("Error getting pfile version (do_whois)");
       return;
+    }
+    fclose(fl);
+    class = (int)char_info_2.class;
+    level = char_info_2.level;
+    secs = time(0) - char_info_2.last_update;
+    sprintf(host, "%s", char_info_2.new.host);
+    break;
+  case 3:
+    memset(&char_info_4, 0, sizeof(char_info_4));
+    if (fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
+      log_s("Error reading rent file (do_whois).");
+      fclose(fl);
+      return;
+    }
+    fclose(fl);
+    class = (int)char_info_4.class;
+    subclass = char_info_4.ver3.subclass;
+    subclass_level = char_info_4.ver3.subclass_level;
+    level = char_info_4.level;
+    if (level >= 31) level = LEVEL_IMM;
+    secs = time(0) - char_info_4.last_update;
+    sprintf(host, "%s", char_info_4.new.host);
+    break;
+  case 4:
+    memset(&char_info_4, 0, sizeof(char_info_4));
+    if (fread(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
+      log_s("Error reading rent file (do_whois).");
+      fclose(fl);
+      return;
+    }
+    fclose(fl);
+    class = (int)char_info_4.class;
+    subclass = char_info_4.ver3.subclass;
+    subclass_level = char_info_4.ver3.subclass_level;
+    level = char_info_4.level;
+    secs = time(0) - char_info_4.last_update;
+    sprintf(host, "%s", char_info_4.new.host);
+    break;
+  case 5:
+    memset(&char_info_5, 0, sizeof(char_info_5));
+    if (fread(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
+      log_s("Error reading rent file (do_whois).");
+      fclose(fl);
+      return;
+    }
+    fclose(fl);
+    class = (int)char_info_5.class;
+    subclass = char_info_5.ver3.subclass;
+    subclass_level = char_info_5.ver3.subclass_level;
+    prestige = char_info_5.ver3.prestige;
+    level = char_info_5.level;
+    secs = time(0) - char_info_5.last_update;
+    sprintf(host, "%s", char_info_5.new.host);
+    break;
+  default:
+    log_s("Error getting pfile version (do_whois)");
+    return;
   }
 
-  sprintf(buf, "%s is a level %d %s.\n\r", name,level,pc_class_types[class]);
-  send_to_char (buf, ch);
-  if(subclass) {
-    sprintf(buf, "Subclass: %s Level: %d.\n\r",subclass_name[subclass-1],subclass_level);
-    send_to_char(buf,ch);
+  CAP(name);
+
+  if (level >= LEVEL_IMM) {
+    printf_to_char(ch, "%s is %s %s.\n\r",
+      name,
+      index("aeiouyAEIOUY", *(immortal_types[level - LEVEL_IMM])) ? "an" : "a",
+      immortal_types[level - LEVEL_IMM]);
   }
-  sprintf(buf, "%s isn't in now.\n\r", CAP(name));
-  send_to_char(buf, ch);
-  days = secs/SECS_PER_REAL_DAY;
-  secs -= days*SECS_PER_REAL_DAY;
-  hours = secs/SECS_PER_REAL_HOUR;
-  secs -= hours*SECS_PER_REAL_HOUR;
-  mins = secs/SECS_PER_REAL_MIN;
+  else {
+    printf_to_char(ch, "%s is a level %d %s.\n\r",
+      name,
+      level,
+      pc_class_types[class]);
+  }
+
+  if (subclass) {
+    printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+      subclass_name[subclass - 1],
+      subclass_level);
+  }
+
+  if (prestige) {
+    printf_to_char(ch, "Prestige: %d\n\r", prestige);
+  }
+
+  printf_to_char(ch, "%s isn't in now.\n\r", name);
+
+  days = secs / SECS_PER_REAL_DAY;
+  secs -= days * SECS_PER_REAL_DAY;
+  hours = secs / SECS_PER_REAL_HOUR;
+  secs -= hours * SECS_PER_REAL_HOUR;
+  mins = secs / SECS_PER_REAL_MIN;
   secs -= (mins * SECS_PER_REAL_MIN);
 
-  buf2[0]=0;
-  sscanf(host+strlen(host)-5,"%*[^.].%s",buf2);
-  if(is_number(buf2))
+  buf2[0] = 0;
+
+  sscanf(host + strlen(host) - 5, "%*[^.].%s", buf2);
+
+  if (is_number(buf2))
     send_to_char("Originally logged from numeric address.\n\r", ch);
-  else sprintf(buf, "Originally logged from *.%s.\n\r", buf2);
-  send_to_char(buf, ch);
-  sprintf(buf,"Last on %d days, %d hours, %d minute, and %d seconds ago.\n\r",
-          days,hours,mins,secs);
-  send_to_char(buf, ch);
+  else {
+    printf_to_char(ch, "Originally logged from *.%s.\n\r", buf2);
+  }
+
+  printf_to_char(ch, "Last on %d days, %d hours, %d minute, and %d seconds ago.\n\r",
+    days,
+    hours,
+    mins,
+    secs);
 }

@@ -329,6 +329,11 @@ Returns:
     return FALSE;
   }
 
+  // Prestige Perk 23
+  if (GET_PRESTIGE_PERK(ch) >= 23) {
+    need_movement = MAX(1, need_movement - 1);
+  }
+
   /* Check for exhaustion. */
   if (IS_MORTAL(ch) && (GET_MOVE(ch) < need_movement)) {
     if (GET_MASTER(ch)) {
@@ -339,6 +344,19 @@ Returns:
     }
 
     return FALSE;
+  }
+
+  // Prestige Perk 7
+  if (GET_PRESTIGE_PERK(ch) >= 7) {
+    if ((IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, HAZARD) ||
+         IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, DEATH)) &&
+        chance(50)) {
+      send_to_char("You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r", ch);
+
+      GET_MOVE(ch) = 0;
+
+      return FALSE;
+    }
   }
 
   /* Subtract their movement points. */
@@ -2328,7 +2346,14 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  if (GET_MOVE(ch) < special_move_mv[dir_type] && !IS_NPC(ch)) {
+  int move_cost = special_move_mv[dir_type];
+
+  // Prestige Perk 23
+  if (GET_PRESTIGE_PERK(ch) >= 23) {
+    move_cost = MAX(1, move_cost - 1);
+  }
+
+  if (GET_MOVE(ch) < move_cost && !IS_NPC(ch)) {
     send_to_char("You are too exhausted.\n\r", ch);
 
     return;
@@ -2376,7 +2401,20 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  GET_MOVE(ch) -= special_move_mv[dir_type];
+  // Prestige Perk 7
+  if (GET_PRESTIGE_PERK(ch) >= 7) {
+    if ((IS_SET(world[other_room].room_flags, HAZARD) ||
+         IS_SET(world[other_room].room_flags, DEATH)) &&
+        chance(50)) {
+      send_to_char("You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r", ch);
+
+      GET_MOVE(ch) = 0;
+
+      return;
+    }
+  }
+
+  GET_MOVE(ch) -= move_cost;
 
   if (up_down && (door == UP || door == DOWN)) {
     snprintf(buf, sizeof(buf), "$n %s %s the $F.", special_move_str[dir_type][DIR_PLURAL], dirs[door]);

@@ -1535,12 +1535,28 @@ void mus_enfeeble( CHAR *vict )
 {
   if(GET_LEVEL(vict) >= LEVEL_IMM)
     return;
+
+  int prestige_hit = 0;
+
+  if ((GET_CLASS(vict) == CLASS_THIEF) || (GET_CLASS(vict) == CLASS_WARRIOR) || (GET_CLASS(vict) == CLASS_NOMAD)) {
+    prestige_hit = GET_PRESTIGE(vict) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+  }
+  else {
+    prestige_hit = GET_PRESTIGE(vict) * PRESTIGE_HIT_GAIN;
+  }
+
+  int prestige_mana = 0;
+
+  if (!((GET_CLASS(vict) == CLASS_THIEF) || (GET_CLASS(vict) == CLASS_WARRIOR) || (GET_CLASS(vict) == CLASS_NOMAD))) {
+    prestige_mana = GET_PRESTIGE(vict) * PRESTIGE_MANA_GAIN;
+  }
+
   int nat_hp = vict->specials.org_hit;
   int nat_mana = vict->specials.org_mana+100;
   int orig_hp = GET_MAX_HIT(vict);
   int orig_mana = GET_MAX_MANA(vict);
-  int new_hp = -(2*orig_hp/3);
-  int new_mana = -(2*orig_mana/3);
+  int new_hp = -((2*orig_hp/3)+prestige_hit);
+  int new_mana = -((2*orig_mana/3)+prestige_mana);
   vict->new.been_killed += 1;
   if(!IS_NPC(vict) && vict->ver3.death_limit) vict->ver3.death_limit++;
   death_list(vict);

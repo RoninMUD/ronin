@@ -1859,8 +1859,20 @@ CIRCLE
 
 Class: Thief
 
-A skill similar to backstab, however it can be used during battle.  CIRCLE does
-the highest non-magic combat damage.
+Usage: circle <target>
+
+A skill similar to Backstab, however it can be used during battle.  Circle
+inflicts the highest non-magic combat damage of any class skill.
+
+Circle damage is equal to the thief's normal attack damage, multiplied by:
+
+Level  Multiplier
+ 1-14  2x
+15-19  3x
+20-39  4x
+40-50  5x
+
+See Also: BACKSTAB
 #
 "COIN TOSS"
 
@@ -2138,12 +2150,25 @@ BACKSTAB
 
 Class: Anti-Paladin Thief
 
-A backstab is the attempt to sneak up on someone and place your dagger in his
-back at exactly the point where it does most damage.  A successful backstab
-gives a damage multiplier dependent on level.
+The Backstab skill is a powerful attack used to engage combat with an
+unsuspecting foe.  The effects of placing a pointed weapon into a victim's
+exposed back are quite chilling, and often deadly.
 
-The chance of successfully backstabbing a person depends on how well you have
-practiced backstab at your guild. You can always backstab sleeping persons.
+Backstab damage is equal to the attacker's normal attack damage, multiplied by:
+
+Level  Multiplier
+ 1-7    2x
+ 8-13   3x
+14-19   4x
+20-23   5x
+24-26   6x
+27-29   7x
+30-39   8x
+40-49   9x
+   50  10x
+
+The chance of successfully backstabbing a target depends on how well you have
+practiced Backstab at your guild.  You can always backstab sleeping victims.
 
 The Anti-Paladin's Assassinate skill also allows a sufficiently hidden, or
 invisible, Anti-Paladin to use the Backstab skill against a victim already in
@@ -9026,4 +9051,23 @@ penalty to their chance to dodge attacks.  If the Rogue is in combat,
 this skill cannot be turned on or off.
 
 See Also: SUBCLASSES ROGUE DODGE
+#
+PRESTIGE
+
+Players looking for an enduring degree of fame and fortune can earn prestige.
+By visiting Saga in the Grunting Boar Inn, a player can 'earn prestige' by
+spending 100 million experience points and 20 million gold.  
+
+Each level of prestige earned will increase a player's hit points by 8 and mana
+by 4 (or 12 hit points for non spell-casting classes).  At the fifth level of
+prestige, and every ten levels thereafter, players will also gain access to a
+perk.  There are 255 levels of prestige available, for a total of 26 perks.
+
+A complete list of Perks, and the amount of prestige required to unlock them,
+can be viewed by visiting Saga and typing 'list'.
+
+Prestige levels, stats, and perks are unaffected by the remort process; once
+earned, prestige and its benefits are permanent.
+
+See Also: REMORT
 #~
