@@ -266,12 +266,12 @@ do {                   \
 
 #define CAN_CARRY_W(ch) (\
   IS_IMMORTAL(ch) ? 10000 : \
-  (ch->ver3.prestige >= 20) ? (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
+  (ch->ver3.prestige >= 20) ? (int)(str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
 
 #define CAN_CARRY_N(ch) (\
   IS_IMMORTAL(ch) ? 200 : \
   ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : \
-  (ch->ver3.prestige >= 14) ? ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
+  (ch->ver3.prestige >= 14) ? (int)((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
 
 #define CAN_CARRY_OBJ(ch, obj) ( \
   IS_IMMORTAL(ch) || \
