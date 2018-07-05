@@ -2489,13 +2489,31 @@ See Also: QUAFF
 #
 WHO
 
-Lists the people currently in the game. Some people may choose to remain unseen
-through invisibility. If given a number WHO lists people of that level and
-above.
+Lists the people currently in the game.
 
-Example: who 25
+You can specify a number of switches, listed below, in addition to a minimum
+level, or a range of levels.
 
-Will list all people in the game with level 25 or higher.
+Usage:
+
+who [-c|-s|-p|-r|-t|-f] [min_level][-[max_level]]
+
+Switches:
+  -c | --class
+  -l | --level      Display player Class and Level data.
+  -s | --subclass   Display player Subclass data.
+  -p | --prestige   Display player Prestige data.
+  -r | --rank       Display player Rank data.
+  -t | --title      Display player Title data.
+  -f | --flags      Display player Flag data.
+
+Switch Example: who -c -r -f (shows who output with only Class, Rank, and Flags data).
+
+Setting Filters:
+
+who filter [class|subclass|prestige|rank|title|flags] to toggle who filters on/off.
+
+Filter Example: who filter subclass (toggles Subclass data filter on/off).
 
 See also: WHOIS
 #
@@ -2503,9 +2521,12 @@ WHOIS
 
 Usage: whois <name>
 
-Tells you the level of a person and if she/he isn't on tells you how long
-since last login.  If a connected player is idle, that info will also
-be given.  The idle display only works on mortals.
+Tells you the class, level, subclass, subclass level, and prestige of a player.
+
+This command also will tell you the last time that the character logged in.
+
+If a connected player is idle, that info will also be given.  The idle display
+only works on mortals.
 
 See also: WHO
 #
