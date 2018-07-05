@@ -3241,8 +3241,14 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     bool add_space = FALSE;
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_CLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_CLASS, temp_filter))) {
-      snprintf(buf2, sizeof(buf2), "[%2d %2s]",
-        GET_LEVEL(c), class_abbrevs[GET_CLASS(c)]);
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[ %s ]",
+          immortal_abbrevs[GET_LEVEL(c) - LEVEL_IMM]);
+      }
+      else {
+        snprintf(buf2, sizeof(buf2), "[%2d %2s]",
+          GET_LEVEL(c), class_abbrevs[GET_CLASS(c)]);
+      }
       strcat(buf, buf2);
 
       add_space = TRUE;

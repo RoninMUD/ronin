@@ -6143,7 +6143,7 @@ Lvl   Perk Description\n\r\
         return TRUE;
       }
 
-      if (GET_PRESTIGE(ch) == PRESTIGE_MAX) {
+      if (GET_PRESTIGE(ch) >= PRESTIGE_MAX) {
         snprintf(buf, sizeof(buf), "$n tells you 'You've already attained the highest level of prestige!'");
         act(buf, FALSE, mob, 0, ch, TO_VICT);
 
@@ -6175,7 +6175,7 @@ Lvl   Perk Description\n\r\
       GET_EXP(ch) -= EXP_REQUIRED;
       GET_GOLD(ch) -= GOLD_REQUIRED;
 
-      GET_PRESTIGE(ch) = MAX(GET_PRESTIGE(ch) + 1, PRESTIGE_MAX);
+      GET_PRESTIGE(ch) += 1;
 
       ch->points.max_hit += PRESTIGE_HIT_GAIN;
 
