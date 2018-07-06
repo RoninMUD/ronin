@@ -569,7 +569,7 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     }
 
     if(ch->ver3.subclass) {
-      if(ch->ver3.subclass!=subclass-1) { /* Change of subclass */
+      if(ch->ver3.subclass!=subclass+1) { /* Change of subclass */
         act("$N tells you 'You can't change your subclass - yet!",0,ch,0,mob,TO_CHAR);
         return TRUE;
       }
