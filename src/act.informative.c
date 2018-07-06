@@ -3317,10 +3317,6 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if (IS_SET(GET_PFLAG(c), PLR_QUEST)) {
-        strcat(buf, " (quest)");
-      }
-
       if (IS_AFFECTED(c, AFF_INVISIBLE)) {
         strcat(buf, " (invis)");
       }
@@ -3329,7 +3325,11 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (impy)");
       }
 
-      if (IS_SET(GET_IMM_FLAGS(c), WIZ_QUEST) && (GET_LEVEL(ch) >= GET_LEVEL(c))) {
+      if (IS_MORTAL(c) && IS_SET(GET_PFLAG(c), PLR_QUEST)) {
+        strcat(buf, " (quest)");
+      }
+
+      if (IS_IMMORTAL(c) && IS_SET(GET_IMM_FLAGS(c), WIZ_QUEST) && (GET_LEVEL(ch) >= GET_LEVEL(c))) {
         strcat(buf, " (wq)");
       }
     }
