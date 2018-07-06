@@ -46,6 +46,7 @@ $State: Exp $
 #include "spec.clan.h"
 #include "spec_assign.h"
 
+#define RANK_BOARD_DAYS  (365*SECS_PER_REAL_DAY)
 extern struct clan_data clan_list[MAX_CLANS];
 
 struct rank_struct
@@ -153,7 +154,7 @@ void read_rank_boards (void) {
       }
 
       if(rank_board[i][j].update_time &&
-        (rank_board[i][j].update_time+30*SECS_PER_REAL_DAY<time(0))) {
+        (rank_board[i][j].update_time+RANK_BOARD_DAYS<time(0))) {
         strcpy(rank_board[i][j].name, "None");
         rank_board[i][j].ranking       = 0;
         rank_board[i][j].level         = 0;
