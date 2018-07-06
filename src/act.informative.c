@@ -1861,7 +1861,7 @@ int gain_death_exp(CHAR *ch, int exp)
   return exp;
 }
 
-#define DEATH_EXP_PERCENT .90
+#define DEATH_EXP_PERCENT 0.90
 void die(CHAR *ch)
 {
                                 /* mu   cl   th   wa   ni   no   pa   ap   av   ba   co */
@@ -2083,7 +2083,7 @@ void die(CHAR *ch)
 
     if (death_exp)
     {
-      int mult = DEATH_EXP_PERCENT;
+      double mult = DEATH_EXP_PERCENT;
 
       // Prestige Perk 11
       if (GET_PRESTIGE_PERK(ch) >= 11) {
