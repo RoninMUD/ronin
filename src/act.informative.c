@@ -3322,7 +3322,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if (IS_AFFECTED(c, AFF_INVISIBLE)) {
+      if (IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV)) {
         strcat(buf, " (invis)");
       }
 
