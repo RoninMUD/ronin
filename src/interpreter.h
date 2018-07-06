@@ -15,6 +15,7 @@ bool is_abbrev(char *str1, char *str2);
 bool is_fill_word(char *string);
 char *skip_spaces(char *string);
 int search_block(const char *string, const char * const *list, bool exact);
+int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive);
 int old_search_block(const char *string, int begin, int length, const char * const * const list, int mode);
 char *one_argument(char *string, char *arg1);
 void argument_interpreter(char *string, char *arg1, char *arg2);

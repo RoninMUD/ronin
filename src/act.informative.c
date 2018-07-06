@@ -3255,7 +3255,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, temp_filter))) {
-      if (GET_SC_LEVEL(c)) {
+      if (!IS_IMMORTAL(c) && GET_SC_LEVEL(c)) {
         snprintf(buf2, sizeof(buf2), "[%d %2s]",
           GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
       }
@@ -3268,8 +3268,13 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
-      snprintf(buf2, sizeof(buf2), "[%3d Pr]",
-        GET_PRESTIGE(c));
+      if (!IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
+          GET_PRESTIGE(c));
+      }
+      else {
+        snprintf(buf2, sizeof(buf2), "[--- --]");
+      }
       strcat(buf, buf2);
 
       add_space = TRUE;
@@ -4164,7 +4169,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   char buf[MSL], buf2[MSL];
   char name[MSL],host[50];
   int days, hours, mins, secs;
-  int version,class,level,subclass=0,subclass_level,prestige=0;
+  int version,class,level,subclass=0,subclass_level=0,prestige=0;
   struct char_file_u_5 char_info_5;
   struct char_file_u_4 char_info_4;
   struct char_file_u_2 char_info_2;
@@ -4194,14 +4199,16 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
           pc_class_types[(int)GET_CLASS(d->character)]);
       }
 
-      if (GET_SC(d->character)) {
-        printf_to_char(ch, "Subclass: %s, Level %d\n\r",
-          subclass_name[GET_SC(d->character) - 1],
-          GET_SC_LEVEL(d->character));
-      }
+      if (!IS_IMMORTAL(ch)) {
+        if (GET_SC(d->character)) {
+          printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+            subclass_name[GET_SC(d->character) - 1],
+            GET_SC_LEVEL(d->character));
+        }
 
-      if (GET_PRESTIGE(d->character)) {
-        printf_to_char(ch, "Prestige: %d\n\r", GET_PRESTIGE(d->character));
+        if (GET_PRESTIGE(d->character)) {
+          printf_to_char(ch, "Prestige: %d\n\r", GET_PRESTIGE(d->character));
+        }
       }
 
       if (d->host) {
@@ -4321,14 +4328,16 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
       pc_class_types[class]);
   }
 
-  if (subclass) {
-    printf_to_char(ch, "Subclass: %s, Level %d\n\r",
-      subclass_name[subclass - 1],
-      subclass_level);
-  }
+  if (level <= LEVEL_IMM) {
+    if (subclass) {
+      printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+        subclass_name[subclass - 1],
+        subclass_level);
+    }
 
-  if (prestige) {
-    printf_to_char(ch, "Prestige: %d\n\r", prestige);
+    if (prestige) {
+      printf_to_char(ch, "Prestige: %d\n\r", prestige);
+    }
   }
 
   printf_to_char(ch, "%s isn't in now.\n\r", name);
