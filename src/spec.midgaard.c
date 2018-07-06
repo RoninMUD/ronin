@@ -6193,6 +6193,12 @@ Lvl   Perk Description\n\r\
 
       save_char(ch, NOWHERE);
 
+      if (GET_PRESTIGE(ch) == PRESTIGE_MAX) {
+        send_to_char("Amazing! You've joined the ranks of the most prestigious adventurers in all the land!\n\r", ch);
+        snprintf(buf, sizeof(buf), "%s has joined the ranks of the most prestigious adventurers in all the land!\n\r", GET_NAME(ch) ? GET_NAME(ch) : "(null)");
+        send_to_world_except(buf, ch);
+      }
+
       return TRUE;
     }
 
