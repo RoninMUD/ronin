@@ -96,6 +96,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     }
     break;
   case SCQ_PRESTIGE:
+  case SCQ_PRESTIGE_LEVEL:
     sprintf(buf, "%sPrestige: [%s%d%s]%s",
       CHCLR(ch, 7), ENDCHCLR(ch),
       GET_PRESTIGE(ch),
@@ -816,7 +817,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
-    if (!IS_NPC(ch))
+    if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
         CHCLR(ch, 7), ENDCHCLR(ch));
@@ -1229,7 +1230,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, "You are a level %d %s.\n\r",
         GET_SC_LEVEL(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
 
-    if (!IS_NPC(ch))
+    if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "You have %d prestige.\n\r",
         GET_PRESTIGE(ch));
 
@@ -1382,7 +1383,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
     }
-    if (!IS_NPC(ch))
+    if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
         CHCLR(ch, 7), ENDCHCLR(ch));

@@ -2641,27 +2641,25 @@ score query <element>
 
 Score elements:
 
-name, title, level, class, subclass_name, sc_name, subclass_level,
-sc_level, rank_name, rank_level, maximum_hit, max_hit, hit, hp,
-maximum_mana, max_mana, mana, maximum_movement, max_movement,
-movement, natural_hit, nat_hit, natural_hp, nat_hp, natural_mana,
-nat_mana, natural_movement, nat_movement, gain_hit, gain_hp, hit_gain,
-hp_gain, gain_mana, mana_gain, gain_movement, movement_gain,
-move_gain, current_strength, cur_strength, strength,
-current_dexterity, cur_dexterity, dexterity, current_constitution,
-cur_constitution, constitution, current_intelligence,
+name, title, level, class, subclass_name, sc_name, subclass_level, sc_level,
+rank_name, rank_level, prestige, prestige_level, maximum_hit, max_hit, hit, hp,
+maximum_mana, max_mana, mana, maximum_movement, max_movement, movement,
+natural_hit, nat_hit, natural_hp, nat_hp, natural_mana, nat_mana,
+natural_movement, nat_movement, gain_hit, gain_hp, hit_gain, hp_gain, gain_mana,
+mana_gain, gain_movement, movement_gain, move_gain, current_strength,
+cur_strength, strength, current_dexterity, cur_dexterity, dexterity,
+current_constitution, cur_constitution, constitution, current_intelligence,
 cur_intelligence, intelligence, current_wisdom, cur_wisdom, wisdom,
 natural_strength, nat_strength, natural_dexterity, nat_dexterity,
-natural_constitution, nat_constitution, natural_intelligence,
-nat_intelligence, natural_wisdom, nat_wisdom, armor_class, ac, armor,
-wimpy_limit, bleed_limit, subclass_points, subclass_pts, scp,
-quest_points, qp, aqp, class_points, cpp, deaths, age, practices,
-average_damage, avg_damage, damroll, hitroll, alignment, experience,
-xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
+natural_constitution, nat_constitution, natural_intelligence, nat_intelligence,
+natural_wisdom, nat_wisdom, armor_class, ac, armor, wimpy_limit, bleed_limit,
+subclass_points, subclass_pts, scp, quest_points, qp, aqp, class_points, cpp,
+deaths, age, practices, average_damage, avg_damage, damroll, hitroll, alignment,
+experience, xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
 remort_multiplier, death_exp, death_xp, gold, coins, money, bank_gold,
-bank_coins, bank_money, quest_timer, club, clan, guild, time_played,
-played, weight_carried, carried_weight, toggles, flags, death_limit,
-position, wizinv, editing_zone
+bank_coins, bank_money, quest_timer, club, clan, guild, time_played, played,
+weight_carried, carried_weight, toggles, flags, death_limit, position, wizinv,
+editing_zone
 
 See Also: SCORE
 #
