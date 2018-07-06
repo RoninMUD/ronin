@@ -3242,7 +3242,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_CLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_CLASS, temp_filter))) {
       if (IS_IMMORTAL(c)) {
-        snprintf(buf2, sizeof(buf2), "[ %s ]",
+        snprintf(buf2, sizeof(buf2), "[ %3s ]",
           immortal_abbrevs[GET_LEVEL(c) - LEVEL_IMM]);
       }
       else {
@@ -3294,9 +3294,9 @@ void do_who(CHAR *ch, char *arg, int cmd) {
       GET_NAME(c) ? GET_NAME(c) : "(null)");
     strcat(buf, buf2);
 
-    if ((!use_temp_filter && !IS_SET(WHO_FLT_TITLE, GET_WHO_FILTER(ch))) && GET_TITLE(c)) {
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_TITLE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_TITLE, temp_filter))) {
       snprintf(buf2, sizeof(buf2), " %s%s",
-        GET_TITLE(c), ENDCHCLR(ch));
+        GET_TITLE(c) ? GET_TITLE(c) : "", ENDCHCLR(ch));
       strcat(buf, buf2);
     }
 
