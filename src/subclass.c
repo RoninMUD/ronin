@@ -432,7 +432,7 @@ Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
   if(add) {
     argument=one_argument(argument, buf);
     if(!*buf) { send_to_char(Usage,ch); return; }
-    subclass=old_search_block(string_to_upper(buf),0,strlen(buf),subclass_name,TRUE);
+    subclass = new_search_block(buf, subclass_name, TRUE, FALSE);
     if(subclass==-1) {
       send_to_char("\
 Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
@@ -456,11 +456,11 @@ Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
   }
 
   if(add) {
-    if(!set_subclass(vict,subclass,level)) {
+    if(!set_subclass(vict,subclass+1,level)) {
       send_to_char("Subclass assignment failed.\n\r",ch);
       return;
     }
-    sprintf(buf,"WIZINFO: %s set %s to subclass %s, level %d.",GET_NAME(ch),GET_NAME(vict),subclass_name[subclass-1],level);
+    sprintf(buf,"WIZINFO: %s set %s to subclass %s, level %d.",GET_NAME(ch),GET_NAME(vict),subclass_name[subclass],level);
     wizlog(buf,GET_LEVEL(ch)+1,5);
   }
   else {
@@ -528,31 +528,6 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   char name1[20],name2[20];
   OBJ *obj;
   int point,subclass,pclass,token_number,loop=0;
-  char *sc_name_l[] = {
-    "enchanter",
-    "archmage",
-    "druid",
-    "templar",
-    "rogue",
-    "bandit",
-    "warlord",
-    "gladiator",
-    "ronin",
-    "mystic",
-    "ranger",
-    "trapper",
-    "cavalier",
-    "crusader",
-    "defiler",
-    "infidel",
-    "",/* avatar*/
-    "",
-    "bladesinger",
-    "chanter",
-    "legionnaire",
-    "mercenary",
-    "\n"
-  };
 
   if (cmd == CMD_PRACTICE) {
     if(guild(mob,ch,cmd, arg)) return TRUE;
@@ -568,31 +543,33 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     one_argument(arg,buf);
     pclass=GET_CLASS(ch);
     if(pclass<1 || pclass>11) return FALSE;
-    sprintf(name1,"%s",sc_name_l[2*pclass-2]);
-    sprintf(name2,"%s",sc_name_l[2*pclass-1]);
+    sprintf(name1,"%s", subclass_name[2*pclass-2]);
+    CAP(name1);
+    sprintf(name2,"%s", subclass_name[2*pclass-1]);
+    CAP(name2);
     if(!*buf) {
       sprintf(buf,"$N tells you 'Which subclass path did you want to choose: %s or %s?'",
-              CAP(name1),CAP(name2));
+              name1, name2);
       act(buf,0,ch,0,mob,TO_CHAR);
       return TRUE;
     }
 
-    subclass=old_search_block(string_to_upper(buf),0,strlen(buf),subclass_name,TRUE);
+    subclass = new_search_block(buf, subclass_name, TRUE, FALSE);
     if(subclass==-1) {
       sprintf(buf,"$N tells you 'Thats not a valid subclass.  Your choices are: %s or %s.'",
-              CAP(name1),CAP(name2));
+              name1, name2);
       act(buf,0,ch,0,mob,TO_CHAR);
       return TRUE;
     }
-    if((subclass>2*pclass) || (subclass<2*pclass-1)) {
+    if((subclass>2*pclass-1) || (subclass<2*pclass-2)) {
       sprintf(buf,"$N tells you 'Thats not a valid choice.  Your choices are: %s or %s.'",
-              CAP(name1),CAP(name2));
+              name1, name2);
       act(buf,0,ch,0,mob,TO_CHAR);
       return TRUE;
     }
 
     if(ch->ver3.subclass) {
-      if(ch->ver3.subclass!=subclass) { /* Change of subclass */
+      if(ch->ver3.subclass!=subclass+1) { /* Change of subclass */
         act("$N tells you 'You can't change your subclass - yet!",0,ch,0,mob,TO_CHAR);
         return TRUE;
       }
@@ -603,9 +580,10 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         }
         if(!check_sc_points(ch,mob)) return TRUE; /* Also subtracts points */
         ch->ver3.subclass_level++;
-        sprintf(name1,"%s",sc_name_l[subclass-1]);
+        sprintf(name1,"%s", subclass_name[subclass]);
+        CAP(name1);
         sprintf(buf,"%s shouts '%s has taken another step along the path of the %s!'\n\r",
-                GET_SHORT(mob),GET_NAME(ch),CAP(name1));
+                GET_SHORT(mob),GET_NAME(ch), name1);
         send_to_world(buf);
         save_char(ch,NOWHERE);
         return TRUE;
@@ -613,11 +591,12 @@ int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     }
     else { /* New Subclass at lvl 1 */
       if(!check_sc_points(ch,mob)) return TRUE; /* Also subtracts points */
-      ch->ver3.subclass=subclass;
+      ch->ver3.subclass=subclass+1;
       ch->ver3.subclass_level=1;
-      sprintf(name1,"%s",sc_name_l[subclass-1]);
+      sprintf(name1,"%s", subclass_name[subclass]);
+      CAP(name1);
       sprintf(buf,"%s shouts '%s has joined the path of the %s! All bow before %s might!'\n\r",
-              GET_SHORT(mob),GET_NAME(ch),CAP(name1),HSHR(ch));
+              GET_SHORT(mob),GET_NAME(ch), name1, HSHR(ch));
       send_to_world(buf);
       save_char(ch,NOWHERE);
       return TRUE;

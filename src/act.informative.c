@@ -1861,7 +1861,7 @@ int gain_death_exp(CHAR *ch, int exp)
   return exp;
 }
 
-#define DEATH_EXP_PERCENT .90
+#define DEATH_EXP_PERCENT 0.90
 void die(CHAR *ch)
 {
                                 /* mu   cl   th   wa   ni   no   pa   ap   av   ba   co */
@@ -2083,7 +2083,7 @@ void die(CHAR *ch)
 
     if (death_exp)
     {
-      int mult = DEATH_EXP_PERCENT;
+      double mult = DEATH_EXP_PERCENT;
 
       // Prestige Perk 11
       if (GET_PRESTIGE_PERK(ch) >= 11) {
@@ -3241,15 +3241,21 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     bool add_space = FALSE;
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_CLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_CLASS, temp_filter))) {
-      snprintf(buf2, sizeof(buf2), "[%2d %2s]",
-        GET_LEVEL(c), class_abbrevs[GET_CLASS(c)]);
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[ %3s ]",
+          immortal_abbrevs[GET_LEVEL(c) - LEVEL_IMM]);
+      }
+      else {
+        snprintf(buf2, sizeof(buf2), "[%2d %2s]",
+          GET_LEVEL(c), class_abbrevs[GET_CLASS(c)]);
+      }
       strcat(buf, buf2);
 
       add_space = TRUE;
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, temp_filter))) {
-      if (GET_SC_LEVEL(c)) {
+      if (!IS_IMMORTAL(c) && GET_SC_LEVEL(c)) {
         snprintf(buf2, sizeof(buf2), "[%d %2s]",
           GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
       }
@@ -3262,8 +3268,13 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
-      snprintf(buf2, sizeof(buf2), "[%3d Pr]",
-        GET_PRESTIGE(c));
+      if (!IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
+          GET_PRESTIGE(c));
+      }
+      else {
+        snprintf(buf2, sizeof(buf2), "[--- --]");
+      }
       strcat(buf, buf2);
 
       add_space = TRUE;
@@ -3288,9 +3299,9 @@ void do_who(CHAR *ch, char *arg, int cmd) {
       GET_NAME(c) ? GET_NAME(c) : "(null)");
     strcat(buf, buf2);
 
-    if ((!use_temp_filter && !IS_SET(WHO_FLT_TITLE, GET_WHO_FILTER(ch))) && GET_TITLE(c)) {
+    if ((!use_temp_filter && !IS_SET(WHO_FLT_TITLE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_TITLE, temp_filter))) {
       snprintf(buf2, sizeof(buf2), " %s%s",
-        GET_TITLE(c), ENDCHCLR(ch));
+        GET_TITLE(c) ? GET_TITLE(c) : "", ENDCHCLR(ch));
       strcat(buf, buf2);
     }
 
@@ -3311,11 +3322,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if (IS_SET(GET_PFLAG(c), PLR_QUEST)) {
-        strcat(buf, " (quest)");
-      }
-
-      if (IS_AFFECTED(c, AFF_INVISIBLE)) {
+      if (IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV)) {
         strcat(buf, " (invis)");
       }
 
@@ -3323,7 +3330,11 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (impy)");
       }
 
-      if (IS_SET(GET_IMM_FLAGS(ch), WIZ_QUEST) && (GET_LEVEL(ch) > GET_LEVEL(c))) {
+      if (IS_MORTAL(c) && IS_SET(GET_PFLAG(c), PLR_QUEST)) {
+        strcat(buf, " (quest)");
+      }
+
+      if (IS_IMMORTAL(c) && IS_SET(GET_IMM_FLAGS(c), WIZ_QUEST) && (GET_LEVEL(ch) >= GET_LEVEL(c))) {
         strcat(buf, " (wq)");
       }
     }
@@ -4158,7 +4169,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   char buf[MSL], buf2[MSL];
   char name[MSL],host[50];
   int days, hours, mins, secs;
-  int version,class,level,subclass=0,subclass_level,prestige=0;
+  int version,class,level,subclass=0,subclass_level=0,prestige=0;
   struct char_file_u_5 char_info_5;
   struct char_file_u_4 char_info_4;
   struct char_file_u_2 char_info_2;
@@ -4188,14 +4199,16 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
           pc_class_types[(int)GET_CLASS(d->character)]);
       }
 
-      if (GET_SC(d->character)) {
-        printf_to_char(ch, "Subclass: %s, Level %d\n\r",
-          subclass_name[GET_SC(d->character) - 1],
-          GET_SC_LEVEL(d->character));
-      }
+      if (!IS_IMMORTAL(ch)) {
+        if (GET_SC(d->character)) {
+          printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+            subclass_name[GET_SC(d->character) - 1],
+            GET_SC_LEVEL(d->character));
+        }
 
-      if (GET_PRESTIGE(d->character)) {
-        printf_to_char(ch, "Prestige: %d\n\r", GET_PRESTIGE(d->character));
+        if (GET_PRESTIGE(d->character)) {
+          printf_to_char(ch, "Prestige: %d\n\r", GET_PRESTIGE(d->character));
+        }
       }
 
       if (d->host) {
@@ -4315,14 +4328,16 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
       pc_class_types[class]);
   }
 
-  if (subclass) {
-    printf_to_char(ch, "Subclass: %s, Level %d\n\r",
-      subclass_name[subclass - 1],
-      subclass_level);
-  }
+  if (level <= LEVEL_IMM) {
+    if (subclass) {
+      printf_to_char(ch, "Subclass: %s, Level %d\n\r",
+        subclass_name[subclass - 1],
+        subclass_level);
+    }
 
-  if (prestige) {
-    printf_to_char(ch, "Prestige: %d\n\r", prestige);
+    if (prestige) {
+      printf_to_char(ch, "Prestige: %d\n\r", prestige);
+    }
   }
 
   printf_to_char(ch, "%s isn't in now.\n\r", name);

@@ -6094,7 +6094,7 @@ const char * const prestige_perk_descriptions[] = {
   "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
   "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
   "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
-  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 26
+  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
   "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
 };
 
@@ -6143,7 +6143,7 @@ Lvl   Perk Description\n\r\
         return TRUE;
       }
 
-      if (GET_PRESTIGE(ch) == PRESTIGE_MAX) {
+      if (GET_PRESTIGE(ch) >= PRESTIGE_MAX) {
         snprintf(buf, sizeof(buf), "$n tells you 'You've already attained the highest level of prestige!'");
         act(buf, FALSE, mob, 0, ch, TO_VICT);
 
@@ -6175,7 +6175,7 @@ Lvl   Perk Description\n\r\
       GET_EXP(ch) -= EXP_REQUIRED;
       GET_GOLD(ch) -= GOLD_REQUIRED;
 
-      GET_PRESTIGE(ch) = MAX(GET_PRESTIGE(ch) + 1, PRESTIGE_MAX);
+      GET_PRESTIGE(ch) += 1;
 
       ch->points.max_hit += PRESTIGE_HIT_GAIN;
 
@@ -6192,6 +6192,12 @@ Lvl   Perk Description\n\r\
       affect_total(ch);
 
       save_char(ch, NOWHERE);
+
+      if (GET_PRESTIGE(ch) == PRESTIGE_MAX) {
+        send_to_char("Amazing! You've joined the ranks of the most prestigious adventurers in all the land!\n\r", ch);
+        snprintf(buf, sizeof(buf), "%s has joined the ranks of the most prestigious adventurers in all the land!\n\r", GET_NAME(ch) ? GET_NAME(ch) : "(null)");
+        send_to_world_except(buf, ch);
+      }
 
       return TRUE;
     }
