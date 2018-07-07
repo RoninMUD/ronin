@@ -3346,19 +3346,19 @@ void do_who(CHAR *ch, char *arg, int cmd) {
   }
 
   printf_to_char(ch, "\n\rThere %s %d visible player%s connected.\n\r",
-    count > 1 ? "are" : "is",
+    count != 1 ? "are" : "is",
     count,
-    count > 1 ? "s" : "");
+    count != 1 ? "s" : "");
 
   printf_to_char(ch, "With a boot time high of %d player%s.\n\r",
     max_connects,
-    max_connects > 1 ? "s" : "");
+    max_connects != 1 ? "s" : "");
 
   if (IS_IMMORTAL(ch))
     printf_to_char(ch, "%d player%s %s connected since boot.\n\r",
       total_connects,
-      total_connects > 1 ? "s" : "",
-      total_connects > 1 ? "have" : "has");
+      total_connects != 1 ? "s" : "",
+      total_connects != 1 ? "have" : "has");
 
   return;
 
@@ -3381,7 +3381,7 @@ Switch Example: who -c -r -f (shows output with Class, Rank, and Flags data).\n\
 \n\r\
 Setting Filters:\n\r\
 \n\r\
-who filter [class|subclass|prestige|rank|title|flags] to toggle filters on/off.\n\r\
+who filter [class/level|subclass|prestige|rank|title|flags]\n\r\
 \n\r\
 Filter Example: who filter subclass (toggles Subclass data filter on/off).\n\r");
 
