@@ -3255,12 +3255,12 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, temp_filter))) {
-      if (!IS_IMMORTAL(c) && GET_SC_LEVEL(c)) {
-        snprintf(buf2, sizeof(buf2), "[%d %2s]",
-          GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[ ** ]");
       }
       else {
-        snprintf(buf2, sizeof(buf2), "[- --]");
+        snprintf(buf2, sizeof(buf2), "[%d %2s]",
+          GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
       }
       strcat(buf, buf2);
 
@@ -3268,12 +3268,12 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
-      if (!IS_IMMORTAL(c)) {
-        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
-          GET_PRESTIGE(c));
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[  **  ]");
       }
       else {
-        snprintf(buf2, sizeof(buf2), "[--- --]");
+        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
+          GET_PRESTIGE(c));
       }
       strcat(buf, buf2);
 
