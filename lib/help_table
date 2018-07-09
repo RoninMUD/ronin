@@ -2492,7 +2492,7 @@ WHO
 Lists the people currently in the game.
 
 You can specify a number of switches, listed below, in addition to a minimum
-level, or a range of levels.
+level or a range of levels.
 
 Usage:
 
@@ -2509,9 +2509,9 @@ Switches:
 
 Switch Example: who -c -r -f (shows output with Class, Rank, and Flags data).
 
-Setting Filters:
+Filters:
 
-who filter [class|subclass|prestige|rank|title|flags] to toggle filters on/off.
+who filter [class/level|subclass|prestige|rank|title|flags]
 
 Filter Example: who filter subclass (toggles Subclass data filter on/off).
 

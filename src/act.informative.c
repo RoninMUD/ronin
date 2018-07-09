@@ -3255,12 +3255,12 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_SUBCLASS, temp_filter))) {
-      if (!IS_IMMORTAL(c) && GET_SC_LEVEL(c)) {
-        snprintf(buf2, sizeof(buf2), "[%d %2s]",
-          GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[ ** ]");
       }
       else {
-        snprintf(buf2, sizeof(buf2), "[- --]");
+        snprintf(buf2, sizeof(buf2), "[%d %2s]",
+          GET_SC_LEVEL(c), subclass_abbrevs[GET_SC(c)]);
       }
       strcat(buf, buf2);
 
@@ -3268,12 +3268,12 @@ void do_who(CHAR *ch, char *arg, int cmd) {
     }
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
-      if (!IS_IMMORTAL(c)) {
-        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
-          GET_PRESTIGE(c));
+      if (IS_IMMORTAL(c)) {
+        snprintf(buf2, sizeof(buf2), "[  **  ]");
       }
       else {
-        snprintf(buf2, sizeof(buf2), "[--- --]");
+        snprintf(buf2, sizeof(buf2), "[%3d Pr]",
+          GET_PRESTIGE(c));
       }
       strcat(buf, buf2);
 
@@ -3330,12 +3330,8 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (impy)");
       }
 
-      if (IS_MORTAL(c) && IS_SET(GET_PFLAG(c), PLR_QUEST)) {
+      if (IS_SET(GET_PFLAG(c), PLR_QUEST)) {
         strcat(buf, " (quest)");
-      }
-
-      if (IS_IMMORTAL(c) && IS_SET(GET_IMM_FLAGS(c), WIZ_QUEST) && (GET_LEVEL(ch) >= GET_LEVEL(c))) {
-        strcat(buf, " (wq)");
       }
     }
 
@@ -3350,19 +3346,19 @@ void do_who(CHAR *ch, char *arg, int cmd) {
   }
 
   printf_to_char(ch, "\n\rThere %s %d visible player%s connected.\n\r",
-    count > 1 ? "are" : "is",
+    count != 1 ? "are" : "is",
     count,
-    count > 1 ? "s" : "");
+    count != 1 ? "s" : "");
 
   printf_to_char(ch, "With a boot time high of %d player%s.\n\r",
     max_connects,
-    max_connects > 1 ? "s" : "");
+    max_connects != 1 ? "s" : "");
 
   if (IS_IMMORTAL(ch))
     printf_to_char(ch, "%d player%s %s connected since boot.\n\r",
       total_connects,
-      total_connects > 1 ? "s" : "",
-      total_connects > 1 ? "have" : "has");
+      total_connects != 1 ? "s" : "",
+      total_connects != 1 ? "have" : "has");
 
   return;
 
@@ -3385,7 +3381,7 @@ Switch Example: who -c -r -f (shows output with Class, Rank, and Flags data).\n\
 \n\r\
 Setting Filters:\n\r\
 \n\r\
-who filter [class|subclass|prestige|rank|title|flags] to toggle filters on/off.\n\r\
+who filter [class/level|subclass|prestige|rank|title|flags]\n\r\
 \n\r\
 Filter Example: who filter subclass (toggles Subclass data filter on/off).\n\r");
 
