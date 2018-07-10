@@ -547,11 +547,14 @@ struct room_data
 #define AFF_IMMINENT_DEATH   2 /* also uses death_timer */
 #define AFF_SEVERED          4
 #define AFF_QUAD             8
-#define AFF2_FINAL           16
+#define AFF2_FORTIFICATION   16
+#define AFF2_PERCEIVE        32
+#define AFF2_RAGE            64
+#define AFF2_FINAL           128
 /* WIP - Night
-#define AFF_RIPOSTE          16
-#define AFF_FEINT            32
-#define AFF2_FINAL           64
+#define AFF2_RIPOSTE         128
+#define AFF2_FEINT           256
+#define AFF2_FINAL           512
 */
 
 /* modifiers to char's abilities */

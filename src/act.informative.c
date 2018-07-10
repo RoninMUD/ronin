@@ -1876,7 +1876,7 @@ void die(CHAR *ch)
 
   /* Characters affected by Animate, Charm and Subdue do not leave blood, to avoid gaming Bathed in Blood bonuses. */
   if (!IS_AFFECTED(ch, AFF_ANIMATE) && !IS_AFFECTED(ch, AFF_CHARM) && !IS_AFFECTED(ch, AFF_SUBDUE)) {
-    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(CHAR_REAL_ROOM(ch) + 1, 10);
+    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
   if (!IS_NPC(ch) && ch->specials.death_timer == 1 && GET_HIT(ch) >= 0)
@@ -3269,7 +3269,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
 
     if ((!use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, GET_WHO_FILTER(ch))) || (use_temp_filter && !IS_SET(WHO_FLT_PRESTIGE, temp_filter))) {
       if (IS_IMMORTAL(c)) {
-        snprintf(buf2, sizeof(buf2), "[  **  ]");
+        snprintf(buf2, sizeof(buf2), "[ **** ]");
       }
       else {
         snprintf(buf2, sizeof(buf2), "[%3d Pr]",
@@ -3322,11 +3322,11 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if (IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV)) {
+      if (IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV) && NRM_INV(ch, c)) {
         strcat(buf, " (invis)");
       }
 
-      if (IS_AFFECTED(c, AFF_IMINV)) {
+      if (IS_AFFECTED(c, AFF_IMINV) && IMP_INV(ch, c)) {
         strcat(buf, " (impy)");
       }
 
