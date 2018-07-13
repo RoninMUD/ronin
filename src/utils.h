@@ -382,7 +382,7 @@ do {                   \
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
 #define GET_LAST_DIR(mob) (mob->specials.last_direction)
 #define GET_PRESTIGE(ch) (ch->ver3.prestige)
-#define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? (GET_PRESTIGE(ch) - 5 / 10) : 0)
+#define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? ((int)(GET_PRESTIGE(ch) + 5) / 10) : 0)
 #define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
 #define GET_WAIT(ch) (GET_DESCRIPTOR(ch)->wait)
 #define GET_DEFAULT_POSITION(ch) (ch->specials.default_pos)
