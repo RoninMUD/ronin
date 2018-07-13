@@ -935,8 +935,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, " %sWimpy Limit:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_WIMPY(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu (2x)\n\r",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch));
+    printf_to_char(ch, "%sDeath XP:%s %lu (%sx)\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch), GET_PRESTIGE_PERK(ch) >= 6 ? "3" : "2"); // Prestige Perk 6
 
     printf_to_char(ch, " %sBleed Limit:%s %-13d   ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_BLEED(ch));
@@ -1218,8 +1218,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if (GET_DEATH_EXP(ch))
     {
-      printf_to_char(ch, "You have %lu death experience to re-earn at a 2x multiplier.\n\r",
-        GET_DEATH_EXP(ch));
+      printf_to_char(ch, "You have %lu death experience to re-earn at a %sx multiplier.\n\r",
+        GET_DEATH_EXP(ch), GET_PRESTIGE_PERK(ch) >= 6 ? "3" : "2"); // Prestige Perk 6
     }
 
     printf_to_char(ch, "You have %d class placement points.\n\r", GET_RANKING(ch));
@@ -1431,8 +1431,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, "%sQuest Points:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_QP(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu (2x)\n\r",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch));
+    printf_to_char(ch, "%sDeath XP:%s %lu (%sx)\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch), GET_PRESTIGE_PERK(ch) >= 6 ? "3" : "2"); // Prestige Perk 6
 
     printf_to_char(ch, "%sAge in Years:%s %-13d ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_AGE(ch));
