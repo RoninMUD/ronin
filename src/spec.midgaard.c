@@ -6112,9 +6112,9 @@ A + symbol to the left of the perk description indicates that you've earned its 
 Lvl   Perk Description\n\r\
 ---   ----------------\n\r", GET_PRESTIGE(ch));
 
-    for (int i = 1; i <= NUMELEMS(prestige_perk_descriptions); i++) {
-      int perk_level = 5 + (10 * (i - 1));
-      printf_to_char(ch, "%3d %s %s\n\r", perk_level, (GET_PRESTIGE_PERK(ch) >= perk_level) ? "+" : " ", prestige_perk_descriptions[i - 1]);
+    for (int i = 0; i < NUMELEMS(prestige_perk_descriptions); i++) {
+      int perk_level = 5 + (10 * i);
+      printf_to_char(ch, "%3d %s %s\n\r", perk_level, (GET_PRESTIGE(ch) >= perk_level) ? "+" : " ", prestige_perk_descriptions[i]);
     }
 
     return TRUE;
