@@ -481,10 +481,25 @@ D3
 S
 #3124
 End of Elm Street~
-   You are at the end of Elm Street.
-An old elm tree grows here.
+    You are at the end of Elm street.  A tall Elm tree, for which the
+street is named, stands here.  It looms over the area, casting a shadow
+as dark as night itself.  Wall line both sides of the street here, and are
+blanketed in shrubs, thickets, and overgrown vegetation.  To the east lie
+the gates to Southern Midgaard, and the small fields that lie beyond that.
+To the south there are broken, rusted gates.  Previously, they had been
+lost and buried beneath the overgrown foliage of the area.  But a recent
+storm blew apart the lock, and revealed not only the existence of the
+gate, but a long trail beyond it.  
 ~
-31 0 1
+31 4 1
+D1
+~
+~
+0 -1 3564
+D2
+~
+~
+0 -1 3142
 D3
 ~
 ~
@@ -819,6 +834,49 @@ D2
 ~
 ~
 0 -1 3140
+S
+#3142
+The Old, Rusty Gates of Southern Midgaard~
+     These rusted, broken gates look as if they have stood for centuries,
+though they look as if they have not been maintained for decades.  Had an
+incredible, local storm not broken the log, and blown the gate apart, it
+may have been left unexplored for several more centuries.  To the north
+there is a tremendous elm tree, and the various parks of Southern Midgaard.
+To the south there is a long pathway through an overgrown forest.
+~
+31 4 1
+D0
+~
+~
+0 -1 3124
+D2
+~
+gate~
+1 -1 1401
+S
+#3190
+An opulent sitting room overlooking the Middern River~
+   Situated high above Midgaard, this elegantly decorated room appears very out
+of place compared to the muddy riverbank directly below it.  Several expensive
+paintings hang on the walls, soft music plays from some hidden source, and
+small clusters of leather armchairs are scattered around the room.  Plush
+carpeting partially muffles the sound of the few other visitors as they hold
+conversations and conduct their business.
+   The focus of the room is a massive polished oak desk located in front of
+the completely transparent southern wall.  The desk is staffed by three well-
+dressed young aides bustling back and forth as they talk to guests and move on
+to attend their needs.  Beyond the desk is a panorama of the southern lands,
+visible through one massive window that comprises the entirety of the wall.  The
+breathtaking view is slightly marred by a large set of double doors exiting onto
+a gangplank.  A brilliant metallic zeppelin floats at the end of the ramp, ready
+to depart at a moment's notice.
+~
+31 67117128 0
+D5
+A posh staircase leads back down to the riverbank.
+~
+~
+0 -1 3049
 S
 #3199
 Entrance to the Midgaard Casino~

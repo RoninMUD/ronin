@@ -32,18 +32,61 @@ $State: Exp $
 #ifndef __UTILS_H__
 #define __UTILS_H__
 
-
 #include "utility.h"
 
 extern char *index(const char *s, int c);
 
-#define CHAR_REAL_ROOM(char_s)      (char_s ? (char_s)->in_room_r : NOWHERE)
-#define CHAR_VIRTUAL_ROOM(char_s)   (char_s ? (char_s)->in_room_v : 0)
+#define TRUE                    1
+#define FALSE                   0
 
-#define MOB_NAME(o)                 ((o)->player.name ? (o)->player.name : mob_proto_table[(o)->nr].name)
-#define MOB_DESCRIPTION(o)          (o->player.description ? o->player.description : mob_proto_table[o->nr].description)
-#define MOB_SHORT(o)                (o->player.short_descr ? o->player.short_descr : mob_proto_table[o->nr].short_descr)
-#define MOB_LONG(o)                 (o->player.long_descr ? o->player.long_descr : mob_proto_table[o->nr].long_descr)
+#define LOWER(c)                (((c) >= 'A'  && (c) <= 'Z') ? ((c) + ('a'-'A')) : (c))
+#define UPPER(c)                (((c) >= 'a'  && (c) <= 'z') ? ((c) + ('A'-'a')) : (c))
+#define CAP(st)                 (*(st) = UPPER(*(st)), st)
+#define LOW(st)                 (*(st) = LOWER(*(st)), st)
+
+#define ISNEWL(ch)              ((ch) == '\n' || (ch) == '\r')
+
+#define NUMELEMS(x)             (sizeof(x) / sizeof(x[0]))
+
+#define FIELD_SIZE(t, f)        (sizeof(((struct t*)0)->f))
+
+#define CREATE(result, type, number)                          \
+do {                                                          \
+  if (!((result) = (type *)calloc((number), sizeof(type)))) { \
+    log_f("malloc failure");                                  \
+    abort();                                                  \
+  }                                                           \
+} while (0)
+
+#define RECREATE(result, type, number)                                    \
+do {                                                                      \
+  if (!((result) = (type *)realloc((result), sizeof(type) * (number)))) { \
+    log_f("realloc failure");                                             \
+    abort();                                                              \
+  }                                                                       \
+} while (0)
+
+#define DESTROY(value) \
+do {                   \
+  if (value != NULL) { \
+    free(value);       \
+  }                    \
+} while (0)            \
+
+#define IS_NIGHT                ((time_info.hours > 18) || (time_info.hours < 6))
+#define IS_DAY                  !IS_NIGHT
+
+#define ROOM                    1
+#define ZONE                    2
+#define WORLD                   3
+
+#define CHAR_REAL_ROOM(ch)      (ch ? ch->in_room_r : NOWHERE)
+#define CHAR_VIRTUAL_ROOM(ch)   (ch ? ch->in_room_v : 0)
+
+#define MOB_NAME(mob)               (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
+#define MOB_DESCRIPTION(mob)        (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
+#define MOB_SHORT(mob)              (mob->player.short_descr ? mob->player.short_descr : mob_proto_table[mob->nr].short_descr)
+#define MOB_LONG(mob)               (mob->player.long_descr ? mob->player.long_descr : mob_proto_table[mob->nr].long_descr)
 #define MOB_NUM_ATTACKS(mob)        (mob->specials.no_att)
 #define MOB_ATTACK_TIMER(mob)       (mob->specials.att_timer)
 #define MOB_ATTACK_CHANCE(mob, num) (mob->specials.att_percent[num])
@@ -51,13 +94,13 @@ extern char *index(const char *s, int c);
 #define MOB_ATTACK_TARGET(mob, num) (mob->specials.att_target[num])
 #define MOB_ATTACK_SPELL(mob, num)  (mob->specials.att_spell[num])
 
-#define OBJ_VNUM(obj)           (obj->item_number_v)
 #define OBJ_RNUM(obj)           (obj->item_number)
+#define OBJ_VNUM(obj)           (obj->item_number_v)
 #define OBJ_NUM_IN_GAME(obj)    (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
 #define OBJ_FUNC(obj)           (obj->func)
 #define OBJ_NAME(obj)           (obj->name ? obj->name : obj_proto_table[obj->item_number].name)
 #define OBJ_DESCRIPTION(obj)    (obj->description ? obj->description : obj_proto_table[obj->item_number].description)
-#define OBJ_SHORT(obj)          (obj->short_description ? obj->short_description : obj_proto_table[obj->item_number].short_description)
+#define OBJ_SHORT(obj)          (obj->short_description ? obj->short_description : obj_proto_table[obj->item_number].short_description )
 #define OBJ_ACTION(obj)         (obj->action_description ? obj->action_description : obj_proto_table[obj->item_number].action_description)
 #define OBJ_ACTION_NT(obj)      (obj->action_description_nt ? obj->action_description_nt : obj_proto_table[obj->item_number].action_description_nt)
 #define OBJ_CWEAR_DESC(obj)     (obj->char_wear_desc ? obj->char_wear_desc : obj_proto_table[obj->item_number].char_wear_desc)
@@ -95,59 +138,19 @@ extern char *index(const char *s, int c);
 #define OBJ_IN_OBJ(obj)         (obj->in_obj)
 #define OBJ_CARRIED_BY(obj)     (obj->carried_by)
 #define OBJ_EQUIPPED_BY(obj)    (obj->equipped_by)
+#define OBJ_OWNED_BY(obj)       (obj->owned_by)
 #define OBJ_LOG(obj)            (obj->log)
 #define OBJ_REAL_ROOM(obj)      (obj ? obj->in_room : NOWHERE)
 #define OBJ_VIRTUAL_ROOM(obj)   (obj ? obj->in_room_v : 0)
 
 #define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
+
 #define GET_ID(ch)              ((ch) ? (ch)->ver3.id : -1)
 #define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
 
 #define ROOM_SPEC(rm)           (world[(rm)].spec_tmp)
 #define RM_BLOOD(rm)            (world[rm].blood)
 #define ITEM(zone,x)            ((zone)+(x))
-
-#define IS_NIGHT                (time_info.hours>18||time_info.hours<6)
-#define IS_DAY                  !IS_NIGHT
-#define ROOM                    1
-#define ZONE                    2
-#define WORLD                   3
-
-#define TRUE  1
-#define FALSE 0
-
-#define LOWER(c) (((c)>='A'  && (c) <= 'Z') ? ((c)+('a'-'A')) : (c))
-#define UPPER(c) (((c)>='a'  && (c) <= 'z') ? ((c)+('A'-'a')) : (c) )
-
-#define NUMELEMS(x)             (sizeof(x) / sizeof(x[0]))
-
-#define ISNEWL(ch) ((ch) == '\n' || (ch) == '\r')
-#define IF_STR(st) ((st) ? (st) : "\0")
-#define CAP(st)  (*(st) = UPPER(*(st)), st)
-#define LOW(st)  (*(st) = LOWER(*(st)), st)
-
-#define CREATE(result, type, number)                          \
-do {                                                          \
-  if (!((result) = (type *)calloc((number), sizeof(type)))) { \
-    log_f("malloc failure");                                  \
-    abort();                                                  \
-  }                                                           \
-} while (0)
-
-#define RECREATE(result, type, number)                                    \
-do {                                                                      \
-  if (!((result) = (type *)realloc((result), sizeof(type) * (number)))) { \
-    log_f("realloc failure");                                             \
-    abort();                                                              \
-  }                                                                       \
-} while (0)
-
-#define DESTROY(value) \
-do {                   \
-  if (value != NULL) { \
-    free(value);       \
-  }                    \
-} while (0)            \
 
 #define IS_SET(flag,bit)  ((flag) & (bit))
 
@@ -159,12 +162,6 @@ do {                   \
 
 #define SET_BIT(var,bit)     ((var) = (var) | (bit))
 #define REMOVE_BIT(var,bit)  ((var) = (var) & ~(bit) )
-
-#define WIZ_INV(ch, vict) \
-( (((vict)->new.wizinv > GET_LEVEL(ch))  && !IS_NPC(vict)) || \
-  (((vict)->new.wizinv > LEVEL_IMM) && IS_NPC(ch)) )
-
-#define IMP_INV(ch, vict) (IS_AFFECTED(vict, AFF_IMINV) && GET_LEVEL(ch) < LEVEL_IMM && !CHAOSMODE)
 
 #define GET_REQ(i) (i<2  ? "Awful" :(i<4  ? "Bad"     :(i<7  ? "Poor"      :\
 (i<10 ? "Average" :(i<14 ? "Fair"    :(i<20 ? "Good"    :(i<24 ? "Very good" :\
@@ -182,20 +179,6 @@ do {                   \
 #define ANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
 #define SANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
 
-#define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
-#define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
-#define IS_MOUNT(ch)       (ch ? IS_SET(ch->specials.act, ACT_MOUNT) : FALSE)
-
-#define IS_MORTAL(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
-
-#define IS_IMMORTAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMM)) : FALSE)
-#define IS_DEITY(ch)       (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_DEI)) : FALSE)
-#define IS_TEMPORAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_TEM)) : FALSE)
-#define IS_WIZARD(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_WIZ)) : FALSE)
-#define IS_ETERNAL(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_ETE)) : FALSE)
-#define IS_SUPREME(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_SUP)) : FALSE)
-#define IS_IMPLEMENTOR(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMP)) : FALSE)
-
 #define GET_POS(ch)        ((ch)->specials.position)
 #define GET_COND(ch, i)    ((ch)->specials.conditions[(i)])
 
@@ -209,6 +192,7 @@ do {                   \
 #define GET_CLASS(ch)      ((ch)->player.class)
 #define GET_HOME(ch)       ((ch)->player.hometown)
 #define GET_AGE(ch)        (age(ch).year)
+#define GET_WIMPY(ch)      ((ch)->new.wimpy)
 
 #define GET_STR(ch)     ((ch)->tmpabilities.str)
 #define GET_ADD(ch)     ((ch)->tmpabilities.str_add)
@@ -216,7 +200,7 @@ do {                   \
 #define GET_INT(ch)     ((ch)->tmpabilities.intel)
 #define GET_WIS(ch)     ((ch)->tmpabilities.wis)
 #define GET_CON(ch)     ((ch)->tmpabilities.con)
-#define GET_WIMPY(ch)   ((ch)->new.wimpy)
+
 #define GET_OSTR(ch)    ((ch)->abilities.str)
 #define GET_OADD(ch)    ((ch)->abilities.str_add)
 #define GET_ODEX(ch)    ((ch)->abilities.dex)
@@ -266,12 +250,12 @@ do {                   \
 
 #define CAN_CARRY_W(ch) (\
   IS_IMMORTAL(ch) ? 10000 : \
-  (ch->ver3.prestige >= 20) ? (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
+  (ch->ver3.prestige >= 20) ? (int)(str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
 
 #define CAN_CARRY_N(ch) (\
   IS_IMMORTAL(ch) ? 200 : \
   ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : \
-  (ch->ver3.prestige >= 14) ? ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
+  (ch->ver3.prestige >= 14) ? (int)((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
 
 #define CAN_CARRY_OBJ(ch, obj) ( \
   IS_IMMORTAL(ch) || \
@@ -398,9 +382,33 @@ do {                   \
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
 #define GET_LAST_DIR(mob) (mob->specials.last_direction)
 #define GET_PRESTIGE(ch) (ch->ver3.prestige)
-#define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? (GET_PRESTIGE(ch) - 5 / 10) : 0)
+#define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? ((int)(GET_PRESTIGE(ch) + 5) / 10) : 0)
 #define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
+#define GET_WAIT(ch) (GET_DESCRIPTOR(ch)->wait)
+#define GET_DEFAULT_POSITION(ch) (ch->specials.default_pos)
+#define GET_QUEST_GIVER(ch) (ch->questgiver)
+#define GET_QUEST_OBJ(ch) (ch->questobj)
+#define GET_QUEST_OWNER(ch) (ch->questowner)
+#define GET_QUEST_MOB(ch) (ch->questmob)
+#define GET_QUEST_LEVEL(ch) (ch->quest_level)
+#define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
 
-#define FIELD_SIZE(t,f) sizeof(((struct t*)0)->f)
+#define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
+#define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
+#define IS_MOUNT(ch)       (ch ? IS_SET(ch->specials.act, ACT_MOUNT) : FALSE)
+
+#define IS_MORTAL(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
+#define IS_IMMORTAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMM)) : FALSE)
+#define IS_DEITY(ch)       (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_DEI)) : FALSE)
+#define IS_TEMPORAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_TEM)) : FALSE)
+#define IS_WIZARD(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_WIZ)) : FALSE)
+#define IS_ETERNAL(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_ETE)) : FALSE)
+#define IS_SUPREME(ch)     (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_SUP)) : FALSE)
+#define IS_IMPLEMENTOR(ch) (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMP)) : FALSE)
+
+#define WIZ_INV(ch, vict)        (GET_WIZINV(vict) && ((!IS_NPC(vict) && (GET_WIZINV(vict) > GET_LEVEL(ch))) || (IS_NPC(ch) && (GET_WIZINV(vict) > LEVEL_IMM))))
+#define IMP_INV(ch, vict)        (IS_AFFECTED(vict, AFF_IMINV) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !((GET_LEVEL(vict) <= GET_LEVEL(ch)) && IS_AFFECTED2(ch, AFF2_PERCEIVE)) && !CHAOSMODE)
+#define NRM_INV(ch, vict)        (IS_AFFECTED(vict, AFF_INVISIBLE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED(ch, AFF_DETECT_INVISIBLE) && !((GET_LEVEL(vict) <= GET_LEVEL(ch)) && IS_AFFECTED2(ch, AFF2_PERCEIVE)))
+#define IS_HIDING_FROM(ch, vict) (IS_AFFECTED(vict, AFF_HIDE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED2(ch, AFF2_PERCEIVE))
 
 #endif /* __UTILS_H__ */

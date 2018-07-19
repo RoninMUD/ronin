@@ -4461,7 +4461,7 @@ void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   af.modifier   = 0;
   af.location   = 0;
   af.bitvector  = 0;
-  af.bitvector2 = 0;
+  af.bitvector2 = AFF2_PERCEIVE;
 
   affect_to_char(victim, &af);
 

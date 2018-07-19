@@ -14,6 +14,26 @@ for coming here more often.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#3110
+wesley wainwright clerk desk~
+Wesley J. Wainwright, Esquire~
+A sharply dressed clerk stands behind the desk, awaiting your command.
+~
+   Wesley is a prim and proper man.  He stands ramrod straight, his posture
+never wavering.  The impeccably tailored suit he wears is a subdued shade of
+gray and covers a heavily starched shirt.  He speaks precisely, choosing the
+every word with care and delivering them with the slight hint of an accent. His
+bearing never wavers as he efficiently addresses the needs of the previous
+client to approach his work space, and then turns to greet the next.
+~
+74 134220928 -300 Y
+51 0 0 123d456+0 10d20+30
+1234321 1234321
+8 8 1
+87 0 100d1+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
 #3120
 sexton~
 the Sexton~
