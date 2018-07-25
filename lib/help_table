@@ -7929,7 +7929,9 @@ in combat with an enemy that is in a weakened state (near death), the commando
 will automatically attempt to snipe their opponent with a deadly attack.  This
 attack inflicts 20 to 30 times the commando's class level, for a minimum of 1000
 damage, and a maximum of 1500 damage at level 50.  This attack is automatic and
-is attempted approximately every 10 seconds and has a fixed success rate of 20%.
+is attempted approximately every 10 seconds.  Its chance of success is based on
+the target's remaining hit points, with a more wounded target being more prone
+to being sniped.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #

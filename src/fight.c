@@ -1577,6 +1577,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   int i = 0;
   int j = 0;
   int nr = 0;
+  double damage_reduction = 0.0;
 
   original_damage = dmg;
 
@@ -2014,35 +2015,23 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (con_app[GET_CON(victim)].reduct / 100.0)));
   }
 
-  /* Sanctuary and Templar SC5: Fortification */
-  if (IS_AFFECTED(victim, AFF_SANCTUARY)) {
-    if (affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
-      /* 15% reduction with only Fortification. */
-      if (affected_by_spell(victim, SPELL_FORTIFICATION)) {
-        dmg = lround(dmg * 0.85);
-      }
-    }
-    else {
-      /* 65% reduction with both Sanctuary and Fortification. */
-      if (affected_by_spell(victim, SPELL_FORTIFICATION)) {
-        dmg = lround(dmg * 0.35);
-      }
-      /* 50% reduction with only Sanctuary. */
-      else {
-        dmg = lround(dmg * 0.50);
-      }
-    }
+  /* Sanctuary */
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
+    damage_reduction += 0.5;
   }
+
+  /* Fortification */
+  if (affected_by_spell(victim, SPELL_FORTIFICATION)) {
+    damage_reduction += 0.15;
+  }
+
+  /* Damage Reduction Effects */
+  dmg = lround(dmg * (1.0 - damage_reduction));
 
   /* Bandit SC5: Evasion */
   if (((damage_type == DAM_PHYSICAL) || (damage_type == DAM_SKILL)) &&
       affected_by_spell(victim, SKILL_EVASION)) {
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-      dmg = lround(dmg * 0.80); /* 20% reduction when Chaotic. */
-    }
-    else {
-      dmg = lround(dmg * 0.75); /* 25% reduction normally. */
-    }
+    dmg = lround(dmg * 0.75);
   }
 
   /* Bullwark */
@@ -2053,11 +2042,17 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (((abs(calc_ac(victim)) - 250.0) / 3.0) / 100.0)));
   }
 
-  /* Ronin SC3: Combat Zen grants half damage from poison. */
   if (IS_MORTAL(victim) &&
-      damage_type == DAM_POISON &&
-      check_subclass(victim, SC_RONIN, 3)) {
-    dmg = lround(dmg * 0.50);
+      damage_type == DAM_POISON) {
+    /* One with Nature */
+    if (check_subclass(victim, SC_DRUID, 1)) {
+      dmg = 0;
+    }
+
+    /* Combat Zen */
+    if (check_subclass(victim, SC_RONIN, 3)) {
+      dmg = lround(dmg * 0.50);
+    }
   }
 
   /* Limit total damage. */
@@ -2119,17 +2114,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Cleric Level 50: Divine Intervention */
   if (affected_by_spell(victim, SPELL_DIVINE_INTERVENTION) &&
       (GET_POS(victim) <= POSITION_INCAP)) {
-    /* Divine Intervention doesn't work on actively Degenerated people. */
-    if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-        (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-      send_to_char("Your call to the gods to intervene and heal your degenerated body falls on deaf ears.\n\r", victim);
-    }
-    else {
-      GET_HIT(victim) = GET_MAX_HIT(victim);
+    GET_HIT(victim) = GET_MAX_HIT(victim);
 
-      act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
-      send_to_char("Your life has been restored by divine forces.\n\r", victim);
-    }
+    act("$n's life has been restored by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
+    send_to_char("Your life has been restored by divine forces.\n\r", victim);
 
     affect_from_char(victim, SPELL_DIVINE_INTERVENTION);
 
@@ -2264,9 +2252,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     default:
       /* Handle player wimpy. */
       if (!IS_NPC(victim) &&
-          GET_HIT(victim) < GET_WIMPY(victim) &&
           !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) &&
-          damage_type != DAM_NO_BLOCK_NO_FLEE) {
+          (GET_HIT(victim) < GET_WIMPY(victim)) &&
+          (damage_type != DAM_NO_BLOCK_NO_FLEE) &&
+          !affected_by_spell(victim, SPELL_DIVINE_INTERVENTION)) {
         do_flee(victim, "", CMD_FLEE);
 
         if (!SAME_ROOM(ch, victim)) return dmg;
@@ -2785,10 +2774,10 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int mode) {
       dam = 1;
     }
 
-    /* Clarity Damage Penalty */
-    if (affected_by_spell(ch, SPELL_CLARITY)) {
-      dam = 0;
-    }
+    /* TODO: Shapeshift Damage Penalty */
+    //if (affected_by_spell(ch, SPELL_CLARITY)) {
+    //  dam = 0;
+    //}
   }
 
   return dam;
@@ -3074,7 +3063,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
           hit(defender, attacker, TYPE_UNDEFINED);
 
-          if (CHAR_REAL_ROOM(defender) == NOWHERE || CHAR_REAL_ROOM(attacker) == NOWHERE) {
+          if (!SAME_ROOM(attacker, defender)) {
             return FALSE;
           }
 
@@ -3408,26 +3397,6 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
           damage(ch, victim, dam, SKILL_FLANK, DAM_PHYSICAL);
         }
         break;
-
-      //case SKILL_CHARGE:
-      //  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
-      //  {
-      //    act("$n tries to charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-      //    act("$n tries to charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
-      //    act("You try to charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
-
-      //    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-      //  }
-      //  else
-      //  {
-      //    act("With a bloodthirsty scream, $n charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-      //    act("With a bloodthirsty scream, $n charges you.", FALSE, ch, 0, victim, TO_VICT);
-      //    act("With a bloodthirsty scream, you charge $N.", FALSE, ch, 0, victim, TO_CHAR);
-
-      //    dam *= 2;
-      //    damage(ch, victim, dam, SKILL_CHARGE, DAM_PHYSICAL);
-      //  }
-      //  break;
 
       case SKILL_ASSAULT:
         if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL))
@@ -3997,24 +3966,27 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
 }
 
 
-int dirty_tricks_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-{
-  int set_pos = 0;
+int dirty_tricks_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg) {
+  if (cmd == MSG_MOBACT) {
+    act("Blood oozes from your gaping wound.", FALSE, ch, 0, 0, TO_CHAR);
+    act("Blood oozes from $n's gaping wound.", TRUE, ch, 0, 0, TO_ROOM);
 
-  if (cmd != MSG_MOBACT) return FALSE;
+    int set_pos = GET_POS(ch);
+    int dmg = dice(3, 12);
 
-  act("Blood oozes from your gaping wound.", FALSE, enchanted_ch, 0, 0, TO_CHAR);
-  act("Blood oozes from $n's gaping wound.", TRUE, enchanted_ch, 0, 0, TO_ROOM);
+    if (dmg >= GET_HIT(ch)) {
+      dmg = GET_HIT(ch) - 1;
+    }
 
-  set_pos = GET_POS(enchanted_ch);
+    damage(ch, ch, dmg, SKILL_DIRTY_TRICKS, DAM_PHYSICAL);
 
-  damage(enchanted_ch, enchanted_ch, dice(3, 12), SKILL_DIRTY_TRICKS, DAM_PHYSICAL);
+    GET_POS(ch) = set_pos;
 
-  GET_POS(enchanted_ch) = set_pos;
+    return FALSE;
+  }
 
   return FALSE;
 }
-
 
 void dirty_tricks_action(CHAR *ch, CHAR *victim) {
   ENCH ench;
@@ -4024,6 +3996,9 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
   int set_pos = 0;
 
   if (!ch || !victim) return;
+
+  /* 1.8 average attempts per 60 seconds, or 18 combat rounds. */
+  if (!chance(10)) return;
 
   if (!GET_WEAPON(ch) || affected_by_spell(victim, SKILL_DIRTY_TRICKS)) {
     can_stab = FALSE;
@@ -4113,18 +4088,52 @@ void dirty_tricks_action(CHAR *ch, CHAR *victim) {
   }
 }
 
+
+int snipe_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg) {
+  if (cmd == MSG_MOBACT) {
+    enchantment_remove(ch, ench, FALSE);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 void snipe_action(CHAR *ch, CHAR *victim) {
   if (!ch || !victim) return;
 
+  char buf[MIL];
+
+  snprintf(buf, sizeof(buf), "Sniped by %s", GET_NAME(ch));
+
+  if (enchanted_by(victim, buf)) return;
+
   int dmg = GET_LEVEL(ch) * number(25, 30);
 
-  if (((GET_HIT(victim) <= (GET_MAX_HIT(victim) * 0.2)) || (GET_HIT(victim) <= dmg)) && chance(20)) {
-    act("You take advantage of $N's weakness and snipe $M with a deadly attack!", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n takes advantage of your weakness and snipes you with a deadly attack!", FALSE, ch, 0, victim, TO_VICT);
-    act("$n takes advantage of $N's weakness and snipes $m with a deadly attack!", FALSE, ch, 0, victim, TO_NOTVICT);
+  double percent = (double)GET_HIT(victim) / (double)GET_MAX_HIT(victim);
 
-    damage(ch, victim, dmg, SKILL_SNIPE, DAM_PHYSICAL);
-  }
+  int check = ((GET_HIT(victim) > (dmg * (IS_AFFECTED(victim, AFF_SANCTUARY) ? 0.5 : 1.0))) ? (int)(100 * (0.5 - percent)) : MIN(100, (int)(10 * (1.0 / percent))));
+
+  if (!check || !chance(check)) return;
+
+  act("You take advantage of $N's weakness and snipe $M with a deadly attack!", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n takes advantage of your weakness and snipes you with a deadly attack!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n takes advantage of $N's weakness and snipes $m with a deadly attack!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  damage(ch, victim, dmg, SKILL_SNIPE, DAM_PHYSICAL);
+
+  ENCH ench;
+
+  ench.name       = strdup(buf);
+  ench.type       = SKILL_SNIPE;
+  ench.duration   = 0;
+  ench.location   = 0;
+  ench.modifier   = 0;
+  ench.bitvector  = 0;
+  ench.bitvector2 = 0;
+  ench.func       = snipe_enchantment;
+
+  enchantment_to_char(victim, &ench, FALSE);
 }
 
 
@@ -4135,6 +4144,7 @@ void perform_violence(void) {
 
   for (ch = combat_list; ch; ch = combat_next_dude) {
     combat_next_dude = ch->next_fighting;
+
     assert(vict = GET_OPPONENT(ch));
 
     if (AWAKE(ch) && SAME_ROOM(ch, vict)) {
@@ -4165,12 +4175,11 @@ void perform_violence(void) {
         victimize_action(ch, vict);
       }
 
-      /* 30% average per MSG_MOBACT (1.8 average attempts per 60 seconds, or 18 combat rounds). */
-      if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && chance(10) && SAME_ROOM(ch, vict)) {
+      if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && SAME_ROOM(ch, vict)) {
         dirty_tricks_action(ch, vict);
       }
 
-      if (affected_by_spell(ch, SKILL_SNIPE) && chance(20) && SAME_ROOM(ch, vict)) {
+      if (affected_by_spell(ch, SKILL_SNIPE) && SAME_ROOM(ch, vict)) {
         snipe_action(ch, vict);
       }
     }

@@ -945,42 +945,45 @@ void heartbeat(int pulse) {
     if (point->prompt_mode) {
       give_prompt(point);
     }
+
     /* Addition of descriptor timer and disconnect - Ranger Dec 2000 */
-    if(!(pulse % PULSE_TICK) && !GAMEHALT && STATE(point)!=CON_PLYNG) {
+    if (!(pulse % PULSE_TICK) && !GAMEHALT && STATE(point) != CON_PLYNG) {
       point->timer++;
-      if(point->timer>30) {
+
+      if (point->timer > 30) {
         sprintf(buf, "WIZINFO: Closing socket %d - idle at menu.", point->descriptor);
         wizlog(buf, LEVEL_IMM, 5);
         log_s(buf);
+
         close_socket(point);
       }
     }
   }
 
-  if (!(pulse % PULSE_ZONE) && !GAMEHALT) 
+  if (!(pulse % PULSE_ZONE) && !GAMEHALT)
     zone_update();
-  
 
   if (!(pulse % PULSE_MOBILE) && !GAMEHALT)
-    signal_world(NULL,MSG_MOBACT,"");
+    signal_world(NULL, MSG_MOBACT, "");
 
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
     /* Moved flying part down - Ranger March 98 */
     /* Changed loop to top_of_fly - made it a pointer - Ranger Nov 98 */
-    for (i = 0;i<top_of_flying; i++) flying_room(*(flying_rooms+i));
-    for (i = 0;i < NUMELEMS(msg_violence_objects);i++) /* array of objects to signal */
-    {
-      if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
+    for (i = 0; i < top_of_flying; i++)
+      flying_room(*(flying_rooms + i));
 
+    /* array of objects to signal */
+    for (i = 0; i < NUMELEMS(msg_violence_objects); i++) {
+      if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
         for (obj = object_list; obj; obj = obj->next) {
           if (msg_violence_objects[i] == obj->item_number_v) {
-            signal_object(obj,0,MSG_VIOLENCE,"");
+            signal_object(obj, 0, MSG_VIOLENCE, "");
           }
         }
       }
     }
-    perform_violence();
 
+    perform_violence();
   }
 
   if (!(pulse % PULSE_TICK) && !GAMEHALT) { /* 1 minute */
@@ -2787,14 +2790,8 @@ void pulse_mantra(CHAR *ch) {
           gain = ((gain * 12) / 10);
         }
 
-        if (affected_by_spell(ch, SPELL_DEGENERATE) &&
-            (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
-          send_to_char("Your trance fails to heal your degenerated body.\n\r", ch);
-        }
-        else {
-          send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
-          magic_heal(ch, SKILL_MANTRA, gain, FALSE);
-        }
+        send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
+        magic_heal(ch, SKILL_MANTRA, gain, FALSE);
       }
 
       mantra_dispel = get_random_set_effect(ch, mantra_dispel_types);
@@ -3100,9 +3097,11 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
   if (CHAR_REAL_ROOM(ch) == -1) return FALSE;
 
-  if (cmd == MSG_TICK && !IS_NPC(ch)) {
-    /* Shadow Wraith */
-    pulse_shadow_wraith(ch);
+  if (cmd == MSG_TICK) {
+    if (!IS_NPC(ch)) {
+      /* Shadow Wraith */
+      pulse_shadow_wraith(ch);
+    }
   }
 
   if (cmd == MSG_MOBACT) {
