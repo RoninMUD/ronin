@@ -724,7 +724,7 @@ sufficating, sulfuric steam that rises almost invisibly towards
 the hole in the chamber ceiling.  The crimson magma glow makes
 the steam shimmer, making it hard to see through.
 ~
-175 0 0
+175 32768 0
 D1
 It looks possible to climb up the ledge on the eastern side of the pit.
 ~
@@ -743,7 +743,7 @@ tunnel below.  The naked walls do not appear to support climbing,
 but for those who dare to take the risk, it may be possible to
 jump into the darkness below.
 ~
-175 0 0
+175 32768 0
 D1
 The cave is too dark to make out anything in particular.
 ~
@@ -761,7 +761,7 @@ In the Deeper Tunnels~
 the western wall.  The tunnel appears to be very tall here, the
 ceiling too high to percieve in the darkness.
 ~
-175 0 0
+175 32768 0
 D1
 The utter darkness prevents you from making out anything down the tunnel.
 ~
