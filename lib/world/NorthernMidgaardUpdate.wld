@@ -239,19 +239,20 @@ S
 #3007
 The Grunting Boar~
    Fragments of light stab through the dusty air casting patchwork illumination
-on the seats and alcoves of the bar room. The hardwood floor has been worn 
-from years of travelers' boots while the bar shows the dents and scrapes of an 
+on the seats and alcoves of the bar room. The hardwood floor has been worn
+from years of travelers' boots while the bar shows the dents and scrapes of an
 endless stream of mugs. A large bar fashioned from the stump of a giant tree
-dominates the center of the room. Rising from the floor, the center has been 
-hollowed out to allow space for the bartender and shelves upon shelves of 
-liquors and spirits from all over the realm. A small fire casts flickering 
-points of light to dance on the dusty paintings covering the walls. Depicting 
-scenes of bravery and horrifying blunders, they cover every section of the 
+dominates the center of the room. Rising from the floor, the center has been
+hollowed out to allow space for the bartender and shelves upon shelves of
+liquors and spirits from all over the realm. A small fire casts flickering
+points of light to dance on the dusty paintings covering the walls. Depicting
+scenes of bravery and horrifying blunders, they cover every section of the
 wall, overlapping in a violent collection of images and colors.
-   To the west the low door opens into a small courtyard, the doorway to a 
-small shop and the stairs leading up to the reception area clearly visible 
-outside. 
-   A small sign has been tacked to the face of the bar.
+   To the west the low door opens into a small courtyard, the doorway to a
+small shop and the stairs leading up to the reception area clearly visible
+outside.
+   A small sign tacked to the face of the bar promises enduring fame and
+fortune.
 ~
 30 67108872 0
 D0
@@ -268,18 +269,16 @@ The courtyard before the Grunting Boar is visible.
 ~
 0 -1 3006
 E
-sign~
-The sign reads:
-Free instructions provided by the Grunting Boar Inn.
-
-   Buy  - Buy something (drinkable) from the bartender.
-   List - The bartender will show you all the different drinks and
-          specialities, and tell the price of each.
-~
-E
 writing carving carvings symbols symbol~
 Although it is very hard to understand, you think it looks a lot like beer,
 poems about beer, and small beer-mugs.
+~
+E
+sign~
+The sign describes the basics of the Prestige system:
+
+Type 'list' to see all the perks that come with earning prestige, 'earn prestige'
+to increase your current level of prestige, or 'help prestige' for more details.
 ~
 S
 #3008
