@@ -1046,7 +1046,7 @@ void do_brief(struct char_data *ch, char *argument, int cmd) {
   send_to_char("             tagline - You will not see player/NPC taglines.\n\r", ch);
   send_to_char("             fight   - You will not see verbose hit messages for other players.\n\r", ch);
   send_to_char("             list    - Shows your active brief settings.\n\r", ch);
-  send_to_char("             all     - Toggles all breif modes on or off.\n\r\n\r", ch);
+  send_to_char("             all     - Toggles all brief modes on or off.\n\r\n\r", ch);
 }
 
 void do_compact(struct char_data *ch, char *argument, int cmd)

@@ -202,12 +202,12 @@ int rv2_calc_remort_mult(CHAR *ch) {
   adjust = MAX(0, GET_NAT_MANA(ch) - min - prestige_mana) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
-  int mult = 24;
+  result = MIN(result, 24);
 
   // Prestige Perk 1
-  if (GET_PRESTIGE_PERK(ch) >= 1) mult += 1;
+  if (GET_PRESTIGE_PERK(ch) >= 1) result += 1;
 
-  return MIN(result, mult);
+  return result;
 }
 
 /* Give the player remort experience (if they deserve it), and return how much experience was given. */

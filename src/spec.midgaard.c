@@ -6070,7 +6070,7 @@ int gear_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 
 const char * const prestige_perk_descriptions[] = {
-  "1x increased maximum remort experience multiplier.",                                             // Prestige Perk 1
+  "1x increased remort experience multiplier (maximum of 25x).",                                    // Prestige Perk 1
   "5% chance for free rent, determined after logging in.",                                          // Prestige Perk 2
   "1% increased chance for half-price metas.",                                                      // Prestige Perk 3
   "10% experience and gold discount on rank purchases.",                                            // Prestige Perk 4
