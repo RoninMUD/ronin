@@ -1675,7 +1675,7 @@ armor points for every 5 levels.
  
 You can improve your skills by using the practice command.
  
-Skills: backstab, circle, dodge, hide, sneak, steal, peek, pick, throw,
+Skills: backstab, circle, dodge, hide, kick, sneak, steal, peek, pick, throw,
         coin toss, scan (level 35), twist (level 45), cunning (level 50)
  
 See also: PRACTICE "CLASS PLACEMENT POINTS"
@@ -1827,7 +1827,7 @@ Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
 Hidden Blade  Y
-Kick          Y              Y         Y    Y    Y         Y
+Kick          Y              Y         Y    Y    Y    Y    Y
 Knock                                                      Y
 Peek          Y    Y                        Y         Y
 Pick          Y    Y                        Y         Y
@@ -2047,17 +2047,16 @@ stay in the victim's inventory.
 #
 KICK
 
-Class: Anti-Paladin Commando Ninja Nomad Paladin Warrior
+Class: Anti-Paladin Commando Ninja Nomad Paladin Thief Warrior
 
-The success of a kick depends upon how well you learned the skill. The higher
-your level, the harder you kick. There is one small catch - whenever you kick
-and connect, you will be unable to type any command for three rounds of
-'Violence'.  If you miss it is two rounds... so be sure that you do not need to
-flee!
+Kick is a combat skill that inflicts damage equal to two times the attacker's
+class level.  The user will experience 3 rounds of skill lag after a successful
+kick, and 2 rounds of skill lag on a failure.
 
-Kick damage is limited to 60.
+The success of this skill is based on how well it is practiced, and
+the character's Dexterity.
 
-See Also: RESCUE, BASH
+See Also: PRACTICE DEXTERITY
 #
 BASH
 
@@ -7743,9 +7742,9 @@ multiplied by between the Gladiator's level divided by 10, up to to their level
 divided by 5 (between a 5x to a 10x multiplier at level 50).
 
 This attack can only be successful when performed against a target that is
-either in an terrible or bleeding condition (20% hit points remaining, or less),
-or if the damage would cause the victim to die in one strike.  This ability is
-similar to Backstab, but is used at the end of combat, instead of the beginning.
+close to death (30% hit points remaining, or less), or if the damage would cause
+the victim to die in one strike.  This ability is similar to Backstab, but is
+used at the end of combat, instead of the beginning.
 
 The Gladiator will experience 3 rounds of input lag after using Disembowel,
 regardless of success or failure.
@@ -7927,8 +7926,8 @@ Usage: snipe (toggles on/off)
 The Legionnaire has honed their combat skills to near perfection.  When engaged
 in combat with an enemy that is in a weakened state (near death), the commando
 will automatically attempt to snipe their opponent with a deadly attack.  This
-attack inflicts 20 to 30 times the commando's class level, for a minimum of 1000
-damage, and a maximum of 1500 damage at level 50.  This attack is automatic and
+attack inflicts 15 to 25 times the commando's class level, for a minimum of 750
+damage, and a maximum of 1250 damage at level 50.  This attack is automatic and
 is attempted approximately every 10 seconds.  Its chance of success is based on
 the target's remaining hit points, with a more wounded target being more prone
 to being sniped.

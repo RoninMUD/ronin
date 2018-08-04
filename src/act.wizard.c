@@ -476,12 +476,12 @@ Usage: setflag <victim> <flag>\n\r", ch);
         send_to_char("You cannot set the severed flag.\n\r", ch);
         return;
       }
-      if (IS_SET(vict->specials.affected_by2,AFF_SEVERED)) {
+      if (IS_SET(vict->specials.affected_by2,AFF2_SEVERED)) {
         send_to_char("Severed affect removed.\n\r", ch);
-        REMOVE_BIT(vict->specials.affected_by2,AFF_SEVERED);
+        REMOVE_BIT(vict->specials.affected_by2,AFF2_SEVERED);
       } else {
         send_to_char("Severed affect added.\n\r", ch);
-        SET_BIT(vict->specials.affected_by2,AFF_SEVERED);
+        SET_BIT(vict->specials.affected_by2,AFF2_SEVERED);
       }
     }
     else if (!strcmp(buf2, "chaos")) {
@@ -8105,14 +8105,14 @@ void do_rip(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if(IS_SET(victim->specials.affected_by2,AFF_SEVERED) || !CHAR_HAS_LEGS(victim)) {
+  if(IS_SET(victim->specials.affected_by2,AFF2_SEVERED) || !CHAR_HAS_LEGS(victim)) {
     act("$N has no legs to rip off.",0,ch,0,victim,TO_CHAR);
     return;
   }
 
   log_f("%s ripped by %s.", IS_NPC(victim) ? MOB_SHORT(victim) : GET_NAME(victim), GET_NAME(ch));
 
-  SET_BIT(victim->specials.affected_by2,AFF_SEVERED);
+  SET_BIT(victim->specials.affected_by2,AFF2_SEVERED);
   if(!IS_NPC(victim))
     act("$n picks you up and rips you in half!",0,ch,0,victim,TO_VICT);
   act("$n picks up $N and rips $S legs off!",0,ch,0,victim,TO_NOTVICT);

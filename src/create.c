@@ -1609,8 +1609,8 @@ INVUL, DUAL, FURY, PROTECT-GOOD, TRIPLE, QUAD.\r\n", ch);
                else {
                  mob_proto_table[mob].affected_by = AFF_FINAL-1;
                  mob_proto_table[mob].affected_by2 = AFF2_FINAL-1;
-                 mob_proto_table[mob].affected_by2 -= AFF_SEVERED;
-                 mob_proto_table[mob].affected_by2 -= AFF_IMMINENT_DEATH;
+                 mob_proto_table[mob].affected_by2 -= AFF2_SEVERED;
+                 mob_proto_table[mob].affected_by2 -= AFF2_IMMINENT_DEATH;
                }
                }
              else
@@ -7145,8 +7145,8 @@ Affs are:  `iBLIND, INVISIBLE, DETECT-ALIGNMENT, DETECT-INVISIBLE,\n\r\
     mob_proto_table[rmob].affected_by = (1<<(bitpos-1)) -1;
     bitpos=old_search_block("\n", 0, strlen("\n"), affected_bits2, FALSE);
     mob_proto_table[rmob].affected_by2 = (1<<(bitpos-1)) -1;
-    mob_proto_table[rmob].affected_by2 -= AFF_SEVERED;
-    mob_proto_table[rmob].affected_by2 -= AFF_IMMINENT_DEATH;
+    mob_proto_table[rmob].affected_by2 -= AFF2_SEVERED;
+    mob_proto_table[rmob].affected_by2 -= AFF2_IMMINENT_DEATH;
     send_to_char("`iAll mob affects added.`q\n\r",ch);
     return;
   }

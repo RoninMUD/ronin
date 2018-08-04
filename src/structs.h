@@ -76,6 +76,9 @@ typedef char byte;
 #define NPC_STATUE   4
 #define CHAOS_CORPSE 5
 
+#define STATUE_PEACE 9
+#define WALL_THORNS  34
+
 /* Keep times a multiple of 10 for the decay messages */
 #define MAX_NPC_CORPSE_TIME   10
 #define MAX_PC_CORPSE_TIME    60
@@ -293,10 +296,13 @@ struct tagline_data
 #define MAX_OBJ_AFFECT       3         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 #define OFILE_MAX_OBJ_AFFECT 2         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 
+#define MAX_OBJ_VALUE 4
+#define MAX_OBJ_SKIN  6
+
 struct obj_flag_data
 {
-  int value[4];       /* Values of the item (see list)    */
-  int skin_vnum[6];   /* skin loading items - Ranger Feb 2001 */
+  int value[MAX_OBJ_VALUE];       /* Values of the item (see list)    */
+  int skin_vnum[MAX_OBJ_SKIN];   /* skin loading items - Ranger Feb 2001 */
   ubyte type_flag;    /* Type of item                     */
   int wear_flags;     /* Where you can wear it            */
   int extra_flags;    /* If it hums,glows etc             */
@@ -490,8 +496,10 @@ struct room_data
 #define WEAR_WAIST    13
 #define WEAR_WRIST_R  14
 #define WEAR_WRIST_L  15
-#define WIELD         16
-#define HOLD          17
+#define WEAR_WIELD    16
+#define WIELD         WEAR_WIELD
+#define WEAR_HOLD     17
+#define HOLD          WEAR_HOLD
 
 /* For 'char_payer_data' */
 #define MAX_TONGUE  3   /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
@@ -543,10 +551,10 @@ struct room_data
 
 /* Bitvector for 'affected_by2' */
 /* Don't forget to update do_affect if you add something here. */
-#define AFF_TRIPLE           1
-#define AFF_IMMINENT_DEATH   2 /* also uses death_timer */
-#define AFF_SEVERED          4
-#define AFF_QUAD             8
+#define AFF2_TRIPLE           1
+#define AFF2_IMMINENT_DEATH   2
+#define AFF2_SEVERED          4
+#define AFF2_QUAD             8
 #define AFF2_FORTIFICATION   16
 #define AFF2_PERCEIVE        32
 #define AFF2_RAGE            64

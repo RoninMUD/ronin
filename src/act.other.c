@@ -189,7 +189,7 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
 
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && !IS_NPC(ch) &&
      !ch->specials.death_timer &&
-     !IS_SET(ch->specials.affected_by2,AFF_SEVERED)) {
+     !IS_SET(ch->specials.affected_by2,AFF2_SEVERED)) {
     sprintf(buf,"\n\rThe Dungeonmaster (chaos) [ ** %s wimps out at %s ** ]\n\r\n\r",
             GET_NAME(ch),world[CHAR_REAL_ROOM(ch)].name);
     for(d = descriptor_list; d; d = d->next) {
@@ -754,25 +754,23 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-void list_skills_to_prac(CHAR *ch);
-void list_spells_to_prac(CHAR *ch,int listall); /* In spec.midgaard.c */
-void do_practice(CHAR *ch, char *arg, int cmd)
-{
+
+void list_skills_to_prac(CHAR *ch, bool list_all);
+void list_spells_to_prac(CHAR *ch, bool list_all);
+void do_practice(CHAR *ch, char *arg, int cmd) {
   int showSpells = FALSE;
   int showSkills = FALSE;
 
   if (!ch->desc || !ch->skills) return;
 
-  if (*arg)
-  {
+  if (*arg) {
     send_to_char("`iYou can't practice here.`q\n\r", ch);
     return;
   }
 
   send_to_char("`iYou are currently practiced in these areas:`q\n\r\n\r", ch);
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
       showSpells = TRUE;
       break;
@@ -803,7 +801,7 @@ void do_practice(CHAR *ch, char *arg, int cmd)
   }
 
   if (showSkills) {
-    list_skills_to_prac(ch);
+    list_skills_to_prac(ch, TRUE);
   }
 
   if (showSpells && showSkills) {
@@ -814,6 +812,7 @@ void do_practice(CHAR *ch, char *arg, int cmd)
     list_spells_to_prac(ch, TRUE);
   }
 }
+
 
 void do_useidea(struct char_data *ch, char *argument, int cmd)
 {

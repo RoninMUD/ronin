@@ -56,60 +56,17 @@ struct social_type {
  *  Special procedures for rooms                                       *
  ******************************************************************** */
 
-void list_spells_to_prac(CHAR *ch, int listall)
+
+void list_skills_to_prac(CHAR *ch, bool list_all)
 {
-  struct string_block sb;
-  int bonus = 0;
-  char buf[MIL];
-  int i = 0;
-
-  init_string_block(&sb);
-
-  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) bonus = 5;
-  else if (enchanted_by_type(ch, ENCHANT_LORDLADY)) bonus = 5;
-  else if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) bonus = 5;
-  else if (enchanted_by_type(ch, ENCHANT_COMMANDER)) bonus = 5;
-  else if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) bonus = 5;
-
-  sprintf(buf, "\
-`nSpell Name                      `kHow Well      `jMana Cost\n\r\
-`n------------------------------- `k------------- `j---------`q\n\r");
-  append_to_string_block(&sb, buf);
-
-  for (i = 0; *spells[i] != '\n'; i++)
-  {
-    if (!spell_info[i + 1].spell_pointer) continue;
-    else if ((ch->skills[i + 1].learned >= MAX_PRAC(ch)) && !listall) continue;
-    else if (SPELL_LEVEL(ch, i + 1) > GET_LEVEL(ch)) continue;
-    else if (!check_sc_access(ch, i + 1)) continue;
-    else
-    {
-      sprintf(buf, "`n%-30s `k%-14s `j[%3d]`q\n\r",
-        spells[i], how_good(ch->skills[i + 1].learned + bonus), USE_MANA(ch, i + 1));
-      append_to_string_block(&sb, buf);
-    }
-  }
-
-  page_string_block(&sb, ch);
-
-  destroy_string_block(&sb);
-}
-
-void list_skills_to_prac(CHAR *ch)
-{
-  int i = 0;
-  int done = FALSE;
   int number = 0;
-  int bonus = 0;
   char buf[MIL];
 
   send_to_char("\
-`nSkill Name                     `kHow Well     \n\r\
-`n------------------------------ `k-------------`q\n\r", ch);
+`nSkill Name                     `kHow Well       `oPrac\n\r\
+`n------------------------------ `k-------------- `o-----`q\n\r", ch);
 
-  for (i = 0; !done; i++) {
-    bonus = 0;
-
+  for (int i = 0, done = FALSE; !done; i++) {
     switch (GET_CLASS(ch))
     {
       case CLASS_MAGIC_USER:
@@ -123,10 +80,11 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(cleric_skills[i], 0, strlen(cleric_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BASH) && (GET_LEVEL(ch) < 35)) continue;
           else {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", cleric_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", cleric_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -139,13 +97,14 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(thief_skills[i], 0, strlen(thief_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_SCAN) && (GET_LEVEL(ch) < 35)) continue;
           else if ((number == SKILL_TWIST) && (GET_LEVEL(ch) < 45)) continue;
           else if ((number == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", thief_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", thief_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -158,12 +117,13 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(warrior_skills[i], 0, strlen(warrior_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", warrior_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", warrior_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -176,15 +136,10 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(ninja_skills[i], 0, strlen(ninja_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else {
-            if (((SKILL_MANTRA == number) || (SKILL_BANZAI == number)) &&
-                (ch->skills[number].learned > 0) &&
-                enchanted_by_type(ch, ENCHANT_SHOGUN)) {
-              bonus = 5;
-            }
-
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", ninja_skills[i], how_good(ch->skills[number].learned + bonus));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", ninja_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -197,13 +152,14 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(nomad_skills[i], 0, strlen(nomad_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
           else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
           else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
           else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
           else {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", nomad_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", nomad_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -216,11 +172,12 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(paladin_skills[i], 0, strlen(paladin_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_PRAY) && (GET_LEVEL(ch) < 40)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", paladin_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", paladin_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -233,12 +190,13 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(anti_paladin_skills[i], 0, strlen(anti_paladin_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", anti_paladin_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", anti_paladin_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -251,10 +209,11 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", avatar_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", avatar_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -267,11 +226,12 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(bard_skills[i], 0, strlen(bard_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", bard_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", bard_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -284,11 +244,12 @@ void list_skills_to_prac(CHAR *ch)
           number = old_search_block(commando_skills[i], 0, strlen(commando_skills[i]), spells, TRUE);
 
           if (number == 0) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
           else
           {
-            sprintf(buf, "`n%-30s `k%-13s`q\n\r", commando_skills[i], how_good(ch->skills[number].learned));
+            sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", commando_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
           }
         }
@@ -297,197 +258,189 @@ void list_skills_to_prac(CHAR *ch)
   }
 }
 
-int practice_spell(CHAR *ch, int number)
-{
-  int learned = 0;
-  int max_prac = 0;
 
-  /* Check for it being a skill. */
-  if (!spell_info[number].spell_pointer) return FALSE;
+void list_spells_to_prac(CHAR *ch, bool list_all) {
+  struct string_block sb;
+  char buf[MIL];
 
-  if (number == 0)
-  {
-    send_to_char("`iThat spell wasn't found.`q\n\r", ch);
+  init_string_block(&sb);
 
-    return TRUE;
-  }
-  else if (ch->specials.spells_to_learn <= 0)
-  {
-    send_to_char("`iYou do not seem to be able to practice now.`q\n\r", ch);
+  snprintf(buf, sizeof(buf), "\
+`nSpell Name                     `kHow Well       `oPrac  `jMana\n\r\
+`n------------------------------ `k-------------- `o----- `j-----`q\n\r");
+  append_to_string_block(&sb, buf);
 
-    return TRUE;
-  }
-  else if ((GET_LEVEL(ch) < SPELL_LEVEL(ch, number)) || !check_sc_access(ch, number)) {
-    return FALSE;
-  }
-
-  if (ch->specials.spells_to_learn <= 0)
-  {
-    send_to_char("`iYou do not seem to be able to practice now.`q\n\r", ch);
-
-    return TRUE;
+  for (int i = 0; *spells[i] != '\n'; i++) {
+    if (!spell_info[i + 1].spell_pointer) continue;
+    else if ((ch->skills[i + 1].learned >= MAX_PRAC(ch)) && !list_all) continue;
+    else if (SPELL_LEVEL(ch, i + 1) > GET_LEVEL(ch)) continue;
+    else if (!check_sc_access(ch, i + 1)) continue;
+    else {
+      snprintf(buf, sizeof(buf), "`n%-30s `k%-14s `o(%3d) `j[%3d]`q\n\r",
+        spells[i], how_good(GET_LEARNED(ch, i + 1)), GET_LEARNED(ch, i + 1), USE_MANA(ch, i + 1));
+      append_to_string_block(&sb, buf);
+    }
   }
 
-  learned = ch->skills[number].learned;
-  max_prac = MAX_PRAC(ch);
+  page_string_block(&sb, ch);
 
-  if (learned >= max_prac)
-  {
-    send_to_char("`iYou are already learned in this area.`q\n\r", ch);
-
-    return TRUE;
-  }
-
-  send_to_char("`iYou practice for a while...`q\n\r", ch);
-
-  ch->specials.spells_to_learn--;
-
-  learned += MAX(int_app[GET_INT(ch)].learn, 25);
-  learned = MIN(learned, max_prac);
-
-  ch->skills[number].learned = learned;
-
-  if (ch->skills[number].learned >= max_prac)
-  {
-    send_to_char("`iYou are now learned in this area.`q\n\r", ch);
-  }
-
-  return TRUE;
+  destroy_string_block(&sb);
 }
 
-int practice_skill(CHAR *ch, int number)
-{
-  int learned = 0;
-  int max_prac = 0;
 
-  if (number == 0 || number == 200)
-  {
+int practice_skill(CHAR *ch, int number) {
+  if (number == 0 || number == 200) {
     send_to_char("`iThat skill wasn't found.`q\n\r", ch);
+
     return TRUE;
   }
-  else if (ch->specials.spells_to_learn <= 0)
-  {
+
+  if (GET_PRAC(ch) <= 0) {
     send_to_char("`iYou do not seem to be able to practice now.`q\n\r", ch);
+
     return TRUE;
   }
-  else if (!check_sc_access(ch, number)) {
+
+  if (!check_sc_access(ch, number)) {
     return FALSE;
   }
 
-  learned = ch->skills[number].learned;
-  max_prac = MAX_PRAC(ch);
+  int bonus = 0;
 
-  switch (number)
-  {
+  switch (number) {
     case SKILL_BACKSTAB:
-      if (enchanted_by_type(ch, ENCHANT_MINION))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_MINION)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_BASH:
-      if (GET_CLASS(ch) == CLASS_CLERIC)
-      {
-        max_prac -= 10;
+      if (GET_CLASS(ch) == CLASS_CLERIC) {
+        bonus -= 10;
       }
       break;
 
     case SKILL_BLOCK:
       if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) ||
-          enchanted_by_type(ch, ENCHANT_JUSTICIAR))
-      {
-        learned -= 5;
+        enchanted_by_type(ch, ENCHANT_JUSTICIAR)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_DUAL:
       if (enchanted_by_type(ch, ENCHANT_KNIGHT) ||
-          enchanted_by_type(ch, ENCHANT_PRIVATE))
-      {
-        learned -= 5;
+        enchanted_by_type(ch, ENCHANT_PRIVATE)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_CIRCLE:
-      if (enchanted_by_type(ch, ENCHANT_ASSASSIN))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_ASSASSIN)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_TRIPLE:
-      if (enchanted_by_type(ch, ENCHANT_COMMANDER))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_COMMANDER)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_ASSAULT:
       if (enchanted_by_type(ch, ENCHANT_COMMODORE) ||
-          enchanted_by_type(ch, ENCHANT_SHOGUN))
-      {
-        learned -= 5;
+        enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_AMBUSH:
-      if (enchanted_by_type(ch, ENCHANT_WANDERER))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_WANDERER)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_DISEMBOWEL:
-      if (enchanted_by_type(ch, ENCHANT_TAMER))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_TAMER)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_PUMMEL:
       if (enchanted_by_type(ch, ENCHANT_LORDLADY) ||
-          enchanted_by_type(ch, ENCHANT_SHINOBI))
-      {
-        learned -= 5;
+        enchanted_by_type(ch, ENCHANT_SHINOBI)) {
+        bonus += 5;
       }
       break;
 
     case SKILL_BACKFLIP:
-      if (enchanted_by_type(ch, ENCHANT_CONDUCTOR))
-      {
-        learned -= 5;
+      if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
+        bonus += 5;
       }
       break;
   }
 
-  if (learned >= max_prac)
-  {
+  if (GET_LEARNED(ch, number) >= (MAX_PRAC(ch) + bonus)) {
     send_to_char("`iYou are already learned in this area.`q\n\r", ch);
+
     return TRUE;
   }
 
   send_to_char("`iYou practice for a while...`q\n\r", ch);
 
-  ch->specials.spells_to_learn--;
+  GET_PRAC(ch)--;
 
-  learned += MIN(int_app[GET_INT(ch)].learn, 18);
-  learned = MIN(learned, max_prac);
+  GET_LEARNED(ch, number) = MIN((GET_LEARNED(ch, number) + MIN(int_app[GET_INT(ch)].learn, 18)), (MAX_PRAC(ch) + bonus));
 
-  ch->skills[number].learned = learned;
-
-  if (ch->skills[number].learned >= max_prac)
-  {
+  if (GET_LEARNED(ch, number) >= MAX_PRAC(ch)) {
     send_to_char("`iYou are now learned in this area.`q\n\r", ch);
   }
 
   return TRUE;
 }
 
-int quest_giver(CHAR *mob,CHAR *ch, int cmd, char *argument);
-int check_sc_master(CHAR *ch,CHAR *mob);
-int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
+
+int practice_spell(CHAR *ch, int number) {
+  if (!spell_info[number].spell_pointer) return FALSE;
+
+  if (number == 0) {
+    send_to_char("`iThat spell wasn't found.`q\n\r", ch);
+
+    return TRUE;
+  }
+
+  if (GET_PRAC(ch) <= 0) {
+    send_to_char("`iYou do not seem to be able to practice now.`q\n\r", ch);
+
+    return TRUE;
+  }
+
+  if ((GET_LEVEL(ch) < SPELL_LEVEL(ch, number)) || !check_sc_access(ch, number)) {
+    return FALSE;
+  }
+
+  if (GET_LEARNED(ch, number) >= MAX_PRAC(ch)) {
+    send_to_char("`iYou are already learned in this area.`q\n\r", ch);
+
+    return TRUE;
+  }
+
+  send_to_char("`iYou practice for a while...`q\n\r", ch);
+
+  GET_PRAC(ch)--;
+
+  GET_LEARNED(ch, number) = MIN(GET_LEARNED(ch, number) + int_app[GET_INT(ch)].learn, MAX_PRAC(ch));
+
+  if (GET_LEARNED(ch, number) >= MAX_PRAC(ch)) {
+    send_to_char("`iYou are now learned in this area.`q\n\r", ch);
+  }
+
+  return TRUE;
+}
+
+
+int quest_giver(CHAR *mob, CHAR *ch, int cmd, char *argument);
+int check_sc_master(CHAR *ch, CHAR *mob);
+int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   int showSpells = FALSE;
   int showSkills = FALSE;
   int spell = -1;
@@ -498,22 +451,19 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
   arg = skip_spaces(arg);
 
-  if (cmd == CMD_AQUEST)
-  {
+  if (cmd == CMD_AQUEST) {
     if (quest_giver(mob, ch, cmd, arg)) return TRUE;
 
     return FALSE;
   }
 
   /* Give back any questcards given to the mob, as players should use 'aquest complete' to get credit. */
-  if (cmd == MSG_GAVE_OBJ)
-  {
+  if (cmd == MSG_GAVE_OBJ) {
     if (!isname("questcard", arg)) return FALSE;
 
     qcard = get_obj_in_list_vis(mob, "questcard", mob->carrying);
 
-    if (qcard && (V_OBJ(qcard) == 35))
-    {
+    if (qcard && (V_OBJ(qcard) == 35)) {
       act("$N tells you 'You should hold on to these.'", FALSE, ch, 0, mob, TO_CHAR);
       act("$N gives you $q.", FALSE, ch, qcard, mob, TO_CHAR);
       obj_from_char(qcard);
@@ -521,8 +471,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
       return TRUE;
     }
-    else
-    {
+    else {
       act("$N tells you 'That wasn't a questcard you gave me...'", FALSE, ch, 0, mob, TO_CHAR);
 
       return TRUE;
@@ -531,12 +480,10 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
   if (cmd != CMD_PRACTICE || !ch->skills) return FALSE;
 
-  if (!*arg)
-  {
-    printf_to_char(ch,"`iYou have %d practice sessions.`q\n\r", ch->specials.spells_to_learn);
+  if (!*arg) {
+    printf_to_char(ch, "`iYou have %d practice sessions.`q\n\r", ch->specials.spells_to_learn);
 
-    switch (GET_CLASS(ch))
-    {
+    switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
         showSpells = TRUE;
         break;
@@ -544,8 +491,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
       case CLASS_CLERIC:
         showSpells = TRUE;
 
-        if ((GET_LEVEL(ch) >= 35) || check_sc_access(ch, SKILL_MEDITATE))
-        {
+        if ((GET_LEVEL(ch) >= 35) || check_sc_access(ch, SKILL_MEDITATE)) {
           showSkills = TRUE;
         }
         break;
@@ -567,19 +513,20 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg)
         break;
     }
 
-    if (showSkills)
-    {
-      send_to_char("`iYou can practice any of these skills:`q\n\r\n\r", ch);
-      list_skills_to_prac(ch);
-    }
-
-    if (showSpells && showSkills)
-    {
+    if (showSpells || showSkills) {
       send_to_char("\n\r", ch);
     }
 
-    if (showSpells)
-    {
+    if (showSkills) {
+      send_to_char("`iYou can practice any of these skills:`q\n\r\n\r", ch);
+      list_skills_to_prac(ch, FALSE);
+    }
+
+    if (showSpells && showSkills) {
+      send_to_char("\n\r", ch);
+    }
+
+    if (showSpells) {
       send_to_char("`iYou can practice any of these spells:`q\n\r\n\r", ch);
       list_spells_to_prac(ch, FALSE);
     }
@@ -6069,37 +6016,35 @@ int gear_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg)
 }
 
 
-const char * const prestige_perk_descriptions[] = {
-  "1x increased remort experience multiplier (maximum of 25x).",                                    // Prestige Perk 1
-  "5% chance for free rent, determined after logging in.",                                          // Prestige Perk 2
-  "1% increased chance for half-price metas.",                                                      // Prestige Perk 3
-  "10% experience and gold discount on rank purchases.",                                            // Prestige Perk 4
-  "10% discount on rent cost.",                                                                     // Prestige Perk 5
-  "1x increased maximum death experience multiplier.",                                              // Prestige Perk 6
-  "50% chance to avoid entering a death trap or hazard, setting your movement to zero.",            // Prestige Perk 7
-  "5% increased hit point, mana, and movement regeneration rate.",                                  // Prestige Perk 8
-  "Identify command now available for 5,000 coins; acts as if you recited a scroll.",               // Prestige Perk 9
-  "5% discount on bribes at the metaphysician.",                                                    // Prestige Perk 10
-  "1% less permanent experience loss upon death.",                                                  // Prestige Perk 11
-  "10% chance that a 1 point token is worth 2 subclass points.",                                    // Prestige Perk 12
-  "10% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 13
-  "10% increase in number of items that can be carried.",                                           // Prestige Perk 14
-  "Instant passage to Daimyo on a new airship located above the Midgaard docks.",                   // Prestige Perk 15
-  "5% discount on items purchased from shops.",                                                     // Prestige Perk 16
-  "10% chance to maintain existing rank upon death.",                                               // Prestige Perk 17
-  "10% discount on vault storage costs.",                                                           // Prestige Perk 18
-  "2% increased chance for double-point auto quest.",                                               // Prestige Perk 19
-  "10% increase in amount of weight that can be carried.",                                          // Prestige Perk 20
-  "Home command now available for 20,000 coins; acts as if you recited a scroll.",                  // Prestige Perk 21
-  "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
-  "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
-  "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
-  "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
-  "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
-};
-
-
 int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  const char * const prestige_perk_descriptions[] = {
+    "1x increased remort experience multiplier (maximum of 25x).",                                    // Prestige Perk 1
+    "5% chance for free rent, determined after logging in.",                                          // Prestige Perk 2
+    "1% increased chance for half-price metas.",                                                      // Prestige Perk 3
+    "10% experience and gold discount on rank purchases.",                                            // Prestige Perk 4
+    "10% discount on rent cost.",                                                                     // Prestige Perk 5
+    "1x increased maximum death experience multiplier.",                                              // Prestige Perk 6
+    "50% chance to avoid entering a death trap or hazard, setting your movement to zero.",            // Prestige Perk 7
+    "5% increased hit point, mana, and movement regeneration rate.",                                  // Prestige Perk 8
+    "Identify command now available for 5,000 coins; acts as if you recited a scroll.",               // Prestige Perk 9
+    "5% discount on bribes at the metaphysician.",                                                    // Prestige Perk 10
+    "1% less permanent experience loss upon death.",                                                  // Prestige Perk 11
+    "10% chance that a 1 point token is worth 2 subclass points.",                                    // Prestige Perk 12
+    "10% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 13
+    "10% increase in number of items that can be carried.",                                           // Prestige Perk 14
+    "Instant passage to Daimyo on a new airship located above the Midgaard docks.",                   // Prestige Perk 15
+    "5% discount on items purchased from shops.",                                                     // Prestige Perk 16
+    "10% chance to maintain existing rank upon death.",                                               // Prestige Perk 17
+    "10% discount on vault storage costs.",                                                           // Prestige Perk 18
+    "2% increased chance for double-point auto quest.",                                               // Prestige Perk 19
+    "10% increase in amount of weight that can be carried.",                                          // Prestige Perk 20
+    "Home command now available for 20,000 coins; acts as if you recited a scroll.",                  // Prestige Perk 21
+    "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
+    "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
+    "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
+    "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
+    "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
+  };
   const int EXP_REQUIRED = 100000000;
   const int GOLD_REQUIRED = 20000000;
 

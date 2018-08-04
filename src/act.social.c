@@ -603,7 +603,7 @@ void do_action(struct char_data *ch, char *argument, int cmd)
   }
 
   if((IS_AFFECTED(vict, AFF_HIDE)) &&
-     !affected_by_spell(ch, SPELL_PERCEIVE) && GET_LEVEL(ch)<LEVEL_IMM) {
+     !IS_AFFECTED2(ch, AFF2_PERCEIVE) && (GET_LEVEL(ch) < LEVEL_IMM)) {
     send_to_char(action->not_found, ch);
     send_to_char("\n\r", ch);
     return;
