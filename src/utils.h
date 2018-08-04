@@ -108,7 +108,7 @@ do {                   \
 #define OBJ_CREM_DESC(obj)      (obj->char_rem_desc ? obj->char_rem_desc : obj_proto_table[obj->item_number].char_rem_desc)
 #define OBJ_RREM_DESC(obj)      (obj->room_rem_desc ? obj->room_rem_desc : obj_proto_table[obj->item_number].room_rem_desc)
 #define OBJ_WEAR_FLAGS(obj)     (obj->obj_flags.wear_flags)
-#define OBJ_SUBCLASS_RES(obj)   (obj->obj_flags.subclass_res)
+#define OBJ_SC_RES(obj)         (obj->obj_flags.subclass_res)
 #define OBJ_BITS(obj)           (obj->obj_flags.bitvector)
 #define OBJ_BITS2(obj)          (obj->obj_flags.bitvector2)
 #define OBJ_EXTRA_FLAGS(obj)    (obj->obj_flags.extra_flags)

@@ -22,9 +22,6 @@
 #include "cmd.h"
 #include "subclass.h"
 
-/*   external vars  */
-#define WALL_THORNS 34 /* In limbo */
-
 /* external functs */
 
 int hit_limit(struct char_data *ch);
@@ -85,10 +82,10 @@ int dt_or_hazard(CHAR *ch) {
       wizlog(buf,LEVEL_IMM,3);
     }
     if(ch->specials.riding) {
-      SET_BIT(ch->specials.riding->specials.affected_by2,AFF_IMMINENT_DEATH);
+      SET_BIT(ch->specials.riding->specials.affected_by2,AFF2_IMMINENT_DEATH);
       ch->specials.riding->specials.death_timer=2;
     }
-    SET_BIT(ch->specials.affected_by2,AFF_IMMINENT_DEATH);
+    SET_BIT(ch->specials.affected_by2,AFF2_IMMINENT_DEATH);
     ch->specials.death_timer=2;
 
     /* Send death_text to character */
@@ -537,7 +534,7 @@ Returns:
 void do_move(struct char_data *ch, char *argument, int cmd) {
   --cmd;
 
-  if (IS_SET(ch->specials.affected_by2, AFF_SEVERED)) {
+  if (IS_SET(ch->specials.affected_by2, AFF2_SEVERED)) {
     send_to_char("Move without legs? How?\n\r", ch);
 
     return;

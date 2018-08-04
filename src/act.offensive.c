@@ -1675,6 +1675,7 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
   if (!GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) != CLASS_THIEF) &&
       (GET_CLASS(ch) != CLASS_WARRIOR) &&
       (GET_CLASS(ch) != CLASS_NINJA) &&
       (GET_CLASS(ch) != CLASS_NOMAD) &&
@@ -1732,7 +1733,7 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
       damage(ch, victim, 0, SKILL_KICK, DAM_NO_BLOCK);
     }
     else {
-      damage(ch, victim, calc_position_damage(GET_POS(victim), MIN(GET_LEVEL(ch), 30) * 2), SKILL_KICK, DAM_PHYSICAL);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 2)), SKILL_KICK, DAM_PHYSICAL);
 
       auto_learn_skill(ch, SKILL_KICK);
 
@@ -1929,7 +1930,7 @@ void do_disembowel(CHAR *ch, char *argument, int cmd) {
     int multi = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5);
     int dam = calc_hit_damage(ch, victim, EQ(ch, WIELD), RND_NRM) * multi;
 
-    if ((GET_HIT(victim) > dam) && (GET_HIT(victim) > (GET_MAX_HIT(victim) * 0.2))) {
+    if ((GET_HIT(victim) > dam) && (GET_HIT(victim) > (GET_MAX_HIT(victim) * 0.3))) {
       act("You attempt to spill $N's guts, but $E fends you off.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n attempts to spill your guts, but you fend $m off.", FALSE, ch, 0, victim, TO_VICT);
       act("$n attempts to spill $N's guts, but $N fends $n off.", FALSE, ch, 0, victim, TO_NOTVICT);

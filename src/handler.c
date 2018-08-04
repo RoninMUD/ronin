@@ -697,10 +697,10 @@ struct obj_data *obj_from_char(struct obj_data *object)
 }
 
 
-int apply_ac(struct char_data *ch, int eq_pos) {
+int apply_ac(CHAR *ch, int eq_pos) {
   if (!ch || (eq_pos < 0)) return 0;
 
-  struct obj_data *eq = EQ(ch, eq_pos);
+  OBJ *eq = EQ(ch, eq_pos);
 
   if (!eq || (OBJ_TYPE(eq) != ITEM_ARMOR)) return 0;
 

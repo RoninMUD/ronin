@@ -1557,7 +1557,7 @@ void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if(GET_MANA(victim) >= mana_limit(victim))
     GET_MANA(victim) = mana_limit(victim);
   update_pos( victim );
-  send_to_char("You feel slightly regenerated\n\r", victim);
+  send_to_char("You feel slightly regenerated.\n\r", victim);
 }
 
 void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
@@ -4445,25 +4445,14 @@ void spell_armageddon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 */
 
 
-void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-
-  if(affected_by_spell(victim, SPELL_PERCEIVE))
-  {
-    send_to_char("You are already affected by this spell.\n\r",ch);
+void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (IS_AFFECTED2(victim, AFF2_PERCEIVE)) {
+    send_to_char("You are already affected by this spell.\n\r", ch);
 
     return;
   }
 
-  af.type       = SPELL_PERCEIVE;
-  af.duration   = 2 * level;
-  af.modifier   = 0;
-  af.location   = 0;
-  af.bitvector  = 0;
-  af.bitvector2 = AFF2_PERCEIVE;
-
-  affect_to_char(victim, &af);
+  affect_apply(victim, SPELL_PERCEIVE, (2 * level), 0, 0, 0, AFF2_PERCEIVE);
 
   send_to_char("Your eyes glow with unearthly light.\n\r", victim);
 }

@@ -364,792 +364,652 @@ void list_obj_to_char(struct obj_data *list,
   if ((! found) && (show)) send_to_char("Nothing\n\r", ch);
 }
 
-void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
-{
-  char buffer[MSL];
-  int j, found, percent;
-  struct obj_data *tmp_obj;
-  struct descriptor_data *d;
-  struct tagline_data *tag;
-  long ct;
-  char *tmstr;
-  AFF *aff = NULL;
-  bool stop = FALSE;
 
-  const int EMITH_CAPE_1 = 26709;
-  const int EMITH_CAPE_2 = 26719;
+#define SHOW_CHAR_IN_ROOM   0
+#define SHOW_CHAR_LOOK_AT   1
+#define SHOW_CHAR_INVENTORY 2
 
-  if (mode == 0)
-  {
-    if (i->new.wizinv > GET_LEVEL(ch)) { return; }
+void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
+  char buf[MSL], buf2[MIL];
 
-    if (((IS_AFFECTED(i, AFF_HIDE)) && GET_LEVEL(ch) < LEVEL_IMM && !affected_by_spell(ch, SPELL_PERCEIVE)) || !CAN_SEE(ch, i))
-    {
-      if (i->specials.riding)
-      {
-        if (GET_POS(i->specials.riding) == POSITION_FLYING)
-        {
-          act("$n is here being flown by someone.", TRUE, i->specials.riding, 0, ch, TO_VICT);
+  switch (mode) {
+    case SHOW_CHAR_IN_ROOM:
+      if (GET_WIZINV(target) > GET_LEVEL(ch)) return;
+
+      if (!CAN_SEE(ch, target) || IS_HIDING_FROM(ch, target)) {
+        if (GET_MOUNT(target)) {
+          if (GET_POS(GET_MOUNT(target)) == POSITION_FLYING) {
+            act("$n is here, flown by someone.", TRUE, GET_MOUNT(target), 0, ch, TO_VICT);
+          }
+          else {
+            act("$n is here, ridden by someone.", TRUE, GET_MOUNT(target), 0, ch, TO_VICT);
+          }
+
+          return;
         }
-        else
-        {
-          act("$n is here being ridden by someone.", TRUE, i->specials.riding, 0, ch, TO_VICT);
+
+        if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+
+          send_to_char("You sense a hidden life form.\n\r", ch);
+
+          return;
         }
 
         return;
       }
 
-      if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(ch) < LEVEL_IMM))
-      {
-        send_to_char("You sense a hidden life form.\n\r", ch);
+      if (GET_RIDER(target) && (GET_RIDER(target) == ch)) {
+        if (GET_POS(target) == POSITION_FLYING) {
+          act("$n is here, flown by you.", FALSE, target, 0, ch, TO_VICT);
+        }
+        else {
+          act("$n is here, ridden by you.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        return;
       }
 
-      return;
-    }
+      if (!IS_NPC(target) || !MOB_LONG(target) || (GET_POS(target) != GET_DEFAULT_POSITION(target))) {
+        memset(buf, 0, sizeof(buf));
 
-    if (GET_MOUNT(i))
-    {
-      if (ch == GET_MOUNT(i))
-      {
-        if (GET_POS(i) == POSITION_FLYING)
-        {
-          act("$n is here being flown by you.", FALSE, i, 0, ch, TO_VICT);
+        if (!IS_NPC(target)) {
+          strlcat(buf, PERS(target, ch), sizeof(buf));
+
+          if (GET_TITLE(ch)) {
+            snprintf(buf2, sizeof(buf2), " %s", GET_TITLE(target));
+            strlcat(buf, buf2, sizeof(buf));
+          }
         }
-        else
-        {
-          act("$n is here being ridden by you.", FALSE, i, 0, ch, TO_VICT);
+        else {
+          if (GET_QUEST_MOB(ch) && (GET_QUEST_MOB(ch) == target)) {
+            strlcat(buf, "[TARGET] ", sizeof(buf));
+          }
+          else if (GET_QUEST_OWNER(target)) {
+            snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_NAME(GET_QUEST_OWNER(target)));
+            strlcat(buf, buf2, sizeof(buf));
+          }
+
+          snprintf(buf2, sizeof(buf2), "%s", GET_SHORT(target));
+          CAP(buf2);
+          strlcat(buf, buf2, sizeof(buf));
         }
-      }
 
-      return;
-    }
+        strlcat(buf, "`q", sizeof(buf));
 
-    buffer[0] = 0;
-
-    if (!IS_NPC(i) || !(MOB_LONG(i)) || (GET_POS(i) != i->specials.default_pos))
-    {
-      /* A player char or a mobile without long descr, or not in default pos.*/
-      if (!IS_NPC(i))
-      {
-        strcpy(buffer, PERS(i, ch));
-        strcat(buffer, " ");
-
-        if (GET_TITLE(i))
-        {
-          strcat(buffer, GET_TITLE(i));
+        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+          strlcat(buf, " (invisible)", sizeof(buf));
         }
+
+        if (IS_AFFECTED(target, AFF_HIDE)) {
+          strlcat(buf, " (hiding)", sizeof(buf));
+        }
+
+        if (IS_SET(GET_PFLAG(target), PLR_KILL) && !IS_NPC(target)) {
+          strlcat(buf, " (killer)", sizeof(buf));
+        }
+
+        if (IS_SET(GET_PFLAG(target), PLR_THIEF) && !IS_NPC(target)) {
+          strlcat(buf, " (thief)", sizeof(buf));
+        }
+
+        if (IS_AFFECTED2(target, AFF2_SEVERED)) {
+          strlcat(buf, "'s upper torso is here... twitching.", sizeof(buf));
+        }
+        else if (GET_DEATH_TIMER(target) >= 2) {
+          strlcat(buf, " lies here... near death.", sizeof(buf));
+        }
+        else {
+          switch (GET_POS(target)) {
+            case POSITION_STUNNED:
+              strlcat(buf, " is lying here, stunned.", sizeof(buf));
+              break;
+
+            case POSITION_INCAP:
+              strlcat(buf, " is lying here, incapacitated.", sizeof(buf));
+              break;
+
+            case POSITION_MORTALLYW:
+              strlcat(buf, " is lying here, mortally wounded.", sizeof(buf));
+              break;
+
+            case POSITION_DEAD:
+              strlcat(buf, " is lying here, dead.", sizeof(buf));
+              break;
+
+            case POSITION_STANDING:
+              strlcat(buf, " is standing here.", sizeof(buf));
+              break;
+
+            case POSITION_SITTING:
+              strlcat(buf, " is sitting here.", sizeof(buf));
+              break;
+
+            case POSITION_RESTING:
+              strlcat(buf, " is resting here.", sizeof(buf));
+              break;
+
+            case POSITION_SLEEPING:
+              strlcat(buf, " is sleeping here.", sizeof(buf));
+              break;
+
+            case POSITION_FLYING:
+              strlcat(buf, " is flying here.", sizeof(buf));
+              break;
+
+            case POSITION_SWIMMING:
+              strlcat(buf, " is swimming here.", sizeof(buf));
+              break;
+
+            case POSITION_RIDING:
+              if (GET_MOUNT(target) && (GET_POS(GET_MOUNT(target)) == POSITION_FLYING)) {
+                strlcat(buf, " is here, flying on ", sizeof(buf));
+              }
+              else {
+                strlcat(buf, " is here, riding ", sizeof(buf));
+              }
+
+              if (GET_MOUNT(target)) {
+                snprintf(buf2, sizeof(buf2), "%s.", GET_SHORT(GET_MOUNT(target)));
+                strlcat(buf, buf2, sizeof(buf));
+              }
+              else {
+                strlcat(buf, "something.", sizeof(buf));
+              }
+              break;
+
+            case POSITION_FIGHTING:
+              if (GET_OPPONENT(target)) {
+                strlcat(buf, " is here, fighting ", sizeof(buf));
+
+                if (GET_OPPONENT(target) == ch) {
+                  strlcat(buf, " YOU!", sizeof(buf));
+                }
+                else {
+                  if (SAME_ROOM(target, GET_OPPONENT(target))) {
+                    if (IS_NPC(GET_OPPONENT(target))) {
+                      strlcat(buf, GET_SHORT(GET_OPPONENT(target)), sizeof(buf));
+                    }
+                    else {
+                      strlcat(buf, GET_NAME(GET_OPPONENT(target)), sizeof(buf));
+                    }
+                  }
+                  else {
+                    strlcat(buf, "someone who has already left.", sizeof(buf));
+                  }
+                }
+              }
+              else {
+                strlcat(buf, " is here struggling with thin air.", sizeof(buf));
+              }
+              break;
+
+            default:
+              strlcat(buf, " is floating here.", sizeof(buf));
+              break;
+          }
+        }
+
+        if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
+          if (IS_EVIL(target)) {
+            strlcat(buf, " (Red Aura)", sizeof(buf));
+          }
+          else if (IS_GOOD(target)) {
+            strlcat(buf, " (Yellow Aura)", sizeof(buf));
+          }
+        }
+
+        strlcat(buf, "\n\r", sizeof(buf));
       }
       else {
-        char mob_name[MAX_INPUT_LENGTH+1] = {0};
+        memset(buf, 0, sizeof(buf));
 
-        strncpy(mob_name, GET_SHORT(i), MAX_INPUT_LENGTH);
-        (void)(CAP(mob_name));
-
-        if (ch->questmob && ch->questmob == i)
-        {
-          strcpy(buffer, "[TARGET] ");
-          strcat(buffer, mob_name);
+        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+          strlcat(buf, "*", sizeof(buf));
         }
-        else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
-        {
-          strcpy(buffer, "[");
-          strcat(buffer, GET_NAME(i->questowner));
-          strcat(buffer, "'s TARGET] ");
-          strcat(buffer, mob_name);
-        }
-        else
-        {
-          strcpy(buffer, mob_name);
-        }
-      }
 
-      strcat(buffer, "`q");
-
-      if (IS_AFFECTED(i, AFF_INVISIBLE))
-      {
-        strcat(buffer, " (invisible)");
-      }
-
-      if (IS_AFFECTED(i, AFF_HIDE))
-      {
-        strcat(buffer, " (hiding)");
-      }
-
-      if (affected_by_spell(i, SKILL_FADE))
-      {
-        strcat(buffer, " (faded)");
-      }
-
-      if (IS_SET(i->specials.pflag, PLR_KILL) && !IS_NPC(i))
-      {
-        strcat(buffer, " (killer)");
-      }
-
-      if (IS_SET(i->specials.pflag, PLR_THIEF) && !IS_NPC(i))
-      {
-        strcat(buffer, " (thief)");
-      }
-
-      if (IS_SET(i->specials.affected_by2, AFF_SEVERED))
-      {
-        strcat(buffer, "'s upper torso is here... twitching.");
-      }
-      else if (i->specials.death_timer == 2)
-      {
-        strcat(buffer, " lies here... near death.");
-      }
-      else
-      {
-        switch (GET_POS(i))
-        {
-          case POSITION_STUNNED:
-            strcat(buffer, " is lying here, stunned.");
-            break;
-
-          case POSITION_INCAP:
-            strcat(buffer, " is lying here, incapacitated.");
-            break;
-
-          case POSITION_MORTALLYW:
-            strcat(buffer, " is lying here, mortally wounded.");
-            break;
-
-          case POSITION_DEAD:
-            strcat(buffer, " is lying here, dead.");
-            break;
-
-          case POSITION_STANDING:
-            strcat(buffer, " is standing here.");
-            break;
-
-          case POSITION_SITTING:
-            strcat(buffer, " is sitting here.");
-            break;
-
-          case POSITION_RESTING:
-            strcat(buffer, " is resting here.");
-            break;
-
-          case POSITION_SLEEPING:
-            strcat(buffer, " is sleeping here.");
-            break;
-
-          case POSITION_FLYING:
-            strcat(buffer, " is flying here.");
-            break;
-
-          case POSITION_SWIMMING:
-            strcat(buffer, " is swimming here.");
-            break;
-
-          case POSITION_RIDING:
-            if (i->specials.riding)
-            {
-              if (GET_POS(i->specials.riding) == POSITION_FLYING)
-              {
-                strcat(buffer, " is here, flying on ");
-              }
-              else
-              {
-                strcat(buffer, " is here, riding ");
-              }
-
-              strcat(buffer, GET_SHORT(i->specials.riding));
-              strcat(buffer, ".");
-            }
-            break;
-
-          case POSITION_FIGHTING:
-            if (i->specials.fighting)
-            {
-              strcat(buffer, " is here, fighting ");
-
-              if (i->specials.fighting == ch)
-              {
-                strcat(buffer, " YOU!");
-              }
-              else
-              {
-                if (CHAR_REAL_ROOM(i) == CHAR_REAL_ROOM(i->specials.fighting))
-                {
-                  if (IS_NPC(i->specials.fighting))
-                  {
-                    strcat(buffer, GET_SHORT(i->specials.fighting));
-                  }
-                  else
-                  {
-                    strcat(buffer, "someone.");
-                  }
-                }
-                else
-                {
-                  strcat(buffer, "someone who has already left.");
-                }
-              }
-            }
-            else   /* NIL fighting pointer */
-            {
-              strcat(buffer, " is here struggling with thin air.");
-            }
-            break;
-
-          default:
-            strcat(buffer, " is floating here.");
-            break;
-        }
-      }
-
-      if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT))
-      {
-        if (IS_EVIL(i))
-        {
-          strcat(buffer, " (Red Aura)");
-        }
-        else if (IS_GOOD(i))
-        {
-          strcat(buffer, " (Yellow Aura)");
-        }
-      }
-
-      strcat(buffer, "\n\r");
-      send_to_char(buffer, ch);
-    }
-    else    /* npc with long */
-    {
-      if (IS_AFFECTED(i, AFF_INVISIBLE))
-      {
-        strcpy(buffer, "*");
-      }
-      else
-      {
-        *buffer = '\0';
-      }
-
-      if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT))
-      {
-        if (IS_EVIL(i))
-        {
-          strcat(buffer, " (Red Aura)");
-        }
-        else if (IS_GOOD(i))
-        {
-          strcat(buffer, " (Yellow Aura)");
-        }
-      }
-
-      if (ch->questmob && ch->questmob == i)
-      {
-        strcat(buffer, "[TARGET] ");
-      }
-      else if (i->questowner && !IS_NPC(i->questowner) && GET_NAME(i->questowner))
-      {
-        strcat(buffer, "[");
-        strcat(buffer, GET_NAME(i->questowner));
-        strcat(buffer, "'s TARGET] ");
-      }
-
-      if (IS_SET(i->specials.affected_by2, AFF_SEVERED))
-      {
-        strcat(buffer, MOB_SHORT(i));
-        strcat(buffer, "'s upper torso is here... twitching.");
-      }
-      else if (i->specials.death_timer == 2)
-      {
-        strcat(buffer, MOB_SHORT(i));
-        strcat(buffer, " lies here... near death.");
-      }
-      else
-      {
-        strcat(buffer, MOB_LONG(i));
-      }
-
-      send_to_char(buffer, ch);
-    }
-
-    if (IS_SET(i->specials.pflag, PLR_WRITING))
-    {
-      act("......$n is writing a message.", FALSE, i, 0, ch, TO_VICT);
-    }
-
-    if (!IS_SET(ch->specials.pflag, PLR_TAGBRF))
-    {
-      if (affected_by_spell(i, SMELL_FARTMOUTH))
-      {
-        act("......brown fumes waft from $n's mouth.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SKILL_CAMP))
-      {
-        act("......$n is camping here.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_ORB_PROTECTION))
-      {
-        act("......a shield of power emanates from an orb above $n's head!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SKILL_PRAY))
-      {
-        act("......$n is bowing $s head in prayer.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_IRONSKIN))
-      {
-        act("......$n's skin is as hard and impervious as iron.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      signal_char(i, ch, MSG_SHOW_AFFECT_TEXT, "");
-    }
-
-    if (IS_AFFECTED(i, AFF_SANCTUARY) && !affected_by_spell(i, SPELL_DISRUPT_SANCT))
-    {
-      act("......$n glows with a bright light!", FALSE, i, 0, ch, TO_VICT);
-    }
-    else if (IS_AFFECTED(i, AFF_SANCTUARY) && affected_by_spell(i, SPELL_DISRUPT_SANCT))
-    {
-      act("......$n's protective aura has been disrupted!", FALSE, i, 0, ch, TO_VICT);
-    }
-
-    if (IS_AFFECTED(i, AFF_SPHERE) && !affected_by_spell(i, SPELL_DISTORTION))
-    {
-      act("......$n is surrounded by a golden sphere!", FALSE, i, 0, ch, TO_VICT);
-    }
-    else if (IS_AFFECTED(i, AFF_SPHERE) && affected_by_spell(i, SPELL_DISTORTION))
-    {
-      act("......$n's golden sphere seems to shimmer and blur in weakness!", FALSE, i, 0, ch, TO_VICT);
-    }
-
-    if (IS_AFFECTED(i, AFF_INVUL))
-    {
-      act("......$n is surrounded by a powerful sphere!", FALSE, i, 0, ch, TO_VICT);
-    }
-
-    if (!IS_SET(ch->specials.pflag, PLR_TAGBRF))
-    {
-      for (stop = FALSE, aff = i->affected; stop == FALSE && aff; aff = aff->next)
-      {
-        if (aff->type == SPELL_WARCHANT && aff->location == APPLY_HITROLL && aff->modifier < 0)
-        {
-          act("......$n hears the sound of war!", FALSE, i, 0, ch, TO_VICT);
-
-          stop = TRUE;
-        }
-      }
-
-      for (stop = FALSE, aff = i->affected; stop == FALSE && aff; aff = aff->next) {
-        if (aff->type == SPELL_WRATH_OF_GOD && aff->location == APPLY_DAMROLL) {
-          if (aff->modifier <= -50) {
-            act("......$n is being crushed by the wrath of gods!", FALSE, i, 0, ch, TO_VICT);
+        if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
+          if (IS_EVIL(target)) {
+            strlcat(buf, "(Red Aura) ", sizeof(buf));
           }
-          else if (aff->modifier <= -40) {
-            act("......$n is tormented by a holy force of will!", FALSE, i, 0, ch, TO_VICT);
+          else if (IS_GOOD(target)) {
+            strlcat(buf, "(Yellow Aura) ", sizeof(buf));
           }
-          else if (aff->modifier <= -30) {
-            act("......$n is persecuted by celestial powers!", FALSE, i, 0, ch, TO_VICT);
+        }
+
+        if (GET_QUEST_MOB(ch) && (GET_QUEST_MOB(ch) == target)) {
+          strlcat(buf, "[TARGET] ", sizeof(buf));
+        }
+        else if (GET_QUEST_OWNER(target)) {
+          strlcat(buf, "[", sizeof(buf));
+          strlcat(buf, GET_NAME(GET_QUEST_OWNER(target)), sizeof(buf));
+          strlcat(buf, "'s TARGET] ", sizeof(buf));
+        }
+
+        if (IS_AFFECTED2(target, AFF2_SEVERED)) {
+          strlcat(buf, "'s upper torso is here... twitching.", sizeof(buf));
+        }
+        else if (GET_DEATH_TIMER(target) >= 2) {
+          strlcat(buf, " lies here... near death.", sizeof(buf));
+        }
+        else {
+          strlcat(buf, MOB_LONG(target), sizeof(buf));
+        }
+      }
+
+      send_to_char(buf, ch);
+
+      if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
+        act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
+        if (affected_by_spell(target, SMELL_FARTMOUTH)) {
+          act("......brown fumes waft from $n's mouth.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SKILL_CAMP)) {
+          act("......$n is camping here.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SKILL_PRAY)) {
+          act("......$n is bowing $s head in prayer.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        signal_char(target, ch, MSG_SHOW_AFFECT_TEXT, "");
+      }
+
+      if (affected_by_spell(target, SPELL_DIVINE_INTERVENTION)) {
+        act("......$n is sheltered from death by a divine aura.", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if (IS_AFFECTED(target, AFF_SANCTUARY) && !affected_by_spell(target, SPELL_DISRUPT_SANCT)) {
+        act("......$n glows with a bright light!", FALSE, target, 0, ch, TO_VICT);
+      }
+      else if (IS_AFFECTED(target, AFF_SANCTUARY) && affected_by_spell(target, SPELL_DISRUPT_SANCT)) {
+        act("......$n's protective aura has been disrupted!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_FORTIFICATION)) || affected_by_spell(target, SPELL_FORTIFICATION)) {
+        act("......$n is protected by a barrier of magical fortification!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if ((!IS_NPC(target) && IS_AFFECTED(target, AFF_FURY)) || affected_by_spell(target, SPELL_FURY)) {
+        act("......$n is snarling and fuming with fury!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_RAGE)) || affected_by_spell(target, SPELL_RAGE)) {
+        act("......$n is seething with hatred and rage!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if (IS_AFFECTED(target, AFF_SPHERE) && !affected_by_spell(target, SPELL_DISTORTION)) {
+        act("......$n is surrounded by a golden sphere!", FALSE, target, 0, ch, TO_VICT);
+      }
+      else if (IS_AFFECTED(target, AFF_SPHERE) && affected_by_spell(target, SPELL_DISTORTION)) {
+        act("......$n's golden sphere seems to shimmer and blur in weakness!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if (IS_AFFECTED(target, AFF_INVUL)) {
+        act("......$n is surrounded by a powerful sphere!", FALSE, target, 0, ch, TO_VICT);
+      }
+
+      if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
+        if (affected_by_spell(target, SPELL_IRONSKIN)) {
+          act("......$n's skin is as hard and impervious as iron.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_ORB_PROTECTION)) {
+          act("......a shield of power emanates from an orb above $n's head.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_BLADE_BARRIER)) {
+          act("......$n is surrounded by a barrier of whirling blades.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_DESECRATE)) {
+          act("......$n's sinister presence desecrates the surroundings.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_BLACKMANTLE)) {
+          act("......$n is surrounded by an eerie mantle of darkness.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_QUICK)) {
+          act("......$n's words and gestures are magically quickened.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_HASTE)) {
+          act("......$n's hastened actions move faster than reality.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_MYSTIC_SWIFTNESS)) {
+          act("......$n's hands move with mystical swiftness.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_BLUR)) {
+          act("......$n's movements blur in and out of reality.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_RUSH)) {
+          act("......$n's pulse rushes with supernatural speed.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_BLOOD_LUST)) {
+          act("......$n thirsts for blood and lusts for carnage.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_SHADOW_WRAITH)) {
+          int duration = duration_of_spell(target, SPELL_SHADOW_WRAITH);
+
+          if (duration >= 0) {
+            act("......$n's shadow stretches to the north.", FALSE, target, 0, ch, TO_VICT);
           }
-          else if (aff->modifier <= -20) {
-            act("......$n is oppressed by divine intervention.", FALSE, i, 0, ch, TO_VICT);
+
+          if (duration > (10 * 1)) {
+            act("......$n's shadow stretches to the south.", FALSE, target, 0, ch, TO_VICT);
+          }
+
+          if (duration > (10 * 2)) {
+            act("......$n's shadow stretches to the east.", FALSE, target, 0, ch, TO_VICT);
+          }
+
+          if (duration > (10 * 3)) {
+            act("......$n's shadow stretches to the west.", FALSE, target, 0, ch, TO_VICT);
+          }
+        }
+
+        if (affected_by_spell(target, SPELL_BLINDNESS)) {
+          act("......$n stumbles about wildly!", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_PARALYSIS)) {
+          act("......$n is completely immobilized!", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_HOLD)) {
+          act("......$n is rooted to the ground!", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_DEBILITATE)) {
+          act("......$n is enveloped by a greenish smoke.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_CLOUD_CONFUSION)) {
+          act("......$n drools absentmindedly.", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW))) {
+          act("......$n is enveloped by a huge ball of flame!", FALSE, target, 0, ch, TO_VICT);
+        }
+
+        for (AFF *temp_aff = target->affected; temp_aff; temp_aff = temp_aff->next) {
+          if ((temp_aff->type == SPELL_WARCHANT) && (temp_aff->location == APPLY_HITROLL) && (temp_aff->modifier < 0)) {
+            act("......$n hears the sound of war!", FALSE, target, 0, ch, TO_VICT);
+
+            break;
+          }
+        }
+
+        for (AFF *temp_aff = target->affected; temp_aff; temp_aff = temp_aff->next) {
+          if ((temp_aff->type == SPELL_WRATH_OF_GOD) && (temp_aff->location == APPLY_DAMROLL)) {
+            if (temp_aff->modifier <= -50) {
+              act("......$n is being crushed by the wrath of gods!", FALSE, target, 0, ch, TO_VICT);
+            }
+            else if (temp_aff->modifier <= -40) {
+              act("......$n is tormented by a holy force of will!", FALSE, target, 0, ch, TO_VICT);
+            }
+            else if (temp_aff->modifier <= -30) {
+              act("......$n is persecuted by celestial powers!", FALSE, target, 0, ch, TO_VICT);
+            }
+            else if (temp_aff->modifier <= -20) {
+              act("......$n is oppressed by divine condemnation!", FALSE, target, 0, ch, TO_VICT);
+            }
+            else {
+              act("......$n is suffering from righteous indignation!", FALSE, target, 0, ch, TO_VICT);
+            }
+
+            break;
+          }
+        }
+
+        if (IS_NPC(target)) {
+          if (mob_proto_table[target->nr].tagline) {
+            for (struct tagline_data *tag = mob_proto_table[target->nr].tagline; tag; tag = tag->next) {
+              act(tag->desc, FALSE, target, 0, ch, TO_VICT);
+            }
+          }
+        }
+      }
+      break;
+
+    case SHOW_CHAR_LOOK_AT:
+      if (IS_NPC(target) && IS_IMMORTAL(ch)) {
+        snprintf(buf, sizeof(buf), "WIZINFO: %s looks at %s",
+          GET_NAME(ch),
+          GET_SHORT(target));
+        wizlog(buf, GET_LEVEL(ch) + 1, 5);
+        log_s(buf);
+      }
+
+      if (IS_NPC(target) && IS_AFFECTED(target, AFF_STATUE) && !IS_IMMORTAL(ch)) {
+        if (signal_char(ch, ch, MSG_STONE, "")) return;
+
+        time_t rawtime;
+        time(&rawtime);
+
+        send_to_char("When you look into its eyes, you slowly turn into a statue.\n\r", ch);
+
+        if (GET_OPPONENT(target) && (GET_OPPONENT(target) == ch)) {
+          stop_fighting(target);
+        }
+
+        if (GET_OPPONENT(target)) {
+          stop_fighting(ch);
+        }
+
+        act("$n screams in pain as $e slowly turns to stone.", FALSE, ch, 0, target, TO_ROOM);
+
+        if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && IS_MORTAL(ch)) {
+          snprintf(buf, sizeof(buf), "%s stoned by %s at %s",
+            GET_NAME(ch),
+            GET_SHORT(target),
+            world[CHAR_REAL_ROOM(ch)].name);
+
+          for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+            if (!temp_desc->connected) {
+              act(buf, 0, temp_desc->character, 0, 0, TO_CHAR);
+            }
+          }
+
+          number_of_kills++;
+
+          if (number_of_kills < 100) {
+            snprintf(scores[number_of_kills].killer, sizeof(scores[number_of_kills].killer), "%s",
+              IS_NPC(target) ? MOB_SHORT(target) : GET_NAME(target));
+            snprintf(scores[number_of_kills].killed, sizeof(scores[number_of_kills].killed), "%s",
+              GET_NAME(ch));
+            snprintf(scores[number_of_kills].location, sizeof(scores[number_of_kills].location), "%s",
+              world[CHAR_REAL_ROOM(ch)].name);
+            snprintf(scores[number_of_kills].time_txt, sizeof(scores[number_of_kills].time_txt), "%s",
+              asctime(localtime(&rawtime)));
+
+            if (number_of_kills == CHAOSDEATH) {
+              snprintf(buf, sizeof(buf), "**** Kill number %d has been reached, we have a winner!!! ****\n\r\n\r", CHAOSDEATH);
+              send_to_all(buf);
+              send_to_all(buf);
+            }
           }
           else {
-            act("......$n suffers from righteous indignation.", FALSE, i, 0, ch, TO_VICT);
-          }
-
-          stop = TRUE;
-        }
-      }
-
-      if (affected_by_spell(i, SPELL_DIVINE_INTERVENTION))
-      {
-        act("......$n is sheltered from death by a divine aura.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_FORTIFICATION))
-      {
-        act("......$n is protected by a barrier of magical fortification.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_BLADE_BARRIER))
-      {
-        act("......$n is surrounded by a barrier of whirling blades.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_BLACKMANTLE))
-      {
-        act("......$n is surrounded by an eerie mantle of darkness.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_MAGIC_ARMAMENT))
-      {
-        act("......$n is enveloped by a faint red glow.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_FURY) || (IS_AFFECTED(i, AFF_FURY) && !IS_NPC(i)))
-      {
-        act("......$n is snarling and fuming with fury!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_RAGE))
-      {
-        act("......$n is seething with hatred and rage!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_BLOOD_LUST))
-      {
-        act("......$n thirsts for blood and lusts for carnage!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_DESECRATE))
-      {
-        act("......$n's sinister presence desecrates the surroundings.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_QUICK))
-      {
-        act("......$n's words and gestures are magically quickened.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_HASTE))
-      {
-        act("......$n's hastened actions move faster than reality.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_BLUR))
-      {
-        act("......$n's movements blur in and out of reality.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_MYSTIC_SWIFTNESS))
-      {
-        act("......$n's hands move with mystical swiftness.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_RUSH))
-      {
-        act("......$n's pulse rushes with supernatural speed.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) >= 0)
-      {
-        act("......$n's shadow stretches to the north.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 1))
-      {
-        act("......$n's shadow stretches to the south.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 2))
-      {
-        act("......$n's shadow stretches to the east.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_SHADOW_WRAITH) && duration_of_spell(i, SPELL_SHADOW_WRAITH) > (10 * 3))
-      {
-        act("......$n's shadow stretches to the west.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_BLINDNESS))
-      {
-        act("......$n stumbles about wildly!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_PARALYSIS))
-      {
-        act("......$n is completely immobilized!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_HOLD))
-      {
-        act("......$n is rooted to the ground!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_DEBILITATE))
-      {
-        act("......$n is enveloped by a greenish smoke.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_CLOUD_CONFUSION))
-      {
-        act("......$n drools absentmindedly.", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (affected_by_spell(i, SPELL_INCENDIARY_CLOUD))
-      {
-        act("......$n is enveloped by a huge ball of flame!", FALSE, i, 0, ch, TO_VICT);
-      }
-
-      if (IS_NPC(i))
-      {
-        if (mob_proto_table[i->nr].tagline)
-        {
-          for (tag = mob_proto_table[i->nr].tagline; tag; tag = tag->next)
-          {
-            act(tag->desc, FALSE, i, 0, ch, TO_VICT);
+            number_of_kills = 99;
           }
         }
-      }
-    }
-  }
-  else if (mode == 1)
-  {
-    if (IS_NPC(i) && GET_LEVEL(ch) >= LEVEL_IMM)
-    {
-      sprintf(buffer, "WIZINFO: %s looks at %s", GET_NAME(ch), GET_SHORT(i));
-      wizlog(buffer, GET_LEVEL(ch) + 1, 5);
-      log_s(buffer);
-    }
-
-    if (IS_NPC(i) && (IS_AFFECTED(i, AFF_STATUE)) && (GET_LEVEL(ch) < LEVEL_IMM))
-    {
-      if (signal_char(ch, ch, MSG_STONE, "")) return;
-
-      send_to_char("When you look into its eye, you slowly turn into a statue.\n\r", ch);
-
-      if (GET_OPPONENT(i) && GET_OPPONENT(i) == ch)
-      {
-        stop_fighting(i);
-      }
-
-      if (GET_OPPONENT(i))
-      {
-        stop_fighting(ch);
-      }
-
-      act("$n screams in pain as $s slowly turns to stone.", FALSE, ch, 0, i, TO_ROOM);
-
-      if ((CHAOSMODE || IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) &&
-          !IS_NPC(ch) && GET_LEVEL(ch) < LEVEL_IMM)
-      {
-        sprintf(buffer, "%s stoned by %s at %s", GET_NAME(ch), GET_SHORT(i), world[CHAR_REAL_ROOM(ch)].name);
-
-        for (d = descriptor_list; d; d = d->next)
-        {
-          if (!d->connected)
-          {
-            act(buffer, 0, d->character, 0, 0, TO_CHAR);
-          }
+        else {
+          snprintf(buf, sizeof(buf), "%s stoned by %s at %s (%d)",
+            GET_NAME(ch),
+            GET_SHORT(target),
+            world[CHAR_REAL_ROOM(ch)].name,
+            world[CHAR_REAL_ROOM(ch)].number);
+          wizlog(buf, LEVEL_IMM, 3);
         }
 
-        number_of_kills++;
+        log_s(buf);
+        deathlog(buf);
 
-        if (number_of_kills < 100)
-        {
-          sprintf(scores[number_of_kills].killer, "%s", (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
-          sprintf(scores[number_of_kills].killed, "%s", GET_NAME(ch));
-          sprintf(scores[number_of_kills].location, "%s", world[CHAR_REAL_ROOM(ch)].name);
-          ct = time(0);
-          tmstr = asctime(localtime(&ct));
-          *(tmstr + strlen(tmstr) - 1) = '\0';
-          sprintf(scores[number_of_kills].time_txt, "%s", tmstr);
+        GET_QUEST_GIVER(ch) = NULL;
+        if (GET_QUEST_OBJ(ch)) OBJ_OWNED_BY(GET_QUEST_OBJ(ch)) = NULL;
+        GET_QUEST_OBJ(ch) = NULL;
+        if (GET_QUEST_MOB(ch)) GET_QUEST_OWNER(GET_QUEST_MOB(ch)) = NULL;
+        GET_QUEST_MOB(ch) = NULL;
+        GET_QUEST_LEVEL(ch) = 0;
+        if (GET_QUEST_STATUS(ch) != QUEST_FAILED) GET_QUEST_TIMER(ch) = 30;
+        GET_QUEST_STATUS(ch) = QUEST_NONE;
 
-          if (number_of_kills == CHAOSDEATH)
-          {
-            sprintf(buffer,
-                    "**** Kill number %d has been reached, we have a winner!!! ****\n\r\n\r",
-                    CHAOSDEATH);
-            send_to_all(buffer);
-            send_to_all(buffer); /* yes, twice */
-          }
-        }
-        else
-        {
-          number_of_kills = 99;
-        }
-      }
-      else
-      {
-        sprintf(buffer, "%s stoned by %s at %s (%d)",
-          GET_NAME(ch), GET_SHORT(i),
-          world[CHAR_REAL_ROOM(ch)].name, world[CHAR_REAL_ROOM(ch)].number);
-        wizlog(buffer, LEVEL_IMM, 3);
+        death_cry(ch);
+        make_statue(ch);
+        save_char(ch, NOWHERE);
+        extract_char(ch);
+
+        return;
       }
 
-      log_s(buffer);
-      deathlog(buffer);
-      death_cry(ch);
-
-      if (GET_QUEST_STATUS(ch) || GET_QUEST_STATUS(ch) == QUEST_COMPLETED)
-      {
-        GET_QUEST_TIMER(ch) = 30;
+      if (MOB_DESCRIPTION(target)) {
+        send_to_char(MOB_DESCRIPTION(target), ch);
+      }
+      else {
+        act("You see nothing special about $m.", FALSE, target, 0, ch, TO_VICT);
       }
 
-      ch->questgiver = 0;
+      memset(buf, 0, sizeof(buf));
 
-      if (ch->questobj)
-      {
-        ch->questobj->owned_by = 0;
+      strlcat(buf, IS_NPC(target) ? GET_SHORT(target) : GET_NAME(target), sizeof(buf));
+
+      int percent = 0;
+
+      if (GET_MAX_HIT(target) > 0) {
+        percent = (100 * GET_HIT(target)) / GET_MAX_HIT(target);
+      }
+      else {
+        percent = -1;
       }
 
-      ch->questobj = 0;
-
-      if (ch->questmob)
-      {
-        ch->questmob->questowner = 0;
+      if (percent >= 100) {
+        strlcat(buf, " is in an excellent condition.\n\r", sizeof(buf));
+      }
+      else if (percent >= 90) {
+        strlcat(buf, " has a few scratches.\n\r", sizeof(buf));
+      }
+      else if (percent >= 75) {
+        strlcat(buf, " has some small wounds and bruises.\n\r", sizeof(buf));
+      }
+      else if (percent >= 50) {
+        strlcat(buf, " has quite a few wounds.\n\r", sizeof(buf));
+      }
+      else if (percent >= 30) {
+        strlcat(buf, " has some big nasty wounds and scratches.\n\r", sizeof(buf));
+      }
+      else if (percent >= 15) {
+        strlcat(buf, " looks pretty hurt.\n\r", sizeof(buf));
+      }
+      else if (percent >= 0) {
+        strlcat(buf, " is in an awful condition.\n\r", sizeof(buf));
+      }
+      else {
+        strlcat(buf, " is bleeding awfully from big wounds.\n\r", sizeof(buf));
       }
 
-      ch->questmob = 0;
-      ch->quest_status = QUEST_NONE;
-      ch->quest_level = 0;
-      make_statue(ch);
-      save_char(ch, NOWHERE);
-      extract_char(ch);
+      send_to_char(buf, ch);
 
-      return;
-    }
+      bool found = FALSE;
 
-    if (MOB_DESCRIPTION(i) || !IS_NPC(i))
-    {
-      send_to_char(MOB_DESCRIPTION(i), ch);
-    }
-    else
-    {
-      act("You see nothing special about $m.", FALSE, i, 0, ch, TO_VICT);
-    }
-
-    /* Show a character to another */
-
-    if (GET_MAX_HIT(i) > 0)
-    {
-      percent = (100 * GET_HIT(i)) / GET_MAX_HIT(i);
-    }
-    else
-    {
-      percent = -1;
-    }
-
-    if (IS_NPC(i))
-    {
-      strcpy(buffer, GET_SHORT(i));
-    }
-    else
-    {
-      strcpy(buffer, GET_NAME(i));
-    }
-
-    if (percent >= 100)
-    {
-      strcat(buffer, " is in an excellent condition.\n\r");
-    }
-    else if (percent >= 90)
-    {
-      strcat(buffer, " has a few scratches.\n\r");
-    }
-    else if (percent >= 75)
-    {
-      strcat(buffer, " has some small wounds and bruises.\n\r");
-    }
-    else if (percent >= 50)
-    {
-      strcat(buffer, " has quite a few wounds.\n\r");
-    }
-    else if (percent >= 30)
-    {
-      strcat(buffer, " has some big nasty wounds and scratches.\n\r");
-    }
-    else if (percent >= 15)
-    {
-      strcat(buffer, " looks pretty hurt.\n\r");
-    }
-    else if (percent >= 0)
-    {
-      strcat(buffer, " is in an awful condition.\n\r");
-    }
-    else
-    {
-      strcat(buffer, " is bleeding awfully from big wounds.\n\r");
-    }
-
-    send_to_char(buffer, ch);
-    found = FALSE;
-
-    for (j = 0; j < MAX_WEAR; j++)
-    {
-      if (EQ(i, j))
-      {
-        if (CAN_SEE_OBJ(ch, EQ(i, j)))
-        {
-          found = TRUE;
-        }
-      }
-    }
-
-    if (found) {
-      act("\n\r$n is using:", FALSE, i, 0, ch, TO_VICT);
-
-      for (j = 0; j < MAX_WEAR; j++) {
-        OBJ *obj = EQ(i, j);
+      for (int i = 0; i < MAX_WEAR; i++) {
+        OBJ *obj = EQ(target, i);
 
         if (!obj || !CAN_SEE_OBJ(ch, obj)) continue;
 
-        send_to_char(where[j], ch);
-        show_obj_to_char(obj, ch, 1, 0);
+        found = TRUE;
+        break;
+      }
 
-        switch (j) {
-          case WEAR_NECK_1:
-            /* ITEM_WEAR_2NECK and Emith cape uses both neck slots, similar to a 2-handed weapon. */
-            if (CAN_WEAR(obj, ITEM_WEAR_2NECK) || (V_OBJ(obj) == EMITH_CAPE_1) || (V_OBJ(obj) == EMITH_CAPE_2)) {
-              send_to_char(where[WEAR_NECK_2], ch);
-              send_to_char("********\n\r", ch);
-              j++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
-            }
-            break;
-          case WIELD:
-            if (OBJ_TYPE(obj) == ITEM_2HWEAPON) {
-              send_to_char(where[j], ch);
-              send_to_char("********\n\r", ch);
-              j++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
-            }
-            break;
+      if (found) {
+        act("\n\r$n is using:", FALSE, target, 0, ch, TO_VICT);
+
+        for (int i = 0; i < MAX_WEAR; i++) {
+          OBJ *obj = EQ(target, i);
+
+          if (!obj || !CAN_SEE_OBJ(ch, obj)) continue;
+
+          send_to_char(where[i], ch);
+          show_obj_to_char(obj, ch, 1, 0);
+
+          const int EMITH_CAPE_1 = 26709;
+          const int EMITH_CAPE_2 = 26719;
+
+          switch (i) {
+            case WEAR_NECK_1:
+              /* ITEM_WEAR_2NECK and Emith cape uses both neck slots, similar to a 2-handed weapon. */
+              if (CAN_WEAR(obj, ITEM_WEAR_2NECK) || (V_OBJ(obj) == EMITH_CAPE_1) || (V_OBJ(obj) == EMITH_CAPE_2)) {
+                printf_to_char(ch, "%s********\n\r", where[WEAR_NECK_2]);
+                i++; /* Skip WEAR_NECK_2. This assumes WEAR_NECK_2 is always immediately after WEAR_NECK_1. */
+              }
+              break;
+
+            case WIELD:
+              if (OBJ_TYPE(obj) == ITEM_2HWEAPON) {
+                printf_to_char(ch, "%s********\n\r", where[i]);
+                i++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
+              }
+              break;
+          }
         }
       }
-    }
 
-    if (GET_MOUNT(i))
-    {
-      sprintf(buffer, "<riding>             %s", GET_SHORT(i->specials.riding));
-      send_to_char(buffer, ch);
-    }
+      if (GET_MOUNT(target)) {
+        printf_to_char(ch, "<riding>             %s\n\r", GET_SHORT(GET_MOUNT(target)));
+      }
 
-    if (((GET_CLASS(ch) == CLASS_THIEF) && (ch != i))
-        || (GET_LEVEL(ch) > LEVEL_DEI))
-    {
-      found = FALSE;
-      send_to_char("\n\rYou attempt to peek at the inventory:\n\r", ch);
+      if ((IS_IMMORTAL(ch) && (GET_LEVEL(ch) > LEVEL_DEI)) ||
+          (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (ch != target))) {
+        found = FALSE;
 
-      for (tmp_obj = i->carrying; tmp_obj; tmp_obj = tmp_obj->next_content)
-      {
-        if (CAN_SEE_OBJ(ch, tmp_obj) && (number(0, 40) < GET_LEVEL(ch)) &&
-            tmp_obj->obj_flags.type_flag != ITEM_SC_TOKEN)
-        {
-          show_obj_to_char(tmp_obj, ch, 1, 0);
+        if (ch != target) {
+          act("\n\rYou attempt to peek at $s inventory:\n\r", FALSE, target, 0, ch, TO_VICT);
+        }
+        else {
+          send_to_char("\n\rYou are carrying:\n\r", ch);
+        }
+
+        for (OBJ *temp_obj = target->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+          if ((OBJ_TYPE(temp_obj) == ITEM_SC_TOKEN) && !(IS_IMMORTAL(ch) && GET_LEVEL(ch) >= LEVEL_SUP)) continue;
+          if (!CAN_SEE_OBJ(ch, temp_obj) || (number(0, 40) > GET_LEVEL(ch))) continue;
+
           found = TRUE;
+
+          show_obj_to_char(temp_obj, ch, 1, 0);
+        }
+
+        if (!found) {
+          if (ch != target) {
+            send_to_char("You can't see anything.\n\r", ch);
+          }
+          else {
+            send_to_char("Nothing\n\r", ch);
+          }
         }
       }
+      break;
 
-      if (!found)
-      {
-        send_to_char("You can't see anything.\n\r", ch);
-      }
-    }
-  }
-  else if (mode == 2)
-  {
-    /* Lists inventory */
-    act("$n is carrying:", FALSE, i, 0, ch, TO_VICT);
-    list_obj_to_char(i->carrying, ch, 1, TRUE);
+    case SHOW_CHAR_INVENTORY:
+      act("$n is carrying:", FALSE, target, 0, ch, TO_VICT);
+      list_obj_to_char(target->carrying, ch, 1, TRUE);
+      break;
   }
 }
 
 
+void list_char_to_char(CHAR *list, CHAR *ch, int mode) {
+  for (CHAR *temp_ch = list, *next_ch; temp_ch; temp_ch = next_ch) {
+    next_ch = temp_ch->next_in_room;
 
-void list_char_to_char(struct char_data *list,
-           struct char_data *ch, int mode)
-{
-  struct char_data *i, *temp;
-
-  for (i = list; i ; i = temp) {
-    temp = i->next_in_room; /* Added temp - Ranger June 96 */
-    if (ch!=i) show_char_to_char(i,ch,0);
+    if (ch != temp_ch) show_char_to_char(temp_ch, ch, 0);
   }
 }
 
@@ -1890,7 +1750,7 @@ void die(CHAR *ch)
     factor = 2;
   }
 
-  if (!IS_NPC(ch) && IS_SET(ch->specials.affected_by2, AFF_SEVERED) && GET_HIT(ch) >= 0)
+  if (!IS_NPC(ch) && IS_SET(ch->specials.affected_by2, AFF2_SEVERED) && GET_HIT(ch) >= 0)
   {
     sprintf(buf, "%s killed by massive body trama.", GET_NAME(ch));
     log_s(buf);
@@ -1898,7 +1758,7 @@ void die(CHAR *ch)
     wizlog(buf, LEVEL_IMM, 3);
   }
 
-  if (!IS_NPC(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && !ch->specials.death_timer && !IS_SET(ch->specials.affected_by2, AFF_SEVERED))
+  if (!IS_NPC(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && !ch->specials.death_timer && !IS_SET(ch->specials.affected_by2, AFF2_SEVERED))
   {
     send_to_char("The forces of Chaos send you spinning through reality!", ch);
 
@@ -2056,14 +1916,14 @@ void die(CHAR *ch)
     send_to_char("\n\r\n\rThe Reaper considers your soul and intones 'You may pass for free--for now.'\n\r", ch);
   }
 
-  if (IS_SET(ch->specials.affected_by2, AFF_SEVERED))
+  if (IS_SET(ch->specials.affected_by2, AFF2_SEVERED))
   {
-    REMOVE_BIT(ch->specials.affected_by2, AFF_SEVERED);
+    REMOVE_BIT(ch->specials.affected_by2, AFF2_SEVERED);
   }
 
-  if (IS_SET(ch->specials.affected_by2, AFF_IMMINENT_DEATH))
+  if (IS_SET(ch->specials.affected_by2, AFF2_IMMINENT_DEATH))
   {
-    REMOVE_BIT(ch->specials.affected_by2, AFF_IMMINENT_DEATH);
+    REMOVE_BIT(ch->specials.affected_by2, AFF2_IMMINENT_DEATH);
   }
 
   ch->specials.death_timer = 0;
@@ -2369,13 +2229,13 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     }
 
     /* affected_by2 */
-    if (IS_SET(OBJ_BITS2(obj), AFF_TRIPLE) &&
-        IS_SET(GET_AFF2(ch), AFF_TRIPLE)) {
+    if (IS_SET(OBJ_BITS2(obj), AFF2_TRIPLE) &&
+        IS_SET(GET_AFF2(ch), AFF2_TRIPLE)) {
       equipment[SKILL_TRIPLE] = TRUE;
     }
 
-    if (IS_SET(OBJ_BITS2(obj), AFF_QUAD) &&
-        IS_SET(GET_AFF2(ch), AFF_QUAD)) {
+    if (IS_SET(OBJ_BITS2(obj), AFF2_QUAD) &&
+        IS_SET(GET_AFF2(ch), AFF2_QUAD)) {
       equipment[SKILL_QUAD] = TRUE;
     }
   }
@@ -4195,7 +4055,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
           pc_class_types[(int)GET_CLASS(d->character)]);
       }
 
-      if (!IS_IMMORTAL(d->character)) {
+      if (!IS_IMMORTAL(ch)) {
         if (GET_SC(d->character)) {
           printf_to_char(ch, "Subclass: %s, Level %d\n\r",
             subclass_name[GET_SC(d->character) - 1],

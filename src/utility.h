@@ -163,4 +163,8 @@ int32_t MAX(int32_t a, int32_t b);
 
 int MAX_PRAC(CHAR *ch);
 
+size_t strlmrg(char *dest, size_t size, ...);
+size_t strlcpy(char *dest, const char *src, size_t size);
+size_t strlcat(char *dest, const char *src, size_t size);
+
 #endif

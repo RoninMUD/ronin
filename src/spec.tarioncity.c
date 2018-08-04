@@ -798,7 +798,7 @@ if(IS_DAY && chance(9)) {
     act("You are suddenly spirited away by $n and placed in a cage!",0,paktat,0,vict,TO_VICT);
     char_from_room(vict);
     char_to_room(vict, real_room(CAGE_ROOM));
-    SET_BIT(vict->specials.affected_by2,AFF_IMMINENT_DEATH);
+    SET_BIT(vict->specials.affected_by2,AFF2_IMMINENT_DEATH);
     if(!vict->specials.death_timer)
       vict->specials.death_timer=number(3,40);
     else
@@ -910,7 +910,7 @@ if(cmd==MSG_ZONE_RESET) {
     if(!(vict=get_random_victim_fighting(beast))) return FALSE;
     if(IS_NPC(vict)) return FALSE;
     do_say(beast, "Huo amnaer'tz lpahirb faemnh vaimn.",CMD_SAY);
-    SET_BIT(vict->specials.affected_by2,AFF_IMMINENT_DEATH);
+    SET_BIT(vict->specials.affected_by2,AFF2_IMMINENT_DEATH);
     if(!vict->specials.death_timer)
       vict->specials.death_timer=number(3,45);
     else
@@ -970,9 +970,9 @@ int tc_altar_spec(int room, CHAR *ch, int cmd, char *arg) {
     char_from_room(vict);
     char_to_room(vict,real_room(12825));
     do_look(vict,"",CMD_LOOK);
-    REMOVE_BIT(vict->specials.affected_by2,AFF_IMMINENT_DEATH);
+    REMOVE_BIT(vict->specials.affected_by2,AFF2_IMMINENT_DEATH);
     vict->specials.death_timer=0;
-    SET_BIT(ch->specials.affected_by2,AFF_IMMINENT_DEATH);
+    SET_BIT(ch->specials.affected_by2,AFF2_IMMINENT_DEATH);
     ch->specials.death_timer=2;
     return TRUE;
   }

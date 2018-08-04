@@ -3666,14 +3666,14 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
   }
 
   /* NPC Triple */
-  if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF_TRIPLE) && !number(0, 2)) {
+  if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_TRIPLE) && !number(0, 2)) {
     thit(ch, victim, TYPE_UNDEFINED);
     return;
   }
 
   /* PC Triple */
-  if (!IS_NPC(ch) && (IS_AFFECTED2(ch, AFF_TRIPLE) || ((GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_AVATAR || GET_CLASS(ch) == CLASS_COMMANDO) && GET_LEVEL(ch) >= 20))) {
-    int skill = IS_AFFECTED2(ch, AFF_TRIPLE) ? MAX(SKILL_MAX_PRAC, GET_LEARNED(ch, SKILL_TRIPLE)) : GET_LEARNED(ch, SKILL_TRIPLE);
+  if (!IS_NPC(ch) && (IS_AFFECTED2(ch, AFF2_TRIPLE) || ((GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_AVATAR || GET_CLASS(ch) == CLASS_COMMANDO) && GET_LEVEL(ch) >= 20))) {
+    int skill = IS_AFFECTED2(ch, AFF2_TRIPLE) ? MAX(SKILL_MAX_PRAC, GET_LEARNED(ch, SKILL_TRIPLE)) : GET_LEARNED(ch, SKILL_TRIPLE);
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 283;
 
@@ -3701,14 +3701,14 @@ void thit(CHAR *ch, CHAR *victim, int type) {
   if (!perform_hit(ch, victim, type, 3)) return;
 
   /* NPC Quad */
-  if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF_QUAD) && !number(0, 2)) {
+  if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_QUAD) && !number(0, 2)) {
     qhit(ch, victim, TYPE_UNDEFINED);
     return;
   }
 
   /* PC Quad */
-  if (!IS_NPC(ch) && (IS_AFFECTED2(ch, AFF_QUAD) || ((GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_AVATAR) && GET_LEVEL(ch) >= 50))) {
-    int skill = IS_AFFECTED2(ch, AFF_QUAD) ? MAX(SKILL_MAX_PRAC, GET_LEARNED(ch, SKILL_QUAD)) : GET_LEARNED(ch, SKILL_QUAD);
+  if (!IS_NPC(ch) && (IS_AFFECTED2(ch, AFF2_QUAD) || ((GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_AVATAR) && GET_LEVEL(ch) >= 50))) {
+    int skill = IS_AFFECTED2(ch, AFF2_QUAD) ? MAX(SKILL_MAX_PRAC, GET_LEARNED(ch, SKILL_QUAD)) : GET_LEARNED(ch, SKILL_QUAD);
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 269;
 
@@ -4103,15 +4103,12 @@ void snipe_action(CHAR *ch, CHAR *victim) {
   if (!ch || !victim) return;
 
   char buf[MIL];
-
   snprintf(buf, sizeof(buf), "Sniped by %s", GET_NAME(ch));
 
   if (enchanted_by(victim, buf)) return;
 
-  int dmg = GET_LEVEL(ch) * number(25, 30);
-
+  int dmg = GET_LEVEL(ch) * number(15, 25);
   double percent = (double)GET_HIT(victim) / (double)GET_MAX_HIT(victim);
-
   int check = ((GET_HIT(victim) > (dmg * (IS_AFFECTED(victim, AFF_SANCTUARY) ? 0.5 : 1.0))) ? (int)(100 * (0.5 - percent)) : MIN(100, (int)(10 * (1.0 / percent))));
 
   if (!check || !chance(check)) return;

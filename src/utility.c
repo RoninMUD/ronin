@@ -140,20 +140,6 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
       break;
   }
 
-  /*char buf[MIL];
-  sprintf(buf, "%d\n\r", result);
-  DESC *listener_desc;
-  CHAR *listener;
-  for (listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
-    listener = listener_desc->character;
-
-    if (!listener) continue;
-
-    if (!listener->desc->connected) {
-      send_to_char(buf, listener);
-    }
-  }*/
-
   return result;
 }
 
@@ -223,51 +209,50 @@ int32_t MAX(int32_t a, int32_t b) {
 
 /* End New RNG Section */
 
-char *PERS(CHAR *ch, CHAR*vict)
-{
-  static char name[100];
-  memset(name,0,sizeof(name));
-  //name[0]= 0;
-  if(CAN_SEE(vict, ch))
-    {
-    if(IS_MOB(ch))
-      strcat(name,MOB_SHORT(ch));
-    else
-      {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE,name);
-      strncat(name,ch->player.name,sizeof(name)-1);
-      }
+
+char *PERS(CHAR *ch, CHAR *vict) {
+  static char buf[MIL];
+
+  memset(buf, 0, sizeof(buf));
+
+  if (CAN_SEE(vict, ch)) {
+    if (IS_MOB(ch))
+      snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
+    else {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+      strlcat(buf, GET_NAME(ch), sizeof(buf));
     }
-  else
-    {
-    strcat(name, "somebody");
-    }
-  return name;
+  }
+  else {
+    strcat(buf, "somebody");
+  }
+
+  return buf;
 }
 
-char *POSSESS(CHAR *ch, CHAR*vict)
-{
-  static char name[100];
-  name[0]= 0;
-  if(CAN_SEE(vict, ch))
-    {
-    if(IS_MOB(ch)) {
-      strcat(name,MOB_SHORT(ch));
-      strcat(name,"'s");
+
+char *POSSESS(CHAR *ch, CHAR *vict) {
+  static char buf[MIL];
+
+  memset(buf, 0, sizeof(buf));
+
+  if (CAN_SEE(vict, ch)) {
+    if (IS_MOB(ch)) {
+      snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
     }
-    else
-      {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE,name);
-      strcat(name,ch->player.name);
-      strcat(name,"'s");
-      }
+    else {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+      strlcat(buf, GET_NAME(ch), sizeof(buf));
+      strlcat(buf, "'s", sizeof(buf));
     }
-  else
-    {
-    strcat(name, "somebody's");
-    }
-  return name;
+  }
+  else {
+    strcat(buf, "somebody's");
+  }
+
+  return buf;
 }
+
 
 char *CHCLR(CHAR *ch, int color) {
   static char colorcode1[100];
@@ -393,49 +378,80 @@ int GETOBJ_WEIGHT(struct obj_data *obj)
     }
   return(tmp_weight);
 }
+
 int IS_DARK(int room) {
-  if(world[room].zone==30) return FALSE;
-  if(world[room].light) return FALSE;
-  if(IS_SET(world[room].room_flags, DARK)) return TRUE;
-  if(IS_SET(world[room].room_flags, INDOORS)) return FALSE;
-  if(world[room].sector_type==SECT_INSIDE) return FALSE;
-  if(IS_SET(world[room].room_flags, LIT)) return FALSE;
-  if(weather_info.sunlight==SUN_SET || weather_info.sunlight==SUN_DARK) return TRUE;
-  return FALSE;
+  return !IS_LIGHT(room);
 }
 
 int IS_LIGHT(int room) {
-  if(world[room].zone==30) return TRUE;
-  if(world[room].light) return TRUE;
-  if(IS_SET(world[room].room_flags, DARK)) return FALSE;
-  if(IS_SET(world[room].room_flags, INDOORS)) return TRUE;
-  if(world[room].sector_type==SECT_INSIDE) return TRUE;
-  if(IS_SET(world[room].room_flags, LIT)) return TRUE;
-  if(weather_info.sunlight==SUN_SET || weather_info.sunlight==SUN_DARK) return FALSE;
-  return TRUE;
+  if (world[room].light ||
+      world[room].zone == 30 ||
+      (!IS_SET(world[room].room_flags, DARK) &&
+       (IS_SET(world[room].room_flags, INDOORS) ||
+        IS_SET(world[room].room_flags, LIT) ||
+        world[room].sector_type == SECT_INSIDE ||
+        weather_info.sunlight == SUN_RISE ||
+        weather_info.sunlight == SUN_LIGHT))) {
+    return TRUE;
+  }
+
+  return FALSE;
 }
 
-char *string_to_lower(char *string)
-{
-  int i = 0;
-
-  for (i=0;i<strlen(string);i++)
-    {
-      string[i] = LOWER(string[i]);
-    }
+char *string_to_lower(char *string) {
+  for (int i = 0; i < strlen(string); i++) {
+    string[i] = LOWER(string[i]);
+  }
 
   return string;
 }
 
-char *string_to_upper(char *string)
-{
-  int i = 0;
+char *string_to_upper(char *string) {
+  for (int i = 0; i < strlen(string); i++) {
+    string[i] = UPPER(string[i]);
+  }
 
-  for (i=0;i<strlen(string);i++)
-    {
-      string[i] = UPPER(string[i]);
-    }
   return string;
+}
+
+size_t strlmrg(char *dest, size_t size, ...) {
+  char *s, *end = dest + (size - 1);
+  size_t needed = 0;
+
+  va_list ap;
+
+  va_start(ap, size);
+
+  while ((s = va_arg(ap, char *))) {
+    if (s == dest) {
+      size_t n = strnlen(s, (end + 1) - s);
+      needed += n;
+      dest += n;
+    }
+    else {
+      needed += strlen(s);
+
+      if (dest && (dest < end)) {
+        while (*s && (dest < end)) {
+          *dest++ = *s++;
+        }
+
+        *dest = 0;
+      }
+    }
+  }
+
+  va_end(ap);
+
+  return needed;
+}
+
+size_t strlcpy(char *dest, const char *src, size_t size) {
+  return strlmrg(dest, size, src, (void *)0);
+}
+
+size_t strlcat(char *dest, const char *src, size_t size) {
+  return strlmrg(dest, size, dest, src, (void *)0);
 }
 
 int IS_CARRYING_W(struct char_data *ch)
@@ -890,10 +906,14 @@ struct time_info_data age(struct char_data *ch)
   return player_age;
 }
 
-struct obj_data
-*EQ( struct char_data *ch, int loc ) {
-  if( ch->equipment[loc] ) return( ch->equipment[loc] );
-  else return NULL;
+OBJ *EQ(CHAR *ch, int loc) {
+  OBJ *obj = NULL;
+
+  if ((loc >= WEAR_LIGHT) && (loc <= WEAR_HOLD) && ch->equipment[loc]) {
+    obj = ch->equipment[loc];
+  }
+
+  return obj;
 }
 
 char
@@ -1343,23 +1363,23 @@ char *how_good(int percent)
   static char buf[256];
 
   if (percent == 0)
-   strcpy(buf, " (not learned)");
+   strcpy(buf, "(not learned)");
   else if (percent <= 10)
-   strcpy(buf, " (awful)");
+   strcpy(buf, "(awful)");
   else if (percent <= 20)
-   strcpy(buf, " (bad)");
+   strcpy(buf, "(bad)");
   else if (percent <= 40)
-   strcpy(buf, " (poor)");
+   strcpy(buf, "(poor)");
   else if (percent <= 55)
-   strcpy(buf, " (average)");
+   strcpy(buf, "(average)");
   else if (percent <= 70)
-   strcpy(buf, " (fair)");
+   strcpy(buf, "(fair)");
   else if (percent <= 80)
-   strcpy(buf, " (good)");
+   strcpy(buf, "(good)");
   else if (percent <= 85)
-   strcpy(buf, " (very good)");
+   strcpy(buf, "(very good)");
   else
-   strcpy(buf, " (Superb)");
+   strcpy(buf, "(Superb)");
 
   return (buf);
 }
@@ -1640,8 +1660,7 @@ void add_program(struct program_info prg, struct char_data *ch)
     program_fork();
 }
 
-/* Just a list of mob classes with no legs */
-int CHAR_HAS_LEGS(struct char_data *ch) {
+int CHAR_HAS_LEGS(CHAR *ch) {
   switch(GET_CLASS(ch)) {
     case CLASS_LICH:
     case CLASS_LESSER_ELEMENTAL:
@@ -1657,13 +1676,12 @@ int CHAR_HAS_LEGS(struct char_data *ch) {
       return FALSE;
       break;
   }
+
   return TRUE;
 }
 
-int CORPSE_HAS_TROPHY(struct obj_data *obj)
-{
-  switch(obj->obj_flags.material)
-  {
+int CORPSE_HAS_TROPHY(OBJ *obj) {
+  switch(OBJ_MATERIAL(obj)) {
     case CLASS_LICH:
     case CLASS_LESSER_ELEMENTAL:
     case CLASS_GREATER_ELEMENTAL:
@@ -1682,16 +1700,21 @@ int CORPSE_HAS_TROPHY(struct obj_data *obj)
   return TRUE;
 }
 
-int CAN_SEE(struct char_data *ch,struct char_data *vict) {
-  if(WIZ_INV(ch,vict)) return FALSE;
-  if(IMP_INV(ch,vict) && ch!=vict && !(GET_LEVEL(vict)<=GET_LEVEL(ch) && affected_by_spell(ch, SPELL_PERCEIVE))) return FALSE;
-  if(IS_AFFECTED(ch,AFF_BLIND)) return FALSE;
-  if(IS_AFFECTED(vict,AFF_INVISIBLE) && !IS_AFFECTED(ch, AFF_DETECT_INVISIBLE) && !affected_by_spell(ch, SPELL_PERCEIVE) && IS_MORTAL(ch)) return FALSE;
-  if(!IS_LIGHT(CHAR_REAL_ROOM(ch)) && IS_MORTAL(ch) && !IS_AFFECTED(ch,AFF_INFRAVISION)) return FALSE;
+int CAN_SEE(CHAR *ch, CHAR *vict) {
+  if (!ch || !vict) return FALSE;
+
+  if (WIZ_INV(ch, vict) ||
+      IMP_INV(ch, vict) ||
+      NRM_INV(ch, vict) ||
+      (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
+      (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
+    return FALSE;
+  }
+
   return TRUE;
 }
 
-int CAN_TAKE(struct char_data *ch, struct obj_data *obj) {
+int CAN_TAKE(CHAR *ch, OBJ *obj) {
   if (!ch || !obj) return FALSE;
 
   if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
@@ -1702,61 +1725,53 @@ int CAN_TAKE(struct char_data *ch, struct obj_data *obj) {
   return TRUE;
 }
 
-struct char_data *get_ch_by_id(int num)
-{
-  struct descriptor_data *d;
-
-  for (d = descriptor_list; d; d = d->next)
-    if (d && !d->connected && d->character &&
-        d->character->ver3.id==num )
-      return (d->character);
+CHAR *get_ch_by_id(int num) {
+  for (struct descriptor_data *d = descriptor_list; d; d = d->next)
+    if (d && !d->connected && d->character && (d->character->ver3.id == num))
+      return d->character;
 
   return NULL;
 }
 
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch) {
-  int index = 0;
+  if (!ch) return 0;
+
+  if (GET_OSTR(ch) < 0 || GET_OSTR(ch) > 25) return 0;
+
+  int index = GET_OSTR(ch);
 
   if (GET_OSTR(ch) == 18) {
-    if (GET_OADD(ch) == 100) index = 30;
-    if (GET_OADD(ch) <= 99)  index = 29;
-    if (GET_OADD(ch) <= 90)  index = 28;
-    if (GET_OADD(ch) <= 75)  index = 27;
-    if (GET_OADD(ch) <= 50)  index = 26;
-    if (GET_OADD(ch) == 0)   index = 18;
-  }
-  else if (index >= 0 && index <= 25) {
-    index = GET_OSTR(ch);
-  }
-  else {
-    index = 0;
+    if (GET_OADD(ch) < 1)        index = 18;
+    else if (GET_OADD(ch) < 50)  index = 26;
+    else if (GET_OADD(ch) < 75)  index = 27;
+    else if (GET_OADD(ch) < 90)  index = 28;
+    else if (GET_OADD(ch) < 100) index = 29;
+    else                         index = 30;
   }
 
   return index;
 }
 
 int STRENGTH_APPLY_INDEX(struct char_data *ch) {
-  int index = 0;
+  if (!ch) return 0;
+
+  if (GET_STR(ch) < 0 || GET_STR(ch) > 25) return 0;
+
+  int index = GET_STR(ch);
 
   if (GET_STR(ch) == 18) {
-    if (GET_ADD(ch) == 100) index = 30;
-    if (GET_ADD(ch) <= 99)  index = 29;
-    if (GET_ADD(ch) <= 90)  index = 28;
-    if (GET_ADD(ch) <= 75)  index = 27;
-    if (GET_ADD(ch) <= 50)  index = 26;
-    if (GET_ADD(ch) == 0)   index = 18;
-  }
-  else if (index >= 0 && index <= 25) {
-    index = GET_STR(ch);
-  }
-  else {
-    index = 0;
+    if (GET_ADD(ch) < 1)        index = 18;
+    else if (GET_ADD(ch) < 50)  index = 26;
+    else if (GET_ADD(ch) < 75)  index = 27;
+    else if (GET_ADD(ch) < 90)  index = 28;
+    else if (GET_ADD(ch) < 100) index = 29;
+    else                        index = 30;
   }
 
   return index;
 }
 
-int IS_GROUPED(struct char_data *ch,struct char_data *vict) {
+int IS_GROUPED(struct char_data *ch, struct char_data *vict) {
   struct char_data *k;
   struct follow_type *f;
   int found_ch=0,found_vict=0;
@@ -1781,7 +1796,7 @@ int IS_GROUPED(struct char_data *ch,struct char_data *vict) {
   return FALSE;
 }
 
-void log_cmd(char *file,char *fmt, ...)
+void log_cmd(char *file, char *fmt, ...)
 {
   char buf [2*MSL],filename[20];
   FILE *fl;
@@ -1802,36 +1817,34 @@ void log_cmd(char *file,char *fmt, ...)
 }
 
 
-void WAIT_STATE(CHAR *ch,int cycle) {
-  if(!ch) return;
-  if(!ch->desc) return;
-  if(cycle < ch->desc->wait) return;
-  ch->desc->wait=cycle;
-  return;
+void WAIT_STATE(CHAR *ch, int cycle) {
+  if (!ch || !GET_DESCRIPTOR(ch)) return;
+
+  if (cycle >= GET_WAIT(ch)) {
+    GET_WAIT(ch) = cycle;
+  }
 }
 
-int get_weapon_type(OBJ *obj)
-{
+int get_weapon_type(OBJ *obj) {
   int w_type = TYPE_HIT;
 
-  switch (OBJ_VALUE3(obj))
-  {
+  switch (OBJ_VALUE3(obj)) {
     case 0:
     case 1:
-    case 2: w_type = TYPE_WHIP; break;
-    case 3: w_type = TYPE_SLASH; break;
-    case 4: w_type = TYPE_WHIP; break;
-    case 5: w_type = TYPE_STING; break;
-    case 6: w_type = TYPE_CRUSH; break;
+    case 2: w_type = TYPE_WHIP;     break;
+    case 3: w_type = TYPE_SLASH;    break;
+    case 4: w_type = TYPE_WHIP;     break;
+    case 5: w_type = TYPE_STING;    break;
+    case 6: w_type = TYPE_CRUSH;    break;
     case 7: w_type = TYPE_BLUDGEON; break;
-    case 8: w_type = TYPE_CLAW; break;
+    case 8: w_type = TYPE_CLAW;     break;
     case 9:
     case 10:
-    case 11: w_type = TYPE_PIERCE; break;
-    case 12: w_type = TYPE_HACK; break;
-    case 13: w_type = TYPE_CHOP; break;
-    case 14: w_type = TYPE_SLICE; break;
-    default: w_type = TYPE_HIT; break;
+    case 11: w_type = TYPE_PIERCE;  break;
+    case 12: w_type = TYPE_HACK;    break;
+    case 13: w_type = TYPE_CHOP;    break;
+    case 14: w_type = TYPE_SLICE;   break;
+    default: w_type = TYPE_HIT;     break;
   }
 
   return w_type;

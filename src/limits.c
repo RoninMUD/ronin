@@ -380,7 +380,7 @@ int mana_gain(CHAR *ch) {
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
-    if (check_subclass(ch, SC_RONIN, 3)) {
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       gain /= 8;
     }
     else {
@@ -1100,7 +1100,7 @@ void point_update(void)
   {
     next_ch = ch->next;
 
-    if (IS_SET(ch->specials.affected_by2, AFF_SEVERED))
+    if (IS_SET(ch->specials.affected_by2, AFF2_SEVERED))
     {
       act("With a last gasp of breath,\n\r$n dies due to massive lower body trauma.", FALSE, ch, 0, 0, TO_ROOM);
 

@@ -242,7 +242,7 @@ const char * const spell_wear_off_msg[] = {
   "!switch!",/*231*/
   "!trusty steed!",/*232*/
   "!backfist!",/*233*/
-  "!retreat!",/*234*/
+  "",/*234*/
   "You seem more visible.",/*235*/
   "You feel less disoriented.",/*236*/
   "!lunge!",/*237*/
@@ -2606,6 +2606,7 @@ const char * const thief_skills[] = {
   "coin-toss",
   "dodge",
   "hide",
+  "kick",
   "peek",
   "pick",
   "sneak",
