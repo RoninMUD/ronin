@@ -718,17 +718,9 @@ bool comm_pers(CHAR *ch, CHAR *vict) {
 
   if (WIZ_INV(ch, vict)) return FALSE;
 
-  return TRUE;
-}
+  if (IS_MORTAL(vict)) return TRUE;
 
-
-bool comm_invis(CHAR *ch, CHAR *vict) {
-  if (!ch || !vict) return TRUE;
-
-  if (IS_AFFECTED(vict, AFF_IMINV) && !affected_by_spell(ch, SPELL_PERCEIVE) && IS_MORTAL(ch)) return TRUE;
-  if (IS_AFFECTED(vict, AFF_INVISIBLE) && !IS_AFFECTED(ch, AFF_DETECT_INVISIBLE) && !affected_by_spell(ch, SPELL_PERCEIVE) && IS_MORTAL(ch)) return TRUE;
-
-  return FALSE;
+  return CAN_SEE(ch, vict);
 }
 
 
@@ -740,8 +732,8 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     { "chaos",   PLR_CHAOS,   15 },
   };
 
-  char buf[MSL];
   char name[MIL];
+  char message[MSL];
   DESC *listener_desc = NULL;
   CHAR *listener = NULL;
 
@@ -754,29 +746,28 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     if (!IS_NPC(ch)) {
       if IS_SET(GET_PFLAG(ch), channel_info[comm].channel_flag) {
         REMOVE_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-        snprintf(buf, sizeof(buf), "You turn OFF the %s channel.\n\r", channel_info[comm].channel_name);
-        send_to_char(buf, ch);
+        printf_to_char(ch, "You turn OFF the %s channel.\n\r", channel_info[comm].channel_name);
       }
       else {
         SET_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-        snprintf(buf, sizeof(buf), "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
-        send_to_char(buf, ch);
+        printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
       }
     }
     else {
       /* It's an NPC. */
-      snprintf(buf, sizeof(buf), "What do you want to %s?\n\r", channel_info[comm].channel_name);
-      send_to_char(buf, ch);
+      printf_to_char(ch, "What do you want to %s?\n\r", channel_info[comm].channel_name);
     }
 
     return;
   }
 
+  /* Store the message. */
+  snprintf(message, sizeof(message), "%s", arg);
+
   /* NoShouted characters can't use the gossip channel. */
   if (!IS_NPC(ch) &&
       IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    snprintf(buf, sizeof(buf), "You have displeased the gods, you cannot use the %s channel.\n\r", channel_info[comm].channel_name);
-    send_to_char(buf, ch);
+    printf_to_char(ch, "You have displeased the gods, you cannot use the %s channel.\n\r", channel_info[comm].channel_name);
 
     return;
   }
@@ -785,7 +776,7 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
   if (!IS_NPC(ch) &&
       IS_SET(GET_PFLAG(ch), PLR_QUEST) &&
       IS_SET(GET_PFLAG(ch), PLR_QUIET)) {
-    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r", ch);
+    printf_to_char(ch, "The Questmaster has taken away your ability to interrupt.\n\r");
 
     return;
   }
@@ -794,20 +785,16 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
   if (!IS_NPC(ch) &&
       !IS_SET(GET_PFLAG(ch), channel_info[comm].channel_flag)) {
     SET_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-    snprintf(buf, sizeof(buf), "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
-    send_to_char(buf, ch);
+    printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
   }
 
   if (GET_COND(ch, DRUNK) > 10) {
-    arg = make_drunk(arg, ch);
+    snprintf(message, sizeof(message), "%s", make_drunk(message, ch));
   }
-
-  /* Build the buffer for the acting character. */
-  snprintf(buf, sizeof(buf), "You (%s) [ %s ]\n\r", channel_info[comm].channel_name, arg);
 
   /* Show the text to the acting character. */
   COLOR(ch, channel_info[comm].channel_color);
-  send_to_char(buf, ch);
+  printf_to_char(ch, "You (%s) [ %s ]\n\r", channel_info[comm].channel_name, message);
   ENDCOLOR(ch);
 
   /* Loop through the descriptors in the game and show them the text if they're connected
@@ -823,7 +810,7 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
         listener != ch &&
         IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) {
       /* Build the buffer for the listener. */
-      if (comm_pers(listener, ch)) {
+      if (IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(listener, ch)) || CAN_SEE(listener, ch)) {
         if (IS_MOB(ch)) {
           snprintf(name, sizeof(name), "%s", MOB_SHORT(ch));
         }
@@ -836,15 +823,11 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
         snprintf(name, sizeof(name), "somebody");
       }
 
-      snprintf(buf, sizeof(buf), "%s%s (%s) [ %s ]\n\r",
-        (comm_pers(listener, ch) && comm_invis(listener, ch)) ? "[*] " : "",
-        CAP(name),
-        channel_info[comm].channel_name,
-        arg);
+      CAP(name);
 
       /* Show the text to the listener. */
       COLOR(listener, channel_info[comm].channel_color);
-      send_to_char(buf, listener);
+      printf_to_char(listener, "%s (%s) [ %s ]\n\r", name, channel_info[comm].channel_name, message);
       ENDCOLOR(listener);
     }
   }
@@ -917,7 +900,7 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 
         if (!player) continue;
 
-        if (CAN_SEE(ch, player) &&
+        if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
           CHAR_REAL_ROOM(player) != NOWHERE &&
           IS_SET(player->specials.pflag, PLR_GOSSIP)) {
           sprintf(buf, "%s\n\r", GET_NAME(player));
@@ -935,7 +918,7 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 
           if (!player) continue;
 
-          if (CAN_SEE(ch, player) &&
+          if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
             CHAR_REAL_ROOM(player) != NOWHERE &&
             IS_SET(player->specials.pflag, PLR_AUCTION)) {
             sprintf(buf, "%s\n\r", GET_NAME(player));
@@ -953,7 +936,7 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 
             if (!player) continue;
 
-            if (CAN_SEE(ch, player) &&
+            if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
               CHAR_REAL_ROOM(player) != NOWHERE &&
               IS_SET(player->specials.pflag, PLR_CHAOS)) {
               sprintf(buf, "%s\n\r", GET_NAME(player));
@@ -971,7 +954,7 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 
               if (!player) continue;
 
-              if (CAN_SEE(ch, player) &&
+              if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
                 CHAR_REAL_ROOM(player) != NOWHERE &&
                 IS_SET(player->specials.pflag, PLR_QUESTC)) {
                 sprintf(buf, "%s\n\r", GET_NAME(player));
@@ -989,7 +972,6 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 /* Function called by the 'tell' command.
    Re-written by Night, 12/10/2011 */
 void do_tell(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
   char name[MIL];
   char message[MSL];
   struct descriptor_data *temp_desc = NULL;
@@ -1046,12 +1028,9 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
   }
 
   /* Store the listener's name. */
-  if (WIZ_INV(ch, listener)) {
-    snprintf(name, sizeof(name), "someone");
-  }
-  else {
-    snprintf(name, sizeof(name), "%s", GET_NAME(listener));
-  }
+  snprintf(name, sizeof(name), "%s", GET_NAME(listener));
+
+  CAP(name);
 
   /* Various conditions that might prevent a character from using tell.
      Here we're building the buffer for the acting character. */
@@ -1066,34 +1045,29 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
   /* NPCs/Players can't tell through NoShout. */
   if (!IS_IMMORTAL(listener) &&
       IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    snprintf(buf, sizeof(buf), "The gods have taken away %s's ability to communicate.", name);
-    act(buf, FALSE, ch, 0, listener, TO_CHAR);
+    printf_to_char(ch, "The gods have taken away %s's ability to communicate.\n\r", name);
 
     return;
   }
 
-  /* Everything worked out. */
-  snprintf(buf, sizeof(buf), "You tell %s, '%s'", name, message);
-
   /* Show the text to the acting character. */
   COLOR(ch, 6);
-  act(buf, 0, ch, 0, listener, TO_CHAR);
+  printf_to_char(ch, "You tell %s, '%s'\n\r", name, message);
   ENDCOLOR(ch);
 
   /* Store the actor's name. */
   if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "someone");
+    snprintf(name, sizeof(name), "Someone");
   }
   else {
     snprintf(name, sizeof(name), "%s", GET_NAME(ch));
   }
 
-  /* Build the buffer for the listening player. */
-  snprintf(buf, sizeof(buf), "%s tells you '%s'", CAP(name), message);
+  CAP(name);
 
   /* Show the text to the listening player. */
   COLOR(listener, 6);
-  act(buf, 0, ch, 0, listener, TO_VICT);
+  printf_to_char(listener, "%s tells you '%s'\n\r", name, message);
   ENDCOLOR(listener);
 
   /* Update the listening player's reply_to variable. */
@@ -1106,7 +1080,6 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
 /* Function called by the 'reply' command.
    Re-written by Night, 12/10/2011 */
 void do_reply(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
   char name[MIL];
   char message[MSL];
   CHAR *temp_ch = NULL;
@@ -1141,15 +1114,15 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
 
   arg = skip_spaces(arg);
 
-  /* Store the message. */
-  snprintf(message, sizeof(message), "%s", arg);
-
   /* Reply was used without any arguments. */
   if (!*arg) {
     send_to_char("Yes, but what do you want to reply?\n\r", ch);
 
     return;
   }
+
+  /* Store the message. */
+  snprintf(message, sizeof(message), "%s", arg);
 
   /* Attempt to locate the listener. */
   temp_ch = get_ch_by_id(GET_REPLY_TO(ch));
@@ -1171,11 +1144,13 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
 
   /* Store the listener's name. */
   if (WIZ_INV(ch, listener)) {
-    snprintf(name, sizeof(name), "someone");
+    snprintf(name, sizeof(name), "Someone");
   }
   else {
     snprintf(name, sizeof(name), "%s", GET_NAME(listener));
   }
+
+  CAP(name);
 
   /* Various conditions that might prevent a character from using reply.
      Here we're building the buffer for the acting character. */
@@ -1197,34 +1172,29 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
   /* NPCs/Players can't reply through NoShout. */
   if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
       IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    snprintf(buf, sizeof(buf), "The gods have taken away %s's ability to communicate.", name);
-    act(buf, FALSE, ch, 0, listener, TO_CHAR);
+    printf_to_char(ch, "The gods have taken away %s's ability to communicate.\n\r", name);
 
     return;
   }
 
-  /* Everything worked out. */
-  snprintf(buf, sizeof(buf), "You reply to %s, '%s'", name, message);
-
   /* Show the text to the acting character. */
   COLOR(ch, 6);
-  act(buf, 0, ch, 0, listener, TO_CHAR);
+  printf_to_char(ch, "You reply to %s, '%s'\n\r", name, message);
   ENDCOLOR(ch);
 
   /* Store the actor's name. */
   if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "someone");
+    snprintf(name, sizeof(name), "Someone");
   }
   else {
     snprintf(name, sizeof(name), "%s", GET_NAME(ch));
   }
 
-  /* Build the buffer for the listening player. */
-  snprintf(buf, sizeof(buf), "%s replies '%s'", CAP(name), message);
+  CAP(name);
 
   /* Show the text to the listening player. */
   COLOR(listener, 6);
-  act(buf, 0, ch, 0, listener, TO_VICT);
+  printf_to_char(listener, "%s replies '%s'\n\r", name, message);
   ENDCOLOR(listener);
 
   /* Update the listening player's reply_to variable. */

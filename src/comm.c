@@ -999,8 +999,6 @@ void heartbeat(int pulse) {
 
   if (!(pulse %(10* PULSE_TICK))) { /* 10 minutes */
     plrlog();
-/*    if (lawful)
-     night_watchman();*/
     check_reboot();
   }
 
@@ -2373,9 +2371,8 @@ void act_by_type(
   }
 }
 
-void act(char *str, int hide_invisible, struct char_data *ch,
-         void *ob, void *vict_obj, int type) {
-  act_by_type(str,hide_invisible,ch,ob,vict_obj,type,0);
+void act(char *str, int hide_invisible, struct char_data *ch, void *ob, void *vict_obj, int type) {
+  act_by_type(str, hide_invisible, ch, ob, vict_obj, type, 0);
 }
 
 
@@ -2738,7 +2735,7 @@ void pulse_shadow_wraith(CHAR *ch) {
     if (!IS_NPC(ch) && check_subclass(ch, SC_INFIDEL, 4)) {
       if (GET_OPPONENT(ch)) {
         /* A bit of a hack here. Cast Dusk Requiem with caster level equal to
-            LEVEL_MORT +1 to inflict double damage, rather than making a
+            LEVEL_MORT+1 to inflict double damage, rather than making a
             special function to do this. */
         spell_dusk_requiem(LEVEL_MORT + 1, ch, GET_OPPONENT(ch), 0);
 
