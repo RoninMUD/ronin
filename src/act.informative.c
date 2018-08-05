@@ -522,16 +522,18 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
                 strlcat(buf, " is here, fighting ", sizeof(buf));
 
                 if (GET_OPPONENT(target) == ch) {
-                  strlcat(buf, " YOU!", sizeof(buf));
+                  strlcat(buf, "YOU!", sizeof(buf));
                 }
                 else {
                   if (SAME_ROOM(target, GET_OPPONENT(target))) {
                     if (IS_NPC(GET_OPPONENT(target))) {
-                      strlcat(buf, GET_SHORT(GET_OPPONENT(target)), sizeof(buf));
+                      snprintf(buf2, sizeof(buf2), "%s.", GET_SHORT(GET_OPPONENT(target)));
                     }
                     else {
-                      strlcat(buf, GET_NAME(GET_OPPONENT(target)), sizeof(buf));
+                      snprintf(buf2, sizeof(buf2), "%s.", GET_NAME(GET_OPPONENT(target)));
                     }
+
+                    strlcat(buf, buf2, sizeof(buf));
                   }
                   else {
                     strlcat(buf, "someone who has already left.", sizeof(buf));
