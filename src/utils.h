@@ -242,26 +242,6 @@ do {                   \
 
 #define IS_OBJ_STAT(obj, stat) (IS_SET((obj)->obj_flags.extra_flags, stat))
 
-#define CAN_SEE_OBJ(ch, obj) ( \
-  IS_IMMORTAL(ch) || \
-  IS_AFFECTED((ch), AFF_INFRAVISION) || \
-  ((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE)) && !IS_AFFECTED((ch), AFF_BLIND) && IS_LIGHT(CHAR_REAL_ROOM(ch))) \
-)
-
-#define CAN_CARRY_W(ch) (\
-  IS_IMMORTAL(ch) ? 10000 : \
-  (ch->ver3.prestige >= 20) ? (int)(str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
-
-#define CAN_CARRY_N(ch) (\
-  IS_IMMORTAL(ch) ? 200 : \
-  ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : \
-  (ch->ver3.prestige >= 14) ? (int)((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
-
-#define CAN_CARRY_OBJ(ch, obj) ( \
-  IS_IMMORTAL(ch) || \
-  ((((IS_CARRYING_W(ch) + GETOBJ_WEIGHT(obj)) <= (3 * CAN_CARRY_W(ch))) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch)))) \
-)
-
 #define CAN_GET_OBJ(ch, obj) \
 (CAN_TAKE((ch), (obj)) && CAN_CARRY_OBJ((ch), (obj)) && CAN_SEE_OBJ((ch), (obj)))
 
@@ -392,6 +372,7 @@ do {                   \
 #define GET_QUEST_MOB(ch) (ch->questmob)
 #define GET_QUEST_LEVEL(ch) (ch->quest_level)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
+#define GET_REPLY_TO(ch) (ch->specials.reply_to)
 
 #define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
 #define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
@@ -410,5 +391,25 @@ do {                   \
 #define IMP_INV(ch, vict)        (IS_AFFECTED(vict, AFF_IMINV) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !((GET_LEVEL(vict) <= GET_LEVEL(ch)) && IS_AFFECTED2(ch, AFF2_PERCEIVE)) && !CHAOSMODE)
 #define NRM_INV(ch, vict)        (IS_AFFECTED(vict, AFF_INVISIBLE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED(ch, AFF_DETECT_INVISIBLE) && !((GET_LEVEL(vict) <= GET_LEVEL(ch)) && IS_AFFECTED2(ch, AFF2_PERCEIVE)))
 #define IS_HIDING_FROM(ch, vict) (IS_AFFECTED(vict, AFF_HIDE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED2(ch, AFF2_PERCEIVE))
+
+#define CAN_SEE_OBJ(ch, obj) ( \
+  IS_IMMORTAL(ch) || \
+  IS_AFFECTED((ch), AFF_INFRAVISION) || \
+  ((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE)) && !IS_AFFECTED((ch), AFF_BLIND) && IS_LIGHT(CHAR_REAL_ROOM(ch))) \
+)
+
+#define CAN_CARRY_W(ch) (\
+  IS_IMMORTAL(ch) ? 10000 : \
+  (GET_PRESTIGE_PERK(ch) >= 20) ? (int)(str_app[STRENGTH_APPLY_INDEX(ch)].carry_w * 1.1) : str_app[STRENGTH_APPLY_INDEX(ch)].carry_w) // Prestige Perk 20
+
+#define CAN_CARRY_N(ch) (\
+  IS_IMMORTAL(ch) ? 200 : \
+  ((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) < 20) ? 20 : \
+  (GET_PRESTIGE_PERK(ch) >= 14) ? (int)((((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2)) * 1.1) : (((5 + GET_DEX(ch)) / 2) + (GET_LEVEL(ch) / 2))) // Prestige Perk 14
+
+#define CAN_CARRY_OBJ(ch, obj) ( \
+  IS_IMMORTAL(ch) || \
+  ((((IS_CARRYING_W(ch) + GETOBJ_WEIGHT(obj)) <= (3 * CAN_CARRY_W(ch))) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch)))) \
+)
 
 #endif /* __UTILS_H__ */

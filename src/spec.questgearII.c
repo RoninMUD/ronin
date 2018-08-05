@@ -718,6 +718,7 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
               if(!ROOM_CHAOTIC(CHAR_REAL_ROOM(owner)) && (IS_MOUNT(vict) || !IS_NPC(vict) || vict->master || IS_AFFECTED(vict, AFF_CHARM)))
                 continue; /* skip mounts/PCs/pets/charmies in non-chaos rooms/mode */
               stop_fighting(vict); /* stop the vict fighting so damage() will make the wailer tank against that vict */
+              set_fighting(vict, owner); /* try a fix for wail sometimes not setting fighting as expected */
               damage(owner, vict, 333, TYPE_UNDEFINED, DAM_NO_BLOCK);
             }
             if(phylactery->spec_value == PHYLACTERY_MAX_CHARGES)
