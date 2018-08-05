@@ -392,6 +392,7 @@ do {                   \
 #define GET_QUEST_MOB(ch) (ch->questmob)
 #define GET_QUEST_LEVEL(ch) (ch->quest_level)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
+#define GET_REPLY_TO(ch) (ch->specials.reply_to)
 
 #define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
 #define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)

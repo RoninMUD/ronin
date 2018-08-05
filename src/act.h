@@ -481,3 +481,16 @@ void wear(CHAR *ch, OBJ *obj_object, int keyword);
 void do_cunning(CHAR *ch, char *argument, int cmd);
 void do_coin_toss(CHAR *ch, char *arg, int cmd);
 void do_movestat(CHAR *ch, char *arg, int cmd);
+
+void channel_comm(struct char_data *ch, char *arg, int comm);
+
+#define CHANNEL_COMM_GOSSIP  0
+#define CHANNEL_COMM_AUCTION 1
+#define CHANNEL_COMM_QUESTC  2
+#define CHANNEL_COMM_CHAOS   3
+
+typedef struct channel_t {
+  char *channel_name;
+  long channel_flag;
+  int channel_color;
+} channel_t;

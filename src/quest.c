@@ -45,78 +45,46 @@ void write_board(int vnum,char *heading,char *message);
 
 void do_quest(CHAR *ch, char *argument, int cmd)
 {
-  char buf2[MAX_STRING_LENGTH];
-  struct descriptor_data *i;
+  char buf[MSL];
 
-  if(!IS_NPC(ch) && IS_SET(ch->specials.pflag, PLR_NOSHOUT))
-    {
-       send_to_char("You have displeased the gods, you cannot quest.\n\r", ch);
-       return;
-    }
+  if (!IS_NPC(ch) && IS_SET(ch->specials.pflag, PLR_NOSHOUT)) {
+    send_to_char("You have displeased the gods, you cannot quest.\n\r", ch);
+    return;
+  }
 
   for (; *argument == ' '; argument++);
 
-  if(!(*argument)&& IS_NPC(ch))
+  if (!(*argument) && IS_NPC(ch))
     return;
-  if (!(*argument))
-    {
-    if IS_SET(ch->specials.pflag, PLR_QUESTC)
-      {
+  else if (!(*argument)) {
+    if IS_SET(ch->specials.pflag, PLR_QUESTC) {
       REMOVE_BIT(ch->specials.pflag, PLR_QUESTC);
       send_to_char("You turn OFF the quest channel.\n\r", ch);
-      }
-    else
-      {
+    }
+    else {
       SET_BIT(ch->specials.pflag, PLR_QUESTC);
       send_to_char("You turn ON the quest channel.\n\r", ch);
-      }
-    return;
     }
+    return;
+  }
 
   if (!strncmp("flag", argument, strlen("flag")) && !IS_NPC(ch)) {
-    if(IS_SET(ch->specials.pflag, PLR_QUEST)) {
-      REMOVE_BIT(ch->specials.pflag, PLR_QUEST);
+    if (IS_SET(GET_PFLAG(ch), PLR_QUEST)) {
+      REMOVE_BIT(GET_PFLAG(ch), PLR_QUEST);
       send_to_char("You turn OFF your quest flag.\n\r", ch);
-      sprintf(buf2,"QSTINFO: %s turned off the quest flag.",GET_NAME(ch));
-      wizlog(buf2,LEVEL_IMM,7);
-    } else {
-      SET_BIT(ch->specials.pflag, PLR_QUEST);
+      sprintf(buf, "QSTINFO: %s turned off the quest flag.", GET_NAME(ch));
+      wizlog(buf, LEVEL_IMM, 7);
+    }
+    else {
+      SET_BIT(GET_PFLAG(ch), PLR_QUEST);
       send_to_char("You turn ON your quest flag.\n\r", ch);
-      sprintf(buf2,"QSTINFO: %s turned on the quest flag.",GET_NAME(ch));
-      wizlog(buf2,LEVEL_IMM,7);
+      sprintf(buf, "QSTINFO: %s turned on the quest flag.", GET_NAME(ch));
+      wizlog(buf, LEVEL_IMM, 7);
     }
     return;
   }
 
-
-  if (!IS_SET(ch->specials.pflag, PLR_QUESTC)&&!IS_NPC(ch))
-    {
-    send_to_char("You turn ON the quest channel.\n\r", ch);
-    SET_BIT(ch->specials.pflag, PLR_QUESTC);
-  }
-
-  if(!IS_NPC(ch) && GET_COND(ch,DRUNK)>10)
-    argument=make_drunk(argument,ch);
-
-  sprintf(buf2, "You [quest] '%s'.", argument);
-  COLOR(ch,14);
-  act(buf2,0,ch,0,0,TO_CHAR);
-  ENDCOLOR(ch);
-
-  sprintf(buf2, "$n (quest) [ %s ]", argument);
-
-  for (i = descriptor_list; i; i = i->next)
-    {
-    if (i->character != ch && !i->connected &&
-        ((!IS_SET(i->character->specials.pflag, PLR_NOSHOUT)
-	&&  IS_SET(i->character->specials.pflag, PLR_QUESTC))
-        || i->original) )
-		{
-		COLOR(i->character,14);
-        	act(buf2,0,ch,0,i->character,TO_VICT);
-		ENDCOLOR(i->character);
-		}
-    }
+  channel_comm(ch, argument, CHANNEL_COMM_QUESTC);
 }
 
 #define FUNCT_WHERE     1
