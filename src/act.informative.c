@@ -739,7 +739,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           act("......$n drools absentmindedly.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW))) {
+        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD) || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW)) {
           act("......$n is enveloped by a huge ball of flame!", FALSE, target, 0, ch, TO_VICT);
         }
 
