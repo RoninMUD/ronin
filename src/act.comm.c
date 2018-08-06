@@ -848,7 +848,7 @@ void do_auction(CHAR *ch, char *arg, int cmd) {
 
 /* Function called by the 'chaos' command. */
 void do_chaos(CHAR *ch, char *arg, int cmd) {
-  channel_comm(ch, arg, CHANNEL_COMM_GOSSIP);
+  channel_comm(ch, arg, CHANNEL_COMM_CHAOS);
 }
 
 
