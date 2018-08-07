@@ -3184,11 +3184,11 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if ((IS_AFFECTED(c, AFF_INVISIBLE) && NRM_INV(ch, c) && !IS_AFFECTED(c, AFF_IMINV)) || IS_IMMORTAL(ch)) {
+      if ((IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV)) && (NRM_INV(ch, c) || IS_IMMORTAL(ch))) {
         strcat(buf, " (invis)");
       }
 
-      if ((IS_AFFECTED(c, AFF_IMINV) && IMP_INV(ch, c)) || IS_IMMORTAL(ch)) {
+      if (IS_AFFECTED(c, AFF_IMINV) && (IMP_INV(ch, c) || IS_IMMORTAL(ch))) {
         strcat(buf, " (impy)");
       }
 

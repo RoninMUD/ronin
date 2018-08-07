@@ -262,7 +262,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
   }
 
   if (!name[0] &&
-    !action->others_no_arg)
+      !action->others_no_arg)
   {
     strncpy(buf2, action->char_no_arg, sizeof(buf2));
     style = 1;
@@ -308,15 +308,15 @@ void do_gf(CHAR *ch, char *arg, int cmd)
       COLOR(tmp_vict, 5);
       if (style == 2)
       {
-        act(buf, FALSE, ch, NULL, vict, TO_VICT);
+        act(buf, -1, ch, NULL, vict, TO_VICT);
       }
       else if (style == 3)
       {
-        act(buf, FALSE, ch, tmp_vict, vict, TO_OTHER);
+        act(buf, -1, ch, tmp_vict, vict, TO_OTHER);
       }
       else
       {
-        act(buf, FALSE, ch, NULL, tmp_vict, TO_VICT);
+        act(buf, -1, ch, NULL, tmp_vict, TO_VICT);
       }
       ENDCOLOR(tmp_vict);
 
