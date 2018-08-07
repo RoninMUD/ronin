@@ -739,7 +739,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           act("......$n drools absentmindedly.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW))) {
+        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD) || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW)) {
           act("......$n is enveloped by a huge ball of flame!", FALSE, target, 0, ch, TO_VICT);
         }
 
@@ -3184,11 +3184,11 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (deaf)");
       }
 
-      if (IS_AFFECTED(c, AFF_INVISIBLE) && !IS_AFFECTED(c, AFF_IMINV) && NRM_INV(ch, c)) {
+      if ((IS_AFFECTED(c, AFF_INVISIBLE) && NRM_INV(ch, c) && !IS_AFFECTED(c, AFF_IMINV)) || IS_IMMORTAL(ch)) {
         strcat(buf, " (invis)");
       }
 
-      if (IS_AFFECTED(c, AFF_IMINV) && IMP_INV(ch, c)) {
+      if ((IS_AFFECTED(c, AFF_IMINV) && IMP_INV(ch, c)) || IS_IMMORTAL(ch)) {
         strcat(buf, " (impy)");
       }
 
