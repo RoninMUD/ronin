@@ -226,10 +226,8 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
     strlcat(buf, GET_NAME(ch), sizeof(buf));
   }
   else {
-    snprintf(buf, sizeof(buf), "somebody");
+    snprintf(buf, sizeof(buf), "Somebody");
   }
-
-  CAP(buf);
 
   return buf;
 }
