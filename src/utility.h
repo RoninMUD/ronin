@@ -7,6 +7,9 @@
 #ifndef __UTILITY_H
 #define __UTILITY_H
 
+#define PERS_NORMAL 0
+#define PERS_MORTAL -1
+
 typedef struct char_data CHAR;
 typedef struct obj_data OBJ;
 typedef struct room_data RM;
@@ -28,8 +31,9 @@ int strn_cmp(char *arg1, char *arg2, int n);
 char *str_upper(char *str);
 char *string_to_lower(char *string);
 char *string_to_upper(char *string);
-char *PERS(CHAR *ch, CHAR*vict);
-char *POSSESS(CHAR *ch, CHAR*vict);
+char *PERS_ex(CHAR *ch, CHAR *vict, int mode);
+char *PERS(CHAR *ch, CHAR *vict);
+char *POSSESS(CHAR *ch, CHAR *vict);
 char *CHCLR(CHAR *ch, int color);
 char *ENDCHCLR(CHAR *ch);
 void log_s(char *str);

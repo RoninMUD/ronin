@@ -761,9 +761,6 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     return;
   }
 
-  /* Store the message. */
-  snprintf(message, sizeof(message), "%s", arg);
-
   /* NoShouted characters can't use the gossip channel. */
   if (!IS_NPC(ch) &&
       IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
@@ -788,9 +785,13 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
   }
 
+  /* If the player's drunk, drunkify the text. */
   if (GET_COND(ch, DRUNK) > 10) {
-    snprintf(message, sizeof(message), "%s", make_drunk(message, ch));
+    arg = make_drunk(arg, ch);
   }
+
+  /* Store the message. */
+  snprintf(message, sizeof(message), "%s", arg);
 
   /* Show the text to the acting character. */
   COLOR(ch, channel_info[comm].channel_color);

@@ -1983,13 +1983,13 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_DIVINE_INTERVENTION,   30, POSITION_STANDING, 51, 50, 51, 51, 51, 51, 51, 51,  500, TAR_CHAR_ROOM,                                                                cast_divine_intervention);
 
   // Druid
-  //SPELLO(SPELL_TEMPEST,               30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_tempest);
+  SPELLO(SPELL_CLARITY,               30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_clarity);
   SPELLO(SPELL_WALL_THORNS,           30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_wall_thorns);
-  //SPELLO(SPELL_BARRIER,               30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_barrier);
+  SPELLO(SPELL_MAGIC_ARMAMENT,        30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_magic_armament);
+  SPELLO(SPELL_DEGENERATE,            30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,    0, TAR_SELF_ONLY,                                                                cast_degenerate);
 
   // Templar
   SPELLO(SPELL_SANCTIFY,              30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_sanctify);
-  SPELLO(SPELL_MAGIC_ARMAMENT,        30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_magic_armament);
   SPELLO(SPELL_FORTIFICATION,         30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
 
   // Ninja

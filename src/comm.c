@@ -2194,9 +2194,11 @@ void act_by_type(
   register char *strp, *point, *i = NULL;
   struct char_data *to = NULL;
   struct obj_data  *obj = NULL;
-  char buf[MSL];
+  static char buf[MSL];
 
   if (!str || !*str || !ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+
+  memset(buf, 0, sizeof(buf));
 
   if (type == TO_OTHER) {
     to = (struct char_data *) ob;
@@ -2216,15 +2218,14 @@ void act_by_type(
   }
 
   for (; to; to = to->next_in_room) {
-    if (hide_invisible == 2 && IS_SET(to->specials.pflag, PLR_SUPERBRF)) continue;
+    if (hide_invisible == 2 && IS_SET(GET_PFLAG(to), PLR_SUPERBRF)) continue;
     if (type == TO_GROUP && (to == ch || !same_group(to, ch))) continue;
 
     if (to->desc &&
         ((to != ch) || (type == TO_CHAR)) &&
-        (!hide_invisible || CAN_SEE(to, ch)) &&
+        ((hide_invisible < 1) || CAN_SEE(to, ch)) &&
         (type == TO_CHAR || type == TO_VICT || GET_POS(to) != POSITION_SLEEPING) &&
-        !((type == TO_NOTVICT) && (to == (struct char_data *) vict_obj))) {
-
+        !((type == TO_NOTVICT) && (to == (struct char_data *)vict_obj))) {
       for (strp = str, point = buf;;) {
         if (*strp == '$') {
           switch (*(++strp)) {
@@ -2240,26 +2241,30 @@ void act_by_type(
               if (!vict_obj) { i = "$R"; }
               else {
                 if (to == vict_obj) { i = "your"; }
-                else { i = POSSESS((struct char_data *) vict_obj, to); }
+                else { i = POSSESS((struct char_data *)vict_obj, to); }
               }
               break;
             case 'i':
               if (!ch) { i = "$i"; }
+              else if (hide_invisible == -1) { i = PERS_ex(ch, to, PERS_MORTAL); }
               else { i = PERS(ch, to); }
               break;
             case 'I':
               if (!vict_obj) { i = "$I"; }
-              else { i = PERS((struct char_data *) vict_obj, to); }
+              else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
+              else { i = PERS((struct char_data *)vict_obj, to); }
               break;
             case 'n':
               if (ch == to) { i = "you"; }
+              else if (hide_invisible == -1) { i = PERS_ex(ch, to, PERS_MORTAL); }
               else { i = PERS(ch, to); }
               break;
             case 'N':
               if (!vict_obj) { i = "$N"; }
               else {
                 if (to == vict_obj) { i = "you"; }
-                else { i = PERS((struct char_data *) vict_obj, to); }
+                else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
+                else { i = PERS((struct char_data *)vict_obj, to); }
               }
               break;
             case 'm':
@@ -2270,7 +2275,7 @@ void act_by_type(
               if (!vict_obj) { i = "$M"; }
               else {
                 if (to == vict_obj) { i = "you"; }
-                else { i = HMHR((struct char_data *) vict_obj); }
+                else { i = HMHR((struct char_data *)vict_obj); }
               }
               break;
             case 's':
@@ -2281,7 +2286,7 @@ void act_by_type(
               if (!vict_obj) { i = "$S"; }
               else {
                 if (to == vict_obj) { i = "you"; }
-                else { i = HSHR((struct char_data *) vict_obj); }
+                else { i = HSHR((struct char_data *)vict_obj); }
               }
               break;
             case 'e':
@@ -2292,7 +2297,7 @@ void act_by_type(
               if (!vict_obj) { i = "$E"; }
               else {
                 if (to == vict_obj) { i = "you"; }
-                else { i = HSSH((struct char_data *) vict_obj); }
+                else { i = HSSH((struct char_data *)vict_obj); }
               }
               break;
             case 'o':
@@ -2301,7 +2306,7 @@ void act_by_type(
               break;
             case 'O':
               if (!vict_obj) { i = "$O"; }
-              else { i = OBJN((struct obj_data *) vict_obj, to); }
+              else { i = OBJN((struct obj_data *)vict_obj, to); }
               break;
             case 'q':
               if (!obj) { i = "$q"; }
@@ -2309,7 +2314,7 @@ void act_by_type(
               break;
             case 'Q':
               if (!vict_obj) { i = "$Q"; }
-              else { i = OBJS2((struct obj_data *) vict_obj, to); }
+              else { i = OBJS2((struct obj_data *)vict_obj, to); }
               break;
             case 'p':
               if (!obj) { i = "$p"; }
@@ -2317,7 +2322,7 @@ void act_by_type(
               break;
             case 'P':
               if (!vict_obj) { i = "$P"; }
-              else { i = OBJS((struct obj_data *) vict_obj, to); }
+              else { i = OBJS((struct obj_data *)vict_obj, to); }
               break;
             case 'a':
               if (!obj) { i = "$a"; }
@@ -2325,7 +2330,7 @@ void act_by_type(
               break;
             case 'A':
               if (!vict_obj) { i = "$A"; }
-              else { i = SANA((struct obj_data *) vict_obj); }
+              else { i = SANA((struct obj_data *)vict_obj); }
               break;
             case 'T':
               if (!vict_obj) { i = "$T"; }
@@ -2339,7 +2344,8 @@ void act_by_type(
               if (!vict_obj) { i = "no-one"; }
               else {
                 if (to == vict_obj) { i = "you"; }
-                else { i = PERS((struct char_data *) vict_obj, to); }
+                else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
+                else { i = PERS((struct char_data *)vict_obj, to); }
               }
               break;
             case '$':

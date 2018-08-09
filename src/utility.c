@@ -210,29 +210,38 @@ int32_t MAX(int32_t a, int32_t b) {
 /* End New RNG Section */
 
 
-char *PERS(CHAR *ch, CHAR *vict) {
+char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
   static char buf[MIL];
+
+  assert(ch);
+  assert(vict);
 
   memset(buf, 0, sizeof(buf));
 
-  if (CAN_SEE(vict, ch)) {
-    if (IS_MOB(ch))
-      snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
-    else {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
-      strlcat(buf, GET_NAME(ch), sizeof(buf));
-    }
+  if (IS_MOB(ch) && CAN_SEE(vict, ch)) {
+    snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
+  }
+  else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {
+    signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    strlcat(buf, GET_NAME(ch), sizeof(buf));
   }
   else {
-    strcat(buf, "somebody");
+    snprintf(buf, sizeof(buf), "Somebody");
   }
 
   return buf;
 }
 
+char *PERS(CHAR *ch, CHAR *vict) {
+  return PERS_ex(ch, vict, PERS_NORMAL);
+}
+
 
 char *POSSESS(CHAR *ch, CHAR *vict) {
   static char buf[MIL];
+
+  assert(ch);
+  assert(vict);
 
   memset(buf, 0, sizeof(buf));
 
@@ -247,7 +256,7 @@ char *POSSESS(CHAR *ch, CHAR *vict) {
     }
   }
   else {
-    strcat(buf, "somebody's");
+    strlcat(buf, "somebody's", sizeof(buf));
   }
 
   return buf;
@@ -264,6 +273,7 @@ char *CHCLR(CHAR *ch, int color) {
   return colorcode1;
 }
 
+
 char *ENDCHCLR(CHAR *ch) {
   static char colorcode2[100];
   colorcode2[0]=0;
@@ -273,6 +283,7 @@ char *ENDCHCLR(CHAR *ch) {
   }
   return colorcode2;
 }
+
 
 /* 50% chance when victim level is the same as the attacker.
    100% chance when victim level is 10 levels or less than the attacker.
