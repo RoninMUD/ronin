@@ -1475,7 +1475,7 @@ void extract_obj(struct obj_data *obj) {
 
 
 void update_object(struct obj_data *obj, int equipped) {
-  if ((OBJ_TIMER(obj) > 0) && (!(obj->in_obj) || (OBJ_TYPE(obj) != ITEM_AQ_ORDER))) {
+  if (OBJ_TIMER(obj) > 0) {
     CHAR *ch;
     bool decay = TRUE;
 
@@ -1484,6 +1484,8 @@ void update_object(struct obj_data *obj, int equipped) {
 
     // Prestige Perk 22
     if (ch && ((GET_PRESTIGE_PERK(ch) >= 22) && chance(10))) decay = FALSE;
+
+    if ((obj->in_obj) && (OBJ_TYPE(obj->in_obj) == ITEM_AQ_ORDER)) decay = FALSE;
 
     if (decay) {
       if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY)) {

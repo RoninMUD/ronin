@@ -218,7 +218,7 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
 
   memset(buf, 0, sizeof(buf));
 
-  if (IS_MOB(ch) && CAN_SEE(vict, ch)) {
+  if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
   }
   else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {
@@ -245,7 +245,7 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
 
   memset(buf, 0, sizeof(buf));
 
-  if (IS_MOB(ch) && CAN_SEE(vict, ch)) {
+  if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
   }
   else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {

@@ -275,7 +275,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
 
       if (!tmp_vict ||
           tmp_vict->desc->connected ||
-          !IS_SET(tmp_vict->specials.pflag, PLR_GOSSIP))
+          !IS_SET(GET_PFLAG(tmp_vict), PLR_GOSSIP))
       {
         continue;
       }
@@ -327,8 +327,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
     {
       sprintf(buf2, "%s", action->char_auto);
     }
-    else if (name[0] &&
-             action->char_found)
+    else if (name[0] && action->char_found)
     {
       sprintf(buf2, "%s", action->char_found);
     }
