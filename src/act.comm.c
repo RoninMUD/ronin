@@ -812,17 +812,17 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
         IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) {
       /* Build the buffer for the listener. */
       if (IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(listener, ch)) || CAN_SEE(listener, ch)) {
-        if (IS_NPC(ch)) {
+        if (!IS_NPC(ch)) {
           signal_char(ch, listener, MSG_SHOW_PRETITLE, name);
         }
 
         strlcat(name, !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch), sizeof(name));
+
+        CAP(name);
       }
       else {
         snprintf(name, sizeof(name), "Somebody");
       }
-
-      CAP(name);
 
       /* Show the text to the listener. */
       COLOR(listener, channel_info[comm].channel_color);
