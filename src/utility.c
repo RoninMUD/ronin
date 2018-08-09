@@ -237,7 +237,7 @@ char *PERS(CHAR *ch, CHAR *vict) {
 }
 
 
-char *POSSESS(CHAR *ch, CHAR *vict) {
+char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
   static char buf[MIL];
 
   assert(ch);
@@ -245,21 +245,23 @@ char *POSSESS(CHAR *ch, CHAR *vict) {
 
   memset(buf, 0, sizeof(buf));
 
-  if (CAN_SEE(vict, ch)) {
-    if (IS_MOB(ch)) {
-      snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
-    }
-    else {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
-      strlcat(buf, GET_NAME(ch), sizeof(buf));
-      strlcat(buf, "'s", sizeof(buf));
-    }
+  if (IS_MOB(ch) && CAN_SEE(vict, ch)) {
+    snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
+  }
+  else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {
+    signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    strlcat(buf, GET_NAME(ch), sizeof(buf));
+    strlcat(buf, "'s", sizeof(buf));
   }
   else {
-    strlcat(buf, "somebody's", sizeof(buf));
+    snprintf(buf, sizeof(buf), "Somebody's");
   }
 
   return buf;
+}
+
+char *POSSESS(CHAR *ch, CHAR *vict) {
+  return POSSESS_ex(ch, vict, PERS_NORMAL);
 }
 
 

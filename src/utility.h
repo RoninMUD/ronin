@@ -33,6 +33,7 @@ char *string_to_lower(char *string);
 char *string_to_upper(char *string);
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode);
 char *PERS(CHAR *ch, CHAR *vict);
+char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode);
 char *POSSESS(CHAR *ch, CHAR *vict);
 char *CHCLR(CHAR *ch, int color);
 char *ENDCHCLR(CHAR *ch);

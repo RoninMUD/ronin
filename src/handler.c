@@ -1475,7 +1475,7 @@ void extract_obj(struct obj_data *obj) {
 
 
 void update_object(struct obj_data *obj, int equipped) {
-  if ((obj->obj_flags.timer > 0) && (!(obj->in_obj) || (OBJ_TYPE(obj->in_obj) != ITEM_AQ_ORDER))) {
+  if ((OBJ_TIMER(obj) > 0) && (!(obj->in_obj) || (OBJ_TYPE(obj) != ITEM_AQ_ORDER))) {
     CHAR *ch;
     bool decay = TRUE;
 
@@ -1486,17 +1486,17 @@ void update_object(struct obj_data *obj, int equipped) {
     if (ch && ((GET_PRESTIGE_PERK(ch) >= 22) && chance(10))) decay = FALSE;
 
     if (decay) {
-      if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY)) {
+      if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY)) {
         if (equipped) {
-          obj->obj_flags.timer -= 2;
+          OBJ_TIMER(obj) -= 2;
         }
         else {
-          obj->obj_flags.timer -= 1;
+          OBJ_TIMER(obj) -= 1;
         }
       }
-      else if (IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
+      else if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
         if (equipped) {
-          obj->obj_flags.timer -= 1;
+          OBJ_TIMER(obj) -= 1;
         }
       }
     }
