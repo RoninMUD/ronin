@@ -1062,7 +1062,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (lh_opt == 0 && GET_LEVEL(ch) < 25 && aq_mob_quest_level > 0) continue;  // newbie
     if (lh_opt == 0 && GET_LEVEL(ch) >= 25 && aq_mob_quest_level < 1) continue; // non-newbie
     if (lh_opt == 1 && aq_mob_quest_level > 1) continue;                        // solo
-    if (lh_opt == 2 && aq_mob_quest_level > 2) continue;                        // low
+    if (lh_opt == 2 && aq_mob_quest_level > 3) continue;                        // low
     if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
     if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
                         aq_mob_quest_level > 4 ||
