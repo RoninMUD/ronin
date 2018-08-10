@@ -812,19 +812,17 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
         IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) {
       /* Build the buffer for the listener. */
       if (IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(listener, ch)) || CAN_SEE(listener, ch)) {
-        if (IS_MOB(ch)) {
-          snprintf(name, sizeof(name), "%s", MOB_SHORT(ch));
-        }
-        else {
+        if (!IS_NPC(ch)) {
           signal_char(ch, listener, MSG_SHOW_PRETITLE, name);
-          strlcat(name, GET_NAME(ch), sizeof(name));
         }
+
+        strlcat(name, !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch), sizeof(name));
+
+        CAP(name);
       }
       else {
-        snprintf(name, sizeof(name), "somebody");
+        snprintf(name, sizeof(name), "Somebody");
       }
-
-      CAP(name);
 
       /* Show the text to the listener. */
       COLOR(listener, channel_info[comm].channel_color);
@@ -1029,7 +1027,7 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
   }
 
   /* Store the listener's name. */
-  snprintf(name, sizeof(name), "%s", GET_NAME(listener));
+  snprintf(name, sizeof(name), "%s", !IS_NPC(listener) ? GET_NAME(listener) : GET_SHORT(listener));
 
   CAP(name);
 
@@ -1058,10 +1056,10 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
 
   /* Store the actor's name. */
   if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "Someone");
+    snprintf(name, sizeof(name), "Somebody");
   }
   else {
-    snprintf(name, sizeof(name), "%s", GET_NAME(ch));
+    snprintf(name, sizeof(name), "%s", !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch));
   }
 
   CAP(name);
@@ -1145,10 +1143,10 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
 
   /* Store the listener's name. */
   if (WIZ_INV(ch, listener)) {
-    snprintf(name, sizeof(name), "Someone");
+    snprintf(name, sizeof(name), "Somebody");
   }
   else {
-    snprintf(name, sizeof(name), "%s", GET_NAME(listener));
+    snprintf(name, sizeof(name), "%s", !IS_NPC(listener) ? GET_NAME(listener) : GET_SHORT(listener));
   }
 
   CAP(name);
@@ -1185,10 +1183,10 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
 
   /* Store the actor's name. */
   if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "Someone");
+    snprintf(name, sizeof(name), "Somebody");
   }
   else {
-    snprintf(name, sizeof(name), "%s", GET_NAME(ch));
+    snprintf(name, sizeof(name), "%s", !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch));
   }
 
   CAP(name);

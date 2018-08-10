@@ -2235,12 +2235,14 @@ void act_by_type(
               break;
             case 'r':
               if (ch == to) { i = "your"; }
+              else if (hide_invisible == -1) { i = POSSESS_ex(ch, to, PERS_MORTAL); }
               else { i = POSSESS(ch, to); }
               break;
             case 'R':
               if (!vict_obj) { i = "$R"; }
               else {
                 if (to == vict_obj) { i = "your"; }
+                else if (hide_invisible == -1) { i = POSSESS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
                 else { i = POSSESS((struct char_data *)vict_obj, to); }
               }
               break;
