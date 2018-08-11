@@ -1555,8 +1555,8 @@ void mus_enfeeble( CHAR *vict )
   int nat_mana = vict->specials.org_mana+100;
   int orig_hp = GET_MAX_HIT(vict);
   int orig_mana = GET_MAX_MANA(vict);
-  int new_hp = -((2*orig_hp/3)+prestige_hit);
-  int new_mana = -((2*orig_mana/3)+prestige_mana);
+  int new_hp = -((2 * (orig_hp + prestige_hit)) / 3);
+  int new_mana = -((2 * (orig_mana + prestige_mana)) / 3);
   vict->new.been_killed += 1;
   if(!IS_NPC(vict) && vict->ver3.death_limit) vict->ver3.death_limit++;
   death_list(vict);
