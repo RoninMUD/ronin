@@ -224,17 +224,17 @@ void do_gf(CHAR *ch, char *arg, int cmd)
   if (index < 0)
   {
     send_to_char("Want to try that again?\n\r", ch);
-
     return;
   }
 
   action = &soc_mess_list[index];
 
-  buf[0] = '\0';
+  memset(buf, 0, sizeof(buf));
+  memset(buf2, 0, sizeof(buf2));
 
   half_chop(arg, buf2, sizeof(buf2), buf, sizeof(buf));
 
-  name[0] = '\0';
+  memset(name, 0, sizeof(name));
 
   if (action->char_found)
   {
@@ -252,9 +252,9 @@ void do_gf(CHAR *ch, char *arg, int cmd)
 
   if (name[0] != '\0')
   {
-    vict = get_char_vis(ch, name);
+    vict = get_char(name);
 
-    if (!vict)
+    if (!vict || (!IS_MORTAL(vict) && !CAN_SEE(ch, vict)))
     {
       send_to_char("They aren't here.\n\r", ch);
       return;
@@ -281,7 +281,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
       }
 
       if (action->char_found &&
-        vict == ch)
+          vict == ch)
       {
         sprintf(buf2, "%s", action->others_auto);
       }
@@ -292,7 +292,7 @@ void do_gf(CHAR *ch, char *arg, int cmd)
       }
       else
       if (action->char_found &&
-        vict == tmp_vict)
+          vict == tmp_vict)
       {
         sprintf(buf2, "%s", action->vict_found);
         style = 2;
