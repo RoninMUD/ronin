@@ -732,11 +732,6 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     { "chaos",   PLR_CHAOS,   15 },
   };
 
-  char name[MIL];
-  char message[MSL];
-  DESC *listener_desc = NULL;
-  CHAR *listener = NULL;
-
   if (!ch || comm < 0 || comm >= NUMELEMS(channel_info)) return;
 
   arg = skip_spaces(arg);
@@ -792,6 +787,8 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
   }
 
   /* Store the message. */
+  char message[MSL];
+
   snprintf(message, sizeof(message), "%s", arg);
 
   /* Show the text to the acting character. */
@@ -801,35 +798,34 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
 
   /* Loop through the descriptors in the game and show them the text if they're connected
      and can hear the channel. */
-  for (listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
-    listener = listener_desc->character;
+  for (DESC *listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
+    CHAR *listener = listener_desc->character;
 
-    if (!listener) continue;
+    if (!listener->desc || (listener->desc->connected != CON_PLYNG)) continue;
+    if (!listener || (listener == ch) || !IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) continue;
+
+    char name[MIL];
 
     memset(name, 0, sizeof(name));
 
-    if (!listener->desc->connected &&
-        listener != ch &&
-        IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) {
-      /* Build the buffer for the listener. */
-      if (IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(listener, ch)) || CAN_SEE(listener, ch)) {
-        if (!IS_NPC(ch)) {
-          signal_char(ch, listener, MSG_SHOW_PRETITLE, name);
-        }
-
-        strlcat(name, !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch), sizeof(name));
-
-        CAP(name);
-      }
-      else {
-        snprintf(name, sizeof(name), "Somebody");
+    /* Build the buffer for the listener. */
+    if (IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(listener, ch)) || CAN_SEE(listener, ch)) {
+      if (!IS_NPC(ch)) {
+        signal_char(ch, listener, MSG_SHOW_PRETITLE, name);
       }
 
-      /* Show the text to the listener. */
-      COLOR(listener, channel_info[comm].channel_color);
-      printf_to_char(listener, "%s (%s) [ %s ]\n\r", name, channel_info[comm].channel_name, message);
-      ENDCOLOR(listener);
+      strlcat(name, !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch), sizeof(name));
+
+      CAP(name);
     }
+    else {
+      snprintf(name, sizeof(name), "Somebody");
+    }
+
+    /* Show the text to the listener. */
+    COLOR(listener, channel_info[comm].channel_color);
+    printf_to_char(listener, "%s (%s) [ %s ]\n\r", name, channel_info[comm].channel_name, message);
+    ENDCOLOR(listener);
   }
 }
 
