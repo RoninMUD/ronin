@@ -1663,10 +1663,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
     /* specials.immune2 */
     if (GET_IMMUNE2(victim) &&
-        (((damage_type == DAM_COLD) && IS_IMMUNE2(victim, IMMUNE_COLD)) ||
-         ((damage_type == DAM_SOUND) && IS_IMMUNE2(victim, IMMUNE_SOUND)) ||
-         ((damage_type == DAM_CHEMICAL) && IS_IMMUNE2(victim, IMMUNE_CHEMICAL)) ||
-         ((damage_type == DAM_ACID) && IS_IMMUNE(victim, IMMUNE_ACID)))) {
+        (((damage_type == DAM_COLD) && IS_IMMUNE2(victim, IMMUNE2_COLD)) ||
+         ((damage_type == DAM_SOUND) && IS_IMMUNE2(victim, IMMUNE2_SOUND)) ||
+         ((damage_type == DAM_CHEMICAL) && IS_IMMUNE2(victim, IMMUNE2_CHEMICAL)) ||
+         ((damage_type == DAM_ACID) && IS_IMMUNE2(victim, IMMUNE2_ACID)))) {
       dmg = 0;
     }
 
@@ -1844,7 +1844,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     /* Fury */
     if (IS_AFFECTED(ch, AFF_FURY)) {
       /* Paladin Level 50 */
-      if (GET_CLASS(ch) == CLASS_PALADIN &&
+      if (IS_MORTAL(ch) &&
+          GET_CLASS(ch) == CLASS_PALADIN &&
           GET_LEVEL(ch) == 50 &&
           GET_ALIGNMENT(ch) > 500 &&
           !CHAOSMODE) {

@@ -2181,6 +2181,190 @@ void send_to_group(char *messg, struct char_data *ch, int same_room) {
   }
 }
 
+
+#define ACT_FLAG_HIDE_NONE    0
+#define ACT_FLAG_HIDE_INV     1
+#define ACT_FLAG_HIDE_BRF     2
+#define ACT_FLAG_HIDE_IMP_INV 4
+#define ACT_FLAG_HIDE_WIZ_INV 8
+
+void act_print(char *dst, size_t dst_sz, char *str, int flags, CHAR *observer, CHAR *ch, void *ob, void *vict_obj, int type) {
+  register char *str_ptr, *ptr, *i;
+  struct char_data *to;
+  struct obj_data  *obj;
+  static char buf[MSL];
+
+  if (!dst || (dst_sz <= 0) || !str) return;
+
+  memset(buf, 0, sizeof(buf));
+
+//#define TO_ROOM    0
+//#define TO_VICT    1
+//#define TO_NOTVICT 2
+//#define TO_CHAR    3
+//#define TO_OTHER   4
+//#define TO_GROUP   5
+
+  if (type == TO_OTHER) {
+    to = (struct char_data *)ob;
+  }
+  else {
+    obj = (struct obj_data *)ob;
+  }
+
+  if (type == TO_VICT) {
+    to = (struct char_data *)vict_obj;
+  }
+  else if (type == TO_CHAR) {
+    to = ch;
+  }
+  else if (type != TO_OTHER) {
+    to = world[CHAR_REAL_ROOM(ch)].people;
+  }
+
+  for (str_ptr = str, ptr = buf;;) {
+    if (*str_ptr == '$') {
+      switch (*(++str_ptr)) {
+        case 'i':
+          if (!ch) { i = "$i"; }
+          else { i = PERS_ex(ch, to, flags); }
+          break;
+        case 'I':
+          if (!vict_obj) { i = "$I"; }
+          else { i = PERS_ex((CHAR *)vict_obj, to, flags); }
+          break;
+        case 'n':
+          if (ch == to) { i = "you"; }
+          else if (flags == ACT_FLAG_HIDE_WIZ_INV) { i = PERS_ex(ch, to, PERS_MORTAL); }
+          else { i = PERS(ch, to); }
+          break;
+        case 'N':
+          if (!vict_obj) { i = "$N"; }
+          else {
+            if (to == vict_obj) { i = "you"; }
+            else { i = PERS_ex((CHAR *)vict_obj, to, flags); }
+          }
+          break;
+        case 'r':
+          if (ch == to) { i = "your"; }
+          else { i = POSSESS_ex(ch, to, flags); }
+          break;
+        case 'R':
+          if (!vict_obj) { i = "$R"; }
+          else {
+            if (to == vict_obj) { i = "your"; }
+            else { i = POSSESS_ex((CHAR *)vict_obj, to, flags); }
+          }
+          break;
+        case 'm':
+          if (to == ch) { i = "you"; }
+          else { i = HMHR(ch); }
+          break;
+        case 'M':
+          if (!vict_obj) { i = "$M"; }
+          else {
+            if (to == vict_obj) { i = "you"; }
+            else { i = HMHR((CHAR *)vict_obj); }
+          }
+          break;
+        case 's':
+          if (to == ch) { i = "your"; }
+          else { i = HSHR(ch); }
+          break;
+        case 'S':
+          if (!vict_obj) { i = "$S"; }
+          else {
+            if (to == vict_obj) { i = "you"; }
+            else { i = HSHR((CHAR *)vict_obj); }
+          }
+          break;
+        case 'e':
+          if (to == ch) { i = "you"; }
+          else { i = HSSH(ch); }
+          break;
+        case 'E':
+          if (!vict_obj) { i = "$E"; }
+          else {
+            if (to == vict_obj) { i = "you"; }
+            else { i = HSSH((CHAR *)vict_obj); }
+          }
+          break;
+        case 'o':
+          if (!obj) { i = "$o"; }
+          else { i = OBJN(obj, to); }
+          break;
+        case 'O':
+          if (!vict_obj) { i = "$O"; }
+          else { i = OBJN((OBJ *)vict_obj, to); }
+          break;
+        case 'q':
+          if (!obj) { i = "$q"; }
+          else { i = OBJS2(obj, to); }
+          break;
+        case 'Q':
+          if (!vict_obj) { i = "$Q"; }
+          else { i = OBJS2((OBJ *)vict_obj, to); }
+          break;
+        case 'p':
+          if (!obj) { i = "$p"; }
+          else { i = OBJS(obj, to); }
+          break;
+        case 'P':
+          if (!vict_obj) { i = "$P"; }
+          else { i = OBJS((OBJ *)vict_obj, to); }
+          break;
+        case 'a':
+          if (!obj) { i = "$a"; }
+          else { i = SANA(obj); }
+          break;
+        case 'A':
+          if (!vict_obj) { i = "$A"; }
+          else { i = SANA((OBJ *)vict_obj); }
+          break;
+        case 'T':
+          if (!vict_obj) { i = "$T"; }
+          else { i = (char *)vict_obj; }
+          break;
+        case 'F':
+          if (!vict_obj) { i = "$F"; }
+          else { i = fname((char *)vict_obj); }
+          break;
+        case 'V':
+          if (!vict_obj) { i = "no-one"; }
+          else {
+            if (to == vict_obj) { i = "you"; }
+            else { i = PERS_ex((CHAR *)vict_obj, to, flags); }
+          }
+          break;
+        case 'z':
+          if (ch == to) { i = ""; }
+          else { i = "s"; }
+          break;
+        case '$':
+          i = "$";
+          break;
+        default:
+          log_s("Illegal case called in act_print(). Not reported for fear of crash.");
+          log_s(str);
+          break;
+      }
+
+      while ((*ptr = *(i++))) ++ptr;
+
+      ++str_ptr;
+    }
+    else if (!(*(ptr++) = *(str_ptr++))) {
+      break;
+    }
+  }
+
+  *(--ptr) = '\n';
+  *(++ptr) = '\r';
+  *(++ptr) = '\0';
+
+  snprintf(dst, dst_sz, "%s", buf);
+}
+
 /* higher-level communication */
 void act_by_type(
   char *str,
@@ -2921,7 +3105,7 @@ int wither_pulse_action(CHAR *victim) {
         break;
 
       case SPELL_CHILL_TOUCH:
-        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_COLD))) {
+        if ((IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE2_COLD))) {
           dam += 50;
           break;
         }

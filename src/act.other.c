@@ -632,7 +632,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
   if(GET_LEVEL(ch)>LEVEL_SUP && IS_SET(ch->new.imm_flags, WIZ_ACTIVE))
     percent = -1; /* Active IMP can steal anything */
 
-  if(IS_NPC(victim) && IS_SET(victim->specials.immune2,IMMUNE_STEAL))
+  if(IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE2_STEAL))
     percent = 201; /* Failure */
 
   if(str_cmp(obj_name, "coins") && str_cmp(obj_name,"gold")) 

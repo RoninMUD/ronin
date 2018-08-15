@@ -10121,7 +10121,7 @@ Types are:\n\r\
     return;
   }
 
-  int type = old_search_block(arg, 0, strlen(arg), item_types, FALSE);
+  int type = old_search_block(string_to_upper(arg), 0, strlen(arg), item_types, FALSE);
 
   if (type == -1) {
     char buf[MSL];

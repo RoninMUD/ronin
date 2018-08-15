@@ -782,6 +782,7 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
   if (!IS_NPC(ch) &&
       !IS_SET(GET_PFLAG(ch), channel_info[comm].channel_flag)) {
     SET_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
+
     printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
   }
 
