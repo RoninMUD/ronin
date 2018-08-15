@@ -813,15 +813,15 @@ struct room_data
 #define TAR_MAX          8
 
 /* Mob resistance  specials.resist */
-#define RESIST_POISON        1
-#define RESIST_PHYSICAL      2
-#define RESIST_MAGICAL       4
-#define RESIST_FIRE          8
-#define RESIST_COLD          16
-#define RESIST_ELECTRIC      32
-#define RESIST_SOUND         64
-#define RESIST_CHEMICAL      128
-#define RESIST_ACID          256
+#define RESIST_POISON       1
+#define RESIST_PHYSICAL     2
+#define RESIST_MAGICAL      4
+#define RESIST_FIRE         8
+#define RESIST_COLD         16
+#define RESIST_ELECTRIC     32
+#define RESIST_SOUND        64
+#define RESIST_CHEMICAL     128
+#define RESIST_ACID         256
 
 #define IMMUNE_FIRE         1
 #define IMMUNE_ELECTRIC     2
@@ -855,16 +855,16 @@ struct room_data
 #define IMMUNE_ASSAULT      536870912
 
 /* immune2 */
-#define IMMUNE_LOCATE       1
-#define IMMUNE_COLD         2
-#define IMMUNE_SOUND        4
-#define IMMUNE_CHEMICAL     8
-#define IMMUNE_ACID         16
-#define IMMUNE_FEAR         32
-#define IMMUNE_2_UNUSED_64  64
-#define IMMUNE_CIRCLE       128
-#define IMMUNE_2_UNUSED_256 256
-#define IMMUNE_STEAL        512
+#define IMMUNE2_LOCATE      1
+#define IMMUNE2_COLD        2
+#define IMMUNE2_SOUND       4
+#define IMMUNE2_CHEMICAL    8
+#define IMMUNE2_ACID        16
+#define IMMUNE2_FEAR        32
+#define IMMUNE2_UNUSED_64   64
+#define IMMUNE2_CIRCLE      128
+#define IMMUNE2_UNUSED_256  256
+#define IMMUNE2_STEAL       512
 
 /* For players : specials.pflag */
 #define PLR_BRIEF             1

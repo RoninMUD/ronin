@@ -1459,8 +1459,8 @@ const char *extra_bits[] = {
   "ANTI-CLERIC",
   "ANTI-MAGIC_USER",
   "ANTI-MORTAL",
-  "<UNUSED>",
-  "<UNUSED>",
+  "<EXTRA_UNUSED>",
+  "<EXTRA_UNUSED2>",
   "ANTI-RENT",
   "ANTI-NINJA",
   "ANTI-NOMAD",
@@ -1643,6 +1643,9 @@ const char * const affected_bits2[] =  {
   "IMMINENT-DEATH",
   "SEVERED",
   "QUAD",
+  "FORTIFICATION",
+  "PERCEIVE",
+  "RAGE",
   "\n"
 };
 
@@ -1930,9 +1933,9 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "<UNUSED>",
+  "<IMMUNE2_UNUSED>",
   "CIRCLE",
-  "<UNUSED>",
+  "<IMMUNE2_UNUSED2>",
   "STEAL",
   "\n"
 };

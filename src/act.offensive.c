@@ -865,7 +865,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   set_pos = stack_position(victim, POSITION_RESTING);
 
-  if ((check > GET_LEARNED(ch, SKILL_CIRCLE)) || (IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE_CIRCLE))) {
+  if ((check > GET_LEARNED(ch, SKILL_CIRCLE)) || (IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE2_CIRCLE))) {
     act("$n slips quietly into the shadows, but $N notices as $e appears behind $M.", FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n disappears from sight, but you notice as $e appears behind you.", FALSE, ch, 0, victim, TO_VICT);
     act("You slip quietly into the shadows, but $N notices as you appear behind $M.", FALSE, ch, 0, victim, TO_CHAR);

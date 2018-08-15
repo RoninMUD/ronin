@@ -418,17 +418,25 @@ int quest_giver(CHAR *mob,CHAR *ch, int cmd, char *argument) {
         return TRUE;
       }
 
-      argument=one_argument(argument,arg);
-      if(*arg) {
-        if(is_abbrev(arg,"solo")) lh_opt=1;
-        if(is_abbrev(arg,"low")) lh_opt=2;
-        if(is_abbrev(arg,"high")) lh_opt=3;
-        if(is_abbrev(arg,"mid")) lh_opt=4;
-      }
-      if(!generate_quest(ch, mob,lh_opt)) {
-        act("$N tells you, 'Sorry, I failed to find a quest for you.'",0,ch,0,mob,TO_CHAR);
+      argument = one_argument(argument, arg);
+
+      if (!*arg || is_abbrev(arg, "newbie")) lh_opt = 0;
+      else if (is_abbrev(arg, "solo")) lh_opt = 1;
+      else if (is_abbrev(arg, "low")) lh_opt = 2;
+      else if (is_abbrev(arg, "high")) lh_opt = 3;
+      else if (is_abbrev(arg, "mid")) lh_opt = 4;
+      else {
+        act("$N tells you, 'Sorry, I didn't quite get that.  Please use: aquest request newbie, solo, low, mid, or high.'", 0, ch, 0, mob, TO_CHAR);
+
         return TRUE;
       }
+
+      if (!generate_quest(ch, mob, lh_opt)) {
+        act("$N tells you, 'Sorry, I failed to find a quest for you.'", 0, ch, 0, mob, TO_CHAR);
+
+        return TRUE;
+      }
+
       return TRUE;
       break;
 

@@ -1448,7 +1448,7 @@ void spell_fear(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  if ((IS_NPC(victim) && IS_SET(victim->specials.immune, IMMUNE_FEAR)) || affected_by_spell(victim, SPELL_TRANQUILITY)) return;
+  if ((IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE2_FEAR)) || affected_by_spell(victim, SPELL_TRANQUILITY)) return;
 
   if (saves_spell(victim, SAVING_PARA, level)) return;
 
@@ -1744,7 +1744,7 @@ void spell_locate_character(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     wizlog(buf,LEVEL_IMM,7);
   }
 
-  if (!CAN_SEE(ch, victim) || IS_SET(victim->specials.immune2,IMMUNE_LOCATE)) {
+  if (!CAN_SEE(ch, victim) || IS_IMMUNE2(victim, IMMUNE2_LOCATE)) {
     send_to_char("Nobody playing by that name.\n\r", ch);
     return;
   }

@@ -104,22 +104,26 @@ int graf(int age, int p0, int p1, int p2, int p3, int p4, int p5, int p6)
 
 /* The three MAX functions define a character's Effective maximum, */
 /* which is NOT the same as ch->points.max_xxxx !!!                */
-int mana_limit(CHAR *ch)
-{
-  if (!IS_NPC(ch)) return (100 + ch->points.max_mana);
-  else return ch->points.max_mana;
+int hit_limit(CHAR *ch) {
+  int max_hit = GET_MAX_HIT_POINTS(ch);
+
+  return max_hit;
 }
 
-int hit_limit(CHAR *ch)
-{
-  if (!IS_NPC(ch)) return ch->points.max_hit;
-  else return ch->points.max_hit;
+int mana_limit(CHAR *ch) {
+  int max_mana = GET_MAX_MANA_POINTS(ch);
+
+  if (!IS_NPC(ch)) max_mana += 100;
+
+  return max_mana;
 }
 
-int move_limit(CHAR *ch)
-{
-  if (!IS_NPC(ch)) return (100 + ch->points.max_move);
-  else return ch->points.max_move;
+int move_limit(CHAR *ch) {
+  int max_move = GET_MAX_MOVE_POINTS(ch);
+
+  if (!IS_NPC(ch)) max_move += 100;
+
+  return max_move;
 }
 
 int equipment_regen(CHAR *ch, int type)
