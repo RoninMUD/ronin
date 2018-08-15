@@ -1070,7 +1070,8 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     attempt = number(0, 5);
 
     if (CAN_GO(ch, attempt) &&
-        !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
+        !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH) &&
+        (!IS_NPC(ch) || (IS_NPC(ch) && !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, NO_MOB)))) {
       CHAR *blocker = GET_OPPONENT(ch);
 
       if (!IS_NPC(blocker) && affected_by_spell(blocker, SKILL_BLOCK) && !GET_RIDER(ch)) {
