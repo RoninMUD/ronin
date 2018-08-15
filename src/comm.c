@@ -2189,9 +2189,9 @@ void send_to_group(char *messg, struct char_data *ch, int same_room) {
 #define ACT_FLAG_HIDE_WIZ_INV 8
 
 void act_print(char *dst, size_t dst_sz, char *str, int flags, CHAR *observer, CHAR *ch, void *ob, void *vict_obj, int type) {
-  register char *str_ptr, *ptr, *i;
-  struct char_data *to;
-  struct obj_data  *obj;
+  register char *str_ptr = NULL, *ptr = NULL, *i = NULL;
+  struct char_data *to = NULL;
+  struct obj_data  *obj = NULL;
   static char buf[MSL];
 
   if (!dst || (dst_sz <= 0) || !str) return;
