@@ -801,8 +801,8 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
   for (DESC *listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
     CHAR *listener = listener_desc->character;
 
-    if (!listener->desc || (listener->desc->connected != CON_PLYNG)) continue;
-    if (!listener || (listener == ch) || !IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) continue;
+    if (!listener || !listener->desc || (listener->desc->connected != CON_PLYNG)) continue;
+    if ((listener == ch) || !IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) continue;
 
     char name[MIL];
 
