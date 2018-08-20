@@ -2747,7 +2747,7 @@ const char * const avatar_skills[] = {
   "parry",
   "peek",
   "pick",
-  "pummel"
+  "pummel",
   "punch",
   "rescue",
   "steal",
@@ -2784,6 +2784,7 @@ const char * const commando_skills[] = {
   "lunge",        /* Legionnaire SC1 */
   "clobber",      /* Legionnaire SC3 */
   "snipe",        /* Legionnaire SC4 */
+  "riposte",      /* Mercenary SC3 */
   "\n"
 };
 
