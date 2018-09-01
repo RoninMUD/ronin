@@ -1666,25 +1666,6 @@ Spec: stores up to 3 charges for "bite" command
 Cost: 250 RP + 2 QT
 ~
 E
-bone~
- 
-The Desiccated Proximal Phalanx of Enlil
-  OR
-The Desiccated Proximal Phalanx of Anu
- 
-worn on finger
-+5 DAMROLL
-+5 HITROLL
-+5 MANA_REGEN (or +25 HP_REGEN)
-FLY
- 
-Spec: has 3 charges, on use a charge is expended and each character
-......in the room has a random one of the following spells cast on
-......them (PCs only): haste, fury (2 tick), miarcle, 3x heal.
- 
-Cost per ring: 150 RP + 2 QT
-~
-E
 phylactery~
  
 Phylactery of the Bean-Sidhe
@@ -1848,6 +1829,25 @@ a lance tipped with a mammoth's tusk: wield, pierce, 8d5
 Leviathan's scale vambraces: arms
  25 AC-apply, +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-GOOD
  no specs
+~
+E
+bone~
+The Desiccated Proximal Phalanx of Enlil
+  OR
+The Desiccated Proximal Phalanx of Anu
+
+worn on finger
++5 DAMROLL
++5 HITROLL
++5 MANA_REGEN (or +25 HP_REGEN)
+FLY
+
+Spec: has 3 charges, on use a charge is expended and each character
+......in the room has a random one of the following spells cast on
+......them (PCs only): haste, fury (2 tick), miracle, 3x heal.
+......Charges take one mud day to replenish.
+
+Cost per ring: 150 RP + 2 QT
 ~
 X
 ~
