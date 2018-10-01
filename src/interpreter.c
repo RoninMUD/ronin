@@ -173,41 +173,37 @@ char *skip_spaces(char *string) {
 }
 
 int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive) {
-  char buf[MIL];
-  int len = 0;
-
   assert(list);
 
-  strncpy(buf, string, sizeof(buf) - 1);
-  buf[sizeof(buf) - 1] = '\0';
-
-  for (len = 0; *(buf + len); len++)
-    *(buf + len) = LOWER(*(buf + len));
-
-  if (exact) {
-    for (int i = 0; **(list + i) != '\n'; i++)
-      if (case_sensitive) {
-        if (!strcmp(buf, *(list + i)))
-          return i;
-      }
-      else {
-        if (!strcasecmp(buf, *(list + i)))
-          return i;
-      }
+  if (!*string) {
+    return -1;
   }
-  else {
-    if (!len)
-      len = 1; /* Avoid "" to match the first available string. */
 
-    for (int i = 0; **(list + i) != '\n'; i++)
-      if (case_sensitive) {
-        if (!strncmp(buf, *(list + i), len))
+  for (int i = 0; **(list + i) != '\n'; i++) {
+    if (case_sensitive) {
+      if (exact) {
+        if (!strcmp(string, *(list + i))) {
           return i;
+        }
       }
       else {
-        if (!strncasecmp(buf, *(list + i), len))
+        if (!strncmp(string, *(list + i), strlen(string))) {
           return i;
+        }
       }
+    }
+    else {
+      if (exact) {
+        if (!strcasecmp(string, *(list + i))) {
+          return i;
+        }
+      }
+      else {
+        if (!strncasecmp(string, *(list + i), strlen(string))) {
+          return i;
+        }
+      }
+    }
   }
 
   return -1;

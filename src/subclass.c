@@ -1046,7 +1046,7 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
               case 1:
                 sprintf(buf,"Am I annoying you yet %s?",GET_NAME(d->character));break;
               case 2:
-                sprintf(buf,"You talking to me, %s?!...     You talking to ME?!!",GET_NAME(d->character));break;
+                sprintf(buf,"You talking to me, %s?!... You talking to ME?!!",GET_NAME(d->character));break;
               case 3:
                 sprintf(buf,"I know what you're thinking. Did he fire 6 shots or only 5?");break;
               case 4:

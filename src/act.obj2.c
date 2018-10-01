@@ -878,718 +878,701 @@ void perform_wear(struct char_data *ch, struct obj_data *obj_object, int keyword
   }
 }
 
-void show_bitvector_wear(struct char_data *ch, struct obj_data *obj_object)
-{
-
-if(!IS_SET(ch->specials.affected_by,AFF_IMINV) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_IMINV)) {
-    act("$n slowly fades out of existence.", TRUE, ch,0,0,TO_ROOM);
+void show_bitvector_wear(struct char_data *ch, struct obj_data *obj_object) {
+  if (!IS_SET(ch->specials.affected_by, AFF_IMINV) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_IMINV)) {
+    act("$n slowly fades out of existence.", TRUE, ch, 0, 0, TO_ROOM);
     send_to_char("You vanish.\n\r", ch);
-}
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_POISON) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_POISON)) {
+  if (!IS_SET(ch->specials.affected_by, AFF_POISON) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_POISON)) {
     send_to_char("You feel very sick.\n\r", ch);
-}
+  }
 
-
-if(!IS_SET(ch->specials.affected_by,AFF_FURY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_FURY)) {
+  if (!IS_SET(ch->specials.affected_by, AFF_FURY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_FURY)) {
     send_to_char("You feel very angry.\n\r", ch);
-    act("$n starts snarling and fuming with rage.",FALSE,ch,0,0,TO_ROOM);
-}
+    act("$n starts snarling and fuming with fury.", FALSE, ch, 0, 0, TO_ROOM);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_BLIND) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_BLIND)) {
+  if (!IS_SET(ch->specials.affected_by, AFF_BLIND) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_BLIND)) {
     send_to_char("You can't see anything!!\n\r", ch);
-    act("$n is blinded!!",FALSE,ch,0,0,TO_ROOM);
-}
+    act("$n is blinded!!", FALSE, ch, 0, 0, TO_ROOM);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_PARALYSIS) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PARALYSIS)) {
-    act("Your limbs freeze in place.",FALSE,ch,0,0,TO_CHAR);
-        act("$n's limbs freeze in place!",TRUE,ch,0,0,TO_ROOM);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_PARALYSIS) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PARALYSIS)) {
+    act("Your limbs freeze in place.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n's limbs freeze in place!", TRUE, ch, 0, 0, TO_ROOM);
+  }
 
-
-if((!IS_SET(ch->specials.affected_by,AFF_DETECT_INVISIBLE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_INVISIBLE)) ||
-  (!IS_SET(ch->specials.affected_by,AFF_DETECT_MAGIC) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_MAGIC)) ||
-  (!IS_SET(ch->specials.affected_by,AFF_DETECT_ALIGNMENT) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_ALIGNMENT))) {
+  if ((!IS_SET(ch->specials.affected_by, AFF_DETECT_INVISIBLE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_INVISIBLE)) ||
+    (!IS_SET(ch->specials.affected_by, AFF_DETECT_MAGIC) &&
+      IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_MAGIC)) ||
+      (!IS_SET(ch->specials.affected_by, AFF_DETECT_ALIGNMENT) &&
+        IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_ALIGNMENT))) {
     send_to_char("Your eyes tingle.\n\r", ch);
-}
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_FLY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_FLY)) {
+  if (!IS_SET(ch->specials.affected_by, AFF_FLY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_FLY)) {
     send_to_char("You start to fly.\n\r", ch);
-    act("$n starts to fly.", TRUE, ch,0,0,TO_ROOM);
-}
+    act("$n starts to fly.", TRUE, ch, 0, 0, TO_ROOM);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_INFRAVISION) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_INFRAVISION)) {
-    act("$n's eyes start glowing a bright red.",TRUE,ch,0,0,TO_ROOM);
-   send_to_char("Your eyes glow a bright red.\n\r", ch);
-}
-
-
-if(!IS_SET(ch->specials.affected_by,AFF_SANCTUARY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SANCTUARY)) {
-    act("$n is surrounded by a white aura.",TRUE,ch,0,0,TO_ROOM);
-    act("You start glowing.",TRUE,ch,0,0,TO_CHAR);
-}
-
-if(!IS_SET(ch->specials.affected_by,AFF_INVUL) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_INVUL)) {
-    act("$n is surrounded by a powerful sphere.",TRUE,ch,0,0,TO_ROOM);
-    act("You are surrounded by a powerful sphere.",TRUE,ch,0,0,TO_CHAR);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_SPHERE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SPHERE)) {
-    act("$n is surrounded by a golden sphere.",TRUE,ch,0,0,TO_ROOM);
-    act("You are surrounded by a golden sphere.",TRUE,ch,0,0,TO_CHAR);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_PROTECT_EVIL) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PROTECT_EVIL)) {
-send_to_char("You have a rightous feeling.\n\r",ch);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_PROTECT_GOOD) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PROTECT_GOOD)) {
-send_to_char("A cloak of chaotic energy surrounds you.\n\r",ch);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_HIDE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_HIDE)) {
-    send_to_char("You try to hide.\n\r",ch);
-    act("$n's tries to hide in the shadows.",TRUE,ch,0,0,TO_ROOM);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_SNEAK) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SNEAK)) {
-    send_to_char("You start moving quietly.\n\r",ch);
-    act("$n's starts moving quietly.",TRUE,ch,0,0,TO_ROOM);
-   }
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_INFRAVISION) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_INFRAVISION)) {
+    act("$n's eyes start glowing a bright red.", TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("Your eyes glow a bright red.\n\r", ch);
+  }
 
 
-void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object)
-{
+  if (!IS_SET(ch->specials.affected_by, AFF_SANCTUARY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SANCTUARY)) {
+    act("$n is surrounded by a white aura.", TRUE, ch, 0, 0, TO_ROOM);
+    act("You start glowing.", TRUE, ch, 0, 0, TO_CHAR);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_IMINV) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_IMINV)) {
-    act("$n slowly fades into existence.", TRUE, ch,0,0,TO_ROOM);
-    send_to_char("You slowly fade into view.\n\r", ch);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_INVUL) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_INVUL)) {
+    act("$n is surrounded by a powerful sphere.", TRUE, ch, 0, 0, TO_ROOM);
+    act("You are surrounded by a powerful sphere.", TRUE, ch, 0, 0, TO_CHAR);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_POISON) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_POISON)) {
-    send_to_char("You feel better.\n\r", ch);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_SPHERE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SPHERE)) {
+    act("$n is surrounded by a golden sphere.", TRUE, ch, 0, 0, TO_ROOM);
+    act("You are surrounded by a golden sphere.", TRUE, ch, 0, 0, TO_CHAR);
+  }
 
+  if (!IS_SET(ch->specials.affected_by, AFF_PROTECT_EVIL) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PROTECT_EVIL)) {
+    send_to_char("You have a rightous feeling.\n\r", ch);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_FURY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_FURY)) {
-    send_to_char("You calm down.\n\r", ch);
-    act("$n stops snarling and fuming with rage.",FALSE,ch,0,0,TO_ROOM);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_PROTECT_GOOD) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PROTECT_GOOD)) {
+    send_to_char("A cloak of chaotic energy surrounds you.\n\r", ch);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_BLIND) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_BLIND)) {
-    send_to_char("You can see again.\n\r", ch);
-    act("$n is no longer blinded.",FALSE,ch,0,0,TO_ROOM);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF_HIDE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_HIDE)) {
+    send_to_char("You try to hide.\n\r", ch);
+    act("$n's tries to hide in the shadows.", TRUE, ch, 0, 0, TO_ROOM);
+  }
 
+  if (!IS_SET(ch->specials.affected_by, AFF_SNEAK) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SNEAK)) {
+    send_to_char("You start moving quietly.\n\r", ch);
+    act("$n's starts moving quietly.", TRUE, ch, 0, 0, TO_ROOM);
+  }
 
-if(!IS_SET(ch->specials.affected_by,AFF_PARALYSIS) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PARALYSIS)) {
-    act("You can move again.",FALSE,ch,0,0,TO_CHAR);
-        act("$n is no longer paralyzed.",TRUE,ch,0,0,TO_ROOM);
-}
+  if (!IS_SET(ch->specials.affected_by, AFF2_FORTIFICATION) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_FORTIFICATION)) {
+    send_to_char("You feel able to withstand any attack.\n\r", ch);
+    act("$n seems able to withstand any attack.", TRUE, ch, 0, 0, TO_ROOM);
+  }
 
+  if (!IS_SET(ch->specials.affected_by, AFF2_PERCEIVE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_PERCEIVE)) {
+    send_to_char("Your eyes glow with unearthly light.\n\r", ch);
+  }
 
-if((!IS_SET(ch->specials.affected_by,AFF_DETECT_INVISIBLE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_INVISIBLE)) ||
-  (!IS_SET(ch->specials.affected_by,AFF_DETECT_MAGIC) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_MAGIC)) ||
-  (!IS_SET(ch->specials.affected_by,AFF_DETECT_ALIGNMENT) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_DETECT_ALIGNMENT))) {
-    send_to_char("Your eyes stop tingling.\n\r", ch);
-}
-
-if(!IS_SET(ch->specials.affected_by,AFF_FLY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_FLY)) {
-    send_to_char("You stop flying and fall to the ground.\n\r", ch);
-    act("$n stops flying and falls to the ground.", TRUE, ch,0,0,TO_ROOM);
-}
-
-if(!IS_SET(ch->specials.affected_by,AFF_INFRAVISION) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_INFRAVISION)) {
-    act("$n's eyes stop glowing.",TRUE,ch,0,0,TO_ROOM);
-   send_to_char("Your eyes stop glowing.\n\r", ch);
-}
-
-
-if(!IS_SET(ch->specials.affected_by,AFF_SANCTUARY) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SANCTUARY)) {
-    act("The white aura around $n's body fades.",TRUE,ch,0,0,TO_ROOM);
-    act("The white aura around your body fades.",TRUE,ch,0,0,TO_CHAR);
-}
-
-if(!IS_SET(ch->specials.affected_by,AFF_INVUL) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_INVUL)) {
-    act("$n's powerful sphere disappears.",TRUE,ch,0,0,TO_ROOM);
-    act("Your powerful sphere disappears.",TRUE,ch,0,0,TO_CHAR);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_SPHERE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SPHERE)) {
-    act("$n's golden sphere disappears.",TRUE,ch,0,0,TO_ROOM);
-    act("Your golden sphere disappears.",TRUE,ch,0,0,TO_CHAR);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_PROTECT_EVIL) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PROTECT_EVIL)) {
-send_to_char("You stop feeling rightous.\n\r",ch);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_PROTECT_GOOD) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_PROTECT_GOOD)) {
-send_to_char("Your protective aura of chaos disappears.\n\r",ch);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_HIDE) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_HIDE)) {
-    send_to_char("You stop hiding.\n\r",ch);
-    act("$n's stops hiding.",TRUE,ch,0,0,TO_ROOM);
-   }
-
-if(!IS_SET(ch->specials.affected_by,AFF_SNEAK) &&
-   IS_SET(obj_object->obj_flags.bitvector,AFF_SNEAK)) {
-    send_to_char("You stop sneaking.\n\r",ch);
-    act("$n stops sneaking.",TRUE,ch,0,0,TO_ROOM);
-   }
-
-}
-
-
-void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
-{
-  char buffer[MAX_STRING_LENGTH];
-
-  switch(keyword) {
-  case 0: {  /* LIGHT SOURCE */
-    if (ch->equipment[WEAR_LIGHT])
-      send_to_char("You are already holding a light source.\n\r", ch);
-    else {
-      if (!CAN_WEAR(obj_object,ITEM_HOLD) && !CAN_WEAR(obj_object,ITEM_LIGHT_SOURCE)) {
-         send_to_char("You can't hold this.\n\r", ch);
-      }
-      else {
-        perform_wear(ch,obj_object,keyword);
-        show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch,obj_object, WEAR_LIGHT);
-        if (obj_object->obj_flags.value[2]) world[CHAR_REAL_ROOM(ch)].light++;
-      }
-    }
-  } break;
-
-  case 1:
-  {
-    if (CAN_WEAR(obj_object, ITEM_WEAR_FINGER)) {
-      if (EQ(ch, WEAR_FINGER_R) && EQ(ch, WEAR_FINGER_L)) {
-        send_to_char("You are already wearing something on your fingers.\n\r", ch);
-      }
-      else {
-        perform_wear(ch, obj_object, keyword);
-
-        if (EQ(ch, WEAR_FINGER_L)) {
-          printf_to_char(ch, "You put the %s on your right finger.\n\r",
-            fname(OBJ_NAME(obj_object)));
-
-          show_bitvector_wear(ch, obj_object);
-
-          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, WEAR_FINGER_R);
-        }
-        else {
-          printf_to_char(ch, "You put the %s on your left finger.\n\r",
-            fname(OBJ_NAME(obj_object)));
-
-          show_bitvector_wear(ch, obj_object);
-
-          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, WEAR_FINGER_L);
-        }
-      }
-    }
-    else {
-      send_to_char("You can't wear that on your finger.\n\r", ch);
-    }
-  } break;
-  case 2:
-  {
-    if (CAN_WEAR(obj_object, ITEM_WEAR_NECK) || CAN_WEAR(obj_object, ITEM_WEAR_2NECK)) {
-      if ((CAN_WEAR(obj_object, ITEM_WEAR_2NECK) && (EQ(ch, WEAR_NECK_1) || EQ(ch, WEAR_NECK_2)))) {
-        send_to_char("This item must be worn around the neck by itself.\n\r", ch);
-      }
-      else if ((CAN_WEAR(obj_object, ITEM_WEAR_NECK) && (EQ(ch, WEAR_NECK_1) && CAN_WEAR(EQ(ch, WEAR_NECK_1), ITEM_WEAR_2NECK))) ||
-               (EQ(ch, WEAR_NECK_1) && EQ(ch, WEAR_NECK_2))) {
-        send_to_char("You can't wear any more around your neck.\n\r", ch);
-      }
-      else {
-        perform_wear(ch, obj_object, keyword);
-
-        if (EQ(ch, WEAR_NECK_1) && !CAN_WEAR(obj_object, ITEM_WEAR_2NECK)) {
-          show_bitvector_wear(ch, obj_object);
-
-          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, WEAR_NECK_2);
-        }
-        else {
-          show_bitvector_wear(ch, obj_object);
-
-          if (signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, WEAR_NECK_1);
-        }
-      }
-    }
-    else {
-      send_to_char("You can't wear that around your neck.\n\r", ch);
-    }
-  } break;
-  case 3: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_BODY)) {
-      if (ch->equipment[WEAR_BODY]) {
-      send_to_char("You already wear something on your body.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch,  obj_object, WEAR_BODY);
-      }
-    } else {
-      send_to_char("You can't wear that on your body.\n\r", ch);
-    }
-  } break;
-  case 4: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_HEAD)) {
-      if (ch->equipment[WEAR_HEAD]) {
-      send_to_char("You already wear something on your head.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_HEAD);
-      }
-    } else {
-      send_to_char("You can't wear that on your head.\n\r", ch);
-    }
-  } break;
-  case 5: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_LEGS)) {
-      if (ch->equipment[WEAR_LEGS]) {
-      send_to_char("You already wear something on your legs.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_LEGS);
-      }
-    } else {
-      send_to_char("You can't wear that on your legs.\n\r", ch);
-    }
-  } break;
-  case 6: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_FEET)) {
-      if (ch->equipment[WEAR_FEET]) {
-      send_to_char("You already wear something on your feet.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_FEET);
-      }
-    } else {
-      send_to_char("You can't wear that on your feet.\n\r", ch);
-    }
-  } break;
-  case 7: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_HANDS)) {
-      if (ch->equipment[WEAR_HANDS]) {
-      send_to_char("You already wear something on your hands.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_HANDS);
-      }
-    } else {
-      send_to_char("You can't wear that on your hands.\n\r", ch);
-    }
-  } break;
-  case 8: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) {
-      if (ch->equipment[WEAR_ARMS]) {
-      send_to_char("You already wear something on your arms.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_ARMS);
-      }
-    } else {
-      send_to_char("You can't wear that on your arms.\n\r", ch);
-    }
-  } break;
-  case 9: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_ABOUT)) {
-      if (ch->equipment[WEAR_ABOUT]) {
-      send_to_char("You already wear something about your body.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_ABOUT);
-      }
-    } else {
-      send_to_char("You can't wear that about your body.\n\r", ch);
-    }
-  } break;
-  case 10: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) {
-      if (ch->equipment[WEAR_WAIST]) {
-      send_to_char("You already wear something about your waist.\n\r",
-                 ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch,  obj_object, WEAR_WAIST);
-      }
-    } else {
-      send_to_char("You can't wear that about your waist.\n\r", ch);
-    }
-  } break;
-  case 11: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) {
-      if ((ch->equipment[WEAR_WRIST_L]) && (ch->equipment[WEAR_WRIST_R])) {
-        send_to_char("You already wear something around both your wrists.\n\r", ch);
-      } else {
-        perform_wear(ch,obj_object,keyword);
-        if (ch->equipment[WEAR_WRIST_L]) {
-          sprintf(buffer, "You wear the %s around your right wrist.\n\r",fname(OBJ_NAME(obj_object)));
-          send_to_char(buffer, ch);
-          show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-          obj_from_char(obj_object);
-          equip_char(ch,  obj_object, WEAR_WRIST_R);
-        } else {
-          sprintf(buffer, "You wear the %s around your left wrist.\n\r",fname(OBJ_NAME(obj_object)));
-          send_to_char(buffer, ch);
-          show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, WEAR_WRIST_L);
-        }
-      }
-    } else {
-      send_to_char("You can't wear that around your wrist.\n\r", ch);
-    }
-  } break;
-
-  case 12:
-    if(CAN_WEAR(obj_object,ITEM_WIELD)) {
-      if ( GET_ITEM_TYPE(obj_object) == ITEM_2HWEAPON &&
-         (ch->equipment[HOLD] || ch->equipment[WIELD])) {
-      send_to_char("You need both hands to wield this.\n\r", ch);
-      return;
-      }
-
-      if(GET_CLASS(ch) == CLASS_NINJA && ch->equipment[WIELD] &&
-         ch->equipment[HOLD]) {
-      send_to_char("You are already wielding and holding something.\n\r", ch);
-      return;
-      }
-      if(GET_CLASS(ch) == CLASS_NINJA && ch->equipment[WIELD] &&
-         GET_ITEM_TYPE(ch->equipment[WIELD]) == ITEM_2HWEAPON) {
-      send_to_char("You are already wielding a 2-handed weapon.\n\r", ch);
-      return;
-      }
-      if (GET_CLASS(ch) == CLASS_NINJA && ch->equipment[WIELD] &&
-        !ch->equipment[HOLD]) {
-        if (GETOBJ_WEIGHT(obj_object) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w) {
-          send_to_char("It is too heavy for you to use.\n\r",ch);
-          return;
-        } else {
-          perform_wear(ch,obj_object,keyword);
-          show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-          obj_from_char(obj_object);
-          equip_char(ch, obj_object, HOLD);
-          return;
-        }
-      }
-      if (ch->equipment[WIELD]) {
-      send_to_char("You are already wielding something.\n\r", ch);
-      } else {
-      if (  (ch->player.class == CLASS_CLERIC) &&
-            ((GET_ITEM_TYPE(obj_object) == ITEM_WEAPON || GET_ITEM_TYPE(obj_object) == ITEM_2HWEAPON) &&
-             ((obj_object->obj_flags.value[3] == 3)  ||
-            (obj_object->obj_flags.value[3] > 8)))  ) {
-        strcpy(buffer, "You can't wield that! its SHARP.\n\r");
-        strcat(buffer, "Your religion forbids the use of sharp weapons!\n\r");
-        send_to_char(buffer, ch);
-      }
-      else if ( (ch->player.class == CLASS_MAGIC_USER) &&
-              ((GET_ITEM_TYPE(obj_object) == ITEM_WEAPON || GET_ITEM_TYPE(obj_object) == ITEM_2HWEAPON) &&
-               ((obj_object->obj_flags.value[1] > 3) ||
-                (obj_object->obj_flags.value[2] > 9))) && (V_OBJ(obj_object)!=570) && (V_OBJ(obj_object)!=29981)&& (V_OBJ(obj_object)!=129) ) { /* Addition of a special mage weapon */
-        strcpy(buffer, "Your magical training did not include the use of this weapon!\n\r");
-        send_to_char(buffer, ch);
-      }
-     else {
-
-       /* Cleric execption has been removed, and is temporarily placed */
-       /* at the end of this file                                      */
-
-       if (GETOBJ_WEIGHT(obj_object) >
-           str_app[STRENGTH_APPLY_INDEX(ch)].wield_w) {
-         send_to_char("It is too heavy for you to use.\n\r",ch);
-       } else {
-         perform_wear(ch,obj_object,keyword);
-       show_bitvector_wear(ch,obj_object);
-       if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-         obj_from_char(obj_object);
-         equip_char(ch, obj_object, WIELD);
-       }
-     }
-      }
-    } else {
-      send_to_char("You can't wield that.\n\r", ch);
-    }
-    break;
-
-  case 13:
-    if (CAN_WEAR(obj_object,ITEM_HOLD)) {
-      if (ch->equipment[WIELD] && GET_ITEM_TYPE(ch->equipment[WIELD]) == ITEM_2HWEAPON) {
-      send_to_char("You're using a two-handed weapon so you can't hold this.\n\r", ch);
-      return;
-      }
-      if (ch->equipment[HOLD]) {
-      send_to_char("You are already holding something.\n\r", ch);
-      } else {
-      /* Cleric execption has been removed, and is temporarily placed */
-      /* at the end of this file                                      */
-
-      if ((GETOBJ_WEIGHT(obj_object) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)
-          && GET_CLASS(ch) == CLASS_NINJA
-          && GET_ITEM_TYPE(obj_object)==ITEM_WEAPON) {
-        send_to_char("It is too heavy for you to use.\n\r",ch);
-      } else {
-        perform_wear(ch,obj_object,keyword);
-        show_bitvector_wear(ch,obj_object);
-        if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-        obj_from_char(obj_object);
-        equip_char(ch, obj_object, HOLD);
-      }
-      }
-    } else {
-      send_to_char("You can't hold this.\n\r", ch);
-    }
-    break;
-  case 14: {
-    if (CAN_WEAR(obj_object,ITEM_WEAR_SHIELD)) {
-
-      if ((ch->equipment[WEAR_SHIELD])) {
-      send_to_char(
-                 "You are already using a shield.\n\r", ch);
-      } else {
-      perform_wear(ch,obj_object,keyword);
-      sprintf(buffer, "You start using the %s as a shield.\n\r",
-            fname(OBJ_NAME(obj_object)));
-      send_to_char(buffer, ch);
-      show_bitvector_wear(ch,obj_object);
-      if(signal_object(obj_object, ch, MSG_OBJ_WORN, "")) return;
-      obj_from_char(obj_object);
-      equip_char(ch, obj_object, WEAR_SHIELD);
-      }
-    } else {
-      send_to_char("You can't use that as a shield.\n\r", ch);
-    }
-  } break;
-  case -1: {
-    sprintf(buffer,"Wear %s where?.\n\r", fname(OBJ_NAME(obj_object)));
-    send_to_char(buffer, ch);
-  } break;
-  case -2: {
-    sprintf(buffer,"You can't wear the %s.\n\r", fname(OBJ_NAME(obj_object)));
-    send_to_char(buffer, ch);
-  } break;
-
-  default: {
-    log_f("Unknown type called in wear.");
-  } break;
+  if (!IS_SET(ch->specials.affected_by, AFF2_RAGE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_RAGE)) {
+    send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
+    act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
   }
 }
 
 
-void do_wear(struct char_data *ch, char *argument, int cmd) {
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
-  char buf[256];
-  char buffer[MAX_STRING_LENGTH];
-  struct obj_data *obj_object;
-  struct obj_data *next_obj;
-  int keyword;
-  const char * const keywords[] = {
-    "finger",
-    "neck",
-    "body",
-    "head",
-    "legs",
-    "feet",
-    "hands",
-    "arms",
-    "about",
-    "waist",
-    "wrist",
-    "shield",
-    "\n"
+void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object) {
+  if (!IS_SET(ch->specials.affected_by, AFF_IMINV) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_IMINV)) {
+    act("$n slowly fades into existence.", TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("You slowly fade into view.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_POISON) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_POISON)) {
+    send_to_char("You feel better.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_FURY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_FURY)) {
+    send_to_char("You calm down.\n\r", ch);
+    act("$n stops snarling and fuming with rage.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_BLIND) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_BLIND)) {
+    send_to_char("You can see again.\n\r", ch);
+    act("$n is no longer blinded.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_PARALYSIS) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PARALYSIS)) {
+    act("You can move again.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n is no longer paralyzed.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+
+  if ((!IS_SET(ch->specials.affected_by, AFF_DETECT_INVISIBLE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_INVISIBLE)) ||
+    (!IS_SET(ch->specials.affected_by, AFF_DETECT_MAGIC) &&
+      IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_MAGIC)) ||
+      (!IS_SET(ch->specials.affected_by, AFF_DETECT_ALIGNMENT) &&
+        IS_SET(obj_object->obj_flags.bitvector, AFF_DETECT_ALIGNMENT))) {
+    send_to_char("Your eyes stop tingling.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_FLY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_FLY)) {
+    send_to_char("You stop flying and fall to the ground.\n\r", ch);
+    act("$n stops flying and falls to the ground.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_INFRAVISION) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_INFRAVISION)) {
+    act("$n's eyes stop glowing.", TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("Your eyes stop glowing.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_SANCTUARY) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SANCTUARY)) {
+    act("The white aura around $n's body fades.", TRUE, ch, 0, 0, TO_ROOM);
+    act("The white aura around your body fades.", TRUE, ch, 0, 0, TO_CHAR);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_INVUL) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_INVUL)) {
+    act("$n's powerful sphere disappears.", TRUE, ch, 0, 0, TO_ROOM);
+    act("Your powerful sphere disappears.", TRUE, ch, 0, 0, TO_CHAR);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_SPHERE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SPHERE)) {
+    act("$n's golden sphere disappears.", TRUE, ch, 0, 0, TO_ROOM);
+    act("Your golden sphere disappears.", TRUE, ch, 0, 0, TO_CHAR);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_PROTECT_EVIL) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PROTECT_EVIL)) {
+    send_to_char("You stop feeling rightous.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_PROTECT_GOOD) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_PROTECT_GOOD)) {
+    send_to_char("Your protective aura of chaos disappears.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_HIDE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_HIDE)) {
+    send_to_char("You stop hiding.\n\r", ch);
+    act("$n's stops hiding.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF_SNEAK) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF_SNEAK)) {
+    send_to_char("You stop sneaking.\n\r", ch);
+    act("$n stops sneaking.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF2_FORTIFICATION) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_FORTIFICATION)) {
+    send_to_char("Your feeling of fortification diminishes.\n\r", ch);
+    act("$n's magical foritication diminishes.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF2_PERCEIVE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_PERCEIVE)) {
+    send_to_char("Your depth of perception diminishes.\n\r", ch);
+  }
+
+  if (!IS_SET(ch->specials.affected_by, AFF2_RAGE) &&
+    IS_SET(obj_object->obj_flags.bitvector, AFF2_RAGE)) {
+    send_to_char("You calm down and feel less angry.\n\r", ch);
+    act("$n calms down and looks less angry.", TRUE, ch, 0, 0, TO_ROOM);
+  }
+}
+
+
+void wear(CHAR *ch, OBJ *obj, int eq_slot) {
+  typedef struct wear_info_t {
+    int eq_slot;
+    int wear_pos;
+    int wear_pos2;
+    bool is_two_slot;
+    char *cant_wear;
+    char *already_worn;
+    char *ch_wear;
+    char *rm_wear;
+  } wear_info_t;
+
+  const wear_info_t wear_info[] = {
+    {
+      ITEM_LIGHT_SOURCE,
+      WEAR_LIGHT,
+      -1,
+      FALSE,
+      "You can't hold that.",
+      "You are already holding a light source.",
+      "You light $p and hold it.",
+      "$n lights $p and holds it.",
+    },
+    {
+      ITEM_WEAR_FINGER,
+      WEAR_FINGER_R,
+      WEAR_FINGER_L,
+      FALSE,
+      "You can't wear that on your finger.",
+      "You already wear something on both your fingers.",
+      "You put the $p on your %s finger.",
+      "$n wears $p on $s finger.",
+    },
+    {
+      ITEM_WEAR_NECK,
+      WEAR_NECK_1,
+      WEAR_NECK_2,
+      FALSE,
+      "You can't wear that around your neck.",
+      "You can't wear any more around your neck.",
+      "You wear $p around your neck.",
+      "$n wears $p around $s neck.",
+    },
+    {
+      ITEM_WEAR_2NECK,
+      WEAR_NECK_1,
+      WEAR_NECK_2,
+      TRUE,
+      "You can't wear that around your neck.",
+      "You can't wear any more around your neck.",
+      "You wear $p around your neck.",
+      "$n wears $p around $s neck.",
+    },
+    {
+      ITEM_WEAR_BODY,
+      WEAR_BODY,
+      -1,
+      FALSE,
+      "You can't wear that on your body.",
+      "You already wear something on your body.",
+      "You wear $p on your body.",
+      "$n wears $p on $s body.",
+    },
+    {
+      ITEM_WEAR_HEAD,
+      WEAR_HEAD,
+      -1,
+      FALSE,
+      "You can't wear that on your head.",
+      "You already wear something on your head.",
+      "You wear $p on your head.",
+      "$n wears $p on $s head.",
+    },
+    {
+      ITEM_WEAR_LEGS,
+      WEAR_LEGS,
+      -1,
+      FALSE,
+      "You can't wear that on your legs.",
+      "You already wear something on your legs.",
+      "You wear $p on your legs.",
+      "$n wears $p on $s legs.",
+    },
+    {
+      ITEM_WEAR_FEET,
+      WEAR_FEET,
+      -1,
+      FALSE,
+      "You can't wear that on your feet.",
+      "You already wear something on your feet.",
+      "You wear $p on your feet.",
+      "$n wears $p on $s feet.",
+    },
+    {
+      ITEM_WEAR_HANDS,
+      WEAR_HANDS,
+      -1,
+      FALSE,
+      "You can't wear that on your hands.",
+      "You already wear something on your hands.",
+      "You wear $p on your hands.",
+      "$n wears $p on $s hands.",
+    },
+    {
+      ITEM_WEAR_ARMS,
+      WEAR_ARMS,
+      -1,
+      FALSE,
+      "You can't wear that on your arms.",
+      "You already wear something on your arms.",
+      "You wear $p on your arms.",
+      "$n wears $p on $s arms.",
+    },
+    {
+      ITEM_WEAR_SHIELD,
+      WEAR_SHIELD,
+      -1,
+      FALSE,
+      "You can't hold this.",
+      "You are already holding a light source.",
+      "You light $p and hold it.",
+      "$n lights $p and holds it.",
+    },
+    {
+      ITEM_WEAR_ABOUT,
+      WEAR_ABOUT,
+      -1,
+      FALSE,
+      "You can't wear that about your body.",
+      "You already wear something about your body.",
+      "You wear $p about your body.",
+      "$n wears $p about $s body.",
+    },
+    {
+      ITEM_WEAR_WAIST,
+      WEAR_WAIST,
+      -1,
+      FALSE,
+      "You can't wear that about your waist.",
+      "You already wear something about your waist.",
+      "You wear $p about your waist.",
+      "$n wears $p about $s waist.",
+    },
+    {
+      ITEM_WEAR_WRIST,
+      WEAR_WRIST_R,
+      WEAR_WRIST_L,
+      FALSE,
+      "You can't wear that around your wrist.",
+      "You already wear something around both your wrists.",
+      "You wear the $p around your %s wrist.",
+      "$n wears $p around $s wrist.",
+    },
+    {
+      ITEM_WIELD,
+      WIELD,
+      -1,
+      FALSE, // Always false, even for 2H weapons, due to using ITEM_TYPE instead.
+      "You can't wield that.",
+      "You are already wielding something.",
+      "You wield $p.",
+      "$n wields $p.",
+    },
+    {
+      ITEM_HOLD,
+      HOLD,
+      -1,
+      FALSE,
+      "You can't hold that.",
+      "You are already holding something.",
+      "You grab $p.",
+      "$n grabs $p.",
+    },
   };
 
-  argument_interpreter(argument, arg1, arg2);
-  if (*arg1) {
-    if (!strcmp(arg1,"all")) {
-      for(obj_object = ch->carrying;obj_object;obj_object = next_obj) {
-        next_obj = obj_object->next_content;
+  if (!ch || !obj) return;
 
-        keyword = -2;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_SHIELD)) keyword = 14;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_2NECK)) keyword = 2;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_HANDS)) keyword = 7;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_FEET)) keyword = 6;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_LEGS)) keyword = 5;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_ABOUT)) keyword = 9;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_HEAD)) keyword = 4;
-        if (CAN_WEAR(obj_object,ITEM_WEAR_BODY)) keyword = 3;
+  int wear_pos = -1;
 
-        wear(ch, obj_object, keyword);
-     }
-     check_equipment(ch);
-     return;
+  /* Handle WIELD separately, since its more complex. */
+  if (eq_slot == ITEM_WIELD) {
+    if ((OBJ_TYPE(obj) == ITEM_2HWEAPON) && (EQ(ch, WIELD) || EQ(ch, HOLD))) {
+      printf_to_char(ch, "You need both hands to wield this.\n\r");
 
-    } else {
-      obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);}
-    if (obj_object) {
-      if (*arg2) {
-     keyword = search_block(arg2, keywords, FALSE);
-     if (keyword == -1) {
-       sprintf(buf, "%s is an unknown body location.\n\r", arg2);
-       send_to_char(buf, ch);
-     } else { wear(ch, obj_object, keyword+1);}
-      } else {
-
-     keyword = -2;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_SHIELD)) keyword = 14;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_FINGER)) keyword = 1;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_NECK)) keyword = 2;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_2NECK)) keyword = 2;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_WRIST)) keyword = 11;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_WAIST)) keyword = 10;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_ARMS)) keyword = 8;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_HANDS)) keyword = 7;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_FEET)) keyword = 6;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_LEGS)) keyword = 5;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_ABOUT)) keyword = 9;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_HEAD)) keyword = 4;
-     if (CAN_WEAR(obj_object,ITEM_WEAR_BODY)) keyword = 3;
-
-     wear(ch, obj_object, keyword);}
-    } else     {
-      sprintf(buffer, "You do not seem to have the '%s'.\n\r",arg1);
-      send_to_char(buffer,ch);
+      return;
     }
-  } else {
-    send_to_char("Wear what?\n\r", ch);
+
+    if (GET_CLASS(ch) == CLASS_CLERIC) {
+      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_WEAPON)) &&
+          ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
+        printf_to_char(ch, "You can't wield that; it's SHARP!\n\rYour religion forbids the use of sharp weapons!\n\r");
+
+        return;
+      }
+    }
+
+    if (GET_CLASS(ch) == CLASS_MAGIC_USER) {
+      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_WEAPON)) &&
+          ((OBJ_VALUE(obj, 1) > 3) || (OBJ_VALUE(obj, 2) > 9))) {
+        /* Mage Weapon Exceptions */
+        if ((V_OBJ(obj) != 129) &&
+            (V_OBJ(obj) != 570) &&
+            (V_OBJ(obj) != 29981)) {
+          printf_to_char(ch, "Your magical training did not include the use of this weapon!\n\r");
+
+          return;
+        }
+      }
+    }
+
+    if (GET_CLASS(ch) == CLASS_NINJA) {
+      if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2HWEAPON)) {
+        printf_to_char(ch, "You are already wielding a two-handed weapon.\n\r");
+
+        return;
+      }
+
+      if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
+        if (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) {
+          printf_to_char(ch, "You are already wielding two weapons.\n\r");
+        }
+        else {
+          printf_to_char(ch, "You are already wielding and holding something.\n\r");
+        }
+
+        return;
+      }
+
+      if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2HWEAPON) && !EQ(ch, HOLD)) {
+        wear_pos = HOLD;
+      }
+    }
+
+    /* Check weapon weight if object is being wielded. */
+    if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2HWEAPON)) &&
+        (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) {
+      printf_to_char(ch, "It's too heavy for you to use.\n\r");
+
+      return;
+    }
   }
+
+  /* Handle HOLD separately, since its more complex. */
+  if (eq_slot == ITEM_HOLD) {
+    if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2HWEAPON)) {
+      printf_to_char(ch, "You're wielding a two-handed weapon, so you can't hold that.\n\r");
+
+      return;
+    }
+  }
+
+  int index = -1;
+
+  for (int i = 0; i < NUMELEMS(wear_info); i++) {
+    if (wear_info[i].eq_slot == eq_slot) {
+      index = i;
+
+      break;
+    }
+  }
+
+  if (index == -1) {
+    log_f("Unknown equipment slot '%d' passed to wear().", eq_slot);
+
+    return;
+  }
+
+  if (!CAN_WEAR(obj, wear_info[index].eq_slot)) {
+    act(wear_info[index].cant_wear, TRUE, ch, obj, 0, TO_CHAR);
+
+    return;
+  }
+
+  if ((wear_pos == -1) && !EQ(ch, wear_info[index].wear_pos)) {
+    wear_pos = wear_info[index].wear_pos;
+  }
+
+  if ((wear_pos == -1) && !wear_info[index].is_two_slot && !EQ(ch, wear_info[index].wear_pos2)) {
+    wear_pos = wear_info[index].wear_pos2;
+  }
+
+  if (wear_pos == -1) {
+    act(wear_info[index].already_worn, TRUE, ch, obj, 0, TO_CHAR);
+
+    return;
+  }
+
+  if (signal_object(obj, ch, MSG_OBJ_WORN, "")) return;
+
+  show_bitvector_wear(ch, obj);
+
+  bool show_to_ch = TRUE, show_to_rm = TRUE;
+
+  if (OBJ_CWEAR_DESC(obj)) {
+    act(OBJ_CWEAR_DESC(obj), FALSE, ch, obj, 0, TO_CHAR);
+    show_to_ch = FALSE;
+  }
+
+  if (OBJ_RWEAR_DESC(obj)) {
+    act(OBJ_RWEAR_DESC(obj), FALSE, ch, obj, 0, TO_ROOM);
+    show_to_rm = FALSE;
+  }
+
+  if (show_to_ch) {
+    char buf[MIL];
+
+    snprintf(buf, sizeof(buf), wear_info[index].ch_wear, ((wear_pos == wear_info[index].wear_pos) ? "right" : "left"));
+
+    act(buf, TRUE, ch, obj, 0, TO_CHAR);
+  }
+
+  if (show_to_rm) {
+    act(wear_info[index].rm_wear, TRUE, ch, obj, 0, TO_ROOM);
+  }
+
+  equip_char(ch, obj_from_char(obj), wear_pos);
+}
+
+
+void do_wear(CHAR *ch, char *arg, int cmd) {
+  typedef struct eq_slot_info_t {
+    char *eq_slot_keyword;
+    int eq_slot_wear_flag;
+  } eq_slot_info_t;
+
+  const eq_slot_info_t eq_slot_info[] = {
+    { "finger", ITEM_WEAR_FINGER },
+    { "neck",   ITEM_WEAR_NECK   },
+    { "body",   ITEM_WEAR_BODY   },
+    { "head",   ITEM_WEAR_HEAD   },
+    { "legs",   ITEM_WEAR_LEGS   },
+    { "feet",   ITEM_WEAR_FEET   },
+    { "hands",  ITEM_WEAR_HANDS  },
+    { "arms",   ITEM_WEAR_ARMS   },
+    { "shield", ITEM_WEAR_SHIELD },
+    { "about",  ITEM_WEAR_ABOUT  },
+    { "waist",  ITEM_WEAR_WAIST  },
+    { "wrist",  ITEM_WEAR_WRIST  },
+  };
+
+  char obj_name[MIL], eq_slot_keyword[MIL];
+
+  argument_interpreter(arg, obj_name, eq_slot_keyword);
+
+  if (!*obj_name) {
+    printf_to_char(ch, "Wear what?\n\r");
+
+    return;
+  }
+
+  if (!strcmp(obj_name, "all")) {
+    for (OBJ *temp_obj = ch->carrying, *next_obj; temp_obj; temp_obj = next_obj) {
+      next_obj = temp_obj->next_content;
+
+      int eq_slot = -1;
+
+      for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
+        if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
+          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+          wear(ch, temp_obj, eq_slot);
+
+          break;
+        }
+      }
+
+      if (eq_slot == -1) {
+        printf_to_char(ch, "You can't wear the %s.\n\r", fname(OBJ_NAME(temp_obj)));
+      }
+    }
+  }
+  else {
+    OBJ *temp_obj = get_obj_in_list_vis(ch, obj_name, ch->carrying);
+
+    if (!temp_obj) {
+      printf_to_char(ch, "You do not seem to have the '%s'.\n\r", obj_name);
+
+      return;
+    }
+
+    if (*eq_slot_keyword) {
+      int eq_slot = -1;
+
+      for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
+        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword))) {
+          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+
+          break;
+        }
+      }
+
+      if (eq_slot == -1) {
+        printf_to_char(ch, "Unknown equipment location '%s'.\n\r", eq_slot_keyword);
+
+        return;
+      }
+
+      wear(ch, temp_obj, eq_slot);
+    }
+    else {
+      int eq_slot = -1;
+
+      for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
+        if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
+          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+          wear(ch, temp_obj, eq_slot);
+
+          break;
+        }
+      }
+
+      if (eq_slot == -1) {
+        printf_to_char(ch, "You can't wear the %s.\n\r", fname(OBJ_NAME(temp_obj)));
+      }
+    }
+  }
+
   check_equipment(ch);
 }
 
 
-void do_wield(struct char_data *ch, char *argument, int cmd) {
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
-  char buffer[MAX_STRING_LENGTH];
-  struct obj_data *obj_object;
+void do_wield(CHAR *ch, char *arg, int cmd) {
+  char obj_name[MIL];
 
-  argument_interpreter(argument, arg1, arg2);
-  if (*arg1) {
-    obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
-    if (obj_object) {
-      wear(ch, obj_object, 12);
-    } else {
-      sprintf(buffer, "You do not seem to have the '%s'.\n\r",arg1);
-      send_to_char(buffer,ch);
-    }
-  } else {
-    send_to_char("Wield what?\n\r", ch);
+  one_argument(arg, obj_name);
+
+  if (!*obj_name) {
+    printf_to_char(ch, "Wield what?\n\r");
+
+    return;
   }
+
+  OBJ *obj = get_obj_in_list_vis(ch, obj_name, ch->carrying);
+
+  if (!obj) {
+    printf_to_char(ch, "You do not seem to have the '%s'.\n\r", obj_name);
+
+    return;
+  }
+
+  wear(ch, obj, ITEM_WIELD);
+
   check_equipment(ch);
 }
 
 
-void do_grab(struct char_data *ch, char *argument, int cmd)
-{
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
-  char buffer[MAX_STRING_LENGTH];
-  struct obj_data *obj_object;
+void do_grab(CHAR *ch, char *arg, int cmd) {
+  char obj_name[MIL];
 
-  argument_interpreter(argument, arg1, arg2);
+  one_argument(arg, obj_name);
 
-  if (*arg1) {
-    obj_object = get_obj_in_list(arg1, ch->carrying);
-    if (obj_object) {
-      if (obj_object->obj_flags.type_flag == ITEM_LIGHT)
-     wear(ch, obj_object, WEAR_LIGHT);
-      else
-     wear(ch, obj_object, 13);
-    } else {
-      sprintf(buffer, "You do not seem to have the '%s'.\n\r",arg1);
-      send_to_char(buffer,ch);
-    }
-  } else {
-    send_to_char("Hold what?\n\r", ch);
+  if (!*obj_name) {
+    printf_to_char(ch, "Hold what?\n\r");
+
+    return;
   }
+
+  OBJ *obj = get_obj_in_list_vis(ch, obj_name, ch->carrying);
+
+  if (!obj) {
+    printf_to_char(ch, "You do not seem to have the '%s'.\n\r", obj_name);
+
+    return;
+  }
+
+  if (OBJ_TYPE(obj) == ITEM_LIGHT) {
+    wear(ch, obj, ITEM_LIGHT_SOURCE);
+  }
+  else {
+    wear(ch, obj, ITEM_HOLD);
+  }
+
   check_equipment(ch);
 }
+
 
 void remove_item(struct char_data *ch, struct obj_data *obj, int pos)
 {
