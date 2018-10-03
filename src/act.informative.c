@@ -1991,6 +1991,7 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
+
 #define AFF_MODE_N 0
 #define AFF_MODE_O 1
 #define AFF_MODE_B 2
@@ -2242,17 +2243,17 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     }
 
     if (IS_SET(OBJ_BITS2(obj), AFF2_FORTIFICATION) &&
-      IS_SET(GET_AFF2(ch), AFF2_FORTIFICATION)) {
+        IS_SET(GET_AFF2(ch), AFF2_FORTIFICATION)) {
       equipment[SPELL_FORTIFICATION] = TRUE;
     }
 
     if (IS_SET(OBJ_BITS2(obj), AFF2_PERCEIVE) &&
-      IS_SET(GET_AFF2(ch), AFF2_PERCEIVE)) {
+        IS_SET(GET_AFF2(ch), AFF2_PERCEIVE)) {
       equipment[SPELL_PERCEIVE] = TRUE;
     }
 
     if (IS_SET(OBJ_BITS2(obj), AFF2_RAGE) &&
-      IS_SET(GET_AFF2(ch), AFF2_RAGE)) {
+        IS_SET(GET_AFF2(ch), AFF2_RAGE)) {
       equipment[SPELL_RAGE] = TRUE;
     }
   }
@@ -2384,11 +2385,11 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
             snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Second%s",
               ((longest_dur < 2) ? longest_dur : (longest_dur - 1)),
               (af_list[i].duration * 10),
-              ((af_list[i].duration > 1) ? "s" : ""));
+              ((af_list[i].duration != 1) ? "s" : ""));
           }
           else {
             snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-              longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : ""));
+              longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : ""));
           }
         }
 
@@ -2414,7 +2415,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         }
         else {
           snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-            longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : " "));
+            longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : " "));
         }
 
         printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
@@ -2438,6 +2439,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     }
   }
 }
+
 
 void do_time(struct char_data *ch, char *argument, int cmd) {
   long ct;
