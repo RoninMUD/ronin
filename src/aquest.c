@@ -1042,6 +1042,7 @@ static bool aq_calc_skip = FALSE;
 int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
   static int skip_aq2 = 0, skip_aq4 = 0;
 
+  /* For "mid", we want a roughly even number of 2, 3 and 4 point mobs, so one time per boot, calculate the percentage of 2 and/or 4 point mobs to skip and store these numbers in some static variables. */
   if (!aq_calc_skip) {
     int aq2 = 0, aq3 = 0, aq4 = 0;
 
@@ -1155,6 +1156,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     }
   }
 
+  /* We found something and we're ready to give the player a quest. */
   if (quest_mob && quest_level >= 0) {
     quest_mob->questowner = ch;
 

@@ -51,8 +51,8 @@ int wot_merchant(CHAR *mob, CHAR *vict, int cmd, char *argument) {
 
   const char const *msg[] = {
     "I wish the Aiel would reopen the traderoutes to the Waste. Grandpa always said that the silk trade was the most profitable.",
-    "Are you also heading to Tarvins Gap? I hear they are gathering an army there.",
-    "I wish I wasn't heading to Tarvins Gap. Thats where the Trollocs will invade first. They better hold off the invasion until I've unloaded my goods.",
+    "Are you also heading to Tarwins Gap? I hear they are gathering an army there.",
+    "I wish I wasn't heading to Tarwins Gap. Thats where the Trollocs will invade first. They better hold off the invasion until I've unloaded my goods.",
     "Trade is hard these days. All major cities are closed, and only a few are allowed to enter.",
     "I have to make due trading in the smaller towns, while Gerarld has gotten his permit. Unfare I tell you!",
     "I heard Tar Valon will be the first city to reopen their gates to normal trafic, but the city was still closed on my last visit."
@@ -98,7 +98,7 @@ int wot_hunter(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   size_t i = 0;
 
   const char const *msg[] = {
-    "To Tarvins Gap!",
+    "To Tarwins Gap!",
     "Stop following me! I will not lead you to the Horn of Valere. It's mine!",
     "Hey! Stop following me!",
     "Did you hear the news? Some army has made landfall in Ebu Dar! I'm heading north, that's for sure!"
