@@ -1873,12 +1873,13 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
     /* Rage */
     if (!IS_AFFECTED(ch, AFF_FURY) &&
-        affected_by_spell(ch, SPELL_RAGE)) {
+        IS_AFFECTED2(ch, AFF2_RAGE)) {
       dmg = lround(dmg * 1.5);
     }
 
     /* Frenzy */
     if (!IS_AFFECTED(ch, AFF_FURY) &&
+        !IS_AFFECTED2(ch, AFF2_RAGE) &&
         affected_by_spell(ch, SKILL_FRENZY) &&
         !shadow_damage) {
       dmg = lround(dmg * 1.5);
@@ -1941,7 +1942,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       if (IS_AFFECTED(victim, AFF_FURY)) {
         max_reflect *= 2;
       }
-      else if (affected_by_spell(victim, SPELL_RAGE)) {
+      else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
         max_reflect = lround(max_reflect * 1.5);
       }
 
@@ -1967,7 +1968,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     if (IS_AFFECTED(victim, AFF_FURY)) {
       max_reflect *= 2;
     }
-    else if (affected_by_spell(victim, SPELL_RAGE)) {
+    else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
       max_reflect = lround(max_reflect * 1.5);
     }
 
@@ -2822,7 +2823,7 @@ bool try_hit(CHAR *ch, CHAR *victim)
   }
 
   /* Rage normally imposes a 50% failure chance. */
-  if (affected_by_spell(victim, SPELL_RAGE)) {
+  if (IS_AFFECTED2(ch, AFF2_RAGE)) {
     int success_chance = 50;
 
     /* Desecrate increases the chance of success to 80%. */
@@ -2919,7 +2920,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     }
 
     /* Rage normally imposes a 50% failure chance. */
-    if (affected_by_spell(defender, SPELL_RAGE)) {
+    if (IS_AFFECTED2(defender, AFF2_RAGE)) {
       int failure_chance = 50;
 
       /* Desecrate reduces the chance of failure to 20%. */
@@ -3038,7 +3039,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
             if (IS_AFFECTED(defender, AFF_FURY)) {
               reflect *= 2;
             }
-            else if (affected_by_spell(defender, SPELL_RAGE)) {
+            else if (IS_AFFECTED2(defender, AFF2_RAGE)) {
               reflect *= 1.5;
             }
 
