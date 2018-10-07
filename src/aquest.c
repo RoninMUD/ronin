@@ -798,7 +798,6 @@ const int aq_mob_master_list[][2] = {
   { 16904, 1 }, /* spectre spirit trembling */
   { 20857, 1 }, /* Supreme Slug */
   { 26475, 1 }, /* protector */
-  { 26476, 1 }, /* adept */
   { 27113, 1 }, /* cannibal warrior */
   { 27651, 1 }, /* king monkey monkeys */
   { 27662, 1 }, /* blood goddess */
@@ -869,6 +868,7 @@ const int aq_mob_master_list[][2] = {
   { 24005, 2 }, /* guardian tomb ancient statue */
   { 24900, 2 }, /* Dark Druid Guardian */
   { 26405, 2 }, /* statue demon */
+  { 26476, 2 }, /* adept */
   { 26479, 2 }, /* devotee */
   { 27100, 2 }, /* Centurion */
   { 27109, 2 }, /* tyrannosaurus rex */
@@ -1050,8 +1050,8 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
       int aq_mob_quest_level = aq_mob_master_list[i][1];
 
       if (aq_mob_quest_level == 2) aq2++;
-      if (aq_mob_quest_level == 3) aq3++;
-      if (aq_mob_quest_level == 4) aq4++;
+      else if (aq_mob_quest_level == 3) aq3++;
+      else if (aq_mob_quest_level == 4) aq4++;
     }
 
     if ((aq2 > 0) && (aq2 > aq3)) skip_aq2 = ((1.0 - ((double)aq3 / (double)aq2)) * 100);
@@ -1068,15 +1068,15 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     int aq_mob_vnum = aq_mob_master_list[i][0];
     int aq_mob_quest_level = aq_mob_master_list[i][1];
 
-    if (lh_opt == 0 && GET_LEVEL(ch) < 25 && aq_mob_quest_level > 0) continue;  // newbie
-    if (lh_opt == 0 && GET_LEVEL(ch) >= 25 && aq_mob_quest_level < 1) continue; // non-newbie
-    if (lh_opt == 1 && aq_mob_quest_level > 1) continue;                        // solo
-    if (lh_opt == 2 && aq_mob_quest_level > 3) continue;                        // low
-    if (lh_opt == 3 && aq_mob_quest_level < 3) continue;                        // high
-    if (lh_opt == 4 && (aq_mob_quest_level < 2 ||                               // mid
-                        aq_mob_quest_level > 4 ||
-                      ((aq_mob_quest_level == 2 && chance(skip_aq2)) ||
-                       (aq_mob_quest_level == 4 && chance(skip_aq4))))) continue;
+    if ((lh_opt == 0) && (GET_LEVEL(ch) < 25) && (aq_mob_quest_level > 0)) continue;  // newbie
+    if ((lh_opt == 0) && (GET_LEVEL(ch) >= 25) && (aq_mob_quest_level < 1)) continue; // non-newbie
+    if ((lh_opt == 1) && (aq_mob_quest_level > 1)) continue;                          // solo
+    if ((lh_opt == 2) && (aq_mob_quest_level > 3)) continue;                          // low
+    if ((lh_opt == 3) && (aq_mob_quest_level < 3)) continue;                          // high
+    if ((lh_opt == 4) && ((aq_mob_quest_level < 2) ||
+                          (aq_mob_quest_level > 4) ||
+                          ((aq_mob_quest_level == 2 && chance(skip_aq2)) ||
+                           (aq_mob_quest_level == 4 && chance(skip_aq4))))) continue; // mid
 
     aq_mob_temp_list[aq_mob_num][0] = aq_mob_vnum;
     aq_mob_temp_list[aq_mob_num][1] = aq_mob_quest_level;
@@ -1163,7 +1163,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     ch->questgiver = mob;
     ch->questobj = 0;
     ch->questmob = quest_mob;
-    ch->quest_level = quest_level == 0 ? 1 : quest_level;
+    ch->quest_level = (quest_level == 0 ? 1 : quest_level);
     ch->quest_status = QUEST_RUNNING;
     ch->quest_room_v = CHAR_VIRTUAL_ROOM(quest_mob);
     ch->ver3.time_to_quest = 60;
@@ -1585,7 +1585,7 @@ const int aq_obj_master_list[][2] = {
   {28720, 20}, // The Staff of Dark Influence 8
   {300, 25}, // The Talon of a Red Dragon 6
   {301, 25}, // a pair of red dragon scale boots 6
-  //{572, 25}, // An oaken root wand 3 // removing anti-rent object from order
+  //{572, 25}, // An oaken root wand 3
   {2716, 25}, // The black sting of the Queen 10
   {6806, 25}, // Erishkigal's lash 9
   {21309, 25}, // A Rotting Otyugh Skin 2
@@ -1640,13 +1640,14 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     int aq_obj_temp_vnum = aq_obj_master_list[i][0];
     int aq_obj_temp_value = aq_obj_master_list[i][1];
 
-    if (lh_opt == 0 && aq_obj_temp_value > 8) continue;
-    if (lh_opt == 1 && aq_obj_temp_value != 1) continue; // newbie
-    if (lh_opt == 2 && aq_obj_temp_value != 2) continue; // low
-    if (lh_opt == 3 && aq_obj_temp_value != 3) continue; // mid
-    if (lh_opt == 4 && aq_obj_temp_value != 4) continue; // high
-    if (lh_opt == 5 && ((aq_obj_temp_value < 4) || (aq_obj_temp_value > 8))) continue; // veteran
-    if (lh_opt == 6 && aq_obj_temp_value < 10) continue; // uber
+    if ((lh_opt == 0) && (aq_obj_temp_value > 8)) continue;   // other (non-uber)
+    if ((lh_opt == 1) && (aq_obj_temp_value != 1)) continue;  // newbie
+    if ((lh_opt == 2) && (aq_obj_temp_value != 2)) continue;  // low
+    if ((lh_opt == 3) && (aq_obj_temp_value != 3)) continue;  // mid
+    if ((lh_opt == 4) && (aq_obj_temp_value != 4)) continue;  // high
+    if ((lh_opt == 5) && ((aq_obj_temp_value < 4) ||
+                          (aq_obj_temp_value > 8))) continue; // veteran
+    if ((lh_opt == 6) && (aq_obj_temp_value < 10)) continue;  // uber
 
     aq_obj_temp_list[aq_obj_num][0] = aq_obj_temp_vnum;
     aq_obj_temp_list[aq_obj_num][1] = aq_obj_temp_value;
@@ -1690,7 +1691,7 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
     tmp_descr = NULL;
 
     sprintf(buf, "Good luck %s, try to do a better job than %s, it'll be worth %d points if you can.",
-      GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1 )], quest_value);
+      GET_NAME(requester), kendernames[number(0, NUMELEMS(kendernames)-1)], quest_value);
     do_say(ordergiver, buf, CMD_SAY);
 
     obj_to_char(aq_order, requester);
