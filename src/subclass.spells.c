@@ -249,7 +249,7 @@ void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
     act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
 
-    affect_apply(ch, SPELL_RAGE, 5, 0, 0, 0, 0);
+    affect_apply(ch, SPELL_RAGE, 5, 0, 0, 0, AFF2_RAGE);
   }
 
   if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN) && !affected_by_spell(ch, SPELL_BLOOD_LUST)) {

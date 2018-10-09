@@ -921,7 +921,7 @@ int Geryon_Horn(OBJ *obj, CHAR *ch, int cmd, char *arg) {
                break;
       case 9:
                for (tar_ch = world[CHAR_REAL_ROOM(holder)].people;tar_ch;tar_ch=tar_ch->next_in_room) {
-                 if (!affected_by_spell(tar_ch, SPELL_RAGE)) {
+                 if (!IS_AFFECTED2(ch, AFF2_RAGE)) {
                    send_to_char("Rage courses through your body!\n\r", tar_ch);
                    act("$n is enraged with the fury of Lord Geryon!",1,tar_ch,0,0,TO_ROOM);
                    af.type      = SPELL_RAGE;
@@ -929,7 +929,7 @@ int Geryon_Horn(OBJ *obj, CHAR *ch, int cmd, char *arg) {
                    af.modifier  = 0;
                    af.location  = 0;
                    af.bitvector = 0;
-                   af.bitvector2 = 0;
+                   af.bitvector2 = AFF2_RAGE;
                    affect_to_char(tar_ch, &af);
                  }
                }
@@ -4570,7 +4570,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
         af.modifier  = 0;
         af.location  = 0;
         af.bitvector = 0;
-        af.bitvector2 = 0;
+        af.bitvector2 = AFF2_RAGE;
         affect_to_char(lucifer, &af);
       }
     }

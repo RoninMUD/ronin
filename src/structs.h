@@ -496,10 +496,10 @@ struct room_data
 #define WEAR_WAIST    13
 #define WEAR_WRIST_R  14
 #define WEAR_WRIST_L  15
-#define WEAR_WIELD    16
-#define WIELD         WEAR_WIELD
-#define WEAR_HOLD     17
-#define HOLD          WEAR_HOLD
+#define WIELD         16
+#define WEAR_WIELD    WIELD
+#define HOLD          17
+#define WEAR_HOLD     HOLD
 
 /* For 'char_payer_data' */
 #define MAX_TONGUE  3   /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */

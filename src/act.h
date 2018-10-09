@@ -477,7 +477,7 @@ bool circle_follow(CHAR *ch, CHAR *victim);
 void stop_follower(CHAR *ch);
 void die_follower(CHAR *ch);
 void add_follower(CHAR *ch, CHAR *leader);
-void wear(CHAR *ch, OBJ *obj_object, int keyword);
+void wear(CHAR *ch, OBJ *obj, int eq_slot);
 void do_cunning(CHAR *ch, char *argument, int cmd);
 void do_coin_toss(CHAR *ch, char *arg, int cmd);
 void do_movestat(CHAR *ch, char *arg, int cmd);

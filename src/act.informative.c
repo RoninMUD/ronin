@@ -1991,6 +1991,7 @@ char *get_club_name(CHAR *ch)
     return "None";
 }
 
+
 #define AFF_MODE_N 0
 #define AFF_MODE_O 1
 #define AFF_MODE_B 2
@@ -2240,6 +2241,21 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         IS_SET(GET_AFF2(ch), AFF2_QUAD)) {
       equipment[SKILL_QUAD] = TRUE;
     }
+
+    if (IS_SET(OBJ_BITS2(obj), AFF2_FORTIFICATION) &&
+        IS_SET(GET_AFF2(ch), AFF2_FORTIFICATION)) {
+      equipment[SPELL_FORTIFICATION] = TRUE;
+    }
+
+    if (IS_SET(OBJ_BITS2(obj), AFF2_PERCEIVE) &&
+        IS_SET(GET_AFF2(ch), AFF2_PERCEIVE)) {
+      equipment[SPELL_PERCEIVE] = TRUE;
+    }
+
+    if (IS_SET(OBJ_BITS2(obj), AFF2_RAGE) &&
+        IS_SET(GET_AFF2(ch), AFF2_RAGE)) {
+      equipment[SPELL_RAGE] = TRUE;
+    }
   }
 
   if (!eq_af &&
@@ -2262,8 +2278,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     /* Process skill/spell affects. */
     if (ch->affected) {
       for (tmp_af = ch->affected; tmp_af && (count < MAX_SPL_LIST); tmp_af = tmp_af->next, count++) {
-        /* Only count the affect once, from either equipment, or
-        applied skill/spell affects. */
+        /* Only count the affect once, from either equipment, or applied skill/spell affects. */
         if (!equipment[tmp_af->type] && !affects[tmp_af->type]) {
           affects[tmp_af->type] = TRUE;
 
@@ -2283,9 +2298,8 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
           /* Record the longest duration for use in printing. */
           if (af_list[count].duration > longest_dur) {
-            /* SKILL_MANTRA length is multiplied by 100 instead of 10
-            to take into accout the ~ character. */
-            longest_dur = (((af_list[count].type == SKILL_MANTRA) || (af_list[count].type == SPELL_WITHER)) ?
+            longest_dur = (((af_list[count].type == SKILL_MANTRA) ||
+                            (af_list[count].type == SPELL_WITHER)) ?
                            (af_list[count].duration * 100) : af_list[count].duration);
           }
         }
@@ -2356,8 +2370,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     /* Print skill/spell affects first. */
     if (ch->affected) {
       for (i = 0; i < MAX_SPL_LIST; i++) {
-        if (af_list[i].source != AFF_SRC_AF ||
-            ((af_list[i].duration == -1) && (mode == AFF_MODE_B))) {
+        if ((af_list[i].source != AFF_SRC_AF) || ((af_list[i].duration == -1) && (mode == AFF_MODE_B))) {
           continue;
         }
 
@@ -2367,13 +2380,16 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
         else {
-          if (af_list[i].type == SKILL_MANTRA || af_list[i].type == SPELL_WITHER) {
-            snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Secs.",
-                     ((longest_dur < 2) ? longest_dur : (longest_dur - 1)), (af_list[i].duration * 10));
+          if ((af_list[i].type == SKILL_MANTRA) ||
+              (af_list[i].type == SPELL_WITHER)) {
+            snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Second%s",
+              ((longest_dur < 2) ? longest_dur : (longest_dur - 1)),
+              (af_list[i].duration * 10),
+              ((af_list[i].duration != 1) ? "s" : ""));
           }
           else {
             snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-                     longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : ""));
+              longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : ""));
           }
         }
 
@@ -2381,16 +2397,14 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       }
     }
 
-    /* Next, print enchantments. They are unique by name, so this is
-    a bit more simple than skill/spell affects. */
+    /* Next, print enchantments. They are unique by name, so this is a bit more simple than skill/spell affects. */
     if (ch->enchantments) {
       if (ch->affected && (mode != AFF_MODE_B)) {
         send_to_char("\n\r", ch);
       }
 
       for (i = 0; i < MAX_SPL_LIST; i++) {
-        if (af_list[i].source != AFF_SRC_EN ||
-            ((af_list[i].duration == -1) && (mode == AFF_MODE_B))) {
+        if ((af_list[i].source != AFF_SRC_EN) || ((af_list[i].duration == -1) && (mode == AFF_MODE_B))) {
           continue;
         }
 
@@ -2401,7 +2415,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         }
         else {
           snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-                   longest_dur, af_list[i].duration, ((af_list[i].duration > 1) ? "s" : " "));
+            longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : " "));
         }
 
         printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
@@ -2420,11 +2434,12 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
 
         printf_to_char(ch, "Equipment%s: %-*s Never Expires\n\r",
-                       (ch->affected || ch->enchantments) ? "  " : "", longest_str + 2, buf);
+          (ch->affected || ch->enchantments) ? "  " : "", longest_str + 2, buf);
       }
     }
   }
 }
+
 
 void do_time(struct char_data *ch, char *argument, int cmd) {
   long ct;
