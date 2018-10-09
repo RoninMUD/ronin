@@ -1202,6 +1202,23 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   if (!ch || !obj) return;
 
+  /* Validate that we're trying to equip an available eq_slot. */
+  int index = -1;
+
+  for (int i = 0; i < NUMELEMS(wear_info); i++) {
+    if (wear_info[i].eq_slot == eq_slot) {
+      index = i;
+
+      break;
+    }
+  }
+
+  if (index == -1) {
+    log_f("Unknown equipment slot '%d' passed to wear().", eq_slot);
+
+    return;
+  }
+
   int wear_pos = -1;
 
   /* Handle WIELD separately, since its more complex. */
@@ -1274,22 +1291,6 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
       return;
     }
-  }
-
-  int index = -1;
-
-  for (int i = 0; i < NUMELEMS(wear_info); i++) {
-    if (wear_info[i].eq_slot == eq_slot) {
-      index = i;
-
-      break;
-    }
-  }
-
-  if (index == -1) {
-    log_f("Unknown equipment slot '%d' passed to wear().", eq_slot);
-
-    return;
   }
 
   if (!CAN_WEAR(obj, wear_info[index].eq_slot)) {

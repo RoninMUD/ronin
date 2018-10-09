@@ -74,19 +74,19 @@ void mobile_activity(CHAR *mob) {
         if (mob_act_test_object(best_obj)) {
           switch (OBJ_TYPE(best_obj)) {
             case ITEM_LIGHT:
-              wear(mob, best_obj, WEAR_LIGHT);
+              wear(mob, best_obj, ITEM_LIGHT_SOURCE);
               break;
             case ITEM_WEAPON:
             case ITEM_2HWEAPON:
-              wear(mob, best_obj, WEAR_WIELD);
+              wear(mob, best_obj, ITEM_WIELD);
               break;
             case ITEM_FIREWEAPON:
             case ITEM_KEY:
             case ITEM_MUSICAL:
-              wear(mob, best_obj, WEAR_HOLD);
+              wear(mob, best_obj, ITEM_HOLD);
               break;
             default:
-              do_wear(mob, "all", 0);
+              do_wear(mob, "all", CMD_WEAR);
               break;
           }
         }
