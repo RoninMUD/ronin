@@ -634,5 +634,42 @@ M
 ~
 ~
 ~
+#30050
+chopsticks chaotic destruction rusty iron antirent~
+Chopsticks of Chaotic Destruction~
+A pair of rusty chopsticks crafted from dark iron are stuck in the ground here.~
+$n raise$z a pair of chopsticks high into the air and plunge$z them deeply into $V!~
+26 134742102 8193
+0 3 9 11
+13 0 0
+0
+E
+chopsticks chaotic destruction rusty iron antirent~
+This deadly-looking pair of rusty iron chopsticks is crafted from cruely-forged
+dark metal.  A jagged tip adorns each chopstick, sharp and barbed; apparently
+by design, use, and perhaps even misuse.  These chopsticks are a hazard to any
+that would dare use them as a tool eating, and equally so to those unfortunate
+enough to be on the bad side of their wielder.
+~
+X
+$n twirl$z a deadly-looking pair of chopsticks in the air with deadly precision!~
+212 0 0
+M
+You brandish a deadly-looking pair of rusted iron chopsticks!~
+$n brandishes a deadly-looking pair of rusted iron chopsticks!~
+You holster your pair of chopsticks in a bloodsoaked silken sleeve!~
+$n holsters $s chopsticks in a bloodsoaked silken sleeve!~
+A
+18 10
+A
+19 20
+A
+52 50
+T
+800
+B
+268468256
+C
+64
 #0
 $~
