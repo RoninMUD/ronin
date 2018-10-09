@@ -1319,13 +1319,15 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   bool show_to_ch = TRUE, show_to_rm = TRUE;
 
-  if (OBJ_CWEAR_DESC(obj)) {
+  if (V_OBJ(obj) && OBJ_CWEAR_DESC(obj)) {
     act(OBJ_CWEAR_DESC(obj), FALSE, ch, obj, 0, TO_CHAR);
+
     show_to_ch = FALSE;
   }
 
-  if (OBJ_RWEAR_DESC(obj)) {
+  if (V_OBJ(obj) && OBJ_RWEAR_DESC(obj)) {
     act(OBJ_RWEAR_DESC(obj), FALSE, ch, obj, 0, TO_ROOM);
+
     show_to_rm = FALSE;
   }
 
