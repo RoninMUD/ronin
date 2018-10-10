@@ -1301,31 +1301,33 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
   }
 
   /* Can we wear the object in the 1st position?*/
-  if ((wear_pos == -1) && !EQ(ch, wear_info[index].wear_pos)) {
+  if ((wear_pos == -1) && !EQ(ch, wear_info[index].wear_pos) && (!wear_info[index].is_two_slot || (wear_info[index].is_two_slot && !EQ(ch, wear_info[index].wear_pos2)))) {
     wear_pos = wear_info[index].wear_pos;
   }
 
-  /* Do some crazy stuff to check if we're already wearing a two-slot item in one of the two possible wear positions. */
+  /* Do some crazy stuff to check if we're already wearing a two-slot item in the first wear position. */
   bool wearing_two_slot = FALSE;
 
-  /* Loop through the wear_info struct array and look for the element defining the "two-slot version" of the specified eq slot. */
-  for (int i = 0; i < NUMELEMS(wear_info); i++) {
-    if (i == index) continue; /* No need to check the same eq slot info; we're looking for the other slot with the similar wear positions. */
+  /* We only need to perform the two-slot logic if slot 1 wasn't eligible. */
+  if (wear_pos == -1) {
+    /* Loop through the wear_info struct array and look for the element defining the two-slot version of the specified eq slot. */
+    for (int i = 0; i < NUMELEMS(wear_info); i++) {
+      if (i == index) continue; // No need to check the same eq slot info; we're looking for the other slot with the similar wear positions.
 
-    /* Is this the two-slot version we're looking for? */
-    if (((wear_info[i].wear_pos == wear_info[index].wear_pos) || (wear_info[i].wear_pos2 == wear_info[index].wear_pos2)) && wear_info[i].is_two_slot) {
-      /* Check the wear positions of the two-slot version and see if we're wearing a two-slot item of that type in either position already. */
-      if ((EQ(ch, wear_info[i].wear_pos) && IS_SET(OBJ_WEAR_FLAGS(EQ(ch, wear_info[i].wear_pos)), wear_info[i].eq_slot)) ||
-          (EQ(ch, wear_info[i].wear_pos2) && IS_SET(OBJ_WEAR_FLAGS(EQ(ch, wear_info[i].wear_pos2)), wear_info[i].eq_slot))) {
-        wearing_two_slot = TRUE; // The object already equippped in wear position 1 or 2 is a two-slot version of the object we're trying to wear.
+      /* Is this the two-slot version we're looking for? */
+      if (wear_info[i].is_two_slot && (wear_info[i].wear_pos == wear_info[index].wear_pos)) {
+        /* Check the wear positions of the two-slot version and see if we're wearing a two-slot item of that type in either position already. */
+        if ((EQ(ch, wear_info[i].wear_pos) && IS_SET(OBJ_WEAR_FLAGS(EQ(ch, wear_info[i].wear_pos)), wear_info[i].eq_slot))) {
+          wearing_two_slot = TRUE; // The object already equipped in wear position 1 or 2 is a two-slot version of the object we're trying to wear.
 
-        break;
+          break;
+        }
       }
     }
   }
 
   /* Can we wear the object in the 2nd position? */
-  if ((wear_pos == -1) && (!wear_info[index].is_two_slot && !wearing_two_slot) && !EQ(ch, wear_info[index].wear_pos2)) {
+  if ((wear_pos == -1) && !wear_info[index].is_two_slot && !wearing_two_slot && !EQ(ch, wear_info[index].wear_pos2)) {
     wear_pos = wear_info[index].wear_pos2;
   }
 
