@@ -1305,11 +1305,11 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     wear_pos = wear_info[index].wear_pos;
   }
 
-  /* Do some crazy stuff to check if we're already wearing a two-slot item in the first wear position. */
+  /* Do some checks to determine if we can use the 2nd wear position, including checking if we're already wearing a two-slot item in the first wear position. */
   bool wearing_two_slot = FALSE;
 
-  /* We only need to perform the two-slot logic if slot 1 wasn't eligible. */
-  if (wear_pos == -1) {
+  /* We only need to check out the 2nd wear position and perform the two-slot logic if slot 1 wasn't eligible and we're not trying to wear a two-slot object. */
+  if (wear_pos == -1 && !wear_info[index].is_two_slot) {
     /* Loop through the wear_info struct array and look for the element defining the two-slot version of the specified eq slot. */
     for (int i = 0; i < NUMELEMS(wear_info); i++) {
       if (i == index) continue; // No need to check the same eq slot info; we're looking for the other slot with the similar wear positions.
@@ -1324,11 +1324,11 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
         }
       }
     }
-  }
 
-  /* Can we wear the object in the 2nd position? */
-  if ((wear_pos == -1) && !wear_info[index].is_two_slot && !wearing_two_slot && !EQ(ch, wear_info[index].wear_pos2)) {
-    wear_pos = wear_info[index].wear_pos2;
+    /* Can we wear the object in the 2nd position? */
+    if ((wear_pos == -1) && !wearing_two_slot && !EQ(ch, wear_info[index].wear_pos2)) {
+      wear_pos = wear_info[index].wear_pos2;
+    }
   }
 
   /* Something is already worn in the eq slot. */
