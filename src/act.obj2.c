@@ -1293,20 +1293,43 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
   }
 
+  /* Can we wear the object in the eq slot we've been told to wear it on? */
   if (!CAN_WEAR(obj, wear_info[index].eq_slot)) {
     act(wear_info[index].cant_wear, TRUE, ch, obj, 0, TO_CHAR);
 
     return;
   }
 
+  /* Can we wear the object in the 1st position?*/
   if ((wear_pos == -1) && !EQ(ch, wear_info[index].wear_pos)) {
     wear_pos = wear_info[index].wear_pos;
   }
 
-  if ((wear_pos == -1) && !wear_info[index].is_two_slot && !EQ(ch, wear_info[index].wear_pos2)) {
+  /* Do some crazy stuff to check if we're already wearing a two-slot item in one of the two possible wear positions. */
+  bool wearing_two_slot = FALSE;
+
+  /* Loop through the wear_info struct array and look for the element defining the "two-slot version" of the specified eq slot. */
+  for (int i = 0; i < NUMELEMS(wear_info); i++) {
+    if (i == index) continue; /* No need to check the same eq slot info; we're looking for the other slot with the similar wear positions. */
+
+    /* Is this the two-slot version we're looking for? */
+    if (((wear_info[i].wear_pos == wear_info[index].wear_pos) || (wear_info[i].wear_pos2 == wear_info[index].wear_pos2)) && wear_info[i].is_two_slot) {
+      /* Check the wear positions of the two-slot version and see if we're wearing a two-slot item of that type in either position already. */
+      if ((EQ(ch, wear_info[i].wear_pos) && IS_SET(OBJ_WEAR_FLAGS(EQ(ch, wear_info[i].wear_pos)), wear_info[i].eq_slot)) ||
+          (EQ(ch, wear_info[i].wear_pos2) && IS_SET(OBJ_WEAR_FLAGS(EQ(ch, wear_info[i].wear_pos2)), wear_info[i].eq_slot))) {
+        wearing_two_slot = TRUE; // The object already equippped in wear position 1 or 2 is a two-slot version of the object we're trying to wear.
+
+        break;
+      }
+    }
+  }
+
+  /* Can we wear the object in the 2nd position? */
+  if ((wear_pos == -1) && (!wear_info[index].is_two_slot && !wearing_two_slot) && !EQ(ch, wear_info[index].wear_pos2)) {
     wear_pos = wear_info[index].wear_pos2;
   }
 
+  /* Something is already worn in the eq slot. */
   if (wear_pos == -1) {
     act(wear_info[index].already_worn, TRUE, ch, obj, 0, TO_CHAR);
 
@@ -1356,6 +1379,7 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
   const eq_slot_info_t eq_slot_info[] = {
     { "finger", ITEM_WEAR_FINGER },
     { "neck",   ITEM_WEAR_NECK   },
+    { "neck",   ITEM_WEAR_2NECK  },
     { "body",   ITEM_WEAR_BODY   },
     { "head",   ITEM_WEAR_HEAD   },
     { "legs",   ITEM_WEAR_LEGS   },
@@ -1387,6 +1411,7 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
       for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
         if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
           eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+
           wear(ch, temp_obj, eq_slot);
 
           break;
@@ -1411,7 +1436,8 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
       int eq_slot = -1;
 
       for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
-        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword))) {
+        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword)) &&
+            CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
           eq_slot = eq_slot_info[i].eq_slot_wear_flag;
 
           break;
@@ -1432,6 +1458,7 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
       for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
         if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
           eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+
           wear(ch, temp_obj, eq_slot);
 
           break;
