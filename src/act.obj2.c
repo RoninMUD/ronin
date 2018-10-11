@@ -1438,16 +1438,22 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
       int eq_slot = -1;
 
       for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
-        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword)) &&
-            CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
-          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword))) {
+          if (CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
+            eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+          }
+          else {
+            printf_to_char(ch, "You can't wear the %s there.\n\r", fname(OBJ_NAME(temp_obj)));
+
+            return;
+          }
 
           break;
         }
       }
 
       if (eq_slot == -1) {
-        printf_to_char(ch, "Unknown equipment location '%s'.\n\r", eq_slot_keyword);
+        printf_to_char(ch, "Equip the %s where, exactly?\n\r", fname(OBJ_NAME(temp_obj)));
 
         return;
       }
