@@ -863,6 +863,7 @@ void assign_command_pointers ( void )
   /* COMMANDO("playeravg",CMD_PLRAVG     ,POSITION_RESTING  ,do_playeravg, LEVEL_IMP);*/
   COMMANDO("idname"   ,CMD_IDNAME     ,POSITION_DEAD     ,do_idname, LEVEL_SUP); /* Ranger 05-Feb-04 */
   COMMANDO("gf"       ,CMD_GF         ,POSITION_DEAD     ,do_gf, 0);
+  COMMANDO("locate", CMD_LOCATE, POSITION_STANDING, do_locate, 1);
   
   /* These next few are for the new exit types - Ranger Oct 96 */
   COMMANDO("move"     ,CMD_MOVE      ,POSITION_STANDING  ,do_move_keyword,1);
