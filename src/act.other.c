@@ -2386,3 +2386,72 @@ copying to that address.\n\r\n\r\
   }
 }
 
+
+void do_locate(CHAR *ch, char *arg, int cmd) {
+  char buf[MSL], name[MIL];
+
+  if (!ch) return;
+
+  one_argument(arg, name);
+
+  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(ch), PLR_QUEST)) {
+    snprintf(buf, sizeof(buf), "QSTINFO: %s uses 'locate' %s", GET_NAME(ch), name);
+
+    wizlog(buf, LEVEL_IMM, 7);
+  }
+
+  if (!*name) {
+    send_to_char("Locate what?\n\r", ch);
+
+    return;
+  }
+  else if (!isname(name, "questcard corpse pcorpse")) {
+    send_to_char("You may only use locate to find questcards and player corpses.\n\rValid keywords for locate are: questcard corpse pcorpse\n\r", ch);
+
+    return;
+  }
+
+  int count = 0;
+
+  for (OBJ *temp_obj = object_list, *next_obj; temp_obj; temp_obj = next_obj) {
+    next_obj = temp_obj->next;
+
+    if (!IS_IMMORTAL(ch) && temp_obj->in_room && (world[temp_obj->in_room].zone == 12)) continue; // Immortal zone
+
+    bool locate_ok = FALSE;
+
+    if (!locate_ok && (V_OBJ(temp_obj) == 35)) locate_ok = TRUE; // Questcard
+    if (!locate_ok && ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (OBJ_VALUE3(temp_obj) == 1) && isname("pcorpse", OBJ_NAME(temp_obj)))) locate_ok = TRUE; // Player corpse
+
+    if (!locate_ok) continue;
+
+    if (temp_obj->carried_by) {
+      snprintf(buf, sizeof(buf), "%s", PERS(temp_obj->carried_by, ch));
+
+      if (strlen(buf)) {
+        printf_to_char(ch, "%s carried by %s.\n\r", OBJ_SHORT(temp_obj), buf);
+      }
+    }
+    else if (temp_obj->in_obj) {
+      printf_to_char(ch, "%s in %s.\n\r", OBJ_SHORT(temp_obj), OBJ_SHORT(temp_obj->in_obj));
+    }
+    else if (temp_obj->equipped_by) {
+      snprintf(buf, sizeof(buf), "%s", PERS(temp_obj->equipped_by, ch));
+
+      if (strlen(buf)) {
+        printf_to_char(ch, "%s equipped by %s.\n\r", OBJ_SHORT(temp_obj), buf);
+      }
+    }
+    else {
+      printf_to_char(ch, "%s in %s.\n\r", OBJ_SHORT(temp_obj), ((temp_obj->in_room == NOWHERE) ? "Used but uncertain." : world[temp_obj->in_room].name));
+    }
+
+    count++;
+  }
+
+  if (!count) {
+    send_to_char("No such object.\n\r", ch);
+  }
+
+  WAIT_STATE(ch, PULSE_VIOLENCE);
+}
