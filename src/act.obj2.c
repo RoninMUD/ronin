@@ -896,19 +896,19 @@ void show_bitvector_wear(struct char_data *ch, struct obj_data *obj_object) {
     act("$n's starts moving quietly.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_FORTIFICATION) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_FORTIFICATION)) {
+  if (!IS_AFFECTED2(ch, AFF2_FORTIFICATION) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_FORTIFICATION)) {
     send_to_char("You feel able to withstand any attack.\n\r", ch);
     act("$n seems able to withstand any attack.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_PERCEIVE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_PERCEIVE)) {
+  if (!IS_AFFECTED2(ch, AFF2_PERCEIVE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_PERCEIVE)) {
     send_to_char("Your eyes glow with unearthly light.\n\r", ch);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_RAGE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_RAGE)) {
+  if (!IS_AFFECTED2(ch, AFF2_RAGE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_RAGE)) {
     send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
     act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
   }
