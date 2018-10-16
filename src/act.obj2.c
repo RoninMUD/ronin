@@ -1024,16 +1024,8 @@ void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object) {
   }
 }
 
-typedef struct wear_options_t {
-  bool silent
-} wear_options_t;
 
-void perform_wear(CHAR *ch, OBJ *obj, int eq_slot);
 void wear(CHAR *ch, OBJ *obj, int eq_slot) {
-}
-
-
-void perform_wear(CHAR *ch, OBJ *obj, int eq_slot) {
   typedef struct wear_info_t {
     int eq_slot;
     int wear_pos;
