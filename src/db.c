@@ -122,7 +122,7 @@ void boot_the_shops();
 
 void boot_db(void)
 {
-     int i,token_number,loop=0,n_mid=0,s_mid=0;
+     int i,n_mid=0,s_mid=0;
      FILE *wiz_fl,*wiz_in_fl;
 
      log_f("Boot db -- BEGIN.");
@@ -278,96 +278,72 @@ void boot_db(void)
      read_zone_rating();
      log_f("Reading player ids");
      read_idname();
+
      log_f("Distributing Subclass Tokens");
-     token_number=TOKENCOUNT;
+     distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT);
 
-  if(CHAOSMODE)
-    token_number=0;
+     log_f("Initializing token mob");
+     initialize_token_mob();
 
-  while(token_number>0) {
-    if(distribute_token()) token_number--;
-    loop++;
-    if(loop>1000) {
-      log_f("Breaking loop distribute tokens");
-      break;
-    }
-  }
-  log_f("Initializing token mob");
-  initialize_token_mob();
-  log_f("Checking for last_command file");
-  examine_last_command();
-  log_f("Boot db -- DONE.");
+     log_f("Checking for last_command file");
+     examine_last_command();
+     log_f("Boot db -- DONE.");
 }
 
-int is_shop(CHAR *mob);
 
-int distribute_token(void)
-{
-    int i = 0, zone = 0, rzone = 0;
-    int bReturn = FALSE;
-    CHAR *mob = NULL;
-    OBJ *token = NULL;
+void distribute_tokens(int num_tokens) {
+  /* Distribute new tokens */
+  for (int i = 0; (num_tokens > 0) && (i < 1001); i++) {
+    if (i > 1000) {
+      log_s("Breaking distribute_token() loop");
 
-    i = number(1,top_of_mobt);
-
-    zone = inzone(mob_proto_table[i].virtual);
-    rzone = real_zone(zone);
-
-    if(rzone != -1 &&
-        zone != 0 && /*LIMBO*/
-        zone != 10 && /*Quest Gear II*/
-        zone != 12 && /*Immortal Rooms*/
-        zone != 30 && /*Northern Midgaard Update*/
-        zone != 31 && /*Southern Midgaard Update*/
-        zone != 35 && /*Training, by Nosferatu*/
-        zone != 36 && /*Cafe, by Jarldian*/
-        zone != 39 && /*Stables, by Ranger and Quack*/
-        zone != 58 && /*HMS Topknot*/
-        zone != 66 && /*NewbieMist*/
-        zone != 69 && /*Quest Gear*/
-        zone != 123 && /*Boards*/
-        zone != 253 && /*Hell1*/
-        zone != 254 && /*Hell2*/
-        zone != 255 && /*Hell3*/
-        zone != 260 && /*Questy Vader III*/
-        zone != 261 && /*Questy Nosferatu*/
-        zone != 262 && /*Questy by Feroz*/
-        zone != 275 && /*Clan Halls*/
-        zone != 278 && /*ISA Hall*/
-        zone != 294 && /*Custom Gear III*/
-        zone != 295 && /*Lottery Items*/
-        zone != 298 && /*Custom Gear II*/
-        zone != 299 && /*Custom Gear*/
-        zone != 300)   /*Labyrinth of Skelos by Quack*/
-    {
-  if(mob_proto_table[i].number > 0 && /*Mob exists in game*/
-   mob_proto_table[i].level >= 15 && /*Mob is at least level 15*/
-   !IS_SET(mob_proto_table[i].act2, ACT_NO_TOKEN)) /*Mob does not have NO_TOKEN flag*/
-  {
-   for(mob = character_list; mob; mob = mob->next) /*Iterate through all mobs/chars in game until we find the right one*/
-   {
-    if(mob->nr != i) /*Mob isn't the one we're after*/
-     continue;
-    if(GET_MAX_HIT(mob) >= 15000) /*Mob is too big*/
-     continue;
-    if(GET_MAX_HIT(mob) < 500 && GET_LEVEL(mob) < 42) /*Mob is too small*/
-     continue;
-    if(is_shop(mob)) /*Mob is a shopkeeper*/
-     break;
-    token = read_object(5,VIRTUAL);
-    if (token)
-    {
-     token->obj_flags.value[0] = number(1,2);
-     log_f("SUBLOG: Tokened %s v(%d) r(%d)",GET_SHORT(mob),V_MOB(mob),mob->nr);
-     obj_to_char(token, mob);
-     bReturn = TRUE;
-     break;
+      return;
     }
-   }
+
+    if (distribute_token()) num_tokens--;
   }
-    }
-    return bReturn;
 }
+
+
+bool is_shop_v(int vnum);
+bool distribute_token(void) {
+  const int no_token_zones[] = {
+    -1, 0, 10, 12, 30, 31, 35, 36, 39, 58, 66, 69, 123, 253, 254, 255, 260, 261, 262, 275, 278, 294, 295, 298, 299, 300
+  };
+
+  int mob_nr = number(1, top_of_mobt);
+  int zone_nr = real_zone(inzone(mob_proto_table[mob_nr].virtual));
+
+  for (int i = 0; i < NUMELEMS(no_token_zones); i++) {
+    if (zone_nr == no_token_zones[i]) return FALSE;
+  }
+
+  if ((mob_proto_table[mob_nr].number < 1) ||
+      (mob_proto_table[mob_nr].level < 15) ||
+      IS_SET(mob_proto_table[mob_nr].act2, ACT_NO_TOKEN) ||
+      is_shop_v(mob_proto_table[mob_nr].virtual)) return FALSE;
+
+  for (CHAR *mob = character_list; mob; mob = mob->next) {
+    if ((mob->nr != mob_nr) ||
+        (GET_MAX_HIT(mob) >= 15000) ||
+        ((GET_MAX_HIT(mob) < 500) && GET_LEVEL(mob) < 42)) continue;
+
+    OBJ *token = read_object(TOKEN_OBJ_VNUM, VIRTUAL);
+
+    if (token) {
+      OBJ_VALUE0(token) = number(1, 2);
+
+      obj_to_char(token, mob);
+
+      log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), mob->nr);
+
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+
 
 int adjust_ticket_strings(OBJ *obj); /*Added Oct 98 Ranger */
 struct obj_data *corpsefile_to_obj(FILE *fl) {

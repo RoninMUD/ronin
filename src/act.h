@@ -482,6 +482,7 @@ void do_cunning(CHAR *ch, char *argument, int cmd);
 void do_coin_toss(CHAR *ch, char *arg, int cmd);
 void do_movestat(CHAR *ch, char *arg, int cmd);
 void do_locate(CHAR *ch, char *arg, int cmd);
+void do_nop(CHAR *ch, char *arg, int cmd);
 
 void channel_comm(struct char_data *ch, char *arg, int comm);
 

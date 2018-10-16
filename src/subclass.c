@@ -32,7 +32,7 @@
 
 int check_subclass(CHAR *ch,int sub,int lvl);
 int check_god_access(CHAR *ch, int active);
-int distribute_token(void);
+bool distribute_token(void);
 
 int check_sc_song_access(CHAR *ch, int s) {
   if(s<=17) return TRUE;
@@ -786,7 +786,7 @@ int zone_rating(int zone) {
 void initialize_token_mob() {
 #ifndef TEST_SITE
   if(CHAOSMODE) return;
-  token_mob_time=number(40,80);
+  token_mob_time = number(40,80);
 #endif
   return;
 }

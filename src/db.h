@@ -36,7 +36,8 @@
 #define MAX_ID            15000 /* Maximum number of id's stored in name/id list */
 
 /* public procedures in db.c */
-int distribute_token(void);
+void distribute_tokens(int num_tokens);
+bool distribute_token(void);
 int inzone(int);
 void boot_db(void);
 void save_char(struct char_data *ch, sh_int load_room);

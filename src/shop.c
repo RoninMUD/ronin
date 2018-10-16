@@ -599,9 +599,18 @@ void boot_the_shops() { /* loaded in spec_assign.c (assign_mobiles) */
 }
 
 int is_shop(CHAR *mob) {
-  int temp1;
-  for(temp1=0 ; temp1<number_of_shops ; temp1++)
-    if(shop_index[temp1].keeper==V_MOB(mob)) return TRUE;
+  for (int i = 0; i < number_of_shops; i++) {
+    if (shop_index[i].keeper == V_MOB(mob)) return TRUE;
+  }
+
+  return FALSE;
+}
+
+bool is_shop_v(int vnum) {
+  for (int i = 0; i < number_of_shops; i++) {
+    if (shop_index[i].keeper == vnum) return TRUE;
+  }
+
   return FALSE;
 }
 

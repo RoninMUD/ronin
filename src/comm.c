@@ -931,51 +931,50 @@ jump into command
 
 void check_token_mob(void);
 void heartbeat(int pulse) {
-  OBJ *obj,*next_obj;
-  int token_number=0,loop,i;
-  struct descriptor_data *point;
   char buf[MSL];
 
+  /* ~ 3.33 seconds */
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
     perform_mob_attack();
   }
 
-  /* give the people some prompts */
-  for (point = descriptor_list; point; point = point->next) {
-    if (point->prompt_mode) {
-      give_prompt(point);
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (desc->prompt_mode) {
+      give_prompt(desc);
     }
 
-    /* Addition of descriptor timer and disconnect - Ranger Dec 2000 */
-    if (!(pulse % PULSE_TICK) && !GAMEHALT && STATE(point) != CON_PLYNG) {
-      point->timer++;
+    /* 1 minute */
+    if (!(pulse % PULSE_TICK) && !GAMEHALT && (STATE(desc) != CON_PLYNG)) {
+      desc->timer++;
 
-      if (point->timer > 30) {
-        sprintf(buf, "WIZINFO: Closing socket %d - idle at menu.", point->descriptor);
+      if (desc->timer > 30) {
+        snprintf(buf, sizeof(buf), "WIZINFO: Closing socket %d - idle at menu.", desc->descriptor);
         wizlog(buf, LEVEL_IMM, 5);
         log_s(buf);
 
-        close_socket(point);
+        close_socket(desc);
       }
     }
   }
 
-  if (!(pulse % PULSE_ZONE) && !GAMEHALT)
+  if (!(pulse % PULSE_ZONE) && !GAMEHALT) {
     zone_update();
+  }
 
-  if (!(pulse % PULSE_MOBILE) && !GAMEHALT)
+  if (!(pulse % PULSE_MOBILE) && !GAMEHALT) {
     signal_world(NULL, MSG_MOBACT, "");
+  }
 
+  /* ~ 3.33 seconds */
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
-    /* Moved flying part down - Ranger March 98 */
-    /* Changed loop to top_of_fly - made it a pointer - Ranger Nov 98 */
-    for (i = 0; i < top_of_flying; i++)
+    for (int i = 0; i < top_of_flying; i++) {
       flying_room(*(flying_rooms + i));
+    }
 
-    /* array of objects to signal */
-    for (i = 0; i < NUMELEMS(msg_violence_objects); i++) {
+    /* Signal objects */
+    for (int i = 0; i < NUMELEMS(msg_violence_objects); i++) {
       if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
-        for (obj = object_list; obj; obj = obj->next) {
+        for (OBJ *obj = object_list; obj; obj = obj->next) {
           if (msg_violence_objects[i] == obj->item_number_v) {
             signal_object(obj, 0, MSG_VIOLENCE, "");
           }
@@ -986,53 +985,53 @@ void heartbeat(int pulse) {
     perform_violence();
   }
 
-  if (!(pulse % PULSE_TICK) && !GAMEHALT) { /* 1 minute */
+  /* 1 minute */
+  if (!(pulse % PULSE_TICK) && !GAMEHALT) {
     if (32 != RAND_load_file("/dev/urandom", 32)) {
       log_s("Failed to read /dev/urandom for entropy (heartbeat).");
     }
 
     signal_world(NULL, MSG_TICK, "");
 
-    if (!CHAOSMODE)
+    if (!CHAOSMODE) {
       check_token_mob();
+    }
   }
 
-  if (!(pulse %(10* PULSE_TICK))) { /* 10 minutes */
+  /* 10 minutes */
+  if (!(pulse % (10* PULSE_TICK))) {
     plrlog();
+
     check_reboot();
   }
 
-  if(!(pulse%(120*PULSE_TICK))) { /* 10x ever 22 hrs */
-    log_s("Re-distributing Subclass Tokens");
-    /* First extract them all */
-    token_number=0;
-    for(obj=object_list;obj;obj= next_obj) {
+  /* 10 times every 22 hours */
+  if (!(pulse % (120 * PULSE_TICK))) {
+    log_s("Re-distributing subclass tokens");
+
+    int token_number = 0;
+
+    for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
       next_obj = obj->next;
-      if(V_OBJ(obj)==5) {
-        if(!obj->carried_by) continue;
-        else if(!IS_NPC(obj->carried_by)) continue;
-        else if(V_MOB(obj->carried_by)==11) continue;
-        else {
-          extract_obj(obj);
-          token_number++;
-        }
-      }
+
+      /* Extract existing tokens */
+      if ((V_OBJ(obj) != TOKEN_OBJ_VNUM) ||
+          (!obj->carried_by) ||
+          (!IS_NPC(obj->carried_by)) ||
+          (V_MOB(obj->carried_by) == TOKEN_MOB_VNUM)) continue;
+
+      extract_obj(obj);
+
+      token_number++;
     }
+
 #ifdef TEST_SITE
-    token_number=0;
+    token_number = 0;
 #endif
 
-    if(CHAOSMODE)
-      token_number=0;
-    loop = 0;
-    while(token_number>0) {
-      if(distribute_token()) token_number--;
-      loop++;
-      if(loop>1000) {
-        log_s("Breaking loop re-distribute tokens");
-        break;
-      }
-    }
+    if (CHAOSMODE) token_number = 0;
+
+    distribute_tokens(token_number);
   }
 }
 
@@ -3067,14 +3066,7 @@ void pulse_incendiary_cloud_new(CHAR *ch) {
   }
 }
 
-int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
-{
-  /*
-  char buf[512];
-  sprintf(buf, "  signalling char %d, %d (%s) with cmd=%d arg=%s", ch->nr, ch->nr_v, ch->nr ? mob_proto_table[ch->nr].name : ch->player.name, cmd, arg);
-  log_f("%s", buf);
-  */
-
+int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   bool stop = FALSE;
   int i = 0;
   int tmp_mana = 0;
@@ -3083,24 +3075,24 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
   ENCH *tmp_ench = NULL;
   ENCH *next_ench = NULL;
 
+  //assert(ch);
+
   /* Sanity check, to make sure ch is OK. */
   if ((ch->nr >= 0) &&
-      (ch->nr <= top_of_mobt))
-  {
-    if ((ch->nr_v != mob_proto_table[ch->nr].virtual) &&
-        (ch->nr_v != 0) &&
-        (ch->nr != 0))
-    {
-      return FALSE;
-    }
+      (ch->nr <= top_of_mobt) &&
+      (ch->nr_v != mob_proto_table[ch->nr].virtual) &&
+      (ch->nr_v != 0) &&
+      (ch->nr != 0)) {
+    return FALSE;
   }
-  else
-  {
+  else  {
     /* Possibly a free'd CHAR. */
     return FALSE;
   }
 
-  if (CHAR_REAL_ROOM(ch) == -1) return FALSE;
+  if (CHAR_REAL_ROOM(ch) == NOWHERE) {
+    return FALSE;
+  }
 
   if (cmd == MSG_TICK) {
     if (!IS_NPC(ch)) {
@@ -3125,64 +3117,53 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
     pulse_incendiary_cloud_new(ch);
   }
 
-  if (IS_MORTAL(ch))
-  {
+  if (IS_MORTAL(ch)) {
     tmp_mana = GET_MANA(ch);
   }
 
   /* Reset the stop variable. Important. */
   stop = FALSE;
 
-  if (!stop)
-  {
-    for (i = 0; !stop && (i <= (MAX_WEAR - 1)); i++)
-    {
-      if (ch->equipment[i])
-      {
+  if (!stop) {
+    for (i = 0; !stop && (i <= (MAX_WEAR - 1)); i++) {
+      if (ch->equipment[i]) {
         stop = signal_object(ch->equipment[i], signaler, cmd, arg);
       }
     }
   }
 
-  if (!stop)
-  {
-    for (tmp_obj = ch->carrying; !stop && tmp_obj; tmp_obj = next_obj)
-    {
+  if (!stop) {
+    for (tmp_obj = ch->carrying; !stop && tmp_obj; tmp_obj = next_obj) {
       next_obj = tmp_obj->next_content;
+
       stop = signal_object(tmp_obj, signaler, cmd, arg);
     }
   }
 
-  if (!stop)
-  {
-    for (tmp_ench = ch->enchantments; !stop && tmp_ench; tmp_ench = next_ench)
-    {
+  if (!stop) {
+    for (tmp_ench = ch->enchantments; !stop && tmp_ench; tmp_ench = next_ench) {
       next_ench = tmp_ench->next;
+
       stop = enchantment_special(tmp_ench, ch, signaler, cmd, arg);
     }
   }
 
-  if (IS_MORTAL(ch))
-  {
-    if (GET_MANA(ch) > tmp_mana)
-    {
+  if (IS_MORTAL(ch)) {
+    if (GET_MANA(ch) > tmp_mana) {
       ch->points.mana_regen_tmp = (GET_MANA(ch) - tmp_mana);
     }
-    else ch->points.mana_regen_tmp = 0;
+    else {
+      ch->points.mana_regen_tmp = 0;
+    }
   }
 
-  if (!stop)
-  {
-    if (IS_NPC(ch) &&
-      CHAR_REAL_ROOM(ch) != NOWHERE)
-    {
-      if (cmd == MSG_MOBACT)
-      {
+  if (!stop) {
+    if (IS_NPC(ch) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+      if (cmd == MSG_MOBACT) {
         mobile_activity(ch);
       }
 
-      if (mob_proto_table[ch->nr].func)
-      {
+      if (mob_proto_table[ch->nr].func) {
         stop = mob_special(ch, signaler, cmd, arg);
       }
     }
@@ -3191,48 +3172,45 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg)
   return stop;
 }
 
-int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-//  if( obj->item_number_v == 3095) return FALSE;
-//  char buf[512];
-//  sprintf(buf, "   signalling obj %d with cmd=%d and arg=%s", obj->item_number_v, cmd, arg);
-//  log_s( buf );
-  OBJ *tmp,*tmp_n;
-  if (obj->item_number>=0)
-      if (obj_proto_table[obj->item_number].func || obj->func)
-      if (obj_special(obj, ch, cmd, arg))
-        return(TRUE);
-      if(obj->obj_flags.type_flag==ITEM_BOARD)
-        if(board(obj, ch, cmd, arg))
-          return(TRUE);
-  if(cmd==MSG_TICK && COUNT_CONTENTS(obj)) {
-    for (tmp = obj->contains;tmp;tmp = tmp_n) {
-      tmp_n=tmp->next_content;
-      if(signal_object(tmp,ch,cmd,arg)) return TRUE;
+
+int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  //assert(obj);
+
+  if ((OBJ_RNUM(obj) >= 0) && (obj_proto_table[obj->item_number].func || obj->func) && obj_special(obj, ch, cmd, arg)) {
+    return TRUE;
+  }
+
+  if ((OBJ_TYPE(obj) == ITEM_BOARD) && board(obj, ch, cmd, arg)) {
+    return TRUE;
+  }
+
+  if ((cmd == MSG_TICK) && COUNT_CONTENTS(obj)) {
+    for (OBJ *tmp = obj->contains, *tmp_n; tmp; tmp = tmp_n) {
+      tmp_n = tmp->next_content;
+
+      if (signal_object(tmp, ch, cmd, arg)) {
+        return TRUE;
+      }
     }
   }
+
   return FALSE;
 }
 
-void send_to_world(char *arg)
-{
-  int i = 0;
 
-  for (i = 0; i < top_of_world; i++)
-  {
+void send_to_world(char *arg) {
+  for (int i = 0; i < top_of_world; i++) {
     send_to_room(arg, i);
   }
 }
 
-void send_to_world_except(char *arg, CHAR *ch)
-{
-  int i = 0;
 
-  for (i = 0; i < top_of_world; i++)
-  {
+void send_to_world_except(char *arg, CHAR *ch) {
+  for (int i = 0; i < top_of_world; i++) {
     send_to_room_except(arg, i, ch);
   }
 }
+
 
 void flying_room(int room) {
   CHAR *vict,*next_vict;
