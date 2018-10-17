@@ -27,6 +27,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <openssl/rand.h>
+#include <assert.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -975,7 +976,7 @@ void heartbeat(int pulse) {
     for (int i = 0; i < NUMELEMS(msg_violence_objects); i++) {
       if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
         for (OBJ *obj = object_list; obj; obj = obj->next) {
-          if (V_OBJ(obj) == msg_violence_objects[i]) {
+          if (obj->item_number_v == msg_violence_objects[i]) {
             signal_object(obj, 0, MSG_VIOLENCE, "");
           }
         }
@@ -3073,18 +3074,19 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   ENCH *tmp_ench = NULL;
   ENCH *next_ench = NULL;
 
-  //assert(ch);
+  assert(ch);
 
   /* Sanity check, to make sure ch is OK. */
   if ((ch->nr >= 0) &&
-      (ch->nr <= top_of_mobt) &&
-      (ch->nr_v != mob_proto_table[ch->nr].virtual) &&
-      (ch->nr_v != 0) &&
-      (ch->nr != 0)) {
-    return FALSE;
+      (ch->nr <= top_of_mobt)) {
+    if ((ch->nr_v != mob_proto_table[ch->nr].virtual) &&
+        (ch->nr_v != 0) &&
+        (ch->nr != 0)) {
+      return FALSE;
+    }
   }
-  else  {
-    /* Possibly a free'd CHAR. */
+  /* Possibly a free'd CHAR */
+  else {
     return FALSE;
   }
 
@@ -3172,7 +3174,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
 
 
 int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg) {
-  //assert(obj);
+  assert(obj);
 
   if ((OBJ_RNUM(obj) >= 0) && (obj_proto_table[obj->item_number].func || obj->func) && obj_special(obj, ch, cmd, arg)) {
     return TRUE;
