@@ -135,11 +135,6 @@ void open_logfile(void);
 void close_logfile(void);
 void backup_logfile(void);
 
-/* VNUM of items that are sent MSG_VIOLENCE */
-static int msg_violence_objects[1] = {
-  18,     /* Lottery Machine */
-};
-
 char *Color[]=
       {
 
@@ -967,15 +962,20 @@ void heartbeat(int pulse) {
 
   /* ~ 3.33 seconds */
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
+    /* Process flying rooms */
     for (int i = 0; i < top_of_flying; i++) {
       flying_room(*(flying_rooms + i));
     }
 
     /* Signal objects */
+    const int msg_violence_objects[] = {
+      18, // Lottery Machine
+    };
+
     for (int i = 0; i < NUMELEMS(msg_violence_objects); i++) {
       if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
         for (OBJ *obj = object_list; obj; obj = obj->next) {
-          if (msg_violence_objects[i] == obj->item_number_v) {
+          if (V_OBJ(obj) == msg_violence_objects[i]) {
             signal_object(obj, 0, MSG_VIOLENCE, "");
           }
         }
@@ -1009,7 +1009,7 @@ void heartbeat(int pulse) {
   if (!(pulse % (120 * PULSE_TICK))) {
     log_s("Re-distributing subclass tokens");
 
-    int token_number = 0;
+    int num_tokens = 0;
 
     for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
       next_obj = obj->next;
@@ -1022,16 +1022,14 @@ void heartbeat(int pulse) {
 
       extract_obj(obj);
 
-      token_number++;
+      num_tokens++;
     }
 
 #ifdef TEST_SITE
-    token_number = 0;
+    num_tokens = 0;
 #endif
 
-    if (CHAOSMODE) token_number = 0;
-
-    distribute_tokens(token_number);
+    distribute_tokens(CHAOSMODE ? 0 : num_tokens);
   }
 }
 

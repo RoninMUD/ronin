@@ -279,7 +279,7 @@ void boot_db(void)
      log_f("Reading player ids");
      read_idname();
 
-     log_f("Distributing Subclass Tokens");
+     log_f("Distributing subclass tokens");
      distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT);
 
      log_f("Initializing token mob");
@@ -308,7 +308,38 @@ void distribute_tokens(int num_tokens) {
 bool is_shop_v(int vnum);
 bool distribute_token(void) {
   const int no_token_zones[] = {
-    -1, 0, 10, 12, 30, 31, 35, 36, 39, 58, 66, 69, 123, 253, 254, 255, 260, 261, 262, 275, 278, 294, 295, 298, 299, 300
+    -1,  // NOWHERE
+    0,   // Limbo
+    10,  // Quest Gear III
+    12,  // Immortal Rooms
+    30,  // Northern Midgaard
+    31,  // Southern Midgaard
+    35,  // Training
+    36,  // Cafe
+    39,  // Stables
+    58,  // HMS Topknot
+    66,  // Newbie
+    69,  // Quest Gear
+    123, // Boards
+    131, // The Elemental Plane of Fire
+    132, // The Elemental Plane of Water
+    133, // The Elemental Plane of Earth
+    134, // The Elemental Plane of Air
+    253, // Hell1
+    254, // Hell2
+    255, // Hell3
+    260, // Questy Vader III
+    261, // Questy Nosferatu
+    262, // Quest by Hemp
+    275, // Clan Halls
+    278, // ISAHall
+    294, // Custom Gear III
+    295, // Lottery Items
+    296, // Custom Gear IV
+    297, // Theldon's Crypt
+    298, // Custom Gear II
+    299, // Custom Gear
+    300, // Labyrinth of Skelos
   };
 
   int mob_nr = number(1, top_of_mobt);
@@ -330,15 +361,15 @@ bool distribute_token(void) {
 
     OBJ *token = read_object(TOKEN_OBJ_VNUM, VIRTUAL);
 
-    if (token) {
-      OBJ_VALUE0(token) = number(1, 2);
+    if (!token) return FALSE;
 
-      obj_to_char(token, mob);
+    OBJ_VALUE0(token) = number(1, 2);
 
-      log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), mob->nr);
+    obj_to_char(token, mob);
 
-      return TRUE;
-    }
+    log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), mob->nr);
+
+    return TRUE;
   }
 
   return FALSE;
