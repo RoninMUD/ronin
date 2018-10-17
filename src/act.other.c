@@ -2455,3 +2455,12 @@ void do_locate(CHAR *ch, char *arg, int cmd) {
 
   WAIT_STATE(ch, PULSE_VIOLENCE);
 }
+
+
+/* NOP command to allow clients to send a "keepalive" without "doing anything"
+   or printing anything in return (e.g. a carriage return or prompt display). */
+void do_nop(CHAR *ch, char *arg, int cmd) {
+  if (ch && (ch->desc) && !(ch->desc->connected)) {
+    ch->desc->prompt_mode = 0;
+  }
+}

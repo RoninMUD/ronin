@@ -896,19 +896,19 @@ void show_bitvector_wear(struct char_data *ch, struct obj_data *obj_object) {
     act("$n's starts moving quietly.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_FORTIFICATION) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_FORTIFICATION)) {
+  if (!IS_AFFECTED2(ch, AFF2_FORTIFICATION) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_FORTIFICATION)) {
     send_to_char("You feel able to withstand any attack.\n\r", ch);
     act("$n seems able to withstand any attack.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_PERCEIVE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_PERCEIVE)) {
+  if (!IS_AFFECTED2(ch, AFF2_PERCEIVE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_PERCEIVE)) {
     send_to_char("Your eyes glow with unearthly light.\n\r", ch);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_RAGE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_RAGE)) {
+  if (!IS_AFFECTED2(ch, AFF2_RAGE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_RAGE)) {
     send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
     act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
   }
@@ -1006,19 +1006,19 @@ void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object) {
     act("$n stops sneaking.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_FORTIFICATION) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_FORTIFICATION)) {
+  if (!IS_AFFECTED2(ch, AFF2_FORTIFICATION) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_FORTIFICATION)) {
     send_to_char("Your feeling of fortification diminishes.\n\r", ch);
     act("$n's magical foritication diminishes.", TRUE, ch, 0, 0, TO_ROOM);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_PERCEIVE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_PERCEIVE)) {
+  if (!IS_AFFECTED2(ch, AFF2_PERCEIVE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_PERCEIVE)) {
     send_to_char("Your depth of perception diminishes.\n\r", ch);
   }
 
-  if (!IS_SET(ch->specials.affected_by, AFF2_RAGE) &&
-    IS_SET(obj_object->obj_flags.bitvector, AFF2_RAGE)) {
+  if (!IS_AFFECTED2(ch, AFF2_RAGE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_RAGE)) {
     send_to_char("You calm down and feel less angry.\n\r", ch);
     act("$n calms down and looks less angry.", TRUE, ch, 0, 0, TO_ROOM);
   }
@@ -1424,58 +1424,59 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
         printf_to_char(ch, "You can't wear the %s.\n\r", fname(OBJ_NAME(temp_obj)));
       }
     }
-  }
-  else {
-    OBJ *temp_obj = get_obj_in_list_vis(ch, obj_name, ch->carrying);
 
-    if (!temp_obj) {
-      printf_to_char(ch, "You do not seem to have the '%s'.\n\r", obj_name);
+    return;
+  }
+
+  OBJ *temp_obj = get_obj_in_list_vis(ch, obj_name, ch->carrying);
+
+  if (!temp_obj) {
+    printf_to_char(ch, "You do not seem to have the '%s'.\n\r", obj_name);
+
+    return;
+  }
+
+  if (*eq_slot_keyword) {
+    int eq_slot = -1;
+
+    for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
+      if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword))) {
+        if (CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
+          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
+        }
+        else {
+          printf_to_char(ch, "You can't wear the %s there.\n\r", fname(OBJ_NAME(temp_obj)));
+
+          return;
+        }
+
+        break;
+      }
+    }
+
+    if (eq_slot == -1) {
+      printf_to_char(ch, "Equip the %s where, exactly?\n\r", fname(OBJ_NAME(temp_obj)));
 
       return;
     }
 
-    if (*eq_slot_keyword) {
-      int eq_slot = -1;
+    wear(ch, temp_obj, eq_slot);
+  }
+  else {
+    int eq_slot = -1;
 
-      for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
-        if (!strncmp(eq_slot_keyword, eq_slot_info[i].eq_slot_keyword, strlen(eq_slot_keyword))) {
-          if (CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
-            eq_slot = eq_slot_info[i].eq_slot_wear_flag;
-          }
-          else {
-            printf_to_char(ch, "You can't wear the %s there.\n\r", fname(OBJ_NAME(temp_obj)));
+    for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
+      if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
+        eq_slot = eq_slot_info[i].eq_slot_wear_flag;
 
-            return;
-          }
+        wear(ch, temp_obj, eq_slot);
 
-          break;
-        }
+        break;
       }
-
-      if (eq_slot == -1) {
-        printf_to_char(ch, "Equip the %s where, exactly?\n\r", fname(OBJ_NAME(temp_obj)));
-
-        return;
-      }
-
-      wear(ch, temp_obj, eq_slot);
     }
-    else {
-      int eq_slot = -1;
 
-      for (int i = 0; i < NUMELEMS(eq_slot_info); i++) {
-        if (!OBJ_EQUIPPED_BY(temp_obj) && CAN_WEAR(temp_obj, eq_slot_info[i].eq_slot_wear_flag)) {
-          eq_slot = eq_slot_info[i].eq_slot_wear_flag;
-
-          wear(ch, temp_obj, eq_slot);
-
-          break;
-        }
-      }
-
-      if (eq_slot == -1) {
-        printf_to_char(ch, "You can't wear the %s.\n\r", fname(OBJ_NAME(temp_obj)));
-      }
+    if (eq_slot == -1) {
+      printf_to_char(ch, "You can't wear the %s.\n\r", fname(OBJ_NAME(temp_obj)));
     }
   }
 

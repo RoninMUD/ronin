@@ -57,27 +57,31 @@ typedef char byte;
 #define SECS_PER_MUD_MONTH (28*SECS_PER_MUD_DAY)
 #define SECS_PER_MUD_YEAR  (17*SECS_PER_MUD_MONTH)
 
-/* prestige */
+/* Prestige */
 #define PRESTIGE_MAX       255
 #define PRESTIGE_HIT_GAIN  8
 #define PRESTIGE_MANA_GAIN 4
 
-/* quest status */
+/* Quest Status */
 #define QUEST_NONE      0
 #define QUEST_RUNNING   1
 #define QUEST_COMPLETED 2
 #define QUEST_FAILED    3
 
-/* For Corpses and Statues */
-
+/* Corpses and Statues */
 #define PC_CORPSE    1
 #define NPC_CORPSE   2
 #define PC_STATUE    3
 #define NPC_STATUE   4
 #define CHAOS_CORPSE 5
 
+/* Subclass Objects*/
 #define STATUE_PEACE 9
 #define WALL_THORNS  34
+
+/* Subclass Token and Token Mob */
+#define TOKEN_OBJ_VNUM 5
+#define TOKEN_MOB_VNUM 11
 
 /* Keep times a multiple of 10 for the decay messages */
 #define MAX_NPC_CORPSE_TIME   10
@@ -295,9 +299,8 @@ struct tagline_data
 
 #define MAX_OBJ_AFFECT       3         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 #define OFILE_MAX_OBJ_AFFECT 2         /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
-
-#define MAX_OBJ_VALUE 4
-#define MAX_OBJ_SKIN  6
+#define MAX_OBJ_VALUE        4
+#define MAX_OBJ_SKIN         6
 
 struct obj_flag_data
 {
@@ -331,6 +334,7 @@ struct obj_affected_type {
   sh_int modifier;     /* How much it changes by              */
 };
 
+#define MAX_OBJ_OWNER_ID 8
 
 /* ======================== Structure for object ========================= */
 struct obj_data
@@ -341,7 +345,7 @@ struct obj_data
   sh_int in_room_v;              /* In what room -1 when conta/carr  */
   byte log;                      /* To see if/how the item needs to be logged */
   int spec_value;                /* tmp value for spec progs         */
-  int ownerid[8];                /* Id of owners */
+  int ownerid[MAX_OBJ_OWNER_ID]; /* Id of owners */
   struct obj_flag_data obj_flags;/* Object information               */
   struct obj_affected_type
       affected[MAX_OBJ_AFFECT];  /* Which abilities in PC to change  */

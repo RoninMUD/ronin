@@ -4138,52 +4138,60 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 
 /* control the fights going on */
 void perform_violence(void) {
-  CHAR *ch = NULL;
-  CHAR *vict = NULL;
+  const int msg_violence_rooms[] = {
+    17532, // Ancient Red Dragon
+    23063, // Cryohydra
+    25541, // Lucifer
+    27748, // Shadowraith
+  };
 
-  for (ch = combat_list; ch; ch = combat_next_dude) {
+  for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
+    assert(ch);
+
     combat_next_dude = ch->next_fighting;
 
-    assert(vict = GET_OPPONENT(ch));
+    CHAR *vict = GET_OPPONENT(ch);
 
-    if (AWAKE(ch) && SAME_ROOM(ch, vict)) {
-      /* Linerfix - Makes MSG_VIOLENCE only signal to the room of Satan, Cryohydra, Shadowraith or Ancient Red Dragon. */
-      if (V_ROOM(ch) == 25541 ||
-          V_ROOM(ch) == 23063 ||
-          V_ROOM(ch) == 27748 ||
-          V_ROOM(ch) == 17532) {
+    assert(vict);
+
+    if (!AWAKE(ch) || !SAME_ROOM(ch, vict)) {
+      stop_fighting(ch);
+
+      continue;
+    }
+
+    for (int i = 0; i < NUMELEMS(msg_violence_rooms); i++) {
+      if (V_ROOM(ch) == msg_violence_rooms[i]) {
         if (signal_char(ch, vict, MSG_VIOLENCE, "")) return;
       }
-
-      /* Shadowstep is before hit() in order to take advantage of pummel, etc. */
-      if (affected_by_spell(ch, SKILL_SHADOWSTEP) && SAME_ROOM(ch, vict)) {
-        shadowstep_action(ch, vict);
-      }
-
-      if (SAME_ROOM(ch, vict)) {
-        hit(ch, vict, TYPE_UNDEFINED);
-      }
-
-      /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
-
-      if (affected_by_spell(ch, SPELL_BLOOD_LUST) && SAME_ROOM(ch, vict)) {
-        blood_lust_action(ch, vict);
-      }
-
-      if (affected_by_spell(ch, SKILL_VICTIMIZE) && SAME_ROOM(ch, vict)) {
-        victimize_action(ch, vict);
-      }
-
-      if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && SAME_ROOM(ch, vict)) {
-        dirty_tricks_action(ch, vict);
-      }
-
-      if (affected_by_spell(ch, SKILL_SNIPE) && SAME_ROOM(ch, vict)) {
-        snipe_action(ch, vict);
-      }
     }
-    else { /* Not in same room. */
-      stop_fighting(ch);
+
+    /* Shadowstep is before hit() in order to take advantage of pummel, etc. */
+    if (affected_by_spell(ch, SKILL_SHADOWSTEP) && SAME_ROOM(ch, vict)) {
+      shadowstep_action(ch, vict);
+    }
+
+    /* Process hit. */
+    if (SAME_ROOM(ch, vict)) {
+      hit(ch, vict, TYPE_UNDEFINED);
+    }
+
+    /* These skills are applied after hit() in order to avoid consuming pummel, etc. */
+
+    if (affected_by_spell(ch, SPELL_BLOOD_LUST) && SAME_ROOM(ch, vict)) {
+      blood_lust_action(ch, vict);
+    }
+
+    if (affected_by_spell(ch, SKILL_VICTIMIZE) && SAME_ROOM(ch, vict)) {
+      victimize_action(ch, vict);
+    }
+
+    if (affected_by_spell(ch, SKILL_DIRTY_TRICKS) && SAME_ROOM(ch, vict)) {
+      dirty_tricks_action(ch, vict);
+    }
+
+    if (affected_by_spell(ch, SKILL_SNIPE) && SAME_ROOM(ch, vict)) {
+      snipe_action(ch, vict);
     }
   }
 }

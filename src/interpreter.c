@@ -1030,6 +1030,8 @@ void assign_command_pointers ( void )
   COMMANDO("zmult"    ,CMD_NEWOLCZ    ,POSITION_DEAD     ,do_zmult   ,LEVEL_OLC2);
   /* End OLC Related Commands */
   COMMANDO("movestat" ,CMD_MOVESTAT   ,POSITION_DEAD     ,do_movestat,LEVEL_SUP);
+
+  COMMANDO("nop", CMD_NOP, POSITION_DEAD, do_nop, 1);
 }
 
 /* *************************************************************************

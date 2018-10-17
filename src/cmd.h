@@ -364,3 +364,5 @@ $State: Exp $
 #define CMD_NEWOLCR            403
 #define CMD_NEWOLCZ            404
 #define CMD_MOVESTAT           405
+
+#define CMD_NOP                999
