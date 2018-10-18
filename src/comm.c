@@ -1356,8 +1356,7 @@ int get_from_q(struct txt_q *queue, char *dest)
   return(1);
 }
 
-void write_to_q(char *txt, struct txt_q *queue)
-{
+void write_to_q(char *txt, struct txt_q *queue) {
   struct txt_block *new;
 
   CREATE(new, struct txt_block, 1);
@@ -1367,13 +1366,13 @@ void write_to_q(char *txt, struct txt_q *queue)
 
   /* Q empty? */
   if (!queue->head) {
-   new->next = NULL;
-   queue->head = queue->tail = new;
+    new->next = NULL;
+    queue->head = queue->tail = new;
   }
   else {
-   queue->tail->next = new;
-   queue->tail = new;
-   new->next = NULL;
+    queue->tail->next = new;
+    queue->tail = new;
+    new->next = NULL;
   }
 }
 
@@ -1675,49 +1674,44 @@ void init_descriptor (struct descriptor_data *newd, int desc)
   descriptor_list = newd;
 }
 
-int process_output(struct descriptor_data *t)
-{
-  char i[4*MSL + 1];
 
-  if (!t->prompt_mode && !t->connected)
-   if (write_to_descriptor(t->descriptor, "\n\r") < 0)
-    return(-1);
+int process_output(struct descriptor_data *desc) {
+  char buf[4 * MSL + 1];
 
-  /* Cycle thru output queue */
-  while (get_from_q(&t->output, i)) {
-   /* Snoop moved to send_to_char_by_type - Ranger Jan 99 */
-   if (write_to_descriptor(t->descriptor, i))
-    return(-1);
+  if (!desc->prompt_mode && !desc->connected) {
+    if (write_to_descriptor(desc->descriptor, "\n\r") < 0) return -1;
   }
 
-  if (!t->connected && !(t->character && !IS_NPC(t->character) &&
-      IS_SET(t->character->specials.pflag, PLR_COMPACT)))
-   if (write_to_descriptor(t->descriptor, "\n\r") < 0)
-    return(-1);
+  while (get_from_q(&desc->output, buf)) {
+    if (write_to_descriptor(desc->descriptor, buf)) return -1;
+  }
 
-  return(1);
+  if (!desc->connected && !(desc->character && !IS_NPC(desc->character) && IS_SET(GET_PFLAG(desc->character), PLR_COMPACT))) {
+    if (write_to_descriptor(desc->descriptor, "\n\r") < 0) return -1;
+  }
+
+  return 1;
 }
 
 
-int write_to_descriptor(int desc, char *txt)
-{
-  int sofar, thisround, total;
+int write_to_descriptor(int desc, char *txt) {
+  int so_far = 0, this_round = 0, total = 0;
 
   total = strlen(txt);
-  sofar = 0;
 
-  do
-  {
-   thisround = write(desc, txt + sofar, total - sofar);
-   if (thisround < 0) {
-    log_s("Write to socket");
-    return(-1);
-   }
-   sofar += thisround;
-  }
-  while (sofar < total);
+  do {
+    this_round = write(desc, txt + so_far, total - so_far);
 
-  return(0);
+    if (this_round < 0) {
+      log_s("Write to socket error");
+
+      return -1;
+    }
+
+    so_far += this_round;
+  } while (so_far < total);
+
+  return 0;
 }
 
 int process_input(struct descriptor_data *t)
