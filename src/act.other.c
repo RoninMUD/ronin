@@ -9,6 +9,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -2457,10 +2458,12 @@ void do_locate(CHAR *ch, char *arg, int cmd) {
 }
 
 
-/* NOP command to allow clients to send a "keepalive" without "doing anything"
-   or printing anything in return (e.g. a carriage return or prompt display). */
+/* No Operation command that will simply send a Telnet No Operation command in return.
+   This may be useful for some clients to "keepalive" their connections. */
 void do_nop(CHAR *ch, char *arg, int cmd) {
   if (ch && (ch->desc) && !(ch->desc->connected)) {
-    ch->desc->prompt_mode = 0;
+    write_to_descriptor(ch->desc->descriptor, "\xFF\xF1"); // Send Telnet No Operation command.
+
+    ch->desc->prompt_mode = 0; // Don't print a prompt in response to this command.
   }
 }
