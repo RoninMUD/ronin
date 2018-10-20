@@ -2777,9 +2777,9 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int mode) {
     }
 
     /* TODO: Shapeshift Damage Penalty */
-    //if (affected_by_spell(ch, SPELL_CLARITY)) {
-    //  dam = 0;
-    //}
+    if (affected_by_spell(ch, SPELL_CLARITY)) {
+      dam = 0;
+    }
   }
 
   return dam;
