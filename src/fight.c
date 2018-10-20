@@ -2777,9 +2777,9 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int mode) {
     }
 
     /* TODO: Shapeshift Damage Penalty */
-    //if (affected_by_spell(ch, SPELL_CLARITY)) {
-    //  dam = 0;
-    //}
+    if (affected_by_spell(ch, SPELL_CLARITY)) {
+      dam = 0;
+    }
   }
 
   return dam;
@@ -3743,7 +3743,7 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
   int check = 20;
 
   /* Bathed in Blood */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 4)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
     check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
   }
 

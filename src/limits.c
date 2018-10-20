@@ -428,7 +428,7 @@ int mana_gain(CHAR *ch) {
   }
 
   /* Bathed in Blood */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 4)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
     if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
       double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
 
@@ -662,7 +662,7 @@ int hit_gain(CHAR *ch) {
   }
 
   /* Bathed in Blood */
-  if (check_subclass(ch, SC_DEFILER, 4)) {
+  if (check_subclass(ch, SC_DEFILER, 5)) {
     if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
       double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
 
