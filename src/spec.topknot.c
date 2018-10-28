@@ -484,23 +484,21 @@ tk_baron_drain (CHAR *ch, CHAR *v)
   affect_total (v);
 }
 
-OBJ*
-tk_get_loot_inv (CHAR *k, CHAR *ch)
-{
+OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
   OBJ *tar = 0, *tmp;
 
-  for (tmp = ch->carrying;tmp;tmp = tmp->next_content)
-    {
-      if (GET_OBJ_WEIGHT(tmp) > 20 || !CAN_SEE_OBJ(k, tmp))
-	continue;
+  for (tmp = ch->carrying; tmp; tmp = tmp->next_content) {
+    if (!CAN_SEE_OBJ(k, tmp) || (GET_OBJ_WEIGHT(tmp) > 20) || (OBJ_TYPE(tmp) == ITEM_SC_TOKEN))
+      continue;
 
-      if (!tar)
-	tar = tmp;
+    if (!tar)
+      tar = tmp;
 
-      if (!number (0,5))
-	tar = tmp;
-    }
-  return tmp;
+    if (!number(0, 5))
+      tar = tmp;
+  }
+
+  return tar;
 }
 
 int
