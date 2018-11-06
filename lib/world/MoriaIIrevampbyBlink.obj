@@ -52,16 +52,16 @@ A green slime mold is here. Stinks like sh**.~
 1 20 8
 100
 E
-mold~
-This stuff is digusting!
+smile mold~
+It wasn't meant to be food, - Certainly not for humans.
 ~
 E
 slime~
 This stuff is disgusting!
 ~
 E
-smile mold~
-It wasn't mend to be food, - Certainly not for humans.
+mold~
+This stuff is digusting!
 ~
 X
 ~
@@ -81,16 +81,16 @@ A green slime mold is here. Stinks like sh**.~
 1 20 8
 100
 E
-mold~
-This stuff is REALLY gross.
+smile mold~
+It wasn't meant to be food, - Certainly not for humans.
 ~
 E
 slime~
 This stuff is REALLY gross.
 ~
 E
-smile mold~
-It wasn't mend to be food, - Certainly not for humans.
+mold~
+This stuff is REALLY gross.
 ~
 X
 ~
@@ -110,11 +110,11 @@ A pair of gauntlets floats in the air here.~
 1 20000 15000
 30
 E
-gauntlets~
+silver~
 These look like powerful gauntlets.
 ~
 E
-silver~
+gauntlets~
 These look like powerful gauntlets.
 ~
 X
@@ -162,12 +162,12 @@ A marble pendant lies on the ground here.~
 10 15000 10000
 40
 E
-marble~
-Its a beautiful marble pendant.
+pendant~
+It's a beautiful marble pendant.
 ~
 E
-pendant~
-Its a beautiful marble pendant.
+marble~
+It's a beautiful marble pendant.
 ~
 X
 ~
@@ -191,7 +191,7 @@ A beautiful shimmering portal that reflects another world is here.~
 10 10 10
 100
 E
-shimmering~
+portal~
 You gaze into the rippling surface of this beautiful portal.
 Its rim is made from onyx with faces of ugly demons carved
 into the stone.  A faint glow surrounds the surface of the
@@ -199,7 +199,7 @@ portal and you hear a gurggling sound, like that of water
 eminating from the portal.
 ~
 E
-portal~
+shimmering~
 You gaze into the rippling surface of this beautiful portal.
 Its rim is made from onyx with faces of ugly demons carved
 into the stone.  A faint glow surrounds the surface of the
@@ -225,7 +225,7 @@ An old and worn-looking belt lies here.~
 9
 E
 belt~
-Its a finely crafted leather belt.
+It's a finely crafted leather belt.
 ~
 X
 ~
