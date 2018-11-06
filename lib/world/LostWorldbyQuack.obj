@@ -8,14 +8,14 @@ The helmet of a roman centurion lies here on the ground.~
 10 10000 8000
 13
 E
-roman~
-roman~
+helmet~
+helmet~
 E
 centurion~
 centurion~
 E
-helmet~
-helmet~
+roman~
+roman~
 X
 ~
 0 0 0
@@ -137,7 +137,7 @@ B
 #27106
 Gladius~
 Gladius~
-an extremely sharp shortsword lies here.~
+An extremely sharp shortsword lies here.~
 $r razor-sharp shortsword glints wickedly as it strikes.~
 5 64 8193
 0 7 4 3
@@ -505,7 +505,7 @@ A ring with a truly putrid odor is lying here, next to a weed.~
 2 10000 26400
 5
 E
-ring~
+ring flesh~
 
   This is one of the most revolting items you have ever seen.  It is the
 bone of some now unrecognizable creature that the Witchdoctor has carved
@@ -518,7 +518,7 @@ as well.
 
 ~
 E
-ring flesh~
+ring~
 
   This is one of the most revolting items you have ever seen.  It is the
 bone of some now unrecognizable creature that the Witchdoctor has carved

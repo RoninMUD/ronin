@@ -437,13 +437,13 @@ D3
 ~
 0 -1 27116
 E
-carcass~
-Judging from the smell it has been dead for several days.
-~
-E
 tracks~
 They look like they were made by a huge lizard, say 40-50 feet long and about 
 20-25 tons.
+~
+E
+carcass~
+Judging from the smell it has been dead for several days.
 ~
 S
 #27118
@@ -486,12 +486,12 @@ D5
 bottom~
 1 -1 27139
 E
-mound~
-It appears there might be some small opening there.
-~
-E
 tracks~
 They look like the tracks of a HUGE lizard.
+~
+E
+mound~
+It appears there might be some small opening there.
 ~
 S
 #27120
@@ -603,14 +603,6 @@ door~
 E
 hut~
 It is made of straw but strengthened with magic so as to repel intruders.
-~
-E
-27123~
-edit r 27124 n add 27122
-~
-E
-27123~
-edit r 27124 e add 27122
 ~
 S
 #27125
@@ -809,12 +801,12 @@ D3
 door~
 1 -1 27135
 E
-drawings~
-They are mostly drawings of various military formations.
-~
-E
 maps~
 They are maps of the world as it was in 40 B.C.
+~
+E
+drawings~
+They are mostly drawings of various military formations.
 ~
 S
 #27135

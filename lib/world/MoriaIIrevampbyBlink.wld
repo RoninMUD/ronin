@@ -235,12 +235,12 @@ D2
 ~
 0 0 4114
 E
+tunnel~
+Its very small~
+E
 statues~
 These are ornate statues of gothic monsters.
 ~
-E
-tunnel~
-Its very small~
 S
 #4110
 The Dark Pit~
@@ -439,12 +439,12 @@ D3
 ~
 0 0 4119
 E
-runes~
-There are magical runes carved into the wall.
-~
-E
 rune~
 A rune blocks the entrance north.
+~
+E
+runes~
+There are magical runes carved into the wall.
 ~
 S
 #4119
@@ -600,12 +600,12 @@ D2
 rune~
 8 0 4118
 E
-candle~
-There are thousands of candles all around this room. 
-~
-E
 circle~
 The circle is painted in blood at the center of the room.  It is for magical uses.
+~
+E
+candle~
+There are thousands of candles all around this room. 
 ~
 S
 #4127
@@ -733,16 +733,16 @@ D3
 ~
 0 -1 4133
 E
-pillows~
-A lot of pillows are piled up over there, they look inviting.
+tapestries~
+Beautiful old tapestries adorn the walls here.
 ~
 E
 rug~
 A soft rug sits on the floor here.
 ~
 E
-tapestries~
-Beautiful old tapestries adorn the walls here.
+pillows~
+A lot of pillows are piled up over there, they look inviting.
 ~
 S
 #4133
@@ -760,54 +760,20 @@ D1
 ~
 0 -1 4132
 S
-#4150
-Grunting Boar Square~
-A temporary description
-~
-41 0 0
-D0
-~
-~
-0 -1 4151
-D2
-~
-~
-0 -1 4152
-D3
-~
-~
-0 -1 3007
-S
-#4151
-Club Grunting Boar~
- The comfortable resting room of the club has wall-to-wall carpeting and
-seating arrangements for up to 80 people at once.  For the weary and tired there
-are several beds with silk sheets and bedclothes on them.  Mounted on the walls 
-here are many hunting trophies, many of which are from magnificent animals which
-you've never seen before. Amongst the greatest of them is the head of the great
-grunting boar,  which is reputed to have killed a dozen men before being felled.
-~
-41 0 0
-D2
-~
-~
-0 -1 4150
-S
-#4152
-The Grunting Boar Reception~
-A temporary description
-~
-41 0 0
-D0
-~
-~
-0 -1 4152
-S
 #4199
-A temporary name~
-A temporary description
+Hall of Kludges~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing.  A sign on the wall catches your attention.
+
+             /----------------/
+             [  IMPORTANT:    ]
+             [                ]
+             [  DON'T TOUCH   ]
+             [   ANYTHING!    ]
+             [                ]
+             [----------------]/
 ~
-41 512 0
+41 588 0
 S
 #0
 $~

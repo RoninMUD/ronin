@@ -1279,6 +1279,23 @@ M
 ~
 ~
 ~
+#3068
+nothing~
+sign carnage~
+Prepare For Carnage!~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #3069
 flute silver~
 a silver flute~
@@ -1647,6 +1664,25 @@ a large wooden display case has been placed at the back of the room.~
 10 10 10
 100
 E
+shabtis~
+Shabtis of the mummified pharoah
+
+worn about waist
+0 AC-Apply
++5 DAMROLL
++5 HITROLL
+-20 AC-AFFECT
+DETECT INVIS, SENSE LIFE, INFRAVISION
+
+Specs: Four shabti figures that each perform a specific task (triggered on use)
+......Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
+......Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
+......Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
+......Soldier (Waw): Summons an army that does 6,000 damage to current target - Takes 1 mud week to recharge
+
+Cost: 450 RP + 2 QT
+~
+E
 cowl~
  
 cowl of the Shadowmage
@@ -1700,25 +1736,6 @@ Spec: 15% chance on successful pummel to set victim's position to
 ......hit has a 2.5x multiplier instead of just 2x
  
 Cost: 350 RP + 2 QT
-~
-E
-shabtis~
- 
-Shabtis of the mummified pharaoh
- 
-worn about waist
-20 AC-apply
-+5 DAMROLL
-+5 HITROLL
-DETECT INVIS, SENSE LIFE, INFRAVISION
- 
-Specs: Four shabti figures that each perform a specific task (triggered on use)
-......Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
-......Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
-......Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
-......Soldier (Waw): Summons an army that does 6,000 damage to current target - Takes 1 mud week to recharge
- 
-Cost: 450 RP + 2 QT
 ~
 E
 case~
