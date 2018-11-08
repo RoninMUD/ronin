@@ -368,7 +368,7 @@ $n slips into $s boots and vanishes into thin air.~
 You remove your boots and reappear to the world.~
 $n appears before you suddenly... barefoot.~
 A
-14 10000
+2 25
 A
 19 10
 A
@@ -376,7 +376,9 @@ A
 T
 800
 B
-68681730
+268435456
+C
+9
 #30014
 toy gun~
 a toy gun~
@@ -487,7 +489,7 @@ a basic recipe for the Cloak of Caster's Choice~
 A simple recipe direct from the generous gods for a delicious item!~
 ~
 32 0 1
-30012 3043 4809 100
+30012 3048 4823 100
 3 1 55555
 0
 X
@@ -625,6 +627,40 @@ A complicated recipe direct from the stingy gods for a scrumptious item!~
 32 0 1
 30013 4508 12031 9405
 3 1 55555
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30034
+recipe chopsticks challenging~
+A challenging recipe for Chopsticks~
+A challenging recipe for a set of Chopsticks of Chaotic Destruction lies here.~
+~
+32 0 1
+30050 506 11604 2605
+5 50 5
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30035
+recipe modest chopsticks~
+A modest recipe for Chopsticks~
+A modest recipe for a set of Chopsticks of Chaotic Destruction lies here.~
+~
+32 0 1
+30050 3030 3025 8005
+5 50 5
 0
 X
 ~
