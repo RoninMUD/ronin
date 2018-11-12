@@ -1230,9 +1230,9 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
 
     if (GET_CLASS(ch) == CLASS_CLERIC) {
-      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_WEAPON)) &&
+      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2HWEAPON)) &&
           ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
-        printf_to_char(ch, "You can't wield that; it's SHARP!\n\rYour religion forbids the use of sharp weapons!\n\r");
+        printf_to_char(ch, "You can't wield that, it's SHARP!  Your religion forbids the use of sharp weapons!\n\r");
 
         return;
       }
