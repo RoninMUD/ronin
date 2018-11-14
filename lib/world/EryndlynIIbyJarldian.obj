@@ -88,12 +88,10 @@ A Caldron is here, filled with tribute in blood.~
 10 10 10
 100
 E
-cauldron~
-Here lies a caldron filled with blood from the faithful drow elves that 
-worship their Queen.  Matron mothers, high priestesses all come here to
-offer a tribute....in BLOOD.  They all slit their wrists and allow the blood
-to drain into the caldron, as a sign of favoritism.  Usually required, however
-unusual requests from the queen can only be answered with additional blood.~
+blood~
+Swirling and swirling around is the blood collected from the high drow 
+hierarchy. Apparently, the queen periodically hungers for it and booms out 
+a demand, pushing the matrons and priestesses into order.~
 E
 caldron~
 Here lies a caldron filled with blood from the faithful drow elves that
@@ -102,10 +100,12 @@ offer a tribute....in BLOOD.  They all slit their wrists and allow the blood
 to drain into the caldron, as a sign of favoritism.  Usually required, however
 unusual requests from the queen can only be answered with additional blood.~
 E
-blood~
-Swirling and swirling around is the blood collected from the high drow 
-hierarchy. Apparently, the queen periodically hungers for it and booms out 
-a demand, pushing the matrons and priestesses into order.~
+cauldron~
+Here lies a caldron filled with blood from the faithful drow elves that 
+worship their Queen.  Matron mothers, high priestesses all come here to
+offer a tribute....in BLOOD.  They all slit their wrists and allow the blood
+to drain into the caldron, as a sign of favoritism.  Usually required, however
+unusual requests from the queen can only be answered with additional blood.~
 X
 ~
 0 0 0
@@ -124,14 +124,14 @@ High upon the steps of the chapel is a throne of bones.~
 10 10 10
 100
 E
-throne~
-You are looking about the grand throne of the Spider Queen, made from the 
-very bones of the drow elves, and others that have displeased her.~
-E
 bones~
 You are looking about the grand throne of the Spider Queen, made from the
 very bones of the drow elves, and others that have displeased her.
 ~
+E
+throne~
+You are looking about the grand throne of the Spider Queen, made from the 
+very bones of the drow elves, and others that have displeased her.~
 X
 ~
 0 0 0
@@ -310,9 +310,9 @@ $r scimitar fuses intensely in $s hands with hellfire.~
 10 100000 30000
 10
 E
-terrakar~
-This weapon is made from a material unknown to the face of the mortal plane. 
-It is a magical item, powers to aid evil causes, and thirsts for blood. 
+arachnid~
+This weapon is made from a material unknown to the face of the mortal plane.
+It is a magical item, powers to aid evil causes, and thirsts for blood.
 There is a head of a spider on the hilt of the scimitar, it's head probing
 and seeming alive~
 E
@@ -322,9 +322,9 @@ It is a magical item, powers to aid evil causes, and thirsts for blood.
 There is a head of a spider on the hilt of the scimitar, it's head probing
 and seeming alive~
 E
-arachnid~
-This weapon is made from a material unknown to the face of the mortal plane.
-It is a magical item, powers to aid evil causes, and thirsts for blood.
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane. 
+It is a magical item, powers to aid evil causes, and thirsts for blood. 
 There is a head of a spider on the hilt of the scimitar, it's head probing
 and seeming alive~
 X
@@ -347,8 +347,8 @@ $r scythe becomes engulfed with a bright white light of protection.~
 10 100000 30000
 10
 E
-terrakar~
-This weapon is made from a material unknown to the face of the mortal plane. 
+unicorn~
+This weapon is made from a material unknown to the face of the mortal plane.
 It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
 There is a head of a unicorn on the hilt of this longsword, it's head probing
 and seeming alive~
@@ -359,8 +359,8 @@ It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
 There is a head of a unicorn on the hilt of this longsword, it's head probing 
 and seeming alive~
 E
-unicorn~
-This weapon is made from a material unknown to the face of the mortal plane.
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane. 
 It is a magical item, powers to aid goodly causes, and hungers for dispel evil.
 There is a head of a unicorn on the hilt of this longsword, it's head probing
 and seeming alive~
@@ -384,12 +384,11 @@ $r dirk grows into a huge battle-weapon.~
 10 100000 30000
 10
 E
-terrakar~
-This weapon is made from a material unknown to the face of the mortal plane.
+eagle~
+This weapon is made from a material unknown to the face of the mortal plane. 
 It is a magical item, powers to aid the wielder and strengthen his will. 
 It has no substance in the ways of evil or good, and will thirst for either.
-The head of the eagle probes up and down and seems to be reading your mind.
-~
+The head of the eagle probes up and down and seems to be reading your mind.~
 E
 sword~
 This weapon is made from a material unknown to the face of the mortal plane.
@@ -398,11 +397,12 @@ It has no substance in the ways of evil or good, and will thirst for either.
 The head of the eagle probes up and down and seems to be reading your mind.
 ~
 E
-eagle~
-This weapon is made from a material unknown to the face of the mortal plane. 
+terrakar~
+This weapon is made from a material unknown to the face of the mortal plane.
 It is a magical item, powers to aid the wielder and strengthen his will. 
 It has no substance in the ways of evil or good, and will thirst for either.
-The head of the eagle probes up and down and seems to be reading your mind.~
+The head of the eagle probes up and down and seems to be reading your mind.
+~
 X
 ~
 0 0 0
