@@ -2635,159 +2635,160 @@ int do_vault(CHAR *vault_guard, CHAR *ch, int cmd, char *arg)
 #define PLATINUM_BAR 3016
 #define MITHRIL_BAR  3017
 #define DIAMOND      3018
+#define PALLADIUM    3146
+#define ADAMANTIUM   3145
 #define ZYCA_SILVER  10923
 #define ZYCA_BRONZE  10922
 #define ABYSS_BAR    25034
 #define DI_OPAL      27700
 #define DI_CRYSTAL   27701
 
-int jeweler(CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
+int jeweler(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   extern OBJ *read_object(int num, int type);
 
   OBJ *obj = NULL;
   char buf[MSL];
   int cost = 0;
 
-  switch (cmd)
-  {
-    case CMD_LIST:
-      send_to_char("\
+  switch (cmd) {
+  case CMD_LIST:
+    send_to_char("\
 You can buy:\n\r\
--------------------------------\n\r\
-A Bronze Bar    :   50000 coins\n\r\
-A Silver Bar    :  100000 coins\n\r\
-A Gold Bar      :  200000 coins\n\r\
-A Platinum Bar  :  500000 coins\n\r\
-A Mithril Bar   : 1000000 coins\n\r\
-A Large Diamond : 5000000 coins\n\r", ch);
+---------------------------------------\n\r\
+A Bronze Bar      :        50,000 coins\n\r\
+A Silver Bar      :       100,000 coins\n\r\
+A Gold Bar        :       200,000 coins\n\r\
+A Platinum Bar    :       500,000 coins\n\r\
+A Mithril Bar     :     1,000,000 coins\n\r\
+A Large Diamond   :     5,000,000 coins\n\r\
+A Palladium Bar   :   100,000,000 coins\n\r\
+An Adamantium Bar : 1,000,000,000 coins\n\r", ch);
+
+    return TRUE;
+    break;
+
+  case CMD_SELL:
+    if (!*arg) {
+      send_to_char("The Jeweler tells you 'Sell what?'\n\r", ch);
 
       return TRUE;
-      break;
+    }
 
-    case CMD_SELL:
-      if (!*arg)
-      {
-        send_to_char("The Jeweler tells you 'Sell what?'\n\r", ch);
+    one_argument(arg, buf);
+    string_to_lower(buf);
 
-        return TRUE;
-      }
+    obj = get_obj_in_list_vis(ch, buf, ch->carrying);
 
-      one_argument(arg, buf);
-      string_to_lower(buf);
-
-      obj = get_obj_in_list_vis(ch, buf, ch->carrying);
-
-      if (!obj)
-      {
-        send_to_char("The Jeweler tells you 'Sell what?'\n\r", ch);
-
-        return TRUE;
-      }
-
-      switch (V_OBJ(obj))
-      {
-        case BRONZE_BAR:
-        case SILVER_BAR:
-        case GOLD_BAR:
-        case PLATINUM_BAR:
-        case MITHRIL_BAR:
-        case DIAMOND:
-        case ZYCA_SILVER:
-        case ZYCA_BRONZE:
-        case ABYSS_BAR:
-        case DI_OPAL:
-        case DI_CRYSTAL:
-          break;
-
-        default:
-          send_to_char("The Jeweler tells you 'I only buy Midgaard trade bars, diamonds and a few other treasures.'\n\r", ch);
-
-          return TRUE;
-      }
-
-      cost = obj->obj_flags.cost;
-
-      if ((INT_MAX - GET_GOLD(ch)) < cost) {
-        send_to_char("You can't carry any more coins.\n\r", ch);
-
-        return TRUE;
-      }
-
-      act("You give $p to $N.", FALSE, ch, obj, mob, TO_CHAR);
-      act("$N gives you $P.", FALSE, ch, obj, mob, TO_VICT);
-      act("$n gives $p to $N.", FALSE, ch, obj, mob, TO_ROOM);
-
-      printf_to_char(ch, "The Jeweler gives you %d coins.\n\r", cost);
-
-      GET_GOLD(ch) += cost;
-
-      obj_from_char(obj);
-      extract_obj(obj);
-
-      save_char(ch, NOWHERE);
+    if (!obj) {
+      send_to_char("The Jeweler tells you 'Sell what?'\n\r", ch);
 
       return TRUE;
+    }
+
+    switch (V_OBJ(obj)) {
+    case BRONZE_BAR:
+    case SILVER_BAR:
+    case GOLD_BAR:
+    case PLATINUM_BAR:
+    case MITHRIL_BAR:
+    case DIAMOND:
+    case PALLADIUM:
+    case ADAMANTIUM:
+    case ZYCA_SILVER:
+    case ZYCA_BRONZE:
+    case ABYSS_BAR:
+    case DI_OPAL:
+    case DI_CRYSTAL:
       break;
 
-    case CMD_BUY:
-      arg = one_argument(arg, buf);
-
-      if (!*buf)
-      {
-        send_to_char("The Jeweler tells you 'Buy what?'\n\r", ch);
-
-        return TRUE;
-      }
-
-      if (!strcmp(buf, "bronze"))
-        obj = read_object(BRONZE_BAR, VIRTUAL);
-      else if (!strcmp(buf, "silver"))
-        obj = read_object(SILVER_BAR, VIRTUAL);
-      else if (!strcmp(buf, "gold"))
-        obj = read_object(GOLD_BAR, VIRTUAL);
-      else if (!strcmp(buf, "platinum"))
-        obj = read_object(PLATINUM_BAR, VIRTUAL);
-      else if (!strcmp(buf, "mithril"))
-        obj = read_object(MITHRIL_BAR, VIRTUAL);
-      else if (!strcmp(buf, "diamond"))
-        obj = read_object(DIAMOND, VIRTUAL);
-      else
-      {
-        send_to_char("The Jeweler tells you 'I don't sell that.'\n\r", ch);
-
-        return TRUE;
-      }
-
-      if (!obj)
-      {
-        sprintf(buf, "[jeweler()] Unable to load object '%s'.", buf);
-        wizlog(buf, LEVEL_ETE, WIZ_LOG_SIX);
-
-        return TRUE;
-      }
-
-      cost = obj->obj_flags.cost;
-
-      if (GET_GOLD(ch) < cost)
-      {
-        send_to_char("The Jeweler tells you 'You don't have enough money.'\n\r", ch);
-
-        return TRUE;
-      }
-
-      printf_to_char(ch, "The Jeweler tells you 'That will cost you %d coins.'\n\r", cost);
-      act("$n gives $p to $N.", TRUE, mob, obj, ch, TO_NOTVICT);
-      act("$n gives $p to you.", TRUE, mob, obj, ch, TO_VICT);
-
-      obj_to_char(obj, ch);
-
-      GET_GOLD(ch) -= cost;
-
-      save_char(ch, NOWHERE);
+    default:
+      send_to_char("The Jeweler tells you 'I only buy trade bars, diamonds, and a few other treasures.'\n\r", ch);
 
       return TRUE;
-      break;
+    }
+
+    cost = OBJ_COST(obj);
+
+    if ((INT_MAX - GET_GOLD(ch)) < cost) {
+      send_to_char("You can't carry any more coins.\n\r", ch);
+
+      return TRUE;
+    }
+
+    act("You give $p to $N.", FALSE, ch, obj, mob, TO_CHAR);
+    act("$N gives you $P.", FALSE, ch, obj, mob, TO_VICT);
+    act("$n gives $p to $N.", FALSE, ch, obj, mob, TO_ROOM);
+
+    printf_to_char(ch, "The Jeweler gives you %d coins.\n\r", cost);
+
+    GET_GOLD(ch) += cost;
+
+    obj_from_char(obj);
+    extract_obj(obj);
+
+    save_char(ch, NOWHERE);
+
+    return TRUE;
+    break;
+
+  case CMD_BUY:
+    arg = one_argument(arg, buf);
+
+    if (!*buf) {
+      send_to_char("The Jeweler tells you 'Buy what?'\n\r", ch);
+
+      return TRUE;
+    }
+
+    if (!strcmp(buf, "bronze"))
+      obj = read_object(BRONZE_BAR, VIRTUAL);
+    else if (!strcmp(buf, "silver"))
+      obj = read_object(SILVER_BAR, VIRTUAL);
+    else if (!strcmp(buf, "gold"))
+      obj = read_object(GOLD_BAR, VIRTUAL);
+    else if (!strcmp(buf, "platinum"))
+      obj = read_object(PLATINUM_BAR, VIRTUAL);
+    else if (!strcmp(buf, "mithril"))
+      obj = read_object(MITHRIL_BAR, VIRTUAL);
+    else if (!strcmp(buf, "diamond"))
+      obj = read_object(DIAMOND, VIRTUAL);
+    else if (!strcmp(buf, "palladium"))
+      obj = read_object(PALLADIUM, VIRTUAL);
+    else if (!strcmp(buf, "adamantium"))
+      obj = read_object(ADAMANTIUM, VIRTUAL);
+    else {
+      send_to_char("The Jeweler tells you 'I don't sell that.'\n\r", ch);
+
+      return TRUE;
+    }
+
+    if (!obj) {
+      sprintf(buf, "[jeweler()] Unable to load object '%s'.", buf);
+      wizlog(buf, LEVEL_ETE, WIZ_LOG_SIX);
+
+      return TRUE;
+    }
+
+    cost = obj->obj_flags.cost;
+
+    if (GET_GOLD(ch) < cost) {
+      send_to_char("The Jeweler tells you 'You don't have enough money.'\n\r", ch);
+
+      return TRUE;
+    }
+
+    printf_to_char(ch, "The Jeweler tells you 'That will cost you %d coins.'\n\r", cost);
+    act("$n gives $p to $N.", TRUE, mob, obj, ch, TO_NOTVICT);
+    act("$n gives $p to you.", TRUE, mob, obj, ch, TO_VICT);
+
+    obj_to_char(obj, ch);
+
+    GET_GOLD(ch) -= cost;
+
+    save_char(ch, NOWHERE);
+
+    return TRUE;
+    break;
   }
 
   return FALSE;
