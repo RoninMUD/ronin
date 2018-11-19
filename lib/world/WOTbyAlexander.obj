@@ -20,19 +20,21 @@ M
 ~
 ~
 #18703
-broken shield~
-A broken tower shield~
-A broken shield is lying here.~
+broken shield upper~
+The broken upper half of a tower shield~
+The top half of a large, broken shield lies here.~
 ~
 9 0 513
 0 0 0 0
 20 2 500
 2
 E
-broken shield~
-The shield was once a powerful shield, but the years have taken
-its toll, and the shield needs to be remade. Maybe you can be the
-one to remake it and wield its former might?
+broken shield tower~
+At some point during the process of murdering its former
+owner, this shield was cleaved in two. Remarkably, due to
+the high quality construction of the original shield, this
+piece looks like it can still somehow be of use.   Perhaps
+you can repair it somehow.
 ~
 X
 ~
@@ -47,17 +49,23 @@ A
 A
 17 10
 #18704
-sketch~
-A sketch~
-A sketch is lying here.~
+blueprints shield recipe~
+Detailed blueprints for a prototype shield~
+A set of complicated blueprints describing the construction of a shield lie here.~
 ~
 32 0 1
-18706 5427 16590 12120
+18706 18703 18707 3017
 10 10 10
 5
 E
-sketch recipe~
-On the paper you see a sketch of a shield and notes on how to make it.
+blueprints recipe shield~
+You have found a set of blueprints detailing the construction of a much more
+combat-ready shield for use by the city guards throughout the realm.
+~
+E
+blueprints recipe shield~
+You have found a set of blueprints detailing the construction of a much more
+combat-ready shield for use by the city guards throughout the land.
 ~
 X
 ~
@@ -72,7 +80,7 @@ ring hero~
 A hero's ring~
 A powerful ring is lying here.~
 ~
-11 44623872 16387
+11 44099584 16387
 0 0 0 0
 25 25000 25000
 1
@@ -99,11 +107,11 @@ T
 400
 #18706
 heroes shield~
-A Heroes Shield~
+A hero's shield~
 A mighty shield is lying here.~
 ~
-9 112245760 513
-14 -1 -1 -1
+9 8391680 513
+15 0 0 0
 32 20000 20000
 0
 E
@@ -118,7 +126,7 @@ sky over a dark landscape filled with evil creatures.
 ~
 X
 ~
-3584 0 0
+1536 0 0
 M
 Your hands shiver in excitement as you grab the Shield of Heroes.~
 $n wears $s Heroes Shield and cries out in excitement.~
@@ -128,34 +136,36 @@ A
 19 0
 A
 18 0
-A
-53 -2
 T
 1000
 #18707
-portal~
-A warped portal~
-A warped portal is standing here slightly bending the light around it.~
+broken shield lower~
+The broken lower half of a tower shield~
+The bottom half of a large, broken shield lies here.~
 ~
-12 0 0
+9 0 513
 0 0 0 0
-2000 10 10
-100
+20 2 500
+2
 E
-portal~
-The portal is made of some unknown material, and it's formed like a rounded 
-rectangle wide enough for 2-3 people to enter at the same time. A serpent curls
-around the rim of the portal, biting its own tail. It's know that some consider
-this symbol of symbolising the eternal spinning of the Wheel Of Time, a once
-fabeled world lost in the winds of time.
+broken shield tower~
+At some point during the process of murdering its former
+owner, this shield was cleaved in two. Remarkably, due to
+the high quality construction of the original shield, this
+piece looks like it can still somehow be of use.   Perhaps
+you can repair it somehow.
 ~
 X
 ~
-64 0 0
+0 0 0
 M
-~
-~
-~
-~
+You feel no safer at all as you wear the broken shield.~
+$n blushes as $e notices that you see $m wearing a useless shield.~
+Why did you ever want to use that shield in the first place?.~
+$n feels a little embarrassed that $e used such a useless shield.~
+A
+19 -1
+A
+17 10
 #0
 $~
