@@ -270,12 +270,6 @@ FOUNTAIN
 Midgaard has a fountain for all to use.  It is located in Market
 Square and can be used to drink from or to fill containers from.
 #
-FOURTHS
-
-Fourths are illegal on RoninMud.
-
-SEE ALSO: MULTI
-#
 GODLIST
 
 For a list of active gods, type 'wizlist' or check out our
@@ -309,11 +303,8 @@ SEE ALSO: FLAG RULES
 "BAM"
 (BIG ASS MULTI)
 
-For the first week of every month, the gods allow you to play more than 3
-characters at a time, but no more than 5.
-
-BAM starts at 12:01 AM US Pacific Time on the 1st of the month and runs through
-11:59 PM US Pacific Time on the 7th.  That's a full 7 days.
+This is a special game mode where load rates are increased.  The
+multi limit remains at 5.
 
 All regular game rules still apply.
 
@@ -832,17 +823,17 @@ adventures, friend, and may the Gods be with you.
 #
 "INFORMATION"
 
-Multis are limited to 3 chars at a time.
+Multis are limited to 5 chars at a time.
 
 HELP PKILL AND PSTEAL, as you will be held responsible for
 knowing the info contained therein.  Pkill and Psteal are limited
 to those areas marked with a [*].  Corpse looting is always
 illegal and will be treated with the harshest punishment.
 
-Character sharing and playing 4 multies is not permitted.
-Playing a 4th is defined as any connection of a 4th character for
+Character sharing and playing 6 multies is not permitted.
+Playing a 6th is defined as any connection of a 6th character for
 any reason other than exchanging eq.  Linkdead characters count.
-If you take that 4th character out of the reception area, you are
+If you take that 6th character out of the reception area, you are
 counted as playing that char. See HELP MULTI.
 
 Character trading is illegal.  See HELP TRADE.
@@ -861,7 +852,7 @@ Some highlights about RoninMUD.
   - Challenging original areas.         (AREAS MAP)
   - 50 levels with 10 classes.          (LEVELS CLASSES)
   - Meta system to improve stats.       (META EXP)
-  - Multiplaying to a max of 3 characters.   (MULTI)
+  - Multiplaying to a max of 5 characters.   (MULTI)
   - Many communication channels.             (GOSSIP, AUCTION, CHAOS, QUEST)
   - Helpful friendly players.           (DEPUTY)
   - Extensive help file.                (HELP, HELP INDEX)
@@ -1065,7 +1056,7 @@ public channels or face the wrath of thy gods.  (GOSSIP)
 Thou shalt not share thy characters with anyone else or give thy
 characters away. (TRADE)
 
-Thou shalt not possess more than three bodies at one time.  (MULTI)
+Thou shalt not possess more than five bodies at one time.  (MULTI)
 
 Thou shalt not spam thy fellow mortal.
 
@@ -1198,7 +1189,7 @@ There are a few guidelines you should keep in mind while mudding:
    The stuff in there is intended to start out newbies, not as a quick way
    to earn your rent.
 6) Character sharing and trading are not permitted (TRADE).
-7) Multis are limited to 3 characters (MULTI)
+7) Multis are limited to 5 characters (MULTI)
 8) Botting is strictly forbidden. (BOT)
 9) Remember we're here to have fun.  The gods too.
 #
@@ -1278,11 +1269,11 @@ tank and a healer.
 #
 MULTI MULTIS
 
-RoninMUD allows a single player to have three characters logged on at the same
+RoninMUD allows a single player to have five characters logged on at the same
 time.  Note that a linkdead character counts towards this limit.  More than
-three characters may only be logged on when all characters remain in the
+five characters may only be logged on when all characters remain in the
 reception or vault room for the SOLE purpose of exchanging equipment.  This
-means that logging on more than three characters to have one of the chars cast
+means that logging on more than five characters to have one of the chars cast
 a spell on your other characters while all are in reception is PROHIBITED.
 
           1st offense:  1 char locked for 10 days.
@@ -6138,9 +6129,9 @@ See Also: MULTI-PLAY
 #
 MULTI-PLAY
 
-A person can use up to three characters at one time on Ronin.  Though
+A person can use up to five characters at one time on Ronin.  Though
 there is no limit on the amount of characters you own, you can only play
-a maximum of three at one time.  If a fourth character is logged on, it
+a maximum of three at one time.  If a sixth character is logged on, it
 can only be for a limited time and that person must stay in the
 Reception/Vault area, and must only be used for the exchange of
 gear and cannot be played.
