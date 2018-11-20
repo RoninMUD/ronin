@@ -342,6 +342,40 @@ M
 ~
 ~
 ~
+#3145
+adamantium bar trade tradebar~
+an adamantium tradebar~
+An adamantium tradebar lies here.~
+~
+8 402653184 16385
+0 0 0 0
+10 1000000000 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#3146
+palladium bar trade tradebar~
+a palladium tradebar~
+A palladium tradebar lies here.~
+~
+8 402653184 16385
+0 0 0 0
+10 100000000 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #3150
 map maker's scroll~
 the Map Maker's lost scroll~

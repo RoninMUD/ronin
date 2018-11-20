@@ -4072,7 +4072,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
           pc_class_types[(int)GET_CLASS(d->character)]);
       }
 
-      if (!IS_IMMORTAL(ch)) {
+      if (!IS_IMMORTAL(d->character)) {
         if (GET_SC(d->character)) {
           printf_to_char(ch, "Subclass: %s, Level %d\n\r",
             subclass_name[GET_SC(d->character) - 1],
