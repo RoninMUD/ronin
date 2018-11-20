@@ -2255,8 +2255,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       /* Handle player wimpy. */
       if (!IS_NPC(victim) &&
           !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) &&
-          (GET_HIT(victim) < GET_WIMPY(victim)) &&
           (damage_type != DAM_NO_BLOCK_NO_FLEE) &&
+          (GET_HIT(victim) < GET_WIMPY(victim)) &&
+          (!affected_by_spell(victim, SPELL_ORB_PROTECTION) || (affected_by_spell(victim, SPELL_ORB_PROTECTION) && (GET_MANA(victim) < 1))) &&
           !affected_by_spell(victim, SPELL_DIVINE_INTERVENTION)) {
         do_flee(victim, "", CMD_FLEE);
 
