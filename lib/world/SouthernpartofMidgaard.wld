@@ -544,6 +544,12 @@ D2
 ~
 0 3133 3129
 E
+house~
+The house is obviously very old and needs painting.  The heavy oaken door is
+equipped with a brass door knocker shaped as a goblin's head.  No name plate
+is to be seen anywhere.
+~
+E
 door knocker~
 As you look at it, the goblin door knocker comes alive!
 
@@ -551,12 +557,6 @@ The head splutters 'Tiz iz da houze uff Kwiff... Kuiffe... Qwiff... Erhm...'
 The head splutters 'Quiff... Quiffil...  Ne'er mind!  Quiffy livez ere!'
 
 It opens its mouth wide and gobbles 'Unlokk me!'
-~
-E
-house~
-The house is obviously very old and needs painting.  The heavy oaken door is
-equipped with a brass door knocker shaped as a goblin's head.  No name plate
-is to be seen anywhere.
 ~
 S
 #3127
@@ -756,10 +756,8 @@ The exit west leads to Emerald Avenue.
 ~
 0 -1 3117
 E
-typewriter~
-It is an ancient Quifatronic T-1000 mk I.  These machines are known for their
-incredible durability, and for their even more incredible weight.  They make
-a Cray II look like a laptop.
+chair chairs~
+Not the very least comfortable.
 ~
 E
 desk~
@@ -767,8 +765,10 @@ An extremely heavy desk.  It is so large that it doesn't even need drawers.
 Everything can be stored on its top.
 ~
 E
-chair chairs~
-Not the very least comfortable.
+typewriter~
+It is an ancient Quifatronic T-1000 mk I.  These machines are known for their
+incredible durability, and for their even more incredible weight.  They make
+a Cray II look like a laptop.
 ~
 S
 #3138
@@ -785,15 +785,15 @@ The waiting room is to the west.
 ~
 0 -1 3137
 E
+desk~
+This desk is obviously very old.  Nevertheless it looks as if has never been
+used.
+~
+E
 chair armchair~
 This chair is really a masterpiece.  A chair where one can sit as comfortably
 as in a bed.  All auditoriums should be equipped with these things.  A shame
 that there wouldn't be room for the students too, though.
-~
-E
-desk~
-This desk is obviously very old.  Nevertheless it looks as if has never been
-used.
 ~
 S
 #3139
