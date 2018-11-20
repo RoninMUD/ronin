@@ -27,7 +27,7 @@ The top half of a large, broken shield lies here.~
 9 0 513
 0 0 0 0
 20 2 500
-2
+5
 E
 broken shield tower~
 At some point during the process of murdering its former
@@ -56,16 +56,16 @@ A set of complicated blueprints describing the construction of a shield lie here
 32 0 1
 18706 18703 18707 3017
 10 10 10
-5
-E
-blueprints recipe shield~
-You have found a set of blueprints detailing the construction of a much more
-combat-ready shield for use by the city guards throughout the realm.
-~
+17
 E
 blueprints recipe shield~
 You have found a set of blueprints detailing the construction of a much more
 combat-ready shield for use by the city guards throughout the land.
+~
+E
+blueprints recipe shield~
+You have found a set of blueprints detailing the construction of a much more
+combat-ready shield for use by the city guards throughout the realm.
 ~
 X
 ~
@@ -83,7 +83,7 @@ A powerful ring is lying here.~
 11 44099584 16387
 0 0 0 0
 25 25000 25000
-1
+11
 E
 ring hero~
 This ring is a powerful ring from the Age of Legends, with mighty powers
@@ -146,7 +146,7 @@ The bottom half of a large, broken shield lies here.~
 9 0 513
 0 0 0 0
 20 2 500
-2
+5
 E
 broken shield tower~
 At some point during the process of murdering its former
