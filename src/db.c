@@ -22,6 +22,7 @@
 #include "fight.h"
 #include "spec.clan.h"
 #include "interpreter.h"
+#include "aquest.h"
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -2399,7 +2400,7 @@ void reset_zone(int zone, int full)
              pop_percent=obj_proto_table[object].obj_flags.repop_percent;
              /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
              if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
-             if(BAMDAY) pop_percent=pop_percent+20;
+             if(BAMDAY || is_order_item(ZCMD.arg1)) pop_percent=pop_percent+20;
              if(number(1,100)<=pop_percent||
                 obj_proto_table[object].obj_flags.type_flag==ITEM_KEY ||
                 obj_proto_table[object].obj_flags.type_flag==ITEM_CONTAINER ||
@@ -2418,7 +2419,7 @@ void reset_zone(int zone, int full)
            pop_percent=obj_proto_table[object].obj_flags.repop_percent;
            /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
            if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
-           if(BAMDAY) pop_percent=pop_percent+10;
+           if(BAMDAY || is_order_item(ZCMD.arg1)) pop_percent=pop_percent+10;
            if(number(1,100)<=pop_percent||
               obj_proto_table[object].obj_flags.type_flag==ITEM_KEY||
               obj_proto_table[object].obj_flags.type_flag==ITEM_CONTAINER ||
@@ -2444,7 +2445,7 @@ void reset_zone(int zone, int full)
                pop_percent=obj_proto_table[object].obj_flags.repop_percent;
                /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
                if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
-               if(BAMDAY) pop_percent=pop_percent+10;
+               if(BAMDAY || is_order_item(ZCMD.arg1)) pop_percent=pop_percent+10;
                if(number(1,100)<=pop_percent||
              obj_proto_table[object].obj_flags.type_flag==ITEM_KEY||
              obj_proto_table[object].obj_flags.type_flag==ITEM_CONTAINER||
@@ -2485,50 +2486,42 @@ void reset_zone(int zone, int full)
        break;
 
      case 'G': /* obj_to_char */
-     	if (mob)
-     		{
-            if(zone_table[zone].reset_mode==5) break;
-            object = real_object(ZCMD.arg1);
-            if(object != -1)
-              {
-               if(rebooting_check) mob_proto_table[mobile].loads++;
-               pop_percent=obj_proto_table[object].obj_flags.repop_percent;
-               /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
-               if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
-               if(BAMDAY) pop_percent=pop_percent+10;
-               if(number(1,100)<=pop_percent||
-             obj_proto_table[object].obj_flags.type_flag==ITEM_KEY|| full)
-             {
-                obj = read_object(object, REAL);
+       if (mob) {
+         if(zone_table[zone].reset_mode==5) break;
+         object = real_object(ZCMD.arg1);
+         if(object != -1) {
+           if(rebooting_check) mob_proto_table[mobile].loads++;
+           pop_percent=obj_proto_table[object].obj_flags.repop_percent;
+           /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
+           if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
+           if(BAMDAY || is_order_item(ZCMD.arg1)) pop_percent=pop_percent+10;
+           if(number(1,100)<=pop_percent || obj_proto_table[object].obj_flags.type_flag==ITEM_KEY|| full) {
+             obj = read_object(object, REAL);
              obj_to_char(obj, mob);
              last_cmd = 1;
-             }
-              }
-            }
+           }
+         }
+       }
        break;
 
      case 'E': /* object to equipment list */
-     	if (mob)
-     		{
-            if(zone_table[zone].reset_mode==5) break;
-            if(mob->equipment[ZCMD.arg3]) break;
-            object = real_object(ZCMD.arg1);
-            if(object != -1)
-              {
-               if(rebooting_check) mob_proto_table[mobile].loads++;
-               pop_percent=obj_proto_table[object].obj_flags.repop_percent;
-               /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
-               if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
-               if(BAMDAY) pop_percent=pop_percent+10;
-               if(number(1,100)<=pop_percent||
-             obj_proto_table[object].obj_flags.type_flag==ITEM_KEY || full)
-             {
-                obj = read_object(object, REAL);
+       if (mob) {
+         if(zone_table[zone].reset_mode==5) break;
+         if(mob->equipment[ZCMD.arg3]) break;
+         object = real_object(ZCMD.arg1);
+         if(object != -1) {
+           if(rebooting_check) mob_proto_table[mobile].loads++;
+           pop_percent=obj_proto_table[object].obj_flags.repop_percent;
+           /*if(rebooting_check && pop_percent<21) pop_percent=pop_percent/2;*/
+           if(pop_percent && rebooting_check) pop_percent+=pop_bonus;
+           if(BAMDAY || is_order_item(ZCMD.arg1)) pop_percent=pop_percent+10;
+           if(number(1,100)<=pop_percent || obj_proto_table[object].obj_flags.type_flag==ITEM_KEY || full) {
+             obj = read_object(object, REAL);
              equip_char(mob, obj, ZCMD.arg3);
              last_cmd = 1;
-             }
-              }
-            }
+           }
+         }
+       }
        break;
 
      case 'D': /* set state of door */

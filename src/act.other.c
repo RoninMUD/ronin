@@ -28,6 +28,7 @@
 #include "enchant.h"
 #include "cmd.h"
 #include "subclass.h"
+#include "aquest.h"
 
 /* extern procedures */
 
@@ -2318,13 +2319,12 @@ void do_skin(struct char_data *ch, char *argument, int cmd)
   send_to_char("You strip the skin off the corpse and rip the corpse apart.\n\r", ch);
   act("$n strips the skin off the corpse and rips the corpse apart.", TRUE, ch, 0,0, TO_ROOM);
 
-  repop_bonus = (BAMDAY) ? 10 : 0;
-
   for(i = 0; i < 6; i++) {
     if(corpse->obj_flags.skin_vnum[i] == 0)
       continue;
     if((rnum=real_object(corpse->obj_flags.skin_vnum[i])) > 0) {
       /* repop percent check */
+      repop_bonus = (BAMDAY || is_order_item(corpse->obj_flags.skin_vnum[i])) ? 10 : 0;
       if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent + repop_bonus) ||
          obj_proto_table[rnum].obj_flags.type_flag==ITEM_KEY) {
         obj = read_object(rnum, REAL);
