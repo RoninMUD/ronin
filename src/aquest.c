@@ -29,6 +29,7 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
+#include "aquest.h"
 
 extern void mob_do(CHAR* mob, char *arg);
 
@@ -2256,7 +2257,15 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
   return FALSE;
 }
 
+bool is_order_item(int vnum) {
+  for (int i = 0; i < NUMELEMS(aq_obj_master_list); i++) {
+    if (vnum == aq_obj_master_list[i][0]) {
+      return TRUE;
+    }
+  }
 
+  return FALSE;
+}
 
 void assign_aquest_special(void) {
   assign_obj(TEMPLATE_AQORDER, aq_order_obj);
