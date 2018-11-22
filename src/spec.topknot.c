@@ -492,7 +492,6 @@ OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
     ITEM_TREASURE,
     ITEM_POTION,
     ITEM_TRASH,
-    ITEM_TRAP,
     ITEM_FOOD,
     ITEM_MONEY,
   };
