@@ -580,37 +580,40 @@ tk_kender_steal(CHAR *ch)
       }
       return 0;
     }
-    else
-      if (number(0, 12))
-      {
-        l = tk_get_loot_eq(ch, vict);
+    //Disable kender EQ stealing. - Night
 
-        if (l != -1)
-        {
-          loot = unequip_char(vict, l);
-          obj_to_char(loot, ch);
-          save_char(vict, NOWHERE);
-          sprintf(buf, "%s just stole %s from %s",
-            MOB_SHORT(ch), OBJ_SHORT(loot),
-            (IS_NPC(vict) ? MOB_SHORT(vict) :
-              GET_NAME(vict)));
-          /*wizlog(buf, LEVEL_WIZ, 6);*/
-          log_s(buf);
-          loot->log = 1;
-          return 1;
-        }
+    //else
+    //  if (number(0, 12))
+    //  {
+    //    l = tk_get_loot_eq(ch, vict);
 
-        return 0;
-      }
-      else
-      {
-        act("You discover $n's hands in your pockets!",
-          FALSE, ch, 0, vict, TO_VICT);
-        act("Hey, $n stares at you strangely.",
-          TRUE, vict, 0, ch, TO_VICT);
-        act("$n stares at $N strangely.", TRUE, vict, 0, ch, TO_NOTVICT);
-      }
+    //    if (l != -1)
+    //    {
+    //      loot = unequip_char(vict, l);
+    //      obj_to_char(loot, ch);
+    //      save_char(vict, NOWHERE);
+    //      sprintf(buf, "%s just stole %s from %s",
+    //        MOB_SHORT(ch), OBJ_SHORT(loot),
+    //        (IS_NPC(vict) ? MOB_SHORT(vict) :
+    //          GET_NAME(vict)));
+    //      /*wizlog(buf, LEVEL_WIZ, 6);*/
+    //      log_s(buf);
+    //      loot->log = 1;
+    //      return 1;
+    //    }
+
+    //    return 0;
+    //  }
+    //  else
+    //  {
+    //    act("You discover $n's hands in your pockets!",
+    //      FALSE, ch, 0, vict, TO_VICT);
+    //    act("Hey, $n stares at you strangely.",
+    //      TRUE, vict, 0, ch, TO_VICT);
+    //    act("$n stares at $N strangely.", TRUE, vict, 0, ch, TO_NOTVICT);
+    //  }
   }
+
   return 0;
 }
 
