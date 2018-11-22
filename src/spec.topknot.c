@@ -485,33 +485,38 @@ tk_baron_drain (CHAR *ch, CHAR *v)
 }
 
 OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
-  OBJ *tar = 0, *tmp;
+  const int tk_loot_inv_item_types[] = {
+    ITEM_SCROLL,
+    ITEM_WAND,
+    ITEM_STAFF,
+    ITEM_TREASURE,
+    ITEM_POTION,
+    ITEM_TRASH,
+    ITEM_FOOD,
+    ITEM_MONEY,
+  };
 
-  for (tmp = ch->carrying; tmp; tmp = tmp->next_content) {
-    if (!CAN_SEE_OBJ(k, tmp) ||
-        (GET_OBJ_WEIGHT(tmp) > 20) ||
-        (OBJ_TYPE(tmp) == ITEM_SC_TOKEN) ||
-        (OBJ_TYPE(tmp) == ITEM_OTHER) ||
-        (OBJ_TYPE(tmp) == ITEM_LOCKPICK) ||
-        (OBJ_TYPE(tmp) == ITEM_BOARD) ||
-        (OBJ_TYPE(tmp) == ITEM_TICKET) ||
-        (OBJ_TYPE(tmp) == ITEM_SKIN) ||
-        (OBJ_TYPE(tmp) == ITEM_TROPHY) ||
-        (OBJ_TYPE(tmp) == ITEM_RECIPE) ||
-        (OBJ_TYPE(tmp) == ITEM_AQ_ORDER))
-      continue;
+  OBJ *tar = 0;
 
-    if (!tar)
-      tar = tmp;
+  for (OBJ *tmp = ch->carrying; tmp; tmp = tmp->next_content) {
+    if (!CAN_SEE_OBJ(k, tmp) || (GET_OBJ_WEIGHT(tmp) > 20)) continue;
 
-    if (!number(0, 5))
-      tar = tmp;
+    bool obj_ok = FALSE;
+
+    for (int i = 0; i < NUMELEMS(tk_loot_inv_item_types); i++) {
+      if (OBJ_TYPE(tmp) == tk_loot_inv_item_types[i]) {
+        obj_ok = TRUE;
+
+        break;
+      }
+    }
+
+    if (!obj_ok) continue;
+
+    if (!tar || !number(0, 5)) tar = tmp;
   }
 
-  if (number(0, 5))
-    tar = 0;
-
-  return tar;
+  return (tar && !number(0, 5)) ? tar : 0;
 }
 
 int
@@ -548,7 +553,7 @@ tk_kender_steal(CHAR *ch)
 {
   CHAR *vict;
   OBJ *loot = 0;
-  int l = -1;
+  //int l = -1;
   char buf[MAX_STRING_LENGTH];
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE))
@@ -575,37 +580,40 @@ tk_kender_steal(CHAR *ch)
       }
       return 0;
     }
-    else
-      if (number(0, 12))
-      {
-        l = tk_get_loot_eq(ch, vict);
+    //Disable kender EQ stealing. - Night
 
-        if (l != -1)
-        {
-          loot = unequip_char(vict, l);
-          obj_to_char(loot, ch);
-          save_char(vict, NOWHERE);
-          sprintf(buf, "%s just stole %s from %s",
-            MOB_SHORT(ch), OBJ_SHORT(loot),
-            (IS_NPC(vict) ? MOB_SHORT(vict) :
-              GET_NAME(vict)));
-          /*wizlog(buf, LEVEL_WIZ, 6);*/
-          log_s(buf);
-          loot->log = 1;
-          return 1;
-        }
+    //else
+    //  if (number(0, 12))
+    //  {
+    //    l = tk_get_loot_eq(ch, vict);
 
-        return 0;
-      }
-      else
-      {
-        act("You discover $n's hands in your pockets!",
-          FALSE, ch, 0, vict, TO_VICT);
-        act("Hey, $n stares at you strangely.",
-          TRUE, vict, 0, ch, TO_VICT);
-        act("$n stares at $N strangely.", TRUE, vict, 0, ch, TO_NOTVICT);
-      }
+    //    if (l != -1)
+    //    {
+    //      loot = unequip_char(vict, l);
+    //      obj_to_char(loot, ch);
+    //      save_char(vict, NOWHERE);
+    //      sprintf(buf, "%s just stole %s from %s",
+    //        MOB_SHORT(ch), OBJ_SHORT(loot),
+    //        (IS_NPC(vict) ? MOB_SHORT(vict) :
+    //          GET_NAME(vict)));
+    //      /*wizlog(buf, LEVEL_WIZ, 6);*/
+    //      log_s(buf);
+    //      loot->log = 1;
+    //      return 1;
+    //    }
+
+    //    return 0;
+    //  }
+    //  else
+    //  {
+    //    act("You discover $n's hands in your pockets!",
+    //      FALSE, ch, 0, vict, TO_VICT);
+    //    act("Hey, $n stares at you strangely.",
+    //      TRUE, vict, 0, ch, TO_VICT);
+    //    act("$n stares at $N strangely.", TRUE, vict, 0, ch, TO_NOTVICT);
+    //  }
   }
+
   return 0;
 }
 
