@@ -786,9 +786,9 @@ struct room_data
 #define ACT_FINAL      1073741824
 
 /* More mobile actions specials.act2 */
-#define ACT_NO_TOKEN      1
-#define ACT_IGNORE_SPHERE 2
-#define ACT2_FINAL        4
+#define ACT2_NO_TOKEN      1
+#define ACT2_IGNORE_SPHERE 2
+#define ACT2_FINAL         4
 
 /* New mob attacks - specials.att_type[] */
 #define ATT_UNDEFINED    0  /* Never use undefined */

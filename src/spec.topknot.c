@@ -553,7 +553,7 @@ tk_kender_steal(CHAR *ch)
 {
   CHAR *vict;
   OBJ *loot = 0;
-  int l = -1;
+  //int l = -1;
   char buf[MAX_STRING_LENGTH];
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE))

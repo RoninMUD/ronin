@@ -60,12 +60,12 @@ A set of complicated blueprints describing the construction of a shield lie here
 E
 blueprints recipe shield~
 You have found a set of blueprints detailing the construction of a much more
-combat-ready shield for use by the city guards throughout the land.
+combat-ready shield for use by the city guards throughout the realm.
 ~
 E
 blueprints recipe shield~
 You have found a set of blueprints detailing the construction of a much more
-combat-ready shield for use by the city guards throughout the realm.
+combat-ready shield for use by the city guards throughout the land.
 ~
 X
 ~
@@ -110,7 +110,7 @@ heroes shield~
 A hero's shield~
 A mighty shield is lying here.~
 ~
-9 8391680 513
+9 0 513
 15 0 0 0
 32 20000 20000
 0

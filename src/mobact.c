@@ -33,7 +33,7 @@ bool check_aggro_target(CHAR *attacker, CHAR *defender) {
       IS_IMMORTAL(defender) ||
       !CAN_SEE(attacker, defender) ||
       (IS_SET(GET_ACT(attacker), ACT_WIMPY) && AWAKE(defender)) ||
-      ((IS_AFFECTED(defender, AFF_SPHERE) || IS_AFFECTED(defender, AFF_INVUL)) && (GET_LEVEL(attacker) <= (GET_LEVEL(defender) - 5)) && !IS_SET(GET_ACT2(attacker), ACT_IGNORE_SPHERE))) {
+      ((IS_AFFECTED(defender, AFF_SPHERE) || IS_AFFECTED(defender, AFF_INVUL)) && (GET_LEVEL(attacker) <= (GET_LEVEL(defender) - 5)) && !IS_SET(GET_ACT2(attacker), ACT2_IGNORE_SPHERE))) {
     return FALSE;
   }
 
