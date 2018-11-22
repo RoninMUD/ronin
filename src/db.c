@@ -344,7 +344,7 @@ bool distribute_token(void) {
   };
 
   int mob_nr = number(1, top_of_mobt);
-  int zone_nr = real_zone(inzone(mob_proto_table[mob_nr].virtual));
+  int zone_nr = inzone(mob_proto_table[mob_nr].virtual);
 
   for (int i = 0; i < NUMELEMS(no_token_zones); i++) {
     if (zone_nr == no_token_zones[i]) return FALSE;
@@ -352,7 +352,7 @@ bool distribute_token(void) {
 
   if ((mob_proto_table[mob_nr].number < 1) ||
       (mob_proto_table[mob_nr].level < 15) ||
-      IS_SET(mob_proto_table[mob_nr].act2, ACT_NO_TOKEN) ||
+      IS_SET(mob_proto_table[mob_nr].act2, ACT2_NO_TOKEN) ||
       is_shop_v(mob_proto_table[mob_nr].virtual)) return FALSE;
 
   for (CHAR *mob = character_list; mob; mob = mob->next) {

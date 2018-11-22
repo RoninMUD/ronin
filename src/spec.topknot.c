@@ -485,33 +485,39 @@ tk_baron_drain (CHAR *ch, CHAR *v)
 }
 
 OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
-  OBJ *tar = 0, *tmp;
+  const int tk_loot_inv_item_types[] = {
+    ITEM_SCROLL,
+    ITEM_WAND,
+    ITEM_STAFF,
+    ITEM_TREASURE,
+    ITEM_POTION,
+    ITEM_TRASH,
+    ITEM_TRAP,
+    ITEM_FOOD,
+    ITEM_MONEY,
+  };
 
-  for (tmp = ch->carrying; tmp; tmp = tmp->next_content) {
-    if (!CAN_SEE_OBJ(k, tmp) ||
-        (GET_OBJ_WEIGHT(tmp) > 20) ||
-        (OBJ_TYPE(tmp) == ITEM_SC_TOKEN) ||
-        (OBJ_TYPE(tmp) == ITEM_OTHER) ||
-        (OBJ_TYPE(tmp) == ITEM_LOCKPICK) ||
-        (OBJ_TYPE(tmp) == ITEM_BOARD) ||
-        (OBJ_TYPE(tmp) == ITEM_TICKET) ||
-        (OBJ_TYPE(tmp) == ITEM_SKIN) ||
-        (OBJ_TYPE(tmp) == ITEM_TROPHY) ||
-        (OBJ_TYPE(tmp) == ITEM_RECIPE) ||
-        (OBJ_TYPE(tmp) == ITEM_AQ_ORDER))
-      continue;
+  OBJ *tar = 0;
 
-    if (!tar)
-      tar = tmp;
+  for (OBJ *tmp = ch->carrying; tmp; tmp = tmp->next_content) {
+    if (!CAN_SEE_OBJ(k, tmp) || (GET_OBJ_WEIGHT(tmp) > 20)) continue;
 
-    if (!number(0, 5))
-      tar = tmp;
+    bool obj_ok = FALSE;
+
+    for (int i = 0; i < NUMELEMS(tk_loot_inv_item_types); i++) {
+      if (OBJ_TYPE(tmp) == tk_loot_inv_item_types[i]) {
+        obj_ok = TRUE;
+
+        break;
+      }
+    }
+
+    if (!obj_ok) continue;
+
+    if (!tar || !number(0, 5)) tar = tmp;
   }
 
-  if (number(0, 5))
-    tar = 0;
-
-  return tar;
+  return (tar && !number(0, 5)) ? tar : 0;
 }
 
 int
