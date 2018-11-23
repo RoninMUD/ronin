@@ -67,7 +67,7 @@ Golden Stick~
 A small stick of golden color is nestled in the dirt.~
 ~
 4 1 16385
-50 2 2 216
+50 2 2 140
 1 90000 45000
 25
 X
@@ -931,5 +931,22 @@ A
 19 1
 B
 8192
+#12050
+stick golden~
+golden stick~
+A small stick of golden color is nestled in the dirt.~
+~
+4 1 16385
+50 2 2 85
+1 90000 45000
+25
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
