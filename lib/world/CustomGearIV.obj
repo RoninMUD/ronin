@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1690,6 +1690,27 @@ A
 19 5
 A
 18 5
+A
+53 15
+#29672
+reflective silver mittens soot~
+Reflective Silver Mittens~
+A reflective set of silver mittens lies here.~
+~
+9 134217794 129
+8 0 0 0
+10 1000000 80000
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
 A
 53 15
 #0
