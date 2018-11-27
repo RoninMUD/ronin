@@ -516,7 +516,7 @@ OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
     if (!tar || !number(0, 5)) tar = tmp;
   }
 
-  return (tar && !number(0, 5)) ? tar : 0;
+  return tar;
 }
 
 int
