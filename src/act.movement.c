@@ -1454,10 +1454,10 @@ void do_knock(struct char_data *ch, char *argument, int cmd) {
             if (back->to_room_r == CHAR_REAL_ROOM(ch))
             REMOVE_BIT(back->exit_info, EX_LOCKED);
 
-          if (GET_MOVE(ch) > 30) GET_MOVE(ch) -= 30;
-          else       GET_MOVE(ch) = 0;
+        if (GET_MOVE(ch) > 30) GET_MOVE(ch) -= 30;
+        else       GET_MOVE(ch) = 0;
 
-          return;
+        return;
     }
     if (col==1) send_to_char("You realize it is impossible to break this lock.\n\r",ch);
     else send_to_char("You were unable to break the lock.\n\r",ch);

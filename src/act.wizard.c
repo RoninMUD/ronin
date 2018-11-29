@@ -5554,15 +5554,17 @@ void do_alert(struct char_data *ch, char *argument, int cmd)
   if(!strcmp(name,"all")) {
     for (pt = descriptor_list; pt; pt = pt->next)
       if(pt->connected==CON_PLYNG && pt->character != ch)
-     if(CAN_SEE(ch, pt->character))
-       send_to_char( alertstring, pt->character);
-       send_to_char(buf,pt->character);
-  } else {
+        if(CAN_SEE(ch, pt->character)) {
+          send_to_char(alertstring, pt->character);
+          send_to_char(buf,pt->character);
+        }
+  }
+  else {
     if(!(victim = get_char_vis( ch, name))) {
       send_to_char("That person can't be found.\n\r",ch);
       return;
     }
-    send_to_char( alertstring, victim);
+    send_to_char(alertstring, victim);
     send_to_char(buf,victim);
   }
 }

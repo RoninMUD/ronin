@@ -588,7 +588,7 @@ void char_from_room(struct char_data *ch)
     for (i = world[CHAR_REAL_ROOM(ch)].people;
        i->next_in_room != ch; i = i->next_in_room);
 
-     i->next_in_room = ch->next_in_room;
+    i->next_in_room = ch->next_in_room;
   }
 
   ch->in_room_r = NOWHERE;

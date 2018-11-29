@@ -1793,10 +1793,10 @@ int process_input(struct descriptor_data *t)
 
     /* find end of entry */
     for (; ISNEWL(*(t->buf + i)); i++);
-     /* squelch the entry from the buffer */
-     for (squelch = 0;; squelch++)
+    /* squelch the entry from the buffer */
+    for (squelch = 0;; squelch++)
       if ((*(t->buf + squelch) = *(t->buf + i + squelch)) == '\0')
-       break;
+        break;
 
     k = 0;
     i = 0;

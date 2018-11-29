@@ -138,7 +138,7 @@ void add_program(struct program_info prg, struct char_data *ch);
 struct char_data *get_ch_by_id(int num);
 
 int get_weapon_type(OBJ *obj);
-const char const * get_weapon_type_desc(OBJ *obj);
+const char * get_weapon_type_desc(OBJ *obj);
 
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
