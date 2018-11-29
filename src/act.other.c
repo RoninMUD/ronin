@@ -2340,11 +2340,12 @@ void do_skin(struct char_data *ch, char *argument, int cmd)
   corpse->obj_flags.timer=MAX(1,corpse->obj_flags.timer);
 }
 
+
 void do_email(struct char_data *ch, char *argument, int cmd) {
   char usage[]="\
 This command allows you to assign an email address and turn on/off postcard\n\r\
 copying to that address.\n\r\n\r\
-  Usage: email yes/no - toggles postcard email copies\n\r\
+  Usage: email yes/no - turns on/off postcard email copies\n\r\
                show   - shows current email address\n\r\
                set <address> - sets email address\n\r";
   char arg[MIL];
@@ -2388,6 +2389,10 @@ copying to that address.\n\r\n\r\
 }
 
 
+#define LOCATE_NONE      (1 << 0)
+#define LOCATE_QUESTCARD (1 << 1)
+#define LOCATE_CORPSE    (1 << 2)
+
 void do_locate(CHAR *ch, char *arg, int cmd) {
   char buf[MSL], name[MIL];
 
@@ -2406,7 +2411,18 @@ void do_locate(CHAR *ch, char *arg, int cmd) {
 
     return;
   }
-  else if (!isname(name, "questcard corpse pcorpse")) {
+
+  int locate_type = LOCATE_NONE;
+
+  if (!str_cmp(name, "questcard")) {
+    SET_BIT(locate_type, LOCATE_QUESTCARD);
+  }
+
+  if (!str_cmp(name, "corpse") || !str_cmp(name, "pcorpse")) {
+    SET_BIT(locate_type, LOCATE_CORPSE);
+  }
+
+  if (locate_type == LOCATE_NONE) {
     send_to_char("You may only use locate to find questcards and player corpses.\n\rValid keywords for locate are: questcard corpse pcorpse\n\r", ch);
 
     return;
@@ -2421,8 +2437,8 @@ void do_locate(CHAR *ch, char *arg, int cmd) {
 
     bool locate_ok = FALSE;
 
-    if (!locate_ok && (V_OBJ(temp_obj) == 35)) locate_ok = TRUE; // Questcard
-    if (!locate_ok && ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (OBJ_VALUE3(temp_obj) == 1) && isname("pcorpse", OBJ_NAME(temp_obj)))) locate_ok = TRUE; // Player corpse
+    if (IS_SET(locate_type, LOCATE_QUESTCARD) && (V_OBJ(temp_obj) == 35)) locate_ok = TRUE; // Questcard
+    else if (IS_SET(locate_type, LOCATE_CORPSE) && ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (OBJ_VALUE3(temp_obj) == 1) && isname("pcorpse", OBJ_NAME(temp_obj)))) locate_ok = TRUE; // Player corpse
 
     if (!locate_ok) continue;
 
