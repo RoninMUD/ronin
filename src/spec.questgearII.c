@@ -806,7 +806,7 @@ typedef enum {
   RING_TYPE_COUNT
 } ring_type;
 
-static const char const *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
+static const char *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
   { /* Vilya */
     "vilya",
     "A rush of air passes over you, and Vilya's sapphire glows a deeper shade of blue.",
@@ -889,7 +889,7 @@ static const char const *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
   }
 };
 
-static const char const *ring_string(int vnum, ring_string_id id) {
+static const char *ring_string(int vnum, ring_string_id id) {
   ring_type type = RING_TYPE_COUNT;
   char const *result = NULL;
 

@@ -1333,64 +1333,60 @@ void do_ask(CHAR *ch, char *arg, int cmd) {
       IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
     /* NPCs/Players can't ask through NoMessage. */
     act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
-
     return;
   }
-  else
-    if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-        IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-      /* NPCs/Players can't ask through NoShout. */
-      act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
 
-      return;
-    }
-    else
-      if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-          IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
-          !IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-        /* Immortals can ask through NoMessage. */
-        sprintf(buf, "You ask $N (deaf), '%s'", message);
-      }
-      else
-        if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
+      IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+    /* NPCs/Players can't ask through NoShout. */
+    act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
+    return;
+  }
+
+  if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+      IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
+      !IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+    /* Immortals can ask through NoMessage. */
+    sprintf(buf, "You ask $N (deaf), '%s'", message);
+  }
+  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
             !IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
             IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-          /* Immortals can ask through NoShout. */
-          sprintf(buf, "You ask $N (noshout), '%s'", message);
-        }
-        else
-          if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-              IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
-              IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-            /* Immortals can ask through NoMessage & NoShout. */
-            sprintf(buf, "You ask $N (deaf & noshout), '%s'", message);
-          }
-          else {
-            /* Everything worked out. */
-            sprintf(buf, "You ask $N, '%s'", message);
-          }
+    /* Immortals can ask through NoShout. */
+    sprintf(buf, "You ask $N (noshout), '%s'", message);
+  }
+  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+           IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
+            IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+    /* Immortals can ask through NoMessage & NoShout. */
+    sprintf(buf, "You ask $N (deaf & noshout), '%s'", message);
+  }
+  else {
+    /* Everything worked out. */
+    sprintf(buf, "You ask $N, '%s'", message);
+  }
 
-          /* Show the text to the acting character. */
-          act(buf, 0, ch, 0, listener, TO_CHAR);
+  /* Show the text to the acting character. */
+  act(buf, 0, ch, 0, listener, TO_CHAR);
 
-          /* Build the buffer for the listening player. */
-          sprintf(buf, "$n asks you '%s'", message);
+  /* Build the buffer for the listening player. */
+  sprintf(buf, "$n asks you '%s'", message);
 
-          /* Show the text to the listening player. */
-          act(buf, 0, ch, 0, listener, TO_VICT);
+  /* Show the text to the listening player. */
+  act(buf, 0, ch, 0, listener, TO_VICT);
 
-          /* Show some text to the room. */
-          if (listener == ch) {
-            act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
-          }
-          else {
-            act("$n asks $N a question.", FALSE, ch, 0, listener, TO_NOTVICT);
-          }
+  /* Show some text to the room. */
+  if (listener == ch) {
+    act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+  else {
+    act("$n asks $N a question.", FALSE, ch, 0, listener, TO_NOTVICT);
+  }
 
-          /* Update the listening player's reply_to variable. */
-          if (!IS_NPC(ch)) {
-            listener->specials.reply_to = GET_ID(ch);
-          }
+  /* Update the listening player's reply_to variable. */
+  if (!IS_NPC(ch)) {
+    listener->specials.reply_to = GET_ID(ch);
+  }
 }
 
 
@@ -1449,67 +1445,63 @@ void do_whisper(CHAR *ch, char *arg, int cmd) {
   /* Various conditions that might prevent a character from using whisper.
      Here we're building the buffer for the acting character. */
   if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-    IS_SET(listener->specials.pflag, PLR_NOMESSAGE)) {
+      IS_SET(listener->specials.pflag, PLR_NOMESSAGE)) {
     /* NPCs/Players can't whisper through NoMessage. */
     act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
-
     return;
   }
-  else
-    if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
+
+  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
       IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-      /* NPCs/Players can't whisper through NoShout. */
-      act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
+    /* NPCs/Players can't whisper through NoShout. */
+    act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
+    return;
+  }
 
-      return;
-    }
-    else
-      if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-        IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-        !IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-        /* Immortals can whisper through NoMessage. */
-        sprintf(buf, "You whisper to $N (deaf), '%s'", message);
-      }
-      else
-        if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-          !IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-          IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-          /* Immortals can whisper through NoShout. */
-          sprintf(buf, "You whisper to $N (noshout), '%s'", message);
-        }
-        else
-          if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-            IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-            IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-            /* Immortals can whisper through NoMessage & NoShout. */
-            sprintf(buf, "You whisper to $N (deaf & noshout), '%s'", message);
-          }
-          else {
-            /* Everything worked out. */
-            sprintf(buf, "You whisper to $N, '%s'", message);
-          }
+  if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+      IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
+      !IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
+    /* Immortals can whisper through NoMessage. */
+    sprintf(buf, "You whisper to $N (deaf), '%s'", message);
+  }
+  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+           !IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
+           IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
+    /* Immortals can whisper through NoShout. */
+    sprintf(buf, "You whisper to $N (noshout), '%s'", message);
+  }
+  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
+           IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
+           IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
+    /* Immortals can whisper through NoMessage & NoShout. */
+    sprintf(buf, "You whisper to $N (deaf & noshout), '%s'", message);
+  }
+  else {
+    /* Everything worked out. */
+    sprintf(buf, "You whisper to $N, '%s'", message);
+  }
 
-          /* Show the text to the acting character. */
-          act(buf, 0, ch, 0, listener, TO_CHAR);
+  /* Show the text to the acting character. */
+  act(buf, 0, ch, 0, listener, TO_CHAR);
 
-          /* Build the buffer for the listening player. */
-          sprintf(buf, "$n whispers to you '%s'", message);
+  /* Build the buffer for the listening player. */
+  sprintf(buf, "$n whispers to you '%s'", message);
 
-          /* Show the text to the listening player. */
-          act(buf, 0, ch, 0, listener, TO_VICT);
+  /* Show the text to the listening player. */
+  act(buf, 0, ch, 0, listener, TO_VICT);
 
-          /* Show some text to the room. */
-          if (listener == ch) {
-            act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
-          }
-          else {
-            act("$n whispers something to $N.", FALSE, ch, 0, listener, TO_NOTVICT);
-          }
+  /* Show some text to the room. */
+  if (listener == ch) {
+    act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
+  }
+  else {
+    act("$n whispers something to $N.", FALSE, ch, 0, listener, TO_NOTVICT);
+  }
 
-          /* Update the listening player's reply_to variable. */
-          if (!IS_NPC(ch)) {
-            listener->specials.reply_to = ch->ver3.id;
-          }
+  /* Update the listening player's reply_to variable. */
+  if (!IS_NPC(ch)) {
+    listener->specials.reply_to = ch->ver3.id;
+  }
 }
 
 

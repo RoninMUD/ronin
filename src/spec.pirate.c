@@ -314,15 +314,15 @@ Shovel (OBJ *shovel, CHAR *ch, int cmd, char *arg) {
   if (!IS_MORTAL(ch))
     return FALSE;
 
-    scorpion = real_mobile(SCORPION);
-    skeleton = real_mobile(SKELETON);
+  scorpion = real_mobile(SCORPION);
+  skeleton = real_mobile(SKELETON);
 
-    chest = real_object(CHESTV);
-    d_bracelet = real_object(DIAMOND_BRACELET);
-    d_ring = real_object(DIAMOND_RING);
-    treasure = real_object(TREASURE);
-    gloves = real_object(SILK_GLOVES);
-    pants = real_object(SILK_PANTS);
+  chest = real_object(CHESTV);
+  d_bracelet = real_object(DIAMOND_BRACELET);
+  d_ring = real_object(DIAMOND_RING);
+  treasure = real_object(TREASURE);
+  gloves = real_object(SILK_GLOVES);
+  pants = real_object(SILK_PANTS);
 
   if (shovel == EQ(ch,HOLD)) {
     one_argument (arg, buf);

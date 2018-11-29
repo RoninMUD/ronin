@@ -353,7 +353,7 @@ void make_corpse(CHAR *ch)
   object_list = corpse;
 
   for(o = corpse->contains; o; o->in_obj = corpse, o = o->next_content);
-   object_list_new_owner(corpse, 0);
+  object_list_new_owner(corpse, 0);
 
   if(GET_LEVEL(ch)<10 && corpse->obj_flags.cost==PC_CORPSE &&
      !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,DEATH) &&

@@ -3511,7 +3511,7 @@ edit zone <#> command change <#> D <if_flag> <room#> <direction  > <state(0-2)>\
          arg2 = strtok(NULL, " ");
          if(arg2)
            zone_table[zone].lifespan = atoi(arg2);
-           send_to_char("Done.\n\r", ch);
+         send_to_char("Done.\n\r", ch);
          break;
       case EDIT_ZONE_MODE:
          arg2 = strtok(NULL, " ");

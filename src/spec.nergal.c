@@ -383,45 +383,44 @@ int nergal_bodyguard(CHAR *mob,CHAR *ch, int cmd, char *arg)
    CHAR *vict;
    struct affected_type_5 af;
 
-   switch (cmd)
-     {
-     case MSG_MOBACT:
-        if (!mob->specials.fighting)
-           return FALSE;
-	   for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room )
-	     if (vict->specials.fighting==mob && number(0,4)==0)
-	       break;
+   switch (cmd) {
+   case MSG_MOBACT:
+     if (!mob->specials.fighting)
+       return FALSE;
+     for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room)
+       if (vict->specials.fighting==mob && number(0,4)==0)
+         break;
 
-	   if (!vict) return FALSE;
+     if (!vict) return FALSE;
 
-           switch(number(0,1))
-             {
-             case 0:   /*VOMIT!*/
-	       act("$n vomits on $N!", 1, mob, 0, vict,TO_NOTVICT);
-	       act("$n vomits on you!", 1, mob, 0, vict ,TO_VICT);
-	       spell_acid_breath(GET_LEVEL(mob), mob, vict, 0);
-               break;
-             case 1:  /*Diseased Claw!*/
-               af.type = SPELL_POISON;
-               af.modifier = -6;
-               af.location = APPLY_STR;
-               af.duration = number(2,4);
-               af.bitvector = AFF_POISON;
-               af.bitvector2 = 0;
-               affect_to_char (vict, &af);
+     switch(number(0,1)) {
+     case 0:   /*VOMIT!*/
+       act("$n vomits on $N!", 1, mob, 0, vict,TO_NOTVICT);
+       act("$n vomits on you!", 1, mob, 0, vict ,TO_VICT);
+       spell_acid_breath(GET_LEVEL(mob), mob, vict, 0);
+       break;
+     case 1:  /*Diseased Claw!*/
+       af.type = SPELL_POISON;
+       af.modifier = -6;
+       af.location = APPLY_STR;
+       af.duration = number(2,4);
+       af.bitvector = AFF_POISON;
+       af.bitvector2 = 0;
+       affect_to_char (vict, &af);
 
-	       act("$n claws $N with $s filthy claws!", 1, mob, 0, vict,TO_NOTVICT);
-	       act("$n rakes you with $s filthy claws!", 1, mob, 0, vict ,TO_VICT);
-               break;
-             }
-           break;
-      case MSG_DIE:
-	   act("$n's body ruptures in a noxious cloud.", 0, mob, 0,0 ,TO_ROOM);
-	   cast_poison_smoke(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, 0, 0);
-           break;
-       }
+       act("$n claws $N with $s filthy claws!", 1, mob, 0, vict,TO_NOTVICT);
+       act("$n rakes you with $s filthy claws!", 1, mob, 0, vict ,TO_VICT);
+       break;
+     }
+     break;
+   case MSG_DIE:
+     act("$n's body ruptures in a noxious cloud.", 0, mob, 0,0 ,TO_ROOM);
+     cast_poison_smoke(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, 0, 0);
+     break;
+   }
    return FALSE;
- }
+}
+
 int nergal_larvae(CHAR *mob,CHAR *ch, int cmd, char *arg)
  {
    CHAR *vict,*temp;

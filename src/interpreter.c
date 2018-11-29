@@ -1046,7 +1046,7 @@ int _parse_name(char *arg, char *name)
 
   /* skip whitespaces */
   for (; isspace(*arg); arg++);
-   for (i = 0;( *name = *arg); arg++, i++, name++)
+  for (i = 0;( *name = *arg); arg++, i++, name++)
     if ((*arg <0) || !isalpha(*arg) || i > 15)
       return(1);
 

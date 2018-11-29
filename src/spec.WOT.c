@@ -49,7 +49,7 @@ int wot_merchant(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  const char const *msg[] = {
+  static const char *msg[] = {
     "I wish the Aiel would reopen the traderoutes to the Waste. Grandpa always said that the silk trade was the most profitable.",
     "Are you also heading to Tarwins Gap? I hear they are gathering an army there.",
     "I wish I wasn't heading to Tarwins Gap. Thats where the Trollocs will invade first. They better hold off the invasion until I've unloaded my goods.",
@@ -97,7 +97,7 @@ int wot_hunter(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  const char const *msg[] = {
+  static const char *msg[] = {
     "To Tarwins Gap!",
     "Stop following me! I will not lead you to the Horn of Valere. It's mine!",
     "Hey! Stop following me!",
@@ -139,7 +139,7 @@ int wot_tinker(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  static const char const *msg[] = {
+  static const char *msg[] = {
     "Do you follow the way of the leaf? I never hit anybody. Carl did once and father almost abandoned him in Camelyn!",
     "Hello!",
     "You're weird!"
@@ -196,7 +196,7 @@ int wot_seeker(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  const char const *msg[] = {
+  static const char *msg[] = {
     "Greetings stranger! Do you know the song?",
     "Nobody remembers the song, but one day we will find it!",
     "Welcome to our camp strangers. Please sit down and rest your feet while we get to know each other."
@@ -267,7 +267,7 @@ int wot_guard(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  static const char const *msg[] = {
+  static const char *msg[] = {
     "Halt! This city is closed for foreigners for the time being.",
     "Hello travellers! The city is currently closed for foreigners.",
     "Hold on strangers! We want no foreigners in the city at the moment. The gates are closed!"
@@ -305,13 +305,13 @@ int wot_whitecloak(CHAR *mob, CHAR *vict, int cmd, char *argument) {
   char buf[MIL] = { 0 };
   size_t i = 0;
 
-  const char const *msg_fight[] = {
+  static const char *msg_fight[] = {
     "Die Darkfriend!",
     "I sense the evil in you! Confess!",
     "I will get the truth from you in the end!"
   };
 
-  const char const *msg_notfight[] = {
+  static const char *msg_notfight[] = {
     "Do you walk in the light?",
     "Do you fear the light?"
   };

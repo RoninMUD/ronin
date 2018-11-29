@@ -1018,7 +1018,7 @@ void list_char_to_char(CHAR *list, CHAR *ch, int mode) {
 
 int check_extra_desc(CHAR *ch,char *tmp_desc);
 
-static const char const *decay_string_table[] = {
+static const char *decay_string_table[] = {
   "like new",
   "almost new",
   "fairly new",
@@ -1031,7 +1031,7 @@ static const char const *decay_string_table[] = {
   "about to crumble"
 };
 
-static const int decay_string_max = (int)(sizeof(decay_string_table)/sizeof(const char const*) - 1);
+static const int decay_string_max = (int)(sizeof(decay_string_table)/sizeof(const char *) - 1);
 
 bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *arg) {
   struct extra_descr_data *list = NULL;
@@ -2374,7 +2374,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           continue;
         }
 
-        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+        snprintf(buf, sizeof(buf), "'%.252s'", af_list[i].name);
 
         if (af_list[i].duration == -1) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
@@ -2408,7 +2408,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
           continue;
         }
 
-        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+        snprintf(buf, sizeof(buf), "'%.252s'", af_list[i].name);
 
         if (af_list[i].duration == -1) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
@@ -2431,7 +2431,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       for (i = 0; i < MAX_SPL_LIST; i++) {
         if (af_list[i].source != AFF_SRC_EQ) continue;
 
-        snprintf(buf, sizeof(buf), "'%s'", af_list[i].name);
+        snprintf(buf, sizeof(buf), "'%.252s'", af_list[i].name);
 
         printf_to_char(ch, "Equipment%s: %-*s Never Expires\n\r",
           (ch->affected || ch->enchantments) ? "  " : "", longest_str + 2, buf);
@@ -3556,20 +3556,20 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 
   for (d = descriptor_list; d; d = d->next){
     if (d->character && GET_NAME(d->character) &&
-        CAN_SEE(ch, d->character)){
+        CAN_SEE(ch, d->character)) {
 
-     if(d->connected==CON_PLYNG) timer=d->character->specials.timer;
-     else timer=d->timer;
-          if(d->original)
-      sprintf(line, "#%2d [-- --] %-12s %-20s %2d ", d->descriptor,
-              GET_NAME(d->original),connected_types[d->connected],
-              timer);
-     else
-      sprintf(line, "#%2d [%2d %2s] %-12s %-12s %2d ",
-              d->descriptor, d->character->player.level,
-              class_abbrevs[d->character->player.class],
-              GET_NAME(d->character),connected_types[d->connected],
-              timer);
+      if(d->connected==CON_PLYNG) timer=d->character->specials.timer;
+      else timer=d->timer;
+      if(d->original)
+        sprintf(line, "#%2d [-- --] %-12s %-20s %2d ", d->descriptor,
+               GET_NAME(d->original),connected_types[d->connected],
+               timer);
+      else
+        sprintf(line, "#%2d [%2d %2s] %-12s %-12s %2d ",
+                d->descriptor, d->character->player.level,
+                class_abbrevs[d->character->player.class],
+                GET_NAME(d->character),connected_types[d->connected],
+                timer);
       if (*d->host!='\0')
         sprintf(line + strlen(line), "[%-20s]\n\r", d->host);
       else if (d->addr) {

@@ -228,7 +228,7 @@ int tweef_boss_room(int room, CHAR *ch, int cmd, char *arg)
   CHAR *temp, *next;
   bool teinfort_life = 0, priestess_life = 0;
 
-  if(world[room].number == TEINFORT_ROOM || world[room].number == PRIESTESS_ROOM);
+  if(world[room].number == TEINFORT_ROOM || world[room].number == PRIESTESS_ROOM)
   {
     if(cmd == MSG_TICK)
     {

@@ -1863,7 +1863,7 @@ int get_weapon_type(OBJ *obj) {
   return w_type;
 }
 
-const char const *
+const char  *
 get_weapon_type_desc(OBJ *obj) {
   char const * result = NULL;
 

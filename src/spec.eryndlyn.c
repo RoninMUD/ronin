@@ -179,7 +179,7 @@ int drow_queen(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       for(tmp=world[CHAR_REAL_ROOM(mob)].people;tmp;tmp=tmp->next_in_room) {
         if(tmp!=mob && tmp!=vict1 && tmp!=vict2)
           send_to_char(buf,tmp);
-          send_to_char(buf1,tmp);
+        send_to_char(buf1,tmp);
       }
       sprintf(buf,"The Spider Queen laughs heartily as she hurls you into a nearby wall..\n\r");
       sprintf(buf1,"The Spider Queen's flailing limbs reach and grab for you and %s.\n\r",GET_NAME(vict2));
