@@ -121,20 +121,8 @@ void assign_topknot (void)
 
 /* Utility Functions */
 
-int
-tk_is_friend (CHAR *ch)
-{
-  int virtual;
-
-  if (!IS_NPC (ch))
-    return 0;
-  else
-    {
-      virtual = V_MOB (ch);
-      if (TK_BARON <= virtual && virtual <= TK_KENDER_END)
-	return 1;
-    }
-  return 0;
+int tk_is_friend(CHAR *ch) {
+  return ((IS_NPC(ch) && (V_MOB(ch) >= TK_BARON) && (V_MOB(ch) <= TK_KENDER_END)) ? 1 : 0);
 }
 
 int
@@ -312,31 +300,25 @@ tk_get_baron_victim (CHAR *ch)
   return vict;
 }
 
-CHAR*
-tk_get_steal_victim (CHAR *ch)
-{
-  CHAR *tmp, *vict = 0;
+CHAR* tk_get_steal_victim(CHAR *ch) {
+  CHAR *vict = 0;
 
-  for (tmp = world[CHAR_REAL_ROOM(ch)].people;tmp;tmp = tmp->next_in_room)
-    if (!tk_is_friend (tmp) && CAN_SEE(ch, tmp) &&
-	(IS_NPC (tmp) ||
-	 (GET_LEVEL (tmp) < LEVEL_IMM && GET_LEVEL (tmp) > 20)))
-      {
-	if (V_MOB(ch) == TK_SLAPHOFF && !IS_NPC(tmp) &&
-	    GET_LEVEL (tmp) < 25)
-	  continue;
+  for (CHAR *tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
+    if (tmp->desc && (!tmp->desc->descriptor || (tmp->desc->connected != CON_PLYNG)))
+      continue;
 
-	if (tmp->desc && !tmp->desc->descriptor)
-	  continue;
+    if (tk_is_friend(tmp) || !CAN_SEE(ch, tmp) || (IS_NPC(tmp) && (inzone(V_MOB(tmp)) == 30)))
+      continue;
 
-	if (tmp->desc && (tmp->desc->connected != CON_PLYNG)) continue;
+    if ((V_MOB(ch) == TK_SLAPHOFF) && !IS_NPC(tmp) && (GET_LEVEL(tmp) < 25))
+      continue;
 
-	if (!vict)
-	  vict = tmp;
+    if (!IS_NPC(tmp) && (IS_IMMORTAL(tmp) || (GET_LEVEL(tmp) < 21)))
+      continue;
 
-	if (!number (0,9))
-	  vict = tmp;
-      }
+    if (!vict || !number(0, 9))
+      vict = tmp;
+  }
 
   return vict;
 }
@@ -548,9 +530,7 @@ tk_get_loot_eq (CHAR *k, CHAR *ch)
   return tar;
 }
 
-int
-tk_kender_steal(CHAR *ch)
-{
+int tk_kender_steal(CHAR *ch) {
   CHAR *vict;
   OBJ *loot = 0;
   //int l = -1;
@@ -559,13 +539,11 @@ tk_kender_steal(CHAR *ch)
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE))
     return 0;
 
-  if ((vict = tk_get_steal_victim(ch)))
-  {
-    if (number(0, 19))
-    {
+  if ((vict = tk_get_steal_victim(ch))) {
+    if (number(0, 19)) {
       loot = tk_get_loot_inv(ch, vict);
-      if (loot)
-      {
+
+      if (loot) {
         obj_from_char(loot);
         obj_to_char(loot, ch);
         save_char(vict, NOWHERE);
@@ -576,8 +554,10 @@ tk_kender_steal(CHAR *ch)
         /*wizlog(buf, LEVEL_WIZ, 6);*/
         log_s(buf);
         loot->log = 1;
+
         return 1;
       }
+
       return 0;
     }
     //Disable kender EQ stealing. - Night
