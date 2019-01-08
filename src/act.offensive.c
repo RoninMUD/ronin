@@ -417,7 +417,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
 
       act("You have been kicked by $n.", FALSE, ch, 0, tmp_victim, TO_VICT);
 
-      damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), MIN(GET_LEVEL(ch) * 2, 60)), TYPE_UNDEFINED, DAM_PHYSICAL);
+      damage(ch, tmp_victim, calc_position_damage(GET_POS(tmp_victim), (GET_LEVEL(ch) * 2)), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
 
     auto_learn_skill(ch, SKILL_SPIN_KICK);
