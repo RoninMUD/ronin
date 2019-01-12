@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -420,11 +420,11 @@ $n wraps strands of twisted metal around $s arms.~
 You unwind the twisted metal from your arms.~
 $n carefully unwinds the strands of twisted metal from $s arms.~
 A
-19 4
+19 5
 A
 18 2
 A
-53 9
+53 15
 B
 16777216
 #29615
@@ -1711,6 +1711,38 @@ M
 ~
 A
 19 5
+A
+53 15
+#29673
+anodized chimera scale soot~
+An Anodized Chimera Scale~
+A metallic animal scale has been abandoned here.~
+~
+9 134217732 513
+25 -1 -1 -1
+146 713262 24955
+0
+E
+nomad humanshield~
+Everyone knows nomads make the best tanks, the term "meat-shield" is hardly an
+unfamiliar moniker. Say what you will about the sick mind behind this makeshift
+shield but its creator's logic was sound: if a nomad makes a good tank, it stands
+to reason they would make an excellent shield. Still, you cannot help but wonder
+whether this unfortunate nomad was put to use after he died, or slaughtered for
+this purpose specifically.
+~
+X
+~
+0 0 0
+M
+$n strap the chimera scale to $s arm and ready for battle.~
+$n straps the chimera scale to $s arm and readies for battle.~
+$n unstrap the cimera scale from $s arm.~
+$n unstraps the chimera scale from $s arm.~
+A
+19 5
+A
+13 200
 A
 53 15
 #0
