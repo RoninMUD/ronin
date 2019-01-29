@@ -94,15 +94,15 @@ rock~
 8 -1 21204
 E
 rock~
-You closely examine the opening in the rock.  You peer down into the opening 
-but it is too dark to see anything.  The opening is barely wide enough to fix one 
-person. It look rather interesting.
-~
-E
-rock~
 You closely examine the hole in the rock.  You peer down into the opening 
 but it is too dark to see.  The opening is barely wide enough to fix one 
 person. It look rather interesting
+~
+E
+rock~
+You closely examine the opening in the rock.  You peer down into the opening 
+but it is too dark to see anything.  The opening is barely wide enough to fix one 
+person. It look rather interesting.
 ~
 S
 #21204
@@ -349,11 +349,11 @@ D2
 ~
 0 -1 21214
 E
-ball~
+balls~
 A swirling orb of bright matter floats at the edges of the room.
 ~
 E
-balls~
+ball~
 A swirling orb of bright matter floats at the edges of the room.
 ~
 S
