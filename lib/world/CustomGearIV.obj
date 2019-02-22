@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -353,9 +353,9 @@ $n straps some sturdy steel greaves to $s legs.~
 You unbuckle a sturdy pair of greaves.~
 $n unbuckles a sturdy pair of greaves.~
 A
-19 2
+19 5
 A
-53 9
+53 15
 #29612
 bracer enchanted brass soot~
 An Enchanted Brass Bracer~
@@ -1745,5 +1745,45 @@ A
 13 200
 A
 53 15
+#29674
+diamond skull cap soot~
+Diamond Studded Skull Cap~
+A studded cap merrily reflects the light.~
+~
+9 2 17
+10 0 0 0
+12 50000 600
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 15
+#29675
+belt holding~
+A belt of holding~
+A leather belt is lying on the ground.~
+~
+15 0 2049
+8000 0 0 0
+5 900 100
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+17 -5
 #0
 $~
