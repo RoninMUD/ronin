@@ -149,17 +149,17 @@ D4
 ~
 0 -1 3090
 E
+doors~
+The lock looks outdated and the doors old and brittle.  A swift kick would
+probably break them right off the hinges.
+~
+E
 plaque~
 The faded writing on it reads:
  "Here within lies Thelgar Wolfslayer, scourge of the barbarians, keeper of the
  seven sacred scrolls, guardian of the light, slain in battle with orcs in
  Haon-Dor forest in the twenty-second day of the month of the Dragon in the
  year of the Howling Wolf.  His deeds will not be forgotten."
-~
-E
-doors~
-The lock looks outdated and the doors old and brittle.  A swift kick would
-probably break them right off the hinges.
 ~
 S
 #3005
@@ -269,16 +269,16 @@ The courtyard before the Grunting Boar is visible.
 ~
 0 -1 3006
 E
+writing carving carvings symbols symbol~
+Although it is very hard to understand, you think it looks a lot like beer,
+poems about beer, and small beer-mugs.
+~
+E
 sign~
 The sign describes the basics of the Prestige system:
 
 Type 'list' to see all the perks that come with earning prestige, 'earn prestige'
 to increase your current level of prestige, or 'help prestige' for more details.
-~
-E
-writing carving carvings symbols symbol~
-Although it is very hard to understand, you think it looks a lot like beer,
-poems about beer, and small beer-mugs.
 ~
 S
 #3008
@@ -336,14 +336,6 @@ You see the main street.
 ~
 0 -1 3013
 E
-sign~
-Free instructions provided by the store:
-
-   Buy  - Will buy you some bread or pastry.
-   List - The baker will kindly tell you the price and sort of the bread in
-          his bakery.
-~
-E
 danish pastry~
 You see that this is truly delicious pastry.  Must be made by a Dane from
 Denmark (which surely is not the capital of Sweden!).  Former ruler of
@@ -351,6 +343,14 @@ Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
 Iceland, Estonia etc. etc.
    The sight of those large, wholesome chokoladeboller makes your mouth water
 and your soul sing.
+~
+E
+sign~
+Free instructions provided by the store:
+
+   Buy  - Will buy you some bread or pastry.
+   List - The baker will kindly tell you the price and sort of the bread in
+          his bakery.
 ~
 S
 #3010
@@ -1198,14 +1198,9 @@ The city gate is to the west.
 gate~
 0 0 3052
 E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
 ~
 E
 gate~
@@ -1214,9 +1209,14 @@ reinforced with large iron bands to make them even more sturdy.  One of the
 doors is equipped with a very big lock.
 ~
 E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
 ~
 S
 #3041
@@ -1240,14 +1240,9 @@ You see Main Street.~
 ~
 0 -1 3062
 E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
 ~
 E
 gate~
@@ -1256,9 +1251,14 @@ reinforced with large iron bands to make them even more sturdy.  One of the
 doors is equipped with a very big lock.
 ~
 E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
 ~
 S
 #3042
@@ -1319,13 +1319,13 @@ The road continues further south.
 ~
 0 -1 3047
 E
+letters~
+It says 'Who watches the watchmen?'
+~
+E
 wall~
 It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
-~
-E
-letters~
-It says 'Who watches the watchmen?'
 ~
 S
 #3044
@@ -1551,18 +1551,18 @@ You see the Concourse.
 ~
 0 -1 3100
 E
-wall~
+bridge~
 It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+some kind of mortar, just like the wall.
 ~
 E
 opening~
 You cannot really see it from here as it is somewhere beneath your feet.
 ~
 E
-bridge~
+wall~
 It is built from large grey rocks that have been fastened to each other with
-some kind of mortar, just like the wall.
+some kind of mortar.  It is far too high to climb.
 ~
 S
 #3052
@@ -1590,14 +1590,9 @@ The forest edge is to the west.
 ~
 0 -1 6000
 E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
 ~
 E
 gate~
@@ -1606,9 +1601,14 @@ reinforced with large iron bands to make them even more sturdy.  One of the
 doors is equipped with a very big lock.
 ~
 E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
 ~
 S
 #3053
@@ -1633,14 +1633,9 @@ You see the city gate.
 gate~
 0 0 3041
 E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+bridge footbridge~
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other.
 ~
 E
 gate~
@@ -1649,9 +1644,14 @@ reinforced with large iron bands to make them even more sturdy.  One of the
 doors is equipped with a very big lock.
 ~
 E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+tower towers~
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall.
+~
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb.
 ~
 S
 #3054
@@ -1689,16 +1689,16 @@ D3
 ~
 0 -1 3087
 E
+altar~
+Even though the altar is more than ten feet long it appears to be made from a
+single block of white virgin marble.
+~
+E
 statue odin king god~
 The statue represents the one-eyed Odin sitting on a his throne.  He has
 long, grey hair and beard and a strict look on his face.  On top of the
 throne, just above his shoulders, his two ravens Hugin and Munin are sitting
 and at his feet are his wolves Gere and Freke.
-~
-E
-altar~
-Even though the altar is more than ten feet long it appears to be made from a
-single block of white virgin marble.
 ~
 S
 #3055
@@ -2294,12 +2294,12 @@ D3
 ~
 0 -1 3080
 E
-weapons~
-The huge battleaxe and spear are much too large for you to be able to lift.
-~
-E
 armor~
 The old worm's hide has rotted away partially and is useless now.
+~
+E
+weapons~
+The huge battleaxe and spear are much too large for you to be able to lift.
 ~
 S
 #3082
@@ -2526,21 +2526,108 @@ D3
 ~
 0 -1 3038
 E
-armor~
+hpregen hp~
 
----Armor--------Cost--
+--HPRegen-------Cost--
 ======================
-      5           5
-     10          10
-     15          15
-     20          25
-     25          35
-     30          45
-     35          60
-     40          75
-     45          90
-     50         105
+    15            5
+    30           10
+    45           15
+    60           25
+    75           35
+    90           45
+   105           60
+   120           75
+   135           90
+   150          105
 
+
+~
+E
+manaregen mana~
+
+--ManaRegen-----Cost--
+======================
+     3           10
+     6           20
+     9           30
+    12           45
+    15           60
+    18           75
+    21          100
+    24          125
+    27          150
+    30          175
+
+
+~
+E
+skills~
+
+--Skills-------Cost--
+======================
+     2          10
+     4          20
+     6          30
+     8          45
+    10          60
+    12          75
+    14         100
+    16         125
+    18         150
+    20         175
+
+
+~
+E
+hitroll~
+
+--Hitroll-------Cost--
+======================
+     1            5
+     2           10
+     3           15
+     4           25
+     5           35
+     6           45
+     7           60
+     8           75
+     9           90
+    10          105
+
+
+~
+E
+damroll damage~
+
+--Damroll-------Cost--
+======================
+     1           10
+     2           20
+     3           30
+     4           45
+     5           60
+     6           75
+     7          100
+     8          125
+     9          150
+    10          175
+
+
+~
+E
+prices list price~
+
+To see pricing in RP (Rewards Points) for various object affects, use the
+following commands:
+
+Skills: 'look skills'
+Spells: 'look spells'
+Damroll: 'look damroll' or 'look damage'
+Hitroll: 'look hitroll'
+Mana-Regen: 'look manaregen' or 'look mana'
+HP-Regen: 'look hpregen' or 'look hp'
+Armor: 'look armor'
 
 
 ~
@@ -2570,108 +2657,21 @@ Detect-Align
 
 ~
 E
-prices list price~
+armor~
 
-To see pricing in RP (Rewards Points) for various object affects, use the
-following commands:
-
-Skills: 'look skills'
-Spells: 'look spells'
-Damroll: 'look damroll' or 'look damage'
-Hitroll: 'look hitroll'
-Mana-Regen: 'look manaregen' or 'look mana'
-HP-Regen: 'look hpregen' or 'look hp'
-Armor: 'look armor'
-
-
-~
-E
-damroll damage~
-
---Damroll-------Cost--
+---Armor--------Cost--
 ======================
-     1           10
-     2           20
-     3           30
-     4           45
-     5           60
-     6           75
-     7          100
-     8          125
-     9          150
-    10          175
+      5           5
+     10          10
+     15          15
+     20          25
+     25          35
+     30          45
+     35          60
+     40          75
+     45          90
+     50         105
 
-
-~
-E
-hitroll~
-
---Hitroll-------Cost--
-======================
-     1            5
-     2           10
-     3           15
-     4           25
-     5           35
-     6           45
-     7           60
-     8           75
-     9           90
-    10          105
-
-
-~
-E
-skills~
-
---Skills-------Cost--
-======================
-     2          10
-     4          20
-     6          30
-     8          45
-    10          60
-    12          75
-    14         100
-    16         125
-    18         150
-    20         175
-
-
-~
-E
-manaregen mana~
-
---ManaRegen-----Cost--
-======================
-     3           10
-     6           20
-     9           30
-    12           45
-    15           60
-    18           75
-    21          100
-    24          125
-    27          150
-    30          175
-
-
-~
-E
-hpregen hp~
-
---HPRegen-------Cost--
-======================
-    15            5
-    30           10
-    45           15
-    60           25
-    75           35
-    90           45
-   105           60
-   120           75
-   135           90
-   150          105
 
 
 ~
