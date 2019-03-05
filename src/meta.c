@@ -617,17 +617,6 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
 
     exp = meta_cost(ch, choice);
 
-    bool free_bribe = FALSE;
-
-    // Prestige Perk 24
-    if (GET_PRESTIGE_PERK(ch) >= 24) {
-      free_bribe = TRUE;
-
-      send_to_char("The Metaphysician tells you 'Congratulations, you got a free bribe!'\n\r", ch);
-    }
-
-    adjust = get_meta_adjust(choice, (bribe || free_bribe));
-
     if (choice == META_MOVE_UP_1 ||
         choice == META_MOVE_DOWN_1)
     {
@@ -662,6 +651,17 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
       send_to_char("The Metaphysician tells you 'Sorry, you don't have enough gold for that!\n\r", ch);
       return TRUE;
     }
+
+    bool free_bribe = FALSE;
+
+    // Prestige Perk 24
+    if ((GET_PRESTIGE_PERK(ch) >= 24) && chance(2)) {
+      free_bribe = TRUE;
+
+      send_to_char("The Metaphysician tells you 'Congratulations, you got a free bribe!'\n\r", ch);
+    }
+
+    adjust = get_meta_adjust(choice, (bribe || free_bribe));
 
     int half_price_chance = 2;
 
