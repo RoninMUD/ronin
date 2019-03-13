@@ -135,6 +135,7 @@ do {                   \
 #define OBJ_TIMER(obj)          (obj->obj_flags.timer)
 #define OBJ_OWNER_ID(obj, num)  (obj->ownerid[num])
 #define OBJ_IN_ROOM(obj)        (obj->in_room)
+#define OBJ_IN_ROOM_V(obj)      (obj->in_room_v)
 #define OBJ_IN_OBJ(obj)         (obj->in_obj)
 #define OBJ_CARRIED_BY(obj)     (obj->carried_by)
 #define OBJ_EQUIPPED_BY(obj)    (obj->equipped_by)

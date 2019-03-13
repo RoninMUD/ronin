@@ -1230,6 +1230,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
 
     if (GET_CLASS(ch) == CLASS_CLERIC) {
+      /* Disallow sharp weapons. */
       if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2HWEAPON)) &&
           ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
         printf_to_char(ch, "You can't wield that, it's SHARP!  Your religion forbids the use of sharp weapons!\n\r");
@@ -1239,6 +1240,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
 
     if (GET_CLASS(ch) == CLASS_MAGIC_USER) {
+      /* Disallow "powerful" weapons. */
       if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_WEAPON)) &&
           ((OBJ_VALUE(obj, 1) > 3) || (OBJ_VALUE(obj, 2) > 9))) {
         /* Mage Weapon Exceptions */
@@ -1253,12 +1255,14 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
 
     if (GET_CLASS(ch) == CLASS_NINJA) {
+      /* Check if already wielding a 2H weapon. */
       if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2HWEAPON)) {
         printf_to_char(ch, "You are already wielding a two-handed weapon.\n\r");
 
         return;
       }
 
+      /* Check if already wielding a 2nd weapon. */
       if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
         if (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) {
           printf_to_char(ch, "You are already wielding two weapons.\n\r");
@@ -1270,7 +1274,8 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
         return;
       }
 
-      if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2HWEAPON) && !EQ(ch, HOLD)) {
+      /* Check if we wield the weapon in the hold position. */
+      if ((EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2HWEAPON)) && !EQ(ch, HOLD)) {
         wear_pos = HOLD;
       }
     }

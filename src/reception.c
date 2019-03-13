@@ -302,7 +302,7 @@ void load_char(CHAR *ch) {
   char tmp_name[50];
   char alertstring[]={7,7,7,0};
   void obj_to_char(struct obj_data *object, CHAR *ch);
-  int rent_equip_char(CHAR *ch, struct obj_data *obj, int possition);
+  bool rent_equip_char(CHAR *ch, struct obj_data *obj, int possition);
 
   sprintf(tmp_name,"%s",GET_NAME(ch));
   string_to_lower(tmp_name);
@@ -727,82 +727,74 @@ int obj_version(FILE *fl) {
 
 int adjust_ticket_strings(OBJ *obj); /*Added Oct 98 Ranger */
 
-struct obj_data *store_to_obj_ver3(FILE *fl,CHAR *ch) {
+struct obj_data *store_to_obj_ver3(FILE *fl, CHAR *ch) {
   struct obj_file_elem_ver3 object;
-  struct obj_data *obj=NULL;
-  int i;
 
-  memset(&object,0,sizeof(struct obj_file_elem_ver3));
-  fread(&object,sizeof(struct obj_file_elem_ver3),1,fl);
-  if(real_object(object.item_number)>-1) {
-    obj=read_object(object.item_number,VIRTUAL);
-    if((IS_SET(obj->obj_flags.extra_flags2,ITEM_ALL_DECAY) ||
-        IS_SET(obj->obj_flags.extra_flags2,ITEM_EQ_DECAY)) &&
-        object.timer==0) {
-      /* Timer is as assigned in read_object */
-      /* Allows the addition of timers to popped objects for decay items*/
-    }
-    else {
-      obj->obj_flags.timer    =object.timer;
-    }
-    obj->obj_flags.value[0]   =object.value[0];
-    obj->obj_flags.value[1]   =object.value[1];
-    obj->obj_flags.value[2]   =object.value[2];
-    if(obj->obj_flags.type_flag != ITEM_CONTAINER)
-      obj->obj_flags.value[3]   =object.value[3];
-    obj->obj_flags.extra_flags=object.extra_flags;
-    obj->obj_flags.weight     =object.weight;
-    obj->obj_flags.bitvector  =object.bitvector;
+  memset(&object, 0, sizeof(struct obj_file_elem_ver3));
 
-/* new obj reads */
-    obj->obj_flags.type_flag    =object.type_flag;
-    obj->obj_flags.wear_flags   =object.wear_flags;
-    obj->obj_flags.extra_flags2 =object.extra_flags2;
-    obj->obj_flags.subclass_res =object.subclass_res;
-    obj->obj_flags.material     =object.material;
-    OBJ_SPEC(obj)               =object.spec_value;
+  fread(&object, sizeof(struct obj_file_elem_ver3), 1, fl);
 
-    for(i=0;i<MAX_OBJ_AFFECT;i++)
-      obj->affected[i]  =object.affected[i];
-/* end new obj reads */
+  if (real_object(object.item_number) < 0) {
+    log_f("BUG: store_to_obj_ver3() :: No such item #%d", object.item_number);
 
-/* New ver3 reads */
-    obj->obj_flags.bitvector2   = object.bitvector2;
-    obj->obj_flags.popped       = object.popped;
-
-/* New ownerid field */
-    obj->ownerid[0]             =object.ownerid[0];
-    obj->ownerid[1]             =object.ownerid[1];
-    obj->ownerid[2]             =object.ownerid[2];
-    obj->ownerid[3]             =object.ownerid[3];
-    obj->ownerid[4]             =object.ownerid[4];
-    obj->ownerid[5]             =object.ownerid[5];
-    obj->ownerid[6]             =object.ownerid[6];
-    if (obj->obj_flags.type_flag != ITEM_AQ_ORDER) {
-      obj->ownerid[7]           =object.ownerid[7];
-    } else { // same "repacking" as is done for containers
-      for (i = 0; i < object.ownerid[7]; i++) {
-        obj_to_obj(store_to_obj_ver3(fl, ch), obj);
-      }
-    }
-
-    if (obj->obj_flags.type_flag == ITEM_TICKET) {
-      if(!adjust_ticket_strings(obj)) return 0;
-    }
-
-    if (obj->obj_flags.type_flag == ITEM_CONTAINER) {
-      for(i=0;i<object.value[3];i++)
-        obj_to_obj(store_to_obj_ver3(fl,ch),obj);
-    }
-    if(rent_equip_char( ch, obj, object.position))
-          obj = NULL;  /*  make it so it will return null, so load_char
-                        *  wont add it to the inventory.
-                        */
+    return NULL;
   }
-  else  {
-    if(object.item_number != 0)
-      log_f("BUG: No such item #%d",object.item_number);
+
+  OBJ *obj = read_object(object.item_number, VIRTUAL);
+
+  OBJ_TYPE(obj) = object.type_flag;
+
+  for (int i = 0; i < MAX_OBJ_VALUE; i++) {
+    if ((i == 3) && (OBJ_TYPE(obj) == ITEM_CONTAINER)) continue;
+
+    OBJ_VALUE(obj, i) = object.value[i];
   }
+
+  for (int i = 0; i < MAX_OBJ_OWNER_ID; i++) {
+    OBJ_OWNER_ID(obj, i) = object.ownerid[i];
+  }
+
+  OBJ_WEAR_FLAGS(obj) = object.wear_flags;
+  OBJ_EXTRA_FLAGS(obj) = object.extra_flags;
+  OBJ_EXTRA_FLAGS2(obj) = object.extra_flags2;
+  OBJ_SC_RES(obj) = object.subclass_res;
+  OBJ_WEIGHT(obj) = object.weight;
+
+  if ((!IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) && !IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) || (object.timer != 0)) {
+    OBJ_TIMER(obj) = object.timer;
+  }
+
+  OBJ_MATERIAL(obj) = object.material;
+  OBJ_BITS(obj) = object.bitvector;
+  OBJ_BITS2(obj) = object.bitvector2;
+  OBJ_SPEC(obj) = object.spec_value;
+
+  for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
+    OBJ_AFF(obj, i) = object.affected[i];
+  }
+
+  OBJ_POPPED(obj) = object.popped;
+
+  /* Pack Containers */
+  if (OBJ_TYPE(obj) == ITEM_CONTAINER) {
+    for (int i = 0; i < object.value[3]; i++) {
+      obj_to_obj(store_to_obj_ver3(fl, ch), obj);
+    }
+  }
+
+  /* Pack AQ Orders */
+  if (OBJ_TYPE(obj) == ITEM_AQ_ORDER) {
+    for (int i = 0; i < object.ownerid[7]; i++) {
+      obj_to_obj(store_to_obj_ver3(fl, ch), obj);
+    }
+  }
+
+  /* Adjust Ticket Strings */
+  if ((OBJ_TYPE(obj) == ITEM_TICKET) && !adjust_ticket_strings(obj)) return NULL;
+
+  /* Attempt to equip the object in the correct EQ slot if it was worn when the character rented. */
+  if (rent_equip_char(ch, obj, object.position)) return NULL;
+
   return obj;
 }
 

@@ -79,7 +79,7 @@ void extract_obj(struct obj_data *obj);
 
 /* ******* characters ********* */
 
-int rent_equip_char(struct char_data *ch, struct obj_data *obj, int pos);
+bool rent_equip_char(struct char_data *ch, struct obj_data *obj, int pos);
 
 struct char_data *get_char_room(char *name, int room);
 struct char_data *get_char_num(int nr);
