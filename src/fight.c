@@ -3419,7 +3419,7 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
           multi = assault_mult[GET_LEVEL(ch)];
 
           /* Dual Assault */
-          if ((hit_num == 4) && IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3))
+          if ((hit_num == 4) && IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 1))
           {
             multi -= 3;
           }
