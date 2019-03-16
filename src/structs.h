@@ -1409,7 +1409,7 @@ struct obj_file_elem_ver3 /* Addition of bitvector2  */
 
   ubyte type_flag;
   int value[MAX_OBJ_VALUE];
-  int ownerid[8];
+  int ownerid[MAX_OBJ_OWNER_ID];
   int wear_flags;
   int extra_flags;
   int extra_flags2;
