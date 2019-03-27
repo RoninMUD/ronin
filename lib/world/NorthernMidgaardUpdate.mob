@@ -262,7 +262,7 @@ of the forest.
 6 1073741823 0d0+0 2
 2 1 4 0
 9 1 4 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -285,7 +285,7 @@ a skilled ninja that can kill you with a single blow.
 7 1 5 0
 1 6 6 72
 1 1 3 104
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -314,7 +314,7 @@ shimmering aura.
 1 1 10 17
 1 1 12 5
 1 1 8 30
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -340,7 +340,7 @@ cord binds it close at his waist.
 1 6 4 4
 1 6 6 15
 1 6 3 85
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -359,7 +359,7 @@ having the appearance of a beggar.
 8794 150000
 8 8 2
 3 1073741823 0d0+0 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -378,7 +378,7 @@ born. He has a calm look on his face.
 8794 150000
 8 8 1
 4 1073741823 0d0+0 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -493,7 +493,7 @@ people.
 3 1 4 0
 1 1 3 26
 1 1 5 10
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -527,7 +527,7 @@ music from him.
 8796 150000
 8 8 1
 10 1073741823 0d0+0 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -561,7 +561,7 @@ you notice that he must be a very tough knight.
 12341 200000
 8 8 1
 7 1073741823 0d0+0 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -595,7 +595,7 @@ you notice that he must be a very tough knight.
 12341 200000
 8 8 1
 8 1073741823 0d0+0 0
-0 0 0 1023
+0 0 0 703
 R
 6
 K
@@ -762,7 +762,7 @@ he waves a hand toward the sign hanging from the ceiling.
 1 1
 8 8 1
 68 1073741823 1d1+1 0
-0 0 9 1023
+0 0 9 703
 K
 0 0 0 0 0 0 0
 #3051
@@ -780,8 +780,8 @@ carefully inks notes on the margins of his latest work.
 50 19 10 1000d1000+0 1d1+1
 1 1
 8 8 1
-68 1073741823 1d1+1 0
-0 0 9 1023
+68 805306367 1d1+1 0
+0 0 9 703
 K
 0 0 0 0 0 0 0
 #3060
@@ -1096,7 +1096,7 @@ its citizens, and giving guidance to the Fates themselves.
 0 0
 6 6 1
 67 1073733631 1d1+32766 0
-0 3 9 127
+0 3 9 63
 R
 511
 K
