@@ -1597,7 +1597,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Adjust for shadow damage. */
   if (attack_type == TYPE_SHADOW) {
-    OBJ *weapon = EQ(ch, WIELD);
+    OBJ *weapon = GET_WEAPON(ch);
 
     if (weapon) {
       attack_type = get_attack_type(ch, weapon);
@@ -3131,11 +3131,11 @@ bool perform_hit(CHAR *ch, CHAR *victim, int type, int hit_num) {
   }
 
   /* Get the weapon involved for use later on. */
-  weapon = EQ(ch, WIELD);
+  weapon = GET_WEAPON(ch);
 
   /* If the attacker is a Ninja and it's an even-numbered hit number, get the weapon in the HOLD position. */
   if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA) && !(hit_num % 2)) {
-    weapon = EQ(ch, HOLD);
+    weapon = GET_WEAPON2(ch);
   }
 
   /* Get the attack type for use later on. */
