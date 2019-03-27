@@ -332,7 +332,6 @@ do {                   \
 #define GET_QUEST_STATUS(ch) (ch->quest_status)
 #define GET_QUEST_TIMER(ch) (ch->ver3.time_to_quest)
 #define GET_IMM_FLAGS(ch) (ch->new.imm_flags)
-#define IS_WEAPON(obj) (obj ? (obj->obj_flags.type_flag == ITEM_WEAPON || obj->obj_flags.type_flag == ITEM_2HWEAPON) : FALSE)
 #define GET_MOUNT(ch) (ch->specials.riding)
 #define GET_PFLAG(ch) (ch->specials.pflag)
 #define GET_ACT(ch) (ch->specials.act)
@@ -340,7 +339,6 @@ do {                   \
 #define GET_AFF(ch) (ch->specials.affected_by)
 #define GET_AFF2(ch) (ch->specials.affected_by2)
 #define OBJ_TYPE(obj) (obj->obj_flags.type_flag)
-#define GET_WEAPON(ch) (ch->equipment[WIELD])
 #define GET_DEX_APP(ch) (dex_app[GET_DEX(ch)].prac_bonus)
 #define GET_WIS_APP(ch) (wis_app[GET_WIS(ch)].bonus)
 #define GET_LEARNED(ch, skill) (ch->skills[skill].learned)
@@ -377,6 +375,12 @@ do {                   \
 #define GET_QUEST_LEVEL(ch) (ch->quest_level)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
 #define GET_REPLY_TO(ch) (ch->specials.reply_to)
+
+#define IS_WEAPON(obj)     (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON || GET_ITEM_TYPE(obj) == ITEM_2HWEAPON) : FALSE)
+#define IS_1H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON) : FALSE)
+#define IS_2H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_2HWEAPON) : FALSE)
+#define GET_WEAPON(ch)     ((EQ(ch, WIELD) && IS_WEAPON(EQ(ch, WIELD))) ? EQ(ch, WIELD) : NULL)
+#define GET_WEAPON2(ch)    ((GET_CLASS(ch) == CLASS_NINJA) && EQ(ch, HOLD) && IS_1H_WEAPON(EQ(ch, HOLD)) ? EQ(ch, HOLD) : NULL)
 
 #define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
 #define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
