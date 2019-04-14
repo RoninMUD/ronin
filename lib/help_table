@@ -7668,8 +7668,8 @@ skill, just type HELP <name of skill>
 
 Level         Skill
   1           FLANK
-  2           DISEMBOWEL
-  3           TACTICIAN
+  2           TACTICIAN
+  3           MAIM
   4           HEADBUTT
   5           HOSTILE
 
@@ -7724,13 +7724,12 @@ See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD PRACTICE DEXTERITY
 #
 DISEMBOWEL
 
-Subclass Gladiator: Level 2 (Warrior)
 Class: Nomad (Level 40)
 
 Usage: disembowel <victim>
 
 Disembowel is a vicious attack that deals a single melee hit against the target,
-multiplied by between the Gladiator's level divided by 10, up to to their level
+multiplied by between the Nomad's level divided by 10, up to to their level
 divided by 5 (between a 5x to a 10x multiplier at level 50).
 
 This attack can only be successful when performed against a target that is
@@ -7738,13 +7737,13 @@ close to death (30% hit points remaining, or less), or if the damage would cause
 the victim to die in one strike.  This ability is similar to Backstab, but is
 used at the end of combat, instead of the beginning.
 
-The Gladiator will experience 3 rounds of input lag after using Disembowel,
+The Nomad will experience 3 rounds of input lag after using Disembowel,
 regardless of success or failure.
 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
 
-See Also: SUBCLASSES GLADIATOR PRACTICE DEXTERITY
+See Also: NOMAD PRACTICE DEXTERITY
 #
 TACTICIAN
 
@@ -7768,6 +7767,24 @@ by the impending blow is reduced by one round, to a minimum of zero.
 
 See Also: SUBCLASSES GLADIATOR DISARM
 #
+MAIM
+
+Subclass Gladiator: Level 3 (Warrior)
+
+Maim applies a debuff to the target of the Gladiator's Flank attack.  This
+debuff will cause the target to take extra damage equal to 1/4 the Gladiator's
+class level, rounded down, (12 damage at lvl 48+) after being hit by a
+successful physical attack skill (pummel, punch, etc.).  This bonus damage is
+applied separately from the damage inflicted by the triggering skill and
+cannot be increased (such as by position, spell effects like Fury, etc.).
+Backflip, Smite, and Zeal will also trigger this bonus damage.  Other bonus
+attacks that are triggered by skills (such as Hidden Blade and Trusty Steed,
+etc.) do not cause extra damage from the Maim effect (e.g. they do not "double
+dip").  This damage is subject to normal physical damage resistance or
+immunity.  The Maim effect lasts until the affected creature dies.
+
+See Also: SUBCLASSES GLADIATOR
+#
 HEADBUTT
 
 Subclass Gladiator: Level 4 (Warrior)
@@ -7782,9 +7799,8 @@ skulls into their opponents, they can deal a significant amount of damage.
 This attack will deal 200 damage to the victim in a single motion and will also
 place them into the Stunned position.
 
-The Gladiator will experience 3 rounds of input lag after a successful Headbutt,
-their vision left spinning from the mighty blow.  A failed Headbutt will result
-in 2 rounds of input lag instead.
+The Gladiator will experience 2 rounds of input lag after a successful Headbutt,
+their vision left spinning from the mighty blow.
 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
