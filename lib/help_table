@@ -9042,13 +9042,12 @@ TROPHY
 Subclass Rogue: Level 2 (Thief)
 Subclass Trapper: Level 4 (Nomad)
 
-The Rogue/Trapper has the ability to take trophies from his victims.
-These trophies give whoever is carrying them a sense of power and
-increases both their hitroll and damroll by one for each trophy.
-Unfortunately, the largest increase possible due to trophies is 2
-hitroll/damroll and the trophies decay quickly.  However, the
-Rogue/Trapper can give the trophies to whomever they wish, making them
-extremely useful in a group.
+Trophy is group buff skill.  Creating a trophy inspires the group at a cost of
+10 mana per character that will receive a benefit.  If the Rogue or Trapper
+does not have enough mana, players will receive the benefit from the "top
+down" of the party list, with the Rogue or Trapper always first until their
+mana is below 10.  The benefits are +2 hitroll and +2 damroll.  The duration
+of the effect is 10 ticks.  The skill now causes a 1 round skill lag when used.
 
 See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
 #
@@ -9059,9 +9058,9 @@ Subclass Rogue: Level 3 (Thief)
 Usage: vehemence (toggles on/off)
 
 When affected by Vehemence, the Rogue gains a slight increase to all of
-their skills.  However, when in this state, the Rogue suffers from a 10%
-penalty to their chance to dodge attacks.  If the Rogue is in combat,
-this skill cannot be turned on or off.
+their skills.  However, when in this state, the Rogue suffers from an increase
+of 10% damage received.  If the Rogue is in combat, this skill cannot be turned
+on or off.
 
 See Also: SUBCLASSES ROGUE DODGE
 #
