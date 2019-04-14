@@ -7568,8 +7568,8 @@ new or improved skill.  For help on each skill, just type
 HELP <name of skill>
 
 Level         Skill
-  1           FADE
-  2           IMPAIR
+  1           IMPAIR
+  2           FADE
   3           ADRENALINE RUSH
   4           CLOSE COMBAT
   5           EVASION
@@ -7578,16 +7578,15 @@ See Also: SUBCLASSES ROGUE THIEF
 #
 FADE
 
-Subclass Bandit: Level 1 (Thief)
+Subclass Bandit: Level 2 (Thief)
 
 Usage: fade (toggles on/off)
 
-The fade skill allows the Bandit to blend in with their surroundings,
-increasing their chance of a successful dodge.  However, this comes at
-the cost of reduced hitroll.  The hitroll reduction is less severe the
-higher the Bandit's class level.
+The fade skill allows the Bandit to blend in with their surrounding.  When
+tanking, fade adds level * 1.5 to dodge skill.  When not tanking, they gain
+a +10 skill bonus to their Circle skill check.
 
-See also: SUBCLASSES BANDIT DODGE HITROLL
+See also: SUBCLASSES BANDIT DODGE CIRCLE
 #
 "DIRTY TRICKS"
 
@@ -7617,7 +7616,7 @@ See Also: SUBCLASSES ROGUE
 #
 IMPAIR
 
-Subclass Bandit: Level 2 (Thief)
+Subclass Bandit: Level 1 (Thief)
 
 This skill gives the Bandit a chance to automatically apply various
 debuffs to their target when engaging in, and during combat.
@@ -7648,11 +7647,14 @@ See Also: SUBCLASSES ROGUE
 
 Subclass Bandit: Level 4 (Thief)
 
-The Bandit benefits from an increased combat awareness, granting them
-an increase of +1 hitroll, +1 damroll and -20 AC.  When fighting in
-close quarters (inside, in the city, or in the forest), the Bandit
-receives an additional benefit, increasing the damroll and hitroll
-bonus to a total of +5 each.
+The Bandit benefits from an increased combat awareness, granting them a passive
+increase of +2 hitroll and +2 damroll.  After a successful Backstab or Circle,
+the Bandit has a 40% + dex modifier chance of increasing this benefit to +5
+hitroll and +5 damroll for a duration of 3 combat rounds.
+
+After a successful dodge, there is a second benefit of bonus 10 AC for a
+duration of 3 combat rounds.  This AC benefit can stack twice to a maximum of
+20 AC.  This benefit can exceed the normal max of -250 AC. to -270 AC
 
 This is an automatic skill and is always in effect.
 
@@ -9011,9 +9013,10 @@ Subclass Bandit: Level 3 (Thief)
 
 When affected by healing magic, the Bandit will have the amount of
 healing received increased by 10% to 15%.  In addition, the Bandit has
-an increased health regeneration rate when fighting; they will gain
-hit points equal to one fifth of their level every 10 seconds while
-engaged in combat.
+an increased health and mana regeneration rate when fighting.  While engaged
+in combat, they will gain hit points equal to one fifth of their level and
+mana points equal to one fifteenth of their level every 10 seconds.  The mana
+regeneration caps at 3 mana every 10 seconds at level 45 and above.
 
 See Also: SUBCLASSES BANDIT
 #
