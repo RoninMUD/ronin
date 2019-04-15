@@ -7096,6 +7096,9 @@ landing an attack against the Defiler. In addition, the Defiler will
 make a doubled attack back against his/her opponent, exploiting the
 opponent's miss.
 
+When not tanking, the Defiler will have a chance of triggering an extra
+doubled hit when their normal attack is avoided.
+
 The success of this skill is based on how well it is practiced, and
 the character's dexterity.
 
@@ -7843,8 +7846,8 @@ Level         Skill/Spell
   1           IRON SKIN
   2           CLOUD OF CONFUSION
   3           RIPOSTE
-  4           TREMOR
-  5           INCENDIARY CLOUD
+  4           INCENDIARY CLOUD
+  5           HEALING SURGE
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7969,9 +7972,14 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
+Iron skin protects and promotes recovery.
+
 When self-cast upon the Mercenary, this defensive spell will modify their AC by
 -25, making them harder to hit.  If cast upon a different target, the spell is
 less effective, granting only -10 AC instead.
+
+As a secondary benefit, the taret will regenerate hit points equal to the
+amount of AC that it provides the target.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7985,8 +7993,12 @@ Duration    : 1d5 + 1
 Save        : -
 Mana Cost   : 100
 
+Cloud of confusion makes it hard for targets to focus, resulting in more misses
+when fighting, and missteps when feeling.
+
 This spell affects everyone in the room not grouped with the Mercenary.  All
-victims will have their Hitroll reduced by 5 to 8.
+victims will have their Hitroll reduced by 5 to 8.  As secondary effect,
+affected targets will have a 90% chance of failing to fee during combat.
 
 This spell will be more effective when cast at night.
 
@@ -7997,45 +8009,61 @@ RIPOSTE
 Subclass Mercenary: Level 3 (Commando)
 
 With this skill, the Mercenary has a chance to partially deflect incoming
-attacks made against them; the damage deflected is equal to 20% of the deflected
+attacks made against them; the damage deflected is equal to 40% of the deflected
 attack.  Additionally, the Mercenary will strike back at their opponent,
 performing an attack with a normal chance of a Dual or Triple hit.
+
+When not tanking, the Mercenary has a chance of triggering an extra hit when
+their attack is avoided.
 
 The success of this skill is dependent on how well it is practiced, and the
 character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
-TREMOR
+"HEALING SURGE"
 
-Subclass Mercenary: Level 4 (Commando)
+Subclass Mercenary: Level 5 (Commando)
 
-Usage       : cast 'tremor'
-Accumulative: No
-Duration    : -
-Save        : -
-Mana Cost   : 150
+Usage       : healing-surge
 
-With this spell, the Mercenary causes the ground to shake and heave
-violently, inflicting 400 damage to every opponent in the room, and
-knocking them into a stunned state.
+Healing Surge allows the Mercenary to store health from magical healing that
+would otherwise be lost due to overheal prevention.
+
+The amount stored is 1/2 the amount of overhealing, not to exceed the
+Mercenary's maximum hit points or 2,000, whichever is less. The overheal
+banking only functions while the Mercenary is actively engaged in combat (e.g.
+overhealing that would be lost outside of combat is still lost).
+
+This stored health can be used to restore the Mercenary's hit points (up to
+their maximum) on demand through the use of the 'healing-surge' command. The
+Healing Surge effect is automatically used if the Mercenary would die (however,
+Divine Intervention and other life-saving effects trigger first), expending
+the surge to heal them instead of resulting in death. When this happens, the
+Mercenary is set to the stunned position (2x damage taken on the next hit) and
+cannot act for 2 rounds; they will likely need follow-up healing immediately!
+
+Finally, the amount of health stored in the healing surge "pool" decays at a
+rate of 50% of the existing pool lost every 12 seconds while outside of combat,
+and is depleted entirely after 60 seconds (one tick). Health gained from
+effects that naturally grant overhealing (such as Vampiric Touch) do not
+apply to Healing Surge.
 
 See Also: SUBCLASSES MERCENARY
 #
 "INCENDIARY CLOUD"
 
-Subclass Mercenary: Level 5 (Commando)
+Subclass Mercenary: Level 4 (Commando)
 
 Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
 Duration    : Instantaneous / ~ 60 seconds (DoT)
 Save        : -
 Mana Cost   : 150
-Damage      : 700 + 100 damage per 10 seconds for 60 seconds
+Damage      : 500 + 75 per combat round for 20 rounds
 
 This powerful spell will inflict a large amount of up-front damage instantly,
-plus 100 damage per ~ 10 seconds (one pulse), for a duration of ~ 60 total
-seconds (6 total pulses).
+plus a smaller, but still potent burst, every combat round.
 
 See Also: SUBCLASSES MERCENARY
 #
