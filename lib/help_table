@@ -8510,10 +8510,10 @@ level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
-  1           DUAL ASSAULT
+  1           BLUR
   2           BACKFIST
   3           COMBAT ZEN
-  4           BLUR
+  4           SENTO KATA
   5           BANZAI
 
 See Also: SUBCLASSES MYSTIC NINJA
@@ -8533,33 +8533,36 @@ Level         Skill/Spell
 
 See Also: SUBCLASSES RONIN NINJA
 #
-"DUAL ASSAULT"
+"SENTO KATA"
 
-Subclass Ronin: Level 1 (Ninja)
+Subclass Ronin: Level 4 (Ninja)
 
-Usage: assault <victim>
+Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
+of combat in several ways.
 
-The Ronin is practiced in the art of the quick draw of their
-weapons. By taking an enemy by surprise, the Ronin can assault the
-target with both weapons, as opposed to only the primary weapon (in
-the wielded equipment location). A standard assault check is made for
-each weapon, and each weapon's success is independent of the other.
-The second weapon inflicts slightly less damage, as outlined below.
+First, the Ronin now only automatically misses with an attack roll of 1,
+followed by a second attack roll of 5 or less that also would miss the target
+(or a second 1).
 
-The first number listed applies to the wielded-weapon, the second to
-the held-weapon.
+Next, the Ronin inflicts a critical hit for double damage if they roll a
+natural attack roll of 20, followed by a second attack roll of 15 or higher
+that also would hit the target (or a second 20).
 
-  Level 30 Dual Assault: 5x + 2x
-  Level 35 Dual Assault: 5x + 2.5x
-  Level 40 Dual Assault: 6x + 3x
-  Level 45 Dual Assault: 6x + 3.5x
-  Level 50 Dual Assault: 7x + 4x
+Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
+with certain weapons to automatically choose the best attack type for use
+against their opponent (e.g. to avoid damage resistance or immunity). The way
+this works is as follows:
 
-This skill causes a 3 round input lag for the Ronin on a success,
-while a failure causes a 2 round input lag.
+Weapon attack types for which Sento Kata applies:
+* hit (bare hands), chop, hack, pierce, slash, slice
 
-The success of Dual Assault is dependent on how well the skill is
-practiced.
+Eligible alternate attack types:
+* hit (bare hands): bludgeon, crush
+* chop, hack: crush, slash
+* slash, slice: bludgeon, pierce
+
+If an opponent is more likely to be damaged by a possible alternate attack
+type, that type will be chosen; if not, the original attack type will be used.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8571,7 +8574,7 @@ Usage: backfist <victim>
 
 With this attack, the Ronin drives the back of their fist into the
 victim with deadly force. This skill inflicts damage equivalent to
-1.25 times the Ronin's level, and knocks the victim into a stunned
+1.50 times the Ronin's level, and knocks the victim into a stunned
 state. Backfist is not subject to the effects of Invulnerability.
 
 This skill causes a 2 round input lag for the Ronin, regardless of
@@ -8611,12 +8614,12 @@ See Also: SUBCLASSES RONIN
 #
 BLUR
 
-Subclass Ronin: Level 4 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
 Usage       : cast 'blur' (self only)
 Accumulative: No
 Duration    : Level / 6
-Mana Cost   : 100
+Mana Cost   : 80
 
 The Ronin blurs out of reality, making them not only harder to hit,
 but harder to defend against. While under the effects of Blur, the
@@ -8626,7 +8629,7 @@ success of the affected skills:
   -(Level / 2) to the Ronin's armor class (this is a benefit).
   +(Level) to Dodge skill checks.
   +(Level / 5) to Assault and Dual Assault skill checks.
-  +(Level / 10) to all other skill checks.
+  +(Level / 7) to all other skill checks.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8650,7 +8653,8 @@ component of this skill will inflict 200 to 300 damage to a target,
 with no saving throw. If a separate skill check successful, the ninja
 will also gain an extra round of attacks against the target, attacking
 with both weapons, with a chance for a third attack if affected by
-Mystic Swiftness.
+Mystic Swiftness.  Banzai switches the Ronin's opponent to the target it is
+used on, similar to Flank and Smite.
 
 This skill causes a 1 round input lag for the Ronin, regardless of
 success or failure.
