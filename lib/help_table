@@ -8741,8 +8741,9 @@ by the enchantment it will be replaced by the higher level
 enchantment and the duration will be refreshed.
 
 While affected by the "Mantra" enchantment, the character regains
-"Level + (5 * Wisdom Bonus)" hit points every 10 seconds for a
-duration of 100 seconds (there will be 10 healing "pulses").
+"(Level + wisdom modifier) * 1.44" hit points every 10 seconds for a
+duration of 100 seconds (there will be 10 healing "pulses").  At 25
+Wisdom, the total amount of healing is 1364.
 
 Additionally, during each healing "pulse", there is a 25% chance to
 dispel any one of the following status ailments from the target:
