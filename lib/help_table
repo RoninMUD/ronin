@@ -8061,9 +8061,9 @@ each level, the Crusader receives a new or improved skill or spell.  For help
 on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           RIGHTEOUSNESS
-  2           BLESSING OF SACRIFICE
-  3           FOCUS
+  1           BLESSING OF SACRIFICE
+  2           FOCUS
+  3           PANACEA
   4           ZEAL
   5           POWER OF FAITH
 
@@ -8133,8 +8133,8 @@ Usage: smite <victim>
 
 This skill allows the Cavalier to channel their righteous fury against an
 enemy. In doing so, the Cavalier switches their target and performs a
-single attack against their enemy that knocks them down into a resting
-position.
+single attack against their enemy that consumes their current position
+before knocking them down into a resting position.
 
 When smiting an enemy the Cavalier also has a chance to summon their
 trusty steed against the target of their attack.
@@ -8145,7 +8145,7 @@ See Also: SUBCLASSES CAVALIER
 
 Subclass Cavalier: Level 5 (Paladin)
 
-Usage       : cast 'power of devotion' <victim>
+Usage       : cast 'power of devotion' <victim> <victim2> ... <victimN>
 Accumulative: No
 Duration    : Level / 4
 Save        : -
@@ -8157,26 +8157,27 @@ sanctuary spell. In addition the target receives an additional -15 ARMOR, +1 to
 all saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN. Being able to
 cast this spell on others makes the Cavalier a great addition to any group.
 
+Power of devotion accepts more than one character as a target.  The spell is
+cast once and is applied to each character in the order specified, one at a
+time. The spell consumes the full mana cost for each additional target beyond
+the first until the spell has been applied to each target, or the Cavalier's
+mana falls below the casting cost of the spell.
 See Also: SUBCLASSES CAVALIER
 #
-RIGHTEOUSNESS
+PANACEA
 
-Subclass Crusader: Level 1 (Paladin)
+Subclass Crusader: Level 3 (Paladin)
 
-Usage       : cast 'righteousness' (self only)
-Accumulative: No
-Duration    : 10
-Save        : -
-Mana Cost   : 30
+When Lay Hands is cast on a target, it will grant the effects of the Bless
+spell to the target and will also remove up to two of the following negative
+effects per cast, in this order of priority: blindness, paralysis, poison,
+curse, chill touch, sleep.
 
-This spell gives the Crusader the following bonuses: +1 damroll,
-+1 hitroll, -1 to all saving throws (this is a benefit), and it will
-cause the Crusader's melee attacks to deal an additional +1d6 damage
-against evil opponents.
-
-See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
+See Also: SUBCLASSES CRUSADER "LAY HANDS"
 #
 "BLESSING OF SACRIFICE"
+
+Subclass Crusader: Level 1 (Paladin)
 
 Usage       : cast 'blessing of sacrifice'
 Accumulative: No
@@ -8197,7 +8198,7 @@ See Also: BLESS
 #
 FOCUS
 
-Subclass Crusader: Level 3 (Paladin)
+Subclass Crusader: Level 2 (Paladin)
 
 The Crusader has mastered the ability to concentrate and focus on casting magic.
 
@@ -8220,6 +8221,12 @@ targets all mobs in the same room with a single hit.  The Crusader has a
 three-round delay to recover when successful and a two-round delay to
 recover on a failure. All creatures hit require a two-round recovery time.
 
+
+Zeal additionally inflicts 2d3 bonus damage before multipliers (Fury, target's
+position, etc.) to evil creatures. This means a Zeal hit by a level 50 Crusader
+with 901+ alignment affected by Fury (2.5x multiplier) against an evil creature
+that is stunned (2x multiplier) will be hit for an average bonus damage of 20!
+
 See Also: SUBCLASSES CRUSADER
 #
 "POWER OF FAITH"
@@ -8234,9 +8241,9 @@ Mana Cost   : varies
 
 The Crusader uses his power of divine faith to cure the most serious wounds of
 the victim.  The cost of this spell varies depending on the amount of hit
-points healed and is defined as 50+healed/15. However, even the most devote
-Crusaders have limits and thus the maximum amount of healing power they can do
-is 1100 hit points for 120 mana.
+points healed, starting at 360 hit points for 50 mana. However, even the most
+devote Crusaders have limits and thus the maximum amount of healing power they
+can do is 1200 hit points for 120 mana.
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -8629,7 +8636,7 @@ success of the affected skills:
   -(Level / 2) to the Ronin's armor class (this is a benefit).
   +(Level) to Dodge skill checks.
   +(Level / 5) to Assault and Dual Assault skill checks.
-  +(Level / 7) to all other skill checks.
+  +(Level / 7) to all other skill checks (+7 at level 48+).
 
 See Also: SUBCLASSES RONIN
 #
