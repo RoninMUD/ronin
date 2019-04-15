@@ -7862,8 +7862,8 @@ Level         Skill/Spell
   1           LUNGE
   2           RIMEFANG
   3           CLOBBER
-  4           SNIPE
-  5           DEVASTATION
+  4           DEVASTATION
+  5           SNIPE
 
 See Also: SUBCLASSES MERCENARY COMMANDO
 #
@@ -7892,9 +7892,9 @@ Subclass Legionnaire: Level 2 (Commando)
 Usage       : cast 'rimefang'
 Accumulative: No
 Duration    : -
-Save        : Save vs. Spell: 1/2 Damage, Save vs. Paralysis: Negates Paralysis
+Save        : Save vs. Paralysis: Negates Paralysis
 Mana Cost   : 150
-Damage      : (6 to 8) * caster level (up to 400 at level 50)
+Damage      : (5 to 7) * caster level (up to 350 at level 50)
 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
@@ -7914,8 +7914,9 @@ The Legionnaire will attempt to strike an opponent with a devastating blow.  The
 damage dealt by this skill is equal to one to four times the user's level.
 
 Additionally, this skill will stun, incapacitate, or even mortally wound a
-target, making the next attack made against the target much more effective.  The
-user will experience two rounds of lag after use.
+target, making the next attack made against the target much more effective.
+The chance for each position is 50%, 30%, and 20% respectively. The user will
+experience two rounds of lag after use.
 
 Clobber pierces through the powerful shielding granted by Invulnerability.
 
@@ -7930,7 +7931,7 @@ See Also: SUBCLASSES LEGIONNAIRE
 #
 SNIPE
 
-Subclass Legionnaire: Level 4 (Commando)
+Subclass Legionnaire: Level 5 (Commando)
 
 Usage: snipe (toggles on/off)
 
@@ -7941,24 +7942,25 @@ attack inflicts 15 to 25 times the commando's class level, for a minimum of 750
 damage, and a maximum of 1250 damage at level 50.  This attack is automatic and
 is attempted approximately every 10 seconds.  Its chance of success is based on
 the target's remaining hit points, with a more wounded target being more prone
-to being sniped.
+to being sniped.  Snipe can only trigger once per 20 combat rounds on the same
+creature.  Multiple Legionnaires can Snipe the same creature, but only one time
+each within the 20 round window.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
 DEVASTATION
 
-Subclass Legionnaire: Level 5 (Commando)
+Subclass Legionnaire: Level 4 (Commando)
 
 Usage       : cast 'devastation' <victim>
 Accumulative: No
 Duration    : -
 Save        : -
-Mana Cost   : 200
-Damage      : 1000 to 1200
+Mana Cost   : 150
+Damage      : 1000
 
-This powerful spell causes a bit more damage than the Mage's Thunderball spell.
-
-The Legionnaire can expect to deal 1000 to 1200 damage to their victim.
+This powerful spell is nearly as mana efficient as Frost Bolt, while being
+more time efficient.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
