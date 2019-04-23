@@ -749,7 +749,8 @@ int move_gain(CHAR *ch) {
 
 void advance_level(CHAR *ch) {
   int gain = 0;
-  int i = 0;
+
+  affect_total(ch);
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
@@ -830,10 +831,12 @@ void advance_level(CHAR *ch) {
   }
 
   if (GET_LEVEL(ch) >= LEVEL_IMM) {
-    for (i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
       ch->specials.conditions[i] = -1;
     }
   }
+
+  affect_total(ch);
 }
 
 void set_title(CHAR * ch, char *title)
