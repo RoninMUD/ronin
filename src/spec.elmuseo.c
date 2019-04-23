@@ -3263,7 +3263,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
     CHAR *vict = NULL;
     for(vict = world[lem_instance->in_room_r].people; vict; vict = vict->next_in_room)
     {
-      if(!IS_NPC(vict) && affected_by_spell(vict, SKILL_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
+      if(!IS_NPC(vict) && IS_SET(GET_PFLAG2(vict), PLR2_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
       {
           char buf[512];
           sprintf(buf, "Fight me like a man, not a cowering wimp, %s!", vict->player.name );

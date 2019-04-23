@@ -18,29 +18,57 @@
 #include "utils.h"
 #include "spells.h"
 #include "subclass.h"
+#include "fight.h"
+#include "enchant.h"
 
-/* Extern functions */
-
-void magic_heal(CHAR *ch, int spell, int heal, bool overheal) {
-  if (!ch) return;
+void magic_heal(CHAR *victim, int spell, int heal, bool overheal) {
+  if (!victim) return;
 
   /* Degenerate */
-  if (affected_by_spell(ch, SPELL_DEGENERATE) && (duration_of_spell(ch, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", ch);
+  if (affected_by_spell(victim, SPELL_DEGENERATE) && (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
+    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
 
     return;
   }
 
   /* Adrenaline Rush */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 3)) {
-    heal += ((heal * number(10, 15)) / 100);
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_BANDIT, 3)) {
+    heal += (heal * number(10, 15)) / 100;
   }
 
+  /* Limit healing, as appropriate. */
   if (!overheal) {
-    heal = MIN(heal, (GET_MAX_HIT(ch) - GET_HIT(ch)));
+    int need = MAX((GET_MAX_HIT(victim) - GET_HIT(victim)), 0);
+
+    /* Triage */
+    if (GET_OPPONENT(victim) && IS_MORTAL(victim) && check_subclass(victim, SC_MERCENARY, 5)) {
+      ENCH *triage_ench = get_enchantment_by_name(victim, "Triage");
+
+      int excess = MAX(heal - need, 0);
+      int reserve = (triage_ench ? triage_ench->modifier : 0);
+      int amount = (excess ? (excess / 2) : (heal * 0.05));
+      int limit = MIN((GET_MAX_HIT(victim) / 2), 2000);
+      
+      if (amount) {
+        act("You absorb a portion of the excess healing and add it to your triage reserve.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n absorbs a portion of the excess healing and add it to $s triage reserve.", FALSE, victim, 0, 0, TO_ROOM);
+
+        if (!triage_ench) {
+          enchantment_apply(victim, FALSE, "Triage", 0, 20, ENCH_INTERVAL_ROUND, MIN((reserve + amount), limit), 0, 0, 0, triage_enchantment);
+        }
+        else {
+          triage_ench->modifier = MIN((reserve + amount), limit);
+          triage_ench->duration = 20; // Reset duration to max
+        }
+      }
+    }
+
+    heal = MIN(heal, need);
   }
 
-  GET_HIT(ch) = (GET_HIT(ch) + heal);
+  GET_HIT(victim) += heal;
+
+  update_pos(victim);
 }
 
 void cast_burning_hands(ubyte level,CHAR *ch,char *arg,int type,
@@ -528,23 +556,6 @@ void cast_disintegrate (ubyte level, CHAR *ch, char *arg, int type,
     break;
   default:
     log_f("cast_disintegrate called with wrong type!");
-    break;
-  }
-}
-
-void cast_confusion (ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *victim, OBJ *obj)
-/* Mana: 20 Current only 31+ can cast */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_confusion(level,ch,victim,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_confusion(level,ch,ch,0);
-    break;
-  default:
-    log_f("cast_confusion called with wrong type!");
     break;
   }
 }
@@ -1898,31 +1909,37 @@ void cast_regeneration( ubyte level, CHAR *ch, char *arg, int type,
     break;
   }
 }
-void cast_layhands( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100 10*level hps cured */
-{
+
+void cast_lay_hands(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    act("$n lays hands on $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
-    act("You lay hands on $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
-    spell_layhands(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_WAND:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_POTION:
-    spell_layhands(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-         tar_ch ; tar_ch = tar_ch->next_in_room)
-         spell_layhands(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in layhands!");
-    break;
+    case SPELL_TYPE_SPELL:
+      if (tar_ch == ch) {
+        act("You lay your hands on yourself.", FALSE, ch, 0, tar_ch, TO_CHAR);
+        act("$n lays $s hands on $mself.", FALSE, ch, 0, tar_ch, TO_ROOM);
+      }
+      else {
+        act("You lay your hands on $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
+        act("$n lays $s hands on you.", FALSE, ch, 0, tar_ch, TO_VICT);
+        act("$n lays $s hands on $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
+      }
+
+      spell_lay_hands(level, ch, tar_ch, 0);
+      break;
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_POTION:
+      spell_lay_hands(level, ch, tar_ch, 0);
+      break;
+    case SPELL_TYPE_STAFF:
+      for (tar_ch = world[CHAR_REAL_ROOM(ch)].people; tar_ch; tar_ch = tar_ch->next_in_room)
+        spell_lay_hands(level, ch, tar_ch, 0);
+      break;
+    default:
+      log_f("Wrong type called in lay_hands!");
+      break;
   }
 }
+
 void cast_hold( ubyte level, CHAR *ch, char *arg, int type,
 	       CHAR *tar_ch, OBJ *tar_obj )
 /* Mana: 15 */

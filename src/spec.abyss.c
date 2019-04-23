@@ -73,9 +73,9 @@ void abyss_punch(CHAR *mob,  CHAR *vict)
   act("$n punches $N's head with a blow!", 1, mob, 0, vict, TO_NOTVICT);
   act("$n punches your head with a blow!", 1, mob, 0, vict, TO_VICT);
   if(V_MOB(mob) == ABYSS_LORD)
-  	damage(mob, vict, number(120,200), TYPE_UNDEFINED, DAM_SKILL);
+  	damage(mob, vict, number(120,200), TYPE_UNDEFINED, DAM_PHYSICAL);
   else
-		damage(mob, vict, number(60,100), TYPE_UNDEFINED, DAM_SKILL);
+		damage(mob, vict, number(60,100), TYPE_UNDEFINED, DAM_PHYSICAL);
   WAIT_STATE(vict,PULSE_VIOLENCE*3);
 }
 
@@ -84,9 +84,9 @@ void abyss_bash(CHAR *mob, CHAR *vict)
   act("$n runs quickly towards $N and knocks $M down!", 1, mob, 0, vict, TO_NOTVICT);
   act("$n runs quickly towards YOU! BANG!!!!!!!!!", 1, mob, 0, vict, TO_VICT);
   if(V_MOB(mob) == ABYSS_LORD)
-  	damage(mob, vict, number(160,240), TYPE_UNDEFINED, DAM_SKILL);
+  	damage(mob, vict, number(160,240), TYPE_UNDEFINED, DAM_PHYSICAL);
   else
-	  damage(mob, vict, number(80,120), TYPE_UNDEFINED,DAM_SKILL);
+	  damage(mob, vict, number(80,120), TYPE_UNDEFINED,DAM_PHYSICAL);
   GET_POS(vict) = POSITION_RESTING;
   WAIT_STATE(vict,PULSE_VIOLENCE*3);
 }
@@ -96,10 +96,10 @@ void abyss_disarm(CHAR *mob, CHAR *vict) {
   act("$n makes a full-circle-kick and kicks your hand!", TRUE, mob, 0, vict, TO_VICT);
 
   if (V_MOB(mob) == ABYSS_LORD) {
-    damage(mob, vict, number(60, 100), TYPE_UNDEFINED, DAM_SKILL);
+    damage(mob, vict, number(60, 100), TYPE_UNDEFINED, DAM_PHYSICAL);
   }
   else {
-    damage(mob, vict, number(30, 50), TYPE_UNDEFINED, DAM_SKILL);
+    damage(mob, vict, number(30, 50), TYPE_UNDEFINED, DAM_PHYSICAL);
   }
 
   if (mob_disarm(mob, vict, FALSE)) {
@@ -446,7 +446,7 @@ int kalas(CHAR *mob,CHAR *ch, int cmd, char *arg)
 				if(IS_NPC(vict) || !IS_MORTAL(vict))
 					continue;
 				act("You have been kicked by $n!",0,mob,0,vict,TO_VICT);
-				damage(mob, vict, number(80,120), TYPE_UNDEFINED,DAM_SKILL);
+				damage(mob, vict, number(80,120), TYPE_UNDEFINED,DAM_PHYSICAL);
 			}
 		}
 		else

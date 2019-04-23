@@ -200,6 +200,13 @@ struct zone_data
 	*/
 };
 
+#define ZRESET_MODE_NEVER  0
+#define ZRESET_MODE_EMPTY  1
+#define ZRESET_MODE_ALWAYS 2
+#define ZRESET_MODE_BLOCK  3
+#define ZRESET_MODE_LOCK   4
+#define ZRESET_MODE_DOORS  5
+
 struct help_index_element
 {
 	char *keyword;

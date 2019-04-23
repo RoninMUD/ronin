@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <dmalloc.h>
 
+/* Typedefs */
 typedef signed char sbyte;
 typedef unsigned char ubyte;
 typedef signed short int sh_int;
@@ -16,144 +17,160 @@ typedef unsigned short int ush_int;
 typedef char bool;
 typedef char byte;
 
-#define ROOM_MORGUE    3088
-#define ROOM_DONATION  3084
-#define ROOM_SCRAPYARD 3030
 
-#define BIT_POOF_IN  1
-#define BIT_POOF_OUT 2
+/* Time Data */
 
-#define BT_INVUL  1
-#define BT_SPHERE 2
+#define OPT_USEC              100000
+#define PASSES_PER_SEC        (1000000 / OPT_USEC)
+#define RL_SEC                PASSES_PER_SEC
 
-#define MAX_STRING_LENGTH 4096
-#define MAX_INPUT_LENGTH  255
-#define MSL MAX_STRING_LENGTH
-#define MIL MAX_INPUT_LENGTH
-#define MAX_MESSAGES      60
-#define MAX_ITEMS         153
-#define MAX_COLORS        16
-#define MAX_USERID        50
-#define MAX_ATTS          10
+#define PULSE_ZONE            (60 * RL_SEC)
+#define PULSE_TICK            (60 * RL_SEC)
+#define PULSE_MOBILE          (10 * RL_SEC)
+#define PULSE_VIOLENCE        (3 * RL_SEC)
 
-#define MAX_DNAME_LENGTH  20
+#define SECS_PER_REAL_MIN     60
+#define SECS_PER_REAL_HOUR    (60 * SECS_PER_REAL_MIN)
+#define SECS_PER_REAL_DAY     (24 * SECS_PER_REAL_HOUR)
+#define SECS_PER_REAL_YEAR    (365 * SECS_PER_REAL_DAY)
 
-#define OPT_USEC         100000      /* 10 passes per second */
-#define PASSES_PER_SEC   (1000000 / OPT_USEC)
-#define RL_SEC           * PASSES_PER_SEC
+#define SECS_PER_MUD_HOUR     (60 * 4)
+#define SECS_PER_MUD_DAY      (24 * SECS_PER_MUD_HOUR)
+#define SECS_PER_MUD_MONTH    (28 * SECS_PER_MUD_DAY)
+#define SECS_PER_MUD_YEAR     (17 * SECS_PER_MUD_MONTH)
 
-#define PULSE_ZONE      (60 RL_SEC)
-#define PULSE_MOBILE    (10 RL_SEC)
-#define PULSE_VIOLENCE  (3 RL_SEC)
-#define PULSE_TICK      (60 RL_SEC)
 
-#define SECS_PER_REAL_MIN  60
-#define SECS_PER_REAL_HOUR (60*SECS_PER_REAL_MIN)
-#define SECS_PER_REAL_DAY  (24*SECS_PER_REAL_HOUR)
-#define SECS_PER_REAL_YEAR (365*SECS_PER_REAL_DAY)
+/* Various Game Limits */
 
-#define SECS_PER_MUD_HOUR  (60*4)
-#define SECS_PER_MUD_DAY   (24*SECS_PER_MUD_HOUR)
-#define SECS_PER_MUD_MONTH (28*SECS_PER_MUD_DAY)
-#define SECS_PER_MUD_YEAR  (17*SECS_PER_MUD_MONTH)
+#define MAX_STRING_LENGTH     4096
+#define MSL                   MAX_STRING_LENGTH
+#define MAX_INPUT_LENGTH      255
+#define MIL                   MAX_INPUT_LENGTH
 
-/* Prestige */
-#define PRESTIGE_MAX       255
-#define PRESTIGE_HIT_GAIN  8
-#define PRESTIGE_MANA_GAIN 4
+#define MAX_ATTS              10 /* Mob Attacks */
+
+#define MAX_MESSAGES          60 /* Damage Messages */
+
+#define MAX_DNAME_LENGTH      20 /* Max Player Name Length */
+
+#define MAX_USERID            50 /* Used in get_slave_result() */
+
+#define MAX_COLORS            16 /* Max Player Colors */
+
+
+/* Misc. Special Data */
+
+/* Breakthrough flags */
+#define BT_INVUL              1
+#define BT_SPHERE             2
+
+
+/* Character Data */
+
+/* Mortal and Immortal Levels */
+#define LEVEL_MORT            50
+#define LEVEL_IMM             51
+#define LEVEL_DEI             52
+#define LEVEL_TEM             53
+#define LEVEL_WIZ             54
+#define LEVEL_ETE             55
+#define LEVEL_SUP             56
+#define LEVEL_IMP             57
+#define LEVEL_MAX             70
+
+/* Prestige Data */
+#define PRESTIGE_MAX          255
+#define PRESTIGE_HIT_GAIN     8
+#define PRESTIGE_MANA_GAIN    4
 
 /* Quest Status */
-#define QUEST_NONE      0
-#define QUEST_RUNNING   1
-#define QUEST_COMPLETED 2
-#define QUEST_FAILED    3
+#define QUEST_NONE            0
+#define QUEST_RUNNING         1
+#define QUEST_COMPLETED       2
+#define QUEST_FAILED          3
 
-/* Corpses and Statues */
-#define PC_CORPSE    1
-#define NPC_CORPSE   2
-#define PC_STATUE    3
-#define NPC_STATUE   4
-#define CHAOS_CORPSE 5
 
-/* Subclass Objects*/
-#define STATUE_PEACE 9
-#define WALL_THORNS  34
+/* Object Data */
+
+/* Subclass Object VNUMs */
+#define STATUE_PEACE          9
+#define WALL_THORNS           34
 
 /* Subclass Token and Token Mob */
-#define TOKEN_OBJ_VNUM 5
-#define TOKEN_MOB_VNUM 11
+#define TOKEN_OBJ_VNUM        5
+#define TOKEN_MOB_VNUM        11
 
-/* Keep times a multiple of 10 for the decay messages */
+/* Corpse and Statue Timer Data */
 #define MAX_NPC_CORPSE_TIME   10
 #define MAX_PC_CORPSE_TIME    60
 #define MAX_NPC_STATUE_TIME   30
 #define MAX_PC_STATUE_TIME    60
 #define MAX_CHAOS_CORPSE_TIME 20
 
-/* The following defs are for obj_data  */
+/* Object Bits */
 
-/* For 'type_flag' */
-#define ITEM_LIGHT      1
-#define ITEM_SCROLL     2
-#define ITEM_WAND       3
-#define ITEM_STAFF      4
-#define ITEM_WEAPON     5
-#define ITEM_FIREWEAPON 6
-#define ITEM_MISSILE    7
-#define ITEM_TREASURE   8
-#define ITEM_ARMOR      9
-#define ITEM_POTION     10
-#define ITEM_WORN       11
-#define ITEM_OTHER      12
-#define ITEM_TRASH      13
-#define ITEM_TRAP       14
-#define ITEM_CONTAINER  15
-#define ITEM_NOTE       16
-#define ITEM_DRINKCON   17
-#define ITEM_KEY        18
-#define ITEM_FOOD       19
-#define ITEM_MONEY      20
-#define ITEM_PEN        21
-#define ITEM_BOAT       22
-#define ITEM_BULLET     23
-#define ITEM_MUSICAL    24
-#define ITEM_LOCKPICK   25
-#define ITEM_2HWEAPON   26
-#define ITEM_BOARD      27
-#define ITEM_TICKET     28
-#define ITEM_SC_TOKEN   29
-#define ITEM_SKIN       30
-#define ITEM_TROPHY     31
-#define ITEM_RECIPE     32
-#define ITEM_UNUSED_33  33
-#define ITEM_UNUSED_34  34
-#define ITEM_UNUSED_35  35
-#define ITEM_AQ_ORDER   36
+/* Object type numbers -- used in 'type_flag' */
+#define ITEM_LIGHT            1
+#define ITEM_SCROLL           2
+#define ITEM_WAND             3
+#define ITEM_STAFF            4
+#define ITEM_WEAPON           5
+#define ITEM_FIREARM          6
+#define ITEM_MISSILE          7
+#define ITEM_TREASURE         8
+#define ITEM_ARMOR            9
+#define ITEM_POTION           10
+#define ITEM_WORN             11
+#define ITEM_OTHER            12
+#define ITEM_TRASH            13
+#define ITEM_TRAP             14
+#define ITEM_CONTAINER        15
+#define ITEM_NOTE             16
+#define ITEM_DRINKCON         17
+#define ITEM_KEY              18
+#define ITEM_FOOD             19
+#define ITEM_MONEY            20
+#define ITEM_PEN              21
+#define ITEM_BOAT             22
+#define ITEM_BULLET           23
+#define ITEM_MUSICAL          24
+#define ITEM_LOCKPICK         25
+#define ITEM_2H_WEAPON        26
+#define ITEM_BOARD            27
+#define ITEM_TICKET           28
+#define ITEM_SC_TOKEN         29
+#define ITEM_SKIN             30
+#define ITEM_TROPHY           31
+#define ITEM_RECIPE           32
+#define ITEM_TYPE_33          33
+#define ITEM_TYPE_34          34
+#define ITEM_TYPE_35          35
+#define ITEM_AQ_ORDER         36
 
-/* Bitvector For 'wear_flags' */
-#define ITEM_TAKE         1
-#define ITEM_WEAR_FINGER  2
-#define ITEM_WEAR_NECK    4
-#define ITEM_WEAR_BODY    8
-#define ITEM_WEAR_HEAD    16
-#define ITEM_WEAR_LEGS    32
-#define ITEM_WEAR_FEET    64
-#define ITEM_WEAR_HANDS   128
-#define ITEM_WEAR_ARMS    256
-#define ITEM_WEAR_SHIELD  512
-#define ITEM_WEAR_ABOUT   1024
-#define ITEM_WEAR_WAIST   2048
-#define ITEM_WEAR_WRIST   4096
-#define ITEM_WIELD        8192
-#define ITEM_HOLD         16384
-#define ITEM_THROW        32768
-#define ITEM_LIGHT_SOURCE 65536
-#define ITEM_NO_REMOVE    131072
-#define ITEM_NO_SCAVENGE  262144
-#define ITEM_QUESTWEAR    524288
-#define ITEM_WEAR_2NECK   1048576
+/* Object bit flags-- used in 'wear_flags' */
+#define ITEM_TAKE             1
+#define ITEM_WEAR_FINGER      2
+#define ITEM_WEAR_NECK        4
+#define ITEM_WEAR_BODY        8
+#define ITEM_WEAR_HEAD        16
+#define ITEM_WEAR_LEGS        32
+#define ITEM_WEAR_FEET        64
+#define ITEM_WEAR_HANDS       128
+#define ITEM_WEAR_ARMS        256
+#define ITEM_WEAR_SHIELD      512
+#define ITEM_WEAR_ABOUT       1024
+#define ITEM_WEAR_WAIST       2048
+#define ITEM_WEAR_WRIST       4096
+#define ITEM_WIELD            8192
+#define ITEM_HOLD             16384
+#define ITEM_THROW            32768
+#define ITEM_LIGHT_SOURCE     65536
+#define ITEM_NO_REMOVE        131072
+#define ITEM_NO_SCAVENGE      262144
+#define ITEM_QUESTWEAR        524288
+#define ITEM_WEAR_2NECK       1048576
 
-/* Bitvector for 'extra_flags' */
+/* Object bit flags -- used in 'extra_flags' */
 #define ITEM_GLOW             1
 #define ITEM_HUM              2
 #define ITEM_DARK             4
@@ -163,16 +180,16 @@ typedef char byte;
 #define ITEM_MAGIC            64
 #define ITEM_NODROP           128
 #define ITEM_BLESS            256
-#define ITEM_ANTI_GOOD        512 /* not usable by good people    */
-#define ITEM_ANTI_EVIL        1024 /* not usable by evil people    */
-#define ITEM_ANTI_NEUTRAL     2048 /* not usable by neutral people */
+#define ITEM_ANTI_GOOD        512
+#define ITEM_ANTI_EVIL        1024
+#define ITEM_ANTI_NEUTRAL     2048
 #define ITEM_ANTI_WARRIOR     4096
 #define ITEM_ANTI_THIEF       8192
 #define ITEM_ANTI_CLERIC      16384
 #define ITEM_ANTI_MAGIC_USER  32768
 #define ITEM_ANTI_MORTAL      65536
-#define ITEM_UNUSED_131072    131072
-#define ITEM_UNUSED_262144    262144
+#define ITEM_EXTRA_131072     131072
+#define ITEM_EXTRA_262144     262144
 #define ITEM_ANTI_RENT        524288
 #define ITEM_ANTI_NINJA       1048576
 #define ITEM_ANTI_NOMAD       2097152
@@ -185,7 +202,7 @@ typedef char byte;
 #define ITEM_ANTI_AUCTION     268435456
 #define ITEM_CHAOTIC          536870912
 
-/* Bitvector for 'extra_flags2' - These aren't saved in the pfiles - yet*/
+/* Object bit flags -- used in 'extra_flags2' */
 #define ITEM_RANDOM           1
 #define ITEM_ALL_DECAY        2
 #define ITEM_EQ_DECAY         4
@@ -193,90 +210,97 @@ typedef char byte;
 #define ITEM_NO_GIVE_MOB      16
 #define ITEM_NO_PUT           32
 #define ITEM_NO_TAKE_MOB      64
-#define ITEM_NO_TROPHY        128 /* Used to be ITEM_NO_SCALP */
+#define ITEM_EXTRA2_128       128
 #define ITEM_NO_LOCATE        256
-#define ITEM_RANDOM_0         512
-#define ITEM_RANDOM_1         1024
-#define ITEM_RANDOM_2         2048
+#define ITEM_RANDOM_AFF0      512
+#define ITEM_RANDOM_AFF1      1024
+#define ITEM_RANDOM_AFF2      2048
 
-/* Bitvector for subclass restrictions */
-#define ITEM_ANTI_ENCHANTER      1
-#define ITEM_ANTI_ARCHMAGE       2
-#define ITEM_ANTI_DRUID          4
-#define ITEM_ANTI_TEMPLAR        8
-#define ITEM_ANTI_ROGUE          16
-#define ITEM_ANTI_BANDIT         32
-#define ITEM_ANTI_WARLORD        64
-#define ITEM_ANTI_GLADIATOR      128
-#define ITEM_ANTI_RONIN          256
-#define ITEM_ANTI_MYSTIC         512
-#define ITEM_ANTI_RANGER         1024
-#define ITEM_ANTI_TRAPPER        2048
-#define ITEM_ANTI_CAVALIER       4096
-#define ITEM_ANTI_CRUSADER       8192
-#define ITEM_ANTI_DEFILER        16384
-#define ITEM_ANTI_INFIDEL        32768
-#define ITEM_ANTI_BLADESINGER    65536
-#define ITEM_ANTI_CHANTER        131072
-#define ITEM_ANTI_LEGIONNAIRE    262144
-#define ITEM_ANTI_MERCENARY      524288
+/* Object bit flags -- used in 'subclass_res' */
+#define ITEM_ANTI_ENCHANTER   1
+#define ITEM_ANTI_ARCHMAGE    2
+#define ITEM_ANTI_DRUID       4
+#define ITEM_ANTI_TEMPLAR     8
+#define ITEM_ANTI_ROGUE       16
+#define ITEM_ANTI_BANDIT      32
+#define ITEM_ANTI_WARLORD     64
+#define ITEM_ANTI_GLADIATOR   128
+#define ITEM_ANTI_RONIN       256
+#define ITEM_ANTI_MYSTIC      512
+#define ITEM_ANTI_RANGER      1024
+#define ITEM_ANTI_TRAPPER     2048
+#define ITEM_ANTI_CAVALIER    4096
+#define ITEM_ANTI_CRUSADER    8192
+#define ITEM_ANTI_DEFILER     16384
+#define ITEM_ANTI_INFIDEL     32768
+#define ITEM_ANTI_BLADESINGER 65536
+#define ITEM_ANTI_CHANTER     131072
+#define ITEM_ANTI_LEGIONNAIRE 262144
+#define ITEM_ANTI_MERCENARY   524288
 
-/* Some different kind of liquids */
-#define LIQ_WATER 0
-#define LIQ_BEER 1
-#define LIQ_WINE 2
-#define LIQ_ALE 3
-#define LIQ_DARKALE 4
-#define LIQ_WHISKY 5
-#define LIQ_LEMONADE 6
-#define LIQ_FIREBRT 7
-#define LIQ_LOCALSPC 8
-#define LIQ_SLIME 9
-#define LIQ_MILK 10
-#define LIQ_TEA 11
-#define LIQ_COFFE 12
-#define LIQ_BLOOD 13
-#define LIQ_SALTWATER 14
-#define LIQ_COKE 15
-#define LIQ_STOUT 16
-#define LIQ_VODKA 17
-#define LIQ_RUM 18
-#define LIQ_LIQUER 19
-#define LIQ_CHAMPAGNE 20
-#define LIQ_BOURBON 21
-#define LIQ_TEQUILA 22
-#define LIQ_CIDER 23
-#define LIQ_URINE 24
-#define LIQ_GIN 25
-#define LIQ_MERLOT 26
-#define LIQ_SCHNAPPS 27
-#define LIQ_MOONSHINE 28
-#define LIQ_PUS 29
-#define LIQ_SHERBET 30
-#define LIQ_COGNAC 31
-#define LIQ_BRANDY 32
-#define LIQ_SCOTCH 33
-#define LIQ_KEFIR 34
-#define LIQ_OUZO 35
-#define LIQ_SAKI 36
-#define LIQ_LAGER 37
+/* Corpse and Statue flags -- used in 'cost' */
+#define PC_CORPSE             1
+#define NPC_CORPSE            2
+#define PC_STATUE             3
+#define NPC_STATUE            4
+#define CHAOS_CORPSE          5
 
-/* for containers  - value[1] */
-#define CONT_CLOSEABLE 1
-#define CONT_PICKPROOF 2
-#define CONT_CLOSED    4
-#define CONT_LOCKED    8
-#define CONT_NOREMOVE  16
+/* Container flags -- used in value[1] */
+#define CONT_CLOSEABLE        1
+#define CONT_PICKPROOF        2
+#define CONT_CLOSED           4
+#define CONT_LOCKED           8
+#define CONT_NO_REMOVE        16
 
-#define LEVEL_MORT 50 /* Max mortal level */
-#define LEVEL_IMM  51
-#define LEVEL_DEI  52
-#define LEVEL_TEM  53
-#define LEVEL_WIZ  54
-#define LEVEL_ETE  55
-#define LEVEL_SUP  56
-#define LEVEL_IMP  57
-#define LEVEL_MAX  70
+/* Liquid Types */
+#define LIQ_WATER             0
+#define LIQ_BEER              1
+#define LIQ_WINE              2
+#define LIQ_ALE               3
+#define LIQ_DARKALE           4
+#define LIQ_WHISKY            5
+#define LIQ_LEMONADE          6
+#define LIQ_FIREBREATHER      7
+#define LIQ_LOCAL             8
+#define LIQ_SLIME             9
+#define LIQ_MILK              10
+#define LIQ_TEA               11
+#define LIQ_COFFE             12
+#define LIQ_BLOOD             13
+#define LIQ_SALTWATER         14
+#define LIQ_COKE              15
+#define LIQ_STOUT             16
+#define LIQ_VODKA             17
+#define LIQ_RUM               18
+#define LIQ_LIQUOR            19
+#define LIQ_CHAMPAGNE         20
+#define LIQ_BOURBON           21
+#define LIQ_TEQUILA           22
+#define LIQ_CIDER             23
+#define LIQ_URINE             24
+#define LIQ_GIN               25
+#define LIQ_MERLOT            26
+#define LIQ_SCHNAPPS          27
+#define LIQ_MOONSHINE         28
+#define LIQ_PUS               29
+#define LIQ_SHERBET           30
+#define LIQ_COGNAC            31
+#define LIQ_BRANDY            32
+#define LIQ_SCOTCH            33
+#define LIQ_KEFIR             34
+#define LIQ_OUZO              35
+#define LIQ_SAKI              36
+#define LIQ_LAGER             37
+
+
+/* Room Data */
+
+/* Reserved Room VNUMs */
+#define ROOM_TEMPLE_MIDGAARD  3001
+#define ROOM_MARKET_SQUARE    3014
+#define ROOM_MORGUE           3088
+#define ROOM_DONATION         3084
+#define ROOM_SCRAPYARD        3030
 
 
 struct string_block {
@@ -530,7 +554,7 @@ struct room_data
 #define AFF_HOLD             64
 #define AFF_SANCTUARY        128
 #define AFF_GROUP            256
-#define AFF_CONFUSION        512
+#define AFF_512              512 /* Unused */
 #define AFF_CURSE            1024
 #define AFF_SPHERE           2048
 #define AFF_POISON           4096
@@ -827,50 +851,53 @@ struct room_data
 #define RESIST_CHEMICAL     128
 #define RESIST_ACID         256
 
-#define IMMUNE_FIRE         1
-#define IMMUNE_ELECTRIC     2
-#define IMMUNE_POISON       4
-#define IMMUNE_PUMMEL       8
-#define IMMUNE_KICK         16
-#define IMMUNE_PUNCH        32
-#define IMMUNE_SLEEP        64
-#define IMMUNE_CHARM        128
-#define IMMUNE_BLINDNESS    256
-#define IMMUNE_PARALYSIS    512
-#define IMMUNE_DRAIN        1024
-#define IMMUNE_DISEMBOWEL   2048
-#define IMMUNE_DISINTEGRATE 4096
-#define IMMUNE_CLAIR        8192
-#define IMMUNE_SUMMON       16384
-#define IMMUNE_HIT          32768
-#define IMMUNE_BLUDGEON     65536
-#define IMMUNE_PIERCE       131072
-#define IMMUNE_SLASH        262144
-#define IMMUNE_WHIP         524288
-#define IMMUNE_CLAW         1048576
-#define IMMUNE_BITE         2097152
-#define IMMUNE_STING        4194304
-#define IMMUNE_CRUSH        8388608
-#define IMMUNE_HACK         16777216
-#define IMMUNE_CHOP         33554432
-#define IMMUNE_SLICE        67108864
-#define IMMUNE_BACKSTAB     134217728
-#define IMMUNE_AMBUSH       268435456
-#define IMMUNE_ASSAULT      536870912
+/* Immunities -- used in specials.immune */
+#define IMMUNE_FIRE         (1 << 0)  /* 1 */
+#define IMMUNE_ELECTRIC     (1 << 1)  /* 2 */
+#define IMMUNE_POISON       (1 << 2)  /* 4 */
+#define IMMUNE_PUMMEL       (1 << 3)  /* 8 */
+#define IMMUNE_KICK         (1 << 4)  /* 16 */
+#define IMMUNE_PUNCH        (1 << 5)  /* 32 */
+#define IMMUNE_SLEEP        (1 << 6)  /* 64 */
+#define IMMUNE_CHARM        (1 << 7)  /* 128 */
+#define IMMUNE_BLINDNESS    (1 << 8)  /* 256 */
+#define IMMUNE_PARALYSIS    (1 << 9)  /* 512 */
+#define IMMUNE_DRAIN        (1 << 10) /* 1024 */
+#define IMMUNE_DISEMBOWEL   (1 << 11) /* 2048 */
+#define IMMUNE_DISINTEGRATE (1 << 12) /* 4096 */
+#define IMMUNE_CLAIR        (1 << 13) /* 8192 */
+#define IMMUNE_SUMMON       (1 << 14) /* 16384 */
+#define IMMUNE_HIT          (1 << 15) /* 32768 */
+#define IMMUNE_BLUDGEON     (1 << 16) /* 65536 */
+#define IMMUNE_PIERCE       (1 << 17) /* 131072 */
+#define IMMUNE_SLASH        (1 << 18) /* 262144 */
+#define IMMUNE_WHIP         (1 << 19) /* 524288 */
+#define IMMUNE_CLAW         (1 << 20) /* 1048576 */
+#define IMMUNE_BITE         (1 << 21) /* 2097152 */
+#define IMMUNE_STING        (1 << 22) /* 4194304 */
+#define IMMUNE_CRUSH        (1 << 23) /* 8388608 */
+#define IMMUNE_HACK         (1 << 24) /* 16777216 */
+#define IMMUNE_CHOP         (1 << 25) /* 33554432 */
+#define IMMUNE_SLICE        (1 << 26) /* 67108864 */
+#define IMMUNE_BACKSTAB     (1 << 27) /* 134217728 */
+#define IMMUNE_AMBUSH       (1 << 28) /* 268435456 */
+#define IMMUNE_ASSAULT      (1 << 29) /* 536870912 */
+#define IMMUNE_PHYSICAL     (1 << 30) /* 1073741824 */
+#define IMMUNE_MAGICAL      (1 << 31) /* 2147483648 */
 
-/* immune2 */
-#define IMMUNE2_LOCATE      1
-#define IMMUNE2_COLD        2
-#define IMMUNE2_SOUND       4
-#define IMMUNE2_CHEMICAL    8
-#define IMMUNE2_ACID        16
-#define IMMUNE2_FEAR        32
-#define IMMUNE2_UNUSED_64   64
-#define IMMUNE2_CIRCLE      128
-#define IMMUNE2_UNUSED_256  256
-#define IMMUNE2_STEAL       512
+/* Immunities 2 -- used in specials.immune2 */
+#define IMMUNE2_LOCATE      (1 << 0)  /* 1 */
+#define IMMUNE2_COLD        (1 << 1)  /* 2 */
+#define IMMUNE2_SOUND       (1 << 2)  /* 4 */
+#define IMMUNE2_CHEMICAL    (1 << 3)  /* 8 */
+#define IMMUNE2_ACID        (1 << 4)  /* 16 */
+#define IMMUNE2_FEAR        (1 << 5)  /* 32 */
+#define IMMUNE2_BASH        (1 << 6)  /* 64 */
+#define IMMUNE2_CIRCLE      (1 << 7)  /* 128 */
+#define IMMUNE2_BACKFLIP    (1 << 8)  /* 256 */
+#define IMMUNE2_STEAL       (1 << 9)  /* 512 */
 
-/* For players : specials.pflag */
+/* Player flags -- used in specials.pflag */
 #define PLR_BRIEF             1
 #define PLR_NOSHOUT           2
 #define PLR_COMPACT           4
@@ -901,6 +928,21 @@ struct room_data
 #define PLR_EMAIL             134217728
 #define PLR_TAGBRF            268435456
 
+/* Player flags 2 -- used in ver3.pflag2 */
+#define PLR2_BLOCK           (1 << 0)
+#define PLR2_CUNNING         (1 << 1)
+#define PLR2_DIRTY_TRICKS    (1 << 2)
+#define PLR2_VEHEMENCE       (1 << 3)
+#define PLR2_TRIP            (1 << 4)
+#define PLR2_EVASION         (1 << 5)
+#define PLR2_AWARENESS       (1 << 6)
+#define PLR2_HOSTILE         (1 << 7)
+#define PLR2_TRUSTY_STEED    (1 << 8)
+#define PLR2_SHADOWSTEP      (1 << 9)
+#define PLR2_VICTIMIZE       (1 << 10)
+#define PLR2_SNIPE           (1 << 11)
+
+/* Wizard flags -- used in specials.wizflags */
 #define WIZ_TRUST       1
 #define WIZ_QUEST       2
 #define WIZ_FREEZE      4
@@ -920,23 +962,24 @@ struct room_data
 #define WIZ_CHAOS       65536
 #define WIZ_SNOOP_BRIEF 131072
 
-typedef struct MEMtMemoryRec {
-   int id;
-   struct MEMtMemoryRec *next;
-} MEMtMemoryRec;
+
+/* Character Structs */
+
+typedef struct memory_record_t {
+  int id;
+  struct memory_record_t *next;
+} memory_record_t;
 
 
 /* This structure is purely intended to be an easy way to transfer */
 /* and return information about time (real or mudwise).            */
-struct time_info_data
-{
+struct time_info_data {
   ubyte hours, day, month;
   sh_int year;
 };
 
 /* These data contain information about a players time data */
-struct time_data
-{
+struct time_data {
   time_t birth;    /* This represents the characters age                */
   time_t logon;    /* Time of the last logon (used to calculate played) */
   int played;      /* This is the total accumulated time played in secs */
@@ -948,17 +991,23 @@ struct char_player_data
   char *short_descr;  /* for 'actions'                        */
   char *long_descr;   /* for 'look'.. Only here for testing   */
   char *description;  /* Extra descriptions                   */
+
   struct tagline_data *tagline;
+
   char *title;        /* PC / NPC s title                     */
   char *poofin;
   char *poofout;
+
   ubyte sex;           /* PC / NPC s sex                       */
   ubyte class;         /* PC  class or NPC alignment          */
   ubyte level;         /* PC / NPC s level                     */
+
   int hometown;       /* PC s Hometown (zone)                 */
 
   bool talks[MAX_TONGUE]; /* PC s Tongues 0 for NPC           */
+
   struct time_data time; /* PC s AGE in days                 */
+
   ubyte weight;       /* PC / NPC s weight                    */
   ubyte height;       /* PC / NPC s height                    */
 };
@@ -974,7 +1023,6 @@ struct char_ability_data
   sbyte dex;
   sbyte con;
 };
-
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_point_data_pfile
@@ -1057,7 +1105,7 @@ struct char_special_data
   byte last_direction;      /* The last direction the monster went    */
   int attack_type;          /* The Attack Type Bitvector for NPC's    */
   int alignment;            /* +-1000 for alignments                  */
-  MEMtMemoryRec *memory;     /* List of attackers to remember ...     */
+  memory_record_t *memory;     /* List of attackers to remember ...     */
 
   long affected_by;        /* Bitvector for spells/skills affected by */
   long affected_by2;        /* Bitvector for spells/skills affected by */
@@ -1106,8 +1154,10 @@ struct char_ver3_data {
   byte house_num; /* Not used yet */
   byte race; /* Not used yet */
   char email_addr[80]; /* Ranger Dec 03 */
-  unsigned long extra_bitvect[3]; /* Not used yet */
-  byte extra_byte[7]; /* Not used yet */
+  unsigned long long int pflag2; /* Player Flags 2 */
+  unsigned long extra_bitvect; /* Not used yet */
+  byte extra_byte[6]; /* Not used yet */
+  ubyte rank;
   ubyte prestige;
   ubyte who_filter; /* Filters specified for 'who' output. */
   byte sc_style; /* Which score style to display - Ranger Sept 2000 */
@@ -1130,14 +1180,15 @@ struct enchantment_type_5 /* pfile versions 5 */
                         * required to match a name in the 'enchantment'
                         * list in order to associate a function with
                         * it.                                     */
-  sh_int temps[5];        /* Temporary storage */
-  int  type;            /* The type of spell that caused this      */
+  sh_int temps[4];        /* Temporary storage */
+  sh_int interval;        /* Duration interval type; 0 defaults to ticks, see enchant.h for details */
+  int    type;            /* The type of spell that caused this      */
   sh_int duration;        /* For how long its effects will last      */
   int    modifier;        /* This is added to apropriate ability     */
   byte   location;        /* Tells which ability to change(APPLY_XXX)*/
   long   bitvector;       /* Tells which bits to set (AFF_XXX)       */
-  long   bitvector2;       /* Tells which bits to set (AFF_XXX)       */
-  int    (*func)(struct enchantment_type_5 *enchantment,struct char_data *ch, struct char_data *other, int CMD, char* arg);
+  long   bitvector2;      /* Tells which bits to set (AFF_XXX)       */
+  int    (*func)(struct enchantment_type_5 *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
   struct enchantment_type_5 *next;
 };
 
@@ -1212,14 +1263,16 @@ struct idname_struct
 };
 
 
-struct char_data
-{
+struct char_data {
   sh_int nr;                            /* monster nr (pos in file)    */
   sh_int nr_v;                            /* monster nr (pos in file)    */
   sh_int in_room_r;                       /* Location                    */
   sh_int in_room_v;                       /* Location                    */
+
   int colors[MAX_COLORS];
+
   char   pwd[11];                       /*adding the pwd to here, too  */
+
   struct char_player_data player;       /* Normal data                 */
   struct char_ability_data abilities;   /* Abilities                   */
   struct char_ability_data tmpabilities;/* The abilities we will use   */
@@ -1228,6 +1281,7 @@ struct char_data
   struct char_skill_data *skills;       /* Skills                      */
   struct char_new_data new;             /* New                         */
   struct char_ver3_data ver3;
+
   struct bot_check bot;                 /* Anti-bot code */
 
   struct char_data *questgiver;         /* Automated quest - Ranger Feb 99 */
@@ -1315,8 +1369,8 @@ struct death_file_u
 #define WPN_SLAY_NEUTRAL_BEINGS 22
 #define WPN_SLAY_GOOD_BEINGS    23
 #define WPN_CHAOTIC             30
+
 #define WPN_SLAY_MAGIC_USERS    30 + CLASS_MAGIC_USER
-#define WPN_SLAY_FIRST          WPN_SLAY_MAGIC_USERS
 #define WPN_SLAY_CLERICS        30 + CLASS_CLERIC
 #define WPN_SLAY_THIEVES        30 + CLASS_THIEF
 #define WPN_SLAY_WARRIORS       30 + CLASS_WARRIOR
@@ -1327,9 +1381,10 @@ struct death_file_u
 #define WPN_SLAY_AVATARS        30 + CLASS_AVATAR
 #define WPN_SLAY_BARDS          30 + CLASS_BARD
 #define WPN_SLAY_COMMANDOS      30 + CLASS_COMMANDO
+#define WPN_SLAY_FIRST          WPN_SLAY_MAGIC_USERS
 #define WPN_SLAY_LAST           WPN_SLAY_COMMANDOS
+
 #define WPN_CLASS_MAGIC_USER    300 + CLASS_MAGIC_USER
-#define WPN_CLASS_FIRST         WPN_CLASS_MAGIC_USER
 #define WPN_CLASS_CLERIC        300 + CLASS_CLERIC
 #define WPN_CLASS_THIEF         300 + CLASS_THIEF
 #define WPN_CLASS_WARRIOR       300 + CLASS_WARRIOR
@@ -1340,6 +1395,7 @@ struct death_file_u
 #define WPN_CLASS_AVATAR        300 + CLASS_AVATAR
 #define WPN_CLASS_BARD          300 + CLASS_BARD
 #define WPN_CLASS_COMMANDO      300 + CLASS_COMMANDO
+#define WPN_CLASS_FIRST         WPN_CLASS_MAGIC_USER
 #define WPN_CLASS_LAST          WPN_CLASS_COMMANDO
 
 #define MAX_OBJ_VALUE 4

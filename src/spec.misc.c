@@ -266,7 +266,7 @@ int chaos_spiked_gauntlets(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     }
 
     if((IS_NPC(victim) && IS_SET(victim->specials.immune,IMMUNE_PUMMEL)) ||
-      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch,victim,BT_INVUL))) {
+      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, SKILL_PUMMEL, BT_INVUL))) {
       act("You pummel $N, but your pummel has no affect!", FALSE, ch, 0, victim, TO_CHAR);
       act("$N pummels you, but it is ineffective!", FALSE, victim, 0, ch, TO_CHAR);
       act("$n pummels $N, but the pummel has no affect!", FALSE, ch, 0, victim, TO_NOTVICT);

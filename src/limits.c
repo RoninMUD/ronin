@@ -185,7 +185,7 @@ int spell_regen(CHAR *ch, int type)
   }
 
   if (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (((duration_of_spell(ch, SKILL_MEDITATE) > 9) && CHAOSMODE) || duration_of_spell(ch, SKILL_MEDITATE) > 30))
+      (((duration_of_spell(ch, SKILL_MEDITATE) > 9) && CHAOSMODE) || duration_of_spell(ch, SKILL_MEDITATE) > 27))
   {
     gain += 60;
   }
@@ -212,10 +212,12 @@ int point_update_hit(CHAR *ch)
     if (CHAR_REAL_ROOM(ch) == NOWHERE) return 0;
   }
 
+  /* Old Incendiary Cloud (used by some specs, etc.) */
   if (affected_by_spell(ch, SPELL_INCENDIARY_CLOUD))
   {
-    act("The cloud of fire enveloping you burns you to the core...", FALSE, ch, 0, 0, TO_CHAR);
-    damage(ch, ch, 100, SPELL_INCENDIARY_CLOUD, DAM_NO_BLOCK_NO_FLEE);
+    send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
+
+    damage(ch, ch, 100, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
 
     if (CHAR_REAL_ROOM(ch) == NOWHERE) return 0;
   }
@@ -229,11 +231,11 @@ int point_update_move(CHAR *ch)
   {
     if (GET_MOVE(ch) <= 0)
     {
-      act("The bitter cold chills you to the bone.", FALSE, ch, 0, 0 , TO_CHAR);
+      send_to_char("The bitter cold chills you to the bone.\n\r", ch);
 
-      if (GET_HIT(ch) > 3)
+      if (GET_HIT(ch) > 4)
       {
-        damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
       }
     }
   }
@@ -241,11 +243,11 @@ int point_update_move(CHAR *ch)
   {
     if (GET_COND(ch, THIRST) >= 0)
     {
-      act("You suffer dehydration from the heat.", FALSE, ch, 0, 0 , TO_CHAR);
+      send_to_char("You suffer dehydration from the heat.\n\r", ch);
 
-      if (GET_HIT(ch) > 2)
+      if (GET_HIT(ch) > 4)
       {
-        damage(ch, ch, number(1, 3), TYPE_UNDEFINED, DAM_NO_BLOCK);
+        damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
       }
     }
 
@@ -256,9 +258,7 @@ int point_update_move(CHAR *ch)
 }
 
 int mana_gain(CHAR *ch) {
-  int gain = 0;
-  int loss = 0;
-  int year = 0;
+  int gain = 0, loss = 0, year = 0;
 
   if (IS_NPC(ch)) {
     gain = GET_LEVEL(ch);
@@ -306,7 +306,7 @@ int mana_gain(CHAR *ch) {
 
   /* Dark Pact */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is is right in the sweet spot. */
+    year = 45; /* 45 is right in the sweet spot. */
   }
 
   gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
@@ -369,17 +369,11 @@ int mana_gain(CHAR *ch) {
     case CLASS_NINJA:
       gain *= 2;
       break;
-
-    default:
-      break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
+      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
     gain *= 2;
-  }
-  else if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-    GET_LEVEL(ch) < 16) {
-    gain += gain / 2;
   }
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -403,12 +397,12 @@ int mana_gain(CHAR *ch) {
         gain += 10;
         break;
 
+      case CLASS_NINJA:
       case CLASS_PALADIN:
       case CLASS_ANTI_PALADIN:
       case CLASS_AVATAR:
       case CLASS_BARD:
       case CLASS_COMMANDO:
-      case CLASS_NINJA:
         /* Dark Pact */
         if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
           if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
@@ -421,16 +415,13 @@ int mana_gain(CHAR *ch) {
 
         gain += 5;
         break;
-
-      default:
-        break;
     }
   }
 
   /* Bathed in Blood */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
     if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
+      double multi = 1.0 + (0.2 * (double)RM_BLOOD(CHAR_REAL_ROOM(ch)));
 
       if (multi > 2.0) multi = 2.0;
 
@@ -546,14 +537,16 @@ int hit_gain(CHAR *ch) {
       gain += 4;
       break;
 
+    case CLASS_THIEF:
     case CLASS_COMMANDO:
       gain += 3;
       break;
 
-    case CLASS_THIEF:
-    case CLASS_ANTI_PALADIN:
-    case CLASS_BARD:
     case CLASS_NINJA:
+    case CLASS_PALADIN:
+    case CLASS_ANTI_PALADIN:
+    case CLASS_AVATAR:
+    case CLASS_BARD:
       /* Dark Pact */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
         if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
@@ -565,9 +558,6 @@ int hit_gain(CHAR *ch) {
       }
 
       gain += 2;
-      break;
-
-    default:
       break;
   }
 
@@ -596,13 +586,9 @@ int hit_gain(CHAR *ch) {
       break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
+      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
     gain *= 2;
-  }
-
-  if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-    GET_LEVEL(ch) < 16) {
-    gain += gain / 2;
   }
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -619,7 +605,7 @@ int hit_gain(CHAR *ch) {
   gain += equipment_regen(ch, HP_REGEN);
   gain += spell_regen(ch, HP_REGEN);
 
-  if (GET_LEVEL(ch) == 50) {
+  if (GET_LEVEL(ch) >= 50) {
     switch (GET_CLASS(ch)) {
       case CLASS_THIEF:
       case CLASS_WARRIOR:
@@ -684,7 +670,7 @@ int move_gain(CHAR *ch) {
   int gain = 0;
   int year = 0;
 
-  if (IS_NPC(ch)) return (GET_LEVEL(ch));
+  if (IS_NPC(ch)) return GET_LEVEL(ch);
 
   if (!ch->desc) return 0;
 
@@ -734,13 +720,9 @@ int move_gain(CHAR *ch) {
       break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
+      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
     gain *= 2;
-  }
-
-  if (CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR &&
-    GET_LEVEL(ch) < 16) {
-    gain += gain / 2;
   }
 
   if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -1210,11 +1192,11 @@ void point_update(void)
     }
     else if (GET_POS(ch) == POSITION_INCAP)
     {
-      damage(ch, ch, 1, TYPE_SUFFERING, DAM_NO_BLOCK);
+      damage(ch, ch, 1, TYPE_UNDEFINED, DAM_NO_BLOCK);
     }
     else if (GET_POS(ch) == POSITION_MORTALLYW)
     {
-      damage(ch, ch, 2, TYPE_SUFFERING, DAM_NO_BLOCK);
+      damage(ch, ch, 2, TYPE_UNDEFINED, DAM_NO_BLOCK);
     }
 
     if (!IS_NPC(ch))

@@ -77,10 +77,10 @@ void mobile_activity(CHAR *mob) {
               wear(mob, best_obj, ITEM_LIGHT_SOURCE);
               break;
             case ITEM_WEAPON:
-            case ITEM_2HWEAPON:
+            case ITEM_2H_WEAPON:
               wear(mob, best_obj, ITEM_WIELD);
               break;
-            case ITEM_FIREWEAPON:
+            case ITEM_FIREARM:
             case ITEM_KEY:
             case ITEM_MUSICAL:
               wear(mob, best_obj, ITEM_HOLD);
@@ -224,7 +224,7 @@ void mobile_activity(CHAR *mob) {
   /* Memory */
   if (!aggro_target && IS_SET(GET_ACT(mob), ACT_MEMORY)) {
     for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(mob)].people; tmp_ch && !aggro_target; tmp_ch = tmp_ch->next_in_room) {
-      for (MEMtMemoryRec *memory = mob->specials.memory; memory && !aggro_target; memory = memory->next) {
+      for (memory_record_t *memory = mob->specials.memory; memory && !aggro_target; memory = memory->next) {
         if ((GET_ID(tmp_ch) != memory->id) || !check_aggro_target(mob, tmp_ch)) continue;
 
         aggro_target = tmp_ch;
@@ -243,7 +243,7 @@ void mobile_activity(CHAR *mob) {
     /* Awareness */
     for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(mob)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
       if (IS_MORTAL(tmp_ch) &&
-          affected_by_spell(tmp_ch, SKILL_AWARENESS) &&
+          IS_SET(GET_PFLAG2(tmp_ch), PLR2_AWARENESS) &&
           !GET_OPPONENT(tmp_ch) &&
           !IS_AFFECTED(tmp_ch, AFF_FURY) &&
           !affected_by_spell(tmp_ch, SKILL_BERSERK) &&
@@ -271,11 +271,11 @@ bool mob_disarm(CHAR *mob, CHAR *victim, bool to_ground) {
 
   if (!weapon ||
       (V_OBJ(weapon) == WEAPON_WYVERN_SPUR) ||
-      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL))) return FALSE;
+      (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, TYPE_UNDEFINED, BT_INVUL))) return FALSE;
 
   /* Tactician */
   if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_GLADIATOR, 3) &&
+      check_subclass(victim, SC_GLADIATOR, 2) &&
       SAME_ROOM(mob, victim) &&
       (GET_POS(victim) >= POSITION_FIGHTING)) {
     if (chance(20 + GET_DEX_APP(victim))) {
@@ -609,7 +609,7 @@ void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool mult
 
   /* Tactician */
   if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_GLADIATOR, 3) &&
+      check_subclass(victim, SC_GLADIATOR, 2) &&
       SAME_ROOM(mob, victim) &&
       (GET_POS(victim) >= POSITION_FIGHTING) &&
       chance(70 + GET_DEX_APP(victim))) {
@@ -637,7 +637,7 @@ void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool mult
     return;
   }
 
-  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, BT_INVUL)) {
+  if (IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(mob, victim, TYPE_UNDEFINED, BT_INVUL)) {
     if (!multi_target) {
       act(mob_attack_table[attack_type].failure_to_other, FALSE, mob, 0, victim, TO_NOTVICT);
       act(mob_attack_table[attack_type].failure_to_char, FALSE, mob, 0, victim, TO_CHAR);
@@ -670,7 +670,7 @@ void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool mult
   int vict_wait_state = mob_attack_table[attack_type].vict_wait_state;
 
   /* Tactician */
-  if (IS_MORTAL(victim) && check_subclass(victim, SC_GLADIATOR, 3)) {
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_GLADIATOR, 2)) {
     vict_wait_state = MAX(0, vict_wait_state - 1);
   }
 
@@ -682,7 +682,7 @@ void mob_attack_skill_single_target(CHAR *mob, CHAR *victim, int attack_type) {
 
   mob_attack_skill_action(mob, victim, attack_type, FALSE);
 
-  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
+  MOB_ATT_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
 }
 
 void mob_attack_skill_multi_target(CHAR *mob, int attack_type, int target_type) {
@@ -699,22 +699,23 @@ void mob_attack_skill_multi_target(CHAR *mob, int attack_type, int target_type) 
     mob_attack_skill_action(mob, temp_victim, attack_type, TRUE);
   }
 
-  MOB_ATTACK_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
+  MOB_ATT_TIMER(mob) = mob_attack_table[attack_type].mob_attack_timer;
 }
 
 void mob_attack(CHAR *mob) {
-  if (!mob || !IS_NPC(mob) || !MOB_NUM_ATTACKS(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob)) || (GET_POS(mob) < POSITION_FIGHTING)) return;
+  if (!mob || !IS_NPC(mob) || !MOB_ATT_NUM(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob)) || (GET_POS(mob) < POSITION_FIGHTING)) return;
 
-  if (MOB_ATTACK_TIMER(mob)) {
-    MOB_ATTACK_TIMER(mob)--;
+  if (MOB_ATT_TIMER(mob)) {
+    MOB_ATT_TIMER(mob)--;
+
     return;
   }
 
-  for (int num = 0; (num < MOB_NUM_ATTACKS(mob)) && !MOB_ATTACK_TIMER(mob); num++) {
-    if (!chance(MOB_ATTACK_CHANCE(mob, num))) continue;
+  for (int num = 0; (num < MOB_ATT_NUM(mob)) && !MOB_ATT_TIMER(mob); num++) {
+    if (!chance(MOB_ATT_CHANCE(mob, num))) continue;
 
-    int attack_type = MOB_ATTACK_TYPE(mob, num);
-    int target_type = MOB_ATTACK_TARGET(mob, num);
+    int attack_type = MOB_ATT_TYPE(mob, num);
+    int target_type = MOB_ATT_TARGET(mob, num);
 
     if ((attack_type <= ATT_UNDEFINED) || (attack_type >= ATT_MAX) || (target_type <= TAR_UNDEFINED) || (target_type >= TAR_MAX)) continue;
 
@@ -725,7 +726,7 @@ void mob_attack(CHAR *mob) {
       case ATT_SPELL_CAST:
       case ATT_SPELL_SKILL:
         if (victim) {
-          mob_attack_spell(mob, victim, MOB_ATTACK_SPELL(mob, num), (ATT_SPELL_CAST ? 1 : 0));
+          mob_attack_spell(mob, victim, MOB_ATT_SPELL(mob, num), (ATT_SPELL_CAST ? 1 : 0));
         }
         break;
       /* "Skills" */
@@ -750,15 +751,11 @@ void mob_attack(CHAR *mob) {
 }
 
 void perform_mob_attack(void) {
-  for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
-    combat_next_dude = ch->next_fighting;
+  for (CHAR *mob = combat_list; mob; mob = combat_next_dude) {
+    combat_next_dude = mob->next_fighting;
 
-    CHAR *victim = GET_OPPONENT(ch);
+    if (!IS_NPC(mob) || !AWAKE(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob))) continue;
 
-    assert(victim);
-
-    if (IS_NPC(ch) && AWAKE(ch) && SAME_ROOM(ch, victim)) {
-      mob_attack(ch);
-    }
+    mob_attack(mob);
   }
 }

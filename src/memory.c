@@ -36,13 +36,13 @@ $State: Exp $
 /*******************************************************************/
 
 void remember (struct char_data *ch, struct char_data *mob) {
-   MEMtMemoryRec *new, *curr;
+   memory_record_t *new, *curr;
    bool present = FALSE;
 
    if(IS_NPC(ch)) return;
    /* See if the person is already in the list (no duplicates) */
 
-   curr = (MEMtMemoryRec *)mob->specials.memory;
+   curr = (memory_record_t *)mob->specials.memory;
    while (curr) {
       if (ch->ver3.id==curr->id) {
          present = TRUE;
@@ -54,7 +54,7 @@ void remember (struct char_data *ch, struct char_data *mob) {
    }
 
    if (!present) {
-      CREATE(new, MEMtMemoryRec, 1);
+      CREATE(new, memory_record_t, 1);
       new->next = mob->specials.memory;
       new->id = (int)ch->ver3.id;
       mob->specials.memory = new;
@@ -66,9 +66,9 @@ void remember (struct char_data *ch, struct char_data *mob) {
 
 void forget (struct char_data *ch, struct char_data *mob)
 {
-   MEMtMemoryRec *prev, *curr;
+   memory_record_t *prev, *curr;
 
-   prev = (MEMtMemoryRec *)mob->specials.memory;
+   prev = (memory_record_t *)mob->specials.memory;
    curr = prev;
 
    while ((curr) && curr->id!=ch->ver3.id) {
@@ -91,9 +91,9 @@ void forget (struct char_data *ch, struct char_data *mob)
 
 void clearMemory(struct char_data *ch)
 {
-   MEMtMemoryRec *curr, *prev;
+   memory_record_t *curr, *prev;
 
-   prev = (MEMtMemoryRec *)ch->specials.memory;
+   prev = (memory_record_t *)ch->specials.memory;
 
    while (prev) {
       curr = prev->next;

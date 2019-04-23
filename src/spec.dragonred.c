@@ -1028,7 +1028,7 @@ int red_dragons_ancient(CHAR *dragon, CHAR *ch, int cmd, char *arg)
 						act("$n's tail sweep knocks you off your feet!",1,dragon,0,vict, TO_VICT);
 						GET_POS(ch) = POSITION_SITTING;
 						damage(dragon, vict, number(100,500), TYPE_UNDEFINED, DAM_NO_BLOCK);
-						WAIT_STATE(vict, number(2,5) RL_SEC);
+						WAIT_STATE(vict, number(2,5) * RL_SEC);
 					}
 				}
 				break;

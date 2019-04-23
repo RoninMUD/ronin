@@ -1223,7 +1223,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   /* Handle WIELD separately, since its more complex. */
   if (eq_slot == ITEM_WIELD) {
-    if ((OBJ_TYPE(obj) == ITEM_2HWEAPON) && (EQ(ch, WIELD) || EQ(ch, HOLD))) {
+    if ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) && (EQ(ch, WIELD) || EQ(ch, HOLD))) {
       printf_to_char(ch, "You need both hands to wield this.\n\r");
 
       return;
@@ -1231,7 +1231,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
     if (GET_CLASS(ch) == CLASS_CLERIC) {
       /* Disallow sharp weapons. */
-      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2HWEAPON)) &&
+      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
           ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
         printf_to_char(ch, "You can't wield that, it's SHARP!  Your religion forbids the use of sharp weapons!\n\r");
 
@@ -1256,7 +1256,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
     if (GET_CLASS(ch) == CLASS_NINJA) {
       /* Check if already wielding a 2H weapon. */
-      if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2HWEAPON)) {
+      if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) {
         printf_to_char(ch, "You are already wielding a two-handed weapon.\n\r");
 
         return;
@@ -1275,13 +1275,13 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
       }
 
       /* Check if we wield the weapon in the hold position. */
-      if ((EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2HWEAPON)) && !EQ(ch, HOLD)) {
+      if ((EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2H_WEAPON)) && !EQ(ch, HOLD)) {
         wear_pos = HOLD;
       }
     }
 
     /* Check weapon weight if object is being wielded. */
-    if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2HWEAPON)) &&
+    if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
         (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) {
       printf_to_char(ch, "It's too heavy for you to use.\n\r");
 
@@ -1291,7 +1291,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   /* Handle HOLD separately, since its more complex. */
   if (eq_slot == ITEM_HOLD) {
-    if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2HWEAPON)) {
+    if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON)) {
       printf_to_char(ch, "You're wielding a two-handed weapon, so you can't hold that.\n\r");
 
       return;

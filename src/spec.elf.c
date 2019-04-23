@@ -345,7 +345,7 @@ DemonSword (OBJ *sw, CHAR *ch, int cmd, char *arg) {
     "...and $p explodes in a ball of red, hot fire.",
   };
 
-  if (!GET_OPPONENT(ch))
+  if (!ch || !GET_OPPONENT(ch))
     return FALSE;
 
   if (number(0,19)) return FALSE;

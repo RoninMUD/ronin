@@ -7,20 +7,24 @@
 #ifndef __UTILITY_H
 #define __UTILITY_H
 
+
 #define PERS_NORMAL 0
 #define PERS_MORTAL -1
 
-typedef struct char_data CHAR;
-typedef struct obj_data OBJ;
-typedef struct room_data RM;
+
+typedef struct descriptor_data    DESC;
+typedef struct follow_type        FOL;
+typedef struct char_data          CHAR;
+typedef struct obj_data           OBJ;
+typedef struct room_data          RM;
+typedef struct affected_type_5    AFF;
 typedef struct enchantment_type_5 ENCH;
-typedef struct affected_type_5 AFF;
-typedef struct social_messg SOC;
-typedef struct descriptor_data DESC;
-typedef struct follow_type FOL;
+typedef struct social_messg       SOC;
+
 
 /* Common external variables */
-bool breakthrough(CHAR *ch, CHAR *vict,int btype);
+bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type);
+
 char *str_dup(char *source);
 
 void WAIT_STATE(CHAR *ch,int cycle);
@@ -108,10 +112,11 @@ void move_chars_to_room (int frm, int to) ;
 int ISCARRYING_W(struct char_data *ch);
 int GETOBJ_WEIGHT(struct obj_data *obj);
 int CHAR_HAS_LEGS(struct char_data *ch);
-int CORPSE_HAS_TROPHY(struct obj_data *obj); /* Used to be CORPSE_HAS_SCALP */
+int CORPSE_HAS_TROPHY(struct obj_data *obj);
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch);
 int STRENGTH_APPLY_INDEX(struct char_data *ch);
-int IS_GROUPED(struct char_data *ch,struct char_data *vict);
+
+bool SAME_GROUP(CHAR *ch1, CHAR *ch2);
 
 char *how_good(int percent);
 void check_equipment(struct char_data *ch);
@@ -140,9 +145,17 @@ struct char_data *get_ch_by_id(int num);
 int get_weapon_type(OBJ *obj);
 const char * get_weapon_type_desc(OBJ *obj);
 
+int count_attackers(CHAR *defender);
+
+int qcmp_int(const void *a, const void *b);
+int qcmp_int_asc(const void *a, const void *b);
+int qcmp_int_desc(const void *a, const void *b);
+
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_bit_from_mask(const int mask);
+
+bool in_int_array(int value, int *array, size_t num_elems);
 
 void shuffle_int_array(int *array, size_t num_elems);
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems);

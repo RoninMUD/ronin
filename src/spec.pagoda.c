@@ -182,7 +182,7 @@ int p_sphere(OBJ *sphere, CHAR *ch,int cmd, char *arg) {
   if(!sphere->obj_flags.value[3]) {
     act("$p shoots out rays of darklight towards you.",FALSE,ch,sphere,0,TO_CHAR);
     act("$p shoots out rays of darklight towards $n.",FALSE,ch,sphere,0,TO_ROOM);
-    spell_layhands(LEVEL_IMM-1,ch,ch,SPELL_TYPE_SPELL);
+    spell_lay_hands(LEVEL_IMM-1,ch,ch,SPELL_TYPE_SPELL);
     sphere->obj_flags.value[3]=120;
     return (TRUE);
   }

@@ -193,7 +193,7 @@ int get_obj_from_object(struct char_data *ch, char *name, struct obj_data *sub_o
 
   if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
     if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
-        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
     } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
@@ -242,7 +242,7 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct ob
 
   if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
     if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
-        (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE))) {
+        (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
     } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
@@ -334,7 +334,7 @@ int get_number_from_object(struct char_data *ch, char *name, int number, struct 
     return(0);
 
   if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
-    if (IS_SET(sub_object->obj_flags.value[1], CONT_NOREMOVE)) {
+    if (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE)) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
     } else if (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED)) {
@@ -1527,7 +1527,7 @@ void do_split(struct char_data *ch, char *argument, int cmd) {
   for (FOL *follower = leader->followers; follower; follower = follower->next) {
     CHAR *temp_ch = follower->follower;
 
-    if (!temp_ch || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
+    if (!temp_ch || !SAME_ROOM(ch, temp_ch) || !SAME_GROUP(leader, temp_ch)) continue;
 
     num_members++;
   }
@@ -1542,7 +1542,7 @@ void do_split(struct char_data *ch, char *argument, int cmd) {
   for (FOL *follower = leader->followers; follower; follower = follower->next) {
     CHAR *temp_ch = follower->follower;
 
-    if (!temp_ch || (ch == temp_ch) || !IS_MORTAL(temp_ch) || !SAME_ROOM(ch, temp_ch) || !same_group(leader, temp_ch)) continue;
+    if (!temp_ch || (ch == temp_ch) || !IS_MORTAL(temp_ch) || !SAME_ROOM(ch, temp_ch) || !SAME_GROUP(leader, temp_ch)) continue;
 
     /* Prevent gold overflow. */
     if ((INT_MAX - GET_GOLD(temp_ch)) < split) {

@@ -131,7 +131,7 @@ int cavalier(CHAR *cavalier,CHAR *ch, int cmd, char *arg) {
        break;
       case 2:
        act("$n begins singing a war chant to lift his spirits.",1,cavalier,0,0,TO_ROOM);
-       cast_layhands(GET_LEVEL(cavalier),cavalier,"",SPELL_TYPE_SPELL,cavalier,0);
+       cast_lay_hands(GET_LEVEL(cavalier),cavalier,"",SPELL_TYPE_SPELL,cavalier,0);
        break;
       case 3:
        if(!(vict=get_random_victim_fighting(cavalier))) return FALSE;

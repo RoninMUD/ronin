@@ -219,7 +219,13 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
     stop_riding(ch,ch->specials.riding);
   }
 
-  ch->ver3.time_to_quest=MAX(ch->ver3.time_to_quest - 40, 5);
+  if (IS_IMMORTAL(ch)) {
+    GET_QUEST_TIMER(ch) = 0;
+  }
+  else {
+    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
+  }
+
   if(ch->quest_status==QUEST_FAILED) {
     printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
   }
@@ -426,7 +432,7 @@ void do_sneak(struct char_data *ch, char *argument, int cmd)
   check = (number(1, 101) - dex_app_skill[GET_DEX(ch)].sneak);
 
   if (affected_by_spell(ch, SPELL_BLUR)) {
-    check -= (GET_LEVEL(ch) / 10);
+    check -= (GET_LEVEL(ch) / 7);
   }
 
   if (check > GET_LEARNED(ch, SKILL_SNEAK)) {
@@ -473,7 +479,7 @@ void do_hide(struct char_data *ch, char *argument, int cmd)
   check = (number(1, 101) - dex_app_skill[GET_DEX(ch)].hide);
 
   if (affected_by_spell(ch, SPELL_BLUR)) {
-    check -= (GET_LEVEL(ch) / 10);
+    check -= (GET_LEVEL(ch) / 7);
   }
 
   if (check > GET_LEARNED(ch, SKILL_HIDE)) {
@@ -617,7 +623,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
   /* 101% is a complete failure */
   percent=number(1,101) - dex_app_skill[GET_DEX(ch)].p_pocket;
 
-  if (affected_by_spell(ch, SKILL_VEHEMENCE))
+  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE))
   {
     percent -= 5 + (GET_DEX_APP(ch) / 2);
   }
@@ -1685,7 +1691,7 @@ void do_throw(struct char_data *ch, char *argument, int cmd)
 
         if (affected_by_spell(ch, SPELL_BLUR))
         {
-          percent -= (GET_LEVEL(ch) / 10);
+          percent -= (GET_LEVEL(ch) / 7);
         }
 
         if(percent > ch->skills[SKILL_THROW].learned) {
@@ -1754,7 +1760,7 @@ void do_shoot(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (OBJ_TYPE(gun) != ITEM_FIREWEAPON) {
+  if (OBJ_TYPE(gun) != ITEM_FIREARM) {
     send_to_char("You can't shoot that.\n\r", ch);
 
     return;
@@ -1856,7 +1862,7 @@ void do_reload(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (OBJ_TYPE(gun) != ITEM_FIREWEAPON) {
+  if (OBJ_TYPE(gun) != ITEM_FIREARM) {
     send_to_char("You can't reload that.\n\r", ch);
 
     return;
@@ -1882,247 +1888,386 @@ void do_reload(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-void do_display(struct char_data *ch, char *argument, int cmd) {
-  char option[MIL], number[MIL];
 
+void do_display(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_DESCRIPTOR(ch)) return;
 
-  two_arguments(argument, option, number);
+  DESC *desc = GET_DESCRIPTOR(ch);
 
-  if (option[0] == '\0') {
-    return;
+  char temp[MIL], option[MIL], setting[MIL];
+
+  chop_string(arg, option, sizeof(option), temp, sizeof(temp));
+  chop_string(temp, setting, sizeof(setting), arg, sizeof(arg));
+
+  if (is_abbrev(option, "automatic")) {
+    send_to_char("Prompt display set to auto.\n\r", ch);
+    desc->prompt = 0xFFFFFFFF;
   }
-
-  if (option[0] != '\0') {
-    if (strcmp(option, "name") == 0) {
-      if (IS_SET(ch->desc->prompt, PROMPT_NAME)) {
-        send_to_char("Name display off.\n\r", ch);
-        REMOVE_BIT(ch->desc->prompt, PROMPT_NAME);
-      }
-      else {
-        send_to_char("Name display on.\n\r", ch);
-        SET_BIT(ch->desc->prompt, PROMPT_NAME);
-      } /* if*/
+  else if (is_abbrev(option, "verbose") || is_abbrev(option, "all")) {
+    send_to_char("Prompt display set to all.\n\r", ch);
+    desc->prompt = 0xFFFFFFFF;
+    REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A | PROMPT_VICTIM_A);
+  }
+  else if (is_abbrev(option, "none") || is_abbrev(option, "off")) {
+    send_to_char("Prompt display set to off.\n\r", ch);
+    desc->prompt = 0;
+  }
+  else if (is_abbrev(option, "name")) {
+    if ((!*setting && !IS_SET(desc->prompt, PROMPT_NAME)) || (is_abbrev(setting, "on") || (*setting == '1'))) {
+      send_to_char("Name display on.\n\r", ch);
+      SET_BIT(desc->prompt, PROMPT_NAME);
     }
-    else if (strcmp(option, "hp") == 0) {
-      argument = one_argument(argument, number);
-      if (number[0] != '\0') {
-        if (*number == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_HP);
-          send_to_char("Hit point display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_HP);
-          send_to_char("Hit point display off.\n\r", ch);
-        }
-        if (*(number + 1) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_HP_MAX);
-          send_to_char("Max hit point display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_HP_MAX);
-          send_to_char("Max hit point display off.\n\r", ch);
-        }
-        if (*(number + 2) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_HP_TEX);
-          send_to_char("Hit point text display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_HP_TEX);
-          send_to_char("Hit point tex display off.\n\r", ch);
-        }
-      }
-      else {
-        if (IS_SET(ch->desc->prompt, PROMPT_HP | PROMPT_HP_MAX)) {
-          send_to_char("Hp and max hp display off.\n\r", ch);
-          REMOVE_BIT(ch->desc->prompt, PROMPT_HP | PROMPT_HP_MAX);
-        }
-        else {
-          send_to_char("Hp and max hp display on.\n\r", ch);
-          SET_BIT(ch->desc->prompt, PROMPT_HP | PROMPT_HP_MAX);
-        } /* if*/
-      }
-    }
-    else if (strcmp(option, "mana") == 0) {
-      argument = one_argument(argument, number);
-      if (number[0] != '\0') {
-        if (*number == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MANA);
-          send_to_char("Mana display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MANA);
-          send_to_char("Mana display off.\n\r", ch);
-        }
-        if (*(number + 1) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MANA_MAX);
-          send_to_char("Max mana display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MANA_MAX);
-          send_to_char("Max mana display off.\n\r", ch);
-        }
-        if (*(number + 2) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MANA_TEX);
-          send_to_char("Mana text display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MANA_TEX);
-          send_to_char("Mana text display off.\n\r", ch);
-        }
-      }
-      else {
-        if (IS_SET(ch->desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX)) {
-          send_to_char("Mana and max mana display off.\n\r", ch);
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX);
-        }
-        else {
-          send_to_char("Mana and max mana display on.\n\r", ch);
-          SET_BIT(ch->desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX);
-        } /* if*/
-      }
-    }
-    else if (strcmp(option, "move") == 0) {
-      argument = one_argument(argument, number);
-      if (number[0] != '\0') {
-        if (*number == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MOVE);
-          send_to_char("Move display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MOVE);
-          send_to_char("Move display off.\n\r", ch);
-        }
-        if (*(number + 1) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MOVE_MAX);
-          send_to_char("Max move display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MOVE_MAX);
-          send_to_char("Max move display off.\n\r", ch);
-        }
-        if (*(number + 2) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_MOVE_TEX);
-          send_to_char("Move tex display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MOVE_TEX);
-          send_to_char("Move tex display off.\n\r", ch);
-        }
-      }
-      else {
-        if (IS_SET(ch->desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX)) {
-          send_to_char("Movement point and max movement point display off.\n\r", ch);
-          REMOVE_BIT(ch->desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX);
-        }
-        else {
-          send_to_char("Movement point and max movement point display on.\n\r", ch);
-          SET_BIT(ch->desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX);
-        } /* if*/
-      }
-    }
-    else if (strcmp(option, "buf") == 0) {
-      argument = one_argument(argument, number);
-      if (number[0] != '\0') {
-        if (*number == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_BUFFER);
-          send_to_char("Buffer display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_BUFFER);
-          send_to_char("Buffer display off.\n\r", ch);
-        }
-        if (*(number + 1) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_BUFFER_A);
-          send_to_char("Buffer always display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_BUFFER_A);
-          send_to_char("Buffer always display off.\n\r", ch);
-        }
-        if (*(number + 2) == '1' || GET_LEVEL(ch) < LEVEL_SUP) {
-          SET_BIT(ch->desc->prompt, PROMPT_BUFFER_TEX);
-          send_to_char("Buffer text display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_BUFFER_TEX);
-          send_to_char("Buffer number display on.\n\r", ch);
-        }
-      }
-      else {
-        if (IS_SET(ch->desc->prompt, PROMPT_BUFFER | PROMPT_BUFFER_A)) {
-          send_to_char("Buffer and always buffer display off.\n\r", ch);
-          REMOVE_BIT(ch->desc->prompt, PROMPT_BUFFER | PROMPT_BUFFER_A);
-        }
-        else {
-          send_to_char("Buffer and always buffer display on.\n\r", ch);
-          SET_BIT(ch->desc->prompt, PROMPT_BUFFER | PROMPT_BUFFER_A);
-        } /* if*/
-      }
-    }
-    else if (strcmp(option, "vic") == 0) {
-      argument = one_argument(argument, number);
-      if (number[0] != '\0') {
-        if (*number == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_VICTIM);
-          send_to_char("Victim display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_VICTIM);
-          send_to_char("Victim display off.\n\r", ch);
-        }
-        if (*(number + 1) == '1') {
-          SET_BIT(ch->desc->prompt, PROMPT_VICTIM_A);
-          send_to_char("Victim always display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_VICTIM_A);
-          send_to_char("Victim always display off.\n\r", ch);
-        }
-        if (*(number + 2) == '1' || GET_LEVEL(ch) < LEVEL_SUP) {
-          SET_BIT(ch->desc->prompt, PROMPT_VICTIM_TEX);
-          send_to_char("Victim text display on.\n\r", ch);
-        }
-        else {
-          REMOVE_BIT(ch->desc->prompt, PROMPT_VICTIM_TEX);
-          send_to_char("Victim number display on.\n\r", ch);
-        }
-      }
-      else {
-        if (IS_SET(ch->desc->prompt, PROMPT_VICTIM | PROMPT_VICTIM_A)) {
-          send_to_char("Victim and always victim display off.\n\r", ch);
-          REMOVE_BIT(ch->desc->prompt, PROMPT_VICTIM | PROMPT_VICTIM_A);
-        }
-        else {
-          send_to_char("Victim and always victim display on.\n\r", ch);
-          SET_BIT(ch->desc->prompt, PROMPT_VICTIM | PROMPT_VICTIM_A);
-        } /* if*/
-      }
-    }
-    else if (strcmp(option, "all") == 0) {
-      send_to_char("Full display on.\n\r", ch);
-      ch->desc->prompt = 0xFFFFFFFF;
-    }
-    else if (strcmp(option, "none") == 0) {
-      send_to_char("Display off.\n\r", ch);
-      if (GET_LEVEL(ch) >= LEVEL_SUP)
-        ch->desc->prompt = 0;
-      else
-        ch->desc->prompt = PROMPT_VICTIM_TEX + PROMPT_BUFFER_TEX;
+    else if ((!*setting && IS_SET(desc->prompt, PROMPT_NAME)) || (is_abbrev(setting, "off") || (*setting == '0'))){
+      send_to_char("Name display off.\n\r", ch);
+      REMOVE_BIT(desc->prompt, PROMPT_NAME);
     }
     else {
-      send_to_char("Display what???\n\r", ch);
-    } /* if*/
+      send_to_char("Usage: display name [on|off] | [#]\n\r", ch);
+    }
+  }
+  else if (is_abbrev(option, "hit-points") || is_abbrev(option, "hp")) {
+    if (is_abbrev(setting, "current")) {
+      if (!IS_SET(desc->prompt, PROMPT_HP)) {
+        SET_BIT(desc->prompt, PROMPT_HP);
+        send_to_char("Hit point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP);
+        send_to_char("Hit point display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "maximum")) {
+      if (!IS_SET(desc->prompt, PROMPT_HP_MAX)) {
+        SET_BIT(desc->prompt, PROMPT_HP_MAX);
+        send_to_char("Hit point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP_MAX);
+        send_to_char("Hit point max display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "text")) {
+      if (!IS_SET(desc->prompt, PROMPT_HP_TEX)) {
+        SET_BIT(desc->prompt, PROMPT_HP_TEX);
+        send_to_char("Hit point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP_TEX);
+        send_to_char("Hit point text display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "on") || is_abbrev(setting, "verbose") || is_abbrev(setting, "all")) {
+      SET_BIT(desc->prompt, PROMPT_HP | PROMPT_HP_MAX | PROMPT_HP_TEX);
+      send_to_char("Hit point verbose display on.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "off") || is_abbrev(setting, "none")) {
+      REMOVE_BIT(desc->prompt, PROMPT_HP | PROMPT_HP_MAX | PROMPT_HP_TEX);
+      send_to_char("Hit point display off.\n\r", ch);
+    }
+    else if (is_number(setting)) {
+      if (*setting == '1') {
+        SET_BIT(desc->prompt, PROMPT_HP);
+        send_to_char("Hit point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP);
+        send_to_char("Hit point display off.\n\r", ch);
+      }
+
+      if (*(setting + 1) == '1') {
+        SET_BIT(desc->prompt, PROMPT_HP_MAX);
+        send_to_char("Hit point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP_MAX);
+        send_to_char("Hit point max display off.\n\r", ch);
+      }
+
+      if (*(setting + 2) == '1') {
+        SET_BIT(desc->prompt, PROMPT_HP_TEX);
+        send_to_char("Hit point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_HP_TEX);
+        send_to_char("Hit point text display off.\n\r", ch);
+      }
+    }
+    else {
+      send_to_char("Usage: display hit [current|maximum|text|all|off] | [###]\n\r", ch);
+    }
+  }
+  else if (is_abbrev(option, "mana-points") || is_abbrev(option, "mp")) {
+    if (is_abbrev(setting, "current")) {
+      if (!IS_SET(desc->prompt, PROMPT_MANA)) {
+        SET_BIT(desc->prompt, PROMPT_MANA);
+        send_to_char("Mana point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA);
+        send_to_char("Mana point display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "maximum")) {
+      if (!IS_SET(desc->prompt, PROMPT_MANA_MAX)) {
+        SET_BIT(desc->prompt, PROMPT_MANA_MAX);
+        send_to_char("Mana point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA_MAX);
+        send_to_char("Mana point max display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "text")) {
+      if (!IS_SET(desc->prompt, PROMPT_MANA_TEX)) {
+        SET_BIT(desc->prompt, PROMPT_MANA_TEX);
+        send_to_char("Mana point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA_TEX);
+        send_to_char("Mana point text display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "on") || is_abbrev(setting, "verbose") || is_abbrev(setting, "all")) {
+      SET_BIT(desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX | PROMPT_MANA_TEX);
+      send_to_char("Mana point verbose display on.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "off") || is_abbrev(setting, "none")) {
+      REMOVE_BIT(desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX | PROMPT_MANA_TEX);
+      send_to_char("Mana point display off.\n\r", ch);
+    }
+    else if (is_number(setting)) {
+      if (*setting == '1') {
+        SET_BIT(desc->prompt, PROMPT_MANA);
+        send_to_char("Mana point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA);
+        send_to_char("Mana point display off.\n\r", ch);
+      }
+
+      if (*(setting + 1) == '1') {
+        SET_BIT(desc->prompt, PROMPT_MANA_MAX);
+        send_to_char("Mana point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA_MAX);
+        send_to_char("Mana point max display off.\n\r", ch);
+      }
+
+      if (*(setting + 2) == '1') {
+        SET_BIT(desc->prompt, PROMPT_MANA_TEX);
+        send_to_char("Mana point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MANA_TEX);
+        send_to_char("Mana point text display off.\n\r", ch);
+      }
+    }
+    else {
+      send_to_char("Usage: display mana [current|maximum|text|all|off] | [###]\n\r", ch);
+    }
+  }
+  else if (is_abbrev(option, "movement-points") || is_abbrev(option, "move-points") || is_abbrev(option, "mv")) {
+    if (is_abbrev(setting, "current")) {
+      if (!IS_SET(desc->prompt, PROMPT_MOVE)) {
+        SET_BIT(desc->prompt, PROMPT_MOVE);
+        send_to_char("Movement point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE);
+        send_to_char("Movement point display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "maximum")) {
+      if (!IS_SET(desc->prompt, PROMPT_MOVE_MAX)) {
+        SET_BIT(desc->prompt, PROMPT_MOVE_MAX);
+        send_to_char("Movement point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE_MAX);
+        send_to_char("Movement point max display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "text")) {
+      if (!IS_SET(desc->prompt, PROMPT_MOVE_TEX)) {
+        SET_BIT(desc->prompt, PROMPT_MOVE_TEX);
+        send_to_char("Movement point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE_TEX);
+        send_to_char("Movement point text display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "on") || is_abbrev(setting, "verbose") || is_abbrev(setting, "all")) {
+      SET_BIT(desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX | PROMPT_MOVE_TEX);
+      send_to_char("Movement point verbose display on.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "off") || is_abbrev(setting, "none")) {
+      REMOVE_BIT(desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX | PROMPT_MOVE_TEX);
+      send_to_char("Movement point display off.\n\r", ch);
+    }
+    else if (is_number(setting)) {
+      if (*setting == '1') {
+        SET_BIT(desc->prompt, PROMPT_MOVE);
+        send_to_char("Movement point display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE);
+        send_to_char("Movement point display off.\n\r", ch);
+      }
+
+      if (*(setting + 1) == '1') {
+        SET_BIT(desc->prompt, PROMPT_MOVE_MAX);
+        send_to_char("Movement point max display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE_MAX);
+        send_to_char("Movement point max display off.\n\r", ch);
+      }
+
+      if (*(setting + 2) == '1') {
+        SET_BIT(desc->prompt, PROMPT_MOVE_TEX);
+        send_to_char("Movement point text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_MOVE_TEX);
+        send_to_char("Movement point text display off.\n\r", ch);
+      }
+    }
+    else {
+      send_to_char("Usage: display move [current|maximum|text|all|off] | [###]\n\r", ch);
+    }
+  }
+  else if (is_abbrev(option, "buffer") || is_abbrev(option, "tank")) {
+    if (!*setting || is_abbrev(setting, "on")) {
+      SET_BIT(desc->prompt, PROMPT_BUFFER);
+      send_to_char("Buffer display on.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "off")) {
+      REMOVE_BIT(desc->prompt, PROMPT_BUFFER);
+      send_to_char("Buffer display off.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "automatic")) {
+      if (!IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
+        SET_BIT(desc->prompt, PROMPT_BUFFER_A);
+        send_to_char("Buffer auto display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A);
+        send_to_char("Buffer auto display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "text")) {
+      if (!IS_SET(desc->prompt, PROMPT_BUFFER_TEX)) {
+        SET_BIT(desc->prompt, PROMPT_BUFFER_TEX);
+        send_to_char("Buffer text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_BUFFER_TEX);
+        send_to_char("Buffer text display off.\n\r", ch);
+      }
+    }
+    else if (is_number(setting)) {
+      if (*setting == '1') {
+        SET_BIT(desc->prompt, PROMPT_BUFFER);
+        send_to_char("Buffer display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_BUFFER);
+        send_to_char("Buffer display off.\n\r", ch);
+      }
+
+      if (*(setting + 1) == '1') {
+        SET_BIT(desc->prompt, PROMPT_BUFFER_A);
+        send_to_char("Buffer auto display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A);
+        send_to_char("Buffer auto display off.\n\r", ch);
+      }
+
+      if (*(setting + 2) == '1') {
+        SET_BIT(desc->prompt, PROMPT_BUFFER_TEX);
+        send_to_char("Buffer text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_BUFFER_TEX);
+        send_to_char("Buffer text max display off.\n\r", ch);
+      }
+    }
+    else {
+      send_to_char("Usage: display buffer [on|off|auto|text] | [###]\n\r", ch);
+    }
+  }
+  else if (is_abbrev(option, "victim") || is_abbrev(option, "target")) {
+    if (!*setting || is_abbrev(setting, "on")) {
+      SET_BIT(desc->prompt, PROMPT_VICTIM);
+      send_to_char("Victim display on.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "off")) {
+      REMOVE_BIT(desc->prompt, PROMPT_VICTIM);
+      send_to_char("Victim display off.\n\r", ch);
+    }
+    else if (is_abbrev(setting, "automatic")) {
+      if (!IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
+        SET_BIT(desc->prompt, PROMPT_VICTIM_A);
+        send_to_char("Victim auto display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_VICTIM_A);
+        send_to_char("Victim auto display off.\n\r", ch);
+      }
+    }
+    else if (is_abbrev(setting, "text")) {
+      if (!IS_SET(desc->prompt, PROMPT_VICTIM_TEX)) {
+        SET_BIT(desc->prompt, PROMPT_VICTIM_TEX);
+        send_to_char("Victim text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_VICTIM_TEX);
+        send_to_char("Victim text display off.\n\r", ch);
+      }
+    }
+    else if (is_number(setting)) {
+      if (*setting == '1') {
+        SET_BIT(desc->prompt, PROMPT_VICTIM);
+        send_to_char("Victim display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_VICTIM);
+        send_to_char("Victim display off.\n\r", ch);
+      }
+
+      if (*(setting + 1) == '1') {
+        SET_BIT(desc->prompt, PROMPT_VICTIM_A);
+        send_to_char("Victim auto display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_VICTIM_A);
+        send_to_char("Victim auto display off.\n\r", ch);
+      }
+
+      if (*(setting + 2) == '1') {
+        SET_BIT(desc->prompt, PROMPT_VICTIM_TEX);
+        send_to_char("Victim text display on.\n\r", ch);
+      }
+      else {
+        REMOVE_BIT(desc->prompt, PROMPT_VICTIM_TEX);
+        send_to_char("Victim text max display off.\n\r", ch);
+      }
+    }
+    else {
+      send_to_char("Usage: display victim [on|off|auto|text] | [###]\n\r", ch);
+    }
   }
   else {
-    send_to_char("Display usage : display [name all none].\n\r", ch);
-    send_to_char("             or display <hp mana move buf vic> [number].\n\r", ch);
-    send_to_char("Example: display hp 101\n\r", ch);
-  } /* if*/
+    send_to_char("Usage: display [auto|all|off]\n\r"\
+                 "               [name]          [on|off]                   | [#]\n\r"\
+                 "               [hit|mana|move] [current|max|text|all|off] | [###]\n\r"\
+                 "               [buffer|victim] [on|off|auto|text]         | [###]\n\r", ch);
+  }
+}
 
-  ch->new.prompt = ch->desc->prompt;
-
-} /* do_display */
 
 void do_identify(CHAR *ch, char *arg, int cmd) {
   char buf[MIL];

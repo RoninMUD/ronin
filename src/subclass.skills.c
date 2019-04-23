@@ -41,17 +41,18 @@ int stack_position(CHAR *ch, int target_position);
 void do_move(struct char_data *ch, char *argument, int cmd);
 void skill_wait(CHAR *ch, int skill, int wait);
 
-void do_awareness(CHAR *ch, char *argument, int cmd) {
+
+void do_awareness(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_AWARENESS)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_AWARENESS)) {
-    affect_from_char(ch, SKILL_AWARENESS);
+  if (IS_SET(GET_PFLAG2(ch), PLR2_AWARENESS)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_AWARENESS);
 
     send_to_char("You relax and your sense of awareness fades.\n\r", ch);
     act("$n relaxes and $s sense of awareness fades.", TRUE, ch, 0, 0, TO_ROOM);
@@ -61,21 +62,22 @@ void do_awareness(CHAR *ch, char *argument, int cmd) {
 
   if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_AWARENESS)) {
     send_to_char("You are overwhelmed by your surroundings, nearly feeling less aware than before.\n\r", ch);
-  }
-  else {
-    affect_apply(ch, SKILL_AWARENESS, -1, 0, 0, 0, 0);
 
-    send_to_char("You become more aware of your surroundings, watching for danger.\n\r", ch);
-    act("$n becomes more aware of $s surroundings, watching for danger.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_AWARENESS);
+
+  send_to_char("You become more aware of your surroundings, watching for danger.\n\r", ch);
+  act("$n becomes more aware of $s surroundings, watching for danger.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
 
-void do_meditate(CHAR *ch, char *argument, int cmd) {
+void do_meditate(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_MEDITATE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -94,21 +96,22 @@ void do_meditate(CHAR *ch, char *argument, int cmd) {
 
   if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_MEDITATE)) {
     send_to_char("You failed to focus your thoughts.\n\r", ch);
-  }
-  else {
-    affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 33), 0, 0, 0, 0);
 
-    send_to_char("You gaze inward and focus on healing.\n\r", ch);
-    act("$n enters a deep trance.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
+
+  affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 30), 0, 0, 0, 0);
+
+  send_to_char("You gaze inward and focus on healing.\n\r", ch);
+  act("$n enters a deep trance.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
 
-void do_protect(CHAR *ch, char *argument, int cmd) {
+void do_protect(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_PROTECT)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -121,7 +124,7 @@ void do_protect(CHAR *ch, char *argument, int cmd) {
 
   char buf[MIL];
 
-  one_argument(argument, buf);
+  one_argument(arg, buf);
 
   if (!*buf) {
     send_to_char("Protect who?\n\r", ch);
@@ -129,9 +132,9 @@ void do_protect(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  CHAR *victim = NULL;
+  CHAR *victim = victim = get_char_room_vis(ch, buf);
 
-  if (!(victim = get_char_room_vis(ch, buf))) {
+  if (!victim) {
     send_to_char("That player is not here.\n\r", ch);
 
     return;
@@ -164,8 +167,9 @@ void do_protect(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
+  /* Berserk */
   if (affected_by_spell(ch, SKILL_BERSERK)) {
-    send_to_char("You can't protect anyone while berserked.\n\r", ch);
+    send_to_char("You can't protect anyone while you're berserking!\n\r", ch);
 
     return;
   }
@@ -185,27 +189,23 @@ void do_protect(CHAR *ch, char *argument, int cmd) {
     GET_PROTECTEE(ch) = NULL;
   }
 
-  if ((number(1, 131) > GET_LEARNED(ch, SKILL_PROTECT))) {
+  if ((number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_PROTECT))) {
     act("You failed to start protecting $N.", FALSE, ch, 0, victim, TO_CHAR);
-  }
-  else {
-    act("You start trying to protect $N.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n starts trying to protect you.", FALSE, ch, 0, victim, TO_VICT);
-    act("$n starts trying to protect $N.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    GET_PROTECTEE(ch) = victim;
-    GET_PROTECTOR(victim) = ch;
+    return;
   }
+
+  act("You start trying to protect $N.", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n starts trying to protect you.", FALSE, ch, 0, victim, TO_VICT);
+  act("$n starts trying to protect $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  GET_PROTECTEE(ch) = victim;
+  GET_PROTECTOR(victim) = ch;
 }
 
 
 void do_backfist(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int set_pos = 0;
-
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_BACKFIST)) {
     send_to_char("You don't know this skill.\n\r", ch);
@@ -213,16 +213,20 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  one_argument(arg, name);
+  char buf[MIL];
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  one_argument(arg, buf);
+
+  CHAR *victim = get_char_room_vis(ch, buf);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Backfist who?\n\r", ch);
 
     return;
   }
 
   if (victim == ch) {
-    send_to_char("That seems incredibly painful...\n\r", ch);
+    send_to_char("That sounds incredibly painful...\n\r", ch);
 
     return;
   }
@@ -239,44 +243,45 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 121) - GET_DEX_APP(ch);
+  int check = number(1, 121) - GET_DEX_APP(ch);
 
+  /* Blur*/
   if (affected_by_spell(ch, SPELL_BLUR)) {
-    check -= GET_LEVEL(ch) / 10;
+    check -= GET_LEVEL(ch) / 7;
   }
 
   if (check > GET_LEARNED(ch, SKILL_BACKFIST)) {
-    act("You try to backfist $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n tries to backfist $N but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-    act("$n tries to backfist you but fails.", FALSE, ch, 0, victim, TO_VICT);
+    act("You try to backfist $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n tries to backfist $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("$n tries to backfist you, but misses.", FALSE, ch, 0, victim, TO_VICT);
 
     damage(ch, victim, 0, SKILL_BACKFIST, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_BACKFIST, 2);
+
+    return;
   }
-  else {
-    set_pos = stack_position(victim, POSITION_STUNNED);
 
-    act("With a sickening crunch you hit $N with a huge backfist.", FALSE, ch, 0, victim, TO_CHAR);
-    act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
-    act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
+  int set_pos = stack_position(victim, POSITION_STUNNED);
 
-    damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.25)), SKILL_BACKFIST, DAM_PHYSICAL);
+  act("With a sickening crunch you hit $N with a huge backfist.", FALSE, ch, 0, victim, TO_CHAR);
+  act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
+  act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
 
-    if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-      GET_POS(victim) = set_pos;
+  damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 1.5), SKILL_BACKFIST, DAM_PHYSICAL);
 
-      /* Can't use skill_wait() since this applies to victim. */
-      WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
-    }
+  if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
+
+    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
   }
 
   skill_wait(ch, SKILL_BACKFIST, 2);
 }
 
 
-void do_pray(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
+void do_pray(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_PALADIN)) {
     send_to_char("You don't know this skill.\n\r", ch);
@@ -308,32 +313,21 @@ void do_pray(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_PRAY)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_PRAY)) {
     send_to_char("You failed to focus your thoughts in prayer.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_PRAY;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
 
-    affect_to_char(ch, &af);
-
-    send_to_char("You bow your head and begin your prayer.\n\r", ch);
-    act("$n bows $s head and begins praying.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
+
+  affect_apply(ch, SKILL_PRAY, -1, 0, 0, 0, 0);
+
+  send_to_char("You bow your head and begin your prayer.\n\r", ch);
+  act("$n bows $s head and begins praying.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
 
 void do_tigerkick(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int set_pos = 0;
-
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_TIGERKICK)) {
     send_to_char("You don't know this skill.\n\r", ch);
@@ -341,9 +335,13 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  one_argument(arg, name);
+  char buf[MIL];
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  one_argument(arg, buf);
+
+  CHAR *victim = get_char_room_vis(ch, buf);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Tigerkick who?\n\r", ch);
 
     return;
@@ -367,11 +365,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 121) - GET_DEX_APP(ch);
-
-  if (affected_by_spell(ch, SPELL_BLUR)) {
-    check -= GET_LEVEL(ch) / 10;
-  }
+  int check = number(1, 121) - GET_DEX_APP(ch);
 
   if (check > GET_LEARNED(ch, SKILL_TIGERKICK)) {
     act("You try to tigerkick $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
@@ -379,31 +373,38 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     act("$n tries to tigerkick $N, but misses.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_TIGERKICK, 2);
+
+    return;
   }
-  else {
-    if (!breakthrough(ch, victim, BT_INVUL)) {
-      act("$N seems completely unaffected by your beautiful tigerkick.", FALSE, ch, 0, victim, TO_CHAR);
-      act("You feel completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_VICT);
-      act("$N seems completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_NOTVICT);
-    }
-    else {
-      set_pos = stack_position(victim, POSITION_STUNNED);
 
-      act("You drive your foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n drives $s foot into your chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n drives $s foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_NOTVICT);
+  if (!breakthrough(ch, victim, SKILL_TIGERKICK, BT_INVUL)) {
+    act("$N seems completely unaffected by your beautiful tigerkick.", FALSE, ch, 0, victim, TO_CHAR);
+    act("You feel completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_VICT);
+    act("$N seems completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.75)), SKILL_TIGERKICK, DAM_PHYSICAL);
+    damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
 
-      GET_MANA(ch) = MIN(GET_MANA(ch) + MIN(MAX((GET_MAX_HIT(victim) / 5000), 2), 10), GET_MAX_MANA(ch));
+    skill_wait(ch, SKILL_TIGERKICK, 2);
 
-      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-        GET_POS(victim) = set_pos;
+    return;
+  }
 
-        /* Can't use skill_wait() since this applies to victim. */
-        WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
-      }
-    }
+  int set_pos = stack_position(victim, POSITION_STUNNED);
+
+  act("You drive your foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n drives $s foot into your chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n drives $s foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.75)), SKILL_TIGERKICK, DAM_PHYSICAL);
+
+  GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + MIN(MAX((GET_MAX_HIT(victim) / 5000), 2), 10));
+
+  if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
+
+    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
   }
 
   skill_wait(ch, SKILL_TIGERKICK, 2);
@@ -468,7 +469,7 @@ void list_scanned_chars(CHAR *list, CHAR *ch, int distance, int door) {
 
 
 /* Portions of scan taken from a snippet (do_scan) by sjmaster@mit.edu */
-void do_scan(CHAR *ch, char *argument, int cmd) {
+void do_scan(CHAR *ch, char *arg, int cmd) {
   int dir = NOWHERE;
   int room = NOWHERE;
   int exit_room = NOWHERE;
@@ -487,8 +488,9 @@ void do_scan(CHAR *ch, char *argument, int cmd) {
 
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_THIEF) &&
-      ((GET_CLASS(ch) != CLASS_NOMAD) || !check_subclass(ch, SC_TRAPPER, 1))) {
+      !check_subclass(ch, SC_TRAPPER, 1)) {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
@@ -499,7 +501,7 @@ void do_scan(CHAR *ch, char *argument, int cmd) {
   }
 
   if (IS_AFFECTED(ch, AFF_BLIND)) {
-    send_to_char("You can't see a thing, you're blind!\n\r", ch);
+    send_to_char("You can't see a thing! You're blind!\n\r", ch);
 
     return;
   }
@@ -542,20 +544,18 @@ void do_scan(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_camp(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
+void do_camp(CHAR *ch, char *arg, int cmd) {
   if (!GET_SKILLS(ch)) return;
 
-  if (!check_sc_access(ch, SKILL_CAMP) &&
-      GET_CLASS(ch) != CLASS_BARD) {
+  if (!check_sc_access(ch, SKILL_CAMP)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) < 35))
-  {
+  if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) == CLASS_BARD) &&
+      (GET_LEVEL(ch) < 35)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;
@@ -585,109 +585,104 @@ void do_camp(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_CAMP)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_CAMP)) {
     send_to_char("You failed to set up camp.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_CAMP;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    GET_POS(ch) = POSITION_RESTING;
-
-    SET_BIT(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB);
-
-    send_to_char("You quickly set up a camp here, then sit down and rest.\n\r", ch);
-    act("$n quickly sets up a camp here, then sits down and rests.", TRUE, ch, 0, 0, TO_ROOM);
-  }
-}
-
-
-void do_blitz(CHAR *ch, char *argument, int cmd)
-{
-  char name[MIL];
-  CHAR* victim = NULL;
-  int check = 0;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_BLITZ))
-  {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  one_argument(argument, name);
+  affect_apply(ch, SKILL_CAMP, -1, 0, 0, 0, 0);
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch)))
-  {
+  GET_POS(ch) = POSITION_RESTING;
+
+  SET_BIT(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB);
+
+  send_to_char("You quickly set up a camp here, then sit down and rest.\n\r", ch);
+  act("$n quickly sets up a camp here, then sits down and rests.", FALSE, ch, 0, 0, TO_ROOM);
+}
+
+
+void do_blitz(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_BLITZ)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  char name[MIL];
+
+  one_argument(arg, name);
+
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Blitz who?\n\r", ch);
 
     return;
   }
 
-  if (victim == ch)
-  {
+  if (victim == ch) {
     send_to_char("Why would you even consider such a thing?\n\r", ch);
 
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(victim)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
     send_to_char("Behave yourself here please!\n\r", ch);
 
     return;
   }
 
-  if (IS_MORTAL(ch) && IS_IMMORTAL(victim))
-  {
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
     send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
 
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  if (!GET_WEAPON(ch)) {
+    send_to_char("You need to wield a weapon for your blitz to succeed.\n\r", ch);
 
-  if (check > GET_LEARNED(ch, SKILL_BLITZ))
-  {
+    return;
+  }
+
+  int check = number(1, 131) - GET_DEX_APP(ch);
+
+  if (check > GET_LEARNED(ch, SKILL_BLITZ)) {
     act("You try to blitz $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to blitz you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to blitz $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_BLITZ, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_BLITZ, 2);
+
+    return;
   }
-  else
-  {
-    hit(ch, victim, SKILL_BLITZ);
-  }
+
+  hit(ch, victim, SKILL_BLITZ);
 
   skill_wait(ch, SKILL_BLITZ, 2);
 }
 
 
-void do_lunge(CHAR *ch, char *argument, int cmd) {
-  CHAR *victim = NULL;
-  char name[MIL];
-  int check = 0;
-
-  if (!GET_SKILLS(ch)) return;
+void do_lunge(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_LUNGE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  one_argument(argument, name);
+  char name[MIL];
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  one_argument(arg, name);
+
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Lunge at who?\n\r", ch);
 
     return;
@@ -717,7 +712,7 @@ void do_lunge(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 131) - GET_DEX_APP(ch);
 
   /* Bonus for lunging at a target already in combat. */
   if (GET_OPPONENT(victim)) {
@@ -726,82 +721,27 @@ void do_lunge(CHAR *ch, char *argument, int cmd) {
 
   if (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_LUNGE))) {
     act("You try to lunge at $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$N tries to lunge at you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
+    act("$n tries to lunge at you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to lunge at $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_LUNGE, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_LUNGE, 2);
+
+    return;
   }
-  else {
-    hit(ch, victim, SKILL_LUNGE);
-  }
+
+  hit(ch, victim, SKILL_LUNGE);
 
   skill_wait(ch, SKILL_LUNGE, 2);
 }
 
 
-void do_fade(CHAR *ch, char *argument, int cmd) {
-  int modifier = 0;
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_FADE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
-
-    return;
-  }
-
-  if (affected_by_spell(ch, SKILL_FADE)) {
-    affect_from_char(ch, SKILL_FADE);
-
-    send_to_char("You emerge from the background and into view.\n\r", ch);
-    act("$n emerges from the background and into view.", TRUE, ch, 0, 0, TO_ROOM);
-
-    return;
-  }
-
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_FADE)) {
-    send_to_char("You failed to fade into the background.\n\r", ch);
-  }
-  else {
-    if (GET_LEVEL(ch) < 35) {
-      modifier = -5;
-    }
-    else if (GET_LEVEL(ch) < 40) {
-      modifier = -4;
-    }
-    else if (GET_LEVEL(ch) < 45) {
-      modifier = -3;
-    }
-    else if (GET_LEVEL(ch) < 50) {
-      modifier = -2;
-    }
-    else {
-      modifier = -1;
-    }
-
-    af.type = SKILL_FADE;
-    af.duration = -1;
-    af.modifier = modifier;
-    af.location = APPLY_HITROLL;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You quietly fade into the background and blend in with your surroundings.\n\r", ch);
-    act("$n quietly fades into the background and blends in with $s surroundings.", TRUE, ch, 0, 0, TO_ROOM);
-  }
-}
-
-
-void do_vehemence(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
+void do_vehemence(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_VEHEMENCE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -812,112 +752,42 @@ void do_vehemence(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_VEHEMENCE)) {
-    affect_from_char(ch, SKILL_VEHEMENCE);
+  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_VEHEMENCE);
 
     send_to_char("Your vehemence diminishes.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_VEHEMENCE)) {
-    send_to_char("You are unable to fill yourself with a sense of vehemence.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_VEHEMENCE;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_VEHEMENCE)) {
+    send_to_char("You are unable to fill yourself with vehemence.\n\r", ch);
 
-    affect_to_char(ch, &af);
-
-    send_to_char("You feel a sudden rush of vehemence wash over you.\n\r", ch);
+    return;
   }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_VEHEMENCE);
+
+  send_to_char("You feel a sudden rush of vehemence wash over you.\n\r", ch);
 }
 
 
-void do_switch(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_SWITCH)) {
-    send_to_char("You do not have this skill.\n\r", ch);
-
-    return;
-  }
-
-  if (!GET_OPPONENT(ch)) {
-    send_to_char("You aren't fighting anything.\n\r", ch);
-
-    return;
-  }
-
-  one_argument(argument, name);
-
-  if (!(victim = get_char_room_vis(ch, name))) {
-    send_to_char("Switch to who?\n\r", ch);
-
-    return;
-  }
-
-  if (victim == ch) {
-    send_to_char("Maybe you should surrender instead...\n\r", ch);
-
-    return;
-  }
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
-    send_to_char("Behave yourself here please!\n\r", ch);
-
-    return;
-  }
-
-  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
-    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-
-    return;
-  }
-
-  check = number(1, 111) - GET_DEX_APP(ch);
-
-  if ((check > GET_LEARNED(ch, SKILL_SWITCH)) || IS_AFFECTED(ch, AFF_FURY)) {
-    send_to_char("You failed to switch.\n\r", ch);
-  }
-  else {
-    act("$n switches $s fight to $N", 0, ch, 0, victim, TO_NOTVICT);
-    act("You switch your fight to $N!", 0, ch, 0, victim, TO_CHAR);
-    act("$n switches $s fight to you!", 0, ch, 0, victim, TO_VICT);
-
-    stop_fighting(ch);
-    set_fighting(ch, victim);
-  }
-
-  skill_wait(ch, SKILL_SWITCH, 2);
-}
-
-
-void do_smite(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int set_pos = 0;
-
-  if (!GET_SKILLS(ch)) return;
+void do_smite(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_SMITE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  one_argument(argument, name);
+  char name[MIL];
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  one_argument(arg, name);
+
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Smite who?\n\r", ch);
 
     return;
@@ -947,44 +817,44 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 111) - GET_DEX_APP(ch);
+  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_WIS_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_SMITE)) {
-    act("You try to smite $M but your concentration falters.", 0, ch, 0, victim, TO_CHAR);
-    act("$n tries to smite you but $s concentration falters.", 0, ch, 0, victim, TO_VICT);
-    act("$n tries to smite $N but $s concentration falters.", 0, ch, 0, victim, TO_NOTVICT);
+    act("You try to smite $M, but your concentration falters.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n tries to smite you, but $s concentration falters.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n tries to smite $N, but $s concentration falters.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_SMITE, DAM_NO_BLOCK);
+
+    skill_wait(ch, SKILL_SMITE, 2);
+
+    return;
   }
-  else {
-    if (victim != GET_OPPONENT(ch)) {
-      act("You call upon your divine energy and switch the focus of your attacks to $N.", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n calls upon $s divine energy and switches the focus of $s attacks to you!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n calls upon $s divine energy and switches the focus of $s attacks to $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-    }
+
+  if (GET_OPPONENT(ch) && (victim != GET_OPPONENT(ch))) {
+    act("You call upon your divine energy and switch the focus of your attacks to $N.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n calls upon $s divine energy and switches the focus of $s attacks to you!", FALSE, ch, 0, victim, TO_VICT);
+    act("$n calls upon $s divine energy and switches the focus of $s attacks to $N.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     stop_fighting(ch);
     set_fighting(ch, victim);
-
+  }
+  else {
     act("You raise your weapon high to smite $M with holy vengeance!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n raises $s weapon high to smite you with holy vengence!", FALSE, ch, 0, victim, TO_VICT);
     act("$n raises $s weapon high to smite $N with holy vengeance!", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    hit(ch, victim, TYPE_UNDEFINED);
-
-    if ((CHAR_REAL_ROOM(victim) != NOWHERE) && breakthrough(ch, victim, BT_INVUL)) {
-      GET_POS(victim) = stack_position(victim, POSITION_RESTING);
-    }
   }
 
+  hit(ch, victim, SKILL_SMITE);
+
+  GET_POS(victim) = stack_position(victim, POSITION_RESTING);
+
   /* Trusty Steed */
-  if ((CHAR_REAL_ROOM(victim) != NOWHERE) &&
-      affected_by_spell(ch, SKILL_TRUSTY_STEED) &&
-      breakthrough(ch, victim, BT_INVUL)) {
+  if (SAME_ROOM(ch, victim) && IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
     check = number(1, 121) - GET_WIS_APP(ch);
 
-    if (check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
-      set_pos = stack_position(victim, POSITION_SITTING);
+    if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
+      int set_pos = stack_position(victim, POSITION_SITTING);
 
       act("You summon forth your trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_CHAR);
       act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", FALSE, ch, 0, victim, TO_VICT);
@@ -1002,29 +872,36 @@ void do_smite(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_flank(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
+int maim_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_DAMAGED) {
+    if (!*arg || strcasecmp(arg, "SKILL_MAIM")) return FALSE;
 
-  if (!GET_SKILLS(ch)) return;
+    send_to_char("You cry out in pain as your maimed body suffers another blow!\n\r", ch);
+    act("$n cries out in pain as $s maimed body suffers another blow!", FALSE, ch, 0, 0, TO_ROOM);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+void do_flank(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_FLANK)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  one_argument(argument, name);
+  char name[MIL];
 
-  if (!(victim = get_char_room_vis(ch, name))) {
+  one_argument(arg, name);
+
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim) {
     send_to_char("Flank who?\n\r", ch);
-
-    return;
-  }
-
-  if (victim == GET_OPPONENT(ch)) {
-    send_to_char("You cannot flank a target who is so focused on fighting you.\n\r", ch);
 
     return;
   }
@@ -1053,7 +930,7 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 131) - GET_DEX_APP(ch);
 
   if (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_FLANK))) {
     act("You try to flank $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1061,18 +938,39 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
     act("$n tries to flank $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
-  }
-  else {
-    if (GET_OPPONENT(ch)) {
-      act("$n turns suddenly, flanking $N deftly and swiftly.", 0, ch, 0, victim, TO_NOTVICT);
-      act("You turn suddenly, flanking $N deflty and swiftly.", 0, ch, 0, victim, TO_CHAR);
-      act("$n turns suddenly, flanking $N deftly and swifty.", 0, ch, 0, victim, TO_VICT);
 
-      stop_fighting(ch);
-      set_fighting(ch, victim);
-    }
-    else {
-      hit(ch, victim, SKILL_FLANK);
+    skill_wait(ch, SKILL_FLANK, 2);
+
+    return;
+  }
+
+  if (!GET_OPPONENT(ch)) {
+    hit(ch, victim, SKILL_FLANK);
+  }
+  else if (GET_OPPONENT(ch) && (victim != GET_OPPONENT(ch))) {
+    act("You turn suddenly, flanking $N deftly and swiftly.", 0, ch, 0, victim, TO_CHAR);
+    act("$n turns suddenly, flanking $N deftly and swiftly.", 0, ch, 0, victim, TO_VICT);
+    act("$n turns suddenly, flanking $N deftly and swiftly.", 0, ch, 0, victim, TO_NOTVICT);
+
+    stop_fighting(ch);
+    set_fighting(ch, victim);
+  }
+  else if (GET_OPPONENT(ch) && (victim == GET_OPPONENT(ch))) {
+    act("You reposition yourself so that you to flank $N.", 0, ch, 0, victim, TO_CHAR);
+    act("$n repositions $mself so that $e flanks you.", 0, ch, 0, victim, TO_VICT);
+    act("$n repositions $mself so that $e flanks $N.", 0, ch, 0, victim, TO_NOTVICT);
+  }
+
+  /* Maim */
+  if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_MAIM) && !affected_by_spell(victim, SKILL_MAIM)) {
+    check = number(1, 131) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
+
+    if (check <= GET_LEARNED(ch, SKILL_MAIM)) {
+      act("You savagely maim $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n savagely maims you, making you susceptible to extra damage!", FALSE, ch, 0, victim, TO_VICT);
+      act("$n savagely maim $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+      enchantment_apply(victim, FALSE, "Maimed", SKILL_MAIM, -1, 0, (GET_LEVEL(ch) / 4), 0, 0, 0, maim_enchantment);
     }
   }
 
@@ -1080,16 +978,11 @@ void do_flank(CHAR *ch, char *argument, int cmd) {
 }
 
 
-/* Used to be Sweep */
-void do_zeal(CHAR *ch, char *argument, int cmd) {
-  CHAR *tmp_victim = NULL;
-  CHAR *next_victim = NULL;
-  int check = 0;
-
-  if (!GET_SKILLS(ch)) return;
+void do_zeal(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_ZEAL)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -1101,57 +994,54 @@ void do_zeal(CHAR *ch, char *argument, int cmd) {
   }
 
   if (!GET_WEAPON(ch)) {
-    send_to_char("You need to wield a weapon for it to be successful.\n\r", ch);
+    send_to_char("You need to wield a weapon for your zeal to be successful.\n\r", ch);
 
     return;
   }
 
-  check = number(1, 101) - GET_DEX_APP(ch);
+  int check = number(1, 101) - MAX(GET_STR_TO_HIT(ch), GET_WIS_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_ZEAL)) {
     act("You fail in your attempt to invoke divine wrath upon your foes.", FALSE, ch, 0, 0, TO_CHAR);
     act("$n fails in an attempt to invoke divine wrath upon $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
     skill_wait(ch, SKILL_ZEAL, 2);
+
+    return;
   }
-  else {
-    act("You are empowered by a sense of divine zeal as you tear into your foes.", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n is empowered by divine zeal and cleaves through $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
-      next_victim = tmp_victim->next_in_room;
+  act("You are empowered by a sense of divine zeal as you tear into your foes.", FALSE, ch, 0, 0, TO_CHAR);
+  act("$n is empowered by divine zeal and cleaves through $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-      if (tmp_victim == ch) continue;
+  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(ch)].people, *next_victim; temp_victim; temp_victim = next_victim) {
+    next_victim = temp_victim->next_in_room;
 
-      if (IS_NPC(tmp_victim) && GET_RIDER(tmp_victim) != ch) {
-        hit(ch, tmp_victim, TYPE_UNDEFINED);
+    if (IS_IMMORTAL(temp_victim) ||
+        (temp_victim == ch) ||
+        (IS_NPC(temp_victim) && (GET_RIDER(temp_victim) == ch)) ||
+        (IS_MORTAL(temp_victim) && (!ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim)) || GET_OPPONENT(temp_victim)))) continue;
 
-        skill_wait(tmp_victim, SKILL_ZEAL, 2);
+    hit(ch, temp_victim, SKILL_ZEAL);
 
-        continue;
+    if (temp_victim && SAME_ROOM(ch, temp_victim)) {
+      if (IS_NPC(temp_victim)) {
+        MOB_ATT_TIMER(temp_victim) = MAX(MOB_ATT_TIMER(temp_victim), 2);
       }
-
-      if (IS_MORTAL(tmp_victim) &&
-          ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-          !GET_OPPONENT(tmp_victim)) {
-        hit(ch, tmp_victim, TYPE_UNDEFINED);
-
-        continue;
+      else {
+        WAIT_STATE(temp_victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
       }
     }
-
-    skill_wait(ch, SKILL_ZEAL, 2);
   }
+
+  skill_wait(ch, SKILL_ZEAL, 2);
 }
 
 
-void do_hostile(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
+void do_hostile(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_HOSTILE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -1162,8 +1052,8 @@ void do_hostile(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_HOSTILE)) {
-    affect_from_char(ch, SKILL_HOSTILE);
+  if (IS_SET(GET_PFLAG2(ch), PLR2_HOSTILE)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_HOSTILE);
 
     send_to_char("You place yourself in a normal stance.\n\r", ch);
     act("$n places $mself in a normal stance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1171,32 +1061,24 @@ void do_hostile(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_HOSTILE)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_HOSTILE)) {
     send_to_char("You failed to get into the hostile stance.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_HOSTILE;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
 
-    affect_to_char(ch, &af);
-
-    send_to_char("You place yourself in a hostile stance.", ch);
-    act("$n places $mself in a hostile stance.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_HOSTILE);
+
+  send_to_char("You place yourself in a hostile stance.\n\r", ch);
+  act("$n places $mself in a hostile stance.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
 
-void do_defend(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
+void do_defend(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_DEFEND)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -1218,25 +1100,18 @@ void do_defend(CHAR *ch, char *argument, int cmd) {
 
   if (number(1, 85) > GET_LEARNED(ch, SKILL_DEFEND)) {
     send_to_char("You failed to get into a defensive stance.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_DEFEND;
-    af.duration = -1;
-    af.modifier = -100;
-    af.location = APPLY_AC;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
 
-    affect_to_char(ch, &af);
-
-    send_to_char("You place yourself in a defensive stance.", ch);
-    act("$n places $mself in a defensive stance.", TRUE, ch, 0, 0, TO_ROOM);
+    return;
   }
+
+  affect_apply(ch, SKILL_DEFEND, -1, -100, APPLY_AC, 0, 0);
+
+  send_to_char("You place yourself in a defensive stance.\n\r", ch);
+  act("$n places $mself in a defensive stance.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
 
-void do_batter(CHAR *ch, char *arg, int cmd)
-{
+void do_batter(CHAR *ch, char *arg, int cmd) {
   char name[MIL];
   CHAR *victim;
   int check;
@@ -1246,7 +1121,7 @@ void do_batter(CHAR *ch, char *arg, int cmd)
   if (IS_MORTAL(ch) &&
       !check_sc_access(ch, SKILL_BATTER))
   {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
     return;
   }
 
@@ -1301,7 +1176,7 @@ void do_batter(CHAR *ch, char *arg, int cmd)
   }
   else
   {
-    if ((IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, BT_INVUL)))
+    if ((IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, SKILL_BATTER, BT_INVUL)))
     {
       act("You pound on $N with your fists, but your battering has no effect.", FALSE, ch, 0, victim, TO_CHAR);
       act("$N pounds on you with $s fists, but $s battering has no effect.", FALSE, ch, 0, victim, TO_VICT);
@@ -1334,128 +1209,22 @@ void do_batter(CHAR *ch, char *arg, int cmd)
 }
 
 
-//void do_charge(struct char_data *ch, char *argument, int cmd) {
-//  CHAR *leader, *victim;
-//  struct follow_type *Followers = NULL;
-//  int percent;
-//  //int hps;
-//  char name[256];
-//
-//  if (!ch->skills) return;
-//  if (!check_sc_access(ch, SKILL_CHARGE)) {
-//    send_to_char("You do not have this skill.\n\r", ch);
-//    return;
-//  }
-//
-//  if (ch->specials.fighting) {
-//    send_to_char("You are already fighting.\n\r", ch);
-//    return;
-//  }
-//
-//  one_argument(argument, name);
-//
-//  if (!(victim = get_char_room_vis(ch, name))) {
-//    send_to_char("Charge who?\n\r", ch);
-//    return;
-//  }
-//
-//  if (victim == ch)
-//  {
-//    send_to_char("Aren't we funny today...\n\r", ch);
-//    return;
-//  }
-//  else if (victim->specials.fighting)
-//  {
-//    act("$N is already fighting someone.", 0, ch, 0, victim, TO_CHAR);
-//    return;
-//  }
-//  else if (IS_MORTAL(ch) &&
-//           !IS_NPC(victim) &&
-//           GET_LEVEL(victim) >= LEVEL_IMM)
-//  {
-//    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-//    return;
-//  }
-//  else if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
-//           !CHAOSMODE)
-//  {
-//    send_to_char("Behave yourself here please!\n\r", ch);
-//    return;
-//  }
-//
-//  percent = number(1, 131);
-//
-//  if (percent > GET_LEARNED(ch, SKILL_CHARGE)) {
-//    act("You try to lead a charge against $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
-//    act("$N tries to lead a charge against you, but fails.", FALSE, victim, 0, ch, TO_CHAR);
-//    act("$n tries to lead a charge against $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
-//    damage(ch, victim, 0, SKILL_CHARGE, DAM_NO_BLOCK);
-//    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-//    return;
-//  }
-//
-//  /* find the leader */
-//  if ((!IS_AFFECTED(ch, AFF_GROUP) || ch->master == NULL)) {
-//    leader = ch;
-//  }
-//  else {
-//    if (!IS_AFFECTED(ch->master, AFF_GROUP))
-//      leader = ch;
-//    else
-//      leader = ch->master;
-//  }
-//
-//  act("You lead a charge against $N!", FALSE, ch, 0, victim, TO_CHAR);
-//  act("$N leads a charge against you!", FALSE, victim, 0, ch, TO_CHAR);
-//  act("$n leads a charge against $N!", FALSE, ch, 0, victim, TO_NOTVICT);
-//
-//  /* charger hits */
-//  //hps = GET_HIT(victim);
-//  hit(ch, victim, SKILL_CHARGE);
-//  WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-//
-//  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-//  /*if(GET_HIT(victim)>=hps) return;*/ /* this is a check for a missed charge */
-//
-//  /* Go through the followers */
-//  for (Followers = leader->followers; Followers; Followers = Followers->next)
-//  {
-//    if (Followers->follower->desc) /*make sure they're connected*/
-//    {
-//      if (IS_AFFECTED(Followers->follower, AFF_GROUP) &&
-//          CHAR_REAL_ROOM(Followers->follower) == CHAR_REAL_ROOM(ch) && Followers->follower != ch)
-//      {
-//        send_to_char("You join in the charge!\n\r", Followers->follower);
-//        hit(Followers->follower, victim, SKILL_CHARGE);
-//        if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-//      }
-//    }
-//  }
-//  /* Have leader charge */
-//  if (CHAR_REAL_ROOM(leader) == CHAR_REAL_ROOM(ch) && leader != ch) {
-//    send_to_char("You join in the charge!\n\r", leader);
-//    hit(leader, victim, SKILL_CHARGE);
-//  }
-//}
-
-
 void do_headbutt(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int set_pos = 0;
-
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_HEADBUTT)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
+  char name[MIL];
+
   one_argument(arg, name);
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Headbutt who?\n\r", ch);
 
     return;
@@ -1479,7 +1248,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_HEADBUTT)) {
     act("You miss $N with your headbutt.", FALSE, ch, NULL, victim, TO_CHAR);
@@ -1489,44 +1258,45 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
     damage(ch, victim, 0, SKILL_HEADBUTT, DAM_NO_BLOCK);
 
     skill_wait(ch, SKILL_HEADBUTT, 2);
+
+    return;
   }
-  else {
-    if (!breakthrough(ch, victim, BT_INVUL)) {
-      act("You slam your forehead into $N's face, but $E isn't even phased.", FALSE, ch, NULL, victim, TO_CHAR);
-      act("$n slams his forehead into your face, but you aren't even phased.", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n slams $s forehead into $N's face, but $E isn't even phased.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      damage(ch, victim, 0, SKILL_HEADBUTT, DAM_NO_BLOCK);
-    }
-    else {
-      set_pos = stack_position(victim, POSITION_STUNNED);
+  if (!breakthrough(ch, victim, SKILL_HEADBUTT, BT_INVUL)) {
+    act("You slam your forehead into $N's face, but $E isn't even phased.", FALSE, ch, NULL, victim, TO_CHAR);
+    act("$n slams his forehead into your face, but you aren't even phased.", FALSE, ch, NULL, victim, TO_VICT);
+    act("$n slams $s forehead into $N's face, but $E isn't even phased.", FALSE, ch, NULL, victim, TO_NOTVICT);
 
-      act("You slam your forehead into $N's face!", FALSE, ch, NULL, victim, TO_CHAR);
-      act("$n slams his forehead into your face!", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n slams $s forehead into $N's face!", FALSE, ch, NULL, victim, TO_NOTVICT);
+    damage(ch, victim, 0, SKILL_HEADBUTT, DAM_NO_BLOCK);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 200), SKILL_HEADBUTT, DAM_PHYSICAL);
+    skill_wait(ch, SKILL_HEADBUTT, 2);
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
-        GET_POS(victim) = set_pos;
-      }
-    }
-
-    skill_wait(ch, SKILL_HEADBUTT, 3);
+    return;
   }
+
+  int set_pos = stack_position(victim, POSITION_STUNNED);
+
+  act("You slam your forehead into $N's face!", FALSE, ch, NULL, victim, TO_CHAR);
+  act("$n slams his forehead into your face!", FALSE, ch, NULL, victim, TO_VICT);
+  act("$n slams $s forehead into $N's face!", FALSE, ch, NULL, victim, TO_NOTVICT);
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 4), SKILL_HEADBUTT, DAM_PHYSICAL);
+
+  if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
+  }
+
+  skill_wait(ch, SKILL_HEADBUTT, 2);
 }
 
 
 void do_banzai(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int mana_cost = 75;
+  const int mana_cost = 75;
 
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_BANZAI)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
@@ -1537,9 +1307,13 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
+  char name[MIL];
+
   one_argument(arg, name);
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Banzai charge who?\n\r", ch);
 
     return;
@@ -1563,33 +1337,55 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 101) - GET_DEX_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
+  int check = number(1, 101) - GET_DEX_APP(ch);
+
+  /* The Shogun title increases "concentration" rate. */
+  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+    check -= 5;
+  }
 
   if (check > GET_LEARNED(ch, SKILL_BANZAI)) {
-    act("You try to banzai charge $N but fail.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n tries to banzai charge you but fails.", FALSE, ch, 0, victim, TO_VICT);
-    act("$n tries to banzai charge $N but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("You try to banzai charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n tries to banzai charge you, but fails.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n tries to banzai charge $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_BANZAI, DAM_NO_BLOCK);
 
-    GET_MANA(ch) = MAX(GET_MANA(ch) - (mana_cost / 2), 0);
-  }
-  else {
-    act("With a primal yell, you banzai charge $N.", FALSE, ch, 0, victim, TO_CHAR);
-    act("With a primal yell, $n banzai charges you.", FALSE, ch, 0, victim, TO_VICT);
-    act("With a primal yell, $n banzai charges $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    damage(ch, victim, number(200, 300), SKILL_BANZAI, DAM_PHYSICAL);
-
-    // check again for hit
-    check = number(1, 101) - GET_DEX_APP(ch) - (enchanted_by_type(ch, ENCHANT_SHOGUN) ? 5 : 0);
-
-    if (SAME_ROOM(victim, ch) &&
-        (check <= GET_LEARNED(ch, SKILL_BANZAI))) {
-      hit(ch, victim, SKILL_BANZAI);
+    if (ch) {
+      GET_MANA(ch) -= mana_cost / 2;
     }
 
-    GET_MANA(ch) = MAX(GET_MANA(ch) - mana_cost, 0);
+    skill_wait(ch, SKILL_BANZAI, 1);
+
+    return;
+  }
+
+  if (GET_OPPONENT(ch) && (victim != GET_OPPONENT(ch))) {
+    stop_fighting(ch);
+    set_fighting(ch, victim);
+  }
+
+  act("With a primal yell, you banzai charge $N!", FALSE, ch, 0, victim, TO_CHAR);
+  act("With a primal yell, $n banzai charges you!", FALSE, ch, 0, victim, TO_VICT);
+  act("With a primal yell, $n banzai charges $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  damage(ch, victim, number(200, 300), SKILL_BANZAI, DAM_PHYSICAL);
+
+  if (SAME_ROOM(victim, ch)) {
+    check = number(1, 101) - GET_DEX_APP(ch);
+
+    /* The Shogun title increases "concentration" rate. */
+    if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+      check -= 5;
+    }
+
+    if (check <= GET_LEARNED(ch, SKILL_BANZAI)) {
+      hit(ch, victim, SKILL_BANZAI);
+    }
+  }
+
+  if (ch) {
+    GET_MANA(ch) -= mana_cost;
   }
 
   skill_wait(ch, SKILL_BANZAI, 1);
@@ -1597,34 +1393,29 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
 
 
 void do_mantra(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int mana_cost = 120;
-  int modifier = 0;
-  AFF *tmp_af = NULL;
-  AFF af = {0};
+  const int mana_cost = 120;
 
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_MANTRA)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (IS_MORTAL(ch) && GET_MANA(ch) < mana_cost) {
-    send_to_char("You do not have enough mana.\n\r", ch);
+  if (IS_MORTAL(ch) && (GET_MANA(ch) < mana_cost)) {
+    send_to_char("You can't summon enough energy to chant your mantra.\n\r", ch);
 
     return;
   }
+
+  char name[MIL];
 
   one_argument(arg, name);
 
-  if (!*name) {
-    victim = ch;
-  }
-  else if (!(victim = get_char_room_vis(ch, name))) {
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = ch)) {
     send_to_char("Chant your mantra to who?\n\r", ch);
 
     return;
@@ -1636,73 +1427,68 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 101) - GET_WIS_APP(ch);
+  int check = number(1, 101) - ((GET_INT_CONC(ch) + GET_WIS_CONC(ch)) / 10);
 
   /* Inner Peace */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
     check -= 5;
   }
-  
-  /* The Shogun title increases concentration rate. */
+
+  /* The Shogun title increases "concentration" rate. */
   if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
     check -= 5;
   }
 
-  /* Mantra automatically fails when used on a degenerated target. */
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    check = 256;
-  }
+  /* Take 50% of the mana cost before skill check. */
+  GET_MANA(ch) -= mana_cost / 2;
 
-  if (check > GET_LEARNED(ch, SKILL_MANTRA)) {
+  if ((check > GET_LEARNED(ch, SKILL_MANTRA)) ||
+      (affected_by_spell(victim, SPELL_DEGENERATE) && (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27)))) {
     if (victim != ch) {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n chants $s mantra to you, but nothing happens.", FALSE, ch, 0, victim, TO_VICT);
       act("$n chants $s mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_NOTVICT);
     }
     else {
-      send_to_char("You chant softly to yourself with no noticeable affect.\n\r", ch);
-      act("$n chants softly to $mself with no noticeable affect.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("You chant softly to yourself with no noticeable effect.\n\r", ch);
+      act("$n chants softly to $mself with no noticeable effect.", FALSE, ch, 0, 0, TO_ROOM);
     }
 
-    GET_MANA(ch) = MAX(GET_MANA(ch) - (mana_cost / 2), 0);
+    skill_wait(ch, SKILL_MANTRA, 1);
+
+    return;
+  }
+
+  /* Take 50% of the mana cost after skill check. */
+  GET_MANA(ch) -= mana_cost / 2;
+
+  if (victim != ch) {
+    act("You chant softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n chants softly to you, healing your spirit and giving you life.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n chants softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_NOTVICT);
   }
   else {
-    if (victim != ch) {
-      act("You chant softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n chants softly to you, healing your spirit and giving you life.", FALSE, ch, 0, victim, TO_VICT);
-      act("$n chants softly to $N, healing $S spirit and giving $M life.", FALSE, ch, 0, victim, TO_NOTVICT);
-    }
-    else {
-      send_to_char("You chant softly, healing your spirit and giving yourself life.\n\r", ch);
-      act("$n chants softly, healing $s spirit and giving $mself life.", FALSE, ch, 0, 0, TO_ROOM);
-    }
-
-    GET_MANA(ch) = MAX(GET_MANA(ch) - mana_cost, 0);
-
-    magic_heal(victim, SKILL_MANTRA, 500, FALSE);
-
-    modifier = (GET_LEVEL(ch) + (5 * GET_WIS_APP(ch)));
-
-    // remove existing affect and replace with a refreshed version
-    for (tmp_af = victim->affected; tmp_af; tmp_af = tmp_af->next) {
-      if (tmp_af->type == SKILL_MANTRA) {
-        // keep the highest of the caster's modifier or affected modifier
-        modifier = MAX(tmp_af->modifier, modifier);
-        affect_from_char(victim, SKILL_MANTRA);
-        break;
-      }
-    }
-
-    af.type       = SKILL_MANTRA;
-    af.duration   = 10;
-    af.modifier   = modifier;
-    af.location   = APPLY_NONE;
-    af.bitvector  = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(victim, &af);
+    act("You chant softly, healing your spirit and giving yourself life.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n chants softly, healing $s spirit and giving $mself life.", FALSE, ch, 0, 0, TO_ROOM);
   }
+
+  magic_heal(victim, SKILL_MANTRA, 500, FALSE);
+
+  int modifier = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.3333);
+
+  /* Check if victim is already affected by Mantra. If so, keep the higher modifier. */
+  for (AFF *temp_af = victim->affected; temp_af; temp_af = temp_af->next) {
+    if (temp_af->type == SKILL_MANTRA) {
+      modifier = MAX(temp_af->modifier, modifier);
+
+      affect_from_char(victim, SKILL_MANTRA);
+
+      break;
+    }
+  }
+
+  /* TODO: Convert to Enchant using MSG_ROUND. */
+  affect_apply(victim, SKILL_MANTRA, 10, modifier, 0, 0, 0);
 
   skill_wait(ch, SKILL_MANTRA, 1);
 }
@@ -1784,46 +1570,63 @@ void do_berserk(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_trophy(CHAR *ch, char *argument, int cmd) {
-  OBJ *corpse = NULL;
-  OBJ *trophy = NULL;
-  char obj_name[MSL];
-  char trophy_name[MSL];
-  char buf[MIL];
+void do_trophy(CHAR *ch, char *arg, int cmd) {
+  const int mana_cost = 10;
+
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_TROPHY)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (IS_MORTAL(ch) && !GET_WEAPON(ch)) {
-    send_to_char("Not with your bare hands.\r\n", ch);
+  char name[MIL];
 
-    return;
-  }
+  one_argument(arg, name);
 
-  argument = one_argument(argument, obj_name);
+  OBJ *corpse = corpse = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents);
 
-  if (!(corpse = get_obj_in_list_vis(ch, obj_name, world[CHAR_REAL_ROOM(ch)].contents))) {
+  if (!corpse) {
     send_to_char("Collect a trophy from what?\n\r", ch);
 
     return;
   }
 
-  if (GET_ITEM_TYPE(corpse) != ITEM_CONTAINER || (GET_ITEM_TYPE(corpse) == ITEM_CONTAINER && OBJ_VALUE3(corpse) != 1)) {
+  if (!GET_WEAPON(ch)) {
+    send_to_char("Not with your bare hands.\r\n", ch);
+
+    return;
+  }
+
+  if ((get_weapon_type(GET_WEAPON(ch)) == TYPE_HIT) ||
+      (get_weapon_type(GET_WEAPON(ch)) == TYPE_BLUDGEON) ||
+      (get_weapon_type(GET_WEAPON(ch)) == TYPE_WHIP) ||
+      (get_weapon_type(GET_WEAPON(ch)) == TYPE_CRUSH)) {
+    send_to_char("You need a weapon with an edge or a point in order to craft a trophy.\n\r", ch);
+
+    return;
+  }
+
+  if (GET_MANA(ch) < mana_cost) {
+    send_to_char("You can't summon enough energy to craft a trophy.\n\r", ch);
+
+    return;
+  }
+
+  if (!IS_CORPSE(corpse)) {
     send_to_char("That isn't a corpse.\n\r", ch);
 
     return;
   }
 
-  if (!IS_NPC(ch) && (OBJ_COST(corpse) == PC_CORPSE || OBJ_COST(corpse) == CHAOS_CORPSE)) {
+  if (IS_PC_CORPSE(corpse)) {
     send_to_char("The thought of collecting a trophy from a fellow adventurer makes you cringe!\n\r", ch);
 
     return;
   }
 
-  if (OBJ_COST(corpse) == PC_STATUE || OBJ_COST(corpse) == NPC_STATUE) {
+  if (IS_STATUE(corpse)) {
     send_to_char("You find it impossible to chip away at the stone.\n\r", ch);
 
     return;
@@ -1835,70 +1638,107 @@ void do_trophy(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_SET(OBJ_EXTRA_FLAGS2(corpse), ITEM_NO_TROPHY)) {
-    send_to_char("A trophy has already been collected from the corpse.\n\r", ch);
+  if (IS_MORTAL(ch) && ((10 - (10 * (OBJ_TIMER(corpse)) / MAX_NPC_CORPSE_TIME)) > 3)) {
+    send_to_char("The corpse is too badly damaged.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > (IS_NPC(ch) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_TROPHY))) {
-    send_to_char("You failed to harvest a trophy from the corpse.\n\r", ch);
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_TROPHY)) {
+    send_to_char("You failed to craft a trophy from the corpse.\n\r", ch);
+
+    return;
   }
-  else {
-    CREATE(trophy, struct obj_data, 1);
-    clear_object(trophy);
-    trophy->item_number = NOWHERE;
-    trophy->in_room = NOWHERE;
-    trophy->name = str_dup("trophy");
-    half_chop(corpse->description, buf, MIL, trophy_name, MSL);
-    sprintf(buf, "A gruesome trophy %s", trophy_name);
-    trophy->description = str_dup(buf);
-    half_chop(corpse->short_description, buf, MIL, trophy_name, MSL);
-    sprintf(buf, "A gruesome trophy %s", trophy_name);
-    trophy->short_description = str_dup(buf);
-    trophy->obj_flags.timer = 10;
-    trophy->obj_flags.type_flag = ITEM_TROPHY;
-    trophy->obj_flags.wear_flags = ITEM_TAKE + ITEM_WEAR_HEAD;
-    trophy->obj_flags.extra_flags = ITEM_ANTI_RENT;
-    trophy->obj_flags.extra_flags2 = ITEM_ALL_DECAY;
-    trophy->obj_flags.material = corpse->obj_flags.material;
-    trophy->obj_flags.value[0] = 0;
-    trophy->obj_flags.value[1] = 0;
-    trophy->obj_flags.value[2] = 0;
-    trophy->obj_flags.value[3] = 0;
-    trophy->obj_flags.weight = corpse->obj_flags.weight / 10;
-    trophy->obj_flags.cost = corpse->obj_flags.cost_per_day;
 
-    trophy->next = object_list;
-    object_list = trophy;
-    obj_to_room(trophy, CHAR_REAL_ROOM(ch));
+  OBJ_TIMER(corpse) = MAX(1, MAX_NPC_CORPSE_TIME / 2);
 
-    send_to_char("You harvest a trophy from the corpse.\n\r", ch);
-    act("$n harvests a trophy from $p.", TRUE, ch, corpse, 0, TO_ROOM);
+  CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
 
-    SET_BIT(OBJ_EXTRA_FLAGS2(corpse), ITEM_NO_TROPHY);
+  int num_group_members = 1;
+
+  /* Count the number of characters in the player's group. */
+  for (FOL *follower = group_leader->followers; follower; follower = follower->next) {
+    CHAR *temp_ch = follower->follower;
+
+    if (!temp_ch || !SAME_ROOM(ch, temp_ch) || !SAME_GROUP(group_leader, temp_ch) || affected_by_spell(temp_ch, SKILL_TROPHY)) continue;
+
+    num_group_members++;
+  }
+
+  act("You craft a trophy from the $p.", FALSE, ch, corpse, 0, TO_CHAR);
+  act("$n crafts a trophy from the $p.", FALSE, ch, corpse, 0, TO_ROOM);
+
+  skill_wait(ch, SKILL_TROPHY, 1);
+
+  /* Apply the affects to the player. */
+  if (!affected_by_spell(ch, SKILL_TROPHY)) {
+    act("You are inspired by the trophy's impressive quality.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n is inspired by the trophy's impressive quality.", FALSE, ch, 0, 0, TO_ROOM);
+
+    affect_apply(ch, SKILL_TROPHY, 10, 2, APPLY_HITROLL, 0, 0);
+    affect_apply(ch, SKILL_TROPHY, 10, 2, APPLY_DAMROLL, 0, 0);
+
+    GET_MANA(ch) -= mana_cost;
+  }
+
+  if (GET_MANA(ch) < mana_cost) {
+    act("You feel exhausted from the effort of crafting your trophy.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n looks exhausted after crafting $s trophy.", FALSE, ch, 0, 0, TO_ROOM);
+
+    return;
+  }
+
+  /* Apply the affects to the group leader. */
+  if ((group_leader != ch) && SAME_ROOM(group_leader, ch) && SAME_GROUP(ch, group_leader) && !affected_by_spell(group_leader, SKILL_TROPHY)) {
+    act("You are inspired by the trophy's impressive quality.", FALSE, group_leader, 0, 0, TO_CHAR);
+    act("$n is inspired by the trophy's impressive quality.", FALSE, group_leader, 0, 0, TO_ROOM);
+
+    affect_apply(group_leader, SKILL_TROPHY, 10, 2, APPLY_HITROLL, 0, 0);
+    affect_apply(group_leader, SKILL_TROPHY, 10, 2, APPLY_DAMROLL, 0, 0);
+
+    GET_MANA(ch) -= mana_cost;
+  }
+
+  /* Loop through all of the members in group_leader's group and apply the affects to them. */
+  for (FOL *follower = group_leader->followers; follower; follower = follower->next) {
+    if (GET_MANA(ch) < mana_cost) {
+      act("You feel exhausted from the effort of crafting your trophy.", FALSE, ch, 0, 0, TO_CHAR);
+      act("$n looks exhausted after crafting $s trophy.", FALSE, ch, 0, 0, TO_ROOM);
+
+      return;
+    }
+
+    CHAR *group_member = follower->follower;
+
+    if (!group_member || (group_member == ch) || !SAME_ROOM(group_member, ch) || !SAME_GROUP(ch, group_leader) || affected_by_spell(group_member, SKILL_TROPHY)) continue;
+
+    act("You are inspired by the trophy's impressive quality.", FALSE, group_member, 0, 0, TO_CHAR);
+    act("$n is inspired by the trophy's impressive quality.", FALSE, group_member, 0, 0, TO_ROOM);
+
+    affect_apply(group_member, SKILL_TROPHY, 10, 2, APPLY_HITROLL, 0, 0);
+    affect_apply(group_member, SKILL_TROPHY, 10, 2, APPLY_DAMROLL, 0, 0);
+
+    GET_MANA(ch) -= mana_cost;
   }
 }
 
 
 void do_clobber(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int num = 0;
-  int set_pos = 0;
-
-  if (!GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_CLOBBER)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
+  char name[MIL];
+
   one_argument(arg, name);
 
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
+  CHAR *victim = get_char_room_vis(ch, name);
+
+  if (!victim && !(victim = GET_OPPONENT(ch))) {
     send_to_char("Clobber who?\n\r", ch);
 
     return;
@@ -1922,162 +1762,216 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_CLOBBER)) {
-    act("Your attempt to clobber $N misses everything but the air.", FALSE, ch, NULL, victim, TO_CHAR);
-    act("$n flails about wildly, missing you with $s erratic swinging.", FALSE, ch, NULL, victim, TO_VICT);
-    act("$n flails about wildly, missing $N with $s erratic swinging.", FALSE, ch, NULL, victim, TO_NOTVICT);
+    act("Your attempt to clobber $N misses everything but the air.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n flails about wildly, missing you with $s erratic swinging.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n flails about wildly, missing $N with $s erratic swinging.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
 
     skill_wait(ch, SKILL_CLOBBER, 2);
-  }
-  else {
-    if (FALSE /* !breakthrough(ch, victim, BT_INVUL) */) {
-      act("You clobber $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_CHAR);
-      act("$n tries to clobber you, but it feels more like a massage!", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n clobbers $N, but $E doesn't seem to mind!", FALSE, ch, NULL, victim, TO_NOTVICT);
-
-      damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
-    }
-    else {
-      num = number(1, 10);
-
-      /* 20% chance of 2.50x damage on next hit. */
-      if (num <= 2) {
-        set_pos = POSITION_MORTALLYW;
-      }
-      /* 40% chance of 2.33x damage on next hit. */
-      else if (num <= 6) {
-        set_pos = POSITION_INCAP;
-      }
-      /* 40% chance of 2.00x damage on next hit. */
-      else {
-        set_pos = POSITION_STUNNED;
-      }
-
-      set_pos = stack_position(victim, set_pos);
-
-      act("You clobber $N with windmilling fists!", FALSE, ch, NULL, victim, TO_CHAR);
-      act("You're clobbered by $n's windmilling fists!", FALSE, ch, NULL, victim, TO_VICT);
-      act("$n clobbers $N with $s windmilling fists!", FALSE, ch, NULL, victim, TO_NOTVICT);
-
-      damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_PHYSICAL);
-
-      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-        GET_POS(victim) = set_pos;
-      }
-    }
-
-    skill_wait(ch, SKILL_CLOBBER, 2);
-  }
-}
-
-
-void do_victimize(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_VICTIMIZE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_VICTIMIZE)) {
-    affect_from_char(ch, SKILL_VICTIMIZE);
+  int target_pos = GET_POS(victim);
+
+  int rnd = number(1, 100);
+
+  /* 25% Mortally Wounded */
+  if (rnd <= 25) {
+    target_pos = POSITION_MORTALLYW;
+  }
+  /* 25% Incapacitated */
+  else if (rnd <= 50) {
+    target_pos = POSITION_INCAP;
+  }
+  /* 50% Stunned */
+  else {
+    target_pos = POSITION_STUNNED;
+  }
+
+  int set_pos = stack_position(victim, target_pos);
+
+  act("You clobber $N with windmilling fists!", FALSE, ch, 0, victim, TO_CHAR);
+  act("You're clobbered by $n's windmilling fists!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n clobbers $N with $s windmilling fists!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), number(GET_LEVEL(ch), GET_LEVEL(ch) * 4)), SKILL_CLOBBER, DAM_PHYSICAL);
+
+  if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+    GET_POS(victim) = set_pos;
+  }
+
+  skill_wait(ch, SKILL_CLOBBER, 2);
+}
+
+
+int triage_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_ROUND) {
+    if (!GET_OPPONENT(ch)) {
+      if ((ench->duration > 0) && (ench->duration < 20) && (ench->duration % 4) == 0) {
+        ench->modifier /= 2;
+      }
+    }
+    else {
+      ench->duration = 20;
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_DAMAGED) {
+    if (GET_POS(ch) <= POSITION_INCAP) return FALSE;
+
+    int reserve = ench->modifier;
+
+    if ((reserve >= MIN((GET_MAX_HIT(ch) / 2), 2000)) && (GET_HIT(ch) <= (GET_MAX_HIT(ch) - reserve))) {
+      act("You draw upon your reserve strength and quickly triage your wounds.", FALSE, ch, 0, 0, TO_CHAR);
+      act("$n draws upon $s reserve strength and quickly triages $s wounds.", FALSE, ch, 0, 0, TO_ROOM);
+
+      GET_HIT(ch) = MIN((GET_HIT(ch) + reserve), GET_MAX_HIT(ch));
+
+      enchantment_remove(ch, ench, FALSE);
+    }
+  }
+
+  return FALSE;
+}
+
+void do_triage(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_TRIAGE)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  bool print_reserve = FALSE;
+
+  if (*buf && is_abbrev(buf, "reserve")) {
+    print_reserve = TRUE;
+  }
+
+  ENCH *triage_ench = get_enchantment_by_name(ch, "Triage");
+
+  if (!triage_ench && !print_reserve) {
+    send_to_char("Your healing reserves are depleted and you're unable to triage your wounds.\n\r", ch);
+
+    return;
+  }
+
+  int reserve = ((triage_ench) ? triage_ench->modifier : 0);
+
+  if (print_reserve) {
+    printf_to_char(ch, "Your triage reserve is: %d\n\r", reserve);
+
+    return;
+  }
+
+  if (GET_HIT(ch) >= GET_MAX_HIT(ch)) {
+    send_to_char("You are in perfect health and don't require any healing right now.\n\r", ch);
+
+    return;
+  }
+
+  act("You draw upon your reserve strength and quickly triage your wounds.", FALSE, ch, 0, 0, TO_CHAR);
+  act("$n draws upon $s reserve strength and quickly triages $s wounds.", FALSE, ch, 0, 0, TO_ROOM);
+
+  GET_HIT(ch) = MIN((GET_HIT(ch) + reserve), GET_MAX_HIT(ch));
+
+  enchantment_remove(ch, triage_ench, FALSE);
+}
+
+
+void do_victimize(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_VICTIMIZE)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(GET_PFLAG2(ch), PLR2_VICTIMIZE)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_VICTIMIZE);
 
     send_to_char("You decide to show a modicum of mercy to your victims.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_VICTIMIZE)) {
-    send_to_char("You can't come up with any good taunts or threats.\n\r", ch);
-  }
-  else {
-    if (IS_GOOD(ch)) {
-      send_to_char("You are much too friendly to do that.\n\r", ch);
-
-      return;
-    }
-
-    af.type = SKILL_VICTIMIZE;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You will now take every opportunity to victimize your foe.\n\r", ch);
-  }
-}
-
-
-void do_shadowstep(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_SHADOWSTEP)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+  if (IS_GOOD(ch)) {
+    send_to_char("You are much too friendly to do that.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_SHADOWSTEP)) {
-    affect_from_char(ch, SKILL_SHADOWSTEP);
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_VICTIMIZE)) {
+    send_to_char("You can't come up with any good taunts or threats.\n\r", ch);
+
+    return;
+  }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_VICTIMIZE);
+
+  send_to_char("You will now take every opportunity to victimize your foe.\n\r", ch);
+}
+
+
+void do_shadowstep(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_SHADOWSTEP)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(GET_PFLAG2(ch), PLR2_SHADOWSTEP)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_SHADOWSTEP);
 
     send_to_char("You will no longer slip into the shadows to attack your victims.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_SHADOWSTEP)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_SHADOWSTEP)) {
     send_to_char("You can't seem to blend in with the shadows.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_SHADOWSTEP;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You will now slip into the shadows to attack your victims.\n\r", ch);
-  }
-}
-
-
-void do_evasion(CHAR *ch, char *argument, int cmd)
-{
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_EVASION))
-  {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (GET_OPPONENT(ch))
-  {
+  SET_BIT(GET_PFLAG2(ch), PLR2_SHADOWSTEP);
+
+  send_to_char("You will now slip into the shadows to attack your victims.\n\r", ch);
+}
+
+
+void do_evasion(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_EVASION)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (GET_OPPONENT(ch)) {
     send_to_char("You can't focus well enough to do that while fighting.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_EVASION))
-  {
-    affect_from_char(ch, SKILL_EVASION);
+  if (IS_SET(GET_PFLAG2(ch), PLR2_EVASION)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_EVASION);
 
     send_to_char("You become less evasive and set yourself into a normal fighting stance.\n\r", ch);
     act("$n becomes less evasive and sets $mself into a normal fighting stance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -2085,237 +1979,130 @@ void do_evasion(CHAR *ch, char *argument, int cmd)
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_EVASION)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_EVASION)) {
     send_to_char("You failed to focus on evading attacks.\n\r", ch);
-  }
-  else
-  {
-    af.type = SKILL_EVASION;
-    af.duration = -1;
-    af.modifier = -5;
-    af.location = APPLY_HITROLL;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You focus on evading attacks and fighting defensively.\n\r", ch);
-    act("$n focuses on evading attacks and fighting defensively.", TRUE, ch, 0, 0, TO_ROOM);
-  }
-}
-
-
-void do_dirty_tricks(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_DIRTY_TRICKS)) {
-    affect_from_char(ch, SKILL_DIRTY_TRICKS);
+  SET_BIT(GET_PFLAG2(ch), PLR2_EVASION);
+
+  send_to_char("You focus on evading attacks and fighting defensively.\n\r", ch);
+  act("$n focuses on evading attacks and fighting defensively.", TRUE, ch, 0, 0, TO_ROOM);
+}
+
+
+void do_dirty_tricks(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS);
 
     send_to_char("You'll fight fair... for now.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_DIRTY_TRICKS)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_DIRTY_TRICKS)) {
     send_to_char("You have trouble coming up with a strategy for fighting dirty.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_DIRTY_TRICKS;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You will start using dirty tricks to get the upper hand in combat.\n\r", ch);
-  }
-}
-
-
-void do_trip(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_TRIP)) {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_TRIP)) {
-    affect_from_char(ch, SKILL_TRIP);
+  SET_BIT(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS);
+
+  send_to_char("You will start using dirty tricks to get the upper hand in combat.\n\r", ch);
+}
+
+
+void do_trip(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_TRIP)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(GET_PFLAG2(ch), PLR2_TRIP)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_TRIP);
 
     send_to_char("You will no longer try to trip your enemies during combat.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_TRIP)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_TRIP)) {
     send_to_char("You don't feel quite skilled enough to trip up your enemies.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_TRIP;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
-
-    affect_to_char(ch, &af);
-
-    send_to_char("You will try to trip your enemies when you circle around them.\n\r", ch);
-  }
-}
-
-
-void do_trusty_steed(CHAR *ch, char *argument, int cmd) {
-  AFF af;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_TRUSTY_STEED)) {
-    send_to_char("You do not have this skill.\n\r", ch);
 
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_TRUSTY_STEED)) {
-    affect_from_char(ch, SKILL_TRUSTY_STEED);
+  SET_BIT(GET_PFLAG2(ch), PLR2_TRIP);
+
+  send_to_char("You will try to trip your enemies when you circle around them.\n\r", ch);
+}
+
+
+void do_trusty_steed(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_TRUSTY_STEED)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_TRUSTY_STEED);
 
     send_to_char("You will no longer summon your trusty steed to aid you in battle.\n\r", ch);
 
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_TRUSTY_STEED)) {
     send_to_char("You fail to establish a spirit link with your trusty steed in the astral plane.\n\r", ch);
-  }
-  else {
-    af.type = SKILL_TRUSTY_STEED;
-    af.duration = -1;
-    af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = AFF_NONE;
-    af.bitvector2 = AFF_NONE;
 
-    affect_to_char(ch, &af);
-
-    send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
+    return;
   }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_TRUSTY_STEED);
+
+  send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
 }
 
 
-void do_snipe(CHAR *ch, char *argument, int cmd) {
-  if (!GET_SKILLS(ch)) return;
+void do_snipe(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_SNIPE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
-  if (affected_by_spell(ch, SKILL_SNIPE)) {
-    affect_from_char(ch, SKILL_SNIPE);
+  if (IS_SET(GET_PFLAG2(ch), PLR2_SNIPE)) {
+    REMOVE_BIT(GET_PFLAG2(ch), PLR2_SNIPE);
+
+    send_to_char("You will no longer attempt to snipe opponents when they are weakened.\n\r", ch);
+
     return;
   }
 
-  if (number(1, 85) > GET_LEARNED(ch, SKILL_SNIPE)) {
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_SNIPE)) {
     send_to_char("You're unable to concetrate well enough to make accurate headshots.\n\r", ch);
-  }
-  else {
-    affect_apply(ch, SKILL_SNIPE, -1, 0, 0, 0, 0);
 
-    send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
+    return;
   }
+
+  SET_BIT(GET_PFLAG2(ch), PLR2_SNIPE);
+
+  send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
 }
-
-
-/* Unused for now. - Night
-void do_voidstrike(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
-  CHAR *victim = NULL;
-  int check = 0;
-  int shadow_wraith_duration = 0;
-  int num_shadows = 0;
-  int gain = 0;
-
-  if (!GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_VOIDSTRIKE)) {
-    send_to_char("You do not have this skill.\n\r", ch);
-
-    return;
-  }
-
-  one_argument(argument, name);
-
-  if (!(victim = get_char_room_vis(ch, name)) && !(victim = GET_OPPONENT(ch))) {
-    send_to_char("Voidstrike who?\n\r", ch);
-
-    return;
-  }
-
-  if (victim == ch) {
-    send_to_char("You aren't that insane... are you?\n\r", ch);
-
-    return;
-  }
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
-    send_to_char("Behave yourself here please!\n\r", ch);
-
-    return;
-  }
-
-  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
-    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-
-    return;
-  }
-
-  check = number(1, 131) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_VOIDSTRIKE)) {
-    act("Your strike at $N is lost in the labrynthine whorls of the void.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n performs some arcane gesture directed towards you, without noticable effect.", FALSE, ch, NULL, victim, TO_VICT);
-    act("$n performs some arcane gesture directed towards $N, without noticable effect.", FALSE, ch, NULL, victim, TO_NOTVICT);
-
-    damage(ch, victim, 0, SKILL_VOIDSTRIKE, DAM_NO_BLOCK);
-  }
-  else {
-    act("You reach into the void and strike at $N's soul!", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n reaches into the void and strikes at your soul!", FALSE, ch, NULL, victim, TO_VICT);
-    act("$n reaches into the void and strikes at $N's soul!", FALSE, ch, NULL, victim, TO_NOTVICT);
-
-    hit(ch, victim, TYPE_UNDEFINED);
-
-    shadow_wraith_duration = duration_of_spell(ch, SPELL_SHADOW_WRAITH);
-    if (shadow_wraith_duration > 60) num_shadows = 4;
-    else if (shadow_wraith_duration > 40) num_shadows = 3;
-    else if (shadow_wraith_duration > 20) num_shadows = 2;
-    else if (shadow_wraith_duration > 0) num_shadows = 1;
-    else num_shadows = 0;
-
-    if (!number(0, 3)) {
-      gain = ((1 + num_shadows) * 2);
-      GET_HIT(ch) = MIN(GET_MAX_HIT(ch), (GET_HIT(ch) + gain));
-    }
-    else {
-      gain = ((1 + num_shadows) * 5);
-      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + gain));
-    }
-  }
-
-  skill_wait(ch, SKILL_VOIDSTRIKE, 3);
-}
-*/

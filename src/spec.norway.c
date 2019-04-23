@@ -396,7 +396,7 @@ int norway_maneater(CHAR *bear, CHAR *ch, int cmd, char *arg)
 				act("$n grabs you with his paws and sinks $s teeth into your abdomen.",0,bear,0,vict, TO_VICT);
 				act("$n grabs $N with his paws and sinks $s teeth into $S abdomen.",0,bear,0,vict, TO_NOTVICT);
 				damage(bear, vict, number(80, 200), TYPE_UNDEFINED, DAM_NO_BLOCK);
-				WAIT_STATE(vict, number(4, 7) RL_SEC);
+				WAIT_STATE(vict, number(4, 7) * RL_SEC);
 				break;
 			}
 			case 1:
@@ -407,7 +407,7 @@ int norway_maneater(CHAR *bear, CHAR *ch, int cmd, char *arg)
 				act("$n throws $s head around and bites you!",0,bear,0,vict, TO_VICT);
 				act("$n throws $s head around and bites $N.",0,bear,0,vict, TO_NOTVICT);
 				damage(bear, vict, number(40, 125), TYPE_UNDEFINED, DAM_NO_BLOCK);
-				WAIT_STATE(vict, number(2, 6) RL_SEC);
+				WAIT_STATE(vict, number(2, 6) * RL_SEC);
 				break;
 			}			
 		}

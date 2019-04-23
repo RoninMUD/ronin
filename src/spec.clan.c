@@ -1799,11 +1799,13 @@ int priest_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 /* Dojo Master Spec */
 int dojo_master_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_MOBACT) {
-    if (!GET_OPPONENT(ch)) return FALSE;
+    CHAR *opponent = GET_OPPONENT(mob);
+
+    if (!opponent) return FALSE;
 
     if (GET_HIT(mob) < (GET_MAX_HIT(mob) / 10)) {
       stop_fighting(mob);
-      stop_fighting(ch);
+      stop_fighting(opponent);
 
       do_say(mob, "That is enough for this session.  Challenge me again any time.", CMD_SAY);
 

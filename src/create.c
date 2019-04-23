@@ -2502,11 +2502,11 @@ void edit_obj(CHAR *ch, char *fargs)
             case ITEM_STAFF :
               send_to_char("For Staves and Wands:  <Level> <Max Charges> <Charges Left> <Spell>\n\r", ch);
               break;
-         case ITEM_2HWEAPON:
+         case ITEM_2H_WEAPON:
             case ITEM_WEAPON :
               send_to_char("For weapons:  <olchelp weapon attacks> <dice damage> <dice size> <type>\n\r", ch);
               break;
-            case ITEM_FIREWEAPON :
+            case ITEM_FIREARM :
               send_to_char("For guns:  <license number> <bullets left> <dam dice number> <dam dice size>\n\r", ch);
               break;
             case ITEM_MISSILE :
@@ -2777,7 +2777,7 @@ RANDOM_0, RANDOM_1, RANDOM_2.\n\r", ch);
                }
                else {
                  obj_proto_table[object].obj_flags.extra_flags = (ITEM_CHAOTIC<<1) -1;
-                 obj_proto_table[object].obj_flags.extra_flags2 = (ITEM_RANDOM_2<<1) -1;
+                 obj_proto_table[object].obj_flags.extra_flags2 = (ITEM_RANDOM_AFF2<<1) -1;
                }
                send_to_char("Done.\n\r",ch);
              }
@@ -8078,7 +8078,7 @@ The spec reset will signal MSG_ZONE_RESET first, allowing specs to test.\n\r\n\r
 
   if(reset==1 || reset == 3) {
     if (reset == 3)
-      if (signal_zone(NULL, zone_table[zone].virtual, MSG_ZONE_RESET, ""))
+      if (signal_zone(zone, NULL, MSG_ZONE_RESET, ""))
         return;
     reset_zone(zone, FALSE);
     sprintf(arg,"`iCompleted normal reset of zone %d.`q\n\r",vzone);
@@ -10907,11 +10907,11 @@ print_item_value_info:
     case ITEM_STAFF:
       send_to_char("For Staves and Wands: <Level> <Max Charges> <Charges Left> <Spell>\n\r", ch);
       break;
-    case ITEM_2HWEAPON:
+    case ITEM_2H_WEAPON:
     case ITEM_WEAPON:
       send_to_char("For weapons: <olchelp weapon attacks> <dice damage> <dice size> <type>\n\r", ch);
       break;
-    case ITEM_FIREWEAPON:
+    case ITEM_FIREARM:
       send_to_char("For guns: <license number> <bullets left> <dam dice number> <dam dice size>\n\r", ch);
       break;
     case ITEM_MISSILE:

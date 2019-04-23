@@ -7563,6 +7563,73 @@ Level         Skill
 
 See Also: SUBCLASSES BANDIT THIEF
 #
+"DIRTY TRICKS"
+
+Subclass Rogue: Level 1 (Thief)
+
+Usage: dirty-tricks (toggles on/off)
+
+When active, this skill is used automatically during combat.  Randomly
+throught out each fight, the Rogue does things like throwing dirt in
+the victim's eyes for blindness, kicking in sensitive areas to knock
+them to the ground, and inflicting grievous wounds that cause them to
+bleed profusely, causing damage over time.
+
+See Also: SUBCLASSES ROGUE BLINDNESS
+#
+TROPHY
+
+Subclass Rogue: Level 2 (Thief)
+Subclass Trapper: Level 4 (Nomad)
+
+Trophy is a group buff skill.  Creating a trophy inspires the group at a cost of
+10 mana per character that will receive a benefit.  If the Rogue or Trapper does
+not have enough mana, players will receive the benefit from the "top down" of
+the party list, with the Rogue or Trapper always first until their mana is below
+10.  The benefits gained from the trophy effect are +2 hitroll and +2 damroll,
+and the duration of the effect is 10 ticks.  This skill causes a 1 round skill
+lag when used.
+
+See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
+#
+VEHEMENCE
+
+Subclass Rogue: Level 3 (Thief)
+
+Usage: vehemence (toggles on/off)
+
+When affected by Vehemence, the Rogue gains a skill bonus of (5 + 1/2 dexterity
+modifier) to all of their skill checks.  When in this state, the Rogue suffers
+from an increase of 10% damage received, due to their reckless abandon.  If the
+Rogue is in combat, this skill cannot be toggled on or off.
+
+See Also: SUBCLASSES ROGUE DODGE
+#
+TRIP
+
+Subclass Rogue: Level 4 (Thief)
+
+Usage: trip (toggles on/off)
+
+When active and using Circle against an opponent, the Rogue has a chance to
+follow up their attack by tripping the victim, knocking them to the ground into
+a stunned position.
+
+See Also: SUBCLASSES ROGUE
+#
+"QUICK RECOVERY"
+
+Subclass Rogue: Level 5 (Thief)
+
+Once the Rogue reaches this subclass level, they have a chance of
+being affected by 1 less round of lag on all skills.  The chance of
+receiving the reduction varies from 50% to 75%, and is not modified by
+any skill or attribute.
+
+This is an automatic skill and is always in effect.
+
+See Also: SUBCLASSES ROGUE
+#
 BANDIT
 
 Bandit is one of the Thief subclasses and is broken up
@@ -7579,89 +7646,83 @@ Level         Skill
 
 See Also: SUBCLASSES ROGUE THIEF
 #
-FADE
-
-Subclass Bandit: Level 2 (Thief)
-
-Usage: fade (toggles on/off)
-
-The fade skill allows the Bandit to blend in with their surrounding.  When
-tanking, fade adds level * 1.5 to dodge skill.  When not tanking, they gain
-a +10 skill bonus to their Circle skill check.
-
-See also: SUBCLASSES BANDIT DODGE CIRCLE
-#
-"DIRTY TRICKS"
-
-Subclass Rogue: Level 1 (Thief)
-
-Usage: dirty-tricks (toggles on/off)
-
-When active, this skill is used automatically during combat.  Randomly
-throught out each fight, the Rogue does things like throwing dirt in
-the victim's eyes for blindness, kicking in sensitive areas to knock
-them to the ground, and inflicting grievous wounds that cause them to
-bleed profusely, causing damage over time.
-
-See Also: SUBCLASSES ROGUE BLINDNESS
-#
-TRIP
-
-Subclass Rogue: Level 4 (Thief)
-
-Usage: trip (toggles on/off)
-
-When active and using Circle against an opponent, the Rogue has a
-chance to follow up their attack by tripping the victim, knocking them
-to the ground.
-
-See Also: SUBCLASSES ROGUE
-#
 IMPAIR
 
 Subclass Bandit: Level 1 (Thief)
 
-This skill gives the Bandit a chance to automatically apply various
-debuffs to their target when engaging in, and during combat.
+This skill gives the Bandit a chance to automatically apply a debuff to their
+target when using the Backstab and Circle skills.
 
-When using Backstab, there is a chance that the target will be
-paralyzed and unable to flee from combat.  When using Circle, there is
-a chance that the target will be dazed, causing them to receive a 30
-point penalty to their AC, and -2 penalty to their hitroll.
+When using Backstab, there is a chance that the target will be paralyzed and
+unable to move for a duration of 2 ticks.  When using Circle, there is a chance
+that the target will be dazed, causing them to receive a 30 point penalty to
+their AC and -2 penalty to their hitroll.
 
 This is an automatic skill and is always in effect.
 
 See also: SUBCLASSES BANDIT AC HITROLL
 #
-"QUICK RECOVERY"
+FADE
 
-Subclass Rogue: Level 5 (Thief)
+Subclass Bandit: Level 2 (Thief)
 
-Once the Rogue reaches this subclass level, they have a chance of
-being affected by 1 less round of lag on all skills.  The chance of
-receiving the reduction varies from 50% to 75%, and is not modified by
-any skill or attribute.
+Fade allows the Bandit to blend in with their surroundings, making their actions
+more difficult to predict.  Fade grants a bonus to Dodge equal to (level * 1.5)
+at all times.  When not being attacked directly the Bandit gains +10 bonus to
+their Circle skill check.
 
-This is an automatic skill and is always in effect.
+Fade is an automatic skill and is always active.
 
-See Also: SUBCLASSES ROGUE
+See also: SUBCLASSES BANDIT DODGE CIRCLE
+#
+"ADRENALINE RUSH"
+
+Subclass Bandit: Level 3 (Thief)
+
+When affected by healing magic, the Bandit will have the amount of healing
+received increased by 10% to 15%.
+
+In addition, the Bandit has an increased health and mana regeneration rate when
+engaged in combat.  The regeneration rate is equal to (level / 5) for hit
+points and (level / 15) for mana points, and these points are gained every 10
+seconds.
+
+See Also: SUBCLASSES BANDIT
 #
 "CLOSE COMBAT"
 
 Subclass Bandit: Level 4 (Thief)
 
 The Bandit benefits from an increased combat awareness, granting them a passive
-increase of +2 hitroll and +2 damroll.  After a successful Backstab or Circle,
-the Bandit has a 40% + dex modifier chance of increasing this benefit to +5
-hitroll and +5 damroll for a duration of 3 combat rounds.
+bonus of +2 hitroll and +2 damroll.  After a successful Backstab or Circle
+attack, the Bandit has a 50% + dexterity modifier chance of increasing this
+bonus to a total +5 hitroll and +5 damroll for a duration of 3 combat rounds.
 
-After a successful dodge, there is a second benefit of bonus 10 AC for a
-duration of 3 combat rounds.  This AC benefit can stack twice to a maximum of
-20 AC.  This benefit can exceed the normal max of -250 AC. to -270 AC
+After the Bandit successfully dodges an attack, they are granted a bonus of -10
+AC for a duration of 3 combat rounds.  This AC benefit can stack twice to a
+maximum of -20 AC.  This benefit allows the Bandit's AC to temporarily exceed
+the normal maximum of -250 AC, to a limit of -270 AC with two stacks.
 
 This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES BANDIT
+#
+EVASION
+
+Subclass Bandit: Level 5 (Thief)
+Class: Nomad (Level 50)
+
+Usage: evasion (toggles on/off)
+
+When the Bandit/Nomad is in this protective postion, all damage inflicted by
+physical attacks (bare hand attacks, weapon attacks, and skills) will be
+reduced by 25%.
+
+Unfortunately, since the Bandit/Nomad is so intent on protecting themselves,
+they will miss more often.  If the Bandit is in combat, this skill cannot be
+toggled on or off.
+
+See Also: SUBCLASSES BANDIT NOMAD
 #
 GLADIATOR
 
@@ -7750,7 +7811,7 @@ See Also: NOMAD PRACTICE DEXTERITY
 #
 TACTICIAN
 
-Subclass Gladiator: Level 3 (Warrior)
+Subclass Gladiator: Level 2 (Warrior)
 
 A measured tactical response is often the key factor separating victory and
 defeat, even among warriors of disparate physical abilities.  A seasoned
@@ -7802,8 +7863,8 @@ skulls into their opponents, they can deal a significant amount of damage.
 This attack will deal 200 damage to the victim in a single motion and will also
 place them into the Stunned position.
 
-The Gladiator will experience 2 rounds of input lag after a successful Headbutt,
-their vision left spinning from the mighty blow.
+The Gladiator will experience 2 rounds of input lag after an attempted Headbutt,
+their vision left spinning from the effort.
 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
@@ -7847,7 +7908,7 @@ Level         Skill/Spell
   2           CLOUD OF CONFUSION
   3           RIPOSTE
   4           INCENDIARY CLOUD
-  5           HEALING SURGE
+  5           TRIAGE
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7942,9 +8003,9 @@ attack inflicts 15 to 25 times the commando's class level, for a minimum of 750
 damage, and a maximum of 1250 damage at level 50.  This attack is automatic and
 is attempted approximately every 10 seconds.  Its chance of success is based on
 the target's remaining hit points, with a more wounded target being more prone
-to being sniped.  Snipe can only trigger once per 20 combat rounds on the same
+to being sniped.  Snipe can only trigger once per 10 combat rounds on the same
 creature.  Multiple Legionnaires can Snipe the same creature, but only one time
-each within the 20 round window.
+each within the 10 round window.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7980,8 +8041,8 @@ When self-cast upon the Mercenary, this defensive spell will modify their AC by
 -25, making them harder to hit.  If cast upon a different target, the spell is
 less effective, granting only -10 AC instead.
 
-As a secondary benefit, the taret will regenerate hit points equal to the
-amount of AC that it provides the target.
+As a secondary benefit, the taret will regenerate hit points equal to the amount
+of AC that this spell provides the target.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8000,7 +8061,7 @@ when fighting, and missteps when feeling.
 
 This spell affects everyone in the room not grouped with the Mercenary.  All
 victims will have their Hitroll reduced by 5 to 8.  As secondary effect,
-affected targets will have a 90% chance of failing to fee during combat.
+affected targets will have a 90% chance of failing to flee during combat.
 
 This spell will be more effective when cast at night.
 
@@ -8023,33 +8084,41 @@ character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
-"HEALING SURGE"
+TRIAGE
 
 Subclass Mercenary: Level 5 (Commando)
 
-Usage       : healing-surge
+Usage: triage (self only)
 
-Healing Surge allows the Mercenary to store health from magical healing that
-would otherwise be lost due to overheal prevention.
+The Triage ability allows the Mercenary to store health from magical healing
+that would otherwise be lost due to the amount of healing being greater than
+their maximum hit points (overheal).
 
-The amount stored is 1/2 the amount of overhealing, not to exceed the
-Mercenary's maximum hit points or 2,000, whichever is less. The overheal
-banking only functions while the Mercenary is actively engaged in combat (e.g.
-overhealing that would be lost outside of combat is still lost).
+The amount stored is equal to 1/2 the amount of overhealing that would have been
+lost, while the total Triage reserve is limited to 1/2 the Mercenary's maximum
+hit points or 2,000, whichever is less. Triage reserve banking only functions
+while the Mercenary is actively engaged in combat (e.g. overhealing that would
+be lost outside of combat is still lost).
 
-This stored health can be used to restore the Mercenary's hit points (up to
-their maximum) on demand through the use of the 'healing-surge' command. The
-Healing Surge effect is automatically used if the Mercenary would die (however,
-Divine Intervention and other life-saving effects trigger first), expending
-the surge to heal them instead of resulting in death. When this happens, the
-Mercenary is set to the stunned position (2x damage taken on the next hit) and
-cannot act for 2 rounds; they will likely need follow-up healing immediately!
+Health stored in this way can be used to restore the Mercenary's hit points (up
+to their maximum) on demand through the use of the 'triage' command.
 
-Finally, the amount of health stored in the healing surge "pool" decays at a
-rate of 50% of the existing pool lost every 12 seconds while outside of combat,
-and is depleted entirely after 60 seconds (one tick). Health gained from
-effects that naturally grant overhealing (such as Vampiric Touch) do not
-apply to Healing Surge.
+The Triage effect is automatically used if the reserve limit has been reached
+and the Mercenary's hit points drop to or below that amount; this automatic
+Triage triggers only while engaged in combat.
+
+The amount of health stored in the Triage reserve decays at a rate of 50% of the
+existing reserve lost every 12 seconds while outside of combat, and is depleted
+entirely after 60 seconds (one tick). The decay is halted and the timer is reset
+to 60 seconds as soon as the Mercenary re-engages in combat if it has not yet
+expired.
+
+Health gained from effects that naturally grant overhealing (such as Vampiric
+Touch) do not apply to Triage.
+
+The Triage ability takes an optional parameter of "reserve" (without quotes)
+that allows the Mercenary to see how much health is currently stored in their
+reserve.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8169,7 +8238,7 @@ before knocking them down into a resting position.
 When smiting an enemy the Cavalier also has a chance to summon their
 trusty steed against the target of their attack.
 
-See Also: SUBCLASSES CAVALIER
+See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
 #
 "POWER OF DEVOTION"
 
@@ -8198,10 +8267,14 @@ PANACEA
 
 Subclass Crusader: Level 3 (Paladin)
 
-When Lay Hands is cast on a target, it will grant the effects of the Bless
-spell to the target and will also remove up to two of the following negative
-effects per cast, in this order of priority: blindness, paralysis, poison,
-curse, chill touch, sleep.
+The healing touch of a devout Crusader is a panacea to injury and ailments
+sustained by the target.  As such, the Crusader's Lay Hands spell heals for 50%
+more hit points (up to 750 at level 50).
+
+Additionally, when Lay Hands is cast on a target, it will grant the effects of
+the Bless spell to the target and will also remove up to two of the following
+negative effects per cast, in the following order of priority: blindness,
+paralysis, poison, curse, chill touch, sleep.
 
 See Also: SUBCLASSES CRUSADER "LAY HANDS"
 #
@@ -8213,7 +8286,7 @@ Usage       : cast 'blessing of sacrifice'
 Accumulative: No
 Duration    : Instantaneous
 Save        : -
-Mana Cost   : 100
+Mana Cost   : None
 
 This potent healing spell allows the Crusader to sacrifice 100 hit points in
 order to heal every other mortal in the room by 333 hit points.
@@ -8250,7 +8323,6 @@ This skill allows the Crusader to channel divine fury into an attack that
 targets all mobs in the same room with a single hit.  The Crusader has a
 three-round delay to recover when successful and a two-round delay to
 recover on a failure. All creatures hit require a two-round recovery time.
-
 
 Zeal additionally inflicts 2d3 bonus damage before multipliers (Fury, target's
 position, etc.) to evil creatures. This means a Zeal hit by a level 50 Crusader
@@ -8594,8 +8666,9 @@ Weapon attack types for which Sento Kata applies:
 * hit (bare hands), chop, hack, pierce, slash, slice
 
 Eligible alternate attack types:
-* hit (bare hands): bludgeon, crush
+* hit (bare hands): claw, whip
 * chop, hack: crush, slash
+* pierce: hack, slice
 * slash, slice: bludgeon, pierce
 
 If an opponent is more likely to be damaged by a possible alternate attack
@@ -8665,7 +8738,6 @@ success of the affected skills:
 
   -(Level / 2) to the Ronin's armor class (this is a benefit).
   +(Level) to Dodge skill checks.
-  +(Level / 5) to Assault and Dual Assault skill checks.
   +(Level / 7) to all other skill checks (+7 at level 48+).
 
 See Also: SUBCLASSES RONIN
@@ -8690,8 +8762,8 @@ component of this skill will inflict 200 to 300 damage to a target,
 with no saving throw. If a separate skill check successful, the ninja
 will also gain an extra round of attacks against the target, attacking
 with both weapons, with a chance for a third attack if affected by
-Mystic Swiftness.  Banzai switches the Ronin's opponent to the target it is
-used on, similar to Flank and Smite.
+Mystic Swiftness.  Banzai switches the Ronin's opponent to the target it
+is used on, similar to Flank and Smite.
 
 This skill causes a 1 round input lag for the Ronin, regardless of
 success or failure.
@@ -8780,11 +8852,11 @@ enchantment and the duration will be refreshed.
 While affected by the "Mantra" enchantment, the character regains
 "(Level + wisdom modifier) * 1.44" hit points every 10 seconds for a
 duration of 100 seconds (there will be 10 healing "pulses").  At 25
-Wisdom, the total amount of healing is 1364.
+Wisdom, the total amount of healing over time is 1364.
 
 Additionally, during each healing "pulse", there is a 25% chance to
 dispel any one of the following status ailments from the target:
-blindness, poison or paralysis.
+blindness, poison, or paralysis.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -9064,63 +9136,6 @@ Backstab against such a protected target will incur a cost of 10 mana
 to the thief while Cunning is enabled.
 
 See Also: INVULNERABILITY CIRCLE BACKSTAB
-#
-"ADRENALINE RUSH"
-
-Subclass Bandit: Level 3 (Thief)
-
-When affected by healing magic, the Bandit will have the amount of
-healing received increased by 10% to 15%.  In addition, the Bandit has
-an increased health and mana regeneration rate when fighting.  While engaged
-in combat, they will gain hit points equal to one fifth of their level and
-mana points equal to one fifteenth of their level every 10 seconds.  The mana
-regeneration caps at 3 mana every 10 seconds at level 45 and above.
-
-See Also: SUBCLASSES BANDIT
-#
-EVASION
-
-Subclass Bandit: Level 5 (Thief)
-Class: Nomad (Level 50)
-
-Usage: evasion (toggles on/off)
-
-When the Bandit/Nomad is in this protective postion, all damage
-inflicted by physical attacks (bare hand attacks, weapon attacks, and
-skills) will be reduced by one quarter.
-
-Unfortunately, since the Bandit/Nomad is so intent on protecting
-themselves, the will miss more often.  If the Bandit is in combat,
-this skill cannot be turned on or off.
-
-See Also: SUBCLASSES BANDIT NOMAD
-#
-TROPHY
-
-Subclass Rogue: Level 2 (Thief)
-Subclass Trapper: Level 4 (Nomad)
-
-Trophy is group buff skill.  Creating a trophy inspires the group at a cost of
-10 mana per character that will receive a benefit.  If the Rogue or Trapper
-does not have enough mana, players will receive the benefit from the "top
-down" of the party list, with the Rogue or Trapper always first until their
-mana is below 10.  The benefits are +2 hitroll and +2 damroll.  The duration
-of the effect is 10 ticks.  The skill now causes a 1 round skill lag when used.
-
-See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
-#
-VEHEMENCE
-
-Subclass Rogue: Level 3 (Thief)
-
-Usage: vehemence (toggles on/off)
-
-When affected by Vehemence, the Rogue gains a slight increase to all of
-their skills.  However, when in this state, the Rogue suffers from an increase
-of 10% damage received.  If the Rogue is in combat, this skill cannot be turned
-on or off.
-
-See Also: SUBCLASSES ROGUE DODGE
 #
 PRESTIGE
 

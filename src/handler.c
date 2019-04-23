@@ -93,28 +93,23 @@ char *rem_prefix(char *str) {
   return obuf;
 }
 
-int isname(char *name, char *list)
-{
-  char *tmp_list = NULL;
-  char *token = NULL;
-  char *last = NULL;
-
+int isname(char *name, char *list) {
   if (!name || !*name || !list || !*list) return FALSE;
 
   if (!str_cmp(name, list)) return TRUE;
 
-  tmp_list = strdup(list);
+  char *temp_list = strdup(list);
 
-  for (token = strtok_r(tmp_list, " \t\r\n", &last); token; token = strtok_r(NULL, " \t\r\n", &last))
-  {
-    if (token && !str_cmp(name, token))
-    {
-      free(tmp_list);
+  for (char *save = NULL, *token = strtok_r(temp_list, " \t\r\n", &save); token; token = strtok_r(NULL, " \t\r\n", &save)) {
+    if (token && !str_cmp(name, token)) {
+      free(temp_list);
+
       return TRUE;
     }
   }
 
-  free(tmp_list);
+  free(temp_list);
+
   return FALSE;
 }
 
@@ -539,19 +534,19 @@ AFF * get_affect_from_char(CHAR *ch, int type) {
   return NULL;
 }
 
-void affect_apply(CHAR *ch, int af_type, int af_dur, int af_mod, int af_loc, long af_bitv, long af_bitv2) {
+void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2) {
   if (!ch) return;
 
-  AFF af;
+  AFF aff;
 
-  af.type = af_type;
-  af.duration = af_dur;
-  af.modifier = af_mod;
-  af.location = af_loc;
-  af.bitvector = af_bitv;
-  af.bitvector2 = af_bitv2;
+  aff.type       = type;
+  aff.duration   = duration;
+  aff.modifier   = modifier;
+  aff.location   = location;
+  aff.bitvector  = bitvector;
+  aff.bitvector2 = bitvector2;
 
-  affect_to_char(ch, &af);
+  affect_to_char(ch, &aff);
 }
 
 /* move a player out of a room */
@@ -800,7 +795,7 @@ void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
     }
   }
 
-  if((GET_ITEM_TYPE(obj)==ITEM_WEAPON || GET_ITEM_TYPE(obj)==ITEM_2HWEAPON) && (!IS_NPC(ch)) && /* Ranger - July 96 */
+  if((GET_ITEM_TYPE(obj)==ITEM_WEAPON || GET_ITEM_TYPE(obj)==ITEM_2H_WEAPON) && (!IS_NPC(ch)) && /* Ranger - July 96 */
       GETOBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)
     {
     act("$p falls from your grasp, because of your weakness.", FALSE, ch, obj, 0, TO_CHAR);
@@ -896,27 +891,29 @@ bool rent_equip_char(CHAR *ch, OBJ *obj, int pos) {
     return FALSE;
   }
 
-  if ((IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MORTAL) && IS_MORTAL(ch)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_CLERIC) && (GET_CLASS(ch) == CLASS_CLERIC)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_THIEF) && (GET_CLASS(ch) == CLASS_THIEF)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_WARRIOR) && (GET_CLASS(ch) == CLASS_WARRIOR)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_BARD) && (GET_CLASS(ch) == CLASS_BARD)) ||
-      (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_COMMANDO) && (GET_CLASS(ch) == CLASS_COMMANDO))) {
-    return FALSE;
-  }
+  if (!IS_IMMORTAL(ch)) {
+    if ((IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MORTAL) && IS_MORTAL(ch)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_CLERIC) && (GET_CLASS(ch) == CLASS_CLERIC)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_THIEF) && (GET_CLASS(ch) == CLASS_THIEF)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_WARRIOR) && (GET_CLASS(ch) == CLASS_WARRIOR)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_BARD) && (GET_CLASS(ch) == CLASS_BARD)) ||
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_COMMANDO) && (GET_CLASS(ch) == CLASS_COMMANDO))) {
+      return FALSE;
+    }
 
-  if (OBJ_TYPE(obj) == ITEM_WEAPON) {
-    if ((GET_CLASS(ch) != CLASS_NINJA) && (pos == HOLD) && !IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_HOLD)) return FALSE;
-    if (((pos == WIELD) || (pos == HOLD)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) return FALSE;
+    if (OBJ_TYPE(obj) == ITEM_WEAPON) {
+      if ((GET_CLASS(ch) != CLASS_NINJA) && (pos == HOLD) && !IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_HOLD)) return FALSE;
+      if (((pos == WIELD) || (pos == HOLD)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) return FALSE;
+    }
   }
 
   ch->equipment[pos] = obj;
@@ -1740,42 +1737,55 @@ struct char_data *get_mortal_room_vis(struct char_data *ch, char *name)
   return(0);
 }
 
-CHAR *get_char_vis(CHAR *ch, char *name)
-{
-  CHAR *tmp_char = NULL;
+CHAR *get_char_vis(CHAR *ch, char *name) {
+  if (!ch || !name) return NULL;
+
   char buf[MIL];
-  char *tmp_name;
-  int number = 0;
-  int i = 0;
 
-  /* check location */
-  if ((tmp_char = get_char_room_vis(ch, name)))
-    return tmp_char;
+  /* Copy the name to buf and point to it with temp_name, since get_number() is destructive. */
+  snprintf(buf, sizeof(buf), "%s", name);
 
-  strcpy(buf, name);
-  tmp_name = buf;
+  char *temp_name = buf;
 
-  if (!(number = get_number(&tmp_name)))
+  /* Pointer to the character we're interested in. */
+  CHAR *temp_ch = get_char_room_vis(ch, temp_name);
+
+  /* Check current room. */
+  if (temp_ch) {
+    return temp_ch;
+  }
+
+  /* Get the number of the character. */
+  int number = get_number(&temp_name);
+
+  /* Was the number input invalid? */
+  if (!number) {
     return NULL;
+  }
 
-  /* Check for players first. */
-  for (tmp_char = character_list, i = 1; tmp_char && (i <= number); tmp_char = tmp_char->next)
-    if (isname(tmp_name, GET_NAME(tmp_char)) && !IS_NPC(tmp_char))
-      if (CAN_SEE(ch, tmp_char))
-      {
-        if (i == number)
-          return tmp_char;
-        i++;
+  /* Check players first. */
+  temp_ch = character_list;
+  for (int i = 1; temp_ch && (i <= number); temp_ch = temp_ch->next) {
+    if (!IS_NPC(temp_ch) && CAN_SEE(ch, temp_ch) && isname(temp_name, GET_NAME(temp_ch))) {
+      if (i == number) {
+        return temp_ch;
       }
 
-  for (tmp_char = character_list, i = 1; tmp_char && (i <= number); tmp_char = tmp_char->next)
-    if (isname(tmp_name, GET_NAME(tmp_char)))
-      if (CAN_SEE(ch, tmp_char))
-      {
-        if (i == number)
-          return tmp_char;
-        i++;
+      i++;
+    }
+  }
+
+  /* Check NPCs. */
+  temp_ch = character_list;
+  for (int i = 1; temp_ch && (i <= number); temp_ch = temp_ch->next) {
+    if (IS_NPC(temp_ch) && CAN_SEE(ch, temp_ch) && isname(temp_name, GET_NAME(temp_ch))) {
+      if (i == number) {
+        return temp_ch;
       }
+
+      i++;
+    }
+  }
 
   return NULL;
 }
@@ -1948,6 +1958,7 @@ struct obj_data *get_obj_vis_in_rooms(struct char_data *ch, char *name)
   return(0);
 }
 
+
 struct obj_data *create_money( int amount )
 {
   struct obj_data *obj;
@@ -2103,4 +2114,32 @@ int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ 
   }
 
   return 0;
+}
+
+/* Returns a pointer to the first MOB in the specified room with the specified VNUM, or NULL if not found. */
+CHAR *get_mob_by_vnum_in_room(int mob_vnum, int rm) {
+  if (((rm < 0) || (rm > top_of_world)) || (mob_vnum < 0)) return NULL;
+
+  for (CHAR *temp_vict = world[rm].people, *next_in_room; temp_vict; temp_vict = next_in_room) {
+    next_in_room = temp_vict->next_in_room;
+
+    if (!IS_NPC(temp_vict)) continue;
+
+    if (V_MOB(temp_vict) == mob_vnum) return temp_vict;
+  }
+
+  return NULL;
+}
+
+/* Returns a pointer to the first OBJ in the specified room with the specified VNUM, or NULL if not found. */
+OBJ *get_obj_by_vnum_in_room(int obj_vnum, int rm) {
+  if (((rm < 0) || (rm > top_of_world)) || (obj_vnum < 0)) return NULL;
+
+  for (OBJ *temp_obj = world[rm].contents, *next_content; temp_obj; temp_obj = next_content) {
+    next_content = temp_obj->next_content;
+
+    if (V_OBJ(temp_obj) == obj_vnum) return temp_obj;
+  }
+
+  return NULL;
 }

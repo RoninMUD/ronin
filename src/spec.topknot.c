@@ -1117,7 +1117,7 @@ tk_baron (CHAR *baron, CHAR *ch, int cmd, char *arg)
     GET_POS (baron) = POSITION_RESTING;
 
   if(GET_HIT(baron)!=GET_MAX_HIT(baron) && count_mortals_room(baron,TRUE)<1 && !number(0,7))
-     spell_layhands(GET_LEVEL(baron), baron, baron, 0);
+     spell_lay_hands(GET_LEVEL(baron), baron, baron, 0);
 
   if (GET_OPPONENT (baron))
     {

@@ -56,6 +56,7 @@ int red_death(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int lizard_bite(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int greasy_palms(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 
+
 #ifdef TEST_SITE
 /* Digsite Enchantments */
 int toxic_fumes_ench(ENCH *ench, CHAR *ench_ch, CHAR *char_in_room, int cmd, char *arg);
@@ -76,11 +77,6 @@ int remortv2_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int
 
 int imm_grace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
 {
-  return FALSE;
-}
-
-
-int impair_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
   return FALSE;
 }
 
@@ -1757,13 +1753,19 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
       ench->duration = enchantment->duration;
     }
 
+    byte interval = 0;
+
+    if (enchantment->interval) {
+      interval = enchantment->interval;
+    }
+
     ench->location = enchantments[index].location;
     ench->modifier = enchantments[index].modifier;
     ench->bitvector = enchantments[index].bitvector;
     ench->bitvector2 = enchantments[index].bitvector2;
     ench->type = index;
+    ench->interval = interval;
     ench->func = enchantments[index].func;
-    ench->duration = enchantments[index].duration;
   }
   else
   {
@@ -1773,6 +1775,7 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
     ench->bitvector = enchantment->bitvector;
     ench->bitvector2 = enchantment->bitvector2;
     ench->type = 0;
+    ench->interval = enchantment->interval;
     ench->func = enchantment->func;
     ench->duration = enchantment->duration;
   }
@@ -1863,14 +1866,9 @@ void enchantment_remove(CHAR *victim, ENCH *enchantment, int tolog)
 }
 
 
-int enchanted_by(CHAR *ch, char *enchantment_name)
-{
-  ENCH *ench = NULL;
-
-  for (ench = ch->enchantments; ench; ench = ench->next)
-  {
-    if (ench->name && !strcmp(ench->name, enchantment_name))
-    {
+int enchanted_by(CHAR *ch, char *name) {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    if (ench->name && !strcmp(ench->name, name)) {
       return TRUE;
     }
   }
@@ -1879,14 +1877,9 @@ int enchanted_by(CHAR *ch, char *enchantment_name)
 }
 
 
-int enchanted_by_type(CHAR *ch, int type)
-{
-  ENCH *ench = NULL;
-
-  for (ench = ch->enchantments; ench; ench = ench->next)
-  {
-    if (ench->type == type)
-    {
+int enchanted_by_type(CHAR *ch, int type) {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next)  {
+    if (ench->type == type) {
       return TRUE;
     }
   }
@@ -2064,4 +2057,46 @@ char *get_rank_name(CHAR *ch)
   }
 
   return "None";
+}
+
+ENCH *get_enchantment_by_name(CHAR *ch, char *name) {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    if (ench->name && !strcmp(ench->name, name)) {
+      return ench;
+    }
+  }
+
+  return NULL;
+}
+
+
+/* Note: Does not work right now, since type is not reliable. */
+ENCH *get_enchantment_by_type(CHAR *ch, int type) {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    if (ench->type == type) {
+      return ench;
+    }
+  }
+
+  return NULL;
+}
+
+void enchantment_apply(CHAR *ch, bool overwrite, char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg)) {
+  if (!ch || !*name) return;
+
+  if (overwrite && get_enchantment_by_name(ch, name)) return;
+
+  ENCH ench;
+
+  ench.name       = name;
+  ench.type       = type;
+  ench.duration   = duration;
+  ench.modifier   = modifier;
+  ench.interval   = interval;
+  ench.location   = location;
+  ench.bitvector  = bitvector;
+  ench.bitvector2 = bitvector2;
+  ench.func       = func;
+
+  enchantment_to_char(ch, &ench, FALSE);
 }
