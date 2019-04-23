@@ -4876,6 +4876,8 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
     set_title(victim,NULL);
     insert_char_wizlist(victim);
   }
+
+  save_char(victim, NOWHERE);
 }
 
 extern void remove_wizlist_name (char *name);
@@ -4977,6 +4979,8 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
   log_s(buf);
   send_to_char("Done.\n\r", ch);
   send_to_char("You have been demoted.\n\r",victim);
+
+  save_char(victim, NOWHERE);
 }
 
 

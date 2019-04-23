@@ -113,35 +113,38 @@ int isname(char *name, char *list) {
   return FALSE;
 }
 
+
 #define SCHAR_MIN -127
 #define SCHAR_MAX 127
 
 #define INC_SCHAR(orig,amount) \
   do { \
-    if (orig > 0 && SCHAR_MAX-orig < amount) orig = SCHAR_MAX; \
-    else if (orig < 0 && SCHAR_MIN-orig > amount ) orig = SCHAR_MIN; \
+    if ((orig > 0) && ((SCHAR_MAX - orig) < amount)) orig = SCHAR_MAX; \
+    else if ((orig < 0) && ((SCHAR_MIN - orig) > amount)) orig = SCHAR_MIN; \
     else orig += amount; \
   } while (0)
 
-void affect_modify(struct char_data *ch, int loc, int mod, long bitv,long bitv2, bool add)
-{
+void affect_modify(struct char_data *ch, int loc, int mod, long bitv, long bitv2, bool add) {
   if (add) {
    SET_BIT(ch->specials.affected_by, bitv);
    SET_BIT(ch->specials.affected_by2, bitv2);
-  } else {
+  }
+  else {
    REMOVE_BIT(ch->specials.affected_by, bitv);
    REMOVE_BIT(ch->specials.affected_by2, bitv2);
+
    mod = -mod;
   }
 
-  switch(loc) {
-    case APPLY_NONE:
-      break;
+  switch (loc) {
     case APPLY_STR:
-      INC_SCHAR(GET_STR(ch),mod);
+      INC_SCHAR(GET_STR(ch), mod);
       break;
     case APPLY_DEX:
       GET_DEX(ch) += mod;
+      break;
+    case APPLY_CON:
+      GET_CON(ch) += mod;
       break;
     case APPLY_INT:
       GET_INT(ch) += mod;
@@ -149,260 +152,257 @@ void affect_modify(struct char_data *ch, int loc, int mod, long bitv,long bitv2,
     case APPLY_WIS:
       GET_WIS(ch) += mod;
       break;
-    case APPLY_CON:
-      GET_CON(ch) += mod;
+
+    case APPLY_MANA:
+      ch->points.max_mana += mod;
       break;
+    case APPLY_HIT:
+      ch->points.max_hit += mod;
+      break;
+    case APPLY_MOVE:
+      ch->points.max_move += mod;
+      break;
+
+    case APPLY_GOLD:
+      break;
+    case APPLY_EXP:
+      break;
+
+    case APPLY_AC:
+      GET_AC(ch) += mod;
+      break;
+
+    case APPLY_HITROLL:
+      GET_HITROLL(ch) += mod;
+      break;
+    case APPLY_DAMROLL:
+      GET_DAMROLL(ch) += mod;
+      break;
+
+    case APPLY_SAVING_PARA:
+      ch->specials.apply_saving_throw[0] += mod;
+      break;
+    case APPLY_SAVING_ROD:
+      ch->specials.apply_saving_throw[1] += mod;
+      break;
+    case APPLY_SAVING_PETRI:
+      ch->specials.apply_saving_throw[2] += mod;
+      break;
+    case APPLY_SAVING_BREATH:
+      ch->specials.apply_saving_throw[3] += mod;
+      break;
+    case APPLY_SAVING_SPELL:
+      ch->specials.apply_saving_throw[4] += mod;
+      break;
+
+    case APPLY_AGE:
+      ch->player.time.birth -= ((long)SECS_PER_MUD_YEAR * (long)mod);
+      break;
+    case APPLY_CHAR_WEIGHT:
+      GET_WEIGHT(ch) += mod;
+      break;
+    case APPLY_CHAR_HEIGHT:
+      GET_HEIGHT(ch) += mod;
+      break;
+
     case APPLY_SEX:
-      /*GET_SEX(ch) += mod;*/
+      /* Never use. */
       break;
     case APPLY_CLASS:
-      /* ??? GET_CLASS(ch) += mod; */
+      /* Never use. */
       break;
     case APPLY_LEVEL:
-      /*GET_LEVEL(ch) += mod;
-      Never reactivate this unless you want a potential security breach
-      with a level 1 wearing a -level item.  There are other problems as
-      well. - Ranger*/
+      /* Never use due to major player corruption and security breach concerns. */
       break;
-   case APPLY_AGE:
-    ch->player.time.birth -= ((long)SECS_PER_MUD_YEAR*(long)mod);
-    break;
-   case APPLY_CHAR_WEIGHT:
-    GET_WEIGHT(ch) += mod;
-    break;
-   case APPLY_CHAR_HEIGHT:
-    GET_HEIGHT(ch) += mod;
-    break;
-   case APPLY_MANA:
-    ch->points.max_mana += mod;
-    break;
-   case APPLY_HIT:
-    ch->points.max_hit += mod;
-    break;
-   case APPLY_MOVE:
-    ch->points.max_move += mod;
-    break;
-   case APPLY_GOLD:
-    break;
-   case APPLY_EXP:
-    break;
-   case APPLY_AC:
-    GET_AC(ch) += mod;
-    break;
-   case APPLY_HITROLL:
-    GET_HITROLL(ch) += mod;
-    break;
-   case APPLY_DAMROLL:
-    GET_DAMROLL(ch) += mod;
-    break;
-   case APPLY_SAVING_PARA:
-    ch->specials.apply_saving_throw[0] += mod;
-    break;
-   case APPLY_SAVING_ROD:
-    ch->specials.apply_saving_throw[1] += mod;
-    break;
-   case APPLY_SAVING_PETRI:
-    ch->specials.apply_saving_throw[2] += mod;
-    break;
-   case APPLY_SAVING_BREATH:
-    ch->specials.apply_saving_throw[3] += mod;
-    break;
-   case APPLY_SAVING_SPELL:
-    ch->specials.apply_saving_throw[4] += mod;
-    break;
-   case APPLY_SKILL_SNEAK:
-    if(ch->skills)
-      ch->skills[SKILL_SNEAK].learned += mod;
-    break;
-   case APPLY_SKILL_HIDE:
-    if(ch->skills)
-      ch->skills[SKILL_HIDE].learned += mod;
-    break;
-   case APPLY_SKILL_STEAL:
-    if(ch->skills)
-      ch->skills[SKILL_STEAL].learned += mod;
-    break;
-   case APPLY_SKILL_BACKSTAB:
-    if(ch->skills)
-      ch->skills[SKILL_BACKSTAB].learned += mod;
-    break;
-   case APPLY_SKILL_PICK_LOCK:
-    if(ch->skills)
-      ch->skills[SKILL_PICK_LOCK].learned += mod;
-    break;
-   case APPLY_SKILL_KICK:
-    if(ch->skills)
-      ch->skills[SKILL_KICK].learned += mod;
-    break;
-   case APPLY_SKILL_BASH:
-    if(ch->skills)
-      ch->skills[SKILL_BASH].learned += mod;
-    break;
-   case APPLY_SKILL_RESCUE:
-    if(ch->skills)
-      ch->skills[SKILL_RESCUE].learned += mod;
-    break;
-   case APPLY_SKILL_BLOCK:
-    if(ch->skills)
-      ch->skills[SKILL_BLOCK].learned += mod;
-    break;
-   case APPLY_SKILL_KNOCK:
-    if(ch->skills)
-      ch->skills[SKILL_KNOCK].learned += mod;
-    break;
-   case APPLY_SKILL_PUNCH:
-    if(ch->skills)
-      ch->skills[SKILL_PUNCH].learned += mod;
-    break;
-   case APPLY_SKILL_PARRY:
-    if(ch->skills)
-      ch->skills[SKILL_PARRY].learned += mod;
-    break;
-   case APPLY_SKILL_DUAL:
-    if(ch->skills)
-      ch->skills[SKILL_DUAL].learned += mod;
-    break;
-   case APPLY_SKILL_THROW:
-    if(ch->skills)
-      ch->skills[SKILL_THROW].learned += mod;
-    break;
-   case APPLY_SKILL_DODGE:
-    if(ch->skills)
-      ch->skills[SKILL_DODGE].learned += mod;
-    break;
-   case APPLY_SKILL_PEEK:
-    if(ch->skills)
-      ch->skills[SKILL_PEEK].learned += mod;
-    break;
-   case APPLY_SKILL_BUTCHER:
-    if(ch->skills)
-      ch->skills[SKILL_BUTCHER].learned += mod;
-    break;
-   case APPLY_SKILL_TRAP:
-    if(ch->skills)
-      ch->skills[SKILL_TRAP].learned += mod;
-    break;
-   case APPLY_SKILL_DISARM:
-    if(ch->skills)
-      ch->skills[SKILL_DISARM].learned += mod;
-    break;
-   case APPLY_SKILL_SUBDUE:
-    if(ch->skills)
-      ch->skills[SKILL_SUBDUE].learned += mod;
-    break;
-   case APPLY_SKILL_CIRCLE:
-    if(ch->skills)
-      ch->skills[SKILL_CIRCLE].learned += mod;
-    break;
-   case APPLY_SKILL_TRIPLE:
-    if(ch->skills)
-      ch->skills[SKILL_TRIPLE].learned += mod;
-    break;
-   case APPLY_SKILL_PUMMEL:
-    if(ch->skills)
-      ch->skills[SKILL_PUMMEL].learned += mod;
-    break;
-   case APPLY_SKILL_AMBUSH:
-    if(ch->skills)
-      ch->skills[SKILL_AMBUSH].learned += mod;
-    break;
-   case APPLY_SKILL_ASSAULT:
-    if(ch->skills)
-      ch->skills[SKILL_ASSAULT].learned += mod;
-    break;
-   case APPLY_SKILL_DISEMBOWEL:
-    if(ch->skills)
-      ch->skills[SKILL_DISEMBOWEL].learned += mod;
-    break;
-   case APPLY_SKILL_BACKFLIP:
-    if(ch->skills)
-      ch->skills[SKILL_BACKFLIP].learned += mod;
-    break;
+  }
 
-   default:
-/*  log_f("Unknown apply adjust attempt (handler.c, affect_modify).");*/
-    break;
-
-  } /* switch */
+  /* Handle skills separately, as they don't apply to NPCs. */
+  if (ch->skills) {
+    switch (loc) {
+      case APPLY_SKILL_SNEAK:
+        ch->skills[SKILL_SNEAK].learned += mod;
+        break;
+      case APPLY_SKILL_HIDE:
+        ch->skills[SKILL_HIDE].learned += mod;
+        break;
+      case APPLY_SKILL_STEAL:
+        ch->skills[SKILL_STEAL].learned += mod;
+        break;
+      case APPLY_SKILL_BACKSTAB:
+        ch->skills[SKILL_BACKSTAB].learned += mod;
+        break;
+      case APPLY_SKILL_PICK_LOCK:
+        ch->skills[SKILL_PICK_LOCK].learned += mod;
+        break;
+      case APPLY_SKILL_KICK:
+        ch->skills[SKILL_KICK].learned += mod;
+        break;
+      case APPLY_SKILL_BASH:
+        ch->skills[SKILL_BASH].learned += mod;
+        break;
+      case APPLY_SKILL_RESCUE:
+        ch->skills[SKILL_RESCUE].learned += mod;
+        break;
+      case APPLY_SKILL_BLOCK:
+        ch->skills[SKILL_BLOCK].learned += mod;
+        break;
+      case APPLY_SKILL_KNOCK:
+        ch->skills[SKILL_KNOCK].learned += mod;
+        break;
+      case APPLY_SKILL_PUNCH:
+        ch->skills[SKILL_PUNCH].learned += mod;
+        break;
+      case APPLY_SKILL_PARRY:
+        ch->skills[SKILL_PARRY].learned += mod;
+        break;
+      case APPLY_SKILL_DUAL:
+        ch->skills[SKILL_DUAL].learned += mod;
+        break;
+      case APPLY_SKILL_THROW:
+        ch->skills[SKILL_THROW].learned += mod;
+        break;
+      case APPLY_SKILL_DODGE:
+        ch->skills[SKILL_DODGE].learned += mod;
+        break;
+      case APPLY_SKILL_PEEK:
+        ch->skills[SKILL_PEEK].learned += mod;
+        break;
+      case APPLY_SKILL_BUTCHER:
+        ch->skills[SKILL_BUTCHER].learned += mod;
+        break;
+      case APPLY_SKILL_TRAP:
+        ch->skills[SKILL_TRAP].learned += mod;
+        break;
+      case APPLY_SKILL_DISARM:
+        ch->skills[SKILL_DISARM].learned += mod;
+        break;
+      case APPLY_SKILL_SUBDUE:
+        ch->skills[SKILL_SUBDUE].learned += mod;
+        break;
+      case APPLY_SKILL_CIRCLE:
+        ch->skills[SKILL_CIRCLE].learned += mod;
+        break;
+      case APPLY_SKILL_TRIPLE:
+        ch->skills[SKILL_TRIPLE].learned += mod;
+        break;
+      case APPLY_SKILL_PUMMEL:
+        ch->skills[SKILL_PUMMEL].learned += mod;
+        break;
+      case APPLY_SKILL_AMBUSH:
+        ch->skills[SKILL_AMBUSH].learned += mod;
+        break;
+      case APPLY_SKILL_ASSAULT:
+        ch->skills[SKILL_ASSAULT].learned += mod;
+        break;
+      case APPLY_SKILL_DISEMBOWEL:
+        ch->skills[SKILL_DISEMBOWEL].learned += mod;
+        break;
+      case APPLY_SKILL_BACKFLIP:
+        ch->skills[SKILL_BACKFLIP].learned += mod;
+        break;
+    }
+  }
 }
 
 
-
-/* This updates a character by subtracting everything he is affected by */
-/* restoring original abilities, and then affecting all again           */
-void affect_total(struct char_data *ch)
-{
-  struct affected_type_5 *af;
-  struct enchantment_type_5 *ench;
-  int i,j;
-
-  for(i=0; i<MAX_WEAR; i++) {
-    if (ch->equipment[i])
-      for(j=0; j<MAX_OBJ_AFFECT; j++)
-        affect_modify(ch, ch->equipment[i]->affected[j].location,
-                      ch->equipment[i]->affected[j].modifier,
-                      ch->equipment[i]->obj_flags.bitvector,ch->equipment[i]->obj_flags.bitvector2, FALSE);
+/* Update a character by removing all affects, restoring original abilities,
+   then re-applying all affects. */
+void affect_total(struct char_data *ch) {
+  for (int i = 0; i < MAX_WEAR; i++) {
+    if (ch->equipment[i]) {
+      for (int j = 0; j < MAX_OBJ_AFFECT; j++) {
+        affect_modify(ch,
+          ch->equipment[i]->affected[j].location,
+          ch->equipment[i]->affected[j].modifier,
+          ch->equipment[i]->obj_flags.bitvector,
+          ch->equipment[i]->obj_flags.bitvector2,
+          FALSE);
+      }
+    }
   }
 
+  for (AFF *af = ch->affected; af; af = af->next) {
+    affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, FALSE);
+  }
 
-  for(af = ch->affected; af; af=af->next)
-    affect_modify(ch, af->location, af->modifier, af->bitvector,af->bitvector2, FALSE);
-  for(ench = ch->enchantments; ench; ench=ench->next)
-    affect_modify(ch, ench->location, ench->modifier, ench->bitvector,ench->bitvector2, FALSE);
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    affect_modify(ch, ench->location, ench->modifier, ench->bitvector, ench->bitvector2, FALSE);
+  }
+
   ch->tmpabilities = ch->abilities;
 
-  ch->specials.org_hit=ch->points.max_hit;
-  ch->specials.org_mana=ch->points.max_mana;
-  ch->specials.org_move=ch->points.max_move;
+  ch->specials.org_hit = ch->points.max_hit;
+  ch->specials.org_mana = ch->points.max_mana;
+  ch->specials.org_move = ch->points.max_move;
 
-  for(i=0; i<MAX_WEAR; i++) {
-    if (ch->equipment[i])
-      for(j=0; j<MAX_OBJ_AFFECT; j++)
-        affect_modify(ch, ch->equipment[i]->affected[j].location,
-                      ch->equipment[i]->affected[j].modifier,
-                      ch->equipment[i]->obj_flags.bitvector,ch->equipment[i]->obj_flags.bitvector2, TRUE);
+  for (int i = 0; i < MAX_WEAR; i++) {
+    if (ch->equipment[i]) {
+      for (int j = 0; j < MAX_OBJ_AFFECT; j++) {
+        affect_modify(ch,
+          ch->equipment[i]->affected[j].location,
+          ch->equipment[i]->affected[j].modifier,
+          ch->equipment[i]->obj_flags.bitvector,
+          ch->equipment[i]->obj_flags.bitvector2,
+          TRUE);
+      }
+    }
   }
 
+  for (AFF *af = ch->affected; af; af = af->next) {
+    affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, TRUE);
+  }
 
-  for(af = ch->affected; af; af=af->next)
-    affect_modify(ch, af->location, af->modifier, af->bitvector,af->bitvector2, TRUE);
-  for(ench = ch->enchantments; ench; ench=ench->next)
-    affect_modify(ch, ench->location, ench->modifier, ench->bitvector,ench->bitvector2, TRUE);
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    affect_modify(ch, ench->location, ench->modifier, ench->bitvector, ench->bitvector2, TRUE);
+  }
 
-  if(GET_OCON(ch)<19) GET_CON(ch)=MAX(0,MIN(GET_CON(ch),18));
-  else GET_CON(ch) = MAX(0,MIN(GET_CON(ch),GET_OCON(ch)));
+  if (GET_STR(ch) > 18) {
+    if (GET_OSTR(ch) < 19) {
+      int i = GET_ADD(ch) + ((GET_STR(ch) - 18) * 10);
 
-  if(GET_OINT(ch)<19) GET_INT(ch)=MAX(0,MIN(GET_INT(ch),18));
-  else GET_INT(ch) = MAX(0,MIN(GET_INT(ch),GET_OINT(ch)));
-
-  if(GET_ODEX(ch)<19) GET_DEX(ch)=MAX(0,MIN(GET_DEX(ch),18));
-  else GET_DEX(ch) = MAX(0,MIN(GET_DEX(ch),GET_ODEX(ch)));
-
-  if(GET_OWIS(ch)<19) GET_WIS(ch)=MAX(0,MIN(GET_WIS(ch),18));
-  else GET_WIS(ch) = MAX(0,MIN(GET_WIS(ch),GET_OWIS(ch)));
-
-  if(GET_STR(ch)>18) {
-    if(GET_OSTR(ch)<19) {
-      i=GET_ADD(ch)+((GET_STR(ch)-18)*10);
-      GET_ADD(ch)=MIN(i,100);
-      GET_STR(ch)=18;
+      GET_ADD(ch) = MIN(i, 100);
+      GET_STR(ch) = 18;
     }
     else {
-      GET_STR(ch)=MIN(GET_STR(ch),GET_OSTR(ch));
+      GET_STR(ch) = MIN(GET_STR(ch), GET_OSTR(ch));
     }
   }
 
-  if(GET_STR(ch)<18) {
-    i=GET_ADD(ch)/10;
-    GET_STR(ch)+=i;
-    GET_ADD(ch)-=i*10;
-    if(GET_STR(ch)>18) {
-      i=GET_ADD(ch)+((GET_STR(ch)-18)*10);
-      GET_ADD(ch)=MIN(i, 100);
-      GET_STR(ch)=18;
+  if (GET_STR(ch) < 18) {
+    int i = GET_ADD(ch) / 10;
+
+    GET_STR(ch) += i;
+    GET_ADD(ch) -= i * 10;
+
+    if (GET_STR(ch) > 18) {
+      i = GET_ADD(ch) + ((GET_STR(ch) - 18) * 10);
+
+      GET_ADD(ch) = MIN(i, 100);
+      GET_STR(ch) = 18;
     }
   }
+
+  if (GET_ODEX(ch) < 19)
+    GET_DEX(ch) = MAX(0, MIN(GET_DEX(ch), 18));
+  else
+    GET_DEX(ch) = MAX(0, MIN(GET_DEX(ch), GET_ODEX(ch)));
+
+  if (GET_OCON(ch) < 19)
+    GET_CON(ch) = MAX(0, MIN(GET_CON(ch), 18));
+  else
+    GET_CON(ch) = MAX(0, MIN(GET_CON(ch), GET_OCON(ch)));
+
+  if (GET_OINT(ch) < 19)
+    GET_INT(ch) = MAX(0, MIN(GET_INT(ch), 18));
+  else
+    GET_INT(ch) = MAX(0, MIN(GET_INT(ch), GET_OINT(ch)));
+
+  if (GET_OWIS(ch) < 19)
+    GET_WIS(ch) = MAX(0, MIN(GET_WIS(ch), 18));
+  else
+    GET_WIS(ch) = MAX(0, MIN(GET_WIS(ch), GET_OWIS(ch)));
 }
+
 
 /* Insert an affect_type in a char_data structure
    Automatically sets apropriate bits and apply's */
