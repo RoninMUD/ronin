@@ -2649,14 +2649,13 @@ void give_prompt(DESC *desc) {
 
   if (IS_SET(desc->prompt, PROMPT_BUFFER)) {
     CHAR *opponent = ((GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) ? GET_OPPONENT(ch) : NULL);
+    CHAR *buffer = ((opponent && GET_OPPONENT(opponent) && SAME_ROOM(ch, GET_OPPONENT(opponent)) && (GET_OPPONENT(opponent) != ch)) ? GET_OPPONENT(opponent) : NULL);
 
-    if (opponent || !IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
+    if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
       strlcat(prompt, " Buf:", sizeof(prompt));
     }
 
-    if (opponent && (GET_OPPONENT(opponent) != ch)) {
-      CHAR *buffer = ((GET_OPPONENT(opponent) && SAME_ROOM(ch, GET_OPPONENT(opponent))) ? GET_OPPONENT(opponent) : NULL);
-
+    if (buffer) {
       if (IS_SET(desc->prompt, PROMPT_BUFFER_TEX)) {
         snprintf(buf, sizeof(buf), "%s", condition[MAX(MIN((GET_MAX_HIT(buffer) ? ((100 * GET_HIT(buffer)) / GET_MAX_HIT(buffer)) : 0) / 10, 10), 0)]);
         strlcat(prompt, buf, sizeof(prompt));
@@ -2666,7 +2665,7 @@ void give_prompt(DESC *desc) {
         strlcat(prompt, buf, sizeof(prompt));
       }
     }
-    else if ((opponent && (GET_OPPONENT(opponent) == ch)) || !IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
+    else if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
       strlcat(prompt, "*", sizeof(prompt));
     }
   }
@@ -2674,7 +2673,7 @@ void give_prompt(DESC *desc) {
   if (IS_SET(desc->prompt, PROMPT_VICTIM)) {
     CHAR *opponent = ((GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) ? GET_OPPONENT(ch) : NULL);
 
-    if (opponent || !IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
+    if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
       strlcat(prompt, " Vic:", sizeof(prompt));
     }
 
@@ -2688,7 +2687,7 @@ void give_prompt(DESC *desc) {
         strlcat(prompt, buf, sizeof(prompt));
       }
     }
-    else if (!IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
+    else if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
       strlcat(prompt, "*", sizeof(prompt));
     }
   }
@@ -2710,188 +2709,6 @@ void give_prompt(DESC *desc) {
   desc->prompt_mode = 0;
 }
 
-
-///* Insertion of color codes throughout the prompt for anti-botting - Ranger Jan 99 */
-//void give_prompt_old(struct descriptor_data *point)
-//{
-//  int percent, pos = 0;
-//  char prompt[MAX_INPUT_LENGTH];
-//  char temp[MAX_INPUT_LENGTH];
-//  char tex[10];
-//  char *condition[]=
-//    {
-//      "bleeding",  /*    -  9 */
-//      "terrible",  /* 10 - 19 */
-//      "awful",     /* 20 - 29 */
-//      "bad",       /* 30 - 39 */
-//      "hurt",      /* 40 - 49 */
-//      "wounded",   /* 50 - 59 */
-//      "fair",      /* 60 - 69 */
-//      "good",      /* 70 - 79 */
-//      "fine",      /* 80 - 89 */
-//      "excellent", /* 90 - 99 */
-//      "full"       /* 100-    */
-//      };
-//  bool disp;
-//
-//  if (point->str) {
-//    write_to_descriptor(point->descriptor, "] ");
-//    point->prompt_mode = 0;
-//  } else if (!point->connected) {
-//    if (point->showstr_point) {
-//      write_to_descriptor(point->descriptor,
-//                    "*** Press return ***");
-//      point->prompt_mode = 0;
-//    } else {
-//      *prompt = '\0';
-//      pos = 0;
-//
-//      if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-//      if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//
-//      pos = str_cat(prompt, pos, MSL, "<");
-//      disp = FALSE;
-//
-//      if (IS_SET(point->prompt, PROMPT_NAME)) {
-//        sprintf(temp, "%s", GET_NAME(point->character));
-//        pos = str_cat(prompt, pos, MSL, temp);
-//      }
-//
-//      if (IS_SET(point->prompt, PROMPT_HP_TEX))
-//        strcpy(tex, "hp");
-//      else
-//        *tex = '\0';
-//
-//      if(IS_SET(point->prompt, PROMPT_HP)) {
-//        sprintf(temp," %d",GET_HIT(point->character));
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-//        if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//        if (IS_SET(point->prompt, PROMPT_HP_MAX))
-//          sprintf(temp, "(%d)%s",GET_MAX_HIT(point->character),tex);
-//        else
-//          sprintf(temp, "%s",tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      } else if (IS_SET(point->prompt, PROMPT_HP_MAX)) {
-//        sprintf(temp, " (%d)%s", GET_MAX_HIT(point->character), tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      }
-//
-//      if (IS_SET(point->prompt, PROMPT_MANA_TEX))
-//        strcpy(tex, "mana");
-//      else
-//        *tex = '\0';
-//
-//      if(IS_SET(point->prompt, PROMPT_MANA)) {
-//        sprintf(temp, " %d",GET_MANA(point->character));
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-//        if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//        if (IS_SET(point->prompt, PROMPT_MANA_MAX))
-//          sprintf(temp, "(%d)%s",GET_MAX_MANA(point->character),tex);
-//        else
-//          sprintf(temp, "%s",tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      } else if (IS_SET(point->prompt, PROMPT_MANA_MAX)) {
-//        sprintf(temp, " (%d)%s", GET_MAX_MANA(point->character), tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      }
-//
-//      if (IS_SET(point->prompt, PROMPT_MOVE_TEX))
-//        strcpy(tex, "mv");
-//      else
-//        *tex = '\0';
-//
-//      if (IS_SET(point->prompt, PROMPT_MOVE)) {
-//        if (IS_SET(point->prompt, PROMPT_MOVE_MAX))
-//          sprintf(temp, " %d(%d)%s",
-//                  GET_MOVE(point->character), GET_MAX_MOVE(point->character), tex);
-//        else
-//          sprintf(temp, " %d%s", GET_MOVE(point->character), tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      } else if (IS_SET(point->prompt, PROMPT_MOVE_MAX)) {
-//        sprintf(temp, " (%d)%s", GET_MAX_MOVE(point->character), tex);
-//        pos = str_cat(prompt, pos, MSL, temp);
-//        disp = TRUE;
-//      }
-//
-//      if (point->character->specials.fighting) {
-//        if (IS_SET(point->prompt, PROMPT_BUFFER | PROMPT_BUFFER_A)) {
-//          if ((point->character->specials.fighting->specials.fighting != point->character) &&
-//            (point->character->specials.fighting->specials.fighting)) {
-//            if (IS_SET(point->prompt, PROMPT_BUFFER_TEX)) {
-//              if (GET_MAX_HIT(point->character->specials.fighting->specials.fighting) > 0)
-//                percent = (100*GET_HIT(point->character->specials.fighting->specials.fighting))/GET_MAX_HIT(point->character->specials.fighting->specials.fighting);
-//              else
-//                percent = -1; /* How could MAX_HIT be < 1?? */
-//              sprintf(temp, " Buf:");
-//              pos = str_cat(prompt, pos, MSL, temp);
-//              if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-//              if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//              sprintf(temp, "%s", condition[MAX( MIN( percent/10, 10), 0)]);
-//            } else
-//              sprintf(temp, " Buf:%d", GET_HIT(point->character->specials.fighting->specials.fighting));
-//
-//            pos = str_cat(prompt, pos, MSL, temp);
-//            disp = TRUE;
-//          } else if (IS_SET(point->prompt, PROMPT_BUFFER_A)) {
-//            pos = str_cat(prompt, pos, MSL, " Buf:*");
-//            disp = TRUE;
-//          }
-//        }
-//
-//        if (IS_SET(point->prompt, PROMPT_VICTIM | PROMPT_VICTIM_A)) {
-//          if (IS_SET(point->prompt, PROMPT_VICTIM_TEX)) {
-//            if (GET_MAX_HIT(point->character->specials.fighting) > 0)
-//              percent = (100*GET_HIT(point->character->specials.fighting))/GET_MAX_HIT(point->character->specials.fighting);
-//            else
-//              percent = -1; /* How could MAX_HIT be < 1?? */
-//
-//            sprintf(temp, " Vic:");
-//            pos = str_cat(prompt, pos, MSL, temp);
-//            if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-//            if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//            sprintf(temp, "%s", condition[ MAX( MIN( percent/10, 10), 0)]);
-//          } else
-//            sprintf(temp, " Vic:%d", GET_HIT(point->character->specials.fighting));
-//
-//          pos = str_cat(prompt, pos, MSL, temp);
-//          disp = TRUE;
-//        }
-//      } else {
-//        if (IS_SET(point->prompt, PROMPT_BUFFER_A)) {
-//          pos = str_cat(prompt, pos, MSL, " Buf:*");
-//          disp = TRUE;
-//        }
-//        if (IS_SET(point->prompt, PROMPT_VICTIM_A)) {
-//          pos = str_cat(prompt, pos, MSL, " Vic:*");
-//          disp = TRUE;
-//        }
-//      }
-//
-//      if (disp) {
-//        pos = str_cat(prompt, pos, MSL, " > ");
-//      } else {
-//        pos = str_cat(prompt, pos, MSL, "> ");
-//      } /* if */
-//      if(pos == MSL) {
-//      log_f("BUG: prompt too long (%s)", GET_NAME(point->character));
-//      }
-//      disp = FALSE;
-//
-//      if(point->character->colors[0]&&point->character->colors[1]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[1])*2)-2)]);
-//      if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-//      write_to_descriptor(point->descriptor, prompt);
-//
-//      point->prompt_mode = 0;
-//    } /* if */
-//  }
-//}
 
 int signal_world(CHAR *signaler, int cmd, char *arg) {
   static int counter = 0;

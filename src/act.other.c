@@ -1902,11 +1902,11 @@ void do_display(CHAR *ch, char *arg, int cmd) {
   if (is_abbrev(option, "automatic")) {
     send_to_char("Prompt display set to auto.\n\r", ch);
     desc->prompt = 0xFFFFFFFF;
+    REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A | PROMPT_VICTIM_A);
   }
   else if (is_abbrev(option, "verbose") || is_abbrev(option, "all")) {
     send_to_char("Prompt display set to all.\n\r", ch);
     desc->prompt = 0xFFFFFFFF;
-    REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A | PROMPT_VICTIM_A);
   }
   else if (is_abbrev(option, "none") || is_abbrev(option, "off")) {
     send_to_char("Prompt display set to off.\n\r", ch);
@@ -2147,15 +2147,13 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       REMOVE_BIT(desc->prompt, PROMPT_BUFFER);
       send_to_char("Buffer display off.\n\r", ch);
     }
+    else if (is_abbrev(setting, "always")) {
+      SET_BIT(desc->prompt, PROMPT_BUFFER_A);
+      send_to_char("Buffer always display on.\n\r", ch);
+    }
     else if (is_abbrev(setting, "automatic")) {
-      if (!IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
-        SET_BIT(desc->prompt, PROMPT_BUFFER_A);
-        send_to_char("Buffer auto display on.\n\r", ch);
-      }
-      else {
-        REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A);
-        send_to_char("Buffer auto display off.\n\r", ch);
-      }
+      REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A);
+      send_to_char("Buffer auto display on.\n\r", ch);
     }
     else if (is_abbrev(setting, "text")) {
       if (!IS_SET(desc->prompt, PROMPT_BUFFER_TEX)) {
@@ -2179,11 +2177,11 @@ void do_display(CHAR *ch, char *arg, int cmd) {
 
       if (*(setting + 1) == '1') {
         SET_BIT(desc->prompt, PROMPT_BUFFER_A);
-        send_to_char("Buffer auto display on.\n\r", ch);
+        send_to_char("Buffer always display on.\n\r", ch);
       }
       else {
         REMOVE_BIT(desc->prompt, PROMPT_BUFFER_A);
-        send_to_char("Buffer auto display off.\n\r", ch);
+        send_to_char("Buffer auto display on.\n\r", ch);
       }
 
       if (*(setting + 2) == '1') {
@@ -2196,7 +2194,7 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       }
     }
     else {
-      send_to_char("Usage: display buffer [on|off|auto|text] | [###]\n\r", ch);
+      send_to_char("Usage: display buffer [on|off|always|auto|text] | [###]\n\r", ch);
     }
   }
   else if (is_abbrev(option, "victim") || is_abbrev(option, "target")) {
@@ -2208,15 +2206,13 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       REMOVE_BIT(desc->prompt, PROMPT_VICTIM);
       send_to_char("Victim display off.\n\r", ch);
     }
+    else if (is_abbrev(setting, "always")) {
+      SET_BIT(desc->prompt, PROMPT_VICTIM_A);
+      send_to_char("Victim always display on.\n\r", ch);
+    }
     else if (is_abbrev(setting, "automatic")) {
-      if (!IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
-        SET_BIT(desc->prompt, PROMPT_VICTIM_A);
-        send_to_char("Victim auto display on.\n\r", ch);
-      }
-      else {
-        REMOVE_BIT(desc->prompt, PROMPT_VICTIM_A);
-        send_to_char("Victim auto display off.\n\r", ch);
-      }
+      REMOVE_BIT(desc->prompt, PROMPT_VICTIM_A);
+      send_to_char("Victim auto display on.\n\r", ch);
     }
     else if (is_abbrev(setting, "text")) {
       if (!IS_SET(desc->prompt, PROMPT_VICTIM_TEX)) {
@@ -2240,11 +2236,11 @@ void do_display(CHAR *ch, char *arg, int cmd) {
 
       if (*(setting + 1) == '1') {
         SET_BIT(desc->prompt, PROMPT_VICTIM_A);
-        send_to_char("Victim auto display on.\n\r", ch);
+        send_to_char("Victim always display on.\n\r", ch);
       }
       else {
         REMOVE_BIT(desc->prompt, PROMPT_VICTIM_A);
-        send_to_char("Victim auto display off.\n\r", ch);
+        send_to_char("Victim auto display on.\n\r", ch);
       }
 
       if (*(setting + 2) == '1') {
@@ -2257,14 +2253,14 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       }
     }
     else {
-      send_to_char("Usage: display victim [on|off|auto|text] | [###]\n\r", ch);
+      send_to_char("Usage: display victim [on|off|always|auto|text] | [###]\n\r", ch);
     }
   }
   else {
     send_to_char("Usage: display [auto|all|off]\n\r"\
                  "               [name]          [on|off]                   | [#]\n\r"\
                  "               [hit|mana|move] [current|max|text|all|off] | [###]\n\r"\
-                 "               [buffer|victim] [on|off|auto|text]         | [###]\n\r", ch);
+                 "               [buffer|victim] [on|off|always|auto|text]  | [###]\n\r", ch);
   }
 }
 
