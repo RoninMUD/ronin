@@ -33,6 +33,7 @@
 #include "enchant.h"
 #include "meta.h"
 #include "quest.h"
+#include "subclass.h"
 
 /* extern functions */
 
@@ -614,15 +615,15 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
-        if (af_list[SMELL_FARTMOUTH]) /*(affected_by_spell(target, SMELL_FARTMOUTH))*/ {
+        if (af_list[SMELL_FARTMOUTH]) {
           act("......brown fumes waft from $n's mouth.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SKILL_CAMP]) /*(affected_by_spell(target, SKILL_CAMP))*/ {
+        if (af_list[SKILL_CAMP]) {
           act("......$n is camping here.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SKILL_PRAY]) /*(affected_by_spell(target, SKILL_PRAY))*/ {
+        if (af_list[SKILL_PRAY]) {
           act("......$n is bowing $s head in prayer.", FALSE, target, 0, ch, TO_VICT);
         }
 
@@ -633,29 +634,29 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         act("......$n is sheltered from death by a divine aura.", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if (IS_AFFECTED(target, AFF_SANCTUARY) && !af_list[SPELL_DISRUPT_SANCT]) /*!affected_by_spell(target, SPELL_DISRUPT_SANCT))*/ {
+      if (IS_AFFECTED(target, AFF_SANCTUARY) && !af_list[SPELL_DISRUPT_SANCT]) {
         act("......$n glows with a bright light!", FALSE, target, 0, ch, TO_VICT);
       }
-      else if (IS_AFFECTED(target, AFF_SANCTUARY) && af_list[SPELL_DISRUPT_SANCT]) /*affected_by_spell(target, SPELL_DISRUPT_SANCT))*/ {
+      else if (IS_AFFECTED(target, AFF_SANCTUARY) && af_list[SPELL_DISRUPT_SANCT]) {
         act("......$n's protective aura has been disrupted!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_FORTIFICATION)) || af_list[SPELL_FORTIFICATION]) /*affected_by_spell(target, SPELL_FORTIFICATION))*/ {
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_FORTIFICATION)) || af_list[SPELL_FORTIFICATION]) {
         act("......$n is protected by a barrier of magical fortification!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED(target, AFF_FURY)) || af_list[SPELL_FURY]) /*affected_by_spell(target, SPELL_FURY))*/ {
+      if ((!IS_NPC(target) && IS_AFFECTED(target, AFF_FURY)) || af_list[SPELL_FURY]) {
         act("......$n is snarling and fuming with fury!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_RAGE)) || af_list[SPELL_RAGE]) /*affected_by_spell(target, SPELL_RAGE))*/ {
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_RAGE)) || af_list[SPELL_RAGE]) {
         act("......$n is seething with hatred and rage!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if (IS_AFFECTED(target, AFF_SPHERE) && !af_list[SPELL_DISTORTION]) /*!affected_by_spell(target, SPELL_DISTORTION))*/ {
+      if (IS_AFFECTED(target, AFF_SPHERE) && !af_list[SPELL_DISTORTION]) {
         act("......$n is surrounded by a golden sphere!", FALSE, target, 0, ch, TO_VICT);
       }
-      else if (IS_AFFECTED(target, AFF_SPHERE) && af_list[SPELL_DISTORTION]) /*affected_by_spell(target, SPELL_DISTORTION))*/ {
+      else if (IS_AFFECTED(target, AFF_SPHERE) && af_list[SPELL_DISTORTION]) {
         act("......$n's golden sphere seems to shimmer and blur in weakness!", FALSE, target, 0, ch, TO_VICT);
       }
 
@@ -664,51 +665,51 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
-        if (af_list[SPELL_IRON_SKIN]) /*affected_by_spell(target, SPELL_IRON_SKIN))*/ {
+        if (af_list[SPELL_IRON_SKIN]) {
           act("......$n's skin is as hard and impervious as iron.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_ORB_PROTECTION]) /*affected_by_spell(target, SPELL_ORB_PROTECTION))*/ {
+        if (af_list[SPELL_ORB_PROTECTION]) {
           act("......a shield of power emanates from an orb above $n's head.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_BLADE_BARRIER]) /*affected_by_spell(target, SPELL_BLADE_BARRIER))*/ {
+        if (af_list[SPELL_BLADE_BARRIER]) {
           act("......$n is surrounded by a barrier of whirling blades.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_DESECRATE]) /*affected_by_spell(target, SPELL_DESECRATE))*/ {
+        if (af_list[SPELL_DESECRATE]) {
           act("......$n's sinister presence desecrates the surroundings.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_BLACKMANTLE]) /*affected_by_spell(target, SPELL_BLACKMANTLE))*/ {
+        if (af_list[SPELL_BLACKMANTLE]) {
           act("......$n is surrounded by an eerie mantle of darkness.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_QUICK]) /*affected_by_spell(target, SPELL_QUICK))*/ {
+        if (af_list[SPELL_QUICK]) {
           act("......$n's words and gestures are magically quickened.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_HASTE]) /*affected_by_spell(target, SPELL_HASTE))*/ {
+        if (af_list[SPELL_HASTE]) {
           act("......$n's hastened actions move faster than reality.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_MYSTIC_SWIFTNESS]) /*affected_by_spell(target, SPELL_MYSTIC_SWIFTNESS))*/ {
+        if (af_list[SPELL_MYSTIC_SWIFTNESS]) {
           act("......$n's hands move with mystical swiftness.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_BLUR]) /*affected_by_spell(target, SPELL_BLUR))*/ {
+        if (af_list[SPELL_BLUR]) {
           act("......$n's movements blur in and out of reality.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_RUSH]) /*affected_by_spell(target, SPELL_RUSH))*/ {
+        if (af_list[SPELL_RUSH]) {
           act("......$n's pulse rushes with supernatural speed.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_BLOOD_LUST]) /*affected_by_spell(target, SPELL_BLOOD_LUST))*/ {
+        if (af_list[SPELL_BLOOD_LUST]) {
           act("......$n thirsts for blood and lusts for carnage.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_SHADOW_WRAITH]) /*affected_by_spell(target, SPELL_SHADOW_WRAITH))*/ {
+        if (af_list[SPELL_SHADOW_WRAITH]) {
           int duration = duration_of_spell(target, SPELL_SHADOW_WRAITH);
 
           if (duration >= 0) {
@@ -728,27 +729,28 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        if (af_list[SPELL_BLINDNESS]) /*affected_by_spell(target, SPELL_BLINDNESS))*/ {
+        /* Inner Peace */
+        if (af_list[SPELL_BLINDNESS] && !(IS_MORTAL(target) && check_subclass(target, SC_MYSTIC, 3))) {
           act("......$n stumbles about wildly!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_PARALYSIS]) /*affected_by_spell(target, SPELL_PARALYSIS))*/ {
+        if (af_list[SPELL_PARALYSIS]) {
           act("......$n is completely immobilized!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_HOLD]) /*affected_by_spell(target, SPELL_HOLD))*/ {
+        if (af_list[SPELL_HOLD]) {
           act("......$n is rooted to the ground!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_DEBILITATE]) /*affected_by_spell(target, SPELL_DEBILITATE))*/ {
+        if (af_list[SPELL_DEBILITATE]) {
           act("......$n is enveloped by a greenish smoke.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_CLOUD_CONFUSION]) /*affected_by_spell(target, SPELL_CLOUD_CONFUSION))*/ {
+        if (af_list[SPELL_CLOUD_CONFUSION]) {
           act("......$n drools absentmindedly.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_INCENDIARY_CLOUD] || af_list[SPELL_INCENDIARY_CLOUD_NEW]) /*affected_by_spell(target, SPELL_INCENDIARY_CLOUD) || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW))*/ {
+        if (af_list[SPELL_INCENDIARY_CLOUD] || af_list[SPELL_INCENDIARY_CLOUD_NEW]) {
           act("......$n is enveloped by a huge ball of flame!", FALSE, target, 0, ch, TO_VICT);
         }
 
@@ -1124,7 +1126,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
     send_to_char("You can't see anything but stars!\n\r", ch);
   else if (GET_POS(ch) == POSITION_SLEEPING)
     send_to_char("You can't see anything, you're sleeping!\n\r", ch);
-  else if ( IS_AFFECTED(ch, AFF_BLIND) )
+  else if (IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) /* Inner Peace */
     send_to_char("You can't see anything, you're blind!\n\r", ch);
   else if (IS_DARK(CHAR_REAL_ROOM(ch)) &&
            !IS_AFFECTED(ch, AFF_INFRAVISION) &&

@@ -644,7 +644,7 @@ int hit_gain(CHAR *ch) {
 
   /* Tranquility */
   if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-    gain *= 1.2;
+    gain *= 1.25;
   }
 
   /* Bathed in Blood */

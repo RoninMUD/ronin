@@ -1709,12 +1709,12 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     affect_from_char(group_leader, SPELL_TRANQUILITY);
 
     af.location = APPLY_HITROLL;
-    af.modifier = 2;
+    af.modifier = 3;
 
     affect_to_char(group_leader, &af);
 
     af.location = APPLY_DAMROLL;
-    af.modifier = 2;
+    af.modifier = 3;
 
     affect_to_char(group_leader, &af);
   }

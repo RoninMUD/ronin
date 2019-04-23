@@ -2526,7 +2526,7 @@ int calc_hitroll(CHAR *ch) {
     /* Combat Zen Blindness Hitroll Penalty Nullification */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       for (AFF *aff = ch->affected; aff; aff = aff->next) {
-        if ((aff->type == SPELL_BLINDNESS) && (aff->location == APPLY_HITROLL)) {
+        if ((aff->type == SPELL_BLINDNESS) && (aff->location == APPLY_HITROLL) && (aff->modifier < 0)) {
           hitroll += abs(aff->modifier);
           break;
         }
@@ -2821,7 +2821,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       attack_roll = number(1, 20);
 
       /* Check for automatic failure avoidance */
-      if ((attack_roll = 1) || ((attack_roll <= 5) && !hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
+      if ((attack_roll = 1) || ((attack_roll <= 10) && !hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
         success = HIT_SUCCESS;
       }
     }
@@ -2832,10 +2832,8 @@ int try_hit(CHAR *attacker, CHAR *defender) {
 
     /* Sento Kata */
     if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
-      attack_roll = number(1, 20);
-
       /* Check for critical hit. */
-      if ((attack_roll == 20) || ((attack_roll > 15) && hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
+      if (hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender))) {
         success = HIT_CRITICAL;
       }
     }
@@ -3135,20 +3133,20 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (IS_MORTAL(attacker) && (check_subclass(attacker, SC_DEFILER, 3) || check_subclass(attacker, SC_MERCENARY, 3)) && !count_attackers(attacker)) {
           switch (GET_SC(attacker)) {
             case SC_DEFILER:
-              if (number(1, 850) <= (GET_LEARNED(attacker, SKILL_FEINT) - (GET_DEX_APP(attacker) * 5))) {
-                act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
-                act("As you dodge $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
-                act("As $N dodges $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
+              if ((number(1, 850) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_FEINT)) {
+                act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
+                act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
+                act("$n feints after $N dodges $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
                 hit(attacker, defender, SKILL_FEINT); // A feint hit (doubled).
               }
               break;
 
             case SC_MERCENARY:
-              if (number(1, 850) <= (GET_LEARNED(attacker, SKILL_RIPOSTE) - (GET_DEX_APP(attacker) * 5))) {
-                act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
-                act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
-                act("$n feints after $N dodges $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
+              if ((number(1, 850) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_RIPOSTE)) {
+                act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
+                act("As you dodge $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
+                act("As $N dodges $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
                 hit(attacker, defender, TYPE_UNDEFINED); // A normal hit (can dual/triple).
               }

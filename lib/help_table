@@ -8650,12 +8650,13 @@ Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
 of combat in several ways.
 
 First, the Ronin now only automatically misses with an attack roll of 1,
-followed by a second attack roll of 5 or less that also would miss the target
+followed by a second attack roll of 10 or less that also would miss the target
 (or a second 1).
 
-Next, the Ronin inflicts a critical hit for double damage if they roll a
-natural attack roll of 20, followed by a second attack roll of 15 or higher
-that also would hit the target (or a second 20).
+Next, the Ronin inflicts a critical hit for double damage if they roll a natural
+attack roll of 20, as long as a natural 20 would hit hit the target (excluding
+the normal "20 always hits" rule). If an attack roll of 20 would miss, the hit
+still succeeds, but is not a critical hit.
 
 Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
 with certain weapons to automatically choose the best attack type for use
@@ -8792,12 +8793,12 @@ See Also: SUBCLASSES MYSTIC
 Subclass Mystic: Level 2 (Ninja)
 
 The winds of the gods blow through the Mystic's spirit, imparting a sense of
-Zen and tranquility upon their being.
+Zen and tranquility upon their being.  A Mystic that has attained inner peace
+is unaffected by the visual impairment imposed by blindness.
 
-Inner Peace is a passive ability that provides the Mystic with +10 mana
-regeneration at all times.  In addition, this ability increases the Mystic's
-in-combat mana regeneration limit by 10, to a maximum of 100.  Finally, this
-ability increases the Mystic's concentration rate by 5%.
+Inner Peace also provides the Mystic with +10 mana regeneration at all times.
+In addition, the Mystic's in-combat mana regeneration limit by 10, to a maximum
+of 100.  Finally, this ability increases the Mystic's concentration rate by 5%.
 
 See Also: SUBCLASSES MYSTIC REGENERATION
 #
@@ -8881,10 +8882,10 @@ Each character affected by Tranquility will be immune to the effects
 of fear and will gain the following benefits while the spell is
 active:
 
-  +20% HP Regeneration Rate
-  +20% Mantra Regeneration Rate (HELP MANTRA)
-  +2 Hitroll
-  +2 Damroll
+  +25% HP Regeneration Rate
+  +25% Mantra Regeneration Rate (HELP MANTRA)
+  +3 Hitroll
+  +3 Damroll
 
 See Also: SUBCLASSES MYSTIC REGENERATION MANTRA HITROLL DAMROLL
 #

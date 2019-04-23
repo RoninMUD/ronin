@@ -3092,7 +3092,7 @@ void pulse_mantra(CHAR *ch) {
         gain = tmp_af->modifier;
 
         if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-          gain *= 1.2;
+          gain *= 1.25;
         }
 
         send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
