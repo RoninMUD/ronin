@@ -216,7 +216,7 @@ int osyluth_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
     {
       act("$n stings $N with $s tail!", TRUE, mob, 0, vict, TO_NOTVICT);
       act("$n stings you with $s tail!", FALSE, mob, 0, vict, TO_VICT);
-      damage(mob, vict, number(8, 24), TYPE_UNDEFINED, DAM_SKILL);
+      damage(mob, vict, number(8, 24), TYPE_UNDEFINED, DAM_PHYSICAL);
 
       return FALSE;
     }
@@ -342,7 +342,7 @@ int myrdon_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
 TO_NOTVICT);
       act("$n circles behind you and stabs $s weapon into your back!", FALSE, mob, 0, vict, TO_VICT);
       damage(mob, vict, ((dice(mob->specials.damnodice, mob->specials.damsizedice) + mob->points.damroll)
-* 4), TYPE_UNDEFINED, DAM_SKILL);
+* 4), TYPE_UNDEFINED, DAM_PHYSICAL);
 
       return FALSE;
     }
@@ -399,7 +399,7 @@ int shadowraith_spec(CHAR *mob, CHAR *ch, int cmd, char *arg)
 vict, TO_NOTVICT);
       act("$n makes a series of quick movements and you are pelted with throwing stars!", FALSE, mob, 0,
 vict, TO_VICT);
-      damage(mob, vict, number(80, 180), TYPE_UNDEFINED, DAM_SKILL);
+      damage(mob, vict, number(80, 180), TYPE_UNDEFINED, DAM_PHYSICAL);
 
       return FALSE;
     }
@@ -1560,12 +1560,12 @@ int tactical_spec(OBJ *obj, CHAR *ch, int cmd, char *arg)
     if(ch != vict && IS_NPC(vict) && vict->specials.rider != ch)
     {
       act("You have been kicked by $n.", FALSE, ch, 0, vict, TO_VICT);
-      damage(ch, vict, (MIN((GET_LEVEL(ch) * 2), 60) * 2), TYPE_UNDEFINED, DAM_SKILL);
+      damage(ch, vict, (MIN((GET_LEVEL(ch) * 2), 60) * 2), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
     if(ch != vict && !IS_NPC(vict) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
     {
       act("You have been kicked by $n.", FALSE, ch, 0, vict, TO_VICT);
-      damage(ch, vict, (MIN((GET_LEVEL(ch) * 2), 60) * 2), TYPE_UNDEFINED, DAM_SKILL);
+      damage(ch, vict, (MIN((GET_LEVEL(ch) * 2), 60) * 2), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
   }
 
