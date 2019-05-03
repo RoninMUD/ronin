@@ -3187,7 +3187,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   }
 
   /* Get the weapon involved for use later on. */
-  OBJ *weapon = ((type == TYPE_WEAPON2) ? GET_WEAPON2(attacker) : GET_WEAPON(attacker));
+  OBJ *weapon = ((type != TYPE_WEAPON2) ? GET_WEAPON(attacker) : GET_WEAPON2(attacker));
 
   /* Get the attack type for use later on. */
   int attack_type = get_attack_type(attacker, weapon);
@@ -3623,8 +3623,8 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   }
 
   /* PC Ninja 2nd Hit */
-  if (!IS_NPC(ch) && GET_CLASS(ch) == CLASS_NINJA) {
-    dhit(ch, victim, TYPE_WEAPON2);
+  if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
+    dhit(ch, victim, (IS_2H_WEAPON(EQ(ch, WIELD)) ? TYPE_UNDEFINED : TYPE_WEAPON2));
     return;
   }
 
