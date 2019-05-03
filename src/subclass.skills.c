@@ -1005,7 +1005,7 @@ void do_zeal(CHAR *ch, char *arg, int cmd) {
     act("You fail in your attempt to invoke divine wrath upon your foes.", FALSE, ch, 0, 0, TO_CHAR);
     act("$n fails in an attempt to invoke divine wrath upon $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-    skill_wait(ch, SKILL_ZEAL, 2);
+    skill_wait(ch, SKILL_ZEAL, 3);
 
     return;
   }
@@ -1022,15 +1022,6 @@ void do_zeal(CHAR *ch, char *arg, int cmd) {
         (IS_MORTAL(temp_victim) && (!ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim)) || GET_OPPONENT(temp_victim)))) continue;
 
     hit(ch, temp_victim, SKILL_ZEAL);
-
-    if (temp_victim && SAME_ROOM(ch, temp_victim)) {
-      if (IS_NPC(temp_victim)) {
-        MOB_ATT_TIMER(temp_victim) = MAX(MOB_ATT_TIMER(temp_victim), 2);
-      }
-      else {
-        WAIT_STATE(temp_victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
-      }
-    }
   }
 
   skill_wait(ch, SKILL_ZEAL, 2);

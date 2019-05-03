@@ -769,7 +769,7 @@ void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 }
 
 void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  switch (type)   {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_rimefang(level, ch, 0, 0);
       break;
@@ -786,7 +786,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  int dam = (number(5, 7) * GET_LEVEL(ch));
+  int dam = (number(6, 8) * GET_LEVEL(ch));
 
   /* Increased damage at night. */
   if (IS_NIGHT) {
@@ -794,34 +794,48 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   /* Increased damage during winter. */
-  if (time_info.month <= 2 || time_info.month >= 15) {
+  if ((time_info.month <= 2) || (time_info.month >= 15)) {
     dam += number(GET_LEVEL(ch) / 2, GET_LEVEL(ch));
   }
 
   send_to_char("An aura of frost starts to form around you.\n\r", ch);
   act("An aura of frost starts to form around $n.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(ch)].people, *next_victim = NULL; temp_victim; temp_victim = next_victim) {
-    next_victim = temp_victim->next_in_room;
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
 
-    if (temp_victim == ch || IS_IMMORTAL(temp_victim)) continue;
+    if (temp_vict == ch || IS_IMMORTAL(temp_vict)) continue;
 
-    if (IS_NPC(temp_victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim))) {
-      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_victim, TO_VICT);
+    if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
+      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_vict, TO_VICT);
 
-      /* Rimefang paralyze has an increased success rate. */
-      if (!IS_SET(GET_IMMUNE(temp_victim), IMMUNE_PARALYSIS) &&
-          !IS_AFFECTED(temp_victim, AFF_PARALYSIS) &&
-          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_victim)) &&
-          !saves_spell(temp_victim, SAVING_PARA, (level + 10))) {
-        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), 100, APPLY_AC, AFF_PARALYSIS, 0);
-        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
+      if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_PARALYSIS) &&
+          !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
+          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
+          !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
+        affect_apply(temp_vict, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), 100, APPLY_AC, AFF_PARALYSIS, 0);
+        affect_apply(temp_vict, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
-        send_to_char("Your limbs freeze in place.\n\r", temp_victim);
-        act("$n is paralyzed!", TRUE, temp_victim, 0, 0, TO_ROOM);
+        send_to_char("Your limbs freeze in place.\n\r", temp_vict);
+        act("$n is paralyzed!", FALSE, temp_vict, 0, 0, TO_ROOM);
+
+        if (IS_NPC(temp_vict)) {
+          MOB_ATT_TIMER(temp_vict) = MAX(MOB_ATT_TIMER(temp_vict), 2);
+        }
+        else {
+          WAIT_STATE(temp_vict, PULSE_VIOLENCE * (ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict)) ? number(1, 2) : 2));
+        }
       }
 
-      damage(ch, temp_victim, dam, SPELL_RIMEFANG, DAM_COLD);
+      if (saves_spell(temp_vict, SAVING_SPELL, (level + 10))) {
+        dam /= 2;
+      }
+
+      dam = damage(ch, temp_vict, dam, SPELL_RIMEFANG, DAM_COLD);
+
+      if ((dam > 0) && (CHAR_REAL_ROOM(temp_vict) != NOWHERE)) {
+        enchantment_apply(temp_vict, TRUE, "Shivering (Rimefang)", SPELL_RIMEFANG, 60, ENCH_INTERVAL_ROUND, 20, APPLY_SAVING_SPELL, 0, 0, 0);
+      }
     }
   }
 }

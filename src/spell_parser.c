@@ -2038,12 +2038,12 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_RUSH,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
 
   // Mercenary
-  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_tremor);
+  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  130, TAR_IGNORE,                                                                   cast_tremor);
   SPELLO(SPELL_CLOUD_CONFUSION,       30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
   SPELLO(SPELL_INCENDIARY_CLOUD_NEW,  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_incendiary_cloud);
 
   // Legionnaire
-  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  120, TAR_IGNORE,                                                                   cast_rimefang);
+  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  115, TAR_IGNORE,                                                                   cast_rimefang);
   SPELLO(SPELL_DEVASTATION,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
 
   // Other
