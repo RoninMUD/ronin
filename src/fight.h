@@ -49,6 +49,7 @@ int calc_hit_damage(struct char_data *ch, struct char_data *victim, struct obj_d
 int stack_position(struct char_data *ch, int target_position);
 
 int try_hit(struct char_data *ch, struct char_data *victim);
+bool perform_hit(struct char_data *attacker, struct char_data *defender, int type, int hit_num);
 void hit(struct char_data *ch, struct char_data *victim, int type);
 void dhit(struct char_data *ch, struct char_data *victim, int type);
 void thit(struct char_data *ch, struct char_data *victim, int type);

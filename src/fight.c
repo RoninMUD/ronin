@@ -3187,17 +3187,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   }
 
   /* Get the weapon involved for use later on. */
-  OBJ *weapon = GET_WEAPON(attacker);
-
-  /* If the attacker is a Ninja and it's an even-numbered hit number, get the weapon in the HOLD position. */
-  if (!(hit_num % 2) && !IS_NPC(attacker) && (GET_CLASS(attacker) == CLASS_NINJA)) {
-    weapon = GET_WEAPON2(attacker);
-  }
-  /* Combat Tactics
-     Note: Using hit number 4 is a bit of a hack, but works as long as Commando never gets Quad. */
-  else if ((hit_num == 4) && IS_MORTAL(attacker) && check_subclass(attacker, SC_MERCENARY, 5) && EQ(attacker, HOLD) && (OBJ_TYPE(EQ(attacker, HOLD)) == ITEM_WEAPON)) {
-    weapon = GET_WEAPON2(attacker);
-  }
+  OBJ *weapon = ((type == TYPE_WEAPON2) ? GET_WEAPON2(attacker) : GET_WEAPON(attacker));
 
   /* Get the attack type for use later on. */
   int attack_type = get_attack_type(attacker, weapon);
@@ -3629,13 +3619,12 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   /* This adds the chance for an additional "hit" and performs it before any
      additional hit skill checks, which may fail at any point in the chain. */
   if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
-    /* Note: Using hit 3 here as a hack so hasted Ninjas hit with their primary weapon. */
-    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 3)) return;
+    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return;
   }
 
   /* PC Ninja 2nd Hit */
   if (!IS_NPC(ch) && GET_CLASS(ch) == CLASS_NINJA) {
-    dhit(ch, victim, TYPE_UNDEFINED);
+    dhit(ch, victim, TYPE_WEAPON2);
     return;
   }
 
@@ -3646,8 +3635,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     act("You draw your sidearm and attack $N!", FALSE, ch, 0, 0, TO_CHAR);
     act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, 0, TO_ROOM);
 
-    /* Note: Using hit number 4 is a bit of a hack, but works as long as Commando never gets Quad. */
-    perform_hit(ch, victim, TYPE_UNDEFINED, 4);
+    hit(ch, victim, TYPE_WEAPON2);
 
     enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(4, 6), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }

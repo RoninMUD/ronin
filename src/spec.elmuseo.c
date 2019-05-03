@@ -1342,14 +1342,6 @@ int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
   CHAR *vict = NULL;
   char buf[MAX_STRING_LENGTH];
 
-  if (cmd == CMD_WIELD) {
-    if (!ch || (ch != OBJ_EQUIPPED_BY(spear)) || !AWAKE(ch) || IS_NPC(ch)) return FALSE;
-
-    printf_to_char(ch, "Wielding the %s requires a sturdy two-handed grip; you're unable to wield anything else.\n\r", OBJ_SHORT(spear));
-
-    return TRUE;
-  }
-
   if (cmd == MSG_BEING_REMOVED) {
     if (ch != spear->equipped_by) return FALSE;
     if (!ch) return FALSE;
@@ -1360,12 +1352,6 @@ int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
     }
     return FALSE;
   } else if (cmd == MSG_OBJ_WORN) {
-    if (EQ(ch, HOLD)) {
-      printf_to_char(ch, "Wielding the %s requires a sturdy two-handed grip.\n\r", OBJ_SHORT(spear));
-
-      return TRUE;
-    }
-
     if (GET_CLASS(ch) == CLASS_THIEF) {
       sprintf(buf, "You alter your grip slightly on the %s.\n\r", OBJ_SHORT(spear));
       send_to_char(buf, ch);
@@ -1388,7 +1374,7 @@ int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
     act("Guided through the forest by your spear, you leap toward $N.", 1, owner, 0, vict, TO_CHAR);
     act("$n disappears into the forest momentarily before leaping toward you.", 1, owner, 0, vict, TO_VICT);
     act("$n disappears into the forest momentarily before leaping toward $N.", 1, owner, 0, vict, TO_NOTVICT);
-    hit(owner, vict, TYPE_UNDEFINED);
+    perform_hit(owner, vict, TYPE_UNDEFINED, 1); // Enforce a single hit (no dual/triple/quad).
   }
   return FALSE;
 }

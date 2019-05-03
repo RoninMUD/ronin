@@ -701,7 +701,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   }
 
   if (index == -1) {
-
     if (spell == -1) {
       act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
@@ -709,9 +708,10 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     if ((spell > 165) &&
         check_sc_access(ch, spell) &&
-        ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
-        ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
         ((GET_CLASS(ch) != CLASS_NINJA) || (spell != SPELL_DIVINE_WIND)) &&
+        ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
+        ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
+        ((GET_CLASS(ch) != CLASS_COMMANDO) || (spell != SPELL_IRON_SKIN)) &&
         !check_sc_master(ch, mob)) {
       act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
@@ -738,8 +738,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
   if ((skill > 165) &&
       check_sc_access(ch, skill) &&
-      ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
       ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_EVASION)) &&
+      ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
       !check_sc_master(ch, mob)) {
     act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;
