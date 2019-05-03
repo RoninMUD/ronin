@@ -8300,9 +8300,9 @@ ZEAL
 Subclass Crusader: Level 4 (Paladin)
 
 This skill allows the Crusader to channel divine fury into an attack that
-targets all mobs in the same room with a single hit.  The Crusader has a
-three-round delay to recover when successful and a two-round delay to
-recover on a failure.
+targets all mobs in the same room with a single hit.  The Crusader is affected
+by a two-round skill input lag after using Zeal.  All creatures hit by this
+skill also require a two-round recovery time.
 
 See Also: SUBCLASSES CRUSADER
 #
