@@ -332,8 +332,8 @@ $State: Exp $
 #define CMD_EVASION            311
 #define CMD_CAMP               312
 #define CMD_LUNGE              313
-#define CMD_SWITCH             314
-#define CMD_TRIAGE             315
+#define CMD_314                314
+#define CMD_315                315
 #define CMD_SMITE              316
 #define CMD_HEROES             317
 #define CMD_TRUSTY_STEED       318

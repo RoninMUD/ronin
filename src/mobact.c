@@ -139,11 +139,12 @@ void mobile_activity(CHAR *mob) {
   /* Aggro */
 
   /* Check for conditions that prevent aggro/memory. */
-  if (CHAR_REAL_ROOM(mob) == NOWHERE ||
+  if ((CHAR_REAL_ROOM(mob) == NOWHERE) ||
+      ROOM_SAFE(CHAR_REAL_ROOM(mob)) ||
       GET_OPPONENT(mob) ||
-      !count_mortals_real_room(CHAR_REAL_ROOM(mob)) ||
       IS_AFFECTED(mob, AFF_HOLD) ||
-      IS_SET(GET_ACT(mob), ACT_SUBDUE)) {
+      IS_SET(GET_ACT(mob), ACT_SUBDUE) ||
+      !count_mortals_real_room(CHAR_REAL_ROOM(mob))) {
     return;
   }
 

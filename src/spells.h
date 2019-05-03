@@ -213,7 +213,7 @@
 #define SPELL_BLUR                  175
 #define SPELL_TRANQUILITY           177
 #define SKILL_VEHEMENCE             178
-#define SPELL_SKILL_179             179
+#define SPELL_TREMOR                179
 #define SPELL_SHADOW_WRAITH         180
 #define SPELL_DEVASTATION           181
 #define SPELL_INCENDIARY_CLOUD      182 /* Old Version */
@@ -273,7 +273,7 @@
 #define SPELL_CLOUD_CONFUSION       236
 #define SKILL_LUNGE                 237
 #define SPELL_RAGE                  238
-#define SKILL_TRIAGE                239
+#define SPELL_RIGHTEOUSNESS         239
 #define SKILL_PROTECT               240
 #define SPELL_WRATH_ANCIENTS        241
 #define SKILL_VICTIMIZE             242

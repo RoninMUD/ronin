@@ -7444,7 +7444,8 @@ Mana Cost   : 50
 Damage      : 350
 
 This spell is similar to iceball, but the damage to casting cost ratio is much
-higher, making it a very mana-efficient attack spell.
+higher, making it a very mana-efficient attack spell.  A victim hit with Frost
+Bolt has their movement points reduced by 100.
 
 See Also: SUBCLASSES ARCHMAGE
 #
@@ -7904,11 +7905,11 @@ new or improved skill or spell.  For help on each skill
 or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           IRON SKIN
+  1           TREMOR
   2           CLOUD OF CONFUSION
   3           RIPOSTE
   4           INCENDIARY CLOUD
-  5           TRIAGE
+  5           SIDEARM
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7954,14 +7955,15 @@ Usage       : cast 'rimefang'
 Accumulative: No
 Duration    : -
 Save        : Save vs. Paralysis: Negates Paralysis
-Mana Cost   : 150
-Damage      : (5 to 7) * caster level (up to 350 at level 50)
+Mana Cost   : 120
+Damage      : (5 to 7) * (caster level)
 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
 paralyze those hit by it, as compared to the Paralyze spell.
 
-During the winter, Rimefang will deal an additional 50 to 100 damage.
+Rimefang deals (level / 2 to level) additional damage at night or during the
+winter, and (level to level * 2) damage on a cold winter's eve.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7990,6 +7992,22 @@ mortally wounded position, making them temporarily rather defenseless.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
+DEVASTATION
+
+Subclass Legionnaire: Level 4 (Commando)
+
+Usage       : cast 'devastation' <victim>
+Accumulative: No
+Duration    : -
+Save        : -
+Mana Cost   : 150
+Damage      : 1000
+
+This powerful spell is nearly as mana efficient as Frost Bolt, while being
+more time efficient.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
 SNIPE
 
 Subclass Legionnaire: Level 5 (Commando)
@@ -8009,40 +8027,20 @@ each within the 10 round window.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-DEVASTATION
+TREMOR
 
-Subclass Legionnaire: Level 4 (Commando)
+Subclass Mercenary: Level 4 (Commando)
 
-Usage       : cast 'devastation' <victim>
+Usage       : cast 'tremor'
 Accumulative: No
 Duration    : -
 Save        : -
 Mana Cost   : 150
-Damage      : 1000
+Damage      : 450
 
-This powerful spell is nearly as mana efficient as Frost Bolt, while being
-more time efficient.
-
-See Also: SUBCLASSES LEGIONNAIRE
-#
-"IRON SKIN"
-
-Subclass Mercenary: Level 1 (Commando)
-
-Usage       : cast 'iron skin' <target>
-Accumulative: No
-Duration    : 10
-Save        : -
-Mana Cost   : 50
-
-Iron skin protects and promotes recovery.
-
-When self-cast upon the Mercenary, this defensive spell will modify their AC by
--25, making them harder to hit.  If cast upon a different target, the spell is
-less effective, granting only -10 AC instead.
-
-As a secondary benefit, the taret will regenerate hit points equal to the amount
-of AC that this spell provides the target.
+With this spell, the Mercenary causes the ground to shake and heave
+violently, inflicting 450 damage to every opponent in the room, and
+knocking them into the stunned position.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8060,10 +8058,8 @@ Cloud of confusion makes it hard for targets to focus, resulting in more misses
 when fighting, and missteps when feeling.
 
 This spell affects everyone in the room not grouped with the Mercenary.  All
-victims will have their Hitroll reduced by 5 to 8.  As secondary effect,
-affected targets will have a 90% chance of failing to flee during combat.
-
-This spell will be more effective when cast at night.
+victims will have their Hitroll reduced by 5 to 8 during the day, or 6 to 9 at
+night.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8084,57 +8080,36 @@ character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
-TRIAGE
-
-Subclass Mercenary: Level 5 (Commando)
-
-Usage: triage (self only)
-
-The Triage ability allows the Mercenary to store health from magical healing
-that would otherwise be lost due to the amount of healing being greater than
-their maximum hit points (overheal).
-
-The amount stored is equal to 1/2 the amount of overhealing that would have been
-lost, while the total Triage reserve is limited to 1/2 the Mercenary's maximum
-hit points or 2,000, whichever is less. Triage reserve banking only functions
-while the Mercenary is actively engaged in combat (e.g. overhealing that would
-be lost outside of combat is still lost).
-
-Health stored in this way can be used to restore the Mercenary's hit points (up
-to their maximum) on demand through the use of the 'triage' command.
-
-The Triage effect is automatically used if the reserve limit has been reached
-and the Mercenary's hit points drop to or below that amount; this automatic
-Triage triggers only while engaged in combat.
-
-The amount of health stored in the Triage reserve decays at a rate of 50% of the
-existing reserve lost every 12 seconds while outside of combat, and is depleted
-entirely after 60 seconds (one tick). The decay is halted and the timer is reset
-to 60 seconds as soon as the Mercenary re-engages in combat if it has not yet
-expired.
-
-Health gained from effects that naturally grant overhealing (such as Vampiric
-Touch) do not apply to Triage.
-
-The Triage ability takes an optional parameter of "reserve" (without quotes)
-that allows the Mercenary to see how much health is currently stored in their
-reserve.
-
-See Also: SUBCLASSES MERCENARY
-#
 "INCENDIARY CLOUD"
 
 Subclass Mercenary: Level 4 (Commando)
 
 Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
-Duration    : Instantaneous / ~ 60 seconds (DoT)
+Duration    : Instantaneous / 60 seconds (damage over time)
 Save        : -
-Mana Cost   : 150
+Mana Cost   : 200
 Damage      : 500 + 75 per combat round for 20 rounds
 
 This powerful spell will inflict a large amount of up-front damage instantly,
 plus a smaller, but still potent burst, every combat round.
+
+See Also: SUBCLASSES MERCENARY
+#
+"SIDEARM"
+
+Subclass Mercenary: Level 5 (Commando)
+
+This ability allows the Mercenary to wield a second weapon in their off-hand.
+
+Periodically during combat (every 4 to 6 rounds), the Mercenary will strike with
+this second weapon, dealing a standard melee attack that can dual or triple as
+normal.
+
+This ability allows the Mercenary to wield a two-handed weapon in their main
+hand, but the normal 50% bonus to hitroll and damroll from strength that is
+granted when wielding a two-handed weapon is not applied; the second weapon must
+be a one-handed weapon.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8179,8 +8154,8 @@ Duration    : 20
 Save        : -
 Mana Cost   : 50
 
-The Cavalier or Templar draws strength from his/her faith, giving him/her an
-additional 2 damroll.
+The Cavalier or Templar draws strength from his/her faith, granting them +1
+hitroll and +3 damroll on all melee attacks.
 
 See Also: SUBCLASSES CAVALIER TEMPLAR
 #
@@ -8190,7 +8165,7 @@ Subclass Cavalier: Level 2 (Paladin)
 
 Usage: trusty-steed (toggles on/off)
 
-When using pummel or smite against an enemy, the Crusader has a chance to
+When using Pummel or Smite against an enemy, the Crusader has a chance to
 follow up their attack by summoning an ethereal steed that charges into
 their target dealing 1.5 times the Cavalier's level in damage and
 knocking them to the ground.
@@ -8204,7 +8179,7 @@ receiving 2.33x damage on the next attack.
 Cavaliers with Wisdom greater than 18 will receive a bonus to the chance
 to summon their magical steed.
 
-See Also: SUBCLASSES CAVALIER
+See Also: SUBCLASSES CAVALIER SMITE
 #
 "WRATH OF GOD"
 
@@ -8263,41 +8238,25 @@ the first until the spell has been applied to each target, or the Cavalier's
 mana falls below the casting cost of the spell.
 See Also: SUBCLASSES CAVALIER
 #
-PANACEA
-
-Subclass Crusader: Level 3 (Paladin)
-
-The healing touch of a devout Crusader is a panacea to injury and ailments
-sustained by the target.  As such, the Crusader's Lay Hands spell heals for 50%
-more hit points (up to 750 at level 50).
-
-Additionally, when Lay Hands is cast on a target, it will grant the effects of
-the Bless spell to the target and will also remove up to two of the following
-negative effects per cast, in the following order of priority: blindness,
-paralysis, poison, curse, chill touch, sleep.
-
-See Also: SUBCLASSES CRUSADER "LAY HANDS"
-#
-"BLESSING OF SACRIFICE"
+RIGHTEOUSNESS
 
 Subclass Crusader: Level 1 (Paladin)
 
-Usage       : cast 'blessing of sacrifice'
+Usage       : cast 'righteousness' (self only)
 Accumulative: No
-Duration    : Instantaneous
+Duration    : 10
 Save        : -
-Mana Cost   : None
+Mana Cost   : 30
 
-This potent healing spell allows the Crusader to sacrifice 100 hit points in
-order to heal every other mortal in the room by 333 hit points.
+This spell grants the Crusader a 1d2 bonus damroll to all weapon attacks.  This
+bonus increases to 1d4 damage when targetting a neutral opponent, and 1d6 damage
+when targetting an evil opponent.
 
-This spell will also grant the effects of the Bless spell to each character that
-is affected.
+Additionally, each standard melee attack will recover 1d3 points of the
+Crusader's mana points.  Melee hits caused by skills (such as Zeal) do not
+trigger the mana recovery effect.
 
-Note: This spell cannot be cast if the Crusader has less than 100 hit points
-remaining.
-
-See Also: BLESS
+See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
 #
 FOCUS
 
@@ -8315,6 +8274,21 @@ mana cost at sufficiently high caster level.
 
 See Also: SUBCLASSES CRUSADER MANA
 #
+PANACEA
+
+Subclass Crusader: Level 3 (Paladin)
+
+The healing touch of a devout Crusader is a panacea to injury and ailments
+sustained by the target.  As such, the Crusader's Lay Hands spell heals for 50%
+more hit points (up to 750 at level 50).
+
+Additionally, when Lay Hands is cast on a target, it will grant the effects of
+the Bless spell to the target and will also remove up to two of the following
+negative effects per cast, in the following order of priority: blindness,
+paralysis, poison, curse, chill touch, sleep.
+
+See Also: SUBCLASSES CRUSADER "LAY HANDS"
+#
 ZEAL
 
 Subclass Crusader: Level 4 (Paladin)
@@ -8323,11 +8297,6 @@ This skill allows the Crusader to channel divine fury into an attack that
 targets all mobs in the same room with a single hit.  The Crusader has a
 three-round delay to recover when successful and a two-round delay to
 recover on a failure. All creatures hit require a two-round recovery time.
-
-Zeal additionally inflicts 2d3 bonus damage before multipliers (Fury, target's
-position, etc.) to evil creatures. This means a Zeal hit by a level 50 Crusader
-with 901+ alignment affected by Fury (2.5x multiplier) against an evil creature
-that is stunned (2x multiplier) will be hit for an average bonus damage of 20!
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -8621,7 +8590,7 @@ skill or spell, just type HELP <skill/spell name>.
 Level         Skill/Spell
   1           BLUR
   2           BACKFIST
-  3           COMBAT ZEN
+  3           ZEN
   4           SENTO KATA
   5           BANZAI
 
@@ -8698,7 +8667,7 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
-"COMBAT ZEN"
+"ZEN"
 
 Subclass Ronin: Level 3 (Ninja)
 
@@ -8851,9 +8820,9 @@ by the enchantment it will be replaced by the higher level
 enchantment and the duration will be refreshed.
 
 While affected by the "Mantra" enchantment, the character regains
-"(Level + wisdom modifier) * 1.44" hit points every 10 seconds for a
+"(Level + Wisdom modifier) * 1.5" hit points every 10 seconds for a
 duration of 100 seconds (there will be 10 healing "pulses").  At 25
-Wisdom, the total amount of healing over time is 1364.
+Wisdom, the total amount of healing over time is 1400.
 
 Additionally, during each healing "pulse", there is a 25% chance to
 dispel any one of the following status ailments from the target:
@@ -9156,4 +9125,19 @@ Prestige levels, stats, and perks are unaffected by the remort process; once
 earned, prestige and its benefits are permanent.
 
 See Also: REMORT
+#
+"IRON SKIN"
+
+Usage       : cast 'iron skin' <target>
+Level       : Level 40 commando
+Accumulative: No
+Duration    : 10
+Save        : -
+Mana Cost   : 50
+
+When self-cast upon the Mercenary, this defensive spell will modify their AC by
+-20, making them harder to hit.  If cast upon a different target, the spell is
+less effective, granting only -10 AC instead.
+
+See Also: SUBCLASSES MERCENARY
 #~

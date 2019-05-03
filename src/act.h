@@ -72,7 +72,6 @@ void do_headbutt(CHAR *ch, char *argument, int cmd);
 void do_frenzy(CHAR *ch, char *argument, int cmd);
 void do_berserk(CHAR *ch, char *argument, int cmd);
 void do_evasion(CHAR *ch, char *argument, int cmd);
-void do_triage(CHAR *ch, char *arg, int cmd);
 /* End Subclass skill commands */
 
 /* New olc commands */

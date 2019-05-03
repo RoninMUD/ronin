@@ -1753,7 +1753,7 @@ ENCH *get_enchantment(ENCH *enchantment, int must_find)
       ench->duration = enchantment->duration;
     }
 
-    byte interval = 0;
+    sh_int interval = 0;
 
     if (enchantment->interval) {
       interval = enchantment->interval;

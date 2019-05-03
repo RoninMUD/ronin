@@ -237,7 +237,7 @@ const char * const spells[] = {
   "",                             /* 176 */
   "tranquility",                  /* 177 */
   "vehemence",                    /* 178 */
-  "",                             /* 179 */
+  "tremor",                       /* 179 */
   "shadow wraith",                /* 180 */
   "devastation",                  /* 181 */
   "!incendiary cloud!",           /* 182 Old Version */
@@ -259,7 +259,7 @@ const char * const spells[] = {
   "banzai",                       /* 198 */
   "headbutt",                     /* 199 */
   "maim",                         /* 200 */
-  "blessing of sacrifice",        /* 201 */
+  "",                             /* 201 */
   "aid",                          /* 202 */
   "demonic thunder",              /* 203 */
   "shadowstep",                   /* 204 */
@@ -297,7 +297,7 @@ const char * const spells[] = {
   "cloud of confusion",           /* 236 */
   "lunge",                        /* 237 */
   "rage",                         /* 238 */
-  "",                             /* 239 */
+  "righteousness",                /* 239 */
   "protect",                      /* 240 */
   "wrath of ancients",            /* 241 */
   "victimize",                    /* 242 */
@@ -1928,7 +1928,6 @@ void assign_spell_pointers(void)
   SPELLO(103, 30, POSITION_STANDING, 51, 51,  3, 51, 51,  3, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_endure);
   SPELLO(104, 30, POSITION_FIGHTING, 51, 51, 16, 51, 17, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
   SPELLO(105, 30, POSITION_FIGHTING, 51, 51, 17, 51, 16, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_poison_smoke);
-  SPELLO(106, 30, POSITION_FIGHTING, 51, 51, 51, 51, 28, 24, 51, 51,  110, TAR_IGNORE,                                                                   cast_hell_fire);
   SPELLO(107, 30, POSITION_STANDING, 51, 51, 22, 51, 27, 51, 51, 51,   40, TAR_CHAR_ROOM,                                                                cast_hypnotize);
   SPELLO(108, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_recover_mana);
   SPELLO(109, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 27, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_thunderball);
@@ -2006,15 +2005,16 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_LAY_HANDS,             30, POSITION_FIGHTING, 51, 51, 51, 15, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_lay_hands);
 
   // Cavalier
-  SPELLO(SPELL_MIGHT,                 30, POSITION_STANDING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
+  SPELLO(SPELL_MIGHT,                 30, POSITION_FIGHTING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
   SPELLO(SPELL_WRATH_OF_GOD,          30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
   SPELLO(SPELL_POWER_OF_DEVOTION,     30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
 
   // Crusader
-  SPELLO(SPELL_BLESSING_OF_SACRIFICE, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,    0, TAR_IGNORE,                                                                   cast_blessing_of_sacrifice);
+  SPELLO(SPELL_RIGHTEOUSNESS,         30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_righteousness);
   SPELLO(SPELL_POWER_OF_FAITH,        30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
 
   // Anti-Paladin
+  SPELLO(SPELL_HELL_FIRE,             30, POSITION_FIGHTING, 51, 51, 51, 51, 28, 24, 51, 51,  100, TAR_IGNORE,                                                                   cast_hell_fire);
   SPELLO(SPELL_BLOOD_LUST,            30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blood_lust);
   SPELLO(SPELL_RAGE,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  130, TAR_SELF_ONLY,                                                                cast_rage);
 
@@ -2034,15 +2034,16 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
 
   // Commando
+  SPELLO(SPELL_IRON_SKIN,             30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
   SPELLO(SPELL_RUSH,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
 
   // Mercenary
-  SPELLO(SPELL_IRON_SKIN,             30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
+  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_tremor);
   SPELLO(SPELL_CLOUD_CONFUSION,       30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
   SPELLO(SPELL_INCENDIARY_CLOUD_NEW,  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_incendiary_cloud);
 
   // Legionnaire
-  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_rimefang);
+  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  120, TAR_IGNORE,                                                                   cast_rimefang);
   SPELLO(SPELL_DEVASTATION,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
 
   // Other

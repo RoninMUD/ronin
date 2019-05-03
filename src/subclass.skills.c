@@ -100,7 +100,7 @@ void do_meditate(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 30), 0, 0, 0, 0);
+  affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 32), 0, 0, 0, 0);
 
   send_to_char("You gaze inward and focus on healing.\n\r", ch);
   act("$n enters a deep trance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -268,7 +268,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
   act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
   act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
 
-  damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 1.5), SKILL_BACKFIST, DAM_PHYSICAL);
+  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_BACKFIST, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
@@ -399,7 +399,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 
   damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.75)), SKILL_TIGERKICK, DAM_PHYSICAL);
 
-  GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + MIN(MAX((GET_MAX_HIT(victim) / 5000), 2), 10));
+  GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + MIN(MAX((GET_MAX_HIT(victim) / 5000), 2), 10)));
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
@@ -1474,7 +1474,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
 
   magic_heal(victim, SKILL_MANTRA, 500, FALSE);
 
-  int modifier = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.3333);
+  int modifier = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.5);
 
   /* Check if victim is already affected by Mantra. If so, keep the higher modifier. */
   for (AFF *temp_af = victim->affected; temp_af; temp_af = temp_af->next) {
@@ -1806,88 +1806,6 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
   }
 
   skill_wait(ch, SKILL_CLOBBER, 2);
-}
-
-
-int triage_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  if (cmd == MSG_ROUND) {
-    if (!GET_OPPONENT(ch)) {
-      if ((ench->duration > 0) && (ench->duration < 20) && (ench->duration % 4) == 0) {
-        ench->modifier /= 2;
-      }
-    }
-    else {
-      ench->duration = 20;
-    }
-
-    return FALSE;
-  }
-
-  if (cmd == MSG_DAMAGED) {
-    if (GET_POS(ch) <= POSITION_INCAP) return FALSE;
-
-    int reserve = ench->modifier;
-
-    if ((reserve >= MIN((GET_MAX_HIT(ch) / 2), 2000)) && (GET_HIT(ch) <= (GET_MAX_HIT(ch) - reserve))) {
-      act("You draw upon your reserve strength and quickly triage your wounds.", FALSE, ch, 0, 0, TO_CHAR);
-      act("$n draws upon $s reserve strength and quickly triages $s wounds.", FALSE, ch, 0, 0, TO_ROOM);
-
-      GET_HIT(ch) = MIN((GET_HIT(ch) + reserve), GET_MAX_HIT(ch));
-
-      enchantment_remove(ch, ench, FALSE);
-    }
-  }
-
-  return FALSE;
-}
-
-void do_triage(CHAR *ch, char *arg, int cmd) {
-  if (!ch || !GET_SKILLS(ch)) return;
-
-  if (!check_sc_access(ch, SKILL_TRIAGE)) {
-    send_to_char("You don't know this skill.\n\r", ch);
-
-    return;
-  }
-
-  char buf[MIL];
-
-  one_argument(arg, buf);
-
-  bool print_reserve = FALSE;
-
-  if (*buf && is_abbrev(buf, "reserve")) {
-    print_reserve = TRUE;
-  }
-
-  ENCH *triage_ench = get_enchantment_by_name(ch, "Triage");
-
-  if (!triage_ench && !print_reserve) {
-    send_to_char("Your healing reserves are depleted and you're unable to triage your wounds.\n\r", ch);
-
-    return;
-  }
-
-  int reserve = ((triage_ench) ? triage_ench->modifier : 0);
-
-  if (print_reserve) {
-    printf_to_char(ch, "Your triage reserve is: %d\n\r", reserve);
-
-    return;
-  }
-
-  if (GET_HIT(ch) >= GET_MAX_HIT(ch)) {
-    send_to_char("You are in perfect health and don't require any healing right now.\n\r", ch);
-
-    return;
-  }
-
-  act("You draw upon your reserve strength and quickly triage your wounds.", FALSE, ch, 0, 0, TO_CHAR);
-  act("$n draws upon $s reserve strength and quickly triages $s wounds.", FALSE, ch, 0, 0, TO_ROOM);
-
-  GET_HIT(ch) = MIN((GET_HIT(ch) + reserve), GET_MAX_HIT(ch));
-
-  enchantment_remove(ch, triage_ench, FALSE);
 }
 
 

@@ -166,7 +166,7 @@ void update_pos(CHAR *victim) {
 }
 
 
-/* Start one char fighting another (yes, it is horrible, I know... ) */
+/* Start one char fighting another (yes, it is horrible, I know...) */
 void set_fighting(CHAR *ch, CHAR *vict) {
   char buf[MSL];
 
@@ -198,6 +198,15 @@ void set_fighting(CHAR *ch, CHAR *vict) {
   if (GET_OPPONENT(vict) != ch) {
     vict->specials.num_fighting++;
     vict->specials.max_num_fighting = MAX(vict->specials.max_num_fighting, vict->specials.num_fighting);
+  }
+
+  /* Combat Tactics
+     Note: This is a bit of a hack, but it adds some "realism" to the initial
+     variance of when Combat Tactics will first trigger after engaging in combat. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) &&
+      EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) &&
+      !enchanted_by(ch, "Readying Sidearm...")) {
+    enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(2, 4), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }
 
   GET_POS(ch) = POSITION_FIGHTING;
@@ -2057,7 +2066,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (((abs(calc_ac(victim)) - 250.0) / 3.0) / 100.0)));
   }
 
-  /* Combat Zen */
+  /* Zen */
   if (IS_MORTAL(victim) &&
       check_subclass(victim, SC_RONIN, 3) &&
       (damage_type == DAM_POISON)) {
@@ -2492,16 +2501,15 @@ int wpn_extra(OBJ *weapon, CHAR *ch, CHAR *victim, int mode) {
 }
 
 int calc_hitroll(CHAR *ch) {
-  int hitroll = 0;
+  if (!ch) return 0;
 
-  if (!ch) return hitroll;
-
-  hitroll = GET_HITROLL(ch);
+  int hitroll = GET_HITROLL(ch);
 
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].tohit;
 
   /* 2H weapons allow for a 150% strength modifier. */
-  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON)) {
+  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON) &&
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD))) { /* Sidearm */
     str_bonus *= 1.5;
   }
 
@@ -2523,7 +2531,7 @@ int calc_hitroll(CHAR *ch) {
       hitroll -= 10;
     }
 
-    /* Combat Zen Blindness Hitroll Penalty Nullification */
+    /* Zen Blindness Hitroll Penalty Nullification */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       for (AFF *aff = ch->affected; aff; aff = aff->next) {
         if ((aff->type == SPELL_BLINDNESS) && (aff->location == APPLY_HITROLL) && (aff->modifier < 0)) {
@@ -2545,7 +2553,8 @@ int calc_damroll(CHAR *ch) {
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].todam;
 
   /* 2H weapons allow for a 150% strength modifier. */
-  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON)) {
+  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON) &&
+    !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD))) { /* Sidearm */
     str_bonus *= 1.5;
   }
 
@@ -2614,8 +2623,6 @@ int calc_ac(CHAR *ch) {
     }
 
     /* Close Combat Max AC Adjustment */
-
-    /* Close Combat */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       ENCH *cc_ench = NULL;
 
@@ -2671,7 +2678,7 @@ int calc_position_damage(int position, int damage) {
       break;
   }
 
-  return damage * multi;
+  return lround(damage * multi);
 }
 
 /*
@@ -2729,10 +2736,25 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
   }
 
   /* Calculate weapon/barehand damage. */
-  dam = dice_ex(num_dice, size_dice, mode) + bonus + extra;
+  dam = dice_ex(num_dice, size_dice, mode) + extra + bonus;
 
   /* Add damroll. */
   dam += calc_damroll(ch);
+
+  /* Rightousness */
+  if (!IS_NPC(ch)) {
+    if (victim && IS_GOOD(ch) && affected_by_spell(ch, SPELL_RIGHTEOUSNESS)) {
+      if (IS_EVIL(victim)) {
+        dam += dice_ex(1, 6, mode);
+      }
+      else if (IS_NEUTRAL(victim)) {
+        dam += dice_ex(1, 4, mode);
+      }
+      else {
+        dam += dice_ex(1, 2, mode);
+      }
+    }
+  }
 
   /* Minimum damage is 1, unless modified below. */
   dam = MAX(1, (victim) ? calc_position_damage(GET_POS(victim), dam) : dam);
@@ -3154,7 +3176,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           }
         }
 
-        /* Combat Zen */
+        /* Zen */
         if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
           return TRUE;
         }
@@ -3168,7 +3190,12 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   OBJ *weapon = GET_WEAPON(attacker);
 
   /* If the attacker is a Ninja and it's an even-numbered hit number, get the weapon in the HOLD position. */
-  if (!IS_NPC(attacker) && (GET_CLASS(attacker) == CLASS_NINJA) && !(hit_num % 2)) {
+  if (!(hit_num % 2) && !IS_NPC(attacker) && (GET_CLASS(attacker) == CLASS_NINJA)) {
+    weapon = GET_WEAPON2(attacker);
+  }
+  /* Combat Tactics
+     Note: Using hit number 4 is a bit of a hack, but works as long as Commando never gets Quad. */
+  else if ((hit_num == 4) && IS_MORTAL(attacker) && check_subclass(attacker, SC_MERCENARY, 5) && EQ(attacker, HOLD) && (OBJ_TYPE(EQ(attacker, HOLD)) == ITEM_WEAPON)) {
     weapon = GET_WEAPON2(attacker);
   }
 
@@ -3285,7 +3312,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       break;
     }
 
-    /* Combat Zen */
+    /* Zen */
     if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
       return TRUE;
     }
@@ -3293,14 +3320,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
     return FALSE;
   }
 
-  int bonus = 0;
-
-  /* Zeal damage bonus vs. evil creatures. */
-  if ((type == SKILL_ZEAL) && IS_MORTAL(attacker) && check_subclass(attacker, SC_CRUSADER, 4) && IS_GOOD(attacker) && IS_EVIL(defender)) {
-    bonus += dice(2, 3);
-  }
-
-  int dam = calc_hit_damage(attacker, defender, weapon, bonus, RND_NRM);
+  int dam = calc_hit_damage(attacker, defender, weapon, 0, RND_NRM);
 
   switch (type) {
     case SKILL_BACKSTAB:
@@ -3322,8 +3342,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           special_message = TRUE;
         }
 
-        dam *= backstab_mult[GET_LEVEL(attacker)];
-        damage(attacker, defender, dam, SKILL_BACKSTAB, DAM_PHYSICAL);
+        damage(attacker, defender, (dam * backstab_mult[GET_LEVEL(attacker)]), SKILL_BACKSTAB, DAM_PHYSICAL);
 
         if ((CHAR_REAL_ROOM(defender) != NOWHERE) && special_message) {
           act("$n nearly severs $N's spine with $s backstab, temporarily paralyzing $M.", FALSE, attacker, 0, defender, TO_NOTVICT);
@@ -3360,8 +3379,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("$n plunges $p deep into your back.", FALSE, attacker, weapon, defender, TO_VICT);
         act("You plunge $p deep into $N's back.", FALSE, attacker, weapon, defender, TO_CHAR);
 
-        dam *= circle_mult[GET_LEVEL(attacker)];
-        damage(attacker, defender, dam, SKILL_CIRCLE, DAM_PHYSICAL);
+        damage(attacker, defender, (dam * circle_mult[GET_LEVEL(attacker)]), SKILL_CIRCLE, DAM_PHYSICAL);
 
         if ((CHAR_REAL_ROOM(defender) != NOWHERE) && special_message) {
           act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, attacker, 0, defender, TO_CHAR);
@@ -3416,8 +3434,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           multi -= 1;
         }
 
-        dam *= MAX(multi, 1);
-        damage(attacker, defender, dam, SKILL_AMBUSH, DAM_PHYSICAL);
+        damage(attacker, defender, (dam * MAX(multi, 1)), SKILL_AMBUSH, DAM_PHYSICAL);
       }
       break;
 
@@ -3434,8 +3451,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("$n quickly moves to your side and hits you with a devastating blow.", FALSE, attacker, 0, defender, TO_VICT);
         act("You quickly move to $N's side and hit $M with a devastating blow.", FALSE, attacker, 0, defender, TO_CHAR);
 
-        dam *= GET_LEVEL(attacker) / 10;
-        damage(attacker, defender, dam, SKILL_FLANK, DAM_PHYSICAL);
+        damage(attacker, defender, (dam * (GET_LEVEL(attacker) / 10)), SKILL_FLANK, DAM_PHYSICAL);
       }
       break;
 
@@ -3452,8 +3468,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("You are attacked suddenly by $n.", FALSE, attacker, 0, defender, TO_VICT);
         act("You attacked $N suddenly without $M noticing.", FALSE, attacker, 0, defender, TO_CHAR);
 
-        dam *= assault_mult[GET_LEVEL(attacker)];
-        damage(attacker, defender, dam, SKILL_ASSAULT, DAM_PHYSICAL);
+        damage(attacker, defender, (dam * assault_mult[GET_LEVEL(attacker)]), SKILL_ASSAULT, DAM_PHYSICAL);
       }
       break;
 
@@ -3489,8 +3504,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           save_char(defender, NOWHERE);
         }
 
-        dam = (dam * 3) / 2;
-        damage(attacker, defender, dam, SKILL_BLITZ, DAM_PHYSICAL);
+        damage(attacker, defender, lround(dam * 1.5), SKILL_BLITZ, DAM_PHYSICAL);
       }
       break;
 
@@ -3507,23 +3521,28 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("$n lunges forward with $s weapon, impacting your hide!", FALSE, attacker, 0, defender, TO_VICT);
         act("You lunge forward with your weapon, impacting $N's hide!", FALSE, attacker, 0, defender, TO_CHAR);
 
-        dam *= assault_mult[GET_LEVEL(attacker)] * 1.25;
-        damage(attacker, defender, dam, SKILL_LUNGE, DAM_PHYSICAL);
+        damage(attacker, defender, lround(assault_mult[GET_LEVEL(attacker)] * 1.25), SKILL_LUNGE, DAM_PHYSICAL);
       }
       break;
 
     case SKILL_FEINT:
-      dam *= 2;
-      damage(attacker, defender, dam, attack_type, DAM_PHYSICAL);
+      damage(attacker, defender, (dam * 2), attack_type, DAM_PHYSICAL);
       break;
 
-    /* Physical Attacks */
+    /* Standard Melee Attacks */
     default:
+      /* Riposte damage reduction (deflection). */
       if (avoidance_skill == SKILL_RIPOSTE) {
-        dam *= 0.6;
+        dam = lround(dam * 0.6);
       }
 
-      damage(attacker, defender, dam, attack_type, ((hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL));
+      dam = damage(attacker, defender, dam, attack_type, ((hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL));
+
+      /* Rightousness
+         Note: Type <= 0 isn't guaranteed evidence that the attack was a melee hit, but its the best we can (currently) do. */
+      if ((hit_num == 1) && (dam > 0) && (type < 0) && (GET_MANA(attacker) < GET_MAX_MANA(attacker)) && affected_by_spell(attacker, SPELL_RIGHTEOUSNESS)) {
+        GET_MANA(attacker) = MIN(GET_MAX_MANA(attacker), GET_MANA(attacker) + dice(1, 3));
+      }
       break;
   }
 
@@ -3610,7 +3629,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   /* This adds the chance for an additional "hit" and performs it before any
      additional hit skill checks, which may fail at any point in the chain. */
   if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
-    /* Note: Using hit 3 here as a hack so Ninjas hit with their primary weapon. */
+    /* Note: Using hit 3 here as a hack so hasted Ninjas hit with their primary weapon. */
     if (!perform_hit(ch, victim, TYPE_UNDEFINED, 3)) return;
   }
 
@@ -3618,6 +3637,19 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   if (!IS_NPC(ch) && GET_CLASS(ch) == CLASS_NINJA) {
     dhit(ch, victim, TYPE_UNDEFINED);
     return;
+  }
+
+  /* Sidearm */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) &&
+      EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) &&
+      !enchanted_by(ch, "Readying Sidearm...")) {
+    act("You draw your sidearm and attack $N!", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, 0, TO_ROOM);
+
+    /* Note: Using hit number 4 is a bit of a hack, but works as long as Commando never gets Quad. */
+    perform_hit(ch, victim, TYPE_UNDEFINED, 4);
+
+    enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(4, 6), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }
 
   /* NPC Dual */
@@ -3962,7 +3994,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
-  damage(ch, vict, (calc_hit_damage(ch, vict, EQ(ch, WIELD), 0, RND_NRM) * multi), get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
+  damage(ch, vict, (lround(calc_hit_damage(ch, vict, EQ(ch, WIELD), 0, RND_NRM) * multi)), get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
 }
 
 
@@ -4102,15 +4134,15 @@ void snipe_action(CHAR *ch, CHAR *victim) {
   int dmg = GET_LEVEL(ch) * number(15, 25);
   double percent = (double)GET_HIT(victim) / (double)GET_MAX_HIT(victim);
 
-  int dmg_sim = dmg;
+  double multi = 1.0;
   
-  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !IS_AFFECTED2(victim, AFF2_FORTIFICATION)) dmg_sim *= 0.5;
-  else if (!IS_AFFECTED(victim, AFF_SANCTUARY) && IS_AFFECTED2(victim, AFF2_FORTIFICATION)) dmg_sim *= 0.85;
-  else if (IS_AFFECTED(victim, AFF_SANCTUARY) && IS_AFFECTED2(victim, AFF2_FORTIFICATION)) dmg_sim *= 0.35;
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !IS_AFFECTED2(victim, AFF2_FORTIFICATION)) multi = 0.5;
+  else if (!IS_AFFECTED(victim, AFF_SANCTUARY) && IS_AFFECTED2(victim, AFF2_FORTIFICATION)) multi = 0.85;
+  else if (IS_AFFECTED(victim, AFF_SANCTUARY) && IS_AFFECTED2(victim, AFF2_FORTIFICATION)) multi = 0.35;
 
   int check = 0;
   
-  if (GET_HIT(victim) > dmg_sim) {
+  if (GET_HIT(victim) > lround(dmg * multi)) {
     check = (int)(100 * (0.5 - percent));
   }
   else {
@@ -4130,13 +4162,6 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 
 
 void perform_violence(void) {
-  //const int msg_violence_mobs[] = {
-  //  17505, // Ancient Red Dragon
-  //  23007, // Cryohydra
-  //  25326, // Lucifer
-  //  27721, // Shadowraith
-  //};
-
   for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
     assert(ch);
 
@@ -4152,13 +4177,7 @@ void perform_violence(void) {
       continue;
     }
 
-    signal_char(ch, vict, MSG_VIOLENCE, "");
-
-    //for (int i = 0; i < NUMELEMS(msg_violence_mobs); i++) {
-    //  if (V_MOB(ch) == msg_violence_mobs[i]) {
-    //    signal_char(ch, vict, MSG_VIOLENCE, "");
-    //  }
-    //}
+    if (signal_char(ch, vict, MSG_VIOLENCE, "")) return;
 
     /* Shadowstep is before hit() in order to take advantage of pummel, etc. */
     if (IS_MORTAL(ch)) {

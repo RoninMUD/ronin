@@ -2093,7 +2093,7 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
        conditions, but it is a bit odd to look at because all of the conditions are OR'd
        and then negated. */
     if (!(!GET_DESCRIPTOR(to_ch) ||
-          ((hide == COMM_ACT_HIDE_INVIS) && !CAN_SEE(ch, to_ch)) ||
+          ((hide == COMM_ACT_HIDE_INVIS) && !CAN_SEE(to_ch, ch)) ||
           ((hide == COMM_ACT_HIDE_SUPERBRF) && IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) ||
           ((type != TO_VICT) && (type != TO_CHAR) && (GET_POS(to_ch) == POSITION_SLEEPING)) ||
           ((type != TO_CHAR) && (to_ch == ch)) ||
@@ -2753,7 +2753,7 @@ int signal_zone(int zone_rnum, CHAR *signaler, int cmd, char *arg) {
 
   int start = 0;
 
-  if (zone_table[zone_rnum].bottom == -1 || real_room(zone_table[zone_rnum].bottom) == -1) {
+  if ((zone_table[zone_rnum].bottom == -1) || (real_room(zone_table[zone_rnum].bottom) == -1)) {
     start = 0;
   }
   else {
@@ -2762,7 +2762,7 @@ int signal_zone(int zone_rnum, CHAR *signaler, int cmd, char *arg) {
 
   int finish = 0;
 
-  if (zone_table[zone_rnum].top == -1 || real_room(zone_table[zone_rnum].top) == -1) {
+  if ((zone_table[zone_rnum].top == -1) || (real_room(zone_table[zone_rnum].top) == -1)) {
     finish = top_of_world;
   }
   else {
@@ -3220,9 +3220,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
     for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
       next_ench = temp_ench->next;
 
-      if (temp_ench->func) {
-        stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
-      }
+      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
     }
 
     if (IS_MORTAL(ch)) {
@@ -3258,9 +3256,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
     for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
       next_ench = temp_ench->next;
 
-      if (temp_ench->func) {
-        stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
-      }
+      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
     }
   }
 

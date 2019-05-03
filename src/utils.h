@@ -397,11 +397,11 @@ do {                   \
 
 #define EQ(ch, loc)        (((loc >= WEAR_LIGHT) && (loc <= WEAR_HOLD)) ? ch->equipment[loc] : NULL)
 
-#define IS_WEAPON(obj)     (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON || GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON) : FALSE)
+#define IS_WEAPON(obj)     (obj ? ((GET_ITEM_TYPE(obj) == ITEM_WEAPON) || (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON)) : FALSE)
 #define IS_1H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON) : FALSE)
 #define IS_2H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON) : FALSE)
 #define GET_WEAPON(ch)     ((EQ(ch, WIELD) && IS_WEAPON(EQ(ch, WIELD))) ? EQ(ch, WIELD) : NULL)
-#define GET_WEAPON2(ch)    ((!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA) && EQ(ch, HOLD) && IS_1H_WEAPON(EQ(ch, HOLD))) ? EQ(ch, HOLD) : NULL)
+#define GET_WEAPON2(ch)    ((EQ(ch, HOLD) && IS_WEAPON(EQ(ch, HOLD))) ? EQ(ch, HOLD) : NULL)
 
 #define IS_PHYSICAL_DAMAGE(damage_type)           ((damage_type >= DAM_PHYSICAL) && (damage_type < DAM_MAGICAL))
 #define IS_MAGICAL_DAMAGE(damage_type)            (damage_type >= DAM_MAGICAL)

@@ -4468,6 +4468,8 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
+  spell_cure_blind(level, ch, victim, obj);
+
   magic_heal(victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
 
   send_to_char("A warm feeling fills your body.\n\r", victim);

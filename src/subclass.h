@@ -29,6 +29,8 @@ void cast_cloud_confusion(ubyte level, CHAR *ch, char *arg, int type, CHAR *vict
 void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_righteousness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_righteousness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_debilitate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_debilitate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -91,6 +93,8 @@ void cast_devastation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_blur(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -99,11 +103,7 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_blessing_of_sacrifice(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_blessing_of_sacrifice(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 
 extern int token_mob_time;
-
-int triage_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg);
 
 #endif /* _SUBCLASS_H_ */

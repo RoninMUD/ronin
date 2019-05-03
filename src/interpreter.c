@@ -342,7 +342,7 @@ void command_interpreter(CHAR *ch, char *argument)
 
   if(affected_by_spell(ch, SKILL_MEDITATE) && GET_LEVEL(ch)<LEVEL_IMM) {   /* Chaos03 */
     if((CHAOSMODE && duration_of_spell(ch,SKILL_MEDITATE)>9) ||
-     duration_of_spell(ch,SKILL_MEDITATE)>27) {
+     duration_of_spell(ch,SKILL_MEDITATE)>29) {
       send_to_char("You are in a deep healing trance, unable to do anything.\n\r",ch);
       return;
     }
@@ -912,7 +912,6 @@ void assign_command_pointers ( void )
   COMMANDO("clobber", CMD_CLOBBER, POSITION_FIGHTING, do_clobber, 30);
   COMMANDO("victimize", CMD_VICTIMIZE, POSITION_FIGHTING, do_victimize, 30);
   COMMANDO("snipe", CMD_SNIPE, POSITION_FIGHTING, do_snipe, 30);
-  COMMANDO("triage", CMD_TRIAGE, POSITION_FIGHTING, do_triage, 30);
   
   COMMANDO("rip"      ,CMD_RIP       ,POSITION_DEAD      ,do_rip,LEVEL_IMP ); /* Ranger - Feb 29,2000 */
 

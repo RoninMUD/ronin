@@ -392,7 +392,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     sprintf(buf, "%sAverage Damage:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
 
-    if (GET_CLASS(ch) == CLASS_NINJA)
+    if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       sprintf(buf2, "%d / %d",
         calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
         calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));
@@ -843,7 +843,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch));
     printf_to_char(ch, "%sAverage Damage:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
-    if (GET_CLASS(ch) == CLASS_NINJA)
+    if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       printf_to_char(ch, "%d / %d\n\r",
         calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
         calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));
@@ -1186,7 +1186,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
     printf_to_char(ch, "You have %d(%d) hit, %d(%d) mana and %d(%d) movement points.\n\r",
       GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch), GET_MAX_MOVE(ch));
 
-    if (GET_CLASS(ch) == CLASS_NINJA)
+    if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       printf_to_char(ch, "Your average damage is %d / %d.\n\r",
         calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
         calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));

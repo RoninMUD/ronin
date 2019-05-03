@@ -38,32 +38,7 @@ void magic_heal(CHAR *victim, int spell, int heal, bool overheal) {
 
   /* Limit healing, as appropriate. */
   if (!overheal) {
-    int need = MAX((GET_MAX_HIT(victim) - GET_HIT(victim)), 0);
-
-    /* Triage */
-    if (GET_OPPONENT(victim) && IS_MORTAL(victim) && check_subclass(victim, SC_MERCENARY, 5)) {
-      ENCH *triage_ench = get_enchantment_by_name(victim, "Triage");
-
-      int excess = MAX(heal - need, 0);
-      int reserve = (triage_ench ? triage_ench->modifier : 0);
-      int amount = (excess ? (excess / 2) : (heal * 0.05));
-      int limit = MIN((GET_MAX_HIT(victim) / 2), 2000);
-      
-      if (amount) {
-        act("You absorb a portion of the excess healing and add it to your triage reserve.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n absorbs a portion of the excess healing and add it to $s triage reserve.", FALSE, victim, 0, 0, TO_ROOM);
-
-        if (!triage_ench) {
-          enchantment_apply(victim, FALSE, "Triage", 0, 20, ENCH_INTERVAL_ROUND, MIN((reserve + amount), limit), 0, 0, 0, triage_enchantment);
-        }
-        else {
-          triage_ench->modifier = MIN((reserve + amount), limit);
-          triage_ench->duration = 20; // Reset duration to max
-        }
-      }
-    }
-
-    heal = MIN(heal, need);
+    heal = MIN(heal, MAX((GET_MAX_HIT(victim) - GET_HIT(victim)), 0));
   }
 
   GET_HIT(victim) += heal;

@@ -185,7 +185,7 @@ int spell_regen(CHAR *ch, int type)
   }
 
   if (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (((duration_of_spell(ch, SKILL_MEDITATE) > 9) && CHAOSMODE) || duration_of_spell(ch, SKILL_MEDITATE) > 27))
+      (((duration_of_spell(ch, SKILL_MEDITATE) > 9) && CHAOSMODE) || duration_of_spell(ch, SKILL_MEDITATE) > 29))
   {
     gain += 60;
   }

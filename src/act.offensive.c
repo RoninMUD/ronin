@@ -46,8 +46,8 @@ void skill_wait(CHAR *ch, int skill, int wait) {
 
 
 void auto_learn_skill(CHAR *ch, int skill) {
-  if (GET_LEARNED(ch, skill) < SKILL_MAX_PRAC) {
-    GET_LEARNED(ch, skill) = MIN(GET_LEARNED(ch, skill) + 2, SKILL_MAX_PRAC);
+  if (GET_LEARNED(ch, skill) < (SKILL_MAX_PRAC - 5)) {
+    GET_LEARNED(ch, skill) = MIN(GET_LEARNED(ch, skill) + 2, (SKILL_MAX_PRAC - 5));
   }
 }
 
@@ -206,8 +206,11 @@ void do_kill(CHAR *ch, char *argument, int cmd) {
       act(buf, FALSE, ch, 0, 0, TO_CHAR);
     }
 
-    if (i == 2) {
+    if ((i == 2) && !IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
       weapon = GET_WEAPON2(ch);
+    }
+    else {
+      weapon = NULL;
     }
   }
 
@@ -990,13 +993,6 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (affected_by_spell(ch, SPELL_CLOUD_CONFUSION) && chance(90)) {
-    act("You try to flee but you stumble and stagger in confusion!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to flee but stumbles and staggers in confusion.", TRUE, ch, 0, 0, TO_ROOM);
-
-    return;
-  }
-
   if (affected_by_spell(ch, SKILL_BERSERK) || affected_by_spell(ch, SKILL_FRENZY)) {
     act("You try to flee but fail!", FALSE, ch, 0, 0, TO_CHAR);
     act("$n tries to flee but fails.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1283,7 +1279,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
   int set_pos = stack_position(victim, POSITION_STUNNED);
 
   /* The Spiked Gauntlet of Gruumsh */
-  if (EQ(ch, WEAR_HANDS) && (V_OBJ(EQ(ch, WEAR_HANDS)) == QGII_GRUUMSH)) {
+  if (EQ(ch, WEAR_HANDS) && (V_OBJ(EQ(ch, WEAR_HANDS)) == QGII_GRUUMSH) && chance(15)) {
     set_pos = POSITION_MORTALLYW;
   }
 
@@ -1294,7 +1290,9 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
   damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
 
   /* Hidden Blade */
-  if ((number(1, SKILL_MAX_PRAC) <= GET_LEARNED(ch, SKILL_HIDDEN_BLADE)) && chance(25 + GET_DEX_APP(ch))) {
+  if (SAME_ROOM(ch, victim) &&
+      ((GET_CLASS(ch) == CLASS_ANTI_PALADIN) && (GET_LEVEL(ch) >= 40)) &&
+      ((number(1, SKILL_MAX_PRAC) <= GET_LEARNED(ch, SKILL_HIDDEN_BLADE)) && chance(25 + GET_DEX_APP(ch)))) {
     act("You drive a hidden blade deep into $N's gut!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n drives a hidden blade deep into your gut!", FALSE, ch, 0, victim, TO_VICT);
     act("$n drives a hidden blade deep into $N's gut!", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -1319,7 +1317,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
       act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", 0, ch, 0, victim, TO_VICT);
       act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", 0, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 1.5), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
+      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
 
       if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
         GET_POS(victim) = set_pos;
@@ -1336,6 +1334,10 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
 
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_CLERIC) &&
+      (GET_CLASS(ch) != CLASS_NINJA) &&
+      (GET_CLASS(ch) != CLASS_PALADIN) &&
+      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
+      (GET_CLASS(ch) != CLASS_COMMANDO) &&
       (GET_CLASS(ch) != CLASS_WARRIOR)) {
     send_to_char("You don't know this skill.\n\r", ch);
 

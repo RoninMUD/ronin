@@ -187,7 +187,7 @@ const char * const spell_wear_off_msg[] = {
   "",/*176*/
   "Your sense of tranquility fades away.", /* 177 Tranquility */
   "!execute!",/*178*/
-  "", /*179*/
+  "!tremor!", /*179*/
   "", /* 180 Shadow Wraith */
   "!devastation!",/*181*/
   "The cloud of fire surrounding you dies out.",/*182*/
@@ -209,7 +209,7 @@ const char * const spell_wear_off_msg[] = {
   "!banzai!", /*198*/
   "!headbutt!",/* 199 */
   "!maim!",/*200*/
-  "!blessing of sacrifice!", /* 201 */
+  "", /* 201 */
   "You don't feel as powerful.",/*202*/
   "!demonic thunder!",/*203*/
   "!shadowstep!", /* 204 Used to be Shadow-Walk */
@@ -247,7 +247,7 @@ const char * const spell_wear_off_msg[] = {
   "You feel less disoriented.",/*236*/
   "!lunge!",/*237*/
   "You calm down and feel less angry.",/*238*/
-  "",/*239*/
+  "Your sense of righteousness disappears.",/*239*/
   "!protect!",/*240*/
   "!wrath of ancients!",/*241*/
   "!victimize!", /*242*/

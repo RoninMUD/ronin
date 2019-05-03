@@ -73,9 +73,10 @@ int check_sc_song_access(CHAR *ch, int s) {
 }
 
 int check_sc_access(CHAR *ch, int skill) {
-  if (skill == SPELL_REJUVENATION) return TRUE;
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
+  if ((skill == SPELL_REJUVENATION) && (GET_CLASS(ch) == CLASS_BARD)) return TRUE;
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
+  if ((skill == SPELL_IRON_SKIN) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
 
   if (skill <= 165) return TRUE;
   if (GET_LEVEL(ch) >= LEVEL_SUP) return TRUE;
@@ -252,7 +253,7 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Crusader */
-    case SPELL_BLESSING_OF_SACRIFICE:
+    case SPELL_RIGHTEOUSNESS:
       if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
       break;
     case SKILL_ZEAL:
@@ -313,7 +314,7 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Mercenary */
-    case SPELL_IRON_SKIN:
+    case SPELL_TREMOR:
       if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
       break;
     case SPELL_CLOUD_CONFUSION:
@@ -324,9 +325,6 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
     case SPELL_INCENDIARY_CLOUD_NEW:
       if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
-      break;
-    case SKILL_TRIAGE:
-      if (check_subclass(ch, SC_MERCENARY, 5)) return TRUE;
       break;
   }
 

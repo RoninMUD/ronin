@@ -911,7 +911,7 @@ bool rent_equip_char(CHAR *ch, OBJ *obj, int pos) {
     }
 
     if (OBJ_TYPE(obj) == ITEM_WEAPON) {
-      if ((GET_CLASS(ch) != CLASS_NINJA) && (pos == HOLD) && !IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_HOLD)) return FALSE;
+      if ((pos == HOLD) && !IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_HOLD) && ((GET_CLASS(ch) != CLASS_NINJA) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))) return FALSE;
       if (((pos == WIELD) || (pos == HOLD)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) return FALSE;
     }
   }

@@ -143,7 +143,7 @@ Returns:
   /* Check for Meditation. */
   if (!IS_IMMORTAL(ch) &&
       (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 27)))) {
+      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 29)))) {
     send_to_char("You are deep in meditation, unable to follow.\n\r", ch);
 
     return FALSE;
