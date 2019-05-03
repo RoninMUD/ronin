@@ -1901,7 +1901,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Maim */
   int maim_damage = 0;
   if (dmg && IS_SKILL_ATTACK(attack_type, damage_type)) {
-    ENCH *maim_ench = get_enchantment_by_name(victim, "Maimed");
+    ENCH *maim_ench = get_enchantment_by_name(victim, "Savaged (Maim)");
 
     if (maim_ench) {
       maim_damage = resist_damage(victim, maim_ench->modifier, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -2626,7 +2626,7 @@ int calc_ac(CHAR *ch) {
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       ENCH *cc_ench = NULL;
 
-      if ((cc_ench = get_enchantment_by_name(ch, "Close Combat (-10 AC)")) || (cc_ench = get_enchantment_by_name(ch, "Close Combat (-20 AC)"))) {
+      if ((cc_ench = get_enchantment_by_name(ch, "-10 AC (Close Combat)")) || (cc_ench = get_enchantment_by_name(ch, "-20 AC (Close Combat)"))) {
         min_pc_ac += cc_ench->modifier;
       }
     }
@@ -3141,13 +3141,13 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
           ENCH *cc_ench = NULL;
 
-          if (!(cc_ench = get_enchantment_by_name(defender, "Close Combat (-10 AC)")) && !(cc_ench = get_enchantment_by_name(defender, "Close Combat (-20 AC)"))) {
-            enchantment_apply(defender, FALSE, "Close Combat (-10 AC)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
+          if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
+            enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
           }
-          else if ((cc_ench = get_enchantment_by_name(defender, "Close Combat (-10 AC)"))) {
+          else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
             enchantment_remove(defender, cc_ench, FALSE);
 
-            enchantment_apply(defender, FALSE, "Close Combat (-20 AC)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+            enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
           }
         }
 
@@ -3337,7 +3337,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
             !IS_IMMUNE(defender, IMMUNE_PARALYSIS) &&
             chance(50 + GET_DEX_APP(attacker))) {
-          enchantment_apply(defender, FALSE, "Impaired (Paralyzed)", SKILL_IMPAIR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(attacker)) ? 0 : 2), 0, 0, 0, AFF_PARALYSIS, 0, 0);
+          enchantment_apply(defender, FALSE, "Paralyzed (Impair)", SKILL_IMPAIR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(attacker)) ? 0 : 2), 0, 0, 0, AFF_PARALYSIS, 0, 0);
 
           special_message = TRUE;
         }
@@ -3369,8 +3369,8 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (SAME_ROOM(attacker, defender) &&
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
             chance(30 + GET_DEX_APP(attacker))) {
-          enchantment_apply(defender, FALSE, "Impaired (+30 AC)", SKILL_IMPAIR, 1, 0, 30, APPLY_AC, 0, 0, 0);
-          enchantment_apply(defender, FALSE, "Impaired (-2 Hitroll)", SKILL_IMPAIR, 1, 0, -2, APPLY_HITROLL, 0, 0, 0);
+          enchantment_apply(defender, FALSE, "+30 AC (Impair)", SKILL_IMPAIR, 1, 0, 30, APPLY_AC, 0, 0, 0);
+          enchantment_apply(defender, FALSE, "-2 Hitroll (Impair)", SKILL_IMPAIR, 1, 0, -2, APPLY_HITROLL, 0, 0, 0);
 
           special_message = TRUE;
         }
@@ -4038,7 +4038,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *vict) {
   /* Create a list to store possible tricks. */
   int trick_list[3];
 
-  if (EQ(ch, WIELD) && !enchanted_by(vict, "Dirty Tricks (Gaping Wound)")) {
+  if (EQ(ch, WIELD) && !enchanted_by(vict, "Gaping Wound (Dirty Tricks)")) {
     trick_list[trick_idx] = DT_STAB;
   }
   else {
@@ -4082,7 +4082,7 @@ void dirty_tricks_action(CHAR *ch, CHAR *vict) {
     act("$n stabs $s weapon deeply into you, opening a gruesome gaping wound.", FALSE, ch, 0, vict, TO_VICT);
     act("$n stabs $s weapon deeply into $N, opening a gruesome gaping wound.", FALSE, ch, 0, vict, TO_NOTVICT);
 
-    enchantment_apply(vict, FALSE, "Dirty Tricks (Gaping Wounds)", SKILL_DIRTY_TRICKS, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, dirty_tricks_enchantment);
+    enchantment_apply(vict, FALSE, "Gaping Wounds (Dirty Tricks)", SKILL_DIRTY_TRICKS, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, dirty_tricks_enchantment);
   }
   else if (trick == DT_BLIND) {
     act("You throw some blinding dust into $N's eyes.", FALSE, ch, 0, vict, TO_CHAR);

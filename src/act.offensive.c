@@ -524,8 +524,8 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   /* Close Combat */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4) && chance(50 + GET_DEX_APP(ch))) {
-    enchantment_apply(ch, FALSE, "Close Combat (+3 Hitroll)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
-    enchantment_apply(ch, FALSE, "Close Combat (+3 Damroll)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
   }
 
   skill_wait(ch, SKILL_BACKSTAB, 3);
@@ -895,8 +895,8 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   /* Close Combat */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4) && chance(50 + GET_DEX_APP(ch))) {
-    enchantment_apply(ch, FALSE, "Close Combat (+3 Hitroll)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
-    enchantment_apply(ch, FALSE, "Close Combat (+3 Damroll)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
   }
 
   skill_wait(ch, SKILL_CIRCLE, 3);
@@ -993,7 +993,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (enchanted_by(ch, "Tremoring (Tremor)") && chance(95)) {
+  if (enchanted_by(ch, "Staggering (Tremor)") && chance(95)) {
     act("You try to flee, but your tremoring causes you to stumble and stagger!", FALSE, ch, 0, 0, TO_CHAR);
     act("$n tries to flee, but $s tremoring causes $m to stumble and stagger.", TRUE, ch, 0, 0, TO_ROOM);
 

@@ -786,7 +786,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  int dam = (number(6, 8) * GET_LEVEL(ch));
+  int dam = number(5, 7) * GET_LEVEL(ch);
 
   /* Increased damage at night. */
   if (IS_NIGHT) {
@@ -827,15 +827,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         }
       }
 
-      if (saves_spell(temp_vict, SAVING_SPELL, (level + 10))) {
-        dam /= 2;
-      }
-
       dam = damage(ch, temp_vict, dam, SPELL_RIMEFANG, DAM_COLD);
-
-      if ((dam > 0) && (CHAR_REAL_ROOM(temp_vict) != NOWHERE)) {
-        enchantment_apply(temp_vict, TRUE, "Shivering (Rimefang)", SPELL_RIMEFANG, 60, ENCH_INTERVAL_ROUND, 20, APPLY_SAVING_SPELL, 0, 0, 0);
-      }
     }
   }
 }
@@ -1681,7 +1673,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
         GET_POS(temp_vict) = POSITION_STUNNED;
 
-        enchantment_apply(temp_vict, TRUE, "Tremoring (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+        enchantment_apply(temp_vict, TRUE, "Staggering (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }

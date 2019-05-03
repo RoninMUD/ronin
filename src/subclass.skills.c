@@ -970,7 +970,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
       act("$n savagely maims you, making you susceptible to extra damage!", FALSE, ch, 0, victim, TO_VICT);
       act("$n savagely maim $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      enchantment_apply(victim, FALSE, "Maimed", SKILL_MAIM, -1, 0, (GET_LEVEL(ch) / 4), 0, 0, 0, maim_enchantment);
+      enchantment_apply(victim, FALSE, "Savaged (Maim)", SKILL_MAIM, -1, 0, (GET_LEVEL(ch) / 4), 0, 0, 0, maim_enchantment);
     }
   }
 
