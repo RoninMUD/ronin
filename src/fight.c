@@ -2843,19 +2843,21 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       attack_roll = number(1, 20);
 
       /* Check for automatic failure avoidance */
-      if ((attack_roll = 1) || ((attack_roll <= 10) && !hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
+      if ((attack_roll == 1) || ((attack_roll <= 10) && !hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
         success = HIT_SUCCESS;
       }
     }
   }
-  else if (attack_roll == 20) {
+  else {
     /* Automatic success. */
-    success = HIT_SUCCESS;
+    if (attack_roll == 20) {
+      success = HIT_SUCCESS;
+    }
 
     /* Sento Kata */
     if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
       /* Check for critical hit. */
-      if (hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender))) {
+      if ((attack_roll == 20) || ((attack_roll >= 17) && hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)))) {
         success = HIT_CRITICAL;
       }
     }

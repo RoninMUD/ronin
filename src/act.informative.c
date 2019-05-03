@@ -785,8 +785,12 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         }
 
         if (target->enchantments) {
-          if (enchanted_by(target, "Maimed")) {
+          if (enchanted_by(target, "Savaged (Maim)")) {
             act("......$n has been horribly maimed!", FALSE, target, 0, ch, TO_VICT);
+          }
+
+          if (enchanted_by(target, "Staggering (Tremor)")) {
+            act("......$n is stumbling and staggering!", FALSE, target, 0, ch, TO_VICT);
           }
         }
 
