@@ -8044,7 +8044,7 @@ Damage      : 400
 
 With this spell, the Mercenary causes the ground to shake and heave violently,
 inflicting 400 damage to every opponent in the room, and knocking them into the
-stunned position.  Opponents affected by Tremor have a 95% chance of failing to
+resting position.  Opponents affected by Tremor have a 95% chance of failing to
 flee from combat for a duration of 10 rounds (30 seconds).  This effect can be
 refreshed or re-applied by casting Tremor again.
 
