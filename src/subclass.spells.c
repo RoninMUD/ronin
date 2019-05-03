@@ -1681,7 +1681,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
         GET_POS(temp_vict) = POSITION_STUNNED;
 
-        enchantment_apply(temp_vict, TRUE, "Tremoring", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+        enchantment_apply(temp_vict, TRUE, "Tremoring (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }
