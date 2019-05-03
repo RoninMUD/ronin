@@ -8096,20 +8096,19 @@ plus a smaller, but still potent burst, every combat round.
 
 See Also: SUBCLASSES MERCENARY
 #
-"SIDEARM"
+SIDEARM
 
 Subclass Mercenary: Level 5 (Commando)
 
 This ability allows the Mercenary to wield a second weapon in their off-hand.
+Unlike the more disciplined Ninja, the Mercenary cannot attack with this second
+weapon every round.  Instead, this weapon will be automatically drawn and used
+every 4 to 5 rounds, causing a standard melee attack; this attack can result in
+a dual or triple hit, as usual.
 
-Periodically during combat (every 4 to 6 rounds), the Mercenary will strike with
-this second weapon, dealing a standard melee attack that can dual or triple as
-normal.
-
-This ability allows the Mercenary to wield a two-handed weapon in their main
-hand, but the normal 50% bonus to hitroll and damroll from strength that is
-granted when wielding a two-handed weapon is not applied; the second weapon must
-be a one-handed weapon.
+This ability also allows the Mercenary to wield a two-handed weapon in the main
+hand, though the normal 50% bonus to hitroll and damroll from strength is not
+applied when doing so.  The sidearm must be a one-handed weapon.
 
 See Also: SUBCLASSES MERCENARY
 #
