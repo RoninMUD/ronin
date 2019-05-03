@@ -7954,9 +7954,9 @@ Subclass Legionnaire: Level 2 (Commando)
 Usage       : cast 'rimefang'
 Accumulative: No
 Duration    : -
-Save        : Save vs. Spell: 1/2 Damage, Save vs. Paralysis: Negates Paralysis
+Save        : Save vs. Paralysis: Negates Paralysis
 Mana Cost   : 115
-Damage      : (6 to 8) * (caster level) (up to 400 at level 50)
+Damage      : (5 to 7) * (caster level) (up to 350 at level 50)
 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
@@ -7968,10 +7968,6 @@ creature has been damaged by Rimefang, it gains a 10 point penalty to its saving
 throws vs. spells for a duration of 20 rounds (60 seconds, or 1 tick); this
 penalty can be refreshed by additional casts of Rimefang, but does not stack
 with itself.
-
-Creatures damaged by Rimefang will be unable to act, other than performaing
-standard melee attacks, for a duration of two rounds; this includes monster
-spells and special attacks (such as bite and claw), but not special procedures.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
