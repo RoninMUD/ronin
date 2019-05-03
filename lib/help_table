@@ -8036,11 +8036,13 @@ Accumulative: No
 Duration    : -
 Save        : -
 Mana Cost   : 150
-Damage      : 450
+Damage      : 400
 
-With this spell, the Mercenary causes the ground to shake and heave
-violently, inflicting 450 damage to every opponent in the room, and
-knocking them into the stunned position.
+With this spell, the Mercenary causes the ground to shake and heave violently,
+inflicting 400 damage to every opponent in the room, and knocking them into the
+stunned position.  Opponents affected by Tremor have a 90% chance of failing to
+flee from combat for a duration of 10 rounds (30 seconds).  This effect can be
+refreshed or re-applied by casting Tremor again.
 
 See Also: SUBCLASSES MERCENARY
 #

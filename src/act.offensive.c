@@ -987,21 +987,28 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
   mount = FALSE;
 
   if (IS_AFFECTED(ch, AFF_PARALYSIS) || (IS_AFFECTED(ch, AFF_HOLD) && chance(25))) {
-    act("You try to flee but are paralyzed and can't move!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to flee but seems to be unable to move.", TRUE, ch, 0, 0, TO_ROOM);
+    act("You try to flee, but are paralyzed and can't move!", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n tries to flee, but seems to be unable to move.", TRUE, ch, 0, 0, TO_ROOM);
+
+    return;
+  }
+
+  if (enchanted_by(ch, "Tremoring") && chance(90)) {
+    act("You try to flee, but your tremoring causes you to stumble and stagger!", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n tries to flee, but $s tremoring causes $m to stumble and stagger.", TRUE, ch, 0, 0, TO_ROOM);
 
     return;
   }
 
   if (affected_by_spell(ch, SKILL_BERSERK) || affected_by_spell(ch, SKILL_FRENZY)) {
-    act("You try to flee but fail!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to flee but fails.", TRUE, ch, 0, 0, TO_ROOM);
+    act("You try to flee, but fail!", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n tries to flee, but fails.", TRUE, ch, 0, 0, TO_ROOM);
 
     return;
   }
 
   if ((wall = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)))) {
-    act("A wall of thorns blocks your way. Ouch!", FALSE, ch, 0, 0, TO_CHAR);
+    act("A wall of thorns blocks your way.  Ouch!", FALSE, ch, 0, 0, TO_CHAR);
 
     damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
 

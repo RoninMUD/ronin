@@ -1662,10 +1662,12 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ((temp_vict == ch) || IS_IMMORTAL(temp_vict)) continue;
 
     if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
-      damage(ch, temp_vict, 450, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage(ch, temp_vict, 400, TYPE_UNDEFINED, DAM_MAGICAL);
 
       if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
         GET_POS(temp_vict) = POSITION_STUNNED;
+
+        enchantment_apply(temp_vict, TRUE, "Tremoring", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }
