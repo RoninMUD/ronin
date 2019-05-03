@@ -2066,7 +2066,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (((abs(calc_ac(victim)) - 250.0) / 3.0) / 100.0)));
   }
 
-  /* Zen */
+  /* Combat Zen */
   if (IS_MORTAL(victim) &&
       check_subclass(victim, SC_RONIN, 3) &&
       (damage_type == DAM_POISON)) {
@@ -3176,7 +3176,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           }
         }
 
-        /* Zen */
+        /* Combat Zen */
         if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
           return TRUE;
         }
@@ -3312,7 +3312,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       break;
     }
 
-    /* Zen */
+    /* Combat Zen */
     if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
       return TRUE;
     }
