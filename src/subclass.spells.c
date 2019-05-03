@@ -1671,7 +1671,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       damage(ch, temp_vict, 400, TYPE_UNDEFINED, DAM_MAGICAL);
 
       if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
-        GET_POS(temp_vict) = POSITION_STUNNED;
+        GET_POS(temp_vict) = POSITION_RESTING;
 
         enchantment_apply(temp_vict, TRUE, "Staggering (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
