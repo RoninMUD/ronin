@@ -8628,10 +8628,9 @@ First, the Ronin now only automatically misses with an attack roll of 1,
 followed by a second attack roll of 10 or less that also would miss the target
 (or a second 1).
 
-Next, the Ronin inflicts a critical hit for double damage if they roll a natural
-attack roll of 20, as long as a natural 20 would hit hit the target (excluding
-the normal "20 always hits" rule). If an attack roll of 20 would miss, the hit
-still succeeds, but is not a critical hit.
+Next, the Ronin inflicts a critical hit for double damage if they roll an attack
+roll of 17 or higher, as long as this attack would hit the target, or if they
+roll a natural 20.
 
 Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
 with certain weapons to automatically choose the best attack type for use
