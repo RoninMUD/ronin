@@ -8624,9 +8624,9 @@ Subclass Ronin: Level 4 (Ninja)
 Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
 of combat in several ways.
 
-First, the Ronin now only automatically misses with an attack roll of 1,
-followed by a second attack roll of 10 or less that also would miss the target
-(or a second 1).
+First, the Ronin now will re-roll an attack roll of 1 (automatic miss) and use
+the second result; if the second roll is a natural 20, this will result in an
+automatic success, but not a critical hit.
 
 Next, the Ronin inflicts a critical hit for double damage if they roll an attack
 roll of 17 or higher, as long as this attack would hit the target, or if they
