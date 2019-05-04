@@ -847,7 +847,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
 
   hit(ch, victim, SKILL_SMITE);
 
-  GET_POS(victim) = stack_position(victim, POSITION_RESTING);
+  GET_POS(victim) = stack_position(victim, POSITION_STUNNED);
 
   /* Trusty Steed */
   if (SAME_ROOM(ch, victim) && IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
