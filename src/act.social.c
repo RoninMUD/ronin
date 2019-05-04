@@ -132,18 +132,21 @@ void boot_social_messages(void) {
   fclose(fl);
 }
 
-int find_action(char *cmd, int length)
-{
-  int i = 0;
+int find_action_ex(char *arg, size_t len, bool ignore_case) {
+  if (!arg || !*arg || !len) return -1;
 
-  for (i = 0; soc_mess_list[i].cmd_text; i++)
-  {
-    if (!strncmp(soc_mess_list[i].cmd_text, cmd, length)) break;
+  for (int i = 0; soc_mess_list[i].cmd_text; i++) {
+    if ((ignore_case && !strncasecmp(soc_mess_list[i].cmd_text, arg, len)) ||
+        (!ignore_case && !strncmp(soc_mess_list[i].cmd_text, arg, len))) {
+      return i;
+    }
   }
 
-  if (!soc_mess_list[i].cmd_text || !length) i = -1;
+  return -1;
+}
 
-  return i;
+int find_action(char *arg, size_t len) {
+  return find_action_ex(arg, len, FALSE);
 }
 
 void list_socials(struct char_data *ch) {
@@ -168,185 +171,125 @@ void list_socials(struct char_data *ch) {
   destroy_string_block(&sb);
 }
 
-void do_gf(CHAR *ch, char *arg, int cmd)
-{
-  char buf[MIL];
-  char buf2[MIL];
-  char name[MIL];
-  char *command = NULL;
-  char *args = NULL;
-  int index = 0;
-  int style = 0;
-  SOC *action = NULL;
-  CHAR *vict = NULL;
-  CHAR *tmp_vict = NULL;
-  DESC *tmp_desc = NULL;
 
-  memset(buf, 0, sizeof(buf));
-  memset(buf2, 0, sizeof(buf));
-  memset(name, 0, sizeof(name));
+#define SOCIAL_MODE_NONE 0
+#define SOCIAL_MODE_CHAR 1
 
-  arg = skip_spaces(arg);
+void do_gf(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !arg) return;
 
-  if (!IS_NPC(ch) &&
-      IS_SET(ch->specials.pflag, PLR_NOSHOUT))
-  {
+  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
     send_to_char("You have displeased the gods, you cannot use the gossip channel.\n\r", ch);
+
     return;
   }
 
-  if (!IS_NPC(ch) &&
-      IS_SET(ch->specials.pflag, PLR_QUEST) &&
-      IS_SET(ch->specials.pflag, PLR_QUIET))
-  {
-    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r",ch);
+  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_QUEST) && IS_SET(GET_PFLAG(ch), PLR_QUIET)) {
+    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r", ch);
+
     return;
   }
 
-  if (!IS_NPC(ch) &&
-      !IS_SET(ch->specials.pflag, PLR_GOSSIP))
-  {
-    SET_BIT(ch->specials.pflag, PLR_GOSSIP);
+  if (!IS_NPC(ch) && !IS_SET(GET_PFLAG(ch), PLR_GOSSIP)) {
+    SET_BIT(GET_PFLAG(ch), PLR_GOSSIP);
+
     send_to_char("You turn ON the gossip channel.\n\r", ch);
   }
 
-  one_argument(arg, buf);
+  char action[MIL], name[MIL];
 
-  for (command = arg; *command == ' '; command++);
+  two_arguments(arg, action, name);
 
-  for (args = command; *args > ' ' ; args++)
-  {
-    *(args) = LOWER(*args);
-  }
+  int action_index = find_action_ex(action, strlen(action), TRUE);
 
-  index = find_action(command, args - command);
-
-  if (index < 0)
-  {
+  if (action_index < 0) {
     send_to_char("Want to try that again?\n\r", ch);
+
     return;
   }
 
-  action = &soc_mess_list[index];
+  SOC *social = &soc_mess_list[action_index];
 
-  memset(buf, 0, sizeof(buf));
-  memset(buf2, 0, sizeof(buf2));
+  CHAR *victim = NULL;
 
-  half_chop(arg, buf2, sizeof(buf2), buf, sizeof(buf));
+  if (*name) {
+    victim = get_char_vis(ch, name);
 
-  memset(name, 0, sizeof(name));
-
-  if (action->char_found)
-  {
-    one_argument(buf, name);
-  }
-  else
-  {
-    name[0] = '\0';
-  }
-
-  if (name[0] == ' ')
-  {
-    name[0] = '\0';
-  }
-
-  if (name[0] != '\0')
-  {
-    vict = get_char(name);
-
-    if (!vict || (!IS_MORTAL(vict) && !CAN_SEE(ch, vict)))
-    {
+    if (!victim) {
       send_to_char("They aren't here.\n\r", ch);
+
       return;
     }
   }
 
-  if (!name[0] &&
-      !action->others_no_arg)
-  {
-    strncpy(buf2, action->char_no_arg, sizeof(buf2));
-    style = 1;
+  char buf[MIL], message[MSL];
+
+  int type = 0;
+
+  if (!*name && !social->others_no_arg) {
+    snprintf(buf, sizeof(buf), "%s", social->char_no_arg);
+
+    type = TO_CHAR;
   }
-  else
-  {
-    for (tmp_desc = descriptor_list; tmp_desc; tmp_desc = tmp_desc->next)
-    {
-      tmp_vict = tmp_desc->character;
+  else {
+    for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+      CHAR *temp_ch = temp_desc->character;
 
-      if (!tmp_vict ||
-          tmp_vict->desc->connected ||
-          !IS_SET(GET_PFLAG(tmp_vict), PLR_GOSSIP))
-      {
-        continue;
-      }
+      if (temp_desc->connected || !temp_ch || !IS_SET(GET_PFLAG(temp_ch), PLR_GOSSIP)) continue;
 
-      if (action->char_found &&
-          vict == ch)
-      {
-        sprintf(buf2, "%s", action->others_auto);
+      if ((victim == ch) && social->others_auto) {
+        snprintf(buf, sizeof(buf), "%s", social->others_auto);
       }
-      else
-      if (!name[0])
-      {
-        sprintf(buf2, "%s", action->others_no_arg);
+      else if (!*name && social->others_no_arg) {
+        snprintf(buf, sizeof(buf), "%s", social->others_no_arg);
       }
-      else
-      if (action->char_found &&
-          vict == tmp_vict)
-      {
-        sprintf(buf2, "%s", action->vict_found);
-        style = 2;
+      else if ((victim == temp_ch) && social->vict_found) {
+        snprintf(buf, sizeof(buf), "%s", social->vict_found);
+
+        type = TO_VICT;
       }
-      else
-      {
-        sprintf(buf2, "%s", action->others_found);
-        style = 3;
+      else if (social->others_found) {
+        snprintf(buf, sizeof(buf), "%s", social->others_found);
+
+        type = TO_OTHER;
       }
 
-      sprintf(buf, "[gossip] %s", buf2);
+      snprintf(message, sizeof(message), "[gossip] %s", buf);
 
-      COLOR(tmp_vict, 5);
-      if (style == 2)
-      {
-        act(buf, -1, ch, NULL, vict, TO_VICT);
+      COLOR(temp_ch, 5);
+      if (type == TO_VICT) {
+        act(message, PERS_MORTAL, ch, 0, victim, TO_VICT);
       }
-      else if (style == 3)
-      {
-        act(buf, -1, ch, tmp_vict, vict, TO_OTHER);
+      else if (type == TO_OTHER) {
+        act(message, PERS_MORTAL, ch, temp_ch, victim, TO_OTHER);
       }
-      else
-      {
-        act(buf, -1, ch, NULL, tmp_vict, TO_VICT);
+      else {
+        act(message, PERS_MORTAL, ch, 0, temp_ch, TO_VICT);
       }
-      ENDCOLOR(tmp_vict);
+      ENDCOLOR(temp_ch);
 
-      style = 0;
+      type = 0;
     }
 
-    if (vict == ch)
-    {
-      sprintf(buf2, "%s", action->char_auto);
+    if ((victim == ch) && social->char_auto) {
+      snprintf(buf, sizeof(buf), "%s", social->char_auto);
     }
-    else if (name[0] && action->char_found)
-    {
-      sprintf(buf2, "%s", action->char_found);
+    else if (*name && social->char_found) {
+      snprintf(buf, sizeof(buf), "%s", social->char_found);
     }
-    else
-    {
-      sprintf(buf2, "%s", action->char_no_arg);
+    else if (social->char_no_arg) {
+      snprintf(buf, sizeof(buf), "%s", social->char_no_arg);
     }
   }
 
-  sprintf(buf, "[gossip] %s", buf2);
+  snprintf(message, sizeof(message), "[gossip] %s", buf);
 
   COLOR(ch, 5);
-  if (style == 1)
-  {
-    act(buf, FALSE, ch, NULL, NULL, TO_CHAR);
+  if (type == TO_CHAR) {
+    act(message, FALSE, ch, 0, 0, TO_CHAR);
   }
-  else
-  {
-    act(buf, FALSE, ch, NULL, vict, TO_CHAR);
+  else {
+    act(message, FALSE, ch, 0, victim, TO_CHAR);
   }
   ENDCOLOR(ch);
 }
@@ -676,12 +619,12 @@ void do_insult(struct char_data *ch, char *argument, int cmd)
     case 2 :
       act("$n farts in your open mouth!",FALSE, ch, 0, victim, TO_VICT );
       act("You fart in $N's open mouth!",FALSE, ch, 0, victim, TO_CHAR );
-      if(GET_LEVEL(ch)>=LEVEL_IMM) {
-        if(!affected_by_spell(victim, SMELL_FARTMOUTH)) {
-          af.type      = SMELL_FARTMOUTH;
-          af.duration  = 5;
-          af.modifier  = 0;
-          af.location  = 0;
+      if (GET_LEVEL(ch) >= LEVEL_IMM) {
+        if (!affected_by_spell(victim, SMELL_FARTMOUTH)) {
+          af.type = SMELL_FARTMOUTH;
+          af.duration = 5;
+          af.modifier = 0;
+          af.location = 0;
           af.bitvector = 0;
           af.bitvector2 = 0;
           if (GET_LEVEL(ch) < GET_LEVEL(victim))

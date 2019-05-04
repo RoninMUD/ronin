@@ -1374,7 +1374,7 @@ int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
     act("Guided through the forest by your spear, you leap toward $N.", 1, owner, 0, vict, TO_CHAR);
     act("$n disappears into the forest momentarily before leaping toward you.", 1, owner, 0, vict, TO_VICT);
     act("$n disappears into the forest momentarily before leaping toward $N.", 1, owner, 0, vict, TO_NOTVICT);
-    hit(owner, vict, TYPE_UNDEFINED);
+    perform_hit(owner, vict, TYPE_UNDEFINED, 1); // Enforce a single hit (no dual/triple/quad).
   }
   return FALSE;
 }
@@ -3263,7 +3263,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
     CHAR *vict = NULL;
     for(vict = world[lem_instance->in_room_r].people; vict; vict = vict->next_in_room)
     {
-      if(!IS_NPC(vict) && affected_by_spell(vict, SKILL_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
+      if(!IS_NPC(vict) && IS_SET(GET_PFLAG2(vict), PLR2_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
       {
           char buf[512];
           sprintf(buf, "Fight me like a man, not a cowering wimp, %s!", vict->player.name );

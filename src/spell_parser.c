@@ -188,11 +188,11 @@ const char * const spells[] = {
   "power word kill",              /* 128 */
   "dispel magic",                 /* 129 */
   "conflagration",                /* 130 */
-  "mass invisibility",            /* 131 */
+  "",                             /* 131 */
   "convergence",                  /* 132 */
   "enchant armour",               /* 133 */
   "disintegrate",                 /* 134 */
-  "confusion",                    /* 135 */
+  "hidden-blade",                 /* 135 */
   "vampiric touch",               /* 136 */
   "searing orb",                  /* 137 */
   "clairvoyance",                 /* 138 */
@@ -212,8 +212,8 @@ const char * const spells[] = {
   "blood lust",                   /* 152 */
   "scan",                         /* 153 */
   "mystic swiftness",             /* 154 */
-  "legend lore",                  /* 155 */
-  "hidden-blade",                 /* 156 */
+  "",                             /* 155 */
+  "",                             /* 156 */
   "",                             /* 157 */
   "",                             /* 158 */
   "",                             /* 159 */
@@ -223,7 +223,8 @@ const char * const spells[] = {
   "twist",                        /* 163 */
   "cunning",                      /* 164 */
   "wind slash",                   /* 165 */
-  "",                             /* 166 */ /* Subclass Skills Start Here */
+  /* Subclass Skills Start Here */
+  "",                             /* 166 */
   "",                             /* 167 */
   "",                             /* 168 */
   "",                             /* 169 */
@@ -239,13 +240,13 @@ const char * const spells[] = {
   "tremor",                       /* 179 */
   "shadow wraith",                /* 180 */
   "devastation",                  /* 181 */
-  "!incendiary cloud!",           /* 182 Incendiary Cloud (Old) */
+  "!incendiary cloud!",           /* 182 Old Version */
   "snipe",                        /* 183 */
   "riposte",                      /* 184 */
   "trophy",                       /* 185 */
   "frenzy",                       /* 186 */
   "power of faith",               /* 187 */
-  "incendiary cloud",             /* 188 Incendiary Cloud (New)*/
+  "incendiary cloud",             /* 188 New Version */
   "power of devotion",            /* 189 */
   "wrath of god",                 /* 190 */
   "disrupt sanctuary",            /* 191 */
@@ -257,8 +258,8 @@ const char * const spells[] = {
   "mantra",                       /* 197 */
   "banzai",                       /* 198 */
   "headbutt",                     /* 199 */
-  "",                             /* 200 Reserved */
-  "blessing of sacrifice",        /* 201 */
+  "maim",                         /* 200 */
+  "",                             /* 201 */
   "aid",                          /* 202 */
   "demonic thunder",              /* 203 */
   "shadowstep",                   /* 204 */
@@ -271,7 +272,7 @@ const char * const spells[] = {
   "blackmantle",                  /* 211 */
   "divine wind",                  /* 212 */
   "zeal",                         /* 213 */
-  "impair",                       /* 214 */
+  "",                             /* 214 */
   "flank",                        /* 215 */
   "rejuvenation",                 /* 216 */
   "wall of thorns",               /* 217 */
@@ -291,8 +292,8 @@ const char * const spells[] = {
   "switch",                       /* 231 */
   "trusty-steed",                 /* 232 */
   "backfist",                     /* 233 */
-  "retreat",                      /* 234 */
-  "fade",                         /* 235 */
+  "",                             /* 234 */
+  "",                             /* 235 */
   "cloud of confusion",           /* 236 */
   "lunge",                        /* 237 */
   "rage",                         /* 238 */
@@ -1167,17 +1168,16 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   }
 
   if (*argument != '\'') {
-    send_to_char("Magic must always be enclosed by the magic symbols:'\n\r",ch);
+    send_to_char("Magic must always be enclosed by the magic symbols:'\n\r", ch);
     return;
   }
 
-  /* Locate the last quote && lowercase the magic words (if any) */
+  for (qend = 1; *(argument + qend) && (*(argument + qend) != '\''); qend++) {
+    *(argument + qend) = LOWER(*(argument + qend));
+  }
 
-  for (qend=1; *(argument+qend) && (*(argument+qend) != '\'') ; qend++)
-    *(argument+qend) = LOWER(*(argument+qend));
-
-  if (*(argument+qend) != '\'') {
-    send_to_char("Magic must always be enclosed by the magic symbols: '\n\r",ch);
+  if (*(argument + qend) != '\'') {
+    send_to_char("Magic must always be enclosed by the magic symbols: '\n\r", ch);
     return;
   }
 
@@ -1363,7 +1363,6 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
         tar_char = ch;
         target_ok = TRUE;
       }
-
     }
 
   } else {
@@ -1456,7 +1455,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
 
   /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) con_amt += 50;
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) con_amt += 50;
 
   percent=number(1,1001);
   conc=1;
@@ -1526,7 +1525,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   int cost_reduction_chance = 0;
 
   /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) {
     cost_reduction_chance += 10;
   }
 
@@ -1929,7 +1928,6 @@ void assign_spell_pointers(void)
   SPELLO(103, 30, POSITION_STANDING, 51, 51,  3, 51, 51,  3, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_endure);
   SPELLO(104, 30, POSITION_FIGHTING, 51, 51, 16, 51, 17, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
   SPELLO(105, 30, POSITION_FIGHTING, 51, 51, 17, 51, 16, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_poison_smoke);
-  SPELLO(106, 30, POSITION_FIGHTING, 51, 51, 51, 51, 28, 24, 51, 51,  110, TAR_IGNORE,                                                                   cast_hell_fire);
   SPELLO(107, 30, POSITION_STANDING, 51, 51, 22, 51, 27, 51, 51, 51,   40, TAR_CHAR_ROOM,                                                                cast_hypnotize);
   SPELLO(108, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_recover_mana);
   SPELLO(109, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 27, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_thunderball);
@@ -1951,7 +1949,6 @@ void assign_spell_pointers(void)
   SPELLO(132, 30, POSITION_FIGHTING, 21, 51, 27, 51, 51, 51, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_SELF,                                               cast_convergence);
   SPELLO(133, 30, POSITION_STANDING, 21, 51, 51, 51, 51, 51, 51, 51,  100, TAR_OBJ_INV,                                                                  cast_enchant_armour);
   SPELLO(134, 30, POSITION_FIGHTING, 27, 51, 51, 51, 51, 51, 51, 28,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_INV | TAR_OBJ_ROOM,                  cast_disintegrate);
-  SPELLO(135, 30, POSITION_STANDING, 55, 55, 55, 55, 55, 55, 55, 55,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_confusion);
   SPELLO(136, 30, POSITION_FIGHTING, 18, 51, 51, 51, 24, 51, 51, 32,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_vampiric_touch);
   SPELLO(137, 30, POSITION_FIGHTING, 51, 16, 51, 51, 51, 51, 51, 51,   60, TAR_IGNORE,                                                                   cast_searing_orb);
   SPELLO(138, 30, POSITION_STANDING, 18, 16, 21, 51, 51, 51, 51, 51,   35, TAR_CHAR_WORLD,                                                               cast_clairvoyance);
@@ -1998,26 +1995,26 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_MYSTIC_SWIFTNESS,      30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 42, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
 
   // Ronin
-  SPELLO(SPELL_BLUR,                  30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_blur);
+  SPELLO(SPELL_BLUR,                  30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_blur);
 
   // Mystic
   SPELLO(SPELL_DEBILITATE,            30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_debilitate);
   SPELLO(SPELL_TRANQUILITY,           30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  150, TAR_IGNORE,                                                                   cast_tranquility);
 
   // Paladin
-  SPELLO(SPELL_LAYHANDS,              30, POSITION_FIGHTING, 51, 51, 51, 15, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_layhands);
+  SPELLO(SPELL_LAY_HANDS,             30, POSITION_FIGHTING, 51, 51, 51, 15, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_lay_hands);
 
   // Cavalier
-  SPELLO(SPELL_MIGHT,                 30, POSITION_STANDING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
+  SPELLO(SPELL_MIGHT,                 30, POSITION_FIGHTING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
   SPELLO(SPELL_WRATH_OF_GOD,          30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
   SPELLO(SPELL_POWER_OF_DEVOTION,     30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
 
   // Crusader
   SPELLO(SPELL_RIGHTEOUSNESS,         30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_righteousness);
-  SPELLO(SPELL_BLESSING_OF_SACRIFICE, 30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_blessing_of_sacrifice);
   SPELLO(SPELL_POWER_OF_FAITH,        30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
 
   // Anti-Paladin
+  SPELLO(SPELL_HELL_FIRE,             30, POSITION_FIGHTING, 51, 51, 51, 51, 28, 24, 51, 51,  100, TAR_IGNORE,                                                                   cast_hell_fire);
   SPELLO(SPELL_BLOOD_LUST,            30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blood_lust);
   SPELLO(SPELL_RAGE,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  130, TAR_SELF_ONLY,                                                                cast_rage);
 
@@ -2037,21 +2034,19 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
 
   // Commando
+  SPELLO(SPELL_IRON_SKIN,             30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
   SPELLO(SPELL_RUSH,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
 
   // Mercenary
-  SPELLO(SPELL_IRONSKIN,              30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM,                                                                cast_ironskin);
+  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  130, TAR_IGNORE,                                                                   cast_tremor);
   SPELLO(SPELL_CLOUD_CONFUSION,       30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
-  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_tremor);
   SPELLO(SPELL_INCENDIARY_CLOUD_NEW,  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_incendiary_cloud);
 
   // Legionnaire
-  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_IGNORE,                                                                   cast_rimefang);
-  SPELLO(SPELL_DEVASTATION,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
+  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  115, TAR_IGNORE,                                                                   cast_rimefang);
+  SPELLO(SPELL_DEVASTATION,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
 
   // Other
   SPELLO(SPELL_MANA_HEAL,             30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
   SPELLO(SPELL_GREAT_MANA,            30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_great_mana);
-  SPELLO(SPELL_LEGEND_LORE,           30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 57,   25, TAR_OBJ_INV,                                                                  cast_legend_lore);
-  
 }

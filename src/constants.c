@@ -139,11 +139,11 @@ const char * const spell_wear_off_msg[] = {
   "!power word kill!",
   "!dispel magic!",
   "!conflagration!",
-  "!mass invisibility!",
+  "",
   "!convergence!",
   "!enchant armour!",
   "!disintegrate!",
-  "Your head clears and you no longer feel confused.",
+  "!hidden blade!",
   "!vampiric touch!",
   "!searing orb!",
   "!clairvoyance!",
@@ -161,10 +161,10 @@ const char * const spell_wear_off_msg[] = {
   "You feel as if the gods have forsaken you!",
   "Your pulse slows.",
   "The gnawing hunger slowly fades.",
-  "!cover!",
+  "!scan!",
   "Your hands slow down.",
-  "!legend lore!", /* 155 */
-  "!hidden blade!", /* 156 */
+  "", /* 155 */
+  "", /* 156 */
   "", /* 157 */
   "", /* 158 */
   "", /* 159 */
@@ -181,7 +181,7 @@ const char * const spell_wear_off_msg[] = {
   "", /* 170 */
   "", /* 171 */
   "You feel a little less weak.", /* 172 Debilitate */
-  "!Mana Heal!",
+  "!mana heal!",
   "",/*174*/
   "Your movements become less of a blur.", /* 175 Blur */
   "",/*176*/
@@ -196,7 +196,7 @@ const char * const spell_wear_off_msg[] = {
   "!trophy!",/*185*/
   "!frenzy!",/*186*/
   "!power of faith!",/*187*/
-  "The cloud of fire surrounding you dies out.", /* 188 Incendiary Cloud (New) */
+  "", /* 188 Incendiary Cloud (New) */
   "The bright white aura around your body fades.",/*189*/
   "!wrath of god!",/*190*/
   "The force disrupting your white aura disappears.",/*191*/
@@ -208,8 +208,8 @@ const char * const spell_wear_off_msg[] = {
   "Your slowly slip out of your regenerative trance.",/*197*/
   "!banzai!", /*198*/
   "!headbutt!",/* 199 */
-  "!skip!",/*200*/
-  "!blessing of sacrifice!", /* 201 */
+  "!maim!",/*200*/
+  "", /* 201 */
   "You don't feel as powerful.",/*202*/
   "!demonic thunder!",/*203*/
   "!shadowstep!", /* 204 Used to be Shadow-Walk */
@@ -243,7 +243,7 @@ const char * const spell_wear_off_msg[] = {
   "!trusty steed!",/*232*/
   "!backfist!",/*233*/
   "",/*234*/
-  "You seem more visible.",/*235*/
+  "",/*235*/
   "You feel less disoriented.",/*236*/
   "!lunge!",/*237*/
   "You calm down and feel less angry.",/*238*/
@@ -251,7 +251,7 @@ const char * const spell_wear_off_msg[] = {
   "!protect!",/*240*/
   "!wrath of ancients!",/*241*/
   "!victimize!", /*242*/
-  "You feel less focused.",/*243*/
+  "!focus!",/*243*/
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
@@ -1923,6 +1923,8 @@ const char *immune_bits[] =  {
   "BACKSTAB",
   "AMBUSH",
   "ASSAULT",
+  "PHYSICAL",
+  "MAGICAL",
   "\n"
 };
 
@@ -1933,9 +1935,9 @@ const char *immune_bits2[] =  {
   "CHEMICAL",
   "ACID",
   "FEAR",
-  "<IMMUNE2_UNUSED>",
+  "BASH",
   "CIRCLE",
-  "<IMMUNE2_UNUSED2>",
+  "BACKFLIP",
   "STEAL",
   "\n"
 };
@@ -2152,73 +2154,6 @@ const int thaco[11][58] = {
   5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
   3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
   1,1,1,1,1,1,1} /*51-57*/
-};
-
-/* Strength Apply */
-/* tohit, todam, carry_w, wield_w */
-const struct str_app_type str_app[] = {
-  { -5, -4,    0,  0 },  /* 0  */
-  { -5, -4,    3,  1 },  /* 1  */
-  { -3, -2,    3,  2 },
-  { -3, -1,   10,  3 },  /* 3  */
-  { -2, -1,   25,  4 },
-  { -2, -1,   55,  5 },  /* 5  */
-  { -1,  0,   80,  6 },
-  { -1,  0,   90,  7 },
-  {  0,  0,  100,  8 },
-  {  0,  0,  100,  9 },
-  {  0,  0,  115, 10 }, /* 10  */
-  {  0,  0,  115, 11 },
-  {  0,  0,  140, 12 },
-  {  0,  0,  140, 13 },
-  {  0,  0,  170, 14 },
-  {  0,  0,  170, 15 }, /* 15  */
-  {  0,  1,  195, 16 },
-  {  1,  1,  220, 18 },
-  {  1,  2,  255, 20 }, /* 18  */
-  {  3,  7,  640, 31 },
-  {  3,  8,  700, 32 }, /* 20  */
-  {  4,  9,  810, 33 },
-  {  4, 10,  970, 34 },
-  {  5, 11, 1130, 35 },
-  {  6, 12, 1440, 36 },
-  {  7, 14, 1750, 37 }, /* 25       */
-  {  1,  3,  280, 22 }, /* 18/01-50 */
-  {  2,  3,  305, 24 }, /* 18/51-75 */
-  {  2,  4,  330, 26 }, /* 18/76-90 */
-  {  2,  5,  380, 28 }, /* 18/91-99 */
-  {  3,  6,  480, 30 }  /* 18/100   */
-};
-
-/* Dexterity Skill Apply (Thief Only) */
-/* p_pocket, sneak, hide */
-const struct dex_skill_type dex_app_skill[] = {
-  {-99, -99, -60}, /* 0 */
-  {-90, -90, -50}, /* 1 */
-  {-80, -80, -45},
-  {-70, -70, -40},
-  {-60, -60, -35},
-  {-50, -50, -30}, /* 5 */
-  {-40, -40, -25},
-  {-30, -30, -20},
-  {-20, -20, -15},
-  {-15, -20, -10},
-  {-10, -15,  -5}, /* 10 */
-  { -5, -10,   0},
-  {  0,  -5,   0},
-  {  0,   0,   0},
-  {  0,   0,   0},
-  {  0,   0,   0}, /* 15 */
-  {  0,   0,   0},
-  {  5,   5,   5},
-  { 10,  10,  10},
-  { 15,  15,  15},
-  { 15,  15,  15}, /* 20 */
-  { 20,  15,  20},
-  { 20,  20,  20},
-  { 25,  20,  20},
-  { 25,  25,  25},
-  { 25,  25,  25}  /* 25 */
 };
 
 /* Backstab Multiplyer  */
@@ -2471,6 +2406,73 @@ const byte circle_mult[] = {
   7   /* 57 */
 };
 
+/* Strength Apply */
+/* tohit, todam, carry_w, wield_w */
+const struct str_app_type str_app[] = {
+  { -5, -4,    0,  0 }, /* 0 */
+  { -5, -4,    3,  1 }, /* 1 */
+  { -3, -2,    3,  2 },
+  { -3, -2,   10,  3 }, /* 3 */
+  { -2, -1,   25,  4 },
+  { -2, -1,   55,  5 }, /* 5 */
+  { -1,  0,   80,  6 },
+  { -1,  0,   90,  7 },
+  {  0,  0,  100,  8 },
+  {  0,  0,  100,  9 },
+  {  0,  0,  115, 10 }, /* 10 */
+  {  0,  0,  115, 11 },
+  {  0,  0,  140, 12 },
+  {  0,  0,  140, 13 }, /* 13 */
+  {  0,  0,  170, 14 },
+  {  0,  0,  170, 15 }, /* 15 */
+  {  0,  1,  195, 16 },
+  {  1,  1,  220, 18 },
+  {  1,  2,  255, 20 }, /* 18 */
+  {  3,  7,  640, 31 },
+  {  3,  8,  700, 32 }, /* 20 */
+  {  4,  9,  810, 33 },
+  {  4, 10,  970, 34 },
+  {  5, 11, 1130, 35 },
+  {  6, 12, 1440, 36 },
+  {  7, 14, 1750, 37 }, /* 25  */
+  {  1,  3,  280, 22 }, /* 18/01-50 */
+  {  2,  3,  305, 24 }, /* 18/51-75 */
+  {  2,  4,  330, 26 }, /* 18/76-90 */
+  {  2,  5,  380, 28 }, /* 18/91-99 */
+  {  3,  6,  480, 30 }  /* 18/100   */
+};
+
+/* Dexterity Skill Apply */
+/* p_pocket, sneak, hide */
+const struct dex_skill_type dex_app_skill[] = {
+  {-99, -99, -60}, /* 0 */
+  {-90, -90, -50}, /* 1 */
+  {-80, -80, -45},
+  {-70, -70, -40},
+  {-60, -60, -35},
+  {-50, -50, -30}, /* 5 */
+  {-40, -40, -25},
+  {-30, -30, -20},
+  {-20, -20, -15},
+  {-15, -20, -10},
+  {-10, -15,  -5}, /* 10 */
+  { -5, -10,   0},
+  {  0,  -5,   0},
+  {  0,   0,   0}, /* 13 */
+  {  0,   0,   0},
+  {  0,   0,   0}, /* 15 */
+  {  0,   0,   0},
+  {  5,   5,   5},
+  { 10,  10,  10},
+  { 15,  15,  15},
+  { 15,  15,  15}, /* 20 */
+  { 20,  20,  20},
+  { 20,  20,  20},
+  { 25,  25,  25},
+  { 25,  25,  25},
+  { 30,  30,  30}  /* 25 */
+};
+
 /* Dexterity Apply */
 /* defensive, prac_bonus */
 struct dex_app_type dex_app[] = {
@@ -2486,7 +2488,7 @@ struct dex_app_type dex_app[] = {
   {  0,  0},
   {  0,  0}, /* 10 */
   {  0,  0},
-  {  0,  0},
+  {  0,  0}, /* 13 */
   { -2,  0},
   { -4,  0},
   { -6,  0}, /* 15 */
@@ -2507,92 +2509,92 @@ struct dex_app_type dex_app[] = {
 struct con_app_type con_app[] = {
   {-4, -3,  0}, /* 0 */
   {-3, -2,  0}, /* 1 */
-  {-2, -2,  0},
-  {-2, -2,  0},
-  {-1, -1,  0},
-  {-1, -1,  0}, /* 5 */
-  {-1, -1,  0},
-  { 0, -1,  0},
+  {-3, -2,  0},
+  {-2, -1,  0},
+  {-2, -1,  0},
+  {-1,  0,  0}, /* 5 */
+  {-1,  0,  0},
+  { 0,  0,  0},
   { 0,  0,  0},
   { 0,  0,  0},
   { 0,  0,  0}, /* 10 */
   { 0,  0,  0},
-  { 0,  1,  0},
-  { 0,  2,  0},
-  { 0,  3,  0},
-  { 1,  4,  0}, /* 15 */
-  { 1,  5,  0},
-  { 2,  6,  0},
-  { 3,  7,  0}, /* 18 */
-  { 3,  8,  2},
+  { 0,  0,  0},
+  { 0,  0,  0}, /* 13 */
+  { 1,  2,  0},
+  { 2,  3,  0}, /* 15 */
+  { 2,  4,  0},
+  { 3,  5,  0},
+  { 3,  6,  0}, /* 18 */
+  { 4,  7,  2},
   { 4,  9,  4}, /* 20 - 4% damage reduction before Sancutary/etc. */
-  { 5, 12,  6},
-  { 5, 15,  8},
-  { 5, 19, 12},
-  { 6, 22, 16},
+  { 5, 11,  6},
+  { 5, 14,  8},
+  { 6, 17, 12},
+  { 6, 21, 16},
   { 7, 25, 20}  /* 25 - 20% damage reduction before Sancutary/etc. */
 };
 
 /* Intelligence Apply */
 /* learn, conc */
 struct int_app_type int_app[] = {
-  {3,  -20}, /* 0 */
-  {5,  -15}, /* 1 */
-  {7,  -15},
-  {8,  -15},
-  {9,  -15},
+  { 5, -20}, /* 0 */
+  { 6, -15}, /* 1 */
+  { 7, -15},
+  { 8, -15},
+  { 9, -15},
   {10, -10}, /* 5 */
   {11, -10},
   {12, -10},
   {13, -10},
-  {15, -10},
-  {17,  -5}, /* 10 */
-  {19,  -5},
-  {22,  -5},
-  {25,  -5},
-  {30,  -2},
+  {14,  -5},
+  {15,  -5}, /* 10 */
+  {17,  -5},
+  {20,  -5},
+  {25,   0}, /* 13 */
+  {30,   0},
   {35,   0}, /* 15 */
   {40,   5},
   {45,  10},
   {50,  15}, /* 18 - 1.5% conc */
-  {53,  17},
-  {55,  20}, /* 20 - 2% conc */
+  {52,  17},
+  {54,  20}, /* 20 - 2% conc */
   {56,  22},
   {58,  24},
   {60,  26},
-  {63,  28},
-  {65,  30}  /* 25 - 3% conc */
+  {62,  28},
+  {64,  30}  /* 25 - 3% conc */
 };
 
 /* Wisdom Apply */
 /* bonus, conc */
 struct wis_app_type wis_app[] = {
-  {0, -20}, /* 0 */
-  {0, -15}, /* 1 */
-  {0, -15},
-  {0, -15},
-  {0, -15},
-  {0, -10}, /* 5 */
-  {0, -10},
-  {0, -10},
-  {0, -10},
-  {0, -10},
-  {0,  -5}, /* 10 */
-  {0,  -5},
-  {2,  -5},
-  {2,  -5},
-  {3,  -2},
-  {3,   0}, /* 15 */
-  {3,   5},
-  {4,  10},
-  {5,  15}, /* 18 - 1.5% conc */
-  {6,  17},
-  {6,  20}, /* 20 - 2% conc */
-  {6,  22},
-  {6,  24},
-  {6,  26},
-  {6,  28},
-  {6,  30}  /* 25 - 3% conc */
+  { 0, -20}, /* 0 */
+  { 0, -15}, /* 1 */
+  { 0, -15},
+  { 0, -15},
+  { 0, -15},
+  { 0, -10}, /* 5 */
+  { 0, -10},
+  { 0, -10},
+  { 0, -10},
+  { 0,  -5},
+  { 0,  -5}, /* 10 */
+  { 0,  -5},
+  { 0,  -5},
+  { 0,   0}, /* 13 */
+  { 1,   0},
+  { 2,   0}, /* 15 */
+  { 3,   5},
+  { 4,  10},
+  { 5,  15}, /* 18 - 1.5% conc */
+  { 6,  17},
+  { 6,  20}, /* 20 - 2% conc */
+  { 7,  22},
+  { 7,  24},
+  { 8,  26},
+  { 9,  28},
+  {10,  30}  /* 25 - 3% conc */
 };
 
 /* Cleric Skills */
@@ -2622,8 +2624,6 @@ const char * const thief_skills[] = {
   "trophy",       /* Rogue SC2 */
   "vehemence",    /* Rogue SC3 */
   "trip",         /* Rogue SC4 */
-  "fade",         /* Bandit SC1 */
-  "impair",       /* Bandit SC2 */
   "evasion",      /* Bandit SC5 */
   "\n"
 };
@@ -2646,7 +2646,7 @@ const char * const warrior_skills[] = {
   "awareness",    /* Warlord SC1 */
   "protect",      /* Warlord SC2 */
   "flank",        /* Gladiator SC1 */
-  "disembowel",   /* Gladiator SC2 */
+  "maim",         /* Gladiator SC2 */
   "headbutt",     /* Gladiator SC4 */
   "hostile",      /* Gladiator SC5 */
   "\n",

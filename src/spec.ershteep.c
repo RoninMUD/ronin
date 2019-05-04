@@ -231,7 +231,7 @@ int ersh_female_citizen(CHAR *fcit, CHAR *ch, int cmd, char *arg)
     do_say(fcit,"Start your brawling in some other city, we're a peaceful people!",CMD_SAY);
     act("$n slaps $N in the face.",0,fcit,0,vict,TO_NOTVICT);
     act("$n slaps you in the face.",0,fcit,0,vict,TO_VICT);
-    damage(fcit,vict,23,TYPE_UNDEFINED,DAM_SKILL);
+    damage(fcit,vict,23,TYPE_UNDEFINED,DAM_PHYSICAL);
   }
   return FALSE;
 }
@@ -252,7 +252,7 @@ int ersh_male_citizen(CHAR *mcit, CHAR *ch, int cmd, char *arg)
       if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
       act("$N is clipped by a flailing limb as $n spins wildly around the room.",0,mcit,0,vict,TO_NOTVICT);
       act("You are clipped by a flailing limb as $n spins wildly around the room.",0,mcit,0,vict,TO_VICT);
-      damage(mcit,vict,17,TYPE_UNDEFINED,DAM_SKILL);
+      damage(mcit,vict,17,TYPE_UNDEFINED,DAM_PHYSICAL);
     }
   }
   return FALSE;
@@ -284,7 +284,7 @@ int ersh_child(CHAR *child, CHAR *ch, int cmd, char *arg)
         if (!vict) break;
         act("$n punches $N in the groin.",0,child,0,vict,TO_NOTVICT);
         act("$n punches you in the groin.",0,child,0,vict,TO_VICT);
-        damage(child,vict,41,TYPE_UNDEFINED,DAM_SKILL);
+        damage(child,vict,41,TYPE_UNDEFINED,DAM_PHYSICAL);
         WAIT_STATE(vict,PULSE_VIOLENCE*3);
         break;
       default:
@@ -311,7 +311,7 @@ int ersh_dealer(CHAR *dealer, CHAR *ch, int cmd, char *arg)
         act("$n whistles to the bouncers hidden in the shadows.",0,dealer,0,0,TO_ROOM);
         act("The casino bouncers ruthlessly beat $N to a pulp.",0,dealer,0,vict,TO_NOTVICT);
         act("The casino bouncers ruthlessly beat you to a pulp.",0,dealer,0,vict,TO_VICT);
-        damage(dealer,vict,41,TYPE_UNDEFINED,DAM_SKILL);
+        damage(dealer,vict,41,TYPE_UNDEFINED,DAM_PHYSICAL);
         WAIT_STATE(vict,PULSE_VIOLENCE*3);
       }
       break;
@@ -342,7 +342,7 @@ int ersh_dealer(CHAR *dealer, CHAR *ch, int cmd, char *arg)
       do_say(dealer,"Conspiring to cheat the casino eh? Is that what's going on here?",CMD_SAY);
       act("$n fans out a deck of cards and hurls them at $N like darts.",0,dealer,0,ch,TO_NOTVICT);
       act("$n fans out a deck of cards and hurls them at your chest like darts.",0,dealer,0,ch,TO_VICT);
-      damage(dealer,ch,number(3,13)*3,TYPE_UNDEFINED,DAM_SKILL);
+      damage(dealer,ch,number(3,13)*3,TYPE_UNDEFINED,DAM_PHYSICAL);
       break;
     default:
       break;
@@ -457,7 +457,7 @@ int ersh_jarve(CHAR *jarve, CHAR *ch, int cmd, char *arg)
         if (!vict) break;
         act("$n rams $N with his enormous belly, pinning $M against the wall.",0,jarve,0,vict,TO_NOTVICT);
         act("$n rams you with his enormous belly, pinning you against the wall.",0,jarve,0,vict,TO_VICT);
-        damage(jarve,vict,61,TYPE_UNDEFINED,DAM_SKILL);
+        damage(jarve,vict,61,TYPE_UNDEFINED,DAM_PHYSICAL);
         WAIT_STATE(vict,PULSE_VIOLENCE*3);
         break;
       case 3:
@@ -466,7 +466,7 @@ int ersh_jarve(CHAR *jarve, CHAR *ch, int cmd, char *arg)
         if (!vict) break;
         act("$n picks up the nearest chair and hurls it at $N.",0,jarve,0,vict,TO_NOTVICT);
         act("$n picks up the nearest chair and hurls it at you.",0,jarve,0,vict,TO_VICT);
-        damage(jarve,vict,41,TYPE_UNDEFINED,DAM_SKILL);
+        damage(jarve,vict,41,TYPE_UNDEFINED,DAM_PHYSICAL);
         stop_fighting(vict);
         WAIT_STATE(vict,PULSE_VIOLENCE*2);
         break;

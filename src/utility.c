@@ -210,18 +210,19 @@ int32_t MAX(int32_t a, int32_t b) {
 /* End New RNG Section */
 
 
+// TODO: Change to not use static char.
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL];
-
   assert(ch);
   assert(vict);
+
+  static char buf[MIL];
 
   memset(buf, 0, sizeof(buf));
 
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
   }
-  else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {
+  else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
     signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
     strlcat(buf, GET_NAME(ch), sizeof(buf));
   }
@@ -237,18 +238,19 @@ char *PERS(CHAR *ch, CHAR *vict) {
 }
 
 
+// TODO: Change to not use static char.
 char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL];
-
   assert(ch);
   assert(vict);
+
+  static char buf[MIL];
 
   memset(buf, 0, sizeof(buf));
 
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
   }
-  else if (CAN_SEE(vict, ch) || ((mode == PERS_MORTAL) && IS_MORTAL(ch))) {
+  else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
     signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
     strlcat(buf, GET_NAME(ch), sizeof(buf));
     strlcat(buf, "'s", sizeof(buf));
@@ -290,26 +292,21 @@ char *ENDCHCLR(CHAR *ch) {
 /* 50% chance when victim level is the same as the attacker.
    100% chance when victim level is 10 levels or less than the attacker.
    0% chance when victim level is 10 levels or higher than the attacker. */
-bool breakthrough(CHAR *ch, CHAR *victim, int breakthrough_type)
-{
-  int check = 0;
-
-  if ((breakthrough_type == BT_INVUL && !IS_AFFECTED(victim, AFF_INVUL)) ||
-      (breakthrough_type == BT_SPHERE && !IS_AFFECTED(victim, AFF_SPHERE))) {
+bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type) {
+  if (((breakthrough_type == BT_INVUL) && !IS_AFFECTED(victim, AFF_INVUL)) ||
+      ((breakthrough_type == BT_SPHERE) && !IS_AFFECTED(victim, AFF_SPHERE))) {
     return TRUE;
   }
 
-  if (breakthrough_type == BT_INVUL)
-  {
+  if (breakthrough_type == BT_INVUL) {
     /* Invulnerability never applies to Hostile victims. */
-    if (affected_by_spell(victim, SKILL_HOSTILE)) return TRUE;
+    if (IS_SET(GET_PFLAG2(victim), PLR2_HOSTILE)) return TRUE;
 
-    /* Thief Level 50: Cunning */
-    if (GET_CLASS(ch) == CLASS_THIEF &&
-        GET_LEVEL(ch) >= 50 &&
-        GET_MANA(ch) >= 10 &&
-        affected_by_spell(ch, SKILL_CUNNING))
-    {
+    /* Cunning */
+    if ((IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
+        ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE)) &&
+        IS_SET(GET_PFLAG2(ch), PLR2_CUNNING) &&
+        (GET_MANA(ch) >= 10)) {
       act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
       act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
       act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
@@ -320,10 +317,9 @@ bool breakthrough(CHAR *ch, CHAR *victim, int breakthrough_type)
     }
   }
 
-  check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
+  int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
 
-  switch (GET_CLASS(ch))
-  {
+  switch (GET_CLASS(ch)) {
     case CLASS_CLERIC:
       if (breakthrough_type == BT_INVUL) check -= 10;
       else if (breakthrough_type == BT_SPHERE) check -= 5;
@@ -364,13 +360,9 @@ bool breakthrough(CHAR *ch, CHAR *victim, int breakthrough_type)
       if (breakthrough_type == BT_INVUL) check += 5;
       else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
-    default:
-      break;
   }
-
-  if (number(1, 100) <= check) return TRUE;
-
-  return FALSE;
+  
+  return (number(1, 100) <= check);
 }
 
 int GETOBJ_WEIGHT(struct obj_data *obj)
@@ -919,15 +911,6 @@ struct time_info_data age(struct char_data *ch)
   return player_age;
 }
 
-OBJ *EQ(CHAR *ch, int loc) {
-  OBJ *obj = NULL;
-
-  if ((loc >= WEAR_LIGHT) && (loc <= WEAR_HOLD) && ch->equipment[loc]) {
-    obj = ch->equipment[loc];
-  }
-
-  return obj;
-}
 
 char
 is_carrying_obj (struct char_data *ch, int virtual) {
@@ -1784,30 +1767,31 @@ int STRENGTH_APPLY_INDEX(struct char_data *ch) {
   return index;
 }
 
-int IS_GROUPED(struct char_data *ch, struct char_data *vict) {
-  struct char_data *k;
-  struct follow_type *f;
-  int found_ch=0,found_vict=0;
 
-  if(!IS_AFFECTED(vict, AFF_GROUP)) return FALSE;
-  if(!IS_AFFECTED(ch, AFF_GROUP)) return FALSE;
+bool SAME_GROUP(CHAR *ch1, CHAR *ch2) {
+  if (!ch1 || !ch2) return FALSE;
 
-  if(vict->master)
-    k=vict->master;
-  else
-    k=vict;
+  if (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP)) return FALSE;
 
-  if(!IS_AFFECTED(k, AFF_GROUP)) return FALSE;
-  if(k==ch) found_ch=TRUE;
-  if(k==vict) found_vict=TRUE;
+  CHAR *group_leader = (GET_MASTER(ch1) ? GET_MASTER(ch1) : ch1);
 
-  for(f=k->followers; f; f=f->next) {
-     if(f->follower==ch) found_ch=TRUE;
-     if(f->follower==vict) found_vict=TRUE;
+  if (!IS_AFFECTED(group_leader, AFF_GROUP)) return FALSE;
+
+  bool found_ch1 = FALSE, found_ch2 = FALSE;
+
+  if (group_leader == ch1) found_ch1 = TRUE;
+  if (group_leader == ch2) found_ch2 = TRUE;
+
+  for (FOL *follower = group_leader->followers; follower && (!found_ch1 && !found_ch2); follower = follower->next) {
+    CHAR *group_member = follower->follower;
+
+    if (group_member == ch1) found_ch1 = TRUE;
+    if (group_member == ch2) found_ch2 = TRUE;
   }
-  if(found_ch && found_vict) return TRUE;
-  return FALSE;
+
+  return (found_ch1 && found_ch2);
 }
+
 
 void log_cmd(char *file, char *fmt, ...)
 {
@@ -1882,6 +1866,32 @@ get_weapon_type_desc(OBJ *obj) {
   }
 
   return result;
+}
+
+
+int count_attackers(CHAR *ch) {
+  int count = 0;
+
+  for (CHAR *attacker = world[CHAR_REAL_ROOM(ch)].people; attacker; attacker = attacker->next_in_room) {
+    if (GET_OPPONENT(attacker) == ch) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+
+int qcmp_int(const void *a, const void *b) {
+  return *(int *)a - *(int *)b;
+}
+
+int qcmp_int_asc(const void *a, const void *b) {
+  return qcmp_int(a, b);
+}
+
+int qcmp_int_desc(const void *a, const void *b) {
+  return qcmp_int(b, a);
 }
 
 
@@ -1978,9 +1988,22 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
 }
 
 
+bool in_int_array(int value, int *array, size_t num_elems) {
+  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
+    for (size_t i = 0; i < (num_elems - 1); i++) {
+      if (array[i] == value) {
+        return TRUE;
+      }
+    }
+  }
+
+  return FALSE;
+}
+
+
 /* Shuffle an array of integers. */
 void shuffle_int_array(int *array, size_t num_elems) {
-  if (num_elems > 1 && num_elems < UINT_MAX)   {
+  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
     for (size_t i = 0; i < (num_elems - 1); i++) {
       size_t j = i + number(0, (num_elems - i) - 1);
       int t = array[j];
@@ -1993,7 +2016,7 @@ void shuffle_int_array(int *array, size_t num_elems) {
 
 /* Shuffle a 2D array of integers. */
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
-  if (num_elems > 1 && num_elems < UINT_MAX)   {
+  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
     for (size_t i = 0; i < num_elems - 1; i++) {
       size_t j = i + number(0, (num_elems - i) - 1);
       int t0 = array[j][0];

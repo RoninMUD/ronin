@@ -33,6 +33,7 @@
 #include "enchant.h"
 #include "meta.h"
 #include "quest.h"
+#include "subclass.h"
 
 /* extern functions */
 
@@ -600,20 +601,29 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
       send_to_char(buf, ch);
 
+      /* Store 'simple' affects "all in one go"; for 'complex' affects
+         (e.g. warchant, wrath of god, etc.), or enchantments, use the
+         explicit method. */
+      bool af_list[MAX_SPL_LIST];
+      memset(af_list, FALSE, sizeof(bool) * MAX_SPL_LIST);
+      for (AFF *af = target->affected; af; af = af->next) {
+        af_list[af->type] = TRUE;
+      }
+
       if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
         act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
-        if (affected_by_spell(target, SMELL_FARTMOUTH)) {
+        if (af_list[SMELL_FARTMOUTH]) {
           act("......brown fumes waft from $n's mouth.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SKILL_CAMP)) {
+        if (af_list[SKILL_CAMP]) {
           act("......$n is camping here.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SKILL_PRAY)) {
+        if (af_list[SKILL_PRAY]) {
           act("......$n is bowing $s head in prayer.", FALSE, target, 0, ch, TO_VICT);
         }
 
@@ -624,29 +634,29 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         act("......$n is sheltered from death by a divine aura.", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if (IS_AFFECTED(target, AFF_SANCTUARY) && !affected_by_spell(target, SPELL_DISRUPT_SANCT)) {
+      if (IS_AFFECTED(target, AFF_SANCTUARY) && !af_list[SPELL_DISRUPT_SANCT]) {
         act("......$n glows with a bright light!", FALSE, target, 0, ch, TO_VICT);
       }
-      else if (IS_AFFECTED(target, AFF_SANCTUARY) && affected_by_spell(target, SPELL_DISRUPT_SANCT)) {
+      else if (IS_AFFECTED(target, AFF_SANCTUARY) && af_list[SPELL_DISRUPT_SANCT]) {
         act("......$n's protective aura has been disrupted!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_FORTIFICATION)) || affected_by_spell(target, SPELL_FORTIFICATION)) {
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_FORTIFICATION)) || af_list[SPELL_FORTIFICATION]) {
         act("......$n is protected by a barrier of magical fortification!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED(target, AFF_FURY)) || affected_by_spell(target, SPELL_FURY)) {
+      if ((!IS_NPC(target) && IS_AFFECTED(target, AFF_FURY)) || af_list[SPELL_FURY]) {
         act("......$n is snarling and fuming with fury!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_RAGE)) || affected_by_spell(target, SPELL_RAGE)) {
+      if ((!IS_NPC(target) && IS_AFFECTED2(target, AFF2_RAGE)) || af_list[SPELL_RAGE]) {
         act("......$n is seething with hatred and rage!", FALSE, target, 0, ch, TO_VICT);
       }
 
-      if (IS_AFFECTED(target, AFF_SPHERE) && !affected_by_spell(target, SPELL_DISTORTION)) {
+      if (IS_AFFECTED(target, AFF_SPHERE) && !af_list[SPELL_DISTORTION]) {
         act("......$n is surrounded by a golden sphere!", FALSE, target, 0, ch, TO_VICT);
       }
-      else if (IS_AFFECTED(target, AFF_SPHERE) && affected_by_spell(target, SPELL_DISTORTION)) {
+      else if (IS_AFFECTED(target, AFF_SPHERE) && af_list[SPELL_DISTORTION]) {
         act("......$n's golden sphere seems to shimmer and blur in weakness!", FALSE, target, 0, ch, TO_VICT);
       }
 
@@ -655,51 +665,51 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
-        if (affected_by_spell(target, SPELL_IRONSKIN)) {
+        if (af_list[SPELL_IRON_SKIN]) {
           act("......$n's skin is as hard and impervious as iron.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_ORB_PROTECTION)) {
+        if (af_list[SPELL_ORB_PROTECTION]) {
           act("......a shield of power emanates from an orb above $n's head.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_BLADE_BARRIER)) {
+        if (af_list[SPELL_BLADE_BARRIER]) {
           act("......$n is surrounded by a barrier of whirling blades.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_DESECRATE)) {
+        if (af_list[SPELL_DESECRATE]) {
           act("......$n's sinister presence desecrates the surroundings.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_BLACKMANTLE)) {
+        if (af_list[SPELL_BLACKMANTLE]) {
           act("......$n is surrounded by an eerie mantle of darkness.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_QUICK)) {
+        if (af_list[SPELL_QUICK]) {
           act("......$n's words and gestures are magically quickened.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_HASTE)) {
+        if (af_list[SPELL_HASTE]) {
           act("......$n's hastened actions move faster than reality.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_MYSTIC_SWIFTNESS)) {
+        if (af_list[SPELL_MYSTIC_SWIFTNESS]) {
           act("......$n's hands move with mystical swiftness.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_BLUR)) {
+        if (af_list[SPELL_BLUR]) {
           act("......$n's movements blur in and out of reality.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_RUSH)) {
+        if (af_list[SPELL_RUSH]) {
           act("......$n's pulse rushes with supernatural speed.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_BLOOD_LUST)) {
+        if (af_list[SPELL_BLOOD_LUST]) {
           act("......$n thirsts for blood and lusts for carnage.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_SHADOW_WRAITH)) {
+        if (af_list[SPELL_SHADOW_WRAITH]) {
           int duration = duration_of_spell(target, SPELL_SHADOW_WRAITH);
 
           if (duration >= 0) {
@@ -719,27 +729,28 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        if (affected_by_spell(target, SPELL_BLINDNESS)) {
+        /* Inner Peace */
+        if (af_list[SPELL_BLINDNESS] && !(IS_MORTAL(target) && check_subclass(target, SC_MYSTIC, 3))) {
           act("......$n stumbles about wildly!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_PARALYSIS)) {
+        if (af_list[SPELL_PARALYSIS]) {
           act("......$n is completely immobilized!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_HOLD)) {
+        if (af_list[SPELL_HOLD]) {
           act("......$n is rooted to the ground!", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_DEBILITATE)) {
+        if (af_list[SPELL_DEBILITATE]) {
           act("......$n is enveloped by a greenish smoke.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_CLOUD_CONFUSION)) {
+        if (af_list[SPELL_CLOUD_CONFUSION]) {
           act("......$n drools absentmindedly.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (affected_by_spell(target, SPELL_INCENDIARY_CLOUD) || affected_by_spell(target, SPELL_INCENDIARY_CLOUD_NEW)) {
+        if (af_list[SPELL_INCENDIARY_CLOUD] || af_list[SPELL_INCENDIARY_CLOUD_NEW]) {
           act("......$n is enveloped by a huge ball of flame!", FALSE, target, 0, ch, TO_VICT);
         }
 
@@ -770,6 +781,16 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
             }
 
             break;
+          }
+        }
+
+        if (target->enchantments) {
+          if (enchanted_by(target, "Savaged (Maim)")) {
+            act("......$n has been horribly maimed!", FALSE, target, 0, ch, TO_VICT);
+          }
+
+          if (enchanted_by(target, "Staggering (Tremor)")) {
+            act("......$n is stumbling and staggering!", FALSE, target, 0, ch, TO_VICT);
           }
         }
 
@@ -955,7 +976,8 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
               break;
 
             case WIELD:
-              if (OBJ_TYPE(obj) == ITEM_2HWEAPON) {
+              if ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) &&
+                  !(IS_MORTAL(target) && check_subclass(target, SC_MERCENARY, 5) && EQ(target, HOLD) && (OBJ_TYPE(EQ(target, HOLD)) == ITEM_WEAPON))) { /* Sidearm */
                 printf_to_char(ch, "%s********\n\r", where[i]);
                 i++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
               }
@@ -1111,7 +1133,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
     send_to_char("You can't see anything but stars!\n\r", ch);
   else if (GET_POS(ch) == POSITION_SLEEPING)
     send_to_char("You can't see anything, you're sleeping!\n\r", ch);
-  else if ( IS_AFFECTED(ch, AFF_BLIND) )
+  else if (IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) /* Inner Peace */
     send_to_char("You can't see anything, you're blind!\n\r", ch);
   else if (IS_DARK(CHAR_REAL_ROOM(ch)) &&
            !IS_AFFECTED(ch, AFF_INFRAVISION) &&
@@ -1674,11 +1696,8 @@ void imm_grace_remove_enchant(CHAR *ch)
 /* Add the Immortali's Grace enchant. */
 void imm_grace_add_enchant(CHAR *ch)
 {
-  char buf[MSL];
   ENCH ench;
-
-  sprintf(buf, "Immortalis' Grace");
-  ench.name = buf;
+  ench.name = strdup("Immortalis' Grace");
   enchantment_to_char(ch, &ench, TRUE);
 }
 
@@ -2003,6 +2022,7 @@ char *get_club_name(CHAR *ch)
 struct affect {
   char name[MIL];
   int duration;
+  int interval;
   int type;
   int source;
 };
@@ -2134,11 +2154,6 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     if (IS_SET(OBJ_BITS(obj), AFF_SANCTUARY) &&
         IS_SET(GET_AFF(ch), AFF_SANCTUARY)) {
       equipment[SPELL_SANCTUARY] = TRUE;
-    }
-
-    if (IS_SET(OBJ_BITS(obj), AFF_CONFUSION) &&
-        IS_SET(GET_AFF(ch), AFF_CONFUSION)) {
-      equipment[SPELL_CONFUSION] = TRUE;
     }
 
     if (IS_SET(OBJ_BITS(obj), AFF_CURSE) &&
@@ -2317,6 +2332,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
         af_new.type = AFF_NONE;
         af_new.duration = tmp_ench->duration;
+        af_new.interval = tmp_ench->interval;
         af_new.source = AFF_SRC_EN;
 
         memcpy(&af_list[count], &af_new, sizeof(struct affect));
@@ -2376,7 +2392,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
         snprintf(buf, sizeof(buf), "'%.252s'", af_list[i].name);
 
-        if (af_list[i].duration == -1) {
+        if (af_list[i].duration < 0) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
         else {
@@ -2410,12 +2426,22 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
         snprintf(buf, sizeof(buf), "'%.252s'", af_list[i].name);
 
-        if (af_list[i].duration == -1) {
+        if (af_list[i].duration < 0) {
           snprintf(buf2, sizeof(buf2), "Never Expires");
         }
-        else {
+        else if (af_list[i].interval == ENCH_INTERVAL_TICK) {
           snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-            longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : " "));
+            longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : ""));
+        }
+        else if (af_list[i].interval == ENCH_INTERVAL_MOBACT) {
+          snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Second%s",
+            ((longest_dur < 2) ? longest_dur : (longest_dur - 1)),
+            (af_list[i].duration * 10),
+            ((af_list[i].duration != 1) ? "s" : ""));
+        }
+        else if (af_list[i].interval == ENCH_INTERVAL_ROUND) {
+          snprintf(buf2, sizeof(buf2), "Expires in: %*d Round%s",
+            longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : ""));
         }
 
         printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
@@ -3265,281 +3291,6 @@ Filter Example: who filter subclass (toggles Subclass data filter on/off).\n\r")
   return;
 }
 
-/* who class not working atm - Ranger Nov 97 */
-void do_who_old(struct char_data *ch, char *argument, int cmd) {
-  struct descriptor_data *d;
-  char buf[MAX_STRING_LENGTH], name[256], *p;
-  char   f = 1,m = 1;
-  char  s = 0;
-  int  dep = 1,quest=1;
-  int   cl = 0;
-  int sc=0;
-  char  cl_type[3] = "--";
-  int count = 0, count2 = 0, pos, level = 1, level2 = LEVEL_IMP;
-  char ok;
-
-  const char *god[] = {
-    "IMM",   /* 0 == 51 */
-    "DEI",
-    "TEM",
-    "WIZ",
-    "ETE",
-    "SUP",
-    "IMP"    /* 6 == 57 */
-  };
-
-  char *header_types[] = {
-    "--",
-    "Mu",
-    "Cl",
-    "Th",
-    "Wa",
-    "Ni",
-    "No",
-    "Pa",
-    "Ap",
-    "Av",
-    "Ba",
-    "Co",
-  };
-
-  for(argument = one_argument(argument, name);*name;
-      argument = one_argument(argument, name)) {
-    if(*name == '-') {
-      for( pos = 1, ok = TRUE; *(name + pos) != '\0' && ok; pos++) {
-        switch(*(name + pos)) {
-          case 'm':
-            f = 0;
-            m = 1;
-            break;
-          case 'f':
-            f = 1;
-            m = 0;
-            break;
-          case 'w':
-            s = 1;
-            break;
-          case 's':
-            sc = 1;
-            break;
-          case 'd':
-            dep = 0;
-            break;
-          case 'q':
-            quest=0;
-            break;
-/*          case 'mu':
-          cl = 1;
-            sprintf(cl_type,"Mu");
-          break;
-          case 'cl':
-            cl = 2;
-            sprintf(cl_type,"Cl");
-            break;
-          case 'th':
-        cl = 3;
-          sprintf(cl_type,"Th");
-        break;
-          case 'wa':
-        cl = 4;
-        sprintf(cl_type,"Wa");
-        break;
-          case 'ni':
-        cl = 5;
-        sprintf(cl_type,"Ni");
-        break;
-          case 'no':
-        cl = 6;
-        sprintf(cl_type,"No");
-        break;
-          case 'pa':
-        cl = 7;
-        sprintf(cl_type,"Pa");
-       break;
-          case 'ap':
-        cl = 8;
-        sprintf(cl_type,"Ap");
-        break;
-          case 'ba':
-        cl = 10;
-        sprintf(cl_type,"Ba");
-        break;
-          case 'co':
-        cl = 11;
-      sprintf(cl_type,"Co");
-        break;
-*/
-          default:
-            if(isdigit(*(name + pos))) {
-              level2 = MIN(LEVEL_IMP, atoi(name + pos));
-            } else {
-/*              send_to_char("Usage: who [-m] [-f] [-s] [-d] [-(class)] [number][][-number]\n\r" \
-                           "    or who [-[m][f][s][d][(class)][number]] [number][][-number]\n\r" \
-                           "Example: who -sf 30-32\n\r" \
-                           "         who -m33\n\r" \
-                           "         who -th\n\r", ch);*/
-              send_to_char("Usage: who [-m] [-f] [-w] [-d] [-q] [-s] [number][][-number]\n\r" \
-                           "    or who [-[m][f][w][d][q][s][number]] [number][][-number]\n\r" \
-                           "Example: who -wf 30-32\n\r" \
-                           "         who -m33\n\r", ch);
-              return;
-            }
-            ok = FALSE;
-            break;
-        }
-      }
-    } else {
-      if(isdigit(*name)) {
-        p = strchr(name, '-');
-        if(p) {
-          if(isdigit(*(p + 1))) level2 = MIN( LEVEL_IMP, atoi(p + 1));
-          *p = '\0';
-        }
-        level = MAX(1, atoi(name));
-      }
-    }
-  }
-
-  if( level > level2) {
-    sprintf(buf, "How you think anybody could be %d-%d level!?\n\r",level,level2);
-    send_to_char(buf, ch);
-    return;
-  }
-
-  send_to_char("Players\n\r-------\n\r",ch);
-  if(!s) {
-    for (d = descriptor_list; d; d = d->next) {
-      if (!d->connected && CAN_SEE(ch, d->character) &&
-         (GET_LEVEL(d->character) >= level) && (GET_LEVEL(d->character) <=level2) &&
-
-         ( ((GET_SEX(d->character) == SEX_MALE) && m) ||
-           ((GET_SEX(d->character) == SEX_FEMALE) && f) ||
-           (GET_SEX(d->character) == SEX_NEUTRAL)   ) &&
-          (IS_SET(d->character->specials.pflag, PLR_DEPUTY) || dep) &&
-          (IS_SET(d->character->specials.pflag, PLR_QUEST) || quest) &&
-          (!strcmp(header_types[cl], cl_type) || !cl) ) {
-
-        if(sc) {
-          if(GET_LEVEL(d->character) >= LEVEL_IMM) {
-            if(d->character->ver3.subclass)
-              sprintf(buf, "[ %s ] %s - %s %d", god[GET_LEVEL(d->character) - LEVEL_IMM],
-                    PERS(d->character,ch),subclass_name[d->character->ver3.subclass-1],d->character->ver3.subclass_level);
-            else
-              sprintf(buf, "[ %s ] %s - None", god[GET_LEVEL(d->character) - LEVEL_IMM],
-                    PERS(d->character,ch));
-          }
-          else {
-            if(d->character->ver3.subclass)
-              sprintf(buf, "[%2d %2s] %s - %s %d",GET_LEVEL(d->character),
-                    header_types[d->character->player.class],
-                    PERS(d->character,ch),subclass_name[d->character->ver3.subclass-1],d->character->ver3.subclass_level);
-            else
-              sprintf(buf, "[%2d %2s] %s - None",GET_LEVEL(d->character),
-                    header_types[d->character->player.class],PERS(d->character,ch));
-          }
-        }
-        else {
-          if(d->original) { /* If switched */
-            if(!CAN_SEE(ch, d->original)) continue;
-            sprintf(buf, "[%2d %2s] %s %s", GET_LEVEL(d->original),
-                    header_types[d->original->player.class],
-                    PERS(d->original,ch),d->original->player.title);
-          }
-          else if(GET_LEVEL(d->character) >= LEVEL_IMM) {
-            sprintf(buf, "[ %s ] %s %s", god[GET_LEVEL(d->character) - LEVEL_IMM],
-                    PERS(d->character,ch),d->character->player.title);
-          }
-          else {
-            sprintf(buf, "[%2d %2s] %s %s",GET_LEVEL(d->character),
-                    header_types[d->character->player.class],
-                    PERS(d->character,ch),d->character->player.title);
-          }
-        }
-
-        if(IS_SET(d->character->specials.pflag, PLR_DEPUTY))
-            strcat(buf, " (Deputy)");
-
-        if(IS_SET(d->character->specials.pflag, PLR_NOMESSAGE))
-            strcat(buf, " (deaf)");
-
-        if(IS_AFFECTED(d->character, AFF_INVISIBLE))
-            strcat(buf, " (invis)");
-
-        if(IS_AFFECTED(d->character, AFF_IMINV))
-            strcat(buf, " (impy)");
-
-        if(IS_SET(d->character->specials.pflag, PLR_KILL))
-            strcat(buf, " (killer)");
-
-        if(IS_SET(d->character->specials.pflag, PLR_THIEF))
-            strcat(buf, " (thief)");
-
-        if(IS_SET(d->character->specials.pflag, PLR_QUEST) &&
-             (GET_LEVEL(d->character)<LEVEL_IMM) )
-            strcat(buf, " (quest)");
-
-        if(IS_SET(d->character->new.imm_flags, WIZ_QUEST) &&
-             GET_LEVEL(ch) > GET_LEVEL(d->character))
-            strcat(buf, " (wq)");
-
-        if (d->character->new.wizinv > 1) {
-            send_to_char(buf,ch);
-            sprintf(buf, " (i%d)`q\n\r", d->character->new.wizinv);
-        }
-        else {
-          strcat(buf, "`q\n\r");
-        }
-        send_to_char(buf,ch);
-        ++count;
-      }
-    }
-  }
-  else {
-    for(d = descriptor_list; d; d = d->next) {
-      if(!d->connected && CAN_SEE(ch, d->character) &&
-         (GET_LEVEL(d->character) >= level) &&
-         (GET_LEVEL(d->character) <= level2) &&
-         (((GET_SEX(d->character) == SEX_MALE) && m) ||
-          ((GET_SEX(d->character) == SEX_FEMALE) && f) ||
-           (GET_SEX(d->character) == SEX_NEUTRAL)) &&
-          (IS_SET(d->character->specials.pflag, PLR_DEPUTY) || dep) &&
-          (IS_SET(d->character->specials.pflag, PLR_QUEST) || quest) &&
-          (!strcmp(header_types[cl], cl_type) || !cl)) {
-
-        if(d->original) { /* If switched */
-          if(!CAN_SEE(ch, d->original)) continue;
-          sprintf(buf, "[%2d %2s] %-25s", GET_LEVEL(d->original),
-                  header_types[d->original->player.class],
-                  PERS(d->original,ch));
-        }
-        else if(GET_LEVEL(d->character) >= LEVEL_IMM) {
-          sprintf(buf, "[ %s ] %-25s", god[GET_LEVEL(d->character) - LEVEL_IMM],
-          PERS(d->character,ch));
-        }
-        else {
-        sprintf(buf, "[%2d %2s] %-25s",GET_LEVEL(d->character),
-                header_types[d->character->player.class],
-                PERS(d->character,ch));
-        }
-        ++count2;
-        if (count2 == 2) {
-          strcat(buf, "\n\r");
-          count2 = 0;
-        }
-        ++count;
-        send_to_char(buf,ch);
-      }
-    }
-  }
-  sprintf(buf,"\n\rThere are %d visible players connected.\n\r",count);
-  send_to_char(buf,ch);
-  sprintf(buf,"With a boot time high of %d players.\n\r",max_connects);
-  send_to_char(buf,ch);
-  if(GET_LEVEL(ch)>=LEVEL_IMM) {
-    sprintf(buf,"%d players have connected since boot.\n\r",total_connects);
-    send_to_char(buf,ch);
-  }
-}
 
 void do_users(struct char_data *ch, char *argument, int cmd)
 {
@@ -3633,7 +3384,8 @@ void do_equipment(struct char_data *ch, char *argument, int cmd)
           }
           break;
         case WIELD:
-          if (OBJ_TYPE(equipment) == ITEM_2HWEAPON) {
+          if ((OBJ_TYPE(equipment) == ITEM_2H_WEAPON) &&
+              !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON))) { /* Sidearm */
             send_to_char(where[HOLD], ch);
             send_to_char("********\n\r", ch);
             equip_pos++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */

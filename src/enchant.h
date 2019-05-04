@@ -28,6 +28,11 @@ $State: Exp $
 #ifndef __ENCHANT_H__
 #define __ENCHANT_H__
 
+#define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (tick)
+#define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (mobact)
+#define ENCH_INTERVAL_ROUND  2 // Decrements every 3 seconds (round)
+#define ENCH_INTERVAL_USER   3 // User-defined interval, must be handled by spec
+
 #define TOTAL_ENCHANTMENTS 50
 
 #define ENCHANTO(nme,tpe,dration,mdifier,lcation,btvector,btvector2,fnc) { \
@@ -130,5 +135,10 @@ int enchanted_by(CHAR *victim,char *enchantment_name);
 int enchanted_by_type(CHAR *victim, int type);
 int get_rank(CHAR *ch);
 char *get_rank_name(CHAR *ch);
+
+ENCH *get_enchantment_by_name(CHAR *ch, char *name);
+ENCH *get_enchantment_by_type(CHAR *ch, int type);
+
+void enchantment_apply(CHAR *ch, bool overwrite, char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg));
 
 #endif /* __ENCHANT_H__ */

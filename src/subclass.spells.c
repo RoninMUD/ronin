@@ -33,6 +33,7 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
+#include "enchant.h"
 
 void cast_rally(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
@@ -180,21 +181,19 @@ void cast_cloud_confusion(ubyte level, CHAR *ch, char *arg, int type, CHAR *vict
       spell_cloud_confusion(level, ch, 0, 0);
       break;
     default:
-      log_f("Wrong type called in Cloud of Confusion!");
+      log_f("Wrong 'type' called in cast_cloud_confusion!");
       break;
   }
 }
 
 void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  AFF af;
-  CHAR *leader = NULL;
-  CHAR *tmp_victim = NULL;
-
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
 
     return;
   }
+
+  CHAR *leader = NULL;
 
   if (!IS_AFFECTED(ch, AFF_GROUP) || !GET_MASTER(ch)) {
     leader = ch;
@@ -206,102 +205,55 @@ void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   send_to_char("You whirl around, engulfing the area with a thick black cloud.\n\r", ch);
   act("$n whirls around, engulfing the area with a thick black cloud.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (victim = world[CHAR_REAL_ROOM(ch)].people; victim; victim = tmp_victim) {
-    tmp_victim = victim->next_in_room;
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
 
-    if (IS_IMMORTAL(victim)) continue;
-    if (victim == leader) continue;
-    if (GET_MASTER(victim) == leader) continue;
-    if (affected_by_spell(victim, SPELL_CLOUD_CONFUSION)) continue;
+    if (IS_IMMORTAL(temp_vict) || (temp_vict == leader) || (GET_MASTER(temp_vict) == leader) || affected_by_spell(temp_vict, SPELL_CLOUD_CONFUSION)) continue;
 
-    send_to_char("You feel disoriented.\n\r", victim);
+    send_to_char("You feel disoriented.\n\r", temp_vict);
 
-    af.type       = SPELL_CLOUD_CONFUSION;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-      af.duration = 1;
-    }
-    else {
-      af.duration = number(2, 6);
-    }
-    af.modifier   = -(number(5, 8));
-    if (IS_NIGHT) {
-      af.modifier -= 1;
-    }
-    af.location   = APPLY_HITROLL;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-
-    affect_to_char(victim, &af);
+    affect_apply(temp_vict, SPELL_CLOUD_CONFUSION, (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : (dice(1, 5) + 1)), (IS_NIGHT ? -(number(6, 9)) : -(number(5, 8))), APPLY_HITROLL, 0, 0);
   }
 }
 
 void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   if (type == SPELL_TYPE_SPELL) {
-    spell_rage(level, ch, 0, 0);
+    spell_rage(level, ch, ch, 0);
+
+    if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) {
+      spell_blood_lust(level, ch, ch, 0);
+    }
   }
   else {
-    log_f("Wrong 'type' called in: cast_rage()");
+    log_f("Wrong 'type' called in cast_rage!");
   }
 }
 
 void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(ch, SPELL_RAGE)) {
-    send_to_char("A surge of rage and bloodlust courses through your body!\n\r", ch);
-    act("$n's eyes turn blood-red, rage and bloodlust coursing through $s body.", FALSE, ch, 0, 0, TO_ROOM);
+  if (!affected_by_spell(victim, SPELL_RAGE)) {
+    send_to_char("Rage courses through your body!\n\r", victim);
+    act("Rage courses through $n's body!", FALSE, victim, 0, 0, TO_ROOM);
 
-    affect_apply(ch, SPELL_RAGE, 5, 0, 0, 0, AFF2_RAGE);
-  }
-
-  if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN) && !affected_by_spell(ch, SPELL_BLOOD_LUST)) {
-    affect_apply(ch, SPELL_BLOOD_LUST, 5, 0, 0, 0, 0);
+    affect_apply(victim, SPELL_RAGE, 5, 0, 0, 0, AFF2_RAGE);
   }
 }
 
-void cast_righteousness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_righteousness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
-      spell_righteousness(level, ch, 0, 0);
+      spell_righteousness(level, ch, ch, 0);
       break;
     default:
-      log_f("Wrong type called in righteousness!");
+      log_f("Wrong 'type' called in cast_righteousness!");
       break;
   }
 }
 
-void spell_righteousness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_righteousness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(victim, SPELL_RIGHTEOUSNESS)) {
+    send_to_char("You feel righteous!\n\r", victim);
 
-  if (!affected_by_spell(ch, SPELL_RIGHTEOUSNESS))
-  {
-    send_to_char("You feel righteous!\n\r", ch);
-
-    af.type       = SPELL_RIGHTEOUSNESS;
-    af.duration   = 10;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-
-    af.location   = APPLY_HITROLL;
-    af.modifier   = 1;
-    affect_to_char(ch, &af);
-
-    af.location   = APPLY_DAMROLL;
-    af.modifier   = 1;
-    affect_to_char(ch, &af);
-
-    af.modifier = -1;
-    af.location = APPLY_SAVING_PARA;
-    affect_to_char(ch, &af);
-    af.location = APPLY_SAVING_ROD;
-    affect_to_char(ch, &af);
-    af.location = APPLY_SAVING_PETRI;
-    affect_to_char(ch, &af);
-    af.location = APPLY_SAVING_BREATH;
-    affect_to_char(ch, &af);
-    af.location = APPLY_SAVING_SPELL;
-    affect_to_char(ch, &af);
+    affect_apply(victim, SPELL_RIGHTEOUSNESS, 10, 0, 0, 0, 0);
   }
 }
 
@@ -381,37 +333,23 @@ void spell_wrath_ancients(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   damage(ch, victim, number(1800, 2000), SPELL_WRATH_ANCIENTS, DAM_MAGICAL);
 }
 
-void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_might(level, ch, 0, 0);
       break;
     default:
-      log_f("Wrong type called in might!");
+      log_f("Wrong 'type' called in cast_might!");
       break;
   }
 }
 
-void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-
-  if (!affected_by_spell(ch, SPELL_MIGHT))
-  {
+void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(ch, SPELL_MIGHT)) {
     send_to_char("You feel more powerful.\n\r", ch);
 
-    af.type       = SPELL_MIGHT;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 10;
-    else
-      af.duration = 20;
-    af.modifier   = 2;
-    af.location   = APPLY_DAMROLL;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+    affect_apply(ch, SPELL_MIGHT, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 10 : 20), 1, APPLY_HITROLL, 0, 0);
+    affect_apply(ch, SPELL_MIGHT, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 10 : 20), 3, APPLY_DAMROLL, 0, 0);
   }
 }
 
@@ -523,26 +461,25 @@ void spell_distortion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_ironskin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  if (type == SPELL_TYPE_SPELL) {
-    spell_ironskin(level, ch, victim, 0);
-  }
-  else {
-    log_f("Wrong 'type' called in: cast_ironskin()");
+void cast_iron_skin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim) {
+        spell_iron_skin(level, ch, victim, 0);
+      }
+      break;
+    default:
+      log_f("Wrong 'type' called in cast_iron_skin!");
+      break;
   }
 }
 
-void spell_ironskin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_IRONSKIN) &&
-      get_affect_from_char(victim, SPELL_IRONSKIN)->modifier > -25) {
-    affect_from_char(victim, SPELL_IRONSKIN);
-  }
-
-  if (!affected_by_spell(victim, SPELL_IRONSKIN)) {
+void spell_iron_skin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(victim, SPELL_IRON_SKIN)) {
     send_to_char("You feel your skin harden.\n\r", victim);
     act("$n's skin hardens and turns dark iron in color.", TRUE, victim, 0, 0, TO_ROOM);
 
-    affect_apply(victim, SPELL_IRONSKIN, ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 5 : 10, (ch == victim) ? -25 : -10, APPLY_AC, 0, 0);
+    affect_apply(victim, SPELL_IRON_SKIN, (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 5 : 10), ((ch == victim) ? -20 : -10), APPLY_AC, 0, 0);
   }
 }
 
@@ -551,31 +488,32 @@ void cast_frostbolt(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
   switch (type)
   {
     case SPELL_TYPE_SPELL:
-      if (victim)
+      if (victim) {
         spell_frostbolt(level, ch, victim, 0);
+      }
       break;
     default:
-      log_f("Wrong type called in frostbolt!");
+      log_f("Wrong 'type' called in cast_frostbolt!");
       break;
   }
 }
 
-void spell_frostbolt(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+void spell_frostbolt(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
   GET_MOVE(victim) = MAX(GET_MOVE(victim) - 100, 0);
-  damage(ch, victim, number(330, 370), SPELL_FROSTBOLT, DAM_COLD);
+
+  damage(ch, victim, 350, SPELL_FROSTBOLT, DAM_COLD);
 }
 
 void cast_orb_protection(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
@@ -830,15 +768,13 @@ void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_rimefang(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_rimefang(level, ch, 0, 0);
       break;
     default:
-      log_f("Wrong type called in rimefang!");
+      log_f("Wrong 'type' called in cast_rimefang!");
       break;
   }
 }
@@ -850,42 +786,48 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  int dam = (number(6, 8) * GET_LEVEL(ch));
+  int dam = number(5, 7) * GET_LEVEL(ch);
+
+  /* Increased damage at night. */
+  if (IS_NIGHT) {
+    dam += number(GET_LEVEL(ch) / 2, GET_LEVEL(ch));
+  }
 
   /* Increased damage during winter. */
-  if (time_info.month <= 2 || time_info.month >= 15) {
-    dam += number(50, 100);
+  if ((time_info.month <= 2) || (time_info.month >= 15)) {
+    dam += number(GET_LEVEL(ch) / 2, GET_LEVEL(ch));
   }
 
   send_to_char("An aura of frost starts to form around you.\n\r", ch);
   act("An aura of frost starts to form around $n.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (CHAR *temp_victim = world[CHAR_REAL_ROOM(ch)].people, *next_victim = NULL; temp_victim; temp_victim = next_victim) {
-    next_victim = temp_victim->next_in_room;
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
 
-    if (temp_victim == ch || IS_IMMORTAL(temp_victim)) continue;
+    if (temp_vict == ch || IS_IMMORTAL(temp_vict)) continue;
 
-    if (IS_NPC(temp_victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_victim))) {
-      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_victim, TO_VICT);
+    if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
+      act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_vict, TO_VICT);
 
-      if (!IS_SET(GET_IMMUNE(temp_victim), IMMUNE_PARALYSIS) &&
-          !IS_AFFECTED(temp_victim, AFF_PARALYSIS) &&
-          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_victim)) &&
-          /* Rimefang paralyze has an increased success rate. */
-          !saves_spell(temp_victim, SAVING_PARA, (level + 10)))
-      {
-        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), 100, APPLY_AC, AFF_PARALYSIS, 0);
-        affect_apply(temp_victim, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
+      if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_PARALYSIS) &&
+          !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
+          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
+          !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
+        affect_apply(temp_vict, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), 100, APPLY_AC, AFF_PARALYSIS, 0);
+        affect_apply(temp_vict, SPELL_PARALYSIS, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : (GET_LEVEL(ch) / 10)), -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
-        send_to_char("Your limbs freeze in place.\n\r", temp_victim);
-        act("$n is paralyzed!", TRUE, temp_victim, 0, 0, TO_ROOM);
+        send_to_char("Your limbs freeze in place.\n\r", temp_vict);
+        act("$n is paralyzed!", FALSE, temp_vict, 0, 0, TO_ROOM);
+
+        if (IS_NPC(temp_vict)) {
+          MOB_ATT_TIMER(temp_vict) = MAX(MOB_ATT_TIMER(temp_vict), 2);
+        }
+        else {
+          WAIT_STATE(temp_vict, PULSE_VIOLENCE * (ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict)) ? number(1, 2) : 2));
+        }
       }
 
-      if (saves_spell(temp_victim, SAVING_SPELL, level)) {
-        dam /= 2;
-      }
-
-      damage(ch, temp_victim, dam, SPELL_RIMEFANG, DAM_COLD);
+      dam = damage(ch, temp_vict, dam, SPELL_RIMEFANG, DAM_COLD);
     }
   }
 }
@@ -1142,12 +1084,6 @@ void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  if (victim->specials.fighting)
-  {
-    send_to_char("That victim is already in combat.\n\r", ch);
-    return;
-  }
-
   switch (wielded->obj_flags.value[3])
   {
     case 0 :
@@ -1205,7 +1141,7 @@ void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   str_index=MIN(STRENGTH_APPLY_INDEX(ch),OSTRENGTH_APPLY_INDEX(ch));
   dam = str_app[str_index].todam;
-  if (wielded->obj_flags.type_flag == ITEM_2HWEAPON) dam = (dam*3)/2;
+  if (wielded->obj_flags.type_flag == ITEM_2H_WEAPON) dam = (dam*3)/2;
   dam += GET_DAMROLL(ch);
   dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
   dam += wpn_extra(wielded,ch,victim,RND_NRM);
@@ -1314,7 +1250,7 @@ void spell_degenerate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     act("$n eats away at $s life force for a few precious mana points.", TRUE, ch, 0, 0, TO_ROOM);
 
     af.type       = SPELL_DEGENERATE;
-    af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 12 : 30;
+    af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 12 : 30;
     af.modifier   = 0;
     af.location   = APPLY_NONE;
     af.bitvector  = 0;
@@ -1505,10 +1441,33 @@ void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 //}
 
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  char buf[MIL];
+
   switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim) {
-        spell_power_of_devotion(level, ch, victim, 0);
+      spell_power_of_devotion(level, ch, victim, 0);
+
+      arg = one_argument(arg, buf);
+
+      while (*buf) {
+        if ((GET_MANA(ch) < spell_info[SPELL_POWER_OF_DEVOTION].min_usesmana)) {
+          send_to_char("You can't summon enough energy to continue casting your spell.\n\r", ch);
+
+          break;
+        }
+
+        victim = get_char_room_vis(ch, buf);
+
+        if (victim) {
+          GET_MANA(ch) -= spell_info[SPELL_POWER_OF_DEVOTION].min_usesmana;
+
+          spell_power_of_devotion(level, ch, victim, 0);
+        }
+        else {
+          send_to_char("Nobody here by that name.\n\r", ch);
+        }
+
+        arg = one_argument(arg, buf);
       }
       break;
     default:
@@ -1518,8 +1477,6 @@ void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *vi
 }
 
 void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  AFF af;
-
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch) {
     send_to_char("Things are too chaotic to cast this spell on another player.\n\r", ch);
 
@@ -1530,48 +1487,21 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     send_to_char("You are enveloped in a bright white aura.\n\r", victim);
     act("$n is enveloped in a bright white aura.", TRUE, victim, 0, 0, TO_ROOM);
 
-    af.type       = SPELL_SANCTUARY;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = level / 8;
-    else
-      af.duration = level / 4;
-    af.modifier   = 0;
-    af.location   = APPLY_NONE;
-    af.bitvector  = AFF_SANCTUARY;
-    af.bitvector2 = AFF_NONE;
+    int duration = (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (level / 8) : (level / 4));
 
-    if (!affected_by_spell(victim, SPELL_SANCTUARY) &&
-        !IS_AFFECTED(victim, AFF_SANCTUARY)) {
-    affect_to_char(victim, &af);
+    if (!affected_by_spell(victim, SPELL_SANCTUARY) && !IS_AFFECTED(victim, AFF_SANCTUARY)) {
+      affect_apply(victim, SPELL_SANCTUARY, duration, 0, 0, AFF_SANCTUARY, 0);
     }
 
-    af.type      = SPELL_POWER_OF_DEVOTION;
-    af.modifier  = -15;
-    af.location  = APPLY_AC;
-    af.bitvector  = AFF_NONE;
-    affect_to_char(victim, &af);
-
-    af.modifier   = 3;
-    af.location   = APPLY_DAMROLL;
-    affect_to_char(victim, &af);
-    af.modifier   = 25;
-    af.location   = APPLY_HP_REGEN;
-    affect_to_char(victim, &af);
-    af.modifier   = 5;
-    af.location   = APPLY_MANA_REGEN;
-    affect_to_char(victim, &af);
-
-    af.modifier  = -1;
-    af.location  = APPLY_SAVING_PARA;
-    affect_to_char(victim, &af);
-    af.location  = APPLY_SAVING_ROD;
-    affect_to_char(victim, &af);
-    af.location  = APPLY_SAVING_PETRI;
-    affect_to_char(victim, &af);
-    af.location  = APPLY_SAVING_BREATH;
-    affect_to_char(victim, &af);
-    af.location  = APPLY_SAVING_SPELL;
-    affect_to_char(victim, &af);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
   }
 }
 
@@ -1589,36 +1519,21 @@ void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 }
 
 void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  int heal_max = 0;
-  int mana_max = 0;
-  int heal = 0;
-  int mana = 0;
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && victim != ch) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
     return;
   }
 
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
+  int heal = 360, mana = 0;
 
-  heal_max = MIN(GET_MAX_HIT(victim) - GET_HIT(victim), 1050);
-  heal_max = MAX(heal_max, 0);
-  mana_max = MIN(GET_MANA(ch), 70);
-  mana_max = MAX(mana_max, 0);
-
-  while ((heal < heal_max) && (mana < mana_max)) {
-    heal += 15;
+  while ((heal < (GET_MAX_HIT(victim) - GET_HIT(victim))) && (heal < 1200)) {
+    heal += 12;
     mana += 1;
   }
 
-  heal = MIN(heal, 1050);
-  heal = MIN(GET_MAX_HIT(victim), heal + 50);
-
   magic_heal(victim, SPELL_POWER_OF_FAITH, heal, FALSE);
+
   GET_MANA(ch) -= mana;
 
   if (victim != ch) {
@@ -1627,157 +1542,160 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
   }
   else {
-    send_to_char("The power of your faith heals your body.\n\r", ch);
+    act("The power of your faith heals your body.", FALSE, ch, 0, 0, TO_CHAR);
+    act("The power of $n's faith heals $s body.", FALSE, ch, 0, 0, TO_ROOM);
   }
 
-  update_pos(victim);
-
   /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) {
     GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
   }
 }
 
-void cast_devastation( ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_devastation( ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
-      if (victim)
+      if (victim) {
         spell_devastation(level, ch, victim, 0);
+      }
       break;
     default:
-      log_f("Wrong type called in devastation!");
+      log_f("Wrong 'type' called in cast_devastation!");
       break;
   }
 }
 
-void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))   {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  damage(ch, victim, number(1000, 1200), SPELL_DEVASTATION, DAM_MAGICAL);
+  damage(ch, victim, 1000, SPELL_DEVASTATION, DAM_MAGICAL);
 }
 
 void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  if (type == SPELL_TYPE_SPELL) {
-    if (victim) {
-      spell_incendiary_cloud(level, ch, victim, 0);
-    }
-  }
-  else {
-    log_f("Wrong 'type' called in: cast_incendiary_cloud()");
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim) {
+        spell_incendiary_cloud(level, ch, victim, 0);
+      }
+      break;
+    default:
+      log_f("Wrong 'type' called in cast_incendiary_cloud!");
+      break;
   }
 }
 
-void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("The cloud of fire surrounding you dies out.\n\r", ch);
 
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
+    act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
+
+    int dmg = 75;
+
+    /* Don't kill the character, otherwise EXP is lost. */
+    if (GET_HIT(ch) <= dmg) {
+      dmg = GET_HIT(ch) - 1;
+    }
+
+    damage(ch, ch, dmg, TYPE_UNDEFINED, DAM_FIRE);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_INCENDIARY_CLOUD_NEW)) {
-    affect_apply(victim, SPELL_INCENDIARY_CLOUD_NEW, 6, 0, 0, 0, 0);
-  }
+  act("You make a gesture and a huge ball of flame envelopes $N!", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n makes a gesture and a huge ball of flame envelopes you!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n makes a gesture and a huge ball of flame envelopes $N!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-  act("You make a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_CHAR);
-  act("$n makes a gesture and a huge ball of flame envelopes you.", FALSE, ch, 0, victim, TO_VICT);
-  act("$n makes a gesture and a huge ball of flame envelopes $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+  damage(ch, victim, 500, SPELL_INCENDIARY_CLOUD_NEW, DAM_FIRE);
 
-  damage(ch, victim, 700, SPELL_INCENDIARY_CLOUD_NEW, DAM_MAGICAL);
+  enchantment_apply(victim, TRUE, "Incendiary Cloud", SPELL_INCENDIARY_CLOUD_NEW, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
 }
 
-void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_tremor(level, ch, 0, 0);
       break;
     default:
-      log_f("Wrong type called in tremor!");
+      log_f("Wrong 'type' called in cast_tremor!");
       break;
   }
 }
 
-void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  CHAR *tmp_victim = NULL;
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
   send_to_room("The ground begins to shake and heave.\n\r", CHAR_REAL_ROOM(ch));
 
-  for (victim = world[CHAR_REAL_ROOM(ch)].people; victim; victim = tmp_victim)
-  {
-    tmp_victim = victim->next_in_room;
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
 
-    if (victim == ch || IS_IMMORTAL(victim)) continue;
+    if ((temp_vict == ch) || IS_IMMORTAL(temp_vict)) continue;
 
-    if (IS_NPC(victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)))
-    {
-      damage(ch, victim, 400, TYPE_UNDEFINED, DAM_MAGICAL);
+    if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
+      damage(ch, temp_vict, 400, TYPE_UNDEFINED, DAM_MAGICAL);
 
-      if (CHAR_REAL_ROOM(victim) != NOWHERE)
-      {
-        GET_POS(victim) = POSITION_STUNNED;
+      if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
+        GET_POS(temp_vict) = POSITION_RESTING;
+
+        enchantment_apply(temp_vict, TRUE, "Staggering (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }
 }
 
-void cast_blur(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_blur(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_blur(level, ch, 0, 0);
       break;
     default:
-       log_f("Wrong type called in blur!");
+       log_f("Wrong 'type' called in cast_blur!");
       break;
   }
 }
 
-void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
-
-  if (!affected_by_spell(ch, SPELL_BLUR))
-  {
+void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!affected_by_spell(ch, SPELL_BLUR)) {
     send_to_char("Your movements become a blur.\n\r", ch);
     act("$n's movements become a blur.", TRUE, ch, 0, 0, TO_ROOM);
 
-    af.type       = SPELL_BLUR;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = (GET_LEVEL(ch) / 12);
-    else
-      af.duration = (GET_LEVEL(ch) / 6);
-    af.modifier   = 0;
-    af.location   = APPLY_NONE;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(ch, &af);
+    affect_apply(ch, SPELL_BLUR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (GET_LEVEL(ch) / 12) : (GET_LEVEL(ch) / 6)), 0, 0, 0, 0);
   }
 }
 
@@ -1820,12 +1738,12 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     affect_from_char(group_leader, SPELL_TRANQUILITY);
 
     af.location = APPLY_HITROLL;
-    af.modifier = 2;
+    af.modifier = 3;
 
     affect_to_char(group_leader, &af);
 
     af.location = APPLY_DAMROLL;
-    af.modifier = 2;
+    af.modifier = 3;
 
     affect_to_char(group_leader, &af);
   }
@@ -2046,51 +1964,3 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_blessing_of_sacrifice(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  if (type == SPELL_TYPE_SPELL) {
-    spell_blessing_of_sacrifice(level, ch, 0, 0);
-  }
-  else {
-    log_f("Wrong 'type' called in: cast_blessing_of_sacrifice()");
-  }
-}
-
-void spell_blessing_of_sacrifice(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (GET_HIT(ch) <= 100) {
-    send_to_char("You don't have enough lifeforce remaining to cast this spell.\n\r", ch);
-
-    GET_MANA(ch) += spell_info[SPELL_BLESSING_OF_SACRIFICE].min_usesmana; /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
-    return;
-  }
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
-    send_to_char("The chaotic energies surrounding you distort your spell!\n\r", ch);
-
-    magic_heal(ch, SPELL_BLESSING_OF_SACRIFICE, 333, FALSE);
-    return;
-  }
-
-  for (CHAR *victim = world[CHAR_REAL_ROOM(ch)].people, *tmp_ch = NULL; victim; victim = tmp_ch) {
-    tmp_ch = victim->next_in_room;
-
-    if ((victim == ch) || !IS_MORTAL(victim)) continue;
-
-    if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-        (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-      send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-      continue;
-    }
-
-    act("$n's lifeforce flows into you, healing your wounds.", FALSE, ch, 0, victim, TO_VICT);
-
-    magic_heal(victim, SPELL_BLESSING_OF_SACRIFICE, 333, FALSE);
-    spell_bless(level, ch, victim, 0);
-  }
-
-  /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
-    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
-  }
-
-  if (!IS_IMMORTAL(ch)) GET_HIT(ch) -= 100;
-}

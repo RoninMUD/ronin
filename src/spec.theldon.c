@@ -79,7 +79,7 @@ int axe_of_theldon(OBJ *axe,CHAR *ch, int cmd, char *argument)
 
     act("$n's $p glows with a bright light.",FALSE,ch,axe,0,TO_ROOM);
     act("Your $p glows with a bright light.",FALSE,ch,axe,0,TO_CHAR);
-    spell_layhands(20,ch,ch,SPELL_TYPE_SPELL);
+    spell_lay_hands(20,ch,ch,SPELL_TYPE_SPELL);
     OBJ_SPEC(axe)=time_info.day;
     return TRUE;
     break;

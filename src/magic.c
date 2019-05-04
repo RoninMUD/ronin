@@ -341,7 +341,7 @@ void spell_energy_drain(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if (GET_LEVEL(victim) <= 2) {
       damage(ch, victim, 100, SPELL_ENERGY_DRAIN,DAM_MAGICAL); /* Kill the sucker */
     } else {
-      if(IS_AFFECTED(victim, AFF_SPHERE) && !breakthrough(ch,victim,BT_SPHERE)) {
+      if(IS_AFFECTED(victim, AFF_SPHERE) && !breakthrough(ch,victim, SPELL_ENERGY_DRAIN, BT_SPHERE)) {
         damage(ch, victim, 0, SPELL_ENERGY_DRAIN,DAM_MAGICAL);
         return;
       }
@@ -910,7 +910,7 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         (GET_ITEM_TYPE(obj) == ITEM_POTION) ||
         (GET_ITEM_TYPE(obj) == ITEM_BULLET) ||
         (GET_ITEM_TYPE(obj) == ITEM_SCROLL) ||
-        (GET_ITEM_TYPE(obj) == ITEM_FIREWEAPON) ||
+        (GET_ITEM_TYPE(obj) == ITEM_FIREARM) ||
         (GET_ITEM_TYPE(obj) == ITEM_MISSILE) ||
         (GET_ITEM_TYPE(obj) == ITEM_MONEY) ||
         (GET_ITEM_TYPE(obj) == ITEM_RECIPE) ||
@@ -1085,25 +1085,6 @@ void spell_cure_blind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void spell_cure_critic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  magic_heal(victim, SPELL_CURE_CRITIC, MIN(10 + (level * 5), 75), FALSE);
-  send_to_char("You feel better!\n\r", victim);
-
-  update_pos(victim);
-}
-
 void spell_mana_transfer(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch!=victim) { /* Chaos03 */
@@ -1127,99 +1108,6 @@ void spell_evil_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   GET_ALIGNMENT(victim) = MAX(-1000, GET_ALIGNMENT(victim)-100);
   /* check_equipment(victim);   Linerfix 110203 */
   send_to_char("You feel Evil!\n\r", victim);
-}
-
-void spell_cure_light_spray(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
-  CHAR *tmp_victim, *temp;
-
-  void spell_cure_light(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-
-  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people;tmp_victim; tmp_victim = temp) {
-    temp = tmp_victim->next_in_room;
-    spell_cure_light(level, ch, tmp_victim, 0);
-  }
-}
-
-void spell_cure_serious_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *tmp_victim, *temp;
-
-  void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-
-  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people;tmp_victim; tmp_victim = temp) {
-    temp = tmp_victim->next_in_room;
-    spell_cure_serious(level, ch, tmp_victim, 0);
-  }
-}
-
-void spell_cure_critic_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *tmp_victim, *temp;
-
-  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
-    temp = tmp_victim->next_in_room;
-    spell_cure_critic(level, ch, tmp_victim, 0);
-  }
-}
-
-void spell_heal_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *tmp_victim, *temp;
-
-  void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-
-  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
-    temp = tmp_victim->next_in_room;
-    spell_heal(level, ch, tmp_victim, 0);
-  }
-}
-
-void spell_great_miracle(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
-  CHAR *tmp_victim, *temp;
-
-  void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-
-  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
-    temp = tmp_victim->next_in_room;
-    spell_miracle(level, ch, tmp_victim, 0);
-  }
-}
-
-void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
-      ch != victim)
-  {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  magic_heal(victim, SPELL_CURE_SERIOUS, MIN(10 + (level * 5), 45), FALSE);
-  send_to_char("You feel better!\n\r", victim);
-
-  update_pos(victim);
-}
-
-void spell_cure_light(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  magic_heal(victim, SPELL_CURE_LIGHT, MIN(10 + (level * 5), 30), FALSE);
-  send_to_char("You feel better!\n\r", victim);
-
-  update_pos(victim);
 }
 
 void spell_curse(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
@@ -1520,31 +1408,6 @@ void spell_fury(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
-void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (CHAOSMODE && (ch != victim)) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  spell_cure_blind(level, ch, victim, obj);
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  magic_heal(victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
-  send_to_char("A warm feeling fills your body.\n\r", victim);
-
-  update_pos(victim);
-
-  /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
-    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
-  }
-}
-
 void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
   if(CHAOSMODE && ch != victim)
@@ -1558,30 +1421,6 @@ void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     GET_MANA(victim) = mana_limit(victim);
   update_pos( victim );
   send_to_char("You feel slightly regenerated.\n\r", victim);
-}
-
-void spell_layhands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  magic_heal(victim, SPELL_LAYHANDS, MIN(level * 10, 500), FALSE);
-  send_to_char("A healing power flows into your body.\n\r", victim);
-
-  update_pos(victim);
-
-  /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 3)) {
-    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
-  }
 }
 
 void spell_hold(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
@@ -2474,38 +2313,6 @@ void spell_vitality(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   send_to_char("You feel refreshed!\n\r", victim);
 }
 
-void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, NO_MAGIC))
-  {
-    send_to_char("The magic of the miracle has been absorbed by your surroundings.\n\r", victim);
-    return;
-  }
-
-  if (CHAOSMODE && (ch != victim)) {
-    send_to_char("You cannot cast this spell on another player.\n\r", ch);
-    return;
-  }
-
-  if (affected_by_spell(victim, SPELL_DEGENERATE) &&
-      (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
-    return;
-  }
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-    magic_heal(victim, SPELL_MIRACLE, 1500, FALSE);
-    send_to_char("The magic of the miracle has been manipulated by the chaos around you.\n\r", victim);
-  }
-  else {
-    magic_heal(victim, SPELL_MIRACLE, 2000, FALSE);
-    send_to_char("Your life has been restored.\n\r", victim);
-  }
-
-  signal_char(victim, ch, MSG_MIRACLE, "");
-  update_pos(victim);
-}
-
 void spell_recover_mana(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if(CHAOSMODE && ch!=victim) {
@@ -2832,7 +2639,7 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       send_to_char(buf, ch);
       break;
 
-    case ITEM_FIREWEAPON :
+    case ITEM_FIREARM :
       sprintf(buf,"License Number: %d\nNumber of bullets: %d\n",
         obj->obj_flags.value[0], obj->obj_flags.value[1]);
       send_to_char(buf, ch);
@@ -3031,7 +2838,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             break;
 
         case ITEM_WEAPON:
-        case ITEM_2HWEAPON:
+        case ITEM_2H_WEAPON:
             if((obj->obj_flags.value[0] > -1) && (obj->obj_flags.value[0] <= 100))
               sprintf(buf, "Extra: '%s'\n\rDamage Dice is '%dD%d'\n\r",
                   wpn_spc[obj->obj_flags.value[0]],
@@ -3075,7 +2882,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             send_to_char(buf, ch);
             break;
 
-        case ITEM_FIREWEAPON:
+        case ITEM_FIREARM:
             sprintf(buf, "License Number: %d\n\rNumber of bullets left : %d\n\rTodam : %dD%d\n\r",
                 obj->obj_flags.value[0],
                 obj->obj_flags.value[1],
@@ -3654,41 +3461,6 @@ void spell_dispel_magic (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       affect_total (vict);
     }
   }
-}
-
-/* Confusion makes spellcasting extremely difficult, fighting difficult
-   and even walking to a certain direction hard. Remember to add something
-   that cures you. Adding it to spell_miracle would be suitable. */
-
-void spell_confusion (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
-  struct affected_type_5 af;
-
-  if (!affected_by_spell(vict, SPELL_CONFUSION)) {
-    af.type = SPELL_CONFUSION;
-    if(ROOM_CHAOTIC(CHAR_REAL_ROOM(vict)))
-      af.duration = 4;
-    else
-      af.duration = 12;
-    af.location = APPLY_WIS;
-    af.modifier = -10;
-    af.bitvector = AFF_CONFUSION;
-    af.bitvector2 = 0;
-    affect_to_char (vict, &af);
-
-    af.location = APPLY_INT;
-    af.modifier = -10;
-    affect_to_char (vict, &af);
-
-    act("$n points $s finger at $N and a blue ray hits $M.",
-  FALSE,ch,0,vict,TO_NOTVICT);
-    act("$n points $s finger at you and a blue ray hits you.",
-  FALSE,ch,0,vict,TO_VICT);
-    act("You point your finger at $N and a blue ray hits $M.",
-  FALSE,ch,0,vict,TO_CHAR);
-    send_to_char ("You can't seem to think straight anymore...\n\r",vict);
-    return;
-  }
-  send_to_char ("Nothing happens.\n\r",ch);
 }
 
 #define WALL_THORNS 34
@@ -4609,4 +4381,180 @@ void spell_wind_slash(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       damage(ch, temp_victim, dam, SPELL_WIND_SLASH, DAM_MAGICAL);
     }
   }
+}
+
+/* Updated Spells */
+
+void spell_cure_light_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    spell_cure_light(level, ch, temp_vict, 0);
+  }
+}
+
+void spell_cure_serious_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    spell_cure_serious(level, ch, temp_vict, 0);
+  }
+}
+
+void spell_cure_critic_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    spell_cure_critic(level, ch, temp_vict, 0);
+  }
+}
+
+void spell_heal_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    spell_heal(level, ch, temp_vict, 0);
+  }
+}
+
+void spell_great_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    spell_miracle(level, ch, temp_vict, 0);
+  }
+}
+
+void spell_cure_light(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  magic_heal(victim, SPELL_CURE_LIGHT, MIN(10 + (level * 5), 30), FALSE);
+
+  send_to_char("You feel better!\n\r", victim);
+}
+
+void spell_cure_serious(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  magic_heal(victim, SPELL_CURE_SERIOUS, MIN(10 + (level * 5), 45), FALSE);
+
+  send_to_char("You feel better!\n\r", victim);
+}
+
+void spell_cure_critic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  magic_heal(victim, SPELL_CURE_CRITIC, MIN(10 + (level * 5), 75), FALSE);
+
+  send_to_char("You feel better!\n\r", victim);
+}
+
+void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  spell_cure_blind(level, ch, victim, obj);
+
+  magic_heal(victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
+
+  send_to_char("A warm feeling fills your body.\n\r", victim);
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
+}
+
+void spell_lay_hands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  const int lay_hands_dispel_types[] = {
+    SPELL_PARALYSIS,
+    SPELL_CURSE,
+    SPELL_BLINDNESS,
+    SPELL_POISON,
+    SPELL_CHILL_TOUCH,
+    SPELL_SLEEP,
+    -1
+  };
+
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  int heal = MIN(MAX(level * 10, 250), 500);
+
+  /* Panacea */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 4)) {
+    heal *= 1.5;
+  }
+
+  magic_heal(victim, SPELL_LAY_HANDS, heal, FALSE);
+
+  send_to_char("A healing power flows into your body.\n\r", victim);
+
+  /* Panacea */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 4)) {
+    if (!affected_by_spell(victim, SPELL_BLESS)) {
+      affect_apply(victim, SPELL_BLESS, MAX(GET_LEVEL(ch) / 5, 6), 1, APPLY_HITROLL, 0, 0);
+      affect_apply(victim, SPELL_BLESS, MAX(GET_LEVEL(ch) / 5, 6), -1, APPLY_SAVING_SPELL, 0, 0);
+
+      send_to_char("You feel righteous.\n\r", victim);
+    }
+
+    /* Remove up to two ailments from the lay_hands_dispel_types array, in order. */
+    for (int i = 0, j = 0; (lay_hands_dispel_types[i] != -1) && (i < NUMELEMS(lay_hands_dispel_types)) && (j < 2); i++) {
+      if (affected_by_spell(victim, lay_hands_dispel_types[i])) {
+        affect_from_char(victim, lay_hands_dispel_types[i]);
+        j++;
+      }
+    }
+  }
+
+  /* Focus */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) {
+    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+  }
+}
+
+void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, NO_MAGIC)) {
+    send_to_char("The magic of the miracle has been absorbed by your surroundings.\n\r", victim);
+
+    return;
+  }
+
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
+    magic_heal(victim, SPELL_MIRACLE, 1500, FALSE);
+
+    send_to_char("The magic of the miracle has been distorted by the chaos around you.\n\r", victim);
+  }
+  else {
+    magic_heal(victim, SPELL_MIRACLE, 2000, FALSE);
+
+    send_to_char("Your life has been restored.\n\r", victim);
+  }
+
+  signal_char(victim, ch, MSG_MIRACLE, "");
 }

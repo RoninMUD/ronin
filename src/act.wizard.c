@@ -2914,7 +2914,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
              j->obj_flags.value[3]);
        break;
      case ITEM_WEAPON:
-     case ITEM_2HWEAPON:
+     case ITEM_2H_WEAPON:
        if((j->obj_flags.value[0]>-1) && (j->obj_flags.value[0]<64))
          printf_to_char(ch,"Extra : %s(%d)\n\rTodam : %dD%d\n\rType : %d",
             wpn_spc[j->obj_flags.value[0]],j->obj_flags.value[0], j->obj_flags.value[1],
@@ -2928,7 +2928,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
             j->obj_flags.value[0], j->obj_flags.value[1],
             j->obj_flags.value[2], j->obj_flags.value[3]);
        break;
-     case ITEM_FIREWEAPON :
+     case ITEM_FIREARM :
        printf_to_char(ch,"License Number : %d\n\rNumber of bullets left : %d\n\rTodam: %dD%d\n\r",
             j->obj_flags.value[0], j->obj_flags.value[1],
             j->obj_flags.value[2], j->obj_flags.value[3]);
@@ -4876,6 +4876,8 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
     set_title(victim,NULL);
     insert_char_wizlist(victim);
   }
+
+  save_char(victim, NOWHERE);
 }
 
 extern void remove_wizlist_name (char *name);
@@ -4977,6 +4979,8 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
   log_s(buf);
   send_to_char("Done.\n\r", ch);
   send_to_char("You have been demoted.\n\r",victim);
+
+  save_char(victim, NOWHERE);
 }
 
 
@@ -5640,7 +5644,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
          buf3);
     break;
   case ITEM_WEAPON :
-  case ITEM_2HWEAPON:
+  case ITEM_2H_WEAPON:
     maxdam=flags->value[1]*flags->value[2];
     mindam=flags->value[1];
     avgdam=((flags->value[1]+flags->value[1]
@@ -5667,7 +5671,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
            flags->value[0], flags->value[1], flags->value[2],
            mindam,maxdam,avgdam,apt, flags->value[3]);
     break;
-  case ITEM_FIREWEAPON :
+  case ITEM_FIREARM :
     maxdam=flags->value[2]*flags->value[3];
     mindam=flags->value[2];
     avgdam=((flags->value[1]+flags->value[2]

@@ -29,6 +29,7 @@
 #include "spec_assign.h"
 #include "mob.spells.h"
 #include "subclass.h"
+#include "enchant.h"
 
 int check_subclass(CHAR *ch,int sub,int lvl);
 int check_god_access(CHAR *ch, int active);
@@ -71,50 +72,18 @@ int check_sc_song_access(CHAR *ch, int s) {
   return FALSE;
 }
 
-int check_sc_access(CHAR *ch, int skill)
-{
-  if ((skill == SKILL_DISEMBOWEL) && (GET_CLASS(ch) == CLASS_WARRIOR)) return check_subclass(ch, SC_GLADIATOR, 2);
-  if ((skill == SKILL_BLOCK) && (GET_CLASS(ch) == CLASS_NOMAD)) return check_subclass(ch, SC_RANGER, 3);
-  if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
+int check_sc_access(CHAR *ch, int skill) {
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
+  if ((skill == SPELL_REJUVENATION) && (GET_CLASS(ch) == CLASS_BARD)) return TRUE;
+  if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
+  if ((skill == SPELL_IRON_SKIN) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
 
   if (skill <= 165) return TRUE;
   if (GET_LEVEL(ch) >= LEVEL_SUP) return TRUE;
   if (IS_NPC(ch)) return TRUE;
 
-  switch (skill)
-  {
-    case SKILL_MEDITATE:
-      if (check_subclass(ch, SC_DRUID, 1)) return TRUE;
-      if (check_subclass(ch, SC_TEMPLAR, 1)) return TRUE;
-      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
-      break;
-    case SPELL_CLARITY:
-      if (check_subclass(ch, SC_DRUID, 2)) return TRUE;
-      break;
-    case SPELL_WALL_THORNS:
-      if (check_subclass(ch, SC_DRUID, 3)) return TRUE;
-      break;
-    case SPELL_MAGIC_ARMAMENT:
-      if (check_subclass(ch, SC_DRUID, 4)) return TRUE;
-      break;
-    case SPELL_DEGENERATE:
-      if (check_subclass(ch, SC_DRUID, 5)) return TRUE;
-      break;
-    case SPELL_MIGHT:
-      if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
-      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
-      break;
-    case SPELL_SANCTIFY:
-      if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
-      break;
-    case SPELL_ORB_PROTECTION:
-      if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
-      if (check_subclass(ch, SC_TEMPLAR, 4)) return TRUE;
-      break;
-    case SPELL_FORTIFICATION:
-      if (check_subclass(ch, SC_TEMPLAR, 5)) return TRUE;
-      break;
+  switch (skill) {
+    /* Enchanter */
     case SPELL_BLADE_BARRIER:
       if (check_subclass(ch, SC_ENCHANTER, 1)) return TRUE;
       break;
@@ -130,8 +99,14 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_DISRUPT_SANCT:
       if (check_subclass(ch, SC_ENCHANTER, 5)) return TRUE;
       break;
+
+      /* Archmage */
     case SPELL_METEOR:
       if (check_subclass(ch, SC_ARCHMAGE, 1)) return TRUE;
+      break;
+    case SPELL_ORB_PROTECTION:
+      if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 4)) return TRUE;
       break;
     case SPELL_FROSTBOLT:
       if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
@@ -142,55 +117,34 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_DISTORTION:
       if (check_subclass(ch, SC_ARCHMAGE, 5)) return TRUE;
       break;
-    case SKILL_BLITZ:
-      if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
+
+    /* Druid */
+    case SKILL_MEDITATE:
+      if (check_subclass(ch, SC_DRUID, 1)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 1)) return TRUE;
       break;
-    case SKILL_CAMP:
-      if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
-      if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
+    case SPELL_CLARITY:
+      if (check_subclass(ch, SC_DRUID, 2)) return TRUE;
       break;
-    case SKILL_BATTER:
-      if (check_subclass(ch, SC_TRAPPER, 3)) return TRUE;
+    case SPELL_WALL_THORNS:
+      if (check_subclass(ch, SC_DRUID, 3)) return TRUE;
       break;
-    case SKILL_FRENZY:
-      if (check_subclass(ch, SC_TRAPPER, 5)) return TRUE;
+    case SPELL_MAGIC_ARMAMENT:
+      if (check_subclass(ch, SC_DRUID, 4)) return TRUE;
       break;
-    case SKILL_AWARENESS:
-      if (check_subclass(ch, SC_RANGER, 1)) return TRUE;
-      if (check_subclass(ch, SC_WARLORD, 1)) return TRUE;
+    case SPELL_DEGENERATE:
+      if (check_subclass(ch, SC_DRUID, 5)) return TRUE;
       break;
-    case SKILL_PROTECT:
-      if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
-      if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
+
+    /* Templar */
+    case SPELL_SANCTIFY:
+      if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
       break;
-    case SKILL_FLANK:
-      if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
+    case SPELL_FORTIFICATION:
+      if (check_subclass(ch, SC_TEMPLAR, 5)) return TRUE;
       break;
-    case SKILL_HEADBUTT:
-      if (check_subclass(ch, SC_GLADIATOR, 4)) return TRUE;
-      break;
-    case SKILL_HOSTILE:
-      if (check_subclass(ch, SC_GLADIATOR, 5)) return TRUE;
-      break;
-    case SKILL_ZEAL:
-      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
-      break;
-    case SKILL_BERSERK:
-      if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
-      break;
-    case SKILL_DEFEND:
-      if (check_subclass(ch, SC_RANGER, 5)) return TRUE;
-      break;
-    case SKILL_FADE:
-      if (check_subclass(ch, SC_BANDIT, 1)) return TRUE;
-      break;
-    case SKILL_IMPAIR:
-      if (check_subclass(ch, SC_BANDIT, 2)) return TRUE;
-      break;
-    case SKILL_EVASION:
-      if ((GET_LEVEL(ch) >= 50) && (GET_CLASS(ch) == CLASS_NOMAD)) return TRUE;
-      if (check_subclass(ch, SC_BANDIT, 5)) return TRUE;
-      break;
+
+    /* Rogue */
     case SKILL_DIRTY_TRICKS:
       if (check_subclass(ch, SC_ROGUE, 1)) return TRUE;
       break;
@@ -204,48 +158,49 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_TRIP:
       if (check_subclass(ch, SC_ROGUE, 4)) return TRUE;
       break;
-    case SKILL_SMITE:
-      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
+
+    /* Bandit */
+    case SKILL_EVASION:
+      if (check_subclass(ch, SC_BANDIT, 5)) return TRUE;
+      if ((GET_LEVEL(ch) >= 50) && (GET_CLASS(ch) == CLASS_NOMAD)) return TRUE;
       break;
-    case SPELL_IRONSKIN:
-      if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
+
+    /* Warlord */
+    case SKILL_AWARENESS:
+      if (check_subclass(ch, SC_WARLORD, 1)) return TRUE;
+      if (check_subclass(ch, SC_RANGER, 1)) return TRUE;
       break;
-    case SPELL_CLOUD_CONFUSION:
-      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
+    case SKILL_PROTECT:
+      if (check_subclass(ch, SC_WARLORD, 2)) return TRUE;
+      if (check_subclass(ch, SC_RANGER, 2)) return TRUE;
       break;
-    case SKILL_RIPOSTE:
-      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
+
+    /* Gladiator */
+    case SKILL_FLANK:
+      if (check_subclass(ch, SC_GLADIATOR, 1)) return TRUE;
       break;
-    case SPELL_TREMOR:
-      if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
+    case SKILL_MAIM:
+      if (check_subclass(ch, SC_GLADIATOR, 3)) return TRUE;
       break;
-    case SPELL_INCENDIARY_CLOUD_NEW:
-      if (check_subclass(ch, SC_MERCENARY, 5)) return TRUE;
+    case SKILL_HEADBUTT:
+      if (check_subclass(ch, SC_GLADIATOR, 4)) return TRUE;
       break;
-    case SKILL_LUNGE:
-      if (check_subclass(ch, SC_LEGIONNAIRE, 1)) return TRUE;
+    case SKILL_HOSTILE:
+      if (check_subclass(ch, SC_GLADIATOR, 5)) return TRUE;
       break;
-    case SPELL_RIMEFANG:
-      if (check_subclass(ch, SC_LEGIONNAIRE, 2)) return TRUE;
-      break;
-    case SKILL_CLOBBER:
-      if (check_subclass(ch, SC_LEGIONNAIRE, 3)) return TRUE;
-      break;
-    case SKILL_SNIPE:
-      if (check_subclass(ch, SC_LEGIONNAIRE, 4)) return TRUE;
-      break;
-    case SPELL_DEVASTATION:
-      if (check_subclass(ch, SC_LEGIONNAIRE, 5)) return TRUE;
+
+    /* Ronin */
+    case SPELL_BLUR:
+      if (check_subclass(ch, SC_RONIN, 1)) return TRUE;
       break;
     case SKILL_BACKFIST:
       if (check_subclass(ch, SC_RONIN, 2)) return TRUE;
       break;
-    case SPELL_BLUR:
-      if (check_subclass(ch, SC_RONIN, 4)) return TRUE;
-      break;
     case SKILL_BANZAI:
       if (check_subclass(ch, SC_RONIN, 5)) return TRUE;
       break;
+
+    /* Mystic */
     case SPELL_DEBILITATE:
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
@@ -258,17 +213,31 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_TRANQUILITY:
       if (check_subclass(ch, SC_MYSTIC, 5)) return TRUE;
       break;
-    case SPELL_RIGHTEOUSNESS:
-      if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
+
+    /* Ranger */
+    case SKILL_BERSERK:
+      if (check_subclass(ch, SC_RANGER, 4)) return TRUE;
       break;
-    case SPELL_BLESSING_OF_SACRIFICE:
-      if (check_subclass(ch, SC_CRUSADER, 2)) return TRUE;
+    case SKILL_DEFEND:
+      if (check_subclass(ch, SC_RANGER, 5)) return TRUE;
       break;
-    //case SPELL_FOCUS:
-    //  if (check_subclass(ch, SC_CRUSADER, 3)) return TRUE;
-    //  break;
-    case SPELL_POWER_OF_FAITH:
-      if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
+
+    /* Trapper */
+    case SKILL_CAMP:
+      if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
+      if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
+      break;
+    case SKILL_BATTER:
+      if (check_subclass(ch, SC_TRAPPER, 3)) return TRUE;
+      break;
+    case SKILL_FRENZY:
+      if (check_subclass(ch, SC_TRAPPER, 5)) return TRUE;
+      break;
+
+    /* Cavalier */
+    case SPELL_MIGHT:
+      if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
+      if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
       break;
     case SKILL_TRUSTY_STEED:
       if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
@@ -276,9 +245,25 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_WRATH_OF_GOD:
       if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
       break;
+    case SKILL_SMITE:
+      if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
+      break;
     case SPELL_POWER_OF_DEVOTION:
       if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;
       break;
+
+    /* Crusader */
+    case SPELL_RIGHTEOUSNESS:
+      if (check_subclass(ch, SC_CRUSADER, 1)) return TRUE;
+      break;
+    case SKILL_ZEAL:
+      if (check_subclass(ch, SC_CRUSADER, 4)) return TRUE;
+      break;
+    case SPELL_POWER_OF_FAITH:
+      if (check_subclass(ch, SC_CRUSADER, 5)) return TRUE;
+      break;
+
+    /* Defiler */
     case SPELL_DESECRATE:
       if (check_subclass(ch, SC_DEFILER, 1)) return TRUE;
       break;
@@ -291,6 +276,8 @@ int check_sc_access(CHAR *ch, int skill)
     case SKILL_SHADOWSTEP:
       if (check_subclass(ch, SC_DEFILER, 4)) return TRUE;
       break;
+
+    /* Infidel */
     case SKILL_VICTIMIZE:
       if (check_subclass(ch, SC_INFIDEL, 2)) return TRUE;
       break;
@@ -303,8 +290,41 @@ int check_sc_access(CHAR *ch, int skill)
     case SPELL_WITHER:
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
-    case SPELL_REJUVENATION:
-      return TRUE;
+
+    /* Blade Singer */
+    case SKILL_BLITZ:
+      if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
+      break;
+
+    /* Legionnaire */
+    case SKILL_LUNGE:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 1)) return TRUE;
+      break;
+    case SPELL_RIMEFANG:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 2)) return TRUE;
+      break;
+    case SKILL_CLOBBER:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 3)) return TRUE;
+      break;
+    case SPELL_DEVASTATION:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 4)) return TRUE;
+      break;
+    case SKILL_SNIPE:
+      if (check_subclass(ch, SC_LEGIONNAIRE, 5)) return TRUE;
+      break;
+
+    /* Mercenary */
+    case SPELL_TREMOR:
+      if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
+      break;
+    case SPELL_CLOUD_CONFUSION:
+      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
+      break;
+    case SKILL_RIPOSTE:
+      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
+      break;
+    case SPELL_INCENDIARY_CLOUD_NEW:
+      if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
       break;
   }
 
@@ -1150,6 +1170,7 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
 
   return FALSE;
 }
+
 
 void assign_subclass_master(void) {
   assign_mob(1915,  subclass_master);

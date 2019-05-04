@@ -247,15 +247,16 @@ int old_search_block(const char *string, int begin, int length, const char * con
 /* find the first sub-argument of a string, return pointer to first char in
    primary argument, following the sub-arg                  */
 char *one_argument(char *string, char *arg) {
-  int begin = 0, index = 0;
-
   assert(arg);
+
+  int begin = 0, index = 0;
 
   do {
     string = skip_spaces(string);
 
-    for (index = 0; *(string + begin + index) > ' '; index++)
+    for (index = 0; *(string + begin + index) > ' '; index++) {
       *(arg + index) = LOWER(*(string + begin + index));
+    }
 
     *(arg + index) = '\0';
 
@@ -341,7 +342,7 @@ void command_interpreter(CHAR *ch, char *argument)
 
   if(affected_by_spell(ch, SKILL_MEDITATE) && GET_LEVEL(ch)<LEVEL_IMM) {   /* Chaos03 */
     if((CHAOSMODE && duration_of_spell(ch,SKILL_MEDITATE)>9) ||
-     duration_of_spell(ch,SKILL_MEDITATE)>30) {
+     duration_of_spell(ch,SKILL_MEDITATE)>29) {
       send_to_char("You are in a deep healing trance, unable to do anything.\n\r",ch);
       return;
     }
@@ -493,44 +494,43 @@ to a different type of mud.\n\r\n\r",ch);
   return;
 }
 
-int obj_special(struct obj_data *obj,CHAR *ch,int cmd,char *arg)
-{
-  if( obj->func )
-  {
-    return obj->func(obj, ch, cmd, arg );
+int obj_special(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (obj->func) {
+    return (obj->func(obj, ch, cmd, arg));
   }
 
   return ((*obj_proto_table[obj->item_number].func)(obj, ch, cmd, arg));
 }
 
-int mob_special(CHAR *mob,CHAR *ch,int cmd,char *arg)
-{
+int mob_special(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   return ((*mob_proto_table[mob->nr].func)(mob, ch, cmd, arg));
 }
 
-int enchantment_special(struct enchantment_type_5 *enchantment, CHAR *mob, CHAR *ch, int cmd, char *arg)
-{
+int room_special(int room, CHAR *ch, int cmd, char *arg) {
+  return ((*world[room].funct)(room, ch, cmd, arg));
+}
+
+int enchantment_special(ENCH *enchantment, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   if (!enchantment) return FALSE;
 
-  if (((*enchantment->func)(enchantment, mob, ch, cmd, arg))) return TRUE;
-
-  if (cmd == MSG_TICK) {
-    if (enchantment->duration) {
-       if (enchantment->duration > 0) {
-         enchantment->duration--;
-       }
+  if (enchantment->func) {
+    if ((*enchantment->func)(enchantment, ch, signaler, cmd, arg)) {
+      return TRUE;
     }
-    else if (!enchantment_special(enchantment, mob, NULL, MSG_REMOVE_ENCH, NULL)) {
-      enchantment_remove(mob, enchantment, TRUE);
+  }
+
+  if (((cmd == MSG_TICK) && (enchantment->interval == ENCH_INTERVAL_TICK)) ||
+      ((cmd == MSG_MOBACT) && (enchantment->interval == ENCH_INTERVAL_MOBACT)) ||
+      ((cmd == MSG_ROUND) && (enchantment->interval == ENCH_INTERVAL_ROUND))) {
+    if (enchantment->duration > 0) {
+      enchantment->duration--;
+    }
+    else if (!enchantment_special(enchantment, ch, 0, MSG_REMOVE_ENCH, 0)) {
+      enchantment_remove(ch, enchantment, TRUE);
     }
   }
 
   return FALSE;
-}
-
-int room_special(int in_room,CHAR *ch,int cmd,char *arg)
-{
-  return ((*world[in_room].funct)(in_room, ch, cmd, arg));
 }
 
 int special(CHAR *ch, int cmd, char *arg)
@@ -898,9 +898,7 @@ void assign_command_pointers ( void )
   COMMANDO("lunge", CMD_LUNGE, POSITION_STANDING, do_lunge, 30);
   COMMANDO("evasion", CMD_EVASION, POSITION_STANDING, do_evasion, 30);
   COMMANDO("tigerkick", CMD_TIGERKICK, POSITION_FIGHTING, do_tigerkick, 30);
-  COMMANDO("switch", CMD_SWITCH, POSITION_FIGHTING, do_switch, 30);
   COMMANDO("smite", CMD_SMITE, POSITION_FIGHTING, do_smite, 30);
-  COMMANDO("fade", CMD_FADE, POSITION_FIGHTING, do_fade, 30);
   COMMANDO("dirty-tricks", CMD_DIRTY_TRICKS, POSITION_FIGHTING, do_dirty_tricks, 30);
   COMMANDO("trip  ", CMD_TRIP, POSITION_FIGHTING, do_trip, 30);
   COMMANDO("defend", CMD_DEFEND, POSITION_STANDING, do_defend, 30);
@@ -1841,27 +1839,10 @@ void nanny(struct descriptor_data *d, char *arg) {
   }
 }
 
-/* Checks for Paladin affects and restores if necessary
-**
-** by Ranger - May 96 */
-void do_check_pa(struct char_data *ch) {
-  struct affected_type_5 af;
+/* Checks for Paladin affects and restores if necessary. */
+void do_check_pa(CHAR *ch) {
+  if ((GET_CLASS(ch) != CLASS_PALADIN) || !IS_GOOD(ch) || affected_by_spell(ch, SPELL_BLESS)) return;
 
-  if(GET_CLASS(ch)!=CLASS_PALADIN) return;
-
-  if(affected_by_spell(ch, SPELL_BLESS)) return;
-
-  af.type      = SPELL_BLESS;
-  af.duration  = -1;
-  af.modifier  = 1;
-  af.location  = APPLY_HITROLL;
-  af.bitvector = 0;
-  af.bitvector2 = 0;
-  affect_to_char(ch, &af);
-
-  af.location = APPLY_SAVING_SPELL;
-  af.modifier = -1;
-  affect_to_char(ch, &af);
-
-  return;
+  affect_apply(ch, SPELL_BLESS, -1, 1, APPLY_HITROLL, 0, 0);
+  affect_apply(ch, SPELL_BLESS, -1, -1, APPLY_SAVING_SPELL, 0, 0);
 }

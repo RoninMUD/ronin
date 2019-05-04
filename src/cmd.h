@@ -35,16 +35,18 @@ $State: Exp $
 */
 
 #define MSG_VIOLENCE           -99
+#define MSG_ROUND              -98 /* Similar to MSG_VIOLENCE. Used for 3 second pulse signaling. Sent only to enchantments for now. */
+#define MSG_DAMAGED            -30
 #define MSG_OBJ_DISARMED       -29
 #define MSG_OBJ_JUNKED         -28
 #define MSG_OBJ_DONATED        -27
 #define MSG_OBJ_PUT            -26
 #define MSG_AUTORENT           -25
-#define MSG_MIRACLE            -24  /* Allows a PC/PC's items to react to being miraed */
-#define MSG_UNKNOWN            -23  /* Allows a mob to react after someone has done a social - Skeena 1/10/2011 */
-#define MSG_SAID               -22  /* Allows a mob to react after someone has said something - Skeena 1/10/2011 */
-#define MSG_GET                -21  /* Allows an object to know if it's being got - Sane 09/29/2006*/
-#define MSG_RECONNECT          -20  /* For reconnect link room check - Liner 101402 */
+#define MSG_MIRACLE            -24 /* Allows a PC/PC's items to react to being miraed */
+#define MSG_UNKNOWN            -23 /* Allows a mob to react after someone has done a social - Skeena 1/10/2011 */
+#define MSG_SAID               -22 /* Allows a mob to react after someone has said something - Skeena 1/10/2011 */
+#define MSG_GET                -21 /* Allows an object to know if it's being got - Sane 09/29/2006*/
+#define MSG_RECONNECT          -20 /* For reconnect link room check - Liner 101402 */
 #define MSG_SPELL_CAST         -19
 #define MSG_OBJ_DROPPED        -18
 #define MSG_OBJ_WORN           -17
@@ -330,8 +332,8 @@ $State: Exp $
 #define CMD_EVASION            311
 #define CMD_CAMP               312
 #define CMD_LUNGE              313
-#define CMD_SWITCH             314
-#define CMD_FADE               315
+#define CMD_314                314
+#define CMD_315                315
 #define CMD_SMITE              316
 #define CMD_HEROES             317
 #define CMD_TRUSTY_STEED       318

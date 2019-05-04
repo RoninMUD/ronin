@@ -41,7 +41,7 @@ bool affected_by_spell( struct char_data *ch, int skill );
 int duration_of_spell( struct char_data *ch, int skill );
 void affect_join( struct char_data *ch, struct affected_type_5 *af, bool avg_dur, bool avg_mod );
 struct affected_type_5 * get_affect_from_char(struct char_data *ch, int type);
-void affect_apply(struct char_data *ch, int af_type, int af_dur, int af_mod, int af_loc, long af_bitv, long af_bitv2);
+void affect_apply(struct char_data *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2);
 
 /* utility */
 struct obj_data *create_money( int amount );
@@ -113,3 +113,5 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 #define FIND_OBJ_WORLD    16
 #define FIND_OBJ_EQUIP    32
 
+struct char_data *get_mob_by_vnum_in_room(int mob_vnum, int rm);
+struct obj_data *get_obj_by_vnum_in_room(int obj_vnum, int rm);

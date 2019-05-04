@@ -620,7 +620,7 @@ int lottery_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
   int top;
 
-  if(cmd==MSG_VIOLENCE) {
+  if(cmd==MSG_ROUND) {
     if(machine->in_room==NOWHERE) return FALSE;
     if(!machine->obj_flags.value[0]) return FALSE;
     top=l_mach.lotto[machine->obj_flags.value[1]].top_ticket;

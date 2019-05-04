@@ -60,7 +60,7 @@ int kg_keira_banshee(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     corpse->obj_flags.type_flag = ITEM_CONTAINER;
     corpse->obj_flags.wear_flags = 0;
     corpse->obj_flags.value[0] = 0;
-    corpse->obj_flags.value[1] = CONT_NOREMOVE;
+    corpse->obj_flags.value[1] = CONT_NO_REMOVE;
     corpse->obj_flags.value[2] = GET_LEVEL(ch);
     corpse->obj_flags.value[3] = 0;
     corpse->obj_flags.weight = GET_WEIGHT(ch);

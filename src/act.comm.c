@@ -450,23 +450,18 @@ void do_title(CHAR *ch, char *arg, int cmd) {
 }
 
 
-/* Function called by the 'report' command.
-   Re-written by Night, 12/10/2011 */
+/* Function called by the 'report' command. */
 void do_report(CHAR *ch, char *argument, int cmd) {
-  char buf[MIL];
-
-  sprintf(buf, "%s reports %d(%d hp) %d(%d mana) %d(%d mv).",
+  printf_to_room_except(CHAR_REAL_ROOM(ch), ch, "%s reports %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
     GET_NAME(ch),
     GET_HIT(ch), GET_MAX_HIT(ch),
     GET_MANA(ch), GET_MAX_MANA(ch),
     GET_MOVE(ch), GET_MAX_MOVE(ch));
-  act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
-  sprintf(buf, "You report %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
+  printf_to_char(ch, "You report %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
     GET_HIT(ch), GET_MAX_HIT(ch),
     GET_MANA(ch), GET_MAX_MANA(ch),
     GET_MOVE(ch), GET_MAX_MOVE(ch));
-  send_to_char(buf, ch);
 }
 
 
@@ -732,7 +727,7 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     { "chaos",   PLR_CHAOS,   15 },
   };
 
-  if (!ch || comm < 0 || comm >= NUMELEMS(channel_info)) return;
+  if (!ch || (comm < 0) || (comm >= NUMELEMS(channel_info))) return;
 
   arg = skip_spaces(arg);
 
@@ -786,14 +781,13 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
     arg = make_drunk(arg, ch);
   }
 
-  /* Store the message. */
-  char message[MSL];
+  char buf[MSL];
 
-  snprintf(message, sizeof(message), "%s", arg);
+  snprintf(buf, sizeof(buf), "$n (%s) [ %s ]", channel_info[comm].channel_name, arg);
 
   /* Show the text to the acting character. */
   COLOR(ch, channel_info[comm].channel_color);
-  printf_to_char(ch, "You (%s) [ %s ]\n\r", channel_info[comm].channel_name, message);
+  act(buf, FALSE, ch, 0, 0, TO_CHAR);
   ENDCOLOR(ch);
 
   /* Loop through the descriptors in the game and show them the text if they're connected
@@ -824,7 +818,7 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
 
     /* Show the text to the listener. */
     COLOR(listener, channel_info[comm].channel_color);
-    printf_to_char(listener, "%s (%s) [ %s ]\n\r", name, channel_info[comm].channel_name, message);
+    act(buf, FALSE, ch, 0, listener, TO_VICT);
     ENDCOLOR(listener);
   }
 }
@@ -965,28 +959,25 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 }
 
 
-/* Function called by the 'tell' command.
-   Re-written by Night, 12/10/2011 */
+/* Function called by the 'tell' command. */
 void do_tell(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  char message[MSL];
-  struct descriptor_data *temp_desc = NULL;
-  CHAR *temp_ch = NULL;
-  CHAR *listener = NULL;
+  char buf[MSL];
 
-  /* NoShouted players can't use tell. */
+  /* NoShouted players can't tell. */
   if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
     send_to_char("You have displeased the gods, you cannot speak.\n\r", ch);
 
     return;
   }
 
-  /* Players with NoMessage on can't use tell. */
+  /* Players with NoMessage on can't tell. */
   if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
     send_to_char("You can't tell when you have NoMessage turned on.\n\r", ch);
 
     return;
   }
+
+  char name[MIL], message[MIL];
 
   half_chop(arg, name, sizeof(name), message, sizeof(message));
 
@@ -997,89 +988,72 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  /* Loop through the descriptors in the game and find the first player that is connected,
-     matches the argument provided and is visible to the acting character. */
-  for (temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
-    if (!temp_desc->connected &&
-        !str_cmp(name, GET_NAME(temp_desc->character))) {
-        temp_ch = temp_desc->character;
+  CHAR *listener = get_ch_by_name(name);
 
-      break;
-    }
+  CAP(name);
+
+  /* Redirect listener if mobswitched. */
+  if (listener->switched) {
+    listener = listener->switched;
   }
 
   /* We didn't find anyone, or the listener is not visible to the acting character. */
-  if (!temp_ch || (temp_ch && WIZ_INV(ch, temp_ch))) {
+  if (!listener || WIZ_INV(ch, listener)) {
     send_to_char("No one by that name here...\n\r", ch);
 
     return;
   }
 
-  /* Allow a tell to a switched person to go to the mob. */
-  if (temp_ch->switched) {
-    listener = temp_ch->switched;
+     /* Check if the listener is disconnected. */
+  if (!GET_DESCRIPTOR(listener) || GET_DESCRIPTOR(listener)->connected) {
+    act("$E isn't connected at the moment.", FALSE, ch, 0, listener, TO_CHAR);
+
+    return;
   }
-  else {
-    listener = temp_ch;
-  }
 
-  /* Store the listener's name. */
-  snprintf(name, sizeof(name), "%s", !IS_NPC(listener) ? GET_NAME(listener) : GET_SHORT(listener));
-
-  CAP(name);
-
-  /* Various conditions that might prevent a character from using tell.
-     Here we're building the buffer for the acting character. */
-     /* NPCs/Players can't tell through NoMessage. */
-  if (!IS_IMMORTAL(listener) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
+  /* Players can't reply through NoMessage. */
+  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
     act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
 
     return;
   }
 
-  /* NPCs/Players can't tell through NoShout. */
-  if (!IS_IMMORTAL(listener) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+  /* Players can't reply through NoShout. */
+  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
     printf_to_char(ch, "The gods have taken away %s's ability to communicate.\n\r", name);
 
     return;
   }
 
+  /* Build the buffer for the acting player. */
+  snprintf(buf, sizeof(buf), "You tell %s, '%s'", name, message);
+
   /* Show the text to the acting character. */
   COLOR(ch, 6);
-  printf_to_char(ch, "You tell %s, '%s'\n\r", name, message);
+  act(buf, FALSE, ch, 0, 0, TO_CHAR);
   ENDCOLOR(ch);
 
-  /* Store the actor's name. */
-  if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "Somebody");
-  }
-  else {
-    snprintf(name, sizeof(name), "%s", !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch));
-  }
+  /* Store the acting character's name. */
+  snprintf(name, sizeof(name), "%s", (WIZ_INV(ch, listener) ? "Somebody" : GET_NAME(ch)));
 
-  CAP(name);
+  /* Build the buffer for the listening character. */
+  snprintf(buf, sizeof(buf), "%s tells you '%s'", name, message);
 
-  /* Show the text to the listening player. */
+  /* Show the text to the listening character. */
   COLOR(listener, 6);
-  printf_to_char(listener, "%s tells you '%s'\n\r", name, message);
+  act(buf, FALSE, listener, 0, 0, TO_CHAR);
   ENDCOLOR(listener);
 
-  /* Update the listening player's reply_to variable. */
+  /* Update the listening character's reply_to variable. */
   if (!IS_NPC(ch)) {
     GET_REPLY_TO(listener) = GET_ID(ch);
   }
 }
 
 
-/* Function called by the 'reply' command.
-   Re-written by Night, 12/10/2011 */
+/* Function called by the 'reply' command. */
 void do_reply(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  char message[MSL];
-  CHAR *temp_ch = NULL;
-  CHAR *listener = NULL;
+  char buf[MSL];
 
   if (IS_NPC(ch)) {
     send_to_char("NPCs can't reply.\n\r", ch);
@@ -1117,83 +1091,72 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
+  char message[MIL];
+
   /* Store the message. */
   snprintf(message, sizeof(message), "%s", arg);
 
   /* Attempt to locate the listener. */
-  temp_ch = get_ch_by_id(GET_REPLY_TO(ch));
+  CHAR *listener = get_ch_by_id(GET_REPLY_TO(ch));
 
   /* No listener was found. */
-  if (!temp_ch) {
+  if (!listener) {
     send_to_char("There is nobody to reply to...\n\r", ch);
 
     return;
   }
 
-  /* Allow a reply to a switched person to go to the mob. */
-  if (temp_ch->switched) {
-    listener = temp_ch->switched;
-  }
-  else {
-    listener = temp_ch;
+  /* Redirect listener if mobswitched. */
+  if (listener->switched) {
+    listener = listener->switched;
   }
 
-  /* Store the listener's name. */
-  if (WIZ_INV(ch, listener)) {
-    snprintf(name, sizeof(name), "Somebody");
-  }
-  else {
-    snprintf(name, sizeof(name), "%s", !IS_NPC(listener) ? GET_NAME(listener) : GET_SHORT(listener));
-  }
-
-  CAP(name);
-
-  /* Various conditions that might prevent a character from using reply.
-     Here we're building the buffer for the acting character. */
   /* Check if the listener is disconnected. */
-  if (!IS_NPC(listener) && (!listener->desc || (listener->desc && listener->desc->connected))) {
+  if (!GET_DESCRIPTOR(listener) || GET_DESCRIPTOR(listener)->connected) {
     act("$E isn't connected at the moment.", FALSE, ch, 0, listener, TO_CHAR);
 
     return;
   }
 
   /* NPCs/Players can't reply through NoMessage. */
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
+  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
     act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
 
     return;
   }
 
-  /* NPCs/Players can't reply through NoShout. */
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+  char name[MIL];
+  
+  /* Store the listening character's name. */
+  snprintf(name, sizeof(name), "%s", (WIZ_INV(listener, ch) ? "Somebody" : GET_NAME(listener)));
+
+  /* Players can't reply through NoShout. */
+  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
     printf_to_char(ch, "The gods have taken away %s's ability to communicate.\n\r", name);
 
     return;
   }
 
+  /* Build the buffer for the acting player. */
+  snprintf(buf, sizeof(buf), "You reply to %s, '%s'", name, message);
+
   /* Show the text to the acting character. */
   COLOR(ch, 6);
-  printf_to_char(ch, "You reply to %s, '%s'\n\r", name, message);
+  act(buf, FALSE, ch, 0, 0, TO_CHAR);
   ENDCOLOR(ch);
 
-  /* Store the actor's name. */
-  if (WIZ_INV(listener, ch)) {
-    snprintf(name, sizeof(name), "Somebody");
-  }
-  else {
-    snprintf(name, sizeof(name), "%s", !IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch));
-  }
+  /* Store the acting character's name. */
+  snprintf(name, sizeof(name), "%s", (WIZ_INV(listener, ch) ? "Somebody" : GET_NAME(ch)));
 
-  CAP(name);
+  /* Build the buffer for the listening character. */
+  snprintf(buf, sizeof(buf), "%s replies '%s'", name, message);
 
-  /* Show the text to the listening player. */
+  /* Show the text to the listening character. */
   COLOR(listener, 6);
-  printf_to_char(listener, "%s replies '%s'\n\r", name, message);
+  act(buf, FALSE, listener, 0, 0, TO_CHAR);
   ENDCOLOR(listener);
 
-  /* Update the listening player's reply_to variable. */
+  /* Update the listening character's reply_to variable. */
   if (!IS_NPC(ch)) {
     GET_REPLY_TO(listener) = GET_ID(ch);
   }
@@ -1204,13 +1167,9 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
    Re-written by Night, 12/10/2011 */
 void do_gtell(CHAR *ch, char *arg, int cmd) {
   char buf[MSL];
-  CHAR *group_leader = NULL;
-  CHAR *group_member = NULL;
-  FOL *follower = NULL;
 
   /* NoShouted players can't gtell. */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_NOSHOUT)) {
+  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
     send_to_char("You have displeased the gods, you cannot speak.\n\r", ch);
 
     return;
@@ -1218,60 +1177,48 @@ void do_gtell(CHAR *ch, char *arg, int cmd) {
 
   arg = skip_spaces(arg);
 
-  /* GTell was used without any arguments. */
   if (!*arg) {
     send_to_char("Yes, but what do you want to tell your group?\n\r", ch);
 
     return;
   }
 
-  /* Find the group leader. */
-  if (ch->master) {
-    group_leader = ch->master;
-  }
-  else /* The acting character is the leader (or there is no group leader). */
-  {
-    group_leader = ch;
-  }
+  CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
 
   /* Build the buffer for the acting character. */
-  sprintf(buf, "You tell your group, '%s'", arg);
+  snprintf(buf, sizeof(buf), "You tell your group, '%s'", arg);
 
   /* Show the text to the acting character. */
   COLOR(ch, 10);
-  act(buf, 0, ch, 0, 0, TO_CHAR);
+  act(buf, FALSE, ch, 0, 0, TO_CHAR);
   ENDCOLOR(ch);
 
   /* Build the buffer for the group leader and group members. */
   if (IS_MORTAL(ch)) {
-    /* Mortal players should always show their names in GTell. */
-    sprintf(buf, "** %s tells you '%s'", GET_NAME(ch), arg);
+    /* Mortal players should always show their names in gtell. */
+    snprintf(buf, sizeof(buf), "** %s tells you '%s'", GET_NAME(ch), arg);
   }
   else {
     /* Everyone else shows their name according to act()'s rules. */
-    sprintf(buf, "** $n tells you '%s'", arg);
+    snprintf(buf, sizeof(buf), "** $n tells you '%s'", arg);
   }
 
   /* Show the text to the group leader if it's not the acting character. */
-  if (group_leader != ch &&
-    IS_AFFECTED(group_leader, AFF_GROUP)) {
+  if ((group_leader != ch) && IS_AFFECTED(group_leader, AFF_GROUP)) {
     COLOR(group_leader, 10);
-    act(buf, 0, ch, 0, group_leader, TO_VICT);
+    act(buf, FALSE, ch, 0, group_leader, TO_VICT);
     ENDCOLOR(group_leader);
   }
 
   /* Loop through all of the group members of group_leader's group and show them the text. */
-  for (follower = group_leader->followers; follower; follower = follower->next) {
-    group_member = follower->follower;
+  for (FOL *follower = group_leader->followers; follower; follower = follower->next) {
+    CHAR *group_member = follower->follower;
 
-    if (!group_member) continue;
+    if (!group_member || (group_member == ch) || !IS_AFFECTED(group_member, AFF_GROUP)) continue;
 
-    if (group_member != ch &&
-      IS_AFFECTED(group_member, AFF_GROUP)) {
-      COLOR(group_member, 10);
-      act(buf, 0, ch, 0, group_member, TO_VICT);
-      ENDCOLOR(group_member);
-    }
+    COLOR(group_member, 10);
+    act(buf, FALSE, ch, 0, group_member, TO_VICT);
+    ENDCOLOR(group_member);
   }
 }
 

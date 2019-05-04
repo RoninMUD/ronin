@@ -57,10 +57,10 @@
 
 extern int errno;    /* Why isn't this done in errno.h on alfa??? */
 int special(CHAR *ch, int cmd, char *arg);
-int obj_special(struct obj_data *obj, CHAR *ch, int cmd, char *arg);
+int obj_special(OBJ *obj, CHAR *ch, int cmd, char *arg);
 int mob_special(CHAR *mob, CHAR *ch, int cmd, char *arg);
 int room_special(int room, CHAR *ch, int cmd, char *arg);
-int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
+int enchantment_special(ENCH *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 /* externs */
 
 void sfallback_random(unsigned long seed);
@@ -136,72 +136,69 @@ void open_logfile(void);
 void close_logfile(void);
 void backup_logfile(void);
 
-char *Color[]=
-      {
 
-      "\x1B[0m\x1B[30m","Black",
-      "\x1B[0m\x1B[31m","Drk Red",
-      "\x1B[0m\x1B[32m","Drk Green",
-      "\x1B[0m\x1B[33m","Brown",
-      "\x1B[0m\x1B[34m","Drk Blue",
-      "\x1B[0m\x1B[35m","Drk Magenta",
-      "\x1B[0m\x1B[36m","Drk Cyan",
-      "\x1B[0m\x1B[37m","Grey",
-      "\x1B[1m\x1B[31m","Red",
-      "\x1B[1m\x1B[32m","Green",
-      "\x1B[1m\x1B[33m","Yellow",
-      "\x1B[1m\x1B[34m","Blue",
-      "\x1B[1m\x1B[35m","Magenta",
-      "\x1B[1m\x1B[36m","Cyan",
-      "\x1B[1m\x1B[37m","White",
-      "\x1B[1m\x1B[30m","Drk Grey"
+char* Color[] = {
+  "\x1B[0m\x1B[30m", "Black",
+  "\x1B[0m\x1B[31m", "Drk Red",
+  "\x1B[0m\x1B[32m", "Drk Green",
+  "\x1B[0m\x1B[33m", "Brown",
+  "\x1B[0m\x1B[34m", "Drk Blue",
+  "\x1B[0m\x1B[35m", "Drk Magenta",
+  "\x1B[0m\x1B[36m", "Drk Cyan",
+  "\x1B[0m\x1B[37m", "Grey",
+  "\x1B[1m\x1B[31m", "Red",
+  "\x1B[1m\x1B[32m", "Green",
+  "\x1B[1m\x1B[33m", "Yellow",
+  "\x1B[1m\x1B[34m", "Blue",
+  "\x1B[1m\x1B[35m", "Magenta",
+  "\x1B[1m\x1B[36m", "Cyan",
+  "\x1B[1m\x1B[37m", "White",
+  "\x1B[1m\x1B[30m", "Drk Grey",
+};
 
-      };
-char *BKColor[]=
-      {
-      "\x1B[0m",
-      "\x1B[40m",
-      "\x1B[41m",
-      "\x1B[42m",
-      "\x1B[43m",
-      "\x1B[44m",
-      "\x1B[45m",
-      "\x1B[46m",
-      "\x1B[47m",
-      };
+char* BKColor[] = {
+  "\x1B[0m",
+  "\x1B[40m",
+  "\x1B[41m",
+  "\x1B[42m",
+  "\x1B[43m",
+  "\x1B[44m",
+  "\x1B[45m",
+  "\x1B[46m",
+  "\x1B[47m",
+};
 
-char *Color2[]=
-      {
+char* Color2[] = {
+  "\x1B[0;30",
+  "\x1B[0;31",
+  "\x1B[0;32",
+  "\x1B[0;33",
+  "\x1B[0;34",
+  "\x1B[0;35",
+  "\x1B[0;36",
+  "\x1B[0;37",
+  "\x1B[1;31",
+  "\x1B[1;32",
+  "\x1B[1;33",
+  "\x1B[1;34",
+  "\x1B[1;35",
+  "\x1B[1;36",
+  "\x1B[1;37",
+  "\x1B[1;30",
+};
 
-      "\x1B[0;30",
-      "\x1B[0;31",
-      "\x1B[0;32",
-      "\x1B[0;33",
-      "\x1B[0;34",
-      "\x1B[0;35",
-      "\x1B[0;36",
-      "\x1B[0;37",
-      "\x1B[1;31",
-      "\x1B[1;32",
-      "\x1B[1;33",
-      "\x1B[1;34",
-      "\x1B[1;35",
-      "\x1B[1;36",
-      "\x1B[1;37",
-      "\x1B[1;30"
-      };
-char *BKColor2[]=
-      {
-      "0m",
-      ";40m",
-      ";41m",
-      ";42m",
-      ";43m",
-      ";44m",
-      ";45m",
-      ";46m",
-      ";47m"
-      };
+char* BKColor2[] = {
+  "0m",
+  ";40m",
+  ";41m",
+  ";42m",
+  ";43m",
+  ";44m",
+  ";45m",
+  ";46m",
+  ";47m",
+};
+
 
 /* *********************************************************************
 *  main game loop and related stuff                               *
@@ -929,7 +926,6 @@ void check_token_mob(void);
 void heartbeat(int pulse) {
   char buf[MSL];
 
-  /* ~ 3.33 seconds */
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
     perform_mob_attack();
   }
@@ -939,7 +935,6 @@ void heartbeat(int pulse) {
       give_prompt(desc);
     }
 
-    /* 1 minute */
     if (!(pulse % PULSE_TICK) && !GAMEHALT && (STATE(desc) != CON_PLYNG)) {
       desc->timer++;
 
@@ -953,36 +948,44 @@ void heartbeat(int pulse) {
     }
   }
 
+  /* 60 seconds */
   if (!(pulse % PULSE_ZONE) && !GAMEHALT) {
     zone_update();
   }
 
+  /* 10 seconds */
   if (!(pulse % PULSE_MOBILE) && !GAMEHALT) {
-    signal_world(NULL, MSG_MOBACT, "");
+    signal_world(0, MSG_MOBACT, "");
   }
 
-  /* ~ 3.33 seconds */
+  /* 3 seconds */
   if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
     /* Process flying rooms */
     for (int i = 0; i < top_of_flying; i++) {
       flying_room(*(flying_rooms + i));
     }
 
-    /* Signal objects */
-    const int msg_violence_objects[] = {
+    /* 3 second pulse signaling for objects.
+       Used as an override, since objects don't normally get this signal below. */
+    const int msg_3_sec_pulse_objects[] = {
       18, // Lottery Machine
     };
 
-    for (int i = 0; i < NUMELEMS(msg_violence_objects); i++) {
-      if (obj_proto_table[real_object(msg_violence_objects[i])].number >= 1) {
+    for (int i = 0; i < NUMELEMS(msg_3_sec_pulse_objects); i++) {
+      if (obj_proto_table[real_object(msg_3_sec_pulse_objects[i])].number >= 1) {
         for (OBJ *obj = object_list; obj; obj = obj->next) {
-          if (obj->item_number_v == msg_violence_objects[i]) {
-            signal_object(obj, 0, MSG_VIOLENCE, "");
+          if (obj->item_number_v == msg_3_sec_pulse_objects[i]) {
+            signal_object(obj, 0, MSG_ROUND, "");
           }
         }
       }
     }
 
+    /* 3 second pulse signaling for the world.
+       This is filtered in the signal_* functions to send only enchantments for now. */
+    signal_world(0, MSG_ROUND, "");
+
+    /* Process combat */
     perform_violence();
   }
 
@@ -992,7 +995,7 @@ void heartbeat(int pulse) {
       log_s("Failed to read /dev/urandom for entropy (heartbeat).");
     }
 
-    signal_world(NULL, MSG_TICK, "");
+    signal_world(0, MSG_TICK, "");
 
     if (!CHAOSMODE) {
       check_token_mob();
@@ -1006,22 +1009,22 @@ void heartbeat(int pulse) {
     check_reboot();
   }
 
-  /* 10 times every 22 hours */
+  /* 2 hours */
   if (!(pulse % (120 * PULSE_TICK))) {
     log_s("Re-distributing subclass tokens");
 
     int num_tokens = 0;
 
-    for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
-      next_obj = obj->next;
+    for (OBJ *token = object_list, *next_obj; token; token = next_obj) {
+      next_obj = token->next;
 
       /* Extract existing tokens */
-      if ((V_OBJ(obj) != TOKEN_OBJ_VNUM) ||
-          (!obj->carried_by) ||
-          (!IS_NPC(obj->carried_by)) ||
-          (V_MOB(obj->carried_by) == TOKEN_MOB_VNUM)) continue;
+      if ((V_OBJ(token) != TOKEN_OBJ_VNUM) ||
+          (!token->carried_by) ||
+          (!IS_NPC(token->carried_by)) ||
+          (V_MOB(token->carried_by) == TOKEN_MOB_VNUM)) continue;
 
-      extract_obj(obj);
+      extract_obj(token);
 
       num_tokens++;
     }
@@ -1979,613 +1982,754 @@ void comatose(int s)
 
 /* Only types so far are 0 - no type and 1 - combat.  For snoop brief
    Ranger Jan 99 */
-void send_to_char_by_type(char *messg, struct char_data *ch, int type) {
-  if (!ch->desc || !messg) return;
+void send_to_char_by_type(char *message, CHAR *ch, int type) {
+  if (!message || !*message || !ch || !GET_DESCRIPTOR(ch)) return;
 
 #ifdef TYPECOLOR
-  char *strp, *point, *i;
-  char buf[4 * MSL];
-  int col, a = 0;
-  buf[0] = 0;
+  char buf[MSL * 4];
 
-  for (strp = messg, point = buf;;) {
-    if (*strp == '`' && ((*(strp + 1) == '`') ||
-        (*(strp + 1) >= 'a' && *(strp + 1) <= 'q') ||
-        (*(strp + 1) >= 'A' && *(strp + 1) <= 'Q'))) {
-      col = (*(++strp)) - 96;
-      if (col == 0) {
-        *point = '`';
-        ++point;
-        ++strp;
+  bool color_active = FALSE;
+
+  for (char *str_ptr = message, *buf_ptr = buf, *sub = NULL;;) {
+    if (*str_ptr == '`' &&
+        ((*(str_ptr + 1) == '`') ||
+         (*(str_ptr + 1) >= 'a' && *(str_ptr + 1) <= 'q') ||
+         (*(str_ptr + 1) >= 'A' && *(str_ptr + 1) <= 'Q'))) {
+      char c = *(++str_ptr);
+      char color_num = LOWER(c) - '`';
+
+      if (c == '`') {
+        *(buf_ptr++) = '`';
       }
-      else if (ch->colors[0] == 1 && col > 0 && col < 18) {
-        a = 1;
-        if (col == 17) {
-          col = ch->colors[1];
-          if (!col) col = 8;
+      else if ((GET_COMM_COLOR(ch, COMM_COLOR_ENABLED) == TRUE) && (color_num >= COMM_COLOR_CODE_FIRST) && (color_num <= COMM_COLOR_CODE_LAST)) {
+        if (color_num == COMM_COLOR_CODE_LAST) {
+          color_num = (GET_COMM_COLOR(ch, COMM_COLOR_FOREGROUND) ? GET_COMM_COLOR(ch, COMM_COLOR_FOREGROUND) : COMM_COLOR_CODE_GREY);
         }
-        i = Color2[col - 1];
-        while ((*point = *(i++)))
-          ++point;
-        i = BKColor2[ch->colors[13]];
-        while ((*point = *(i++)))
-          ++point;
-        ++strp;
+
+        sub = Color2[color_num - 1];
+        while ((*buf_ptr = *(sub++))) {
+          buf_ptr++;
+        }
+
+        sub = BKColor2[GET_COMM_COLOR(ch, COMM_COLOR_BACKGROUND)];
+        while ((*buf_ptr = *(sub++))) {
+          buf_ptr++;
+        }
+
+        color_active = TRUE;
       }
-      else
-        ++strp;
+
+      str_ptr++;
     }
-    else if (!(*(point++) = *(strp++)))
+    else if (!(*(buf_ptr++) = *(str_ptr++))) {
+      *(--buf_ptr) = '\0';
       break;
+    }
   }
-  *(--point) = '\0';
 
   write_to_q(buf, &ch->desc->output);
 
-  if (a && ch->colors[0] && ch->colors[1]) {
-    write_to_q(Color2[ch->colors[1] - 1], &ch->desc->output);
-    write_to_q(BKColor2[ch->colors[13]], &ch->desc->output);
+  if (color_active && GET_COMM_COLOR(ch, COMM_COLOR_ENABLED) && GET_COMM_COLOR(ch, COMM_COLOR_FOREGROUND)) {
+    write_to_q(Color2[GET_COMM_COLOR(ch, COMM_COLOR_FOREGROUND) - 1], &ch->desc->output);
+    write_to_q(BKColor2[GET_COMM_COLOR(ch, COMM_COLOR_BACKGROUND)], &ch->desc->output);
   }
 
-  if (ch->desc->snoop.snoop_by) {
-    if (!IS_SET(ch->desc->snoop.snoop_by->new.imm_flags, WIZ_SNOOP_BRIEF) || type == 0)
-      printf_to_char(ch->desc->snoop.snoop_by, "%% %s", buf);
-    if (a && ch->desc->snoop.snoop_by->colors[0] && ch->desc->snoop.snoop_by->colors[1])
-      printf_to_char(ch->desc->snoop.snoop_by, "%s%s",
-        Color2[ch->desc->snoop.snoop_by->colors[1] - 1],
-        BKColor2[ch->desc->snoop.snoop_by->colors[13]]);
+  CHAR *snooper = ch->desc->snoop.snoop_by;
+
+  if (snooper) {
+    if (!IS_SET(GET_IMM_FLAGS(snooper), WIZ_SNOOP_BRIEF) || (type == 0)) {
+      printf_to_char(snooper, "%% %s", buf);
+    }
+
+    if (color_active && GET_COMM_COLOR(snooper, COMM_COLOR_ENABLED) && GET_COMM_COLOR(snooper, COMM_COLOR_FOREGROUND)) {
+      printf_to_char(snooper, "%s%s", Color2[GET_COMM_COLOR(snooper, COMM_COLOR_FOREGROUND) - 1], BKColor2[GET_COMM_COLOR(snooper, COMM_COLOR_BACKGROUND)]);
+    }
   }
 #else
-  write_to_q(messg, &ch->desc->output);
+  write_to_q(message, &ch->desc->output);
 
-  if (ch->desc->snoop.snoop_by)
-    if (!IS_SET(ch->new.imm_flags, WIZ_SNOOP_BRIEF) || type == 0)
-      printf_to_char(ch->desc->snoop.snoop_by, "%% %s", messg);
+  CHAR *snooper = ch->desc->snoop.snoop_by;
+
+  if (snooper) {
+    if (!IS_SET(GET_IMM_FLAGS(snooper), WIZ_SNOOP_BRIEF) || (type == 0)) {
+      printf_to_char(snooper, "%% %s", message);
+    }
+  }
 #endif
 }
 
-void send_to_char(char *messg, struct char_data *ch) {
-  send_to_char_by_type(messg, ch, 0);
+void send_to_char(char *message, CHAR *ch) {
+  send_to_char_by_type(message, ch, 0);
 }
 
-void printf_to_char(struct char_data *ch, char *messg, ...) {
+void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, int type2) {
+  if (!message || !*message || !ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
+
+  char buf[MSL * 2];
+
+  CHAR *to_ch = NULL;
+
+  switch (type) {
+    case TO_VICT:
+      to_ch = (CHAR *)vict_or_obj;
+      break;
+
+    case TO_CHAR:
+      to_ch = ch;
+      break;
+
+    case TO_OTHER:
+      to_ch = (CHAR *)other_or_obj;
+      break;
+
+    default:
+      to_ch = world[CHAR_REAL_ROOM(ch)].people;
+      break;
+  }
+
+  for (; to_ch; to_ch = to_ch->next_in_room) {
+    /* This may look a bit odd, but the guard conditions are what would prevent the message
+       from being displayed to the target. This makes more sense when thinking about guard
+       conditions, but it is a bit odd to look at because all of the conditions are OR'd
+       and then negated. */
+    if (!(!GET_DESCRIPTOR(to_ch) ||
+          ((hide == COMM_ACT_HIDE_INVIS) && !CAN_SEE(to_ch, ch)) ||
+          ((hide == COMM_ACT_HIDE_SUPERBRF) && IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) ||
+          ((type != TO_VICT) && (type != TO_CHAR) && (GET_POS(to_ch) == POSITION_SLEEPING)) ||
+          ((type != TO_CHAR) && (to_ch == ch)) ||
+          ((type == TO_NOTVICT) && (to_ch == (CHAR *)vict_or_obj)) ||
+          ((type == TO_GROUP) && !SAME_GROUP(to_ch, ch)))) {
+      for (char *str_ptr = message, *buf_ptr = buf, *sub = NULL;;) {
+        if (*str_ptr == '$') {
+          char c = *(++str_ptr);
+
+          switch (c) {
+            case 'z':
+              if (to_ch == ch) {
+                sub = "";
+              }
+              else {
+                sub = "s";
+              }
+              break;
+            case 'r':
+              if (to_ch == ch) {
+                sub = "your";
+              }
+              else {
+                sub = POSSESS_ex(ch, to_ch, hide);
+              }
+              break;
+            case 'R':
+              if (!vict_or_obj) {
+                sub = "$R";
+              }
+              else {
+                if (vict_or_obj == to_ch) {
+                  sub = "your";
+                }
+                else {
+                  sub = POSSESS_ex((CHAR *)vict_or_obj, to_ch, hide);
+                }
+              }
+              break;
+            case 'i':
+              if (!ch) {
+                sub = "$i";
+              }
+              else {
+                sub = PERS_ex(ch, to_ch, hide);
+              }
+              break;
+            case 'I':
+              if (!vict_or_obj) {
+                sub = "$I";
+              }
+              else {
+                sub = PERS_ex((CHAR *)vict_or_obj, to_ch, hide);
+              }
+              break;
+            case 'n':
+              if (to_ch == ch) {
+                sub = "you";
+              }
+              else {
+                sub = PERS_ex(ch, to_ch, hide);
+              }
+              break;
+            case 'N':
+              if (!vict_or_obj) {
+                sub = "$N";
+              }
+              else {
+                if (to_ch == vict_or_obj) {
+                  sub = "you";
+                }
+                else {
+                  sub = PERS_ex((CHAR *)vict_or_obj, to_ch, hide);
+                }
+              }
+              break;
+            case 'm':
+              if (to_ch == ch) {
+                sub = "you";
+              }
+              else {
+                sub = HMHR(ch);
+              }
+              break;
+            case 'M':
+              if (!vict_or_obj) {
+                sub = "$M";
+              }
+              else {
+                if (to_ch == vict_or_obj) {
+                  sub = "you";
+                }
+                else {
+                  sub = HMHR((CHAR *)vict_or_obj);
+                }
+              }
+              break;
+            case 's':
+              if (to_ch == ch) {
+                sub = "your";
+              }
+              else {
+                sub = HSHR(ch);
+              }
+              break;
+            case 'S':
+              if (!vict_or_obj) {
+                sub = "$S";
+              }
+              else {
+                if (to_ch == vict_or_obj) {
+                  sub = "you";
+                }
+                else {
+                  sub = HSHR((CHAR *)vict_or_obj);
+                }
+              }
+              break;
+            case 'e':
+              if (to_ch == ch) {
+                sub = "you";
+              }
+              else {
+                sub = HSSH(ch);
+              }
+              break;
+            case 'E':
+              if (!vict_or_obj) {
+                sub = "$E";
+              }
+              else {
+                if (to_ch == vict_or_obj) {
+                  sub = "you";
+                }
+                else {
+                  sub = HSSH((CHAR *)vict_or_obj);
+                }
+              }
+              break;
+            case 'o':
+              if (!other_or_obj) {
+                sub = "$o";
+              }
+              else {
+                sub = OBJN((OBJ *)other_or_obj, to_ch);
+              }
+              break;
+            case 'O':
+              if (!vict_or_obj) {
+                sub = "$O";
+              }
+              else {
+                sub = OBJN((OBJ *)vict_or_obj, to_ch);
+              }
+              break;
+            case 'q':
+              if (!other_or_obj) {
+                sub = "$q";
+              }
+              else {
+                sub = OBJS2((OBJ *)other_or_obj, to_ch);
+              }
+              break;
+            case 'Q':
+              if (!vict_or_obj) {
+                sub = "$Q";
+              }
+              else {
+                sub = OBJS2((OBJ *)vict_or_obj, to_ch);
+              }
+              break;
+            case 'p':
+              if (!other_or_obj) {
+                sub = "$p";
+              }
+              else {
+                sub = OBJS((OBJ *)other_or_obj, to_ch);
+              }
+              break;
+            case 'P':
+              if (!vict_or_obj) {
+                sub = "$P";
+              }
+              else {
+                sub = OBJS((OBJ *)vict_or_obj, to_ch);
+              }
+              break;
+            case 'a':
+              if (!other_or_obj) {
+                sub = "$a";
+              }
+              else {
+                sub = SANA((OBJ *)other_or_obj);
+              }
+              break;
+            case 'A':
+              if (!vict_or_obj) {
+                sub = "$A";
+              }
+              else {
+                sub = SANA((OBJ *)vict_or_obj);
+              }
+              break;
+            case 'T':
+              if (!vict_or_obj) {
+                sub = "$T";
+              }
+              else {
+                sub = (char *)vict_or_obj;
+              }
+              break;
+            case 'F':
+              if (!vict_or_obj) {
+                sub = "$F";
+              }
+              else {
+                sub = fname((char *)vict_or_obj);
+              }
+              break;
+            case 'V':
+              if (!vict_or_obj) {
+                sub = "no-one";
+              }
+              else {
+                if (to_ch == vict_or_obj) {
+                  sub = "you";
+                }
+                else {
+                  sub = PERS_ex((CHAR *)vict_or_obj, to_ch, hide);
+                }
+              }
+              break;
+            case '$':
+              sub = "$";
+              break;
+            default:
+              log_f("WARNING: Invalid $flag used in act(): %s", message);
+              break;
+          }
+
+          while ((*buf_ptr = *(sub++))) {
+            buf_ptr++;
+          }
+
+          str_ptr++;
+        }
+        else if (!(*(buf_ptr++) = *(str_ptr++))) {
+          *(--buf_ptr) = '\n';
+          *(++buf_ptr) = '\r';
+          *(++buf_ptr) = '\0';
+          break;
+        }
+      }
+
+      send_to_char_by_type(CAP(buf), to_ch, type2);
+    }
+
+    if ((type == TO_VICT) || (type == TO_CHAR) || (type == TO_OTHER)) break;
+  }
+}
+
+
+void act(char *str, int hide, CHAR * ch, void *other_or_obj, void *vict_or_obj, int type) {
+  act_by_type(str, hide, ch, other_or_obj, vict_or_obj, type, 0);
+}
+
+void printf_to_char(CHAR *ch, char *message, ...) {
+  if (!message || !ch) return;
+
   char buf[MSL];
 
   va_list args;
-  va_start(args, messg);
-  vsnprintf(buf, sizeof(buf), messg, args);
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
   send_to_char(buf, ch);
 }
 
-void send_to_all(char *messg) {
-  struct descriptor_data *i;
+void printf_to_room(int room, char *message, ...) {
+  char buf[MSL];
 
-  if (messg)
-    for (i = descriptor_list; i; i = i->next)
-      if (!i->connected)
-        send_to_char(messg, i->character);
-}
+  va_list args;
 
-void send_to_outdoor(char *messg) {
-  struct descriptor_data *i;
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
 
-  if (messg)
-    for (i = descriptor_list; i; i = i->next)
-      if (!i->connected)
-        if (IS_OUTSIDE(i->character) && AWAKE(i->character))
-          send_to_char(messg, i->character);
-}
-
-void send_to_except(char *messg, struct char_data *ch) {
-  struct descriptor_data *i;
-
-  if (messg)
-    for (i = descriptor_list; i; i = i->next)
-      if (ch->desc != i && !i->connected)
-        send_to_char(messg, i->character);
-}
-
-void send_to_room(char *messg, int room) {
-  struct char_data *i;
-
-  if (messg)
-    for (i = world[room].people; i; i = i->next_in_room)
-      if (i->desc)
-        send_to_char(messg, i);
-}
-
-void send_to_room_except(char *messg, int room, struct char_data *ch) {
-  struct char_data *i;
-
-  if (messg)
-    for (i = world[room].people; i; i = i->next_in_room)
-      if (i != ch && i->desc)
-        send_to_char(messg, i);
-}
-
-void send_to_room_except_two(char *messg, int room, struct char_data *ch1, struct char_data *ch2) {
-  struct char_data *i;
-
-  if (messg)
-    for (i = world[room].people; i; i = i->next_in_room)
-      if (i != ch1 && i != ch2 && i->desc)
-        send_to_char(messg, i);
-}
-
-int same_group(struct char_data *ch1, struct char_data *ch2) {
-  /* If we don't get two characters, there can be no valid compairson. */
-  if (!ch1 || !ch2) return FALSE;
-
-  /* A character is always in their own group. */
-  if (ch1 == ch2) return TRUE;
-
-  /* Mobs are never in a group. */
-  if (IS_NPC(ch1) || IS_NPC(ch2)) return FALSE;
-
-  /* If neither character is grouped, they cannot be in the same group. */
-  if (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP)) return FALSE;
-
-  /* If neither character has a group leader, they cannot be in the same group. */
-  if (!GET_MASTER(ch1) && !GET_MASTER(ch2)) return FALSE;
-
-  /* Get the first character's group leader. */
-  CHAR *leader = GET_MASTER(ch1);
-
-  /* If the first character didn't have a group leader, they are the leader. */
-  if (!leader) leader = ch1;
-
-  /* If the second character's group leader isn't the first character's group
-     leader, they cannot be in the same group. */
-  if (GET_MASTER(ch2) != leader) return FALSE;
-
-  return TRUE;
-}
-
-void send_to_group(char *messg, struct char_data *ch, int same_room) {
-  struct char_data *group_leader = NULL;
-  struct char_data *group_member = NULL;
-  struct follow_type *follower = NULL;
-
-  if (ch->master) {
-    /* Get the group leader. */
-    group_leader = ch->master;
-  }
-  else {
-    /* The acting character is the leader (or there is no group leader). */
-    group_leader = ch;
-  }
-
-  /* Don't send to the character if they're the group leader.
-     Use send_to_char explicitly. */
-  if (group_leader != ch) {
-    send_to_char(messg, group_leader);
-  }
-
-  /* Loop through all of the group members of group_leader's group and apply the affect to them. */
-  for (follower = group_leader->followers; follower; follower = follower->next) {
-    group_member = follower->follower;
-
-    if (!group_member || (group_member == ch) || !IS_AFFECTED(group_member, AFF_GROUP) || (same_room && !SAME_ROOM(group_member, ch))) continue;
-
-    send_to_char(messg, group_member);
+  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch->desc) {
+      send_to_char(buf, temp_ch);
+    }
   }
 }
 
-/* higher-level communication */
-void act_by_type(
-  char *str,
-  int hide_invisible,
-  struct char_data *ch,
-  void *ob,
-  void *vict_obj,
-  int type,
-  int type2)
-{
-  register char *strp, *point, *i = NULL;
-  struct char_data *to = NULL;
-  struct obj_data  *obj = NULL;
-  static char buf[MSL];
+void printf_to_room_except(int room, CHAR *ch, char *message, ...) {
+  char buf[MSL];
 
-  if (!str || !*str || !ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
+  va_list args;
 
-  memset(buf, 0, sizeof(buf));
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
 
-  if (type == TO_OTHER) {
-    to = (struct char_data *) ob;
+  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch->desc && (temp_ch != ch)) {
+      send_to_char(buf, temp_ch);
+    }
   }
-  else {
-    obj = (struct obj_data *) ob;
+}
+
+void printf_to_world(char *message, ...) {
+  if (!message) return;
+
+  char buf[MSL];
+
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  for (int room = 0; room < top_of_world; room++) {
+    send_to_room(buf, room);
+  }
+}
+
+void printf_to_all(char *message, ...) {
+  if (!message) return;
+
+  char buf[MSL];
+
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected) {
+      send_to_char(buf, desc->character);
+    }
+  }
+}
+
+void send_to_all(char *message) {
+  if (!message) return;
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected) {
+      send_to_char(message, desc->character);
+    }
+  }
+}
+
+void send_to_world(char *message) {
+  if (!message) return;
+
+  for (int room = 0; room < top_of_world; room++) {
+    send_to_room(message, room);
+  }
+}
+
+void send_to_world_except(char *message, CHAR *ch) {
+  if (!message) return;
+
+  for (int room = 0; room < top_of_world; room++) {
+    send_to_room_except(message, room, ch);
+  }
+}
+
+void send_to_except(char *message, CHAR *ch) {
+  if (!message || !ch) return;
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected && (desc != ch->desc)) {
+      send_to_char(message, desc->character);
+    }
+  }
+}
+
+void send_to_room(char *message, int room) {
+  if (!message || (room < 0) || (room > top_of_world)) return;
+
+  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch->desc) {
+      send_to_char(message, temp_ch);
+    }
+  }
+}
+
+void send_to_room_except(char *message, int room, CHAR *ch) {
+  if (!message || (room < 0) || (room > top_of_world)) return;
+
+  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch->desc && (temp_ch != ch)) {
+      send_to_char(message, temp_ch);
+    }
+  }
+}
+
+void send_to_room_except_two(char *message, int room, CHAR *ch1, CHAR *ch2) {
+  if (!message || (room < 0) || (room > top_of_world)) return;
+
+  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch->desc && (temp_ch != ch1) && (temp_ch != ch2)) {
+      send_to_char(message, temp_ch);
+    }
+  }
+}
+
+void send_to_outdoor(char *message) {
+  if (!message) return;
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected && IS_OUTSIDE(desc->character) && AWAKE(desc->character)) {
+      send_to_char(message, desc->character);
+    }
+  }
+}
+
+void send_to_group(char *message, CHAR *ch, bool same_room) {
+  if (!message || !ch || !GET_MASTER(ch)) return;
+
+  if (GET_MASTER(ch) != ch) {
+    send_to_char(message, ch);
   }
 
-  if (type == TO_VICT) {
-    to = (struct char_data *) vict_obj;
+  for (FOL *follower = GET_MASTER(ch)->followers; follower; follower = follower->next) {
+    CHAR *group_member = follower->follower;
+
+    if (group_member && (group_member != ch) && SAME_GROUP(ch, group_member) && (!same_room || SAME_ROOM(group_member, ch))) {
+      send_to_char(message, group_member);
+    }
   }
-  else if (type == TO_CHAR) {
-    to = ch;
+}
+
+
+void give_prompt(DESC *desc) {
+  const char *condition[] = {
+    "bleeding",  /*   1% -  9% */
+    "terrible",  /*  10% - 19% */
+    "awful",     /*  20% - 29% */
+    "bad",       /*  30% - 39% */
+    "hurt",      /*  40% - 49% */
+    "wounded",   /*  50% - 59% */
+    "fair",      /*  60% - 69% */
+    "good",      /*  70% - 79% */
+    "fine",      /*  80% - 89% */
+    "excellent", /*  90% - 99% */
+    "full"       /* 100%       */
+  };
+
+  assert(desc);
+
+  if (desc->str) {
+    write_to_descriptor(desc->descriptor, "] ");
+    desc->prompt_mode = 0;
   }
-  else if (type != TO_OTHER) {
-    to = world[CHAR_REAL_ROOM(ch)].people;
+
+  if (desc->connected) return;
+
+  if (desc->showstr_point) {
+    write_to_descriptor(desc->descriptor, "*** Press return ***");
+    desc->prompt_mode = 0;
+
+    return;
   }
 
-  for (; to; to = to->next_in_room) {
-    if (hide_invisible == 2 && IS_SET(GET_PFLAG(to), PLR_SUPERBRF)) continue;
-    if (type == TO_GROUP && (to == ch || !same_group(to, ch))) continue;
+  CHAR *ch = desc->character;
 
-    if (to->desc &&
-        ((to != ch) || (type == TO_CHAR)) &&
-        ((hide_invisible < 1) || CAN_SEE(to, ch)) &&
-        (type == TO_CHAR || type == TO_VICT || GET_POS(to) != POSITION_SLEEPING) &&
-        !((type == TO_NOTVICT) && (to == (struct char_data *)vict_obj))) {
-      for (strp = str, point = buf;;) {
-        if (*strp == '$') {
-          switch (*(++strp)) {
-            case 'z':
-              if (ch == to) { i = ""; }
-              else { i = "s"; }
-              break;
-            case 'r':
-              if (ch == to) { i = "your"; }
-              else if (hide_invisible == -1) { i = POSSESS_ex(ch, to, PERS_MORTAL); }
-              else { i = POSSESS(ch, to); }
-              break;
-            case 'R':
-              if (!vict_obj) { i = "$R"; }
-              else {
-                if (to == vict_obj) { i = "your"; }
-                else if (hide_invisible == -1) { i = POSSESS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
-                else { i = POSSESS((struct char_data *)vict_obj, to); }
-              }
-              break;
-            case 'i':
-              if (!ch) { i = "$i"; }
-              else if (hide_invisible == -1) { i = PERS_ex(ch, to, PERS_MORTAL); }
-              else { i = PERS(ch, to); }
-              break;
-            case 'I':
-              if (!vict_obj) { i = "$I"; }
-              else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
-              else { i = PERS((struct char_data *)vict_obj, to); }
-              break;
-            case 'n':
-              if (ch == to) { i = "you"; }
-              else if (hide_invisible == -1) { i = PERS_ex(ch, to, PERS_MORTAL); }
-              else { i = PERS(ch, to); }
-              break;
-            case 'N':
-              if (!vict_obj) { i = "$N"; }
-              else {
-                if (to == vict_obj) { i = "you"; }
-                else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
-                else { i = PERS((struct char_data *)vict_obj, to); }
-              }
-              break;
-            case 'm':
-              if (to == ch) { i = "you"; }
-              else { i = HMHR(ch); }
-              break;
-            case 'M':
-              if (!vict_obj) { i = "$M"; }
-              else {
-                if (to == vict_obj) { i = "you"; }
-                else { i = HMHR((struct char_data *)vict_obj); }
-              }
-              break;
-            case 's':
-              if (to == ch) { i = "your"; }
-              else { i = HSHR(ch); }
-              break;
-            case 'S':
-              if (!vict_obj) { i = "$S"; }
-              else {
-                if (to == vict_obj) { i = "you"; }
-                else { i = HSHR((struct char_data *)vict_obj); }
-              }
-              break;
-            case 'e':
-              if (to == ch) { i = "you"; }
-              else { i = HSSH(ch); }
-              break;
-            case 'E':
-              if (!vict_obj) { i = "$E"; }
-              else {
-                if (to == vict_obj) { i = "you"; }
-                else { i = HSSH((struct char_data *)vict_obj); }
-              }
-              break;
-            case 'o':
-              if (!obj) { i = "$o"; }
-              else { i = OBJN(obj, to); }
-              break;
-            case 'O':
-              if (!vict_obj) { i = "$O"; }
-              else { i = OBJN((struct obj_data *)vict_obj, to); }
-              break;
-            case 'q':
-              if (!obj) { i = "$q"; }
-              else { i = OBJS2(obj, to); }
-              break;
-            case 'Q':
-              if (!vict_obj) { i = "$Q"; }
-              else { i = OBJS2((struct obj_data *)vict_obj, to); }
-              break;
-            case 'p':
-              if (!obj) { i = "$p"; }
-              else { i = OBJS(obj, to); }
-              break;
-            case 'P':
-              if (!vict_obj) { i = "$P"; }
-              else { i = OBJS((struct obj_data *)vict_obj, to); }
-              break;
-            case 'a':
-              if (!obj) { i = "$a"; }
-              else { i = SANA(obj); }
-              break;
-            case 'A':
-              if (!vict_obj) { i = "$A"; }
-              else { i = SANA((struct obj_data *)vict_obj); }
-              break;
-            case 'T':
-              if (!vict_obj) { i = "$T"; }
-              else { i = (char *)vict_obj; }
-              break;
-            case 'F':
-              if (!vict_obj) { i = "$F"; }
-              else { i = fname((char *)vict_obj); }
-              break;
-            case 'V':
-              if (!vict_obj) { i = "no-one"; }
-              else {
-                if (to == vict_obj) { i = "you"; }
-                else if (hide_invisible == -1) { i = PERS_ex((struct char_data *)vict_obj, to, PERS_MORTAL); }
-                else { i = PERS((struct char_data *)vict_obj, to); }
-              }
-              break;
-            case '$':
-              i = "$";
-              break;
-            default:
-              log_s("Illegal case called in act() Not reported for fear of crash.");
-              log_s(str);
-              break;
-          }
+  assert(ch);
 
-          while ((*point = *(i++))) ++point;
-          ++strp;
-        }
-        else if (!(*(point++) = *(strp++))) {
-          break;
-        }
-      }
+  char prompt[MIL], buf[MIL];
 
-      *(--point) = '\n';
-      *(++point) = '\r';
-      *(++point) = '\0';
+  memset(prompt, 0, sizeof(prompt));
 
-      send_to_char_by_type(CAP(buf), to, type2);
+  bool color_enabled = GET_COMM_COLOR(ch, 0);
+  char *prompt_color = Color[((GET_COMM_COLOR(ch, COMM_COLOR_PROMPT) * 2) - 2)];
+  char *fg_color = Color[((GET_COMM_COLOR(ch, COMM_COLOR_FOREGROUND) * 2) - 2)];
+  char *bg_color = BKColor[GET_COMM_COLOR(ch, COMM_COLOR_BACKGROUND)];
+
+  if (color_enabled) {
+    if (prompt_color) {
+      strlcat(prompt, prompt_color, sizeof(prompt));
     }
 
-    if ((type == TO_VICT) || (type == TO_CHAR) || (type == TO_OTHER))
-      return;
+    if (bg_color) {
+      strlcat(prompt, bg_color, sizeof(prompt));
+    }
   }
-}
 
-void act(char *str, int hide_invisible, struct char_data *ch, void *ob, void *vict_obj, int type) {
-  act_by_type(str, hide_invisible, ch, ob, vict_obj, type, 0);
-}
+  strlcat(prompt, "< ", sizeof(prompt));
 
-
-/* Insertion of color codes throughout the prompt for anti-botting - Ranger Jan 99 */
-void give_prompt(struct descriptor_data *point)
-{
-  int percent, pos = 0;
-  char prompt[MAX_INPUT_LENGTH];
-  char temp[MAX_INPUT_LENGTH];
-  char tex[10];
-  char *condition[]=
-    {
-      "bleeding",  /*    -  9 */
-      "terrible",  /* 10 - 19 */
-      "awful",     /* 20 - 29 */
-      "bad",       /* 30 - 39 */
-      "hurt",      /* 40 - 49 */
-      "wounded",   /* 50 - 59 */
-      "fair",      /* 60 - 69 */
-      "good",      /* 70 - 79 */
-      "fine",      /* 80 - 89 */
-      "excellent", /* 90 - 99 */
-      "full"       /* 100-    */
-      };
-  bool disp;
-
-  if (point->str) {
-    write_to_descriptor(point->descriptor, "] ");
-    point->prompt_mode = 0;
-  } else if (!point->connected) {
-    if (point->showstr_point) {
-      write_to_descriptor(point->descriptor,
-                    "*** Press return ***");
-      point->prompt_mode = 0;
-    } else {
-      *prompt = '\0';
-      pos = 0;
-
-      if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-      if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-
-      pos = str_cat(prompt, pos, MSL, "<");
-      disp = FALSE;
-
-      if (IS_SET(point->prompt, PROMPT_NAME)) {
-        sprintf(temp, "%s", GET_NAME(point->character));
-        pos = str_cat(prompt, pos, MSL, temp);
-      }
-
-      if (IS_SET(point->prompt, PROMPT_HP_TEX))
-        strcpy(tex, "hp");
-      else
-        *tex = '\0';
-
-      if(IS_SET(point->prompt, PROMPT_HP)) {
-        sprintf(temp," %d",GET_HIT(point->character));
-        pos = str_cat(prompt, pos, MSL, temp);
-        if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-        if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-        if (IS_SET(point->prompt, PROMPT_HP_MAX))
-          sprintf(temp, "(%d)%s",GET_MAX_HIT(point->character),tex);
-        else
-          sprintf(temp, "%s",tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      } else if (IS_SET(point->prompt, PROMPT_HP_MAX)) {
-        sprintf(temp, " (%d)%s", GET_MAX_HIT(point->character), tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      }
-
-      if (IS_SET(point->prompt, PROMPT_MANA_TEX))
-        strcpy(tex, "mana");
-      else
-        *tex = '\0';
-
-      if(IS_SET(point->prompt, PROMPT_MANA)) {
-        sprintf(temp, " %d",GET_MANA(point->character));
-        pos = str_cat(prompt, pos, MSL, temp);
-        if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-        if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-        if (IS_SET(point->prompt, PROMPT_MANA_MAX))
-          sprintf(temp, "(%d)%s",GET_MAX_MANA(point->character),tex);
-        else
-          sprintf(temp, "%s",tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      } else if (IS_SET(point->prompt, PROMPT_MANA_MAX)) {
-        sprintf(temp, " (%d)%s", GET_MAX_MANA(point->character), tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      }
-
-      if (IS_SET(point->prompt, PROMPT_MOVE_TEX))
-        strcpy(tex, "mv");
-      else
-        *tex = '\0';
-
-      if (IS_SET(point->prompt, PROMPT_MOVE)) {
-        if (IS_SET(point->prompt, PROMPT_MOVE_MAX))
-          sprintf(temp, " %d(%d)%s",
-                  GET_MOVE(point->character), GET_MAX_MOVE(point->character), tex);
-        else
-          sprintf(temp, " %d%s", GET_MOVE(point->character), tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      } else if (IS_SET(point->prompt, PROMPT_MOVE_MAX)) {
-        sprintf(temp, " (%d)%s", GET_MAX_MOVE(point->character), tex);
-        pos = str_cat(prompt, pos, MSL, temp);
-        disp = TRUE;
-      }
-
-      if (point->character->specials.fighting) {
-        if (IS_SET(point->prompt, PROMPT_BUFFER | PROMPT_BUFFER_A)) {
-          if ((point->character->specials.fighting->specials.fighting != point->character) &&
-            (point->character->specials.fighting->specials.fighting)) {
-            if (IS_SET(point->prompt, PROMPT_BUFFER_TEX)) {
-              if (GET_MAX_HIT(point->character->specials.fighting->specials.fighting) > 0)
-                percent = (100*GET_HIT(point->character->specials.fighting->specials.fighting))/GET_MAX_HIT(point->character->specials.fighting->specials.fighting);
-              else
-                percent = -1; /* How could MAX_HIT be < 1?? */
-              sprintf(temp, " Buf:");
-              pos = str_cat(prompt, pos, MSL, temp);
-              if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-              if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-              sprintf(temp, "%s", condition[MAX( MIN( percent/10, 10), 0)]);
-            } else
-              sprintf(temp, " Buf:%d", GET_HIT(point->character->specials.fighting->specials.fighting));
-
-            pos = str_cat(prompt, pos, MSL, temp);
-            disp = TRUE;
-          } else if (IS_SET(point->prompt, PROMPT_BUFFER_A)) {
-            pos = str_cat(prompt, pos, MSL, " Buf:*");
-            disp = TRUE;
-          }
-        }
-
-        if (IS_SET(point->prompt, PROMPT_VICTIM | PROMPT_VICTIM_A)) {
-          if (IS_SET(point->prompt, PROMPT_VICTIM_TEX)) {
-            if (GET_MAX_HIT(point->character->specials.fighting) > 0)
-              percent = (100*GET_HIT(point->character->specials.fighting))/GET_MAX_HIT(point->character->specials.fighting);
-            else
-              percent = -1; /* How could MAX_HIT be < 1?? */
-
-            sprintf(temp, " Vic:");
-            pos = str_cat(prompt, pos, MSL, temp);
-            if(point->character->colors[0]&&point->character->colors[2]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[2])*2)-2)]);
-            if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-            sprintf(temp, "%s", condition[ MAX( MIN( percent/10, 10), 0)]);
-          } else
-            sprintf(temp, " Vic:%d", GET_HIT(point->character->specials.fighting));
-
-          pos = str_cat(prompt, pos, MSL, temp);
-          disp = TRUE;
-        }
-      } else {
-        if (IS_SET(point->prompt, PROMPT_BUFFER_A)) {
-          pos = str_cat(prompt, pos, MSL, " Buf:*");
-          disp = TRUE;
-        }
-        if (IS_SET(point->prompt, PROMPT_VICTIM_A)) {
-          pos = str_cat(prompt, pos, MSL, " Vic:*");
-          disp = TRUE;
-        }
-      }
-
-      if (disp) {
-        pos = str_cat(prompt, pos, MSL, " > ");
-      } else {
-        pos = str_cat(prompt, pos, MSL, "> ");
-      } /* if */
-      if(pos == MSL) {
-      log_f("BUG: prompt too long (%s)", GET_NAME(point->character));
-      }
-      disp = FALSE;
-
-      if(point->character->colors[0]&&point->character->colors[1]) pos=str_cat(prompt,pos,MSL, Color[(((point->character->colors[1])*2)-2)]);
-      if(point->character->colors[0]&&point->character->colors[13]) pos=str_cat(prompt,pos,MSL, BKColor[point->character->colors[13]]);
-      write_to_descriptor(point->descriptor, prompt);
-
-      point->prompt_mode = 0;
-    } /* if */
+  if (IS_SET(desc->prompt, PROMPT_NAME)) {
+    strlcat(prompt, GET_NAME(ch), sizeof(prompt));
   }
+
+  if (IS_SET(desc->prompt, PROMPT_HP | PROMPT_HP_MAX | PROMPT_HP_TEX)) {
+    strlcat(prompt, " ", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_HP)) {
+    snprintf(buf, sizeof(buf), "%d", GET_HIT(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_HP_MAX)) {
+    snprintf(buf, sizeof(buf), "(%d)", GET_MAX_HIT(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_HP_TEX)) {
+    strlcat(prompt, "hp", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX | PROMPT_MANA_TEX)) {
+    strlcat(prompt, " ", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MANA)) {
+    snprintf(buf, sizeof(buf), "%d", GET_MANA(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MANA_MAX)) {
+    snprintf(buf, sizeof(buf), "(%d)", GET_MAX_MANA(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MANA_TEX)) {
+    strlcat(prompt, "mana", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX | PROMPT_MOVE_TEX)) {
+    strlcat(prompt, " ", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MOVE)) {
+    snprintf(buf, sizeof(buf), "%d", GET_MOVE(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MOVE_MAX)) {
+    snprintf(buf, sizeof(buf), "(%d)", GET_MAX_MOVE(ch));
+    strlcat(prompt, buf, sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_MOVE_TEX)) {
+    strlcat(prompt, "mv", sizeof(prompt));
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_BUFFER)) {
+    CHAR *opponent = ((GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) ? GET_OPPONENT(ch) : NULL);
+    CHAR *buffer = ((opponent && GET_OPPONENT(opponent) && SAME_ROOM(ch, GET_OPPONENT(opponent)) && (GET_OPPONENT(opponent) != ch)) ? GET_OPPONENT(opponent) : NULL);
+
+    if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
+      strlcat(prompt, " Buf:", sizeof(prompt));
+    }
+
+    if (buffer) {
+      if (IS_SET(desc->prompt, PROMPT_BUFFER_TEX)) {
+        snprintf(buf, sizeof(buf), "%s", condition[MAX(MIN((GET_MAX_HIT(buffer) ? ((100 * GET_HIT(buffer)) / GET_MAX_HIT(buffer)) : 0) / 10, 10), 0)]);
+        strlcat(prompt, buf, sizeof(prompt));
+      }
+      else {
+        snprintf(buf, sizeof(buf), "%d%%", GET_MAX_HIT(buffer) ? (int)(((double)GET_HIT(buffer) / (double)GET_MAX_HIT(buffer)) * 100.0) : 0);
+        strlcat(prompt, buf, sizeof(prompt));
+      }
+    }
+    else if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
+      strlcat(prompt, "*", sizeof(prompt));
+    }
+  }
+
+  if (IS_SET(desc->prompt, PROMPT_VICTIM)) {
+    CHAR *opponent = ((GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) ? GET_OPPONENT(ch) : NULL);
+
+    if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
+      strlcat(prompt, " Vic:", sizeof(prompt));
+    }
+
+    if (opponent) {
+      if (IS_SET(desc->prompt, PROMPT_VICTIM_TEX)) {
+        snprintf(buf, sizeof(buf), "%s", condition[MAX(MIN((GET_MAX_HIT(opponent) ? (100 * GET_HIT(opponent)) / GET_MAX_HIT(opponent) : 0) / 10, 10), 0)]);
+        strlcat(prompt, buf, sizeof(prompt));
+      }
+      else {
+        snprintf(buf, sizeof(buf), "%d%%", GET_MAX_HIT(opponent) ? (int)(((double)GET_HIT(opponent) / (double)GET_MAX_HIT(opponent)) * 100.0) : 0);
+        strlcat(prompt, buf, sizeof(prompt));
+      }
+    }
+    else if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
+      strlcat(prompt, "*", sizeof(prompt));
+    }
+  }
+
+  strlcat(prompt, " > ", sizeof(prompt));
+
+  if (color_enabled) {
+    if (fg_color) {
+      strlcat(prompt, fg_color, sizeof(prompt));
+    }
+
+    if (bg_color) {
+      strlcat(prompt, bg_color, sizeof(prompt));
+    }
+  }
+
+  write_to_descriptor(desc->descriptor, prompt);
+
+  desc->prompt_mode = 0;
 }
 
-int signal_world(CHAR *ch, int cmd, char* arg)
-{
-//  char buf[512];
-//  sprintf(buf, "signalling world with cmd=%d arg=%s", cmd, arg);
-//  log_s( buf );
 
-  int i = 0;
-  int stop = FALSE;
+int signal_world(CHAR *signaler, int cmd, char *arg) {
   static int counter = 0;
 
-  for (i = 0; !stop && i <= top_of_zone_table; i++)
-  {
-    stop = signal_zone(ch, zone_table[i].virtual, cmd, arg);
+  bool stop = FALSE;
+
+  for (int zone_rnum = 0; !stop && (zone_rnum <= top_of_zone_table); zone_rnum++) {
+    stop = signal_zone(zone_rnum, signaler, cmd, arg);
   }
 
-  if (cmd == MSG_TICK)
-  {
+  if (cmd == MSG_TICK) {
     point_update();
+
     affect_update();
 
     counter++;
 
-    if (counter == 4)
-    {
+    if (counter == 4) {
       weather_and_time(1);
 
-      if (time_info.hours == 1)
-      {
+      if (time_info.hours == 1) {
         update_time();
       }
 
@@ -2593,126 +2737,107 @@ int signal_world(CHAR *ch, int cmd, char* arg)
     }
   }
 
-  //log("done zone");
-
   return stop;
 }
 
 
-int signal_zone(CHAR *ch, int zone,int cmd, char*arg)
-{
-  /*
-  char buf[512];
-
-  sprintf(buf, "signalling zone=%d with cmd=%d arg=%s", zone, cmd, arg);
-  log_s(buf);
-  */
-
-  int i = 0, start = 0, finish = 0;
-  int breaker = FALSE, started = FALSE, stop = FALSE;
-  int real_zon = real_zone(zone);
-
-  if (zone_table[real_zon].reset_mode == 3)
-  {
-    if (cmd == MSG_ZONE_RESET) return TRUE;
-    else return FALSE;
+int signal_zone(int zone_rnum, CHAR *signaler, int cmd, char *arg) {
+  if (zone_table[zone_rnum].reset_mode == ZRESET_MODE_BLOCK) {
+    if (cmd == MSG_ZONE_RESET) {
+      return TRUE;
+    }
+    else {
+      return FALSE;
+    }
   }
 
-  if (zone_table[real_zon].bottom == -1 || real_room(zone_table[real_zon].bottom) == -1) start = 0;
-  else start = real_room(zone_table[real_zon].bottom);
+  int start = 0;
 
-  if (zone_table[real_zon].top == -1 || real_room(zone_table[real_zon].top) == -1) finish = top_of_world;
-  else finish = real_room(zone_table[real_zon].top);
+  if ((zone_table[zone_rnum].bottom == -1) || (real_room(zone_table[zone_rnum].bottom) == -1)) {
+    start = 0;
+  }
+  else {
+    start = real_room(zone_table[zone_rnum].bottom);
+  }
 
-  for (i = start; !breaker && i <= finish; i++)
-  {
-    if (world[i].zone == zone)
-    {
-      if (zone_table[real_zon].bottom == -1) zone_table[real_zon].bottom = world[i].number;
+  int finish = 0;
+
+  if ((zone_table[zone_rnum].top == -1) || (real_room(zone_table[zone_rnum].top) == -1)) {
+    finish = top_of_world;
+  }
+  else {
+    finish = real_room(zone_table[zone_rnum].top);
+  }
+
+  for (int room_rnum = start, started = FALSE; room_rnum <= finish; room_rnum++) {
+    if (world[room_rnum].zone == zone_table[zone_rnum].virtual) {
+      if (zone_table[zone_rnum].bottom == -1) {
+        zone_table[zone_rnum].bottom = world[room_rnum].number;
+      }
 
       started = TRUE;
 
-      if (signal_room(i, ch, cmd, arg))
-      {
-        stop = TRUE;
-        breaker = TRUE;
+      if (signal_room(room_rnum, signaler, cmd, arg)) {
+        return TRUE;
       }
     }
-    else
-    {
-      if (started)
-      {
-        breaker = TRUE;
-
-        if (i > 0) zone_table[real_zon].top = world[i - 1].number;
+    else if (started) {
+      if (room_rnum > 0) {
+        zone_table[zone_rnum].top = world[room_rnum - 1].number;
       }
+
+      break;
     }
   }
 
-  return stop;
+  return FALSE;
 }
 
-int signal_room(int room, CHAR *ch,int cmd,char *arg)
-{
-  char buf[512];
-//  sprintf(buf, " signalling room=%d (%s) with cmd=%d arg=%s", world[room].number, world[room].name, cmd, arg);
-  //log( buf );
+int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
+  if (room_rnum == NOWHERE) return FALSE;
 
-  CHAR *i;
-  CHAR *next_person;
-  OBJ  *object,*object_n;
-  int stop= FALSE;
-
-  if(room==NOWHERE) return FALSE;
-
-  if(cmd==MSG_TICK) {
-    if(RM_BLOOD(room)>0)
-      RM_BLOOD(room)-=1;
+  if (cmd == MSG_TICK) {
+    if (RM_BLOOD(room_rnum) > 0) {
+      RM_BLOOD(room_rnum) -= 1;
+    }
   }
 
-  if (world[room].funct)
-    if (room_special(room, ch, cmd, arg)) {
-      if(cmd == 0 || cmd == -3 || cmd == -4) {
-        sprintf(buf, "WIZINFO: Room %d returned TRUE from TICK, RESET, or MOBACT", world[room].number);
-        wizlog(buf, 1, 6);
-      }
-      return(TRUE);
+  bool stop = FALSE;
+
+  if (cmd != MSG_ROUND) {
+    if (!stop && world[room_rnum].funct) {
+      stop = room_special(room_rnum, signaler, cmd, arg);
     }
 
-  for (i = world[room].people ; !stop && i; i = next_person)
-    {
-    next_person = i->next_in_room;
-    if(signal_char(i, ch, cmd, arg) )
-     {
-     if(cmd == 0 || cmd == -3 || cmd == -4)
-      {
-        sprintf(buf, "WIZINFO: %s returned TRUE from TICK, RESET, or MOBACT", MOB_SHORT(i));
+    for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
+      next_ch = temp_ch->next_in_room;
+
+      stop = signal_char(temp_ch, signaler, cmd, arg);
+    }
+
+    for (OBJ *temp_obj = world[room_rnum].contents, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+      next_obj = temp_obj->next_content;
+
+      stop = signal_object(temp_obj, signaler, cmd, arg);
+    }
+
+    if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
+      char buf[MSL];
+      snprintf(buf, sizeof(buf), "WIZINFO: Room %d returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", world[room_rnum].number);
       wizlog(buf, 1, 6);
-        stop = FALSE;
-      }
-      else
-        stop = TRUE;
-      }
-    }
 
-  if (stop)
-     return stop;
-
-  for (object = world[room].contents; !stop && object; object = object_n)
-    {
-    object_n=object->next_content;
-    if(signal_object(object, ch, cmd, arg))
-      {
-      if(cmd == 0 || cmd == -3 || cmd == -4)
-      {
-        sprintf(buf, "WIZINFO: %s returned TRUE from TICK, RESET, or MOBACT", object->name);
-      wizlog(buf, 1, 6);
-        stop = FALSE;
-      }
-      else
-      stop = TRUE;
-      }
+      stop = FALSE;
     }
+  }
+
+  if (cmd == MSG_ROUND) {
+    for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
+      next_ch = temp_ch->next_in_room;
+
+      stop = signal_char(temp_ch, signaler, cmd, arg);
+    }
+  }
+
   return stop;
 }
 
@@ -2784,7 +2909,7 @@ void pulse_mantra(CHAR *ch) {
         gain = tmp_af->modifier;
 
         if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-          gain = ((gain * 12) / 10);
+          gain *= 1.25;
         }
 
         send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
@@ -2835,11 +2960,20 @@ void pulse_mantra(CHAR *ch) {
 void pulse_adrenaline_rush(CHAR *ch) {
   if (!ch) return;
 
-  if (IS_MORTAL(ch) &&
-      check_subclass(ch, SC_BANDIT, 3) &&
-      GET_HIT(ch) < GET_MAX_HIT(ch) &&
-      GET_OPPONENT(ch)) {
-    GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 3) && GET_OPPONENT(ch)) {
+    /* If less than max hit points, regenerate hit points. */
+    if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
+      GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
+
+      return;
+    }
+
+    /* If at max hit points and less than max mana, regenerate mana. */
+    if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
+      GET_MANA(ch) = MIN((GET_MANA(ch) + (GET_LEVEL(ch) / 15)), GET_MAX_HIT(ch));
+
+      return;
+    }
   }
 }
 
@@ -3031,128 +3165,74 @@ void pulse_wither(CHAR *ch) {
   }
 }
 
-void pulse_incendiary_cloud_new(CHAR *ch) {
-  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
-
-  for (AFF *tmp_af = ch->affected, *next_af = NULL; tmp_af; tmp_af = next_af) {
-    next_af = tmp_af->next;
-
-    if (tmp_af->type == SPELL_INCENDIARY_CLOUD_NEW) {
-      act("The cloud of fire enveloping you burns you to the core...", FALSE, ch, 0, 0, TO_CHAR);
-      act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
-
-      damage(ch, ch, 100, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
-
-      tmp_af->duration--;
-
-      if (tmp_af->duration <= 0) {
-        if (*spell_wear_off_msg[tmp_af->type]) {
-          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
-        }
-
-        affect_remove(ch, tmp_af);
-      }
-    }
-
-    /* Break out of the loop, as we should only process one Wither effect. */
-    break;
-  }
-}
-
 int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  bool stop = FALSE;
-  int i = 0;
-  int tmp_mana = 0;
-  OBJ *tmp_obj = NULL;
-  OBJ *next_obj = NULL;
-  ENCH *tmp_ench = NULL;
-  ENCH *next_ench = NULL;
-
   assert(ch);
 
-  /* Sanity check, to make sure ch is OK. */
-  if ((ch->nr >= 0) &&
-      (ch->nr <= top_of_mobt)) {
-    if ((ch->nr_v != mob_proto_table[ch->nr].virtual) &&
-        (ch->nr_v != 0) &&
-        (ch->nr != 0)) {
-      return FALSE;
-    }
-  }
-  /* Possibly a free'd CHAR */
-  else {
-    return FALSE;
-  }
-
-  if (CHAR_REAL_ROOM(ch) == NOWHERE) {
+  /* Sanity check. */
+  if ((CHAR_REAL_ROOM(ch) == NOWHERE) || ((ch->nr >= 0) && (ch->nr <= top_of_mobt) && (ch->nr_v && (ch->nr_v != mob_proto_table[ch->nr].virtual)))) {
     return FALSE;
   }
 
   if (cmd == MSG_TICK) {
     if (!IS_NPC(ch)) {
       /* Shadow Wraith */
-      pulse_shadow_wraith(ch);
+      pulse_shadow_wraith(ch); // TODO: Convert to enchant
     }
   }
 
   if (cmd == MSG_MOBACT) {
     if (!IS_NPC(ch)) {
       /* Mantra */
-      pulse_mantra(ch);
+      pulse_mantra(ch); // TODO: Convert to enchant
 
       /* Adrenaline Rush */
       pulse_adrenaline_rush(ch);
     }
 
     /* Wither */
-    pulse_wither(ch);
-
-    /* Incendiary Cloud (New) */
-    pulse_incendiary_cloud_new(ch);
+    pulse_wither(ch); // TODO: Convert to enchant
   }
 
-  if (IS_MORTAL(ch)) {
-    tmp_mana = GET_MANA(ch);
-  }
+  bool stop = FALSE;
 
-  /* Reset the stop variable. Important. */
-  stop = FALSE;
+  /* Handle all signals except MSG_ROUND. */
+  if (cmd != MSG_ROUND) {
+    int temp_mana = 0;
 
-  if (!stop) {
-    for (i = 0; !stop && (i <= (MAX_WEAR - 1)); i++) {
-      if (ch->equipment[i]) {
-        stop = signal_object(ch->equipment[i], signaler, cmd, arg);
+    if (IS_MORTAL(ch)) {
+      temp_mana = GET_MANA(ch);
+    }
+
+    for (int eq_slot = 0; !stop && (eq_slot < MAX_WEAR); eq_slot++) {
+      OBJ *temp_obj = EQ(ch, eq_slot);
+
+      if (temp_obj) {
+        stop = signal_object(temp_obj, signaler, cmd, arg);
       }
     }
-  }
 
-  if (!stop) {
-    for (tmp_obj = ch->carrying; !stop && tmp_obj; tmp_obj = next_obj) {
-      next_obj = tmp_obj->next_content;
+    for (OBJ *temp_obj = ch->carrying, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+      next_obj = temp_obj->next_content;
 
-      stop = signal_object(tmp_obj, signaler, cmd, arg);
+      stop = signal_object(temp_obj, signaler, cmd, arg);
     }
-  }
 
-  if (!stop) {
-    for (tmp_ench = ch->enchantments; !stop && tmp_ench; tmp_ench = next_ench) {
-      next_ench = tmp_ench->next;
+    for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
+      next_ench = temp_ench->next;
 
-      stop = enchantment_special(tmp_ench, ch, signaler, cmd, arg);
+      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
     }
-  }
 
-  if (IS_MORTAL(ch)) {
-    if (GET_MANA(ch) > tmp_mana) {
-      ch->points.mana_regen_tmp = (GET_MANA(ch) - tmp_mana);
+    if (IS_MORTAL(ch)) {
+      if (GET_MANA(ch) > temp_mana) {
+        ch->points.mana_regen_tmp = (GET_MANA(ch) - temp_mana);
+      }
+      else {
+        ch->points.mana_regen_tmp = 0;
+      }
     }
-    else {
-      ch->points.mana_regen_tmp = 0;
-    }
-  }
 
-  if (!stop) {
-    if (IS_NPC(ch) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+    if (!stop && IS_NPC(ch) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
       if (cmd == MSG_MOBACT) {
         mobile_activity(ch);
       }
@@ -3161,48 +3241,61 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
         stop = mob_special(ch, signaler, cmd, arg);
       }
     }
+
+    if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
+      char buf[MSL];
+      snprintf(buf, sizeof(buf), "WIZINFO: Char %s returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", MOB_SHORT(ch));
+      wizlog(buf, 1, 6);
+
+      stop = FALSE;
+    }
+  }
+
+  /* Handle MSG_ROUND. */
+  if (cmd == MSG_ROUND) {
+    for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
+      next_ench = temp_ench->next;
+
+      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
+    }
   }
 
   return stop;
 }
 
 
-int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+int signal_object(OBJ *obj, CHAR *signaler, int cmd, char *arg) {
   assert(obj);
 
-  if ((OBJ_RNUM(obj) >= 0) && (obj_proto_table[obj->item_number].func || obj->func) && obj_special(obj, ch, cmd, arg)) {
-    return TRUE;
+  bool stop = FALSE;
+
+  if (!stop && (OBJ_RNUM(obj) >= 0) && (OBJ_FUNC(obj) || obj_proto_table[obj->item_number].func)) {
+    stop = obj_special(obj, signaler, cmd, arg);
   }
 
-  if ((OBJ_TYPE(obj) == ITEM_BOARD) && board(obj, ch, cmd, arg)) {
-    return TRUE;
+  if (!stop && (OBJ_TYPE(obj) == ITEM_BOARD)) {
+    stop = board(obj, signaler, cmd, arg);
   }
 
-  if ((cmd == MSG_TICK) && COUNT_CONTENTS(obj)) {
-    for (OBJ *tmp = obj->contains, *tmp_n; tmp; tmp = tmp_n) {
-      tmp_n = tmp->next_content;
+  if (!stop && (cmd == MSG_TICK)) {
+    if (COUNT_CONTENTS(obj)) {
+      for (OBJ *temp_obj = obj->contains, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+        next_obj = temp_obj->next_content;
 
-      if (signal_object(tmp, ch, cmd, arg)) {
-        return TRUE;
+        stop = signal_object(temp_obj, signaler, cmd, arg);
       }
     }
   }
 
-  return FALSE;
-}
+  if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
+    char buf[MSL];
+    snprintf(buf, sizeof(buf), "WIZINFO: Obj %s returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", OBJ_SHORT(obj));
+    wizlog(buf, 1, 6);
 
-
-void send_to_world(char *arg) {
-  for (int i = 0; i < top_of_world; i++) {
-    send_to_room(arg, i);
+    stop = FALSE;
   }
-}
 
-
-void send_to_world_except(char *arg, CHAR *ch) {
-  for (int i = 0; i < top_of_world; i++) {
-    send_to_room_except(arg, i, ch);
-  }
+  return stop;
 }
 
 
@@ -3341,44 +3434,50 @@ void flying_room(int room) {
   }
 }
 
-void game_sleep(struct timeval *timeout)
-{
+void game_sleep(struct timeval *timeout) {
   if (select(0, (fd_set *) 0, (fd_set *) 0, (fd_set *) 0, timeout) < 0) {
     if (errno != EINTR) {
       log_s("SYSERR: Select sleep");
+
       exit(1);
     }
   }
 }
 
 void write_last_command() {
-    int fd;
-    if(!last_command[0]) return;
-    fd = open(LAST_COMMAND_FILE, O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+    if (!last_command[0]) return;
+
+    int fd = open(LAST_COMMAND_FILE, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+
     if (fd < 0) return;
-    write (fd, last_command, strlen(last_command));
-    write (fd, "\n", 1);
-    close (fd);
+
+    write(fd, last_command, strlen(last_command));
+    write(fd, "\n", 1);
+
+    close(fd);
 }
 
-void write_board(int vnum,char *heading,char *message);
-void examine_last_command ()
-{
-    FILE *fp;
-    char buf[MSL];
+void write_board(int vnum, char *heading, char *message);
+void examine_last_command () {
+    FILE *fp = fopen(LAST_COMMAND_FILE, "r");
 
-    fp = fopen (LAST_COMMAND_FILE, "r");
     if (!fp) return;
 
+    char buf[MSL];
+
     fscanf (fp, "%[^\n]", buf);
+
     fclose (fp);
-    unlink (LAST_COMMAND_FILE);
-    write_board(3097,"Last recorded command before crash",buf);
+
+    unlink(LAST_COMMAND_FILE);
+
+    write_board(3097, "Last recorded command before crash", buf);
 }
 
 void open_logfile() {
   backup_logfile();
-  if(!(logfile=fopen("syslog", "w"))) {
+
+  if (!(logfile = fopen("syslog", "w"))) {
     printf("Error: syslog file could not be opened.\n\r");
   }
 }

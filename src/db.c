@@ -244,7 +244,7 @@ void boot_db(void)
              zone_table[i].top);
 
        // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
-       signal_zone(NULL, zone_table[i].virtual, MSG_ZONE_RESET, "");
+       signal_zone(i, NULL, MSG_ZONE_RESET, "");
        reset_zone(i,BOOTFULL);
      }
 
@@ -255,7 +255,7 @@ void boot_db(void)
              zone_table[n_mid].top);
 
        // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
-       signal_zone(NULL, zone_table[n_mid].virtual, MSG_ZONE_RESET, "");
+       signal_zone(n_mid, NULL, MSG_ZONE_RESET, "");
        reset_zone(n_mid,BOOTFULL);
      }
 
@@ -266,7 +266,7 @@ void boot_db(void)
              zone_table[s_mid].top);
 
        // send MSG_ZONE_RESET to zone rooms, and ignore return value to handle spec reset
-       signal_zone(NULL, zone_table[s_mid].virtual, MSG_ZONE_RESET, "");
+       signal_zone(s_mid, NULL, MSG_ZONE_RESET, "");
        reset_zone(s_mid,BOOTFULL);
      }
 
@@ -1627,10 +1627,10 @@ struct obj_data *read_object(int nr, int type)
   for (j = 0; j < MAX_OBJ_AFFECT; ++j) {
     mod = 0;
 
-    if((IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM) || /* All random */
-        ((j == 0 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_0)) || /* First position random */
-         (j == 1 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_1)) || /* Second position random */
-         (j == 2 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_2))))) { /* Third position random */
+    if((IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM) ||                     /* All random */
+        ((j == 0 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_AFF0)) ||   /* First position random */
+         (j == 1 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_AFF1)) ||   /* Second position random */
+         (j == 2 && IS_SET(obj->obj_flags.extra_flags2, ITEM_RANDOM_AFF2))))) { /* Third position random */
 
       i = number(1, 100);
 
@@ -2225,24 +2225,25 @@ void read_objs( FILE *obj_f )
   free(temp);
 }
 
-#define ZO_DEAD  999
-
 /* update zone ages, queue for reset if necessary, and dequeue when possible */
 /* Only allow 5 zones to reset at a tick, delay the rest for the next one
    Ranger Oct 98 */
 void zone_update(void) {
-  int i,reset=0;
+  const int ZONE_IS_DEAD = 999;
 
-  for (i = 0; i <= top_of_zone_table; i++) {
-    if(zone_table[i].age < zone_table[i].lifespan && zone_table[i].reset_mode)
-      (zone_table[i].age)++;
-    else
-      if (zone_table[i].age < ZO_DEAD && zone_table[i].reset_mode) {
-        reset++;
-        if(reset>5) continue;
-        if(!signal_zone(NULL,zone_table[i].virtual,MSG_ZONE_RESET,""))
-          reset_zone(i,FALSE);
+  for (int zone = 0, num_reset = 0; zone <= top_of_zone_table; zone++) {
+    if (!zone_table[zone].reset_mode || zone_table[zone].age >= ZONE_IS_DEAD) continue;
+
+    if (zone_table[zone].age < zone_table[zone].lifespan) {
+      zone_table[zone].age++;
+    }
+    else if (num_reset <= 5) {
+      if (!signal_zone(zone, NULL, MSG_ZONE_RESET, "")) {
+        reset_zone(zone, FALSE);
       }
+
+      num_reset++;
+    }
   }
 }
 

@@ -617,22 +617,17 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
 
     exp = meta_cost(ch, choice);
 
-    if (choice == META_MOVE_UP_1 ||
-        choice == META_MOVE_DOWN_1)
-    {
-      choice = META_MOVE;
-    }
-
     if (check >= max)
     {
       send_to_char("The Metaphysician tells you 'Sorry, but I can't help you with that anymore.'\n\r", ch);
+
       return TRUE;
     }
 
-    if (exp > 0 &&
-        GET_EXP(ch) < exp)
+    if (exp > 0 && GET_EXP(ch) < exp)
     {
       send_to_char("The Metaphysician tells you 'Sorry, but you can't pay me for that!'\n\r", ch);
+
       return TRUE;
     }
 
@@ -641,27 +636,33 @@ Listed on a sign are the Metaphysician's prices in experience:\n\r\
       gold = exp * 2;
     }
 
+    // Prestige Perk 10
     if (GET_PRESTIGE_PERK(ch) >= 10) {
       gold *= 0.95;
     }
 
-    if (gold > 0 &&
-        GET_GOLD(ch) < gold)
+    if (gold > 0 && GET_GOLD(ch) < gold)
     {
       send_to_char("The Metaphysician tells you 'Sorry, you don't have enough gold for that!\n\r", ch);
+
       return TRUE;
     }
 
     bool free_bribe = FALSE;
 
     // Prestige Perk 24
-    if ((GET_PRESTIGE_PERK(ch) >= 24) && chance(2)) {
+    if ((GET_PRESTIGE_PERK(ch) >= 24) && chance(2) && ((choice == META_HIT) || (choice == META_MANA))) {
       free_bribe = TRUE;
 
       send_to_char("The Metaphysician tells you 'Congratulations, you got a free bribe!'\n\r", ch);
     }
 
     adjust = get_meta_adjust(choice, (bribe || free_bribe));
+
+    if (choice == META_MOVE_UP_1 || choice == META_MOVE_DOWN_1)
+    {
+      choice = META_MOVE;
+    }
 
     int half_price_chance = 2;
 

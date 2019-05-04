@@ -3,14 +3,17 @@
 *  Usage : Spells                                                         *
 ************************************************************************* */
 
+#ifndef __SPELLS_H__
+#define __SPELLS_H__
+
 /* Damage types for skills/spells/specs. */
-#define DAM_NO_BLOCK                  0 /* Not Blocked */
+#define DAM_NO_BLOCK                  0
 #define DAM_POISON                    1
 #define DAM_NO_BLOCK_NO_FLEE          2
 
 /* 10 through 49 are blocked by Invulnerability */
 #define DAM_PHYSICAL                 10
-#define DAM_SKILL                    11
+#define DAM_PHYSICAL_CRITICAL        11
 
 /* 50+ are blocked by Sphere */
 #define DAM_MAGICAL                  50
@@ -21,8 +24,14 @@
 #define DAM_CHEMICAL                 55
 #define DAM_ACID                     56
 
-#define TYPE_UNDEFINED               -1 /* Reserved. Do not change. */
-#define SPELL_RESERVED_DBC            0 /* Reserved. Do not change. */
+/* Reserved. Do not change. */
+#define TYPE_WEAPON2              -2 /* TODO: Research better placement of this define. */
+#define TYPE_UNDEFINED               -1
+
+#define SPELL_RESERVED_DBC            0
+#define MAX_SPL_LIST                255
+
+/* Spells and Skills */
 #define SPELL_ARMOR                   1
 #define SPELL_TELEPORT                2
 #define SPELL_BLESS                   3
@@ -47,7 +56,7 @@
 #define SPELL_DISPEL_EVIL            22
 #define SPELL_EARTHQUAKE             23
 #define SPELL_ENCHANT_WEAPON         24
-#define SPELL_ENERGY_DRAIN           25
+#define SPELL_ENERGY_DRAIN           25 // Consider removal
 #define SPELL_FIREBALL               26
 #define SPELL_HARM                   27
 #define SPELL_HEAL                   28
@@ -63,7 +72,7 @@
 #define SPELL_SLEEP                  38
 #define SPELL_STRENGTH               39
 #define SPELL_SUMMON                 40
-#define SPELL_VENTRILOQUATE          41
+#define SPELL_VENTRILOQUATE          41 // Consider removal
 #define SPELL_WORD_OF_RECALL         42
 #define SPELL_REMOVE_POISON          43
 #define SPELL_SENSE_LIFE             44
@@ -123,7 +132,7 @@
 #define SPELL_IMP_INVISIBLE          98
 #define SPELL_INVUL                  99
 #define SPELL_FEAR                  100
-#define SPELL_FORGET                101
+#define SPELL_FORGET                101 // Consider removal
 #define SPELL_FURY                  102
 #define SPELL_ENDURE                103
 #define SPELL_BLINDNESS_DUST        104
@@ -138,7 +147,7 @@
 #define SPELL_DISPEL_GOOD           113
 #define SPELL_EVIL_WORD             114
 #define SPELL_REAPPEAR              115
-#define SPELL_REVEAL                116
+#define SPELL_REVEAL                116 // Merge with Reappear
 #define SPELL_RELOCATION            117
 #define SPELL_LOCATE_CHARACTER      118
 #define SPELL_SUPER_HARM            119
@@ -153,53 +162,53 @@
 #define SPELL_PW_KILL               128
 #define SPELL_DISPEL_MAGIC          129
 #define SPELL_CONFLAGRATION         130
-#define SPELL_MASS_INVISIBILITY     131
-#define SPELL_CONVERGENCE           132
+#define SPELL_SKILL_131             131
+#define SPELL_CONVERGENCE           132 // Consider removal
 #define SPELL_ENCHANT_ARMOUR        133
 #define SPELL_DISINTEGRATE          134
-#define SPELL_CONFUSION             135
+#define SKILL_HIDDEN_BLADE          135
 #define SPELL_VAMPIRIC              136
 #define SPELL_SEARING_ORB           137
 #define SPELL_CLAIRVOYANCE          138
 #define SPELL_FIREBREATH            139
-#define SPELL_LAYHANDS              140
+#define SPELL_LAY_HANDS             140
 #define SPELL_DISPEL_SANCT          141
 #define SPELL_DISENCHANT            142
 #define SPELL_PETRIFY               143
 #define SKILL_BACKFLIP              144
 #define SPELL_PROTECT_FROM_GOOD     145
 #define SPELL_REMOVE_IMP_INVIS      146
-#define SPELL_EXISTENCE             147
+#define SPELL_SKILL_147             147
 #define SKILL_QUAD                  148
 #define SPELL_QUICK                 149
 
-/* NOTE: Spells 150-162 should not be direct damage spells to avoid */
-/*       conflict with hit types in the damage() function.          */
+/* Note: 150-162 should not be used for direct damage spells/skills to
+         avoid conflicting with weapon attack types used in damage(). */
 #define SPELL_DIVINE_INTERVENTION   150
 #define SPELL_RUSH                  151
 #define SPELL_BLOOD_LUST            152
 #define SKILL_SCAN                  153
 #define SPELL_MYSTIC_SWIFTNESS      154
-#define SPELL_LEGEND_LORE           155
-#define SKILL_HIDDEN_BLADE          156
-#define SPELL_UNUSED_157            157
-#define SPELL_UNUSED_158            158
-#define SPELL_UNUSED_159            159
-#define SPELL_UNUSED_160            160
-#define SPELL_UNUSED_161            161
-#define SPELL_UNUSED_162            162
+#define SPELL_SKILL_155             155
+#define SPELL_SKILL_156             156
+#define SPELL_SKILL_157             157
+#define SPELL_SKILL_158             158
+#define SPELL_SKILL_159             159
+#define SPELL_SKILL_160             160
+#define SPELL_SKILL_161             161
+#define SPELL_SKILL_162             162
 
 #define SKILL_TWIST                 163
 #define SKILL_CUNNING               164
 #define SPELL_WIND_SLASH            165
 
 /* Subclass Spells and Skills start here. */
-#define SPELL_UNUSED_166            166
-#define SPELL_UNUSED_167            167
-#define SPELL_UNUSED_168            168
-#define SPELL_UNUSED_169            169
-#define SPELL_UNUSED_170            170
-#define SPELL_UNUSED_171            171
+#define SPELL_SKILL_166             166
+#define SPELL_SKILL_167             167
+#define SPELL_SKILL_168             168
+#define SPELL_SKILL_169             169
+#define SPELL_SKILL_170             170
+#define SPELL_SKILL_171             171
 #define SPELL_DEBILITATE            172
 #define SPELL_MANA_HEAL             173
 #define SKILL_CLOBBER               174
@@ -227,7 +236,7 @@
 #define SKILL_MANTRA                197
 #define SKILL_BANZAI                198
 #define SKILL_HEADBUTT              199
-/* Reserved for TYPE_SUFFERING      200 */
+#define SKILL_MAIM                  200
 #define SPELL_BLESSING_OF_SACRIFICE 201
 #define SPELL_AID                   202
 #define SPELL_DEMONIC_THUNDER       203
@@ -262,7 +271,7 @@
 #define SKILL_TRUSTY_STEED          232
 #define SKILL_BACKFIST              233
 #define SKILL_RETREAT               234
-#define SKILL_FADE                  235
+#define SKILL_CLOSE_COMBAT          235
 #define SPELL_CLOUD_CONFUSION       236
 #define SKILL_LUNGE                 237
 #define SPELL_RAGE                  238
@@ -276,16 +285,12 @@
 #define SPELL_ORB_PROTECTION        246
 #define SPELL_DUSK_REQUIEM          247
 #define SPELL_FROSTBOLT             248
-#define SPELL_IRONSKIN              249
+#define SPELL_IRON_SKIN             249
 #define SPELL_DISTORTION            250
 #define SPELL_PASSDOOR              251
 #define SPELL_BLADE_BARRIER         252
 #define SPELL_MIGHT                 253
 #define SPELL_CLARITY               254
-
-/* Reserved */
-#define TYPE_SUFFERING              200 /* Never change this. */
-#define MAX_SPL_LIST                255
 
 /* Attack Types. These values are shared with Spells/Skills, as noted above. */
 #define TYPE_HIT                    150
@@ -303,24 +308,23 @@
 #define TYPE_SHADOW                 162
 
 /* More of anything but spells and weapon types can be inserted here. */
+#define SAVING_PARA        0
+#define SAVING_ROD         1
+#define SAVING_PETRI       2
+#define SAVING_BREATH      3
+#define SAVING_SPELL       4
 
-#define SAVING_PARA       0
-#define SAVING_ROD        1
-#define SAVING_PETRI      2
-#define SAVING_BREATH     3
-#define SAVING_SPELL      4
-
-#define TAR_IGNORE        1
-#define TAR_CHAR_ROOM     2
-#define TAR_CHAR_WORLD    4
-#define TAR_FIGHT_SELF    8
-#define TAR_FIGHT_VICT   16
-#define TAR_SELF_ONLY    32 /* Only a check, use with ei. TAR_CHAR_ROOM */
-#define TAR_SELF_NONO    64 /* Only a check, use with ei. TAR_CHAR_ROOM */
-#define TAR_OBJ_INV     128
-#define TAR_OBJ_ROOM    256
-#define TAR_OBJ_WORLD   512
-#define TAR_OBJ_EQUIP  1024
+#define TAR_IGNORE         1
+#define TAR_CHAR_ROOM      2
+#define TAR_CHAR_WORLD     4
+#define TAR_FIGHT_SELF     8
+#define TAR_FIGHT_VICT    16
+#define TAR_SELF_ONLY     32 /* Only a check, use with ei. TAR_CHAR_ROOM */
+#define TAR_SELF_NONO     64 /* Only a check, use with ei. TAR_CHAR_ROOM */
+#define TAR_OBJ_INV      128
+#define TAR_OBJ_ROOM     256
+#define TAR_OBJ_WORLD    512
+#define TAR_OBJ_EQUIP   1024
 
 struct spell_info_type
 {
@@ -480,7 +484,7 @@ void cast_blindness( ubyte level, struct char_data *ch, char *arg, int si, struc
 void cast_blindness_dust( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_super_harm( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_firebreath( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
-void cast_layhands( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
+void cast_lay_hands( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_dispel_magic( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_power_word_kill( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_conflagration( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
@@ -830,7 +834,7 @@ void spell_regeneration(ubyte level, struct char_data *ch,
 void spell_animate_dead(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
-void spell_layhands(ubyte level, struct char_data *ch,
+void spell_lay_hands(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
 void spell_regeneration(ubyte level, struct char_data *ch,
@@ -921,8 +925,10 @@ void cast_perceive(ubyte level, struct char_data *ch, char *arg, int type,struct
 void spell_perceive(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj);
 void spell_wind_slash(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj); /* Project Tsurugi */
 
-void magic_heal(struct char_data *ch, int spell, int heal, bool overheal);
+void magic_heal(struct char_data *victim, int spell, int heal, bool overheal);
 
 /* externals */
 
 extern struct spell_info_type spell_info[MAX_SPL_LIST+1];
+
+#endif /* __SPELLS_H__ */

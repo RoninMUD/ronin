@@ -143,7 +143,7 @@ Returns:
   /* Check for Meditation. */
   if (!IS_IMMORTAL(ch) &&
       (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 30)))) {
+      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 29)))) {
     send_to_char("You are deep in meditation, unable to follow.\n\r", ch);
 
     return FALSE;
@@ -370,7 +370,7 @@ Returns:
   }
 
   if (IS_AFFECTED(ch, AFF_FLY)) {
-    if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+    if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
       snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
     else {
@@ -380,7 +380,7 @@ Returns:
     act(buf, 2, ch, 0, 0, TO_ROOM);
   }
   else if (GET_POS(ch) == POSITION_SWIMMING) {
-    if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+    if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
       snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
     }
     else {
@@ -414,11 +414,11 @@ Returns:
     }
   }
   else {
-    if (!IS_IMMORTAL(ch) && GET_HIT(ch) < (hit_limit(ch) / 10)) {
+    if (!IS_IMMORTAL(ch) && (GET_HIT(ch) < (hit_limit(ch) / 10))) {
       snprintf(buf, sizeof(buf), "$n crawls %s.", dirs[cmd]);
     }
     else {
-      if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+      if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
         snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
       }
       else {
@@ -443,7 +443,7 @@ Returns:
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
 
   /* In case MSG_LEAVE kills. */
-  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return FALSE;
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
 
   /* Move the character from the old room. */
   char_from_room(ch);
@@ -458,7 +458,7 @@ Returns:
   }
 
   /* Show arrival message, as approrpriate. */
-  if (ch->player.poofout && GET_LEVEL(ch) < LEVEL_IMM) {
+  if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
     snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
   }
   else {
@@ -474,7 +474,13 @@ Returns:
   }
   else {
     if (IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, 2, ch, 0, 0, TO_GROUP);
+      for (CHAR *temp_ch = world[CHAR_REAL_ROOM(ch)].people, *next_ch; temp_ch; temp_ch = next_ch) {
+        next_ch = temp_ch->next_in_room;
+
+        if ((temp_ch == ch) || (!IS_IMMORTAL(ch) && !SAME_GROUP(temp_ch, ch))) continue;
+
+        act(buf, 2, ch, 0, 0, TO_CHAR);
+      }
     }
     else {
       act(buf, 2, ch, 0, 0, TO_ROOM);
@@ -2441,7 +2447,13 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   snprintf(buf, sizeof(buf), "$n as arrived.");
   if (IS_AFFECTED(ch, AFF_SNEAK)) {
-    act(buf, 2, ch, 0, 0, TO_GROUP);
+    for (CHAR *temp_ch = world[CHAR_REAL_ROOM(ch)].people, *next_ch; temp_ch; temp_ch = next_ch) {
+      next_ch = temp_ch->next_in_room;
+
+      if ((temp_ch == ch) || (!IS_IMMORTAL(ch) && !SAME_GROUP(temp_ch, ch))) continue;
+
+      act(buf, 2, ch, 0, 0, TO_CHAR);
+    }
   }
   else {
     act(buf, 2, ch, 0, 0, TO_ROOM);

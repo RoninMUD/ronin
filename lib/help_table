@@ -7096,6 +7096,9 @@ landing an attack against the Defiler. In addition, the Defiler will
 make a doubled attack back against his/her opponent, exploiting the
 opponent's miss.
 
+When not tanking, the Defiler will have a chance of triggering an extra
+doubled hit when their normal attack is avoided.
+
 The success of this skill is based on how well it is practiced, and
 the character's dexterity.
 
@@ -7441,7 +7444,8 @@ Mana Cost   : 50
 Damage      : 350
 
 This spell is similar to iceball, but the damage to casting cost ratio is much
-higher, making it a very mana-efficient attack spell.
+higher, making it a very mana-efficient attack spell.  A victim hit with Frost
+Bolt has their movement points reduced by 100.
 
 See Also: SUBCLASSES ARCHMAGE
 #
@@ -7560,35 +7564,6 @@ Level         Skill
 
 See Also: SUBCLASSES BANDIT THIEF
 #
-BANDIT
-
-Bandit is one of the Thief subclasses and is broken up
-into 5 levels.  At each level, the bandit receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
-
-Level         Skill
-  1           FADE
-  2           IMPAIR
-  3           ADRENALINE RUSH
-  4           CLOSE COMBAT
-  5           EVASION
-
-See Also: SUBCLASSES ROGUE THIEF
-#
-FADE
-
-Subclass Bandit: Level 1 (Thief)
-
-Usage: fade (toggles on/off)
-
-The fade skill allows the Bandit to blend in with their surroundings,
-increasing their chance of a successful dodge.  However, this comes at
-the cost of reduced hitroll.  The hitroll reduction is less severe the
-higher the Bandit's class level.
-
-See also: SUBCLASSES BANDIT DODGE HITROLL
-#
 "DIRTY TRICKS"
 
 Subclass Rogue: Level 1 (Thief)
@@ -7603,33 +7578,45 @@ bleed profusely, causing damage over time.
 
 See Also: SUBCLASSES ROGUE BLINDNESS
 #
+TROPHY
+
+Subclass Rogue: Level 2 (Thief)
+Subclass Trapper: Level 4 (Nomad)
+
+Trophy is a group buff skill.  Creating a trophy inspires the group at a cost of
+10 mana per character that will receive a benefit.  If the Rogue or Trapper does
+not have enough mana, players will receive the benefit from the "top down" of
+the party list, with the Rogue or Trapper always first until their mana is below
+10.  The benefits gained from the trophy effect are +2 hitroll and +2 damroll,
+and the duration of the effect is 10 ticks.  This skill causes a 1 round skill
+lag when used.
+
+See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
+#
+VEHEMENCE
+
+Subclass Rogue: Level 3 (Thief)
+
+Usage: vehemence (toggles on/off)
+
+When affected by Vehemence, the Rogue gains a skill bonus of (5 + 1/2 dexterity
+modifier) to all of their skill checks.  When in this state, the Rogue suffers
+from an increase of 10% damage received, due to their reckless abandon.  If the
+Rogue is in combat, this skill cannot be toggled on or off.
+
+See Also: SUBCLASSES ROGUE DODGE
+#
 TRIP
 
 Subclass Rogue: Level 4 (Thief)
 
 Usage: trip (toggles on/off)
 
-When active and using Circle against an opponent, the Rogue has a
-chance to follow up their attack by tripping the victim, knocking them
-to the ground.
+When active and using Circle against an opponent, the Rogue has a chance to
+follow up their attack by tripping the victim, knocking them to the ground into
+a stunned position.
 
 See Also: SUBCLASSES ROGUE
-#
-IMPAIR
-
-Subclass Bandit: Level 2 (Thief)
-
-This skill gives the Bandit a chance to automatically apply various
-debuffs to their target when engaging in, and during combat.
-
-When using Backstab, there is a chance that the target will be
-paralyzed and unable to flee from combat.  When using Circle, there is
-a chance that the target will be dazed, causing them to receive a 30
-point penalty to their AC, and -2 penalty to their hitroll.
-
-This is an automatic skill and is always in effect.
-
-See also: SUBCLASSES BANDIT AC HITROLL
 #
 "QUICK RECOVERY"
 
@@ -7644,19 +7631,99 @@ This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES ROGUE
 #
+BANDIT
+
+Bandit is one of the Thief subclasses and is broken up
+into 5 levels.  At each level, the bandit receives a
+new or improved skill.  For help on each skill, just type
+HELP <name of skill>
+
+Level         Skill
+  1           IMPAIR
+  2           FADE
+  3           ADRENALINE RUSH
+  4           CLOSE COMBAT
+  5           EVASION
+
+See Also: SUBCLASSES ROGUE THIEF
+#
+IMPAIR
+
+Subclass Bandit: Level 1 (Thief)
+
+This skill gives the Bandit a chance to automatically apply a debuff to their
+target when using the Backstab and Circle skills.
+
+When using Backstab, there is a chance that the target will be paralyzed and
+unable to move for a duration of 2 ticks.  When using Circle, there is a chance
+that the target will be dazed, causing them to receive a 30 point penalty to
+their AC and -2 penalty to their hitroll.
+
+This is an automatic skill and is always in effect.
+
+See also: SUBCLASSES BANDIT AC HITROLL
+#
+FADE
+
+Subclass Bandit: Level 2 (Thief)
+
+Fade allows the Bandit to blend in with their surroundings, making their actions
+more difficult to predict.  Fade grants a bonus to Dodge equal to (level * 1.5)
+at all times.  When not being attacked directly the Bandit gains +10 bonus to
+their Circle skill check.
+
+Fade is an automatic skill and is always active.
+
+See also: SUBCLASSES BANDIT DODGE CIRCLE
+#
+"ADRENALINE RUSH"
+
+Subclass Bandit: Level 3 (Thief)
+
+When affected by healing magic, the Bandit will have the amount of healing
+received increased by 10% to 15%.
+
+In addition, the Bandit has an increased health and mana regeneration rate when
+engaged in combat.  The regeneration rate is equal to (level / 5) for hit
+points and (level / 15) for mana points, and these points are gained every 10
+seconds.
+
+See Also: SUBCLASSES BANDIT
+#
 "CLOSE COMBAT"
 
 Subclass Bandit: Level 4 (Thief)
 
-The Bandit benefits from an increased combat awareness, granting them
-an increase of +1 hitroll, +1 damroll and -20 AC.  When fighting in
-close quarters (inside, in the city, or in the forest), the Bandit
-receives an additional benefit, increasing the damroll and hitroll
-bonus to a total of +5 each.
+The Bandit benefits from an increased combat awareness, granting them a passive
+bonus of +2 hitroll and +2 damroll.  After a successful Backstab or Circle
+attack, the Bandit has a 50% + dexterity modifier chance of increasing this
+bonus to a total +5 hitroll and +5 damroll for a duration of 3 combat rounds.
+
+After the Bandit successfully dodges an attack, they are granted a bonus of -10
+AC for a duration of 3 combat rounds.  This AC benefit can stack twice to a
+maximum of -20 AC.  This benefit allows the Bandit's AC to temporarily exceed
+the normal maximum of -250 AC, to a limit of -270 AC with two stacks.
 
 This is an automatic skill and is always in effect.
 
 See Also: SUBCLASSES BANDIT
+#
+EVASION
+
+Subclass Bandit: Level 5 (Thief)
+Class: Nomad (Level 50)
+
+Usage: evasion (toggles on/off)
+
+When the Bandit/Nomad is in this protective postion, all damage inflicted by
+physical attacks (bare hand attacks, weapon attacks, and skills) will be
+reduced by 25%.
+
+Unfortunately, since the Bandit/Nomad is so intent on protecting themselves,
+they will miss more often.  If the Bandit is in combat, this skill cannot be
+toggled on or off.
+
+See Also: SUBCLASSES BANDIT NOMAD
 #
 GLADIATOR
 
@@ -7666,8 +7733,8 @@ skill, just type HELP <name of skill>
 
 Level         Skill
   1           FLANK
-  2           DISEMBOWEL
-  3           TACTICIAN
+  2           TACTICIAN
+  3           MAIM
   4           HEADBUTT
   5           HOSTILE
 
@@ -7722,13 +7789,12 @@ See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD PRACTICE DEXTERITY
 #
 DISEMBOWEL
 
-Subclass Gladiator: Level 2 (Warrior)
 Class: Nomad (Level 40)
 
 Usage: disembowel <victim>
 
 Disembowel is a vicious attack that deals a single melee hit against the target,
-multiplied by between the Gladiator's level divided by 10, up to to their level
+multiplied by between the Nomad's level divided by 10, up to to their level
 divided by 5 (between a 5x to a 10x multiplier at level 50).
 
 This attack can only be successful when performed against a target that is
@@ -7736,17 +7802,17 @@ close to death (30% hit points remaining, or less), or if the damage would cause
 the victim to die in one strike.  This ability is similar to Backstab, but is
 used at the end of combat, instead of the beginning.
 
-The Gladiator will experience 3 rounds of input lag after using Disembowel,
+The Nomad will experience 3 rounds of input lag after using Disembowel,
 regardless of success or failure.
 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
 
-See Also: SUBCLASSES GLADIATOR PRACTICE DEXTERITY
+See Also: NOMAD PRACTICE DEXTERITY
 #
 TACTICIAN
 
-Subclass Gladiator: Level 3 (Warrior)
+Subclass Gladiator: Level 2 (Warrior)
 
 A measured tactical response is often the key factor separating victory and
 defeat, even among warriors of disparate physical abilities.  A seasoned
@@ -7766,6 +7832,24 @@ by the impending blow is reduced by one round, to a minimum of zero.
 
 See Also: SUBCLASSES GLADIATOR DISARM
 #
+MAIM
+
+Subclass Gladiator: Level 3 (Warrior)
+
+Maim applies a debuff to the target of the Gladiator's Flank attack.  This
+debuff will cause the target to take extra damage equal to 1/4 the Gladiator's
+class level, rounded down, (12 damage at lvl 48+) after being hit by a
+successful physical attack skill (pummel, punch, etc.).  This bonus damage is
+applied separately from the damage inflicted by the triggering skill and
+cannot be increased (such as by position, spell effects like Fury, etc.).
+Backflip, Smite, and Zeal will also trigger this bonus damage.  Other bonus
+attacks that are triggered by skills (such as Hidden Blade and Trusty Steed,
+etc.) do not cause extra damage from the Maim effect (e.g. they do not "double
+dip").  This damage is subject to normal physical damage resistance or
+immunity.  The Maim effect lasts until the affected creature dies.
+
+See Also: SUBCLASSES GLADIATOR
+#
 HEADBUTT
 
 Subclass Gladiator: Level 4 (Warrior)
@@ -7780,9 +7864,8 @@ skulls into their opponents, they can deal a significant amount of damage.
 This attack will deal 200 damage to the victim in a single motion and will also
 place them into the Stunned position.
 
-The Gladiator will experience 3 rounds of input lag after a successful Headbutt,
-their vision left spinning from the mighty blow.  A failed Headbutt will result
-in 2 rounds of input lag instead.
+The Gladiator will experience 2 rounds of input lag after an attempted Headbutt,
+their vision left spinning from the effort.
 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
@@ -7822,11 +7905,11 @@ new or improved skill or spell.  For help on each skill
 or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           IRON SKIN
+  1           TREMOR
   2           CLOUD OF CONFUSION
   3           RIPOSTE
-  4           TREMOR
-  5           INCENDIARY CLOUD
+  4           INCENDIARY CLOUD
+  5           SIDEARM
 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
@@ -7841,8 +7924,8 @@ Level         Skill/Spell
   1           LUNGE
   2           RIMEFANG
   3           CLOBBER
-  4           SNIPE
-  5           DEVASTATION
+  4           DEVASTATION
+  5           SNIPE
 
 See Also: SUBCLASSES MERCENARY COMMANDO
 #
@@ -7871,15 +7954,20 @@ Subclass Legionnaire: Level 2 (Commando)
 Usage       : cast 'rimefang'
 Accumulative: No
 Duration    : -
-Save        : Save vs. Spell: 1/2 Damage, Save vs. Paralysis: Negates Paralysis
-Mana Cost   : 150
-Damage      : (6 to 8) * caster level (up to 400 at level 50)
+Save        : Save vs. Paralysis: Negates Paralysis
+Mana Cost   : 115
+Damage      : (5 to 7) * (caster level) (up to 350 at level 50)
 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
 paralyze those hit by it, as compared to the Paralyze spell.
 
-During the winter, Rimefang will deal an additional 50 to 100 damage.
+Rimefang deals (level / 2 to level) additional damage at night or during the
+winter, and (level to level * 2) damage on a cold winter's eve.  After a
+creature has been damaged by Rimefang, it gains a 10 point penalty to its saving
+throws vs. spells for a duration of 20 rounds (60 seconds, or 1 tick); this
+penalty can be refreshed by additional casts of Rimefang, but does not stack
+with itself.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -7893,8 +7981,9 @@ The Legionnaire will attempt to strike an opponent with a devastating blow.  The
 damage dealt by this skill is equal to one to four times the user's level.
 
 Additionally, this skill will stun, incapacitate, or even mortally wound a
-target, making the next attack made against the target much more effective.  The
-user will experience two rounds of lag after use.
+target, making the next attack made against the target much more effective.
+The chance for each position is 50%, 30%, and 20% respectively. The user will
+experience two rounds of lag after use.
 
 Clobber pierces through the powerful shielding granted by Invulnerability.
 
@@ -7907,9 +7996,25 @@ mortally wounded position, making them temporarily rather defenseless.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-SNIPE
+DEVASTATION
 
 Subclass Legionnaire: Level 4 (Commando)
+
+Usage       : cast 'devastation' <victim>
+Accumulative: No
+Duration    : -
+Save        : -
+Mana Cost   : 150
+Damage      : 1000
+
+This powerful spell is nearly as mana efficient as Frost Bolt, while being
+more time efficient.
+
+See Also: SUBCLASSES LEGIONNAIRE
+#
+SNIPE
+
+Subclass Legionnaire: Level 5 (Commando)
 
 Usage: snipe (toggles on/off)
 
@@ -7920,40 +8025,28 @@ attack inflicts 15 to 25 times the commando's class level, for a minimum of 750
 damage, and a maximum of 1250 damage at level 50.  This attack is automatic and
 is attempted approximately every 10 seconds.  Its chance of success is based on
 the target's remaining hit points, with a more wounded target being more prone
-to being sniped.
+to being sniped.  Snipe can only trigger once per 10 combat rounds on the same
+creature.  Multiple Legionnaires can Snipe the same creature, but only one time
+each within the 10 round window.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
-DEVASTATION
-
-Subclass Legionnaire: Level 5 (Commando)
-
-Usage       : cast 'devastation' <victim>
-Accumulative: No
-Duration    : -
-Save        : -
-Mana Cost   : 200
-Damage      : 1000 to 1200
-
-This powerful spell causes a bit more damage than the Mage's Thunderball spell.
-
-The Legionnaire can expect to deal 1000 to 1200 damage to their victim.
-
-See Also: SUBCLASSES LEGIONNAIRE
-#
-"IRON SKIN"
+TREMOR
 
 Subclass Mercenary: Level 1 (Commando)
 
-Usage       : cast 'iron skin' <target>
+Usage       : cast 'tremor'
 Accumulative: No
-Duration    : 10
+Duration    : -
 Save        : -
-Mana Cost   : 50
+Mana Cost   : 130
+Damage      : 400
 
-When self-cast upon the Mercenary, this defensive spell will modify their AC by
--25, making them harder to hit.  If cast upon a different target, the spell is
-less effective, granting only -10 AC instead.
+With this spell, the Mercenary causes the ground to shake and heave violently,
+inflicting 400 damage to every opponent in the room, and knocking them into the
+resting position.  Opponents affected by Tremor have a 95% chance of failing to
+flee from combat for a duration of 10 rounds (30 seconds).  This effect can be
+refreshed or re-applied by casting Tremor again.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7967,10 +8060,12 @@ Duration    : 1d5 + 1
 Save        : -
 Mana Cost   : 100
 
-This spell affects everyone in the room not grouped with the Mercenary.  All
-victims will have their Hitroll reduced by 5 to 8.
+Cloud of confusion makes it hard for targets to focus, resulting in more misses
+when fighting, and missteps when feeling.
 
-This spell will be more effective when cast at night.
+This spell affects everyone in the room not grouped with the Mercenary.  All
+victims will have their Hitroll reduced by 5 to 8 during the day, or 6 to 9 at
+night.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -7979,45 +8074,48 @@ RIPOSTE
 Subclass Mercenary: Level 3 (Commando)
 
 With this skill, the Mercenary has a chance to partially deflect incoming
-attacks made against them; the damage deflected is equal to 20% of the deflected
+attacks made against them; the damage deflected is equal to 40% of the deflected
 attack.  Additionally, the Mercenary will strike back at their opponent,
 performing an attack with a normal chance of a Dual or Triple hit.
+
+When not tanking, the Mercenary has a chance of triggering an extra hit when
+their attack is avoided.
 
 The success of this skill is dependent on how well it is practiced, and the
 character's Dexterity modifier.
 
 See Also: SUBCLASSES MERCENARY
 #
-TREMOR
+"INCENDIARY CLOUD"
 
 Subclass Mercenary: Level 4 (Commando)
 
-Usage       : cast 'tremor'
-Accumulative: No
-Duration    : -
+Usage       : cast 'incendiary cloud' <target>
+Accumulative: no
+Duration    : Instantaneous / 60 seconds (damage over time)
 Save        : -
-Mana Cost   : 150
+Mana Cost   : 200
+Damage      : 500 + 75 per combat round for 20 rounds
 
-With this spell, the Mercenary causes the ground to shake and heave
-violently, inflicting 400 damage to every opponent in the room, and
-knocking them into a stunned state.
+This powerful spell will inflict a large amount of up-front damage instantly,
+plus a smaller, but still potent burst, every combat round.
 
 See Also: SUBCLASSES MERCENARY
 #
-"INCENDIARY CLOUD"
+SIDEARM
 
 Subclass Mercenary: Level 5 (Commando)
 
-Usage       : cast 'incendiary cloud' <target>
-Accumulative: no
-Duration    : Instantaneous / ~ 60 seconds (DoT)
-Save        : -
-Mana Cost   : 150
-Damage      : 700 + 100 damage per 10 seconds for 60 seconds
+This ability allows the Mercenary to wield a second weapon in their off-hand.
 
-This powerful spell will inflict a large amount of up-front damage instantly,
-plus 100 damage per ~ 10 seconds (one pulse), for a duration of ~ 60 total
-seconds (6 total pulses).
+However, unlike the more disciplined Ninja, the Mercenary cannot attack with
+this second weapon every round.  Instead, this weapon will be automatically
+drawn and used every 4 to 6 rounds, causing a standard melee attack; this
+attack can result in a dual or triple hit, as usual.
+
+This ability also allows the Mercenary to wield a two-handed weapon in the main
+hand, though the normal 50% bonus to hitroll and damroll from strength is not
+applied when doing so.  The sidearm must be a one-handed weapon.
 
 See Also: SUBCLASSES MERCENARY
 #
@@ -8043,9 +8141,9 @@ each level, the Crusader receives a new or improved skill or spell.  For help
 on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           RIGHTEOUSNESS
-  2           BLESSING OF SACRIFICE
-  3           FOCUS
+  1           BLESSING OF SACRIFICE
+  2           FOCUS
+  3           PANACEA
   4           ZEAL
   5           POWER OF FAITH
 
@@ -8062,8 +8160,8 @@ Duration    : 20
 Save        : -
 Mana Cost   : 50
 
-The Cavalier or Templar draws strength from his/her faith, giving him/her an
-additional 2 damroll.
+The Cavalier or Templar draws strength from his/her faith, granting them +1
+hitroll and +3 damroll on all melee attacks.
 
 See Also: SUBCLASSES CAVALIER TEMPLAR
 #
@@ -8073,7 +8171,7 @@ Subclass Cavalier: Level 2 (Paladin)
 
 Usage: trusty-steed (toggles on/off)
 
-When using pummel or smite against an enemy, the Crusader has a chance to
+When using Pummel or Smite against an enemy, the Crusader has a chance to
 follow up their attack by summoning an ethereal steed that charges into
 their target dealing 1.5 times the Cavalier's level in damage and
 knocking them to the ground.
@@ -8087,7 +8185,7 @@ receiving 2.33x damage on the next attack.
 Cavaliers with Wisdom greater than 18 will receive a bonus to the chance
 to summon their magical steed.
 
-See Also: SUBCLASSES CAVALIER
+See Also: SUBCLASSES CAVALIER SMITE
 #
 "WRATH OF GOD"
 
@@ -8115,19 +8213,19 @@ Usage: smite <victim>
 
 This skill allows the Cavalier to channel their righteous fury against an
 enemy. In doing so, the Cavalier switches their target and performs a
-single attack against their enemy that knocks them down into a resting
-position.
+single attack against their enemy that consumes their current position
+before knocking them down into a resting position.
 
 When smiting an enemy the Cavalier also has a chance to summon their
 trusty steed against the target of their attack.
 
-See Also: SUBCLASSES CAVALIER
+See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
 #
 "POWER OF DEVOTION"
 
 Subclass Cavalier: Level 5 (Paladin)
 
-Usage       : cast 'power of devotion' <victim>
+Usage       : cast 'power of devotion' <victim> <victim2> ... <victimN>
 Accumulative: No
 Duration    : Level / 4
 Save        : -
@@ -8139,6 +8237,11 @@ sanctuary spell. In addition the target receives an additional -15 ARMOR, +1 to
 all saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN. Being able to
 cast this spell on others makes the Cavalier a great addition to any group.
 
+Power of devotion accepts more than one character as a target.  The spell is
+cast once and is applied to each character in the order specified, one at a
+time. The spell consumes the full mana cost for each additional target beyond
+the first until the spell has been applied to each target, or the Cavalier's
+mana falls below the casting cost of the spell.
 See Also: SUBCLASSES CAVALIER
 #
 RIGHTEOUSNESS
@@ -8151,35 +8254,19 @@ Duration    : 10
 Save        : -
 Mana Cost   : 30
 
-This spell gives the Crusader the following bonuses: +1 damroll,
-+1 hitroll, -1 to all saving throws (this is a benefit), and it will
-cause the Crusader's melee attacks to deal an additional +1d6 damage
-against evil opponents.
+This spell grants the Crusader a 1d2 bonus damroll to all weapon attacks.  This
+bonus increases to 1d4 damage when targetting a neutral opponent, and 1d6 damage
+when targetting an evil opponent.
+
+Additionally, each standard melee attack will recover 1d3 points of the
+Crusader's mana points.  Melee hits caused by skills (such as Zeal) do not
+trigger the mana recovery effect.
 
 See Also: SUBCLASSES CRUSADER DAMROLL HITROLL
 #
-"BLESSING OF SACRIFICE"
-
-Usage       : cast 'blessing of sacrifice'
-Accumulative: No
-Duration    : Instantaneous
-Save        : -
-Mana Cost   : 100
-
-This potent healing spell allows the Crusader to sacrifice 100 hit points in
-order to heal every other mortal in the room by 333 hit points.
-
-This spell will also grant the effects of the Bless spell to each character that
-is affected.
-
-Note: This spell cannot be cast if the Crusader has less than 100 hit points
-remaining.
-
-See Also: BLESS
-#
 FOCUS
 
-Subclass Crusader: Level 3 (Paladin)
+Subclass Crusader: Level 2 (Paladin)
 
 The Crusader has mastered the ability to concentrate and focus on casting magic.
 
@@ -8193,14 +8280,29 @@ mana cost at sufficiently high caster level.
 
 See Also: SUBCLASSES CRUSADER MANA
 #
+PANACEA
+
+Subclass Crusader: Level 3 (Paladin)
+
+The healing touch of a devout Crusader is a panacea to injury and ailments
+sustained by the target.  As such, the Crusader's Lay Hands spell heals for 50%
+more hit points (up to 750 at level 50).
+
+Additionally, when Lay Hands is cast on a target, it will grant the effects of
+the Bless spell to the target and will also remove up to two of the following
+negative effects per cast, in the following order of priority: blindness,
+paralysis, poison, curse, chill touch, sleep.
+
+See Also: SUBCLASSES CRUSADER "LAY HANDS"
+#
 ZEAL
 
 Subclass Crusader: Level 4 (Paladin)
 
 This skill allows the Crusader to channel divine fury into an attack that
-targets all mobs in the same room with a single hit.  The Crusader has a
-three-round delay to recover when successful and a two-round delay to
-recover on a failure. All creatures hit require a two-round recovery time.
+targets all mobs in the same room with a single hit.  The Crusader is affected
+by a two-round skill input lag after using Zeal.  All creatures hit by this
+skill also require a two-round recovery time.
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -8216,9 +8318,9 @@ Mana Cost   : varies
 
 The Crusader uses his power of divine faith to cure the most serious wounds of
 the victim.  The cost of this spell varies depending on the amount of hit
-points healed and is defined as 50+healed/15. However, even the most devote
-Crusaders have limits and thus the maximum amount of healing power they can do
-is 1100 hit points for 120 mana.
+points healed, starting at 360 hit points for 50 mana. However, even the most
+devote Crusaders have limits and thus the maximum amount of healing power they
+can do is 1200 hit points for 120 mana.
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -8492,10 +8594,10 @@ level, the Ronin receives a new or improved skill or spell.  For help on each
 skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
-  1           DUAL ASSAULT
+  1           BLUR
   2           BACKFIST
-  3           COMBAT ZEN
-  4           BLUR
+  3           ZEN
+  4           SENTO KATA
   5           BANZAI
 
 See Also: SUBCLASSES MYSTIC NINJA
@@ -8515,33 +8617,37 @@ Level         Skill/Spell
 
 See Also: SUBCLASSES RONIN NINJA
 #
-"DUAL ASSAULT"
+"SENTO KATA"
 
-Subclass Ronin: Level 1 (Ninja)
+Subclass Ronin: Level 4 (Ninja)
 
-Usage: assault <victim>
+Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
+of combat in several ways.
 
-The Ronin is practiced in the art of the quick draw of their
-weapons. By taking an enemy by surprise, the Ronin can assault the
-target with both weapons, as opposed to only the primary weapon (in
-the wielded equipment location). A standard assault check is made for
-each weapon, and each weapon's success is independent of the other.
-The second weapon inflicts slightly less damage, as outlined below.
+First, the Ronin now will re-roll an attack roll of 1 (automatic miss) and use
+the second result; if the second roll is a natural 20, this will result in an
+automatic success, but not a critical hit.
 
-The first number listed applies to the wielded-weapon, the second to
-the held-weapon.
+Next, the Ronin inflicts a critical hit for double damage if they roll an attack
+roll of 17 or higher, as long as this attack would hit the target, or if they
+roll a natural 20.
 
-  Level 30 Dual Assault: 5x + 2x
-  Level 35 Dual Assault: 5x + 2.5x
-  Level 40 Dual Assault: 6x + 3x
-  Level 45 Dual Assault: 6x + 3.5x
-  Level 50 Dual Assault: 7x + 4x
+Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
+with certain weapons to automatically choose the best attack type for use
+against their opponent (e.g. to avoid damage resistance or immunity). The way
+this works is as follows:
 
-This skill causes a 3 round input lag for the Ronin on a success,
-while a failure causes a 2 round input lag.
+Weapon attack types for which Sento Kata applies:
+* hit (bare hands), chop, hack, pierce, slash, slice
 
-The success of Dual Assault is dependent on how well the skill is
-practiced.
+Eligible alternate attack types:
+* hit (bare hands): claw, whip
+* chop, hack: crush, slash
+* pierce: hack, slice
+* slash, slice: bludgeon, pierce
+
+If an opponent is more likely to be damaged by a possible alternate attack
+type, that type will be chosen; if not, the original attack type will be used.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8553,7 +8659,7 @@ Usage: backfist <victim>
 
 With this attack, the Ronin drives the back of their fist into the
 victim with deadly force. This skill inflicts damage equivalent to
-1.25 times the Ronin's level, and knocks the victim into a stunned
+1.50 times the Ronin's level, and knocks the victim into a stunned
 state. Backfist is not subject to the effects of Invulnerability.
 
 This skill causes a 2 round input lag for the Ronin, regardless of
@@ -8566,7 +8672,7 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
-"COMBAT ZEN"
+"ZEN"
 
 Subclass Ronin: Level 3 (Ninja)
 
@@ -8593,12 +8699,12 @@ See Also: SUBCLASSES RONIN
 #
 BLUR
 
-Subclass Ronin: Level 4 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
 Usage       : cast 'blur' (self only)
 Accumulative: No
 Duration    : Level / 6
-Mana Cost   : 100
+Mana Cost   : 80
 
 The Ronin blurs out of reality, making them not only harder to hit,
 but harder to defend against. While under the effects of Blur, the
@@ -8607,8 +8713,7 @@ success of the affected skills:
 
   -(Level / 2) to the Ronin's armor class (this is a benefit).
   +(Level) to Dodge skill checks.
-  +(Level / 5) to Assault and Dual Assault skill checks.
-  +(Level / 10) to all other skill checks.
+  +(Level / 7) to all other skill checks (+7 at level 48+).
 
 See Also: SUBCLASSES RONIN
 #
@@ -8632,7 +8737,8 @@ component of this skill will inflict 200 to 300 damage to a target,
 with no saving throw. If a separate skill check successful, the ninja
 will also gain an extra round of attacks against the target, attacking
 with both weapons, with a chance for a third attack if affected by
-Mystic Swiftness.
+Mystic Swiftness.  Banzai switches the Ronin's opponent to the target it
+is used on, similar to Flank and Smite.
 
 This skill causes a 1 round input lag for the Ronin, regardless of
 success or failure.
@@ -8661,12 +8767,12 @@ See Also: SUBCLASSES MYSTIC
 Subclass Mystic: Level 2 (Ninja)
 
 The winds of the gods blow through the Mystic's spirit, imparting a sense of
-Zen and tranquility upon their being.
+Zen and tranquility upon their being.  A Mystic that has attained inner peace
+is unaffected by the visual impairment imposed by blindness.
 
-Inner Peace is a passive ability that provides the Mystic with +10 mana
-regeneration at all times.  In addition, this ability increases the Mystic's
-in-combat mana regeneration limit by 10, to a maximum of 100.  Finally, this
-ability increases the Mystic's concentration rate by 5%.
+Inner Peace also provides the Mystic with +10 mana regeneration at all times.
+In addition, the Mystic's in-combat mana regeneration limit by 10, to a maximum
+of 100.  Finally, this ability increases the Mystic's concentration rate by 5%.
 
 See Also: SUBCLASSES MYSTIC REGENERATION
 #
@@ -8719,12 +8825,13 @@ by the enchantment it will be replaced by the higher level
 enchantment and the duration will be refreshed.
 
 While affected by the "Mantra" enchantment, the character regains
-"Level + (5 * Wisdom Bonus)" hit points every 10 seconds for a
-duration of 100 seconds (there will be 10 healing "pulses").
+"(Level + Wisdom modifier) * 1.5" hit points every 10 seconds for a
+duration of 100 seconds (there will be 10 healing "pulses").  At 25
+Wisdom, the total amount of healing over time is 1400.
 
 Additionally, during each healing "pulse", there is a 25% chance to
 dispel any one of the following status ailments from the target:
-blindness, poison or paralysis.
+blindness, poison, or paralysis.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -8749,10 +8856,10 @@ Each character affected by Tranquility will be immune to the effects
 of fear and will gain the following benefits while the spell is
 active:
 
-  +20% HP Regeneration Rate
-  +20% Mantra Regeneration Rate (HELP MANTRA)
-  +2 Hitroll
-  +2 Damroll
+  +25% HP Regeneration Rate
+  +25% Mantra Regeneration Rate (HELP MANTRA)
+  +3 Hitroll
+  +3 Damroll
 
 See Also: SUBCLASSES MYSTIC REGENERATION MANTRA HITROLL DAMROLL
 #
@@ -9005,63 +9112,6 @@ to the thief while Cunning is enabled.
 
 See Also: INVULNERABILITY CIRCLE BACKSTAB
 #
-"ADRENALINE RUSH"
-
-Subclass Bandit: Level 3 (Thief)
-
-When affected by healing magic, the Bandit will have the amount of
-healing received increased by 10% to 15%.  In addition, the Bandit has
-an increased health regeneration rate when fighting; they will gain
-hit points equal to one fifth of their level every 10 seconds while
-engaged in combat.
-
-See Also: SUBCLASSES BANDIT
-#
-EVASION
-
-Subclass Bandit: Level 5 (Thief)
-Class: Nomad (Level 50)
-
-Usage: evasion (toggles on/off)
-
-When the Bandit/Nomad is in this protective postion, all damage
-inflicted by physical attacks (bare hand attacks, weapon attacks, and
-skills) will be reduced by one quarter.
-
-Unfortunately, since the Bandit/Nomad is so intent on protecting
-themselves, the will miss more often.  If the Bandit is in combat,
-this skill cannot be turned on or off.
-
-See Also: SUBCLASSES BANDIT NOMAD
-#
-TROPHY
-
-Subclass Rogue: Level 2 (Thief)
-Subclass Trapper: Level 4 (Nomad)
-
-The Rogue/Trapper has the ability to take trophies from his victims.
-These trophies give whoever is carrying them a sense of power and
-increases both their hitroll and damroll by one for each trophy.
-Unfortunately, the largest increase possible due to trophies is 2
-hitroll/damroll and the trophies decay quickly.  However, the
-Rogue/Trapper can give the trophies to whomever they wish, making them
-extremely useful in a group.
-
-See Also: SUBCLASSES ROGUE TRAPPER HITROLL DAMROLL
-#
-VEHEMENCE
-
-Subclass Rogue: Level 3 (Thief)
-
-Usage: vehemence (toggles on/off)
-
-When affected by Vehemence, the Rogue gains a slight increase to all of
-their skills.  However, when in this state, the Rogue suffers from a 10%
-penalty to their chance to dodge attacks.  If the Rogue is in combat,
-this skill cannot be turned on or off.
-
-See Also: SUBCLASSES ROGUE DODGE
-#
 PRESTIGE
 
 Players looking for an enduring degree of fame and fortune can earn prestige.
@@ -9080,4 +9130,19 @@ Prestige levels, stats, and perks are unaffected by the remort process; once
 earned, prestige and its benefits are permanent.
 
 See Also: REMORT
+#
+"IRON SKIN"
+
+Usage       : cast 'iron skin' <target>
+Level       : Level 40 commando
+Accumulative: No
+Duration    : 10
+Save        : -
+Mana Cost   : 50
+
+When self-cast upon the Mercenary, this defensive spell will modify their AC by
+-20, making them harder to hit.  If cast upon a different target, the spell is
+less effective, granting only -10 AC instead.
+
+See Also: SUBCLASSES MERCENARY
 #~

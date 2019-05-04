@@ -86,14 +86,14 @@ PirateAttack(CHAR *ch, CHAR *vict, int type) {
       break;
 
     case ATTACK_PUNCH:
-      if (IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(ch, vict, BT_INVUL)) {
+      if (IS_AFFECTED(vict, AFF_INVUL) && !breakthrough(ch, vict, SKILL_PUNCH, BT_INVUL)) {
         act("$n punches you with a left hook to the stomach. Ouch!",
           FALSE, ch, 0, vict, TO_VICT);
         act("$n punches $N with a left hook to the stomach. Ouch!",
           FALSE, ch, 0, vict, TO_NOTVICT);
         act("You punch $N with a left hook to the stomach.",
           FALSE, ch, 0, vict, TO_CHAR);
-        damage(ch, vict, 100, SKILL_PUNCH, DAM_SKILL);
+        damage(ch, vict, 100, SKILL_PUNCH, DAM_PHYSICAL);
       }
       else {
         act("$n attempts to punch you, but just looks foolish.", FALSE, ch, 0, vict, TO_VICT);

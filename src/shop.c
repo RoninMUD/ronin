@@ -73,7 +73,7 @@ int trade_with(struct obj_data *item, int shop_nr)
     if(shop_index[shop_nr].type[counter]==item->obj_flags.type_flag)
       return(TRUE);
     if(shop_index[shop_nr].type[counter]==ITEM_WEAPON &&
-       item->obj_flags.type_flag==ITEM_2HWEAPON)
+       item->obj_flags.type_flag==ITEM_2H_WEAPON)
       return(TRUE);
   }
   return(FALSE);

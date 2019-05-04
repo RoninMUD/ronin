@@ -82,24 +82,24 @@ int wolf_options(CHAR *mob, CHAR *vict)
      case 1: /* Guard */
 	act("$n hits $N hard with $s claw!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n hits you hard with $s claw!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(5,10), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(5,10), TYPE_UNDEFINED,DAM_PHYSICAL);
 	cast_poison(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, vict, 0);
 	return FALSE;
      case 2:/* Guard & Lord*/
 	act("$n bites $N's arm!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n bites your arm!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(10,20), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(10,20), TYPE_UNDEFINED,DAM_PHYSICAL);
 	return FALSE;
       case 3:/* Guard & Lord*/
 	act("$n bites $N's leg!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n bites your leg!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(25,35), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(25,35), TYPE_UNDEFINED,DAM_PHYSICAL);
 	WAIT_STATE(vict, PULSE_VIOLENCE*2);
 	return FALSE;
      case 4: /* Lord */
 	act("$n bites $N's foot!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n bites your foot!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(5,10), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(5,10), TYPE_UNDEFINED,DAM_PHYSICAL);
 	if (GET_MOVE(vict) > 10)
 	  GET_MOVE(vict) -= 10;
 	else
@@ -108,7 +108,7 @@ int wolf_options(CHAR *mob, CHAR *vict)
      case 5: /* King & Lord */
         act("$n claws $N's hand!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n claws your hand!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(15,30), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(15,30), TYPE_UNDEFINED,DAM_PHYSICAL);
   if (mob_disarm(mob, vict, FALSE)) {
     act("$N drops $S weapon.", TRUE, mob, 0, vict, TO_NOTVICT);
     act("You drop your weapon.", TRUE, mob, 0, vict, TO_VICT);
@@ -117,7 +117,7 @@ int wolf_options(CHAR *mob, CHAR *vict)
      case 6: /* Lord & King */
 	act("$n bites $N's neck with $s huge mouth and sucks $S blood!", 1, mob, 0, vict, TO_NOTVICT);
 	act("$n bites your neck with $s huge mouth and sucks your blood!", 1, mob, 0, vict, TO_VICT);
-	damage(mob, vict, number(15,25), TYPE_UNDEFINED,DAM_SKILL);
+	damage(mob, vict, number(15,25), TYPE_UNDEFINED,DAM_PHYSICAL);
 	if (GET_MOVE(vict) > 20)
 	  GET_MOVE(vict) -= 20;
 	else

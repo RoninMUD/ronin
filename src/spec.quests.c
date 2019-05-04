@@ -470,7 +470,7 @@ int cupid_diaper(OBJ *diaper, CHAR *ch, int cmd, char *arg) {
     act("A foul smelling green cloud emits from your diaper!",0,user,0,0,TO_CHAR);
     for(vict=world[CHAR_REAL_ROOM(user)].people;vict;vict = next_vict) {
       next_vict = vict->next_in_room;
-      if( (IS_MOB(vict) && !IS_SET(vict->specials.immune, IMMUNE_POISON)) || (IS_MORTAL(vict) && IS_GROUPED(user,vict))) {
+      if( (IS_MOB(vict) && !IS_SET(vict->specials.immune, IMMUNE_POISON)) || (IS_MORTAL(vict) && SAME_GROUP(user,vict))) {
         af.type = SPELL_POISON;
         af.duration = 30;
         af.modifier = -3;

@@ -1288,6 +1288,8 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
       ch->points.max_mana = 0;
       ch->points.max_move = 0;
 
+      affect_total(ch);
+
       if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
         ch->points.max_hit += GET_PRESTIGE(ch) * 12;
       }

@@ -33,14 +33,15 @@ $State: Exp $
 #define __UTILS_H__
 
 #include "utility.h"
+#include "spells.h"
 
 extern char *index(const char *s, int c);
 
 #define TRUE                    1
 #define FALSE                   0
 
-#define LOWER(c)                (((c) >= 'A'  && (c) <= 'Z') ? ((c) + ('a'-'A')) : (c))
-#define UPPER(c)                (((c) >= 'a'  && (c) <= 'z') ? ((c) + ('A'-'a')) : (c))
+#define LOWER(c)                (((c) >= 'A' && (c) <= 'Z') ? ((c) + ('a' - 'A')) : (c))
+#define UPPER(c)                (((c) >= 'a' && (c) <= 'z') ? ((c) + ('A' - 'a')) : (c))
 #define CAP(st)                 (*(st) = UPPER(*(st)), st)
 #define LOW(st)                 (*(st) = LOWER(*(st)), st)
 
@@ -71,7 +72,7 @@ do {                   \
   if (value != NULL) { \
     free(value);       \
   }                    \
-} while (0)            \
+} while (0)
 
 #define IS_NIGHT                ((time_info.hours > 18) || (time_info.hours < 6))
 #define IS_DAY                  !IS_NIGHT
@@ -80,19 +81,27 @@ do {                   \
 #define ZONE                    2
 #define WORLD                   3
 
-#define CHAR_REAL_ROOM(ch)      (ch ? ch->in_room_r : NOWHERE)
-#define CHAR_VIRTUAL_ROOM(ch)   (ch ? ch->in_room_v : 0)
+#define CHAR_REAL_ROOM(ch)      ((ch) ? (ch)->in_room_r : NOWHERE)
+#define CHAR_VIRTUAL_ROOM(ch)   ((ch) ? (ch)->in_room_v : 0)
 
-#define MOB_NAME(mob)               (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
-#define MOB_DESCRIPTION(mob)        (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
-#define MOB_SHORT(mob)              (mob->player.short_descr ? mob->player.short_descr : mob_proto_table[mob->nr].short_descr)
-#define MOB_LONG(mob)               (mob->player.long_descr ? mob->player.long_descr : mob_proto_table[mob->nr].long_descr)
-#define MOB_NUM_ATTACKS(mob)        (mob->specials.no_att)
-#define MOB_ATTACK_TIMER(mob)       (mob->specials.att_timer)
-#define MOB_ATTACK_CHANCE(mob, num) (mob->specials.att_percent[num])
-#define MOB_ATTACK_TYPE(mob, num)   (mob->specials.att_type[num])
-#define MOB_ATTACK_TARGET(mob, num) (mob->specials.att_target[num])
-#define MOB_ATTACK_SPELL(mob, num)  (mob->specials.att_spell[num])
+#define OBJ_REAL_ROOM(obj)      ((obj) ? (obj)->in_room : NOWHERE)
+#define OBJ_VIRTUAL_ROOM(obj)   ((obj) ? (obj)->in_room_v : 0)
+
+#define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
+
+#define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
+
+#define MOB_NAME(mob)            (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
+#define MOB_DESCRIPTION(mob)     (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
+#define MOB_SHORT(mob)           (mob->player.short_descr ? mob->player.short_descr : mob_proto_table[mob->nr].short_descr)
+#define MOB_LONG(mob)            (mob->player.long_descr ? mob->player.long_descr : mob_proto_table[mob->nr].long_descr)
+#define MOB_ATTACK_TYPE(mob)     (mob->specials.attack_type)
+#define MOB_ATT_NUM(mob)         (mob->specials.no_att)
+#define MOB_ATT_TIMER(mob)       (mob->specials.att_timer)
+#define MOB_ATT_CHANCE(mob, num) (mob->specials.att_percent[num])
+#define MOB_ATT_TYPE(mob, num)   (mob->specials.att_type[num])
+#define MOB_ATT_TARGET(mob, num) (mob->specials.att_target[num])
+#define MOB_ATT_SPELL(mob, num)  (mob->specials.att_spell[num])
 
 #define OBJ_RNUM(obj)           (obj->item_number)
 #define OBJ_VNUM(obj)           (obj->item_number_v)
@@ -141,28 +150,20 @@ do {                   \
 #define OBJ_EQUIPPED_BY(obj)    (obj->equipped_by)
 #define OBJ_OWNED_BY(obj)       (obj->owned_by)
 #define OBJ_LOG(obj)            (obj->log)
-#define OBJ_REAL_ROOM(obj)      (obj ? obj->in_room : NOWHERE)
-#define OBJ_VIRTUAL_ROOM(obj)   (obj ? obj->in_room_v : 0)
-
-#define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
 
 #define GET_ID(ch)              ((ch) ? (ch)->ver3.id : -1)
-#define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
 
 #define ROOM_SPEC(rm)           (world[(rm)].spec_tmp)
-#define RM_BLOOD(rm)            (world[rm].blood)
-#define ITEM(zone,x)            ((zone)+(x))
+#define RM_BLOOD(rm)            (world[(rm)].blood)
+#define ITEM(zone, x)           ((zone)+(x))
 
-#define IS_SET(flag,bit)  ((flag) & (bit))
+#define IS_SET(flag, bit)       ((flag) & (bit))
+#define SET_BIT(var,bit)        ((var) = (var) | (bit))
+#define REMOVE_BIT(var,bit)     ((var) = (var) & ~(bit))
 
-#define SWITCH(a,b) { (a) ^= (b); \
-                      (b) ^= (a); \
-                      (a) ^= (b); }
+#define IS_AFFECTED(ch, skill)  ((ch) ? IS_SET((ch)->specials.affected_by, (skill)) : FALSE)
 
-#define IS_AFFECTED(ch,skill) (ch ? IS_SET((ch)->specials.affected_by, (skill) ): FALSE )
-
-#define SET_BIT(var,bit)     ((var) = (var) | (bit))
-#define REMOVE_BIT(var,bit)  ((var) = (var) & ~(bit) )
+#define SWITCH(a, b)            { (a) ^= (b); (b) ^= (a); (a) ^= (b); }
 
 #define GET_REQ(i) (i<2  ? "Awful" :(i<4  ? "Bad"     :(i<7  ? "Poor"      :\
 (i<10 ? "Average" :(i<14 ? "Fair"    :(i<20 ? "Good"    :(i<24 ? "Very good" :\
@@ -273,6 +274,7 @@ do {                   \
  EXIT(ch, door)->to_room_v != 0 &&                \
  !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) && \
  !IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB) &&  \
+ !IS_SET(EXIT(ch, door)->exit_info, EX_JUMP) &&  \
  !IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL) &&  \
  !IS_SET(EXIT(ch, door)->exit_info, EX_ENTER))
 
@@ -320,7 +322,6 @@ do {                   \
 #define GET_BEEN_KILLED(ch) (ch->new.been_killed)
 #define GET_THACO(ch) (thaco[GET_CLASS(ch) - 1][GET_LEVEL(ch)])
 #define CHAR_ROOM_FLAGS(ch) (world[CHAR_REAL_ROOM(ch)].room_flags)
-#define IS_CORPSE(obj) (obj ? (GET_ITEM_TYPE(obj) == ITEM_CONTAINER && obj->obj_flags.value[3]) : FALSE)
 #define S_ANA(string) (index("aeiouyAEIOUY", *string) ? "An" : "A")
 #define S_SANA(string) (index("aeiouyAEIOUY", *string) ? "an" : "a")
 #define OBJ_TIMER(obj) (obj->obj_flags.timer)
@@ -339,17 +340,14 @@ do {                   \
 #define GET_AFF(ch) (ch->specials.affected_by)
 #define GET_AFF2(ch) (ch->specials.affected_by2)
 #define OBJ_TYPE(obj) (obj->obj_flags.type_flag)
-#define GET_DEX_APP(ch) (dex_app[GET_DEX(ch)].prac_bonus)
-#define GET_WIS_APP(ch) (wis_app[GET_WIS(ch)].bonus)
-#define GET_LEARNED(ch, skill) (ch->skills[skill].learned)
 #define IS_IMMUNE(ch, immunity) (ch ? IS_SET(ch->specials.immune, immunity) : FALSE)
-#define IS_IMMUNE2(ch, immunity) (ch ? IS_SET(ch->specials.immune2, immunity) : FALSE)
+#define IS_IMMUNE2(ch, immunity2) (ch ? IS_SET(ch->specials.immune2, immunity2) : FALSE)
 #define IS_RESISTANT(ch, resistance) (ch ? IS_SET(ch->specials.resist, resistance) : FALSE)
 #define GET_MASTER(ch) (ch->master)
 #define GET_RIDER(ch) (ch->specials.rider)
-#define SAME_ROOM(ch1, ch2) ((CHAR_REAL_ROOM(ch1) == CHAR_REAL_ROOM(ch2)) && (CHAR_REAL_ROOM(ch1) != NOWHERE))
 #define IS_ALIVE(ch) (ch && (CHAR_REAL_ROOM(ch) != NOWHERE) && (GET_POS(ch) > POSITION_DEAD) ? TRUE : FALSE)
 #define IS_DEAD(ch) (!IS_ALIVE(ch))
+#define SAME_ROOM(ch1, ch2) ((CHAR_REAL_ROOM(ch1) != NOWHERE) && (CHAR_REAL_ROOM(ch1) == CHAR_REAL_ROOM(ch2)))
 #define GET_PROTECTOR(ch) (ch->specials.protect_by)
 #define GET_PROTECTEE(ch) (ch->specials.protecting)
 #define GET_IMMUNE(ch) (ch->specials.immune)
@@ -368,23 +366,55 @@ do {                   \
 #define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
 #define GET_WAIT(ch) (GET_DESCRIPTOR(ch)->wait)
 #define GET_DEFAULT_POSITION(ch) (ch->specials.default_pos)
-#define GET_QUEST_GIVER(ch) (ch->questgiver)
-#define GET_QUEST_OBJ(ch) (ch->questobj)
-#define GET_QUEST_OWNER(ch) (ch->questowner)
-#define GET_QUEST_MOB(ch) (ch->questmob)
-#define GET_QUEST_LEVEL(ch) (ch->quest_level)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
 #define GET_REPLY_TO(ch) (ch->specials.reply_to)
+#define GET_PFLAG2(ch) (ch->ver3.pflag2)
+#define GET_COMM_COLOR(ch, num) (((num >= 0) && (num < MAX_COLORS)) ? ch->colors[num] : 0)
 
-#define IS_WEAPON(obj)     (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON || GET_ITEM_TYPE(obj) == ITEM_2HWEAPON) : FALSE)
-#define IS_1H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON) : FALSE)
-#define IS_2H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_2HWEAPON) : FALSE)
-#define GET_WEAPON(ch)     ((EQ(ch, WIELD) && IS_WEAPON(EQ(ch, WIELD))) ? EQ(ch, WIELD) : NULL)
-#define GET_WEAPON2(ch)    ((GET_CLASS(ch) == CLASS_NINJA) && EQ(ch, HOLD) && IS_1H_WEAPON(EQ(ch, HOLD)) ? EQ(ch, HOLD) : NULL)
+#define GET_QUEST_GIVER(ch) (ch->questgiver)
+#define GET_QUEST_OBJ(ch)   (ch->questobj)
+#define GET_QUEST_OWNER(ch) (ch->questowner)
+#define GET_QUEST_MOB(ch)   (ch->questmob)
+#define GET_QUEST_LEVEL(ch) (ch->quest_level)
+
+#define GET_STR_TO_HIT(ch)     (str_app[STRENGTH_APPLY_INDEX(ch)].tohit)
+#define GET_STR_TO_DAM(ch)     (str_app[STRENGTH_APPLY_INDEX(ch)].todam)
+#define GET_DEX_APP(ch)        (dex_app[GET_DEX(ch)].prac_bonus)
+#define GET_DEX_AC(ch)         (dex_app[GET_DEX(ch)].defensive)
+#define GET_CON_HP_BONUS(ch)   (con_app[GET_CON(ch)].hitp)
+#define GET_CON_REGEN(ch)      (con_app[GET_CON(ch)].regen)
+#define GET_CON_DAM_REDUCT(ch) (con_app[GET_CON(ch)].reduct)
+#define GET_INT_APP(ch)        (int_app[GET_WIS(ch)].learn)
+#define GET_INT_CONC(ch)       (int_app[GET_WIS(ch)].conc)
+#define GET_WIS_APP(ch)        (wis_app[GET_WIS(ch)].bonus)
+#define GET_WIS_CONC(ch)       (wis_app[GET_WIS(ch)].conc)
+
+#define GET_LEARNED(ch, skill) (ch->skills[skill].learned)
 
 #define IS_NPC(ch)         (ch ? IS_SET(ch->specials.act, ACT_ISNPC) : FALSE)
 #define IS_MOB(ch)         (ch ? (IS_SET(ch->specials.act, ACT_ISNPC) && (ch->nr > -1)) : FALSE)
 #define IS_MOUNT(ch)       (ch ? IS_SET(ch->specials.act, ACT_MOUNT) : FALSE)
+
+#define EQ(ch, loc)        (((loc >= WEAR_LIGHT) && (loc <= WEAR_HOLD)) ? ch->equipment[loc] : NULL)
+
+#define IS_WEAPON(obj)     (obj ? ((GET_ITEM_TYPE(obj) == ITEM_WEAPON) || (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON)) : FALSE)
+#define IS_1H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON) : FALSE)
+#define IS_2H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON) : FALSE)
+#define GET_WEAPON(ch)     ((EQ(ch, WIELD) && IS_WEAPON(EQ(ch, WIELD))) ? EQ(ch, WIELD) : NULL)
+#define GET_WEAPON2(ch)    ((EQ(ch, HOLD) && IS_WEAPON(EQ(ch, HOLD))) ? EQ(ch, HOLD) : NULL)
+
+#define IS_PHYSICAL_DAMAGE(damage_type)           ((damage_type >= DAM_PHYSICAL) && (damage_type < DAM_MAGICAL))
+#define IS_MAGICAL_DAMAGE(damage_type)            (damage_type >= DAM_MAGICAL)
+#define IS_WEAPON_ATTACK(attack_type)             ((attack_type >= TYPE_HIT) && (attack_type <= TYPE_SLICE))
+#define IS_SKILL_ATTACK(attack_type, damage_type) (!IS_WEAPON_ATTACK(attack_type) && IS_PHYSICAL_DAMAGE(damage_type))
+#define IS_SPELL_ATTACK(attack_type, damage_type) (!IS_WEAPON_ATTACK(attack_type) && IS_MAGICAL_DAMAGE(damage_type))
+
+#define IS_CORPSE(obj)     (obj ? ((GET_ITEM_TYPE(obj) == ITEM_CONTAINER) && (OBJ_VALUE(obj, 3) == 1)) : FALSE)
+#define IS_PC_CORPSE(obj)  (obj ? (IS_CORPSE(obj) && ((OBJ_COST(obj) == PC_CORPSE) || (OBJ_COST(obj) == CHAOS_CORPSE))) : FALSE)
+#define IS_NPC_CORPSE(obj) (obj ? (IS_CORPSE(obj) && (OBJ_COST(obj) == NPC_CORPSE)) : FALSE)
+#define IS_STATUE(obj)     (obj ? (IS_CORPSE(obj) && ((OBJ_COST(obj) == PC_STATUE) || (OBJ_COST(obj) == NPC_STATUE))) : FALSE)
+#define IS_PC_STATUE(obj)  (obj ? (IS_CORPSE(obj) && (OBJ_COST(obj) == PC_STATUE)) : FALSE)
+#define IS_NPC_STATUE(obj) (obj ? (IS_CORPSE(obj) && (OBJ_COST(obj) == NPC_STATUE)) : FALSE)
 
 #define IS_MORTAL(ch)      (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) : FALSE)
 #define IS_IMMORTAL(ch)    (ch ? (!IS_NPC(ch) && (GET_LEVEL(ch) >= LEVEL_IMM)) : FALSE)
@@ -400,7 +430,7 @@ do {                   \
 #define NRM_INV(ch, vict)        (IS_AFFECTED(vict, AFF_INVISIBLE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED(ch, AFF_DETECT_INVISIBLE) && !((GET_LEVEL(vict) <= GET_LEVEL(ch)) && IS_AFFECTED2(ch, AFF2_PERCEIVE)))
 #define IS_HIDING_FROM(ch, vict) (IS_AFFECTED(vict, AFF_HIDE) && (vict != ch) && (GET_LEVEL(ch) < LEVEL_IMM) && !IS_AFFECTED2(ch, AFF2_PERCEIVE))
 
-#define CAN_SEE_OBJ(ch, obj) ( \
+#define CAN_SEE_OBJ(ch, obj) (\
   IS_IMMORTAL(ch) || \
   IS_AFFECTED((ch), AFF_INFRAVISION) || \
   ((!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) || IS_AFFECTED((ch), AFF_DETECT_INVISIBLE)) && !IS_AFFECTED((ch), AFF_BLIND) && IS_LIGHT(CHAR_REAL_ROOM(ch))) \
