@@ -2088,17 +2088,13 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
   }
 
   for (; to_ch; to_ch = to_ch->next_in_room) {
-    /* This may look a bit odd, but the guard conditions are what would prevent the message
-       from being displayed to the target. This makes more sense when thinking about guard
-       conditions, but it is a bit odd to look at because all of the conditions are OR'd
-       and then negated. */
-    if (!(!GET_DESCRIPTOR(to_ch) ||
-          ((hide == COMM_ACT_HIDE_INVIS) && !CAN_SEE(to_ch, ch)) ||
-          ((hide == COMM_ACT_HIDE_SUPERBRF) && IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) ||
-          ((type != TO_VICT) && (type != TO_CHAR) && (GET_POS(to_ch) == POSITION_SLEEPING)) ||
-          ((type != TO_CHAR) && (to_ch == ch)) ||
-          ((type == TO_NOTVICT) && (to_ch == (CHAR *)vict_or_obj)) ||
-          ((type == TO_GROUP) && !SAME_GROUP(to_ch, ch)))) {
+    if ((GET_DESCRIPTOR(to_ch) &&
+        ((hide < COMM_ACT_HIDE_INVIS) || CAN_SEE(to_ch, ch)) &&
+        ((hide != COMM_ACT_HIDE_SUPERBRF) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
+        ((type == TO_VICT) || (type == TO_CHAR) || (GET_POS(to_ch) != POSITION_SLEEPING)) &&
+        ((type == TO_CHAR) || (to_ch != ch)) &&
+        ((type != TO_NOTVICT) || (to_ch != (CHAR *)vict_or_obj)) &&
+        ((type != TO_GROUP) || SAME_GROUP(to_ch, ch)))) {
       for (char *str_ptr = message, *buf_ptr = buf, *sub = NULL;;) {
         if (*str_ptr == '$') {
           char c = *(++str_ptr);

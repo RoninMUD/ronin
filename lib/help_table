@@ -8596,7 +8596,7 @@ skill or spell, just type HELP <skill/spell name>.
 Level         Skill/Spell
   1           BLUR
   2           BACKFIST
-  3           ZEN
+  3           COMBAT ZEN
   4           SENTO KATA
   5           BANZAI
 
@@ -8672,7 +8672,7 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
-"ZEN"
+"COMBAT ZEN"
 
 Subclass Ronin: Level 3 (Ninja)
 

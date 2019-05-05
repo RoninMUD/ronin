@@ -1645,7 +1645,9 @@ void do_trophy(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  OBJ_TIMER(corpse) = MAX(1, MAX_NPC_CORPSE_TIME / 2);
+  /* Change the material type to the hilariously appropriate CLASS_BLOB to
+     represent that its no longer suitable for making trophies. */
+  OBJ_MATERIAL(corpse) = CLASS_BLOB;
 
   CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
 
