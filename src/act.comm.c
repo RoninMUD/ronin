@@ -816,6 +816,8 @@ void channel_comm(CHAR *ch, char *arg, int comm) {
       snprintf(name, sizeof(name), "Somebody");
     }
 
+    snprintf(buf, sizeof(buf), "%s (%s) [ %s ]", name, channel_info[comm].channel_name, arg);
+
     /* Show the text to the listener. */
     COLOR(listener, channel_info[comm].channel_color);
     act(buf, FALSE, ch, 0, listener, TO_VICT);

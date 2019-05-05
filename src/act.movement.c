@@ -474,13 +474,7 @@ Returns:
   }
   else {
     if (IS_AFFECTED(ch, AFF_SNEAK)) {
-      for (CHAR *temp_ch = world[CHAR_REAL_ROOM(ch)].people, *next_ch; temp_ch; temp_ch = next_ch) {
-        next_ch = temp_ch->next_in_room;
-
-        if ((temp_ch == ch) || (!IS_IMMORTAL(ch) && !SAME_GROUP(temp_ch, ch))) continue;
-
-        act(buf, 2, ch, 0, 0, TO_CHAR);
-      }
+      act(buf, 2, ch, 0, 0, TO_GROUP);
     }
     else {
       act(buf, 2, ch, 0, 0, TO_ROOM);

@@ -245,10 +245,10 @@ int check_sc_access(CHAR *ch, int skill) {
     case SPELL_WRATH_OF_GOD:
       if (check_subclass(ch, SC_CAVALIER, 3)) return TRUE;
       break;
-    case SKILL_SMITE:
+    case SPELL_POWER_OF_DEVOTION:
       if (check_subclass(ch, SC_CAVALIER, 4)) return TRUE;
       break;
-    case SPELL_POWER_OF_DEVOTION:
+    case SKILL_SMITE:
       if (check_subclass(ch, SC_CAVALIER, 5)) return TRUE;
       break;
 

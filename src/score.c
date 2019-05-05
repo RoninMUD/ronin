@@ -394,11 +394,11 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
 
     if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       sprintf(buf2, "%d / %d",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
-        calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG),
+        calc_hit_damage(ch, NULL, GET_WEAPON2(ch), 0, RND_AVG));
     else
       sprintf(buf2, "%d",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG));
     strcat(buf, buf2);
     break;
   case SCQ_DAMROLL:
@@ -845,11 +845,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
       CHCLR(ch, 7), ENDCHCLR(ch));
     if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       printf_to_char(ch, "%d / %d\n\r",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
-        calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG),
+        calc_hit_damage(ch, NULL, GET_WEAPON2(ch), 0, RND_AVG));
     else
       printf_to_char(ch, "%d\n\r",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG));
     printf_to_char(ch, "%sSTR:%s ",
       CHCLR(ch, 7), ENDCHCLR(ch));
     if (GET_LEVEL(ch) < 6)
@@ -1188,11 +1188,11 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if ((GET_CLASS(ch) == CLASS_NINJA) || (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))
       printf_to_char(ch, "Your average damage is %d / %d.\n\r",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG),
-        calc_hit_damage(ch, NULL, EQ(ch, HOLD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG),
+        calc_hit_damage(ch, NULL, GET_WEAPON2(ch), 0, RND_AVG));
     else
       printf_to_char(ch, "Your average damage is %d.\n\r",
-        calc_hit_damage(ch, NULL, EQ(ch, WIELD), 0, RND_AVG));
+        calc_hit_damage(ch, NULL, GET_WEAPON(ch), 0, RND_AVG));
 
     if (GET_LEVEL(ch) > 5)
       printf_to_char(ch, "You are carrying %d weight, and the max weight without penalties is %d.\n\r",

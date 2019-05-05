@@ -8129,8 +8129,8 @@ Level         Skill/Spell
   1           MIGHT
   2           TRUSTY STEED
   3           WRATH OF GOD
-  4           SMITE
-  5           POWER OF DEVOTION
+  4           POWER OF DEVOTION
+  5           SMITE
 
 See Also: SUBCLASSES CRUSADER PALADIN
 #
@@ -8141,7 +8141,7 @@ each level, the Crusader receives a new or improved skill or spell.  For help
 on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           BLESSING OF SACRIFICE
+  1           RIGHTEOUSNESS
   2           FOCUS
   3           PANACEA
   4           ZEAL
@@ -8205,25 +8205,9 @@ can be stacked up to five times on a single target.
 
 See Also: SUBCLASSES CAVALIER
 #
-SMITE
-
-Subclass Cavalier: Level 4 (Paladin)
-
-Usage: smite <victim>
-
-This skill allows the Cavalier to channel their righteous fury against an
-enemy. In doing so, the Cavalier switches their target and performs a
-single attack against their enemy that consumes their current position
-before knocking them down into a resting position.
-
-When smiting an enemy the Cavalier also has a chance to summon their
-trusty steed against the target of their attack.
-
-See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
-#
 "POWER OF DEVOTION"
 
-Subclass Cavalier: Level 5 (Paladin)
+Subclass Cavalier: Level 4 (Paladin)
 
 Usage       : cast 'power of devotion' <victim> <victim2> ... <victimN>
 Accumulative: No
@@ -8243,6 +8227,22 @@ time. The spell consumes the full mana cost for each additional target beyond
 the first until the spell has been applied to each target, or the Cavalier's
 mana falls below the casting cost of the spell.
 See Also: SUBCLASSES CAVALIER
+#
+SMITE
+
+Subclass Cavalier: Level 5 (Paladin)
+
+Usage: smite <victim>
+
+This skill allows the Cavalier to channel their righteous fury against an
+enemy. In doing so, the Cavalier switches their target and performs a
+single attack against their enemy that consumes their current position
+before knocking them down into a stunned position.
+
+When smiting an enemy the Cavalier also has a chance to summon their
+trusty steed against the target of their attack.
+
+See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
 #
 RIGHTEOUSNESS
 
@@ -8596,7 +8596,7 @@ skill or spell, just type HELP <skill/spell name>.
 Level         Skill/Spell
   1           BLUR
   2           BACKFIST
-  3           ZEN
+  3           COMBAT ZEN
   4           SENTO KATA
   5           BANZAI
 
@@ -8672,7 +8672,7 @@ practiced.
 
 See Also: SUBCLASSES RONIN
 #
-"ZEN"
+"COMBAT ZEN"
 
 Subclass Ronin: Level 3 (Ninja)
 

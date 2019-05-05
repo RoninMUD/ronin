@@ -2712,7 +2712,7 @@ const char * const paladin_skills[] = {
   "spin",
   "pray",         /* Level 40 */
   "trusty-steed", /* Cavalier SC2 */
-  "smite",        /* Cavalier SC4 */
+  "smite",        /* Cavalier SC5 */
   "protect",      /* Crusader SC2 */
   "zeal",         /* Crusader SC4 */
   "\n"

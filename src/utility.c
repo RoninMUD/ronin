@@ -1782,7 +1782,7 @@ bool SAME_GROUP(CHAR *ch1, CHAR *ch2) {
   if (group_leader == ch1) found_ch1 = TRUE;
   if (group_leader == ch2) found_ch2 = TRUE;
 
-  for (FOL *follower = group_leader->followers; follower && (!found_ch1 && !found_ch2); follower = follower->next) {
+  for (FOL *follower = group_leader->followers; follower && (!found_ch1 || !found_ch2); follower = follower->next) {
     CHAR *group_member = follower->follower;
 
     if (group_member == ch1) found_ch1 = TRUE;
