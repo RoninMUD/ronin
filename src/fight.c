@@ -3633,8 +3633,8 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) &&
       EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) &&
       !enchanted_by(ch, "Readying Sidearm...")) {
-    act("You draw your sidearm and attack $N!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, 0, TO_ROOM);
+    act("You draw your sidearm and attack $N!", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, victim, TO_ROOM);
 
     hit(ch, victim, TYPE_WEAPON2);
 
