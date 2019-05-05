@@ -3627,6 +3627,11 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     return;
   }
 
+  /* Coerce attack type as needed for dual pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
+
   /* NPC Dual */
   if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_DUAL) && !number(0, 2)) {
     dhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
@@ -3690,6 +3695,11 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     return;
   }
 
+  /* Coerce attack type as needed for triple pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
+
   /* NPC Triple */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_TRIPLE) && !number(0, 2)) {
     thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
@@ -3724,6 +3734,11 @@ void thit(CHAR *ch, CHAR *victim, int type) {
 
   /* Perform the attack, returning if it is avoided or misses. */
   if (!perform_hit(ch, victim, type, 3)) return;
+
+  /* Coerce attack type as needed for quad pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
 
   /* NPC Quad */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_QUAD) && !number(0, 2)) {
