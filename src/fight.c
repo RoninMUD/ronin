@@ -200,12 +200,10 @@ void set_fighting(CHAR *ch, CHAR *vict) {
     vict->specials.max_num_fighting = MAX(vict->specials.max_num_fighting, vict->specials.num_fighting);
   }
 
-  /* Combat Tactics
+  /* Sidearm
      Note: This is a bit of a hack, but it adds some "realism" to the initial
-     variance of when Combat Tactics will first trigger after engaging in combat. */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) &&
-      EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) &&
-      !enchanted_by(ch, "Readying Sidearm...")) {
+     variance of when Sidearm will first trigger after engaging in combat. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch) && !enchanted_by(ch, "Readying Sidearm...")) {
     enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(2, 4), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }
 
@@ -2508,8 +2506,8 @@ int calc_hitroll(CHAR *ch) {
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].tohit;
 
   /* 2H weapons allow for a 150% strength modifier. */
-  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD))) { /* Sidearm */
+  if (GET_WEAPON(ch) && IS_2H_WEAPON(GET_WEAPON(ch)) &&
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch))) { /* Sidearm */
     str_bonus *= 1.5;
   }
 
@@ -2553,8 +2551,8 @@ int calc_damroll(CHAR *ch) {
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].todam;
 
   /* 2H weapons allow for a 150% strength modifier. */
-  if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON) &&
-    !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD))) { /* Sidearm */
+  if (GET_WEAPON(ch) && IS_2H_WEAPON(GET_WEAPON(ch)) &&
+      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch))) { /* Sidearm */
     str_bonus *= 1.5;
   }
 
@@ -3620,30 +3618,18 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   /* This adds the chance for an additional "hit" and performs it before any
      additional hit skill checks, which may fail at any point in the chain. */
   if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
-    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return;
+    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return; // Force main weapon for Haste attacks.
   }
 
   /* PC Ninja 2nd Hit */
   if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
-    dhit(ch, victim, (IS_2H_WEAPON(EQ(ch, WIELD)) ? TYPE_UNDEFINED : TYPE_WEAPON2));
+    dhit(ch, victim, (IS_2H_WEAPON(EQ(ch, WIELD)) ? TYPE_UNDEFINED : TYPE_WEAPON2)); // Force the appropriate weapon for Ninja 2nd attack.
     return;
-  }
-
-  /* Sidearm */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) &&
-      EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) &&
-      !enchanted_by(ch, "Readying Sidearm...")) {
-    act("You draw your sidearm and attack $N!", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, victim, TO_ROOM);
-
-    hit(ch, victim, TYPE_WEAPON2);
-
-    enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(4, 6), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }
 
   /* NPC Dual */
   if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_DUAL) && !number(0, 2)) {
-    dhit(ch, victim, TYPE_UNDEFINED);
+    dhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
     return;
   }
 
@@ -3664,7 +3650,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
-      dhit(ch, victim, TYPE_UNDEFINED);
+      dhit(ch, victim, type);
       return;
     }
   }
@@ -3675,7 +3661,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     int percent = 40;
 
     if (chance(percent + bonus)) {
-      dhit(ch, victim, TYPE_UNDEFINED);
+      dhit(ch, victim, type);
       return;
     }
   }
@@ -3686,7 +3672,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     int percent = 10;
 
     if (chance(percent + bonus)) {
-      dhit(ch, victim, TYPE_UNDEFINED);
+      dhit(ch, victim, type);
       return;
     }
   }
@@ -3700,13 +3686,13 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
 
   /* Mystic Swiftness */
   if (affected_by_spell(ch, SPELL_MYSTIC_SWIFTNESS) && chance(50 + (GET_DEX_APP(ch) * 3))) {
-    thit(ch, victim, TYPE_UNDEFINED);
+    thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for Mystic Swiftness bonus attack.
     return;
   }
 
   /* NPC Triple */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_TRIPLE) && !number(0, 2)) {
-    thit(ch, victim, TYPE_UNDEFINED);
+    thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
     return;
   }
 
@@ -3727,7 +3713,7 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
-      thit(ch, victim, TYPE_UNDEFINED);
+      thit(ch, victim, type);
       return;
     }
   }
@@ -3741,7 +3727,7 @@ void thit(CHAR *ch, CHAR *victim, int type) {
 
   /* NPC Quad */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_QUAD) && !number(0, 2)) {
-    qhit(ch, victim, TYPE_UNDEFINED);
+    qhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
     return;
   }
 
@@ -3762,7 +3748,7 @@ void thit(CHAR *ch, CHAR *victim, int type) {
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
-      qhit(ch, victim, TYPE_UNDEFINED);
+      qhit(ch, victim, type);
       return;
     }
   }
@@ -4178,6 +4164,16 @@ void perform_violence(void) {
     /* Perform a melee attack. */
     if (SAME_ROOM(ch, vict)) {
       hit(ch, vict, TYPE_UNDEFINED);
+    }
+
+    /* Sidearm */
+    if (check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch) && !enchanted_by(ch, "Readying Sidearm...")) {
+      act("You draw your sidearm and attack $N!", FALSE, ch, 0, vict, TO_CHAR);
+      act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, vict, TO_ROOM);
+
+      hit(ch, vict, TYPE_WEAPON2);
+
+      enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(4, 6), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
     }
 
     /* These skills are applied after melee attacks in order to avoid consuming position state. */

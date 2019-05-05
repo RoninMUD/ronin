@@ -977,7 +977,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
             case WIELD:
               if ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) &&
-                  !(IS_MORTAL(target) && check_subclass(target, SC_MERCENARY, 5) && EQ(target, HOLD) && (OBJ_TYPE(EQ(target, HOLD)) == ITEM_WEAPON))) { /* Sidearm */
+                  !(IS_MORTAL(target) && check_subclass(target, SC_MERCENARY, 5) && GET_WEAPON2(target))) { /* Sidearm */
                 printf_to_char(ch, "%s********\n\r", where[i]);
                 i++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
               }
@@ -3385,7 +3385,7 @@ void do_equipment(struct char_data *ch, char *argument, int cmd)
           break;
         case WIELD:
           if ((OBJ_TYPE(equipment) == ITEM_2H_WEAPON) &&
-              !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && EQ(ch, HOLD) && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON))) { /* Sidearm */
+              !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch))) { /* Sidearm */
             send_to_char(where[HOLD], ch);
             send_to_char("********\n\r", ch);
             equip_pos++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
