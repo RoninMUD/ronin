@@ -835,15 +835,15 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
     act("You call upon your divine energy and switch the focus of your attacks to $N.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n calls upon $s divine energy and switches the focus of $s attacks to you!", FALSE, ch, 0, victim, TO_VICT);
     act("$n calls upon $s divine energy and switches the focus of $s attacks to $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    stop_fighting(ch);
-    set_fighting(ch, victim);
   }
   else {
     act("You raise your weapon high to smite $M with holy vengeance!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n raises $s weapon high to smite you with holy vengence!", FALSE, ch, 0, victim, TO_VICT);
     act("$n raises $s weapon high to smite $N with holy vengeance!", FALSE, ch, 0, victim, TO_NOTVICT);
   }
+
+  stop_fighting(ch);
+  set_fighting(ch, victim);
 
   hit(ch, victim, SKILL_SMITE);
 
