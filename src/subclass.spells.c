@@ -804,7 +804,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
     next_vict = temp_vict->next_in_room;
 
-    if (temp_vict == ch || IS_IMMORTAL(temp_vict)) continue;
+    if ((temp_vict == ch) || IS_IMMORTAL(temp_vict) || (IS_NPC(ch) && IS_NPC(temp_vict))) continue;
 
     if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
       act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_vict, TO_VICT);
@@ -1665,7 +1665,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
     next_vict = temp_vict->next_in_room;
 
-    if ((temp_vict == ch) || IS_IMMORTAL(temp_vict)) continue;
+    if ((temp_vict == ch) || IS_IMMORTAL(temp_vict) || (IS_NPC(ch) && IS_NPC(temp_vict))) continue;
 
     if (IS_NPC(temp_vict) || ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_vict))) {
       damage(ch, temp_vict, 400, TYPE_UNDEFINED, DAM_MAGICAL);
