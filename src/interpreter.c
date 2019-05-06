@@ -513,20 +513,22 @@ int room_special(int room, CHAR *ch, int cmd, char *arg) {
 int enchantment_special(ENCH *enchantment, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   if (!enchantment) return FALSE;
 
-  if (enchantment->func) {
-    if ((*enchantment->func)(enchantment, ch, signaler, cmd, arg)) {
-      return TRUE;
-    }
+  if (enchantment->func && ((*enchantment->func)(enchantment, ch, signaler, cmd, arg))) {
+    return TRUE;
   }
 
-  if (((cmd == MSG_TICK) && (enchantment->interval == ENCH_INTERVAL_TICK)) ||
-      ((cmd == MSG_MOBACT) && (enchantment->interval == ENCH_INTERVAL_MOBACT)) ||
-      ((cmd == MSG_ROUND) && (enchantment->interval == ENCH_INTERVAL_ROUND))) {
-    if (enchantment->duration > 0) {
-      enchantment->duration--;
-    }
-    else if (!enchantment_special(enchantment, ch, 0, MSG_REMOVE_ENCH, 0)) {
-      enchantment_remove(ch, enchantment, TRUE);
+  if (enchantment->duration >= 0) {
+    if (((cmd == MSG_TICK) && (enchantment->interval == ENCH_INTERVAL_TICK)) ||
+        ((cmd == MSG_MOBACT) && (enchantment->interval == ENCH_INTERVAL_MOBACT)) ||
+        ((cmd == MSG_ROUND) && (enchantment->interval == ENCH_INTERVAL_ROUND))) {
+      if (enchantment->duration > 0) {
+        enchantment->duration--;
+      }
+      else {
+        if (!enchantment_special(enchantment, ch, 0, MSG_REMOVE_ENCH, 0)) {
+          enchantment_remove(ch, enchantment, TRUE);
+        }
+      }
     }
   }
 

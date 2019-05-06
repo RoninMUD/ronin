@@ -1706,78 +1706,49 @@ void assign_enchantments(void)
 
 
 /* Note: Name takes precedence over enchantment number, unless the name isn't in the global enchantment list. */
-ENCH *get_enchantment(ENCH *enchantment, int must_find)
-{
-  ENCH *ench;
+ENCH *get_enchantment(ENCH *enchantment, int must_find) {
   int index = -1;
-  int i = 0;
 
-  if (!enchantment->name)
-  {
+  if (!enchantment->name) {
     index = enchantment->type;
   }
-  else
-  {
-    for (i = 0; i < TOTAL_ENCHANTMENTS; i++)
-    {
+  else {
+    for (int i = 0; i < TOTAL_ENCHANTMENTS; i++)  {
       if (!enchantments[i].name || !enchantment->name) continue;
 
-      if (!strcmp(enchantments[i].name, enchantment->name))
-      {
+      if (!strcmp(enchantments[i].name, enchantment->name)) {
         index = i;
       }
     }
   }
 
-  if (index == -1 && must_find) return NULL;
+  if ((index == -1) && must_find) return NULL;
+
+  ENCH *ench;
 
   CREATE(ench, ENCH, 1);
 
-  if (index != -1)
-  {
-    if (!(enchantment->name))
-    {
-      ench->name = str_dup(enchantments[index].name);
-    }
-    else
-    {
-      ench->name = str_dup(enchantment->name);
-    }
-
-    if (!enchantment->duration)
-    {
-      ench->duration = enchantments[index].duration;
-    }
-    else
-    {
-      ench->duration = enchantment->duration;
-    }
-
-    sh_int interval = 0;
-
-    if (enchantment->interval) {
-      interval = enchantment->interval;
-    }
-
-    ench->location = enchantments[index].location;
+  if (index != -1) {
+    ench->name = str_dup(enchantments[index].name);
+    ench->interval = ((enchantment->interval != 0) ? enchantment->interval : 0); // TODO: Decide if this should be added to the enchant table above.
+    ench->type = index;
+    ench->duration = enchantments[index].duration;
     ench->modifier = enchantments[index].modifier;
+    ench->location = enchantments[index].location;
     ench->bitvector = enchantments[index].bitvector;
     ench->bitvector2 = enchantments[index].bitvector2;
-    ench->type = index;
-    ench->interval = interval;
     ench->func = enchantments[index].func;
   }
-  else
-  {
+  else {
     ench->name = str_dup(enchantment->name);
-    ench->location = enchantment->location;
+    ench->interval = enchantment->interval;
+    ench->type = 0;
+    ench->duration = enchantment->duration;
     ench->modifier = enchantment->modifier;
+    ench->location = enchantment->location;
     ench->bitvector = enchantment->bitvector;
     ench->bitvector2 = enchantment->bitvector2;
-    ench->type = 0;
-    ench->interval = enchantment->interval;
     ench->func = enchantment->func;
-    ench->duration = enchantment->duration;
   }
 
   return ench;
