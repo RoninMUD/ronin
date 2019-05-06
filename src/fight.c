@@ -2837,7 +2837,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     success = HIT_FAILURE;
 
     /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
       /* Re-roll the attack if it was a 1. */
       attack_roll = number(1, 20);
 
@@ -2852,7 +2852,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     }
 
     /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
       /* Check for critical hit. */
       if ((attack_roll >= 17) && (success == HIT_SUCCESS)) {
         success = HIT_CRITICAL;
@@ -3192,7 +3192,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   int attack_type = get_attack_type(attacker, weapon);
 
   /* Sento Kata */
-  if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+  if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
     if (is_immune(defender, attack_type, 0) || is_resistant(defender, attack_type, 0)) {
       switch (attack_type) {
         case TYPE_HIT:

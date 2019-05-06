@@ -2665,7 +2665,7 @@ const char * const ninja_skills[] = {
   "spin",
   "throw",
   "backfist",     /* Ronin SC2 */
-  "banzai",       /* Ronin SC5 */
+  "banzai",       /* Ronin SC4 */
   "tigerkick",    /* Mystic SC3 */
   "mantra",       /* Mystic SC4 */
   "\n"

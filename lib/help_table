@@ -8597,8 +8597,8 @@ Level         Skill/Spell
   1           BLUR
   2           BACKFIST
   3           COMBAT ZEN
-  4           SENTO KATA
-  5           BANZAI
+  4           BANZAI
+  5           SENTO KATA
 
 See Also: SUBCLASSES MYSTIC NINJA
 #
@@ -8617,37 +8617,23 @@ Level         Skill/Spell
 
 See Also: SUBCLASSES RONIN NINJA
 #
-"SENTO KATA"
+BLUR
 
-Subclass Ronin: Level 4 (Ninja)
+Subclass Ronin: Level 1 (Ninja)
 
-Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
-of combat in several ways.
+Usage       : cast 'blur' (self only)
+Accumulative: No
+Duration    : Level / 6
+Mana Cost   : 80
 
-First, the Ronin now will re-roll an attack roll of 1 (automatic miss) and use
-the second result; if the second roll is a natural 20, this will result in an
-automatic success, but not a critical hit.
+The Ronin blurs out of reality, making them not only harder to hit,
+but harder to defend against. While under the effects of Blur, the
+Ronin gains the following benefits, increasing the skill check
+success of the affected skills:
 
-Next, the Ronin inflicts a critical hit for double damage if they roll an attack
-roll of 17 or higher, as long as this attack would hit the target, or if they
-roll a natural 20.
-
-Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
-with certain weapons to automatically choose the best attack type for use
-against their opponent (e.g. to avoid damage resistance or immunity). The way
-this works is as follows:
-
-Weapon attack types for which Sento Kata applies:
-* hit (bare hands), chop, hack, pierce, slash, slice
-
-Eligible alternate attack types:
-* hit (bare hands): claw, whip
-* chop, hack: crush, slash
-* pierce: hack, slice
-* slash, slice: bludgeon, pierce
-
-If an opponent is more likely to be damaged by a possible alternate attack
-type, that type will be chosen; if not, the original attack type will be used.
+  -(Level / 2) to the Ronin's armor class (this is a benefit).
+  +(Level) to Dodge skill checks.
+  +(Level / 7) to all other skill checks (+7 at level 48+).
 
 See Also: SUBCLASSES RONIN
 #
@@ -8697,29 +8683,9 @@ chance to move while affected by paralysis.
 
 See Also: SUBCLASSES RONIN
 #
-BLUR
-
-Subclass Ronin: Level 1 (Ninja)
-
-Usage       : cast 'blur' (self only)
-Accumulative: No
-Duration    : Level / 6
-Mana Cost   : 80
-
-The Ronin blurs out of reality, making them not only harder to hit,
-but harder to defend against. While under the effects of Blur, the
-Ronin gains the following benefits, increasing the skill check
-success of the affected skills:
-
-  -(Level / 2) to the Ronin's armor class (this is a benefit).
-  +(Level) to Dodge skill checks.
-  +(Level / 7) to all other skill checks (+7 at level 48+).
-
-See Also: SUBCLASSES RONIN
-#
 BANZAI
 
-Subclass Ronin: Level 5 (Ninja)
+Subclass Ronin: Level 4 (Ninja)
  
 Usage       : banzai <victim>
 Mana Cost   : 75
@@ -8744,6 +8710,40 @@ This skill causes a 1 round input lag for the Ronin, regardless of
 success or failure.
 
 The success of Banzai is dependent on how well the skill is practiced.
+
+See Also: SUBCLASSES RONIN
+#
+"SENTO KATA"
+
+Subclass Ronin: Level 5 (Ninja)
+
+Sento Kata, translated roughly as "Combat Form", reinforces a Ronin's mastery
+of combat in several ways.
+
+First, the Ronin now will re-roll an attack roll of 1 (automatic miss) and use
+the second result; if the second roll is a natural 20, this will result in an
+automatic success, but not a critical hit.
+
+Next, the Ronin inflicts a critical hit for double damage if they roll an attack
+roll of 17 or higher, as long as this attack would hit the target, or if they
+roll a natural 20.
+
+Finally, the Ronin's mastery of martial arts and weaponry allows their attacks
+with certain weapons to automatically choose the best attack type for use
+against their opponent (e.g. to avoid damage resistance or immunity). The way
+this works is as follows:
+
+Weapon attack types for which Sento Kata applies:
+* hit (bare hands), chop, hack, pierce, slash, slice
+
+Eligible alternate attack types:
+* hit (bare hands): claw, whip
+* chop, hack: crush, slash
+* pierce: hack, slice
+* slash, slice: bludgeon, pierce
+
+If an opponent is more likely to be damaged by a possible alternate attack
+type, that type will be chosen; if not, the original attack type will be used.
 
 See Also: SUBCLASSES RONIN
 #
