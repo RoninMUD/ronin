@@ -1014,7 +1014,7 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
   ENDCOLOR(ch);
 
   /* Build the buffer for the listening character. */
-  snprintf(buf, sizeof(buf), "$n tells you '%s'", message);
+  snprintf(buf, sizeof(buf), "$n tells you, '%s'", message);
 
   /* Show the text to the listening character. */
   COLOR(listener, 6);
@@ -1160,16 +1160,16 @@ void do_gtell(CHAR *ch, char *arg, int cmd) {
   act(buf, FALSE, ch, 0, 0, TO_CHAR);
   ENDCOLOR(ch);
 
-  /* Build the buffer for the group leader and group members. */
-  snprintf(buf, sizeof(buf), "** $n tells you '%s'", arg);
-
   /* Get the group leader, or the acting character if no leader. */
   CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
 
   /* Show the text to the group leader if it's not the acting character. */
   if ((group_leader != ch) && IS_AFFECTED(group_leader, AFF_GROUP)) {
+    /* Build the buffer for the goup leader. */
+    snprintf(buf, sizeof(buf), "** %s tells you, '%s'", (!IS_NPC(ch) ? (WIZ_INV(group_leader, ch) ? "Somebody" : GET_NAME(ch)) : GET_SHORT(ch)), arg);
+
     COLOR(group_leader, 10);
-    act(buf, PERS_MORTAL, ch, 0, group_leader, TO_VICT);
+    act(buf, FALSE, ch, 0, group_leader, TO_VICT);
     ENDCOLOR(group_leader);
   }
 
@@ -1179,8 +1179,11 @@ void do_gtell(CHAR *ch, char *arg, int cmd) {
 
     if (!group_member || (group_member == ch) || !IS_AFFECTED(group_member, AFF_GROUP)) continue;
 
+    /* Build the buffer for the group member. */
+    snprintf(buf, sizeof(buf), "** %s tells you, '%s'", (!IS_NPC(ch) ? (WIZ_INV(group_member, ch) ? "Somebody" : GET_NAME(ch)) : GET_SHORT(ch)), arg);
+
     COLOR(group_member, 10);
-    act(buf, PERS_MORTAL, ch, 0, group_member, TO_VICT);
+    act(buf, FALSE, ch, 0, group_member, TO_VICT);
     ENDCOLOR(group_member);
   }
 }
