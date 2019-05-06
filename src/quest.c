@@ -12,10 +12,12 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
-#include <stdlib.h>
+#include <errno.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -34,6 +36,8 @@
 #include "act.h"
 #include "spec_assign.h"
 #include "quest.h"
+#include "enchant.h"
+#include "remortv2.h"
 
 /* global data */
 struct scoreboard_data scores[101];
@@ -87,23 +91,27 @@ void do_quest(CHAR *ch, char *argument, int cmd)
   channel_comm(ch, argument, CHANNEL_COMM_QUESTC);
 }
 
-#define FUNCT_WHERE     1
-#define FUNCT_TRANSFER  2
-#define FUNCT_GIVE      3
-#define FUNCT_QUIETON   4
-#define FUNCT_QUIETOFF  5
-#define FUNCT_KICKOUT   6
-#define FUNCT_QFLAG     7
-#define FUNCT_CHAOTIC   8
-#define FUNCT_LOG       9
-#define FUNCT_TELEPORT  10
-#define FUNCT_ZONE      11
-#define FUNCT_SPREAD    12
-#define FUNCT_SBRESET   13
-#define FUNCT_TOKEN     14
-#define FUNCT_AWARD     15
-#define FUNCT_QCARD     16
-#define FUNCT_QINFO     17
+#define FUNCT_WHERE      1
+#define FUNCT_TRANSFER   2
+#define FUNCT_GIVE       3
+#define FUNCT_QUIETON    4
+#define FUNCT_QUIETOFF   5
+#define FUNCT_KICKOUT    6
+#define FUNCT_QFLAG      7
+#define FUNCT_CHAOTIC    8
+#define FUNCT_LOG        9
+#define FUNCT_TELEPORT   10
+#define FUNCT_ZONE       11
+#define FUNCT_SPREAD     12
+#define FUNCT_SBRESET    13
+#define FUNCT_TOKEN      14
+#define FUNCT_QCARD      15
+#define FUNCT_QINFO      16
+#define FUNCT_QP         17
+#define FUNCT_SCP        18
+#define FUNCT_GOLD       19
+#define FUNCT_EXP        20
+#define FUNCT_REMORT_EXP 21
 
 int check_god_access(CHAR *ch, int active);
 
@@ -118,38 +126,62 @@ void do_qfunction(CHAR* ch, char *arg, int cmd)
   struct obj_data *obj=NULL,*next_obj;
   bool found;
 
-  if (IS_NPC(ch)) return;
+  if (!check_god_access(ch,TRUE)) return;
 
-  if(!check_god_access(ch,TRUE)) return;
-
-  if(!IS_SET(ch->new.imm_flags, WIZ_QUEST)) {
-    send_to_char("You do not have a god quest flag.\n\r", ch);
+  if(!IS_SET(GET_IMM_FLAGS(ch), WIZ_QUEST)) {
+    send_to_char("You do not have the WIZ_QUEST flag.\n\r", ch);
     return;
   }
 
-  arg=one_argument(arg,arg1);
+  arg = one_argument(arg, arg1);
 
-  if(arg1[0] != '\0') {
-    if(is_abbrev(arg1, "where"))    function = FUNCT_WHERE;
-    if(is_abbrev(arg1, "transfer")) function = FUNCT_TRANSFER;
-    if(is_abbrev(arg1, "give"))     function = FUNCT_GIVE;
-    if(is_abbrev(arg1, "quieton"))  function = FUNCT_QUIETON;
-    if(is_abbrev(arg1, "quietoff")) function = FUNCT_QUIETOFF;
-    if(is_abbrev(arg1, "kickout"))  function = FUNCT_KICKOUT;
-    if(is_abbrev(arg1, "qflag"))    function = FUNCT_QFLAG;
-    if(is_abbrev(arg1, "chaotic"))  function = FUNCT_CHAOTIC;
-    if(is_abbrev(arg1, "log"))      function = FUNCT_LOG;
-    if(is_abbrev(arg1, "teleport")) function = FUNCT_TELEPORT;
-    if(is_abbrev(arg1, "zone"))     function = FUNCT_ZONE;
-    if(is_abbrev(arg1, "spread"))   function = FUNCT_SPREAD;
-    if(is_abbrev(arg1, "sbreset"))  function = FUNCT_SBRESET;
-    if(is_abbrev(arg1, "token"))    function = FUNCT_TOKEN;
-    if(is_abbrev(arg1, "award"))    function = FUNCT_AWARD;
-    if(is_abbrev(arg1, "qcard"))    function = FUNCT_QCARD;
-    if(is_abbrev(arg1, "qinfo"))    function = FUNCT_QINFO;
+  char field_name[MIL];
+
+  if (*arg1) {
+    if (is_abbrev(arg1, "where"))     function = FUNCT_WHERE;
+    if (is_abbrev(arg1, "transfer"))  function = FUNCT_TRANSFER;
+    if (is_abbrev(arg1, "give"))      function = FUNCT_GIVE;
+    if (is_abbrev(arg1, "quieton"))   function = FUNCT_QUIETON;
+    if (is_abbrev(arg1, "quietoff"))  function = FUNCT_QUIETOFF;
+    if (is_abbrev(arg1, "kickout"))   function = FUNCT_KICKOUT;
+    if (is_abbrev(arg1, "qflag"))     function = FUNCT_QFLAG;
+    if (is_abbrev(arg1, "chaotic"))   function = FUNCT_CHAOTIC;
+    if (is_abbrev(arg1, "log"))       function = FUNCT_LOG;
+    if (is_abbrev(arg1, "teleport"))  function = FUNCT_TELEPORT;
+    if (is_abbrev(arg1, "zone"))      function = FUNCT_ZONE;
+    if (is_abbrev(arg1, "spread"))    function = FUNCT_SPREAD;
+    if (is_abbrev(arg1, "sbreset"))   function = FUNCT_SBRESET;
+    if (is_abbrev(arg1, "token"))     function = FUNCT_TOKEN;
+    if (is_abbrev(arg1, "qcard"))     function = FUNCT_QCARD;
+    if (is_abbrev(arg1, "award") ||
+        is_abbrev(arg1, "qp") ||
+        is_abbrev(arg1, "qpts")) {
+      function = FUNCT_QP;
+      snprintf(field_name, sizeof(field_name), "quest points");
+    }
+    if (is_abbrev(arg1, "scp") ||
+        is_abbrev(arg1, "subpts")) {
+      function = FUNCT_SCP;
+      snprintf(field_name, sizeof(field_name), "subclass points");
+    }
+    if (is_abbrev(arg1, "gold")) {
+      function = FUNCT_GOLD;
+      snprintf(field_name, sizeof(field_name), "gold coins");
+    }
+    if (is_abbrev(arg1, "experience") ||
+        is_abbrev(arg1, "xp")) {
+      function = FUNCT_EXP;
+      snprintf(field_name, sizeof(field_name), "experience points");
+    }
+    if (is_abbrev(arg1, "remort_experience") ||
+        is_abbrev(arg1, "remort_xp")) {
+      function = FUNCT_REMORT_EXP;
+      snprintf(field_name, sizeof(field_name), "remort experience points");
+    }
   }
 
-  arg=one_argument(arg,arg1);
+  arg = one_argument(arg, arg1);
+
   switch (function) {
     case FUNCT_WHERE:
       init_string_block(&sb);
@@ -657,59 +689,6 @@ Usage: qf token <char>\n\r\
       obj_to_char(obj, victim);
       return;
       break;
-    case FUNCT_AWARD:
-      if(!*arg1) {
-        send_to_char("\
-Usage: qf award <char> amount (amount can be negative)\n\r\
-       This command gives/removes the amount of quest points to the\n\r\
-       indicated character.\n\r",ch);
-        return;
-      }
-      if(!(victim = get_char_room_vis(ch, arg1))) {
-        send_to_char("That player is not here.\n\r",ch);
-        return;
-      }
-      if(IS_NPC(victim)) {
-        send_to_char("You cannot award a mob.\n\r",ch);
-        return;
-      }
-
-      arg=one_argument(arg,arg1);
-      if(!*arg1) {
-        send_to_char("How many quest points?\n\r",ch);
-        return;
-      }
-      if(!is_number(arg1)) {
-        send_to_char("The amount of quest points needs to be a number.\n\r",ch);
-        return;
-      }
-      else {
-        vnum=atoi(arg1);
-      }
-
-      if (vnum < 0 || vnum > 0) {
-        if(victim->ver3.quest_points+vnum <= -1) {
-          send_to_char("You cannot award that amount of negative points.\n\rThat amount would leave the charater with less than zero points.\n\r",ch);
-          return;
-        }
-      } else {
-        send_to_char("You cannot award zero points.\n\r",ch);
-        return;
-      }
-      sprintf(buf, "QSTINFO: %s awarded %s with %d quest points.",GET_NAME(ch),GET_NAME(victim),vnum);
-      wizlog(buf, GET_LEVEL(ch)+1, 4);
-      log_s(buf);
-
-      if (!IS_SUPREME(ch)) {
-        write_board(3097,"QF Award",buf);
-      }
-
-      sprintf(buf,"You award $N with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_CHAR);
-      sprintf(buf,"$n awards you with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_VICT);
-      sprintf(buf,"$n awards $N with %d quest points.",vnum);act(buf,0,ch,0,victim,TO_NOTVICT);
-      victim->ver3.quest_points+=vnum;
-      return;
-      break;
     case FUNCT_QCARD:
       if(!*arg1) {
         send_to_char("\
@@ -797,27 +776,175 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
         SET_BIT(ch->new.imm_flags, QUEST_INFO);
       }
       break;
+    case FUNCT_QP:
+    case FUNCT_SCP:
+    case FUNCT_GOLD:
+    case FUNCT_EXP:
+    case FUNCT_REMORT_EXP:
+      if (!*arg1) {
+        printf_to_char(ch, "Usage: qf %s <char> <amount>\n\r", field_name);
+        return;
+      }
+
+      if (!(victim = get_char_room_vis(ch, arg1))) {
+        send_to_char("That player is not here.\n\r", ch);
+        return;
+      }
+
+      if (IS_NPC(victim)) {
+        send_to_char("You cannot award an NPC.\n\r", ch);
+        return;
+      }
+
+      arg = one_argument(arg, arg1);
+
+      if (!*arg1) {
+        send_to_char("How many points?\n\r", ch);
+        return;
+      }
+
+      int amount = 0;
+      long long big_amount = 0;
+
+      if (!is_number(arg1)) {
+        send_to_char("Amount needs to be a non-zero number.\n\r", ch);
+        return;
+      }
+      else {
+        switch (function) {
+          case FUNCT_QP:
+          case FUNCT_SCP:
+          case FUNCT_GOLD:
+          case FUNCT_EXP:
+            amount = atoi(arg1);
+            break;
+          case FUNCT_REMORT_EXP:
+            errno = 0;
+
+            big_amount = strtoll(arg1, NULL, 10);
+
+            if (((errno == ERANGE) && ((big_amount == LONG_MAX) || (big_amount == LONG_MIN))) || ((errno != 0) && (big_amount == 0))) {
+              send_to_char("Amount specified was out of range.  Try again.\n\r", ch);
+              return;
+            }
+            break;
+        }
+      }
+
+      bool bad_amount = FALSE;
+
+      switch (function) {
+        case FUNCT_QP:
+          bad_amount = (((GET_QP(victim) + amount) < 0) || ((INT_MAX - GET_QP(victim)) < amount));
+          break;
+        case FUNCT_SCP:
+          bad_amount = (((GET_SCP(victim) + amount) < 0) || ((INT_MAX - GET_SCP(victim)) < amount));
+          break;
+        case FUNCT_GOLD:
+          bad_amount = (((GET_GOLD(victim) + amount) < 0) || ((INT_MAX - GET_GOLD(victim)) < amount));
+          break;
+        case FUNCT_EXP:
+          bad_amount = (((GET_EXP(victim) + amount) < 0) || ((INT_MAX - GET_EXP(victim)) < amount));
+          break;
+        case FUNCT_REMORT_EXP:
+          bad_amount = (((GET_REMORT_EXP(victim) + big_amount) < 0) || ((LONG_MAX - GET_REMORT_EXP(victim)) < big_amount));
+          break;
+      }
+
+      if ((amount == 0) && (big_amount == 0)) {
+        send_to_char("You cannot award zero points.\n\r", ch);
+        return;
+      }
+      else if (bad_amount) {
+        send_to_char("That amount would leave the charater with less than zero points.\n\r", ch);
+        return;
+      }
+
+      if (amount != 0) {
+        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %d %s.", GET_NAME(ch), GET_NAME(victim), amount, field_name);
+      }
+      else if (big_amount != 0) {
+        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %lld %s.", GET_NAME(ch), GET_NAME(victim), big_amount, field_name);
+      }
+      wizlog(buf, GET_LEVEL(ch) + 1, 4);
+      log_s(buf);
+
+      if (!IS_SUPREME(ch)) {
+        snprintf(arg1, sizeof(arg1), "QF %s", field_name);
+        write_board(3097, arg1, buf);
+      }
+
+      if (amount != 0) {
+        snprintf(buf, sizeof(buf), "You award $N with %d %s.", amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_CHAR);
+        snprintf(buf, sizeof(buf), "$n awards you with %d %s.", amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_VICT);
+        snprintf(buf, sizeof(buf), "$n awards $N with %d %s.", amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_NOTVICT);
+      }
+      else if (big_amount != 0) {
+        snprintf(buf, sizeof(buf), "You award $N with %lld %s.", big_amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_CHAR);
+        snprintf(buf, sizeof(buf), "$n awards you with %lld %s.", big_amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_VICT);
+        snprintf(buf, sizeof(buf), "$n awards $N with %lld %s.", big_amount, field_name);
+        act(buf, 0, ch, 0, victim, TO_NOTVICT);
+      }
+
+      switch (function) {
+        case FUNCT_QP:
+          GET_QP(victim) += amount;
+          break;
+        case FUNCT_SCP:
+          GET_SCP(victim) += amount;
+          break;
+        case FUNCT_GOLD:
+          GET_GOLD(victim) += amount;
+          break;
+        case FUNCT_EXP:
+          GET_EXP(victim) += amount;
+          break;
+        case FUNCT_REMORT_EXP:
+          GET_REMORT_EXP(victim) += big_amount;
+
+          if (GET_REMORT_EXP(victim) && !enchanted_by_type(victim, ENCHANT_REMORTV2)) {
+            printf_to_char(ch, "%s's remort enchantment turned ON.\n\r", GET_NAME(victim));
+
+            rv2_add_enchant(victim);
+          }
+          else {
+            printf_to_char(ch, "%s's remort enchantment turned OFF.\n\r", GET_NAME(victim));
+
+            rv2_remove_enchant(victim);
+          }
+          break;
+      }
+      break;
     default:
       send_to_char("\
 Usage: qf where (location of questers)\n\r\
-          transfer <char>/<all> (relocate quester(s) to you)\n\r\
-          give     <argument>   (give all questers items)\n\r\
-          quieton  <char>/<all> (turn on quester quiet flag)\n\r\
-          quietoff <char>/<all> (turn off quester quiet flag)\n\r\
-          kickout  <char>/<all> (turn off quester quest flag)\n\r\
-          qflag    <char>/<all> (turn on quester quest flag)\n\r\
-          chaotic  <obj>/<all>  (assign chaotic flag to obj)\n\r\
-          log      <obj>/<all>  (turn on quest logging for obj)\n\r\
-          teleport              (random transport around the world)\n\r\
-          sbreset               (resets scoreboard - for pkill quests)\n\r\
-          Use SCOREBOARD to see death list (limit 99 deaths)\n\r\
-          spread   <num> <vnum> (random spreading of objs)\n\r\
-          zone     <normal>/<never>/<doors> (chaos zone reset modes)\n\r\
-          token    <char>       (reward the character with a subclass token)\n\r\
-          award    <char> <amt> (award the character # of quest points)\n\r\
-          qcard    load <amt>   (loads the # of quest cards)\n\r\
-          qcard    collect      (pulls all qcards in the game to inventory)\n\r\
-          qinfo                 (turns on/off info flag - see quester actions)\n\r\n\r\
+          transfer   <char>/<all> (relocate quester(s) to you)\n\r\
+          give       <argument>   (give all questers items)\n\r\
+          quieton    <char>/<all> (turn on quester quiet flag)\n\r\
+          quietoff   <char>/<all> (turn off quester quiet flag)\n\r\
+          kickout    <char>/<all> (turn off quester quest flag)\n\r\
+          qflag      <char>/<all> (turn on quester quest flag)\n\r\
+          chaotic    <obj>/<all>  (assign chaotic flag to obj)\n\r\
+          log        <obj>/<all>  (turn on quest logging for obj)\n\r\
+          teleport                (random transport around the world)\n\r\
+          sbreset                 (resets scoreboard - for pkill quests)\n\r\
+            Use SCOREBOARD to see death list (limit 99 deaths)\n\r\
+          spread     <num> <vnum> (random spreading of objs)\n\r\
+          zone       <normal>/<never>/<doors> (chaos zone reset modes)\n\r\
+          token      <char>       (reward the character with a subclass token)\n\r\
+          qcard      load <amt>   (loads the # of quest cards)\n\r\
+          qcard      collect      (pulls all qcards in the game to inventory)\n\r\
+          qinfo                 (turns on/off info flag - see quester actions)\n\r\
+          aqp/award  <char> <amt> (award the character # of quest points)\n\r\
+          scp        <char> <amt> (award the character # of subclass points)\n\r\
+          gold       <char> <amt> (award the character # of gold coins)\n\r\
+          exp        <char> <amt> (award the character # of experience points)\n\r\
+          remort_exp <char> <amt> (award the character # of remort experience points)\n\r\n\r\
 Using most of the commands without the arguments give more information.\n\r",ch);
       return;
       break;

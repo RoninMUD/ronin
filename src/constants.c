@@ -193,7 +193,7 @@ const char * const spell_wear_off_msg[] = {
   "The cloud of fire surrounding you dies out.",/*182*/
   "!snipe!",/*183*/
   "!riposte!",/*184*/
-  "!trophy!",/*185*/
+  "You feel less inspired.",/*185*/
   "!frenzy!",/*186*/
   "!power of faith!",/*187*/
   "", /* 188 Incendiary Cloud (New) */

@@ -1633,12 +1633,6 @@ void do_trophy(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_MORTAL(ch) && ((10 - (10 * (OBJ_TIMER(corpse)) / MAX_NPC_CORPSE_TIME)) > 3)) {
-    send_to_char("The corpse is too badly damaged.\n\r", ch);
-
-    return;
-  }
-
   if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_TROPHY)) {
     send_to_char("You failed to craft a trophy from the corpse.\n\r", ch);
 
