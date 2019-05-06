@@ -852,11 +852,15 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
       }
 
       if ((amount == 0) && (big_amount == 0)) {
-        send_to_char("You cannot award zero points.\n\r", ch);
+        printf_to_char(ch, "You cannot award zero %s.\n\r", field_name);
         return;
       }
-      else if (bad_amount) {
-        send_to_char("That amount would leave the charater with less than zero points.\n\r", ch);
+      else if (bad_amount && ((amount < 0) || (big_amount < 0))) {
+        printf_to_char(ch, "That amount would leave the charater with less than zero %s.\n\r", field_name);
+        return;
+      }
+      else if (bad_amount && ((amount > 0) || (big_amount > 0))) {
+        printf_to_char(ch, "That amount would exceed the maximum limit for %s.\n\r", field_name);
         return;
       }
 
