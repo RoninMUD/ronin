@@ -135,7 +135,7 @@ void do_qfunction(CHAR* ch, char *arg, int cmd)
 
   arg = one_argument(arg, arg1);
 
-  char field_name[MIL];
+  char field_name[MIL], friendly_name[MIL];
 
   if (*arg1) {
     if (is_abbrev(arg1, "where"))     function = FUNCT_WHERE;
@@ -157,26 +157,31 @@ void do_qfunction(CHAR* ch, char *arg, int cmd)
         is_abbrev(arg1, "qp") ||
         is_abbrev(arg1, "qpts")) {
       function = FUNCT_QP;
-      snprintf(field_name, sizeof(field_name), "quest points");
+      snprintf(field_name, sizeof(field_name), "qp");
+      snprintf(friendly_name, sizeof(friendly_name), "quest point");
     }
     if (is_abbrev(arg1, "scp") ||
         is_abbrev(arg1, "subpts")) {
       function = FUNCT_SCP;
-      snprintf(field_name, sizeof(field_name), "subclass points");
+      snprintf(field_name, sizeof(field_name), "scp");
+      snprintf(friendly_name, sizeof(friendly_name), "subclass point");
     }
     if (is_abbrev(arg1, "gold")) {
       function = FUNCT_GOLD;
-      snprintf(field_name, sizeof(field_name), "gold coins");
+      snprintf(field_name, sizeof(field_name), "gold");
+      snprintf(friendly_name, sizeof(friendly_name), "gold coin");
     }
     if (is_abbrev(arg1, "experience") ||
         is_abbrev(arg1, "xp")) {
       function = FUNCT_EXP;
-      snprintf(field_name, sizeof(field_name), "experience points");
+      snprintf(field_name, sizeof(field_name), "exp");
+      snprintf(friendly_name, sizeof(friendly_name), "experience point");
     }
     if (is_abbrev(arg1, "remort_experience") ||
         is_abbrev(arg1, "remort_xp")) {
       function = FUNCT_REMORT_EXP;
-      snprintf(field_name, sizeof(field_name), "remort experience points");
+      snprintf(field_name, sizeof(field_name), "remort_exp");
+      snprintf(friendly_name, sizeof(friendly_name), "remort experience point");
     }
   }
 
@@ -783,23 +788,27 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
     case FUNCT_REMORT_EXP:
       if (!*arg1) {
         printf_to_char(ch, "Usage: qf %s <char> <amount>\n\r", field_name);
+
         return;
       }
 
       if (!(victim = get_char_room_vis(ch, arg1))) {
         send_to_char("That player is not here.\n\r", ch);
+
         return;
       }
 
       if (IS_NPC(victim)) {
         send_to_char("You cannot award an NPC.\n\r", ch);
+
         return;
       }
 
       arg = one_argument(arg, arg1);
 
       if (!*arg1) {
-        send_to_char("How many points?\n\r", ch);
+        printf_to_char(ch, "How many %ss?\n\r", friendly_name);
+
         return;
       }
 
@@ -808,6 +817,7 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
 
       if (!is_number(arg1)) {
         send_to_char("Amount needs to be a non-zero number.\n\r", ch);
+
         return;
       }
       else {
@@ -825,6 +835,7 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
 
             if (((errno == ERANGE) && ((big_amount == LONG_MAX) || (big_amount == LONG_MIN))) || ((errno != 0) && (big_amount == 0))) {
               send_to_char("Amount specified was out of range.  Try again.\n\r", ch);
+
               return;
             }
             break;
@@ -852,23 +863,25 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
       }
 
       if ((amount == 0) && (big_amount == 0)) {
-        printf_to_char(ch, "You cannot award zero %s.\n\r", field_name);
+        printf_to_char(ch, "You cannot award zero %ss.\n\r", friendly_name);
         return;
       }
       else if (bad_amount && ((amount < 0) || (big_amount < 0))) {
-        printf_to_char(ch, "That amount would leave the charater with less than zero %s.\n\r", field_name);
+        printf_to_char(ch, "That amount would leave the charater with less than zero %ss.\n\r", friendly_name);
+
         return;
       }
       else if (bad_amount && ((amount > 0) || (big_amount > 0))) {
-        printf_to_char(ch, "That amount would exceed the maximum limit for %s.\n\r", field_name);
+        printf_to_char(ch, "That amount would exceed the maximum limit for %ss.\n\r", friendly_name);
+
         return;
       }
 
       if (amount != 0) {
-        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %d %s.", GET_NAME(ch), GET_NAME(victim), amount, field_name);
+        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %d %s(s).", GET_NAME(ch), GET_NAME(victim), amount, friendly_name);
       }
       else if (big_amount != 0) {
-        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %lld %s.", GET_NAME(ch), GET_NAME(victim), big_amount, field_name);
+        snprintf(buf, sizeof(buf), "QSTINFO: %s awarded %s with %lld %s(s).", GET_NAME(ch), GET_NAME(victim), big_amount, friendly_name);
       }
       wizlog(buf, GET_LEVEL(ch) + 1, 4);
       log_s(buf);
@@ -879,19 +892,19 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
       }
 
       if (amount != 0) {
-        snprintf(buf, sizeof(buf), "You award $N with %d %s.", amount, field_name);
+        snprintf(buf, sizeof(buf), "You award $N with %d %s(s).", amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_CHAR);
-        snprintf(buf, sizeof(buf), "$n awards you with %d %s.", amount, field_name);
+        snprintf(buf, sizeof(buf), "$n awards you with %d %s(s).", amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_VICT);
-        snprintf(buf, sizeof(buf), "$n awards $N with %d %s.", amount, field_name);
+        snprintf(buf, sizeof(buf), "$n awards $N with %d %s(s).", amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_NOTVICT);
       }
       else if (big_amount != 0) {
-        snprintf(buf, sizeof(buf), "You award $N with %lld %s.", big_amount, field_name);
+        snprintf(buf, sizeof(buf), "You award $N with %lld %s(s).", big_amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_CHAR);
-        snprintf(buf, sizeof(buf), "$n awards you with %lld %s.", big_amount, field_name);
+        snprintf(buf, sizeof(buf), "$n awards you with %lld %s(s).", big_amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_VICT);
-        snprintf(buf, sizeof(buf), "$n awards $N with %lld %s.", big_amount, field_name);
+        snprintf(buf, sizeof(buf), "$n awards $N with %lld %s(s).", big_amount, friendly_name);
         act(buf, 0, ch, 0, victim, TO_NOTVICT);
       }
 
