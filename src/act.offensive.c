@@ -1074,12 +1074,10 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
         (!IS_NPC(ch) || (IS_NPC(ch) && !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, NO_MOB)))) {
       CHAR *blocker = GET_OPPONENT(ch);
 
-      if (!IS_NPC(blocker) && affected_by_spell(blocker, SKILL_BLOCK) && !GET_RIDER(ch)) {
+      if (!GET_RIDER(ch) && !IS_NPC(blocker) && IS_SET(GET_PFLAG2(blocker), PLR2_BLOCK)) {
         int block_check = number(1, 111);
-        int block_skill = GET_LEARNED(blocker, SKILL_BLOCK);
+        int block_skill = GET_LEARNED(blocker, SKILL_BLOCK) + GET_DEX_APP(blocker);
         int auto_block_chance = 0;
-
-        block_skill += GET_DEX_APP(blocker);
 
         /* Iron Fist */
         if (IS_MORTAL(blocker) && check_subclass(blocker, SC_WARLORD, 3)) {
@@ -1088,9 +1086,9 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
         }
 
         if ((block_check <= block_skill) || (auto_block_chance && chance(auto_block_chance))) {
-          act("You tried to flee but $N blocked your way!", FALSE, ch, 0, blocker, TO_CHAR);
-          act("$n tried to flee but you blocked $s way!", FALSE, ch, 0, blocker, TO_VICT);
-          act("$n tried to flee but $N blocked $s way!", FALSE, ch, 0, blocker, TO_NOTVICT);
+          act("You tried to flee, but $N blocked your way!", FALSE, ch, 0, blocker, TO_CHAR);
+          act("$n tried to flee, but you blocked $s way!", FALSE, ch, 0, blocker, TO_VICT);
+          act("$n tried to flee, but $N blocked $s way!", FALSE, ch, 0, blocker, TO_NOTVICT);
 
           return;
         }

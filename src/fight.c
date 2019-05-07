@@ -2837,7 +2837,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     success = HIT_FAILURE;
 
     /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
       /* Re-roll the attack if it was a 1. */
       attack_roll = number(1, 20);
 
@@ -2852,7 +2852,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     }
 
     /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
       /* Check for critical hit. */
       if ((attack_roll >= 17) && (success == HIT_SUCCESS)) {
         success = HIT_CRITICAL;
@@ -3083,8 +3083,6 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
           /* Attack back. */
           hit(defender, attacker, SKILL_FEINT);
 
-          if (!SAME_ROOM(attacker, defender)) return FALSE;
-
           return SKILL_FEINT;
         }
         break;
@@ -3100,8 +3098,6 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
           /* Attack back. */
           hit(defender, attacker, TYPE_UNDEFINED);
-
-          if (!SAME_ROOM(attacker, defender)) return FALSE;
 
           return SKILL_RIPOSTE;
         }
@@ -3185,6 +3181,9 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
     }
   }
 
+  /* Avoidance must have either killed the creature, or caused it to be elsewhere (flee, teleport spec, etc.) */
+  if (!SAME_ROOM(attacker, defender)) return FALSE;
+
   /* Get the weapon involved for use later on. */
   OBJ *weapon = ((type != TYPE_WEAPON2) ? GET_WEAPON(attacker) : GET_WEAPON2(attacker));
 
@@ -3192,7 +3191,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   int attack_type = get_attack_type(attacker, weapon);
 
   /* Sento Kata */
-  if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 4)) {
+  if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
     if (is_immune(defender, attack_type, 0) || is_resistant(defender, attack_type, 0)) {
       switch (attack_type) {
         case TYPE_HIT:
@@ -3627,6 +3626,11 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     return;
   }
 
+  /* Coerce attack type as needed for dual pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
+
   /* NPC Dual */
   if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_DUAL) && !number(0, 2)) {
     dhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
@@ -3690,6 +3694,11 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     return;
   }
 
+  /* Coerce attack type as needed for triple pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
+
   /* NPC Triple */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_TRIPLE) && !number(0, 2)) {
     thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
@@ -3724,6 +3733,11 @@ void thit(CHAR *ch, CHAR *victim, int type) {
 
   /* Perform the attack, returning if it is avoided or misses. */
   if (!perform_hit(ch, victim, type, 3)) return;
+
+  /* Coerce attack type as needed for quad pass-through below. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
 
   /* NPC Quad */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_QUAD) && !number(0, 2)) {
@@ -4166,8 +4180,10 @@ void perform_violence(void) {
       hit(ch, vict, TYPE_UNDEFINED);
     }
 
+    /* These skills are applied after melee attacks in order to avoid consuming position state. */
+
     /* Sidearm */
-    if (check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch) && !enchanted_by(ch, "Readying Sidearm...")) {
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch) && !enchanted_by(ch, "Readying Sidearm...")) {
       act("You draw your sidearm and attack $N!", FALSE, ch, 0, vict, TO_CHAR);
       act("$n draws $s sidearm and attacks $N!", FALSE, ch, 0, vict, TO_ROOM);
 
@@ -4176,23 +4192,24 @@ void perform_violence(void) {
       enchantment_apply(ch, FALSE, "Readying Sidearm...", 0, number(4, 6), ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
     }
 
-    /* These skills are applied after melee attacks in order to avoid consuming position state. */
-    if (IS_MORTAL(ch)) {
-      if (SAME_ROOM(ch, vict) && affected_by_spell(ch, SPELL_BLOOD_LUST)) {
-        blood_lust_action(ch, vict);
-      }
+    /* Blood Lust */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && affected_by_spell(ch, SPELL_BLOOD_LUST)) {
+      blood_lust_action(ch, vict);
+    }
 
-      if (SAME_ROOM(ch, vict) && IS_SET(GET_PFLAG2(ch), PLR2_VICTIMIZE) && check_sc_access(ch, SKILL_VICTIMIZE)) {
-        victimize_action(ch, vict);
-      }
+    /* Victimize */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_VICTIMIZE) && check_sc_access(ch, SKILL_VICTIMIZE)) {
+      victimize_action(ch, vict);
+    }
 
-      if (SAME_ROOM(ch, vict) && IS_SET(GET_PFLAG2(ch), PLR2_SNIPE) && check_sc_access(ch, SKILL_SNIPE)) {
-        snipe_action(ch, vict);
-      }
+    /* Snipe */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_SNIPE) && check_sc_access(ch, SKILL_SNIPE)) {
+      snipe_action(ch, vict);
+    }
 
-      if (SAME_ROOM(ch, vict) && IS_SET(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS) && check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
-        dirty_tricks_action(ch, vict);
-      }
+    /* Dirty Tricks */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS) && check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
+      dirty_tricks_action(ch, vict);
     }
   }
 }
