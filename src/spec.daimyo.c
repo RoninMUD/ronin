@@ -312,6 +312,8 @@ int black_panther(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
      hit(mob, ch, TYPE_HIT);
      hit(mob, ch, TYPE_HIT);
+
+     return FALSE;
    }
 
    return FALSE;
