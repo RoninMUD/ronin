@@ -2505,31 +2505,30 @@ int calc_hitroll(CHAR *ch) {
 
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].tohit;
 
-  /* 2H weapons allow for a 150% strength modifier. */
-  if (GET_WEAPON(ch) && IS_2H_WEAPON(GET_WEAPON(ch)) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch))) { /* Sidearm */
+  /* Two-handed weapons grant a 150% strength modifier, unless a 2nd weapon is wielded (e.g. Sidearm). */
+  if (IS_2H_WEAPON(GET_WEAPON(ch)) && !GET_WEAPON2(ch)) {
     str_bonus *= 1.5;
   }
 
   hitroll += str_bonus;
 
   if (!IS_NPC(ch)) {
-    /* Close Combat Hitroll Bonus */
+    /* Close Combat: Hitroll Bonus */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       hitroll += 2;
     }
 
-    /* Evasion Hitroll Penalty */
+    /* Evasion: Hitroll Penalty */
     if (IS_SET(GET_PFLAG2(ch), PLR2_EVASION)) {
       hitroll -= 5;
     }
 
-    /* Frenzy Hitroll Penalty */
+    /* Frenzy: Hitroll Penalty */
     if (affected_by_spell(ch, SKILL_FRENZY)) {
       hitroll -= 10;
     }
 
-    /* Zen Blindness Hitroll Penalty Nullification */
+    /* Combat Zen: Blindness Hitroll Penalty Nullification */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       for (AFF *aff = ch->affected; aff; aff = aff->next) {
         if ((aff->type == SPELL_BLINDNESS) && (aff->location == APPLY_HITROLL) && (aff->modifier < 0)) {
@@ -2550,16 +2549,15 @@ int calc_damroll(CHAR *ch) {
 
   int str_bonus = str_app[MAX(0, MIN(STRENGTH_APPLY_INDEX(ch), OSTRENGTH_APPLY_INDEX(ch)))].todam;
 
-  /* 2H weapons allow for a 150% strength modifier. */
-  if (GET_WEAPON(ch) && IS_2H_WEAPON(GET_WEAPON(ch)) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5) && GET_WEAPON2(ch))) { /* Sidearm */
+  /* Two-handed weapons grant a 150% strength modifier, unless a 2nd weapon is wielded (e.g. Sidearm). */
+  if (IS_2H_WEAPON(GET_WEAPON(ch)) && !GET_WEAPON2(ch)) {
     str_bonus *= 1.5;
   }
 
   damroll += str_bonus;
 
   if (!IS_NPC(ch)) {
-    /* Close Combat Damroll Bonus */
+    /* Close Combat: Damroll Bonus */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       damroll += 2;
     }
@@ -2569,14 +2567,11 @@ int calc_damroll(CHAR *ch) {
 }
 
 int calc_thaco(CHAR *ch) {
-  if (!ch || !GET_LEVEL(ch)) return 100;
+  if (!ch || (GET_LEVEL(ch) < 1) || IS_NPC(ch)) {
+    return 20;
+  }
 
   int thaco = 20;
-
-  /* NPC thaco is entirely based on their hitroll. */
-  if (IS_NPC(ch)) {
-    return thaco;
-  }
 
   /* This new thaco calculation method levels the playing field for melee characters
      and maintains almost identical parity with the old table-based system.  Casters
@@ -2594,10 +2589,7 @@ int calc_thaco(CHAR *ch) {
     thaco -= 1;
   }
 
-  /* Limit thaco to 1, just in case. */
-  thaco = MAX(1, thaco);
-
-  return thaco;
+  return MAX(1, thaco);
 }
 
 int calc_ac(CHAR *ch) {
@@ -2772,7 +2764,6 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
   return dam;
 }
 
-
 int stack_position(CHAR *ch, int target_position) {
   if (!ch || !target_position) return POSITION_DEAD;
 
@@ -2800,16 +2791,14 @@ int stack_position(CHAR *ch, int target_position) {
   return GET_POS(ch);
 }
 
-
 /* Note: For private use by try_hit(). */
 int hit_success(int attack_roll, int attacker_thaco, int attacker_hitroll, int defender_ac) {
-  int success = HIT_FAILURE;
-
-  if ((attacker_thaco - attacker_hitroll - attack_roll) <= (defender_ac / 10)) {
-    success = HIT_SUCCESS;
+  /* Automatic success on an attack roll of 20, and automatic failure on an attack roll of 1. */
+  if ((attack_roll == 20) || ((attack_roll != 1) && (attacker_thaco - attacker_hitroll - attack_roll) <= (defender_ac / 10))) {
+    return HIT_SUCCESS;
   }
 
-  return success;
+  return HIT_FAILURE;
 }
 
 int try_hit(CHAR *attacker, CHAR *defender) {
@@ -2829,35 +2818,16 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   }
 
   int attack_roll = number(1, 20);
-
   int success = hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender));
 
-  if (attack_roll == 1) {
-    /* Automatic failure. */
-    success = HIT_FAILURE;
-
-    /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
-      /* Re-roll the attack if it was a 1. */
-      attack_roll = number(1, 20);
-
-      /* Success on a re-rolled 20, or if they hit with the second attack. */
-      success = ((attack_roll == 20) || hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender)));
-    }
+  /* Sento Kata: Re-roll the attack if it was a 1. The re-roll can't critically hit. */
+  if ((success == HIT_FAILURE) && (attack_roll == 1) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
+    attack_roll = number(1, 20);
+    success = hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender));
   }
-  else {
-    /* Automatic success. */
-    if (attack_roll == 20) {
-      success = HIT_SUCCESS;
-    }
-
-    /* Sento Kata */
-    if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
-      /* Check for critical hit. */
-      if ((attack_roll >= 17) && (success == HIT_SUCCESS)) {
-        success = HIT_CRITICAL;
-      }
-    }
+  /* Sento Kata: Critical hit if the initial attack was a success and was a 17+. */
+  else if ((success == HIT_SUCCESS) && (attack_roll >= 17) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
+    success = HIT_CRITICAL;
   }
 
   return success;

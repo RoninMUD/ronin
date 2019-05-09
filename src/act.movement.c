@@ -473,16 +473,11 @@ Returns:
     }
   }
   else {
-    if (IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, 2, ch, 0, 0, TO_GROUP);
-    }
-    else {
-      act(buf, 2, ch, 0, 0, TO_ROOM);
-    }
+    act(buf, 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
   /* Do look do look for the character. */
-  do_look(ch, "\0", CMD_LOOK);
+  do_look(ch, "", CMD_LOOK);
 
   /* Do look for the mount. */
   if (GET_MOUNT(ch)) {
@@ -2253,14 +2248,14 @@ void do_move_keyword(struct char_data *ch, char *argument, int cmd)
 #define DIR_ADVERB_PRE  2
 #define DIR_ADVERB_POST 3
 
-const char * special_move_str[][4] = {
-  {"climb", "climbs", " ", " " },
-  {"jump", "jumps", " ", " " },
-  {"crawl", "crawls", " in ", " through " },
-  {"enter", "enters", " ", " "},
+const char *special_move_str[][4] = {
+  {"climb", "climbs", "", "" },
+  {"jump", "jumps", "", "" },
+  {"crawl", "crawls", " in", " through" },
+  {"enter", "enters", "", ""},
 };
 
-const int special_move_mv[] = {
+const int special_move_cost[] = {
   6,
   10,
   3,
@@ -2269,7 +2264,6 @@ const int special_move_mv[] = {
 
 void do_special_move(struct char_data *ch, char *arg, int cmd) {
   char buf[MSL];
-
   int dir_type = -1;
   bool up_down = FALSE;
 
@@ -2290,27 +2284,26 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     default:
       sprintf(buf, "WIZINFO: Invalid cmd sent to do_special_move, cmd = %d", cmd);
       wizlog(buf, LEVEL_WIZ, 6);
+
       return;
       break;
   }
 
-  if (dir_type < 0) {
+  if ((dir_type < 0) || (dir_type > NUMELEMS(special_move_str))) {
     sprintf(buf, "WIZINFO: Invalid dir type in do_special_move, dir_type = %d", dir_type);
+
     wizlog(buf, LEVEL_WIZ, 6);
 
     return;
   }
 
-  char type[MIL];
-  char dir[MIL];
+  char type[MIL], dir[MIL];
 
   argument_interpreter(arg, type, dir);
 
   if (!*type) {
-    snprintf(buf, sizeof(buf), "%s%s", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
-    CAP(buf);
-    strcat(buf, "what?\n\r");
-    send_to_char(buf, ch);
+    snprintf(buf, sizeof(buf), "%s", special_move_str[dir_type][DIR_SINGULAR]);
+    printf_to_char(ch, "%s%s what?", CAP(buf), special_move_str[dir_type][DIR_ADVERB_PRE]);
 
     return;
   }
@@ -2323,34 +2316,37 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   switch (dir_type) {
     case DIR_TYPE_CLIMB:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB)) can_go = TRUE;
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB))
+        can_go = TRUE;
       break;
     case DIR_TYPE_JUMP:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP)) can_go = TRUE;
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP))
+        can_go = TRUE;
       break;
     case DIR_TYPE_CRAWL:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL)) can_go = TRUE;
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL))
+        can_go = TRUE;
       break;
     case DIR_TYPE_ENTER:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_ENTER)) can_go = TRUE;
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_ENTER))
+        can_go = TRUE;
       break;
   }
 
   if (!can_go) {
-    snprintf(buf, sizeof(buf), "You can't %s%sthat.\n\r", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
-    send_to_char(buf, ch);
+    printf_to_char(ch, "You can't %s%s that.\n\r", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
 
     return;
   }
 
-  int move_cost = special_move_mv[dir_type];
+  int move_cost = special_move_cost[dir_type];
 
   // Prestige Perk 23
   if (GET_PRESTIGE_PERK(ch) >= 23) {
     move_cost = MAX(1, move_cost - 1);
   }
 
-  if (GET_MOVE(ch) < move_cost && !IS_NPC(ch)) {
+  if (IS_MORTAL(ch) && (GET_MOVE(ch) < move_cost)) {
     send_to_char("You are too exhausted.\n\r", ch);
 
     return;
@@ -2363,13 +2359,14 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   }
 
   if (!EXIT(ch, door)->keyword) {
-    sprintf(buf, "WIZINFO: Error in do_special_move, no keyword on exit, room %d", CHAR_VIRTUAL_ROOM(ch));
+    snprintf(buf, sizeof(buf), "WIZINFO: Error in do_special_move, no keyword on exit, room %d", CHAR_VIRTUAL_ROOM(ch));
+
     wizlog(buf, LEVEL_WIZ, 6);
 
     return;
   }
 
-  if (!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
+  if ((!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
     send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
 
     damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
@@ -2379,14 +2376,14 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   int other_room = EXIT(ch, door)->to_room_r;
 
-  if (other_room == NOWHERE || other_room == real_room(0)) {
-    sprintf(buf, "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
+  if ((other_room == NOWHERE) || (other_room == real_room(0))) {
+    snprintf(buf, sizeof(buf), "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
     wizlog(buf, LEVEL_WIZ, 6);
 
     return;
   }
 
-  if (IS_SET(world[other_room].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(other_room)) > 0 && !CHAOSMODE) {
+  if (IS_SET(world[other_room].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(other_room) > 0) && !CHAOSMODE) {
     send_to_char("It's too narrow to go there.\n\r", ch);
 
     return;
@@ -2400,9 +2397,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
-    if ((IS_SET(world[other_room].room_flags, HAZARD) ||
-         IS_SET(world[other_room].room_flags, DEATH)) &&
-        chance(50)) {
+    if ((IS_SET(world[other_room].room_flags, HAZARD) || IS_SET(world[other_room].room_flags, DEATH)) && chance(50)) {
       send_to_char("You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r", ch);
 
       GET_MOVE(ch) = 0;
@@ -2413,49 +2408,21 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   GET_MOVE(ch) -= move_cost;
 
-  if (up_down && (door == UP || door == DOWN)) {
-    snprintf(buf, sizeof(buf), "$n %s %s the $F.", special_move_str[dir_type][DIR_PLURAL], dirs[door]);
-    if (!IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
-    }
-    else {
-      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_GROUP);
-    }
-    snprintf(buf, sizeof(buf), "You %s %s the $F.", special_move_str[dir_type][DIR_SINGULAR], dirs[door]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
-  }
-  else {
-    snprintf(buf, sizeof(buf), "$n %s%sthe $F.", special_move_str[dir_type][DIR_PLURAL], special_move_str[dir_type][DIR_ADVERB_POST]);
-    if (!IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
-    }
-    else {
-      act(buf, 2, ch, 0, EXIT(ch, door)->keyword, TO_GROUP);
-    }
-    snprintf(buf, sizeof(buf), "You %s%sthe $F.", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_POST]);
-    act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
-  }
+  snprintf(buf, sizeof(buf), "$n %s%s the $F.", special_move_str[dir_type][DIR_PLURAL], ((up_down && (door == UP || door == DOWN)) ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
+  act(buf, 2, ch, 0, EXIT(ch, door)->keyword, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
+
+  snprintf(buf, sizeof(buf), "You %s%s the $F.", special_move_str[dir_type][DIR_SINGULAR], ((up_down && (door == UP || door == DOWN)) ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
+  act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
 
   char_from_room(ch);
   char_to_room(ch, other_room);
 
   snprintf(buf, sizeof(buf), "$n as arrived.");
-  if (IS_AFFECTED(ch, AFF_SNEAK)) {
-    for (CHAR *temp_ch = world[CHAR_REAL_ROOM(ch)].people, *next_ch; temp_ch; temp_ch = next_ch) {
-      next_ch = temp_ch->next_in_room;
+  act(buf, 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
-      if ((temp_ch == ch) || (!IS_IMMORTAL(ch) && !SAME_GROUP(temp_ch, ch))) continue;
+  do_look(ch, "", CMD_LOOK);
 
-      act(buf, 2, ch, 0, 0, TO_CHAR);
-    }
-  }
-  else {
-    act(buf, 2, ch, 0, 0, TO_ROOM);
-  }
-
-  do_look(ch, "\0", CMD_LOOK);
-
-  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "\0")) return;
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return;
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) GET_MOVE(ch) = 0;
 
