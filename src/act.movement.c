@@ -2318,6 +2318,8 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     case DIR_TYPE_CLIMB:
       if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB))
         can_go = TRUE;
+      if ((door == UP) || (door == DOWN))
+        up_down = TRUE;
       break;
     case DIR_TYPE_JUMP:
       if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP))
@@ -2408,16 +2410,22 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   GET_MOVE(ch) -= move_cost;
 
-  snprintf(buf, sizeof(buf), "$n %s%s the $F.", special_move_str[dir_type][DIR_PLURAL], ((up_down && (door == UP || door == DOWN)) ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
+  snprintf(buf, sizeof(buf), "$n %s%s%s the $F.",
+    special_move_str[dir_type][DIR_PLURAL],
+    (up_down ? " " : ""),
+    (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
   act(buf, 2, ch, 0, EXIT(ch, door)->keyword, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
-  snprintf(buf, sizeof(buf), "You %s%s the $F.", special_move_str[dir_type][DIR_SINGULAR], ((up_down && (door == UP || door == DOWN)) ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
+  snprintf(buf, sizeof(buf), "You %s%s%s the $F.",
+    special_move_str[dir_type][DIR_SINGULAR],
+    (up_down ? " " : ""),
+    (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
   act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
 
   char_from_room(ch);
   char_to_room(ch, other_room);
 
-  snprintf(buf, sizeof(buf), "$n as arrived.");
+  snprintf(buf, sizeof(buf), "$n has arrived.");
   act(buf, 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
   do_look(ch, "", CMD_LOOK);
