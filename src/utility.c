@@ -704,112 +704,117 @@ char *str_upper(char *str)
 
 /* writes a string to the log */
 
-void log_s(char *str)
-{
-  long ct;
-  char *tmstr;
+void log_s(char *str) {
+  if (logfile == NULL) {
+    puts("SYSERR: Using log_s() before stream was initialized!");
 
-  ct = time(0);
-  tmstr = asctime(localtime(&ct));
-  *(tmstr + strlen(tmstr) - 1) = '\0';
-
-  if (logfile == NULL)
-  {
-    puts("SYSERR: Using log_string() before stream was initialized!");
     return;
   }
 
+  time_t ct = time(0);
+  char *tmstr = asctime(localtime(&ct));
+  *(tmstr + strlen(tmstr) - 1) = '\0';
+
   fprintf(logfile, "%s :: %s\n", tmstr, str);
+
   fflush(logfile);
 }
 
-void log_f (char * fmt, ...)
-{
-  char buf [2*MSL];
+void log_f(char *fmt, ...) {
   va_list args;
+  char buf[2 * MSL];
 
-  va_start (args, fmt);
-  vsnprintf (buf, 2*MSL, fmt, args);
-  va_end (args);
+  va_start(args, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, args);
+  va_end(args);
 
   log_s(buf);
 }
 
-void deathlog(char *str)
-{
+void deathlog(char *str) {
   FILE *fl;
-  long ct;
-  char *tmstr;
 
-  if(!(fl = fopen("death.log", "a"))) {
-    log_f("Unable to open death.log file");
+  if (!(fl = fopen("death.log", "a"))) {
+    log_f("WARNING: Unable to open death.log file.");
+
     return;
   }
 
-  ct = time(0);
-  tmstr = asctime(localtime(&ct));
+  time_t ct = time(0);
+  char *tmstr = asctime(localtime(&ct));
   *(tmstr + strlen(tmstr) - 1) = '\0';
+
   fprintf(fl, "%s :: %s\n", tmstr, str);
+
   fclose(fl);
 }
 
-void wizinfo(char *str, int level)
-{
-  char buf[MSL];
-  struct descriptor_data *t;
+void deathlog_f(char *fmt, ...) {
+  va_list args;
+  char buf[2 * MSL];
 
-  strcpy(buf,"** ");
-  strcat(buf, str);
-  strcat(buf," **\n\r");
-  for (t = descriptor_list; t; t = t->next) {
-    if (!t->connected &&
-      GET_LEVEL(t->character) > LEVEL_MORT &&
-      level <= t->wizinfo &&
-      t->wizinfo != 0){
-      send_to_char(buf, t->character);
-    } /* if */
-  } /* for */
+  va_start(args, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, args);
+  va_end(args);
+
+  deathlog(buf);
 }
 
-void wizlog(char *str, int level, int which)
-{
-  char buf[MSL];
-  struct descriptor_data *t;
+void wizinfo(char *str, int level) {
+  char buf[2 * MSL];
 
+  snprintf(buf, sizeof(buf), "** %s **\n\r", str);
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if ((desc->connected == CON_PLYNG) && (desc->wizinfo != 0) && (desc->wizinfo >= level) && IS_IMMORTAL(desc->character)) {
+      send_to_char(buf, desc->character);
+    }
+  }
+}
+
+void wizinfo_f(int level, char *fmt, ...) {
+  va_list args;
+  char buf[2 * MSL];
+
+  va_start(args, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, args);
+  va_end(args);
+
+  wizinfo(buf, level);
+}
+
+void wizlog(char *str, int level, int which) {
   level = MIN(LEVEL_IMP, level);
+  which = (((which < 1) || (which > 7)) ? 6 : which);
 
-  strcpy(buf, "[ ");
-  strcat(buf, str);
-  strcat(buf, " ]\n\r");
-  for (t = descriptor_list; t; t = t->next) {
-    if (!t->connected && GET_LEVEL(t->character) >= LEVEL_IMM &&
-      level <= t->wizinfo && t->wizinfo != 0) {
-      switch(which) {
-      case 1: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_ONE))
-      send_to_char(buf, t->character);
-      break;
-      case 2: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_TWO))
-      send_to_char(buf, t->character);
-      break;
-      case 3: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_THREE))
-      send_to_char(buf, t->character);
-      break;
-      case 4: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_FOUR))
-      send_to_char(buf, t->character);
-      break;
-      case 5: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_FIVE))
-      send_to_char(buf, t->character);
-      break;
-      case 6: if (IS_SET(t->character->new.imm_flags, WIZ_LOG_SIX))
-      send_to_char (buf, t->character);
-      break;
-      case 7: if (IS_SET(t->character->new.imm_flags, QUEST_INFO))
-      send_to_char (buf, t->character);
-      break;
-      default: break;
+  char buf[2 * MSL];
+
+  snprintf(buf, sizeof(buf), "[ %s ]\n\r", str);
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if ((desc->connected == CON_PLYNG) && (desc->wizinfo != 0) && (desc->wizinfo >= level) && IS_IMMORTAL(desc->character)) {
+      if (((which == 1) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_ONE)) ||
+          ((which == 2) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_TWO)) ||
+          ((which == 3) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_THREE)) ||
+          ((which == 4) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FOUR)) ||
+          ((which == 5) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FIVE)) ||
+          ((which == 6) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_SIX)) ||
+          ((which == 7) && IS_SET(GET_IMM_FLAGS(desc->character), QUEST_INFO))) {
+        send_to_char(buf, desc->character);
       }
-    } /* if */
-  } /* for */
+    }
+  }
+}
+
+void wizlog_f(int level, int which, char *fmt, ...) {
+  va_list args;
+  char buf[2 * MSL];
+
+  va_start(args, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, args);
+  va_end(args);
+
+  wizlog(buf, level, which);
 }
 
 
@@ -1654,6 +1659,31 @@ void add_program(struct program_info prg, struct char_data *ch)
   pqueue_counter++;
   if (pqueue_counter==1)       /* No process is running now so start new process */
     program_fork();
+}
+
+bool HAS_BOAT(CHAR *ch) {
+  bool has_boat = FALSE;
+
+  /* If they're flying, or they're a ninja, they are considered to have a boat. */
+  if (IS_AFFECTED(ch, AFF_FLY) || (GET_CLASS(ch) == CLASS_NINJA)) has_boat = TRUE;
+
+  /* Check if they are carrying a boat. */
+  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
+      has_boat = TRUE;
+      break;
+    }
+  }
+
+  /* Check if they are wearing a boat object (e.g. Boots of Water Walking). */
+  for (int i = 0; i < MAX_WEAR; i++) {
+    if (EQ(ch, i) && OBJ_TYPE(EQ(ch, i)) == ITEM_BOAT) {
+      has_boat = TRUE;
+      break;
+    }
+  }
+
+  return has_boat;
 }
 
 int CHAR_HAS_LEGS(CHAR *ch) {

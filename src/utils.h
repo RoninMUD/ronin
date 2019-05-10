@@ -370,6 +370,7 @@ do {                   \
 #define GET_REPLY_TO(ch) (ch->specials.reply_to)
 #define GET_PFLAG2(ch) (ch->ver3.pflag2)
 #define GET_COMM_COLOR(ch, num) (((num >= 0) && (num < MAX_COLORS)) ? ch->colors[num] : 0)
+#define GET_FOLLOWERS(ch) (ch->followers)
 
 #define GET_QUEST_GIVER(ch) (ch->questgiver)
 #define GET_QUEST_OBJ(ch)   (ch->questobj)

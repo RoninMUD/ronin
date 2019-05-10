@@ -7,21 +7,6 @@
 #ifndef __UTILITY_H
 #define __UTILITY_H
 
-
-#define PERS_NORMAL 0
-#define PERS_MORTAL -1
-
-
-typedef struct descriptor_data    DESC;
-typedef struct follow_type        FOL;
-typedef struct char_data          CHAR;
-typedef struct obj_data           OBJ;
-typedef struct room_data          RM;
-typedef struct affected_type_5    AFF;
-typedef struct enchantment_type_5 ENCH;
-typedef struct social_messg       SOC;
-
-
 /* Common external variables */
 bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type);
 
@@ -42,11 +27,14 @@ char *POSSESS(CHAR *ch, CHAR *vict);
 char *CHCLR(CHAR *ch, int color);
 char *ENDCHCLR(CHAR *ch);
 void log_s(char *str);
-void log_f(char * fmt, ...) __attribute__ ((format(printf,1,2)));
-void log_cmd(char *file,char *fmt, ...) __attribute__ ((format(printf,2,3)));
+void log_f(char * fmt, ...) __attribute__ ((format(printf, 1, 2)));
+void log_cmd(char *file, char *fmt, ...) __attribute__ ((format(printf, 2, 3)));
 void deathlog(char *str);
+void deathlog_f(char *fmt, ...) __attribute__((format(printf, 1, 2)));
 void wizinfo(char *str, int level);
+void wizinfo_f(int level, char *fmt, ...) __attribute__((format(printf, 2, 3)));
 void wizlog(char *str, int level, int which);
+void wizlog_f(int level, int which, char *fmt, ...) __attribute__((format(printf, 3, 4)));
 void sprintbit(long vektor, const char * const names[], char *result);
 void sprinttype(int type, const char * const names[], char *result);
 int IS_CARRYING_W(struct char_data *ch);
@@ -111,6 +99,7 @@ void move_chars_to_room (int frm, int to) ;
 
 int ISCARRYING_W(struct char_data *ch);
 int GETOBJ_WEIGHT(struct obj_data *obj);
+bool HAS_BOAT(CHAR *ch);
 int CHAR_HAS_LEGS(struct char_data *ch);
 int CORPSE_HAS_TROPHY(struct obj_data *obj);
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch);
