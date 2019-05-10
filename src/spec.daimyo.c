@@ -305,7 +305,7 @@ int black_panther(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
    if (cmd == MSG_ENTER) {
      if ((mob == ch) || GET_OPPONENT(mob) || IS_IMMORTAL(ch) || !CAN_SEE(mob, ch)) return FALSE;
-     
+
      act("You attempt to rip $N's throat out!", 0, mob, 0, ch, TO_CHAR);
      act("With a loud growl, $n pounces upon you!", 0, mob, 0, ch, TO_VICT);
      act("$n jumps at $N's throat!", 0, mob, 0, ch, TO_NOTVICT);

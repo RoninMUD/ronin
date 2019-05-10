@@ -113,7 +113,7 @@ int dt_or_hazard(CHAR *ch) {
 
 int special(struct char_data *ch, int cmd, char *arg);
 int signal_room(int room, CHAR *ch, int cmd, char *arg);
-int do_simple_move(struct char_data *ch, int cmd, int spec_check)
+int do_simple_move(struct char_data *ch, int cmd, int spec_check) {
 /*
 Assumes:
   1. That there is no master and no followers.
@@ -124,7 +124,6 @@ Returns:
   0 : If failure.
  -1 : If dead.
 */
-{
   char buf[MSL];
 
   /* Check for special routines (North is 1) */
@@ -157,9 +156,9 @@ Returns:
   if (!IS_IMMORTAL(ch) &&
       (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) ||
        get_obj_room(WALL_THORNS, world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].number))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
+    send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
 
-    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
 
     return FALSE;
   }
@@ -207,23 +206,15 @@ Returns:
       }
     }
 
-    if (GET_MOUNT(ch)) {
-      if (!IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
-        send_to_char("Your mount isn't flying.\n\r", ch);
+    if (GET_MOUNT(ch) && !IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
+      send_to_char("Your mount isn't flying.\n\r", ch);
 
-        return FALSE;
-      }
+      return FALSE;
     }
-    else {
-      if (!IS_AFFECTED(ch, AFF_FLY)) {
-        send_to_char("You are not flying.\n\r", ch);
+    else if (!IS_AFFECTED(ch, AFF_FLY)) {
+      send_to_char("You are not flying.\n\r", ch);
 
-        if (GET_RIDER(ch)) {
-          send_to_char("Your mount is not flying.\n\r", GET_RIDER(ch));
-        }
-
-        return FALSE;
-      }
+      return FALSE;
     }
   }
 
@@ -237,7 +228,7 @@ Returns:
     if (IS_AFFECTED(ch, AFF_FLY) || GET_CLASS(ch) == CLASS_NINJA) has_boat = TRUE;
 
     /* Check if they are carrying a boat. */
-    for (struct obj_data *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
       if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
         has_boat = TRUE;
         break;
@@ -249,25 +240,25 @@ Returns:
 
     /* Check if their mount has a boat, or can fly. etc. */
     if (!has_boat && GET_MOUNT(ch)) {
-      for (struct obj_data *tmp_obj = GET_MOUNT(ch)->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+      for (OBJ *tmp_obj = GET_MOUNT(ch)->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
         if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
           has_boat = TRUE;
           break;
         }
       }
 
-      if (IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) has_boat = TRUE;
-      if (IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_FLY)) has_boat = TRUE;
-      if (EQ(GET_MOUNT(ch), WEAR_FEET) && OBJ_TYPE(EQ(GET_MOUNT(ch), WEAR_FEET)) == ITEM_BOAT) has_boat = TRUE;
+      if (IS_AFFECTED(GET_MOUNT(ch), AFF_FLY) ||
+          IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_FLY) ||
+          (EQ(GET_MOUNT(ch), WEAR_FEET) && OBJ_TYPE(EQ(GET_MOUNT(ch), WEAR_FEET)) == ITEM_BOAT)) {
+        has_boat = TRUE;
+      }
     }
 
-    if (!has_boat) {
-      if (GET_MOUNT(ch)) {
-        send_to_char("Your mount needs a boat to go there.\n\r", ch);
-      }
-      else {
-        send_to_char("You need a boat to go there.\n\r", ch);
-      }
+    if (GET_MOUNT(ch) && !has_boat) {
+      send_to_char("Your mount needs a boat to go there.\n\r", ch);
+    }
+    else if (!has_boat) {
+      send_to_char("You need a boat to go there.\n\r", ch);
 
       return FALSE;
     }
@@ -279,16 +270,21 @@ Returns:
 
   int encumb_modifier = 1;
 
-  if (carrying_weight >= 3 * can_carry_weight)
+  if (carrying_weight >= 3 * can_carry_weight) {
     encumb_modifier = 6;
-  else if (carrying_weight >= 5 * can_carry_weight / 2)
+  }
+  else if (carrying_weight >= 5 * can_carry_weight / 2) {
     encumb_modifier = 5;
-  else if (carrying_weight >= 2 * can_carry_weight)
+  }
+  else if (carrying_weight >= 2 * can_carry_weight) {
     encumb_modifier = 4;
-  else if (carrying_weight >= 3 * can_carry_weight / 2)
+  }
+  else if (carrying_weight >= 3 * can_carry_weight / 2) {
     encumb_modifier = 3;
-  else if (carrying_weight >= can_carry_weight)
+  }
+  else if (carrying_weight >= can_carry_weight) {
     encumb_modifier = 2;
+  }
 
   int need_movement = encumb_modifier * (movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type] +
                       movement_loss[world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type]) / 2;
@@ -300,19 +296,24 @@ Returns:
     if (IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_MOUNT)) {
       need_movement = 3;
 
+      const int BRIDLE = 3900;
+      const int SADDLE = 3904;
+
       /* Check for bridle. */
       if (EQ(GET_MOUNT(ch), WEAR_NECK_1)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_1)) == 3900) need_movement--;
+        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_1)) == BRIDLE) need_movement--;
       }
       else if (EQ(GET_MOUNT(ch), WEAR_NECK_2)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_2)) == 3900) need_movement--;
+        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_2)) == BRIDLE) need_movement--;
       }
 
       /* Check for saddle. */
       if (EQ(GET_MOUNT(ch), WEAR_BODY)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_BODY)) == 3904) need_movement--;
+        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_BODY)) == SADDLE) need_movement--;
       }
     }
+
+    need_movement = MAX(need_movement, 1);
   }
 
   /* Check for Paralaysis and Hold Person. */
@@ -321,14 +322,14 @@ Returns:
       (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)) &&
       /* Combat Zen */
       !(IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3) && chance(50))) {
-    send_to_char("You are paralyzed! You can't move!\n\r", ch);
+    send_to_char("You are paralyzed!  You can't move!\n\r", ch);
 
     return FALSE;
   }
 
   // Prestige Perk 23
   if (GET_PRESTIGE_PERK(ch) >= 23) {
-    need_movement = MAX(1, need_movement - 1);
+    need_movement = MAX(need_movement - 1, 1);
   }
 
   /* Check for exhaustion. */
@@ -377,7 +378,7 @@ Returns:
       snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
     }
 
-    act(buf, 2, ch, 0, 0, TO_ROOM);
+    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
   }
   else if (GET_POS(ch) == POSITION_SWIMMING) {
     if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
@@ -387,7 +388,7 @@ Returns:
       snprintf(buf, sizeof(buf), "$n swims %s.", dirs[cmd]);
     }
 
-    act(buf, 2, ch, 0, 0, TO_ROOM);
+    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
   }
   else if (GET_MOUNT(ch)) {   
     if (GET_POS(GET_MOUNT(ch)) == POSITION_FLYING) {
@@ -397,10 +398,10 @@ Returns:
       snprintf(buf, sizeof(buf), "$n rides %s.", dirs[cmd]);
     }
 
-    act(buf, 2, ch, 0, 0, TO_ROOM);
+    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
   }
   else if (GET_RIDER(ch)) {
-    for (struct char_data *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
+    for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
       if (CAN_SEE(tmp_ch, GET_RIDER(ch)) && (tmp_ch != GET_RIDER(ch))) {
         if (GET_POS(ch) == POSITION_FLYING) {
           snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
@@ -409,7 +410,7 @@ Returns:
           snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
         }
 
-        act(buf, 2, ch, 0, tmp_ch, TO_VICT);
+        act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, tmp_ch, TO_VICT);
       }
     }
   }
@@ -427,10 +428,10 @@ Returns:
     }
 
     if (IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, 2, ch, 0, 0, TO_GROUP);
+      act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_GROUP);
     }
     else {
-      act(buf, 2, ch, 0, 0, TO_ROOM);
+      act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
     }
   }
 
@@ -466,14 +467,14 @@ Returns:
   }
 
   if (GET_RIDER(ch)) {
-    for (struct char_data *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
+    for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
       if (CAN_SEE(tmp_ch, GET_RIDER(ch)) && (tmp_ch != GET_RIDER(ch))) {
-        act(buf, 2, ch, 0, tmp_ch, TO_VICT);
+        act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, tmp_ch, TO_VICT);
       }
     }
   }
   else {
-    act(buf, 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
+    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
   /* Do look do look for the character. */
@@ -481,7 +482,7 @@ Returns:
 
   /* Do look for the mount. */
   if (GET_MOUNT(ch)) {
-    do_look(GET_MOUNT(ch), "\0", CMD_LOOK);
+    do_look(GET_MOUNT(ch), "", CMD_LOOK);
   }
 
   /* Signal the room the character just moved to. */
@@ -512,8 +513,8 @@ Returns:
       ((IS_NPC(ch) && (trap_check > (GET_LEVEL(ch) * 2))) ||
        (IS_MORTAL(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && (trap_check > (GET_LEVEL(ch) * 2))) ||
        (IS_MORTAL(ch) && CHAOSMODE && (trap_check > GET_LEVEL(ch))))) {
-    act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
     send_to_char("You fell into a trap!\n\r", ch);
+    act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
 
     REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
 
@@ -2238,6 +2239,7 @@ void do_move_keyword(struct char_data *ch, char *argument, int cmd)
   }
 }
 
+
 #define DIR_TYPE_CLIMB  0
 #define DIR_TYPE_JUMP   1
 #define DIR_TYPE_CRAWL  2
@@ -2264,35 +2266,35 @@ const int special_move_cost[] = {
 
 void do_special_move(struct char_data *ch, char *arg, int cmd) {
   char buf[MSL];
+
   int dir_type = -1;
-  bool up_down = FALSE;
 
   switch (cmd) {
     case CMD_CLIMB:
       dir_type = DIR_TYPE_CLIMB;
-      up_down = TRUE;
       break;
+
     case CMD_JUMP:
       dir_type = DIR_TYPE_JUMP;
       break;
+
     case CMD_CRAWL:
       dir_type = DIR_TYPE_CRAWL;
       break;
+
     case CMD_ENTER:
       dir_type = DIR_TYPE_ENTER;
       break;
+
     default:
-      sprintf(buf, "WIZINFO: Invalid cmd sent to do_special_move, cmd = %d", cmd);
-      wizlog(buf, LEVEL_WIZ, 6);
+      wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Invalid cmd sent to do_special_move, cmd = %d", cmd);
 
       return;
       break;
   }
 
   if ((dir_type < 0) || (dir_type > NUMELEMS(special_move_str))) {
-    sprintf(buf, "WIZINFO: Invalid dir type in do_special_move, dir_type = %d", dir_type);
-
-    wizlog(buf, LEVEL_WIZ, 6);
+    wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Invalid dir type in do_special_move, dir_type = %d", dir_type);
 
     return;
   }
@@ -2302,36 +2304,45 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   argument_interpreter(arg, type, dir);
 
   if (!*type) {
-    snprintf(buf, sizeof(buf), "%s", special_move_str[dir_type][DIR_SINGULAR]);
-    printf_to_char(ch, "%s%s what?", CAP(buf), special_move_str[dir_type][DIR_ADVERB_PRE]);
+    snprintf(buf, sizeof(buf), "%s%s what?\n\r", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
+    send_to_char(CAP(buf), ch);
 
     return;
   }
 
-  int door = -1;
+  int door = find_door(ch, type, dir);
 
-  if ((door = find_door(ch, type, dir)) < 0) return;
+  if (door < 0) return;
 
-  bool can_go = FALSE;
+  bool can_go = FALSE, up_down = FALSE;
 
   switch (dir_type) {
     case DIR_TYPE_CLIMB:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB))
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CLIMB)) {
         can_go = TRUE;
-      if ((door == UP) || (door == DOWN))
-        up_down = TRUE;
+
+        if ((door == UP) || (door == DOWN)) {
+          up_down = TRUE;
+        }
+      }
       break;
+
     case DIR_TYPE_JUMP:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP))
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP)) {
         can_go = TRUE;
+      }
       break;
+
     case DIR_TYPE_CRAWL:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL))
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_CRAWL)) {
         can_go = TRUE;
+      }
       break;
+
     case DIR_TYPE_ENTER:
-      if (IS_SET(EXIT(ch, door)->exit_info, EX_ENTER))
+      if (IS_SET(EXIT(ch, door)->exit_info, EX_ENTER)) {
         can_go = TRUE;
+      }
       break;
   }
 
@@ -2349,50 +2360,47 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   }
 
   if (IS_MORTAL(ch) && (GET_MOVE(ch) < move_cost)) {
-    send_to_char("You are too exhausted.\n\r", ch);
+    printf_to_char(ch, "You are too exhausted.\n\r");
 
     return;
   }
 
   if (GET_POS(ch) == POSITION_RIDING) {
-    send_to_char("You must dismount first.\n\r", ch);
+    printf_to_char(ch, "You must dismount first.\n\r");
 
     return;
   }
 
   if (!EXIT(ch, door)->keyword) {
-    snprintf(buf, sizeof(buf), "WIZINFO: Error in do_special_move, no keyword on exit, room %d", CHAR_VIRTUAL_ROOM(ch));
-
-    wizlog(buf, LEVEL_WIZ, 6);
+    wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Error in do_special_move, no keyword on exit, room %d", CHAR_VIRTUAL_ROOM(ch));
 
     return;
   }
 
   if ((!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
+    printf_to_char(ch, "A wall of thorns blocks your way.  Ouch!\n\r");
 
-    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
 
     return;
-  }  
+  }
 
   int other_room = EXIT(ch, door)->to_room_r;
 
   if ((other_room == NOWHERE) || (other_room == real_room(0))) {
-    snprintf(buf, sizeof(buf), "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
-    wizlog(buf, LEVEL_WIZ, 6);
+    wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
 
     return;
   }
 
   if (IS_SET(world[other_room].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(other_room) > 0) && !CHAOSMODE) {
-    send_to_char("It's too narrow to go there.\n\r", ch);
+    printf_to_char(ch, "It's too narrow to go there.\n\r");
 
     return;
   }
 
   if (IS_SET(world[other_room].room_flags, FLYING) && !IS_AFFECTED(ch, AFF_FLY) && IS_MORTAL(ch) && !CHAOSMODE) {
-    send_to_char("You are not flying.\n\r", ch);
+    printf_to_char(ch, "You are not flying.\n\r");
 
     return;
   }
@@ -2400,7 +2408,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
     if ((IS_SET(world[other_room].room_flags, HAZARD) || IS_SET(world[other_room].room_flags, DEATH)) && chance(50)) {
-      send_to_char("You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r", ch);
+      printf_to_char(ch, "You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r");
 
       GET_MOVE(ch) = 0;
 
@@ -2425,14 +2433,13 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   char_from_room(ch);
   char_to_room(ch, other_room);
 
-  snprintf(buf, sizeof(buf), "$n has arrived.");
-  act(buf, 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
+  act("$n has arrived.", 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
   do_look(ch, "", CMD_LOOK);
 
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) GET_MOVE(ch) = 0;
+  if (IS_SET(CHAR_ROOM_FLAGS(ch), MOVETRAP)) GET_MOVE(ch) = 0;
 
   dt_or_hazard(ch);
 }
