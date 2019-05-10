@@ -2295,6 +2295,10 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     case DIR_TYPE_JUMP:
       if (IS_SET(EXIT(ch, door)->exit_info, EX_JUMP)) {
         can_go = TRUE;
+
+        if ((door == UP) || (door == DOWN)) {
+          up_down = TRUE;
+        }
       }
       break;
 
