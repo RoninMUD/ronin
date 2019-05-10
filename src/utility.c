@@ -1661,6 +1661,31 @@ void add_program(struct program_info prg, struct char_data *ch)
     program_fork();
 }
 
+bool HAS_BOAT(CHAR *ch) {
+  bool has_boat = FALSE;
+
+  /* If they're flying, or they're a ninja, they are considered to have a boat. */
+  if (IS_AFFECTED(ch, AFF_FLY) || (GET_CLASS(ch) == CLASS_NINJA)) has_boat = TRUE;
+
+  /* Check if they are carrying a boat. */
+  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
+      has_boat = TRUE;
+      break;
+    }
+  }
+
+  /* Check if they are wearing a boat object (e.g. Boots of Water Walking). */
+  for (int i = 0; i < MAX_WEAR; i++) {
+    if (EQ(ch, i) && OBJ_TYPE(EQ(ch, i)) == ITEM_BOAT) {
+      has_boat = TRUE;
+      break;
+    }
+  }
+
+  return has_boat;
+}
+
 int CHAR_HAS_LEGS(CHAR *ch) {
   switch(GET_CLASS(ch)) {
     case CLASS_LICH:

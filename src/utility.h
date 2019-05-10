@@ -114,6 +114,7 @@ void move_chars_to_room (int frm, int to) ;
 
 int ISCARRYING_W(struct char_data *ch);
 int GETOBJ_WEIGHT(struct obj_data *obj);
+bool HAS_BOAT(CHAR *ch);
 int CHAR_HAS_LEGS(struct char_data *ch);
 int CORPSE_HAS_TROPHY(struct obj_data *obj);
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch);

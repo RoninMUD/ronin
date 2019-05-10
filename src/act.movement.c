@@ -152,17 +152,6 @@ Returns:
        (world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == NOWHERE) ||
        (world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == real_room(0))) return FALSE;
 
-  /* Check for Wall of Thorns. */
-  if (!IS_IMMORTAL(ch) &&
-      (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) ||
-       get_obj_room(WALL_THORNS, world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].number))) {
-    send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
-
-    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
-
-    return FALSE;
-  }
-
   /* Check for tunnel flee escape. */
   if (IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, TUNNEL) &&
       IS_MORTAL(ch) &&
@@ -219,45 +208,13 @@ Returns:
   }
 
   /* Check to see if they have a boat, or can swim. */
-  if ((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM ||
-       world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type == SECT_WATER_NOSWIM) &&
+  if (((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM) ||
+       (world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type == SECT_WATER_NOSWIM)) &&
       !IS_IMMORTAL(ch)) {
-    bool has_boat = FALSE;
-
-    /* If they're flying, or they're a ninja, they have a boat. */
-    if (IS_AFFECTED(ch, AFF_FLY) || GET_CLASS(ch) == CLASS_NINJA) has_boat = TRUE;
-
-    /* Check if they are carrying a boat. */
-    for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
-      if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
-        has_boat = TRUE;
-        break;
-      }
-    }
-
-    /* Check if their boots are a boat. */
-    if (EQ(ch, WEAR_FEET) && OBJ_TYPE(EQ(ch, WEAR_FEET)) == ITEM_BOAT) has_boat = TRUE;
-
-    /* Check if their mount has a boat, or can fly. etc. */
-    if (!has_boat && GET_MOUNT(ch)) {
-      for (OBJ *tmp_obj = GET_MOUNT(ch)->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
-        if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
-          has_boat = TRUE;
-          break;
-        }
-      }
-
-      if (IS_AFFECTED(GET_MOUNT(ch), AFF_FLY) ||
-          IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_FLY) ||
-          (EQ(GET_MOUNT(ch), WEAR_FEET) && OBJ_TYPE(EQ(GET_MOUNT(ch), WEAR_FEET)) == ITEM_BOAT)) {
-        has_boat = TRUE;
-      }
-    }
-
-    if (GET_MOUNT(ch) && !has_boat) {
+    if (GET_MOUNT(ch) && !HAS_BOAT(GET_MOUNT(ch))) {
       send_to_char("Your mount needs a boat to go there.\n\r", ch);
     }
-    else if (!has_boat) {
+    else if (!HAS_BOAT(ch)) {
       send_to_char("You need a boat to go there.\n\r", ch);
 
       return FALSE;
@@ -344,6 +301,17 @@ Returns:
     return FALSE;
   }
 
+  /* Wall of Thorns */
+  if (!IS_IMMORTAL(ch) &&
+    (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) ||
+      get_obj_room(WALL_THORNS, world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].number))) {
+    send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
+
+    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+    return FALSE;
+  }
+
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
     if ((IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, HAZARD) ||
@@ -357,7 +325,6 @@ Returns:
     }
   }
 
-  /* Subtract their movement points. */
   if (IS_MORTAL(ch)) {
     GET_MOVE(ch) -= need_movement;
   }
@@ -438,18 +405,16 @@ Returns:
   /* If adding hunting, or scanning, or blood trail, etc.,
      it should probably be added here. */
 
-  int was_in = CHAR_REAL_ROOM(ch);
-
   /* Signal the room the character is moving from. */
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
 
   /* In case MSG_LEAVE kills. */
   if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
 
-  /* Move the character from the old room. */
-  char_from_room(ch);
+  int was_in = CHAR_REAL_ROOM(ch);
 
-  /* Move the character to the new room. */
+  /* Move the character. */
+  char_from_room(ch);
   char_to_room(ch, world[was_in].dir_option[cmd]->to_room_r);
 
   /* Move their mount. */
@@ -2377,6 +2342,31 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
+  if ((EXIT(ch, door)->to_room_r == NOWHERE) || (EXIT(ch, door)->to_room_r == real_room(0))) {
+    wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
+
+    return;
+  }
+
+  if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(EXIT(ch, door)->to_room_r) > 0) && !CHAOSMODE) {
+    printf_to_char(ch, "It's too narrow to go there.\n\r");
+
+    return;
+  }
+
+  if (((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM) || (world[EXIT(ch, door)->to_room_r].sector_type == SECT_WATER_NOSWIM)) && !IS_IMMORTAL(ch) && !HAS_BOAT(ch)) {
+    send_to_char("You need a boat to go there.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, FLYING) && !IS_AFFECTED(ch, AFF_FLY) && IS_MORTAL(ch) && !CHAOSMODE) {
+    printf_to_char(ch, "You are not flying.\n\r");
+
+    return;
+  }
+
+  /* Wall of Thorns */
   if ((!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
     printf_to_char(ch, "A wall of thorns blocks your way.  Ouch!\n\r");
 
@@ -2385,29 +2375,9 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  int other_room = EXIT(ch, door)->to_room_r;
-
-  if ((other_room == NOWHERE) || (other_room == real_room(0))) {
-    wizlog_f(LEVEL_WIZ, 6, "WIZINFO: Error in do_special_move, exit points to NULL or VOID, room %d", CHAR_VIRTUAL_ROOM(ch));
-
-    return;
-  }
-
-  if (IS_SET(world[other_room].room_flags, TUNNEL) && IS_MORTAL(ch) && (count_mortals_real_room(other_room) > 0) && !CHAOSMODE) {
-    printf_to_char(ch, "It's too narrow to go there.\n\r");
-
-    return;
-  }
-
-  if (IS_SET(world[other_room].room_flags, FLYING) && !IS_AFFECTED(ch, AFF_FLY) && IS_MORTAL(ch) && !CHAOSMODE) {
-    printf_to_char(ch, "You are not flying.\n\r");
-
-    return;
-  }
-
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
-    if ((IS_SET(world[other_room].room_flags, HAZARD) || IS_SET(world[other_room].room_flags, DEATH)) && chance(50)) {
+    if ((IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, HAZARD) || IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, DEATH)) && chance(50)) {
       printf_to_char(ch, "You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r");
 
       GET_MOVE(ch) = 0;
@@ -2430,8 +2400,10 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
   act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
 
+  int was_in = CHAR_REAL_ROOM(ch);
+
   char_from_room(ch);
-  char_to_room(ch, other_room);
+  char_to_room(ch, world[was_in].dir_option[door]->to_room_r);
 
   act("$n has arrived.", 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
@@ -2439,7 +2411,9 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return;
 
-  if (IS_SET(CHAR_ROOM_FLAGS(ch), MOVETRAP)) GET_MOVE(ch) = 0;
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) {
+    GET_MOVE(ch) = 0;
+  }
 
   dt_or_hazard(ch);
 }
