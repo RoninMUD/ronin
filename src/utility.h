@@ -7,21 +7,6 @@
 #ifndef __UTILITY_H
 #define __UTILITY_H
 
-
-#define PERS_NORMAL 0
-#define PERS_MORTAL -1
-
-
-typedef struct descriptor_data    DESC;
-typedef struct follow_type        FOL;
-typedef struct char_data          CHAR;
-typedef struct obj_data           OBJ;
-typedef struct room_data          RM;
-typedef struct affected_type_5    AFF;
-typedef struct enchantment_type_5 ENCH;
-typedef struct social_messg       SOC;
-
-
 /* Common external variables */
 bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type);
 

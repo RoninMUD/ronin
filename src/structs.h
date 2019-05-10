@@ -10,13 +10,21 @@
 #include <dmalloc.h>
 
 /* Typedefs */
+typedef char bool;
+typedef char byte;
 typedef signed char sbyte;
 typedef unsigned char ubyte;
 typedef signed short int sh_int;
 typedef unsigned short int ush_int;
-typedef char bool;
-typedef char byte;
 
+typedef struct descriptor_data    DESC;
+typedef struct follow_type        FOL;
+typedef struct char_data          CHAR;
+typedef struct obj_data           OBJ;
+typedef struct room_data          RM;
+typedef struct affected_type_5    AFF;
+typedef struct enchantment_type_5 ENCH;
+typedef struct social_messg       SOC;
 
 /* Time Data */
 
@@ -60,9 +68,13 @@ typedef char byte;
 
 /* Misc. Special Data */
 
-/* Breakthrough flags */
+/* Breakthrough Flags */
 #define BT_INVUL              1
 #define BT_SPHERE             2
+
+/* PERS Modes */
+#define PERS_NORMAL 0
+#define PERS_MORTAL -1
 
 
 /* Character Data */

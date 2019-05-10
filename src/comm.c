@@ -2058,10 +2058,6 @@ void send_to_char_by_type(char *message, CHAR *ch, int type) {
 #endif
 }
 
-void send_to_char(char *message, CHAR *ch) {
-  send_to_char_by_type(message, ch, 0);
-}
-
 void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, int type2) {
   if (!message || !*message || !ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
 
@@ -2351,123 +2347,37 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
   }
 }
 
-
-void act(char *str, int hide, CHAR * ch, void *other_or_obj, void *vict_or_obj, int type) {
-  act_by_type(str, hide, ch, other_or_obj, vict_or_obj, type, 0);
+void act(char *message, int hide, CHAR * ch, void *other_or_obj, void *vict_or_obj, int type) {
+  act_by_type(message, hide, ch, other_or_obj, vict_or_obj, type, 0);
 }
 
-void printf_to_char(CHAR *ch, char *message, ...) {
-  if (!message || !ch) return;
-
-  char buf[MSL];
-
+void act_f(int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, char *message, ...) {
+  char buf[2 * MSL];
   va_list args;
 
   va_start(args, message);
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  send_to_char(buf, ch);
+  act(buf, hide, ch, other_or_obj, vict_or_obj, type);
 }
 
-void printf_to_room(int room, char *message, ...) {
-  char buf[MSL];
+void send_to_char(char *message, CHAR *ch) {
+  send_to_char_by_type(message, ch, 0);
+}
 
-  va_list args;
+void send_to_group(char *message, CHAR *ch, bool same_room) {
+  if (!message || !ch || !GET_MASTER(ch)) return;
 
-  va_start(args, message);
-  vsnprintf(buf, sizeof(buf), message, args);
-  va_end(args);
-
-  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
-    if (temp_ch->desc) {
-      send_to_char(buf, temp_ch);
-    }
+  if (GET_MASTER(ch) != ch) {
+    send_to_char(message, ch);
   }
-}
 
-void printf_to_room_except(int room, CHAR *ch, char *message, ...) {
-  char buf[MSL];
+  for (FOL *follower = GET_FOLLOWERS(GET_MASTER(ch)); follower; follower = follower->next) {
+    CHAR *group_member = follower->follower;
 
-  va_list args;
-
-  va_start(args, message);
-  vsnprintf(buf, sizeof(buf), message, args);
-  va_end(args);
-
-  for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
-    if (temp_ch->desc && (temp_ch != ch)) {
-      send_to_char(buf, temp_ch);
-    }
-  }
-}
-
-void printf_to_world(char *message, ...) {
-  if (!message) return;
-
-  char buf[MSL];
-
-  va_list args;
-
-  va_start(args, message);
-  vsnprintf(buf, sizeof(buf), message, args);
-  va_end(args);
-
-  for (int room = 0; room < top_of_world; room++) {
-    send_to_room(buf, room);
-  }
-}
-
-void printf_to_all(char *message, ...) {
-  if (!message) return;
-
-  char buf[MSL];
-
-  va_list args;
-
-  va_start(args, message);
-  vsnprintf(buf, sizeof(buf), message, args);
-  va_end(args);
-
-  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if (!desc->connected) {
-      send_to_char(buf, desc->character);
-    }
-  }
-}
-
-void send_to_all(char *message) {
-  if (!message) return;
-
-  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if (!desc->connected) {
-      send_to_char(message, desc->character);
-    }
-  }
-}
-
-void send_to_world(char *message) {
-  if (!message) return;
-
-  for (int room = 0; room < top_of_world; room++) {
-    send_to_room(message, room);
-  }
-}
-
-void send_to_world_except(char *message, CHAR *ch) {
-  if (!message) return;
-
-  for (int room = 0; room < top_of_world; room++) {
-    send_to_room_except(message, room, ch);
-  }
-}
-
-void send_to_except(char *message, CHAR *ch) {
-  if (!message || !ch) return;
-
-  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if (!desc->connected && (desc != ch->desc)) {
-      send_to_char(message, desc->character);
+    if (group_member && (group_member != ch) && SAME_GROUP(ch, group_member) && (!same_room || SAME_ROOM(group_member, ch))) {
+      send_to_char(message, group_member);
     }
   }
 }
@@ -2483,7 +2393,7 @@ void send_to_room(char *message, int room) {
 }
 
 void send_to_room_except(char *message, int room, CHAR *ch) {
-  if (!message || (room < 0) || (room > top_of_world)) return;
+  if (!message || (room < 0) || (room > top_of_world) || !ch) return;
 
   for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
     if (temp_ch->desc && (temp_ch != ch)) {
@@ -2493,12 +2403,28 @@ void send_to_room_except(char *message, int room, CHAR *ch) {
 }
 
 void send_to_room_except_two(char *message, int room, CHAR *ch1, CHAR *ch2) {
-  if (!message || (room < 0) || (room > top_of_world)) return;
+  if (!message || (room < 0) || (room > top_of_world) || !ch1 || !ch2) return;
 
   for (CHAR *temp_ch = world[room].people; temp_ch; temp_ch = temp_ch->next_in_room) {
     if (temp_ch->desc && (temp_ch != ch1) && (temp_ch != ch2)) {
       send_to_char(message, temp_ch);
     }
+  }
+}
+
+void send_to_world(char *message) {
+  if (!message) return;
+
+  for (int room = 0; room < top_of_world; room++) {
+    send_to_room(message, room);
+  }
+}
+
+void send_to_world_except(char *message, CHAR *ch) {
+  if (!message || !ch) return;
+
+  for (int room = 0; room < top_of_world; room++) {
+    send_to_room_except(message, room, ch);
   }
 }
 
@@ -2512,20 +2438,145 @@ void send_to_outdoor(char *message) {
   }
 }
 
-void send_to_group(char *message, CHAR *ch, bool same_room) {
-  if (!message || !ch || !GET_MASTER(ch)) return;
+void send_to_all(char *message) {
+  if (!message) return;
 
-  if (GET_MASTER(ch) != ch) {
-    send_to_char(message, ch);
-  }
-
-  for (FOL *follower = GET_MASTER(ch)->followers; follower; follower = follower->next) {
-    CHAR *group_member = follower->follower;
-
-    if (group_member && (group_member != ch) && SAME_GROUP(ch, group_member) && (!same_room || SAME_ROOM(group_member, ch))) {
-      send_to_char(message, group_member);
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected) {
+      send_to_char(message, desc->character);
     }
   }
+}
+
+void send_to_all_except(char *message, CHAR *ch) {
+  if (!message || !ch) return;
+
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (!desc->connected && (desc->character != ch)) {
+      send_to_char(message, desc->character);
+    }
+  }
+}
+
+void printf_to_char(CHAR *ch, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_char(buf, ch);
+}
+
+void printf_to_char_except(CHAR *ch, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_char(buf, ch);
+}
+
+void printf_to_group(CHAR *ch, bool same_room, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_group(message, ch, same_room);
+}
+
+void printf_to_room(int room, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_room(message, room);
+}
+
+void printf_to_room_except(int room, CHAR *ch, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_room_except(message, room, ch);
+}
+
+void printf_to_room_except_two(int room, CHAR *ch1, CHAR *ch2, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_room_except_two(message, room, ch1, ch2);
+}
+
+void printf_to_world(char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_world(buf);
+}
+
+void printf_to_world_except(CHAR *ch, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_world_except(buf, ch);
+}
+
+void printf_to_outdoor(char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_outdoor(buf);
+}
+
+void printf_to_all(char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_all(buf);
+}
+
+void printf_to_all_except(CHAR *ch, char *message, ...) {
+  char buf[2 * MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  send_to_all_except(buf, ch);
 }
 
 

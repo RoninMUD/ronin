@@ -30,17 +30,15 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name, struct ob
 void stop_follower(struct char_data *ch);
 void do_special_move(struct char_data *ch, char *arg, int cmd);
 
-void dt_cry(CHAR *ch)
-{
-  int door;
+void dt_cry(CHAR *ch) {
+  if (CHAR_REAL_ROOM(ch) == NOWHERE) return;
 
-  if(CHAR_REAL_ROOM(ch)==NOWHERE) return; /* Ranger - June 96 */
-  act("Your body stiffens as you hear $n scream in agony.",FALSE, ch,0,0,TO_ROOM);
+  act("Your body stiffens as you hear $n scream in agony.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for(door = 0; door <= 5; door++) {
-    if(CAN_GO(ch, door))
-      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r",
-                    world[CHAR_REAL_ROOM(ch)].dir_option[door]->to_room_r);
+  for (int door = NORTH; door <= DOWN; door++) {
+    if (CAN_GO(ch, door)) {
+      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r", world[CHAR_REAL_ROOM(ch)].dir_option[door]->to_room_r);
+    }
   }
 }
 
@@ -2230,8 +2228,6 @@ const int special_move_cost[] = {
 };
 
 void do_special_move(struct char_data *ch, char *arg, int cmd) {
-  char buf[MSL];
-
   int dir_type = -1;
 
   switch (cmd) {
@@ -2269,7 +2265,10 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   argument_interpreter(arg, type, dir);
 
   if (!*type) {
+    char buf[MIL];
+
     snprintf(buf, sizeof(buf), "%s%s what?\n\r", special_move_str[dir_type][DIR_SINGULAR], special_move_str[dir_type][DIR_ADVERB_PRE]);
+
     send_to_char(CAP(buf), ch);
 
     return;
@@ -2359,7 +2358,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
   }
 
   if (((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM) || (world[EXIT(ch, door)->to_room_r].sector_type == SECT_WATER_NOSWIM)) && !IS_IMMORTAL(ch) && !HAS_BOAT(ch)) {
-    send_to_char("You need a boat to go there.\n\r", ch);
+    printf_to_char(ch, "You need a boat to go there.\n\r");
 
     return;
   }
@@ -2392,30 +2391,30 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   GET_MOVE(ch) -= move_cost;
 
-  snprintf(buf, sizeof(buf), "$n %s%s%s the $F.",
-    special_move_str[dir_type][DIR_PLURAL],
-    (up_down ? " " : ""),
-    (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
-  act(buf, 2, ch, 0, EXIT(ch, door)->keyword, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
-
-  snprintf(buf, sizeof(buf), "You %s%s%s the $F.",
+  act_f(FALSE, ch, 0, EXIT(ch, door)->keyword, TO_CHAR,
+    "You %s%s%s the $F.",
     special_move_str[dir_type][DIR_SINGULAR],
     (up_down ? " " : ""),
     (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
-  act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
+
+  act_f(COMM_ACT_HIDE_SUPERBRF, ch, 0, EXIT(ch, door)->keyword, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM),
+    "$n %s%s%s the $F.",
+    special_move_str[dir_type][DIR_PLURAL],
+    (up_down ? " " : ""),
+    (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
 
   /* Signal the room the character is moving from. */
-  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return;
 
   /* In case MSG_LEAVE kills. */
-  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
 
   int was_in = CHAR_REAL_ROOM(ch);
 
   char_from_room(ch);
   char_to_room(ch, world[was_in].dir_option[door]->to_room_r);
 
-  act("$n has arrived.", 2, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
+  act("$n has arrived.", COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
 
   do_look(ch, "", CMD_LOOK);
 

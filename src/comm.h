@@ -18,26 +18,33 @@
 
 void close_socket(struct descriptor_data *d);
 
-void send_to_char_by_type(char *message, struct char_data *ch, int type);
-void send_to_char(char *message, struct char_data *ch);
-void send_to_group(char *messg, struct char_data *ch, bool same_room);
-void send_to_except(char *message, struct char_data *ch);
+void send_to_char_by_type(char *message, CHAR *ch, int type);
+void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, int type2);
+
+void act(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type);
+void act_f(int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, char *message, ...) __attribute__((format(printf, 6, 7)));
+
+void send_to_char(char *message, CHAR *ch);
+void send_to_group(char *messg, CHAR *ch, bool same_room);
 void send_to_room(char *message, int room);
-void send_to_room_except(char *message, int room, struct char_data *ch);
-void send_to_room_except_two(char *message, int room, struct char_data *ch1, struct char_data *ch2);
+void send_to_room_except(char *message, int room, CHAR *ch);
+void send_to_room_except_two(char *message, int room, CHAR *ch1, CHAR *ch2);
 void send_to_world(char *message);
-void send_to_world_except(char *message, struct char_data *ch);
+void send_to_world_except(char *message, CHAR *ch);
 void send_to_outdoor(char *message);
 void send_to_all(char *message);
+void send_to_all_except(char *message, CHAR *ch);
 
-void printf_to_char(struct char_data *ch, char *message, ...) __attribute__((format(printf, 2, 3)));
+void printf_to_char(CHAR *ch, char *message, ...) __attribute__((format(printf, 2, 3)));
+void printf_to_group(CHAR *ch, bool same_room, char *message, ...) __attribute__((format(printf, 3, 4)));
 void printf_to_room(int room, char *message, ...) __attribute__((format(printf, 2, 3)));
-void printf_to_room_except(int room, struct char_data *ch, char *message, ...) __attribute__((format(printf, 3, 4)));
+void printf_to_room_except(int room, CHAR *ch, char *message, ...) __attribute__((format(printf, 3, 4)));
+void printf_to_room_except_two(int room, CHAR *ch1, CHAR *ch2, char *message, ...) __attribute__((format(printf, 4, 5)));
 void printf_to_world(char *message, ...) __attribute__((format(printf, 1, 2)));
+void printf_to_world_except(CHAR *ch, char *message, ...) __attribute__((format(printf, 2, 3)));
+void printf_to_outdoor(char *message, ...) __attribute__((format(printf, 1, 2)));
 void printf_to_all(char *message, ...) __attribute__((format(printf, 1, 2)));
-
-void act_by_type(char *message, int hide, struct char_data *ch, void *other_or_obj, void *vict_or_obj, int type, int type2);
-void act(char *message, int hide, struct char_data *ch, void *other_or_obj, void *vict_or_obj, int type);
+void printf_to_all_except(CHAR *ch, char *message, ...) __attribute__((format(printf, 2, 3)));
 
 void perform_to_all(char *message, struct char_data *ch);
 void perform_complex(struct char_data *ch1, struct char_data *ch2,

@@ -23,18 +23,18 @@ May 98 - Lowered 50K to 30K
 #include <limits.h>
 
 #include "structs.h"
+
+#include "act.h"
 #include "comm.h"
+#include "cmd.h"
 #include "db.h"
 #include "handler.h"
 #include "interpreter.h"
-#include "spells.h"
-#include "utils.h"
+#include "modify.h"
 #include "reception.h"
+#include "spells.h"
 #include "utility.h"
 #include "utils.h"
-#include "act.h"
-#include "modify.h"
-#include "cmd.h"
 
 #define AUCTION_REDUCE 30000
 #define MAX_OBJS_AUCTION 300
