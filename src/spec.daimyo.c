@@ -300,18 +300,22 @@ int hachi_statue (OBJ *statue, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
-int black_panther(CHAR *mob,CHAR *ch, int cmd, char *arg) {
-   if(!ch) return FALSE;
+int black_panther(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+   if (!ch) return FALSE;
 
-   if(cmd!=MSG_ENTER) return FALSE;
-   if (mob->specials.fighting) return FALSE;
-   if (!CAN_SEE(mob,ch)) return FALSE;
+   if (cmd == MSG_ENTER) {
+     if ((mob == ch) || GET_OPPONENT(mob) || IS_IMMORTAL(ch) || !CAN_SEE(mob, ch)) return FALSE;
+     
+     act("You attempt to rip $N's throat out!", 0, mob, 0, ch, TO_CHAR);
+     act("With a loud growl, $n pounces upon you!", 0, mob, 0, ch, TO_VICT);
+     act("$n jumps at $N's throat!", 0, mob, 0, ch, TO_NOTVICT);
 
-   act("The $n jumps at $N's throat!",0,mob,0,ch,TO_NOTVICT);
-   act("You attempt to rip $N's throat out!",0,mob,0,ch,TO_CHAR);
-   act("With a loud growl, the $n pounces upon you!",0,mob,0,ch,TO_VICT);
-   hit(mob, ch, TYPE_HIT);
-   hit(mob, ch, TYPE_HIT);
+     hit(mob, ch, TYPE_HIT);
+     hit(mob, ch, TYPE_HIT);
+
+     return FALSE;
+   }
+
    return FALSE;
 }
 
