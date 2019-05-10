@@ -2400,6 +2400,12 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     (up_down ? dirs[door] : special_move_str[dir_type][DIR_ADVERB_POST]));
   act(buf, 0, ch, 0, EXIT(ch, door)->keyword, TO_CHAR);
 
+  /* Signal the room the character is moving from. */
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
+
+  /* In case MSG_LEAVE kills. */
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
+
   int was_in = CHAR_REAL_ROOM(ch);
 
   char_from_room(ch);
