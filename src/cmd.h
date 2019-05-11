@@ -36,6 +36,7 @@ $State: Exp $
 
 #define MSG_VIOLENCE           -99
 #define MSG_ROUND              -98 /* Similar to MSG_VIOLENCE. Used for 3 second pulse signaling. Sent only to enchantments for now. */
+#define MSG_TOLD               -31
 #define MSG_DAMAGED            -30
 #define MSG_OBJ_DISARMED       -29
 #define MSG_OBJ_JUNKED         -28

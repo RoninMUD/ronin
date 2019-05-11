@@ -945,14 +945,14 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
 void do_tell(CHAR *ch, char *arg, int cmd) {
   /* NoShouted players can't tell. */
   if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods; you cannot speak.\n\r", ch);
+    printf_to_char(ch, "You have displeased the gods; you cannot speak.\n\r");
 
     return;
   }
 
   /* Players with NoMessage on can't tell. */
   if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
-    send_to_char("You can't tell when you have NoMessage turned on.\n\r", ch);
+    printf_to_char(ch, "You can't tell when you have NoMessage turned on.\n\r");
 
     return;
   }
@@ -963,68 +963,63 @@ void do_tell(CHAR *ch, char *arg, int cmd) {
 
   /* Tell was used without any arguments. */
   if (!*name || !*message) {
-    send_to_char("Who do you wish to tell, and what?\n\r", ch);
+    printf_to_char(ch, "Who do you wish to tell, and what?\n\r");
 
     return;
   }
 
+  /* Get the listening character. */
   CHAR *listener = get_ch_by_name(name);
 
-  /* Redirect listener if mobswitched. */
+  /* Redirect listener if they're mobswitched. */
   if (listener->switched) {
     listener = listener->switched;
   }
 
   /* We didn't find anyone, or the listener is not visible to the acting character. */
   if (!listener || WIZ_INV(ch, listener)) {
-    send_to_char("No one by that name here...\n\r", ch);
+    printf_to_char(ch, "No one by that name here...\n\r");
 
     return;
   }
 
-     /* Check if the listener is disconnected. */
+  /* Check if the listener is disconnected. */
   if (!GET_DESCRIPTOR(listener) || GET_DESCRIPTOR(listener)->connected) {
-    act("$E isn't connected at the moment.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+    act_f(PERS_MORTAL, ch, 0, listener, TO_CHAR, "$E isn't connected at the moment.");
 
     return;
   }
 
   /* Players can't reply through NoMessage. */
   if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
-    act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+    act_f(PERS_MORTAL, ch, 0, listener, TO_CHAR, "$E can't hear you.");
 
     return;
   }
 
   /* Players can't reply through NoShout. */
   if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    act("The gods have taken away $N's ability to communicate.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+    act_f(PERS_MORTAL, ch, 0, listener, TO_CHAR, "The gods have taken away $N's ability to communicate.");
 
     return;
   }
 
-  char buf[MSL];
-
-  /* Build the buffer for the acting player. */
-  snprintf(buf, sizeof(buf), "You tell $N, '%s'", message);
-
   /* Show the text to the acting character. */
   COLOR(ch, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener , TO_CHAR);
+  act_f(PERS_MORTAL, ch, 0, listener, TO_CHAR, "You tell $N, '%s'", message);
   ENDCOLOR(ch);
-
-  /* Build the buffer for the listening character. */
-  snprintf(buf, sizeof(buf), "$n tells you, '%s'", message);
 
   /* Show the text to the listening character. */
   COLOR(listener, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener, TO_VICT);
+  act_f(PERS_MORTAL, ch, 0, listener, TO_VICT, "$n tells you, '%s'", message);
   ENDCOLOR(listener);
 
   /* Update the listening character's reply_to variable. */
   if (!IS_NPC(ch)) {
     GET_REPLY_TO(listener) = GET_ID(ch);
   }
+
+  signal_char(listener, ch, MSG_TOLD, arg);
 }
 
 
@@ -1081,7 +1076,7 @@ void do_reply(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  /* Redirect listener if mobswitched. */
+  /* Redirect listener if they're mobswitched. */
   if (listener->switched) {
     listener = listener->switched;
   }
@@ -1519,5 +1514,40 @@ void do_write(CHAR *ch, char *arg, int cmd) {
     SET_BIT(GET_PFLAG(ch), PLR_WRITING);
     ch->desc->str = &note->action_description;
     ch->desc->max_str = MAX_NOTE_LENGTH;
+  }
+}
+
+/* For special usage. Accepts printf-style args and bypasses tell restrictions. */
+void tell_special(CHAR *ch, CHAR *listener, char *message, ...) {
+  if (!ch || !listener || !message || !*message) return;
+
+  /* Redirect listener if thye're mobswitched. */
+  if (listener->switched) {
+    listener = listener->switched;
+  }
+
+  /* We still didn't find a valid listener, so return. */
+  if (!listener || !GET_DESCRIPTOR(listener) || (GET_DESCRIPTOR(listener)->connected != CON_PLYNG)) return;
+
+  char buf[MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  /* Show the text to the acting character. */
+  COLOR(ch, 6);
+  act_f(PERS_MORTAL, ch, 0, listener, TO_CHAR, "You tell $N, '%s'", buf);
+  ENDCOLOR(ch);
+
+  /* Show the text to the listening character. */
+  COLOR(listener, 6);
+  act_f(PERS_MORTAL, ch, 0, listener, TO_VICT, "$n tells you, '%s'", buf);
+  ENDCOLOR(listener);
+
+  /* Update the listening character's reply_to variable. */
+  if (!IS_NPC(ch)) {
+    GET_REPLY_TO(listener) = GET_ID(ch);
   }
 }

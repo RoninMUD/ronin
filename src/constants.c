@@ -2814,6 +2814,20 @@ const char * const subclass_name[] = {
   "\n"
 };
 
+const int subclass_master[11] = {
+  2104,  // CLASS_MAGIC_USER   - Sadyra
+  9640,  // CLASS_CLERIC       - Felnor
+  2107,  // CLASS_THIEF        - Kulzaren
+  9012,  // CLASS_WARRIOR      - The Champion
+  12913, // CLASS_NINJA        - Brother Kenji
+  1915,  // CLASS_NOMAD        - Thrag the Beastman
+  2803,  // CLASS_PALADIN      - The Retire Knight
+  11096, // CLASS_ANTI_PALADIN - the Dark Knight
+  -1,    // CLASS_AVATAR
+  28506, // CLASS_BARD         - Pan
+  7322   // CLASS_COMMANDO     - The warrior mage
+};
+
 /* #define MOB_ID_HP_ARRAY_MAX 10 - in magic.c */
 const int mob_id_hp_int[] =
 {

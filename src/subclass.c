@@ -34,6 +34,7 @@
 int check_subclass(CHAR *ch,int sub,int lvl);
 int check_god_access(CHAR *ch, int active);
 bool distribute_token(void);
+int guild(CHAR *mob, CHAR *ch, int cmd, char *arg);
 
 int check_sc_song_access(CHAR *ch, int s) {
   if(s<=17) return TRUE;
@@ -514,172 +515,150 @@ int wall_thorns(OBJ *obj, CHAR *ch, int cmd, char *argument) {
   return FALSE;
 }
 
-int check_sc_master(CHAR *ch, CHAR *mob) {
-  if(IS_NPC(ch)) {
-    act("$N tells you 'Go Away! I don't deal with your type!'",FALSE,ch,0,mob,TO_CHAR);
-    return FALSE;
-  }
-  if(!IS_NPC(mob)) return FALSE;
-  if(V_MOB(mob)!=1915 && V_MOB(mob)!=2104 && V_MOB(mob)!=7322 && V_MOB(mob)!=12913 &&
-     V_MOB(mob)!=9640 && V_MOB(mob)!=28506 && V_MOB(mob)!=11096 && V_MOB(mob)!=2803 &&
-     V_MOB(mob)!=9012 && V_MOB(mob)!=2107)
-    return FALSE;
+bool check_sc_master(CHAR *ch, CHAR *mob) {
+  if (!ch || !mob || !IS_MORTAL(ch) || !IS_NPC(mob) ||
+      (NUMELEMS(subclass_master) < GET_CLASS(ch)) ||
+      (GET_CLASS(ch) < CLASS_FIRST) ||
+      (GET_CLASS(ch) > CLASS_LAST)) return FALSE;
 
-  if(GET_CLASS(ch)==GET_CLASS(mob)) return TRUE;
-  act("$N tells you 'Go Away! I don't deal with your type!'",FALSE,ch,0,mob,TO_CHAR);
-  return FALSE;
+  return (V_MOB(mob) == subclass_master[GET_CLASS(ch) - 1]);
 }
 
-int check_sc_points(CHAR *ch, CHAR *mob) {
-  int points;
-  points=ch->ver3.subclass_level*70+70;
-  if(ch->ver3.subclass_points>=points) {
-    ch->ver3.subclass_points-=points;
-    return TRUE;
-  }
-  act("$N tells you 'You do not have enough subclass points.",0,ch,0,mob,TO_CHAR);
-  return FALSE;
-}
-
-
-int guild(CHAR *mob, CHAR *ch, int cmd, char *arg);
-int subclass_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
-  char buf[MAX_INPUT_LENGTH];
-  char name1[20],name2[20];
-  OBJ *obj;
-  int point,subclass,pclass,token_number,loop=0;
-
+int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if (cmd == CMD_PRACTICE) {
-    if(guild(mob,ch,cmd, arg)) return TRUE;
-    else return FALSE;
+    return guild(mob, ch, cmd, arg);
   }
 
-  if(cmd==CMD_SAY) {
-    one_argument(arg,buf);
-    if(!*buf || !is_abbrev(buf,"choose")) return FALSE;
-    do_say(ch, arg, CMD_SAY);
-    arg=one_argument(arg,buf);
-    if(!check_sc_master(ch,mob)) return TRUE;
-    one_argument(arg,buf);
-    pclass=GET_CLASS(ch);
-    if(pclass<1 || pclass>11) return FALSE;
-    sprintf(name1,"%s", subclass_name[2*pclass-2]);
-    CAP(name1);
-    sprintf(name2,"%s", subclass_name[2*pclass-1]);
-    CAP(name2);
-    if(!*buf) {
-      sprintf(buf,"$N tells you 'Which subclass path did you want to choose: %s or %s?'",
-              name1, name2);
-      act(buf,0,ch,0,mob,TO_CHAR);
-      return TRUE;
+  if (cmd == MSG_SAID) {
+    if (!IS_MORTAL(ch) || (GET_CLASS(ch) < CLASS_FIRST) || (GET_CLASS(ch) > CLASS_LAST) || (NUMELEMS(subclass_master) < GET_CLASS(ch))) return FALSE;
+
+    char buf[MIL];
+
+    arg = one_argument(arg, buf);
+
+    if (!*buf || (strcasecmp(buf, "choose") != 0)) return FALSE;
+
+    if (!check_sc_master(ch, mob)) {
+      tell_special(mob, ch, "Go away!  I don't deal with your type!");
+
+      return FALSE;
     }
 
-    subclass = new_search_block(buf, subclass_name, TRUE, FALSE);
-    if(subclass==-1) {
-      sprintf(buf,"$N tells you 'Thats not a valid subclass.  Your choices are: %s or %s.'",
-              name1, name2);
-      act(buf,0,ch,0,mob,TO_CHAR);
-      return TRUE;
-    }
-    if((subclass>2*pclass-1) || (subclass<2*pclass-2)) {
-      sprintf(buf,"$N tells you 'Thats not a valid choice.  Your choices are: %s or %s.'",
-              name1, name2);
-      act(buf,0,ch,0,mob,TO_CHAR);
-      return TRUE;
+    one_argument(arg, buf);
+
+    if (!*buf) {
+      tell_special(mob, ch, "Which subclass path did you want to choose?  Your choices are: %s or %s.",
+        subclass_name[(2 * GET_CLASS(ch)) - 2], subclass_name[(2 * GET_CLASS(ch)) - 1]);
+
+      return FALSE;
     }
 
-    if(ch->ver3.subclass) {
-      if(ch->ver3.subclass!=subclass+1) { /* Change of subclass */
-        act("$N tells you 'You can't change your subclass - yet!",0,ch,0,mob,TO_CHAR);
-        return TRUE;
-      }
-      else { /* Increase in level */
-        if(ch->ver3.subclass_level>4) {
-          act("$N tells you 'You already have the highest possible subclass level.",0,ch,0,mob,TO_CHAR);
-          return TRUE;
-        }
-        if(!check_sc_points(ch,mob)) return TRUE; /* Also subtracts points */
-        ch->ver3.subclass_level++;
-        sprintf(name1,"%s", subclass_name[subclass]);
-        CAP(name1);
-        sprintf(buf,"%s shouts '%s has taken another step along the path of the %s!'\n\r",
-                GET_SHORT(mob),GET_NAME(ch), name1);
-        send_to_world(buf);
-        save_char(ch,NOWHERE);
-        return TRUE;
-      }
+    int sc_idx = get_index_of_string_in_list(buf, subclass_name, TRUE, FALSE);
+
+    if ((sc_idx < ((2 * GET_CLASS(ch)) - 2)) || (sc_idx > ((2 * GET_CLASS(ch)) - 1))) {
+      tell_special(mob, ch, "That's not a valid subclass.  Your choices are: %s or %s.",
+        subclass_name[(2 * GET_CLASS(ch)) - 2], subclass_name[(2 * GET_CLASS(ch)) - 1]);
+
+      return FALSE;
     }
-    else { /* New Subclass at lvl 1 */
-      if(!check_sc_points(ch,mob)) return TRUE; /* Also subtracts points */
-      ch->ver3.subclass=subclass+1;
-      ch->ver3.subclass_level=1;
-      sprintf(name1,"%s", subclass_name[subclass]);
-      CAP(name1);
-      sprintf(buf,"%s shouts '%s has joined the path of the %s! All bow before %s might!'\n\r",
-              GET_SHORT(mob),GET_NAME(ch), name1, HSHR(ch));
-      send_to_world(buf);
-      save_char(ch,NOWHERE);
-      return TRUE;
+
+    if (GET_SC(ch) && GET_SC(ch) != (sc_idx + 1)) {
+      tell_special(mob, ch, "Go see Immortalis about remorting if you want to change your subclass.");
+
+      return FALSE;
     }
-    return TRUE;
+
+    if (GET_SC_LEVEL(ch) >= 5) {
+      tell_special(mob, ch, "You already have the highest possible subclass level.");
+
+      return FALSE;
+    }
+
+    int scp_required = (GET_SC_LEVEL(ch) * 70) + 70;
+
+    if (GET_SCP(ch) < scp_required) {
+      tell_special(mob, ch, "You do not have enough subclass points.");
+
+      return FALSE;
+    }
+
+    if (GET_SC_LEVEL(ch) < 1) {
+      printf_to_world("%s shouts, '%s has joined the path of the %s!  All bow before %s might!'\n\r",
+        GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx], HSHR(ch));
+    }
+    else {
+      printf_to_world("%s shouts, '%s has taken another step along the path of the %s!'\n\r",
+        GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx]);
+    }
+
+    GET_SCP(ch) -= scp_required;
+    GET_SC_LEVEL(ch) += 1;
+
+    save_char(ch, NOWHERE);
+
+    return FALSE;
   }
 
-  if(cmd==MSG_GAVE_OBJ) {
-    if(!isname("token",arg)) return FALSE;
-    if(!(obj=get_obj_in_list_vis(mob,"token",mob->carrying))) {
-      act("$N tells you 'That wasn't a token you gave me.'",FALSE,ch,0,mob,TO_CHAR);
-      return TRUE;
+  if (cmd == MSG_GAVE_OBJ) {
+    if (!isname("token", arg)) return FALSE;
+
+    OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+    if (!obj) return TRUE;
+
+    bool give_back = FALSE;
+
+    if (!check_sc_master(ch, mob)) {
+      tell_special(mob, ch, "Go away!  I don't deal with your type!");
+
+      give_back = TRUE;
     }
-    if(obj->obj_flags.type_flag!=ITEM_SC_TOKEN || IS_SET(obj->obj_flags.extra_flags, ITEM_CLONE)) {
-      act("$N tells you 'That wasn't a valid token.'",FALSE,ch,0,mob,TO_CHAR);
-      return TRUE;
+
+    if (OBJ_TYPE(obj) != ITEM_SC_TOKEN) {
+      tell_special(mob, ch, "That wasn't a subclass token.");
+
+      give_back = TRUE;
     }
-    if(!check_sc_master(ch,mob)) {
-      act("$N tells you 'Here, take it back.'",FALSE,ch,0,mob,TO_CHAR);
-      act("$N gives you a token.",FALSE,ch,0,mob,TO_CHAR);
+
+    if (give_back) {
+      tell_special(mob, ch, "Here, take it back.");
+
+      act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+
       obj_from_char(obj);
-      obj_to_char(obj,ch);
+      obj_to_char(obj, ch);
+
       return TRUE;
     }
-    
-    point=obj->obj_flags.value[0];
+
+    int token_scp = OBJ_VALUE(obj, 0);
 
     // Prestige Perk 12
-    if ((point == 1) && (GET_PRESTIGE_PERK(ch) >= 12) && chance(10)) {
-      point = 2;
+    if ((GET_PRESTIGE_PERK(ch) >= 12) && (token_scp == 1) && chance(10)) {
+      token_scp = 2;
     }
 
-    if(point==1)
-      sprintf(buf,"$N tells you 'Thank you.  You get a subclass point for that token.'");
-    else if(point>1)
-      sprintf(buf,"$N tells you 'Thank you.  You get %d subclass points for that token.'",point);
-    else
-      sprintf(buf,"$N tells you 'Sorry, that token is worthless.'");
-    act(buf,FALSE,ch,0,mob,TO_CHAR);
-    log_f("SUBLOG: %s turns in a token.",GET_NAME(ch));
+    if (token_scp < 1) {
+      tell_special(mob, ch, "Sorry, that token is worthless.");
+    }
+    else {
+      tell_special(mob, ch, "Thank you.  You get %d subclass point%s for that token.",
+        token_scp, ((abs(token_scp) == 1) ? "" : "s"));
+
+      GET_SCP(ch) += token_scp;
+    }
+
+    log_f("SUBLOG: %s turns in a token.", GET_NAME(ch));
+
     extract_obj(obj);
-    if(point>0) ch->ver3.subclass_points+=point;
-    token_number=TOKENCOUNT-obj_proto_table[real_object(5)].number;
-	/*log_f("Redistributing %d of %d tokens", token_number, TOKENCOUNT);*/
-    while(token_number>0) {
-      if(distribute_token()) token_number--;
-      loop++;
-      if(loop>1000) {
-        log_f("Breaking loop distribute tokens");
-        break;
-      }
-    }
 
-    // don't redistribute the token if the maximum number are already in the game.
-    if (TOKENCOUNT > obj_proto_table[real_object(5)].number) {
-      distribute_token();
-    }
+    distribute_tokens(CHAOSMODE ? 0 : (TOKENCOUNT - obj_proto_table[real_object(5)].number));
 
     return TRUE;
   }
+
   return FALSE;
 }
-
 
 #define TOKEN_MOB 11
 #define MAX_RATINGS 120 /* Currently 115 zones */
@@ -1172,23 +1151,16 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
 }
 
 
-void assign_subclass_master(void) {
-  assign_mob(1915,  subclass_master);
-  assign_mob(2104,  subclass_master);
-  assign_mob(7322,  subclass_master);
-  assign_mob(12913, subclass_master);
-  assign_mob(9640,  subclass_master);
-  assign_mob(28506, subclass_master); /* Pan made Bard master */
-  assign_mob(11096, subclass_master);
-  assign_mob(2803,  subclass_master);
-  assign_mob(9012,  subclass_master);
-  assign_mob(2107,  subclass_master);
-}
-
 void assign_subclass(void) {
-  assign_obj(STATUE_PEACE,statue_peace);
-  assign_obj(WALL_THORNS,wall_thorns);
-  assign_subclass_master();
-  assign_mob(TOKEN_MOB,token_mob);
+  assign_obj(STATUE_PEACE, statue_peace);
+  assign_obj(WALL_THORNS, wall_thorns);
+
+  assign_mob(TOKEN_MOB, token_mob);
+
+  for (int i = 0; i < NUMELEMS(subclass_master); i++) {
+    if (subclass_master[i] > 0) {
+      assign_mob(subclass_master[i], sc_master);
+    }
+  }
 }
 

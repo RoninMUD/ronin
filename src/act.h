@@ -243,6 +243,8 @@ void do_idname(CHAR *ch, char *argument, int cmd);
 void do_gf(CHAR *ch, char *argument, int cmd);
 void do_identify(CHAR *ch, char *arg, int cmd);
 
+void tell_special(CHAR *ch, CHAR *listener, char *message, ...) __attribute__((format(printf, 3, 4)));
+
 void do_special_move(struct char_data *ch, char *arg, int cmd);
 
 /* Utility things */
