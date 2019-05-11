@@ -2469,17 +2469,6 @@ void printf_to_char(CHAR *ch, char *message, ...) {
   send_to_char(buf, ch);
 }
 
-void printf_to_char_except(CHAR *ch, char *message, ...) {
-  char buf[2 * MSL];
-  va_list args;
-
-  va_start(args, message);
-  vsnprintf(buf, sizeof(buf), message, args);
-  va_end(args);
-
-  send_to_char(buf, ch);
-}
-
 void printf_to_group(CHAR *ch, bool same_room, char *message, ...) {
   char buf[2 * MSL];
   va_list args;
@@ -2488,7 +2477,7 @@ void printf_to_group(CHAR *ch, bool same_room, char *message, ...) {
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  send_to_group(message, ch, same_room);
+  send_to_group(buf, ch, same_room);
 }
 
 void printf_to_room(int room, char *message, ...) {
@@ -2499,7 +2488,7 @@ void printf_to_room(int room, char *message, ...) {
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  send_to_room(message, room);
+  send_to_room(buf, room);
 }
 
 void printf_to_room_except(int room, CHAR *ch, char *message, ...) {
@@ -2510,7 +2499,7 @@ void printf_to_room_except(int room, CHAR *ch, char *message, ...) {
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  send_to_room_except(message, room, ch);
+  send_to_room_except(buf, room, ch);
 }
 
 void printf_to_room_except_two(int room, CHAR *ch1, CHAR *ch2, char *message, ...) {
@@ -2521,7 +2510,7 @@ void printf_to_room_except_two(int room, CHAR *ch1, CHAR *ch2, char *message, ..
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  send_to_room_except_two(message, room, ch1, ch2);
+  send_to_room_except_two(buf, room, ch1, ch2);
 }
 
 void printf_to_world(char *message, ...) {
