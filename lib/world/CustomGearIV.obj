@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1785,5 +1785,26 @@ M
 ~
 A
 17 -5
+#29676
+bead beaded orichalcum chain soot~
+A Beaded Orichalcum Chain~
+A beaded metal chain has been abandoned here.~
+~
+9 65 5
+12 -1 -1 -1
+3 10000 8500
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 15
 #0
 $~
