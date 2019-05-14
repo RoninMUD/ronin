@@ -1441,8 +1441,8 @@ void look_in_room(CHAR *ch, int vnum) {
 
   if (!IS_SET(ch->specials.pflag, PLR_BRIEF)) {
     send_to_char(world[room].description, ch);
-    if (RM_BLOOD(room) > 0) {
-      send_to_char(blood_messages[(int)RM_BLOOD(room)], ch);
+    if (ROOM_BLOOD(room) > 0) {
+      send_to_char(blood_messages[(int)ROOM_BLOOD(room)], ch);
     }
   }
 
@@ -1757,7 +1757,7 @@ void die(CHAR *ch)
 
   /* Characters affected by Animate, Charm and Subdue do not leave blood, to avoid gaming Bathed in Blood bonuses. */
   if (!IS_AFFECTED(ch, AFF_ANIMATE) && !IS_AFFECTED(ch, AFF_CHARM) && !IS_AFFECTED(ch, AFF_SUBDUE)) {
-    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+    ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
   if (!IS_NPC(ch) && ch->specials.death_timer == 1 && GET_HIT(ch) >= 0)

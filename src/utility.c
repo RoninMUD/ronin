@@ -300,12 +300,12 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
 
   if (breakthrough_type == BT_INVUL) {
     /* Invulnerability never applies to Hostile victims. */
-    if (IS_SET(GET_PFLAG2(victim), PLR2_HOSTILE)) return TRUE;
+    if (IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) return TRUE;
 
     /* Cunning */
     if ((IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
         ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE)) &&
-        IS_SET(GET_PFLAG2(ch), PLR2_CUNNING) &&
+        IS_SET(GET_TOGGLES(ch), TOG_CUNNING) &&
         (GET_MANA(ch) >= 10)) {
       act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
       act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);

@@ -1568,7 +1568,7 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     return FALSE;
   }/* end of MSG_TICK */
 
-  if(cmd==MSG_GAVE_OBJ) {
+  if(cmd==MSG_OBJ_GIVEN) {
     if(count_carrying_obj(mob,28500)==1) has_valor=1;
     if(count_carrying_obj(mob,28501)==1) has_truth=1;
     if(count_carrying_obj(mob,28502)==1) has_courage=1;
@@ -1634,7 +1634,7 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     act("$n says 'This item means nothing to me.'",0,mob,0,0,TO_ROOM);
     do_drop(mob,buf,CMD_DROP);
     return TRUE;
-  }/* end of MSG_GAVE_OBJ */
+  }/* end of MSG_OBJ_GIVEN */
 
   return FALSE;
 }
@@ -1938,7 +1938,7 @@ int ench_drunk(CHAR *mob, CHAR *ch, int cmd, char *arg)  {
     return FALSE;
   }
 
-  if(cmd==MSG_GAVE_OBJ) {
+  if(cmd==MSG_OBJ_GIVEN) {
     if(mob->specials.timer>4 || mob->specials.timer<1) return FALSE;
     if(!(obj=get_obj_in_list_num(real_object(drink_num[mob->specials.timer]), mob->carrying))) {
       act("$n says 'Have a heart man! I've no need of that!'",0,mob,0,0,TO_ROOM);

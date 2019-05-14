@@ -623,7 +623,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
   /* 101% is a complete failure */
   percent=number(1,101) - dex_app_skill[GET_DEX(ch)].p_pocket;
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE))
+  if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE))
   {
     percent -= 5 + (GET_DEX_APP(ch) / 2);
   }

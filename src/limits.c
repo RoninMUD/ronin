@@ -325,7 +325,7 @@ int mana_gain(CHAR *ch) {
     case CLASS_COMMANDO:
       /* Dark Pact */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
           gain += 3;
         }
         else {
@@ -405,7 +405,7 @@ int mana_gain(CHAR *ch) {
       case CLASS_COMMANDO:
         /* Dark Pact */
         if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
             gain += 5;
           }
           else {
@@ -420,8 +420,8 @@ int mana_gain(CHAR *ch) {
 
   /* Bathed in Blood */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * (double)RM_BLOOD(CHAR_REAL_ROOM(ch)));
+    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+      double multi = 1.0 + (0.2 * (double)ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
 
       if (multi > 2.0) multi = 2.0;
 
@@ -549,7 +549,7 @@ int hit_gain(CHAR *ch) {
     case CLASS_BARD:
       /* Dark Pact */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
           gain += 2;
         }
         else {
@@ -621,7 +621,7 @@ int hit_gain(CHAR *ch) {
       case CLASS_COMMANDO:
         /* Dark Pact */
         if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
             gain += 5;
           }
           else {
@@ -649,8 +649,8 @@ int hit_gain(CHAR *ch) {
 
   /* Bathed in Blood */
   if (check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && RM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * RM_BLOOD(CHAR_REAL_ROOM(ch)));
+    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+      double multi = 1.0 + (0.2 * ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
 
       if (multi > 2.0) multi = 2.0;
 
@@ -698,7 +698,7 @@ int move_gain(CHAR *ch) {
 
   /* Dark Pact */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    if (IS_NIGHT || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+    if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
       gain += 10;
     }
     else {

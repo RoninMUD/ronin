@@ -14,6 +14,7 @@ bool is_number(char *string);
 bool is_abbrev(char *str1, char *str2);
 bool is_fill_word(char *string);
 char *skip_spaces(char *string);
+int get_index_of_string_in_list(const char *string, const char *const *list, bool match_length, bool case_sensitive);
 int search_block(const char *string, const char * const *list, bool exact);
 int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive);
 int old_search_block(const char *string, int begin, int length, const char * const * const list, int mode);

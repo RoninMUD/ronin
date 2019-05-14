@@ -172,6 +172,26 @@ char *skip_spaces(char *string) {
   return string;
 }
 
+int get_index_of_string_in_list(const char *string, const char * const *list, bool match_length, bool case_sensitive) {
+  assert(string && list);
+
+  size_t str_len = strlen(string);
+
+  if (str_len > 0) {
+    for (int index = 0; **(list + index) != '\n'; index++) {
+      const char *tmp_str = *(list + index);
+
+      size_t tmp_len = strlen(tmp_str);
+
+      if (match_length && (tmp_len != str_len)) continue;
+
+      if ((case_sensitive && !strncmp(string, tmp_str, tmp_len)) || (!case_sensitive && !strncasecmp(string, tmp_str, tmp_len))) return index;
+    }
+  }
+
+  return -1;
+}
+
 int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive) {
   char buf[MIL];
   int len = 0;
@@ -214,8 +234,8 @@ int new_search_block(const char *string, const char * const *list, bool exact, b
 }
 
 /* Return index of string matched in a given list of strings. */
-int search_block(const char *string, const char * const *list, bool exact) {
-  return new_search_block(string, list, exact, TRUE);
+int search_block(const char *string, const char * const *list, bool exact_match) {
+  return new_search_block(string, list, exact_match, TRUE);
 }
 
 /* Return index of string matched in a given list of strings. */

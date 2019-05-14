@@ -1156,8 +1156,8 @@ int uber_bom(OBJ *obj, CHAR *ch, int cmd, char *argument)
       if (GET_HIT(obj->equipped_by)>-1) {
         //bom: range of 8-13 "hidden" regen instead of flat 10, doubles in CLUB, +5 in DARK
         int regen = number(8,13);
-        if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(obj->equipped_by)), CLUB)) regen*=2;
-        if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(obj->equipped_by)), DARK)) regen+=5;
+        if (IS_SET(CHAR_ROOM_FLAGS(ch), CLUB)) regen*=2;
+        if (IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) regen+=5;
         GET_HIT(obj->equipped_by) = MIN( GET_MAX_HIT(obj->equipped_by),
         GET_HIT(obj->equipped_by)+regen);
         GET_MANA(obj->equipped_by) = MIN( GET_MAX_MANA(obj->equipped_by),

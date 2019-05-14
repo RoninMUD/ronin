@@ -458,7 +458,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   }
 
   /* Give back any questcards given to the mob, as players should use 'aquest complete' to get credit. */
-  if (cmd == MSG_GAVE_OBJ) {
+  if (cmd == MSG_OBJ_GIVEN) {
     if (!isname("questcard", arg)) return FALSE;
 
     qcard = get_obj_in_list_vis(mob, "questcard", mob->carrying);

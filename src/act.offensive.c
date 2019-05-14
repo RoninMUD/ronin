@@ -86,8 +86,8 @@ void do_hit(CHAR *ch, char *argument, int cmd) {
   }
 
   if (victim == ch) {
-    send_to_char("You hit yourself... OUCH!\n\r", ch);
-    act("$n hits $mself, and says 'OUCH!'", FALSE, ch, 0, victim, TO_ROOM);
+    send_to_char("You hit yourself...  OUCH!\n\r", ch);
+    act("$n hits $mself and says, 'OUCH!'", FALSE, ch, 0, victim, TO_ROOM);
 
     return;
   }
@@ -126,7 +126,7 @@ void do_hit(CHAR *ch, char *argument, int cmd) {
   if (GET_WEAPON(ch) &&
       (OBJ_VALUE(GET_WEAPON(ch), 0) != 0) &&
       (OBJ_VALUE(GET_WEAPON(ch), 0) <= 20) &&
-      ((CHAOSMODE && !GET_OPPONENT(victim)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC) || IS_NPC(victim)) &&
+      ((CHAOSMODE && !GET_OPPONENT(victim)) || IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) || IS_NPC(victim)) &&
       !number(0, 3)) {
     switch (OBJ_VALUE0(GET_WEAPON(ch))) {
       case 1:
@@ -195,7 +195,7 @@ void do_kill(CHAR *ch, char *argument, int cmd) {
       return;
     }
 
-    act("You chop $M to pieces! Ah! The blood!", FALSE, ch, 0, victim, TO_CHAR);
+    act("You chop $M to pieces!  Ah!  The blood!", FALSE, ch, 0, victim, TO_CHAR);
     act("$N chops you to pieces!", FALSE, ch, 0, victim, TO_VICT);
     act("$n brutally slays $N", FALSE, ch, 0, victim, TO_NOTVICT);
 
@@ -300,8 +300,8 @@ void do_block(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_BLOCK)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_BLOCK);
+  if (IS_SET(GET_TOGGLES(ch), TOG_BLOCK)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_BLOCK);
 
     send_to_char("You will now let your victim flee.\n\r", ch);
 
@@ -314,7 +314,7 @@ void do_block(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_BLOCK);
+  SET_BIT(GET_TOGGLES(ch), TOG_BLOCK);
 
   send_to_char("You will now block your enemies if they flee.\n\r", ch);
 }
@@ -456,7 +456,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   if (GET_OPPONENT(victim)) {
     if (!GET_LEARNED(ch, SKILL_ASSASSINATE)) {
-      send_to_char("You can't backstab someone engaged in combat! They're too alert!\n\r", ch);
+      send_to_char("You can't backstab someone engaged in combat!  They're too alert!\n\r", ch);
 
       return;
     }
@@ -488,7 +488,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   }
 
   /* Vehemence */
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE)) {
+  if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE)) {
     check -= (5 + (GET_DEX_APP(ch) / 2));
   }
 
@@ -508,7 +508,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   auto_learn_skill(ch, SKILL_BACKSTAB);
 
   /* Bathed in Blood */
-  int room_blood_level = MIN(((CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0), 10);
+  int room_blood_level = MIN(((CHAR_REAL_ROOM(ch) != NOWHERE) ? ROOM_BLOOD(CHAR_REAL_ROOM(ch)) : 0), 10);
 
   if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(10 + room_blood_level)) {
     act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, 0, victim, TO_CHAR);
@@ -676,7 +676,7 @@ void do_ambush(struct char_data *ch, char *arg, int cmd) {
       break;
   }
 
-  if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_AMBUSH))) || IS_IMMUNE(victim, IMMUNE_AMBUSH)) {
+  if ((AWAKE(victim) && GET_LEARNED(ch, SKILL_AMBUSH) && (check > GET_LEARNED(ch, SKILL_AMBUSH))) || IS_IMMUNE(victim, IMMUNE_AMBUSH)) {
     act("You try to ambush $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$N tries to ambush you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to ambush $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -755,7 +755,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
     check -= (GET_LEVEL(ch) / 7);
   }
 
-  if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_ASSAULT))) || IS_IMMUNE(victim, IMMUNE_ASSAULT)) {
+  if ((AWAKE(victim) && GET_LEARNED(ch, SKILL_ASSAULT) && (check > GET_LEARNED(ch, SKILL_ASSAULT))) || IS_IMMUNE(victim, IMMUNE_ASSAULT)) {
     act("You try to assault $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to assault you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to assault $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -842,7 +842,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
   }
 
   /* Vehemence */
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE) && check_sc_access(ch, SKILL_VEHEMENCE)) {
+  if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE) && check_sc_access(ch, SKILL_VEHEMENCE)) {
     check -= 5 + (GET_DEX_APP(ch) / 2);
   }
 
@@ -872,11 +872,11 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
   hit(ch, victim, SKILL_CIRCLE);
 
   /* Trip */
-  if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRIP) && IS_SET(GET_PFLAG2(ch), PLR2_TRIP)) {
+  if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRIP) && IS_SET(GET_TOGGLES(ch), TOG_TRIP)) {
     check = number(1, 111) - GET_DEX_APP(ch);
 
     /* Vehemence */
-    if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE) && check_sc_access(ch, SKILL_VEHEMENCE)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE) && check_sc_access(ch, SKILL_VEHEMENCE)) {
       check -= 5 + (GET_DEX_APP(ch) / 2);
     }
 
@@ -1074,7 +1074,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
         (!IS_NPC(ch) || (IS_NPC(ch) && !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, NO_MOB)))) {
       CHAR *blocker = GET_OPPONENT(ch);
 
-      if (!GET_RIDER(ch) && !IS_NPC(blocker) && IS_SET(GET_PFLAG2(blocker), PLR2_BLOCK)) {
+      if (!GET_RIDER(ch) && !IS_NPC(blocker) && IS_SET(GET_TOGGLES(blocker), TOG_BLOCK)) {
         int block_check = number(1, 111);
         int block_skill = GET_LEARNED(blocker, SKILL_BLOCK) + GET_DEX_APP(blocker);
         int auto_block_chance = 0;
@@ -1265,7 +1265,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_IMMUNE(victim, IMMUNE_PUMMEL) ||!breakthrough(ch, victim, SKILL_PUMMEL, BT_INVUL)) {
+  if (IS_IMMUNE(victim, IMMUNE_PUMMEL) || !breakthrough(ch, victim, SKILL_PUMMEL, BT_INVUL)) {
     act("You pummel $N, but your pummel has no effect!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n pummels you, but $s pummel has no effect!", FALSE, ch, 0, victim, TO_VICT);
     act("$n pummels $N, but $s pummel has no effect!", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -1310,7 +1310,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
   }
 
   /* Trusty Steed */
-  if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRUSTY_STEED) && IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED)) {
+  if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRUSTY_STEED) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED)) {
     check = number(1, 121) - GET_WIS_APP(ch);
 
     if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
@@ -1555,7 +1555,7 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
 
   /* Anyone can rescue a player that is level 15 or below. Protect grants automatic success. */
   if (IS_MORTAL(ch) && (GET_LEVEL(victim) > 15) && !check_subclass(ch, SC_WARLORD, 2)) {
-    if (IS_SET(GET_PFLAG2(ch), PLR2_HOSTILE)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
       send_to_char("Your hostility prevents the rescue.\n\r", ch);
 
       return;
@@ -1570,8 +1570,8 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
 
   auto_learn_skill(ch, SKILL_RESCUE);
 
-  send_to_char("Banzai! To the rescue...\n\r", ch);
-  act("You are rescued by $n! You are confused!", FALSE, ch, 0, victim, TO_VICT);
+  act("Banzai!  To the rescue...", FALSE, ch, 0, victim, TO_CHAR);
+  act("You are rescued by $n!  You are confused!", FALSE, ch, 0, victim, TO_VICT);
   act("$n heroically rescues $N!", FALSE, ch, 0, victim, TO_NOTVICT);
 
   if (GET_OPPONENT(victim) == attacker) {
@@ -1597,7 +1597,7 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
 
 void do_assist(CHAR *ch, char *argument, int cmd) {
   if (CHAOSMODE) {
-    send_to_char("Assist? All you can think about is KILLING!\n\r", ch);
+    send_to_char("Assist?  All you can think about is KILLING!\n\r", ch);
 
     return;
   }
@@ -2020,8 +2020,8 @@ void do_cunning(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_CUNNING)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_CUNNING);
+  if (IS_SET(GET_TOGGLES(ch), TOG_CUNNING)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_CUNNING);
 
     send_to_char("You relinquish your focus and feel notably less cunning.\n\r", ch);
 
@@ -2034,7 +2034,7 @@ void do_cunning(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_CUNNING);
+  SET_BIT(GET_TOGGLES(ch), TOG_CUNNING);
 
   send_to_char("You focus on exploiting any weakness in your enemies' defenses and grow more cunning in the process.\n\r", ch);
 }
@@ -2086,7 +2086,7 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
   int check = number(1, 101) - GET_DEX_APP(ch);
 
   /* Vehemence */
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE)) {
+  if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE)) {
     check -= (5 + (GET_DEX_APP(ch) / 2));
   }
 

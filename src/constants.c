@@ -1459,8 +1459,8 @@ const char *extra_bits[] = {
   "ANTI-CLERIC",
   "ANTI-MAGIC_USER",
   "ANTI-MORTAL",
-  "<EXTRA_UNUSED>",
-  "<EXTRA_UNUSED2>",
+  "<ITEM_EXTRA_131072",
+  "<ITEM_EXTRA_262144>",
   "ANTI-RENT",
   "ANTI-NINJA",
   "ANTI-NOMAD",
@@ -1996,7 +1996,7 @@ const char * const player_bits[] = {
   "NOSUMMON",
   "GOSSIP",
   "AUCTION",
-  "BLOCK",
+  "SHOUT_OFF",
   "NOMESSAGE",
   "SANE-CLUB",
   "LEM-CLUB",
@@ -2011,7 +2011,7 @@ const char * const player_bits[] = {
   "FIGHTBRIEF",
   "SKIPTITLE",
   "VICIOUS",
-  "NOYELL",
+  "YELL_OFF",
   "EMAIL",
   "\n"
 };
