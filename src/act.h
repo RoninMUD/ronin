@@ -495,14 +495,14 @@ void communicate(CHAR *ch, char *arg, int comm);
 
 #define COMM_TO_CHAR       0
 #define COMM_TO_CHAR_ROOM  1
-#define COMM_TO_GROUP      2
-#define COMM_TO_ROOM       3
-#define COMM_TO_ZONE       4
-#define COMM_TO_WORLD      5
+#define COMM_TO_REPLY      2
+#define COMM_TO_GROUP      3
+#define COMM_TO_ROOM       4
+#define COMM_TO_ZONE       5
+#define COMM_TO_WORLD      6
 
-#define COMM_MODE_DIRECT   0
-#define COMM_MODE_GENERAL  1
-#define COMM_MODE_CHANNEL  2
+#define COMM_STYLE_QUOTE   0
+#define COMM_STYLE_BRACKET 1
 
 typedef struct comm_info_t {
   const char *name;
@@ -510,15 +510,18 @@ typedef struct comm_info_t {
   const char *text_to_vict;
   const char *text_to_other;
   const char *text_no_arg;
+  const char *text_not_found;
   const unsigned long pflag_on;
   const unsigned long pflag_off;
   const unsigned long pflag_no_do;
   const unsigned long pflag_no_hear;
   const int min_pos_hear;
   const int to;
-  const int mode;
   const int hide;
+  const int style;
+  const bool direct;
   const bool set_reply;
+  const bool smell;
   const int color;
 } comm_info_t;
 
