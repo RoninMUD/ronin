@@ -169,11 +169,39 @@ void do_hit(CHAR *ch, char *argument, int cmd) {
 
 
 void do_kill(CHAR *ch, char *argument, int cmd) {
-  char name[MIL];
+  char buf[MSL], name[MIL];
 
   one_argument(argument, name);
 
   CHAR *victim = get_char_room_vis(ch, name);
+
+  /* Print action messages. */
+  for (int eq_slot = WIELD; eq_slot <= HOLD; eq_slot++) {
+    OBJ *weapon = EQ(ch, eq_slot);
+
+    if (!weapon || !IS_WEAPON(weapon)) continue;
+
+    if (victim && OBJ_ACTION(weapon)) {
+      snprintf(buf, sizeof(buf), "%s", OBJ_ACTION(weapon));
+
+      act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
+      act(buf, FALSE, ch, 0, victim, TO_CHAR);
+    }
+    else if (!victim && OBJ_ACTION_NT(weapon)) {
+      snprintf(buf, sizeof(buf), "%s", OBJ_ACTION_NT(weapon));
+
+      act(buf, FALSE, ch, 0, 0, TO_ROOM);
+      act(buf, FALSE, ch, 0, 0, TO_CHAR);
+    }
+    else if (!victim && OBJ_ACTION(weapon)) {
+      snprintf(buf, sizeof(buf), "%s", OBJ_ACTION(weapon));
+
+      act(buf, FALSE, ch, 0, 0, TO_ROOM);
+      act(buf, FALSE, ch, 0, 0, TO_CHAR);
+    }
+
+    if (IS_NPC(ch) || (GET_CLASS(ch) != CLASS_NINJA)) break;
+  }
 
   /* Implementor raw kill. */
   if (IS_IMPLEMENTOR(ch)) {
@@ -200,41 +228,12 @@ void do_kill(CHAR *ch, char *argument, int cmd) {
     act("$n brutally slays $N", FALSE, ch, 0, victim, TO_NOTVICT);
 
     signal_char(victim, ch, MSG_DIE, "");
+
     divide_experience(ch, victim, TRUE);
+
     raw_kill(victim);
 
     return;
-  }
-  else {
-    char buf[MSL];
-
-    /* Print action messages. */
-    for (int i = 1; i <= 2; i++) {
-      OBJ *weapon = ((i == 1) ? GET_WEAPON(ch) : GET_WEAPON2(ch));
-
-      if (!weapon) continue;
-
-      if (victim && OBJ_ACTION(weapon)) {
-        snprintf(buf, sizeof(buf), "%s", OBJ_ACTION(weapon));
-
-        act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
-        act(buf, FALSE, ch, 0, victim, TO_CHAR);
-      }
-      else if (!victim && OBJ_ACTION_NT(weapon)) {
-        snprintf(buf, sizeof(buf), "%s", OBJ_ACTION_NT(weapon));
-
-        act(buf, FALSE, ch, 0, 0, TO_ROOM);
-        act(buf, FALSE, ch, 0, 0, TO_CHAR);
-      }
-      else if (!victim && OBJ_ACTION(weapon)) {
-        snprintf(buf, sizeof(buf), "%s", OBJ_ACTION(weapon));
-
-        act(buf, FALSE, ch, 0, 0, TO_ROOM);
-        act(buf, FALSE, ch, 0, 0, TO_CHAR);
-      }
-
-      if (IS_NPC(ch) || (GET_CLASS(ch) != CLASS_NINJA)) break;
-    }
   }
 
   do_hit(ch, argument, CMD_KILL);

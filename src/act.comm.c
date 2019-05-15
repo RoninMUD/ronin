@@ -332,19 +332,24 @@ struct drunk_t drunk[] = {
 /* Make a string look drunk. Original code by Apex. Modifications by the Maniac
    from Mythran for envy(2), Kohl Desenee for ROM 2.4, and Ranger for RoninMUD.
    Re-written by Night. */
-void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int drunk_level) {
+void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, const char *src, ...) {
   if (!src || !dst || !dst_sz) return;
 
-  char buf[MSL];
+  char str[MSL], buf[2 * MSL];
+  va_list args;
+
+  va_start(args, src);
+  vsnprintf(str, sizeof(str), src, args);
+  va_end(args);
 
   memset(buf, 0, sizeof(buf));
 
   int buf_pos = 0;
 
-  for (int i = 0; (i < strlen(src)) && (buf_pos < (sizeof(buf) - 1)); i++) {
+  for (int i = 0; (i < strlen(str)) && (buf_pos < (sizeof(buf) - 1)); i++) {
     char temp;
 
-    temp = src[i];
+    temp = str[i];
     temp = UPPER(temp);
 
     if ((temp >= 'A') && (temp <= 'Z') && (drunk_level > drunk[temp - 'A'].min_drunk_level)) {
@@ -358,7 +363,7 @@ void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int 
       buf[buf_pos++] = '0' + number(0, 9);
     }
     else {
-      buf[buf_pos++] = src[i];
+      buf[buf_pos++] = str[i];
     }
   }
 
@@ -373,7 +378,7 @@ void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int 
 
 
 /* Unified communication function. */
-void communicate(CHAR *ch, char *arg, int comm) {
+void communicate(CHAR *ch, char *arg, const int comm) {
   if (!ch || (comm < COMM_FIRST) || (comm > COMM_LAST)) return;
 
   arg = skip_spaces(arg);
@@ -496,7 +501,7 @@ void communicate(CHAR *ch, char *arg, int comm) {
 
   /* Drunkify the string as needed, otherwise, store the resulting arg text in the message variable. */
   if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {
-    drunkify_string(arg, message, sizeof(message), GET_COND(ch, DRUNK));
+    drunkify_string(message, sizeof(message), GET_COND(ch, DRUNK), "%s", arg);
   }
   else {
     snprintf(message, sizeof(message), "%s", arg);
@@ -690,7 +695,7 @@ void do_chaos(CHAR *ch, char *arg, int cmd) {
 
 /* For special procedure direct communications from mobs to players.
    Accepts printf-style args and bypasses all restrictions. */
-void comm_special(CHAR *ch, CHAR *listener, int comm, char *message, ...) {
+void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message, ...) {
   if (!ch || !IS_NPC(ch) || !listener || IS_NPC(listener) || !message || !*message) return;
 
   /* Direct communication only; no reply. */
