@@ -497,7 +497,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
     check -= (5 + (GET_DEX_APP(ch) / 2));
   }
 
-  if (IS_IMMUNE(victim, IMMUNE_BACKSTAB) || (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_BACKSTAB)))) {
+  if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_BACKSTAB))) || IS_IMMUNE(victim, IMMUNE_BACKSTAB)) {
     damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
 
     skill_wait(ch, SKILL_BACKSTAB, 2);
@@ -676,7 +676,7 @@ void do_ambush(struct char_data *ch, char *arg, int cmd) {
       break;
   }
 
-  if ((AWAKE(victim) && GET_LEARNED(ch, SKILL_AMBUSH) && (check > GET_LEARNED(ch, SKILL_AMBUSH))) || IS_IMMUNE(victim, IMMUNE_AMBUSH)) {
+  if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_AMBUSH))) || IS_IMMUNE(victim, IMMUNE_AMBUSH)) {
     act("You try to ambush $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$N tries to ambush you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to ambush $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -755,7 +755,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
     check -= (GET_LEVEL(ch) / 7);
   }
 
-  if ((AWAKE(victim) && GET_LEARNED(ch, SKILL_ASSAULT) && (check > GET_LEARNED(ch, SKILL_ASSAULT))) || IS_IMMUNE(victim, IMMUNE_ASSAULT)) {
+  if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_ASSAULT))) || IS_IMMUNE(victim, IMMUNE_ASSAULT)) {
     act("You try to assault $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to assault you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to assault $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);

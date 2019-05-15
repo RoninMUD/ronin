@@ -719,7 +719,7 @@ void do_lunge(CHAR *ch, char *arg, int cmd) {
     check -= 5;
   }
 
-  if (AWAKE(victim) && GET_LEARNED(ch, SKILL_LUNGE) && (check > GET_LEARNED(ch, SKILL_LUNGE))) {
+  if (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_LUNGE))) {
     act("You try to lunge at $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to lunge at you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to lunge at $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -932,7 +932,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
 
   int check = number(1, 131) - GET_DEX_APP(ch);
 
-  if (AWAKE(victim) && GET_LEARNED(ch, SKILL_FLANK) && (check > GET_LEARNED(ch, SKILL_FLANK))) {
+  if (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_FLANK))) {
     act("You try to flank $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to flank you, but fails.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to flank $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);

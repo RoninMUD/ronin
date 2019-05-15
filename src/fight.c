@@ -2792,8 +2792,6 @@ int stack_position(CHAR *ch, int target_position) {
 
 /* Note: For private use by try_hit(). */
 int hit_success(int attack_roll, int attacker_thaco, int attacker_hitroll, int defender_ac) {
-  printf_to_world("DEBUG :: attack_roll = %d, attacker_thaco = %d, attacker_hitroll = %d, defender_ac = %d (%d)\n\r",
-    attack_roll, attacker_thaco, attacker_hitroll, defender_ac, (defender_ac / 10));
   /* Automatic success on an attack roll of 20, and automatic failure on an attack roll of 1. */
   if ((attack_roll == 20) || ((attack_roll != 1) && (attacker_thaco - attacker_hitroll - attack_roll) <= (defender_ac / 10))) {
     return HIT_SUCCESS;
@@ -2804,9 +2802,6 @@ int hit_success(int attack_roll, int attacker_thaco, int attacker_hitroll, int d
 
 int try_hit(CHAR *attacker, CHAR *defender) {
   if (!attacker || !defender) return FALSE;
-
-  printf_to_world("DEBUG :: attacker = %s, defender = %s\n\r",
-    (IS_NPC(attacker) ? GET_SHORT(attacker) : GET_NAME(attacker)), (IS_NPC(defender) ? GET_SHORT(defender) : GET_NAME(defender)));
 
   /* The following conditions always result in a hit. */
   if (!AWAKE(defender) ||
