@@ -331,10 +331,10 @@ void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int 
       buf_pos += strlen(replacement_str);
     }
     else if (temp >= '0' && temp <= '9') {
-      buf[buf_pos] = '0' + number(0, 9);
+      buf[buf_pos++] = '0' + number(0, 9);
     }
     else {
-      buf[buf_pos] = src[i];
+      buf[buf_pos++] = src[i];
     }
   }
 
