@@ -483,7 +483,7 @@ void communicate(CHAR *ch, char *arg, int comm) {
       return;
     }
 
-    /* Is the listening character's NoMessage on? */
+    /* Is the listening character's NoMessage on? Is their position below the listening threshold? */
     if ((IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOMESSAGE) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) ||
         (GET_POS(listener) < comm_info[comm].min_pos_hear)) {
       act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
@@ -534,7 +534,7 @@ void communicate(CHAR *ch, char *arg, int comm) {
     ((comm_info[comm].smell &&affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
     style_open, message, style_close);
 
-  /* Print the message string to the listening character. */
+  /* Print the message string to the listening character(s). */
   switch (comm_info[comm].to) {
     case COMM_TO_CHAR:
     case COMM_TO_CHAR_ROOM:
@@ -600,15 +600,25 @@ void communicate(CHAR *ch, char *arg, int comm) {
       break; // COMM_TO_WORLD
   }
 
-  /* Print text_to_other to the acting character's room. */
-  if (listener && strlen(comm_info[comm].text_to_other)) {
-    snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
-    act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+  /* Perform some post-communication activites if there's a listening character. */
+  if (listener) {
+    /* Print text_to_other to the acting character's room. */
+    if (strlen(comm_info[comm].text_to_other)) {
+      snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+    }
+
+    /* Set the listener's reply_to value to the acting character's ID. */
+    if (comm_info[comm].set_reply && (listener != ch) && !IS_NPC(listener) && !IS_NPC(ch) && GET_ID(ch)) {
+      GET_REPLY_TO(listener) = GET_ID(ch);
+    }
   }
 
-  /* Set the listener's reply_to value to the acting character's ID. */
-  if (!IS_NPC(ch) && comm_info[comm].set_reply && listener && (listener != ch) && GET_ID(ch)) {
-    GET_REPLY_TO(listener) = GET_ID(ch);
+  /* Signal communication events. */
+  switch (comm) {
+    case COMM_SAY:
+      signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
+      break;
   }
 }
 
@@ -646,8 +656,6 @@ void do_gtell(CHAR *ch, char *arg, int cmd) {
 /* Function called by the 'say' command. */
 void do_say(CHAR *ch, char *arg, int cmd) {
   communicate(ch, arg, COMM_SAY);
-
-  signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
 }
 
 
