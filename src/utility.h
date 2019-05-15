@@ -105,6 +105,7 @@ int CORPSE_HAS_TROPHY(struct obj_data *obj);
 int OSTRENGTH_APPLY_INDEX(struct char_data *ch);
 int STRENGTH_APPLY_INDEX(struct char_data *ch);
 
+bool SAME_GROUP_EX(CHAR *ch1, CHAR *ch2, bool ignore_aff_group);
 bool SAME_GROUP(CHAR *ch1, CHAR *ch2);
 
 char *how_good(int percent);

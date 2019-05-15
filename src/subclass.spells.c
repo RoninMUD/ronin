@@ -1588,6 +1588,7 @@ void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *vic
         spell_incendiary_cloud(level, ch, victim, 0);
       }
       break;
+
     default:
       log_f("Wrong 'type' called in cast_incendiary_cloud!");
       break;
@@ -1647,6 +1648,7 @@ void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
     case SPELL_TYPE_SPELL:
       spell_tremor(level, ch, 0, 0);
       break;
+
     default:
       log_f("Wrong 'type' called in cast_tremor!");
       break;
@@ -1662,7 +1664,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   send_to_room("The ground begins to shake and heave.\n\r", CHAR_REAL_ROOM(ch));
 
-  for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
+  for (CHAR *temp_vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_vict; temp_vict; temp_vict = next_vict) {
     next_vict = temp_vict->next_in_room;
 
     if ((temp_vict == ch) || IS_IMMORTAL(temp_vict) || (IS_NPC(ch) && IS_NPC(temp_vict))) continue;
@@ -1684,6 +1686,7 @@ void cast_blur(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *ta
     case SPELL_TYPE_SPELL:
       spell_blur(level, ch, 0, 0);
       break;
+
     default:
        log_f("Wrong 'type' called in cast_blur!");
       break;
@@ -1704,118 +1707,54 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
     case SPELL_TYPE_SPELL:
       spell_tranquility(level, ch, 0, 0);
       break;
+
     default:
-      log_f("Wrong type called in tranquility!");
+      log_f("Wrong 'type' called in cast_tranquility!");
       break;
   }
 }
 
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  CHAR *group_leader = NULL;
-  CHAR *group_member = NULL;
-  FOL *follower = NULL;
-  AFF af;
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch; temp_ch; temp_ch = next_ch) {
+    next_ch = temp_ch->next_in_room;
 
-  af.type       = SPELL_TRANQUILITY;
-  af.duration   = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 3 : 6;
-  af.bitvector  = 0;
-  af.bitvector2 = 0;
+    if (!SAME_GROUP_EX(temp_ch, ch, TRUE)) continue;
 
-  if (ch->master) {
-    /* Find the group leader. */
-    group_leader = ch->master;
+    send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", temp_ch);
+    act("$n is suddenly awash in a sense of tranquility.", FALSE, temp_ch, 0, 0, TO_ROOM);
+
+    affect_from_char(temp_ch, SPELL_TRANQUILITY);
+
+    affect_apply(temp_ch, SPELL_TRANQUILITY, (ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_ch)) ? 3 : 6), 3, APPLY_HITROLL, 0, 0);
+    affect_apply(temp_ch, SPELL_TRANQUILITY, (ROOM_CHAOTIC(CHAR_REAL_ROOM(temp_ch)) ? 3 : 6), 3, APPLY_DAMROLL, 0, 0);
   }
-  else {
-    /* The acting character is the leader (or there is no group leader). */
-    group_leader = ch;
-  }
-
-  /* Apply the affects to the group leader first. */
-  if (group_leader != ch && IS_AFFECTED(group_leader, AFF_GROUP)) {
-    send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", group_leader);
-    act("$n is suddenly awash in a sense of tranquility.", TRUE, group_leader, 0, 0, TO_ROOM);
-
-    affect_from_char(group_leader, SPELL_TRANQUILITY);
-
-    af.location = APPLY_HITROLL;
-    af.modifier = 3;
-
-    affect_to_char(group_leader, &af);
-
-    af.location = APPLY_DAMROLL;
-    af.modifier = 3;
-
-    affect_to_char(group_leader, &af);
-  }
-
-  /* Loop through all of the group members of group_leader's group and apply the affects to them. */
-  for (follower = group_leader->followers; follower; follower = follower->next) {
-    group_member = follower->follower;
-
-    if (!group_member || group_member == ch || !SAME_ROOM(group_member, ch)) continue;
-
-    if (IS_AFFECTED(group_member, AFF_GROUP)) {
-      send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", group_member);
-      act("$n is suddenly awash in a sense of tranquility.", TRUE, group_member, 0, 0, TO_ROOM);
-
-      affect_from_char(group_member, SPELL_TRANQUILITY);
-
-      af.location = APPLY_HITROLL;
-      af.modifier = 3;
-
-      affect_to_char(group_member, &af);
-
-      af.location = APPLY_DAMROLL;
-      af.modifier = 3;
-
-      affect_to_char(group_member, &af);
-    }
-  }
-
-  /* Apply the affects to the caster. */
-  send_to_char("You suddenly feel awash in a sense of tranquility.\n\r", ch);
-  act("$n is suddenly awash in a sense of tranquility.", TRUE, ch, 0, 0, TO_ROOM);
-
-  affect_from_char(ch, SPELL_TRANQUILITY);
-
-  af.location = APPLY_HITROLL;
-  af.modifier = 2;
-
-  affect_to_char(ch, &af);
-
-  af.location = APPLY_DAMROLL;
-  af.modifier = 2;
-
-  affect_to_char(ch, &af);
 }
 
-void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
   case SPELL_TYPE_SPELL:
     if (victim)
       spell_wither(level, ch, victim, 0);
     break;
+
   default:
-    log_f("Wrong type called in wither!");
+    log_f("Wrong 'type' called in cast_wither!");
     break;
   }
 }
 
-void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
+void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int wither_pulse_action(CHAR *victim);  
 
-  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-  {
+  if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
+
     return;
   }
 
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
@@ -1823,29 +1762,17 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
 
-  if (affected_by_spell(victim, SPELL_WITHER)) {
-    affect_from_char(victim, SPELL_WITHER);
-  }
+  affect_from_char(victim, SPELL_WITHER);
 
-  AFF af;
-
-  af.type       = SPELL_WITHER;
-  af.duration   = 4;
-  af.location   = 0;
-  af.modifier   = level;
-  af.bitvector  = 0;
-  af.bitvector2 = 0;
-
-  affect_to_char(victim, &af);
+  affect_apply(victim, SPELL_WITHER, 4, 0, level, 0, 0);
 }
 
-void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
-{
-  switch (type)
-  {
+void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_shadow_wraith(level, ch, 0, 0);
       break;
+
     default:
       log_f("Wrong type called in shadow wraith!");
       break;
@@ -1860,10 +1787,9 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
   }
 
-  if (num_shadows >= 4 ||
-      ((num_shadows >= 2) && (GET_SC_LEVEL(ch) < 4)) ||
-      ((num_shadows >= 3) && (GET_SC_LEVEL(ch) < 5))) {
+  if ((num_shadows >= 4) || ((num_shadows >= 2) && (GET_SC_LEVEL(ch) < 4)) || ((num_shadows >= 3) && (GET_SC_LEVEL(ch) < 5))) {
     send_to_char("You are already controlling the maximum number of shadows you can maintain.\n\r", ch);
+
     return;
   }
 
@@ -1872,11 +1798,15 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (GET_MANA(ch) < extra_mana_cost) {
     send_to_char("You can't summon enough energy to manifest another shadow.\n\r", ch);
 
-    GET_MANA(ch) += spell_info[SPELL_SHADOW_WRAITH].min_usesmana; /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
+    /* Refund base mana cost, since they couldn't muster the full cost of the spell. */
+    GET_MANA(ch) += spell_info[SPELL_SHADOW_WRAITH].min_usesmana;
+
     return;
   }
 
   GET_MANA(ch) -= extra_mana_cost;
+
+  /* Apply the affect. This has to be done the old-school way, due to using affect_join() below. */
 
   AFF af;
 
@@ -1898,14 +1828,17 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       send_to_char("Your shadow stretches to the north.\n\r", ch);
       act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
       break;
+
     case 2:
       send_to_char("Your shadow stretches to the south.\n\r", ch);
       act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
       break;
+
     case 3:
       send_to_char("Your shadow stretches to the east.\n\r", ch);
       act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
       break;
+
     case 4:
       send_to_char("Your shadow stretches to the west.\n\r", ch);
       act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
@@ -1916,14 +1849,14 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   level = MIN(LEVEL_MORT, level); // Dusk Reqiuem has a hack for > LEVEL_MORT.
 
-  switch (type)
-  {
+  switch (type)   {
   case SPELL_TYPE_SPELL:
     if (victim)
       spell_dusk_requiem(level, ch, victim, 0);
     break;
+
   default:
-    log_f("Wrong type called in dusk_requiem!");
+    log_f("Wrong 'type' called in cast_dusk_requiem!");
     break;
   }
 }
@@ -1932,6 +1865,7 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) {
     send_to_char("Your requiem fails to draw power from the fleeting shadows.\n\r", ch);
     act("$n's requiem fails to draw power from the fleeting shadows.", FALSE, ch, 0, 0, TO_ROOM);
+
     return;
   }
 

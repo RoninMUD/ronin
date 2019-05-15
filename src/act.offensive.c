@@ -441,6 +441,12 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
   if (!GET_WEAPON(ch)) {
     send_to_char("You need to wield a weapon to backstab someone.\n\r", ch);
 
