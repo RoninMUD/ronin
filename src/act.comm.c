@@ -8,8 +8,6 @@
 Majority of act.comm.c code re-written by Night.
 */
 
-/* Includes */
-
 #include <stdio.h>
 #include <string.h>
 
@@ -26,396 +24,950 @@ Majority of act.comm.c code re-written by Night.
 #include "limits.h"
 #include "spells.h"
 
-
-/* Externs */
-
 extern char *skip_spaces(char * string);
 
-
-/* Variables */
-
-char *color_field_full[] =
-{
-  "(A) Text               ",
-  "(B) Prompt             ",
-  "(C) Room Name          ",
-  "(D) Exits              ",
-  "(E) Gossips            ",
-  "(F) Tells              ",
-  "(G) Auctions/Score     ",
-  "(H) Shouts/Yells       ",
-  "(I) Says               ",
-  "(J) Group Tells        ",
-  "(K) Combat->Your Hits  ",
-  "(L) Combat->Mob Hits   ",
-  "(M) Background         ",
-  "(N) Quest              ",
-  "(O) Chaos              ",
-  "(P)                    "
+const comm_info_t comm_info[] = {
+  {
+    .name = "tell",
+    .text_to_ch = "$n tell $N",
+    .text_to_vict = "$n tells $N",
+    .text_to_other = "",
+    .text_no_arg = "Who do you wish to tell, and what?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_NOMESSAGE,
+    .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
+    .to = COMM_TO_CHAR,
+    .mode = COMM_MODE_DIRECT,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = TRUE,
+    .color = 6,
+  },
+  {
+    .name = "reply",
+    .text_to_ch = "$n reply to $N",
+    .text_to_vict = "$n replies",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you wish to reply?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = PLR_NOSHOUT,
+    .to = COMM_TO_CHAR,
+    .mode = COMM_MODE_DIRECT,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = TRUE,
+    .color = 6,
+  },
+  {
+    .name = "whisper",
+    .text_to_ch = "$n whisper to $N",
+    .text_to_vict = "$n whispers to $N",
+    .text_to_other = "$n whispers something to $N.",
+    .text_no_arg = "Who do you wish to whisper, and what?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
+    .to = COMM_TO_CHAR_ROOM,
+    .mode = COMM_MODE_DIRECT,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = TRUE,
+    .color = 0,
+  },
+  {
+    .name = "ask",
+    .text_to_ch = "$n ask $N",
+    .text_to_vict = "$n asks $N",
+    .text_to_other = "$n asks $N a question.",
+    .text_no_arg = "Who do you wish to ask, and what?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
+    .to = COMM_TO_CHAR_ROOM,
+    .mode = COMM_MODE_DIRECT,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = TRUE,
+    .color = 0,
+  },
+  {
+    .name = "gtell",
+    .text_to_ch = "$n tell your group",
+    .text_to_vict = "** $n tells $N",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want to tell your group?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_GROUP,
+    .mode = COMM_MODE_GENERAL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 10,
+  },
+  {
+    .name = "say",
+    .text_to_ch = "$n say",
+    .text_to_vict = "$n says",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want to say?",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_ROOM,
+    .mode = COMM_MODE_GENERAL,
+    .hide = FALSE,
+    .min_pos_hear = POSITION_RESTING,
+    .set_reply = FALSE,
+    .color = 9,
+  },
+  {
+    .name = "shout",
+    .text_to_ch = "$n shout",
+    .text_to_vict = "$n shouts",
+    .text_to_other = "",
+    .text_no_arg = "Shout?  Yes!  Fine!  Shout we must, but WHAT?",
+    .pflag_on = 0,
+    .pflag_off = PLR_SHOUT_OFF,
+    .pflag_no_do = PLR_NOSHOUT | PLR_KILL | PLR_THIEF | PLR_QUIET,
+    .pflag_no_hear = PLR_NOSHOUT,
+    .to = COMM_TO_ZONE,
+    .mode = COMM_MODE_GENERAL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 8,
+  },
+  {
+    .name = "yell",
+    .text_to_ch = "$n yell",
+    .text_to_vict = "$n yells",
+    .text_to_other = "",
+    .text_no_arg = "Yell?  Yes!  Fine!  Yell we must, but WHAT?",
+    .pflag_on = 0,
+    .pflag_off = PLR_YELL_OFF,
+    .pflag_no_do = PLR_NOSHOUT | PLR_KILL | PLR_THIEF | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_WORLD,
+    .mode = COMM_MODE_GENERAL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 8,
+  },
+  {
+    .name = "gossip",
+    .text_to_ch = "$n (gossip)",
+    .text_to_vict = "$n (gossip)",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want to say on the gossip channel?",
+    .pflag_on = PLR_AUCTION,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_WORLD,
+    .mode = COMM_MODE_CHANNEL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 5,
+  },
+  {
+    .name = "auction",
+    .text_to_ch = "$n (auction)",
+    .text_to_vict = "$n (auction)",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want to say on the auction channel?",
+    .pflag_on = PLR_AUCTION,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_WORLD,
+    .mode = COMM_MODE_CHANNEL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 7,
+  },
+  {
+    .name = "quest",
+    .text_to_ch = "$n (quest)",
+    .text_to_vict = "$n (quest)",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want say on the quest channel?",
+    .pflag_on = PLR_QUESTC,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_WORLD,
+    .mode = COMM_MODE_CHANNEL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 14,
+  },
+  {
+    .name = "chaos",
+    .text_to_ch = "$n (chaos)",
+    .text_to_vict = "$n (chaos)",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you want say on the chaos channel?",
+    .pflag_on = PLR_CHAOS,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT | PLR_QUIET,
+    .pflag_no_hear = 0,
+    .to = COMM_TO_WORLD,
+    .mode = COMM_MODE_CHANNEL,
+    .hide = PERS_MORTAL,
+    .min_pos_hear = 0,
+    .set_reply = FALSE,
+    .color = 15,
+  },
 };
 
 
-char *color_field_simple[] =
-{
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16"
+// TODO: Sanitize mud-wide color system.
+
+const color_t color_info[] = {
+  { .code = "\x1B[0m\x1B[30m", .name = "Black",        .key = "a" },
+  { .code = "\x1B[0m\x1B[31m", .name = "Dark Red",     .key = "b" },
+  { .code = "\x1B[0m\x1B[32m", .name = "Dark Green",   .key = "c" },
+  { .code = "\x1B[0m\x1B[33m", .name = "Dark Yellow",  .key = "d" },
+  { .code = "\x1B[0m\x1B[34m", .name = "Dark Blue",    .key = "e" },
+  { .code = "\x1B[0m\x1B[35m", .name = "Dark Magenta", .key = "f" },
+  { .code = "\x1B[0m\x1B[36m", .name = "Dark Cyan",    .key = "g" },
+  { .code = "\x1B[0m\x1B[37m", .name = "Grey",         .key = "h" },
+  { .code = "\x1B[1m\x1B[31m", .name = "Red",          .key = "i" },
+  { .code = "\x1B[1m\x1B[32m", .name = "Green",        .key = "j" },
+  { .code = "\x1B[1m\x1B[33m", .name = "Yellow",       .key = "k" },
+  { .code = "\x1B[1m\x1B[34m", .name = "Blue",         .key = "l" },
+  { .code = "\x1B[1m\x1B[35m", .name = "Magenta",      .key = "m" },
+  { .code = "\x1B[1m\x1B[36m", .name = "Cyan",         .key = "n" },
+  { .code = "\x1B[1m\x1B[37m", .name = "White",        .key = "o" },
+  { .code = "\x1B[1m\x1B[30m", .name = "Dark Grey",    .key = "p" },
 };
 
 
-char *color_key[] =
-{
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q"
+const color_field_t color_field_info[] = {
+  { .field = "A", .name = "Text"               },
+  { .field = "B", .name = "Prompt"             },
+  { .field = "C", .name = "Room Name"          },
+  { .field = "D", .name = "Exits"              },
+  { .field = "E", .name = "Gossips"            },
+  { .field = "F", .name = "Tells/Replies"      },
+  { .field = "G", .name = "Auctions/Score"     },
+  { .field = "H", .name = "Shouts/Yells"       },
+  { .field = "I", .name = "Says"               },
+  { .field = "J", .name = "Group Tells/Wiznet" },
+  { .field = "K", .name = "Combat: Your Hits"  },
+  { .field = "L", .name = "Combat: Mob Hits"   },
+  { .field = "M", .name = "Background"         },
+  { .field = "N", .name = "Quest"              },
+  { .field = "O", .name = "Chaos"              },
 };
 
 
-/* Structs */
-
-struct drunk_t {
-  int min_drunk_level;
-  int num_replacements;
-  char *replacement[11];
+struct drunk_t drunk[] = {
+  { 3, 10, {"a", "a", "a", "A", "aa", "ah", "Ah", "ao", "aw", "oa", "ahhhh"} },
+  { 8, 5,  {"b", "b", "b", "B", "B", "vb"} },
+  { 3, 5,  {"c", "c", "C", "cj", "sj", "zj"} },
+  { 5, 2,  {"d", "d", "D"} },
+  { 3, 3,  {"e", "e", "eh", "E"} },
+  { 4, 5,  {"f", "f", "ff", "fff", "fFf", "F"} },
+  { 8, 2,  {"g", "g", "G"} },
+  { 9, 6,  {"h", "h", "hh", "hhh", "Hhh", "HhH", "H"} },
+  { 7, 6,  {"i", "i", "Iii", "ii", "iI", "Ii", "I"} },
+  { 9, 5,  {"j", "j", "jj", "Jj", "jJ", "J"} },
+  { 7, 2,  {"k", "k", "K"} },
+  { 3, 2,  {"l", "l", "L"} },
+  { 5, 8,  {"m", "m", "mm", "mmm", "mmmm", "mmmmm", "MmM", "mM", "M"} },
+  { 6, 6,  {"n", "n", "nn", "Nn", "nnn", "nNn", "N"} },
+  { 3, 6,  {"o", "o", "ooo", "ao", "aOoo", "Ooo", "ooOo"} },
+  { 3, 2,  {"p", "p", "P"} },
+  { 5, 5,  {"q", "q", "Q", "ku", "ququ", "kukeleku"} },
+  { 4, 2,  {"r", "r", "R"} },
+  { 2, 5,  {"s", "ss", "zzZzssZ", "ZSssS", "sSzzsss", "sSss"} },
+  { 5, 2,  {"t", "t", "T"} },
+  { 3, 6,  {"u", "u", "uh", "Uh", "Uhuhhuh", "uhU", "uhhu"} },
+  { 4, 2,  {"v", "v", "V"} },
+  { 4, 2,  {"w", "w", "W"} },
+  { 5, 6,  {"x", "x", "X", "ks", "iks", "kz", "xz"} },
+  { 3, 2,  {"y", "y", "Y"} },
+  { 2, 9,  {"z", "z", "ZzzZz", "Zzz", "Zsszzsz", "szz", "sZZz", "ZSz", "zZ", "Z"} }
 };
 
-
-struct drunk_t drunk[] =
-{
-  {3, 10, {"a", "a", "a", "A", "aa", "ah", "Ah", "ao", "aw", "oa", "ahhhh"}},
-  {8, 5,  {"b", "b", "b", "B", "B", "vb"}},
-  {3, 5,  {"c", "c", "C", "cj", "sj", "zj"}},
-  {5, 2,  {"d", "d", "D"}},
-  {3, 3,  {"e", "e", "eh", "E"}},
-  {4, 5,  {"f", "f", "ff", "fff", "fFf", "F"}},
-  {8, 2,  {"g", "g", "G"}},
-  {9, 6,  {"h", "h", "hh", "hhh", "Hhh", "HhH", "H"}},
-  {7, 6,  {"i", "i", "Iii", "ii", "iI", "Ii", "I"}},
-  {9, 5,  {"j", "j", "jj", "Jj", "jJ", "J"}},
-  {7, 2,  {"k", "k", "K"}},
-  {3, 2,  {"l", "l", "L"}},
-  {5, 8,  {"m", "m", "mm", "mmm", "mmmm", "mmmmm", "MmM", "mM", "M"}},
-  {6, 6,  {"n", "n", "nn", "Nn", "nnn", "nNn", "N"}},
-  {3, 6,  {"o", "o", "ooo", "ao", "aOoo", "Ooo", "ooOo"}},
-  {3, 2,  {"p", "p", "P"}},
-  {5, 5,  {"q", "q", "Q", "ku", "ququ", "kukeleku"}},
-  {4, 2,  {"r", "r", "R"}},
-  {2, 5,  {"s", "ss", "zzZzssZ", "ZSssS", "sSzzsss", "sSss"}},
-  {5, 2,  {"t", "t", "T"}},
-  {3, 6,  {"u", "u", "uh", "Uh", "Uhuhhuh", "uhU", "uhhu"}},
-  {4, 2,  {"v", "v", "V"}},
-  {4, 2,  {"w", "w", "W"}},
-  {5, 6,  {"x", "x", "X", "ks", "iks", "kz", "xz"}},
-  {3, 2,  {"y", "y", "Y"}},
-  {2, 9,  {"z", "z", "ZzzZz", "Zzz", "Zsszzsz", "szz", "sZZz", "ZSz", "zZ", "Z"}}
-};
-
-
-
-/* Prototypes */
-
-char *make_drunk(char *string, CHAR *ch);
-void do_setcolor(CHAR *ch, char *arg, int cmd);
-void do_title(CHAR *ch, char *arg, int cmd);
-void do_report(CHAR *ch, char *argument, int cmd);
-void do_say(CHAR *ch, char *arg, int cmd);
-void do_yell(CHAR *ch, char *arg, int cmd);
-void do_shout(CHAR *ch, char *arg, int cmd);
-void do_gossip(CHAR *ch, char *arg, int cmd);
-void do_auction(CHAR *ch, char *arg, int cmd);
-void do_chaos(CHAR *ch, char *arg, int cmd);
-void do_channel(CHAR *ch, char *arg, int cmd);
-void do_tell(CHAR *ch, char *arg, int cmd);
-void do_reply(CHAR *ch, char *arg, int cmd);
-void do_gtell(CHAR *ch, char *arg, int cmd);
-void do_ask(CHAR *ch, char *arg, int cmd);
-void do_whisper(CHAR *ch, char *arg, int cmd);
-void do_write(CHAR *ch, char *arg, int cmd);
-
-
-/* Functions */
 
 /* Make a string look drunk. Original code by Apex. Modifications by the Maniac
-   from Mythran for envy(2), Kohl Desenee for ROM 2.4 and Ranger for RoninMUD.
-   Re-written by Night, 12/10/2011 */
-char *make_drunk(char *string, CHAR *ch) {
+   from Mythran for envy(2), Kohl Desenee for ROM 2.4, and Ranger for RoninMUD.
+   Re-written by Night. */
+void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int drunk_level) {
+  if (!src || !dst || !dst_sz) return;
+
   char buf[MSL];
-  char temp_string[MIL];
-  int drunk_level = 0;
-  int i = 0;
-  char temp = 0;
-  int replacement_number = 0;
-  int character_position = 0;
 
-  /* Copy the input string into a temporary array for processing. */
-  strcpy(temp_string, string);
+  memset(buf, 0, sizeof(buf));
 
-  /* Check how drunk the character is. */
-  drunk_level = GET_COND(ch, DRUNK);
+  int buf_pos = 0;
 
-  /* Character is drunk so we'll mangle their text. */
-  if (drunk_level > 0) {
-    /* Loop through each character in the string. */
-    for (i = 0; i < strlen(temp_string); i++) {
-      temp = UPPER(temp_string[i]);
+  for (int i = 0; (i < strlen(src)) && (buf_pos < (sizeof(buf) - 1)); i++) {
+    char temp;
 
-      /* Check if the character is A through Z. */
-      if (temp >= 'A' &&
-        temp <= 'Z') {
-        /* If the character is drunk enough, mangle the character. */
-        if (drunk_level > drunk[temp - 'A'].min_drunk_level) {
-          replacement_number = number(0, drunk[temp - 'A'].num_replacements);
-          strcpy(&buf[character_position], drunk[temp - 'A'].replacement[replacement_number]);
-          character_position += strlen(drunk[temp - 'A'].replacement[replacement_number]);
-        }
-      }
-      else /* Scramble any numbers in the text. */
-        if (temp >= '0' &&
-          temp <= '9') {
-          temp = '0' + number(0, 9);
+    temp = src[i];
+    temp = UPPER(temp);
 
-          buf[character_position] = temp;
-          character_position++;
-        }
-        else /* Non-alphanumeric character, leave it alone. */
-        {
-          buf[character_position] = temp_string[i];
-          character_position++;
-        }
+    if ((temp >= 'A') && (temp <= 'Z') && (drunk_level > drunk[temp - 'A'].min_drunk_level)) {
+      char *replacement_str = drunk[temp - 'A'].replacement[number(0, drunk[temp - 'A'].num_replacements)];
+
+      strncpy(&buf[buf_pos], replacement_str, sizeof(buf) - buf_pos);
+
+      buf_pos += strlen(replacement_str);
     }
-
-    /* If the mangled text is too big, truncate it and replace the last three characters with ... */
-    if (character_position > MIL) {
-      strcpy(&buf[MIL - 3], "...");
-      character_position = MIL;
+    else if (temp >= '0' && temp <= '9') {
+      buf[buf_pos++] = '0' + number(0, 9);
     }
-
-    /* Ensure that the string is null-terminated. */
-    buf[character_position] = '\0';
-
-    /* Copy the mangled text into the original string variable. */
-    strcpy(string, buf);
+    else {
+      buf[buf_pos++] = src[i];
+    }
   }
 
-  return string;
+  buf[sizeof(buf) - 1] = '\0';
+
+  if (strlen(buf) > dst_sz) {
+    strcpy(&buf[dst_sz - 4], "...\0");
+  }
+
+  snprintf(dst, dst_sz, "%s", buf);
 }
 
 
-/* Function called by the 'color' command.
-   Re-written by Night, 12/10/2011 */
-void do_setcolor(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  char first_arg[10];
-  char second_arg[10];
-  char field_name[10];
-  char field_color[10];
-  int i = 0;
-  int temp = 0;
-  int set_field = 0;
-  int set_color = 0;
+/* Unified communication function. */
+void communicate(CHAR *ch, char *arg, int comm) {
+  if (!ch || (comm < COMM_FIRST) || (comm > COMM_LAST)) return;
 
-  /* NPCs don't get to use the color command. */
-  if (IS_NPC(ch)) {
-    send_to_char("NPCs can't turn on color.\n\r", ch);
+  arg = skip_spaces(arg);
+
+  if (!*arg) {
+    printf_to_char(ch, "%s\n\r", comm_info[comm].text_no_arg);
 
     return;
   }
 
-  half_chop(arg, first_arg, sizeof(first_arg), second_arg, sizeof(second_arg));
+  if (IS_NPC(ch) && (comm == COMM_REPLY)) {
+    printf_to_char(ch, "NPCs can't use reply.\n\r");
 
-  /* Color command was called without any arguments. Toggle color on or off. */
-  if (!*first_arg) {
-    if (ch->colors[0]) {
-      send_to_char("Color is now OFF.\n\r", ch);
-      ch->colors[0] = 0;
-    }
-    else {
-      send_to_char("Color is now ON.\n\r", ch);
-      ch->colors[0] = 1;
-    }
+    return;
   }
-  else /* Color command was called with an argument of 'text'. Toggle added text color on or off.*/
-    if (!strcmp(first_arg, "text")) {
-      /* Color is off. */
-      if (ch->colors[0] == 0) {
-        send_to_char("You must turn color on first.\n\r", ch);
+
+  if (!IS_NPC(ch) && IS_SET(comm_info[comm].pflag_no_do, PLR_NOMESSAGE) && IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
+    printf_to_char(ch, "You can't use %s when you have NoMessage turned on.\n\r", comm_info[comm].name);
+
+    return;
+  }
+
+  if (!IS_NPC(ch) && IS_SET(comm_info[comm].pflag_no_do, PLR_NOSHOUT) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
+    printf_to_char(ch, "You have displeased the gods; you can't use %s.\n\r", comm_info[comm].name);
+
+    return;
+  }
+
+  if (!CHAOSMODE && !IS_NPC(ch) &&
+      ((IS_SET(comm_info[comm].pflag_no_do, PLR_KILL) && IS_SET(GET_PFLAG(ch), PLR_KILL)) ||
+       (IS_SET(comm_info[comm].pflag_no_do, PLR_THIEF) && IS_SET(GET_PFLAG(ch), PLR_THIEF)))) {
+    printf_to_char(ch, "You can't %s!\n\r", comm_info[comm].name);
+
+    return;
+  }
+
+  if (!IS_NPC(ch) && IS_SET(comm_info[comm].pflag_no_do, PLR_QUIET) &&
+      (IS_SET(GET_PFLAG(ch), PLR_QUIET) && IS_SET(GET_PFLAG(ch), PLR_QUEST))) {
+    printf_to_char(ch, "The Questmaster has taken away your ability to interrupt.\n\r");
+
+    return;
+  }
+
+  if (!IS_NPC(ch) && comm_info[comm].pflag_on && !IS_SET(GET_PFLAG(ch), comm_info[comm].pflag_on)) {
+    SET_BIT(GET_PFLAG(ch), comm_info[comm].pflag_on);
+
+    printf_to_char(ch, "You turn ON the %s channel.\n\r", comm_info[comm].name);
+  }
+  
+  CHAR *listener = NULL;
+
+  char name[MIL];
+
+  switch (comm_info[comm].mode) {
+    case COMM_MODE_DIRECT:
+      switch (comm) {
+        case COMM_REPLY:
+          listener = get_ch_by_id(GET_REPLY_TO(ch));
+
+          if (listener && listener->switched) {
+            listener = listener->switched;
+          }
+
+          if (!listener) {
+            printf_to_char(ch, "There is nobody to reply to...\n\r");
+
+            return;
+          }
+          break; // COMM_REPLY
+
+        default:
+          arg = skip_spaces(one_argument(arg, name));
+
+          switch (comm_info[comm].to) {
+            case COMM_TO_CHAR:
+              listener = get_ch_by_name(name);
+              break;
+
+            case COMM_TO_CHAR_ROOM:
+              listener = get_char_room_vis(ch, name);
+              break;
+          }
+
+          if (listener && listener->switched) {
+            listener = listener->switched;
+          }
+
+          if (!listener || WIZ_INV(ch, listener)) {
+            printf_to_char(ch, "No one by that name here...\n\r");
+
+            return;
+          }
+          break; // default
       }
-      else
-        if (ch->colors[0] == 1) {
-          send_to_char("You will no longer see added text color.\n\r", ch);
-          ch->colors[0] = 2;
-        }
-        else
-          if (ch->colors[0] == 2) {
-            send_to_char("You will now see added text color.\n\r", ch);
-            ch->colors[0] = 1;
-          }
-    }
-    else /* Color command was called with an argument of 'list'. Show the list of the character's */
-      if (!strcmp(first_arg, "list")) {
-        /* Loop through the color fields. */
-        for (i = 0; i < (MAX_COLORS - 1); i++) {
-          /* Wiznet uses the same color as Group Tells. */
-          if (i == 9 &&
-            (!IS_NPC(ch) && !IS_MORTAL(ch))) {
-            send_to_char("(J) Group Tells/Wiznet ", ch);
-          }
-          else /* Print the name of the color field. */
-          {
-            send_to_char(color_field_full[i], ch);
-          }
 
-          /* Check if the current color field is set. */
-          temp = ch->colors[i + 1];
+      if (!GET_DESCRIPTOR(listener) || (GET_DESCRIPTOR(listener)->connected != CON_PLYNG)) {
+        act("$E isn't connected at the moment.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
 
-          /* If the color field isn't set, print that out. */
-          if (!temp) {
-            send_to_char(":        Not set.\n\r", ch);
-          }
-          else /* Print the current color and show a sample of it. */
-          {
-            sprintf(buf, ": `%sSAMPLE`q %s\n\r", color_key[temp - 1], Color[(temp * 2) - 1]);
-            send_to_char(buf, ch);
-          }
+        return;
+      }
+
+      if ((IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOMESSAGE) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) ||
+          (GET_POS(listener) < comm_info[comm].min_pos_hear)) {
+        act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+
+        return;
+      }
+
+      if (IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOSHOUT) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
+        act("The gods have taken away $S ability to communicate.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+
+        return;
+      }
+      break; // COMM_MODE_DIRECT
+  }
+
+  char message[MIL];
+
+  if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {
+    drunkify_string(arg, message, sizeof(message), GET_COND(ch, DRUNK));
+  }
+  else {
+    snprintf(message, sizeof(message), "%s", arg);
+  }
+
+  char buf[MSL];
+
+  switch (comm_info[comm].mode) {
+    case COMM_MODE_DIRECT:
+    case COMM_MODE_GENERAL:
+      /* Fartmouth is hard-coded to COMM_SAY, because it's "special." */
+      if ((comm == COMM_SAY) && affected_by_spell(ch, SMELL_FARTMOUTH)) {
+        snprintf(buf, sizeof(buf), "%s `d'%s'", comm_info[comm].text_to_ch, message);
+      }
+      else {
+        snprintf(buf, sizeof(buf), "%s '%s'", comm_info[comm].text_to_ch, message);
+      }
+      break; // COM_MODE_DIRECT, COM_MODE_GENERAL
+
+    case COMM_MODE_CHANNEL:
+      snprintf(buf, sizeof(buf), "%s [ %s ]", comm_info[comm].text_to_ch, message);
+      break; // COM_MODE_CHANNEL
+  }
+
+  if (comm_info[comm].color) COLOR(ch, comm_info[comm].color);
+  act(buf, FALSE, ch, 0, listener, TO_CHAR);
+  if (comm_info[comm].color) ENDCOLOR(ch);
+
+  switch (comm_info[comm].mode) {
+    case COMM_MODE_DIRECT:
+    case COMM_MODE_GENERAL:
+      /* Fartmouth is hard-coded to COMM_SAY, because it's "special." */
+      if ((comm == COMM_SAY) && affected_by_spell(ch, SMELL_FARTMOUTH)) {
+        snprintf(buf, sizeof(buf), "%s `d'%s'", comm_info[comm].text_to_vict, message);
+      }
+      else {
+        snprintf(buf, sizeof(buf), "%s '%s'", comm_info[comm].text_to_vict, message);
+      }
+      break; // COM_MODE_DIRECT, COM_MODE_GENERAL
+
+    case COMM_MODE_CHANNEL:
+      snprintf(buf, sizeof(buf), "%s [ %s ]", comm_info[comm].text_to_vict, message);
+      break; // COM_MODE_CHANNEL
+  }
+
+  switch (comm_info[comm].to) {
+    case COMM_TO_CHAR:
+    case COMM_TO_CHAR_ROOM:
+      if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
+      if (comm_info[comm].color) ENDCOLOR(listener);
+      break; // COMM_TO_CHAR, COMM_TO_CHAR_ROOM
+
+    case COMM_TO_GROUP:
+      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+        if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
+
+        CHAR *temp_ch = temp_desc->character;
+
+        if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
+            SAME_GROUP(temp_ch, ch)) {
+          if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
-      else /* Color command was called with an argument of 'colors'. Show the list of colors. */
-        if (!strcmp(first_arg, "colors")) {
-          send_to_char(" 0 : Disable\n\r", ch);
+      break; // COMM_TO_GROUP
 
-          /* Loop through the available colors, print out the code and show a sample of it. */
-          for (i = 1; i < 17; i++) {
-            sprintf(buf, " %s : `%sSAMPLE`q ", color_field_simple[i - 1], color_key[i - 1]);
-            send_to_char(buf, ch);
-            send_to_char(Color[(i * 2) - 1], ch);
-            send_to_char("\n\r", ch);
-          }
+    case COMM_TO_ROOM:
+      for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
+        if (!GET_DESCRIPTOR(temp_ch) || (GET_DESCRIPTOR(temp_ch)->connected != CON_PLYNG)) continue;
 
-          send_to_char(" Q : Disable\n\r", ch);
+        if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
+          if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
-        else /* Color command was called with an argument of 'set'. */
-          if (!strcmp(first_arg, "set")) {
-            /* No argument was provided to the set option. */
-            if (!*second_arg) {
-              send_to_char("Set what?\n\r", ch);
+      }
+      break; // COMM_TO_ROOM
 
-              return;
-            }
+    case COMM_TO_ZONE:
+      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+        if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
-            half_chop(second_arg, field_name, sizeof(field_name), field_color, sizeof(field_color));
+        CHAR *temp_ch = temp_desc->character;
 
-            /* No color was provided. */
-            if (!*field_color) {
-              send_to_char("What color?\n\r", ch);
+        if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
+            ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
+          if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          if (comm_info[comm].color) ENDCOLOR(temp_ch);
+        }
+      }
+      break; // COMM_TO_ZONE
 
-              return;
-            }
+    case COMM_TO_WORLD:
+      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+        if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
-            /* Loop through the possible color fields and check if the field specified exists. */
-            for (i = 0; i < (MAX_COLORS - 1); i++) {
-              if (!str_cmp(field_name, color_field_simple[i])) {
-                set_field = i + 1;
-              }
-            }
+        CHAR *temp_ch = temp_desc->character;
 
-            /* The field specified doesn't exist. */
-            if (!set_field) {
-              send_to_char("Invalid field.\n\r", ch);
+        if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
+          if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          if (comm_info[comm].color) ENDCOLOR(temp_ch);
+        }
+      }
+      break; // COMM_TO_WORLD
+  }
 
-              return;
-            }
+  if (listener && strlen(comm_info[comm].text_to_other)) {
+    snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
+    act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+  }
 
-            /* Loop through the possible colors and check if the color specified exists. */
-            for (i = 0; i < 16; i++) {
-              if (!str_cmp(field_color, color_field_simple[i])) {
-                set_color = (i + 1);
-              }
-            }
-
-            /* Fixed color disable, Ranger - June 96 */
-            if (!strcmp(field_color, "0") || !strcmp(field_color, "q")) {
-              send_to_char("Color disabled.\n\r", ch);
-              set_color = 0;
-            }
-            else /* The color specified doesn't exist. */
-              if (!set_color) {
-                send_to_char("Invalid color.\n\r", ch);
-
-                return;
-              }
-              else /* The specified field was the background and an invalid color was chosen. */
-                if (set_field == 13 &&
-                  set_color > 8) {
-                  send_to_char("Background color can only be (A-H).\n\r", ch);
-
-                  return;
-                }
-
-            ch->colors[set_field] = set_color;
-
-            /* Fixed color disable, Ranger - June 96*/
-            if (set_color) {
-              send_to_char("Color set.\n\r", ch);
-            }
-          }
-          else /* Color command was called with an unknown option. Print command usage info. */
-          {
-            send_to_char("Usage: color <list|colors|set|text> <field> <color>\n\r", ch);
-          }
-
-  ENDCOLOR(ch);
+  if (!IS_NPC(ch) && comm_info[comm].set_reply && listener && (listener != ch) && GET_ID(ch)) {
+    GET_REPLY_TO(listener) = GET_ID(ch);
+  }
 }
 
 
-/* Function called by the 'title' command.
-   Re-written by Night, 12/11/2011 */
-void do_title(CHAR *ch, char *arg, int cmd) {
+/* Function called by the 'tell' command. */
+void do_tell(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_TELL);
+}
+
+
+/* Function called by the 'reply' command. */
+void do_reply(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_REPLY);
+}
+
+
+/* Function called by the 'ask' command. */
+void do_ask(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_ASK);
+}
+
+
+/* Function called by the 'whisper' command. */
+void do_whisper(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_WHISPER);
+}
+
+
+/* Function called by the 'gtell' command. */
+void do_gtell(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_GTELL);
+}
+
+
+/* Function called by the 'say' command. */
+void do_say(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_SAY);
+
+  signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
+}
+
+
+/* Function called by the 'shout' command. */
+void do_shout(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_SHOUT);
+}
+
+/* Function called by the 'yell' command. */
+void do_yell(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_YELL);
+}
+
+
+/* Function called by the 'gossip' command. */
+void do_gossip(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_GOSSIP);
+}
+
+
+/* Function called by the 'auction' command. */
+void do_auction(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_AUCTION);
+}
+
+
+/* Function called by the 'chaos' command. */
+void do_chaos(CHAR *ch, char *arg, int cmd) {
+  communicate(ch, arg, COMM_CHAOS);
+}
+
+
+/* For special procedure direct communications from mobs to players.
+   Accepts printf-style args and bypasses all restrictions. */
+void comm_special(CHAR *ch, CHAR *listener, int comm, char *message, ...) {
+  if (!ch || !IS_NPC(ch) || !listener || IS_NPC(listener) || !message || !*message) return;
+
+  /* Direct communication only; no reply. */
+  if ((comm < COMM_TELL) || (comm > COMM_ASK) || (comm == COMM_REPLY)) return;
+
+  /* Redirect listener if they're mobswitched. */
+  if (listener->switched) {
+    listener = listener->switched;
+  }
+
+  /* We still didn't find a valid listener, so return. */
+  if (!listener || !GET_DESCRIPTOR(listener) || (GET_DESCRIPTOR(listener)->connected != CON_PLYNG)) return;
+
+  char buf[MSL];
+  va_list args;
+
+  va_start(args, message);
+  vsnprintf(buf, sizeof(buf), message, args);
+  va_end(args);
+
+  /* Show the text to the acting character. */
+  if (comm_info[comm].color) COLOR(ch, comm_info[comm].color);
+  act_f(comm_info[comm].hide, ch, 0, listener, TO_CHAR, "%s '%s'", comm_info[comm].text_to_ch, buf);
+  if (comm_info[comm].color) ENDCOLOR(ch);
+
+  /* Show the text to the listening character. */
+  if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
+  act_f(comm_info[comm].hide, ch, 0, listener, TO_VICT, "%s '%s'", comm_info[comm].text_to_vict, buf);
+  if (comm_info[comm].color) ENDCOLOR(listener);
+
+  /* Show the text to other characters (if applicable). */
+  if (listener && strlen(comm_info[comm].text_to_other)) {
+    act_f(comm_info[comm].hide, ch, 0, listener, TO_NOTVICT, "%s", comm_info[comm].text_to_other);
+  }
+}
+
+
+/* Function called by the 'channel' command. */
+void do_channel(CHAR *ch, char *arg, int cmd) {
+  if (!ch) return;
+
   if (IS_NPC(ch)) {
-    send_to_char("NPCs can't change their titles!\n\r", ch);
+    printf_to_char(ch, "NPCs can't use the channel command.\n\r");
+
+    return;
+  }
+
+  char buf[MIL], setting[MIL];
+
+  chop_string(arg, buf, sizeof(buf), setting, sizeof(setting));
+
+  /* Print channel on/off status if no argument is provided. */
+  if (!*buf || is_abbrev(buf, "list")) {
+    int longest_channel_name = 0;
+
+    for (int i = 0; i < NUMELEMS(comm_info); i++) {
+      if (comm_info[i].pflag_on || comm_info[i].pflag_off) {
+        longest_channel_name = MAX(longest_channel_name, strlen(comm_info[i].name));
+      }
+    }
+
+    printf_to_char(ch, "Channel Settings:\n\r-----------------\n\r");
+
+    for (int i = 0; i < NUMELEMS(comm_info); i++) {
+      if (comm_info[i].pflag_on) {
+        snprintf(buf, sizeof(buf), "%s", comm_info[i].name);
+        printf_to_char(ch, "%-*s is %s\n\r", longest_channel_name, CAP(buf), IS_SET(GET_PFLAG(ch), comm_info[i].pflag_on) ? "ON" : "OFF");
+      }
+      else if (comm_info[i].pflag_off) {
+        snprintf(buf, sizeof(buf), "%s", comm_info[i].name);
+        printf_to_char(ch, "%-*s is %s\n\r", longest_channel_name, CAP(buf), !IS_SET(GET_PFLAG(ch), comm_info[i].pflag_off) ? "ON" : "OFF");
+      }
+    }
+
+    return;
+  }
+
+  int channel = -1;
+
+  /* Get the channel number. */
+  for (int i = 0; i < NUMELEMS(comm_info); i++) {
+    if ((comm_info[i].pflag_on || comm_info[i].pflag_off) && (strncasecmp(buf, comm_info[i].name, strlen(buf)) == 0)) {
+      channel = i;
+      break;
+    }
+  }
+
+  /* Invalid channel. */
+  if (channel == -1) {
+    int channel_count = 0;
+
+    for (int i = 0; i < NUMELEMS(comm_info); i++) {
+      if (comm_info[i].pflag_on || comm_info[i].pflag_off) {
+        channel_count++;
+      }
+    }
+
+    printf_to_char(ch, "Invalid channel.");
+
+    if (channel_count) {
+      printf_to_char(ch, "  Your options are: ");
+
+      for (int i = 0; channel_count && (i < NUMELEMS(comm_info)); i++) {
+        if (comm_info[i].pflag_on || comm_info[i].pflag_off) {
+          printf_to_char(ch, "%s%s", comm_info[i].name, ((channel_count > 1) ? ", " : "."));
+
+          channel_count--;
+        }
+      }
+
+      printf_to_char(ch, "\n\r");
+    }
+
+    return;
+  }
+
+  if (!*setting || is_abbrev(setting, "list")) {
+    memset(buf, 0, sizeof(buf));
+    
+    for (int i = 0; i < strlen(comm_info[channel].name); i++) {
+      strlcat(buf, "-", sizeof(buf));
+    }
+
+    printf_to_char(ch, "Players in the %s channel:\n\r------------------------%s\n\r", comm_info[channel].name, buf);
+
+    /* Loop through the descriptors in the game and show visibile players in the channel. */
+    for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+      if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
+
+      CHAR * temp_ch = temp_desc->character;
+
+      if ((IS_SET(GET_PFLAG(temp_ch), comm_info[channel].pflag_on) || !IS_SET(GET_PFLAG(temp_ch), comm_info[channel].pflag_off)) &&
+        (CHAR_REAL_ROOM(temp_ch) != NOWHERE) && !WIZ_INV(ch, temp_ch)) {
+        printf_to_char(ch, "%s\n\r", GET_NAME(temp_ch));
+      }
+    }
+  }
+  else if (is_abbrev(setting, "on")) {
+    if (comm_info[channel].pflag_on) {
+      SET_BIT(GET_PFLAG(ch), comm_info[channel].pflag_on);
+
+      printf_to_char(ch, "You turn %s the %s channel.\n\r", (IS_SET(GET_PFLAG(ch), comm_info[channel].pflag_on) ? "ON" : "OFF"), comm_info[channel].name);
+    }
+    else if (comm_info[channel].pflag_off) {
+      REMOVE_BIT(GET_PFLAG(ch), comm_info[channel].pflag_off);
+
+      printf_to_char(ch, "You turn %s the %s channel.\n\r", (IS_SET(GET_PFLAG(ch), comm_info[channel].pflag_off) ? "OFF" : "ON"), comm_info[channel].name);
+    }
+    else {
+      printf_to_char(ch, "The %s channel cannot be turned on or off.\n\r", comm_info[channel].name);
+    }
+  }
+  else if (is_abbrev(setting, "off")) {
+    if (comm_info[channel].pflag_on) {
+      REMOVE_BIT(GET_PFLAG(ch), comm_info[channel].pflag_on);
+
+      printf_to_char(ch, "You turn %s the %s channel.\n\r", (IS_SET(GET_PFLAG(ch), comm_info[channel].pflag_on) ? "ON" : "OFF"), comm_info[channel].name);
+    }
+    else if (comm_info[channel].pflag_off) {
+      SET_BIT(GET_PFLAG(ch), comm_info[channel].pflag_off);
+
+      printf_to_char(ch, "You turn %s the %s channel.\n\r", (IS_SET(GET_PFLAG(ch), comm_info[channel].pflag_off) ? "OFF" : "ON"), comm_info[channel].name);
+    }
+    else {
+      printf_to_char(ch, "The %s channel cannot be turned on or off.\n\r", comm_info[channel].name);
+    }
+  }
+  else {
+    printf_to_char(ch, "Usage: channel [auction|chaos|gossip|quest] <list|on|off>\n\r");
+  }
+}
+
+
+/* Function called by the 'color' command. */
+void do_setcolor(CHAR *ch, char *arg, int cmd) {
+  if (IS_NPC(ch)) {
+    send_to_char("NPCs can't set color.\n\r", ch);
+
+    return;
+  }
+
+  char buf[MIL];
+
+  arg = one_argument(arg, buf);
+
+  if (!*buf) {
+    GET_COMM_COLOR(ch, 0) = (GET_COMM_COLOR(ch, 0) == 0) ? 1 : 0;
+
+    printf_to_char(ch, "Color is now %s.\n\r", (GET_COMM_COLOR(ch, 0) ? "`cON`q" : "OFF"));
+
+    return;
+  }
+
+  if (is_abbrev(buf, "text")) {
+    GET_COMM_COLOR(ch, 0) = (GET_COMM_COLOR(ch, 0) == 1) ? 2 : 1;
+
+    printf_to_char(ch, "You will %s see added text color.\n\r", ((GET_COMM_COLOR(ch, 0) == 1) ? "now" : "no longer"));
+
+    return;
+  }
+
+  if (is_abbrev(buf, "colors")) {
+    send_to_char("0 : Disable\n\r", ch);
+
+    for (int i = 0; i < NUMELEMS(color_info); i++) {
+      char c = color_info[i].key[0];
+
+      printf_to_char(ch, "%c : `%sSAMPLE`q %s\n\r",
+        UPPER(c),
+        color_info[i].key,
+        color_info[i].name);
+    }
+
+    send_to_char("Q : Disable\n\r", ch);
+
+    return;
+  }
+
+  if (is_abbrev(buf, "list")) {
+    int longest_field_string = 0;
+
+    for (int i = 0; i < NUMELEMS(color_field_info); i++) {
+      longest_field_string = MAX(longest_field_string, strlen(color_field_info[i].name));
+    }
+
+    for (int i = 0; i < NUMELEMS(color_field_info); i++) {
+      printf_to_char(ch, "%s : %-*s : `%sSAMPLE`q %s\n\r",
+        color_field_info[i].field,
+        longest_field_string,
+        color_field_info[i].name,
+        color_info[GET_COMM_COLOR(ch, i + 1) - 1].key,
+        color_info[GET_COMM_COLOR(ch, i + 1) - 1].name);
+    }
+
+    return;
+  }
+
+  if (is_abbrev(buf, "set")) {
+    arg = one_argument(arg, buf);
+
+    if (!*buf) {
+      printf_to_char(ch, "Set what?\n\r");
+
+      return;
+    }
+
+    int color_field = -1;
+
+    for (int i = 0; i < NUMELEMS(color_field_info); i++) {
+      if (strcasecmp(buf, color_field_info[i].field) == 0) {
+        color_field = i + 1;
+        break;
+      }
+    }
+
+    if (color_field < 0) {
+      printf_to_char(ch, "Invalid field.  See 'color list' for possible fields.\n\r");
+
+      return;
+    }
+
+    arg = one_argument(arg, buf);
+
+    if ((strcasecmp(buf, "0") == 0) || (strcasecmp(buf, "q") == 0)) {
+      printf_to_char(ch, "Color disabled for %s.\n\r", color_field_info[color_field].name);
+
+      GET_COMM_COLOR(ch, color_field) = 0;
+
+      return;
+    }
+
+    int color_idx = -1;
+
+    for (int i = 0; i < NUMELEMS(color_info); i++) {
+      if (strcasecmp(buf, color_info[i].key) == 0) {
+        color_idx = i;
+        break;
+      }
+    }
+
+    if (color_idx <= 0) {
+      printf_to_char(ch, "Invalid color.  See 'color colors' for possible colors.\n\r");
+
+      return;
+    }
+
+    if ((color_field == 13) && (color_idx > 8)) {
+      printf_to_char(ch, "Background color can only be set to colors A through H.\n\r");
+
+      return;
+    }
+
+    GET_COMM_COLOR(ch, color_field) = color_idx + 1;
+
+    printf_to_char(ch, "Color set to `%s%s`q for %s.\n\r", color_info[color_idx].key, color_info[color_idx].name, color_field_info[color_field - 1].name);
+
+    return;
+  }
+
+  printf_to_char(ch, "Usage: color <colors|list|set|text> <field> <color>\n\r");
+}
+
+
+/* Function called by the 'title' command.*/
+void do_title(CHAR * ch, char *arg, int cmd) {
+  if (IS_NPC(ch)) {
+    send_to_char("NPCs can't change their titles.\n\r", ch);
 
     return;
   }
@@ -424,997 +976,32 @@ void do_title(CHAR *ch, char *arg, int cmd) {
 
   /* Title command with no argument toggles the automatic titles given at level on and off. */
   if (!*arg) {
-    if (IS_SET(ch->specials.pflag, PLR_SKIPTITLE)) {
-      send_to_char("Your title will now change when leveling.\n\r", ch);
-      REMOVE_BIT(ch->specials.pflag, PLR_SKIPTITLE);
-    }
-    else {
-      send_to_char("Your title will no longer change when leveling.\n\r", ch);
-      SET_BIT(ch->specials.pflag, PLR_SKIPTITLE);
-    }
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_SKIPTITLE);
+
+    printf_to_char(ch, "Your title will %s change when leveling.\n\r", (IS_SET(GET_PFLAG(ch), PLR_SKIPTITLE) ? "no longer" : "now"));
 
     return;
   }
 
-  /* Set the player's title to default if so requested with the 'def' or 'default' arguments,
-     otherwise set it to the argument specified. */
-  if (!strcmp(arg, "def") ||
-    !strcmp(arg, "default")) {
-    set_title(ch, NULL);
-  }
-  else {
-    set_title(ch, arg);
-  }
+  /* Set the player's title to default if so requested with the 'default' argument, otherwise set it to the string specified. */
+  set_title(ch, ((strcasecmp(arg, "default") == 0) ? NULL : arg));
 
-  send_to_char("Done.\n\r", ch);
+  printf_to_char(ch, "Done.\n\r");
 }
 
 
 /* Function called by the 'report' command. */
-void do_report(CHAR *ch, char *argument, int cmd) {
+void do_report(CHAR * ch, char *argument, int cmd) {
+  printf_to_char(ch, "You report %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
+    GET_HIT(ch), GET_MAX_HIT(ch),
+    GET_MANA(ch), GET_MAX_MANA(ch),
+    GET_MOVE(ch), GET_MAX_MOVE(ch));
+
   printf_to_room_except(CHAR_REAL_ROOM(ch), ch, "%s reports %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
     GET_NAME(ch),
     GET_HIT(ch), GET_MAX_HIT(ch),
     GET_MANA(ch), GET_MAX_MANA(ch),
     GET_MOVE(ch), GET_MAX_MOVE(ch));
-
-  printf_to_char(ch, "You report %d(%d hp) %d(%d mana) %d(%d mv).\n\r",
-    GET_HIT(ch), GET_MAX_HIT(ch),
-    GET_MANA(ch), GET_MAX_MANA(ch),
-    GET_MOVE(ch), GET_MAX_MOVE(ch));
-}
-
-
-/* Function called by the 'say' command.
-   Re-written by Night, 12/10/2011 */
-void do_say(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  CHAR *listener = NULL;
-
-  /* NoShouted players can't talk. */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods, you cannot talk.\n\r", ch);
-
-    return;
-  }
-
-  /* Ranger - June 96 */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_QUEST) &&
-    IS_SET(ch->specials.pflag, PLR_QUIET)) {
-    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r", ch);
-
-    return;
-  }
-
-  /* Ranger - July 96 */
-  if (IS_MORTAL(ch) &&
-    IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, QUIET)) {
-    send_to_char("A magical force absorbs your words.\n\r", ch);
-
-    return;
-  }
-
-  arg = skip_spaces(arg);
-
-  if (!*arg) {
-    send_to_char("Yes, but what do you want to say?\n\r", ch);
-
-    return;
-  }
-
-  if (GET_COND(ch, DRUNK) > 10) {
-    arg = make_drunk(arg, ch);
-  }
-
-  /* Build the buffer for the acting character. */
-  /* Fartmouth makes the text brown. */
-  if (affected_by_spell(ch, SMELL_FARTMOUTH)) {
-    sprintf(buf, "You say `d'%s'", arg);
-  }
-  else {
-    sprintf(buf, "You say '%s'", arg);
-  }
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 9);
-  act(buf, 0, ch, 0, 0, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Build the buffer for the listeners. */
-  /* Fartmouth makes the text brown. */
-  if (affected_by_spell(ch, SMELL_FARTMOUTH)) {
-    sprintf(buf, "$n says `d'%s'", arg);
-  }
-  else {
-    sprintf(buf, "$n says '%s'", arg);
-  }
-
-  /* Loop through the characters in the room and show them the text if they're connected
-     and in an awake state. */
-  for (listener = world[CHAR_REAL_ROOM(ch)].people; listener; listener = listener->next_in_room) {
-    if (!listener->desc) continue;
-
-    if (listener != ch &&
-      AWAKE(listener)) {
-      /* Show the text to the listener. */
-      COLOR(listener, 9);
-      act(buf, FALSE, ch, 0, listener, TO_VICT);
-      ENDCOLOR(listener);
-    }
-  }
-
-  /* Signal the game that an event happened in the room. */
-  signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
-}
-
-
-/* Function called by the 'shout' command.
-   Re-written by Night, 1/6/2012 */
-void do_shout(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  struct descriptor_data *listener_desc = NULL;
-  CHAR *listener = NULL;
-
-  /* Various conditions that might prevent a character from yelling. */
-  if (!IS_NPC(ch) &&
-    (IS_SET(ch->specials.pflag, PLR_NOSHOUT) ||
-      IS_SET(ch->specials.pflag, PLR_NOMESSAGE) ||
-      (IS_SET(ch->specials.pflag, PLR_KILL) && !CHAOSMODE) ||
-      (IS_SET(ch->specials.pflag, PLR_THIEF) && !CHAOSMODE))) {
-    send_to_char("You can't shout!\n\r", ch);
-
-    return;
-  }
-
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_QUEST) &&
-    IS_SET(ch->specials.pflag, PLR_QUIET)) {
-    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r", ch);
-
-    return;
-  }
-
-  arg = skip_spaces(arg);
-
-  if (!*arg) {
-    send_to_char("Shout? Yes! Fine! Shout we must, but WHAT?\n\r", ch);
-
-    return;
-  }
-
-  if (GET_COND(ch, DRUNK) > 10) {
-    arg = make_drunk(arg, ch);
-  }
-
-  /* Build the buffer for the acting character. */
-  sprintf(buf, "You shout '%s'", arg);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 8);
-  act(buf, 0, ch, 0, 0, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Build the buffer for the listeners. */
-  sprintf(buf, "$n shouts '%s'", arg);
-
-  for (listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
-    listener = listener_desc->character;
-
-    if (!listener) continue;
-
-    if (!listener->desc->connected &&
-      listener != ch &&
-      !IS_SET(listener->specials.pflag, PLR_NOSHOUT) &&
-      (world[CHAR_REAL_ROOM(listener)].zone == world[CHAR_REAL_ROOM(ch)].zone || GET_LEVEL(listener) > LEVEL_MORT)) {
-      /* Show the text to the listener. */
-      COLOR(listener, 8);
-      act(buf, 0, ch, 0, listener, TO_VICT);
-      ENDCOLOR(listener);
-    }
-  }
-}
-
-
-/* Function called by the 'yell' command.
-   Re-written by Night, 1/6/2012 */
-void do_yell(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  struct descriptor_data *listener_desc = NULL;
-  CHAR *listener = NULL;
-
-  arg = skip_spaces(arg);
-
-  if (!*arg) {
-    /* If it's a player, toggle the yell channel on and off if no argument provided. */
-    if (!IS_NPC(ch)) {
-      if (IS_SET(ch->specials.pflag, PLR_NOYELL)) {
-        send_to_char("You turn ON the yell channel.\n\r", ch);
-        REMOVE_BIT(ch->specials.pflag, PLR_NOYELL);
-      }
-      else {
-        send_to_char("You turn OFF the yell channel.\n\r", ch);
-        SET_BIT(ch->specials.pflag, PLR_NOYELL);
-      }
-    }
-    else /* It's an NPC. */
-    {
-      send_to_char("What do you want to yell?\n\r", ch);
-    }
-
-    return;
-  }
-
-  /* Various conditions that might prevent a character from yelling. */
-  if (!IS_NPC(ch) &&
-    (IS_SET(ch->specials.pflag, PLR_NOSHOUT) ||
-      IS_SET(ch->specials.pflag, PLR_NOMESSAGE) ||
-      (IS_SET(ch->specials.pflag, PLR_KILL) && !CHAOSMODE) ||
-      (IS_SET(ch->specials.pflag, PLR_THIEF) && !CHAOSMODE))) {
-    send_to_char("You can't yell!\n\r", ch);
-
-    return;
-  }
-
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_QUEST) &&
-    IS_SET(ch->specials.pflag, PLR_QUIET)) {
-    send_to_char("The Questmaster has taken away your ability to interrupt.\n\r", ch);
-
-    return;
-  }
-
-  /* Turn the yell channel on if it's off. */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_NOYELL)) {
-    send_to_char("You turn ON the yell channel.\n\r", ch);
-    REMOVE_BIT(ch->specials.pflag, PLR_NOYELL);
-  }
-
-  if (GET_COND(ch, DRUNK) > 10) {
-    arg = make_drunk(arg, ch);
-  }
-
-  /* Build the buffer for the acting character. */
-  sprintf(buf, "You yell '%s'", arg);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 8);
-  act(buf, 0, ch, 0, 0, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Build the buffer for the listeners. */
-  sprintf(buf, "$n yells '%s'", arg);
-
-  /* Loop through the descriptors in the game and show them the text if they're connected
-     and can hear yells. */
-  for (listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
-    listener = listener_desc->character;
-
-    if (!listener) continue;
-
-    if (!listener->desc->connected &&
-      listener != ch &&
-      !IS_SET(listener->specials.pflag, PLR_NOYELL) &&
-      !IS_SET(listener->specials.pflag, PLR_NOSHOUT) &&
-      (!IS_SET(listener->specials.pflag, PLR_NOSHOUT) || listener_desc->original)) {
-      /* Show the text to the listener. */
-      COLOR(listener, 8);
-      act(buf, 0, ch, 0, listener, TO_VICT);
-      ENDCOLOR(listener);
-    }
-  }
-}
-
-
-bool comm_pers(CHAR *ch, CHAR *vict) {
-  if (!ch || !vict) return FALSE;
-
-  if (WIZ_INV(ch, vict)) return FALSE;
-
-  if (IS_MORTAL(vict)) return TRUE;
-
-  return CAN_SEE(ch, vict);
-}
-
-
-void channel_comm(CHAR *ch, char *arg, int comm) {
-  const channel_t channel_info[] = {
-    { "gossip",  PLR_GOSSIP,  5 },
-    { "auction", PLR_AUCTION, 7 },
-    { "quest",   PLR_QUESTC,  14 },
-    { "chaos",   PLR_CHAOS,   15 },
-  };
-
-  if (!ch || (comm < 0) || (comm >= NUMELEMS(channel_info))) return;
-
-  arg = skip_spaces(arg);
-
-  if (!*arg) {
-    /* If it's a player, toggle the channel on or off if no argument is provided. */
-    if (!IS_NPC(ch)) {
-      if IS_SET(GET_PFLAG(ch), channel_info[comm].channel_flag) {
-        REMOVE_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-        printf_to_char(ch, "You turn OFF the %s channel.\n\r", channel_info[comm].channel_name);
-      }
-      else {
-        SET_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-        printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
-      }
-    }
-    else {
-      /* It's an NPC. */
-      printf_to_char(ch, "What do you want to %s?\n\r", channel_info[comm].channel_name);
-    }
-
-    return;
-  }
-
-  /* NoShouted characters can't use the gossip channel. */
-  if (!IS_NPC(ch) &&
-      IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    printf_to_char(ch, "You have displeased the gods; you cannot use the %s channel.\n\r", channel_info[comm].channel_name);
-
-    return;
-  }
-
-  /* If Quest and Quiet flags, character can't interrupt the ongoing quest. */
-  if (!IS_NPC(ch) &&
-      IS_SET(GET_PFLAG(ch), PLR_QUEST) &&
-      IS_SET(GET_PFLAG(ch), PLR_QUIET)) {
-    printf_to_char(ch, "The Questmaster has taken away your ability to interrupt.\n\r");
-
-    return;
-  }
-
-  /* Turn the channel on if it's off. */
-  if (!IS_NPC(ch) &&
-      !IS_SET(GET_PFLAG(ch), channel_info[comm].channel_flag)) {
-    SET_BIT(GET_PFLAG(ch), channel_info[comm].channel_flag);
-
-    printf_to_char(ch, "You turn ON the %s channel.\n\r", channel_info[comm].channel_name);
-  }
-
-  /* If the player's drunk, drunkify the text. */
-  if (GET_COND(ch, DRUNK) > 10) {
-    arg = make_drunk(arg, ch);
-  }
-
-  char buf[MSL];
-
-  snprintf(buf, sizeof(buf), "$n (%s) [ %s ]", channel_info[comm].channel_name, arg);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, channel_info[comm].channel_color);
-  act(buf, FALSE, ch, 0, 0, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Loop through the descriptors in the game and show them the text if they're connected
-     and can hear the channel. */
-  for (DESC *listener_desc = descriptor_list; listener_desc; listener_desc = listener_desc->next) {
-    CHAR *listener = listener_desc->character;
-
-    if (!listener || !listener->desc || (listener->desc->connected != CON_PLYNG)) continue;
-    if ((listener == ch) || !IS_SET(GET_PFLAG(listener), channel_info[comm].channel_flag)) continue;
-
-    /* Show the text to the listener. */
-    COLOR(listener, channel_info[comm].channel_color);
-    act(buf, PERS_MORTAL, ch, 0, listener, TO_VICT);
-    ENDCOLOR(listener);
-  }
-}
-
-
-/* Function called by the 'gossip' command. */
-void do_gossip(CHAR *ch, char *arg, int cmd) {
-  channel_comm(ch, arg, CHANNEL_COMM_GOSSIP);
-}
-
-
-/* Function called by the 'auction' command. */
-void do_auction(CHAR *ch, char *arg, int cmd) {
-  channel_comm(ch, arg, CHANNEL_COMM_AUCTION);
-}
-
-
-/* Function called by the 'chaos' command. */
-void do_chaos(CHAR *ch, char *arg, int cmd) {
-  channel_comm(ch, arg, CHANNEL_COMM_CHAOS);
-}
-
-
-/* Function called by the 'channel' command. */
-void do_channel(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  DESC *desc = NULL;
-  CHAR *player = NULL;
-
-  one_argument(arg, buf);
-
-  /* Print channel on/off status if no argument is provided. */
-  if (!*buf) {
-    if IS_SET(ch->specials.pflag, PLR_GOSSIP) {
-      send_to_char("Gossip is ON\n\r", ch);
-    }
-    else {
-      send_to_char("Gossip is OFF\n\r", ch);
-    }
-
-    if IS_SET(ch->specials.pflag, PLR_AUCTION) {
-      send_to_char("Auction is ON\n\r", ch);
-    }
-    else {
-      send_to_char("Auction is OFF\n\r", ch);
-    }
-
-    if IS_SET(ch->specials.pflag, PLR_CHAOS) {
-      send_to_char("Chaos is ON\n\r", ch);
-    }
-    else {
-      send_to_char("Chaos is OFF\n\r", ch);
-    }
-
-    if IS_SET(ch->specials.pflag, PLR_QUESTC) {
-      send_to_char("Quest is ON\n\r", ch);
-    }
-    else {
-      send_to_char("Quest is OFF\n\r", ch);
-    }
-  }
-  else
-    if (is_abbrev(buf, "gossip")) {
-      send_to_char("The players in Gossip Channel are:\n\r", ch);
-
-      /* Loop through the descriptors in the game and show visibile players in the channel. */
-      for (desc = descriptor_list; desc; desc = desc->next) {
-        player = desc->character;
-
-        if (!player) continue;
-
-        if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
-          CHAR_REAL_ROOM(player) != NOWHERE &&
-          IS_SET(player->specials.pflag, PLR_GOSSIP)) {
-          sprintf(buf, "%s\n\r", GET_NAME(player));
-          send_to_char(buf, ch);
-        }
-      }
-    }
-    else
-      if (is_abbrev(buf, "auction")) {
-        send_to_char("The players in Auction Channel are:\n\r", ch);
-
-        /* Loop through the descriptors in the game and show visibile players in the channel. */
-        for (desc = descriptor_list; desc; desc = desc->next) {
-          player = desc->character;
-
-          if (!player) continue;
-
-          if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
-            CHAR_REAL_ROOM(player) != NOWHERE &&
-            IS_SET(player->specials.pflag, PLR_AUCTION)) {
-            sprintf(buf, "%s\n\r", GET_NAME(player));
-            send_to_char(buf, ch);
-          }
-        }
-      }
-      else
-        if (is_abbrev(buf, "chaos")) {
-          send_to_char("The players in Chaos Channel are:\n\r", ch);
-
-          /* Loop through the descriptors in the game and show visibile players in the channel. */
-          for (desc = descriptor_list; desc; desc = desc->next) {
-            player = desc->character;
-
-            if (!player) continue;
-
-            if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
-              CHAR_REAL_ROOM(player) != NOWHERE &&
-              IS_SET(player->specials.pflag, PLR_CHAOS)) {
-              sprintf(buf, "%s\n\r", GET_NAME(player));
-              send_to_char(buf, ch);
-            }
-          }
-        }
-        else
-          if (is_abbrev(buf, "quest")) {
-            send_to_char("The players in Quest Channel are:\n\r", ch);
-
-            /* Loop through the descriptors in the game and show visibile players in the channel. */
-            for (desc = descriptor_list; desc; desc = desc->next) {
-              player = desc->character;
-
-              if (!player) continue;
-
-              if ((IS_MORTAL(ch) || (IS_IMMORTAL(ch) && !WIZ_INV(player, ch)) || CAN_SEE(player, ch)) &&
-                CHAR_REAL_ROOM(player) != NOWHERE &&
-                IS_SET(player->specials.pflag, PLR_QUESTC)) {
-                sprintf(buf, "%s\n\r", GET_NAME(player));
-                send_to_char(buf, ch);
-              }
-            }
-          }
-          else /* Non-existent channel. */
-          {
-            send_to_char("Which channel are you looking for?\n\r", ch);
-          }
-}
-
-
-/* Function called by the 'tell' command. */
-void do_tell(CHAR *ch, char *arg, int cmd) {
-  /* NoShouted players can't tell. */
-  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods; you cannot speak.\n\r", ch);
-
-    return;
-  }
-
-  /* Players with NoMessage on can't tell. */
-  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
-    send_to_char("You can't tell when you have NoMessage turned on.\n\r", ch);
-
-    return;
-  }
-
-  char name[MIL], message[MIL];
-
-  half_chop(arg, name, sizeof(name), message, sizeof(message));
-
-  /* Tell was used without any arguments. */
-  if (!*name || !*message) {
-    send_to_char("Who do you wish to tell, and what?\n\r", ch);
-
-    return;
-  }
-
-  CHAR *listener = get_ch_by_name(name);
-
-  /* Redirect listener if mobswitched. */
-  if (listener->switched) {
-    listener = listener->switched;
-  }
-
-  /* We didn't find anyone, or the listener is not visible to the acting character. */
-  if (!listener || WIZ_INV(ch, listener)) {
-    send_to_char("No one by that name here...\n\r", ch);
-
-    return;
-  }
-
-     /* Check if the listener is disconnected. */
-  if (!GET_DESCRIPTOR(listener) || GET_DESCRIPTOR(listener)->connected) {
-    act("$E isn't connected at the moment.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  /* Players can't reply through NoMessage. */
-  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
-    act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  /* Players can't reply through NoShout. */
-  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    act("The gods have taken away $N's ability to communicate.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  char buf[MSL];
-
-  /* Build the buffer for the acting player. */
-  snprintf(buf, sizeof(buf), "You tell $N, '%s'", message);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener , TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Build the buffer for the listening character. */
-  snprintf(buf, sizeof(buf), "$n tells you, '%s'", message);
-
-  /* Show the text to the listening character. */
-  COLOR(listener, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener, TO_VICT);
-  ENDCOLOR(listener);
-
-  /* Update the listening character's reply_to variable. */
-  if (!IS_NPC(ch)) {
-    GET_REPLY_TO(listener) = GET_ID(ch);
-  }
-}
-
-
-/* Function called by the 'reply' command. */
-void do_reply(CHAR *ch, char *arg, int cmd) {
-  if (IS_NPC(ch)) {
-    send_to_char("NPCs can't reply.\n\r", ch);
-
-    return;
-  }
-
-  /* NoShouted players can't reply. */
-  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods; you cannot speak.\n\r", ch);
-
-    return;
-  }
-
-  /* Players with NoMessage on can't reply. */
-  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
-    send_to_char("You can't reply when you have NoMessage turned on.\n\r", ch);
-
-    return;
-  }
-
-  /* The acting character doesn't have anyone to reply to. */
-  if (!GET_REPLY_TO(ch)) {
-    send_to_char("There is no one to reply to.\n\r", ch);
-
-    return;
-  }
-
-  arg = skip_spaces(arg);
-
-  /* Reply was used without any arguments. */
-  if (!*arg) {
-    send_to_char("Yes, but what do you want to reply?\n\r", ch);
-
-    return;
-  }
-
-  char message[MIL];
-
-  /* Store the message. */
-  snprintf(message, sizeof(message), "%s", arg);
-
-  /* Attempt to locate the listener. */
-  CHAR *listener = get_ch_by_id(GET_REPLY_TO(ch));
-
-  /* No listener was found. */
-  if (!listener) {
-    send_to_char("There is nobody to reply to...\n\r", ch);
-
-    return;
-  }
-
-  /* Redirect listener if mobswitched. */
-  if (listener->switched) {
-    listener = listener->switched;
-  }
-
-  /* Check if the listener is disconnected. */
-  if (!GET_DESCRIPTOR(listener) || GET_DESCRIPTOR(listener)->connected) {
-    act("$E isn't connected at the moment.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  /* NPCs/Players can't reply through NoMessage. */
-  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
-    act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  /* Players can't reply through NoShout. */
-  if (IS_MORTAL(ch) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    act("The gods have taken away $N's ability to communicate.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
-
-    return;
-  }
-
-  char buf[MSL];
-
-  /* Build the buffer for the acting player. */
-  snprintf(buf, sizeof(buf), "You reply to $N, '%s'", message);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Build the buffer for the listening character. */
-  snprintf(buf, sizeof(buf), "$n replies, '%s'", message);
-
-  /* Show the text to the listening character. */
-  COLOR(listener, 6);
-  act(buf, PERS_MORTAL, ch, 0, listener, TO_VICT);
-  ENDCOLOR(listener);
-
-  /* Update the listening character's reply_to variable. */
-  if (!IS_NPC(ch)) {
-    GET_REPLY_TO(listener) = GET_ID(ch);
-  }
-}
-
-
-/* Function called by the 'gtell' command.
-   Re-written by Night, 12/10/2011 */
-void do_gtell(CHAR *ch, char *arg, int cmd) {
-  /* NoShouted players can't gtell. */
-  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods; you cannot speak.\n\r", ch);
-
-    return;
-  }
-
-  arg = skip_spaces(arg);
-
-  if (!*arg) {
-    send_to_char("Yes, but what do you want to tell your group?\n\r", ch);
-
-    return;
-  }
-
-  char buf[MSL];
-
-  /* Build the buffer for the acting character. */
-  snprintf(buf, sizeof(buf), "You tell your group, '%s'", arg);
-
-  /* Show the text to the acting character. */
-  COLOR(ch, 10);
-  act(buf, FALSE, ch, 0, 0, TO_CHAR);
-  ENDCOLOR(ch);
-
-  /* Get the group leader, or the acting character if no leader. */
-  CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
-
-  /* Show the text to the group leader if it's not the acting character. */
-  if ((group_leader != ch) && IS_AFFECTED(group_leader, AFF_GROUP)) {
-    /* Build the buffer for the goup leader. */
-    snprintf(buf, sizeof(buf), "** %s tells you, '%s'", (!IS_NPC(ch) ? (WIZ_INV(group_leader, ch) ? "Somebody" : GET_NAME(ch)) : GET_SHORT(ch)), arg);
-
-    COLOR(group_leader, 10);
-    act(buf, FALSE, ch, 0, group_leader, TO_VICT);
-    ENDCOLOR(group_leader);
-  }
-
-  /* Loop through all of the group members of group_leader's group and show them the text. */
-  for (FOL *follower = group_leader->followers; follower; follower = follower->next) {
-    CHAR *group_member = follower->follower;
-
-    if (!group_member || (group_member == ch) || !IS_AFFECTED(group_member, AFF_GROUP)) continue;
-
-    /* Build the buffer for the group member. */
-    snprintf(buf, sizeof(buf), "** %s tells you, '%s'", (!IS_NPC(ch) ? (WIZ_INV(group_member, ch) ? "Somebody" : GET_NAME(ch)) : GET_SHORT(ch)), arg);
-
-    COLOR(group_member, 10);
-    act(buf, FALSE, ch, 0, group_member, TO_VICT);
-    ENDCOLOR(group_member);
-  }
-}
-
-
-/* Function called by the 'ask' command.
-   Re-written by Night, 12/10/2011 */
-void do_ask(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  char name[20];
-  char message[MSL];
-  CHAR *temp_ch = NULL;
-  CHAR *listener = NULL;
-
-  /* NoShouted players can't use ask. */
-  if (!IS_NPC(ch) &&
-      IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods; you cannot speak.\n\r", ch);
-
-    return;
-  }
-
-  /* Players with NoMessage on can't use ask. */
-  if (!IS_NPC(ch) &&
-      IS_SET(GET_PFLAG(ch), PLR_NOMESSAGE)) {
-    send_to_char("You can't ask anything when you have NoMessage turned on.\n\r", ch);
-
-    return;
-  }
-
-  half_chop(arg, name, sizeof(name), message, sizeof(message));
-
-  /* Ask was used without any arguments. */
-  if (!*name || !*message) {
-    send_to_char("Who do you wish to ask, and what?\n\r", ch);
-
-    return;
-  }
-
-  temp_ch = get_char_room_vis(ch, name);
-
-  /* We didn't find anyone, or the listener is not visible to the acting character. */
-  if (!temp_ch) {
-    send_to_char("No one by that name here...\n\r", ch);
-
-    return;
-  }
-
-  /* Allow asking a switched person to go to the mob. */
-  if (temp_ch->switched) {
-    listener = temp_ch->switched;
-  }
-  else {
-    listener = temp_ch;
-  }
-
-  /* Various conditions that might prevent a character from using ask.
-     Here we're building the buffer for the acting character. */
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) {
-    /* NPCs/Players can't ask through NoMessage. */
-    act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
-    return;
-  }
-
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    /* NPCs/Players can't ask through NoShout. */
-    act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
-    return;
-  }
-
-  if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-      IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
-      !IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    /* Immortals can ask through NoMessage. */
-    sprintf(buf, "You ask $N (deaf), '%s'", message);
-  }
-  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-            !IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
-            IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    /* Immortals can ask through NoShout. */
-    sprintf(buf, "You ask $N (noshout), '%s'", message);
-  }
-  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-           IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE) &&
-            IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-    /* Immortals can ask through NoMessage & NoShout. */
-    sprintf(buf, "You ask $N (deaf & noshout), '%s'", message);
-  }
-  else {
-    /* Everything worked out. */
-    sprintf(buf, "You ask $N, '%s'", message);
-  }
-
-  /* Show the text to the acting character. */
-  act(buf, 0, ch, 0, listener, TO_CHAR);
-
-  /* Build the buffer for the listening player. */
-  sprintf(buf, "$n asks you '%s'", message);
-
-  /* Show the text to the listening player. */
-  act(buf, 0, ch, 0, listener, TO_VICT);
-
-  /* Show some text to the room. */
-  if (listener == ch) {
-    act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else {
-    act("$n asks $N a question.", FALSE, ch, 0, listener, TO_NOTVICT);
-  }
-
-  /* Update the listening player's reply_to variable. */
-  if (!IS_NPC(ch)) {
-    listener->specials.reply_to = GET_ID(ch);
-  }
-}
-
-
-/* Function called by the 'whisper' command.
-   Re-written by Night, 12/10/2011 */
-void do_whisper(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  char name[20];
-  char message[MSL];
-  CHAR *temp_ch = NULL;
-  CHAR *listener = NULL;
-
-  /* NoShouted players can't use whisper. */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods, you cannot speak.\n\r", ch);
-
-    return;
-  }
-
-  /* Players with NoMessage on can't use whisper. */
-  if (!IS_NPC(ch) &&
-    IS_SET(ch->specials.pflag, PLR_NOMESSAGE)) {
-    send_to_char("You can't whisper when you have NoMessage turned on.\n\r", ch);
-
-    return;
-  }
-
-  half_chop(arg, name, sizeof(name), message, sizeof(message));
-
-  /* Whisper was used without any arguments. */
-  if (!*name ||
-    !*message) {
-    send_to_char("Who do you wish to whisper, and what?\n\r", ch);
-
-    return;
-  }
-
-  temp_ch = get_char_room_vis(ch, name);
-
-  /* We didn't find anyone, or the listener is not visible to the acting character. */
-  if (!temp_ch) {
-    send_to_char("No one by that name here...\n\r", ch);
-
-    return;
-  }
-
-  /* Allow a whisper to a switched person to go to the mob. */
-  if (temp_ch->switched) {
-    listener = temp_ch->switched;
-  }
-  else {
-    listener = temp_ch;
-  }
-
-  /* Various conditions that might prevent a character from using whisper.
-     Here we're building the buffer for the acting character. */
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(listener->specials.pflag, PLR_NOMESSAGE)) {
-    /* NPCs/Players can't whisper through NoMessage. */
-    act("$E can't hear you.", FALSE, ch, 0, listener, TO_CHAR);
-    return;
-  }
-
-  if ((IS_NPC(ch) || IS_MORTAL(ch)) &&
-      IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-    /* NPCs/Players can't whisper through NoShout. */
-    act("The gods have taken away $N's ability to communicate.", FALSE, ch, 0, listener, TO_CHAR);
-    return;
-  }
-
-  if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-      IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-      !IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-    /* Immortals can whisper through NoMessage. */
-    sprintf(buf, "You whisper to $N (deaf), '%s'", message);
-  }
-  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-           !IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-           IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-    /* Immortals can whisper through NoShout. */
-    sprintf(buf, "You whisper to $N (noshout), '%s'", message);
-  }
-  else if ((!IS_NPC(ch) && !IS_MORTAL(ch)) &&
-           IS_SET(listener->specials.pflag, PLR_NOMESSAGE) &&
-           IS_SET(listener->specials.pflag, PLR_NOSHOUT)) {
-    /* Immortals can whisper through NoMessage & NoShout. */
-    sprintf(buf, "You whisper to $N (deaf & noshout), '%s'", message);
-  }
-  else {
-    /* Everything worked out. */
-    sprintf(buf, "You whisper to $N, '%s'", message);
-  }
-
-  /* Show the text to the acting character. */
-  act(buf, 0, ch, 0, listener, TO_CHAR);
-
-  /* Build the buffer for the listening player. */
-  sprintf(buf, "$n whispers to you '%s'", message);
-
-  /* Show the text to the listening player. */
-  act(buf, 0, ch, 0, listener, TO_VICT);
-
-  /* Show some text to the room. */
-  if (listener == ch) {
-    act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else {
-    act("$n whispers something to $N.", FALSE, ch, 0, listener, TO_NOTVICT);
-  }
-
-  /* Update the listening player's reply_to variable. */
-  if (!IS_NPC(ch)) {
-    listener->specials.reply_to = ch->ver3.id;
-  }
 }
 
 

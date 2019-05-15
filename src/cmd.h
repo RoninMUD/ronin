@@ -50,7 +50,7 @@ $State: Exp $
 #define MSG_SPELL_CAST         -19
 #define MSG_OBJ_DROPPED        -18
 #define MSG_OBJ_WORN           -17
-#define MSG_GAVE_OBJ           -16
+#define MSG_OBJ_GIVEN          -16
 #define MSG_CORPSE             -15
 #define MSG_OBJ_ENTERING_GAME  -14
 #define MSG_DEAD               -13

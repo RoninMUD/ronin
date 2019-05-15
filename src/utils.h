@@ -16,7 +16,7 @@ Reinitialization of cvs archives
 
 Revision - Addition of GET_EMAIL(ch) - 19-Dec-03 Ranger
 
-Revision - Addition of RM_BLOOD macro 26-Nov-02 Ranger
+Revision - Addition of ROOM_BLOOD macro 26-Nov-02 Ranger
 
 Revision - removed commented text from IMP_INV
 
@@ -74,22 +74,18 @@ do {                   \
   }                    \
 } while (0)
 
-#define IS_NIGHT                ((time_info.hours > 18) || (time_info.hours < 6))
-#define IS_DAY                  !IS_NIGHT
+#define IS_NIGHT                 ((time_info.hours > 18) || (time_info.hours < 6))
+#define IS_DAY                   !IS_NIGHT
 
-#define ROOM                    1
-#define ZONE                    2
-#define WORLD                   3
+#define ROOM                     1
+#define ZONE                     2
+#define WORLD                    3
 
-#define CHAR_REAL_ROOM(ch)      ((ch) ? (ch)->in_room_r : NOWHERE)
-#define CHAR_VIRTUAL_ROOM(ch)   ((ch) ? (ch)->in_room_v : 0)
+#define CHAR_REAL_ROOM(ch)       ((ch) ? (ch)->in_room_r : NOWHERE)
+#define CHAR_VIRTUAL_ROOM(ch)    ((ch) ? (ch)->in_room_v : 0)
 
-#define OBJ_REAL_ROOM(obj)      ((obj) ? (obj)->in_room : NOWHERE)
-#define OBJ_VIRTUAL_ROOM(obj)   ((obj) ? (obj)->in_room_v : 0)
-
-#define GET_OPPONENT(ch)        ((ch) ? (ch)->specials.fighting : NULL)
-
-#define GET_ZONE(ch)            (world[CHAR_REAL_ROOM(ch)].zone)
+#define OBJ_REAL_ROOM(obj)       ((obj) ? (obj)->in_room : NOWHERE)
+#define OBJ_VIRTUAL_ROOM(obj)    ((obj) ? (obj)->in_room_v : 0)
 
 #define MOB_NAME(mob)            (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
 #define MOB_DESCRIPTION(mob)     (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
@@ -103,83 +99,98 @@ do {                   \
 #define MOB_ATT_TARGET(mob, num) (mob->specials.att_target[num])
 #define MOB_ATT_SPELL(mob, num)  (mob->specials.att_spell[num])
 
-#define OBJ_RNUM(obj)           (obj->item_number)
-#define OBJ_VNUM(obj)           (obj->item_number_v)
-#define OBJ_NUM_IN_GAME(obj)    (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
-#define OBJ_FUNC(obj)           (obj->func)
-#define OBJ_NAME(obj)           (obj->name ? obj->name : obj_proto_table[obj->item_number].name)
-#define OBJ_DESCRIPTION(obj)    (obj->description ? obj->description : obj_proto_table[obj->item_number].description)
-#define OBJ_SHORT(obj)          (obj->short_description ? obj->short_description : obj_proto_table[obj->item_number].short_description )
-#define OBJ_ACTION(obj)         (obj->action_description ? obj->action_description : obj_proto_table[obj->item_number].action_description)
-#define OBJ_ACTION_NT(obj)      (obj->action_description_nt ? obj->action_description_nt : obj_proto_table[obj->item_number].action_description_nt)
-#define OBJ_CWEAR_DESC(obj)     (obj->char_wear_desc ? obj->char_wear_desc : obj_proto_table[obj->item_number].char_wear_desc)
-#define OBJ_RWEAR_DESC(obj)     (obj->room_wear_desc ? obj->room_wear_desc : obj_proto_table[obj->item_number].room_wear_desc)
-#define OBJ_CREM_DESC(obj)      (obj->char_rem_desc ? obj->char_rem_desc : obj_proto_table[obj->item_number].char_rem_desc)
-#define OBJ_RREM_DESC(obj)      (obj->room_rem_desc ? obj->room_rem_desc : obj_proto_table[obj->item_number].room_rem_desc)
-#define OBJ_WEAR_FLAGS(obj)     (obj->obj_flags.wear_flags)
-#define OBJ_SC_RES(obj)         (obj->obj_flags.subclass_res)
-#define OBJ_BITS(obj)           (obj->obj_flags.bitvector)
-#define OBJ_BITS2(obj)          (obj->obj_flags.bitvector2)
-#define OBJ_EXTRA_FLAGS(obj)    (obj->obj_flags.extra_flags)
-#define OBJ_EXTRA_FLAGS2(obj)   (obj->obj_flags.extra_flags2)
-#define OBJ_REPOP(obj)          (obj->obj_flags.repop_percent)
-#define OBJ_WEIGHT(obj)         (obj->obj_flags.weight)
-#define OBJ_MATERIAL(obj)       (obj->obj_flags.material)
-#define OBJ_COST(obj)           (obj->obj_flags.cost)
-#define OBJ_RENT_COST(obj)      (obj->obj_flags.cost_per_day)
-#define OBJ_TYPE(obj)           (obj->obj_flags.type_flag)
-#define OBJ_AFF(obj, num)       (obj->affected[num])
-#define OBJ_AFF0(obj)           (obj->affected[0])
-#define OBJ_AFF1(obj)           (obj->affected[1])
-#define OBJ_AFF2(obj)           (obj->affected[2])
-#define OBJ_AFF_LOC(obj, num)   (obj->affected[num].location)
-#define OBJ_AFF_MOD(obj, num)   (obj->affected[num].modifier)
-#define OBJ_VALUE(obj, num)     (obj->obj_flags.value[num])
-#define OBJ_VALUE0(obj)         (obj->obj_flags.value[0])
-#define OBJ_VALUE1(obj)         (obj->obj_flags.value[1])
-#define OBJ_VALUE2(obj)         (obj->obj_flags.value[2])
-#define OBJ_VALUE3(obj)         (obj->obj_flags.value[3])
-#define OBJ_POPPED(obj)         (obj->obj_flags.popped)
-#define OBJ_SPEC(obj)           (obj->spec_value)
-#define OBJ_TIMER(obj)          (obj->obj_flags.timer)
-#define OBJ_OWNER_ID(obj, num)  (obj->ownerid[num])
-#define OBJ_IN_ROOM(obj)        (obj->in_room)
-#define OBJ_IN_ROOM_V(obj)      (obj->in_room_v)
-#define OBJ_IN_OBJ(obj)         (obj->in_obj)
-#define OBJ_CARRIED_BY(obj)     (obj->carried_by)
-#define OBJ_EQUIPPED_BY(obj)    (obj->equipped_by)
-#define OBJ_OWNED_BY(obj)       (obj->owned_by)
-#define OBJ_LOG(obj)            (obj->log)
+#define OBJ_RNUM(obj)            (obj->item_number)
+#define OBJ_VNUM(obj)            (obj->item_number_v)
+#define OBJ_NAME(obj)            (obj->name ? obj->name : obj_proto_table[obj->item_number].name)
+#define OBJ_SHORT(obj)           (obj->short_description ? obj->short_description : obj_proto_table[obj->item_number].short_description)
+#define OBJ_DESCRIPTION(obj)     (obj->description ? obj->description : obj_proto_table[obj->item_number].description)
+#define OBJ_ACTION(obj)          (obj->action_description ? obj->action_description : obj_proto_table[obj->item_number].action_description)
+#define OBJ_ACTION_NT(obj)       (obj->action_description_nt ? obj->action_description_nt : obj_proto_table[obj->item_number].action_description_nt)
+#define OBJ_CWEAR_DESC(obj)      (obj->char_wear_desc ? obj->char_wear_desc : obj_proto_table[obj->item_number].char_wear_desc)
+#define OBJ_RWEAR_DESC(obj)      (obj->room_wear_desc ? obj->room_wear_desc : obj_proto_table[obj->item_number].room_wear_desc)
+#define OBJ_CREM_DESC(obj)       (obj->char_rem_desc ? obj->char_rem_desc : obj_proto_table[obj->item_number].char_rem_desc)
+#define OBJ_RREM_DESC(obj)       (obj->room_rem_desc ? obj->room_rem_desc : obj_proto_table[obj->item_number].room_rem_desc)
+#define OBJ_TYPE(obj)            (obj->obj_flags.type_flag)
+#define OBJ_WEAR_FLAGS(obj)      (obj->obj_flags.wear_flags)
+#define OBJ_BITS(obj)            (obj->obj_flags.bitvector)
+#define OBJ_BITS2(obj)           (obj->obj_flags.bitvector2)
+#define OBJ_EXTRA_FLAGS(obj)     (obj->obj_flags.extra_flags)
+#define OBJ_EXTRA_FLAGS2(obj)    (obj->obj_flags.extra_flags2)
+#define OBJ_SC_RES(obj)          (obj->obj_flags.subclass_res)
+#define OBJ_MATERIAL(obj)        (obj->obj_flags.material)
+#define OBJ_WEIGHT(obj)          (obj->obj_flags.weight)
+#define OBJ_COST(obj)            (obj->obj_flags.cost)
+#define OBJ_RENT_COST(obj)       (obj->obj_flags.cost_per_day)
+#define OBJ_REPOP(obj)           (obj->obj_flags.repop_percent)
+#define OBJ_AFF(obj, num)        (obj->affected[num])
+#define OBJ_AFF0(obj)            (obj->affected[0])
+#define OBJ_AFF1(obj)            (obj->affected[1])
+#define OBJ_AFF2(obj)            (obj->affected[2])
+#define OBJ_AFF_LOC(obj, num)    (obj->affected[num].location)
+#define OBJ_AFF_MOD(obj, num)    (obj->affected[num].modifier)
+#define OBJ_VALUE(obj, num)      (obj->obj_flags.value[num])
+#define OBJ_VALUE0(obj)          (obj->obj_flags.value[0])
+#define OBJ_VALUE1(obj)          (obj->obj_flags.value[1])
+#define OBJ_VALUE2(obj)          (obj->obj_flags.value[2])
+#define OBJ_VALUE3(obj)          (obj->obj_flags.value[3])
+#define OBJ_POPPED(obj)          (obj->obj_flags.popped)
+#define OBJ_SPEC(obj)            (obj->spec_value)
+#define OBJ_TIMER(obj)           (obj->obj_flags.timer)
+#define OBJ_OWNER_ID(obj, num)   (obj->ownerid[num])
+#define OBJ_IN_ROOM(obj)         (obj->in_room)
+#define OBJ_IN_ROOM_V(obj)       (obj->in_room_v)
+#define OBJ_IN_OBJ(obj)          (obj->in_obj)
+#define OBJ_CARRIED_BY(obj)      (obj->carried_by)
+#define OBJ_EQUIPPED_BY(obj)     (obj->equipped_by)
+#define OBJ_OWNED_BY(obj)        (obj->owned_by)
+#define OBJ_FUNC(obj)            (obj->func)
+#define OBJ_LOG(obj)             (obj->log)
 
-#define GET_ID(ch)              ((ch) ? (ch)->ver3.id : -1)
+#define OBJ_NUM_IN_GAME(obj)     (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
 
-#define ROOM_SPEC(rm)           (world[(rm)].spec_tmp)
-#define RM_BLOOD(rm)            (world[(rm)].blood)
-#define ITEM(zone, x)           ((zone)+(x))
+#define ROOM_CHAOTIC(rm)         (CHAOSMODE || ((rm != NOWHERE) ? IS_SET(world[rm].room_flags, CHAOTIC) : FALSE))
+#define ROOM_SAFE(rm)            (!CHAOSMODE && ((rm != NOWHERE) ? IS_SET(world[rm].room_flags, SAFE) : FALSE))
+#define ROOM_ARENA(rm)           ((rm != NOWHERE) ? IS_SET(world[rm].room_flags, ARENA) : FALSE)
+#define ROOM_SPEC(rm)            (world[rm].spec_tmp)
+#define ROOM_BLOOD(rm)           (world[rm].blood)
+#define ROOM_FLAGS(rm)           (world[rm].room_flags)
+#define ROOM_PEOPLE(rm)          (world[rm].people)
 
-#define IS_SET(flag, bit)       ((flag) & (bit))
-#define SET_BIT(var,bit)        ((var) = (var) | (bit))
-#define REMOVE_BIT(var,bit)     ((var) = (var) & ~(bit))
+#define CHAR_ROOM_FLAGS(ch)      (ROOM_FLAGS(CHAR_REAL_ROOM(ch)))
 
-#define IS_AFFECTED(ch, skill)  ((ch) ? IS_SET((ch)->specials.affected_by, (skill)) : FALSE)
+#define ITEM(zone, x)            ((zone) + (x))
 
-#define SWITCH(a, b)            { (a) ^= (b); (b) ^= (a); (a) ^= (b); }
+#define IS_SET(flag, bit)        ((flag) & (bit))
+#define SET_BIT(flag, bit)       ((flag) = (flag) | (bit))
+#define REMOVE_BIT(flag, bit)    ((flag) = (flag) & ~(bit))
+#define TOGGLE_BIT(flag, bit)    (IS_SET(flag, bit) ? REMOVE_BIT(flag, bit) : SET_BIT(flag, bit))
 
-#define GET_REQ(i) (i<2  ? "Awful" :(i<4  ? "Bad"     :(i<7  ? "Poor"      :\
-(i<10 ? "Average" :(i<14 ? "Fair"    :(i<20 ? "Good"    :(i<24 ? "Very good" :\
-        "Superb" )))))))
+#define IS_AFFECTED(ch, skill)   ((ch) ? IS_SET((ch)->specials.affected_by, (skill)) : FALSE)
 
-#define HSHR(ch) ((ch)->player.sex ?          \
-  (((ch)->player.sex == 1) ? "his" : "her") : "its")
+#define SWITCH(a, b)             { (a) ^= (b); (b) ^= (a); (a) ^= (b); }
 
-#define HSSH(ch) ((ch)->player.sex ?          \
-  (((ch)->player.sex == 1) ? "he" : "she") : "it")
+#define GET_REQ(i) \
+(i < 2 ?  "Awful"     : \
+(i < 4 ?  "Bad"       : \
+(i < 7 ?  "Poor"      : \
+(i < 10 ? "Average"   : \
+(i < 14 ? "Fair"      : \
+(i < 20 ? "Good"      : \
+(i < 24 ? "Very Good" : \
+          "Superb")))))))
 
-#define HMHR(ch) ((ch)->player.sex ?           \
-  (((ch)->player.sex == 1) ? "him" : "her") : "it")
+#define HSHR(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "his" : "her") : "its")
+#define HSSH(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "he"  : "she") : "it")
+#define HMHR(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "him" : "her") : "it")
 
-#define ANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
+#define ANA(obj)  (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
 #define SANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
+
+#define GET_ID(ch)         ((ch) ? (ch)->ver3.id : -1)
+
+#define GET_OPPONENT(ch)         ((ch) ? (ch)->specials.fighting : NULL)
+
+#define GET_ZONE(ch)             (world[CHAR_REAL_ROOM(ch)].zone)
 
 #define GET_POS(ch)        ((ch)->specials.position)
 #define GET_COND(ch, i)    ((ch)->specials.conditions[(i)])
@@ -284,9 +295,9 @@ do {                   \
 #define IS_EVIL(ch)    (GET_ALIGNMENT(ch) <= -350)
 #define IS_NEUTRAL(ch) (!IS_GOOD(ch) && !IS_EVIL(ch))
 
-#define COLORNAME(ch,i) (Color[(ch->colors[i]+1)])
-#define COLOR(ch,i) if(ch->colors[0]&&ch->colors[i]) {send_to_char(Color[(((ch->colors[i])*2)-2)],ch);send_to_char(BKColor[ch->colors[13]],ch);}
-#define ENDCOLOR(ch) if(ch->colors[0]&&ch->colors[1]) {COLOR(ch,1);send_to_char(BKColor[ch->colors[13]],ch);}
+#define COLORNAME(ch, i) (Color[(ch->colors[i] + 1)])
+#define COLOR(ch, i)     if (ch->colors[0] && ch->colors[i]) { send_to_char(Color[(((ch->colors[i]) * 2) - 2)], ch); send_to_char(BKColor[ch->colors[13]], ch); }
+#define ENDCOLOR(ch)     if (ch->colors[0] && ch->colors[1]) { send_to_char(Color[(((ch->colors[1]) * 2) - 2)], ch); send_to_char(BKColor[ch->colors[13]], ch); }
 
 #define IS_RENTABLE(obj) ( (obj) ? (((obj)->item_number > -1) &&\
                              (!IS_OBJ_STAT((obj), ITEM_ANTI_RENT)     ) &&\
@@ -297,10 +308,6 @@ do {                   \
 
 #define GET_OBJ_WEIGHT(obj)     ((obj)->obj_flags.weight)
 #define strMove(d,s) memmove(d,s,strlen(s)+1)
-
-#define ROOM_CHAOTIC(rm) (CHAOSMODE || ((rm != NOWHERE) ? IS_SET(world[rm].room_flags, CHAOTIC) : FALSE))
-#define ROOM_SAFE(rm) (!CHAOSMODE && ((rm != NOWHERE) ? IS_SET(world[rm].room_flags, SAFE) : FALSE))
-#define ROOM_ARENA(rm) ((rm != NOWHERE) ? IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, ARENA) : FALSE)
 
 #define GET_CLASS_NAME(ch) (!IS_NPC(ch) ? pc_class_types[(int)GET_CLASS(ch)] : npc_class_types[(int)GET_CLASS(ch)])
 #define GET_EXP_TO_LEVEL(ch) (GET_LEVEL(ch) < LEVEL_IMP ? exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch) : 0)
@@ -321,7 +328,6 @@ do {                   \
 #define GET_BLEED(ch) (ch->ver3.bleed_limit)
 #define GET_BEEN_KILLED(ch) (ch->new.been_killed)
 #define GET_THACO(ch) (thaco[GET_CLASS(ch) - 1][GET_LEVEL(ch)])
-#define CHAR_ROOM_FLAGS(ch) (world[CHAR_REAL_ROOM(ch)].room_flags)
 #define S_ANA(string) (index("aeiouyAEIOUY", *string) ? "An" : "A")
 #define S_SANA(string) (index("aeiouyAEIOUY", *string) ? "an" : "a")
 #define OBJ_TIMER(obj) (obj->obj_flags.timer)
@@ -356,8 +362,6 @@ do {                   \
 #define GET_DESCRIPTOR(ch) (ch->desc)
 #define GET_WAS_IN_ROOM(ch) (ch->specials.was_in_room)
 #define GET_SKILLS(ch) (ch->skills)
-#define GET_ROOM_PEOPLE(room) (world[room].people)
-#define GET_ROOM_FLAGS(room) (world[room].room_flags)
 #define GET_OBJ_BITS(obj) (obj->obj_flags.bitvector)
 #define GET_OBJ_BITS2(obj) (obj->obj_flags.bitvector2)
 #define GET_LAST_DIR(mob) (mob->specials.last_direction)
@@ -368,8 +372,9 @@ do {                   \
 #define GET_DEFAULT_POSITION(ch) (ch->specials.default_pos)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
 #define GET_REPLY_TO(ch) (ch->specials.reply_to)
-#define GET_PFLAG2(ch) (ch->ver3.pflag2)
-#define GET_COMM_COLOR(ch, num) (((num >= 0) && (num < MAX_COLORS)) ? ch->colors[num] : 0)
+#define GET_TOGGLES(ch) (ch->ver3.toggles)
+#define GET_COMM_COLOR(ch, num) (ch->colors[num])
+#define GET_COLORS(ch) (ch->colors)
 #define GET_FOLLOWERS(ch) (ch->followers)
 
 #define GET_QUEST_GIVER(ch) (ch->questgiver)

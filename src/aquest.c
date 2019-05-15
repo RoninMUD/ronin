@@ -2053,7 +2053,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
     }
   }
 
-  if (cmd == MSG_GAVE_OBJ) {
+  if (cmd == MSG_OBJ_GIVEN) {
     // process order delivery
     order = get_obj_in_list_vis(collector, "order", collector->carrying);
 

@@ -12,6 +12,7 @@
 extern const int exp_table[58];
 
 extern const char * const subclass_name[];
+extern const int subclass_master[11];
 
 extern const char * const pc_class_types[];
 extern const char * const npc_class_types[];

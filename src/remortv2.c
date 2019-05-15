@@ -1250,6 +1250,8 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
         affect_remove(ch, aff);
       }
 
+      GET_TOGGLES(ch) = 0;
+
       /* Set the player up as their chosen gender and class, and reset their vitals to that of a new player. */
       GET_SEX(ch) = token_info.gender;
       GET_CLASS(ch) = token_info.class_num;
@@ -1464,7 +1466,7 @@ int rv2_obj_spec_token(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
     return FALSE;
   }
-  else if (cmd == MSG_GAVE_OBJ ||
+  else if (cmd == MSG_OBJ_GIVEN ||
            cmd == MSG_OBJ_DROPPED ||
            cmd == MSG_OBJ_PUT ||
            cmd == MSG_OBJ_DONATED ||

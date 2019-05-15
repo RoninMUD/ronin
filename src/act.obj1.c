@@ -1252,7 +1252,7 @@ bool give_object_to(CHAR *ch, OBJ *obj, CHAR *vict, int show)
     return FALSE;
   }
 
-  if (signal_object(obj, ch, MSG_GAVE_OBJ, MOB_NAME(vict))) return TRUE;
+  if (signal_object(obj, ch, MSG_OBJ_GIVEN, MOB_NAME(vict))) return TRUE;
 
   if (IS_IMMORTAL(ch) || IS_IMMORTAL(vict))
   {
@@ -1272,7 +1272,7 @@ bool give_object_to(CHAR *ch, OBJ *obj, CHAR *vict, int show)
   obj_from_char(obj);
   obj_to_char(obj, vict);
 
-  signal_char(vict, ch, MSG_GAVE_OBJ, OBJ_NAME(obj));
+  signal_char(vict, ch, MSG_OBJ_GIVEN, OBJ_NAME(obj));
 
   return TRUE;
 }

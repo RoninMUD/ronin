@@ -44,51 +44,36 @@ struct scoreboard_data scores[101];
 int number_of_kills=0;
 
 /* declarations */
-char *make_drunk(char *string, struct char_data *ch);
 void write_board(int vnum,char *heading,char *message);
 
-void do_quest(CHAR *ch, char *argument, int cmd)
-{
-  char buf[MSL];
+void do_quest(CHAR *ch, char *arg, int cmd) {
+  if (!ch) return;
 
-  if (!IS_NPC(ch) && IS_SET(ch->specials.pflag, PLR_NOSHOUT)) {
-    send_to_char("You have displeased the gods, you cannot quest.\n\r", ch);
+  if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_NOSHOUT)) {
+    printf_to_char(ch, "You have displeased the gods; you cannot quest.\n\r");
+
     return;
   }
 
-  for (; *argument == ' '; argument++);
+  arg = skip_spaces(arg);
 
-  if (!(*argument) && IS_NPC(ch))
-    return;
-  else if (!(*argument)) {
-    if IS_SET(ch->specials.pflag, PLR_QUESTC) {
-      REMOVE_BIT(ch->specials.pflag, PLR_QUESTC);
-      send_to_char("You turn OFF the quest channel.\n\r", ch);
-    }
-    else {
-      SET_BIT(ch->specials.pflag, PLR_QUESTC);
-      send_to_char("You turn ON the quest channel.\n\r", ch);
-    }
-    return;
-  }
+  if (!IS_NPC(ch) && is_abbrev(arg, "flag")) {
+    if (!IS_SET(GET_PFLAG(ch), PLR_QUESTC)) {
+      SET_BIT(GET_PFLAG(ch), PLR_QUESTC);
 
-  if (!strncmp("flag", argument, strlen("flag")) && !IS_NPC(ch)) {
-    if (IS_SET(GET_PFLAG(ch), PLR_QUEST)) {
-      REMOVE_BIT(GET_PFLAG(ch), PLR_QUEST);
-      send_to_char("You turn OFF your quest flag.\n\r", ch);
-      sprintf(buf, "QSTINFO: %s turned off the quest flag.", GET_NAME(ch));
-      wizlog(buf, LEVEL_IMM, 7);
+      printf_to_char(ch, "You turn ON the quest channel.\n\r");
     }
-    else {
-      SET_BIT(GET_PFLAG(ch), PLR_QUEST);
-      send_to_char("You turn ON your quest flag.\n\r", ch);
-      sprintf(buf, "QSTINFO: %s turned on the quest flag.", GET_NAME(ch));
-      wizlog(buf, LEVEL_IMM, 7);
-    }
+
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_QUEST);
+
+    printf_to_char(ch, "You turn %s your quest flag.\n\r", (IS_SET(GET_PFLAG(ch), PLR_QUEST) ? "ON" : "OFF"));
+
+    wizlog_f(LEVEL_IMM, 7, "QSTINFO: %s turned %s %s quest flag.", GET_NAME(ch), HSHR(ch), (IS_SET(GET_PFLAG(ch), PLR_QUEST) ? "ON" : "OFF"));
+
     return;
   }
 
-  channel_comm(ch, argument, CHANNEL_COMM_QUESTC);
+  communicate(ch, arg, COMM_QUEST);
 }
 
 #define FUNCT_WHERE      1
@@ -950,14 +935,14 @@ Usage: qf where (location of questers)\n\r\
           log        <obj>/<all>  (turn on quest logging for obj)\n\r\
           teleport                (random transport around the world)\n\r\
           sbreset                 (resets scoreboard - for pkill quests)\n\r\
-            Use SCOREBOARD to see death list (limit 99 deaths)\n\r\
+                     Use SCOREBOARD to see death list (limit 99 deaths)\n\r\
           spread     <num> <vnum> (random spreading of objs)\n\r\
           zone       <normal>/<never>/<doors> (chaos zone reset modes)\n\r\
           token      <char>       (reward the character with a subclass token)\n\r\
           qcard      load <amt>   (loads the # of quest cards)\n\r\
           qcard      collect      (pulls all qcards in the game to inventory)\n\r\
           qinfo                 (turns on/off info flag - see quester actions)\n\r\
-          aqp/award  <char> <amt> (award the character # of quest points)\n\r\
+          qp/award   <char> <amt> (award the character # of quest points)\n\r\
           scp        <char> <amt> (award the character # of subclass points)\n\r\
           gold       <char> <amt> (award the character # of gold coins)\n\r\
           exp        <char> <amt> (award the character # of experience points)\n\r\

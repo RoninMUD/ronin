@@ -83,7 +83,7 @@ int elven_lass(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	OBJ *obj;
 	OBJ *obj2;
 	
-	if(cmd==MSG_GAVE_OBJ)
+	if(cmd==MSG_OBJ_GIVEN)
 	{
 		if(!ch) return FALSE;
 		for(obj = mob->carrying;obj;obj = obj->next_content)
@@ -111,7 +111,7 @@ int warrior(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
 	OBJ *obj;
 	
-	if(cmd==MSG_GAVE_OBJ)
+	if(cmd==MSG_OBJ_GIVEN)
 	{
 		if(!ch) return FALSE;
 		for(obj = mob->carrying;obj;obj = obj->next_content)

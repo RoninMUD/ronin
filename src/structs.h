@@ -910,49 +910,49 @@ struct room_data
 #define IMMUNE2_STEAL       (1 << 9)  /* 512 */
 
 /* Player flags -- used in specials.pflag */
-#define PLR_BRIEF             1
-#define PLR_NOSHOUT           2
-#define PLR_COMPACT           4
-#define PLR_WRITING           8
-#define PLR_KILL              16
-#define PLR_THIEF             32
-#define PLR_NOKILL            64
-#define PLR_SECTOR_BRIEF      128
-#define PLR_NOSUMMON          256
-#define PLR_GOSSIP            512
-#define PLR_AUCTION           1024
-#define PLR_UNUSED_2048       2048
-#define PLR_NOMESSAGE         4096
-#define PLR_SANES_VOCAL_CLUB  8192
-#define PLR_LEMS_LIQOUR_ROOM  16384
-#define PLR_LINERS_LOUNGE     32768
-#define PLR_RANGERS_RELIQUARY 65536
-#define PLR_QUEST             131072
-#define PLR_CHAOS             262144
-#define PLR_DEPUTY            524288
-#define PLR_QUIET             1048576
-#define PLR_QUESTC            2097152
-#define PLR_SUPERBRF          4194304
-#define PLR_FIGHTBRF          8388608
-#define PLR_SKIPTITLE         16777216
-#define PLR_VICIOUS           33554432
-#define PLR_NOYELL            67108864
-#define PLR_EMAIL             134217728
-#define PLR_TAGBRF            268435456
+#define PLR_BRIEF             (1 << 0)  /* 1 */
+#define PLR_NOSHOUT           (1 << 1)  /* 2 */
+#define PLR_COMPACT           (1 << 2)  /* 4 */
+#define PLR_WRITING           (1 << 3)  /* 8 */
+#define PLR_KILL              (1 << 4)  /* 16 */
+#define PLR_THIEF             (1 << 5)  /* 32 */
+#define PLR_NOKILL            (1 << 6)  /* 64 */
+#define PLR_SECTOR_BRIEF      (1 << 7)  /* 128 */
+#define PLR_NOSUMMON          (1 << 8)  /* 256 */
+#define PLR_GOSSIP            (1 << 9)  /* 512 */
+#define PLR_AUCTION           (1 << 10) /* 1024 */
+#define PLR_SHOUT_OFF         (1 << 11) /* 2048 */
+#define PLR_NOMESSAGE         (1 << 12) /* 4096 */
+#define PLR_SANES_VOCAL_CLUB  (1 << 13) /* 8192 */
+#define PLR_LEMS_LIQOUR_ROOM  (1 << 14) /* 16384 */
+#define PLR_LINERS_LOUNGE     (1 << 15) /* 32768 */
+#define PLR_RANGERS_RELIQUARY (1 << 16) /* 65536 */
+#define PLR_QUEST             (1 << 17) /* 131072 */
+#define PLR_CHAOS             (1 << 18) /* 262144 */
+#define PLR_DEPUTY            (1 << 19) /* 524288 */
+#define PLR_QUIET             (1 << 20) /* 1048576 */
+#define PLR_QUESTC            (1 << 21) /* 2097152 */
+#define PLR_SUPERBRF          (1 << 22) /* 4194304 */
+#define PLR_FIGHTBRF          (1 << 23) /* 8388608 */
+#define PLR_SKIPTITLE         (1 << 24) /* 16777216 */
+#define PLR_VICIOUS           (1 << 25) /* 33554432 */
+#define PLR_YELL_OFF          (1 << 26) /* 67108864 */
+#define PLR_EMAIL             (1 << 27) /* 134217728 */
+#define PLR_TAGBRF            (1 << 28) /* 268435456 */
 
 /* Player flags 2 -- used in ver3.pflag2 */
-#define PLR2_BLOCK           (1 << 0)
-#define PLR2_CUNNING         (1 << 1)
-#define PLR2_DIRTY_TRICKS    (1 << 2)
-#define PLR2_VEHEMENCE       (1 << 3)
-#define PLR2_TRIP            (1 << 4)
-#define PLR2_EVASION         (1 << 5)
-#define PLR2_AWARENESS       (1 << 6)
-#define PLR2_HOSTILE         (1 << 7)
-#define PLR2_TRUSTY_STEED    (1 << 8)
-#define PLR2_SHADOWSTEP      (1 << 9)
-#define PLR2_VICTIMIZE       (1 << 10)
-#define PLR2_SNIPE           (1 << 11)
+#define TOG_BLOCK             (1 << 0)  /* 1 */
+#define TOG_CUNNING           (1 << 1)  /* 2 */
+#define TOG_DIRTY_TRICKS      (1 << 2)  /* 4 */
+#define TOG_VEHEMENCE         (1 << 3)  /* 8 */
+#define TOG_TRIP              (1 << 4)  /* 16 */
+#define TOG_EVASION           (1 << 5)  /* 32 */
+#define TOG_AWARENESS         (1 << 6)  /* 64 */
+#define TOG_HOSTILE           (1 << 7)  /* 128 */
+#define TOG_TRUSTY_STEED      (1 << 8)  /* 256 */
+#define TOG_SHADOWSTEP        (1 << 9)  /* 512 */
+#define TOG_VICTIMIZE         (1 << 10) /* 1024 */
+#define TOG_SNIPE             (1 << 11) /* 2048 */
 
 /* Wizard flags -- used in specials.wizflags */
 #define WIZ_TRUST       1
@@ -1166,7 +1166,7 @@ struct char_ver3_data {
   byte house_num; /* Not used yet */
   byte race; /* Not used yet */
   char email_addr[80]; /* Ranger Dec 03 */
-  unsigned long long int pflag2; /* Player Flags 2 */
+  unsigned long long toggles; /* Player Flags 2 */
   unsigned long extra_bitvect; /* Not used yet */
   byte extra_byte[6]; /* Not used yet */
   ubyte rank;
@@ -1180,7 +1180,7 @@ struct char_ver3_data {
   int time_to_quest; /* Ranger Feb 99 */
   int id; /* Ranger - Sep 00 */
   int death_timer; /* Used for imminent death */
-  long long int remort_exp; /* Remort EXP Pool */
+  long long remort_exp; /* Remort EXP Pool */
   unsigned long death_exp; /* Death Pool */
 };
 

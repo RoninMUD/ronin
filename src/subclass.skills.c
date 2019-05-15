@@ -51,8 +51,8 @@ void do_awareness(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_AWARENESS)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_AWARENESS);
+  if (IS_SET(GET_TOGGLES(ch), TOG_AWARENESS)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_AWARENESS);
 
     send_to_char("You relax and your sense of awareness fades.\n\r", ch);
     act("$n relaxes and $s sense of awareness fades.", TRUE, ch, 0, 0, TO_ROOM);
@@ -66,7 +66,7 @@ void do_awareness(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_AWARENESS);
+  SET_BIT(GET_TOGGLES(ch), TOG_AWARENESS);
 
   send_to_char("You become more aware of your surroundings, watching for danger.\n\r", ch);
   act("$n becomes more aware of $s surroundings, watching for danger.", TRUE, ch, 0, 0, TO_ROOM);
@@ -567,7 +567,7 @@ void do_camp(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB)) {
+  if (IS_SET(CHAR_ROOM_FLAGS(ch), CLUB)) {
     send_to_char("There is already a camp here.\n\r", ch);
 
     return;
@@ -595,7 +595,7 @@ void do_camp(CHAR *ch, char *arg, int cmd) {
 
   GET_POS(ch) = POSITION_RESTING;
 
-  SET_BIT(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB);
+  SET_BIT(CHAR_ROOM_FLAGS(ch), CLUB);
 
   send_to_char("You quickly set up a camp here, then sit down and rest.\n\r", ch);
   act("$n quickly sets up a camp here, then sits down and rests.", FALSE, ch, 0, 0, TO_ROOM);
@@ -752,8 +752,8 @@ void do_vehemence(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_VEHEMENCE);
+  if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_VEHEMENCE);
 
     send_to_char("Your vehemence diminishes.\n\r", ch);
 
@@ -766,7 +766,7 @@ void do_vehemence(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_VEHEMENCE);
+  SET_BIT(GET_TOGGLES(ch), TOG_VEHEMENCE);
 
   send_to_char("You feel a sudden rush of vehemence wash over you.\n\r", ch);
 }
@@ -850,7 +850,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
   GET_POS(victim) = stack_position(victim, POSITION_STUNNED);
 
   /* Trusty Steed */
-  if (SAME_ROOM(ch, victim) && IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
+  if (SAME_ROOM(ch, victim) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
     check = number(1, 121) - GET_WIS_APP(ch);
 
     if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
@@ -1047,8 +1047,8 @@ void do_hostile(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_HOSTILE)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_HOSTILE);
+  if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_HOSTILE);
 
     send_to_char("You place yourself in a normal stance.\n\r", ch);
     act("$n places $mself in a normal stance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1062,7 +1062,7 @@ void do_hostile(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_HOSTILE);
+  SET_BIT(GET_TOGGLES(ch), TOG_HOSTILE);
 
   send_to_char("You place yourself in a hostile stance.\n\r", ch);
   act("$n places $mself in a hostile stance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1809,8 +1809,8 @@ void do_victimize(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_VICTIMIZE)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_VICTIMIZE);
+  if (IS_SET(GET_TOGGLES(ch), TOG_VICTIMIZE)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_VICTIMIZE);
 
     send_to_char("You decide to show a modicum of mercy to your victims.\n\r", ch);
 
@@ -1829,7 +1829,7 @@ void do_victimize(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_VICTIMIZE);
+  SET_BIT(GET_TOGGLES(ch), TOG_VICTIMIZE);
 
   send_to_char("You will now take every opportunity to victimize your foe.\n\r", ch);
 }
@@ -1844,8 +1844,8 @@ void do_shadowstep(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_SHADOWSTEP)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_SHADOWSTEP);
+  if (IS_SET(GET_TOGGLES(ch), TOG_SHADOWSTEP)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_SHADOWSTEP);
 
     send_to_char("You will no longer slip into the shadows to attack your victims.\n\r", ch);
 
@@ -1858,7 +1858,7 @@ void do_shadowstep(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_SHADOWSTEP);
+  SET_BIT(GET_TOGGLES(ch), TOG_SHADOWSTEP);
 
   send_to_char("You will now slip into the shadows to attack your victims.\n\r", ch);
 }
@@ -1879,8 +1879,8 @@ void do_evasion(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_EVASION)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_EVASION);
+  if (IS_SET(GET_TOGGLES(ch), TOG_EVASION)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_EVASION);
 
     send_to_char("You become less evasive and set yourself into a normal fighting stance.\n\r", ch);
     act("$n becomes less evasive and sets $mself into a normal fighting stance.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1894,7 +1894,7 @@ void do_evasion(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_EVASION);
+  SET_BIT(GET_TOGGLES(ch), TOG_EVASION);
 
   send_to_char("You focus on evading attacks and fighting defensively.\n\r", ch);
   act("$n focuses on evading attacks and fighting defensively.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1910,8 +1910,8 @@ void do_dirty_tricks(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS);
+  if (IS_SET(GET_TOGGLES(ch), TOG_DIRTY_TRICKS)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_DIRTY_TRICKS);
 
     send_to_char("You'll fight fair... for now.\n\r", ch);
 
@@ -1924,7 +1924,7 @@ void do_dirty_tricks(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS);
+  SET_BIT(GET_TOGGLES(ch), TOG_DIRTY_TRICKS);
 
   send_to_char("You will start using dirty tricks to get the upper hand in combat.\n\r", ch);
 }
@@ -1939,8 +1939,8 @@ void do_trip(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_TRIP)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_TRIP);
+  if (IS_SET(GET_TOGGLES(ch), TOG_TRIP)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_TRIP);
 
     send_to_char("You will no longer try to trip your enemies during combat.\n\r", ch);
 
@@ -1953,7 +1953,7 @@ void do_trip(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_TRIP);
+  SET_BIT(GET_TOGGLES(ch), TOG_TRIP);
 
   send_to_char("You will try to trip your enemies when you circle around them.\n\r", ch);
 }
@@ -1968,8 +1968,8 @@ void do_trusty_steed(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_TRUSTY_STEED)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_TRUSTY_STEED);
+  if (IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_TRUSTY_STEED);
 
     send_to_char("You will no longer summon your trusty steed to aid you in battle.\n\r", ch);
 
@@ -1982,7 +1982,7 @@ void do_trusty_steed(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_TRUSTY_STEED);
+  SET_BIT(GET_TOGGLES(ch), TOG_TRUSTY_STEED);
 
   send_to_char("You will summon your trusty steed when pummeling or smiting your foes.\n\r", ch);
 }
@@ -1997,8 +1997,8 @@ void do_snipe(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (IS_SET(GET_PFLAG2(ch), PLR2_SNIPE)) {
-    REMOVE_BIT(GET_PFLAG2(ch), PLR2_SNIPE);
+  if (IS_SET(GET_TOGGLES(ch), TOG_SNIPE)) {
+    REMOVE_BIT(GET_TOGGLES(ch), TOG_SNIPE);
 
     send_to_char("You will no longer attempt to snipe opponents when they are weakened.\n\r", ch);
 
@@ -2011,7 +2011,7 @@ void do_snipe(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  SET_BIT(GET_PFLAG2(ch), PLR2_SNIPE);
+  SET_BIT(GET_TOGGLES(ch), TOG_SNIPE);
 
   send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
 }

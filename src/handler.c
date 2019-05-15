@@ -1852,29 +1852,6 @@ struct char_data *get_mob_vis(struct char_data *ch, char *name)
   return(0);
 }
 
-struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
-        struct obj_data *list)
-{
-  struct obj_data *i;
-  int j, number;
-  char tmpname[MAX_INPUT_LENGTH];
-  char *tmp;
-
-  strcpy(tmpname,name);
-  tmp = tmpname;
-  if(!(number = get_number(&tmp)))
-    return(0);
-
-  for (i = list, j = 1; i && (j <= number); i = i->next_content)
-    if (isname(tmp, OBJ_NAME(i)))
-      if (CAN_SEE_OBJ(ch, i)) {
-        if (j == number)
-          return(i);
-        j++;
-      }
-  return(0);
-}
-
 
 /*
 Search a given equipment for an object, and return a pointer to that object
@@ -2044,76 +2021,47 @@ struct obj_data *create_money( int amount )
 /* **tar_obj Will be NULL if no object was found, otherwise points        */
 /*                                                                        */
 int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ **target_obj) {
-  const char * ignore[] = {
-    "the",
-    "in",
-    "on",
-    "at",
-    "\n"
-  };
-
   char name[MIL];
 
-  /* Eliminate spaces and "ignore" words. */
-  while (*argument) {
-    for (; *argument == ' '; argument++);
+  one_argument(argument, name);
 
-    int i = 0;
+  if (!*name) return FIND_NOT_FOUND;
 
-    for (; (name[i] = *(argument + i)) && (name[i] != ' '); i++);
-
-    name[i] = 0;
-
-    argument += i;
-
-    if (search_block(name, ignore, TRUE) > -1) break;
-  }
-
-  if (!name[0]) return 0;
-
-  if (target_ch && IS_SET(bitvector, FIND_CHAR_ROOM)) {
-    if ((*target_ch = get_char_room_vis(ch, name))) {
+  if (target_ch) {
+    if (IS_SET(bitvector, FIND_CHAR_ROOM) && (*target_ch = get_char_room_vis(ch, name))) {
       return FIND_CHAR_ROOM;
     }
-  }
 
-  if (target_ch && IS_SET(bitvector, FIND_CHAR_WORLD)) {
-    if ((*target_ch = get_char_vis(ch, name))) {
+    if (IS_SET(bitvector, FIND_CHAR_WORLD) && (*target_ch = get_char_vis(ch, name))) {
       return FIND_CHAR_WORLD;
     }
   }
 
-  if (target_obj && IS_SET(bitvector, FIND_OBJ_INV)) {
-    if ((*target_obj = get_obj_in_list_vis(ch, name, ch->carrying))) {
+  if (target_obj) {
+    if (IS_SET(bitvector, FIND_OBJ_INV) && (*target_obj = get_obj_in_list_vis(ch, name, ch->carrying))) {
       return FIND_OBJ_INV;
     }
-  }
 
-  if (target_obj && IS_SET(bitvector, FIND_OBJ_EQUIP)) {
-    for (int i = 0; i < MAX_WEAR; i++) {
-      OBJ *tmp_obj = EQ(ch, i);
+    if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
+      for (int i = 0; i < MAX_WEAR; i++) {
+        if (EQ(ch, i) && isname(name, OBJ_NAME(EQ(ch, i)))) {
+          *target_obj = EQ(ch, i);
 
-      if (tmp_obj && isname(name, OBJ_NAME(tmp_obj))) {
-        *target_obj = tmp_obj;
-
-        return FIND_OBJ_EQUIP;
+          return FIND_OBJ_EQUIP;
+        }
       }
     }
-  }
 
-  if (target_obj && IS_SET(bitvector, FIND_OBJ_ROOM)) {
-    if ((*target_obj = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents))) {
+    if (IS_SET(bitvector, FIND_OBJ_ROOM) && (*target_obj = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents))) {
       return FIND_OBJ_ROOM;
     }
-  }
 
-  if (target_obj && IS_SET(bitvector, FIND_OBJ_WORLD)) {
-    if ((*target_obj = get_obj_vis(ch, name))) {
+    if (IS_SET(bitvector, FIND_OBJ_WORLD) && (*target_obj = get_obj_vis(ch, name))) {
       return FIND_OBJ_WORLD;
     }
   }
 
-  return 0;
+  return FIND_NOT_FOUND;
 }
 
 /* Returns a pointer to the first MOB in the specified room with the specified VNUM, or NULL if not found. */
@@ -2142,4 +2090,36 @@ OBJ *get_obj_by_vnum_in_room(int obj_vnum, int rm) {
   }
 
   return NULL;
+}
+
+OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see) {
+  OBJ *obj = list;
+
+  char buf[MIL];
+
+  snprintf(buf, sizeof(buf), "%s", name);
+
+  char *buf_ptr = buf;
+
+  int number = get_number(&buf_ptr);
+
+  if (!number) return NULL;
+
+  for (int i = 1; obj && (i <= number); obj = obj->next_content) {
+    if (isname(buf_ptr, OBJ_NAME(obj))) {
+      if (!must_see || CAN_SEE_OBJ(ch, obj)) {
+        if (i == number) {
+          return obj;
+        }
+
+        i++;
+      }
+    }
+  }
+
+  return NULL;
+}
+
+OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list) {
+  return get_obj_in_list_ex(ch, name, list, TRUE);
 }

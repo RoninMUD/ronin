@@ -3263,7 +3263,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
     CHAR *vict = NULL;
     for(vict = world[lem_instance->in_room_r].people; vict; vict = vict->next_in_room)
     {
-      if(!IS_NPC(vict) && IS_SET(GET_PFLAG2(vict), PLR2_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
+      if(!IS_NPC(vict) && IS_SET(GET_TOGGLES(vict), TOG_EVASION) && !enchanted_by(vict, ENCH_NAIAD_COWARDICE) )
       {
           char buf[512];
           sprintf(buf, "Fight me like a man, not a cowering wimp, %s!", vict->player.name );
@@ -4163,7 +4163,7 @@ int mus_Captain(CHAR *mob, CHAR* ch, int cmd, char *arg )
 {
   char buf[200];
 
-  if( cmd == MSG_GAVE_OBJ )
+  if( cmd == MSG_OBJ_GIVEN )
   {
     if( mob->points.gold > 0 )
     {
@@ -4304,7 +4304,7 @@ int mus_mar_ghost(CHAR *mob, CHAR* ch, int cmd, char *arg )
       extract_obj( unequip_char( mob, WEAR_ABOUT ) );
     }
   }
-  else if( cmd == MSG_GAVE_OBJ )
+  else if( cmd == MSG_OBJ_GIVEN )
   {
     if( ch && is_carrying_obj( mob, MUS_CLOAK ) )
     {

@@ -1996,7 +1996,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Vehemence penalty. */
   if (IS_MORTAL(victim) &&
-      IS_SET(GET_PFLAG2(victim), PLR2_VEHEMENCE)) {
+      IS_SET(GET_TOGGLES(victim), TOG_VEHEMENCE)) {
     dmg = lround(dmg * 1.1);
   }
 
@@ -2052,7 +2052,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Evasion */
   if (IS_PHYSICAL_DAMAGE(damage_type) &&
-      IS_SET(GET_PFLAG2(victim), PLR2_EVASION)) {
+      IS_SET(GET_TOGGLES(victim), TOG_EVASION)) {
     dmg = lround(dmg * 0.75);
   }
 
@@ -2519,7 +2519,7 @@ int calc_hitroll(CHAR *ch) {
     }
 
     /* Evasion: Hitroll Penalty */
-    if (IS_SET(GET_PFLAG2(ch), PLR2_EVASION)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_EVASION)) {
       hitroll -= 5;
     }
 
@@ -2567,7 +2567,7 @@ int calc_damroll(CHAR *ch) {
 }
 
 int calc_thaco(CHAR *ch) {
-  if (!ch || (GET_LEVEL(ch) < 1) || IS_NPC(ch)) {
+  if (!ch || !GET_LEVEL(ch) || IS_NPC(ch)) {
     return 20;
   }
 
@@ -2597,47 +2597,46 @@ int calc_ac(CHAR *ch) {
 
   int ac = GET_AC(ch);
 
-  /* PC Section */
   if (!IS_NPC(ch)) {
     /* Normal PC AC limit is -250. */
     int min_pc_ac = -250;
 
     /* Dexterity bonus only applies if awake. */
     if (AWAKE(ch)) {
-      ac += (dex_app[GET_DEX(ch)].defensive);
+      ac += dex_app[GET_DEX(ch)].defensive;
     }
 
-    /* Vehemence AC Penalty */
-    if (IS_SET(GET_PFLAG2(ch), PLR2_VEHEMENCE)) {
+    /* Vehemence: AC Penalty */
+    if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE)) {
       ac += 30;
     }
 
-    /* Close Combat Max AC Adjustment */
+    /* Close Combat: Max AC Adjustment */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       ENCH *cc_ench = NULL;
 
-      if ((cc_ench = get_enchantment_by_name(ch, "-10 AC (Close Combat)")) || (cc_ench = get_enchantment_by_name(ch, "-20 AC (Close Combat)"))) {
+      if (((cc_ench = get_enchantment_by_name(ch, "-10 AC (Close Combat)")) || (cc_ench = get_enchantment_by_name(ch, "-20 AC (Close Combat)"))) && (cc_ench->modifier < 0)) {
         min_pc_ac += cc_ench->modifier;
       }
     }
 
-    /* Warlord Max AC Adjustment */
+    /* Warlord: Max AC Adjustment */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
       min_pc_ac -= GET_SC_LEVEL(ch) * 10;
     }
 
-    /* Defend AC Bonus and Max AC Adjustment */
+    /* Defend: AC Bonus and Max AC Adjustment */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       ac -= 100;
       min_pc_ac = -300;
     }
 
-    /* Blur AC Bonus */
+    /* Blur: AC Bonus */
     if (affected_by_spell(ch, SPELL_BLUR)) {
       ac -= (GET_LEVEL(ch) / 2);
     }
 
-    /* Limit PC AC as calculated above. */
+    /* Limit AC */
     ac = MAX(ac, min_pc_ac);
   }
 
@@ -2807,7 +2806,7 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   /* The following conditions always result in a hit. */
   if (!AWAKE(defender) ||
       IS_AFFECTED(defender, AFF_FURY) ||
-      IS_SET(GET_PFLAG2(defender), PLR2_HOSTILE) ||
+      IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
       affected_by_spell(defender, SKILL_FRENZY)) {
     return HIT_SUCCESS;
   }
@@ -2820,14 +2819,17 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   int attack_roll = number(1, 20);
   int success = hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender));
 
-  /* Sento Kata: Re-roll the attack if it was a 1. The re-roll can't critically hit. */
-  if ((success == HIT_FAILURE) && (attack_roll == 1) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
-    attack_roll = number(1, 20);
-    success = hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender));
-  }
-  /* Sento Kata: Critical hit if the initial attack was a success and was a 17+. */
-  else if ((success == HIT_SUCCESS) && (attack_roll >= 17) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
-    success = HIT_CRITICAL;
+  /* Sento Kata */
+  if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 5)) {
+    /* Re-roll the attack if it was a 1. The re-roll can't critically hit. */
+    if ((success == HIT_FAILURE) && (attack_roll == 1)) {
+      attack_roll = number(1, 20);
+      success = hit_success(attack_roll, calc_thaco(attacker), calc_hitroll(attacker), calc_ac(defender));
+    }
+    /* Critical hit if the initial attack was a success and was a 17+. */
+    else if ((success == HIT_SUCCESS) && (attack_roll >= 17)) {
+      success = HIT_CRITICAL;
+    }
   }
 
   return success;
@@ -2889,7 +2891,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
   if (IS_NPC(defender)) {
     /* The following conditions always result in a failure. */
     if ((GET_POS(defender) <= POSITION_INCAP) ||
-        IS_SET(GET_PFLAG2(defender), PLR2_HOSTILE) ||
+        IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
         affected_by_spell(defender, SKILL_FRENZY)) {
       return FALSE;
     }
@@ -2909,7 +2911,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     /* The following conditions always result in a failure. */
     if ((GET_POS(defender) <= POSITION_STUNNED) ||
         IS_AFFECTED(defender, AFF_FURY) ||
-        IS_SET(GET_PFLAG2(defender), PLR2_HOSTILE) ||
+        IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
         affected_by_spell(defender, SKILL_FRENZY)) {
       return FALSE;
     }
@@ -2957,6 +2959,8 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
     /* If no skill or affect applies, return FALSE. */
     if (!skill) return FALSE;
+
+    int defender_ac = calc_ac(defender);
 
     int check = 0;
 
@@ -3011,7 +3015,6 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
         }
 
         /* Bullwark */
-        int defender_ac = calc_ac(defender);
         if (IS_MORTAL(defender) && check_subclass(defender, SC_WARLORD, 5) && (defender_ac < -250)) {
           check += (int)(700.0 * ((((double)defender_ac - 250.0) / 6.0) / 100.0));
         }
@@ -3349,7 +3352,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (SAME_ROOM(attacker, defender) &&
             (GET_CLASS(attacker) == CLASS_THIEF) &&
             (GET_LEVEL(attacker) >= 45) &&
-            ((number(1, 131) - GET_DEX_APP(attacker) - (IS_SET(GET_PFLAG2(attacker), PLR2_VEHEMENCE) ? (5 + (GET_DEX_APP(attacker) / 2)) : 0)) <= GET_LEARNED(attacker, SKILL_TWIST))) {
+            ((number(1, 131) - GET_DEX_APP(attacker) - (IS_SET(GET_TOGGLES(attacker), TOG_VEHEMENCE) ? (5 + (GET_DEX_APP(attacker) / 2)) : 0)) <= GET_LEARNED(attacker, SKILL_TWIST))) {
           act("You twist your weapon in the flesh of $N.", FALSE, attacker, 0, defender, TO_CHAR);
           act("You writhe in pain as $n twists his weapon in your back.", FALSE, attacker, 0, defender, TO_VICT);
           act("$n gruesomely twists $s weapon in the flesh of $N.", TRUE, attacker, 0, defender, TO_NOTVICT);
@@ -3361,7 +3364,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (!IS_NPC(attacker) && check_subclass(attacker, SC_DEFILER, 5) && chance(20)) {
           send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(attacker));
 
-          RM_BLOOD(CHAR_REAL_ROOM(attacker)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(attacker)) + 1, 10);
+          ROOM_BLOOD(CHAR_REAL_ROOM(attacker)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(attacker)) + 1, 10);
         }
       }
       break;
@@ -3752,7 +3755,7 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
 
   /* Bathed in Blood */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
-    check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? RM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
+    check += 5 + (CHAR_REAL_ROOM(ch) != NOWHERE) ? ROOM_BLOOD(CHAR_REAL_ROOM(ch)) : 0;
   }
 
   if (!chance(check)) return;
@@ -3809,7 +3812,7 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
   if (IS_MORTAL(ch) && chance(20)) {
     send_to_room("Blood sprays across the room, staining the surroundings dark crimson.\n\r", CHAR_REAL_ROOM(ch));
 
-    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+    ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 }
 
@@ -3906,8 +3909,8 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
 
   double multi = 1.5;
 
-  if (!IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK) &&
-      ((IS_DAY && IS_OUTSIDE(ch)) || IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LIT))) {
+  if (!IS_SET(CHAR_ROOM_FLAGS(ch), DARK) &&
+      ((IS_DAY && IS_OUTSIDE(ch)) || IS_SET(CHAR_ROOM_FLAGS(ch), LIT))) {
     check += 50;
     multi -= 0.5;
   }
@@ -3922,7 +3925,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
     }
   }
 
-  if (IS_SET(GET_ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DARK)) {
+  if (IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
     check -= 15;
     multi += 0.3;
 
@@ -4140,7 +4143,7 @@ void perform_violence(void) {
 
     /* Shadowstep is before hit() in order to take advantage of pummel, etc. */
     if (IS_MORTAL(ch)) {
-      if (SAME_ROOM(ch, vict) && IS_SET(GET_PFLAG2(ch), PLR2_SHADOWSTEP) && check_sc_access(ch, SKILL_SHADOWSTEP)) {
+      if (SAME_ROOM(ch, vict) && IS_SET(GET_TOGGLES(ch), TOG_SHADOWSTEP) && check_sc_access(ch, SKILL_SHADOWSTEP)) {
         shadowstep_action(ch, vict);
       }
     }
@@ -4168,17 +4171,17 @@ void perform_violence(void) {
     }
 
     /* Victimize */
-    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_VICTIMIZE) && check_sc_access(ch, SKILL_VICTIMIZE)) {
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_TOGGLES(ch), TOG_VICTIMIZE) && check_sc_access(ch, SKILL_VICTIMIZE)) {
       victimize_action(ch, vict);
     }
 
     /* Snipe */
-    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_SNIPE) && check_sc_access(ch, SKILL_SNIPE)) {
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_TOGGLES(ch), TOG_SNIPE) && check_sc_access(ch, SKILL_SNIPE)) {
       snipe_action(ch, vict);
     }
 
     /* Dirty Tricks */
-    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_PFLAG2(ch), PLR2_DIRTY_TRICKS) && check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_TOGGLES(ch), TOG_DIRTY_TRICKS) && check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
       dirty_tricks_action(ch, vict);
     }
   }

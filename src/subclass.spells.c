@@ -954,7 +954,7 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10))) {
     send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
 
-    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+    ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
   extract_obj(obj);
@@ -1761,12 +1761,12 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       affect_from_char(group_member, SPELL_TRANQUILITY);
 
       af.location = APPLY_HITROLL;
-      af.modifier = 2;
+      af.modifier = 3;
 
       affect_to_char(group_member, &af);
 
       af.location = APPLY_DAMROLL;
-      af.modifier = 2;
+      af.modifier = 3;
 
       affect_to_char(group_member, &af);
     }

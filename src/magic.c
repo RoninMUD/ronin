@@ -2370,7 +2370,7 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10))) {
     send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
 
-    RM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(RM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+    ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
   extract_obj(obj);

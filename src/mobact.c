@@ -244,7 +244,7 @@ void mobile_activity(CHAR *mob) {
     /* Awareness */
     for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(mob)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
       if (IS_MORTAL(tmp_ch) &&
-          IS_SET(GET_PFLAG2(tmp_ch), PLR2_AWARENESS) &&
+          IS_SET(GET_TOGGLES(tmp_ch), TOG_AWARENESS) &&
           !GET_OPPONENT(tmp_ch) &&
           !IS_AFFECTED(tmp_ch, AFF_FURY) &&
           !affected_by_spell(tmp_ch, SKILL_BERSERK) &&

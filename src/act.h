@@ -462,7 +462,6 @@ void do_bid(CHAR *ch, char *arg, int cmd);
 void do_wemote(CHAR *ch,char *argument, int cmd);
 void do_donate(CHAR *ch,char *argument, int cmd);
 void do_wizact(CHAR *ch,char *argument, int cmd);
-void do_setcolor(CHAR *ch,char *argument, int cmd);
 void do_descr(CHAR *ch,char *argument, int cmd);
 bool circle_follow(CHAR *ch, CHAR *victim);
 void stop_follower(CHAR *ch);
@@ -475,15 +474,67 @@ void do_movestat(CHAR *ch, char *arg, int cmd);
 void do_locate(CHAR *ch, char *arg, int cmd);
 void do_nop(CHAR *ch, char *arg, int cmd);
 
-void channel_comm(struct char_data *ch, char *arg, int comm);
+void comm_special(CHAR *ch, CHAR *listener, int comm, char *message, ...) __attribute__((format(printf, 4, 5)));
 
-#define CHANNEL_COMM_GOSSIP  0
-#define CHANNEL_COMM_AUCTION 1
-#define CHANNEL_COMM_QUESTC  2
-#define CHANNEL_COMM_CHAOS   3
+void communicate(CHAR *ch, char *arg, int comm);
 
-typedef struct channel_t {
-  char *channel_name;
-  long channel_flag;
-  int channel_color;
-} channel_t;
+#define COMM_TELL          0
+#define COMM_REPLY         1
+#define COMM_WHISPER       2
+#define COMM_ASK           3
+#define COMM_GTELL         4
+#define COMM_SAY           5
+#define COMM_SHOUT         6
+#define COMM_YELL          7
+#define COMM_GOSSIP        8
+#define COMM_AUCTION       9
+#define COMM_QUEST         10
+#define COMM_CHAOS         11
+#define COMM_FIRST         COMM_TELL
+#define COMM_LAST          COMM_CHAOS
+
+#define COMM_TO_CHAR       0
+#define COMM_TO_CHAR_ROOM  1
+#define COMM_TO_GROUP      2
+#define COMM_TO_ROOM       3
+#define COMM_TO_ZONE       4
+#define COMM_TO_WORLD      5
+
+#define COMM_MODE_DIRECT   0
+#define COMM_MODE_GENERAL  1
+#define COMM_MODE_CHANNEL  2
+
+typedef struct comm_info_t {
+  const char *name;
+  const char *text_to_ch;
+  const char *text_to_vict;
+  const char *text_to_other;
+  const char *text_no_arg;
+  const unsigned long pflag_on;
+  const unsigned long pflag_off;
+  const unsigned long pflag_no_do;
+  const unsigned long pflag_no_hear;
+  const int min_pos_hear;
+  const int to;
+  const int mode;
+  const int hide;
+  const bool set_reply;
+  const int color;
+} comm_info_t;
+
+typedef struct color_t {
+  const char *code;
+  const char *name;
+  const char *key;
+} color_t;
+
+typedef struct color_field_t {
+  const char *field;
+  const char *name;
+} color_field_t;
+
+struct drunk_t {
+  int min_drunk_level;
+  int num_replacements;
+  char *replacement[11];
+};

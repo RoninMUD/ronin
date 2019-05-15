@@ -21,11 +21,12 @@ void close_socket(struct descriptor_data *d);
 void send_to_char_by_type(char *message, CHAR *ch, int type);
 void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, int type2);
 
+//void act(const char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, ...) __attribute__((format(printf, 1, 7)));
 void act(char *message, int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type);
 void act_f(int hide, CHAR *ch, void *other_or_obj, void *vict_or_obj, int type, char *message, ...) __attribute__((format(printf, 6, 7)));
 
 void send_to_char(char *message, CHAR *ch);
-void send_to_group(char *messg, CHAR *ch, bool same_room);
+void send_to_group(char *messge, CHAR *ch, bool same_room);
 void send_to_room(char *message, int room);
 void send_to_room_except(char *message, int room, CHAR *ch);
 void send_to_room_except_two(char *message, int room, CHAR *ch1, CHAR *ch2);
@@ -34,6 +35,19 @@ void send_to_world_except(char *message, CHAR *ch);
 void send_to_outdoor(char *message);
 void send_to_all(char *message);
 void send_to_all_except(char *message, CHAR *ch);
+
+/*
+void send_to_char(const char *message, CHAR *ch, ...) __attribute__((format(printf, 1, 3)));
+void send_to_group(const char *messge, CHAR *ch, bool same_room, ...) __attribute__((format(printf, 1, 4)));
+void send_to_room(const char *message, int room, ...) __attribute__((format(printf, 1, 3)));
+void send_to_room_except(const char *message, int room, CHAR *ch, ...) __attribute__((format(printf, 1, 4)));
+void send_to_room_except_two(const char *message, int room, CHAR *ch1, CHAR *ch2, ...) __attribute__((format(printf, 1, 5)));
+void send_to_world(const char *message, ...) __attribute__((format(printf, 1, 2)));
+void send_to_world_except(const char *message, CHAR *ch, ...) __attribute__((format(printf, 1, 3)));
+void send_to_outdoor(const char *message, ...) __attribute__((format(printf, 1, 2)));
+void send_to_all(const char *message, ...) __attribute__((format(printf, 1, 2)));
+void send_to_all_except(const char *message, CHAR *ch, ...) __attribute__((format(printf, 1, 3)));
+*/
 
 void printf_to_char(CHAR *ch, char *message, ...) __attribute__((format(printf, 2, 3)));
 void printf_to_group(CHAR *ch, bool same_room, char *message, ...) __attribute__((format(printf, 3, 4)));

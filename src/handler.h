@@ -94,8 +94,6 @@ struct char_data *get_mortal_room_vis(struct char_data *ch, char *name);
 struct char_data *get_char_vis(struct char_data *ch, char *name);
 struct char_data *get_char_vis_zone(struct char_data *ch, char *name);
 struct char_data *get_mob_vis(struct char_data *ch, char *name);
-struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
-				struct obj_data *list);
 struct obj_data *get_obj_vis(struct char_data *ch, char *name);
 struct obj_data *get_obj_vis_in_rooms(struct char_data *ch, char *name);
 
@@ -103,15 +101,20 @@ void extract_char(struct char_data *ch);
 
 /* Generic Find */
 
-int generic_find(char *arg, int bitvector, struct char_data *ch,
-                   struct char_data **tar_ch, struct obj_data **tar_obj);
+int generic_find(char *arg, int bitvector, CHAR *ch, CHAR **tar_ch, OBJ **tar_obj);
 
-#define FIND_CHAR_ROOM     1
-#define FIND_CHAR_WORLD    2
-#define FIND_OBJ_INV       4
-#define FIND_OBJ_ROOM      8
-#define FIND_OBJ_WORLD    16
-#define FIND_OBJ_EQUIP    32
+#define FIND_NOT_FOUND  0
+#define FIND_CHAR_ROOM  1
+#define FIND_CHAR_WORLD 2
+#define FIND_OBJ_INV    4
+#define FIND_OBJ_ROOM   8
+#define FIND_OBJ_WORLD  16
+#define FIND_OBJ_EQUIP  32
+//#define FIND_CHAR_INVIS 64
+//#define FIND_OBJ_INVIS  128
 
 struct char_data *get_mob_by_vnum_in_room(int mob_vnum, int rm);
 struct obj_data *get_obj_by_vnum_in_room(int obj_vnum, int rm);
+
+OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see);
+OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list);
