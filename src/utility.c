@@ -1798,14 +1798,16 @@ int STRENGTH_APPLY_INDEX(struct char_data *ch) {
 }
 
 
-bool SAME_GROUP(CHAR *ch1, CHAR *ch2) {
+bool SAME_GROUP_EX(CHAR *ch1, CHAR *ch2, bool ignore_aff_group) {
   if (!ch1 || !ch2) return FALSE;
 
-  if (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP)) return FALSE;
+  if (ch1 == ch2) return TRUE;
 
-  CHAR *group_leader = (GET_MASTER(ch1) ? GET_MASTER(ch1) : ch1);
+  if (!ignore_aff_group && (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP))) return FALSE;
 
-  if (!IS_AFFECTED(group_leader, AFF_GROUP)) return FALSE;
+  CHAR * group_leader = (GET_MASTER(ch1) ? GET_MASTER(ch1) : ch1);
+
+  if (!ignore_aff_group && !IS_AFFECTED(group_leader, AFF_GROUP)) return FALSE;
 
   bool found_ch1 = FALSE, found_ch2 = FALSE;
 
@@ -1820,6 +1822,11 @@ bool SAME_GROUP(CHAR *ch1, CHAR *ch2) {
   }
 
   return (found_ch1 && found_ch2);
+}
+
+
+bool SAME_GROUP(CHAR *ch1, CHAR *ch2) {
+  return SAME_GROUP_EX(ch1, ch2, FALSE);
 }
 
 
