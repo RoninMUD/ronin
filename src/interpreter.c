@@ -138,12 +138,17 @@ const char * const fill[] = {
   "\n"
 };
 
+/* Determine if a given string is a fill word. */
+bool is_fill_word(char *string) {
+  return (search_block(string, fill, TRUE) >= 0);
+}
+
 /* Determine if a given string is a number. */
 bool is_number(char *string) {
   if (!*string) return FALSE;
 
-  for (int index = (*string == '-') ? 1 : 0; *(string + index) != '\0'; index++)
-    if ((*(string + index) < '0') || (*(string + index) > '9'))
+  for (int index = ((*string == '-') ? 1 : 0); *(string + index); index++)
+    if (!isdigit(*(string + index)))
       return FALSE;
 
   return TRUE;
@@ -160,11 +165,6 @@ bool is_abbrev(char *str1, char *str2) {
   return TRUE;
 }
 
-/* Determine if a given string is a fill word. */
-bool is_fill_word(char *string) {
-  return (search_block(string, fill, TRUE) >= 0);
-}
-
 /* Return argument after skipping all leading spaces. */
 char *skip_spaces(char *string) {
   while (*string && isspace(*string)) string++;
@@ -173,20 +173,18 @@ char *skip_spaces(char *string) {
 }
 
 int get_index_of_string_in_list(const char *string, const char * const *list, bool match_length, bool case_sensitive) {
-  assert(string && list);
+  if (!string || !list) return -1;
 
   size_t str_len = strlen(string);
 
-  if (str_len > 0) {
-    for (int index = 0; **(list + index) != '\n'; index++) {
-      const char *tmp_str = *(list + index);
+  for (int index = 0; str_len && (**(list + index) != '\n'); index++) {
+    const char *tmp_str = *(list + index);
+    size_t tmp_len = strlen(tmp_str);
 
-      size_t tmp_len = strlen(tmp_str);
+    if (match_length && (tmp_len != str_len)) continue;
+    else tmp_len = MAX(tmp_len, 1);
 
-      if (match_length && (tmp_len != str_len)) continue;
-
-      if ((case_sensitive && !strncmp(string, tmp_str, tmp_len)) || (!case_sensitive && !strncasecmp(string, tmp_str, tmp_len))) return index;
-    }
+    if ((case_sensitive && !strncmp(string, tmp_str, tmp_len)) || (!case_sensitive && !strncasecmp(string, tmp_str, tmp_len))) return index;
   }
 
   return -1;
@@ -195,8 +193,6 @@ int get_index_of_string_in_list(const char *string, const char * const *list, bo
 int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive) {
   char buf[MIL];
   int len = 0;
-
-  assert(list);
 
   strncpy(buf, string, sizeof(buf) - 1);
   buf[sizeof(buf) - 1] = '\0';
@@ -240,11 +236,8 @@ int search_block(const char *string, const char * const *list, bool exact_match)
 
 /* Return index of string matched in a given list of strings. */
 int old_search_block(const char *string, int begin, int length, const char * const *list, int mode) {
-  bool found = FALSE;
   int index = 0;
-
-  assert(begin >= 0);
-  assert(list);
+  bool found = FALSE;
 
   if (length < 1)
     return 0;
@@ -267,12 +260,12 @@ int old_search_block(const char *string, int begin, int length, const char * con
 /* find the first sub-argument of a string, return pointer to first char in
    primary argument, following the sub-arg                  */
 char *one_argument(char *string, char *arg) {
-  assert(arg);
-
   int begin = 0, index = 0;
 
   do {
-    string = skip_spaces(string);
+    while (*(string + begin) == ' ') {
+      begin++;
+    }
 
     for (index = 0; *(string + begin + index) > ' '; index++) {
       *(arg + index) = LOWER(*(string + begin + index));
@@ -287,25 +280,18 @@ char *one_argument(char *string, char *arg) {
 }
 
 /* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
-void argument_interpreter(char *string, char *arg1, char *arg2) {
-  assert(string);
-  assert(arg1);
-  assert(arg2);
-
+void two_arguments(char *string, char *arg1, char *arg2) {
   string = one_argument(string, arg1);
   string = one_argument(string, arg2);
 }
 
 /* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
-void two_arguments(char *string, char *arg1, char *arg2) {
-  argument_interpreter(string, arg1, arg2);
+void argument_interpreter(char *string, char *arg1, char *arg2) {
+  two_arguments(string, arg1, arg2);
 }
 
 /* Fill arg1 with the first argument and substring with the rest of the provided string. */
 void half_chop(char *string, char *arg1, int len1, char *substring, int substring_len) {
-  assert(arg1);
-  assert(substring);
-
   string = skip_spaces(string);
   for (; *string && (len1 > 1) && !isspace(*arg1 = *string); string++, arg1++, len1--);
   *arg1 = '\0';

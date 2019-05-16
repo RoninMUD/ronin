@@ -47,25 +47,6 @@ const comm_info_t comm_info[] = {
     .color = 6,
   },
   {
-    .name = "reply",
-    .text_to_ch = "$n reply to $N",
-    .text_to_vict = "$n replies",
-    .text_to_other = "",
-    .text_no_arg = "Yes, but what do you wish to reply?",
-    .text_not_found = "There is nobody to reply to...",
-    .pflag_on = 0,
-    .pflag_off = 0,
-    .pflag_no_do = PLR_NOSHOUT,
-    .pflag_no_hear = PLR_NOSHOUT,
-    .min_pos_hear = 0,
-    .to = COMM_TO_CHAR,
-    .hide = PERS_MORTAL,
-    .style = COMM_STYLE_QUOTE,
-    .direct = TRUE,
-    .set_reply = TRUE,
-    .color = 6,
-  },
-  {
     .name = "whisper",
     .text_to_ch = "$n whisper to $N",
     .text_to_vict = "$n whispers to $N",
@@ -102,6 +83,25 @@ const comm_info_t comm_info[] = {
     .direct = TRUE,
     .set_reply = TRUE,
     .color = 0,
+  },
+  {
+    .name = "reply",
+    .text_to_ch = "$n reply to $N",
+    .text_to_vict = "$n replies",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you wish to reply?",
+    .text_not_found = "There is nobody to reply to...",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = PLR_NOSHOUT,
+    .min_pos_hear = 0,
+    .to = COMM_TO_REPLY,
+    .hide = PERS_MORTAL,
+    .style = COMM_STYLE_QUOTE,
+    .direct = TRUE,
+    .set_reply = TRUE,
+    .color = 6,
   },
   {
     .name = "gtell",
@@ -543,6 +543,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
   switch (comm_info[comm].to) {
     case COMM_TO_CHAR:
     case COMM_TO_CHAR_ROOM:
+    case COMM_TO_REPLY:
       if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
       act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
       if (comm_info[comm].color) ENDCOLOR(listener);
@@ -699,7 +700,7 @@ void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message,
   if (!ch || !IS_NPC(ch) || !listener || IS_NPC(listener) || !message || !*message) return;
 
   /* Direct communication only; no reply. */
-  if (comm_info[comm].direct && (comm_info[comm].to != COMM_TO_REPLY)) return;
+  if (!comm_info[comm].direct || (comm_info[comm].to == COMM_TO_REPLY)) return;
 
   /* Redirect listener if they're mobswitched. */
   if (listener->switched) {

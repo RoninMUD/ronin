@@ -964,6 +964,37 @@ struct obj_data *unequip_char(struct char_data *ch, int pos)
   return(obj);
 }
 
+/*
+A non-destructive method of getting the "dot number" in a string.
+Returns the "dot number" and points the sub variable to the substring.
+*/
+int dot_number(char *str, char **sub_ptr) {
+  char *dot_pos;
+
+  if ((dot_pos = strchr(str, '.'))) {
+    *sub_ptr = (dot_pos + 1);
+
+    int dot_num = 0;
+
+    for (int i = 0; i < (dot_pos - str); i++) {
+      char c = *((dot_pos - 1) - i);
+
+      if (!isdigit(c)) {
+        return 0;
+      }
+
+      dot_num += (c - '0') * ((i > 0) ? (10 * i) : 1);
+    }
+
+    return dot_num;
+  }
+
+  *sub_ptr = str;
+
+  return 1;
+}
+
+
 int get_number(char **name)
 {
   char *ppos = NULL;
@@ -1690,30 +1721,6 @@ void extract_char(struct char_data *ch)
    which incorporate the actual player-data.
    *********************************************************************** */
 
-
-struct char_data *get_char_room_vis(struct char_data *ch, char *name)
-{
-  struct char_data *i;
-  int j, number;
-  char tmpname[MAX_INPUT_LENGTH];
-  char *tmp;
-
-  strcpy(tmpname,name);
-  tmp = tmpname;
-  if(!(number = get_number(&tmp)))
-    return(0);
-
-  for (i = world[CHAR_REAL_ROOM(ch)].people, j = 1; i && (j <= number); i = i->next_in_room)
-    if (isname(tmp, GET_NAME(i)))
-      if (CAN_SEE(ch, i))  {
-        if (j == number)
-          return(i);
-        j++;
-      }
-
-  return(0);
-}
-
 struct char_data *get_mortal_room_vis(struct char_data *ch, char *name)
 {
   struct char_data *i;
@@ -2023,9 +2030,9 @@ struct obj_data *create_money( int amount )
 int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ **target_obj) {
   char name[MIL];
 
-  one_argument(argument, name);
+  argument = skip_spaces(one_argument(argument, name));
 
-  if (!*name) return FIND_NOT_FOUND;
+  if (!*name || *argument) return FIND_NOT_FOUND;
 
   if (target_ch) {
     if (IS_SET(bitvector, FIND_CHAR_ROOM) && (*target_ch = get_char_room_vis(ch, name))) {
@@ -2093,26 +2100,23 @@ OBJ *get_obj_by_vnum_in_room(int obj_vnum, int rm) {
 }
 
 OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see) {
-  OBJ *obj = list;
+  if (!ch || !name || !list) return NULL;
 
-  char buf[MIL];
+  int number = 0;
+  char *sub_ptr = NULL;
 
-  snprintf(buf, sizeof(buf), "%s", name);
+  if ((number = dot_number(name, &sub_ptr))) {
+    OBJ *obj = list;
 
-  char *buf_ptr = buf;
+    for (int i = 1; obj && (i <= number); obj = obj->next_content) {
+      if (isname(sub_ptr, OBJ_NAME(obj))) {
+        if (!must_see || CAN_SEE_OBJ(ch, obj)) {
+          if (i == number) {
+            return obj;
+          }
 
-  int number = get_number(&buf_ptr);
-
-  if (!number) return NULL;
-
-  for (int i = 1; obj && (i <= number); obj = obj->next_content) {
-    if (isname(buf_ptr, OBJ_NAME(obj))) {
-      if (!must_see || CAN_SEE_OBJ(ch, obj)) {
-        if (i == number) {
-          return obj;
+          i++;
         }
-
-        i++;
       }
     }
   }
@@ -2122,4 +2126,33 @@ OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see) {
 
 OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list) {
   return get_obj_in_list_ex(ch, name, list, TRUE);
+}
+
+CHAR *get_char_room_ex(CHAR *ch, char *name, bool must_see) {
+  if (!ch || !name) return NULL;
+
+  int number = 0;
+  char *sub_ptr = NULL;
+
+  if ((number = dot_number(name, &sub_ptr))) {
+    CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch));
+
+    for (int i = 1; vict && (i <= number); vict = vict->next_in_room) {
+      if (isname(sub_ptr, GET_NAME(vict))) {
+        if (!must_see || CAN_SEE(ch, vict)) {
+          if (i == number) {
+            return vict;
+          }
+
+          i++;
+        }
+      }
+    }
+  }
+
+  return NULL;
+}
+
+CHAR *get_char_room_vis(CHAR *ch, char *name) {
+  return get_char_room_ex(ch, name, TRUE);
 }

@@ -480,9 +480,9 @@ void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message,
 void communicate(CHAR *ch, char *arg, const int comm);
 
 #define COMM_TELL          0
-#define COMM_REPLY         1
-#define COMM_WHISPER       2
-#define COMM_ASK           3
+#define COMM_WHISPER       1
+#define COMM_ASK           2
+#define COMM_REPLY         3
 #define COMM_GTELL         4
 #define COMM_SAY           5
 #define COMM_SHOUT         6
