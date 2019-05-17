@@ -605,11 +605,11 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     }
 
     if (GET_SC_LEVEL(ch) <= 0) {
-      printf_to_world("%s shouts, '%s has joined the path of the %s!  All bow before %s might!'\n\r",
+      printf_to_world("%s shouts '%s has joined the path of the %s!  All bow before %s might!'\n\r",
         GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx], HSHR(ch));
     }
     else {
-      printf_to_world("%s shouts, '%s has taken another step along the path of the %s!'\n\r",
+      printf_to_world("%s shouts '%s has taken another step along the path of the %s!'\n\r",
         GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx]);
     }
 

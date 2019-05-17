@@ -89,7 +89,6 @@ void char_from_room(struct char_data *ch);
 void char_to_room(struct char_data *ch, int room);
 
 /* find if character can see */
-struct char_data *get_char_room_vis(struct char_data *ch, char *name);
 struct char_data *get_mortal_room_vis(struct char_data *ch, char *name);
 struct char_data *get_char_vis(struct char_data *ch, char *name);
 struct char_data *get_char_vis_zone(struct char_data *ch, char *name);
@@ -113,8 +112,13 @@ int generic_find(char *arg, int bitvector, CHAR *ch, CHAR **tar_ch, OBJ **tar_ob
 //#define FIND_CHAR_INVIS 64
 //#define FIND_OBJ_INVIS  128
 
+int dot_number(char *str, char **sub_ptr);
+
 struct char_data *get_mob_by_vnum_in_room(int mob_vnum, int rm);
 struct obj_data *get_obj_by_vnum_in_room(int obj_vnum, int rm);
 
 OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see);
 OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list);
+
+CHAR *get_char_room_ex(CHAR *ch, char *name, bool must_see);
+CHAR *get_char_room_vis(CHAR *ch, char *name);

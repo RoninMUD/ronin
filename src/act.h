@@ -474,14 +474,15 @@ void do_movestat(CHAR *ch, char *arg, int cmd);
 void do_locate(CHAR *ch, char *arg, int cmd);
 void do_nop(CHAR *ch, char *arg, int cmd);
 
-void comm_special(CHAR *ch, CHAR *listener, int comm, char *message, ...) __attribute__((format(printf, 4, 5)));
+void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, const char *src, ...) __attribute__((format(printf, 4, 5)));
+void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message, ...) __attribute__((format(printf, 4, 5)));
 
-void communicate(CHAR *ch, char *arg, int comm);
+void communicate(CHAR *ch, char *arg, const int comm);
 
 #define COMM_TELL          0
-#define COMM_REPLY         1
-#define COMM_WHISPER       2
-#define COMM_ASK           3
+#define COMM_WHISPER       1
+#define COMM_ASK           2
+#define COMM_REPLY         3
 #define COMM_GTELL         4
 #define COMM_SAY           5
 #define COMM_SHOUT         6

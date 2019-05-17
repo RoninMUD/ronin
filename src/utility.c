@@ -1399,9 +1399,9 @@ void check_equipment(struct char_data *ch)
    update_pos(ch);
 }
 
-void produce_core()
-{
-   char *NullPointer=NULL;
+void produce_core() {
+   char *NullPointer = NULL;
+
    *NullPointer = 1;
 }
 
@@ -1499,14 +1499,12 @@ FILE *process_in;           /* Standart input for runned program             */
  * get_ch_by_name : given a name, searches every descriptor for a
  *              character with that name and returns a pointer to it.
  */
-struct char_data *get_ch_by_name(char *chname)
-{
-  struct descriptor_data *d;
-
-  for (d = descriptor_list; d; d = d->next)
-    if (d && !d->connected && d->character &&
-        !str_cmp(chname, GET_NAME(d->character)))
-      return (d->character);
+CHAR *get_ch_by_name(char *name) {
+  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+    if (desc && !desc->connected && desc->character && (strcasecmp(name, GET_NAME(desc->character)) == 0)) {
+      return (desc->character);
+    }
+  }
 
   return NULL;
 }

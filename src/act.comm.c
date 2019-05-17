@@ -47,25 +47,6 @@ const comm_info_t comm_info[] = {
     .color = 6,
   },
   {
-    .name = "reply",
-    .text_to_ch = "$n reply to $N",
-    .text_to_vict = "$n replies",
-    .text_to_other = "",
-    .text_no_arg = "Yes, but what do you wish to reply?",
-    .text_not_found = "There is nobody to reply to...",
-    .pflag_on = 0,
-    .pflag_off = 0,
-    .pflag_no_do = PLR_NOSHOUT,
-    .pflag_no_hear = PLR_NOSHOUT,
-    .min_pos_hear = 0,
-    .to = COMM_TO_CHAR,
-    .hide = PERS_MORTAL,
-    .style = COMM_STYLE_QUOTE,
-    .direct = TRUE,
-    .set_reply = TRUE,
-    .color = 6,
-  },
-  {
     .name = "whisper",
     .text_to_ch = "$n whisper to $N",
     .text_to_vict = "$n whispers to $N",
@@ -102,6 +83,25 @@ const comm_info_t comm_info[] = {
     .direct = TRUE,
     .set_reply = TRUE,
     .color = 0,
+  },
+  {
+    .name = "reply",
+    .text_to_ch = "$n reply to $N",
+    .text_to_vict = "$n replies",
+    .text_to_other = "",
+    .text_no_arg = "Yes, but what do you wish to reply?",
+    .text_not_found = "There is nobody to reply to...",
+    .pflag_on = 0,
+    .pflag_off = 0,
+    .pflag_no_do = PLR_NOSHOUT,
+    .pflag_no_hear = PLR_NOSHOUT,
+    .min_pos_hear = 0,
+    .to = COMM_TO_REPLY,
+    .hide = PERS_MORTAL,
+    .style = COMM_STYLE_QUOTE,
+    .direct = TRUE,
+    .set_reply = TRUE,
+    .color = 6,
   },
   {
     .name = "gtell",
@@ -332,19 +332,24 @@ struct drunk_t drunk[] = {
 /* Make a string look drunk. Original code by Apex. Modifications by the Maniac
    from Mythran for envy(2), Kohl Desenee for ROM 2.4, and Ranger for RoninMUD.
    Re-written by Night. */
-void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int drunk_level) {
+void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, const char *src, ...) {
   if (!src || !dst || !dst_sz) return;
 
-  char buf[MSL];
+  char str[MSL], buf[2 * MSL];
+  va_list args;
+
+  va_start(args, src);
+  vsnprintf(str, sizeof(str), src, args);
+  va_end(args);
 
   memset(buf, 0, sizeof(buf));
 
   int buf_pos = 0;
 
-  for (int i = 0; (i < strlen(src)) && (buf_pos < (sizeof(buf) - 1)); i++) {
+  for (int i = 0; (i < strlen(str)) && (buf_pos < (sizeof(buf) - 1)); i++) {
     char temp;
 
-    temp = src[i];
+    temp = str[i];
     temp = UPPER(temp);
 
     if ((temp >= 'A') && (temp <= 'Z') && (drunk_level > drunk[temp - 'A'].min_drunk_level)) {
@@ -358,7 +363,7 @@ void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int 
       buf[buf_pos++] = '0' + number(0, 9);
     }
     else {
-      buf[buf_pos++] = src[i];
+      buf[buf_pos++] = str[i];
     }
   }
 
@@ -373,7 +378,7 @@ void drunkify_string(const char *src, char *dst, const size_t dst_sz, const int 
 
 
 /* Unified communication function. */
-void communicate(CHAR *ch, char *arg, int comm) {
+void communicate(CHAR *ch, char *arg, const int comm) {
   if (!ch || (comm < COMM_FIRST) || (comm > COMM_LAST)) return;
 
   arg = skip_spaces(arg);
@@ -483,7 +488,7 @@ void communicate(CHAR *ch, char *arg, int comm) {
       return;
     }
 
-    /* Is the listening character's NoMessage on? */
+    /* Is the listening character's NoMessage on? Is their position below the listening threshold? */
     if ((IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOMESSAGE) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) ||
         (GET_POS(listener) < comm_info[comm].min_pos_hear)) {
       act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
@@ -492,11 +497,11 @@ void communicate(CHAR *ch, char *arg, int comm) {
     }
   }
 
-  char message[MIL];
+  char message[MSL];
 
   /* Drunkify the string as needed, otherwise, store the resulting arg text in the message variable. */
   if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {
-    drunkify_string(arg, message, sizeof(message), GET_COND(ch, DRUNK));
+    drunkify_string(message, sizeof(message), GET_COND(ch, DRUNK), "%s", arg);
   }
   else {
     snprintf(message, sizeof(message), "%s", arg);
@@ -534,10 +539,11 @@ void communicate(CHAR *ch, char *arg, int comm) {
     ((comm_info[comm].smell &&affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
     style_open, message, style_close);
 
-  /* Print the message string to the listening character. */
+  /* Print the message string to the listening character(s). */
   switch (comm_info[comm].to) {
     case COMM_TO_CHAR:
     case COMM_TO_CHAR_ROOM:
+    case COMM_TO_REPLY:
       if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
       act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
       if (comm_info[comm].color) ENDCOLOR(listener);
@@ -600,15 +606,25 @@ void communicate(CHAR *ch, char *arg, int comm) {
       break; // COMM_TO_WORLD
   }
 
-  /* Print text_to_other to the acting character's room. */
-  if (listener && strlen(comm_info[comm].text_to_other)) {
-    snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
-    act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+  /* Perform some post-communication activites if there's a listening character. */
+  if (listener) {
+    /* Print text_to_other to the acting character's room. */
+    if (strlen(comm_info[comm].text_to_other)) {
+      snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+    }
+
+    /* Set the listener's reply_to value to the acting character's ID. */
+    if (comm_info[comm].set_reply && (listener != ch) && !IS_NPC(listener) && !IS_NPC(ch) && GET_ID(ch)) {
+      GET_REPLY_TO(listener) = GET_ID(ch);
+    }
   }
 
-  /* Set the listener's reply_to value to the acting character's ID. */
-  if (!IS_NPC(ch) && comm_info[comm].set_reply && listener && (listener != ch) && GET_ID(ch)) {
-    GET_REPLY_TO(listener) = GET_ID(ch);
+  /* Signal communication events. */
+  switch (comm) {
+    case COMM_SAY:
+      signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
+      break;
   }
 }
 
@@ -646,8 +662,6 @@ void do_gtell(CHAR *ch, char *arg, int cmd) {
 /* Function called by the 'say' command. */
 void do_say(CHAR *ch, char *arg, int cmd) {
   communicate(ch, arg, COMM_SAY);
-
-  signal_room(CHAR_REAL_ROOM(ch), ch, MSG_SAID, arg);
 }
 
 
@@ -682,11 +696,11 @@ void do_chaos(CHAR *ch, char *arg, int cmd) {
 
 /* For special procedure direct communications from mobs to players.
    Accepts printf-style args and bypasses all restrictions. */
-void comm_special(CHAR *ch, CHAR *listener, int comm, char *message, ...) {
+void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message, ...) {
   if (!ch || !IS_NPC(ch) || !listener || IS_NPC(listener) || !message || !*message) return;
 
   /* Direct communication only; no reply. */
-  if (comm_info[comm].direct && (comm_info[comm].to != COMM_TO_REPLY)) return;
+  if (!comm_info[comm].direct || (comm_info[comm].to == COMM_TO_REPLY)) return;
 
   /* Redirect listener if they're mobswitched. */
   if (listener->switched) {
