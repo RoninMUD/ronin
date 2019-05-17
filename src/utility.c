@@ -1399,9 +1399,9 @@ void check_equipment(struct char_data *ch)
    update_pos(ch);
 }
 
-void produce_core()
-{
-   char *NullPointer=NULL;
+void produce_core() {
+   char *NullPointer = NULL;
+
    *NullPointer = 1;
 }
 

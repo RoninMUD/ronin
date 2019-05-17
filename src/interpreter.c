@@ -307,18 +307,13 @@ void chop_string(char *string, char *arg1, int len1, char *substring, int substr
 }
 
 int determine_command(char *command, int length) {
-  int i = 0;
-
-  while (cmd_info[i].cmd_text) {
-    if (!strncmp(cmd_info[i].cmd_text, command, length))
-      break;
-    i++;
+  for (int cmd = 0; cmd_info[cmd].cmd_text; cmd++) {
+    if (!strncmp(cmd_info[cmd].cmd_text, command, length)) {
+      return cmd;
+    }
   }
 
-  if (!cmd_info[i].cmd_text || !length)
-    i = -1;
-
-  return i;
+  return -1;
 }
 
 void command_interpreter(CHAR *ch, char *argument)

@@ -37,5 +37,6 @@ extern int total_connects;
 extern char *unknownCMD[];
 extern struct command_info cmd_info[];
 extern char last_command[MSL];
+int determine_command(char *command, int length);
 
 #endif /* __INTERPRETER_H__ */

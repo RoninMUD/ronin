@@ -1670,14 +1670,12 @@ struct char_file_u_2
 *  The following structures are related to descriptor_data   *
 *********************************************************** */
 
-struct txt_block
-{
+struct txt_block {
   char *text;
   struct txt_block *next;
 };
 
-struct txt_q
-{
+struct txt_q {
   struct txt_block *head;
   struct txt_block *tail;
 };
