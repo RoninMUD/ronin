@@ -307,7 +307,9 @@ void chop_string(char *string, char *arg1, int len1, char *substring, int substr
 }
 
 int determine_command(char *command, int length) {
-  for (int cmd = 0; cmd_info[cmd].cmd_text; cmd++) {
+  if (!command || !length) return -1;
+
+  for (int cmd = 0; (cmd < NUMELEMS(cmd_info)) && cmd_info[cmd].cmd_text; cmd++) {
     if (!strncmp(cmd_info[cmd].cmd_text, command, length)) {
       return cmd;
     }
