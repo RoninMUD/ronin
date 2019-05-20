@@ -593,7 +593,7 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     if ((GET_LEVEL(ch) < 30) ||
         ((GET_LEVEL(ch) < 40) && ((GET_SC_LEVEL(ch) + 1) > 2)) ||
         ((GET_LEVEL(ch) < 45) && ((GET_SC_LEVEL(ch) + 1) > 4))) {
-      comm_special(mob, ch, COMM_TELL, "Come back and see me after you've gained some class levels.");
+      comm_special(mob, ch, COMM_TELL, "Come back and see me after you've gained a few class levels.");
 
       return FALSE;
     }
@@ -616,7 +616,7 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       printf_to_world("%s shouts '%s has joined the path of the %s!  All bow before %s might!'\n\r",
         GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx], HSHR(ch));
 
-      GET_SC(ch) = sc_idx + 1;
+      GET_SC(ch) = MIN(5, sc_idx + 1);
     }
     else {
       printf_to_world("%s shouts '%s has taken another step along the path of the %s!'\n\r",
