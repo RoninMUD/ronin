@@ -1744,7 +1744,7 @@ struct char_data *get_mortal_room_vis(struct char_data *ch, char *name)
   return(0);
 }
 
-CHAR *get_char_vis(CHAR *ch, char *name) {
+CHAR *get_char_ex(CHAR *ch, char *name, bool must_see) {
   if (!ch || !name) return NULL;
 
   char buf[MIL];
@@ -1755,7 +1755,7 @@ CHAR *get_char_vis(CHAR *ch, char *name) {
   char *temp_name = buf;
 
   /* Pointer to the character we're interested in. */
-  CHAR *temp_ch = get_char_room_vis(ch, temp_name);
+  CHAR *temp_ch = get_char_room_ex(ch, temp_name, must_see);
 
   /* Check current room. */
   if (temp_ch) {
@@ -1773,7 +1773,7 @@ CHAR *get_char_vis(CHAR *ch, char *name) {
   /* Check players first. */
   temp_ch = character_list;
   for (int i = 1; temp_ch && (i <= number); temp_ch = temp_ch->next) {
-    if (!IS_NPC(temp_ch) && CAN_SEE(ch, temp_ch) && isname(temp_name, GET_NAME(temp_ch))) {
+    if (!IS_NPC(temp_ch) && isname(temp_name, GET_NAME(temp_ch)) && (!must_see || CAN_SEE(ch, temp_ch))) {
       if (i == number) {
         return temp_ch;
       }
@@ -1785,7 +1785,7 @@ CHAR *get_char_vis(CHAR *ch, char *name) {
   /* Check NPCs. */
   temp_ch = character_list;
   for (int i = 1; temp_ch && (i <= number); temp_ch = temp_ch->next) {
-    if (IS_NPC(temp_ch) && CAN_SEE(ch, temp_ch) && isname(temp_name, GET_NAME(temp_ch))) {
+    if (IS_NPC(temp_ch) && isname(temp_name, GET_NAME(temp_ch)) && (!must_see || CAN_SEE(ch, temp_ch))) {
       if (i == number) {
         return temp_ch;
       }
@@ -1795,6 +1795,10 @@ CHAR *get_char_vis(CHAR *ch, char *name) {
   }
 
   return NULL;
+}
+
+CHAR *get_char_vis(CHAR *ch, char *name) {
+  return get_char_ex(ch, name, TRUE);
 }
 
 struct char_data *get_char_vis_zone(struct char_data *ch, char *name)
