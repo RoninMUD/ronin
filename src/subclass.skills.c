@@ -1510,8 +1510,8 @@ void do_frenzy(CHAR *ch, char *argument, int cmd) {
     af.type = SKILL_FRENZY;
     af.duration = -1;
     af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = 0;
+    af.location = 0;
+    af.bitvector = AFF_DUAL;
     af.bitvector2 = 0;
     affect_to_char(ch, &af);
     act("You go into a frenzy.", 1, ch, 0, 0, TO_CHAR);
@@ -1548,8 +1548,8 @@ void do_berserk(CHAR *ch, char *argument, int cmd) {
     af.type = SKILL_BERSERK;
     af.duration = -1;
     af.modifier = 0;
-    af.location = APPLY_NONE;
-    af.bitvector = 0;
+    af.location = 0;
+    af.bitvector = AFF_DUAL;
     af.bitvector2 = 0;
     affect_to_char(ch, &af);
     act("You go berserk!", 1, ch, 0, 0, TO_CHAR);

@@ -213,9 +213,9 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
   CHAR *victim = NULL;
 
   if (*name) {
-    victim = get_char_vis(ch, name);
+    victim = get_char_ex(ch, name, FALSE);
 
-    if (!victim) {
+    if (!victim || WIZ_INV(ch, victim)) {
       send_to_char("They aren't here.\n\r", ch);
 
       return;

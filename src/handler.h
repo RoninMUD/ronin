@@ -90,7 +90,6 @@ void char_to_room(struct char_data *ch, int room);
 
 /* find if character can see */
 struct char_data *get_mortal_room_vis(struct char_data *ch, char *name);
-struct char_data *get_char_vis(struct char_data *ch, char *name);
 struct char_data *get_char_vis_zone(struct char_data *ch, char *name);
 struct char_data *get_mob_vis(struct char_data *ch, char *name);
 struct obj_data *get_obj_vis(struct char_data *ch, char *name);
@@ -122,3 +121,6 @@ OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list);
 
 CHAR *get_char_room_ex(CHAR *ch, char *name, bool must_see);
 CHAR *get_char_room_vis(CHAR *ch, char *name);
+
+CHAR *get_char_ex(CHAR *ch, char *name, bool must_see);
+CHAR *get_char_vis(CHAR *ch, char *name);

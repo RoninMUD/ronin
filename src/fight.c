@@ -3512,55 +3512,54 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 
 
 void hit(CHAR *ch, CHAR *victim, int type) {
+  char buf[MSL];
+
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
-      !CHAOSMODE) {
+  if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
     send_to_char("Behave yourself here please!\n\r", ch);
+
     return;
   }
 
-  if (!IS_NPC(ch) &&
-      IS_SET(GET_PFLAG(ch), PLR_NOKILL) &&
-      IS_NPC(victim) &&
-      IS_SET(GET_ACT(victim), ACT_MOUNT) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), ARENA) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) &&
-      !CHAOSMODE) {
-    send_to_char("You can't attack mounts.\n\r", ch);
-    return;
-  }
+  /* PC Checks */
+  if (!IS_NPC(ch) && (ch != victim)) {
+    if (IS_MOUNT(victim) &&
+        IS_SET(GET_PFLAG(ch), PLR_NOKILL) &&
+        !ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
+        !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+      send_to_char("You can't attack mounts.\n\r", ch);
 
-  if (!IS_NPC(ch) &&
-      !IS_NPC(victim) &&
-      ch != victim &&
-      IS_SET(GET_PFLAG(ch), PLR_NOKILL) &&
-      (!IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF)) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), ARENA) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) &&
-      !CHAOSMODE) {
-    send_to_char("You can't attack other players.\n\r", ch);
-    return;
-  }
+      return;
+    }
 
-  if (!IS_NPC(ch) &&
-      !IS_NPC(victim) &&
-      ch != victim &&
-      !IS_SET(GET_PFLAG(ch), PLR_KILL) &&
-      (!IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF)) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), ARENA) &&
-      !IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) &&
-      !CHAOSMODE) {
-    send_to_char("You are a killer!\n\r", ch);
+    /* PvP Checks */
+    if (!IS_NPC(victim)) {
+      if ((!IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF)) &&
+          IS_SET(GET_PFLAG(ch), PLR_NOKILL) &&
+          !ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
+          !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+        send_to_char("You can't attack other players.\n\r", ch);
 
-    SET_BIT(GET_PFLAG(ch), PLR_KILL);
+        return;
+      }
 
-    char buf[MSL];
+      if ((!IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF)) &&
+          !IS_SET(GET_PFLAG(ch), PLR_KILL) &&
+          !ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
+          !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+        send_to_char("You are a killer!\n\r", ch);
 
-    sprintf(buf,"PLRINFO: %s just attacked %s; Killer flag set. (Room %d)",
-            GET_NAME(ch), GET_NAME(victim), V_ROOM(ch));
-    wizlog(buf, LEVEL_SUP, 4);
-    log_f("%s", buf);
+        SET_BIT(GET_PFLAG(ch), PLR_KILL);
+
+        snprintf(buf, sizeof(buf), "PLRINFO: %s just attacked %s in room %d. Killer flag set.",
+                 GET_NAME(ch), GET_NAME(victim), V_ROOM(ch));
+
+        wizlog(buf, LEVEL_SUP, 4);
+
+        log_f("%s", buf);
+      }
+    }
   }
 
   /* Update the attacker's position to Fighting. */
@@ -3581,38 +3580,46 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   }
 
   /* The following attack types never result in a multi hit. */
-  if ((type == SKILL_ASSASSINATE) ||
-      (type == SKILL_BACKSTAB) ||
-      (type == SKILL_AMBUSH) ||
-      (type == SKILL_CIRCLE)) return;
+  switch (type) {
+    case SKILL_ASSASSINATE:
+    case SKILL_BACKSTAB:
+    case SKILL_AMBUSH:
+    case SKILL_CIRCLE:
+      return;
+  }
 
   /* Haste */
   /* This adds the chance for an additional "hit" and performs it before any
      additional hit skill checks, which may fail at any point in the chain. */
   if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch))) {
-    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return; // Force main weapon for Haste attacks.
+    /* Force main weapon for Haste attacks. */
+    if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return;
   }
 
   /* PC Ninja 2nd Hit */
   if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
-    dhit(ch, victim, (IS_2H_WEAPON(EQ(ch, WIELD)) ? TYPE_UNDEFINED : TYPE_WEAPON2)); // Force the appropriate weapon for Ninja 2nd attack.
-    return;
-  }
+    /* Force the appropriate weapon for Ninja 2nd attack. */
+    dhit(ch, victim, (IS_2H_WEAPON(EQ(ch, WIELD)) ? TYPE_UNDEFINED : TYPE_WEAPON2));
 
-  /* Coerce attack type as needed for dual pass-through below. */
-  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
-    type = TYPE_UNDEFINED;
+    return;
   }
 
   /* NPC Dual */
   if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_DUAL) && !number(0, 2)) {
-    dhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
+    /* Force main weapon for NPC attacks. */
+    dhit(ch, victim, TYPE_UNDEFINED);
+
     return;
+  }
+
+  /* Coerce attack type as needed. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
   }
 
   /* PC Dual */
   if (!IS_NPC(ch) && (IS_AFFECTED(ch, AFF_DUAL) || (GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_AVATAR || GET_CLASS(ch) == CLASS_COMMANDO))) {
-    int skill = IS_AFFECTED(ch, AFF_DUAL) ? SKILL_MAX_PRAC : GET_LEARNED(ch, SKILL_DUAL);
+    int skill = IS_AFFECTED(ch, AFF_DUAL) ? MAX(SKILL_MAX_PRAC, GET_LEARNED(ch, SKILL_DUAL)) : GET_LEARNED(ch, SKILL_DUAL);
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 298;
 
@@ -3620,14 +3627,14 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
       check = 259;
     }
-
     /* Hostile/Rush */
-    if (affected_by_spell(ch, SKILL_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 213;
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
       dhit(ch, victim, type);
+
       return;
     }
   }
@@ -3639,6 +3646,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);
+
       return;
     }
   }
@@ -3650,6 +3658,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);
+
       return;
     }
   }
@@ -3662,20 +3671,24 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
   if (!perform_hit(ch, victim, type, 2)) return;
 
   /* Mystic Swiftness */
-  if (affected_by_spell(ch, SPELL_MYSTIC_SWIFTNESS) && chance(50 + (GET_DEX_APP(ch) * 3))) {
-    thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for Mystic Swiftness bonus attack.
-    return;
-  }
+  if (affected_by_spell(ch, SPELL_MYSTIC_SWIFTNESS) && chance(50 + (GET_DEX_APP(ch) * 2.5))) {
+    /* Force main weapon for Mystic Swiftness bonus attack. */
+    thit(ch, victim, TYPE_UNDEFINED);
 
-  /* Coerce attack type as needed for triple pass-through below. */
-  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
-    type = TYPE_UNDEFINED;
+    return;
   }
 
   /* NPC Triple */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_TRIPLE) && !number(0, 2)) {
-    thit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
+    /* Force main weapon for NPC attacks. */
+    thit(ch, victim, TYPE_UNDEFINED);
+
     return;
+  }
+
+  /* Coerce attack type as needed. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
   }
 
   /* PC Triple */
@@ -3688,14 +3701,14 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
       check = 246;
     }
-
     /* Hostile/Rush */
-    if (affected_by_spell(ch, SKILL_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 202;
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
       thit(ch, victim, type);
+
       return;
     }
   }
@@ -3707,15 +3720,17 @@ void thit(CHAR *ch, CHAR *victim, int type) {
   /* Perform the attack, returning if it is avoided or misses. */
   if (!perform_hit(ch, victim, type, 3)) return;
 
-  /* Coerce attack type as needed for quad pass-through below. */
-  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
-    type = TYPE_UNDEFINED;
-  }
-
   /* NPC Quad */
   if (IS_NPC(ch) && IS_AFFECTED2(ch, AFF2_QUAD) && !number(0, 2)) {
-    qhit(ch, victim, TYPE_UNDEFINED); // Force main weapon for NPC attacks.
+    /* Force main weapon for NPC attacks. */
+    qhit(ch, victim, TYPE_UNDEFINED);
+
     return;
+  }
+
+  /* Coerce attack type as needed. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
   }
 
   /* PC Quad */
@@ -3728,14 +3743,14 @@ void thit(CHAR *ch, CHAR *victim, int type) {
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
       check = 234;
     }
-
     /* Hostile */
-    if (affected_by_spell(ch, SKILL_HOSTILE)) {
+    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
       check = 192;
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
       qhit(ch, victim, type);
+
       return;
     }
   }
@@ -3743,6 +3758,11 @@ void thit(CHAR *ch, CHAR *victim, int type) {
 
 void qhit(CHAR *ch, CHAR *victim, int type) {
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
+
+  /* Coerce attack type as needed. */
+  if ((type != TYPE_UNDEFINED) && (type != TYPE_WEAPON2)) {
+    type = TYPE_UNDEFINED;
+  }
 
   perform_hit(ch, victim, type, 4);
 }
@@ -3790,7 +3810,9 @@ void blood_lust_action(CHAR *ch, CHAR *vict) {
       }
 
       damage(ch, vict, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
+
       magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
+
       GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - dmg);
       break;
 
