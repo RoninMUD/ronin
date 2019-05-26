@@ -512,18 +512,20 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   auto_learn_skill(ch, SKILL_BACKSTAB);
 
-  /* Bathed in Blood */
-  int room_blood_level = MIN(((CHAR_REAL_ROOM(ch) != NOWHERE) ? ROOM_BLOOD(CHAR_REAL_ROOM(ch)) : 0), 10);
-
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(10 + room_blood_level)) {
-    act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, 0, victim, TO_CHAR);
-    act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, 0, victim, TO_VICT);
-    act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-    spell_vampiric_touch(GET_LEVEL(ch), ch, victim, 0);
-  }
-
   hit(ch, victim, SKILL_BACKSTAB);
+
+  /* Bathed in Blood */
+  if (SAME_ROOM(ch, victim)) {
+    int room_blood_level = MIN(((CHAR_REAL_ROOM(ch) != NOWHERE) ? ROOM_BLOOD(CHAR_REAL_ROOM(ch)) : 0), 10);
+
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5) && chance(10 + room_blood_level)) {
+      act("As you drive your weapon into $N's back, $S life energy flows into you.", FALSE, ch, 0, victim, TO_CHAR);
+      act("As $n drives $s weapon into your back, your life energy flows into $m.", FALSE, ch, 0, victim, TO_VICT);
+      act("As $n drives $s weapon into $N's back, $N's life energy flows into $n.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+      spell_vampiric_touch(GET_LEVEL(ch), ch, victim, 0);
+    }
+  }
 
   /* Close Combat */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4) && chance(50 + GET_DEX_APP(ch))) {
