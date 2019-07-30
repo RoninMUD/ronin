@@ -616,7 +616,7 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       printf_to_world("%s shouts '%s has joined the path of the %s!  All bow before %s might!'\n\r",
         GET_SHORT(mob), GET_NAME(ch), subclass_name[sc_idx], HSHR(ch));
 
-      GET_SC(ch) = MIN(5, sc_idx + 1);
+      GET_SC(ch) = sc_idx + 1;
     }
     else {
       printf_to_world("%s shouts '%s has taken another step along the path of the %s!'\n\r",
