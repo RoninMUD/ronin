@@ -212,22 +212,22 @@ int32_t MAX(int32_t a, int32_t b) {
 
 // TODO: Change to not use static char.
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
-  assert(ch);
-  assert(vict);
-
   static char buf[MIL];
 
   memset(buf, 0, sizeof(buf));
 
-  if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
-    snprintf(buf, sizeof(buf), "%s", MOB_SHORT(ch));
-  }
-  else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
-    signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
-    strlcat(buf, GET_NAME(ch), sizeof(buf));
-  }
-  else {
-    snprintf(buf, sizeof(buf), "Somebody");
+  if (ch && vict) {
+    if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
+      snprintf(buf, sizeof(buf), "%s", GET_DISP_NAME(ch));
+    }
+    else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+
+      strlcat(buf, GET_DISP_NAME(ch), sizeof(buf));
+    }
+    else {
+      snprintf(buf, sizeof(buf), "Somebody");
+    }
   }
 
   return buf;
@@ -799,7 +799,7 @@ void wizlog(char *str, int level, int which) {
           ((which == 4) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FOUR)) ||
           ((which == 5) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FIVE)) ||
           ((which == 6) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_SIX)) ||
-          ((which == 7) && IS_SET(GET_IMM_FLAGS(desc->character), QUEST_INFO))) {
+          ((which == 7) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_QUEST_INFO))) {
         send_to_char(buf, desc->character);
       }
     }

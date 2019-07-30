@@ -182,7 +182,7 @@ int get_index_of_string_in_list(const char *string, const char * const *list, bo
     size_t tmp_len = strlen(tmp_str);
 
     if (match_length && (tmp_len != str_len)) continue;
-    else tmp_len = MAX(tmp_len, 1);
+    else if (!match_length) tmp_len = MAX(tmp_len, 1);
 
     if ((case_sensitive && !strncmp(string, tmp_str, tmp_len)) || (!case_sensitive && !strncasecmp(string, tmp_str, tmp_len))) return index;
   }
@@ -290,20 +290,20 @@ void argument_interpreter(char *string, char *arg1, char *arg2) {
   two_arguments(string, arg1, arg2);
 }
 
-/* Fill arg1 with the first argument and substring with the rest of the provided string. */
-void half_chop(char *string, char *arg1, int len1, char *substring, int substring_len) {
+/* Fill arg with the first word and sub with the rest of the provided string. */
+void chop_string(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len) {
   string = skip_spaces(string);
-  for (; *string && (len1 > 1) && !isspace(*arg1 = *string); string++, arg1++, len1--);
-  *arg1 = '\0';
+  for (; arg_len && *string && !isspace(*arg = *string); arg_len--, string++, arg++);
+  *arg = '\0';
 
   string = skip_spaces(string);
-  for (; *string && (substring_len > 1) && (*substring = *string); string++, substring++, substring_len--);
-  *substring = '\0';
+  for (; sub_len && *string && (*sub = *string);  sub_len--, string++, sub++);
+  *sub = '\0';
 }
 
-/* Fill arg1 with the first argument and substring with the rest of the provided string. */
-void chop_string(char *string, char *arg1, int len1, char *substring, int substring_len) {
-  half_chop(string, arg1, len1, substring, substring_len);
+/* chop_string */
+void half_chop(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len) {
+  chop_string(string, arg, arg_len, sub, sub_len);
 }
 
 int determine_command(char *command, int length) {

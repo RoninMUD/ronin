@@ -18,11 +18,11 @@ int get_index_of_string_in_list(const char *string, const char *const *list, boo
 int search_block(const char *string, const char * const *list, bool exact);
 int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive);
 int old_search_block(const char *string, int begin, int length, const char * const * const list, int mode);
-char *one_argument(char *string, char *arg1);
-void argument_interpreter(char *string, char *arg1, char *arg2);
+char *one_argument(char *string, char *arg);
 void two_arguments(char *string, char *arg1, char *arg2);
-void half_chop(char *string, char *arg1, int len1, char *substring, int substring_len);
-void chop_string(char *string, char *arg1, int len1, char *substring, int substring_len);
+void argument_interpreter(char *string, char *arg1, char *arg2);
+void chop_string(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len);
+void half_chop(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len);
 
 struct command_info {
   void(*command_pointer) (struct char_data *ch, char *argument, int cmd);

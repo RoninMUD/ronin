@@ -656,7 +656,7 @@ void raw_kill(CHAR *ch) {
   }
 
   if ((ch->quest_status == QUEST_RUNNING) || (ch->quest_status == QUEST_COMPLETED)) {
-    ch->ver3.time_to_quest = 30;
+    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
   }
 
   ch->questgiver = 0;
@@ -2870,14 +2870,14 @@ void print_avoidance_messages(CHAR *attacker, CHAR *defender, int skill) {
       act("You parry $N's attack!", FALSE, defender, 0, attacker, TO_CHAR);
       break;
     case SKILL_FEINT:
-      act("$n feints, preventing $N's attack. $n hits back!", FALSE, defender, 0, attacker, TO_NOTVICT);
-      act("$n feints, preventing your attack. $n hits back!", FALSE, defender, 0, attacker, TO_VICT);
-      act("You feint, preventing $N's attack. You hit back!", FALSE, defender, 0, attacker, TO_CHAR);
+      act("$n feints, preventing $N's attack.  $n hits back!", FALSE, defender, 0, attacker, TO_NOTVICT);
+      act("$n feints, preventing your attack.  $n hits back!", FALSE, defender, 0, attacker, TO_VICT);
+      act("You feint, preventing $N's attack.  You hit back!", FALSE, defender, 0, attacker, TO_CHAR);
       break;
     case SKILL_RIPOSTE:
-      act("$n deflects $N's attack. $n hits back!", FALSE, defender, 0, attacker, TO_NOTVICT);
-      act("$n deflects your attack. $n hits back!", FALSE, defender, 0, attacker, TO_VICT);
-      act("You deflect $N's attack. You hit back!", FALSE, defender, 0, attacker, TO_CHAR);
+      act("$n deflects $N's attack.  $n hits back!", FALSE, defender, 0, attacker, TO_NOTVICT);
+      act("$n deflects your attack.  $n hits back!", FALSE, defender, 0, attacker, TO_VICT);
+      act("You deflect $N's attack.  You hit back!", FALSE, defender, 0, attacker, TO_CHAR);
       break;
   }
 }
@@ -3035,20 +3035,20 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
         if (number(1, 850) <= check) {
           /* Blackmantle */
           if (affected_by_spell(defender, SPELL_BLACKMANTLE)) {
-            int reflect = GET_LEVEL(defender) / 5;
+            double reflect_multi = 1.0;
 
             if (IS_AFFECTED(defender, AFF_FURY)) {
-              reflect *= 2;
+              reflect_multi *= 2.0;
             }
             else if (IS_AFFECTED2(defender, AFF2_RAGE)) {
-              reflect *= 1.5;
+              reflect_multi *= 1.5;
             }
 
             act("$n is scorched by your mantle of darkness as $e gets too close.", FALSE, attacker, 0, defender, TO_VICT);
             act("$n is scorched by $N's mantle of darkness as $e gets too close.", FALSE, attacker, 0, defender, TO_NOTVICT);
             act("You are scorched by $N's mantle of darkness as you get too close!", FALSE, attacker, 0, defender, TO_CHAR);
 
-            damage(defender, attacker, reflect, TYPE_UNDEFINED, DAM_MAGICAL);
+            damage(defender, attacker, ((GET_LEVEL(defender) / 5) * reflect_multi), TYPE_UNDEFINED, DAM_MAGICAL);
           }
 
           print_avoidance_messages(attacker, defender, SKILL_FEINT);
@@ -4146,14 +4146,10 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 
 
 void perform_violence(void) {
-  for (CHAR *ch = combat_list; ch; ch = combat_next_dude) {
-    assert(ch);
-
+  for (CHAR *ch = combat_list; ch && GET_OPPONENT(ch); ch = combat_next_dude) {
     combat_next_dude = ch->next_fighting;
 
     CHAR *vict = GET_OPPONENT(ch);
-
-    assert(vict);
 
     if (!AWAKE(ch) || !SAME_ROOM(ch, vict)) {
       stop_fighting(ch);
@@ -4212,123 +4208,77 @@ void perform_violence(void) {
 
 #define TOKEN_MOB 11
 
-void brag(struct char_data *ch, struct char_data *vict) {
-  struct descriptor_data *i;
-  char brag[MSL];
-  CHAR* rashgugh;
+void brag(CHAR *ch, CHAR *vict) {
+  const char *brags[] = {
+    "%s was just too easy a kill!",
+    "%s was a tasty dinner!  Now who's for dessert?",
+    "Bahaha! %s should stick to fighting Odifs!",
+    "%s is now in need of some exp...",
+    "%s needs a hospital now.",
+    "%s is such a wimp; no challenge at all.",
+    "%s is a punk and hits like a dragonfly.  Bah.",
+    "%s, your life force has just run out...",
+    "Bah!  %s should stick to the training ground!",
+    "%s, give me your family's address and I might return your corpse.",
+    "Hey %s! Come back!  You dropped your corpse!",
+    "%s wears pink chainmail and fights like a pansy!",
+    "Hahaha! %s hits like a fido!  Sissy!",
+    "I charp in your direction, %s!",
+    "I guess you thought you could whoop me, eh %s?",
+    "If that's all you can do, you had better try harder %s, cause it ain't enough to bring ME down!",
+    "Where did you get that weapon %s?  From the newts?  :P",
+    "If you wanna play with the big boys, you had better get BIG %s.",
+    "Dunt, dunt, dunt...  Another one bites the dust!  Or, should I say, %s did.  *chortle*",
+    "Game Over %s...  Game Over.",
+    "Haha, %s is no match for me!",
+    "%s fights like a yeasty bit of stomach bile!",
+    "Mmm!  Look what goodies %s left for me in their corpse!",
+    "%s couldn't hit the broad side of a barn, let alone the actual cow!",
+    "Who taught you how to fight %s?  Your Grandma?",
+    "Muhaha!  Try as you might %s, you'll never kill me!",
+    "One thing's for certain: %s should stop trying while ahead!",
+    "Ouch, %s...  Hope you didn't lose any stats!  Hahaha!",
+    "So you thought you could kill me, eh %s?",
+    "To junk %s's corpse, or to not junk %s's corpse, that is the question...",
+    "Hey %s, come back and fight like a man!",
+    "Hey everyone, %s is naked at the temple!  Don't stare too long.  :P",
+    "%s is inferior to my greatness!",
+    "Someone come get %s's corpse outta here; its starting to smell like rotten fish.",
+    "That was a really good attempt at killing me, %s.  Better luck next time.",
+    "Hey %s, you coming back for more anytime soon?",
+    "%s is no match for my superior skills!  *flex*",
+    "Hey %s, nice killing you! See ya again sometime!",
+    "Ouch, how much exp will that cost you, %s?",
+    "I have SLAIN %s!  Fear my wrath!",
+    "%s has failed, yet again, to slay me!",
+    "%s, you are the weakest link!  Goodbye!",
+    "Thanks for the meta, %s!  I got a 7!",
+    "LEVEL!!!",
+    "Hey %s, where'd you get your equipment?  The donation?  Muhaha!",
+  };
 
-  switch (number(0, 45)) {
-  case 0:
-   sprintf(brag, "$n brags, '%s was just too easy a kill!'", GET_NAME(vict));break;
-  case 1:
-   sprintf(brag, "$n brags, '%s was a tasty dinner, now who's for dessert?'", GET_NAME(vict));break;
-  case 2:
-   sprintf(brag, "$n brags, 'Bahaha! %s should stick to Odif's !'",GET_NAME(vict));break;
-  case 3:
-   sprintf(brag, "$n brags, '%s is now in need of some exp...'", GET_NAME(vict));break;
-  case 4:
-   sprintf(brag, "$n brags, '%s needs a hospital now.'",GET_NAME(vict));break;
-  case 5:
-   sprintf(brag, "$n brags, '%s is such a wimp, no challenge at all.'", GET_NAME(vict));break;
-  case 6:
-   sprintf(brag, "$n brags, '%s is a punk, hits like a dragonfly. Bah.'", GET_NAME(vict));break;
-  case 7:
-   sprintf(brag, "$n brags, '%s, your life force has just run out...'", GET_NAME(vict));break;
-  case 8:
-   sprintf(brag, "$n brags, 'Bah, %s should stick to the training ground!'",GET_NAME(vict));break;
-  case 9:
-   sprintf(brag, "$n brags, '%s, give me your family's number and I might return your corpse.'", GET_NAME(vict));break;
-  case 10:
-   sprintf(brag, "$n brags, 'Hey %s!  Come back, you dropped your corpse!'", GET_NAME(vict));break;
-  case 11:
-   sprintf(brag, "$n brags, 'I think %s wears pink chainmail.  Fights like a girl!'", GET_NAME(vict));break;
-  case 12:
-   sprintf(brag, "$n brags, 'Hahaha! %s hits like a girl! Sissy!'", GET_NAME(vict));break;
-  case 13:
-   sprintf(brag, "$n brags, 'I charp in your direction, %s!'", GET_NAME(vict));break;
-  case 14:
-   sprintf(brag, "$n brags, 'I guess you thought you could whoop me, eh %s?'", GET_NAME(vict));break;
-  case 15:
-   sprintf(brag, "$n brags, 'If that's all you can do, you had better try harder %s, cause it ain't enough to bring ME down!'", GET_NAME(vict));break;
-  case 16:
-   sprintf(brag, "$n brags, 'Where did you get that weapon %s? The newts? :P'", GET_NAME(vict));break;
-  case 17:
-   sprintf(brag, "$n brags, 'If you wanna play with the big boys, you had better get BIG %s.'", GET_NAME(vict));break;
-  case 18:
-   sprintf(brag, "$n brags, 'Dunt, Dunt, Dunt, Another one bites the dust! Or Should I say, %s did. *chortle*'", GET_NAME(vict));break;
-  case 19:
-   sprintf(brag, "$n brags, 'Game Over %s.. Game Over.'", GET_NAME(vict));break;
-  case 20:
-   sprintf(brag, "$n brags, 'Haha, %s is no match for me!'", GET_NAME(vict));break;
-  case 21:
-   sprintf(brag, "$n brags, '%s fights like a yeasty bit of stomach bile!'", GET_NAME(vict));break;
-  case 22:
-   sprintf(brag, "$n brags, 'Mmmm! Look what goodies %s left for me in their corpse!'", GET_NAME(vict));break;
-  case 23:
-   sprintf(brag, "$n brags, '%s couldn't hit the broad side of a barn! Let alone the actual cow.'", GET_NAME(vict));break;
-  case 24:
-   sprintf(brag, "$n brags, 'Who taught you how to fight %s, your Grandma?'", GET_NAME(vict));break;
-  case 25:
-   sprintf(brag, "$n brags, 'Muahaha %s, try as you might, you'll never kill me!'", GET_NAME(vict));break;
-  case 26:
-   sprintf(brag, "$n brags, 'One thing's for sure, %s should stop trying while ahead!'", GET_NAME(vict));break;
-  case 27:
-   sprintf(brag, "$n brags, 'Oow %s, hope you didn't lose any stats! Hahaha!'", GET_NAME(vict));break;
-  case 28:
-   sprintf(brag, "$n brags, 'So you thought you could kill me, eh %s?'", GET_NAME(vict));break;
-  case 29:
-   sprintf(brag, "$n brags, 'To junk %s's corpse, or to not junk %s's corpse, that is the question...'", GET_NAME(vict), GET_NAME(vict));break;
-  case 30:
-   sprintf(brag, "$n brags, 'Hey %s, come back and fight like a man!'", GET_NAME(vict));break;
-  case 31:
-   sprintf(brag, "$n brags, 'Hey Everyone, %s is naked at the temple! Don't stare too long. :P'", GET_NAME(vict));break;
-  case 32:
-   sprintf(brag, "$n brags, '%s is inferior to my manliness!!'", GET_NAME(vict));break;
-  case 33:
-   sprintf(brag, "$n brags, 'Ooh %s, that just had to hurt.'", GET_NAME(vict));break;
-  case 34:
-   sprintf(brag, "$n brags, 'Someone come get %s's corpse outta here, its starting to smell like rotten fish.'", GET_NAME(vict));break;
-  case 35:
-   sprintf(brag, "$n brags, 'That was a really good attempt at killing me %s. Better luck next time.'", GET_NAME(vict));break;
-  case 36:
-   sprintf(brag, "$n brags, 'Hey %s, you coming back for more anytime soon?'", GET_NAME(vict));break;
-  case 37:
-   sprintf(brag, "$n brags, '%s is no match for my superior skills! *flex*'", GET_NAME(vict));break;
-  case 38:
-   sprintf(brag, "$n brags, 'Hey %s, nice killing you, see ya again sometime!'", GET_NAME(vict));break;
-  case 39:
-   sprintf(brag, "$n brags, 'Ouch, how much exp will that cost you %s?'", GET_NAME(vict));break;
-  case 40:
-   sprintf(brag, "$n brags, 'I have SLAIN %s! Fear my wrath!'", GET_NAME(vict));break;
-  case 41:
-   sprintf(brag, "$n brags, '%s Has failed, yet again, to slay me!'", GET_NAME(vict));break;
-  case 42:
-   sprintf(brag, "$n brags, '%s, you are the weakest link, good-bye!'", GET_NAME(vict));break;
-  case 43:
-   sprintf(brag, "$n brags, 'Thanks for the meta, %s!  I got a 7!'", GET_NAME(vict));break;
-  case 44:
-   sprintf(brag, "$n brags, 'LEVEL !!'");break;
-  case 45:
-   sprintf(brag, "$n brags, 'Hey %s, where'd you get your equipment - donation? MUhaha!'", GET_NAME(vict));break;
-  }
+  char buf[MIL], brag[MSL];
 
-  for (i = descriptor_list; i; i = i->next) {
-    if(i->character && (i->character != ch) && !i->connected
-       && (IS_SET(i->character->specials.pflag, PLR_GOSSIP)
-       || i->original ) ) {
-      COLOR(i->character,5);
-      act(brag,0,ch,0,i->character,TO_VICT);
-      ENDCOLOR(i->character);
+  snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict));
+  snprintf(brag, sizeof(brag), "$n brags '%s'", buf);
+
+  /* Do this the "hard way", since we want a "custom" gossip string. */
+  for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+    CHAR *temp_char = temp_desc->character;
+
+    if ((temp_desc->connected == CON_PLYNG) && temp_char && (temp_char != ch) && IS_SET(GET_PFLAG(temp_char), PLR_GOSSIP)) {
+      COLOR(temp_char, 5);
+      act(brag, FALSE, ch, 0, temp_char, TO_VICT);
+      ENDCOLOR(temp_char);
     }
   }
-  /*If rashgugh is in the game, brag too*/
-  if (chance(25))
-  {
-     rashgugh = get_ch_world(TOKEN_MOB);
-     if (rashgugh)
-     {
-       sprintf(brag, "I didn't attend the funeral, but I sent a nice letter saying I approved of it.");
-       do_yell(rashgugh, brag, CMD_YELL);
-     }
+
+  CHAR *rashgugh = get_ch_world(TOKEN_MOB);
+
+  /* If Rashgugh is in the game, have him brag too. */
+  if (rashgugh && chance(25)) {
+    snprintf(brag, sizeof(brag), "I didn't attend the funeral, but I sent a nice letter saying I approved of it.");
+
+    do_yell(rashgugh, brag, CMD_YELL);
   }
 }

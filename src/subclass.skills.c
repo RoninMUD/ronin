@@ -219,7 +219,11 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, buf);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Backfist who?\n\r", ch);
 
     return;
@@ -341,7 +345,11 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, buf);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Tigerkick who?\n\r", ch);
 
     return;
@@ -617,7 +625,11 @@ void do_blitz(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Blitz who?\n\r", ch);
 
     return;
@@ -682,7 +694,7 @@ void do_lunge(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim) {
     send_to_char("Lunge at who?\n\r", ch);
 
     return;
@@ -787,7 +799,11 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Smite who?\n\r", ch);
 
     return;
@@ -1219,7 +1235,11 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Headbutt who?\n\r", ch);
 
     return;
@@ -1308,7 +1328,11 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Banzai charge who?\n\r", ch);
 
     return;
@@ -1729,7 +1753,11 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Clobber who?\n\r", ch);
 
     return;
