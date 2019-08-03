@@ -758,12 +758,12 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
       return;
       break;
     case FUNCT_QINFO:
-      if (IS_SET(ch->new.imm_flags, QUEST_INFO)) {
+      if (IS_SET(ch->new.imm_flags, WIZ_QUEST_INFO)) {
         send_to_char("OK, you have turned off quest info.\n\r", ch);
-        REMOVE_BIT(ch->new.imm_flags, QUEST_INFO);
+        REMOVE_BIT(ch->new.imm_flags, WIZ_QUEST_INFO);
       } else {
         send_to_char("OK, you have turned on quest info.\n\r", ch);
-        SET_BIT(ch->new.imm_flags, QUEST_INFO);
+        SET_BIT(ch->new.imm_flags, WIZ_QUEST_INFO);
       }
       break;
     case FUNCT_QP:

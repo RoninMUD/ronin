@@ -367,12 +367,15 @@ void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, cons
     }
   }
 
+  /* Null-terminate the drunkified string. */
   buf[sizeof(buf) - 1] = '\0';
 
+  /* If the drunkified string is longer than the destination string, truncate it with ellipses. */
   if (strlen(buf) > dst_sz) {
     strcpy(&buf[dst_sz - 4], "...\0");
   }
 
+  /* Write the drunkified string into the destination string. */
   snprintf(dst, dst_sz, "%s", buf);
 }
 
@@ -497,14 +500,14 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     }
   }
 
-  char message[MSL];
+  char temp[MSL / 2];
 
   /* Drunkify the string as needed, otherwise, store the resulting arg text in the message variable. */
-  if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {
-    drunkify_string(message, sizeof(message), GET_COND(ch, DRUNK), "%s", arg);
+  if (GET_COND(ch, DRUNK) > 10) {
+    drunkify_string(temp, sizeof(temp), GET_COND(ch, DRUNK), "%s", arg);
   }
   else {
-    snprintf(message, sizeof(message), "%s", arg);
+    snprintf(temp, sizeof(temp), "%s", arg);
   }
 
   char style_open[3], style_close[3];
@@ -522,20 +525,20 @@ void communicate(CHAR *ch, char *arg, const int comm) {
       break; // COMM_STYLE_BRACKET
   }
 
-  char buf[MSL];
+  char message[MSL];
 
   /* Build the message string for the acting character. */
-  snprintf(buf, sizeof(buf), "%s %s%s%s%s", comm_info[comm].text_to_ch,
+  snprintf(message, sizeof(message), "%s %s%s%s%s", comm_info[comm].text_to_ch,
     ((comm_info[comm].smell && affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
-    style_open, message, style_close);
+    style_open, temp, style_close);
 
   /* Print the message string to the acting character. */
   if (comm_info[comm].color) COLOR(ch, comm_info[comm].color);
-  act(buf, FALSE, ch, 0, listener, TO_CHAR);
+  act(message, FALSE, ch, 0, listener, TO_CHAR);
   if (comm_info[comm].color) ENDCOLOR(ch);
 
   /* Build the message string for the listening character(s). */
-  snprintf(buf, sizeof(buf), "%s %s%s%s%s", comm_info[comm].text_to_vict,
+  snprintf(message, sizeof(message), "%s %s%s%s%s", comm_info[comm].text_to_vict,
     ((comm_info[comm].smell &&affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
     style_open, message, style_close);
 
@@ -545,7 +548,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     case COMM_TO_CHAR_ROOM:
     case COMM_TO_REPLY:
       if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
-      act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
+      act(message, comm_info[comm].hide, ch, 0, listener, TO_VICT);
       if (comm_info[comm].color) ENDCOLOR(listener);
       break; // COMM_TO_CHAR, COMM_TO_CHAR_ROOM
 
@@ -558,7 +561,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             SAME_GROUP(temp_ch, ch)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -570,7 +573,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -585,7 +588,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -599,7 +602,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -610,8 +613,9 @@ void communicate(CHAR *ch, char *arg, const int comm) {
   if (listener) {
     /* Print text_to_other to the acting character's room. */
     if (strlen(comm_info[comm].text_to_other)) {
-      snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
-      act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+      snprintf(message, sizeof(message), "%s", comm_info[comm].text_to_other);
+
+      act(message, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
     }
 
     /* Set the listener's reply_to value to the acting character's ID. */
@@ -1058,56 +1062,48 @@ void do_report(CHAR * ch, char *argument, int cmd) {
 }
 
 
-/* Arbitrary */
-#define MAX_NOTE_LENGTH 2000
-
-/* Function called by the 'write' command.
-   Re-written by Night, 12/11/2011 */
+/* Function called by the 'write' command. */
 void do_write(CHAR *ch, char *arg, int cmd) {
-  char buf[MSL];
-  char first_arg[MIL];
-  char second_arg[MIL];
-  OBJ *note = NULL;
-  OBJ *pen = NULL;
-
   /* Character does not have a descriptor so they can't write. */
-  if (!ch->desc) {
-    return;
-  }
+  if (!GET_DESCRIPTOR(ch)) return;
 
-  argument_interpreter(arg, first_arg, second_arg);
+  char arg1[MIL], arg2[MIL];
+
+  two_arguments(arg, arg1, arg2);
 
   /* Write command was called with no argument. */
-  if (!*first_arg) {
+  if (!*arg1) {
     send_to_char("Write? On what? With what? What are you trying to do?\n\r", ch);
 
     return;
   }
 
+  OBJ *note = NULL;
+
   /* The first argument was provided. This indicates the note to be written on. */
-  if (*first_arg) {
+  if (*arg1) {
     /* Check the character's inventory for a visible object matching the first argument provided. */
-    if (!(note = get_obj_in_list_vis(ch, first_arg, ch->carrying))) {
+    if (!(note = get_obj_in_list_vis(ch, arg1, ch->carrying))) {
       /* If nothing was found in the character's inventory, try the object held by the character. */
-      if (!(note = EQ(ch, HOLD)) || !isname(first_arg, OBJ_NAME(note))) {
+      if (!(note = EQ(ch, HOLD)) || !isname(arg1, OBJ_NAME(note))) {
         /* No object of the name provided was found. */
-        sprintf(buf, "You have no %s.\n\r", first_arg);
-        send_to_char(buf, ch);
+        printf_to_char(ch, "You have no %s.\n\r", arg1);
 
         return;
       }
     }
   }
 
+  OBJ *pen = NULL;
+
   /* The second argument was provided. This indicates the pen to write with. */
-  if (*second_arg) {
+  if (*arg2) {
     /* Check the character's inventory for a visible object matching the second argument provided. */
-    if (!(pen = get_obj_in_list_vis(ch, second_arg, ch->carrying))) {
+    if (!(pen = get_obj_in_list_vis(ch, arg2, ch->carrying))) {
       /* If nothing was found in the character's inventory, try the object held by the character. */
-      if (!(pen = EQ(ch, HOLD)) || !isname(second_arg, OBJ_NAME(pen))) {
+      if (!(pen = EQ(ch, HOLD)) || !isname(arg2, OBJ_NAME(pen))) {
         /* No object of the name provided was found. */
-        sprintf(buf, "You have no %s.\n\r", second_arg);
-        send_to_char(buf, ch);
+        printf_to_char(ch, "You have no %s.\n\r", arg2);
 
         return;
       }
@@ -1116,7 +1112,7 @@ void do_write(CHAR *ch, char *arg, int cmd) {
 
   /* An object was found to write on but no argument was provided to indicate a writing implement.
      The writing implement might be held by the character. */
-  if (note && !*second_arg && !(pen = EQ(ch, HOLD))) {
+  if (note && !*arg2 && !(pen = EQ(ch, HOLD))) {
     act("You can't write with $p alone.", TRUE, ch, note, 0, TO_CHAR);
 
     return;
@@ -1146,7 +1142,7 @@ void do_write(CHAR *ch, char *arg, int cmd) {
     }
 
     /* The note has already been written on. */
-    if (note->action_description) {
+    if (OBJ_GET_ACTION(note)) {
       send_to_char("There's something written on it already.\n\r", ch);
 
       return;
@@ -1157,7 +1153,8 @@ void do_write(CHAR *ch, char *arg, int cmd) {
     act("$n begins to jot down a note.", TRUE, ch, 0, 0, TO_ROOM);
 
     SET_BIT(GET_PFLAG(ch), PLR_WRITING);
-    ch->desc->str = &note->action_description;
-    ch->desc->max_str = MAX_NOTE_LENGTH;
+
+    DESC_MAX_STR(GET_DESCRIPTOR(ch)) = MSL / 2;
+    DESC_STR(GET_DESCRIPTOR(ch)) = &OBJ_GET_ACTION(note);
   }
 }

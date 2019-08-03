@@ -2805,8 +2805,7 @@ void reset_char(struct char_data *ch)
 }
 
 /* clear ALL the working variables of a char and do NOT free any space alloc'ed*/
-void clear_char(struct char_data *ch)
-{
+void clear_char(struct char_data *ch) {
   memset((char *)ch, '\0', sizeof(struct char_data));
 
   ch->in_room_r = NOWHERE;
@@ -2818,17 +2817,15 @@ void clear_char(struct char_data *ch)
   ch->new.prompt = PROMPT_HP | PROMPT_HP_TEX | PROMPT_MANA | PROMPT_MANA_TEX | PROMPT_MOVE | PROMPT_MOVE_TEX | PROMPT_BUFFER | PROMPT_BUFFER_TEX | PROMPT_VICTIM | PROMPT_VICTIM_TEX;
 }
 
-void clear_skills(struct char_skill_data *skills)
-{
-  memset((char *)skills, '\0', sizeof(struct char_skill_data)*MAX_SKILLS5);
+void clear_skills(struct char_skill_data *skills) {
+  memset((char *)skills, '\0', sizeof(struct char_skill_data) * MAX_SKILLS5);
 }
 
-void clear_object(struct obj_data *obj)
-{
-     memset((char *)obj, '\0', sizeof(struct obj_data));
+void clear_object(struct obj_data *obj) {
+  memset((char *)obj, '\0', sizeof(struct obj_data));
 
-     obj->item_number = -1;
-     obj->in_room       = NOWHERE;
+  obj->item_number = -1;
+  obj->in_room = NOWHERE;
 }
 
 int generate_id(void);

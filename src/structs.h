@@ -770,144 +770,144 @@ struct room_data
 #define CLASS_MOB_LAST            CLASS_STATUE
 
 /* sex */
-#define SEX_NEUTRAL 0
-#define SEX_MALE    1
-#define SEX_FEMALE  2
+#define SEX_NEUTRAL           0
+#define SEX_MALE              1
+#define SEX_FEMALE            2
 
 /* positions */
-#define POSITION_DEAD      0
-#define POSITION_MORTALLYW 1
-#define POSITION_INCAP     2
-#define POSITION_STUNNED   3
-#define POSITION_SLEEPING  4
-#define POSITION_RESTING   5
-#define POSITION_SITTING   6
-#define POSITION_FIGHTING  7
-#define POSITION_STANDING  8
-#define POSITION_FLYING    9
-#define POSITION_RIDING    10
-#define POSITION_SWIMMING  11
-
-/* for mobile actions: specials.act */
-#define ACT_SPEC       1     /* special routine to be called if exist   */
-#define ACT_SENTINEL   2     /* this mobile not to be moved             */
-#define ACT_SCAVENGER  4     /* pick up stuff lying around              */
-#define ACT_ISNPC      8     /* This bit is set for use with IS_NPC()   */
-#define ACT_NICE_THIEF 16    /* Set if a thief should NOT be killed     */
-#define ACT_AGGRESSIVE 32    /* Set if automatic attack on NPC's        */
-#define ACT_STAY_ZONE  64    /* MOB Must stay inside its own zone       */
-#define ACT_WIMPY      128   /* MOB Will flee when injured, and if aggressive only attack sleeping players */
-#define ACT_SUBDUE     256
-#define ACT_OPEN_DOOR  512
-#define ACT_AGGWA      1024
-#define ACT_AGGTH      2048
-#define ACT_AGGCL      4096
-#define ACT_AGGMU      8192
-#define ACT_MEMORY     16384
-#define ACT_AGGNI      32768
-#define ACT_AGGNO      65536
-#define ACT_ARM        131072
-#define ACT_MOUNT      262144
-#define ACT_FLY        524288
-#define ACT_AGGPA      1048576
-#define ACT_AGGAP      2097152
-#define ACT_AGGBA      4194304
-#define ACT_AGGCO      8388608
-#define ACT_SHIELD     16777216
-#define ACT_AGGEVIL    33554432
-#define ACT_AGGGOOD    67108864
-#define ACT_AGGNEUT    134217728
-#define ACT_AGGLEADER  268435456
-#define ACT_AGGRANDOM  536870912
-#define ACT_FINAL      1073741824
-
-/* More mobile actions specials.act2 */
-#define ACT2_NO_TOKEN      1
-#define ACT2_IGNORE_SPHERE 2
-#define ACT2_FINAL         4
+#define POSITION_DEAD         0
+#define POSITION_MORTALLYW    1
+#define POSITION_INCAP        2
+#define POSITION_STUNNED      3
+#define POSITION_SLEEPING     4
+#define POSITION_RESTING      5
+#define POSITION_SITTING      6
+#define POSITION_FIGHTING     7
+#define POSITION_STANDING     8
+#define POSITION_FLYING       9
+#define POSITION_RIDING       10
+#define POSITION_SWIMMING     11
 
 /* New mob attacks - specials.att_type[] */
-#define ATT_UNDEFINED    0  /* Never use undefined */
-#define ATT_SPELL_CAST   1
-#define ATT_KICK         2
-#define ATT_PUMMEL       3
-#define ATT_PUNCH        4
-#define ATT_BITE         5
-#define ATT_CLAW         6
-#define ATT_BASH         7
-#define ATT_TAILSLAM     8
-#define ATT_DISARM       9
-#define ATT_TRAMPLE     10
-#define ATT_SPELL_SKILL 11
-#define ATT_MAX         12
+#define ATT_UNDEFINED         0  /* Never use undefined */
+#define ATT_SPELL_CAST        1
+#define ATT_KICK              2
+#define ATT_PUMMEL            3
+#define ATT_PUNCH             4
+#define ATT_BITE              5
+#define ATT_CLAW              6
+#define ATT_BASH              7
+#define ATT_TAILSLAM          8
+#define ATT_DISARM            9
+#define ATT_TRAMPLE           10
+#define ATT_SPELL_SKILL       11
+#define ATT_MAX               12
 
 /* Targets for attacks - special.att_target[] */
-#define TAR_UNDEFINED    0 /* doesn't attack anyone */
-#define TAR_BUFFER       1 /* the usual, attacks the one hitting the mob */
-#define TAR_RAN_GROUP    2 /* attacks at random from the buffers group   */
-#define TAR_RAN_ROOM     3 /* random char from the room                  */
-#define TAR_GROUP        4 /* whole group                                */
-#define TAR_ROOM         5 /* whole room                                 */
-#define TAR_SELF         6
-#define TAR_LEADER       7
-#define TAR_MAX          8
+#define TAR_UNDEFINED         0 /* doesn't attack anyone */
+#define TAR_BUFFER            1 /* the usual, attacks the one hitting the mob */
+#define TAR_RAN_GROUP         2 /* attacks at random from the buffers group   */
+#define TAR_RAN_ROOM          3 /* random char from the room                  */
+#define TAR_GROUP             4 /* whole group                                */
+#define TAR_ROOM              5 /* whole room                                 */
+#define TAR_SELF              6
+#define TAR_LEADER            7
+#define TAR_MAX               8
+
+/* for mobile actions: specials.act */
+#define ACT_SPEC              (1 << 0)  /* 1 */
+#define ACT_SENTINEL          (1 << 1)  /* 2 */
+#define ACT_SCAVENGER         (1 << 2)  /* 4 */
+#define ACT_ISNPC             (1 << 3)  /* 8 */
+#define ACT_NICE_THIEF        (1 << 4)  /* 16 */
+#define ACT_AGGRESSIVE        (1 << 5)  /* 32 */
+#define ACT_STAY_ZONE         (1 << 6)  /* 64 */
+#define ACT_WIMPY             (1 << 7)  /* 128 */
+#define ACT_SUBDUE            (1 << 8)  /* 256 */
+#define ACT_OPEN_DOOR         (1 << 9)  /* 512 */
+#define ACT_AGGWA             (1 << 10) /* 1024 */
+#define ACT_AGGTH             (1 << 11) /* 2048 */
+#define ACT_AGGCL             (1 << 12) /* 4096 */
+#define ACT_AGGMU             (1 << 13) /* 8192 */
+#define ACT_MEMORY            (1 << 14) /* 16384 */
+#define ACT_AGGNI             (1 << 15) /* 32768 */
+#define ACT_AGGNO             (1 << 16) /* 65536 */
+#define ACT_ARM               (1 << 17) /* 131072 */
+#define ACT_MOUNT             (1 << 18) /* 262144 */
+#define ACT_FLY               (1 << 19) /* 524288 */
+#define ACT_AGGPA             (1 << 20) /* 1048576 */
+#define ACT_AGGAP             (1 << 21) /* 2097152 */
+#define ACT_AGGBA             (1 << 22) /* 4194304 */
+#define ACT_AGGCO             (1 << 23) /* 8388608 */
+#define ACT_SHIELD            (1 << 24) /* 16777216 */
+#define ACT_AGGEVIL           (1 << 25) /* 33554432 */
+#define ACT_AGGGOOD           (1 << 26) /* 67108864 */
+#define ACT_AGGNEUT           (1 << 27) /* 134217728 */
+#define ACT_AGGLEADER         (1 << 28) /* 268435456 */
+#define ACT_AGGRANDOM         (1 << 29) /* 536870912 */
+#define ACT_FINAL             (1 << 30) /* 1073741824 */
+
+/* More mobile actions specials.act2 */
+#define ACT2_NO_TOKEN         (1 << 0)  /* 1 */
+#define ACT2_IGNORE_SPHERE    (1 << 1)  /* 2 */
+#define ACT2_FINAL            (1 << 2)  /* 4 */
 
 /* Mob resistance  specials.resist */
-#define RESIST_POISON       1
-#define RESIST_PHYSICAL     2
-#define RESIST_MAGICAL      4
-#define RESIST_FIRE         8
-#define RESIST_COLD         16
-#define RESIST_ELECTRIC     32
-#define RESIST_SOUND        64
-#define RESIST_CHEMICAL     128
-#define RESIST_ACID         256
+#define RESIST_POISON         (1 << 0)  /* 1 */
+#define RESIST_PHYSICAL       (1 << 1)  /* 2 */
+#define RESIST_MAGICAL        (1 << 2)  /* 4 */
+#define RESIST_FIRE           (1 << 3)  /* 8 */
+#define RESIST_COLD           (1 << 4)  /* 16 */
+#define RESIST_ELECTRIC       (1 << 5)  /* 32 */
+#define RESIST_SOUND          (1 << 6)  /* 64 */
+#define RESIST_CHEMICAL       (1 << 7)  /* 128 */
+#define RESIST_ACID           (1 << 8)  /* 256 */
 
 /* Immunities -- used in specials.immune */
-#define IMMUNE_FIRE         (1 << 0)  /* 1 */
-#define IMMUNE_ELECTRIC     (1 << 1)  /* 2 */
-#define IMMUNE_POISON       (1 << 2)  /* 4 */
-#define IMMUNE_PUMMEL       (1 << 3)  /* 8 */
-#define IMMUNE_KICK         (1 << 4)  /* 16 */
-#define IMMUNE_PUNCH        (1 << 5)  /* 32 */
-#define IMMUNE_SLEEP        (1 << 6)  /* 64 */
-#define IMMUNE_CHARM        (1 << 7)  /* 128 */
-#define IMMUNE_BLINDNESS    (1 << 8)  /* 256 */
-#define IMMUNE_PARALYSIS    (1 << 9)  /* 512 */
-#define IMMUNE_DRAIN        (1 << 10) /* 1024 */
-#define IMMUNE_DISEMBOWEL   (1 << 11) /* 2048 */
-#define IMMUNE_DISINTEGRATE (1 << 12) /* 4096 */
-#define IMMUNE_CLAIR        (1 << 13) /* 8192 */
-#define IMMUNE_SUMMON       (1 << 14) /* 16384 */
-#define IMMUNE_HIT          (1 << 15) /* 32768 */
-#define IMMUNE_BLUDGEON     (1 << 16) /* 65536 */
-#define IMMUNE_PIERCE       (1 << 17) /* 131072 */
-#define IMMUNE_SLASH        (1 << 18) /* 262144 */
-#define IMMUNE_WHIP         (1 << 19) /* 524288 */
-#define IMMUNE_CLAW         (1 << 20) /* 1048576 */
-#define IMMUNE_BITE         (1 << 21) /* 2097152 */
-#define IMMUNE_STING        (1 << 22) /* 4194304 */
-#define IMMUNE_CRUSH        (1 << 23) /* 8388608 */
-#define IMMUNE_HACK         (1 << 24) /* 16777216 */
-#define IMMUNE_CHOP         (1 << 25) /* 33554432 */
-#define IMMUNE_SLICE        (1 << 26) /* 67108864 */
-#define IMMUNE_BACKSTAB     (1 << 27) /* 134217728 */
-#define IMMUNE_AMBUSH       (1 << 28) /* 268435456 */
-#define IMMUNE_ASSAULT      (1 << 29) /* 536870912 */
-#define IMMUNE_PHYSICAL     (1 << 30) /* 1073741824 */
-#define IMMUNE_MAGICAL      (1 << 31) /* 2147483648 */
+#define IMMUNE_FIRE           (1 << 0)  /* 1 */
+#define IMMUNE_ELECTRIC       (1 << 1)  /* 2 */
+#define IMMUNE_POISON         (1 << 2)  /* 4 */
+#define IMMUNE_PUMMEL         (1 << 3)  /* 8 */
+#define IMMUNE_KICK           (1 << 4)  /* 16 */
+#define IMMUNE_PUNCH          (1 << 5)  /* 32 */
+#define IMMUNE_SLEEP          (1 << 6)  /* 64 */
+#define IMMUNE_CHARM          (1 << 7)  /* 128 */
+#define IMMUNE_BLINDNESS      (1 << 8)  /* 256 */
+#define IMMUNE_PARALYSIS      (1 << 9)  /* 512 */
+#define IMMUNE_DRAIN          (1 << 10) /* 1024 */
+#define IMMUNE_DISEMBOWEL     (1 << 11) /* 2048 */
+#define IMMUNE_DISINTEGRATE   (1 << 12) /* 4096 */
+#define IMMUNE_CLAIR          (1 << 13) /* 8192 */
+#define IMMUNE_SUMMON         (1 << 14) /* 16384 */
+#define IMMUNE_HIT            (1 << 15) /* 32768 */
+#define IMMUNE_BLUDGEON       (1 << 16) /* 65536 */
+#define IMMUNE_PIERCE         (1 << 17) /* 131072 */
+#define IMMUNE_SLASH          (1 << 18) /* 262144 */
+#define IMMUNE_WHIP           (1 << 19) /* 524288 */
+#define IMMUNE_CLAW           (1 << 20) /* 1048576 */
+#define IMMUNE_BITE           (1 << 21) /* 2097152 */
+#define IMMUNE_STING          (1 << 22) /* 4194304 */
+#define IMMUNE_CRUSH          (1 << 23) /* 8388608 */
+#define IMMUNE_HACK           (1 << 24) /* 16777216 */
+#define IMMUNE_CHOP           (1 << 25) /* 33554432 */
+#define IMMUNE_SLICE          (1 << 26) /* 67108864 */
+#define IMMUNE_BACKSTAB       (1 << 27) /* 134217728 */
+#define IMMUNE_AMBUSH         (1 << 28) /* 268435456 */
+#define IMMUNE_ASSAULT        (1 << 29) /* 536870912 */
+#define IMMUNE_PHYSICAL       (1 << 30) /* 1073741824 */
+#define IMMUNE_MAGICAL        (1 << 31) /* 2147483648 */
 
 /* Immunities 2 -- used in specials.immune2 */
-#define IMMUNE2_LOCATE      (1 << 0)  /* 1 */
-#define IMMUNE2_COLD        (1 << 1)  /* 2 */
-#define IMMUNE2_SOUND       (1 << 2)  /* 4 */
-#define IMMUNE2_CHEMICAL    (1 << 3)  /* 8 */
-#define IMMUNE2_ACID        (1 << 4)  /* 16 */
-#define IMMUNE2_FEAR        (1 << 5)  /* 32 */
-#define IMMUNE2_BASH        (1 << 6)  /* 64 */
-#define IMMUNE2_CIRCLE      (1 << 7)  /* 128 */
-#define IMMUNE2_BACKFLIP    (1 << 8)  /* 256 */
-#define IMMUNE2_STEAL       (1 << 9)  /* 512 */
+#define IMMUNE2_LOCATE        (1 << 0)  /* 1 */
+#define IMMUNE2_COLD          (1 << 1)  /* 2 */
+#define IMMUNE2_SOUND         (1 << 2)  /* 4 */
+#define IMMUNE2_CHEMICAL      (1 << 3)  /* 8 */
+#define IMMUNE2_ACID          (1 << 4)  /* 16 */
+#define IMMUNE2_FEAR          (1 << 5)  /* 32 */
+#define IMMUNE2_BASH          (1 << 6)  /* 64 */
+#define IMMUNE2_CIRCLE        (1 << 7)  /* 128 */
+#define IMMUNE2_BACKFLIP      (1 << 8)  /* 256 */
+#define IMMUNE2_STEAL         (1 << 9)  /* 512 */
 
 /* Player flags -- used in specials.pflag */
 #define PLR_BRIEF             (1 << 0)  /* 1 */
@@ -955,24 +955,24 @@ struct room_data
 #define TOG_SNIPE             (1 << 11) /* 2048 */
 
 /* Wizard flags -- used in specials.wizflags */
-#define WIZ_TRUST       1
-#define WIZ_QUEST       2
-#define WIZ_FREEZE      4
-#define WIZ_LOAD        8
-#define WIZ_NO_NET      16
-#define WIZ_LOG_ONE     32
-#define WIZ_LOG_TWO     64
-#define WIZ_LOG_THREE   128
-#define WIZ_LOG_FOUR    256
-#define WIZ_LOG_FIVE    512
-#define WIZ_CREATE      1024
-#define WIZ_LOG_SIX     2048
-#define QUEST_INFO      4096
-#define WIZ_JUDGE       8192
-#define WIZ_ACTIVE      16384
-#define WIZ_WIZNET      32768
-#define WIZ_CHAOS       65536
-#define WIZ_SNOOP_BRIEF 131072
+#define WIZ_TRUST             (1 << 0)  /* 1 */
+#define WIZ_QUEST             (1 << 1)  /* 2 */
+#define WIZ_FREEZE            (1 << 2)  /* 4 */
+#define WIZ_LOAD              (1 << 3)  /* 8 */
+#define WIZ_NO_NET            (1 << 4)  /* 16 */
+#define WIZ_LOG_ONE           (1 << 5)  /* 32 */
+#define WIZ_LOG_TWO           (1 << 6)  /* 64 */
+#define WIZ_LOG_THREE         (1 << 7)  /* 128 */
+#define WIZ_LOG_FOUR          (1 << 8)  /* 256 */
+#define WIZ_LOG_FIVE          (1 << 9)  /* 512 */
+#define WIZ_CREATE            (1 << 10) /* 1024 */
+#define WIZ_LOG_SIX           (1 << 11) /* 2048 */
+#define WIZ_QUEST_INFO        (1 << 12) /* 4096 */
+#define WIZ_JUDGE             (1 << 13) /* 8192 */
+#define WIZ_ACTIVE            (1 << 14) /* 16384 */
+#define WIZ_WIZNET            (1 << 15) /* 32768 */
+#define WIZ_CHAOS             (1 << 16) /* 65536 */
+#define WIZ_SNOOP_BRIEF       (1 << 17) /* 131072 */
 
 
 /* Character Structs */

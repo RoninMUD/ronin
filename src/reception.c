@@ -521,8 +521,8 @@ void load_char(CHAR *ch) {
 
   if(GET_LEVEL(ch)<LEVEL_IMM) rank_char(ch);
 
-  if(GET_LEVEL(ch)<LEVEL_SUP && IS_SET(ch->new.imm_flags, QUEST_INFO))
-    REMOVE_BIT(ch->new.imm_flags, QUEST_INFO);
+  if(GET_LEVEL(ch)<LEVEL_SUP && IS_SET(ch->new.imm_flags, WIZ_QUEST_INFO))
+    REMOVE_BIT(ch->new.imm_flags, WIZ_QUEST_INFO);
 
 /* CHAOS2017: no equipment */
 #ifndef CHAOS2017
@@ -620,8 +620,7 @@ void load_char(CHAR *ch) {
   if(signal_char(ch,ch,MSG_OBJ_ENTERING_GAME,buf))
     log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
 
-  ch->ver3.time_to_quest-=((int)(time(0)-last_up)/60);
-  ch->ver3.time_to_quest=MAX(0,ch->ver3.time_to_quest);
+  ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
 
   /* Default all imms gold to 10000 coins - Ranger Sept 97 */
   if(IS_IMMORTAL(ch)) GET_GOLD(ch)=10000;
@@ -1105,7 +1104,9 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
         printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
       }
       if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
-        send_to_char("Your quest has been automatically ended, you can start another in 30 ticks.\n\r",ch);
+        int ttq = MAX(ch->ver3.time_to_quest - 40, 5);
+        snprintf(buf, sizeof(buf), "Your quest has been automatically ended.  You can start another in %d ticks.\n\r", ttq);
+        send_to_char(buf, ch);
         ch->ver3.time_to_quest=30;
       }
 
@@ -1202,7 +1203,7 @@ void auto_rent(CHAR *ch) {
   }
 
   if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED)
-    ch->ver3.time_to_quest=30;
+    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
 
   ch->questgiver=0;
   if(ch->questobj)

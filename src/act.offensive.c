@@ -799,7 +799,11 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Circle who?\n\r", ch);
 
     return;
@@ -1223,7 +1227,11 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Pummel who?\n\r", ch);
 
     return;
@@ -1368,7 +1376,11 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Bash who?\n\r", ch);
 
     return;
@@ -1441,7 +1453,11 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Punch who?\n\r", ch);
 
     return;
@@ -1652,7 +1668,7 @@ void do_assist(CHAR *ch, char *argument, int cmd) {
 
 
 void do_kick(CHAR *ch, char *arg, int cmd) {
-  if (ch || !GET_SKILLS(ch)) return;
+  if (!ch || !GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_THIEF) &&
@@ -1673,7 +1689,11 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, victim)) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Kick who?\n\r", ch);
 
     return;
@@ -1961,7 +1981,11 @@ void do_backflip(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && !(victim = GET_OPPONENT(ch))) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
     send_to_char("Who do you want to flip over?\n\r", ch);
 
     return;

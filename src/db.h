@@ -67,12 +67,19 @@ void reset_zone(int zone, int full);
 struct obj_data *read_object(int nr, int type);
 struct char_data *read_mobile(int nr, int type);
 
-#define MENU         \
-"\n\rWelcome to Ronin Diku\n\r\n\
+#define SITE_BAN_MESSAGE \
+"Sorry...  Your site has been banned.  One or more members that operate from the\n\r\
+site or subnet that you have logged in from has been a habitual problem causer\n\r\
+and has forced us to take extreme measures to keep the peace.\n\r"
+
+#define MENU \
+"\n\r\
+Welcome to Ronin Diku\n\r\n\
 0) Exit from DikuMud.\n\r\
 1) Enter the game.\n\r\
 2) Enter description.\n\r\
-3) Read the background story.\n\r\n\r\
+3) Read the background story.\n\r\
+\n\r\
    Make your choice: "
 
 
@@ -100,8 +107,9 @@ using straight telnet before giving up.\n\r\
 \n\r"
 
 #define WELC_MESSG \
-"\n\rWelcome to the land of DikuMUD. May your visit here be... Interesting.\
-\n\r\n\r"
+"\n\r\
+Welcome to the land of DikuMUD. May your visit here be... Interesting.\n\r\
+\n\r"
 
 
 #define STORY     \
@@ -131,12 +139,13 @@ of Midgaard was forced to appoint a Mayor to lead them.  The Mayor's\n\r\
 first act of duty was to contrive a way to bring about peace again.\n\r\
 \n\r\
       After much toiling and thought, the Mayor concocted his most\n\r\
-brilliant idea:  to bring the strongest adventurers from across the\n\r\
+brilliant idea: to bring the strongest adventurers from across the\n\r\
 land into the town of Midgaard in hopes that they would band together,\n\r\
 restoring order to their world with their selfless bravery.  Only the\n\r\
 most divine and gifted warriors were to be chosen.\n\r\
 \n\r\
-You have been chosen...\n\r\n\r"
+You have been chosen...\n\r\
+\n\r"
 
 
 /* structure for the reset commands */
