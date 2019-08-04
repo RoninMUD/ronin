@@ -620,7 +620,12 @@ void load_char(CHAR *ch) {
   if(signal_char(ch,ch,MSG_OBJ_ENTERING_GAME,buf))
     log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
 
-  ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
+  if (ch->ver3.time_to_quest > 0) {
+    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
+  }
+  else {
+    ch->ver3.time_to_quest = 0;
+  }
 
   /* Default all imms gold to 10000 coins - Ranger Sept 97 */
   if(IS_IMMORTAL(ch)) GET_GOLD(ch)=10000;
