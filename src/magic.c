@@ -768,6 +768,7 @@ void spell_teleport(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
      (IS_NPC(ch) && IS_SET(world[to_room].room_flags, SAFE)) ||
      (IS_NPC(ch) && IS_SET(world[to_room].room_flags, DEATH)) ||
      (IS_NPC(ch) && IS_SET(world[to_room].room_flags, HAZARD)) ||
+     (IS_NPC(ch) && IS_SET(world[to_room].room_flags, NO_MOB)) ||
      IS_SET(world[to_room].room_flags, LOCK));
 
   act("$n slowly fades out of existence.", FALSE, ch,0,0,TO_ROOM);

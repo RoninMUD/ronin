@@ -866,7 +866,8 @@ static int token_mob_target_room() {
        IS_SET(world[goto_room].room_flags, SAFE) ||
        IS_SET(world[goto_room].room_flags, PRIVATE) ||
        IS_SET(world[goto_room].room_flags, DEATH) ||
-       IS_SET(world[goto_room].room_flags, HAZARD))
+       IS_SET(world[goto_room].room_flags, HAZARD) ||
+       IS_SET(world[goto_room].room_flags, NO_MOB))
       goto_room=0;
 
     if(number(1,100)>zone_rating(zone)) /* zone rating check */
