@@ -191,42 +191,46 @@ tk_beam_request (CHAR *ch)
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_BEAM)) {
     send_to_char("You cannot teleport from here.\n\r",ch);
     return;
-  }                              /* Liner 02 - only adding NO_BEAM rooms to not be beamable from.. */
-  
-  if (GET_ZONE(ch) == world[teleport_nr].zone)
-    {
-      for (tmp = character_list;tmp;tmp = tmp->next)
-	if ((IS_NPC (tmp) || GET_LEVEL (tmp) < LEVEL_IMM) &&
-	    GET_ZONE(tmp) != world[real_room(0)].zone &&    /* Void & Limbo */
-	    GET_ZONE(tmp) != world[real_room(3014)].zone && /* Upper City */
-	    GET_ZONE(tmp) != world[real_room(1212)].zone && /* Immort */
-	    GET_ZONE(tmp) != world[real_room(3137)].zone && /* Lower City */
-	    GET_ZONE(tmp) != world[real_room(3501)].zone && /* Training Gr. */
-	    CAN_SEE (scotty, tmp) &&
-	    !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, SAFE) &&
-	    !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, CLUB) &&
-	    !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, NO_BEAM) &&
-	    !IS_SET (world[CHAR_REAL_ROOM(ch)].room_flags, NO_BEAM) &&
-	    !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, PRIVATE))
-	  {
-	    if (!t)
-	      t = tmp;
+  }
 
-	    if (!number (0,9))
-	      t = tmp;
-	  }
+  /* Liner 02 - only adding NO_BEAM rooms to not be beamable from.. */
 
-      if (t)
-	{
-	  if (!number (0,4))
-	    tk_scotty_beam (scotty, ch, t);
-	  else
-	    spell_teleport (30, ch, ch, 0);
-	}
-      else return;
+  if (GET_ZONE(ch) == world[teleport_nr].zone) {
+    for (tmp = character_list;tmp;tmp = tmp->next) {
+      if ((IS_NPC (tmp) || GET_LEVEL (tmp) < LEVEL_IMM) &&
+          GET_ZONE(tmp) != world[real_room(0)].zone &&    /* Void & Limbo */
+          GET_ZONE(tmp) != world[real_room(3014)].zone && /* Upper City */
+          GET_ZONE(tmp) != world[real_room(1212)].zone && /* Immort */
+          GET_ZONE(tmp) != world[real_room(3137)].zone && /* Lower City */
+          GET_ZONE(tmp) != world[real_room(3501)].zone && /* Training Gr. */
+          CAN_SEE (scotty, tmp) &&
+          !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, SAFE) &&
+          !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, CLUB) &&
+          !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, NO_BEAM) &&
+          !IS_SET (world[CHAR_REAL_ROOM(ch)].room_flags, NO_BEAM) &&
+          !IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, PRIVATE) &&
+          !(IS_NPC(ch) && IS_SET (world[CHAR_REAL_ROOM(tmp)].room_flags, NO_MOB))) {
+        if (!t)
+          t = tmp;
+
+        if (!number (0,9))
+          t = tmp;
+      }
     }
-  else
+
+    if (t) {
+      if (!number (0,4))
+        tk_scotty_beam (scotty, ch, t);
+      else
+        spell_teleport (30, ch, ch, 0);
+    }
+    else {
+      return;
+    }
+  }
+  else {
     tk_scotty_beam (scotty, ch, scotty);
+  }
 }
 
 void
