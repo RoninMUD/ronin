@@ -736,8 +736,6 @@ int dt_or_hazard(CHAR *ch);
 void spell_teleport(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int to_room;
 
-  send_to_char("teleport\n\r", ch);
-
   if(CHAOSMODE) {
     send_to_char("The forces of Chaos absorb the magic.\n\r",ch);
     return;
