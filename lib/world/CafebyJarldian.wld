@@ -19,14 +19,14 @@ D5
 ~
 0 -1 3610
 E
-roots~
-It seems much alive when you ascend these stairs.  It moves and wiggles at 
-your presence, clearing a walking path wherever you move.
-~
-E
 handrail~
 A strange handrail extends from the bottom of this stairwell to the top.
 It looks organic and provides excellent grip when you hold onto it. 
+~
+E
+roots~
+It seems much alive when you ascend these stairs.  It moves and wiggles at 
+your presence, clearing a walking path wherever you move.
 ~
 S
 #3610
@@ -50,10 +50,9 @@ D4
 ~
 0 -1 3600
 E
-stairs~
-A sturdy looking set of stairs stand before you, with roots grown all over it.
-It is of a spiral design and will lead you somewhere. Maybe you should 
-investigate?
+rug~
+a thick red rug with gold trimmings extend here and into the next room
+leaving west.
 ~
 E
 hole~
@@ -61,9 +60,10 @@ Looking up through this huge gaping hole, you see a set of stairs leading
 upward towards something.
 ~
 E
-rug~
-a thick red rug with gold trimmings extend here and into the next room
-leaving west.
+stairs~
+A sturdy looking set of stairs stand before you, with roots grown all over it.
+It is of a spiral design and will lead you somewhere. Maybe you should 
+investigate?
 ~
 S
 #3611
@@ -87,14 +87,14 @@ D5
 ~
 0 -1 3600
 E
-handrail~
-A strange handrail extends from the bottom of this stairwell to the top.
-It looks organic and provides excellent grip when you hold onto it.
-~
-E
 roots~
 It seems much alive when you ascend these stairs.  It moves and wiggles at 
 your presence, clearing a walking path wherever you move.
+~
+E
+handrail~
+A strange handrail extends from the bottom of this stairwell to the top.
+It looks organic and provides excellent grip when you hold onto it.
 ~
 S
 #3612
@@ -248,14 +248,14 @@ D3
 ~
 0 -1 3007
 E
-rug~
-a thick red rug with gold trimmings extends here and into the next room
-leaving east.
-~
-E
 symbol~
 A circle with the letters, "RoM" are carved neatly here -- standing for the
 Restaurant of Midgaard.
+~
+E
+rug~
+a thick red rug with gold trimmings extends here and into the next room
+leaving east.
 ~
 S
 #3680
@@ -271,13 +271,13 @@ there?
 D2
 You see two swinging doors leading into the back of the shop.
 ~
-The Double Doors~
+doors double~
 1 0 3681
 E
 board chalk chalkboard~
 Through the bloodstains you can make out the words...
 
-  
+
 TODAYS SPECIAL!!
       -
 MYSTERY STEAK!!!
@@ -299,27 +299,29 @@ hacking away at their work.
 D0
 You see the main entrance to the shop.
 ~
-The Butcher Shop~
+doors double~
 1 0 3680
 D1
 You see the meat storage area.
 ~
-Meat Storage~   
+~
 0 0 3682
 D2
-You see the back offices.~
-The Back Offices~
+You see the back offices.
+~
+~
 0 0 3688
 D3
-You see another shop, and the Wall Road beyond.~
-The Surplus Meat Store~
+You see another shop, and the Wall Road beyond.
+~
+~
 0 0 3689
 E
 parts miscellaneous~
 You really don't want to look too closely at them.
 ~
 S
-#3682 
+#3682
 The Storage Room~
 This is the room that the meat is kept in just after it is removed from cold
 storage, and before the assistants begin hacking on it.  There are meat
@@ -329,11 +331,13 @@ in here, and it's not just because of the chill in the air.
 ~
 36 0 0
 D0
-You see a meat locker.~
+You see a meat locker.
+~
 locker door~
 1 0 3683
 D1
-You see a meat locker.~
+You see a meat locker.
+~
 locker door~
 1 0 3684
 D2
@@ -344,14 +348,15 @@ locker door~
 D3
 You see the preparing area for the meat.
 ~
-The Back Room~   
+~
 0 0 3681
 D5
-You door concealed to look like part of the floor.~
+You see a door concealed to look like part of the floor.
+~
 locker door~
 1 3680 3686
 S
-#3683 
+#3683
 A Meat Locker~
 You are standing inside a very cold meat locker.  Block of ice laying every-
 where keep this room cold, and there are yet more corpses of animals hanging
@@ -360,21 +365,23 @@ think you should perhaps get out.....NOW.....
 ~
 36 0 0
 D2
-You see the main storage room.~
-The Storage Room~
+You see the main storage room.
+~
+~
 0 0 3682
 S
-#3684   
+#3684
 A Meat Locker~
 You are standing inside a very cold meat locker.  Block of ice laying every-
 where keep this room cold, and there are yet more corpses of animals hanging
 from the ceiling in here.  You have a very uneasy feeling in here, and you
 think you should perhaps get out.....NOW.....
-~ 
+~~
 36 0 0
 D3
-You see the main storage room.~
-The Storage Room~
+You see the main storage room.
+~
+~
 0 0 3682
 S
 #3685
@@ -383,11 +390,12 @@ You are standing inside a very cold meat locker.  Block of ice laying every-
 where keep this room cold, and there are yet more corpses of animals hanging
 from the ceiling in here.  You have a very uneasy feeling in here, and you
 think you should perhaps get out.....NOW.....
-~ 
+~~
 36 0 0
 D0
-You see the main storage room.~
-The Storage Room~
+You see the main storage room.
+~
+~
 0 0 3682
 S
 #3686
@@ -401,9 +409,10 @@ the most common.  You kinda wish you had never found this room, because now
 you feel slightly ill...
 ~
 36 0 0
-D4   
-You see the main storage room.~
-The Storage Room~
+D4
+You see the main storage room.
+~
+~
 0 3680 3682
 S
 #3688
@@ -416,8 +425,9 @@ that's there?
 ~
 36 0 0
 D0
-You see the preparing room.~
-The Preparing Room~
+You see the preparing room.
+~
+~
 0 0 3681
 S
 #3689
@@ -429,8 +439,9 @@ on the wall here.
 ~
 36 0 0
 D1
-You see the preparing room for the meats.~
-The Preparing Room~
+You see the preparing room for the meats.
+~
+~
 0 0 3681
 E
 sign~

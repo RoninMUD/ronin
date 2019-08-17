@@ -1007,18 +1007,14 @@ A
 A
 18 1
 #29840
-badge fallen avatar jearom~
-The Badge of a Fallen Avatar~
-The symbol of a once holy warrior lies here.~
+signet fallen avatar soot~
+Signet of a Fallen Avatar~
+The signet of a once holy warrior lies here.~
 ~
 1 134217793 65537
 0 0 -1 0
 1 10000 20000
 20
-E
-symbol karsch~
-It is a black round disc with some runes in it.
-~
 X
 ~
 0 0 0
@@ -1028,9 +1024,11 @@ M
 ~
 ~
 A
-18 5
+18 2
 A
-19 3
+19 5
+A
+53 15
 B
 36
 #29841

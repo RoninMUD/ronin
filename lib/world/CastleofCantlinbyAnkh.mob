@@ -11,6 +11,8 @@ Aldor is an evil looking man.  Let's not make him angry.
 8 8 1
 1 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8402
 wyvern small~
 A Small Wyvern~
@@ -24,6 +26,8 @@ The wyvern is very small so he should not cause you too much trouble.
 8 8 0
 56 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8403
 spirit edrick guard~
 The Spirit~
@@ -38,6 +42,8 @@ but now it haunts the halls of this old castle.
 8 8 0
 52 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8404
 old cook~
 The Old Cook~
@@ -52,6 +58,8 @@ of the evil Aldor.
 8 8 2
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8405
 rat~
 A Rat~
@@ -65,6 +73,8 @@ The rat is a small brown rodent, kinda cute actually.
 8 8 0
 93 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8406
 dragon~
 The Flying Dragon~
@@ -79,6 +89,8 @@ strong and powerful.
 8 8 0
 57 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8407
 knight animated~
 The Animated Knight~
@@ -93,6 +105,8 @@ Aldor is truely powerfull to create such a beast.
 8 8 0
 52 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8408
 prisoner~
 The Prisoner~
@@ -107,6 +121,8 @@ to a cell by the evil Aldor.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8409
 priestess~
 The Priestess of Aldor~
@@ -121,5 +137,7 @@ her making offerings to him as the price of her continuing existence.
 8 8 2
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~
