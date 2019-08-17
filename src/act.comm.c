@@ -426,8 +426,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     }
 
     /* Is the player questing with their Quiet flag on? */
-    if (IS_SET(comm_info[comm].pflag_no_do, PLR_QUIET) &&
-        (IS_SET(GET_PFLAG(ch), PLR_QUIET) && IS_SET(GET_PFLAG(ch), PLR_QUEST))) {
+    if (IS_SET(comm_info[comm].pflag_no_do, PLR_QUIET) && (IS_SET(GET_PFLAG(ch), PLR_QUIET) && IS_SET(GET_PFLAG(ch), PLR_QUEST))) {
       printf_to_char(ch, "The Questmaster has taken away your ability to interrupt.\n\r");
 
       return;
@@ -440,7 +439,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
       printf_to_char(ch, "You turn ON the %s channel.\n\r", comm_info[comm].name);
     }
   }
-  
+
   CHAR *listener = NULL;
 
   char name[MIL];
@@ -500,14 +499,14 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     }
   }
 
-  char temp[MSL / 2];
+  char message[MSL];
 
   /* Drunkify the string as needed, otherwise, store the resulting arg text in the message variable. */
-  if (GET_COND(ch, DRUNK) > 10) {
-    drunkify_string(temp, sizeof(temp), GET_COND(ch, DRUNK), "%s", arg);
+  if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {
+    drunkify_string(message, sizeof(message), GET_COND(ch, DRUNK), "%s", arg);
   }
   else {
-    snprintf(temp, sizeof(temp), "%s", arg);
+    snprintf(message, sizeof(message), "%s", arg);
   }
 
   char style_open[3], style_close[3];
@@ -525,22 +524,22 @@ void communicate(CHAR *ch, char *arg, const int comm) {
       break; // COMM_STYLE_BRACKET
   }
 
-  char message[MSL];
+  char buf[MSL];
 
   /* Build the message string for the acting character. */
-  snprintf(message, sizeof(message), "%s %s%s%s%s", comm_info[comm].text_to_ch,
-    ((comm_info[comm].smell && affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
-    style_open, temp, style_close);
+  snprintf(buf, sizeof(buf), "%s %s%s%s%s", comm_info[comm].text_to_ch,
+           ((comm_info[comm].smell && affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
+           style_open, message, style_close);
 
   /* Print the message string to the acting character. */
   if (comm_info[comm].color) COLOR(ch, comm_info[comm].color);
-  act(message, FALSE, ch, 0, listener, TO_CHAR);
+  act(buf, FALSE, ch, 0, listener, TO_CHAR);
   if (comm_info[comm].color) ENDCOLOR(ch);
 
   /* Build the message string for the listening character(s). */
-  snprintf(message, sizeof(message), "%s %s%s%s%s", comm_info[comm].text_to_vict,
-    ((comm_info[comm].smell &&affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
-    style_open, message, style_close);
+  snprintf(buf, sizeof(buf), "%s %s%s%s%s", comm_info[comm].text_to_vict,
+           ((comm_info[comm].smell && affected_by_spell(ch, SMELL_FARTMOUTH)) ? "`q" : ""),
+           style_open, message, style_close);
 
   /* Print the message string to the listening character(s). */
   switch (comm_info[comm].to) {
@@ -548,61 +547,61 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     case COMM_TO_CHAR_ROOM:
     case COMM_TO_REPLY:
       if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
-      act(message, comm_info[comm].hide, ch, 0, listener, TO_VICT);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
       if (comm_info[comm].color) ENDCOLOR(listener);
       break; // COMM_TO_CHAR, COMM_TO_CHAR_ROOM
 
     case COMM_TO_GROUP:
-      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+      for (DESC* temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
-        CHAR *temp_ch = temp_desc->character;
+        CHAR* temp_ch = temp_desc->character;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             SAME_GROUP(temp_ch, ch)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
       break; // COMM_TO_GROUP
 
     case COMM_TO_ROOM:
-      for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
+      for (CHAR* temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
         if (!GET_DESCRIPTOR(temp_ch) || (GET_DESCRIPTOR(temp_ch)->connected != CON_PLYNG)) continue;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
       break; // COMM_TO_ROOM
 
     case COMM_TO_ZONE:
-      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+      for (DESC* temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
-        CHAR *temp_ch = temp_desc->character;
+        CHAR* temp_ch = temp_desc->character;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
       break; // COMM_TO_ZONE
 
     case COMM_TO_WORLD:
-      for (DESC *temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
+      for (DESC* temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
-        CHAR *temp_ch = temp_desc->character;
+        CHAR* temp_ch = temp_desc->character;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(message, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -613,9 +612,9 @@ void communicate(CHAR *ch, char *arg, const int comm) {
   if (listener) {
     /* Print text_to_other to the acting character's room. */
     if (strlen(comm_info[comm].text_to_other)) {
-      snprintf(message, sizeof(message), "%s", comm_info[comm].text_to_other);
+      snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
 
-      act(message, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
     }
 
     /* Set the listener's reply_to value to the acting character's ID. */
