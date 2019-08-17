@@ -21,12 +21,12 @@ grate~
 The grate is rusted heavily and hangs loosely on its hinges.
 ~
 E
-walls~
-They are made of dark earth and reek of sewage.
-~
-E
 earth~
 It reeks of sewage.
+~
+E
+walls~
+They are made of dark earth and reek of sewage.
 ~
 E
 grate~
@@ -53,13 +53,13 @@ The grate is rusted heavily and hangs loosely on its hinges.
 grate~
 1 -1 4700
 E
-roots~
-Some of the roots are large and thick, but most are long and thin.
-~
-E
 walls~
 They seem to be hollowed from the flow of sewage rather than the
 construction of man.
+~
+E
+roots~
+Some of the roots are large and thick, but most are long and thin.
 ~
 S
 #4702
@@ -82,17 +82,17 @@ D3
 ~
 0 -1 4701
 E
-roots~
-The roots here all thick and strong.  The weaker roots must have
-rotted away.
+ceiling~
+Roots hang from above.
 ~
 E
 sewage~
 The sludge is flowing at a fast pace and smells terrible!
 ~
 E
-ceiling~
-Roots hang from above.
+roots~
+The roots here all thick and strong.  The weaker roots must have
+rotted away.
 ~
 S
 #4703
@@ -161,20 +161,20 @@ The ladder leads back up the waterfall shaft.
 ladder~
 11 -1 4703
 E
-mists~
-They make the room unbearable to smell.
-~
-E
-pool~
-It is filled with the sewage that falls from above.
+floor~
+It reminds you of your first trip to the Midgaard dump!
 ~
 E
 ladder~
 It leads back up the waterfall shaft.
 ~
 E
-floor~
-It reminds you of your first trip to the Midgaard dump!
+pool~
+It is filled with the sewage that falls from above.
+~
+E
+mists~
+They make the room unbearable to smell.
 ~
 S
 #4706
@@ -195,20 +195,20 @@ D3
 ~
 0 -1 4705
 E
-roots~
-They seem to form a ladder going upwards to the west.
-~
-E
-extensions~
-They look like roots.
+trash~
+It consists of old rotted animal parts as well as just pure muck!
 ~
 E
 liquid~
 It's hard to see, but you sure can smell it's foulness.
 ~
 E
-trash~
-It consists of old rotted animal parts as well as just pure muck!
+extensions~
+They look like roots.
+~
+E
+roots~
+They seem to form a ladder going upwards to the west.
 ~
 S
 #4707
@@ -234,12 +234,12 @@ D4
 crack~
 9 -1 4748
 E
-walls~
-There is a crack on the eastern upper wall.
-~
-E
 crack~
 It looks almost big enough to crawl through.
+~
+E
+walls~
+There is a crack on the eastern upper wall.
 ~
 S
 #4708
@@ -261,16 +261,16 @@ D3
 ~
 0 -1 4709
 E
-tunnel~
-It curves to the west here.
+piles~
+The piles look like small humanoids.
 ~
 E
 garbage~
 It has been pushed into small piles.
 ~
 E
-piles~
-The piles look like small humanoids.
+tunnel~
+It curves to the west here.
 ~
 S
 #4709
@@ -320,16 +320,16 @@ D1
 ~
 0 -1 4709
 E
-piles~
-The piles look like small humanoids.
+tunnel~
+It curves to the east here.
 ~
 E
 garbage~
 It has been pushed into small piles.
 ~
 E
-tunnel~
-It curves to the east here.
+piles~
+The piles look like small humanoids.
 ~
 S
 #4711
@@ -375,20 +375,20 @@ D2
 ~
 0 -1 4711
 E
-trash~
-It consists of old rotted animal parts as well as just pure muck!
-~
-E
-liquid~
-It's hard to see, but you sure can smell it's foulness.
+roots~
+They seem to form a ladder going upwards to the east.
 ~
 E
 extensions~
 They look like roots.
 ~
 E
-roots~
-They seem to form a ladder going upwards to the east.
+liquid~
+It's hard to see, but you sure can smell it's foulness.
+~
+E
+trash~
+It consists of old rotted animal parts as well as just pure muck!
 ~
 S
 #4713
@@ -410,12 +410,12 @@ D5
 grate~
 1 -1 4714
 E
-garbage~
-It is flowing through the grate down the passage.
-~
-E
 grate~
 It is very large and blocks the way down, but it looks openable.
+~
+E
+garbage~
+It is flowing through the grate down the passage.
 ~
 S
 #4714
@@ -436,16 +436,16 @@ D5
 ~
 0 -1 4715
 E
-walls~
-They are eroded and covered with slimy filth!
+grate~
+It can be opened or closed.
 ~
 E
 garbage~
 It flows downward.
 ~
 E
-grate~
-It can be opened or closed.
+walls~
+They are eroded and covered with slimy filth!
 ~
 S
 #4715
@@ -470,16 +470,16 @@ D5
 ~
 0 -1 4716
 E
-ledges~
-They are all over the floor and help with your footing.
+alcove~
+It opens to the west.
 ~
 E
 footholds~
 They are all over the floor and help with your footing.
 ~
 E
-alcove~
-It opens to the west.
+ledges~
+They are all over the floor and help with your footing.
 ~
 S
 #4716
@@ -512,16 +512,16 @@ D4
 ~
 0 -1 4715
 E
-sewage~
-It smells terrible!
+ocean~
+It is not an ocean of water, but raw sewage.
 ~
 E
 river~
 It flows into the ocean.
 ~
 E
-ocean~
-It is not an ocean of water, but raw sewage.
+sewage~
+It smells terrible!
 ~
 S
 #4717
@@ -546,16 +546,16 @@ D3
 ~
 0 -1 4724
 E
-river~
-It flows not with water, but garbage.  Yuck!
+pool~
+It's made of raw sewage.
 ~
 E
 island~
 It looks rather small.
 ~
 E
-pool~
-It's made of raw sewage.
+river~
+It flows not with water, but garbage.  Yuck!
 ~
 S
 #4718
@@ -577,16 +577,16 @@ D3
 ~
 0 -1 4717
 E
-bubbles~
-They go blip blip and occur at random intervals.
+pool~
+It is filled with raw sewage.
 ~
 E
 sewage~
 It smells!
 ~
 E
-pool~
-It is filled with raw sewage.
+bubbles~
+They go blip blip and occur at random intervals.
 ~
 S
 #4719
@@ -612,16 +612,16 @@ D3
 ~
 0 -1 4716
 E
-pool~
-It goes on forever in the eastward direction.
+water~
+It is dripping from overhead.
 ~
 E
 waterfall~
 It is to the west.
 ~
 E
-water~
-It is dripping from overhead.
+pool~
+It goes on forever in the eastward direction.
 ~
 S
 #4720
@@ -643,16 +643,16 @@ D3
 ~
 0 -1 4721
 E
-bubbles~
-They go blip blip and occur at random intervals.
+sewage~
+It smells!
 ~
 E
 pool~
 It is filled with raw sewage.
 ~
 E
-sewage~
-It smells!
+bubbles~
+They go blip blip and occur at random intervals.
 ~
 S
 #4721
@@ -681,12 +681,12 @@ D3
 ~
 0 -1 4722
 E
-island~
-It is to the north and littered with garbage.
-~
-E
 pool~
 There is a current pulling you south.
+~
+E
+island~
+It is to the north and littered with garbage.
 ~
 S
 #4722
@@ -708,8 +708,12 @@ D1
 ~
 0 -1 4721
 E
-sewage~
-It smells!
+bubbles~
+They go blip blip and occur at random intervals.
+~
+E
+pool~
+It is filled with raw sewage.
 ~
 E
 sewage~
@@ -718,12 +722,8 @@ save 47
 l
 ~
 E
-pool~
-It is filled with raw sewage.
-~
-E
-bubbles~
-They go blip blip and occur at random intervals.
+sewage~
+It smells!
 ~
 S
 #4723
@@ -748,16 +748,16 @@ D2
 ~
 0 -1 4722
 E
-film~
-It's green, slimy, and smelly.
+garbage~
+It floats all around.
 ~
 E
 trash~
 They float all around.
 ~
 E
-garbage~
-It floats all around.
+film~
+It's green, slimy, and smelly.
 ~
 S
 #4724
@@ -785,16 +785,16 @@ It looks possible to jump further down into the pool.
 pool~
 10 -1 4749
 E
-sewage~
-It smells!
+pool~
+You could possible jump pool to see what lies below the surface.
 ~
 E
 bubbles~
 They go blip blip and occur at random intervals.
 ~
 E
-pool~
-You could possible jump pool to see what lies below the surface.
+sewage~
+It smells!
 ~
 S
 #4725
@@ -816,13 +816,13 @@ It looks possible to jump further down into the pool.
 pool~
 10 -1 4726
 E
-pool~
-It looks possible to jump further down into the pool.
-~
-E
 figures~
 They look like fish of some sort, but could also be just piece of trash
 floating around.
+~
+E
+pool~
+It looks possible to jump further down into the pool.
 ~
 S
 #4726
@@ -897,12 +897,12 @@ D3
 ~
 0 -1 4727
 E
-roots~
-They hang down about two feet and look fairly old.
-~
-E
 sewage~
 It's green and disgusting.
+~
+E
+roots~
+They hang down about two feet and look fairly old.
 ~
 S
 #4729
@@ -923,17 +923,17 @@ D4
 chain~
 11 -1 4730
 E
-garbage~
-It has a variety of trash, including some moldy pipeweed bread.
+chain~
+It leads up and looks like a skilled climber could utilize it to
+escape this awful place.
 ~
 E
 floor~
 It is covered with rotted garbage.
 ~
 E
-chain~
-It leads up and looks like a skilled climber could utilize it to
-escape this awful place.
+garbage~
+It has a variety of trash, including some moldy pipeweed bread.
 ~
 S
 #4730
@@ -955,16 +955,16 @@ D5
 pool~
 10 -1 4729
 E
-light~
-The light is probably coming from torches of some kind.
+pool~
+It looks deep enough to jump in.
 ~
 E
 chain~
 Probably helps someone climb out of the pool.
 ~
 E
-pool~
-It looks deep enough to jump in.
+light~
+The light is probably coming from torches of some kind.
 ~
 S
 #4731
@@ -985,16 +985,16 @@ D2
 ~
 0 -1 4730
 E
-entrance~
-It is lit by two torches.
+pool~
+It is to the south and smells awful!
 ~
 E
 torches~
 They look freshly lit, what could have lit them?
 ~
 E
-pool~
-It is to the south and smells awful!
+entrance~
+It is lit by two torches.
 ~
 S
 #4732
@@ -1015,12 +1015,12 @@ D3
 ~
 0 -1 4731
 E
-opening~
-It leads east.
-~
-E
 torches~
 They burn the very garbage that collects here.
+~
+E
+opening~
+It leads east.
 ~
 S
 #4733
@@ -1083,12 +1083,12 @@ D5
 rug~
 8 -1 4737
 E
-curtains~
-They are black and have green markings woven in them.
-~
-E
 rug~
 It looks like it is covering up something.
+~
+E
+curtains~
+They are black and have green markings woven in them.
 ~
 S
 #4736
@@ -1126,20 +1126,20 @@ D4
 rug~
 8 -1 4735
 E
-gate~
-It looks clean!?!?
-~
-E
-chest~
-It is rather small and probably made of wood.
+garbage~
+It litters the floor.
 ~
 E
 trash~
 It litters the floor.
 ~
 E
-garbage~
-It litters the floor.
+chest~
+It is rather small and probably made of wood.
+~
+E
+gate~
+It looks clean!?!?
 ~
 S
 #4738
@@ -1167,20 +1167,20 @@ D3
 ~
 0 -1 4746
 E
-trash~
-It is everywhere and smells really bad!
-~
-E
-garbage~
-It is everywhere and smells really bad!
+chest~
+It is directly north.
 ~
 E
 gate~
 It is directly north.
 ~
 E
-chest~
-It is directly north.
+garbage~
+It is everywhere and smells really bad!
+~
+E
+trash~
+It is everywhere and smells really bad!
 ~
 S
 #4739
@@ -1204,16 +1204,16 @@ D2
 ~
 0 -1 4738
 E
-walls~
-Smelly greenish brown filth covers the walls.
+gate~
+It is made of iron and painted black.
 ~
 E
 chest~
 It looks like it is made of wood and opened.
 ~
 E
-gate~
-It is made of iron and painted black.
+walls~
+Smelly greenish brown filth covers the walls.
 ~
 S
 #4740
@@ -1233,12 +1233,12 @@ It is made of iron and painted black.
 gate~
 2 4702 4739
 E
-walls~
-They are made of stone and are completely clean.
-~
-E
 gate~
 It is made of iron and painted black.
+~
+E
+walls~
+They are made of stone and are completely clean.
 ~
 S
 #4741
@@ -1290,12 +1290,12 @@ D1
 ~
 0 -1 4715
 E
-crates~
-They are rotted through and smell awful.
-~
-E
 boxes~
 Most are broken and opened and none contain anything of value.
+~
+E
+crates~
+They are rotted through and smell awful.
 ~
 S
 #4744
@@ -1376,12 +1376,12 @@ The crack leads downward and is big enough to crawl through.
 crack~
 9 -1 4707
 E
-crack~
-It leads downward and is big enough to crawl through.
-~
-E
 walls~
 They are crude and look as if made by some basic digging tool.
+~
+E
+crack~
+It leads downward and is big enough to crawl through.
 ~
 S
 #4749

@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1806,5 +1806,52 @@ A
 19 5
 A
 53 15
+#29677
+painted hide roc soot~
+The Painted Hide of a Roc~
+The intricately painted skin of a giant bird lies rumpled in a corner.~
+~
+9 0 1025
+9 -1 -1 -1
+3 4000 2000
+4
+X
+(null)
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 15
+#29678
+enhanced titanium mesh soot~
+An Enhanced Titanium Mesh~
+A shimmering mesh of silver metal has been draped over a nearby shrub.~
+~
+9 134217796 1025
+40 0 0 0
+30 66666 6666
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+18 3
+A
+53 15
+B
+8
 #0
 $~
