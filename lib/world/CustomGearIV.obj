@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1853,5 +1853,49 @@ A
 53 15
 B
 8
+#29679
+sharpened basilisk fang soot~
+A Sharpened Basilisk Fang~
+The whittled fang of a giant snake drips venom on the floor.~
+$r eyes glint with malice as $n stab $V with a poisoned fang.~
+5 250638336 8193
+0 2 7 11
+30 30000 30000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 9
+A
+12 -100
+B
+268435456
+#29680
+odin petrified eye soot~
+The Petrified Eye of Odin~
+A stone eye stares directly back at you.~
+~
+9 0 16385
+10 0 0 0
+10 90000 30000
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 5
+A
+53 15
 #0
 $~
