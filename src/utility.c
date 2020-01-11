@@ -21,7 +21,7 @@
 #include <math.h>
 #include <stdint.h>
 #include <limits.h>
-#include <openssl/rand.h>
+#include <sodium.h>
 
 
 #include "structs.h"
@@ -38,75 +38,6 @@
 
 extern FILE *logfile;
 void update_pos( struct char_data *ch );
-
-/* Begin Fallback RNG Section */
-
-/* Note: The fallback RNG exists for, as the name says, fallback
-         situations where the new RNG could fail. This should
-         never happen, but it's here just in case. */
-
-#define FALLBACK_RAN_MAX  2147483647L
-#define FALLBACK_RAN_MULT 16807
-
-static uint32_t fallback_random_num = 1;
-
-/* Part of the fallback RNG; do not use directly. */
-void sfallback_random(uint32_t seed) {
-  fallback_random_num = seed ? (seed & FALLBACK_RAN_MAX) : 1;
-}
-
-/* Part of the fallback RNG; do not use directly. */
-uint32_t fallback_random_next(uint32_t seed) {
-  uint32_t lo = FALLBACK_RAN_MULT * (long)(seed & 0xFFFF);
-  uint32_t hi = FALLBACK_RAN_MULT * (long)((unsigned long)seed >> 16);
-
-  lo += (hi & 0x7FFF) << 16;
-
-  if (lo > FALLBACK_RAN_MAX) {
-    lo &= FALLBACK_RAN_MAX;
-    ++lo;
-  }
-
-  lo += hi >> 15;
-
-  if (lo > FALLBACK_RAN_MAX) {
-    lo &= FALLBACK_RAN_MAX;
-    ++lo;
-  }
-
-  return lo;
-}
-
-/* Part of the fallback RNG; do not use directly. */
-uint32_t fallback_random(void) {
-  fallback_random_num = fallback_random_next(fallback_random_num);
-
-  return fallback_random_num;
-}
-
-/* End Fallback RNG Section */
-
-/* Begin New RNG Section */
-
-/* Generates a random unsigned integer in interval [0, upper_bound] (exclusive).
-   Note: Uses OpenSSL (lcrypto).
-*/
-uint32_t random_uint32_t(uint32_t upper_bound) {
-  union {
-    uint32_t i;
-    unsigned char c[sizeof(uint32_t)];
-  } u;
-
-  do {
-    if (RAND_bytes(u.c, sizeof(u.c)) == -1) {
-      log_s("Failed to get random bytes (random_uint32_t); using fallback RNG.");
-
-      return fallback_random() % upper_bound;
-    }
-  } while (u.i < (-upper_bound % upper_bound));
-
-  return u.i % upper_bound;
-}
 
 /*
 Generates a random integer in interval [from, to] (inclusive).
@@ -136,7 +67,7 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
       result = (from * to) / 2;
       break;
     default:
-      result = random_uint32_t((to - from) + 1) + from;
+      result = randombytes_uniform((to - from) + 1) + from;
       break;
   }
 
@@ -206,8 +137,6 @@ int32_t MIN(int32_t a, int32_t b) {
 int32_t MAX(int32_t a, int32_t b) {
   return a > b ? a : b;
 }
-
-/* End New RNG Section */
 
 
 // TODO: Change to not use static char.

@@ -26,7 +26,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <openssl/rand.h>
 #include <assert.h>
 
 #include "structs.h"
@@ -63,7 +62,6 @@ int room_special(int room, CHAR *ch, int cmd, char *arg);
 int enchantment_special(ENCH *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 /* externs */
 
-void sfallback_random(unsigned long seed);
 void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
@@ -362,17 +360,6 @@ int main(int argc, char **argv)
   }
 
   log_f("Using %s as data directory.", g_datadir);
-
-  /* Seed rand(). */
-  srand(time(NULL));
-
-  /* Seed the Fallback RNG. */
-  sfallback_random(time(NULL));
-
-  /* Seed the New RNG. */
-  if (32 != RAND_load_file("/dev/urandom", 32)) {
-    log_s("Failed to read /dev/urandom for entropy (main).");
-  }
 
   run_the_game(port);
   return(0);
@@ -991,10 +978,6 @@ void heartbeat(int pulse) {
 
   /* 1 minute */
   if (!(pulse % PULSE_TICK) && !GAMEHALT) {
-    if (32 != RAND_load_file("/dev/urandom", 32)) {
-      log_s("Failed to read /dev/urandom for entropy (heartbeat).");
-    }
-
     signal_world(0, MSG_TICK, "");
 
     if (!CHAOSMODE) {
