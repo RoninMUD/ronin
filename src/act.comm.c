@@ -409,7 +409,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
       return;
     }
 
-    /* Is the player a killer or a thief? (Only applies when not Chaos Mode). */
+    /* Is the player a killer or a thief? Ignored during Chaos. */
     if (!CHAOSMODE &&
         ((IS_SET(comm_info[comm].pflag_no_do, PLR_KILL) && IS_SET(GET_PFLAG(ch), PLR_KILL)) ||
          (IS_SET(comm_info[comm].pflag_no_do, PLR_THIEF) && IS_SET(GET_PFLAG(ch), PLR_THIEF)))) {
@@ -509,7 +509,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     snprintf(message, sizeof(message), "%s", arg);
   }
 
-  char style_open[3], style_close[3];
+  char style_open[3] = "", style_close[3] = "";
 
   /* Prepare the style for surrounding the message text. */
   switch (comm_info[comm].style) {
@@ -720,7 +720,7 @@ void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message,
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  char style_open[3], style_close[3];
+  char style_open[3] = "", style_close[3] = "";
 
   /* Prepare the style for surrounding the message text. */
   switch (comm_info[comm].style) {

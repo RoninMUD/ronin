@@ -3104,7 +3104,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         GET_POS(defender) = POSITION_FIGHTING;
       }
 
-      if ((avoidance_skill == SKILL_DODGE) || (avoidance_skill == SKILL_PARRY) || (avoidance_skill == SKILL_FEINT)) {
+      if (avoidance_skill) {
         /* Close Combat */
         if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
           ENCH *cc_ench = NULL;
