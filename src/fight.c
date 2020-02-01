@@ -2766,7 +2766,7 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
 int stack_position(CHAR *ch, int target_position) {
   if (!ch || !target_position) return POSITION_DEAD;
 
-  if ((target_position >= GET_POS(ch)) || (GET_POS(ch) <= POSITION_INCAP)) {
+  if (GET_POS(ch) <= POSITION_INCAP) {
     return GET_POS(ch);
   }
 

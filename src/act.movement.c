@@ -337,7 +337,7 @@ Returns:
 
   if (IS_AFFECTED(ch, AFF_FLY)) {
     if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-      snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+      snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
     }
     else {
       snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
@@ -347,7 +347,7 @@ Returns:
   }
   else if (GET_POS(ch) == POSITION_SWIMMING) {
     if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-      snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+      snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
     }
     else {
       snprintf(buf, sizeof(buf), "$n swims %s.", dirs[cmd]);
@@ -385,19 +385,15 @@ Returns:
     }
     else {
       if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-        snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+        snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
       }
       else {
         snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
       }
     }
 
-    if (IS_AFFECTED(ch, AFF_SNEAK)) {
-      act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_GROUP);
-    }
-    else {
-      act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
-    }
+    /* If sneaking, only send movement text to group. Otherwise, send to room. */
+    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
   /* If adding hunting, or scanning, or blood trail, etc.,
@@ -423,7 +419,7 @@ Returns:
 
   /* Show arrival message, as approrpriate. */
   if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-    snprintf(buf, sizeof(buf), "%s %s.", ch->player.poofout, dirs[cmd]);
+    snprintf(buf, sizeof(buf), "%s", ch->player.poofin);
   }
   else {
     snprintf(buf, sizeof(buf), "$n has arrived.");
@@ -437,6 +433,7 @@ Returns:
     }
   }
   else {
+    /* If sneaking, only send movement text to group. Otherwise, send to room. */
     act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
@@ -493,14 +490,14 @@ Returns:
 void do_move(struct char_data *ch, char *argument, int cmd) {
   --cmd;
 
-  if (IS_SET(ch->specials.affected_by2, AFF2_SEVERED)) {
+  if (IS_SET(GET_AFF2(ch), AFF2_SEVERED)) {
     send_to_char("Move without legs? How?\n\r", ch);
 
     return;
   }
 
-  if (ch->specials.death_timer == 2) {
-    send_to_char("You are near certain death, you can't move!\n\r", ch);
+  if (GET_DEATH_TIMER(ch) == 2) {
+    send_to_char("You are near certain death; you can't move!\n\r", ch);
 
     return;
   }
@@ -522,14 +519,14 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_AFFECTED(ch, AFF_CHARM) && ch->master && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->master)) {
+  if (IS_AFFECTED(ch, AFF_CHARM) && GET_MASTER(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_MASTER(ch))) {
     send_to_char("The thought of leaving your master makes you weep.\n\r", ch);
     act("$n bursts into tears.", FALSE, ch, 0, 0, TO_ROOM);
 
     return;
   }
 
-  if (IS_NPC(ch) && ch->specials.rider && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(ch->specials.rider)) {
+  if (IS_NPC(ch) && GET_RIDER(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_RIDER(ch))) {
     send_to_char("You don't want to leave your master.\n\r", ch);
 
     return;
@@ -554,7 +551,7 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_SET(world[EXIT(ch, cmd)->to_room_r].room_flags, TUNNEL) &&
+  if (IS_SET(ROOM_FLAGS(EXIT(ch, cmd)->to_room_r), TUNNEL) &&
       IS_MORTAL(ch) &&
       (count_mortals_real_room(EXIT(ch, cmd)->to_room_r) > 0) &&
       !CHAOSMODE) {
@@ -581,10 +578,9 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
         if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
 
         act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
-        cmd++;
         send_to_char("\n\r", temp_follower->follower);
-        do_move(temp_follower->follower, argument, cmd);
-        cmd--;
+
+        do_move(temp_follower->follower, argument, cmd + 1);
       }
     }
   }

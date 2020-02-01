@@ -416,7 +416,7 @@ void do_donate(CHAR *ch, char *arg, int cmd)
 
 void do_jun(struct char_data *ch, char *argument, int cmd)
 {
-  send_to_char("You have to write junk - no less, to junk!\n\r", ch);
+  send_to_char("You have to type 'junk', no less, to junk something!\n\r", ch);
 }
 
 void do_junk(CHAR *ch, char *arg, int cmd)
@@ -1230,7 +1230,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
       /* Disallow sharp weapons. */
       if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
           ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
-        printf_to_char(ch, "You can't wield that, it's SHARP!  Your religion forbids the use of sharp weapons!\n\r");
+        printf_to_char(ch, "You can't wield that, it's SHARP! Your religion forbids the use of sharp weapons!\n\r");
 
         return;
       }
@@ -1280,8 +1280,8 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
     /* Sidearm */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)) {
-      /* Check if already wielding a 2nd weapon. */
-      if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
+      /* Check if already holding something. */
+      if (EQ(ch, HOLD)) {
         if (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) {
           printf_to_char(ch, "You are already wielding two weapons.\n\r");
         }
@@ -1297,6 +1297,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
         wear_pos = HOLD;
       }
 
+      /* Allow wielding a 2h weapon in one hand. */
       if (wear_pos != HOLD) {
         bypass_2h_restriction = TRUE;
       }
@@ -1561,7 +1562,7 @@ void do_grab(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (OBJ_TYPE(obj) == ITEM_LIGHT) {
+  if ((OBJ_TYPE(obj) == ITEM_LIGHT) && !EQ(ch, WEAR_LIGHT)) {
     wear(ch, obj, ITEM_LIGHT_SOURCE);
   }
   else {
@@ -1659,7 +1660,7 @@ remove <obj> or\n\r\
     if(ch->equipment[WEAR_NECK_1])
       remove_item(ch, ch->equipment[WEAR_NECK_1], WEAR_NECK_1);
     else
-      send_to_char("You aren't wearing anything on your first next position.\n\r",ch);
+      send_to_char("You aren't wearing anything on your first neck position.\n\r",ch);
     return;
   }
 
@@ -1667,7 +1668,7 @@ remove <obj> or\n\r\
     if(ch->equipment[WEAR_NECK_2])
       remove_item(ch, ch->equipment[WEAR_NECK_2], WEAR_NECK_2);
     else
-      send_to_char("You aren't wearing anything on your second next position.\n\r",ch);
+      send_to_char("You aren't wearing anything on your second neck position.\n\r",ch);
     return;
   }
 
@@ -1791,33 +1792,3 @@ remove <obj> or\n\r\
   send_to_char("You are not using it.\n\r", ch);
   return;
 }
-
-
-
-/*void do_remove(struct char_data *ch, char *argument, int cmd)
-{
-  char arg1[MAX_STRING_LENGTH];
-  struct obj_data *obj_object;
-  int i, j;
-
-  one_argument(argument, arg1);
-
-  if (*arg1) {
-    if (!strcmp(arg1, "all")) {
-      for (i=0; i < MAX_WEAR; i++) {
-     obj_object = ch->equipment[i];
-     if (obj_object)
-       remove_item(ch, obj_object, i);
-      }
-    } else {
-      obj_object = get_object_in_equip_vis(ch, arg1, ch->equipment, &j);
-      if (obj_object)
-     remove_item(ch, obj_object, j);
-      else
-     send_to_char("You are not using it.\n\r", ch);
-    }
-  } else {
-    send_to_char("Remove what?\n\r", ch);
-  }
-}
-*/
