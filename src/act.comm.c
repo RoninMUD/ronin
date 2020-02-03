@@ -1149,6 +1149,7 @@ void do_write(CHAR *ch, char *arg, int cmd) {
 
     /* Everything checked out. The character can write a note. */
     send_to_char("Ok, go ahead and write; end the note with an @ symbol on a new line.\n\r", ch);
+
     act("$n begins to jot down a note.", TRUE, ch, 0, 0, TO_ROOM);
 
     SET_BIT(GET_PFLAG(ch), PLR_WRITING);

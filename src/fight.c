@@ -4227,7 +4227,7 @@ void brag(CHAR *ch, CHAR *vict) {
     "I guess you thought you could whoop me, eh %s?",
     "If that's all you can do, you had better try harder %s, cause it ain't enough to bring ME down!",
     "Where did you get that weapon %s?  From the newts?  :P",
-    "If you wanna play with the big boys, you had better get BIG %s.",
+    "If you wanna play with the big boys, you had better get BIG, %s.",
     "Dunt, dunt, dunt...  Another one bites the dust!  Or, should I say, %s did.  *chortle*",
     "Game Over %s...  Game Over.",
     "Haha, %s is no match for me!",
@@ -4239,7 +4239,7 @@ void brag(CHAR *ch, CHAR *vict) {
     "One thing's for certain: %s should stop trying while ahead!",
     "Ouch, %s...  Hope you didn't lose any stats!  Hahaha!",
     "So you thought you could kill me, eh %s?",
-    "To junk %s's corpse, or to not junk %s's corpse, that is the question...",
+    "To junk %s's corpse, or to not junk their corpse, that is the question...",
     "Hey %s, come back and fight like a man!",
     "Hey everyone, %s is naked at the temple!  Don't stare too long.  :P",
     "%s is inferior to my greatness!",
@@ -4259,7 +4259,10 @@ void brag(CHAR *ch, CHAR *vict) {
 
   char buf[MIL], brag[MSL];
 
+  /* Pick a random brag and print it to buf. */
   snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict));
+
+  /* Construct the brag. */
   snprintf(brag, sizeof(brag), "$n brags '%s'", buf);
 
   /* Do this the "hard way", since we want a "custom" gossip string. */
@@ -4273,9 +4276,9 @@ void brag(CHAR *ch, CHAR *vict) {
     }
   }
 
+  /* If Rashgugh is in the game, have him brag too. */
   CHAR *rashgugh = get_ch_world(TOKEN_MOB);
 
-  /* If Rashgugh is in the game, have him brag too. */
   if (rashgugh && chance(25)) {
     snprintf(brag, sizeof(brag), "I didn't attend the funeral, but I sent a nice letter saying I approved of it.");
 

@@ -1222,20 +1222,12 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   int wear_pos = -1;
 
-  /* Handle WIELD separately, since its more complex. */
+  /* Check if we can wield the object. */
   if (eq_slot == ITEM_WIELD) {
-    bool bypass_2h_restriction = FALSE;
+    bool can_dual_wield = FALSE;
+    bool can_wield_2h_and_1h = FALSE;
 
-    if (GET_CLASS(ch) == CLASS_CLERIC) {
-      /* Disallow sharp weapons. */
-      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
-          ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
-        printf_to_char(ch, "You can't wield that, it's SHARP! Your religion forbids the use of sharp weapons!\n\r");
-
-        return;
-      }
-    }
-
+    /* Mage weapon handling. */
     if (GET_CLASS(ch) == CLASS_MAGIC_USER) {
       /* Disallow "powerful" weapons. */
       if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_WEAPON)) &&
@@ -1251,74 +1243,76 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
       }
     }
 
-    /* Ninja Dual Wield */
+    /* Cleric weapon handling. */
+    if (GET_CLASS(ch) == CLASS_CLERIC) {
+      /* Disallow sharp weapons. */
+      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
+          ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
+        printf_to_char(ch, "You can't wield that, it's SHARP! Your religion forbids the use of sharp weapons!\n\r");
+
+        return;
+      }
+    }
+
+    /* Ninja weapon handling. */
     if (GET_CLASS(ch) == CLASS_NINJA) {
-      /* Check if already wielding a 2H weapon. */
-      if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) {
-        printf_to_char(ch, "You are already wielding a two-handed weapon.\n\r");
+      can_dual_wield = TRUE;
+    }
 
-        return;
-      }
-
-      /* Check if already wielding a 2nd weapon. */
-      if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
-        if (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) {
-          printf_to_char(ch, "You are already wielding two weapons.\n\r");
-        }
-        else {
-          printf_to_char(ch, "You are already wielding and holding something.\n\r");
-        }
-
-        return;
-      }
-
-      /* Check if we wield the weapon in the hold position. */
-      if ((EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2H_WEAPON)) && !EQ(ch, HOLD)) {
-        wear_pos = HOLD;
+    /* Commando weapon handling. */
+    if (GET_CLASS(ch) == CLASS_COMMANDO) {
+      /* Sidearm */
+      if ((GET_SC(ch) == SC_MERCENARY) && (GET_SC_LEVEL(ch) == 5) && check_subclass(ch, SC_MERCENARY, 5)) {
+        can_dual_wield = TRUE;
+        can_wield_2h_and_1h = TRUE;
       }
     }
 
-    /* Sidearm */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)) {
-      /* Check if already holding something. */
-      if (EQ(ch, HOLD)) {
-        if (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) {
-          printf_to_char(ch, "You are already wielding two weapons.\n\r");
-        }
-        else {
-          printf_to_char(ch, "You are already wielding and holding something.\n\r");
-        }
-
-        return;
+    /* Check if already wielding and holding something. */
+    if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
+      if (can_dual_wield && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON)) {
+        printf_to_char(ch, "You are already wielding two weapons.\n\r");
       }
-
-      /* Check if we wield the weapon in the hold position. */
-      if (EQ(ch, WIELD) && !EQ(ch, HOLD)) {
-        wear_pos = HOLD;
+      else {
+        printf_to_char(ch, "You are already wielding and holding something.\n\r");
       }
-
-      /* Allow wielding a 2h weapon in one hand. */
-      if (wear_pos != HOLD) {
-        bypass_2h_restriction = TRUE;
-      }
-    }
-
-    /* Check weapon weight if object is being wielded. */
-    if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
-        (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) {
-      printf_to_char(ch, "It's too heavy for you to use.\n\r");
 
       return;
     }
 
-    if ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) && (EQ(ch, WIELD) || (!bypass_2h_restriction && EQ(ch, HOLD)))) {
-      printf_to_char(ch, "You need both hands to wield this.\n\r");
+    /* Check if already wielding a two-handed weapon. */
+    if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON) && ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) || !can_wield_2h_and_1h)) {
+      printf_to_char(ch, "You are already wielding a two-handed weapon.\n\r");
 
       return;
+    }
+
+    /* Check if we can wield a two-handed weapon. */
+    if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) {
+      if (can_wield_2h_and_1h) {
+        printf_to_char(ch, "You can only wield a two-handed weapon in your main hand.\n\r");
+      }
+      else {
+        printf_to_char(ch, "You need both hands to wield this.\n\r");
+      }
+
+      return;
+    }
+
+    /* Check weapon weight. */
+    if (IS_MORTAL(ch) && ((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) {
+      printf_to_char(ch, "It's too heavy for you to wield.\n\r");
+
+      return;
+    }
+
+    /* Check if we can wield the weapon in the hold position. */
+    if (can_dual_wield && EQ(ch, WIELD) && !EQ(ch, HOLD) && ((OBJ_TYPE(EQ(ch, WIELD)) != ITEM_2H_WEAPON) || can_wield_2h_and_1h)) {
+      wear_pos = HOLD;
     }
   }
 
-  /* Handle HOLD separately, since its more complex. */
+  /* Check if we can hold the object. */
   if (eq_slot == ITEM_HOLD) {
     if (EQ(ch, WIELD) && (OBJ_TYPE(EQ(ch, WIELD)) == ITEM_2H_WEAPON)) {
       printf_to_char(ch, "You're wielding a two-handed weapon, so you can't hold that.\n\r");
