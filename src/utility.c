@@ -149,8 +149,10 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
     if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
       snprintf(buf, sizeof(buf), "%s", GET_DISP_NAME(ch));
     }
-    else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+      if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+        signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+      }
 
       strlcat(buf, GET_DISP_NAME(ch), sizeof(buf));
     }
@@ -163,7 +165,7 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
 }
 
 char *PERS(CHAR *ch, CHAR *vict) {
-  return PERS_ex(ch, vict, PERS_NORMAL);
+  return PERS_ex(ch, vict, COMM_ACT_HIDE_NORMAL);
 }
 
 
@@ -179,8 +181,11 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
   }
-  else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
-    signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+  else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+    if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    }
+
     strlcat(buf, GET_NAME(ch), sizeof(buf));
     strlcat(buf, "'s", sizeof(buf));
   }
@@ -192,7 +197,7 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
 }
 
 char *POSSESS(CHAR *ch, CHAR *vict) {
-  return POSSESS_ex(ch, vict, PERS_NORMAL);
+  return POSSESS_ex(ch, vict, COMM_ACT_HIDE_NON_MORT);
 }
 
 

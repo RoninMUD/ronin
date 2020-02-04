@@ -2068,8 +2068,8 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
 
   for (; to_ch; to_ch = to_ch->next_in_room) {
     if ((GET_DESCRIPTOR(to_ch) &&
-        ((hide < COMM_ACT_HIDE_INVIS) || CAN_SEE(to_ch, ch)) &&
-        ((hide != COMM_ACT_HIDE_SUPERBRF) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
+        ((hide < COMM_ACT_HIDE_CANT_SEE) || (IS_SET(hide, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(to_ch, ch)) &&
+        ((!IS_SET(hide, COMM_ACT_HIDE_SUPERBRF)) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
         ((type == TO_VICT) || (type == TO_CHAR) || (GET_POS(to_ch) != POSITION_SLEEPING)) &&
         ((type == TO_CHAR) || (to_ch != ch)) &&
         ((type != TO_NOTVICT) || (to_ch != (CHAR *)vict_or_obj)) &&

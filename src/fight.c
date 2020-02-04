@@ -4239,7 +4239,7 @@ void brag(CHAR *ch, CHAR *vict) {
     "One thing's for certain: %s should stop trying while ahead!",
     "Ouch, %s...  Hope you didn't lose any stats!  Hahaha!",
     "So you thought you could kill me, eh %s?",
-    "To junk %s's corpse, or to not junk their corpse, that is the question...",
+    "To junk %s's corpse, or to not junk %s's corpse, that is the question...",
     "Hey %s, come back and fight like a man!",
     "Hey everyone, %s is naked at the temple!  Don't stare too long.  :P",
     "%s is inferior to my greatness!",
@@ -4259,8 +4259,8 @@ void brag(CHAR *ch, CHAR *vict) {
 
   char buf[MIL], brag[MSL];
 
-  /* Pick a random brag and print it to buf. */
-  snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict));
+  /* Pick a random brag and print it to buf. Need to include GET_NAME(vict) for as many %s' in the string. */
+  snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict), GET_NAME(vict));
 
   /* Construct the brag. */
   snprintf(brag, sizeof(brag), "$n brags '%s'", buf);

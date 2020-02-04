@@ -258,13 +258,13 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
 
       COLOR(temp_ch, 5);
       if (type == TO_VICT) {
-        act(message, PERS_MORTAL, ch, 0, victim, TO_VICT);
+        act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, victim, TO_VICT);
       }
       else if (type == TO_OTHER) {
-        act(message, PERS_MORTAL, ch, temp_ch, victim, TO_OTHER);
+        act(message, COMM_ACT_HIDE_NON_MORT, ch, temp_ch, victim, TO_OTHER);
       }
       else {
-        act(message, PERS_MORTAL, ch, 0, temp_ch, TO_VICT);
+        act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, temp_ch, TO_VICT);
       }
       ENDCOLOR(temp_ch);
 

@@ -81,9 +81,12 @@ int signal_object(struct obj_data *obj, struct char_data *signaler, int cmd, cha
 #define TO_OTHER   4
 #define TO_GROUP   5
 
-#define COMM_ACT_HIDE_NONE     0
-#define COMM_ACT_HIDE_INVIS    1
+/* A bit of a hack here.*/
+#define COMM_ACT_HIDE_NORMAL   0
+#define COMM_ACT_HIDE_CANT_SEE 1
 #define COMM_ACT_HIDE_SUPERBRF 2
+#define COMM_ACT_HIDE_NON_MORT 4 // Overrides CANT_SEE if combined with it.
+#define COMM_ACT_HIDE_PRETITLE 8
 
 int write_to_descriptor(int desc, char *txt);
 void write_to_q(char *txt, struct txt_q *queue);
