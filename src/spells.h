@@ -236,8 +236,8 @@
 #define SKILL_MANTRA                197
 #define SKILL_BANZAI                198
 #define SKILL_HEADBUTT              199
-#define SKILL_MAIM                  200
-#define SPELL_BLESSING_OF_SACRIFICE 201
+/* 200 is Reserved */
+#define SKILL_MAIM                  201
 #define SPELL_AID                   202
 #define SPELL_DEMONIC_THUNDER       203
 #define SKILL_SHADOWSTEP            204

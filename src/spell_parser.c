@@ -258,8 +258,8 @@ const char * const spells[] = {
   "mantra",                       /* 197 */
   "banzai",                       /* 198 */
   "headbutt",                     /* 199 */
-  "maim",                         /* 200 */
-  "",                             /* 201 */
+  "",                             /* 200 Reserved */
+  "maim",                         /* 201 */
   "aid",                          /* 202 */
   "demonic thunder",              /* 203 */
   "shadowstep",                   /* 204 */

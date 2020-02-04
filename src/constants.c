@@ -208,8 +208,8 @@ const char * const spell_wear_off_msg[] = {
   "Your slowly slip out of your regenerative trance.",/*197*/
   "!banzai!", /*198*/
   "!headbutt!",/* 199 */
-  "!maim!",/*200*/
-  "", /* 201 */
+  "",/*200*/
+  "!maim!", /* 201 */
   "You don't feel as powerful.",/*202*/
   "!demonic thunder!",/*203*/
   "!shadowstep!", /* 204 Used to be Shadow-Walk */
