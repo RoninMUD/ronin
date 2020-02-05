@@ -836,7 +836,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
   int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_WIS_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_SMITE)) {
-    act("You try to smite $M, but your concentration falters.", FALSE, ch, 0, victim, TO_CHAR);
+    act("You try to smite $N, but your concentration falters.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to smite you, but $s concentration falters.", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to smite $N, but $s concentration falters.", FALSE, ch, 0, victim, TO_NOTVICT);
 
@@ -853,7 +853,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
     act("$n calls upon $s divine energy and switches the focus of $s attacks to $N.", FALSE, ch, 0, victim, TO_NOTVICT);
   }
   else {
-    act("You raise your weapon high to smite $M with holy vengeance!", FALSE, ch, 0, victim, TO_CHAR);
+    act("You raise your weapon high to smite $N with holy vengeance!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n raises $s weapon high to smite you with holy vengence!", FALSE, ch, 0, victim, TO_VICT);
     act("$n raises $s weapon high to smite $N with holy vengeance!", FALSE, ch, 0, victim, TO_NOTVICT);
   }
