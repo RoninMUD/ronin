@@ -286,10 +286,10 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
 
   COLOR(ch, 5);
   if (type == TO_CHAR) {
-    act(message, FALSE, ch, 0, 0, TO_CHAR);
+    act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, 0, TO_CHAR);
   }
   else {
-    act(message, FALSE, ch, 0, victim, TO_CHAR);
+    act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, victim, TO_CHAR);
   }
   ENDCOLOR(ch);
 }
