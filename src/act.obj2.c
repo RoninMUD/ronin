@@ -1270,7 +1270,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
     /* Check if already wielding and holding something. */
     if (EQ(ch, WIELD) && EQ(ch, HOLD)) {
-      if (can_dual_wield && (OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON)) {
+      if ((OBJ_TYPE(EQ(ch, HOLD)) == ITEM_WEAPON) && can_dual_wield) {
         printf_to_char(ch, "You are already wielding two weapons.\n\r");
       }
       else {
@@ -1288,15 +1288,17 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
     }
 
     /* Check if we can wield a two-handed weapon. */
-    if (EQ(ch, WIELD) && (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) {
-      if (can_wield_2h_and_1h) {
+    if (OBJ_TYPE(obj) == ITEM_2H_WEAPON) {
+      if (EQ(ch, WIELD) && can_wield_2h_and_1h) {
         printf_to_char(ch, "You can only wield a two-handed weapon in your main hand.\n\r");
-      }
-      else {
-        printf_to_char(ch, "You need both hands to wield this.\n\r");
-      }
 
-      return;
+        return;
+      }
+      else if (EQ(ch, WIELD) || EQ(ch, HOLD)) {
+        printf_to_char(ch, "You need both hands to wield this.\n\r");
+
+        return;
+      }
     }
 
     /* Check weapon weight. */

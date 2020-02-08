@@ -1331,13 +1331,13 @@ const int aq_obj_master_list[][2] = {
   {13019, 2}, // a Heart-Shaped Amulet 20
   {14008, 2}, // a rosette bracelet 50
   {16637, 2}, // Berbalang's cloak 30
-  {19007, 2}, // a bear-tooth amulet 0
+  //{19007, 2}, // a bear-tooth amulet 0
   {20851, 2}, // A toupe 50
   {20856, 2}, // a bracelet of slug entrails 30
   {26411, 2}, // lucky ivory die 30
   {27651, 2}, // the jade monkey 25
   {27682, 2}, // A purple robe 20
-  {27700, 2}, // An Ice Opal 25
+  //{27700, 2}, // An Ice Opal 25
   {517, 3}, // Shuriken 45
   {801, 3}, // Pharaoh's Death Mask 30
   {803, 3}, // Tattered Leggings 30
@@ -1413,7 +1413,7 @@ const int aq_obj_master_list[][2] = {
   {204, 4}, // A gleaming spyglass 7
   {3907, 4}, // The tail of the Celestial Dragon 10
   {5709, 4}, // The medallion of Akinra 10
-  {5711, 4}, // mercury's boots 10
+  //{5711, 4}, // mercury's boots 10
   {5804, 4}, // Pair of red lederhosen 20
   {6208, 4}, // a chitonous exoskeleton 10
   {6210, 4}, // a priest's skirt 10
@@ -1481,7 +1481,7 @@ const int aq_obj_master_list[][2] = {
   {11327, 5}, // a band of twisted veins 7
   {12208, 5}, // Amulet of Ettins 10
   {12211, 5}, // Ettins Cape 10
-  {12822, 5}, // the Scent of a Mankey 10
+  //{12822, 5}, // the Scent of a Mankey 10
   {12827, 5}, // A bag of MankeyBits 10
   {12928, 5}, // a silver katana 8
   {13001, 5}, // an Elven Cloak 15
@@ -1552,10 +1552,9 @@ const int aq_obj_master_list[][2] = {
   {26713, 8}, // A Clean Red Cloak 5
   {26714, 8}, // A Glowing Staff of Gnarled Wood 5
   {28741, 8}, // The Coin of Fate 12
-  {4478, 10}, // A Pretty Noose 8
-  {4488, 10}, // Axe of Justice 10
   {5198, 10}, // Flaming Mask 10
-  {7201, 10}, // a soul shard fragment 10
+  {14212, 10}, // Boundary Warden Belt 45
+  //{7201, 10}, // a soul shard fragment 10
   {16503, 10}, // the Dagger of Segretto 5
   {16805, 10}, // Scythe of Execution 8
   {16806, 10}, // A Bladed Lash 8
@@ -1563,15 +1562,20 @@ const int aq_obj_master_list[][2] = {
   {26402, 10}, // The Wand of Watoomb 18
   {26579, 10}, // The Loincloth of Good Omens 8
   {26711, 10}, // The Greatsword of the Guard 8
-  {5807, 15}, // Silk Suit 20
+  {27711, 10}, // A Carapace Shield 7
+  {4478, 15}, // A Pretty Noose 8
+  {4488, 15}, // Axe of Justice 10
+  //{5807, 15}, // Silk Suit 20
   {11712, 15}, // Armor of Dark Angels 8
+  {19400, 15}, // An Extraordinarily Large Grolem Beak 10
   {26404, 15}, // The Dark Sphere of Ul 8
-  {27711, 15}, // A Carapace Shield 7
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
   {599, 20}, // The Gong of Unholy Wrath 8
   {5580, 20}, // Scorched Abdomen 8
+  {5581, 20}, // Some Fine Elastic Cartilage 9
   {20132, 20}, // A Gleaming Jade Battlesuit 6
+  {20137, 20}, // Helm of Lacquered Wood 8
   {21329, 20}, // a swarm of angry beetles 4
   {21330, 20}, // a mass of black, glistening thorns 5
   {25300, 20}, // Tail of Minos 8
@@ -1579,16 +1583,17 @@ const int aq_obj_master_list[][2] = {
   {26709, 20}, // The Grand Cape of Emithoynarthe 15
   {26712, 20}, // Heavy Red Gloves 15
   {26715, 20}, // Shimmering Metallic Greaves 15
-  {27724, 20}, // A Pair of Fine Leather Boots 3
-  {27726, 20}, // The Circlet of Devotion 4
-  {27727, 20}, // A Pair of Tactical Zyca Leg Plates 4
+  //{27724, 20}, // A Pair of Fine Leather Boots 3
+  //{27726, 20}, // The Circlet of Devotion 4
+  //{27727, 20}, // A Pair of Tactical Zyca Leg Plates 4
   {28602, 20}, // Olympian Leg Plates 12
   {28720, 20}, // The Staff of Dark Influence 8
-  {300, 25}, // The Talon of a Red Dragon 6
-  {301, 25}, // a pair of red dragon scale boots 6
+  //{300, 25}, // The Talon of a Red Dragon 6
+  //{301, 25}, // a pair of red dragon scale boots 6
   //{572, 25}, // An oaken root wand 3
-  {2716, 25}, // The black sting of the Queen 10
-  {6806, 25}, // Erishkigal's lash 9
+  //{2716, 25}, // The black sting of the Queen 10
+  //{6806, 25}, // Erishkigal's lash 9
+  {14208, 25}, // Councilor's Plate 10
   {21309, 25}, // A Rotting Otyugh Skin 2
 };
 

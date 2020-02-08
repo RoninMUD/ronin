@@ -4111,7 +4111,7 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 
   char buf[MIL];
 
-  snprintf(buf, sizeof(buf), "Sniped by %s", GET_NAME(ch));
+  snprintf(buf, sizeof(buf), "Sniped by %s", GET_DISP_NAME(ch));
 
   if (enchanted_by(victim, buf)) return;
 
