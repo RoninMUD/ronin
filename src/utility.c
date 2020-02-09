@@ -1931,7 +1931,7 @@ int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
 
 /* Takes a bit mask and and returns one of the set bits randomly,
    or zero if no bits were set. */
-int get_random_set_bit_from_mask_t(const int32_t mask) {
+int get_random_set_bit_from_mask(const int32_t mask) {
   const int32_t mask_size = (sizeof(int32_t) * CHAR_BIT);
 
   int32_t i = 0;
@@ -1957,7 +1957,7 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
 }
 
 
-bool in_int_array(int value, int *array, size_t num_elems) {
+bool in_int_array(int value, const int *array, size_t num_elems) {
   if ((num_elems > 1) && (num_elems < UINT_MAX)) {
     for (size_t i = 0; i < (num_elems - 1); i++) {
       if (array[i] == value) {
