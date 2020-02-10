@@ -4534,7 +4534,7 @@ void spell_lay_hands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, NO_MAGIC)) {
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(victim)), NO_MAGIC)) {
     send_to_char("The magic of the miracle has been absorbed by your surroundings.\n\r", victim);
 
     return;
@@ -4546,14 +4546,18 @@ void spell_miracle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-    magic_heal(victim, SPELL_MIRACLE, 1500, FALSE);
+  int heal = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1500 : 2000;
 
+  if (!IS_MORTAL(ch)) {
+    heal = GET_MAX_HIT(victim);
+  }
+
+  magic_heal(victim, SPELL_MIRACLE, heal, FALSE);
+
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
     send_to_char("The magic of the miracle has been distorted by the chaos around you.\n\r", victim);
   }
   else {
-    magic_heal(victim, SPELL_MIRACLE, 2000, FALSE);
-
     send_to_char("Your life has been restored.\n\r", victim);
   }
 
