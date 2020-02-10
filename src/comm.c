@@ -2280,6 +2280,14 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
                 sub = (char *)vict_or_obj;
               }
               break;
+            case 'f':
+              if (!other_or_obj) {
+                sub = "$f";
+              }
+              else {
+                sub = fname((char *)other_or_obj);
+              }
+              break;
             case 'F':
               if (!vict_or_obj) {
                 sub = "$F";
