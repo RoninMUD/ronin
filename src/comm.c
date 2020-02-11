@@ -301,6 +301,7 @@ int main(int argc, char **argv)
     case 'C':
       fCopyOver = TRUE;
       mother_desc = atoi(argv[pos]+2);
+      log_f("Booting in copyover mode, mother desc = %d.", mother_desc);
       break;
     case 'l':
       lawful = 1;
@@ -1094,7 +1095,7 @@ int copyover_write(int same_room) {
 
   for (d = descriptor_list;d;d = d->next) {
     i=d->character;
-    if (!d->character || d->connected > CON_PLYNG) {
+    if (!d->character || (d->connected > CON_PLYNG)) {
       write_to_descriptor(d->descriptor, "\r\nSorry, the world is being rebooted, Come back in a minute.\r\n");
       close_socket(d);
     }
@@ -1170,6 +1171,7 @@ void copyover_recover(void) {
 
     /* Write something, and check if it goes error-free */
     if (write_to_descriptor (desc, "\r") < 0) {
+      log_f("Error writing to descriptor %d for character %s. Closing.", desc, name);
       close (desc);
       continue;
     }
@@ -1689,7 +1691,7 @@ int write_to_descriptor(int desc, char *txt) {
     this_round = write(desc, txt + so_far, total - so_far);
 
     if (this_round < 0) {
-      log_s("Write to socket error");
+      log_f("Write to socket error, %d.", errno);
 
       return -1;
     }
