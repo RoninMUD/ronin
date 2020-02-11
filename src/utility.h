@@ -145,12 +145,10 @@ int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_bit_from_mask(const int mask);
 
-bool in_int_array(int value, int *array, size_t num_elems);
+bool in_int_array(int value, const int *array, size_t num_elems);
 
 void shuffle_int_array(int *array, size_t num_elems);
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems);
-
-/* Begin New RNG Section */
 
 #define RND_NRM 0
 #define RND_MIN 1
@@ -164,8 +162,6 @@ int32_t dice(int32_t num_dice, int32_t size_dice);
 bool chance(int32_t num);
 int32_t MIN(int32_t a, int32_t b);
 int32_t MAX(int32_t a, int32_t b);
-
-/* End New RNG Section */
 
 #define SKILL_MAX_PRAC 85
 

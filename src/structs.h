@@ -72,10 +72,6 @@ typedef struct social_messg       SOC;
 #define BT_INVUL              1
 #define BT_SPHERE             2
 
-/* PERS Modes */
-#define PERS_NORMAL 0
-#define PERS_MORTAL -1
-
 
 /* Character Data */
 

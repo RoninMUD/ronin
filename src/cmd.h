@@ -60,6 +60,7 @@ $State: Exp $
 #define MSG_LEAVE              -9
 #define MSG_ENTER              -8
 #define MSG_BEING_REMOVED      -7
+#define MSG_OBJ_REMOVED        MSG_BEING_REMOVED
 #define MSG_SHOW_PRETITLE      -6
 #define MSG_SHOW_AFFECT_TEXT   -5
 #define MSG_ZONE_RESET         -4

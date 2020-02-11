@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -g -Wall -Wno-unused-result -m32 -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
-LFLAGS = -lm -lcrypt -ldmalloc -rdynamic -lcrypto
+LFLAGS = -lm -lcrypt -ldmalloc -rdynamic -lsodium
 OBJDIR = ../obj
 BINDIR = ../bin
 TYPE ?= $(shell basename $$(dirname $$PWD))

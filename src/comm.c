@@ -26,7 +26,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <openssl/rand.h>
 #include <assert.h>
 
 #include "structs.h"
@@ -63,7 +62,6 @@ int room_special(int room, CHAR *ch, int cmd, char *arg);
 int enchantment_special(ENCH *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 /* externs */
 
-void sfallback_random(unsigned long seed);
 void init_descriptor (struct descriptor_data *newd, int desc);
 void game_sleep(struct timeval *timeout);
 void heartbeat(int pulse);
@@ -362,17 +360,6 @@ int main(int argc, char **argv)
   }
 
   log_f("Using %s as data directory.", g_datadir);
-
-  /* Seed rand(). */
-  srand(time(NULL));
-
-  /* Seed the Fallback RNG. */
-  sfallback_random(time(NULL));
-
-  /* Seed the New RNG. */
-  if (32 != RAND_load_file("/dev/urandom", 32)) {
-    log_s("Failed to read /dev/urandom for entropy (main).");
-  }
 
   run_the_game(port);
   return(0);
@@ -991,10 +978,6 @@ void heartbeat(int pulse) {
 
   /* 1 minute */
   if (!(pulse % PULSE_TICK) && !GAMEHALT) {
-    if (32 != RAND_load_file("/dev/urandom", 32)) {
-      log_s("Failed to read /dev/urandom for entropy (heartbeat).");
-    }
-
     signal_world(0, MSG_TICK, "");
 
     if (!CHAOSMODE) {
@@ -2085,8 +2068,8 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
 
   for (; to_ch; to_ch = to_ch->next_in_room) {
     if ((GET_DESCRIPTOR(to_ch) &&
-        ((hide < COMM_ACT_HIDE_INVIS) || CAN_SEE(to_ch, ch)) &&
-        ((hide != COMM_ACT_HIDE_SUPERBRF) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
+        ((hide < COMM_ACT_HIDE_CANT_SEE) || (IS_SET(hide, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(to_ch, ch)) &&
+        ((!IS_SET(hide, COMM_ACT_HIDE_SUPERBRF)) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
         ((type == TO_VICT) || (type == TO_CHAR) || (GET_POS(to_ch) != POSITION_SLEEPING)) &&
         ((type == TO_CHAR) || (to_ch != ch)) &&
         ((type != TO_NOTVICT) || (to_ch != (CHAR *)vict_or_obj)) &&
@@ -2295,6 +2278,14 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
               }
               else {
                 sub = (char *)vict_or_obj;
+              }
+              break;
+            case 'f':
+              if (!other_or_obj) {
+                sub = "$f";
+              }
+              else {
+                sub = fname((char *)other_or_obj);
               }
               break;
             case 'F':

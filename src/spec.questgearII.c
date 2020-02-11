@@ -699,7 +699,7 @@ int qgII_phylactery(OBJ *phylactery, CHAR *owner, int cmd, char *arg)
         arg = one_argument(arg, buf);
         if(AWAKE(owner) && phylactery==EQ(owner,WEAR_WAIST) && V_OBJ(phylactery)==QGII_PHYLACTERY && !strncmp(buf, "wail", MIL))
         {
-          if(phylactery->spec_value > 0)
+          if(phylactery->spec_value > 0 && !ROOM_SAFE(CHAR_REAL_ROOM(owner)))
           {
             act("$n surges with puissance of the Bean-Sidhe and expels a keening wail!", FALSE, owner, NULL, NULL, TO_ROOM);
             act("The spirit of the Bean-Sidhe erupts from within as you expel a keening wail!", FALSE, owner, NULL, NULL, TO_CHAR);

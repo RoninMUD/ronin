@@ -1649,50 +1649,40 @@ int check_for_level_32(OBJ *obj, CHAR *ch,int cmd, char *argument) {
   return FALSE;
 }
 
-int blade_unholy_sacrifice(OBJ *blade, CHAR *ch, int cmd, char *argument) {
-  CHAR *vict, *tmp_vict;
+int blade_unholy_sacrifice(OBJ *obj, CHAR *ch, int cmd, char *argument) {
+  if (cmd == MSG_MOBACT) {
+    CHAR *owner = OBJ_EQUIPPED_BY(obj);
 
-	ch=blade->equipped_by;
+    if (!owner || !GET_OPPONENT(owner)) return FALSE;
 
-  if(cmd==MSG_MOBACT && ch && ch->specials.fighting)
-  {
-		switch(number(0,39))
-		{
-			case 0:
-	      act("Your blade whirls out of control and slashes everyone! Including you!", FALSE, ch, NULL, NULL, TO_CHAR);
-	      for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = tmp_vict)
-	      {
-					tmp_vict = vict->next_in_room;
-      	  if(!IS_MORTAL(vict)) continue;
-      	  if(vict != ch) act("$n's blade whirls out of control and slashes you!", FALSE, ch, NULL, vict, TO_VICT);
-      	  damage(vict, vict, 200, TYPE_UNDEFINED, DAM_NO_BLOCK);
-      	}
-	      break;
-			case 1:
-      	vict = get_random_victim(ch);
-      	if(chance(25)) vict = ch;
-      	if(vict)
-      	{
-            if(vict == ch)
-            {
-                act("Your blade whirls out of control and slashes you!", FALSE, ch, NULL, NULL, TO_CHAR);
-                act("$n's blade whirls out of control and slashes $m!", FALSE, ch, NULL, NULL, TO_ROOM);
-					}
-					else
-					{
-		        act("Your blade whirls out of control and slashes $N!", FALSE, ch, NULL, vict, TO_CHAR);
-		        act("$n's blade whirls out of control and slashes $N!", FALSE, ch, NULL, vict, TO_NOTVICT);
-		        act("$n's blade whirls out of control and slashes you!", FALSE, ch, NULL, vict, TO_VICT);
-					}
-      	damage(vict, vict, 400, TYPE_UNDEFINED, DAM_NO_BLOCK);
-        }
-      	break;
-			default:
-				break;
-		}
-	}
-	return FALSE;
-}/* END blade_unholy_sacrifice : rewrite by Hemp */
+    int rnd = number(1, 1000);
+
+    if (rnd <= 25) {
+      if (chance(25)) {
+        act("Your blade whirls out of control and slashes you!", FALSE, owner, 0, 0, TO_CHAR);
+        act("$n's blade whirls out of control and slashes $m!", FALSE, owner, 0, 0, TO_ROOM);
+
+        damage(owner, owner, 100, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+      }
+
+      for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(owner)), *temp_vict; vict; vict = temp_vict) {
+        temp_vict = vict->next_in_room;
+
+        if (!GET_OPPONENT(vict) || (GET_OPPONENT(vict) != GET_OPPONENT(GET_OPPONENT(owner))) || IS_IMMORTAL(vict) || (vict == owner)) continue;
+
+        act("Your blade whirls out of control and slashes $N!", FALSE, owner, 0, vict, TO_CHAR);
+        act("$n's blade whirls out of control and slashes $N!", FALSE, owner, 0, vict, TO_NOTVICT);
+        act("$n's blade whirls out of control and slashes you!", FALSE, owner, 0, vict, TO_VICT);
+
+        damage(owner, vict, 200, TYPE_UNDEFINED, DAM_NO_BLOCK);
+      }
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
 
 int ench_crown_kings(OBJ *obj, CHAR *ch,int cmd, char *argument) {
   CHAR *vict;

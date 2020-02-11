@@ -21,7 +21,7 @@
 #include <math.h>
 #include <stdint.h>
 #include <limits.h>
-#include <openssl/rand.h>
+#include <sodium.h>
 
 
 #include "structs.h"
@@ -38,75 +38,6 @@
 
 extern FILE *logfile;
 void update_pos( struct char_data *ch );
-
-/* Begin Fallback RNG Section */
-
-/* Note: The fallback RNG exists for, as the name says, fallback
-         situations where the new RNG could fail. This should
-         never happen, but it's here just in case. */
-
-#define FALLBACK_RAN_MAX  2147483647L
-#define FALLBACK_RAN_MULT 16807
-
-static uint32_t fallback_random_num = 1;
-
-/* Part of the fallback RNG; do not use directly. */
-void sfallback_random(uint32_t seed) {
-  fallback_random_num = seed ? (seed & FALLBACK_RAN_MAX) : 1;
-}
-
-/* Part of the fallback RNG; do not use directly. */
-uint32_t fallback_random_next(uint32_t seed) {
-  uint32_t lo = FALLBACK_RAN_MULT * (long)(seed & 0xFFFF);
-  uint32_t hi = FALLBACK_RAN_MULT * (long)((unsigned long)seed >> 16);
-
-  lo += (hi & 0x7FFF) << 16;
-
-  if (lo > FALLBACK_RAN_MAX) {
-    lo &= FALLBACK_RAN_MAX;
-    ++lo;
-  }
-
-  lo += hi >> 15;
-
-  if (lo > FALLBACK_RAN_MAX) {
-    lo &= FALLBACK_RAN_MAX;
-    ++lo;
-  }
-
-  return lo;
-}
-
-/* Part of the fallback RNG; do not use directly. */
-uint32_t fallback_random(void) {
-  fallback_random_num = fallback_random_next(fallback_random_num);
-
-  return fallback_random_num;
-}
-
-/* End Fallback RNG Section */
-
-/* Begin New RNG Section */
-
-/* Generates a random unsigned integer in interval [0, upper_bound] (exclusive).
-   Note: Uses OpenSSL (lcrypto).
-*/
-uint32_t random_uint32_t(uint32_t upper_bound) {
-  union {
-    uint32_t i;
-    unsigned char c[sizeof(uint32_t)];
-  } u;
-
-  do {
-    if (RAND_bytes(u.c, sizeof(u.c)) == -1) {
-      log_s("Failed to get random bytes (random_uint32_t); using fallback RNG.");
-
-      return fallback_random() % upper_bound;
-    }
-  } while (u.i < (-upper_bound % upper_bound));
-
-  return u.i % upper_bound;
-}
 
 /*
 Generates a random integer in interval [from, to] (inclusive).
@@ -136,7 +67,7 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
       result = (from * to) / 2;
       break;
     default:
-      result = random_uint32_t((to - from) + 1) + from;
+      result = randombytes_uniform((to - from) + 1) + from;
       break;
   }
 
@@ -207,8 +138,6 @@ int32_t MAX(int32_t a, int32_t b) {
   return a > b ? a : b;
 }
 
-/* End New RNG Section */
-
 
 // TODO: Change to not use static char.
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
@@ -220,8 +149,10 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
     if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
       snprintf(buf, sizeof(buf), "%s", GET_DISP_NAME(ch));
     }
-    else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+      if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+        signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+      }
 
       strlcat(buf, GET_DISP_NAME(ch), sizeof(buf));
     }
@@ -234,7 +165,7 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
 }
 
 char *PERS(CHAR *ch, CHAR *vict) {
-  return PERS_ex(ch, vict, PERS_NORMAL);
+  return PERS_ex(ch, vict, COMM_ACT_HIDE_NORMAL);
 }
 
 
@@ -250,8 +181,11 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
   }
-  else if ((IS_MORTAL(ch) && (mode == PERS_MORTAL)) || CAN_SEE(vict, ch)) {
-    signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+  else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+    if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    }
+
     strlcat(buf, GET_NAME(ch), sizeof(buf));
     strlcat(buf, "'s", sizeof(buf));
   }
@@ -263,7 +197,7 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
 }
 
 char *POSSESS(CHAR *ch, CHAR *vict) {
-  return POSSESS_ex(ch, vict, PERS_NORMAL);
+  return POSSESS_ex(ch, vict, COMM_ACT_HIDE_NON_MORT);
 }
 
 
@@ -1997,7 +1931,7 @@ int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
 
 /* Takes a bit mask and and returns one of the set bits randomly,
    or zero if no bits were set. */
-int get_random_set_bit_from_mask_t(const int32_t mask) {
+int get_random_set_bit_from_mask(const int32_t mask) {
   const int32_t mask_size = (sizeof(int32_t) * CHAR_BIT);
 
   int32_t i = 0;
@@ -2023,7 +1957,7 @@ int get_random_set_bit_from_mask_t(const int32_t mask) {
 }
 
 
-bool in_int_array(int value, int *array, size_t num_elems) {
+bool in_int_array(int value, const int *array, size_t num_elems) {
   if ((num_elems > 1) && (num_elems < UINT_MAX)) {
     for (size_t i = 0; i < (num_elems - 1); i++) {
       if (array[i] == value) {

@@ -2766,7 +2766,7 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
 int stack_position(CHAR *ch, int target_position) {
   if (!ch || !target_position) return POSITION_DEAD;
 
-  if ((target_position >= GET_POS(ch)) || (GET_POS(ch) <= POSITION_INCAP)) {
+  if (GET_POS(ch) <= POSITION_INCAP) {
     return GET_POS(ch);
   }
 
@@ -3104,7 +3104,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         GET_POS(defender) = POSITION_FIGHTING;
       }
 
-      if ((avoidance_skill == SKILL_DODGE) || (avoidance_skill == SKILL_PARRY) || (avoidance_skill == SKILL_FEINT)) {
+      if (avoidance_skill) {
         /* Close Combat */
         if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
           ENCH *cc_ench = NULL;
@@ -4111,7 +4111,7 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 
   char buf[MIL];
 
-  snprintf(buf, sizeof(buf), "Sniped by %s", GET_NAME(ch));
+  snprintf(buf, sizeof(buf), "Sniped by %s", GET_DISP_NAME(ch));
 
   if (enchanted_by(victim, buf)) return;
 
@@ -4227,7 +4227,7 @@ void brag(CHAR *ch, CHAR *vict) {
     "I guess you thought you could whoop me, eh %s?",
     "If that's all you can do, you had better try harder %s, cause it ain't enough to bring ME down!",
     "Where did you get that weapon %s?  From the newts?  :P",
-    "If you wanna play with the big boys, you had better get BIG %s.",
+    "If you wanna play with the big boys, you had better get BIG, %s.",
     "Dunt, dunt, dunt...  Another one bites the dust!  Or, should I say, %s did.  *chortle*",
     "Game Over %s...  Game Over.",
     "Haha, %s is no match for me!",
@@ -4259,7 +4259,10 @@ void brag(CHAR *ch, CHAR *vict) {
 
   char buf[MIL], brag[MSL];
 
-  snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict));
+  /* Pick a random brag and print it to buf. Need to include GET_NAME(vict) for as many %s' in the string. */
+  snprintf(buf, sizeof(buf), brags[number(0, NUMELEMS(brags) - 1)], GET_NAME(vict), GET_NAME(vict));
+
+  /* Construct the brag. */
   snprintf(brag, sizeof(brag), "$n brags '%s'", buf);
 
   /* Do this the "hard way", since we want a "custom" gossip string. */
@@ -4273,9 +4276,9 @@ void brag(CHAR *ch, CHAR *vict) {
     }
   }
 
+  /* If Rashgugh is in the game, have him brag too. */
   CHAR *rashgugh = get_ch_world(TOKEN_MOB);
 
-  /* If Rashgugh is in the game, have him brag too. */
   if (rashgugh && chance(25)) {
     snprintf(brag, sizeof(brag), "I didn't attend the funeral, but I sent a nice letter saying I approved of it.");
 

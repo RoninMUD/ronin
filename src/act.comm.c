@@ -40,7 +40,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
     .min_pos_hear = 0,
     .to = COMM_TO_CHAR,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = TRUE,
     .set_reply = TRUE,
@@ -59,7 +59,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
     .min_pos_hear = 0,
     .to = COMM_TO_CHAR_ROOM,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = TRUE,
     .set_reply = TRUE,
@@ -78,7 +78,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = PLR_NOSHOUT | PLR_NOMESSAGE,
     .min_pos_hear = 0,
     .to = COMM_TO_CHAR_ROOM,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = TRUE,
     .set_reply = TRUE,
@@ -97,7 +97,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = PLR_NOSHOUT,
     .min_pos_hear = 0,
     .to = COMM_TO_REPLY,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = TRUE,
     .set_reply = TRUE,
@@ -116,7 +116,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_GROUP,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT | COMM_ACT_HIDE_PRETITLE,
     .style = COMM_STYLE_QUOTE,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -135,7 +135,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = POSITION_RESTING,
     .to = COMM_TO_ROOM,
-    .hide = FALSE,
+    .hide = COMM_ACT_HIDE_NORMAL,
     .style = COMM_STYLE_QUOTE,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -154,7 +154,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = PLR_NOSHOUT,
     .min_pos_hear = 0,
     .to = COMM_TO_ZONE,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -173,7 +173,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_WORLD,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_QUOTE,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -192,7 +192,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_WORLD,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_BRACKET,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -211,7 +211,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_WORLD,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_BRACKET,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -230,7 +230,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_WORLD,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_BRACKET,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -249,7 +249,7 @@ const comm_info_t comm_info[] = {
     .pflag_no_hear = 0,
     .min_pos_hear = 0,
     .to = COMM_TO_WORLD,
-    .hide = PERS_MORTAL,
+    .hide = COMM_ACT_HIDE_NON_MORT,
     .style = COMM_STYLE_BRACKET,
     .direct = FALSE,
     .set_reply = FALSE,
@@ -409,7 +409,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
       return;
     }
 
-    /* Is the player a killer or a thief? (Only applies when not Chaos Mode). */
+    /* Is the player a killer or a thief? Ignored during Chaos. */
     if (!CHAOSMODE &&
         ((IS_SET(comm_info[comm].pflag_no_do, PLR_KILL) && IS_SET(GET_PFLAG(ch), PLR_KILL)) ||
          (IS_SET(comm_info[comm].pflag_no_do, PLR_THIEF) && IS_SET(GET_PFLAG(ch), PLR_THIEF)))) {
@@ -478,14 +478,14 @@ void communicate(CHAR *ch, char *arg, const int comm) {
 
     /* Is the listening character connected? */
     if (!GET_DESCRIPTOR(listener) || (GET_DESCRIPTOR(listener)->connected != CON_PLYNG)) {
-      act("$E isn't connected at the moment.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+      act("$E isn't connected at the moment.", COMM_ACT_HIDE_NON_MORT, ch, 0, listener, TO_CHAR);
 
       return;
     }
 
     /* Is the listening character's NoShout on? */
     if (IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOSHOUT) && IS_SET(GET_PFLAG(listener), PLR_NOSHOUT)) {
-      act("The gods have taken away $S ability to communicate.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+      act("The gods have taken away $S ability to communicate.", COMM_ACT_HIDE_NON_MORT, ch, 0, listener, TO_CHAR);
 
       return;
     }
@@ -493,7 +493,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     /* Is the listening character's NoMessage on? Is their position below the listening threshold? */
     if ((IS_MORTAL(ch) && (listener != ch) && IS_SET(comm_info[comm].pflag_no_hear, PLR_NOMESSAGE) && IS_SET(GET_PFLAG(listener), PLR_NOMESSAGE)) ||
         (GET_POS(listener) < comm_info[comm].min_pos_hear)) {
-      act("$E can't hear you.", PERS_MORTAL, ch, 0, listener, TO_CHAR);
+      act("$E can't hear you.", COMM_ACT_HIDE_NON_MORT, ch, 0, listener, TO_CHAR);
 
       return;
     }
@@ -509,7 +509,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     snprintf(message, sizeof(message), "%s", arg);
   }
 
-  char style_open[3], style_close[3];
+  char style_open[3] = "", style_close[3] = "";
 
   /* Prepare the style for surrounding the message text. */
   switch (comm_info[comm].style) {
@@ -720,7 +720,7 @@ void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message,
   vsnprintf(buf, sizeof(buf), message, args);
   va_end(args);
 
-  char style_open[3], style_close[3];
+  char style_open[3] = "", style_close[3] = "";
 
   /* Prepare the style for surrounding the message text. */
   switch (comm_info[comm].style) {
@@ -1149,6 +1149,7 @@ void do_write(CHAR *ch, char *arg, int cmd) {
 
     /* Everything checked out. The character can write a note. */
     send_to_char("Ok, go ahead and write; end the note with an @ symbol on a new line.\n\r", ch);
+
     act("$n begins to jot down a note.", TRUE, ch, 0, 0, TO_ROOM);
 
     SET_BIT(GET_PFLAG(ch), PLR_WRITING);
