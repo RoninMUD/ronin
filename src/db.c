@@ -58,9 +58,9 @@ char helpcontents[3*MSL];
 char olchelpcontents[3*MSL];
 char wizhelpcontents[3*MSL];
 
-FILE *help_fl,                        /* file for help texts (HELP <kwd>)*/
-     *wizhelp_fl,
-     *olchelp_fl;
+FILE *help_fl = NULL,                  /* file for help texts (HELP <kwd>)*/
+     *wizhelp_fl = NULL,
+     *olchelp_fl = NULL;
 
 struct help_index_element *help_index = 0;
 struct help_index_element *wizhelp_index = 0;

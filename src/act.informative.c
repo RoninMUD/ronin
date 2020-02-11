@@ -13,6 +13,7 @@
 #include <arpa/inet.h>
 #include <math.h>
 #include <limits.h>
+#include <errno.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -2652,28 +2653,40 @@ void do_wizcmd(struct char_data *ch, char *argument)
 
     bot = 0;
     top = top_of_wizhelpt;
+    minlen = strlen(argument);
+
     for (;;) {
       mid = (bot + top) / 2;
-      minlen = strlen(argument);
       if (!(chk = strn_cmp(argument, wizhelp_index[mid].keyword, minlen))) {
-  fseek(wizhelp_fl, wizhelp_index[mid].pos, 0);
-  *buffer = '\0';
-  for (;;) {
-    if (!fgets(buf, 80, wizhelp_fl)) break;
-    if (*buf == '#')
-      break;
-    strcat(buffer, buf);
-    strcat(buffer, "\r");
-  }
-  page_string(ch->desc, buffer, 1);
-  return;
-      } else if (bot >= top) {
+        rewind(wizhelp_fl);
+        if (fseek(wizhelp_fl, wizhelp_index[mid].pos, SEEK_SET) < 0) {
+          log_f("Could not read wizhelp file, errno=%d.\n\r", errno);
+          send_to_char("The help file appears to be corrupted. Please report this to an admin.\n\r", ch);
+        }
+
+        *buffer = '\0';
+
+        for (;;) {
+          if (!fgets(buf, 80, wizhelp_fl)) break;
+          if (*buf == '#') break;
+          strcat(buffer, buf);
+          strcat(buffer, "\r");
+        }
+
+        page_string(ch->desc, buffer, 1);
+        return;
+      }
+      else if (bot >= top) {
         send_to_char("There is no help on that word.\n\r", ch);
-  return;
-      } else if (chk > 0)
-  bot = ++mid;
+        return;
+      }
+      else if (chk > 0) {
+        bot = ++mid;
+      }
       else
-  top = --mid;
+      {
+        top = --mid;
+      }
     }
     return;
   }
