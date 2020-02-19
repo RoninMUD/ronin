@@ -4,6 +4,9 @@
   Written by Alan K. Miles for RoninMUD
 */
 
+/* System Includes */
+#include <string.h>
+
 /* Ronin Includes */
 #include "constants.h"
 #include "structs.h"
@@ -2086,7 +2089,7 @@ int lantern_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     arg = one_argument(arg, buf);
 
-    if (!*buf || !is_abbrev(buf, "stoke")) return FALSE;
+    if (!*buf || (strcmp(buf, "stoke") != 0)) return FALSE;
 
     one_argument(arg, buf);
 
@@ -2250,7 +2253,7 @@ int barbarians_rage_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     arg = one_argument(arg, buf);
 
-    if (!*buf || !is_abbrev(buf, "break")) return FALSE;
+    if (!*buf || (strcmp(buf, "break") != 0)) return FALSE;
 
     if ((obj != EQ(ch, WIELD)) && chance(20)) {
       act("You feel the insatiable urge to wield $p and break something with it!", FALSE, ch, obj, 0, TO_CHAR);
@@ -2345,7 +2348,7 @@ int flute_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     arg = one_argument(arg, buf);
 
-    if (!*buf || !is_abbrev(buf, "play")) return FALSE;
+    if (!*buf || (strcmp(buf, "play") != 0)) return FALSE;
 
     one_argument(arg, buf);
 
