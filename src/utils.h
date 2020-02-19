@@ -169,7 +169,7 @@ do {                   \
 #define OBJ_VALUE2(obj)          (obj->obj_flags.value[2])
 #define OBJ_VALUE3(obj)          (obj->obj_flags.value[3])
 #define OBJ_POPPED(obj)          (obj->obj_flags.popped)
-#define OBJ_SPEC(obj)            (obj_proto_table[obj->item_number].func)
+#define OBJ_SPEC(obj)            (obj->spec_value)
 #define OBJ_TIMER(obj)           (obj->obj_flags.timer)
 #define OBJ_OWNER_ID(obj, num)   (obj->ownerid[num])
 #define OBJ_IN_ROOM(obj)         (obj->in_room)
