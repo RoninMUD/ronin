@@ -1575,7 +1575,7 @@ const int aq_obj_master_list[][2] = {
   {5580, 20}, // Scorched Abdomen 8
   {5581, 20}, // Some Fine Elastic Cartilage 9
   {20132, 20}, // A Gleaming Jade Battlesuit 6
-  {20137, 20}, // Helm of Lacquered Wood 8
+  {20138, 20}, // Helm of Lacquered Wood 8
   {21329, 20}, // a swarm of angry beetles 4
   {21330, 20}, // a mass of black, glistening thorns 5
   {25300, 20}, // Tail of Minos 8

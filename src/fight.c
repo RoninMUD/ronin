@@ -1961,6 +1961,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         max_reflect = lround(max_reflect * 1.5);
       }
 
+      /* NPCs can reflect more damage, to add an element of challenge. */
+      if (IS_NPC(victim)) {
+        max_reflect *= 4;
+      }
+
       reflect = MIN(max_reflect, lround(dmg * 0.1));
       reflect = MAX(reflect, GET_LEVEL(victim) / 5);
 
@@ -1984,6 +1989,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
     else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
       max_reflect = lround(max_reflect * 1.5);
+    }
+
+    /* NPCs can reflect more damage, to add an element of challenge. */
+    if (IS_NPC(victim)) {
+      max_reflect *= 4;
     }
 
     reflect = MIN(max_reflect, lround(dmg * 0.25));

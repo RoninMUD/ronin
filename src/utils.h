@@ -112,6 +112,7 @@ do {                   \
 #define DESC_SNOOPING(desc)      (DESC_SNOOP(desc).snooping)
 #define DESC_SNOOP_BY(desc)      (DESC_SNOOP(desc).snoop_by)
 
+#define MOB_VNUM(mob)            (mob_proto_table[mob->nr].virtual)
 #define MOB_NAME(mob)            (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
 #define MOB_DESCRIPTION(mob)     (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
 #define MOB_SHORT(mob)           (mob->player.short_descr ? mob->player.short_descr : mob_proto_table[mob->nr].short_descr)
@@ -155,7 +156,7 @@ do {                   \
 #define OBJ_WEIGHT(obj)          (obj->obj_flags.weight)
 #define OBJ_COST(obj)            (obj->obj_flags.cost)
 #define OBJ_RENT_COST(obj)       (obj->obj_flags.cost_per_day)
-#define OBJ_REPOP(obj)           (obj->obj_flags.repop_percent)
+#define OBJ_REPOP(obj)           (obj_proto_table[obj->item_number].obj_flags.repop_percent)
 #define OBJ_AFF(obj, num)        (obj->affected[num])
 #define OBJ_AFF0(obj)            (obj->affected[0])
 #define OBJ_AFF1(obj)            (obj->affected[1])
@@ -168,7 +169,7 @@ do {                   \
 #define OBJ_VALUE2(obj)          (obj->obj_flags.value[2])
 #define OBJ_VALUE3(obj)          (obj->obj_flags.value[3])
 #define OBJ_POPPED(obj)          (obj->obj_flags.popped)
-#define OBJ_SPEC(obj)            (obj->spec_value)
+#define OBJ_SPEC(obj)            (obj_proto_table[obj->item_number].func)
 #define OBJ_TIMER(obj)           (obj->obj_flags.timer)
 #define OBJ_OWNER_ID(obj, num)   (obj->ownerid[num])
 #define OBJ_IN_ROOM(obj)         (obj->in_room)
@@ -182,7 +183,7 @@ do {                   \
 
 #define OBJ_NUM_IN_GAME(obj)     (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
 
-#define ROOM_RNUM(rm)            (world[rm].number)
+#define ROOM_VNUM(rm)            (world[rm].number)
 #define ROOM_ZONE(rm)            (world[rm].zone)
 #define ROOM_SPEC(rm)            (world[rm].spec_tmp)
 #define ROOM_SECTOR_TYPE(rm)     (world[rm].sector_type)

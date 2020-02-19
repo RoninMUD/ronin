@@ -521,7 +521,10 @@ void do_scan(CHAR *ch, char *arg, int cmd) {
 
     if (!CAN_GO(ch, dir)) continue;
 
-    if (number(1, 121) > GET_LEARNED(ch, SKILL_SCAN)) {
+    exit_room = world[room].dir_option[dir]->to_room_r;
+
+    if ((number(1, 121) > GET_LEARNED(ch, SKILL_SCAN)) ||
+        ((exit_room != NOWHERE) && (exit_room != real_room(0)) && IS_SET(NO_PEEK, ROOM_FLAGS(exit_room)))) {
       printf_to_char(ch, "You failed to scan %s.\n\r", dir_name[dir]);
 
       continue;

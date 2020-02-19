@@ -1,32 +1,40 @@
-                Mortal Announcements for RoninMUD
+                      Mortal Announcements for RoninMUD
 
- ***********************************************************************
- **                 Welcome to Ronin's new home!                      **
- **                                                                   **
- **   We're now set up on a new, faster and more up to date server.   **
- **                                                                   **
- ***********************************************************************
+ o  Welcome to RoninMUD!
 
- o  A new Auto-Quest mode has been added: aquest order. Check out the
-    help file for more details.
+ o  We now have a remort system that allows you to re-roll your existing
+    character(s) as a new class at level 1, and re-earn your experience, stats,
+    and levels at vastly accelerated rate.  See HELP REMORT for details.
 
- o  Thief and Paladin subclasses have been revamped recently.
+ o  We also have a new auto quest order option that allows you to earn quest
+    points by turning in a number of items that must be collected after the
+    order request is made.  See HELP AQORDER for details.
 
- o  Minor improvements to Ninjas and Warriors have been made.
+ o  Prestige has been added, which is a whole new way to gain "levels" and
+    improve your stats.  Each level of prestige earned will improve the player's
+    stats.  At the fifth level of prestige, and every ten levels thereafter,
+    players will also gain access to a perk.  There are 255 levels of prestige
+    available, for a total of 26 perks.  See HELP PRESTIGE for details.
 
- o  More updates are forthcoming, with Bard and Warrior subclasses on the
-    radar. Help contribute in our forums if you have some good ideas.
+ o  We have implemented a system for improving equipment through trading in
+    quest points, which allows detailed customization and optimization of your
+    character's stats, such as damroll, hitroll, permanent effects, mana and hit
+    point regeneration, and more.  Ask a SUP+ for details.
 
- o  Updated and improved Int/Wis bonuses are coming soon, so prepare to
-    spend those quest points!
+ o  Many subclasses have been improved and revised recently.  The following
+    classes have seen the most significant changes: Thief, Warrior, Ninja,
+    Paladin, Anti-Paladin, and Commando.  See the changelog below, and the
+    files for each class and subclass for details.
 
- o  The RoninMUD Forum is located at http://forum.roninmud.org/forum/
+ o  We now allow each real player to control a "multi" of up to five characters
+    at a time.  We primarily balance and design around multis, but solo players
+    are welcome and warmly met.  Many solo players find a niche and have great
+    success exploring the less-traveled parts of our lands.
 
- o  Visit our homepage at http://www.roninmud.org/
+ o  The changelog can be found at https://pastebin.com/raw/6y9Ju9EG
 
- o  Be sure to check the Altar Board to keep yourself informed of recent
-    announcements and changes.
+ o  In addition to the changelog, the board by the Temple Altar, one north of
+    the Temple of Midgaard, has other interesting information and minor updates.
 
- o  Our 21st Chaos Night is over! (HELP CHAOS NIGHT)
-    This year's winners: Soot, Mog, and Hyperion
-    Nth kill/death: Soot and Glyph
+ o  These helpful immortals are never too far away from their keyboards, should
+    you need any help: Night, Shun, Hemp, Jearom, and Kith.

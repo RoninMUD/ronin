@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
   *name = '\0';
   while(!feof(fd) && loop<30) {
     fscanf(fd, "vault/%[a-z].name\n",name);
-    if(name) {
+    if(*name) {
       printf("%s\n\r",CAP(name));
     }
     loop++;

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./newbiepurge.perl
+./newbiepurge2.perl

@@ -2840,10 +2840,6 @@ int signal_world(CHAR *signaler, int cmd, char *arg) {
     if (counter == 4) {
       weather_and_time(1);
 
-      if (time_info.hours == 1) {
-        update_time();
-      }
-
       counter = 0;
     }
   }

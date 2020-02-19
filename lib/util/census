@@ -1,0 +1,1 @@
+find . -name '*.dat' -mtime -$1 -print | grep -c dat

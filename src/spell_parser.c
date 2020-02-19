@@ -261,7 +261,7 @@ const char * const spells[] = {
   "",                             /* 200 Reserved */
   "maim",                         /* 201 */
   "aid",                          /* 202 */
-  "demonic thunder",              /* 203 */
+  "               ",              /* 203 */
   "shadowstep",                   /* 204 */
   "batter",                       /* 205 */
   "desecrate",                    /* 206 */

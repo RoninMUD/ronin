@@ -3901,31 +3901,17 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 }
 
 
-void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (affected_by_spell(victim, SPELL_HASTE)) {
+    printf_to_char(victim, "You're already moving as fast as you can.\n\r");
 
-  if (!affected_by_spell(victim, SPELL_HASTE))
-  {
-    af.type       = SPELL_HASTE;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 2;
-    else
-      af.duration = 5;
-    af.modifier   = 0;
-    af.location   = APPLY_NONE;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-
-    affect_to_char(victim, &af);
-
-    send_to_char("Suddenly everything around you seems to slow down to a crawl.\n\r", victim);
-    act("$n starts moving with blinding speed.", FALSE, victim, 0, 0, TO_ROOM);
+    return;
   }
-  else
-  {
-    send_to_char("You're already moving as fast as you can.\n\r", victim);
-  }
+
+  affect_apply(ch, SPELL_HASTE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 2 : 5, 0, 0, 0, 0);
+
+  printf_to_char(victim, "Suddenly everything around you seems to slow down to a crawl.\n\r");
+  act("$n starts moving with blinding speed.", FALSE, victim, 0, 0, TO_ROOM);
 }
 
 
