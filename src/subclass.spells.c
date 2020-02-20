@@ -1613,7 +1613,12 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
       dmg = GET_HIT(ch) - 1;
     }
 
+    /* Don't consume position. */
+    int set_pos = GET_POS(ch);
+
     damage(ch, ch, dmg, TYPE_UNDEFINED, DAM_FIRE);
+
+    GET_POS(ch) = MIN(GET_POS(ch), set_pos);
 
     return FALSE;
   }
