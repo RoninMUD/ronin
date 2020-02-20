@@ -7012,7 +7012,7 @@ an attack against a creature or player affected by Rage will be automatically
 hit.
 
 Rage also automatically applies the effects of the Blood Lust spell when
-successfully by Anti-Paladin characters.
+successfully cast by Anti-Paladin characters.
 
 See Also: SUBCLASSES INFIDEL FURY "BLOOD LUST"
 #
@@ -8623,13 +8623,12 @@ Subclass Ronin: Level 1 (Ninja)
 
 Usage       : cast 'blur' (self only)
 Accumulative: No
-Duration    : Level / 6
+Duration    : Level / 5
 Mana Cost   : 80
 
-The Ronin blurs out of reality, making them not only harder to hit,
-but harder to defend against. While under the effects of Blur, the
-Ronin gains the following benefits, increasing the skill check
-success of the affected skills:
+The Ronin blurs out of reality, making them not only harder to hit, but harder
+to defend against. While under the effects of Blur, the Ronin gains the
+following benefits:
 
   -(Level / 2) to the Ronin's armor class (this is a benefit).
   +(Level) to Dodge skill checks.
@@ -8643,18 +8642,16 @@ Subclass Ronin: Level 2 (Ninja)
 
 Usage: backfist <victim>
 
-With this attack, the Ronin drives the back of their fist into the
-victim with deadly force. This skill inflicts damage equivalent to
-1.50 times the Ronin's level, and knocks the victim into a stunned
-state. Backfist is not subject to the effects of Invulnerability.
+With this attack, the Ronin drives the back of their fist into the victim with
+deadly force.  This skill inflicts damage equivalent to 1.50 to 1.75 times the
+Ronin's level, and knocks the victim into a stunned state.
 
-This skill causes a 2 round input lag for the Ronin, regardless of
-success or failure.
+Backfist is not subject to the effects of Invulnerability.
 
-A successful Backfist will stun the victim for 2 rounds.
+This skill causes a 2 round input lag for the Ronin, regardless of success or
+failure.  A successful Backfist will stun the victim for 2 rounds.
 
-The success of Backfist is dependent on how well the skill is
-practiced.
+The success of Backfist is dependent on how well the skill is practiced.
 
 See Also: SUBCLASSES RONIN
 #
@@ -8782,23 +8779,19 @@ Subclass Mystic: Level 3 (Ninja)
 
 Usage: tigerkick <victim>
 
-The Mystic's kicks are so powerful that they inflict additional
-damage, knock the target into a stunned position. A successful
-tigerkick allows the mystic to draw some of the target's life-force,
-restoring a small portion of his/her mana. The greater the maximum
-health potential of the target, the greater the restoration.
+The Mystic's powerful tigerkick causes a large amount of damage to the victim
+and knocks them into a stunned position.  A successful tigerkick allows the
+mystic to draw some of the target's life-force, restoring a small portion of
+their mana.  The greater the maximum health potential of the target, the
+greater the restoration.
 
-A tigerkick inflicts 1.75 times the Mystic's Level in damage. The
-maximum amount of mana that can be restored per successful kick is
-10.
+Tigerkick inflicts 1.75 times the Mystic's level in damage.  The maximum amount
+of mana that can be restored per successful kick is 10.
 
-This skill causes a 2 round input lag for the Mystic, regardless of
-success or failure.
+This skill causes a 2 round input lag for the Mystic, regardless of success or
+failure.  A successful Tigerkick will stun the victim for 2 rounds.
 
-A successful Tigerkick will stun the victim for 2 rounds.
-
-The success of Tigerkick is dependent on how well the skill is
-practiced.
+The success of Tigerkick is dependent on how well the skill is practiced.
 
 See Also: SUBCLASSES MYSTIC
 #
@@ -9104,11 +9097,10 @@ Class: Thief (Level 50)
 
 Usage: cunning (toggles on/off)
 
-When affected by the Cunning skill, the thief is able to expend their
-energy (mana) in order to grant them the ability to break through the
-Invulnerability spell/affect.  Each successful use of Circle or
-Backstab against such a protected target will incur a cost of 10 mana
-to the thief while Cunning is enabled.
+When affected by Cunning, the Thief is able to expend their energy (mana) in
+order to grant them the ability to break through the Invulnerability
+spell/affect with their Backstab and Circle skills.  Piercing through a
+target's protective field has a cost of 10 mana points.
 
 See Also: INVULNERABILITY CIRCLE BACKSTAB
 #

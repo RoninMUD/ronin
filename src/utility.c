@@ -232,31 +232,17 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
     return TRUE;
   }
 
-  if (breakthrough_type == BT_INVUL) {
-    /* Invulnerability never applies to Hostile victims. */
-    if (IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) return TRUE;
-
-    /* Cunning */
-    if ((IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
-        ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE)) &&
-        IS_SET(GET_TOGGLES(ch), TOG_CUNNING) &&
-        (GET_MANA(ch) >= 10)) {
-      act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-      act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-      act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
-
-      GET_MANA(ch) -= 10;
-
-      return TRUE;
-    }
+  /* Invulnerability never applies to Hostile victims. */
+  if ((breakthrough_type == BT_INVUL) && IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) {
+    return TRUE;
   }
 
   int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
 
   switch (GET_CLASS(ch)) {
     case CLASS_CLERIC:
-      if (breakthrough_type == BT_INVUL) check -= 10;
-      else if (breakthrough_type == BT_SPHERE) check -= 5;
+      if (breakthrough_type == BT_INVUL) check -= 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
     case CLASS_MAGIC_USER:
       if (breakthrough_type == BT_INVUL) check -= 10;
@@ -267,7 +253,7 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       else if (breakthrough_type == BT_SPHERE) check -= 10;
       break;
     case CLASS_NOMAD:
-      if (breakthrough_type == BT_INVUL) check += 5;
+      if (breakthrough_type == BT_INVUL) check += 10;
       else if (breakthrough_type == BT_SPHERE) check -= 10;
       break;
     case CLASS_THIEF:
@@ -295,8 +281,23 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
   }
-  
-  return (number(1, 100) <= check);
+
+  check = number(1, 100) <= check;
+
+  /* Cunning */
+  if (!check && IS_SET(GET_TOGGLES(ch), TOG_CUNNING) && (GET_MANA(ch) >= 10) &&
+      (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
+      ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE))) {
+    act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
+    act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+
+    GET_MANA(ch) -= 10;
+
+    return TRUE;
+  }
+
+  return check;
 }
 
 int GETOBJ_WEIGHT(struct obj_data *obj)

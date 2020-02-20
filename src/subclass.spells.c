@@ -1703,7 +1703,7 @@ void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     send_to_char("Your movements become a blur.\n\r", ch);
     act("$n's movements become a blur.", TRUE, ch, 0, 0, TO_ROOM);
 
-    affect_apply(ch, SPELL_BLUR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (GET_LEVEL(ch) / 12) : (GET_LEVEL(ch) / 6)), 0, 0, 0, 0);
+    affect_apply(ch, SPELL_BLUR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (GET_LEVEL(ch) / 10) : (GET_LEVEL(ch) / 5)), 0, 0, 0, 0);
   }
 }
 

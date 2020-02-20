@@ -272,7 +272,9 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
   act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
   act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
 
-  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_BACKFIST, DAM_PHYSICAL);
+  double multi = number(150, 175) / 100;
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * multi)), SKILL_BACKFIST, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
