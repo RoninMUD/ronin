@@ -20,12 +20,13 @@ endif
 #
 
 .PHONY : all
-all : roninslave ronin
+all : ronin roninslave list_vaults
 
 .PHONY : clean
 clean :
 	-rm $(OBJDIR)/ronin $(OBJS_RONIN)
 	-rm $(OBJDIR)/roninslave $(OBJS_SLAVE)
+	-rm $(OBJDIR)/list_vaults $(OBJS_LIST_VAULTS)
 
 $(OBJDIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -35,6 +36,20 @@ $(OBJDIR) :
 
 $(BINDIR) :
 	@mkdir -p $(BINDIR)
+
+#
+# List Vaults
+#
+
+OBJS_LIST_VAULTS = $(OBJDIR)/list_vaults.o
+
+$(OBJS_SLAVE) :| $(OBJDIR) $(BINDIR)
+
+.PHONY: list_vaults
+list_vaults : $(OBJDIR)/list_vaults
+
+$(OBJDIR)/list_vaults : $(OBJS_LIST_VAULTS)
+	$(CC) -o $(OBJDIR)/list_vaults $(CFLAGS) $(OBJS_LIST_VAULTS)
 
 #
 # Slave

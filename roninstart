@@ -12,6 +12,7 @@ while 1
 
   cp -f obj/ronin bin/
   cp -f obj/roninslave bin/
+  cp -f obj/list_vaults bin/
   bin/ronin $1 >>& runlog
 
   set tmp=$status
