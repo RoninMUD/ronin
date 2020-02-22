@@ -23,10 +23,9 @@ int main(int argc, char **argv) {
     exit(0);
   }
 
-  snprintf(name, sizeof(name), "%s", argv[1]);
-
   remove("vault/access.list");
 
+  snprintf(name, sizeof(name), "%s", argv[1]);
   snprintf(buf, sizeof(buf), "grep -lx %s vault/*.name > vault/access.list", name);
 
   system(buf);
@@ -56,6 +55,8 @@ int main(int argc, char **argv) {
   }
 
   fclose(fd);
+
+  remove("vault/access.list");
 
   exit(0);
 }
