@@ -2766,7 +2766,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      sprintf(buf,
           "Object name: [%s], R-number: [%d], V-number: [%d] Item type: ",
           OBJ_NAME(j), j->item_number, virtual);
-     sprinttype(GET_ITEM_TYPE(j),item_types,buf2);
+     sprinttype(OBJ_TYPE(j),item_types,buf2);
      strcat(buf,buf2); strcat(buf,"\n\r");
      send_to_char(buf, ch);
      sprintf(buf, "Short description: %s\n\rLong description:\n\r%s\n\r",
