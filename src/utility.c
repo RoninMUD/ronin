@@ -141,9 +141,7 @@ int32_t MAX(int32_t a, int32_t b) {
 
 // TODO: Change to not use static char.
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL];
-
-  memset(buf, 0, sizeof(buf));
+  static char buf[MIL] = { 0 };
 
   if (ch && vict) {
     if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
@@ -171,12 +169,7 @@ char *PERS(CHAR *ch, CHAR *vict) {
 
 // TODO: Change to not use static char.
 char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
-  assert(ch);
-  assert(vict);
-
-  static char buf[MIL];
-
-  memset(buf, 0, sizeof(buf));
+  static char buf[MIL] = { 0 };
 
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
@@ -201,25 +194,29 @@ char *POSSESS(CHAR *ch, CHAR *vict) {
 }
 
 
+// TODO: Make a better color system someday.
 char *CHCLR(CHAR *ch, int color) {
-  static char colorcode1[100];
-  colorcode1[0]=0;
-  if(ch->colors[0]&&ch->colors[color]) {
-    strcat(colorcode1,Color[(((ch->colors[color])*2)-2)]);
-    strcat(colorcode1,BKColor[ch->colors[13]]);
+  static char color_code[32] = { 0 };
+
+  if (ch->colors[0] && ch->colors[color]) {
+    strlcat(color_code, Color[(((ch->colors[color]) * 2) - 2)], sizeof(color_code));
+    strlcat(color_code, BKColor[ch->colors[13]], sizeof(color_code));
   }
-  return colorcode1;
+
+  return color_code;
 }
 
 
+// TODO: Make a better color system someday.
 char *ENDCHCLR(CHAR *ch) {
-  static char colorcode2[100];
-  colorcode2[0]=0;
-  if(ch->colors[0]&&ch->colors[1]) {
-    strcat(colorcode2,Color[(((ch->colors[1])*2)-2)]);
-    strcat(colorcode2,BKColor[ch->colors[13]]);
+  static char color_code[32] = { 0 };
+
+  if (ch->colors[0] && ch->colors[1]) {
+    strlcat(color_code, Color[(((ch->colors[1]) * 2) - 2)], sizeof(color_code));
+    strlcat(color_code, BKColor[ch->colors[13]], sizeof(color_code));
   }
-  return colorcode2;
+
+  return color_code;
 }
 
 
@@ -300,43 +297,108 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
   return check;
 }
 
-int GETOBJ_WEIGHT(struct obj_data *obj)
-{
-  int  tmp_weight = 0;
-  struct obj_data *tmp;
-
-  if (obj->obj_flags.type_flag == ITEM_DRINKCON)
-    tmp_weight = obj->obj_flags.weight*(.5 + (float)
-                              ((float)obj->obj_flags.value[1]/2.0/(float)obj->obj_flags.value[0]));
-  else
-    tmp_weight = obj->obj_flags.weight;
-
-  if (obj->contains)
-    {
-      for(tmp=obj->contains;tmp;tmp=tmp->next_content)
-      tmp_weight += GETOBJ_WEIGHT(tmp);
-    }
-  return(tmp_weight);
-}
 
 int IS_DARK(int room) {
   return !IS_LIGHT(room);
 }
 
-int IS_LIGHT(int room) {
-  if (world[room].light ||
-      world[room].zone == 30 ||
-      (!IS_SET(world[room].room_flags, DARK) &&
-       (IS_SET(world[room].room_flags, INDOORS) ||
-        IS_SET(world[room].room_flags, LIT) ||
-        world[room].sector_type == SECT_INSIDE ||
-        weather_info.sunlight == SUN_RISE ||
-        weather_info.sunlight == SUN_LIGHT))) {
-    return TRUE;
+
+int CAN_SEE(CHAR *ch, CHAR *vict) {
+  if (!ch || !vict) return FALSE;
+
+  if (WIZ_INV(ch, vict) ||
+      IMP_INV(ch, vict) ||
+      NRM_INV(ch, vict) ||
+      (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
+      (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
+    return FALSE;
   }
 
-  return FALSE;
+  return TRUE;
 }
+
+
+int CAN_TAKE(CHAR *ch, OBJ *obj) {
+  if (!ch || !obj) return FALSE;
+
+  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
+      (IS_NPC(ch) && IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_NO_TAKE_MOB))) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+
+int GETOBJ_WEIGHT(OBJ *obj) {
+  if (!obj) return 0;
+
+  int weight = OBJ_WEIGHT(obj);
+
+  if ((OBJ_TYPE(obj) == ITEM_DRINKCON) && OBJ_VALUE(obj, 0)) {
+    weight *= (0.5 + ((OBJ_VALUE(obj, 1) / 2.0) / OBJ_VALUE(obj, 0)));
+  }
+
+  if (obj->contains) {
+    for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content)
+      weight += GETOBJ_WEIGHT(tmp_obj);
+  }
+
+  return weight;
+}
+
+
+int IS_CARRYING_W(CHAR *ch) {
+  if (!ch) return 0;
+
+  int weight = 0;
+
+  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    weight += GETOBJ_WEIGHT(tmp_obj);
+  }
+
+  return weight;
+}
+
+
+int IS_CARRYING_N(CHAR *ch) {
+  if (!ch) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    num++;
+  }
+
+  return num;
+}
+
+
+int COUNT_CONTENTS(OBJ *obj) {
+  if (!obj) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    num++;
+  }
+
+  return num;
+}
+
+
+int COUNT_RENTABLE_CONTENTS(OBJ *obj) {
+  if (!obj) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    if (IS_RENTABLE(tmp_obj)) num++;
+  }
+
+  return num;
+}
+
 
 char *string_to_lower(char *string) {
   for (int i = 0; i < strlen(string); i++) {
@@ -346,6 +408,7 @@ char *string_to_lower(char *string) {
   return string;
 }
 
+
 char *string_to_upper(char *string) {
   for (int i = 0; i < strlen(string); i++) {
     string[i] = UPPER(string[i]);
@@ -354,10 +417,10 @@ char *string_to_upper(char *string) {
   return string;
 }
 
+
 size_t strlmrg(char *dest, size_t size, ...) {
   char *s, *end = dest + (size - 1);
   size_t needed = 0;
-
   va_list ap;
 
   va_start(ap, size);
@@ -386,38 +449,29 @@ size_t strlmrg(char *dest, size_t size, ...) {
   return needed;
 }
 
+
 size_t strlcpy(char *dest, const char *src, size_t size) {
   return strlmrg(dest, size, src, (void *)0);
 }
+
 
 size_t strlcat(char *dest, const char *src, size_t size) {
   return strlmrg(dest, size, dest, src, (void *)0);
 }
 
-int IS_CARRYING_W(struct char_data *ch)
-{
-  struct obj_data *tmp;
-  int    tmp_weight=0;
-  for(tmp=ch->carrying;tmp;tmp=tmp->next_content)
-  {
-    tmp_weight += GETOBJ_WEIGHT(tmp);
-  }
 
-  return tmp_weight;
+int IS_LIGHT(int room) {
+  if (ROOM_LIGHT(room)) return TRUE;                       // If the room has light sources present, it is lit.
+  if (ROOM_ZONE(room) == 30) return TRUE;                  // If the room is in zone 30 (Midgaard), it is lit.
+  if (IS_SET(ROOM_FLAGS(room), LIT)) return TRUE;          // If the room has the LIT flag, it is lit.
+  if (IS_SET(ROOM_FLAGS(room), DARK)) return FALSE;        // If the room has the DARK flag, it is unlit.
+  if (IS_SET(ROOM_FLAGS(room), INDOORS)) return FALSE;     // If the room has the INDOORS flag, it is unlit.
+  if (ROOM_SECTOR_TYPE(room) == SECT_INSIDE) return FALSE; // If the room has the sector type SECT_INSIDE, it is unlit.
+  if (weather_info.sunlight != SUN_DARK) return TRUE;      // If the sun is not dark, the room is lit.
+
+  return FALSE;
 }
 
-int IS_CARRYING_N(struct char_data *ch)
-{
-  struct obj_data *tmp;
-  int    i=0;
-
-  for(tmp=ch->carrying;tmp;tmp=tmp->next_content)
-  {
-    i++;
-  }
-
-  return i;
-}
 
 char *str_cut(char *source,char *dest,int number) {
   int y;
@@ -512,27 +566,6 @@ char *sstrdel(char *s, ...)
             }
       }
       return s;
-}
-
-int COUNT_CONTENTS(struct obj_data *obj)
-{
-  struct obj_data *tmp;
-  int    i=0;
-  for(tmp=obj->contains;tmp;tmp=tmp->next_content)
-  {
-    i++;
-  }
-  return i;
-}
-
-int COUNT_RENTABLE_CONTENTS(struct obj_data *obj)
-{
-  struct obj_data *tmp;
-  int    i=0;
-  for(tmp=obj->contains;tmp;tmp=tmp->next_content)
-    if(IS_RENTABLE(tmp))
-      i++;
-  return(i);
 }
 
 /* Create a duplicate of a string */
@@ -958,26 +991,22 @@ struct char_data
   return( get_ch( virtual, ROOM, realroom ) );
 }
 
-int V_OBJ(struct obj_data *obj)
-{
-  if (((GET_ITEM_TYPE(obj) == ITEM_CONTAINER) && OBJ_VALUE3(obj)) ||
-      (GET_ITEM_TYPE(obj) == ITEM_SKIN) ||
-      (GET_ITEM_TYPE(obj) == ITEM_TROPHY))
-  {
+int V_OBJ(OBJ *obj) {
+  if (((OBJ_TYPE(obj) == ITEM_CONTAINER) && OBJ_VALUE(obj, 3)) ||
+      (OBJ_TYPE(obj) == ITEM_SKIN) ||
+      (OBJ_TYPE(obj) == ITEM_TROPHY))   {
     return 0;
   }
 
   return obj_proto_table[obj->item_number].virtual;
 }
 
-int
-V_MOB(struct char_data *m) {
-  return( mob_proto_table[m->nr].virtual );
+int V_MOB(CHAR *ch) {
+  return mob_proto_table[ch->nr].virtual;
 }
 
-int
-V_ROOM(struct char_data *m) {
-  return( world[CHAR_REAL_ROOM(m)].number );
+int V_ROOM(CHAR *ch) {
+  return world[CHAR_REAL_ROOM(ch)].number;
 }
 
 struct obj_data
@@ -1320,24 +1349,23 @@ char *how_good(int percent)
   return (buf);
 }
 
-void check_equipment(struct char_data *ch)
-{
-   int i = 0;
 
-   for (i = 0; i < WIELD; i++)
-   {
-     equip_char(ch,unequip_char(ch,i),i);
-   }
+void check_equipment(CHAR *ch) {
+  for (int eq_pos = 0; eq_pos < WIELD; eq_pos++) {
+    equip_char(ch, unequip_char(ch, eq_pos), eq_pos);
+  }
 
-   equip_char(ch,unequip_char(ch,HOLD),HOLD);
-   equip_char(ch,unequip_char(ch,WIELD),WIELD);
-   update_pos(ch);
+  equip_char(ch, unequip_char(ch, HOLD), HOLD);
+  equip_char(ch, unequip_char(ch, WIELD), WIELD);
+
+  update_pos(ch);
 }
 
-void produce_core() {
-   char *NullPointer = NULL;
 
-   *NullPointer = 1;
+void produce_core() {
+   char *np = NULL;
+
+   *np = 1;
 }
 
 /* assumes j is a container */
@@ -1654,31 +1682,6 @@ int CORPSE_HAS_TROPHY(OBJ *obj) {
     case CLASS_INVERTIBRATE:
       return FALSE;
       break;
-  }
-
-  return TRUE;
-}
-
-int CAN_SEE(CHAR *ch, CHAR *vict) {
-  if (!ch || !vict) return FALSE;
-
-  if (WIZ_INV(ch, vict) ||
-      IMP_INV(ch, vict) ||
-      NRM_INV(ch, vict) ||
-      (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
-      (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
-    return FALSE;
-  }
-
-  return TRUE;
-}
-
-int CAN_TAKE(CHAR *ch, OBJ *obj) {
-  if (!ch || !obj) return FALSE;
-
-  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
-      (IS_NPC(ch) && IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_NO_TAKE_MOB))) {
-    return FALSE;
   }
 
   return TRUE;

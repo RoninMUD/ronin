@@ -367,8 +367,8 @@ void do_donate(CHAR *ch, char *arg, int cmd)
     return;
   }
 
-  if (GET_ITEM_TYPE(obj) == ITEM_FOOD  ||
-      GET_ITEM_TYPE(obj) == ITEM_TRASH)
+  if (OBJ_TYPE(obj) == ITEM_FOOD  ||
+      OBJ_TYPE(obj) == ITEM_TRASH)
   {
     send_to_char("You can't donate that!\n\r", ch);
     return;
@@ -1569,37 +1569,47 @@ void do_grab(CHAR *ch, char *arg, int cmd) {
 }
 
 
-void remove_item(struct char_data *ch, struct obj_data *obj, int pos)
-{
-  if (CAN_CARRY_N(ch) > IS_CARRYING_N(ch)) {
-    if(!signal_object(obj, ch, MSG_BEING_REMOVED, "")) {
-      if(CAN_WEAR(obj,ITEM_NO_REMOVE) && GET_LEVEL(ch)<LEVEL_IMM ) {
-        act("You can't remove $p.",0,ch,obj,0,TO_CHAR);
-      }
-      else {
-        if(IS_SET(obj->obj_flags.extra_flags2,ITEM_EQ_DECAY) &&
-           obj->obj_flags.timer>0) {
-          obj->obj_flags.timer--;
-        }
+void remove_item(struct char_data *ch, struct obj_data *obj, int pos) {
+  if (CAN_CARRY_N(ch) <= IS_CARRYING_N(ch)) {
+    printf_to_char(ch, "You can't carry that many items.\n\r");
 
-        if(V_OBJ(obj)>0 && OBJ_CREM_DESC(obj))
-          act(OBJ_CREM_DESC(obj),FALSE,ch,obj,0,TO_CHAR);
-        else
-          act("You stop using $p.",FALSE,ch,obj,0,TO_CHAR);
-        if(V_OBJ(obj)>0 && OBJ_RREM_DESC(obj))
-          act(OBJ_RREM_DESC(obj),FALSE,ch,obj,0,TO_ROOM);
-        else
-          act("$n stops using $p.",TRUE,ch,obj,0,TO_ROOM);
-        obj_to_char(unequip_char(ch, pos), ch);
-        show_bitvector_remove(ch,obj);
-        if (obj->obj_flags.type_flag == ITEM_LIGHT)
-          if (obj->obj_flags.value[2])
-               world[CHAR_REAL_ROOM(ch)].light--;
-      }
-    }
-  } else {
-    send_to_char("You can't carry that many items.\n\r", ch);
+    return;
   }
+
+  if (signal_object(obj, ch, MSG_BEING_REMOVED, "")) return;
+
+  if (IS_MORTAL(ch) && IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_NO_REMOVE)) {
+    act("You can't remove $p.", 0, ch, obj, 0, TO_CHAR);
+
+    return;
+  }
+
+  if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY) && OBJ_TIMER(obj)) {
+    OBJ_TIMER(obj)--;
+  }
+
+  if (V_OBJ(obj) && OBJ_CREM_DESC(obj)) {
+    act(OBJ_CREM_DESC(obj), FALSE, ch, obj, 0, TO_CHAR);
+  }
+  else {
+    act("You stop using $p.", FALSE, ch, obj, 0, TO_CHAR);
+  }
+
+  if (V_OBJ(obj) && OBJ_RREM_DESC(obj)) {
+    act(OBJ_RREM_DESC(obj), FALSE, ch, obj, 0, TO_ROOM);
+  }
+  else {
+    act("$n stops using $p.", TRUE, ch, obj, 0, TO_ROOM);
+  }
+
+  obj_to_char(unequip_char(ch, pos), ch);
+
+  show_bitvector_remove(ch, obj);
+
+  if ((OBJ_TYPE(obj) == ITEM_LIGHT) && OBJ_VALUE(obj, 2)) {
+    ROOM_LIGHT(CHAR_REAL_ROOM(ch))--;
+  }
+
   check_equipment(ch);
 }
 

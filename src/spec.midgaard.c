@@ -780,14 +780,14 @@ int dump(int room, CHAR *ch, int cmd, char *arg) {
     // updated to unpack containers which might contain an AQ_ORDER
     // and moves AQ_ORDERs to Storage Room - no free way to "quit" them
     // also by unpacking containers, get poof message for all contents
-    if (GET_ITEM_TYPE(k) == ITEM_AQ_ORDER) {
+    if (OBJ_TYPE(k) == ITEM_AQ_ORDER) {
       sprintf(buf, "%s vanishes in a brilliant flash of bright light.\n\r", CAP(OBJ_SHORT(k)));
       send_to_room(buf, CHAR_REAL_ROOM(ch));
       obj_from_room(k);
       obj_to_room(k, real_room(STORAGE_ROOM));
     }
     else {
-      if (GET_ITEM_TYPE(k)==ITEM_CONTAINER) {
+      if (OBJ_TYPE(k)==ITEM_CONTAINER) {
         for (tmp_c = k->contains; tmp_c; tmp_c = next_c) {
             next_c = tmp_c->next_content;
             obj_from_obj(tmp_c);
@@ -1681,7 +1681,7 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
         if (temp_obj == vault_obj) continue;
         if (alldot && !isname(allbuf, OBJ_NAME(temp_obj))) continue;
 
-        if (!IS_RENTABLE(temp_obj) || (GET_ITEM_TYPE(temp_obj) == ITEM_AQ_ORDER))
+        if (!IS_RENTABLE(temp_obj) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER))
         {
           act("$n tells you 'You can't store $p in a vault.'", FALSE, vault_guard, temp_obj, ch, TO_VICT);
 
@@ -4895,7 +4895,7 @@ int fido(CHAR *mob,CHAR *ch, int cmd, char *arg)
 
   for (i = world[CHAR_REAL_ROOM(mob)].contents; i; i = tmp) {
     tmp=i->next_content;  /* Added tmp - Ranger June 96 */
-    if (GET_ITEM_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3] &&
+    if (OBJ_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3] &&
         i->obj_flags.cost!=PC_STATUE && i->obj_flags.cost!=NPC_STATUE) {
       act("$n savagely devours a corpse.", FALSE, mob, 0, 0, TO_ROOM);
       for(temp = i->contains; temp; temp=next_obj)
@@ -5829,7 +5829,7 @@ int gear_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 {
                     next_obj = obj->next_content;
 
-                    if (GET_ITEM_TYPE(obj) == ITEM_RECIPE)
+                    if (OBJ_TYPE(obj) == ITEM_RECIPE)
                     {
                         recipe = obj;
                         newObj = recipe->obj_flags.value[0];

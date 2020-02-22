@@ -38,7 +38,7 @@ int wolf_chew_toy(CHAR *mob)
      {
      for (i=world[CHAR_REAL_ROOM(mob)].contents;i;i=tmp) {
        tmp = i->next_content; /* Added tmp - Ranger June 96 */
-       if (GET_ITEM_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3])
+       if (OBJ_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3])
          {
          act("$n is eating a corpse.", FALSE, mob, 0, 0, TO_ROOM);
          for (temp=i->contains;temp;temp=next_obj)

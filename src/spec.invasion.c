@@ -478,7 +478,7 @@ int shadowraith_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_DIE) {
     OBJ *wristband = EQ(mob, WEAR_WRIST_R) ? EQ(mob, WEAR_WRIST_R) : EQ(mob, WEAR_WRIST_L);
 
-    if (!wristband || (V_OBJ(wristband) != WRISTBAND) || OBJ_AFF(wristband, 2).location || OBJ_AFF(wristband, 2).modifier) return FALSE;
+    if (!wristband || (V_OBJ(wristband) != WRISTBAND) || OBJ_AFF_LOC(wristband, 2) || OBJ_AFF_MOD(wristband, 2)) return FALSE;
 
     const int wristband_skill_list[] = {
       APPLY_SKILL_ASSAULT,
@@ -490,8 +490,8 @@ int shadowraith_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     wristband_location = wristband_skill_list[number(1, NUMELEMS(wristband_skill_list)) - 1];
 
-    OBJ_AFF(wristband, 2).location = wristband_location;
-    OBJ_AFF(wristband, 2).modifier = 5;
+    OBJ_AFF_LOC(wristband, 2) = wristband_location;
+    OBJ_AFF_MOD(wristband, 2) = 5;
 
     return FALSE;
   }
@@ -1177,9 +1177,9 @@ int aniston_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     const int tactical_max_damroll = 3;
 
-    if (!tactical || (V_OBJ(tactical) != TACTICAL) || OBJ_AFF(tactical, 1).location != APPLY_DAMROLL) return FALSE;
+    if (!tactical || (V_OBJ(tactical) != TACTICAL) || OBJ_AFF_LOC(tactical, 1) != APPLY_DAMROLL) return FALSE;
 
-    OBJ_AFF(tactical, 1).modifier = MIN(OBJ_AFF(tactical, 1).modifier, tactical_max_damroll);
+    OBJ_AFF_MOD(tactical, 1) = MIN(OBJ_AFF_MOD(tactical, 1), tactical_max_damroll);
 
     return FALSE;
   }
@@ -1294,7 +1294,7 @@ int chaos_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       next_content = temp_obj->next_content;
 
       /* Make sure it's a corpse. */
-      if ((GET_ITEM_TYPE(temp_obj) == ITEM_CONTAINER) && OBJ_VALUE(temp_obj, 3) && (OBJ_COST(temp_obj) != PC_STATUE) && (OBJ_COST(temp_obj) != NPC_STATUE)) {
+      if ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && OBJ_VALUE(temp_obj, 3) && (OBJ_COST(temp_obj) != PC_STATUE) && (OBJ_COST(temp_obj) != NPC_STATUE)) {
         if (!spirit_levy) {
           act("$n performs a dark ritual.", FALSE, mob, 0, 0, TO_ROOM);
 
@@ -1326,7 +1326,7 @@ int chaos_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     OBJ *shield = EQ(mob, WEAR_SHIELD);
 
-    if (!shield || (V_OBJ(shield) != BLADED_SHIELD) || OBJ_AFF(shield, 2).location || OBJ_AFF(shield, 2).modifier) return FALSE;
+    if (!shield || (V_OBJ(shield) != BLADED_SHIELD) || OBJ_AFF_LOC(shield, 2) || OBJ_AFF_MOD(shield, 2)) return FALSE;
 
     const int shield_skill_list[] = {
       APPLY_SKILL_ASSAULT,
@@ -1369,8 +1369,8 @@ int chaos_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
     }
 
-    OBJ_AFF(shield, 2).location = shield_location;
-    OBJ_AFF(shield, 2).modifier = shield_modifier;
+    OBJ_AFF_LOC(shield, 2) = shield_location;
+    OBJ_AFF_MOD(shield, 2) = shield_modifier;
 
     return FALSE;
   }
@@ -2557,14 +2557,14 @@ int searing_room_spec(int room, CHAR *ch, int cmd, char *arg) {
 
       CHAR *dummy = world[room].people;
 
-      if (((GET_ITEM_TYPE(temp_obj) == ITEM_SCROLL) || (GET_ITEM_TYPE(temp_obj) == ITEM_RECIPE)) && number(0, 5)) {
+      if (((OBJ_TYPE(temp_obj) == ITEM_SCROLL) || (OBJ_TYPE(temp_obj) == ITEM_RECIPE)) && number(0, 5)) {
         act("$p burns in bright and hot flames...", FALSE, dummy, temp_obj, 0, TO_ROOM);
         act("$p burns in bright and hot flames...", FALSE, dummy, temp_obj, 0, TO_CHAR);
 
         extract_obj(temp_obj);
       }
 
-      if ((GET_ITEM_TYPE(temp_obj) == ITEM_POTION) && number(0, 5)) {
+      if ((OBJ_TYPE(temp_obj) == ITEM_POTION) && number(0, 5)) {
         act("$p boils up in steam...", FALSE, dummy, temp_obj, 0, TO_ROOM);
         act("$p boils up in steam...", FALSE, dummy, temp_obj, 0, TO_CHAR);
 
@@ -2581,14 +2581,14 @@ int searing_room_spec(int room, CHAR *ch, int cmd, char *arg) {
       for (OBJ *temp_obj = temp_ch->carrying, *next_obj; temp_obj; temp_obj = next_obj) {
         next_obj = temp_obj->next_content;
 
-        if (((GET_ITEM_TYPE(temp_obj) == ITEM_SCROLL) || (GET_ITEM_TYPE(temp_obj) == ITEM_RECIPE)) && !number(0, 5)) {
+        if (((OBJ_TYPE(temp_obj) == ITEM_SCROLL) || (OBJ_TYPE(temp_obj) == ITEM_RECIPE)) && !number(0, 5)) {
           act("$p burns in bright and hot flames...", FALSE, temp_ch, temp_obj, 0, TO_ROOM);
           act("$p burns in bright and hot flames...", FALSE, temp_ch, temp_obj, 0, TO_CHAR);
 
           extract_obj(temp_obj);
         }
 
-        if ((GET_ITEM_TYPE(temp_obj) == ITEM_POTION) && !number(0, 5)) {
+        if ((OBJ_TYPE(temp_obj) == ITEM_POTION) && !number(0, 5)) {
           act("$p boils up in steam...", FALSE, temp_ch, temp_obj, 0, TO_ROOM);
           act("$p boils up in steam...", FALSE, temp_ch, temp_obj, 0, TO_CHAR);
 

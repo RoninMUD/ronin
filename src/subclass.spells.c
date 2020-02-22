@@ -927,7 +927,7 @@ void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
 void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int mob_level = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
+  if (OBJ_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
     /* Object is not a corpse, or a container. */
     send_to_char("You must target a corpse.\n\r", ch);
 

@@ -514,14 +514,14 @@ int slime_spec(OBJ *slime, CHAR *ch, int cmd, char *arg) {
           for (obj2 = obj->contains;obj2;obj2 = tmp2) {
             tmp2=obj2->next_content;
             if(obj2) {
-              if(GET_ITEM_TYPE(obj2)==ITEM_FOOD) {
+              if(OBJ_TYPE(obj2)==ITEM_FOOD) {
                 extract_obj(obj2);
                 to_slime=TRUE;
               }
             }
           }
         }
-        if(GET_ITEM_TYPE(obj)==ITEM_FOOD) {
+        if(OBJ_TYPE(obj)==ITEM_FOOD) {
           extract_obj(obj);
           to_slime=TRUE;
         }

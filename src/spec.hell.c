@@ -3234,12 +3234,12 @@ int Flame(CHAR *flame, CHAR *ch, int cmd, char *arg) {
 
     for (paper = world[CHAR_REAL_ROOM(flame)].contents;paper;paper = anot) {
       anot = paper->next_content;
-      if ((GET_ITEM_TYPE(paper) == ITEM_SCROLL || GET_ITEM_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
+      if ((OBJ_TYPE(paper) == ITEM_SCROLL || OBJ_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
         act("$p burns in bright and hot flames...",FALSE,flame,paper,0,TO_ROOM);
         act("$p burns in bright and hot flames...",FALSE,flame,paper,0,TO_CHAR);
         extract_obj(paper);
       }
-      if (GET_ITEM_TYPE(paper) == ITEM_POTION && !number(0,5)) {
+      if (OBJ_TYPE(paper) == ITEM_POTION && !number(0,5)) {
         act("$p boils up in steam...",FALSE,flame,paper,0,TO_ROOM);
         act("$p boils up in steam...",FALSE,flame,paper,0,TO_CHAR);
         extract_obj(paper);
@@ -3250,12 +3250,12 @@ int Flame(CHAR *flame, CHAR *ch, int cmd, char *arg) {
       next = tmp->next_in_room;
       for (paper = tmp->carrying;paper;paper = anot) {
         anot = paper->next_content;
-        if ((GET_ITEM_TYPE(paper) == ITEM_SCROLL || GET_ITEM_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
+        if ((OBJ_TYPE(paper) == ITEM_SCROLL || OBJ_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
 	        act("$p burns in bright and hot flames...",FALSE,flame,paper,0,TO_ROOM);
 	        act("$p burns in bright and hot flames...",FALSE,flame,paper,0,TO_CHAR);
 	        extract_obj(paper);
         }
-        if (GET_ITEM_TYPE(paper) == ITEM_POTION && !number(0,5)) {
+        if (OBJ_TYPE(paper) == ITEM_POTION && !number(0,5)) {
 	        act("$p boils up in steam...",FALSE,flame,paper,0,TO_ROOM);
 	        act("$p boils up in steam...",FALSE,flame,paper,0,TO_CHAR);
 	        extract_obj(paper);
@@ -5692,7 +5692,7 @@ int hell_rooms(int room, CHAR *ch, int cmd, char *arg) {
     if (!EQ(ch,HOLD) || EQ(ch,HOLD) != obj) return FALSE;
     one_argument (arg, buf);
     if (!isname(buf, OBJ_NAME(obj))) return FALSE;
-    if (!(GET_ITEM_TYPE(obj) == ITEM_STAFF) || (GET_ITEM_TYPE(obj) == ITEM_WAND)) return FALSE;
+    if (!(OBJ_TYPE(obj) == ITEM_STAFF) || (OBJ_TYPE(obj) == ITEM_WAND)) return FALSE;
     if (chance(66)) {
       act("The flames of Hell burn brightly, eclipsing $p's power!",FALSE,ch,obj,0,TO_CHAR);
       act("The power of Hell disintegrates $p in $n's hands!",FALSE,ch,obj,0,TO_ROOM);

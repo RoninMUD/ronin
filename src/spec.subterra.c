@@ -144,7 +144,7 @@ int subterra_scorpion_room(int room, CHAR *ch, int cmd, char *arg)
     if(!EQ(ch,HOLD) || EQ(ch,HOLD) != obj) return FALSE;
     one_argument (arg, buf);
     if(!isname(buf, OBJ_NAME(obj))) return FALSE;
-    if(!(GET_ITEM_TYPE(obj) == ITEM_STAFF) || (GET_ITEM_TYPE(obj) == ITEM_WAND)) return FALSE;
+    if(!(OBJ_TYPE(obj) == ITEM_STAFF) || (OBJ_TYPE(obj) == ITEM_WAND)) return FALSE;
 		send_to_char("Your staff feels powerless in this room",ch);
 		act("$n attempts to use $p but an aura in the room prevents it.",0,ch,obj,0,TO_ROOM);
 	}

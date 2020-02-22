@@ -180,6 +180,7 @@ do {                   \
 #define OBJ_OWNED_BY(obj)        (obj->owned_by)
 #define OBJ_FUNC(obj)            (obj->func)
 #define OBJ_LOG(obj)             (obj->log)
+#define OBJ_NEXT_CONTENT(obj)    (obj->next_content)
 
 #define OBJ_NUM_IN_GAME(obj)     (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
 
@@ -226,43 +227,72 @@ do {                   \
 #define HSSH(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "he"  : "she") : "it")
 #define HMHR(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "him" : "her") : "it")
 
-#define ANA(obj)  (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
-#define SANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
+#define ANA(obj)       (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
+#define SANA(obj)      (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
 
-#define GET_ID(ch)         ((ch) ? (ch)->ver3.id : -1)
-
-#define GET_OPPONENT(ch)   ((ch) ? (ch)->specials.fighting : NULL)
+#define S_ANA(string)  (index("aeiouyAEIOUY", *string) ? "An" : "A")
+#define S_SANA(string) (index("aeiouyAEIOUY", *string) ? "an" : "a")
 
 #define GET_ZONE(ch)       (world[CHAR_REAL_ROOM(ch)].zone)
 
-#define GET_POS(ch)        ((ch)->specials.position)
+#define GET_OPPONENT(ch)   ((ch) ? (ch)->specials.fighting : NULL)
+
 #define GET_COND(ch, i)    ((ch)->specials.conditions[(i)])
 
-#define GET_NAME(ch)       (!IS_MOB(ch) ? (ch)->player.name : MOB_NAME(ch))
-#define GET_LONG(ch)       (!IS_MOB(ch) ? "none" : MOB_LONG(ch))
-#define GET_SHORT(ch)      (!IS_MOB(ch) ? "none" : MOB_SHORT(ch))
-#define GET_DISP_NAME(ch)  (!IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch))
-#define GET_TITLE(ch)      ((ch)->player.title)
-#define GET_EMAIL(ch)      ((ch)->ver3.email_addr)
-#define GET_LEVEL(ch)      ((ch)->player.level)
-#define GET_CLASS(ch)      ((ch)->player.class)
-#define GET_HOME(ch)       ((ch)->player.hometown)
-#define GET_AGE(ch)        (age(ch).year)
-#define GET_WIMPY(ch)      ((ch)->new.wimpy)
+#define GET_POS(ch)        ((ch)->specials.position)
 
-#define GET_STR(ch)     ((ch)->tmpabilities.str)
-#define GET_ADD(ch)     ((ch)->tmpabilities.str_add)
-#define GET_DEX(ch)     ((ch)->tmpabilities.dex)
-#define GET_INT(ch)     ((ch)->tmpabilities.intel)
-#define GET_WIS(ch)     ((ch)->tmpabilities.wis)
-#define GET_CON(ch)     ((ch)->tmpabilities.con)
+#define AWAKE(ch) (GET_POS(ch) > POSITION_SLEEPING)
 
-#define GET_OSTR(ch)    ((ch)->abilities.str)
-#define GET_OADD(ch)    ((ch)->abilities.str_add)
-#define GET_ODEX(ch)    ((ch)->abilities.dex)
-#define GET_OINT(ch)    ((ch)->abilities.intel)
-#define GET_OWIS(ch)    ((ch)->abilities.wis)
-#define GET_OCON(ch)    ((ch)->abilities.con)
+#define GET_ID(ch)              (ch ? ch->ver3.id : -1)
+
+#define GET_NAME(ch)            (!IS_MOB(ch) ? (ch)->player.name : MOB_NAME(ch))
+#define GET_LONG(ch)            (!IS_MOB(ch) ? "None" : MOB_LONG(ch))
+#define GET_SHORT(ch)           (!IS_MOB(ch) ? "None" : MOB_SHORT(ch))
+#define GET_DISP_NAME(ch)       (!IS_NPC(ch) ? GET_NAME(ch) : GET_SHORT(ch))
+#define GET_TITLE(ch)           (ch->player.title)
+
+#define GET_EMAIL(ch)           (ch->ver3.email_addr)
+
+#define GET_CLAN_NUM(ch)        (ch->ver3.clan_num)
+#define GET_CLAN(ch)            (clan_list[(int)GET_CLAN_NUM(ch)])
+#define GET_CLAN_NAME(ch)       ((GET_CLAN_NUM(ch) && GET_CLAN(ch).name) ? GET_CLAN(ch).name : "None")
+
+#define GET_CLASS(ch)           (ch->player.class)
+#define GET_LEVEL(ch)           (ch->player.level)
+#define GET_CLASS_NAME(ch)      (!IS_NPC(ch) ? pc_class_types[(int)GET_CLASS(ch)] : npc_class_types[(int)GET_CLASS(ch)])
+
+#define GET_SC(ch)              (ch->ver3.subclass)
+#define GET_SC_NAME(ch)         (GET_SC(ch) ? subclass_name[GET_SC(ch) - 1] : "None")
+#define GET_SC_LEVEL(ch)        (ch->ver3.subclass_level)
+
+#define GET_RANKING(ch)         (ch->ver3.ranking)
+
+#define GET_SCP(ch)             (ch->ver3.subclass_points)
+#define GET_QP(ch)              (ch->ver3.quest_points)
+
+#define GET_EXP(ch)             (ch->points.exp)
+#define GET_REMORT_EXP(ch)      (ch->ver3.remort_exp)
+#define GET_DEATH_EXP(ch)       (ch->ver3.death_exp)
+#define GET_EXP_TO_LEVEL(ch)    ((GET_LEVEL(ch) < LEVEL_MORT) ? exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch) : 0)
+
+#define GET_SEX(ch)             (ch->player.sex)
+#define GET_AGE(ch)             (age(ch).year)
+#define GET_HEIGHT(ch)          (ch->player.height)
+#define GET_WEIGHT(ch)          (ch->player.weight)
+
+#define GET_STR(ch)             (ch->tmpabilities.str)
+#define GET_ADD(ch)             (ch->tmpabilities.str_add)
+#define GET_DEX(ch)             (ch->tmpabilities.dex)
+#define GET_INT(ch)             (ch->tmpabilities.intel)
+#define GET_WIS(ch)             (ch->tmpabilities.wis)
+#define GET_CON(ch)             (ch->tmpabilities.con)
+
+#define GET_OSTR(ch)            (ch->abilities.str)
+#define GET_OADD(ch)            (ch->abilities.str_add)
+#define GET_ODEX(ch)            (ch->abilities.dex)
+#define GET_OINT(ch)            (ch->abilities.intel)
+#define GET_OWIS(ch)            (ch->abilities.wis)
+#define GET_OCON(ch)            (ch->abilities.con)
 
 #define GET_HIT(ch)             (ch->points.hit)
 #define GET_NAT_HIT(ch)         (ch->specials.org_hit)
@@ -279,27 +309,29 @@ do {                   \
 #define GET_MAX_MOVE_POINTS(ch) (ch->points.max_move)
 #define GET_MAX_MOVE(ch)        (move_limit(ch))
 
+#define GET_THACO(ch)           (calc_thaco(ch))
+
+#define GET_HITROLL(ch)         (ch->points.hitroll)
+#define GET_DAMROLL(ch)         (ch->points.damroll)
+
 #define GET_AC(ch)              (ch->points.armor)
-#define GET_MOD_AC(ch)          (compute_ac(ch))
+#define GET_MOD_AC(ch)          (calc_ac(ch))
 
-#define GET_GOLD(ch)    ((ch)->points.gold)
-#define GET_BANK(ch)    ((ch)->points.bank)
+#define GET_GOLD(ch)            (ch->points.gold)
+#define GET_BANK(ch)            (ch->points.bank)
 
-#define GET_EXP(ch)     ((ch)->points.exp)
+#define GET_HOME(ch)            (ch->player.hometown)
 
-#define GET_HEIGHT(ch)  ((ch)->player.height)
-#define GET_WEIGHT(ch)  ((ch)->player.weight)
+#define GET_BLEED(ch)           (ch->ver3.bleed_limit)
+#define GET_WIMPY(ch)           (ch->new.wimpy)
 
-#define GET_SEX(ch)     ((ch)->player.sex)
+#define GET_DEATH_LIMIT(ch)     (ch->ver3.death_limit)
 
-#define GET_HITROLL(ch) ((ch)->points.hitroll)
-#define GET_DAMROLL(ch) ((ch)->points.damroll)
+#define GET_CARRYING(ch)        (ch->carrying)
 
-#define AWAKE(ch) (GET_POS(ch) > POSITION_SLEEPING)
+#define CHAR_NEXT_IN_ROOM(ch)   (ch->next_in_room)
 
 /* Object And Carry related macros */
-
-#define GET_ITEM_TYPE(obj) ((obj)->obj_flags.type_flag)
 
 #define CAN_WEAR(obj, wear_flag) (IS_SET((obj)->obj_flags.wear_flags, wear_flag))
 
@@ -308,14 +340,9 @@ do {                   \
 #define CAN_GET_OBJ(ch, obj) \
 (CAN_TAKE((ch), (obj)) && CAN_CARRY_OBJ((ch), (obj)) && CAN_SEE_OBJ((ch), (obj)))
 
-#define OBJS(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
-  OBJ_SHORT((obj)) : "something")
-
-#define OBJS2(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
-  rem_prefix(OBJ_SHORT((obj))) : "something")
-
-#define OBJN(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? \
-  fname(OBJ_NAME((obj))) : "something")
+#define OBJS(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? OBJ_SHORT((obj)) : "something")
+#define OBJS2(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? rem_prefix(OBJ_SHORT((obj))) : "something")
+#define OBJN(obj, vict) (CAN_SEE_OBJ((vict), (obj)) ? fname(OBJ_NAME((obj))) : "something")
 
 #define IS_INDOORS(ch) (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, INDOORS) || world[CHAR_REAL_ROOM(ch)].sector_type == SECT_INSIDE)
 #define IS_OUTSIDE(ch) (!IS_INDOORS(ch))
@@ -349,36 +376,17 @@ do {                   \
                              ((obj)->obj_flags.type_flag != ITEM_TRASH) &&\
                              ((obj)->obj_flags.type_flag != ITEM_KEY  )   ) : 0 )
 
-#define GET_OBJ_WEIGHT(obj)     ((obj)->obj_flags.weight)
 #define strMove(d,s) memmove(d,s,strlen(s)+1)
 
-#define GET_CLASS_NAME(ch) (!IS_NPC(ch) ? pc_class_types[(int)GET_CLASS(ch)] : npc_class_types[(int)GET_CLASS(ch)])
-#define GET_EXP_TO_LEVEL(ch) (GET_LEVEL(ch) < LEVEL_IMP ? exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch) : 0)
 #define ZONE_NAME_CH(ch) (zone_table[real_zone(ch->specials.zone)].name)
 #define ZONE_NUM_CH(ch) (ch->specials.zone)
 #define GET_PLAY_TIME(ch) (real_time_passed((time(0) - ch->player.time.logon) + ch->player.time.played, 0))
-#define GET_CLAN(ch) (clan_list[(int)GET_CLAN_NUM(ch)])
-#define GET_CLAN_NUM(ch) (ch->ver3.clan_num)
 #define GET_WIZINV(ch) (ch->new.wizinv)
-#define GET_DEATH_LIMIT(ch) (ch->ver3.death_limit)
-#define GET_SC(ch) (ch->ver3.subclass)
-#define GET_SC_NAME(ch) (subclass_name[GET_SC(ch) - 1])
-#define GET_SC_LEVEL(ch) (ch->ver3.subclass_level)
-#define GET_RANKING(ch) (ch->ver3.ranking)
-#define GET_SCP(ch) (ch->ver3.subclass_points)
-#define GET_QP(ch) (ch->ver3.quest_points)
 #define GET_PRAC(ch) (ch->specials.spells_to_learn)
-#define GET_BLEED(ch) (ch->ver3.bleed_limit)
 #define GET_BEEN_KILLED(ch) (ch->new.been_killed)
-#define GET_THACO(ch) (thaco[GET_CLASS(ch) - 1][GET_LEVEL(ch)])
-#define S_ANA(string) (index("aeiouyAEIOUY", *string) ? "An" : "A")
-#define S_SANA(string) (index("aeiouyAEIOUY", *string) ? "an" : "a")
 #define OBJ_TIMER(obj) (obj->obj_flags.timer)
-#define GET_REMORT_EXP(ch) (ch->ver3.remort_exp)
 #define IS_AFFECTED2(ch, aff) (ch ? IS_SET(ch->specials.affected_by2, aff) : FALSE)
-#define GET_DEATH_EXP(ch) (ch->ver3.death_exp)
 #define GET_SCORE_STYLE(ch) (ch->ver3.sc_style)
-#define GET_CLAN_NAME(ch) ((GET_CLAN_NUM(ch) && GET_CLAN(ch).name) ? GET_CLAN(ch).name : "None")
 #define GET_QUEST_STATUS(ch) (ch->quest_status)
 #define GET_QUEST_TIMER(ch) (ch->ver3.time_to_quest)
 #define GET_IMM_FLAGS(ch) (ch->new.imm_flags)
@@ -450,11 +458,10 @@ do {                   \
 #define IS_MOB(ch)          (ch ? IS_SET(MOB_ACT(ch), ACT_ISNPC) && (MOB_NUM_IN_GAME(ch) > -1) : FALSE)
 #define IS_MOUNT(ch)        (ch ? IS_SET(MOB_ACT(ch), ACT_MOUNT) : FALSE)
 
-#define EQ(ch, loc)        (((loc >= WEAR_LIGHT) && (loc <= WEAR_HOLD)) ? ch->equipment[loc] : NULL)
-
-#define IS_WEAPON(obj)     (obj ? ((GET_ITEM_TYPE(obj) == ITEM_WEAPON) || (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON)) : FALSE)
-#define IS_1H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_WEAPON) : FALSE)
-#define IS_2H_WEAPON(obj)  (obj ? (GET_ITEM_TYPE(obj) == ITEM_2H_WEAPON) : FALSE)
+#define EQ(ch, pos)        (ch->equipment[pos])
+#define IS_WEAPON(obj)     (obj ? ((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) : FALSE)
+#define IS_1H_WEAPON(obj)  (obj ? (OBJ_TYPE(obj) == ITEM_WEAPON) : FALSE)
+#define IS_2H_WEAPON(obj)  (obj ? (OBJ_TYPE(obj) == ITEM_2H_WEAPON) : FALSE)
 #define GET_WEAPON(ch)     ((EQ(ch, WIELD) && IS_WEAPON(EQ(ch, WIELD))) ? EQ(ch, WIELD) : NULL)
 #define GET_WEAPON2(ch)    ((EQ(ch, HOLD) && IS_WEAPON(EQ(ch, HOLD))) ? EQ(ch, HOLD) : NULL)
 
@@ -464,7 +471,7 @@ do {                   \
 #define IS_SKILL_ATTACK(attack_type, damage_type) (!IS_WEAPON_ATTACK(attack_type) && IS_PHYSICAL_DAMAGE(damage_type))
 #define IS_SPELL_ATTACK(attack_type, damage_type) (!IS_WEAPON_ATTACK(attack_type) && IS_MAGICAL_DAMAGE(damage_type))
 
-#define IS_CORPSE(obj)     (obj ? ((GET_ITEM_TYPE(obj) == ITEM_CONTAINER) && (OBJ_VALUE(obj, 3) == 1)) : FALSE)
+#define IS_CORPSE(obj)     (obj ? ((OBJ_TYPE(obj) == ITEM_CONTAINER) && (OBJ_VALUE(obj, 3) == 1)) : FALSE)
 #define IS_PC_CORPSE(obj)  (obj ? (IS_CORPSE(obj) && ((OBJ_COST(obj) == PC_CORPSE) || (OBJ_COST(obj) == CHAOS_CORPSE))) : FALSE)
 #define IS_NPC_CORPSE(obj) (obj ? (IS_CORPSE(obj) && (OBJ_COST(obj) == NPC_CORPSE)) : FALSE)
 #define IS_STATUE(obj)     (obj ? (IS_CORPSE(obj) && ((OBJ_COST(obj) == PC_STATUE) || (OBJ_COST(obj) == NPC_STATUE))) : FALSE)

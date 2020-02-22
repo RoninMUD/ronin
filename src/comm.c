@@ -522,7 +522,7 @@ void check_corpses(void) {
       name_to_corpsefile(j,fl);
       obj_to_corpsefile(j,fl);
     }
-    else if((GET_ITEM_TYPE(j) == ITEM_CONTAINER) && (j->obj_flags.value[3])) {
+    else if((OBJ_TYPE(j) == ITEM_CONTAINER) && (j->obj_flags.value[3])) {
       if(!COUNT_RENTABLE_CONTENTS(j)) continue;
       if(j->obj_flags.cost!=PC_STATUE && j->obj_flags.cost!=PC_CORPSE) continue;
       obj=0;
