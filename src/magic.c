@@ -800,7 +800,7 @@ void spell_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         return;
       }
 
-      send_to_char("You feel righteous.\n\r", victim);
+      send_to_char("You feel blessed.\n\r", victim);
       af.type      = SPELL_BLESS;
       af.duration  = MAX(6,GET_LEVEL(ch)/5);
       af.modifier  = 1;

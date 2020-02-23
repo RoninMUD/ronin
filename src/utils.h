@@ -180,6 +180,7 @@ do {                   \
 #define OBJ_OWNED_BY(obj)        (obj->owned_by)
 #define OBJ_FUNC(obj)            (obj->func)
 #define OBJ_LOG(obj)             (obj->log)
+#define OBJ_CONTAINS(obj)        (obj->contains)
 #define OBJ_NEXT_CONTENT(obj)    (obj->next_content)
 
 #define OBJ_NUM_IN_GAME(obj)     (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
