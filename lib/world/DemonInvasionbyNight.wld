@@ -63,12 +63,12 @@ An opening in the floor opens into a tunnel below.
 opening~
 9 -1 27703
 E
-boulder~
-A large boulder sits here and looks like it can just bearly be moved.
-~
-E
 opening~
 An opening in the floor opens into a tunnel below.
+~
+E
+boulder~
+A large boulder sits here and looks like it can just bearly be moved.
 ~
 S
 #27703
@@ -96,12 +96,12 @@ An opening in the ceiling opens into a small crevice behind some rocks.
 opening~
 9 -1 27702
 E
-opening~
-A small opening in the ceiling opens into a small crevice behind some rocks.
-~
-E
 moss fungus fungi cracks walls floor~
 Dark green moss and light brown fungi grows from cracks in the walls.
+~
+E
+opening~
+A small opening in the ceiling opens into a small crevice behind some rocks.
 ~
 S
 #27704
@@ -326,12 +326,12 @@ A small crack barely big enough to crawl through, leads into the chambers above.
 crack~
 9 -1 27707
 E
-glyphs wall walls blood~
-Indecipherable pictures cover the walls and are written in blood.
-~
-E
 waste meat~
 Needless to say, there are flies... lots of them...
+~
+E
+glyphs wall walls blood~
+Indecipherable pictures cover the walls and are written in blood.
 ~
 S
 #27715
@@ -477,7 +477,8 @@ to a glassy sheen by the frozen winds.  Small dips and rises, which would
 normally be unnoticeable on ordinary terrain, prove to be difficult to traverse
 and slow to circumvent.  Frost and snow cover most of the rest of the ice flow,
 gradually adding to the overall bulk of the glacier.  Footprints make a winding
-path through the snow to the north, heading for an immense crack in the ice.
+path through the snow to the north, heading for an immense crack in the ice.  A
+small pile of powdery snow forms a low snowbank to the east.
 ~
 277 0 9
 D0
@@ -485,7 +486,7 @@ D0
 ~
 0 -1 27723
 D1
-There's a soft pile of snow lying here.
+A soft pile of snow currently blocks the way to the east.
 ~
 snow pile~
 8 -1 23070
@@ -499,19 +500,15 @@ Upon the Glacier~
    The middle of the glacier is a lonely place indeed.  Nothing seems to be
 able to survive anywhere on this barren landscape.  Snow drifts pile up in
 places several meters thick and a few meters tall, their surfaces crystalline
-and crumbly.  Some footprints in the snow appear to branch off at this point, a
-larger number of them lead to the north, but a few turn to the east, farther
-out onto the glacier.
+and crumbly.  Some footprints in the snow can be seen here and there, a number
+of them leading to the north toward the center of the glacier, but a few point
+south and the far-off cliff edge.
 ~
 277 0 9
 D0
 ~
 ~
 0 -1 27724
-D1
-~
-~
-0 -1 27727
 D2
 ~
 ~
@@ -544,32 +541,19 @@ Near a Glacial Rift~
 depression.  The glacier surface here is semi-transparent ice with no snow
 cover.  There seems to be some slight movement apparent through the glassy
 material, though what exactly causes it cannot be seen.  The slope up to the
-west is too slippery to climb, but the path continues to the east and then the
-north, up and along a large snow drift.
+west is quite slippery but traversable, while an icy path with some claw-like
+scratches marked upon it continues to north towards a massive rift in the
+glacier surface.
 ~
 277 0 9
 D0
 ~
 ~
 0 -1 27726
-D1
-~
-~
-0 -1 27730
 D3
 ~
 ~
 0 -1 27724
-E
-map designs battle plans drawing~
-
-==========
-| \ \    |
-|+ | \   |
-|  \ x|  |
-|   `-'  |
-==========
-~
 S
 #27726
 Entrance to the Glacial Rift~
@@ -591,36 +575,47 @@ A narrow ledge of ice leads down into the ravine.
 0 -1 27731
 S
 #27727
-Glassy Surface~
-   The path drops down a sharp, slick slope into a small bowl-shaped
-depression.  The glacier surface here is semi-transparent ice with no snow
-cover.  There seems to be some slight movement apparent through the glassy
-material, though what exactly causes it cannot be seen.  The slope up to the
-west is too slippery to climb, but the path continues to the north up and along
-a large snow drift.
+A Dark Passage of Scorched Stone~
+   The walls of this passage are constructed from blocks of rough-hewn black
+stone.  The dark coloring of the stone appears to be a thick layer of soot,
+with strange patterns traced into the grime along the walls and ceiling.  A
+deep scratch mars the floor, roughly a quarter of a meter deep and half as
+wide, etched into the dark rock by some unknown entity.  The scratch meanders
+down the passage to the east and into the darkness beyond.  A cross-shaped
+hallway lies to the south, with exits branching off in every direction.
 ~
-277 0 9
+277 9 0
 D1
 ~
 ~
 0 -1 27728
+D2
+~
+~
+0 -1 27782
 E
-glass glassy surface~
-The floor here is semi-clear and slick, offering just a hint of what lies below.
+scratch floor~
+The scratch in the ground is ragged and uneven, as if something heavy was
+dragged across the rocky surface.
+~
+E
+patterns walls ceiling soot~
+Strange patterns appearing otherworldly in design are traced in the soot
+covering the walls of this passage.  Their purpose, if any, remains hidden.
 ~
 S
 #27728
-Upon a Snow Drift~
-   The climb up the side of this snow drift is a slow and dangerous process,
-with many soft spots in the snow for unweary hands and feet to slip into.  Much
-of the surrounding area, including the entirety of the glacier, can bee seen
-from the top of this white mound.  Tall mountains ring this area with snow-
-covered peaks, blocking off passage from nearly every direction.  To the west
-the valley continues, but the glacier ends and a swampy marshland fills the
-rest of this hidden place.  A narrow river flows through that area, flowing
-from the base of the glacier.
+A Deeply Scarred Tunnel~
+   Deep gashes have been made in the rock walls in this section of the twisting
+underground tunnel network.  Solid stone globules are spattered across the
+floor, concentrated around an unnatural looking mound on the floor.  A
+partially molten metallic rod projects from one side of the tunnel directly
+above the mound, protruding nearly two meters from the wall.  The tip of the
+rod is jagged and twisted, as if it was snapped off by some massive force.  The
+gouge in the floor leading from the east becomes erratic for several meters
+before trailing off deeper into the darkness to the north.
 ~
-277 0 9
+277 9 0
 D0
 ~
 ~
@@ -629,65 +624,104 @@ D3
 ~
 ~
 0 -1 27727
+E
+scratch gouge floor~
+The scratch in the ground is ragged and uneven, as if something heavy was
+dragged across the rocky surface.
+~
+E
+rod molten metallic~
+A dull metallic rod of unknown metallurgic origin projects nearly two meters
+from the tunnel wall, its tip twisted and shorn away.  Dark rocky material has
+solidified along the jagged end, dripping to form some of the globules that
+litter the floor.
+~
+E
+mound~
+The mound is composed of the same material as the globules, but in a denser
+concentration.  It forms something like an unnatural looking stalagmite.
+~
+E
+globules~
+Dark stone beads approximately 10 centimeters in diameter are scattered about
+the floor of the tunnel, hardened and affixed to the rocky surface.
+~
+E
+gashes walls~
+The gashes look exactly like something a massive, sharp-clawed hand could make,
+only these have been made into solid stone.  Whatever created them was a force
+of nature, or perhaps foreign to nature altogether.
+~
 S
 #27729
-Along the Ravine~
-   The path along the ravine continues for a ways before turning away from it
-and heading to the south.  This change of direction seems to be due to the fact
-that the edge looks cracked and unstable at that point.  Footprints in the snow
-here do not look to be entirely human made, some being too large and deep for
-an adventurer.  A small stack of stones rests along the side of a dune, piled
-by someone or something for a not-so-apparent reason.
+A Tunnel of Warped Stone~
+   A series of strange half-circle ribbons of stone arc from the walls in this
+section of tunnel.  The protrusions are almost organic in nature, but have
+clearly been carved away from the surrounding rock by some unnatural force.  A
+number of stone slabs litter the floor, broken away from the wall as if torn
+or smashed and making footing precarious.  Thick black ash float about the area
+in a snow-like haze, somewhat dampening the sounds from other parts of this
+underground complex.  The ever-present gash in the floor passes through this
+section of dark tunnel, leading away to the north and south.
 ~
-277 0 9
+277 9 0
+D0
+~
+~
+0 -1 27730
 D2
 ~
 ~
 0 -1 27728
-D3
-~
-~
-0 -1 27730
 E
-foot footprints~
-
-Oooo
-\  |
- | |
-  o
+scratch floor~
+The scratch in the ground is ragged and uneven, as if something heavy was
+dragged across the rocky surface.
 ~
 E
-stones stone stack pile~
-
-  ( )
- (   )
-(_____)
+ash black~
+The ash is delicate, like snow, but smells strongly caustic.  It crumbles to a
+fine powder if touched, leaving an abrasive residue behind.
 ~
 E
-ravine fissure edge~
-The glacier ends abruptly and drops off into darkness below.
+protrusions walls~
+Sheets of stone have been stripped or torn from the wall, likely heated to a
+pliable state before cooling again in their present form.
 ~
 S
 #27730
-Along the Ravine~
-   A narrow path has been made by some sort of foot travel along the edge of a
-ravine in the glacier.  The rift floor is far down from here, but is visible.
-Large snowdrifts crowd around the edge, depositing snow into the fissure when
-piled too high or disturbed.  A narrow ice shelf along the ravine wall can be
-seen to the west.
+A Carbon-Blasted Chamber~
+   The hulking remains of some twisted creature sits slumped at the back of
+this ash-covered chamber, petrified and partly melted into the surrounding
+stone.  The walls and ceiling are heavily pockmarked, each impression filled
+with a myriad of pitch black crystals embedded within that hint at some kind of
+violent explosion.  The massive scratch in the chamber floor coming from the
+south ends here at the base of the creature's remains, leading directly to a
+massive gaping wound in its belly.  The tunnel from the south terminates here,
+and is the only way in or out.
 ~
-277 0 9
-D1
+277 9 0
+D2
 ~
 ~
 0 -1 27729
-D3
-~
-~
-0 -1 27725
 E
-ravine fissure edge~
-The glacier ends abruptly and drops off into darkness below.
+scratch floor~
+The scratch wavers and stutters across the blasted stone surface of the
+chamber, coming to an abrupt halt at the base of some hulking creature's
+blasted remains.
+~
+E
+crystals black~
+The crystals appear to be composed of pure carbon and absorb most of the light
+that falls upon their dull surface.
+~
+E
+remains hulking creature~
+The petrified remains of some hulking creature are slumped here, a gaping
+wound exposing its now crystallized innards.  It appears as if the creature
+dragged itself to this final resting place before exploding from within.  A
+trace of molten metal has cooled after leaking from a gash in its body.
 ~
 S
 #27731
@@ -1246,10 +1280,10 @@ tunnel continues a ways further in both directions.
 ~
 277 9 5
 D0
-A small crawl-tunnel leads into the stone to the north.
+A small tunnel leads into the stone to the north.
 ~
 tunnel~
-9 -1 27766
+9 -1 27767
 D1
 ~
 ~
@@ -1428,29 +1462,21 @@ D2
 0 -1 27764
 S
 #27766
-Crawling Through the Stone~
-   The small tunnel through the stone narrows down rapidly to an average
-diameter of about one meter, though less in some places.  It is almost an
-impossible task to crawl through such a tight place, but with rotations and
-contortions of the body slow progress can be made.  Scuff marks upon the floor
-and walls appear to be made by some sort of regular travel through this passage
-by some unknown thing.  The walls are smooth along the length of the tunnel,
-looking unnatural, and yet not seeming to be made by any sort of tool or claw.
-Whatever made it looks to have burrowed through the solid rock by some other
-means.  The crawl-space bends at this point, traveling west in one direction,
-and south in the other.
+A Rubble-Strewn Alcove~
+   This almost circular alcove appears to have formed when part of the magma
+tube's walls collapsed.  Black shards of obsidian litter the ground, having
+fallen away from the cavern walls over time, a reminder of this tunnel
+section's volcanic origin.  A trace of water streaks the crumbling walls,
+staining them dark orange in places with organic residue.  The air here is
+stagnant, warm, and sticky, likely a result of the moisture that has become
+trapped so deep underground.  The main magma tube can be seen to the east, and
+is the only avenue of egress from this dank place.
 ~
-277 265 5
-D2
-The crawl-tunnel continues to the south.
+277 9 5
+D1
 ~
-tunnel~
-9 -1 27757
-D3
-The crawl-tunnel continues to the west.
 ~
-tunnel~
-9 -1 27767
+0 -1 27772
 S
 #27767
 Within a Small Lair~
@@ -1460,46 +1486,35 @@ partially eaten and rotting corpses of unrecognizable creatures.  Several
 gnawed-on bones litter the floor, as well as a thin layer of what appears to be
 bone powder.  The rounded ceiling makes standing in this room by anyone taller
 than a meter and a half quite a hunched-over task.  Meeting with the creature
-who dwells here is probably not the wisest thing one could do.  This place has
-two exits, a crawl-tunnel to the north and another to the east.
+who dwells here is probably not the wisest thing one could do.  Crawling
+through the small tunnel to the south is the only way to exit this lair.
 ~
-277 135299977 5
-D0
-A small tunnel, barely large enough to crawl through leads to the north.
-~
-tunnel~
-9 -1 27768
-D1
-A small tunnel, barely large enough to crawl through leads to the east.
+277 16809993 5
+D2
+A rough tunnel burrowed into the stone opens into a magma tube to the south.
 ~
 tunnel~
-9 -1 27766
+9 -1 27757
 E
 bones corpses rotting creatures~
 The foul remains of half-eaten creatures has been left upon the floor to rot.
 ~
 S
 #27768
-Crawling Through the Stone~
-   This small tube travels in a fairly straight fashion from north to south.
-Traces of recent travel through this space hint at the fact that something
-might indeed live wherever this may lead.  A few dark stains show up on the
-floor and walls in various places, though it is too old to be certain of what
-the substance might be.  A foul smell wafts from the south every now and again,
-smelling very much like the stench of death.  Passage through this tight place
-is slow and painful, but possible.
+A Dead End Spur~
+   This section of tunnel appears to have been abandoned during the creation of
+the main underground complex.  A number of old and disused tools have been
+discarded here, scattered across the floor or leaning against the uneven stone
+walls.  Some rotten timber is stacked to one side, a few metal spikes strewn
+about nearby.  The ground here is uneven, and a mound of rubble is piled near
+the rear section of the passage.  The spur dead ends here, with the only way
+out being the exit to the south.
 ~
-277 265 5
-D0
-The crawl-tunnel continues to the north.
-~
-tunnel~
-9 -1 27769
+277 9 5
 D2
-The crawl-tunnel continues to the south.
 ~
-tunnel~
-9 -1 27767
+~
+0 -1 27769
 S
 #27769
 Decending Deeper Into the Earth~
@@ -1509,19 +1524,17 @@ earth through a series of twists and turns, heading in an eastern direction.
 The stone has been crudely hacked by someone or something that wanted to reach
 an exit to the surface in a short time, uncaring about aesthetics.  Much of the
 stone debris still dusts the floor with rock silt and gravel pieces.  A small
-opening in the stone to the south looks like a more natural tunnel through the
-earth, though it is only large enough to crawl through.
+spur leading off from the main tunnel dead ends a short distance to the north.
 ~
 277 9 5
+D0
+~
+~
+0 -1 27768
 D1
 ~
 ~
 0 -1 27770
-D2
-A small crawl-tunnel leads into the stone to the south.
-~
-tunnel~
-9 -1 27768
 D3
 ~
 ~
@@ -1575,9 +1588,10 @@ An Ancient Magma Tube~
 very few turns, and minor ones when it does.  The intensity of the heat which
 flowed with the molten rock must have been great indeed to have burrowed so
 proficiently through the stony depths.  The grade begins to steepen perceptibly
-as the tunnel heads deeper and deeper.  The diameter of the tunnel is such that
+as the tunnel heads deeper and deeper; its diameter of the tunnel is such that
 perhaps ten men could comfortably walk side by side, each carrying six meter
-pikes over their shoulders.
+pikes over their shoulders.  A small alcove can be seen to the west, created
+when part of the tube wall collapsed after its formation.
 ~
 277 9 5
 D0
@@ -1588,6 +1602,10 @@ D2
 ~
 ~
 0 -1 27771
+D3
+~
+~
+0 -1 27766
 S
 #27773
 An Ancient Magma Tube~
@@ -1687,12 +1705,12 @@ D3
 ~
 0 -1 27775
 E
-table~
-The table is covered with scraps of what look like battle-plans and orders.
-~
-E
 parchment scraps writing~
 The writing seems to indicated battle strategies, plans and orders.
+~
+E
+table~
+The table is covered with scraps of what look like battle-plans and orders.
 ~
 S
 #27777
@@ -1722,12 +1740,13 @@ from the next.
 door~
 1 -1 27778
 E
-27777 forge~
-A blazingly hot forge, used to melt the mined metal.
+27777 vat~
+The vat is filled with liquid metal and radiates tremendous heat.
 ~
 E
-27777 anvil~
-A large metal anvil, seemingly too large for a human to use practically.
+27777 hole opening portal~
+The opening in the stone floor looks just large enough for a small creature to
+crawl into or a bucket to come out of.
 ~
 E
 27777 contraption ropes pulleys~
@@ -1736,13 +1755,12 @@ light.  It continually turns a wheel that pulls several ropes through a series
 of pulleys.
 ~
 E
-27777 hole opening portal~
-The opening in the stone floor looks just large enough for a small creature to
-crawl into or a bucket to come out of.
+27777 anvil~
+A large metal anvil, seemingly too large for a human to use practically.
 ~
 E
-27777 vat~
-The vat is filled with liquid metal and radiates tremendous heat.
+27777 forge~
+A blazingly hot forge, used to melt the mined metal.
 ~
 S
 #27778
@@ -1848,14 +1866,14 @@ D2
 ~
 0 -1 27780
 E
+scrawls pictures plans walls~
+Intricate battle-plans and pictures of attack targets fill the room.
+~
+E
 blood pools gore body parts mess floor~
 The amount of gore and variation of the body parts strewn about seems to
 indicate a large number of creatures were killed, maimed or mutilated in this
 room.
-~
-E
-scrawls pictures plans walls~
-Intricate battle-plans and pictures of attack targets fill the room.
 ~
 S
 #27782
@@ -1865,10 +1883,15 @@ containing a stairway that opens into the ceiling and beyond.  This hall is
 unlit, save for an angry reddish-orange glow from the west, caused by what
 looks to be a cavern full of molten rock.  A narrow ledge in that direction
 connects to a stone bridge that snakes its way through the magma flows and
-disappears beyond sight to the north.  The passage fades into darkness to the
-east as it continues in a straight line through the earth.
+disappears beyond sight.  The passage fades into darkness to the east as it
+continues in a straight line through the earth.  The dark maw of a rough
+passage deeper into the stone opens to the north.
 ~
 277 67108872 0
+D0
+~
+~
+0 -1 27727
 D1
 ~
 ~
@@ -2154,7 +2177,7 @@ overload all five senses, plus others previously unknown.  A narrow band of
 familiarity flickers in some undefined direction for both an instant and an
 eternity, a last glimpse of what might have been reality.
 ~
-277 494453388 0
+277 1568195084 0
 D0
 ~
 ~
