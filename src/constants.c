@@ -11,7 +11,7 @@ const char * const spell_wear_off_msg[] = {
   "RESERVED DB.C",
   "You feel less protected.",
   "!Teleport!",
-  "You feel less righteous.",
+  "You feel less blessed.",
   "You feel a cloak of blindness disolve.",
   "!Burning Hands!",
   "!Call Lightning",
