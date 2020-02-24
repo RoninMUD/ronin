@@ -141,7 +141,9 @@ int32_t MAX(int32_t a, int32_t b) {
 
 // TODO: Change to not use static char.
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL] = { 0 };
+  static char buf[MIL];
+
+  buf[0] = '\0';
 
   if (ch && vict) {
     if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
@@ -169,7 +171,9 @@ char *PERS(CHAR *ch, CHAR *vict) {
 
 // TODO: Change to not use static char.
 char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL] = { 0 };
+  static char buf[MIL];
+
+  buf[0] = '\0';
 
   if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
     snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
@@ -196,7 +200,9 @@ char *POSSESS(CHAR *ch, CHAR *vict) {
 
 // TODO: Make a better color system someday.
 char *CHCLR(CHAR *ch, int color) {
-  static char color_code[32] = { 0 };
+  static char color_code[32];
+
+  color_code[0] = '\0';
 
   if (ch->colors[0] && ch->colors[color]) {
     strlcat(color_code, Color[(((ch->colors[color]) * 2) - 2)], sizeof(color_code));
@@ -209,7 +215,9 @@ char *CHCLR(CHAR *ch, int color) {
 
 // TODO: Make a better color system someday.
 char *ENDCHCLR(CHAR *ch) {
-  static char color_code[32] = { 0 };
+  static char color_code[32];
+
+  color_code[0] = '\0';
 
   if (ch->colors[0] && ch->colors[1]) {
     strlcat(color_code, Color[(((ch->colors[1]) * 2) - 2)], sizeof(color_code));

@@ -910,16 +910,16 @@ OBJ *unequip_char(CHAR *ch, int pos) {
 
   if (!obj) return NULL;
 
+  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
+    GET_AC(ch) += apply_ac(ch, pos);
+  }
+
   EQ(ch, pos) = NULL;
 
   OBJ_CARRIED_BY(obj) = NULL;
   OBJ_EQUIPPED_BY(obj) = NULL;
   OBJ_IN_ROOM(obj) = NOWHERE;
   OBJ_IN_ROOM_V(obj) = NOWHERE;
-
-  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
-    GET_AC(ch) += apply_ac(ch, pos);
-  }
 
   for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
     affect_modify(ch, OBJ_AFF_LOC(obj, i), OBJ_AFF_MOD(obj, i), OBJ_BITS(obj), OBJ_BITS2(obj), FALSE);
