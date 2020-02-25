@@ -251,7 +251,7 @@ const char * const spell_wear_off_msg[] = {
   "!protect!",/*240*/
   "!wrath of ancients!",/*241*/
   "!victimize!", /*242*/
-  "!focus!",/*243*/
+  "You feel less focused.",/*243*/
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
