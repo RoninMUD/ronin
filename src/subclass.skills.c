@@ -272,7 +272,9 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
   act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
   act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
 
-  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_BACKFIST, DAM_PHYSICAL);
+  double multi = number(150, 175) / 100;
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * multi)), SKILL_BACKFIST, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
@@ -521,7 +523,10 @@ void do_scan(CHAR *ch, char *arg, int cmd) {
 
     if (!CAN_GO(ch, dir)) continue;
 
-    if (number(1, 121) > GET_LEARNED(ch, SKILL_SCAN)) {
+    exit_room = world[room].dir_option[dir]->to_room_r;
+
+    if ((number(1, 121) > GET_LEARNED(ch, SKILL_SCAN)) ||
+        ((exit_room != NOWHERE) && (exit_room != real_room(0)) && IS_SET(NO_PEEK, ROOM_FLAGS(exit_room)))) {
       printf_to_char(ch, "You failed to scan %s.\n\r", dir_name[dir]);
 
       continue;

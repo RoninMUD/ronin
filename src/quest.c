@@ -924,7 +924,7 @@ Usage: qf qc load <num> (Loads # of quest cards)\n\r\
       break;
     default:
       send_to_char("\
-Usage: qf where (location of questers)\n\r\
+Usage: qf where                   (location of questers)\n\r\
           transfer   <char>/<all> (relocate quester(s) to you)\n\r\
           give       <argument>   (give all questers items)\n\r\
           quieton    <char>/<all> (turn on quester quiet flag)\n\r\
@@ -935,19 +935,19 @@ Usage: qf where (location of questers)\n\r\
           log        <obj>/<all>  (turn on quest logging for obj)\n\r\
           teleport                (random transport around the world)\n\r\
           sbreset                 (resets scoreboard - for pkill quests)\n\r\
-                     Use SCOREBOARD to see death list (limit 99 deaths)\n\r\
           spread     <num> <vnum> (random spreading of objs)\n\r\
-          zone       <normal>/<never>/<doors> (chaos zone reset modes)\n\r\
+          zone       <normal>/<never>/<doors> (zone reset modes)\n\r\
           token      <char>       (reward the character with a subclass token)\n\r\
           qcard      load <amt>   (loads the # of quest cards)\n\r\
           qcard      collect      (pulls all qcards in the game to inventory)\n\r\
-          qinfo                 (turns on/off info flag - see quester actions)\n\r\
+          qinfo                   (turns on/off info flag - see quester actions)\n\r\
           qp/award   <char> <amt> (award the character # of quest points)\n\r\
           scp        <char> <amt> (award the character # of subclass points)\n\r\
           gold       <char> <amt> (award the character # of gold coins)\n\r\
           exp        <char> <amt> (award the character # of experience points)\n\r\
-          remort_exp <char> <amt> (award the character # of remort experience points)\n\r\n\r\
-Using most of the commands without the arguments give more information.\n\r",ch);
+          remort_exp <char> <amt> (award the character # of remort experience points)\n\r\
+          Use SCOREBOARD to see death list (limit 99 deaths)\n\r\n\r\
+Using most of the commands without the arguments gives more information.\n\r",ch);
       return;
       break;
   }

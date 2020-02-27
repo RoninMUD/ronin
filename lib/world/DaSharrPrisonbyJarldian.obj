@@ -8,11 +8,11 @@ a skirt lies here unwanted.~
 10 100000 5000
 11
 E
-silk~
+skirt~
 The texture of this skirt feels smooth.  Made from pure silk, this skirt
 would look sexy if worn right.~
 E
-skirt~
+silk~
 The texture of this skirt feels smooth.  Made from pure silk, this skirt
 would look sexy if worn right.~
 X
@@ -114,7 +114,7 @@ An Old Wooden Bench rests here.~
 700 10 10
 100
 E
-old~
+bench~
 This bench looks one touch away from falling apart.  Cobwebs surround the legs
 of the bench, while dust continues to accumulate on the body.  Closer inspection
 reveals writing of some sort, but you cannot decipher it.
@@ -126,7 +126,7 @@ of the bench, while dust continues to accumulate on the body.  Closer inspection
 reveals writing of some sort, but you cannot decipher it.
 ~
 E
-bench~
+old~
 This bench looks one touch away from falling apart.  Cobwebs surround the legs
 of the bench, while dust continues to accumulate on the body.  Closer inspection
 reveals writing of some sort, but you cannot decipher it.
@@ -191,7 +191,7 @@ A Big Boiling Pot of Stew is sitting here smelling like sh*t!~
 1000 10 10
 100
 E
-stew~
+pot~
 You've always wondered what was in prison food, and after seeing this, you
 wished you'd never asked!  Green in color, along with chunks of what appears to
 be rodents and other things not worth mentioning.  Guess the funding for
@@ -207,7 +207,7 @@ prison HEALTH isn't top priority.  Well, you have to eat sometime, and when
 you're hungry -- anything tastes good.
 ~
 E
-pot~
+stew~
 You've always wondered what was in prison food, and after seeing this, you
 wished you'd never asked!  Green in color, along with chunks of what appears to
 be rodents and other things not worth mentioning.  Guess the funding for
@@ -232,18 +232,18 @@ A hinged wooden seat rests here, sealing the hole below.~
 900 10 10
 100
 E
+hinged~
+This looks more like a piece of a tree than a seat.  It is splintered, cracked
+and has pieces of paint chipping off.  Rest your buttocks with caution, this
+wooden contraption looks more than meets the eye.  The seat looks like it
+can be opened.~
+E
 seat~
 This looks more like a piece of a tree than a seat.  It is splintered, cracked
 and has pieces of paint chipping off.  Rest your buttocks with caution, this
 wooden contraption looks more than meets the eye.  The seat looks like it
 can be opened.
 ~
-E
-hinged~
-This looks more like a piece of a tree than a seat.  It is splintered, cracked
-and has pieces of paint chipping off.  Rest your buttocks with caution, this
-wooden contraption looks more than meets the eye.  The seat looks like it
-can be opened.~
 X
 ~
 0 0 0
@@ -288,11 +288,11 @@ a dried up piece of oak lies here unnoticed.~
 10 82111 20000
 18
 E
-shield~
+oak~
 This looks like a huge chuck ripped off a tree and added a handle to hold it.
 ~
 E
-oak~
+shield~
 This looks like a huge chuck ripped off a tree and added a handle to hold it.
 ~
 X
@@ -388,8 +388,7 @@ B
 #4465
 Were Badger Mane Hair~
 A Were-Badger's Mane~
-A thick mess of hair lies here.
-~
+A thick mess of hair lies here.~
 ~
 9 112211008 257
 3 0 0 0
@@ -421,10 +420,10 @@ a thick strand of web is stuck to the ground here.~
 10 100000 8000
 12
 E
-web~
+boots~
 woven from web, these boots look like they can stick to almost anything.~
 E
-boots~
+web~
 woven from web, these boots look like they can stick to almost anything.~
 X
 ~
@@ -448,14 +447,14 @@ a hellish fire blazes over this ring.~
 10 500000 80000
 9
 E
-eye~
+demon~
 A hazzle blue illumination flares from the center of this round orb.  Soft
 to the touch, this remarkable piece of equipment seems to dart back and forth,
 seeking something only known to the ring itself.  It draws out a life of its
 own and exhibits superior power to whoever bears this ring.
 ~
 E
-demon~
+eye~
 A hazzle blue illumination flares from the center of this round orb.  Soft
 to the touch, this remarkable piece of equipment seems to dart back and forth,
 seeking something only known to the ring itself.  It draws out a life of its
@@ -483,10 +482,10 @@ A thick pair of trousers rests here.~
 10 823222 99999
 10
 E
-fortune~
+trousers~
 these trousers look like they can bring you some good luck.~
 E
-trousers~
+fortune~
 these trousers look like they can bring you some good luck.~
 X
 ~
@@ -508,11 +507,11 @@ A shimmering Crystal Ball floats gently in the air here.~
 5000 10 10
 100
 E
-ball~
+crystal~
 Glazing into the crystal ball, it locks onto your eyes and drains the life
 out of them!~
 E
-crystal~
+ball~
 Glazing into the crystal ball, it locks onto your eyes and drains the life
 out of them!~
 X
@@ -535,11 +534,11 @@ a brass coffin is lying here in the corner.~
 10 10 200000
 100
 E
-brass~
+coffin~
 The plaque inscribed reads: Modeuur, may you rest in peace.
 ~
 E
-coffin~
+brass~
 The plaque inscribed reads: Modeuur, may you rest in peace.
 ~
 X
@@ -591,11 +590,11 @@ a long noose is curled up in a bundle here.~
 10 700900 78100
 8
 E
-pretty~
+noose~
 Diamond rope, silver chain -- Pretty noose is pretty pain.
 ~
 E
-noose~
+pretty~
 Diamond rope, silver chain -- Pretty noose is pretty pain.
 ~
 X
@@ -620,12 +619,12 @@ A Translucent Object lies here unclaimed.~
 10 912872 91000
 9
 E
-helm~
+translucent~
 A spectacular head piece that looks to be made from the clearest of glass,
 it shines with authority and looks as if it can provide good protection.
 ~
 E
-translucent~
+helm~
 A spectacular head piece that looks to be made from the clearest of glass,
 it shines with authority and looks as if it can provide good protection.
 ~
@@ -736,13 +735,13 @@ a soft glow is coming from a cross here.~
 10 700000 10000
 7
 E
-cross~
+virtue~
 This cross is the symbol of all that is sacred.  It is made from a marble
 frame with a jewel that is engraved at the very center of this cross.  It
 shines with authority and would only serve those who are truely pure.
 ~
 E
-virtue~
+cross~
 This cross is the symbol of all that is sacred.  It is made from a marble
 frame with a jewel that is engraved at the very center of this cross.  It
 shines with authority and would only serve those who are truely pure.
@@ -771,12 +770,12 @@ a long flowing gown is spread along the floor here.~
 10 723000 30000
 9
 E
-gown~
+judgement~
 Long, white flowing robes -- this gown is made from pure silk.  It would
 fit on anyone that is a saint and burn those who are evil.
 ~
 E
-judgement~
+gown~
 Long, white flowing robes -- this gown is made from pure silk.  It would
 fit on anyone that is a saint and burn those who are evil.
 ~
@@ -802,14 +801,14 @@ Axe crackles with energy as it brings down it's judgement.~
 30 10 100000
 10
 E
-axe~
-This giant axe hums with hunger -- waiting to deliver its judgement.  The
+justice~
+This giant axe hums with hunger -- waiting to deliver its judgement.  The 
 handle is made from pure ivory and the blade itself is forged from adamanite.
 It looks like a great weapon, problem is -- the axe chooses his wielders.
 ~
 E
-justice~
-This giant axe hums with hunger -- waiting to deliver its judgement.  The 
+axe~
+This giant axe hums with hunger -- waiting to deliver its judgement.  The
 handle is made from pure ivory and the blade itself is forged from adamanite.
 It looks like a great weapon, problem is -- the axe chooses his wielders.
 ~
@@ -835,6 +834,12 @@ An Ornament is lying here glowing with a blinding white light.~
 2 19000 25000
 6
 E
+inscription~
+
+           Justice and Righteousness will stand forever.
+
+~
+E
 ornament~
 
   This extravagant Ornament is made from the finest gold refined by fire.  It
@@ -842,12 +847,6 @@ gives off a blinding white light and you can feel the evil as it shudders in
 the presence of Righteousness.  Anyone who encompasses the power contained
 within is sure to fear no evil and will prevail over it.  As you look more
 closely you see an inscription on the inside.
-
-~
-E
-inscription~
-
-           Justice and Righteousness will stand forever.
 
 ~
 X

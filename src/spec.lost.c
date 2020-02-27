@@ -165,7 +165,7 @@ int lw_witchdoctor(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         tmp = i->next_content;
 
         /* if it is a corpse */
-        if (GET_ITEM_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3]) {
+        if (OBJ_TYPE(i)==ITEM_CONTAINER && i->obj_flags.value[3]) {
           if(number(0,4)) continue; /* 20% chance of making a zombie */
 
           act("$n gestures slightly and says 'Arise, my minion!'"

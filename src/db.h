@@ -18,8 +18,8 @@
 #define HEROES_FILE       "heroes"        /* for the 'heroes' command  */
 #define NEWS_FILE         "news"          /* for the 'news' command     */
 #define MOTD_FILE         "motd"          /* messages of today          */
-#define NEWBIEMOTD_FILE   "newbiemotd"
-#define GODMOTD_FILE      "godmotd"
+#define NEWBIEMOTD_FILE   "motd.newbie"
+#define GODMOTD_FILE      "motd.god"
 #define TIME_FILE         "time"          /* game calendar information  */
 #define IDEA_FILE         "ideas"         /* for the 'idea'-command     */
 #define TYPO_FILE         "typos"         /*         'typo'             */

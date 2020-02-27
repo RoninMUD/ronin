@@ -97,8 +97,8 @@ void set_item_value (struct obj_data *o, int val, int new) ;
 void move_objs_to_room (int frm, int to) ;
 void move_chars_to_room (int frm, int to) ;
 
-int ISCARRYING_W(struct char_data *ch);
-int GETOBJ_WEIGHT(struct obj_data *obj);
+int ISCARRYING_W(CHAR *ch);
+int GETOBJ_WEIGHT(OBJ *obj);
 bool HAS_BOAT(CHAR *ch);
 int CHAR_HAS_LEGS(struct char_data *ch);
 int CORPSE_HAS_TROPHY(struct obj_data *obj);
@@ -109,7 +109,7 @@ bool SAME_GROUP_EX(CHAR *ch1, CHAR *ch2, bool ignore_aff_group);
 bool SAME_GROUP(CHAR *ch1, CHAR *ch2);
 
 char *how_good(int percent);
-void check_equipment(struct char_data *ch);
+void check_equipment(CHAR *ch);
 void produce_core();
 void empty_container(struct obj_data *j) ;
 void empty_all_containers(struct char_data *ch);

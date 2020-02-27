@@ -108,7 +108,7 @@ void get(struct char_data *ch, struct obj_data *obj_object,
   if (sub_object) {
     /* Log loot of PC corpse - Ranger Feb 97 */
     /* Check for PC corpse or Statue */
-    if((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+    if((OBJ_TYPE(sub_object) == ITEM_CONTAINER) &&
        (sub_object->obj_flags.value[3]) &&
        (sub_object->obj_flags.cost==PC_CORPSE ||
         sub_object->obj_flags.cost==PC_STATUE) ) {
@@ -137,7 +137,7 @@ void get(struct char_data *ch, struct obj_data *obj_object,
     }
   } else {
     /* Log corpse getting picked up - Ranger June 97 */
-    if((GET_ITEM_TYPE(obj_object) == ITEM_CONTAINER) &&
+    if((OBJ_TYPE(obj_object) == ITEM_CONTAINER) &&
        (obj_object->obj_flags.value[3]) &&
        (obj_object->obj_flags.cost==PC_CORPSE ||
         obj_object->obj_flags.cost==PC_STATUE) ) {
@@ -191,12 +191,12 @@ int get_obj_from_object(struct char_data *ch, char *name, struct obj_data *sub_o
   struct obj_data *obj_object;
   int total=0;
 
-  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
-    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+  if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) || (OBJ_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+    } else if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
       printf_to_char(ch,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
@@ -240,12 +240,12 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct ob
 
   assert(ch && sub_object);
 
-  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
-    if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+  if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) || (OBJ_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+    if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE))) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
-    } else if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) &&
+    } else if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) &&
         (IS_SET(sub_object->obj_flags.value[1], CONT_CLOSED))) {
       sprintf(buffer,"The %s is closed.\n\r", fname(OBJ_NAME(sub_object)));
       send_to_char(buffer, ch);
@@ -333,7 +333,7 @@ int get_number_from_object(struct char_data *ch, char *name, int number, struct 
   if(!number)
     return(0);
 
-  if ((GET_ITEM_TYPE(sub_object) == ITEM_CONTAINER) || (GET_ITEM_TYPE(sub_object) == ITEM_AQ_ORDER)) {
+  if ((OBJ_TYPE(sub_object) == ITEM_CONTAINER) || (OBJ_TYPE(sub_object) == ITEM_AQ_ORDER)) {
     if (IS_SET(sub_object->obj_flags.value[1], CONT_NO_REMOVE)) {
       printf_to_char(ch,"You can't seem to get anything out of the %s.\n\r", fname(OBJ_NAME(sub_object)));
       return(0);
@@ -961,7 +961,7 @@ int put(CHAR *ch, OBJ *obj, OBJ *sub_obj, bool show)
   if (signal_object(obj, ch, MSG_OBJ_PUT, OBJ_NAME(sub_obj))) return TRUE;
 
   if ((((GETOBJ_WEIGHT(sub_obj) + GETOBJ_WEIGHT(obj)) >= OBJ_VALUE0(sub_obj)) ||
-      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) && GET_ITEM_TYPE(sub_obj) != ITEM_AQ_ORDER)
+      IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) && OBJ_TYPE(sub_obj) != ITEM_AQ_ORDER)
   {
     if (show)
     {
@@ -1077,7 +1077,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     if(!to_object) {
       type = 2;
     } else {
-      switch (GET_ITEM_TYPE(to_object)) {
+      switch (OBJ_TYPE(to_object)) {
       case ITEM_CONTAINER:
         if (!IS_SET(to_object->obj_flags.value[1], CONT_CLOSED)) {
           alldot = is_all_dot(arg1, allbuf);
@@ -1122,7 +1122,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
       sprintf(buffer, "You cannot put %d all %s.\n\r", number, arg2);
       send_to_char(buffer, ch);
     } else {
-      if (GET_ITEM_TYPE(to_object) == ITEM_AQ_ORDER && !alldot) {
+      if (OBJ_TYPE(to_object) == ITEM_AQ_ORDER && !alldot) {
         sprintf(buffer,"You cannot put all into %s.\n\r",OBJ_SHORT(to_object));
         send_to_char(buffer, ch);
       } else {
@@ -1134,7 +1134,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
     if (number == 1) {
       obj_object = get_obj_in_list_vis(ch, arg1, ch->carrying);
       if (obj_object) {
-        if (GET_ITEM_TYPE(to_object) == ITEM_CONTAINER ||
+        if (OBJ_TYPE(to_object) == ITEM_CONTAINER ||
             (V_OBJ(obj_object) == to_object->obj_flags.value[0] || // we only want to allow you to put things in acquisition order that the order wants
             V_OBJ(obj_object) == to_object->obj_flags.value[1] ||
             V_OBJ(obj_object) == to_object->obj_flags.value[2] ||

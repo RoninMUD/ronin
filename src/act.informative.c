@@ -262,7 +262,7 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch,
   }
 
   if (mode != 3) {
-    if (mode!=5 && GET_ITEM_TYPE(object)==ITEM_CONTAINER && object->obj_flags.value[3]) {
+    if (mode!=5 && OBJ_TYPE(object)==ITEM_CONTAINER && object->obj_flags.value[3]) {
       strncpy(buf1, buffer, sizeof(buf1)-1);
       switch(object->obj_flags.cost) {
         case PC_CORPSE:
@@ -1197,7 +1197,7 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
             FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
           if (bits) { /* Found something */
-            if (GET_ITEM_TYPE(tmp_object)== ITEM_DRINKCON) {
+            if (OBJ_TYPE(tmp_object)== ITEM_DRINKCON) {
               if (tmp_object->obj_flags.value[1] <= 0) {
                 act("It is empty.", FALSE, ch, 0, 0, TO_CHAR);
               }
@@ -1208,10 +1208,10 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
                 send_to_char(buffer, ch);
               }
             }
-            else if (GET_ITEM_TYPE(tmp_object) == ITEM_CONTAINER ||
-                     GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
+            else if (OBJ_TYPE(tmp_object) == ITEM_CONTAINER ||
+                     OBJ_TYPE(tmp_object) == ITEM_AQ_ORDER) {
               if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
-                  GET_ITEM_TYPE(tmp_object) == ITEM_AQ_ORDER) {
+                  OBJ_TYPE(tmp_object) == ITEM_AQ_ORDER) {
                 send_to_char(fname(OBJ_NAME(tmp_object)), ch);
                 switch (bits) {
                 case FIND_OBJ_INV :
@@ -1603,9 +1603,9 @@ void do_examine(struct char_data *ch, char *argument, int cmd) {
           FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
   if (tmp_object) {
-    if ((GET_ITEM_TYPE(tmp_object)==ITEM_DRINKCON) ||
-        (GET_ITEM_TYPE(tmp_object)==ITEM_CONTAINER) ||
-        (GET_ITEM_TYPE(tmp_object)==ITEM_AQ_ORDER)) {
+    if ((OBJ_TYPE(tmp_object)==ITEM_DRINKCON) ||
+        (OBJ_TYPE(tmp_object)==ITEM_CONTAINER) ||
+        (OBJ_TYPE(tmp_object)==ITEM_AQ_ORDER)) {
       send_to_char("When you look inside, you see:\n\r", ch);
       sprintf(buf,"in %s",argument);
       do_look(ch,buf,15);

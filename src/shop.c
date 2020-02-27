@@ -281,7 +281,7 @@ void shopping_sell( char *arg, CHAR *ch,CHAR *keeper,int shop_nr)
   GET_GOLD(ch) += coins;
   GET_GOLD(keeper) -= coins;
 
-  if (GET_ITEM_TYPE(temp1) == ITEM_TRASH) {
+  if (OBJ_TYPE(temp1) == ITEM_TRASH) {
     extract_obj(temp1);
   }
 

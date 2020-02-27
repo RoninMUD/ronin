@@ -516,7 +516,7 @@ void do_butcher(struct char_data *ch, char *argument, int cmd) {
       return;
     }
 
-    if(!(GET_ITEM_TYPE(obj) == ITEM_CONTAINER) &&
+    if(!(OBJ_TYPE(obj) == ITEM_CONTAINER) &&
              (obj->obj_flags.value[3] != 1)) {
                send_to_char("You failed.\n\r", ch);
                return;
@@ -2380,7 +2380,7 @@ void do_skin(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  if(GET_ITEM_TYPE(corpse)!=ITEM_CONTAINER && corpse->obj_flags.value[3]!=1) {
+  if(OBJ_TYPE(corpse)!=ITEM_CONTAINER && corpse->obj_flags.value[3]!=1) {
     send_to_char("That isn't a corpse.\n\r",ch);
     return;
   }

@@ -522,7 +522,7 @@ void check_corpses(void) {
       name_to_corpsefile(j,fl);
       obj_to_corpsefile(j,fl);
     }
-    else if((GET_ITEM_TYPE(j) == ITEM_CONTAINER) && (j->obj_flags.value[3])) {
+    else if((OBJ_TYPE(j) == ITEM_CONTAINER) && (j->obj_flags.value[3])) {
       if(!COUNT_RENTABLE_CONTENTS(j)) continue;
       if(j->obj_flags.cost!=PC_STATUE && j->obj_flags.cost!=PC_CORPSE) continue;
       obj=0;
@@ -2840,10 +2840,6 @@ int signal_world(CHAR *signaler, int cmd, char *arg) {
     if (counter == 4) {
       weather_and_time(1);
 
-      if (time_info.hours == 1) {
-        update_time();
-      }
-
       counter = 0;
     }
   }
@@ -3253,12 +3249,17 @@ void pulse_wither(CHAR *ch) {
     next_af = tmp_af->next;
 
     if (tmp_af->type == SPELL_WITHER) {
-      int dam = wither_pulse_action(ch);
-
       send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
       act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
 
+      int dam = wither_pulse_action(ch);
+
+      /* Don't consume position. */
+      int set_pos = GET_POS(ch);
+
       damage(ch, ch, (GET_HIT(ch) > dam) ? dam : (GET_HIT(ch) > 1) ? ((GET_HIT(ch) / 2) - 1) : 0, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+      GET_POS(ch) = MIN(GET_POS(ch), set_pos);
 
       tmp_af->duration--;
 
@@ -3297,7 +3298,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
       pulse_mantra(ch); // TODO: Convert to enchant
 
       /* Adrenaline Rush */
-      pulse_adrenaline_rush(ch);
+      pulse_adrenaline_rush(ch); // TODO: Convert to enchant
     }
 
     /* Wither */

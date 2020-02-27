@@ -796,7 +796,7 @@ void advance_level(CHAR *ch) {
       break;
   }
 
-  ch->points.max_hit += MAX(gain + con_app[GET_CON(ch)].hitp, 1);
+  ch->points.max_hit += MAX(gain + 3, 1);
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
@@ -1326,7 +1326,7 @@ void point_update(void)
           }
         }
 
-        if (GET_ITEM_TYPE(obj) == ITEM_CONTAINER)
+        if (OBJ_TYPE(obj) == ITEM_CONTAINER)
         {
           for (obj2 = obj->contains; obj2; obj2 = next_obj2)
           {
@@ -1375,7 +1375,7 @@ void point_update(void)
       }
     }
     /* Decay corpses. */
-    else if (GET_ITEM_TYPE(obj) == ITEM_CONTAINER &&
+    else if (OBJ_TYPE(obj) == ITEM_CONTAINER &&
              obj->obj_flags.value[3])
     {
       if (obj->obj_flags.timer > 0)

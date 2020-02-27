@@ -524,7 +524,7 @@ void remove_all_affects(CHAR *ch) {
   }
 }
 
-AFF * get_affect_from_char(CHAR *ch, int type) {
+AFF *get_affect_from_char(CHAR *ch, int type) {
   if (!ch) return NULL;
 
   for (AFF *aff = ch->affected; aff; aff = aff->next) {
@@ -549,161 +549,170 @@ void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte loca
   affect_to_char(ch, &aff);
 }
 
-/* move a player out of a room */
-void char_from_room(struct char_data *ch)
-{
-  struct char_data *i;
 
-  if (CHAR_REAL_ROOM(ch) == NOWHERE) {
-    log_s("NOWHERE extracting char from room (handler.c, char_from_room)");
-    produce_core();
+void char_from_room(CHAR *ch) {
+  const int club_rooms[] = {
+    3076, 3079, 3081, 3083
+  };
+
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
+
+  if (affected_by_spell(ch, SKILL_CAMP)) {
+    printf_to_char(ch, "You quickly break camp.\n\r");
+    act("$n quickly breaks camp.", TRUE, ch, 0, 0, TO_ROOM);
+
+    affect_from_char(ch, SKILL_CAMP);
+
+    if (!in_int_array(CHAR_VIRTUAL_ROOM(ch), club_rooms, NUMELEMS(club_rooms))) {
+      REMOVE_BIT(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB);
+    }
   }
 
-  if(affected_by_spell(ch, SKILL_CAMP)) {
-    act("You quickly break camp.\n\r",1,ch,0,0,TO_CHAR);
-    act("$n quickly breaks camp.",1,ch,0,0,TO_ROOM);
-    affect_from_char(ch,SKILL_CAMP);
-    if(CHAR_VIRTUAL_ROOM(ch)!=3076 &&
-       CHAR_VIRTUAL_ROOM(ch)!=3079 &&
-       CHAR_VIRTUAL_ROOM(ch)!=3081 &&
-       CHAR_VIRTUAL_ROOM(ch)!=3083)
-      REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags,CLUB);
+  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2)) {
+    ROOM_LIGHT(CHAR_REAL_ROOM(ch))--;
   }
 
-  if (ch->equipment[WEAR_LIGHT])
-    if (ch->equipment[WEAR_LIGHT]->obj_flags.type_flag == ITEM_LIGHT)
-      if (ch->equipment[WEAR_LIGHT]->obj_flags.value[2]) /* Light is ON */
-        world[CHAR_REAL_ROOM(ch)].light--;
+  if (ROOM_PEOPLE(CHAR_REAL_ROOM(ch)) == ch) {
+    ROOM_PEOPLE(CHAR_REAL_ROOM(ch)) = CHAR_NEXT_IN_ROOM(ch);
+  }
+  else {
+    CHAR *tmp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch));
 
-  if (ch == world[CHAR_REAL_ROOM(ch)].people)  /* head of list */
-     world[CHAR_REAL_ROOM(ch)].people = ch->next_in_room;
+    while (tmp_ch && (CHAR_NEXT_IN_ROOM(tmp_ch) != ch)) {
+      tmp_ch = CHAR_NEXT_IN_ROOM(tmp_ch);
+    }
 
-  else    /* locate the previous element */
-  {
-    for (i = world[CHAR_REAL_ROOM(ch)].people;
-       i->next_in_room != ch; i = i->next_in_room);
-
-    i->next_in_room = ch->next_in_room;
+    CHAR_NEXT_IN_ROOM(tmp_ch) = CHAR_NEXT_IN_ROOM(ch);
   }
 
+  CHAR_NEXT_IN_ROOM(ch) = NULL;
   ch->in_room_r = NOWHERE;
   ch->in_room_v = NOWHERE;
-  ch->next_in_room = 0;
 }
 
 
-/* place a character in a room */
-void char_to_room(struct char_data *ch, int room)
-{
-  if(room<0)
-     room = 0;
-  if (IS_SET(world[room].room_flags, LOCK) &&
-      (GET_LEVEL(ch) < LEVEL_SUP) &&
-      real_room(1212) != room &&
-      real_room(3054) != room &&
-      !isname(GET_NAME(ch),world[room].name)) {
-    send_to_char("The room is locked. There may be a private conversation there.\n\r", ch);
-    if(GET_LEVEL(ch)<LEVEL_IMM) char_to_room(ch, real_room(3054));
-    else char_to_room(ch,real_room(1212));
+void char_to_room(CHAR *ch, int room) {
+  const int immortal_room_vnum = 1212;
+  const int mortal_room_vnum = 3054;
+
+  if (!ch) return;
+
+  if (room < 0) {
+    room = 0;
+  }
+
+  if (IS_SET(ROOM_FLAGS(room), LOCK) && (GET_LEVEL(ch) < LEVEL_SUP) && (room != real_room(immortal_room_vnum)) && (room != real_room(mortal_room_vnum)) && !isname(ROOM_NAME(room), GET_NAME(ch))) {
+    printf_to_char(ch, "The room is locked.  There may be a private conversation there.\n\r");
+
+    IS_IMMORTAL(ch) ? char_to_room(ch, real_room(immortal_room_vnum)) : char_to_room(ch, real_room(mortal_room_vnum));
+
     return;
   }
 
-  ch->next_in_room = world[room].people;
-  world[room].people = ch;
+  CHAR_NEXT_IN_ROOM(ch) = ROOM_PEOPLE(room);
+  ROOM_PEOPLE(room) = ch;
   ch->in_room_r = room;
-  ch->in_room_v = world[room].number;
+  ch->in_room_v = ROOM_VNUM(room);
 
-  if (GET_CLASS(ch) == CLASS_NINJA && GET_POS(ch) == POSITION_SWIMMING
-      && world[room].sector_type < SECT_WATER_NOSWIM)
+  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2)) {
+    ROOM_LIGHT(CHAR_REAL_ROOM(ch))++;
+  }
+
+  if ((GET_CLASS(ch) == CLASS_NINJA) && (GET_POS(ch) == POSITION_SWIMMING) && (ROOM_SECTOR_TYPE(room) != SECT_WATER_NOSWIM)) {
     GET_POS(ch) = POSITION_STANDING;
-
-  if (ch->equipment[WEAR_LIGHT])
-    if (ch->equipment[WEAR_LIGHT]->obj_flags.type_flag == ITEM_LIGHT)
-      if (ch->equipment[WEAR_LIGHT]->obj_flags.value[2]) /* Light is ON */
-  world[room].light++;
+  }
 }
 
 
-/* give an object to a char   */
+void obj_to_char(OBJ *obj, CHAR *ch) {
+  const int quest_card_vnum = 35;
 
-void obj_to_char(struct obj_data *object, struct char_data *ch) {
-  char buf[MAX_INPUT_LENGTH];
-  if (object) {
-    adjust_obj_list(object,ch->carrying);
-    ch->carrying = object;
-    object->carried_by = ch;
-    object->equipped_by = 0;
-    object->in_room = NOWHERE;
-    if(ch->questobj && ch->quest_status==QUEST_RUNNING)
-    {
-      if(ch->questobj==object && V_OBJ(object)!=35)
-      {
-        send_to_char("You have the quest item! Return it to the quest giver for credit.\n\r",ch);
-        ch->quest_status=QUEST_COMPLETED;
+  if (!obj || !ch) return;
+
+  adjust_obj_list(obj, GET_CARRYING(ch));
+
+  GET_CARRYING(ch) = obj;
+
+  OBJ_CARRIED_BY(obj) = ch;
+  OBJ_EQUIPPED_BY(obj) = NULL;
+  OBJ_IN_ROOM(obj) = NOWHERE;
+  OBJ_IN_ROOM_V(obj) = NOWHERE;
+
+  if (GET_QUEST_STATUS(ch) == QUEST_RUNNING) {
+    if (GET_QUEST_OBJ(ch) && (GET_QUEST_OBJ(ch) == obj)) {
+      if (V_OBJ(obj) != quest_card_vnum) {
+        printf_to_char(ch, "You have the quest item!  Return to the quest giver to complete the quest.\n\r");
+
+        GET_QUEST_STATUS(ch) = QUEST_COMPLETED;
       }
-      if(V_OBJ(ch->questobj) == V_OBJ(object) && OBJ_SPEC(object) == ch->ver3.id)
-      {/* for auto-questcard hunting */
-        send_to_char("You found one! When you have enough, return to your guildmaster and complete.\n\r", ch);
+      else {
+        printf_to_char(ch, "You found a quest item!  When you have enough, return to the quest giver to complete the quest.\n\r");
       }
     }
-    if(object->log) {
-      sprintf(buf,"QSTINFO: %s has item %s (%d).",GET_NAME(ch),OBJ_SHORT(object),V_OBJ(object));
-      if(object->log==1) {
-        if(!IS_NPC(ch)) object->log=0;
-        log_f("%s",buf);
-      }
-      if(object->log==2) wizlog(buf,GET_LEVEL(ch),4);
+  }
+
+  if (OBJ_LOG(obj)) {
+    char buf[MIL];
+
+    snprintf(buf, sizeof(buf), "QSTINFO: %s has item %s (%d).", GET_DISP_NAME(ch), OBJ_SHORT(obj), V_OBJ(obj));
+
+    switch (OBJ_LOG(obj)) {
+      case 1:
+        if (!IS_NPC(ch)) OBJ_LOG(obj) = 0;
+
+        log_f("%s", buf);
+        break;
+      case 2:
+        wizlog(buf, GET_LEVEL(ch), 4);
+        break;
+    }
+  }
+
+  if ((OBJ_TYPE(obj) == ITEM_SC_TOKEN) && !IS_NPC(ch)) {
+    log_f("SUBLOG: %s has a token.", GET_NAME(ch));
+  }
+}
+
+
+OBJ *obj_from_char(OBJ *obj) {
+  if (!obj || OBJ_EQUIPPED_BY(obj)) return NULL;
+
+  if ((OBJ_TYPE(obj) == ITEM_SC_TOKEN) && !IS_NPC(OBJ_CARRIED_BY(obj))) {
+    log_f("SUBLOG: %s loses a token.", GET_DISP_NAME(OBJ_CARRIED_BY(obj)));
+  }
+
+  if (GET_CARRYING(OBJ_CARRIED_BY(obj)) == obj) {
+    GET_CARRYING(OBJ_CARRIED_BY(obj)) = OBJ_NEXT_CONTENT(obj);
+  }
+  else {
+    OBJ *tmp_obj = GET_CARRYING(OBJ_CARRIED_BY(obj));
+
+    while (tmp_obj && (OBJ_NEXT_CONTENT(tmp_obj) != obj)) {
+      tmp_obj = OBJ_NEXT_CONTENT(tmp_obj);
     }
 
-    if(object->obj_flags.type_flag==ITEM_SC_TOKEN && !IS_NPC(ch))
-      log_f("SUBLOG: %s has a token.",GET_NAME(ch));
+    OBJ_NEXT_CONTENT(tmp_obj) = OBJ_NEXT_CONTENT(obj);
   }
+
+  OBJ_CARRIED_BY(obj) = NULL;
+  OBJ_EQUIPPED_BY(obj) = NULL;
+  OBJ_NEXT_CONTENT(obj) = NULL;
+
+  return obj;
 }
 
 
-/* take an object from a char */
-struct obj_data *obj_from_char(struct obj_data *object)
-{
-  struct obj_data *tmp;
+int apply_ac(CHAR *ch, int pos) {
+  if (!ch) return 0;
 
-  if (object->equipped_by) {
-    log_f("Obj in more than one place.");
-    abort();
-  }
-
-  if(object->obj_flags.type_flag==ITEM_SC_TOKEN && !IS_NPC(object->carried_by))
-    log_f("SUBLOG: %s loses a token.",GET_NAME(object->carried_by));
-
-  if (object->carried_by->carrying == object)   /* head of list */
-     object->carried_by->carrying = object->next_content;
-
-  else
-  {
-    for (tmp = object->carried_by->carrying;
-       tmp && (tmp->next_content != object);
-          tmp = tmp->next_content); /* locate previous */
-
-    tmp->next_content = object->next_content;
-  }
-  object->equipped_by = 0;
-  object->carried_by = 0;
-  object->next_content = 0;
-        return object;
-}
-
-
-int apply_ac(CHAR *ch, int eq_pos) {
-  if (!ch || (eq_pos < 0)) return 0;
-
-  OBJ *eq = EQ(ch, eq_pos);
+  OBJ *eq = EQ(ch, pos);
 
   if (!eq || (OBJ_TYPE(eq) != ITEM_ARMOR)) return 0;
 
-  int ac = OBJ_VALUE0(eq);
-
+  int ac = OBJ_VALUE(eq, 0);
   int multi = 1;
 
-  switch (eq_pos) {
+  switch (pos) {
     case WEAR_BODY:
       multi = 3;
       break;
@@ -720,209 +729,167 @@ int apply_ac(CHAR *ch, int eq_pos) {
   return (ac * multi);
 }
 
-void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
-{
-  int j,hit,owner_ok=0;
-  char buf[MAX_INPUT_LENGTH];
 
-  assert(pos>=0 && pos<MAX_WEAR);
-  assert(!(ch->equipment[pos]));
+void equip_char(CHAR *ch, OBJ *obj, int pos) {
+  if (!ch || !obj || (pos < 0) || (pos > (MAX_WEAR - 1))) return;
 
-  if (!obj) return;
-  if (obj->carried_by) {
-   log_f("EQUIP: Obj is carried_by when equip.");
-   return;
-  }
+  if (EQ(ch, pos) || OBJ_CARRIED_BY(obj) || OBJ_EQUIPPED_BY(obj) || (OBJ_IN_ROOM(obj) != NOWHERE) || (OBJ_IN_ROOM_V(obj) != NOWHERE)) return;
 
-  if (obj->in_room!=NOWHERE) {
-   log_f("EQUIP: Obj is in_room when equip.");
-   return;
-  }
+  if (IS_MORTAL(ch) && IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_QUESTWEAR)) {
+    bool is_owner = FALSE;
 
-  if(!IS_NPC(ch) && GET_LEVEL(ch)<LEVEL_IMM) {
-   if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL)       && IS_EVIL(ch))         ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD)        && IS_GOOD(ch))         ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL)     && IS_NEUTRAL(ch))      ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_WARRIOR)     && (GET_CLASS(ch) == CLASS_WARRIOR))      ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_THIEF)       && (GET_CLASS(ch) == CLASS_THIEF))        ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_CLERIC)      && (GET_CLASS(ch) == CLASS_CLERIC))       ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_MAGIC_USER)  && (GET_CLASS(ch) == CLASS_MAGIC_USER))   ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_NINJA)       && (GET_CLASS(ch) == CLASS_NINJA))        ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_NOMAD)       && (GET_CLASS(ch) == CLASS_NOMAD))        ||
-      /*
-      (IS_OBJ_STAT(obj, ITEM_ANTI_MALE)        && (GET_SEX(ch)   == SEX_MALE))           ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_FEMALE)      && (GET_SEX(ch)   == SEX_FEMALE))         ||
-      */
-      (IS_OBJ_STAT(obj, ITEM_ANTI_PALADIN)     && (GET_CLASS(ch) == CLASS_PALADIN))      ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_AVATAR)      && (GET_CLASS(ch) == CLASS_AVATAR))       ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_BARD)        && (GET_CLASS(ch) == CLASS_BARD))         ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_COMMANDO)    && (GET_CLASS(ch) == CLASS_COMMANDO))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_ENCHANTER  )   && check_subclass(ch,SC_ENCHANTER  ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_ARCHMAGE   )   && check_subclass(ch,SC_ARCHMAGE   ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_DRUID      )   && check_subclass(ch,SC_DRUID      ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_TEMPLAR    )   && check_subclass(ch,SC_TEMPLAR    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_ROGUE      )   && check_subclass(ch,SC_ROGUE      ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_BANDIT     )   && check_subclass(ch,SC_BANDIT     ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_WARLORD    )   && check_subclass(ch,SC_WARLORD    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_GLADIATOR  )   && check_subclass(ch,SC_GLADIATOR  ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_RONIN      )   && check_subclass(ch,SC_RONIN      ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_MYSTIC     )   && check_subclass(ch,SC_MYSTIC     ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_RANGER     )   && check_subclass(ch,SC_RANGER     ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_TRAPPER    )   && check_subclass(ch,SC_TRAPPER    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_CAVALIER   )   && check_subclass(ch,SC_CAVALIER   ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_CRUSADER   )   && check_subclass(ch,SC_CRUSADER   ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_DEFILER    )   && check_subclass(ch,SC_DEFILER    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_INFIDEL    )   && check_subclass(ch,SC_INFIDEL    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_BLADESINGER)   && check_subclass(ch,SC_BLADESINGER,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_CHANTER    )   && check_subclass(ch,SC_CHANTER    ,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_LEGIONNAIRE)   && check_subclass(ch,SC_LEGIONNAIRE,1))     ||
-      (IS_SET(obj->obj_flags.subclass_res, ITEM_ANTI_MERCENARY  )   && check_subclass(ch,SC_MERCENARY  ,1))     ||
-      (IS_OBJ_STAT(obj, ITEM_ANTI_MORTAL)      && (GET_LEVEL(ch) < LEVEL_IMM) && !CHAOSMODE)       )          {
-     if (CHAR_REAL_ROOM(ch) != NOWHERE) {
-       act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
-       act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
-       sprintf(buf,"%s zapped by %s (Room %d)",GET_NAME(ch),OBJ_SHORT(obj),CHAR_VIRTUAL_ROOM(ch));
-       log_f("%s",buf);
-       obj->log = TRUE;
-       wizlog(buf,LEVEL_WIZ,6);
-       obj_to_room(obj, CHAR_REAL_ROOM(ch));
-       save_char(ch, NOWHERE);
-       return;
-     } else {
-       log_f("CHAR_REAL_ROOM(ch) = NOWHERE when equipping char.");
-     }
+    for (int i = 0; i < MAX_OBJ_OWNER_ID; i++) {
+      if (OBJ_OWNER_ID(obj, i) == GET_ID(ch)) {
+        is_owner = TRUE;
+        break;
+      }
+    }
+
+    if (!is_owner) {
+      act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
+
+      obj_to_char(obj, ch);
     }
   }
 
-  if((GET_ITEM_TYPE(obj)==ITEM_WEAPON || GET_ITEM_TYPE(obj)==ITEM_2H_WEAPON) && (!IS_NPC(ch)) && /* Ranger - July 96 */
-      GETOBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)
-    {
-    act("$p falls from your grasp, because of your weakness.", FALSE, ch, obj, 0, TO_CHAR);
-    act("$p falls from $n's grasp because $e's too weak.", FALSE, ch, obj, 0, TO_ROOM);
+  if (IS_MORTAL(ch) &&
+      ((IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MORTAL)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_CLERIC) && (GET_CLASS(ch) == CLASS_CLERIC)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_THIEF) && (GET_CLASS(ch) == CLASS_THIEF)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_WARRIOR) && (GET_CLASS(ch) == CLASS_WARRIOR)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_BARD) && (GET_CLASS(ch) == CLASS_BARD)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_COMMANDO) && (GET_CLASS(ch) == CLASS_COMMANDO)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ENCHANTER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ARCHMAGE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_DRUID)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_TEMPLAR)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ROGUE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_BANDIT)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_WARLORD)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_GLADIATOR)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_RONIN)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_MYSTIC)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_RANGER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_TRAPPER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CAVALIER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CRUSADER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_DEFILER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_INFIDEL)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_BLADESINGER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CHANTER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_LEGIONNAIRE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_MERCENARY)))) {
+    act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
+
     obj_to_char(obj, ch);
+
     return;
-    }
-/* Insert check for - hps here */
-  if(GET_LEVEL(ch)<21) {
-   for (j=0; j<MAX_OBJ_AFFECT; j++) {
-    if(obj->affected[j].location==APPLY_HIT) {
-      hit=hit_limit(ch)+obj->affected[j].modifier;
-      if(hit<1) {
-        if (CHAR_REAL_ROOM(ch) != NOWHERE) {
-          act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
-          act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
-          sprintf(buf,"%s zapped by %s (Room %d)",GET_NAME(ch),OBJ_SHORT(obj),CHAR_VIRTUAL_ROOM(ch));
-          log_f("%s",buf);
-          obj->log = TRUE;
-          wizlog(buf,LEVEL_WIZ,6);
-          obj_to_room(obj, CHAR_REAL_ROOM(ch));
-          save_char(ch, NOWHERE);
-          return;
-        } else {
-          log_f("CHAR_REAL_ROOM(ch) = NOWHERE when equipping char.");
-        }
-      }
-    }
-   }
   }
 
-/* Check for equipment ownership */
-  if(IS_SET(obj->obj_flags.wear_flags,ITEM_QUESTWEAR)) {
-    for(j=0;j<8;j++) {
-      if(ch->ver3.id==obj->ownerid[j]) owner_ok=1;
-    }
-    if(!owner_ok) {
-      if (CHAR_REAL_ROOM(ch) != NOWHERE) {
-        act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
-        act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
-        sprintf(buf,"%s zapped by %s (Room %d)",GET_NAME(ch),OBJ_SHORT(obj),CHAR_VIRTUAL_ROOM(ch));
-        log_f("%s",buf);
-        obj->log = TRUE;
-        wizlog(buf,LEVEL_WIZ,6);
-        obj_to_room(obj, CHAR_REAL_ROOM(ch));
-        save_char(ch, NOWHERE);
-        return;
-      } else {
-        log_f("CHAR_REAL_ROOM(ch) = NOWHERE when equipping char.");
-      }
+  for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
+    if ((OBJ_AFF(obj, i).location == APPLY_HIT) && ((hit_limit(ch) + OBJ_AFF(obj, i).modifier) <= 0)) {
+      act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
+
+      obj_to_char(obj, ch);
+
+      return;
     }
   }
 
-  ch->equipment[pos] = obj;
-  obj->equipped_by = ch;
-  obj->in_room = NOWHERE;
-  obj->in_room_v = NOWHERE;
-  if (GET_ITEM_TYPE(obj) == ITEM_ARMOR)
-    GET_AC(ch) -= apply_ac(ch, pos);
+  if (IS_MORTAL(ch) && ((pos == WIELD) || (pos == HOLD)) && ((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) && (GETOBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) {
+    act("$p falls from your grasp because of your weakness.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p falls from $n's grasp because $e's too weak.", FALSE, ch, obj, 0, TO_ROOM);
 
-  for (j=0; j<MAX_OBJ_AFFECT; j++)
-    affect_modify(ch, obj->affected[j].location,
-    obj->affected[j].modifier,
-    obj->obj_flags.bitvector,obj->obj_flags.bitvector2, TRUE);
-   affect_total(ch);
-}
+    obj_to_char(obj, ch);
 
-
-bool rent_equip_char(CHAR *ch, OBJ *obj, int pos) {
-  if (!obj || (pos < 0) || (pos >= MAX_WEAR)) return FALSE;
-
-  if (ch->equipment[pos]) {
-    log_f("BUG: rent_equip_char() :: Char already has object in equipment[pos] during rent equip");
-
-    return FALSE;
+    return;
   }
 
-  if (OBJ_CARRIED_BY(obj)) {
-    log_f("BUG: rent_equip_char() :: Obj is carried_by during rent equip");
+  EQ(ch, pos) = obj;
 
-    return FALSE;
-  }
-
-  if (OBJ_EQUIPPED_BY(obj)) {
-    log_f("BUG: rent_equip_char() :: Obj is equipped_by during rent equip");
-
-    return FALSE;
-  }
-
-  if (OBJ_IN_ROOM(obj) != NOWHERE) {
-    log_f("BUG: rent_equip_char() :: Obj is in_room during rent equip");
-
-    return FALSE;
-  }
-
-  if (!IS_IMMORTAL(ch)) {
-    if ((IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MORTAL) && IS_MORTAL(ch)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_CLERIC) && (GET_CLASS(ch) == CLASS_CLERIC)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_THIEF) && (GET_CLASS(ch) == CLASS_THIEF)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_WARRIOR) && (GET_CLASS(ch) == CLASS_WARRIOR)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_BARD) && (GET_CLASS(ch) == CLASS_BARD)) ||
-        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_COMMANDO) && (GET_CLASS(ch) == CLASS_COMMANDO))) {
-      return FALSE;
-    }
-
-    if (OBJ_TYPE(obj) == ITEM_WEAPON) {
-      if ((pos == HOLD) && !IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_HOLD) && ((GET_CLASS(ch) != CLASS_NINJA) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 5)))) return FALSE;
-      if (((pos == WIELD) || (pos == HOLD)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) return FALSE;
-    }
-  }
-
-  ch->equipment[pos] = obj;
-
+  OBJ_CARRIED_BY(obj) = NULL;
   OBJ_EQUIPPED_BY(obj) = ch;
   OBJ_IN_ROOM(obj) = NOWHERE;
   OBJ_IN_ROOM_V(obj) = NOWHERE;
 
-  if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
+  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
+    GET_AC(ch) -= apply_ac(ch, pos);
+  }
+
+  for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
+    affect_modify(ch, OBJ_AFF_LOC(obj, i), OBJ_AFF_MOD(obj, i), OBJ_BITS(obj), OBJ_BITS2(obj), TRUE);
+  }
+
+  affect_total(ch);
+}
+
+
+bool rent_equip_char(CHAR *ch, OBJ *obj, int pos) {
+  if (!ch || !obj || (pos < 0) || (pos > (MAX_WEAR - 1))) return FALSE;
+
+  if (EQ(ch, pos) || OBJ_CARRIED_BY(obj) || OBJ_EQUIPPED_BY(obj) || (OBJ_IN_ROOM(obj) != NOWHERE) || (OBJ_IN_ROOM_V(obj) != NOWHERE)) return FALSE;
+
+  if (IS_MORTAL(ch) &&
+      ((IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MORTAL)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_MAGIC_USER) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_CLERIC) && (GET_CLASS(ch) == CLASS_CLERIC)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_THIEF) && (GET_CLASS(ch) == CLASS_THIEF)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_WARRIOR) && (GET_CLASS(ch) == CLASS_WARRIOR)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NINJA) && (GET_CLASS(ch) == CLASS_NINJA)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_NOMAD) && (GET_CLASS(ch) == CLASS_NOMAD)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_PALADIN) && (GET_CLASS(ch) == CLASS_PALADIN)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_ANTIPALADIN) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AVATAR) && (GET_CLASS(ch) == CLASS_AVATAR)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_BARD) && (GET_CLASS(ch) == CLASS_BARD)) ||
+       (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_COMMANDO) && (GET_CLASS(ch) == CLASS_COMMANDO)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ENCHANTER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ARCHMAGE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_DRUID)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_TEMPLAR)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_ROGUE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_BANDIT)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_WARLORD)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_GLADIATOR)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_RONIN)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_MYSTIC)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_RANGER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_TRAPPER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CAVALIER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CRUSADER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_DEFILER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_INFIDEL)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_BLADESINGER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_CHANTER)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_LEGIONNAIRE)) ||
+       (IS_SET(OBJ_SC_RES(obj), ITEM_ANTI_ENCHANTER) && (GET_SC(ch) == SC_MERCENARY)))) {
+    return FALSE;
+  }
+
+  if (IS_MORTAL(ch) && ((pos == WIELD) || (pos == HOLD)) && ((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) && (OBJ_WEIGHT(obj) > str_app[STRENGTH_APPLY_INDEX(ch)].wield_w)) return FALSE;
+
+  EQ(ch, pos) = obj;
+
+  OBJ_CARRIED_BY(obj) = NULL;
+  OBJ_EQUIPPED_BY(obj) = ch;
+  OBJ_IN_ROOM(obj) = NOWHERE;
+  OBJ_IN_ROOM_V(obj) = NOWHERE;
+
+  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
     GET_AC(ch) -= apply_ac(ch, pos);
   }
 
@@ -936,33 +903,33 @@ bool rent_equip_char(CHAR *ch, OBJ *obj, int pos) {
 }
 
 
-struct obj_data *unequip_char(struct char_data *ch, int pos)
-{
-  int j;
-  struct obj_data *obj;
+OBJ *unequip_char(CHAR *ch, int pos) {
+  if (!ch) return NULL;
 
-  assert(pos>=0 && pos<MAX_WEAR);
+  OBJ *obj = EQ(ch, pos);
 
-  if (!ch->equipment[pos])
-       return NULL;
-  obj = ch->equipment[pos];
-  if (GET_ITEM_TYPE(obj) == ITEM_ARMOR)
-   GET_AC(ch) += apply_ac(ch, pos);
+  if (!obj) return NULL;
 
-  obj->equipped_by = 0;
-  ch->equipment[pos] = 0;
-  obj->in_room = NOWHERE;
-  obj->in_room_v = NOWHERE;
+  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
+    GET_AC(ch) += apply_ac(ch, pos);
+  }
 
-  for(j=0; j<MAX_OBJ_AFFECT; j++)
-   affect_modify(ch, obj->affected[j].location,
-  obj->affected[j].modifier,
-  obj->obj_flags.bitvector,obj->obj_flags.bitvector2, FALSE);
+  EQ(ch, pos) = NULL;
+
+  OBJ_CARRIED_BY(obj) = NULL;
+  OBJ_EQUIPPED_BY(obj) = NULL;
+  OBJ_IN_ROOM(obj) = NOWHERE;
+  OBJ_IN_ROOM_V(obj) = NOWHERE;
+
+  for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
+    affect_modify(ch, OBJ_AFF_LOC(obj, i), OBJ_AFF_MOD(obj, i), OBJ_BITS(obj), OBJ_BITS2(obj), FALSE);
+  }
 
   affect_total(ch);
 
-  return(obj);
+  return obj;
 }
+
 
 /*
 A non-destructive method of getting the "dot number" in a string.

@@ -215,7 +215,7 @@ int wyvern_enchantment(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg)
       case 4:
               for (tmp=world[CHAR_REAL_ROOM(ench_ch)].contents;tmp;tmp=tmp2 ) {
                 tmp2 = tmp->next_content;  /* Added tmp2 - Ranger June 96 */
-                if (GET_ITEM_TYPE(tmp)==ITEM_CONTAINER && tmp->obj_flags.value[3]) {
+                if (OBJ_TYPE(tmp)==ITEM_CONTAINER && tmp->obj_flags.value[3]) {
                   for(obj = tmp->contains; obj; obj=next_obj)
                     {
                     next_obj = obj->next_content;

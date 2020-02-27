@@ -800,7 +800,7 @@ void spell_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         return;
       }
 
-      send_to_char("You feel righteous.\n\r", victim);
+      send_to_char("You feel blessed.\n\r", victim);
       af.type      = SPELL_BLESS;
       af.duration  = MAX(6,GET_LEVEL(ch)/5);
       af.modifier  = 1;
@@ -906,17 +906,17 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if (obj) {
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_CLONE) ||
-        (GET_ITEM_TYPE(obj) == ITEM_STAFF) ||
-        (GET_ITEM_TYPE(obj) == ITEM_WAND) ||
-        (GET_ITEM_TYPE(obj) == ITEM_POTION) ||
-        (GET_ITEM_TYPE(obj) == ITEM_BULLET) ||
-        (GET_ITEM_TYPE(obj) == ITEM_SCROLL) ||
-        (GET_ITEM_TYPE(obj) == ITEM_FIREARM) ||
-        (GET_ITEM_TYPE(obj) == ITEM_MISSILE) ||
-        (GET_ITEM_TYPE(obj) == ITEM_MONEY) ||
-        (GET_ITEM_TYPE(obj) == ITEM_RECIPE) ||
-        (GET_ITEM_TYPE(obj) == ITEM_AQ_ORDER) ||
-        (GET_ITEM_TYPE(obj) == ITEM_KEY)) {
+        (OBJ_TYPE(obj) == ITEM_STAFF) ||
+        (OBJ_TYPE(obj) == ITEM_WAND) ||
+        (OBJ_TYPE(obj) == ITEM_POTION) ||
+        (OBJ_TYPE(obj) == ITEM_BULLET) ||
+        (OBJ_TYPE(obj) == ITEM_SCROLL) ||
+        (OBJ_TYPE(obj) == ITEM_FIREARM) ||
+        (OBJ_TYPE(obj) == ITEM_MISSILE) ||
+        (OBJ_TYPE(obj) == ITEM_MONEY) ||
+        (OBJ_TYPE(obj) == ITEM_RECIPE) ||
+        (OBJ_TYPE(obj) == ITEM_AQ_ORDER) ||
+        (OBJ_TYPE(obj) == ITEM_KEY)) {
       act("$p exploded.", FALSE, ch, obj, 0, TO_ROOM);
       act("$p exploded.", FALSE, ch, obj, 0, TO_CHAR);
       extract_obj(obj);
@@ -1051,7 +1051,7 @@ void spell_create_water(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   void name_to_drinkcon(OBJ *obj,int type);
   void name_from_drinkcon(OBJ *obj,int type);
 
-  if (GET_ITEM_TYPE(obj) == ITEM_DRINKCON) {
+  if (OBJ_TYPE(obj) == ITEM_DRINKCON) {
     if ((obj->obj_flags.value[2] != LIQ_WATER)
          && (obj->obj_flags.value[1] != 0)) {
       name_from_drinkcon(obj,obj->obj_flags.value[2]);
@@ -1235,7 +1235,7 @@ void spell_enchant_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (IS_SET(obj->obj_flags.extra_flags, ITEM_DARK))
     return;
 
-  if ((GET_ITEM_TYPE(obj) == ITEM_WEAPON) &&
+  if ((OBJ_TYPE(obj) == ITEM_WEAPON) &&
       !IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
 
     for (i=0; i < MAX_OBJ_AFFECT; i++)
@@ -1743,7 +1743,7 @@ void spell_protection_from_good(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj){
 
 void spell_recharge(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     int tmpnum = 0;
-  if((GET_ITEM_TYPE(obj) == ITEM_STAFF) || (GET_ITEM_TYPE(obj) == ITEM_WAND)) {
+  if((OBJ_TYPE(obj) == ITEM_STAFF) || (OBJ_TYPE(obj) == ITEM_WAND)) {
       if (GET_CLASS(ch) == CLASS_MAGIC_USER) {
         tmpnum = 60;
       } else {
@@ -2337,7 +2337,7 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   int mob_level = 0;
   int heal = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
+  if (OBJ_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
   {
     /* Object is not a corpse, or a container. */
     send_to_char("You must target a corpse.\n\r", ch);
@@ -2469,7 +2469,7 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (obj) {
     send_to_char("Legends indicate...\n\r", ch);
     sprintf(buf, "%s is %s.\n\r", CAP(OBJ_SHORT(obj)),
-      type_msg[GET_ITEM_TYPE(obj)]);
+      type_msg[OBJ_TYPE(obj)]);
     send_to_char (buf,ch);
 
     if (obj->obj_flags.bitvector) {
@@ -2528,7 +2528,7 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   loc = obj->affected[i].location;
   mod = obj->affected[i].modifier;
 
-  if (loc == APPLY_DAMROLL && GET_ITEM_TYPE(obj) == ITEM_WEAPON)
+  if (loc == APPLY_DAMROLL && OBJ_TYPE(obj) == ITEM_WEAPON)
     continue;
 
   if (loc == APPLY_ARMOR)
@@ -2547,7 +2547,7 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       }
     }
 
-    switch (GET_ITEM_TYPE(obj)) {
+    switch (OBJ_TYPE(obj)) {
     case ITEM_SCROLL :
     case ITEM_POTION :
       sprintf(buf, "There are following spells on the item...\n\r");
@@ -2695,7 +2695,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
         send_to_char(buf,ch);
 
         sprintf(buf, "Type: ");
-        sprinttype(GET_ITEM_TYPE(obj),item_types,buf2);
+        sprinttype(OBJ_TYPE(obj),item_types,buf2);
         strcat(buf,buf2);
         strcat(buf,"\n\r");
         send_to_char(buf, ch);
@@ -2746,7 +2746,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             GETOBJ_WEIGHT(obj), obj->obj_flags.cost, obj->obj_flags.cost_per_day, obj->obj_flags.popped);
         send_to_char(buf, ch);
 
-        switch (GET_ITEM_TYPE(obj)) {
+        switch (OBJ_TYPE(obj)) {
         case ITEM_RECIPE:
             if (obj->obj_flags.value[0] < 0)
             {
@@ -3008,7 +3008,7 @@ void spell_animate_dead(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   void add_follower(CHAR  *ch, CHAR *leader);
 
-  if (!(GET_ITEM_TYPE(obj) == ITEM_CONTAINER) ||
+  if (!(OBJ_TYPE(obj) == ITEM_CONTAINER) ||
       (obj->obj_flags.value[3] != 1)) {
     /* Object is not a corpse, or a container.      */
   } else {
@@ -3350,7 +3350,7 @@ void spell_convergence (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 void spell_enchant_armour (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   int i, ench=0;
 
-  if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
+  if (OBJ_TYPE(obj) == ITEM_ARMOR) {
     if (IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC) ||
   IS_SET(obj->obj_flags.extra_flags, ITEM_DARK)) {
       send_to_char ("Nothing happens.\n\r",ch);
@@ -3429,7 +3429,7 @@ void spell_dispel_magic (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       return;
     }
 
-    switch (GET_ITEM_TYPE(obj)) {
+    switch (OBJ_TYPE(obj)) {
 
     case ITEM_POTION:
     case ITEM_SCROLL:
@@ -3481,10 +3481,10 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   }
 
   if (obj) {
-    if(number(0,3) || GET_ITEM_TYPE(obj)==ITEM_CONTAINER ||
+    if(number(0,3) || OBJ_TYPE(obj)==ITEM_CONTAINER ||
        V_OBJ(obj)==WALL_THORNS || V_OBJ(obj)==STATUE_PEACE ||
        V_OBJ(obj)==ICE_WALL || V_OBJ(obj)==ICE_BLOCK ||
-       GET_ITEM_TYPE(obj)==ITEM_AQ_ORDER) {
+       OBJ_TYPE(obj)==ITEM_AQ_ORDER) {
       send_to_char ("Nothing happens.\n\r",ch);
       return;
     }
@@ -3519,10 +3519,10 @@ void spell_disintegrate (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
       next = tmp->next_content;
       // updated to unpack containers which might contain an AQ_ORDER
       //   and moves AQ_ORDERs to room - no free way to "quit" them
-      if(GET_ITEM_TYPE(tmp)==ITEM_AQ_ORDER) {
+      if(OBJ_TYPE(tmp)==ITEM_AQ_ORDER) {
         obj_from_char(tmp);
         obj_to_room(tmp, CHAR_REAL_ROOM(vict));
-      } else if (GET_ITEM_TYPE(tmp)==ITEM_CONTAINER) {
+      } else if (OBJ_TYPE(tmp)==ITEM_CONTAINER) {
         for (tmp_c = tmp->contains; tmp_c; tmp_c = next_c) {
           next_c = tmp_c->next_content;
           obj_from_obj(tmp_c);
@@ -3577,12 +3577,12 @@ void spell_searing_orb (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 
   for (paper = world[CHAR_REAL_ROOM(ch)].contents;paper;paper = anot) {
     anot = paper->next_content;
-    if ((GET_ITEM_TYPE(paper) == ITEM_SCROLL || GET_ITEM_TYPE(paper) == ITEM_RECIPE) && number(0,5)) {
+    if ((OBJ_TYPE(paper) == ITEM_SCROLL || OBJ_TYPE(paper) == ITEM_RECIPE) && number(0,5)) {
       act("$p burns in bright and hot flames...",FALSE,ch,paper,0,TO_ROOM);
       act("$p burns in bright and hot flames...",FALSE,ch,paper,0,TO_CHAR);
       extract_obj(paper);
     }
-    if (GET_ITEM_TYPE(paper) == ITEM_POTION && number(0,5)) {
+    if (OBJ_TYPE(paper) == ITEM_POTION && number(0,5)) {
       act("$p boils up in steam...",FALSE,ch,paper,0,TO_ROOM);
       act("$p boils up in steam...",FALSE,ch,paper,0,TO_CHAR);
       extract_obj(paper);
@@ -3593,13 +3593,13 @@ void spell_searing_orb (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
         next = tmp->next_in_room;
         for (paper = tmp->carrying;paper;paper = anot) {
             anot = paper->next_content;
-            if ((GET_ITEM_TYPE(paper) == ITEM_SCROLL || GET_ITEM_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
+            if ((OBJ_TYPE(paper) == ITEM_SCROLL || OBJ_TYPE(paper) == ITEM_RECIPE) && !number(0,5)) {
                 act("$p burns in bright and hot flames...",FALSE,ch,paper,0,TO_ROOM);
                 act("$p burns in bright and hot flames...",FALSE,ch,paper,0,TO_CHAR);
                 extract_obj(paper);
             }
 
-            if (GET_ITEM_TYPE(paper) == ITEM_POTION && !number(0,5)) {
+            if (OBJ_TYPE(paper) == ITEM_POTION && !number(0,5)) {
                 act("$p boils up in steam...",FALSE,ch,paper,0,TO_ROOM);
                 act("$p boils up in steam...",FALSE,ch,paper,0,TO_CHAR);
                 extract_obj(paper);
@@ -3901,31 +3901,17 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 }
 
 
-void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  AFF af;
+void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (affected_by_spell(victim, SPELL_HASTE)) {
+    printf_to_char(victim, "You're already moving as fast as you can.\n\r");
 
-  if (!affected_by_spell(victim, SPELL_HASTE))
-  {
-    af.type       = SPELL_HASTE;
-    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      af.duration = 2;
-    else
-      af.duration = 5;
-    af.modifier   = 0;
-    af.location   = APPLY_NONE;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-
-    affect_to_char(victim, &af);
-
-    send_to_char("Suddenly everything around you seems to slow down to a crawl.\n\r", victim);
-    act("$n starts moving with blinding speed.", FALSE, victim, 0, 0, TO_ROOM);
+    return;
   }
-  else
-  {
-    send_to_char("You're already moving as fast as you can.\n\r", victim);
-  }
+
+  affect_apply(ch, SPELL_HASTE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 2 : 5, 0, 0, 0, 0);
+
+  printf_to_char(victim, "Suddenly everything around you seems to slow down to a crawl.\n\r");
+  act("$n starts moving with blinding speed.", FALSE, victim, 0, 0, TO_ROOM);
 }
 
 

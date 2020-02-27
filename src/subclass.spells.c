@@ -347,6 +347,7 @@ void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *t
 void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!affected_by_spell(ch, SPELL_MIGHT)) {
     send_to_char("You feel more powerful.\n\r", ch);
+    act("$n looks more powerful.", TRUE, ch, 0, 0, TO_ROOM);
 
     affect_apply(ch, SPELL_MIGHT, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 10 : 20), 1, APPLY_HITROLL, 0, 0);
     affect_apply(ch, SPELL_MIGHT, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 10 : 20), 3, APPLY_DAMROLL, 0, 0);
@@ -666,8 +667,7 @@ void spell_wall_thorns(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
 void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
-  switch (type)
-  {
+  switch (type) {
     case SPELL_TYPE_SPELL:
       spell_rejuvenation(level, ch, victim, NULL);
       break;
@@ -679,19 +679,21 @@ void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim,
 
 void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
+
     return;
   }
 
   if (affected_by_spell(victim, SPELL_DEGENERATE) &&
       (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
     send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
+
     return;
   }
 
   magic_heal(victim, SPELL_REJUVENATION, 400, FALSE);
+
   send_to_char("You feel much better!\n\r", victim);
 
   update_pos(victim);
@@ -927,7 +929,7 @@ void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
 void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int mob_level = 0;
 
-  if (GET_ITEM_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
+  if (OBJ_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1) {
     /* Object is not a corpse, or a container. */
     send_to_char("You must target a corpse.\n\r", ch);
 
@@ -1613,7 +1615,12 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
       dmg = GET_HIT(ch) - 1;
     }
 
+    /* Don't consume position. */
+    int set_pos = GET_POS(ch);
+
     damage(ch, ch, dmg, TYPE_UNDEFINED, DAM_FIRE);
+
+    GET_POS(ch) = MIN(GET_POS(ch), set_pos);
 
     return FALSE;
   }
@@ -1698,7 +1705,7 @@ void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     send_to_char("Your movements become a blur.\n\r", ch);
     act("$n's movements become a blur.", TRUE, ch, 0, 0, TO_ROOM);
 
-    affect_apply(ch, SPELL_BLUR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (GET_LEVEL(ch) / 12) : (GET_LEVEL(ch) / 6)), 0, 0, 0, 0);
+    affect_apply(ch, SPELL_BLUR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (GET_LEVEL(ch) / 10) : (GET_LEVEL(ch) / 5)), 0, 0, 0, 0);
   }
 }
 
@@ -1826,22 +1833,22 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   switch (num_shadows) {
     case 1:
       send_to_char("Your shadow stretches to the north.\n\r", ch);
-      act("$n's shadow stretches to the north.", FALSE, ch, 0, 0, TO_ROOM);
+      act("$n's shadow stretches to the north.", TRUE, ch, 0, 0, TO_ROOM);
       break;
 
     case 2:
       send_to_char("Your shadow stretches to the south.\n\r", ch);
-      act("$n's shadow stretches to the south.", FALSE, ch, 0, 0, TO_ROOM);
+      act("$n's shadow stretches to the south.", TRUE, ch, 0, 0, TO_ROOM);
       break;
 
     case 3:
       send_to_char("Your shadow stretches to the east.\n\r", ch);
-      act("$n's shadow stretches to the east.", FALSE, ch, 0, 0, TO_ROOM);
+      act("$n's shadow stretches to the east.", TRUE, ch, 0, 0, TO_ROOM);
       break;
 
     case 4:
       send_to_char("Your shadow stretches to the west.\n\r", ch);
-      act("$n's shadow stretches to the west.", FALSE, ch, 0, 0, TO_ROOM);
+      act("$n's shadow stretches to the west.", TRUE, ch, 0, 0, TO_ROOM);
       break;
   }
 }

@@ -261,7 +261,7 @@ const char * const spells[] = {
   "",                             /* 200 Reserved */
   "maim",                         /* 201 */
   "aid",                          /* 202 */
-  "demonic thunder",              /* 203 */
+  "               ",              /* 203 */
   "shadowstep",                   /* 204 */
   "batter",                       /* 205 */
   "desecrate",                    /* 206 */
@@ -1851,7 +1851,7 @@ void assign_spell_pointers(void)
    */
   SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1,  5, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
   SPELLO(  2, 30, POSITION_FIGHTING,  8, 51, 51, 51, 51,  7, 51, 51,   25, TAR_SELF_ONLY,                                                                cast_teleport);
-  SPELLO(  3, 30, POSITION_STANDING, 51,  5, 51,  6, 51,  3,  7, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
+  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3,  7, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
   SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 13, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
   SPELLO(  5, 30, POSITION_FIGHTING,  5, 51, 51, 51, 51,  1, 51,  3,   17, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_burning_hands);
   SPELLO(  6, 30, POSITION_FIGHTING, 51, 12, 51, 51, 51, 51, 51, 12,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_call_lightning);

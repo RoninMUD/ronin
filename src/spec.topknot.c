@@ -485,7 +485,7 @@ OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
   OBJ *tar = 0;
 
   for (OBJ *tmp = ch->carrying; tmp; tmp = tmp->next_content) {
-    if (!CAN_SEE_OBJ(k, tmp) || (GET_OBJ_WEIGHT(tmp) > 20)) continue;
+    if (!CAN_SEE_OBJ(k, tmp) || (GETOBJ_WEIGHT(tmp) > 20)) continue;
 
     bool obj_ok = FALSE;
 
@@ -521,7 +521,7 @@ tk_get_loot_eq (CHAR *k, CHAR *ch)
 
       if ((t = EQ (ch, tmp)))
 	{
-	  if (GET_OBJ_WEIGHT(t) > 20 || !CAN_SEE_OBJ (k,t))
+	  if (GETOBJ_WEIGHT(t) > 20 || !CAN_SEE_OBJ (k,t))
 	    continue;
 
 	  if (tar == -1)
