@@ -442,7 +442,6 @@ do {                   \
 #define GET_STR_TO_DAM(ch)     (str_app[STRENGTH_APPLY_INDEX(ch)].todam)
 #define GET_DEX_APP(ch)        (dex_app[GET_DEX(ch)].prac_bonus)
 #define GET_DEX_AC(ch)         (dex_app[GET_DEX(ch)].defensive)
-#define GET_CON_HP_BONUS(ch)   (con_app[GET_CON(ch)].hitp)
 #define GET_CON_REGEN(ch)      (con_app[GET_CON(ch)].regen)
 #define GET_CON_DAM_REDUCT(ch) (con_app[GET_CON(ch)].reduct)
 #define GET_INT_APP(ch)        (int_app[GET_WIS(ch)].learn)

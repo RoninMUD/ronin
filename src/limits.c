@@ -796,7 +796,7 @@ void advance_level(CHAR *ch) {
       break;
   }
 
-  ch->points.max_hit += MAX(gain + con_app[GET_CON(ch)].hitp, 1);
+  ch->points.max_hit += MAX(gain + 3, 1);
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:

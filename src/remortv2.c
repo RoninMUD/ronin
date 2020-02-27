@@ -279,8 +279,7 @@ long long int rv2_meta_sim(CHAR *ch)
     affect_total(sim);
   }
 
-  /* To prevent a "free exp" loophole, assume 18 Constitution stat (leveling gear) for HP purposes. */
-  adjust_hit_mana_move(sim, META_HIT, (GET_LEVEL(sim) * con_app[18].hitp));
+  adjust_hit_mana_move(sim, META_HIT, (GET_LEVEL(sim) * 3));
 
   affect_total(sim);
 

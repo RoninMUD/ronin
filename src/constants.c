@@ -11,7 +11,7 @@ const char * const spell_wear_off_msg[] = {
   "RESERVED DB.C",
   "You feel less protected.",
   "!Teleport!",
-  "You feel less righteous.",
+  "Your divine favor fades.",
   "You feel a cloak of blindness disolve.",
   "!Burning Hands!",
   "!Call Lightning",
@@ -251,7 +251,7 @@ const char * const spell_wear_off_msg[] = {
   "!protect!",/*240*/
   "!wrath of ancients!",/*241*/
   "!victimize!", /*242*/
-  "!focus!",/*243*/
+  "You feel less focused.",/*243*/
   "!sanctify!",/*244*/
   "!blitz!",/*245*/
   "Your little orb disappears.",/*246*/
@@ -2505,34 +2505,34 @@ struct dex_app_type dex_app[] = {
 };
 
 /* Constitution Apply */
-/* hitp, regen, reduct */
+/* regen, reduct */
 struct con_app_type con_app[] = {
-  {-4, -3,  0}, /* 0 */
-  {-3, -2,  0}, /* 1 */
-  {-3, -2,  0},
-  {-2, -1,  0},
-  {-2, -1,  0},
-  {-1,  0,  0}, /* 5 */
-  {-1,  0,  0},
-  { 0,  0,  0},
-  { 0,  0,  0},
-  { 0,  0,  0},
-  { 0,  0,  0}, /* 10 */
-  { 0,  0,  0},
-  { 0,  0,  0},
-  { 0,  0,  0}, /* 13 */
-  { 1,  2,  0},
-  { 2,  3,  0}, /* 15 */
-  { 2,  4,  0},
-  { 3,  5,  0},
-  { 3,  6,  0}, /* 18 */
-  { 4,  7,  2},
-  { 4,  9,  4}, /* 20 - 4% damage reduction before Sancutary/etc. */
-  { 5, 11,  6},
-  { 5, 14,  8},
-  { 6, 17, 12},
-  { 6, 21, 16},
-  { 7, 25, 20}  /* 25 - 20% damage reduction before Sancutary/etc. */
+  {-3,  0}, /* 0 */
+  {-2,  0}, /* 1 */
+  {-2,  0},
+  {-1,  0},
+  {-1,  0},
+  {0,  0}, /* 5 */
+  {0,  0},
+  {0,  0},
+  {0,  0},
+  {0,  0},
+  {0,  0}, /* 10 */
+  {0,  0},
+  {0,  0},
+  {0,  0}, /* 13 */
+  {2,  0},
+  {3,  0}, /* 15 */
+  {4,  0},
+  {5,  0},
+  {6,  0}, /* 18 */
+  {7,  2},
+  {9,  4}, /* 20 - 4% damage reduction before Sancutary/etc. */
+  {11,  6},
+  {14,  8},
+  {17, 12},
+  {21, 16},
+  {25, 20}  /* 25 - 20% damage reduction before Sancutary/etc. */
 };
 
 /* Intelligence Apply */

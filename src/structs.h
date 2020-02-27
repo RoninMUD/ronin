@@ -1793,7 +1793,6 @@ struct dex_app_type
 
 struct con_app_type
 {
-  int hitp;
   int regen;
   int reduct;
 };
