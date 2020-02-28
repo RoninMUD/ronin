@@ -53,7 +53,7 @@ A Crude Stone Hammer~
 A crude looking stone hammer with a bone shaft has been dropped here.~
 ~
 5 0 8193
-0 8 3 6
+0 9 3 6
 14 5000 5000
 25
 E
@@ -78,8 +78,8 @@ A Carapace Shield~
 The carapace of some creature has been fashioned into a shield.~
 ~
 9 402653184 513
-20 0 0 0
-8 48000 40000
+22 0 0 0
+8 48000 12000
 7
 E
 shield creature carapace~
@@ -92,20 +92,20 @@ worldly power which might be harnessed by its wearer.
 ~
 X
 ~
-258 0 0
+2 0 0
 M
 ~
 ~
 ~
 ~
 A
-12 10
+13 35
 A
-13 20
+12 35
 A
-18 2
+19 1
 T
-2880
+7200
 B
 32768
 #27712
@@ -140,8 +140,8 @@ mail suit banded bandit armor~
 Banded Mail of the Bandit~
 A suit of banded mail has been dropped here by some careless person.~
 ~
-9 250663936 9
-15 0 0 0
+9 213962752 9
+25 0 0 0
 30 75000 45000
 5
 E
@@ -162,20 +162,20 @@ M
 ~
 ~
 A
-2 1
+13 35
 A
 19 2
 A
-13 15
+39 10
 B
-524288
+8
 #27721
 wristband black silk silken oriental assassin~
 Wristband of the Assassin~
 A black silken wristband with oriental designs lies here.~
 ~
-9 249622596 4097
-2 0 0 0
+9 239128644 4097
+7 0 0 0
 1 4444 4444
 10
 E
@@ -195,18 +195,16 @@ M
 ~
 ~
 A
-13 5
+18 1
 A
-18 2
-A
-19 1
+19 2
 #27722
 talisman sand desert crescent moon~
 Talisman of the Desert Moon~
 A small sand-colored talisman shaped like the crescent moon has been left here.~
 ~
-11 248574016 5
-0 0 0 0
+9 248561728 5
+15 0 0 0
 2 88000 24000
 5
 E
@@ -218,7 +216,7 @@ that these talismans bring good luck to the wearer.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
@@ -227,9 +225,9 @@ M
 A
 13 25
 A
-19 1
+52 5
 A
-17 -8
+19 1
 B
 32
 #27723
@@ -237,7 +235,7 @@ horn pale conch shell~
 A Conch Shell Horn~
 A pale colored shell that looks like a horn is here, needing a player.~
 ~
-24 217116992 16385
+24 217100608 16385
 0 0 0 0
 4 200000 90000
 3
@@ -251,25 +249,23 @@ to form perfect-toned music that dances in the air.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-18 2
+18 4
 A
 19 4
-A
-51 5
 #27724
 boots pair fine leather polished black~
 A Pair of Fine Leather Boots~
 A pair of fine leather boots, polished and black, sit here.~
 ~
-11 250638400 65
-0 0 0 0
+9 141586496 65
+8 0 0 0
 2 130000 100000
 3
 E
@@ -283,18 +279,18 @@ for a perfect fit.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-12 15
-A
-19 2
+12 5
 A
 53 1
+A
+19 2
 B
 32828
 #27725
@@ -302,7 +298,7 @@ mantle black silken silk cloak purple battle mage~
 Mantle of the Battle-Mage~
 A black silken cloak, lined with purple as been dropped here.~
 ~
-9 183562308 1025
+9 141619268 1025
 10 0 0 0
 8 130000 100000
 5
@@ -317,24 +313,24 @@ radiates the kind of power that demands respect from its wearer.
 ~
 X
 ~
-0 0 0
+512 0 0
 M
 ~
 ~
 ~
 ~
 A
-12 15
+53 4
 A
 19 2
 B
-32784
+32792
 #27726
 circlet small metal shining platinum devotion~
 The Circlet of Devotion~
 A small metal circlet made of shining platinum rests here unobtrusively.~
 ~
-11 250657859 17
+11 246461507 17
 0 0 0 0
 1 100000 40000
 4
@@ -354,15 +350,17 @@ M
 ~
 ~
 A
-19 2
+53 5
 A
-12 20
+19 2
+B
+4
 #27727
 plates pair red steel leg tactical zyca~
 A Pair of Tactical Zyca Leg Plates~
 A pair of high quality red-steel leg plates have been dropped here.~
 ~
-9 250667008 33
+9 179363840 33
 15 0 0 0
 8 80000 60000
 4
@@ -376,24 +374,24 @@ reserved for persons of high importance or command.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 2
+52 5
 A
-30 10
+19 2
 #27728
 frostbrand blade huge cobalt blue steel sword~
 A Huge, Cobalt-Blue Frostbrand~
 A huge blade, crafted from cobalt-blue steel and covered with frost, rests here.~
 $r frostbrand hacks into $V with a tremendous force!~
-26 246473795 8193
-63 11 4 12
-30 500000 100000
+26 244376643 8193
+63 7 7 12
+32 500000 100000
 4
 E
 frostbrand blade huge cobalt blue steel sword~
@@ -416,7 +414,9 @@ $n breathes easier as $e removes $s frostbrand.~
 A
 18 6
 A
-19 3
+19 4
+A
+1 2
 #27729
 shield sharp blades bladed agony~
 The Bladed Shield of Agony~
@@ -453,7 +453,7 @@ lantern dark smoldering cinders~
 A Lantern of Smoldering Cinders~
 A dark lantern is here, smoldering quietly with an evil glow.~
 ~
-1 139485767 65537
+1 134217799 65537
 0 0 0 0
 5 240000 160000
 3
@@ -468,7 +468,7 @@ to catch whatever they land on aflame.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 You scream in agony as you grasp A Lantern of Smoldering Cinders!~
 $n screams in agony as $e grasps A Lantern of Smoldering Cinders!~
@@ -485,8 +485,8 @@ armor large ribcage wings winged demon~
 Winged Armor of the Demon~
 A large ribcage fashioned in the shape of armor with wings rests here.~
 ~
-9 208695808 9
-20 0 0 0
+9 207647248 9
+24 0 0 0
 50 400000 120000
 3
 E
@@ -501,14 +501,14 @@ flexes the remaining muscles in a slow but steady rhythm.
 ~
 X
 ~
-0 0 0
+1024 0 0
 M
 You strap on the Winged Armor of the Demon and flex your new set of wings.~
 $n straps on the Winged Armor of the Demon, and flexes $s new wings.~
 You alight upon the ground and remove your Winged Armor of the Demon.~
 $n alights upon the ground and removes $s Winged Armor of the Demon.~
 A
-13 20
+13 40
 A
 19 2
 B
@@ -518,8 +518,8 @@ belt thick blood red flesh demon~
 A Belt of Demon Flesh~
 A thick belt crafted from blood-red flesh lies coiled here.~
 ~
-9 172016208 2049
-8 0 0 0
+9 171999824 2049
+10 0 0 0
 5 333333 140000
 2
 E
@@ -533,14 +533,14 @@ the end of the belt as a fastener.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-13 15
+52 10
 A
 19 2
 #27733
@@ -548,10 +548,10 @@ belt thick blood red flesh demon~
 A Belt of Demon Flesh~
 A thick belt crafted from blood-red flesh lies coiled here.~
 ~
-9 172016208 2049
-8 0 0 0
+9 171999824 2049
+10 0 0 0
 5 333333 140000
-10
+15
 E
 belt thick blood red flesh demon~
 The belt is crafted from the thick blood-red hide of a demon.  Strange symbols
@@ -563,24 +563,24 @@ the end of the belt as a fastener.
 ~
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-13 15
+52 10
 A
 19 2
 B
 8388608
 #27740
-lockpicks magical magic set~
+lockpicks picks set magical magic~
 A Set of Magical Lockpicks~
 A set of glowing lockpicks has been dropped here.~
 ~
-18 403177537 1
+12 403177537 1
 0 0 0 0
 1 0 0
 100
@@ -601,7 +601,7 @@ M
 ~
 #27741
 dart assassins assassin~
-Assassin's Dart~
+The Assassin's Dart~
 A small barbed dart crafted of black metal lies here, glistening with poison.~
 invalid~
 12 403177488 16385
@@ -630,7 +630,7 @@ The Barbarian's Rage~
 A large, two-bladed axe is here, humming with uncontained power.~
 The Barbarian's Rage slams into $V with devastating force!~
 26 403177538 8193
-0 0 0 13
+0 10 5 13
 18 10000 0
 100
 E
@@ -652,7 +652,7 @@ The urge to 'break' something fades.~
 $n seems to calm down.~
 #27743
 flute small silver glistening tranquility~
-Flute of Tranquility~
+The Flute of Tranquility~
 A small silver flute lies upon the ground, glistening with its own light.~
 ~
 24 403177536 16385
@@ -833,7 +833,7 @@ M
 ~
 #27750
 wall ice interlocking structures~
-Ice Wall~
+An Ice Wall~
 An interlocking wall of ice and stone blocks the path to the north.~
 ~
 12 0 0
@@ -855,8 +855,8 @@ M
 ~
 ~
 #27751
-wall shattered ice rock~
-Ice Wall~
+wall ice shattered rock~
+A Shattered Ice Wall~
 A shattered wall of ice and rock.~
 ~
 12 0 0
@@ -898,73 +898,6 @@ M
 ~
 ~
 ~
-#27790
-lantern dark smoldering cinders~
-A Lantern of Smoldering Cinders~
-A dark lantern is here, smoldering quietly with an evil glow.~
-~
-1 134218327 65537
-0 0 0 0
-5 240000 160000
-100
-E
-lantern dark smoldering cinders~
-Made from the blackest iron is a lantern of purely evil origin.  This light-
-producing device has been crafted from metal that looks more twisted and warped
-than hammered or cast.  Glowing cinders smolder from within their metal cage,
-burning like a gateway into the deepest parts of hell.  When moved about, a
-small shower of hot sparks and embers is produced, which almost seem to 'try'
-to catch whatever they land on aflame.
-~
-X
-~
-0 0 0
-M
-You scream in agony as you grasp A Lantern of Smoldering Cinders!~
-$n screams in agony as $e grasps A Lantern of Smoldering Cinders!~
-You feel a sense of relief as you cease to use A Lantern of Smoldering Cinders.~
-$n looks relieved as $e ceases to use A Lantern of Smoldering Cinders.~
-A
-18 5
-A
-19 5
-A
-17 -10
-B
-32768
-#27791
-armor large ribcage wings winged demon~
-Winged Armor of the Demon~
-A large ribcage fashioned in the shape of armor with wings rests here.~
-~
-9 208695808 9
-20 0 0 0
-50 400000 120000
-3
-E
-armor large ribcage wings winged demon~
-This armor is a gruesome sight indeed, for it is made from the hollowed out
-chest-cavity of some foul demon.  Hardened black flesh stretches tautly over a
-large ribcage of jagged bone and a pair of large leathery bat-like wings
-protrude from the back of the armor and still seem to be functional.  Perhaps
-the most frightening thing about it is the fact that it is only a part of the
-original host and yet it still seems to be alive in some way as it pulses and
-flexes the remaining muscles in a slow but steady rhythm.
-~
-X
-~
-0 0 0
-M
-You strap on the Winged Armor of the Demon and flex your new set of wings.~
-$n straps on the Winged Armor of the Demon, and flexes $s new wings.~
-You alight upon the ground and remove your Winged Armor of the Demon.~
-$n alights upon the ground and removes $s Winged Armor of the Demon.~
-A
-13 20
-A
-19 2
-B
-16777216
 #27797
 page organ music discordant~
 a page of organ music~
@@ -1004,7 +937,7 @@ shadow plate~
 The Shadow Plate~
 A plate armor made of some black, swirling matter is lying on the ground.~
 ~
-9 139586112 9
+9 139520576 9
 0 0 0 0
 10 175000 21500
 95

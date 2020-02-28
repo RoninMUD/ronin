@@ -11,7 +11,7 @@ blue eyes, this beast looks around with savage hunger for anything to eat.
 ~
 106 295040 0 Y
 45 -15 -10 50d50+10000 23d8+75
-0 1021923
+42039 1021923
 8 8 1
 68 18568 1d1+1 1
 7 2 20 0
@@ -30,11 +30,11 @@ not unheard of in remote areas.  A thin mist hovers around this large angular
 creature.  Jagged white teeth drip half-frozen water droplets onto the ground,
 leaving small icicles upon the troll's chin.
 ~
-536887406 294912 -197 Y
-38 -14 -6 20d20+2000 4d22+30
-62834 339238
+16494 294912 -197 Y
+45 -9 -6 20d30+3700 7d10+25
+62834 761681
 8 8 0
-75 268451968 1d1+1 2
+75 16512 1d1+1 2
 6 2 5 0
 5 1 10 0
 0 0 0 34
@@ -58,16 +58,16 @@ catch the gleam in its eye however, you realize it should be treated with the
 full respect due to such a monster.
 ~
 536871018 268730408 0 Y
-40 -20 -20 10d10+3600 10d10+10
-1 302393
+47 -20 -20 10d10+4500 10d10+50
+1 989287
 8 8 0
 80 1023 1d1+1 3
 6 1 5 0
 8 1 5 0
 5 1 5 0
-0 0 0 126
+0 0 0 62
 K
-70283 27712 0 0 0 0 0
+172839 27712 0 0 0 0 0
 #27710
 imp wicked little demon~
 An Imp~
@@ -106,11 +106,11 @@ on itself.  Though it has no will of its own, it is proficient in the ways of
 killing, using jagged claws and teeth to rip its victims apart.
 ~
 108 0 0 Y
-40 -15 -5 22d22+4800 7d7+7
+43 -15 -5 22d22+4800 7d7+7
 7157 501234
 8 8 0
 62 16384 1d1+1 0
-0 0 0 64
+0 0 0 0
 K
 0 0 0 0 0 0 0
 #27712
@@ -128,11 +128,11 @@ material as the creature's shell.  Efficient killers, bebiliths never miss an
 opportunity to deal out death.
 ~
 536887406 276856892 -832 Y
-47 -26 -20 123d127+18347 40d6+287
-0 1593423
+66 -26 -20 123d127+18347 40d6+287
+0 3802398
 8 8 0
 62 268452044 1d1+1 0
-0 0 0 376
+0 0 0 56
 K
 1391242 27711 0 0 0 0 0
 #27713
@@ -150,8 +150,8 @@ dangerous barbed tail--similar to that of a scorpion--which it takes great
 pleasure in impaling its victims with.
 ~
 108 268468224 -650 Y
-47 -13 -9 30d7+6660 10d2+33
-7203 926586
+47 -13 -9 30d7+10660 10d3+63
+32938 926586
 8 8 0
 62 16388 1d1+1 0
 0 1 0 0
@@ -172,19 +172,19 @@ paws and wickedly sharp teeth flex and grind, waiting for a fresh meal of flesh
 to tear into.
 ~
 104 9207868 -500 Y
-38 -13 -11 36d4+5893 23d3+13
-0 616878
+46 -13 -11 36d4+4893 23d3+13
+0 723839
 8 8 0
 62 268452289 1d1+1 2
 5 2 10 0
 6 2 10 0
-0 0 0 32
+0 1 0 32
 K
-0 0 0 0 0 0 0
+13043 0 0 0 0 0 0
 #27715
 gelugon guardian guard demon~
 A Gelugon Guardian~
-A Gelugon Guardian blocks entry beyond his station.
+A Gelugon Guardian blocks entry beyond its station.
 ~
 The super-elite guards and protectors of demonkind, Gelugons resemble humanoid
 insects that stand over ten feet tall on their hind legs.  Powerful chitinous
@@ -198,34 +198,36 @@ masters to the limits of their existence.
 ~
 16490 277088416 -850 Y
 48 -19 -12 120d8+8329 47d2+43
-39458 1532393
+77382 1783929
 8 8 0
 63 18880 1d1+1 0
 0 0 0 34
 R
-265
+257
 K
 0 0 0 0 0 0 0
 #27716
-batazu warrior demon~
-A Batazu Warrior~
-A Batazu Warrior roams the area, waiting for orders.
+baatezu warrior demon~
+A Baatezu Warrior~
+A Baatezu Warrior roams the area, waiting for orders.
 ~
-One of the most fearsome denizens of the outer planes, Batazu look like
+One of the most fearsome denizens of the outer planes, Baatezu look like
 something out of the most terrible nighmare ever dreamed.  These creatures are
 the second in command in their home plane, candidates for transformation one
-day into the most feared demon of all--The Pit Fiend.  Only vaguely humanoid in
+day into the most feared demon of all: the Pit Fiend.  Only vaguely humanoid in
 shape, these greater demons are covered with jagged green scales and sport a
 pair of leathery bat-like wings.  A long, wickedly-barbed tail sprouts from the
 base of its back.
 ~
 16488 277118988 -800 Y
-50 -23 -13 46d49+16439 21d7+46
-6593 2971125
+50 -23 -21 46d49+15639 21d7+110
+38293 2971125
 8 8 0
-63 17103 1d1+1 1
+63 17092 1d1+1 1
 8 2 15 0
-0 1 0 48
+0 1 1 48
+R
+8
 K
 0 0 0 0 0 0 0
 #27717
@@ -245,7 +247,7 @@ greater demons and may even attain the status of Pit Fiend, the ultimate
 killing-machine.
 ~
 536871020 8421376 -999 Y
-35 -13 -3 30d30+800 24d4+14
+35 -13 -3 30d30+1527 24d4+14
 0 293874
 8 8 0
 62 24769 1d1+1 2
@@ -275,13 +277,13 @@ crafted daggers, which he wears easily in sheaths on his hips.
 342039 1202924
 8 8 1
 3 402674112 1d1+1 0
-0 0 0 960
+0 0 0 640
 K
 0 0 0 0 0 0 0
 #27721
 shadowraith ninja assassin jal pur~
-Shadowraith, the Ninja Assassin~
-Shadowraith, the Ninja Assassin of Jal-Pur is here, biding her time.
+Shadowraith, the Deadly Assassin~
+Shadowraith, the Deadly Assassin of Jal-Pur is here, biding her time.
 ~
 A black-garbed figure is all that can describe this being.  It moves with a
 stealthy flow, not making a sound.  Two long sword hilts reach from either of
@@ -293,12 +295,12 @@ taking in every detail of the surroundings.
 ~
 16458 8650880 -703 Y
 45 -25 -15 26d32+13212 30d6+36
-120429 1302343
+301023 1302343
 8 8 2
 5 536891852 5d50+350 2
 2 2 10 0
 9 2 10 0
-0 0 0 832
+0 0 0 512
 K
 0 0 0 0 0 0 0
 #27722
@@ -316,12 +318,12 @@ Shomed seems to be on a hunt of his own at this very moment.
 ~
 16458 1318944 832 Y
 48 -25 -25 100d100+75000 9d14+132
-82740 1922526
+583724 1922526
 8 8 1
 6 268458184 1d1+1 2
 9 2 10 0
 2 2 15 0
-0 0 0 832
+0 0 0 512
 R
 16
 K
@@ -341,17 +343,17 @@ woman seems to take in every detail of her surroundings with a curiosity akin
 to that of a child.
 ~
 33554506 305336 874 Y
-48 -18 -15 100d5+28000 26d10+182
-238432 2019838
+48 -18 -22 100d5+43892 26d10+263
+728923 2019838
 8 8 2
 10 21440 1d1+1 0
-0 0 0 832
+0 0 0 512
 K
 0 0 0 0 0 0 0
 #27724
 velxok archmage canticle mage magic-user~
 Velxok, the Archmage~
-Velxok, the Archmage of Canticle searches the area with keen intrest.
+Velxok, Archmage of The Canticle searches the area with keen intrest.
 ~
 At first glance, this hunched over figure of a man looks humble and quiet.  A
 second glance brings a sense of dread as the malice in his eyes becomes all too
@@ -362,18 +364,22 @@ black--that makes his thick robe and wilted but still pointed hat seem sinister
 indeed.  The only other item about him is a gnarled staff of misshapen black
 wood that he clutches in one of his twisted hands.
 ~
-16777450 142641340 -905 Y
-49 -20 -10 55d55+15555 6d12+200
+16777322 142641340 -905 Y
+49 -20 -18 55d55+28732 12d12+273
 3019233 3770874
 8 8 1
-1 29632 127d127+9999 6
-1 2 5 241
-1 2 10 110
-1 1 20 109
-1 5 30 80
-1 5 40 23
-1 2 50 26
-0 2 0 865
+1 29632 127d127+9999 10
+1 2 10 241
+1 5 20 130
+1 2 30 109
+1 5 40 80
+1 2 50 110
+1 2 60 248
+1 2 70 136
+1 2 80 95
+1 2 90 218
+1 2 100 26
+0 2 0 545
 R
 4
 K
@@ -393,14 +399,14 @@ combat, sometimes hacking his enemies to pieces and other times disintegrating
 them into a pile of ash--whichever method gets the job done.
 ~
 536887370 276857000 -925 Y
-49 -20 -15 120d40+26000 70d2+120
-234934 3250182
+50 -27 -24 128d48+43294 70d3+212
+1809384 43948035
 8 8 1
 11 536899968 1d1+1 3
 3 2 40 0
 9 2 30 0
 2 2 20 0
-0 0 1 864
+0 0 1 544
 K
 0 0 0 0 0 0 0
 #27726
@@ -418,17 +424,19 @@ the floor as she walks about making hardly a sound.  She seems to be muttering
 something quietly to herself in her own language, perhaps a prayer of some
 sort.
 ~
-33554506 134260924 989 Y
-49 -20 -15 140d40+24390 34d6+103
-47 2719348
+33554506 402696380 989 Y
+50 -20 -20 140d40+87982 36d6+187
+42 3405934
 8 8 2
-2 30660 127d127+9999 5
-1 6 2 85
-1 2 20 129
-1 2 30 141
-1 5 30 81
-1 6 75 28
-0 0 0 864
+2 30660 127d127+9999 7
+1 6 15 85
+1 2 25 119
+1 2 35 93
+1 5 50 23
+1 6 65 28
+1 2 80 129
+7 2 100 0
+0 0 0 544
 K
 0 0 0 0 0 0 0
 #27727
@@ -449,13 +457,13 @@ Aniston Blackbane stands ever at the ready, performing his chosen task with
 utter determination.
 ~
 16777290 276856872 -965 Y
-49 -27 -22 120d100+80000 54d9+278
-403933 3930239
+50 -27 -28 120d100+97329 54d9+478
+2349247 4639283
 8 8 1
-4 268456952 1d1+1 2
+4 21488 1d1+1 2
 10 2 10 0
 4 2 50 0
-0 0 1 864
+0 0 9 544
 K
 0 0 0 0 0 0 0
 #27728
@@ -474,17 +482,19 @@ with a dull light the same color as his eyes and which leaves a slight trail of
 frost behind its every movement.  Law radiates the energy of a being that is
 directly touched by a divine force.
 ~
-131178 43196 1000 Y
-50 -30 -24 24d100+23988 10d5+2000
+131178 536914108 1000 Y
+51 -31 -25 90d30+52183 10d10+2100
 0 8201938
 8 8 1
-9 32717 127d127+9999 6
-3 2 30 0
-1 6 25 187
-9 2 20 0
-1 2 15 27
-10 2 10 0
-1 2 10 119
+9 32717 127d127+9999 8
+1 6 30 187
+1 6 40 140
+1 2 40 190
+9 2 50 0
+1 2 50 119
+3 2 60 0
+2 2 70 0
+1 2 80 27
 0 0 0 547
 K
 0 0 0 0 0 0 0
@@ -504,13 +514,13 @@ souls of the underworld are channeling their amusement through his body about
 some unknown and sinister joke.
 ~
 536887402 144476220 -1000 Y
-50 -23 -25 100d30+37293 66d6+444
+51 -31 -25 70d70+69384 66d6+666
 0 8392732
 8 8 1
 9 32717 127d127+9999 3
-1 2 5 203
+1 2 10 210
 1 2 20 136
-1 2 30 172
+3 2 25 0
 0 0 0 553
 K
 0 0 0 0 0 0 0
@@ -530,49 +540,24 @@ hide the color of smoldering blood and outfitted with a pair of huge wyvern-
 like wings, Xykloqtium is a terrifying sight to behold.
 ~
 537411688 428116028 -1000 Y
-66 -40 -22 1d1+111110 40d4+438
+70 -40 -30 1d1+222221 40d4+680
 0 18903985
 9 9 0
-63 29645 127d127+9999 5
-1 2 8 203
-1 2 10 100
+63 29645 127d127+9999 10
+1 2 10 181
+1 5 15 179
 1 5 20 106
-8 2 25 0
-10 2 30 0
-0 2 1 881
+1 2 25 100
+10 5 40 0
+8 5 50 0
+5 2 60 0
+6 2 70 0
+2 2 85 0
+4 2 100 0
+0 2 1 561
 R
-160
+164
 K
-4109934 27733 0 0 0 0 0
-#27790
-xykloqtium uber imposing pit fiend general~
-Uber Xykloqtium, the Imposing~
-Uber Xykloqtium, the Imposing is flying here, flexing its corded muscles.
-~
-Standing just over three meters tall Xykloqtium is short for the standards of
-its kind.  However, three meters and over five hundred kilograms is simply not
-enough to contain the sheer horror that is a Pit Fiend.  Having spent more than
-a thousand years in the torments of the deepest, most terrible regions of the
-Abyss, Xykloqtium is one of the most deeply changed and powerful demons ever
-produced.  Pit Fiends are the result of the unceasing torture and dementation
-of a greater demon into something even more fearsome.  Covered in a thick red
-hide the color of smoldering blood and outfitted with a pair of huge wyvern-
-like wings, Xykloqtium is a terrifying sight to behold.
-~
-537411688 965511228 -1000 Y
-70 -40 -25 1d1+111110 40d4+438
-0 18903985
-9 9 0
-63 29645 127d127+9999 5
-1 2 16 203
-1 2 20 100
-1 5 40 106
-8 2 50 0
-10 2 60 0
-0 2 9 561
-R
-160
-K
-34560648 0 0 0 0 0 0
+15032932 27733 0 0 0 0 0
 #0
 $~
