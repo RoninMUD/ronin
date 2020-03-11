@@ -120,6 +120,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
           else
           {
@@ -154,7 +155,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
-          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
           else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
           else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
@@ -590,6 +591,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
 
       if (((skill == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) ||
+          ((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) ||
           ((skill == SKILL_QUAD) && (GET_LEVEL(ch) < 50)))
       {
         index = -2;

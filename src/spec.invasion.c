@@ -1794,10 +1794,10 @@ int circlet_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     if (!owner || !IS_MORTAL(owner)) return FALSE;
 
-    if (OBJ_SPEC(obj) < 10) {
+    if (OBJ_SPEC(obj) < 5) {
       OBJ_SPEC(obj)++;
 
-      if (OBJ_SPEC(obj) >= 10) {
+      if (OBJ_SPEC(obj) >= 5) {
         printf_to_char(owner, "You feel as if the gods will reward your devotion if you pray.\n\r");
       }
     }

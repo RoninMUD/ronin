@@ -752,35 +752,35 @@ void advance_level(CHAR *ch) {
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
-      gain = number(3, 7);   /* average 5, was 4 */
+      gain = number(3, 7);   /* average 5 */
       break;
 
     case CLASS_CLERIC:
-      gain = number(5, 9);   /* average 7, was 6 */
+      gain = number(5, 9);   /* average 7 */
       break;
 
     case CLASS_THIEF:
-      gain = number(7, 11);  /* average 9, was 8 */
+      gain = number(7, 11);  /* average 9 */
       break;
 
     case CLASS_WARRIOR:
-      gain = number(10, 14); /* average 12, was 11 */
+      gain = number(10, 14); /* average 12 */
       break;
 
     case CLASS_NINJA:
-      gain = number(5, 9);   /* average 7, was 6 */
+      gain = number(5, 9);   /* average 7 */
       break;
 
     case CLASS_NOMAD:
-      gain = number(13, 17); /* average 15, was 14 */
+      gain = number(13, 17); /* average 15 */
       break;
 
     case CLASS_PALADIN:
-      gain = number(8, 12);  /* average 10, was 9 */
+      gain = number(8, 12);  /* average 10 */
       break;
 
     case CLASS_ANTI_PALADIN:
-      gain = number(6, 10);  /* average 8, was 7 */
+      gain = number(6, 10);  /* average 8 */
       break;
 
     case CLASS_AVATAR:
@@ -788,15 +788,15 @@ void advance_level(CHAR *ch) {
       break;
 
     case CLASS_BARD:
-      gain = number(6, 10);  /* average 8, was 6.5 */
+      gain = number(6, 10);  /* average 8 */
       break;
 
     case CLASS_COMMANDO:
-      gain = number(7, 11);  /* average 9, was 8 */
+      gain = number(7, 11);  /* average 9 */
       break;
   }
 
-  ch->points.max_hit += MAX(gain + 3, 1);
+  ch->points.max_hit += gain + MAX(con_app[GET_CON(ch)].hitp, con_app[18].hitp);
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
@@ -822,11 +822,7 @@ void advance_level(CHAR *ch) {
 
   ch->points.max_move += 3;
 
-  ch->specials.spells_to_learn += MAX(2, wis_app[GET_WIS(ch)].bonus);
-
-  if (ch->specials.spells_to_learn < 0) {
-    ch->specials.spells_to_learn = 127;
-  }
+  ch->specials.spells_to_learn += MIN(MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus), 127);
 
   if (GET_LEVEL(ch) >= LEVEL_IMM) {
     for (int i = 0; i < 3; i++) {
