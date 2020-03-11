@@ -66,11 +66,13 @@ rate.
  
 After reaching 18 constitution (see META), you can gain even more
 constitution from your guildmaster with quest points (see AQUEST).
-Constitution of 19 and above will reduce the damage taken each
-hit and provide addition regen per tick.
+Constitution of 19 and above will increase the number of hit points
+you gain at level, reduce the damage taken each hit, and will provide
+additional regen per tick.
 
   ------------------------------------------------------------
   | CON     |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | HIT PTS |   4  |   4  |   5  |   5  |   6  |   6  |   7  |
   | DAM %   |   2  |   2  |   2  |   2  |   4  |   4  |   4  |
   | REGEN   |   3  |   3  |   3  |   4  |   4  |   4  |   4  |
   ------------------------------------------------------------
@@ -1651,7 +1653,7 @@ practice % on parry for every 10 levels.
 You can improve your skills by using the practice command.
 
 Skills: bash, block, disarm, dual, kick, knock, parry, punch, rescue,
-        spin, throw, triple (level 20), quad (level 50)
+        spin, throw, triple (level 20), disembowel (level 40), quad (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1811,7 +1813,7 @@ Circle                                                Y
 Coin Toss                                             Y
 Cunning                                               Y
 Disarm                       Y              Y    Y
-Disembowel                                  Y
+Disembowel                                  Y              Y
 Dodge              Y                   Y    Y         Y
 Dual                         Y                             Y
 Hide          Y                        Y              Y
@@ -7787,12 +7789,12 @@ See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD PRACTICE DEXTERITY
 #
 DISEMBOWEL
 
-Class: Nomad (Level 40)
+Class: Warrior (Level 40) Nomad (Level 40)
 
 Usage: disembowel <victim>
 
 Disembowel is a vicious attack that deals a single melee hit against the target,
-multiplied by between the Nomad's level divided by 10, up to to their level
+multiplied by between the user's level divided by 10, up to to their level
 divided by 5 (between a 5x to a 10x multiplier at level 50).
 
 This attack can only be successful when performed against a target that is
@@ -7800,7 +7802,7 @@ close to death (30% hit points remaining, or less), or if the damage would cause
 the victim to die in one strike.  This ability is similar to Backstab, but is
 used at the end of combat, instead of the beginning.
 
-The Nomad will experience 3 rounds of input lag after using Disembowel,
+The user will experience 3 rounds of input lag after using Disembowel,
 regardless of success or failure.
 
 The success of this skill is based on how well it is practiced, and the user's
