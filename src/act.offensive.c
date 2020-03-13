@@ -1853,6 +1853,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) != CLASS_WARRIOR) &&
       (GET_CLASS(ch) != CLASS_NOMAD)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
@@ -1860,8 +1861,8 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
   }
 
   if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) == CLASS_NOMAD) &&
-      (GET_LEVEL(ch) < 45)) {
+      ((GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) &&
+      (GET_LEVEL(ch) < 40)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;

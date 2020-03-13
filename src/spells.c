@@ -760,66 +760,65 @@ void cast_firebreath( ubyte level, CHAR *ch, char *arg, int type,
   }
 }
 
-void cast_bless( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 Bless victim or object Hit +1 */
-{
+void cast_bless(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (tar_obj) {        /* It's an object */
-      if ( IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS) ) {
-	send_to_char("Nothing seems to happen.\n\r", ch);
-	return;
+    case SPELL_TYPE_SPELL:
+      if (tar_obj) {        /* It's an object */
+        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS)) {
+          send_to_char("Nothing seems to happen.\n\r", ch);
+          return;
+        }
+        spell_bless(level, ch, 0, tar_obj);
       }
-      spell_bless(level,ch,0,tar_obj);
-    } else {              /* Then it is a PC | NPC */
-      if ( affected_by_spell(tar_ch, SPELL_BLESS) ||
-	  (GET_POS(tar_ch) == POSITION_FIGHTING)) {
-	send_to_char("Nothing seems to happen.\n\r", ch);
-	return;
+      else {              /* Then it is a PC | NPC */
+        if (affected_by_spell(tar_ch, SPELL_BLESS)) {
+          send_to_char("Nothing seems to happen.\n\r", ch);
+          return;
+        }
+        spell_bless(level, ch, tar_ch, 0);
       }
-      spell_bless(level,ch,tar_ch,0);
-    }
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_BLESS) ||
-	(GET_POS(ch) == POSITION_FIGHTING))
-      return;
-    spell_bless(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) {        /* It's an object */
-      if ( IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS) )
-	return;
-      spell_bless(level,ch,0,tar_obj);
+      break;
+    case SPELL_TYPE_POTION:
+      if (affected_by_spell(ch, SPELL_BLESS) ||
+        (GET_POS(ch) == POSITION_FIGHTING))
+        return;
+      spell_bless(level, ch, ch, 0);
+      break;
+    case SPELL_TYPE_SCROLL:
+      if (tar_obj) {        /* It's an object */
+        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS))
+          return;
+        spell_bless(level, ch, 0, tar_obj);
 
-    } else {              /* Then it is a PC | NPC */
+      }
+      else {              /* Then it is a PC | NPC */
 
-      if (!tar_ch) tar_ch = ch;
+        if (!tar_ch) tar_ch = ch;
 
-      if ( affected_by_spell(tar_ch, SPELL_BLESS) ||
-	  (GET_POS(tar_ch) == POSITION_FIGHTING))
-	return;
-      spell_bless(level,ch,tar_ch,0);
-    }
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) {        /* It's an object */
-      if ( IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS) )
-	return;
-      spell_bless(level,ch,0,tar_obj);
+        if (affected_by_spell(tar_ch, SPELL_BLESS) ||
+          (GET_POS(tar_ch) == POSITION_FIGHTING))
+          return;
+        spell_bless(level, ch, tar_ch, 0);
+      }
+      break;
+    case SPELL_TYPE_WAND:
+      if (tar_obj) {        /* It's an object */
+        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS))
+          return;
+        spell_bless(level, ch, 0, tar_obj);
 
-    } else {              /* Then it is a PC | NPC */
+      }
+      else {              /* Then it is a PC | NPC */
 
-      if ( affected_by_spell(tar_ch, SPELL_BLESS) ||
-	  (GET_POS(tar_ch) == POSITION_FIGHTING))
-	return;
-      spell_bless(level,ch,tar_ch,0);
-    }
-    break;
-  default :
-    log_f("Wrong type called in bless!");
-    break;
+        if (affected_by_spell(tar_ch, SPELL_BLESS) ||
+          (GET_POS(tar_ch) == POSITION_FIGHTING))
+          return;
+        spell_bless(level, ch, tar_ch, 0);
+      }
+      break;
+    default:
+      log_f("Wrong type called in bless!");
+      break;
   }
 }
 

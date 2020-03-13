@@ -319,7 +319,7 @@ int gelugon_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     if (!ch || IS_IMMORTAL(ch) || (V_ROOM(mob) != STAIRCASE_ROOM)) return FALSE;
 
     /* Attack the character if not engaged in combat. */
-    if (!GET_OPPONENT(mob)) {
+    if (!GET_OPPONENT(mob) && IS_MORTAL(ch)) {
       act("$n blocks $N's way and attacks!", FALSE, mob, 0, ch, TO_NOTVICT);
       act("$n blocks your way and attacks!", FALSE, mob, 0, ch, TO_VICT);
 
@@ -992,7 +992,7 @@ int aniston_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
   /* Attack first character to enter Searing Room if Locket has been given, unless already engaged in combat. */
   if (cmd == MSG_ENTER) {
-    if (!ch || IS_IMMORTAL(ch) || !IS_SET(GET_BANK(mob), WEAKENED) || GET_OPPONENT(mob)) return FALSE;
+    if (!ch || !IS_MORTAL(ch) || !IS_SET(GET_BANK(mob), WEAKENED) || GET_OPPONENT(mob)) return FALSE;
 
     do_say(mob, "My brother is dead, and soon you shall join him!", CMD_SAY);
 
@@ -1794,10 +1794,10 @@ int circlet_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
     if (!owner || !IS_MORTAL(owner)) return FALSE;
 
-    if (OBJ_SPEC(obj) < 10) {
+    if (OBJ_SPEC(obj) < 5) {
       OBJ_SPEC(obj)++;
 
-      if (OBJ_SPEC(obj) >= 10) {
+      if (OBJ_SPEC(obj) >= 5) {
         printf_to_char(owner, "You feel as if the gods will reward your devotion if you pray.\n\r");
       }
     }
