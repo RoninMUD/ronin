@@ -3262,48 +3262,48 @@ void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 
-void spell_conflagration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
-  CHAR *tmp, *next;
-
+void spell_conflagration(ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
-    send_to_char("Behave yourself here please!\n",ch);
+    send_to_char("Behave yourself here please!\n", ch);
+
     return;
   }
 
-  act("$n conjures a handful of flames from thin air\nand throws them at $N.",
-      FALSE,ch,0,vict,TO_NOTVICT);
-  act("$n conjures a handful of flames from thin air and throws them at you.",
-      FALSE,ch,0,vict,TO_VICT);
-  act("You conjure a handful of flames from thin air and throw them at $N.",
-      FALSE,ch,0,vict,TO_CHAR);
+  act("$n conjures a handful of flames from thin air and throws them at $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+  act("$n conjures a handful of flames from thin air and throws them at you.", FALSE, ch, 0, vict, TO_VICT);
+  act("You conjure a handful of flames from thin air and throw them at $N.", FALSE, ch, 0, vict, TO_CHAR);
 
-  for (tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = next) {
-    next = tmp->next_in_room;
-    if(IS_NPC(tmp) && IS_SET(tmp->specials.immune,IMMUNE_FIRE)) continue;
-    if (tmp != vict && tmp != ch) {
-      act ("The fires raging around $n burn you as well.",
-     FALSE,vict,0,tmp,TO_VICT);
-/* Changed following line so conflag would damage other Pcs - Ranger Nov 96
-      damage (ch, tmp, 100, SPELL_CONFLAGRATION);
-   Changed again so that pc's would get xp killing mobs in the room with
-   this loop - Ranger May 99 */
-      if(!IS_NPC(tmp)) {
-        damage (tmp, tmp, 100, TYPE_UNDEFINED,DAM_NO_BLOCK);
-      }
-      else
-        damage (ch, tmp, 100, TYPE_UNDEFINED,DAM_FIRE);
+  if (!IS_SET(GET_IMMUNE(vict), IMMUNE_FIRE)) {
+    send_to_char("You are burning to the soul.\n\r", vict);
+
+    damage(ch, vict, IS_NPC(vict) ? 1500 : 500, SPELL_CONFLAGRATION, DAM_FIRE);
+  }
+  else {
+    act("You emerge from the flames unscathed.", FALSE, ch, 0, vict, TO_VICT);
+    act("$N emerges from the flames unscathed.", FALSE, ch, 0, vict, TO_CHAR);
+  }
+
+  for (CHAR *temp_vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_vict; temp_vict; temp_vict = next_vict) {
+    next_vict = temp_vict->next_in_room;
+
+    if ((temp_vict == vict) && (temp_vict == ch)) continue;
+
+    if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_FIRE)) {
+      act("The fires raging around $n burn you as well.", FALSE, vict, 0, temp_vict, TO_VICT);
+
+      damage(IS_NPC(temp_vict) ? ch : temp_vict, temp_vict, 200, SPELL_CONFLAGRATION, DAM_FIRE);
+    }
+    else {
+      act("You emerge from the flames unscathed.", FALSE, ch, 0, temp_vict, TO_VICT);
+      act("$N emerges from the flames unscathed.", FALSE, ch, 0, temp_vict, TO_CHAR);
     }
   }
 
-  if(!IS_SET(vict->specials.immune,IMMUNE_FIRE)){
-    send_to_char("You are burning to the soul.\n\r",vict);
-    if(IS_NPC(vict)) damage (ch, vict, 1500, TYPE_UNDEFINED,DAM_MAGICAL);
-    else damage (ch, vict, 400, TYPE_UNDEFINED,DAM_FIRE);
-  }
+  send_to_char("The raging fires burn you as well.\n\r", ch);
 
-  send_to_char("The raging fires burn you as well.\n\r",ch);
-  damage (ch, ch, 300, TYPE_UNDEFINED,DAM_NO_BLOCK);
+  damage(ch, ch, 300, TYPE_UNDEFINED, DAM_NO_BLOCK);
 }
+
 
 void spell_mass_invisibility (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   CHAR *tmp, *next;

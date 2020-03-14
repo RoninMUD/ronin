@@ -1727,7 +1727,7 @@ int mantle_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     return FALSE;
   }
 
-  /* Set APPLY_DAMAGE between 1 and 3 at tick. */
+  /* Set APPLY_DAMAGE between 1 and 4 at tick. */
   if (cmd == MSG_TICK) {
     CHAR *owner = OBJ_EQUIPPED_BY(obj);
 
@@ -1744,16 +1744,20 @@ int mantle_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     int rnd = number(1, 100);
 
     /* 10% 1 damage. */
-    if (rnd <= 10) {
+    if (rnd <= 20) {
       OBJ_AFF_MOD(obj, 1) = 1;
     }
-    /* 50% 2 damage. */
-    else if (rnd <= 60) {
+    /* 30% 2 damage. */
+    else if (rnd <= 50) {
       OBJ_AFF_MOD(obj, 1) = 2;
     }
     /* 40% 3 damage. */
-    else {
+    else if (rnd <= 80) {
       OBJ_AFF_MOD(obj, 1) = 3;
+    }
+    /* 20% 4 damage. */
+    else {
+      OBJ_AFF_MOD(obj, 1) = 4;
     }
 
     equip_char(owner, obj, WEAR_ABOUT);
