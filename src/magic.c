@@ -3276,27 +3276,21 @@ void spell_conflagration(ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   if (!IS_SET(GET_IMMUNE(vict), IMMUNE_FIRE)) {
     send_to_char("You are burning to the soul.\n\r", vict);
 
-    damage(ch, vict, IS_NPC(vict) ? 1500 : 500, SPELL_CONFLAGRATION, DAM_FIRE);
+    damage(ch, vict, IS_NPC(vict) ? 1500 : 500, TYPE_UNDEFINED, DAM_FIRE);
   }
   else {
     act("You emerge from the flames unscathed.", FALSE, ch, 0, vict, TO_VICT);
-    act("$N emerges from the flames unscathed.", FALSE, ch, 0, vict, TO_CHAR);
+    act("$N emerges from the flames unscathed.", FALSE, ch, 0, vict, TO_ROOM);
   }
 
   for (CHAR *temp_vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_vict; temp_vict; temp_vict = next_vict) {
     next_vict = temp_vict->next_in_room;
 
-    if ((temp_vict == vict) && (temp_vict == ch)) continue;
+    if ((temp_vict == vict) || (temp_vict == ch) || IS_SET(GET_IMMUNE(temp_vict), IMMUNE_FIRE)) continue;
 
-    if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_FIRE)) {
-      act("The fires raging around $n burn you as well.", FALSE, vict, 0, temp_vict, TO_VICT);
+    act("The fires raging around $n burn you as well.", FALSE, vict, 0, temp_vict, TO_VICT);
 
-      damage(IS_NPC(temp_vict) ? ch : temp_vict, temp_vict, 200, SPELL_CONFLAGRATION, DAM_FIRE);
-    }
-    else {
-      act("You emerge from the flames unscathed.", FALSE, ch, 0, temp_vict, TO_VICT);
-      act("$N emerges from the flames unscathed.", FALSE, ch, 0, temp_vict, TO_CHAR);
-    }
+    damage(IS_NPC(temp_vict) ? ch : temp_vict, temp_vict, 200, TYPE_UNDEFINED, DAM_FIRE);
   }
 
   send_to_char("The raging fires burn you as well.\n\r", ch);
