@@ -1713,7 +1713,7 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
   }
   else
   {
-    // 'store item' or 'store 1 item'
+    // 'store item' or 'store 1 item' or 'store x.item'
     if (number == 1)
     {
       temp_obj = get_obj_in_list_vis(ch, arg1, ch->carrying);
@@ -1728,6 +1728,20 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
         }
         else
         {
+          if ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (!*arg2 || str_cmp(arg2, "confirm")))
+          {
+            if (strchr(arg1, '.')) {
+              act("$n tells you 'You must type 'store x.<container_keyword> confirm' to store a container.'", FALSE, vault_guard, 0, ch, TO_VICT);
+            }
+            else {
+              act("$n tells you 'You must type 'store <container_keyword> confirm' to store a container.'", FALSE, vault_guard, 0, ch, TO_VICT);
+            }
+
+            extract_obj(vault_obj);
+
+            return TRUE;
+          }
+
           vault_put(ch, temp_obj, vault_obj);
 
           total = 1;
@@ -1760,8 +1774,19 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
 
           num_no_rent++;
         }
-        else if (vault_put(ch, temp_obj, vault_obj))
+        else
         {
+          if ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (!*arg2 || str_cmp(arg2, "confirm")))
+          {
+            act("$n tells you 'You must type 'store x <container_keyword> confirm' to store multiple containers.'", FALSE, vault_guard, 0, ch, TO_VICT);
+
+            extract_obj(vault_obj);
+
+            return TRUE;
+          }
+
+          vault_put(ch, temp_obj, vault_obj);
+
           total++;
         }
       }
