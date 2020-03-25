@@ -575,12 +575,15 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
       for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
         next_follower = temp_follower->next;
 
-        if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
-
-        act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
-        send_to_char("\n\r", temp_follower->follower);
-
-        do_move(temp_follower->follower, argument, cmd + 1);
+        //if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
+        if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_FIGHTING)) continue;
+        if (GET_POS(temp_follower->follower) >= POSITION_FIGHTING) {
+          if (!SAME_ROOM(temp_follower->follower, GET_OPPONENT(temp_follower->follower))) {
+            act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
+            send_to_char("\n\r", temp_follower->follower);
+            do_move(temp_follower->follower, argument, cmd + 1);
+          }
+        }
       }
     }
   }
