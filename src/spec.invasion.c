@@ -1206,6 +1206,8 @@ int chaos_bite_ench(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg
   if (cmd == CMD_CAST) {
     if (!ch || !IS_MORTAL(ch) || (GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) return FALSE;
 
+    if (!enchanted_by(ch, CHAOS_BITE_ENCH_NAME)) return FALSE;
+
     act("$n tries to cast a spell, but $e can only choke up blood from the wound in $s neck.", FALSE, ch, 0, 0, TO_ROOM);
     act("You try to cast a spell, but you can only choke up blood from the wound in your neck.", FALSE, ch, 0, 0, TO_CHAR);
 
