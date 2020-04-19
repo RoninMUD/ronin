@@ -750,6 +750,7 @@ void equip_char(CHAR *ch, OBJ *obj, int pos) {
       act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
 
       obj_to_char(obj, ch);
+      return;
     }
   }
 
