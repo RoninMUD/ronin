@@ -822,7 +822,7 @@ void advance_level(CHAR *ch) {
 
   ch->points.max_move += 3;
 
-  ch->specials.spells_to_learn += MIN(MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus), 127);
+  GET_PRAC(ch) = MIN(GET_PRAC(ch) + MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus), 127);
 
   if (GET_LEVEL(ch) >= LEVEL_IMM) {
     for (int i = 0; i < 3; i++) {
