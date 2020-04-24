@@ -1188,6 +1188,7 @@ int dm_katana(OBJ *katana, CHAR *ch, int cmd, char *argument)
     // chance to remove protective magic around target
     vict = ch->specials.fighting;
     OBJ_SPEC(katana)++;
+    if( IS_NPC(vict) && vict->nr_v == 11300 ) return FALSE;
     spec_chance = MIN ( MAX(0, OBJ_SPEC(katana) - KATANA_CHARGE), 33 );
     if( chance( spec_chance ) ) {
       dm_katana_cleanse(ch, vict);
