@@ -251,7 +251,7 @@ int check_clanlist_name (char *name, const char *filename) {
 
 void rem_clanlist_name (CHAR *ch) {
   FILE *fl, *real_fl;
-  char buf[80],clanlist[80];
+  char buf[100],clanlist[80];
   char tmpname[80];
   int ind;
 

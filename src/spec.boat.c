@@ -66,7 +66,7 @@ const char *position[]= {
 };
 
 int sailing_vessel(CHAR *captain, CHAR *ch, int cmd, char *arg) {
-   char buf[MAX_STRING_LENGTH];
+   char buf[MAX_STRING_LENGTH / 2];
    char buf2[MAX_STRING_LENGTH];
 
    if(!AWAKE(captain))return FALSE;

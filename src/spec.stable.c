@@ -71,7 +71,7 @@ struct social_type {
 
 int stable_boy(CHAR *stboy, CHAR *ch, int cmd, char *arg) {
 
-  char buf[MAX_STRING_LENGTH], mount_name[MAX_STRING_LENGTH],tmp_pwd[11];
+  char buf[MAX_STRING_LENGTH], mount_name[MIL],tmp_pwd[11];
   struct obj_data *obj;
   struct follow_type *k;
   int stall_room, this_room, object;

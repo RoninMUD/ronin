@@ -1147,7 +1147,7 @@ void copyover_recover(void) {
   long last_up = 0;
   FILE *fp,*fl;
   bool fOld,close_desc;
-  char name[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char name[MAX_INPUT_LENGTH],buf[MSL];
 
   log_s("Copyover recovery initiated");
 
@@ -1705,7 +1705,7 @@ int write_to_descriptor(int desc, char *txt) {
 int process_input(struct descriptor_data *t)
 {
   int sofar, thisround, begin, squelch, i, k, flag;
-  char tmp[MAX_INPUT_LENGTH+50], buffer[MAX_INPUT_LENGTH + 60];
+  char tmp[MAX_INPUT_LENGTH+50], buffer[MAX_INPUT_LENGTH * 2];
 
   sofar = 0;
   flag = 0;

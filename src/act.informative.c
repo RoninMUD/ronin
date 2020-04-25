@@ -1107,8 +1107,8 @@ bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *ar
 
 void do_look(struct char_data *ch, char *argument, int cmd) {
   char buffer[MSL];
-  char arg1[MSL];
-  char arg2[MSL];
+  char arg1[MIL];
+  char arg2[MIL];
   int keyword_no;
   int j, bits, temp,window;
   bool found;
@@ -3805,7 +3805,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   struct descriptor_data *d;
   FILE *fl;
   char buf[MSL], buf2[MSL];
-  char name[MSL],host[50];
+  char name[MIL],host[50];
   int days, hours, mins, secs;
   int version,class,level,subclass=0,subclass_level=0,prestige=0;
   struct char_file_u_5 char_info_5;

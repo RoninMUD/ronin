@@ -1197,7 +1197,7 @@ void check_mail(CHAR *ch)
   FILE *fd;
   char alertstring[]={7,7,7,0};
   int i;
-  char name[32], filename[32];
+  char name[32], filename[50];
 
   for (i=0;ch->player.name[i];++i){
   name[i]=ch->player.name[i];

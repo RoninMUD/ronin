@@ -1787,7 +1787,7 @@ mus_hakeem (CHAR *hak, CHAR *ch, int cmd, char *arg) {
 Fire/ice djinns block movement and can only be damaged by fire/ice damage spells respectively
 */
 int mus_djinn(CHAR *mob, CHAR *ch, int cmd, char *arg) {
-  char buf[MAX_INPUT_LENGTH],thing[MAX_INPUT_LENGTH];
+  char buf[MAX_INPUT_LENGTH*2],thing[MAX_INPUT_LENGTH];
   int block;
 
   if( !mob ) return FALSE;

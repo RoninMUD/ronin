@@ -7113,7 +7113,7 @@ Affs are:  `iBLIND, INVISIBLE, DETECT-ALIGNMENT, DETECT-INVISIBLE,\n\r\
            POISON, PROTECT-EVIL, PARALYSIS, INFRAVISION, STATUE, SLEEP,\n\r\
            DODGE, SNEAK, HIDE, FLY, IMINV, INVUL, DUAL, FURY, PROTECT-GOOD,\n\r\
            TRIPLE, QUAD.`q\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char arg[MAX_INPUT_LENGTH],buf[MSL];
   int vmob,rmob,zone,bitpos,aff;
   long bit;
 
@@ -7204,7 +7204,7 @@ Acts are: `iSENTINEL, SCAVENGER, ISNPC, NICE-THIEF, AGGRESSIVE, STAY-ZONE,\n\r\
           MEMORY, AGGNI, AGGNO, AGGPA, AGGAP, AGGBA, AGGCO, AGGEVIL, AGGGOOD,\n\r\
           AGGNEUT, AGGLEADER, AGGRANDOM, ARM, SHIELD, OPEN-DOOR, NO-TOKEN,\n\r\
           IGNORE-SPHERE.`q\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char arg[MAX_INPUT_LENGTH],buf[MSL];
   int vmob,rmob,zone,bitpos,act;
   long bit;
 
@@ -7294,7 +7294,7 @@ Immunes are: `iFIRE, ELECTRIC, POISON, PUMMEL, KICK, PUNCH, SLEEP,\n\r\
              BITE, STING, CRUSH, HACK, CHOP, SLICE, BACKSTAB, AMBUSH,\n\r\
              ASSAULT, LOCATE, COLD, SOUND, CHEMICAL, ACID, FEAR,\n\r\
              CIRCLE, STEAL.`q\n\r\n\r"; /* Removed Throatstrike and Execute */
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char arg[MAX_INPUT_LENGTH],buf[MSL];
   int vmob,rmob,zone,bitpos,immune;
   long bit;
 
@@ -7380,7 +7380,7 @@ This command toggles the mob resistances listed on/off.\n\r\n\r\
      Ex: `kmresist`q 3005 `iCOLD SOUND`q (caps not important)\n\r\n\r\
 Resistances are: `iPOISON, PHYSICAL, MAGICAL, FIRE, COLD, ELECTRIC,\n\r\
                  SOUND, CHEMICAL, ACID.`q\n\r\n\r";
-  char arg[MAX_INPUT_LENGTH],buf[MAX_INPUT_LENGTH];
+  char arg[MAX_INPUT_LENGTH],buf[MSL];
   int vmob,rmob,zone,bitpos;
   long bit;
 
@@ -7782,7 +7782,7 @@ This zone command deletes the indicated command number.\n\r\n\r\
 }
 
 void do_cmdlist(CHAR *ch, char *argument, int cmd) {
-  char buf[MAX_STRING_LENGTH],buf2[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH],buf2[MIL];
   struct string_block sb;
   struct zone_data *zone;
   int tab = 0,i,vzone,zoneNum,cmd_no,mobile, room, object,object_to;
@@ -9123,7 +9123,7 @@ This command displays zone reset commands by room.\n\r\
 The zone reset command must be in the same zone as the room to be\n\r\
 displayed.\n\r";
 
-  char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+  char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], buf2[MIL];
 
   if (!check_olc_access(ch)) return;
 

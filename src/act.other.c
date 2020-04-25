@@ -2489,7 +2489,7 @@ copying to that address.\n\r\n\r\
   Usage: email yes/no - turns on/off postcard email copies\n\r\
                show   - shows current email address\n\r\
                set <address> - sets email address\n\r";
-  char arg[MIL];
+  char arg[80];
 
   if(IS_NPC(ch)) return;
 

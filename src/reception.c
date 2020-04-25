@@ -1014,8 +1014,7 @@ void save_char(CHAR *ch, sh_int load_room) {
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
   if(!(fl=fopen(buf,"wb+"))) {
     log_s("Problem opening file (save_char)");
-    sprintf(buf,"Error--can't open file %s for writing", buf);
-    log_s(buf);
+    log_f("Error--can't open file %s for writing", buf);
     return;
   }
   for (i=0;i<MAX_WEAR;i++)

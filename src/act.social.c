@@ -296,7 +296,7 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
 
 void do_wizact(CHAR *ch, char *arg, int cmd)
 {
-  char buf[MIL];
+  char buf[MSL];
   char buf2[MIL];
   char name[MIL];
   char *command = NULL;
@@ -310,7 +310,7 @@ void do_wizact(CHAR *ch, char *arg, int cmd)
   DESC *tmp_desc = NULL;
 
   memset(buf, 0, sizeof(buf));
-  memset(buf2, 0, sizeof(buf));
+  memset(buf2, 0, sizeof(buf2));
   memset(name, 0, sizeof(name));
 
   level = ch->specials.wiznetlvl;

@@ -532,8 +532,8 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
 
 void do_pour(struct char_data *ch, char *argument, int cmd)
 {
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char arg1[MIL];
+  char arg2[MIL];
   char buf[MAX_STRING_LENGTH];
   struct obj_data *from_obj;
   struct obj_data *to_obj;

@@ -395,8 +395,8 @@ int get_number_from_object(struct char_data *ch, char *name, int number, struct 
 
 void do_get(struct char_data *ch, char *argument, int cmd)
 {
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char arg1[MIL];
+  char arg2[MIL];
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *sub_object=0;
   struct obj_data *obj_object;
@@ -409,8 +409,8 @@ void do_get(struct char_data *ch, char *argument, int cmd)
   int number = 1;
   bool alldot1 = FALSE;
   bool alldot2 = FALSE;
-  char allbuf1[MAX_STRING_LENGTH];
-  char allbuf2[MAX_STRING_LENGTH];
+  char allbuf1[MIL];
+  char allbuf2[MIL];
 
   number_argument_interpreter(argument, &number, arg1, arg2);
 
@@ -803,9 +803,9 @@ void do_drop(struct char_data *ch, char *argument, int cmd)
   bool type = 0;
   bool found = FALSE;
   bool alldot = FALSE;
-  char allbuf[MAX_STRING_LENGTH];
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char allbuf[MIL];
+  char arg1[MIL];
+  char arg2[MIL];
   char buffer[MAX_STRING_LENGTH];
   int number = 0;
   int total = 0;
@@ -1046,8 +1046,8 @@ int put_all_to(struct char_data *ch, char *allbuf, bool alldot,
 void do_put(struct char_data *ch, char *argument, int cmd)
 {
   char buffer[MAX_STRING_LENGTH];
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char arg1[MIL];
+  char arg2[MIL];
   struct obj_data *obj_object;
   struct obj_data *to_object;
   struct obj_data *tmp_object, *next_obj;
@@ -1058,7 +1058,7 @@ void do_put(struct char_data *ch, char *argument, int cmd)
   int total = 0;
   bool alldot = FALSE;
   bool found = FALSE;
-  char allbuf[MAX_STRING_LENGTH];
+  char allbuf[MIL];
 
   number_argument_interpreter(argument, &number, arg1, arg2);
 
