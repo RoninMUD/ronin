@@ -3077,11 +3077,6 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
         check += GET_DEX_APP(defender) * 5;
 
         if (number(1, 850) <= check) {
-          print_avoidance_messages(attacker, defender, SKILL_RIPOSTE);
-
-          /* Attack back. */
-          hit(defender, attacker, TYPE_UNDEFINED);
-
           return SKILL_RIPOSTE;
         }
         break;
@@ -3106,61 +3101,68 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   /* Check avoidance skills and affects. */
   if (IS_NPC(defender) || (!IS_NPC(defender) && (hit_num == 1))) {
     if ((type != SKILL_ASSASSINATE) && (type != SKILL_BACKSTAB)) {
+      bool hit_success = TRUE;
+
       avoidance_skill = try_avoidance(attacker, defender);
 
-      if (!GET_OPPONENT(defender)) {
-        set_fighting(defender, attacker);
+      switch (avoidance_skill) {
+        case SKILL_PARRY:
+          hit_success = FALSE;
+          break;
+        case SKILL_DODGE:
+          /* Close Combat */
+          if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
+            ENCH *cc_ench = NULL;
 
-        GET_POS(defender) = POSITION_FIGHTING;
+            if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
+              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
+            }
+            else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
+              enchantment_remove(defender, cc_ench, FALSE);
+
+              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+            }
+          }
+
+          /* Combat Zen */
+          if (SAME_ROOM(attacker, defender) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
+            hit_success = TRUE; // Override avoidance result to continue with further attacks.
+          }
+
+          hit_success = FALSE;
+          break;
+        case SKILL_FEINT:
+          hit_success = FALSE;
+          break;
+        case SKILL_RIPOSTE:
+          // Attack continues as normal, but some damage is deflected.
+          break;
       }
 
-      if (avoidance_skill) {
-        /* Close Combat */
-        if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
-          ENCH *cc_ench = NULL;
+      /* Some classes have a chance to hit again, if the attack was avoided. */
+      if (!hit_success && SAME_ROOM(attacker, defender)) {
+        if (IS_MORTAL(attacker) && check_subclass(attacker, SC_MERCENARY, 3)) {
+          if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_RIPOSTE)) {
+            act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
+            act("As you dodge $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
+            act("As $N dodges $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
-          if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
-            enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
-          }
-          else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
-            enchantment_remove(defender, cc_ench, FALSE);
-
-            enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+            hit(attacker, defender, TYPE_UNDEFINED); // A normal hit (can dual/triple).
           }
         }
 
-        /* Feint and Riposte have a chance to allow the Defiler/Mercenary to attack back after their attack is avoided, provided that they are not being attacked themselves. */
-        if (IS_MORTAL(attacker) && (check_subclass(attacker, SC_DEFILER, 3) || check_subclass(attacker, SC_MERCENARY, 3)) && !count_attackers(attacker)) {
-          switch (GET_SC(attacker)) {
-            case SC_DEFILER:
-              if ((number(1, 850) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_FEINT)) {
-                act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
-                act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
-                act("$n feints after $N dodges $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
+        if (SAME_ROOM(attacker, defender) && IS_MORTAL(attacker) && check_subclass(attacker, SC_DEFILER, 3)) {
+          if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_FEINT)) {
+            act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
+            act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
+            act("$n feints after $N dodges $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
-                hit(attacker, defender, SKILL_FEINT); // A feint hit (doubled).
-              }
-              break;
-
-            case SC_MERCENARY:
-              if ((number(1, 850) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_RIPOSTE)) {
-                act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
-                act("As you dodge $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
-                act("As $N dodges $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
-
-                hit(attacker, defender, TYPE_UNDEFINED); // A normal hit (can dual/triple).
-              }
-              break;
+            hit(attacker, defender, SKILL_FEINT); // A feint hit (doubled).
           }
         }
-
-        /* Combat Zen */
-        if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
-          return TRUE;
-        }
-
-        return FALSE;
       }
+
+      if (!hit_success) return FALSE;
     }
   }
 
@@ -3508,6 +3510,13 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       }
 
       dam = damage(attacker, defender, dam, attack_type, ((hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL));
+
+      /* Riposte attack back. */
+      if (SAME_ROOM(attacker, defender) && (avoidance_skill == SKILL_RIPOSTE)) {
+        print_avoidance_messages(attacker, defender, SKILL_RIPOSTE);
+
+        hit(defender, attacker, TYPE_UNDEFINED);
+      }
 
       /* Rightousness
          Note: Type <= 0 isn't guaranteed evidence that the attack was a melee hit, but its the best we can (currently) do. */

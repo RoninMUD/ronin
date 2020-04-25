@@ -614,7 +614,7 @@ void char_to_room(CHAR *ch, int room) {
   ch->in_room_r = room;
   ch->in_room_v = ROOM_VNUM(room);
 
-  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2)) {
+  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && (OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2) != 0)) {
     ROOM_LIGHT(CHAR_REAL_ROOM(ch))++;
   }
 
