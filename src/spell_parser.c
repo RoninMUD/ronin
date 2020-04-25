@@ -188,7 +188,7 @@ const char * const spells[] = {
   "power word kill",              /* 128 */
   "dispel magic",                 /* 129 */
   "conflagration",                /* 130 */
-  "",                             /* 131 */
+  "spirit blast",                             /* 131 */
   "convergence",                  /* 132 */
   "enchant armour",               /* 133 */
   "disintegrate",                 /* 134 */
@@ -2049,4 +2049,5 @@ void assign_spell_pointers(void)
   // Other
   SPELLO(SPELL_MANA_HEAL,             30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
   SPELLO(SPELL_GREAT_MANA,            30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_great_mana);
+  SPELLO(SPELL_SPIRIT_BLAST,          30, POSITION_FIGHTING, 51, 51, 51, 51, 51, 51, 51, 51,   15, TAR_OBJ_ROOM,                                                                 cast_spirit_blast);
 }

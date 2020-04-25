@@ -1444,7 +1444,70 @@ void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void cast_spirit_blast(ubyte level, CHAR* ch, char* arg, int type, CHAR* victim, OBJ* tar_obj)
 {
+  switch (type)
+  {
+    case SPELL_TYPE_SPELL:
+      spell_spirit_blast(level, ch, NULL, tar_obj);
+      break;
 
+    default:
+      log_f("Wrong type called in power of faith!");
+      break;
+  }
+}
+
+void spell_spirit_blast(ubyte level, CHAR* ch, CHAR* victim, OBJ* obj)
+{
+  int mob_level = 0;
+  int dam = 0;
+
+  if (OBJ_TYPE(obj) != ITEM_CONTAINER || OBJ_VALUE3(obj) != 1)
+  {
+    /* Object is not a corpse, or a container. */
+    send_to_char("You must target a corpse.\n\r", ch);
+    return;
+  }
+
+  if (OBJ_COST(obj) == PC_CORPSE && obj->contains)
+  {
+    /* The corpse is that of a PC and contains items (prevent griefing). */
+    send_to_char("The corpse has something in it.\n\r", ch);
+    return;
+  }
+
+  if (!victim)
+  {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim)
+  {
+    send_to_char("Who do you wish to destroy using the power of the dead?\n\r", ch);
+    return;
+  }
+
+  mob_level = OBJ_VALUE2(obj);
+
+  dam = (mob_level * 5);
+
+  damage(ch, victim, dam, SPELL_SPIRIT_BLAST, DAM_MAGICAL);
+
+  GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - dam);
+
+  act("You channel the power of the dead to attack $N.", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n channels the power of the dead to attack you!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n channel the power of the dead toward $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  if (IS_MORTAL(ch) && (mob_level >= (GET_LEVEL(ch) - 10)))
+  {
+    send_to_room("Some blood and gore is left behind after the ritual is complete.\n\r", CHAR_REAL_ROOM(ch));
+
+    ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
+  }
+
+  extract_obj(obj);
+
+  update_pos(ch);
 }
 
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {

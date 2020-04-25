@@ -162,7 +162,7 @@
 #define SPELL_PW_KILL               128
 #define SPELL_DISPEL_MAGIC          129
 #define SPELL_CONFLAGRATION         130
-#define SPELL_SKILL_131             131
+#define SPELL_SPIRIT_BLAST          131
 #define SPELL_CONVERGENCE           132 // Consider removal
 #define SPELL_ENCHANT_ARMOUR        133
 #define SPELL_DISINTEGRATE          134
@@ -510,6 +510,7 @@ void cast_mystic_swiftness( ubyte level, struct char_data *ch, char *arg, int si
 void cast_mana_heal( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_wind_slash(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_wither(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
+void cast_spirit_blast(ubyte level, struct char_data* ch, char* arg, int si, struct char_data* tar_ch, struct obj_data* tar_obj);
 
 void spell_reappear(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
@@ -875,6 +876,9 @@ void spell_mystic_swiftness(ubyte level, struct char_data *ch,
 
 void spell_mana_heal(ubyte level, struct char_data *ch,
 	struct char_data *victim, struct obj_data *obj);
+
+void spell_spirit_blast(ubyte level, struct char_data* ch,
+  struct char_data* victim, struct obj_data* obj);
 /*
 void cast_quester( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_spiritwrack( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
