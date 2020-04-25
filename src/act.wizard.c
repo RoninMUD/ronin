@@ -5887,7 +5887,7 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
       printf_to_char(ch, "    Affects: %s by %d\n\r", buf2, proto->affected[i].modifier);
     }
   } else {
-    log_f(buf3,"WIZINFO: %s ostat %s %s",GET_NAME(ch),buf,argument);
+    sprintf(buf3,"WIZINFO: %s ostat %s %s",GET_NAME(ch),buf,argument);
     wizlog(buf3, GET_LEVEL(ch)+1, 5);
     log_s(buf3);
 
