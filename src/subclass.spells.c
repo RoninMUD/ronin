@@ -1442,6 +1442,11 @@ void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 //  }
 //}
 
+void cast_spirit_blast(ubyte level, CHAR* ch, char* arg, int type, CHAR* victim, OBJ* tar_obj)
+{
+
+}
+
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   char buf[MIL];
 
