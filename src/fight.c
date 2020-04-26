@@ -1634,20 +1634,8 @@ int resist_damage(CHAR *ch, int dmg, int attack_type, int damage_type) {
 int get_attack_type(CHAR *ch, OBJ *weapon);
 int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   char buf[MSL];
-  struct message_type *messages = NULL;
-  int original_damage = 0;
-  int shadow_damage = 0;
-  int reflect = 0;
-  int max_reflect = 0;
-  int reduct = 0;
-  int mana_shield = 0;
-  int dmg_text = 0;
-  int i = 0;
-  int j = 0;
-  int nr = 0;
-  double damage_reduction = 0.0;
 
-  original_damage = dmg;
+  int original_damage = dmg;
 
   if (!ch || !victim || !IS_ALIVE(victim) || !SAME_ROOM(victim, ch) || (dmg < 0)) return 0;
 
@@ -1664,18 +1652,21 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Adjust for shadow damage. */
+  int shadow_damage = FALSE;
   if (attack_type == TYPE_SHADOW) {
     attack_type = get_attack_type(ch, GET_WEAPON(ch));
+
     shadow_damage = TRUE;
   }
 
-  if (IS_MORTAL(victim) &&
+  /* Protect */
+  if (!IS_NPC(victim) &&
       GET_PROTECTOR(victim) &&
-      !IS_AFFECTED(GET_PROTECTOR(victim), AFF_FURY) &&
-      IS_MORTAL(GET_PROTECTOR(victim)) &&
+      !IS_NPC(GET_PROTECTOR(victim)) &&
       IS_ALIVE(GET_PROTECTOR(victim)) &&
       SAME_ROOM(victim, GET_PROTECTOR(victim)) &&
       (GET_PROTECTEE(GET_PROTECTOR(victim)) == victim) &&
+      !IS_AFFECTED(GET_PROTECTOR(victim), AFF_FURY) &&
       (number(1, SKILL_MAX_PRAC) <= GET_LEARNED(GET_PROTECTOR(victim), SKILL_PROTECT)) &&
       chance(90)) {
     act("$N takes the damage meant for you!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_CHAR);
@@ -1694,20 +1685,21 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     WAIT_STATE(victim, PULSE_VIOLENCE * 2);
   }
 
-  /* No damage dealt by a player if they are sleeping, resting or sitting; except when ch == victim, or it's a mob. */
-  if ((victim != ch) &&
-      !IS_NPC(ch) &&
+  /* No damage dealt by a player to another character if they are sleeping, resting or sitting. */
+  if (!IS_NPC(ch) &&
+      (victim != ch) &&
       ((GET_POS(ch) == POSITION_SLEEPING) || (GET_POS(ch) == POSITION_RESTING) || (GET_POS(ch) == POSITION_SITTING))) {
     dmg = 0;
   }
 
-  /* Process Immunities and Resistances */
+  /* Adjust for immunities and resistances. */
   if (IS_NPC(victim)) {
     dmg = resist_damage(victim, dmg, attack_type, damage_type);
   }
 
-  /* Force a player mount to flee if it does damage to a player that isn't a thief or killer; except when damage is of the type DAM_NO_BLOCK_NO_FLEE.*/
+  /* Force a player mount to flee if it inflicts damage to a player that isn't marked PLR_KILL or PLR_THIEF, except when damage is of the type DAM_NO_BLOCK_NO_FLEE.*/
   if (IS_NPC(ch) &&
+      IS_MOUNT(ch) &&
       GET_RIDER(ch) &&
       !IS_NPC(GET_RIDER(ch)) &&
       !IS_NPC(victim) &&
@@ -1719,7 +1711,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Handle PvP */
-  if (victim != ch &&
+  if ((victim != ch) &&
       !IS_NPC(ch) &&
       !IS_NPC(victim) &&
       !ROOM_ARENA(CHAR_REAL_ROOM(victim)) &&
@@ -1737,21 +1729,22 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
       SET_BIT(GET_PFLAG(ch), PLR_KILL);
 
-      sprintf(buf, "PLRINFO: %s just attacked %s; Killer flag set. (Room %d)",
-              GET_NAME(ch), GET_NAME(victim), world[CHAR_REAL_ROOM(ch)].number);
+      snprintf(buf, sizeof(buf), "PLRINFO: %s just attacked %s. Killer flag set. (Room %d)",
+               GET_NAME(ch), GET_NAME(victim), world[CHAR_REAL_ROOM(ch)].number);
       wizlog(buf, LEVEL_SUP, 4);
       log_s(buf);
     }
   }
 
-  /* Prevent players from attacking mounts if PLR_NOKILL is turned on. */
+  /* Prevent players from attacking player mounts if PLR_NOKILL is turned on. */
   if (!IS_NPC(ch) &&
       IS_SET(GET_PFLAG(ch), PLR_NOKILL) &&
       IS_NPC(victim) &&
       IS_MOUNT(victim) &&
+      !IS_NPC(GET_RIDER(victim)) &&
       !ROOM_ARENA(CHAR_REAL_ROOM(victim)) &&
       !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim))) {
-    send_to_char("You can't attack mounts.\n\r", ch);
+    send_to_char("You can't attack player mounts.\n\r", ch);
 
     return 0;
   }
@@ -1766,11 +1759,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     return 0;
   }
 
-  /* Prevent charmed NPCs from attacking players except during Chaos. */
+  /* Prevent charmed NPCs from attacking players, except during Chaos. */
   if (IS_NPC(ch) &&
       IS_AFFECTED(ch, AFF_CHARM) &&
       !IS_NPC(victim) &&
-      GET_OPPONENT(victim) != ch &&
+      (GET_OPPONENT(victim) != ch) &&
       !CHAOSMODE) {
     send_to_char("You can't harm a player!\n\r", ch);
 
@@ -1787,9 +1780,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
 
       /* Make mobs with memory remember their attacker. */
-      if (IS_NPC(victim) &&
+      if (!IS_NPC(ch) &&
+          IS_NPC(victim) &&
           IS_SET(GET_ACT(victim), ACT_MEMORY) &&
-          !IS_NPC(ch) &&
           CAN_SEE(victim, ch)) {
         remember(ch, victim);
       }
@@ -1802,8 +1795,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       /* Start the attacker fighting the victim. */
       if (!GET_OPPONENT(ch)) {
         set_fighting(ch, victim);
-
-        GET_POS(ch) = POSITION_FIGHTING;
       }
 
       /* NPCs have a chance to switch to a charmed NPC's master. */
@@ -1812,7 +1803,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           IS_AFFECTED(victim, AFF_CHARM) &&
           GET_MASTER(victim) &&
           (CHAR_REAL_ROOM(GET_MASTER(victim)) == CHAR_REAL_ROOM(ch)) &&
-          !number(0, 10)) {
+          chance(10)) {
         if (GET_OPPONENT(ch)) {
           stop_fighting(ch);
         }
@@ -1827,7 +1818,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           IS_NPC(victim) &&
           GET_RIDER(victim) &&
           (CHAR_REAL_ROOM(GET_RIDER(victim)) == CHAR_REAL_ROOM(ch)) &&
-          !number(0, 10)) {
+          chance(10)) {
         if (GET_OPPONENT(ch)) {
           stop_fighting(ch);
         }
@@ -1839,7 +1830,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Stop riding a mount if the master attacks it and stop the mount from following the master. */
+  /* Stop victim following its master if the master attacks it.
+     Unmount the attacker they attack their mount.*/
   if (GET_MASTER(victim) == ch) {
     if (GET_RIDER(victim)) {
       stop_riding(ch, victim);
@@ -1860,7 +1852,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Process damage improving skills/spells. */
-  if ((dmg > 0) && IS_WEAPON_ATTACK(attack_type)) {
+  if (dmg && IS_WEAPON_ATTACK(attack_type)) {
     /* Fury */
     if (IS_AFFECTED(ch, AFF_FURY)) {
       /* Paladin Level 50 */
@@ -1913,9 +1905,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Invulnerability */
   if (IS_AFFECTED(victim, AFF_INVUL)) {
     /* Reduce DAM_PHYSICAL damage less than 20 to 0. */
-    if (IS_PHYSICAL_DAMAGE(damage_type) &&
-        (!IS_AFFECTED(victim, AFF_FURY) || IS_NPC(victim)) &&
-        (dmg < 20)) {
+    if ((dmg < 20) &&
+        IS_PHYSICAL_DAMAGE(damage_type) &&
+        (!IS_AFFECTED(victim, AFF_FURY) || IS_NPC(victim))) {
       dmg = 0;
     }
   }
@@ -1925,6 +1917,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
     dmg = 0;
   }
+
+  int reflect = 0, max_reflect = 0;
 
   /* Juggernaut */
   if ((reflect <= 0) &&
@@ -2015,8 +2009,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       IS_AFFECTED(victim, AFF_PROTECT_EVIL) &&
       IS_EVIL(ch) &&
       (!IS_EVIL(victim) || IS_NPC(victim))) {
-    reduct = MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch));
-    dmg = MAX(0, dmg - reduct);
+    dmg = MAX(0, dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)));
   }
 
   /* Protection from Good */
@@ -2024,8 +2017,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       IS_AFFECTED(victim, AFF_PROTECT_GOOD) &&
       IS_GOOD(ch) &&
       (!IS_GOOD(victim) || IS_NPC(victim))) {
-    reduct = MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch));
-    dmg = MAX(0, dmg - reduct);
+    dmg = MAX(0, dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)));
   }
 
   /* Sphere */
@@ -2047,8 +2039,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (GET_CON_DAM_REDUCT(victim) / 100.0)));
   }
 
+  double damage_reduction = 0.0;
+
   /* Sanctuary */
-  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) &&
+      !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
     damage_reduction += 0.5;
   }
 
@@ -2092,12 +2087,12 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Record damage for use later when printing damage text. */
-  dmg_text = dmg;
+  int dmg_text = dmg;
 
   /* Archmage SC2/Templar SC4: Orb of Protection */
   if ((dmg > 0) &&
       affected_by_spell(victim, SPELL_ORB_PROTECTION)) {
-    mana_shield = ((200 + dmg) - GET_HIT(victim)) / 2;
+    int mana_shield = ((200 + dmg) - GET_HIT(victim)) / 2;
 
     if (mana_shield > 0) {
       mana_shield = MIN(mana_shield, GET_MANA(victim));
@@ -2185,11 +2180,12 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
   /* Print messages for skills and spells. */
   else {
-    for (i = 0; i < MAX_MESSAGES; i++) {
+    for (int i = 0; i < MAX_MESSAGES; i++) {
       if (fight_messages[i].a_type == attack_type) {
-        nr = dice(1, fight_messages[i].number_of_attacks);
+        int nr = dice(1, fight_messages[i].number_of_attacks);
+        struct message_type *messages = fight_messages[i].msg;
 
-        for (j = 1, messages = fight_messages[i].msg; (j < nr) && messages; j++) {
+        for (int j = 1; (j < nr) && messages; j++) {
           messages = messages->next;
         }
 
@@ -2230,17 +2226,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Signal info about damage to the victim. */
-  char msg_damaged_arg[MIL];
-
-  memset(msg_damaged_arg, 0, sizeof(msg_damaged_arg));
-
   /* Maim */
   if (maim_damage) {
-    snprintf(msg_damaged_arg, sizeof(msg_damaged_arg), "SKILL_MAIM");
+    signal_char(victim, ch, MSG_DAMAGED, "SKILL_MAIM");
   }
-
-  signal_char(victim, ch, MSG_DAMAGED, msg_damaged_arg);
 
   update_pos(victim);
 
@@ -2262,14 +2251,14 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       break;
 
     case POSITION_DEAD:
-      /* Disembowel */
-      if (attack_type == SKILL_DISEMBOWEL) {
-        act("Guts splatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
-      }
-
       /* Handle MSG_DEAD in case it was intercepted. */
       if (signal_char(victim, ch, MSG_DEAD, "")) {
         return dmg;
+      }
+
+      /* Disembowel */
+      if (attack_type == SKILL_DISEMBOWEL) {
+        act("Guts splatter everywhere. Yuck!", FALSE, victim, 0, 0, TO_ROOM);
       }
 
       act("$n is dead! R.I.P.", TRUE, victim, 0, 0, TO_ROOM);
@@ -2317,7 +2306,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Handle link-dead players. */
   if (!IS_NPC(victim) &&
       !GET_DESCRIPTOR(victim) &&
-      damage_type != DAM_NO_BLOCK_NO_FLEE) {
+      (damage_type != DAM_NO_BLOCK_NO_FLEE)) {
     do_flee(victim, "", 0);
 
     if (!GET_OPPONENT(victim)) {
@@ -2334,36 +2323,29 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     if (!SAME_ROOM(ch, victim)) return dmg;
   }
 
-  /* Handle vicious. */
-  if (GET_HIT(victim) <= 0 &&
-      GET_OPPONENT(ch) == victim) {
+  /* Process reflected damage. */
+  if (reflect && IS_ALIVE(victim)) {
+    damage(victim, ch, reflect, TYPE_UNDEFINED, damage_type);
+  }
+
+  /* Stop fighting, as appropriate. */
+  if (!GET_HIT(victim) && (GET_OPPONENT(ch) == victim) && (GET_POS(victim) < POSITION_STUNNED)) {
     if (IS_SET(GET_PFLAG(ch), PLR_VICIOUS)) {
-      if (GET_POS(victim) < POSITION_MORTALLYW) {
+      if (!IS_ALIVE(victim)) {
         stop_fighting(ch);
       }
-
-      if (GET_POS(victim) < POSITION_STUNNED &&
-          IS_GOOD(ch)) {
+      else if (IS_GOOD(ch)) {
         GET_ALIGNMENT(ch) -= 5;
       }
     }
     else {
-      if (GET_POS(victim) < POSITION_STUNNED) {
-        stop_fighting(ch);
-      }
+      stop_fighting(ch);
     }
   }
 
-  /* Handle sleeping victims. */
-  if (!AWAKE(victim) &&
-      GET_OPPONENT(victim)) {
+  /* Stop the victim fighting if it's in a non-awake state. */
+  if (!AWAKE(victim) && GET_OPPONENT(victim)) {
     stop_fighting(victim);
-  }
-
-  /* Process reflected damage. */
-  if (reflect > 0 &&
-      GET_POS(victim) > POSITION_DEAD) {
-    damage(victim, ch, reflect, TYPE_UNDEFINED, damage_type);
   }
 
   /* Process death. */
@@ -2975,6 +2957,29 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     int check = 0;
 
     switch (skill) {
+      case SKILL_PARRY:
+        check = GET_LEARNED(defender, SKILL_PARRY);
+
+        /* Dexterity */
+        check += GET_DEX_APP(defender) * 5;
+
+        /* Class */
+        if (GET_CLASS(defender) == CLASS_WARRIOR) {
+          check += GET_LEVEL(defender) / 10;
+        }
+
+        /* Bullwark */
+        if (IS_MORTAL(defender) && check_subclass(defender, SC_WARLORD, 5) && (defender_ac < -250)) {
+          check += (int)(700.0 * ((((double)defender_ac - 250.0) / 6.0) / 100.0));
+        }
+
+        if (number(1, 700) <= check) {
+          print_avoidance_messages(attacker, defender, SKILL_PARRY);
+
+          return SKILL_PARRY;
+        }
+        break;
+
       case SKILL_DODGE:
         check = GET_LEARNED(defender, SKILL_DODGE);
 
@@ -3009,30 +3014,21 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
         if (number(1, 700) <= check) {
           print_avoidance_messages(attacker, defender, SKILL_DODGE);
 
+          /* Close Combat */
+          if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
+            ENCH *cc_ench = NULL;
+
+            if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
+              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
+            }
+            else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
+              enchantment_remove(defender, cc_ench, FALSE);
+
+              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+            }
+          }
+
           return SKILL_DODGE;
-        }
-        break;
-
-      case SKILL_PARRY:
-        check = GET_LEARNED(defender, SKILL_PARRY);
-
-        /* Dexterity */
-        check += GET_DEX_APP(defender) * 5;
-
-        /* Class */
-        if (GET_CLASS(defender) == CLASS_WARRIOR) {
-          check += GET_LEVEL(defender) / 10;
-        }
-
-        /* Bullwark */
-        if (IS_MORTAL(defender) && check_subclass(defender, SC_WARLORD, 5) && (defender_ac < -250)) {
-          check += (int)(700.0 * ((((double)defender_ac - 250.0) / 6.0) / 100.0));
-        }
-
-        if (number(1, 700) <= check) {
-          print_avoidance_messages(attacker, defender, SKILL_PARRY);
-
-          return SKILL_PARRY;
         }
         break;
 
@@ -3052,6 +3048,11 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
             }
             else if (IS_AFFECTED2(defender, AFF2_RAGE)) {
               reflect_multi *= 1.5;
+            }
+
+            /* NPCs can reflect more damage, to add an element of challenge. */
+            if (IS_NPC(defender)) {
+              reflect_multi *= 4;
             }
 
             act("$n is scorched by your mantle of darkness as $e gets too close.", FALSE, attacker, 0, defender, TO_VICT);
@@ -3101,56 +3102,16 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
   /* Check avoidance skills and affects. */
   if (IS_NPC(defender) || (!IS_NPC(defender) && (hit_num == 1))) {
     if ((type != SKILL_ASSASSINATE) && (type != SKILL_BACKSTAB)) {
-      bool hit_success = TRUE;
-
+      /* Check avoidance skills and record which skill (if any) avoided the attack. */
       avoidance_skill = try_avoidance(attacker, defender);
 
-      if (SAME_ROOM(attacker, defender)) {
-        /* Set the characters as fighting each other to ensure combat is engaged. */
-        set_fighting(attacker, defender);
-        set_fighting(defender, attacker);
-      }
-      else {
-        /* Avoidance must have either killed the creature, or caused it to be elsewhere (flee, teleport spec, etc.) */
-        return FALSE;
-      }
+      bool hit_avoided = avoidance_skill ? TRUE : FALSE;
 
-      switch (avoidance_skill) {
-        case SKILL_PARRY:
-          hit_success = FALSE;
-          break;
-        case SKILL_DODGE:
-          /* Close Combat */
-          if (IS_MORTAL(defender) && check_subclass(defender, SC_BANDIT, 4)) {
-            ENCH *cc_ench = NULL;
-
-            if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
-              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
-            }
-            else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
-              enchantment_remove(defender, cc_ench, FALSE);
-
-              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
-            }
-          }
-
-          /* Combat Zen */
-          if (SAME_ROOM(attacker, defender) && IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
-            hit_success = TRUE; // Override avoidance result to continue with further attacks.
-          }
-
-          hit_success = FALSE;
-          break;
-        case SKILL_FEINT:
-          hit_success = FALSE;
-          break;
-        case SKILL_RIPOSTE:
-          // Attack continues as normal, but some damage is deflected.
-          break;
-      }
+      /* Check if attacker and defender are still in the same room after avoidance. If not, someone died/fled/etc. */
+      if (!SAME_ROOM(attacker, defender)) return FALSE;
 
       /* Some classes have a chance to hit again, if the attack was avoided. */
-      if (!hit_success && SAME_ROOM(attacker, defender)) {
+      if (hit_avoided) {
         if (IS_MORTAL(attacker) && check_subclass(attacker, SC_MERCENARY, 3)) {
           if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_RIPOSTE)) {
             act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
@@ -3161,7 +3122,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
           }
         }
 
-        if (SAME_ROOM(attacker, defender) && IS_MORTAL(attacker) && check_subclass(attacker, SC_DEFILER, 3)) {
+        if (IS_MORTAL(attacker) && check_subclass(attacker, SC_DEFILER, 3)) {
           if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_FEINT)) {
             act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
             act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
@@ -3172,12 +3133,20 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         }
       }
 
-      if (!hit_success) return FALSE;
+      /* If the hit was avoided, return the appropriate result. */
+      if (hit_avoided) {
+        /* Combat Zen */
+        if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
+          return TRUE; // Override avoidance result to continue with further attacks.
+        }
+
+        return FALSE;
+      }
     }
   }
 
   /* Get the weapon involved for use later on. */
-  OBJ *weapon = ((type != TYPE_WEAPON2) ? GET_WEAPON(attacker) : GET_WEAPON2(attacker));
+  OBJ *weapon = (type != TYPE_WEAPON2) ? GET_WEAPON(attacker) : GET_WEAPON2(attacker);
 
   /* Get the attack type for use later on. */
   int attack_type = get_attack_type(attacker, weapon);
@@ -3196,6 +3165,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
             }
           }
           break;
+
         case TYPE_CHOP:
         case TYPE_HACK:
           if (!is_immune(defender, TYPE_SLASH, 0) && !is_resistant(defender, TYPE_SLASH, 0)) {
@@ -3205,6 +3175,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
             attack_type = TYPE_CRUSH;
           }
           break;
+
         case TYPE_PIERCE:
           if (!is_immune(defender, TYPE_SLICE, 0) && !is_resistant(defender, TYPE_SLICE, 0)) {
             attack_type = TYPE_SLICE;
@@ -3213,6 +3184,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
             attack_type = TYPE_HACK;
           }
           break;
+
         case TYPE_SLASH:
         case TYPE_SLICE:
           if (!is_immune(defender, TYPE_PIERCE, 0) && !is_resistant(defender, TYPE_PIERCE, 0)) {
@@ -3294,7 +3266,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 
     /* Combat Zen */
     if (IS_MORTAL(attacker) && check_subclass(attacker, SC_RONIN, 3)) {
-      return TRUE;
+      return TRUE; // Override miss result to continue with further attacks.
     }
 
     return FALSE;
@@ -3506,17 +3478,18 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       break;
 
     case SKILL_FEINT:
+      /* Feint attack back. */
       damage(attacker, defender, (dam * 2), attack_type, DAM_PHYSICAL);
       break;
 
     /* Standard Melee Attacks */
     default:
-      /* Riposte damage reduction (deflection). */
+      /* Riposte damage reduction. */
       if (avoidance_skill == SKILL_RIPOSTE) {
-        dam = lround(dam * 0.6);
+        dam = lrint(dam * 0.6);
       }
 
-      dam = damage(attacker, defender, dam, attack_type, ((hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL));
+      dam = damage(attacker, defender, dam, attack_type, (hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL);
 
       /* Riposte attack back. */
       if (SAME_ROOM(attacker, defender) && (avoidance_skill == SKILL_RIPOSTE)) {
@@ -3525,9 +3498,8 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         hit(defender, attacker, TYPE_UNDEFINED);
       }
 
-      /* Rightousness
-         Note: Type <= 0 isn't guaranteed evidence that the attack was a melee hit, but its the best we can (currently) do. */
-      if ((hit_num == 1) && (dam > 0) && (type < 0) && (GET_MANA(attacker) < GET_MAX_MANA(attacker)) && affected_by_spell(attacker, SPELL_RIGHTEOUSNESS)) {
+      /* Rightousness */
+      if (dam && (hit_num == 1) && IS_GOOD(attacker) && affected_by_spell(attacker, SPELL_RIGHTEOUSNESS)) {
         GET_MANA(attacker) = MIN(GET_MAX_MANA(attacker), GET_MANA(attacker) + dice(1, 3));
       }
       break;
@@ -3588,9 +3560,14 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     }
   }
 
-  /* Update the attacker's position to Fighting. */
-  if (GET_OPPONENT(ch) && (GET_POS(ch) > POSITION_FIGHTING)) {
-    GET_POS(ch) = POSITION_FIGHTING;
+  /* Ensure ch engages victim if not already fighting someone. */
+  if (!GET_OPPONENT(ch)) {
+    set_fighting(ch, victim);
+  }
+
+  /* Ensure victim engages ch if not already fighting someone. */
+  if (!GET_OPPONENT(victim)) {
+    set_fighting(victim, ch);
   }
 
   /* Perform the attack, returning if it is avoided or misses. */
