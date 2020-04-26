@@ -3105,6 +3105,16 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 
       avoidance_skill = try_avoidance(attacker, defender);
 
+      if (SAME_ROOM(attacker, defender)) {
+        /* Set the characters as fighting each other to ensure combat is engaged. */
+        set_fighting(attacker, defender);
+        set_fighting(defender, attacker);
+      }
+      else {
+        /* Avoidance must have either killed the creature, or caused it to be elsewhere (flee, teleport spec, etc.) */
+        return FALSE;
+      }
+
       switch (avoidance_skill) {
         case SKILL_PARRY:
           hit_success = FALSE;
@@ -3165,9 +3175,6 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       if (!hit_success) return FALSE;
     }
   }
-
-  /* Avoidance must have either killed the creature, or caused it to be elsewhere (flee, teleport spec, etc.) */
-  if (!SAME_ROOM(attacker, defender)) return FALSE;
 
   /* Get the weapon involved for use later on. */
   OBJ *weapon = ((type != TYPE_WEAPON2) ? GET_WEAPON(attacker) : GET_WEAPON2(attacker));
