@@ -1108,7 +1108,7 @@ int ench_eros(CHAR *mob,CHAR *ch,int cmd,char *argument) {
 /* Pegasus 28734 sells out winged horses 28737 as mounts. */
 int ench_pegasus(CHAR *mob,CHAR *ch,int cmd,char *argument) {
   CHAR *victim;
-  char buf[MIL],mount_name[MIL],tmp_pwd[11];
+  char buf[MIL*2],mount_name[MIL],tmp_pwd[11];
   struct follow_type *k;
 
   if(cmd==MSG_MOBACT) {
@@ -1862,7 +1862,7 @@ int ench_bouncer (CHAR *mob, CHAR *ch, int cmd, char *arg)  {
 }
 
 int ench_drunk(CHAR *mob, CHAR *ch, int cmd, char *arg)  {
-  char buf[MSL],password[20],*drinks[5]={"","brew","wine","ale","whisky"};
+  char buf[MSL],password[10],*drinks[5]={"","brew","wine","ale","whisky"};
   char *az[26]={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
   char *vol[5]={"a","e","i","o","u"};
   int drink_num[5]={0,28711,28712,28713,28714};

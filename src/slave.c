@@ -112,7 +112,7 @@ int query( char *orig_arg )
     int s;
     FILE *f;
     char result[ MAX_STRING ];
-    char buf[ MAX_STRING ];
+    char buf[ MAX_STRING+128 ];
     char arg[ MAX_STRING ];
     char *host;
     char *port_pair;

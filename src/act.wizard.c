@@ -227,7 +227,7 @@ void do_warn(CHAR *ch, char *argument, int cmd) {
 Usage: `kwarn`q <name> [warning] or\n\r\
        `kwarn`q <search word>or\n\r\
        `kwarn`q <num> (last # of warns).\n\r";
-  char buf[MAX_INPUT_LENGTH];
+  char buf[MSL];
   char name[MAX_INPUT_LENGTH],warnings[MAX_INPUT_LENGTH];
   unsigned int num=0;
   long ct;
@@ -1004,8 +1004,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
 
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
   if(!(fl=fopen(buf,"rb"))) {
-    sprintf(buf,"Error--can't open file %s for updating pwd (read)", buf);
-    log_s(buf);
+    log_f("Error--can't open file %s for updating pwd (read)", buf);
     return(FALSE);
   }
 
@@ -1022,8 +1021,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       strcpy((char*)&char_info_2.pwd, pass);
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
-        sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_s(buf);
+        log_f("Error--can't open file %s for updating pwd (write)", buf);
         return(FALSE);
       }
       if (fwrite(&char_info_2, sizeof(struct char_file_u_2), 1, fl) < 1) {
@@ -1042,8 +1040,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       strcpy((char*)&char_info_4.pwd, pass);
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
-        sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_s(buf);
+        log_f("Error--can't open file %s for updating pwd (write)", buf);
         return(FALSE);
       }
       if (fwrite(&char_info_4, sizeof(struct char_file_u_4), 1, fl) < 1) {
@@ -1061,8 +1058,7 @@ int change_password(struct char_data *ch, char *name, char* newpassword) {
       strcpy((char*)&char_info_5.pwd, pass);
       sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
       if(!(fl=fopen(buf,"r+b"))) {
-        sprintf(buf,"Error--can't open file %s for updating pwd (write)", buf);
-        log_s(buf);
+        log_f("Error--can't open file %s for updating pwd (write)", buf);
         return(FALSE);
       }
       if (fwrite(&char_info_5, sizeof(struct char_file_u_5), 1, fl) < 1) {
@@ -1657,7 +1653,7 @@ void do_world(struct char_data *ch, char *argument, int cmd)
   }
 }
 
-char gamecheck_txt[MAX_STRING_LENGTH];
+char gamecheck_txt[MIL];
 
 void do_system(struct char_data *ch, char *argument, int cmd) {
   char buf[MAX_STRING_LENGTH];
@@ -1968,7 +1964,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
 void do_emote(struct char_data *ch, char *argument, int cmd)
 {
   int i;
-  char buf[MAX_STRING_LENGTH],buf2[MAX_STRING_LENGTH],buf3[MAX_STRING_LENGTH];
+  char buf[MIL],buf2[MIL],buf3[MAX_STRING_LENGTH];
 
   if(!AWAKE(ch)) {
     send_to_char("While asleep? Hah.\n\r",ch);
@@ -1995,7 +1991,7 @@ void do_emote(struct char_data *ch, char *argument, int cmd)
   if (!*(argument + i))
     send_to_char("Yes.. But what?\n\r", ch);
   else {
-    half_chop(argument,buf,MSL,buf2,MSL);
+    half_chop(argument,buf,sizeof(buf),buf2,sizeof(buf2));
     sprintf(buf3,"$i %s %s",buf,buf2);
     if(strstr(buf3,"lucky ivory die rolls a"))
       strcat(buf3,"- a FAKE ROLL!!");
@@ -2149,7 +2145,7 @@ void do_echo(struct char_data *ch, char *argument, int cmd)
 void do_wemote(struct char_data *ch, char *argument, int cmd)
 {
   int i,level;
-  char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+  char buf[MIL], buf2[MIL];
   char buf3[MAX_STRING_LENGTH];
   struct descriptor_data *e;
 
@@ -2209,7 +2205,7 @@ void do_wiznet(struct char_data *ch,char *argument, int cmd)
 {
   int i, level;
   char buf2[MAX_STRING_LENGTH];
-  char buf3[MAX_STRING_LENGTH],buf4[MAX_STRING_LENGTH];
+  char buf3[MIL],buf4[MIL];
   struct descriptor_data *e;
 
   if(!IS_NPC(ch)) {
@@ -2377,7 +2373,7 @@ void do_trans(struct char_data *ch, char *argument, int cmd)
 void do_at(struct char_data *ch, char *argument, int cmd)
 {
   char command[MAX_INPUT_LENGTH], loc_str[MAX_INPUT_LENGTH];
-  char buf[MAX_INPUT_LENGTH];
+  char buf[MSL];
   int loc_nr, location, original_loc,zonenum;
   struct char_data *target_mob;
   struct obj_data *target_obj;
@@ -5778,7 +5774,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
 }
 
 void do_ostat(struct char_data *ch, char *argument, int cmd) {
-  char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH],ltd[4];
+  char buf[MAX_STRING_LENGTH], buf2[MIL],ltd[4], buf3[MSL * 2];
   int number, r_number, i, found = FALSE;
   int type, wear,zonenum;
   struct obj_proto *proto;
@@ -5891,9 +5887,9 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
       printf_to_char(ch, "    Affects: %s by %d\n\r", buf2, proto->affected[i].modifier);
     }
   } else {
-    sprintf(buf2,"WIZINFO: %s ostat %s %s",GET_NAME(ch),buf,argument);
-    wizlog(buf2, GET_LEVEL(ch)+1, 5);
-    log_s(buf2);
+    sprintf(buf3,"WIZINFO: %s ostat %s %s",GET_NAME(ch),buf,argument);
+    wizlog(buf3, GET_LEVEL(ch)+1, 5);
+    log_s(buf3);
 
     one_argument(argument, buf2);
     init_string_block(&sb);
@@ -5912,36 +5908,36 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
               sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
-              sprintf(buf2, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
+              sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
                 obj_proto_table[i].virtual,ltd,
                 obj_proto_table[i].affected[0].modifier,
                 obj_proto_table[i].short_description,
                 obj_proto_table[i].name,buf);
-              append_to_string_block(&sb, buf2);
+              append_to_string_block(&sb, buf3);
               found = TRUE;
             }
             else if(obj_proto_table[i].affected[1].location==wear) {
               sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
-              sprintf(buf2, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
+              sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
                 obj_proto_table[i].virtual,ltd,
                 obj_proto_table[i].affected[1].modifier,
                 obj_proto_table[i].short_description,
                 obj_proto_table[i].name,buf);
-              append_to_string_block(&sb, buf2);
+              append_to_string_block(&sb, buf3);
               found = TRUE;
             }
             else if(obj_proto_table[i].affected[2].location==wear) {
               sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
-              sprintf(buf2, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
+              sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
                 obj_proto_table[i].virtual,ltd,
                 obj_proto_table[i].affected[2].modifier,
                 obj_proto_table[i].short_description,
                 obj_proto_table[i].name,buf);
-              append_to_string_block(&sb, buf2);
+              append_to_string_block(&sb, buf3);
               found = TRUE;
             }
           }
@@ -5958,11 +5954,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           if(IS_SET(obj_proto_table[i].obj_flags.wear_flags, wear)) {
             if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
             else sprintf(ltd," ");
-            sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+            sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
               obj_proto_table[i].virtual,ltd,
               obj_proto_table[i].short_description,
               obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
             found = TRUE;
           }
         }
@@ -5976,11 +5972,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           if(obj_proto_table[i].action_description) {
             if(IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
             else sprintf(ltd," ");
-            sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+            sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
               obj_proto_table[i].virtual,ltd,
               obj_proto_table[i].short_description,
               obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
             found = TRUE;
           }
         }
@@ -5996,11 +5992,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           if (IS_SET(obj_proto_table[i].obj_flags.bitvector, wear)) {
             if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
             else sprintf(ltd," ");
-            sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+            sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
               obj_proto_table[i].virtual,ltd,
               obj_proto_table[i].short_description,
               obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
             found = TRUE;
           }
         }
@@ -6016,11 +6012,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, wear)) {
             if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
             else sprintf(ltd," ");
-            sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+            sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
               obj_proto_table[i].virtual,ltd,
               obj_proto_table[i].short_description,
               obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
             found = TRUE;
           }
         }
@@ -6036,11 +6032,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           if(obj_proto_table[i].obj_flags.type_flag == type) {
             if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
             else sprintf(ltd," ");
-            sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+            sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
               obj_proto_table[i].virtual,ltd,
               obj_proto_table[i].short_description,
               obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
             found = TRUE;
           }
         }
@@ -6055,11 +6051,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
         for(i = number; i <= top_of_objt && i <= number + 25; i++) {
           if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
           else sprintf(ltd," ");
-          sprintf(buf2, "%4d.[%-5d]%s %s (%s)\n\r",i,
+          sprintf(buf3, "%4d.[%-5d]%s %s (%s)\n\r",i,
             obj_proto_table[i].virtual,ltd,
             obj_proto_table[i].short_description,
             obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
           found = TRUE;
         }
       } break;
@@ -6082,11 +6078,11 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
             if(GET_LEVEL(ch)<LEVEL_WIZ) continue;
           }
           else sprintf(ltd," ");
-          sprintf(buf2, "[%-5d]%s %s (%s)\n\r",
+          sprintf(buf3, "[%-5d]%s %s (%s)\n\r",
             obj_proto_table[i].virtual,ltd,
             obj_proto_table[i].short_description,
             obj_proto_table[i].name);
-            append_to_string_block(&sb, buf2);
+            append_to_string_block(&sb, buf3);
           found = TRUE;
         }
       }
@@ -6094,8 +6090,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
 
     if (found) page_string_block(&sb,ch);
     else {
-      sprintf(buf2, "There isn't such objects as '%s' in object file.\n\r", buf);
-      send_to_char(buf2, ch);
+      sprintf(buf3, "There isn't such objects as '%s' in object file.\n\r", buf);
+      send_to_char(buf3, ch);
     }
     destroy_string_block(&sb);
   }
@@ -6108,7 +6104,7 @@ void show_zone_to_char(CHAR *ch, int zoneNum)
   struct string_block sb;
   struct zone_data *zone;
   char buf[MAX_STRING_LENGTH];
-  char buf2[MAX_STRING_LENGTH];
+  char buf2[MIL];
 
   init_string_block(&sb);
   zone=&zone_table[zoneNum];
@@ -6388,7 +6384,7 @@ void do_snooplist(struct char_data *ch, char *argument, int cmd) {
 }
 
 void do_mstat(struct char_data *ch, char *argument, int cmd) {
-  char buf[MAX_STRING_LENGTH*2],buf2[MAX_STRING_LENGTH],buf3[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH*2],buf2[MAX_STRING_LENGTH],buf3[MAX_STRING_LENGTH], buf4[MSL * 3];
   char apt[3];
   char usage_text[] = "\
 Usage: mstat ac(t) <ACT>\n\r\
@@ -6466,9 +6462,9 @@ Usage: mstat ac(t) <ACT>\n\r\
 
     sprinttype(proto->position,position_types,buf2);
     sprinttype(proto->default_pos,position_types,buf3);
-    sprintf(buf,"Position: %s, Default:  %s ",buf2, buf3);
-    strcat(buf,"\n\r");
-    send_to_char(buf, ch);
+    sprintf(buf4,"Position: %s, Default:  %s ",buf2, buf3);
+    strcat(buf4,"\n\r");
+    send_to_char(buf4, ch);
 
     buf[0] = 0;
     strcat(buf,"NPC flags: ");
@@ -6753,8 +6749,8 @@ Usage: mstat ac(t) <ACT>\n\r\
 
     if (found) page_string_block(&sb,ch);
     else {
-      sprintf(buf2, "There isn't such mobiles as '%s' in mob file.\n\r", buf);
-      send_to_char(buf2, ch);
+      snprintf(buf4, sizeof(buf4), "There isn't such mobiles as '%s' in mob file.\n\r", buf);
+      send_to_char(buf4, ch);
     }
     destroy_string_block(&sb);
   }
@@ -6992,7 +6988,7 @@ void read_dlist(CHAR *ch, char *argument, int cmd) {
   char usage_text[] = "\
 Usage: `kdlist`q <name> <death #> or.\n\r\
        `kdlist`q # for last # of deaths.\n\r";
-  char buf[MAX_INPUT_LENGTH],buf2[MAX_INPUT_LENGTH];
+  char buf[MSL],buf2[MAX_INPUT_LENGTH];
   char name[30],deaths[50];
   int num,dflag,fail=0,found=0;
   char *tmstr;
@@ -7414,7 +7410,7 @@ void do_reimb(CHAR *ch, char *argument, int cmd) {
 
 void do_rshow(struct char_data *ch, char *argument, int cmd) {
 
-  char buf2[MAX_INPUT_LENGTH], arg[MAX_INPUT_LENGTH];
+  char buf2[MSL], arg[MAX_INPUT_LENGTH];
   struct string_block sb;
   char sects[MAX_INPUT_LENGTH],flags[MAX_INPUT_LENGTH],arg2[MAX_INPUT_LENGTH];
   int i, found = FALSE,flag_check=FALSE,tmp;
@@ -7487,7 +7483,7 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
   struct string_block sb;
   int i,x,zone,rzone;
   long int tmp1,tmp2;
-  char buf[MAX_INPUT_LENGTH],buf2[MAX_INPUT_LENGTH], buf3[MAX_INPUT_LENGTH],buf4[MAX_INPUT_LENGTH];
+  char buf[MAX_INPUT_LENGTH],buf2[MSL], buf3[MAX_INPUT_LENGTH],buf4[MAX_INPUT_LENGTH],buf5[MSL*2],buf6[MSL];
   char num[100],type[100];
   struct extra_descr_data *desc;
   char usage_text[] = "Usage: zbrief <zone #> <mobile/object/room> <all mobile> (IMP Only).\n\r";
@@ -7649,19 +7645,19 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
          str_cut(buf2,buf4,7);
          strncpy(buf2,buf4,sizeof(buf2));
           }
-          sprintf(buf, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
-          strcat(buf3, buf);
+          sprintf(buf5, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
+          strcat(buf6, buf);
         }
      sprintf(buf," ");
      strncat(buf,item_types[obj_proto_table[i].obj_flags.type_flag],9);
      if(obj_proto_table[i].obj_flags.bitvector!=0) sprintf(fu,"Y");
      if(IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_MAGIC)) sprintf(sa,"Y");
-        sprintf(buf2, "#%-2d%-10s  %4d %4d %4d %4d   %s  %s  %s\n\r",
+        sprintf(buf5, "#%-2d%-10s  %4d %4d %4d %4d   %s  %s  %s\n\r",
        obj_proto_table[i].virtual-((obj_proto_table[i].virtual/100)*100),
        buf, obj_proto_table[i].obj_flags.value[0],
        obj_proto_table[i].obj_flags.value[1], obj_proto_table[i].obj_flags.value[2],
-       obj_proto_table[i].obj_flags.value[3], fu,sa,buf3);
-        append_to_string_block(&sb, buf2);
+       obj_proto_table[i].obj_flags.value[3], fu,sa,buf6);
+        append_to_string_block(&sb, buf5);
       }
     }
     page_string_block(&sb,ch);

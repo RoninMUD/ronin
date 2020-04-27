@@ -960,7 +960,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
 void say_spell(struct char_data *ch, int si)
 {
   char buf[MAX_STRING_LENGTH];
-  char buf2[MAX_STRING_LENGTH];
+  char buf2[MAX_STRING_LENGTH * 2];
   char splwd[240];
 
   int j = 0;

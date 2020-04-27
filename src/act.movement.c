@@ -491,7 +491,7 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
   --cmd;
 
   if (IS_SET(GET_AFF2(ch), AFF2_SEVERED)) {
-    send_to_char("Move without legs? How?\n\r", ch);
+    send_to_char("Move without legs?  How!?\n\r", ch);
 
     return;
   }
@@ -565,191 +565,174 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
   /* Move the character. */
   if (do_simple_move(ch, cmd, 1) == 1) {
     if (!ch) {
-      log_f("WARNING: ch doesn't exist after a movement");
+      log_f("WARNING: ch doesn't exist after movement");
 
       return;
     }
 
-    if (ch->followers) {
-      /* If success, move followers. */
-      for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
-        next_follower = temp_follower->next;
+    /* If success, move followers. */
+    for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
+      next_follower = temp_follower->next;
 
-#ifndef TEST_FOLLOW_NOTARGET
+      if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) ||
+          (GET_POS(temp_follower->follower) < POSITION_FIGHTING) ||
+          ((GET_POS(temp_follower->follower) == POSITION_FIGHTING) && SAME_ROOM(temp_follower->follower, GET_OPPONENT(temp_follower->follower)))) continue;
 
-        if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
+      act("You follow $N.\n\r", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
 
-        act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
-        send_to_char("\n\r", temp_follower->follower);
-        do_move(temp_follower->follower, argument, cmd + 1);
-#else
-
-        if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_FIGHTING)) continue;
-
-        if (GET_POS(temp_follower->follower) >= POSITION_FIGHTING) {
-          if (!SAME_ROOM(temp_follower->follower, GET_OPPONENT(temp_follower->follower))) {
-            act("You follow $N.", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
-            send_to_char("\n\r", temp_follower->follower);
-            do_move(temp_follower->follower, argument, cmd + 1);
-          }
-        }
-#endif
-      }
+      do_move(temp_follower->follower, argument, cmd + 1);
     }
   }
 }
 
 void look_in_room(CHAR *ch, int vnum);
 
-void do_peek(struct char_data *ch, char *argument, int cmd)
-{
-  char arg1[MAX_STRING_LENGTH];
-  int keyword_no;
-  int was_in, percent;
-  const char * const keywords[]= {
+void do_peek(struct char_data *ch, char *argument, int cmd) {
+  const char * const keywords[] = {
     "north",
     "east",
     "south",
     "west",
     "up",
     "down",
-    "",  /* Look at '' case */
-    "\n" };
+    "",
+    "\n"
+  };
 
-  if (!ch->desc || !ch->skills)
-    return;
+  if (!ch || !ch->desc || !ch->skills) return;
 
-  if ((GET_CLASS(ch) != CLASS_THIEF) && (GET_CLASS(ch) != CLASS_NINJA) &&
-      (GET_CLASS(ch) != CLASS_NOMAD) && (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
-      (GET_CLASS(ch) != CLASS_BARD) && (GET_CLASS(ch) != CLASS_AVATAR) &&
-      (GET_LEVEL(ch) < LEVEL_IMM)) {
-    send_to_char("Leave this job for the others.\n\r", ch);
+  if (IS_MORTAL(ch) &&
+      (GET_CLASS(ch) != CLASS_THIEF) &&
+      (GET_CLASS(ch) != CLASS_NINJA) &&
+      (GET_CLASS(ch) != CLASS_NOMAD) &&
+      (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
+      (GET_CLASS(ch) != CLASS_AVATAR) &&
+      (GET_CLASS(ch) != CLASS_BARD)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
-  if (GET_POS(ch) < POSITION_SLEEPING)
-    send_to_char("You can't see anything but stars!\n\r", ch);
-  else if (GET_POS(ch) == POSITION_SLEEPING)
-    send_to_char("You can't see anything, you're sleeping!\n\r", ch);
-  else if ( IS_AFFECTED(ch, AFF_BLIND) )
-    send_to_char("You can't see a damn thing, you're blind!\n\r", ch);
-  else if ( IS_DARK(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch,AFF_INFRAVISION) )
-    send_to_char("It is pitch black...\n\r", ch);
-  else {
-    arg1[0] = 0; /* null terminate the thing */
-    sscanf(argument,"%s",arg1);
-    keyword_no = search_block(arg1, keywords, FALSE); /* Partiel Match */
+  if (IS_AFFECTED(ch, AFF_BLIND)) {
+    send_to_char("You can't see a thing; you're blind!\n\r", ch);
 
-    /*    if ((keyword_no == -1) && *arg1) {
-        keyword_no = 7;
-        strcpy(arg2, arg1);
-        }
-    */
+    return;
+  }
 
-    switch(keyword_no) {
-      /* look <dir> */
-    case 0 :
-    case 1 :
-    case 2 :
-    case 3 :
-    case 4 :
-    case 5 : {
+  if (!IS_IMMORTAL(ch) && IS_DARK(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+    send_to_char("You're surrounded by darkness...\n\r", ch);
 
-      if (EXIT(ch, keyword_no) &&
-        world[CHAR_REAL_ROOM(ch)].dir_option[keyword_no]->to_room_r != -1 &&
-        world[CHAR_REAL_ROOM(ch)].dir_option[keyword_no]->to_room_r != real_room(0) &&
-        !IS_SET(EXIT(ch, keyword_no)->exit_info, EX_JUMP) &&
-        !IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLIMB) &&
-        !IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CRAWL) &&
-        !IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ENTER) &&
-        !IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED)) {
+    return;
+  }
+
+  char arg[MSL];
+
+  one_argument(argument, arg);
+
+  int keyword_idx = search_block(arg, keywords, FALSE);
+
+  switch (keyword_idx) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    if (EXIT(ch, keyword_idx) &&
+        world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r != -1 &&
+        world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r != real_room(0) &&
+        !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLIMB) &&
+        !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_JUMP) &&
+        !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CRAWL) &&
+        !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_ENTER) &&
+        !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLOSED)) {
       send_to_char("You try to peek.\n\r", ch);
 
-  /* NO_PEEK - Ranger Sept 97 */
-      if(IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_no]->to_room_r].room_flags,NO_PEEK)) {
-    send_to_char("Something blocks your vision.\n\r",ch);
-    return;
-      }
-      percent = number(1, 85); /* removing fail on peek, basically */
+      if (!IS_IMMORTAL(ch) && IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r].room_flags, NO_PEEK)) {
+        send_to_char("Something blocks your vision.\n\r", ch);
 
-      if (percent > ch->skills[SKILL_PEEK].learned)
-        { return; }
-      if (IS_DARK(world[CHAR_REAL_ROOM(ch)].dir_option[keyword_no]->to_room_r) &&
-          !IS_AFFECTED(ch,AFF_INFRAVISION) ) {
-        send_to_char("It is pitch black...\n\r", ch);
         return;
       }
 
-      was_in = CHAR_REAL_ROOM(ch);
-  look_in_room(ch, world[world[was_in].dir_option[keyword_no]->to_room_r].number);
+      if (!IS_IMMORTAL(ch) && IS_DARK(world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+        send_to_char("It is pitch black...\n\r", ch);
 
-      } else {
-      send_to_char("Nothing special there...\n\r", ch);
+        return;
       }
+
+      if (number(1, 85) > GET_LEARNED(ch, SKILL_PEEK)) return;
+
+      look_in_room(ch, world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r].number);
     }
+    else {
+      send_to_char("Nothing special there...\n\r", ch);
+    }
+    break;
+
+    case 6:
+      send_to_char("You must choose a direction.\n\r", ch);
       break;
 
-    case 6 : { send_to_char("Select a direction please.\n\r", ch); }
+    case -1:
+      send_to_char("Peek where?\n\r", ch);
       break;
-
-    case -1 :
-      send_to_char("Sorry, I didn't understand that!\n\r", ch);
-      break;
-    }
   }
 }
 
-int find_door(struct char_data *ch, char *type, char *dir)
-{
-  int door;
-  const char * const dirs[] =
-    {
-      "north",
-      "east",
-      "south",
-      "west",
-      "up",
-      "down",
-      "\n"
-    };
+int find_door(struct char_data *ch, char *type, char *dir) {
+  const char * const dirs[] = {
+    "north",
+    "east",
+    "south",
+    "west",
+    "up",
+    "down",
+    "\n"
+  };
 
-  if (*dir) /* a direction was specified */
-    {
-      if ((door = search_block(dir, dirs, FALSE)) == -1) /* Partial Match */
-      {
-        send_to_char("That's not a direction.\n\r", ch);
-        return(-1);
+  if (*dir) {
+    /* a direction was specified */
+    int door_idx = search_block(dir, dirs, FALSE);
+
+    if (door_idx == -1) {
+      send_to_char("That's not a direction.\n\r", ch);
+
+      return -1;
+    }
+
+    if (EXIT(ch, door_idx)) {
+      if (EXIT(ch, door_idx)->keyword) {
+        if (isname(type, EXIT(ch, door_idx)->keyword)) {
+          return door_idx;
+        }
+        else {
+          printf_to_char(ch, "I see no %s there.\n\r", type);
+
+          return -1;
+        }
       }
-
-      if (EXIT(ch, door))
-      if (EXIT(ch, door)->keyword)
-        if (isname(type, EXIT(ch, door)->keyword))
-          return(door);
-        else
-          {
-            printf_to_char(ch, "I see no %s there.\n\r", type);
-            return(-1);
-          }
-      else
-        return(door);
-      else
-      {
-        send_to_char(
-                   "I really don't see how you can close anything there.\n\r", ch);
-        return(-1);
+      else {
+        return door_idx;
       }
     }
-  else /* try to locate the keyword */
-    {
-      for (door = 0; door <= 5; door++)
-      if (EXIT(ch, door))
-        if (EXIT(ch, door)->keyword)
-          if (isname(type, EXIT(ch, door)->keyword))
-            return(door);
+    else {
+      send_to_char("I really don't see how you can close anything there.\n\r", ch);
 
-      printf_to_char(ch, "I see no %s here.\n\r", type);
-      return(-1);
+      return -1;
     }
+  }
+  else {
+    /* try to locate the keyword */
+    for (int door = NORTH; door <= DOWN; door++) {
+      if (EXIT(ch, door) && EXIT(ch, door)->keyword && isname(type, EXIT(ch, door)->keyword)) {
+        return door;
+      }
+    }
+
+    printf_to_char(ch, "I see no %s here.\n\r", type);
+
+    return -1;
+  }
 }
 
 

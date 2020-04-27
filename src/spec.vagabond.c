@@ -306,61 +306,7 @@ int old_dragon_mob(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
-void spyglass_list_scanned_chars(CHAR *list, CHAR *ch, int distance, int dir)
-{
-  const char *how_far[] = {
-    "close",
-    "a ways",
-    "far"
-  };
-
-  const char *dir_messages[] = {
-    "to the north",
-    "to the east",
-    "to the south",
-    "to the west",
-    "above you",
-    "below you"
-  };
-
-  CHAR *i = NULL;
-  char buf[MSL];
-  int count = 0, count_limit = 10;
-
-  for (i = list; i && count < count_limit; i = i->next_in_room)
-  {
-    if (CAN_SEE(ch, i)) count++;
-  }
-
-  if (!count) return;
-
-  sprintf(buf, "You see ");
-
-  for (i = list; i && count > 0; i = i->next_in_room)
-  {
-    if (!CAN_SEE(ch, i)) continue;
-
-    count--;
-
-    sprintf(buf, "%s%s", buf, (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
-
-    if (count > 1)
-    {
-      strcat(buf, ", ");
-    }
-    else if (count == 1)
-    {
-      strcat(buf, " and ");
-    }
-    else
-    {
-      sprintf(buf, "%s %s %s.\n\r", buf, how_far[distance], dir_messages[dir]);
-    }
-  }
-
-  send_to_char(buf, ch);
-}
-
+void list_scanned_chars(CHAR *list, CHAR *ch, int distance, int door);
 int spyglass_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
   CHAR *owner = NULL;
@@ -418,7 +364,7 @@ int spyglass_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
         if (world[exit_room].people)
         {
-          spyglass_list_scanned_chars(world[exit_room].people, owner, distance, dir);
+          list_scanned_chars(world[exit_room].people, owner, distance, dir);
         }
 
         room = exit_room;

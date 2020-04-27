@@ -425,8 +425,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 void list_scanned_chars(CHAR *list, CHAR *ch, int distance, int door) {
   CHAR *i = NULL;
   int count = 0;
-  char buf[MSL];
-  char buf2[MIL];
+  bool start = FALSE;
 
   const char *how_far[] = {
     "close to the",
@@ -449,32 +448,28 @@ void list_scanned_chars(CHAR *list, CHAR *ch, int distance, int door) {
 
   if (!count) return;
 
-  buf[0] = '\0';
   for (i = list; i; i = i->next_in_room) {
     if (!CAN_SEE(ch, i)) continue;
 
     count--;
 
-    if (!*buf) {
-      sprintf(buf, "You see %s", (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
+    if (start) {
+      printf_to_char(ch, "You see %s", (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
     }
     else {
-      sprintf(buf, "%s%s", buf, (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
+      printf_to_char(ch, "%s", (IS_NPC(i) ? MOB_SHORT(i) : GET_NAME(i)));
     }
 
     if (count > 1) {
-      strcat(buf, ", ");
+      printf_to_char(ch, ", ");
     }
     else if (count == 1) {
-      strcat(buf, " and ");
+      printf_to_char(ch, " and ");
     }
     else {
-      sprintf(buf2, " %s %s.\n\r", how_far[distance], dir_name[door]);
-      strcat(buf, buf2);
+      printf_to_char(ch, " %s %s.\n\r", how_far[distance], dir_name[door]);
     }
   }
-
-  send_to_char(buf, ch);
 }
 
 

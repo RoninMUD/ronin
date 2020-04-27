@@ -461,7 +461,7 @@ char *corpsename_read(FILE *fl) {
 void read_corpselist(void) {
   FILE *fl;
   OBJ *obj;
-  char name[30],buf[MIL],buf2[MIL];
+  char name[30],buf[MIL],buf2[MIL*2];
 
   fl=fopen("corpselist","rb");
   if(!fl) return;
@@ -3108,9 +3108,9 @@ void read_idname (void) {
 
 void check_idname(CHAR *ch) {
   int id;
-  char tmp_name[50];
+  char tmp_name[20];
 
-  sprintf(tmp_name,"%s",GET_NAME(ch));
+  sprintf(tmp_name,"%s",ch->player.name);
   string_to_lower(tmp_name);
   id=ch->ver3.id;
 

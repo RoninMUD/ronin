@@ -692,7 +692,7 @@ int lottery_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
 
 int slot_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
   int num1, num2, num3, win = 0;
-  char buf[MIL],*slot_msg[] = {
+  char buf[MIL],buf2[MSL],*slot_msg[] = {
 	"*YOU SHOULDN'T SEE THIS*",
 	"a mithril bar",              /* 1 */
 	"a golden dragon",
@@ -749,12 +749,12 @@ int slot_machine(OBJ *machine, CHAR *ch, int cmd, char *arg) {
      sprintf(buf, "You got %s, %s, %s, ", slot_msg[num1],
 	     slot_msg[num2], slot_msg[num3]);
      if (win > 1)
-	sprintf(buf, "%syou win %d gold pieces!\r\n", buf, win);
+	sprintf(buf2, "%syou win %d gold pieces!\r\n", buf, win);
      else if (win == 1)
-	sprintf(buf, "%syou win 1 gold piece!\r\n", buf);
+	sprintf(buf2, "%syou win 1 gold piece!\r\n", buf);
      else
-	sprintf(buf, "%syou lose.\r\n", buf);
-     send_to_char(buf, ch);
+	sprintf(buf2, "%syou lose.\r\n", buf);
+     send_to_char(buf2, ch);
      GET_GOLD(ch) += win;
 
      return TRUE;

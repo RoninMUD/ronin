@@ -499,7 +499,7 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     }
   }
 
-  char message[MSL];
+  char message[MSL / 2];
 
   /* Drunkify the string as needed, otherwise, store the resulting arg text in the message variable. */
   if (!IS_NPC(ch) && (GET_COND(ch, DRUNK) > 10)) {

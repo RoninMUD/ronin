@@ -103,7 +103,7 @@ int check_god_access(CHAR *ch, int active);
 extern struct obj_data  *object_list;
 void do_qfunction(CHAR* ch, char *arg, int cmd)
 {
-  char arg1[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
+  char arg1[MAX_STRING_LENGTH / 2], buf[MAX_STRING_LENGTH];
   int function=0,target,num,vnum,i;
   struct string_block   sb;
   struct descriptor_data *d;

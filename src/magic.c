@@ -2668,7 +2668,7 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
 void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-    char buf[256], buf2[256];
+    char buf[MSL], buf2[256];
     int i;
     int iHP=0;
     int iDMG=0;

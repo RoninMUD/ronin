@@ -2790,8 +2790,7 @@ An Adamantium Bar : 1,000,000,000 coins\n\r", ch);
     }
 
     if (!obj) {
-      sprintf(buf, "[jeweler()] Unable to load object '%s'.", buf);
-      wizlog(buf, LEVEL_ETE, WIZ_LOG_SIX);
+      wizlog_f(LEVEL_ETE, WIZ_LOG_SIX, "[jeweler()] Unable to load object '%s'.", buf);
 
       return TRUE;
     }
@@ -2852,8 +2851,8 @@ int postoffice(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   extern OBJ *read_object(int num, int type);
   OBJ *obj = NULL, *tmp = NULL;
   char *message,*p;
-  char name[MAX_STRING_LENGTH],sender[MAX_STRING_LENGTH],filename[MAX_STRING_LENGTH];
-  char test[MAX_STRING_LENGTH],email_addr[80],buf[MAX_INPUT_LENGTH],reply_addr[80];
+  char name[MIL],sender[MAX_STRING_LENGTH],filename[MAX_STRING_LENGTH];
+  char test[MAX_STRING_LENGTH],email_addr[80],buf[MSL * 2],reply_addr[80];
   FILE *fd,*fl;
   int i,j,vnum,cost,send_email,version;
   long ct;
@@ -5093,7 +5092,7 @@ int jail_room(int room,CHAR *ch, int cmd, char *arg) {
 
 int pet_shops(int room,CHAR *ch, int cmd, char *arg)
 {
-  char buf[MAX_STRING_LENGTH], pet_name[MAX_STRING_LENGTH],tmp_pwd[11];
+  char buf[MAX_STRING_LENGTH], pet_name[MIL],tmp_pwd[11];
   int pet_room;
   CHAR *pet;
   if(!ch)
