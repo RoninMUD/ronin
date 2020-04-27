@@ -3105,18 +3105,29 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       /* Check avoidance skills and record which skill (if any) avoided the attack. */
       avoidance_skill = try_avoidance(attacker, defender);
 
-      bool hit_avoided = avoidance_skill ? TRUE : FALSE;
-
       /* Check if attacker and defender are still in the same room after avoidance. If not, someone died/fled/etc. */
       if (!SAME_ROOM(attacker, defender)) return FALSE;
+
+      bool hit_avoided = FALSE;
+
+      switch (avoidance_skill) {
+        case SKILL_PARRY:
+        case SKILL_DODGE:
+        case SKILL_FEINT:
+          hit_avoided = TRUE; // Attack was avoided entirely.
+          break;
+        case SKILL_RIPOSTE:
+          hit_avoided = FALSE; // Attack continues as normal, but some damage is deflected.
+          break;
+      }
 
       /* Some classes have a chance to hit again, if the attack was avoided. */
       if (hit_avoided) {
         if (IS_MORTAL(attacker) && check_subclass(attacker, SC_MERCENARY, 3)) {
           if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_RIPOSTE)) {
-            act("As $N dodges your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
-            act("As you dodge $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
-            act("As $N dodges $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
+            act("As $N avoids your attack, you riposte and strike back!", FALSE, attacker, 0, defender, TO_CHAR);
+            act("As you avoid $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_VICT);
+            act("As $N avoids $n's attack, $e ripostes and strikes back!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
             hit(attacker, defender, TYPE_UNDEFINED); // A normal hit (can dual/triple).
           }
@@ -3124,9 +3135,9 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 
         if (IS_MORTAL(attacker) && check_subclass(attacker, SC_DEFILER, 3)) {
           if ((number(1, 1000) - (GET_DEX_APP(attacker) * 5)) <= GET_LEARNED(attacker, SKILL_FEINT)) {
-            act("You feint after $N dodges your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
-            act("$n feints after you dodge $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
-            act("$n feints after $N dodges $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
+            act("You feint after $N avoids your attack and you attack once again!", FALSE, attacker, 0, defender, TO_CHAR);
+            act("$n feints after you avoid $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_VICT);
+            act("$n feints after $N avoids $s attack and $e attacks once again!", FALSE, attacker, 0, defender, TO_NOTVICT);
 
             hit(attacker, defender, SKILL_FEINT); // A feint hit (doubled).
           }
@@ -3486,7 +3497,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
     default:
       /* Riposte damage reduction. */
       if (avoidance_skill == SKILL_RIPOSTE) {
-        dam = lrint(dam * 0.6);
+        dam = lround(dam * 0.6);
       }
 
       dam = damage(attacker, defender, dam, attack_type, (hit_success == HIT_CRITICAL) ? DAM_PHYSICAL_CRITICAL : DAM_PHYSICAL);
