@@ -1444,10 +1444,36 @@ void spell_wrath_of_god(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void cast_spirit_blast(ubyte level, CHAR* ch, char* arg, int type, CHAR* victim, OBJ* tar_obj)
 {
+  struct char_data* tmp_char;
+  struct obj_data* tmp_object;
+  int bits;
+
   switch (type)
   {
     case SPELL_TYPE_SPELL:
-      spell_spirit_blast(level, ch, NULL, tar_obj);
+      bits = generic_find(arg, FIND_CHAR_ROOM, ch, &tmp_char, &tmp_object);
+      if (bits == FIND_CHAR_ROOM)
+      {
+        if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(tmp_char)) {
+          send_to_char("Your target isn't here.\n\r", ch);
+          return;
+        }
+      }
+      if (!GET_OPPONENT(ch))
+      {
+      //else {
+        //  bits = FIND_CHAR_ROOM;
+        //  tmp_char = ch->specials.fighting;
+        //}
+
+        //if (bits) {
+        //  if (bits == FIND_CHAR_ROOM) {
+        //    /* Shun: Check if target is actually in same room */
+        //    if (CHAR_REAL_ROOM(ch) != CHAR_REAL_ROOM(tmp_char)) {
+        //      send_to_char("Your target isn't here.\n\r", ch);
+        //      return;
+        //    }
+      spell_spirit_blast(level, ch, tar_victim, tar_obj);
       break;
 
     default:
@@ -1477,6 +1503,7 @@ void spell_spirit_blast(ubyte level, CHAR* ch, CHAR* victim, OBJ* obj)
 
   if (!victim)
   {
+
     victim = GET_OPPONENT(ch);
   }
 
@@ -1506,8 +1533,6 @@ void spell_spirit_blast(ubyte level, CHAR* ch, CHAR* victim, OBJ* obj)
   }
 
   extract_obj(obj);
-
-  update_pos(ch);
 }
 
 void cast_power_of_devotion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
