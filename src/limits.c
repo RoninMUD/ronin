@@ -1253,14 +1253,15 @@ void point_update(void)
     {
       GET_COND(ch, FULL) = -1;
       GET_COND(ch, THIRST) = -1;
-      if (IS_IMMORTAL(ch)) GET_COND(ch, DRUNK) = -1;
     }
     else
     {
       gain_condition(ch, FULL, -1);
-      gain_condition(ch, DRUNK, -1);
       gain_condition(ch, THIRST, -1);
     }
+
+    if (IS_IMMORTAL(ch)) GET_COND(ch, DRUNK) = -1;
+    else gain_condition(ch, DRUNK, -1);
 
     gain_condition(ch, QUAFF, (GET_PRESTIGE_PERK(ch) >= 26) ? -2 : -1); // Prestige Perk 26
 
