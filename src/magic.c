@@ -37,11 +37,11 @@
 
 /* Extern procedures */
 void stop_riding(struct char_data *ch,struct char_data *vict);
-void empty_all_containers (CHAR *ch);
-void make_statue (struct char_data *ch);
+void empty_all_containers(CHAR *ch);
+void make_statue(struct char_data *ch);
 void weight_change_object(OBJ *obj, int weight);
 char *str_dup(char *source);
-char *one_argument (char*, char*);
+char *one_argument(char *string, char *arg);
 int dice(int number, int size);
 void stop_follower(CHAR *ch);
 void do_look(CHAR *ch, char *argument, int cmd);
@@ -3719,32 +3719,28 @@ void spell_firebreath (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
 }
 
 
-void spell_regeneration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj)
-{
+void spell_regeneration (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   ENCH ench;
 
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != vict)
-  {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != vict)) {
     send_to_char("You cannot cast this spell on another player.\n\r",ch);
 
     return;
   }
 
-  if (ch != vict)
-  {
-    act("$N's skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_NOTVICT);
-    act("Your skin turns green, and you feel an affinity for the shining sun.",FALSE,ch,0,vict,TO_VICT);
-    act("$S skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_CHAR);
+  if (ch != vict) {
+    act("$N's skin turns green, and $E seems to bend toward the sun.", FALSE, ch, 0, vict, TO_NOTVICT);
+    act("Your skin turns green, and you feel an affinity for the shining sun.", FALSE, ch, 0, vict, TO_VICT);
+    act("$S skin turns green, and $E seems to bend toward the sun.", FALSE, ch, 0, vict, TO_CHAR);
   }
-  else
-  {
-    act("$N's skin turns green, and $E seems to bend toward the sun.",FALSE,ch,0,vict,TO_NOTVICT);
-    act("Your skin turns green, and you feel an affinity for the shining sun.",FALSE,0,0,vict,TO_VICT);
+  else {
+    act("$N's skin turns green, and $E seems to bend toward the sun.", FALSE, ch, 0, vict, TO_NOTVICT);
+    act("Your skin turns green, and you feel an affinity for the shining sun.", FALSE, 0, 0, vict, TO_VICT);
   }
 
-  memset(&ench, 0, sizeof(AFF));
-  ench.name     = str_dup("Regeneration");
-  enchantment_to_char(vict,&ench,TRUE);
+  memset(&ench, 0, sizeof(ENCH));
+  ench.name = str_dup("Regeneration");
+  enchantment_to_char(vict, &ench, TRUE);
   free(ench.name);
 }
 
