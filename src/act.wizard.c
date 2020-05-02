@@ -181,8 +181,6 @@ void do_handbook(struct char_data *ch, char *argument, int cmd) {
   }
 }
 
-extern char str_cut(char *source, char *dest, int number);
-
 int check_god_access(CHAR *ch, int active) {
 
   if(IS_NPC(ch)) return FALSE;
@@ -7637,13 +7635,13 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
         sprintf(buf3," ");
         for(x = 0; x < MAX_OBJ_AFFECT; x++) {
           sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
-          if(strstr(buf2,"SKILL")) {
-         str_cut(buf2,buf4,6);
-         strncpy(buf2,buf4,sizeof(buf2));
-         }
-          if(strstr(buf2,"SAVING")) {
-         str_cut(buf2,buf4,7);
-         strncpy(buf2,buf4,sizeof(buf2));
+          if(strstr(buf2,"SKILL_")) {
+            str_tail(buf4, sizeof(buf4), buf2, strlen("SKILL_"));
+            snprintf(buf2, sizeof(buf2), "%s", buf4);
+          }
+          if (strstr(buf2, "SAVING_")) {
+            str_tail(buf4, sizeof(buf4), buf2, strlen("SAVING_"));
+            snprintf(buf2, sizeof(buf2), "%s", buf4);
           }
           sprintf(buf5, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
           strcat(buf6, buf);

@@ -421,7 +421,7 @@ int myrdon_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       act("$n circles behind $N's back and stabs $s weapon into $S back!", FALSE, mob, 0, vict, TO_NOTVICT);
       act("$n circles behind you and stabs $s weapon into your back!", FALSE, mob, 0, vict, TO_VICT);
 
-      damage(mob, vict, (calc_hit_damage(mob, vict, NULL, 0, RND_NRM) * 4), TYPE_UNDEFINED, DAM_PHYSICAL);
+      damage(mob, vict, (calc_hit_damage(mob, vict, NULL, 0, RND_RND) * 4), TYPE_UNDEFINED, DAM_PHYSICAL);
     }
     /* 15% Circle fail. */
     else {

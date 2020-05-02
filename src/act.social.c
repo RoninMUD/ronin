@@ -261,7 +261,14 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
         act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, victim, TO_VICT);
       }
       else if (type == TO_OTHER) {
+        /* This is a hack to make act() TO_OTHER show to sleeping players. */
+        const bool sleeping = (GET_POS(ch) == POSITION_SLEEPING);
+
+        if (sleeping) GET_POS(ch) = POSITION_STANDING;
+
         act(message, COMM_ACT_HIDE_NON_MORT, ch, temp_ch, victim, TO_OTHER);
+
+        if (sleeping) GET_POS(ch) = POSITION_SLEEPING;
       }
       else {
         act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, temp_ch, TO_VICT);

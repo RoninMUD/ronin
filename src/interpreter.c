@@ -117,39 +117,45 @@ char *unknownCMD[] = {
   "\n\r"
   };
 
-const char * const ill_name[] = {
-  "up",
-  "down",
-  "north",
-  "south",
-  "east",
-  "west",
-  "\n"
-};
+bool is_illegal_word(char *string) {
+  const char *illegal_name[] = {
+    "north",
+    "east",
+    "south",
+    "west",
+    "up",
+    "down",
+    "\n"
+  };
 
-const char * const fill[] = {
-  "in",
-  "from",
-  "with",
-  "the",
-  "on",
-  "at",
-  "to",
-  "\n"
-};
+  return (search_block(string, illegal_name, TRUE) >= 0);
+}
 
 /* Determine if a given string is a fill word. */
 bool is_fill_word(char *string) {
-  return (search_block(string, fill, TRUE) >= 0);
+  const char *fill_word[] = {
+    "at",
+    "from",
+    "in",
+    "on",
+    "the",
+    "to",
+    "with",
+    "\n"
+  };
+
+  return (search_block(string, fill_word, TRUE) >= 0);
 }
 
 /* Determine if a given string is a number. */
 bool is_number(char *string) {
   if (!*string) return FALSE;
 
-  for (int index = ((*string == '-') ? 1 : 0); *(string + index); index++)
-    if (!isdigit(*(string + index)))
+  for (size_t i = ((*string == '-') ? 1 : 0); *(string + i); i++) {
+    if (!isdigit(*(string + i))) {
       return FALSE;
+    }
+  }
 
   return TRUE;
 }
@@ -158,72 +164,41 @@ bool is_number(char *string) {
 bool is_abbrev(char *str1, char *str2) {
   if (!*str1 || !*str2) return FALSE;
 
-  for (; *str1; str1++, str2++)
-    if (LOWER(*str1) != LOWER(*str2))
+  while (*str1) {
+    if (LOWER(*str1) != LOWER(*str2)) {
       return FALSE;
+    }
+
+    str1++, str2++;
+  }
 
   return TRUE;
 }
 
-/* Return argument after skipping all leading spaces. */
+/* Return substring after skipping all leading spaces. */
 char *skip_spaces(char *string) {
-  while (*string && isspace(*string)) string++;
+  while (*string && isspace(*string)) {
+    string++;
+  }
 
   return string;
 }
 
-int get_index_of_string_in_list(const char *string, const char * const *list, bool match_length, bool case_sensitive) {
+/* Return index of string matched in a given list of strings. */
+int search_block_ex(const char *string, const char * const *list, bool exact_match, bool case_sensitive) {
   if (!string || !list) return -1;
 
-  size_t str_len = strlen(string);
+  const size_t string_len = strlen(string);
 
-  for (int index = 0; str_len && (**(list + index) != '\n'); index++) {
-    const char *tmp_str = *(list + index);
-    size_t tmp_len = strlen(tmp_str);
+  for (int index = 0; (**(list + index) != '\n'); index++) {
+    const char *list_string = *(list + index);
+    const size_t list_string_len = strlen(list_string);
 
-    if (match_length && (tmp_len != str_len)) continue;
-    else if (!match_length) tmp_len = MAX(tmp_len, 1);
+    if ((exact_match && (list_string_len != string_len)) || (!string_len && list_string_len)) continue;
 
-    if ((case_sensitive && !strncmp(string, tmp_str, tmp_len)) || (!case_sensitive && !strncasecmp(string, tmp_str, tmp_len))) return index;
-  }
-
-  return -1;
-}
-
-int new_search_block(const char *string, const char * const *list, bool exact, bool case_sensitive) {
-  char buf[MIL];
-  int len = 0;
-
-  strncpy(buf, string, sizeof(buf) - 1);
-  buf[sizeof(buf) - 1] = '\0';
-
-  for (len = 0; *(buf + len); len++)
-    *(buf + len) = LOWER(*(buf + len));
-
-  if (exact) {
-    for (int i = 0; **(list + i) != '\n'; i++)
-      if (case_sensitive) {
-        if (!strcmp(buf, *(list + i)))
-          return i;
-      }
-      else {
-        if (!strcasecmp(buf, *(list + i)))
-          return i;
-      }
-  }
-  else {
-    if (!len)
-      len = 1; /* Avoid "" to match the first available string. */
-
-    for (int i = 0; **(list + i) != '\n'; i++)
-      if (case_sensitive) {
-        if (!strncmp(buf, *(list + i), len))
-          return i;
-      }
-      else {
-        if (!strncasecmp(buf, *(list + i), len))
-          return i;
-      }
+    if (case_sensitive ? !strncmp(list_string, string, string_len) : !strncasecmp(list_string, string, string_len)) {
+      return index;
+    }
   }
 
   return -1;
@@ -231,12 +206,12 @@ int new_search_block(const char *string, const char * const *list, bool exact, b
 
 /* Return index of string matched in a given list of strings. */
 int search_block(const char *string, const char * const *list, bool exact_match) {
-  return new_search_block(string, list, exact_match, TRUE);
+  return search_block_ex(string, list, exact_match, TRUE);
 }
 
 /* Return index of string matched in a given list of strings. */
 int old_search_block(const char *string, int begin, int length, const char * const *list, int mode) {
-  int index = 0;
+  size_t index = 0;
   bool found = FALSE;
 
   if (length < 1)
@@ -257,32 +232,51 @@ int old_search_block(const char *string, int begin, int length, const char * con
   return -1;
 }
 
-/* find the first sub-argument of a string, return pointer to first char in
-   primary argument, following the sub-arg                  */
-char *one_argument(char *string, char *arg) {
-  int begin = 0, index = 0;
+/* Fill arg with the first argument and return the remaining substring of the provided string. */
+char *one_argument_ex(char *string, char *arg, size_t arg_size, bool include_fill_words) {
+  size_t begin = 0, index = 0;
+
+  /* Permit unsafe arg size, for legacy use. */
+  if (arg_size < 0) {
+    /* Assume arg_size is at large enough to hold strlen(string). */
+    arg_size = strlen(string) + 1;
+  }
 
   do {
+    /* Skip spaces. */
     while (*(string + begin) == ' ') {
       begin++;
     }
 
-    for (index = 0; *(string + begin + index) > ' '; index++) {
+    /* Fill arg with the first word in the string and convert it to lowercase. */
+    for (index = 0; (index < arg_size - 1) && (*(string + begin + index) > ' '); index++) {
       *(arg + index) = LOWER(*(string + begin + index));
     }
 
+    /* Null terminate the arg. */
     *(arg + index) = '\0';
 
     begin += index;
-  } while (is_fill_word(arg));
+  } while (!include_fill_words && is_fill_word(arg)); /* Skip fill words as appropriate. */
 
-  return (string + begin);
+  return (string + begin); /* Return the remaining substring of the provided string. */
 }
 
-/* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
+/* Fill arg with the first argument and return the remaining substring of the provided string. */
+char *one_argument(char *string, char *arg) {
+  return one_argument_ex(string, arg, -1, FALSE);
+}
+
+/* Fill arg1 with the first argument, arg2 with the second argument, and return the remaining substring of the provided string. */
+void two_arguments_ex(char *string, char *arg1, size_t arg1_size, char *arg2, size_t arg2_size, bool include_fill_words) {
+  string = one_argument_ex(string, arg1, arg1_size, include_fill_words);
+  one_argument_ex(string, arg2, arg2_size, include_fill_words);
+}
+
+/* Fill arg1 with the first argument, arg2 with the second argument, and return the remaining substring of the provided string. */
 void two_arguments(char *string, char *arg1, char *arg2) {
   string = one_argument(string, arg1);
-  string = one_argument(string, arg2);
+  one_argument(string, arg2);
 }
 
 /* Fill arg1 with the first argument and arg2 with the second argument from the provided string. */
@@ -297,11 +291,11 @@ void chop_string(char *string, char *arg, size_t arg_len, char *sub, size_t sub_
   *arg = '\0';
 
   string = skip_spaces(string);
-  for (; sub_len && *string && (*sub = *string);  sub_len--, string++, sub++);
+  for (; sub_len && *string && (*sub = *string); sub_len--, string++, sub++);
   *sub = '\0';
 }
 
-/* chop_string */
+/* Wrapper for chop_string. */
 void half_chop(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len) {
   chop_string(string, arg, arg_len, sub, sub_len);
 }
@@ -1264,13 +1258,13 @@ void nanny(struct descriptor_data *d, char *arg) {
         SEND_TO_Q("Name: ", d);
         return;
       }
-      else if(search_block(arg,fill,TRUE)>=0) {
+      else if(is_fill_word(arg)) {
         SEND_TO_Q("Illegal name, please try another.", d);
         SEND_TO_Q("Name: ", d);
         return;
       }
       else {
-        if(search_block(arg,ill_name,TRUE)>=0) {
+        if(is_illegal_word(arg)) {
           SEND_TO_Q("Illegal name, please try another.", d);
           SEND_TO_Q("Name: ", d);
           return;

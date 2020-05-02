@@ -2681,7 +2681,7 @@ void give_prompt(DESC *desc) {
 
   char prompt[MIL], buf[MIL];
 
-  memset(prompt, 0, sizeof(prompt));
+  prompt[0] = '\0';
 
   bool color_enabled = GET_COMM_COLOR(ch, 0);
   char *prompt_color = Color[((GET_COMM_COLOR(ch, COMM_COLOR_PROMPT) * 2) - 2)];
@@ -2690,72 +2690,72 @@ void give_prompt(DESC *desc) {
 
   if (color_enabled) {
     if (prompt_color) {
-      strlcat(prompt, prompt_color, sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), prompt_color);
     }
 
     if (bg_color) {
-      strlcat(prompt, bg_color, sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), bg_color);
     }
   }
 
-  strlcat(prompt, "< ", sizeof(prompt));
+  str_cat(prompt, sizeof(prompt), "< ");
 
   if (IS_SET(desc->prompt, PROMPT_NAME)) {
-    strlcat(prompt, GET_NAME(ch), sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), GET_NAME(ch));
   }
 
   if (IS_SET(desc->prompt, PROMPT_HP | PROMPT_HP_MAX | PROMPT_HP_TEX)) {
-    strlcat(prompt, " ", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), " ");
   }
 
   if (IS_SET(desc->prompt, PROMPT_HP)) {
     snprintf(buf, sizeof(buf), "%d", GET_HIT(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_HP_MAX)) {
     snprintf(buf, sizeof(buf), "(%d)", GET_MAX_HIT(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_HP_TEX)) {
-    strlcat(prompt, "hp", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), "hp");
   }
 
   if (IS_SET(desc->prompt, PROMPT_MANA | PROMPT_MANA_MAX | PROMPT_MANA_TEX)) {
-    strlcat(prompt, " ", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), " ");
   }
 
   if (IS_SET(desc->prompt, PROMPT_MANA)) {
     snprintf(buf, sizeof(buf), "%d", GET_MANA(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_MANA_MAX)) {
     snprintf(buf, sizeof(buf), "(%d)", GET_MAX_MANA(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_MANA_TEX)) {
-    strlcat(prompt, "mana", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), "mana");
   }
 
   if (IS_SET(desc->prompt, PROMPT_MOVE | PROMPT_MOVE_MAX | PROMPT_MOVE_TEX)) {
-    strlcat(prompt, " ", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), " ");
   }
 
   if (IS_SET(desc->prompt, PROMPT_MOVE)) {
     snprintf(buf, sizeof(buf), "%d", GET_MOVE(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_MOVE_MAX)) {
     snprintf(buf, sizeof(buf), "(%d)", GET_MAX_MOVE(ch));
-    strlcat(prompt, buf, sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), buf);
   }
 
   if (IS_SET(desc->prompt, PROMPT_MOVE_TEX)) {
-    strlcat(prompt, "mv", sizeof(prompt));
+    str_cat(prompt, sizeof(prompt), "mv");
   }
 
   if (IS_SET(desc->prompt, PROMPT_BUFFER)) {
@@ -2763,21 +2763,21 @@ void give_prompt(DESC *desc) {
     CHAR *buffer = ((opponent && GET_OPPONENT(opponent) && SAME_ROOM(ch, GET_OPPONENT(opponent)) && (GET_OPPONENT(opponent) != ch)) ? GET_OPPONENT(opponent) : NULL);
 
     if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
-      strlcat(prompt, " Buf:", sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), " Buf:");
     }
 
     if (buffer) {
       if (IS_SET(desc->prompt, PROMPT_BUFFER_TEX)) {
         snprintf(buf, sizeof(buf), "%s", condition[MAX(MIN((GET_MAX_HIT(buffer) ? ((100 * GET_HIT(buffer)) / GET_MAX_HIT(buffer)) : 0) / 10, 10), 0)]);
-        strlcat(prompt, buf, sizeof(prompt));
+        str_cat(prompt, sizeof(prompt), buf);
       }
       else {
         snprintf(buf, sizeof(buf), "%d%%", GET_MAX_HIT(buffer) ? (int)(((double)GET_HIT(buffer) / (double)GET_MAX_HIT(buffer)) * 100.0) : 0);
-        strlcat(prompt, buf, sizeof(prompt));
+        str_cat(prompt, sizeof(prompt), buf);
       }
     }
     else if (buffer || IS_SET(desc->prompt, PROMPT_BUFFER_A)) {
-      strlcat(prompt, "*", sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), "*");
     }
   }
 
@@ -2785,33 +2785,33 @@ void give_prompt(DESC *desc) {
     CHAR *opponent = ((GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) ? GET_OPPONENT(ch) : NULL);
 
     if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
-      strlcat(prompt, " Vic:", sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), " Vic:");
     }
 
     if (opponent) {
       if (IS_SET(desc->prompt, PROMPT_VICTIM_TEX)) {
         snprintf(buf, sizeof(buf), "%s", condition[MAX(MIN((GET_MAX_HIT(opponent) ? (100 * GET_HIT(opponent)) / GET_MAX_HIT(opponent) : 0) / 10, 10), 0)]);
-        strlcat(prompt, buf, sizeof(prompt));
+        str_cat(prompt, sizeof(prompt), buf);
       }
       else {
         snprintf(buf, sizeof(buf), "%d%%", GET_MAX_HIT(opponent) ? (int)(((double)GET_HIT(opponent) / (double)GET_MAX_HIT(opponent)) * 100.0) : 0);
-        strlcat(prompt, buf, sizeof(prompt));
+        str_cat(prompt, sizeof(prompt), buf);
       }
     }
     else if (opponent || IS_SET(desc->prompt, PROMPT_VICTIM_A)) {
-      strlcat(prompt, "*", sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), "*");
     }
   }
 
-  strlcat(prompt, " > ", sizeof(prompt));
+  str_cat(prompt, sizeof(prompt), " > ");
 
   if (color_enabled) {
     if (fg_color) {
-      strlcat(prompt, fg_color, sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), fg_color);
     }
 
     if (bg_color) {
-      strlcat(prompt, bg_color, sizeof(prompt));
+      str_cat(prompt, sizeof(prompt), bg_color);
     }
   }
 

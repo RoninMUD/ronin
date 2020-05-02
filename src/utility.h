@@ -10,16 +10,8 @@
 /* Common external variables */
 bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type);
 
-char *str_dup(char *source);
-
 void WAIT_STATE(CHAR *ch,int cycle);
 
-int str_cat(char *s, int len, int maxlen, const char *append);
-int str_cmp(char *arg1, char *arg2);
-int strn_cmp(char *arg1, char *arg2, int n);
-char *str_upper(char *str);
-char *string_to_lower(char *string);
-char *string_to_upper(char *string);
 char *PERS_ex(CHAR *ch, CHAR *vict, int mode);
 char *PERS(CHAR *ch, CHAR *vict);
 char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode);
@@ -58,11 +50,11 @@ struct char_data *get_ch_world (int virtual) ;
 struct char_data *get_ch_zone (int virtual, int zone) ;
 struct char_data *get_ch_room (int virtual, int realroom) ;
 
-int V_OBJ(struct obj_data *o) ;
-int V_MOB(struct char_data *m) ;
-int V_ROOM(struct char_data *m) ;
-int IS_DARK(int room);
-int IS_LIGHT(int room);
+int V_OBJ(OBJ *obj);
+int V_MOB(CHAR *ch);
+int V_ROOM(CHAR *ch);
+bool IS_DARK(int room);
+bool IS_LIGHT(int room);
 int CAN_SEE(struct char_data *ch,struct char_data *vict);
 int CAN_TAKE(struct char_data *ch,struct obj_data *obj);
 struct obj_data *get_obj_room (int virtual, int loc) ;
@@ -150,7 +142,7 @@ bool in_int_array(int value, const int *array, size_t num_elems);
 void shuffle_int_array(int *array, size_t num_elems);
 void shuffle_2d_int_array(int (*array)[2], size_t num_elems);
 
-#define RND_NRM 0
+#define RND_RND 0
 #define RND_MIN 1
 #define RND_MAX 2
 #define RND_AVG 3
@@ -167,8 +159,21 @@ int32_t MAX(int32_t a, int32_t b);
 
 int MAX_PRAC(CHAR *ch);
 
-size_t strlmrg(char *dest, size_t size, ...);
-size_t strlcpy(char *dest, const char *src, size_t size);
-size_t strlcat(char *dest, const char *src, size_t size);
+size_t str_mrg(char *dest, size_t dest_size, ...);
+size_t str_cpy(char *dest, size_t dest_size, const char *src);
+size_t str_cat(char *dest, size_t dest_size, const char *src);
+char *str_sub(char *dest, size_t dest_size, const char *src, size_t start_idx, size_t n);
+char *str_head(char *dest, size_t dest_size, const char *src, size_t n);
+char *str_tail(char *dest, size_t dest_size, const char *src, size_t n);
+char *str_del(char *src, ...);
+char *str_upper(char *dest, size_t dest_size, char *src);
+char *str_lower(char *dest, size_t dest_size, char *src);
+char *str_upr(char *str);
+char *str_lwr(char *str);
+char *str_dup(char *src);
+int str_cmp(char *str1, char *str2);
+int strn_cmp(char *str1, char *str2, size_t n);
+char *string_to_lower(char *str);
+char *string_to_upper(char *str);
 
 #endif

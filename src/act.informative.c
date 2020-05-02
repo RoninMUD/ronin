@@ -46,6 +46,7 @@ void make_chaos_corpse(struct char_data *ch);
 void create_wizlist (FILE *wizlist);
 void create_inactive_wizlist (FILE *wizlist);
 void give_prompt(struct descriptor_data *point);
+void death_list(CHAR *ch);
 
 /* intern functions */
 
@@ -55,315 +56,327 @@ void look_in_room(CHAR *ch, int vnum);
 
 void show_char_to_char(struct char_data *i, struct char_data *ch, int mode);
 
+
+const char *object_decay_text[] = {
+  "like new",
+  "almost new",
+  "fairly new",
+  "slightly worn",
+  "worn",
+  "fairly worn",
+  "very worn",
+  "slightly cracked",
+  "cracked",
+  "about to crumble"
+};
+
 /* Procedures related to 'look' */
 
-void argument_split_2(char *argument, char *first_arg, char *second_arg) {
-  int look_at, begin = 0;
-
-  /* Find first non blank */
-
-  for ( ;*(argument + begin ) == ' ' ; begin++);
-
-  /* Find length of first word */
-  for (look_at=0; *(argument+begin+look_at) > ' ' ; look_at++)
-
-    /* Make all letters lower case, AND copy them to first_arg */
-
-    *(first_arg + look_at) = LOWER(*(argument + begin + look_at));
-  *(first_arg + look_at) = '\0';
-  begin += look_at;
-
-  /* Find first non blank */
-  for ( ;*(argument + begin ) == ' ' ; begin++);
-
-  /* Find length of second word */
-  for ( look_at=0; *(argument+begin+look_at)> ' ' ; look_at++)
-
-    /* Make all letters lower case, AND copy them to second_arg */
-    *(second_arg + look_at) = LOWER(*(argument + begin + look_at));
-  *(second_arg + look_at)='\0';
-  begin += look_at;
-}
-
-struct obj_data *get_object_in_equip_vis(struct char_data *ch,
-           char *arg,
-           struct obj_data *equipment[],
-           int *j) {
-
-  for ((*j) = 0; (*j) < MAX_WEAR ; (*j)++)
-    if (equipment[(*j)])
-      if (CAN_SEE_OBJ(ch,equipment[(*j)]))
-  if (isname(arg, OBJ_NAME(equipment[(*j)])))
-    return(equipment[(*j)]);
-
-  return (0);
-}
-
-char *find_ex_description(char *word, struct extra_descr_data *list)
-{
-  struct extra_descr_data *i = NULL;
-
-  for (i = list; i; i = i->next)
-    if (isname(word,i->keyword))
-      return(i->description);
-
-  return(0);
-}
-
-void death_list(CHAR *ch);
-void make_statue(struct char_data *ch)
-{
-  struct obj_data *statue, *o;
-  struct obj_data *money;
-  char buf[MSL];
-  int i;
-
-  char *str_dup(char *source);
-  struct obj_data *create_money( int amount );
-
-  ch->new.been_killed += 1;
-  death_list(ch);
-  CREATE(statue, struct obj_data, 1);
-  clear_object(statue);
-
-  statue->item_number = NOWHERE;
-  statue->in_room = NOWHERE;
-  if(!IS_NPC(ch)) {
-    sprintf(buf,"statue %s",GET_NAME(ch));
-    string_to_lower(buf);
-    statue->name=str_dup(buf);
-  }
-  else
-    statue->name=str_dup("statue");
-
-  sprintf(buf, "Statue of %s is standing here.",
-    (IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch)));
-  statue->description = str_dup(buf);
-
-  sprintf(buf, "Statue of %s",
-    (IS_NPC(ch) ? GET_SHORT(ch) : GET_NAME(ch)));
-  statue->short_description = str_dup(buf);
-
-  statue->contains = ch->carrying;
-  if(GET_GOLD(ch)>0)
-    {
-      money = create_money(GET_GOLD(ch));
-      GET_GOLD(ch)=0;
-      obj_to_obj(money,statue);
+char *find_ex_description(char *string, struct extra_descr_data *list) {
+  for (struct extra_descr_data *desc = list; desc; desc = desc->next) {
+    if (isname(string, desc->keyword)) {
+      return desc->description;
     }
+  }
 
-  statue->obj_flags.type_flag = ITEM_CONTAINER;
-  statue->obj_flags.wear_flags = ITEM_TAKE;
-  statue->obj_flags.value[0] = 0; /* You can't store stuff in a statue */
-  statue->obj_flags.value[2] = GET_LEVEL(ch);
-  statue->obj_flags.value[3] = 1; /* statue identifyer */
-  statue->obj_flags.weight = 10000;
-  statue->obj_flags.cost_per_day = 100000;
+  return NULL;
+}
+
+void make_statue(CHAR *ch) {
+  if (!ch) return;
+
+  char buf[MIL];
+  OBJ *statue;
+
+  CREATE(statue, OBJ, 1);
+
+  OBJ_RNUM(statue) = -1;
+  OBJ_IN_ROOM(statue) = NOWHERE;
+
+
   if (IS_NPC(ch)) {
-    statue->obj_flags.cost=NPC_STATUE;
-    statue->obj_flags.timer = MAX_NPC_STATUE_TIME;
+    OBJ_GET_NAME(statue) = strdup("statue");
   }
   else {
-    statue->obj_flags.cost=PC_STATUE;
-    statue->obj_flags.timer = MAX_PC_STATUE_TIME;
+    snprintf(buf, sizeof(buf), "statue %s", GET_NAME(ch));
+    OBJ_GET_NAME(statue) = strdup(str_lwr(buf));
   }
 
-  for (i=0; i<MAX_WEAR; i++)
-    if (ch->equipment[i])
-      obj_to_obj(unequip_char(ch, i), statue);
+  snprintf(buf, sizeof(buf), "A statue of %s is standing here.", GET_DISP_NAME(ch));
+  OBJ_GET_DESCRIPTION(statue) = strdup(buf);
 
-  ch->carrying = 0;
+  snprintf(buf, sizeof(buf), "Statue of %s", GET_DISP_NAME(ch));
+  OBJ_GET_SHORT(statue) = strdup(buf);
+
+  OBJ_TYPE(statue) = ITEM_CONTAINER;
+
+  SET_BIT(OBJ_WEAR_FLAGS(statue), ITEM_TAKE);
+
+  OBJ_VALUE(statue, 0) = 0;
+  OBJ_VALUE(statue, 2) = GET_LEVEL(ch);
+  OBJ_VALUE(statue, 3) = 1;
+
+  OBJ_WEIGHT(statue) = 10000;
+
+  OBJ_COST(statue) = IS_NPC(ch) ? NPC_STATUE : PC_STATUE;
+  OBJ_TIMER(statue) = IS_NPC(ch) ? MAX_NPC_STATUE_TIME : MAX_PC_STATUE_TIME;
+
+  OBJ_CONTAINS(statue) = GET_CARRYING(ch);
+  GET_CARRYING(ch) = NULL;
+
+  for (OBJ *obj = OBJ_CONTAINS(statue); obj; OBJ_IN_OBJ(obj) =statue, obj = OBJ_NEXT_CONTENT(obj));
+
+  object_list_new_owner(statue, NULL);
+
+  for (int i = 0; i < MAX_WEAR; i++) {
+    if (EQ(ch, i)) {
+      obj_to_obj(unequip_char(ch, i), statue);
+    }
+  }
+
+  if (GET_GOLD(ch) > 0) {
+    obj_to_obj(create_money(GET_GOLD(ch)), statue);
+
+    GET_GOLD(ch) = 0;
+  }
 
   statue->next = object_list;
   object_list = statue;
 
-  for(o = statue->contains; o; o->in_obj = statue,
-      o = o->next_content);
-  object_list_new_owner(statue, 0);
+  if (IS_MORTAL(ch) && (GET_LEVEL(ch) < 10) &&
+      !IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DEATH) &&
+      !IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), HAZARD)) {
+    send_to_char("\n\rYour statue is in the Midgaard Morgue, 2 west from the Temple of Midgaard.\n\rWhen you reach level 10, your statue will remain where you died.\n\r", ch);
 
-  if(GET_LEVEL(ch)<10 && statue->obj_flags.cost==PC_STATUE &&
-     !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,DEATH) &&
-     !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,HAZARD) ) {
-    send_to_char("\n\rYour statue is in the Midgaard Morgue 2 west from the Temple.\n\rWhen you reach level 10, your statue will be whereever you died.\n\r",ch);
-    obj_to_room(statue,real_room(3088));
+    obj_to_room(statue, real_room(ROOM_MORGUE));
   }
   else {
     obj_to_room(statue, CHAR_REAL_ROOM(ch));
   }
-  GET_HIT(ch)  = 1;
-  GET_MANA(ch) = 1;
+
+  if (IS_MORTAL(ch)) {
+    GET_BEEN_KILLED(ch) += 1;
+
+    death_list(ch);
+
+    GET_HIT(ch) = 1;
+    GET_MANA(ch) = 1;
+  }
+
   remove_all_affects(ch);
 }
 
 
-void show_obj_to_char(struct obj_data *object, struct char_data *ch,
-          int mode,int num)
-{
-  char buffer[4*MSL] = "\0";
-  char bb[MSL]="\0";
-  char buf1[MSL*4]="\0";
-  char *Dcorpse[10]=
-  {"The fresh ","The ","The slightly decayed ","The mildly decayed ",
-   "The badly decayed ","The awfully decayed ","The rotting ",
-   "The putrid rotten ","The barely recognizable ",
-   "Flies and maggots surround this gruesomely decayed corpse."};
-  char *Dstatue[10]=
-  {"The new ","The ","The slightly chipped ","The chipped  ",
-   "The badly chipped ","The awfully chipped ","The cracked and chipped ",
-   "The awfully cracked ","The barely recognizable crumbling ",
-   "A crumbling statue of unknown origin stands here."};
-  char *decay_text[10]=
-  {"like new","almost new","fairly new","slightly worn","worn",
-   "fairly worn","very worn","slightly cracked","cracked",
-   "about to crumble"};
-  int val3,max_time;
-  bool isstatue=FALSE;
+// TODO: Remove or define "magic number" mode.
+void show_obj_to_char(OBJ *obj, CHAR *ch, int mode, int num) {
+  const char *statue_decay_text[] = {
+    "The new ",
+    "The ",
+    "The slightly chipped ",
+    "The chipped ",
+    "The badly chipped ",
+    "The awfully chipped ",
+    "The cracked and chipped ",
+    "The awfully cracked ",
+    "The barely recognizable crumbling ",
+    "A crumbling statue of unknown origin stands here."
+  };
 
-  if ((mode == 0) && OBJ_DESCRIPTION(object))
-    strcpy(buffer,OBJ_DESCRIPTION(object));
-  else if (OBJ_SHORT(object) && ((mode == 1)
-           || (mode == 2) || (mode==3) || (mode == 4))) {
-      sprintf(buffer,"%s",OBJ_SHORT(object));
-  }
-  else if (mode == 5) {
-    if (object->obj_flags.type_flag == ITEM_NOTE) {
-      if (OBJ_ACTION(object)) {
-  strcpy(buffer, "There is something written upon it:\n\r\n\r");
-  strcat(buffer, OBJ_ACTION(object));
-  page_string(ch->desc, buffer, 1);
+  const char *corpse_decay_text[] = {
+    "The fresh ",
+    "The ",
+    "The slightly decayed ",
+    "The mildly decayed ",
+    "The badly decayed ",
+    "The awfully decayed ",
+    "The rotting ",
+    "The putrid rotten ",
+    "The barely recognizable ",
+    "Flies and maggots surround this gruesomely decayed corpse."
+  };
+
+  char buf[4 * MSL], *tmp;
+
+  switch (mode) {
+    case 0:
+      snprintf(buf, sizeof(buf), "%s", OBJ_DESCRIPTION(obj));
+      break;
+
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      snprintf(buf, sizeof(buf), "%s", OBJ_SHORT(obj));
+      break;
+
+    case 5:
+      if (OBJ_TYPE(obj) == ITEM_NOTE) {
+        if (OBJ_ACTION(obj)) {
+          snprintf(buf, sizeof(buf), "There is something written upon it:\n\r\n\r%s", OBJ_ACTION(obj));
+
+          page_string(GET_DESCRIPTOR(ch), buf, 1);
+        }
+        else {
+          send_to_char("It's blank.\n\r", ch);
+        }
+
+        return;
       }
-      else act("It's blank.", FALSE, ch,0,0,TO_CHAR);
-      return;
-    }
-    else if (object->obj_flags.type_flag == ITEM_TICKET) {
-      if(object->obj_flags.value[1]==object->obj_flags.value[2] || object->obj_flags.value[2]==0)
-        sprintf(buffer,"This is ticket # %d from lot %d.\n\r",object->obj_flags.value[1],object->obj_flags.value[0]);
-      else
-        sprintf(buffer,"This is ticket # %d to %d from lot %d.\n\r",object->obj_flags.value[1],object->obj_flags.value[2],object->obj_flags.value[0]);
-      page_string(ch->desc, buffer, 1);
-      return;
-    }
-    else if(IS_SET(object->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(object->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-      max_time=obj_proto_table[object->item_number].obj_flags.timer;
-      if(max_time)
-        val3=9-10*object->obj_flags.timer/max_time;
-      else val3=9;
-      if(val3<0) val3=0;
-      val3=MIN(val3,9);
-      sprintf(buffer,"This item decays and seems %s.\n\r",decay_text[val3]);
-    }
-    else if((object->obj_flags.type_flag != ITEM_DRINKCON)) {
-      strcpy(buffer,"You see nothing special..");
-    }
-    else /* ITEM_TYPE == ITEM_DRINKCON */
-      {
-  strcpy(buffer, "It looks like a drink container.");
+      else if (OBJ_TYPE(obj) == ITEM_TICKET) {
+        if ((OBJ_VALUE(obj, 1) == OBJ_VALUE(obj, 2)) || (OBJ_VALUE(obj, 2) == 0)) {
+          snprintf(buf, sizeof(buf), "This is ticket # %d from lot %d.\n\r", OBJ_VALUE(obj, 1), OBJ_VALUE(obj, 0));
+        }
+        else {
+          snprintf(buf, sizeof(buf), "This is ticket # %d to %d from lot %d.\n\r", OBJ_VALUE(obj, 1), OBJ_VALUE(obj, 2), OBJ_VALUE(obj, 0));
+        }
+
+        page_string(GET_DESCRIPTOR(ch), buf, 1);
+
+        return;
       }
+      else if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) || IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
+        const int decay_string_max_idx = NUMELEMS(object_decay_text) - 1;
+
+        int decay_level = OBJ_PROTO_TIMER(obj) ? decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / OBJ_PROTO_TIMER(obj)) : decay_string_max_idx;
+
+        decay_level = MIN(MAX(decay_level, 0), decay_string_max_idx);
+
+        snprintf(buf, sizeof(buf), "This item decays and seems %s.", object_decay_text[decay_level]);
+      }
+      else if (OBJ_TYPE(obj) == ITEM_DRINKCON) {
+        snprintf(buf, sizeof(buf), "It looks like a drink container.");
+      }
+      else {
+        snprintf(buf, sizeof(buf), "You see nothing special.");
+      }
+      break;
+    default:
+      buf[0] = '\0';
+      break;
   }
 
   if (mode != 3) {
-    if (mode!=5 && OBJ_TYPE(object)==ITEM_CONTAINER && object->obj_flags.value[3]) {
-      strncpy(buf1, buffer, sizeof(buf1)-1);
-      switch(object->obj_flags.cost) {
+    if ((mode != 5) && IS_CORPSE(obj)) {
+      tmp = strdup(buf);
+
+      int max_time = 0;
+
+      switch (OBJ_COST(obj)) {
         case PC_CORPSE:
-          max_time=MAX_PC_CORPSE_TIME; break;
+          max_time = MAX_PC_CORPSE_TIME;
+          break;
+
         case NPC_CORPSE:
-          max_time=MAX_NPC_CORPSE_TIME; break;
+          max_time = MAX_NPC_CORPSE_TIME;
+          break;
+
         case PC_STATUE:
-          max_time=MAX_PC_STATUE_TIME;
-          isstatue=TRUE; break;
+          max_time = MAX_PC_STATUE_TIME;
+          break;
+
         case NPC_STATUE:
-          max_time=MAX_NPC_STATUE_TIME;
-          isstatue=TRUE; break;
+          max_time = MAX_NPC_STATUE_TIME;
+          break;
+
         case CHAOS_CORPSE:
-          max_time=MAX_CHAOS_CORPSE_TIME; break;
+          max_time = MAX_CHAOS_CORPSE_TIME;
+          break;
+
         default:
-          max_time=0;
+          max_time = 0;
+          break;
       }
 
-      if(max_time) val3=9-10*object->obj_flags.timer/max_time;
-      else val3=1;
-      if(val3<0) val3=0;
-      val3=MIN(val3,9);
+      int decay_text_max_idx = 0;
+      int decay_level = 0;
 
-      if(isstatue)
-        strncpy(buffer, Dstatue[val3], sizeof(buffer));
-       else
-        strncpy(buffer, Dcorpse[val3], sizeof(buffer));
-     if(val3!=9)   strcat(buffer, LOW(buf1));
+      if ((OBJ_RENT_COST(obj) == PC_STATUE) || (OBJ_RENT_COST(obj) == NPC_STATUE)) {
+        decay_text_max_idx = NUMELEMS(statue_decay_text) - 1;
 
+        decay_level = max_time ? decay_text_max_idx - ((10 * OBJ_TIMER(obj)) / max_time) : decay_text_max_idx;
+        decay_level = MIN(MAX(decay_level, 0), decay_text_max_idx);
+
+        snprintf(buf, sizeof(buf), "%s", statue_decay_text[decay_level]);
+      }
+      else {
+        decay_text_max_idx = NUMELEMS(corpse_decay_text) - 1;
+
+        decay_level = max_time ? decay_text_max_idx - ((10 * OBJ_TIMER(obj)) / max_time) : decay_text_max_idx;
+        decay_level = MIN(MAX(decay_level, 0), decay_text_max_idx);
+
+        snprintf(buf, sizeof(buf), "%s", corpse_decay_text[decay_level]);
+      }
+
+      if (decay_level < decay_text_max_idx) {
+        str_cat(buf, sizeof(buf), LOW(tmp));
+      }
+
+      free(tmp);
     }
 
-    if (GET_LEVEL(ch)>LEVEL_WIZ && diff_obj_stats(object)) {
-      strcat(buffer,"(`iQUESTED`q)");
+    if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_MAGIC) && (IS_AFFECTED(ch, AFF_DETECT_MAGIC) || IS_IMMORTAL(ch))) {
+      str_cat(buf, sizeof(buf), "(blue)");
     }
-    if (IS_OBJ_STAT(object,ITEM_INVISIBLE)) {
-      strcat(buffer,"(invisible)");
+    if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_GLOW)) {
+      str_cat(buf, sizeof(buf), "(glowing)");
     }
-    if (IS_OBJ_STAT(object,ITEM_MAGIC) && IS_AFFECTED(ch,AFF_DETECT_MAGIC)) {
-      strcat(buffer,"(blue)");
+    if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_HUM)) {
+      str_cat(buf, sizeof(buf), "(humming)");
     }
-    if (IS_OBJ_STAT(object,ITEM_GLOW)) {
-      strcat(buffer,"(glowing)");
+    if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE)) {
+      str_cat(buf, sizeof(buf), "(invisible)");
     }
-    if (IS_OBJ_STAT(object,ITEM_HUM)) {
-      strcat(buffer,"(humming)");
+    if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) {
+      str_cat(buf, sizeof(buf), "(cloned)");
     }
-    if (IS_OBJ_STAT(object,ITEM_CLONE)) {
-      strcat(buffer,"(cloned)");
+    if (IS_ETERNAL(ch) && diff_obj_stats(obj)) {
+      str_cat(buf, sizeof(buf), "(`iQUESTED`q)");
     }
   }
 
-  if(num)  {
-    sprintf(bb,"[%d] ",num);
-    strcat(bb,buffer);
-    strcpy(buffer, bb);
+  if (num > 0) {
+    tmp = strdup(buf);
+
+    snprintf(buf, sizeof(buf), "[%d] %s", num, tmp);
+
+    free(tmp);
   }
-  strcat(buffer, "\n\r");
-  page_string(ch->desc, buffer, 1);
+
+  str_cat(buf, sizeof(buf), "\n\r");
+
+  page_string(GET_DESCRIPTOR(ch), buf, 1);
 }
 
-void list_obj_to_char(struct obj_data *list,
-          struct char_data *ch, int mode, bool show)
-{
-  struct obj_data *i;
-  struct obj_data *back;
-  bool c,f,found=FALSE;
-  int x=0;
-  c=TRUE;
-  i=list;
-  if(i)  {
-    found=TRUE;
-    while(c) {
-      if (CAN_SEE_OBJ(ch,i)) {
-        f=FALSE;x=1;
-        back=i;
-        i=i->next_content;
-        if(i) f=TRUE;
-        else c=FALSE;
-        while(f) {
-          if((i->item_number==back->item_number)
-             &&(IS_OBJ_STAT(i,ITEM_CLONE)==IS_OBJ_STAT(back,ITEM_CLONE))
-             &&(IS_OBJ_STAT(i,ITEM_INVISIBLE)==IS_OBJ_STAT(back,ITEM_INVISIBLE))
-             &&(!str_cmp(OBJ_NAME(i),OBJ_NAME(back)))
-             &&(!str_cmp(OBJ_SHORT(i),OBJ_SHORT(back)))
-             &&(!str_cmp(OBJ_DESCRIPTION(i),OBJ_DESCRIPTION(back))))
-            {
-            x++;
-            i=i->next_content;
-            if(!i) {f=FALSE;c=FALSE;}
-          }
-          else    f=FALSE;
-        }
-        show_obj_to_char(back,ch,mode,x);
-      }
-      else   {
-        i=i->next_content;
-        if(!i) c=FALSE;
-      }
-    }
+
+void list_obj_to_char(OBJ *list, CHAR *ch, int mode, bool show) {
+  if (!ch) return;
+
+  if (!list && show) {
+    send_to_char("Nothing\n\r", ch);
+
+    return;
   }
-  if ((! found) && (show)) send_to_char("Nothing\n\r", ch);
+
+  OBJ *obj = list;
+
+  while(obj) {
+    if (!CAN_SEE_OBJ(ch, obj)) continue;
+
+    int count = 1;
+
+    OBJ *obj_ptr = obj;
+
+    while ((obj = OBJ_NEXT_CONTENT(obj)) &&
+           (OBJ_RNUM(obj) == OBJ_RNUM(obj_ptr)) &&
+           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_CLONE)) &&
+           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_INVISIBLE)) &&
+           !strcmp(OBJ_NAME(obj), OBJ_NAME(obj_ptr)) &&
+           !strcmp(OBJ_SHORT(obj), OBJ_SHORT(obj_ptr))) {
+      count++;
+    }
+
+    show_obj_to_char(obj_ptr, ch, mode, count);
+  }
 }
 
 
@@ -391,7 +404,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         }
 
         if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(ch) < LEVEL_IMM)) {
-
           send_to_char("You sense a hidden life form.\n\r", ch);
 
           return;
@@ -411,192 +423,175 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         return;
       }
 
+      buf[0] = '\0', buf2[0] = '\0';
+
+      if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+        str_cat(buf, sizeof(buf), "*");
+      }
+
+      if (GET_QUEST_OWNER(target)) {
+        if (GET_QUEST_OWNER(target) == ch) {
+          str_cat(buf, sizeof(buf), "[TARGET] ");
+        }
+        else {
+          snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_DISP_NAME(GET_QUEST_OWNER(target)));
+          str_cat(buf, sizeof(buf), buf2);
+        }
+      }
+
       if (!IS_NPC(target) || !MOB_LONG(target) || (GET_POS(target) != GET_DEFAULT_POSITION(target))) {
-        memset(buf, 0, sizeof(buf));
+        buf[0] = '\0';
 
         if (!IS_NPC(target)) {
-          strlcat(buf, PERS(target, ch), sizeof(buf));
+          str_cat(buf, sizeof(buf), PERS(target, ch));
 
           if (GET_TITLE(ch)) {
             snprintf(buf2, sizeof(buf2), " %s", GET_TITLE(target));
-            strlcat(buf, buf2, sizeof(buf));
+            str_cat(buf, sizeof(buf), buf2);
           }
         }
         else {
-          if (GET_QUEST_MOB(ch) && (GET_QUEST_MOB(ch) == target)) {
-            strlcat(buf, "[TARGET] ", sizeof(buf));
-          }
-          else if (GET_QUEST_OWNER(target)) {
-            snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_NAME(GET_QUEST_OWNER(target)));
-            strlcat(buf, buf2, sizeof(buf));
-          }
-
           snprintf(buf2, sizeof(buf2), "%s", GET_SHORT(target));
-          CAP(buf2);
-          strlcat(buf, buf2, sizeof(buf));
+          str_cat(buf, sizeof(buf), CAP(buf2));
         }
 
-        strlcat(buf, "`q", sizeof(buf));
-
-        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          strlcat(buf, " (invisible)", sizeof(buf));
-        }
-
-        if (IS_AFFECTED(target, AFF_HIDE)) {
-          strlcat(buf, " (hiding)", sizeof(buf));
-        }
-
-        if (IS_SET(GET_PFLAG(target), PLR_KILL) && !IS_NPC(target)) {
-          strlcat(buf, " (killer)", sizeof(buf));
-        }
-
-        if (IS_SET(GET_PFLAG(target), PLR_THIEF) && !IS_NPC(target)) {
-          strlcat(buf, " (thief)", sizeof(buf));
-        }
+        str_cat(buf, sizeof(buf), "`q");
 
         if (IS_AFFECTED2(target, AFF2_SEVERED)) {
-          strlcat(buf, "'s upper torso is here... twitching.", sizeof(buf));
+          str_cat(buf, sizeof(buf), "'s upper torso is here... twitching.");
         }
         else if (GET_DEATH_TIMER(target) >= 2) {
-          strlcat(buf, " lies here... near death.", sizeof(buf));
+          str_cat(buf, sizeof(buf), " lies here... near death.");
         }
         else {
           switch (GET_POS(target)) {
             case POSITION_STUNNED:
-              strlcat(buf, " is lying here, stunned.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is lying here, stunned.");
               break;
 
             case POSITION_INCAP:
-              strlcat(buf, " is lying here, incapacitated.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is lying here, incapacitated.");
               break;
 
             case POSITION_MORTALLYW:
-              strlcat(buf, " is lying here, mortally wounded.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is lying here, mortally wounded.");
               break;
 
             case POSITION_DEAD:
-              strlcat(buf, " is lying here, dead.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is lying here, dead.");
               break;
 
             case POSITION_STANDING:
-              strlcat(buf, " is standing here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is standing here.");
               break;
 
             case POSITION_SITTING:
-              strlcat(buf, " is sitting here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is sitting here.");
               break;
 
             case POSITION_RESTING:
-              strlcat(buf, " is resting here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is resting here.");
               break;
 
             case POSITION_SLEEPING:
-              strlcat(buf, " is sleeping here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is sleeping here.");
               break;
 
             case POSITION_FLYING:
-              strlcat(buf, " is flying here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is flying here.");
               break;
 
             case POSITION_SWIMMING:
-              strlcat(buf, " is swimming here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is swimming here.");
               break;
 
             case POSITION_RIDING:
               if (GET_MOUNT(target) && (GET_POS(GET_MOUNT(target)) == POSITION_FLYING)) {
-                strlcat(buf, " is here, flying on ", sizeof(buf));
+                str_cat(buf, sizeof(buf), " is here, flying on");
               }
               else {
-                strlcat(buf, " is here, riding ", sizeof(buf));
+                str_cat(buf, sizeof(buf), " is here, riding");
               }
 
-              if (GET_MOUNT(target)) {
-                snprintf(buf2, sizeof(buf2), "%s.", GET_SHORT(GET_MOUNT(target)));
-                strlcat(buf, buf2, sizeof(buf));
-              }
-              else {
-                strlcat(buf, "something.", sizeof(buf));
-              }
+              snprintf(buf2, sizeof(buf2), " %s.", GET_MOUNT(target) ? GET_DISP_NAME(GET_MOUNT(target)) : "something");
+              str_cat(buf, sizeof(buf), buf2);
               break;
 
             case POSITION_FIGHTING:
               if (GET_OPPONENT(target)) {
-                strlcat(buf, " is here, fighting ", sizeof(buf));
+                str_cat(buf, sizeof(buf), " is here, fighting");
 
                 if (GET_OPPONENT(target) == ch) {
-                  strlcat(buf, "YOU!", sizeof(buf));
+                  str_cat(buf, sizeof(buf), " YOU!");
                 }
                 else {
-                  if (SAME_ROOM(target, GET_OPPONENT(target))) {
-                    if (IS_NPC(GET_OPPONENT(target))) {
-                      snprintf(buf2, sizeof(buf2), "%s.", GET_SHORT(GET_OPPONENT(target)));
-                    }
-                    else {
-                      snprintf(buf2, sizeof(buf2), "%s.", GET_NAME(GET_OPPONENT(target)));
-                    }
-
-                    strlcat(buf, buf2, sizeof(buf));
-                  }
-                  else {
-                    strlcat(buf, "someone who has already left.", sizeof(buf));
-                  }
+                  snprintf(buf2, sizeof(buf2), " %s.", SAME_ROOM(target, GET_OPPONENT(target)) ? GET_DISP_NAME(GET_OPPONENT(target)) : " someone who has already left.");
+                  str_cat(buf, sizeof(buf), buf2);
                 }
               }
               else {
-                strlcat(buf, " is here struggling with thin air.", sizeof(buf));
+                str_cat(buf, sizeof(buf), " is here, struggling with thin air.");
               }
               break;
 
             default:
-              strlcat(buf, " is floating here.", sizeof(buf));
+              str_cat(buf, sizeof(buf), " is floating here.");
               break;
           }
         }
 
-        if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
-          if (IS_EVIL(target)) {
-            strlcat(buf, " (Red Aura)", sizeof(buf));
-          }
-          else if (IS_GOOD(target)) {
-            strlcat(buf, " (Yellow Aura)", sizeof(buf));
-          }
+        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+          str_cat(buf, sizeof(buf), " (Invisible)");
         }
 
-        strlcat(buf, "\n\r", sizeof(buf));
+        if (IS_AFFECTED(target, AFF_HIDE)) {
+          str_cat(buf, sizeof(buf), " (Hiding)");
+        }
+
+        if (IS_SET(GET_PFLAG(target), PLR_KILL) && !IS_NPC(target)) {
+          str_cat(buf, sizeof(buf), " (Killer)");
+        }
+
+        if (IS_SET(GET_PFLAG(target), PLR_THIEF) && !IS_NPC(target)) {
+          str_cat(buf, sizeof(buf), " (Thief)");
+        }
+
+        str_cat(buf, sizeof(buf), "\n\r");
       }
       else {
-        memset(buf, 0, sizeof(buf));
+        buf[0] = '\0';
 
         if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          strlcat(buf, "*", sizeof(buf));
+          str_cat(buf, sizeof(buf), "*");
         }
 
         if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
           if (IS_EVIL(target)) {
-            strlcat(buf, "(Red Aura) ", sizeof(buf));
+            str_cat(buf, sizeof(buf), "(Red Aura) ");
           }
           else if (IS_GOOD(target)) {
-            strlcat(buf, "(Yellow Aura) ", sizeof(buf));
+            str_cat(buf, sizeof(buf), "(Yellow Aura) ");
           }
         }
 
-        if (GET_QUEST_MOB(ch) && (GET_QUEST_MOB(ch) == target)) {
-          strlcat(buf, "[TARGET] ", sizeof(buf));
-        }
-        else if (GET_QUEST_OWNER(target)) {
-          strlcat(buf, "[", sizeof(buf));
-          strlcat(buf, GET_NAME(GET_QUEST_OWNER(target)), sizeof(buf));
-          strlcat(buf, "'s TARGET] ", sizeof(buf));
+        if (GET_QUEST_OWNER(target)) {
+          if (GET_QUEST_OWNER(target) == ch) {
+            str_cat(buf, sizeof(buf), "[TARGET] ");
+          }
+          else {
+            snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_DISP_NAME(GET_QUEST_OWNER(target)));
+            str_cat(buf, sizeof(buf), buf2);
+          }
         }
 
         if (IS_AFFECTED2(target, AFF2_SEVERED)) {
-          strlcat(buf, "'s upper torso is here... twitching.", sizeof(buf));
+          str_cat(buf, sizeof(buf), "'s upper torso is here... twitching.");
         }
         else if (GET_DEATH_TIMER(target) >= 2) {
-          strlcat(buf, " lies here... near death.", sizeof(buf));
+          str_cat(buf, sizeof(buf), " lies here... near death.");
         }
         else {
-          strlcat(buf, MOB_LONG(target), sizeof(buf));
+          str_cat(buf, sizeof(buf), MOB_LONG(target));
         }
       }
 
@@ -605,8 +600,8 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       /* Store 'simple' affects "all in one go"; for 'complex' affects
          (e.g. warchant, wrath of god, etc.), or enchantments, use the
          explicit method. */
-      bool af_list[MAX_SPL_LIST];
-      memset(af_list, FALSE, sizeof(bool) * MAX_SPL_LIST);
+      bool af_list[MAX_SPL_LIST] = { FALSE };
+
       for (AFF *af = target->affected; af; af = af->next) {
         af_list[af->type] = TRUE;
       }
@@ -902,9 +897,9 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         act("You see nothing special about $m.", FALSE, target, 0, ch, TO_VICT);
       }
 
-      memset(buf, 0, sizeof(buf));
+      buf[0] = '\0';
 
-      strlcat(buf, IS_NPC(target) ? GET_SHORT(target) : GET_NAME(target), sizeof(buf));
+      str_cat(buf, sizeof(buf), GET_DISP_NAME(target));
 
       int percent = 0;
 
@@ -916,28 +911,28 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (percent >= 100) {
-        strlcat(buf, " is in an excellent condition.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " is in an excellent condition.\n\r");
       }
       else if (percent >= 90) {
-        strlcat(buf, " has a few scratches.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " has a few scratches.\n\r");
       }
       else if (percent >= 75) {
-        strlcat(buf, " has some small wounds and bruises.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " has some small wounds and bruises.\n\r");
       }
       else if (percent >= 50) {
-        strlcat(buf, " has quite a few wounds.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " has quite a few wounds.\n\r");
       }
       else if (percent >= 30) {
-        strlcat(buf, " has some big nasty wounds and scratches.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " has some big nasty wounds and scratches.\n\r");
       }
       else if (percent >= 15) {
-        strlcat(buf, " looks pretty hurt.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " looks pretty hurt.\n\r");
       }
       else if (percent >= 0) {
-        strlcat(buf, " is in an awful condition.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " is in an awful condition.\n\r");
       }
       else {
-        strlcat(buf, " is bleeding awfully from big wounds.\n\r", sizeof(buf));
+        str_cat(buf, sizeof(buf), " is bleeding awfully from big wounds.\n\r");
       }
 
       send_to_char(buf, ch);
@@ -978,7 +973,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
             case WIELD:
               if ((OBJ_TYPE(obj) == ITEM_2H_WEAPON) &&
-                  !(IS_MORTAL(target) && check_subclass(target, SC_MERCENARY, 5) && GET_WEAPON2(target))) { /* Sidearm */
+                !(IS_MORTAL(target) && check_subclass(target, SC_MERCENARY, 5) && GET_WEAPON2(target))) { /* Sidearm */
                 printf_to_char(ch, "%s********\n\r", where[i]);
                 i++; /* Skip HOLD. This assumes HOLD is always immediately after WIELD. */
               }
@@ -992,7 +987,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if ((IS_IMMORTAL(ch) && (GET_LEVEL(ch) > LEVEL_DEI)) ||
-          (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (ch != target))) {
+        (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (ch != target))) {
         found = FALSE;
 
         if (ch != target) {
@@ -1034,89 +1029,58 @@ void list_char_to_char(CHAR *list, CHAR *ch, int mode) {
   for (CHAR *temp_ch = list, *next_ch; temp_ch; temp_ch = next_ch) {
     next_ch = temp_ch->next_in_room;
 
-    if (ch != temp_ch) show_char_to_char(temp_ch, ch, 0);
+    if (ch != temp_ch) {
+      show_char_to_char(temp_ch, ch, 0);
+    }
   }
 }
 
 
-int check_extra_desc(CHAR *ch,char *tmp_desc);
+bool show_object_extra_desc(OBJ *obj, CHAR *ch, char *arg) {
+  if (!obj || !ch || !CAN_SEE_OBJ(ch, obj)) return FALSE;
 
-static const char *decay_string_table[] = {
-  "like new",
-  "almost new",
-  "fairly new",
-  "slightly worn",
-  "worn",
-  "fairly worn",
-  "very worn",
-  "slightly cracked",
-  "cracked",
-  "about to crumble"
-};
+  struct extra_descr_data *ex_desc_list = NULL;
 
-static const int decay_string_max = (int)(sizeof(decay_string_table)/sizeof(const char *) - 1);
+  if (OBJ_GET_EX_DESC(obj)) {
+    ex_desc_list = OBJ_GET_EX_DESC(obj);
+  }
+  else if ((OBJ_RNUM(obj) >= 0) && (OBJ_RNUM(obj) <= top_of_objt)) {
+    ex_desc_list = OBJ_PROTO_GET_EX_DESC(obj);
+  }
 
-bool show_object_extra_desc(struct obj_data *obj, struct char_data *ch, char *arg) {
-  struct extra_descr_data *list = NULL;
-  char *desc = NULL;
-  int window = 0;
-  int max_time = 0, decay = 0;
+  if (!ex_desc_list) return FALSE;
 
-  if (ch && obj && CAN_SEE_OBJ(ch, obj)) {
+  char *ex_desc = find_ex_description(arg, ex_desc_list);
 
-    if (obj->ex_description) {
-      list = obj->ex_description;
+  if (!ex_desc) return FALSE;
+
+  /* A "window description" is a special extra description composed of a room virtual number.
+     When the description is shown to a character, they will see the description of the room that matches the virtual number. */
+  int window = atoi(ex_desc);
+
+  if (window > 0) {
+    look_in_room(ch, window);
+  }
+  else {
+    page_string(GET_DESCRIPTOR(ch), ex_desc, 1);
+
+    if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) || IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
+      const int decay_string_max_idx = NUMELEMS(object_decay_text) - 1;
+
+      int decay_level = OBJ_PROTO_TIMER(obj) ? decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / OBJ_PROTO_TIMER(obj)) : decay_string_max_idx;
+
+      decay_level = MIN(MAX(decay_level, 0), decay_string_max_idx);
+
+      printf_to_char(ch, "This item decays and seems %s.", object_decay_text[decay_level]);
     }
-    else if ((obj->item_number >= 0) && (obj->item_number <= top_of_objt)) {
-      list = obj_proto_table[obj->item_number].ex_description;
-    }
+  }
 
-    if (!list) return FALSE;
-
-    desc = find_ex_description(arg, list);
-
-    if (desc) {
-      if (isdigit(*desc)) {
-        window=atoi(desc);
-        look_in_room(ch,window);
-      }
-      else {
-        page_string(ch->desc, desc, 1);
-        if(IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-          max_time=obj_proto_table[obj->item_number].obj_flags.timer;
-          if(max_time) {
-            decay=decay_string_max-10*obj->obj_flags.timer/max_time;
-          }
-          else {
-            decay=decay_string_max;
-          }
-
-          if(decay<0) {
-            decay=0;
-          }
-          decay=MIN(decay,decay_string_max);
-          printf_to_char(ch,"This item decays and seems %s.\n\r",decay_string_table[decay]);
-        }
-      }
-      return TRUE;
-   }
- }
-
- return FALSE;
+  return TRUE;
 }
 
-void do_look(struct char_data *ch, char *argument, int cmd) {
-  char buffer[MSL];
-  char arg1[MIL];
-  char arg2[MIL];
-  int keyword_no;
-  int j, bits, temp,window;
-  bool found;
-  struct obj_data *tmp_object = NULL, *found_object = NULL;
-  struct char_data *tmp_char = NULL;
-  char *tmp_desc;
 
-  const char * const keywords[]= {
+void do_look(CHAR *ch, char *argument, int cmd) {
+  const char * const keywords[] = {
     "north",
     "east",
     "south",
@@ -1125,241 +1089,205 @@ void do_look(struct char_data *ch, char *argument, int cmd) {
     "down",
     "in",
     "at",
-    "",  /* Look at '' case */
-    "\n" };
+    "",
+    "\n"
+  };
 
-  if (!ch->desc) return;
+  if (!ch || !GET_DESCRIPTOR(ch)) return;
 
-  if (GET_POS(ch) < POSITION_SLEEPING)
+  if (GET_POS(ch) < POSITION_SLEEPING) {
     send_to_char("You can't see anything but stars!\n\r", ch);
-  else if (GET_POS(ch) == POSITION_SLEEPING)
-    send_to_char("You can't see anything, you're sleeping!\n\r", ch);
-  else if (IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) /* Inner Peace */
-    send_to_char("You can't see anything, you're blind!\n\r", ch);
-  else if (IS_DARK(CHAR_REAL_ROOM(ch)) &&
-           !IS_AFFECTED(ch, AFF_INFRAVISION) &&
-           (GET_LEVEL(ch) < LEVEL_IMM))
+
+    return;
+  }
+
+  if (GET_POS(ch) == POSITION_SLEEPING) {
+    send_to_char("You can't see anything; you're sleeping!\n\r", ch);
+
+    return;
+  }
+
+  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) {
+    send_to_char("You can't see anything; you're blind!\n\r", ch);
+
+    return;
+  }
+
+  if (!IS_IMMORTAL(ch) && IS_DARK(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
     send_to_char("It is pitch black...\n\r", ch);
-  else {
-    argument_split_2(argument,arg1,arg2);
-    keyword_no = search_block(arg1, keywords, FALSE); /* Partial Match */
 
-    if ((keyword_no == -1) && *arg1) {
-      keyword_no = 7;
-      strcpy(arg2, arg1); /* Let arg2 become the target object (arg1) */
-    }
+    return;
+  }
 
-    found = FALSE;
-    tmp_object = 0;
-    tmp_desc   = 0;
+  char arg1[MIL], arg2[MIL];
 
-    switch(keyword_no) {
-      /* look <dir> */
-    case 0 :
-    case 1 :
-    case 2 :
-    case 3 :
-    case 4 :
-    case 5 : {
-        if (EXIT(ch, keyword_no)) {
-          if (EXIT(ch, keyword_no)->general_description) {
-            send_to_char(EXIT(ch, keyword_no)->general_description, ch);
-          }
-          else {
-            send_to_char("You see nothing special.\n\r", ch);
-          }
+  two_arguments_ex(argument, arg1, sizeof(arg1), arg2, sizeof(arg2), TRUE);
 
-          if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) &&
-              (EXIT(ch, keyword_no)->keyword)) {
-            sprintf(buffer, "The %s is closed.\n\r", fname(EXIT(ch, keyword_no)->keyword));
-            send_to_char(buffer, ch);
-          }
-          else {
-            if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ISDOOR) &&
-                EXIT(ch, keyword_no)->keyword) {
-              sprintf(buffer, "The %s is open.\n\r", fname(EXIT(ch, keyword_no)->keyword));
-              send_to_char(buffer, ch);
-            }
-          }
+  int keyword_idx = search_block_ex(arg1, keywords, FALSE, FALSE);
+
+  /* Default to "look at" if no keyword was found. */
+  if (keyword_idx < 0) {
+    keyword_idx = 7;
+
+    /* Copy arg1 to arg2 because arg1 would normally be "at". */
+    strcpy(arg2, arg1);
+  }
+
+  switch (keyword_idx) {
+    case NORTH:
+    case EAST:
+    case WEST:
+    case SOUTH:
+    case UP:
+    case DOWN:
+      if (EXIT(ch, keyword_idx)) {
+        if (EXIT(ch, keyword_idx)->general_description) {
+          send_to_char(EXIT(ch, keyword_idx)->general_description, ch);
         }
         else {
-          send_to_char("Nothing special there...\n\r", ch);
+          send_to_char("You see nothing special.\n\r", ch);
+        }
+
+        if (EXIT(ch, keyword_idx)->keyword) {
+          if (IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLOSED)) {
+            printf_to_char(ch, "The %s is closed.\n\r", fname(EXIT(ch, keyword_idx)->keyword));
+          }
+          else {
+            printf_to_char(ch, "The %s is open.\n\r", fname(EXIT(ch, keyword_idx)->keyword));
+          }
         }
       }
-      break;
+      else {
+        send_to_char("Nothing special there...\n\r", ch);
+      }
+    break;
 
-      /* look 'in'  */
-    case 6: {
-        if (*arg2) {
-          /* Item carried */
+    case 6: /* look in */
+    {
+      if (*arg2) {
+        OBJ *temp_obj;
 
-          bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM |
-            FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+        int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
 
-          if (bits) { /* Found something */
-            if (OBJ_TYPE(tmp_object)== ITEM_DRINKCON) {
-              if (tmp_object->obj_flags.value[1] <= 0) {
-                act("It is empty.", FALSE, ch, 0, 0, TO_CHAR);
-              }
-              else {
-                temp=((tmp_object->obj_flags.value[1]*3)/tmp_object->obj_flags.value[0]);
-                sprintf(buffer,"It's %sfull of a %s liquid.\n\r",
-                        fullness[temp],color_liquid[tmp_object->obj_flags.value[2]]);
-                send_to_char(buffer, ch);
-              }
-            }
-            else if (OBJ_TYPE(tmp_object) == ITEM_CONTAINER ||
-                     OBJ_TYPE(tmp_object) == ITEM_AQ_ORDER) {
-              if (!IS_SET(tmp_object->obj_flags.value[1],CONT_CLOSED) ||
-                  OBJ_TYPE(tmp_object) == ITEM_AQ_ORDER) {
-                send_to_char(fname(OBJ_NAME(tmp_object)), ch);
+        if (temp_obj) {
+          switch (OBJ_TYPE(temp_obj)) {
+            case ITEM_CONTAINER:
+            case ITEM_AQ_ORDER:
+              if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
                 switch (bits) {
-                case FIND_OBJ_INV :
-                  send_to_char(" (carried) : \n\r", ch);
-                  break;
-                case FIND_OBJ_ROOM :
-                  send_to_char(" (here) : \n\r", ch);
-                  break;
-                case FIND_OBJ_EQUIP :
-                  send_to_char(" (used) : \n\r", ch);
-                  break;
+                  case FIND_OBJ_INV:
+                    printf_to_char(ch, "%s (carried) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    break;
+                  case FIND_OBJ_ROOM:
+                    printf_to_char(ch, "%s (here) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    break;
+                  case FIND_OBJ_EQUIP:
+                    printf_to_char(ch, "%s (used) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    break;
                 }
-                list_obj_to_char(tmp_object->contains, ch, 2, TRUE);
+
+                list_obj_to_char(OBJ_CONTAINS(temp_obj), ch, 2, TRUE);
               }
               else {
                 send_to_char("It is closed.\n\r", ch);
               }
-            }
-            else {
-              send_to_char("That is not a container.\n\r", ch);
-            }
-          }
-          else { /* wrong argument */
-            send_to_char("You do not see that item here.\n\r", ch);
-          }
-        }
-        else { /* no argument */
-          send_to_char("Look in what?!\n\r", ch);
-        }
-      }
-      break;
+              break;
 
-      /* look 'at'  */
-    case 7 : {
-
-        if (*arg2) {
-          bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP | FIND_CHAR_ROOM,
-                              ch, &tmp_char, &found_object);
-          if (tmp_char) {
-            if (ch != tmp_char) {
-              act("$n looks at you.", TRUE, ch, 0, tmp_char, TO_VICT);
-              act("$n looks at $N.", TRUE, ch, 0, tmp_char, TO_NOTVICT);
-            }
-            show_char_to_char(tmp_char, ch, 1);
-            return;
-          }
-
-          /* Search for Extra Descriptions in room and items */
-          /* Extra description in room?? */
-          /* Added window feature - Ranger August 96 */
-          if (!found) {
-            tmp_desc = find_ex_description(arg2, world[CHAR_REAL_ROOM(ch)].ex_description);
-            if (tmp_desc) {
-              sprintf(buffer,"$n looks at the %s.",arg2);
-              act(buffer,1,ch,0,0,TO_ROOM);
-              if(isdigit(*tmp_desc)) {
-                window=atoi(tmp_desc);
-                look_in_room(ch,window);
-                return;
+            case ITEM_DRINKCON:
+              if (OBJ_VALUE(temp_obj, 1)) {
+                printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
+                  fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
+                  S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
+                  color_liquid[OBJ_VALUE(temp_obj, 2)]);
               }
               else {
-                page_string(ch->desc, tmp_desc, 0);
+                send_to_char("It is empty.\n\r", ch);
               }
-              return; /* RETURN SINCE IT WAS A ROOM DESCRIPTION */
-              /* Old system was: found = TRUE; */
-            }
-          }
+              break;
 
-          /* Search for extra descriptions in items */
-          /* Equipment Used */
-
-          if (!found) {
-            for (j = 0; (j < MAX_WEAR) && !found; j++) {
-              if (NULL != (tmp_object = ch->equipment[j])) {
-                found = show_object_extra_desc(tmp_object, ch, arg2);
-              }
-            }
-          }
-
-          /* In inventory */
-
-          if (!found) {
-            for (tmp_object = ch->carrying; tmp_object && !found; tmp_object = tmp_object->next_content) {
-              found = show_object_extra_desc(tmp_object, ch, arg2);
-            }
-          }
-
-          /* Object In room */
-
-          if (!found) {
-            for(tmp_object = world[CHAR_REAL_ROOM(ch)].contents; tmp_object && !found; tmp_object = tmp_object->next_content) {
-              found = show_object_extra_desc(tmp_object, ch, arg2);
-            }
-          }
-
-          /* wrong argument */
-
-          if (bits) { /* If an object was found */
-            if (!found) {
-              show_obj_to_char(found_object, ch, 5,0); /* Show no-description */
-            }
-            else {
-              show_obj_to_char(found_object, ch, 6,0); /* Find hum, glow etc */
-            }
-          }
-          else if (!found) {
-            send_to_char("You do not see that here.\n\r", ch);
+            default:
+              send_to_char("That is not a container.\n\r", ch);
           }
         }
         else {
-          /* no argument */
-          send_to_char("Look at what?\n\r", ch);
+          send_to_char("You do not see that item here.\n\r", ch);
         }
       }
-      break;
-
-      /* look ''    */
-    case 8 :
-      look_in_room(ch,world[CHAR_REAL_ROOM(ch)].number);
-      break;
-
-      /* wrong arg  */
-    case -1 :
-      send_to_char("Sorry, I didn't understand that!\n\r", ch);
-      break;
+      else {
+        send_to_char("Look in what?\n\r", ch);
+      }
     }
-  }
+    break;
 
+    case 7: /* look at */
+    {
+      if (*arg2) {
+        CHAR *temp_ch;
+        OBJ *temp_obj;
+        char *room_extra_desc;
+
+        generic_find(arg2, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &temp_ch, &temp_obj);
+
+        /* Show the character found in the room. Keep this first, to ensure characters take precedence. */
+        if (temp_ch) {
+          if (temp_ch != ch) {
+            act("$n looks at you.", TRUE, ch, 0, temp_ch, TO_VICT);
+            act("$n looks at $N.", TRUE, ch, 0, temp_ch, TO_NOTVICT);
+          }
+
+          show_char_to_char(temp_ch, ch, 1);
+        }
+        /* Show the extra description found in the room. */
+        else if ((room_extra_desc = find_ex_description(arg2, ROOM_GET_EXTRA_DESC(CHAR_REAL_ROOM(ch))))) {
+          char buf[MSL];
+
+          snprintf(buf, sizeof(buf), "$n looks at the %s.", arg2);
+
+          act(buf, TRUE, ch, 0, 0, TO_ROOM);
+
+          /* A "window description" is a special extra description composed of a room virtual number.
+              When the description is shown to a character, they will see the description of the room that matches the virtual number. */
+          int window = atoi(room_extra_desc);
+
+          if (window > 0) {
+            look_in_room(ch, window);
+          }
+          else {
+            page_string(GET_DESCRIPTOR(ch), room_extra_desc, 0);
+          }
+        }
+        /* Show the object found. */
+        else if (temp_obj) {
+          /* Show the object extra description, if one exist. */
+          if (!show_object_extra_desc(temp_obj, ch, arg2)) {
+            show_obj_to_char(temp_obj, ch, 5, 0); /* Show without description. */
+          }
+          else {
+            show_obj_to_char(temp_obj, ch, 6, 0); /* Show only glowing, humming, etc. */
+          }
+        }
+        else {
+          send_to_char("You do not see that here.\n\r", ch);
+        }
+      }
+      else {
+        send_to_char("Look at what?\n\r", ch);
+      }
+    }
+    break;
+
+    case 8:
+      look_in_room(ch, V_ROOM(ch));
+    break;
+  }
 }
 
-/* end of look */
 
 #define ROOM_IMMORTAL_KITCHEN 1203
 #define ROOM_DONATION_ROOM    3084
 
-/* looking in room pulled from case 8 in do_look and added here to
-simplify the addition of the window feature - Ranger Aug 96 */
 void look_in_room(CHAR *ch, int vnum) {
-  char buffer[MSL];
-  char ebuf[MSL] = "\0";
-  char dbuf[MSL] = "\0";
-  int room;
-  int d;
-  int dd;
-  int i;
-  OBJ *obj = NULL;
-
-  char *keywords[] = {
+  const char *keywords[] = {
     "north",
     "east",
     "south",
@@ -1368,204 +1296,200 @@ void look_in_room(CHAR *ch, int vnum) {
     "down"
   };
 
-  char *blood_messages[] = {
-    "Should never see this.\n\r",
-    "   There's a little blood here.\n\r",
-    "   You're standing in some blood.\n\r",
-    "   The blood here is flowing.\n\r",
-    "   There's so much blood here it's intoxicating!\n\r",
-    "   How much more blood can there be in any one place?\n\r",
-    "   Such carnage. The God of Death is feasting tonight!\n\r",
-    "   You are splashing around in the blood of the slain!\n\r",
-    "   Even the spirits are revolted by the death and destruction!\n\r",
-    "   The Gods should show some mercy and cleanse this horrid place!\n\r",
-    "   So much blood has been shed here, you are drowning in it!\n\r",
-    "\n"
+  const char *blood_messages[] = {
+    "There's a little blood here.",
+    "You're standing in some blood.",
+    "The blood here is flowing.",
+    "There's so much blood here it's intoxicating!",
+    "How much more blood can there be in any one place?",
+    "Such carnage. The God of Death is feasting tonight!",
+    "You are splashing around in the blood of the slain!",
+    "Even the spirits are revolted by the death and destruction!",
+    "The Gods should show some mercy and cleanse this horrid place!",
+    "So much blood has been shed here, you are drowning in it!"
   };
 
-  room = real_room(vnum);
+  char buf[MSL], tmp[MIL];
 
-  if (room == -1) {
+  int room = real_room(vnum);
+
+  if (room < 0) {
     send_to_char("All you see is an endless void.\n\r", ch);
+
     return;
   }
 
   COLOR(ch, 3);
-  send_to_char(world[room].name, ch);
+  send_to_char(ROOM_NAME(room), ch);
   ENDCOLOR(ch);
 
-  if IS_SET(world[room].room_flags, ARENA) {
-    send_to_char(" [*]", ch);
+  buf[0] = '\0';
+
+  if (IS_SET(ROOM_FLAGS(room), ARENA)) str_cat(buf, sizeof(buf), " [*]");
+
+  if (IS_IMMORTAL(ch)) {
+    snprintf(tmp, sizeof(tmp), " [%d]", ROOM_VNUM(room));
+    str_cat(buf, sizeof(buf), tmp);
+
+    if (IS_SET(ROOM_FLAGS(room), LIT)) str_cat(buf, sizeof(buf), " (LIT)");
+    if (IS_SET(ROOM_FLAGS(room), DARK)) str_cat(buf, sizeof(buf), " (DARK)");
+    if (IS_SET(ROOM_FLAGS(room), INDOORS)) str_cat(buf, sizeof(buf), " (INDOORS)");
+    if (IS_SET(ROOM_FLAGS(room), FLYING)) str_cat(buf, sizeof(buf), " (FLYING)");
+    if (IS_SET(ROOM_FLAGS(room), TUNNEL)) str_cat(buf, sizeof(buf), " (TUNNEL)");
+    if (IS_SET(ROOM_FLAGS(room), TRAP)) str_cat(buf, sizeof(buf), " (TRAP)");
+    if (IS_SET(ROOM_FLAGS(room), CLUB)) str_cat(buf, sizeof(buf), " (CLUB)");
+    if (IS_SET(ROOM_FLAGS(room), LAWFUL)) str_cat(buf, sizeof(buf), " (LAWFUL)");
+    if (IS_SET(ROOM_FLAGS(room), CHAOTIC)) str_cat(buf, sizeof(buf), " (CHAOTIC)");
+    if (IS_SET(ROOM_FLAGS(room), PRIVATE)) str_cat(buf, sizeof(buf), " (PRIVATE)");
+    if (IS_SET(ROOM_FLAGS(room), QUIET)) str_cat(buf, sizeof(buf), " (QUIET)");
+    if (IS_SET(ROOM_FLAGS(room), LOCK)) str_cat(buf, sizeof(buf), " (LOCK)");
+    if (IS_SET(ROOM_FLAGS(room), SAFE)) str_cat(buf, sizeof(buf), " (SAFE)");
+    if (IS_SET(ROOM_FLAGS(room), ARENA)) str_cat(buf, sizeof(buf), " (ARENA)");
+    if (IS_SET(ROOM_FLAGS(room), HAZARD)) str_cat(buf, sizeof(buf), " (HAZARD)");
+    if (IS_SET(ROOM_FLAGS(room), DEATH)) str_cat(buf, sizeof(buf), " (DEATH)");
+    if (IS_SET(ROOM_FLAGS(room), NO_MOB)) str_cat(buf, sizeof(buf), " (NO_MOB)");
+    if (IS_SET(ROOM_FLAGS(room), NO_MAGIC)) str_cat(buf, sizeof(buf), " (NO_MAGIC)");
+    if (IS_SET(ROOM_FLAGS(room), NO_SUM)) str_cat(buf, sizeof(buf), " (NO_SUMMON)");
+    if (IS_SET(ROOM_FLAGS(room), NO_BEAM)) str_cat(buf, sizeof(buf), " (NO_BEAM)");
+    if (IS_SET(ROOM_FLAGS(room), NO_PEEK)) str_cat(buf, sizeof(buf), " (NO_PEEK)");
+    if (IS_SET(ROOM_FLAGS(room), NO_SONG)) str_cat(buf, sizeof(buf), " (NO_SONG)");
+    if (IS_SET(ROOM_FLAGS(room), NO_ORB)) str_cat(buf, sizeof(buf), " (NO_ORB)");
+    if (IS_SET(ROOM_FLAGS(room), NO_QUAFF)) str_cat(buf, sizeof(buf), " (NO_QUAFF)");
+    if (IS_SET(ROOM_FLAGS(room), NO_REGEN)) str_cat(buf, sizeof(buf), " (NO_REGEN)");
+    if (IS_SET(ROOM_FLAGS(room), REV_REGEN)) str_cat(buf, sizeof(buf), " (REV_REGEN)");
+    if (IS_SET(ROOM_FLAGS(room), MANA_DRAIN)) str_cat(buf, sizeof(buf), " (MANA_DRAIN)");
+    if (IS_SET(ROOM_FLAGS(room), DOUBLE_MANA)) str_cat(buf, sizeof(buf), " (DOUBLE_MANA)");
+    if (IS_SET(ROOM_FLAGS(room), MOVE_TRAP)) str_cat(buf, sizeof(buf), " (MOVE_TRAP)");
+    if (IS_SET(ROOM_FLAGS(room), HALF_CONC)) str_cat(buf, sizeof(buf), " (HALF_CONC)");
+    if (IS_SET(ROOM_FLAGS(room), QRTR_CONC)) str_cat(buf, sizeof(buf), " (QRTR_CONC)");
   }
 
-  if (GET_LEVEL(ch) >= LEVEL_IMM) {
-    sprintf(buffer, " [%d] ", world[room].number);
-    send_to_char(buffer, ch);
+  printf_to_char(ch, "%s\n\r", buf);
 
-    if (IS_SET(world[room].room_flags, LIT)) send_to_char("(LIT) ", ch);
-    if (IS_SET(world[room].room_flags, DARK)) send_to_char("(DARK) ", ch);
-    if (IS_SET(world[room].room_flags, DEATH)) send_to_char("(DEATH) ", ch);
-    if (IS_SET(world[room].room_flags, NO_MAGIC)) send_to_char("(NO_MAGIC) ", ch);
-    if (IS_SET(world[room].room_flags, NO_MOB)) send_to_char("(NOMOB) ", ch);
-    if (IS_SET(world[room].room_flags, SAFE)) send_to_char("(SAFE) ", ch);
-    if (IS_SET(world[room].room_flags, PRIVATE)) send_to_char("(PRIVATE) ", ch);
-    if (IS_SET(world[room].room_flags, LOCK)) send_to_char("(LOCK) ", ch);
-    if (IS_SET(world[room].room_flags, TRAP)) send_to_char("(TRAP) ", ch);
-    if (IS_SET(world[room].room_flags, ARENA)) send_to_char("(ARENA) ", ch);
-    if (IS_SET(world[room].room_flags, CLUB)) send_to_char("(CLUB) ", ch);
-    if (IS_SET(world[room].room_flags, LAWFUL)) send_to_char("(LAWFUL) ", ch);
-    if (IS_SET(world[room].room_flags, QUIET)) send_to_char("(QUIET) ", ch);
-    if (IS_SET(world[room].room_flags, TUNNEL)) send_to_char("(TUNNEL) ", ch);
-    if (IS_SET(world[room].room_flags, INDOORS)) send_to_char("(INDOORS) ", ch);
-    if (IS_SET(world[room].room_flags, CHAOTIC)) send_to_char("(CHAOTIC) ", ch);
-    if (IS_SET(world[room].room_flags, HAZARD)) send_to_char("(HAZARD) ", ch);
-    if (IS_SET(world[room].room_flags, MOVETRAP)) send_to_char("(MOVETRAP) ", ch);
-    if (IS_SET(world[room].room_flags, NO_BEAM)) send_to_char("(NO_BEAM) ", ch);
-    if (IS_SET(world[room].room_flags, FLYING)) send_to_char("(FLYING) ", ch);
-    if (IS_SET(world[room].room_flags, NO_PEEK)) send_to_char("(NO_PEEK) ", ch);
-    if (IS_SET(world[room].room_flags, NO_SONG)) send_to_char("(NO_SONG) ", ch);
-    if (IS_SET(world[room].room_flags, NO_REGEN)) send_to_char("(NO_REGEN) ", ch);
-    if (IS_SET(world[room].room_flags, NO_QUAFF)) send_to_char("(NO_QUAFF) ", ch);
-    if (IS_SET(world[room].room_flags, REV_REGEN)) send_to_char("(REV_REGEN) ", ch);
-    if (IS_SET(world[room].room_flags, DOUBLE_MANA)) send_to_char("(DOUBLE_MANA) ", ch);
-    if (IS_SET(world[room].room_flags, HALF_CONC)) send_to_char("(HALF_CONC) ", ch);
-    if (IS_SET(world[room].room_flags, QRTR_CONC)) send_to_char("(QRTR_CONC) ", ch);
-    if (IS_SET(world[room].room_flags, NO_ORB)) send_to_char("(NO_ORB) ", ch);
-    if (IS_SET(world[room].room_flags, MANADRAIN)) send_to_char("(MANADRAIN) ", ch);
-    if (IS_SET(world[room].room_flags, NO_SUM)) send_to_char("(NO_SUM) ", ch);
-    /*
-        if (IS_SET(world[room].room_flags, MANABURN)) send_to_char("(MANABURN) ", ch);
-    */
-  }
+  if (!IS_SET(GET_PFLAG(ch), PLR_BRIEF)) {
+    send_to_char(ROOM_DESC(room), ch);
 
-  send_to_char("\n\r", ch);
+    int blood_level = MIN(MAX(ROOM_BLOOD(room), 0), NUMELEMS(blood_messages));
 
-  if (!IS_SET(ch->specials.pflag, PLR_BRIEF)) {
-    send_to_char(world[room].description, ch);
-    if (ROOM_BLOOD(room) > 0) {
-      send_to_char(blood_messages[(int)ROOM_BLOOD(room)], ch);
+    if (blood_level) {
+      printf_to_char(ch, "   %s\n\r", blood_messages[blood_level - 1]);
     }
   }
 
-  dd = 0;
   send_to_char("   Obvious Exits:", ch);
-  COLOR(ch, 4);
-  for (d = 0; d <= 5; d++) {
-    if (world[room].dir_option[d]) {
-      if ((world[room].dir_option[d]->to_room_r != NOWHERE) &&
-          (world[room].dir_option[d]->to_room_r != real_room(0)) &&
-          !IS_SET(world[room].dir_option[d]->exit_info, EX_CLOSED) &&
-          !IS_SET(world[room].dir_option[d]->exit_info, EX_CRAWL) &&
-          !IS_SET(world[room].dir_option[d]->exit_info, EX_JUMP) &&
-          !IS_SET(world[room].dir_option[d]->exit_info, EX_ENTER) &&
-          !IS_SET(world[room].dir_option[d]->exit_info, EX_CLIMB)) {
-        dd++;
-        strcat(ebuf, " [");
-        if (ch->colors[0] && ch->colors[2]) {
-          strcat(ebuf, Color[(((ch->colors[2]) * 2) - 2)]);
-          strcat(ebuf, BKColor[ch->colors[13]]);
-        }
-        if (ch->colors[0] && ch->colors[4]) {
-          strcat(ebuf, Color[(((ch->colors[4]) * 2) - 2)]);
-          strcat(ebuf, BKColor[ch->colors[13]]);
-        }
-        strcat(ebuf, keywords[d]);
-        strcat(ebuf, "]");
+
+  buf[0] = '\0';
+  int dir_count = 0;
+  for (int dir = NORTH; dir <= DOWN; dir++) {
+    if (world[room].dir_option[dir]) {
+      if ((world[room].dir_option[dir]->to_room_r != NOWHERE) &&
+          (world[room].dir_option[dir]->to_room_r != real_room(0)) &&
+          !IS_SET(world[room].dir_option[dir]->exit_info, EX_CLOSED) &&
+          !IS_SET(world[room].dir_option[dir]->exit_info, EX_CLIMB) &&
+          !IS_SET(world[room].dir_option[dir]->exit_info, EX_JUMP) &&
+          !IS_SET(world[room].dir_option[dir]->exit_info, EX_CRAWL) &&
+          !IS_SET(world[room].dir_option[dir]->exit_info, EX_ENTER)) {
+        dir_count++;
+
+        snprintf(tmp, sizeof(tmp), " [%s]", keywords[dir]);
+        str_cat(buf, sizeof(buf), tmp);
       }
     }
   }
-  if (!dd) {
-    strcat(ebuf, "  None.\n\r");
+
+  if (!dir_count) {
+    str_cat(buf, sizeof(buf), "  None.");
   }
-  else {
-    strcat(ebuf, "\n\r");
-  }
-  send_to_char(ebuf, ch);
+
+  COLOR(ch, 4);
+  printf_to_char(ch, "%s\n\r", buf);
   ENDCOLOR(ch);
 
-  if (GET_LEVEL(ch) > LEVEL_WIZ) {
-    dd = 0;
+  if (IS_IMMORTAL(ch)) {
     send_to_char("           Doors:", ch);
-    COLOR(ch, 4);
-    for (d = 0; d <= 5; d++) {
-      if (world[room].dir_option[d]) {
-        if ((world[room].dir_option[d]->to_room_r != NOWHERE) &&
-            (IS_SET(world[room].dir_option[d]->exit_info, EX_CLOSED))) {
-          dd++;
-          strcat(dbuf, " [");
-          strcat(dbuf, keywords[d]);
-          strcat(dbuf, "]");
+
+    buf[0] = '\0';
+    dir_count = 0;
+    for (int dir = NORTH; dir <= DOWN; dir++) {
+      if (world[room].dir_option[dir]) {
+        if ((world[room].dir_option[dir]->to_room_r != NOWHERE) &&
+            (IS_SET(world[room].dir_option[dir]->exit_info, EX_CLOSED))) {
+          dir_count++;
+
+          snprintf(tmp, sizeof(tmp), " [%s]", keywords[dir]);
+          str_cat(buf, sizeof(buf), tmp);
         }
       }
     }
-    if (!dd) {
-      strcat(dbuf, "  None.\n\r");
+
+    if (!dir_count) {
+      str_cat(buf, sizeof(buf), "  None.");
     }
-    else {
-      strcat(dbuf, "\n\r");
-    }
-    send_to_char(dbuf, ch);
+
+    COLOR(ch, 4);
+    printf_to_char(ch, "%s\n\r", buf);
     ENDCOLOR(ch);
   }
 
-  if (GET_LEVEL(ch) > LEVEL_WIZ) {
-    sprintf(buffer, "     Sector Type:  %s (%d)\n\r",
-      sector_types[world[room].sector_type],
-      movement_loss[world[room].sector_type]);
-    send_to_char(buffer, ch);
+  if (IS_ETERNAL(ch)) {
+    printf_to_char(ch, "     Sector Type:  %s (%d)\n\r",
+      sector_types[ROOM_SECTOR_TYPE(room)], movement_loss[ROOM_SECTOR_TYPE(room)]);
   }
   else if (IS_IMMORTAL(ch) || (IS_MORTAL(ch) && !IS_SET(GET_PFLAG(ch), PLR_SECTOR_BRIEF))) {
-    sprintf(buffer, "     Sector Type:  %s\n\r",
-      ((world[room].sector_type < 6 || world[room].sector_type > 7) ? sector_types[world[room].sector_type] : "Water"));
-    send_to_char(buffer, ch);
+    printf_to_char(ch, "     Sector Type:  %s\n\r",
+      (ROOM_SECTOR_TYPE(room) < SECT_WATER_SWIM || ROOM_SECTOR_TYPE(room) > SECT_WATER_NOSWIM) ? sector_types[ROOM_SECTOR_TYPE(room)] : "Water");
   }
 
-  if (GET_LEVEL(ch) > LEVEL_WIZ) {
-    dd = 0;
+  if (IS_WIZARD(ch)) {
     send_to_char("     Extra Exits:", ch);
-    COLOR(ch, 4);
-    strcpy(ebuf, "");
-    for (d = 0; d <= 5; d++) {
-      if (world[room].dir_option[d]) {
-        if (((world[room].dir_option[d]->to_room_r != NOWHERE) &&
-             (world[room].dir_option[d]->to_room_r != real_room(0))) &&
-             (IS_SET(world[room].dir_option[d]->exit_info, EX_CRAWL) ||
-              IS_SET(world[room].dir_option[d]->exit_info, EX_JUMP) ||
-              IS_SET(world[room].dir_option[d]->exit_info, EX_ENTER) ||
-              IS_SET(world[room].dir_option[d]->exit_info, EX_CLIMB))) {
-          dd++;
-          strcat(ebuf, " [");
-          strcat(ebuf, keywords[d]);
-          strcat(ebuf, "]");
+
+    buf[0] = '\0';
+    dir_count = 0;
+    for (int dir = NORTH; dir <= DOWN; dir++) {
+      if (world[room].dir_option[dir]) {
+        if ((world[room].dir_option[dir]->to_room_r != NOWHERE) &&
+            (world[room].dir_option[dir]->to_room_r != real_room(0)) &&
+            (IS_SET(world[room].dir_option[dir]->exit_info, EX_CRAWL) ||
+             IS_SET(world[room].dir_option[dir]->exit_info, EX_JUMP) ||
+             IS_SET(world[room].dir_option[dir]->exit_info, EX_ENTER) ||
+             IS_SET(world[room].dir_option[dir]->exit_info, EX_CLIMB))) {
+          dir_count++;
+
+          snprintf(tmp, sizeof(tmp), " [%s]", keywords[dir]);
+          str_cat(buf, sizeof(buf), tmp);
         }
       }
     }
-    if (!dd) {
-      strcat(ebuf, "  None.\n\r");
+
+    if (!dir_count) {
+      str_cat(buf, sizeof(buf), "  None.");
     }
-    else {
-      strcat(ebuf, "\n\r");
-    }
-    send_to_char(ebuf, ch);
+
+    COLOR(ch, 4);
+    printf_to_char(ch, "%s\n\r", buf);
     ENDCOLOR(ch);
   }
 
-  if (!IS_SET(ch->specials.pflag, PLR_SUPERBRF)) {
-    if (world[room].number == ROOM_DONATION_ROOM) {
-      i = 0;
-      for (obj = world[room].contents; obj; obj = obj->next_content) {
-        if (CAN_SEE_OBJ(ch, obj) && OBJ_TYPE(obj) != ITEM_BOARD) i++;
+  if (!IS_SET(GET_PFLAG(ch), PLR_SUPERBRF)) {
+    if (ROOM_VNUM(room) == ROOM_DONATION_ROOM) {
+      int item_count = 0;
+
+      for (OBJ *temp_obj = ROOM_CONTENTS(room); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+        if (CAN_SEE_OBJ(ch, temp_obj) && (OBJ_TYPE(temp_obj) != ITEM_BOARD)) item_count++;
       }
-      if (i) {
-        printf_to_char(ch, "There are `i[%d]`q donated items here, use `i'LIST'`q to see them.\n\r", i);
+
+      if (item_count) {
+        printf_to_char(ch, "There are `i[%d]`q donated items here, use `i'LIST'`q to see them.\n\r", item_count);
       }
+
       send_to_char("[1] An Adventure bulletin board is mounted on a wall here.(glowing)\n\r", ch);
     }
     else {
-      list_obj_to_char(world[room].contents, ch, 0, FALSE);
+      list_obj_to_char(ROOM_CONTENTS(room), ch, 0, FALSE);
     }
-    if (world[room].number != ROOM_IMMORTAL_KITCHEN) {
-      list_char_to_char(world[room].people, ch, 0);
+
+    if (ROOM_VNUM(room) != ROOM_IMMORTAL_KITCHEN) {
+      list_char_to_char(ROOM_PEOPLE(room), ch, 0);
     }
   }
 }
@@ -1681,37 +1605,44 @@ void do_exits(struct char_data *ch, char *argument, int cmd) {
 }
 
 /* Remove the Immortalis' Grace enchant. */
-void imm_grace_remove_enchant(CHAR *ch)
-{
-  ENCH *ench = NULL;
-
-  for (ench = ch->enchantments; ench; ench = ench->next)
-  {
-    if (ench->type == ENCHANT_IMM_GRACE)
-    {
+void imm_grace_remove_enchant(CHAR *ch) {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    if (ench->type == ENCHANT_IMM_GRACE) {
       enchantment_remove(ch, ench, FALSE);
+
+      break;
     }
   }
 }
 
 /* Add the Immortali's Grace enchant. */
-void imm_grace_add_enchant(CHAR *ch)
-{
-  ENCH ench;
+void imm_grace_add_enchant(CHAR *ch) {
+  ENCH ench = { 0 };
+
   ench.name = strdup("Immortalis' Grace");
+
   enchantment_to_char(ch, &ench, TRUE);
+
+  free(ench.name);
 }
 
-/* Function used to maniplulate death experience. Don't use this unless you know what you're doing. */
-int adjust_death_exp(CHAR *ch, int exp)
-{
+/* Maniplulate a player's death experience. Don't use this directly unless you know what you're doing. */
+int adjust_death_exp(CHAR *ch, int exp) {
+  if (!ch || (exp == 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
+
+  int64_t tmp_exp = GET_DEATH_EXP(ch) + exp;
+
+  if (tmp_exp > INT_MAX) {
+    exp = INT_MAX - GET_DEATH_EXP(ch);
+  }
+  else if (tmp_exp < 0) {
+    exp = -GET_DEATH_EXP(ch);
+  }
+
   GET_DEATH_EXP(ch) += exp;
 
   /* Did the player exhaust their death xp pool? */
-  if (!GET_DEATH_EXP(ch))
-  {
-    GET_DEATH_EXP(ch) = 0;
-
+  if (GET_DEATH_EXP(ch) == 0) {
     send_to_char("You are no longer affected by Immortalis' Grace.\n\r", ch);
 
     imm_grace_remove_enchant(ch);
@@ -1720,25 +1651,37 @@ int adjust_death_exp(CHAR *ch, int exp)
   return exp;
 }
 
-#define DEATH_EXP_MULTIPLIER 2
-/* Give the player death experience (if they deserve it), and return how much experience was given. */
-int gain_death_exp(CHAR *ch, int exp)
-{
-  if (!GET_DEATH_EXP(ch)) return 0;
+/* Calculate a player's death experience multiplier. */
+int calc_death_exp_mult(CHAR *ch) {
+  if (!ch) return 0;
 
-  int mult = DEATH_EXP_MULTIPLIER;
+  const int DEATH_EXP_MULT = 2;
 
   // Prestige Perk 6
   if (GET_PRESTIGE_PERK(ch) >= 6) {
-    mult += 1;
+    return DEATH_EXP_MULT + 1;
   }
 
-  exp *= mult;
+  return DEATH_EXP_MULT;
+}
 
-  if (exp > GET_DEATH_EXP(ch)) exp = GET_DEATH_EXP(ch);
+/* Give a player death experience and return how much experience was given. */
+int gain_death_exp(CHAR *ch, int exp) {
+  if (!ch || (exp <= 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
 
-  adjust_death_exp(ch, -1 * exp); /* Deduct the experience from the death experience pool. */
-  gain_exp(ch, exp); /* Give the death experience to the player. */
+  int mult = calc_death_exp_mult(ch);
+
+  int64_t tmp_exp = exp * mult;
+
+  if (tmp_exp > INT_MAX) {
+    exp = INT_MAX;
+  }
+  else {
+    exp *= mult;
+  }
+
+  exp = abs(adjust_death_exp(ch, -exp)); /* Deduct the experience from the player's death experience pool. */
+  gain_exp(ch, exp);                     /* Give the (adjusted) death experience to the player. */
 
   return exp;
 }
@@ -2443,6 +2386,9 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         else if (af_list[i].interval == ENCH_INTERVAL_ROUND) {
           snprintf(buf2, sizeof(buf2), "Expires in: %*d Round%s",
             longest_dur, af_list[i].duration, ((af_list[i].duration != 1) ? "s" : ""));
+        }
+        else {
+          buf2[0] = '\0';
         }
 
         printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
@@ -4003,3 +3949,22 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
     mins,
     secs);
 }
+
+/* For future use.
+bool compare_objects(OBJ *obj1, OBJ *obj2) {
+  if (!obj1 || !obj2) return FALSE;
+
+  if (OBJ_RNUM(obj1) != OBJ_RNUM(obj2)) return FALSE;
+  if (OBJ_TYPE(obj1) != OBJ_TYPE(obj2)) return FALSE;
+  if (OBJ_WEAR_FLAGS(obj1) != OBJ_WEAR_FLAGS(obj2)) return FALSE;
+  if (OBJ_BITS(obj1) != OBJ_BITS(obj2)) return FALSE;
+  if (OBJ_BITS2(obj1) != OBJ_BITS2(obj2)) return FALSE;
+  if (OBJ_EXTRA_FLAGS(obj1) != OBJ_EXTRA_FLAGS(obj2)) return FALSE;
+  if (OBJ_EXTRA_FLAGS2(obj1) != OBJ_EXTRA_FLAGS2(obj2)) return FALSE;
+  if (strcmp(OBJ_NAME(obj1), OBJ_NAME(obj2))) return FALSE;
+  if (strcmp(OBJ_SHORT(obj1), OBJ_SHORT(obj2))) return FALSE;
+  if (strcmp(OBJ_DESCRIPTION(obj1), OBJ_DESCRIPTION(obj2))) return FALSE;
+
+  return TRUE;
+}
+*/

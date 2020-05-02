@@ -145,6 +145,7 @@ do {                   \
 #define OBJ_GET_CREM_DESC(obj)   (obj->char_rem_desc)
 #define OBJ_RREM_DESC(obj)       (obj->room_rem_desc ? obj->room_rem_desc : obj_proto_table[obj->item_number].room_rem_desc)
 #define OBJ_GET_RREM_DESC(obj)   (obj->room_rem_desc)
+#define OBJ_GET_EX_DESC(obj)     (obj->ex_description)
 #define OBJ_TYPE(obj)            (obj->obj_flags.type_flag)
 #define OBJ_WEAR_FLAGS(obj)      (obj->obj_flags.wear_flags)
 #define OBJ_BITS(obj)            (obj->obj_flags.bitvector)
@@ -183,6 +184,9 @@ do {                   \
 #define OBJ_CONTAINS(obj)        (obj->contains)
 #define OBJ_NEXT_CONTENT(obj)    (obj->next_content)
 
+#define OBJ_PROTO_GET_EX_DESC(obj) (obj_proto_table[OBJ_RNUM(obj)].ex_description)
+#define OBJ_PROTO_TIMER(obj)       (obj_proto_table[OBJ_RNUM(obj)].obj_flags.timer)
+
 #define OBJ_NUM_IN_GAME(obj)     (((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt)) ? obj_proto_table[OBJ_RNUM(obj)].number : 0)
 
 #define ROOM_VNUM(rm)            (world[rm].number)
@@ -191,12 +195,14 @@ do {                   \
 #define ROOM_SECTOR_TYPE(rm)     (world[rm].sector_type)
 #define ROOM_NAME(rm)            (world[rm].name)
 #define ROOM_DESC(rm)            (world[rm].description)
+#define ROOM_GET_EXTRA_DESC(rm)  (world[rm].ex_description)
 #define ROOM_EX_DESC(rm)         (world[rm].ex_description->description)
 #define ROOM_EX_KEYWORD(rm)      (world[rm].ex_description->keyword)
 #define ROOM_FLAGS(rm)           (world[rm].room_flags)
 #define ROOM_PEOPLE(rm)          (world[rm].people)
 #define ROOM_LIGHT(rm)           (world[rm].light)
 #define ROOM_BLOOD(rm)           (world[rm].blood)
+#define ROOM_CONTENTS(rm)        (world[rm].contents)
 #define ROOM_ARENA(rm)           ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), ARENA) : FALSE)
 #define ROOM_CHAOTIC(rm)         (CHAOSMODE || ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), CHAOTIC) : FALSE))
 #define ROOM_SAFE(rm)            (!CHAOSMODE && ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), SAFE) : FALSE))

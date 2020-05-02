@@ -1932,7 +1932,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int dam = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5) * calc_hit_damage(ch, victim, GET_WEAPON(ch), 0, RND_NRM);
+  int dam = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5) * calc_hit_damage(ch, victim, GET_WEAPON(ch), 0, RND_RND);
 
   if ((GET_HIT(victim) > dam) && (GET_HIT(victim) > (GET_MAX_HIT(victim) * 0.3))) {
     act("You attempt to spill $N's guts, but $E fends you off.", FALSE, ch, 0, victim, TO_CHAR);

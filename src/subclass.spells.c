@@ -1146,7 +1146,7 @@ void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   if (wielded->obj_flags.type_flag == ITEM_2H_WEAPON) dam = (dam*3)/2;
   dam += GET_DAMROLL(ch);
   dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
-  dam += wpn_extra(wielded,ch,victim,RND_NRM);
+  dam += wpn_extra(wielded,ch,victim,RND_RND);
 
   if(GET_POS(victim) < POSITION_FIGHTING)
     dam *= 1+(POSITION_FIGHTING-GET_POS(victim))/3;

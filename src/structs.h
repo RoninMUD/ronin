@@ -426,7 +426,7 @@ struct obj_data
 #define QUIET       16384
 #define NO_BEAM     32768
 #define HAZARD      65536
-#define MOVETRAP    131072
+#define MOVE_TRAP   131072
 #define FLYING      262144
 #define NO_PEEK     524288
 #define NO_SONG     1048576
@@ -438,7 +438,7 @@ struct obj_data
 #define LIT         67108864
 #define NO_ORB      134217728
 #define QRTR_CONC   268435456
-#define MANADRAIN   536870912
+#define MANA_DRAIN  536870912
 #define NO_SUM      1073741824
 #define ROOM_FINAL  2147483648u
 

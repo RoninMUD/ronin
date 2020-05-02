@@ -253,7 +253,7 @@ void do_peek(CHAR *ch, char *argument, int cmd);
 int find_door(CHAR *ch, char *type, char *dir);
 void do_open(CHAR *ch, char *argument, int cmd);
 void do_close(CHAR *ch, char *argument, int cmd);
-int has_key(CHAR *ch, int key);
+bool has_key(CHAR *ch, int key);
 void do_lock(CHAR *ch, char *argument, int cmd);
 void do_unlock(CHAR *ch, char *argument, int cmd);
 void do_pick(CHAR *ch, char *argument, int cmd);
@@ -473,6 +473,8 @@ void do_coin_toss(CHAR *ch, char *arg, int cmd);
 void do_movestat(CHAR *ch, char *arg, int cmd);
 void do_locate(CHAR *ch, char *arg, int cmd);
 void do_nop(CHAR *ch, char *arg, int cmd);
+
+int calc_death_exp_mult(CHAR *ch);
 
 void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, const char *src, ...) __attribute__((format(printf, 4, 5)));
 void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message, ...) __attribute__((format(printf, 4, 5)));
