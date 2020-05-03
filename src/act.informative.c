@@ -1176,13 +1176,13 @@ void do_look(CHAR *ch, char *argument, int cmd) {
               if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
                 switch (bits) {
                   case FIND_OBJ_INV:
-                    printf_to_char(ch, "%s (carried) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
                     break;
                   case FIND_OBJ_ROOM:
-                    printf_to_char(ch, "%s (here) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
                     break;
                   case FIND_OBJ_EQUIP:
-                    printf_to_char(ch, "%s (used) :\n\r", fname(OBJ_NAME(temp_obj)));
+                    printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
                     break;
                 }
 
@@ -1210,7 +1210,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
           }
         }
         else {
-          send_to_char("You do not see that item here.\n\r", ch);
+          send_to_char("You do not see that here.\n\r", ch);
         }
       }
       else {
@@ -1282,55 +1282,12 @@ void do_look(CHAR *ch, char *argument, int cmd) {
   }
 }
 
-
-#define ROOM_IMMORTAL_KITCHEN 1203
-#define ROOM_DONATION_ROOM    3084
-
-void look_in_room(CHAR *ch, int vnum) {
-  const char *keywords[] = {
-    "north",
-    "east",
-    "south",
-    "west",
-    "up",
-    "down"
-  };
-
-  const char *blood_messages[] = {
-    "There's a little blood here.",
-    "You're standing in some blood.",
-    "The blood here is flowing.",
-    "There's so much blood here it's intoxicating!",
-    "How much more blood can there be in any one place?",
-    "Such carnage. The God of Death is feasting tonight!",
-    "You are splashing around in the blood of the slain!",
-    "Even the spirits are revolted by the death and destruction!",
-    "The Gods should show some mercy and cleanse this horrid place!",
-    "So much blood has been shed here, you are drowning in it!"
-  };
-
-  char buf[MSL], tmp[MIL];
-
-  int room = real_room(vnum);
-
-  if (room < 0) {
-    send_to_char("All you see is an endless void.\n\r", ch);
-
-    return;
-  }
-
-  COLOR(ch, 3);
-  send_to_char(ROOM_NAME(room), ch);
-  ENDCOLOR(ch);
+void print_room_flags(int room, char *str, size_t str_size) {
+  char buf[MSL];
 
   buf[0] = '\0';
 
-  if (IS_SET(ROOM_FLAGS(room), ARENA)) str_cat(buf, sizeof(buf), " [*]");
-
-  if (IS_IMMORTAL(ch)) {
-    snprintf(tmp, sizeof(tmp), " [%d]", ROOM_VNUM(room));
-    str_cat(buf, sizeof(buf), tmp);
-
+  if ((room != NOWHERE) && (room != real_room(0))) {
     if (IS_SET(ROOM_FLAGS(room), LIT)) str_cat(buf, sizeof(buf), " (LIT)");
     if (IS_SET(ROOM_FLAGS(room), DARK)) str_cat(buf, sizeof(buf), " (DARK)");
     if (IS_SET(ROOM_FLAGS(room), INDOORS)) str_cat(buf, sizeof(buf), " (INDOORS)");
@@ -1362,6 +1319,61 @@ void look_in_room(CHAR *ch, int vnum) {
     if (IS_SET(ROOM_FLAGS(room), MOVE_TRAP)) str_cat(buf, sizeof(buf), " (MOVE_TRAP)");
     if (IS_SET(ROOM_FLAGS(room), HALF_CONC)) str_cat(buf, sizeof(buf), " (HALF_CONC)");
     if (IS_SET(ROOM_FLAGS(room), QRTR_CONC)) str_cat(buf, sizeof(buf), " (QRTR_CONC)");
+  }
+
+  snprintf(str, str_size, "%s", buf);
+}
+
+#define ROOM_IMMORTAL_KITCHEN 1203
+#define ROOM_DONATION_ROOM    3084
+
+void look_in_room(CHAR *ch, int vnum) {
+  const char *keywords[] = {
+    "north",
+    "east",
+    "south",
+    "west",
+    "up",
+    "down"
+  };
+
+  const char *blood_messages[] = {
+    "There's a little blood here.",
+    "You're standing in some blood.",
+    "The blood here is flowing.",
+    "There's so much blood here it's intoxicating!",
+    "How much more blood can there be in any one place?",
+    "Such carnage. The God of Death is feasting tonight!",
+    "You are splashing around in the blood of the slain!",
+    "Even the spirits are revolted by the death and destruction!",
+    "The Gods should show some mercy and cleanse this horrid place!",
+    "So much blood has been shed here, you are drowning in it!"
+  };
+
+  char buf[MSL], tmp[MSL / 2];
+
+  int room = real_room(vnum);
+
+  if (room < 0) {
+    send_to_char("All you see is an endless void.\n\r", ch);
+
+    return;
+  }
+
+  COLOR(ch, 3);
+  send_to_char(ROOM_NAME(room), ch);
+  ENDCOLOR(ch);
+
+  buf[0] = '\0';
+
+  if (IS_SET(ROOM_FLAGS(room), ARENA)) str_cat(buf, sizeof(buf), " [*]");
+
+  if (IS_IMMORTAL(ch)) {
+    snprintf(tmp, sizeof(tmp), " [%d]", ROOM_VNUM(room));
+    str_cat(buf, sizeof(buf), tmp);
+
+    print_room_flags(room, tmp, sizeof(tmp));
+    str_cat(buf, sizeof(buf), tmp);
   }
 
   printf_to_char(ch, "%s\n\r", buf);
@@ -1494,114 +1506,113 @@ void look_in_room(CHAR *ch, int vnum) {
   }
 }
 
+void do_read(CHAR *ch, char *argument, int cmd) {
+  char buf[MSL * 4];
 
-void do_read(struct char_data *ch, char *argument, int cmd) {
-  char buf[MIL+5];
+  OBJ *temp_obj;
 
-  /* This is just for now - To be changed later.! */
+  generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
 
-  sprintf(buf,"at %s",argument);
-  do_look(ch,buf,15);
-}
+  if (!temp_obj) {
+    send_to_char("You do not see that here.\n\r", ch);
 
-void do_examine(struct char_data *ch, char *argument, int cmd) {
-  char name[MIL], buf[MIL+5];
-  struct char_data *tmp_char;
-  struct obj_data *tmp_object;
-
-  sprintf(buf,"at %s",argument);
-  do_look(ch,buf,15);
-
-  if(CHAR_REAL_ROOM(ch)==NOWHERE) return;  /* Character died - happens when
-          a stoning mob has the same keyword as an object in the room being
-          examined - Ranger March 98 */
-
-  one_argument(argument, name);
-
-  if (!*name) {
-    send_to_char("Examine what?\n\r", ch);
     return;
   }
 
-  generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
-          FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+  switch(OBJ_TYPE(temp_obj)) {
+    case ITEM_NOTE:
+      if (OBJ_ACTION(temp_obj)) {
+        snprintf(buf, sizeof(buf), "There is something written upon it:\n\r\n\r%s", OBJ_ACTION(temp_obj));
 
-  if (tmp_object) {
-    if ((OBJ_TYPE(tmp_object)==ITEM_DRINKCON) ||
-        (OBJ_TYPE(tmp_object)==ITEM_CONTAINER) ||
-        (OBJ_TYPE(tmp_object)==ITEM_AQ_ORDER)) {
-      send_to_char("When you look inside, you see:\n\r", ch);
-      sprintf(buf,"in %s",argument);
-      do_look(ch,buf,15);
-    }
+        page_string(GET_DESCRIPTOR(ch), buf, 1);
+      }
+      else {
+        send_to_char("It's blank.\n\r", ch);
+      }
+      break;
+
+    default:
+      send_to_char("You can't read that.\n\r", ch);
+      break;
   }
 }
 
-void do_exits(struct char_data *ch, char *argument, int cmd) {
-  int door;
+void do_examine(CHAR *ch, char *argument, int cmd) {
   char buf[MSL];
-  char *exits[] =
-    {
-      "North",
-      "East ",
-      "South",
-      "West ",
-      "Up   ",
-      "Down "
-    };
 
-  *buf = '\0';
-  if (GET_LEVEL(ch) < LEVEL_IMM) {
-    for (door = 0; door <= 5; door++)
-      if (EXIT(ch, door))
-   if (EXIT(ch, door)->to_room_r != NOWHERE && EXIT(ch, door)->to_room_r != real_room(0) &&
-      !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
-    if (IS_DARK(EXIT(ch, door)->to_room_r) && !IS_AFFECTED(ch, AFF_INFRAVISION))
-      sprintf(buf + strlen(buf), "%s - Too dark to tell\n\r",exits[door]);
-    else
-      sprintf(buf + strlen(buf), "%s - %s\n\r", exits[door],world[EXIT(ch, door)->to_room_r].name);
-   }
-    send_to_char("Obvious exits:\n\r", ch);
-  } else {
-    for (door = 0; door <= 5; door++)
-      if (EXIT(ch, door))
-  if (EXIT(ch, door)->to_room_r != NOWHERE &&
-            EXIT(ch, door)->to_room_r != real_room(0) &&
-      !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)
-        /*  && !IS_SET(EXIT(ch, door)->exit_info,EX_CRAWL)
-          && !IS_SET(EXIT(ch, door)->exit_info,EX_JUMP)
-          && !IS_SET(EXIT(ch, door)->exit_info,EX_ENTER)
-          && !IS_SET(EXIT(ch, door)->exit_info,EX_CLIMB)*/) {
+  CHAR *temp_ch;
+  OBJ *temp_obj;
 
-    sprintf(buf + strlen(buf), "%s - %s [%d]", exits[door],
-      world[EXIT(ch, door)->to_room_r].name,
-      world[EXIT(ch, door)->to_room_r].number);
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, DARK))
-      strcat(buf, " (DARK)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, DEATH))
-      strcat(buf, " (DEATH)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, TRAP))
-      strcat(buf," (TRAP)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, NO_MOB))
-      strcat(buf," (NOMOB)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, NO_MAGIC))
-      strcat(buf, " (NOMAGIC)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, SAFE))
-      strcat(buf, " (SAFE)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, ARENA))
-      strcat(buf, " (ARENA)");
-    if (IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, CLUB))
-      strcat(buf, " (CLUB)");
-    strcat(buf, "\n\r");
+  generic_find(argument, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &temp_ch, &temp_obj);
+
+  if (!temp_ch && !temp_obj) {
+    send_to_char("Examine what?\n\r", ch);
+
+    return;
   }
 
-    send_to_char("Obvious exits:\n\r", ch);
+  snprintf(buf, sizeof(buf), "at %s", argument);
+
+  do_look(ch, buf, cmd);
+
+  if (CHAR_REAL_ROOM(ch) == NOWHERE) return;
+
+  if (temp_obj &&
+      ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) ||
+       (OBJ_TYPE(temp_obj) == ITEM_DRINKCON) ||
+       (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER))) {
+    send_to_char("When you look inside, you see:\n\r", ch);
+
+    snprintf(buf, sizeof(buf), "in %s", argument);
+
+    do_look(ch, buf, cmd);
+  }
+}
+
+void do_exits(CHAR *ch, char *argument, int cmd) {
+  const char *exits[] = {
+    "North",
+    "East ",
+    "South",
+    "West ",
+    "Up   ",
+    "Down "
+  };
+
+  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) {
+    send_to_char("You're blind; you can't see any exits!\n\r", ch);
+
+    return;
   }
 
-  if (*buf)
-    send_to_char(buf, ch);
-  else
-    send_to_char("None.\n\r", ch);
+  char buf[MSL], tmp[MSL / 2];
+
+  buf[0] = '\0';
+  for (int dir = NORTH; (dir <= DOWN) && (dir < NUMELEMS(exits)); dir++) {
+    if (EXIT(ch, dir) && (EXIT(ch, dir)->to_room_r != NOWHERE) && (EXIT(ch, dir)->to_room_r != real_room(0)) && !IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)) {
+      if (IS_IMMORTAL(ch)) {
+        snprintf(tmp, sizeof(tmp), "%s - %s [%d]", exits[dir], world[EXIT(ch, dir)->to_room_r].name, world[EXIT(ch, dir)->to_room_r].number);
+        str_cat(buf, sizeof(buf), tmp);
+
+        print_room_flags(EXIT(ch, dir)->to_room_r, tmp, sizeof(tmp));
+        str_cat(buf, sizeof(buf), tmp);
+      }
+      else {
+        if (IS_DARK(EXIT(ch, dir)->to_room_r) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+          snprintf(tmp, sizeof(tmp), "%s - Too dark to tell.", exits[dir]);
+          str_cat(buf, sizeof(buf), tmp);
+        }
+        else {
+          snprintf(tmp, sizeof(tmp), "%s - %s", exits[dir], world[EXIT(ch, dir)->to_room_r].name);
+          str_cat(buf, sizeof(buf), tmp);
+        }
+      }
+
+      str_cat(buf, sizeof(buf), "\n\r");
+    }
+  }
+
+  printf_to_char(ch, "\n\rObvious exits:\n\r%s", *buf ? buf : "None");
 }
 
 /* Remove the Immortalis' Grace enchant. */
