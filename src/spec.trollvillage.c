@@ -54,7 +54,7 @@ int troll_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   char whatroom;
   static int status = 0;
 
-  if (cmd != MSG_MOBACT && cmd != MSG_DIE && cmd != MSG_TICK)
+  if (cmd != MSG_MOBACT && cmd != MSG_TICK)
     return FALSE;
 
   if(cmd == MSG_TICK && (status%10) < 5)   /* increase the tick counter! */
