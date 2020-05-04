@@ -1396,12 +1396,20 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   for(i = 0; i <= 4; i++)
     ch->specials.apply_saving_throw[i] = st->apply_saving_throw[i];
 
-  for(i = 0; i <= 2; i++)
-    {
-    GET_COND(ch, i) = st->conditions[i];
-    if(GET_LEVEL(ch)<LEVEL_IMM && GET_CLASS(ch)!=CLASS_AVATAR)
-      GET_COND(ch,i)=MAX(0,GET_COND(ch,i));
-    }
+  for (i = 0; i <= 2; i++) {
+    GET_COND(ch, i) = MAX(0, st->conditions[i]);
+  }
+
+  if (IS_IMMORTAL(ch) ||
+      GET_CLASS(ch) == CLASS_AVATAR ||
+      GET_PRESTIGE_PERK(ch) >= 26) { // Prestige Perk 26
+    GET_COND(ch, FULL) = -1;
+    GET_COND(ch, THIRST) = -1;
+  }
+
+  if (IS_IMMORTAL(ch)) {
+    GET_COND(ch, DRUNK) = -1;
+  }
 
   /* Add all spell effects */
   for(i=0; i < MAX_AFFECT; i++)
