@@ -1951,20 +1951,6 @@ have lost in death. Redeem yourself and you shall return to your former glory!'\
   raw_kill(ch);
 }
 
-char *get_club_name(CHAR *ch)
-{
-  if (IS_SET(ch->specials.pflag, PLR_SANES_VOCAL_CLUB))
-    return "Sane's Vocal Club";
-  else if (IS_SET(ch->specials.pflag, PLR_LINERS_LOUNGE))
-    return "Liner's Lounge";
-  else if (IS_SET(ch->specials.pflag, PLR_LEMS_LIQOUR_ROOM))
-    return "Lem's Liqour Room";
-  else if (IS_SET(ch->specials.pflag, PLR_RANGERS_RELIQUARY))
-    return "Ranger's Reliquary";
-  else
-    return "None";
-}
-
 
 #define AFF_MODE_N 0
 #define AFF_MODE_O 1
@@ -2425,22 +2411,11 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 }
 
 
-void do_time(struct char_data *ch, char *argument, int cmd) {
-  long ct;
-  char buf[100], *suf, *tmstr;
-  int weekday, day;
+void do_time(CHAR *ch, char *argument, int cmd) {
+  int day = time_info.day + 1;
+  int weekday = ((28 * time_info.month) + day) % 7;
 
-  sprintf(buf, "It is %d o'clock %s, on ",
-    ((time_info.hours % 12 == 0) ? 12 : ((time_info.hours) % 12)),
-    ((time_info.hours >= 12) ? "pm" : "am") );
-
-  weekday = ((28*time_info.month)+time_info.day+1) % 7;/* 28 days in a month */
-
-  strcat(buf,weekdays[weekday]);
-  strcat(buf,"\n\r");
-  send_to_char(buf,ch);
-
-  day = time_info.day + 1;   /* day in [1..28] */
+  char *suf;
 
   if (day == 1)
     suf = "st";
@@ -2459,24 +2434,20 @@ void do_time(struct char_data *ch, char *argument, int cmd) {
   else
     suf = "th";
 
-  sprintf(buf, "The %d%s Day of the %s, Year %d.\n\r",
-    day,
-    suf,
-    month_name[time_info.month],
-    time_info.year);
+  printf_to_char(ch, "It is %d o'clock %s, on the %s.\n\r",
+    ((time_info.hours % 12 == 0) ? 12 : ((time_info.hours) % 12)),
+    ((time_info.hours >= 12) ? "pm" : "am"),
+    weekdays[weekday]);
 
-  send_to_char(buf,ch);
+  printf_to_char(ch, "It is the %d%s Day of the %s, Year %d.\n\r",
+    day, suf, month_name[time_info.month], time_info.year);
 
-  ct = time(0);
-  tmstr = asctime(localtime(&ct));
-  *(tmstr+strlen(tmstr)-1)='\0';
-#ifdef BCHS
-  sprintf(buf,"The real local time is: %s CST\n\r",tmstr);
-#else
-  sprintf(buf,"The real local time is: %s PST with the reboot due %d:00.\n\r",tmstr,REBOOT_AT);
-#endif
-  send_to_char(buf,ch);
+  time_t ct = time(0);
+  char *ct_str = asctime(localtime(&ct));
 
+  *(ct_str + strlen(ct_str) - 1) = '\0';
+
+  printf_to_char(ch, "Local server time is %s, with reboot due at %02d:00.\n\r", ct_str, REBOOT_AT);
 }
 
 

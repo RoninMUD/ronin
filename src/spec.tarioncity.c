@@ -726,7 +726,7 @@ int tc_whistle_spec(OBJ *whistle ,CHAR *ch, int cmd, char *argument) {
         send_to_char("The myistzpae doesn't seem to hold any power.\n\r",ch);
         return TRUE;
       }
-      if(GET_LEVEL(ch)<LEVEL_IMM && time_info.month>4) { /* if mort uses, during winter months.. it works */
+      if(GET_LEVEL(ch)<LEVEL_IMM && (time_info.month > 2 || time_info.month < 15)) { /* if mort uses, during winter months.. it works */
         send_to_char("The myistzpae doesn't seem to work properly without the winter wind.\n\r",ch);
         return TRUE;
       } else {

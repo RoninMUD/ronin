@@ -415,8 +415,8 @@ int knot_of_kudzu(OBJ *kudzu, CHAR *ch, int cmd, char *argument)
 				}
 				break;
 			}
-			else if(time_info.month == 4)
-			{/* spring (The Grand Struggle) - accelerated growth */
+			else if(time_info.month == 3)
+			{/* spring (Month of Fertility) - accelerated growth */
 				if(kudzu==EQ(ch, WEAR_WRIST_L) && chance(7))
 				{
 					send_to_char("With the mighty awakening of spring, a small bud appears on the kudzu vine.\n\r", ch);
