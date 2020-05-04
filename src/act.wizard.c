@@ -2686,7 +2686,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      }
       }
       return;
-    } else if (is_abbrev(type, "shop")) {
+    } 
+    else if (is_abbrev(type, "shop")) {
       /* stats on shop */
       found=FALSE;
       i2= atoi( arg1);
@@ -2737,7 +2738,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 
       return;
 /*zone stat */
-    } else if (is_abbrev(type, "zone")) {
+    }
+    else if (is_abbrev(type, "zone")) {
       zonenum = atoi( arg1);
       zonenum = real_zone(zonenum);
       if(zonenum!= -1) {
@@ -2745,7 +2747,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
         show_zone_to_char(ch, zonenum);
       }
       return;
-    } else if (is_abbrev(type, "obj")) {
+    }
+    else if (is_abbrev(type, "obj")) {
       if ((j = get_obj_vis(ch, arg1))) {
      if (IS_SET(j->obj_flags.extra_flags, ITEM_LIMITED) &&
          GET_LEVEL(ch) < LEVEL_DEI) {
@@ -3050,7 +3053,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      send_to_char("No such object.\n\r", ch);
      return;
       }
-    } else if(is_abbrev(type, "world")){
+    }
+    else if(is_abbrev(type, "world")){
       i2=0;
       for(i=0; i <= top_of_mobt; i++)
      i2+=mob_proto_table[i].number;
@@ -3065,7 +3069,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
            top_of_objt, top_of_mobt, top_of_world);
       send_to_char(buf, ch);
       return;
-    } else if (is_abbrev(type, "char")) {
+    }
+    else if (is_abbrev(type, "char")) {
       /* mobile in world */
       if ((k = get_char_vis(ch, arg1))) {
         if(IS_NPC(k)) {
@@ -5247,8 +5252,8 @@ void do_setstat(struct char_data *ch, char *argument, int cmd)
 Syntax : setstat <victim> <field> <value> <passwd>\n\r\
 Field can be: alignment, hp, mp, mana, bank, gold, str, add, dex,\n\r\
 con, int, wis, age, xp, sex, free_rent(imp), deathlimit,\n\r\
-subpts, qpts, prestige, remort_exp, death_exp, questtime\n\r\
-clear_toggles\n\r";
+subpts, qpts, prestige, remort_exp, death_exp, questtime,\n\r\
+clear_toggles, thirst, hunger, drunk\n\r";
   int value = 0;
   unsigned long ulValue = 0UL;
   long long int big_value = 0;
@@ -5504,6 +5509,43 @@ Usage: -1  : Restore target's Death Experience enchantment (if it's missing).\n\
 
   if (strcmp(class, "clear_toggles") == 0) {
     if (value == 1) GET_TOGGLES(vict) = 0;
+    return;
+  }
+
+  if (strcmp(class, "thirst") == 0)
+  {
+    if (value < -1 || value > 24)
+    {
+      send_to_char("Thirst must be between -1 and 24.\n\r", ch);
+    }
+    else
+    {
+      vict->specials.conditions[THIRST] = value;
+    }
+    return;
+  }
+  if (strcmp(class, "hunger") == 0)
+  {
+    if (value < -1 || value > 24)
+    {
+      send_to_char("Hunger must be between -1 and 24.\n\r", ch);
+    }
+    else
+    {
+      vict->specials.conditions[FULL] = value;
+    }
+    return;
+  }
+  if (strcmp(class, "drunk") == 0)
+  {
+    if (value < -1 || value > 24)
+    {
+      send_to_char("Drunk must be between -1 and 24.\n\r", ch);
+    }
+    else
+    {
+      vict->specials.conditions[DRUNK] = value;
+    }
     return;
   }
 
