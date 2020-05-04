@@ -30,8 +30,8 @@ Spring
 Summer
  7 June      = Sólmánuður/Selmánuður           = Sun/Shieling Month   = Month of Pasturing     - Livestock would be taken to graze in the mountains at "shielings" (huts/structures for the herders to live in). Small liberty taken here.
  8 July      = Heyannir/Ormamánuður            = Hay Cutting/Worm     = Month of Reaping       - Hay would be cut and dried. Small liberty taken here.
- 9                                                                    = Month of Flames        - Ronin-specific. Probably around the hottest and dryest time of the year.
-10 August    = Tvímánuður                      = Two-Month            = Month of Harvesting    - Literally "two months" (of summer left). Many crops would be harvested at this time of the year. Small liberty taken here.
+ 9                                                                    = Month of Flames        - Ronin-specific. Probably around the hottest and driest time of the year.
+10 August    = Tvímánuður                      = Two-Month            = Month of Harvesting    - Literally "two months" (until winter). Many crops would be harvested at this time of the year. Small liberty taken here.
 Autumn
 11 September = Haustmánuður/Kornskurðarmánuður = Harvest/Corn Cutting = Month of Brewing       - Corn would be harvested and beer would be brewed. Note: Both August and September could be referred to as "corn cutting month." Liberty taken here.
 12                                                                    = Month of Weaving       - Ronin-specific. Probably around the time new winter garments, blankets, etc. would be crafted for the impending winter.
