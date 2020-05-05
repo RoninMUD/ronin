@@ -7,6 +7,71 @@
 #include "structs.h"
 #include "limits.h"
 
+/* Reasoning behind the chosen day and month names used by Ronin.
+## Real Life   Norse                             Translation            Ronin Version            Notes
+
+ 0 Sunday    = Sunnudagr                       = Sun Day              = Day of the Sun         - Literaly "sun day."
+ 1 Monday    = Mánadagr                        = Moon Day             = Day of the Moon        - Literaly "moon day."
+ 2 Tuesday   = Týsdagr                         = Tyr's Day            = Day of the War God     - Tyr is the god of war and of justice/law.
+ 3 Wednesday = Óðinsdagr                       = Odin's Day           = Day of the Old God     - Liberty taken here, converting Odin to "old god", as Odin was the god of many things.
+ 4 Thursday  = Þórsdagr                        = Thor's Day           = Day of the Thunder God - Thor is known primarily as the thunder/lightning god.
+ 5 Friday    = Frjádagr                        = Freya's/Frigg's Day  = Day of the Goddess     - Liberty taken here, though Freya/Frigg would likely to be the first "goddess" to come to mind.
+ 6 Saturday  = Laugardagr                      = Bath/Washing Day     = Day of the Spirits     - Literally "bath" or "washing" day. Note: Made up a Ronin-specific day, as nothing bath-related sounded good.
+
+Winter
+ 0 January   = Þorri                           = Þórr (Thorri)        = Month of Feasting      - Þorr is thought to be the god Thorri, but could also be a forgotten spirit. A great feast would be held at this time of year in his honor. Liberty taken here.
+ 1 February  = Gói                             = Daughter of Þórr     = Month of Sacrifice     - From Norse Legend: "She (Gói) vanished, and when Thorri held the sacrifice a month later than usual, they named the month after her." Also known as "women's month." Small liberty.
+ 2 March     = Einmánuður                      = One-Month            = Month of Thawing       - Literally "one month" (of winter left). The first thaw would come during this time. Also known as "men's month." Liberty taken here.
+Spring
+ 3 April     = Harpa/Gaukmánuður               = Unknown/Cuckoo       = Month of Sowing        - Mythical beings that have been forgotten. A time of year when seeds would be sown. Also known as "boy's month." Liberty taken here.
+ 4                                                                    = Month of Fertility     - Ronin-specific. Probably around the time plants start to flourish. Mothers that became pregnant over the long winter would be showing about this time.
+ 5 May       = Skerpla                         = Unknown              = Month of Blossoming    - Mythical being that has been forgotten. A time of vigour and new growth. Also known as "girl's month." Liberty taken here.
+ 6                                                                    = Month of Battle        - Ronin-specific. Probably the time that war campaigns would be in full swing.
+Summer
+ 7 June      = Sólmánuður/Selmánuður           = Sun/Shieling Month   = Month of Pasturing     - Livestock would be taken to graze in the mountains at "shielings" (huts/structures for the herders to live in). Small liberty taken here.
+ 8 July      = Heyannir/Ormamánuður            = Hay Cutting/Worm     = Month of Reaping       - Hay would be cut and dried. Small liberty taken here.
+ 9                                                                    = Month of Flames        - Ronin-specific. Probably around the hottest and driest time of the year.
+10 August    = Tvímánuður                      = Two-Month            = Month of Harvesting    - Literally "two months" (until winter). Many crops would be harvested at this time of the year. Small liberty taken here.
+Autumn
+11 September = Haustmánuður/Kornskurðarmánuður = Harvest/Corn Cutting = Month of Brewing       - Corn would be harvested and beer would be brewed. Note: Both August and September could be referred to as "corn cutting month." Liberty taken here.
+12                                                                    = Month of Weaving       - Ronin-specific. Probably around the time new winter garments, blankets, etc. would be crafted for the impending winter.
+13 October   = Gormánuður                      = Slaughter            = Month of Slaughter     - Livestock would be slaughtered and prepared for the winter.
+14                                                                    = Month of Shadows       - Ronin-specific. Alluding to the coming winter.
+Winter
+15 November  = Ýlir/Frermánuður                = Yule/Frost Month     = Month of Frost         - Yule. Odin would visit Midgard and offer gifts in exchange for food for his horse, Sleipnir. Also known as "frost month."
+16 December  = Mörsugur                        = Fat/Marrow Sucking   = Month of Bones         - Literally "fat sucking." Fat from organs and marrow from bones would be sucked on for extra calories in the dead of winter. Small liberty taken here.
+*/
+
+const char *weekdays[] = {
+  "Day of the Sun",
+  "Day of the Moon",
+  "Day of the War God",
+  "Day of the Old God",
+  "Day of the Thunder God",
+  "Day of the Goddess",
+  "Day of the Sprits"
+};
+
+const char *month_name[] = {
+  "Month of Feasting",
+  "Month of Sacrifice",
+  "Month of Thawing",
+  "Month of Sowing",
+  "Month of Fertility",
+  "Month of Blossoming",
+  "Month of Battle",
+  "Month of Pasturing",
+  "Month of Reaping",
+  "Month of Flames",
+  "Month of Harvesting",
+  "Month of Brewing",
+  "Month of Weaving",
+  "Month of Slaughter",
+  "Month of Shadows",
+  "Month of Frost",
+  "Month of Bones"
+};
+
 const char * const spell_wear_off_msg[] = {
   "RESERVED DB.C",
   "You feel less protected.",
@@ -301,16 +366,6 @@ const char *dirs[] =
   "\n"
 };
 
-const char *weekdays[7] = {
-  "the Day of the Moon",
-  "the Day of the Bull",
-  "the Day of the Deception",
-  "the Day of Thunder",
-  "the Day of Freedom",
-  "the day of the Great Gods",
-  "the Day of the Sun"
-};
-
 const char *wpn_spc[] = {
   "None",                      /*   0 */
   "Blind",                     /*   1 */
@@ -431,26 +486,6 @@ const char *weapon_type[15] = {
   "Hack",     /* 12 */
   "Chop",     /* 13 */
   "Slice"     /* 14 */
-};
-
-const char *month_name[17] = {
-  "Month of Winter",
-  "Month of the Winter Wolf",
-  "Month of the Frost Giant",
-  "Month of the Old Forces",
-  "Month of the Grand Struggle",
-  "Month of the Spring",
-  "Month of Nature",
-  "Month of Futility",
-  "Month of the Dragon",
-  "Month of the Sun",
-  "Month of the Heat",
-  "Month of the Battle",
-  "Month of the Dark Shades",
-  "Month of the Shadows",
-  "Month of the Long Shadows",
-  "Month of the Ancient Darkness",
-  "Month of the Great Evil"
 };
 
 const char *where[] = {

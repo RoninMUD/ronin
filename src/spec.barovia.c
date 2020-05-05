@@ -135,6 +135,19 @@ int strahd(CHAR *mob, CHAR *ch, int cmd, char *arg)
   if(cmd!=MSG_MOBACT && cmd != MSG_DIE) return FALSE;
   if(cmd==MSG_MOBACT && !mob->specials.fighting) return FALSE;
 
+  /* Need a miracle ? */
+
+  if ((GET_HIT(mob) < 600) && (sttaus == 1)) {
+    act("$n utters the words 'he titul iparem piolo'", 1, mob, 0, 0, TO_ROOM);
+    act("$n seems to be completely healed again !'", 1, mob, 0, 0, TO_ROOM);
+    /* cast_miracle(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, mob, 0); */
+    GET_HIT(mob) = GET_MAX_HIT(mob);
+    sttaus = 2;
+    return FALSE;
+  }
+
+  if (cmd == MSG_DIE) return FALSE;
+
   /* Summon some help ! (zombie & ghoul) */
 
   if(sttaus == 0){
@@ -161,18 +174,6 @@ int strahd(CHAR *mob, CHAR *ch, int cmd, char *arg)
     char_to_room(new_mob, CHAR_REAL_ROOM(mob));
     act("a ghoul jumps through the portal !", FALSE, mob, 0, new_mob, TO_ROOM);
 
-    return FALSE;
-  }
-
-
-  /* Need a miracle ? */
-
-  if((GET_HIT(mob) < 600) && (sttaus == 1) ) {
-    act("$n utters the words 'he titul iparem piolo'",1,mob,0,0,TO_ROOM);
-    act("$n seems to be completely healed again !'",1,mob,0,0,TO_ROOM);
-    /* cast_miracle(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, mob, 0); */
-    GET_HIT(mob) = GET_MAX_HIT(mob); 
-    sttaus = 2;
     return FALSE;
   }
 

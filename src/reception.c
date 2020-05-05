@@ -1396,12 +1396,20 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   for(i = 0; i <= 4; i++)
     ch->specials.apply_saving_throw[i] = st->apply_saving_throw[i];
 
-  for(i = 0; i <= 2; i++)
-    {
-    GET_COND(ch, i) = st->conditions[i];
-    if(GET_LEVEL(ch)<LEVEL_IMM && GET_CLASS(ch)!=CLASS_AVATAR)
-      GET_COND(ch,i)=MAX(0,GET_COND(ch,i));
-    }
+  for (i = 0; i <= 2; i++) {
+    GET_COND(ch, i) = MAX(0, st->conditions[i]);
+  }
+
+  if (IS_IMMORTAL(ch) ||
+      GET_CLASS(ch) == CLASS_AVATAR ||
+      GET_PRESTIGE_PERK(ch) >= 26) { // Prestige Perk 26
+    GET_COND(ch, FULL) = -1;
+    GET_COND(ch, THIRST) = -1;
+  }
+
+  if (IS_IMMORTAL(ch)) {
+    GET_COND(ch, DRUNK) = -1;
+  }
 
   /* Add all spell effects */
   for(i=0; i < MAX_AFFECT; i++)
@@ -1935,24 +1943,11 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
 
   *st->poofin = '\0';
   if (ch->player.poofin)
-    if(str_cat(st->poofin, 0, 150, ch->player.poofin) == 150) {
-      sprintf(buf, "BUG: too long ch->player.poofin %s",
-        GET_NAME(ch));
-      log_s(buf);
-      *st->poofin = '\0';
-      free(ch->player.poofin);
-      ch->player.poofin = 0;
-    }
+    str_cat(st->poofin, sizeof(st->poofin), ch->player.poofin);
 
   *st->poofout = '\0';
   if (ch->player.poofout)
-    if(str_cat(st->poofout, 0, 150, ch->player.poofout)== 150) {
-      sprintf(buf, "BUG: too long ch->player.poofout %s",
-        GET_NAME(ch));
-      *st->poofout = '\0';
-      free(ch->player.poofout);
-      ch->player.poofout = 0;
-    }
+    str_cat(st->poofout, sizeof(st->poofout), ch->player.poofout);
 
 
   for (i = 0; i <= MAX_TONGUE - 1; i++)

@@ -467,8 +467,10 @@ void make_chaos_corpse(CHAR *ch)
 /* When ch kills victim */
 void change_alignment(CHAR *ch, CHAR *victim) {
   if (!ch || !victim) return;
+
   if ((CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) return;
+
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC)) return;
 
   int align = -(GET_ALIGNMENT(victim) / 10);
 
@@ -481,14 +483,15 @@ void change_alignment(CHAR *ch, CHAR *victim) {
 
 void death_cry(CHAR *ch) {
   if (!ch) return;
+
   if ((CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
 
   act("Your blood freezes as you hear $n's death cry.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (int door = NORTH; door <= DOWN; door++) {
-    if (CAN_GO(ch, door)) {
+  for (int dir = NORTH; dir <= DOWN; dir++) {
+    if (CAN_GO(ch, dir)) {
       send_to_room("Your blood freezes as you hear someone's death cry.\n\r",
-        world[CHAR_REAL_ROOM(ch)].dir_option[door]->to_room_r);
+        world[CHAR_REAL_ROOM(ch)].dir_option[dir]->to_room_r);
     }
   }
 }
@@ -2409,7 +2412,7 @@ calculation.
 The 'mode' parameter allows for the normal value, minimum value, maximum value,
 or the average value to be returned.
 
-Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
+Valid modes: RND_RND, RND_MIN, RND_MAX, RND_AVG
 */
 int wpn_extra(OBJ *weapon, CHAR *ch, CHAR *victim, int mode) {
   if (!weapon) return 0;
@@ -2676,7 +2679,7 @@ The 'bonus' parameter is applied before resulting damage is calculated.
 The 'mode' parameter allows for the normal value, minimum value, maximum value,
 or the average value to be returned.
 
-Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
+Valid modes: RND_RND, RND_MIN, RND_MAX, RND_AVG
 */
 int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
   int dam = 0;
@@ -3283,7 +3286,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
     return FALSE;
   }
 
-  int dam = calc_hit_damage(attacker, defender, weapon, 0, RND_NRM);
+  int dam = calc_hit_damage(attacker, defender, weapon, 0, RND_RND);
 
   switch (type) {
     case SKILL_BACKSTAB:
@@ -3992,7 +3995,7 @@ void shadowstep_action(CHAR *ch, CHAR *vict) {
   act("$n steps into the shadows and attacks you by surprise!", FALSE, ch, 0, vict, TO_VICT);
   act("$n steps into the shadows and attacks $N by surprise!", FALSE, ch, 0, vict, TO_NOTVICT);
 
-  damage(ch, vict, (lround(calc_hit_damage(ch, vict, EQ(ch, WIELD), 0, RND_NRM) * multi)), get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
+  damage(ch, vict, (lround(calc_hit_damage(ch, vict, EQ(ch, WIELD), 0, RND_RND) * multi)), get_attack_type(ch, EQ(ch, WIELD)), DAM_PHYSICAL);
 }
 
 

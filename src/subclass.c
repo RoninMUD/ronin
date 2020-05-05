@@ -455,7 +455,7 @@ Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
   if(add) {
     argument=one_argument(argument, buf);
     if(!*buf) { send_to_char(Usage,ch); return; }
-    subclass = new_search_block(buf, subclass_name, TRUE, FALSE);
+    subclass = search_block_ex(buf, subclass_name, TRUE, FALSE);
     if(subclass==-1) {
       send_to_char("\
 Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
@@ -575,7 +575,7 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       return FALSE;
     }
 
-    int sc_idx = get_index_of_string_in_list(buf, subclass_name, TRUE, FALSE);
+    int sc_idx = search_block_ex(buf, subclass_name, TRUE, FALSE);
 
     if ((sc_idx < ((2 * GET_CLASS(ch)) - 2)) || (sc_idx > ((2 * GET_CLASS(ch)) - 1))) {
       comm_special(mob, ch, COMM_TELL, "That's not a valid subclass.  Your choices are: %s or %s.",

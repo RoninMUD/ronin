@@ -834,10 +834,10 @@ void do_channel(CHAR *ch, char *arg, int cmd) {
   }
 
   if (!*setting || is_abbrev(setting, "list")) {
-    memset(buf, 0, sizeof(buf));
+    buf[0] = '\0';
     
     for (int i = 0; i < strlen(comm_info[channel].name); i++) {
-      strlcat(buf, "-", sizeof(buf));
+      str_cat(buf, sizeof(buf), "-");
     }
 
     printf_to_char(ch, "Players in the %s channel:\n\r------------------------%s\n\r", comm_info[channel].name, buf);

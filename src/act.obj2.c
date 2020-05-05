@@ -25,9 +25,6 @@
 
 /* extern functions */
 extern int signal_object(OBJ *obj, CHAR *ch, int cmd, char *arg);
-struct obj_data *get_object_in_equip_vis(struct char_data *ch,char *arg,struct obj_data **equipment, int *j);
-char *str_dup(char *source);
-char *sstrdel(char *s, ...);
 void raw_kill(struct char_data *ch);
 
 void name_from_drinkcon(struct obj_data *obj,int type) {
@@ -40,7 +37,7 @@ void name_from_drinkcon(struct obj_data *obj,int type) {
     sprintf(name," %s",drinknames[type]);
     if(!strstr(new_name,name)) return;
   }
-  sstrdel(new_name,name,NULL);
+  str_del(new_name,name,NULL);
 
   if(obj->item_number < 0 ||
      obj->name != obj_proto_table[obj->item_number].name)
@@ -1611,6 +1608,20 @@ void remove_item(struct char_data *ch, struct obj_data *obj, int pos) {
   }
 
   check_equipment(ch);
+}
+
+struct obj_data *get_object_in_equip_vis(struct char_data *ch,
+  char *arg,
+  struct obj_data *equipment[],
+  int *j) {
+
+  for ((*j) = 0; (*j) < MAX_WEAR; (*j)++)
+    if (equipment[(*j)])
+      if (CAN_SEE_OBJ(ch, equipment[(*j)]))
+        if (isname(arg, OBJ_NAME(equipment[(*j)])))
+          return(equipment[(*j)]);
+
+  return (0);
 }
 
 void do_remove(struct char_data *ch, char *argument, int cmd)

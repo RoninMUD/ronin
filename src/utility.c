@@ -1,3 +1,7 @@
+/**
+ * @file utility.c
+*/
+
 /* ************************************************************************
 *  file: utility.c, Utility module.                       Part of DIKUMUD *
 *  Usage: Utility procedures                                              *
@@ -37,25 +41,37 @@
 #include "spells.h"
 
 extern FILE *logfile;
-void update_pos( struct char_data *ch );
+void update_pos(struct char_data *ch);
 
-/*
-Generates a random integer in interval [from, to] (inclusive).
+/* RNG and Other Math Functions */
 
-The 'mode' parameter allows for the normal value, minimum value, maximum value,
-or the average value to be returned.
-
-Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
-*/
+/**
+ * @brief Generates a number in the range [from, to] inclusive, based on the
+ *   chosen mode.
+ *
+ * Modes:
+ * - RND_RND (0): A random number in the range [from, to].
+ * - RND_MIN (1): The minimum possible number (from).
+ * - RND_MAX (2): The maximum possible number (to).
+ * - RND_AVG (3): The average (mean) of the range [from, to].
+ *
+ * @param[in] from The minimum possible number.
+ * @param[in] to The maximum possible number.
+ * @param[in] mode The mode used to determine the generated number.
+ *
+ * @return The generated number.
+ */
 int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
+  int32_t result = 0, temp;
+
+  /* Swap from and to if from is greater than to. */
   if (from > to) {
-    int32_t temp = from;
+    temp = from;
     from = to;
     to = temp;
   }
 
-  int32_t result = 0;
-
+  /* Generate a result based on the chosen mode. */
   switch (mode) {
     case RND_MIN:
       result = from;
@@ -66,6 +82,7 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
     case RND_AVG:
       result = (from * to) / 2;
       break;
+    case RND_RND:
     default:
       result = randombytes_uniform((to - from) + 1) + from;
       break;
@@ -74,24 +91,44 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
   return result;
 }
 
-/* Generates a random integer in interval [from, to] (inclusive). */
+/**
+ * @brief Generates a number in the range [from, to] inclusive.
+ *
+ * @param[in] from The minimum possible number.
+ * @param[in] to The maximum possible number.
+ *
+ * @return The generated number.
+ */
 int32_t number(int32_t from, int32_t to) {
-  return number_ex(from, to, RND_NRM);
+  return number_ex(from, to, RND_RND);
 }
 
-/*
-Simulates a dice roll.
-
-The 'mode' parameter allows for the normal value, minimum value, maximum value,
-or the average value to be returned.
-
-Valid modes: RND_NRM, RND_MIN, RND_MAX, RND_AVG
-*/
+/**
+ * @brief Simulates rolling dice, generating a number in the range
+ *   [num_dice, (num_dice * size_dice)], based on the chosen mode.
+ *
+ * Modes:
+ * - RND_RND (0): A random number in the range
+ *   [num_dice, (num_dice * size_dice)].
+ * - RND_MIN (1): The minimum possible number (num_dice).
+ * - RND_MAX (2): The maximum possible number (num_dice * size_dice).
+ * - RND_AVG (3): The average (mean) of the range
+ *   [num_dice, (num_dice * size_dice)].
+ *
+ * @param[in] num_dice The number of dice to roll.
+ * @param[in] size_dice The size of the dice (e.g. the number of faces).
+ * @param[in] mode The mode used to determine the generated number.
+ *
+ * @return The generated number.
+ */
 int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode) {
+  /* Use int64_t to prevent integer overflow during arithmetic. */
+  int64_t result = 0, roll;
+
+  /* Return 0 if either num_dice or size_dice are less than 1. */
   if ((num_dice < 1) || (size_dice < 1)) return 0;
 
-  int64_t result = 0;
-
+  /* Generate a result based on the chosen mode. */
   switch (mode) {
     case RND_MIN:
       result = num_dice;
@@ -102,583 +139,362 @@ int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode) {
     case RND_AVG:
       result = (num_dice * (size_dice + 1)) / 2;
       break;
+    case RND_RND:
     default:
-      for (int32_t r = 1; r <= num_dice; r++) {
+      for (roll = 1; roll <= num_dice; roll++) {
         result += number(1, size_dice);
       }
       break;
   }
 
+  /* Ensure that result does not exceed INT_MAX. */
   if (result > INT_MAX) {
     result = INT_MAX;
   }
 
+  /* Coerce result to int32_t. */
   return (int32_t)result;
 }
 
-/* Simulates a dice roll. */
+/**
+ * @brief Simulates rolling dice, generating a number in the range
+ *   [num_dice, (num_dice * size_dice)].
+ *
+ * @param[in] num_dice The number of dice to roll.
+ * @param[in] size_dice The size of the dice (e.g. the number of faces).
+ *
+ * @return The generated number.
+ */
 int32_t dice(int32_t num_dice, int32_t size_dice) {
-  return dice_ex(num_dice, size_dice, RND_NRM);
+  return dice_ex(num_dice, size_dice, RND_RND);
 }
 
-/* Returns true based on the odds out of 100 of success. */
-bool chance(int32_t num) {
-  if (number(1, 100) <= num) return TRUE;
-
-  return FALSE;
+/**
+ * @brief Determines success or failure based on the provided percent chance.
+ *
+ * @param[in] percent The percent chance of success.
+ *
+ * @return TRUE if success and FALSE if failure.
+ */
+bool chance(int32_t percent) {
+  return (number(1, 100) <= percent);
 }
 
-/* Returns the number with the lowest value. */
+/**
+ * @brief Provided integers a and b, returns the integer with the lesser value.
+ *
+ * @param[in] a The first integer to compare.
+ * @param[in] b The second integer to compare.
+ *
+ * @return The integer with the lesser value.
+ */
 int32_t MIN(int32_t a, int32_t b) {
   return a < b ? a : b;
 }
 
-/* Returns the number with the highest value. */
+/**
+ * @brief Provided integers a and b, returns the integer with the greater value.
+ *
+ * @param[in] a The first integer to compare.
+ * @param[in] b The second integer to compare.
+ *
+ * @return The integer with the greater value.
+ */
 int32_t MAX(int32_t a, int32_t b) {
   return a > b ? a : b;
 }
 
 
-// TODO: Change to not use static char.
-char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL];
-
-  buf[0] = '\0';
-
-  if (ch && vict) {
-    if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
-      snprintf(buf, sizeof(buf), "%s", GET_DISP_NAME(ch));
-    }
-    else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
-      if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
-        signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
-      }
-
-      strlcat(buf, GET_DISP_NAME(ch), sizeof(buf));
-    }
-    else {
-      snprintf(buf, sizeof(buf), "Somebody");
-    }
-  }
-
-  return buf;
-}
-
-char *PERS(CHAR *ch, CHAR *vict) {
-  return PERS_ex(ch, vict, COMM_ACT_HIDE_NORMAL);
-}
-
-
-// TODO: Change to not use static char.
-char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
-  static char buf[MIL];
-
-  buf[0] = '\0';
-
-  if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
-    snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
-  }
-  else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
-    if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
-      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
-    }
-
-    strlcat(buf, GET_NAME(ch), sizeof(buf));
-    strlcat(buf, "'s", sizeof(buf));
-  }
-  else {
-    snprintf(buf, sizeof(buf), "Somebody's");
-  }
-
-  return buf;
-}
-
-char *POSSESS(CHAR *ch, CHAR *vict) {
-  return POSSESS_ex(ch, vict, COMM_ACT_HIDE_NON_MORT);
-}
-
-
-// TODO: Make a better color system someday.
-char *CHCLR(CHAR *ch, int color) {
-  static char color_code[32];
-
-  color_code[0] = '\0';
-
-  if (ch->colors[0] && ch->colors[color]) {
-    strlcat(color_code, Color[(((ch->colors[color]) * 2) - 2)], sizeof(color_code));
-    strlcat(color_code, BKColor[ch->colors[13]], sizeof(color_code));
-  }
-
-  return color_code;
-}
-
-
-// TODO: Make a better color system someday.
-char *ENDCHCLR(CHAR *ch) {
-  static char color_code[32];
-
-  color_code[0] = '\0';
-
-  if (ch->colors[0] && ch->colors[1]) {
-    strlcat(color_code, Color[(((ch->colors[1]) * 2) - 2)], sizeof(color_code));
-    strlcat(color_code, BKColor[ch->colors[13]], sizeof(color_code));
-  }
-
-  return color_code;
-}
-
-
-/* 50% chance when victim level is the same as the attacker.
-   100% chance when victim level is 10 levels or less than the attacker.
-   0% chance when victim level is 10 levels or higher than the attacker. */
-bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type) {
-  if (((breakthrough_type == BT_INVUL) && !IS_AFFECTED(victim, AFF_INVUL)) ||
-      ((breakthrough_type == BT_SPHERE) && !IS_AFFECTED(victim, AFF_SPHERE))) {
-    return TRUE;
-  }
-
-  /* Invulnerability never applies to Hostile victims. */
-  if ((breakthrough_type == BT_INVUL) && IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) {
-    return TRUE;
-  }
-
-  int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_CLERIC:
-      if (breakthrough_type == BT_INVUL) check -= 5;
-      else if (breakthrough_type == BT_SPHERE) check += 5;
-      break;
-    case CLASS_MAGIC_USER:
-      if (breakthrough_type == BT_INVUL) check -= 10;
-      else if (breakthrough_type == BT_SPHERE) check += 10;
-      break;
-    case CLASS_WARRIOR:
-      if (breakthrough_type == BT_INVUL) check += 10;
-      else if (breakthrough_type == BT_SPHERE) check -= 10;
-      break;
-    case CLASS_NOMAD:
-      if (breakthrough_type == BT_INVUL) check += 10;
-      else if (breakthrough_type == BT_SPHERE) check -= 10;
-      break;
-    case CLASS_THIEF:
-      if (breakthrough_type == BT_INVUL) check += 10;
-      else if (breakthrough_type == BT_SPHERE) check -= 10;
-      break;
-    case CLASS_NINJA:
-      if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check -= 5;
-      break;
-    case CLASS_ANTI_PALADIN:
-      if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check += 5;
-      break;
-    case CLASS_PALADIN:
-      if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check -= 5;
-      break;
-    case CLASS_BARD:
-      if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check += 5;
-      break;
-    case CLASS_COMMANDO:
-      if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check += 5;
-      break;
-  }
-
-  check = number(1, 100) <= check;
-
-  /* Cunning */
-  if (!check && IS_SET(GET_TOGGLES(ch), TOG_CUNNING) && (GET_MANA(ch) >= 10) &&
-      (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
-      ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE))) {
-    act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
-    act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
-    act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
-
-    GET_MANA(ch) -= 10;
-
-    return TRUE;
-  }
-
-  return check;
-}
-
-
-int IS_DARK(int room) {
-  return !IS_LIGHT(room);
-}
-
-
-int CAN_SEE(CHAR *ch, CHAR *vict) {
-  if (!ch || !vict) return FALSE;
-
-  if (WIZ_INV(ch, vict) ||
-      IMP_INV(ch, vict) ||
-      NRM_INV(ch, vict) ||
-      (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
-      (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
-    return FALSE;
-  }
-
-  return TRUE;
-}
-
-
-int CAN_TAKE(CHAR *ch, OBJ *obj) {
-  if (!ch || !obj) return FALSE;
-
-  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
-      (IS_NPC(ch) && IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_NO_TAKE_MOB))) {
-    return FALSE;
-  }
-
-  return TRUE;
-}
-
-
-int GETOBJ_WEIGHT(OBJ *obj) {
-  if (!obj) return 0;
-
-  int weight = OBJ_WEIGHT(obj);
-
-  if ((OBJ_TYPE(obj) == ITEM_DRINKCON) && OBJ_VALUE(obj, 0)) {
-    weight *= (0.5 + ((OBJ_VALUE(obj, 1) / 2.0) / OBJ_VALUE(obj, 0)));
-  }
-
-  if (obj->contains) {
-    for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content)
-      weight += GETOBJ_WEIGHT(tmp_obj);
-  }
-
-  return weight;
-}
-
-
-int IS_CARRYING_W(CHAR *ch) {
-  if (!ch) return 0;
-
-  int weight = 0;
-
-  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
-    weight += GETOBJ_WEIGHT(tmp_obj);
-  }
-
-  return weight;
-}
-
-
-int IS_CARRYING_N(CHAR *ch) {
-  if (!ch) return 0;
-
-  int num = 0;
-
-  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
-    num++;
-  }
-
-  return num;
-}
-
-
-int COUNT_CONTENTS(OBJ *obj) {
-  if (!obj) return 0;
-
-  int num = 0;
-
-  for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content) {
-    num++;
-  }
-
-  return num;
-}
-
-
-int COUNT_RENTABLE_CONTENTS(OBJ *obj) {
-  if (!obj) return 0;
-
-  int num = 0;
-
-  for (OBJ *tmp_obj = obj->contains; tmp_obj; tmp_obj = tmp_obj->next_content) {
-    if (IS_RENTABLE(tmp_obj)) num++;
-  }
-
-  return num;
-}
-
-
-char *string_to_lower(char *string) {
-  for (int i = 0; i < strlen(string); i++) {
-    string[i] = LOWER(string[i]);
-  }
-
-  return string;
-}
-
-
-char *string_to_upper(char *string) {
-  for (int i = 0; i < strlen(string); i++) {
-    string[i] = UPPER(string[i]);
-  }
-
-  return string;
-}
-
-
-size_t strlmrg(char *dest, size_t size, ...) {
-  char *s, *end = dest + (size - 1);
-  size_t needed = 0;
-  va_list ap;
-
-  va_start(ap, size);
-
-  while ((s = va_arg(ap, char *))) {
-    if (s == dest) {
-      size_t n = strnlen(s, (end + 1) - s);
-      needed += n;
-      dest += n;
-    }
-    else {
-      needed += strlen(s);
-
-      if (dest && (dest < end)) {
-        while (*s && (dest < end)) {
-          *dest++ = *s++;
-        }
-
-        *dest = 0;
-      }
+/* String Manipulation Functions */
+
+/**
+ * @brief Merges a list of strings.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] ... List of strings to merge. The final pointer MUST be NULL.
+ *
+ * @return The length of the merged strings.
+ */
+size_t str_mrg(char *dest, size_t dest_size, ...) {
+  size_t len = 0;
+  va_list str_list;
+  char *str;
+
+  va_start(str_list, dest_size);
+
+  /* Copy each string from str_list to dest. */
+  while (((str = va_arg(str_list, char *)) != NULL) && (len < dest_size - 1)) {
+    /* Copy each character from the current string to dest. */
+    while ((*str != '\0') && (len < dest_size - 1)) {
+      *dest++ = *str++;
+      len++;
     }
   }
 
-  va_end(ap);
+  /* Null-terminate dest. */
+  *dest++ = '\0';
 
-  return needed;
+  va_end(str_list);
+
+  return len;
 }
 
-
-size_t strlcpy(char *dest, const char *src, size_t size) {
-  return strlmrg(dest, size, src, (void *)0);
+/**
+ * @brief Copies a source string to a destination string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ *
+ * @return The length of the copied string.
+ */
+size_t str_cpy(char *dest, size_t dest_size, const char *src) {
+  return str_mrg(dest, dest_size, src, NULL);
 }
 
-
-size_t strlcat(char *dest, const char *src, size_t size) {
-  return strlmrg(dest, size, dest, src, (void *)0);
+/**
+ * @brief Appends a copy of the source string to the destination string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated to the destination string.
+ * @param[in] src The source string.
+ *
+ * @return The length of the concatenated strings.
+ */
+size_t str_cat(char *dest, size_t dest_size, const char *src) {
+  return str_mrg(dest, dest_size, dest, src, NULL);
 }
 
+/**
+ * @brief Gets a substring of a string that begins from a specified position
+ *   and has a specified length.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ * @param[in] start_idx Index of the source string to start from.
+ * @param[in] n The length of the substring.
+ *
+ * @return The substring.
+ */
+char *str_sub(char *dest, size_t dest_size, const char *src, size_t start_idx, size_t n) {
+  size_t str_len = strlen(src);
 
-int IS_LIGHT(int room) {
-  if (ROOM_LIGHT(room)) return TRUE;                       // If the room has light sources present, it is lit.
-  if (ROOM_ZONE(room) == 30) return TRUE;                  // If the room is in zone 30 (Midgaard), it is lit.
-  if (IS_SET(ROOM_FLAGS(room), LIT)) return TRUE;          // If the room has the LIT flag, it is lit.
-  if (IS_SET(ROOM_FLAGS(room), DARK)) return FALSE;        // If the room has the DARK flag, it is unlit.
-  if (IS_SET(ROOM_FLAGS(room), INDOORS)) return FALSE;     // If the room has the INDOORS flag, it is unlit.
-  if (ROOM_SECTOR_TYPE(room) == SECT_INSIDE) return FALSE; // If the room has the sector type SECT_INSIDE, it is unlit.
-  if (weather_info.sunlight != SUN_DARK) return TRUE;      // If the sun is not dark, the room is lit.
-
-  return FALSE;
-}
-
-
-char *str_cut(char *source,char *dest,int number) {
-  int y;
-  char buf[MAX_INPUT_LENGTH];
-
-  if(strlen(source)>MAX_INPUT_LENGTH ||
-    strlen(source)<number) return source;
-  strncpy(buf,source,sizeof(buf));
-  for(y=0;source[y];y++){
-    buf[y]=source[y+number];
+  /* Ensure start_idx does not exceed str_len. */
+  if (start_idx > str_len) {
+    start_idx = str_len;
   }
-  dest[0]='\0';
-  strncat(dest,buf,strlen(source)-number);
+
+  /* Ensure n does not exceed (str_len - start_idx). */
+  if (n > (str_len - start_idx)) {
+    n = str_len - start_idx;
+  }
+
+  /* Ensure n does not exceed dest_size - 1. */
+  if (n > dest_size - 1) {
+    n = dest_size - 1;
+  }
+
+  /* Increment str pointer by start_idx. */
+  src += start_idx;
+
+  /* Copy n characters from src to sub. */
+  strncpy(dest, src, n);
+
+  /* Null-terminate sub. */
+  dest[n++] = '\0';
+
   return dest;
 }
 
-/*
-**  sstrdel() - Delete multiple substrings
-**
-**  public domain by Shamim Islam
-**
-**  Usage: sstrdel(char * s,char * del0,del1...deln)
-**
-**  Remarks: sstrdel takes a string s, and removes all occurrences of
-**           the substrings del0, del1, ... deln
-**
-**  Return:  sstrdel returns a pointer to the string s, unless s is NULL.
-**           sstrdel will return a NULL for this exception.
-**
-**  Comment: Use sstrdel to remove a list of substrings from a string.
-**
-**           sstrdel matches the largest substring for deletion, if more than
-**           one substring matches a particular portion of the string s.
-**
-**  NOTE:    The last element in the variable substring list MUST be NULL
-**           or your program will have a high likelihood of hanging.
-*/
+/**
+ * @brief Gets the specified number of characters from the beginning of a string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ * @param[in] n The number of characters to get.
+ *
+ * @return The head of the string.
+ */
+char *str_head(char *dest, size_t dest_size, const char *src, size_t n) {
+  return str_sub(dest, dest_size, src, 0, n);
+}
 
-char *sstrdel(char *s, ...)
-{
-      /* Find out how many arguments are present */
+/**
+ * @brief Gets the specified number of characters from the end of a string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ * @param[in] n The number of characters to get.
+ *
+ * @return The tail of the string.
+ */
+char *str_tail(char *dest, size_t dest_size, const char *src, size_t n) {
+  return str_sub(dest, dest_size, src, strlen(src) - n, n);
+}
 
-      int c = 0;
-      va_list ap, hold;
+/**
+ * @brief Deletes a list of substrings from a string.
+ *
+ * @param[in,out] src The source string.
+ * @param[in] ... List of substrings to delete. The final pointer MUST be NULL.
+ *
+ * @return The modified string.
+ */
+char *str_del(char *src, ...) {
+  va_list del_list;
+  char *del, *idx, *end, *ptr;
 
-      if (s == NULL)
-            return NULL;
-      va_start(ap, s);
-      memcpy(&hold, &ap, sizeof(va_list));
-      while (va_arg(ap, char*) != NULL)
-            c++;
-      va_end(ap);
-      if (c)
-      {
-            /* Assign pointers  */
+  va_start(del_list, src);
 
-            char *r = s,*n = s;
-            char *p;
-            int len, i;
-
-            /* Copy next character to result */
-            /* And then check for matches if */
-            /* not at end of string          */
-
-            while ((*r = *n) != 0)
-            {
-                  int l = 0;
-
-                  /* Substitute for va_start(ap,s) */
-
-                  memcpy(&ap, &hold, sizeof(va_list));
-                  for (i = 0; i < c; i++)
-                  {
-                        /* Initialise the pointer and the length    */
-
-                        len = strlen(p = va_arg(ap, char*));
-
-                        /* Compare ONLY if we haven't found one yet */
-                        /* or if this one is bigger than the one we */
-                        /* found AND this arg has a length > 0      */
-
-                        if(len > 0 && (l == 0 || len> l) &&
-                              strncmp(n, p, len) == 0)
-                        {
-                              l = len;
-                        }
-                  }
-                  va_end(ap);
-                  if (l)
-                        n += l;
-                  else  n++, r++;
-            }
+  /* Delete each substring in del_list from src. */
+  while ((del = va_arg(del_list, char *)) != NULL) {
+    if ((idx = end = strstr(src, del)) != NULL) {
+      while ((end = strstr(ptr = end + strlen(del), del)) != NULL) {
+        while (ptr < end) {
+          *idx++ = *ptr++;
+        }
       }
-      return s;
-}
 
-/* Create a duplicate of a string */
-char *str_dup(char *source)
-{
-  char *new = NULL;
-  size_t len = strnlen(source, MAX_STRING_LENGTH);
-
-  if (!source) source = "";
-
-  CREATE(new, char, len + 1);
-
-  return strncpy(new, source, len);
-}
-
-int str_cat(char *s, int len, int maxlen, const char *append)
-{
-  int i = 0;
-
-  assert(len <= maxlen);
-
-  for ( i = 0; len + i < maxlen - 1 && *(append + i) != '\0'; i++)
-  {
-    *(s + len + i) = *(append + i);
-  }
-
-  *(s + len + i) = '\0';
-
-  if(*(append + i) != '\0')
-  {
-    log_f("BUG: too long append string in str_cat");
-  }
-
-  return len + i;
-}
-
-
-/* returns: 0 if equal, 1 if arg1 > arg2, -1 if arg1 < arg2  */
-/* scan 'till found different or end of both                 */
-int str_cmp(char *arg1, char *arg2)
-{
-  int chk = 0, i = 0;
-
-  if (!arg1)
-    return -1;
-  if (!arg2)
-    return 1;
-
-  for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
-  {
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
-    {
-      if (chk < 0)
-        return -1;
-      else
-        return 1;
+      while ((*idx++ = *ptr++) != '\0');
     }
   }
 
-  return 0;
+  va_end(del_list);
+
+  return src;
 }
 
-/* returns: 0 if equal, 1 if arg1 > arg2, -1 if arg1 < arg2  */
-/* scan 'till found different, end of both, or n reached     */
-int strn_cmp(char *arg1, char *arg2, int n)
-{
-  int chk = 0, i = 0;
+/**
+ * @brief Converts a string to uppercase, storing the uppercase version in the
+ *   specified destination string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The string to convert.
+ *
+ * @return The uppercase version of the string.
+ */
+char *str_upper(char *dest, size_t dest_size, char *src) {
+  size_t str_len = strlen(src), i;
 
-  if (!arg1)
-    return -1;
-  if (!arg2)
-    return 1;
+  /* Ensure len does not exceed (dest_sz - 1) to allow for null termination. */
+  if (str_len >= dest_size) {
+    str_len = dest_size - 1;
+  }
 
-  for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--)
-  {
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
-    {
-      if (chk < 0)
-        return -1;
-      else
-        return 1;
-    }
-    }
+  /* Copy len characters from src to dest. */
+  strncpy(dest, src, str_len);
 
-  return 0;
+  /* Null-terminate dest. */
+  dest[str_len + 1] = '\0';
+
+  /* Convert each character in dest to uppercase. */
+  for (i = 0; i < str_len; i++) {
+    dest[i] = toupper(dest[i]);
+  }
+
+  return dest;
 }
 
-/* changes the supplied string buffer to contain all uppercase chars */
-char *str_upper(char *str)
-{
-  char *p;
+/**
+ * @brief Converts a string to lowercase, storing the lowercase version in the
+ *   specified destination string.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The string to convert.
+ *
+ * @return The lowercase version of the string.
+ */
+char *str_lower(char *dest, size_t dest_size, char *src) {
+  size_t str_len = strlen(src), i;
 
-  p = str;
+  /* Ensure len does not exceed (dest_sz - 1) to allow for null termination. */
+  if (str_len >= dest_size) {
+    str_len = dest_size - 1;
+  }
 
-  while (*p)
-  {
-    *p = toupper(*p);
-    p++;
+  /* Copy len characters from src to dest. */
+  strncpy(dest, src, str_len);
+
+  /* Null-terminate dest. */
+  dest[str_len + 1] = '\0';
+
+  /* Convert each character in dest to uppercase. */
+  for (i = 0; i < str_len; i++) {
+    dest[i] = tolower(dest[i]);
+  }
+
+  return dest;
+}
+
+/**
+ * @brief Converts a string to uppercase.
+ *
+ * @param[in,out] str The string to convert.
+ *
+ * @return The uppercase string.
+ */
+char *str_upr(char *str) {
+  size_t i;
+
+  /* Convert each character in str to uppercase. */
+  for (i = 0; i < strlen(str); i++) {
+    str[i] = toupper(str[i]);
   }
 
   return str;
 }
 
+/**
+ * @brief Converts a string to lowercase.
+ *
+ * @param[in,out] str The string to convert.
+ *
+ * @return The lowercase string.
+ */
+char *str_lwr(char *str) {
+  size_t i;
 
-/* writes a string to the log */
+  /* Convert each character in str to lowercase. */
+  for (i = 0; i < strlen(str); i++) {
+    str[i] = tolower(str[i]);
+  }
+
+  return str;
+}
+
+/* TODO: Eventually transition code that uses these wrappers to use the direct functions instead. */
+
+/* Wrapper for strdup. */
+char *str_dup(char *src) {
+  return strdup(src);
+}
+
+/* Wrapper for strcasecmp. */
+int str_cmp(char *str1, char *str2) {
+  return strcasecmp(str1, str2);
+}
+
+/* Wrapper for strncasecmp. */
+int strn_cmp(char *str1, char *str2, size_t n) {
+  return strncasecmp(str1, str2, n);
+}
+
+/* Wrapper for str_upr.  */
+char *string_to_upper(char *str) {
+  return str_upr(str);
+}
+
+/* Wrapper for str_lwr.  */
+char *string_to_lower(char *str) {
+  return str_lwr(str);
+}
+
 
 void log_s(char *str) {
   if (logfile == NULL) {
@@ -696,6 +512,7 @@ void log_s(char *str) {
   fflush(logfile);
 }
 
+
 void log_f(char *fmt, ...) {
   va_list args;
   char buf[2 * MSL];
@@ -707,11 +524,12 @@ void log_f(char *fmt, ...) {
   log_s(buf);
 }
 
+
 void deathlog(char *str) {
   FILE *fl;
 
   if (!(fl = fopen("death.log", "a"))) {
-    log_f("WARNING: Unable to open death.log file.");
+    log_f("WARNING: Unable to open death.log.");
 
     return;
   }
@@ -725,6 +543,7 @@ void deathlog(char *str) {
   fclose(fl);
 }
 
+
 void deathlog_f(char *fmt, ...) {
   va_list args;
   char buf[2 * MSL];
@@ -736,17 +555,21 @@ void deathlog_f(char *fmt, ...) {
   deathlog(buf);
 }
 
+
 void wizinfo(char *str, int level) {
+  level = MIN(LEVEL_IMP, MAX(LEVEL_IMM, level));
+
   char buf[2 * MSL];
 
   snprintf(buf, sizeof(buf), "** %s **\n\r", str);
 
   for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if ((desc->connected == CON_PLYNG) && (desc->wizinfo != 0) && (desc->wizinfo >= level) && IS_IMMORTAL(desc->character)) {
+    if ((desc->connected == CON_PLYNG) && IS_IMMORTAL(desc->character) && (desc->wizinfo >= level)) {
       send_to_char(buf, desc->character);
     }
   }
 }
+
 
 void wizinfo_f(int level, char *fmt, ...) {
   va_list args;
@@ -759,8 +582,9 @@ void wizinfo_f(int level, char *fmt, ...) {
   wizinfo(buf, level);
 }
 
+
 void wizlog(char *str, int level, int which) {
-  level = MIN(LEVEL_IMP, level);
+  level = MIN(LEVEL_IMP, MAX(LEVEL_IMM, level));
   which = (((which < 1) || (which > 7)) ? 6 : which);
 
   char buf[2 * MSL];
@@ -768,19 +592,20 @@ void wizlog(char *str, int level, int which) {
   snprintf(buf, sizeof(buf), "[ %s ]\n\r", str);
 
   for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if ((desc->connected == CON_PLYNG) && (desc->wizinfo != 0) && (desc->wizinfo >= level) && IS_IMMORTAL(desc->character)) {
+    if ((desc->connected == CON_PLYNG) && IS_IMMORTAL(desc->character) && (desc->wizinfo >= level)) {
       if (((which == 1) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_ONE)) ||
-          ((which == 2) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_TWO)) ||
-          ((which == 3) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_THREE)) ||
-          ((which == 4) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FOUR)) ||
-          ((which == 5) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FIVE)) ||
-          ((which == 6) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_SIX)) ||
-          ((which == 7) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_QUEST_INFO))) {
+        ((which == 2) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_TWO)) ||
+        ((which == 3) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_THREE)) ||
+        ((which == 4) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FOUR)) ||
+        ((which == 5) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_FIVE)) ||
+        ((which == 6) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_LOG_SIX)) ||
+        ((which == 7) && IS_SET(GET_IMM_FLAGS(desc->character), WIZ_QUEST_INFO))) {
         send_to_char(buf, desc->character);
       }
     }
   }
 }
+
 
 void wizlog_f(int level, int which, char *fmt, ...) {
   va_list args;
@@ -794,40 +619,39 @@ void wizlog_f(int level, int which, char *fmt, ...) {
 }
 
 
-void sprintbit(long vektor, const char * const names[], char *result)
-{
+void sprintbit(long vektor, const char * const names[], char *result) {
   long nr;
 
   *result = '\0';
 
-  for(nr=0; vektor; vektor>>=1)
-    {
-      if (IS_SET(1, vektor)) {
-        if (*names[nr] != '\n') {
-          strcat(result,names[nr]);
-          strcat(result," ");
-        } else {
-          strcat(result,"UNDEFINED");
-          strcat(result," ");
-        }
+  for (nr = 0; vektor; vektor >>= 1) {
+    if (IS_SET(1, vektor)) {
+      if (*names[nr] != '\n') {
+        strcat(result, names[nr]);
+        strcat(result, " ");
       }
-      if (*names[nr] != '\n')
-      nr++;
+      else {
+        strcat(result, "UNDEFINED");
+        strcat(result, " ");
+      }
     }
+    if (*names[nr] != '\n')
+      nr++;
+  }
 
   if (!*result)
     strcat(result, "NOBITS");
 }
 
-void sprinttype(int type, const char * const names[], char *result)
-{
+void sprinttype(int type, const char * const names[], char *result) {
   int nr;
 
-  for(nr=0;(*names[nr]!='\n');nr++);
-  if(type < nr)
-    strcpy(result,names[type]);
+  for (nr = 0; (*names[nr] != '\n'); nr++);
+
+  if (type < nr)
+    strcpy(result, names[type]);
   else
-    strcpy(result,"UNDEFINED");
+    strcpy(result, "UNDEFINED");
 }
 
 
@@ -890,6 +714,287 @@ struct time_info_data age(struct char_data *ch)
   player_age.year += 17;   /* All players start at 17 */
 
   return player_age;
+}
+
+
+char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
+  static char buf[MIL];
+
+  buf[0] = '\0';
+
+  if (ch && vict) {
+    if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
+      snprintf(buf, sizeof(buf), "%s", GET_DISP_NAME(ch));
+    }
+    else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+      if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+        signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+      }
+
+      str_cat(buf, sizeof(buf), GET_DISP_NAME(ch));
+    }
+    else {
+      snprintf(buf, sizeof(buf), "Somebody");
+    }
+  }
+
+  return buf;
+}
+
+
+char *PERS(CHAR *ch, CHAR *vict) {
+  return PERS_ex(ch, vict, COMM_ACT_HIDE_NORMAL);
+}
+
+
+char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
+  static char buf[MIL];
+
+  buf[0] = '\0';
+
+  if (IS_NPC(ch) && CAN_SEE(vict, ch)) {
+    snprintf(buf, sizeof(buf), "%s's", MOB_SHORT(ch));
+  }
+  else if ((IS_MORTAL(ch) && IS_SET(mode, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(vict, ch)) {
+    if (!IS_SET(mode, COMM_ACT_HIDE_PRETITLE)) {
+      signal_char(ch, vict, MSG_SHOW_PRETITLE, buf);
+    }
+
+    str_cat(buf, sizeof(buf), GET_NAME(ch));
+    str_cat(buf, sizeof(buf), "'s");
+  }
+  else {
+    snprintf(buf, sizeof(buf), "Somebody's");
+  }
+
+  return buf;
+}
+
+char *POSSESS(CHAR *ch, CHAR *vict) {
+  return POSSESS_ex(ch, vict, COMM_ACT_HIDE_NON_MORT);
+}
+
+
+// TODO: Make a better color system someday.
+char *CHCLR(CHAR *ch, int color) {
+  static char color_code[32];
+
+  color_code[0] = '\0';
+
+  if (ch->colors[0] && ch->colors[color]) {
+    str_cat(color_code, sizeof(color_code), Color[(((ch->colors[color]) * 2) - 2)]);
+    str_cat(color_code, sizeof(color_code), BKColor[ch->colors[13]]);
+  }
+
+  return color_code;
+}
+
+
+// TODO: Make a better color system someday.
+char *ENDCHCLR(CHAR *ch) {
+  static char color_code[32];
+
+  color_code[0] = '\0';
+
+  if (ch->colors[0] && ch->colors[1]) {
+    str_cat(color_code, sizeof(color_code), Color[(((ch->colors[1]) * 2) - 2)]);
+    str_cat(color_code, sizeof(color_code), BKColor[ch->colors[13]]);
+  }
+
+  return color_code;
+}
+
+
+/* 50% chance when victim level is the same as the attacker.
+   100% chance when victim level is 10 levels or less than the attacker.
+   0% chance when victim level is 10 levels or higher than the attacker. */
+bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type) {
+  if (((breakthrough_type == BT_INVUL) && !IS_AFFECTED(victim, AFF_INVUL)) ||
+    ((breakthrough_type == BT_SPHERE) && !IS_AFFECTED(victim, AFF_SPHERE))) {
+    return TRUE;
+  }
+
+  /* Invulnerability never applies to Hostile victims. */
+  if ((breakthrough_type == BT_INVUL) && IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) {
+    return TRUE;
+  }
+
+  int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
+
+  switch (GET_CLASS(ch)) {
+    case CLASS_CLERIC:
+      if (breakthrough_type == BT_INVUL) check -= 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
+      break;
+    case CLASS_MAGIC_USER:
+      if (breakthrough_type == BT_INVUL) check -= 10;
+      else if (breakthrough_type == BT_SPHERE) check += 10;
+      break;
+    case CLASS_WARRIOR:
+      if (breakthrough_type == BT_INVUL) check += 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
+      break;
+    case CLASS_NOMAD:
+      if (breakthrough_type == BT_INVUL) check += 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
+      break;
+    case CLASS_THIEF:
+      if (breakthrough_type == BT_INVUL) check += 10;
+      else if (breakthrough_type == BT_SPHERE) check -= 10;
+      break;
+    case CLASS_NINJA:
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check -= 5;
+      break;
+    case CLASS_ANTI_PALADIN:
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
+      break;
+    case CLASS_PALADIN:
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check -= 5;
+      break;
+    case CLASS_BARD:
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
+      break;
+    case CLASS_COMMANDO:
+      if (breakthrough_type == BT_INVUL) check += 5;
+      else if (breakthrough_type == BT_SPHERE) check += 5;
+      break;
+  }
+
+  check = number(1, 100) <= check;
+
+  /* Cunning */
+  if (!check && IS_SET(GET_TOGGLES(ch), TOG_CUNNING) && (GET_MANA(ch) >= 10) &&
+    (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_THIEF) && (GET_LEVEL(ch) >= 50)) &&
+    ((skill_spell == SKILL_BACKSTAB) || (skill_spell == SKILL_CIRCLE))) {
+    act("$n's weapon flashes with brilliant energy as $e bores through $N's protective shield.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("$n's weapon gleams with azure light as $e pierces through your protective shield.", FALSE, ch, 0, victim, TO_VICT);
+    act("Your weapon is briefly sheathed in energy as you slice through $N's protective shield.", FALSE, ch, 0, victim, TO_CHAR);
+
+    GET_MANA(ch) -= 10;
+
+    return TRUE;
+  }
+
+  return check;
+}
+
+
+bool IS_LIGHT(int room) {
+  if (ROOM_LIGHT(room)) return TRUE;                       // If the room has light sources present, it is lit.
+  if (ROOM_ZONE(room) == 30) return TRUE;                  // If the room is in zone 30 (Midgaard), it is lit.
+  if (IS_SET(ROOM_FLAGS(room), LIT)) return TRUE;          // If the room has the LIT flag, it is lit.
+  if (IS_SET(ROOM_FLAGS(room), DARK)) return FALSE;        // If the room has the DARK flag, it is unlit.
+  if (IS_SET(ROOM_FLAGS(room), INDOORS)) return FALSE;     // If the room has the INDOORS flag, it is unlit.
+  if (ROOM_SECTOR_TYPE(room) == SECT_INSIDE) return FALSE; // If the room has the sector type SECT_INSIDE, it is unlit.
+  if (weather_info.sunlight != SUN_DARK) return TRUE;      // If the sun is not dark, the room is lit.
+
+  return FALSE;
+}
+
+
+bool IS_DARK(int room) {
+  return !IS_LIGHT(room);
+}
+
+
+int CAN_SEE(CHAR *ch, CHAR *vict) {
+  if (!ch || !vict) return FALSE;
+
+  if (WIZ_INV(ch, vict) ||
+    IMP_INV(ch, vict) ||
+    NRM_INV(ch, vict) ||
+    (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
+    (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+
+int CAN_TAKE(CHAR *ch, OBJ *obj) {
+  if (!ch || !obj) return FALSE;
+
+  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_TAKE) ||
+    (IS_NPC(ch) && IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_NO_TAKE_MOB))) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+
+int GETOBJ_WEIGHT(OBJ *obj) {
+  if (!obj) return 0;
+
+  int weight = OBJ_WEIGHT(obj);
+
+  if ((OBJ_TYPE(obj) == ITEM_DRINKCON) && OBJ_VALUE(obj, 0)) {
+    weight *= (0.5 + ((OBJ_VALUE(obj, 1) / 2.0) / OBJ_VALUE(obj, 0)));
+  }
+
+  if (obj->contains) {
+    for (OBJ *tmp_obj = OBJ_CONTAINS(obj); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj))
+      weight += GETOBJ_WEIGHT(tmp_obj);
+  }
+
+  return weight;
+}
+
+
+int IS_CARRYING_W(CHAR *ch) {
+  if (!ch) return 0;
+
+  int weight = 0;
+
+  for (OBJ *tmp_obj = GET_CARRYING(ch); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
+    weight += GETOBJ_WEIGHT(tmp_obj);
+  }
+
+  return weight;
+}
+
+
+int IS_CARRYING_N(CHAR *ch) {
+  if (!ch) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = GET_CARRYING(ch); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
+    num++;
+  }
+
+  return num;
+}
+
+
+int COUNT_CONTENTS(OBJ *obj) {
+  if (!obj) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = OBJ_CONTAINS(obj); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
+    num++;
+  }
+
+  return num;
+}
+
+
+int COUNT_RENTABLE_CONTENTS(OBJ *obj) {
+  if (!obj) return 0;
+
+  int num = 0;
+
+  for (OBJ *tmp_obj = OBJ_CONTAINS(obj); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
+    if (IS_RENTABLE(tmp_obj)) num++;
+  }
+
+  return num;
 }
 
 

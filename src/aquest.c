@@ -906,8 +906,8 @@ const int aq_mob_master_list[][2] = {
   { 16508, 3 }, /* wax knight bill janitor */  
   { 16513, 3 }, /* proto-horse proto horse wax */
   { 16526, 3 }, /* jenny consort girl */
-  //{ 17001, 3 }, /* atropos doctor agent */
-  //{ 17003, 3 }, /* sand beast pile */
+  { 17001, 3 }, /* atropos doctor agent */
+  { 17003, 3 }, /* sand beast pile */
   { 21109, 3 }, /* root tree large */
   { 21207, 3 }, /* aldrene bard lady singer */
   { 21223, 3 }, /* thief morian thug */
@@ -947,15 +947,15 @@ const int aq_mob_master_list[][2] = {
   { 12012, 4 }, /* king spider spi */
   { 12202, 4 }, /* thief ettin th et */
   { 12203, 4 }, /* rat giant */
-  { 12811, 4 }, /* mankey pet */
+  //{ 12811, 4 }, /* mankey pet */
   { 12904, 4 }, /* mystic ultimate */
   { 13501, 4 }, /* oglozt greater */
   { 14205, 4 }, /* fred gatekeeper */
   //{ 14508, 4 }, /* eduard magistrate wererat grotesque rat */
   { 16515, 4 }, /* gorgo fur beast */
-  //{ 17005, 4 }, /* marten man */
-  //{ 17006, 4 }, /* maerlyn sorcerer wizard */
-  //{ 17007, 4 }, /* oracle spirit */
+  { 17005, 4 }, /* marten man */
+  { 17006, 4 }, /* maerlyn sorcerer wizard */
+  { 17007, 4 }, /* oracle spirit */
   { 17330, 4 }, /* dwarf smith prisoner ragar */
   { 20108, 4 }, /* Miyamoto Musashi */
   { 20129, 4 }, /* Spectral Warlord */
@@ -995,8 +995,8 @@ const int aq_mob_master_list[][2] = {
   { 5191, 5 }, /* spider sentry second */
   { 5596, 5 }, /* myconid king mushroom */
   { 11326, 5 }, /* vampire strahd count */
-  //{ 17004, 5 }, /* twixt bard man master */
-  //{ 17010, 5 }, /* minion lesser */
+  { 17004, 5 }, /* twixt bard man master */
+  { 17010, 5 }, /* minion lesser */
   { 17308, 5 }, /* marcus wizard mage */
   { 20145, 5 }, /* Shogun Warlord Samurai */
   { 21204, 5 }, /* adrel sage magic */
@@ -1025,7 +1025,7 @@ const int aq_mob_master_list[][2] = {
   { 14503, 6 }, /* ardaan inquisitor warrior */
   //{ 11514, 6 }, /* wyvern */
   { 13019, 6 }, /* elf elven master beastmaster */
-  //{ 17002, 6 }, /* vermilion king */
+  { 17002, 6 }, /* vermilion king */
   { 17306, 6 }, /* pit fiend */
   { 17342, 6 }, /* troll cook chef */
   { 20107, 6 }, /* Raiden */

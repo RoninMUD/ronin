@@ -2790,7 +2790,7 @@ An Adamantium Bar : 1,000,000,000 coins\n\r", ch);
     }
 
     if (!obj) {
-      wizlog_f(LEVEL_ETE, WIZ_LOG_SIX, "[jeweler()] Unable to load object '%s'.", buf);
+      wizlog_f(LEVEL_ETE, 6, "[jeweler()] Unable to load object '%s'.", buf);
 
       return TRUE;
     }

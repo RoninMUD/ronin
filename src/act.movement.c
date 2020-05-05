@@ -31,78 +31,81 @@ void stop_follower(struct char_data *ch);
 void do_special_move(struct char_data *ch, char *arg, int cmd);
 
 void dt_cry(CHAR *ch) {
-  if (CHAR_REAL_ROOM(ch) == NOWHERE) return;
+  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
 
   act("Your body stiffens as you hear $n scream in agony.", FALSE, ch, 0, 0, TO_ROOM);
 
-  for (int door = NORTH; door <= DOWN; door++) {
-    if (CAN_GO(ch, door)) {
-      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r", world[CHAR_REAL_ROOM(ch)].dir_option[door]->to_room_r);
+  for (int dir = NORTH; dir <= DOWN; dir++) {
+    if (CAN_GO(ch, dir)) {
+      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r", world[CHAR_REAL_ROOM(ch)].dir_option[dir]->to_room_r);
     }
   }
 }
 
 int dt_or_hazard(CHAR *ch) {
-  struct extra_descr_data *tmp_descr;
-  int extra=0;
-  char buf[MIL];
+  char buf[MSL];
 
-  if((IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, HAZARD) && number(0,1)) &&
-      GET_LEVEL(ch) < LEVEL_IMM) {
-    if(!IS_NPC(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, HAZARD)) {
-      sprintf(buf, "WIZINFO: %s fell into a HAZARD at %s (%d)", GET_NAME(ch),
-              world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
+  if (!IS_IMMORTAL(ch) && IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), HAZARD) && chance(50)) {
+    if (!IS_NPC(ch)) {
+      snprintf(buf, sizeof(buf), "WIZINFO: %s fell into a HAZARD at %s (%d)",
+        GET_NAME(ch), ROOM_NAME(CHAR_REAL_ROOM(ch)), ROOM_VNUM(CHAR_REAL_ROOM(ch)));
+      wizlog(buf, LEVEL_IMM, 3);
       log_s(buf);
       deathlog(buf);
-      wizlog(buf,LEVEL_IMM,3);
     }
 
     // signal character and rider with MSG_AUTORENT, which is a terrible hack
     // to have dynamic enchantments remove themselves and not save affects
     // permanently in raw_kill
 
-    if(ch->specials.riding) {
-      signal_char(ch->specials.riding, ch->specials.riding, MSG_AUTORENT, "");
-      raw_kill(ch->specials.riding);
+    if (GET_MOUNT(ch)) {
+      signal_char(GET_MOUNT(ch), GET_MOUNT(ch), MSG_AUTORENT, "");
+
+      raw_kill(GET_MOUNT(ch));
     }
 
     signal_char(ch, ch, MSG_AUTORENT, "");
+
     raw_kill(ch);
+
     return TRUE;
   }
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, DEATH) && GET_LEVEL(ch)<LEVEL_IMM) {
-    if(!IS_NPC(ch)) {
-      sprintf(buf, "WIZINFO: %s fell into a DT at %s (%d)", GET_NAME(ch),
-              world[CHAR_REAL_ROOM(ch)].name,world[CHAR_REAL_ROOM(ch)].number);
+  if (!IS_IMMORTAL(ch) && IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DEATH)) {
+    if (!IS_NPC(ch)) {
+      snprintf(buf, sizeof(buf), "WIZINFO: %s fell into a DT at %s (%d)",
+        GET_NAME(ch), ROOM_NAME(CHAR_REAL_ROOM(ch)), ROOM_VNUM(CHAR_REAL_ROOM(ch)));
+      wizlog(buf, LEVEL_IMM, 3);
       log_s(buf);
       deathlog(buf);
-      wizlog(buf,LEVEL_IMM,3);
     }
-    if(ch->specials.riding) {
-      SET_BIT(ch->specials.riding->specials.affected_by2,AFF2_IMMINENT_DEATH);
-      ch->specials.riding->specials.death_timer=2;
-    }
-    SET_BIT(ch->specials.affected_by2,AFF2_IMMINENT_DEATH);
-    ch->specials.death_timer=2;
 
-    /* Send death_text to character */
-    tmp_descr=world[CHAR_REAL_ROOM(ch)].ex_description;
-    while(tmp_descr && !extra) {
-      if(!strcmp(tmp_descr->keyword,"death_text")) {
-        if(tmp_descr->description) {
-          send_to_char(tmp_descr->description,ch);
-          extra=1;
-        }
-      }
-      else {
-        tmp_descr = tmp_descr->next;
+    if (GET_MOUNT(ch)) {
+      SET_BIT(GET_AFF2(GET_MOUNT(ch)), AFF2_IMMINENT_DEATH);
+      GET_DEATH_TIMER(GET_MOUNT(ch)) = 2;
+    }
+
+    SET_BIT(GET_AFF2(ch), AFF2_IMMINENT_DEATH);
+    GET_DEATH_TIMER(ch) = 2;
+
+    bool found_death_text = FALSE;
+
+    for (struct extra_descr_data *extra_desc = world[CHAR_REAL_ROOM(ch)].ex_description; extra_desc; extra_desc = extra_desc->next) {
+      if (!strcmp(extra_desc->keyword, "death_text") && extra_desc->description) {
+        found_death_text = TRUE;
+
+        send_to_char(extra_desc->description, ch);
+
+        break;
       }
     }
-    if(!extra)
-      send_to_char("....\n\rDarkness begins to decend around you....\n\rYour time of death is near....\n\r",ch);
+
+    if (!found_death_text) {
+      send_to_char("....\n\rDarkness begins to decend around you....\n\rYour time of death is near....\n\r", ch);
+    }
 
     dt_cry(ch);
+
     return TRUE;
   }
 
@@ -451,13 +454,13 @@ Returns:
   /* In case MSG_ENTER kills. */
   if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP) && !IS_IMMORTAL(ch)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVE_TRAP) && !IS_IMMORTAL(ch)) {
     send_to_char("\n\rYour movement points have been drained by the surroundings.\n\r", ch);
 
     GET_MOVE(ch) = 0;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANADRAIN) && !IS_IMMORTAL(ch)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANA_DRAIN) && !IS_IMMORTAL(ch)) {
     send_to_char("\n\rYour mana has been drained by the surroundings.\n\r", ch);
 
     GET_MANA(ch) = 0;
@@ -574,9 +577,7 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
     for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
       next_follower = temp_follower->next;
 
-      if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) ||
-          (GET_POS(temp_follower->follower) < POSITION_FIGHTING) ||
-          ((GET_POS(temp_follower->follower) == POSITION_FIGHTING) && SAME_ROOM(temp_follower->follower, GET_OPPONENT(temp_follower->follower)))) continue;
+      if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
 
       act("You follow $N.\n\r", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
 
@@ -588,7 +589,7 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
 void look_in_room(CHAR *ch, int vnum);
 
 void do_peek(struct char_data *ch, char *argument, int cmd) {
-  const char * const keywords[] = {
+  const char *keywords[] = {
     "north",
     "east",
     "south",
@@ -680,7 +681,7 @@ void do_peek(struct char_data *ch, char *argument, int cmd) {
 }
 
 int find_door(struct char_data *ch, char *type, char *dir) {
-  const char * const dirs[] = {
+  const char *dirs[] = {
     "north",
     "east",
     "south",
@@ -858,86 +859,82 @@ void do_close(struct char_data *ch, char *argument, int cmd)
   }
 }
 
+
 #define KEY_RING 16539
-int has_key(struct char_data *ch, int key)
-{
-  struct obj_data *o;
 
-  for (o = ch->carrying; o; o = o->next_content)
-    if (obj_proto_table[o->item_number].virtual == key)
-      return 1;
+bool has_key(CHAR *ch, int key_vnum) {
+  if (!ch || !key_vnum) return FALSE;
 
-  if (ch->equipment[HOLD])
-    if (obj_proto_table[ch->equipment[HOLD]->item_number].virtual == key)
-      return 1;
+  if (EQ(ch, HOLD) && (V_OBJ(EQ(ch, HOLD)) == key_vnum)) {
+    return TRUE;
+  }
 
-  return 0;
-}
-
-OBJ *find_keychain( CHAR* ch )
-{
-  OBJ *chain = get_obj_in_list_num( real_object( KEY_RING ), ch->carrying );
-  if( !chain )
-    if( EQ(ch, HOLD) && V_OBJ( EQ(ch, HOLD ) ) == KEY_RING )
-      chain = EQ(ch, HOLD );
-
-  return chain;
-}
-
-bool keys_from_ring( OBJ *chain, CHAR *ch, char *argument, int cmd )
-{
-  CHAR *victim = chain->carried_by;
-  if( !victim )
-    victim = chain->equipped_by;
-
-  struct obj_data *carrying = NULL;
-  struct obj_data *next_item = NULL;
-
-  for( carrying = chain->contains; carrying; carrying = next_item )
-  {
-    next_item = carrying->next_content;
-    obj_from_obj( carrying );
-    obj_to_char( carrying, victim );
-    if( signal_object( carrying, ch, cmd, argument ) )
+  for (OBJ *temp_obj = GET_CARRYING(ch); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+    if (V_OBJ(temp_obj) == key_vnum) {
       return TRUE;
+    }
   }
 
   return FALSE;
 }
 
-bool keys_to_ring( OBJ* chain)
-{
-  CHAR *victim = chain->carried_by;
-  if( !victim )
-    victim = chain->equipped_by;
 
-  struct obj_data *carrying = NULL;
-  struct obj_data *next_item = NULL;
+OBJ *find_keychain(CHAR* ch) {
+  if (!ch) return NULL;
 
-  bool fiddled = FALSE;
+  if (EQ(ch, HOLD) && (V_OBJ(EQ(ch, HOLD)) == KEY_RING)) {
+    return EQ(ch, HOLD);
+  }
+
+  return get_obj_in_list_num(real_object(KEY_RING), GET_CARRYING(ch));
+}
 
 
-  bool moved_object = FALSE;
-  do
-  {
-    moved_object = FALSE;
-    for( carrying = victim->carrying; carrying; carrying = next_item )
-    {
-      next_item = carrying->next_content;
+bool keys_from_ring(OBJ *chain, char *argument, int cmd) {
+  if (!chain || (V_OBJ(chain) != KEY_RING)) return FALSE;
 
-      if( carrying->obj_flags.type_flag == ITEM_KEY )
-      {
-        obj_from_char( carrying );
-        obj_to_obj( carrying, chain );
-        fiddled = TRUE;
-        moved_object = TRUE;
-        break;
+  CHAR *owner = OBJ_EQUIPPED_BY(chain) ? OBJ_EQUIPPED_BY(chain) : OBJ_CARRIED_BY(chain) ? OBJ_CARRIED_BY(chain) : NULL;
+
+  if (owner) {
+    for (OBJ *temp_obj = OBJ_CONTAINS(chain), *next_obj; temp_obj; temp_obj = next_obj) {
+      next_obj = OBJ_NEXT_CONTENT(temp_obj);
+
+      obj_from_obj(temp_obj);
+      obj_to_char(temp_obj, owner);
+
+      if (signal_object(temp_obj, owner, cmd, argument)) {
+        return TRUE;
       }
     }
-  } while( moved_object );
+  }
+
+  return FALSE;
+}
+
+
+bool keys_to_ring(OBJ *chain) {
+  bool fiddled = FALSE;
+
+  if (!chain || (V_OBJ(chain) != KEY_RING)) return FALSE;
+
+  CHAR *owner = OBJ_EQUIPPED_BY(chain) ? OBJ_EQUIPPED_BY(chain) : OBJ_CARRIED_BY(chain) ? OBJ_CARRIED_BY(chain) : NULL;
+
+  if (owner) {
+    for (OBJ *temp_obj = GET_CARRYING(owner), *next_obj; temp_obj; temp_obj = next_obj) {
+      next_obj = OBJ_NEXT_CONTENT(temp_obj);
+
+      if (OBJ_TYPE(temp_obj) == ITEM_KEY) {
+        fiddled = TRUE;
+
+        obj_from_char(temp_obj);
+        obj_to_obj(temp_obj, chain);
+      }
+    }
+  }
 
   return fiddled;
 }
+
 
 void do_lock(struct char_data *ch, char *argument, int cmd)
 {
@@ -955,7 +952,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
   OBJ *chain = find_keychain( ch );
 
   if( chain )
-    if( keys_from_ring( chain, ch, argument, cmd ) )
+    if( keys_from_ring( chain, argument, cmd ) )
       goto cleanup;
 
   argument_interpreter(argument, type, dir);
@@ -1040,7 +1037,7 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
   OBJ *chain = find_keychain( ch );
 
   if( chain )
-    if( keys_from_ring( chain, ch, argument, cmd ) )
+    if( keys_from_ring( chain, argument, cmd ) )
       goto cleanup;
 
   argument_interpreter(argument, type, dir);
@@ -2412,7 +2409,7 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
 
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVETRAP)) {
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVE_TRAP)) {
     GET_MOVE(ch) = 0;
   }
 
