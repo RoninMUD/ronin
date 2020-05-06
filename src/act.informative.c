@@ -395,7 +395,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       if (GET_WIZINV(target) > GET_LEVEL(ch)) return;
 
       if (!CAN_SEE(ch, target) || IS_HIDING_FROM(ch, target)) {
-        if (GET_MOUNT(target)) {
+        if (GET_MOUNT(target) && CAN_SEE(ch, GET_MOUNT(target))) {
           if (GET_POS(GET_MOUNT(target)) == POSITION_FLYING) {
             act("$n is here, flown by someone.", TRUE, GET_MOUNT(target), 0, ch, TO_VICT);
           }
@@ -406,7 +406,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           return;
         }
 
-        if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+        if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && !IS_IMMORTAL(ch)) {
           send_to_char("You sense a hidden life form.\n\r", ch);
 
           return;
@@ -443,8 +443,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (!IS_NPC(target) || !MOB_LONG(target) || (GET_POS(target) != GET_DEFAULT_POSITION(target))) {
-        buf[0] = '\0';
-
         if (!IS_NPC(target)) {
           str_cat(buf, sizeof(buf), PERS(target, ch));
 
@@ -516,7 +514,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
                 str_cat(buf, sizeof(buf), " is here, riding");
               }
 
-              snprintf(buf2, sizeof(buf2), " %s.", GET_MOUNT(target) ? GET_DISP_NAME(GET_MOUNT(target)) : "something");
+              snprintf(buf2, sizeof(buf2), " %s.", GET_MOUNT(target) && CAN_SEE(ch, GET_MOUNT(target)) ? GET_DISP_NAME(GET_MOUNT(target)) : "something");
               str_cat(buf, sizeof(buf), buf2);
               break;
 
@@ -528,8 +526,13 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
                   str_cat(buf, sizeof(buf), " YOU!");
                 }
                 else {
-                  snprintf(buf2, sizeof(buf2), " %s.", SAME_ROOM(target, GET_OPPONENT(target)) ? GET_DISP_NAME(GET_OPPONENT(target)) : " someone who has already left.");
-                  str_cat(buf, sizeof(buf), buf2);
+                  if (SAME_ROOM(target, GET_OPPONENT(target))) {
+                    snprintf(buf2, sizeof(buf2), " %s.", CAN_SEE(ch, GET_OPPONENT(target)) ? GET_DISP_NAME(GET_OPPONENT(target)) : "someone");
+                    str_cat(buf, sizeof(buf), buf2);
+                  }
+                  else {
+                    str_cat(buf, sizeof(buf), " someone who has already left.");
+                  }
                 }
               }
               else {
@@ -543,50 +546,15 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          str_cat(buf, sizeof(buf), " (Invisible)");
+        if (!IS_NPC(target) && IS_SET(GET_PFLAG(target), PLR_KILL)) {
+          str_cat(buf, sizeof(buf), "(Killer)");
         }
 
-        if (IS_AFFECTED(target, AFF_HIDE)) {
-          str_cat(buf, sizeof(buf), " (Hiding)");
+        if (!IS_NPC(target) && IS_SET(GET_PFLAG(target), PLR_THIEF)) {
+          str_cat(buf, sizeof(buf), "(Thief)");
         }
-
-        if (IS_SET(GET_PFLAG(target), PLR_KILL) && !IS_NPC(target)) {
-          str_cat(buf, sizeof(buf), " (Killer)");
-        }
-
-        if (IS_SET(GET_PFLAG(target), PLR_THIEF) && !IS_NPC(target)) {
-          str_cat(buf, sizeof(buf), " (Thief)");
-        }
-
-        str_cat(buf, sizeof(buf), "\n\r");
       }
       else {
-        buf[0] = '\0';
-
-        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          str_cat(buf, sizeof(buf), "*");
-        }
-
-        if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
-          if (IS_EVIL(target)) {
-            str_cat(buf, sizeof(buf), "(Red Aura) ");
-          }
-          else if (IS_GOOD(target)) {
-            str_cat(buf, sizeof(buf), "(Yellow Aura) ");
-          }
-        }
-
-        if (GET_QUEST_OWNER(target)) {
-          if (GET_QUEST_OWNER(target) == ch) {
-            str_cat(buf, sizeof(buf), "[TARGET] ");
-          }
-          else {
-            snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_DISP_NAME(GET_QUEST_OWNER(target)));
-            str_cat(buf, sizeof(buf), buf2);
-          }
-        }
-
         if (IS_AFFECTED2(target, AFF2_SEVERED)) {
           str_cat(buf, sizeof(buf), "'s upper torso is here... twitching.");
         }
@@ -594,9 +562,38 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           str_cat(buf, sizeof(buf), " lies here... near death.");
         }
         else {
-          str_cat(buf, sizeof(buf), MOB_LONG(target));
+          snprintf(buf2, sizeof(buf2), "%s", MOB_LONG(target));
+
+          size_t buf2_len = strlen(buf2);
+
+          /* Strip newline from the end of MOB_LONG. */
+          while (buf2_len && ISNEWL(*(buf2 + buf2_len - 1))) {
+            *(buf2 + buf2_len - 1) = '\0';
+            buf2_len -= 1;
+          }
+
+          str_cat(buf, sizeof(buf), buf2);
         }
       }
+
+      if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
+        if (IS_EVIL(target)) {
+          str_cat(buf, sizeof(buf), "(Red Aura)");
+        }
+        else if (IS_GOOD(target)) {
+          str_cat(buf, sizeof(buf), "(Yellow Aura)");
+        }
+      }
+
+      if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+        str_cat(buf, sizeof(buf), "(Invisible)");
+      }
+
+      if (IS_AFFECTED(target, AFF_HIDE)) {
+        str_cat(buf, sizeof(buf), "(Hiding)");
+      }
+
+      str_cat(buf, sizeof(buf), "\n\r");
 
       send_to_char(buf, ch);
 
@@ -2464,6 +2461,7 @@ void do_time(CHAR *ch, char *argument, int cmd) {
   time_t ct = time(NULL);
   char *ct_str = asctime(localtime(&ct));
 
+  /* Strip newline from string returned by asctime(). */
   *(ct_str + strlen(ct_str) - 1) = '\0';
 
   printf_to_char(ch, "Local server time is %s, with reboot due at %02d:00.\n\r", ct_str, REBOOT_AT);

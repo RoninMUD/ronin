@@ -62,13 +62,28 @@ void update_pos(struct char_data *ch);
  * @return The generated number.
  */
 int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
-  int32_t result = 0, temp;
+  int32_t result = 0, mod = 0, temp;
 
   /* Swap from and to if from is greater than to. */
   if (from > to) {
     temp = from;
     from = to;
     to = temp;
+  }
+
+  /* If from < 0, shift the range up, since randombytes_uniform() requires an upper bound >= 0. */
+  if (from < 0) {
+    mod = abs(from);
+
+    from += mod;
+
+    /* Overflow protection. */
+    if ((int64_t)to + mod > INT_MAX) {
+      to = INT_MAX;
+    }
+    else {
+      to += mod;
+    }
   }
 
   /* Generate a result based on the chosen mode. */
@@ -88,7 +103,7 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
       break;
   }
 
-  return result;
+  return result - mod;
 }
 
 /**
@@ -217,7 +232,7 @@ int32_t MAX(int32_t a, int32_t b) {
  * @return The length of the merged strings.
  */
 size_t str_mrg(char *dest, size_t dest_size, ...) {
-  size_t len = 0;
+  size_t len = 0, str_len;
   va_list str_list;
   char *str;
 
@@ -225,17 +240,25 @@ size_t str_mrg(char *dest, size_t dest_size, ...) {
 
   /* Copy each string from str_list to dest. */
   while (((str = va_arg(str_list, char *)) != NULL) && (len < dest_size - 1)) {
-    /* Copy each character from the current string to dest. */
-    while ((*str != '\0') && (len < dest_size - 1)) {
-      *dest++ = *str++;
-      len++;
+    str_len = strlen(str);
+
+    /* Copy the current string to dest. */
+    if (str != dest) {
+      if (str_len > dest_size - 1) {
+        str_len = dest_size - 1;
+      }
+
+      strncpy(dest, str, str_len);
     }
+
+    dest += str_len;
+    len += str_len;
   }
+
+  va_end(str_list);
 
   /* Null-terminate dest. */
   *dest++ = '\0';
-
-  va_end(str_list);
 
   return len;
 }
