@@ -597,6 +597,10 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
       send_to_char(buf, ch);
 
+      if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
+        act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
+      }
+
       /* Store 'simple' affects "all in one go"; for 'complex' affects
          (e.g. warchant, wrath of god, etc.), or enchantments, use the
          explicit method. */
@@ -604,10 +608,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
       for (AFF *af = target->affected; af; af = af->next) {
         af_list[af->type] = TRUE;
-      }
-
-      if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
-        act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
@@ -1164,115 +1164,148 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
     case 6: /* look in */
     {
-      if (*arg2) {
-        OBJ *temp_obj;
-
-        int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
-
-        if (temp_obj) {
-          switch (OBJ_TYPE(temp_obj)) {
-            case ITEM_CONTAINER:
-            case ITEM_AQ_ORDER:
-              if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
-                switch (bits) {
-                  case FIND_OBJ_INV:
-                    printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                  case FIND_OBJ_ROOM:
-                    printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                  case FIND_OBJ_EQUIP:
-                    printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                }
-
-                list_obj_to_char(OBJ_CONTAINS(temp_obj), ch, 2, TRUE);
-              }
-              else {
-                send_to_char("It is closed.\n\r", ch);
-              }
-              break;
-
-            case ITEM_DRINKCON:
-              if (OBJ_VALUE(temp_obj, 1)) {
-                printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
-                  fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
-                  S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
-                  color_liquid[OBJ_VALUE(temp_obj, 2)]);
-              }
-              else {
-                send_to_char("It is empty.\n\r", ch);
-              }
-              break;
-
-            default:
-              send_to_char("That is not a container.\n\r", ch);
-          }
-        }
-        else {
-          send_to_char("You do not see that here.\n\r", ch);
-        }
-      }
-      else {
+      if (!*arg2) {
         send_to_char("Look in what?\n\r", ch);
+
+        return;
       }
+
+      OBJ *temp_obj;
+
+      int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
+
+      if (temp_obj) {
+        switch (OBJ_TYPE(temp_obj)) {
+          case ITEM_CONTAINER:
+          case ITEM_AQ_ORDER:
+            if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
+              switch (bits) {
+                case FIND_OBJ_INV:
+                  printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+                case FIND_OBJ_ROOM:
+                  printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+                case FIND_OBJ_EQUIP:
+                  printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+              }
+
+              list_obj_to_char(OBJ_CONTAINS(temp_obj), ch, 2, TRUE);
+            }
+            else {
+              send_to_char("It is closed.\n\r", ch);
+            }
+            break;
+
+          case ITEM_DRINKCON:
+            if (OBJ_VALUE(temp_obj, 1)) {
+              printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
+                fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
+                S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
+                color_liquid[OBJ_VALUE(temp_obj, 2)]);
+            }
+            else {
+              send_to_char("It is empty.\n\r", ch);
+            }
+            break;
+
+          default:
+            send_to_char("That is not a container.\n\r", ch);
+        }
+
+        return;
+      }
+
+      send_to_char("You do not see that here.\n\r", ch);
     }
     break;
 
     case 7: /* look at */
     {
-      if (*arg2) {
-        CHAR *temp_ch;
-        OBJ *temp_obj;
-        char *room_extra_desc;
+      if (!*arg2) {
+        send_to_char("Look at what?\n\r", ch);
 
-        generic_find(arg2, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &temp_ch, &temp_obj);
+        return;
+      }
 
-        /* Show the character found in the room. Keep this first, to ensure characters take precedence. */
-        if (temp_ch) {
-          if (temp_ch != ch) {
-            act("$n looks at you.", TRUE, ch, 0, temp_ch, TO_VICT);
-            act("$n looks at $N.", TRUE, ch, 0, temp_ch, TO_NOTVICT);
-          }
+      /* Search for characters in the room. */
+      CHAR *temp_ch;
 
-          show_char_to_char(temp_ch, ch, 1);
+      generic_find(arg2, FIND_CHAR_ROOM, ch, &temp_ch, NULL);
+
+      /* Show the character found. Keep this first, to ensure characters take precedence. */
+      if (temp_ch) {
+        if (temp_ch != ch) {
+          act("$n looks at you.", TRUE, ch, 0, temp_ch, TO_VICT);
+          act("$n looks at $N.", TRUE, ch, 0, temp_ch, TO_NOTVICT);
         }
-        /* Show the extra description found in the room. */
-        else if ((room_extra_desc = find_ex_description(arg2, ROOM_GET_EXTRA_DESC(CHAR_REAL_ROOM(ch))))) {
-          char buf[MSL];
 
-          snprintf(buf, sizeof(buf), "$n looks at the %s.", arg2);
+        show_char_to_char(temp_ch, ch, 1);
 
-          act(buf, TRUE, ch, 0, 0, TO_ROOM);
+        return;
+      }
 
-          /* A "window description" is a special extra description composed of a room virtual number.
-              When the description is shown to a character, they will see the description of the room that matches the virtual number. */
-          int window = atoi(room_extra_desc);
+      /* Search for extra descriptions in the room. */
+      char *room_extra_desc = find_ex_description(arg2, ROOM_GET_EXTRA_DESC(CHAR_REAL_ROOM(ch)));
 
-          if (window > 0) {
-            look_in_room(ch, window);
-          }
-          else {
-            page_string(GET_DESCRIPTOR(ch), room_extra_desc, 0);
-          }
-        }
-        /* Show the object found. */
-        else if (temp_obj) {
-          /* Show the object extra description, if one exist. */
-          if (!show_object_extra_desc(temp_obj, ch, arg2)) {
-            show_obj_to_char(temp_obj, ch, 5, 0); /* Show without description. */
-          }
-          else {
-            show_obj_to_char(temp_obj, ch, 6, 0); /* Show only glowing, humming, etc. */
-          }
+      /* Show the extra description found. */
+      if (room_extra_desc) {
+        char buf[MSL];
+
+        snprintf(buf, sizeof(buf), "$n looks at the %s.", arg2);
+
+        act(buf, TRUE, ch, 0, 0, TO_ROOM);
+
+        /* A "window description" is a special extra description composed of a room virtual number.
+           When the description is shown to a character, they will see the description of the room that matches the virtual number. */
+        int window = atoi(room_extra_desc);
+
+        if (window > 0) {
+          look_in_room(ch, window);
         }
         else {
-          send_to_char("You do not see that here.\n\r", ch);
+          page_string(GET_DESCRIPTOR(ch), room_extra_desc, 0);
         }
+
+        return;
       }
-      else {
-        send_to_char("Look at what?\n\r", ch);
+
+      /* Search for object extra descriptions in... */
+      OBJ *temp_obj;
+
+      /* Equipment */
+      for (int eq_pos = WEAR_LIGHT; eq_pos < MAX_WEAR; eq_pos++) {
+        if (EQ(ch, eq_pos) && show_object_extra_desc(temp_obj, ch, arg2)) return;
       }
+
+      /* Inventory */
+      for (temp_obj = GET_CARRYING(ch); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+        if (show_object_extra_desc(temp_obj, ch, arg2)) return;
+      }
+
+      /* Room */
+      for (temp_obj = ROOM_CONTENTS(CHAR_REAL_ROOM(ch)); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+        if (show_object_extra_desc(temp_obj, ch, arg2)) return;
+      }
+
+      /* Search for objects. */
+      generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
+
+      /* Show the object found. */
+      if (temp_obj) {
+        /* Show the object extra description, if one exist. */
+        if (!show_object_extra_desc(temp_obj, ch, arg2)) {
+          show_obj_to_char(temp_obj, ch, 5, 0); /* Show without description. */
+        }
+        else {
+          show_obj_to_char(temp_obj, ch, 6, 0); /* Show only glowing, humming, etc. */
+        }
+
+        return;
+      }
+
+      send_to_char("You do not see that here.\n\r", ch);
     }
     break;
 
