@@ -359,23 +359,26 @@ void list_obj_to_char(OBJ *list, CHAR *ch, int mode, bool show) {
 
   OBJ *obj = list;
 
-  while(obj) {
-    if (!CAN_SEE_OBJ(ch, obj)) continue;
+  while (obj) {
+    if (CAN_SEE_OBJ(ch, obj)) {
+      int count = 1;
 
-    int count = 1;
+      OBJ *obj_ptr = obj;
 
-    OBJ *obj_ptr = obj;
+      while ((obj = OBJ_NEXT_CONTENT(obj)) &&
+        (OBJ_RNUM(obj) == OBJ_RNUM(obj_ptr)) &&
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_CLONE)) &&
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_INVISIBLE)) &&
+        !strcmp(OBJ_NAME(obj), OBJ_NAME(obj_ptr)) &&
+        !strcmp(OBJ_SHORT(obj), OBJ_SHORT(obj_ptr))) {
+        count++;
+      }
 
-    while ((obj = OBJ_NEXT_CONTENT(obj)) &&
-           (OBJ_RNUM(obj) == OBJ_RNUM(obj_ptr)) &&
-           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_CLONE)) &&
-           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_INVISIBLE)) &&
-           !strcmp(OBJ_NAME(obj), OBJ_NAME(obj_ptr)) &&
-           !strcmp(OBJ_SHORT(obj), OBJ_SHORT(obj_ptr))) {
-      count++;
+      show_obj_to_char(obj_ptr, ch, mode, count);
     }
-
-    show_obj_to_char(obj_ptr, ch, mode, count);
+    else {
+      obj = OBJ_NEXT_CONTENT(obj);
+    }
   }
 }
 
@@ -1615,51 +1618,26 @@ void do_exits(CHAR *ch, char *argument, int cmd) {
   printf_to_char(ch, "\n\rObvious exits:\n\r%s", *buf ? buf : "None");
 }
 
-/* Remove the Immortalis' Grace enchant. */
-void imm_grace_remove_enchant(CHAR *ch) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    if (ench->type == ENCHANT_IMM_GRACE) {
-      enchantment_remove(ch, ench, FALSE);
-
-      break;
-    }
-  }
-}
-
 /* Add the Immortali's Grace enchant. */
 void imm_grace_add_enchant(CHAR *ch) {
-  ENCH ench = { 0 };
+  ENCH imm_grace = { 0 };
 
-  ench.name = strdup("Immortalis' Grace");
+  imm_grace.name = strdup("Immortalis' Grace");
 
-  enchantment_to_char(ch, &ench, TRUE);
+  enchantment_to_char(ch, &imm_grace, TRUE);
 
-  free(ench.name);
+  free(imm_grace.name);
 }
 
-/* Maniplulate a player's death experience. Don't use this directly unless you know what you're doing. */
-int adjust_death_exp(CHAR *ch, int exp) {
-  if (!ch || (exp == 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
+/* Remove the Immortalis' Grace enchant. */
+void imm_grace_remove_enchant(CHAR *ch) {
+  ENCH *imm_grace = get_enchantment_by_type(ch, ENCHANT_IMM_GRACE);
 
-  int64_t tmp_exp = GET_DEATH_EXP(ch) + exp;
-
-  if (tmp_exp > INT_MAX) {
-    exp = INT_MAX - GET_DEATH_EXP(ch);
-  }
-  else if (tmp_exp < 0) {
-    exp = -GET_DEATH_EXP(ch);
-  }
-
-  GET_DEATH_EXP(ch) += exp;
-
-  /* Did the player exhaust their death xp pool? */
-  if (GET_DEATH_EXP(ch) == 0) {
+  if (imm_grace) {
     send_to_char("You are no longer affected by Immortalis' Grace.\n\r", ch);
 
-    imm_grace_remove_enchant(ch);
+    enchantment_remove(ch, imm_grace, FALSE);
   }
-
-  return exp;
 }
 
 /* Calculate a player's death experience multiplier. */
@@ -1676,23 +1654,57 @@ int calc_death_exp_mult(CHAR *ch) {
   return DEATH_EXP_MULT;
 }
 
+/* Maniplulate a player's death experience. Don't use this directly unless you know what you're doing. */
+int adjust_death_exp(CHAR *ch, int exp) {
+  if (!ch) return 0;
+
+  /* Sanity check. */
+  GET_DEATH_EXP(ch) = MAX(GET_DEATH_EXP(ch), 0);
+
+  /* Overflow protection. */
+  if (exp > 0) {
+    exp = MIN(INT_MAX - GET_DEATH_EXP(ch), exp);
+  }
+  /* Ensure deducted exp is no greater than the amount of death exp the player has. */
+  else {
+    exp = MAX(-GET_DEATH_EXP(ch), exp);
+  }
+
+  GET_DEATH_EXP(ch) += exp;
+
+  /* Did the player exhaust their death xp pool? */
+  if (GET_DEATH_EXP(ch) == 0) {
+    imm_grace_remove_enchant(ch);
+  }
+
+  return exp;
+}
+
 /* Give a player death experience and return how much experience was given. */
 int gain_death_exp(CHAR *ch, int exp) {
-  if (!ch || (exp <= 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
+  if (!ch) return 0;
+
+  /* Sanity check. */
+  GET_DEATH_EXP(ch) = MAX(GET_DEATH_EXP(ch), 0);
+
+  /* Ensure exp is >= 0. To remove death exp, use adjust_death_exp() with a negative exp value. */
+  exp = MAX(exp, 0);
 
   int mult = calc_death_exp_mult(ch);
 
-  int64_t tmp_exp = exp * mult;
-
-  if (tmp_exp > INT_MAX) {
+  /* Overflow protection. Underflow is not possible, due to exp being >= 0. */
+  if (((int64_t)exp * mult) > INT_MAX) {
     exp = INT_MAX;
   }
   else {
     exp *= mult;
   }
 
-  exp = abs(adjust_death_exp(ch, -exp)); /* Deduct the experience from the player's death experience pool. */
-  gain_exp(ch, exp);                     /* Give the (adjusted) death experience to the player. */
+  /* Adjust exp to the amount actually deducted from the player's death exp. */
+  exp = -adjust_death_exp(ch, -exp);
+
+  /* Earn the adjusted exp as regular exp. */
+  gain_exp(ch, exp);
 
   return exp;
 }
@@ -2410,7 +2422,6 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   }
 }
 
-
 void do_time(CHAR *ch, char *argument, int cmd) {
   int day = time_info.day + 1;
   int weekday = ((28 * time_info.month) + day) % 7;
@@ -2459,23 +2470,23 @@ void do_time(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_weather(struct char_data *ch, char *argument, int cmd)
-{
+void do_weather(struct char_data *ch, char *argument, int cmd) {
   char buf[100];
-  char *sky_look[4]= {
+  char *sky_look[4] = {
     "cloudless",
     "cloudy",
     "rainy",
-    "lit by flashes of lightning"};
+    "lit by flashes of lightning" };
 
   if (IS_OUTSIDE(ch)) {
     sprintf(buf,
       "The sky is %s and %s.\n\r",
       sky_look[weather_info.sky],
-      (weather_info.change >=0 ? "you feel a warm wind from south" :
-       "your foot tells you bad weather is due"));
-    send_to_char(buf,ch);
-  } else
+      (weather_info.change >= 0 ? "you feel a warm wind from south" :
+        "your foot tells you bad weather is due"));
+    send_to_char(buf, ch);
+  }
+  else
     send_to_char("You have no feeling about the weather at all.\n\r", ch);
 }
 
