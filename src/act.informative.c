@@ -359,23 +359,26 @@ void list_obj_to_char(OBJ *list, CHAR *ch, int mode, bool show) {
 
   OBJ *obj = list;
 
-  while(obj) {
-    if (!CAN_SEE_OBJ(ch, obj)) continue;
+  while (obj) {
+    if (CAN_SEE_OBJ(ch, obj)) {
+      int count = 1;
 
-    int count = 1;
+      OBJ *obj_ptr = obj;
 
-    OBJ *obj_ptr = obj;
+      while ((obj = OBJ_NEXT_CONTENT(obj)) &&
+        (OBJ_RNUM(obj) == OBJ_RNUM(obj_ptr)) &&
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_CLONE)) &&
+        (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_INVISIBLE)) &&
+        !strcmp(OBJ_NAME(obj), OBJ_NAME(obj_ptr)) &&
+        !strcmp(OBJ_SHORT(obj), OBJ_SHORT(obj_ptr))) {
+        count++;
+      }
 
-    while ((obj = OBJ_NEXT_CONTENT(obj)) &&
-           (OBJ_RNUM(obj) == OBJ_RNUM(obj_ptr)) &&
-           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_CLONE)) &&
-           (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE) == IS_SET(OBJ_EXTRA_FLAGS(obj_ptr), ITEM_INVISIBLE)) &&
-           !strcmp(OBJ_NAME(obj), OBJ_NAME(obj_ptr)) &&
-           !strcmp(OBJ_SHORT(obj), OBJ_SHORT(obj_ptr))) {
-      count++;
+      show_obj_to_char(obj_ptr, ch, mode, count);
     }
-
-    show_obj_to_char(obj_ptr, ch, mode, count);
+    else {
+      obj = OBJ_NEXT_CONTENT(obj);
+    }
   }
 }
 
@@ -392,7 +395,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       if (GET_WIZINV(target) > GET_LEVEL(ch)) return;
 
       if (!CAN_SEE(ch, target) || IS_HIDING_FROM(ch, target)) {
-        if (GET_MOUNT(target)) {
+        if (GET_MOUNT(target) && CAN_SEE(ch, GET_MOUNT(target))) {
           if (GET_POS(GET_MOUNT(target)) == POSITION_FLYING) {
             act("$n is here, flown by someone.", TRUE, GET_MOUNT(target), 0, ch, TO_VICT);
           }
@@ -403,7 +406,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           return;
         }
 
-        if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+        if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && !IS_IMMORTAL(ch)) {
           send_to_char("You sense a hidden life form.\n\r", ch);
 
           return;
@@ -440,8 +443,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (!IS_NPC(target) || !MOB_LONG(target) || (GET_POS(target) != GET_DEFAULT_POSITION(target))) {
-        buf[0] = '\0';
-
         if (!IS_NPC(target)) {
           str_cat(buf, sizeof(buf), PERS(target, ch));
 
@@ -513,7 +514,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
                 str_cat(buf, sizeof(buf), " is here, riding");
               }
 
-              snprintf(buf2, sizeof(buf2), " %s.", GET_MOUNT(target) ? GET_DISP_NAME(GET_MOUNT(target)) : "something");
+              snprintf(buf2, sizeof(buf2), " %s.", GET_MOUNT(target) && CAN_SEE(ch, GET_MOUNT(target)) ? GET_DISP_NAME(GET_MOUNT(target)) : "something");
               str_cat(buf, sizeof(buf), buf2);
               break;
 
@@ -525,8 +526,13 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
                   str_cat(buf, sizeof(buf), " YOU!");
                 }
                 else {
-                  snprintf(buf2, sizeof(buf2), " %s.", SAME_ROOM(target, GET_OPPONENT(target)) ? GET_DISP_NAME(GET_OPPONENT(target)) : " someone who has already left.");
-                  str_cat(buf, sizeof(buf), buf2);
+                  if (SAME_ROOM(target, GET_OPPONENT(target))) {
+                    snprintf(buf2, sizeof(buf2), " %s.", CAN_SEE(ch, GET_OPPONENT(target)) ? GET_DISP_NAME(GET_OPPONENT(target)) : "someone");
+                    str_cat(buf, sizeof(buf), buf2);
+                  }
+                  else {
+                    str_cat(buf, sizeof(buf), " someone who has already left.");
+                  }
                 }
               }
               else {
@@ -540,50 +546,15 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          str_cat(buf, sizeof(buf), " (Invisible)");
+        if (!IS_NPC(target) && IS_SET(GET_PFLAG(target), PLR_KILL)) {
+          str_cat(buf, sizeof(buf), "(Killer)");
         }
 
-        if (IS_AFFECTED(target, AFF_HIDE)) {
-          str_cat(buf, sizeof(buf), " (Hiding)");
+        if (!IS_NPC(target) && IS_SET(GET_PFLAG(target), PLR_THIEF)) {
+          str_cat(buf, sizeof(buf), "(Thief)");
         }
-
-        if (IS_SET(GET_PFLAG(target), PLR_KILL) && !IS_NPC(target)) {
-          str_cat(buf, sizeof(buf), " (Killer)");
-        }
-
-        if (IS_SET(GET_PFLAG(target), PLR_THIEF) && !IS_NPC(target)) {
-          str_cat(buf, sizeof(buf), " (Thief)");
-        }
-
-        str_cat(buf, sizeof(buf), "\n\r");
       }
       else {
-        buf[0] = '\0';
-
-        if (IS_AFFECTED(target, AFF_INVISIBLE)) {
-          str_cat(buf, sizeof(buf), "*");
-        }
-
-        if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
-          if (IS_EVIL(target)) {
-            str_cat(buf, sizeof(buf), "(Red Aura) ");
-          }
-          else if (IS_GOOD(target)) {
-            str_cat(buf, sizeof(buf), "(Yellow Aura) ");
-          }
-        }
-
-        if (GET_QUEST_OWNER(target)) {
-          if (GET_QUEST_OWNER(target) == ch) {
-            str_cat(buf, sizeof(buf), "[TARGET] ");
-          }
-          else {
-            snprintf(buf2, sizeof(buf2), "[%s's TARGET] ", GET_DISP_NAME(GET_QUEST_OWNER(target)));
-            str_cat(buf, sizeof(buf), buf2);
-          }
-        }
-
         if (IS_AFFECTED2(target, AFF2_SEVERED)) {
           str_cat(buf, sizeof(buf), "'s upper torso is here... twitching.");
         }
@@ -591,11 +562,44 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           str_cat(buf, sizeof(buf), " lies here... near death.");
         }
         else {
-          str_cat(buf, sizeof(buf), MOB_LONG(target));
+          snprintf(buf2, sizeof(buf2), "%s", MOB_LONG(target));
+
+          size_t buf2_len = strlen(buf2);
+
+          /* Strip newline from the end of MOB_LONG. */
+          while (buf2_len && ISNEWL(*(buf2 + buf2_len - 1))) {
+            *(buf2 + buf2_len - 1) = '\0';
+            buf2_len -= 1;
+          }
+
+          str_cat(buf, sizeof(buf), buf2);
         }
       }
 
+      if (IS_AFFECTED(ch, AFF_DETECT_ALIGNMENT)) {
+        if (IS_EVIL(target)) {
+          str_cat(buf, sizeof(buf), "(Red Aura)");
+        }
+        else if (IS_GOOD(target)) {
+          str_cat(buf, sizeof(buf), "(Yellow Aura)");
+        }
+      }
+
+      if (IS_AFFECTED(target, AFF_INVISIBLE)) {
+        str_cat(buf, sizeof(buf), "(Invisible)");
+      }
+
+      if (IS_AFFECTED(target, AFF_HIDE)) {
+        str_cat(buf, sizeof(buf), "(Hiding)");
+      }
+
+      str_cat(buf, sizeof(buf), "\n\r");
+
       send_to_char(buf, ch);
+
+      if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
+        act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
+      }
 
       /* Store 'simple' affects "all in one go"; for 'complex' affects
          (e.g. warchant, wrath of god, etc.), or enchantments, use the
@@ -604,10 +608,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
       for (AFF *af = target->affected; af; af = af->next) {
         af_list[af->type] = TRUE;
-      }
-
-      if (IS_SET(GET_PFLAG(target), PLR_WRITING)) {
-        act("......$n is writing a message.", FALSE, target, 0, ch, TO_VICT);
       }
 
       if (!IS_SET(GET_PFLAG(ch), PLR_TAGBRF)) {
@@ -1164,115 +1164,150 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
     case 6: /* look in */
     {
-      if (*arg2) {
-        OBJ *temp_obj;
-
-        int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
-
-        if (temp_obj) {
-          switch (OBJ_TYPE(temp_obj)) {
-            case ITEM_CONTAINER:
-            case ITEM_AQ_ORDER:
-              if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
-                switch (bits) {
-                  case FIND_OBJ_INV:
-                    printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                  case FIND_OBJ_ROOM:
-                    printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                  case FIND_OBJ_EQUIP:
-                    printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
-                    break;
-                }
-
-                list_obj_to_char(OBJ_CONTAINS(temp_obj), ch, 2, TRUE);
-              }
-              else {
-                send_to_char("It is closed.\n\r", ch);
-              }
-              break;
-
-            case ITEM_DRINKCON:
-              if (OBJ_VALUE(temp_obj, 1)) {
-                printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
-                  fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
-                  S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
-                  color_liquid[OBJ_VALUE(temp_obj, 2)]);
-              }
-              else {
-                send_to_char("It is empty.\n\r", ch);
-              }
-              break;
-
-            default:
-              send_to_char("That is not a container.\n\r", ch);
-          }
-        }
-        else {
-          send_to_char("You do not see that here.\n\r", ch);
-        }
-      }
-      else {
+      if (!*arg2) {
         send_to_char("Look in what?\n\r", ch);
+
+        return;
       }
+
+      OBJ *temp_obj;
+
+      int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
+
+      if (temp_obj) {
+        switch (OBJ_TYPE(temp_obj)) {
+          case ITEM_CONTAINER:
+          case ITEM_AQ_ORDER:
+            if (!IS_SET(OBJ_VALUE(temp_obj, 1), CONT_CLOSED) || (OBJ_TYPE(temp_obj) == ITEM_AQ_ORDER)) {
+              switch (bits) {
+                case FIND_OBJ_INV:
+                  printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+                case FIND_OBJ_ROOM:
+                  printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+                case FIND_OBJ_EQUIP:
+                  printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
+                  break;
+              }
+
+              list_obj_to_char(OBJ_CONTAINS(temp_obj), ch, 2, TRUE);
+            }
+            else {
+              send_to_char("It is closed.\n\r", ch);
+            }
+            break;
+
+          case ITEM_DRINKCON:
+            if (OBJ_VALUE(temp_obj, 1)) {
+              printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
+                fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
+                S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
+                color_liquid[OBJ_VALUE(temp_obj, 2)]);
+            }
+            else {
+              send_to_char("It is empty.\n\r", ch);
+            }
+            break;
+
+          default:
+            send_to_char("That is not a container.\n\r", ch);
+        }
+
+        return;
+      }
+
+      send_to_char("You do not see that here.\n\r", ch);
     }
     break;
 
     case 7: /* look at */
     {
-      if (*arg2) {
-        CHAR *temp_ch;
-        OBJ *temp_obj;
-        char *room_extra_desc;
+      if (!*arg2) {
+        send_to_char("Look at what?\n\r", ch);
 
-        generic_find(arg2, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &temp_ch, &temp_obj);
+        return;
+      }
 
-        /* Show the character found in the room. Keep this first, to ensure characters take precedence. */
-        if (temp_ch) {
-          if (temp_ch != ch) {
-            act("$n looks at you.", TRUE, ch, 0, temp_ch, TO_VICT);
-            act("$n looks at $N.", TRUE, ch, 0, temp_ch, TO_NOTVICT);
-          }
+      /* Search for characters in the room. */
+      CHAR *temp_ch;
 
-          show_char_to_char(temp_ch, ch, 1);
+      generic_find(arg2, FIND_CHAR_ROOM, ch, &temp_ch, NULL);
+
+      /* Show the character found. Keep this first, to ensure characters take precedence. */
+      if (temp_ch) {
+        if (temp_ch != ch) {
+          act("$n looks at you.", TRUE, ch, 0, temp_ch, TO_VICT);
+          act("$n looks at $N.", TRUE, ch, 0, temp_ch, TO_NOTVICT);
         }
-        /* Show the extra description found in the room. */
-        else if ((room_extra_desc = find_ex_description(arg2, ROOM_GET_EXTRA_DESC(CHAR_REAL_ROOM(ch))))) {
-          char buf[MSL];
 
-          snprintf(buf, sizeof(buf), "$n looks at the %s.", arg2);
+        show_char_to_char(temp_ch, ch, 1);
 
-          act(buf, TRUE, ch, 0, 0, TO_ROOM);
+        return;
+      }
 
-          /* A "window description" is a special extra description composed of a room virtual number.
-              When the description is shown to a character, they will see the description of the room that matches the virtual number. */
-          int window = atoi(room_extra_desc);
+      /* Search for extra descriptions in the room. */
+      char *room_extra_desc = find_ex_description(arg2, ROOM_GET_EXTRA_DESC(CHAR_REAL_ROOM(ch)));
 
-          if (window > 0) {
-            look_in_room(ch, window);
-          }
-          else {
-            page_string(GET_DESCRIPTOR(ch), room_extra_desc, 0);
-          }
-        }
-        /* Show the object found. */
-        else if (temp_obj) {
-          /* Show the object extra description, if one exist. */
-          if (!show_object_extra_desc(temp_obj, ch, arg2)) {
-            show_obj_to_char(temp_obj, ch, 5, 0); /* Show without description. */
-          }
-          else {
-            show_obj_to_char(temp_obj, ch, 6, 0); /* Show only glowing, humming, etc. */
-          }
+      /* Show the extra description found. */
+      if (room_extra_desc) {
+        char buf[MSL];
+
+        snprintf(buf, sizeof(buf), "$n looks at the %s.", arg2);
+
+        act(buf, TRUE, ch, 0, 0, TO_ROOM);
+
+        /* A "window description" is a special extra description composed of a room virtual number.
+           When the description is shown to a character, they will see the description of the room that matches the virtual number. */
+        int window = atoi(room_extra_desc);
+
+        if (window > 0) {
+          look_in_room(ch, window);
         }
         else {
-          send_to_char("You do not see that here.\n\r", ch);
+          page_string(GET_DESCRIPTOR(ch), room_extra_desc, 0);
         }
+
+        return;
       }
-      else {
-        send_to_char("Look at what?\n\r", ch);
+
+      /* Search for object extra descriptions in... */
+      OBJ *temp_obj;
+
+      /* Equipment */
+      for (int eq_pos = WEAR_LIGHT; eq_pos < MAX_WEAR; eq_pos++) {
+        temp_obj = EQ(ch, eq_pos);
+
+        if (temp_obj && show_object_extra_desc(temp_obj, ch, arg2)) return;
       }
+
+      /* Inventory */
+      for (temp_obj = GET_CARRYING(ch); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+        if (show_object_extra_desc(temp_obj, ch, arg2)) return;
+      }
+
+      /* Room */
+      for (temp_obj = ROOM_CONTENTS(CHAR_REAL_ROOM(ch)); temp_obj; temp_obj = OBJ_NEXT_CONTENT(temp_obj)) {
+        if (show_object_extra_desc(temp_obj, ch, arg2)) return;
+      }
+
+      /* Search for objects. */
+      generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
+
+      /* Show the object found. */
+      if (temp_obj) {
+        /* Show the object extra description, if one exist. */
+        if (!show_object_extra_desc(temp_obj, ch, arg2)) {
+          show_obj_to_char(temp_obj, ch, 5, 0); /* Show without description. */
+        }
+        else {
+          show_obj_to_char(temp_obj, ch, 6, 0); /* Show only glowing, humming, etc. */
+        }
+
+        return;
+      }
+
+      send_to_char("You do not see that here.\n\r", ch);
     }
     break;
 
@@ -1615,51 +1650,26 @@ void do_exits(CHAR *ch, char *argument, int cmd) {
   printf_to_char(ch, "\n\rObvious exits:\n\r%s", *buf ? buf : "None");
 }
 
-/* Remove the Immortalis' Grace enchant. */
-void imm_grace_remove_enchant(CHAR *ch) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    if (ench->type == ENCHANT_IMM_GRACE) {
-      enchantment_remove(ch, ench, FALSE);
-
-      break;
-    }
-  }
-}
-
 /* Add the Immortali's Grace enchant. */
 void imm_grace_add_enchant(CHAR *ch) {
-  ENCH ench = { 0 };
+  ENCH imm_grace = { 0 };
 
-  ench.name = strdup("Immortalis' Grace");
+  imm_grace.name = strdup("Immortalis' Grace");
 
-  enchantment_to_char(ch, &ench, TRUE);
+  enchantment_to_char(ch, &imm_grace, TRUE);
 
-  free(ench.name);
+  free(imm_grace.name);
 }
 
-/* Maniplulate a player's death experience. Don't use this directly unless you know what you're doing. */
-int adjust_death_exp(CHAR *ch, int exp) {
-  if (!ch || (exp == 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
+/* Remove the Immortalis' Grace enchant. */
+void imm_grace_remove_enchant(CHAR *ch) {
+  ENCH *imm_grace = get_enchantment_by_type(ch, ENCHANT_IMM_GRACE);
 
-  int64_t tmp_exp = GET_DEATH_EXP(ch) + exp;
-
-  if (tmp_exp > INT_MAX) {
-    exp = INT_MAX - GET_DEATH_EXP(ch);
-  }
-  else if (tmp_exp < 0) {
-    exp = -GET_DEATH_EXP(ch);
-  }
-
-  GET_DEATH_EXP(ch) += exp;
-
-  /* Did the player exhaust their death xp pool? */
-  if (GET_DEATH_EXP(ch) == 0) {
+  if (imm_grace) {
     send_to_char("You are no longer affected by Immortalis' Grace.\n\r", ch);
 
-    imm_grace_remove_enchant(ch);
+    enchantment_remove(ch, imm_grace, FALSE);
   }
-
-  return exp;
 }
 
 /* Calculate a player's death experience multiplier. */
@@ -1676,23 +1686,57 @@ int calc_death_exp_mult(CHAR *ch) {
   return DEATH_EXP_MULT;
 }
 
+/* Maniplulate a player's death experience. Don't use this directly unless you know what you're doing. */
+int adjust_death_exp(CHAR *ch, int exp) {
+  if (!ch) return 0;
+
+  /* Sanity check. */
+  GET_DEATH_EXP(ch) = MAX(GET_DEATH_EXP(ch), 0);
+
+  /* Overflow protection. */
+  if (exp > 0) {
+    exp = MIN(INT_MAX - GET_DEATH_EXP(ch), exp);
+  }
+  /* Ensure deducted exp is no greater than the amount of death exp the player has. */
+  else {
+    exp = MAX(-GET_DEATH_EXP(ch), exp);
+  }
+
+  GET_DEATH_EXP(ch) += exp;
+
+  /* Did the player exhaust their death xp pool? */
+  if (GET_DEATH_EXP(ch) == 0) {
+    imm_grace_remove_enchant(ch);
+  }
+
+  return exp;
+}
+
 /* Give a player death experience and return how much experience was given. */
 int gain_death_exp(CHAR *ch, int exp) {
-  if (!ch || (exp <= 0) || (GET_DEATH_EXP(ch) == 0)) return 0;
+  if (!ch) return 0;
+
+  /* Sanity check. */
+  GET_DEATH_EXP(ch) = MAX(GET_DEATH_EXP(ch), 0);
+
+  /* Ensure exp is >= 0. To remove death exp, use adjust_death_exp() with a negative exp value. */
+  exp = MAX(exp, 0);
 
   int mult = calc_death_exp_mult(ch);
 
-  int64_t tmp_exp = exp * mult;
-
-  if (tmp_exp > INT_MAX) {
+  /* Overflow protection. Underflow is not possible, due to exp being >= 0. */
+  if (((int64_t)exp * mult) > INT_MAX) {
     exp = INT_MAX;
   }
   else {
     exp *= mult;
   }
 
-  exp = abs(adjust_death_exp(ch, -exp)); /* Deduct the experience from the player's death experience pool. */
-  gain_exp(ch, exp);                     /* Give the (adjusted) death experience to the player. */
+  /* Adjust exp to the amount actually deducted from the player's death exp. */
+  exp = -adjust_death_exp(ch, -exp);
+
+  /* Earn the adjusted exp as regular exp. */
+  gain_exp(ch, exp);
 
   return exp;
 }
@@ -2410,7 +2454,6 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   }
 }
 
-
 void do_time(CHAR *ch, char *argument, int cmd) {
   int day = time_info.day + 1;
   int weekday = ((28 * time_info.month) + day) % 7;
@@ -2453,29 +2496,30 @@ void do_time(CHAR *ch, char *argument, int cmd) {
   time_t ct = time(NULL);
   char *ct_str = asctime(localtime(&ct));
 
+  /* Strip newline from string returned by asctime(). */
   *(ct_str + strlen(ct_str) - 1) = '\0';
 
   printf_to_char(ch, "Local server time is %s, with reboot due at %02d:00.\n\r", ct_str, REBOOT_AT);
 }
 
 
-void do_weather(struct char_data *ch, char *argument, int cmd)
-{
+void do_weather(struct char_data *ch, char *argument, int cmd) {
   char buf[100];
-  char *sky_look[4]= {
+  char *sky_look[4] = {
     "cloudless",
     "cloudy",
     "rainy",
-    "lit by flashes of lightning"};
+    "lit by flashes of lightning" };
 
   if (IS_OUTSIDE(ch)) {
     sprintf(buf,
       "The sky is %s and %s.\n\r",
       sky_look[weather_info.sky],
-      (weather_info.change >=0 ? "you feel a warm wind from south" :
-       "your foot tells you bad weather is due"));
-    send_to_char(buf,ch);
-  } else
+      (weather_info.change >= 0 ? "you feel a warm wind from south" :
+        "your foot tells you bad weather is due"));
+    send_to_char(buf, ch);
+  }
+  else
     send_to_char("You have no feeling about the weather at all.\n\r", ch);
 }
 
