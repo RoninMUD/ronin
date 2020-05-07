@@ -1276,7 +1276,9 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
       /* Equipment */
       for (int eq_pos = WEAR_LIGHT; eq_pos < MAX_WEAR; eq_pos++) {
-        if (EQ(ch, eq_pos) && show_object_extra_desc(temp_obj, ch, arg2)) return;
+        temp_obj = EQ(ch, eq_pos);
+
+        if (temp_obj && show_object_extra_desc(temp_obj, ch, arg2)) return;
       }
 
       /* Inventory */
