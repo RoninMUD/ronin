@@ -73,26 +73,27 @@ const char *object_decay_text[] = {
 /* Procedures related to 'look' */
 
 char *find_ex_description(char *string, struct extra_descr_data *list) {
-  for (struct extra_descr_data *desc = list; desc; desc = desc->next) {
-    if (isname(string, desc->keyword)) {
-      return desc->description;
+  for (struct extra_descr_data *ex_desc = list; ex_desc; ex_desc = ex_desc->next) {
+    if (isname(string, ex_desc->keyword)) {
+      return ex_desc->description;
     }
   }
 
   return NULL;
 }
 
+
 void make_statue(CHAR *ch) {
   if (!ch) return;
 
-  char buf[MIL];
-  OBJ *statue;
+  OBJ *statue = NULL;
 
   CREATE(statue, OBJ, 1);
 
   OBJ_RNUM(statue) = -1;
   OBJ_IN_ROOM(statue) = NOWHERE;
 
+  char buf[MIL];
 
   if (IS_NPC(ch)) {
     OBJ_GET_NAME(statue) = strdup("statue");
@@ -169,6 +170,8 @@ void make_statue(CHAR *ch) {
 
 // TODO: Remove or define "magic number" mode.
 void show_obj_to_char(OBJ *obj, CHAR *ch, int mode, int num) {
+  if (!obj || !ch) return;
+
   const char *statue_decay_text[] = {
     "The new ",
     "The ",
@@ -1026,6 +1029,8 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
 
 void list_char_to_char(CHAR *list, CHAR *ch, int mode) {
+  if (!list || !ch) return;
+
   for (CHAR *temp_ch = list, *next_ch; temp_ch; temp_ch = next_ch) {
     next_ch = temp_ch->next_in_room;
 
@@ -1080,6 +1085,8 @@ bool show_object_extra_desc(OBJ *obj, CHAR *ch, char *arg) {
 
 
 void do_look(CHAR *ch, char *argument, int cmd) {
+  if (!ch || !GET_DESCRIPTOR(ch)) return;
+
   const char * const keywords[] = {
     "north",
     "east",
@@ -1092,8 +1099,6 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     "",
     "\n"
   };
-
-  if (!ch || !GET_DESCRIPTOR(ch)) return;
 
   if (GET_POS(ch) < POSITION_SLEEPING) {
     send_to_char("You can't see anything but stars!\n\r", ch);
@@ -1170,7 +1175,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
         return;
       }
 
-      OBJ *temp_obj;
+      OBJ *temp_obj = NULL;
 
       int bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
 
@@ -1230,7 +1235,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
       }
 
       /* Search for characters in the room. */
-      CHAR *temp_ch;
+      CHAR *temp_ch = NULL;
 
       generic_find(arg2, FIND_CHAR_ROOM, ch, &temp_ch, NULL);
 
@@ -1272,13 +1277,11 @@ void do_look(CHAR *ch, char *argument, int cmd) {
       }
 
       /* Search for object extra descriptions in... */
-      OBJ *temp_obj;
+      OBJ *temp_obj = NULL;
 
       /* Equipment */
       for (int eq_pos = WEAR_LIGHT; eq_pos < MAX_WEAR; eq_pos++) {
-        temp_obj = EQ(ch, eq_pos);
-
-        if (temp_obj && show_object_extra_desc(temp_obj, ch, arg2)) return;
+        if ((temp_obj = EQ(ch, eq_pos)) && show_object_extra_desc(temp_obj, ch, arg2)) return;
       }
 
       /* Inventory */
@@ -1316,6 +1319,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     break;
   }
 }
+
 
 void print_room_flags(int room, char *str, size_t str_size) {
   char buf[MSL];
@@ -1359,10 +1363,13 @@ void print_room_flags(int room, char *str, size_t str_size) {
   snprintf(str, str_size, "%s", buf);
 }
 
+
 #define ROOM_IMMORTAL_KITCHEN 1203
 #define ROOM_DONATION_ROOM    3084
 
 void look_in_room(CHAR *ch, int vnum) {
+  if (!ch) return;
+
   const char *keywords[] = {
     "north",
     "east",
@@ -1541,10 +1548,13 @@ void look_in_room(CHAR *ch, int vnum) {
   }
 }
 
+
 void do_read(CHAR *ch, char *argument, int cmd) {
+  if (!ch) return;
+
   char buf[MSL * 4];
 
-  OBJ *temp_obj;
+  OBJ *temp_obj = NULL;
 
   generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, NULL, &temp_obj);
 
@@ -1572,11 +1582,14 @@ void do_read(CHAR *ch, char *argument, int cmd) {
   }
 }
 
+
 void do_examine(CHAR *ch, char *argument, int cmd) {
+  if (!ch) return;
+
   char buf[MSL];
 
-  CHAR *temp_ch;
-  OBJ *temp_obj;
+  CHAR *temp_ch = NULL;
+  OBJ *temp_obj = NULL;
 
   generic_find(argument, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &temp_ch, &temp_obj);
 
@@ -1604,7 +1617,10 @@ void do_examine(CHAR *ch, char *argument, int cmd) {
   }
 }
 
+
 void do_exits(CHAR *ch, char *argument, int cmd) {
+  if (!ch) return;
+
   const char *exits[] = {
     "North",
     "East ",
@@ -1649,6 +1665,7 @@ void do_exits(CHAR *ch, char *argument, int cmd) {
 
   printf_to_char(ch, "\n\rObvious exits:\n\r%s", *buf ? buf : "None");
 }
+
 
 /* Add the Immortali's Grace enchant. */
 void imm_grace_add_enchant(CHAR *ch) {
@@ -2454,10 +2471,26 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   }
 }
 
+
 void do_time(CHAR *ch, char *argument, int cmd) {
+  if (!ch) return;
+
   int day = time_info.day + 1;
   int weekday = ((28 * time_info.month) + day) % 7;
-  char *suf, *season;
+  char *sunlight, *suf, *season;
+
+  if (weather_info.sunlight == SUN_RISE) {
+    sunlight = "Dawn";
+  }
+  if (weather_info.sunlight == SUN_LIGHT) {
+    sunlight = "Day";
+  }
+  if (weather_info.sunlight == SUN_SET) {
+    sunlight = "Dusk";
+  }
+  else {
+    sunlight = "Night";
+  }
 
   if (day == 1)
     suf = "st";
@@ -2485,9 +2518,10 @@ void do_time(CHAR *ch, char *argument, int cmd) {
   else
     season = "Winter"; /* ((time_info.month <= 2) || (time_info.month >= 15)) */
 
-  printf_to_char(ch, "It is %d o'clock %s, on the %s.\n\r",
+  printf_to_char(ch, "It is %d o'clock %s (%s), on the %s.\n\r",
     ((time_info.hours % 12 == 0) ? 12 : ((time_info.hours) % 12)),
     ((time_info.hours >= 12) ? "pm" : "am"),
+    sunlight,
     weekdays[weekday]);
 
   printf_to_char(ch, "It is the %d%s Day of the %s (%s), Year %d.\n\r",
@@ -2504,23 +2538,35 @@ void do_time(CHAR *ch, char *argument, int cmd) {
 
 
 void do_weather(struct char_data *ch, char *argument, int cmd) {
-  char buf[100];
-  char *sky_look[4] = {
-    "cloudless",
-    "cloudy",
-    "rainy",
-    "lit by flashes of lightning" };
-
   if (IS_OUTSIDE(ch)) {
-    sprintf(buf,
-      "The sky is %s and %s.\n\r",
-      sky_look[weather_info.sky],
-      (weather_info.change >= 0 ? "you feel a warm wind from south" :
-        "your foot tells you bad weather is due"));
-    send_to_char(buf, ch);
+    switch (weather_info.sky) {
+      case SKY_CLOUDLESS:
+        send_to_char("The sky is clear and cloudless.\n\r", ch);
+        break;
+
+      case SKY_CLOUDY:
+        send_to_char("The sky is overcast, with clouds extending to the horizon.\n\r", ch);
+        break;
+
+      case SKY_RAINING:
+        send_to_char("It is raining steadily.\n\r", ch);
+        break;
+
+      case SKY_LIGHTNING:
+        send_to_char("It is stormy and the sky is lit by flashes of lightning.\n\r", ch);
+        break;
+    }
+
+    if (weather_info.change >= 0) {
+      send_to_char("You feel a warm wind from the south.\n\r", ch);
+    }
+    else {
+      send_to_char("It looks like bad weather is due.\n\r", ch);
+    }
   }
-  else
-    send_to_char("You have no feeling about the weather at all.\n\r", ch);
+  else {
+    send_to_char("You can't get a sense of the weather here.\n\r", ch);
+  }
 }
 
 void list_socials(struct char_data *ch);

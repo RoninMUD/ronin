@@ -2838,7 +2838,7 @@ int signal_world(CHAR *signaler, int cmd, char *arg) {
     counter++;
 
     if (counter == 4) {
-      weather_and_time(1);
+      weather_and_time();
 
       counter = 0;
     }

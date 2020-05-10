@@ -27,8 +27,8 @@
 
 char *fread_string(FILE *fl);
 
-struct shop_data *shop_index;
-int number_of_shops=0;
+struct shop_data *shop_index = 0;
+int number_of_shops = 0;
 
 int is_ok(CHAR *keeper, CHAR *ch, int shop_nr) {
   if (shop_index[shop_nr].open1 > time_info.hours) {
@@ -413,174 +413,158 @@ void shop_kickout(CHAR *mob, CHAR *vict) {
 }
 
 
-int shop_keeper(CHAR *keeper,CHAR *ch,int cmd,char *arg)
-{
-  char argm[MAX_STRING_LENGTH];
-  int shop_nr = 0;
+int shop_keeper(CHAR *keeper, CHAR *ch, int cmd, char *argument) {
+  if (!keeper || !ch) return FALSE;
 
-  /* Added shop kickout function - Ranger Feb 99 */
-  if(cmd==MSG_MOBACT && keeper->specials.fighting) {
-    shop_kickout(keeper,keeper->specials.fighting);
-    GET_HIT(keeper)=GET_MAX_HIT(keeper);
+  int shop_nr = real_shop(MOB_VNUM(keeper));
+
+  if ((shop_nr < 0) || (CHAR_REAL_ROOM(keeper) != real_room(shop_index[shop_nr].in_room))) return FALSE;
+
+  char arg[MIL];
+
+  argument = one_argument_ex(argument, arg, sizeof(arg), FALSE);
+
+  if (cmd == MSG_MOBACT) {
+    if (GET_OPPONENT(keeper)) {
+      shop_kickout(keeper, GET_OPPONENT(keeper));
+
+      GET_HIT(keeper) = GET_MAX_HIT(keeper);
+    }
+
     return FALSE;
   }
 
-  /* Moved for loop into an if - Ranger Feb 99 */
-  if(cmd==CMD_BUY || cmd==CMD_SELL || cmd==CMD_VALUE || cmd==CMD_LIST)
-    for(shop_nr=0 ; real_mobile(shop_index[shop_nr].keeper) != keeper->nr; shop_nr++);
+  if (cmd == CMD_BUY) {
+    shopping_buy(arg, ch, keeper, shop_nr);
 
-  if((cmd == CMD_BUY) && (CHAR_REAL_ROOM(ch) ==
-         real_room(shop_index[shop_nr].in_room)))
-    {
-      shopping_buy(arg,ch,keeper,shop_nr);
-      return(TRUE);
-    }
-
-  if((cmd == CMD_SELL ) && (CHAR_REAL_ROOM(ch) ==
-         real_room(shop_index[shop_nr].in_room)))
-    {
-      shopping_sell(arg,ch,keeper,shop_nr);
-      return(TRUE);
-    }
-
-  if((cmd == CMD_VALUE) && (CHAR_REAL_ROOM(ch) ==
-         real_room(shop_index[shop_nr].in_room)))
-    {
-      shopping_value(arg,ch,keeper,shop_nr);
-      return(TRUE);
-    }
-
-  if((cmd == CMD_LIST) && (CHAR_REAL_ROOM(ch) ==
-         real_room(shop_index[shop_nr].in_room)))
-    {
-      shopping_list(arg,ch,keeper,shop_nr);
-      return(TRUE);
-    }
-
-  if(cmd==CMD_KILL || cmd==CMD_HIT || cmd==CMD_PUMMEL ||   /*Offensives*/
-     cmd==CMD_CIRCLE || cmd==CMD_PUNCH || cmd==CMD_SHOOT ||
-     cmd==CMD_BACKSTAB || cmd==CMD_BASH || cmd==CMD_ASSAULT ||
-     cmd==CMD_AMBUSH || cmd==CMD_KICK || cmd==CMD_SPIN) {
-    one_argument(arg, argm);
-    if (keeper == get_char_room(argm,CHAR_REAL_ROOM(ch))) {
-      shopping_kill(ch,keeper);
-      return(TRUE);
-    }
-  }
-
-  if ((cmd==CMD_CAST) || (cmd==CMD_USE)) {
-    act("$N tells you 'No magic here - kid!'.", FALSE, ch, 0, keeper, TO_CHAR);
-    return TRUE;
-  }
-  /* Allow identify - Ranger July 99 */
-  if(cmd==CMD_RECITE) {
-    one_argument(arg, argm);
-    if(is_abbrev(argm,"identify")) return FALSE;
-    act("$N tells you 'No magic here - kid!'.", FALSE, ch, 0, keeper, TO_CHAR);
     return TRUE;
   }
 
-  return(FALSE);
+  if (cmd == CMD_SELL) {
+    shopping_sell(arg, ch, keeper, shop_nr);
+
+    return TRUE;
+  }
+
+  if (cmd == CMD_VALUE) {
+    shopping_value(arg, ch, keeper, shop_nr);
+
+    return TRUE;
+  }
+
+  if (cmd == CMD_LIST) {
+    shopping_list(arg, ch, keeper, shop_nr);
+
+    return TRUE;
+  }
+
+  if (IS_MORTAL(ch)) {
+    switch (cmd) {
+      case CMD_PUMMEL:
+      case CMD_CIRCLE:
+      case CMD_KILL:
+      case CMD_HIT:
+      case CMD_PUNCH:
+      case CMD_DISARM:
+      case CMD_SHOOT:
+      case CMD_BACKSTAB:
+      case CMD_BASH:
+      case CMD_KICK:
+      case CMD_ASSAULT:
+      case CMD_SPIN:
+      case CMD_AMBUSH:
+      case CMD_COIN_TOSS:
+      case CMD_BACKFIST:
+      case CMD_BLITZ:
+      case CMD_FLANK:
+      case CMD_TIGERKICK:
+      case CMD_LUNGE:
+      case CMD_SMITE:
+      case CMD_ZEAL:
+      case CMD_ASSASSINATE:
+      case CMD_BATTER:
+      case CMD_HEADBUTT:
+      case CMD_BANZAI:
+      case CMD_CLOBBER:
+        if (keeper == get_char_room(arg, CHAR_REAL_ROOM(ch))) {
+          shopping_kill(ch, keeper);
+
+          return TRUE;
+        }
+        break;
+    }
+
+    if (cmd == CMD_CAST) {
+      comm_special(keeper, ch, COMM_TELL, "No magic here, kid!");
+
+      return TRUE;
+    }
+
+    if ((cmd == CMD_USE) || (cmd == CMD_RECITE)) {
+      OBJ *obj = NULL;
+
+      generic_find(arg, FIND_OBJ_INV | FIND_OBJ_EQUIP, ch, NULL, &obj);
+
+      if (obj && (OBJ_VNUM(obj) != 3050)) {
+        comm_special(keeper, ch, COMM_TELL, "No magic here, kid!");
+
+        return TRUE;
+      }
+
+      return FALSE;
+    }
+  }
+
+  return FALSE;
 }
 
 void read_shop(FILE *shop_f)
 {
+  struct shop_data *shop;
   char *buf;
-  int temp= 0, count = 0;
+  int temp= 0, count = 0, shop_nr = -1;
 
   while (*(buf = fread_string(shop_f)) != '$')
   {
     if (*buf == '#') /* a new shop */
     {
-      if (!number_of_shops) /* first shop */
-      {
-        CREATE(shop_index, struct shop_data, 1);
-      }
-      else if (!(shop_index = (struct shop_data*) realloc(shop_index, (number_of_shops + 1) * sizeof(struct shop_data))))
-      {
-        log_f("Error in read_shop\n");
-        produce_core();
-      }
+      CREATE(shop, struct shop_data, 1);
 
       for (count = 0; count < MAX_PROD; count++)
       {
         fscanf(shop_f, "%d \n", &temp);
-        shop_index[number_of_shops].producing[count] = temp;
+        shop->producing[count] = temp;
       }
 
-      fscanf(shop_f, "%f \n", &shop_index[number_of_shops].profit_buy);
-      fscanf(shop_f, "%f \n", &shop_index[number_of_shops].profit_sell);
+      fscanf(shop_f, "%f \n", &shop->profit_buy);
+      fscanf(shop_f, "%f \n", &shop->profit_sell);
 
       for (count = 0; count < MAX_TRADE; count++)
       {
         fscanf(shop_f, "%d \n", &temp);
-        shop_index[number_of_shops].type[count] = (byte)temp;
+        shop->type[count] = (byte)temp;
       }
 
-      shop_index[number_of_shops].no_such_item1 = fread_string(shop_f);
-      shop_index[number_of_shops].no_such_item2 = fread_string(shop_f);
-      shop_index[number_of_shops].do_not_buy    = fread_string(shop_f);
-      shop_index[number_of_shops].missing_cash1 = fread_string(shop_f);
-      shop_index[number_of_shops].missing_cash2 = fread_string(shop_f);
-      shop_index[number_of_shops].message_buy   = fread_string(shop_f);
-      shop_index[number_of_shops].message_sell  = fread_string(shop_f);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].temper1);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].temper2);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].keeper);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].with_who);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].in_room);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].open1);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].close1);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].open2);
-      fscanf(shop_f, "%d \n", &shop_index[number_of_shops].close2);
+      shop->no_such_item1 = fread_string(shop_f);
+      shop->no_such_item2 = fread_string(shop_f);
+      shop->do_not_buy    = fread_string(shop_f);
+      shop->missing_cash1 = fread_string(shop_f);
+      shop->missing_cash2 = fread_string(shop_f);
+      shop->message_buy   = fread_string(shop_f);
+      shop->message_sell  = fread_string(shop_f);
+      fscanf(shop_f, "%d \n", &shop->temper1);
+      fscanf(shop_f, "%d \n", &shop->temper2);
+      fscanf(shop_f, "%d \n", &shop->keeper);
+      fscanf(shop_f, "%d \n", &shop->with_who);
+      fscanf(shop_f, "%d \n", &shop->in_room);
+      fscanf(shop_f, "%d \n", &shop->open1);
+      fscanf(shop_f, "%d \n", &shop->close1);
+      fscanf(shop_f, "%d \n", &shop->open2);
+      fscanf(shop_f, "%d \n", &shop->close2);
 
-      /* Was this shop previously loaded? If so, save info to old spot and then delete it*/
-      for (temp = 0; temp < number_of_shops; temp++)
-      {
-        if (shop_index[temp].keeper == shop_index[number_of_shops].keeper)
-        {
-          for (count = 0; count < MAX_PROD; count++)
-          {
-            shop_index[temp].producing[count] = shop_index[number_of_shops].producing[count];
-          }
+      shop_nr = allocate_shop(shop->keeper);
 
-          shop_index[temp].profit_buy         = shop_index[number_of_shops].profit_buy;
-          shop_index[temp].profit_sell        = shop_index[number_of_shops].profit_sell;
-
-          for (count = 0; count < MAX_TRADE; count++)
-          {
-            shop_index[temp].type[count]      = shop_index[number_of_shops].type[count];
-          }
-
-          shop_index[temp].no_such_item1      = str_dup(shop_index[number_of_shops].no_such_item1);
-          shop_index[temp].no_such_item2      = str_dup(shop_index[number_of_shops].no_such_item2);
-          shop_index[temp].do_not_buy         = str_dup(shop_index[number_of_shops].do_not_buy);
-          shop_index[temp].missing_cash1      = str_dup(shop_index[number_of_shops].missing_cash1);
-          shop_index[temp].missing_cash2      = str_dup(shop_index[number_of_shops].missing_cash2);
-          shop_index[temp].message_buy        = str_dup(shop_index[number_of_shops].message_buy);
-          shop_index[temp].message_sell       = str_dup(shop_index[number_of_shops].message_sell);
-          shop_index[temp].temper1            = shop_index[number_of_shops].temper1;
-          shop_index[temp].temper2            = shop_index[number_of_shops].temper2;
-          shop_index[temp].with_who           = shop_index[number_of_shops].with_who;
-          shop_index[temp].in_room            = shop_index[number_of_shops].in_room;
-          shop_index[temp].open1              = shop_index[number_of_shops].open1;
-          shop_index[temp].close1             = shop_index[number_of_shops].close1;
-          shop_index[temp].open2              = shop_index[number_of_shops].open2;
-          shop_index[temp].close2             = shop_index[number_of_shops].close2;
-
-          //memset(&shop_index[number_of_shops], 0, sizeof(struct shop_data));
-          //free(&shop_index[number_of_shops]);
-          if (!(shop_index = (struct shop_data*) realloc(shop_index, (number_of_shops - 1) * sizeof(struct shop_data))))
-          {
-            log_f("Error in read_shop\n");
-            produce_core();
-          }
-          number_of_shops--;
-          break;
-        }
-      }
-
-      number_of_shops++;
+      shop_index[shop_nr] = *shop;
     }
   }
 }
@@ -601,14 +585,6 @@ void boot_the_shops() { /* loaded in spec_assign.c (assign_mobiles) */
 int is_shop(CHAR *mob) {
   for (int i = 0; i < number_of_shops; i++) {
     if (shop_index[i].keeper == V_MOB(mob)) return TRUE;
-  }
-
-  return FALSE;
-}
-
-bool is_shop_v(int vnum) {
-  for (int i = 0; i < number_of_shops; i++) {
-    if (shop_index[i].keeper == vnum) return TRUE;
   }
 
   return FALSE;
