@@ -4770,7 +4770,6 @@ void do_club(struct char_data *ch, char *argument, int cmd)
 }
 
 void advance_level(struct char_data *ch);
-extern void gain_exp_regardless(struct char_data *ch, int gain);
 void death_list(CHAR *ch);
 void do_advance(struct char_data *ch, char *argument, int cmd)
 {
@@ -4886,8 +4885,6 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
   char name[100], level[100];
   int newlevel=0, oldlevel,i;
   char buf[250];
-
-  void gain_exp(struct char_data *ch, int gain);
 
   if(!check_god_access(ch,TRUE)) return;
 

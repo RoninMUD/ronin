@@ -71,7 +71,6 @@ int hit_gain(CHAR *ch);
 int move_gain(CHAR *ch);
 void advance_level(CHAR *ch);
 void gain_exp(CHAR *ch, int gain);
-void gain_exp_regardless(CHAR *ch, int gain);
 void gain_condition(CHAR *ch, int condition, int value);
 void check_idling(CHAR *ch);
 void point_update(void);
@@ -887,55 +886,6 @@ void gain_exp(CHAR *ch, int gain)
     else
     {
       GET_EXP(ch) += MAX(gain, -(GET_EXP(ch) / 2));
-      GET_EXP(ch) = MAX(GET_EXP(ch), 0);
-    }
-
-    if (!IS_NPC(ch) &&
-        is_altered &&
-        !IS_SET(ch->specials.pflag, PLR_SKIPTITLE))
-    {
-      set_title(ch, NULL);
-    }
-  }
-}
-
-void gain_exp_regardless(CHAR *ch, int gain)
-{
-  char buf[MIL];
-  bool is_altered = FALSE;
-
-  if (!IS_NPC(ch))
-  {
-    GET_EXP(ch) += gain;
-
-    if (gain > 0 &&
-        GET_LEVEL(ch) < LEVEL_IMP)
-    {
-      /* Log a warning if exp gain is over 25 million. */
-      if (gain > 25000000)
-      {
-        sprintf(buf, "PLRINFO: WARNING %s's exp just increased by %d. (Room %d)",
-          GET_NAME(ch), gain, world[CHAR_REAL_ROOM(ch)].number);
-        wizlog(buf, LEVEL_SUP, 4);
-        log_f("%s", buf);
-      }
-
-      while (GET_EXP(ch) >= exp_table[GET_LEVEL(ch) + 1])
-      {
-        if (GET_LEVEL(ch) >= LEVEL_IMP) break;
-
-        send_to_char("You raise a level!\n\r", ch);
-
-        GET_EXP(ch) -= exp_table[GET_LEVEL(ch) + 1];
-        GET_LEVEL(ch)++;
-        advance_level(ch);
-
-        is_altered = TRUE;
-      }
-    }
-    else
-    {
-      if (gain < 0) GET_EXP(ch) += gain;
       GET_EXP(ch) = MAX(GET_EXP(ch), 0);
     }
 
