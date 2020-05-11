@@ -16,7 +16,7 @@ aligns with your eyes and whips forward to attack!
 92 0 1d1+1 0
 0 0 0 0
 K
-500 0 0 0 0 0
+500 0 0 0 0 0 0
 #16801
 Tajjo~
 Tajjo~
@@ -36,11 +36,11 @@ mortal soul and condemn you to these catacombs for eternity.
 63 939531327 10d8+459 2
 1 1 6 135
 3 1 6 0
-0 0 0 0
+0 1 0 0
 T
 ......Tajjo is surrounded by a torrent of black smoke!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16802
 Tajte~
 Tajte~
@@ -61,11 +61,11 @@ with her horrible gaze.
 63 939531327 10d8+459 2
 1 1 6 113
 9 1 6 0
-0 0 0 0
+0 1 0 0
 T
 ......Tajte is surrounded by a swirling green mist!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16803
 revenant form~
 A Revenant~
@@ -88,7 +88,7 @@ you as it raises its arms to cast a spell.
 6 3 15 0
 0 0 0 0
 K
-200000 0 0 0 0 0
+200000 0 0 0 0 0 0
 #16804
 hunter arctic man squat~
 The Arctic Hunter~
@@ -112,7 +112,7 @@ kill, bidding you to stay a while.
 9 2 10 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16805
 dweller cavern imp drooling~
 A cavern-dweller~
@@ -134,7 +134,7 @@ merely an apprentice.
 1 2 20 30
 0 0 0 0
 K
-30000 0 0 0 0 0
+30000 0 0 0 0 0 0
 #16806
 woman elderly inhabitant~
 An elderly woman~
@@ -152,7 +152,7 @@ her face as she realizes the futility of her effort.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16807
 man elderly ancient inhabitant~
 An elderly man~
@@ -170,7 +170,7 @@ roll as his snores echo within the shelter.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16808
 boy young~
 A young boy~
@@ -189,7 +189,7 @@ the old man's nose.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16809
 boy young~
 A young boy~
@@ -207,7 +207,7 @@ with the purity and joy only children can experience.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16810
 girl young~
 A young girl~
@@ -225,7 +225,7 @@ joy only children can experience.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16811
 Clem tradesman jolly figure~
 Clem, the Northern Tradesman~
@@ -245,7 +245,7 @@ he displays his wares.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16812
 man gatesman weary~
 A weary gatesman~
@@ -265,7 +265,7 @@ either purchase a pass or leave.
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #16813
 captain sturdy~
 Captain of the Barge~
@@ -284,8 +284,8 @@ powerful arms as he steers the craft along.
 8 8 1
 69 0 1d1+1 1
 3 1 50 0
-0 0 0 0
+0 1 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~

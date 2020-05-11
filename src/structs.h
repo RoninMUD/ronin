@@ -479,6 +479,8 @@ struct obj_data
 #define SECT_WATER_NOSWIM 7
 #define SECT_DESERT       8
 #define SECT_ARCTIC       9
+#define SECT_FIRST        SECT_INSIDE
+#define SECT_LAST         SECT_ARCTIC
 
 struct room_direction_data
 {

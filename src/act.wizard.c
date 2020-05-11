@@ -36,6 +36,7 @@
 #include "spec.clan.h"
 #include "shop.h"
 #include "remortv2.h"
+//#include "weather.h"
 
 /* external functs */
 
@@ -4027,6 +4028,9 @@ void do_load(struct char_data *ch, char *argument, int cmd)
          if(GET_LEVEL(ch) > LEVEL_ETE) {
 #endif
            if((zonenum=boot_area(arg1))>-1) {
+             //update_zone_terrain_type(zonenum);
+             //reset_zone_weather(zonenum);
+
              for( i = 0; i <= top_of_zone_table; i++) {
 
                if(zonenum==zone_table[i].virtual) {

@@ -2424,7 +2424,7 @@ int wpn_extra(OBJ *weapon, CHAR *ch, CHAR *victim, int mode) {
   int dam = 0;
 
   if (attack_type == WPN_CHAOTIC) {
-    dam = (10 - number_ex(0, 20, mode));
+    dam = (11 - dice_ex(1, 21, mode));
   }
   else if ((attack_type >= WPN_CLASS_FIRST) && (attack_type <= WPN_CLASS_LAST) && ch && ((attack_type - 300) == GET_CLASS(ch))) {
     dam = dice_ex(1, 5, mode);

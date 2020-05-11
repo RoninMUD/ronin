@@ -135,7 +135,7 @@ to nip at anything that gets too close.
 5 2 20 0
 6 2 20 0
 8 2 20 0
-0 0 0 0
+0 1 0 0
 K
 15000 0 0 0 0 0 0
 #26706
@@ -209,7 +209,7 @@ focused on devouring every tasty morsel they can find.
 0 375000
 8 8 1
 86 0 1d1+1 0
-0 0 0 0
+0 1 0 0
 K
 5000 0 0 0 0 0 0
 #26709
@@ -230,7 +230,7 @@ its surroundings or any possibility of danger.
 86 0 1d1+1 2
 10 1 5 0
 5 2 7 0
-0 0 0 0
+0 1 0 0
 K
 10000 0 0 0 0 0 0
 #26710

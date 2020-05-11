@@ -61,7 +61,7 @@ void update_pos(struct char_data *ch);
  *
  * @return The generated number.
  */
-int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
+int32_t number_ex(int32_t from, int32_t to, int mode) {
   int32_t result = 0, mod = 0, temp;
 
   /* Swap from and to if from is greater than to. */
@@ -78,7 +78,7 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
     from += mod;
 
     /* Overflow protection. */
-    if ((int64_t)to + mod > INT_MAX) {
+    if (INT_MAX - mod < to) {
       to = INT_MAX;
     }
     else {
@@ -103,7 +103,12 @@ int32_t number_ex(int32_t from, int32_t to, int32_t mode) {
       break;
   }
 
-  return result - mod;
+  /* Shift range down again, as needed. */
+  if (mod > 0) {
+    result -= mod;
+  }
+
+  return result;
 }
 
 /**
@@ -136,7 +141,7 @@ int32_t number(int32_t from, int32_t to) {
  *
  * @return The generated number.
  */
-int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode) {
+int32_t dice_ex(int32_t num_dice, int32_t size_dice, int mode) {
   /* Use int64_t to prevent integer overflow during arithmetic. */
   int64_t result = 0, roll;
 
@@ -1992,7 +1997,7 @@ int count_attackers(CHAR *ch) {
 
 
 int qcmp_int(const void *a, const void *b) {
-  return *(int *)a - *(int *)b;
+  return (*(int *)a > *(int *)b) - (*(int *)a < *(int *)b);
 }
 
 int qcmp_int_asc(const void *a, const void *b) {
@@ -2005,13 +2010,13 @@ int qcmp_int_desc(const void *a, const void *b) {
 
 
 /* Takes a character object and an array of eligible effects and returns
-   an effect randomly from the array if the character is not affected by it.
+   an effect randomly from the array if the character is NOT affected by it.
    If there are no eligible effects found, this returns TYPE_UNDEFINED.
    Note: You MUST terminate the array with -1 or bad things will happen. */
 int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
   /* Count the number of elements in the list of eligible effects. */
-  int list_size = 0;
-  for (int i = 0; eligible_effects[i] != -1; list_size++, i++);
+  size_t list_size = 0;
+  for (size_t i = 0; eligible_effects[i] != -1; list_size++, i++);
 
   if (!list_size) return TYPE_UNDEFINED;
 
@@ -2019,7 +2024,7 @@ int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
   memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
 
   int num_eligible_ch_effects = 0;
-  for (int i = 0; i < list_size; i++) {
+  for (size_t i = 0; i < list_size; i++) {
     if (!affected_by_spell(ch, eligible_effects[i])) {
       num_eligible_ch_effects++;
       eligible_ch_effects[num_eligible_ch_effects - 1] = eligible_effects[i];
@@ -2035,25 +2040,22 @@ int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
 
 
 /* Takes a character object and an array of eligible effects and returns
-   an effect randomly from the array if the character is affected by it.
+   an effect randomly from the array if the character IS affected by it.
    If there are no eligible effects found, this returns TYPE_UNDEFINED.
    Note: You MUST terminate the array with -1 or bad things will happen. */
 int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
-  AFF *af = NULL;
-  int i = 0;
-  int list_size = 0;
-  int eligible_ch_effects[MAX_SPL_LIST];
-  int num_eligible_ch_effects = 0;
-
-  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
-
   /* Count the number of elements in the list of eligible effects. */
-  for (list_size = 0, i = 0; eligible_effects[i] != -1; list_size++, i++);
+  size_t list_size = 0;
+  for (size_t i = 0; eligible_effects[i] != -1; list_size++, i++);
 
   if (!list_size) return TYPE_UNDEFINED;
 
-  for (af = ch->affected; af; af = af->next) {
-    for (i = 0; i < list_size; i++) {
+  int eligible_ch_effects[MAX_SPL_LIST];
+  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
+
+  int num_eligible_ch_effects = 0;
+  for (AFF *af = ch->affected; af; af = af->next) {
+    for (size_t i = 0; i < list_size; i++) {
       if (af->type == eligible_effects[i]) {
         num_eligible_ch_effects++;
         eligible_ch_effects[num_eligible_ch_effects - 1] = af->type;
@@ -2074,15 +2076,13 @@ int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
 int get_random_set_bit_from_mask(const int32_t mask) {
   const int32_t mask_size = (sizeof(int32_t) * CHAR_BIT);
 
-  int32_t i = 0;
-  int32_t flag = 0;
-  int32_t eligible_bits[mask_size];
-  int32_t num_eligible_bits = 0;
-
   if (mask == 0) return 0;
 
-  for (i = 0; i < mask_size; i++) {
-    flag = (1 << i);
+  int32_t eligible_bits[mask_size];
+
+  int32_t num_eligible_bits = 0;
+  for (int32_t i = 0; i < mask_size; i++) {
+    int32_t flag = (1 << i);
     if (IS_SET(mask, flag)) {
       eligible_bits[num_eligible_bits] = flag;
       num_eligible_bits++;
@@ -2097,12 +2097,10 @@ int get_random_set_bit_from_mask(const int32_t mask) {
 }
 
 
-bool in_int_array(int value, const int *array, size_t num_elems) {
-  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
-    for (size_t i = 0; i < (num_elems - 1); i++) {
-      if (array[i] == value) {
-        return TRUE;
-      }
+bool in_int_array(const int value, const int array[], const size_t num_elems) {
+  for (size_t i = 0; i < num_elems; i++) {
+    if (array[i] == value) {
+      return TRUE;
     }
   }
 
@@ -2111,10 +2109,10 @@ bool in_int_array(int value, const int *array, size_t num_elems) {
 
 
 /* Shuffle an array of integers. */
-void shuffle_int_array(int *array, size_t num_elems) {
-  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
-    for (size_t i = 0; i < (num_elems - 1); i++) {
-      size_t j = i + number(0, (num_elems - i) - 1);
+void shuffle_int_array(int array[], const size_t num_elems) {
+  if (num_elems > 1) {
+    for (size_t i = num_elems - 1; i > 0; i--) {
+      size_t j = number(0, i);
       int t = array[j];
       array[j] = array[i];
       array[i] = t;
@@ -2124,10 +2122,10 @@ void shuffle_int_array(int *array, size_t num_elems) {
 
 
 /* Shuffle a 2D array of integers. */
-void shuffle_2d_int_array(int (*array)[2], size_t num_elems) {
-  if ((num_elems > 1) && (num_elems < UINT_MAX)) {
-    for (size_t i = 0; i < num_elems - 1; i++) {
-      size_t j = i + number(0, (num_elems - i) - 1);
+void shuffle_2d_int_array(int array[][2], const size_t num_elems) {
+  if (num_elems > 1) {
+    for (size_t i = num_elems - 1; i > 0; i--) {
+      size_t j = number(0, i);
       int t0 = array[j][0];
       int t1 = array[j][1];
       array[j][0] = array[i][0];

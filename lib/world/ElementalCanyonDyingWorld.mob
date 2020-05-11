@@ -14,7 +14,7 @@ lunge quickly at anything that gets too close.
 8 8 1
 80 0 1d1+1 1
 6 2 8 0
-0 0 0 0
+0 1 0 0
 K
 20000 0 0 0 0 0 0
 #19401
@@ -34,7 +34,7 @@ lunge quickly at anything that gets too close.
 80 0 1d1+1 2
 6 2 8 0
 8 2 7 0
-0 0 0 0
+0 1 0 0
 K
 30000 0 0 0 0 0 0
 #19402
@@ -54,7 +54,7 @@ lunge quickly at anything that gets too close.
 80 0 1d1+1 2
 6 2 8 0
 10 2 7 0
-0 0 0 0
+0 1 0 0
 K
 40000 0 0 0 0 0 0
 #19403
@@ -95,7 +95,7 @@ wrapped in leathery gray skin.
 80 0 12d100+1000 2
 8 2 5 0
 5 2 5 0
-0 0 0 0
+0 1 0 0
 K
 38000 0 0 0 0 0 0
 #19405
@@ -115,7 +115,7 @@ wrapped in leathery gray skin.
 80 0 12d100+1000 2
 8 2 5 0
 5 2 5 0
-0 0 0 0
+0 1 0 0
 K
 38000 0 0 0 0 0 0
 #0

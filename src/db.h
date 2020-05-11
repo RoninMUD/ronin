@@ -36,8 +36,7 @@
 #define MAX_ID            15000 /* Maximum number of id's stored in name/id list */
 
 /* public procedures in db.c */
-void distribute_tokens(int num_tokens);
-bool distribute_token(void);
+void distribute_tokens(const int num_tokens);
 int inzone(int);
 void boot_db(void);
 void save_char(struct char_data *ch, sh_int load_room);
@@ -49,18 +48,26 @@ void clear_skills(struct char_skill_data *skills);
 void clear_object(struct obj_data *obj);
 void reset_char(struct char_data *ch);
 void free_char(struct char_data *ch);
-int real_room(int virtual);
 char *fread_string(FILE *fl);
-int real_object(int virtual);
-int real_mobile(int virtual);
-int real_zone(int virtual);
 void update_time(void);
-int allocate_zone(int virtual_number);
-int allocate_room(int virtual_number);
-int allocate_obj(int virtual_number);
-int allocate_mob(int virtual_number);
+int search_zone_table(int l, int r, int vnum);
+int search_world_table(int l, int r, int vnum);
+int search_mob_table(int l, int r, int vnum);
+int search_obj_table(int l, int r, int vnum);
+int search_shop_table(int l, int r, int vnum);
+int allocate_zone(int vnum);
+int allocate_room(int vnum);
+int allocate_mob(int vnum);
+int allocate_obj(int vnum);
+int allocate_shop(int vnum);
 void renum_world(void);
 void reset_zone(int zone, int full);
+int real_zone(int vnum);
+int real_room(int vnum);
+int real_mobile(int vnum);
+int real_object(int vnum);
+int real_shop(int vnum);
+
 #define REAL 0
 #define VIRTUAL 1
 
@@ -207,6 +214,9 @@ struct zone_data
     4: Lock Zone
     5: Only reset doors
 	*/
+
+	/*ubyte terrain_type;
+	struct weather_info_t weather;*/
 };
 
 #define ZRESET_MODE_NEVER  0
@@ -244,12 +254,15 @@ extern struct zone_data *zone_table;
 extern int top_of_world;
 extern struct room_data *world;
 
-extern int top_of_objt;
-extern struct obj_data  *object_list;
-extern struct obj_proto *obj_proto_table;
-
 extern int top_of_mobt;
 extern struct mob_proto *mob_proto_table;
+
+extern int top_of_objt;
+extern struct obj_proto *obj_proto_table;
+extern struct obj_data  *object_list;
+
+extern int number_of_shops;
+extern struct shop_data *shop_index;
 
 extern struct time_info_data time_info;
 extern struct weather_data weather_info;

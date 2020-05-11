@@ -83,12 +83,12 @@ Several stones have been piled together to resemble a desk.~
 10 10 10
 100
 E
-desk~
+stones~
 This desk is really just three flat stones stacked together
 in order to hold items above the frozen ground.
 ~
 E
-stones~
+desk~
 This desk is really just three flat stones stacked together
 in order to hold items above the frozen ground.
 ~
@@ -131,12 +131,12 @@ $r scythe gleams black as it flies swiftly toward $V.~
 19 5000 26780
 8
 E
-scythe~
+blade~
 A dark, sinister blade socketed on the end of an ash handle, it
 drips with the congealing blood of the last victim.
 ~
 E
-blade~
+scythe~
 A dark, sinister blade socketed on the end of an ash handle, it
 drips with the congealing blood of the last victim.
 ~
@@ -162,14 +162,14 @@ $r lash cracks as thousands of tiny blades pierce the air.~
 18 5000 25670
 8
 E
-lash~
+bladed~
 A leather-bound whip, the handle is wound tight with black wire
 and the business end separates into hundreds of extensions.
 Upon the tip of each extension, a tiny obsidian blade has been
 attached, truly a weapon of ultimate torture.
 ~
 E
-bladed~
+lash~
 A leather-bound whip, the handle is wound tight with black wire
 and the business end separates into hundreds of extensions.
 Upon the tip of each extension, a tiny obsidian blade has been
@@ -260,12 +260,12 @@ $r spear curves gracefully through the air as it plunges forward.~
 7 1000 5890
 50
 E
-spear~
+rib~
 An object of superior craftsmanship, this spear has been fashioned
 from the rib of a huge animal and sharpened to a fine point.
 ~
 E
-rib~
+spear~
 An object of superior craftsmanship, this spear has been fashioned
 from the rib of a huge animal and sharpened to a fine point.
 ~
@@ -577,11 +577,11 @@ The scattered remains of a human skeleton lie strewn about here.~
 10 10 10
 75
 E
-remains~
+skeleton~
 The decaying bones of a less-fortunate adventurer..
 ~
 E
-skeleton~
+remains~
 The decaying bones of a less-fortunate adventurer..
 ~
 X
@@ -624,12 +624,6 @@ A twisted sigil lies before your feet, sapping your energy.~
 3 10500 21200
 8
 E
-inscription~
-
-      Whosoever wears this sigil must feed the Soul within, and
-      always step within the shadows of the shriveled heart.
-~
-E
 sigil~
 
   It appears to be a large ring of hardening clay.  Speckles of
@@ -638,6 +632,12 @@ human form nailed to a crosstree.  Shrouds and shackles dangle
 from either side of the large T-shape.  This is the Seal of Tajjo,
 the eater of souls.  A tiny inscription lines the inner circle.
 
+~
+E
+inscription~
+
+      Whosoever wears this sigil must feed the Soul within, and
+      always step within the shadows of the shriveled heart.
 ~
 X
 ~

@@ -78,8 +78,10 @@ stare deep within the icy tomb to the south.
 linerocks~
 9 -1 16802
 E
-wall~
-A giant, shimmering wall of smooth ice blocks the cavern to the south.
+reflection~
+The solemn reflection of your face shifts and distorts, forming a
+screaming mask of pain, then winking out of existence as you stare
+in paralyzing horror.
 ~
 E
 puddle~
@@ -87,10 +89,8 @@ A wide puddle of frost and ice-covered water collects the thawing
 droplets from above.
 ~
 E
-reflection~
-The solemn reflection of your face shifts and distorts, forming a
-screaming mask of pain, then winking out of existence as you stare
-in paralyzing horror.
+wall~
+A giant, shimmering wall of smooth ice blocks the cavern to the south.
 ~
 S
 #16803
@@ -115,14 +115,14 @@ the looming shapes of boulders in the darkness.
 ~
 0 -1 16807
 E
-shapes patterns~
-Geometric shapes dance and flutter across the walls, freezing
-and refreezing in a display of icy beauty.
-~
-E
 icicles columns~
 Streaming icicles extend up and down from the frozen surroundings,
 forming fragile columns across the cavern's mouth.
+~
+E
+shapes patterns~
+Geometric shapes dance and flutter across the walls, freezing
+and refreezing in a display of icy beauty.
 ~
 S
 #16804
@@ -476,8 +476,9 @@ A widening crack drains the murky water into the deep caverns below.
 crack~
 9 -1 16806
 E
-water~
-The water within this pool is rank with rotting leaves and eroding soil.
+crack~
+A crack in the frozen ground at the pool's bottom looks just large
+enough to crawl through but you'd better hold your breath first..
 ~
 E
 bottom~
@@ -485,9 +486,8 @@ The bottom is barely discernable through the murky water.  It is cold
 and hard beneath your feet, and a widening crack spans below you.
 ~
 E
-crack~
-A crack in the frozen ground at the pool's bottom looks just large
-enough to crawl through but you'd better hold your breath first..
+water~
+The water within this pool is rank with rotting leaves and eroding soil.
 ~
 S
 #16818
@@ -560,14 +560,14 @@ A loosely-woven wall of roots obscures a faint light from above.
 roots~
 9 -1 1926
 E
-vines branches~
-Extending out from the barrier of foliage, they drift in the breeze
-toward you, shaking with hunger.
-~
-E
 roots~
 A network of large roots extends down from a passage above.  They
 are spread just wide enough to crawl through.
+~
+E
+vines branches~
+Extending out from the barrier of foliage, they drift in the breeze
+toward you, shaking with hunger.
 ~
 S
 #16821
@@ -597,8 +597,13 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16835
 E
-rock~
-A large granite sheet lay against the wall, covering something.
+hole tunnel opening~
+A tiny passage leading into darkness.
+~
+E
+straw~
+A layer of straw has been stuffed within here, dirty and covered
+in tufts of hair as if used by some creature as a bed.
 ~
 E
 clay walls~
@@ -607,13 +612,8 @@ Straw-lined holes, tunnels, and openings have been carved all
 around you.
 ~
 E
-straw~
-A layer of straw has been stuffed within here, dirty and covered
-in tufts of hair as if used by some creature as a bed.
-~
-E
-hole tunnel opening~
-A tiny passage leading into darkness.
+rock~
+A large granite sheet lay against the wall, covering something.
 ~
 S
 #16822
@@ -637,10 +637,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16823
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -648,8 +646,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16823
@@ -673,10 +673,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 opening~
 9 -1 16833
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -684,8 +682,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16824
@@ -709,10 +709,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 opening~
 9 -1 16835
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -720,8 +718,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16825
@@ -745,10 +745,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16824
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -756,8 +754,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16826
@@ -781,10 +781,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 opening~
 9 -1 16836
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -792,8 +790,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16827
@@ -817,10 +817,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16836
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -828,8 +826,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16828
@@ -859,18 +859,18 @@ A dingy straw mat obscures another hole in the floor below.
 straw~
 8 -1 16838
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw mat~
 The straw layer has been woven into a fine mat, covering the floor.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16829
@@ -894,10 +894,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16834
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -905,8 +903,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16830
@@ -930,10 +930,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 hole~
 9 -1 16834
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -941,8 +939,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16831
@@ -966,10 +966,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 opening~
 9 -1 16830
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -977,8 +975,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16832
@@ -1002,10 +1002,8 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 hole~
 9 -1 16833
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
 ~
 E
 straw~
@@ -1013,8 +1011,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16833
@@ -1043,10 +1043,12 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 opening~
 9 -1 16823
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
+~
+E
+sand~
+A steep slope of black, volcanic sand cascades down toward a pit.
 ~
 E
 floor~
@@ -1054,12 +1056,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-sand~
-A steep slope of black, volcanic sand cascades down toward a pit.
-~
-E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16834
@@ -1088,10 +1088,12 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16829
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
+~
+E
+sand~
+A steep slope of black, volcanic sand cascades down toward a pit.
 ~
 E
 floor~
@@ -1099,12 +1101,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-sand~
-A steep slope of black, volcanic sand cascades down toward a pit.
-~
-E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16835
@@ -1133,10 +1133,12 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16821
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
+~
+E
+sand~
+A steep slope of black, volcanic sand cascades down toward a pit.
 ~
 E
 floor~
@@ -1144,12 +1146,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-sand~
-A steep slope of black, volcanic sand cascades down toward a pit.
-~
-E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16836
@@ -1178,10 +1178,12 @@ Various holes, tunnels, and openings lead into the straw-lined darkness.
 tunnel~
 9 -1 16827
 E
-clay walls~
-The smooth-packed walls have been dug and gouged out perfectly.
-Straw-lined holes, tunnels, and openings have been carved all
-around you.
+hole tunnel opening~
+A tiny passage leading into darkness.
+~
+E
+sand~
+A steep slope of black, volcanic sand cascades down toward a pit.
 ~
 E
 floor~
@@ -1189,12 +1191,10 @@ A layer of straw has been stuffed within here, dirty and covered
 in tufts of hair as if used by some creature as a bed.
 ~
 E
-sand~
-A steep slope of black, volcanic sand cascades down toward a pit.
-~
-E
-hole tunnel opening~
-A tiny passage leading into darkness.
+clay walls~
+The smooth-packed walls have been dug and gouged out perfectly.
+Straw-lined holes, tunnels, and openings have been carved all
+around you.
 ~
 S
 #16837
@@ -1228,13 +1228,13 @@ A slope of sand leads up to a ledge to the west.
 ~
 0 -1 16833
 E
+death_text~
+The shining object flits before your eyes, suddenly slamming into your skull!
+~
+E
 sand~
 A fine grit of crushed obsidian and pumice, it slides easily down
 the sloping surroundings.
-~
-E
-death_text~
-The shining object flits before your eyes, suddenly slamming into your skull!
 ~
 S
 #16838
@@ -1258,12 +1258,12 @@ A dingy mat of straw covers a small hole leading up into darkness.
 straw~
 8 -1 16828
 E
-straw~
-A fine mat of woven straw hangs down from above.
-~
-E
 rocks~
 They lay tossed about the tunnel floor, making passage difficult.
+~
+E
+straw~
+A fine mat of woven straw hangs down from above.
 ~
 S
 #16839
@@ -1344,14 +1344,14 @@ The path winds west among the rocks and granite walls.
 ~
 0 -1 16840
 E
-grass moss~
-Long stalks of grass and fuzzy moss creep out from small cracks
-in the walls.
-~
-E
 cracks~
 Thin cracks in the walls spurt lively grass and moss from around
 the boulders.
+~
+E
+grass moss~
+Long stalks of grass and fuzzy moss creep out from small cracks
+in the walls.
 ~
 S
 #16842
@@ -1382,9 +1382,8 @@ Dim light filters down from either side of a rotting plank above.
 plank~
 8 -1 772
 E
-grass moss~
-Long stalks of grass and fuzzy moss creep out from small cracks
-in the walls.
+plank~
+A rough, wooden plank covers up a small hole in the ceiling.
 ~
 E
 cracks~
@@ -1392,8 +1391,9 @@ Thin cracks in the walls spurt lively grass and moss from around
 the boulders.
 ~
 E
-plank~
-A rough, wooden plank covers up a small hole in the ceiling.
+grass moss~
+Long stalks of grass and fuzzy moss creep out from small cracks
+in the walls.
 ~
 S
 #16843
@@ -1448,13 +1448,13 @@ A tiny hole opens into a dark tunnel in the ceiling above.
 ~
 0 -1 16863
 E
-hole~
-A wide hole opens in the rock ceiling.
-~
-E
 cracks crevices~
 Varying sizes of cracks line the surface of the ancient rock walls,
 signs of the earth's movement and strength.
+~
+E
+hole~
+A wide hole opens in the rock ceiling.
 ~
 S
 #16845
@@ -1479,13 +1479,13 @@ The path winds onward to the west.
 ~
 0 -1 16844
 E
+bushes~
+A loose wall of bushes crawls over the path.
+~
+E
 cracks crevices~
 Varying sizes of cracks line the surface of the ancient rock walls,
 signs of the earth's movement and strength.
-~
-E
-bushes~
-A loose wall of bushes crawls over the path.
 ~
 S
 #16846
@@ -1539,8 +1539,9 @@ A trail leads up a gentle slope between dense overgrowth.
 ~
 0 -1 16846
 E
-sand pebbles~
-A soft fan of grit contours the riverbend.
+mist~
+A sultry mist rises from the surface of the black river, drifting
+in currents around your ankles.
 ~
 E
 river~
@@ -1548,9 +1549,8 @@ A winding blackness drifts across the cavern to the east and onward
 into the distance.  It appears to be too swift and deep to traverse.
 ~
 E
-mist~
-A sultry mist rises from the surface of the black river, drifting
-in currents around your ankles.
+sand pebbles~
+A soft fan of grit contours the riverbend.
 ~
 S
 #16848
@@ -1603,16 +1603,16 @@ The dark river flows swiftly into the darkness.
 ~
 0 -1 16848
 E
-shadows~
-The dim outlines of bushes and rocks dance across the cavern ceiling.
+rocks bushes~
+An occasional rustle of movement catches your eye from behind them.
 ~
 E
 cliffs~
 Sheer cliffs rise on either side of the river.
 ~
 E
-rocks bushes~
-An occasional rustle of movement catches your eye from behind them.
+shadows~
+The dim outlines of bushes and rocks dance across the cavern ceiling.
 ~
 S
 #16850
@@ -1640,17 +1640,17 @@ The dark river flows swiftly into the darkness.
 ~
 0 -1 16849
 E
-shadows~
-The dim outlines of bushes and rocks dance across the cavern ceiling.
+waterfalls~
+Tiny magnificently-tall jets spray from above the cliffs, emptying
+black water into the river.
 ~
 E
 cliffs~
 Sheer cliffs rise on either side of the river.
 ~
 E
-waterfalls~
-Tiny magnificently-tall jets spray from above the cliffs, emptying
-black water into the river.
+shadows~
+The dim outlines of bushes and rocks dance across the cavern ceiling.
 ~
 S
 #16851
@@ -1675,13 +1675,13 @@ A broken path of rocks drops along the side, perfect for climbing.
 rocks~
 11 -1 16854
 E
+waterfall~
+A steep dropoff carries the swollen river deep into the cavern.
+~
+E
 rocks boulders~
 A group of boulders delineate the edge of the waterfall, while a
 slope of rocks drifts down either side.
-~
-E
-waterfall~
-A steep dropoff carries the swollen river deep into the cavern.
 ~
 S
 #16852
@@ -1704,13 +1704,13 @@ The trail drifts up a steep path, weaving between dense overgrowth.
 ~
 0 -1 16853
 E
+brush~
+A choked barrier of overgrown foliage lines the riverbank above.
+~
+E
 sand~
 A spray of soft grit mixes with the soil and moisture of the
 riverbank forming dark clumps.
-~
-E
-brush~
-A choked barrier of overgrown foliage lines the riverbank above.
 ~
 S
 #16853
@@ -1739,13 +1739,13 @@ The trail drifts up a steep path, weaving between dense overgrowth.
 ~
 0 -1 16860
 E
+brush~
+A wall of brush growing just wide enough to crawl between the branches.
+~
+E
 bushes grass vegetation~
 A dense barrier of underground plants, forbs, and razor-grass encloses
 the winding path.
-~
-E
-brush~
-A wall of brush growing just wide enough to crawl between the branches.
 ~
 S
 #16854
@@ -1770,17 +1770,17 @@ is barely discernable.
 rocks~
 11 -1 16851
 E
-waterfall~
-The roaring cascade of black water and mist thunders within the
-rock walls.
+river~
+A darkened, thin pool churns into a rivulet, widening once more.
 ~
 E
 rocks~
 A slope of rocks drifts up either side of the waterfall.
 ~
 E
-river~
-A darkened, thin pool churns into a rivulet, widening once more.
+waterfall~
+The roaring cascade of black water and mist thunders within the
+rock walls.
 ~
 S
 #16855
@@ -1808,17 +1808,17 @@ A conglomeration of boulders and rapids blocks further progress.
 linerocks~
 9 -1 16855
 E
-boulders~
-A line of huge rocks blocks the river's passage and forces it to
-churn rapidly between them.
+brush vegetation~
+Rampant overgrowth blocks the riverbank on either side of the boulders.
 ~
 E
 rapids~
 The black water foams as it crashes down through the rocks.
 ~
 E
-brush vegetation~
-Rampant overgrowth blocks the riverbank on either side of the boulders.
+boulders~
+A line of huge rocks blocks the river's passage and forces it to
+churn rapidly between them.
 ~
 S
 #16856
@@ -1841,13 +1841,13 @@ A path of moss leads up a steep embankment away from the river.
 ~
 0 -1 16857
 E
-sand slope~
-A beach of white, pure sand lines the sloping riverbank.
-~
-E
 track~
 A sweeping and curving trail drifts across the beach, the track
 of a large river-snake.
+~
+E
+sand slope~
+A beach of white, pure sand lines the sloping riverbank.
 ~
 S
 #16857
@@ -1870,17 +1870,17 @@ A path of moss leads down a steep embankment toward a lonely beach.
 ~
 0 -1 16856
 E
-moss~
-A soft-green carpet lines the sloping path.
+trees~
+Stunted trees, cut short by roving wildlife, grow sparse along
+the mossy trail.
 ~
 E
 thornbrush~
 Dense vegetation spawning giant thorns encircles you.
 ~
 E
-trees~
-Stunted trees, cut short by roving wildlife, grow sparse along
-the mossy trail.
+moss~
+A soft-green carpet lines the sloping path.
 ~
 S
 #16858
@@ -1903,8 +1903,8 @@ A path of moss leads down a steep embankment.
 ~
 0 -1 16857
 E
-weeds~
-Giant cattails and swamp grass line the trail.
+trail~
+A trail of dirty sand meanders between the bogs and ponds.
 ~
 E
 bogs water ponds~
@@ -1912,8 +1912,8 @@ Murky bogs and standing water have collected on either side of
 the trail.  The land is flat and saturated with moisture.
 ~
 E
-trail~
-A trail of dirty sand meanders between the bogs and ponds.
+weeds~
+Giant cattails and swamp grass line the trail.
 ~
 S
 #16859
@@ -1938,21 +1938,21 @@ from above.
 reeds~
 9 -1 7106
 E
-bogs water ponds~
-Murky bogs and standing water have collected on either side of
-the trail.  The land is flat and saturated with moisture.
-~
-E
-trail~
-A trail of dirty sand meanders between the bogs and ponds.
+barrier~
+A wall of dense reeds blocks a passage leading up.
 ~
 E
 reeds wall~
 A wall of dense reeds blocks a passage leading up.
 ~
 E
-barrier~
-A wall of dense reeds blocks a passage leading up.
+trail~
+A trail of dirty sand meanders between the bogs and ponds.
+~
+E
+bogs water ponds~
+Murky bogs and standing water have collected on either side of
+the trail.  The land is flat and saturated with moisture.
 ~
 S
 #16860
@@ -1976,14 +1976,14 @@ The trail drifts down a steep path, weaving between dense overgrowth.
 ~
 0 -1 16853
 E
-plants~
-A dense barrier of intimidating overgrowth moves closer still to
-the narrowing trail.
-~
-E
 thorns~
 Stretching branches span the passage and threaten to impale you on
 their extended thorns.
+~
+E
+plants~
+A dense barrier of intimidating overgrowth moves closer still to
+the narrowing trail.
 ~
 S
 #16861
@@ -2013,9 +2013,9 @@ wall, forming a makeshift ladder leading up toward a lit opening.
 branches~
 11 -1 6018
 E
-plants~
-A dense barrier of intimidating overgrowth moves closer still to
-the narrowing trail.
+branches~
+An obscure set of branches have grown solid against the rock
+wall, forming a makeshift ladder leading up toward a lit opening.
 ~
 E
 thorns~
@@ -2023,9 +2023,9 @@ Stretching branches span the passage and threaten to impale you on
 their extended thorns.
 ~
 E
-branches~
-An obscure set of branches have grown solid against the rock
-wall, forming a makeshift ladder leading up toward a lit opening.
+plants~
+A dense barrier of intimidating overgrowth moves closer still to
+the narrowing trail.
 ~
 S
 #16862
@@ -2055,11 +2055,9 @@ A giant wall of red rock spans west, curving into the south.
 linerocks~
 9 -1 16862
 E
-lettering~
-        Lost and wandering, forever
-       malaise and bitter desolation,
-   my very soul vexed with grief and mournful emptiness,
-       Where did I go wrong?
+cracks~
+Several thin cracks radiate across the walls, emitting a slight
+breeze.
 ~
 E
 wall walls~
@@ -2067,9 +2065,11 @@ A spray of cyrillic lettering covers the western wall, written
 in a flaking layer of blood.
 ~
 E
-cracks~
-Several thin cracks radiate across the walls, emitting a slight
-breeze.
+lettering~
+        Lost and wandering, forever
+       malaise and bitter desolation,
+   my very soul vexed with grief and mournful emptiness,
+       Where did I go wrong?
 ~
 S
 #16863
@@ -2092,12 +2092,12 @@ A tiny hole opens into a dim cavern below.
 ~
 0 -1 16844
 E
-slime~
-A gray pus oozes out from between the rocks here.
-~
-E
 hole~
 A wide hole leads down into a dim cavern below.
+~
+E
+slime~
+A gray pus oozes out from between the rocks here.
 ~
 S
 #16864
@@ -2120,12 +2120,12 @@ A hole opens up below you, leading into a brighter cavern.
 ~
 0 -1 16867
 E
-slime~
-A gray pus oozes out from between the rocks here.
-~
-E
 hole space~
 A wide hole leads down into a brighter cavern below.
+~
+E
+slime~
+A gray pus oozes out from between the rocks here.
 ~
 S
 #16865
@@ -2200,17 +2200,17 @@ A tiny hole opens up into a dark cavern above.
 ~
 0 -1 16864
 E
-road~
-A winding cobblestone road, the main path for trade within
-these subterranean tunnels, has been left to disintegrate.
+inscription~
+You cannot decipher what it says.
 ~
 E
 beams~
 Each carries a singular inscription, the mark of the ancient people.
 ~
 E
-inscription~
-You cannot decipher what it says.
+road~
+A winding cobblestone road, the main path for trade within
+these subterranean tunnels, has been left to disintegrate.
 ~
 S
 #16868
@@ -2234,22 +2234,22 @@ The stone road continues south in the dim underground passage.
 ~
 0 -1 16867
 E
-road~
-A winding cobblestone road, the main path for trade within
-these subterranean tunnels, has been left to disintegrate.
-~
-E
-beams~
-Each carries a singular inscription, the mark of the ancient people.
+rocks wreck~
+An avalanche of rocks and beams have fallen to block the rest of
+the road.
 ~
 E
 inscription~
 You cannot decipher what it says.
 ~
 E
-rocks wreck~
-An avalanche of rocks and beams have fallen to block the rest of
-the road.
+beams~
+Each carries a singular inscription, the mark of the ancient people.
+~
+E
+road~
+A winding cobblestone road, the main path for trade within
+these subterranean tunnels, has been left to disintegrate.
 ~
 S
 #16869
@@ -2272,21 +2272,21 @@ The stone road continues south in the dim underground passage.
 ~
 0 -1 16870
 E
-road~
-A winding cobblestone road, the main path for trade within
-these subterranean tunnels, has been left to disintegrate.
-~
-E
-beams~
-Each carries a singular inscription, the mark of the ancient people.
+grass tufts strands~
+Tufts of defiant subterranean grass grow between the cobblestones.
 ~
 E
 inscription~
 You cannot decipher what it says.
 ~
 E
-grass tufts strands~
-Tufts of defiant subterranean grass grow between the cobblestones.
+beams~
+Each carries a singular inscription, the mark of the ancient people.
+~
+E
+road~
+A winding cobblestone road, the main path for trade within
+these subterranean tunnels, has been left to disintegrate.
 ~
 S
 #16870
@@ -2315,21 +2315,21 @@ A wide, dusty path drifts down into the lower caverns.
 ~
 0 -1 16882
 E
-road~
-A winding cobblestone road, the main path for trade within
-these subterranean tunnels, has been left to disintegrate.
-~
-E
-beams~
-Each carries a singular inscription, the mark of the ancient people.
+grass tufts strands~
+Tufts of defiant subterranean grass grow between the cobblestones.
 ~
 E
 inscription~
 You cannot decipher what it says.
 ~
 E
-grass tufts strands~
-Tufts of defiant subterranean grass grow between the cobblestones.
+beams~
+Each carries a singular inscription, the mark of the ancient people.
+~
+E
+road~
+A winding cobblestone road, the main path for trade within
+these subterranean tunnels, has been left to disintegrate.
 ~
 S
 #16871
@@ -2359,21 +2359,8 @@ leading into the upper caverns.
 stairs~
 11 -1 16872
 E
-road~
-A winding cobblestone road, the main path for trade within
-these subterranean tunnels, has been left to disintegrate.
-~
-E
-beams~
-Each carries a singular inscription, the mark of the ancient people.
-~
-E
-inscription~
-You cannot decipher what it says.
-~
-E
-grass tufts strands~
-Tufts of defiant subterranean grass grow between the cobblestones.
+ravine~
+A brush-engorged ravine extends past the end of the road.
 ~
 E
 stairs~
@@ -2381,8 +2368,21 @@ A rickety set of stairs have been attached to the rock wall here,
 leading into the upper caverns.
 ~
 E
-ravine~
-A brush-engorged ravine extends past the end of the road.
+grass tufts strands~
+Tufts of defiant subterranean grass grow between the cobblestones.
+~
+E
+inscription~
+You cannot decipher what it says.
+~
+E
+beams~
+Each carries a singular inscription, the mark of the ancient people.
+~
+E
+road~
+A winding cobblestone road, the main path for trade within
+these subterranean tunnels, has been left to disintegrate.
 ~
 S
 #16872
@@ -2407,14 +2407,14 @@ leading into the lower caverns.
 stairs~
 11 -1 16871
 E
-stairs~
-A rickety set of stairs have been attached to the rock wall here,
-leading into the upper caverns.
-~
-E
 plants~
 Ravenous hybrids of spiny plants grow rampant across the walls and
 floor, making it difficult to follow the tunnel.
+~
+E
+stairs~
+A rickety set of stairs have been attached to the rock wall here,
+leading into the upper caverns.
 ~
 S
 #16873
@@ -2545,13 +2545,13 @@ A fan of dense foliage barely hides a tiny opening above.
 foliage~
 9 0 27105
 E
+foliage~
+A dense wall of foliage barely hides a tiny opening above.
+~
+E
 bushes vines~
 Giant lengths of underground vines and curls of bushes close in
 to almost block the cavern.
-~
-E
-foliage~
-A dense wall of foliage barely hides a tiny opening above.
 ~
 S
 #16878
@@ -2735,15 +2735,8 @@ snow above.
 linerocks~
 9 -1 16884
 E
-walls~
-The ice and frost-covered rock walls are adorned with various
-hunting items and trophies.  Furs, hides, and spears are hung
-all around you.
-~
-E
-spears~
-Several stone spears are stuck in the soft floor and hung on
-hooks in the stone walls, obviously for display.
+block~
+A large ice block stands by a second entrance.
 ~
 E
 furs hides~
@@ -2752,8 +2745,15 @@ hung on the walls around you.  A few lie in piles in the corners,
 probably serving as bedding.
 ~
 E
-block~
-A large ice block stands by a second entrance.
+spears~
+Several stone spears are stuck in the soft floor and hung on
+hooks in the stone walls, obviously for display.
+~
+E
+walls~
+The ice and frost-covered rock walls are adorned with various
+hunting items and trophies.  Furs, hides, and spears are hung
+all around you.
 ~
 S
 #16885
@@ -2807,13 +2807,13 @@ The pathway winds west between the snowbanks.
 ~
 0 -1 16888
 E
+block~
+A large ice block stands beside a towering cliff.
+~
+E
 path~
 A dry trail of eroded granite drifts blindly forward between the
 banks of snow.
-~
-E
-block~
-A large ice block stands beside a towering cliff.
 ~
 S
 #16887
@@ -2832,9 +2832,8 @@ D0
 ~
 0 -1 16896
 E
-floor planks~
-A rough, wooden floor spans the deck, planks creaking as the barge
-moves along.
+clouds~
+Puffs of clouds drift past the deck as you sail along.
 ~
 E
 roof~
@@ -2842,8 +2841,9 @@ A thin metallic sheet blocks the snow and wind as the barge flies
 along.
 ~
 E
-clouds~
-Puffs of clouds drift past the deck as you sail along.
+floor planks~
+A rough, wooden floor spans the deck, planks creaking as the barge
+moves along.
 ~
 S
 #16888
@@ -2894,17 +2894,17 @@ The pathway winds east between the snowbanks.
 ~
 0 -1 16888
 E
-steps~
-A set of granite steps at the end of the path leading up to a gate.
+logs wall~
+The wall surrounding the fort is tall and formidable, but does little
+to slake the fury of the wind and blinding snow.
 ~
 E
 gate~
 A crude, log and plank gate standing against the sharp winter wind.
 ~
 E
-logs wall~
-The wall surrounding the fort is tall and formidable, but does little
-to slake the fury of the wind and blinding snow.
+steps~
+A set of granite steps at the end of the path leading up to a gate.
 ~
 S
 #16890
@@ -2938,14 +2938,14 @@ A shoveled path leads into a withering garden.
 ~
 0 -1 16892
 E
-marks shovel-marks~
-Sweeping gashes in the frozen layer of ice and snow on the trail
-where people have swept away a path.
-~
-E
 tracks~
 A smattering of boot-tracks lead in and out of huts and along
 the trail.
+~
+E
+marks shovel-marks~
+Sweeping gashes in the frozen layer of ice and snow on the trail
+where people have swept away a path.
 ~
 S
 #16891
@@ -2969,9 +2969,9 @@ A shoveled path meets with a snowy trail in the west.
 ~
 0 -1 16890
 E
-cots~
-Several homemade, hide cots line the walls, bedding for the
-inhabitants of this tiny fort.
+walls~
+The canvas walls are dotted with rope-ties, each holding items
+and tools the inhabitants use.
 ~
 E
 firepit~
@@ -2979,9 +2979,9 @@ A pile of smoldering coals burn away in the corner, surrounded
 by small granite stones.
 ~
 E
-walls~
-The canvas walls are dotted with rope-ties, each holding items
-and tools the inhabitants use.
+cots~
+Several homemade, hide cots line the walls, bedding for the
+inhabitants of this tiny fort.
 ~
 S
 #16892
@@ -3004,15 +3004,15 @@ A shoveled path meets with a snowy trail in the east.
 ~
 0 -1 16890
 E
+rows~
+The garden is divided into a few rows, each holding less than
+ten stalks of corn and potato plants.
+~
+E
 garden~
 A tiny, drab plot of land which barely supports a few rows of
 dying vegetables, this is the only source of edible plants for
 these inhabitants.
-~
-E
-rows~
-The garden is divided into a few rows, each holding less than
-ten stalks of corn and potato plants.
 ~
 S
 #16893
@@ -3041,14 +3041,14 @@ A shoveled path leads into a squat shelter to the west.
 ~
 0 -1 16895
 E
-marks shovel-marks~
-Sweeping gashes in the frozen layer of ice and snow on the trail
-where people have swept away a path.
-~
-E
 tracks~
 A smattering of boot-tracks lead in and out of huts and along
 the trail.
+~
+E
+marks shovel-marks~
+Sweeping gashes in the frozen layer of ice and snow on the trail
+where people have swept away a path.
 ~
 S
 #16894
@@ -3074,14 +3074,14 @@ A shoveled path meets with a snowy trail in the west.
 ~
 0 -1 16893
 E
-piles junk~
-Mounds of junk and items of interest are piled all around, all
-for sale.
-~
-E
 desk~
 A pine desk sits beneath the weight of the junk, cleared only
 where a tiny brass bell has been placed.
+~
+E
+piles junk~
+Mounds of junk and items of interest are piled all around, all
+for sale.
 ~
 S
 #16895
@@ -3113,14 +3113,14 @@ A shoveled path leads south into a withering garden.
 ~
 0 -1 16892
 E
-roof~
-The barely-patched roof flaps and creaks in the wind, holes
-dropping gouts of snow within.
-~
-E
 clumps snow~
 Piles of frozen snow drifts in from the holes in the roof and
 melt slowly on the dirt floor, forming puddles of mud.
+~
+E
+roof~
+The barely-patched roof flaps and creaks in the wind, holes
+dropping gouts of snow within.
 ~
 S
 #16896
@@ -3153,14 +3153,14 @@ The snowy mountain edge extends into a dense forest.
 ~
 0 -1 16897
 E
-shelter~
-An abandoned wood shelter stands precariously on the edge of
-the platform here, barely housing a desk of stone.
-~
-E
 ruts~
 Deep ruts score the snowy earth leading north into the tree-lined
 wilderness.
+~
+E
+shelter~
+An abandoned wood shelter stands precariously on the edge of
+the platform here, barely housing a desk of stone.
 ~
 S
 #16897
@@ -3180,13 +3180,13 @@ A frost-covered wooden platform spans the mountain's edge.
 ~
 0 -1 16896
 E
+snowbanks~
+Giant snowdrifts line the edge of the forest.
+~
+E
 evergreens~
 Towering trees sway under the weight of the snow they carry and
 waver in the slight winter wind.
-~
-E
-snowbanks~
-Giant snowdrifts line the edge of the forest.
 ~
 S
 #16898
@@ -3206,13 +3206,13 @@ A frost-covered wooden platform spans the mountain's edge.
 ~
 0 -1 16896
 E
+snowbanks~
+Giant snowdrifts line the edge of the forest.
+~
+E
 evergreens~
 Towering trees sway under the weight of the snow they carry and
 waver in the slight winter wind.
-~
-E
-snowbanks~
-Giant snowdrifts line the edge of the forest.
 ~
 S
 #16899
@@ -3240,14 +3240,14 @@ perhaps large enough to crawl through..
 snowdrift~
 9 -1 12844
 E
-treeline~
-Towering evergreens sway under the weight of the snow they carry and
-waver in the slight winter wind.  A piercing howl drifts from within.
-~
-E
 snowdrifts~
 Giant snowdrifts line the edge of the forest, blown over by the cold
 wind.
+~
+E
+treeline~
+Towering evergreens sway under the weight of the snow they carry and
+waver in the slight winter wind.  A piercing howl drifts from within.
 ~
 S
 #0

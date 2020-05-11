@@ -33,7 +33,6 @@
 
 int check_subclass(CHAR *ch,int sub,int lvl);
 int check_god_access(CHAR *ch, int active);
-bool distribute_token(void);
 int guild(CHAR *mob, CHAR *ch, int cmd, char *arg);
 
 int check_sc_access(CHAR *ch, int skill) {
@@ -822,62 +821,144 @@ void initialize_token_mob() {
   return;
 }
 
-static int token_mob_target_room() {
+/* A list of zones for which teleport is disqualified. */
+const int no_teleport_zones[] = {
+    -1,  // NOWHERE
+    0,   // Limbo
+    10,  // Quest Gear III
+    12,  // Immortal Rooms
+    30,  // Northern Midgaard
+    31,  // Southern Midgaard
+    35,  // Training
+    36,  // Cafe
+    39,  // Stables
+    51,  // Eryndlyn I
+    55,  // Eryndlyn II
+    58,  // HMS Topknot
+    59,  // Eryndlyn III
+    66,  // Newbie
+    69,  // Quest Gear
+    123, // Boards
+    131, // The Elemental Plane of Fire
+    132, // The Elemental Plane of Water
+    133, // The Elemental Plane of Earth
+    134, // The Elemental Plane of Air
+    253, // Hell1
+    254, // Hell2
+    255, // Hell3
+    260, // Questy Vader III
+    261, // Questy Nosferatu
+    262, // Quest by Hemp
+    275, // Clan Halls
+    278, // ISAHall
+    285, // Enchanted Forest
+    286, // Olympus Puzzles
+    287, // Immortal Village
+    293, // 00Gear
+    294, // Custom Gear III
+    295, // Lottery Items
+    296, // Custom Gear IV
+    297, // Theldon's Crypt
+    298, // Custom Gear II
+    299, // Custom Gear
+    300, // Labyrinth of Skelos
+};
+
+/* Validate that the given room real number is OK to teleport to. */
+bool is_valid_token_mob_target_room(int rnum) {
+  /* Ensure the given rnum is within the world table. */
+  if (rnum < 0 || rnum > top_of_world) return FALSE;
+
+  /* Disqualify a room that is in a zone in the no teleport zone list. */
+  if (in_int_array(inzone(ROOM_VNUM(rnum)), no_teleport_zones, NUMELEMS(no_teleport_zones))) return FALSE;
+
+  /* Various room flags that disqualify a room for teleport. */
+  if (IS_SET(ROOM_FLAGS(rnum), DEATH)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), NO_MOB)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), SAFE)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), PRIVATE)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), LOCK)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), HAZARD)) return FALSE;
+  if (IS_SET(ROOM_FLAGS(rnum), FLYING)) return FALSE;
+
+#ifdef PROFILE
+  log_f("PROFILE :: teleport room: '%s', vnum: %d, rnum: %d",
+    ROOM_NAME(rnum), ROOM_VNUM(rnum), rnum);
+#endif
+
+  return TRUE;
+}
+
+/* Returns a randomly chosen room from all valid rooms in the world. */
+int token_mob_target_room() {
   int goto_room = 0;
 
-#ifndef TEST_SITE
+  /* Return 0 if the list of loaded zones is less than the number of zones in
+     the no teleport zone list. */
+  if (top_of_zone_table < NUMELEMS(no_teleport_zones)) return 0;
 
-  int zone = 0;
+  /* This table is cached, because the world table doesn't change often,
+     and the token mob makes frequent use of it when it's alive. */
+  static int *teleport_room_table = 0;
+  static int top_of_teleport_room_table = -1;
+  static int allocated = 0;
 
+  /* Create the teleport room table if it's not already allocated. */
+  if (top_of_teleport_room_table < 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 7000;
+
+    CREATE(teleport_room_table, int, allocated);
+
+    /* Loop through all of the rooms in the world and build a list of valid
+       teleport rooms. */
+    for (int i = 0; i <= top_of_world; i++) {
+      if (!is_valid_token_mob_target_room(i)) continue;
+
+      /* Re-allocate the teleport room table, as needed. */
+      if (top_of_teleport_room_table > allocated) {
+        allocated += 500;
+
+        RECREATE(teleport_room_table, int, allocated);
+      }
+
+      /* Store the real number of the room. */
+      teleport_room_table[++top_of_teleport_room_table] = i;
+    }
+
+#ifdef PROFILE
+    log_f("PROFILE :: teleport_room_table size: %d, allocated: %d", top_of_teleport_room_table + 1, allocated);
 #endif
+  }
 
-  while(goto_room==0) {
-    goto_room=number(1,top_of_world);
+  /* Log and return 0 if no suitable teleport room could be found. */
+  if (top_of_teleport_room_table < 0) {
+    log_f("WARNING: Could not find a suitable teleport room for token mob.");
 
-#ifndef TEST_SITE
+    return 0;
+  }
 
-    zone=inzone(world[goto_room].number);
+  /* Shuffle the teleport room list. */
+  shuffle_int_array(teleport_room_table, top_of_teleport_room_table + 1);
 
-    if(zone==275 ||
-       zone==300 ||
-       zone==39  ||
-       zone==36  ||
-       zone==35  ||
-       zone==30  ||
-       zone==31  ||
-       zone==58  ||
-       zone==0   ||
-       zone==12  ||
-       zone==253 ||
-       zone==254 ||
-       zone==255 ||
-       zone==51  ||
-       zone==55  ||
-       zone==59  ||
-       zone==285 ||
-       zone==286 ||
-       zone==287 ||
-       zone==261 ||
-       zone==260 ||
-       zone==278 ||
-       zone==66  ||
-       zone==10  ||
-       zone==262 ||
-       IS_SET(world[goto_room].room_flags, SAFE) ||
-       IS_SET(world[goto_room].room_flags, PRIVATE) ||
-       IS_SET(world[goto_room].room_flags, DEATH) ||
-       IS_SET(world[goto_room].room_flags, HAZARD) ||
-       IS_SET(world[goto_room].room_flags, NO_MOB))
-      goto_room=0;
+  /* Choose the first element of the shuffled teleport room list. */
+  goto_room = teleport_room_table[0];
 
-    if(number(1,100)>zone_rating(zone)) /* zone rating check */
-      goto_room=0;
-
-#endif
-
+  /* Double-check that the chosen room is valid, as it's possible the cached
+     room list has become invalidated. If this is the case, destroy the
+     current list, and call this function again to build a new one. */
+  if (!is_valid_token_mob_target_room(goto_room)) {
+    goto try_again;
   }
 
   return goto_room;
+
+try_again:
+  DESTROY(teleport_room_table);
+
+  top_of_teleport_room_table = -1;
+
+  return token_mob_target_room();
 }
 
 void check_token_mob() {
@@ -894,23 +975,26 @@ void check_token_mob() {
     if(!(obj=read_object(5,VIRTUAL))) return;
 
     goto_room = token_mob_target_room();
-    char_to_room(mob,goto_room);
-    obj_to_char(obj,mob);
-    log_f("SUBLOG: Token mob placed in room %d.",world[goto_room].number);
 
-    switch(number(0,3)) {
-      case 1:
-        do_yell(mob,"Death to all that oppose me!",CMD_YELL);
-        break;
-      case 2:
-        do_yell(mob,"I have returned!",CMD_YELL);
-        break;
-      case 3:
-        do_yell(mob, "Yo, whassup?!", CMD_YELL);
-        break;
-      default:
-        do_yell(mob,"Death to you all!",CMD_YELL);
-        break;
+    if (goto_room > 0) {
+      char_to_room(mob, goto_room);
+      obj_to_char(obj, mob);
+      log_f("SUBLOG: Token mob placed in room %d.", world[goto_room].number);
+
+      switch (number(0, 3)) {
+        case 1:
+          do_yell(mob, "Death to all that oppose me!", CMD_YELL);
+          break;
+        case 2:
+          do_yell(mob, "I have returned!", CMD_YELL);
+          break;
+        case 3:
+          do_yell(mob, "Yo, whassup?!", CMD_YELL);
+          break;
+        default:
+          do_yell(mob, "Death to you all!", CMD_YELL);
+          break;
+      }
     }
   }
 #endif
@@ -994,29 +1078,31 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
       zone_rate(zone,1);
     }
 
-    if(mob->specials.timer>=15 && !mob->specials.fighting) {
+    if (mob->specials.timer >= 15 && !mob->specials.fighting) {
       /* if morts in the zone, don't beam */
-      if(count_mortals_zone(mob,TRUE)) return FALSE;
+      if (count_mortals_zone(mob, TRUE)) return FALSE;
 
       goto_room = token_mob_target_room();
 
-      switch (number(1,4)) {
-        case 1:
-          do_yell(mob,"I don't like this place, I'm moving!",CMD_YELL); break;
-        case 2:
-          do_yell(mob,"Time to find some new real estate!", CMD_YELL); break;
-        case 3:
-          do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL); break;
-        case 4:
-          do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL); break;
-      }
+      if (goto_room > 0) {
+        switch (number(1, 4)) {
+          case 1:
+            do_yell(mob, "I don't like this place, I'm moving!", CMD_YELL); break;
+          case 2:
+            do_yell(mob, "Time to find some new real estate!", CMD_YELL); break;
+          case 3:
+            do_yell(mob, "I'm still looking for that elusive mudder!", CMD_YELL); break;
+          case 4:
+            do_yell(mob, "Well, if no one's here, I'm moving on!", CMD_YELL); break;
+        }
 
-      act("$n disappears in a puff of smoke.",0,mob,0,0,TO_ROOM);
-      zone=inzone(CHAR_VIRTUAL_ROOM(mob));
-      zone_rate(zone,2);
-      char_from_room(mob);
-      char_to_room(mob,goto_room);
-      mob->specials.timer=0;
+        act("$n disappears in a puff of smoke.", 0, mob, 0, 0, TO_ROOM);
+        zone = inzone(CHAR_VIRTUAL_ROOM(mob));
+        zone_rate(zone, 2);
+        char_from_room(mob);
+        char_to_room(mob, goto_room);
+        mob->specials.timer = 0;
+      }
     }
   }
 

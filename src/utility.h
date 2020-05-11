@@ -135,21 +135,21 @@ int qcmp_int_desc(const void *a, const void *b);
 
 int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
 int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
-int get_random_set_bit_from_mask(const int mask);
+int get_random_set_bit_from_mask(const int32_t mask);
 
-bool in_int_array(int value, const int *array, size_t num_elems);
+bool in_int_array(int value, const int array[], const size_t num_elems);
 
-void shuffle_int_array(int *array, size_t num_elems);
-void shuffle_2d_int_array(int (*array)[2], size_t num_elems);
+void shuffle_int_array(int array[], const size_t num_elems);
+void shuffle_2d_int_array(int array[][2], const size_t num_elems);
 
 #define RND_RND 0
 #define RND_MIN 1
 #define RND_MAX 2
 #define RND_AVG 3
 
-int32_t number_ex(int32_t from, int32_t to, int32_t mode);
+int32_t number_ex(int32_t from, int32_t to, int mode);
 int32_t number(int32_t from, int32_t to);
-int32_t dice_ex(int32_t num_dice, int32_t size_dice, int32_t mode);
+int32_t dice_ex(int32_t num_dice, int32_t size_dice, int mode);
 int32_t dice(int32_t num_dice, int32_t size_dice);
 bool chance(int32_t num);
 int32_t MIN(int32_t a, int32_t b);

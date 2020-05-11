@@ -74,7 +74,7 @@ do {                   \
   }                    \
 } while (0)
 
-#define IS_NIGHT                 ((time_info.hours > 18) || (time_info.hours < 6))
+#define IS_NIGHT                 (weather_info.sunlight != SUN_LIGHT)
 #define IS_DAY                   !IS_NIGHT
 
 #define ROOM                     1
@@ -112,7 +112,8 @@ do {                   \
 #define DESC_SNOOPING(desc)      (DESC_SNOOP(desc).snooping)
 #define DESC_SNOOP_BY(desc)      (DESC_SNOOP(desc).snoop_by)
 
-#define MOB_VNUM(mob)            (mob_proto_table[mob->nr].virtual)
+#define MOB_RNUM(mob)            (mob->nr)
+#define MOB_VNUM(mob)            (mob->nr_v)
 #define MOB_NAME(mob)            (mob->player.name ? mob->player.name : mob_proto_table[mob->nr].name)
 #define MOB_DESCRIPTION(mob)     (mob->player.description ? mob->player.description : mob_proto_table[mob->nr].description)
 #define MOB_SHORT(mob)           (mob->player.short_descr ? mob->player.short_descr : mob_proto_table[mob->nr].short_descr)
@@ -251,6 +252,9 @@ do {                   \
 #define AWAKE(ch) (GET_POS(ch) > POSITION_SLEEPING)
 
 #define GET_ID(ch)              (ch ? ch->ver3.id : -1)
+
+#define GET_IN_ROOM_R(ch)       (ch->in_room_r)
+#define GET_IN_ROOM_V(ch)       (ch->in_room_v)
 
 #define GET_NAME(ch)            (!IS_MOB(ch) ? (ch)->player.name : MOB_NAME(ch))
 #define GET_LONG(ch)            (!IS_MOB(ch) ? "None" : MOB_LONG(ch))

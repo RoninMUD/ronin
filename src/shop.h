@@ -25,7 +25,7 @@ struct shop_data
 	char *message_sell;     /* Message when player sells item       */
 	int temper1;           	/* How does keeper react if no money    */
 	int temper2;           	/* How does keeper react when attacked  */
-	int keeper;             /* The mobil who owns the shop (real)*/
+	int keeper;             /* The mobile who owns the shop (virtual)*/
 	int with_who;		/* Who does the shop trade with?	*/
 	int in_room;		/* Where is the shop?			*/
 	int open1,open2;	/* When does the shop open?		*/

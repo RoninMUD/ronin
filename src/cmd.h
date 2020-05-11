@@ -322,7 +322,7 @@ $State: Exp $
 #define CMD_MEDITATE           300
 #define CMD_PROTECT            301
 #define CMD_SUBCLASS           302
-#define CMD_WHIRLWIND          303
+#define CMD_303                303
 #define CMD_DIRTY_TRICKS       304 
 #define CMD_BACKFIST           305
 #define CMD_AWARENESS          306

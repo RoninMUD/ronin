@@ -335,6 +335,7 @@ void create_room(CHAR *ch, char *arg1) {
   world[room_index] = (const struct room_data) { 0 };
 
   world[room_index].number = room_num;
+
   world[room_index].zone = zone_num;
   world[room_index].name = str_dup("Temporary Room");
   world[room_index].description = str_dup("Temporary description.\n");
@@ -432,72 +433,62 @@ void create_mob(CHAR *ch, char *arg1) {
 }
 
 void create_shop(CHAR *ch, char *arg1) {
-  int shop_num = -1;
+  int keeper = -1, shop_nr;
 
-  sscanf(arg1, "%d", &shop_num);
+  sscanf(arg1, "%d", &keeper);
 
-  if (shop_num < 0) {
+  if (keeper < 0) {
     send_to_char("You must specify a shop number, and the number must be greater than 0.\n\r", ch);
     return;
   }
 
-  int zone_num = (shop_num / 100);
+  int zone_num = (keeper / 100);
 
   if (!check_zone(ch, zone_num)) return;
   if (!check_zone_access(ch, zone_num)) return;
 
   for (int i = 0; i < number_of_shops; i++) {
-    if (shop_index[i].keeper == shop_num) {
+    if (shop_index[i].keeper == keeper) {
       send_to_char("That shop already exists.\n\r", ch);
       return;
     }
   }
 
-  if (!number_of_shops) {
-    CREATE(shop_index, struct shop_data, 1);
-  }
-  else {
-    if (!(shop_index = (struct shop_data*)realloc(shop_index, ((number_of_shops + 1) * sizeof(struct shop_data))))) {
-      send_to_char("Unable to create shop structure (realloc).\n\r", ch);
-      return;
-    }
-  }
+  shop_nr = allocate_shop(keeper);
 
-  shop_index[number_of_shops].keeper = shop_num;
+  shop_index[shop_nr].keeper = keeper;
 
   for (int i = 0; i < MAX_PROD; i++) {
-    shop_index[number_of_shops].producing[i] = -1;
+    shop_index[shop_nr].producing[i] = -1;
   }
 
-  shop_index[number_of_shops].profit_buy = 1;
-  shop_index[number_of_shops].profit_sell = 1;
+  shop_index[shop_nr].profit_buy = 1;
+  shop_index[shop_nr].profit_sell = 1;
 
   for (int i = 0; i < MAX_TRADE; i++) {
-    shop_index[number_of_shops].type[i] = 0;
+    shop_index[shop_nr].type[i] = 0;
   }
 
-  shop_index[number_of_shops].no_such_item1 = str_dup("%s What keeper says if it doesn't have the item.");
-  shop_index[number_of_shops].no_such_item2 = str_dup("%s What keeper says if seller doesn't have the item.");
-  shop_index[number_of_shops].do_not_buy = str_dup("%s What keeper says if it doesn't buy that kind of item.");
-  shop_index[number_of_shops].missing_cash1 = str_dup("%s What keeper says if it doesn't have cash to buy an item.");
-  shop_index[number_of_shops].missing_cash2 = str_dup("%s What keeper says if buyer doesn't have the cash to buy an item.");
-  shop_index[number_of_shops].message_buy = str_dup("%s What keeper says after buyer gets item (can include %d for amount).");
-  shop_index[number_of_shops].message_sell = str_dup("%s What keeper says after it buys a sellers item (can include %d for amount).");
+  shop_index[shop_nr].no_such_item1 = str_dup("%s What keeper says if it doesn't have the item.");
+  shop_index[shop_nr].no_such_item2 = str_dup("%s What keeper says if seller doesn't have the item.");
+  shop_index[shop_nr].do_not_buy = str_dup("%s What keeper says if it doesn't buy that kind of item.");
+  shop_index[shop_nr].missing_cash1 = str_dup("%s What keeper says if it doesn't have cash to buy an item.");
+  shop_index[shop_nr].missing_cash2 = str_dup("%s What keeper says if buyer doesn't have the cash to buy an item.");
+  shop_index[shop_nr].message_buy = str_dup("%s What keeper says after buyer gets item (can include %d for amount).");
+  shop_index[shop_nr].message_sell = str_dup("%s What keeper says after it buys a sellers item (can include %d for amount).");
 
-  shop_index[number_of_shops].temper1 = 0;
-  shop_index[number_of_shops].temper2 = 0;
+  shop_index[shop_nr].temper1 = 0;
+  shop_index[shop_nr].temper2 = 0;
 
-  shop_index[number_of_shops].with_who = 0;
+  shop_index[shop_nr].with_who = 0;
 
-  shop_index[number_of_shops].in_room = 0;
+  shop_index[shop_nr].in_room = 0;
 
-  shop_index[number_of_shops].open1 = 0;
-  shop_index[number_of_shops].open2 = 0;
+  shop_index[shop_nr].open1 = 0;
+  shop_index[shop_nr].open2 = 0;
 
-  shop_index[number_of_shops].close1 = 28;
-  shop_index[number_of_shops].close2 = 0;
-
-  number_of_shops++;
+  shop_index[shop_nr].close1 = 28;
+  shop_index[shop_nr].close2 = 0;
 
   send_to_char("Shop created.\n\r\
 Note: A mobile with the same virtual number as the shop must exist and\n\r\
@@ -4311,8 +4302,8 @@ void do_rclone(CHAR *ch, char *argument, int cmd) {
 
     for(i=0;i<6;i++) world[index2].dir_option[i] = NULL;
 
-    /* Renumber the world to match the new real indeces */
     renum_world();
+
     fl = fopen("test.wld","w");
     write_room(fl, index2);
     fclose(fl);
@@ -4473,6 +4464,7 @@ void do_mclone(CHAR *ch, char *argument, int cmd) {
         mob_proto_table[i2].tagline = tmp_tag;
       }
     }
+
     log_cmd("mclone","  writing test.mob file");
     fl = fopen("test.mob","w");
     write_mob(fl, i2);
@@ -4944,18 +4936,17 @@ Any existing exits to the room being deleted will be removed.\n\r";
     extract_obj(obj);
   }
 
+  DESTROY(world[room_rnum].name);
+  DESTROY(world[room_rnum].description);
+
   /* Remove any existing exits to the room. */
   for (int i = 0; i <= top_of_world; i++) {
     for (int door = NORTH; door <= DOWN; door++) {
       if (world[i].dir_option[door]) {
         if (world[i].dir_option[door]->to_room_v == room_vnum) {
-          if (world[i].dir_option[door]->general_description) {
-            free(world[i].dir_option[door]->general_description);
-          }
-          if (world[i].dir_option[door]->keyword) {
-            free(world[i].dir_option[door]->keyword);
-          }
-          free(world[i].dir_option[door]);
+          DESTROY(world[i].dir_option[door]->general_description);
+          DESTROY(world[i].dir_option[door]->keyword);
+          DESTROY(world[i].dir_option[door]);
           world[i].dir_option[door] = NULL;
         }
       }
@@ -5038,6 +5029,17 @@ but will not be deleted from the zone.\n\r";
     }
   }
 
+  DESTROY(mob_proto_table[mob_rnum].name);
+  DESTROY(mob_proto_table[mob_rnum].short_descr);
+  DESTROY(mob_proto_table[mob_rnum].long_descr);
+  DESTROY(mob_proto_table[mob_rnum].description);
+
+  for (struct tagline_data *tagline = mob_proto_table[mob_rnum].tagline; tagline; tagline = tagline->next) {
+    DESTROY(tagline->desc);
+  }
+
+  DESTROY(mob_proto_table[mob_rnum].tagline);
+
   /* If not the top mob, move all mobs that are above down by one. */
   if (mob_rnum != top_of_mobt) {
     memmove(&mob_proto_table[mob_rnum], &mob_proto_table[mob_rnum + 1], (sizeof(struct char_data) * (top_of_mobt - mob_rnum)));
@@ -5108,6 +5110,22 @@ but will not be deleted from the zone.\n\r";
     }
   }
 
+  DESTROY(obj_proto_table[obj_rnum].short_description);
+  DESTROY(obj_proto_table[obj_rnum].description);
+  DESTROY(obj_proto_table[obj_rnum].action_description);
+  DESTROY(obj_proto_table[obj_rnum].action_description_nt);
+  DESTROY(obj_proto_table[obj_rnum].char_wear_desc);
+  DESTROY(obj_proto_table[obj_rnum].room_wear_desc);
+  DESTROY(obj_proto_table[obj_rnum].char_rem_desc);
+  DESTROY(obj_proto_table[obj_rnum].room_rem_desc);
+
+  for (struct extra_descr_data *ex_desc = obj_proto_table[obj_rnum].ex_description; ex_desc; ex_desc = ex_desc->next) {
+    DESTROY(ex_desc->keyword);
+    DESTROY(ex_desc->description);
+  }
+
+  DESTROY(obj_proto_table[obj_rnum].ex_description);
+
   /* If not the top object, move all objects that are above down by one. */
   if (obj_rnum != top_of_objt) {
     memmove(&obj_proto_table[obj_rnum], &obj_proto_table[obj_rnum + 1], (sizeof(struct obj_data) * (top_of_objt - obj_rnum)));
@@ -5173,6 +5191,14 @@ This command is used to delete a shop from a zone.\n\r\
     printf_to_char(ch, "Shop %d does not exist.\n\r", shop_vnum);
     return;
   }
+
+  DESTROY(shop_index[shop_num].no_such_item1);
+  DESTROY(shop_index[shop_num].no_such_item2);
+  DESTROY(shop_index[shop_num].missing_cash1);
+  DESTROY(shop_index[shop_num].missing_cash2);
+  DESTROY(shop_index[shop_num].do_not_buy);
+  DESTROY(shop_index[shop_num].message_buy);
+  DESTROY(shop_index[shop_num].message_sell);
 
   /* If not the top shop, move all shops that are above down by one. */
   if (shop_num != number_of_shops) {

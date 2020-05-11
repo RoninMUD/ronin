@@ -23,6 +23,8 @@
 #include "spec.clan.h"
 #include "interpreter.h"
 #include "aquest.h"
+#include "weather.h"
+#include "shop.h"
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -95,7 +97,6 @@ void examine_last_command(void);
 void read_vote(void);
 void read_voters (void);
 void load_messages(void);
-void weather_and_time ( int mode );
 void assign_command_pointers ( void );
 void assign_enchantments   ( void );
 void assign_spell_pointers ( void );
@@ -178,8 +179,19 @@ void boot_db(void)
 
      log_f("Loading World.");
      boot_world();
+
      log_f("Renumbering World.");
      renum_world();
+
+     /*
+     for (int i = 0; i <= top_of_zone_table; i++) {
+       log_f("Calculating zone terrain types.");
+       update_zone_terrain_type(zone_table[i].virtual);
+
+       log_f("Generating zone weather.");
+       reset_zone_weather(zone_table[i].virtual);
+     }
+     */
 
      log_f("Loading fight messages.");
      load_messages();
@@ -238,7 +250,7 @@ void boot_db(void)
          continue;
        }
 
-       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+       log_f("Performing boot-time reset of %s (rooms %d-%d).",
              zone_table[i].name,
              (i ? (zone_table[i - 1].top + 1) : 0),
              zone_table[i].top);
@@ -249,7 +261,7 @@ void boot_db(void)
      }
 
      if(n_mid) {
-       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+       log_f("Performing boot-time reset of %s (rooms %d-%d).",
              zone_table[n_mid].name,
              (n_mid ? (zone_table[n_mid - 1].top + 1) : 0),
              zone_table[n_mid].top);
@@ -260,7 +272,7 @@ void boot_db(void)
      }
 
      if(s_mid) {
-       log_f("Performing boot-time reset of %s (rooms %d-%d).\n",
+       log_f("Performing boot-time reset of %s (rooms %d-%d).",
              zone_table[s_mid].name,
              (s_mid ? (zone_table[s_mid - 1].top + 1) : 0),
              zone_table[s_mid].top);
@@ -291,91 +303,199 @@ void boot_db(void)
      log_f("Boot db -- DONE.");
 }
 
+/* Mobs in these zones should not load tokens. */
+const int no_token_zones[] = {
+  -1,  // NOWHERE
+  0,   // Limbo
+  10,  // Quest Gear III
+  12,  // Immortal Rooms
+  30,  // Northern Midgaard
+  31,  // Southern Midgaard
+  35,  // Training
+  36,  // Cafe
+  39,  // Stables
+  58,  // HMS Topknot
+  66,  // Newbie
+  69,  // Quest Gear
+  123, // Boards
+  128, // Tarion City
+  131, // The Elemental Plane of Fire
+  132, // The Elemental Plane of Water
+  133, // The Elemental Plane of Earth
+  134, // The Elemental Plane of Air
+  253, // Hell1
+  254, // Hell2
+  255, // Hell3
+  260, // Questy Vader III
+  261, // Questy Nosferatu
+  262, // Quest by Hemp
+  275, // Clan Halls
+  278, // ISAHall
+  293, // 00Gear
+  294, // Custom Gear III
+  295, // Lottery Items
+  296, // Custom Gear IV
+  297, // Theldon's Crypt
+  298, // Custom Gear II
+  299, // Custom Gear
+  300, // Labyrinth of Skelos
+};
 
-void distribute_tokens(int num_tokens) {
-  /* Distribute new tokens */
-  for (int i = 0; (num_tokens > 0) && (i < 1001); i++) {
-    if (i > 1000) {
-      log_s("Breaking distribute_token() loop");
+/* Validate that the given mob real number is OK to token. */
+bool is_valid_token_mob(int rnum) {
+  /* Ensure the given rnum is within the world table. */
+  if (rnum < 0 || rnum > top_of_mobt) return FALSE;
 
-      return;
+  /* Skip mobs that aren't currently in the game. */
+  if (mob_proto_table[rnum].number < 1) return FALSE;
+
+  /* Skip mobs in zones that are in the no token zone list. */
+  if (in_int_array(inzone(mob_proto_table[rnum].virtual), no_token_zones, NUMELEMS(no_token_zones))) return FALSE;
+
+  /* Skip mobs flagged NO_TOKEN. */
+  if (IS_SET(mob_proto_table[rnum].act2, ACT2_NO_TOKEN)) return FALSE;
+
+  /* Skip low-level mobs. */
+  if (mob_proto_table[rnum].level < 15) return FALSE;
+
+  /* Skip shopkeepers. */
+  if (real_shop(mob_proto_table[rnum].virtual) != -1) return FALSE;
+
+  /* Calculate mob average max hit points. */
+  int avg_max_hp = dice_ex(mob_proto_table[rnum].hp_nodice, mob_proto_table[rnum].hp_sizedice, RND_AVG) + mob_proto_table[rnum].hp_add;
+
+  /* Skip mobs with low or high max hit points. */
+  if (avg_max_hp < 500 || avg_max_hp > 15000) return FALSE;
+
+#ifdef PROFILE
+  log_f("PROFILE :: token mob: '%s', vnum: %d, rnum: %d, avg_max_hps: %d, level: %d",
+    mob_proto_table[rnum].short_descr, mob_proto_table[rnum].virtual, rnum, avg_max_hp, mob_proto_table[rnum].level);
+#endif
+
+  return TRUE;
+}
+
+/* Distribute tokens to eligible mobs in the game. */
+void distribute_tokens(const int num_tokens) {
+  /* Return if there are no tokens to distribute, or no mobs to choose from. */
+  if (num_tokens < 0 || top_of_mobt < 0) return;
+
+  /* This table is cached, because the mob prototype table doesn't change often.
+     The behavior of this new token distribution funciton is slightly different
+     than the old one. Chiefly, that mob max hit points are simulated using
+     the average roll described by the mob prototype. Thus, a mob might get
+     chosen that has actual max hit points slightly above or below the range
+     specified. */
+  static int *token_mob_table = 0;
+  static int top_of_token_mob_table = -1;
+  static int allocated = 0;
+
+  /* Create the teleport room table if it's not already allocated. */
+  if (top_of_token_mob_table < 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 1000;
+
+    /* Create the token mob table if it's not already allocated. */
+    CREATE(token_mob_table, int, allocated);
+
+    for (int i = 0; i <= top_of_mobt; i++) {
+      if (!is_valid_token_mob(i)) continue;
+
+      /* Re-allocate the token mob table, as needed. */
+      if (top_of_token_mob_table > allocated) {
+        allocated += 100;
+
+        RECREATE(token_mob_table, int, allocated);
+      }
+
+      /* Store the real number of the mob. */
+      token_mob_table[++top_of_token_mob_table] = i;
+    }
+  }
+
+#ifdef PROFILE
+  log_f("PROFILE :: token_mob_table size: %d, allocated: %d", top_of_token_mob_table + 1, allocated);
+#endif
+
+  /* Log and abort if no eligible token mobs could be found. */
+  if (top_of_token_mob_table < 0) {
+    log_f("SUBLOG: Could not find any eligible token mobs.");
+
+    return;
+  }
+
+  /* Shuffle the token mob table.*/
+  shuffle_int_array(token_mob_table, top_of_token_mob_table + 1);
+
+  int tokens_distributed = 0;
+
+  /* Distribute the tokens. */
+  for (int i = 0; i < num_tokens && top_of_token_mob_table - tokens_distributed >= 0; i++) {
+    /* Get the mob real number at the top of the table and decrement the
+       table counter so the next loop will pick a different number. */
+    int mob_nr = token_mob_table[top_of_token_mob_table - tokens_distributed];
+
+    /* Double-check that the chosen mob is valid, as it's possible the cached
+       token mob list has become invalidated. If this is the case, destroy the
+       current list, and call this function again to build a new one. */
+    if (!is_valid_token_mob(mob_nr)) {
+      goto try_again;
     }
 
-    if (distribute_token()) num_tokens--;
+    /* Randomly choose a loaded instance of the mob with that real number. */
+    int mob_instance = number(1, mob_proto_table[mob_nr].number);
+
+    /* Start with the first mob instance. */
+    int mob_count = 1;
+
+    bool tokened = FALSE;
+
+    /* Loop through the character list and distribute tokens. */
+    for (CHAR *mob = character_list; mob && !tokened; mob = mob->next) {
+      /* Skip mobs that don't match the real number chosen. */
+      if (MOB_RNUM(mob) != mob_nr) continue;
+      /* Skip until we find the correct mob instance. */
+      if (mob_count++ != mob_instance) continue;
+
+      /* Load a new token object. */
+      OBJ *token = read_object(TOKEN_OBJ_VNUM, VIRTUAL);
+
+      /* Log and abort if a token object couldn't be loaded. */
+      if (!token) {
+        log_f("SUBLOG: Error reading token object from DB.");
+
+        return;
+      }
+
+      /* The token is worth 1 or 2 subclass points. */
+      OBJ_VALUE0(token) = number(1, 2);
+
+      /* Give the token to the mob. */
+      obj_to_char(token, mob);
+
+      /* Log the distribution. */
+      log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), MOB_RNUM(mob));
+
+      tokens_distributed++;
+
+      tokened = TRUE;
+    }
   }
+
+  /* Log if we couldn't distribute the given number of tokens. */
+  if (tokens_distributed < num_tokens) {
+    log_f("SUBLOG: Only %d of %d tokens could be distributed.", tokens_distributed, num_tokens);
+  }
+
+  return;
+
+try_again:
+  DESTROY(token_mob_table);
+
+  top_of_token_mob_table = -1;
+
+  distribute_tokens(num_tokens);
 }
-
-
-bool is_shop_v(int vnum);
-bool distribute_token(void) {
-  const int no_token_zones[] = {
-    -1,  // NOWHERE
-    0,   // Limbo
-    10,  // Quest Gear III
-    12,  // Immortal Rooms
-    30,  // Northern Midgaard
-    31,  // Southern Midgaard
-    35,  // Training
-    36,  // Cafe
-    39,  // Stables
-    58,  // HMS Topknot
-    66,  // Newbie
-    69,  // Quest Gear
-    123, // Boards
-    131, // The Elemental Plane of Fire
-    132, // The Elemental Plane of Water
-    133, // The Elemental Plane of Earth
-    134, // The Elemental Plane of Air
-    253, // Hell1
-    254, // Hell2
-    255, // Hell3
-    260, // Questy Vader III
-    261, // Questy Nosferatu
-    262, // Quest by Hemp
-    275, // Clan Halls
-    278, // ISAHall
-    294, // Custom Gear III
-    295, // Lottery Items
-    296, // Custom Gear IV
-    297, // Theldon's Crypt
-    298, // Custom Gear II
-    299, // Custom Gear
-    300, // Labyrinth of Skelos
-  };
-
-  int mob_nr = number(1, top_of_mobt);
-  int zone_nr = inzone(mob_proto_table[mob_nr].virtual);
-
-  for (int i = 0; i < NUMELEMS(no_token_zones); i++) {
-    if (zone_nr == no_token_zones[i]) return FALSE;
-  }
-
-  if ((mob_proto_table[mob_nr].number < 1) ||
-      (mob_proto_table[mob_nr].level < 15) ||
-      IS_SET(mob_proto_table[mob_nr].act2, ACT2_NO_TOKEN) ||
-      is_shop_v(mob_proto_table[mob_nr].virtual)) return FALSE;
-
-  for (CHAR *mob = character_list; mob; mob = mob->next) {
-    if ((mob->nr != mob_nr) ||
-        (GET_MAX_HIT(mob) >= 15000) ||
-        ((GET_MAX_HIT(mob) < 500) && GET_LEVEL(mob) < 42)) continue;
-
-    OBJ *token = read_object(TOKEN_OBJ_VNUM, VIRTUAL);
-
-    if (!token) return FALSE;
-
-    OBJ_VALUE0(token) = number(1, 2);
-
-    obj_to_char(token, mob);
-
-    log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), mob->nr);
-
-    return TRUE;
-  }
-
-  return FALSE;
-}
-
 
 int adjust_ticket_strings(OBJ *obj); /*Added Oct 98 Ranger */
 struct obj_data *corpsefile_to_obj(FILE *fl) {
@@ -527,82 +647,17 @@ void help_contents(struct help_index_element *help_index,char *buf, int top) {
   *(buf + strlen(buf) + 1) = '\0';
 }
 
+void reset_time(void) {
+  const time_t beginning_of_time = 650336715; /* Do not change. */
 
-/* reset the time in the game from file */
-void reset_time(void)
-{
-     long beginning_of_time = 650336715;
-     struct time_info_data mud_time_passed(time_t t2, time_t t1);
+  time_info = mud_time_passed(time(NULL), beginning_of_time);
 
-     time_info = mud_time_passed(time(0), beginning_of_time);
+  log_f("   Current Game Time: %dH %dD %dM %dY",
+    time_info.hours, time_info.day, time_info.month, time_info.year);
 
-     switch(time_info.hours){
-          case 0 :
-          case 1 :
-          case 2 :
-          case 3 :
-          case 4 :
-          {
-               weather_info.sunlight = SUN_DARK;
-               break;
-          }
-          case 5 :
-          {
-               weather_info.sunlight = SUN_RISE;
-               break;
-          }
-          case 6 :
-          case 7 :
-          case 8 :
-          case 9 :
-          case 10 :
-          case 11 :
-          case 12 :
-          case 13 :
-          case 14 :
-          case 15 :
-          case 16 :
-          case 17 :
-          case 18 :
-          case 19 :
-          case 20 :
-          {
-               weather_info.sunlight = SUN_LIGHT;
-               break;
-          }
-          case 21 :
-          {
-               weather_info.sunlight = SUN_SET;
-               break;
-          }
-          case 22 :
-          case 23 :
-          default :
-          {
-               weather_info.sunlight = SUN_DARK;
-               break;
-          }
-     }
+  update_sunlight();
 
-     log_f("   Current Gametime: %dH %dD %dM %dY.",
-             time_info.hours, time_info.day,
-             time_info.month, time_info.year);
-
-     weather_info.pressure = 960;
-     if ((time_info.month>=7)&&(time_info.month<=12))
-          weather_info.pressure += dice(1,50);
-     else
-          weather_info.pressure += dice(1,80);
-
-     weather_info.change = 0;
-
-     if (weather_info.pressure<=980)
-          weather_info.sky = SKY_LIGHTNING;
-     else if (weather_info.pressure<=1000)
-          weather_info.sky = SKY_RAINING;
-     else if (weather_info.pressure<=1020)
-          weather_info.sky = SKY_CLOUDY;
-     else weather_info.sky = SKY_CLOUDLESS;
+  reset_weather();
 }
 
 /* update the time file */
@@ -777,380 +832,450 @@ void read_rooms(FILE *fl)
 }
 
 /* load the rooms */
-void boot_world(void)
-{
-     FILE *fl;
-     char pZoneName[100];
+void boot_world(void) {
+  FILE *fl;
+  char pZoneName[100];
 
-     world = 0;
-     character_list = 0;
-     object_list = 0;
-        top_of_world = -1;
+  world = 0;
+  character_list = 0;
+  object_list = 0;
+  top_of_world = -1;
 
-     if (!(fl = fopen(WORLD_LIST_FILE, "r")))
-     {
-          log_f("fopen");
-          log_f("boot_world: could not open list file.");
-          produce_core();
-     }
-        else
-          {
-          while(!feof(fl))
-            {
-            fgets(pZoneName, 100, fl);
-            if(strlen(pZoneName))
-              {
-              initial_boot_area(pZoneName);
-              }
-            }
-       fclose(fl);
-          }
-}
-int allocate_mob(int virtual_number)
-{
-  CHAR *mob;
-  struct mob_proto *new_mob;
-  int new_top;
-  int i,new_number=-1;
-  int bot, top, mid;
-
-  bot = 0;
-  top = top_of_mobt;
-
-     /* perform binary search on mob-table */
-  if(top_of_mobt != -1)
-  {
-  for (;;)
-     {
-          mid = (bot + top) / 2;
-
-          if ((mob_proto_table + mid)->virtual == virtual_number)
-                        {
-                        new_number = mid;
-                        break;
-                        }
-          if (bot >= top)
-                        {
-               new_number = -1;
-                        break;
-                        }
-          if ((mob_proto_table + mid)->virtual > virtual_number)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
-   }
-  if(new_number != -1)
-      return (new_number);
-  new_top = top_of_mobt+1;
-  if (new_top) {
-    if (!(new_top%3500)) {
-      if (!(new_mob = (struct mob_proto *)
-         realloc(mob_proto_table, (new_top + 3500) * sizeof(struct mob_proto)))) {
-     log_f("alloc_mob");
-     produce_core();
+  if (!(fl = fopen(WORLD_LIST_FILE, "r"))) {
+    log_f("fopen");
+    log_f("boot_world: could not open list file.");
+    produce_core();
+  }
+  else {
+    while (!feof(fl)) {
+      fgets(pZoneName, 100, fl);
+      if (strlen(pZoneName)) {
+        initial_boot_area(pZoneName);
       }
-    } else
-      new_mob = mob_proto_table;
-  } else
-    CREATE(new_mob, struct mob_proto, 3500);
-
-  mob_proto_table = new_mob;
-
-  top_of_mobt++;
-
-  /* Find the index as to where it goes */
-  if(top_of_mobt ==0)
-     new_number = 0;
-  else
-    {
-    if(virtual_number > mob_proto_table[top_of_mobt-1].virtual)
-      {
-      new_number = top_of_mobt;
-      }
-    else
-      {/*Cheezey search for one the place to put the new one */
-      for(i=0;i<top_of_mobt;i++)
-        {
-        if(virtual_number < mob_proto_table[i].virtual)
-          {
-          memmove(&mob_proto_table[i+1], &mob_proto_table[i], sizeof(struct mob_proto) *(top_of_mobt  -i));
-          memset(&mob_proto_table[i], 0, sizeof(struct mob_proto));
-          new_number = i;
-          break;
-          }
-        }
-      }
-   for(mob=character_list;mob;mob= mob->next)
-     {
-     /*  if an item is above this one, increase its real number by one*/
-     if(IS_NPC(mob) && mob->nr >= new_number && mob->nr_v != virtual_number)
-       {
-       mob->nr++;
-       }
-     }
+      pZoneName[0] = '\0';
     }
-   return new_number;
+    fclose(fl);
+  }
 }
-int allocate_obj(int virtual_number)
-{
-  OBJ *obj;
-  struct obj_proto *new_obj;
-  int new_top;
-  int i,new_number=-1;
-  int bot, top, mid;
 
-  bot = 0;
-  top = top_of_objt;
+int search_zone_table(int l, int r, int vnum) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
 
-     /* perform binary search on obj-table */
-  if(top_of_objt != -1)
-  {
-  for (;;)
-     {
-          mid = (bot + top) / 2;
+    if (zone_table[mid].virtual == vnum)
+      return mid;
 
-          if ((obj_proto_table + mid)->virtual == virtual_number)
-                        {
-                        new_number = mid;
-                        break;
-                        }
-          if (bot >= top)
-                        {
-               new_number = -1;
-                        break;
-                        }
-          if ((obj_proto_table + mid)->virtual > virtual_number)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
-     }
-  if(new_number != -1)
-     return(new_number);
-  new_top = top_of_objt+1;
-  if (new_top) {
-    if (!(new_top%3500)) {
-      if (!(new_obj = (struct obj_proto *)
-         realloc(obj_proto_table, (new_top + 3500) * sizeof(struct obj_proto)))) {
-     log_f("alloc_room");
-     produce_core();
-      }
-    } else
-      new_obj = obj_proto_table;
-  } else
-    CREATE(new_obj, struct obj_proto, 3500);
+    if (zone_table[mid].virtual > vnum)
+      return search_zone_table(l, mid - 1, vnum);
 
-  obj_proto_table = new_obj;
+    return search_zone_table(mid + 1, r, vnum);
+  }
 
-  top_of_objt++;
-
-  /* Find the index as to where it goes */
-  if(top_of_objt ==0)
-     new_number = 0;
-  else
-    {
-    if(virtual_number > obj_proto_table[top_of_objt-1].virtual)
-      {
-      new_number = top_of_objt;
-      }
-    else
-      {/*Cheezey search for one the place to put the new one */
-      for(i=0;i<top_of_objt;i++)
-        {
-        if(virtual_number < obj_proto_table[i].virtual)
-          {
-          memmove(&obj_proto_table[i+1], &obj_proto_table[i], sizeof(struct obj_proto) *(top_of_objt  -i));
-          memset(&obj_proto_table[i], 0, sizeof(struct obj_proto));
-          new_number = i;
-          break;
-          }
-        }
-      }
-   for(obj=object_list;obj;obj= obj->next)
-     {
-     /*  if an item is above this one, increase its real number by one*/
-     if(obj->item_number >= new_number && obj->item_number_v != virtual_number)
-       {
-       obj->item_number++;
-       }
-     }
-
-    }
-   return new_number;
+  return -1;
 }
-int allocate_room(int virtual_number)
-{
-  struct room_data *new_world;
-  int new_top;
-  int i,new_number=-1;
 
-   CHAR *chs = NULL, *next_ch=NULL;
-   OBJ  *obj = NULL, *next_obj=NULL;
-   int bot, top, mid;
+int allocate_zone(int vnum) {
+  static int allocated = 0;
 
-   bot = 0;
-   top = top_of_world;
+  /* Search the table to see if the given vnum already exists. */
+  if (top_of_zone_table >= 0) {
+    int index = search_zone_table(0, top_of_zone_table, vnum);
 
-     /* perform binary search on world-table */
-    if(top_of_world != -1)
-    {
-    for (;;)
-     {
-          mid = (bot + top) / 2;
-
-          if ((world + mid)->number == virtual_number)
-                        {
-               new_number = mid;
-                        break;
-                        }
-          if (bot >= top)
-          {
-               new_number = -1;
-                        break;
-          }
-          if ((world + mid)->number > virtual_number)
-               top = mid - 1;
-          else
-               bot = mid + 1;
-     }
+    /* If the vnum was found, return the index. */
+    if (index != -1) {
+      return index;
     }
-  if(new_number != -1)
-    return new_number;
-  new_top = top_of_world+1;
-  if (new_top) {
-    if (!(new_top%3500)) {
-      if (!(new_world = (struct room_data *)
-         realloc(world, (new_top + 3500) * sizeof(struct room_data)))) {
-     log_f("alloc_room");
-     produce_core();
-      }
-    } else
-      new_world = world;
-  } else
-    CREATE(new_world, struct room_data, 3500);
-
-  world = new_world;
-
-  top_of_world++;
-
-  /* Find the index as to where it goes */
-  if(top_of_world ==0)
-     new_number = 0;
-  else
-    {
-    if(virtual_number > world[top_of_world-1].number)
-      {
-      new_number = top_of_world;
-      }
-    else
-      {/*Cheezey search for one the place to put the new one */
-      for(i=0;i<top_of_world;i++)
-        {
-        if(virtual_number < world[i].number)
-          {
-          memmove(&world[i+1], &world[i], sizeof(struct room_data) *(top_of_world  -i));
-          memset(&world[i],0, sizeof(struct room_data));
-          world[i].number = virtual_number;
-          new_number = i;
-          break;
-          }
-        }
-      }
-
-   for(chs=character_list;chs;chs= next_ch)
-     {
-     next_ch = chs->next;
-     i = real_room(chs->in_room_v);
-     if(i == NOWHERE)
-       {
-       log_f("Deleting char (%s) because was not attached to a room", GET_NAME(chs));
-       char_to_room(chs, 0);
-       extract_char(chs);
-       }
-     else
-       {
-       if(i!=chs->in_room_r)
-          chs->in_room_r = i;
-       }
-     }
-   /* Renumber the objs to match, also */
-   for(obj=object_list;obj;obj= next_obj)
-     {
-     next_obj = obj->next;
-     if(obj->in_room_v!=NOWHERE)
-       {
-       i = real_room(obj->in_room_v);
-       if(i == NOWHERE)
-         {
-         log_f("Deleting obj (%s) because was not attached to a room", OBJ_NAME(obj));
-         obj_to_room(obj, 0);
-         extract_obj(obj);
-         }
-       else
-         {
-         if(i!=obj->in_room)
-            obj->in_room = i;
-         }
-       }
-     }
-    }
-   return new_number;
-}
-int allocate_zone(int virtual_number)
-{
-  struct zone_data *new_zone;
-  int new_top;
-  int i,new_number=-1;
-    for(i=0;i<=top_of_zone_table;i++)
-      {
-      if(zone_table[i].virtual == virtual_number)
-          new_number = i;
-      }
-  if(new_number != -1)
-     return new_number;
-  new_top = top_of_zone_table+1;
-  if (new_top) {
-    if (!(new_top%350)) {
-      if (!(new_zone = (struct zone_data *)
-         realloc(zone_table, (new_top + 350) * sizeof(struct zone_data)))) {
-     log_f("alloc_zone");
-     produce_core();
-      }
-    } else
-      new_zone = zone_table;
-  } else
-    CREATE(new_zone, struct zone_data, 350);
-
-  zone_table = new_zone;
+  }
 
   top_of_zone_table++;
 
-  /* Find the index as to where it goes */
-  if(top_of_zone_table ==0)
-     new_number = 0;
-  else
-    {
-    if(virtual_number > zone_table[top_of_zone_table-1].virtual)
-      {
-      new_number = top_of_zone_table;
+  /* Create a new table if this is the first entry. */
+  if (top_of_zone_table == 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 175;
+
+    CREATE(zone_table, struct zone_data, allocated);
+
+#ifdef PROFILE
+    log_f("PROFILE :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
+#endif
+
+    return top_of_zone_table;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_zone_table % allocated == 0) {
+    allocated += 25;
+
+    RECREATE(zone_table, struct zone_data, allocated * sizeof(struct zone_data));
+
+#ifdef PROFILE
+    log_f("PROFILE :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
+#endif
+  }
+
+  if (vnum > zone_table[top_of_zone_table - 1].virtual) {
+    return top_of_zone_table;
+  }
+
+  int index = -1;
+
+  for (int i = 0; (i < top_of_zone_table) && (index < 0); i++) {
+    if (vnum < zone_table[i].virtual) {
+      memmove(&zone_table[i + 1], &zone_table[i], sizeof(struct zone_data) * (top_of_zone_table - i));
+      memset(&zone_table[i], 0, sizeof(struct zone_data));
+
+      index = i;
+    }
+  }
+
+  return index;
+}
+
+int search_world_table(int l, int r, int vnum) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+
+    if (world[mid].number == vnum)
+      return mid;
+
+    if (world[mid].number > vnum)
+      return search_world_table(l, mid - 1, vnum);
+
+    return search_world_table(mid + 1, r, vnum);
+  }
+
+  return -1;
+}
+
+int allocate_room(int vnum) {
+  static int allocated = 0;
+
+  /* Search the table to see if the given vnum already exists. */
+  if (top_of_world >= 0) {
+    int index = search_world_table(0, top_of_world, vnum);
+
+    /* If the vnum was found, return the index. */
+    if (index != -1) {
+      return index;
+    }
+  }
+
+  top_of_world++;
+
+  /* Create a new table if this is the first entry. */
+  if (top_of_world == 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 9000;
+
+    CREATE(world, struct room_data, allocated);
+
+#ifdef PROFILE
+    log_f("PROFILE :: world size: %d, allocated: %d", top_of_world + 1, allocated);
+#endif
+
+    return top_of_world;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_world % allocated == 0) {
+    allocated += 500;
+
+    RECREATE(world, struct room_data, allocated * sizeof(struct room_data));
+
+#ifdef PROFILE
+    log_f("PROFILE :: world size: %d, allocated: %d", top_of_world + 1, allocated);
+#endif
+  }
+
+  if (vnum > world[top_of_world - 1].number) {
+    return top_of_world;
+  }
+
+  int index = -1;
+
+  for (int i = 0; (i < top_of_world) && (index < 0); i++) {
+    if (vnum < world[i].number) {
+      memmove(&world[i + 1], &world[i], sizeof(struct room_data) * (top_of_world - i));
+      memset(&world[i], 0, sizeof(struct room_data));
+
+      index = i;
+    }
+  }
+
+  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
+    next_ch = ch->next;
+
+    if (GET_IN_ROOM_V(ch) != NOWHERE) {
+      int room_rnum = real_room(GET_IN_ROOM_V(ch));
+
+      if (room_rnum == NOWHERE) {
+        log_f("Deleting char (%s) because it was not attached to a room.", GET_NAME(ch));
+        char_to_room(ch, 0);
+        extract_char(ch);
       }
-    else
-      {/*Cheezey search for one the place to put the new one */
-      for(i=0;i<top_of_zone_table;i++)
-        {
-        if(virtual_number < zone_table[i].virtual)
-          {
-          memmove(&zone_table[i+1], &zone_table[i], sizeof(struct zone_data) *(top_of_zone_table  -i));
-          memset(&zone_table[i], 0, sizeof(struct zone_data));
-          new_number = i;
-          break;
-          }
-        }
+      else if (room_rnum != GET_IN_ROOM_R(ch)) {
+        GET_IN_ROOM_R(ch) = room_rnum;
       }
     }
-   return new_number;
+  }
+
+  for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
+    next_obj = obj->next;
+
+    if (OBJ_IN_ROOM_V(obj) != NOWHERE) {
+      int obj_rnum = real_room(OBJ_IN_ROOM_V(obj));
+
+      if (obj_rnum == NOWHERE) {
+        log_f("Deleting obj (%s) because it was not attached to a room.", OBJ_NAME(obj));
+        obj_to_room(obj, 0);
+        extract_obj(obj);
+      }
+      else if (obj_rnum != OBJ_IN_ROOM(obj)) {
+        OBJ_IN_ROOM(obj) = obj_rnum;
+      }
+    }
+  }
+
+  return index;
 }
+
+int search_mob_table(int l, int r, int vnum) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+
+    if (mob_proto_table[mid].virtual == vnum)
+      return mid;
+
+    if (mob_proto_table[mid].virtual > vnum)
+      return search_mob_table(l, mid - 1, vnum);
+
+    return search_mob_table(mid + 1, r, vnum);
+  }
+
+  return -1;
+}
+
+int allocate_mob(int vnum) {
+  static int allocated = 0;
+
+  /* Search the table to see if the given vnum already exists. */
+  if (top_of_mobt >= 0) {
+    int index = search_mob_table(0, top_of_mobt, vnum);
+
+    /* If the vnum was found, return the index. */
+    if (index != -1) {
+      return index;
+    }
+  }
+
+  top_of_mobt++;
+
+  /* Create a new table if this is the first entry. */
+  if (top_of_mobt == 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 2750;
+
+    CREATE(mob_proto_table, struct mob_proto, allocated);
+
+#ifdef PROFILE
+    log_f("PROFILE :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
+#endif
+
+    return top_of_mobt;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_mobt % allocated == 0) {
+    allocated += 250;
+
+    RECREATE(mob_proto_table, struct mob_proto, allocated * sizeof(struct mob_proto));
+
+#ifdef PROFILE
+    log_f("PROFILE :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
+#endif
+  }
+
+  if (vnum > mob_proto_table[top_of_mobt - 1].virtual) {
+    return top_of_mobt;
+  }
+
+  int index = -1;
+
+  for (int i = 0; (i < top_of_mobt) && (index < 0); i++) {
+    if (vnum < mob_proto_table[i].virtual) {
+      memmove(&mob_proto_table[i + 1], &mob_proto_table[i], sizeof(struct mob_proto) * (top_of_mobt - i));
+      memset(&mob_proto_table[i], 0, sizeof(struct mob_proto));
+
+      index = i;
+    }
+  }
+
+  for (CHAR *mob = character_list; mob; mob = mob->next) {
+    if (IS_NPC(mob) && (MOB_RNUM(mob) >= index) && (MOB_VNUM(mob) != vnum)) {
+      MOB_RNUM(mob)++;
+    }
+  }
+
+  return index;
+}
+
+int search_obj_table(int l, int r, int vnum) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+
+    if (obj_proto_table[mid].virtual == vnum)
+      return mid;
+
+    if (obj_proto_table[mid].virtual > vnum)
+      return search_obj_table(l, mid - 1, vnum);
+
+    return search_obj_table(mid + 1, r, vnum);
+  }
+
+  return -1;
+}
+
+int allocate_obj(int vnum) {
+  static int allocated = 0;
+
+  /* Search the table to see if the given vnum already exists. */
+  if (top_of_objt >= 0) {
+    int index = search_obj_table(0, top_of_objt, vnum);
+
+    /* If the vnum was found, return the index. */
+    if (index != -1) {
+      return index;
+    }
+  }
+
+  top_of_objt++;
+
+  /* Create a new table if this is the first entry. */
+  if (top_of_objt == 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 4000;
+
+    CREATE(obj_proto_table, struct obj_proto, allocated);
+
+#ifdef PROFILE
+    log_f("PROFILE :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
+#endif
+
+    return top_of_objt;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_objt % allocated == 0) {
+    allocated += 250;
+
+    RECREATE(obj_proto_table, struct obj_proto, allocated * sizeof(struct obj_proto));
+
+#ifdef PROFILE
+    log_f("PROFILE :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
+#endif
+  }
+
+  if (vnum > obj_proto_table[top_of_objt - 1].virtual) {
+    return top_of_objt;
+  }
+
+  int index = -1;
+
+  for (int i = 0; (i < top_of_objt) && (index < 0); i++) {
+    if (vnum < obj_proto_table[i].virtual) {
+      memmove(&obj_proto_table[i + 1], &obj_proto_table[i], sizeof(struct obj_proto) * (top_of_objt - i));
+      memset(&obj_proto_table[i], 0, sizeof(struct obj_proto));
+
+      index = i;
+    }
+  }
+
+  for (OBJ *obj = object_list; obj; obj = obj->next) {
+    if ((OBJ_RNUM(obj) >= index) && (OBJ_VNUM(obj) != vnum)) {
+      OBJ_RNUM(obj)++;
+    }
+  }
+
+  return index;
+}
+
+int search_shop_table(int l, int r, int vnum) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+
+    if (shop_index[mid].keeper == vnum)
+      return mid;
+
+    if (shop_index[mid].keeper > vnum)
+      return search_shop_table(l, mid - 1, vnum);
+
+    return search_shop_table(mid + 1, r, vnum);
+  }
+
+  return -1;
+}
+
+int allocate_shop(int vnum) {
+  static int allocated = 0;
+
+  /* Search the table to see if the given rnum already exists. */
+  if (number_of_shops > 0) {
+    int index = search_shop_table(0, number_of_shops - 1, vnum);
+
+    /* If the vnum was found, return the index. */
+    if (index != -1) {
+      return index;
+    }
+  }
+
+  number_of_shops++;
+
+  int top_of_shop_table = number_of_shops - 1;
+
+  /* Create a new table if this is the first entry. */
+  if (top_of_shop_table == 0) {
+    /* Initial table size, based on profiling in May of 2020. */
+    allocated = 125;
+
+    CREATE(shop_index, struct shop_data, allocated);
+
+#ifdef PROFILE
+    log_f("PROFILE :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
+#endif
+
+    return top_of_shop_table;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_shop_table % allocated == 0) {
+    allocated += 25;
+
+    RECREATE(shop_index, struct shop_data, allocated * sizeof(struct shop_data));
+
+#ifdef PROFILE
+    log_f("PROFILE :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
+#endif
+  }
+
+  if (vnum > shop_index[top_of_shop_table - 1].keeper) {
+    return top_of_shop_table;
+  }
+
+  int index = -1;
+
+  for (int i = 0; (i < top_of_shop_table) && (index < 0); i++) {
+    if (vnum < shop_index[i].keeper) {
+      memmove(&shop_index[i + 1], &shop_index[i], sizeof(struct shop_data) * (top_of_shop_table - i));
+      memset(&shop_index[i], 0, sizeof(struct shop_data));
+
+      index = i;
+    }
+  }
+
+  return index;
+}
+
 /* read direction data */
 void setup_dir(FILE *fl, int room, int dir)
 {
@@ -2831,206 +2956,167 @@ void clear_object(struct obj_data *obj) {
 int generate_id(void);
 void check_idname(CHAR *ch);
 /* initialize a new character only if class is set */
-void init_char(struct char_data *ch)
-{
-     int i;
-     struct tm *timeStruct;
-     long ct;
+void init_char(struct char_data *ch) {
+  int i;
+  struct tm *timeStruct;
+  long ct;
 
-     assert(ch->skills);
+  assert(ch->skills);
 
-     /* *** if this is our first player --- he be God *** */
+  /* *** if this is our first player --- he be God *** */
 
-     if (CREATEIMP[0] && !strncasecmp(ch->player.name, CREATEIMP, sizeof(((struct char_player_data*)0)->name))) {
-       GET_EXP(ch) = 2000000000;
-       GET_LEVEL(ch) = LEVEL_IMP;
-       SET_BIT(ch->new.imm_flags, WIZ_TRUST);
-       SET_BIT(ch->new.imm_flags, WIZ_ACTIVE);
-       ch->points.max_hit = 100;
-     }
+  if (CREATEIMP[0] && !strncasecmp(ch->player.name, CREATEIMP, sizeof(((struct char_player_data *)0)->name))) {
+    GET_EXP(ch) = 2000000000;
+    GET_LEVEL(ch) = LEVEL_IMP;
+    SET_BIT(ch->new.imm_flags, WIZ_TRUST);
+    SET_BIT(ch->new.imm_flags, WIZ_ACTIVE);
+    ch->points.max_hit = 100;
+  }
 
-     set_title(ch,NULL);
+  set_title(ch, NULL);
 
-     ch->player.short_descr = 0;
-     ch->player.long_descr = 0;
-     ch->player.description = 0;
+  ch->player.short_descr = 0;
+  ch->player.long_descr = 0;
+  ch->player.description = 0;
 
-/*     ch->player.hometown = number(1,4); */
+  /*     ch->player.hometown = number(1,4); */
 
-     ch->player.time.birth = time(0);
-     ch->player.time.played = 1;
-     ch->player.time.logon = time(0);
-     ct=ch->player.time.birth;
-     timeStruct=localtime(&ct);
-     ch->ver3.created=(timeStruct->tm_mon+1)*1000000+timeStruct->tm_mday*10000+
-                       1900+timeStruct->tm_year;
+  ch->player.time.birth = time(0);
+  ch->player.time.played = 1;
+  ch->player.time.logon = time(0);
+  ct = ch->player.time.birth;
+  timeStruct = localtime(&ct);
+  ch->ver3.created = (timeStruct->tm_mon + 1) * 1000000 + timeStruct->tm_mday * 10000 +
+    1900 + timeStruct->tm_year;
 
-     for (i = 0; i < MAX_TONGUE; i++)
-      ch->player.talks[i] = 0;
+  for (i = 0; i < MAX_TONGUE; i++)
+    ch->player.talks[i] = 0;
 
-     GET_STR(ch) = 9;
-     GET_INT(ch) = 9;
-     GET_WIS(ch) = 9;
-     GET_DEX(ch) = 9;
-     GET_CON(ch) = 9;
+  GET_STR(ch) = 9;
+  GET_INT(ch) = 9;
+  GET_WIS(ch) = 9;
+  GET_DEX(ch) = 9;
+  GET_CON(ch) = 9;
 
-     /* make favors for sex */
-     if (ch->player.sex == SEX_MALE) {
-          ch->player.weight = number(120,180);
-          ch->player.height = number(160,200);
-     } else {
-          ch->player.weight = number(100,160);
-          ch->player.height = number(150,180);
-     }
+  /* make favors for sex */
+  if (ch->player.sex == SEX_MALE) {
+    ch->player.weight = number(120, 180);
+    ch->player.height = number(160, 200);
+  }
+  else {
+    ch->player.weight = number(100, 160);
+    ch->player.height = number(150, 180);
+  }
 
-     ch->points.mana = GET_MAX_MANA(ch);
-     ch->points.hit = GET_MAX_HIT(ch);
-     ch->points.move = GET_MAX_MOVE(ch);
-     ch->points.armor = 100;
+  ch->points.mana = GET_MAX_MANA(ch);
+  ch->points.hit = GET_MAX_HIT(ch);
+  ch->points.move = GET_MAX_MOVE(ch);
+  ch->points.armor = 100;
 
-     for (i = 0; i <= MAX_SKILLS5 - 1; i++)
-     {
-          if (GET_LEVEL(ch) < LEVEL_SUP) {
-               ch->skills[i].learned = 0;
-          }     else {
-               ch->skills[i].learned = 100;
-          }
-     }
+  for (i = 0; i <= MAX_SKILLS5 - 1; i++) {
+    if (GET_LEVEL(ch) < LEVEL_SUP) {
+      ch->skills[i].learned = 0;
+    }
+    else {
+      ch->skills[i].learned = 100;
+    }
+  }
 
-     ch->specials.affected_by = 0;
-     ch->specials.fighting = 0;
-     ch->questgiver = 0;
-     ch->questmob = 0;
-     ch->questobj = 0;
-     ch->questowner = 0;
-     ch->quest_status = 0;
-     ch->quest_level = 0;
-     ch->specials.vaultaccess  = 0;
-     ch->specials.wiznetlvl  = 0;
-     strcpy(ch->specials.vaultname,"not-set");
-     ch->specials.message  = 0;
-     ch->specials.zone = -1;
-     ch->specials.rider  = 0;
-     ch->specials.riding = 0;
-     ch->specials.protecting = 0;
-     ch->specials.protect_by=0;
-     ch->specials.num_fighting=0;
-     ch->specials.max_num_fighting=0;
-     ch->ver3.clan_num=0;
-     ch->ver3.death_limit=0;
-     ch->ver3.bleed_limit=0;
-     ch->ver3.subclass=0;
-     ch->ver3.subclass_points=0;
-     ch->ver3.subclass_level=0;
-     ch->ver3.time_to_quest=0;
-     ch->ver3.quest_points=0;
-     ch->ver3.sc_style=0;
-     ch->ver3.death_timer=0;
-     ch->specials.death_timer=0;
-     ch->ver3.id=generate_id();
-     check_idname(ch);
-     ch->specials.reply_to=0;
+  ch->specials.affected_by = 0;
+  ch->specials.fighting = 0;
+  ch->questgiver = 0;
+  ch->questmob = 0;
+  ch->questobj = 0;
+  ch->questowner = 0;
+  ch->quest_status = 0;
+  ch->quest_level = 0;
+  ch->specials.vaultaccess = 0;
+  ch->specials.wiznetlvl = 0;
+  strcpy(ch->specials.vaultname, "not-set");
+  ch->specials.message = 0;
+  ch->specials.zone = -1;
+  ch->specials.rider = 0;
+  ch->specials.riding = 0;
+  ch->specials.protecting = 0;
+  ch->specials.protect_by = 0;
+  ch->specials.num_fighting = 0;
+  ch->specials.max_num_fighting = 0;
+  ch->ver3.clan_num = 0;
+  ch->ver3.death_limit = 0;
+  ch->ver3.bleed_limit = 0;
+  ch->ver3.subclass = 0;
+  ch->ver3.subclass_points = 0;
+  ch->ver3.subclass_level = 0;
+  ch->ver3.time_to_quest = 0;
+  ch->ver3.quest_points = 0;
+  ch->ver3.sc_style = 0;
+  ch->ver3.death_timer = 0;
+  ch->specials.death_timer = 0;
+  ch->ver3.id = generate_id();
+  check_idname(ch);
+  ch->specials.reply_to = 0;
 
-     ch->specials.spells_to_learn = 0;
-     SET_BIT(ch->specials.pflag,PLR_GOSSIP);
-     SET_BIT(ch->specials.pflag,PLR_AUCTION);
-     SET_BIT(ch->specials.pflag,PLR_NOKILL);
-     SET_BIT(ch->specials.pflag,PLR_QUESTC);
-     SET_BIT(ch->specials.pflag,PLR_CHAOS);
-     for (i = 0; i < 5; i++)
-          ch->specials.apply_saving_throw[i] = 0;
+  ch->specials.spells_to_learn = 0;
+  SET_BIT(ch->specials.pflag, PLR_GOSSIP);
+  SET_BIT(ch->specials.pflag, PLR_AUCTION);
+  SET_BIT(ch->specials.pflag, PLR_NOKILL);
+  SET_BIT(ch->specials.pflag, PLR_QUESTC);
+  SET_BIT(ch->specials.pflag, PLR_CHAOS);
+  for (i = 0; i < 5; i++)
+    ch->specials.apply_saving_throw[i] = 0;
 
-     for (i = 0; i < 3; i++)
-          GET_COND(ch, i) = (GET_LEVEL(ch) >= LEVEL_IMM ? -1 : 24);
-     for(i=0;i<MAX_COLORS;i++)
-          ch->colors[i]=0;
-     ch->colors[0]=0;
-     ch->colors[1]=8;
-     ch->colors[2]=3;
-     ch->colors[3]=5;
-     ch->colors[4]=7;
-     ch->colors[5]=6;
-     ch->colors[6]=4;
-     ch->colors[7]=15;
-     ch->colors[13]=1;
-     ch->colors[14]=6;
-     ch->colors[15]=6;
+  for (i = 0; i < 3; i++)
+    GET_COND(ch, i) = (GET_LEVEL(ch) >= LEVEL_IMM ? -1 : 24);
+  for (i = 0; i < MAX_COLORS; i++)
+    ch->colors[i] = 0;
+  ch->colors[0] = 0;
+  ch->colors[1] = 8;
+  ch->colors[2] = 3;
+  ch->colors[3] = 5;
+  ch->colors[4] = 7;
+  ch->colors[5] = 6;
+  ch->colors[6] = 4;
+  ch->colors[7] = 15;
+  ch->colors[13] = 1;
+  ch->colors[14] = 6;
+  ch->colors[15] = 6;
 }
 
 
 /* Returns the real number of the zone with given virtual number. */
-int real_zone(int zone_vnum) {
-  if (zone_vnum < 0) return -1;
+int real_zone(int vnum) {
+  if (vnum < 0) return -1;
 
-  for (int i = 0; i <= top_of_zone_table; i++) {
-    if (zone_table[i].virtual == zone_vnum) {
-      return i;
-    }
-  }
-
-  return -1;
+  return search_zone_table(0, top_of_zone_table, vnum);
 }
-
 
 /* Returns the real number of the room with given virtual number. */
-int real_room(int room_vnum) {
-  if (room_vnum < 0) return -1;
+int real_room(int vnum) {
+  if (vnum < 0) return -1;
 
-  /* Perform binary search on object table. */
-  for (int bot = 0, mid = 0, top = top_of_world;;) {
-    mid = (bot + top) / 2;
-
-    if ((world + mid)->number == room_vnum)
-      return mid;
-    if (bot >= top)
-      return -1;
-    if ((world + mid)->number > room_vnum)
-      top = mid - 1;
-    else
-      bot = mid + 1;
-  }
+  return search_world_table(0, top_of_world, vnum);
 }
-
 
 /* Returns the real number of the mobile with given virtual number. */
-int real_mobile(int mob_vnum) {
-  if (mob_vnum < 0) return -1;
+int real_mobile(int vnum) {
+  if (vnum < 0) return -1;
 
-  /* Perform binary search on mobile table. */
-  for (int bot = 0, mid = 0, top = top_of_mobt;;) {
-    mid = (bot + top) / 2;
-
-    if ((mob_proto_table + mid)->virtual == mob_vnum)
-      return mid;
-    if (bot >= top)
-      return -1;
-    if ((mob_proto_table + mid)->virtual > mob_vnum)
-      top = mid - 1;
-    else
-      bot = mid + 1;
-  }
+  return search_mob_table(0, top_of_mobt, vnum);
 }
-
 
 /* Returns the real number of the object with given virtual number. */
-int real_object(int obj_vnum) {
-  if (obj_vnum < 0) return -1;
+int real_object(int vnum) {
+  if (vnum < 0) return -1;
 
-  /* Perform binary search on object table. */
-  for (int bot = 0, mid = 0, top = top_of_objt;;) {
-    mid = (bot + top) / 2;
-
-    if ((obj_proto_table + mid)->virtual == obj_vnum)
-      return mid;
-    if (bot >= top)
-      return -1;
-    if ((obj_proto_table + mid)->virtual > obj_vnum)
-      top = mid - 1;
-    else
-      bot = mid + 1;
-  }
+  return search_obj_table(0, top_of_objt, vnum);
 }
 
+/* Returns the real number of the shop with given mobile virtual number. */
+int real_shop(int vnum) {
+  if (vnum < 0) return -1;
+
+  return search_shop_table(0, number_of_shops - 1, vnum);
+}
 
 /* Returns the zone number of the room/mob/obj with given virtual number, or -1 if it doesn't/shouldn't exist. */
 int inzone(int vnum) {

@@ -110,7 +110,7 @@ killing, using jagged claws and teeth to rip its victims apart.
 7157 501234
 8 8 0
 62 16384 1d1+1 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #27712
@@ -253,7 +253,7 @@ killing-machine.
 62 24769 1d1+1 2
 5 2 30 0
 6 2 30 0
-0 0 0 33
+0 1 0 33
 R
 1
 K
