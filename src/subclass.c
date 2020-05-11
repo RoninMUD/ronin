@@ -867,7 +867,7 @@ const int no_teleport_zones[] = {
 /* Validate that the given room real number is OK to teleport to. */
 bool is_valid_token_mob_target_room(int rnum) {
   /* Ensure the given rnum is within the world table. */
-  if (rnum < 0 || rnum > top_of_world) return FALSE;
+  if ((rnum < 0) || (rnum > top_of_world)) return FALSE;
 
   /* Disqualify a room that is in a zone in the no teleport zone list. */
   if (in_int_array(inzone(ROOM_VNUM(rnum)), no_teleport_zones, NUMELEMS(no_teleport_zones))) return FALSE;
@@ -915,15 +915,17 @@ int token_mob_target_room() {
     for (int i = 0; i <= top_of_world; i++) {
       if (!is_valid_token_mob_target_room(i)) continue;
 
+      top_of_teleport_room_table++;
+
       /* Re-allocate the teleport room table, as needed. */
-      if (top_of_teleport_room_table > allocated) {
+      if (top_of_teleport_room_table % allocated == 0) {
         allocated += 500;
 
         RECREATE(teleport_room_table, int, allocated);
       }
 
       /* Store the real number of the room. */
-      teleport_room_table[++top_of_teleport_room_table] = i;
+      teleport_room_table[top_of_teleport_room_table] = i;
     }
 
 #ifdef PROFILE
