@@ -420,10 +420,6 @@ int shop_keeper(CHAR *keeper, CHAR *ch, int cmd, char *argument) {
 
   if ((shop_nr < 0) || (CHAR_REAL_ROOM(keeper) != real_room(shop_index[shop_nr].in_room))) return FALSE;
 
-  char arg[MIL];
-
-  argument = one_argument_ex(argument, arg, sizeof(arg), FALSE);
-
   if (cmd == MSG_MOBACT) {
     if (GET_OPPONENT(keeper)) {
       shop_kickout(keeper, GET_OPPONENT(keeper));
@@ -435,28 +431,32 @@ int shop_keeper(CHAR *keeper, CHAR *ch, int cmd, char *argument) {
   }
 
   if (cmd == CMD_BUY) {
-    shopping_buy(arg, ch, keeper, shop_nr);
+    shopping_buy(argument, ch, keeper, shop_nr);
 
     return TRUE;
   }
 
   if (cmd == CMD_SELL) {
-    shopping_sell(arg, ch, keeper, shop_nr);
+    shopping_sell(argument, ch, keeper, shop_nr);
 
     return TRUE;
   }
 
   if (cmd == CMD_VALUE) {
-    shopping_value(arg, ch, keeper, shop_nr);
+    shopping_value(argument, ch, keeper, shop_nr);
 
     return TRUE;
   }
 
   if (cmd == CMD_LIST) {
-    shopping_list(arg, ch, keeper, shop_nr);
+    shopping_list(argument, ch, keeper, shop_nr);
 
     return TRUE;
   }
+
+  char arg[MIL];
+
+  argument = one_argument_ex(argument, arg, sizeof(arg), FALSE);
 
   if (IS_MORTAL(ch)) {
     switch (cmd) {

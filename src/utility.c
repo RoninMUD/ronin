@@ -41,7 +41,8 @@
 #include "spells.h"
 
 extern FILE *logfile;
-void update_pos(struct char_data *ch);
+
+void update_pos(CHAR *ch);
 
 /* RNG and Other Math Functions */
 
