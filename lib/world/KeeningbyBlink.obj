@@ -8,10 +8,10 @@ A Pearl Fountain adorns the centre of the square.~
 10 10 10
 100
 E
-pearl~
+fountain~
 A beautiful fountain made from pearl rests here.~
 E
-fountain~
+pearl~
 A beautiful fountain made from pearl rests here.~
 X
 ~
@@ -31,13 +31,13 @@ A dark hood has been left here.~
 12 300000 25000
 8
 E
-black~
+hood~
 This hood is made from burlap, and radiates evil.~
 E
 pitch~
 This hood is made from burlap, and radiates evil.~
 E
-hood~
+black~
 This hood is made from burlap, and radiates evil.~
 X
 ~
@@ -63,10 +63,10 @@ stick unleashes hellish fury!~
 15 10 5000
 10
 E
-hell~
+stick~
 This is an evil stick with a deadly stinger at the end.~
 E
-stick~
+hell~
 This is an evil stick with a deadly stinger at the end.~
 X
 ~
@@ -90,13 +90,13 @@ A blood-red amulet has been left here.~
 10 10 5000
 12
 E
-red~
+amulet~
 This is a deep red amulet.~
 E
 blood~
 This is a deep red amulet.~
 E
-amulet~
+red~
 This is a deep red amulet.~
 X
 ~
@@ -120,13 +120,13 @@ A lantern with magical blue flames is burning here.~
 10 10 45000
 13
 E
-flames~
+lantern~
 This is a magical lantern smothered in blue flames.~
 E
 blue~
 This is a magical lantern smothered in blue flames.~
 E
-lantern~
+flames~
 This is a magical lantern smothered in blue flames.~
 X
 ~
@@ -150,12 +150,12 @@ An odd-looking orb floats above the ground here.~
 10 10 10
 100
 E
-reversal~
+orb~
 This orb has powerful magic properties.  However,
 you get the idea that it is somehow not yet...
 completed?~
 E
-orb~
+reversal~
 This orb has powerful magic properties.  However,
 you get the idea that it is somehow not yet...
 completed?~
@@ -177,12 +177,12 @@ An odd-looking orb floats about the ground here.~
 10 10 10
 100
 E
-wailing~
+orb~
 This orb has powerful magic properties.  However,
 you get the idea that it is somehow not yet...
 completed?~
 E
-orb~
+wailing~
 This orb has powerful magic properties.  However,
 you get the idea that it is somehow not yet...
 completed?~
@@ -204,11 +204,11 @@ A pair of black sandals have been left here.~
 4 10 43222
 100
 E
-sorrow~
+sandals~
 These are black leather sandals, woven with intricate
 patterns of black silk.  They look almost magical.~
 E
-sandals~
+sorrow~
 These are black leather sandals, woven with intricate
 patterns of black silk.  They look almost magical.~
 X
@@ -299,10 +299,10 @@ A glowing stone is on the ground here.~
 10 90000 30000
 50
 E
-glowing~
+stone~
 This appears to be a magical stone, it glows with arcane power.~
 E
-stone~
+glowing~
 This appears to be a magical stone, it glows with arcane power.~
 X
 ~
@@ -324,7 +324,7 @@ An ornate telescope is here, pointing towards the ocean.~
 10 10 10
 100
 E
-ornate~
+telescope~
    Through the telescope, you get a breathtaking view of a rolling 
 ocean. The dark waves pound against some unknown shore.
 The sky is pitch-black and beautiful stars are twinkling brightly.
@@ -335,7 +335,7 @@ a bright flash the scene is no more.  You are left feeling
 somewhat baffled.  What could this mean?
 ~
 E
-telescope~
+ornate~
    Through the telescope, you get a breathtaking view of a rolling 
 ocean. The dark waves pound against some unknown shore.
 The sky is pitch-black and beautiful stars are twinkling brightly.

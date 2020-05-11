@@ -63,15 +63,15 @@ You can see the entrance to the building to your west.
 ~
 0 -1 2701
 E
+flowers~
+The flowers look so beautiful and so fragile, that should you touch them,
+they would simply crumble to dust.
+~
+E
 statue small marble~
 The statue looks like a young girl, but the face of it has clearly been
 torn away a long time ago. You can see the shards from the statue lying
 on the ground, partly hidden by the flowers.
-~
-E
-flowers~
-The flowers look so beautiful and so fragile, that should you touch them,
-they would simply crumble to dust.
 ~
 S
 #2703
@@ -186,11 +186,6 @@ You see a large hall with something like an arena in the middle.
 ~
 0 -1 2706
 E
-footprints prints foot~
-They are a bit larger than the ones you are leaving on the floor, but
-these were made by bare feet.
-~
-E
 crate chest broken~
 All the crates are smashed and torn to bits, as if someone or something
 very powerful had lost his temper. Examining the remains of the crates,
@@ -198,6 +193,11 @@ you can clearly discern that marks on those were clearly made by huge
 and sharp claws.
 
 Suddenly, you notice some footprints on the dust gathered on the floor.
+~
+E
+footprints prints foot~
+They are a bit larger than the ones you are leaving on the floor, but
+these were made by bare feet.
 ~
 S
 #2710
@@ -219,16 +219,16 @@ You see a heavy, metal hatch in the ceiling.
 hatch metal heavy~
 2 2718 2706
 E
-holder torch~
-The torch holder on the western wall looks like it's been out of use for
-ages. The blackened torch that one day might have brought light to the
-room is dark and cold.
-~
-E
 ladder metal~
 The metal ladder leading down into the room from the hatch on the ceiling
 are squeaky clean of any traces of dust. This might be because you just
 descended them, or ...
+~
+E
+holder torch~
+The torch holder on the western wall looks like it's been out of use for
+ages. The blackened torch that one day might have brought light to the
+room is dark and cold.
 ~
 S
 #2715

@@ -637,28 +637,10 @@ looks as if the blackness is moving...
 ~
 2 -1 16536
 E
-circle~
+pattern~
 As you look closely at the circular pattern, you notice that
 it seems to be edged in a deep, matte black. Strangely, it
 looks as if the blackness is moving...
-~
-E
-runes~
-These strange runes look to be carved in a different hand than
-the protective sigils. Most, however, look to have been scratched
-at in an attempt to break whatever powers they contain...
-~
-E
-rune~
-These strange runes look to be carved in a different hand than
-the protective sigils. Most, however, look to have been scratched
-at in an attempt to break whatever powers they contain...
-~
-E
-sigils~
-The sigils seem to have a deep black molten wax puddled in their
-deeper crevices. It looks as if the wax is moving of its own
-volition...
 ~
 E
 sigil~
@@ -667,7 +649,25 @@ deeper crevices. It looks as if the wax is moving of its own
 volition...
 ~
 E
-pattern~
+sigils~
+The sigils seem to have a deep black molten wax puddled in their
+deeper crevices. It looks as if the wax is moving of its own
+volition...
+~
+E
+rune~
+These strange runes look to be carved in a different hand than
+the protective sigils. Most, however, look to have been scratched
+at in an attempt to break whatever powers they contain...
+~
+E
+runes~
+These strange runes look to be carved in a different hand than
+the protective sigils. Most, however, look to have been scratched
+at in an attempt to break whatever powers they contain...
+~
+E
+circle~
 As you look closely at the circular pattern, you notice that
 it seems to be edged in a deep, matte black. Strangely, it
 looks as if the blackness is moving...
@@ -1055,16 +1055,16 @@ The river passes through a much smaller vein to the south.
 ~
 0 -1 16565
 E
-shelf~
-The shelf doesn't look very safe, and you probably oughtn't
-try to climb onto it.
-~
-E
 corpse~
 You grab on to a large hunk of ice which juts from the frozen
 wall and gaze at this horrible spectacle. A primitive human has
 been frozen into the ice here, and her wide eyes, open mouth, and
 swirled hair do not imply that it was a very pleasant death.
+~
+E
+shelf~
+The shelf doesn't look very safe, and you probably oughtn't
+try to climb onto it.
 ~
 S
 #16550
