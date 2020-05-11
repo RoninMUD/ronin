@@ -344,7 +344,7 @@ const int no_token_zones[] = {
 /* Validate that the given mob real number is OK to token. */
 bool is_valid_token_mob(int rnum) {
   /* Ensure the given rnum is within the world table. */
-  if (rnum < 0 || rnum > top_of_mobt) return FALSE;
+  if ((rnum < 0) || (rnum > top_of_mobt)) return FALSE;
 
   /* Skip mobs that aren't currently in the game. */
   if (mob_proto_table[rnum].number < 1) return FALSE;
@@ -365,7 +365,7 @@ bool is_valid_token_mob(int rnum) {
   int avg_max_hp = dice_ex(mob_proto_table[rnum].hp_nodice, mob_proto_table[rnum].hp_sizedice, RND_AVG) + mob_proto_table[rnum].hp_add;
 
   /* Skip mobs with low or high max hit points. */
-  if (avg_max_hp < 500 || avg_max_hp > 15000) return FALSE;
+  if ((avg_max_hp < 500) || (avg_max_hp > 15000)) return FALSE;
 
 #ifdef PROFILE
   log_f("PROFILE :: token mob: '%s', vnum: %d, rnum: %d, avg_max_hps: %d, level: %d",
@@ -378,10 +378,10 @@ bool is_valid_token_mob(int rnum) {
 /* Distribute tokens to eligible mobs in the game. */
 void distribute_tokens(const int num_tokens) {
   /* Return if there are no tokens to distribute, or no mobs to choose from. */
-  if (num_tokens < 0 || top_of_mobt < 0) return;
+  if ((num_tokens < 0) || (top_of_mobt < 0)) return;
 
   /* This table is cached, because the mob prototype table doesn't change often.
-     The behavior of this new token distribution funciton is slightly different
+     The behavior of this new token distribution function is slightly different
      than the old one. Chiefly, that mob max hit points are simulated using
      the average roll described by the mob prototype. Thus, a mob might get
      chosen that has actual max hit points slightly above or below the range
@@ -401,15 +401,17 @@ void distribute_tokens(const int num_tokens) {
     for (int i = 0; i <= top_of_mobt; i++) {
       if (!is_valid_token_mob(i)) continue;
 
+      top_of_token_mob_table++;
+
       /* Re-allocate the token mob table, as needed. */
-      if (top_of_token_mob_table > allocated) {
+      if (top_of_token_mob_table % allocated == 0) {
         allocated += 100;
 
         RECREATE(token_mob_table, int, allocated);
       }
 
       /* Store the real number of the mob. */
-      token_mob_table[++top_of_token_mob_table] = i;
+      token_mob_table[top_of_token_mob_table] = i;
     }
   }
 
@@ -430,7 +432,7 @@ void distribute_tokens(const int num_tokens) {
   int tokens_distributed = 0;
 
   /* Distribute the tokens. */
-  for (int i = 0; i < num_tokens && top_of_token_mob_table - tokens_distributed >= 0; i++) {
+  for (int i = 0; (i < num_tokens) && (top_of_token_mob_table - tokens_distributed >= 0); i++) {
     /* Get the mob real number at the top of the table and decrement the
        table counter so the next loop will pick a different number. */
     int mob_nr = token_mob_table[top_of_token_mob_table - tokens_distributed];
