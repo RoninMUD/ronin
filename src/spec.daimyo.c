@@ -607,6 +607,7 @@ int dm_hachiman(CHAR *mob,CHAR *ch, int cmd, char *arg) {
      case CMD_CAST:
        if(!ch) return FALSE;
        if (number(0,7)) return FALSE; /* If its not 0 it returns */
+       if (GET_MANA(ch) <= 0) return FALSE;
        act("$n reaches out toward $N, and a bolt of yellow energy is drawn away from $M.",0,mob,0,ch,TO_NOTVICT);
        act("You reach towards $N, and a stream of yellow energy flows to you.",0,mob,0,ch,TO_CHAR);
        act("$n utters the words, 'efaui waia'",0,mob,0,ch,TO_VICT);

@@ -133,14 +133,15 @@ int qcmp_int(const void *a, const void *b);
 int qcmp_int_asc(const void *a, const void *b);
 int qcmp_int_desc(const void *a, const void *b);
 
-int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
-int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
-int get_random_set_bit_from_mask(const int32_t mask);
-
-bool in_int_array(int value, const int array[], const size_t num_elems);
+int binary_search_int_array(const int array[], const int l, const int r, const int value);
+bool in_int_array(const int array[], const size_t num_elems, const int value);
 
 void shuffle_int_array(int array[], const size_t num_elems);
 void shuffle_2d_int_array(int array[][2], const size_t num_elems);
+
+int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
+int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
+int get_random_set_bit_from_mask(const int32_t mask);
 
 #define RND_RND 0
 #define RND_MIN 1

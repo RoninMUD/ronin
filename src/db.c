@@ -303,7 +303,8 @@ void boot_db(void)
      log_f("Boot db -- DONE.");
 }
 
-/* Mobs in these zones should not load tokens. */
+/* Mobs in these zones should not load tokens.
+   Keep this ordered so we can use a binary search on the list.*/
 const int no_token_zones[] = {
   -1,  // NOWHERE
   0,   // Limbo
@@ -350,7 +351,7 @@ bool is_valid_token_mob(int rnum) {
   if (mob_proto_table[rnum].number < 1) return FALSE;
 
   /* Skip mobs in zones that are in the no token zone list. */
-  if (in_int_array(inzone(mob_proto_table[rnum].virtual), no_token_zones, NUMELEMS(no_token_zones))) return FALSE;
+  if (binary_search_int_array(no_token_zones, 0, NUMELEMS(no_token_zones) - 1, inzone(mob_proto_table[rnum].virtual)) != -1) return FALSE;
 
   /* Skip mobs flagged NO_TOKEN. */
   if (IS_SET(mob_proto_table[rnum].act2, ACT2_NO_TOKEN)) return FALSE;
