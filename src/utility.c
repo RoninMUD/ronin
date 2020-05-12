@@ -913,7 +913,7 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
 
 
 bool IS_LIGHT(int room) {
-  if (ROOM_LIGHT(room)) return TRUE;                       // If the room has light sources present, it is lit.
+  if (ROOM_LIGHT(room) > 0) return TRUE;                   // If the room has light sources present, it is lit.
   if (ROOM_ZONE(room) == 30) return TRUE;                  // If the room is in zone 30 (Midgaard), it is lit.
   if (IS_SET(ROOM_FLAGS(room), LIT)) return TRUE;          // If the room has the LIT flag, it is lit.
   if (IS_SET(ROOM_FLAGS(room), DARK)) return FALSE;        // If the room has the DARK flag, it is unlit.
@@ -937,7 +937,7 @@ int CAN_SEE(CHAR *ch, CHAR *vict) {
     IMP_INV(ch, vict) ||
     NRM_INV(ch, vict) ||
     (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND)) ||
-    (IS_MORTAL(ch) && !IS_LIGHT(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION))) {
+    (IS_MORTAL(ch) && !IS_AFFECTED(ch, AFF_INFRAVISION) && !IS_LIGHT(CHAR_REAL_ROOM(ch)))) {
     return FALSE;
   }
 

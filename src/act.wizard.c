@@ -2627,12 +2627,15 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
       send_to_char(buf, ch);
 
       sprinttype(rm->sector_type,sector_types,buf2);
-      sprintf(buf, "Sector type : %s", buf2);
+      sprintf(buf, "Sector type : %s\n\r", buf2);
       send_to_char(buf, ch);
 
       strcpy(buf,"Special procedure : ");
       strcat(buf,(rm->funct) ? "Exists\n\r" : "No\n\r");
       send_to_char(buf, ch);
+
+      printf_to_char(ch, "Lit: %s, Light sources: %d\n\r",
+        IS_LIGHT(i2) ? "Yes" : "No", rm->light);
 
       send_to_char("Room flags: ", ch);
       sprintbit((long) rm->room_flags,room_bits,buf);
