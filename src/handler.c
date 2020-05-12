@@ -569,7 +569,7 @@ void char_from_room(CHAR *ch) {
     }
   }
 
-  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2)) {
+  if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && (OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2) != 0)) {
     ROOM_LIGHT(CHAR_REAL_ROOM(ch))--;
   }
 
@@ -1467,18 +1467,30 @@ void extract_obj(struct obj_data *obj) {
 }
 
 
-void update_object(struct obj_data *obj, int equipped) {
-  if (OBJ_TIMER(obj) > 0) {
-    CHAR *ch;
-    bool decay = TRUE;
+void update_object(OBJ *obj, bool equipped) {
+  if (!obj) return;
 
-    if (equipped) ch = obj->equipped_by;
-    else ch = obj->carried_by;
+  CHAR *ch = equipped ? OBJ_EQUIPPED_BY(obj) : OBJ_CARRIED_BY(obj);
+
+  if (EQ(ch, WEAR_LIGHT) && (EQ(ch, WEAR_LIGHT) == obj)) {
+    if (OBJ_VALUE(obj, 2) > 0) {
+      OBJ_VALUE(obj, 2)--;
+
+      if (OBJ_VALUE(obj, 2) == 0) {
+        printf_to_char(ch, "The light from your %s flickers and fades as it goes dark.\n\r", fname(OBJ_NAME(obj)));
+
+        ROOM_LIGHT(CHAR_REAL_ROOM(ch))--;
+      }
+    }
+  }
+
+  if (OBJ_TIMER(obj) > 0) {
+    bool decay = TRUE;
 
     // Prestige Perk 22
     if (ch && ((GET_PRESTIGE_PERK(ch) >= 22) && chance(10))) decay = FALSE;
 
-    if ((obj->in_obj) && (OBJ_TYPE(obj->in_obj) == ITEM_AQ_ORDER)) decay = FALSE;
+    if (OBJ_IN_OBJ(obj) && (OBJ_TYPE(OBJ_IN_OBJ(obj)) == ITEM_AQ_ORDER)) decay = FALSE;
 
     if (decay) {
       if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY)) {
@@ -1497,26 +1509,25 @@ void update_object(struct obj_data *obj, int equipped) {
     }
   }
 
-  if (obj->contains) update_object(obj->contains, FALSE);
-  if (obj->next_content) update_object(obj->next_content, FALSE);
+  if (OBJ_CONTAINS(obj)) {
+    update_object(OBJ_CONTAINS(obj), FALSE);
+  }
+
+  if (OBJ_NEXT_CONTENT(obj)) {
+    update_object(OBJ_NEXT_CONTENT(obj), FALSE);
+  }
 }
 
+void update_char_objects(CHAR *ch) {
+  for (int eq_pos = 0; eq_pos < MAX_WEAR; eq_pos++) {
+    if (EQ(ch, eq_pos)) {
+      update_object(EQ(ch, eq_pos), TRUE);
+    }
+  }
 
-void update_char_objects( struct char_data *ch )
-{
-
-  int i;
-
-  if (ch->equipment[WEAR_LIGHT])
-    if (ch->equipment[WEAR_LIGHT]->obj_flags.type_flag == ITEM_LIGHT)
-      if (ch->equipment[WEAR_LIGHT]->obj_flags.value[2] > 0)
-        (ch->equipment[WEAR_LIGHT]->obj_flags.value[2])--;
-
-  for(i = 0;i < MAX_WEAR;i++)
-    if(ch->equipment[i])
-      update_object(ch->equipment[i],TRUE);
-
-  if(ch->carrying) update_object(ch->carrying,FALSE);
+  if (GET_CARRYING(ch)) {
+    update_object(GET_CARRYING(ch), FALSE);
+  }
 }
 
 

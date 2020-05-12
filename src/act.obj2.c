@@ -1396,6 +1396,10 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
   }
 
   equip_char(ch, obj_from_char(obj), wear_pos);
+
+  if ((OBJ_TYPE(obj) == ITEM_LIGHT) && (OBJ_VALUE(obj, 2) != 0)) {
+    ROOM_LIGHT(CHAR_REAL_ROOM(ch))++;
+  }
 }
 
 
@@ -1603,7 +1607,7 @@ void remove_item(struct char_data *ch, struct obj_data *obj, int pos) {
 
   show_bitvector_remove(ch, obj);
 
-  if ((OBJ_TYPE(obj) == ITEM_LIGHT) && OBJ_VALUE(obj, 2)) {
+  if ((OBJ_TYPE(obj) == ITEM_LIGHT) && (OBJ_VALUE(obj, 2) != 0)) {
     ROOM_LIGHT(CHAR_REAL_ROOM(ch))--;
   }
 

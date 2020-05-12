@@ -440,7 +440,7 @@ Returns:
     act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
-  /* Do look do look for the character. */
+  /* Do look for the character. */
   do_look(ch, "", CMD_LOOK);
 
   /* Do look for the mount. */
@@ -468,7 +468,7 @@ Returns:
 
   if (dt_or_hazard(ch)) return -1;
 
-  /* Check for Trap. */
+  /* Check for trap rooms. */
   int trap_check = number(1, 110);
 
   if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
@@ -649,19 +649,13 @@ void do_peek(struct char_data *ch, char *argument, int cmd) {
         !IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLOSED)) {
       send_to_char("You try to peek.\n\r", ch);
 
-      if (!IS_IMMORTAL(ch) && IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r].room_flags, NO_PEEK)) {
+      if (number(1, 85) > GET_LEARNED(ch, SKILL_PEEK)) return;
+
+      if (IS_MORTAL(ch) && IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r].room_flags, NO_PEEK)) {
         send_to_char("Something blocks your vision.\n\r", ch);
 
         return;
       }
-
-      if (!IS_IMMORTAL(ch) && IS_DARK(world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
-        send_to_char("It is pitch black...\n\r", ch);
-
-        return;
-      }
-
-      if (number(1, 85) > GET_LEARNED(ch, SKILL_PEEK)) return;
 
       look_in_room(ch, world[world[CHAR_REAL_ROOM(ch)].dir_option[keyword_idx]->to_room_r].number);
     }

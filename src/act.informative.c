@@ -1121,7 +1121,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (!IS_IMMORTAL(ch) && IS_DARK(CHAR_REAL_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+  if (IS_MORTAL(ch) && !IS_AFFECTED(ch, AFF_INFRAVISION) && IS_DARK(CHAR_REAL_ROOM(ch))) {
     send_to_char("It is pitch black...\n\r", ch);
 
     return;
