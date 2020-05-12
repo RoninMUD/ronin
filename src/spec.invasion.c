@@ -772,17 +772,18 @@ int velxok_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
     }
 
-    /* Don't teleport players to these rooms. */
+    /* Don't teleport players to these rooms.
+       Keep this ordered so we can use a binary search on the list.*/
     const int teleport_blacklist[] = {
        BEBILITH_ROOM,
        MYRDON_ROOM,
        SHADOWRAITH_ROOM,
+       DT_ROOM,
        TRYSTA_ROOM,
        SHOMED_ROOM,
        VELXOK_ROOM,
        STRAM_ROOM,
        TOHIRI_ROOM,
-       DT_ROOM,
        HAZARD_ROOM
     };
 
@@ -801,7 +802,7 @@ int velxok_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       int teleport_list[teleport_list_size];
 
       for (int i = 0, j = 0; (i < (TELEPORT_END - TELEPORT_START)) && (j < teleport_list_size); i++) {
-        if (in_int_array(TELEPORT_START + i, teleport_blacklist, NUMELEMS(teleport_blacklist))) continue;
+        if (binary_search_int_array(teleport_blacklist, 0, NUMELEMS(teleport_blacklist) - 1, TELEPORT_START + i) != -1) continue;
 
         teleport_list[j] = TELEPORT_START + i;
         j++;

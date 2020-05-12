@@ -149,12 +149,14 @@ void update_pos(CHAR *victim) {
     GET_POS(victim) = POSITION_STANDING;
   }
 
-  if ((GET_POS(victim) == POSITION_STANDING) && IS_AFFECTED(victim, AFF_FLY)) {
-    GET_POS(victim) = POSITION_FLYING;
+  if (((GET_POS(victim) == POSITION_FLYING) && !IS_AFFECTED(victim, AFF_FLY)) ||
+      (IS_NPC(victim) && !IS_SET(GET_ACT(victim), ACT_FLY))) {
+    GET_POS(victim) = POSITION_STANDING;
   }
 
-  if ((GET_POS(victim) == POSITION_FLYING) && !IS_AFFECTED(victim, AFF_FLY)) {
-    GET_POS(victim) = POSITION_STANDING;
+  if (((GET_POS(victim) == POSITION_STANDING) && IS_AFFECTED(victim, AFF_FLY)) ||
+      (IS_NPC(victim) && IS_SET(GET_ACT(victim), ACT_FLY))) {
+    GET_POS(victim) = POSITION_FLYING;
   }
 
   if ((GET_HIT(victim) > 0) && (GET_POS(victim) > POSITION_STUNNED)) return;

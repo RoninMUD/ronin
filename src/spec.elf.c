@@ -410,7 +410,7 @@ LesserOg (CHAR *og, CHAR *ch, int cmd, char *arg) {
     "As you gather your energies, you feel slightly drained.\n\r"
   };
 
-  if (cmd == CMD_CAST && IS_MORTAL(ch) && is_caster(ch)) {
+  if (cmd == CMD_CAST && IS_MORTAL(ch) && is_caster(ch) && (GET_MANA(ch) > 0)) {
     tmp = number(0,10);
     drain = 2*(5-tmp)*(5-tmp);
     if (drain == 50) {

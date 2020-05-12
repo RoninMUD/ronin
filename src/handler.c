@@ -551,6 +551,7 @@ void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte loca
 
 
 void char_from_room(CHAR *ch) {
+  /* Keep this ordered so we can use a binary search on the list.*/
   const int club_rooms[] = {
     3076, 3079, 3081, 3083
   };
@@ -563,7 +564,7 @@ void char_from_room(CHAR *ch) {
 
     affect_from_char(ch, SKILL_CAMP);
 
-    if (!in_int_array(CHAR_VIRTUAL_ROOM(ch), club_rooms, NUMELEMS(club_rooms))) {
+    if (binary_search_int_array(club_rooms, 0, NUMELEMS(club_rooms) - 1, CHAR_VIRTUAL_ROOM(ch)) == -1) {
       REMOVE_BIT(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB);
     }
   }

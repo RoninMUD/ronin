@@ -41,7 +41,8 @@
 #include "spells.h"
 
 extern FILE *logfile;
-void update_pos(struct char_data *ch);
+
+void update_pos(CHAR *ch);
 
 /* RNG and Other Math Functions */
 
@@ -2000,12 +2001,75 @@ int qcmp_int(const void *a, const void *b) {
   return (*(int *)a > *(int *)b) - (*(int *)a < *(int *)b);
 }
 
+
 int qcmp_int_asc(const void *a, const void *b) {
   return qcmp_int(a, b);
 }
 
+
 int qcmp_int_desc(const void *a, const void *b) {
   return qcmp_int(b, a);
+}
+
+
+/* Perform a binary search on an ordered integer array. If the array is
+   un-ordered, this will fail. If re-ordering the list is acceptable, use
+   qsort() on the array first, using the qcmp_int* functions above. */
+int binary_search_int_array(const int array[], const int l, const int r, const int value) {
+  if (r >= l) {
+    const int mid = l + (r - l) / 2;
+
+    if (array[mid] == value)
+      return mid;
+
+    if (array[mid] > value)
+      return binary_search_int_array(array, l, mid - 1, value);
+
+    return binary_search_int_array(array, mid + 1, r, value);
+  }
+
+  return -1;
+}
+
+
+/* O(n) linear search for a value in an integer array. */
+bool in_int_array(const int array[], const size_t num_elems, const int value) {
+  for (size_t i = 0; i < num_elems; i++) {
+    if (array[i] == value) {
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+
+
+/* Shuffle an array of integers. */
+void shuffle_int_array(int array[], const size_t num_elems) {
+  if (num_elems > 1) {
+    for (size_t i = num_elems - 1; i > 0; i--) {
+      size_t j = number(0, i);
+      int t = array[j];
+      array[j] = array[i];
+      array[i] = t;
+    }
+  }
+}
+
+
+/* Shuffle a 2D array of integers. */
+void shuffle_2d_int_array(int array[][2], const size_t num_elems) {
+  if (num_elems > 1) {
+    for (size_t i = num_elems - 1; i > 0; i--) {
+      size_t j = number(0, i);
+      int t0 = array[j][0];
+      int t1 = array[j][1];
+      array[j][0] = array[i][0];
+      array[j][1] = array[i][1];
+      array[i][0] = t0;
+      array[i][1] = t1;
+    }
+  }
 }
 
 
@@ -2094,46 +2158,6 @@ int get_random_set_bit_from_mask(const int32_t mask) {
   }
 
   return 0;
-}
-
-
-bool in_int_array(const int value, const int array[], const size_t num_elems) {
-  for (size_t i = 0; i < num_elems; i++) {
-    if (array[i] == value) {
-      return TRUE;
-    }
-  }
-
-  return FALSE;
-}
-
-
-/* Shuffle an array of integers. */
-void shuffle_int_array(int array[], const size_t num_elems) {
-  if (num_elems > 1) {
-    for (size_t i = num_elems - 1; i > 0; i--) {
-      size_t j = number(0, i);
-      int t = array[j];
-      array[j] = array[i];
-      array[i] = t;
-    }
-  }
-}
-
-
-/* Shuffle a 2D array of integers. */
-void shuffle_2d_int_array(int array[][2], const size_t num_elems) {
-  if (num_elems > 1) {
-    for (size_t i = num_elems - 1; i > 0; i--) {
-      size_t j = number(0, i);
-      int t0 = array[j][0];
-      int t1 = array[j][1];
-      array[j][0] = array[i][0];
-      array[j][1] = array[i][1];
-      array[i][0] = t0;
-      array[i][1] = t1;
-    }
-  }
 }
 
 

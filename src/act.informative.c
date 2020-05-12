@@ -35,6 +35,9 @@
 #include "meta.h"
 #include "quest.h"
 #include "subclass.h"
+#include "weather.h"
+
+extern struct season_info_t season_info[];
 
 /* extern functions */
 
@@ -2477,15 +2480,15 @@ void do_time(CHAR *ch, char *argument, int cmd) {
 
   int day = time_info.day + 1;
   int weekday = ((28 * time_info.month) + day) % 7;
-  char *sunlight, *suf, *season;
+  char *sunlight, *suf;
 
   if (weather_info.sunlight == SUN_RISE) {
     sunlight = "Dawn";
   }
-  if (weather_info.sunlight == SUN_LIGHT) {
+  else if (weather_info.sunlight == SUN_LIGHT) {
     sunlight = "Day";
   }
-  if (weather_info.sunlight == SUN_SET) {
+  else if (weather_info.sunlight == SUN_SET) {
     sunlight = "Dusk";
   }
   else {
@@ -2509,15 +2512,6 @@ void do_time(CHAR *ch, char *argument, int cmd) {
   else
     suf = "th";
 
-  if ((time_info.month >= 3) && (time_info.month <= 6))
-    season = "Spring";
-  else if ((time_info.month >= 7) && (time_info.month <= 10))
-    season = "Summer";
-  else if ((time_info.month >= 11) && (time_info.month <= 14))
-    season = "Autumn";
-  else
-    season = "Winter"; /* ((time_info.month <= 2) || (time_info.month >= 15)) */
-
   printf_to_char(ch, "It is %d o'clock %s (%s), on the %s.\n\r",
     ((time_info.hours % 12 == 0) ? 12 : ((time_info.hours) % 12)),
     ((time_info.hours >= 12) ? "pm" : "am"),
@@ -2525,7 +2519,7 @@ void do_time(CHAR *ch, char *argument, int cmd) {
     weekdays[weekday]);
 
   printf_to_char(ch, "It is the %d%s Day of the %s (%s), Year %d.\n\r",
-    day, suf, month_name[time_info.month], season, time_info.year);
+    day, suf, month_name[time_info.month], season_info[get_season()].season_string, time_info.year);
 
   time_t ct = time(NULL);
   char *ct_str = asctime(localtime(&ct));
@@ -2537,7 +2531,7 @@ void do_time(CHAR *ch, char *argument, int cmd) {
 }
 
 
-void do_weather(struct char_data *ch, char *argument, int cmd) {
+void do_weather(CHAR *ch, char *argument, int cmd) {
   if (IS_OUTSIDE(ch)) {
     switch (weather_info.sky) {
       case SKY_CLOUDLESS:

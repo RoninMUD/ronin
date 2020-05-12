@@ -821,47 +821,48 @@ void initialize_token_mob() {
   return;
 }
 
-/* A list of zones for which teleport is disqualified. */
+/* A list of zones for which teleport is disqualified.
+   Keep this ordered so we can use a binary search on the list.*/
 const int no_teleport_zones[] = {
-    -1,  // NOWHERE
-    0,   // Limbo
-    10,  // Quest Gear III
-    12,  // Immortal Rooms
-    30,  // Northern Midgaard
-    31,  // Southern Midgaard
-    35,  // Training
-    36,  // Cafe
-    39,  // Stables
-    51,  // Eryndlyn I
-    55,  // Eryndlyn II
-    58,  // HMS Topknot
-    59,  // Eryndlyn III
-    66,  // Newbie
-    69,  // Quest Gear
-    123, // Boards
-    131, // The Elemental Plane of Fire
-    132, // The Elemental Plane of Water
-    133, // The Elemental Plane of Earth
-    134, // The Elemental Plane of Air
-    253, // Hell1
-    254, // Hell2
-    255, // Hell3
-    260, // Questy Vader III
-    261, // Questy Nosferatu
-    262, // Quest by Hemp
-    275, // Clan Halls
-    278, // ISAHall
-    285, // Enchanted Forest
-    286, // Olympus Puzzles
-    287, // Immortal Village
-    293, // 00Gear
-    294, // Custom Gear III
-    295, // Lottery Items
-    296, // Custom Gear IV
-    297, // Theldon's Crypt
-    298, // Custom Gear II
-    299, // Custom Gear
-    300, // Labyrinth of Skelos
+  -1,  // NOWHERE
+  0,   // Limbo
+  10,  // Quest Gear III
+  12,  // Immortal Rooms
+  30,  // Northern Midgaard
+  31,  // Southern Midgaard
+  35,  // Training
+  36,  // Cafe
+  39,  // Stables
+  51,  // Eryndlyn I
+  55,  // Eryndlyn II
+  58,  // HMS Topknot
+  59,  // Eryndlyn III
+  66,  // Newbie
+  69,  // Quest Gear
+  123, // Boards
+  131, // The Elemental Plane of Fire
+  132, // The Elemental Plane of Water
+  133, // The Elemental Plane of Earth
+  134, // The Elemental Plane of Air
+  253, // Hell1
+  254, // Hell2
+  255, // Hell3
+  260, // Questy Vader III
+  261, // Questy Nosferatu
+  262, // Quest by Hemp
+  275, // Clan Halls
+  278, // ISAHall
+  285, // Enchanted Forest
+  286, // Olympus Puzzles
+  287, // Immortal Village
+  293, // 00Gear
+  294, // Custom Gear III
+  295, // Lottery Items
+  296, // Custom Gear IV
+  297, // Theldon's Crypt
+  298, // Custom Gear II
+  299, // Custom Gear
+  300, // Labyrinth of Skelos
 };
 
 /* Validate that the given room real number is OK to teleport to. */
@@ -870,7 +871,7 @@ bool is_valid_token_mob_target_room(int rnum) {
   if ((rnum < 0) || (rnum > top_of_world)) return FALSE;
 
   /* Disqualify a room that is in a zone in the no teleport zone list. */
-  if (in_int_array(inzone(ROOM_VNUM(rnum)), no_teleport_zones, NUMELEMS(no_teleport_zones))) return FALSE;
+  if (binary_search_int_array(no_teleport_zones, 0, NUMELEMS(no_teleport_zones) - 1, inzone(ROOM_VNUM(rnum))) != -1) return FALSE;
 
   /* Various room flags that disqualify a room for teleport. */
   if (IS_SET(ROOM_FLAGS(rnum), DEATH)) return FALSE;

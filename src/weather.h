@@ -44,7 +44,8 @@ void weather_change(void);
 
 int get_season(void);
 
-//void reset_zone_weather(int zone_vnum);
+/*
+void reset_zone_weather(int zone_vnum);
 
 #define BIOME_UNKNOWN    0
 #define BIOME_GRASSLANDS 1
@@ -60,12 +61,13 @@ int get_season(void);
 struct biome_info_t {
   uint8_t biome;
   char *biome_string;
-  int8_t temp_min_avg, temp_max_avg;      /* Celcius */
-  int16_t precip_min_avg, precip_max_avg; /* Centimeters */
+  int8_t temp_min_avg, temp_max_avg;
+  int16_t precip_min_avg, precip_max_avg;
   bool use_default_weather_info;
 };
 
 int get_biome(int room);
 void update_zone_terrain_type(int zone_vnum);
+*/
 
 #endif /* __WEATHER_H__ */
