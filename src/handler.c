@@ -1472,7 +1472,7 @@ void update_object(OBJ *obj, bool equipped) {
 
   CHAR *ch = equipped ? OBJ_EQUIPPED_BY(obj) : OBJ_CARRIED_BY(obj);
 
-  if (EQ(ch, WEAR_LIGHT) && (EQ(ch, WEAR_LIGHT) == obj)) {
+  if (ch && equipped && EQ(ch, WEAR_LIGHT) && (EQ(ch, WEAR_LIGHT) == obj)) {
     if (OBJ_VALUE(obj, 2) > 0) {
       OBJ_VALUE(obj, 2)--;
 

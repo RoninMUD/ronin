@@ -66,7 +66,7 @@ add_hp) {
 
   if(hit) {
     hp_gained = MIN(hit, GET_HIT(vict));
-    GET_HIT(vict) = MAX(0, GET_HIT(vict) - hp_gained);
+    damage(ch, vict, hp_gained, TYPE_UNDEFINED, DAM_NO_BLOCK);
     if(add_hp)
       GET_HIT(ch) = MIN(GET_MAX_HIT(ch)+(GET_MAX_HIT(ch)/3), GET_HIT(ch) + hp_gained);
   }      /* hit can't go over 133% max */
