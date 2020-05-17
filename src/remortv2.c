@@ -202,7 +202,7 @@ int rv2_calc_remort_mult(CHAR *ch) {
   adjust = MAX(0, GET_NAT_MANA(ch) - min - prestige_mana) / step;
   if (adjust > 0) result += (1 << (adjust - 1));
 
-  result = MIN(result, 24);
+  result = MAX(MIN(result, 24), 0);
 
   // Prestige Perk 1
   if (GET_PRESTIGE_PERK(ch) >= 1) result += 1;
