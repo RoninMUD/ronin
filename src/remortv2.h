@@ -43,6 +43,7 @@
 #define RV2_SIM_AVG_STAT           13
 
 #define RV2_EXP_MULTIPLIER         4
+#define RV2_MAX_EXP_MULTIPLIER     24
 #define RV2_MAX_EXP_GAIN           100000000
 
 /* Structs */
