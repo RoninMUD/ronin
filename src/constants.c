@@ -2860,7 +2860,7 @@ const int subclass_master[11] = {
   2803,  // CLASS_PALADIN      - The Retire Knight
   11096, // CLASS_ANTI_PALADIN - the Dark Knight
   -1,    // CLASS_AVATAR
-  28506, // CLASS_BARD         - Pan
+  11609, // CLASS_BARD         - Elven master-singer
   7322   // CLASS_COMMANDO     - The warrior mage
 };
 

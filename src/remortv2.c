@@ -145,69 +145,79 @@ int rv2_adjust_remort_exp(CHAR *ch, int exp)
 }
 
 int rv2_calc_remort_mult(CHAR *ch) {
-  int result = RV2_EXP_MULTIPLIER;
-  int min, step, adjust;
+  int mult = RV2_EXP_MULTIPLIER;
 
-  if (!ch) return result;
+  if (!ch) return mult;
 
   /* attribute based increases */
 
   if (GET_OSTR(ch) >= 18) {
-    result += 1;
+    mult += 1;
 
-    if (GET_OADD(ch) >= 50) result += 1;
-    if (GET_OADD(ch) == 100) result += 2;
+    if (GET_OADD(ch) >= 50) mult += 1;
+    if (GET_OADD(ch) == 100) mult += 2;
   }
 
-  if (GET_ODEX(ch) >= 18) result += 1;
-  if (GET_OINT(ch) >= 18) result += 1;
-  if (GET_OWIS(ch) >= 18) result += 1;
-  if (GET_OCON(ch) >= 18) result += 1;
+  if (GET_ODEX(ch) >= 18) mult += 1;
+  if (GET_OINT(ch) >= 18) mult += 1;
+  if (GET_OWIS(ch) >= 18) mult += 1;
+  if (GET_OCON(ch) >= 18) mult += 1;
 
   /* level based increases */
 
-  if (GET_LEVEL(ch) >= 30) result += 1;
-  if (GET_LEVEL(ch) >= 40) result += 1;
-  if (GET_LEVEL(ch) >= 45) result += 2;
-  if (GET_LEVEL(ch) >= 50) result += 3;
+  if (GET_LEVEL(ch) >= 30) mult += 1;
+  if (GET_LEVEL(ch) >= 40) mult += 1;
+  if (GET_LEVEL(ch) >= 45) mult += 2;
+  if (GET_LEVEL(ch) >= 50) mult += 3;
 
   /* stat based increase */
 
-  if (GET_CLASS(ch) == CLASS_NOMAD || GET_CLASS(ch) == CLASS_WARRIOR || GET_CLASS(ch) == CLASS_THIEF) {
-    min  = 1000;
-    step = 250;
-  } else {
-    min  = 500;
-    step = 250;
-  }
-
-  int prestige_hit = 0;
+  int prestige_hit, prestige_mana;
 
   if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
     prestige_hit = GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+    prestige_mana = 0;
   }
   else {
     prestige_hit = GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
-  }
-
-  adjust = MAX(0, GET_NAT_HIT(ch) - min - prestige_hit) / step;
-  if (adjust > 0) result += (1 << (adjust - 1));
-
-  int prestige_mana = 0;
-
-  if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
     prestige_mana = GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
   }
 
-  adjust = MAX(0, GET_NAT_MANA(ch) - min - prestige_mana) / step;
-  if (adjust > 0) result += (1 << (adjust - 1));
+  int hp_min, hp_step, mana_min, mana_step;
 
-  result = MIN(result, 24);
+  if ((GET_CLASS(ch) == CLASS_NOMAD) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_THIEF)) {
+    hp_min = 1000;
+    hp_step = 250;
+    mana_min = 0;
+    mana_step = 0;
+  }
+  else {
+    hp_min = 500;
+    hp_step = 250;
+    mana_min = 500;
+    mana_step = 250;
+  }
+
+  if ((prestige_hit >= 0) && (hp_min > 0) && (hp_step > 0)) {
+    for (int adjusted_hp = GET_NAT_HIT(ch) - prestige_hit - hp_min, temp_hp = 0, mod = 1; (temp_hp + hp_step < adjusted_hp) && (mult < RV2_MAX_EXP_MULTIPLIER); temp_hp += hp_step) {
+      mod *= 2;
+      mult += mod;
+    }
+  }
+
+  if ((prestige_mana >= 0) && (mana_min > 0) && (mana_step > 0)) {
+    for (int adjusted_mana = GET_NAT_MANA(ch) - prestige_mana - mana_min, temp_mana = 0, mod = 1; (temp_mana + mana_step < adjusted_mana) && (mult < RV2_MAX_EXP_MULTIPLIER); temp_mana += mana_step) {
+      mod *= 2;
+      mult += mod;
+    }
+  }
+
+  mult = MAX(MIN(mult, RV2_MAX_EXP_MULTIPLIER), RV2_EXP_MULTIPLIER);
 
   // Prestige Perk 1
-  if (GET_PRESTIGE_PERK(ch) >= 1) result += 1;
+  if (GET_PRESTIGE_PERK(ch) >= 1) mult += 1;
 
-  return result;
+  return mult;
 }
 
 /* Give the player remort experience (if they deserve it), and return how much experience was given. */
