@@ -917,18 +917,19 @@ int allocate_zone(int vnum) {
 #endif
   }
 
-  if (vnum > zone_table[top_of_zone_table - 1].virtual) {
-    return top_of_zone_table;
-  }
-
   int index = -1;
 
-  for (int i = 0; (i < top_of_zone_table) && (index < 0); i++) {
-    if (vnum < zone_table[i].virtual) {
-      memmove(&zone_table[i + 1], &zone_table[i], sizeof(struct zone_data) * (top_of_zone_table - i));
-      memset(&zone_table[i], 0, sizeof(struct zone_data));
+  if (vnum > zone_table[top_of_zone_table - 1].virtual) {
+    index = top_of_zone_table;
+  }
+  else {
+    for (int i = 0; (i < top_of_zone_table) && (index < 0); i++) {
+      if (vnum < zone_table[i].virtual) {
+        memmove(&zone_table[i + 1], &zone_table[i], sizeof(struct zone_data) * (top_of_zone_table - i));
+        memset(&zone_table[i], 0, sizeof(struct zone_data));
 
-      index = i;
+        index = i;
+      }
     }
   }
 
@@ -991,18 +992,19 @@ int allocate_room(int vnum) {
 #endif
   }
 
-  if (vnum > world[top_of_world - 1].number) {
-    return top_of_world;
-  }
-
   int index = -1;
 
-  for (int i = 0; (i < top_of_world) && (index < 0); i++) {
-    if (vnum < world[i].number) {
-      memmove(&world[i + 1], &world[i], sizeof(struct room_data) * (top_of_world - i));
-      memset(&world[i], 0, sizeof(struct room_data));
+  if (vnum > world[top_of_world - 1].number) {
+    index = top_of_world;
+  }
+  else {
+    for (int i = 0; (i < top_of_world) && (index < 0); i++) {
+      if (vnum < world[i].number) {
+        memmove(&world[i + 1], &world[i], sizeof(struct room_data) * (top_of_world - i));
+        memset(&world[i], 0, sizeof(struct room_data));
 
-      index = i;
+        index = i;
+      }
     }
   }
 
@@ -1099,18 +1101,19 @@ int allocate_mob(int vnum) {
 #endif
   }
 
-  if (vnum > mob_proto_table[top_of_mobt - 1].virtual) {
-    return top_of_mobt;
-  }
-
   int index = -1;
 
-  for (int i = 0; (i < top_of_mobt) && (index < 0); i++) {
-    if (vnum < mob_proto_table[i].virtual) {
-      memmove(&mob_proto_table[i + 1], &mob_proto_table[i], sizeof(struct mob_proto) * (top_of_mobt - i));
-      memset(&mob_proto_table[i], 0, sizeof(struct mob_proto));
+  if (vnum > mob_proto_table[top_of_mobt - 1].virtual) {
+    index = top_of_mobt;
+  }
+  else {
+    for (int i = 0; (i < top_of_mobt) && (index < 0); i++) {
+      if (vnum < mob_proto_table[i].virtual) {
+        memmove(&mob_proto_table[i + 1], &mob_proto_table[i], sizeof(struct mob_proto) * (top_of_mobt - i));
+        memset(&mob_proto_table[i], 0, sizeof(struct mob_proto));
 
-      index = i;
+        index = i;
+      }
     }
   }
 
@@ -1179,18 +1182,19 @@ int allocate_obj(int vnum) {
 #endif
   }
 
-  if (vnum > obj_proto_table[top_of_objt - 1].virtual) {
-    return top_of_objt;
-  }
-
   int index = -1;
 
-  for (int i = 0; (i < top_of_objt) && (index < 0); i++) {
-    if (vnum < obj_proto_table[i].virtual) {
-      memmove(&obj_proto_table[i + 1], &obj_proto_table[i], sizeof(struct obj_proto) * (top_of_objt - i));
-      memset(&obj_proto_table[i], 0, sizeof(struct obj_proto));
+  if (vnum > obj_proto_table[top_of_objt - 1].virtual) {
+    index = top_of_objt;
+  }
+  else {
+    for (int i = 0; (i < top_of_objt) && (index < 0); i++) {
+      if (vnum < obj_proto_table[i].virtual) {
+        memmove(&obj_proto_table[i + 1], &obj_proto_table[i], sizeof(struct obj_proto) * (top_of_objt - i));
+        memset(&obj_proto_table[i], 0, sizeof(struct obj_proto));
 
-      index = i;
+        index = i;
+      }
     }
   }
 
@@ -1261,18 +1265,19 @@ int allocate_shop(int vnum) {
 #endif
   }
 
-  if (vnum > shop_index[top_of_shop_table - 1].keeper) {
-    return top_of_shop_table;
-  }
-
   int index = -1;
 
-  for (int i = 0; (i < top_of_shop_table) && (index < 0); i++) {
-    if (vnum < shop_index[i].keeper) {
-      memmove(&shop_index[i + 1], &shop_index[i], sizeof(struct shop_data) * (top_of_shop_table - i));
-      memset(&shop_index[i], 0, sizeof(struct shop_data));
+  if (vnum > shop_index[top_of_shop_table - 1].keeper) {
+    index = top_of_shop_table;
+  }
+  else {
+    for (int i = 0; (i < top_of_shop_table) && (index < 0); i++) {
+      if (vnum < shop_index[i].keeper) {
+        memmove(&shop_index[i + 1], &shop_index[i], sizeof(struct shop_data) * (top_of_shop_table - i));
+        memset(&shop_index[i], 0, sizeof(struct shop_data));
 
-      index = i;
+        index = i;
+      }
     }
   }
 
