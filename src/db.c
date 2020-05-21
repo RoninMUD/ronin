@@ -391,7 +391,7 @@ void distribute_tokens(const int num_tokens) {
   static int top_of_token_mob_table = -1;
   static int allocated = 0;
 
-  /* Create the teleport room table if it's not already allocated. */
+  /* Create the token mob table if it's not already allocated. */
   if (top_of_token_mob_table < 0) {
     /* Initial table size, based on profiling in May of 2020. */
     allocated = 1000;
