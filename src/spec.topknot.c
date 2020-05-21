@@ -305,23 +305,20 @@ tk_get_baron_victim (CHAR *ch)
 }
 
 CHAR* tk_get_steal_victim(CHAR *ch) {
-  CHAR *vict = 0;
+  CHAR *vict = NULL;
 
-  for (CHAR *tmp = world[CHAR_REAL_ROOM(ch)].people; tmp; tmp = tmp->next_in_room) {
-    if (tmp->desc && (!tmp->desc->descriptor || (tmp->desc->connected != CON_PLYNG)))
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (!IS_NPC(temp_ch))
       continue;
 
-    if (tk_is_friend(tmp) || !CAN_SEE(ch, tmp) || (IS_NPC(tmp) && (inzone(V_MOB(tmp)) == 30)))
+    if (real_shop(V_MOB(temp_ch)) != -1)
       continue;
 
-    if ((V_MOB(ch) == TK_SLAPHOFF) && !IS_NPC(tmp) && (GET_LEVEL(tmp) < 25))
-      continue;
-
-    if (!IS_NPC(tmp) && (IS_IMMORTAL(tmp) || (GET_LEVEL(tmp) < 21)))
+    if (tk_is_friend(temp_ch) || !CAN_SEE(ch, temp_ch) || (inzone(V_MOB(temp_ch)) == 30))
       continue;
 
     if (!vict || !number(0, 9))
-      vict = tmp;
+      vict = temp_ch;
   }
 
   return vict;
