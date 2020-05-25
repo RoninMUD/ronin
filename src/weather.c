@@ -340,7 +340,7 @@ int get_season(void) {
   int season = -1;
 
   for (int i = 0; i < NUMELEMS(season_info); i++) {
-    for (int j = 0; (j < NUMELEMS(season_info[i].months)) && (season_info[i].months[j] > 0); j++) {
+    for (int j = 0; (j < NUMELEMS(season_info[i].months)) && (season_info[i].months[j] >= 0); j++) {
       if (time_info.month == season_info[i].months[j]) {
         season = season_info[i].season;
       }
