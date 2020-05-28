@@ -2698,7 +2698,11 @@ void give_prompt(DESC *desc) {
     }
   }
 
-  str_cat(prompt, sizeof(prompt), "< ");
+  str_cat(prompt, sizeof(prompt), "<");
+
+  if (IS_SET(desc->prompt, PROMPT_NAME)) {
+    str_cat(prompt, sizeof(prompt), " ");
+  }
 
   if (IS_SET(desc->prompt, PROMPT_NAME)) {
     str_cat(prompt, sizeof(prompt), GET_NAME(ch));
