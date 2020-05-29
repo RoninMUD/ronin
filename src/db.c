@@ -928,6 +928,8 @@ int allocate_zone(int vnum) {
         memmove(&zone_table[i + 1], &zone_table[i], sizeof(struct zone_data) * (top_of_zone_table - i));
         memset(&zone_table[i], 0, sizeof(struct zone_data));
 
+        zone_table[i].virtual = vnum;
+
         index = i;
       }
     }
@@ -1003,41 +1005,43 @@ int allocate_room(int vnum) {
         memmove(&world[i + 1], &world[i], sizeof(struct room_data) * (top_of_world - i));
         memset(&world[i], 0, sizeof(struct room_data));
 
+        world[i].number = vnum;
+
         index = i;
       }
     }
-  }
 
-  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
-    next_ch = ch->next;
+    for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
+      next_ch = ch->next;
 
-    if (GET_IN_ROOM_V(ch) != NOWHERE) {
-      int room_rnum = real_room(GET_IN_ROOM_V(ch));
+      if (GET_IN_ROOM_V(ch) != NOWHERE) {
+        int room_rnum = real_room(GET_IN_ROOM_V(ch));
 
-      if (room_rnum == NOWHERE) {
-        log_f("Deleting char (%s) because it was not attached to a room.", GET_NAME(ch));
-        char_to_room(ch, 0);
-        extract_char(ch);
-      }
-      else if (room_rnum != GET_IN_ROOM_R(ch)) {
-        GET_IN_ROOM_R(ch) = room_rnum;
+        if (room_rnum == NOWHERE) {
+          log_f("Deleting char (%s) because it was not attached to a room.", GET_NAME(ch));
+          char_to_room(ch, 0);
+          extract_char(ch);
+        }
+        else {
+          GET_IN_ROOM_R(ch) = room_rnum;
+        }
       }
     }
-  }
 
-  for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
-    next_obj = obj->next;
+    for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
+      next_obj = obj->next;
 
-    if (OBJ_IN_ROOM_V(obj) != NOWHERE) {
-      int obj_rnum = real_room(OBJ_IN_ROOM_V(obj));
+      if (OBJ_IN_ROOM_V(obj) != NOWHERE) {
+        int obj_rnum = real_room(OBJ_IN_ROOM_V(obj));
 
-      if (obj_rnum == NOWHERE) {
-        log_f("Deleting obj (%s) because it was not attached to a room.", OBJ_NAME(obj));
-        obj_to_room(obj, 0);
-        extract_obj(obj);
-      }
-      else if (obj_rnum != OBJ_IN_ROOM(obj)) {
-        OBJ_IN_ROOM(obj) = obj_rnum;
+        if (obj_rnum == NOWHERE) {
+          log_f("Deleting obj (%s) because it was not attached to a room.", OBJ_NAME(obj));
+          obj_to_room(obj, 0);
+          extract_obj(obj);
+        }
+        else {
+          OBJ_IN_ROOM(obj) = obj_rnum;
+        }
       }
     }
   }
@@ -1111,6 +1115,8 @@ int allocate_mob(int vnum) {
       if (vnum < mob_proto_table[i].virtual) {
         memmove(&mob_proto_table[i + 1], &mob_proto_table[i], sizeof(struct mob_proto) * (top_of_mobt - i));
         memset(&mob_proto_table[i], 0, sizeof(struct mob_proto));
+
+        mob_proto_table[i].virtual = vnum;
 
         index = i;
       }
@@ -1192,6 +1198,8 @@ int allocate_obj(int vnum) {
       if (vnum < obj_proto_table[i].virtual) {
         memmove(&obj_proto_table[i + 1], &obj_proto_table[i], sizeof(struct obj_proto) * (top_of_objt - i));
         memset(&obj_proto_table[i], 0, sizeof(struct obj_proto));
+
+        obj_proto_table[i].virtual = vnum;
 
         index = i;
       }
@@ -1275,6 +1283,8 @@ int allocate_shop(int vnum) {
       if (vnum < shop_index[i].keeper) {
         memmove(&shop_index[i + 1], &shop_index[i], sizeof(struct shop_data) * (top_of_shop_table - i));
         memset(&shop_index[i], 0, sizeof(struct shop_data));
+
+        shop_index[i].keeper = vnum;
 
         index = i;
       }
