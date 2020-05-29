@@ -681,18 +681,49 @@ void do_yell(CHAR *ch, char *arg, int cmd) {
 
 /* Function called by the 'gossip' command. */
 void do_gossip(CHAR *ch, char *arg, int cmd) {
+  arg = skip_spaces(arg);
+
+  if (!*arg) {
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_GOSSIP);
+
+    printf_to_char(ch, "You turn %s the %s channel.\n\r", IS_SET(GET_PFLAG(ch), PLR_GOSSIP) ? "ON" : "OFF", comm_info[COMM_GOSSIP].name);
+
+    return;
+  }
+
   communicate(ch, arg, COMM_GOSSIP);
 }
 
 
 /* Function called by the 'auction' command. */
 void do_auction(CHAR *ch, char *arg, int cmd) {
+  arg = skip_spaces(arg);
+
+  if (!*arg) {
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_AUCTION);
+
+    printf_to_char(ch, "You turn %s the %s channel.\n\r", IS_SET(GET_PFLAG(ch), PLR_AUCTION) ? "ON" : "OFF", comm_info[COMM_AUCTION].name);
+
+    return;
+  }
+
   communicate(ch, arg, COMM_AUCTION);
 }
 
 
 /* Function called by the 'chaos' command. */
 void do_chaos(CHAR *ch, char *arg, int cmd) {
+  arg = skip_spaces(arg);
+
+  /* No arg? Let the character know. */
+  if (!*arg) {
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_CHAOS);
+
+    printf_to_char(ch, "You turn %s the %s channel.\n\r", IS_SET(GET_PFLAG(ch), PLR_CHAOS) ? "ON" : "OFF", comm_info[COMM_CHAOS].name);
+
+    return;
+  }
+
   communicate(ch, arg, COMM_CHAOS);
 }
 
