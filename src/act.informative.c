@@ -1207,9 +1207,11 @@ void do_look(CHAR *ch, char *argument, int cmd) {
             break;
 
           case ITEM_DRINKCON:
-            if (OBJ_VALUE(temp_obj, 1)) {
+            if ((OBJ_VALUE(temp_obj, 1) > 0) && (OBJ_VALUE(temp_obj, 0) > 0)) {
+              int fullness_idx = MAX(MIN((OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0), 3), 0);
+
               printf_to_char(ch, "It's %sfull of %s %s liquid.\n\r",
-                fullness[(OBJ_VALUE(temp_obj, 1) * 3) / OBJ_VALUE(temp_obj, 0)],
+                fullness[fullness_idx],
                 S_ANA(color_liquid[OBJ_VALUE(temp_obj, 2)]),
                 color_liquid[OBJ_VALUE(temp_obj, 2)]);
             }
