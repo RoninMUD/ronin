@@ -57,6 +57,14 @@ void do_quest(CHAR *ch, char *arg, int cmd) {
 
   arg = skip_spaces(arg);
 
+  if (!*arg) {
+    TOGGLE_BIT(GET_PFLAG(ch), PLR_QUESTC);
+
+    printf_to_char(ch, "You turn %s the quest channel.\n\r", IS_SET(GET_PFLAG(ch), PLR_QUESTC) ? "ON" : "OFF");
+
+    return;
+  }
+
   if (!IS_NPC(ch) && is_abbrev(arg, "flag")) {
     if (!IS_SET(GET_PFLAG(ch), PLR_QUESTC)) {
       SET_BIT(GET_PFLAG(ch), PLR_QUESTC);
