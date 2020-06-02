@@ -8488,7 +8488,7 @@ Level  Song/Skill                          Mana
   2    BLITZ
   3    "there is no heart that won't heal" 100     (REJUVENATION)
   4    "heaven beside you"                 100     (PROTECTION FROM EVIL/GOOD)
-  5    "you've been thunderstruck"         400     (THUNDERBALL)
+  5    "you've been thunderstruck"         250     (THUNDERBALL)
 
 The protection from the song at level 4 is dependent on the
 alignment of the Blade Singer.
