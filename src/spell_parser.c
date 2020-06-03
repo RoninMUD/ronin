@@ -423,7 +423,7 @@ int song_level[] =
 
 int song_mana[] =
 {
-  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,40,75,60,100,100,150,100,400,200
+  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,40,75,60,100,100,150,100,250,200
 };
 
 char *skip_spaces(char *string);
@@ -617,7 +617,8 @@ void do_song(CHAR *ch, char *arg, int cmd)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+
+        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
         {
           spell_blindness(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
