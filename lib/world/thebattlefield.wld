@@ -356,15 +356,6 @@ fortunes.~
 ~
 0 -1 7301
 E
-SOFA CHESTERFIELD~
-The Chesterfield Sofa is finished in a very tasteful dark blue leather, 
-trimmed in black leather.  Along side it is a matching drinks table with a
-copy of "Mud Weekly" open to the news section~
-E
-MUD WEEKLY~
-The Mud Weekly is open to the 'New arrivals' section, here you read about the
-new 'Battle field area' by Tedric, THE Oreo Pirate.  Interesting reading.~
-E
 PIN BOARD~
 		 IDEAS FOR EXPANSIONS TO THIS AREA.
 I have many planned expansions to this area, all link in to this area, all
@@ -411,6 +402,15 @@ P.S If you want me I may still be at this address r.j.hodkinson@bradford.ac.uk
 P.P.S  Happy mudding all.  Cul8r.
 
 ~
+E
+MUD WEEKLY~
+The Mud Weekly is open to the 'New arrivals' section, here you read about the
+new 'Battle field area' by Tedric, THE Oreo Pirate.  Interesting reading.~
+E
+SOFA CHESTERFIELD~
+The Chesterfield Sofa is finished in a very tasteful dark blue leather, 
+trimmed in black leather.  Along side it is a matching drinks table with a
+copy of "Mud Weekly" open to the news section~
 S
 #7318
 A landscape filled with ash~
@@ -962,15 +962,15 @@ You see an ash covered landscape.~
 ~
 0 -1 7336
 E
-ARMOR~
-Fragments of armor lie, twisted and half covered in the ash, emblems on them 
-scoured away but time, but still some vivid color remains in nooks and 
-crannies.~
-E
 BONE~
 bits of bone stick out of the grey ash here.  All are worn smooth by endless 
 days of wind and grit, still the bones tell of a violent end to the body it 
 once belonged to.~
+E
+ARMOR~
+Fragments of armor lie, twisted and half covered in the ash, emblems on them 
+scoured away but time, but still some vivid color remains in nooks and 
+crannies.~
 S
 #7341
 By a mountain of junk~
@@ -994,14 +994,14 @@ You see plains of volcanic glass.~
 ~
 0 -1 7339
 E
+BONE~~
+Splinters of bones lie everywhere, sticking like knives out of the mass of 
+junk surrounding you.~
+E
 ARMOR~
 Twisted and rusted pieces of armor seem to reach out at you, you reach out
 to touch some, it crumbles under your fingers, the rust drifting away with
 the wind.~
-E
-BONE~~
-Splinters of bones lie everywhere, sticking like knives out of the mass of 
-junk surrounding you.~
 S
 #7342
 Ash ridden landscape~
@@ -1501,11 +1501,11 @@ You see a dark passage partially filled with junk.~
 ~
 0 -1 7367
 E
-junk~
-You see broken bits of weapons and armor scattered on the floor.~
-E
 bones~
 You notice that all have been split in half, most have bits of rotting meat on.~
+E
+junk~
+You see broken bits of weapons and armor scattered on the floor.~
 S
 #7367
 The chamber.~
@@ -1526,12 +1526,12 @@ You see a hidden door.~
 hidden door~
 1 -1 7368
 E
-forge~
-The forge is still hot, along one side are tools for metal working.~
-E
 Blackrock table~
 The light seems to disappears into the table, you feel waves of cold and
 malevolence coming from the table.~
+E
+forge~
+The forge is still hot, along one side are tools for metal working.~
 S
 #7368
 The smelly tunnel.~
@@ -1549,11 +1549,11 @@ There is a bright light ahead.~
 ~
 0 -1 7337
 E
-bones~
-You notice that all have been split in half, most have bits of rotting meat on.~
-E
 junk~
 You see broken bits of weapons and armor scattered on the floor.~
+E
+bones~
+You notice that all have been split in half, most have bits of rotting meat on.~
 S
 #7369
 The blasted lands.~
