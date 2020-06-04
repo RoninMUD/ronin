@@ -1917,7 +1917,7 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       send_to_char("Name display on.\n\r", ch);
       SET_BIT(desc->prompt, PROMPT_NAME);
     }
-    else if ((!*setting && IS_SET(desc->prompt, PROMPT_NAME)) || (is_abbrev(setting, "off") || (*setting == '0'))){
+    else if ((!*setting && IS_SET(desc->prompt, PROMPT_NAME)) || (is_abbrev(setting, "off") || (*setting == '0'))) {
       send_to_char("Name display off.\n\r", ch);
       REMOVE_BIT(desc->prompt, PROMPT_NAME);
     }
@@ -2256,11 +2256,25 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       send_to_char("Usage: display victim [on|off|always|auto|text] | [###]\n\r", ch);
     }
   }
+  else if (is_abbrev(option, "newline")) {
+  if ((!*setting && !IS_SET(GET_PFLAG(ch), PLR_PROMPT_NEWLINE)) || (is_abbrev(setting, "on") || (*setting == '1'))) {
+      SET_BIT(GET_PFLAG(ch), PLR_PROMPT_NEWLINE);
+      send_to_char("Newline display on.\n\r", ch);
+    }
+    else if ((!*setting && IS_SET(GET_PFLAG(ch), PLR_PROMPT_NEWLINE)) || (is_abbrev(setting, "off") || (*setting == '0'))) {
+      REMOVE_BIT(GET_PFLAG(ch), PLR_PROMPT_NEWLINE);
+      send_to_char("Newline display off.\n\r", ch);
+    }
+    else {
+      send_to_char("Usage: display newline [on|off]\n\r", ch);
+    }
+  }
   else {
     send_to_char("Usage: display [auto|all|off]\n\r"\
-                 "               [name]          [on|off]                   | [#]\n\r"\
-                 "               [hit|mana|move] [current|max|text|all|off] | [###]\n\r"\
-                 "               [buffer|victim] [on|off|always|auto|text]  | [###]\n\r", ch);
+                 "               name          [on|off]                   | [#]\n\r"\
+                 "               hit|mana|move [current|max|text|all|off] | [###]\n\r"\
+                 "               buffer|victim [on|off|always|auto|text]  | [###]\n\r"\
+                 "               newline       [on|off]                   | [#]\n\r", ch);
   }
 }
 

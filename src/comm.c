@@ -2819,6 +2819,10 @@ void give_prompt(DESC *desc) {
     }
   }
 
+  if (IS_SET(GET_PFLAG(ch), PLR_PROMPT_NEWLINE)) {
+    str_cat(prompt, sizeof(prompt), "\n\r");
+  }
+
   write_to_descriptor(desc->descriptor, prompt);
 
   desc->prompt_mode = 0;

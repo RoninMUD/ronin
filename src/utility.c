@@ -1883,7 +1883,7 @@ bool SAME_GROUP_EX(CHAR *ch1, CHAR *ch2, bool ignore_aff_group) {
 
   if (!ignore_aff_group && (!IS_AFFECTED(ch1, AFF_GROUP) || !IS_AFFECTED(ch2, AFF_GROUP))) return FALSE;
 
-  CHAR * group_leader = (GET_MASTER(ch1) ? GET_MASTER(ch1) : ch1);
+  CHAR *group_leader = (GET_MASTER(ch1) ? GET_MASTER(ch1) : ch1);
 
   if (!ignore_aff_group && !IS_AFFECTED(group_leader, AFF_GROUP)) return FALSE;
 

@@ -25,7 +25,7 @@
 #define DAM_ACID                     56
 
 /* Reserved. Do not change. */
-#define TYPE_WEAPON2              -2 /* TODO: Research better placement of this define. */
+#define TYPE_WEAPON2                 -2 /* TODO: Research better placement of this define. */
 #define TYPE_UNDEFINED               -1
 
 #define SPELL_RESERVED_DBC            0
