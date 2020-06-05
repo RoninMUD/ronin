@@ -937,6 +937,7 @@ struct room_data
 #define PLR_YELL_OFF          (1 << 26) /* 67108864 */
 #define PLR_EMAIL             (1 << 27) /* 134217728 */
 #define PLR_TAGBRF            (1 << 28) /* 268435456 */
+#define PLR_PROMPT_NEWLINE    (1 << 29) /* 536870912 */
 
 /* Player flags 2 -- used in ver3.pflag2 */
 #define TOG_BLOCK             (1 << 0)  /* 1 */
