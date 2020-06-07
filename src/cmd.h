@@ -326,7 +326,7 @@ $State: Exp $
 #define CMD_DIRTY_TRICKS       304 
 #define CMD_BACKFIST           305
 #define CMD_AWARENESS          306
-#define CMD_BLITZ              307
+#define CMD_307                307
 #define CMD_FLANK              308
 #define CMD_TRIP               309
 #define CMD_TIGERKICK          310

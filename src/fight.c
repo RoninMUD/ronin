@@ -1886,6 +1886,42 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         affected_by_spell(ch, SKILL_FRENZY)) {
       dmg = lround(dmg * 1.5);
     }
+
+    /* War Chant */
+    if (affected_by_spell(ch, SPELL_WARCHANT) &&
+        check_subclass(ch, SC_CHANTER, 2)) {
+      if (!affected_by_spell(victim, SPELL_WARCHANT)) {
+        dmg = lround(dmg * 1.2);
+      }
+      else { /* Victim is War Chanted */
+        dmg = lround(dmg * 1.3);
+      }
+    }
+
+    /* Showmanship */
+    if (IS_MORTAL(ch) &&
+        check_subclass(ch, SC_BLADESINGER, 2)) {
+      float showman_multi = 1;
+      CHAR *tmp_victim = NULL;
+      CHAR *next_victim = NULL;
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+        next_victim = tmp_victim->next_in_room;
+
+        if (ch != tmp_victim &&
+            SAME_GROUP(ch, tmp_victim) &&
+            IS_MORTAL(tmp_victim)) {
+          showman_multi += 0.05;
+
+          if (GET_CLASS(tmp_victim) == CLASS_BARD) {
+            showman_multi += 0.05;
+          }
+        }
+      }
+
+      dmg = lround(dmg * showman_multi);
+    }
+
   }
 
   /* Physical Critical Hit */
@@ -3259,14 +3295,6 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         damage(attacker, defender, 0, SKILL_ASSAULT, DAM_NO_BLOCK);
       break;
 
-      case SKILL_BLITZ:
-        act("$n tries to blitz $N, but misses.", FALSE, attacker, 0, defender, TO_NOTVICT);
-        act("$n tries to blitz you, but misses.", FALSE, attacker, 0, defender, TO_VICT);
-        act("You try to blitz $N, but miss.", FALSE, attacker, 0, defender, TO_CHAR);
-
-        damage(attacker, defender, 0, SKILL_BLITZ, DAM_NO_BLOCK);
-      break;
-
       case SKILL_LUNGE:
         act("$n tries to lunge at $N, but misses.", FALSE, attacker, 0, defender, TO_NOTVICT);
         act("$n tries to lunge at you, but misses.", FALSE, attacker, 0, defender, TO_VICT);
@@ -3437,42 +3465,6 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("You attacked $N suddenly without $M noticing.", FALSE, attacker, 0, defender, TO_CHAR);
 
         damage(attacker, defender, (dam * assault_mult[GET_LEVEL(attacker)]), SKILL_ASSAULT, DAM_PHYSICAL);
-      }
-      break;
-
-    case SKILL_BLITZ:
-      if (IS_AFFECTED(defender, AFF_INVUL) && !breakthrough(attacker, defender, type, BT_INVUL)) {
-        act("$n tries to blitz $N, but fails.", FALSE, attacker, 0, defender, TO_NOTVICT);
-        act("$n tries to blitz you, but fails.", FALSE, attacker, 0, defender, TO_VICT);
-        act("You try to blitz $N, but fail.", FALSE, attacker, 0, defender, TO_CHAR);
-
-        damage(attacker, defender, 0, SKILL_BLITZ, DAM_NO_BLOCK);
-      }
-      else {
-        act("$n charges into the fray, wildly swinging $s weapon at $N.", FALSE, attacker, 0, defender, TO_NOTVICT);
-        act("$n charges into the fray, wildly swinging $s weapon at you.", FALSE, attacker, 0, defender, TO_VICT);
-        act("You charge into the fray, wildly swinging your weapon at $N.", FALSE, attacker, 0, defender, TO_CHAR);
-
-        if (GET_WEAPON(defender) && chance(20)) {
-          OBJ *disarm = unequip_char(defender, WIELD);
-
-          act("$n's $p is knocked from $s grasp.", FALSE, defender, disarm, 0, TO_ROOM);
-          act("Your $p is knocked from your grasp.", FALSE, defender, disarm, 0, TO_CHAR);
-
-          if (IS_SET(CHAR_ROOM_FLAGS(attacker), CHAOTIC)) {
-            obj_to_char(disarm, defender);
-          }
-          else {
-            OBJ_LOG(disarm) = TRUE;
-            obj_to_room(disarm, CHAR_REAL_ROOM(defender));
-
-            log_f("WIZINFO: %s disarms %s's %s (Room %d)", GET_NAME(attacker), GET_NAME(defender), OBJ_NAME(disarm), V_ROOM(defender));
-          }
-
-          save_char(defender, NOWHERE);
-        }
-
-        damage(attacker, defender, lround(dam * 1.5), SKILL_BLITZ, DAM_PHYSICAL);
       }
       break;
 
