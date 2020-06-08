@@ -475,7 +475,6 @@ int shop_keeper(CHAR *keeper, CHAR *ch, int cmd, char *argument) {
       case CMD_AMBUSH:
       case CMD_COIN_TOSS:
       case CMD_BACKFIST:
-      case CMD_BLITZ:
       case CMD_FLANK:
       case CMD_TIGERKICK:
       case CMD_LUNGE:

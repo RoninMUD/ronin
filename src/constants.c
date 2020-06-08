@@ -261,7 +261,7 @@ const char * const spell_wear_off_msg[] = {
   "You feel less inspired.",/*185*/
   "!frenzy!",/*186*/
   "!power of faith!",/*187*/
-  "", /* 188 Incendiary Cloud (New) */
+  "The blistering waves of heat subside.", /* 188 Incendiary Cloud (New) */
   "The bright white aura around your body fades.",/*189*/
   "!wrath of god!",/*190*/
   "The force disrupting your white aura disappears.",/*191*/
@@ -318,7 +318,7 @@ const char * const spell_wear_off_msg[] = {
   "!victimize!", /*242*/
   "You feel less focused.",/*243*/
   "!sanctify!",/*244*/
-  "!blitz!",/*245*/
+  "",/*245*/
   "Your little orb disappears.",/*246*/
   "!dusk requiem!", /* 247 Dusk Requiem */
   "!frostbolt!",/*248*/
@@ -2802,7 +2802,6 @@ const char * const bard_skills[] = {
   "throw",
   "backflip",     /* Level 20 */
   "camp",         /* Level 35 */
-  "blitz",        /* Bladesinger SC2 */
   "\n"
 };
 

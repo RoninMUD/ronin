@@ -281,7 +281,7 @@
 #define SKILL_VICTIMIZE             242
 #define SKILL_MEDITATE              243
 #define SPELL_SANCTIFY              244
-#define SKILL_BLITZ                 245
+//#define SKILL_245                   245
 #define SPELL_ORB_PROTECTION        246
 #define SPELL_DUSK_REQUIEM          247
 #define SPELL_FROSTBOLT             248

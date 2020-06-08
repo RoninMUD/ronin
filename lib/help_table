@@ -4804,6 +4804,7 @@ Level Song's Name                       Mana    Spell
 (25)  Toy Soldier                        60     (animate-dead)
 (26)  Everything I do I do it for you    70     (heal)
 (28)  A View to a Kill                   80     (lethal fire)
+(35)  Lifting Shadows of a Dream         25     (remove poison)
 (50)  There is No Heart That Won't Heal  100    (rejuvenation)
 #
 SPELL SPELLS
@@ -8485,7 +8486,7 @@ or song, just type HELP <skill/song>
 
 Level  Song/Skill                          Mana
   1    "brightest flame burns quickest"     75     (RALLY)
-  2    BLITZ
+  2    SHOWMANSHIP
   3    "there is no heart that won't heal" 100     (REJUVENATION)
   4    "heaven beside you"                 100     (PROTECTION FROM EVIL/GOOD)
   5    "you've been thunderstruck"         250     (THUNDERBALL)
@@ -8503,13 +8504,33 @@ new or improved song.  For help on each song, just
 type HELP <song>
 
 Level  Song                              Mana
-  1    "lifting shadows of a dream"       40         (REMOVE POISON)
+  1    "bridge over troubled water"       40         (RESPITE)
   2    "something takes a part of me"     60         (WAR CHANT)
   3    "if I could change the world"     100         (LUCK)
   4    "hero of the day"                 150         (AID)
   5    "ray of light"                 # chars*30     (SPHERE)
 
 See Also: SUBCLASSES "BLADE SINGER" SONGS BARD
+#
+RESPITE
+
+This song is the ultimate in party status protection. With it the
+Chanter will remove one negative status ailment from each player
+character in the room from the following list:
+- cloud of confusion
+- incendiary cloud
+- paralyze
+- poison
+- charm person
+- blindness
+- chill touch
+- curse
+- wither
+
+If the PC is affected by none of these, it will set their wait
+(skill/spell lag etc.) to zero. The mana cost is 40.
+
+See Also: SUBCLASSES CHANTER SONGS BARD
 #
 RALLY
 
@@ -8521,13 +8542,17 @@ ticks.
 
 See Also: SUBCLASSES "BLADE SINGER"
 #
-BLITZ
+SHOWMANSHIP
 
 Subclass Blade Singer: Level 2 (Bard)
 
-This battle-starting skill gives the Blade Singer 1.5 times damage on the first
-hit with a chance of disarming the victim.  The success of blitz is dependent
-on how well the skill is practiced.
+The Blade Singer is fueled by their audience, and gains power the greater its
+size, especially when comprised of fellow Bard College graduates.  Being a
+great showman bestows upon the Blade Singer a 5% damage bonus per PC
+in the room and group, or 10% if the PC is a bard.
+
+This is a passive damage multiplier that is always applied, but only to combat
+damage.
 
 See Also: SUBCLASSES "BLADE SINGER"
 #
@@ -8547,10 +8572,12 @@ See Also: SONGS
 
 Subclass Chanter: Level 2 (Bard)
 
-This song has two effects.  First, it increases all group member saving throws
+This song has three effects.  First, it increases all group member saving throws
 by 2.  Second, it reduces all other character's hitrolls by 4.  The victim has
-a save vs. magic on the hitroll deduction.  The duration of the affect is 5,
-the mana cost is 60.
+a save vs. magic on the hitroll deduction.  Third, Chanters receive a 20% bonus
+to their combat damage while affected by War Chant, and this increases to a 30%
+if the victim is affected by War Chant as well.
+The duration of the affect is 5, the mana cost is 60.
 
 See Also: SUBCLASSES CHANTER
 #

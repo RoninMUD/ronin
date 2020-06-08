@@ -59,7 +59,6 @@ void do_dirty_tricks(CHAR *ch, char *argument, int cmd);
 void do_tigerkick(CHAR *ch, char *argument, int cmd);
 void do_scan(CHAR *ch, char *argument, int cmd);
 void do_camp(CHAR *ch, char *argument, int cmd);
-void do_blitz(CHAR *ch, char *argument, int cmd);
 void do_lunge(CHAR *ch, char *argument, int cmd);
 void do_smite(CHAR *ch, char *argument, int cmd);
 void do_flank(CHAR *ch, char *argument, int cmd);

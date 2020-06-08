@@ -256,11 +256,6 @@ int check_sc_access(CHAR *ch, int skill) {
       if (check_subclass(ch, SC_INFIDEL, 5)) return TRUE;
       break;
 
-    /* Blade Singer */
-    case SKILL_BLITZ:
-      if (check_subclass(ch, SC_BLADESINGER, 2)) return TRUE;
-      break;
-
     /* Legionnaire */
     case SKILL_LUNGE:
       if (check_subclass(ch, SC_LEGIONNAIRE, 1)) return TRUE;
@@ -302,12 +297,9 @@ int check_sc_song_access(CHAR *ch, int song) {
   if (IS_NPC(ch) || IS_IMMORTAL(ch)) return TRUE;
 
   /* Note: Song 22 is Rejuvenation. */
-  if ((song <= 17) || (song == 22)) return TRUE;
+  if ((song <= 18) || (song == 22)) return TRUE;
 
   switch (song) {
-    case 18: /* song of remove poison */
-      if (check_subclass(ch, SC_CHANTER, 1)) return TRUE;
-      break;
     case 19: /* rally song */
       if (check_subclass(ch, SC_BLADESINGER, 1)) return TRUE;
       break;
@@ -328,6 +320,9 @@ int check_sc_song_access(CHAR *ch, int song) {
       break;
     case 26: /* sphere */
       if (check_subclass(ch, SC_CHANTER, 5)) return TRUE;
+      break;
+    case 27: /* respite */
+      if (check_subclass(ch, SC_CHANTER, 1)) return TRUE;
       break;
   }
 

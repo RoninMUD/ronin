@@ -892,7 +892,6 @@ void assign_command_pointers ( void )
   COMMANDO("trusty-steed", CMD_TRUSTY_STEED, POSITION_FIGHTING, do_trusty_steed, 30);
   COMMANDO("vehemence", CMD_VEHEMENCE, POSITION_FIGHTING, do_vehemence, 30);
   COMMANDO("zeal", CMD_ZEAL, POSITION_FIGHTING, do_zeal, 30);
-  COMMANDO("blitz", CMD_BLITZ, POSITION_STANDING, do_blitz, 30);
   COMMANDO("flank", CMD_FLANK, POSITION_FIGHTING, do_flank, 30);
   COMMANDO("lunge", CMD_LUNGE, POSITION_STANDING, do_lunge, 30);
   COMMANDO("evasion", CMD_EVASION, POSITION_STANDING, do_evasion, 30);
