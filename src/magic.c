@@ -2074,7 +2074,7 @@ void spell_total_recall(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
   spell_word_of_recall(level, ch, ch, 0);
 }
 
-void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+int spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   sh_int target;
   int percent;
   char buf[MIL];
@@ -2082,18 +2082,18 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_SUM))
   {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
   
   /* Fix for Sin_Pride to not allow totals or recalls - Liner 041303 */
   if(enchanted_by(victim,"Deadly Sin - Pride")) {
     send_to_char("You failed.\n\r",ch);
-    return;
+    return FALSE;
   }
 
   if(CHAR_REAL_ROOM(victim)==NOWHERE) {
     send_to_char("You failed.\n\r",ch);
-    return;
+    return FALSE;
   }
 
   if(IS_SET(ch->specials.pflag, PLR_QUEST)) {
@@ -2105,19 +2105,19 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (IS_NPC(victim) && (GET_LEVEL(victim) > 15) &&
      !IS_SET(victim->specials.act,ACT_MOUNT)) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   /* Immune summon added Aug 28/98 - Ranger */
   if(IS_SET(victim->specials.immune,IMMUNE_SUMMON)) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   /* So you can't summon a ridden mount Ranger April 96 */
   if (victim->specials.rider) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   /* New summon failures - Ranger April 2000 */
@@ -2130,18 +2130,18 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if(!chance(percent) || (ch==victim)) {
     send_to_char("You failed.\n\r",ch);
-    return;
+    return FALSE;
   }
 
   if (!IS_NPC(victim) && (IS_SET(victim->specials.pflag, PLR_KILL) ||
         IS_SET(victim->specials.pflag, PLR_THIEF)) && !CHAOSMODE) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   if ((IS_SET(victim->specials.pflag, PLR_NOSUMMON)) && (!IS_NPC(victim))) {
     send_to_char("You failed.\n\r",ch);
-    return;
+    return FALSE;
   }
 
   if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, PRIVATE) ||
@@ -2153,13 +2153,13 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) ||
       (V_ROOM(victim)==10) ) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   if (IS_NPC(victim) && (saves_spell(victim, SAVING_SPELL,level) ||
        IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE))) {
     send_to_char("You failed.\n\r", ch);
-    return;
+    return FALSE;
   }
 
   act("$n disappears suddenly.",TRUE,victim,0,0,TO_ROOM);
@@ -2178,6 +2178,7 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   act("$n has summoned you!",FALSE,ch,0,victim,TO_VICT);
   do_look(victim,"",15);
   GET_POS(victim) = POSITION_RESTING;
+  return TRUE;
 }
 
 void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {

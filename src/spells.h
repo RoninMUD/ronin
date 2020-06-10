@@ -793,7 +793,7 @@ void spell_word_of_recall(ubyte level, struct char_data *ch,
 void spell_total_recall(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
-void spell_summon(ubyte level, struct char_data *ch,
+int spell_summon(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
 void spell_relocation(ubyte level, struct char_data *ch,
