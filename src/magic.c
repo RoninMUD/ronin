@@ -2074,92 +2074,47 @@ void spell_total_recall(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
   spell_word_of_recall(level, ch, ch, 0);
 }
 
-int spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   sh_int target;
   int percent;
   char buf[MIL];
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_SUM))
-  {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
-  }
-  
-  /* Fix for Sin_Pride to not allow totals or recalls - Liner 041303 */
-  if(enchanted_by(victim,"Deadly Sin - Pride")) {
-    send_to_char("You failed.\n\r",ch);
-    return FALSE;
-  }
+  percent = 100;
+  percent -= 5 * (GET_LEVEL(victim) - GET_LEVEL(ch));
+  if (affected_by_spell(victim, SPELL_BLESS)) percent += 5;
+  if (affected_by_spell(victim, SPELL_CURSE)) percent -= 5;
+  percent = MIN(percent, 100);
+  percent = MAX(0, percent);
 
-  if(CHAR_REAL_ROOM(victim)==NOWHERE) {
-    send_to_char("You failed.\n\r",ch);
-    return FALSE;
-  }
-
-  if(IS_SET(ch->specials.pflag, PLR_QUEST)) {
-    sprintf(buf,"QSTINFO: %s casts 'summon' %s",GET_NAME(ch),GET_NAME(victim));
-    wizlog(buf,LEVEL_IMM,7);
-  }
-
-  /* Check for mount added - Ranger */
-  if (IS_NPC(victim) && (GET_LEVEL(victim) > 15) &&
-     !IS_SET(victim->specials.act,ACT_MOUNT)) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
-  }
-
-  /* Immune summon added Aug 28/98 - Ranger */
-  if(IS_SET(victim->specials.immune,IMMUNE_SUMMON)) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
-  }
-
-  /* So you can't summon a ridden mount Ranger April 96 */
-  if (victim->specials.rider) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
-  }
-
-  /* New summon failures - Ranger April 2000 */
-  percent=100;
-  percent-=5*(GET_LEVEL(victim)-GET_LEVEL(ch));
-  if(affected_by_spell(victim, SPELL_BLESS)) percent+=5;
-  if(affected_by_spell(victim, SPELL_CURSE)) percent-=5;
-  percent=MIN(percent,100);
-  percent=MAX(0,percent);
-
-  if(!chance(percent) || (ch==victim)) {
-    send_to_char("You failed.\n\r",ch);
-    return FALSE;
-  }
-
-  if (!IS_NPC(victim) && (IS_SET(victim->specials.pflag, PLR_KILL) ||
-        IS_SET(victim->specials.pflag, PLR_THIEF)) && !CHAOSMODE) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
-  }
-
-  if ((IS_SET(victim->specials.pflag, PLR_NOSUMMON)) && (!IS_NPC(victim))) {
-    send_to_char("You failed.\n\r",ch);
-    return FALSE;
-  }
-
-  if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, PRIVATE) ||
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_SUM) ||
+     /* Fix for Sin_Pride to not allow totals or recalls - Liner 041303 */
+      enchanted_by(victim,"Deadly Sin - Pride") ||
+      (CHAR_REAL_ROOM(victim)==NOWHERE) ||
+      /* Check for mount added - Ranger */
+      (IS_NPC(victim) && (GET_LEVEL(victim) > 15) && !IS_SET(victim->specials.act, ACT_MOUNT)) ||
+      /* Immune summon added Aug 28/98 - Ranger */
+      IS_SET(victim->specials.immune, IMMUNE_SUMMON) ||
+      /* So you can't summon a ridden mount Ranger April 96 */
+      victim->specials.rider ||
+      (!chance(percent) || (ch == victim)) ||
+      (!IS_NPC(victim) && (IS_SET(victim->specials.pflag, PLR_KILL) || IS_SET(victim->specials.pflag, PLR_THIEF)) && !CHAOSMODE) ||
+      (IS_SET(victim->specials.pflag, PLR_NOSUMMON) && (!IS_NPC(victim))) ||
+      IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, PRIVATE) ||
       IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, PRIVATE) ||
       IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, ARENA) ||
       IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) ||
       IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) ||
       (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TUNNEL) && !CHAOSMODE) ||
       IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) ||
-      (V_ROOM(victim)==10) ) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
+      (V_ROOM(victim) == 10) ||
+      (IS_NPC(victim) && (saves_spell(victim, SAVING_SPELL, level) || IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE)))) {
+    act("You failed to summon $N.", FALSE, ch, NULL, victim, TO_CHAR);
+    return;
   }
 
-  if (IS_NPC(victim) && (saves_spell(victim, SAVING_SPELL,level) ||
-       IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE))) {
-    send_to_char("You failed.\n\r", ch);
-    return FALSE;
+  if(IS_SET(ch->specials.pflag, PLR_QUEST)) {
+    sprintf(buf,"QSTINFO: %s casts 'summon' %s",GET_NAME(ch),GET_NAME(victim));
+    wizlog(buf,LEVEL_IMM,7);
   }
 
   act("$n disappears suddenly.",TRUE,victim,0,0,TO_ROOM);
@@ -2178,7 +2133,6 @@ int spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   act("$n has summoned you!",FALSE,ch,0,victim,TO_VICT);
   do_look(victim,"",15);
   GET_POS(victim) = POSITION_RESTING;
-  return TRUE;
 }
 
 void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {

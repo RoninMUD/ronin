@@ -175,6 +175,43 @@ void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
   }
 }
 
+void cast_camaraderie(ubyte level, CHAR* ch, char* arg, int type, CHAR* victim, OBJ* tar_obj)
+{
+    switch (type)
+    {
+    case SPELL_TYPE_SPELL:
+        spell_camaraderie(level, ch, victim, 0);
+        break;
+    default:
+        log_f("Wrong type called in camaraderie!");
+        break;
+    }
+}
+
+void spell_camaraderie(ubyte level, CHAR* ch, CHAR* victim, OBJ* obj)
+{
+    AFF af;
+
+    if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim)
+    {
+        send_to_char("You cannot cast this spell on another player.\n\r", ch);
+        return;
+    }
+
+    if (!affected_by_spell(victim, SPELL_CAMARADERIE))
+    {
+        send_to_char("You feel safety in numbers.\n\r", victim);
+
+        af.type = SPELL_CAMARADERIE;
+        af.duration = 5;
+        af.modifier = 0;
+        af.location = 0;
+        af.bitvector = 0;
+        af.bitvector2 = 0;
+        affect_to_char(victim, &af);
+    }
+}
+
 void cast_cloud_confusion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
     case SPELL_TYPE_SPELL:

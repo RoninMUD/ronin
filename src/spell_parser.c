@@ -261,7 +261,7 @@ const char * const spells[] = {
   "",                             /* 200 Reserved */
   "maim",                         /* 201 */
   "aid",                          /* 202 */
-  "               ",              /* 203 */
+  "",                             /* 203 */
   "shadowstep",                   /* 204 */
   "batter",                       /* 205 */
   "desecrate",                    /* 206 */
@@ -303,7 +303,7 @@ const char * const spells[] = {
   "victimize",                    /* 242 */
   "meditate",                     /* 243 */
   "sanctify",                     /* 244 */
-  "",                             /* 245 */
+  "camaraderie",                  /* 245 */
   "orb of protection",            /* 246 */
   "dusk requiem",                 /* 247 */
   "frost bolt",                   /* 248 */
@@ -412,19 +412,20 @@ const char * const songs[] =
   "hero of the day",                  /* aid */
   "heaven beside you",                /* protection from evil/good */
   "you've been thunderstruck",        /* thunderball */
-  "ray of light",                     /* sphere */
+  "we are family",                    /* camaraderie */
   "bridge over troubled water",       /* respite */
+  "come together",                    /* group summon */
   "\n"
 };
 
 int song_level[] =
 {
-  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,35,30,30,30,50,30,30,30,30,30
+  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,35,30,30,30,45,30,30,30,30,30,50
 };
 
 int song_mana[] =
 {
-  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,25,75,60,100,100,150,100,250,200,40
+  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,25,75,60,100,80,150,100,250,150,40,100
 };
 
 char *skip_spaces(char *string);
@@ -435,7 +436,6 @@ void do_song(CHAR *ch, char *arg, int cmd)
   int song = 0;
   int mana = 0;
   int level = 0;
-  int tmp = 0;
   CHAR *tmp_victim = NULL;
   CHAR *next_victim = NULL;
   OBJ *tmp_obj = NULL;
@@ -602,7 +602,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
         {
           spell_cure_critic(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
@@ -751,7 +751,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
         {
           spell_heal(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
@@ -860,7 +860,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
         {
           spell_rejuvenation(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
@@ -929,15 +929,8 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 26:
-      act("$n sings 'Quicker than a ray of light...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp = 0, tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp++, tmp_victim = tmp_victim->next_in_room);
-
-      tmp = MAX(MIN(tmp * 30, 200), 50);
-      level = GET_LEVEL(ch);
-
-      GET_MANA(ch) += (200 - tmp);
+    case 26: /* Camaraderie */
+      act("$n sings 'Everyone can see we're together...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -945,106 +938,135 @@ void do_song(CHAR *ch, char *arg, int cmd)
 
         if (ch != tmp_victim)
         {
-          spell_sphere(level, ch, tmp_victim, NULL);
+          spell_camaraderie(level, ch, tmp_victim, NULL);
         }
       }
 
-      spell_sphere(level, ch, ch, NULL);
+      spell_camaraderie(level, ch, ch, NULL);
       break;
 
     case 27: /* Respite */
-        act("$n sings 'When you're weary, feeling small...'", FALSE, ch, NULL, NULL, TO_ROOM);
-        const int respite_dispel_types[] = {
-          SPELL_CHARM_PERSON,
-          SPELL_INCENDIARY_CLOUD_NEW,
-          SPELL_CLOUD_CONFUSION,
-          SPELL_CURSE,
-          SPELL_CHILL_TOUCH,
-          SPELL_WITHER,
-          SPELL_RIMEFANG,
-          SPELL_BLINDNESS,
-          SPELL_POISON,
-          SPELL_PARALYSIS,
-          -1
-        };
-        int respite_dispel = 0;
+      act("$n sings 'When you're weary, feeling small...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      const int respite_dispel_types[] = {
+        SPELL_CHARM_PERSON,
+        SPELL_INCENDIARY_CLOUD_NEW,
+        SPELL_CLOUD_CONFUSION,
+        SPELL_CURSE,
+        SPELL_CHILL_TOUCH,
+        SPELL_WITHER,
+        SPELL_RIMEFANG,
+        SPELL_BLINDNESS,
+        SPELL_POISON,
+        SPELL_PARALYSIS,
+        SPELL_SLEEP,
+        -1
+      };
+      int respite_dispel = 0;
 
-        for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
+      {
+        next_victim = tmp_victim->next_in_room;
+
+        if (!IS_NPC(tmp_victim))
         {
-          next_victim = tmp_victim->next_in_room;
-
-          if (ch != tmp_victim && !IS_NPC(tmp_victim))
-          {
-            respite_dispel = get_random_set_effect(tmp_victim, respite_dispel_types);
-            switch (respite_dispel) {
-            case SPELL_CHARM_PERSON:
-              if (affected_by_spell(tmp_victim, SPELL_CHARM_PERSON)) {
-                  send_to_char("You feel more self-confident.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_CHARM_PERSON);
-              }
-              break;
-            case SPELL_INCENDIARY_CLOUD_NEW:
-              if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW)) {
-                  send_to_char("The blistering waves of heat subside.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW);
-              }
-              break;
-            case SPELL_CLOUD_CONFUSION:
-              if (affected_by_spell(tmp_victim, SPELL_CLOUD_CONFUSION)) {
-                  send_to_char("You feel less disoriented.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_CLOUD_CONFUSION);
-              }
-              break;
-            case SPELL_CURSE:
-              if (affected_by_spell(tmp_victim, SPELL_CURSE)) {
-                  send_to_char("You feel better.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_CURSE);
-              }
-              break;
-            case SPELL_CHILL_TOUCH:
-              if (affected_by_spell(tmp_victim, SPELL_CHILL_TOUCH)) {
-                  send_to_char("You feel warm again.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_CHILL_TOUCH);
-              }
-              break;
-            case SPELL_WITHER:
-              if (affected_by_spell(tmp_victim, SPELL_WITHER)) {
-                  send_to_char("The pain coursing through your withered body begins to recede.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_WITHER);
-              }
-              break;
-            case SPELL_RIMEFANG:
-              if (affected_by_spell(tmp_victim, SPELL_RIMEFANG)) {
-                  send_to_char("The paralyzation wears off, you can move again.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_RIMEFANG);
-              }
-              break;
-            case SPELL_BLINDNESS:
-              if (affected_by_spell(tmp_victim, SPELL_BLINDNESS)) {
-                send_to_char("You can see again.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_BLINDNESS);
-              }
-              break;
-            case SPELL_POISON:
-              if (affected_by_spell(tmp_victim, SPELL_POISON)) {
+          respite_dispel = get_random_set_effect(tmp_victim, respite_dispel_types);
+          switch (respite_dispel) {
+          case SPELL_CHARM_PERSON:
+            if (affected_by_spell(tmp_victim, SPELL_CHARM_PERSON)) {
+                send_to_char("You feel more self-confident.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_CHARM_PERSON);
+            }
+            break;
+          case SPELL_INCENDIARY_CLOUD_NEW:
+            if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW)) {
+                send_to_char("The blistering waves of heat subside.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW);
+            }
+            break;
+          case SPELL_CLOUD_CONFUSION:
+            if (affected_by_spell(tmp_victim, SPELL_CLOUD_CONFUSION)) {
+                send_to_char("You feel less disoriented.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_CLOUD_CONFUSION);
+            }
+            break;
+          case SPELL_CURSE:
+            if (affected_by_spell(tmp_victim, SPELL_CURSE)) {
                 send_to_char("You feel better.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_POISON);
+                affect_from_char(tmp_victim, SPELL_CURSE);
+            }
+            break;
+          case SPELL_CHILL_TOUCH:
+            if (affected_by_spell(tmp_victim, SPELL_CHILL_TOUCH)) {
+                send_to_char("You feel warm again.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_CHILL_TOUCH);
+            }
+            break;
+          case SPELL_WITHER:
+            if (affected_by_spell(tmp_victim, SPELL_WITHER)) {
+                send_to_char("The pain coursing through your withered body begins to recede.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_WITHER);
+            }
+            break;
+          case SPELL_RIMEFANG:
+            if (affected_by_spell(tmp_victim, SPELL_RIMEFANG)) {
+                send_to_char("The paralyzation wears off, you can move again.\n\r", tmp_victim);
+                affect_from_char(tmp_victim, SPELL_RIMEFANG);
+            }
+            break;
+          case SPELL_BLINDNESS:
+            if (affected_by_spell(tmp_victim, SPELL_BLINDNESS)) {
+              send_to_char("You can see again.\n\r", tmp_victim);
+              affect_from_char(tmp_victim, SPELL_BLINDNESS);
+            }
+            break;
+          case SPELL_POISON:
+            if (affected_by_spell(tmp_victim, SPELL_POISON)) {
+              send_to_char("You feel better.\n\r", tmp_victim);
+              affect_from_char(tmp_victim, SPELL_POISON);
+            }
+            break;
+          case SPELL_PARALYSIS:
+            if (affected_by_spell(tmp_victim, SPELL_PARALYSIS)) {
+              send_to_char("You can move again.\n\r", tmp_victim);
+              affect_from_char(tmp_victim, SPELL_PARALYSIS);
+            }
+            break;
+          case SPELL_SLEEP:
+              if (affected_by_spell(tmp_victim, SPELL_SLEEP)) {
+                  send_to_char("You feel less tired.\n\r", tmp_victim);
+                  affect_from_char(tmp_victim, SPELL_SLEEP);
               }
               break;
-            case SPELL_PARALYSIS:
-              if (affected_by_spell(tmp_victim, SPELL_PARALYSIS)) {
-                send_to_char("You can move again.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_PARALYSIS);
-              }
-              break;
-            case TYPE_UNDEFINED:
+          case TYPE_UNDEFINED:
+            if (ch != tmp_victim) {
               send_to_char("You feel ready!\n\r", tmp_victim);
               GET_WAIT(tmp_victim) = 0;
-              break;
             }
+            break;
           }
         }
-        break;
+      }
+      break;
+
+    case 28: /* Group Summon */
+      act("$n sings 'He got joo joo eyeballs, he one holy roller...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      CHAR* group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
+
+      if (ch != group_leader) spell_summon(GET_LEVEL(ch), ch, group_leader, NULL);
+
+      for (FOL* follower = group_leader->followers; follower; follower = follower->next) {
+        CHAR* temp_ch = follower->follower;
+
+        if (temp_ch &&
+            SAME_GROUP(group_leader, temp_ch) &&
+            SAME_GROUP(ch, temp_ch) &&
+            ch != temp_ch) {
+          spell_summon(GET_LEVEL(ch), ch, temp_ch, NULL);
+        }
+      }
+
+      break;
+
     default:
       act("$n hums the words of a song $e doesn't know.", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You hum the words of a song you don't know.", FALSE, ch, NULL, NULL, TO_CHAR);
@@ -2127,6 +2149,7 @@ void assign_spell_pointers(void)
 
   // Chanter
   SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
+  SPELLO(SPELL_CAMARADERIE,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  150, TAR_CHAR_ROOM,                                                                cast_camaraderie);
 
   // Commando
   SPELLO(SPELL_IRON_SKIN,             30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);

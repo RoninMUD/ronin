@@ -318,7 +318,7 @@ const char * const spell_wear_off_msg[] = {
   "!victimize!", /*242*/
   "You feel less focused.",/*243*/
   "!sanctify!",/*244*/
-  "",/*245*/
+  "Your kinship fades.",/*245*/
   "Your little orb disappears.",/*246*/
   "!dusk requiem!", /* 247 Dusk Requiem */
   "!frostbolt!",/*248*/

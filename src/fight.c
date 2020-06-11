@@ -1639,7 +1639,8 @@ int resist_damage(CHAR *ch, int dmg, int attack_type, int damage_type) {
 int get_attack_type(CHAR *ch, OBJ *weapon);
 int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   char buf[MSL];
-
+  CHAR* tmp_victim = NULL;
+  CHAR* next_victim = NULL;
   int original_damage = dmg;
 
   if (!ch || !victim || !IS_ALIVE(victim) || !SAME_ROOM(victim, ch) || (dmg < 0)) return 0;
@@ -1662,6 +1663,49 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     attack_type = get_attack_type(ch, GET_WEAPON(ch));
 
     shadow_damage = TRUE;
+  }
+
+  /* Camaraderie */
+  if (affected_by_spell(victim, SPELL_CAMARADERIE) &&
+      damage_type != DAM_CAMARADERIE &&
+      IS_MORTAL(victim)) {
+    int comrades = 0;
+    int comrade_dmg = 0;
+    int sixtypct_dmg = MAX(1, lround(dmg * 0.6));
+
+    for (tmp_victim = world[CHAR_REAL_ROOM(victim)].people; tmp_victim; tmp_victim = next_victim) {
+      next_victim = tmp_victim->next_in_room;
+
+      if (victim != tmp_victim &&
+          SAME_GROUP(victim, tmp_victim) &&
+          IS_MORTAL(tmp_victim) &&
+          affected_by_spell(tmp_victim, SPELL_CAMARADERIE)) {
+        comrades += 1;
+      }
+    }
+    /* Deal 60% original dmg to victim, then 100% spread among comrades (yes, 160% total) */
+    /* Proceed to normal processing of damage() if comrades = 0 */
+    if (comrades > 0) {
+        comrade_dmg = MAX(1, lround(dmg / comrades));
+
+      damage(ch, victim, sixtypct_dmg, attack_type, DAM_CAMARADERIE);
+      act("Some of the damage intended for $n is reflected to $s comrades!", FALSE, victim, NULL, NULL, TO_ROOM);
+      act("Some of the damage intended for you is reflected to your comrades!", FALSE, victim, NULL, NULL, TO_CHAR);
+
+      if (IS_ALIVE(victim)) {
+        for (tmp_victim = world[CHAR_REAL_ROOM(victim)].people; tmp_victim; tmp_victim = next_victim) {
+          next_victim = tmp_victim->next_in_room;
+
+          if (victim != tmp_victim &&
+              SAME_GROUP(victim, tmp_victim) &&
+              IS_MORTAL(tmp_victim) &&
+              affected_by_spell(tmp_victim, SPELL_CAMARADERIE)) {
+            damage(ch, tmp_victim, comrade_dmg, attack_type, DAM_CAMARADERIE);
+          }
+        }
+      }
+      return 0;
+    }
   }
 
   /* Protect */
@@ -1902,8 +1946,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     if (IS_MORTAL(ch) &&
         check_subclass(ch, SC_BLADESINGER, 2)) {
       float showman_multi = 1;
-      CHAR *tmp_victim = NULL;
-      CHAR *next_victim = NULL;
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
         next_victim = tmp_victim->next_in_room;
@@ -1918,10 +1960,14 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           }
         }
       }
-
-      dmg = lround(dmg * showman_multi);
+      if (showman_multi > 3 ||
+          (IS_AFFECTED(ch, AFF_FURY) && showman_multi > 1.5)) {
+        dmg = dmg * 3;
+      }
+      else {
+        dmg = lround(dmg * showman_multi);
+      }
     }
-
   }
 
   /* Physical Critical Hit */
@@ -2183,6 +2229,28 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     affect_from_char(victim, SPELL_DIVINE_INTERVENTION);
 
     update_pos(victim);
+  }
+
+  /* Chanter SC3: Lucky Break */
+  if (affected_by_spell(victim, SPELL_LUCK) &&
+      (GET_POS(victim) <= POSITION_INCAP) &&
+      !IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) &&
+      chance(20)) {
+    CHAR* tmp = NULL;
+
+    for (tmp = world[CHAR_REAL_ROOM(victim)].people; tmp; tmp = tmp->next_in_room)
+    {
+      if (GET_OPPONENT(tmp) == victim) stop_fighting(tmp);
+    }
+
+    GET_HIT(victim) = 1;
+    stop_fighting(victim);
+    update_pos(victim);
+
+    act("An echo of bards past whisks you away from certain death.", FALSE, victim, 0, 0, TO_CHAR);
+    act("A faint echo is the only sound you hear as a nearly lifeless $n disappears suddenly.", FALSE, victim, 0, 0, TO_ROOM);
+
+    spell_word_of_recall(GET_LEVEL(victim), victim, victim, 0);
   }
 
   /* Handle death. */
@@ -4156,6 +4224,204 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 }
 
 
+void mimicry_action(CHAR* ch, CHAR* vict) {
+  CHAR* tmp_target = NULL;
+  CHAR* mimicee = NULL;
+  int dam = 0;
+  struct affected_type_5 af;
+  struct enchantment_type_5 ench;
+
+  if (!ch ||
+      !vict ||
+      !check_subclass(ch, SC_BLADESINGER, 4) ||
+      (count_mortals_room(ch, TRUE) < 1))
+    return;
+
+  int check = number(1, 1500) - (GET_DEX_APP(ch) * 5);
+
+  if (check > 100) return;
+
+  mimicee = get_random_victim(vict);
+  int failcount = 0;
+  while (failcount < 5 &&
+      (ch == mimicee ||
+        IS_NPC(mimicee) ||
+        !SAME_GROUP(ch, mimicee)))
+  {
+    mimicee = get_random_victim(vict);
+    failcount++;
+  }
+
+  if (ch && mimicee && failcount < 5) {
+    act("$n does $s best impression of you.", FALSE, ch, 0, mimicee, TO_VICT);
+    act("$n does $s best impression of $N.", FALSE, ch, 0, mimicee, TO_NOTVICT);
+    act("You do your best impression of $N.", FALSE, ch, 0, mimicee, TO_CHAR);
+
+    switch (GET_CLASS(mimicee)) {
+    case CLASS_MAGIC_USER:
+      act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      spell_thunderball(GET_LEVEL(ch), ch, vict, NULL);
+      break;
+    case CLASS_CLERIC:
+      act("$n sings 'All I need is a miracle, all I need is you...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'All I need is a miracle, all I need is you...'", FALSE, ch, NULL, NULL, TO_CHAR);
+      tmp_target = get_random_victim(vict);
+
+      if (!tmp_target ||
+          IS_NPC(tmp_target) ||
+          tmp_target == ch) {
+        tmp_target = ch;
+        act("$n sumptuous vocals heal $mself.", FALSE, ch, NULL, NULL, TO_ROOM);
+        act("Your sumptuous vocals heal yourself.", FALSE, ch, NULL, NULL, TO_CHAR);
+      }
+      else {
+        act("$n miraculous vocals heal you.", FALSE, ch, NULL, tmp_target, TO_VICT);
+        act("$n miraculous vocals heal $N.", FALSE, ch, NULL, tmp_target, TO_NOTVICT);
+        act("Your miraculous vocals heal $N.", FALSE, ch, NULL, tmp_target, TO_CHAR);
+      }
+      spell_miracle(GET_LEVEL(ch), ch, tmp_target, NULL);
+      break;
+    case CLASS_THIEF:
+      act("$n sings 'It's the circle of life, it's the wheel of fortune...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'It's the circle of life, it's the wheel of fortune...'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      act("$n pirouettes into the light, noisily dancing $s way behind $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+      act("$n pirouettes into the light, you are transfixed by the shameless dance.", FALSE, ch, 0, vict, TO_VICT);
+      act("You pirouette wildly into the light, noisily dancing your way behind $N.", FALSE, ch, 0, vict, TO_CHAR);
+
+      if (!EQ(ch, WIELD)) {// no weapon
+        if (EQ(ch, HOLD)) {
+          OBJ* hold = ch->equipment[HOLD];
+          act("$n plunges $p deep into $N's back.", FALSE, ch, hold, vict, TO_NOTVICT);
+          act("$n plunges $p deep into your back.", FALSE, ch, hold, vict, TO_VICT);
+          act("You plunge $p deep into $N's back.", FALSE, ch, hold, vict, TO_CHAR);
+        }
+        else {// no hold
+          act("$n plunges $s tiny fist deep into $N's back!", FALSE, ch, NULL, vict, TO_NOTVICT);
+          act("$n plunges $s tiny fist deep into your back!", FALSE, ch, NULL, vict, TO_VICT);
+          act("You plunge your tiny fist deep into $N's back!", FALSE, ch, NULL, vict, TO_CHAR);
+        }
+        dam = circle_mult[GET_LEVEL(ch)] * calc_hit_damage(ch, vict, GET_WEAPON(ch), 0, RND_RND);
+        damage(ch, vict, dam, SKILL_CIRCLE, DAM_PHYSICAL);
+      }
+      else {
+        hit(ch, vict, SKILL_CIRCLE);
+      }
+      break;
+    case CLASS_WARRIOR:
+      if (GET_HIT(vict) > lround(GET_MAX_HIT(vict) * 0.3)) {
+        act("$n sings 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_ROOM);
+        act("You sing 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+        act("$n strikes $N with the feeble fist of a musician.", FALSE, ch, 0, vict, TO_NOTVICT);
+        act("$n strikes you with the feeble fist of a musician.", FALSE, ch, 0, vict, TO_VICT);
+        act("You strike $N with your feeble musician's fist.", FALSE, ch, 0, vict, TO_CHAR);
+
+        int set_pos = stack_position(vict, POSITION_SITTING);
+        damage(ch, vict, 2 * GET_LEVEL(ch), TYPE_UNDEFINED, DAM_PHYSICAL);
+        if (CHAR_REAL_ROOM(vict) != NOWHERE) {
+          GET_POS(vict) = set_pos;
+        }
+      }
+      else {
+          act("$n sings 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_ROOM);
+          act("You sing 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+          dam = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5) * calc_hit_damage(ch, vict, GET_WEAPON(ch), 0, RND_RND);
+
+          act("$n's one-in-a-million attack causes $N's guts to spill out onto $s feet.", FALSE, ch, 0, vict, TO_NOTVICT);
+          act("$n's one-in-a-million attack causes your guts to spill out onto $s feet.", FALSE, ch, 0, vict, TO_VICT);
+          act("Your one-in-a-million attack causes $N's guts to spill out onto your feet.", FALSE, ch, 0, vict, TO_CHAR);
+
+          damage(ch, vict, dam, SKILL_DISEMBOWEL, DAM_PHYSICAL);
+      }
+      break;
+    case CLASS_NINJA:
+      act("$n sings 'Everybody is Kung Fu fighting!'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'Everybody is Kung Fu fighting!'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      hit(ch, vict, TYPE_UNDEFINED);
+      spell_divine_wind(GET_LEVEL(ch), ch, vict, NULL);
+      break;
+    case CLASS_PALADIN:
+      act("$n sings 'But what makes a man decide, take the wrong or righteous road...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'But what makes a man decide, take the wrong or righteous road...'", FALSE, ch, NULL, NULL, TO_CHAR);
+      if (!affected_by_spell(ch, SPELL_FURY)) {
+        af.type = SPELL_FURY;
+        af.duration = 0;
+        af.location = 0;
+        af.modifier = 0;
+        af.bitvector = AFF_FURY;
+        af.bitvector2 = 0;
+        affect_to_char(ch, &af);
+        send_to_char("You feel very angry.\n\r", ch);
+        act("$n starts snarling and fuming with fury.", FALSE, ch, 0, 0, TO_ROOM);
+      }
+      break;
+    case CLASS_ANTI_PALADIN:
+      act("$n sings 'Well, I'm hot blooded, check it and see...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'Well, I'm hot blooded, check it and see...'", FALSE, ch, NULL, NULL, TO_CHAR);
+      if (!affected_by_spell(ch, SPELL_BLOOD_LUST)) {
+        af.type = SPELL_BLOOD_LUST;
+        af.duration = 1;
+        af.location = 0;
+        af.modifier = 0;
+        af.bitvector = 0;
+        af.bitvector2 = 0;
+        affect_to_char(ch, &af);
+        send_to_char("Your body writhes with a gnawing hunger for blood!\n\r", ch);
+        act("$n's body writhes with a gnawing hunger for blood!", FALSE, ch, 0, 0, TO_ROOM);
+      }
+      break;
+    case CLASS_BARD:
+      act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      act("After that sick burn, $n sneers at $N and prepares to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
+      act("After that sick burn, $n sneers at you and prepares to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_VICT);
+      act("After that sick burn, you sneer at $N and prepare to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_CHAR);
+
+      memset(&ench, 0, sizeof(struct enchantment_type_5));
+      ench.name = str_dup("Fire Breath");
+      enchantment_to_char(ch, &ench, TRUE);
+      free(ench.name);
+      break;
+    case CLASS_COMMANDO:
+      act("$n sings 'Disarm you with a smile, and cut you like you want me to...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'Disarm you with a smile, and cut you like you want me to...'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      /* disarm vict if wielding */
+      if (vict->equipment[WIELD]) {
+        OBJ* wield = vict->equipment[WIELD];
+        if (V_OBJ(wield) != 11523 && // no to Wyvern's Tail
+            V_OBJ(wield) != 20102 && // no to gleaming katana of the Five Rings
+            !(IS_SET(vict->specials.act, ACT_ARM) && IS_NPC(vict))) {
+          act("Your elegant backflip into scorpion kick has knocked $N's weapon loose!", FALSE, ch, 0, vict, TO_CHAR);
+          act("$N backflips into a beautiful scorpion kick, knocking your weapon loose!", FALSE, ch, 0, vict, TO_VICT);
+          act("$n backflips into a scorpion kick, knocking $N's weapon loose!", FALSE, ch, 0, vict, TO_NOTVICT);
+          unequip_char(vict, WIELD);
+          if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) obj_to_char(wield, vict);
+          else {
+            log_f("WIZLOG: %s disarms %s's %s (Room %d).", GET_NAME(ch), GET_NAME(vict), OBJ_SHORT(wield), world[CHAR_REAL_ROOM(vict)].number);
+            obj_to_room(wield, CHAR_REAL_ROOM(vict));
+            wield->log = 1;
+          }
+        save_char(vict, NOWHERE);
+        }
+      }
+      /* triple - no more no less */
+      perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      break;
+    default:
+      break;
+    }
+  }
+}
+
 void perform_violence(void) {
   for (CHAR *ch = combat_list; ch && GET_OPPONENT(ch); ch = combat_next_dude) {
     combat_next_dude = ch->next_fighting;
@@ -4212,6 +4478,11 @@ void perform_violence(void) {
     /* Dirty Tricks */
     if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && IS_SET(GET_TOGGLES(ch), TOG_DIRTY_TRICKS) && check_sc_access(ch, SKILL_DIRTY_TRICKS)) {
       dirty_tricks_action(ch, vict);
+    }
+
+    /* Mimicry */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && check_subclass(ch, SC_BLADESINGER, 4)) {
+      mimicry_action(ch, vict);
     }
   }
 }

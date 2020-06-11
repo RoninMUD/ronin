@@ -297,7 +297,10 @@ int check_sc_song_access(CHAR *ch, int song) {
   if (IS_NPC(ch) || IS_IMMORTAL(ch)) return TRUE;
 
   /* Note: Song 22 is Rejuvenation. */
-  if ((song <= 18) || (song == 22)) return TRUE;
+  if ((song <= 18) ||
+      (song == 22) || // rejuvenation
+      (song == 28))   // group summon
+    return TRUE;
 
   switch (song) {
     case 19: /* rally song */
@@ -318,7 +321,7 @@ int check_sc_song_access(CHAR *ch, int song) {
     case 25: /* thunderball */
       if (check_subclass(ch, SC_BLADESINGER, 5)) return TRUE;
       break;
-    case 26: /* sphere */
+    case 26: /* camaraderie */
       if (check_subclass(ch, SC_CHANTER, 5)) return TRUE;
       break;
     case 27: /* respite */
