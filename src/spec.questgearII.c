@@ -50,11 +50,11 @@
 
 /* Vanities */
 #define JEAROM_SHABTIS_START 29369
-#define JEAROM_SHABTIS_END 29373
-#define JEAROM_ENLIL_START 29375
-#define JEAROM_ENLIL_END 29379
-#define JEAROM_ANU_START 29380
-#define JEAROM_ANU_END 29384
+#define JEAROM_SHABTIS_END   29373
+#define JEAROM_ENLIL_START   29375
+#define JEAROM_ENLIL_END     29379
+#define JEAROM_ANU_START     29380
+#define JEAROM_ANU_END       29384
 
 /*
 ** Spec Functions
@@ -164,7 +164,7 @@ int qgII_shabtis(OBJ *shabtis, CHAR *owner, int cmd, char *arg)
        break;
     case CMD_EXAMINE:
       one_argument(arg, buf);
-      if(!IS_NPC(owner) && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && V_OBJ(shabtis)==QGII_SHABTIS && shabtis && owner)
+      if(owner && shabtis && !IS_NPC(owner) && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by))
       {
         if(!strncmp(buf, "swnu", MIL) || !strncmp(buf, "Swnu", MIL))
         { i = 0; /* 0:Swnu */
@@ -230,7 +230,7 @@ bleached completely white and the last is coated in a thin dusting of desert san
       }
       break;
     case CMD_USE:
-      if(!IS_NPC(owner) && owner && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAIST) && V_OBJ(shabtis)==QGII_SHABTIS)
+      if(owner && shabtis && !IS_NPC(owner) && AWAKE(owner) && (owner==shabtis->equipped_by || owner==shabtis->carried_by) && shabtis==EQ(owner,WEAR_WAIST))
       {
         one_argument(arg, buf);
         if(!strncmp(buf, "swnu", MIL) || !strncmp(buf, "Swnu", MIL))
