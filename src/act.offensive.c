@@ -1206,8 +1206,10 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
 }
 
 
+#define QGII_GRUUMSH   1060 // The Spiked Gauntlet of Gruumsh
+#define JEAROM_GRUUMSH 29374
+
 void do_pummel(CHAR *ch, char *arg, int cmd) {
-  const int QGII_GRUUMSH = 1060; // The Spiked Gauntlet of Gruumsh
 
   if (!ch || !GET_SKILLS(ch)) return;
 
@@ -1296,9 +1298,14 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
   int set_pos = stack_position(victim, POSITION_STUNNED);
 
-  /* The Spiked Gauntlet of Gruumsh */
-  if (EQ(ch, WEAR_HANDS) && (V_OBJ(EQ(ch, WEAR_HANDS)) == QGII_GRUUMSH) && chance(15)) {
-    set_pos = POSITION_MORTALLYW;
+  /* The Spiked Gauntlet of Gruumsh + vanities */
+  if (EQ(ch, WEAR_HANDS) && chance(15)) {
+    switch (V_OBJ(EQ(ch, WEAR_HANDS))) {
+      case QGII_GRUUMSH:
+      case JEAROM_GRUUMSH:
+        set_pos = POSITION_MORTALLYW;
+        break;
+    }
   }
 
   act("You pummel $N, and $N is stunned now!", FALSE, ch, 0, victim, TO_CHAR);

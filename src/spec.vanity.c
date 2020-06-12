@@ -44,7 +44,8 @@
 #define JAMIE_SWORD 29942
 #define JAMIE_HOOD   29805
 #define CHUD_SYM 29819
-#define JEAROM_SYM 29840
+#define JEAROM_SYM_START 29364
+#define JEAROM_SYM_END 29368
 #define FRENZY_SYM 29463
 #define TIM_TAIL 29467
 #define LEMON_BONG 29487
@@ -599,7 +600,7 @@ assign_obj(EP_PAN, v_pan);
 assign_obj(AK_SYM, v_symbol);
 assign_obj(PHISH_SYM, v_symbol);
 assign_obj(CHUD_SYM, v_symbol);
-assign_obj(JEAROM_SYM, v_symbol);
+for (int i = JEAROM_SYM_START; i <= JEAROM_SYM_END; i++) assign_obj(i, v_symbol);
 assign_obj(29856,v_symbol);
 assign_obj(FUSE_FANG, v_fang);
 assign_obj(HELL_STING,sting);
