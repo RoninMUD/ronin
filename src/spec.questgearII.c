@@ -48,6 +48,14 @@
 #define QGII_ANU          1062
 #define QGII_VINDICTAE    1092
 
+/* Vanities */
+#define JEAROM_SHABTIS_START 29369
+#define JEAROM_SHABTIS_END 29373
+#define JEAROM_ENLIL_START 29375
+#define JEAROM_ENLIL_END 29379
+#define JEAROM_ANU_START 29380
+#define JEAROM_ANU_END 29384
+
 /*
 ** Spec Functions
 */
@@ -909,6 +917,15 @@ static const char *ring_string(int vnum, ring_string_id id) {
     case QGII_ANU:
       type = RING_TYPE_ANU;
       break;
+
+    default:
+      if (vnum >= JEAROM_ENLIL_START && vnum <= JEAROM_ENLIL_END) {
+        type = RING_TYPE_ENLIL;
+      }
+      else if (vnum >= JEAROM_ANU_START && vnum <= JEAROM_ANU_END) {
+        type = RING_TYPE_ANU;
+      }
+      break;
   }
 
   if (type != RING_TYPE_COUNT) {
@@ -1169,6 +1186,7 @@ int qgII_vindictae(OBJ *vindictae, CHAR *ch, int cmd, char *arg)
 void assign_questgearII(void)
 {
   assign_obj(QGII_SHABTIS,      qgII_shabtis);
+  for (int i = JEAROM_SHABTIS_START; i <= JEAROM_SHABTIS_END; i++) assign_obj(i, qgII_shabtis);
   assign_obj(QGII_COWL,         qgII_cowl);
   assign_obj(QGII_PHYLACTERY,   qgII_phylactery);
   assign_obj(QGII_VIZARD,       qgII_vizard);
@@ -1176,7 +1194,9 @@ void assign_questgearII(void)
   assign_obj(QGII_VILYA,        qgII_ring);
   assign_obj(QGII_NARYA,        qgII_ring);
   assign_obj(QGII_ENLIL,        qgII_ring);
+  for (int i = JEAROM_ENLIL_START; i <= JEAROM_ENLIL_END; i++) assign_obj(i, qgII_ring);
   assign_obj(QGII_ANU,          qgII_ring);
+  for (int i = JEAROM_ANU_START; i <= JEAROM_ANU_END; i++) assign_obj(i, qgII_ring);
   assign_obj(QGII_VINDICTAE,    qgII_vindictae);
 }
 

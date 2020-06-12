@@ -4035,7 +4035,7 @@ higher level than yourself.  However, the higher they are above you, the lower
 your chance of succeeding.  If you attempt to summon a monster it will get a
 saving throw. It is also not possible to summon anyone into arena zones.
 
-See Also: -
+See Also: "GROUP SUMMON"
 #
 "CHARM PERSON"
 
@@ -4805,7 +4805,8 @@ Level Song's Name                       Mana    Spell
 (26)  Everything I do I do it for you    70     (heal)
 (28)  A View to a Kill                   80     (lethal fire)
 (35)  Lifting Shadows of a Dream         25     (remove poison)
-(50)  There is No Heart That Won't Heal  100    (rejuvenation)
+(45)  There is No Heart That Won't Heal  80     (rejuvenation)
+(50)  Come Together                      100    (group summon)
 #
 SPELL SPELLS
 
@@ -8488,7 +8489,7 @@ Level  Song/Skill                          Mana
   1    "brightest flame burns quickest"     75     (RALLY)
   2    SHOWMANSHIP
   3    "there is no heart that won't heal" 100     (REJUVENATION)
-  4    "heaven beside you"                 100     (PROTECTION FROM EVIL/GOOD)
+  4    MIMICRY
   5    "you've been thunderstruck"         250     (THUNDERBALL)
 
 The protection from the song at level 4 is dependent on the
@@ -8508,9 +8509,28 @@ Level  Song                              Mana
   2    "something takes a part of me"     60         (WAR CHANT)
   3    "if I could change the world"     100         (LUCK)
   4    "hero of the day"                 150         (AID)
-  5    "ray of light"                 # chars*30     (SPHERE)
+  5    "we are family"                   150         (CAMARADERIE)
 
 See Also: SUBCLASSES "BLADE SINGER" SONGS BARD
+#
+MIMICRY
+
+The Blade Singer is a master of impersonations and mocking mimicry,
+and periodically demonstrates this prowess in combat with powerful
+results.  The frequency of the bard's Mimicry is based on Dexterity.
+
+Mimicked actions:
+- Cleric: miracle
+- Mage: thunderball
+- Warrior: punch or disembowel (target HP dependent)
+- Thief: circle
+- Paladin: fury (self 0 ticks)
+- Anti-Paladin: bloodlust (self 1 tick)
+- Ninja: hit + divine wind
+- Bard: firebreath (self)
+- Commando: triple + disarm
+
+See Also: SUBCLASSES "BLADE SINGER" BARD
 #
 RESPITE
 
@@ -8526,11 +8546,20 @@ character in the room from the following list:
 - chill touch
 - curse
 - wither
+- sleep
 
 If the PC is affected by none of these, it will set their wait
-(skill/spell lag etc.) to zero. The mana cost is 40.
+(skill/spell lag etc.) to zero, though this wait reset does not
+apply to the Chanter. The mana cost is 40.
 
 See Also: SUBCLASSES CHANTER SONGS BARD
+#
+"GROUP SUMMON""
+
+This song will summon all PC group members to the bards location,
+with the same limitations as the summon spell. The mana cost is 100.
+
+See Also: SUMMON SONGS BARD
 #
 RALLY
 
@@ -8548,23 +8577,18 @@ Subclass Blade Singer: Level 2 (Bard)
 
 The Blade Singer is fueled by their audience, and gains power the greater its
 size, especially when comprised of fellow Bard College graduates.  Being a
-great showman bestows upon the Blade Singer a 5% damage bonus per PC
-in the room and group, or 10% if the PC is a bard.
+great showman bestows upon the Blade Singer a 5% damage bonus per PC in the
+room and group, or 10% if the PC is a bard.
 
 This is a passive damage multiplier that is always applied, but only to combat
-damage.
+damage. This caps at a 200% bonus, or a 50% bonus if affected by fury (3x dmg).
 
-See Also: SUBCLASSES "BLADE SINGER"
+See Also: SUBCLASSES "BLADE SINGER" BARD
 #
 REJUVENATION
 
-Usage       : cast 'rejuvenation' <victim>
-Accumulative: No
-Level       : Level 50 Bard.
-Duration    : Instantaneous
-Mana Cost   : 80
-
-This spell will heal the victim for a maximum of 400 hit points.
+This song will heal all of the bard's group members for 400 hit points, the
+cost is 80 mana. It is available at level 45.
 
 See Also: SONGS
 #
@@ -8581,12 +8605,27 @@ The duration of the affect is 5, the mana cost is 60.
 
 See Also: SUBCLASSES CHANTER
 #
+CAMARADERIE
+
+Subclass Chanter: Level 5 (Bard)
+
+This song binds the fate of the affected characters to one another. Whenever
+any character affected by Camaraderie (in a room with others affected by
+Camaraderie) takes damage, they instead take only 60% of that damage. The
+other 40% of incoming damage is split amongst their other comrades-in-arms,
+with a penalty (2.5x) on the transfer due to complexities of the entanglement.
+This results in total incoming damage 1.6x original across comrades.
+The duration of the affect is 5, the mana cost is 150.
+
+See Also: SUBCLASSES CHANTER
+#
 LUCK
 
 Subclass Chanter: Level 3 (Bard)
 
-This song increases the party regen by 10 hit points and 10 mana each tick for
-5 ticks.  The cost is 100 mana.
+This song increases the party regen by 75 hit points and 15 mana each tick for
+5 ticks.  Additionally, characters affected by luck have a 20% chance to avoid
+death on an otherwise killing blow. The cost is 100 mana.
 
 See Also: SUBCLASSES CHANTER
 #

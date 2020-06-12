@@ -192,7 +192,14 @@ int spell_regen(CHAR *ch, int type)
 
   if (affected_by_spell(ch, SPELL_LUCK))
   {
-    gain += 10;
+    switch (type) {
+    case MANA_REGEN:
+      gain += 15;
+      break;
+    case HP_REGEN:
+      gain += 75;
+      break;
+    }
   }
 
   return gain;

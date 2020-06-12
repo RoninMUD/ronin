@@ -1066,9 +1066,11 @@ invalid~
 10 10 300000
 10
 E
-This ancient artifact was used by an old Sith Master during the fight against the Jedis.~
-It is woven from a material you never before have seen, seems like it is made of the force!
-Darkness keeps on streaming out of the cloak.  
+look robe~
+This ancient artifact was used by an old Sith Master during the
+fight against the Jedis.It is woven from a material you never 
+before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.
 ~
 E
 look robe~
@@ -1077,11 +1079,9 @@ It is woven from a material you never before have seen, seems like it is made of
 Darkness keeps on streaming out of the cloak.  
 ~
 E
-look robe~
-This ancient artifact was used by an old Sith Master during the
-fight against the Jedis.It is woven from a material you never 
-before have seen, seems like it is made of the force!
-Darkness keeps on streaming out of the cloak.
+This ancient artifact was used by an old Sith Master during the fight against the Jedis.~
+It is woven from a material you never before have seen, seems like it is made of the force!
+Darkness keeps on streaming out of the cloak.  
 ~
 X
 ~
@@ -1192,16 +1192,16 @@ A shield of legend has been forgotten here.~
 10
 E
 shield~
+This shield bears the bloody cross swords symbol of the sacred
+Mortal Kombat quest series. The holder must be either a legendary
+warrior or a very lucky person to have such an item.
+~
+E
+shield~
 This shield has seen a great many bloody battles but
 remains sturdy and true. It bears the proud symbol of
 the Mortal Kombat Quest series which took place in
 this land at some time in the past according to legend.
-~
-E
-shield~
-This shield bears the bloody cross swords symbol of the sacred
-Mortal Kombat quest series. The holder must be either a legendary
-warrior or a very lucky person to have such an item.
 ~
 X
 ~
@@ -1215,31 +1215,6 @@ A
 19 2
 B
 16
-#6953
-greaves reinforced cobalt soot~
-Reinforced Cobalt Greaves~
-A sturdy pair of cobalt greaves have been unceremoniously abandoned here.~
-~
-9 134217793 33
-10 0 0 0
-10 1000000 25000
-10
-X
-~
-0 0 0
-M
-You strap some sturdy cobalt greaves to your legs.~
-$n straps some sturdy cobalt greaves to $s legs.~
-You unbuckle a sturdy pair of greaves.~
-$n unbuckles a sturdy pair of greaves.~
-A
-19 3
-A
-18 3
-A
-53 9
-B
-8
 #6954
 bracers kombat~
 The Bracers of Kombat~
@@ -1724,13 +1699,7 @@ invalid~
 10 100000 25000
 0
 E
-fallen~
-You are handling the guts and insides of those who you have defeated in combat.
-Remembering their efforts to kill you, you squeeze a little harder, hoping to
-inflict more pain to the dead.
-~
-E
-flaming~
+innards~
 You are handling the guts and insides of those who you have defeated in combat.
 Remembering their efforts to kill you, you squeeze a little harder, hoping to
 inflict more pain to the dead.
@@ -1742,7 +1711,13 @@ Remembering their efforts to kill you, you squeeze a little harder, hoping to
 inflict more pain to the dead.
 ~
 E
-innards~
+flaming~
+You are handling the guts and insides of those who you have defeated in combat.
+Remembering their efforts to kill you, you squeeze a little harder, hoping to
+inflict more pain to the dead.
+~
+E
+fallen~
 You are handling the guts and insides of those who you have defeated in combat.
 Remembering their efforts to kill you, you squeeze a little harder, hoping to
 inflict more pain to the dead.
@@ -1771,7 +1746,7 @@ The Mark of Greatness lies here, begging you to pick it up.~
 5 60000 5000
 0
 E
-greatness~
+mark~
 The tattoo depicts a lone warrior, facing tremendous odds, fending off
 several enemies at the same time.  In an instant, it changes to reveal
 that same warrior standing victorious among the dead bodies of the slain
@@ -1787,7 +1762,7 @@ enemies. Upon closer inspection, you realize that the warrior depicted
 is actually you.
 ~
 E
-mark~
+greatness~
 The tattoo depicts a lone warrior, facing tremendous odds, fending off
 several enemies at the same time.  In an instant, it changes to reveal
 that same warrior standing victorious among the dead bodies of the slain
@@ -1818,7 +1793,7 @@ The huge belt of a fat man lies here.~
 10 45000 20000
 0
 E
-glutton~
+belt~
 This belt looks very big, in fact, you think it is definitely
 too big to fit you!  There are food crumbs and stains all over
 it's leathery composition and the buckle seems to be made of
@@ -1826,7 +1801,7 @@ some sort of edible material, which it looks like the previous
 owner has taken a good sized bite out of.
 ~
 E
-belt~
+glutton~
 This belt looks very big, in fact, you think it is definitely
 too big to fit you!  There are food crumbs and stains all over
 it's leathery composition and the buckle seems to be made of
@@ -1857,14 +1832,14 @@ Some riot gear is here, looking particularly usefull for fending of a mob!~
 10 10 50000
 0
 E
-riot~
+shield~
 This shield is made of a hard metallic substance and is entirely black.
 There is a small clear portion embedded in the center that you can look
 through while using this as a shield, and you guess it would help your
 vision in combat.
 ~
 E
-shield~
+riot~
 This shield is made of a hard metallic substance and is entirely black.
 There is a small clear portion embedded in the center that you can look
 through while using this as a shield, and you guess it would help your

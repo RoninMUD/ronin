@@ -11,6 +11,8 @@
 #define DAM_POISON                    1
 #define DAM_NO_BLOCK_NO_FLEE          2
 
+#define DAM_CAMARADERIE               9
+
 /* 10 through 49 are blocked by Invulnerability */
 #define DAM_PHYSICAL                 10
 #define DAM_PHYSICAL_CRITICAL        11
@@ -281,7 +283,7 @@
 #define SKILL_VICTIMIZE             242
 #define SKILL_MEDITATE              243
 #define SPELL_SANCTIFY              244
-//#define SKILL_245                   245
+#define SPELL_CAMARADERIE           245
 #define SPELL_ORB_PROTECTION        246
 #define SPELL_DUSK_REQUIEM          247
 #define SPELL_FROSTBOLT             248
@@ -510,6 +512,7 @@ void cast_mystic_swiftness( ubyte level, struct char_data *ch, char *arg, int si
 void cast_mana_heal( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_wind_slash(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_wither(ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
+void cast_camaraderie(ubyte level, struct char_data* ch, char* arg, int si, struct char_data* tar_ch, struct obj_data* tar_obj);
 
 void spell_reappear(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
@@ -875,6 +878,10 @@ void spell_mystic_swiftness(ubyte level, struct char_data *ch,
 
 void spell_mana_heal(ubyte level, struct char_data *ch,
 	struct char_data *victim, struct obj_data *obj);
+
+void spell_camaraderie(ubyte level, struct char_data* ch,
+    struct char_data* victim, struct obj_data* obj);
+
 /*
 void cast_quester( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_spiritwrack( ubyte level, struct char_data *ch, char *arg, int si, struct char_data *tar_ch, struct obj_data *tar_obj);
