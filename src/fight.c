@@ -145,26 +145,34 @@ void update_pos(CHAR *ch) {
     stop_riding(GET_RIDER(ch), ch);
   }
 
-  if ((GET_POS(ch) == POSITION_FIGHTING) && (!GET_OPPONENT(ch) || !SAME_ROOM(ch, GET_OPPONENT(ch)))) {
-    GET_POS(ch) = POSITION_STANDING;
-  }
-
-  if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
-    if (GET_POS(ch) == POSITION_STANDING) {
-      GET_POS(ch) = POSITION_FLYING;
+  if (GET_HIT(ch) > 0) {
+    if (GET_POS(ch) <= POSITION_STUNNED) {
+      if (GET_OPPONENT(ch) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
+        GET_POS(ch) = POSITION_FIGHTING;
+      }
+      else {
+        if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
+          GET_POS(ch) = POSITION_FLYING;
+        }
+        else {
+          GET_POS(ch) = POSITION_STANDING;
+        }
+      }
     }
   }
   else {
-    if (GET_POS(ch) == POSITION_FLYING) {
-      GET_POS(ch) = POSITION_STANDING;
+    if (GET_HIT(ch) < -10) {
+      GET_POS(ch) = POSITION_DEAD;
     }
-  }
-
-  if (GET_HIT(ch) <= 0) {
-    if (GET_HIT(ch) < -10) GET_POS(ch) = POSITION_DEAD;
-    else if (GET_HIT(ch) < -5) GET_POS(ch) = POSITION_MORTALLYW;
-    else if (GET_HIT(ch) < -2) GET_POS(ch) = POSITION_INCAP;
-    else GET_POS(ch) = POSITION_STUNNED;
+    else if (GET_HIT(ch) < -5) {
+      GET_POS(ch) = POSITION_MORTALLYW;
+    }
+    else if (GET_HIT(ch) < -2) {
+      GET_POS(ch) = POSITION_INCAP;
+    }
+    else {
+      GET_POS(ch) = POSITION_STUNNED;
+    }
   }
 }
 
