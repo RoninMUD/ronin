@@ -2711,6 +2711,25 @@ int calc_ac(CHAR *ch) {
     /* Normal PC AC limit is -250. */
     int min_pc_ac = -250;
 
+    /* Class AC Bonus */
+    switch (GET_CLASS(ch)) {
+      case CLASS_THIEF:
+        ac -= (GET_LEVEL(ch) / 5) * 2;
+        break;
+
+      case CLASS_WARRIOR:
+        ac -= (GET_LEVEL(ch) / 5) * 4;
+        break;
+
+      case CLASS_NOMAD:
+        ac -= (GET_LEVEL(ch) / 5) * 5;
+        break;
+
+      case CLASS_COMMANDO:
+        ac -= (GET_LEVEL(ch) / 5) * 3;
+        break;
+    }
+
     /* Dexterity bonus only applies if awake. */
     if (AWAKE(ch)) {
       ac += dex_app[GET_DEX(ch)].defensive;
