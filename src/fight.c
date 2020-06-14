@@ -136,34 +136,35 @@ void load_messages(void)
 }
 
 
-void update_pos(CHAR *victim) {
-  if (GET_MOUNT(victim) && !SAME_ROOM(GET_MOUNT(victim), victim)) {
-    stop_riding(victim, GET_MOUNT(victim));
+void update_pos(CHAR *ch) {
+  if (GET_MOUNT(ch) && !SAME_ROOM(GET_MOUNT(ch), ch)) {
+    stop_riding(ch, GET_MOUNT(ch));
   }
 
-  if (GET_RIDER(victim) && !SAME_ROOM(GET_RIDER(victim), victim)) {
-    stop_riding(GET_RIDER(victim), victim);
+  if (GET_RIDER(ch) && !SAME_ROOM(GET_RIDER(ch), ch)) {
+    stop_riding(GET_RIDER(ch), ch);
   }
 
-  int pos = POSITION_STANDING;
-
-  if (IS_AFFECTED(victim, AFF_FLY) || (IS_NPC(victim) && IS_SET(GET_ACT(victim), ACT_FLY))) {
-    pos = POSITION_FLYING;
+  if ((GET_POS(ch) == POSITION_FIGHTING) && (!GET_OPPONENT(ch) || !SAME_ROOM(ch, GET_OPPONENT(ch)))) {
+    GET_POS(ch) = POSITION_STANDING;
   }
 
-  if (GET_OPPONENT(victim)) {
-    pos = POSITION_FIGHTING;
+  if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
+    if (GET_POS(ch) == POSITION_STANDING) {
+      GET_POS(ch) = POSITION_FLYING;
+    }
+  }
+  else {
+    if (GET_POS(ch) == POSITION_FLYING) {
+      GET_POS(ch) = POSITION_STANDING;
+    }
   }
 
-  if (GET_HIT(victim) <= 0) {
-    if (GET_HIT(victim) < -10) pos = POSITION_DEAD;
-    else if (GET_HIT(victim) < -5) pos = POSITION_MORTALLYW;
-    else if (GET_HIT(victim) < -2) pos = POSITION_INCAP;
-    else pos = POSITION_STUNNED;
-  }
-
-  if (GET_POS(victim) != pos) {
-    GET_POS(victim) = pos;
+  if (GET_HIT(ch) <= 0) {
+    if (GET_HIT(ch) < -10) GET_POS(ch) = POSITION_DEAD;
+    else if (GET_HIT(ch) < -5) GET_POS(ch) = POSITION_MORTALLYW;
+    else if (GET_HIT(ch) < -2) GET_POS(ch) = POSITION_INCAP;
+    else GET_POS(ch) = POSITION_STUNNED;
   }
 }
 

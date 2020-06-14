@@ -3456,6 +3456,7 @@ void flying_room(int room) {
     if(!vict->specials.riding) {
       if(IS_AFFECTED(vict,AFF_FLY) && vict->specials.fighting) continue;
       if(!vict->specials.fighting && GET_POS(vict)==POSITION_FLYING) continue;
+      if (IS_SET(GET_ACT(vict), ACT_FLY)) continue;
       if(vict->specials.rider) {
         /* Mount and rider fall */
         act("You and your mount, fall to the area below.",0,vict->specials.rider,0,0,TO_CHAR);
