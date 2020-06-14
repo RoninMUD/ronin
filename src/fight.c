@@ -145,26 +145,26 @@ void update_pos(CHAR *victim) {
     stop_riding(GET_RIDER(victim), victim);
   }
 
-  if ((GET_POS(victim) == POSITION_FIGHTING) && !GET_OPPONENT(victim)) {
-    GET_POS(victim) = POSITION_STANDING;
+  int pos = POSITION_STANDING;
+
+  if (IS_AFFECTED(victim, AFF_FLY) || (IS_NPC(victim) && IS_SET(GET_ACT(victim), ACT_FLY))) {
+    pos = POSITION_FLYING;
   }
 
-  if (((GET_POS(victim) == POSITION_FLYING) && !IS_AFFECTED(victim, AFF_FLY)) ||
-      (IS_NPC(victim) && !IS_SET(GET_ACT(victim), ACT_FLY))) {
-    GET_POS(victim) = POSITION_STANDING;
+  if (GET_OPPONENT(victim)) {
+    pos = POSITION_FIGHTING;
   }
 
-  if (((GET_POS(victim) == POSITION_STANDING) && IS_AFFECTED(victim, AFF_FLY)) ||
-      (IS_NPC(victim) && IS_SET(GET_ACT(victim), ACT_FLY))) {
-    GET_POS(victim) = POSITION_FLYING;
+  if (GET_HIT(victim) <= 0) {
+    if (GET_HIT(victim) < -10) pos = POSITION_DEAD;
+    else if (GET_HIT(victim) < -5) pos = POSITION_MORTALLYW;
+    else if (GET_HIT(victim) < -2) pos = POSITION_INCAP;
+    else pos = POSITION_STUNNED;
   }
 
-  if ((GET_HIT(victim) > 0) && (GET_POS(victim) > POSITION_STUNNED)) return;
-  else if (GET_HIT(victim) > 0) GET_POS(victim) = POSITION_STANDING;
-  else if (GET_HIT(victim) < -10) GET_POS(victim) = POSITION_DEAD;
-  else if (GET_HIT(victim) < -5) GET_POS(victim) = POSITION_MORTALLYW;
-  else if (GET_HIT(victim) < -2) GET_POS(victim) = POSITION_INCAP;
-  else GET_POS(victim) = POSITION_STUNNED;
+  if (GET_POS(victim) != pos) {
+    GET_POS(victim) = pos;
+  }
 }
 
 
