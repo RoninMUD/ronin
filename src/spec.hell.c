@@ -441,13 +441,16 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
       if((GET_LEVEL(holder)<30 || GET_ALIGNMENT(holder)>-350) && IS_MORTAL(holder)) {
         act("You have been blasted by the awesome power of the Sword of Night!!",FALSE,holder,0,0,TO_CHAR);
         act("$n has been blasted by the Sword of Night!",FALSE,holder,0,0,TO_NOTVICT);
-        if(IS_MORTAL(holder)) damage(holder,holder,number(110,190),TYPE_SLASH,DAM_NO_BLOCK);
-        obj_from_char(sword);
         sprintf(buf2,"Hell Log: %s blasted by %s (Room %d)",GET_NAME(holder),OBJ_SHORT(sword),CHAR_VIRTUAL_ROOM(holder));
         log_s(buf2);
-        save_char(holder, NOWHERE);
-        obj_to_room(sword,CHAR_REAL_ROOM(holder));
-        sword->log=1;
+        if(IS_MORTAL(holder)) damage(holder,holder,number(110,190),TYPE_SLASH,DAM_NO_BLOCK);
+        /* check if holder died */
+        if (OBJ_CARRIED_BY(sword)) {
+          obj_from_char(sword);
+          save_char(holder, NOWHERE);
+          obj_to_room(sword,CHAR_REAL_ROOM(holder));
+          sword->log=1;
+        }
         holder=0;
         return TRUE;
       }
