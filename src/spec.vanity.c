@@ -111,6 +111,8 @@ int sting (OBJ *st, CHAR *ch, int cmd, char *arg)
   if (cmd != CMD_BACKSTAB)
     return FALSE;
 
+  if (GET_OPPONENT(ch)) return FALSE;
+
   if ((GET_CLASS (ch) == CLASS_THIEF || GET_CLASS(ch) == CLASS_ANTI_PALADIN) &&
       !number (0,69))
     {

@@ -186,7 +186,7 @@ int rv2_calc_remort_mult(CHAR *ch) {
   int hp_min, hp_step, mana_min, mana_step;
 
   if ((GET_CLASS(ch) == CLASS_NOMAD) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_THIEF)) {
-    hp_min = 1000;
+    hp_min = 750;
     hp_step = 250;
     mana_min = 0;
     mana_step = 0;

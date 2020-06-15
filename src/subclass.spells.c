@@ -1528,19 +1528,18 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     int duration = (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (level / 8) : (level / 4));
 
-    if (!affected_by_spell(victim, SPELL_SANCTUARY) && !IS_AFFECTED(victim, AFF_SANCTUARY)) {
-      affect_apply(victim, SPELL_SANCTUARY, duration, 0, 0, AFF_SANCTUARY, 0);
+    if (!affected_by_spell(victim, SPELL_POWER_OF_DEVOTION)) {
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 0, 0, AFF_SANCTUARY, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
+      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
     }
-
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
   }
 }
 
@@ -1558,18 +1557,25 @@ void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 }
 
 void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  /* MIN_MANA is 0 and MAX_MANA is 75 because the base spell cost is 50 mana. */
+  const int MIN_MANA = 0, MAX_MANA = 75, MANA_STEP = 1;
+  const int MIN_HEAL = 375, MAX_HEAL = 1500, HEAL_STEP = 15;
+
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
     send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
 
     return;
   }
 
-  int heal = 360, mana = 0;
+  int heal = MIN_HEAL, mana = MIN_MANA;
 
-  while ((heal < (GET_MAX_HIT(victim) - GET_HIT(victim))) && (heal < 1200)) {
-    heal += 12;
-    mana += 1;
+  while ((heal < (GET_MAX_HIT(victim) - GET_HIT(victim))) && (heal < MAX_HEAL)) {
+    heal += HEAL_STEP;
+    mana += MANA_STEP;
   }
+
+  /* Sanity check. */
+  mana = MIN(mana, MAX_MANA);
 
   magic_heal(victim, SPELL_POWER_OF_FAITH, heal, FALSE);
 
