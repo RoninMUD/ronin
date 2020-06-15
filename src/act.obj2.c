@@ -1367,6 +1367,9 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   if (signal_object(obj, ch, MSG_OBJ_WORN, "")) return;
 
+  /* check if the target died due to any specs tied to MSG_OBJ_WORN */
+  if (!OBJ_CARRIED_BY(obj)) return;
+
   show_bitvector_wear(ch, obj);
 
   bool show_to_ch = TRUE, show_to_rm = TRUE;

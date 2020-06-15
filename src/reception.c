@@ -1800,7 +1800,7 @@ void store_to_char_2(struct char_file_u_2 *st, CHAR *ch) {
 /* copy vital data from a players char-structure to the file structure */
 void char_to_store(CHAR *ch, struct char_file_u_5 *st)
 {
-  int i,increase,armor;
+  int i,increase;
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 *af;
   struct enchantment_type_5 *af2;
@@ -1964,30 +1964,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
   for(i = 0; i <= 2; i++)
     st->conditions[i] = GET_COND(ch, i);
 
-/* Wa (4/5) No (5/5) Co (3/5) Armor bonus based on level - Ranger June 99 */
   ch->points.armor=100;
-  switch (GET_CLASS(ch)) {
-    case CLASS_WARRIOR:
-      armor=GET_LEVEL(ch)/5;
-      armor*=5;
-      ch->points.armor-=armor;
-      break;
-    case CLASS_NOMAD:
-      armor=GET_LEVEL(ch)/5;
-      armor*=5;
-      ch->points.armor-=armor;
-      break;
-    case CLASS_COMMANDO:
-      armor=GET_LEVEL(ch)/5;
-      armor*=3;
-      ch->points.armor-=armor;
-      break;
-    case CLASS_THIEF:
-      armor=GET_LEVEL(ch)/5;
-      armor*=2;
-      ch->points.armor-=armor;
-      break;
-  }
 
   for(af = ch->affected, i = 0; i<MAX_AFFECT; i++) {
     if (af) {
