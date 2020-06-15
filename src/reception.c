@@ -1800,7 +1800,7 @@ void store_to_char_2(struct char_file_u_2 *st, CHAR *ch) {
 /* copy vital data from a players char-structure to the file structure */
 void char_to_store(CHAR *ch, struct char_file_u_5 *st)
 {
-  int i,increase,armor;
+  int i,increase;
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 *af;
   struct enchantment_type_5 *af2;
