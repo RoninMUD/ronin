@@ -74,7 +74,7 @@
 /* Room Specs */
 
 /* Teleport players into one of the elemental canyon zones randomly. */
-int ecanyon_room_ECANYON_PORTAL_STONE(int room, CHAR *ch, int cmd, char *arg) {
+int ecanyon_room_portal_stone(int room, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_ENTER) {
     if (!ch || !IS_MORTAL(ch)) return FALSE;
 
@@ -449,9 +449,9 @@ int ecanyon_obj_jug(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
 /* Assign Specs */
 void assign_ecanyon(void) {
-  assign_room(ECANYON_ROOM_ORIGINAL_ECANYON_PORTAL, ecanyon_room_ECANYON_PORTAL_STONE);
-  assign_room(ECANYON_ROOM_DYING_ECANYON_PORTAL, ecanyon_room_ECANYON_PORTAL_STONE);
-  assign_room(ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL, ecanyon_room_ECANYON_PORTAL_STONE);
+  assign_room(ECANYON_ROOM_ORIGINAL_ECANYON_PORTAL, ecanyon_room_portal_stone);
+  assign_room(ECANYON_ROOM_DYING_ECANYON_PORTAL, ecanyon_room_portal_stone);
+  assign_room(ECANYON_ROOM_DIFFICULT_ECANYON_PORTAL, ecanyon_room_portal_stone);
   assign_room(ECANYON_ROOM_DYING_FIRE_CHAMBER, ecanyon_room_fire_chamber);
   assign_obj(ECANYON_OBJ_SHIELD, ecanyon_obj_shield);
   assign_obj(ECANYON_OBJ_RING, ecanyon_obj_ring);
