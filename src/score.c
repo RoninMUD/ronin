@@ -816,23 +816,19 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
     printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %-17s ",
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
-      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
-       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
-        GET_CLASS_NAME(ch) : "Undefined");
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE &&GET_CLASS(ch) <= CLASS_LAST) ||
+        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
+      GET_CLASS_NAME(ch) : "Undefined");
     if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
       printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
-    else
-      send_to_char("\n\r", ch);
     if (get_rank(ch))
-      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %-17s ",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
-    else
-      printf_to_char(ch, "%34s", " ");
     if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
@@ -1379,24 +1375,19 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
     printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %-17s",
-      CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
-      CHCLR(ch, 7), ENDCHCLR(ch),
-      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
-       (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
-        GET_CLASS_NAME(ch) : "Undefined");
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
+      ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE &&GET_CLASS(ch) <= CLASS_LAST) ||
+        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
+      GET_CLASS_NAME(ch) : "Undefined");
     if (GET_SC(ch) > SC_NONE && GET_SC(ch) <= SC_LAST)
       printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
-    else
-      send_to_char("\n\r", ch);
     if (get_rank(ch))
-      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %-17s ",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
-    else
-      printf_to_char(ch, "%34s", " ");
     if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
