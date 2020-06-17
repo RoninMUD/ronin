@@ -8177,8 +8177,8 @@ When using Pummel or Smite against an enemy, the Crusader has a chance to follow
 up their attack by summoning an ethereal steed that charges into their target
 dealing 1.5 times the Cavalier's level in damage and knocking them to the ground.
 
-Charging a target who is sitting or resting will cause them to become
-stunned, receiving 2x damage on the next attack.
+Charging a target who is sitting or resting will cause them to become stunned,
+receiving 2x damage on the next attack.
 
 Charging a target who is stunned will cause them to become incapacitated,
 receiving 2.33x damage on the next attack.
@@ -8186,7 +8186,7 @@ receiving 2.33x damage on the next attack.
 Cavaliers with Wisdom greater than 18 will receive a bonus to the chance to
 summon their magical steed.
 
-See Also: SUBCLASSES CAVALIER SMITE
+See Also: SUBCLASSES CAVALIER PUMMEL SMITE WISDOM
 #
 "WRATH OF GOD"
 

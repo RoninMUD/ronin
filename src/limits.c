@@ -78,6 +78,8 @@ void point_update(void);
 
 
 /* Constants */
+const int optimal_age = 45;
+
 const double rank_regen_non_caster[] = {
       1.15,  /* Rank 1 */
       1.075, /* Rank 2 */
@@ -268,12 +270,17 @@ int point_update_move(CHAR *ch) {
 }
 
 int mana_gain(CHAR *ch) {
-  int gain = 0, loss = 0, year = 0;
+  const int optimal_age = 45;
+
+  if (!ch) return 0;
+
+  int gain = 0;
 
   if (IS_NPC(ch)) {
     gain = GET_LEVEL(ch);
 
     gain += equipment_regen(ch, MANA_REGEN);
+
     gain += spell_regen(ch, MANA_REGEN);
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -282,226 +289,252 @@ int mana_gain(CHAR *ch) {
 
     return gain;
   }
+  else {
+    if (IS_NPC(ch)) return GET_LEVEL(ch);
 
-  if (!ch->desc) return 0;
+    if (!GET_DESCRIPTOR(ch)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -10;
-  }
-
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    gain = 1 - GET_MANA(ch);
-
-    if (age(ch).year > 49) loss = -5;
-    else if (age(ch).year > 45) loss = -4;
-    else if (age(ch).year > 41) loss = -3;
-    else if (age(ch).year > 37) loss = -2;
-    else if (age(ch).year > 33) loss = -1;
-    else loss = 0;
-
-    gain = MAX(gain, loss);
-    gain = MIN(gain, 0);
-
-    gain += equipment_regen(ch, MANA_REGEN);
-    gain += spell_regen(ch, MANA_REGEN);
-
-    return gain;
-  }
-
-  year = age(ch).year;
-
-  /* Dark Pact */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is right in the sweet spot. */
-  }
-
-  gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-      gain += 5;
-      break;
-
-    case CLASS_BARD:
-      gain += 3;
-      break;
-
-    case CLASS_ANTI_PALADIN:
-    case CLASS_COMMANDO:
-      /* Dark Pact */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-          gain += 3;
-        }
-        else {
-          gain += 2;
-        }
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+      if (GET_LEVEL(ch) <= 15) {
+        return 0;
       }
+      else {
+        return -5;
+      }
+    }
 
-      gain += 2;
-      break;
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+        gain = 1 - GET_MANA(ch);
 
-    default:
-      break;
-  }
+        int loss = 0;
 
-  switch (GET_POS(ch)) {
-    case POSITION_SLEEPING:
-      gain *= 2;
-      break;
+        if (age(ch).year > 49)
+          loss = -5;
+        else if (age(ch).year > 45)
+          loss = -4;
+        else if (age(ch).year > 41)
+          loss = -3;
+        else if (age(ch).year > 37)
+          loss = -2;
+        else if (age(ch).year > 33)
+          loss = -1;
+        else
+          loss = 0;
 
-    case POSITION_RESTING:
-      gain += gain / 2;
-      break;
+        gain = MIN(MAX(gain, loss), 0);
 
-    case POSITION_SITTING:
-      gain += gain / 4;
-      break;
+        /* Constitution modifier. */
+        gain += con_app[GET_CON(ch)].regen;
 
-    case POSITION_FIGHTING:
-      gain /= 4;
-      break;
-  }
+        gain += equipment_regen(ch, HP_REGEN);
 
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-    case CLASS_PALADIN:
-    case CLASS_ANTI_PALADIN:
-    case CLASS_AVATAR:
-    case CLASS_BARD:
-    case CLASS_COMMANDO:
-    case CLASS_NINJA:
-      gain *= 2;
-      break;
-  }
+        gain += spell_regen(ch, HP_REGEN);
 
-  gain += con_app[GET_CON(ch)].regen;
+        /* Inner Peace */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+          gain += 10;
+        }
 
-  if (GET_LEVEL(ch) >= 50) {
+        return gain;
+      }
+    }
+
+    int year = age(ch).year;
+
+    /* Dark Pact - Provides optimal age-based regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      year = optimal_age;
+    }
+
+    gain = graf(year, 10, 11, 13, 15, 13, 11, 10);
+
+    /* Base class regen. */
     switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
-        gain += 10;
+        gain += 5;
         break;
 
+      case CLASS_BARD:
+        gain += 3;
+        break;
+
+      case CLASS_ANTI_PALADIN:
+      case CLASS_COMMANDO:
+        gain += 2;
+        break;
+    }
+
+    /* Dark Pact - Increases base class regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+        gain += 3;
+      }
+      else {
+        gain += 2;
+      }
+    }
+
+    /* Class-based bonus. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_MAGIC_USER:
+      case CLASS_CLERIC:
       case CLASS_NINJA:
       case CLASS_PALADIN:
       case CLASS_ANTI_PALADIN:
       case CLASS_AVATAR:
       case CLASS_BARD:
       case CLASS_COMMANDO:
-        /* Dark Pact */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-            gain += 5;
-          }
-          else {
-            gain += 2;
-          }
-        }
-
-        gain += 5;
+        gain *= 2;
         break;
     }
-  }
 
-  /* Bathed in Blood */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * (double)ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
+    /* Position-based modifier. */
+    switch (GET_POS(ch)) {
+      case POSITION_SLEEPING:
+        gain *= 1.75;
+        break;
 
-      if (multi > 2.0) multi = 2.0;
+      case POSITION_RESTING:
+        gain += gain / 2;
+        break;
 
-      gain *= multi;
-    }
-  }
+      case POSITION_SITTING:
+        gain += gain / 4;
+        break;
 
-  /* Inner Peace */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-    gain += 10;
-  }
-
-  if (gain > 0) {
-    /* Calculate regeneration from ranks. */
-    if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
-        gain *= rank_regen_non_caster[i];
-      }
-    }
-    else {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
-        gain *= rank_regen_caster[i];
-      }
+      case POSITION_FIGHTING:
+        gain /= 2;
+        break;
     }
 
-    // Prestige Perk 8
-    if (GET_PRESTIGE_PERK(ch) >= 8) {
-      gain *= 1.05;
-    }
-  }
-
-  if (IS_AFFECTED(ch, AFF_POISON)) {
-    /* Combat Zen */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
-      gain /= 8;
-    }
-    else {
-      gain /= 16;
-    }
-  }
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-    ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
-  gain += equipment_regen(ch, MANA_REGEN);
-
-  gain += spell_regen(ch, MANA_REGEN);
-
-  if (gain > 0) {
-    /* Limit mana regen in combat. */
-    if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
-      int mana_regen_cap = 75;
-
+    /* Level 50 regen. */
+    if (GET_LEVEL(ch) >= 50) {
       switch (GET_CLASS(ch)) {
         case CLASS_MAGIC_USER:
         case CLASS_CLERIC:
-          mana_regen_cap = 120;
-          break;
-
-        case CLASS_AVATAR:
-        case CLASS_BARD:
-        case CLASS_COMMANDO:
-          mana_regen_cap = 100;
+          gain += 10;
           break;
 
         case CLASS_NINJA:
         case CLASS_PALADIN:
         case CLASS_ANTI_PALADIN:
-          mana_regen_cap = 90;
+        case CLASS_AVATAR:
+        case CLASS_BARD:
+        case CLASS_COMMANDO:
+          gain += 5;
           break;
       }
 
-      /* Inner Peace */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-        mana_regen_cap += 10;
+      /* Dark Pact - Increases level 50 regen. */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+          gain += 5;
+        }
+        else {
+          gain += 2;
+        }
       }
+    }
 
-      // Prestige Perk 24
-      if (GET_PRESTIGE_PERK(ch) >= 24) {
-        if (mana_regen_cap > 0) {
-          mana_regen_cap += 5;
+    /* Bathed in Blood */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
+      if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+        double multi = 1.0 + (0.2 * (double)ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+        if (multi > 2.0) multi = 2.0;
+
+        gain *= multi;
+      }
+    }
+
+    if (gain > 0) {
+      /* Calculate regeneration from ranks. */
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+          gain *= rank_regen_non_caster[i];
+        }
+      }
+      else {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+          gain *= rank_regen_caster[i];
         }
       }
 
-      gain = MIN(gain, mana_regen_cap);
+      // Prestige Perk 8
+      if (GET_PRESTIGE_PERK(ch) >= 8) {
+        gain *= 1.05;
+      }
+    }
+
+    if (IS_AFFECTED(ch, AFF_POISON)) {
+      /* Combat Zen */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
+        gain /= 8;
+      }
+      else {
+        gain /= 16;
+      }
+    }
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
+
+    /* Constitution modifier. */
+    gain += con_app[GET_CON(ch)].regen;
+
+    gain += equipment_regen(ch, MANA_REGEN);
+
+    gain += spell_regen(ch, MANA_REGEN);
+
+    /* Inner Peace */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+      gain += 10;
+    }
+
+    if (gain > 0) {
+      /* Limit mana regen in combat. */
+      if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+        int mana_regen_cap = 75;
+
+        switch (GET_CLASS(ch)) {
+          case CLASS_MAGIC_USER:
+          case CLASS_CLERIC:
+            mana_regen_cap = 120;
+            break;
+
+          case CLASS_AVATAR:
+          case CLASS_BARD:
+          case CLASS_COMMANDO:
+            mana_regen_cap = 100;
+            break;
+
+          case CLASS_NINJA:
+          case CLASS_PALADIN:
+          case CLASS_ANTI_PALADIN:
+            mana_regen_cap = 90;
+            break;
+        }
+
+        /* Inner Peace */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+          mana_regen_cap += 10;
+        }
+
+        // Prestige Perk 24
+        if (GET_PRESTIGE_PERK(ch) >= 24) {
+          if (mana_regen_cap > 0) {
+            mana_regen_cap += 5;
+          }
+        }
+
+        gain = MIN(gain, mana_regen_cap);
+      }
     }
   }
 
@@ -510,9 +543,8 @@ int mana_gain(CHAR *ch) {
 
 int hit_gain(CHAR *ch) {
   int gain = 0;
-  int loss = 0;
-  int year = 0;
 
+  /* NPCs */
   if (IS_NPC(ch)) {
     switch (GET_POS(ch)) {
       case POSITION_STANDING:
@@ -537,6 +569,206 @@ int hit_gain(CHAR *ch) {
     }
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
+      gain /= 8;
+    }
+
+    gain += equipment_regen(ch, HP_REGEN);
+
+    gain += spell_regen(ch, HP_REGEN);
+
+  }
+  else {
+    if (IS_NPC(ch)) return GET_LEVEL(ch);
+
+    if (!GET_DESCRIPTOR(ch)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+      if (GET_LEVEL(ch) <= 15) {
+        return 0;
+      }
+      else {
+        return -5;
+      }
+    }
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      /* Hunger-based regen. */
+      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+        gain = 1 - GET_HIT(ch);
+
+        int loss = 0;
+
+        if (age(ch).year > 49)
+          loss = -5;
+        else if (age(ch).year > 45)
+          loss = -4;
+        else if (age(ch).year > 41)
+          loss = -3;
+        else if (age(ch).year > 37)
+          loss = -2;
+        else if (age(ch).year > 33)
+          loss = -1;
+        else
+          loss = 0;
+
+        gain = MIN(MAX(gain, loss), 0);
+
+        gain += equipment_regen(ch, HP_REGEN);
+
+        gain += spell_regen(ch, HP_REGEN);
+
+        /* Constitution modifier. */
+        gain += con_app[GET_CON(ch)].regen;
+
+        /* Awareness */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
+          gain += 2 * GET_LEVEL(ch);
+        }
+
+        return gain;
+      }
+    }
+
+    int year = age(ch).year;
+
+    /* Dark Pact - Provides optimal age-based regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      year = optimal_age;
+    }
+
+    /* Age-based regen. */
+    gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
+
+    /* Base multiplier. */
+    gain *= 2.5;
+
+    /* Base class regen. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_WARRIOR:
+      case CLASS_NOMAD:
+        gain += 4;
+        break;
+
+      case CLASS_THIEF:
+      case CLASS_COMMANDO:
+        gain += 3;
+        break;
+
+      case CLASS_NINJA:
+      case CLASS_PALADIN:
+      case CLASS_ANTI_PALADIN:
+      case CLASS_AVATAR:
+      case CLASS_BARD:
+        gain += 2;
+        break;
+    }
+
+    /* Dark Pact - Increases base class regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+        gain += 2;
+      }
+      else {
+        gain += 1;
+      }
+    }
+
+    /* Class-based penalty. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_MAGIC_USER:
+      case CLASS_CLERIC:
+        gain /= 2;
+        break;
+    }
+
+    /* Position-based modifier. */
+    switch (GET_POS(ch)) {
+      case POSITION_SLEEPING:
+        gain += gain / 2;
+        break;
+
+      case POSITION_RESTING:
+        gain += gain / 4;
+        break;
+
+      case POSITION_SITTING:
+        gain += gain / 8;
+        break;
+
+      case POSITION_FIGHTING:
+        gain /= 4;
+        break;
+    }
+
+    /* Level 50 regen. */
+    if (GET_LEVEL(ch) >= 50) {
+      switch (GET_CLASS(ch)) {
+        case CLASS_THIEF:
+        case CLASS_WARRIOR:
+        case CLASS_NOMAD:
+          gain += 10;
+          break;
+
+        case CLASS_NINJA:
+        case CLASS_PALADIN:
+        case CLASS_ANTI_PALADIN:
+        case CLASS_AVATAR:
+        case CLASS_BARD:
+        case CLASS_COMMANDO:
+          gain += 5;
+          break;
+      }
+
+      /* Dark Pact - Increases level 50 regen. */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+          gain += 5;
+        }
+        else {
+          gain += 2;
+        }
+      }
+    }
+
+    /* Tranquility */
+    if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
+      gain *= 1.25;
+    }
+
+    /* Bathed in Blood */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
+      if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+        double multi = 1.0 + (0.2 * ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+        if (multi > 2.0) multi = 2.0;
+
+        gain *= multi;
+      }
+    }
+
+    if (gain > 0) {
+      /* Calculate regeneration from ranks. */
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+          gain *= rank_regen_non_caster[i];
+        }
+      }
+      else {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+          gain *= rank_regen_caster[i];
+        }
+      }
+
+      // Prestige Perk 8
+      if (GET_PRESTIGE_PERK(ch) >= 8) {
+        gain *= 1.05;
+      }
+    }
+
+    if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
         gain /= 4;
@@ -546,200 +778,21 @@ int hit_gain(CHAR *ch) {
       }
     }
 
-    gain += equipment_regen(ch, HP_REGEN);
-    gain += spell_regen(ch, HP_REGEN);
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
 
-    return gain;
-  }
-
-  if (!ch->desc) return 0;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -10;
-  }
-
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    gain = 1 - GET_HIT(ch);
-
-    if (age(ch).year > 49) loss = -5;
-    else if (age(ch).year > 45) loss = -4;
-    else if (age(ch).year > 41) loss = -3;
-    else if (age(ch).year > 37) loss = -2;
-    else if (age(ch).year > 33) loss = -1;
-    else loss = 0;
-
-    gain = MAX(gain, loss);
-    gain = MIN(gain, 0);
+    /* Constitution modifier. */
+    gain += 4 * con_app[GET_CON(ch)].regen;
 
     gain += equipment_regen(ch, HP_REGEN);
+
     gain += spell_regen(ch, HP_REGEN);
 
     /* Awareness */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
       gain += 2 * GET_LEVEL(ch);
     }
-
-    return gain;
-  }
-
-  year = age(ch).year;
-
-  /* Dark Pact */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is is right in the sweet spot. */
-  }
-
-  gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
-
-  gain *= 2;
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_WARRIOR:
-    case CLASS_NOMAD:
-      gain += 4;
-      break;
-
-    case CLASS_THIEF:
-    case CLASS_COMMANDO:
-      gain += 3;
-      break;
-
-    case CLASS_NINJA:
-    case CLASS_PALADIN:
-    case CLASS_ANTI_PALADIN:
-    case CLASS_AVATAR:
-    case CLASS_BARD:
-      /* Dark Pact */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-          gain += 2;
-        }
-        else {
-          gain += 1;
-        }
-      }
-
-      gain += 2;
-      break;
-  }
-
-  switch (GET_POS(ch)) {
-    case POSITION_SLEEPING:
-      gain += gain / 2;
-      break;
-
-    case POSITION_RESTING:
-      gain += gain / 4;
-      break;
-
-    case POSITION_SITTING:
-      gain += gain / 8;
-      break;
-
-    case POSITION_FIGHTING:
-      gain /= 4;
-      break;
-  }
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-      gain /= 2;
-      break;
-  }
-
-  gain += 4 * con_app[GET_CON(ch)].regen;
-
-  if (GET_LEVEL(ch) >= 50) {
-    switch (GET_CLASS(ch)) {
-      case CLASS_THIEF:
-      case CLASS_WARRIOR:
-      case CLASS_NOMAD:
-        gain += 10;
-        break;
-
-      case CLASS_NINJA:
-      case CLASS_PALADIN:
-      case CLASS_ANTI_PALADIN:
-      case CLASS_AVATAR:
-      case CLASS_BARD:
-      case CLASS_COMMANDO:
-        /* Dark Pact */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-            gain += 5;
-          }
-          else {
-            gain += 2;
-          }
-        }
-
-        gain += 5;
-        break;
-    }
-  }
-
-  /* Tranquility */
-  if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-    gain *= 1.25;
-  }
-
-  /* Bathed in Blood */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
-
-      if (multi > 2.0) multi = 2.0;
-
-      gain *= multi;
-    }
-  }
-
-  if (gain > 0) {
-    /* Calculate regeneration from ranks. */
-    if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
-        gain *= rank_regen_non_caster[i];
-      }
-    }
-    else {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
-        gain *= rank_regen_caster[i];
-      }
-    }
-
-    // Prestige Perk 8
-    if (GET_PRESTIGE_PERK(ch) >= 8) {
-      gain *= 1.05;
-    }
-  }
-
-  if (IS_AFFECTED(ch, AFF_POISON)) {
-    /* Combat Zen */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
-      gain /= 4;
-    }
-    else {
-      gain /= 8;
-    }
-  }
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-    ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
-  gain += equipment_regen(ch, HP_REGEN);
-
-  gain += spell_regen(ch, HP_REGEN);
-
-  /* Awareness */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
-    gain += 2 * GET_LEVEL(ch);
   }
 
   return gain;
@@ -747,35 +800,52 @@ int hit_gain(CHAR *ch) {
 
 int move_gain(CHAR *ch) {
   int gain = 0;
-  int year = 0;
+
+  if (!ch) return 0;
 
   if (IS_NPC(ch)) return GET_LEVEL(ch);
 
-  if (!ch->desc) return 0;
+  if (!GET_DESCRIPTOR(ch)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -5;
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+    if (GET_LEVEL(ch) <= 15) {
+      return 0;
+    }
+    else {
+      return -5;
+    }
   }
 
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
-       !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    return 5;
+  /* Dark Pact - Bypasses hunger-based regen. */
+  if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+    /* Hunger-based regen. */
+    if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+      if ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_ARCTIC) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_DESERT)) {
+        if (GET_LEVEL(ch) <= 15) {
+          return 0;
+        }
+        else {
+          return GET_CON(ch) - 20;
+        }
+      }
+
+      return gain;
+    }
   }
 
-  year = age(ch).year;
+  int year = age(ch).year;
 
-  /* Dark Pact */
+  /* Dark Pact - Increases age-based regen. */
   if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is is right in the sweet spot. */
+    year = optimal_age;
   }
 
+  /* Age-based regen. */
   gain = graf(year, 18, 21, 24, 26, 24, 21, 18);
 
-  /* Dark Pact */
+  /* Dark Pact - Increases base class regen. */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
     if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
       gain += 10;
@@ -785,6 +855,7 @@ int move_gain(CHAR *ch) {
     }
   }
 
+  /* Position-based modifier. */
   switch (GET_POS(ch)) {
     case POSITION_SLEEPING:
       gain += gain / 2;
@@ -799,13 +870,6 @@ int move_gain(CHAR *ch) {
       break;
   }
 
-  gain += con_app[GET_CON(ch)].regen;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-    ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
@@ -814,6 +878,10 @@ int move_gain(CHAR *ch) {
     else {
       gain /= 4;
     }
+  }
+
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+    gain *= 2;
   }
 
   if (gain > 0) {
@@ -835,9 +903,8 @@ int move_gain(CHAR *ch) {
     }
   }
 
-  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC) {
-    gain = GET_CON(ch) - 20;
-  }
+  /* Constitution modifier. */
+  gain += con_app[GET_CON(ch)].regen;
 
   return gain;
 }
