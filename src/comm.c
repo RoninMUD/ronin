@@ -914,20 +914,21 @@ void check_token_mob(void);
 void heartbeat(int pulse) {
   char buf[MSL];
 
-  if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
+  if ((pulse % PULSE_VIOLENCE == 0) && !GAMEHALT) {
     perform_mob_attack();
   }
 
   for (DESC *desc = descriptor_list; desc; desc = desc->next) {
-    if (desc->prompt_mode) {
+    if (DESC_PROMPT_MODE(desc)) {
       give_prompt(desc);
     }
 
-    if (!(pulse % PULSE_TICK) && !GAMEHALT && (STATE(desc) != CON_PLYNG)) {
-      desc->timer++;
+    if ((pulse % PULSE_TICK == 0) && !GAMEHALT && (STATE(desc) != CON_PLYNG)) {
+      DESC_TIMER(desc)++;
 
-      if (desc->timer > 30) {
-        snprintf(buf, sizeof(buf), "WIZINFO: Closing socket %d - idle at menu.", desc->descriptor);
+      if (DESC_TIMER(desc) > 30) {
+        snprintf(buf, sizeof(buf), "WIZINFO: Closing socket %d - idle at menu.", DESC_DESCRIPTOR(desc));
+
         wizlog(buf, LEVEL_IMM, 5);
         log_s(buf);
 
@@ -937,17 +938,17 @@ void heartbeat(int pulse) {
   }
 
   /* 60 seconds */
-  if (!(pulse % PULSE_ZONE) && !GAMEHALT) {
+  if ((pulse % PULSE_ZONE == 0) && !GAMEHALT) {
     zone_update();
   }
 
   /* 10 seconds */
-  if (!(pulse % PULSE_MOBILE) && !GAMEHALT) {
+  if ((pulse % PULSE_MOBILE == 0) && !GAMEHALT) {
     signal_world(0, MSG_MOBACT, "");
   }
 
   /* 3 seconds */
-  if (!(pulse % PULSE_VIOLENCE) && !GAMEHALT) {
+  if ((pulse % PULSE_VIOLENCE == 0) && !GAMEHALT) {
     /* Process flying rooms */
     for (int i = 0; i < top_of_flying; i++) {
       flying_room(*(flying_rooms + i));
@@ -962,7 +963,7 @@ void heartbeat(int pulse) {
     for (int i = 0; i < NUMELEMS(msg_3_sec_pulse_objects); i++) {
       if (obj_proto_table[real_object(msg_3_sec_pulse_objects[i])].number >= 1) {
         for (OBJ *obj = object_list; obj; obj = obj->next) {
-          if (obj->item_number_v == msg_3_sec_pulse_objects[i]) {
+          if (OBJ_VNUM(obj) == msg_3_sec_pulse_objects[i]) {
             signal_object(obj, 0, MSG_ROUND, "");
           }
         }
@@ -978,8 +979,24 @@ void heartbeat(int pulse) {
   }
 
   /* 1 minute */
-  if (!(pulse % PULSE_TICK) && !GAMEHALT) {
+  if ((pulse % PULSE_TICK == 0) && !GAMEHALT) {
     signal_world(0, MSG_TICK, "");
+
+    /* Update character points (hp, mana, move, ...) */
+    point_update();
+
+    /* Update character affects. */
+    affect_update();
+
+    /* Update weather and time. */
+    static int weather_and_time_counter = 0;
+
+    /* Every 4 real minutes is equal to one game hour. */
+    if (++weather_and_time_counter == 4) {
+      weather_and_time();
+
+      weather_and_time_counter = 0;
+    }
 
     if (!CHAOSMODE) {
       check_token_mob();
@@ -987,37 +1004,35 @@ void heartbeat(int pulse) {
   }
 
   /* 10 minutes */
-  if (!(pulse % (10* PULSE_TICK))) {
+  if ((pulse % (10 * PULSE_TICK) == 0)) {
     plrlog();
 
     check_reboot();
   }
 
   /* 2 hours */
-  if (!(pulse % (120 * PULSE_TICK))) {
-    log_s("Re-distributing subclass tokens");
+  if ((pulse % (120 * PULSE_TICK) == 0) && !GAMEHALT) {
+#ifndef TEST_SITE
+    if (!CHAOSMODE) {
+      log_s("Re-distributing subclass tokens.");
 
-    int num_tokens = 0;
+      int num_tokens = 0;
 
-    for (OBJ *token = object_list, *next_obj; token; token = next_obj) {
-      next_obj = token->next;
+      /* Extract existing tokens. */
+      for (OBJ *token = object_list, *next_obj; token; token = next_obj) {
+        next_obj = token->next;
 
-      /* Extract existing tokens */
-      if ((V_OBJ(token) != TOKEN_OBJ_VNUM) ||
-          (!token->carried_by) ||
-          (!IS_NPC(token->carried_by)) ||
-          (V_MOB(token->carried_by) == TOKEN_MOB_VNUM)) continue;
 
-      extract_obj(token);
+        if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
+          extract_obj(token);
 
-      num_tokens++;
+          num_tokens++;
+        }
+
+        distribute_tokens(num_tokens);
+      }
     }
-
-#ifdef TEST_SITE
-    num_tokens = 0;
 #endif
-
-    distribute_tokens(CHAOSMODE ? 0 : num_tokens);
   }
 }
 
@@ -2830,26 +2845,10 @@ void give_prompt(DESC *desc) {
 
 
 int signal_world(CHAR *signaler, int cmd, char *arg) {
-  static int counter = 0;
-
   bool stop = FALSE;
 
   for (int zone_rnum = 0; !stop && (zone_rnum <= top_of_zone_table); zone_rnum++) {
     stop = signal_zone(zone_rnum, signaler, cmd, arg);
-  }
-
-  if (cmd == MSG_TICK) {
-    point_update();
-
-    affect_update();
-
-    counter++;
-
-    if (counter == 4) {
-      weather_and_time();
-
-      counter = 0;
-    }
   }
 
   return stop;
@@ -3317,11 +3316,7 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
 
   /* Handle all signals except MSG_ROUND. */
   if (cmd != MSG_ROUND) {
-    int temp_mana = 0;
-
-    if (IS_MORTAL(ch)) {
-      temp_mana = GET_MANA(ch);
-    }
+    int temp_mana = GET_MANA(ch);
 
     for (int eq_slot = 0; !stop && (eq_slot < MAX_WEAR); eq_slot++) {
       OBJ *temp_obj = EQ(ch, eq_slot);
@@ -3343,12 +3338,13 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
       stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
     }
 
+    /* Record mana regen caused by objects and enchantments for use in point_update(). */
     if (IS_MORTAL(ch)) {
       if (GET_MANA(ch) > temp_mana) {
-        ch->points.mana_regen_tmp = (GET_MANA(ch) - temp_mana);
+        GET_MANA_REGEN_TMP(ch) = GET_MANA(ch) - temp_mana;
       }
       else {
-        ch->points.mana_regen_tmp = 0;
+        GET_MANA_REGEN_TMP(ch) = 0;
       }
     }
 

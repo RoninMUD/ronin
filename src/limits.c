@@ -7,9 +7,9 @@
 /* Includes */
 
 #include <stdio.h>
-#include <assert.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -75,6 +75,22 @@ void gain_exp_regardless(CHAR *ch, int gain);
 void gain_condition(CHAR *ch, int condition, int value);
 void check_idling(CHAR *ch);
 void point_update(void);
+
+
+/* Constants */
+const int optimal_age = 45;
+
+const double rank_regen_non_caster[] = {
+      1.15,  /* Rank 1 */
+      1.075, /* Rank 2 */
+      1.075  /* Rank 3 */
+};
+
+const double rank_regen_caster[] = {
+      1.1,  /* Rank 1 */
+      1.05, /* Rank 2 */
+      1.05  /* Rank 3 */
+};
 
 
 /* Functions */
@@ -205,23 +221,19 @@ int spell_regen(CHAR *ch, int type)
   return gain;
 }
 
-int point_update_mana(CHAR *ch)
-{
+int point_update_mana(CHAR *ch) {
   return mana_gain(ch);
 }
 
-int point_update_hit(CHAR *ch)
-{
-  if (IS_AFFECTED(ch, AFF_POISON))
-  {
+int point_update_hit(CHAR *ch) {
+  if (IS_AFFECTED(ch, AFF_POISON))   {
     damage(ch, ch, 2, SPELL_POISON, DAM_POISON);
 
     if (CHAR_REAL_ROOM(ch) == NOWHERE) return 0;
   }
 
   /* Old Incendiary Cloud (used by some specs, etc.) */
-  if (affected_by_spell(ch, SPELL_INCENDIARY_CLOUD))
-  {
+  if (affected_by_spell(ch, SPELL_INCENDIARY_CLOUD))   {
     send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
 
     damage(ch, ch, 100, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
@@ -232,28 +244,21 @@ int point_update_hit(CHAR *ch)
   return hit_gain(ch);
 }
 
-int point_update_move(CHAR *ch)
-{
-  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC)
-  {
-    if (GET_MOVE(ch) <= 0)
-    {
+int point_update_move(CHAR *ch) {
+  if (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_ARCTIC) {
+    if (GET_MOVE(ch) <= 0) {
       send_to_char("The bitter cold chills you to the bone.\n\r", ch);
 
-      if (GET_HIT(ch) > 4)
-      {
+      if (GET_HIT(ch) > 4) {
         damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
       }
     }
   }
-  else if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_DESERT)
-  {
-    if (GET_COND(ch, THIRST) >= 0)
-    {
+  else if (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_DESERT) {
+    if (GET_COND(ch, THIRST) >= 0) {
       send_to_char("You suffer dehydration from the heat.\n\r", ch);
 
-      if (GET_HIT(ch) > 4)
-      {
+      if (GET_HIT(ch) > 4) {
         damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
       }
     }
@@ -265,12 +270,17 @@ int point_update_move(CHAR *ch)
 }
 
 int mana_gain(CHAR *ch) {
-  int gain = 0, loss = 0, year = 0;
+  const int optimal_age = 45;
+
+  if (!ch) return 0;
+
+  int gain = 0;
 
   if (IS_NPC(ch)) {
     gain = GET_LEVEL(ch);
 
     gain += equipment_regen(ch, MANA_REGEN);
+
     gain += spell_regen(ch, MANA_REGEN);
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -279,171 +289,253 @@ int mana_gain(CHAR *ch) {
 
     return gain;
   }
+  else {
+    if (IS_NPC(ch)) return GET_LEVEL(ch);
 
-  if (!ch->desc) return 0;
+    if (!GET_DESCRIPTOR(ch)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -10;
-  }
-
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    gain = 1 - GET_MANA(ch);
-
-    if (age(ch).year > 49) loss = -5;
-    else if (age(ch).year > 45) loss = -4;
-    else if (age(ch).year > 41) loss = -3;
-    else if (age(ch).year > 37) loss = -2;
-    else if (age(ch).year > 33) loss = -1;
-    else loss = 0;
-
-    gain = MAX(gain, loss);
-    gain = MIN(gain, 0);
-
-    gain += equipment_regen(ch, MANA_REGEN);
-    gain += spell_regen(ch, MANA_REGEN);
-
-    return gain;
-  }
-
-  year = age(ch).year;
-
-  /* Dark Pact */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is right in the sweet spot. */
-  }
-
-  gain = graf(year, 9, 10, 12, 14, 12, 10, 9);
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-      gain += 5;
-      break;
-
-    case CLASS_BARD:
-      gain += 3;
-      break;
-
-    case CLASS_ANTI_PALADIN:
-    case CLASS_COMMANDO:
-      /* Dark Pact */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-          gain += 3;
-        }
-        else {
-          gain += 2;
-        }
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+      if (GET_LEVEL(ch) <= 15) {
+        return 0;
       }
-
-      gain += 2;
-      break;
-
-    default:
-      break;
-  }
-
-  switch (GET_POS(ch)) {
-    case POSITION_SLEEPING:
-      gain *= 2;
-      break;
-
-    case POSITION_RESTING:
-      gain += gain / 2;
-      break;
-
-    case POSITION_SITTING:
-      gain += gain / 4;
-      break;
-
-    case POSITION_FIGHTING:
-      gain /= 4;
-      break;
-  }
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-    case CLASS_PALADIN:
-    case CLASS_ANTI_PALADIN:
-    case CLASS_AVATAR:
-    case CLASS_BARD:
-    case CLASS_COMMANDO:
-    case CLASS_NINJA:
-      gain *= 2;
-      break;
-  }
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
-  if (IS_AFFECTED(ch, AFF_POISON)) {
-    /* Combat Zen */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
-      gain /= 8;
+      else {
+        return -5;
+      }
     }
-    else {
-      gain /= 16;
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+        gain = 1 - GET_MANA(ch);
+
+        int loss = 0;
+
+        if (age(ch).year > 49)
+          loss = -5;
+        else if (age(ch).year > 45)
+          loss = -4;
+        else if (age(ch).year > 41)
+          loss = -3;
+        else if (age(ch).year > 37)
+          loss = -2;
+        else if (age(ch).year > 33)
+          loss = -1;
+        else
+          loss = 0;
+
+        gain = MIN(MAX(gain, loss), 0);
+
+        /* Constitution modifier. */
+        gain += con_app[GET_CON(ch)].regen;
+
+        gain += equipment_regen(ch, HP_REGEN);
+
+        gain += spell_regen(ch, HP_REGEN);
+
+        /* Inner Peace */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+          gain += 10;
+        }
+
+        return gain;
+      }
     }
-  }
 
-  gain += con_app[GET_CON(ch)].regen;
-  gain += equipment_regen(ch, MANA_REGEN);
-  gain += spell_regen(ch, MANA_REGEN);
+    int year = age(ch).year;
 
-  if (GET_LEVEL(ch) >= 50) {
+    /* Dark Pact - Provides optimal age-based regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      year = optimal_age;
+    }
+
+    gain = graf(year, 10, 11, 13, 15, 13, 11, 10);
+
+    /* Base class regen. */
     switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
-        gain += 10;
+        gain += 5;
         break;
 
+      case CLASS_BARD:
+        gain += 3;
+        break;
+
+      case CLASS_ANTI_PALADIN:
+      case CLASS_COMMANDO:
+        gain += 2;
+        break;
+    }
+
+    /* Dark Pact - Increases base class regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+        gain += 3;
+      }
+      else {
+        gain += 2;
+      }
+    }
+
+    /* Class-based bonus. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_MAGIC_USER:
+      case CLASS_CLERIC:
       case CLASS_NINJA:
       case CLASS_PALADIN:
       case CLASS_ANTI_PALADIN:
       case CLASS_AVATAR:
       case CLASS_BARD:
       case CLASS_COMMANDO:
-        /* Dark Pact */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-            gain += 5;
-          }
-          else {
-            gain += 2;
+        gain *= 2;
+        break;
+    }
+
+    /* Position-based modifier. */
+    switch (GET_POS(ch)) {
+      case POSITION_SLEEPING:
+        gain *= 1.75;
+        break;
+
+      case POSITION_RESTING:
+        gain += gain / 2;
+        break;
+
+      case POSITION_SITTING:
+        gain += gain / 4;
+        break;
+
+      case POSITION_FIGHTING:
+        gain /= 2;
+        break;
+    }
+
+    /* Level 50 regen. */
+    if (GET_LEVEL(ch) >= 50) {
+      switch (GET_CLASS(ch)) {
+        case CLASS_MAGIC_USER:
+        case CLASS_CLERIC:
+          gain += 10;
+          break;
+
+        case CLASS_NINJA:
+        case CLASS_PALADIN:
+        case CLASS_ANTI_PALADIN:
+        case CLASS_AVATAR:
+        case CLASS_BARD:
+        case CLASS_COMMANDO:
+          gain += 5;
+          break;
+      }
+
+      /* Dark Pact - Increases level 50 regen. */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+          gain += 5;
+        }
+        else {
+          gain += 2;
+        }
+      }
+    }
+
+    /* Bathed in Blood */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
+      if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+        double multi = 1.0 + (0.2 * (double)ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+        if (multi > 2.0) multi = 2.0;
+
+        gain *= multi;
+      }
+    }
+
+    if (gain > 0) {
+      /* Calculate regeneration from ranks. */
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+          gain *= rank_regen_non_caster[i];
+        }
+      }
+      else {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+          gain *= rank_regen_caster[i];
+        }
+      }
+
+      // Prestige Perk 8
+      if (GET_PRESTIGE_PERK(ch) >= 8) {
+        gain *= 1.05;
+      }
+    }
+
+    if (IS_AFFECTED(ch, AFF_POISON)) {
+      /* Combat Zen */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
+        gain /= 8;
+      }
+      else {
+        gain /= 16;
+      }
+    }
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
+
+    /* Constitution modifier. */
+    gain += con_app[GET_CON(ch)].regen;
+
+    gain += equipment_regen(ch, MANA_REGEN);
+
+    gain += spell_regen(ch, MANA_REGEN);
+
+    /* Inner Peace */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+      gain += 10;
+    }
+
+    if (gain > 0) {
+      /* Limit mana regen in combat. */
+      if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+        int mana_regen_cap = 75;
+
+        switch (GET_CLASS(ch)) {
+          case CLASS_MAGIC_USER:
+          case CLASS_CLERIC:
+            mana_regen_cap = 120;
+            break;
+
+          case CLASS_AVATAR:
+          case CLASS_BARD:
+          case CLASS_COMMANDO:
+            mana_regen_cap = 100;
+            break;
+
+          case CLASS_NINJA:
+          case CLASS_PALADIN:
+          case CLASS_ANTI_PALADIN:
+            mana_regen_cap = 90;
+            break;
+        }
+
+        /* Inner Peace */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+          mana_regen_cap += 10;
+        }
+
+        // Prestige Perk 24
+        if (GET_PRESTIGE_PERK(ch) >= 24) {
+          if (mana_regen_cap > 0) {
+            mana_regen_cap += 5;
           }
         }
 
-        gain += 5;
-        break;
+        gain = MIN(gain, mana_regen_cap);
+      }
     }
-  }
-
-  /* Bathed in Blood */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * (double)ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
-
-      if (multi > 2.0) multi = 2.0;
-
-      gain *= multi;
-    }
-  }
-
-  /* Inner Peace */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-    gain += 10;
-  }
-
-  // Prestige Perk 8
-  if (GET_PRESTIGE_PERK(ch) >= 8) {
-    gain *= 1.05;
   }
 
   return gain;
@@ -451,9 +543,8 @@ int mana_gain(CHAR *ch) {
 
 int hit_gain(CHAR *ch) {
   int gain = 0;
-  int loss = 0;
-  int year = 0;
 
+  /* NPCs */
   if (IS_NPC(ch)) {
     switch (GET_POS(ch)) {
       case POSITION_STANDING:
@@ -478,6 +569,206 @@ int hit_gain(CHAR *ch) {
     }
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
+      gain /= 8;
+    }
+
+    gain += equipment_regen(ch, HP_REGEN);
+
+    gain += spell_regen(ch, HP_REGEN);
+
+  }
+  else {
+    if (IS_NPC(ch)) return GET_LEVEL(ch);
+
+    if (!GET_DESCRIPTOR(ch)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+      if (GET_LEVEL(ch) <= 15) {
+        return 0;
+      }
+      else {
+        return -5;
+      }
+    }
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      /* Hunger-based regen. */
+      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+        gain = 1 - GET_HIT(ch);
+
+        int loss = 0;
+
+        if (age(ch).year > 49)
+          loss = -5;
+        else if (age(ch).year > 45)
+          loss = -4;
+        else if (age(ch).year > 41)
+          loss = -3;
+        else if (age(ch).year > 37)
+          loss = -2;
+        else if (age(ch).year > 33)
+          loss = -1;
+        else
+          loss = 0;
+
+        gain = MIN(MAX(gain, loss), 0);
+
+        gain += equipment_regen(ch, HP_REGEN);
+
+        gain += spell_regen(ch, HP_REGEN);
+
+        /* Constitution modifier. */
+        gain += con_app[GET_CON(ch)].regen;
+
+        /* Awareness */
+        if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
+          gain += 2 * GET_LEVEL(ch);
+        }
+
+        return gain;
+      }
+    }
+
+    int year = age(ch).year;
+
+    /* Dark Pact - Provides optimal age-based regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      year = optimal_age;
+    }
+
+    /* Age-based regen. */
+    gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
+
+    /* Base multiplier. */
+    gain *= 2.5;
+
+    /* Base class regen. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_WARRIOR:
+      case CLASS_NOMAD:
+        gain += 4;
+        break;
+
+      case CLASS_THIEF:
+      case CLASS_COMMANDO:
+        gain += 3;
+        break;
+
+      case CLASS_NINJA:
+      case CLASS_PALADIN:
+      case CLASS_ANTI_PALADIN:
+      case CLASS_AVATAR:
+      case CLASS_BARD:
+        gain += 2;
+        break;
+    }
+
+    /* Dark Pact - Increases base class regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+        gain += 2;
+      }
+      else {
+        gain += 1;
+      }
+    }
+
+    /* Class-based penalty. */
+    switch (GET_CLASS(ch)) {
+      case CLASS_MAGIC_USER:
+      case CLASS_CLERIC:
+        gain /= 2;
+        break;
+    }
+
+    /* Position-based modifier. */
+    switch (GET_POS(ch)) {
+      case POSITION_SLEEPING:
+        gain += gain / 2;
+        break;
+
+      case POSITION_RESTING:
+        gain += gain / 4;
+        break;
+
+      case POSITION_SITTING:
+        gain += gain / 8;
+        break;
+
+      case POSITION_FIGHTING:
+        gain /= 4;
+        break;
+    }
+
+    /* Level 50 regen. */
+    if (GET_LEVEL(ch) >= 50) {
+      switch (GET_CLASS(ch)) {
+        case CLASS_THIEF:
+        case CLASS_WARRIOR:
+        case CLASS_NOMAD:
+          gain += 10;
+          break;
+
+        case CLASS_NINJA:
+        case CLASS_PALADIN:
+        case CLASS_ANTI_PALADIN:
+        case CLASS_AVATAR:
+        case CLASS_BARD:
+        case CLASS_COMMANDO:
+          gain += 5;
+          break;
+      }
+
+      /* Dark Pact - Increases level 50 regen. */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+          gain += 5;
+        }
+        else {
+          gain += 2;
+        }
+      }
+    }
+
+    /* Tranquility */
+    if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
+      gain *= 1.25;
+    }
+
+    /* Bathed in Blood */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
+      if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
+        double multi = 1.0 + (0.2 * ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
+
+        if (multi > 2.0) multi = 2.0;
+
+        gain *= multi;
+      }
+    }
+
+    if (gain > 0) {
+      /* Calculate regeneration from ranks. */
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+          gain *= rank_regen_non_caster[i];
+        }
+      }
+      else {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+          gain *= rank_regen_caster[i];
+        }
+      }
+
+      // Prestige Perk 8
+      if (GET_PRESTIGE_PERK(ch) >= 8) {
+        gain *= 1.05;
+      }
+    }
+
+    if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
         gain /= 4;
@@ -487,187 +778,21 @@ int hit_gain(CHAR *ch) {
       }
     }
 
-    gain += equipment_regen(ch, HP_REGEN);
-    gain += spell_regen(ch, HP_REGEN);
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
 
-    return gain;
-  }
-
-  if (!ch->desc) return 0;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -10;
-  }
-
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    gain = 1 - GET_HIT(ch);
-
-    if (age(ch).year > 49) loss = -5;
-    else if (age(ch).year > 45) loss = -4;
-    else if (age(ch).year > 41) loss = -3;
-    else if (age(ch).year > 37) loss = -2;
-    else if (age(ch).year > 33) loss = -1;
-    else loss = 0;
-
-    gain = MAX(gain, loss);
-    gain = MIN(gain, 0);
+    /* Constitution modifier. */
+    gain += 4 * con_app[GET_CON(ch)].regen;
 
     gain += equipment_regen(ch, HP_REGEN);
+
     gain += spell_regen(ch, HP_REGEN);
 
     /* Awareness */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
       gain += 2 * GET_LEVEL(ch);
     }
-
-    return gain;
-  }
-
-  year = age(ch).year;
-
-  /* Dark Pact */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is is right in the sweet spot. */
-  }
-
-  gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
-
-  gain *= 2;
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_WARRIOR:
-    case CLASS_NOMAD:
-      gain += 4;
-      break;
-
-    case CLASS_THIEF:
-    case CLASS_COMMANDO:
-      gain += 3;
-      break;
-
-    case CLASS_NINJA:
-    case CLASS_PALADIN:
-    case CLASS_ANTI_PALADIN:
-    case CLASS_AVATAR:
-    case CLASS_BARD:
-      /* Dark Pact */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-        if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-          gain += 2;
-        }
-        else {
-          gain += 1;
-        }
-      }
-
-      gain += 2;
-      break;
-  }
-
-  switch (GET_POS(ch)) {
-    case POSITION_SLEEPING:
-      gain += gain / 2;
-      break;
-
-    case POSITION_RESTING:
-      gain += gain / 4;
-      break;
-
-    case POSITION_SITTING:
-      gain += gain / 8;
-      break;
-
-    case POSITION_FIGHTING:
-      gain /= 4;
-      break;
-  }
-
-  switch (GET_CLASS(ch)) {
-    case CLASS_MAGIC_USER:
-    case CLASS_CLERIC:
-      gain /= 2;
-      break;
-  }
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
-  if (IS_AFFECTED(ch, AFF_POISON)) {
-    /* Combat Zen */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
-      gain /= 4;
-    }
-    else {
-      gain /= 8;
-    }
-  }
-
-  gain += 4 * con_app[GET_CON(ch)].regen;
-  gain += equipment_regen(ch, HP_REGEN);
-  gain += spell_regen(ch, HP_REGEN);
-
-  if (GET_LEVEL(ch) >= 50) {
-    switch (GET_CLASS(ch)) {
-      case CLASS_THIEF:
-      case CLASS_WARRIOR:
-      case CLASS_NOMAD:
-        gain += 10;
-        break;
-
-      case CLASS_NINJA:
-      case CLASS_PALADIN:
-      case CLASS_ANTI_PALADIN:
-      case CLASS_AVATAR:
-      case CLASS_BARD:
-      case CLASS_COMMANDO:
-        /* Dark Pact */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-          if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-            gain += 5;
-          }
-          else {
-            gain += 2;
-          }
-        }
-
-        gain += 5;
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  /* Awareness */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
-    gain += 2 * GET_LEVEL(ch);
-  }
-
-  /* Tranquility */
-  if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-    gain *= 1.25;
-  }
-
-  /* Bathed in Blood */
-  if (check_subclass(ch, SC_DEFILER, 5)) {
-    if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
-      double multi = 1.0 + (0.2 * ROOM_BLOOD(CHAR_REAL_ROOM(ch)));
-
-      if (multi > 2.0) multi = 2.0;
-
-      gain *= multi;
-    }
-  }
-
-  // Prestige Perk 8
-  if (GET_PRESTIGE_PERK(ch) >= 8) {
-    gain *= 1.05;
   }
 
   return gain;
@@ -675,35 +800,52 @@ int hit_gain(CHAR *ch) {
 
 int move_gain(CHAR *ch) {
   int gain = 0;
-  int year = 0;
+
+  if (!ch) return 0;
 
   if (IS_NPC(ch)) return GET_LEVEL(ch);
 
-  if (!ch->desc) return 0;
+  if (!GET_DESCRIPTOR(ch)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_REGEN)) return 0;
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, REV_REGEN)) {
-    if (GET_LEVEL(ch) < 16) return 0;
-    else return -5;
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+    if (GET_LEVEL(ch) <= 15) {
+      return 0;
+    }
+    else {
+      return -5;
+    }
   }
 
-  if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0) &&
-      (world[CHAR_REAL_ROOM(ch)].sector_type != SECT_ARCTIC || world[CHAR_REAL_ROOM(ch)].sector_type != SECT_DESERT) &&
-       !(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    return 5;
+  /* Dark Pact - Bypasses hunger-based regen. */
+  if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+    /* Hunger-based regen. */
+    if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
+      if ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_ARCTIC) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_DESERT)) {
+        if (GET_LEVEL(ch) <= 15) {
+          return 0;
+        }
+        else {
+          return GET_CON(ch) - 20;
+        }
+      }
+
+      return gain;
+    }
   }
 
-  year = age(ch).year;
+  int year = age(ch).year;
 
-  /* Dark Pact */
+  /* Dark Pact - Increases age-based regen. */
   if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = 45; /* 45 is is right in the sweet spot. */
+    year = optimal_age;
   }
 
+  /* Age-based regen. */
   gain = graf(year, 18, 21, 24, 26, 24, 21, 18);
 
-  /* Dark Pact */
+  /* Dark Pact - Increases base class regen. */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
     if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
       gain += 10;
@@ -713,6 +855,7 @@ int move_gain(CHAR *ch) {
     }
   }
 
+  /* Position-based modifier. */
   switch (GET_POS(ch)) {
     case POSITION_SLEEPING:
       gain += gain / 2;
@@ -727,11 +870,6 @@ int move_gain(CHAR *ch) {
       break;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CLUB) ||
-      ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
@@ -742,109 +880,124 @@ int move_gain(CHAR *ch) {
     }
   }
 
-  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_ARCTIC) {
-    gain = GET_CON(ch) - 20;
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+    gain *= 2;
   }
 
-  // Prestige Perk 8
-  if (GET_PRESTIGE_PERK(ch) >= 8) {
-    gain *= 1.05;
+  if (gain > 0) {
+    /* Calculate regeneration from ranks. */
+    if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+        gain *= rank_regen_non_caster[i];
+      }
+    }
+    else {
+      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+        gain *= rank_regen_caster[i];
+      }
+    }
+
+    // Prestige Perk 8
+    if (GET_PRESTIGE_PERK(ch) >= 8) {
+      gain *= 1.05;
+    }
   }
+
+  /* Constitution modifier. */
+  gain += con_app[GET_CON(ch)].regen;
 
   return gain;
 }
 
 void advance_level(CHAR *ch) {
-  int gain = 0;
+  int hit_gain = 0;
+  int mana_gain = 0;
+  int move_gain = 3;
+  int prac_gain = 1;
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
-      gain = number(3, 7);   /* average 5 */
+      hit_gain = number(3, 7);   /* average 5 */
       break;
 
     case CLASS_CLERIC:
-      gain = number(5, 9);   /* average 7 */
+      hit_gain = number(5, 9);   /* average 7 */
       break;
 
     case CLASS_THIEF:
-      gain = number(7, 11);  /* average 9 */
+      hit_gain = number(7, 11);  /* average 9 */
       break;
 
     case CLASS_WARRIOR:
-      gain = number(10, 14); /* average 12 */
+      hit_gain = number(10, 14); /* average 12 */
       break;
 
     case CLASS_NINJA:
-      gain = number(5, 9);   /* average 7 */
+      hit_gain = number(5, 9);   /* average 7 */
       break;
 
     case CLASS_NOMAD:
-      gain = number(13, 17); /* average 15 */
+      hit_gain = number(13, 17); /* average 15 */
       break;
 
     case CLASS_PALADIN:
-      gain = number(8, 12);  /* average 10 */
+      hit_gain = number(8, 12);  /* average 10 */
       break;
 
     case CLASS_ANTI_PALADIN:
-      gain = number(6, 10);  /* average 8 */
+      hit_gain = number(6, 10);  /* average 8 */
       break;
 
     case CLASS_AVATAR:
-      gain = number(15, 15); /* average 15 */
+      hit_gain = number(15, 15); /* average 15 */
       break;
 
     case CLASS_BARD:
-      gain = number(6, 10);  /* average 8 */
+      hit_gain = number(6, 10);  /* average 8 */
       break;
 
     case CLASS_COMMANDO:
-      gain = number(7, 11);  /* average 9 */
+      hit_gain = number(7, 11);  /* average 9 */
       break;
   }
-
-  ch->points.max_hit += gain + MAX(con_app[GET_CON(ch)].hitp, con_app[18].hitp);
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
     case CLASS_AVATAR:
     case CLASS_BARD:
-      gain = number(2, 6); /* average 4, was 3 */
+      mana_gain = number(2, 6); /* average 4*/
       break;
 
     case CLASS_NINJA:
     case CLASS_PALADIN:
     case CLASS_ANTI_PALADIN:
     case CLASS_COMMANDO:
-      gain = number(1, 5); /* average 3, was 2 */
-      break;
-
-    default:
-      gain = 0;
+      mana_gain = number(1, 5); /* average 3 */
       break;
   }
 
-  ch->points.max_mana += gain;
+  hit_gain += MAX(con_app[GET_CON(ch)].hitp, con_app[18].hitp);
+  prac_gain += MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus);
 
-  ch->points.max_move += 3;
-
-  GET_PRAC(ch) = MIN(GET_PRAC(ch) + MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus), 127);
-
-  if (GET_LEVEL(ch) >= LEVEL_IMM) {
-    for (int i = 0; i < 3; i++) {
-      ch->specials.conditions[i] = -1;
-    }
-  }
+  GET_MAX_HIT_POINTS(ch) = MIN(GET_MAX_HIT_POINTS(ch) + hit_gain, SHRT_MAX);
+  GET_MAX_MANA_POINTS(ch) = MIN(GET_MAX_MANA_POINTS(ch) + mana_gain, SHRT_MAX);
+  GET_MAX_MOVE_POINTS(ch) = MIN(GET_MAX_MOVE_POINTS(ch) + move_gain, SHRT_MAX);
+  GET_PRAC(ch) = MIN(GET_PRAC(ch) + prac_gain, SCHAR_MAX);
 }
 
-void set_title(CHAR * ch, char *title)
-{
-  if (title == NULL) title = READ_TITLE(ch);
+void set_title(CHAR * ch, char *title) {
+  if (!title) {
+    title = READ_TITLE(ch);
+  }
 
-  if (strlen(title) > MAX_TITLE_LENGTH) title[MAX_TITLE_LENGTH] = '\0';
+  if (strlen(title) > MAX_TITLE_LENGTH) {
+    title[MAX_TITLE_LENGTH] = '\0';
+  }
 
-  if (GET_TITLE(ch) != NULL) free(GET_TITLE(ch));
+  if (GET_TITLE(ch)) {
+    free(GET_TITLE(ch));
+  }
 
   GET_TITLE(ch) = str_dup(title);
 }
@@ -955,111 +1108,89 @@ void gain_exp_regardless(CHAR *ch, int gain)
   }
 }
 
-void gain_condition(CHAR *ch, int condition, int value)
-{
-  int was_intoxicated = FALSE;
+void gain_condition(CHAR *ch, int condition, int value) {
+  if (!ch || IS_NPC(ch) || ((condition < 0) || (condition > MAX_COND)) || (value == 0)) return;
 
-  if ((!IS_MORTAL(ch) || GET_CLASS(ch) == CLASS_AVATAR) &&
-      GET_COND(ch, condition) == -1 &&
-      condition != DRUNK) return;
+  int was_intoxicated = GET_COND(ch, DRUNK) > 0;
 
-  if (GET_COND(ch, DRUNK) > 0)
-  {
-    was_intoxicated = TRUE;
+  GET_COND(ch, condition) = MIN(MAX(GET_COND(ch, condition) + value, 0), 24);
+
+  if ((condition == FULL) || (condition == THIRST)) {
+    bool free_lunch = FALSE;
+
+    if (IS_IMMORTAL(ch) || (GET_CLASS(ch) == CLASS_AVATAR)) {
+      free_lunch = TRUE;
+    }
+    // Dark Pact
+    else if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      free_lunch = TRUE;
+    }
+    // Prestige Perk 26
+    else if (GET_PRESTIGE_PERK(ch) >= 26) {
+      free_lunch = TRUE;
+    }
+
+    if (free_lunch) {
+      GET_COND(ch, condition) = -1;
+    }
   }
 
-  GET_COND(ch, condition) += value;
-  GET_COND(ch, condition) = MAX(GET_COND(ch, condition), 0);
-  GET_COND(ch, condition) = MIN(GET_COND(ch, condition), 24);
+  if (GET_COND(ch, condition) == 0) {
+    switch (condition) {
+      case DRUNK:
+        if (was_intoxicated) {
+          send_to_char("You are now sober.\n\r", ch);
+        }
+        break;
 
-  /* Dark Pact */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch) && (GET_COND(ch, condition) == 0)) {
-    GET_COND(ch, condition) = -1;
-  }
-
-  if (GET_COND(ch, condition) == 0)
-  {
-    switch (condition)
-    {
       case FULL:
-        if (age(ch).year > 33)
-        {
+        if (age(ch).year > 33) {
           send_to_char("You'd better eat something.\n\r", ch);
         }
-        else
-        {
+        else {
           send_to_char("You are hungry.\n\r", ch);
         }
         break;
 
       case THIRST:
-        if (age(ch).year > 33)
-        {
+        if (age(ch).year > 33) {
           send_to_char("You'd better drink something.\n\r", ch);
         }
-        else
-        {
+        else {
           send_to_char("You are thirsty.\n\r", ch);
-        }
-        break;
-
-      case DRUNK:
-        if (was_intoxicated)
-        {
-          send_to_char("You are now sober.\n\r", ch);
         }
         break;
     }
   }
 }
 
-void check_idling(CHAR *ch)
-{
-  if (IS_NPC(ch)) return;
+void check_idling(CHAR *ch) {
+  if (!ch || IS_NPC(ch)) return;
 
-  ch->specials.timer++;
+  GET_TIMER(ch)++;
 
-  if (GET_LEVEL(ch) > LEVEL_WIZ) return;
-  else if (GET_LEVEL(ch) >= LEVEL_IMM)
-  {
-    if (ch->specials.timer > 60)
-    {
-      act("$n is pulled into the black void.", FALSE, ch, 0, 0, TO_ROOM);
-      act("You are pulled into the black void.", FALSE, ch, 0, 0, TO_CHAR);
-
+  if (IS_MORTAL(ch)) {
+    if (GET_TIMER(ch) > 40) {
       auto_rent(ch);
     }
+    else if (GET_TIMER(ch) > 20) {
+      if ((GET_WAS_IN_ROOM(ch) == NOWHERE) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+        GET_WAS_IN_ROOM(ch) = CHAR_REAL_ROOM(ch);
 
-    return;
-  }
-  else
-  {
-    if (ch->specials.timer > 40)
-    {
-      auto_rent(ch);
-    }
-    else if (ch->specials.timer > 20)
-    {
-      if (ch->specials.was_in_room == NOWHERE &&
-          CHAR_REAL_ROOM(ch) != NOWHERE)
-      {
-        ch->specials.was_in_room = CHAR_REAL_ROOM(ch);
-
-        if (ch->specials.fighting)
-        {
-          stop_fighting(ch->specials.fighting);
+        if (GET_OPPONENT(ch)) {
+          stop_fighting(GET_OPPONENT(ch));
           stop_fighting(ch);
         }
 
-        if (ch->specials.riding)
-        {
-          stop_riding(ch, ch->specials.riding);
+        if (GET_MOUNT(ch)) {
+          stop_riding(ch, GET_MOUNT(ch));
         }
 
         act("$n disappears into the void.", TRUE, ch, 0, 0, TO_ROOM);
 
         char_from_room(ch);
         char_to_room(ch, 1);
+
         save_char(ch, NOWHERE);
       }
     }
@@ -1071,402 +1202,256 @@ void check_idling(CHAR *ch)
  *
  * This function relies on signaling objects that may affect regen before calling this function.
  */
-void point_update(void)
-{
-  char buf[MSL];
-  int mana_regen = 0;
-  int mana_regen_cap = 0;
-  CHAR *ch = NULL;
-  CHAR *next_ch = NULL;
-  OBJ *obj = NULL;
-  OBJ *next_obj = NULL;
-  OBJ *obj2 = NULL;
-  OBJ *next_obj2 = NULL;
-
+void point_update(void) {
   /* PCs/NPCs */
-  for (ch = character_list; ch; ch = next_ch)
-  {
+  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
     next_ch = ch->next;
 
-    if (IS_SET(ch->specials.affected_by2, AFF2_SEVERED))
-    {
-      act("With a last gasp of breath,\n\r$n dies due to massive lower body trauma.", FALSE, ch, 0, 0, TO_ROOM);
-
-      if (!IS_NPC(ch))
-      {
-        send_to_char("Your injuries prove too much, and you die.\n\r", ch);
-      }
+    if (IS_SET(GET_AFF2(ch), AFF2_SEVERED)) {
+      act("With a last gasp of breath, $n dies due to massive lower body trauma.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("Your injuries prove too much, and you die.\n\r", ch);
 
       signal_char(ch, ch, MSG_DEAD, "");
+
       die(ch);
 
       continue;
     }
 
-    if (ch->specials.death_timer)
-    {
-      if (ch->specials.death_timer > 2)
-      {
-        ch->specials.death_timer--;
+    if (GET_DEATH_TIMER(ch)) {
+      if (GET_DEATH_TIMER(ch) > 2) {
+        GET_DEATH_TIMER(ch)--;
       }
-      else
-      {
-        ch->specials.death_timer = 1;
+      else {
+        GET_DEATH_TIMER(ch) = 1;
 
-        act("With a last gasp of breath,\n\r$n dies a horrible death.", FALSE, ch, 0, 0, TO_ROOM);
-
-        if (!IS_NPC(ch))
-        {
-          send_to_char("Your injuries prove too much, and you die.\n\r", ch);
-        }
+        act("With a last gasp of breath, $n dies a horrible death.", FALSE, ch, 0, 0, TO_ROOM);
+        send_to_char("Your injuries prove too much, and you die.\n\r", ch);
 
         signal_char(ch, ch, MSG_DEAD, "");
+
         die(ch);
 
         continue;
       }
     }
 
-    if (affected_by_spell(ch, SKILL_PRAY))
-    {
+    if (affected_by_spell(ch, SKILL_PRAY)) {
       GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 400, 1000);
 
       check_equipment(ch);
 
-      if (GET_ALIGNMENT(ch) >= 1000)
-      {
+      if (GET_ALIGNMENT(ch) >= 1000) {
         affect_from_char(ch, SKILL_PRAY);
+
         send_to_char("You finish your prayers.\n\r", ch);
       }
     }
 
-    if (GET_POS(ch) > POSITION_INCAP)
-    {
-      mana_regen = point_update_mana(ch);
+    if (GET_POS(ch) > POSITION_INCAP) {
+      /* Calculate base regeneration. */
+      int hit_regen = point_update_hit(ch);
+      int mana_regen = point_update_mana(ch);
+      int move_regen = point_update_move(ch);
 
-      if (IS_MORTAL(ch) &&
-          GET_POS(ch) == POSITION_FIGHTING &&
-          mana_regen > 0)
-      {
-        switch (GET_CLASS(ch))
-        {
-          case CLASS_MAGIC_USER:
-          case CLASS_CLERIC:
-            mana_regen_cap = 120;
-            break;
+      /* Add mana regen caused by objects and enchants recorded in signal_char(). */
+      mana_regen += GET_MANA_REGEN_TMP(ch);
 
-          case CLASS_AVATAR:
-          case CLASS_BARD:
-          case CLASS_COMMANDO:
-            mana_regen_cap = 100;
-            break;
-
-          case CLASS_NINJA:
-          case CLASS_PALADIN:
-          case CLASS_ANTI_PALADIN:
-            mana_regen_cap = 90;
-
-            /* Inner Peace */
-            if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-              mana_regen_cap += 10;
-            }
-            break;
-
-          default:
-            mana_regen_cap = 75;
-            break;
-        }
-
-        // Prestige Perk 24
-        if (GET_PRESTIGE_PERK(ch) >= 24) {
-          if (mana_regen_cap) mana_regen_cap += 5;
-        }
-
-        mana_regen = MIN(mana_regen, mana_regen_cap - MIN(ch->points.mana_regen_tmp, mana_regen_cap));
-        mana_regen = (mana_regen * (100 - ((MAX_RANK - get_rank(ch)) * 5))) / 100;
-      }
-
-      GET_HIT(ch) = MIN(MAX(GET_HIT(ch) + point_update_hit(ch), 1), hit_limit(ch));
+      GET_HIT(ch) = MIN(MAX(GET_HIT(ch) + hit_regen, 1), hit_limit(ch));
       GET_MANA(ch) = MIN(MAX(GET_MANA(ch) + mana_regen, 0), mana_limit(ch));
-      GET_MOVE(ch) = MIN(MAX(GET_MOVE(ch) + point_update_move(ch), 0), move_limit(ch));
+      GET_MOVE(ch) = MIN(MAX(GET_MOVE(ch) + move_regen, 0), move_limit(ch));
 
       update_pos(ch);
     }
-    else if (GET_POS(ch) == POSITION_INCAP)
-    {
+
+    if (GET_POS(ch) == POSITION_INCAP) {
       damage(ch, ch, 1, TYPE_UNDEFINED, DAM_NO_BLOCK);
     }
-    else if (GET_POS(ch) == POSITION_MORTALLYW)
-    {
+    else if (GET_POS(ch) == POSITION_MORTALLYW) {
       damage(ch, ch, 2, TYPE_UNDEFINED, DAM_NO_BLOCK);
     }
 
-    if (!IS_NPC(ch))
-    {
-      if (ch->ver3.time_to_quest)
-      {
-        if (ch->ver3.time_to_quest > 0)
-        {
-          ch->ver3.time_to_quest--;
-        }
+    if (!IS_NPC(ch)) {
+      if (GET_QUEST_TIMER(ch) > 1) {
+        GET_QUEST_TIMER(ch)--;
 
-        if (ch->ver3.time_to_quest == 0 &&
-            ch->quest_status == QUEST_RUNNING)
-        {
-          if (ch->questmob)
-          {
-            ch->questmob->questowner = NULL;
-          }
-
-          if (ch->questobj)
-          {
-            if (V_OBJ(ch->questobj) == 35)
-            {
-              aqcard_cleanup(ch->ver3.id);
-            }
-            else
-            {
-              ch->questobj->owned_by = NULL;
-            }
-          }
-
-          ch->questgiver = NULL;
-          ch->questmob = NULL;
-          ch->questobj = NULL;
-          ch->quest_status = QUEST_FAILED;
-          ch->quest_level = 0;
-          ch->ver3.time_to_quest = 1;
-
-          sprintf(buf, "Your time has expired, you have failed your quest! You can start another in %d ticks.\n\r", ch->ver3.time_to_quest);
-          send_to_char(buf, ch);
-        }
-
-        if (ch->ver3.time_to_quest == 1 &&
-            (ch->quest_status == QUEST_FAILED || ch->quest_status == QUEST_NONE))
-        {
+        if ((GET_QUEST_TIMER(ch) == 1) && ((GET_QUEST_STATUS(ch) == QUEST_NONE) || (GET_QUEST_STATUS(ch) == QUEST_FAILED))) {
           send_to_char("You can start another quest in one tick.\n\r", ch);
         }
       }
+      else {
+        GET_QUEST_TIMER(ch) = 0;
 
-      if (ch->ver3.time_to_quest < 0) ch->ver3.time_to_quest = 0;
+        if (GET_QUEST_STATUS(ch) == QUEST_RUNNING) {
+          if (GET_QUEST_MOB(ch)) {
+            GET_QUEST_OWNER(GET_QUEST_MOB(ch)) = NULL;
+          }
+
+          if (GET_QUEST_OBJ(ch)) {
+            const int aqcard_vnum = 35;
+
+            if (V_OBJ(GET_QUEST_OBJ(ch)) == aqcard_vnum) {
+              aqcard_cleanup(GET_ID(ch));
+            }
+            else {
+              OBJ_OWNED_BY(GET_QUEST_OBJ(ch)) = NULL;
+            }
+          }
+
+          GET_QUEST_GIVER(ch) = NULL;
+          GET_QUEST_MOB(ch) = NULL;
+          GET_QUEST_OBJ(ch) = NULL;
+          GET_QUEST_LEVEL(ch) = 0;
+          GET_QUEST_STATUS(ch) = QUEST_FAILED;
+          GET_QUEST_TIMER(ch) = 1;
+
+          printf_to_char(ch, "Your time has expired, you have failed your quest! You can start another in %d ticks.\n\r", GET_QUEST_TIMER(ch));
+        }
+      }
 
       update_char_objects(ch);
+
       check_idling(ch);
     }
 
-    if (IS_IMMORTAL(ch) ||
-        GET_CLASS(ch) == CLASS_AVATAR ||
-        GET_PRESTIGE_PERK(ch) >= 26) // Prestige Perk 26
-    {
-      GET_COND(ch, FULL) = -1;
-      GET_COND(ch, THIRST) = -1;
-    }
-    else
-    {
-      gain_condition(ch, FULL, -1);
-      gain_condition(ch, THIRST, -1);
+    gain_condition(ch, DRUNK, -1);
+    gain_condition(ch, FULL, -1);
+    gain_condition(ch, THIRST, -1);
+    gain_condition(ch, QUAFF, -1);
+
+    // Prestige Perk 26
+    if (GET_PRESTIGE_PERK(ch) >= 26) {
+      gain_condition(ch, QUAFF, -1);
     }
 
-    if (IS_IMMORTAL(ch)) GET_COND(ch, DRUNK) = -1;
-    else gain_condition(ch, DRUNK, -1);
-
-    gain_condition(ch, QUAFF, (GET_PRESTIGE_PERK(ch) >= 26) ? -2 : -1); // Prestige Perk 26
-
-    if (IS_NPC(ch) &&
-        IS_AFFECTED(ch, AFF_ANIMATE) &&
-        !IS_AFFECTED(ch, AFF_CHARM) &&
-        GET_POS(ch) != POSITION_FIGHTING &&
-        CHAR_REAL_ROOM(ch) != NOWHERE)
-    {
+    if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_ANIMATE) && !IS_AFFECTED(ch, AFF_CHARM) && (GET_POS(ch) != POSITION_FIGHTING) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
       act("$n waves happily and disappears in a puff of smoke.", TRUE, ch, 0, 0, TO_ROOM);
+
       extract_char(ch);
     }
   }
 
   /* Objects */
-  for (obj = object_list; obj; obj = next_obj)
-  {
+  for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
     next_obj = obj->next;
 
-    /* Decaying objects. */
-    if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY) ||
-        IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY))
-    {
-      /* Equipped/Carried objects for PCs/NPCs have their timer updated in
-         update_char_objects() which is in handler.c */
-      if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY) &&
-          !obj->equipped_by &&
-          !obj->carried_by &&
-          obj->obj_flags.timer > 0)
-      {
-        obj->obj_flags.timer--;
+    bool extract = FALSE;
+
+    if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) || IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
+      /* Note: ALL_DECAY objects that are equipped or carried decay in update_char_objects() instead of here. */
+      if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) && (OBJ_TIMER(obj) > 0) && !OBJ_CARRIED_BY(obj) && !OBJ_EQUIPPED_BY(obj)) {
+        OBJ_TIMER(obj)--;
       }
 
-      if (obj->obj_flags.timer < 1)
-      {
-        if (obj->carried_by)
-        {
-          sprintf(buf,"WIZINFO: DECAY - Carried by: %s, Obj: %s", GET_NAME(obj->carried_by), OBJ_SHORT(obj));
-          log_f("%s", buf);
+      if (OBJ_TIMER(obj) <= 0) {
+        if (OBJ_CARRIED_BY(obj)) {
+          log_f("WIZINFO: DECAY - Carried by: %s, Obj: %s", GET_NAME(OBJ_CARRIED_BY(obj)), OBJ_SHORT(obj));
 
-          act("$p decays in your inventory.", FALSE, obj->carried_by, obj, 0, TO_CHAR);
+          act("$p decays in your inventory.", FALSE, OBJ_CARRIED_BY(obj), obj, 0, TO_CHAR);
         }
-        else if (obj->equipped_by)
-        {
-          sprintf(buf,"WIZINFO: DECAY - Equipped by: %s, Obj: %s", GET_NAME(obj->equipped_by), OBJ_SHORT(obj));
-          log_f("%s", buf);
+        else if (OBJ_EQUIPPED_BY(obj)) {
+          log_f("WIZINFO: DECAY - Equipped by: %s, Obj: %s", GET_NAME(OBJ_EQUIPPED_BY(obj)), OBJ_SHORT(obj));
 
-          act("$p decays while it's equipped!", FALSE, obj->equipped_by, obj, 0, TO_CHAR);
+          act("$p decays while it's equipped!", FALSE, OBJ_EQUIPPED_BY(obj), obj, 0, TO_CHAR);
         }
-        else if (obj->in_room != NOWHERE)
-        {
-          sprintf(buf,"WIZINFO: DECAY - In Room: %d, Obj: %s", world[obj->in_room].number, OBJ_SHORT(obj));
-          log_f("%s", buf);
+        else if (OBJ_IN_ROOM(obj) != NOWHERE) {
+          log_f("WIZINFO: DECAY - In Room: %d, Obj: %s", ROOM_VNUM(OBJ_IN_ROOM(obj)), OBJ_SHORT(obj));
 
-          if (world[obj->in_room].people)
-          {
-            act("$p decays, turning to dust.", TRUE, world[obj->in_room].people, obj, 0, TO_ROOM);
-            act("$p decays, turning to dust.", TRUE, world[obj->in_room].people, obj, 0, TO_CHAR);
+          if (ROOM_PEOPLE(OBJ_IN_ROOM(obj))) {
+            act("$p decays, turning to dust.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_CHAR);
+            act("$p decays, turning to dust.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_ROOM);
           }
         }
 
-        if (OBJ_TYPE(obj) == ITEM_CONTAINER)
-        {
-          for (obj2 = obj->contains; obj2; obj2 = next_obj2)
-          {
-            next_obj2 = obj2->next_content;
-
-            obj_from_obj(obj2);
-
-            if (obj->in_obj) obj_to_obj(obj2, obj->in_obj);
-            else
-            if (obj->carried_by)
-            {
-              if (obj2->obj_flags.type_flag == ITEM_MONEY)
-              {
-                GET_GOLD(obj->carried_by) += obj2->obj_flags.value[0];
-              }
-              else
-              {
-                obj_to_char(obj2, obj->carried_by);
-              }
-            }
-            else
-            if (obj->equipped_by)
-            {
-              if (obj2->obj_flags.type_flag == ITEM_MONEY)
-              {
-                GET_GOLD(obj->equipped_by) += obj2->obj_flags.value[0];
-              }
-              else
-              {
-                obj_to_char(obj2, obj->equipped_by);
-              }
-            }
-            else
-            if (obj->in_room != NOWHERE)
-            {
-              obj_to_room(obj2, obj->in_room);
-            }
-            else
-            {
-              log_f("WIZINFO: DECAY - Container decayed in NOWHERE.");
-            }
-          }
-        }
-
-        extract_obj(obj);
+        extract = TRUE;
       }
     }
-    /* Decay corpses. */
-    else if (OBJ_TYPE(obj) == ITEM_CONTAINER &&
-             obj->obj_flags.value[3])
-    {
-      if (obj->obj_flags.timer > 0)
-      {
-        obj->obj_flags.timer--;
+    else if (IS_STATUE(obj) || IS_CORPSE(obj)) {
+      if (OBJ_TIMER(obj) > 0) {
+        if (!IS_PC_STATUE(obj) && !IS_PC_CORPSE(obj)) {
+          OBJ_TIMER(obj)--;
+        }
       }
 
-      if (obj->obj_flags.timer < 1)
-      {
-        if (obj->carried_by)
-        {
-          act("$p decays in your hands.", FALSE, obj->carried_by, obj, 0, TO_CHAR);
-        }
-        else if (obj->equipped_by) /* Foolish immortals... */
-        {
-          act("$p decays on you.", FALSE, obj->equipped_by, obj, 0, TO_CHAR);
-        }
-        else if (obj->in_room != NOWHERE)
-        {
-          /* Don't decay a PC_CORPSE or PC_STATUE if it contains objects. */
-          if (obj->contains &&
-            (obj->obj_flags.cost == PC_CORPSE || obj->obj_flags.cost == PC_STATUE))
-          {
-            obj->obj_flags.timer = 9;
-
-            continue;
+      if (OBJ_TIMER(obj) <= 0) {
+        if (OBJ_CARRIED_BY(obj)) {
+          if (IS_STATUE(obj)) {
+            act("$p crumbles to dust in your hands.", FALSE, OBJ_CARRIED_BY(obj), obj, 0, TO_CHAR);
           }
-          else if (world[obj->in_room].people)
-          {
-            if (obj->obj_flags.cost == PC_STATUE ||
-                obj->obj_flags.cost == NPC_STATUE)
-            {
-              act("$p crumbles to dust.", TRUE, world[obj->in_room].people, obj, 0, TO_ROOM);
-              act("$p crumbles to dust.", TRUE, world[obj->in_room].people, obj, 0, TO_CHAR);
+          else {
+            act("$p decays in your hands.", FALSE, OBJ_CARRIED_BY(obj), obj, 0, TO_CHAR);
+          }
+        }
+        else if (OBJ_EQUIPPED_BY(obj)) {
+          if (IS_STATUE(obj)) {
+            act("$p crumbles to dust and falls off of you.", FALSE, OBJ_EQUIPPED_BY(obj), obj, 0, TO_CHAR);
+          }
+          else {
+            act("$p decays on you.", FALSE, OBJ_EQUIPPED_BY(obj), obj, 0, TO_CHAR);
+          }
+        }
+        else if (OBJ_IN_ROOM(obj) != NOWHERE) {
+          if (ROOM_PEOPLE(OBJ_IN_ROOM(obj))) {
+            if (IS_STATUE(obj)) {
+              act("$p crumbles to dust.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_CHAR);
+              act("$p crumbles to dust.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_ROOM);
             }
-            else
-            {
-              act("A quivering horde of maggots consumes $p.", TRUE, world[obj->in_room].people, obj, 0, TO_ROOM);
-              act("A quivering horde of maggots consumes $p.", TRUE, world[obj->in_room].people, obj, 0, TO_CHAR);
+            else {
+              act("A quivering horde of maggots consumes $p.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_CHAR);
+              act("A quivering horde of maggots consumes $p.", TRUE, ROOM_PEOPLE(OBJ_IN_ROOM(obj)), obj, 0, TO_ROOM);
             }
           }
         }
 
-        for (obj2 = obj->contains; obj2; obj2 = next_obj2)
-        {
-          next_obj2 = obj2->next_content;
-
-          obj_from_obj(obj2);
-
-          if (obj->in_obj)
-          {
-            obj_to_obj(obj2, obj->in_obj);
-          }
-          else if (obj->carried_by)
-          {
-            if (obj2->obj_flags.type_flag == ITEM_MONEY)
-            {
-              GET_GOLD(obj->carried_by) += obj2->obj_flags.value[0];
-            }
-            else
-            {
-              obj_to_char(obj2, obj->carried_by);
-            }
-          }
-          else if (obj->equipped_by)
-          {
-            if (obj2->obj_flags.type_flag == ITEM_MONEY)
-            {
-              GET_GOLD(obj->equipped_by) += obj2->obj_flags.value[0];
-            }
-            else
-            {
-              obj_to_char(obj2, obj->equipped_by);
-            }
-          }
-          else if (obj->in_room != NOWHERE)
-          {
-            obj_to_room(obj2, obj->in_room);
-          }
-          else
-          {
-            log_f("WIZINFO: DECAY - Corpse decayed in NOWHERE.");
-          }
-        }
-
-        extract_obj(obj);
+        extract = TRUE;
       }
+    }
+
+    if (extract) {
+      if ((OBJ_TYPE(obj) == ITEM_CONTAINER) || IS_STATUE(obj) || IS_CORPSE(obj)) {
+        for (OBJ *temp_obj = OBJ_CONTAINS(obj), *temp_obj_next; temp_obj; temp_obj = temp_obj_next) {
+          temp_obj_next = OBJ_NEXT_CONTENT(temp_obj);
+
+          obj_from_obj(temp_obj);
+
+          if (OBJ_IN_OBJ(obj)) {
+            obj_to_obj(temp_obj, OBJ_IN_OBJ(obj));
+          }
+          else {
+            CHAR *temp_ch = NULL;
+
+            if ((temp_ch = OBJ_CARRIED_BY(obj)) || (temp_ch = OBJ_EQUIPPED_BY(obj))) {
+              if (OBJ_TYPE(temp_obj) == ITEM_MONEY) {
+                int gold = 0;
+
+                if (OBJ_TYPE(temp_obj) == ITEM_MONEY) {
+                  gold = OBJ_VALUE(temp_obj, 0);
+
+                  /* Prevent gold overflow. */
+                  if (INT_MAX - GET_GOLD(temp_ch) < gold) {
+                    gold = INT_MAX - GET_GOLD(temp_ch);
+                  }
+                }
+
+                GET_GOLD(temp_ch) += gold;
+              }
+              else {
+                obj_to_char(temp_obj, temp_ch);
+              }
+            }
+            else if (OBJ_IN_ROOM(obj) != NOWHERE) {
+              obj_to_room(temp_obj, OBJ_IN_ROOM(obj));
+            }
+            else {
+              if (!IS_STATUE(obj) && !IS_CORPSE(obj)) {
+                log_f("WIZINFO: DECAY - Container decayed in NOWHERE.");
+              }
+            }
+          }
+        }
+      }
+
+      extract_obj(obj);
     }
   }
 }

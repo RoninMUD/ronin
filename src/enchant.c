@@ -248,8 +248,6 @@ int squire_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.15 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.15 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -295,8 +293,6 @@ int swashbuckler_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -338,8 +334,6 @@ int knight_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075  *hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -387,9 +381,6 @@ int firstsword_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -434,9 +425,6 @@ int justiciar_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -481,9 +469,6 @@ int lordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -531,8 +516,6 @@ int wanderer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.15 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.15 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -578,8 +561,6 @@ int forester_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -621,8 +602,6 @@ int tamer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -670,9 +649,6 @@ int apprentice_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -719,9 +695,6 @@ int warlock_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -762,9 +735,6 @@ int sorcerer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -812,9 +782,6 @@ int minstrel_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -861,9 +828,6 @@ int poet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *ar
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -904,9 +868,6 @@ int conductor_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -955,9 +916,6 @@ int private_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1004,9 +962,6 @@ int commodore_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1048,9 +1003,6 @@ int commander_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1098,8 +1050,6 @@ int highwayman_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.15 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.15 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1145,8 +1095,6 @@ int brigand_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1188,8 +1136,6 @@ int assassin_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.075 * hit_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.075 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1236,9 +1182,6 @@ int minion_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1285,9 +1228,6 @@ int darkwarder_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1332,9 +1272,6 @@ int darklordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1382,9 +1319,6 @@ int tsume_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1431,9 +1365,6 @@ int shinobi_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1475,9 +1406,6 @@ int shogun_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1525,9 +1453,6 @@ int acolyte_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.1 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.1 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.1 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1574,9 +1499,6 @@ int bishop_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1617,9 +1539,6 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 
   if (cmd == MSG_TICK)
   {
-    GET_HIT(ch) = MIN(hit_limit(ch), GET_HIT(ch) + 0.05 * hit_gain(ch));
-    GET_MANA(ch) = MIN(mana_limit(ch), GET_MANA(ch) + 0.05 * mana_gain(ch));
-    GET_MOVE(ch) = MIN(move_limit(ch), GET_MOVE(ch) + 0.05 * move_gain(ch));
     ench->duration = -1;
 
     return FALSE;
@@ -1636,7 +1555,7 @@ void assign_enchantments(void)
 
 /*         Name                               Enchant #            Dur,Mod, Location,              Bitvector            , Bitvect2, Function */
   ENCHANTO("Remort"                         , ENCHANT_REMORTV2    , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, remortv2_enchantment);
-  ENCHANTO("Immortalis' Grace"              , ENCHANT_IMM_GRACE   , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, imm_grace_enchantment); /* Project Broadsword */
+  ENCHANTO("Immortalis' Grace"              , ENCHANT_IMM_GRACE   , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, imm_grace_enchantment);
 
   ENCHANTO("Common Cold"                    , ENCHANT_COLD        , 20,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, cold_enchantment);
   ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,  6,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
@@ -1859,15 +1778,11 @@ int enchanted_by_type(CHAR *ch, int type) {
 }
 
 
-int get_rank(CHAR *ch)
-{
-  ENCH *ench = NULL;
+int get_rank(CHAR *ch) {
   int rank = 0;
 
-  for (ench = ch->enchantments; ench; ench = ench->next)
-  {
-    switch (ench->type)
-    {
+  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
+    switch (ench->type) {
       case ENCHANT_SQUIRE:
       case ENCHANT_FIRSTSWORD:
       case ENCHANT_APPRENTICE:
@@ -1880,6 +1795,7 @@ int get_rank(CHAR *ch)
       case ENCHANT_HIGHWAYMAN:
         if (rank < 1) rank = 1;
         break;
+
       case ENCHANT_SWASHBUCKLER:
       case ENCHANT_JUSTICIAR:
       case ENCHANT_WARLOCK:
@@ -1892,6 +1808,7 @@ int get_rank(CHAR *ch)
       case ENCHANT_BRIGAND:
         if (rank < 2) rank = 2;
         break;
+
       case ENCHANT_KNIGHT:
       case ENCHANT_LORDLADY:
       case ENCHANT_SORCERER:
