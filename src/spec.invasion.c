@@ -1203,9 +1203,9 @@ int law_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
 
 /* Enchantment that prevents casting. */
-int chaos_bite_ench(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg) {
+int chaos_bite_ench(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   if (cmd == CMD_CAST) {
-    if (!ch || !IS_MORTAL(ch) || (GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) return FALSE;
+    if (!ch || !IS_MORTAL(ch) || (ch != signaler) || (GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) return FALSE;
 
     if (!enchanted_by(ch, CHAOS_BITE_ENCH_NAME)) return FALSE;
 
@@ -1216,7 +1216,7 @@ int chaos_bite_ench(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg
   }
 
   if (cmd == MSG_REMOVE_ENCH) {
-    if (!ch || IS_MORTAL(ch)) return FALSE;
+    if (!ch || !IS_MORTAL(ch)) return FALSE;
 
     act("You manage to stem the flow of blood from the wound on your neck.", FALSE, ch, 0, 0, TO_CHAR);
 
@@ -1532,6 +1532,8 @@ int xykloqtium_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       /* Sanity check. */
       if (!ally) return FALSE;
+
+      ally->questmob_ineligible = TRUE;
 
       act("$n utters a word of command and gates in a demonic ally!", FALSE, mob, 0, 0, TO_ROOM);
 

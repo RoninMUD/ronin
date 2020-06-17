@@ -384,6 +384,10 @@ void do_donate(CHAR *ch, char *arg, int cmd)
   }
   else
   {
+    OBJ_COST(obj) = 0;
+
+    if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_QUESTWEAR)) SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AUCTION);
+
     room = real_room(3084); /* Donation Room */
 
     act("You donate $p.", TRUE, ch, obj, NULL, TO_CHAR);
@@ -400,10 +404,6 @@ void do_donate(CHAR *ch, char *arg, int cmd)
     wizlog(buf, GET_LEVEL(ch) + 1, 5);
     log_f("%s", buf);
   }
-
-  OBJ_COST(obj) = 0;
-
-  if (!IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_QUESTWEAR)) SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_AUCTION);
 
   obj_from_char(obj);
   obj_to_room(obj, room);

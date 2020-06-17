@@ -1119,6 +1119,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
       for (CHAR *temp_mob = character_list; temp_mob && (temp_aq_mob_eligible_num < temp_aq_mob_num_in_game); temp_mob = temp_mob->next) {
         if (temp_mob->nr_v != temp_aq_mob_vnum) continue; // Not the right VNum.
         if (GET_OPPONENT(temp_aq_mob) && !IS_NPC(GET_OPPONENT(temp_aq_mob))) continue; // This mob is already fighting someone.
+        if (temp_mob->questmob_ineligible) continue; // This mob is not eligible to be a quest mob.
 
         /* This VNum was not eligible (it's already assigned to somebody, or the mob is already fighting a mortal), so break out of the loop. */
         if (temp_mob->questowner) {

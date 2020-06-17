@@ -1528,18 +1528,18 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     int duration = (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (level / 8) : (level / 4));
 
-    if (!affected_by_spell(victim, SPELL_POWER_OF_DEVOTION)) {
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 0, 0, AFF_SANCTUARY, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
-      affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
-    }
+    affect_from_char(ch, SPELL_SANCTUARY);
+
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 0, 0, AFF_SANCTUARY, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
+    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
   }
 }
 
@@ -1651,15 +1651,19 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
     send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
     act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
 
-    int dmg = 75;
+    int dmg = 150;
 
     /* Don't kill the character, otherwise EXP is lost. */
     if (GET_HIT(ch) <= dmg) {
       dmg = GET_HIT(ch) - 1;
     }
 
-    /* Don't consume position. */
-    int set_pos = GET_POS(ch);
+    int set_pos = POSITION_STANDING;
+
+    /* Don't consume position during combat. */
+    if (((GET_POS(ch) == POSITION_FIGHTING) || (GET_POS(ch) <= POSITION_STUNNED)) && (GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch)))) {
+      set_pos = GET_POS(ch);
+    }
 
     damage(ch, ch, dmg, TYPE_UNDEFINED, DAM_FIRE);
 
@@ -1690,7 +1694,7 @@ void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   damage(ch, victim, 500, SPELL_INCENDIARY_CLOUD_NEW, DAM_FIRE);
 
-  enchantment_apply(victim, TRUE, "Incendiary Cloud", SPELL_INCENDIARY_CLOUD_NEW, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
+  enchantment_apply(victim, TRUE, "Incendiary Cloud", SPELL_INCENDIARY_CLOUD_NEW, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
 }
 
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {

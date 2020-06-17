@@ -96,8 +96,8 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
         CHCLR(ch, 7), ENDCHCLR(ch));
     }
     break;
-  case SCQ_PRESTIGE:
   case SCQ_PRESTIGE_LEVEL:
+  case SCQ_PRESTIGE:
     sprintf(buf, "%sPrestige: [%s%d%s]%s",
       CHCLR(ch, 7), ENDCHCLR(ch),
       GET_PRESTIGE(ch),
@@ -656,6 +656,15 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
     else
       sprintf(buf, "This information is for gods only.");
     break;
+  case SCQ_THAC0:
+    snprintf(buf, sizeof(buf), "%sTHAC0:%s %+-13d",
+      CHCLR(ch, 7), ENDCHCLR(ch), calc_thaco(ch));
+    break;
+  case SCQ_GENDER:
+    snprintf(buf, sizeof(buf), "%sGender:%s %-13s",
+      CHCLR(ch, 7), ENDCHCLR(ch),
+      GET_SEX(ch) == SEX_NEUTRAL ? "Non-Binary" : GET_SEX(ch) == SEX_MALE ? "Male" : "Female");
+    break;
   default:
     sprintf(buf, "Invalid query. See HELP \"SCORE QUERY\" for more information.");
   }
@@ -784,6 +793,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
       else if (is_abbrev(arg, "position")) query = SCQ_POSITION;
       else if (is_abbrev(arg, "wizinv")) query = SCQ_WIZINV;
       else if (is_abbrev(arg, "editing_zone")) query = SCQ_EDITING_ZONE;
+      else if (is_abbrev(arg, "thac0") || is_abbrev(arg, "thaco")) query = SCQ_THAC0;
+      else if (is_abbrev(arg, "gender") || is_abbrev(arg, "sex")) query = SCQ_GENDER;
       else {
         send_to_char("Invalid query. See HELP \"SCORE QUERY\" for more information.\n\r", ch);
 
@@ -805,7 +816,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
     printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %-17s ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch), CHCLR(ch, 7), ENDCHCLR(ch),
       ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
        (IS_NPC(ch) && GET_CLASS(ch) >= CLASS_OTHER && GET_CLASS(ch) <= CLASS_MOB_LAST)) ?
@@ -814,10 +825,14 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
+    else
+      send_to_char("\n\r", ch);
     if (get_rank(ch))
-      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %-17s ",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
+    else
+      printf_to_char(ch, "%34s", " ");
     if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
@@ -922,12 +937,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
     else
       printf_to_char(ch, "%-2d       %-2d            ",
         GET_OWIS(ch), GET_WIS(ch));
-    if (GET_LEVEL(ch) < LEVEL_MORT)
-      printf_to_char(ch, "   %sXP to Level:%s %d\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch), GET_EXP_TO_LEVEL(ch));
-    else
-      printf_to_char(ch, "   %sXP to Level:%s Max Level\n\r",
-        CHCLR(ch, 7), ENDCHCLR(ch));
+    printf_to_char(ch, "   %sXP to Level:%s %d\n\r",
+      CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch) < LEVEL_MORT ? GET_EXP_TO_LEVEL(ch) : 0);
 
     printf_to_char(ch, " %sArmor Class:%s %+-13d ",
       CHCLR(ch, 7), ENDCHCLR(ch), calc_ac(ch));
@@ -1368,7 +1379,7 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, " %s",
         GET_TITLE(ch) ? GET_TITLE(ch) : "(no title)");
     printf_to_char(ch, "%s\n\r\n\r", ENDCHCLR(ch));
-    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %s\n\r",
+    printf_to_char(ch, "%sLevel:    [%s%3d%s]%s %-17s",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_LEVEL(ch),
       CHCLR(ch, 7), ENDCHCLR(ch),
       ((!IS_NPC(ch) && GET_CLASS(ch) > CLASS_NONE && GET_CLASS(ch) <= CLASS_LAST) ||
@@ -1378,12 +1389,14 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, "%sSubclass: [%s%3d%s]%s %s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_LEVEL(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), GET_SC_NAME(ch) ? GET_SC_NAME(ch) : "None");
+    else
+      send_to_char("\n\r", ch);
     if (get_rank(ch))
-    {
-      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %s\n\r",
+      printf_to_char(ch, "%sRank:     [%s%3d%s]%s %-17s ",
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank(ch),
         CHCLR(ch, 7), ENDCHCLR(ch), get_rank_name(ch));
-    }
+    else
+      printf_to_char(ch, "%34s", " ");
     if (!IS_NPC(ch) && GET_PRESTIGE(ch))
       printf_to_char(ch, "%sPrestige: [%s%3d%s]%s\n\r",
         CHCLR(ch, 7), ENDCHCLR(ch), GET_PRESTIGE(ch),
