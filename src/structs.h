@@ -545,6 +545,7 @@ struct room_data
 #define MAX_SKILLS5 500 /* pfile version 5 */
 #define MAX_WEAR    18
 #define MAX_AFFECT  40  /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
+#define MAX_COND    4
 
 /* Predifined conditions */
 #define DRUNK  0
@@ -1299,6 +1300,7 @@ struct char_data {
   struct char_data *questowner;
   struct obj_data *questobj;
   struct char_data *questmob;
+  bool questmob_ineligible;
   int quest_level;
   int quest_status;
   int quest_room_v;

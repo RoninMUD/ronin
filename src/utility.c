@@ -1791,7 +1791,6 @@ bool HAS_BOAT(CHAR *ch) {
 
 int CHAR_HAS_LEGS(CHAR *ch) {
   switch(GET_CLASS(ch)) {
-    case CLASS_LICH:
     case CLASS_LESSER_ELEMENTAL:
     case CLASS_GREATER_ELEMENTAL:
     case CLASS_LESSER_PLANAR:
@@ -1811,7 +1810,6 @@ int CHAR_HAS_LEGS(CHAR *ch) {
 
 int CORPSE_HAS_TROPHY(OBJ *obj) {
   switch(OBJ_MATERIAL(obj)) {
-    case CLASS_LICH:
     case CLASS_LESSER_ELEMENTAL:
     case CLASS_GREATER_ELEMENTAL:
     case CLASS_LESSER_PLANAR:
@@ -1821,7 +1819,6 @@ int CORPSE_HAS_TROPHY(OBJ *obj) {
     case CLASS_PLANT:
     case CLASS_BLOB:
     case CLASS_GHOST:
-    case CLASS_INVERTIBRATE:
       return FALSE;
       break;
   }

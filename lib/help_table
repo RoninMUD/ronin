@@ -2648,7 +2648,7 @@ experience, xp, exp_to_level, xp_to_level, remort_exp, remort_xp,
 remort_multiplier, death_exp, death_xp, gold, coins, money, bank_gold,
 bank_coins, bank_money, quest_timer, club, clan, guild, time_played, played,
 weight_carried, carried_weight, toggles, flags, death_limit, position, wizinv,
-editing_zone
+editing_zone, thac0, thaco, gender, sex
 
 See Also: SCORE
 #
@@ -8097,7 +8097,7 @@ Accumulative: no
 Duration    : Instantaneous / 60 seconds (damage over time)
 Save        : -
 Mana Cost   : 200
-Damage      : 500 + 75 per combat round for 20 rounds
+Damage      : 500 + 150 per combat round for 10 rounds
 
 This powerful spell will inflict a large amount of up-front damage instantly,
 plus a smaller, but still potent burst, every combat round.
@@ -8174,12 +8174,11 @@ Subclass Cavalier: Level 2 (Paladin)
 Usage: trusty-steed (toggles on/off)
 
 When using Pummel or Smite against an enemy, the Crusader has a chance to follow
-up their attack by summoning an ethereal steed that charges into their target,
-dealing 1.5 times the Cavalier's level in damage and knocking them to the
-ground.
+up their attack by summoning an ethereal steed that charges into their target
+dealing 1.5 times the Cavalier's level in damage and knocking them to the ground.
 
-Charging a target who is sitting or resting will cause them to become stunned,
-receiving 2x damage on the next attack.
+Charging a target who is sitting or resting will cause them to become
+stunned, receiving 2x damage on the next attack.
 
 Charging a target who is stunned will cause them to become incapacitated,
 receiving 2.33x damage on the next attack.
@@ -8187,7 +8186,7 @@ receiving 2.33x damage on the next attack.
 Cavaliers with Wisdom greater than 18 will receive a bonus to the chance to
 summon their magical steed.
 
-See Also: SUBCLASSES CAVALIER PUMMEL SMITE
+See Also: SUBCLASSES CAVALIER SMITE
 #
 "WRATH OF GOD"
 
@@ -8198,12 +8197,12 @@ Accumulative: no
 Duration    : -
 Save        : -
 Mana Cost   : 100
-Doamage Done: 600
+Damage Done : 600
 
-The Cavalier calls down the power of his/her god to smite the victim with its
-wrath.  600 damage is dealt to the victim and the target's damroll is reduced by
-10 and HITROLL is reduced by 1 for a duration of 2 ticks. This reduction
-can be stacked up to five times on a single target.
+The Cavalier calls down the power of their god to smite the victim with its
+wrath.  600 damage is dealt to the victim while reducing its damroll by 10 and
+its hitroll by 1 for a duration of 2 ticks.  This reduction can be stacked up
+to 5 times on a single target.
 
 See Also: SUBCLASSES CAVALIER
 #
@@ -8218,10 +8217,10 @@ Save        : -
 Mana Cost   : 100
 
 This is a multipurpose spell designed to protect the victim with a wide range
-of affects.  First and foremost is sanctuary which is identical to the
-sanctuary spell.  In addition the target receives an additional -15 ARMOR, -1 to
-all saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN.  Being able to
-cast this spell on others makes the Cavalier a great addition to any group.
+of affects.  First and foremost is sanctuary which is identical to the Sanctuary
+spell.  In addition the target receives an additional -15 ARMOR, -1 to all
+saving throws, +3 DAMROLL, +25 HP_REGEN and +5 MANA_REGEN.  Being able to cast
+this spell on others makes the Cavalier a great addition to any group.
 
 Power of devotion accepts more than one character as a target.  The spell is
 cast once and is applied to each character in the order specified, one at a
@@ -8237,13 +8236,13 @@ Subclass Cavalier: Level 5 (Paladin)
 
 Usage: smite <victim>
 
-This skill allows the Cavalier to channel their righteous fury against an
-enemy.  In doing so, the Cavalier switches their target and performs a
-single attack against their enemy that consumes their current position
-before knocking them down into a stunned position.
+This skill allows the Cavalier to channel their righteous fury against an enemy.
+In doing so, the Cavalier switches their target and performs a single attack
+against their enemy that consumes their current position before knocking them
+down into a stunned position.
 
-When smiting an enemy the Cavalier also has a chance to summon their
-trusty steed against the target of their attack.
+When smiting an enemy, the Cavalier also has a chance to summon their trusty
+steed against the target of their attack.
 
 See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
 #
@@ -8321,9 +8320,9 @@ Mana Cost   : varies
 
 The Crusader uses his power of divine faith to cure the most serious wounds of
 the victim.  The cost of this spell varies depending on the amount of hit
-points healed, starting at 360 hit points for 50 mana.  However, even the most
-devote Crusaders have limits and thus the maximum amount of healing power they
-can do is 1200 hit points for 120 mana.
+points healed, starting at 375 hit points for 50 mana.  However, even the most
+devote Crusaders have limits, and thus the maximum amount of healing power they
+can do is 1500 hit points for 125 mana.
 
 See Also: SUBCLASSES CRUSADER
 #
@@ -8835,8 +8834,11 @@ Zen and tranquility upon their being.  A Mystic that has attained inner peace
 is unaffected by the visual impairment imposed by blindness.
 
 Inner Peace also provides the Mystic with +10 mana regeneration at all times.
-In addition, the Mystic's in-combat mana regeneration limit by 10, to a maximum
-of 100.  Finally, this ability increases the Mystic's concentration rate by 5%.
+
+In addition, the Mystic's in-combat mana regeneration limit increases by 10, to
+a maximum of 100.
+
+Finally, this ability increases the Mystic's concentration rate by 5%.
 
 See Also: SUBCLASSES MYSTIC REGENERATION
 #

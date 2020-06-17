@@ -320,6 +320,8 @@ do {                   \
 #define GET_MAX_MOVE_POINTS(ch) (ch->points.max_move)
 #define GET_MAX_MOVE(ch)        (move_limit(ch))
 
+#define GET_MANA_REGEN_TMP(ch)  (ch->points.mana_regen_tmp)
+
 #define GET_THACO(ch)           (calc_thaco(ch))
 
 #define GET_HITROLL(ch)         (ch->points.hitroll)
