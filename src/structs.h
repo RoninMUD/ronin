@@ -940,7 +940,7 @@ struct room_data
 #define PLR_TAGBRF            (1 << 28) /* 268435456 */
 #define PLR_PROMPT_NEWLINE    (1 << 29) /* 536870912 */
 
-/* Player flags 2 -- used in ver3.pflag2 */
+/* Toggles -- used in ver3.toggles */
 #define TOG_BLOCK             (1 << 0)  /* 1 */
 #define TOG_CUNNING           (1 << 1)  /* 2 */
 #define TOG_DIRTY_TRICKS      (1 << 2)  /* 4 */
@@ -1166,7 +1166,7 @@ struct char_ver3_data {
   byte house_num; /* Not used yet */
   byte race; /* Not used yet */
   char email_addr[80]; /* Ranger Dec 03 */
-  unsigned long long toggles; /* Player Flags 2 */
+  unsigned long long toggles; /* Toggles */
   unsigned long extra_bitvect; /* Not used yet */
   byte extra_byte[6]; /* Not used yet */
   ubyte rank;
