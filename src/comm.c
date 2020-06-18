@@ -1019,18 +1019,17 @@ void heartbeat(int pulse) {
       int num_tokens = 0;
 
       /* Extract existing tokens. */
-      for (OBJ *token = object_list, *next_obj; token; token = next_obj) {
-        next_obj = token->next;
-
+      for (OBJ *token = object_list, *next_token; token; token = next_token) {
+        next_token = token->next;
 
         if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
           extract_obj(token);
 
           num_tokens++;
         }
-
-        distribute_tokens(num_tokens);
       }
+
+      distribute_tokens(num_tokens);
     }
 #endif
   }
@@ -3338,14 +3337,12 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
       stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
     }
 
-    /* Record mana regen caused by objects and enchantments for use in point_update(). */
-    if (IS_MORTAL(ch)) {
-      if (GET_MANA(ch) > temp_mana) {
-        GET_MANA_REGEN_TMP(ch) = GET_MANA(ch) - temp_mana;
-      }
-      else {
-        GET_MANA_REGEN_TMP(ch) = 0;
-      }
+    /* Record mana regen caused by objects and enchantments. */
+    if (GET_MANA(ch) > temp_mana) {
+      GET_MANA_REGEN_TMP(ch) = GET_MANA(ch) - temp_mana;
+    }
+    else {
+      GET_MANA_REGEN_TMP(ch) = 0;
     }
 
     if (!stop && IS_NPC(ch) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
