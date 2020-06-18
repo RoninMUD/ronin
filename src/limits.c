@@ -350,22 +350,25 @@ int mana_gain(CHAR *ch) {
       year = optimal_age;
     }
 
-    gain = graf(year, 10, 11, 13, 15, 13, 11, 10);
+    gain = graf(year, 9, 11, 13, 17, 13, 11, 9);
 
     /* Base class regen. */
     switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
-        gain += 5;
+        gain += 6;
         break;
 
+      case CLASS_NINJA:
+      case CLASS_AVATAR:
       case CLASS_BARD:
-        gain += 3;
+        gain += 4;
         break;
 
+      case CLASS_PALADIN:
       case CLASS_ANTI_PALADIN:
       case CLASS_COMMANDO:
-        gain += 2;
+        gain += 3;
         break;
     }
 
@@ -379,7 +382,7 @@ int mana_gain(CHAR *ch) {
       }
     }
 
-    /* Class-based bonus. */
+    /* Class-based modifier. */
     switch (GET_CLASS(ch)) {
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
@@ -396,7 +399,7 @@ int mana_gain(CHAR *ch) {
     /* Position-based modifier. */
     switch (GET_POS(ch)) {
       case POSITION_SLEEPING:
-        gain *= 1.75;
+        gain *= 2;
         break;
 
       case POSITION_RESTING:
@@ -408,7 +411,7 @@ int mana_gain(CHAR *ch) {
         break;
 
       case POSITION_FIGHTING:
-        gain /= 2;
+        gain /= 4;
         break;
     }
 
@@ -471,6 +474,10 @@ int mana_gain(CHAR *ch) {
       }
     }
 
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
+
     if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
@@ -479,10 +486,6 @@ int mana_gain(CHAR *ch) {
       else {
         gain /= 16;
       }
-    }
-
-    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-      gain *= 2;
     }
 
     /* Constitution modifier. */
@@ -640,21 +643,18 @@ int hit_gain(CHAR *ch) {
     }
 
     /* Age-based regen. */
-    gain = graf(year, 12, 14, 16, 20, 16, 14, 12);
-
-    /* Base multiplier. */
-    gain *= 2.5;
+    gain = graf(year, 14, 16, 18, 22, 18, 16, 14);
 
     /* Base class regen. */
     switch (GET_CLASS(ch)) {
       case CLASS_WARRIOR:
       case CLASS_NOMAD:
-        gain += 4;
+        gain += 5;
         break;
 
       case CLASS_THIEF:
       case CLASS_COMMANDO:
-        gain += 3;
+        gain += 4;
         break;
 
       case CLASS_NINJA:
@@ -662,7 +662,7 @@ int hit_gain(CHAR *ch) {
       case CLASS_ANTI_PALADIN:
       case CLASS_AVATAR:
       case CLASS_BARD:
-        gain += 2;
+        gain += 3;
         break;
     }
 
@@ -676,12 +676,23 @@ int hit_gain(CHAR *ch) {
       }
     }
 
-    /* Class-based penalty. */
+    /* Class-based modifier. */
     switch (GET_CLASS(ch)) {
+      case CLASS_THIEF:
+      case CLASS_WARRIOR:
+      case CLASS_NOMAD:
+      case CLASS_NINJA:
+      case CLASS_PALADIN:
+      case CLASS_ANTI_PALADIN:
+      case CLASS_AVATAR:
+      case CLASS_BARD:
+      case CLASS_COMMANDO:
+        gain *= 2;
+        break;
+
       case CLASS_MAGIC_USER:
       case CLASS_CLERIC:
-        gain /= 2;
-        break;
+        gain += gain / 2;
     }
 
     /* Position-based modifier. */
@@ -733,11 +744,6 @@ int hit_gain(CHAR *ch) {
       }
     }
 
-    /* Tranquility */
-    if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-      gain *= 1.25;
-    }
-
     /* Bathed in Blood */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_DEFILER, 5)) {
       if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ROOM_BLOOD(CHAR_REAL_ROOM(ch))) {
@@ -747,6 +753,11 @@ int hit_gain(CHAR *ch) {
 
         gain *= multi;
       }
+    }
+
+    /* Tranquility */
+    if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
+      gain *= 1.25;
     }
 
     if (gain > 0) {
@@ -768,6 +779,10 @@ int hit_gain(CHAR *ch) {
       }
     }
 
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+      gain *= 2;
+    }
+
     if (IS_AFFECTED(ch, AFF_POISON)) {
       /* Combat Zen */
       if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
@@ -776,10 +791,6 @@ int hit_gain(CHAR *ch) {
       else {
         gain /= 8;
       }
-    }
-
-    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-      gain *= 2;
     }
 
     /* Constitution modifier. */
@@ -843,7 +854,7 @@ int move_gain(CHAR *ch) {
   }
 
   /* Age-based regen. */
-  gain = graf(year, 18, 21, 24, 26, 24, 21, 18);
+  gain = graf(year, 18, 21, 24, 28, 24, 21, 18);
 
   /* Dark Pact - Increases base class regen. */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
@@ -870,6 +881,10 @@ int move_gain(CHAR *ch) {
       break;
   }
 
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+    gain *= 2;
+  }
+
   if (IS_AFFECTED(ch, AFF_POISON)) {
     /* Combat Zen */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
@@ -878,10 +893,6 @@ int move_gain(CHAR *ch) {
     else {
       gain /= 4;
     }
-  }
-
-  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
   }
 
   if (gain > 0) {
@@ -1253,9 +1264,6 @@ void point_update(void) {
       int hit_regen = point_update_hit(ch);
       int mana_regen = point_update_mana(ch);
       int move_regen = point_update_move(ch);
-
-      /* Add mana regen caused by objects and enchants recorded in signal_char(). */
-      mana_regen += GET_MANA_REGEN_TMP(ch);
 
       GET_HIT(ch) = MIN(MAX(GET_HIT(ch) + hit_regen, 1), hit_limit(ch));
       GET_MANA(ch) = MIN(MAX(GET_MANA(ch) + mana_regen, 0), mana_limit(ch));
