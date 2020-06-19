@@ -143,7 +143,7 @@ A suit of banded mail has been dropped here by some careless person.~
 9 213962752 9
 25 0 0 0
 30 75000 45000
-5
+10
 E
 mail suit banded bandit armor~
 Unlike ordinary banded mail intended to be worn into combat, this suit of armor
@@ -206,7 +206,7 @@ A small sand-colored talisman shaped like the crescent moon has been left here.~
 9 248561728 5
 15 0 0 0
 2 88000 24000
-5
+25
 E
 talisman sand desert crescent moon~
 A small sand-colored figure of a crescent moon hangs from a golden chain to
@@ -238,7 +238,7 @@ A pale colored shell that looks like a horn is here, needing a player.~
 24 217100608 16385
 0 0 0 0
 4 200000 90000
-3
+25
 E
 horn pale conch shell~
 Crafted from a large conch shell, this horn is absolutely beautiful.  Swirls of
@@ -267,7 +267,7 @@ A pair of fine leather boots, polished and black, sit here.~
 9 141586496 65
 8 0 0 0
 2 130000 100000
-3
+25
 E
 boots pair fine polished black~
 A pair of fine leather boots have been crafted from only the best materials.
@@ -301,7 +301,7 @@ A black silken cloak, lined with purple as been dropped here.~
 9 141619268 1025
 10 0 0 0
 8 130000 100000
-5
+25
 E
 mantle black silken silk cloak purple battle mage~
 The cloak is made from a very expensive-looking and thick form of silk, though
@@ -333,7 +333,7 @@ A small metal circlet made of shining platinum rests here unobtrusively.~
 11 246461507 17
 0 0 0 0
 1 100000 40000
-4
+25
 E
 circlet small metal shining platinum devotion~
 The circlet is made from several platinum rings intricately woven together to
@@ -363,7 +363,7 @@ A pair of high quality red-steel leg plates have been dropped here.~
 9 179363840 33
 15 0 0 0
 8 80000 60000
-4
+25
 E
 plates pair red steel leg tactical zyca~
 This is a pair of very sturdy-looking leg plates.  Various leather straps allow
@@ -392,7 +392,7 @@ $r frostbrand hacks into $V with a tremendous force!~
 26 244376643 8193
 63 7 7 12
 32 500000 100000
-4
+25
 E
 frostbrand blade huge cobalt blue steel sword~
 Crafted from cobalt-blue steel, this enormous blade is a true weapon of war.
@@ -425,7 +425,7 @@ Upon the ground lies a shield fashioned of sharp blades.~
 9 134234624 513
 10 0 0 0
 10 160000 80000
-3
+25
 E
 shield sharp blades bladed agony~
 This shield is really a wicked array of blades that have been forged together
@@ -456,7 +456,7 @@ A dark lantern is here, smoldering quietly with an evil glow.~
 1 134217799 65537
 0 0 0 0
 5 240000 160000
-3
+50
 E
 lantern dark smoldering cinders~
 Made from the blackest iron is a lantern of purely evil origin.  This light-
@@ -488,7 +488,7 @@ A large ribcage fashioned in the shape of armor with wings rests here.~
 9 207647248 9
 24 0 0 0
 50 400000 120000
-3
+50
 E
 armor large ribcage wings winged demon~
 This armor is a gruesome sight indeed, for it is made from the hollowed out
@@ -521,7 +521,7 @@ A thick belt crafted from blood-red flesh lies coiled here.~
 9 171999824 2049
 10 0 0 0
 5 333333 140000
-2
+50
 E
 belt thick blood red flesh demon~
 The belt is crafted from the thick blood-red hide of a demon.  Strange symbols
@@ -551,7 +551,7 @@ A thick belt crafted from blood-red flesh lies coiled here.~
 9 171999824 2049
 10 0 0 0
 5 333333 140000
-15
+25
 E
 belt thick blood red flesh demon~
 The belt is crafted from the thick blood-red hide of a demon.  Strange symbols

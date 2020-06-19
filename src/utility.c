@@ -366,6 +366,39 @@ char *str_tail(char *dest, size_t dest_size, const char *src, size_t n) {
 }
 
 /**
+ * @brief Parses a provided string and extracts the substring between the first
+ *   and second delimiter.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ * @param[in] delim1 The first delimiter.
+ * @param[in] delim2 The second delimiter.
+ *
+ * @return The length of the substring.
+ */
+size_t str_sub_delim(char *dest, size_t dest_size, const char *src, int delim1, int delim2) {
+  size_t sub_len = 0;
+
+  if (src) {
+    char *d1 = strchr(src, delim1);
+    char *d2 = strrchr(src, delim2);
+
+    int d1_idx = d1 ? d1 - src : -1;
+    int d2_idx = d2 ? d2 - src : -1;
+
+    if (d1 && d2 && (d2_idx - d1_idx > 1)) {
+      sub_len = strlen(str_sub(dest, dest_size, src, d1_idx + 1, d2_idx - d1_idx - 1));
+    }
+    else {
+      dest[0] = '\0';
+    }
+  }
+
+  return sub_len;
+}
+
+/**
  * @brief Deletes a list of substrings from a string.
  *
  * @param[in,out] src The source string.

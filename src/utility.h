@@ -166,6 +166,7 @@ size_t str_cat(char *dest, size_t dest_size, const char *src);
 char *str_sub(char *dest, size_t dest_size, const char *src, size_t start_idx, size_t n);
 char *str_head(char *dest, size_t dest_size, const char *src, size_t n);
 char *str_tail(char *dest, size_t dest_size, const char *src, size_t n);
+size_t str_sub_delim(char *dest, size_t dest_size, const char *src, int delim1, int delim2);
 char *str_del(char *src, ...);
 char *str_upper(char *dest, size_t dest_size, char *src);
 char *str_lower(char *dest, size_t dest_size, char *src);
