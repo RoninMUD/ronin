@@ -9138,8 +9138,8 @@ decision, the player is set back to level 1, with the gender and class of
 their choice. Their core stats are set to 13 across the board and they are
 given a pool of remort experience based on the valuation of their experience
 point investments prior to remort. This pool of experience is spent
-automatically as the player gains experience, and is returned to them at a
-rate of 4 times the normal amount of experience the player gains. This
+automatically as the player gains experience, and is returned to them at an
+increased multiple of the normal amount of experience the player gains. This
 includes experience gained through killing a mob and dealing damage (also
 known as hit experience).
 
@@ -9159,6 +9159,23 @@ that best fits their style of play. Players are not penalized by changing
 their mind post-remort, and are simply required to regain any experience
 they had previously gathered in order to complete the process, restarting it
 at any time they see fit.
+
+See Also: "REMORT MULTIPLIER"
+#
+"REMORT MULTIPLIER"
+
+During the remort process, a player gains exp at an increased multiple of the
+normal rate.  This increase is in effect until the remort pool of exp is
+exhausted.
+
+The multiple starts at 5x and increases as the player increases in power.  To
+be specific, the multiplier increases when:
+
+1. Stats hit 18
+2. Strength hits 51 and 100
+3. Level hits 30, 40, 45 and 50
+
+See also: STATS REMORT
 #
 CUNNING
 
