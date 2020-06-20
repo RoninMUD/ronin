@@ -1698,7 +1698,7 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge, peek, pick, throw, backflip (level 20), camp (level 35)
+Skills: dodge, peek, pick, throw, taunt (level 20), dual (level 25), backflip (level 20), camp (level 35)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1815,7 +1815,7 @@ Cunning                                               Y
 Disarm                       Y              Y    Y
 Disembowel                                  Y              Y
 Dodge              Y                   Y    Y         Y
-Dual                         Y                             Y
+Dual               Y         Y                             Y
 Hide          Y                        Y              Y
 Hidden Blade  Y
 Kick          Y              Y         Y    Y    Y    Y    Y
@@ -1963,7 +1963,7 @@ well you learn it, and your Dexterity modifier.
 #
 DUAL
 
-Class: Warrior Commando
+Class: Warrior Commando Bard
 
 A skill which gives an automatic second attack during the fight. The chance of
 its success depends on how well you learn it.
@@ -3238,7 +3238,7 @@ ARMOR
 
 Usage       : cast 'armor' <victim>
 Accumulative: No
-Level       : Level 5 mage, 1 cleric, 2 paladin, 5 bard
+Level       : Level 5 mage, 1 cleric, 2 paladin
 Duration    : 24 ticks
 Mana Cost   : 5 (cost will be higher at lower levels)
 
@@ -3298,7 +3298,7 @@ BLINDNESS
 
 Usage       : cast 'blindness' <victim>
 Accumulative: No.
-Level       : Level 8 mage, 6 cleric, 6 ninja, 7 anti-paladin, 13 bard.
+Level       : Level 8 mage, 6 cleric, 6 ninja, 7 anti-paladin
 Duration    : 2 ticks.
 Mana Cost   : 15 (cost will be higher at lower levels)
 
@@ -3521,7 +3521,7 @@ See Also: -
 
 Usage       : cast 'cure critic' <victim>
 Accumulative: -
-Level       : Level 9 cleric, 10 paladin, 11 bard.
+Level       : Level 9 cleric, 10 paladin
 Duration    : Instantaneous
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -3625,8 +3625,7 @@ See Also: -
 
 Usage       : cast 'detect invisibility' [self]
 Accumulative: No
-Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 3 bard,
-              5 anti-paladin.
+Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 5 anti-paladin
 Duration    : level * 5 ticks.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -3698,7 +3697,7 @@ HEAL
 
 Usage       : cast 'heal' <victim>
 Accumulative: No
-Level       : Level 14 cleric, 29 ninja, 21 paladin, 26 bard.
+Level       : Level 14 cleric, 29 ninja, 21 paladin
 Duration    : Instantaneous
 Mana Cost   : 50
 
@@ -3726,18 +3725,20 @@ See Also: "Cure Blindness" "Heal"
 FORGET
 
 Usage       : cast 'forget' <victim>
-Level       : Level 11 mage, 14 anti-paladin, 15 bard.
+Level       : Level 11 mage, 14 anti-paladin
 Duration    : Instantaneous
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Some monsters have a good memory and if a person were to leave a fight
 and come back later the monster would remember that person and attack.
 Forget will cause the monster to...uh...where was I?
+
+See Also: SONGS
 #
 "HOLD PERSON"
 
 Usage       : cast 'hold' <victim>
-Level       : Level 21 mage, 24 ninja, 26 paladin, 18 bard.
+Level       : Level 21 mage, 24 ninja, 26 paladin
 Save        : SAVE PARALYSIS
 Duration    : Level of the caster ticks
 Mana Cost   : 15 (cost will be higher at lower levels)
@@ -3745,12 +3746,14 @@ Mana Cost   : 15 (cost will be higher at lower levels)
 Holds a person.  If the monster is aggressive, it will not attack other
 players.  It will not move around the world.  If it gets attacked by the others
 it can only retreat at second round.
+
+See Also: SONGS
 #
 INVISIBILITY
 
 Usage       : cast 'invisibility' <victim | object>
 Accumulative: No
-Level       : Level 4 mage, 7 ninja, 9 anti-paladin, 8 bard.
+Level       : Level 4 mage, 7 ninja, 9 anti-paladin
 Duration    : 24 ticks, permanent on objects.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -3789,11 +3792,13 @@ FEAR
 
 Usage       : cast 'fear' <victim>
 Accumulative: -
-Level       : Level 9 mage, 10 anti-paladin, 12 bard.
+Level       : Level 9 mage, 10 anti-paladin
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 If you cast this spell on someone then the victim may become scared
 and flee. This spell can be cast during battle.
+
+See Also: SONGS
 #
 "LOCATE OBJECT"
 
@@ -3895,7 +3900,7 @@ SANCTUARY
 
 Usage       : cast 'sanctuary' <victim>
 Accumulative: No
-Level       : Level 13 cleric, 20 paladin, 23 bard.
+Level       : Level 13 cleric, 20 paladin
 Duration    : Level/5 ticks
 Mana Cost   : 50
 
@@ -3968,14 +3973,14 @@ See Also: SPHERE
 
 Usage       : cast 'sleep' <person>
 Accumulative: Yes (duration)
-Level       : Level 14 mage, 19 anti-paladin, 17 bard.
+Level       : Level 14 mage, 19 anti-paladin
 Duration    : 4 ticks + one hour per level
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 If the victim fails a saving throw versus spell he or she will fall asleep.
 A person who is affected by sleep can only be awakened if attacked.
 
-See Also: -
+See Also: SONGS
 #
 "SPELL STRENGTH"
 
@@ -4013,7 +4018,7 @@ See Also: -
 
 Usage       : cast 'word of recall'
 Accumulative: -
-Level       : Level 13 mage, 11 cleric, 19 ninja, 19 commando, 19 bard.
+Level       : Level 13 mage, 11 cleric, 19 ninja, 19 commando
 Duration    : Instantaneous
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -4041,7 +4046,7 @@ See Also: "GROUP SUMMON"
 
 Usage       : cast 'charm person' <victim>
 Accumulative: No
-Level       : Level 14 mage, 18 bard.
+Level       : Level 14 mage
 Duration    : (432/Intelligence points of victim) ticks
 Mana Cost   : 50
 
@@ -4053,7 +4058,7 @@ over level 30.
 A charmed person will follow you and not be able to attack you.  You can give
 commands to a charmed person using the order command. 
 
-See Also: FOLLOW ORDER
+See Also: FOLLOW ORDER SONGS
 #
 "ANIMATE DEAD"
 
@@ -4188,7 +4193,7 @@ See Also: SHOCKING GRASP
 Usage       : cast 'colour spray' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 11 mage, 10 commando, 17 bard.
+Level       : Level 11 mage, 10 commando
 Save        : Versus spell for half damage.
 Mana Cost   : 23 (cost will be higher at lower levels)
 Old Damage done : 80
@@ -4272,7 +4277,7 @@ Reveal allows the caster to return invisible people back to the visible world.
 Usage       : cast 'lethal fire' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 24 mage, 27 commando, 28 bard.
+Level       : Level 24 mage, 27 commando
 Save        : Versus spell for half damage.
 Mana Cost   : 50
 Old Damage done : 180 to 230
@@ -4331,7 +4336,7 @@ See Also: -
 
 Usage       : cast 'total recall'
 Accumulative: -
-Level       : Level 13 bard, 18 cleric.
+Level       : Level 18 cleric.
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Set in the future on the planet Mars, a man has his memory altered in order to
@@ -4340,7 +4345,7 @@ expose a ring of rebels...Oh wait..that was the movie...
 This spell will recall everyone in the room back to the temple including the
 caster.
 
-See Also: WORD OF RECALL
+See Also: "WORD OF RECALL" SONGS
 #
 "DEATH SPRAY"
 
@@ -4376,7 +4381,7 @@ See Also: Dispel Evil
 Usage       : cast 'evil word'
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 23 cleric, 26 anti-paladin, 24 bard.
+Level       : level 23 cleric, 26 anti-paladin
 Save        : Same as dispel good
 Mana Cost   : 80
 Damage Done : 130
@@ -4386,7 +4391,7 @@ gates of Hell to be opened in the vicinity.  The corruption of the pits
 of hell will stream forth and burn all those who do not acknowledge the
 dominance of the powers of darkness.
 
-See Also: "DISPEL GOOD" SONGS
+See Also: "DISPEL GOOD"
 #
 "LAY HANDS"
 
@@ -4425,7 +4430,7 @@ VITALITY
 
 Usage       : cast 'vitality' <victim>
 Accumulative: -
-Level       : Level 8 mage, 16 cleric, 14 paladin, 7 bard.
+Level       : Level 8 mage, 16 cleric, 14 paladin
 Mana cost   : 25 (cost will be higher at lower levels)
 
 The caster gives a refreshing pick-me-up to the tired victim, restoring
@@ -4458,7 +4463,7 @@ soul to the path of righteousness.
 SATIATE
 
 Usage       : cast 'satiate' <victim>
-Level       : Level 15 cleric, 15 bard.
+Level       : Level 15 cleric
 Mana Cost   : 10 (cost will be higher at lower levels)
 
 This spell can fill your stomach to full for 24 ticks, and you can cast
@@ -4687,7 +4692,7 @@ INFRAVISION
 Usage       : cast 'infravision' <victim>
 Accumulative: -
 Duration    : 30 + Level of Caster ticks
-Level       : Level 5 Mage, 5 Ninja, 11 Anti-Paladin, 21 Bard.
+Level       : Level 5 Mage, 5 Ninja, 11 Anti-Paladin
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 The victim of this spell gains the ability to see in the dark without
@@ -4734,7 +4739,7 @@ FLY
 
 Usage       : cast 'fly' <victim>
 Duration    : 12 ticks
-Level       : Level 10 mage, 9 bard
+Level       : Level 10 mage
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell allows players to fly over water and some other obstructions.
@@ -4787,26 +4792,46 @@ Songs work in NOMAGIC rooms also.
 
 Level Song's Name                       Mana    Spell
 -------------------------------------------------------------------
- (5)  Seal with a Kiss                   20     (armor)
- (7)  Like a Prayer                      20     (bless)
- (9)  One Day I will Fly Away            20     (fly)
-(11)  We don't need another hero         25     (cure critic)
-(13)  Smoke gets in your eyes            25     (blindness)
-(15)  Best Of Me                         25     (satiate)
-(16)  I'm Taking a Walk                  30     (vitality)
-(17)  Dangerous                          30     (colour spray)
-(18)  Somebody's Watching Me             30     (detect invisibility)
-(19)  We are the World                   30     (total recall)
-(21)  Moonlight Shadow                   30     (infravision)
+ (5)  Seal with a Kiss                   5      (armor)
+   or Love is a Battlefield
+ (7)  I Can See Clearly Now              15     (cure blindness)
+ (9)  One Day I will Fly Away            25     (fly)
+   or Come Fly With Me
+(11)  We Don't Need Another Hero         25     (cure critic)
+(12)  Forget You                         15     (forget)
+(13)  Smoke Gets In Your Eyes            15     (blindness)
+   or Blinded by the Light
+(14)  Enter Sandman                      25     (sleep)
+(15)  Best Of Me                         10     (satiate)
+   or Hungry Like the Wolf
+(16)  I'm Taking a Walk                  25     (vitality)
+(17)  Dangerous                          25     (colour spray)
+   or Purple Rain
+(18)  Somebody's Watching Me             25     (detect invisibility)
+(19)  We Are the World                   30     (total recall)
+   or Mama, I'm Coming Home
+(20)  Don't Fear the Reaper              15     (fear)
+(21)  Moonlight Shadow                   20     (infravision)
+   or I Wear My Sunglasses at Night
+(22)  This Charming Man                  50     (charm person)
 (23)  Nothing Compares to you            50     (sanctuary)
-(24)  Spirits in the Material World      50     (invisibility)
-(24)  Better than the Devil you Know     60     (evil word)
-(25)  Toy Soldier                        60     (animate-dead)
-(26)  Everything I do I do it for you    70     (heal)
-(28)  A View to a Kill                   80     (lethal fire)
-(35)  Lifting Shadows of a Dream         25     (remove poison)
-(45)  There is No Heart That Won't Heal  80     (rejuvenation)
+   or Safety Dance
+(25)  Toy Soldier                        50     (animate-dead)
+   or Thriller
+(26)  Everything I Do I Do It For You    50     (heal)
+   or Comfortably Numb
+(27)  Hold On                            15     (hold)
+(28)  A View to a Kill                   50     (lethal fire)
+   or Ring of Fire
+(36)  Lifting Shadows of a Dream         25     (remove poison)
+   or Every Rose Has Its Thorn
+(42)  Canned Heat                        120    (haste)*
+(46)  There is No Heart That Won't Heal  80     (rejuvenation)
+   or Forever Young
 (50)  Come Together                      100    (group summon)
+
+* Haste song has guaranteed effect on clerics and bards, other classes
+have a 5% chance to be affected.
 #
 SPELL SPELLS
 
@@ -4820,30 +4845,12 @@ See help for:
 
        BARD SPELLS
 ----------------------------------------------------------
-       (3) Detect Invisibility
-       (5) Armor
-       (7) Vitality
-       (8) Invisibility
-       (9) Identify               (9) Fly
+       (5) Ventriloquate
+       (9) Identify
       (10) Locate Object
-      (11) Cure Critic
-      (12) Fear                  (13) Blindness
-      (13) Locate Character      (13) Total Recall
-      (15) Forget                (15) Satiate
-      (17) Sleep                 (17) Colour Spray
-      (18) Charm Person
-      (18) Hold Person
-      (19) Word of Recall
-      (21) Infravision
-      (23) Sanctuary
-      (24) Evil Word
-      (25) Animate Dead
-      (26) Heal
-      (28) Lethal Fire
-      (45) Haste
-      (50) Rejuvenation
+      (13) Locate Character
 
-Use HELP SONGS to see the bard's songs
+Use HELP SONGS to see the bard's songs.
 #
 LINK LINKS
 
@@ -6640,7 +6647,7 @@ Ninja             RONIN           MYSTIC
 Nomad             TRAPPER         RANGER
 Paladin           CAVALIER        CRUSADER
 Anti-Paladin      DEFILER         INFIDEL
-Bard              BLADE SINGER    CHANTER
+Bard              BLADESINGER     CHANTER
 Commando          LEGIONNAIRE     MERCENARY
 
 Each subclass is broken up into 5 levels.  To gain these levels, players must
@@ -8478,22 +8485,20 @@ mana, there is a large risk of death.
 
 See Also: SUBCLASSES DRUID
 #
-"BLADE SINGER"
+BLADESINGER
 
-Blade Singer is one of the Bard subclasses and is broken up
-into 5 levels.  At each level, the Blade Singer receives a
+Bladesinger is one of the Bard subclasses and is broken up
+into 5 levels.  At each level, the Bladesinger receives a
 new or improved skill or song.  For help on each skill
 or song, just type HELP <skill/song>
 
 Level  Song/Skill                          Mana
-  1    "brightest flame burns quickest"     75     (RALLY)
+  1    "brightest flame burns quickest"     50     (RALLY)
+         or "bulls on parade"
   2    SHOWMANSHIP
-  3    "there is no heart that won't heal" 100     (REJUVENATION)
-  4    MIMICRY
-  5    "you've been thunderstruck"         250     (THUNDERBALL)
-
-The protection from the song at level 4 is dependent on the
-alignment of the Blade Singer.
+  3    BLADESINGING
+  4    "ballroom blitz"                     80     (BLADE DANCE)
+  5    MIMICRY
 
 See Also: SUBCLASSES CHANTER SONGS BARD
 #
@@ -8507,32 +8512,76 @@ type HELP <song>
 Level  Song                              Mana
   1    "bridge over troubled water"       40         (RESPITE)
   2    "something takes a part of me"     60         (WAR CHANT)
+         or "war"
   3    "if I could change the world"     100         (LUCK)
+         or "lucky"
   4    "hero of the day"                 150         (AID)
+         or "power of love"
   5    "we are family"                   150         (CAMARADERIE)
 
-See Also: SUBCLASSES "BLADE SINGER" SONGS BARD
+See Also: SUBCLASSES BLADESINGER SONGS BARD
+#
+BLADESINGING
+
+Subclass Bladesinger: Level 3 (Bard)
+
+The Bladesinger has honed their voice to the highest tier, and
+their vocals have gained a degree of lethality. Their songs will
+imbue their blades with the powerful magic of music.
+When the Bladesinger sings a song, a "Bladesinging" enchantment
+is applied, granting them a bonus to their damage roll equal to
+half the mana cost of the song.  If another song is sung before
+the enchantment expires, it will overwrite the current one and
+apply a new one based on the latest song's mana cost.
+
+This is a passive ability, but the damage bonus enchantment lasts
+10 rounds.
+
+See Also: SUBCLASSES BLADESINGER SONGS BARD
+#
+"BLADE DANCE"
+
+Usage       : song 'ballroom blitz'
+Level       : Bladesinger SC4
+Duration    : Instantaneous
+Damage      : 350
+Mana        : 80
+
+An accomplished Bladesinger weaves songs and combat together in one
+fluid assault of musicality and physicality.  This song does damage
+to the room, in addition the Bladesinger will perform a hit against
+each target.
+
+See Also: SUBCLASSES BLADESINGER SONGS BARD
 #
 MIMICRY
 
-The Blade Singer is a master of impersonations and mocking mimicry,
+Subclass Bladesinger: Level 5 (Bard)
+
+The Bladesinger is a master of impersonations and mocking mimicry,
 and periodically demonstrates this prowess in combat with powerful
-results.  The frequency of the bard's Mimicry is based on Dexterity.
+results.  This is a passive skill that is always active, and the
+frequency of the bard's Mimicry is based on Dexterity.
 
 Mimicked actions:
-- Cleric: miracle
-- Mage: thunderball
-- Warrior: punch or disembowel (target HP dependent)
-- Thief: circle
-- Paladin: fury (self 0 ticks)
-- Anti-Paladin: bloodlust (self 1 tick)
-- Ninja: hit + divine wind
-- Bard: firebreath (self)
-- Commando: triple + disarm
+- Cleric: miracle (opponent of target)
+- Mage: perceive (self) + thunderball (ignores sphere/shield)
+- Warrior: punch + quad, or disembowel (target HP dependent)
+- Thief: circle + twist
+- Paladin: pummel + fury (self 0 ticks)
+- Anti-Paladin: pummel w/ hidden-blade + rage/bloodlust (self 0 tick)
+- Ninja: dual + divine wind + kick
+- Bard: dual + rejuvenation song + heal song + taunt (anything you can do i can do better)
+- Commando: triple + eshock + disarm
 
-See Also: SUBCLASSES "BLADE SINGER" BARD
+See Also: SUBCLASSES BLADESINGER BARD
 #
 RESPITE
+
+Usage       : song 'bridge over troubled water'
+Level       : Chanter SC1
+Duration    : Instantaneous
+Mana        : 40
 
 This song is the ultimate in party status protection. With it the
 Chanter will remove one negative status ailment from each player
@@ -8550,51 +8599,69 @@ character in the room from the following list:
 
 If the PC is affected by none of these, it will set their wait
 (skill/spell lag etc.) to zero, though this wait reset does not
-apply to the Chanter. The mana cost is 40.
+apply to the Chanter.
 
 See Also: SUBCLASSES CHANTER SONGS BARD
 #
-"GROUP SUMMON""
+"GROUP SUMMON"
+
+Usage       : song 'come together'
+Level       : 50
+Duration    : Instantaneous
+Mana        : 100
 
 This song will summon all PC group members to the bards location,
-with the same limitations as the summon spell. The mana cost is 100.
+with the same limitations regarding whether someone can be summoned
+as the summon spell.
 
 See Also: SUMMON SONGS BARD
 #
 RALLY
 
-Subclass Blade Singer: Level 1 (Bard)
+Usage       : song 'brightest flame burns quickest'
+              song 'bulls on parade'
+Level       : Bladesinger SC1
+Duration    : 5
+Mana        : 50
 
-This song increases the hitroll of all characters in
-the room by 5.  Mana cost is 75 and duration is 10
-ticks.
+This song increases the hitroll of all characters in the room by 5.
+Mana cost is 50 and duration is 5 ticks.
 
-See Also: SUBCLASSES "BLADE SINGER"
+See Also: SUBCLASSES BLADESINGER HITROLL
 #
 SHOWMANSHIP
 
-Subclass Blade Singer: Level 2 (Bard)
+Subclass Bladesinger: Level 2 (Bard)
 
-The Blade Singer is fueled by their audience, and gains power the greater its
-size, especially when comprised of fellow Bard College graduates.  Being a
-great showman bestows upon the Blade Singer a 5% damage bonus per PC in the
-room and group, or 10% if the PC is a bard.
+The Bladesinger is fueled by their audience, and gains power the greater its
+size.  Being a great showman bestows upon the Bladesinger a 5% damage bonus
+per PC in the room and group.
 
 This is a passive damage multiplier that is always applied, but only to combat
-damage. This caps at a 200% bonus, or a 50% bonus if affected by fury (3x dmg).
+damage. This caps at a 200% bonus, or a 100% bonus if affected by rage, or a
+50% bonus if affected by fury (3x dmg).
 
-See Also: SUBCLASSES "BLADE SINGER" BARD
+See Also: SUBCLASSES BLADESINGER BARD
 #
 REJUVENATION
 
-This song will heal all of the bard's group members for 400 hit points, the
-cost is 80 mana. It is available at level 45.
+Usage       : song 'there is no heart'
+            : song 'forever young'
+Level       : 46
+Duration    : Instantaneous
+Mana        : 80
+
+This song will heal all of the bard's group members for 400 hit points.
 
 See Also: SONGS
 #
 "WAR CHANT"
 
-Subclass Chanter: Level 2 (Bard)
+Usage       : song 'something takes a part of me'
+            : song 'war'
+Level       : Chanter SC2
+Duration    : 5
+Mana        : 60
 
 This song has three effects.  First, it increases all group member saving throws
 by 2.  Second, it reduces all other character's hitrolls by 4.  The victim has
@@ -8607,7 +8674,10 @@ See Also: SUBCLASSES CHANTER
 #
 CAMARADERIE
 
-Subclass Chanter: Level 5 (Bard)
+Usage       : song 'we are family'
+Level       : Chanter SC5
+Duration    : 5
+Mana        : 150
 
 This song binds the fate of the affected characters to one another. Whenever
 any character affected by Camaraderie (in a room with others affected by
@@ -8621,20 +8691,29 @@ See Also: SUBCLASSES CHANTER
 #
 LUCK
 
-Subclass Chanter: Level 3 (Bard)
+Usage       : song 'if i could change the world'
+            : song 'lucky'
+Level       : Chanter SC3
+Duration    : 5
+Mana        : 100
 
 This song increases the party regen by 75 hit points and 15 mana each tick for
 5 ticks.  Additionally, characters affected by luck have a 20% chance to avoid
-death on an otherwise killing blow. The cost is 100 mana.
+death on an otherwise killing blow.
 
 See Also: SUBCLASSES CHANTER
 #
 AID
 
-Subclass Chanter: Level 4 (Bard)
+Usage       : song 'hero of the day'
+Level       : Chanter SC4
+Duration    : 5
+Mana        : 150
 
-This song increases the damage roll of every character in the room by 5 for a
-duration of 4 ticks.  The mana cost is 150.
+This song increases the damage of all characters in the room by 10%, applied
+as an enchantment with the Chanter's name; e.g. "Ranger's Aid"
+This allows the effect to stack from multiple Chanters, and it applies to all
+damage types (spell, song, combat, skill, etc.)
 
 See Also: SUBCLASSES CHANTER
 #
@@ -9202,5 +9281,5 @@ When self-cast upon the Mercenary, this defensive spell will modify their AC by
 -20, making them harder to hit.  If cast upon a different target, the spell is
 less effective, granting only -10 AC instead.
 
-See Also: SUBCLASSES MERCENARY
+See Also: SUBCLASSES COMMANDO
 #~

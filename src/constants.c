@@ -2800,6 +2800,8 @@ const char * const bard_skills[] = {
   "peek",
   "pick",
   "throw",
+  "taunt",        /* Level 20 */
+  "dual",         /* Level 25 */
   "backflip",     /* Level 20 */
   "camp",         /* Level 35 */
   "\n"

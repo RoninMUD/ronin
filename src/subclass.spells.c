@@ -64,7 +64,7 @@ void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     send_to_char("You feel rallied!\n\r", victim);
 
     af.type       = SPELL_RALLY;
-    af.duration   = 10;
+    af.duration   = 5;
     af.modifier   = 5;
     af.location   = APPLY_HITROLL;
     af.bitvector  = 0;
@@ -1081,7 +1081,7 @@ void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     send_to_char("You feel powerful!\n\r", victim);
 
     af.type       = SPELL_AID;
-    af.duration   = 4;
+    af.duration   = 5;
     af.modifier   = 5;
     af.location   = APPLY_DAMROLL;
     af.bitvector  = 0;

@@ -387,46 +387,168 @@ int SPELL_LEVEL(struct char_data *ch, int spell_number)
 
 const char * const songs[] =
 {
-  "somebody's watching me",           /* detect invis */
-  "seal with a kiss",                 /* armor */
-  "like a prayer",                    /* bless */
-  "one day i will fly away",          /* fly */
-  "we don't need another hero",       /* cure critical */
-  "smoke get in your eyes",           /* blindness */
-  "best of me",                       /* statiate */
-  "i'm taking a walk",                /* vitality */
-  "dangerous",                        /* color spray */
-  "we are the world",                 /* total recall */
-  "moonlight shadow",                 /* infra */
-  "nothing compares to you",          /* santuary */
-  "better than the devil you know",   /* evil word */
-  "toy soldiers",                     /* animate dead */
-  "everything i do i do it for you",  /* heal */
-  "a view to a kill",                 /* lethal fire */
-  "spirits in the material world",    /* mass invis */
-  "lifting shadows of a dream",       /* remove poison */
-  "brightest flame burns quickest",   /* rally */
-  "something takes a part of me",     /* warchant */
-  "if i could change the world",      /* luck */
-  "there is no heart that won't heal",/* rejuvenation */
-  "hero of the day",                  /* aid */
-  "heaven beside you",                /* protection from evil/good */
-  "you've been thunderstruck",        /* thunderball */
-  "we are family",                    /* camaraderie */
-  "bridge over troubled water",       /* respite */
-  "come together",                    /* group summon */
+  "somebody's watching me",           /*1 detect invis */
+  "seal with a kiss",                 /*2 armor */
+  "don't fear the reaper",            /*3 fear */
+  "one day i will fly away",          /*4 fly */
+  "we don't need another hero",       /*5 cure critical */
+  "smoke get in your eyes",           /*6 blindness */
+  "best of me",                       /*7 satiate */
+  "i'm taking a walk",                /*8 vitality */
+  "dangerous",                        /*9 colour spray */
+  "we are the world",                 /*10 total recall */
+  "moonlight shadow",                 /*11 infravision */
+  "nothing compares to you",          /*12 santuary */
+  "i can see clearly now",            /*13 cure blindness */
+  "toy soldiers",                     /*14 animate dead */
+  "everything i do i do it for you",  /*15 heal */
+  "a view to a kill",                 /*16 lethal fire */
+  "enter sandman",                    /*17 sleep */
+  "lifting spirits of a dream",       /*18 remove poison */
+  "brightest flame burns quickest",   /*19 rally */
+  "something takes a part of me",     /*20 warchant */
+  "if i could change the world",      /*21 luck */
+  "there is no heart that won't heal",/*22 rejuvenation */
+  "hero of the day",                  /*23 aid */
+  "canned heat",                      /*24 haste */
+  "ballroom blitz",                   /*25 blade dance */
+  "we are family",                    /*26 camaraderie */
+  "bridge over troubled water",       /*27 respite */
+  "come together",                    /*28 group summon */
+  "love is a battlefield",            /*29 armor (alternate) */
+  "come fly with me",                 /*30 fly (alternate) */
+  "blinded by the light",             /*31 blindness (alternate) */
+  "hungry like a wolf",               /*32 satiate (alternate) */
+  "purple rain",                      /*33 colour spray (alternate) */
+  "mama, i'm coming home",            /*34 total recall (alternate) */
+  "i wear my sunglasses at night",    /*35 infravision (altnerate) */
+  "this charming man",                /*36 charm */
+  "safety dance",                     /*37 sanctuary (alternate) */
+  "thriller",                         /*38 animate-dead (alternate) */
+  "comfortably numb",                 /*39 heal (alternate) */
+  "hold on",                          /*40 hold */
+  "ring of fire",                     /*41 lethal fire (alternate) */
+  "every rose has its thorn",         /*42 remove poison (alternate) */
+  "bulls on parade",                  /*43 rally (altnerate) */
+  "war",                              /*44 warchant (alternate) */
+  "lucky",                            /*45 luck (alternate) */
+  "forever young",                    /*46 rejuvenation (alternate) */
+  "power of love",                    /*47 aid (alternate) */
+  "forget you",                       /*48 forget */
   "\n"
 };
 
 int song_level[] =
 {
-  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,35,30,30,30,45,30,30,30,30,30,50
+  18, /*1 detect invis */
+  5,  /*2 armor */
+  20, /*3 fear */
+  9,  /*4 fly */
+  11, /*5 cure critical */
+  13, /*6 blindness */
+  15, /*7 satiate */
+  16, /*8 vitality */
+  17, /*9 colour spray */
+  19, /*10 total recall */
+  21, /*11 infravision */
+  23, /*12 santuary */
+  7,  /*13 cure blindness */
+  25, /*14 animate dead */
+  26, /*15 heal */
+  28, /*16 lethal fire */
+  14, /*17 sleep */
+  36, /*18 remove poison */
+  30, /*19 rally */
+  30, /*20 warchant */
+  30, /*21 luck */
+  46, /*22 rejuvenation */
+  30, /*23 aid */
+  42, /*24 haste */
+  30, /*25 blade dance */
+  30, /*26 camaraderie */
+  30, /*27 respite */
+  50, /*28 group summon */
+  5,  /*29 armor (alternate) */
+  9,  /*30 fly (alternate) */
+  13, /*31 blindness (alternate) */
+  15, /*32 satiate (alternate) */
+  17, /*33 colour spray (alternate) */
+  19, /*34 total recall (alternate) */
+  21, /*35 infravision (altnerate) */
+  22, /*36 charm */
+  23, /*37 sanctuary (alternate) */
+  25, /*38 animate-dead (alternate) */
+  26, /*39 heal (alternate) */
+  27, /*40 hold */
+  28, /*41 lethal fire (alternate) */
+  36, /*42 remove poison (alternate) */
+  30, /*43 rally (altnerate) */
+  30, /*44 warchant (alternate) */
+  30, /*45 luck (alternate) */
+  46, /*46 rejuvenation (alternate) */
+  30, /*47 aid (alternate) */
+  15  /*48 forget */
 };
 
 int song_mana[] =
 {
-  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,25,75,60,100,80,150,100,250,150,40,100
+  25,  /*1 detect invis */
+  5,   /*2 armor */
+  15,  /*3 fear */
+  25,  /*4 fly */
+  25,  /*5 cure critical */
+  15,  /*6 blindness */
+  10,  /*7 satiate */
+  25,  /*8 vitality */
+  25,  /*9 colour spray */
+  30,  /*10 total recall */
+  20,  /*11 infravision */
+  50,  /*12 santuary */
+  15,  /*13 cure blindness */
+  50,  /*14 animate dead */
+  50,  /*15 heal */
+  50,  /*16 lethal fire */
+  25,  /*17 sleep */
+  25,  /*18 remove poison */
+  50,  /*19 rally */
+  60,  /*20 warchant */
+  100, /*21 luck */
+  80,  /*22 rejuvenation */
+  150, /*23 aid */
+  120, /*24 haste */
+  80,  /*25 blade dance */
+  150, /*26 camaraderie */
+  40,  /*27 respite */
+  100, /*28 group summon */
+  5,   /*29 armor (alternate) */
+  25,  /*30 fly (alternate) */
+  15,  /*31 blindness (alternate) */
+  10,  /*32 satiate (alternate) */
+  25,  /*33 colour spray (alternate) */
+  30,  /*34 total recall (alternate) */
+  20,  /*35 infravision (altnerate) */
+  50,  /*36 charm */
+  50,  /*37 sanctuary (alternate) */
+  50,  /*38 animate-dead (alternate) */
+  50,  /*39 heal (alternate) */
+  15,  /*40 hold */
+  50,  /*41 lethal fire (alternate) */
+  25,  /*42 remove poison (alternate) */
+  50,  /*43 rally (altnerate) */
+  60,  /*44 warchant (alternate) */
+  100, /*45 luck (alternate) */
+  80,  /*46 rejuvenation (alternate) */
+  150, /*47 aid (alternate) */
+  15   /*48 forget */
 };
+
+int bladesinging_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd, char* arg)
+{
+    if (cmd == MSG_REMOVE_ENCH)
+        send_to_char("The musical enhancement of your blade fades away.\n\r", enchanted_ch);
+
+    return FALSE;
+}
 
 char *skip_spaces(char *string);
 void do_song(CHAR *ch, char *arg, int cmd)
@@ -533,7 +655,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
   WAIT_STATE(ch, PULSE_VIOLENCE);
 
   switch (song) {
-    case 1:
+    case 1: /* Detect Invisibility */
       act("$n sings 'I always feel like somebody's watching me...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
@@ -547,8 +669,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_detect_invisibility(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 2:
-      act("$n sings 'In a letter, sealed with a kiss...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 2: /* Armor */
+    case 29:
+      if (song == 2)
+        act("$n sings 'In a letter, sealed with a kiss...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 29)
+        act("$n sings 'Why do you hurt me so bad...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -563,24 +689,26 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_armor(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 3:
-      act("$n sings 'Like a prayer...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 3: /* Fear */
+      act("$n sings 'Come on baby, don't fear the reaper...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
         {
-          spell_bless(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          spell_fear(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
       }
-
-      spell_bless(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 4:
-      act("$n sings 'One day I will fly away...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 4: /* Fly */
+    case 30:
+      if (song == 4)
+        act("$n sings 'One day I will fly away...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 30)
+        act("$n sings 'Come fly with me, let's fly, let's fly away...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -595,7 +723,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_fly(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 5:
+    case 5: /* Cure critic */
       act("$n sings 'We don't need another hero...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -611,8 +739,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_cure_critic(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 6:
-      act("$n sings 'Smoke gets in your eyes...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 6: /* Blindness */
+    case 31:
+      if (song == 6)
+        act("$n sings 'Smoke gets in your eyes...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 31)
+        act("$n sings 'Revved up like a deuce, another runner in the night...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -626,8 +758,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 7:
-      act("$n sings 'Now I save the best of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 7: /* Satiate */
+    case 32:
+      if (song == 7)
+        act("$n sings 'Now I save the best of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 32)
+          act("$n sings 'Mouth is alive with juices like wine...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -642,7 +778,7 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_satiate(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 8:
+    case 8: /* Vitality */
       act("$n sings 'I'm taking a ride with my best friend...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
@@ -658,22 +794,30 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_vitality(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 9:
-      act("$n sings 'Dangerous...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 9: /* Colour Spray */
+    case 33:
+      if (song == 9)
+        act("$n sings 'Dangerous...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 33)
+          act("$n sings 'I never meant to cause you any pain...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
         {
           spell_colour_spray(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
       }
       break;
 
-    case 10:
-      act("$n sings 'We are the world, we are the children...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 10: /* Total Recall */
+    case 34:
+      if (song == 10)
+        act("$n sings 'We are the world, we are the children...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 34)
+          act("$n sings 'Lost and found and turned around...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -688,8 +832,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_word_of_recall(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 11:
-      act("$n sings 'Carried away by moonlight shadow...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 11: /* Infravision */
+    case 35:
+      if (song == 11)
+        act("$n sings 'Carried away by moonlight shadow...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 35)
+          act("$n sings 'Don't masquerade with the guy in shades, oh no...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -704,8 +852,26 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_infravision(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 12:
-      act("$n sings 'It's been seven hours and fifteen days...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 36: /* Charm */
+      act("$n sings 'Will nature make a man of me yet...'", FALSE, ch, NULL, NULL, TO_ROOM);
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
+      {
+          next_victim = tmp_victim->next_in_room;
+
+          if (ch != tmp_victim && IS_NPC(tmp_victim))
+          {
+              spell_charm_person(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          }
+      }
+      break;
+
+    case 12: /* Sanctuary */
+    case 37:
+      if (song == 12)
+        act("$n sings 'It's been seven hours and fifteen days...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 37)
+          act("$n sings 'And we can act like we come from out of this world...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -720,22 +886,28 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_sanctuary(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 13:
-      act("$n sings 'Better the devil you know...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 13: /* Cure Blindness */
+      act("$n sings 'Gone are the dark clouds that had me blind...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
         {
-          spell_dispel_good(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          spell_cure_blind(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
       }
+
+      spell_cure_blind(GET_LEVEL(ch), ch, tmp_victim, NULL);
       break;
 
-    case 14:
-      act("$n sings 'Like toy soldiers...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 14: /* Animate Dead */
+    case 38:
+      if (song == 14)
+        act("$n sings 'Like toy soldiers...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 38)
+          act("$n sings 'Something evil's lurking in the dark...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_obj = world[CHAR_REAL_ROOM(ch)].contents; tmp_obj; tmp_obj = next_obj)
       {
@@ -744,8 +916,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       }
       break;
 
-    case 15:
-      act("$n sings 'Everything I do, I do it for you...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 15: /* Heal */
+    case 39:
+      if (song == 15)
+        act("$n sings 'Everything I do, I do it for you...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 39)
+          act("$n sings 'There is no pain you are receding...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -760,43 +936,64 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_heal(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 16:
-      act("$n sings 'Dance into the fire...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 40: /* Hold */
+      act("$n sings 'Why do you lock yourself up in these chains...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && IS_NPC(tmp_victim))
+        {
+          spell_hold(GET_LEVEL(ch), ch, tmp_victim, NULL);
+        }
+      }
+
+      break;
+
+    case 16: /* Lethal Fire */
+    case 41:
+      if (song == 16)
+        act("$n sings 'Dance into the fire...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 41)
+          act("$n sings 'I went down down down the flames went higher...'", FALSE, ch, NULL, NULL, TO_ROOM);
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
+      {
+        next_victim = tmp_victim->next_in_room;
+
+        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
         {
           spell_lethal_fire(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
       }
       break;
 
-    case 17:
-      act("$n sings 'We are spirits in the material world...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 17: /* Sleep */
+      act("$n sings 'I tuck you in, warm within, keep you free from sin...'", FALSE, ch, NULL, NULL, TO_ROOM);
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && IS_NPC(tmp_victim))
         {
-          spell_invisibility(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          spell_sleep(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
       }
-
-      spell_invisibility(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 18:
-      act("$n sings 'Lifting shadows, off a dream...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 18: /* Remove Poison */
+    case 42:
+      if (song == 18)
+        act("$n sings 'Lifting shadows, off a dream...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 42)
+          act("$n sings 'Was it something I said or something I did...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
         next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
+        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
         {
           spell_remove_poison(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
@@ -805,8 +1002,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_remove_poison(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 19:
-      act("$n sings 'The brightest flame burns quickest...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 19: /* Rally */
+    case 43:
+      if (song == 19)
+        act("$n sings 'The brightest flame burns quickest...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 43)
+          act("$n sings 'Rally 'round the family with a pocket full of shells...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -821,8 +1022,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_rally(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 20:
-      act("$n sings 'Something takes a part of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 20: /* War Chant */
+    case 44:
+      if (song == 20)
+        act("$n sings 'Something takes a part of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 44)
+          act("$n sings 'Oh, war, has shattered many a young mans dreams...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -837,8 +1042,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_warchant(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 21:
-      act("$n sings 'If I could change the world...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 21: /* Luck */
+    case 45:
+      if (song == 21)
+        act("$n sings 'If I could change the world...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 45)
+          act("$n sings 'She's so lucky, she's a star ...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -853,8 +1062,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_luck(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 22:
-      act("$n sings 'There is no heart that won't heal...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 22: /* Rejuvenation */
+    case 46:
+      if (song == 22)
+        act("$n sings 'There is no heart that won't heal...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 46)
+          act("$n sings 'Let us die young or let us live forever...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -869,8 +1082,12 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_rejuvenation(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 23:
-      act("$n sings 'Hero of the day...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 23: /* Aid */
+    case 47:
+      if (song == 23)
+        act("$n sings 'Hero of the day...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      if (song == 47)
+        act("$n sings 'Tougher than diamonds, rich like cream...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -885,38 +1102,22 @@ void do_song(CHAR *ch, char *arg, int cmd)
       spell_aid(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case 24:
-      act("$n sings 'Heaven beside you...'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 48: /* Forget */
+      act("$n sings 'Said, if I was richer, I'd still be with ya...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
-        next_victim = tmp_victim->next_in_room;
+          next_victim = tmp_victim->next_in_room;
 
-        if (ch != tmp_victim)
-        {
-          if (IS_EVIL(ch))
+          if (ch != tmp_victim && IS_NPC(tmp_victim))
           {
-            spell_protection_from_good(GET_LEVEL(ch), ch, tmp_victim, NULL);
+              spell_forget(GET_LEVEL(ch), ch, tmp_victim, NULL);
           }
-          else if (IS_GOOD(ch))
-          {
-            spell_protection_from_evil(GET_LEVEL(ch), ch, tmp_victim, NULL);
-          }
-        }
-      }
-
-      if (IS_EVIL(ch))
-      {
-        spell_protection_from_good(GET_LEVEL(ch), ch, ch, NULL);
-      }
-      else if (IS_GOOD(ch))
-      {
-        spell_protection_from_evil(GET_LEVEL(ch), ch, ch, NULL);
       }
       break;
 
-    case 25:
-      act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
+    case 24: /* Haste */
+      act("$n sings 'You know this boogie is for real...'", FALSE, ch, NULL, NULL, TO_ROOM);
 
       for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
       {
@@ -924,7 +1125,34 @@ void do_song(CHAR *ch, char *arg, int cmd)
 
         if (ch != tmp_victim)
         {
-          spell_thunderball(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          if (GET_CLASS(tmp_victim) == CLASS_BARD || GET_CLASS(tmp_victim) == CLASS_CLERIC)
+          {
+            spell_haste(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          }
+          else if (chance(5))
+          {
+            spell_haste(GET_LEVEL(ch), ch, tmp_victim, NULL);
+          }
+        }
+      }
+      spell_haste(GET_LEVEL(ch), ch, ch, NULL);
+      break;
+
+    case 25: /* Blade Dance */
+      act("$n sings 'And the man in the back said everyone attack...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      send_to_char("You leap and twirl and dodge and dive around in a flurry of sound and fury.\n\r", ch);
+      act("$n leaps and twirls and dodges and dives around in a flurry of sound and fury.", FALSE, ch, NULL, NULL, TO_ROOM);
+
+      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
+      {
+        next_victim = tmp_victim->next_in_room;
+
+        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
+        {
+          send_to_char("The torrent of music overwhelms your senses and pierces your soul.\n\r", tmp_victim);
+          damage(ch, tmp_victim, 350, TYPE_UNDEFINED, DAM_SOUND);
+          if (IS_ALIVE(tmp_victim))
+            perform_hit(ch, tmp_victim, TYPE_UNDEFINED, 1);
         }
       }
       break;
@@ -1064,13 +1292,24 @@ void do_song(CHAR *ch, char *arg, int cmd)
           spell_summon(GET_LEVEL(ch), ch, temp_ch, NULL);
         }
       }
-
       break;
 
     default:
       act("$n hums the words of a song $e doesn't know.", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You hum the words of a song you don't know.", FALSE, ch, NULL, NULL, TO_CHAR);
       break;
+  }
+
+  /* Bladesinging */
+  if (check_subclass(ch, SC_BLADESINGER, 3) && IS_MORTAL(ch))
+  {
+    if (song > 0 &&
+      song <= NUMELEMS(song_mana) &&
+      mana > 0)
+    {
+      enchantment_apply(ch, FALSE, "Bladesinging", TYPE_UNDEFINED, 10, ENCH_INTERVAL_ROUND, MAX(1, (mana / 2)), APPLY_DAMROLL, 0, 0, bladesinging_enchantment);
+      send_to_char("Your powerful lyrics lend strength to your blade!\n\r", ch);
+    }
   }
 }
 
@@ -1966,25 +2205,25 @@ void assign_spell_pointers(void)
   /*                                 Minimum Class Level Required
    * Spell #, BT, Minimum Position,  MU, CL, NI, PA, AP, AV, BA, CO, MANA, Target Types,                                                                 Cast Function
    */
-  SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1,  5, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
+  SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1, 51, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
   SPELLO(  2, 30, POSITION_FIGHTING,  8, 51, 51, 51, 51,  7, 51, 51,   25, TAR_SELF_ONLY,                                                                cast_teleport);
-  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3,  7, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
-  SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 13, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
+  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
+  SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
   SPELLO(  5, 30, POSITION_FIGHTING,  5, 51, 51, 51, 51,  1, 51,  3,   17, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_burning_hands);
   SPELLO(  6, 30, POSITION_FIGHTING, 51, 12, 51, 51, 51, 51, 51, 12,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_call_lightning);
-  SPELLO(  7, 30, POSITION_STANDING, 14, 51, 51, 51, 51, 12, 18, 51,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
+  SPELLO(  7, 30, POSITION_STANDING, 14, 51, 51, 51, 51, 12, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
   SPELLO(  8, 30, POSITION_FIGHTING,  3, 51, 51, 51,  3, 51, 51,  2,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_chill_touch);
   SPELLO(  9, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 27, 51, 51,  100, TAR_OBJ_INV,                                                                  cast_clone);
-  SPELLO( 10, 30, POSITION_FIGHTING, 11, 51, 51, 51, 51, 51, 17, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_colour_spray);
+  SPELLO( 10, 30, POSITION_FIGHTING, 11, 51, 51, 51, 51, 51, 51, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_colour_spray);
   SPELLO( 11, 30, POSITION_STANDING, 10, 13, 11, 51, 51, 51, 51, 51,   25, TAR_IGNORE,                                                                   cast_control_weather);
   SPELLO( 12, 30, POSITION_STANDING, 51,  3, 51,  3, 51, 51, 51, 51,    5, TAR_IGNORE,                                                                   cast_create_food);
   SPELLO( 13, 30, POSITION_STANDING, 51,  2, 51,  4, 51, 51, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_create_water);
   SPELLO( 14, 30, POSITION_STANDING, 51,  4,  9,  7, 51,  5, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_blind);
-  SPELLO( 15, 30, POSITION_FIGHTING, 51,  9, 51, 10, 51,  7, 11, 51,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
+  SPELLO( 15, 30, POSITION_FIGHTING, 51,  9, 51, 10, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
   SPELLO( 16, 30, POSITION_FIGHTING, 51,  1,  4,  1, 51,  1, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_light);
   SPELLO( 17, 30, POSITION_STANDING, 12, 51, 51, 51,  8, 51, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_ROOM | TAR_OBJ_INV,                  cast_curse);
   SPELLO( 18, 30, POSITION_STANDING,  4,  4, 51,  4,  4,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_alignment);
-  SPELLO( 19, 30, POSITION_STANDING,  2,  5,  1,  5,  5,  3,  3, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
+  SPELLO( 19, 30, POSITION_STANDING,  2,  5,  1,  5,  5,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
   SPELLO( 20, 30, POSITION_STANDING,  2,  3, 51, 51, 51, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_magic);
   SPELLO( 21, 30, POSITION_STANDING,  4,  2, 51, 51,  2, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP,                                  cast_detect_poison);
   SPELLO( 22, 30, POSITION_FIGHTING, 51, 10, 51, 19, 51, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_evil);
@@ -1993,28 +2232,28 @@ void assign_spell_pointers(void)
   SPELLO( 25, 30, POSITION_FIGHTING, 13, 51, 51, 51, 15, 14, 51, 51,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_energy_drain);
   SPELLO( 26, 30, POSITION_FIGHTING, 15, 51, 51, 51, 20, 15, 51, 15,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fireball);
   SPELLO( 27, 30, POSITION_FIGHTING, 51, 15, 51, 51, 51, 51, 51, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_harm);
-  SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 26, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
-  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 8,  51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
+  SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
+  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
   SPELLO( 30, 30, POSITION_FIGHTING,  9, 51, 51, 51, 12, 51, 51,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lightning_bolt);
   SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
   SPELLO( 32, 30, POSITION_FIGHTING,  1, 51, 51, 51,  1, 51, 51,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_magic_missile);
   SPELLO( 33, 30, POSITION_STANDING, 51,  8, 12, 51,  6, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_EQUIP, cast_poison);
   SPELLO( 34, 30, POSITION_STANDING, 51,  6, 51, 24, 51, 20, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_evil);
   SPELLO( 35, 30, POSITION_STANDING, 13, 12, 51, 51, 51, 21, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_OBJ_ROOM,                   cast_remove_curse);
-  SPELLO( 36, 30, POSITION_STANDING, 51, 13, 51, 20, 51, 12, 23, 51,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
+  SPELLO( 36, 30, POSITION_STANDING, 51, 13, 51, 20, 51, 12, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
   SPELLO( 37, 30, POSITION_FIGHTING,  7, 51, 51, 51, 51, 51, 51,  5,   19, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_shocking_grasp);
-  SPELLO( 38, 30, POSITION_STANDING, 14, 51, 51, 51, 19, 11, 17, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_sleep);
+  SPELLO( 38, 30, POSITION_STANDING, 14, 51, 51, 51, 19, 11, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_sleep);
   SPELLO( 39, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_strength);
   SPELLO( 40, 30, POSITION_STANDING, 51,  8, 51, 18, 51, 12, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_summon);
-  SPELLO( 41, 30, POSITION_STANDING,  1, 51, 51, 51, 51, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_OBJ_ROOM | TAR_SELF_NONO,                                 cast_ventriloquate);
-  SPELLO( 42, 30, POSITION_STANDING, 13, 11, 19, 51, 51,  6, 19, 19,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_word_of_recall);
+  SPELLO( 41, 30, POSITION_STANDING,  1, 51, 51, 51, 51, 51, 5,  51,    5, TAR_CHAR_ROOM | TAR_OBJ_ROOM | TAR_SELF_NONO,                                 cast_ventriloquate);
+  SPELLO( 42, 30, POSITION_STANDING, 13, 11, 19, 51, 51,  6, 51, 19,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_word_of_recall);
   SPELLO( 43, 30, POSITION_STANDING, 51,  9, 12, 14, 51,  5, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_remove_poison);
   SPELLO( 44, 30, POSITION_STANDING, 51,  7, 10,  6, 13,  8, 51, 51,   20, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sense_life);
   SPELLO( 71, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 10,  9, 51,   25, TAR_OBJ_INV,                                                                  cast_identify);
   SPELLO( 72, 30, POSITION_FIGHTING, 51,  6, 16,  5, 51,  4, 51, 51,   18, TAR_CHAR_ROOM,                                                                cast_cure_serious);
-  SPELLO( 73, 30, POSITION_STANDING,  5, 51,  5, 51, 11,  4, 21, 51,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
+  SPELLO( 73, 30, POSITION_STANDING,  5, 51,  5, 51, 11,  4, 51, 51,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
   SPELLO( 74, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_regeneration);
-  SPELLO( 75, 30, POSITION_FIGHTING,  8, 16, 51, 14, 51, 10,  7, 51,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
+  SPELLO( 75, 30, POSITION_FIGHTING,  8, 16, 51, 14, 51, 10, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
   SPELLO( 76, 30, POSITION_FIGHTING, 51,  4, 51, 51, 51, 51, 51, 51,   23, TAR_IGNORE,                                                                   cast_cure_light_spray);
   SPELLO( 77, 30, POSITION_FIGHTING, 51, 10, 51, 51, 51, 51, 51, 51,   27, TAR_IGNORE,                                                                   cast_cure_serious_spray);
   SPELLO( 78, 30, POSITION_FIGHTING, 51, 13, 51, 51, 51, 16, 51, 51,   38, TAR_IGNORE,                                                                   cast_cure_critic_spray);
@@ -2025,22 +2264,22 @@ void assign_spell_pointers(void)
   SPELLO( 83, 30, POSITION_STANDING, 51, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
   SPELLO( 84, 30, POSITION_STANDING, 17, 20, 51, 51, 51, 16, 51, 51,   30, TAR_OBJ_INV,                                                                  cast_recharge);
   SPELLO( 85, 30, POSITION_FIGHTING, 51, 25, 51, 51, 51, 22, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
-  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7,  9, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
+  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
   SPELLO( 87, 30, POSITION_FIGHTING, 18, 18, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_mana_transfer);
   SPELLO( 88, 30, POSITION_STANDING, 51, 19, 51, 51, 51, 17, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_holy_bless);
   SPELLO( 89, 30, POSITION_STANDING, 51, 20, 51, 51, 51, 18, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_evil_bless);
-  SPELLO( 90, 30, POSITION_STANDING, 51, 15, 51, 51, 51, 51, 15, 51,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
-  SPELLO( 91, 30, POSITION_STANDING, 22, 24, 51, 51, 51, 20, 25, 51,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
+  SPELLO( 90, 30, POSITION_STANDING, 51, 15, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
+  SPELLO( 91, 30, POSITION_STANDING, 22, 24, 51, 51, 51, 20, 51, 51,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
   SPELLO( 92, 30, POSITION_STANDING, 51, 30, 51, 51, 51, 30, 51, 51,  200, TAR_IGNORE,                                                                   cast_great_miracle);
   SPELLO( 93, 30, POSITION_FIGHTING, 51, 11, 51, 10, 51,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_flamestrike);
   SPELLO( 94, 30, POSITION_FIGHTING, 20, 51, 51, 51, 25, 10, 51, 51,   15, TAR_OBJ_ROOM,                                                                 cast_spirit_levy);
-  SPELLO( 95, 30, POSITION_FIGHTING, 24, 51, 51, 51, 51, 20, 28, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lethal_fire);
-  SPELLO( 96, 30, POSITION_STANDING, 21, 51, 24, 26, 51, 19, 18, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_hold);
+  SPELLO( 95, 30, POSITION_FIGHTING, 24, 51, 51, 51, 51, 20, 51, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lethal_fire);
+  SPELLO( 96, 30, POSITION_STANDING, 21, 51, 24, 26, 51, 19, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_hold);
   SPELLO( 97, 30, POSITION_STANDING, 18, 51, 51, 51, 51, 17, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sphere);
   SPELLO( 98, 30, POSITION_STANDING, 25, 51, 51, 51, 29, 22, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_imp_invisibility);
   SPELLO( 99, 30, POSITION_STANDING, 29, 28, 51, 51, 51, 25, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_invulnerability);
-  SPELLO(100, 30, POSITION_FIGHTING,  9, 51, 51, 51, 10,  9, 12, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fear);
-  SPELLO(101, 30, POSITION_FIGHTING, 11, 51, 51, 51, 14, 10, 15, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_forget);
+  SPELLO(100, 30, POSITION_FIGHTING,  9, 51, 51, 51, 10,  9, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fear);
+  SPELLO(101, 30, POSITION_FIGHTING, 11, 51, 51, 51, 14, 10, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_forget);
   SPELLO(102, 30, POSITION_FIGHTING, 51, 51, 51, 21, 51, 23, 51, 51,   60, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_fury);
   SPELLO(103, 30, POSITION_STANDING, 51, 51,  3, 51, 51,  3, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_endure);
   SPELLO(104, 30, POSITION_FIGHTING, 51, 51, 16, 51, 17, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
@@ -2052,14 +2291,14 @@ void assign_spell_pointers(void)
   SPELLO(111, 30, POSITION_STANDING, 29, 51, 51, 51, 21, 28, 51, 51,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_paralyze);
   SPELLO(112, 30, POSITION_STANDING, 51, 14, 51, 51, 51,  9, 51, 51,   35, TAR_CHAR_ROOM,                                                                cast_remove_paralysis);
   SPELLO(113, 30, POSITION_FIGHTING, 51, 11, 51, 51, 22, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_good);
-  SPELLO(114, 30, POSITION_FIGHTING, 51, 23, 51, 51, 26, 51, 24, 51,   80, TAR_IGNORE,                                                                   cast_evil_word);
+  SPELLO(114, 30, POSITION_FIGHTING, 51, 23, 51, 51, 26, 51, 51, 51,   80, TAR_IGNORE,                                                                   cast_evil_word);
   SPELLO(115, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  9, 51, 51,   20, TAR_OBJ_INV,                                                                  cast_reappear);
   SPELLO(116, 30, POSITION_STANDING,  6, 51, 51, 51, 51,  5, 51, 51,   30, TAR_CHAR_ROOM,                                                                cast_reveal);
   SPELLO(117, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 16, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_relocation);
   SPELLO(118, 30, POSITION_STANDING, 11, 14, 51, 51, 51, 11, 13, 51,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
   SPELLO(119, 30, POSITION_FIGHTING, 51, 27, 51, 32, 51, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_super_harm);
   SPELLO(124, 30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
-  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 45, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
+  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 55, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
   SPELLO(128, 30, POSITION_FIGHTING, 26, 51, 51, 51, 30, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_power_word_kill);
   SPELLO(129, 30, POSITION_STANDING, 19, 17, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_dispel_magic);
   SPELLO(130, 30, POSITION_FIGHTING, 30, 51, 51, 51, 51, 51, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_conflagration);
@@ -2145,7 +2384,7 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_WITHER,                30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wither);
 
   // Bard
-  SPELLO(SPELL_REJUVENATION,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 50, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
+  SPELLO(SPELL_REJUVENATION,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
 
   // Chanter
   SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
