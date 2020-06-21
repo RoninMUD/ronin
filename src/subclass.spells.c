@@ -1066,9 +1066,21 @@ void cast_aid(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar
   }
 }
 
+int aid_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd, char* arg)
+{
+  char buf[MIL];
+
+  if (cmd == MSG_REMOVE_ENCH)
+  {
+    sprintf(buf, "You feel the inspiration of %s words fade.\n\r", strtok(ench->name, " "));
+    send_to_char(buf, enchanted_ch);
+  }
+  return FALSE;
+}
+
 void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 {
-  AFF af;
+  char buf[MIL];
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim)
   {
@@ -1076,17 +1088,19 @@ void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_AID))
+  sprintf(buf, "%s's Aid", GET_NAME(ch));
+  if (!enchanted_by(victim, buf))
   {
-    send_to_char("You feel powerful!\n\r", victim);
+    enchantment_apply(victim, FALSE, buf, TYPE_UNDEFINED, 5, ENCH_INTERVAL_TICK, 10, APPLY_DMG_BONUS_PCT, 0, 0, aid_enchantment);
 
-    af.type       = SPELL_AID;
-    af.duration   = 5;
-    af.modifier   = 5;
-    af.location   = APPLY_DAMROLL;
-    af.bitvector  = 0;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+    if (ch == victim)
+    {
+      send_to_char("You feel inspired by your words!\n\r", victim);
+    }
+    else {
+      sprintf(buf, "You feel inspired by %s's words!\n\r", GET_NAME(ch));
+      send_to_char(buf, victim);
+    }
   }
 }
 

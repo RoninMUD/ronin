@@ -878,8 +878,8 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_SKILL_ASSAULT;
         obj->affected[i].modifier = num2;
       }
-      else if (!strcmp(buf, "backflip")) {
-        obj->affected[i].location = APPLY_SKILL_BACKFLIP;
+      else if (!strcmp(buf, "taunt")) {
+        obj->affected[i].location = APPLY_SKILL_TAUNT;
         obj->affected[i].modifier = num2;
       }
       else if (!strcmp(buf, "backstab")) {

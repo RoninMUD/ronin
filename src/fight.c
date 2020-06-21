@@ -1634,6 +1634,27 @@ int resist_damage(CHAR *ch, int dmg, int attack_type, int damage_type) {
   return dmg;
 }
 
+double apply_dmg_bonus(CHAR *ch)
+{
+  struct enchantment_type_5* ench = NULL;
+  struct enchantment_type_5* next_ench = NULL;
+  double dmg_bonus = 0;
+  double dmg_multiplier = 0;
+
+  /* Adjust for APPLY_DMG_BONUS_PCT enchantments */
+  for (ench = ch->enchantments; ench; ench = next_ench)
+  {
+    next_ench = ench->next;
+    if (ench->location == APPLY_DMG_BONUS_PCT)
+    {
+      dmg_bonus += ench->modifier;
+    }
+  }
+
+  dmg_multiplier = (100.0 + dmg_bonus) / 100.0;
+
+  return dmg_multiplier;
+}
 
 /* Returns the amount of damage done after any/all mitigation. */
 int get_attack_type(CHAR *ch, OBJ *weapon);
@@ -1655,6 +1676,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* No damage to immortals. */
   if (IS_IMMORTAL(victim)) {
     dmg = 0;
+  }
+
+  /* Adjust for APPLY_DMG_BONUS_PCT */
+  if (IS_MORTAL(ch)) {
+    dmg = lround(dmg * apply_dmg_bonus(ch));
   }
 
   /* Adjust for shadow damage. */
@@ -4228,15 +4254,86 @@ void snipe_action(CHAR *ch, CHAR *victim) {
 }
 
 
+// {
+//     to_notvict,
+//     to_vict,
+//     to_char
+//   } act() messages
+char* taunt_messages[8][3] = {
+  {
+    "With a mighty leap, $n springs over $N while simultaneously dropping trou in mid-air exposing $M to a full moon!",
+    "With a mighty leap, $n springs over you while simultaneously dropping trou in mid-air exposing you to a full moon!",
+    "With a mighty leap, you spring over $N while simultaneously dropping trou in mid-air exposing $M to a full moon!"
+  },
+  {
+    "$n recounts all the storied tales of past adventurers slaughtering $N, how embarrassing.",
+    "$n recounts all the storied tales of past adventurers slaughtering you, how embarrassing.",
+    "You recount all the storied tales of past adventurers slaughtering $N, how embarrassing."
+  },
+  {
+    "$n regales the room with a story about the time $e caught $N kissing Rashgugh.",
+    "$n regales the room with a story about the time $e caught you kissing Rashgugh.",
+    "You regale the room with a story about the time you caught $N kissing Rashgugh."
+  },
+  {
+    "$n begins reciting Vogon poetry loudly in $N's general direction.",
+    "$n begins reciting Vogon poetry loudly in your general direction, it's unbearable!",
+    "You begin reciting Vogon poetry loudly in $N's general direction.",
+  },
+  {
+    "$n captivates the room with a retelling of $s raunchy encounter with $N's mother.",
+    "$n captivates the room with a retelling of $s raunchy encounter with your mother!",
+    "You captivate the room with a retelling of your raunchy encounter with $N's mother.",
+  },
+  {
+    "$n seems unperturbed battling $N, and takes the opportunity to earn a few coin by busking.",
+    "$n seems unperturbed battling you, and takes the opportunity to earn a few coin by busking.",
+    "You is unperturbed battling $N, and take the opportunity to earn a few coin by busking.",
+  },
+  {
+    "$n picks apart $N's character flaws one-by-one, revealing them to the world.",
+    "$n picks apart your character flaws one-by-one, revealing them to the world.",
+    "You pick apart $N's character flaws one-by-one, revealing them to the world.",
+  },
+  {
+    "$n peeks at $N's soul, disclosing $S secrets for all to hear.",
+    "$n peeks at your soul, disclosing your secrets for all to hear.",
+    "You peek at $N's soul, disclosing $S secrets for all to hear.",
+  }
+};
+
+int taunt_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd, char* arg)
+{
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    act("......$n is distracted.", FALSE, enchanted_ch, NULL, char_in_room, TO_VICT);
+  }
+  return FALSE;
+}
+
+void taunt_action(CHAR* ch, CHAR* vict, bool perform_check)
+{
+  int taunt_msg_index = 0;
+  int check = number(1, 1500);
+
+  if (!perform_check || check <= (GET_LEARNED(ch, SKILL_TAUNT) + (GET_CON_REGEN(ch) * 2)))
+  {
+    taunt_msg_index = number(0, NUMELEMS(taunt_messages) - 1);
+    act(taunt_messages[taunt_msg_index][0], FALSE, ch, NULL, vict, TO_NOTVICT);
+    act(taunt_messages[taunt_msg_index][1], FALSE, ch, NULL, vict, TO_VICT);
+    act(taunt_messages[taunt_msg_index][2], FALSE, ch, NULL, vict, TO_CHAR);
+    enchantment_apply(vict, FALSE, "Taunted", SKILL_TAUNT, 3, ENCH_INTERVAL_ROUND, -(GET_DAMROLL(vict) / 10), APPLY_DAMROLL, 0, 0, taunt_enchantment);
+  }
+}
+
 void mimicry_action(CHAR* ch, CHAR* vict) {
   CHAR* tmp_target = NULL;
+  CHAR* next_target = NULL;
   CHAR* mimicee = NULL;
   int dam = 0;
   int set_pos = 0;
   OBJ* hold = NULL;
   OBJ* wield = NULL;
   struct affected_type_5 af;
-  struct enchantment_type_5 ench;
 
   if (!ch ||
       !vict ||
@@ -4415,8 +4512,8 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
         GET_POS(vict) = set_pos;
       }
 
-      /* dual - no more no less */
-      perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      /* dual - first hit has haste chance vis a vis Mystic Swiftness */
+      perform_hit(ch, vict, TYPE_UNDEFINED, 1);
       if (CHAR_REAL_ROOM(vict) != NOWHERE)
         perform_hit(ch, vict, TYPE_UNDEFINED, 4);
 
@@ -4527,18 +4624,37 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
       }
       break;
 
-    case CLASS_BARD: /* dual + rejuv song + heal song */
-      act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
-      act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
+    case CLASS_BARD: /* taunt + dual + heal song */
+        if (chance(50))
+        {
+          act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
+          act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
+        }
+        else {
+          act("$n liltingly sings 'Anything you can do I can do better, anything you can do I can do better than you.", FALSE, ch, NULL, NULL, TO_ROOM);
+          act("You liltingly sing 'Anything you can do I can do better, anything you can do I can do better than you.", FALSE, ch, NULL, NULL, TO_CHAR);
+        }
 
-      act("After that sick burn, $n sneers at $N and prepares to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
-      act("After that sick burn, $n sneers at you and prepares to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_VICT);
-      act("After that sick burn, you sneer at $N and prepare to spit more hot fire.", FALSE, ch, NULL, mimicee, TO_CHAR);
+        taunt_action(ch, vict, FALSE); //auto success
 
-      memset(&ench, 0, sizeof(struct enchantment_type_5));
-      ench.name = str_dup("Fire Breath");
-      enchantment_to_char(ch, &ench, TRUE);
-      free(ench.name);
+        /* dual - first hit has haste chance */
+        perform_hit(ch, vict, TYPE_UNDEFINED, 1);
+        if (CHAR_REAL_ROOM(vict) != NOWHERE)
+          perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+
+        act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
+        act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
+        act("You sing 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_CHAR);
+
+        for (tmp_target = world[CHAR_REAL_ROOM(ch)].people; tmp_target; tmp_target = next_target)
+        {
+          next_target = tmp_target->next_in_room;
+
+          if (ch != tmp_target && (!IS_NPC(tmp_target) || SAME_GROUP(ch, tmp_target)))
+          {
+            spell_heal(GET_LEVEL(ch), ch, tmp_target, NULL);
+          }
+        }
       break;
 
     case CLASS_COMMANDO: /* triple + eshock + disarm */
@@ -4586,22 +4702,6 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
     }
   }
 }
-/*
-void taunt_action(CHAR* ch, CHAR* vict) {
-  CHAR* tmp_target = NULL;
-
-    char *collectoraction[8] = {"groan","frustration","cod","fume",
-                              "blorf","roll","sneor","mumble"};
-
-  if (!ch ||
-      !vict ||
-      GET_CLASS(ch) != CLASS_BARD)
-    return;
-
-  int check = number(1, 1500);
-
-  if (check > GET_LEARNED(ch, SKILL_TAUNT)) return;
-}*/
 
 void perform_violence(void) {
   for (CHAR *ch = combat_list; ch && GET_OPPONENT(ch); ch = combat_next_dude) {
@@ -4661,15 +4761,15 @@ void perform_violence(void) {
       dirty_tricks_action(ch, vict);
     }
 
+    /* Taunt */
+    if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && GET_CLASS(ch) == CLASS_BARD) {
+      taunt_action(ch, vict, TRUE);
+    }
+
     /* Mimicry */
     if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && check_subclass(ch, SC_BLADESINGER, 5)) {
       mimicry_action(ch, vict);
     }
-
-    /* Taunt */
-    //if (SAME_ROOM(ch, vict) && IS_MORTAL(ch) && GET_CLASS(ch) == CLASS_BARD) {
-    //  taunt_action(ch, vict);
-    //}
   }
 }
 

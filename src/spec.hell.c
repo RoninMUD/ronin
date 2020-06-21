@@ -1463,17 +1463,6 @@ int Achromatic_Gem (OBJ *gem, CHAR *ch, int cmd, char *arg) {
         }
         break;
 
-      case CMD_BACKFLIP:
-        if(GET_CLASS(holder)!=CLASS_BARD) return FALSE;
-        if(!holder->specials.fighting) return FALSE;
-        victim=holder->specials.fighting;
-        if(!IS_NPC(victim)) return FALSE;
-        if (chance(33)) {
-          act("The achromatic gem pulsates as it gains power.",FALSE,holder,0,0,TO_CHAR);
-          OBJ_SPEC(gem)=MIN(OBJ_SPEC(gem)+=1,20);
-        }
-        break;
-
       case CMD_BACKSTAB:
         if(!holder->equipment[WIELD]) return FALSE;
         one_argument(arg, name);

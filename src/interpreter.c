@@ -827,7 +827,7 @@ void assign_command_pointers ( void )
   COMMANDO("color"    ,CMD_COLOR      ,POSITION_DEAD     ,do_setcolor, 1);
   COMMANDO("breath"   ,CMD_FIREBREATH ,POSITION_FIGHTING ,do_unknown, 1);
   COMMANDO("clan"     ,CMD_CLAN       ,POSITION_SLEEPING ,do_clan, 1); /* Linerfix 02, clan cmd while sleep */
-  COMMANDO("backflip" ,CMD_BACKFLIP   ,POSITION_FIGHTING ,do_backflip, 1);
+  //COMMANDO("backflip" ,CMD_BACKFLIP   ,POSITION_FIGHTING ,do_backflip, 1); /* Hemp - removed Backflip, replaced with taunt 2020 */
   COMMANDO("snooplist",CMD_SNOOPLIST  ,POSITION_FIGHTING ,do_snooplist,LEVEL_WIZ);
   COMMANDO("description",CMD_DESCRIPT ,POSITION_FIGHTING ,do_descr, 1);
   COMMANDO("vote"     ,CMD_VOTE       ,POSITION_FIGHTING ,do_not_here, 1);

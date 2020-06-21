@@ -3767,7 +3767,7 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   return TRUE;
 }
 
-// Tomtom has a small chance to sing invuln song when backflipping
+// Tomtom has a small chance to sing haste song (guaranteed) on MSG_MOBACT
 int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
   if(!obj->equipped_by) return FALSE;
@@ -3775,12 +3775,12 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
   CHAR *holder = obj->equipped_by;
   CHAR *tmp_victim = NULL;
   CHAR *temp = NULL;
-  if(cmd != CMD_BACKFLIP) return FALSE;
+  if(cmd != MSG_MOBACT) return FALSE;
   if(GET_CLASS(holder)!=CLASS_BARD) return FALSE;
   if(!holder->specials.fighting) return FALSE;
 
-  // Roughly once every 2 hours of backflipping
-  if(number(0,1000) != 1) return FALSE;
+  // Roughly once every 1.5 hours
+  if(number(0,500) != 1) return FALSE;
 
   act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_CHAR);
   act("$n beats you senseless with $s tomtom!", 1, ch, 0, holder->specials.fighting, TO_VICT);

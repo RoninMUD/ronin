@@ -154,7 +154,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 	      beret->affected[0].modifier=3;
 	      beret->affected[1].location=APPLY_HITROLL;
 	      beret->affected[1].modifier=1;
-	      beret->affected[2].location=APPLY_SKILL_BACKFLIP;
+	      beret->affected[2].location=APPLY_SKILL_TAUNT;
 	      beret->affected[2].modifier=GET_LEVEL(ch)/6;
 	      beret->obj_flags.value[0]=2;
 	      act("Wild flowers sprout from $n's beret, attracting hummingbirds.",0,ch,0,0,TO_ROOM);

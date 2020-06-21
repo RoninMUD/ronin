@@ -188,8 +188,7 @@ int mk4_no_skills(OBJ *obj,CHAR *ch,int cmd,char *arg) {
      cmd==CMD_KICK          ||
      cmd==CMD_ASSAULT       ||
      cmd==CMD_SPIN          ||
-     cmd==CMD_DISEMBOWEL    ||
-     cmd==CMD_BACKFLIP ) {
+     cmd==CMD_DISEMBOWEL ) {
     act("Your $p prevents any kind of skill.",0,ch,obj,0,TO_CHAR);
     return TRUE;
   }
@@ -374,7 +373,6 @@ int xalth_mob(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       case CMD_ASSAULT:
       case CMD_SPIN:
       case CMD_DISEMBOWEL:
-      case CMD_BACKFLIP:
         act("$n laughs at your pitiful attack attempt.",0,mob,0,ch,TO_VICT);
         return TRUE;
         break;

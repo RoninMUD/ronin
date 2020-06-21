@@ -177,7 +177,7 @@
 #define SPELL_DISPEL_SANCT          141
 #define SPELL_DISENCHANT            142
 #define SPELL_PETRIFY               143
-#define SKILL_BACKFLIP              144
+#define SKILL_TAUNT                 144
 #define SPELL_PROTECT_FROM_GOOD     145
 #define SPELL_REMOVE_IMP_INVIS      146
 #define SPELL_SKILL_147             147

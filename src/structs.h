@@ -656,7 +656,7 @@ struct room_data
 #define APPLY_SKILL_AMBUSH     48
 #define APPLY_SKILL_ASSAULT    49
 #define APPLY_SKILL_DISEMBOWEL 50
-#define APPLY_SKILL_BACKFLIP   51
+#define APPLY_SKILL_TAUNT      51
 #define APPLY_HP_REGEN         52
 #define APPLY_MANA_REGEN       53
 /* WIP - Night
@@ -668,6 +668,7 @@ struct room_data
 #define APPLY_SKILL_LUNGE      59
 #define APPLY_SKILL_FLANK      60
 */
+#define APPLY_DMG_BONUS_PCT    61
 
 /* subclasses - Ranger March 98 */
 #define SC_NONE        0
@@ -904,7 +905,7 @@ struct room_data
 #define IMMUNE2_FEAR          (1 << 5)  /* 32 */
 #define IMMUNE2_BASH          (1 << 6)  /* 64 */
 #define IMMUNE2_CIRCLE        (1 << 7)  /* 128 */
-#define IMMUNE2_BACKFLIP      (1 << 8)  /* 256 */
+#define IMMUNE2_TAUNT         (1 << 8)  /* 256 */
 #define IMMUNE2_STEAL         (1 << 9)  /* 512 */
 
 /* Player flags -- used in specials.pflag */

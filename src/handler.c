@@ -297,8 +297,8 @@ void affect_modify(struct char_data *ch, int loc, int mod, long bitv, long bitv2
       case APPLY_SKILL_DISEMBOWEL:
         ch->skills[SKILL_DISEMBOWEL].learned += mod;
         break;
-      case APPLY_SKILL_BACKFLIP:
-        ch->skills[SKILL_BACKFLIP].learned += mod;
+      case APPLY_SKILL_TAUNT:
+        ch->skills[SKILL_TAUNT].learned += mod;
         break;
     }
   }

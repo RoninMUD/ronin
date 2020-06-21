@@ -1698,7 +1698,8 @@ Use HELP BARD SPELLS to see the spells of the bard class.
 Note: In order to sing a song, the bard must be HOLDING an instrument.
       To sing a bard song you just type: song <songname>
 
-Skills: dodge, peek, pick, throw, taunt (level 20), dual (level 25), backflip (level 20), camp (level 35)
+Skills: dodge, peek, pick, throw, taunt (level 20), dual (level 25),
+          camp (level 35)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1803,7 +1804,6 @@ SKILL        AP   BA   CL   CO   MU   NI   NO   PA   TH   WA
 -----------------------------------------------------------------------------
 Ambush                                      Y
 Assault                      Y         Y
-Backflip           Y
 Backstab      Y                                       Y
 Bash          Y         Y    Y         Y         Y         Y
 Block                                            Y         Y
@@ -1832,6 +1832,7 @@ Sneak         Y                        Y              Y
 Spin                                   Y    Y    Y         Y
 Steal         Y                                       Y
 Subdue                                      Y
+Taunt              Y
 Throw              Y         Y         Y    Y         Y    Y
 Trap                                        Y
 Triple                       Y                             Y
@@ -1839,12 +1840,7 @@ Twist                                                 Y
 Quad                                                       Y
 
 SEE ALSO: CLASS CLASSES
-#
-BACKFLIP
 
-Class: Bard  (Level 20)
-
-This ability allows the Bard to flip over an opponent, giving an extra attack.
 #
 CIRCLE
 
@@ -5329,7 +5325,7 @@ See Also: RANKS
 CONDUCTOR
 
 Spell Affects  -  infravision
-Other Affects  -  +5 backflip
+Other Affects  -  +5 taunt
 Required Rank  -  POET
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -7851,11 +7847,11 @@ class level, rounded down, (12 damage at lvl 48+) after being hit by a
 successful physical attack skill (pummel, punch, etc.).  This bonus damage is
 applied separately from the damage inflicted by the triggering skill and
 cannot be increased (such as by position, spell effects like Fury, etc.).
-Backflip, Smite, and Zeal will also trigger this bonus damage.  Other bonus
-attacks that are triggered by skills (such as Hidden Blade and Trusty Steed,
-etc.) do not cause extra damage from the Maim effect (e.g. they do not "double
-dip").  This damage is subject to normal physical damage resistance or
-immunity.  The Maim effect lasts until the affected creature dies.
+Smite and Zeal will also trigger this bonus damage.  Other bonus attacks that
+are triggered by skills (such as Hidden Blade and Trusty Steed, etc.) do not
+cause extra damage from the Maim effect (e.g. they do not "double dip").  This
+damage is subject to normal physical damage resistance or immunity.  The Maim
+effect lasts until the affected creature dies.
 
 See Also: SUBCLASSES GLADIATOR
 #
@@ -8521,6 +8517,27 @@ Level  Song                              Mana
 
 See Also: SUBCLASSES BLADESINGER SONGS BARD
 #
+TAUNT
+
+Class: Bard
+Level: 20
+
+A bard often uses lulls in conversation or adventures to entertain
+and amuse, buoying the spirits of their fellows.  Unfortunately, at
+times this amusement comes at the expense of others, as is the case
+with their taunt skill.
+Taunt is an automatic skill which has a chance of triggering every
+round in combat.  The bard will distract the enemy with embarassing
+stories, mischaracterizations, and general depravity, causing them
+to lose their focus.  A taunted enemy will experience a 10% reduction
+in their DAMROLL for 3 rounds.  The taunt effect does not stack, but
+the duration resets whenever a taunt is applied.
+
+The success rate of this skill is based on practice level, and is
+increased by the bard's Constitution.
+
+See Also: BARD
+#
 BLADESINGING
 
 Subclass Bladesinger: Level 3 (Bard)
@@ -8571,7 +8588,7 @@ Mimicked actions:
 - Paladin: pummel + fury (self 0 ticks)
 - Anti-Paladin: pummel w/ hidden-blade + rage/bloodlust (self 0 tick)
 - Ninja: dual + divine wind + kick
-- Bard: dual + rejuvenation song + heal song + taunt (anything you can do i can do better)
+- Bard: taunt + dual + heal song
 - Commando: triple + eshock + disarm
 
 See Also: SUBCLASSES BLADESINGER BARD
@@ -8706,6 +8723,7 @@ See Also: SUBCLASSES CHANTER
 AID
 
 Usage       : song 'hero of the day'
+              song 'power of love'
 Level       : Chanter SC4
 Duration    : 5
 Mana        : 150
@@ -8713,7 +8731,7 @@ Mana        : 150
 This song increases the damage of all characters in the room by 10%, applied
 as an enchantment with the Chanter's name; e.g. "Ranger's Aid"
 This allows the effect to stack from multiple Chanters, and it applies to all
-damage types (spell, song, combat, skill, etc.)
+damage types (spell, song, combat, skill, spec, etc.)
 
 See Also: SUBCLASSES CHANTER
 #

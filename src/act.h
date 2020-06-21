@@ -189,7 +189,7 @@ void do_vicious(CHAR *ch, char *argument, int cmd);
 void do_reply(CHAR *ch, char *argument, int cmd);
 void do_walkin(CHAR *ch, char *argument, int cmd);
 void do_walkout(CHAR *ch, char *argument, int cmd);
-void do_backflip(CHAR *ch, char *argument, int cmd);
+//void do_backflip(CHAR *ch, char *argument, int cmd);
 void do_clan(CHAR *ch, char *argument, int cmd);
 void do_logon_char(CHAR *ch, char *argument, int cmd);
 void do_logoff_char(CHAR *ch, char *argument, int cmd);

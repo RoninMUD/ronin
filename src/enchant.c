@@ -1668,7 +1668,7 @@ void assign_enchantments(void)
 
   ENCHANTO("The title of Minstrel"          , ENCHANT_MINSTREL    , -1,  1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, minstrel_enchantment);
   ENCHANTO("The title of Poet"              , ENCHANT_POET        , -1,  1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, poet_enchantment);
-  ENCHANTO("The title of Conductor"         , ENCHANT_CONDUCTOR   , -1,  5, APPLY_SKILL_BACKFLIP  , AFF_INFRAVISION     , AFF_NONE, conductor_enchantment);
+  ENCHANTO("The title of Conductor"         , ENCHANT_CONDUCTOR   , -1,  5, APPLY_SKILL_TAUNT     , AFF_INFRAVISION     , AFF_NONE, conductor_enchantment);
 
   ENCHANTO("The title of Minion of Darkness", ENCHANT_MINION      , -1,  5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, minion_enchantment);
   ENCHANTO("The title of Dark Warder"       , ENCHANT_DARKWARDER  , -1,  0, APPLY_NONE            , AFF_INFRAVISION     , AFF_NONE, darkwarder_enchantment);

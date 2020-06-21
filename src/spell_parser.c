@@ -201,7 +201,7 @@ const char * const spells[] = {
   "dispel sanctuary",             /* 141 */
   "disenchant",                   /* 142 */
   "petrify",                      /* 143 */
-  "backflip",                     /* 144 */
+  "taunt",                        /* 144 */
   "protection from good",         /* 145 */
   "remove improved invisibility", /* 146 */
   "",                             /* 147 */
