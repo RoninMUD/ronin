@@ -33,6 +33,39 @@
 #define SPELL_RESERVED_DBC            0
 #define MAX_SPL_LIST                255
 
+/* Songs */
+#define SONG_ARMOR                    1
+#define SONG_CURE_BLIND               2
+#define SONG_FLY                      3
+#define SONG_CURE_CRITIC              4
+#define SONG_FORGET                   5
+#define SONG_BLINDNESS                6
+#define SONG_SLEEP                    7
+#define SONG_SATIATE                  8
+#define SONG_VITALITY                 9
+#define SONG_COLOUR_SPRAY            10
+#define SONG_DETECT_INVIS            11
+#define SONG_TOTAL_RECALL            12
+#define SONG_FEAR                    13
+#define SONG_INFRAVISION             14
+#define SONG_CHARM_PERSON            15
+#define SONG_SANCTUARY               16
+#define SONG_ANIMATE_DEAD            17
+#define SONG_HEAL                    18
+#define SONG_HOLD                    19
+#define SONG_LETHAL_FIRE             20
+#define SONG_REMOVE_POISON           21
+#define SONG_HASTE                   22
+#define SONG_REJUVENATION            23
+#define SONG_GROUP_SUMMON            24
+#define SONG_RESPITE                 25
+#define SONG_WARCHANT                26
+#define SONG_LUCK                    27
+#define SONG_AID                     28
+#define SONG_CAMARADERIE             29
+#define SONG_RALLY                   30
+#define SONG_BLADE_DANCE             31
+
 /* Spells and Skills */
 #define SPELL_ARMOR                   1
 #define SPELL_TELEPORT                2

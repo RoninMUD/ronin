@@ -211,7 +211,7 @@ int (*real_tomek_func)(struct char_data*, struct char_data*, int, char*) = NULL;
 int skeena_id = -1;
 int ench_naiad_cowardice(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg);
 int extract_spell(char *arg);
-int extract_song(char *arg);
+//int extract_song(char *arg);
 
 // We use Skeena's ID as an ownerid for waxed items so we can recover in the event of a reboot/crash
 int get_skeena_id()
@@ -1846,13 +1846,15 @@ int mus_djinn(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   }
 
   //Skeena 6/12/11: Lethal fire song works on fire djinn
-  if( cmd == CMD_SONG ) {
+  // Removed by Hemp with Bard updates 2020
+  /* if( cmd == CMD_SONG ) {
     if( extract_song(arg) == 15 && V_MOB(mob) == MUS_FIRE ) {
       REMOVE_BIT( mob->specials.act, ACT_SHIELD );
     } else {
       SET_BIT(mob->specials.act, ACT_SHIELD);
     }
   }
+  */
 
   if( cmd == CMD_CAST )
   {
@@ -3032,10 +3034,11 @@ extract_spell_end:
 int extract_spell( char *arg ) {
   return extract_from_table(arg, spells);
 }
-
+/*
 int extract_song( char *arg ) {
   return extract_from_table(arg, songs);
 }
+*/
 
 // Summons black panthers; causes trouble to people who would cast spells on her.
 int mus_quaratt(CHAR *mob, CHAR* ch, int cmd, char *arg )

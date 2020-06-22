@@ -4341,7 +4341,7 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
       (count_mortals_room(ch, TRUE) < 1))
     return;
 
-  int check = number(1, 100) - (GET_DEX_APP(ch) * 5);
+  int check = number(1, 1500) - (GET_DEX_APP(ch) * 5);
 
   if (check > 100) return;
 
@@ -4625,36 +4625,36 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
       break;
 
     case CLASS_BARD: /* taunt + dual + heal song */
-        if (chance(50))
+      if (chance(50))
+      {
+        act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
+        act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
+      }
+      else {
+        act("$n liltingly sings 'Anything you can do I can do better, anything you can do I can do better than you.'", FALSE, ch, NULL, NULL, TO_ROOM);
+        act("You liltingly sing 'Anything you can do I can do better, anything you can do I can do better than you.'", FALSE, ch, NULL, NULL, TO_CHAR);
+      }
+
+      taunt_action(ch, vict, FALSE); //auto success
+
+      /* dual - first hit has haste chance */
+      perform_hit(ch, vict, TYPE_UNDEFINED, 1);
+      if (CHAR_REAL_ROOM(vict) != NOWHERE)
+        perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+
+      act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
+      act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
+      act("You sing 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_CHAR);
+
+      for (tmp_target = world[CHAR_REAL_ROOM(ch)].people; tmp_target; tmp_target = next_target)
+      {
+        next_target = tmp_target->next_in_room;
+
+        if (ch != tmp_target && (!IS_NPC(tmp_target) || SAME_GROUP(ch, tmp_target)))
         {
-          act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
-          act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
+          spell_heal(GET_LEVEL(ch), ch, tmp_target, NULL);
         }
-        else {
-          act("$n liltingly sings 'Anything you can do I can do better, anything you can do I can do better than you.", FALSE, ch, NULL, NULL, TO_ROOM);
-          act("You liltingly sing 'Anything you can do I can do better, anything you can do I can do better than you.", FALSE, ch, NULL, NULL, TO_CHAR);
-        }
-
-        taunt_action(ch, vict, FALSE); //auto success
-
-        /* dual - first hit has haste chance */
-        perform_hit(ch, vict, TYPE_UNDEFINED, 1);
-        if (CHAR_REAL_ROOM(vict) != NOWHERE)
-          perform_hit(ch, vict, TYPE_UNDEFINED, 4);
-
-        act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
-        act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
-        act("You sing 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_CHAR);
-
-        for (tmp_target = world[CHAR_REAL_ROOM(ch)].people; tmp_target; tmp_target = next_target)
-        {
-          next_target = tmp_target->next_in_room;
-
-          if (ch != tmp_target && (!IS_NPC(tmp_target) || SAME_GROUP(ch, tmp_target)))
-          {
-            spell_heal(GET_LEVEL(ch), ch, tmp_target, NULL);
-          }
-        }
+      }
       break;
 
     case CLASS_COMMANDO: /* triple + eshock + disarm */
