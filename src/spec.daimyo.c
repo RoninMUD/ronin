@@ -992,7 +992,7 @@ int dm_thorn(OBJ *obj,CHAR *ch, int cmd, char *argument) {
 
 int dm_katana_skills[] = {
   // list of obj_skill_flags that can be rolled
-  APPLY_SKILL_BACKFLIP,
+  APPLY_SKILL_TAUNT,
   APPLY_SKILL_PUMMEL,
   APPLY_SKILL_ASSAULT,
   APPLY_SKILL_PARRY,

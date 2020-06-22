@@ -229,7 +229,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
-          else if ((number == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20)) continue;
+          else if ((number == SKILL_TAUNT) && (GET_LEVEL(ch) < 20)) continue;
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", bard_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -373,7 +373,7 @@ int practice_skill(CHAR *ch, int number) {
       }
       break;
 
-    case SKILL_BACKFLIP:
+    case SKILL_TAUNT:
       if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
         bonus += 5;
       }
@@ -680,7 +680,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         skill = old_search_block(bard_skills[index], 0, strlen(bard_skills[index]), spells, TRUE);
       }
 
-      if (((skill == SKILL_BACKFLIP) && (GET_LEVEL(ch) < 20)) ||
+      if (((skill == SKILL_TAUNT) && (GET_LEVEL(ch) < 20)) ||
           ((skill == SKILL_CAMP) && (GET_LEVEL(ch) < 35)))
       {
         index = -2;

@@ -1334,7 +1334,7 @@ int chaos_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     const int shield_skill_list[] = {
       APPLY_SKILL_ASSAULT,
       APPLY_SKILL_BACKSTAB,
-      APPLY_SKILL_BACKFLIP,
+      APPLY_SKILL_TAUNT,
       APPLY_SKILL_CIRCLE,
       APPLY_SKILL_DODGE,
       APPLY_SKILL_DUAL,
@@ -1594,7 +1594,7 @@ int horn_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
         horn_modifier = 10;
         break;
       case CLASS_BARD:
-        horn_location = APPLY_SKILL_BACKFLIP;
+        horn_location = APPLY_SKILL_TAUNT;
         horn_modifier = 10;
         break;
     }

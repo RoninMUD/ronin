@@ -99,6 +99,7 @@ OBJS_RONIN_BASE = \
 	reception.o \
 	score.o \
 	signals.o \
+	song_parser.o \
 	spec.vote.o \
 	spells.o \
 	spell_parser.o \

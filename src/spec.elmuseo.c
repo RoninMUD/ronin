@@ -211,7 +211,7 @@ int (*real_tomek_func)(struct char_data*, struct char_data*, int, char*) = NULL;
 int skeena_id = -1;
 int ench_naiad_cowardice(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg);
 int extract_spell(char *arg);
-int extract_song(char *arg);
+//int extract_song(char *arg);
 
 // We use Skeena's ID as an ownerid for waxed items so we can recover in the event of a reboot/crash
 int get_skeena_id()
@@ -1846,13 +1846,15 @@ int mus_djinn(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   }
 
   //Skeena 6/12/11: Lethal fire song works on fire djinn
-  if( cmd == CMD_SONG ) {
+  // Removed by Hemp with Bard updates 2020
+  /* if( cmd == CMD_SONG ) {
     if( extract_song(arg) == 15 && V_MOB(mob) == MUS_FIRE ) {
       REMOVE_BIT( mob->specials.act, ACT_SHIELD );
     } else {
       SET_BIT(mob->specials.act, ACT_SHIELD);
     }
   }
+  */
 
   if( cmd == CMD_CAST )
   {
@@ -3032,10 +3034,11 @@ extract_spell_end:
 int extract_spell( char *arg ) {
   return extract_from_table(arg, spells);
 }
-
+/*
 int extract_song( char *arg ) {
   return extract_from_table(arg, songs);
 }
+*/
 
 // Summons black panthers; causes trouble to people who would cast spells on her.
 int mus_quaratt(CHAR *mob, CHAR* ch, int cmd, char *arg )
@@ -3767,7 +3770,7 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   return TRUE;
 }
 
-// Tomtom has a small chance to sing invuln song when backflipping
+// Tomtom has a small chance to sing haste song (guaranteed) on MSG_MOBACT
 int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
   if(!obj->equipped_by) return FALSE;
@@ -3775,12 +3778,12 @@ int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
   CHAR *holder = obj->equipped_by;
   CHAR *tmp_victim = NULL;
   CHAR *temp = NULL;
-  if(cmd != CMD_BACKFLIP) return FALSE;
+  if(cmd != MSG_MOBACT) return FALSE;
   if(GET_CLASS(holder)!=CLASS_BARD) return FALSE;
   if(!holder->specials.fighting) return FALSE;
 
-  // Roughly once every 2 hours of backflipping
-  if(number(0,1000) != 1) return FALSE;
+  // Roughly once every 1.5 hours
+  if(number(0,500) != 1) return FALSE;
 
   act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_CHAR);
   act("$n beats you senseless with $s tomtom!", 1, ch, 0, holder->specials.fighting, TO_VICT);

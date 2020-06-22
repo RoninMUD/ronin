@@ -201,7 +201,7 @@ const char * const spells[] = {
   "dispel sanctuary",             /* 141 */
   "disenchant",                   /* 142 */
   "petrify",                      /* 143 */
-  "backflip",                     /* 144 */
+  "taunt",                        /* 144 */
   "protection from good",         /* 145 */
   "remove improved invisibility", /* 146 */
   "",                             /* 147 */
@@ -360,6 +360,7 @@ void affect_update()
   }
 }
 
+char* skip_spaces(char* string);
 
 int SPELL_LEVEL(struct char_data *ch, int spell_number)
 {
@@ -382,695 +383,6 @@ int SPELL_LEVEL(struct char_data *ch, int spell_number)
     return (spell_info[spell_number].min_level_commando);
   default:
     return LEVEL_ETE;
-  }
-}
-
-const char * const songs[] =
-{
-  "somebody's watching me",           /* detect invis */
-  "seal with a kiss",                 /* armor */
-  "like a prayer",                    /* bless */
-  "one day i will fly away",          /* fly */
-  "we don't need another hero",       /* cure critical */
-  "smoke get in your eyes",           /* blindness */
-  "best of me",                       /* statiate */
-  "i'm taking a walk",                /* vitality */
-  "dangerous",                        /* color spray */
-  "we are the world",                 /* total recall */
-  "moonlight shadow",                 /* infra */
-  "nothing compares to you",          /* santuary */
-  "better than the devil you know",   /* evil word */
-  "toy soldiers",                     /* animate dead */
-  "everything i do i do it for you",  /* heal */
-  "a view to a kill",                 /* lethal fire */
-  "spirits in the material world",    /* mass invis */
-  "lifting shadows of a dream",       /* remove poison */
-  "brightest flame burns quickest",   /* rally */
-  "something takes a part of me",     /* warchant */
-  "if i could change the world",      /* luck */
-  "there is no heart that won't heal",/* rejuvenation */
-  "hero of the day",                  /* aid */
-  "heaven beside you",                /* protection from evil/good */
-  "you've been thunderstruck",        /* thunderball */
-  "we are family",                    /* camaraderie */
-  "bridge over troubled water",       /* respite */
-  "come together",                    /* group summon */
-  "\n"
-};
-
-int song_level[] =
-{
-  18,5,7,9,11,13,15,16,17,19,21,23,24,25,26,28,24,35,30,30,30,45,30,30,30,30,30,50
-};
-
-int song_mana[] =
-{
-  30,20,20,20,25,25,25,30,30,30,30,50,60,60,70,80,50,25,75,60,100,80,150,100,250,150,40,100
-};
-
-char *skip_spaces(char *string);
-void do_song(CHAR *ch, char *arg, int cmd)
-{
-  char buf[MIL];
-  int qend = 0;
-  int song = 0;
-  int mana = 0;
-  int level = 0;
-  CHAR *tmp_victim = NULL;
-  CHAR *next_victim = NULL;
-  OBJ *tmp_obj = NULL;
-  OBJ *next_obj = NULL;
-
-  if (IS_NPC(ch)) return;
-
-  if (GET_CLASS(ch) != CLASS_BARD &&
-      IS_MORTAL(ch))
-  {
-    send_to_char("Please leave singing songs to the bards.\n\r", ch);
-    return;
-  }
-
-  if (IS_MORTAL(ch))
-  {
-    if (!ch->equipment[HOLD] ||
-      ch->equipment[HOLD]->obj_flags.type_flag != ITEM_MUSICAL)
-    {
-      send_to_char("You need to hold a musical instrument to sing a song.\n\r", ch);
-      return;
-    }
-  }
-
-  arg = skip_spaces(arg);
-
-  if (!(*arg))
-  {
-    send_to_char("What song?\n\r", ch);
-    return;
-  }
-
-  for (qend = 1; *(arg + qend) && (*(arg + qend) != '\''); qend++)
-  {
-    *(arg + qend) = LOWER(*(arg + qend));
-  }
-
-  if (*(arg) != '\'' ||
-    *(arg + qend) != '\'')
-  {
-    send_to_char("Songs must always be enclosed by the symbols: '\n\r", ch);
-    return;
-  }
-
-  song = old_search_block(arg, 1, (qend - 1), songs, 0);
-
-  if (!song ||
-      !check_sc_song_access(ch, song))
-  {
-    send_to_char("You do not know of such a song.\n\r", ch);
-    return;
-  }
-
-  if (GET_LEVEL(ch) < song_level[song - 1])
-  {
-    send_to_char("You can't quite remember the words to that song!\n\r", ch);
-    return;
-  }
-
-  mana = song_mana[song - 1];
-
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, DOUBLE_MANA))
-  {
-    mana *= 2;
-  }
-
-  if (IS_MORTAL(ch))
-  {
-    if (GET_MANA(ch) < mana)
-    {
-      send_to_char("You can't summon enough energy to sing the song.\n\r", ch);
-      return;
-    }
-  }
-  else
-  {
-    sprintf(buf, "WIZINFO: %s sings %s.", GET_NAME(ch), arg);
-    log_f("%s", buf);
-    wizlog(buf, GET_LEVEL(ch) + 1, 5);
-  }
-
-  GET_MANA(ch) -= mana;
-
-  send_to_char("You sing the song.\n\r", ch);
-
-  if (IS_MORTAL(ch))
-  {
-    if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_SONG))
-    {
-      send_to_char("The song has been absorbed by your surroundings.\n\r", ch);
-      return;
-    }
-  }
-
-  WAIT_STATE(ch, PULSE_VIOLENCE);
-
-  switch (song) {
-    case 1:
-      act("$n sings 'I always feel like somebody's watching me...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim) {
-          spell_detect_invisibility(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_detect_invisibility(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 2:
-      act("$n sings 'In a letter, sealed with a kiss...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_armor(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_armor(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 3:
-      act("$n sings 'Like a prayer...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_bless(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_bless(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 4:
-      act("$n sings 'One day I will fly away...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_fly(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_fly(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 5:
-      act("$n sings 'We don't need another hero...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
-        {
-          spell_cure_critic(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_cure_critic(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 6:
-      act("$n sings 'Smoke gets in your eyes...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-
-        if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
-        {
-          spell_blindness(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-      break;
-
-    case 7:
-      act("$n sings 'Now I save the best of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_satiate(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_satiate(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 8:
-      act("$n sings 'I'm taking a ride with my best friend...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_vitality(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_vitality(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 9:
-      act("$n sings 'Dangerous...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_colour_spray(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-      break;
-
-    case 10:
-      act("$n sings 'We are the world, we are the children...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_word_of_recall(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_word_of_recall(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 11:
-      act("$n sings 'Carried away by moonlight shadow...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_infravision(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_infravision(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 12:
-      act("$n sings 'It's been seven hours and fifteen days...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_sanctuary(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_sanctuary(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 13:
-      act("$n sings 'Better the devil you know...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_dispel_good(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-      break;
-
-    case 14:
-      act("$n sings 'Like toy soldiers...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_obj = world[CHAR_REAL_ROOM(ch)].contents; tmp_obj; tmp_obj = next_obj)
-      {
-        next_obj = tmp_obj->next_content;
-        spell_animate_dead(GET_LEVEL(ch), ch, NULL, tmp_obj);
-      }
-      break;
-
-    case 15:
-      act("$n sings 'Everything I do, I do it for you...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
-        {
-          spell_heal(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_heal(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 16:
-      act("$n sings 'Dance into the fire...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_lethal_fire(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-      break;
-
-    case 17:
-      act("$n sings 'We are spirits in the material world...'", FALSE, ch, NULL, NULL, TO_ROOM);
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_invisibility(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_invisibility(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 18:
-      act("$n sings 'Lifting shadows, off a dream...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_remove_poison(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_remove_poison(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 19:
-      act("$n sings 'The brightest flame burns quickest...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_rally(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_rally(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 20:
-      act("$n sings 'Something takes a part of me...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_warchant(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_warchant(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 21:
-      act("$n sings 'If I could change the world...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_luck(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_luck(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 22:
-      act("$n sings 'There is no heart that won't heal...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim && (!IS_NPC(tmp_victim) || SAME_GROUP(ch, tmp_victim)))
-        {
-          spell_rejuvenation(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_rejuvenation(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 23:
-      act("$n sings 'Hero of the day...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_aid(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_aid(GET_LEVEL(ch), ch, ch, NULL);
-      break;
-
-    case 24:
-      act("$n sings 'Heaven beside you...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          if (IS_EVIL(ch))
-          {
-            spell_protection_from_good(GET_LEVEL(ch), ch, tmp_victim, NULL);
-          }
-          else if (IS_GOOD(ch))
-          {
-            spell_protection_from_evil(GET_LEVEL(ch), ch, tmp_victim, NULL);
-          }
-        }
-      }
-
-      if (IS_EVIL(ch))
-      {
-        spell_protection_from_good(GET_LEVEL(ch), ch, ch, NULL);
-      }
-      else if (IS_GOOD(ch))
-      {
-        spell_protection_from_evil(GET_LEVEL(ch), ch, ch, NULL);
-      }
-      break;
-
-    case 25:
-      act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_thunderball(GET_LEVEL(ch), ch, tmp_victim, NULL);
-        }
-      }
-      break;
-
-    case 26: /* Camaraderie */
-      act("$n sings 'Everyone can see we're together...'", FALSE, ch, NULL, NULL, TO_ROOM);
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (ch != tmp_victim)
-        {
-          spell_camaraderie(level, ch, tmp_victim, NULL);
-        }
-      }
-
-      spell_camaraderie(level, ch, ch, NULL);
-      break;
-
-    case 27: /* Respite */
-      act("$n sings 'When you're weary, feeling small...'", FALSE, ch, NULL, NULL, TO_ROOM);
-      const int respite_dispel_types[] = {
-        SPELL_CHARM_PERSON,
-        SPELL_INCENDIARY_CLOUD_NEW,
-        SPELL_CLOUD_CONFUSION,
-        SPELL_CURSE,
-        SPELL_CHILL_TOUCH,
-        SPELL_WITHER,
-        SPELL_RIMEFANG,
-        SPELL_BLINDNESS,
-        SPELL_POISON,
-        SPELL_PARALYSIS,
-        SPELL_SLEEP,
-        -1
-      };
-      int respite_dispel = 0;
-
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
-      {
-        next_victim = tmp_victim->next_in_room;
-
-        if (!IS_NPC(tmp_victim))
-        {
-          respite_dispel = get_random_set_effect(tmp_victim, respite_dispel_types);
-          switch (respite_dispel) {
-          case SPELL_CHARM_PERSON:
-            if (affected_by_spell(tmp_victim, SPELL_CHARM_PERSON)) {
-                send_to_char("You feel more self-confident.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_CHARM_PERSON);
-            }
-            break;
-          case SPELL_INCENDIARY_CLOUD_NEW:
-            if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW)) {
-                send_to_char("The blistering waves of heat subside.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW);
-            }
-            break;
-          case SPELL_CLOUD_CONFUSION:
-            if (affected_by_spell(tmp_victim, SPELL_CLOUD_CONFUSION)) {
-                send_to_char("You feel less disoriented.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_CLOUD_CONFUSION);
-            }
-            break;
-          case SPELL_CURSE:
-            if (affected_by_spell(tmp_victim, SPELL_CURSE)) {
-                send_to_char("You feel better.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_CURSE);
-            }
-            break;
-          case SPELL_CHILL_TOUCH:
-            if (affected_by_spell(tmp_victim, SPELL_CHILL_TOUCH)) {
-                send_to_char("You feel warm again.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_CHILL_TOUCH);
-            }
-            break;
-          case SPELL_WITHER:
-            if (affected_by_spell(tmp_victim, SPELL_WITHER)) {
-                send_to_char("The pain coursing through your withered body begins to recede.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_WITHER);
-            }
-            break;
-          case SPELL_RIMEFANG:
-            if (affected_by_spell(tmp_victim, SPELL_RIMEFANG)) {
-                send_to_char("The paralyzation wears off, you can move again.\n\r", tmp_victim);
-                affect_from_char(tmp_victim, SPELL_RIMEFANG);
-            }
-            break;
-          case SPELL_BLINDNESS:
-            if (affected_by_spell(tmp_victim, SPELL_BLINDNESS)) {
-              send_to_char("You can see again.\n\r", tmp_victim);
-              affect_from_char(tmp_victim, SPELL_BLINDNESS);
-            }
-            break;
-          case SPELL_POISON:
-            if (affected_by_spell(tmp_victim, SPELL_POISON)) {
-              send_to_char("You feel better.\n\r", tmp_victim);
-              affect_from_char(tmp_victim, SPELL_POISON);
-            }
-            break;
-          case SPELL_PARALYSIS:
-            if (affected_by_spell(tmp_victim, SPELL_PARALYSIS)) {
-              send_to_char("You can move again.\n\r", tmp_victim);
-              affect_from_char(tmp_victim, SPELL_PARALYSIS);
-            }
-            break;
-          case SPELL_SLEEP:
-              if (affected_by_spell(tmp_victim, SPELL_SLEEP)) {
-                  send_to_char("You feel less tired.\n\r", tmp_victim);
-                  affect_from_char(tmp_victim, SPELL_SLEEP);
-              }
-              break;
-          case TYPE_UNDEFINED:
-            if (ch != tmp_victim) {
-              send_to_char("You feel ready!\n\r", tmp_victim);
-              GET_WAIT(tmp_victim) = 0;
-            }
-            break;
-          }
-        }
-      }
-      break;
-
-    case 28: /* Group Summon */
-      act("$n sings 'He got joo joo eyeballs, he one holy roller...'", FALSE, ch, NULL, NULL, TO_ROOM);
-      CHAR* group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
-
-      if (ch != group_leader) spell_summon(GET_LEVEL(ch), ch, group_leader, NULL);
-
-      for (FOL* follower = group_leader->followers; follower; follower = follower->next) {
-        CHAR* temp_ch = follower->follower;
-
-        if (temp_ch &&
-            SAME_GROUP(group_leader, temp_ch) &&
-            SAME_GROUP(ch, temp_ch) &&
-            ch != temp_ch) {
-          spell_summon(GET_LEVEL(ch), ch, temp_ch, NULL);
-        }
-      }
-
-      break;
-
-    default:
-      act("$n hums the words of a song $e doesn't know.", FALSE, ch, NULL, NULL, TO_ROOM);
-      act("You hum the words of a song you don't know.", FALSE, ch, NULL, NULL, TO_CHAR);
-      break;
   }
 }
 
@@ -1966,25 +1278,25 @@ void assign_spell_pointers(void)
   /*                                 Minimum Class Level Required
    * Spell #, BT, Minimum Position,  MU, CL, NI, PA, AP, AV, BA, CO, MANA, Target Types,                                                                 Cast Function
    */
-  SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1,  5, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
+  SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1, 51, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
   SPELLO(  2, 30, POSITION_FIGHTING,  8, 51, 51, 51, 51,  7, 51, 51,   25, TAR_SELF_ONLY,                                                                cast_teleport);
-  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3,  7, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
-  SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 13, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
+  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
+  SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
   SPELLO(  5, 30, POSITION_FIGHTING,  5, 51, 51, 51, 51,  1, 51,  3,   17, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_burning_hands);
   SPELLO(  6, 30, POSITION_FIGHTING, 51, 12, 51, 51, 51, 51, 51, 12,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_call_lightning);
-  SPELLO(  7, 30, POSITION_STANDING, 14, 51, 51, 51, 51, 12, 18, 51,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
+  SPELLO(  7, 30, POSITION_STANDING, 14, 51, 51, 51, 51, 12, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
   SPELLO(  8, 30, POSITION_FIGHTING,  3, 51, 51, 51,  3, 51, 51,  2,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_chill_touch);
   SPELLO(  9, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 27, 51, 51,  100, TAR_OBJ_INV,                                                                  cast_clone);
-  SPELLO( 10, 30, POSITION_FIGHTING, 11, 51, 51, 51, 51, 51, 17, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_colour_spray);
+  SPELLO( 10, 30, POSITION_FIGHTING, 11, 51, 51, 51, 51, 51, 51, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_colour_spray);
   SPELLO( 11, 30, POSITION_STANDING, 10, 13, 11, 51, 51, 51, 51, 51,   25, TAR_IGNORE,                                                                   cast_control_weather);
   SPELLO( 12, 30, POSITION_STANDING, 51,  3, 51,  3, 51, 51, 51, 51,    5, TAR_IGNORE,                                                                   cast_create_food);
   SPELLO( 13, 30, POSITION_STANDING, 51,  2, 51,  4, 51, 51, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_create_water);
   SPELLO( 14, 30, POSITION_STANDING, 51,  4,  9,  7, 51,  5, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_blind);
-  SPELLO( 15, 30, POSITION_FIGHTING, 51,  9, 51, 10, 51,  7, 11, 51,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
+  SPELLO( 15, 30, POSITION_FIGHTING, 51,  9, 51, 10, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
   SPELLO( 16, 30, POSITION_FIGHTING, 51,  1,  4,  1, 51,  1, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_light);
   SPELLO( 17, 30, POSITION_STANDING, 12, 51, 51, 51,  8, 51, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_ROOM | TAR_OBJ_INV,                  cast_curse);
   SPELLO( 18, 30, POSITION_STANDING,  4,  4, 51,  4,  4,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_alignment);
-  SPELLO( 19, 30, POSITION_STANDING,  2,  5,  1,  5,  5,  3,  3, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
+  SPELLO( 19, 30, POSITION_STANDING,  2,  5,  1,  5,  5,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
   SPELLO( 20, 30, POSITION_STANDING,  2,  3, 51, 51, 51, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_magic);
   SPELLO( 21, 30, POSITION_STANDING,  4,  2, 51, 51,  2, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP,                                  cast_detect_poison);
   SPELLO( 22, 30, POSITION_FIGHTING, 51, 10, 51, 19, 51, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_evil);
@@ -1993,28 +1305,28 @@ void assign_spell_pointers(void)
   SPELLO( 25, 30, POSITION_FIGHTING, 13, 51, 51, 51, 15, 14, 51, 51,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_energy_drain);
   SPELLO( 26, 30, POSITION_FIGHTING, 15, 51, 51, 51, 20, 15, 51, 15,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fireball);
   SPELLO( 27, 30, POSITION_FIGHTING, 51, 15, 51, 51, 51, 51, 51, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_harm);
-  SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 26, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
-  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 8,  51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
+  SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
+  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
   SPELLO( 30, 30, POSITION_FIGHTING,  9, 51, 51, 51, 12, 51, 51,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lightning_bolt);
   SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
   SPELLO( 32, 30, POSITION_FIGHTING,  1, 51, 51, 51,  1, 51, 51,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_magic_missile);
   SPELLO( 33, 30, POSITION_STANDING, 51,  8, 12, 51,  6, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_EQUIP, cast_poison);
   SPELLO( 34, 30, POSITION_STANDING, 51,  6, 51, 24, 51, 20, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_evil);
   SPELLO( 35, 30, POSITION_STANDING, 13, 12, 51, 51, 51, 21, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_OBJ_ROOM,                   cast_remove_curse);
-  SPELLO( 36, 30, POSITION_STANDING, 51, 13, 51, 20, 51, 12, 23, 51,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
+  SPELLO( 36, 30, POSITION_STANDING, 51, 13, 51, 20, 51, 12, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
   SPELLO( 37, 30, POSITION_FIGHTING,  7, 51, 51, 51, 51, 51, 51,  5,   19, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_shocking_grasp);
-  SPELLO( 38, 30, POSITION_STANDING, 14, 51, 51, 51, 19, 11, 17, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_sleep);
+  SPELLO( 38, 30, POSITION_STANDING, 14, 51, 51, 51, 19, 11, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_sleep);
   SPELLO( 39, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_strength);
   SPELLO( 40, 30, POSITION_STANDING, 51,  8, 51, 18, 51, 12, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_summon);
-  SPELLO( 41, 30, POSITION_STANDING,  1, 51, 51, 51, 51, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_OBJ_ROOM | TAR_SELF_NONO,                                 cast_ventriloquate);
-  SPELLO( 42, 30, POSITION_STANDING, 13, 11, 19, 51, 51,  6, 19, 19,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_word_of_recall);
+  SPELLO( 41, 30, POSITION_STANDING,  1, 51, 51, 51, 51, 51, 5,  51,    5, TAR_CHAR_ROOM | TAR_OBJ_ROOM | TAR_SELF_NONO,                                 cast_ventriloquate);
+  SPELLO( 42, 30, POSITION_STANDING, 13, 11, 19, 51, 51,  6, 51, 19,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_word_of_recall);
   SPELLO( 43, 30, POSITION_STANDING, 51,  9, 12, 14, 51,  5, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_remove_poison);
   SPELLO( 44, 30, POSITION_STANDING, 51,  7, 10,  6, 13,  8, 51, 51,   20, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sense_life);
   SPELLO( 71, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 10,  9, 51,   25, TAR_OBJ_INV,                                                                  cast_identify);
   SPELLO( 72, 30, POSITION_FIGHTING, 51,  6, 16,  5, 51,  4, 51, 51,   18, TAR_CHAR_ROOM,                                                                cast_cure_serious);
-  SPELLO( 73, 30, POSITION_STANDING,  5, 51,  5, 51, 11,  4, 21, 51,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
+  SPELLO( 73, 30, POSITION_STANDING,  5, 51,  5, 51, 11,  4, 51, 51,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
   SPELLO( 74, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_regeneration);
-  SPELLO( 75, 30, POSITION_FIGHTING,  8, 16, 51, 14, 51, 10,  7, 51,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
+  SPELLO( 75, 30, POSITION_FIGHTING,  8, 16, 51, 14, 51, 10, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
   SPELLO( 76, 30, POSITION_FIGHTING, 51,  4, 51, 51, 51, 51, 51, 51,   23, TAR_IGNORE,                                                                   cast_cure_light_spray);
   SPELLO( 77, 30, POSITION_FIGHTING, 51, 10, 51, 51, 51, 51, 51, 51,   27, TAR_IGNORE,                                                                   cast_cure_serious_spray);
   SPELLO( 78, 30, POSITION_FIGHTING, 51, 13, 51, 51, 51, 16, 51, 51,   38, TAR_IGNORE,                                                                   cast_cure_critic_spray);
@@ -2025,22 +1337,22 @@ void assign_spell_pointers(void)
   SPELLO( 83, 30, POSITION_STANDING, 51, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
   SPELLO( 84, 30, POSITION_STANDING, 17, 20, 51, 51, 51, 16, 51, 51,   30, TAR_OBJ_INV,                                                                  cast_recharge);
   SPELLO( 85, 30, POSITION_FIGHTING, 51, 25, 51, 51, 51, 22, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
-  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7,  9, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
+  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
   SPELLO( 87, 30, POSITION_FIGHTING, 18, 18, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_mana_transfer);
   SPELLO( 88, 30, POSITION_STANDING, 51, 19, 51, 51, 51, 17, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_holy_bless);
   SPELLO( 89, 30, POSITION_STANDING, 51, 20, 51, 51, 51, 18, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_evil_bless);
-  SPELLO( 90, 30, POSITION_STANDING, 51, 15, 51, 51, 51, 51, 15, 51,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
-  SPELLO( 91, 30, POSITION_STANDING, 22, 24, 51, 51, 51, 20, 25, 51,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
+  SPELLO( 90, 30, POSITION_STANDING, 51, 15, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
+  SPELLO( 91, 30, POSITION_STANDING, 22, 24, 51, 51, 51, 20, 51, 51,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
   SPELLO( 92, 30, POSITION_STANDING, 51, 30, 51, 51, 51, 30, 51, 51,  200, TAR_IGNORE,                                                                   cast_great_miracle);
   SPELLO( 93, 30, POSITION_FIGHTING, 51, 11, 51, 10, 51,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_flamestrike);
   SPELLO( 94, 30, POSITION_FIGHTING, 20, 51, 51, 51, 25, 10, 51, 51,   15, TAR_OBJ_ROOM,                                                                 cast_spirit_levy);
-  SPELLO( 95, 30, POSITION_FIGHTING, 24, 51, 51, 51, 51, 20, 28, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lethal_fire);
-  SPELLO( 96, 30, POSITION_STANDING, 21, 51, 24, 26, 51, 19, 18, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_hold);
+  SPELLO( 95, 30, POSITION_FIGHTING, 24, 51, 51, 51, 51, 20, 51, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lethal_fire);
+  SPELLO( 96, 30, POSITION_STANDING, 21, 51, 24, 26, 51, 19, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_hold);
   SPELLO( 97, 30, POSITION_STANDING, 18, 51, 51, 51, 51, 17, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sphere);
   SPELLO( 98, 30, POSITION_STANDING, 25, 51, 51, 51, 29, 22, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_imp_invisibility);
   SPELLO( 99, 30, POSITION_STANDING, 29, 28, 51, 51, 51, 25, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_invulnerability);
-  SPELLO(100, 30, POSITION_FIGHTING,  9, 51, 51, 51, 10,  9, 12, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fear);
-  SPELLO(101, 30, POSITION_FIGHTING, 11, 51, 51, 51, 14, 10, 15, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_forget);
+  SPELLO(100, 30, POSITION_FIGHTING,  9, 51, 51, 51, 10,  9, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fear);
+  SPELLO(101, 30, POSITION_FIGHTING, 11, 51, 51, 51, 14, 10, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_forget);
   SPELLO(102, 30, POSITION_FIGHTING, 51, 51, 51, 21, 51, 23, 51, 51,   60, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_fury);
   SPELLO(103, 30, POSITION_STANDING, 51, 51,  3, 51, 51,  3, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_endure);
   SPELLO(104, 30, POSITION_FIGHTING, 51, 51, 16, 51, 17, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
@@ -2052,14 +1364,14 @@ void assign_spell_pointers(void)
   SPELLO(111, 30, POSITION_STANDING, 29, 51, 51, 51, 21, 28, 51, 51,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_paralyze);
   SPELLO(112, 30, POSITION_STANDING, 51, 14, 51, 51, 51,  9, 51, 51,   35, TAR_CHAR_ROOM,                                                                cast_remove_paralysis);
   SPELLO(113, 30, POSITION_FIGHTING, 51, 11, 51, 51, 22, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_good);
-  SPELLO(114, 30, POSITION_FIGHTING, 51, 23, 51, 51, 26, 51, 24, 51,   80, TAR_IGNORE,                                                                   cast_evil_word);
+  SPELLO(114, 30, POSITION_FIGHTING, 51, 23, 51, 51, 26, 51, 51, 51,   80, TAR_IGNORE,                                                                   cast_evil_word);
   SPELLO(115, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  9, 51, 51,   20, TAR_OBJ_INV,                                                                  cast_reappear);
   SPELLO(116, 30, POSITION_STANDING,  6, 51, 51, 51, 51,  5, 51, 51,   30, TAR_CHAR_ROOM,                                                                cast_reveal);
   SPELLO(117, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 16, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_relocation);
   SPELLO(118, 30, POSITION_STANDING, 11, 14, 51, 51, 51, 11, 13, 51,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
   SPELLO(119, 30, POSITION_FIGHTING, 51, 27, 51, 32, 51, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_super_harm);
   SPELLO(124, 30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
-  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 45, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
+  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 55, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
   SPELLO(128, 30, POSITION_FIGHTING, 26, 51, 51, 51, 30, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_power_word_kill);
   SPELLO(129, 30, POSITION_STANDING, 19, 17, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_dispel_magic);
   SPELLO(130, 30, POSITION_FIGHTING, 30, 51, 51, 51, 51, 51, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_conflagration);
@@ -2145,7 +1457,7 @@ void assign_spell_pointers(void)
   SPELLO(SPELL_WITHER,                30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wither);
 
   // Bard
-  SPELLO(SPELL_REJUVENATION,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 50, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
+  SPELLO(SPELL_REJUVENATION,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
 
   // Chanter
   SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);

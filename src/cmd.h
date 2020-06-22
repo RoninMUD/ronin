@@ -302,7 +302,7 @@ $State: Exp $
 #define CMD_LOGON              232
 #define CMD_LOGOFF             233
 #define CMD_CLAN               234
-#define CMD_BACKFLIP           235
+#define CMD_SKILL235           235 /* Hemp - removed Backflip */
 #define CMD_REINDEX            236 /* Ranger - March 2000 */
 #define CMD_SNOOPLIST          237 /* Quack - Jan 99 - To list active snoops */
 #define CMD_ZRATE              238 /* Ranger - Oct 2000 */

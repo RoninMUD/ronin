@@ -291,47 +291,6 @@ int check_sc_access(CHAR *ch, int skill) {
   return FALSE;
 }
 
-int check_sc_song_access(CHAR *ch, int song) {
-  if (!ch) return FALSE;
-
-  if (IS_NPC(ch) || IS_IMMORTAL(ch)) return TRUE;
-
-  /* Note: Song 22 is Rejuvenation. */
-  if ((song <= 18) ||
-      (song == 22) || // rejuvenation
-      (song == 28))   // group summon
-    return TRUE;
-
-  switch (song) {
-    case 19: /* rally song */
-      if (check_subclass(ch, SC_BLADESINGER, 1)) return TRUE;
-      break;
-    case 20: /* warchant */
-      if (check_subclass(ch, SC_CHANTER, 2)) return TRUE;
-      break;
-    case 21: /* song of luck */
-      if (check_subclass(ch, SC_CHANTER, 3)) return TRUE;
-      break;
-    case 23: /* aid */
-      if (check_subclass(ch, SC_CHANTER, 4)) return TRUE;
-      break;
-    case 24: /* protection vs. evil/good */
-      if (check_subclass(ch, SC_BLADESINGER, 4)) return TRUE;
-      break;
-    case 25: /* thunderball */
-      if (check_subclass(ch, SC_BLADESINGER, 5)) return TRUE;
-      break;
-    case 26: /* camaraderie */
-      if (check_subclass(ch, SC_CHANTER, 5)) return TRUE;
-      break;
-    case 27: /* respite */
-      if (check_subclass(ch, SC_CHANTER, 1)) return TRUE;
-      break;
-  }
-
-  return FALSE;
-}
-
 int check_subclass(CHAR *ch, int sc, int level) {
   if (!ch) return FALSE;
 

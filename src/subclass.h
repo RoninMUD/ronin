@@ -12,7 +12,6 @@
 
 /* utility*/
 int check_sc_access(CHAR *ch, int s);
-int check_sc_song_access(CHAR *ch, int s);
 int check_subclass(CHAR *ch, int sub, int lvl);
 int set_subclass(CHAR *ch, int sub, int lvl);
 void remove_subclass(CHAR *ch);

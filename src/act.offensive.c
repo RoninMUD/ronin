@@ -1965,6 +1965,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
 }
 
 
+/*
 void do_backflip(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
@@ -2039,7 +2040,7 @@ void do_backflip(CHAR *ch, char *arg, int cmd) {
 
   skill_wait(ch, SKILL_BACKFLIP, 2);
 }
-
+*/
 
 void do_cunning(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
