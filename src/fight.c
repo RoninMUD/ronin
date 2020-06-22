@@ -1983,13 +1983,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
             SAME_GROUP(ch, tmp_victim) &&
             IS_MORTAL(tmp_victim)) {
           showman_multi += 0.05;
-
-          if (GET_CLASS(tmp_victim) == CLASS_BARD) {
-            showman_multi += 0.05;
-          }
         }
       }
       if (showman_multi > 3 ||
+          (IS_AFFECTED(ch, AFF2_RAGE) && showman_multi > 2) ||
           (IS_AFFECTED(ch, AFF_FURY) && showman_multi > 1.5)) {
         dmg = dmg * 3;
       }
