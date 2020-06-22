@@ -45,7 +45,7 @@ struct spell_info_type spell_info[MAX_SPL_LIST + 1];
 int bladesinging_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd, char* arg)
 {
     if (cmd == MSG_REMOVE_ENCH)
-        send_to_char("The music enchanting your blade descrecendos to silence.\n\r", enchanted_ch);
+        send_to_char("The music enchanting your blade decrescendos to silence.\n\r", enchanted_ch);
 
     return FALSE;
 }
