@@ -232,6 +232,39 @@ int old_search_block(const char *string, int begin, int length, const char * con
   return -1;
 }
 
+/**
+ * @brief Parses a provided string and extracts the substring between the first
+ *   and second delimiter.
+ *
+ * @param[in,out] dest The destination string.
+ * @param[in] dest_size The size allocated for the destination string.
+ * @param[in] src The source string.
+ * @param[in] delim1 The first delimiter.
+ * @param[in] delim2 The second delimiter.
+ *
+ * @return The length of the substring.
+ */
+size_t str_sub_delim(char* dest, size_t dest_size, const char* src, int delim1, int delim2) {
+    size_t sub_len = 0;
+
+    if (src) {
+        char* d1 = strchr(src, delim1);
+        char* d2 = strrchr(src, delim2);
+
+        int d1_idx = d1 ? d1 - src : -1;
+        int d2_idx = d2 ? d2 - src : -1;
+
+        if (d1 && d2 && (d2_idx - d1_idx > 1)) {
+            sub_len = strlen(str_sub(dest, dest_size, src, d1_idx + 1, d2_idx - d1_idx - 1));
+        }
+        else {
+            dest[0] = '\0';
+        }
+    }
+
+    return sub_len;
+}
+
 /* Fill arg with the first argument and return the remaining substring of the provided string. */
 char *one_argument_ex(char *string, char *arg, size_t arg_size, bool include_fill_words) {
   size_t begin = 0, index = 0;
@@ -827,7 +860,7 @@ void assign_command_pointers ( void )
   COMMANDO("color"    ,CMD_COLOR      ,POSITION_DEAD     ,do_setcolor, 1);
   COMMANDO("breath"   ,CMD_FIREBREATH ,POSITION_FIGHTING ,do_unknown, 1);
   COMMANDO("clan"     ,CMD_CLAN       ,POSITION_SLEEPING ,do_clan, 1); /* Linerfix 02, clan cmd while sleep */
-  COMMANDO("backflip" ,CMD_BACKFLIP   ,POSITION_FIGHTING ,do_backflip, 1);
+  //COMMANDO("backflip" ,CMD_BACKFLIP   ,POSITION_FIGHTING ,do_backflip, 1); /* Hemp - removed Backflip, replaced with taunt 2020 */
   COMMANDO("snooplist",CMD_SNOOPLIST  ,POSITION_FIGHTING ,do_snooplist,LEVEL_WIZ);
   COMMANDO("description",CMD_DESCRIPT ,POSITION_FIGHTING ,do_descr, 1);
   COMMANDO("vote"     ,CMD_VOTE       ,POSITION_FIGHTING ,do_not_here, 1);

@@ -217,7 +217,7 @@ const char * const spell_wear_off_msg[] = {
   "!dispel sanctuary!",
   "!disenchant!",
   "!petrify!",
-  "!backflip!",
+  "!taunt!",
   "The chaotic aura around your body begins to weaken.",
   "!remove improved invisibility!",
   "", /* 147 */
@@ -1736,7 +1736,7 @@ const char * const apply_types[] = {
   "SKILL_AMBUSH",
   "SKILL_ASSAULT",
   "SKILL_DISEMBOWEL",
-  "SKILL_BACKFLIP",
+  "SKILL_TAUNT",
   "HP_REGEN",
   "MANA_REGEN",
   "\n"
@@ -1972,7 +1972,7 @@ const char *immune_bits2[] =  {
   "FEAR",
   "BASH",
   "CIRCLE",
-  "BACKFLIP",
+  "TAUNT",
   "STEAL",
   "\n"
 };
@@ -2800,7 +2800,8 @@ const char * const bard_skills[] = {
   "peek",
   "pick",
   "throw",
-  "backflip",     /* Level 20 */
+  "taunt",        /* Level 20 */
+  "dual",         /* Level 25 */
   "camp",         /* Level 35 */
   "\n"
 };
