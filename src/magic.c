@@ -3853,7 +3853,7 @@ void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  affect_apply(ch, SPELL_HASTE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 2 : 5, 0, 0, 0, 0);
+  affect_apply(victim, SPELL_HASTE, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 2 : 5, 0, 0, 0, 0);
 
   printf_to_char(victim, "Suddenly everything around you seems to slow down to a crawl.\n\r");
   act("$n starts moving with blinding speed.", FALSE, victim, 0, 0, TO_ROOM);

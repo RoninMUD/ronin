@@ -129,6 +129,10 @@ struct song_data_t get_song_info(CHAR* ch, char* song_name) {
 bool check_song_access(CHAR* ch, struct song_data_t song_info) {
   if (!ch || (song_info.song_id <= 0)) return FALSE;
 
+  if (IS_IMMORTAL(ch)) {
+    return TRUE;
+  }
+
   if (GET_LEVEL(ch) < song_info.level) {
     return FALSE;
   }
@@ -572,8 +576,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
 
       if (ch != tmp_victim)
       {
-        if ((GET_CLASS(tmp_victim) == CLASS_BARD || GET_CLASS(tmp_victim) == CLASS_CLERIC) ||
-            chance(5))
+        if ((GET_CLASS(tmp_victim) == CLASS_BARD) || (GET_CLASS(tmp_victim) == CLASS_CLERIC) || chance(5))
         {
           spell_haste(GET_LEVEL(ch), ch, tmp_victim, NULL);
         }
