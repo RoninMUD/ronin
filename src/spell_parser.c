@@ -814,8 +814,10 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
         send_to_char("You are not wearing anything like that.\n\r", ch);
       else if (IS_SET(spell_info[spl].targets, TAR_OBJ_WORLD))
         send_to_char("Nothing at all by that name.\n\r", ch);
-
-    } else { /* Nothing was given as argument */
+      else if (IS_SET(spell_info[spl].targets, TAR_SELF_ONLY))
+        send_to_char("You may only cast this spell on yourself.\n\r", ch);
+    }
+    else { /* Nothing was given as argument */
       if (spell_info[spl].targets < TAR_OBJ_INV)
         send_to_char("Who should the spell be cast upon?\n\r", ch);
       else
