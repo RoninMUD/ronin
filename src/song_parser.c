@@ -206,7 +206,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     send_to_char("You can't summon enough energy to sing the song.\n\r", ch);
     return;
   }
-  else
+  else if (IS_IMMORTAL(ch))
   {
     sprintf(buf, "WIZINFO: %s sings %s.", GET_NAME(ch), arg);
     wizlog(buf, GET_LEVEL(ch) + 1, 5);
