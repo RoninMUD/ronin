@@ -102,7 +102,7 @@ const struct song_data_t song_data[] = {
   { SONG_RESPITE,       "bridge over troubled water",        "When you're weary, feeling small...",             30,    40,   SC_CHANTER,    1    },
   { SONG_WARCHANT,      "something takes a part of me",      "Something takes a part of me...",                 30,    60,   SC_CHANTER,    2    },
   { SONG_WARCHANT,      "war",                            "Oh, war, has shattered many a young mans dreams...", 30,    60,   SC_CHANTER,    2    },
-  { SONG_LUCK,          "love is a battlefield",             "If I could change the world...",                  40,    100,  SC_CHANTER,    3    },
+  { SONG_LUCK,          "if i could change the world",       "If I could change the world...",                  40,    100,  SC_CHANTER,    3    },
   { SONG_LUCK,          "lucky",                             "She's so lucky, she's a star...",                 40,    100,  SC_CHANTER,    3    },
   { SONG_AID,           "hero of the day",                   "Hero of the day...",                              40,    150,  SC_CHANTER,    4    },
   { SONG_AID,           "power of love",                     "Tougher than diamonds, rich like cream...",       40,    150,  SC_CHANTER,    4    },
