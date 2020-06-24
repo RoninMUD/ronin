@@ -674,7 +674,7 @@ reimbursement, you'll get one.
 "HASTE"
 
 Usage       : cast 'haste' (self only)
-Level       : level 40 cleric, 45 bard
+Level       : level 40 cleric
 Accumulative: no
 Save        : -
 Duration    : 5 ticks
