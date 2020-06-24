@@ -4313,7 +4313,7 @@ char* taunt_messages[8][3] = {
   {
     "$n seems unperturbed battling $N, and takes the opportunity to earn a few coin by busking.",
     "$n seems unperturbed battling you, and takes the opportunity to earn a few coin by busking.",
-    "You is unperturbed battling $N, and take the opportunity to earn a few coin by busking.",
+    "You are unperturbed battling $N, and take the opportunity to earn a few coin by busking.",
   },
   {
     "$n picks apart $N's character flaws one-by-one, revealing them to the world.",
@@ -4537,10 +4537,12 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
         GET_POS(vict) = set_pos;
       }
 
-      /* dual - first hit has haste chance vis a vis Mystic Swiftness */
-      perform_hit(ch, vict, TYPE_UNDEFINED, 1);
+      /* dual + haste chance vis a vis Mystic Swiftness */
+      perform_hit(ch, vict, TYPE_UNDEFINED, 4);
       if (CHAR_REAL_ROOM(vict) != NOWHERE)
         perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      if (CHAR_REAL_ROOM(vict) != NOWHERE && affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+        perform_hit(ch, vict, TYPE_UNDEFINED, 1);
 
       /* divine wind: we want this to ignore sphere/shield so spoof the message of the spell */
       if (CHAR_REAL_ROOM(vict) != NOWHERE)
@@ -4549,7 +4551,10 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
         act("Malicious spirits materialize in front of you, assaulting you viciously!", FALSE, ch, NULL, vict, TO_VICT);
         act("Malicious spirits materialize in front of $N, assaulting $M viciously!", FALSE, ch, NULL, vict, TO_CHAR);
         set_pos = stack_position(vict, POSITION_RESTING);
-        damage(ch, vict, 300, SPELL_DIVINE_WIND, DAM_MAGICAL);
+        damage(ch, vict, 300, TYPE_UNDEFINED, DAM_MAGICAL);
+        if (CHAR_REAL_ROOM(vict) != NOWHERE) {
+            GET_POS(vict) = set_pos;
+        }
       }
 
       /* spoof kick */
@@ -4617,10 +4622,10 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
         af.location = 0;
         af.modifier = 0;
         af.bitvector = 0;
-        af.bitvector2 = 0;
+        af.bitvector2 = AFF2_RAGE;
         affect_to_char(ch, &af);
         send_to_char("Rage courses through your body!\n\r", ch);
-        act("Rage courses through $n's body!", FALSE, vict, 0, 0, TO_ROOM);
+        act("Rage courses through $n's body!", FALSE, ch, 0, 0, TO_ROOM);
       }
 
       /* spoof pummel + hidden-blade: smack with hold (instrument) */
@@ -4662,10 +4667,12 @@ void mimicry_action(CHAR* ch, CHAR* vict) {
 
       taunt_action(ch, vict, FALSE); //auto success
 
-      /* dual - first hit has haste chance */
+      /* dual + haste chance */
       perform_hit(ch, vict, TYPE_UNDEFINED, 1);
       if (CHAR_REAL_ROOM(vict) != NOWHERE)
         perform_hit(ch, vict, TYPE_UNDEFINED, 4);
+      if (CHAR_REAL_ROOM(vict) != NOWHERE && affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+        perform_hit(ch, vict, TYPE_UNDEFINED, 1);
 
       act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
       act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
