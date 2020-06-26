@@ -40,7 +40,7 @@ void affect_from_char( struct char_data *ch, int skill);
 bool affected_by_spell( struct char_data *ch, int skill );
 int duration_of_spell( struct char_data *ch, int skill );
 void affect_join( struct char_data *ch, struct affected_type_5 *af, bool avg_dur, bool avg_mod );
-struct affected_type_5 * get_affect_from_char(struct char_data *ch, int type);
+AFF *get_affect_from_char(CHAR *ch, int type);
 void affect_apply(struct char_data *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2);
 
 /* utility */

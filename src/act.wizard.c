@@ -56,7 +56,7 @@ int move_limit(struct char_data *ch);
 int mana_gain(struct char_data *ch);
 int hit_gain(struct char_data *ch);
 int move_gain(struct char_data *ch);
-int enchantment_special(struct enchantment_type_5 *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
+int enchantment_special(ENCH *enchantment,CHAR *mob,CHAR *ch,int cmd,char *arg);
 
 void do_look(struct char_data *ch, char *argument, int cmd);
 void dsearch(char *string, char *tmp);
@@ -832,14 +832,6 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
       }
       else if (!strcmp(buf, "age")) {
         obj->affected[i].location = APPLY_AGE;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "weight")) {
-        obj->affected[i].location = APPLY_CHAR_WEIGHT;
-        obj->affected[i].modifier = num2;
-      }
-      else if (!strcmp(buf, "height")) {
-        obj->affected[i].location = APPLY_CHAR_HEIGHT;
         obj->affected[i].modifier = num2;
       }
       else if (!strcmp(buf, "mana")) {
@@ -2580,7 +2572,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 {
   char apt[3];
   struct affected_type_5 *aff;
-  struct enchantment_type_5 *ench;
+  ENCH *ench;
   struct obj_data *wielded=0,*hold=0;
   char arg1[MAX_STRING_LENGTH],buf[2*MAX_STRING_LENGTH],buf2[MAX_STRING_LENGTH];
   char type[100];
@@ -2626,7 +2618,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
            rm->name, rm->zone, rm->number, real_room(rm->number));
       send_to_char(buf, ch);
 
-      sprinttype(rm->sector_type,sector_types,buf2);
+      //sprinttype(rm->sector_type,sector_types,buf2);
+      snprint_type(buf2, sizeof(buf2), rm->sector_type, sector_types);
       sprintf(buf, "Sector type : %s\n\r", buf2);
       send_to_char(buf, ch);
 
@@ -2638,7 +2631,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
         IS_LIGHT(i2) ? "Yes" : "No", rm->light);
 
       send_to_char("Room flags: ", ch);
-      sprintbit((long) rm->room_flags,room_bits,buf);
+      //sprintbit((long) rm->room_flags,room_bits,buf);
+      snprint_bits(buf, sizeof(buf), (long)rm->room_flags, room_bits);
       strcat(buf,"\n\r");
       send_to_char(buf,ch);
 
@@ -2682,7 +2676,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        else
          strcat(buf,"UNDEFINED\n\r");
        send_to_char(buf, ch);
-       sprintbit(rm->dir_option[i]->exit_info,exit_bits,buf2);
+       //sprintbit(rm->dir_option[i]->exit_info,exit_bits,buf2);
+       snprint_bits(buf2, sizeof(buf2), rm->dir_option[i]->exit_info, exit_bits);
        sprintf(buf,
             "Exit flag: %s \n\rKey no: %d\n\rTo room (V-Number): %d\n\r",
             buf2, rm->dir_option[i]->key, rm->dir_option[i]->to_room_v);
@@ -2767,7 +2762,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      sprintf(buf,
           "Object name: [%s], R-number: [%d], V-number: [%d] Item type: ",
           OBJ_NAME(j), j->item_number, virtual);
-     sprinttype(OBJ_TYPE(j),item_types,buf2);
+     //sprinttype(OBJ_TYPE(j),item_types,buf2);
+     snprint_type(buf2, sizeof(buf2), OBJ_TYPE(j), item_types);
      strcat(buf,buf2); strcat(buf,"\n\r");
      send_to_char(buf, ch);
      sprintf(buf, "Short description: %s\n\rLong description:\n\r%s\n\r",
@@ -2812,28 +2808,34 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
         }
 
      send_to_char("Can be worn on :", ch);
-     sprintbit(j->obj_flags.wear_flags,wear_bits,buf);
+     //sprintbit(j->obj_flags.wear_flags,wear_bits,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.wear_flags, wear_bits);
      strcat(buf,"\n\r");
      send_to_char(buf, ch);
 
      send_to_char("Set char bits  :", ch);
-     sprintbit(j->obj_flags.bitvector,affected_bits,buf);
+     //sprintbit(j->obj_flags.bitvector,affected_bits,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.bitvector, affected_bits);
      strcat(buf," ");
      send_to_char(buf,ch);
-     sprintbit(j->obj_flags.bitvector2,affected_bits2,buf);
+     //sprintbit(j->obj_flags.bitvector2,affected_bits2,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.bitvector2, affected_bits2);
      strcat(buf,"\n\r");
      send_to_char(buf, ch);
 
      send_to_char("Extra flags: ", ch);
-     sprintbit(j->obj_flags.extra_flags,extra_bits,buf);
+     //sprintbit(j->obj_flags.extra_flags,extra_bits,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.extra_flags, extra_bits);
      strcat(buf," ");
      send_to_char(buf,ch);
-     sprintbit(j->obj_flags.extra_flags2,extra_bits2,buf);
+     //sprintbit(j->obj_flags.extra_flags2,extra_bits2,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.extra_flags2, extra_bits2);
      strcat(buf,"\n\r");
      send_to_char(buf,ch);
 
      send_to_char("Subclass restrictions: ", ch);
-     sprintbit(j->obj_flags.subclass_res,subclass_res_bits,buf);
+     //sprintbit(j->obj_flags.subclass_res,subclass_res_bits,buf);
+     snprint_bits(buf, sizeof(buf), j->obj_flags.subclass_res, subclass_res_bits);
      strcat(buf,"\n\r");
      send_to_char(buf,ch);
 
@@ -2971,7 +2973,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
                       npc_class_types[j->obj_flags.material],j->obj_flags.cost);
        break;
      case ITEM_DRINKCON :
-       sprinttype(j->obj_flags.value[2],drinks,buf2);
+       //sprinttype(j->obj_flags.value[2],drinks,buf2);
+       snprint_type(buf2, sizeof(buf2), j->obj_flags.value[2], drinks);
        printf_to_char(ch,"Max-contains : %d\n\rContains : %d\n\rPoisoned : %d\n\rLiquid : %s",
             j->obj_flags.value[0], j->obj_flags.value[1],
             j->obj_flags.value[3], buf2);
@@ -3012,7 +3015,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        found = FALSE;
        for (i=0;i < MAX_WEAR;i++) {
          if (j->carried_by->equipment[i] == j) {
-           sprinttype(i,equipment_types,buf2);
+           //sprinttype(i,equipment_types,buf2);
+           snprint_type(buf2, sizeof(buf2), i, equipment_types);
            strcat(buf,buf2);
            found = TRUE;
          }
@@ -3047,7 +3051,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 
      send_to_char("Can affect char :\n\r", ch);
      for (i=0;i<MAX_OBJ_AFFECT;i++) {
-       sprinttype(j->affected[i].location,apply_types,buf2);
+       //sprinttype(j->affected[i].location,apply_types,buf2);
+       snprint_type(buf2, sizeof(buf2), j->affected[i].location, apply_types);
        sprintf(buf,"    Affects : %s By %d\n\r", buf2,j->affected[i].modifier);
        send_to_char(buf, ch);
      }
@@ -3133,10 +3138,12 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 
      if (IS_NPC(k)) {
        strcpy(buf,"Monster Class: ");
-       sprinttype(k->player.class,npc_class_types,buf2);
+       //sprinttype(k->player.class,npc_class_types,buf2);
+       snprint_type(buf2, sizeof(buf2), k->player.class, npc_class_types);
      } else {
        strcpy(buf,"Class: ");
-       sprinttype(k->player.class,pc_class_types,buf2);
+       //sprinttype(k->player.class,pc_class_types,buf2);
+       snprint_type(buf2, sizeof(buf2), k->player.class, pc_class_types);
      }
      strcat(buf, buf2);
 
@@ -3249,11 +3256,13 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
           GET_GOLD(k), GET_BANK(k), (GET_GOLD(k) + GET_BANK(k)));
      send_to_char(buf,ch);
 
-     sprinttype(GET_POS(k),position_types,buf2);
+     //sprinttype(GET_POS(k),position_types,buf2);
+     snprint_type(buf2, sizeof(buf2), GET_POS(k), position_types);
      sprintf(buf,"Position: %s, Fighting: %s",buf2,
           ((k->specials.fighting) ? GET_NAME(k->specials.fighting) : "Nobody") );
      if (k->desc) {
-       sprinttype(k->desc->connected,connected_types,buf2);
+       //sprinttype(k->desc->connected,connected_types,buf2);
+       snprint_type(buf2, sizeof(buf2), k->desc->connected, connected_types);
        strcat(buf,", Connected: ");
        strcat(buf,buf2);
      }
@@ -3261,18 +3270,22 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
      send_to_char(buf, ch);
 
      strcpy(buf,"Default position: ");
-     sprinttype((k->specials.default_pos),position_types,buf2);
+     //sprinttype((k->specials.default_pos),position_types,buf2);
+     snprint_type(buf2, sizeof(buf2), k->specials.default_pos, position_types);
      strcat(buf, buf2);
      if (IS_NPC(k)) {
        strcat(buf,",NPC flags: ");
-       sprintbit(k->specials.act,action_bits,buf2);
+       //sprintbit(k->specials.act,action_bits,buf2);
+       snprint_bits(buf2, sizeof(buf2), k->specials.act, action_bits);
        strcat(buf, buf2);
        strcat(buf, " ");
-       sprintbit(k->specials.act2,action_bits2,buf2);
+       //sprintbit(k->specials.act2,action_bits2,buf2);
+       snprint_bits(buf2, sizeof(buf2), k->specials.act2, action_bits2);
        strcat(buf, buf2);
      } else {
        strcat(buf,",PC flags: ");
-       sprintbit(k->specials.pflag,player_bits,buf2);
+       //sprintbit(k->specials.pflag,player_bits,buf2);
+       snprint_bits(buf2, sizeof(buf2), k->specials.pflag, player_bits);
        strcat(buf, buf2);
      }
 
@@ -3285,16 +3298,19 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        zonenum=inzone(V_MOB(k));
        if (zonenum!=-1 && (GET_LEVEL(ch) > LEVEL_ETE || isname(GET_NAME(ch),zone_table[real_zone(zonenum)].name) || strstr(zone_table[real_zone(zonenum)].creators,GET_NAME(ch)))) {
           strcpy(buf,"Mobile Immunities: ");
-          sprintbit(k->specials.immune,immune_bits,buf2);
+          //sprintbit(k->specials.immune,immune_bits,buf2);
+          snprint_bits(buf2, sizeof(buf2), k->specials.immune, immune_bits);
           strcat(buf,buf2);
           strcat(buf, " ");
-          sprintbit(k->specials.immune2,immune_bits2,buf2);
+          //sprintbit(k->specials.immune2,immune_bits2,buf2);
+          snprint_bits(buf2, sizeof(buf2), k->specials.immune2, immune_bits2);
           strcat(buf,buf2);
           strcat(buf,"\n\r");
           send_to_char(buf,ch);
 
           strcpy(buf,"Mobile Resistance: ");
-          sprintbit(k->specials.resist,resist_bits,buf2);
+          //sprintbit(k->specials.resist,resist_bits,buf2);
+          snprint_bits(buf2, sizeof(buf2), k->specials.resist, resist_bits);
           strcat(buf,buf2);
           strcat(buf,"\n\r");
           send_to_char(buf,ch);
@@ -3305,21 +3321,25 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
              for (i=0;i<k->specials.no_att;i++) {
                 if(i==MAX_ATTS) break;
                 sprintf(buf,"%d) ",i+1);
-                sprinttype(k->specials.att_type[i],att_types,buf2);
+                //sprinttype(k->specials.att_type[i],att_types,buf2);
+                snprint_type(buf2, sizeof(buf2), k->specials.att_type[i], att_types);
                 strcat(buf2," ");
                 strcat(buf,buf2);
-                sprinttype(k->specials.att_target[i],att_targets,buf2);
+                //sprinttype(k->specials.att_target[i],att_targets,buf2);
+                snprint_type(buf2, sizeof(buf2), k->specials.att_target[i], att_targets);
                 strcat(buf2," ");
                 strcat(buf,buf2);
                 sprintf(buf2,"%d ",k->specials.att_percent[i]);
                 strcat(buf,buf2);
                 if(k->specials.att_type[i]==ATT_SPELL_CAST) {
-               sprinttype(k->specials.att_spell[i]-1,spells,buf2);
+               //sprinttype(k->specials.att_spell[i]-1,spells,buf2);
+               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, spells);
                   strcat(buf,CAP(buf2));
             strcat(buf," (cast)");
                 }
                 if(k->specials.att_type[i]==ATT_SPELL_SKILL) {
-               sprinttype(k->specials.att_spell[i]-1,spells,buf2);
+               //sprinttype(k->specials.att_spell[i]-1,spells,buf2);
+               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, spells);
                   strcat(buf,CAP(buf2));
             strcat(buf," (skill)");
                 }
@@ -3526,16 +3546,19 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
        act("    $N", FALSE, ch, 0, fol->follower, TO_CHAR);
 
      /* Showing the wiz bitvector */
-     sprintbit(k->new.imm_flags, wiz_bits, buf);
+     //sprintbit(k->new.imm_flags, wiz_bits, buf);
+     snprint_bits(buf, sizeof(buf), k->new.imm_flags, wiz_bits);
      send_to_char("Wiz Flags: ", ch);
      strcat(buf,"\n\r");
      send_to_char(buf, ch);
 
      send_to_char("Affected by: ", ch);
-     sprintbit(k->specials.affected_by,affected_bits,buf);
+     //sprintbit(k->specials.affected_by,affected_bits,buf);
+     snprint_bits(buf, sizeof(buf), k->specials.affected_by, affected_bits);
      send_to_char(buf, ch);
      send_to_char("\n\r             ", ch);
-     sprintbit(k->specials.affected_by2,affected_bits2,buf);
+     //sprintbit(k->specials.affected_by2,affected_bits2,buf);
+     snprint_bits(buf, sizeof(buf), k->specials.affected_by2, affected_bits2);
      strcat(buf,"\n\r");
      send_to_char(buf, ch);
 
@@ -3551,10 +3574,12 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
          sprintf(buf,"     Expires in %3d ticks, Bits set ",
               aff->duration);
          send_to_char(buf, ch);
-         sprintbit(aff->bitvector,affected_bits,buf);
+         //sprintbit(aff->bitvector,affected_bits,buf);
+         snprint_bits(buf, sizeof(buf), aff->bitvector, affected_bits);
          strcat(buf,"\n\r                                    ");
          send_to_char(buf, ch);
-         sprintbit(aff->bitvector2,affected_bits2,buf);
+         //sprintbit(aff->bitvector2,affected_bits2,buf);
+         snprint_bits(buf, sizeof(buf), aff->bitvector2, affected_bits2);
          strcat(buf,"\n\r");
          send_to_char(buf, ch);
        }
@@ -5667,11 +5692,14 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
   case ITEM_SCROLL :
   case ITEM_POTION :
     if(flags->value[1] > 0)
-      sprinttype(flags->value[1]-1, spells, buf1);
+      //sprinttype(flags->value[1]-1, spells, buf1);
+      snprint_type(buf1, sizeof(buf1), flags->value[1] - 1, spells);
     if(flags->value[2] > 0)
-      sprinttype(flags->value[2]-1, spells, buf2);
+      //sprinttype(flags->value[2]-1, spells, buf2);
+      snprint_type(buf2, sizeof(buf2), flags->value[2] - 1, spells);
     if(flags->value[3] > 0)
-      sprinttype(flags->value[3]-1, spells, buf3);
+      //sprinttype(flags->value[3]-1, spells, buf3);
+      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, spells);
     sprintf(str, "Level: %d\n\rSpells : %d (%s)\n\r         %d (%s)\n\r         %d (%s)\n\r",
          flags->value[0],
          flags->value[1],
@@ -5684,7 +5712,8 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
   case ITEM_WAND :
   case ITEM_STAFF :
     if(flags->value[3] > 0)
-      sprinttype(flags->value[3]-1, spells, buf3);
+      //sprinttype(flags->value[3]-1, spells, buf3);
+      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, spells);
     sprintf(str, "Level : %d\n\rMax Charges : %d\n\rCharges Left: %d\n\rSpell: %d (%s)\n\r",
          flags->value[0],
          flags->value[1],
@@ -5775,7 +5804,8 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
          flags->value[3]);
     break;
   case ITEM_DRINKCON :
-    sprinttype(flags->value[2], drinks, buf2);
+    //sprinttype(flags->value[2], drinks, buf2);
+    snprint_type(buf2, sizeof(buf2), flags->value[2], drinks);
     sprintf(str, "Max-contains : %d\n\rContains : %d\n\rLiquid : %s \n\rPoisoned : %s\n\r",
          flags->value[0],
          flags->value[1],
@@ -5861,7 +5891,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
       return;
     }
 
-    sprinttype(proto->obj_flags.type_flag, item_types, buf2);
+    //sprinttype(proto->obj_flags.type_flag, item_types, buf2);
+    snprint_type(buf2, sizeof(buf2), proto->obj_flags.type_flag, item_types);
     sprintf(buf, "Object name: [%s]\n\rR-number: [%d], V-number: [%d], In-game: [%d] Item type: %s\n\r",
          proto->name, r_number, obj_proto_table[r_number].virtual,obj_proto_table[r_number].number, buf2);
     send_to_char(buf, ch);
@@ -5897,20 +5928,26 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
     printf_to_char(ch, "Room remove description: %s\n\r",
             ((proto->room_rem_desc) ? proto->room_rem_desc : "None"));
 
-    sprintbit((long)proto->obj_flags.wear_flags, wear_bits, buf2);
+    //sprintbit((long)proto->obj_flags.wear_flags, wear_bits, buf2);
+    snprint_bits(buf2, sizeof(buf2), (long)proto->obj_flags.wear_flags, wear_bits);
     printf_to_char(ch, "Can be worn on: %s\n\r", buf2);
 
-    sprintbit(proto->obj_flags.bitvector, affected_bits, buf2);
+    //sprintbit(proto->obj_flags.bitvector, affected_bits, buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->obj_flags.bitvector, affected_bits);
     printf_to_char(ch, "Set char bits: %s\n\r", buf2);
-    sprintbit(proto->obj_flags.bitvector2, affected_bits2, buf2);
+    //sprintbit(proto->obj_flags.bitvector2, affected_bits2, buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->obj_flags.bitvector2, affected_bits2);
     printf_to_char(ch, "               %s\n\r", buf2);
 
-    sprintbit(proto->obj_flags.extra_flags, extra_bits, buf2);
+    //sprintbit(proto->obj_flags.extra_flags, extra_bits, buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->obj_flags.extra_flags, extra_bits);
     sprintf(buf, "Extra flags: %s", buf2);
-    sprintbit(proto->obj_flags.extra_flags2, extra_bits2, buf2);
+    //sprintbit(proto->obj_flags.extra_flags2, extra_bits2, buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->obj_flags.extra_flags2, extra_bits2);
     printf_to_char(ch, "%s %s\n\r",buf,buf2);
 
-    sprintbit(proto->obj_flags.subclass_res, subclass_res_bits, buf2);
+    //sprintbit(proto->obj_flags.subclass_res, subclass_res_bits, buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->obj_flags.subclass_res, subclass_res_bits);
     printf_to_char(ch, "Subclass Restrictions: %s\n\r", buf2);
 
     /* Repop added by Ranger */
@@ -5930,7 +5967,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
 
     send_to_char("Can affect char:\n\r", ch);
     for(i = 0; i < MAX_OBJ_AFFECT; i++) {
-      sprinttype(proto->affected[i].location, apply_types, buf2);
+      //sprinttype(proto->affected[i].location, apply_types, buf2);
+      snprint_type(buf2, sizeof(buf2), proto->affected[i].location, apply_types);
       printf_to_char(ch, "    Affects: %s by %d\n\r", buf2, proto->affected[i].modifier);
     }
   } else {
@@ -5952,7 +5990,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
           wear--;
           for(i = 0; i <= top_of_objt; i++) {
             if(obj_proto_table[i].affected[0].location==wear) {
-              sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              //sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              snprint_bits(buf, sizeof(buf), (long)(obj_proto_table[i].obj_flags.wear_flags - 1), wear_bits);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
               sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
@@ -5964,7 +6003,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
               found = TRUE;
             }
             else if(obj_proto_table[i].affected[1].location==wear) {
-              sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              //sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              snprint_bits(buf, sizeof(buf), (long)(obj_proto_table[i].obj_flags.wear_flags - 1), wear_bits);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
               sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
@@ -5976,7 +6016,8 @@ or ostat <item name>\n\r    or ostat <item number>\n\r";
               found = TRUE;
             }
             else if(obj_proto_table[i].affected[2].location==wear) {
-              sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              //sprintbit((long)(obj_proto_table[i].obj_flags.wear_flags-1), wear_bits, buf);
+              snprint_bits(buf, sizeof(buf), (long)(obj_proto_table[i].obj_flags.wear_flags - 1), wear_bits);
               if (IS_SET(obj_proto_table[i].obj_flags.extra_flags, ITEM_LIMITED)) sprintf(ltd,"*");
               else sprintf(ltd," ");
               sprintf(buf3, "[%-5d]%s (%d) %s (%s) [%s]\n\r",
@@ -6478,7 +6519,8 @@ Usage: mstat ac(t) <ACT>\n\r\
     send_to_char("Full description:\r\n", ch);
     send_to_char(((proto->description) ? proto->description : "None"), ch);
 
-    sprinttype(proto->class,npc_class_types,buf2);
+    //sprinttype(proto->class,npc_class_types,buf2);
+    snprint_type(buf2, sizeof(buf2), proto->class, npc_class_types);
     sprintf(buf,"Monster Class: %s(%d)\n\r",buf2,proto->class);
     send_to_char(buf,ch);
 
@@ -6507,32 +6549,39 @@ Usage: mstat ac(t) <ACT>\n\r\
     sprintf(buf,"Gold: [%d] \n\r", proto->gold);
     send_to_char(buf,ch);
 
-    sprinttype(proto->position,position_types,buf2);
-    sprinttype(proto->default_pos,position_types,buf3);
+    //sprinttype(proto->position,position_types,buf2);
+    snprint_type(buf2, sizeof(buf2), proto->position, position_types);
+    //sprinttype(proto->default_pos,position_types,buf3);
+    snprint_type(buf3, sizeof(buf3), proto->default_pos, position_types);
     sprintf(buf4,"Position: %s, Default:  %s ",buf2, buf3);
     strcat(buf4,"\n\r");
     send_to_char(buf4, ch);
 
     buf[0] = 0;
     strcat(buf,"NPC flags: ");
-    sprintbit(proto->act,action_bits,buf2);
+    //sprintbit(proto->act,action_bits,buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->act, action_bits);
     strcat(buf, buf2);
-    sprintbit(proto->act2,action_bits2,buf2);
+    //sprintbit(proto->act2,action_bits2,buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->act2, action_bits2);
     strcat(buf, buf2);
     send_to_char(buf, ch);
 
     /* New stuff - Ranger Sept 96 */
     strcpy(buf,"\n\rMobile Immunities: ");
-    sprintbit(proto->immune,immune_bits,buf2);
+    //sprintbit(proto->immune,immune_bits,buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->immune, immune_bits);
     strcat(buf,buf2);
     strcat(buf," ");
-    sprintbit(proto->immune2,immune_bits2,buf2);
+    //sprintbit(proto->immune2,immune_bits2,buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->immune2, immune_bits2);
     strcat(buf,buf2);
     strcat(buf,"\n\r");
     send_to_char(buf,ch);
 
     strcpy(buf,"Mobile Resistance: ");
-    sprintbit(proto->resist,resist_bits,buf2);
+    //sprintbit(proto->resist,resist_bits,buf2);
+    snprint_bits(buf2, sizeof(buf2), proto->resist, resist_bits);
     strcat(buf,buf2);
     strcat(buf,"\n\r");
     send_to_char(buf,ch);
@@ -6543,21 +6592,25 @@ Usage: mstat ac(t) <ACT>\n\r\
        for (i=0;i<proto->no_att;i++) {
           if(i==MAX_ATTS) break;
           sprintf(buf,"%d) ",i+1);
-          sprinttype(proto->att_type[i],att_types,buf2);
+          //sprinttype(proto->att_type[i],att_types,buf2);
+          snprint_type(buf2, sizeof(buf2), proto->att_type[i], att_types);
           strcat(buf2," ");
           strcat(buf,buf2);
-          sprinttype(proto->att_target[i],att_targets,buf2);
+          //sprinttype(proto->att_target[i],att_targets,buf2);
+          snprint_type(buf2, sizeof(buf2), proto->att_target[i], att_targets);
           strcat(buf2," ");
           strcat(buf,buf2);
           sprintf(buf2,"%d ",proto->att_percent[i]);
           strcat(buf,buf2);
           if(proto->att_type[i]==ATT_SPELL_CAST) {
-            sprinttype(proto->att_spell[i]-1,spells,buf2);
+            //sprinttype(proto->att_spell[i]-1,spells,buf2);
+            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, spells);
             strcat(buf,CAP(buf2));
          strcat(buf," (cast)");
           }
           if(proto->att_type[i]==ATT_SPELL_SKILL) {
-            sprinttype(proto->att_spell[i]-1,spells,buf2);
+            //sprinttype(proto->att_spell[i]-1,spells,buf2);
+            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, spells);
             strcat(buf,CAP(buf2));
          strcat(buf," (skill)");
           }
@@ -6620,10 +6673,12 @@ Usage: mstat ac(t) <ACT>\n\r\
 
 
     send_to_char("Affected by: ", ch);
-    sprintbit(proto->affected_by,affected_bits,buf);
+    //sprintbit(proto->affected_by,affected_bits,buf);
+    snprint_bits(buf, sizeof(buf), proto->affected_by, affected_bits);
     strcat(buf," ");
     send_to_char(buf, ch);
-    sprintbit(proto->affected_by2,affected_bits2,buf);
+    //sprintbit(proto->affected_by2,affected_bits2,buf);
+    snprint_bits(buf, sizeof(buf), proto->affected_by2, affected_bits2);
     strcat(buf,"\n\r");
     send_to_char(buf, ch);
     if(mob_proto_table[r_number].exp>0) {
@@ -7494,9 +7549,11 @@ void do_rshow(struct char_data *ch, char *argument, int cmd) {
     if (IS_SET(world[i].room_flags, tmp)) {
       sprintf(buf2, "[%d] %s :: ", world[i].number, world[i].name);
 
-      sprintbit((long) world[i].room_flags,room_bits,flags);
+      //sprintbit((long) world[i].room_flags,room_bits,flags);
+      snprint_bits(flags, sizeof(flags), (long)world[i].room_flags, room_bits);
       strcat(buf2,flags);
-      sprinttype(world[i].sector_type,sector_types,sects);
+      //sprinttype(world[i].sector_type,sector_types,sects);
+      snprint_type(sects, sizeof(sects), world[i].sector_type, sector_types);
       strcat(buf2,sects);
       strcat(buf2,"\n\r");
       append_to_string_block(&sb, buf2);
@@ -7509,7 +7566,8 @@ void do_rshow(struct char_data *ch, char *argument, int cmd) {
     if(isname(arg2, world[i].name)) {
       sprintf(buf2, "[%d] %s :: ", world[i].number, world[i].name);
 
-      sprintbit((long) world[i].room_flags,room_bits,flags);
+      //sprintbit((long) world[i].room_flags,room_bits,flags);
+      snprint_bits(flags, sizeof(flags), (long)world[i].room_flags, room_bits);
       strcat(buf2,flags);
       strcat(buf2,"\n\r");
       append_to_string_block(&sb, buf2);
@@ -7683,7 +7741,8 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
      sprintf(in,"N");
         sprintf(buf3," ");
         for(x = 0; x < MAX_OBJ_AFFECT; x++) {
-          sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
+          //sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
+          snprint_type(buf2, sizeof(buf2), obj_proto_table[i].affected[x].location, apply_types);
           if(strstr(buf2,"SKILL_")) {
             str_tail(buf4, sizeof(buf4), buf2, strlen("SKILL_"));
             snprintf(buf2, sizeof(buf2), "%s", buf4);
@@ -7785,10 +7844,12 @@ void do_zshow(struct char_data *ch, char *argument, int cmd) {
       if (zone == inzone(world[i].number)) {
         sprintf(buf2, "[%d] %s :: ", world[i].number, world[i].name);
 
-        sprintbit((long) world[i].room_flags,room_bits,flags);
+        //sprintbit((long) world[i].room_flags,room_bits,flags);
+        snprint_bits(flags, sizeof(flags), (long)world[i].room_flags, room_bits);
         strcat(buf2,flags);
         strcat(buf2," (");
-        sprinttype(world[i].sector_type,sector_types,flags);
+        //sprinttype(world[i].sector_type,sector_types,flags);
+        snprint_type(flags, sizeof(flags), world[i].sector_type, sector_types);
         strcat(buf2,flags);
         strcat(buf2,")\n\r");
         append_to_string_block(&sb, buf2);
@@ -8352,7 +8413,7 @@ void promote_bard(CHAR *promoter, CHAR *ch);
 void do_rank(struct char_data *ch, char *argument, int cmd) {
   int rank = 0, stop = 0;
   CHAR *vict = NULL;
-  struct enchantment_type_5 *tmp_ench = NULL;
+  ENCH *tmp_ench = NULL;
   char name[100], buf[MSL];
 
   if(!check_god_access(ch,TRUE)) return;
@@ -8376,9 +8437,9 @@ void do_rank(struct char_data *ch, char *argument, int cmd) {
 
   /* check for removal */
   one_argument(argument,name);
-  if(*name && !strcmp(name,"remove")) {
+  if(*name && is_abbrev(name,"remove")) {
     for(tmp_ench=vict->enchantments;!stop && tmp_ench;tmp_ench = tmp_ench->next) {
-      stop = enchantment_special(tmp_ench,vict,vict,MSG_DEAD,"");
+      stop = enchantment_special(tmp_ench,vict,ch,MSG_DEAD,"");
     }
     sprintf(buf,"WIZLOG: %s has dropped %s a rank.",GET_NAME(ch),GET_NAME(vict));
     log_s(buf);

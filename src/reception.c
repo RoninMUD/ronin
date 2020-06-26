@@ -1275,7 +1275,7 @@ void autosave_all(void) {
 void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
   int i;
   struct affected_type_5 af;
-  struct enchantment_type_5 ench;
+  ENCH ench;
   size_t len = 0;
 
   /* Ver 3 stuff - set specifics to default in store_to_char_2*/
@@ -1450,7 +1450,7 @@ void store_to_char_5(struct char_file_u_5 *st, CHAR *ch) {
 void store_to_char_4(struct char_file_u_4 *st, CHAR *ch) {
   int i;
   struct affected_type_5 af;
-  struct enchantment_type_5 ench;
+  ENCH ench;
   size_t len = 0;
 
   /* Ver 3 stuff - set specifics to default in store_to_char_2*/
@@ -1624,7 +1624,7 @@ void store_to_char_4(struct char_file_u_4 *st, CHAR *ch) {
 void store_to_char_2(struct char_file_u_2 *st, CHAR *ch) {
   int i;
   struct affected_type_5 af;
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
   /* Ver 3 stuff */
   ch->ver3.clan_num=0;
@@ -1803,7 +1803,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
   int i,increase;
   char buf[MAX_STRING_LENGTH];
   struct affected_type_5 *af;
-  struct enchantment_type_5 *af2;
+  ENCH *af2;
   struct obj_data *char_eq[MAX_WEAR];
 
   for(i=0; i<MAX_WEAR; i++) {

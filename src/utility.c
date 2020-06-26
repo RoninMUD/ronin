@@ -681,39 +681,50 @@ void wizlog_f(int level, int which, char *fmt, ...) {
 }
 
 
-void sprintbit(long vektor, const char * const names[], char *result) {
-  long nr;
+void snprint_bits(char *dest, size_t dest_size, long bitvector, const char *const list[]) {
+  if (!dest || !list) return;
 
-  *result = '\0';
+  dest[0] = '\0';
 
-  for (nr = 0; vektor; vektor >>= 1) {
-    if (IS_SET(1, vektor)) {
-      if (*names[nr] != '\n') {
-        strcat(result, names[nr]);
-        strcat(result, " ");
-      }
-      else {
-        strcat(result, "UNDEFINED");
-        strcat(result, " ");
+  for (int list_idx = 0; bitvector; bitvector >>= 1) {
+    if (IS_SET(1, bitvector)) {
+      if (*(list[list_idx]) != '\n') {
+        if (*(list[list_idx]) != '!') {
+          str_cat(dest, dest_size, list[list_idx]);
+        }
+        else {
+          str_cat(dest, dest_size, "UNDEFINED");
+        }
+
+        str_cat(dest, dest_size, " ");
       }
     }
-    if (*names[nr] != '\n')
-      nr++;
+
+    if (*(list[list_idx]) != '\n') {
+      list_idx++;
+    }
   }
 
-  if (!*result)
-    strcat(result, "NOBITS");
+  if (!(*dest)) {
+    snprintf(dest, dest_size, "NOBITS");
+  }
 }
 
-void sprinttype(int type, const char * const names[], char *result) {
-  int nr;
+void snprint_type(char *dest, size_t dest_size, int type, const char *const list[]) {
+  if (!dest || !list) return;
 
-  for (nr = 0; (*names[nr] != '\n'); nr++);
+  int list_idx = 0;
 
-  if (type < nr)
-    strcpy(result, names[type]);
-  else
-    strcpy(result, "UNDEFINED");
+  while ((list_idx < type) && (*(list[list_idx]) != '\n')) {
+    list_idx++;
+  }
+
+  if ((*(list[list_idx]) == '!') || (*(list[list_idx]) == '\n')) {
+    snprintf(dest, dest_size, "UNDEFINED");
+  }
+  else {
+    snprintf(dest, dest_size, "%s", list[list_idx]);
+  }
 }
 
 
@@ -800,6 +811,8 @@ char *PERS_ex(CHAR *ch, CHAR *vict, int mode) {
     }
   }
 
+  CAP(buf);
+
   return buf;
 }
 
@@ -828,6 +841,8 @@ char *POSSESS_ex(CHAR *ch, CHAR *vict, int mode) {
   else {
     snprintf(buf, sizeof(buf), "Somebody's");
   }
+
+  CAP(buf);
 
   return buf;
 }

@@ -250,8 +250,8 @@ void mus_remeq(CHAR *victim, int pos) {
 //
 ENCH* find_enchantment(CHAR *ch, char *enchantment_name)
 {
-  struct enchantment_type_5 *ench     =NULL;
-  struct enchantment_type_5 *next_ench=NULL;
+  ENCH *ench     =NULL;
+  ENCH *next_ench=NULL;
   for(ench=ch->enchantments;ench;ench=next_ench)
   {
     next_ench = ench->next;

@@ -32,6 +32,7 @@
 #include "enchant.h"
 #include "spells.h"
 #include "fight.h"
+#include "aff_ench.h"
 
 extern int hit_limit(CHAR *ch);
 extern int mana_limit(CHAR *ch);
@@ -40,9 +41,10 @@ extern int hit_gain(CHAR *ch);
 extern int mana_gain(CHAR *ch);
 extern int move_gain(CHAR *ch);
 
-ENCH *enchantments;
 void command_interpreter(CHAR *ch, char *arg);
 void update_pos(CHAR *victim);
+
+ENCH *enchantments;
 
 /* Hell Enchantments */
 int sin_wrath(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
@@ -229,7 +231,7 @@ int squire_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_SQUIRE) &&
         !enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       squire_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -274,7 +276,7 @@ int swashbuckler_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
     if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
         !enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       swashbuckler_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -315,7 +317,7 @@ int knight_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
   {
     if (enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       knight_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -362,7 +364,7 @@ int firstsword_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_FIRSTSWORD) &&
         !enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       firstsword_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -407,7 +409,7 @@ int justiciar_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
     if (enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
         !enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       justiciar_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -450,7 +452,7 @@ int lordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       lordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -497,7 +499,7 @@ int wanderer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_WANDERER) &&
         !enchanted_by_type(ch, ENCHANT_FORESTER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       wanderer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -543,7 +545,7 @@ int forester_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_FORESTER) &&
         !enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       forester_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -583,7 +585,7 @@ int tamer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
   {
     if (enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       tamer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -630,7 +632,7 @@ int apprentice_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_APPRENTICE) &&
         !enchanted_by_type(ch, ENCHANT_WARLOCK) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       apprentice_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -676,7 +678,7 @@ int warlock_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_WARLOCK) &&
         !enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       warlock_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -717,7 +719,7 @@ int sorcerer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       sorcerer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -763,7 +765,7 @@ int minstrel_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_MINSTREL) &&
         !enchanted_by_type(ch, ENCHANT_POET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       minstrel_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -809,7 +811,7 @@ int poet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *ar
     if (enchanted_by_type(ch, ENCHANT_POET) &&
         !enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       poet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -849,7 +851,7 @@ int conductor_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
   {
     if (enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17)
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17)
     {
       conductor_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -897,7 +899,7 @@ int private_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_PRIVATE) &&
         !enchanted_by_type(ch, ENCHANT_COMMODORE) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       private_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -943,7 +945,7 @@ int commodore_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
     if (enchanted_by_type(ch, ENCHANT_COMMODORE) &&
         !enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       commodore_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -984,7 +986,7 @@ int commander_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
   {
     if (enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       commander_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1031,7 +1033,7 @@ int highwayman_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_HIGHWAYMAN) &&
         !enchanted_by_type(ch, ENCHANT_BRIGAND) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       highwayman_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1076,7 +1078,7 @@ int brigand_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_BRIGAND) &&
         !enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       brigand_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1117,7 +1119,7 @@ int assassin_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       assassin_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1163,7 +1165,7 @@ int minion_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_MINION) &&
         !enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       minion_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1209,7 +1211,7 @@ int darkwarder_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
         !enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       darkwarder_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1253,7 +1255,7 @@ int darklordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
   {
     if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       darklordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1300,7 +1302,7 @@ int tsume_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
     if (enchanted_by_type(ch, ENCHANT_TSUME) &&
         !enchanted_by_type(ch, ENCHANT_SHINOBI) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       tsume_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1346,7 +1348,7 @@ int shinobi_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_SHINOBI) &&
         !enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       shinobi_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1387,7 +1389,7 @@ int shogun_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
   {
     if (enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       shogun_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1434,7 +1436,7 @@ int acolyte_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_ACOLYTE) &&
         !enchanted_by_type(ch, ENCHANT_BISHOP) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       acolyte_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1480,7 +1482,7 @@ int bishop_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_BISHOP) &&
         !enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       bishop_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1520,7 +1522,7 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
   {
     if (enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
     {
       prophet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1548,278 +1550,168 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
 }
 
 
-void assign_enchantments(void)
-{
+void assign_enchantments(void) {
   log_s("Defining Enchantments");
-  enchantments = (ENCH*)calloc(TOTAL_ENCHANTMENTS, sizeof(ENCH));
 
-/*         Name                               Enchant #            Dur,Mod, Location,              Bitvector            , Bitvect2, Function */
-  ENCHANTO("Remort"                         , ENCHANT_REMORTV2    , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, remortv2_enchantment);
-  ENCHANTO("Immortalis' Grace"              , ENCHANT_IMM_GRACE   , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, imm_grace_enchantment);
+  CREATE(enchantments, ENCH, TOTAL_ENCHANTMENTS);
 
-  ENCHANTO("Common Cold"                    , ENCHANT_COLD        , 20,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, cold_enchantment);
-  ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,  6,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
-  ENCHANTO("Regeneration"                   , ENCHANT_REGENERATION, 24,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, regeneration_enchantment);
+/*         Name                               Type                  Dur, Int, Mod, Loc,                    Bitv                , Bitv2,    Func */
+  ENCHANTO("Remort"                         , ENCHANT_REMORTV2    ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, remortv2_enchantment);
+  ENCHANTO("Immortalis' Grace"              , ENCHANT_IMM_GRACE   ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, imm_grace_enchantment);
 
-  ENCHANTO("The title of Squire"            , ENCHANT_SQUIRE      , -1,  5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, squire_enchantment);
-  ENCHANTO("The title of Swashbuckler"      , ENCHANT_SWASHBUCKLER, -1,  5, APPLY_SKILL_DUAL      , AFF_NONE            , AFF_NONE, swashbuckler_enchantment);
-  ENCHANTO("The title of Knight"            , ENCHANT_KNIGHT      , -1,  5, APPLY_SKILL_TRIPLE    , AFF_SENSE_LIFE      , AFF_NONE, knight_enchantment);
+  ENCHANTO("Common Cold"                    , ENCHANT_COLD        ,  20,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, cold_enchantment);
+  ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,   6,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
+  ENCHANTO("Regeneration"                   , ENCHANT_REGENERATION,  24,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, regeneration_enchantment);
 
-  ENCHANTO("The title of First Sword"       , ENCHANT_FIRSTSWORD  , -1,  1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, firstsword_enchantment);
-  ENCHANTO("The title of Justiciar"         , ENCHANT_JUSTICIAR   , -1,  5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, justiciar_enchantment);
-  ENCHANTO("The title of Lord/Lady"         , ENCHANT_LORDLADY    , -1,  5, APPLY_SKILL_PUMMEL    , AFF_NONE            , AFF_NONE, lordlady_enchantment);
+  ENCHANTO("The title of Apprentice"        , ENCHANT_APPRENTICE  ,  -1,   0,   0, APPLY_NONE            , AFF_DETECT_INVISIBLE, AFF_NONE, apprentice_enchantment);
+  ENCHANTO("The title of Warlock"           , ENCHANT_WARLOCK     ,  -1,   0,   1, APPLY_HITROLL         , AFF_DETECT_MAGIC    , AFF_NONE, warlock_enchantment);
+  ENCHANTO("The title of Sorcerer"          , ENCHANT_SORCERER    ,  -1,   0,   1, APPLY_DAMROLL         , AFF_FLY             , AFF_NONE, sorcerer_enchantment);
 
-  ENCHANTO("The title of Apprentice"        , ENCHANT_APPRENTICE  , -1,  0, APPLY_NONE            , AFF_DETECT_INVISIBLE, AFF_NONE, apprentice_enchantment);
-  ENCHANTO("The title of Warlock"           , ENCHANT_WARLOCK     , -1,  1, APPLY_HITROLL         , AFF_DETECT_MAGIC    , AFF_NONE, warlock_enchantment);
-  ENCHANTO("The title of Sorcerer"          , ENCHANT_SORCERER    , -1,  1, APPLY_DAMROLL         , AFF_FLY             , AFF_NONE, sorcerer_enchantment);
+  ENCHANTO("The title of Acolyte"           , ENCHANT_ACOLYTE     ,  -1,   0,   0, APPLY_NONE            , AFF_SPHERE          , AFF_NONE, acolyte_enchantment);
+  ENCHANTO("The title of Bishop"            , ENCHANT_BISHOP      ,  -1,   0,   1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, bishop_enchantment);
+  ENCHANTO("The title of Prophet"           , ENCHANT_PROPHET     ,  -1,   0,   1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, prophet_enchantment);
 
-  ENCHANTO("The rank of Private"            , ENCHANT_PRIVATE     , -1,  5, APPLY_SKILL_DUAL      , AFF_NONE            , AFF_NONE, private_enchantment);
-  ENCHANTO("The rank of Commodore"          , ENCHANT_COMMODORE   , -1,  5, APPLY_SKILL_ASSAULT   , AFF_NONE            , AFF_NONE, commodore_enchantment);
-  ENCHANTO("The rank of Commander"          , ENCHANT_COMMANDER   , -1,  5, APPLY_SKILL_TRIPLE    , AFF_NONE            , AFF_NONE, commander_enchantment);
+  ENCHANTO("The status of Highwayman"       , ENCHANT_HIGHWAYMAN  ,  -1,   0,   5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, highwayman_enchantment);
+  ENCHANTO("The status of Brigand"          , ENCHANT_BRIGAND     ,  -1,   0,   1, APPLY_HITROLL         , AFF_SENSE_LIFE      , AFF_NONE, brigand_enchantment);
+  ENCHANTO("The status of Assassin"         , ENCHANT_ASSASSIN    ,  -1,   0,   5, APPLY_SKILL_CIRCLE    , AFF_INFRAVISION     , AFF_NONE, assassin_enchantment);
 
-  ENCHANTO("The title of Wanderer"          , ENCHANT_WANDERER    , -1,  5, APPLY_SKILL_AMBUSH    , AFF_DETECT_MAGIC    , AFF_NONE, wanderer_enchantment);
-  ENCHANTO("The title of Forester"          , ENCHANT_FORESTER    , -1,  1, APPLY_DAMROLL         , AFF_INFRAVISION     , AFF_NONE, forester_enchantment);
-  ENCHANTO("The title of Tamer"             , ENCHANT_TAMER       , -1,  5, APPLY_SKILL_DISEMBOWEL, AFF_DETECT_INVISIBLE, AFF_NONE, tamer_enchantment);
+  ENCHANTO("The title of Squire"            , ENCHANT_SQUIRE      ,  -1,   0,   5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, squire_enchantment);
+  ENCHANTO("The title of Swashbuckler"      , ENCHANT_SWASHBUCKLER,  -1,   0,   5, APPLY_SKILL_DUAL      , AFF_NONE            , AFF_NONE, swashbuckler_enchantment);
+  ENCHANTO("The title of Knight"            , ENCHANT_KNIGHT      ,  -1,   0,   5, APPLY_SKILL_TRIPLE    , AFF_SENSE_LIFE      , AFF_NONE, knight_enchantment);
 
-  ENCHANTO("The title of Tsume"             , ENCHANT_TSUME       , -1,  0, APPLY_NONE            , AFF_INFRAVISION     , AFF_NONE, tsume_enchantment);
-  ENCHANTO("The title of Shinobi"           , ENCHANT_SHINOBI     , -1,  5, APPLY_SKILL_PUMMEL    , AFF_SENSE_LIFE      , AFF_NONE, shinobi_enchantment);
-  ENCHANTO("The title of Shogun"            , ENCHANT_SHOGUN      , -1,  5, APPLY_SKILL_ASSAULT   , AFF_NONE            , AFF_NONE, shogun_enchantment);
+  ENCHANTO("The title of Tsume"             , ENCHANT_TSUME       ,  -1,   0,   0, APPLY_NONE            , AFF_INFRAVISION     , AFF_NONE, tsume_enchantment);
+  ENCHANTO("The title of Shinobi"           , ENCHANT_SHINOBI     ,  -1,   0,   5, APPLY_SKILL_PUMMEL    , AFF_SENSE_LIFE      , AFF_NONE, shinobi_enchantment);
+  ENCHANTO("The title of Shogun"            , ENCHANT_SHOGUN      ,  -1,   0,   5, APPLY_SKILL_ASSAULT   , AFF_NONE            , AFF_NONE, shogun_enchantment);
 
-  ENCHANTO("The title of Minstrel"          , ENCHANT_MINSTREL    , -1,  1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, minstrel_enchantment);
-  ENCHANTO("The title of Poet"              , ENCHANT_POET        , -1,  1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, poet_enchantment);
-  ENCHANTO("The title of Conductor"         , ENCHANT_CONDUCTOR   , -1,  5, APPLY_SKILL_TAUNT     , AFF_INFRAVISION     , AFF_NONE, conductor_enchantment);
+  ENCHANTO("The title of Wanderer"          , ENCHANT_WANDERER    ,  -1,   0,   5, APPLY_SKILL_AMBUSH    , AFF_DETECT_MAGIC    , AFF_NONE, wanderer_enchantment);
+  ENCHANTO("The title of Forester"          , ENCHANT_FORESTER    ,  -1,   0,   1, APPLY_DAMROLL         , AFF_INFRAVISION     , AFF_NONE, forester_enchantment);
+  ENCHANTO("The title of Tamer"             , ENCHANT_TAMER       ,  -1,   0,   5, APPLY_SKILL_DISEMBOWEL, AFF_DETECT_INVISIBLE, AFF_NONE, tamer_enchantment);
 
-  ENCHANTO("The title of Minion of Darkness", ENCHANT_MINION      , -1,  5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, minion_enchantment);
-  ENCHANTO("The title of Dark Warder"       , ENCHANT_DARKWARDER  , -1,  0, APPLY_NONE            , AFF_INFRAVISION     , AFF_NONE, darkwarder_enchantment);
-  ENCHANTO("The title of Dark Lord/Lady"    , ENCHANT_DARKLORDLADY, -1,  1, APPLY_DAMROLL         , AFF_NONE            , AFF_NONE, darklordlady_enchantment);
+  ENCHANTO("The title of First Sword"       , ENCHANT_FIRSTSWORD  ,  -1,   0,   1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, firstsword_enchantment);
+  ENCHANTO("The title of Justiciar"         , ENCHANT_JUSTICIAR   ,  -1,   0,   5, APPLY_SKILL_BLOCK     , AFF_NONE            , AFF_NONE, justiciar_enchantment);
+  ENCHANTO("The title of Lord/Lady"         , ENCHANT_LORDLADY    ,  -1,   0,   5, APPLY_SKILL_PUMMEL    , AFF_NONE            , AFF_NONE, lordlady_enchantment);
 
-  ENCHANTO("The title of Acolyte"           , ENCHANT_ACOLYTE     , -1,  0, APPLY_NONE            , AFF_SPHERE          , AFF_NONE, acolyte_enchantment);
-  ENCHANTO("The title of Bishop"            , ENCHANT_BISHOP      , -1,  1, APPLY_HITROLL         , AFF_DETECT_ALIGNMENT, AFF_NONE, bishop_enchantment);
-  ENCHANTO("The title of Prophet"           , ENCHANT_PROPHET     , -1,  1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, prophet_enchantment);
+  ENCHANTO("The title of Minion of Darkness", ENCHANT_MINION      ,  -1,   0,   5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, minion_enchantment);
+  ENCHANTO("The title of Dark Warder"       , ENCHANT_DARKWARDER  ,  -1,   0,   0, APPLY_NONE            , AFF_INFRAVISION     , AFF_NONE, darkwarder_enchantment);
+  ENCHANTO("The title of Dark Lord/Lady"    , ENCHANT_DARKLORDLADY,  -1,   0,   1, APPLY_DAMROLL         , AFF_NONE            , AFF_NONE, darklordlady_enchantment);
 
-  ENCHANTO("The status of Highwayman"       , ENCHANT_HIGHWAYMAN  , -1,  5, APPLY_SKILL_BACKSTAB  , AFF_NONE            , AFF_NONE, highwayman_enchantment);
-  ENCHANTO("The status of Brigand"          , ENCHANT_BRIGAND     , -1,  1, APPLY_HITROLL         , AFF_SENSE_LIFE      , AFF_NONE, brigand_enchantment);
-  ENCHANTO("The status of Assassin"         , ENCHANT_ASSASSIN    , -1,  5, APPLY_SKILL_CIRCLE    , AFF_INFRAVISION     , AFF_NONE, assassin_enchantment);
+  ENCHANTO("The title of Minstrel"          , ENCHANT_MINSTREL    ,  -1,   0,   1, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, minstrel_enchantment);
+  ENCHANTO("The title of Poet"              , ENCHANT_POET        ,  -1,   0,   1, APPLY_DAMROLL         , AFF_SENSE_LIFE      , AFF_NONE, poet_enchantment);
+  ENCHANTO("The title of Conductor"         , ENCHANT_CONDUCTOR   ,  -1,   0,   5, APPLY_SKILL_TAUNT     , AFF_INFRAVISION     , AFF_NONE, conductor_enchantment);
 
-  ENCHANTO("Deadly Sin - Wrath"             , ENCHANT_WRATH       , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_wrath);
-  ENCHANTO("Deadly Sin - Envy"              , ENCHANT_ENVY        , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_envy);
-  ENCHANTO("Deadly Sin - Lust"              , ENCHANT_LUST        , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_lust);
-  ENCHANTO("Deadly Sin - Pride"             , ENCHANT_PRIDE       , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_pride);
-  ENCHANTO("Deadly Sin - Avarice"           , ENCHANT_AVARICE     , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_avarice);
-  ENCHANTO("Deadly Sin - Gluttony"          , ENCHANT_GLUTTONY    , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_gluttony);
-  ENCHANTO("Deadly Sin - Sloth"             , ENCHANT_SLOTH       , 66,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_sloth);
-  ENCHANTO("Greasy Palms"                   , ENCHANT_GREASY      ,  6,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, greasy_palms);
-  ENCHANTO("Red Death"                      , ENCHANT_REDDEATH    , 30,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, red_death);
-  ENCHANTO("Lizard Lycanthropy"             , ENCHANT_LIZARD      , 30,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, lizard_bite);
+  ENCHANTO("The rank of Private"            , ENCHANT_PRIVATE     ,  -1,   0,   5, APPLY_SKILL_DUAL      , AFF_NONE            , AFF_NONE, private_enchantment);
+  ENCHANTO("The rank of Commodore"          , ENCHANT_COMMODORE   ,  -1,   0,   5, APPLY_SKILL_ASSAULT   , AFF_NONE            , AFF_NONE, commodore_enchantment);
+  ENCHANTO("The rank of Commander"          , ENCHANT_COMMANDER   ,  -1,   0,   5, APPLY_SKILL_TRIPLE    , AFF_NONE            , AFF_NONE, commander_enchantment);
+
+  ENCHANTO("Deadly Sin - Wrath"             , ENCHANT_WRATH       ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_wrath);
+  ENCHANTO("Deadly Sin - Envy"              , ENCHANT_ENVY        ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_envy);
+  ENCHANTO("Deadly Sin - Lust"              , ENCHANT_LUST        ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_lust);
+  ENCHANTO("Deadly Sin - Pride"             , ENCHANT_PRIDE       ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_pride);
+  ENCHANTO("Deadly Sin - Avarice"           , ENCHANT_AVARICE     ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_avarice);
+  ENCHANTO("Deadly Sin - Gluttony"          , ENCHANT_GLUTTONY    ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_gluttony);
+  ENCHANTO("Deadly Sin - Sloth"             , ENCHANT_SLOTH       ,  66,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, sin_sloth);
+  ENCHANTO("Greasy Palms"                   , ENCHANT_GREASY      ,   6,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, greasy_palms);
+  ENCHANTO("Red Death"                      , ENCHANT_REDDEATH    ,  30,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, red_death);
+  ENCHANTO("Lizard Lycanthropy"             , ENCHANT_LIZARD      ,  30,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, lizard_bite);
 
 #ifdef TEST_SITE
-  ENCHANTO("Toxic Fumes"                    , ENCHANT_TOXICFUMES  , -1,  0, APPLY_NONE            , AFF_NONE            , AFF_NONE, toxic_fumes_ench);
+  ENCHANTO("Toxic Fumes"                    , ENCHANT_TOXICFUMES  ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, toxic_fumes_ench);
 #endif
-  ENCHANTO("Frightful Presence"             , ENCHANT_FRIGHTFUL   , 10, -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, frightful_presence);
-  ENCHANTO("The Curse of the Lich"          , ENCHANT_LICH        ,  5, -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, lich_curse);
-/* These 3 were added by Quack for trial in early 1997.
-  ENCHANTO("Magical Silence"                , ENCHANT_SILENCE     ,  2,  0, APPLY_NONE           , AFF_SNEAK            , AFF_NONE, silence_enchantment);
-  ENCHANTO("Wolf Lycanthropy"               , ENCHANT_SHAPESHIFT  ,  2,  0, APPLY_NONE           , AFF_INFRAVISION      , AFF_NONE, shapeshift_enchantment);
-  ENCHANTO("Champion Quester"               , ENCHANT_QUESTER     , -1,  3, APPLY_DAMROLL        , AFF_SANCTUARY        , AFF_NONE, quester_enchantment);*/
+
+  ENCHANTO("Frightful Presence"             , ENCHANT_FRIGHTFUL   ,  10,   0,  -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, frightful_presence);
+
+  ENCHANTO("The Curse of the Lich"          , ENCHANT_LICH        ,   5,   0,  -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, lich_curse);
 }
 
-
-/* Note: Name takes precedence over enchantment number, unless the name isn't in the global enchantment list. */
-ENCH *get_enchantment(ENCH *enchantment, int must_find) {
-  int index = -1;
-
-  if (!enchantment->name) {
-    index = enchantment->type;
-  }
-  else {
-    for (int i = 0; i < TOTAL_ENCHANTMENTS; i++)  {
-      if (!enchantments[i].name || !enchantment->name) continue;
-
-      if (!strcmp(enchantments[i].name, enchantment->name)) {
-        index = i;
-      }
-    }
-  }
-
-  if ((index == -1) && must_find) return NULL;
-
-  ENCH *ench;
-
-  CREATE(ench, ENCH, 1);
-
-  if (index != -1) {
-    ench->name = str_dup(enchantments[index].name);
-    ench->interval = ((enchantment->interval != 0) ? enchantment->interval : 0); // TODO: Decide if this should be added to the enchant table above.
-    ench->type = index;
-    ench->duration = enchantments[index].duration;
-    ench->modifier = enchantments[index].modifier;
-    ench->location = enchantments[index].location;
-    ench->bitvector = enchantments[index].bitvector;
-    ench->bitvector2 = enchantments[index].bitvector2;
-    ench->func = enchantments[index].func;
-  }
-  else {
-    ench->name = str_dup(enchantment->name);
-    ench->interval = enchantment->interval;
-    ench->type = 0;
-    ench->duration = enchantment->duration;
-    ench->modifier = enchantment->modifier;
-    ench->location = enchantment->location;
-    ench->bitvector = enchantment->bitvector;
-    ench->bitvector2 = enchantment->bitvector2;
-    ench->func = enchantment->func;
-  }
-
-  return ench;
+ENCH *get_enchantment_by_name(CHAR *ch, const char *name) {
+  return ench_get_from_char(ch, name, 0);
 }
 
-
-void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find)
-{
-  ENCH *new_ench;
-  ENCH *ench;
-  ENCH *next;
-  ENCH *tmp_ench;
-
-  new_ench = get_enchantment(enchantment, must_find);
-
-  if (!new_ench) return;
-
-  /* If there's an enchantment already there, it replaces it. */
-  for (ench = victim->enchantments; ench; ench = next)
-  {
-    next = ench->next;
-
-    if (ench->name && !strcmp(ench->name, new_ench->name))
-    {
-      enchantment_remove(victim, ench, TRUE);
-      ench = NULL;
-    }
-  }
-
-  if (!victim->enchantments)
-  {
-    victim->enchantments = new_ench;
-  }
-  else
-  {
-    for (tmp_ench = victim->enchantments; tmp_ench->next; tmp_ench = tmp_ench->next);
-
-    tmp_ench->next = new_ench;
-  }
-
-  affect_modify(victim, new_ench->location, new_ench->modifier, new_ench->bitvector, new_ench->bitvector2, TRUE);
-  affect_total(victim);
-  check_equipment(victim);
+ENCH *get_enchantment_by_type(CHAR *ch, int type) {
+  return ench_get_from_char(ch, 0, type);
 }
 
-
-void enchantment_remove(CHAR *victim, ENCH *enchantment, int tolog)
-{
-  ENCH **previous;
-  ENCH *ench = NULL;
-  ENCH *next = NULL;
-  char buf[MSL];
-
-  affect_modify(victim, enchantment->location, enchantment->modifier, enchantment->bitvector, enchantment->bitvector2, FALSE);
-
-  /* Find it in the linked list, and remove it. */
-  previous = &victim->enchantments;
-  for (ench = victim->enchantments; ench; ench = next)
-  {
-    next = ench->next;
-
-    if (ench == enchantment)
-    {
-      *previous = next;
-
-      if (tolog)
-      {
-        sprintf(buf, "PLRINFO: %s just had enchantment %s removed.", GET_NAME(victim), ench->name);
-        log_s(buf);
-      }
-
-      if (enchantment->name)
-      {
-        free(enchantment->name);
-      }
-      free(enchantment);
-
-      affect_total(victim);
-      check_equipment(victim);
-    }
-    else
-    {
-      previous = &ench->next;
-    }
-  }
+int enchanted_by(CHAR *ch, const char *name) {
+  return ench_get_from_char(ch, name, 0) ? TRUE : FALSE;
 }
-
-
-int enchanted_by(CHAR *ch, char *name) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    if (ench->name && !strcmp(ench->name, name)) {
-      return TRUE;
-    }
-  }
-
-  return FALSE;
-}
-
 
 int enchanted_by_type(CHAR *ch, int type) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next)  {
-    if (ench->type == type) {
-      return TRUE;
-    }
-  }
-
-  return FALSE;
+  return ench_get_from_char(ch, 0, type) ? TRUE : FALSE;
 }
 
+void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find) {
+  if (!victim || !enchantment) return;
+
+  ENCH *ench = NULL;
+
+  if (must_find) {
+    ench = ench_get_from_global(enchantment->name, enchantment->type);
+  }
+  else {
+    ench = enchantment;
+  }
+
+  if (ench) {
+    ench_from_char(victim, ench->name, ench->type, TRUE);
+
+    ench_to_char(victim, ench);
+  }
+}
+
+void enchantment_remove(CHAR *victim, ENCH *enchantment, int to_log) {
+  ench_remove(victim, enchantment, to_log);
+}
 
 int get_rank(CHAR *ch) {
+  if (!ch) return 0;
+
   int rank = 0;
 
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    switch (ench->type) {
-      case ENCHANT_SQUIRE:
-      case ENCHANT_FIRSTSWORD:
+  for (ENCH *temp_ench = ch->enchantments; temp_ench; temp_ench = temp_ench->next) {
+    switch (temp_ench->type) {
       case ENCHANT_APPRENTICE:
-      case ENCHANT_PRIVATE:
-      case ENCHANT_WANDERER:
-      case ENCHANT_TSUME:
-      case ENCHANT_MINSTREL:
-      case ENCHANT_MINION:
       case ENCHANT_ACOLYTE:
       case ENCHANT_HIGHWAYMAN:
-        if (rank < 1) rank = 1;
+      case ENCHANT_SQUIRE:
+      case ENCHANT_TSUME:
+      case ENCHANT_WANDERER:
+      case ENCHANT_FIRSTSWORD:
+      case ENCHANT_MINION:
+      case ENCHANT_MINSTREL:
+      case ENCHANT_PRIVATE:
+        if (rank < 1) {
+          rank = 1;
+        }
         break;
 
-      case ENCHANT_SWASHBUCKLER:
-      case ENCHANT_JUSTICIAR:
       case ENCHANT_WARLOCK:
-      case ENCHANT_COMMODORE:
-      case ENCHANT_FORESTER:
-      case ENCHANT_SHINOBI:
-      case ENCHANT_POET:
-      case ENCHANT_DARKWARDER:
       case ENCHANT_BISHOP:
       case ENCHANT_BRIGAND:
-        if (rank < 2) rank = 2;
+      case ENCHANT_SWASHBUCKLER:
+      case ENCHANT_SHINOBI:
+      case ENCHANT_FORESTER:
+      case ENCHANT_JUSTICIAR:
+      case ENCHANT_DARKWARDER:
+      case ENCHANT_POET:
+      case ENCHANT_COMMODORE:
+        if (rank < 2) {
+          rank = 2;
+        }
         break;
 
-      case ENCHANT_KNIGHT:
-      case ENCHANT_LORDLADY:
       case ENCHANT_SORCERER:
-      case ENCHANT_COMMANDER:
-      case ENCHANT_TAMER:
-      case ENCHANT_SHOGUN:
-      case ENCHANT_CONDUCTOR:
-      case ENCHANT_DARKLORDLADY:
       case ENCHANT_PROPHET:
       case ENCHANT_ASSASSIN:
-        if (rank < 3) rank = 3;
+      case ENCHANT_KNIGHT:
+      case ENCHANT_SHOGUN:
+      case ENCHANT_TAMER:
+      case ENCHANT_LORDLADY:
+      case ENCHANT_DARKLORDLADY:
+      case ENCHANT_CONDUCTOR:
+      case ENCHANT_COMMANDER:
+        if (rank < 3) {
+          rank = 3;
+        }
         break;
     }
   }
@@ -1827,164 +1719,89 @@ int get_rank(CHAR *ch) {
   return rank;
 }
 
+char *get_rank_name(CHAR *ch) {
+  if (!ch) return NULL;
 
-/* Project Epee */
-char *get_rank_name(CHAR *ch)
-{
-  ENCH *ench = NULL;
-  int rank = 0;
+  struct rank_name_t {
+    int class;
+    int rank;
+    char *name;
+    char *name_female;
+  };
 
-  rank = get_rank(ch);
+  const struct rank_name_t rank_names[] = {
+    { CLASS_MAGIC_USER,   1, "Apprentice",   NULL },
+    { CLASS_MAGIC_USER,   2, "Warlock",      NULL },
+    { CLASS_MAGIC_USER,   3, "Sorcerer",     NULL },
 
-  if (rank >= 1 && rank <= 3)
-  {
-    for (ench = ch->enchantments; ench; ench = ench->next)
-    {
-      switch (ench->type)
-      {
-        case ENCHANT_SQUIRE:
-          if (rank == 1) return "Squire";
-          break;
-        case ENCHANT_FIRSTSWORD:
-          if (rank == 1) return "First Sword";
-          break;
-        case ENCHANT_APPRENTICE:
-          if (rank == 1) return "Apprentice";
-          break;
-        case ENCHANT_PRIVATE:
-          if (rank == 1) return "Private";
-          break;
-        case ENCHANT_WANDERER:
-          if (rank == 1) return "Wanderer";
-          break;
-        case ENCHANT_TSUME:
-          if (rank == 1) return "Tsume";
-          break;
-        case ENCHANT_MINSTREL:
-          if (rank == 1) return "Minstrel";
-          break;
-        case ENCHANT_MINION:
-          if (rank == 1) return "Evil Minion";
-          break;
-        case ENCHANT_ACOLYTE:
-          if (rank == 1) return "Acolyte";
-          break;
-        case ENCHANT_HIGHWAYMAN:
-          if (rank == 1) return "Highwayman";
-          break;
-        case ENCHANT_SWASHBUCKLER:
-          if (rank == 2) return "Swashbuckler";
-          break;
-        case ENCHANT_JUSTICIAR:
-          if (rank == 2) return "Justiciar";
-          break;
-        case ENCHANT_WARLOCK:
-          if (rank == 2) return "Warlock";
-          break;
-        case ENCHANT_COMMODORE:
-          if (rank == 2) return "Commodore";
-          break;
-        case ENCHANT_FORESTER:
-          if (rank == 2) return "Forester";
-          break;
-        case ENCHANT_SHINOBI:
-          if (rank == 2) return "Shinobi";
-          break;
-        case ENCHANT_POET:
-          if (rank == 2) return "Poet";
-          break;
-        case ENCHANT_DARKWARDER:
-          if (rank == 2) return "Dark Warder";
-          break;
-        case ENCHANT_BISHOP:
-          if (rank == 2) return "Bishop";
-          break;
-        case ENCHANT_BRIGAND:
-          if (rank == 2) return "Brigand";
-          break;
-        case ENCHANT_KNIGHT:
-          if (rank == 3) return "Knight";
-          break;
-        case ENCHANT_LORDLADY:
-          if (rank == 3)
-          {
-            if (GET_SEX(ch) == SEX_FEMALE) return "Lady";
-            else return "Lord";
-          }
-          break;
-        case ENCHANT_SORCERER:
-          if (rank == 3) return "Sorcerer";
-          break;
-        case ENCHANT_COMMANDER:
-          if (rank == 3) return "Commander";
-          break;
-        case ENCHANT_TAMER:
-          if (rank == 3) return "Tamer";
-          break;
-        case ENCHANT_SHOGUN:
-          if (rank == 3) return "Shogun";
-          break;
-        case ENCHANT_CONDUCTOR:
-          if (rank == 3) return "Conductor";
-          break;
-        case ENCHANT_DARKLORDLADY:
-          if (rank == 3)
-          {
-            if (GET_SEX(ch) == SEX_FEMALE) return "Dark Lady";
-            else return "Dark Lord";
-          }
-          break;
-        case ENCHANT_PROPHET:
-          if (rank == 3) return "Prophet";
-          break;
-        case ENCHANT_ASSASSIN:
-          if (rank == 3) return "Assassin";
-          break;
-      }
+    { CLASS_CLERIC,       1, "Acolyte",      NULL },
+    { CLASS_CLERIC,       2, "Bishop",       NULL },
+    { CLASS_CLERIC,       3, "Apprentice",   NULL },
+
+    { CLASS_THIEF,        1, "Highwayman",   NULL },
+    { CLASS_THIEF,        2, "Brigand"  ,    NULL },
+    { CLASS_THIEF,        3, "Assassin",     NULL },
+
+    { CLASS_WARRIOR,      1, "Squire",       NULL },
+    { CLASS_WARRIOR,      2, "Swashbuckler", NULL },
+    { CLASS_WARRIOR,      3, "Knight",       NULL },
+
+    { CLASS_NINJA,        1, "Tsume",        NULL },
+    { CLASS_NINJA,        2, "Shinobi",      NULL },
+    { CLASS_NINJA,        3, "Shogun",       NULL },
+
+    { CLASS_NOMAD,        1, "Wanderer",     NULL },
+    { CLASS_NOMAD,        2, "Forester",     NULL },
+    { CLASS_NOMAD,        3, "Tamer",        NULL },
+
+    { CLASS_PALADIN,      1, "First Sword",  NULL },
+    { CLASS_PALADIN,      2, "Justiciar",    NULL },
+    { CLASS_PALADIN,      3, "Lord",         "Lady" },
+
+    { CLASS_ANTI_PALADIN, 1, "Minion",       NULL },
+    { CLASS_ANTI_PALADIN, 2, "Dark Warder",  NULL },
+    { CLASS_ANTI_PALADIN, 3, "Dark Lord",    "Dark Lady" },
+
+    { CLASS_BARD,         1, "Minstrel",     NULL },
+    { CLASS_BARD,         2, "Poet",         NULL },
+    { CLASS_BARD,         3, "Conductor",    NULL },
+
+    { CLASS_COMMANDO,     1, "Private",      NULL },
+    { CLASS_COMMANDO,     2, "Commodore",    NULL },
+    { CLASS_COMMANDO,     3, "Commander",    NULL },
+  };
+
+  int rank = get_rank(ch), rank_name_idx = -1;
+
+  for (int i = 0; (rank_name_idx < 0) && (i < NUMELEMS(rank_names)); i++) {
+    if ((rank_names[i].class == GET_CLASS(ch)) && (rank_names[i].rank == rank)) {
+      rank_name_idx = i;
     }
   }
 
-  return "None";
-}
+  char *rank_name = NULL;
 
-ENCH *get_enchantment_by_name(CHAR *ch, char *name) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    if (ench->name && !strcmp(ench->name, name)) {
-      return ench;
+  if (rank_name_idx >= 0) {
+    if (GET_SEX(ch) != SEX_FEMALE) {
+      rank_name = rank_names[rank_name_idx].name;
+    }
+    else {
+      rank_name = rank_names[rank_name_idx].name_female;
     }
   }
-
-  return NULL;
-}
-
-
-/* Note: Does not work right now, since type is not reliable. */
-ENCH *get_enchantment_by_type(CHAR *ch, int type) {
-  for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    if (ench->type == type) {
-      return ench;
-    }
+  else {
+    rank_name = "None";
   }
 
-  return NULL;
+  return rank_name;
 }
 
-void enchantment_apply(CHAR *ch, bool overwrite, char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg)) {
+void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg)) {
   if (!ch || !*name) return;
 
-  if (overwrite && get_enchantment_by_name(ch, name)) return;
+  if (overwrite) {
+    ench_from_char(ch, name, type, FALSE);
+  }
 
-  ENCH ench;
-
-  ench.name       = name;
-  ench.type       = type;
-  ench.duration   = duration;
-  ench.modifier   = modifier;
-  ench.interval   = interval;
-  ench.location   = location;
-  ench.bitvector  = bitvector;
-  ench.bitvector2 = bitvector2;
-  ench.func       = func;
-
-  enchantment_to_char(ch, &ench, FALSE);
+  ench_apply(ch, name, type, duration, interval, modifier, location, bitvector, bitvector2, func);
 }

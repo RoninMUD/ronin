@@ -7303,8 +7303,8 @@ Subclass Infidel: Level 5 (Anti-Paladin)
 
 Usage       : cast 'wither' <victim>
 Accumulative: Yes
-Duration    : Instantaneous / ~ 40 seconds (DoT) / Special (Negative Effects)
-Save        : None vs. Damage / Negates (Negative Effects)
+Duration    : Instantaneous / 36 seconds (DoT) / Special (Negative Effects)
+Save        : None vs. Damage / Immunity Negates (Negative Effects)
 Mana Cost   : 75
 Damage Done : 350 / Special
 
@@ -7314,18 +7314,17 @@ This powerful spell deals damage to the target instantly, applies a damage
 over time (DoT) effect, and has a chance to affect the target with lasting
 afflictions.
 
-The damage over time effect is 75 damage inflicted approximately every 10
-seconds, for a duration of 40 seconds.  Multiple casts of Wither will refresh
-the damage over time effect to its maximum duration.
+The damage over time effect is 75 damage inflicted every 9 seconds, for a
+duration of 36 seconds.  Multiple casts of Wither will refresh the damage over
+time effect to its maximum duration.
 
 This spell also applies a random effect to the target from the following list of
-negative conditions: blindness, chill touch, curse, paralysis or poison.
+negative conditions: blindness, curse, paralysis, or poison.  The base chance to
+apply one of these effects is 25% and is reduced by 5% for each effect that the
+target is already affected by.
 
-Each effect is subject to its own saving throw.  There is a 25% chance that a
-second effect will be applied, or the same effect will be attempted again if the
-target made its saving throw.  Blindness has a duration of 2, chill touch has a
-duration of 6, and curse, paralysis and poison each have a duration equal to the
-level of the caster.
+The blindness and curse effects have a duration of 3 rounds, while the paralysis
+and poison effects have a duration equal to the caster's level.
 
 If the target is immune to the chosen effect, the spell deals an additional 50
 damage instead.  Similarly, if all of the effects are already present on the
@@ -8030,9 +8029,9 @@ attack inflicts 15 to 25 times the commando's class level, for a minimum of 750
 damage, and a maximum of 1250 damage at level 50.  This attack is automatic and
 is attempted approximately every 10 seconds.  Its chance of success is based on
 the target's remaining hit points, with a more wounded target being more prone
-to being sniped.  Snipe can only trigger once per 10 combat rounds on the same
-creature.  Multiple Legionnaires can Snipe the same creature, but only one time
-each within the 10 round window.
+to being sniped.  Snipe can only trigger once per 7 combat rounds on the same
+creature.  Multiple Legionnaires can Snipe the same creature, but only 1 time
+each within the 7 round window.
 
 See Also: SUBCLASSES LEGIONNAIRE
 #
@@ -8967,7 +8966,7 @@ Subclass Mystic: Level 4 (Ninja)
 
 Usage       : mantra <target>
 Accumulative: No
-Duration    : Instantaneous + 100 seconds
+Duration    : Instantaneous + 90 seconds
 Mana Cost   : 120
 
 The Mystic channels his/her spiritual energy into a target, which
@@ -8977,15 +8976,15 @@ The immediate amount healed will be 500 hit points.
 
 The target will become affected by the "Mantra" enchantment.  If the
 target is already affected by the enchantment, the duration will be
-extended to the maximum duration of 100 seconds.
+extended to the maximum duration of 90 seconds (30 rounds).
 
 If a more powerful Mystic applies mantra to a target already affected
 by the enchantment it will be replaced by the higher level
 enchantment and the duration will be refreshed.
 
 While affected by the "Mantra" enchantment, the character regains
-"(Level + Wisdom modifier) * 1.5" hit points every 10 seconds for a
-duration of 100 seconds (there will be 10 healing "pulses").  At 25
+"(Level + Wisdom modifier) * 1.5" hit points every 9 seconds for a
+duration of 90 seconds (there will be 10 healing "pulses").  At 25
 Wisdom, the total amount of healing over time is 1400.
 
 Additionally, during each healing "pulse", there is a 25% chance to

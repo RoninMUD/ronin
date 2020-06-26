@@ -2510,7 +2510,8 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
       for (i=1;i<4;i++) {
   if (obj->obj_flags.value[i] >= 1) {
     strcat(buf,"...");
-    sprinttype(obj->obj_flags.value[i]-1,spells,buf);
+    //sprinttype(obj->obj_flags.value[i]-1,spells,buf);
+    snprint_type(buf, sizeof(buf), obj->obj_flags.value[i] - 1, spells);
     strcat(buf,"\n\r");
     send_to_char(buf, ch);
   }
@@ -2523,7 +2524,8 @@ void spell_legend_lore(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
         obj->obj_flags.value[1]);
       send_to_char (buf,ch);
       if (obj->obj_flags.value[3] >= 1) {
-  sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+  //sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+  snprint_type(buf, sizeof(buf), obj->obj_flags.value[3] - 1, spells);
   strcat(buf,"\n\r");
   send_to_char(buf, ch);
       }
@@ -2650,36 +2652,42 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
         send_to_char(buf,ch);
 
         sprintf(buf, "Type: ");
-        sprinttype(OBJ_TYPE(obj),item_types,buf2);
+        //sprinttype(OBJ_TYPE(obj),item_types,buf2);
+        snprint_type(buf2, sizeof(buf2), OBJ_TYPE(obj), item_types);
         strcat(buf,buf2);
         strcat(buf,"\n\r");
         send_to_char(buf, ch);
 
         send_to_char("Item is: ", ch);
-        sprintbit(obj->obj_flags.extra_flags,extra_bits,buf);
+        //sprintbit(obj->obj_flags.extra_flags,extra_bits,buf);
+        snprint_bits(buf, sizeof(buf), obj->obj_flags.extra_flags, extra_bits);
         strcat(buf," ");
         send_to_char(buf,ch);
-        sprintbit(obj->obj_flags.extra_flags2,extra_bits2,buf);
+        //sprintbit(obj->obj_flags.extra_flags2,extra_bits2,buf);
+        snprint_bits(buf, sizeof(buf), obj->obj_flags.extra_flags2, extra_bits2);
         strcat(buf,"\n\r");
         send_to_char(buf,ch);
 
         if( obj->obj_flags.subclass_res )
         {
           send_to_char("Subclass restrictions: ", ch);
-          sprintbit(obj->obj_flags.subclass_res,subclass_res_bits,buf);
+          //sprintbit(obj->obj_flags.subclass_res,subclass_res_bits,buf);
+          snprint_bits(buf, sizeof(buf), obj->obj_flags.subclass_res, subclass_res_bits);
           strcat(buf,"\n\r");
           send_to_char(buf,ch);
         }
 
         if (obj->obj_flags.bitvector) {
             send_to_char("Item has been imbued with: ", ch);
-            sprintbit(obj->obj_flags.bitvector,affected_bits,buf);
+            //sprintbit(obj->obj_flags.bitvector,affected_bits,buf);
+            snprint_bits(buf, sizeof(buf), obj->obj_flags.bitvector, affected_bits);
             strcat(buf,"\n\r");
             send_to_char(buf, ch);
         }
 
         if (obj->obj_flags.bitvector2) {
-            sprintbit(obj->obj_flags.bitvector2,affected_bits2,buf);
+            //sprintbit(obj->obj_flags.bitvector2,affected_bits2,buf);
+            snprint_bits(buf, sizeof(buf), obj->obj_flags.bitvector2, affected_bits2);
             strcat(buf,"\n\r");
             send_to_char(buf, ch);
         }
@@ -2757,19 +2765,22 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             send_to_char(buf, ch);
 
             if (obj->obj_flags.value[1] >= 1) {
-                sprinttype(obj->obj_flags.value[1]-1,spells,buf);
+                //sprinttype(obj->obj_flags.value[1]-1,spells,buf);
+                snprint_type(buf, sizeof(buf), obj->obj_flags.value[1] - 1, spells);
                 strcat(buf,"\n\r");
                 send_to_char(buf, ch);
             }
 
             if (obj->obj_flags.value[2] >= 1) {
-                sprinttype(obj->obj_flags.value[2]-1,spells,buf);
+                //sprinttype(obj->obj_flags.value[2]-1,spells,buf);
+                snprint_type(buf, sizeof(buf), obj->obj_flags.value[2] - 1, spells);
                 strcat(buf,"\n\r");
                 send_to_char(buf, ch);
             }
 
             if (obj->obj_flags.value[3] >= 1) {
-                sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+                //sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+                snprint_type(buf, sizeof(buf), obj->obj_flags.value[3] - 1, spells);
                 strcat(buf,"\n\r");
                 send_to_char(buf, ch);
             }
@@ -2787,7 +2798,8 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
             send_to_char(buf, ch);
 
             if (obj->obj_flags.value[3] >= 1) {
-                sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+                //sprinttype(obj->obj_flags.value[3]-1,spells,buf);
+                snprint_type(buf, sizeof(buf), obj->obj_flags.value[3] - 1, spells);
                 strcat(buf,"\n\r");
                 send_to_char(buf, ch);
             }
@@ -2875,7 +2887,8 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
                     found = TRUE;
                 }
 
-                sprinttype(obj->affected[i].location,apply_types,buf2);
+                //sprinttype(obj->affected[i].location,apply_types,buf2);
+                snprint_type(buf2, sizeof(buf2), obj->affected[i].location, apply_types);
                 sprintf(buf,"    Affects : %s by %d\n\r", buf2,obj->affected[i].modifier);
                 send_to_char(buf, ch);
             }
@@ -3603,7 +3616,7 @@ void spell_clairvoyance (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
 
 /*
 void spell_shapeshift (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int eq_pos;
   int claws = 3005;
   OBJ *tmp_obj;
@@ -3617,7 +3630,7 @@ void spell_shapeshift (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
   act("$n screams in pain as $e transforms into a werewolf.",TRUE,vict,0,0,TO_ROOM);
   act("You scream in pain as you transform into a werewolf.",TRUE,vict,0,0,TO_CHAR);
 
-  memset(&ench,0,sizeof(struct enchantment_type_5));
+  memset(&ench,0,sizeof(ENCH));
   ench.name     = str_dup("Wolf lycanthropy");
   enchantment_to_char(vict,&ench,TRUE);
   free(ench.name);
@@ -3625,24 +3638,24 @@ void spell_shapeshift (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
 
 
 void spell_silence (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
  act("$n tries to scream but no sound escapes $s lips.",TRUE,vict,0,0,TO_ROOM);
  act("You suddenly find yourself unable to make any sound.",TRUE,vict,0,0,TO_CHAR);
 
-  memset(&ench,0,sizeof(struct enchantment_type_5));
+  memset(&ench,0,sizeof(ENCH));
   ench.name     = str_dup("Magical silence");
   enchantment_to_char(vict,&ench,TRUE);
   free(ench.name);
  }
 
 void spell_quester (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
  act("$n starts glowing with a faint blue light.",TRUE,vict,0,0,TO_ROOM);
  act("You start glowing with a faint blue light.",TRUE,vict,0,0,TO_CHAR);
 
-  memset(&ench,0,sizeof(struct enchantment_type_5));
+  memset(&ench,0,sizeof(ENCH));
   ench.name     = str_dup("Champion Quester");
   enchantment_to_char(vict,&ench,TRUE);
   free(ench.name);
@@ -3650,7 +3663,7 @@ void spell_quester (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
 */
 
 void spell_firebreath (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
   if(CHAOSMODE && ch!=vict) { /* Chaos03 */
     send_to_char("You cannot cast this spell on another player.\n\r",ch);
@@ -3667,7 +3680,7 @@ void spell_firebreath (ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj){
     act("Your eyes burn red, and smoke rises from the ground.",FALSE,ch,0,vict,TO_VICT);
   }
 
-  memset(&ench,0,sizeof(struct enchantment_type_5));
+  memset(&ench,0,sizeof(ENCH));
   ench.name     = str_dup("Fire Breath");
   enchantment_to_char(vict,&ench,TRUE);
   free(ench.name);

@@ -36,6 +36,7 @@
 #include "quest.h"
 #include "subclass.h"
 #include "weather.h"
+#include "aff_ench.h"
 
 extern struct season_info_t season_info[];
 
@@ -787,11 +788,11 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         }
 
         if (target->enchantments) {
-          if (enchanted_by(target, "Savaged (Maim)")) {
+          if (enchanted_by(target, "Maimed")) {
             act("......$n has been horribly maimed!", FALSE, target, 0, ch, TO_VICT);
           }
 
-          if (enchanted_by(target, "Staggering (Tremor)")) {
+          if (enchanted_by(target, "Tremor")) {
             act("......$n is stumbling and staggering!", FALSE, target, 0, ch, TO_VICT);
           }
         }
@@ -1676,11 +1677,9 @@ void do_exits(CHAR *ch, char *argument, int cmd) {
 void imm_grace_add_enchant(CHAR *ch) {
   ENCH imm_grace = { 0 };
 
-  imm_grace.name = strdup("Immortalis' Grace");
+  imm_grace.type = ENCHANT_IMM_GRACE;
 
   enchantment_to_char(ch, &imm_grace, TRUE);
-
-  free(imm_grace.name);
 }
 
 /* Remove the Immortalis' Grace enchant. */

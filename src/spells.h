@@ -965,7 +965,7 @@ void cast_perceive(ubyte level, struct char_data *ch, char *arg, int type,struct
 void spell_perceive(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj);
 void spell_wind_slash(ubyte level, struct char_data *ch, struct char_data *victim, struct obj_data *obj); /* Project Tsurugi */
 
-void magic_heal(struct char_data *victim, int spell, int heal, bool overheal);
+void magic_heal(CHAR *victim, int spell, int heal, bool overheal);
 
 /* externals */
 

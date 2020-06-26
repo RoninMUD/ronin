@@ -34,6 +34,7 @@
 #include "fight.h"
 #include "handler.h"
 #include "enchant.h"
+#include "char_spec.h"
 
 #define NOT !
 #define AND &&
@@ -492,6 +493,8 @@ to a different type of mud.\n\r\n\r",ch);
 }
 
 int obj_special(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  assert(obj);
+
   if (obj->func) {
     return (obj->func(obj, ch, cmd, arg));
   }
@@ -500,30 +503,38 @@ int obj_special(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 }
 
 int mob_special(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+  assert(mob);
+
+  if (mob->func) {
+    return (mob->func(mob, ch, cmd, arg));
+  }
+
   return ((*mob_proto_table[mob->nr].func)(mob, ch, cmd, arg));
 }
 
 int room_special(int room, CHAR *ch, int cmd, char *arg) {
+  assert((room >= 0) && room < top_of_world);
+
   return ((*world[room].funct)(room, ch, cmd, arg));
 }
 
-int enchantment_special(ENCH *enchantment, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  if (!enchantment) return FALSE;
+int enchantment_special(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  assert(ench);
 
-  if (enchantment->func && ((*enchantment->func)(enchantment, ch, signaler, cmd, arg))) {
+  if (ench->func && ((*ench->func)(ench, ch, signaler, cmd, arg))) {
     return TRUE;
   }
 
-  if (enchantment->duration >= 0) {
-    if (((cmd == MSG_TICK) && (enchantment->interval == ENCH_INTERVAL_TICK)) ||
-        ((cmd == MSG_MOBACT) && (enchantment->interval == ENCH_INTERVAL_MOBACT)) ||
-        ((cmd == MSG_ROUND) && (enchantment->interval == ENCH_INTERVAL_ROUND))) {
-      if (enchantment->duration > 0) {
-        enchantment->duration--;
+  if (ench->duration >= 0) {
+    if (((cmd == MSG_TICK) && (ench->interval == ENCH_INTERVAL_TICK)) ||
+        ((cmd == MSG_MOBACT) && (ench->interval == ENCH_INTERVAL_MOBACT)) ||
+        ((cmd == MSG_ROUND) && (ench->interval == ENCH_INTERVAL_ROUND))) {
+      if (ench->duration > 0) {
+        ench->duration--;
       }
       else {
-        if (!enchantment_special(enchantment, ch, 0, MSG_REMOVE_ENCH, 0)) {
-          enchantment_remove(ch, enchantment, TRUE);
+        if (!enchantment_special(ench, ch, 0, MSG_REMOVE_ENCH, 0)) {
+          enchantment_remove(ch, ench, TRUE);
         }
       }
     }
@@ -535,7 +546,7 @@ int enchantment_special(ENCH *enchantment, CHAR *ch, CHAR *signaler, int cmd, ch
 int special(CHAR *ch, int cmd, char *arg)
 {
   register struct obj_data *i;
-  register struct enchantment_type_5 *tmp_ench;
+  register ENCH *tmp_ench;
   register CHAR *k,*temp;
   int j;
   if(CHAR_REAL_ROOM(ch) == NOWHERE)
@@ -1815,6 +1826,9 @@ void nanny(struct descriptor_data *d, char *arg) {
             if(GET_LEVEL(d->character)<LEVEL_IMM) {
               do_save(d->character,"",69);
             }
+
+            /* Assign special character function (char_spec.c). */
+            d->character->func = char_spec;
           }
           break;
 

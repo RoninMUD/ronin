@@ -8,13 +8,15 @@
 #include <string.h>
 
 /* Ronin Includes */
-#include "constants.h"
 #include "structs.h"
 #include "utils.h"
+
 #include "act.h"
 #include "db.h"
+#include "char_spec.h"
 #include "cmd.h"
 #include "comm.h"
+#include "constants.h"
 #include "enchant.h"
 #include "fight.h"
 #include "handler.h"
@@ -838,7 +840,6 @@ int velxok_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
 
 /* Commando-like specs. */
-void snipe_action(CHAR *ch, CHAR *victim); /* From fight.c */
 int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg); /* From subclass.spells.c */
 int stram_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_MOBACT) {
@@ -914,7 +915,7 @@ int stram_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (!IS_MORTAL(vict)) continue;
 
-      snipe_action(mob, vict);
+      snipe_spec(mob, vict, 0, "NO_SKILL_CHECK");
 
       /* If he sniped someone, break out of the loop. */
       if (enchanted_by(vict, STRAM_SNIPE_ENCH_NAME)) break;
@@ -1168,21 +1169,6 @@ int aniston_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     hit(mob, ch, TYPE_HIT);
 
     return TRUE;
-  }
-
-  /* Override RANDOM flag so that APPLY_DAMROLL can only be +1 higher than base, instead of +2. */
-  if (cmd == MSG_DIE) {
-    if (!mob) return FALSE;
-
-    OBJ *tactical = EQ(mob, WEAR_LEGS);
-
-    const int tactical_max_damroll = 3;
-
-    if (!tactical || (V_OBJ(tactical) != TACTICAL) || OBJ_AFF_LOC(tactical, 1) != APPLY_DAMROLL) return FALSE;
-
-    OBJ_AFF_MOD(tactical, 1) = MIN(OBJ_AFF_MOD(tactical, 1), tactical_max_damroll);
-
-    return FALSE;
   }
 
   return FALSE;
@@ -2072,7 +2058,7 @@ int lantern_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       for (CHAR *vict = world[CHAR_REAL_ROOM(owner)].people, *next_vict; vict; vict = next_vict) {
         next_vict = vict->next_in_room;
 
-        if (IS_EVIL(vict) || IS_IMMORTAL(vict)) continue;
+        if (IS_EVIL(vict) || IS_IMMORTAL(vict) || (IS_NPC(vict) && (!GET_OPPONENT(vict) || !IS_MORTAL(GET_OPPONENT(vict))))) continue;
 
         act("$N is burned the rain of sparks!", TRUE, owner, 0, vict, TO_NOTVICT);
         act("You are burned by the rain of sparks!", FALSE, owner, 0, vict, TO_VICT);

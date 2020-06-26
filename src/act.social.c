@@ -254,8 +254,6 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
         type = TO_OTHER;
       }
 
-      CAP(buf);
-
       snprintf(message, sizeof(message), "[gossip] %s", buf);
 
       COLOR(temp_ch, 5);
@@ -290,8 +288,6 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
       snprintf(buf, sizeof(buf), "%s", social->char_no_arg);
     }
   }
-
-  CAP(buf);
 
   snprintf(message, sizeof(message), "[gossip] %s", buf);
 

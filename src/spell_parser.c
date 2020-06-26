@@ -25,15 +25,6 @@
 #include "cmd.h"
 #include "limits.h"
 
-#define MANA_MU 1
-#define MANA_CL 1
-#define MANA_NI 1
-#define MANA_PA 1
-#define MANA_AN 1
-#define MANA_AV 1
-#define MANA_BA 1
-#define MANA_CO 1
-
 #define \
 SPELLO(nr, beat, pos, mlev, clev, nlev, plev, aplev, avlev, blev, colev, mana, tar, func) { \
   spell_info[nr].spell_pointer = (func);           \
@@ -316,51 +307,30 @@ const char * const spells[] = {
   "\n"
 };
 
-void affect_update()
-{
-  static CHAR *ch = NULL;
-  static AFF *tmp_af = NULL;
-  static AFF *af_next = NULL;
-  char buf[MSL];
+void affect_update() {
+  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
+    next_ch = ch->next;
 
-  for (ch = character_list; ch; ch = ch->next)
-  {
-    for (tmp_af = ch->affected; tmp_af; tmp_af = af_next)
-    {
-      af_next = tmp_af->next;
+    for (AFF *af = ch->affected, *next_af; af; af = next_af) {
+      next_af = af->next;
 
-      /* Mantra is handled in signal_char() in comm.c */
-      if (tmp_af->type == SKILL_MANTRA) continue;
-
-      if (tmp_af->duration > 0)
-      {
-        tmp_af->duration--;
-      }
-      else
-      {
-        if (tmp_af->duration > -1)
-        {
-          /* It must be a spell. */
-          if (((tmp_af->type > 0) && (tmp_af->type <= 44)) || ((tmp_af->type > 70) && (tmp_af->type <= 254)))
-          {
-            if (!tmp_af->next || (tmp_af->next->type != tmp_af->type) || (tmp_af->next->duration > 0))
-            {
-              if (*spell_wear_off_msg[tmp_af->type])
-              {
-                sprintf(buf, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
-                send_to_char(buf, ch);
-              }
+      if ((af->type > 0) && (af->type < MAX_SPL_LIST)) {
+        if (af->duration > 0) {
+          af->duration--;
+        }
+        else if (af->duration == 0) {
+          if (!af->next || (af->next->type != af->type) || (af->next->duration > 0)) {
+            if (*spell_wear_off_msg[af->type]) {
+              printf_to_char(ch, "%s\n\r", spell_wear_off_msg[af->type]);
             }
           }
 
-          affect_remove(ch, tmp_af);
+          affect_remove(ch, af);
         }
       }
     }
   }
 }
-
-char* skip_spaces(char* string);
 
 int SPELL_LEVEL(struct char_data *ch, int spell_number)
 {

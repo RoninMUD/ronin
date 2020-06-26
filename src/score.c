@@ -1036,7 +1036,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
       printf_to_char(ch, "%sWiz Flags:%s ",
         CHCLR(ch, 7), ENDCHCLR(ch));
 
-      sprintbit(GET_IMM_FLAGS(ch), wiz_bits, buf);
+      //sprintbit(GET_IMM_FLAGS(ch), wiz_bits, buf);
+      snprint_bits(buf, sizeof(buf), GET_IMM_FLAGS(ch), wiz_bits);
       strcat(buf, "\n\r");
 
       send_to_char(buf, ch);

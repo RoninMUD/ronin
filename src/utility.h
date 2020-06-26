@@ -27,8 +27,6 @@ void wizinfo(char *str, int level);
 void wizinfo_f(int level, char *fmt, ...) __attribute__((format(printf, 2, 3)));
 void wizlog(char *str, int level, int which);
 void wizlog_f(int level, int which, char *fmt, ...) __attribute__((format(printf, 3, 4)));
-void sprintbit(long vektor, const char * const names[], char *result);
-void sprinttype(int type, const char * const names[], char *result);
 int IS_CARRYING_W(struct char_data *ch);
 int IS_CARRYING_N(struct char_data *ch);
 int COUNT_CONTENTS(struct obj_data *obj);
@@ -177,5 +175,8 @@ int str_cmp(char *str1, char *str2);
 int strn_cmp(char *str1, char *str2, size_t n);
 char *string_to_lower(char *str);
 char *string_to_upper(char *str);
+
+void snprint_bits(char *dest, size_t dest_size, long bitvector, const char *const list[]);
+void snprint_type(char *dest, size_t dest_size, int type, const char *const list[]);
 
 #endif
