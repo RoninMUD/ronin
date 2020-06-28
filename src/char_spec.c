@@ -838,6 +838,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           spell_heal(GET_LEVEL(ch), ch, temp_target, NULL);
         }
       }
+      spell_heal(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
     case CLASS_COMMANDO: /* triple + eshock + disarm */

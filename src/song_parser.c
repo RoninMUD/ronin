@@ -245,7 +245,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
       }
     }
 
-    spell_cure_blind(GET_LEVEL(ch), ch, tmp_victim, NULL);
+    spell_cure_blind(GET_LEVEL(ch), ch, ch, NULL);
     break;
 
   case SONG_FLY:
