@@ -44,7 +44,7 @@ int calc_damroll(struct char_data *ch);
 int calc_thaco(struct char_data *ch);
 int calc_ac(struct char_data *ch);
 int calc_position_damage(int position, int dam);
-int calc_hit_damage(struct char_data *ch, struct char_data *victim, struct obj_data *weapon, int bonus, int mode);
+int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode);
 
 int stack_position(struct char_data *ch, int target_position);
 
@@ -56,6 +56,8 @@ void thit(struct char_data *ch, struct char_data *victim, int type);
 void qhit(struct char_data *ch, struct char_data *victim, int type);
 
 bool mob_disarm(struct char_data *mob, struct char_data *victim, bool to_ground);
+
+int get_attack_type(CHAR *ch, OBJ *weapon);
 
 extern struct char_data *combat_list;
 

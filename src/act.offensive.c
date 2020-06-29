@@ -1002,7 +1002,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (enchanted_by(ch, "Staggering (Tremor)") && chance(95)) {
+  if (enchanted_by(ch, "Tremor") && chance(95)) {
     act("You try to flee, but your tremoring causes you to stumble and stagger!", FALSE, ch, 0, 0, TO_CHAR);
     act("$n tries to flee, but $s tremoring causes $m to stumble and stagger.", TRUE, ch, 0, 0, TO_ROOM);
 

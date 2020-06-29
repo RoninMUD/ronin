@@ -116,6 +116,7 @@ void initialize_token_mob(void);
 void read_idname(void);
 char *skip_spaces(char *string);
 void boot_the_shops();
+
 /*************************************************************************
 *  routines for booting the system                                       *
 *********************************************************************** */

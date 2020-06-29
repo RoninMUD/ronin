@@ -46,6 +46,9 @@
 #include "reception.h"
 #include "subclass.h"
 #include "fight.h"
+#include "enchant.h"
+#include "aff_ench.h"
+#include "char_spec.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -133,7 +136,6 @@ FILE *logfile = NULL;    /* Where to send the log messages. */
 void open_logfile(void);
 void close_logfile(void);
 void backup_logfile(void);
-
 
 char* Color[] = {
   "\x1B[0m\x1B[30m", "Black",
@@ -912,8 +914,6 @@ jump into command
 
 void check_token_mob(void);
 void heartbeat(int pulse) {
-  char buf[MSL];
-
   if ((pulse % PULSE_VIOLENCE == 0) && !GAMEHALT) {
     perform_mob_attack();
   }
@@ -923,10 +923,12 @@ void heartbeat(int pulse) {
       give_prompt(desc);
     }
 
-    if ((pulse % PULSE_TICK == 0) && !GAMEHALT && (STATE(desc) != CON_PLYNG)) {
+    if ((pulse % PULSE_TICK == 0) && (STATE(desc) != CON_PLYNG) && !GAMEHALT) {
       DESC_TIMER(desc)++;
 
       if (DESC_TIMER(desc) > 30) {
+        char buf[MSL];
+
         snprintf(buf, sizeof(buf), "WIZINFO: Closing socket %d - idle at menu.", DESC_DESCRIPTOR(desc));
 
         wizlog(buf, LEVEL_IMM, 5);
@@ -957,7 +959,7 @@ void heartbeat(int pulse) {
     /* 3 second pulse signaling for objects.
        Used as an override, since objects don't normally get this signal below. */
     const int msg_3_sec_pulse_objects[] = {
-      18, // Lottery Machine
+      18 // Lottery Machine
     };
 
     for (int i = 0; i < NUMELEMS(msg_3_sec_pulse_objects); i++) {
@@ -1323,6 +1325,9 @@ void copyover_recover(void) {
       d->connected = CON_PLYNG;
       do_look(d->character,"",CMD_LOOK);
       log_f("WIZINFO: Restored %s to room %d.",GET_NAME(d->character),room);
+
+      /* Assign special character function (act.other.c). */
+      d->character->func = char_spec;
     }
   }
   total_connects=max_connects;
@@ -2911,7 +2916,7 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
 
   if (cmd == MSG_TICK) {
     if (ROOM_BLOOD(room_rnum) > 0) {
-      ROOM_BLOOD(room_rnum) -= 1;
+      ROOM_BLOOD(room_rnum)--;
     }
   }
 
@@ -2936,7 +2941,9 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
 
     if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
       char buf[MSL];
-      snprintf(buf, sizeof(buf), "WIZINFO: Room %d returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", world[room_rnum].number);
+
+      snprintf(buf, sizeof(buf), "WIZINFO: signal_room(%d, %s, %d, %s) returned TRUE.",
+        world[room_rnum].number, signaler ? GET_DISP_NAME(signaler) : "(null)", cmd, arg ? arg : "(null)");
       wizlog(buf, 1, 6);
 
       stop = FALSE;
@@ -2954,335 +2961,6 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
   return stop;
 }
 
-void pulse_shadow_wraith(CHAR *ch) {
-  if (!ch) return;
-
-  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
-
-  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 1) ||
-      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 11) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 2) % 10))) {
-    send_to_char("One of your shadows flickers and begins to fade from reality.\n\r", ch);
-    act("One of $n's shadows flickers and begins to fade from reality.", TRUE, ch, 0, 0, TO_ROOM);
-
-    return;
-  }
-
-  if ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) == 0) ||
-      ((duration_of_spell(ch, SPELL_SHADOW_WRAITH) > 10) && !((duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1) % 10))) {
-    /* Dusk Requiem */
-    if (!IS_NPC(ch) && check_subclass(ch, SC_INFIDEL, 4)) {
-      if (GET_OPPONENT(ch)) {
-        /* A bit of a hack here. Cast Dusk Requiem with caster level equal to
-            LEVEL_MORT+1 to inflict double damage, rather than making a
-            special function to do this. */
-        spell_dusk_requiem(LEVEL_MORT + 1, ch, GET_OPPONENT(ch), 0);
-
-        return;
-      }
-      else {
-        int num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
-
-        if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
-        }
-
-        if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
-          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
-        }
-      }
-    }
-
-    send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
-    act("One of $n's shadows fades from reality and recedes back into the void.", TRUE, ch, 0, 0, TO_ROOM);
-
-    return;
-  }
-}
-
-void pulse_mantra(CHAR *ch) {
-  const int mantra_dispel_types[] = {
-    SPELL_BLINDNESS,
-    SPELL_POISON,
-    SPELL_PARALYSIS,
-    -1
-  };
-
-  int mantra_dispel = 0;
-  int gain = 0;
-  AFF *tmp_af = NULL;
-  AFF *next_af = NULL;
-
-  if (!ch) return;
-
-  for (tmp_af = ch->affected; tmp_af; tmp_af = next_af) {
-    next_af = tmp_af->next;
-
-    if (tmp_af->type == SKILL_MANTRA) {
-      if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-        gain = tmp_af->modifier;
-
-        if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
-          gain *= 1.25;
-        }
-
-        send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
-        magic_heal(ch, SKILL_MANTRA, gain, FALSE);
-      }
-
-      mantra_dispel = get_random_set_effect(ch, mantra_dispel_types);
-
-      if (mantra_dispel && chance(25)) {
-        switch (mantra_dispel) {
-        case SPELL_BLINDNESS:
-          if (affected_by_spell(ch, SPELL_BLINDNESS)) {
-            send_to_char("You can see again.\n\r", ch);
-            affect_from_char(ch, SPELL_BLINDNESS);
-          }
-          break;
-        case SPELL_POISON:
-          if (affected_by_spell(ch, SPELL_POISON)) {
-            send_to_char("You feel better.\n\r", ch);
-            affect_from_char(ch, SPELL_POISON);
-          }
-          break;
-        case SPELL_PARALYSIS:
-          if (affected_by_spell(ch, SPELL_PARALYSIS)) {
-            send_to_char("You can move again.\n\r", ch);
-            affect_from_char(ch, SPELL_PARALYSIS);
-          }
-          break;
-        }
-      }
-
-      tmp_af->duration--;
-
-      if (tmp_af->duration <= 0) {
-        if (*spell_wear_off_msg[tmp_af->type]) {
-          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
-        }
-
-        affect_remove(ch, tmp_af);
-      }
-
-      /* Break out of the loop, as we should only process one Mantra effect. */
-      break;
-    }
-  }
-}
-
-void pulse_adrenaline_rush(CHAR *ch) {
-  if (!ch) return;
-
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 3) && GET_OPPONENT(ch)) {
-    /* If less than max hit points, regenerate hit points. */
-    if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-      GET_HIT(ch) = MIN((GET_HIT(ch) + (GET_LEVEL(ch) / 5)), GET_MAX_HIT(ch));
-
-      return;
-    }
-
-    /* If at max hit points and less than max mana, regenerate mana. */
-    if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
-      GET_MANA(ch) = MIN((GET_MANA(ch) + (GET_LEVEL(ch) / 15)), GET_MAX_HIT(ch));
-
-      return;
-    }
-  }
-}
-
-int wither_pulse_action(CHAR *victim) {
-  const int wither_effect_types[] = {
-    SPELL_BLINDNESS,
-    SPELL_CHILL_TOUCH,
-    SPELL_CURSE,
-    SPELL_PARALYSIS,
-    SPELL_POISON,
-    -1
-  };
-
-  const int wither_pulse_damage = 75;
-  const int wither_effect_chance = 25;
-  const int wither_effect_reduction = 5;
-
-  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return 0;
-
-  int dam = wither_pulse_damage;
-
-  AFF *wither_aff;
-  
-  if (!(wither_aff = get_affect_from_char(victim, SPELL_WITHER))) return 0;
-
-  int num_eligible_effects = MAX(0, NUMELEMS(wither_effect_types) - 1);
-
-  if (num_eligible_effects <= 0) return dam;
-
-  int num_applied_effects = 0;
-
-  for (int i = 0; i < num_eligible_effects; i++) {
-    if (affected_by_spell(victim, wither_effect_types[i])) {
-      num_applied_effects++;
-    }
-  }
-
-  int effect_chance = MAX(0, (wither_effect_chance - (num_applied_effects * wither_effect_reduction)));
-
-  if (chance(effect_chance)) {
-    AFF af;
-
-    int caster_level = wither_aff->modifier;
-
-    int effect_type = get_random_eligible_effect(victim, wither_effect_types);
-
-    switch (effect_type) {
-      case SPELL_BLINDNESS:
-        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_BLINDNESS))) {
-          dam += 50;
-          break;
-        }
-
-        af.type = SPELL_BLINDNESS;
-        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 2;
-        af.bitvector = AFF_BLIND;
-        af.bitvector2 = 0;
-
-        af.location = APPLY_HITROLL;
-        af.modifier = -4;
-
-        affect_to_char(victim, &af);
-
-        af.location = APPLY_AC;
-        af.modifier = +40;
-
-        affect_to_char(victim, &af);
-
-        act("You have been blinded!", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
-        break;
-
-      case SPELL_CHILL_TOUCH:
-        if ((IS_NPC(victim) && IS_IMMUNE2(victim, IMMUNE2_COLD))) {
-          dam += 50;
-          break;
-        }
-
-        af.type = SPELL_CHILL_TOUCH;
-        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 6;
-        af.modifier = -1;
-        af.location = APPLY_STR;
-        af.bitvector = 0;
-        af.bitvector2 = 0;
-
-        affect_to_char(victim, &af);
-
-        act("You are chilled to the bone.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n is chilled to the bone.", FALSE, victim, 0, 0, TO_ROOM);
-        break;
-
-      case SPELL_CURSE:
-        af.type = SPELL_CURSE;
-        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
-        af.bitvector = AFF_CURSE;
-        af.bitvector2 = 0;
-
-        af.location = APPLY_HITROLL;
-        af.modifier = -((caster_level - 3) / 9);
-
-        affect_to_char(victim, &af);
-
-        af.location = APPLY_SAVING_PARA;
-        af.modifier = ((caster_level - 3) / 9);
-
-        affect_to_char(victim, &af);
-
-        act("You feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
-        break;
-
-      case SPELL_PARALYSIS:
-        if ((IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_PARALYSIS)) ||
-          ((GET_LEVEL(victim) - 10) > caster_level)) {
-          dam += 50;
-          break;
-        }
-
-        af.type = SPELL_PARALYSIS;
-        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
-        af.bitvector = AFF_PARALYSIS;
-        af.bitvector2 = 0;
-
-        af.location = APPLY_AC;
-        af.modifier = +100;
-
-        affect_to_char(victim, &af);
-
-        af.location = APPLY_HITROLL;
-        af.modifier = -5;
-
-        affect_to_char(victim, &af);
-
-        act("Your limbs freeze in place!", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n is paralyzed!", TRUE, victim, 0, 0, TO_ROOM);
-        break;
-
-      case SPELL_POISON:
-        if (IS_NPC(victim) && IS_IMMUNE(victim, IMMUNE_POISON)) {
-          dam += 50;
-          break;
-        }
-
-        af.type = SPELL_POISON;
-        af.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : caster_level;
-        af.modifier = -3;
-        af.location = APPLY_STR;
-        af.bitvector = AFF_POISON;
-        af.bitvector2 = 0;
-
-        affect_to_char(victim, &af);
-
-        act("You feel very sick.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n looks very sick.", TRUE, victim, 0, 0, TO_ROOM);
-        break;
-    }
-  }
-
-  return dam;
-}
-
-void pulse_wither(CHAR *ch) {
-  if (!ch || CHAR_REAL_ROOM(ch) == NOWHERE) return;
-
-  for (AFF *tmp_af = ch->affected, *next_af = NULL; tmp_af; tmp_af = next_af) {
-    next_af = tmp_af->next;
-
-    if (tmp_af->type == SPELL_WITHER) {
-      send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
-      act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
-
-      int dam = wither_pulse_action(ch);
-
-      /* Don't consume position. */
-      int set_pos = GET_POS(ch);
-
-      damage(ch, ch, (GET_HIT(ch) > dam) ? dam : (GET_HIT(ch) > 1) ? ((GET_HIT(ch) / 2) - 1) : 0, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
-
-      GET_POS(ch) = MIN(GET_POS(ch), set_pos);
-
-      tmp_af->duration--;
-
-      if (tmp_af->duration <= 0) {
-        if (*spell_wear_off_msg[tmp_af->type]) {
-          printf_to_char(ch, "%s\n\r", spell_wear_off_msg[tmp_af->type]);
-        }
-
-        affect_remove(ch, tmp_af);
-      }
-
-      /* Break out of the loop, as we should only process one Wither effect. */
-      break;
-    }
-  }
-}
-
 int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   assert(ch);
 
@@ -3291,61 +2969,41 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
     return FALSE;
   }
 
-  if (cmd == MSG_TICK) {
-    if (!IS_NPC(ch)) {
-      /* Shadow Wraith */
-      pulse_shadow_wraith(ch); // TODO: Convert to enchant
-    }
-  }
-
-  if (cmd == MSG_MOBACT) {
-    if (!IS_NPC(ch)) {
-      /* Mantra */
-      pulse_mantra(ch); // TODO: Convert to enchant
-
-      /* Adrenaline Rush */
-      pulse_adrenaline_rush(ch); // TODO: Convert to enchant
-    }
-
-    /* Wither */
-    pulse_wither(ch); // TODO: Convert to enchant
-  }
-
   bool stop = FALSE;
 
-  /* Handle all signals except MSG_ROUND. */
-  if (cmd != MSG_ROUND) {
-    int temp_mana = GET_MANA(ch);
+  /* Call special character function (char_spec.c). */
+  if (ch->func) {
+    stop = (*ch->func)(ch, signaler, cmd, arg);
+  }
 
-    for (int eq_slot = 0; !stop && (eq_slot < MAX_WEAR); eq_slot++) {
-      OBJ *temp_obj = EQ(ch, eq_slot);
+  if (cmd != MSG_ROUND) {
+    /* Signal equipped objects. */
+    for (int eq_pos = 0; !stop && (eq_pos < MAX_WEAR); eq_pos++) {
+      OBJ *temp_obj = EQ(ch, eq_pos);
 
       if (temp_obj) {
         stop = signal_object(temp_obj, signaler, cmd, arg);
       }
     }
 
+    /* Signal carried objects. */
     for (OBJ *temp_obj = ch->carrying, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
       next_obj = temp_obj->next_content;
 
       stop = signal_object(temp_obj, signaler, cmd, arg);
     }
+  }
 
-    for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
-      next_ench = temp_ench->next;
+  /* Signal enchantments. */
+  for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
+    next_ench = temp_ench->next;
 
-      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
-    }
+    stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
+  }
 
-    /* Record mana regen caused by objects and enchantments. */
-    if (GET_MANA(ch) > temp_mana) {
-      GET_MANA_REGEN_TMP(ch) = GET_MANA(ch) - temp_mana;
-    }
-    else {
-      GET_MANA_REGEN_TMP(ch) = 0;
-    }
-
-    if (!stop && IS_NPC(ch) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+  if (cmd != MSG_ROUND) {
+    /* Signal NPCs. */
+    if (IS_NPC(ch)) {
       if (cmd == MSG_MOBACT) {
         mobile_activity(ch);
       }
@@ -3354,22 +3012,21 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
         stop = mob_special(ch, signaler, cmd, arg);
       }
     }
-
-    if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
-      char buf[MSL];
-      snprintf(buf, sizeof(buf), "WIZINFO: Char %s returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", MOB_SHORT(ch));
-      wizlog(buf, 1, 6);
-
-      stop = FALSE;
-    }
   }
 
-  /* Handle MSG_ROUND. */
-  if (cmd == MSG_ROUND) {
-    for (ENCH *temp_ench = ch->enchantments, *next_ench; !stop && temp_ench; temp_ench = next_ench) {
-      next_ench = temp_ench->next;
+  if (stop) {
+    switch (cmd) {
+      case MSG_VIOLENCE:
+      case MSG_VIOLENCE_POST_HIT:
+      case MSG_ROUND:
+      case MSG_TICK:
+      case MSG_MOBACT:
+      case MSG_ZONE_RESET:
+      stop = FALSE;
 
-      stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
+      wizlog_f(1, 6, "WIZINFO: signal_char(%s, %s, %d, %s) returned TRUE.",
+        ch ? GET_DISP_NAME(ch) : "(null)", signaler ? GET_DISP_NAME(signaler) : "(null)", cmd, arg ? arg : "(null)");
+      break;
     }
   }
 
@@ -3390,22 +3047,30 @@ int signal_object(OBJ *obj, CHAR *signaler, int cmd, char *arg) {
     stop = board(obj, signaler, cmd, arg);
   }
 
-  if (!stop && (cmd == MSG_TICK)) {
-    if (COUNT_CONTENTS(obj)) {
+  switch (cmd) {
+    case MSG_TICK:
       for (OBJ *temp_obj = obj->contains, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
         next_obj = temp_obj->next_content;
 
         stop = signal_object(temp_obj, signaler, cmd, arg);
       }
-    }
+      break;
   }
 
-  if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
-    char buf[MSL];
-    snprintf(buf, sizeof(buf), "WIZINFO: Obj %s returned TRUE from MSG_MOBACT, MSG_TICK, or MSG_ZONE_RESET", OBJ_SHORT(obj));
-    wizlog(buf, 1, 6);
+  if (stop) {
+    switch (cmd) {
+      case MSG_VIOLENCE:
+      case MSG_VIOLENCE_POST_HIT:
+      case MSG_ROUND:
+      case MSG_TICK:
+      case MSG_MOBACT:
+      case MSG_ZONE_RESET:
+        stop = FALSE;
 
-    stop = FALSE;
+        wizlog_f(1, 6, "WIZINFO: signal_object(%s, %s, %d, %s) returned TRUE.",
+          obj ? OBJ_SHORT(obj) : "(null)", signaler ? GET_DISP_NAME(signaler) : "(null)", cmd, arg ? arg : "(null)");
+        break;
+    }
   }
 
   return stop;

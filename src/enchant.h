@@ -1,54 +1,5 @@
-
-/*
-$Author: ronin $
-$Date: 2005/01/21 14:55:27 $
-$Header: /home/ronin/cvs/ronin/enchant.h,v 2.1 2005/01/21 14:55:27 ronin Exp $
-$Id: enchant.h,v 2.1 2005/01/21 14:55:27 ronin Exp $
-$Name:  $
-$Log: enchant.h,v $
-Revision 2.1  2005/01/21 14:55:27  ronin
-Update to pfile version 5 and obj file version 3.  Additions include
-bitvector2 for affected_by and enchanted_by, bitvector2 addition to
-objects, increase in possible # of spells/skills to 500, addition
-of space for object spells.
-
-Revision 2.0.0.1  2004/02/05 16:13:07  ronin
-Reinitialization of cvs archives
-
-Revision 1.3  2002/05/09 20:15:32  ronin
-Added hell enchantments for saving through rent.
-Increased maximum number of enchantments to 50.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #ifndef __ENCHANT_H__
 #define __ENCHANT_H__
-
-#define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (tick)
-#define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (mobact)
-#define ENCH_INTERVAL_ROUND  2 // Decrements every 3 seconds (round)
-#define ENCH_INTERVAL_USER   3 // User-defined interval, must be handled by spec
-
-#define TOTAL_ENCHANTMENTS 50
-
-#define ENCHANTO(nme,tpe,dration,mdifier,lcation,btvector,btvector2,fnc) { \
-                 if( (tpe) < TOTAL_ENCHANTMENTS )                 \
-                  {                                               \
-                   enchantments[tpe].duration  = (dration);       \
-                   enchantments[tpe].modifier  = (mdifier);       \
-                   enchantments[tpe].location  = (lcation);       \
-                   enchantments[tpe].bitvector = (btvector);      \
-                   enchantments[tpe].bitvector2 = (btvector2);    \
-                   enchantments[tpe].func      = (fnc);           \
-                   enchantments[tpe].name      = strdup( (nme) ); \
-                  } else {                                        \
-                   log_f("Enchantment out of range %s", (nme));   \
-                  }                                              }
-
 
 #define ENCHANT_COLD          1
 #define ENCHANT_FIREBREATH    2
@@ -64,7 +15,6 @@ $State: Exp $
 #define ENCHANT_PRIVATE      12
 #define ENCHANT_HIGHWAYMAN   13
 #define ENCHANT_ACOLYTE      14
-/* New 2nd and 3rd ranks - Ranger July 1998 */
 #define ENCHANT_SWASHBUCKLER 15
 #define ENCHANT_KNIGHT       16
 #define ENCHANT_BISHOP       17
@@ -85,7 +35,6 @@ $State: Exp $
 #define ENCHANT_TAMER        32
 #define ENCHANT_POET         33
 #define ENCHANT_CONDUCTOR    34
-/* End 2nd and 3rd Ranks */
 
 #define MAX_RANK              3
 
@@ -99,46 +48,54 @@ $State: Exp $
 #define ENCHANT_REDDEATH     42
 #define ENCHANT_GREASY       43
 #define ENCHANT_LIZARD       44
-/* End Hell Enchantments */
 
 #define ENCHANT_TOXICFUMES   45
-/* End Digsite Enchantments */
 
 #define ENCHANT_FRIGHTFUL    46
-/* End Red Dragons Enchantments */
 
 #define ENCHANT_LICH         47
-/* End Abyss Enchantments */
 
 #define ENCHANT_REMORTV2     48
 #define ENCHANT_IMM_GRACE    49
 
-/* Added by Quack Early 1997 for testing
-#define ENCHANT_SILENCE
-#define ENCHANT_SHAPESHIFT
-#define ENCHANT_QUESTER
-int silence_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-int shapeshift_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-int quester_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-*/
+#define ENCH_MANTRA_HEAL     "ENCH_MANTRA_HEAL"
+#define ENCH_APPLY_DMG_PCT   "ENCH_APPLY_DMG_PCT"
 
-int cold_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-int firebreath_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-int regeneration_enchantment(struct enchantment_type_5 *ench, CHAR *enchanted_ch, CHAR *char_in_room,int cmd, char*arg);
-int lord_enchantment(struct enchantment_type_5 *ench, CHAR *ch, CHAR *char_in_room,int cmd, char*arg);
+#define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (MSG_TICK)
+#define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (MSG_MOBACT)
+#define ENCH_INTERVAL_ROUND  2 // Decrements every 3 seconds  (MSG_ROUND)
+#define ENCH_INTERVAL_USER   3 // User-defined interval; must be handled by spec.
+
+#define TOTAL_ENCHANTMENTS   50
+
+#define ENCHANTO(_name, _type, _duration, _interval, _modifier, _location, _bitvector, _bitvector2, _func) { \
+  if (_type < TOTAL_ENCHANTMENTS) { \
+    enchantments[_type].name       = strdup(_name); \
+    enchantments[_type].type       = _type;         \
+    enchantments[_type].duration   = _duration;     \
+    enchantments[_type].interval   = _interval;     \
+    enchantments[_type].modifier   = _modifier;     \
+    enchantments[_type].location   = _location;     \
+    enchantments[_type].bitvector  = _bitvector;    \
+    enchantments[_type].bitvector2 = _bitvector2;   \
+    enchantments[_type].func       = _func;         \
+  } \
+  else { \
+    log_f("WARNING: Enchantment %s out of range (%d).", _name, _type); \
+  } \
+}
 
 void assign_enchantments(void);
-struct enchantment_type_5 *get_enchantment(struct enchantment_type_5 *enchantment,int must_find);
-void enchantment_to_char(CHAR *victim,struct enchantment_type_5 *enchantment,int must_find);
-void enchantment_remove(CHAR *victim,struct enchantment_type_5 *enchantment, int tolog);
-int enchanted_by(CHAR *victim,char *enchantment_name);
+
+ENCH *get_enchantment_by_name(CHAR *ch, const char *name);
+ENCH *get_enchantment_by_type(CHAR *ch, int type);
+int enchanted_by(CHAR *victim, const char *name);
 int enchanted_by_type(CHAR *victim, int type);
+void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find);
+void enchantment_remove(CHAR *victim, ENCH *enchantment, int to_log);
+void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg));
+
 int get_rank(CHAR *ch);
 char *get_rank_name(CHAR *ch);
-
-ENCH *get_enchantment_by_name(CHAR *ch, char *name);
-ENCH *get_enchantment_by_type(CHAR *ch, int type);
-
-void enchantment_apply(CHAR *ch, bool overwrite, char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg));
 
 #endif /* __ENCHANT_H__ */

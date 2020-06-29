@@ -483,7 +483,7 @@ int pan(OBJ *obj,CHAR *ch, int cmd, char *argument) {
 int dragon_tooth(OBJ *tooth, CHAR *ch, int cmd, char *arg)
 {
   CHAR *vict, *tmp_target, *target, *grp_leader;
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
   if(cmd!=MSG_MOBACT && cmd!=MSG_TICK) return FALSE;
   if(!(ch=tooth->equipped_by)) return FALSE;
@@ -525,7 +525,7 @@ int dragon_tooth(OBJ *tooth, CHAR *ch, int cmd, char *arg)
 	    {
 	      act("$n's eyes burn red and smoke rises from the ground.",0,target,0,0,TO_ROOM);
 	      act("Your eyes burn red and smoke rises from the ground.",0,target,0,0,TO_CHAR);
-	      memset(&ench,0,sizeof(struct enchantment_type_5));
+	      memset(&ench,0,sizeof(ENCH));
 	      ench.name     = str_dup("Fire Breath");
 	      enchantment_to_char(target,&ench,TRUE);
 	      free(ench.name);

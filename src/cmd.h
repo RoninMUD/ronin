@@ -34,8 +34,9 @@ Addition of header lines.
 $State: Exp $
 */
 
-#define MSG_VIOLENCE           -99
-#define MSG_ROUND              -98 /* Similar to MSG_VIOLENCE. Used for 3 second pulse signaling. Sent only to enchantments for now. */
+#define MSG_VIOLENCE           -99 /* Signaled before hit() is called in perform_violence() in fight.c */
+#define MSG_VIOLENCE_POST_HIT  -98 /* Signaled after hit() is called in perform_violence() in fight.c */
+#define MSG_ROUND              -97 /* Signaled every 3 seconds. */
 #define MSG_DAMAGED            -30
 #define MSG_OBJ_DISARMED       -29
 #define MSG_OBJ_JUNKED         -28
@@ -64,10 +65,10 @@ $State: Exp $
 #define MSG_SHOW_PRETITLE      -6
 #define MSG_SHOW_AFFECT_TEXT   -5
 #define MSG_ZONE_RESET         -4
-#define MSG_TICK               -3
+#define MSG_TICK               -3 /* Signaled every 60 seconds. */
 #define MSG_REMOVE_ENCH        -2
 #define MSG_DIE                -1
-#define MSG_MOBACT              0
+#define MSG_MOBACT              0 /* Signaled every 10 seconds. */
 #define CMD_NORTH               1
 #define CMD_EAST                2
 #define CMD_SOUTH               3

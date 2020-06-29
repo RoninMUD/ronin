@@ -1078,28 +1078,34 @@ int aid_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd,
   return FALSE;
 }
 
-void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  char buf[MIL];
-
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim)
-  {
+void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim) {
     send_to_char("You cannot cast this spell on another player.\n\r", ch);
+
     return;
   }
 
-  sprintf(buf, "%s's Aid", GET_NAME(ch));
-  if (!enchanted_by(victim, buf))
-  {
-    enchantment_apply(victim, FALSE, buf, TYPE_UNDEFINED, 5, ENCH_INTERVAL_TICK, 10, APPLY_DMG_BONUS_PCT, 0, 0, aid_enchantment);
+  char buf[MIL];
 
-    if (ch == victim)
-    {
+  snprintf(buf, sizeof(buf), "%s's Aid", GET_DISP_NAME(ch));
+
+  if (!enchanted_by(victim, buf)) {
+    ENCH aid_ench = { 0 };
+
+    aid_ench.name = buf;
+    aid_ench.duration = 5;
+    aid_ench.interval = ENCH_INTERVAL_TICK;
+    aid_ench.temp[0] = 10;
+    aid_ench.metadata = ENCH_APPLY_DMG_PCT;
+    aid_ench.func = aid_enchantment;
+
+    enchantment_to_char(victim, &aid_ench, FALSE);
+
+    if (ch == victim) {
       send_to_char("You feel inspired by your words!\n\r", victim);
     }
     else {
-      sprintf(buf, "You feel inspired by %s's words!\n\r", GET_NAME(ch));
-      send_to_char(buf, victim);
+      printf_to_char(victim, "You feel inspired by %s's words!\n\r", GET_DISP_NAME(ch));
     }
   }
 }
@@ -1743,7 +1749,7 @@ void spell_tremor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       if (CHAR_REAL_ROOM(temp_vict) != NOWHERE) {
         GET_POS(temp_vict) = POSITION_RESTING;
 
-        enchantment_apply(temp_vict, TRUE, "Staggering (Tremor)", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+        enchantment_apply(temp_vict, TRUE, "Tremor", SPELL_TREMOR, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }
@@ -1798,6 +1804,137 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
+int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("The pain coursing through your withered body recedes.\n\r", ch);
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    const int wither_effect_types[] = {
+    SPELL_BLINDNESS,
+    SPELL_CURSE,
+    SPELL_PARALYSIS,
+    SPELL_POISON,
+    -1
+    };
+
+    const int wither_pulse_damage = 75;
+    const int wither_effect_chance = 25;
+    const int wither_effect_reduction = 5;
+
+    /* Pulse every 3 rounds. */
+    if (ench->duration % 3 != 0) return FALSE;
+
+    send_to_char("You shudder as your body is wracked with pain!\n\r", ch);
+    act("$n shudders as $s body is wracked with pain!", TRUE, ch, 0, 0, TO_ROOM);
+
+    int dam = wither_pulse_damage;
+
+    int caster_level = MIN(MAX(ench->temp[0], 45), LEVEL_MORT);
+
+    int num_applied_effects = 0;
+
+    for (int i = 0; i < NUMELEMS(wither_effect_types) - 1; i++) {
+      if (affected_by_spell(ch, wither_effect_types[i])) {
+        num_applied_effects++;
+      }
+    }
+
+    int effect_chance = MAX(0, (wither_effect_chance - (num_applied_effects * wither_effect_reduction)));
+
+    if (chance(effect_chance)) {
+      int effect_type = get_random_eligible_effect(ch, wither_effect_types);
+
+      if (effect_type > 0) {
+        switch (effect_type) {
+          case SPELL_BLINDNESS:
+            if (IS_NPC(ch) && IS_IMMUNE(ch, IMMUNE_BLINDNESS)) {
+              dam += 50;
+            }
+            else {
+              int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : 2;
+
+              affect_apply(ch, SPELL_BLINDNESS, duration, 0, 0, AFF_BLIND, 0);
+              affect_apply(ch, SPELL_BLINDNESS, duration, -4, APPLY_HITROLL, 0, 0);
+              affect_apply(ch, SPELL_BLINDNESS, duration, 40, APPLY_AC, 0, 0);
+
+              act("You have been blinded!", FALSE, ch, 0, 0, TO_CHAR);
+              act("$n seems to be blinded!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+            break;
+
+          case SPELL_CURSE:
+            if (IS_NPC(ch) && IS_IMMUNE2(ch, IMMUNE2_CURSE)) {
+              dam += 50;
+            }
+            else {
+              int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : 2;
+
+              affect_apply(ch, SPELL_CURSE, duration, 0, 0, AFF_CURSE, 0);
+              affect_apply(ch, SPELL_CURSE, duration, -((caster_level - 3) / 9), APPLY_HITROLL, 0, 0);
+              affect_apply(ch, SPELL_CURSE, duration, ((caster_level - 3) / 9), APPLY_SAVING_PARA, 0, 0);
+
+              act("You feel very uncomfortable.", FALSE, ch, 0, 0, TO_CHAR);
+              act("$n briefly reveals a red aura!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+            break;
+
+          case SPELL_PARALYSIS:
+            if (IS_NPC(ch) && IS_IMMUNE(ch, IMMUNE_PARALYSIS)) {
+              dam += 50;
+            }
+            else {
+              int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : caster_level;
+
+              affect_apply(ch, SPELL_PARALYSIS, duration, 0, 0, AFF_PARALYSIS, 0);
+              affect_apply(ch, SPELL_PARALYSIS, duration, -2, APPLY_HITROLL, 0, 0);
+              affect_apply(ch, SPELL_PARALYSIS, duration, 20, APPLY_AC, 0, 0);
+
+              act("Your limbs freeze in place!", FALSE, ch, 0, 0, TO_CHAR);
+              act("$n is paralyzed!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+            break;
+
+          case SPELL_POISON:
+            if (IS_NPC(ch) && IS_IMMUNE(ch, IMMUNE_POISON)) {
+              dam += 50;
+            }
+            else {
+              int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : caster_level;
+
+              affect_apply(ch, SPELL_POISON, duration, -3, APPLY_STR, AFF_POISON, 0);
+
+              act("You feel very sick.", FALSE, ch, 0, 0, TO_CHAR);
+              act("$n looks very sick.", TRUE, ch, 0, 0, TO_ROOM);
+            }
+            break;
+        }
+      }
+      else {
+        dam += 100;
+      }
+    }
+
+    dam = MIN(dam, GET_HIT(ch) - 1);
+
+    /* Record the character's initial position. */
+    int set_pos = GET_POS(ch);
+
+    damage(ch, ch, dam, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+    /* Restore the character's initial position if it's less than the current position. */
+    GET_POS(ch) = MIN(GET_POS(ch), set_pos);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
   case SPELL_TYPE_SPELL:
@@ -1812,8 +1949,6 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 }
 
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  int wither_pulse_action(CHAR *victim);  
-
   if (!IS_NPC(ch) && !IS_NPC(victim) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))   {
     send_to_char("You can't cast such a powerful spell on a player.\n\r", ch);
 
@@ -1828,11 +1963,10 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   damage(ch, victim, 350, SPELL_WITHER, DAM_MAGICAL);
 
-  if (!victim || CHAR_REAL_ROOM(victim) == NOWHERE) return;
-
-  affect_from_char(victim, SPELL_WITHER);
-
-  affect_apply(victim, SPELL_WITHER, 4, 0, level, 0, 0);
+  if (IS_ALIVE(victim)) {
+    /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
+    enchantment_apply(victim, TRUE, "Wither", SPELL_WITHER, 11, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, wither_enchantment);
+  }
 }
 
 void cast_shadow_wraith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
@@ -1915,8 +2049,6 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 }
 
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
-  level = MIN(LEVEL_MORT, level); // Dusk Reqiuem has a hack for > LEVEL_MORT.
-
   switch (type)   {
   case SPELL_TYPE_SPELL:
     if (victim)
@@ -1941,15 +2073,15 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   int dam = MIN(350 * 4, 350 * num_shadows);
 
-  /* If level is > LEVEL_MORT, Shadow Wraith must be expiring in signal_char() (or an immortal cast it). Inflict double damage. */
-  if (level > LEVEL_MORT) {
+  /* If level <= 0, inflict double damage. */
+  if (!level) {
     dam *= 2;
   }
 
   damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
 
   /* We only want to reduce duration if the spell was cast, not if Shadow Wraith is expiring. */
-  if (level <= LEVEL_MORT) {
+  if (level > 0) {
     for (AFF *tmp_af = ch->affected, *next_af; tmp_af; tmp_af = next_af) {
       next_af = tmp_af->next;
 

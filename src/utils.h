@@ -287,10 +287,12 @@ do {                   \
 #define GET_EXP_TO_LEVEL(ch)    ((GET_LEVEL(ch) < LEVEL_MORT) ? exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch) : 0)
 
 #define GET_SEX(ch)             (ch->player.sex)
+#define GET_BIRTH(ch)           (ch->player.time.birth)
 #define GET_AGE(ch)             (age(ch).year)
 #define GET_HEIGHT(ch)          (ch->player.height)
 #define GET_WEIGHT(ch)          (ch->player.weight)
 
+#define GET_TMP_ABILITIES(ch)   (ch->tmpabilities)
 #define GET_STR(ch)             (ch->tmpabilities.str)
 #define GET_ADD(ch)             (ch->tmpabilities.str_add)
 #define GET_DEX(ch)             (ch->tmpabilities.dex)
@@ -298,6 +300,7 @@ do {                   \
 #define GET_WIS(ch)             (ch->tmpabilities.wis)
 #define GET_CON(ch)             (ch->tmpabilities.con)
 
+#define GET_ABILITIES(ch)       (ch->abilities)
 #define GET_OSTR(ch)            (ch->abilities.str)
 #define GET_OADD(ch)            (ch->abilities.str_add)
 #define GET_ODEX(ch)            (ch->abilities.dex)
@@ -306,17 +309,20 @@ do {                   \
 #define GET_OCON(ch)            (ch->abilities.con)
 
 #define GET_HIT(ch)             (ch->points.hit)
-#define GET_NAT_HIT(ch)         (ch->specials.org_hit)
+#define GET_OHIT(ch)            (ch->specials.org_hit)
+#define GET_NAT_HIT(ch)         (GET_OHIT(ch))
 #define GET_MAX_HIT_POINTS(ch)  (ch->points.max_hit)
 #define GET_MAX_HIT(ch)         (hit_limit(ch))
 
 #define GET_MANA(ch)            (ch->points.mana)
-#define GET_NAT_MANA(ch)        (100 + ch->specials.org_mana)
+#define GET_OMANA(ch)           (ch->specials.org_mana)
+#define GET_NAT_MANA(ch)        (100 + GET_OMANA(ch))
 #define GET_MAX_MANA_POINTS(ch) (ch->points.max_mana)
 #define GET_MAX_MANA(ch)        (mana_limit(ch))
 
 #define GET_MOVE(ch)            (ch->points.move)
-#define GET_NAT_MOVE(ch)        (100 + ch->specials.org_move)
+#define GET_OMOVE(ch)           (ch->specials.org_move)
+#define GET_NAT_MOVE(ch)        (100 + GET_OMOVE(ch))
 #define GET_MAX_MOVE_POINTS(ch) (ch->points.max_move)
 #define GET_MAX_MOVE(ch)        (move_limit(ch))
 
@@ -443,6 +449,8 @@ do {                   \
 #define GET_FOLLOWERS(ch) (ch->followers)
 #define GET_SWITCHED(ch) (ch->switched)
 #define GET_TIMER(ch) (ch->specials.timer)
+
+#define GET_SAVING_THROW(ch, save) (ch->specials.apply_saving_throw[save])
 
 #define GET_QUEST_GIVER(ch) (ch->questgiver)
 #define GET_QUEST_OBJ(ch)   (ch->questobj)

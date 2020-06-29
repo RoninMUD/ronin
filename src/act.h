@@ -4,41 +4,6 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-/*
-$Author: void $
-$Date: 2004/11/17 19:21:52 $
-$Header: /home/ronin/cvs/ronin/act.h,v 2.3 2004/11/17 19:21:52 void Exp $
-$Id: act.h,v 2.3 2004/11/17 19:21:52 void Exp $
-$Name:  $
-$Log: act.h,v $
-Revision 2.3  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.2  2004/06/02 13:39:21  ronin
-Added zmult.
-
-Revision 2.1  2004/03/13 05:27:14  pyro
-updated for olc commands oname and owear
-
-Revision 2.0.0.1  2004/02/05 16:13:01  ronin
-Reinitialization of cvs archives
-
-
-Revision 19-Dec-03 Ranger
-Addition of do_email
-
-Revision 22-May-03 Ranger
-Addition of do_hunt
-
-Revison 10-Mar-03 Ranger
-Addition of do_social
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 /* Subclass skill commands */
 void do_awareness(CHAR *ch, char *argument, int cmd);
 void do_victimize(CHAR *ch, char *argument, int cmd);

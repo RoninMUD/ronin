@@ -35,6 +35,7 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
+#include "aff_ench.h"
 
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
@@ -793,23 +794,25 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
 
   hit(ch, victim, SKILL_SMITE);
 
-  GET_POS(victim) = stack_position(victim, POSITION_STUNNED);
+  if (IS_ALIVE(victim)) {
+    GET_POS(victim) = stack_position(victim, POSITION_STUNNED);
 
-  /* Trusty Steed */
-  if (SAME_ROOM(ch, victim) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
-    check = number(1, 121) - GET_WIS_APP(ch);
+    /* Trusty Steed */
+    if (SAME_ROOM(ch, victim) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED) && check_sc_access(ch, SKILL_TRUSTY_STEED)) {
+      check = number(1, 121) - GET_WIS_APP(ch);
 
-    if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
-      int set_pos = stack_position(victim, POSITION_SITTING);
+      if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
+        int set_pos = stack_position(victim, POSITION_SITTING);
 
-      act("You summon forth your trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_CHAR);
-      act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_NOTVICT);
+        act("You summon forth your trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n summons forth $s trusty steed and it tramples you with spiritual energy!", FALSE, ch, 0, victim, TO_VICT);
+        act("$n summons forth $s trusty steed and it tramples $N with spiritual energy!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
+        damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.5)), SKILL_TRUSTY_STEED, DAM_PHYSICAL);
 
-      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-        GET_POS(victim) = set_pos;
+        if (IS_ALIVE(victim) && !IS_IMPLEMENTOR(victim)) {
+          GET_POS(victim) = set_pos;
+        }
       }
     }
   }
@@ -819,11 +822,13 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
 
 
 int maim_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  if (cmd == MSG_DAMAGED) {
-    if (!*arg || strcasecmp(arg, "SKILL_MAIM")) return FALSE;
+  if (!ench || !ch) return FALSE;
 
-    send_to_char("You cry out in pain as your maimed body suffers another blow!\n\r", ch);
-    act("$n cries out in pain as $s maimed body suffers another blow!", FALSE, ch, 0, 0, TO_ROOM);
+  if (cmd == MSG_DAMAGED) {
+    if (arg && strcasecmp(arg, "SKILL_MAIM")) {
+      send_to_char("You cry out in pain as your maimed body suffers another blow!\n\r", ch);
+      act("$n cries out in pain as $s maimed body suffers another blow!", FALSE, ch, 0, 0, TO_ROOM);
+    }
 
     return FALSE;
   }
@@ -914,9 +919,16 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
     if (check <= GET_LEARNED(ch, SKILL_MAIM)) {
       act("You savagely maim $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_CHAR);
       act("$n savagely maims you, making you susceptible to extra damage!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n savagely maim $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n savagely maims $N, making $M susceptible to extra damage!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-      enchantment_apply(victim, FALSE, "Savaged (Maim)", SKILL_MAIM, -1, 0, (GET_LEVEL(ch) / 4), 0, 0, 0, maim_enchantment);
+      ENCH maim_ench = { 0 };
+
+      maim_ench.name = "Maimed";
+      maim_ench.duration = -1;
+      maim_ench.temp[0] = GET_LEVEL(ch) / 4;
+      maim_ench.func = maim_enchantment;
+
+      ench_to_char(victim, &maim_ench);
     }
   }
 
@@ -1341,10 +1353,88 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
 }
 
 
-void do_mantra(CHAR *ch, char *arg, int cmd) {
-  const int mana_cost = 120;
+int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
 
-  if (!ch || !GET_SKILLS(ch)) return;
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("You slowly slip out of your regenerative trance.\n\r", ch);
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    const int mantra_dispel_types[] = {
+    SPELL_BLINDNESS,
+    SPELL_POISON,
+    SPELL_PARALYSIS,
+    -1
+    };
+
+    /* Pulse every 3 rounds. */
+    if (ench->duration % 3 != 0) return FALSE;
+
+    int heal = 0;
+
+    if (ench->metadata && !strcasecmp(ench->metadata, ENCH_MANTRA_HEAL) && (ench->temp[0] > 0)) {
+      heal = ench->temp[0];
+    }
+
+    if (affected_by_spell(ch, SPELL_TRANQUILITY)) {
+      heal = lround(heal * 1.25);
+    }
+
+    if ((heal > 0) && (GET_HIT(ch) < GET_MAX_HIT(ch))) {
+      magic_heal(ch, SKILL_MANTRA, heal, FALSE);
+
+      send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
+    }
+
+    int dispel_type = get_random_set_effect(ch, mantra_dispel_types);
+
+    if ((dispel_type > 0) && chance(25)) {
+      switch (dispel_type) {
+        case SPELL_BLINDNESS:
+          if (affected_by_spell(ch, SPELL_BLINDNESS)) {
+            affect_from_char(ch, SPELL_BLINDNESS);
+
+            send_to_char("You can see again.\n\r", ch);
+          }
+          break;
+
+        case SPELL_POISON:
+          if (affected_by_spell(ch, SPELL_POISON)) {
+            affect_from_char(ch, SPELL_POISON);
+
+            send_to_char("You feel better.\n\r", ch);
+
+          }
+          break;
+
+        case SPELL_PARALYSIS:
+          if (affected_by_spell(ch, SPELL_PARALYSIS)) {
+            affect_from_char(ch, SPELL_PARALYSIS);
+
+            send_to_char("You can move again.\n\r", ch);
+          }
+          break;
+      }
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+
+void do_mantra(CHAR *ch, char *arg, int cmd) {
+  if (!ch) return;
+
+  const int mana_cost = 120;
+  const int initial_heal = 500;
+  const int duration = 29;
+
+  if (!GET_SKILLS(ch)) return;
 
   if (!check_sc_access(ch, SKILL_MANTRA)) {
     send_to_char("You don't know this skill.\n\r", ch);
@@ -1384,7 +1474,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   }
 
   /* The Shogun title increases "concentration" rate. */
-  if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+  if (ench_get_from_char(ch, 0, ENCHANT_SHOGUN)) {
     check -= 5;
   }
 
@@ -1392,7 +1482,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   GET_MANA(ch) -= mana_cost / 2;
 
   if ((check > GET_LEARNED(ch, SKILL_MANTRA)) ||
-      (affected_by_spell(victim, SPELL_DEGENERATE) && (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27)))) {
+      (aff_affected_by(victim, SPELL_DEGENERATE) && (aff_duration(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27)))) {
     if (victim != ch) {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n chants $s mantra to you, but nothing happens.", FALSE, ch, 0, victim, TO_VICT);
@@ -1421,23 +1511,32 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     act("$n chants softly, healing $s spirit and giving $mself life.", FALSE, ch, 0, 0, TO_ROOM);
   }
 
-  magic_heal(victim, SKILL_MANTRA, 500, FALSE);
+  magic_heal(victim, SKILL_MANTRA, initial_heal, FALSE);
 
-  int modifier = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.5);
+  int heal = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.5);
 
-  /* Check if victim is already affected by Mantra. If so, keep the higher modifier. */
-  for (AFF *temp_af = victim->affected; temp_af; temp_af = temp_af->next) {
-    if (temp_af->type == SKILL_MANTRA) {
-      modifier = MAX(temp_af->modifier, modifier);
+  ENCH *existing_mantra = ench_get_from_char(victim, "Mantra", 0);
 
-      affect_from_char(victim, SKILL_MANTRA);
-
-      break;
+  if (existing_mantra) {
+    if (!strcasecmp(existing_mantra->metadata, ENCH_MANTRA_HEAL) && (existing_mantra->temp[0] > 0)) {
+      heal = MAX(existing_mantra->temp[0], heal);
     }
-  }
 
-  /* TODO: Convert to Enchant using MSG_ROUND. */
-  affect_apply(victim, SKILL_MANTRA, 10, modifier, 0, 0, 0);
+    existing_mantra->duration = duration;
+    existing_mantra->temp[0] = heal;
+  }
+  else {
+    ENCH mantra_ench = { 0 };
+
+    mantra_ench.name = "Mantra";
+    mantra_ench.duration = duration; /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
+    mantra_ench.interval = ENCH_INTERVAL_ROUND;
+    mantra_ench.temp[0] = heal;
+    mantra_ench.metadata = ENCH_MANTRA_HEAL;
+    mantra_ench.func = mantra_enchantment;
+
+    ench_to_char(victim, &mantra_ench);
+  }
 
   skill_wait(ch, SKILL_MANTRA, 1);
 }

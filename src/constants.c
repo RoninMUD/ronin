@@ -270,7 +270,7 @@ const char * const spell_wear_off_msg[] = {
   "Your magic armament fades.",/*194*/
   "You feel strong enough to leave the physical plane.",/*195*/
   "!engage!",/*196*/
-  "Your slowly slip out of your regenerative trance.",/*197*/
+  "!mantra!",/*197*/
   "!banzai!", /*198*/
   "!headbutt!",/* 199 */
   "",/*200*/
@@ -282,8 +282,8 @@ const char * const spell_wear_off_msg[] = {
   "You feel the insatiable urge to desecrate another corpse.",/*206*/
   "You place yourself in a normal stance.", /*207 - defend*/
   "You place yourself in a normal stance.", /*208 - hostile*/
-  "The paralyzation wears off, you can move again", /*209 - rimefang*/
-  "The pain coursing through your withered body begins to recede.", /* 210 Wither */
+  "The paralyzation wears off, you can move again.", /*209 - rimefang*/
+  "!wither!", /* 210 Wither */
   "Your mantle of darkness fades away.",/*211*/
   "!divine wind!",/*212*/
   "!zeal!",/*213*/
@@ -1691,17 +1691,17 @@ const char * const apply_types[] = {
   "INT",
   "WIS",
   "CON",
-  "SEX",
-  "CLASS",
-  "LEVEL",
+  "!APPLY_6!",
+  "!APPLY_7!",
+  "!APPLY_8!",
   "AGE",
-  "CHAR_WEIGHT",
-  "CHAR_HEIGHT",
+  "!APPLY_10!",
+  "!APPLY_10!",
   "MANA",
   "HIT",
   "MOVE",
-  "GOLD",
-  "EXP",
+  "SAVING_ALL",
+  "!APPLY_16!",
   "ARMOR",
   "HITROLL",
   "DAMROLL",
@@ -1974,6 +1974,7 @@ const char *immune_bits2[] =  {
   "CIRCLE",
   "TAUNT",
   "STEAL",
+  "CURSE",
   "\n"
 };
 

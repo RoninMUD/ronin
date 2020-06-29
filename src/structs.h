@@ -23,7 +23,7 @@ typedef struct char_data          CHAR;
 typedef struct obj_data           OBJ;
 typedef struct room_data          RM;
 typedef struct affected_type_5    AFF;
-typedef struct enchantment_type_5 ENCH;
+typedef struct enchantment_t      ENCH;
 typedef struct social_messg       SOC;
 
 /* Time Data */
@@ -611,17 +611,17 @@ struct room_data
 #define APPLY_INT              3
 #define APPLY_WIS              4
 #define APPLY_CON              5
-#define APPLY_SEX              6
-#define APPLY_CLASS            7
-#define APPLY_LEVEL            8
+#define APPLY_6                6
+#define APPLY_7                7
+#define APPLY_8                8
 #define APPLY_AGE              9
-#define APPLY_CHAR_WEIGHT      10
-#define APPLY_CHAR_HEIGHT      11
+#define APPLY_10               10
+#define APPLY_11               11
 #define APPLY_MANA             12
 #define APPLY_HIT              13
 #define APPLY_MOVE             14
-#define APPLY_GOLD             15
-#define APPLY_EXP              16
+#define APPLY_SAVING_ALL       15
+#define APPLY_16               16
 #define APPLY_AC               17
 #define APPLY_ARMOR            17
 #define APPLY_HITROLL          18
@@ -660,16 +660,7 @@ struct room_data
 #define APPLY_SKILL_TAUNT      51
 #define APPLY_HP_REGEN         52
 #define APPLY_MANA_REGEN       53
-/* WIP - Night
-#define APPLY_SKILL_BACKFIST   54
-#define APPLY_SKILL_TIGERKICK  55
-#define APPLY_SKILL_CLOBBER    56
-#define APPLY_SKILL_RIPOSTE    57
-#define APPLY_SKILL_FEINT      58
-#define APPLY_SKILL_LUNGE      59
-#define APPLY_SKILL_FLANK      60
-*/
-#define APPLY_DMG_BONUS_PCT    61
+#define APPLY_DMG_BONUS_PCT    54
 
 /* subclasses - Ranger March 98 */
 #define SC_NONE        0
@@ -908,6 +899,7 @@ struct room_data
 #define IMMUNE2_CIRCLE        (1 << 7)  /* 128 */
 #define IMMUNE2_TAUNT         (1 << 8)  /* 256 */
 #define IMMUNE2_STEAL         (1 << 9)  /* 512 */
+#define IMMUNE2_CURSE         (1 << 10) /* 1024 */
 
 /* Player flags -- used in specials.pflag */
 #define PLR_BRIEF             (1 << 0)  /* 1 */
@@ -1138,6 +1130,27 @@ struct char_special_data
   int wiznetlvl;
 };
 
+/* Used in-memory only. */
+struct enchantment_t {
+  /* Stored to pfile as AFF. */
+  int    type;       /* SPELL_* and SKILL_* - AFF->type */
+  sh_int duration;   /* Duration            - AFF->duration */
+  sbyte  modifier;   /* Modifier            - AFF->duration */
+  byte   location;   /* APPLY_*             - AFF->location */
+  long   bitvector;  /* AFF_*               - AFF->bitvector */
+  long   bitvector2; /* AFF2_*              - AFF->bitvector2 */
+
+  struct enchantment_t *next;
+
+  /* Not stored to pfile. */
+  char   *name;     /* Used for enchantment list lookups. */
+  int    interval;  /* Duration interval (e.g. round, mobact, tick, etc.) */
+  int    temp[4];   /* Temporary integer storage. */
+  char   *metadata; /* Temporary string storage. */
+
+  int    (*func)(struct enchantment_t *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
+};
+
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_skill_data
 {
@@ -1193,7 +1206,7 @@ struct enchantment_type_5 /* pfile versions 5 */
                         * required to match a name in the 'enchantment'
                         * list in order to associate a function with
                         * it.                                     */
-  sh_int temps[4];        /* Temporary storage */
+  int temps[4];           /* Temporary storage */
   sh_int interval;        /* Duration interval type; 0 defaults to ticks, see enchant.h for details */
   int    type;            /* The type of spell that caused this      */
   sh_int duration;        /* For how long its effects will last      */
@@ -1202,7 +1215,7 @@ struct enchantment_type_5 /* pfile versions 5 */
   long   bitvector;       /* Tells which bits to set (AFF_XXX)       */
   long   bitvector2;      /* Tells which bits to set (AFF_XXX)       */
   int    (*func)(struct enchantment_type_5 *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
-  struct enchantment_type_5 *next;
+  ENCH *next;
 };
 
 struct enchantment_type_4 /* All pfile versions up to 4 */
@@ -1255,70 +1268,75 @@ struct affected_type_2
   struct affected_type_2 *next;
 };
 
-struct follow_type
-{
-  struct char_data *follower;
-  struct follow_type *next;
-};
-
-struct bot_check
-{
-  unsigned long meta_update;
-  int meta_amount;
-  int meta_number;
-  int misses;
-};
 /* ================== Structure for player/non-player ===================== */
 
-struct idname_struct
-{
+struct follow_type {
+  CHAR *follower;
+  FOL  *next;
+};
+
+struct bot_check {
+  unsigned long meta_update;
+  int           meta_amount;
+  int           meta_number;
+  int           misses;
+};
+
+struct idname_struct {
   char name[20];
 };
 
-
+/* Player data. Used in-memory only. */
 struct char_data {
-  sh_int nr;                            /* monster nr (pos in file)    */
-  sh_int nr_v;                            /* monster nr (pos in file)    */
-  sh_int in_room_r;                       /* Location                    */
-  sh_int in_room_v;                       /* Location                    */
+  sh_int nr;                               /* Mobile RNUM */
+  sh_int nr_v;                             /* Mobile VNUM */
 
-  int colors[MAX_COLORS];
+  sh_int in_room_r;                        /* In Room RNUM */
+  sh_int in_room_v;                        /* In Room VNUM */
 
-  char   pwd[11];                       /*adding the pwd to here, too  */
+  DESC *desc;                              /* Descriptor (Player Only) */
 
-  struct char_player_data player;       /* Normal data                 */
-  struct char_ability_data abilities;   /* Abilities                   */
-  struct char_ability_data tmpabilities;/* The abilities we will use   */
-  struct char_point_data_all points;        /* Points                      */
-  struct char_special_data specials;    /* Special playing constants    */
-  struct char_skill_data *skills;       /* Skills                      */
-  struct char_new_data new;             /* New                         */
-  struct char_ver3_data ver3;
+  struct char_player_data    player;       /* Character Data */
+  struct char_ability_data   abilities;    /* Ability Data */
+  struct char_ability_data   tmpabilities; /* Temporary Ability Data */
+  struct char_point_data_all points;       /* Point Data */
+  struct char_special_data   specials;     /* Special Data */
+  struct char_new_data       new;          /* New Data */
+  struct char_ver3_data      ver3;         /* Version 3 Data */
 
-  struct bot_check bot;                 /* Anti-bot code */
+  struct char_skill_data *skills;          /* Skill Data (Player Only)*/
 
-  struct char_data *questgiver;         /* Automated quest - Ranger Feb 99 */
-  struct char_data *questowner;
-  struct obj_data *questobj;
-  struct char_data *questmob;
-  bool questmob_ineligible;
-  int quest_level;
-  int quest_status;
-  int quest_room_v;
+  int  quest_status;                       /* Auto-Quest Status */
+  int  quest_level;                        /* Auto-Quest Level */
+  int  quest_room_v;                       /* Auto-Quest Initial Target Room VNUM */
+  bool questmob_ineligible;                /* Auto-Quest Mobile Ineligible Flag */
+  CHAR *questgiver;                        /* Auto-Quest Giver (Mobile) */
+  CHAR *questowner;                        /* Auto-Quest Owner (Player) */
+  CHAR *questmob;                          /* Auto-Quest Mobile Target */
+  OBJ  *questobj;                          /* Auto-Quest Object Target */
 
-  struct affected_type_5 *affected;       /* affected by what spells     */
-  struct enchantment_type_5 *enchantments;/* affected by what enchantments*/
-  struct obj_data *equipment[MAX_WEAR]; /* Equipment array             */
+  AFF  *affected;                          /* Affect List */
+  ENCH *enchantments;                      /* Enchantment List */
 
-  struct obj_data *carrying;            /* Head of list                */
-  struct descriptor_data *desc;         /* NULL for mobiles            */
+  OBJ  *equipment[MAX_WEAR];               /* Equipment Array */
+  OBJ  *carrying;                          /* Inventory List */
 
-  struct char_data *next_in_room;       /* For room->people - list     */
-  struct char_data *next;               /* For either monster or ppl-list */
-  struct char_data *next_fighting;      /* For fighting list           */
-  struct follow_type *followers;        /* List of chars followers     */
-  struct char_data *master;             /* Who is char following?      */
-  struct char_data *switched;           /* Who is char is switched to  */
+  CHAR *next;                              /* Next Character in Character List */
+  CHAR *next_in_room;                      /* Next Character in Room List */
+  CHAR *next_fighting;                     /* Next Character in Combat List */
+
+  CHAR *master;                            /* Master Character Pointer */
+  FOL  *followers;                         /* Follower List */
+
+  CHAR *switched;                          /* Mobswitch Character Pointer */
+
+  int colors[MAX_COLORS];                  /* Color Array */
+
+  struct bot_check bot;                    /* Anti-bot Data */
+
+  char pwd[11];                            /* Player Password */
+
+  int (*func)(CHAR *, CHAR *, int, const char *); /* Special character function. */
 };
 
 

@@ -3225,7 +3225,7 @@ A Package       :            750 coins\n\r\n\r",ch);
 void promote_mage(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_SORCERER)) {
@@ -3326,7 +3326,7 @@ When the smoke clears, $n is left standing there.",FALSE,promoter,0,ch,TO_ROOM);
 void promote_cleric(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_PROPHET)) {
@@ -3433,7 +3433,7 @@ $n is left standing there.",FALSE, promoter, 0, ch, TO_ROOM);
 void promote_ninja(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
@@ -3545,7 +3545,7 @@ When the smoke clears, $n is left standing there.\n\r",FALSE, promoter, 0, ch, T
 void promote_warrior(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_KNIGHT)) {
@@ -3655,7 +3655,7 @@ When the smoke clears, $n is left standing there.",FALSE, promoter, 0, ch, TO_RO
 void promote_paladin(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50],tmptitle[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_LORDLADY)) {
@@ -3784,7 +3784,7 @@ calm your racing heart.",FALSE, promoter, NULL, ch, TO_ROOM);
 void promote_nomad(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_TAMER)) {
@@ -3894,7 +3894,7 @@ When the dust clears, $n is left standing there.",FALSE, promoter, 0, ch, TO_ROO
 void promote_antipaladin(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50],tmptitle[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY)) {
@@ -4008,7 +4008,7 @@ ground and $n is left standing there, looking a bit pale and weakened.",
 void promote_bard(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
@@ -4127,7 +4127,7 @@ $M to study more and apply again.",FALSE, promoter, 0, ch, TO_NOTVICT);
 void promote_commando(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_COMMANDER)) {
@@ -4245,7 +4245,7 @@ When you turn back, you see $n standing there.",
 void promote_thief(CHAR *promoter, CHAR *ch)
 {
   char buf[1000],title[50];
-  struct enchantment_type_5 ench;
+  ENCH ench;
   int exp=0,gold=0;
 
   if (enchanted_by_type(ch, ENCHANT_ASSASSIN)) {

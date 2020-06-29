@@ -25,92 +25,77 @@
 #include "cmd.h"
 #include "limits.h"
 
-#define MANA_MU 1
-#define MANA_CL 1
-#define MANA_NI 1
-#define MANA_PA 1
-#define MANA_AN 1
-#define MANA_AV 1
-#define MANA_BA 1
-#define MANA_CO 1
-
-/* Extern procedures */
-void set_fighting(CHAR *ch, CHAR *vict);
-size_t str_sub_delim(char* dest, size_t dest_size, const char* src, int delim1, int delim2);
-
-/* Global Data */
-struct spell_info_type spell_info[MAX_SPL_LIST + 1];
-
-/* Enchantments */
-int bladesinging_enchantment(ENCH* ench, CHAR* enchanted_ch, CHAR* char_in_room, int cmd, char* arg)
-{
-    if (cmd == MSG_REMOVE_ENCH)
-        send_to_char("The music enchanting your blade decrescendos to silence.\n\r", enchanted_ch);
-
-    return FALSE;
-}
-
 struct song_data_t {
-    int song_id;
-    char* name;
-    char* lyrics;
-    int level;
-    int mana;
-    int subclass;
-    int subclass_level;
+  int song_id;
+  char* name;
+  char* lyrics;
+  int level;
+  int mana;
+  int subclass;
+  int subclass_level;
 };
 
 const struct song_data_t song_data[] = {
-//     song_id                name                                            lyrics                          level   mana    subclass  subclass_level
-  { SONG_ARMOR,         "seal with a kiss",                  "In a letter, sealed with a kiss...",              5,     5,        0,         0    },
-  { SONG_ARMOR,         "love is a battlefield",             "Why do you hurt me so bad...",                    5,     5,        0,         0    },
-  { SONG_CURE_BLIND,    "i can see clearly now",             "Gone are the dark clouds that had me blind...",   7,     15,       0,         0    },
-  { SONG_FLY,           "one day i will fly away",           "One day I will fly away...",                      9,     25,       0,         0    },
-  { SONG_FLY,           "come fly with me",                  "Come fly with me, let's fly, let's fly away...",  9,     25,       0,         0    },
-  { SONG_CURE_CRITIC,   "we don't need another hero",        "We don't need another hero...",                   11,    25,       0,         0    },
-  { SONG_FORGET,        "forget you",                        "Said, if I was richer, I'd still be with ya...",  12,    15,       0,         0    },
-  { SONG_BLINDNESS,     "smoke gets in your eyes",           "Smoke gets in your eyes...",                      13,    15,       0,         0    },
-  { SONG_BLINDNESS,     "blinded by the light",       "Revved up like a deuce, another runner in the night...", 13,    15,       0,         0    },
-  { SONG_SLEEP,         "enter sandman",               "I tuck you in, warm within, keep you free from sin...", 14,    25,       0,         0    },
-  { SONG_SATIATE,       "best of me",                        "Now I save the best of me...",                    15,    10,       0,         0    },
-  { SONG_SATIATE,       "hungry like the wolf",              "Mouth is alive with juices like wine...",         15,    10,       0,         0    },
-  { SONG_VITALITY,      "i'm taking a walk",                 "I'm taking a ride with my best friend...",        16,    25,       0,         0    },
-  { SONG_COLOUR_SPRAY,  "dangerous",                         "Dangerous...",                                    17,    25,       0,         0    },
-  { SONG_COLOUR_SPRAY,  "purple rain",                       "I never meant to cause you any pain...",          17,    25,       0,         0    },
-  { SONG_DETECT_INVIS,  "somebody's watching me",            "I always feel like somebody's watching me...",    18,    25,       0,         0    },
-  { SONG_TOTAL_RECALL,  "we are the world",                  "We are the world, we are the children...",        19,    30,       0,         0    },
-  { SONG_TOTAL_RECALL,  "mama, i'm coming home",             "Lost and found and turned around...",             19,    30,       0,         0    },
-  { SONG_FEAR,          "don't fear the reaper",             "Come on baby, don't fear the reaper...",          20,    15,       0,         0    },
-  { SONG_INFRAVISION,   "moonlight shadow",                  "Carried away by moonlight shadow...",             21,    20,       0,         0    },
-  { SONG_INFRAVISION,   "i wear my sunglasses at night",   "Don't masquerade with the guy in shades, oh no...", 21,    20,       0,         0    },
-  { SONG_CHARM_PERSON,  "this charming man",                 "Will nature make a man of me yet...",             22,    50,       0,         0    },
-  { SONG_SANCTUARY,     "nothing compares to you",           "It's been seven hours and fifteen days...",       23,    50,       0,         0    },
-  { SONG_SANCTUARY,     "safety dance",                "And we can act like we come from out of this world...", 23,    50,       0,         0    },
-  { SONG_ANIMATE_DEAD,  "toy soldier",                       "Like toy soldiers...",                            25,    50,       0,         0    },
-  { SONG_ANIMATE_DEAD,  "thriller",                          "Something evil's lurking in the dark...",         25,    50,       0,         0    },
-  { SONG_HEAL,          "everything i do i do it for you",   "Everything I do, I do it for you...",             26,    50,       0,         0    },
-  { SONG_HEAL,          "comfortably numb",                  "There is no pain you are receding...",            26,    50,       0,         0    },
-  { SONG_HOLD,          "hold on",                           "Why do you lock yourself up in these chains...",  27,    15,       0,         0    },
-  { SONG_LETHAL_FIRE,   "a view to a kill",                  "Dance into the fire...",                          28,    50,       0,         0    },
-  { SONG_LETHAL_FIRE,   "ring of fire",                      "I went down down down the flames went higher...", 28,    50,       0,         0    },
-  { SONG_REMOVE_POISON, "lifting shadows of a dream",        "Lifting shadows, off a dream...",                 36,    25,       0,         0    },
-  { SONG_REMOVE_POISON, "every rose has its thorn",          "Was it something I said or something I did...",   36,    25,       0,         0    },
-  { SONG_HASTE,         "canned heat",                       "You know this boogie is for real...",             42,    120,      0,         0    },
-  { SONG_REJUVENATION,  "there is no heart that won't heal", "There is no heart that won't heal...",            46,    80,       0,         0    },
-  { SONG_REJUVENATION,  "forever young",                     "Let us die young or let us live forever...'",     46,    80,       0,         0    },
-  { SONG_GROUP_SUMMON,  "come together",                     "He got joo joo eyeballs, he one holy roller...",  50,    100,      0,         0    },
-  { SONG_RESPITE,       "bridge over troubled water",        "When you're weary, feeling small...",             30,    40,   SC_CHANTER,    1    },
-  { SONG_WARCHANT,      "something takes a part of me",      "Something takes a part of me...",                 30,    60,   SC_CHANTER,    2    },
-  { SONG_WARCHANT,      "war",                            "Oh, war, has shattered many a young mans dreams...", 30,    60,   SC_CHANTER,    2    },
-  { SONG_LUCK,          "if i could change the world",       "If I could change the world...",                  40,    100,  SC_CHANTER,    3    },
-  { SONG_LUCK,          "lucky",                             "She's so lucky, she's a star...",                 40,    100,  SC_CHANTER,    3    },
-  { SONG_AID,           "hero of the day",                   "Hero of the day...",                              40,    150,  SC_CHANTER,    4    },
-  { SONG_AID,           "power of love",                     "Tougher than diamonds, rich like cream...",       40,    150,  SC_CHANTER,    4    },
-  { SONG_CAMARADERIE,   "we are family",                     "Everyone can see we're together...",              45,    150,  SC_CHANTER,    5    },
-  { SONG_RALLY,         "brightest flame burns quickest",    "The brightest flame burns quickest...",           30,    50,  SC_BLADESINGER, 1    },
-  { SONG_RALLY,         "bulls on parade",           "Rally 'round the family with a pocket full of shells...", 30,    50,  SC_BLADESINGER, 1    },
-  { SONG_BLADE_DANCE,   "ballroom blitz",                    "And the man in the back said everyone attack...", 40,    80,  SC_BLADESINGER, 4    }
+//  song_id             name                                 lyrics                                                     level  mana  subclass        subclass_level
+  { SONG_ARMOR,         "seal with a kiss",                  "In a letter, sealed with a kiss...",                      5,     5,    0,              0 },
+  { SONG_ARMOR,         "love is a battlefield",             "Why do you hurt me so bad...",                            5,     5,    0,              0 },
+  { SONG_CURE_BLIND,    "i can see clearly now",             "Gone are the dark clouds that had me blind...",           7,     15,   0,              0 },
+  { SONG_FLY,           "one day i will fly away",           "One day I will fly away...",                              9,     25,   0,              0 },
+  { SONG_FLY,           "come fly with me",                  "Come fly with me, let's fly, let's fly away...",          9,     25,   0,              0 },
+  { SONG_CURE_CRITIC,   "we don't need another hero",        "We don't need another hero...",                           11,    25,   0,              0 },
+  { SONG_FORGET,        "forget you",                        "Said, if I was richer, I'd still be with ya...",          12,    15,   0,              0 },
+  { SONG_BLINDNESS,     "smoke gets in your eyes",           "Smoke gets in your eyes...",                              13,    15,   0,              0 },
+  { SONG_BLINDNESS,     "blinded by the light",              "Revved up like a deuce, another runner in the night...",  13,    15,   0,              0 },
+  { SONG_SLEEP,         "enter sandman",                     "I tuck you in, warm within, keep you free from sin...",   14,    25,   0,              0 },
+  { SONG_SATIATE,       "best of me",                        "Now I save the best of me...",                            15,    10,   0,              0 },
+  { SONG_SATIATE,       "hungry like the wolf",              "Mouth is alive with juices like wine...",                 15,    10,   0,              0 },
+  { SONG_VITALITY,      "i'm taking a walk",                 "I'm taking a ride with my best friend...",                16,    25,   0,              0 },
+  { SONG_COLOUR_SPRAY,  "dangerous",                         "Dangerous...",                                            17,    25,   0,              0 },
+  { SONG_COLOUR_SPRAY,  "purple rain",                       "I never meant to cause you any pain...",                  17,    25,   0,              0 },
+  { SONG_DETECT_INVIS,  "somebody's watching me",            "I always feel like somebody's watching me...",            18,    25,   0,              0 },
+  { SONG_TOTAL_RECALL,  "we are the world",                  "We are the world, we are the children...",                19,    30,   0,              0 },
+  { SONG_TOTAL_RECALL,  "mama, i'm coming home",             "Lost and found and turned around...",                     19,    30,   0,              0 },
+  { SONG_FEAR,          "don't fear the reaper",             "Come on baby, don't fear the reaper...",                  20,    15,   0,              0 },
+  { SONG_INFRAVISION,   "moonlight shadow",                  "Carried away by moonlight shadow...",                     21,    20,   0,              0 },
+  { SONG_INFRAVISION,   "i wear my sunglasses at night",     "Don't masquerade with the guy in shades, oh no...",       21,    20,   0,              0 },
+  { SONG_CHARM_PERSON,  "this charming man",                 "Will nature make a man of me yet...",                     22,    50,   0,              0 },
+  { SONG_SANCTUARY,     "nothing compares to you",           "It's been seven hours and fifteen days...",               23,    50,   0,              0 },
+  { SONG_SANCTUARY,     "safety dance",                      "And we can act like we come from out of this world...",   23,    50,   0,              0 },
+  { SONG_ANIMATE_DEAD,  "toy soldier",                       "Like toy soldiers...",                                    25,    50,   0,              0 },
+  { SONG_ANIMATE_DEAD,  "thriller",                          "Something evil's lurking in the dark...",                 25,    50,   0,              0 },
+  { SONG_HEAL,          "everything i do i do it for you",   "Everything I do, I do it for you...",                     26,    50,   0,              0 },
+  { SONG_HEAL,          "comfortably numb",                  "There is no pain you are receding...",                    26,    50,   0,              0 },
+  { SONG_HOLD,          "hold on",                           "Why do you lock yourself up in these chains...",          27,    15,   0,              0 },
+  { SONG_LETHAL_FIRE,   "a view to a kill",                  "Dance into the fire...",                                  28,    50,   0,              0 },
+  { SONG_LETHAL_FIRE,   "ring of fire",                      "I went down down down the flames went higher...",         28,    50,   0,              0 },
+  { SONG_REMOVE_POISON, "lifting shadows of a dream",        "Lifting shadows, off a dream...",                         36,    25,   0,              0 },
+  { SONG_REMOVE_POISON, "every rose has its thorn",          "Was it something I said or something I did...",           36,    25,   0,              0 },
+  { SONG_HASTE,         "canned heat",                       "You know this boogie is for real...",                     42,    120,  0,              0 },
+  { SONG_REJUVENATION,  "there is no heart that won't heal", "There is no heart that won't heal...",                    46,    80,   0,              0 },
+  { SONG_REJUVENATION,  "forever young",                     "Let us die young or let us live forever...'",             46,    80,   0,              0 },
+  { SONG_GROUP_SUMMON,  "come together",                     "He got joo joo eyeballs, he one holy roller...",          50,    100,  0,              0 },
+  { SONG_RESPITE,       "bridge over troubled water",        "When you're weary, feeling small...",                     30,    40,   SC_CHANTER,     1 },
+  { SONG_WARCHANT,      "something takes a part of me",      "Something takes a part of me...",                         30,    60,   SC_CHANTER,     2 },
+  { SONG_WARCHANT,      "war",                               "Oh, war, has shattered many a young mans dreams...",      30,    60,   SC_CHANTER,     2 },
+  { SONG_LUCK,          "if i could change the world",       "If I could change the world...",                          40,    100,  SC_CHANTER,     3 },
+  { SONG_LUCK,          "lucky",                             "She's so lucky, she's a star...",                         40,    100,  SC_CHANTER,     3 },
+  { SONG_AID,           "hero of the day",                   "Hero of the day...",                                      40,    150,  SC_CHANTER,     4 },
+  { SONG_AID,           "power of love",                     "Tougher than diamonds, rich like cream...",               40,    150,  SC_CHANTER,     4 },
+  { SONG_CAMARADERIE,   "we are family",                     "Everyone can see we're together...",                      45,    150,  SC_CHANTER,     5 },
+  { SONG_RALLY,         "brightest flame burns quickest",    "The brightest flame burns quickest...",                   30,    50,   SC_BLADESINGER, 1 },
+  { SONG_RALLY,         "bulls on parade",                   "Rally 'round the family with a pocket full of shells...", 30,    50,   SC_BLADESINGER, 1 },
+  { SONG_BLADE_DANCE,   "ballroom blitz",                    "And the man in the back said everyone attack...",         40,    80,   SC_BLADESINGER, 4 }
 };
+
+int bladesinging_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("The music enchanting your blade decrescendos to silence.\n\r", enchanted_ch);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
 
 struct song_data_t get_song_info(CHAR* ch, char* song_name) {
   struct song_data_t song_info = { 0 };
@@ -149,8 +134,6 @@ bool check_song_access(CHAR* ch, struct song_data_t song_info) {
 
   return TRUE;
 }
-
-char *skip_spaces(char *string);
 
 void do_song(CHAR* ch, char* arg, int cmd)
 {
@@ -262,7 +245,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
       }
     }
 
-    spell_cure_blind(GET_LEVEL(ch), ch, tmp_victim, NULL);
+    spell_cure_blind(GET_LEVEL(ch), ch, ch, NULL);
     break;
 
   case SONG_FLY:
@@ -827,6 +810,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
   case SONG_BLADE_DANCE:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
     act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
+
     send_to_char("You leap and twirl and dodge and dive around in a flurry of sound and fury.\n\r", ch);
     act("$n leaps and twirls and dodges and dives around in a flurry of sound and fury.", FALSE, ch, NULL, NULL, TO_ROOM);
 
@@ -845,9 +829,9 @@ void do_song(CHAR* ch, char* arg, int cmd)
     break;
 
   default:
-      act("$n hums the words of a song $e doesn't know.", FALSE, ch, NULL, NULL, TO_ROOM);
-      act("You hum the words of a song you don't know.", FALSE, ch, NULL, NULL, TO_CHAR);
-      break;
+    act("$n hums the words of a song $e doesn't know.", FALSE, ch, NULL, NULL, TO_ROOM);
+    act("You hum the words of a song you don't know.", FALSE, ch, NULL, NULL, TO_CHAR);
+    break;
   }
 
   /* Bladesinging */

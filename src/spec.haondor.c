@@ -28,7 +28,7 @@
 int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 {
   bool bReturn = FALSE;
-  struct enchantment_type_5 ench;
+  ENCH ench;
 
   switch(cmd)
   {
@@ -68,7 +68,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 	    act("The forest recognizes your kinship and you are bathed in a warm glow.",0,ch,0,0,TO_CHAR);
 	    act("$n's skin turns green, and $e seems to bend toward the sun.",0,ch,0,0,TO_ROOM);
 	    act("Your skin turns green, and you feel an affinity for the shining sun.",0,ch,0,0,TO_CHAR);
-	    memset(&ench,0,sizeof(struct enchantment_type_5));
+	    memset(&ench,0,sizeof(ENCH));
 	    ench.name     = str_dup("Regeneration");
 	    enchantment_to_char(ch,&ench,TRUE);
 	    free(ench.name);

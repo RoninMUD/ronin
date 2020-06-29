@@ -80,8 +80,10 @@ OBJS_RONIN_BASE = \
 	act.other.o \
 	act.social.o \
 	act.wizard.o \
+	aff_ench.o \
 	auction.o \
 	board.o \
+	char_spec.o \
 	constants.o \
 	comm.o \
 	create.o \
