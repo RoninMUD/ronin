@@ -818,12 +818,15 @@ void do_song(CHAR* ch, char* arg, int cmd)
     {
       next_victim = tmp_victim->next_in_room;
 
-      if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
+      if (ch != tmp_victim && (IS_NPC(tmp_victim) || ROOM_CHAOTIC(CHAR_REAL_ROOM(tmp_victim))) && !SAME_GROUP(ch, tmp_victim))
       {
         send_to_char("The torrent of music overwhelms your senses and pierces your soul.\n\r", tmp_victim);
+
         damage(ch, tmp_victim, 350, TYPE_UNDEFINED, DAM_SOUND);
-        if (IS_ALIVE(tmp_victim))
-          perform_hit(ch, tmp_victim, TYPE_UNDEFINED, 1);
+
+        if (SAME_ROOM(ch, tmp_victim)) {
+          hit(ch, tmp_victim, TYPE_UNDEFINED);
+        }
       }
     }
     break;
@@ -835,11 +838,12 @@ void do_song(CHAR* ch, char* arg, int cmd)
   }
 
   /* Bladesinging */
-  if (check_subclass(ch, SC_BLADESINGER, 3) && IS_MORTAL(ch))
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_BLADESINGER, 3))
   {
     if (song_info.song_id && (mana > 0))
     {
-      enchantment_apply(ch, FALSE, "Bladesinging", TYPE_UNDEFINED, 10, ENCH_INTERVAL_ROUND, MAX(1, (mana / 2)), APPLY_DAMROLL, 0, 0, bladesinging_enchantment);
+      enchantment_apply(ch, TRUE, "Bladesinging", TYPE_UNDEFINED, 10, ENCH_INTERVAL_ROUND, MAX(1, (mana / 2)), APPLY_DAMROLL, 0, 0, bladesinging_enchantment);
+
       send_to_char("Your powerful lyrics lend strength to your blade!\n\r", ch);
     }
   }

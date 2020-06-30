@@ -928,7 +928,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
       maim_ench.temp[0] = GET_LEVEL(ch) / 4;
       maim_ench.func = maim_enchantment;
 
-      ench_to_char(victim, &maim_ench);
+      ench_to_char(victim, &maim_ench, FALSE);
     }
   }
 
@@ -1535,7 +1535,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     mantra_ench.metadata = ENCH_MANTRA_HEAL;
     mantra_ench.func = mantra_enchantment;
 
-    ench_to_char(victim, &mantra_ench);
+    ench_to_char(victim, &mantra_ench, FALSE);
   }
 
   skill_wait(ch, SKILL_MANTRA, 1);

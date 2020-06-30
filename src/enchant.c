@@ -1652,10 +1652,12 @@ void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find) {
   }
 
   if (ench) {
-    ench_from_char(victim, ench->name, ench->type, TRUE);
-
-    ench_to_char(victim, ench);
+    ench_to_char(victim, ench, TRUE);
   }
+}
+
+void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg)) {
+  ench_apply(ch, overwrite, name, type, duration, interval, modifier, location, bitvector, bitvector2, func);
 }
 
 void enchantment_remove(CHAR *victim, ENCH *enchantment, int to_log) {
@@ -1794,14 +1796,4 @@ char *get_rank_name(CHAR *ch) {
   }
 
   return rank_name;
-}
-
-void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg)) {
-  if (!ch || !*name) return;
-
-  if (overwrite) {
-    ench_from_char(ch, name, type, FALSE);
-  }
-
-  ench_apply(ch, name, type, duration, interval, modifier, location, bitvector, bitvector2, func);
 }
