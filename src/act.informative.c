@@ -611,7 +611,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       /* Store 'simple' affects "all in one go"; for 'complex' affects
          (e.g. warchant, wrath of god, etc.), or enchantments, use the
          explicit method. */
-      bool af_list[MAX_SPL_LIST] = { FALSE };
+      bool af_list[MAX_SPL_LIST] = { 0 };
 
       for (AFF *af = target->affected; af; af = af->next) {
         af_list[af->type] = TRUE;
@@ -792,7 +792,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
             act("......$n has been horribly maimed!", FALSE, target, 0, ch, TO_VICT);
           }
 
-          if (enchanted_by(target, "Tremor")) {
+          if (enchanted_by(target, "Tremoring")) {
             act("......$n is stumbling and staggering!", FALSE, target, 0, ch, TO_VICT);
           }
         }

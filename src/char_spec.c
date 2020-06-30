@@ -608,7 +608,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
       damage(ch, victim, dam, TYPE_UNDEFINED, DAM_PHYSICAL);
 
-      /* now twist */
+      /* twist */
       if (CHAR_REAL_ROOM(victim) != NOWHERE) {
         if (EQ(ch, WIELD)) {
           act("$n gruesomely twists $s weapon in the flesh of $N.", TRUE, ch, NULL, victim, TO_NOTVICT);
@@ -648,13 +648,9 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           GET_POS(victim) = MIN(GET_POS(ch), set_pos);
 
         /* quad - no more no less */
-        if (SAME_ROOM(ch, victim))
           perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        if (SAME_ROOM(ch, victim))
           perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        if (SAME_ROOM(ch, victim))
           perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        if (SAME_ROOM(ch, victim))
           perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       }
       else {
@@ -696,12 +692,10 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         GET_POS(victim) = MIN(GET_POS(ch), set_pos);
 
       /* dual hit */
-      if (SAME_ROOM(ch, victim))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      if (SAME_ROOM(ch, victim))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      /* haste emulates mystic swiftness */
-      if (SAME_ROOM(ch, victim) && affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+      /* haste (in lieu mystic swiftness) */
+      if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       /* divine wind: we want this to ignore sphere/shield so spoof the message of the spell */
@@ -819,12 +813,11 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
       taunt_spec(ch, victim, 0, "NO_SKILL_CHECK"); // auto success
 
-      /* dual - first hit has haste chance */
-      if (SAME_ROOM(ch, victim))
+      /* dual + haste */
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      if (SAME_ROOM(ch, victim))
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      if (SAME_ROOM(ch, victim) && affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+        /* haste */
+        if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+          perform_hit(ch, victim, TYPE_UNDEFINED, 1);
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
@@ -838,6 +831,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           spell_heal(GET_LEVEL(ch), ch, temp_target, NULL);
         }
       }
+
       spell_heal(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
@@ -850,7 +844,9 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         const int WYVERN_TAIL = 11523;
         const int UBER_KATANA = 20102;
 
-        if (V_OBJ(EQ(victim, WIELD)) != WYVERN_TAIL && (V_OBJ(EQ(victim, WIELD)) != UBER_KATANA || !IS_NPC(victim))) {
+        OBJ *weapon = EQ(victim, WIELD);
+
+        if (V_OBJ(weapon) != WYVERN_TAIL && (V_OBJ(weapon) != UBER_KATANA || !IS_NPC(victim))) {
           act("$n backflips into a scorpion kick, knocking $N's weapon loose!", FALSE, ch, 0, victim, TO_NOTVICT);
           act("$N backflips into a beautiful scorpion kick, knocking your weapon loose!", FALSE, ch, 0, victim, TO_VICT);
           act("Your elegant backflip into scorpion kick has knocked $N's weapon loose!", FALSE, ch, 0, victim, TO_CHAR);
@@ -858,13 +854,13 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           unequip_char(victim, WIELD);
 
           if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC)) {
-            obj_to_char(EQ(victim, WIELD), victim);
+            obj_to_char(weapon, victim);
           }
           else {
-            log_f("WIZLOG: %s disarms %s's %s (Room %d).", GET_DISP_NAME(ch), GET_DISP_NAME(victim), OBJ_SHORT(EQ(victim, WIELD)), ROOM_VNUM(CHAR_REAL_ROOM(ch)));
-            OBJ_LOG(EQ(victim, WIELD)) = TRUE;
+            log_f("WIZLOG: %s disarms %s's %s (Room %d).", GET_DISP_NAME(ch), GET_DISP_NAME(victim), OBJ_SHORT(weapon), ROOM_VNUM(CHAR_REAL_ROOM(ch)));
+            OBJ_LOG(weapon) = TRUE;
 
-            obj_to_room(EQ(victim, WIELD), CHAR_REAL_ROOM(victim));
+            obj_to_room(weapon, CHAR_REAL_ROOM(victim));
           }
 
           save_char(victim, NOWHERE);
@@ -872,11 +868,8 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       }
 
       /* triple - no more no less */
-      if (SAME_ROOM(ch, victim))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      if (SAME_ROOM(ch, victim))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      if (SAME_ROOM(ch, victim))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       /* eshock: we want this to ignore sphere/shield so spoof the message of the spell */
@@ -912,7 +905,7 @@ void snipe_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
     snprintf(sniped_by_str, sizeof(sniped_by_str), "Sniped by %s", GET_DISP_NAME(ch));
 
-    if (!ench_enchanted_by(ch, sniped_by_str, 0)) {
+    if (!ench_enchanted_by(victim, sniped_by_str, 0)) {
       int dmg = GET_LEVEL(ch) * number(15, 25);
 
       double multi = 1.0;
@@ -937,7 +930,7 @@ void snipe_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
         damage(ch, victim, dmg, SKILL_SNIPE, DAM_PHYSICAL);
 
-        enchantment_apply(victim, FALSE, sniped_by_str, 0, 7, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+        ench_apply(victim, FALSE, sniped_by_str, 0, 7, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
       }
     }
   }

@@ -204,21 +204,19 @@ void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long 
 
 void aff_total_char(CHAR *ch) {
   for (int i = 0; i < MAX_WEAR; i++) {
-    OBJ *obj = EQ(ch, i);
-
-    if (obj) {
+    if (EQ(ch, i)) {
       for (int j = 0; j < MAX_OBJ_AFFECT; j++) {
-        aff_modify_char(ch, OBJ_AFF_LOC(obj, j), OBJ_AFF_MOD(obj, j), OBJ_BITS(obj), OBJ_BITS2(obj), FALSE);
+        aff_modify_char(ch, OBJ_AFF_MOD(EQ(ch, i), j), OBJ_AFF_LOC(EQ(ch, i), j), OBJ_BITS(EQ(ch, i)), OBJ_BITS2(EQ(ch, i)), FALSE);
       }
     }
   }
 
   for (AFF *aff = ch->affected; aff; aff = aff->next) {
-    aff_modify_char(ch, aff->location, aff->modifier, aff->bitvector, aff->bitvector2, FALSE);
+    aff_modify_char(ch, aff->modifier, aff->location, aff->bitvector, aff->bitvector2, FALSE);
   }
 
   for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    aff_modify_char(ch, ench->location, ench->modifier, ench->bitvector, ench->bitvector2, FALSE);
+    aff_modify_char(ch, ench->modifier, ench->location, ench->bitvector, ench->bitvector2, FALSE);
   }
 
   GET_TMP_ABILITIES(ch) = GET_ABILITIES(ch);
@@ -228,21 +226,19 @@ void aff_total_char(CHAR *ch) {
   GET_OMOVE(ch) = GET_MAX_MOVE_POINTS(ch);
 
   for (int i = 0; i < MAX_WEAR; i++) {
-    OBJ *obj = EQ(ch, i);
-
-    if (obj) {
+    if (EQ(ch, i)) {
       for (int j = 0; j < MAX_OBJ_AFFECT; j++) {
-        aff_modify_char(ch, OBJ_AFF_LOC(obj, j), OBJ_AFF_MOD(obj, j), OBJ_BITS(obj), OBJ_BITS2(obj), TRUE);
+        aff_modify_char(ch, OBJ_AFF_MOD(EQ(ch, i), j), OBJ_AFF_LOC(EQ(ch, i), j), OBJ_BITS(EQ(ch, i)), OBJ_BITS2(EQ(ch, i)), TRUE);
       }
     }
   }
 
   for (AFF *aff = ch->affected; aff; aff = aff->next) {
-    aff_modify_char(ch, aff->location, aff->modifier, aff->bitvector, aff->bitvector2, TRUE);
+    aff_modify_char(ch, aff->modifier, aff->location, aff->bitvector, aff->bitvector2, TRUE);
   }
 
   for (ENCH *ench = ch->enchantments; ench; ench = ench->next) {
-    aff_modify_char(ch, ench->location, ench->modifier, ench->bitvector, ench->bitvector2, TRUE);
+    aff_modify_char(ch, ench->modifier, ench->location, ench->bitvector, ench->bitvector2, TRUE);
   }
 
   if (GET_STR(ch) > 18) {
@@ -398,7 +394,7 @@ void aff_to_char(CHAR *ch, AFF *aff) {
     }
   }
 
-  aff_modify_char(ch, new_aff->location, new_aff->modifier, new_aff->bitvector, new_aff->bitvector2, TRUE);
+  aff_modify_char(ch, new_aff->modifier, new_aff->location, new_aff->bitvector, new_aff->bitvector2, TRUE);
 
   aff_total_char(ch);
 
@@ -411,15 +407,13 @@ void aff_join(CHAR *ch, AFF *aff, bool avg_dur, bool avg_mod) {
   AFF *existing_aff = aff_get_from_char(ch, aff->type);
 
   if (existing_aff) {
-    if (avg_dur) {
-      INC_SCHAR(aff->duration, existing_aff->duration);
+    INC_SCHAR(aff->duration, existing_aff->duration);
 
+    if (avg_dur) {
       aff->duration /= 2;
     }
 
     if (avg_mod) {
-      INC_SCHAR(aff->modifier, existing_aff->modifier);
-
       aff->modifier /= 2;
     }
 
@@ -448,7 +442,7 @@ void aff_remove(CHAR *ch, AFF *aff) {
   if (!ch || !aff || !(ch->affected)) return;
 
   if (aff_affected_by_aff(ch, aff)) {
-    aff_modify_char(ch, aff->location, aff->modifier, aff->bitvector, aff->bitvector2, FALSE);
+    aff_modify_char(ch, aff->modifier, aff->location, aff->bitvector, aff->bitvector2, FALSE);
 
     if (ch->affected == aff) {
       ch->affected = aff->next;
@@ -611,8 +605,16 @@ int ench_calc_priority(const char *name, int type) {
   return priority;
 }
 
-void ench_to_char(CHAR *ch, ENCH *ench) {
+void ench_to_char(CHAR *ch, ENCH *ench, bool overwrite) {
   if (!ch || !ench || !ench->name || !(*ench->name)) return;
+
+  ENCH *existing_ench = ench_get_from_char(ch, ench->name, ench->type);
+
+  if (existing_ench && !overwrite) return;
+
+  if (overwrite) {
+    ench_remove(ch, existing_ench, FALSE);
+  }
 
   ENCH *new_ench = ench_dup(ench);
 
@@ -643,14 +645,14 @@ void ench_to_char(CHAR *ch, ENCH *ench) {
     new_ench->type = 0;
   }
 
-  aff_modify_char(ch, new_ench->location, new_ench->modifier, new_ench->bitvector, new_ench->bitvector2, TRUE);
+  aff_modify_char(ch, new_ench->modifier, new_ench->location, new_ench->bitvector, new_ench->bitvector2, TRUE);
 
   aff_total_char(ch);
 
   check_equipment(ch);
 }
 
-void ench_apply(CHAR *ch, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)) {
+void ench_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)) {
   if (!ch || !name || !(*name)) return;
 
   ENCH ench = { 0 };
@@ -665,7 +667,7 @@ void ench_apply(CHAR *ch, const char *name, int type, sh_int duration, byte inte
   ench.bitvector2 = bitvector2;
   ench.func = func;
 
-  ench_to_char(ch, &ench);
+  ench_to_char(ch, &ench, overwrite);
 
   free(ench.name);
 }
@@ -678,7 +680,7 @@ void ench_remove(CHAR *ch, ENCH *ench, bool to_log) {
       log_f("PLRINFO: %s just had enchantment %s removed.", GET_DISP_NAME(ch), ench->name);
     }
 
-    aff_modify_char(ch, ench->location, ench->modifier, ench->bitvector, ench->bitvector2, FALSE);
+    aff_modify_char(ch, ench->modifier, ench->location, ench->bitvector, ench->bitvector2, FALSE);
 
     if (ch->enchantments == ench) {
       ch->enchantments = ench->next;

@@ -34,6 +34,7 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
+#include "aff_ench.h"
 
 void cast_rally(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj)
 {
@@ -1965,7 +1966,7 @@ void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   if (IS_ALIVE(victim)) {
     /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
-    enchantment_apply(victim, TRUE, "Wither", SPELL_WITHER, 11, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, wither_enchantment);
+    ench_apply(victim, TRUE, "Wither", SPELL_WITHER, 11, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, wither_enchantment);
   }
 }
 
@@ -2010,16 +2011,12 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
 
   /* Apply the affect. This has to be done the old-school way, due to using affect_join() below. */
 
-  AFF af;
+  AFF aff = { 0 };
 
-  af.type       = SPELL_SHADOW_WRAITH;
-  af.duration   = 10;
-  af.modifier   = 0;
-  af.location   = 0;
-  af.bitvector  = 0;
-  af.bitvector2 = 0;
+  aff.type       = SPELL_SHADOW_WRAITH;
+  aff.duration   = 10;
 
-  affect_join(ch, &af, FALSE, FALSE);
+  affect_join(ch, &aff, FALSE, FALSE);
 
   if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
 

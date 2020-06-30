@@ -32,28 +32,28 @@ char *replace_string(char *str, char *weapon);
 void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type, int shadow);
 void process_death(struct char_data *ch, struct char_data *victim);
 
-bool is_immune(struct char_data *ch, int attack_type, int damage_type);
-bool is_resistant(struct char_data *ch, int attack_type, int damage_type);
-int resist_damage(struct char_data *ch, int dmg, int attack_type, int damage_type);
-int damage(struct char_data *ch, struct char_data *victim, int dmg, int attack_type, int damage_type);
+bool is_immune(CHAR *ch, int attack_type, int damage_type);
+bool is_resistant(CHAR *ch, int attack_type, int damage_type);
+int resist_damage(CHAR *ch, int dmg, int attack_type, int damage_type);
+int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type);
 
 void perform_violence(void);
 
-int calc_hitroll(struct char_data*ch);
-int calc_damroll(struct char_data *ch);
-int calc_thaco(struct char_data *ch);
-int calc_ac(struct char_data *ch);
+int calc_hitroll(CHAR *ch);
+int calc_damroll(CHAR *ch);
+int calc_thaco(CHAR *ch);
+int calc_ac(CHAR *ch);
 int calc_position_damage(int position, int dam);
 int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode);
 
-int stack_position(struct char_data *ch, int target_position);
+int stack_position(CHAR *ch, int target_position);
 
-int try_hit(struct char_data *ch, struct char_data *victim);
-bool perform_hit(struct char_data *attacker, struct char_data *defender, int type, int hit_num);
-void hit(struct char_data *ch, struct char_data *victim, int type);
-void dhit(struct char_data *ch, struct char_data *victim, int type);
-void thit(struct char_data *ch, struct char_data *victim, int type);
-void qhit(struct char_data *ch, struct char_data *victim, int type);
+int try_hit(CHAR *ch, CHAR *victim);
+bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num);
+void hit(CHAR *ch, CHAR *victim, int type);
+void dhit(CHAR *ch, CHAR *victim, int type);
+void thit(CHAR *ch, CHAR *victim, int type);
+void qhit(CHAR *ch, CHAR *victim, int type);
 
 bool mob_disarm(struct char_data *mob, struct char_data *victim, bool to_ground);
 

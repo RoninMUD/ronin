@@ -115,7 +115,7 @@ int isname(char *name, char *list) {
 }
 
 void affect_modify(CHAR *ch, int loc, int mod, long bitv, long bitv2, bool add) {
-  aff_modify_char(ch, loc, mod, bitv, bitv2, add);
+  aff_modify_char(ch, mod, loc, bitv, bitv2, add);
 }
 
 void affect_total(CHAR *ch) {
