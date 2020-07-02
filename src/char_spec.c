@@ -508,7 +508,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   int mimicee_count = 0;
 
   /* Count eligible mimicee's in the room. */
-  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next) {
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
     if ((temp_ch != ch) && IS_MORTAL(temp_ch) && SAME_GROUP(temp_ch, ch)) {
       mimicee_count++;
     }
@@ -522,7 +522,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   CHAR *mimicee = NULL;
 
   /* Get the chosen mimicee from the room's character list. */
-  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); !mimicee && temp_ch; temp_ch = temp_ch->next) {
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); !mimicee && temp_ch; temp_ch = temp_ch->next_in_room) {
     if ((temp_ch != ch) && IS_MORTAL(temp_ch) && SAME_GROUP(temp_ch, ch) && (--mimicee_num == 0)) {
       mimicee = temp_ch;
     }
