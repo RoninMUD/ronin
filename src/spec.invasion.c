@@ -1193,16 +1193,23 @@ int chaos_bite_ench(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   if (cmd == CMD_CAST) {
     if (!ch || !IS_MORTAL(ch) || (ch != signaler) || (GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) return FALSE;
 
-    if (!enchanted_by(ch, CHAOS_BITE_ENCH_NAME)) return FALSE;
-
     act("$n tries to cast a spell, but $e can only choke up blood from the wound in $s neck.", FALSE, ch, 0, 0, TO_ROOM);
     act("You try to cast a spell, but you can only choke up blood from the wound in your neck.", FALSE, ch, 0, 0, TO_CHAR);
 
     return TRUE;
   }
 
+  if (cmd == CMD_SONG) {
+    if (!ch || !IS_MORTAL(ch) || (ch != signaler) || (GET_CLASS(ch) != CLASS_BARD)) return FALSE;
+
+    act("$n tries to sing a song, but $e can only choke up blood from the wound in $s neck.", FALSE, ch, 0, 0, TO_ROOM);
+    act("You try to sing a song, but you can only choke up blood from the wound in your neck.", FALSE, ch, 0, 0, TO_CHAR);
+
+    return TRUE;
+  }
+
   if (cmd == MSG_REMOVE_ENCH) {
-    if (!ch || !IS_MORTAL(ch)) return FALSE;
+    if (!ch || !IS_MORTAL(ch) || (ch != signaler)) return FALSE;
 
     act("You manage to stem the flow of blood from the wound on your neck.", FALSE, ch, 0, 0, TO_CHAR);
 
@@ -1700,7 +1707,7 @@ int horn_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
 int mantle_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   /* Set APPLY_DAMAGE to 2 when removed or when the character dies. */
-  if ((cmd == MSG_BEING_REMOVED) || (cmd == MSG_DIE)) {
+  if ((cmd == MSG_OBJ_REMOVED) || (cmd == MSG_DIE)) {
     if (!ch || !OBJ_EQUIPPED_BY(obj) || (ch != OBJ_EQUIPPED_BY(obj))) return FALSE;
 
     /* Sanity check to make sure AFF1 is APPLY_DAMROLL. */
@@ -1762,7 +1769,7 @@ int mantle_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
 int circlet_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   /* Set APPLY_MANA_REGEN to 5 when removed or when the character dies. */
-  if ((cmd == MSG_BEING_REMOVED) || (cmd == MSG_DIE)) {
+  if ((cmd == MSG_OBJ_REMOVED) || (cmd == MSG_DIE)) {
     if (!ch || !OBJ_EQUIPPED_BY(obj) || (ch != OBJ_EQUIPPED_BY(obj))) return FALSE;
 
     /* Reset the timer for the pray command. */

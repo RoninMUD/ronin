@@ -902,7 +902,7 @@ tk_symbol (OBJ *sym, CHAR *ch, int cmd, char *arg)
   CHAR *vict;
   void remove_item (CHAR*, OBJ*, int);
 
-  if (cmd == MSG_BEING_REMOVED) {
+  if (cmd == MSG_OBJ_REMOVED) {
     if(!ch) return FALSE;
 	  send_to_char ("Eeek! You can't let it go!\n\r",ch);
 	  return TRUE;

@@ -63,7 +63,7 @@ int nergal_ring(OBJ *ring, CHAR *ch, int cmd, char *arg) {
       act("You feel a surge of dark power as you wear the ring.",FALSE,ch,ring,NULL,TO_CHAR);
       break;
 
-    case MSG_BEING_REMOVED:
+    case MSG_OBJ_REMOVED:
       act("$n seems more peaceful, yet less powerful as $e removes the ring.",FALSE,ch,ring,NULL,TO_NOTVICT);
       act("You feel the power bleed out of you as you remove the Ring of the Conqueror.",FALSE,ch,ring,NULL,TO_CHAR);
       break;

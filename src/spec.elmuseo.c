@@ -1342,7 +1342,7 @@ int mus_leaf_spear(OBJ *spear, CHAR *ch, int cmd, char *arg)
   CHAR *vict = NULL;
   char buf[MAX_STRING_LENGTH];
 
-  if (cmd == MSG_BEING_REMOVED) {
+  if (cmd == MSG_OBJ_REMOVED) {
     if (ch != spear->equipped_by) return FALSE;
     if (!ch) return FALSE;
     if (spear == EQ(ch,WIELD)) {

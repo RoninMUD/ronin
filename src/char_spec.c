@@ -433,7 +433,7 @@ int taunt_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) 
 }
 
 void taunt_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
-  if (!ch || !victim || SAME_ROOM(ch, victim)) return;
+  if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   /* Taunt Messages
   {
@@ -485,21 +485,13 @@ void taunt_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
     }
   };
 
-  if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 20)) {
-    bool perform_check = TRUE;
+  if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 20)) {
+    if ((number(1, 1500) <= GET_LEARNED(ch, SKILL_TAUNT) + (GET_CON_REGEN(ch) * 2)) || (arg && !strcasecmp(arg, "NO_SKILL_CHECK"))) {
+      int taunt_message_idx = number(0, NUMELEMS(taunt_messages) - 1);
 
-    if (arg && *arg && !strcasecmp(arg, "NO_SKILL_CHECK")) {
-      perform_check = FALSE;
-    }
-
-    int check = number(1, 1500);
-
-    if (!perform_check || check <= (GET_LEARNED(ch, SKILL_TAUNT) + (GET_CON_REGEN(ch) * 2))) {
-      int taunt_msg_index = number(0, NUMELEMS(taunt_messages) - 1);
-
-      act(taunt_messages[taunt_msg_index][0], FALSE, ch, 0, victim, TO_NOTVICT);
-      act(taunt_messages[taunt_msg_index][1], FALSE, ch, 0, victim, TO_VICT);
-      act(taunt_messages[taunt_msg_index][2], FALSE, ch, 0, victim, TO_CHAR);
+      act(taunt_messages[taunt_message_idx][0], FALSE, ch, 0, victim, TO_NOTVICT);
+      act(taunt_messages[taunt_message_idx][1], FALSE, ch, 0, victim, TO_VICT);
+      act(taunt_messages[taunt_message_idx][2], FALSE, ch, 0, victim, TO_CHAR);
 
       enchantment_apply(victim, FALSE, "Taunted", SKILL_TAUNT, 3, ENCH_INTERVAL_ROUND, -(GET_DAMROLL(victim) / 10), APPLY_DAMROLL, 0, 0, taunt_enchantment);
     }

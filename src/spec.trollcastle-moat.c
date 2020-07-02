@@ -303,7 +303,7 @@ int knot_of_kudzu(OBJ *kudzu, CHAR *ch, int cmd, char *argument)
 
 	switch(cmd)
 	{
-		case MSG_BEING_REMOVED:
+		case MSG_OBJ_REMOVED:
 			//Reset stats if kudzu is removed
 			if(kudzu==EQ(ch, WEAR_WRIST_L))
 			{

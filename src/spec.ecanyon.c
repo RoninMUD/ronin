@@ -231,7 +231,7 @@ int ecanyon_obj_shield(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     return FALSE;
   }
 
-  if (cmd == MSG_BEING_REMOVED) {
+  if (cmd == MSG_OBJ_REMOVED) {
     CHAR *owner = obj->equipped_by;
 
     if (!owner || obj != EQ(owner, WEAR_SHIELD)) return FALSE;
@@ -300,7 +300,7 @@ int ecanyon_obj_ring(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     }
   }
 
-  if (cmd == MSG_BEING_REMOVED) {
+  if (cmd == MSG_OBJ_REMOVED) {
     if (obj->affected[ECANYON_RING_HP_AFFECT_SLOT].location != APPLY_HIT) return FALSE;
 
     CHAR *owner = obj->equipped_by;
@@ -381,7 +381,7 @@ int ecanyon_obj_breastplate(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     }
   }
 
-  if (cmd == MSG_BEING_REMOVED) {
+  if (cmd == MSG_OBJ_REMOVED) {
     if (obj->affected[ECANYON_BREASTPLATE_AC_AFFECT_SLOT].location != APPLY_ARMOR) return FALSE;
 
     CHAR *owner = obj->equipped_by;

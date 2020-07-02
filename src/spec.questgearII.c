@@ -1162,7 +1162,7 @@ int qgII_vindictae(OBJ *vindictae, CHAR *ch, int cmd, char *arg)
 
       break;
 
-    case MSG_BEING_REMOVED:
+    case MSG_OBJ_REMOVED:
 
      /*
      ** Punish on remove, release blood power

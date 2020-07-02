@@ -130,7 +130,7 @@ int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
   CHAR *owner,*vict,*next_vict,*target,*mankey;
   OBJ *tmp,*tmp2;
 
-  if(cmd==MSG_BEING_REMOVED) {
+  if(cmd==MSG_OBJ_REMOVED) {
     if(!suit->equipped_by) return FALSE;
     if(!(owner=suit->equipped_by)) return FALSE;
     unequip_char(owner,WEAR_BODY);
@@ -417,11 +417,11 @@ int tc_stone_spec(OBJ *stone ,CHAR *ch, int cmd, char *argument) {
   int owner_age;
   CHAR *vict;
 
-  if(cmd!=MSG_TICK && cmd!=MSG_BEING_REMOVED) return FALSE;
+  if(cmd!=MSG_TICK && cmd!=MSG_OBJ_REMOVED) return FALSE;
   if(!(vict=stone->equipped_by)) return FALSE;
   if(!AWAKE(vict)) return FALSE;
 
-  if(cmd==MSG_BEING_REMOVED) {
+  if(cmd==MSG_OBJ_REMOVED) {
     unequip_char(vict,WIELD);
     stone->obj_flags.value[1]=9; /*damnodice*/
     stone->obj_flags.value[2]=3; /*damsizedice*/
@@ -566,7 +566,7 @@ int tc_whistle_spec(OBJ *whistle ,CHAR *ch, int cmd, char *argument) {
 
   switch(cmd) {
 
-    case MSG_BEING_REMOVED:
+    case MSG_OBJ_REMOVED:
       if(whistle==EQ(ch,WEAR_NECK_1)) {
         unequip_char(ch,WEAR_NECK_1);
         whistle->affected[1].modifier=33;

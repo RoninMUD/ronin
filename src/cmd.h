@@ -1,39 +1,3 @@
-
-/*
-$Author: void $
-$Date: 2004/11/17 19:21:52 $
-$Header: /home/ronin/cvs/ronin/cmd.h,v 2.1 2004/11/17 19:21:52 void Exp $
-$Id: cmd.h,v 2.1 2004/11/17 19:21:52 void Exp $
-$Name:  $
-$Log: cmd.h,v $
-Revision 2.1  2004/11/17 19:21:52  void
-Added Nomad Skill Cover (1/2 Damage -10 Hitroll)
-
-Revision 2.0.0.1  2004/02/05 16:13:03  ronin
-Reinitialization of cvs archives
-
-
-Revision 19-Dec-03 Ranger
-Addition of CMD_EMAIL
-
-Revision 22-May-03 Ranger
-Addition of CMD_HUNT
-
-Revision 10-Mar-03 Ranger
-Addition of CMD_SOCIAL
-
-Revision 12-Feb-03 Ranger
-Addition of CMD_BOARD
-
-Revision 1.3  2002/10/14 21:00:33  ronin
-Addition of MSG_RECONNECT.
-
-Revision 1.2  2002/03/31 07:42:14  ronin
-Addition of header lines.
-
-$State: Exp $
-*/
-
 #define MSG_VIOLENCE           -99 /* Signaled before hit() is called in perform_violence() in fight.c */
 #define MSG_VIOLENCE_POST_HIT  -98 /* Signaled after hit() is called in perform_violence() in fight.c */
 #define MSG_ROUND              -97 /* Signaled every 3 seconds. */
@@ -60,8 +24,7 @@ $State: Exp $
 #define MSG_STONE              -10
 #define MSG_LEAVE              -9
 #define MSG_ENTER              -8
-#define MSG_BEING_REMOVED      -7
-#define MSG_OBJ_REMOVED        MSG_BEING_REMOVED
+#define MSG_OBJ_REMOVED        -7
 #define MSG_SHOW_PRETITLE      -6
 #define MSG_SHOW_AFFECT_TEXT   -5
 #define MSG_ZONE_RESET         -4

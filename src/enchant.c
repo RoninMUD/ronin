@@ -1738,7 +1738,7 @@ char *get_rank_name(CHAR *ch) {
 
     { CLASS_CLERIC,       1, "Acolyte",      NULL },
     { CLASS_CLERIC,       2, "Bishop",       NULL },
-    { CLASS_CLERIC,       3, "Apprentice",   NULL },
+    { CLASS_CLERIC,       3, "Prophet",      NULL },
 
     { CLASS_THIEF,        1, "Highwayman",   NULL },
     { CLASS_THIEF,        2, "Brigand"  ,    NULL },
@@ -1784,7 +1784,7 @@ char *get_rank_name(CHAR *ch) {
   char *rank_name = NULL;
 
   if (rank_name_idx >= 0) {
-    if (GET_SEX(ch) != SEX_FEMALE) {
+    if ((GET_SEX(ch) != SEX_FEMALE) || !rank_names[rank_name_idx].name_female) {
       rank_name = rank_names[rank_name_idx].name;
     }
     else {

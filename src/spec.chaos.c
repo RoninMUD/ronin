@@ -157,7 +157,7 @@ TZ_Dagger (OBJ *dagger, CHAR *ch, int cmd, char *arg) {
 	      }
           }
        break;
-    case MSG_BEING_REMOVED:
+    case MSG_OBJ_REMOVED:
 	act("$n's weapon whines piteously in $s hand, not wanting to end its destruction."
 	    ,FALSE, ch, obj, NULL,TO_NOTVICT);
 	act("Your weapon whines piteously, upset that you'd stop using it to spread chaos."

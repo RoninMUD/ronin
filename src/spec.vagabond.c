@@ -520,7 +520,7 @@ int boots_obj(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
     return FALSE;
   }
-  else if (cmd == MSG_BEING_REMOVED)
+  else if (cmd == MSG_OBJ_REMOVED)
   {
     unequip_char(owner, WEAR_FEET);
 
