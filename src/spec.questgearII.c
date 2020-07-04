@@ -858,7 +858,7 @@ static const char *ring_string_table[RING_TYPE_COUNT][RING_STR_COUNT] = {
   { /* Enlil */
     "enlil",
     "The ground beneath your feet rumbles as Enlil's topaz flashes a bright orange.",
-    "$n almost loses his footing as Enlil's topaz flashes a bright orange.",
+    "$n almost loses $s footing as Enlil's topaz flashes a bright orange.",
     "Enlil's topaz reveals the image of a desolate wasteland.",
     "Enlil's topaz reveals the images of an idyllic rolling hill.",
     "Enlil's topaz reveals the image of a mighty mountain.",
