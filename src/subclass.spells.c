@@ -1543,24 +1543,30 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_POWER_OF_DEVOTION)) {
-    send_to_char("You are enveloped in a bright white aura.\n\r", victim);
-    act("$n is enveloped in a bright white aura.", TRUE, victim, 0, 0, TO_ROOM);
-
+  if (!aff_affected_by(victim, SPELL_POWER_OF_DEVOTION)) {
     int duration = (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? (level / 8) : (level / 4));
 
-    affect_from_char(ch, SPELL_SANCTUARY);
+    AFF *sanc = aff_get_from_char(victim, SPELL_SANCTUARY);
 
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 0, 0, AFF_SANCTUARY, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PARA, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ROD, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_PETRI, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_BREATH, 0, 0);
-    affect_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_SPELL, 0, 0);
+    if (sanc && sanc->duration < duration) {
+      sanc->duration = duration;
+    }
+
+    if (!IS_AFFECTED(victim, AFF_SANCTUARY)) {
+      aff_apply(victim, SPELL_SANCTUARY, duration, 0, 0, AFF_SANCTUARY, 0);
+
+      send_to_char("You start glowing.\n\r", victim);
+      act("$n is surrounded by a white aura.", TRUE, victim, 0, 0, TO_ROOM);
+    }
+
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -15, APPLY_AC, 0, 0);
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 3, APPLY_DAMROLL, 0, 0);
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 25, APPLY_HP_REGEN, 0, 0);
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, duration, 5, APPLY_MANA_REGEN, 0, 0);
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, duration, -1, APPLY_SAVING_ALL, 0, 0);
+
+    send_to_char("You are enveloped in a bright white aura.\n\r", victim);
+    act("$n is enveloped in a bright white aura.", TRUE, victim, 0, 0, TO_ROOM);
   }
 }
 

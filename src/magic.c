@@ -26,6 +26,7 @@
 #include "enchant.h"
 #include "subclass.h"
 #include "quest.h"
+#include "aff_ench.h"
 
 /* Extern structures */
 
@@ -1818,27 +1819,26 @@ void spell_remove_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_sanctuary(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  struct affected_type_5 af;
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim) {
+    send_to_char("Things are too chaotic to cast this spell on another player.\n\r", ch);
 
-  if (IS_AFFECTED(victim, AFF_SANCTUARY))
-    return;
-
-  if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch!=victim) { /* Chaos03 */
-    send_to_char("You cannot cast this spell on another player.\n\r",ch);
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_SANCTUARY)) {
-    act("$n is surrounded by a white aura.",TRUE,victim,0,0,TO_ROOM);
-    act("You start glowing.",TRUE,victim,0,0,TO_CHAR);
+  int duration = level / 5;
 
-    af.type      = SPELL_SANCTUARY;
-    af.duration  = level / 5;
-    af.modifier  = 0;
-    af.location  = APPLY_NONE;
-    af.bitvector = AFF_SANCTUARY;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  AFF *sanc = aff_get_from_char(victim, SPELL_SANCTUARY);
+  AFF *pod = aff_get_from_char(victim, SPELL_POWER_OF_DEVOTION);
+
+  if (sanc && pod && sanc->duration <= pod->duration && duration > sanc->duration) {
+    aff_remove(victim, sanc);
+  }
+
+  if (!IS_AFFECTED(victim, AFF_SANCTUARY)) {
+    aff_apply(victim, SPELL_SANCTUARY, duration, 0, 0, AFF_SANCTUARY, 0);
+
+    send_to_char("You start glowing.\n\r", victim);
+    act("$n is surrounded by a white aura.", TRUE, victim, 0, 0, TO_ROOM);
   }
 }
 
