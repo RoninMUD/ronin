@@ -124,11 +124,10 @@ p && q && r) {
 }
 
 int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
-  int var,end_switch;
+  bool steal = FALSE;
   int bleed;
   char buf[MAX_INPUT_LENGTH];
-  CHAR *owner,*vict,*next_vict,*target,*mankey;
-  OBJ *tmp,*tmp2;
+  CHAR *owner,*target,*mankey;
 
   if(cmd==MSG_OBJ_REMOVED) {
     if(!suit->equipped_by) return FALSE;
@@ -149,7 +148,7 @@ int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
     }*/
     if(chance(20)) {
       unequip_char(owner,WEAR_BODY);  /* Linerfix 110303 */
-      suit->affected[0].modifier=number(2,4); /* Location 0 should be set as damroll */
+      suit->affected[0].modifier=number(3,4); /* Location 0 should be set as damroll */
       equip_char(owner,suit,WEAR_BODY);  /* Linerfix 110303 */
       if(GET_CLASS(owner)==CLASS_WARRIOR || GET_CLASS(owner)==CLASS_NOMAD) {
         /* regen spec */
@@ -181,96 +180,56 @@ int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
     act("A laktzatz soitz screams in ecstasy as the world explodes in violet around you!",1,owner,0,0,TO_ROOM);
     act("A laktzatz soitz screams in ecstasy as the world explodes in violet around you!",1,owner,0,0,TO_CHAR);
 
-    end_switch=number(0,5);
-
-   /* mankey thieving spec */
-    if((mankey=get_char_room("mankey",real_room(12841))) && !EQ(mankey,WEAR_BODY)) {
-      switch(end_switch) {
-        case 0:
-          /* Log entry added for soitz-steal. Solmyr 2009 */
-          sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-          log_s(buf);
-    	    suit->log = TRUE;
-          act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-          act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-          equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-
-          break;
-
-        case 1:
-          if(chance(90)) {
-            /* Log entry added for soitz-steal. Solmyr 2009 */
-            sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-            log_s(buf);
- 		   	suit->log = TRUE;
-            act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-            act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-            equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-          }
-          break;
-
-        case 2:
-          if(chance(80)) {
-            /* Log entry added for soitz-steal. Solmyr 2009 */
-            sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-            log_s(buf);
-            suit->log = TRUE;
-            act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-            act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-            equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-          }
-          break;
-
-        case 3:
-          if(chance(80)) {
-            /* Log entry added for soitz-steal. Solmyr 2009 */
-            sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-            log_s(buf);
-            suit->log = TRUE;
-            act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-            act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-            equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-          }
-          break;
-
-        case 4:
-          if(chance(40)) {
-            /* Log entry added for soitz-steal. Solmyr 2009 */
-            sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-            log_s(buf);
-            suit->log = TRUE;
-            act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-            act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-            equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-          }
-          break;
-
-        case 5:
-          if(chance(30)) {
-            /* Log entry added for soitz-steal. Solmyr 2009 */
-            sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
-            log_s(buf);
-            suit->log = TRUE;
-            act("The Mankey appears and steals something from $n while $e is stunned !!",1,owner,0,0,TO_ROOM);
-            act("The Mankey appears and steals something from you while you are stunned !!",1,owner,0,0,TO_CHAR);
-            equip_char(mankey, unequip_char(owner,WEAR_BODY),WEAR_BODY);
-          }
-          break;
+    /* mankey thieving spec */
+    if ((mankey = get_char_room("mankey", real_room(12841))) && !EQ(mankey, WEAR_BODY)) {
+      switch (number(0, 5)) {
+      case 0:
+        steal = TRUE;
+        break;
+      case 1:
+        if (chance(90))
+          steal = TRUE;
+        break;
+      case 2:
+        if (chance(80))
+          steal = TRUE;
+        break;
+      case 3:
+        if (chance(80))
+          steal = TRUE;
+        break;
+      case 4:
+        if (chance(40))
+          steal = TRUE;
+        break;
+      case 5:
+        if (chance(30))
+          steal = TRUE;
+        break;
+      default:
+        break;
+      }
+      if (steal) {
+        /* Log entry added for soitz-steal. Solmyr 2009 */
+        sprintf(buf, "WIZINFO: %s steals %s's %s", GET_NAME(mankey), GET_NAME(owner), OBJ_SHORT(suit));
+        log_s(buf);
+        suit->log = TRUE;
+        act("The Mankey appears and steals something from $n, cheeky bastard!", 1, owner, 0, 0, TO_ROOM);
+        act("The Mankey appears and steals something from you, cheeky bastard!", 1, owner, 0, 0, TO_CHAR);
+        equip_char(mankey, unequip_char(owner, WEAR_BODY), WEAR_BODY);
       }
     }
 
+    /* remove bulk of soitz spec - pointless garbage that disincentivizes use: Hemp 2020
     for(vict=world[CHAR_REAL_ROOM(owner)].people; vict;vict=next_vict) {
       next_vict = vict->next_in_room;
 
       if(!IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM) continue;
 
-                /* new crap to destroy room whistles if soitz at all */
-
       tmp=vict->equipment[WEAR_NECK_1];
       tmp2=vict->equipment[WEAR_NECK_2];
 
       if(tmp && V_OBJ(tmp)==WHISTLE) {
-        /* Log entry added by Solmyr 2009 */
         sprintf(buf, "WIZINFO: %s whistle exploded from Soitz spec", GET_NAME(vict));
         log_s(buf);
         act("A mirtzaemn myistzpae shatters from the force of the violet surge around it.",1,vict,0,0,TO_ROOM);
@@ -279,7 +238,6 @@ int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
       }
 
       if(tmp2 && V_OBJ(tmp2)==WHISTLE) {
-        /* Log entry added by Solmyr 2009 */
         sprintf(buf, "WIZINFO: %s whistle exploded from Soitz spec", GET_NAME(vict));
         log_s(buf);
         act("A mirtzaemn myistzpae shatters from the force of the violet surge around it.",1,vict,0,0,TO_ROOM);
@@ -407,9 +365,10 @@ int tc_suit_spec(OBJ *suit ,CHAR *ch, int cmd, char *argument) {
         var=number(5,9);
         WAIT_STATE(vict,PULSE_VIOLENCE*var);
         break;
-      } /* switch */
-    } /* for */
-  } /* if */
+      } // switch
+    } // for
+    */
+  } // if
   return FALSE;
 }
 
