@@ -513,7 +513,7 @@ int mob_special(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 }
 
 int room_special(int room, CHAR *ch, int cmd, char *arg) {
-  assert((room >= 0) && room < top_of_world);
+  assert((room >= 0) && (room <= top_of_world));
 
   return ((*world[room].funct)(room, ch, cmd, arg));
 }
