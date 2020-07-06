@@ -562,21 +562,10 @@ The edge of the chasm pushes westward.
 ~
 0 0 25322
 E
-ledge~
+cliff~
 
-  It's a small outcropping, perfect for a bit of quick climbing.
-
-~
-E
-slab~
-
-  It's a magical door in the stone here.
-
-~
-E
-outline door~
-
-  This appears to be a door of some kind leading up to the next section.
+After close examination of the cliff wall, you note a small ledge that
+seems like the best place to try climbing.
 
 ~
 E
@@ -587,10 +576,21 @@ seems like the best place to try climbing.
 
 ~
 E
-cliff~
+outline door~
 
-After close examination of the cliff wall, you note a small ledge that
-seems like the best place to try climbing.
+  This appears to be a door of some kind leading up to the next section.
+
+~
+E
+slab~
+
+  It's a magical door in the stone here.
+
+~
+E
+ledge~
+
+  It's a small outcropping, perfect for a bit of quick climbing.
 
 ~
 S
@@ -638,9 +638,9 @@ A ledge reaches down over the edge of the cliff below.
 ledge~
 11 0 25324
 E
-ledge~
+outline door~
 
-  It's a small outcropping, perfect for a bit of quick climbing.
+  This appears to be a door of some kind leading down to the next section.
 
 ~
 E
@@ -650,9 +650,9 @@ slab~
 
 ~
 E
-outline door~
+ledge~
 
-  This appears to be a door of some kind leading down to the next section.
+  It's a small outcropping, perfect for a bit of quick climbing.
 
 ~
 S
@@ -808,17 +808,17 @@ A hole leads down into a cold, damp darkness below.
 hole~
 9 0 25334
 E
-hole~
-
-  A large hole in the floor leads downward into cold darkness.
-
-~
-E
 corpses~
 
   The corpses of a thousand victims of Charybdis' fury line the floor
 around you in a strange blackened circle, giving audience to your
 possible demise.
+
+~
+E
+hole~
+
+  A large hole in the floor leads downward into cold darkness.
 
 ~
 S
