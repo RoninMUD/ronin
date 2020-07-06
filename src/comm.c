@@ -2922,40 +2922,30 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
 
   bool stop = FALSE;
 
-  if (cmd != MSG_ROUND) {
-    if (!stop && world[room_rnum].funct) {
-      stop = room_special(room_rnum, signaler, cmd, arg);
-    }
-
-    for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
-      next_ch = temp_ch->next_in_room;
-
-      stop = signal_char(temp_ch, signaler, cmd, arg);
-    }
-
-    for (OBJ *temp_obj = world[room_rnum].contents, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
-      next_obj = temp_obj->next_content;
-
-      stop = signal_object(temp_obj, signaler, cmd, arg);
-    }
-
-    if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
-      char buf[MSL];
-
-      snprintf(buf, sizeof(buf), "WIZINFO: signal_room(%d, %s, %d, %s) returned TRUE.",
-        world[room_rnum].number, signaler ? GET_DISP_NAME(signaler) : "(null)", cmd, arg ? arg : "(null)");
-      wizlog(buf, 1, 6);
-
-      stop = FALSE;
-    }
+  if (!stop && world[room_rnum].funct) {
+    stop = room_special(room_rnum, signaler, cmd, arg);
   }
 
-  if (cmd == MSG_ROUND) {
-    for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
-      next_ch = temp_ch->next_in_room;
+  for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
+    next_ch = temp_ch->next_in_room;
 
-      stop = signal_char(temp_ch, signaler, cmd, arg);
-    }
+    stop = signal_char(temp_ch, signaler, cmd, arg);
+  }
+
+  for (OBJ *temp_obj = world[room_rnum].contents, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+    next_obj = temp_obj->next_content;
+
+    stop = signal_object(temp_obj, signaler, cmd, arg);
+  }
+
+  if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
+    char buf[MSL];
+
+    snprintf(buf, sizeof(buf), "WIZINFO: signal_room(%d, %s, %d, %s) returned TRUE.",
+      world[room_rnum].number, signaler ? GET_DISP_NAME(signaler) : "(null)", cmd, arg ? arg : "(null)");
+    wizlog(buf, 1, 6);
+
+    stop = FALSE;
   }
 
   return stop;
@@ -2976,22 +2966,20 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
     stop = (*ch->func)(ch, signaler, cmd, arg);
   }
 
-  if (cmd != MSG_ROUND) {
-    /* Signal equipped objects. */
-    for (int eq_pos = 0; !stop && (eq_pos < MAX_WEAR); eq_pos++) {
-      OBJ *temp_obj = EQ(ch, eq_pos);
+  /* Signal equipped objects. */
+  for (int eq_pos = 0; !stop && (eq_pos < MAX_WEAR); eq_pos++) {
+    OBJ *temp_obj = EQ(ch, eq_pos);
 
-      if (temp_obj) {
-        stop = signal_object(temp_obj, signaler, cmd, arg);
-      }
-    }
-
-    /* Signal carried objects. */
-    for (OBJ *temp_obj = ch->carrying, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
-      next_obj = temp_obj->next_content;
-
+    if (temp_obj) {
       stop = signal_object(temp_obj, signaler, cmd, arg);
     }
+  }
+
+  /* Signal carried objects. */
+  for (OBJ *temp_obj = ch->carrying, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+    next_obj = temp_obj->next_content;
+
+    stop = signal_object(temp_obj, signaler, cmd, arg);
   }
 
   /* Signal enchantments. */
@@ -3001,16 +2989,14 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
     stop = enchantment_special(temp_ench, ch, signaler, cmd, arg);
   }
 
-  if (cmd != MSG_ROUND) {
-    /* Signal NPCs. */
-    if (IS_NPC(ch)) {
-      if (cmd == MSG_MOBACT) {
-        mobile_activity(ch);
-      }
+  /* Signal NPCs. */
+  if (IS_NPC(ch)) {
+    if (cmd == MSG_MOBACT) {
+      mobile_activity(ch);
+    }
 
-      if (mob_proto_table[ch->nr].func) {
-        stop = mob_special(ch, signaler, cmd, arg);
-      }
+    if (mob_proto_table[ch->nr].func) {
+      stop = mob_special(ch, signaler, cmd, arg);
     }
   }
 

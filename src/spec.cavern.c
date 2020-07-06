@@ -64,7 +64,7 @@ int tajjo_ring(OBJ *ring, CHAR *ch, int cmd, char *arg) {
       act("A swirling cloud of darkness envelops your hand for an instant.",FALSE,ch,ring,NULL,TO_CHAR);
       break;
 
-    case MSG_BEING_REMOVED:
+    case MSG_OBJ_REMOVED:
       act("A voice from $n's sigil screams out in sudden agony.",FALSE,ch,ring,NULL,TO_NOTVICT);
       act("A voice from your sigil screams out in agony.",FALSE,ch,ring,NULL,TO_CHAR);
       break;

@@ -32,7 +32,7 @@ int green_beret(OBJ *beret, CHAR *ch, int cmd, char *arg)
 
   switch(cmd)
   {
-	case MSG_BEING_REMOVED:
+	case MSG_OBJ_REMOVED:
       if (ch != beret->equipped_by) return bReturn;
       if (!ch) return bReturn;
       if(beret==EQ(ch,WEAR_HEAD))

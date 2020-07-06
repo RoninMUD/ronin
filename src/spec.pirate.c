@@ -460,7 +460,7 @@ int marauders_boots(OBJ *boots, CHAR *ch, int cmd, char *arg)
 	    bReturn = TRUE;
       }
 	  break;
-	case MSG_BEING_REMOVED:
+	case MSG_OBJ_REMOVED:
       if (ch != boots->equipped_by) return bReturn;
       if (!ch) return bReturn;
       if(boots==EQ(ch,WEAR_FEET))

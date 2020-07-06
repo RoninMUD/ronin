@@ -1580,7 +1580,7 @@ void remove_item(struct char_data *ch, struct obj_data *obj, int pos) {
     return;
   }
 
-  if (signal_object(obj, ch, MSG_BEING_REMOVED, "")) return;
+  if (signal_object(obj, ch, MSG_OBJ_REMOVED, "")) return;
 
   if (IS_MORTAL(ch) && IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_NO_REMOVE)) {
     act("You can't remove $p.", 0, ch, obj, 0, TO_CHAR);

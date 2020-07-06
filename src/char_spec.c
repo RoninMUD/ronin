@@ -433,7 +433,7 @@ int taunt_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) 
 }
 
 void taunt_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
-  if (!ch || !victim || SAME_ROOM(ch, victim)) return;
+  if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   /* Taunt Messages
   {
@@ -485,21 +485,13 @@ void taunt_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
     }
   };
 
-  if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 20)) {
-    bool perform_check = TRUE;
+  if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 20)) {
+    if ((number(1, 1500) <= GET_LEARNED(ch, SKILL_TAUNT) + (GET_CON_REGEN(ch) * 2)) || (arg && !strcasecmp(arg, "NO_SKILL_CHECK"))) {
+      int taunt_message_idx = number(0, NUMELEMS(taunt_messages) - 1);
 
-    if (arg && *arg && !strcasecmp(arg, "NO_SKILL_CHECK")) {
-      perform_check = FALSE;
-    }
-
-    int check = number(1, 1500);
-
-    if (!perform_check || check <= (GET_LEARNED(ch, SKILL_TAUNT) + (GET_CON_REGEN(ch) * 2))) {
-      int taunt_msg_index = number(0, NUMELEMS(taunt_messages) - 1);
-
-      act(taunt_messages[taunt_msg_index][0], FALSE, ch, 0, victim, TO_NOTVICT);
-      act(taunt_messages[taunt_msg_index][1], FALSE, ch, 0, victim, TO_VICT);
-      act(taunt_messages[taunt_msg_index][2], FALSE, ch, 0, victim, TO_CHAR);
+      act(taunt_messages[taunt_message_idx][0], FALSE, ch, 0, victim, TO_NOTVICT);
+      act(taunt_messages[taunt_message_idx][1], FALSE, ch, 0, victim, TO_VICT);
+      act(taunt_messages[taunt_message_idx][2], FALSE, ch, 0, victim, TO_CHAR);
 
       enchantment_apply(victim, FALSE, "Taunted", SKILL_TAUNT, 3, ENCH_INTERVAL_ROUND, -(GET_DAMROLL(victim) / 10), APPLY_DAMROLL, 0, 0, taunt_enchantment);
     }
@@ -516,7 +508,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   int mimicee_count = 0;
 
   /* Count eligible mimicee's in the room. */
-  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next) {
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
     if ((temp_ch != ch) && IS_MORTAL(temp_ch) && SAME_GROUP(temp_ch, ch)) {
       mimicee_count++;
     }
@@ -530,7 +522,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   CHAR *mimicee = NULL;
 
   /* Get the chosen mimicee from the room's character list. */
-  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); !mimicee && temp_ch; temp_ch = temp_ch->next) {
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); !mimicee && temp_ch; temp_ch = temp_ch->next_in_room) {
     if ((temp_ch != ch) && IS_MORTAL(temp_ch) && SAME_GROUP(temp_ch, ch) && (--mimicee_num == 0)) {
       mimicee = temp_ch;
     }

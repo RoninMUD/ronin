@@ -26,6 +26,7 @@
 #include "enchant.h"
 #include "subclass.h"
 #include "quest.h"
+#include "aff_ench.h"
 
 /* Extern structures */
 
@@ -1818,27 +1819,26 @@ void spell_remove_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_sanctuary(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  struct affected_type_5 af;
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch != victim) {
+    send_to_char("Things are too chaotic to cast this spell on another player.\n\r", ch);
 
-  if (IS_AFFECTED(victim, AFF_SANCTUARY))
-    return;
-
-  if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && ch!=victim) { /* Chaos03 */
-    send_to_char("You cannot cast this spell on another player.\n\r",ch);
     return;
   }
 
-  if (!affected_by_spell(victim, SPELL_SANCTUARY)) {
-    act("$n is surrounded by a white aura.",TRUE,victim,0,0,TO_ROOM);
-    act("You start glowing.",TRUE,victim,0,0,TO_CHAR);
+  int duration = level / 5;
 
-    af.type      = SPELL_SANCTUARY;
-    af.duration  = level / 5;
-    af.modifier  = 0;
-    af.location  = APPLY_NONE;
-    af.bitvector = AFF_SANCTUARY;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
+  AFF *sanc = aff_get_from_char(victim, SPELL_SANCTUARY);
+  AFF *pod = aff_get_from_char(victim, SPELL_POWER_OF_DEVOTION);
+
+  if (sanc && pod && sanc->duration <= pod->duration && duration > sanc->duration) {
+    aff_remove(victim, sanc);
+  }
+
+  if (!IS_AFFECTED(victim, AFF_SANCTUARY)) {
+    aff_apply(victim, SPELL_SANCTUARY, duration, 0, 0, AFF_SANCTUARY, 0);
+
+    send_to_char("You start glowing.\n\r", victim);
+    act("$n is surrounded by a white aura.", TRUE, victim, 0, 0, TO_ROOM);
   }
 }
 
@@ -4427,13 +4427,13 @@ void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_lay_hands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   const int lay_hands_dispel_types[] = {
-    SPELL_PARALYSIS,
-    SPELL_CURSE,
     SPELL_BLINDNESS,
+    SPELL_PARALYSIS,
+    SPELL_HOLD,
+    SPELL_CURSE,
     SPELL_POISON,
     SPELL_CHILL_TOUCH,
-    SPELL_SLEEP,
-    -1
+    SPELL_SLEEP
   };
 
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && (ch != victim)) {
@@ -4455,15 +4455,11 @@ void spell_lay_hands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   /* Panacea */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 4)) {
-    if (!affected_by_spell(victim, SPELL_BLESS)) {
-      affect_apply(victim, SPELL_BLESS, MAX(GET_LEVEL(ch) / 5, 6), 1, APPLY_HITROLL, 0, 0);
-      affect_apply(victim, SPELL_BLESS, MAX(GET_LEVEL(ch) / 5, 6), -1, APPLY_SAVING_SPELL, 0, 0);
-
-      send_to_char("You feel righteous.\n\r", victim);
-    }
+    /* Bless */
+    spell_bless(level, ch, victim, 0);
 
     /* Remove up to two ailments from the lay_hands_dispel_types array, in order. */
-    for (int i = 0, j = 0; (lay_hands_dispel_types[i] != -1) && (i < NUMELEMS(lay_hands_dispel_types)) && (j < 2); i++) {
+    for (int i = 0, j = 0; (i < NUMELEMS(lay_hands_dispel_types)) && (j < 2); i++) {
       if (affected_by_spell(victim, lay_hands_dispel_types[i])) {
         affect_from_char(victim, lay_hands_dispel_types[i]);
         j++;

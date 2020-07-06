@@ -1906,52 +1906,101 @@ int Circlet (OBJ *circlet, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
+#define TOKEN_COOLDOWN    666
 
-int Charon_Token(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
-  int room=3014;
+int Charon_Token(OBJ *token ,CHAR *ch, int cmd, char *argument) {
+  int room=3014; // Market Square
+  int outTime = 0;
   char buf[MIL];
 
-  if(!ch) return FALSE;
-  if(!obj) return FALSE;
-  if(IS_NPC(ch)) return FALSE;
-  if(CHAOSMODE) return FALSE;
+  if(!ch || !token || IS_NPC(ch) || CHAOSMODE) return FALSE;
 
-  if(cmd == CMD_USE) {
+  switch (cmd) {
+  case CMD_EXAMINE:
+    if ((ch == token->equipped_by || ch == token->carried_by) && ch && !IS_NPC(ch)) {
+      one_argument(argument, buf);
 
-    if(!EQ(ch,HOLD) || EQ(ch,HOLD) != obj) return FALSE;
-    one_argument(argument, buf);
-    if(!isname(buf,OBJ_NAME(obj))) return FALSE;
-
-    if(V_OBJ(obj) == TOKEN_A) {
-      room=25318;
-      extract_obj(unequip_char(ch,HOLD));
+      if (AWAKE(ch) && token && (!strncmp(buf, "token", MIL) || !strncmp(buf, "charon", MIL) || !strncmp(buf, "coin", MIL))) {
+        if (token->spec_value <= 0) {
+          send_to_char("Charon's Token beckons you to call the ferryman.\n\r", ch);
+        }
+        else {
+          send_to_char("Charon's Token is as lifeless and cold as death itself.\n\r", ch);
+        }
+      }
     }
-
-    if(V_OBJ(obj) == TOKEN_B) {
-      room=25445;
-      extract_obj(unequip_char(ch,HOLD));
-    }
-
-    if(V_OBJ(obj) == TOKEN_C) {
-      room=25434;
-      extract_obj(unequip_char(ch,HOLD));
-    }
-
-    if(V_OBJ(obj) == TOKEN_D) {
-      room=25516;
-      extract_obj(unequip_char(ch,HOLD));
-    }
-
-    act("\n\rCharon appears and whisks you away to the depths of hell on his boat.\n\r",1,ch,0,0,TO_CHAR);
-    act("\n\rCharon appears and whisks $n away to the depths of hell on his boat.\n\r",1,ch,0,0,TO_ROOM);
-    char_from_room(ch);
-    char_to_room(ch, real_room(room));
-    do_look(ch,"",CMD_LOOK);
-    act("\n\rCharon takes your Token and disappears in a fine cloud of smoke.\n\r",1,ch,0,0,TO_CHAR);
-    act("\n\rCharon appears with $n, and disappears just as quickly with Token in hand.\n\r",1,ch,0,0,TO_ROOM);
     return TRUE;
+    break;
+  case MSG_TICK:
+    if ((ch == token->equipped_by || ch == token->carried_by) && token->spec_value > 0 && ch && !IS_NPC(ch)) {
+      if (token->spec_value > TOKEN_COOLDOWN) {
+        token->spec_value = TOKEN_COOLDOWN;
+      }
+      else if (token->spec_value <= TOKEN_COOLDOWN && token->spec_value > 0) {
+        token->spec_value--;
+      }
+      else {
+        token->spec_value = 0;
+      }
+    }
+    break;
 
+  case MSG_OBJ_ENTERING_GAME:
+    if ((ch == token->equipped_by || ch == token->carried_by) && token->spec_value > 0 && ch && !IS_NPC(ch)) {
+      if (is_number(argument)) {
+        outTime = atoi(argument); /* outTime = time in seconds since last in-game */
+        outTime /= 60; /* time in minutes since last in-game */
+        token->spec_value -= outTime; /* update time until next recharge based on time since last in-game */
+      }
+    }
+    break;
+
+  case CMD_USE:
+    if(!EQ(ch,HOLD) || EQ(ch,HOLD) != token) return FALSE;
+    one_argument(argument, buf);
+    if(!isname(buf,OBJ_NAME(token))) return FALSE;
+
+    if (token->spec_value > 0) {
+      send_to_char("You wave the token frantically, rub it feverishly, and shout out Charon's name; but nothing happens.\n\r", ch);
+      return TRUE;
+    }
+    else {
+      if (V_OBJ(token) == TOKEN_A) {
+        room = 25318;
+      }
+      else if (V_OBJ(token) == TOKEN_B) {
+        room = 25445;
+      }
+      else if (V_OBJ(token) == TOKEN_C) {
+        room = 25434;
+      }
+      else if (V_OBJ(token) == TOKEN_D) {
+        room = 25516;
+      }
+
+      act("\n\rCharon appears and whisks you away to the depths of hell on his boat.\n\r", 1, ch, 0, 0, TO_CHAR);
+      act("\n\rCharon appears and whisks $n away to the depths of hell on his boat.\n\r", 1, ch, 0, 0, TO_ROOM);
+      char_from_room(ch);
+      char_to_room(ch, real_room(room));
+      do_look(ch, "", CMD_LOOK);
+
+      if (chance(10)) {
+        extract_obj(unequip_char(ch, HOLD));
+        act("\n\rCharon takes your Token and disappears in a fine cloud of smoke.\n\r", 1, ch, 0, 0, TO_CHAR);
+        act("\n\rCharon appears and disappears just as quickly with $n's Token in hand.\n\r", 1, ch, 0, 0, TO_ROOM);
+      }
+      else {
+        token->spec_value = TOKEN_COOLDOWN;
+        send_to_char("Charon's Token flares red hot for an instant, then suddenly goes cold as death.\n\r", ch);
+      }
+      return TRUE;
+    }
+    break;
+
+  default:
+    break;
   }
+
   return FALSE;
 }
 
