@@ -8096,7 +8096,7 @@ Subclass Mercenary: Level 4 (Commando)
 
 Usage       : cast 'incendiary cloud' <target>
 Accumulative: no
-Duration    : Instantaneous / 60 seconds (damage over time)
+Duration    : Instantaneous / 10 rounds (damage over time)
 Save        : -
 Mana Cost   : 200
 Damage      : 500 + 150 per combat round for 10 rounds
@@ -8295,7 +8295,7 @@ more hit points (up to 750 at level 50).
 Additionally, when Lay Hands is cast on a target, it will grant the effects of
 the Bless spell to the target and will also remove up to two of the following
 negative effects per cast, in the following order of priority: blindness,
-paralysis, poison, curse, chill touch, sleep.
+paralysis, hold, curse, poison, chill touch, or sleep.
 
 See Also: SUBCLASSES CRUSADER "LAY HANDS"
 #
