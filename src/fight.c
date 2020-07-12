@@ -1652,7 +1652,7 @@ double apply_dmg_bonus(CHAR *ch) {
   for (ENCH *temp_ench = ch->enchantments, *next_ench; temp_ench; temp_ench = next_ench) {
     next_ench = temp_ench->next;
 
-    if (temp_ench->metadata && !strcasecmp(temp_ench->metadata, ENCH_MANTRA_HEAL)) {
+    if (temp_ench->metadata && !strcasecmp(temp_ench->metadata, ENCH_APPLY_DMG_PCT)) {
       dmg_bonus += temp_ench->temp[0];
     }
   }
