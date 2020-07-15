@@ -796,17 +796,18 @@ int tc_beast_spec(CHAR *beast, CHAR *ch, int cmd, char *arg) {
   int factor;
   int beastlev;
   char buf[MIL];
+  OBJ *tmp;
+  bool friend = FALSE;
 
-if(cmd!=MSG_MOBACT && cmd!=MSG_ZONE_RESET) return FALSE;
-if(cmd==MSG_ZONE_RESET) {
+  if(cmd!=MSG_MOBACT && cmd!=MSG_ZONE_RESET) return FALSE;
+  if(cmd==MSG_ZONE_RESET) {
 
     beastlev=number(5,45);
-   sprintf(buf, "emote tarkaes amnuort tzyae mnuuw, mnaefaemntzirb tzu itzs kyiptisy mahs.");
-   command_interpreter (beast, buf);
-   GET_LEVEL(beast)=beastlev;
-   return FALSE;
-
-}
+    sprintf(buf, "emote tarkaes amnuort tzyae mnuuw, mnaefaemntzirb tzu itzs kyiptisy mahs.");
+    command_interpreter (beast, buf);
+    GET_LEVEL(beast)=beastlev;
+    return FALSE;
+  }
 
   if(!beast->specials.fighting) return FALSE;
 
@@ -866,15 +867,32 @@ if(cmd==MSG_ZONE_RESET) {
   }
 
   if(chance(5)) {
-    if(!(vict=get_random_victim_fighting(beast))) return FALSE;
-    if(IS_NPC(vict)) return FALSE;
-    do_say(beast, "Huo amnaer'tz lpahirb faemnh vaimn.",CMD_SAY);
-    SET_BIT(vict->specials.affected_by2,AFF2_IMMINENT_DEATH);
-    if(!vict->specials.death_timer)
-      vict->specials.death_timer=number(3,45);
-    else
-
-      vict->specials.death_timer=MIN(vict->specials.death_timer,number(3,45));
+    vict = get_random_victim_fighting(beast);
+    if (vict && !IS_NPC(vict)) {
+      //check their equipment - if wearing any item from Tarion City, give them a pass
+      for (int i = 0; i <= HOLD; i++) {
+        if (!(tmp = vict->equipment[i]))
+          continue;
+        if (inzone(V_OBJ(tmp)) == 128) {
+          friend = TRUE;
+          break;
+        }
+      }
+      if (friend) {
+        // where'd you get that <item name> it's lovely
+        sprintf(buf, "Myaemnae't huo baetz '%s', itz's pufaeph.", OBJ_SHORT(tmp));
+        do_say(beast, buf, CMD_SAY);
+      }
+      else {
+        // you aren't playing very fair
+        do_say(beast, "Huo amnaer'tz lpahirb faemnh vaimn.",CMD_SAY);
+        SET_BIT(vict->specials.affected_by2,AFF2_IMMINENT_DEATH);
+        if(!vict->specials.death_timer)
+          vict->specials.death_timer=number(3,45);
+        else
+          vict->specials.death_timer=MIN(vict->specials.death_timer,number(3,45));
+      }
+    }
   }
 
   return FALSE;
