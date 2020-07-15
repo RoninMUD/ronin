@@ -620,24 +620,14 @@ int trysta_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         /* Don't warchant immortals or mobs that aren't attackers. */
         if (IS_IMMORTAL(vict) || (IS_NPC(vict) && (GET_OPPONENT(vict) != mob))) continue;
 
-        bool has_warchant = FALSE;
-
-        /* Iterate through the victim's affects and see if they already have the bad Warchant affect. */
-        for (AFF *temp_aff = vict->affected; temp_aff; temp_aff = temp_aff->next) {
-          if ((temp_aff->type == SPELL_WARCHANT) && (temp_aff->location == APPLY_HITROLL) && (temp_aff->modifier < 0)) {
-            has_warchant = TRUE;
-
-            break;
-          }
-        }
-
-        if (has_warchant) continue;
-
-        affect_apply(vict, SPELL_WARCHANT, 5, -4, APPLY_HITROLL, 0, 0);
+        affect_apply(vict, SPELL_WAR_CHANT_DEBUFF, 5, -4, APPLY_HITROLL, 0, 0);
 
         act("$n grows weak with panic!", FALSE, vict, 0, 0, TO_ROOM);
         printf_to_char(vict, "You grow weak with panic!\n\r");
       }
+
+      affect_apply(mob, SPELL_WAR_CHANT, 5, -2, APPLY_SAVING_ALL, 0, 0);
+      affect_apply(mob, SPELL_WAR_CHANT, 5, GET_DAMROLL(mob) * 0.3, APPLY_DAMROLL, 0, 0);
 
       return FALSE;
     }
@@ -857,9 +847,9 @@ int stram_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       act("$n makes an arcane gesture and $N is engulfed in a cloud of flames!", FALSE, mob, 0, vict, TO_NOTVICT);
       act("$n makes an arcane gesture and you are engulfed in a cloud of flames!", FALSE, mob, 0, vict, TO_VICT);
 
-      damage(mob, vict, 500, SPELL_INCENDIARY_CLOUD_NEW, DAM_FIRE);
+      damage(mob, vict, 500, SPELL_INCENDIARY_CLOUD, DAM_FIRE);
 
-      enchantment_apply(vict, TRUE, "Incendiary Cloud", SPELL_INCENDIARY_CLOUD_NEW, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
+      enchantment_apply(vict, TRUE, "Incendiary Cloud", SPELL_INCENDIARY_CLOUD, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
     }
     /* 15% Electric Shock */
     else if (rnd <= 30) {
@@ -1445,7 +1435,7 @@ int xykloqtium_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (!vict) return FALSE;
 
-      /* Throw the tank to the ground instead, causing damage. */
+      /* If he chose  the tank, throw them to the ground instead, causing damage. */
       if (vict == GET_OPPONENT(mob)) {
         act("$n grabs $N and throws $M to the ground!", FALSE, mob, 0, vict, TO_NOTVICT);
         act("$n grabs you and throws you to the ground!", FALSE, mob, 0, vict, TO_VICT);
@@ -1456,32 +1446,33 @@ int xykloqtium_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
         WAIT_STATE(vict, PULSE_VIOLENCE);
       }
+      /* Throw the chosen player. */
       else {
-        size_t maze_list_size = MAZE_MAX - MAZE_MIN;
+        /* Sanity check. */
+        if (MAZE_MAX - MAZE_MIN < 1) return FALSE;
 
-        /* Don't count the current room if the mob is in a maze room. */
-        if ((CHAR_VIRTUAL_ROOM(mob) >= MAZE_MIN) || (CHAR_VIRTUAL_ROOM(mob) <= MAZE_MAX)) {
-          maze_list_size -= 1;
+        int maze_room_list[MAZE_MAX - MAZE_MIN] = { 0 };
+
+        int maze_room_count = 0;
+
+        for (int maze_room_vnum = MAZE_MIN; maze_room_vnum <= MAZE_MAX; maze_room_vnum++) {
+          if (CHAR_VIRTUAL_ROOM(mob) != maze_room_vnum) {
+            maze_room_list[maze_room_count] = maze_room_vnum;
+
+            maze_room_count++;
+          }
         }
 
         /* Sanity check. */
-        if (maze_list_size < 1) return FALSE;
+        if (maze_room_count < 1) {
+          log_s("WARNING: Xykloqtium failed to find a valid maze room to throw a player into.");
 
-        int maze_list[maze_list_size];
-
-        for (int i = 0, j = 0; (i < (MAZE_MAX - MAZE_MIN)) && (j < maze_list_size); i++) {
-          if (CHAR_VIRTUAL_ROOM(mob) == MAZE_MIN + i) continue;
-
-          maze_list[i] = MAZE_MIN + i;
-          j++;
+          return FALSE;
         }
 
-        shuffle_int_array(maze_list, NUMELEMS(maze_list));
+        shuffle_int_array(maze_room_list, maze_room_count);
 
-        int maze_room = real_room(maze_list[0]);
-
-        /* Somehow we failed to find a suitable maze room; abort. */
-        if (!maze_room) return FALSE;
+        int maze_room = real_room(maze_room_list[0]);
 
         act("$n reaches out, grabs $N, and throws $M into the swirling mists!", FALSE, mob, 0, vict, TO_NOTVICT);
         act("$n reaches out, grabs you, and throws you into the swirling mists!", FALSE, mob, 0, vict, TO_VICT);
@@ -1742,11 +1733,11 @@ int mantle_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     int rnd = number(1, 100);
 
     /* 10% 1 damage. */
-    if (rnd <= 20) {
+    if (rnd <= 10) {
       OBJ_AFF_MOD(obj, 1) = 1;
     }
     /* 30% 2 damage. */
-    else if (rnd <= 50) {
+    else if (rnd <= 40) {
       OBJ_AFF_MOD(obj, 1) = 2;
     }
     /* 40% 3 damage. */
@@ -1946,7 +1937,11 @@ int frostbrand_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       act("$n's $f drains the warmth from you as it strikes you!", TRUE, ch, OBJ_NAME(obj), vict, TO_VICT);
       act("Your $f drains the warmth from $N as it strikes $M!", TRUE, ch, OBJ_NAME(obj), vict, TO_CHAR);
 
+      int set_pos = GET_POS(vict);
+
       damage(ch, vict, 100, TYPE_UNDEFINED, DAM_COLD);
+
+      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
 
       if (!affected_by_spell(vict, SPELL_CHILL_TOUCH)) {
         affect_apply(vict, SPELL_CHILL_TOUCH, 1, -2, APPLY_STR, 0, 0);
