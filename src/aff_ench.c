@@ -243,20 +243,27 @@ void aff_total_char(CHAR *ch) {
 
   if (GET_STR(ch) > 18) {
     if (GET_OSTR(ch) <= 18) {
+      int i = GET_ADD(ch) + ((GET_STR(ch) - 18) * 10);
+
       GET_STR(ch) = 18;
-      GET_ADD(ch) = MIN(GET_ADD(ch) + ((GET_STR(ch) - 18) * 10), 100);
+      GET_ADD(ch) = MIN(i, 100);
     }
     else {
       GET_STR(ch) = MIN(GET_STR(ch), GET_OSTR(ch));
     }
   }
-  else if (GET_STR(ch) < 18) {
-    GET_STR(ch) += GET_ADD(ch) / 10;
-    GET_ADD(ch) -= (GET_ADD(ch) / 10) * 10;
+
+  if (GET_STR(ch) < 18) {
+    int i = GET_ADD(ch) / 10;
+
+    GET_STR(ch) += i;
+    GET_ADD(ch) -= i * 10;
 
     if (GET_STR(ch) > 18) {
+      i = GET_ADD(ch) + ((GET_STR(ch) - 18) * 10);
+
       GET_STR(ch) = 18;
-      GET_ADD(ch) = MIN(GET_ADD(ch) + ((GET_STR(ch) - 18) * 10), 100);
+      GET_ADD(ch) = MIN(i, 100);
     }
   }
 
@@ -412,6 +419,8 @@ void aff_join(CHAR *ch, AFF *aff, bool avg_dur, bool avg_mod) {
     if (avg_dur) {
       aff->duration /= 2;
     }
+
+    INC_SCHAR(aff->modifier, existing_aff->modifier);
 
     if (avg_mod) {
       aff->modifier /= 2;
