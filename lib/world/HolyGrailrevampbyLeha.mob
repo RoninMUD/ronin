@@ -15,6 +15,8 @@ strength.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8602
 european swallow~
 A european swallow~
@@ -31,6 +33,8 @@ through the air, as the bird continues to attempt to fly away in vain.
 9 9 0
 83 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8603
 african swallow~
 An african swallow~
@@ -47,6 +51,8 @@ watch you as it snacks on its meal.
 9 9 0
 83 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8604
 french guard~
 a French Guard~
@@ -66,6 +72,8 @@ his attire, it would seem he has continued to make remarks about you.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8605
 crowd~
 A crowd~
@@ -83,6 +91,8 @@ soul.
 8 8 0
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8606
 knight ni~
 A Knight of Ni~
@@ -94,11 +104,13 @@ head as he sites you, yelling something at you about trespassing. As you
 go to explain your situation, he begins to scream, 'Ni! Ni! Ni!'
 ~
 11 32776 -500 Y
-27 -10 -4 2d50+1500 4d6+3
+27 -7 -4 2d50+1500 4d6+3
 10000 210000
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8607
 knight~
 The Knight with Three Heads~
@@ -115,6 +127,8 @@ of his heads turn and acknowledge your presence.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8608
 witch girl~
 an Accused Girl~
@@ -132,6 +146,8 @@ the other half of the scale.
 6 6 2
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8609
 bride~
 a Bride~
@@ -149,6 +165,8 @@ is to marry must be feeling right about now.
 8 8 2
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8610
 father~
 The Father of the Bride~
@@ -166,6 +184,8 @@ girl.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8611
 prince~
 a Prince~
@@ -182,6 +202,8 @@ tears of sadness stroll down his cheeks.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8612
 father~
 The Father of the Prince~
@@ -199,6 +221,8 @@ just as much larger as the land itself.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8613
 guard bridge death~
 a Guard of the Bridge of Death~
@@ -215,6 +239,8 @@ to bulk and bustle with ways and means of hurting you badly.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8614
 tim enchanter~
 Tim the Enchanter~
@@ -233,6 +259,8 @@ to land.
 8 8 1
 1 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8615
 cute little rabbit~
 a Cute Little Rabbit~
@@ -250,6 +278,8 @@ I don't think this is the right rabbit for your stew though.
 8 8 0
 86 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8616
 man collecting dead people~
 a Man Collecting Dead People~
@@ -267,6 +297,8 @@ but suffocating to death in the stench and wretchedness of this old man's cart.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8617
 farmer~
 a Farmer~
@@ -284,6 +316,8 @@ brown mud stains.
 8 8 1
 69 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8618
 moose~
 a Moose~
@@ -301,6 +335,8 @@ Although, I wouldn't want to take this moose for granted.
 8 8 1
 86 0 0d0+0 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
 #8619
 castle guard~
 a Castle Guard~
@@ -318,7 +354,7 @@ steady.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8620
 girl redhead~
 a delicious looking redhead~
@@ -337,7 +373,7 @@ tackle yours, sending shivers down your spine.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8621
 girl blonde~
 a scantily clad blonde~
@@ -355,7 +391,7 @@ there isn't much to be hidden on this scantily clad goddess.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8622
 girl brunette~
 a brunette in a pink teddy~
@@ -373,7 +409,7 @@ though a mist surrounds her torso area.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8623
 girl raven~
 a girl with raven hair~
@@ -393,7 +429,7 @@ appearance of this woman, she must want to be hurt in a most loving way.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8624
 girl redhead~
 a mischievous redhead~
@@ -413,7 +449,7 @@ breeze.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8625
 girl brunette~
 a breathtaking brunette~
@@ -430,7 +466,7 @@ straight, you can see a flimsy green teddy gliding into place.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8626
 girl blonde~
 an alluring blonde~
@@ -448,7 +484,7 @@ scarf at a time, off of her.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8627
 girl dingo~
 Dingo~
@@ -467,7 +503,7 @@ of being looked at like a sex toy comes over your senses.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8628
 girl zoot~
 Zoot~
@@ -486,7 +522,7 @@ aggressive as she grasps and grabs in the most embarassing places.
 69 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8629
 girl doctor piglet~
 Doctor Piglet~
@@ -504,7 +540,7 @@ health.
 69 0 0d0+0 0
 0 0 2 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8630
 doctor winston girl~
 Doctor Winston~
@@ -522,7 +558,7 @@ examination.
 69 0 0d0+0 0
 0 0 2 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #8631
 wooden badger~
 a ferocious wooden badger~
@@ -540,6 +576,6 @@ might just be enough to cause some real damage.
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~

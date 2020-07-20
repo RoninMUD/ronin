@@ -271,7 +271,7 @@ bloody potion~
 bloody potion~
 A potion of blood is lying on the ground.~
 ~
-10 268566592 16385
+10 268435520 16385
 30 36 1 28
 1 15000 1
 50
@@ -557,7 +557,7 @@ potion trans transparent~
 transparent potion~
 A potion of invisibility is lying on the ground.~
 ~
-10 268566529 16385
+10 268435457 16385
 30 28 98 75
 1 45000 15000
 50

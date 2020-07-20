@@ -144,12 +144,12 @@ A Statue of Peace is standing here.~
 10 10 10
 10
 E
-peace~
+statue~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
 E
-statue~
+peace~
 This statue appears to be keeping the surrounding area
 quiet and peaceful.
 ~
@@ -628,7 +628,7 @@ wall thorns~
 Wall of Thorns~
 A wall of thorns blocks all exits.~
 ~
-12 0 0
+12 131072 0
 0 0 0 0
 10 10 10
 10

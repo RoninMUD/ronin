@@ -110,18 +110,18 @@ A well worn road ambles along in your view.
 ~
 0 -1 8604
 E
-nest~
-Bits and pieces of coconut shells litter the nest. Broken shells lie
-in pieces on the outer edge of the tree. You can't see any baby swallows,
-but best to get away from the nest before an angry parent returns.
-~
-E
 tree~
 This itsy bitsy tree appeared to be young, but upon closer inspection,
 you see that it must be years and years older then any of the other
 trees in your vision. It's short stature seems to get more and more
 confusing each moment. In the top of the tree you can see a swallows
 nest.
+~
+E
+nest~
+Bits and pieces of coconut shells litter the nest. Broken shells lie
+in pieces on the outer edge of the tree. You can't see any baby swallows,
+but best to get away from the nest before an angry parent returns.
 ~
 S
 #8604
@@ -808,10 +808,11 @@ A large ballroom hums with music and laughter.
 ~
 0 -1 8635
 E
-flowers~
-Flowers of all sizes and shape have been arranged in pots, vases and cauldrons
-of all size. From the delicate  whites, to seething reds, these flowers add a
-bright light to the gathering of people around.
+paintings~
+All along the upper reaches of the walls, hang beautiful paintings. Long
+pieces of silk adorn their edges with soft colors. As people pass on the
+stairs below, the gentle breeze of them walking, drifts up to the silks,
+making them billow and twirl daintily.
 ~
 E
 gifts~
@@ -822,11 +823,10 @@ Although, in this case, the bride doesn't appear to have been given the
 chance of being unpure.
 ~
 E
-paintings~
-All along the upper reaches of the walls, hang beautiful paintings. Long
-pieces of silk adorn their edges with soft colors. As people pass on the
-stairs below, the gentle breeze of them walking, drifts up to the silks,
-making them billow and twirl daintily.
+flowers~
+Flowers of all sizes and shape have been arranged in pots, vases and cauldrons
+of all size. From the delicate  whites, to seething reds, these flowers add a
+bright light to the gathering of people around.
 ~
 S
 #8635
@@ -844,19 +844,19 @@ A hallway glitters into your view.
 ~
 0 -1 8634
 E
+chandelier~
+In the center of the room hangs the most exquistite glass chandelier.
+Within it, candles have been delicately placed in their seperate holders.
+Visions of rescuing the princess and flying over the room runs through
+your head, until you actually catch site of the princess.
+~
+E
 table food~
 A rack of beef ribs, turkey and chicken legs, and even a full pig, roasted
 to perfection, sits in the middle of this long table. Bowls filled with the
 finest fruits, nuts and salads decorate the areas between the huge array of
 meat products. Near one end of the table, shiny silver goblets filled to the
 brim with fine wines, invite anyone to come and have a taste.
-~
-E
-chandelier~
-In the center of the room hangs the most exquistite glass chandelier.
-Within it, candles have been delicately placed in their seperate holders.
-Visions of rescuing the princess and flying over the room runs through
-your head, until you actually catch site of the princess.
 ~
 S
 #8636
@@ -945,18 +945,18 @@ A beautiful castle towers in the sky above.
 ~
 0 -1 8633
 E
+tree~
+This huge tree seems to be an oak. Its long branches rustle and sway as a
+gentle breeze passes by. A few leaves fall to the ground around you as a
+twitter from above catches your attention.
+~
+E
 nest~
 Above, on a high branch, you can see a large nest. Within it, there are small
 baby swallows. By the looks of things, they appear to be european swallows.
 The white crest of feathers upon their head looks wet, as if they have just
 recently been hatched. With that being the case, it most probably isn't a
 good idea to get much closer, or risk loosing an eye in the process.
-~
-E
-tree~
-This huge tree seems to be an oak. Its long branches rustle and sway as a
-gentle breeze passes by. A few leaves fall to the ground around you as a
-twitter from above catches your attention.
 ~
 S
 #8640

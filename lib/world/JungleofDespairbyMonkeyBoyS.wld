@@ -166,11 +166,11 @@ D3
 0 -1 27607
 E
 horseflies~
-They swarm all around you, getting into your eyes, nose and ears.  Very annoying.
+They swarm all around you, getting into your eyes, nose and ears. Very annoying.
 ~
 E
 horseflies~
-They swarm all around you, getting into your eyes, nose and ears. Very annoying.
+They swarm all around you, getting into your eyes, nose and ears.  Very annoying.
 ~
 S
 #27609
@@ -244,15 +244,15 @@ D2
 ~
 0 -1 27617
 E
-moths~
-~
-E
-moths~
-The light grey insects flutter about your light source.
-~
-E
 moth~
 The light grey insects flutter about your light source.
+~
+E
+moths~
+The light grey insects flutter about your light source.
+~
+E
+moths~
 ~
 S
 #27612
@@ -362,10 +362,7 @@ D5
 ~
 0 -1 27652
 E
-27693~
-~
-E
-hole~
+water~
 Inviting to drink from, refreshing to swim in.
 ~
 E
@@ -373,8 +370,11 @@ watering~
 Inviting to drink from, refreshing to swim in.
 ~
 E
-water~
+hole~
 Inviting to drink from, refreshing to swim in.
+~
+E
+27693~
 ~
 S
 #27616
@@ -395,24 +395,24 @@ D3
 ~
 0 -1 27680
 E
-kettle~
-It is just about to come to a boil.
-~
-E
-rifle~
-They are stacked in little tepee shapes all over the place.
-~
-E
-rifles~
-They are stacked in little tepee shapes all over the place.
+tents~
+Big white tents with red 'rising sun' circles on them.
 ~
 E
 tent~
 Big white tents with red 'rising sun' circles on them.
 ~
 E
-tents~
-Big white tents with red 'rising sun' circles on them.
+rifles~
+They are stacked in little tepee shapes all over the place.
+~
+E
+rifle~
+They are stacked in little tepee shapes all over the place.
+~
+E
+kettle~
+It is just about to come to a boil.
 ~
 S
 #27617
@@ -441,11 +441,11 @@ D3
 ~
 0 -1 27616
 E
-insects~
+insect~
 Yeah, this place is crawling with them.
 ~
 E
-insect~
+insects~
 Yeah, this place is crawling with them.
 ~
 S
@@ -531,11 +531,11 @@ D3
 ~
 0 -1 27619
 E
-hut~
+huts~
 Made of mud and sticks.  Not very sturdy.
 ~
 E
-huts~
+hut~
 Made of mud and sticks.  Not very sturdy.
 ~
 S
@@ -577,12 +577,12 @@ D2
 ~
 0 -1 27628
 E
-head~
-Ants are already working away on it. Disgusting!
-~
-E
 ants~
 They're busy working away on the head.
+~
+E
+head~
+Ants are already working away on it. Disgusting!
 ~
 S
 #27623
@@ -614,11 +614,11 @@ D5
 ~
 0 -1 27683
 E
-mound~
+nest~
 There is a hole at the top you can enter it through.
 ~
 E
-nest~
+mound~
 There is a hole at the top you can enter it through.
 ~
 S
@@ -694,16 +694,16 @@ D3
 ~
 0 -1 27625
 E
-hut~
-Made of dried mud and sticks.
+cloth~
+Colorful strips of cloth are tied tightly to the huts.
 ~
 E
 huts~
 Made of dried mud and sticks.
 ~
 E
-cloth~
-Colorful strips of cloth are tied tightly to the huts.
+hut~
+Made of dried mud and sticks.
 ~
 S
 #27627
@@ -750,17 +750,25 @@ D2
 ~
 0 -1 27634
 E
-stone~
-A large yellow stone with a flat top.
+flint~
+Probably used to start the ritual fires of the temple.
 ~
 E
-altar~
-A large yellow stone with a flat top.
+sculpture~
+A picture of a king riding a ... tiger?
+~
+E
+pottery~
+Useless shards of broken pottery.
+~
+E
+shards~
+Useless shards of broken pottery.
 ~
 E
 tree~
-Ancient, but hideously deformed.  What must its roots fed on when it was 
-young and still growing?
+Ancient, but hideously deformed.  What must its roots
+have fed on when it was young and still growing?
 ~
 E
 tree~
@@ -769,24 +777,16 @@ have fed on when it was still young and growing?
 ~
 E
 tree~
-Ancient, but hideously deformed.  What must its roots
-have fed on when it was young and still growing?
+Ancient, but hideously deformed.  What must its roots fed on when it was 
+young and still growing?
 ~
 E
-shards~
-Useless shards of broken pottery.
+altar~
+A large yellow stone with a flat top.
 ~
 E
-pottery~
-Useless shards of broken pottery.
-~
-E
-sculpture~
-A picture of a king riding a ... tiger?
-~
-E
-flint~
-Probably used to start the ritual fires of the temple.
+stone~
+A large yellow stone with a flat top.
 ~
 S
 #27629
@@ -814,24 +814,24 @@ D3
 ~
 0 -1 27628
 E
-tree~
-Part of the natural erosion process. Someday all this will be gone.
-~
-E
-tree~
-Part of the natural erosion process. Someday these ruins will be gone.
-~
-E
-trees~
-Part of the natural erosion process. Someday these ruins will be gone.
+pyramid~
+Overgrown with plant life, but you can tell they are HUGE!
 ~
 E
 pyramids~
 Overgrown with plant life, but you can tell they are HUGE!
 ~
 E
-pyramid~
-Overgrown with plant life, but you can tell they are HUGE!
+trees~
+Part of the natural erosion process. Someday these ruins will be gone.
+~
+E
+tree~
+Part of the natural erosion process. Someday these ruins will be gone.
+~
+E
+tree~
+Part of the natural erosion process. Someday all this will be gone.
 ~
 S
 #27630
@@ -877,11 +877,7 @@ D3
 ~
 0 -1 27630
 E
-mosquitos~
-They would eat you alive if you let them.
-~
-E
-horseflies~
+mosquito~
 They would eat you alive if you let them.
 ~
 E
@@ -889,7 +885,11 @@ horsefly~
 They would eat you alive if you let them.
 ~
 E
-mosquito~
+horseflies~
+They would eat you alive if you let them.
+~
+E
+mosquitos~
 They would eat you alive if you let them.
 ~
 S
@@ -937,11 +937,11 @@ D3
 0 -1 27632
 E
 tracks~
-goddamit
+Almost perfect circles, several inches across. They head east.
 ~
 E
 tracks~
-Almost perfect circles, several inches across. They head east.
+goddamit
 ~
 S
 #27634
@@ -967,12 +967,12 @@ head~
 11 -1 27651
 E
 head~
-Gigantic, it would barely fit in your guild's 
-practice yard back in town
+Gigantic, it would barely fit in your guild's practice yard back in town.
 ~
 E
 head~
-Gigantic, it would barely fit in your guild's practice yard back in town.
+Gigantic, it would barely fit in your guild's 
+practice yard back in town
 ~
 S
 #27635
@@ -1042,16 +1042,16 @@ D3
 ~
 0 -1 27636
 E
-cliffs~
-Jet black obsidian. Very slippery.
+river~
+A slow moving, muddy river. It must be very old.
 ~
 E
 cliff~
 Jet black obsidian. Very slippery.
 ~
 E
-river~
-A slow moving, muddy river. It must be very old.
+cliffs~
+Jet black obsidian. Very slippery.
 ~
 S
 #27638
@@ -1076,11 +1076,11 @@ D3
 ~
 0 -1 27637
 E
-cliff~
+cliffs~
 Jet black obsidian. Very slippery.
 ~
 E
-cliffs~
+cliff~
 Jet black obsidian. Very slippery.
 ~
 S
@@ -1120,11 +1120,11 @@ D1
 ~
 0 -1 27641
 E
-plant~
+plants~
 They have been extinct for millions of years.
 ~
 E
-plants~
+plant~
 They have been extinct for millions of years.
 ~
 S
@@ -1204,7 +1204,12 @@ D3
 ~
 0 -1 27642
 E
-bones~
+flies~
+They form a dark, almost opaque cloud.  You're glad they're too busy eating
+the remains of the creature or they might be attacking you!
+~
+E
+remains~
 Ripped apart and strewn over a large area.  They look fairly fresh.
 ~
 E
@@ -1212,13 +1217,8 @@ skeleton~
 Ripped apart and strewn over a large area.  It looks like a fresh kill.
 ~
 E
-remains~
+bones~
 Ripped apart and strewn over a large area.  They look fairly fresh.
-~
-E
-flies~
-They form a dark, almost opaque cloud.  You're glad they're too busy eating
-the remains of the creature or they might be attacking you!
 ~
 S
 #27644
@@ -1255,8 +1255,20 @@ D1
 ~
 0 -1 27646
 E
+cliffs~
+Jet black obsidian. Very slippery.
+~
+E
+cliff~
+Jet black obsidian. Very slippery.
+~
+E
+blood~
+It is not fresh.
+~
+E
 scratches~
-The arrow point to the valley entrance.
+The arrow points to the valley entrance.
 ~
 E
 arrow~
@@ -1264,19 +1276,7 @@ The arrow points to the valley entrance.
 ~
 E
 scratches~
-The arrow points to the valley entrance.
-~
-E
-blood~
-It is not fresh.
-~
-E
-cliff~
-Jet black obsidian. Very slippery.
-~
-E
-cliffs~
-Jet black obsidian. Very slippery.
+The arrow point to the valley entrance.
 ~
 S
 #27646
@@ -1326,11 +1326,11 @@ D3
 0 -1 27646
 E
 cloud~
-It seems to be moving in a circle. How odd.
+It seems to be moving in a circle. How odd. Maybe its not a cloud after all.
 ~
 E
 cloud~
-It seems to be moving in a circle. How odd. Maybe its not a cloud after all.
+It seems to be moving in a circle. How odd.
 ~
 S
 #27648
@@ -1354,11 +1354,11 @@ D3
 ~
 0 -1 27647
 E
-crystal~
+crystals~
 Taller than you, they sparkle in the light.
 ~
 E
-crystals~
+crystal~
 Taller than you, they sparkle in the light.
 ~
 S
@@ -1401,7 +1401,11 @@ D4
 cliff up~
 11 -1 27664
 E
-cliff~
+river~
+It disappears under the obsidian cliffs to the south.
+~
+E
+face~
 You may be able to climb it, but don't slip!
 ~
 E
@@ -1409,12 +1413,8 @@ cliffs~
 You may be able to climb it, but don't slip!
 ~
 E
-face~
+cliff~
 You may be able to climb it, but don't slip!
-~
-E
-river~
-It disappears under the obsidian cliffs to the south.
 ~
 S
 #27651
@@ -1430,13 +1430,13 @@ D5
 head~
 11 -1 27634
 E
-throne~
-The throne is inextricably enmeshed in a large tree.
-~
-E
 tree~
 The gigantic tree has grown around a large portion of the
 throne, making it difficult to sit on.
+~
+E
+throne~
+The throne is inextricably enmeshed in a large tree.
 ~
 S
 #27652
@@ -1537,13 +1537,13 @@ D5
 ~
 0 -1 27674
 E
-fungus~
-It glows a soft orange color, enough to see by.
-~
-E
 steps~
 Hewn from the sandstone floors and walls of this natural cave.  They look
 like they have been used regularly and recently.
+~
+E
+fungus~
+It glows a soft orange color, enough to see by.
 ~
 S
 #27658
@@ -1589,13 +1589,13 @@ D3
 ~
 0 -1 27657
 E
-frescoes~
-Etched into the sandstone walls, they represent dozens of sickening acts.
-~
-E
 cave~
 The walls and floor are now straight and regular.  It must have taken years
 to carve all of this out.
+~
+E
+frescoes~
+Etched into the sandstone walls, they represent dozens of sickening acts.
 ~
 S
 #27660
@@ -1663,9 +1663,9 @@ D2
 ~
 0 -1 27663
 E
-altar~
-Fresh blood provides a slick layer for the thickness of dried blood caked
-underneath.  Here and there you can see a streaked, pleading hand print.
+corpse~
+All the blood has been sucked out of them.  Their skin is a pale bluish-
+white.
 ~
 E
 corpses~
@@ -1673,9 +1673,9 @@ All the blood has been sucked out of them.  Their skin is a pale bluish-
 white.
 ~
 E
-corpse~
-All the blood has been sucked out of them.  Their skin is a pale bluish-
-white.
+altar~
+Fresh blood provides a slick layer for the thickness of dried blood caked
+underneath.  Here and there you can see a streaked, pleading hand print.
 ~
 S
 #27663
@@ -1695,11 +1695,11 @@ D3
 ~
 0 -1 27660
 E
-pentagrams~
+pentagram~
 They cover all surfaces in insane, overlapping patterns.
 ~
 E
-pentagram~
+pentagrams~
 They cover all surfaces in insane, overlapping patterns.
 ~
 S
@@ -1868,7 +1868,7 @@ D3
 ~
 0 -1 27672
 E
-bones~
+ivory~
 Bleached white by the Sun, scattered all over the place.
 ~
 E
@@ -1876,7 +1876,7 @@ bone~
 Bleached white by the Sun, scattered all over the place.
 ~
 E
-ivory~
+bones~
 Bleached white by the Sun, scattered all over the place.
 ~
 S
@@ -1986,11 +1986,7 @@ D4
 ~
 0 -1 27661
 E
-skeleton~
-Red, meaty flesh still clings to the bones.
-~
-E
-corpse~
+remains~
 Red, meaty flesh still clings to the bones.
 ~
 E
@@ -1998,7 +1994,11 @@ corpses~
 Red, meaty flesh still clings to the bones.
 ~
 E
-remains~
+corpse~
+Red, meaty flesh still clings to the bones.
+~
+E
+skeleton~
 Red, meaty flesh still clings to the bones.
 ~
 S
@@ -2019,24 +2019,24 @@ D1
 ~
 0 -1 27616
 E
-rifles~
-They are stacked in little teepee shapes all over the place.
-~
-E
-tents~
-Big white tents with red 'rising sun' circles on them.
-~
-E
-tent~
-Big white tents with red 'rising sun' circles on them.
+crate~
+Wooden crates stacked in neat columns.
 ~
 E
 crates~
 Wooden crates stacked in neat columns.
 ~
 E
-crate~
-Wooden crates stacked in neat columns.
+tent~
+Big white tents with red 'rising sun' circles on them.
+~
+E
+tents~
+Big white tents with red 'rising sun' circles on them.
+~
+E
+rifles~
+They are stacked in little teepee shapes all over the place.
 ~
 S
 #27681
@@ -2071,17 +2071,17 @@ D1
 ~
 0 -1 27681
 E
-totem~
-It's some weird-looking metallic object with red paintings on it and
-the letters 'Coca Cola' all over it.
+fan~
+An electric cieling fan.  You could easily stop it with your hand.
 ~
 E
 fire~
 Ouch! It burns, it burns!!!
 ~
 E
-fan~
-An electric cieling fan.  You could easily stop it with your hand.
+totem~
+It's some weird-looking metallic object with red paintings on it and
+the letters 'Coca Cola' all over it.
 ~
 S
 #27683
@@ -2177,11 +2177,11 @@ D3
 ~
 0 -1 27688
 E
-rock~
+granite~
 It is granite. You can't tell how thick it is.
 ~
 E
-granite~
+rock~
 It is granite. You can't tell how thick it is.
 ~
 S
@@ -2319,12 +2319,12 @@ D1
 ~
 0 -1 27697
 E
-flies~
-They look mighty hungry!
-~
-E
 fly~
 It looks mighty hungry!
+~
+E
+flies~
+They look mighty hungry!
 ~
 S
 #27695
@@ -2418,4 +2418,3 @@ D3
 S
 #0
 $~
-

@@ -180,7 +180,7 @@ battered iron necklace~
 A Battered Iron Necklace~
 An ugly necklace lies here, battered and worn.~
 ~
-9 210911744 5
+9 210780672 5
 0 0 0 0
 22 5000000 50000
 1
@@ -233,7 +233,7 @@ hairbrush dirty befouled~
 A Befouled Hairbrush~
 A hairbrush sits here, filthy and covered in grease.~
 ~
-9 147968 16385
+9 16896 16385
 0 0 0 0
 10 1000 20000
 1
@@ -309,7 +309,7 @@ broom ragged~
 A Ragged Broom~
 A ragged broom sits here, its straw almost all fallen out.~
 $r broom flies up in the face of $V.~
-5 147968 8193
+5 16896 8193
 1 7 3 3
 10 2000 5000
 1
@@ -472,7 +472,20 @@ A decaying manuscript sits here.~
 10 10 10
 2
 E
-page2~
+manuscript ancient~
+In the Month of the Battle, Year 143 of the Second Great Age
+of Dark, the Storm Giant King Calaphas visited the realm of
+his giant-kin brethren, the Ogres.
+
+The visit was a matter of state, and he was greeted with all
+pomp and circumstance by the Ogre King, Urshkank.  Though
+relations between the two kingdoms had been strained for
+many years, Urshkank had high hopes for the meeting.  He
+believed that Calaphas came to extend his hand in friendship,
+that the two kingdoms could work together to prosper and
+battle against the rising alliance of Elves which threatened
+their mutual survival.
+
 Instead what occurred was a betrayal of the worst sort.  As
 soon as the meeting had begun and the two were left alone,
 Calaphas turned on Urshkank, pinning him beneath his
@@ -481,13 +494,12 @@ storm-born gauntlets and choking the life from him.
 In the chaos and confusion that followed, Calaphas set fire
 to the keep, a signal to those who lay in wait.  Within minutes
 an army fo Storm Giants, supported by their sworn enemies,
-the Elves of the Mountains, swept in and massacred nearly
-the entire Ogre population.
-
-That day, the day of the Great Gods, was the final end of
-the mighty kingdom of the Ogres, but it too signaled the
-decline of the other giant-kin, and of the mighty Giants
-themselves.
+~
+E
+manuscript ancient~
+This ancient manuscript is scrawled in a sloppy hand, as
+though by a scarcely literate person.  There are only
+two pages, and they are both quite short.
 ~
 E
 page1~
@@ -505,26 +517,7 @@ battle against the rising alliance of Elves which threatened
 their mutual survival.
 ~
 E
-manuscript ancient~
-This ancient manuscript is scrawled in a sloppy hand, as
-though by a scarcely literate person.  There are only
-two pages, and they are both quite short.
-~
-E
-manuscript ancient~
-In the Month of the Battle, Year 143 of the Second Great Age
-of Dark, the Storm Giant King Calaphas visited the realm of
-his giant-kin brethren, the Ogres.
-
-The visit was a matter of state, and he was greeted with all
-pomp and circumstance by the Ogre King, Urshkank.  Though
-relations between the two kingdoms had been strained for
-many years, Urshkank had high hopes for the meeting.  He
-believed that Calaphas came to extend his hand in friendship,
-that the two kingdoms could work together to prosper and
-battle against the rising alliance of Elves which threatened
-their mutual survival.
-
+page2~
 Instead what occurred was a betrayal of the worst sort.  As
 soon as the meeting had begun and the two were left alone,
 Calaphas turned on Urshkank, pinning him beneath his
@@ -533,6 +526,13 @@ storm-born gauntlets and choking the life from him.
 In the chaos and confusion that followed, Calaphas set fire
 to the keep, a signal to those who lay in wait.  Within minutes
 an army fo Storm Giants, supported by their sworn enemies,
+the Elves of the Mountains, swept in and massacred nearly
+the entire Ogre population.
+
+That day, the day of the Great Gods, was the final end of
+the mighty kingdom of the Ogres, but it too signaled the
+decline of the other giant-kin, and of the mighty Giants
+themselves.
 ~
 X
 ~

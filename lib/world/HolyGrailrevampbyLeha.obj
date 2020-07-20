@@ -62,7 +62,7 @@ phony nose~
 a Phony Nose~
 An ugly nose that is surely phony lies in the dirt here.~
 ~
-9 131072 17
+9 0 17
 5 0 0 0
 5 1000 100
 60
@@ -83,7 +83,7 @@ black helmet~
 a Helmet of the Black Knight~
 A helmet belonging to a powerful knight lies here on the ground.~
 ~
-9 262144 17
+9 0 17
 5 0 0 0
 10 5000 500
 50
@@ -374,7 +374,7 @@ pink teddy~
 a Pink Teddy~
 A pink, feminine garment lies at your feet.~
 ~
-9 134348800 9
+9 134217728 9
 5 0 0 0
 3 1000 100
 35
@@ -395,7 +395,7 @@ lace gstring~
 a Lace G-String~
 A piece of lace string lies at your feet.~
 ~
-9 134348800 2049
+9 134217728 2049
 0 0 0 0
 3 1000 100
 40
