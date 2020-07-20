@@ -114,6 +114,35 @@
 28
 0
 28
+#28724~
+28754
+28755
+28756
+28757
+28758
+1.000000
+0.500000
+0
+0
+0
+0
+0
+%s Are you drunk? Type list to see what I sell mortal fool!~
+%s Do you think me a fool? You obviously don't have that!~
+%s What kind of junk are you trying to sell me anyway?~
+%s I can't afford that! Go away!~
+%s Come back when you can afford my goods, runt.~
+%s Good! That will cost you %d coins, friend.~
+%s Ill give you %d coins for it, and no more.~
+0
+0
+28724
+0
+28746
+0
+28
+0
+28
 #28725~
 -1
 -1
@@ -172,35 +201,6 @@
 28
 0
 28
-#28729~
-28702
-28704
-28705
-28706
-28734
-1.000000
-0.500000
-10
-0
-0
-0
-0
-%s Are you drunk? Type list to see what I sell mortal fool!~
-%s Do you think me a fool? You obviously don't have that!~
-%s What kind of junk are you trying to sell me anyway?~
-%s I can't afford that! Go away!~
-%s Come back when you can afford my goods, runt.~
-%s Good! That will cost you %d coins, friend.~
-%s Ill give you %d coins for it, and no more.~
-0
-0
-28729
-0
-28754
-0
-28
-0
-28
 #28728~
 -1
 -1
@@ -230,60 +230,31 @@
 28
 0
 28
-#28724~
+#28729~
+28702
+28704
+28705
+28706
+28734
+1.000000
+0.500000
+10
+0
+0
+0
+0
+%s Are you drunk? Type list to see what I sell mortal fool!~
+%s Do you think me a fool? You obviously don't have that!~
+%s What kind of junk are you trying to sell me anyway?~
+%s I can't afford that! Go away!~
+%s Come back when you can afford my goods, runt.~
+%s Good! That will cost you %d coins, friend.~
+%s Ill give you %d coins for it, and no more.~
+0
+0
+28729
+0
 28754
-28755
-28756
-28757
-28758
-1.000000
-0.500000
-0
-0
-0
-0
-0
-%s Are you drunk? Type list to see what I sell mortal fool!~
-%s Do you think me a fool? You obviously don't have that!~
-%s What kind of junk are you trying to sell me anyway?~
-%s I can't afford that! Go away!~
-%s Come back when you can afford my goods, runt.~
-%s Good! That will cost you %d coins, friend.~
-%s Ill give you %d coins for it, and no more.~
-0
-0
-28724
-0
-28746
-0
-28
-0
-28
-#28732~
--1
--1
--1
-28709
-28710
-1.000000
-0.500000
-0
-0
-0
-0
-0
-%s Are you drunk? Type list to see what I sell mortal fool!~
-%s Do you think me a fool? You obviously don't have that!~
-%s What kind of junk are you trying to sell me anyway?~
-%s I can't afford that! Go away!~
-%s Come back when you can afford my goods, runt.~
-%s Good! That will cost you %d coins, friend.~
-%s Ill give you %d coins for it, and no more.~
-0
-0
-28732
-0
-28772
 0
 28
 0
@@ -313,6 +284,35 @@
 28730
 0
 28756
+0
+28
+0
+28
+#28732~
+-1
+-1
+-1
+28709
+28710
+1.000000
+0.500000
+0
+0
+0
+0
+0
+%s Are you drunk? Type list to see what I sell mortal fool!~
+%s Do you think me a fool? You obviously don't have that!~
+%s What kind of junk are you trying to sell me anyway?~
+%s I can't afford that! Go away!~
+%s Come back when you can afford my goods, runt.~
+%s Good! That will cost you %d coins, friend.~
+%s Ill give you %d coins for it, and no more.~
+0
+0
+28732
+0
+28772
 0
 28
 0

@@ -60,7 +60,7 @@ white mitre~
 a white mitre~
 a white mitre is lying on the ground.~
 ~
-9 132097 17
+9 1025 17
 3 0 0 0
 20 20000 3000
 50
@@ -81,7 +81,7 @@ white crosier~
 a white crosier~
 a white crosier is lying on the ground.~
 ~
-12 263168 16385
+12 1024 16385
 0 0 0 0
 30 10000 1000
 50
@@ -159,7 +159,7 @@ black mitre~
 a black mitre~
 a black mitre is lying on the ground.~
 ~
-9 131585 17
+9 513 17
 3 0 0 0
 20 20000 3000
 50
@@ -180,7 +180,7 @@ black crosier~
 a black crosier~
 a black crosier is lying on the ground.~
 ~
-12 262656 16385
+12 512 16385
 0 0 0 0
 30 10000 1000
 50

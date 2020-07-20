@@ -160,12 +160,12 @@ You see a path in the hills.~
 ~
 0 0 6207
 E
-mountain~
-You see a lonely mountain peak off to the south.~
-E
 mountains~
 The mountains seem tall and forbidding, blocking the sky and your view of
 the terrain in that direction.~
+E
+mountain~
+You see a lonely mountain peak off to the south.~
 S
 #6209
 Secret tunnel in the woods~
@@ -202,20 +202,20 @@ You see a path in the hills.~
 ~
 0 0 6211
 E
-vines~
-The vines are very thick -- no chance of cutting through here.~
-E
-trees~
-The trees grow together so closely that their roots must look like 
-rope, intertwined as they are.~
+grass~
+It's grass, what more do you want? :)~
 E
 bushes~
 The thorn bushes are not the kind you'd want to get tangled in -- some of
 the thorns are razor sharp, and big enough to take off a finger, if you're
 hasty trying to get through them.~
 E
-grass~
-It's grass, what more do you want? :)~
+trees~
+The trees grow together so closely that their roots must look like 
+rope, intertwined as they are.~
+E
+vines~
+The vines are very thick -- no chance of cutting through here.~
 S
 #6211
 A path in the hills~
@@ -334,18 +334,18 @@ You see a path in the hills.~
 ~
 0 0 6208
 E
-roof~
-As you look up at the so-called "roof," you can't help but think how
-nice this cabin is, and how nice it must be to lie on your back at
-night...under the roof...gazing up at the stars...~
+gear~
+You see a jumbled pile of old, worn pieces of equipment, looking as 
+though they've been in this half-cabin for way too long.~
 E
 branches~
 The tree branches look as though they've been used as fodder for some
 kind of vegetarian salad.~
 E
-gear~
-You see a jumbled pile of old, worn pieces of equipment, looking as 
-though they've been in this half-cabin for way too long.~
+roof~
+As you look up at the so-called "roof," you can't help but think how
+nice this cabin is, and how nice it must be to lie on your back at
+night...under the roof...gazing up at the stars...~
 S
 #6217
 At the bottom of a hill~
@@ -568,13 +568,13 @@ You see a demolished cabin.~
 ~
 0 0 6229
 E
-hides~
-These hides were taken long ago, but have been out in the weather for 
-far too long.~
-E
 traps~
 Wind, sun, and rain have taken their toll here, making these traps worse
 than useless.~
+E
+hides~
+These hides were taken long ago, but have been out in the weather for 
+far too long.~
 S
 #6229
 A demolished cabin~
@@ -614,11 +614,11 @@ You see a demolished cabin over to the west.~
 ~
 0 0 6229
 E
-beef meat~
-The meat looks as though maybe it's been hanging a little bit too long.~
-E
 blackened patch~
 The ground is black, as though a fire once burned there.~
+E
+beef meat~
+The meat looks as though maybe it's been hanging a little bit too long.~
 S
 #6231
 A small stand of trees~
@@ -680,18 +680,18 @@ You see a dirt patch.~
 ~
 0 0 6223
 E
-barrels~
-These barrels of flour are the last of the items in storage here, and
-it looks as though the shop may be closing for good.~
+skins~
+On top of this pile of skins lies a note, which reads: This is for a
+barrel of flour, I took it right after that big rain we had, when the 
+old tree crashed up by the lookout hill.~
 E
 chairs~
 Covered with dust and made from warped pine-wood, these chairs weren't
 built for heavy usage in the dining room of the mayor.~
 E
-skins~
-On top of this pile of skins lies a note, which reads: This is for a
-barrel of flour, I took it right after that big rain we had, when the 
-old tree crashed up by the lookout hill.~
+barrels~
+These barrels of flour are the last of the items in storage here, and
+it looks as though the shop may be closing for good.~
 S
 #6234
 A dirt patch~
@@ -742,6 +742,10 @@ You see a dirt patch.~
 ~
 0 0 6234
 E
+large doors~
+The doors don't look as though they would stop a determined man with an
+axe, but maybe that's what the sign is for...~
+E
 sign~
 
 
@@ -749,10 +753,6 @@ sign~
 			-- YOU HAVE BEEN WARNED --
 
 ~
-E
-large doors~
-The doors don't look as though they would stop a determined man with an
-axe, but maybe that's what the sign is for...~
 S
 #6236
 A small stream in the hills~
@@ -826,12 +826,12 @@ You see a cabin in the high hills.~
 ~
 0 0 6237
 E
-cliff~
-The cliff is very sheer -- don't even think about trying to climb it.~
-E
 tree~
 This tree is big enough to have killed anything in its path when it fell,
 especially if it fell off that cliff, which seems to be the case.~
+E
+cliff~
+The cliff is very sheer -- don't even think about trying to climb it.~
 S
 #6239
 A copse of trees~
@@ -1515,11 +1515,11 @@ You see a small mountain pool.~
 ~
 0 0 6268
 E
-timbers~
-The timbers that lie here are long, seasoned, and rough-hewn.~
-E
 rocks~
 The rocks are rough and smooth, polished and jagged.~
+E
+timbers~
+The timbers that lie here are long, seasoned, and rough-hewn.~
 S
 #6275
 A rock pile~
@@ -1857,8 +1857,13 @@ D4
 trapdoor~
 1 -1 6246
 E
-table~
-A small wooden table supports a hide-bound book.
+book~
+This book is so filthy and so abhorrent to human sensibilities
+that your eyes seem to avoid looking at it of their own accord.
+~
+E
+chair~
+You see a small wooden chair, badly used.
 ~
 E
 desk~
@@ -1866,13 +1871,8 @@ The desk is made of unfinished wood, and would be unremarkable
 except for the dark grimoire that rests upon its surface.
 ~
 E
-chair~
-You see a small wooden chair, badly used.
-~
-E
-book~
-This book is so filthy and so abhorrent to human sensibilities
-that your eyes seem to avoid looking at it of their own accord.
+table~
+A small wooden table supports a hide-bound book.
 ~
 S
 #6293
@@ -1919,12 +1919,12 @@ You see more cave, heading into darkness.~
 ~
 0 0 6294
 E
-prints~
-The prints on the ground are made with water, and are unspeakably huge.~
-E
 bones~
 Since they've been cracked in half by a massive set of jaws, it's hard to
 tell what kind of flesh these bones once held together.~
+E
+prints~
+The prints on the ground are made with water, and are unspeakably huge.~
 S
 #6296
 Inside the cave~

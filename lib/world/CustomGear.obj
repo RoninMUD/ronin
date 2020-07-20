@@ -366,14 +366,14 @@ $r Orb burns with the fire from hell.~
 20 10000 10000
 10
 E
-claw~
+animosity~
 When you examine this finely crafted claw you sense much hate and just pure 
 evilness.  The claw itself is made up of pure animosity, you wonder how it 
 is even a solid object.  You dare not look at it to long for you feel the 
 hatred invading your precious body.
 ~
 E
-animosity~
+claw~
 When you examine this finely crafted claw you sense much hate and just pure 
 evilness.  The claw itself is made up of pure animosity, you wonder how it 
 is even a solid object.  You dare not look at it to long for you feel the 
@@ -427,14 +427,14 @@ A battered, old cross rests on the floor.~
 20 10000 10000
 10
 E
-animosity~
+claw~
 When you examine this finely crafted claw you sense much hate and just pure 
 evilness.  The claw itself is made up of pure animosity, you wonder how it 
 is even a solid object.  You dare not look at it to long for you feel the 
 hatred invading your precious body.
 ~
 E
-claw~
+animosity~
 When you examine this finely crafted claw you sense much hate and just pure 
 evilness.  The claw itself is made up of pure animosity, you wonder how it 
 is even a solid object.  You dare not look at it to long for you feel the 
@@ -504,12 +504,12 @@ A paw with bloodstained fur is sitting here.~
 20 10000 10000
 10
 E
-paw~
+rabbit~
 This paw is very ragged and old looking. It has dried blood in the tangled
 fur and you can hardly tell it was once white. The smell coming from it is
 nearly unbearable.~
 E
-rabbit~
+paw~
 This paw is very ragged and old looking. It has dried blood in the tangled
 fur and you can hardly tell it was once white. The smell coming from it is
 nearly unbearable.~
@@ -535,12 +535,12 @@ $r spatula scrapes all the distinguishing facial features from $V in one swift a
 13 75000 25000
 15
 E
-sword~
+flamberge~
 It is a huge heavy sword with a sharp double sided wavy blade. It is
 cousin to a claymore and originally used to slay englishmen by the
 scotts.~
 E
-flamberge~
+sword~
 It is a huge heavy sword with a sharp double sided wavy blade. It is
 cousin to a claymore and originally used to slay englishmen by the
 scotts.~
@@ -2122,7 +2122,7 @@ shield splatter drip dry ak~
 drip-dry splatter shield~
 A goo covered piece of plexiglas lies on the ground, fresh bits of gore clinging to it.~
 ~
-9 259321860 513
+9 259059716 513
 15 0 0 0
 10 1000000 10000
 10

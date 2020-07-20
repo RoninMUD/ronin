@@ -67,11 +67,11 @@ The kettle quietly simmers away here.~
 6 4000 200
 100
 E
-iron~
+kettle~
 A gigantic iron kettle.
 ~
 E
-kettle~
+iron~
 A gigantic iron kettle.
 ~
 X
@@ -114,11 +114,11 @@ A monkey-shaped charm made of jade lays here.
 2 5000 400
 25
 E
-monkey~
+jade~
 A tiny figurine of a dancing monkey. Charming.
 ~
 E
-jade~
+monkey~
 A tiny figurine of a dancing monkey. Charming.
 ~
 X
@@ -137,7 +137,7 @@ B
 pteradactyl egg~
 a pteradactyl egg~
 A huge speckled egg sits here.~
-(null)~
+~
 15 0 1
 200 5 5 0
 3000 2000 500
@@ -193,7 +193,7 @@ robe purple~
 A purple robe~
 A purple robe with strange symbols painted in blood on it lies here.~
 ~
-9 264704 9
+9 2560 9
 10 0 0 0
 24 3000 200
 20
@@ -234,13 +234,13 @@ A rotting wooden sign has been planted in the ground here.~
 750 10 10
 100
 E
-sign~
+rotting~
                                **WARNING**
            Beyond this sign lies the jungle of despair, new
            adventurers beware of the deadly creatures within!
 ~
 E
-rotting~
+sign~
                                **WARNING**
            Beyond this sign lies the jungle of despair, new
            adventurers beware of the deadly creatures within!
