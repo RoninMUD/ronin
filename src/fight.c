@@ -3598,7 +3598,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("$n lunges forward with $s weapon, impacting your hide!", FALSE, attacker, 0, defender, TO_VICT);
         act("You lunge forward with your weapon, impacting $N's hide!", FALSE, attacker, 0, defender, TO_CHAR);
 
-        damage(attacker, defender, lround(assault_mult[GET_LEVEL(attacker)] * 1.25), SKILL_LUNGE, DAM_PHYSICAL);
+        damage(attacker, defender, dam * lround(assault_mult[GET_LEVEL(attacker)] * 1.25), SKILL_LUNGE, DAM_PHYSICAL);
       }
       break;
 
