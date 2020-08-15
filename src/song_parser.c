@@ -37,6 +37,7 @@ struct song_data_t {
 
 const struct song_data_t song_data[] = {
 //  song_id             name                                 lyrics                                                     level  mana  subclass        subclass_level
+  { SONG_DETECT_POISON, "toxic",                             "With a taste of poison paradise...",                      3,     5,    0,              0 },
   { SONG_ARMOR,         "seal with a kiss",                  "In a letter, sealed with a kiss...",                      5,     5,    0,              0 },
   { SONG_ARMOR,         "love is a battlefield",             "Why do you hurt me so bad...",                            5,     5,    0,              0 },
   { SONG_CURE_BLIND,    "i can see clearly now",             "Gone are the dark clouds that had me blind...",           7,     15,   0,              0 },
@@ -50,8 +51,8 @@ const struct song_data_t song_data[] = {
   { SONG_SATIATE,       "best of me",                        "Now I save the best of me...",                            15,    10,   0,              0 },
   { SONG_SATIATE,       "hungry like the wolf",              "Mouth is alive with juices like wine...",                 15,    10,   0,              0 },
   { SONG_VITALITY,      "i'm taking a walk",                 "I'm taking a ride with my best friend...",                16,    25,   0,              0 },
-  { SONG_COLOUR_SPRAY,  "dangerous",                         "Dangerous...",                                            17,    25,   0,              0 },
-  { SONG_COLOUR_SPRAY,  "purple rain",                       "I never meant to cause you any pain...",                  17,    25,   0,              0 },
+  { SONG_COLOR_SPRAY,   "dangerous",                         "Dangerous...",                                            17,    25,   0,              0 },
+  { SONG_COLOR_SPRAY,   "purple rain",                       "I never meant to cause you any pain...",                  17,    25,   0,              0 },
   { SONG_DETECT_INVIS,  "somebody's watching me",            "I always feel like somebody's watching me...",            18,    25,   0,              0 },
   { SONG_TOTAL_RECALL,  "we are the world",                  "We are the world, we are the children...",                19,    30,   0,              0 },
   { SONG_TOTAL_RECALL,  "mama, i'm coming home",             "Lost and found and turned around...",                     19,    30,   0,              0 },
@@ -214,6 +215,21 @@ void do_song(CHAR* ch, char* arg, int cmd)
   OBJ* next_obj = NULL;
 
   switch (song_info.song_id) {
+  case SONG_DETECT_POISON:
+    snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
+    act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
+
+    for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
+      next_victim = tmp_victim->next_in_room;
+
+      if (ch != tmp_victim && !IS_NPC(tmp_victim)) {
+        spell_detect_poison(GET_LEVEL(ch), ch, tmp_victim, NULL);
+      }
+    }
+
+    spell_detect_poison(GET_LEVEL(ch), ch, ch, NULL);
+    break;
+
   case SONG_ARMOR:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
     act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
@@ -336,7 +352,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     {
       next_victim = tmp_victim->next_in_room;
 
-      if (ch != tmp_victim)
+      if (ch != tmp_victim && !IS_NPC(tmp_victim))
       {
         spell_satiate(GET_LEVEL(ch), ch, tmp_victim, NULL);
       }
@@ -353,7 +369,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     {
       next_victim = tmp_victim->next_in_room;
 
-      if (ch != tmp_victim)
+      if (ch != tmp_victim && !IS_NPC(tmp_victim))
       {
         spell_vitality(GET_LEVEL(ch), ch, tmp_victim, NULL);
       }
@@ -362,7 +378,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     spell_vitality(GET_LEVEL(ch), ch, ch, NULL);
     break;
 
-  case SONG_COLOUR_SPRAY:
+  case SONG_COLOR_SPRAY:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
     act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
 
@@ -372,7 +388,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
 
       if (ch != tmp_victim && !SAME_GROUP(ch, tmp_victim))
       {
-        spell_colour_spray(GET_LEVEL(ch), ch, tmp_victim, NULL);
+        spell_color_spray(GET_LEVEL(ch), ch, tmp_victim, NULL);
       }
     }
     break;
@@ -384,7 +400,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
       next_victim = tmp_victim->next_in_room;
 
-      if (ch != tmp_victim) {
+      if (ch != tmp_victim && !IS_NPC(tmp_victim)) {
         spell_detect_invisibility(GET_LEVEL(ch), ch, tmp_victim, NULL);
       }
     }
@@ -432,7 +448,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     {
       next_victim = tmp_victim->next_in_room;
 
-      if (ch != tmp_victim)
+      if (ch != tmp_victim && !IS_NPC(tmp_victim))
       {
         spell_infravision(GET_LEVEL(ch), ch, tmp_victim, NULL);
       }
@@ -484,7 +500,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
     }
     break;
 
-    case SONG_HEAL:
+  case SONG_HEAL:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
     act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
 
@@ -612,7 +628,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
 
     const int respite_dispel_types[] = {
       SPELL_CHARM_PERSON,
-      SPELL_INCENDIARY_CLOUD_NEW,
+      SPELL_INCENDIARY_CLOUD,
       SPELL_CLOUD_CONFUSION,
       SPELL_CURSE,
       SPELL_CHILL_TOUCH,
@@ -621,8 +637,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
       SPELL_BLINDNESS,
       SPELL_POISON,
       SPELL_PARALYSIS,
-      SPELL_SLEEP,
-      -1
+      SPELL_SLEEP
     };
     int respite_dispel = 0;
 
@@ -632,7 +647,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
 
       if (!IS_NPC(tmp_victim))
       {
-        respite_dispel = get_random_set_effect(tmp_victim, respite_dispel_types);
+        respite_dispel = get_random_set_affect(tmp_victim, respite_dispel_types, NUMELEMS(respite_dispel_types));
         switch (respite_dispel) {
         case SPELL_CHARM_PERSON:
           if (affected_by_spell(tmp_victim, SPELL_CHARM_PERSON))
@@ -641,11 +656,11 @@ void do_song(CHAR* ch, char* arg, int cmd)
             affect_from_char(tmp_victim, SPELL_CHARM_PERSON);
           }
           break;
-        case SPELL_INCENDIARY_CLOUD_NEW:
-          if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW))
+        case SPELL_INCENDIARY_CLOUD:
+          if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD))
           {
             send_to_char("The blistering waves of heat subside.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD_NEW);
+            affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD);
           }
           break;
         case SPELL_CLOUD_CONFUSION:

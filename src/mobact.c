@@ -21,6 +21,8 @@
 #include "fight.h"
 #include "spells.h"
 #include "subclass.h"
+#include "aff_ench.h"
+#include "enchant.h"
 
 extern CHAR *combat_list;
 extern CHAR *combat_next_dude;
@@ -526,32 +528,38 @@ const mob_attact_t mob_attack_table[] = {
   {0}
 };
 
-CHAR * mob_attack_get_victim(CHAR *mob, int attack_type, int target_type) {
+CHAR *mob_attack_get_victim(CHAR *mob, int attack_type, int target_type) {
   CHAR *victim = NULL;
 
   switch (target_type) {
     case TAR_BUFFER:
       victim = GET_OPPONENT(mob);
       break;
+
     case TAR_RAN_GROUP:
       victim = get_random_victim_fighting(mob);
       break;
+
     case TAR_RAN_ROOM:
       victim = get_random_victim(mob);
       break;
+
     case TAR_GROUP:
       if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
         victim = get_random_victim_fighting(mob);
       }
       break;
+
     case TAR_ROOM:
       if ((attack_type == ATT_SPELL_CAST) || (attack_type == ATT_SPELL_SKILL)) {
         victim = get_random_victim(mob);
       }
       break;
+
     case TAR_SELF:
       victim = mob;
       break;
+
     case TAR_LEADER:
       victim = GET_OPPONENT(mob);
 
@@ -589,12 +597,15 @@ int mob_attack_calc_damage(CHAR *mob, CHAR *victim, int attack) {
     case ATT_CLAW:
       dam = GET_LEVEL(mob);
       break;
+
     case ATT_PUMMEL:
       dam = 10;
       break;
+
     case ATT_BASH:
       dam = number(1, GET_LEVEL(mob));
       break;
+
     case ATT_PUNCH:
     case ATT_TAILSLAM:
     case ATT_TRAMPLE:
@@ -675,6 +686,11 @@ void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool mult
     vict_wait_state = MAX(0, vict_wait_state - 1);
   }
 
+  /* Druid SC5: Shapeshift: Elemental Form */
+  if (ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+    vict_wait_state = 0;
+  }
+
   WAIT_STATE(victim, PULSE_VIOLENCE * vict_wait_state);
 }
 
@@ -715,6 +731,11 @@ void mob_attack(CHAR *mob) {
   for (int num = 0; (num < MOB_ATT_NUM(mob)) && !MOB_ATT_TIMER(mob); num++) {
     if (!chance(MOB_ATT_CHANCE(mob, num))) continue;
 
+    /* Druid SC4: Elemental Form - Chance to skip mob attack if affected by Entropy. */
+    ENCH *entropy_ench = ench_get_from_char(mob, ENCH_NAME_ENTROPY, 0);
+
+    if (entropy_ench && chance(entropy_ench->temp[0])) continue;
+
     int attack_type = MOB_ATT_TYPE(mob, num);
     int target_type = MOB_ATT_TARGET(mob, num);
 
@@ -730,6 +751,7 @@ void mob_attack(CHAR *mob) {
           mob_attack_spell(mob, victim, MOB_ATT_SPELL(mob, num), (ATT_SPELL_CAST ? 1 : 0));
         }
         break;
+
       /* "Skills" */
       case ATT_KICK:
       case ATT_PUMMEL:

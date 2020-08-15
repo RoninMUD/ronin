@@ -90,7 +90,6 @@ void mob_do(CHAR* mob, char *arg)
 
 //    Objects
 #define DIAMOND_BAR             3018
-#define WALL_THORNS             34
 #define MAR_QUEEN_SHIELD        ITEM (ZONE_MAR,20)
 #define MAR_QUEEN_STING         ITEM(ZONE_MAR,16)
 
@@ -3032,7 +3031,7 @@ extract_spell_end:
 }
 
 int extract_spell( char *arg ) {
-  return extract_from_table(arg, spells);
+  return extract_from_table(arg, (const char * const * const)spells);
 }
 /*
 int extract_song( char *arg ) {
@@ -3104,8 +3103,6 @@ int mus_quaratt(CHAR *mob, CHAR* ch, int cmd, char *arg )
       cast_func = spell_frostbolt;
     else if( spl == SPELL_ELECTRIC_SHOCK )
       cast_func = spell_electric_shock;
-    else if( spl == SPELL_DEMONIC_THUNDER )
-      cast_func = spell_demonic_thunder;
     else if( spl == SPELL_DEVASTATION )
       cast_func = spell_devastation;
     else if( spl == SPELL_WRATH_ANCIENTS )
@@ -3116,8 +3113,6 @@ int mus_quaratt(CHAR *mob, CHAR* ch, int cmd, char *arg )
       cast_func = spell_dusk_requiem;
     else if( spl == SPELL_WITHER )
       cast_func = spell_wither;
-    else if( spl == SPELL_DEMONIC_THUNDER )
-      cast_func = spell_demonic_thunder;
 
     if( cast_func == NULL )
       return FALSE;

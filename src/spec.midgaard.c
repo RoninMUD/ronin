@@ -77,12 +77,13 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*cleric_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(cleric_skills[i], 0, strlen(cleric_skills[i]), spells, TRUE);
+          number = old_search_block(cleric_skills[i], 0, strlen(cleric_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BASH) && (GET_LEVEL(ch) < 35)) continue;
+          else if ((number == SKILL_MEDITATE) && (GET_LEVEL(ch) < 40)) continue;
           else {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", cleric_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
@@ -94,7 +95,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*thief_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(thief_skills[i], 0, strlen(thief_skills[i]), spells, TRUE);
+          number = old_search_block(thief_skills[i], 0, strlen(thief_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -114,7 +115,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*warrior_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(warrior_skills[i], 0, strlen(warrior_skills[i]), spells, TRUE);
+          number = old_search_block(warrior_skills[i], 0, strlen(warrior_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -134,7 +135,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*ninja_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(ninja_skills[i], 0, strlen(ninja_skills[i]), spells, TRUE);
+          number = old_search_block(ninja_skills[i], 0, strlen(ninja_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -150,7 +151,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*nomad_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(nomad_skills[i], 0, strlen(nomad_skills[i]), spells, TRUE);
+          number = old_search_block(nomad_skills[i], 0, strlen(nomad_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -170,7 +171,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*paladin_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(paladin_skills[i], 0, strlen(paladin_skills[i]), spells, TRUE);
+          number = old_search_block(paladin_skills[i], 0, strlen(paladin_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -188,7 +189,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*anti_paladin_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(anti_paladin_skills[i], 0, strlen(anti_paladin_skills[i]), spells, TRUE);
+          number = old_search_block(anti_paladin_skills[i], 0, strlen(anti_paladin_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -207,7 +208,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*avatar_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), spells, TRUE);
+          number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -224,7 +225,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*bard_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(bard_skills[i], 0, strlen(bard_skills[i]), spells, TRUE);
+          number = old_search_block(bard_skills[i], 0, strlen(bard_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -242,7 +243,7 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         if (*commando_skills[i] == '\n') done = TRUE;
         else
         {
-          number = old_search_block(commando_skills[i], 0, strlen(commando_skills[i]), spells, TRUE);
+          number = old_search_block(commando_skills[i], 0, strlen(commando_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
           else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
@@ -322,15 +323,13 @@ int practice_skill(CHAR *ch, int number) {
       break;
 
     case SKILL_BLOCK:
-      if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) ||
-        enchanted_by_type(ch, ENCHANT_JUSTICIAR)) {
+      if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) || enchanted_by_type(ch, ENCHANT_JUSTICIAR)) {
         bonus += 5;
       }
       break;
 
     case SKILL_DUAL:
-      if (enchanted_by_type(ch, ENCHANT_KNIGHT) ||
-        enchanted_by_type(ch, ENCHANT_PRIVATE)) {
+      if (enchanted_by_type(ch, ENCHANT_KNIGHT) || enchanted_by_type(ch, ENCHANT_PRIVATE)) {
         bonus += 5;
       }
       break;
@@ -348,8 +347,7 @@ int practice_skill(CHAR *ch, int number) {
       break;
 
     case SKILL_ASSAULT:
-      if (enchanted_by_type(ch, ENCHANT_COMMODORE) ||
-        enchanted_by_type(ch, ENCHANT_SHOGUN)) {
+      if (enchanted_by_type(ch, ENCHANT_COMMODORE) || enchanted_by_type(ch, ENCHANT_SHOGUN)) {
         bonus += 5;
       }
       break;
@@ -367,8 +365,7 @@ int practice_skill(CHAR *ch, int number) {
       break;
 
     case SKILL_PUMMEL:
-      if (enchanted_by_type(ch, ENCHANT_LORDLADY) ||
-        enchanted_by_type(ch, ENCHANT_SHINOBI)) {
+      if (enchanted_by_type(ch, ENCHANT_LORDLADY) || enchanted_by_type(ch, ENCHANT_SHINOBI)) {
         bonus += 5;
       }
       break;
@@ -376,6 +373,13 @@ int practice_skill(CHAR *ch, int number) {
     case SKILL_TAUNT:
       if (enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
         bonus += 5;
+      }
+      break;
+
+    case SKILL_MEDITATE:
+    case SKILL_DEGENERATE:
+      if (GET_CLASS(ch) == CLASS_CLERIC) {
+        bonus -= 10;
       }
       break;
   }
@@ -540,7 +544,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     arg[i] = tolower(arg[i]);
   }
 
-  spell = old_search_block(arg, 0, strlen(arg), spells, FALSE);
+  spell = old_search_block(arg, 0, strlen(arg),(const char * const * const)spells, FALSE);
 
   if (spell == -1) {
     act("`i$N shrugs, indicating that $E doesn't know what you're talking about.`q", FALSE, ch, 0, mob, TO_CHAR);
@@ -558,7 +562,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(cleric_skills[index], 0, strlen(cleric_skills[index]), spells, TRUE);
+        skill = old_search_block(cleric_skills[index], 0, strlen(cleric_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if ((skill == SKILL_BASH) && (GET_LEVEL(ch) < 35))
@@ -572,7 +576,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(thief_skills[index], 0, strlen(thief_skills[index]), spells, TRUE);
+        skill = old_search_block(thief_skills[index], 0, strlen(thief_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if (((skill == SKILL_SCAN) && (GET_LEVEL(ch) < 35)) ||
@@ -587,7 +591,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(warrior_skills[index], 0, strlen(warrior_skills[index]), spells, TRUE);
+        skill = old_search_block(warrior_skills[index], 0, strlen(warrior_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if (((skill == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) ||
@@ -603,7 +607,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(ninja_skills[index], 0, strlen(ninja_skills[index]), spells, TRUE);
+        skill = old_search_block(ninja_skills[index], 0, strlen(ninja_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if ((skill == SPELL_DIVINE_WIND) && (GET_LEVEL(ch) < 40))
@@ -617,7 +621,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(nomad_skills[index], 0, strlen(nomad_skills[index]), spells, TRUE);
+        skill = old_search_block(nomad_skills[index], 0, strlen(nomad_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if (((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) ||
@@ -635,7 +639,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(paladin_skills[index], 0, strlen(paladin_skills[index]), spells, TRUE);
+        skill = old_search_block(paladin_skills[index], 0, strlen(paladin_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if ((skill == SKILL_PRAY) && (GET_LEVEL(ch) < 40))
@@ -649,7 +653,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), spells, TRUE);
+        skill = old_search_block(anti_paladin_skills[index], 0, strlen(anti_paladin_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if ((skill == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40))
@@ -668,7 +672,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(avatar_skills[index], 0, strlen(avatar_skills[index]), spells, TRUE);
+        skill = old_search_block(avatar_skills[index], 0, strlen(avatar_skills[index]), (const char * const * const)spells, TRUE);
       }
       break;
 
@@ -677,7 +681,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(bard_skills[index], 0, strlen(bard_skills[index]), spells, TRUE);
+        skill = old_search_block(bard_skills[index], 0, strlen(bard_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if (((skill == SKILL_TAUNT) && (GET_LEVEL(ch) < 20)) ||
@@ -692,7 +696,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       if (index > -1)
       {
-        skill = old_search_block(commando_skills[index], 0, strlen(commando_skills[index]), spells, TRUE);
+        skill = old_search_block(commando_skills[index], 0, strlen(commando_skills[index]), (const char * const * const)spells, TRUE);
       }
 
       if ((skill == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20))
@@ -712,7 +716,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         check_sc_access(ch, spell) &&
         ((GET_CLASS(ch) != CLASS_NINJA) || (spell != SPELL_DIVINE_WIND)) &&
         ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
-        ((GET_CLASS(ch) != CLASS_BARD) || (spell != SPELL_REJUVENATION)) &&
         ((GET_CLASS(ch) != CLASS_COMMANDO) || (spell != SPELL_IRON_SKIN)) &&
         !check_sc_master(ch, mob)) {
       act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
@@ -740,6 +743,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
   if ((skill > 165) &&
       check_sc_access(ch, skill) &&
+      ((GET_CLASS(ch) != CLASS_CLERIC) || (spell != SKILL_MEDITATE)) &&
       ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_EVASION)) &&
       ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
       !check_sc_master(ch, mob)) {

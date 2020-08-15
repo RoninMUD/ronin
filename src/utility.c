@@ -681,27 +681,24 @@ void wizlog_f(int level, int which, char *fmt, ...) {
 }
 
 
-void snprint_bits(char *dest, size_t dest_size, long bitvector, const char *const list[]) {
-  if (!dest || !list) return;
+void snprint_bits(char *dest, size_t dest_size, long bits, const char * const list[]) {
+  if (!dest || !dest_size || !list) return;
+
+  int list_count = 0;
+
+  while (*(list[list_count++]) != '\n');
 
   dest[0] = '\0';
 
-  for (int list_idx = 0; bitvector; bitvector >>= 1) {
-    if (IS_SET(1, bitvector)) {
-      if (*(list[list_idx]) != '\n') {
-        if (*(list[list_idx]) != '!') {
-          str_cat(dest, dest_size, list[list_idx]);
-        }
-        else {
-          str_cat(dest, dest_size, "UNDEFINED");
-        }
+  if (bits && list_count) {
+    for (int shift = 0; shift < list_count; shift++) {
+      if (IS_SET(bits, 1 << shift)) {
+        str_cat(dest, dest_size, list[shift]);
 
-        str_cat(dest, dest_size, " ");
+        if (bits >> (shift + 1)) {
+          str_cat(dest, dest_size, " ");
+        }
       }
-    }
-
-    if (*(list[list_idx]) != '\n') {
-      list_idx++;
     }
   }
 
@@ -710,20 +707,18 @@ void snprint_bits(char *dest, size_t dest_size, long bitvector, const char *cons
   }
 }
 
-void snprint_type(char *dest, size_t dest_size, int type, const char *const list[]) {
-  if (!dest || !list) return;
+void snprint_type(char *dest, size_t dest_size, int type, const char * const list[]) {
+  if (!dest || !dest_size || !list) return;
 
-  int list_idx = 0;
+  int list_count = 0;
 
-  while ((list_idx < type) && (*(list[list_idx]) != '\n')) {
-    list_idx++;
-  }
+  while (*(list[list_count++]) != '\n');
 
-  if ((*(list[list_idx]) == '!') || (*(list[list_idx]) == '\n')) {
-    snprintf(dest, dest_size, "UNDEFINED");
+  if ((list_count > 0) && (type >= 0) && (type < list_count)) {
+    snprintf(dest, dest_size, "%s", list[type]);
   }
   else {
-    snprintf(dest, dest_size, "%s", list[list_idx]);
+    snprintf(dest, dest_size, "UNDEFINED");
   }
 }
 
@@ -1816,21 +1811,21 @@ bool HAS_BOAT(CHAR *ch) {
   bool has_boat = FALSE;
 
   /* If they're flying, or they're a ninja, they are considered to have a boat. */
-  if (IS_AFFECTED(ch, AFF_FLY) || (GET_CLASS(ch) == CLASS_NINJA)) has_boat = TRUE;
+  if (IS_AFFECTED(ch, AFF_FLY) || (GET_CLASS(ch) == CLASS_NINJA)) {
+    has_boat = TRUE;
+  }
 
   /* Check if they are carrying a boat. */
-  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
-    if (OBJ_TYPE(tmp_obj) == ITEM_BOAT) {
+  for (OBJ *temp_obj = ch->carrying; !has_boat && temp_obj; temp_obj = temp_obj->next_content) {
+    if (OBJ_TYPE(temp_obj) == ITEM_BOAT) {
       has_boat = TRUE;
-      break;
     }
   }
 
   /* Check if they are wearing a boat object (e.g. Boots of Water Walking). */
-  for (int i = 0; i < MAX_WEAR; i++) {
+  for (int i = 0; !has_boat && (i < MAX_WEAR); i++) {
     if (EQ(ch, i) && OBJ_TYPE(EQ(ch, i)) == ITEM_BOAT) {
       has_boat = TRUE;
-      break;
     }
   }
 
@@ -2118,65 +2113,53 @@ void shuffle_2d_int_array(int array[][2], const size_t num_elems) {
 }
 
 
-/* Takes a character object and an array of eligible effects and returns
-   an effect randomly from the array if the character is NOT affected by it.
-   If there are no eligible effects found, this returns TYPE_UNDEFINED.
-   Note: You MUST terminate the array with -1 or bad things will happen. */
-int get_random_eligible_effect(CHAR *ch, const int eligible_effects[]) {
-  /* Count the number of elements in the list of eligible effects. */
-  size_t list_size = 0;
-  for (size_t i = 0; eligible_effects[i] != -1; list_size++, i++);
+/* Takes a character object and an array of eligible affects and returns
+   an affect randomly from the array if the character is NOT affected by it.
+   If there are no eligible effects found, this returns -1. */
+int get_random_eligible_affect(CHAR *ch, const int eligible_affects_list[], const size_t list_size) {
+  int affect = -1;
 
-  if (!list_size) return TYPE_UNDEFINED;
+  if (ch && list_size) {
+    int eligible_affects[MAX_SPL_LIST - 1] = { 0 }, eligible_affects_count = 0;
 
-  int eligible_ch_effects[MAX_SPL_LIST];
-  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
+    for (size_t i = 0; i < list_size; i++) {
+      if (!affected_by_spell(ch, eligible_affects_list[i])) {
+        eligible_affects[eligible_affects_count++] = eligible_affects_list[i];
+      }
+    }
 
-  int num_eligible_ch_effects = 0;
-  for (size_t i = 0; i < list_size; i++) {
-    if (!affected_by_spell(ch, eligible_effects[i])) {
-      num_eligible_ch_effects++;
-      eligible_ch_effects[num_eligible_ch_effects - 1] = eligible_effects[i];
+    if (eligible_affects_count > 0) {
+      affect =  eligible_affects[number(0, eligible_affects_count - 1)];
     }
   }
 
-  if (num_eligible_ch_effects > 0) {
-    return eligible_ch_effects[number(1, num_eligible_ch_effects) - 1];
-  }
-
-  return TYPE_UNDEFINED;
+  return affect;
 }
 
 
-/* Takes a character object and an array of eligible effects and returns
-   an effect randomly from the array if the character IS affected by it.
-   If there are no eligible effects found, this returns TYPE_UNDEFINED.
-   Note: You MUST terminate the array with -1 or bad things will happen. */
-int get_random_set_effect(CHAR *ch, const int eligible_effects[]) {
-  /* Count the number of elements in the list of eligible effects. */
-  size_t list_size = 0;
-  for (size_t i = 0; eligible_effects[i] != -1; list_size++, i++);
+/* Takes a character object and an array of eligible affects and returns
+   an affect randomly from the array if the character IS affected by it.
+   If there is no eligible affect found, this returns -1. */
+int get_random_set_affect(CHAR *ch, const int eligible_affects_list[], const size_t list_size) {
+  int affect = -1;
 
-  if (!list_size) return TYPE_UNDEFINED;
+  if (ch && list_size) {
+    int eligible_affects[MAX_SPL_LIST - 1] = { 0 }, eligible_affects_count = 0;
 
-  int eligible_ch_effects[MAX_SPL_LIST];
-  memset(&eligible_ch_effects, 0, sizeof(eligible_ch_effects));
-
-  int num_eligible_ch_effects = 0;
-  for (AFF *af = ch->affected; af; af = af->next) {
-    for (size_t i = 0; i < list_size; i++) {
-      if (af->type == eligible_effects[i]) {
-        num_eligible_ch_effects++;
-        eligible_ch_effects[num_eligible_ch_effects - 1] = af->type;
+    for (AFF *aff = ch->affected; aff; aff = aff->next) {
+      for (size_t i = 0; i < list_size; i++) {
+        if (aff->type == eligible_affects_list[i]) {
+          eligible_affects[eligible_affects_count++] = aff->type;
+        }
       }
+    }
+
+    if (eligible_affects_count > 0) {
+      affect = eligible_affects[number(0, eligible_affects_count - 1)];
     }
   }
 
-  if (num_eligible_ch_effects > 0) {
-    return eligible_ch_effects[number(1, num_eligible_ch_effects) - 1];
-  }
-
-  return TYPE_UNDEFINED;
+  return affect;
 }
 
 

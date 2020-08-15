@@ -45,7 +45,11 @@ struct obj_data  *object_list = 0;    /* the global linked list of obj's */
 struct char_data *character_list = 0; /* global l-list of chars          */
 
 struct zone_data *zone_table;         /* table of reset data             */
+
 struct message_list fight_messages[MAX_MESSAGES]; /* fighting messages   */
+
+int top_of_fight_messages_list = -1;
+struct message_list *fight_messages_list = 0;
 
 char credits[MSL];      /* the Credits List                */
 char heroes[MSL];       /* the Heroes List                */
@@ -95,11 +99,12 @@ void examine_last_command(void);
 
 /* external refs */
 void read_vote(void);
-void read_voters (void);
+void read_voters(void);
 void load_messages(void);
-void assign_command_pointers ( void );
-void assign_enchantments   ( void );
-void assign_spell_pointers ( void );
+void assign_command_pointers(void);
+void assign_enchantments(void);
+void assign_spell_pointers(void);
+void assign_spell_text(void);
 int dice(int number, int size);
 int number(int from, int to);
 void boot_social_messages(void);
@@ -108,7 +113,7 @@ struct help_index_element *build_help_index(FILE *fl, int *num);
 char *str_dup(char *source);
 void intialize_auction_board(void);
 void intialize_lottery(void);
-void help_contents(struct help_index_element *help_index,char *contents,int top);
+void help_contents(struct help_index_element *help_index, char *contents, int top);
 void read_corpselist(void);
 void read_rank_boards(void);
 void read_zone_rating(void);
@@ -222,8 +227,10 @@ void boot_db(void)
 
      log_f("   Commands.");
      assign_command_pointers();
+
      log_f("   Spells.");
      assign_spell_pointers();
+     assign_spell_text();
 
      log_f("   Enchantments.");
      assign_enchantments();
@@ -294,7 +301,7 @@ void boot_db(void)
      read_idname();
 
      log_f("Distributing subclass tokens");
-     distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT);
+     distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT, TRUE);
 
      log_f("Initializing token mob");
      initialize_token_mob();
@@ -344,43 +351,45 @@ const int no_token_zones[] = {
 };
 
 /* Validate that the given mob real number is OK to token. */
-bool is_valid_token_mob(int rnum) {
+bool is_valid_token_mob(int mob_rnum) {
   /* Ensure the given rnum is within the world table. */
-  if ((rnum < 0) || (rnum > top_of_mobt)) return FALSE;
+  if ((mob_rnum < 0) || (mob_rnum > top_of_mobt)) return FALSE;
 
-  /* Skip mobs that aren't currently in the game. */
-  if (mob_proto_table[rnum].number < 1) return FALSE;
+  /* Skip the token mob. */
+  if (mob_proto_table[mob_rnum].virtual == TOKEN_MOB_VNUM) return FALSE;
 
   /* Skip mobs in zones that are in the no token zone list. */
-  if (binary_search_int_array(no_token_zones, 0, NUMELEMS(no_token_zones) - 1, inzone(mob_proto_table[rnum].virtual)) != -1) return FALSE;
+  if (binary_search_int_array(no_token_zones, 0, NUMELEMS(no_token_zones) - 1, inzone(mob_proto_table[mob_rnum].virtual)) != -1) return FALSE;
 
   /* Skip mobs flagged NO_TOKEN. */
-  if (IS_SET(mob_proto_table[rnum].act2, ACT2_NO_TOKEN)) return FALSE;
+  if (IS_SET(mob_proto_table[mob_rnum].act2, ACT2_NO_TOKEN)) return FALSE;
 
   /* Skip low-level mobs. */
-  if (mob_proto_table[rnum].level < 15) return FALSE;
+  if (mob_proto_table[mob_rnum].level < 15) return FALSE;
 
   /* Skip shopkeepers. */
-  if (real_shop(mob_proto_table[rnum].virtual) != -1) return FALSE;
+  if (real_shop(mob_proto_table[mob_rnum].virtual) != -1) return FALSE;
 
   /* Calculate mob average max hit points. */
-  int avg_max_hp = dice_ex(mob_proto_table[rnum].hp_nodice, mob_proto_table[rnum].hp_sizedice, RND_AVG) + mob_proto_table[rnum].hp_add;
+  int avg_max_hp = dice_ex(mob_proto_table[mob_rnum].hp_nodice, mob_proto_table[mob_rnum].hp_sizedice, RND_AVG) + mob_proto_table[mob_rnum].hp_add;
 
   /* Skip mobs with low or high max hit points. */
   if ((avg_max_hp < 500) || (avg_max_hp > 15000)) return FALSE;
 
-#ifdef PROFILE
-  log_f("PROFILE :: token mob: '%s', vnum: %d, rnum: %d, avg_max_hps: %d, level: %d",
-    mob_proto_table[rnum].short_descr, mob_proto_table[rnum].virtual, rnum, avg_max_hp, mob_proto_table[rnum].level);
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: token mob: '%s', vnum: %d, rnum: %d, avg_max_hps: %d, level: %d",
+    mob_proto_table[mob_rnum].short_descr, mob_proto_table[mob_rnum].virtual, mob_rnum, avg_max_hp, mob_proto_table[mob_rnum].level);
 #endif
 
   return TRUE;
 }
 
 /* Distribute tokens to eligible mobs in the game. */
-void distribute_tokens(const int num_tokens) {
+void distribute_tokens(int num_tokens, bool rebuild_table) {
   /* Return if there are no tokens to distribute, or no mobs to choose from. */
-  if ((num_tokens < 0) || (top_of_mobt < 0)) return;
+  if ((num_tokens <= 0) || (top_of_mobt < 0)) return;
+
+  log_f("SUBLOG: Distributing %d subclass tokens.", num_tokens);
 
   /* This table is cached, because the mob prototype table doesn't change often.
      The behavior of this new token distribution function is slightly different
@@ -393,32 +402,40 @@ void distribute_tokens(const int num_tokens) {
   static int allocated = 0;
 
   /* Create the token mob table if it's not already allocated. */
-  if (top_of_token_mob_table < 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 1000;
+  if (rebuild_table || (top_of_token_mob_table < 0)) {
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 850;
 
-    /* Create the token mob table if it's not already allocated. */
+    if (rebuild_table) {
+      log_s("SUBLOG: Rebuilding token mob table.");
+
+      DESTROY(token_mob_table);
+
+      top_of_token_mob_table = -1;
+    }
+
+    /* Create the token mob table. */
     CREATE(token_mob_table, int, allocated);
 
-    for (int i = 0; i <= top_of_mobt; i++) {
-      if (!is_valid_token_mob(i)) continue;
+    for (int mob_rnum = 0; mob_rnum <= top_of_mobt; mob_rnum++) {
+      if (!is_valid_token_mob(mob_rnum)) continue;
 
       top_of_token_mob_table++;
 
       /* Re-allocate the token mob table, as needed. */
-      if (top_of_token_mob_table % allocated == 0) {
-        allocated += 100;
+      if ((top_of_token_mob_table > 0) && (top_of_token_mob_table % allocated == 0)) {
+        allocated += 5;
 
         RECREATE(token_mob_table, int, allocated);
       }
 
       /* Store the real number of the mob. */
-      token_mob_table[top_of_token_mob_table] = i;
+      token_mob_table[top_of_token_mob_table] = mob_rnum;
     }
   }
 
-#ifdef PROFILE
-  log_f("PROFILE :: token_mob_table size: %d, allocated: %d", top_of_token_mob_table + 1, allocated);
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: token_mob_table size: %d, allocated: %d", top_of_token_mob_table + 1, allocated);
 #endif
 
   /* Log and abort if no eligible token mobs could be found. */
@@ -431,23 +448,40 @@ void distribute_tokens(const int num_tokens) {
   /* Shuffle the token mob table.*/
   shuffle_int_array(token_mob_table, top_of_token_mob_table + 1);
 
-  int tokens_distributed = 0;
+  int tokens_distributed = 0, num_mobs_skipped = 0;
 
   /* Distribute the tokens. */
-  for (int i = 0; (i < num_tokens) && (top_of_token_mob_table - tokens_distributed >= 0); i++) {
+  for (int mob_table_offset = 0; (tokens_distributed < num_tokens) && (top_of_token_mob_table - mob_table_offset - num_mobs_skipped >= 0); mob_table_offset++) {
     /* Get the mob real number at the top of the table and decrement the
        table counter so the next loop will pick a different number. */
-    int mob_nr = token_mob_table[top_of_token_mob_table - tokens_distributed];
+    int mob_rnum = token_mob_table[top_of_token_mob_table - mob_table_offset - num_mobs_skipped];
+
+    /* Skip mobs that aren't currently in the game. */
+    if (mob_proto_table[mob_rnum].number <= 0) {
+      num_mobs_skipped++;
+
+      log_f("SUBLOG: Token mob %s v(%d) does not exist in the game; skipping.",
+        mob_proto_table[mob_rnum].short_descr, mob_proto_table[mob_rnum].virtual);
+
+      continue;
+    }
 
     /* Double-check that the chosen mob is valid, as it's possible the cached
        token mob list has become invalidated. If this is the case, destroy the
        current list, and call this function again to build a new one. */
-    if (!is_valid_token_mob(mob_nr)) {
-      goto try_again;
+    if (!is_valid_token_mob(mob_rnum)) {
+      log_f("SUBLOG: Mob %s v(%d) is not a valid token mob; re-building token mob table.",
+        mob_proto_table[mob_rnum].short_descr, mob_proto_table[mob_rnum].virtual);
+
+      if (tokens_distributed > 0) {
+        log_f("SUBLOG: Distributed %d of %d subclass tokens.", tokens_distributed, num_tokens);
+      }
+
+      distribute_tokens(num_tokens - tokens_distributed, TRUE);
     }
 
     /* Randomly choose a loaded instance of the mob with that real number. */
-    int mob_instance = number(1, mob_proto_table[mob_nr].number);
+    int mob_instance = number(1, mob_proto_table[mob_rnum].number);
 
     /* Start with the first mob instance. */
     int mob_count = 1;
@@ -457,7 +491,8 @@ void distribute_tokens(const int num_tokens) {
     /* Loop through the character list and distribute tokens. */
     for (CHAR *mob = character_list; mob && !tokened; mob = mob->next) {
       /* Skip mobs that don't match the real number chosen. */
-      if (MOB_RNUM(mob) != mob_nr) continue;
+      if (MOB_RNUM(mob) != mob_rnum) continue;
+
       /* Skip until we find the correct mob instance. */
       if (mob_count++ != mob_instance) continue;
 
@@ -466,19 +501,19 @@ void distribute_tokens(const int num_tokens) {
 
       /* Log and abort if a token object couldn't be loaded. */
       if (!token) {
-        log_f("SUBLOG: Error reading token object from DB.");
+        log_f("SUBLOG: Error reading token object v(%d) from DB; aborting.", TOKEN_OBJ_VNUM);
 
         return;
       }
 
       /* The token is worth 1 or 2 subclass points. */
-      OBJ_VALUE0(token) = number(1, 2);
+      OBJ_VALUE(token, 0) = number(1, 2);
 
       /* Give the token to the mob. */
       obj_to_char(token, mob);
 
       /* Log the distribution. */
-      log_f("SUBLOG: Tokened %s v(%d) r(%d)", GET_SHORT(mob), V_MOB(mob), MOB_RNUM(mob));
+      log_f("SUBLOG: Tokened %s v(%d).", GET_SHORT(mob), V_MOB(mob));
 
       tokens_distributed++;
 
@@ -486,19 +521,18 @@ void distribute_tokens(const int num_tokens) {
     }
   }
 
-  /* Log if we couldn't distribute the given number of tokens. */
+  /* Log number of mobs skipped. */
+  if (num_mobs_skipped > 0) {
+    log_f("SUBLOG: Skipped %d token mobs.", num_mobs_skipped);
+  }
+
+  /* Log count of tokens that were distributed. */
   if (tokens_distributed < num_tokens) {
     log_f("SUBLOG: Only %d of %d tokens could be distributed.", tokens_distributed, num_tokens);
   }
-
-  return;
-
-try_again:
-  DESTROY(token_mob_table);
-
-  top_of_token_mob_table = -1;
-
-  distribute_tokens(num_tokens);
+  else {
+    log_f("SUBLOG: Distributed %d of %d subclass tokens.", tokens_distributed, num_tokens);
+  }
 }
 
 int adjust_ticket_strings(OBJ *obj); /*Added Oct 98 Ranger */
@@ -895,13 +929,13 @@ int allocate_zone(int vnum) {
 
   /* Create a new table if this is the first entry. */
   if (top_of_zone_table == 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 175;
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 150;
 
     CREATE(zone_table, struct zone_data, allocated);
 
-#ifdef PROFILE
-    log_f("PROFILE :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
 #endif
 
     return top_of_zone_table;
@@ -909,14 +943,14 @@ int allocate_zone(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_zone_table % allocated == 0) {
-    allocated += 25;
+    allocated += 5;
 
     RECREATE(zone_table, struct zone_data, allocated * sizeof(struct zone_data));
-
-#ifdef PROFILE
-    log_f("PROFILE :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
-#endif
   }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: zone_table size: %d, allocated: %d", top_of_zone_table + 1, allocated);
+#endif
 
   int index = -1;
 
@@ -972,13 +1006,13 @@ int allocate_room(int vnum) {
 
   /* Create a new table if this is the first entry. */
   if (top_of_world == 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 9000;
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 8400;
 
     CREATE(world, struct room_data, allocated);
 
-#ifdef PROFILE
-    log_f("PROFILE :: world size: %d, allocated: %d", top_of_world + 1, allocated);
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: world size: %d, allocated: %d", top_of_world + 1, allocated);
 #endif
 
     return top_of_world;
@@ -986,14 +1020,14 @@ int allocate_room(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_world % allocated == 0) {
-    allocated += 500;
+    allocated += 100;
 
     RECREATE(world, struct room_data, allocated * sizeof(struct room_data));
-
-#ifdef PROFILE
-    log_f("PROFILE :: world size: %d, allocated: %d", top_of_world + 1, allocated);
-#endif
   }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: world size: %d, allocated: %d", top_of_world + 1, allocated);
+#endif
 
   int index = -1;
 
@@ -1083,13 +1117,13 @@ int allocate_mob(int vnum) {
 
   /* Create a new table if this is the first entry. */
   if (top_of_mobt == 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 2750;
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 2200;
 
     CREATE(mob_proto_table, struct mob_proto, allocated);
 
-#ifdef PROFILE
-    log_f("PROFILE :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
 #endif
 
     return top_of_mobt;
@@ -1097,14 +1131,14 @@ int allocate_mob(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_mobt % allocated == 0) {
-    allocated += 250;
+    allocated += 100;
 
     RECREATE(mob_proto_table, struct mob_proto, allocated * sizeof(struct mob_proto));
-
-#ifdef PROFILE
-    log_f("PROFILE :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
-#endif
   }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: mob_proto_table size: %d, allocated: %d", top_of_mobt + 1, allocated);
+#endif
 
   int index = -1;
 
@@ -1166,13 +1200,13 @@ int allocate_obj(int vnum) {
 
   /* Create a new table if this is the first entry. */
   if (top_of_objt == 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 4000;
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 3600;
 
     CREATE(obj_proto_table, struct obj_proto, allocated);
 
-#ifdef PROFILE
-    log_f("PROFILE :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
 #endif
 
     return top_of_objt;
@@ -1180,14 +1214,14 @@ int allocate_obj(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_objt % allocated == 0) {
-    allocated += 250;
+    allocated += 100;
 
     RECREATE(obj_proto_table, struct obj_proto, allocated * sizeof(struct obj_proto));
-
-#ifdef PROFILE
-    log_f("PROFILE :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
-#endif
   }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: obj_proto_table size: %d, allocated: %d", top_of_objt + 1, allocated);
+#endif
 
   int index = -1;
 
@@ -1235,7 +1269,7 @@ int search_shop_table(int l, int r, int vnum) {
 int allocate_shop(int vnum) {
   static int allocated = 0;
 
-  /* Search the table to see if the given rnum already exists. */
+  /* Search the table to see if the given vnum already exists. */
   if (number_of_shops > 0) {
     int index = search_shop_table(0, number_of_shops - 1, vnum);
 
@@ -1251,13 +1285,13 @@ int allocate_shop(int vnum) {
 
   /* Create a new table if this is the first entry. */
   if (top_of_shop_table == 0) {
-    /* Initial table size, based on profiling in May of 2020. */
-    allocated = 125;
+    /* Initial table size, based on profiling in August of 2020. */
+    allocated = 100;
 
     CREATE(shop_index, struct shop_data, allocated);
 
-#ifdef PROFILE
-    log_f("PROFILE :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
 #endif
 
     return top_of_shop_table;
@@ -1265,14 +1299,14 @@ int allocate_shop(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_shop_table % allocated == 0) {
-    allocated += 25;
+    allocated += 5;
 
     RECREATE(shop_index, struct shop_data, allocated * sizeof(struct shop_data));
-
-#ifdef PROFILE
-    log_f("PROFILE :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
-#endif
   }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: shop_index size: %d, allocated: %d", number_of_shops, allocated);
+#endif
 
   int index = -1;
 
@@ -1293,6 +1327,130 @@ int allocate_shop(int vnum) {
   }
 
   return index;
+}
+
+int search_fight_messages_list(int l, int r, int attack_type) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+
+    if (fight_messages_list[mid].attack_type == attack_type)
+      return mid;
+
+    if (fight_messages_list[mid].attack_type > attack_type)
+      return search_fight_messages_list(l, mid - 1, attack_type);
+
+    return search_fight_messages_list(mid + 1, r, attack_type);
+  }
+
+  return -1;
+}
+
+int allocate_fight_message(int attack_type) {
+  static int allocated = 0;
+
+  /* Search the table to see if the given attack_type already exists. */
+  if (top_of_fight_messages_list > 0) {
+    int index = search_fight_messages_list(0, top_of_fight_messages_list, attack_type);
+
+    /* If the attack_type was found, return the index. */
+    if (index != -1) {
+      return index;
+    }
+  }
+
+  top_of_fight_messages_list++;
+
+  /* Create a new table if this is the first entry. */
+  if (top_of_fight_messages_list == 0) {
+    /* Initial table size, based on profiling in July of 2020. */
+    allocated = 60;
+
+    CREATE(fight_messages_list, struct message_list, allocated);
+
+#ifdef PROFILE_DB
+    log_f("PROFILE_DB :: fight_messages_list size: %d, allocated: %d", top_of_fight_messages_list + 1, allocated);
+#endif
+
+    return top_of_fight_messages_list;
+  }
+
+  /* Increase table size if needed. */
+  if (top_of_fight_messages_list % allocated == 0) {
+    allocated += 5;
+
+    RECREATE(fight_messages_list, struct message_list, allocated * sizeof(struct message_list));
+  }
+
+#ifdef PROFILE_DB
+  log_f("PROFILE_DB :: fight_messages_list size: %d, allocated: %d", top_of_fight_messages_list + 1, allocated);
+#endif
+
+  int index = -1;
+
+  if (attack_type > fight_messages_list[top_of_fight_messages_list - 1].attack_type) {
+    index = top_of_fight_messages_list;
+  }
+  else {
+    for (int i = 0; (i < top_of_fight_messages_list) && (index < 0); i++) {
+      if (attack_type < fight_messages_list[i].attack_type) {
+        memmove(&fight_messages_list[i + 1], &fight_messages_list[i], sizeof(struct message_list) * (top_of_fight_messages_list - i));
+        memset(&fight_messages_list[i], 0, sizeof(struct message_list));
+
+        fight_messages_list[i].attack_type = attack_type;
+
+        index = i;
+      }
+    }
+  }
+
+  return index;
+}
+
+void load_messages(void) {
+  FILE *fl;
+
+  if (!(fl = fopen(MESSAGES_FILE, "r"))) {
+    log_f("fopen %s", MESSAGES_FILE);
+
+    produce_core();
+  }
+
+  char marker[1];
+
+  while ((fscanf(fl, "%1s\n", marker) > 0) && (*marker == 'M')) {
+    int attack_type;
+
+    if (fscanf(fl, "%d\n", &attack_type) > 0) {
+      int fight_message_nr = allocate_fight_message(attack_type);
+
+      if (fight_message_nr >= 0) {
+        struct message_type *messages;
+
+        CREATE(messages, struct message_type, 1);
+
+        fight_messages_list[fight_message_nr].attack_type = attack_type;
+        fight_messages_list[fight_message_nr].number_of_attacks++;
+
+        messages->next = fight_messages_list[fight_message_nr].msg;
+        fight_messages_list[fight_message_nr].msg = messages;
+
+        messages->die_msg.attacker_msg = fread_string(fl);
+        messages->die_msg.victim_msg = fread_string(fl);
+        messages->die_msg.room_msg = fread_string(fl);
+        messages->miss_msg.attacker_msg = fread_string(fl);
+        messages->miss_msg.victim_msg = fread_string(fl);
+        messages->miss_msg.room_msg = fread_string(fl);
+        messages->hit_msg.attacker_msg = fread_string(fl);
+        messages->hit_msg.victim_msg = fread_string(fl);
+        messages->hit_msg.room_msg = fread_string(fl);
+        messages->god_msg.attacker_msg = fread_string(fl);
+        messages->god_msg.victim_msg = fread_string(fl);
+        messages->god_msg.room_msg = fread_string(fl);
+      }
+    }
+  }
+
+  fclose(fl);
 }
 
 /* read direction data */

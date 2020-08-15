@@ -85,7 +85,7 @@ int p_tyrant(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     if ((vict!=mob) && (GET_LEVEL(vict)<LEVEL_IMM)) {
       dam = number(60, 100);
       if (saves_spell(vict, SAVING_SPELL,GET_LEVEL(mob)))  dam >>= 1;
-      damage(mob, vict, dam, SPELL_COLOUR_SPRAY,DAM_MAGICAL);
+      damage(mob, vict, dam, SPELL_COLOR_SPRAY,DAM_MAGICAL);
     }
    }
   }
@@ -379,7 +379,7 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
                 if ( affected_by_spell(foe, SKILL_MEDITATE) ) affect_from_char(foe, SKILL_MEDITATE);
                 if ( !affected_by_spell( foe, SKILL_MEDITATE ) ) {
                   af.type = SKILL_MEDITATE;
-                  af.duration = 32;
+                  af.duration = 12;
                   af.modifier = 0;
                   af.location = APPLY_NONE;
                   af.bitvector = AFF_NONE;
@@ -394,6 +394,12 @@ int uber_eo(CHAR *uber, CHAR *vict, int cmd, char *arg) {
           default:
             break;
         }
+      }
+      break;
+    case CMD_WAKE:
+      if (affected_by_spell(vict, SKILL_MEDITATE) && duration_of_spell(vict, SKILL_MEDITATE >= 10)) {
+        send_to_char("You are in a deep healing trance, unable to do anything.\n\r", vict);
+        return TRUE;
       }
       break;
     case CMD_FLEE:

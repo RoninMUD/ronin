@@ -20,7 +20,6 @@ void remove_subclass(CHAR *ch);
 void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_luck(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
@@ -34,8 +33,6 @@ void cast_debilitate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 void spell_debilitate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_clarity(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_clarity(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_blade_barrier(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_blade_barrier(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_distortion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -46,8 +43,6 @@ void cast_frostbolt(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
 void spell_frostbolt(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_orb_protection(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_orb_protection(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_sanctify(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_sanctify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_wrath_ancients(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_wrath_ancients(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_meteor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -66,16 +61,12 @@ void cast_passdoor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ
 void spell_passdoor(ubyte level, CHAR *ch, int direction);
 void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_demonic_thunder(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_demonic_thunder(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_ethereal_nature(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_ethereal_nature(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_magic_armament(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_magic_armament(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_degenerate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_degenerate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_fortification(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_fortification(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_disrupt_sanct(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -102,6 +93,8 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_dusk_requiem(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_divine_hammer(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_divine_hammer(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 
 extern int token_mob_time;
 

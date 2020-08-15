@@ -20,2363 +20,1704 @@
 #include "subclass.h"
 #include "fight.h"
 #include "enchant.h"
+#include "aff_ench.h"
 
-void magic_heal(CHAR *victim, int spell, int heal, bool overheal) {
-  if (!victim) return;
+/**
+ * @brief Print spell messages.
+ *
+ * Most simple spells should call this function to print the canned spell
+ *   messages defined in spell_parser.c in assign_spell_text().  More complex
+ *   messages should be handled in the spell code itself.
+ *
+ * @param[in] victim The target of the spell.
+ * @param[in] spell The spell number.
+ */
+void print_spell_messages(CHAR *victim, int spell) {
+  if (!victim || !spell || (spell >= MAX_SPL_LIST)) return;
 
-  /* Degenerate */
-  if (affected_by_spell(victim, SPELL_DEGENERATE) && (duration_of_spell(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27))) {
-    send_to_char("The magic of the spell fails to heal your degenerated body.\n\r", victim);
+  if (strlen(spell_text[spell].to_char_msg)) {
+    act(spell_text[spell].to_char_msg, FALSE, victim, 0, 0, TO_CHAR);
+  }
 
-    return;
+  if (strlen(spell_text[spell].to_room_msg)) {
+    act(spell_text[spell].to_room_msg, TRUE, victim, 0, 0, TO_ROOM);
+  }
+}
+
+/**
+ * @brief Print spell wear-off message.
+ *
+ * @param[in] victim The character affected by the spell.
+ * @param[in] spell The spell number.
+ */
+void print_spell_wear_off_message(CHAR *victim, int spell) {
+  if (!victim || !spell || (spell >= MAX_SPL_LIST)) return;
+
+  if (*spell_text[spell].wear_off_msg) {
+    printf_to_char(victim, "%s\n\r", spell_text[spell].wear_off_msg);
+  }
+}
+
+bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags) {
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
+
+  bool cast_ok = TRUE;
+
+  if (IS_SET(spl_chk_flags, NO_CAST_SAFE_ROOM) && ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_SELF) && (victim == ch)) {
+    send_to_char("You can't cast this spell upon yourself.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC) &&
+    victim && !IS_NPC(victim) && !IS_NPC(ch) && (victim != ch)) {
+    send_to_char("You can't cast this spell on another player.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC_NOT_IN_GROUP) &&
+    victim && !SAME_GROUP(victim, ch)) {
+    send_to_char("You can't cast this spell on non-group members.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC_NOKILL_FLAG_ON) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && !ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
+    victim && !IS_NPC(victim) && !IS_NPC(ch) && (victim != ch) &&
+    (IS_SET(GET_PFLAG(ch), PLR_NOKILL) || !IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF))) {
+    send_to_char("You can't attack other players.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC_IN_ARENA_ROOM) && ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
+    victim && !IS_NPC(victim) && !IS_NPC(ch) && (victim != ch)) {
+    send_to_char("You can't cast this spell on another player here.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC_IN_CHAOTIC_ROOM) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) &&
+    victim && !IS_NPC(victim) && !IS_NPC(ch) && (victim != ch)) {
+    send_to_char("The chaos around you prevents this spell from being cast on another player.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+  else if (IS_SET(spl_chk_flags, NO_CAST_CHAOSMODE) && CHAOSMODE) {
+    send_to_char("The forces of Chaos absorb the magic.\n\r", ch);
+
+    cast_ok = FALSE;
+  }
+
+  return cast_ok;
+}
+
+/**
+ * @brief Generic damage spell function.
+ *
+ * Most simple damage spells should call this function.
+ *
+ * @param[in] ch The caster of the spell.
+ * @param[in] victim The target of the spell.
+ * @param[in] level The caster level of the spell.
+ * @param[in] spell The spell number.
+ * @param[in] dmg The damage to inflict.
+ * @param[in] dmg_type The damage type.
+ * @param[in] saving_throw The saving throw to check, if any.
+ *
+ * @example Use SAVING_NONE or -1 if there is no saving throw.
+ *
+ * @return The actual damage inflicted by the spell, or -1 if the cast was aborted.
+ */
+int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_type, int saving_throw) {
+  if (!ch || !victim || !spell) return -1;
+
+  /* Sanity check for negative level. */
+  level = MAX(level, 1);
+
+  /* Sanity check for undefined dmg_type. */
+  if (dmg_type <= 0) {
+    dmg_type = TYPE_UNDEFINED;
+  }
+
+  /* Check saving throw, if any. Damage is reduced by 1/2 on a successful saving throw. */
+  if ((dmg > 0) && (saving_throw >= SAVING_PARA) && (saving_throw <= SAVING_SPELL) && saves_spell(victim, saving_throw, level)) {
+    dmg /= 2;
+  }
+
+  /* Call damage() to inflict the damage. */
+  return damage(ch, victim, dmg, spell, dmg_type);
+}
+
+/**
+ * @brief Cast a single-target spell as an area of effect.
+ */
+void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *tar_obj), int level, int aoe_flags) {
+  if (!ch || !func || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
+
+  if (!IS_SET(aoe_flags, AOE_TAR_OBJS_ONLY)) {
+    for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_victim; temp_victim; temp_victim = next_victim) {
+      next_victim = temp_victim->next_in_room;
+
+      if ((temp_victim == ch) || (IS_IMMORTAL(temp_victim) && !IS_IMMORTAL(ch))) continue;
+
+      if (!IS_SET(aoe_flags, AOE_TAR_ALL_CHARS)) {
+        if (IS_SET(aoe_flags, AOE_TAR_GROUP) && !SAME_GROUP(temp_victim, ch)) continue;
+        if (IS_SET(aoe_flags, AOE_TAR_PCS_ONLY) && IS_NPC(temp_victim)) continue;
+        if (IS_SET(aoe_flags, AOE_TAR_NPCS_ONLY) && !IS_NPC(temp_victim)) continue;
+        if (!IS_SET(aoe_flags, AOE_TAR_OTHER_PCS) && !IS_NPC(temp_victim) && !IS_NPC(ch) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) continue;
+        if (!IS_SET(aoe_flags, AOE_TAR_OTHER_NPCS) && IS_NPC(temp_victim) && IS_NPC(ch) && (!IS_AFFECTED(temp_victim, AFF_CHARM) || (GET_MASTER(temp_victim) == ch))) continue;
+      }
+
+      func(level, ch, temp_victim, 0);
+    }
+
+    if (IS_SET(aoe_flags, AOE_TAR_CH | AOE_TAR_ALL_CHARS)) {
+      func(level, ch, ch, 0);
+    }
+  }
+
+  if (IS_SET(aoe_flags, AOE_TAR_OBJS)) {
+    for (OBJ *temp_obj = ROOM_CONTENTS(CHAR_REAL_ROOM(ch)), *next_obj; temp_obj; temp_obj = next_obj) {
+      next_obj = temp_obj->next_content;
+
+      func(level, ch, 0, temp_obj);
+    }
+  }
+}
+
+/**
+ * @brief Generic magic heal function.
+ *
+ * Most magical healing should call this function.
+ *
+ * @param[in] ch The caster of the spell.
+ * @param[in] victim The target of the spell.
+ * @param[in] spell The spell number.
+ * @param[in] heal The amount of hit points to restore.
+ * @param[in] overheal Set to TRUE to allow overhealing.
+ *
+ * @example If ch is NULL then some checks for the caster may not apply, which
+ *   could cause unexpected behavior.  Generally only spells "cast" by objects
+ *   or affects that provide healing over time should specify NULL for ch.
+ *
+ * @return The actual healing stored by the spell.
+ */
+int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal) {
+  if (!victim) return 0;
+
+  int hp_limit = GET_MAX_HIT(victim);
+
+  if (ch) {
+    /* Druid SC4: Shapeshift: Elemental Form - Magical healing caused by the Druid is increased by 10%. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+      heal *= 1.2;
+    }
+
+    /* Druid SC5: Shapeshift: Dragon Form - Magical healing caused by the Druid is reduced by 20%. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 5) && ench_enchanted_by(ch, ENCH_NAME_DRAGON_FORM, 0)) {
+      heal *= 0.8;
+    }
   }
 
   /* Adrenaline Rush */
-  if (IS_MORTAL(victim) && check_subclass(victim, SC_BANDIT, 3)) {
-    heal += (heal * number(10, 15)) / 100;
-  }
-
-  /* Limit healing, as appropriate. */
-  if (!overheal) {
-    heal = MIN(heal, MAX((GET_MAX_HIT(victim) - GET_HIT(victim)), 0));
-  }
-
-  GET_HIT(victim) += heal;
-
-  update_pos(victim);
-}
-
-void cast_burning_hands(ubyte level,CHAR *ch,char *arg,int type,
-			CHAR *victim, OBJ *tar_obj )
-/* Mana: 17 Damage: 18-25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_burning_hands(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Serious screw-up in burning hands!");
-    break;
-  }
-}
-
-void cast_hell_fire(ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *victim, OBJ *tar_obj )
-/* Mana: 130 Damage: 200 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_hell_fire(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in hell fire!");
-    break;
-  }
-}
-
-void cast_death_spray(ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-/* Mana: 80  Minus 100 hps on mobs */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_death_spray(level, ch, victim, 0);
-    break;
-  default:
-    log_f("Wrong type called in death spray!");
-    break;
-  }
-}
-
-void cast_holy_word(ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *victim, OBJ *tar_obj )
-/* Mana: 80 Damage: 130 on Evil */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_holy_word(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in holy word!");
-    break;
-  }
-}
-
-void cast_evil_word(ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *victim, OBJ *tar_obj )
-/* Mana: 80 Damage: 130 on Good */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_evil_word(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in evil word!");
-    break;
-  }
-}
-
-void cast_call_lightning(ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *victim, OBJ *tar_obj )
-/* Mana: 15 Damage: (level)d8 */
-{
-  CHAR *tmp;
-
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
-      spell_call_lightning(level, ch, victim, 0);
-    else
-      send_to_char("You fail to call upon the lightning from the sky!\n\r",ch);
-    break;
-  case SPELL_TYPE_POTION:
-    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
-      spell_call_lightning(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
-      if(victim)
-	spell_call_lightning(level, ch, victim, 0);
-      else if (!tar_obj) spell_call_lightning(level, ch, ch, 0);
+  if (IS_MORTAL(victim)) {
+    if (check_subclass(victim, SC_BANDIT, 3)) {
+      heal += (heal * number(10, 15)) / 100;
     }
-    break;
-  case SPELL_TYPE_STAFF:
-    if (IS_OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING))
-      for (victim = world[CHAR_REAL_ROOM(ch)].people ;
-	   victim ; victim = tmp ) {
-	tmp = victim->next_in_room;
-	if (victim != ch) spell_call_lightning(level, ch, victim, 0);
-      }
-    break;
-  default :
-    log_f("Wrong type called in call lightning!");
-    break;
-  }
-}
 
-void cast_chill_touch( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-/* Mana: 15 Damage: 11-16 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_chill_touch(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in chill touch!");
-    break;
-  }
-}
+    /* Degenerate */
+    ENCH *degen = ench_get_from_char(victim, 0, ENCHANT_DEGENERATE);
 
-void cast_shocking_grasp( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *victim, OBJ *tar_obj )
-/* Mana: 19 Damage: 33-40 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_shocking_grasp(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in shocking grasp!");
-    break;
-  }
-}
+    if (degen && (degen->duration >= 15)) {
+      send_to_char("The magic of the spell heals only a fraction your degenerated body.\n\r", victim);
 
-void cast_colour_spray( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *victim, OBJ *tar_obj )
-/* Mana: 23 Damage: 80 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_colour_spray(level, ch, victim, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_colour_spray(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in colour spray!");
-    break;
-  }
-}
-
-void cast_earthquake( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *victim, OBJ *tar_obj )
-/* Mana: 15 Damage: 1d8+level */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_STAFF:
-    spell_earthquake(level, ch, 0, 0);
-    break;
-  default :
-    log_f("Wrong type called in earthquake!");
-    break;
-  }
-}
-
-void cast_energy_drain( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *victim, OBJ *tar_obj )
-/* Mana: 35  Gain exp from others */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_energy_drain(level, ch, victim, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_energy_drain(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (victim = world[CHAR_REAL_ROOM(ch)].people ;
-	 victim ; victim = victim->next_in_room )
-      if(victim != ch)
-	spell_energy_drain(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in energy drain!");
-    break;
-  }
-}
-
-void cast_fireball( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *victim, OBJ *tar_obj )
-/* Mana: 25 Damage: 100 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_fireball(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in fireball!");
-    break;
-  }
-}
-
-
-void cast_iceball( ubyte level, CHAR *ch, char *arg, int type,
-		  CHAR *victim, OBJ *tar_obj )
-/* Mana: 30 Damage: 130 */
-{
-  CHAR *victim_n;
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_iceball(level, ch, victim, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (victim = world[CHAR_REAL_ROOM(ch)].people ;
-	 victim ; victim = victim_n) {
-      victim_n=victim->next_in_room;
-      if(victim == ch) continue;
-      if(!IS_NPC(victim) && GET_LEVEL(victim)>=LEVEL_IMM) continue;
-      spell_iceball(level, ch, victim, 0);
+      heal /= 4;
+      hp_limit /= 4;
     }
-    break;
-  default :
-    log_f("Wrong type called in iceball!");
-    break;
   }
-}
 
-void cast_harm( ubyte level, CHAR *ch, char *arg, int type,
-	       CHAR *victim, OBJ *tar_obj )
-/* Mana: 35 Leaves all but 1d4 hps max Damage: 100 */
-{
-  CHAR *temp;
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_harm(level, ch, victim, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_harm(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF: /* Added temp - Ranger June 96 */
-    for (victim = world[CHAR_REAL_ROOM(ch)].people ; victim ; victim = temp) {
-      temp = victim->next_in_room;
-      if(victim != ch) spell_harm(level, ch, victim, 0);
+  /* Restore hit points to the victim. */
+  if (heal > 0) {
+    GET_HIT(victim) += heal;
+
+    /* Limit healing, as appropriate. */
+    if (!overheal) {
+      GET_HIT(victim) = MIN(GET_HIT(victim), hp_limit);
     }
-    break;
-  default :
-    log_f("Wrong type called in harm!");
-    break;
+
+    update_pos(victim);
   }
+
+  return heal;
 }
 
-void cast_super_harm( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *victim, OBJ *tar_obj )
-/* Mana: 100 Leaves all but 1d4 hps max Damage: 600 */
-{
-  CHAR *temp;
+void cast_burning_hands(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_super_harm(level, ch, victim, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_super_harm(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (victim = world[CHAR_REAL_ROOM(ch)].people ;
-	 victim ; victim = temp) {
-      temp = victim->next_in_room;
-      if(victim != ch) spell_super_harm(level, ch, victim, 0);
-    }
-    break;
-  default :
-    log_f("Wrong type called in super harm!");
-    break;
-  }
-}
-
-void cast_lightning_bolt( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *victim, OBJ *tar_obj )
-/* Mana: 20 Damage: 50-60 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_lightning_bolt(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in lightning bolt!");
-    break;
-  }
-}
-
-void cast_flamestrike( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-/* Mana: 25 Damage: 80 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_flamestrike(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in flamestrike!");
-    break;
-  }
-}
-
-void cast_lethal_fire( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-/* Mana: 50 Damage: 180-230 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_lethal_fire(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in lethal fire!");
-    break;
-  }
-}
-
-
-void cast_thunderball( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-/* Mana: 200 Damage: 800-1100 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_thunderball(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in thunderball!");
-    break;
-  }
-}
-
-void cast_electric_shock( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *victim, OBJ *tar_obj )
-/* Mana: 100 Damage: 450-500 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    if (victim)
-      spell_electric_shock(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in electric shock!");
-    break;
-  }
-}
-
-void cast_magic_missile( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *tar_obj )
-/* Mana: 5 Damage: 6-10 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_magic_missile(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in magic missile!");
-    break;
-  }
-}
-
-void cast_mass_invisibility (ubyte level, CHAR *ch, char *arg,
-			     int type, CHAR *victim,OBJ *obj)
-/* Mana: 100  Works on all pcs in room */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_STAFF:
-    spell_mass_invisibility (level, ch, 0, 0);
-    break;
-  default:
-    log_f("cast_mass_invisibility called with wrong type!");
-    break;
-  }
-}
-
-void cast_power_word_kill (ubyte level,CHAR *ch, char *arg, int type,
-			   CHAR *victim, OBJ *obj)
-/* Mana: 100 Can kill victims weeker than caster */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    spell_power_word_kill(level, ch, victim, 0);
-    break;
-  default:
-    log_f("cast_power_word_kill called with wrong type!");
-    break;
-  }
-}
-
-void cast_dispel_magic (ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *obj)
-/* Mana: 20 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-  case SPELL_TYPE_SCROLL:
-    if (victim || obj)
-      spell_dispel_magic(level,ch,victim,obj);
-    break;
-  default:
-    log_f("cast_dispel_magic called with wrong type!");
-    break;
-  }
-}
-
-void cast_convergence (ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *victim, OBJ *obj)
-/* Mana: 20 Uses targets mana to heal him/her */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_convergence(level,ch,victim,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_convergence(level,ch,ch,0);
-  default:
-    log_f("cast_convergence called with wrong type!");
-    break;
-  }
-}
-
-void cast_enchant_armour (ubyte level, CHAR *ch, char *arg, int type,
-			  CHAR *victim, OBJ *obj)
-/* Mana: 100 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    spell_enchant_armour (level,ch,0,obj);
-    break;
-  default:
-    log_f("cast_enchant_armour called with wrong type!");
-    break;
-  }
-}
-
-void cast_disintegrate (ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *obj)
-/* Mana: 150 Damage: 10-20(level) also destroys objects */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    if (victim || obj)
-      spell_disintegrate (level,ch,victim,obj);
-    break;
-  default:
-    log_f("cast_disintegrate called with wrong type!");
-    break;
-  }
-}
-
-void cast_conflagration (ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *victim, OBJ *obj)
-/* Mana: 200 Damage: 100 May also affect pcs in room */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    spell_conflagration (level, ch, victim, 0);
-    break;
-  default:
-    log_f("cast_conflagration called with wrong type!");
-    break;
-  }
-}
-
-void cast_vampiric_touch (ubyte level, CHAR *ch, char *arg, int type,
-			  CHAR *victim, OBJ *obj)
-/* Mana: 50  Drains energy and transfers to caster */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_vampiric_touch(level,ch,victim,0);
-    break;
-  default:
-    log_f("cast_vampiric_touch with wrong type!");
-    break;
-  }
-}
-
-void cast_searing_orb (ubyte level, CHAR *ch, char *arg,
-		       int type, CHAR *victim, OBJ *obj)
-/* Mana: 60 Destroy flamable objects in area */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    spell_searing_orb(level,ch,0,0);
-    break;
-  default:
-    log_f("cast_searing_orb with wrong type!");
-    break;
-  }
-}
-
-void cast_clairvoyance (ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *obj)
-/* Mana: 35 See through anothers eyes */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    spell_clairvoyance (level,ch,victim,0);
-    break;
-  default:
-    log_f("cast_clairvoyance with wrong type!");
-    break;
-  }
-}
-
-void cast_animate_dead(ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
-  struct obj_data *o, *o_next;
-
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    if(!tar_obj) return;
-    spell_animate_dead(level, ch, 0,tar_obj);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (o = world[CHAR_REAL_ROOM(ch)].contents;o;o = o_next) {
-      o_next = o->next_content;
-      spell_animate_dead (level, ch, 0, o);
-    }
-  default :
-    log_f("Wrong type called in Animate Dead!");
-    break;
-  }
-}
-
-void cast_spirit_levy(ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 Absorb energy from corpse */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_spirit_levy(level, ch, 0,tar_obj);
-    break;
-
-  default :
-    log_f("Wrong type called in Spirit Levy!");
-    break;
-  }
-}
-
-
-void cast_armor(ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 affect ac by 10 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (ch != tar_ch)
-      act("$N is protected by your deity.", FALSE, ch, 0, tar_ch, TO_CHAR);
-    spell_armor(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_armor(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_armor(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in armor!");
-    break;
-  }
-}
-
-void cast_endure(ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 10 affect ac by 15 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (ch != tar_ch)
-      act("$N is protected by your deity.", FALSE, ch, 0, tar_ch, TO_CHAR);
-    spell_endure(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_endure(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_endure(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in endure!");
-    break;
-  }
-}
-
-void cast_teleport( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  struct char_data *o_next;
-
-  switch (type) {
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_POTION:
-  case SPELL_TYPE_SPELL:
-    if (!tar_ch)
-      tar_ch = ch;
-    spell_teleport(level, ch, tar_ch, 0);
-    break;
-
-  case SPELL_TYPE_WAND:
-    if(!tar_ch) return;
-    spell_teleport(level, ch, tar_ch, 0);
-    break;
-
-  case SPELL_TYPE_STAFF:
-    for (tar_ch=world[CHAR_REAL_ROOM(ch)].people;tar_ch;tar_ch=o_next) {
-      o_next = tar_ch->next_in_room;
-      if (tar_ch != ch)
-	spell_teleport(level, ch, tar_ch, 0);
-    }
-    spell_teleport(level, ch, ch, 0);
-    break;
-
-  default :
-    log_f("Wrong type called in teleport!");
-    break;
-  }
-}
-
-void cast_firebreath( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 120 Six breaths of fireball */
-{
-
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if(GET_POS(tar_ch) == POSITION_FIGHTING)
-      send_to_char("Your target won't stay still long enough to draw the runes around.\n\r", ch);
-    else
-      {
-        if(ch!=tar_ch) {
-  	  act("$n draws the sigil of fire around $N's feet.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("$n draws the sigil of fire around your feet.",FALSE,ch,0,tar_ch,TO_VICT);
-	  act("You draw the sigil of fire around $N's feet.",FALSE,ch,0,tar_ch,TO_CHAR);
-        }
-        else {
-  	  act("$n draws the sigil of fire around $s feet.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("You draw the sigil of fire around your feet.",FALSE,ch,0,0,TO_CHAR);
-        }
-	spell_firebreath(level,ch,tar_ch,0);
-      }
-    break;
-  case SPELL_TYPE_POTION:
-    act("$n looks like $e has indigestion.",FALSE,ch,0,ch,TO_NOTVICT);
-    act("It burns in your stomach.",FALSE,ch,0,ch,TO_CHAR);
-    spell_firebreath(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    act("As $n reads the scroll, the spirit of fire lifts from the page and\n\renvelops $N.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-    act("$n reads the scroll, and the spirit of fire envelopes you.",FALSE,ch,0,tar_ch,TO_VICT);
-    act("You release the spirit of fire from the scroll.",FALSE,ch,0,tar_ch,TO_CHAR);
-    spell_firebreath(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in firebreath!");
-    break;
-  }
-}
-
-void cast_bless(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
-  switch (type) {
-    case SPELL_TYPE_SPELL:
-      if (tar_obj) {        /* It's an object */
-        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS)) {
-          send_to_char("Nothing seems to happen.\n\r", ch);
-          return;
-        }
-        spell_bless(level, ch, 0, tar_obj);
-      }
-      else {              /* Then it is a PC | NPC */
-        if (affected_by_spell(tar_ch, SPELL_BLESS)) {
-          send_to_char("Nothing seems to happen.\n\r", ch);
-          return;
-        }
-        spell_bless(level, ch, tar_ch, 0);
-      }
-      break;
     case SPELL_TYPE_POTION:
-      if (affected_by_spell(ch, SPELL_BLESS) ||
-        (GET_POS(ch) == POSITION_FIGHTING))
-        return;
-      spell_bless(level, ch, ch, 0);
-      break;
-    case SPELL_TYPE_SCROLL:
-      if (tar_obj) {        /* It's an object */
-        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS))
-          return;
-        spell_bless(level, ch, 0, tar_obj);
-
-      }
-      else {              /* Then it is a PC | NPC */
-
-        if (!tar_ch) tar_ch = ch;
-
-        if (affected_by_spell(tar_ch, SPELL_BLESS) ||
-          (GET_POS(tar_ch) == POSITION_FIGHTING))
-          return;
-        spell_bless(level, ch, tar_ch, 0);
-      }
-      break;
-    case SPELL_TYPE_WAND:
-      if (tar_obj) {        /* It's an object */
-        if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS))
-          return;
-        spell_bless(level, ch, 0, tar_obj);
-
-      }
-      else {              /* Then it is a PC | NPC */
-
-        if (affected_by_spell(tar_ch, SPELL_BLESS) ||
-          (GET_POS(tar_ch) == POSITION_FIGHTING))
-          return;
-        spell_bless(level, ch, tar_ch, 0);
-      }
-      break;
-    default:
-      log_f("Wrong type called in bless!");
-      break;
-  }
-}
-
-void cast_blindness( ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( IS_AFFECTED(tar_ch, AFF_BLIND) ){
-      send_to_char("Nothing seems to happen.\n\r", ch);
-      return;
-    }
-    spell_blindness(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if(IS_AFFECTED(ch, AFF_BLIND)) return;
-    spell_blindness(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    if ( IS_AFFECTED(ch, AFF_BLIND) )
-      return;
-    spell_blindness(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    if ( IS_AFFECTED(ch, AFF_BLIND) )
-      return;
-    spell_blindness(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	if (!(IS_AFFECTED(tar_ch, AFF_BLIND)))
-	  spell_blindness(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in blindness!");
-    break;
-  }
-}
-
-void cast_clone( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    /* if (tar_ch) {
-       sprintf(buf, "You create a duplicate of %s.\n\r", GET_NAME(tar_ch));
-       send_to_char(buf, ch);
-       sprintf(buf, "%%s creates a duplicate of %s,\n\r", GET_NAME(tar_ch));
-
-       spell_clone(level,ch,tar_ch,0);
-       } else {
-       sprintf(buf, "You create a duplicate of %s %s.\n\r",SANA(tar_obj),OBJ_SHORT(tar_obj));
-       send_to_char(buf, ch);
-       sprintf(buf, "%%s creates a duplicate of %s %s,\n\r",SANA(tar_obj),OBJ_SHORT(tar_obj));
-       */
-    spell_clone(level,ch,0,tar_obj);
-    break;
-
-
-  default :
-    log_f("Wrong type called in clone!");
-    break;
-  }
-  /* MISSING REST OF SWITCH -- POTION, SCROLL, WAND */
-}
-
-void cast_control_weather( ubyte level, CHAR *ch, char *arg, int type,
-			  CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  char buffer[MAX_STRING_LENGTH];
-  level=MIN(level,30);
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-
-    one_argument(arg,buffer);
-
-    if (strcmp("better",buffer) && strcmp("worse",buffer))
-      {
-	send_to_char("Do you want it to get better or worse?\n\r",ch);
-	return;
-      }
-
-    if(!strcmp("better",buffer))
-      weather_info.change+=(dice(((level)/2),4));
-    else
-      weather_info.change-=(dice(((level)/2),4));
-    break;
-  default :
-    log_f("Wrong type called in control weather!");
-    break;
-  }
-}
-
-void cast_create_food( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    act("$n magically creates a mushroom.",FALSE, ch, 0, 0, TO_ROOM);
-    spell_create_food(level,ch,0,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_STAFF:
-    spell_create_food(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in create food!");
-    break;
-  }
-}
-
-void cast_create_water( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 */
-{
-  switch (type) {
-  case SPELL_TYPE_WAND:
-    if (tar_obj)
-      {
-	if (tar_obj->obj_flags.type_flag != ITEM_DRINKCON)
-	  return;
-      }
-    else
-      return;
-     spell_create_water(level, ch, 0, tar_obj);
-    break;
-
-  case SPELL_TYPE_SPELL:
-    if (tar_obj->obj_flags.type_flag != ITEM_DRINKCON) {
-      send_to_char("It is unable to hold water.\n\r", ch);
-      return;
-    }
-    spell_create_water(level,ch,0,tar_obj);
-    break;
-
-  default :
-    log_f("Wrong type called in create water!");
-    break;
-  }
-}
-
-void cast_blindness_dust( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 Blind everyone in room */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_blindness_dust(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in blindness dust!");
-    break;
-  }
-}
-
-void cast_poison_smoke( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 Poison everyone in room */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_poison_smoke(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in poison smoke!");
-    break;
-  }
-}
-
-void cast_hypnotize( ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 40 Sleep or charm victim */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_hypnotize(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in hyptonize!");
-    break;
-  }
-}
-
-void cast_reappear( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 For use on objects */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_reappear(level,ch,tar_ch,tar_obj);
-    break;
-  default :
-    log_f("Wrong type called in reappear!");
-    break;
-  }
-}
-
-void cast_reveal( ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 For use on pcs */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_reveal(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in reveal!");
-    break;
-  }
-}
-
-void cast_relocation( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 Relocate to victim */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (!CAN_SEE(ch, tar_ch)) {
-      send_to_char("No-one by that name here!\n\r", ch);
-      return;
-    }
-    spell_relocation(level,ch,tar_ch,0);
-    break;
-  default:
-    log_f("Wrong type called in relocation!");
-    break;
-  }
-}
-
-void cast_cure_blind( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_blind(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_cure_blind(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_cure_blind(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in cure blind!");
-    break;
-  }
-}
-
-void cast_cure_critic( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 Cure 30 hps */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-    spell_cure_critic(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_cure_critic(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_cure_critic(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in cure critic!");
-    break;
-  }
-}
-
-void cast_cure_light_spray( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *victim, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_light_spray(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in cure critic spray!");
-    break;
-  }
-}
-
-void cast_great_miracle( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *tar_obj )
-/* Mana: 200 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    spell_great_miracle(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in great miracle!");
-    break;
-  }
-}
-
-void cast_heal_spray( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *victim, OBJ *tar_obj )
-/* Mana: 100 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_heal_spray(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in heal spray!");
-    break;
-  }
-}
-
-void cast_cure_serious_spray( ubyte level, CHAR *ch, char *arg, int type,
-			     CHAR *victim, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_serious_spray(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in cure serious spray!");
-    break;
-  }
-}
-
-void cast_cure_critic_spray( ubyte level, CHAR *ch, char *arg, int type,
-			    CHAR *victim, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_critic_spray(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in cure critic spray!");
-    break;
-  }
-}
-
-void cast_cure_serious( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 18 Cure 12 hps */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_serious(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_cure_serious(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_cure_serious(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in cure serious!");
-    break;
-  }
-}
-
-void cast_fear( ubyte level, CHAR *ch, char *arg, int type,
-	       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 */
-{
-  CHAR *temp;
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_fear(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_STAFF: /* Added temp - Ranger June 96 */
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = temp) {
-       temp = tar_ch->next_in_room;
-       if (tar_ch != ch) spell_fear(level,ch,tar_ch,0);
-    }
-    break;
-  default :
-    log_f("Wrong type called in fear!");
-    break;
-  }
-}
-
-void cast_forget( ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_forget(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in forget!");
-    break;
-  }
-}
-
-void cast_fly( ubyte level, CHAR *ch, char *arg, int type,
-	      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_FLY) ){
-      send_to_char("Nothing seems to happen.\n\r", ch);
-      return;
-    }
-    spell_fly(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_FLY) )
-      return;
-    spell_fly(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    if ( affected_by_spell(tar_ch, SPELL_FLY) )
-      return;
-    spell_fly(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_fly (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in fly!");
-    break;
-  }
-}
-
-void cast_infravision( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 See in the dark */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_INFRAVISION) ){
-      send_to_char("Nothing seems to happen.\n\r", ch);
-      return;
-    }
-    if (ch != tar_ch)
-      act("$N seems to be glowing with a bright light.",
-	  FALSE, ch, 0, tar_ch, TO_CHAR);
-
-    spell_infravision(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_INFRAVISION) )
-      return;
-    spell_infravision(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (!tar_ch) tar_ch = ch;
-    if ( affected_by_spell(tar_ch, SPELL_INFRAVISION) )
-      return;
-    spell_infravision(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_WAND:
-    if ( affected_by_spell(tar_ch, SPELL_INFRAVISION) )
-      return;
-    spell_infravision(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in infravision!");
-    break;
-  }
-}
-
-void cast_vitality( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 Restore mv points */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_vitality(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_vitality(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_vitality(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in vitality!");
-    break;
-  }
-}
-
-void cast_miracle( ubyte level, CHAR *ch, char *arg, int type,
-		  CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100 Restore victims hps */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_miracle(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_miracle(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_miracle(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in miracle!");
-    break;
-  }
-}
-
-void cast_fury(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj)
-/* Mana: 60  Double damage for hits */
-{
-  switch (type)
-  {
+      victim = ch;
     case SPELL_TYPE_SPELL:
-    case SPELL_TYPE_SCROLL:
     case SPELL_TYPE_WAND:
-      spell_fury(level, ch, tar_ch, 0);
+    case SPELL_TYPE_SCROLL:
+      spell_burning_hands(level, ch, victim, 0);
       break;
-    case SPELL_TYPE_POTION:
-      spell_fury(level, ch, ch, 0);
-      break;
+
     case SPELL_TYPE_STAFF:
-      for (tar_ch = world[CHAR_REAL_ROOM(ch)].people; tar_ch; tar_ch = tar_ch->next_in_room)
-        spell_fury(level, ch, tar_ch, 0);
-      break;
-    default:
-      log_f("Wrong type called in fury!");
+      aoe_spell(ch, spell_burning_hands, level, 0);
       break;
   }
 }
 
-void cast_mana_transfer( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_mana_transfer(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in mana transfer!");
-    break;
-  }
-}
-
-void cast_holy_bless( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 Fix alignment */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_holy_bless(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_holy_bless(level,ch,ch,0);
-    break;
-  default :
-    log_f("Wrong type called in holy bless!");
-    break;
-  }
-}
-
-void cast_evil_bless( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 Fix alignment */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_evil_bless(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_evil_bless(level,ch,ch,0);
-    break;
-  default :
-    log_f("Wrong type called in evil bless!");
-    break;
-  }
-}
-
-void cast_satiate( ubyte level, CHAR *ch, char *arg, int type,
-		  CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 10 Fill your stomach */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_satiate(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_satiate(level,ch,ch,0);
-    break;
-  default :
-    log_f("Wrong type called in satiate!");
-    break;
-  }
-}
-
-void cast_cure_light( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 Cure 10 hps */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_cure_light(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_cure_light(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_cure_light(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in cure light!");
-    break;
-  }
-}
-
-void cast_curse( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 Reduce hit by 1 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (tar_obj)   /* It is an object */
-      spell_curse(level,ch,0,tar_obj);
-    else {              /* Then it is a PC | NPC */
-      spell_curse(level,ch,tar_ch,0);
-    }
-    break;
-  case SPELL_TYPE_POTION:
-    spell_curse(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj)   /* It is an object */
-      spell_curse(level,ch,0,tar_obj);
-    else {              /* Then it is a PC | NPC */
-      if (!tar_ch) tar_ch = ch;
-      spell_curse(level,ch,tar_ch,0);
-    }
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	spell_curse(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in curse!");
-    break;
-  }
-}
-
-void cast_detect_alignment( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_DETECT_ALIGNMENT) ){
-      send_to_char("Nothing seems to happen.\n\r", tar_ch);
-      return;
-    }
-    spell_detect_alignment(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_DETECT_ALIGNMENT) )
-      return;
-    spell_detect_alignment(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if(!(IS_AFFECTED(tar_ch, SPELL_DETECT_ALIGNMENT)))
-	spell_detect_alignment(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in detect alignment!");
-    break;
-  }
-}
-
-void cast_detect_invisibility( ubyte level, CHAR *ch, char *arg, int type,
-			      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_DETECT_INVISIBLE) ){
-      send_to_char("Nothing seems to happen.\n\r", tar_ch);
-      return;
-    }
-    spell_detect_invisibility(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_DETECT_INVISIBLE) )
-      return;
-    spell_detect_invisibility(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if(!(IS_AFFECTED(tar_ch, SPELL_DETECT_INVISIBLE)))
-	spell_detect_invisibility(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in detect invisibility!");
-    break;
-  }
-}
-
-void cast_detect_magic( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_DETECT_MAGIC) ){
-      send_to_char("Nothing seems to happen.\n\r", tar_ch);
-      return;
-    }
-    spell_detect_magic(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    if ( affected_by_spell(ch, SPELL_DETECT_MAGIC) )
-      return;
-    spell_detect_magic(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (!(IS_AFFECTED(tar_ch, SPELL_DETECT_MAGIC)))
-	spell_detect_magic(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in detect magic!");
-    break;
-  }
-}
-
-void cast_recover_mana( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_recover_mana(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_recover_mana(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-	  spell_recover_mana(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in recover mana!");
-    break;
-  }
-}
-
-void cast_detect_poison( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_detect_poison(level, ch, tar_ch,tar_obj);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_detect_poison(level, ch, ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) {
-      spell_detect_poison(level, ch, 0, tar_obj);
-      return;
-    }
-    if (!tar_ch) tar_ch = ch;
-    spell_detect_poison(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in detect poison!");
-    break;
-  }
-}
-
-void cast_dispel_evil( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_dispel_evil(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_dispel_evil(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_dispel_evil(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    spell_dispel_evil(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	spell_dispel_evil(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in dispel evil!");
-    break;
-  }
-}
-
-void cast_dispel_good( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_dispel_good(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_dispel_good(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_dispel_good(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    spell_dispel_good(level, ch, tar_ch,0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	spell_dispel_good(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in dispel good!");
-    break;
-  }
-}
-
-
-void cast_enchant_weapon( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_enchant_weapon(level, ch, 0,tar_obj);
-    break;
-
-  case SPELL_TYPE_SCROLL:
-    if(!tar_obj) return;
-    spell_enchant_weapon(level, ch, 0,tar_obj);
-    break;
-  default :
-    log_f("Wrong type called in enchant weapon!");
-    break;
-  }
-}
-
-
-void cast_heal( ubyte level, CHAR *ch, char *arg, int type,
-	       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 Cures 100 hps */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if(ch==tar_ch) {
-      act("$n heals $mself.", FALSE, ch, 0, 0, TO_ROOM);
-      act("You heal yourself.", FALSE, ch, 0, 0, TO_CHAR);
-    }
-    else {
-      act("$n heals $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
-      act("You heal $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
-    }
-    spell_heal(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_heal(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_heal(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in heal!");
-    break;
-  }
-}
-
-/* Cures 100 mana */
-void cast_mana_heal(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj)
-{
-	switch(type)
-	{
-		case SPELL_TYPE_SPELL:
-		{
-			if(ch == tar_ch)
-			{
-				act("$n restores $mself slightly.",0,ch,0,0, TO_ROOM);
-				act("You restore yourself slightly.",0,ch,0,0, TO_CHAR);
-			}
-			else
-			{
-				act("$n restores $N slightly.",0,ch,0,tar_ch, TO_NOTVICT);
-				act("You restore $N slightly.",0,ch,0,tar_ch, TO_CHAR);
-			}
-			spell_mana_heal(level, ch, tar_ch, 0);
-			break;
-		}
-
-		case SPELL_TYPE_POTION:
-		{
-			spell_mana_heal(level, ch, ch, 0);
-			break;
-		}
-
-		case SPELL_TYPE_STAFF:
-		{
-			for(tar_ch = world[CHAR_REAL_ROOM(ch)].people; tar_ch; tar_ch = tar_ch->next_in_room)
-				spell_mana_heal(level, ch, tar_ch, 0);
-			break;
-		}
-		default :
-		{
-			log_f("Wrong type called in mana_heal!");
-			break;
-		}
-	}
-}
-
-/*
-void cast_shapeshift( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-          act("$n falls down on the ground, clutching $s stomach.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("You fall down on the ground, clutching your stomach.",FALSE,ch,0,0,TO_CHAR);
-          spell_shapeshift(level,ch,tar_ch,0);
-          break;
-
-  case SPELL_TYPE_SCROLL:
-    act("As $n reads the scroll, the spirit of the wolf lifts from the page and\n\renvelops $N.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-    act("$n reads the scroll, and the spirit of the wolf envelopes you.",FALSE,ch,0,tar_ch,TO_VICT);
-    act("You release the wolf spirit from the scroll.",FALSE,ch,0,tar_ch,TO_CHAR);
-    spell_shapeshift(level,ch,tar_ch,0);
-    break;
-
-  default :
-    log_f("Wrong type called in shapeshift!");
-    break;
-  }
- }
-
-void cast_silence( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  	case SPELL_TYPE_SPELL:
-        if(ch!=tar_ch) {
-          act("$n makes a choking gesture towards $N.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("$n makes a choking gesture towards you.",FALSE,ch,0,tar_ch,TO_VICT);
-	  act("You make a choking gesture towards $N's throat.",FALSE,ch,0,tar_ch,TO_CHAR);
-        }
-        else {
-          act("$n draws a few symbols on $s forehead.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("You draw the symbols of stealth on your forehead.",FALSE,ch,0,0,TO_CHAR);
-        }
-	spell_silence(level,ch,tar_ch,0);
-        break;
-
-    default :
-    log_f("Wrong type called in silence!");
-    break;
-   }
-  }
-
-
-void cast_quester( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  	case SPELL_TYPE_SPELL:
-          act("$n touches $N gently on the forehead.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("$n touches you gently on the forehead.",FALSE,ch,0,tar_ch,TO_VICT);
-	  act("You touch $N gently on the forehead.",FALSE,ch,0,tar_ch,TO_CHAR);
-	spell_quester(level,ch,tar_ch,0);
-        break;
-
-    default :
-    log_f("Wrong type called in quest champion!");
-    break;
-   }
-  }
-*/
-
-void cast_regeneration( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100 Regen of mana and hps */
-{
-
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    if(GET_POS(tar_ch) == POSITION_FIGHTING)
-      send_to_char("Your target won't stay still long enough to draw the runes around.\n\r", ch);
-    else
-      {
-        if(ch!=tar_ch) {
-          act("$n draws the sigil of growth around $N's feet.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("$n draws the sigil of growth around your feet.",FALSE,ch,0,tar_ch,TO_VICT);
-	  act("You draw the sigil of growth around $N's feet.",FALSE,ch,0,tar_ch,TO_CHAR);
-        }
-        else {
-          act("$n draws the sigil of growth around $s feet.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-	  act("You draw the sigil of growth around your feet.",FALSE,ch,0,0,TO_CHAR);
-        }
-	spell_regeneration(level,ch,tar_ch,0);
-      }
-    break;
-  case SPELL_TYPE_POTION:
-    spell_regeneration(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    act("As $n reads the scroll, the spirit of the forest lifts from the page and\n\renvelops $N.",FALSE,ch,0,tar_ch,TO_NOTVICT);
-    act("$n reads the scroll, and the spirit of the forest envelopes you.",FALSE,ch,0,tar_ch,TO_VICT);
-    act("You release the spirit of the forest from the scroll.",FALSE,ch,0,tar_ch,TO_CHAR);
-    spell_regeneration(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in regeneration!");
-    break;
-  }
-}
-
-void cast_lay_hands(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
+void cast_hell_fire(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
   switch (type) {
     case SPELL_TYPE_SPELL:
-      if (tar_ch == ch) {
-        act("You lay your hands on yourself.", FALSE, ch, 0, tar_ch, TO_CHAR);
-        act("$n lays $s hands on $mself.", FALSE, ch, 0, tar_ch, TO_ROOM);
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_hell_fire(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_death_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_death_spray(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_holy_word(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_holy_word(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_evil_word(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_evil_word(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_call_lightning(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_call_lightning(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_chill_touch(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_chill_touch(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_chill_touch, level, 0);
+      break;
+  }
+}
+
+void cast_shocking_grasp(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_shocking_grasp(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_shocking_grasp, level, 0);
+      break;
+  }
+}
+
+void cast_color_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_color_spray(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_color_spray, level, 0);
+      break;
+  }
+}
+
+void cast_earthquake(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_earthquake(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_energy_drain(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_energy_drain(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_fireball(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_fireball(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_fireball, level, 0);
+      break;
+  }
+}
+
+void cast_iceball(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_iceball(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_iceball, level, 0);
+      break;
+  }
+}
+
+void cast_harm(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_harm(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_harm, level, 0);
+      break;
+  }
+}
+
+void cast_super_harm(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_super_harm(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_super_harm, level, 0);
+      break;
+  }
+}
+
+void cast_lightning_bolt(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_lightning_bolt(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_lightning_bolt, level, 0);
+      break;
+  }
+}
+
+void cast_flamestrike(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_flamestrike(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_flamestrike, level, 0);
+      break;
+  }
+}
+
+void cast_lethal_fire(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_lethal_fire(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_lethal_fire, level, 0);
+      break;
+  }
+}
+
+void cast_thunderball(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_thunderball(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_thunderball, level, 0);
+      break;
+  }
+}
+
+void cast_electric_shock(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_electric_shock(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_electric_shock, level, 0);
+      break;
+  }
+}
+
+void cast_magic_missile(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_magic_missile(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_magic_missile, level, 0);
+      break;
+  }
+}
+
+void cast_power_word_kill(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_power_word_kill(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_power_word_kill, level, 0);
+      break;
+  }
+}
+
+void cast_dispel_magic(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_dispel_magic(level, ch, victim, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_dispel_magic, level, AOE_TAR_OBJS);
+      break;
+  }
+}
+
+void cast_convergence(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_convergence(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_convergence, level, 0);
+      break;
+  }
+}
+
+void cast_enchant_armor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_enchant_armor(level, ch, 0, obj);
+      break;
+  }
+}
+
+void cast_disintegrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_disintegrate(level, ch, victim, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_disintegrate, level, AOE_TAR_OBJS);
+      break;
+  }
+}
+
+void cast_conflagration(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_conflagration(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_conflagration, level, 0);
+      break;
+  }
+}
+
+void cast_vampiric_touch(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_vampiric_touch(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_vampiric_touch, level, 0);
+      break;
+  }
+}
+
+void cast_searing_orb(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_searing_orb(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_clairvoyance(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_clairvoyance(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_animate_dead(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_animate_dead(level, ch, 0, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_animate_dead, level, AOE_TAR_OBJS_ONLY);
+      break;
+  }
+}
+
+void cast_spirit_levy(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_spirit_levy(level, ch, 0, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_spirit_levy, level, AOE_TAR_OBJS_ONLY);
+      break;
+  }
+}
+
+void cast_armor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_armor(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_armor, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_endure(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_endure(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_endure, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_teleport(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_teleport(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_teleport, level, AOE_TAR_CH | AOE_TAR_GROUP);
+      break;
+  }
+}
+
+void cast_firebreath(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_firebreath(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_firebreath, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_bless(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_bless(level, ch, victim, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_bless, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_blindness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_blindness(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_blindness, level, 0);
+      break;
+  }
+}
+
+void cast_clone(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_blindness(level, ch, victim, 0);
+      break;
+
+  }
+}
+
+void cast_control_weather(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
+  char buf[MIL];
+
+  level = MIN(level, 30);
+
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      one_argument(arg, buf);
+
+      if (is_abbrev(buf, "better")) {
+        send_to_room("The weather takes a turn for the better.\n\r", CHAR_REAL_ROOM(ch));
+
+        weather_info.change += (dice(((level) / 2), 4));
+      }
+      else if (is_abbrev(buf, "worse")) {
+        send_to_room("The weather takes a turn for the worse.\n\r", CHAR_REAL_ROOM(ch));
+
+        weather_info.change -= (dice(((level) / 2), 4));
       }
       else {
-        act("You lay your hands on $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
-        act("$n lays $s hands on you.", FALSE, ch, 0, tar_ch, TO_VICT);
-        act("$n lays $s hands on $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
+        send_to_char("Do you want the weather to get better or worse?\n\r", ch);
       }
-
-      spell_lay_hands(level, ch, tar_ch, 0);
       break;
+  }
+}
+
+void cast_create_food(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_create_food(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_create_water(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-    case SPELL_TYPE_POTION:
-      spell_lay_hands(level, ch, tar_ch, 0);
+      spell_create_food(level, ch, 0, obj);
       break;
+  }
+}
+
+void cast_blindness_dust(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
     case SPELL_TYPE_STAFF:
-      for (tar_ch = world[CHAR_REAL_ROOM(ch)].people; tar_ch; tar_ch = tar_ch->next_in_room)
-        spell_lay_hands(level, ch, tar_ch, 0);
-      break;
-    default:
-      log_f("Wrong type called in lay_hands!");
+      spell_blindness_dust(level, ch, 0, 0);
       break;
   }
 }
 
-void cast_hold( ubyte level, CHAR *ch, char *arg, int type,
-	       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 15 */
-{
+void cast_poison_smoke(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_hold(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_hold(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj)
-      return;
-    if(!tar_ch) tar_ch = ch;
-    spell_hold(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	spell_hold(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in hold!");
-    break;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_poison_smoke(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_hypnotize(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_hypnotize(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_hypnotize, level, 0);
+      break;
+  }
+}
+
+void cast_reappear(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_reappear(level, ch, 0, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_reappear, level, AOE_TAR_OBJS_ONLY);
+      break;
+  }
+}
+
+void cast_reveal(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_reveal(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_reveal, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_relocation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_relocation(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_cure_blind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_cure_blind(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_cure_blind, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_cure_critic(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_cure_critic(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_cure_critic, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_cure_light_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_cure_light_spray(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_great_miracle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_great_miracle(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_heal_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_heal_spray(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_cure_serious_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_cure_serious_spray(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_cure_critic_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_cure_critic_spray(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_cure_serious(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_cure_serious(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_cure_serious, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_fear(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_fear(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_fear, level, 0);
+      break;
+  }
+}
+
+void cast_forget(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_forget(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_forget, level, AOE_TAR_NPCS_ONLY);
+      break;
+  }
+}
+
+void cast_fly(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_fly(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_fly, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_infravision(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_infravision(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_infravision, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_vitality(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_vitality(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_vitality, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_miracle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_miracle(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_miracle, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_fury(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_fury(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_fury, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_mana_transfer(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_mana_transfer(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_holy_bless(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_holy_bless(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_holy_bless, level, AOE_TAR_CH | AOE_TAR_GROUP);
+      break;
+  }
+}
+
+void cast_evil_bless(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_evil_bless(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_evil_bless, level, AOE_TAR_CH | AOE_TAR_GROUP);
+      break;
+  }
+}
+
+void cast_satiate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_satiate(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_satiate, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_cure_light(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_cure_light(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_cure_light, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_curse(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_curse(level, ch, victim, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_curse, level, 0);
+      break;
+  }
+}
+
+void cast_detect_alignment(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_detect_alignment(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_detect_alignment, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_detect_invisibility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_detect_invisibility(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_detect_invisibility, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_detect_magic(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_detect_magic(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_detect_magic, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_recover_mana(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_recover_mana(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_recover_mana, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_detect_poison(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_detect_poison(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_detect_poison, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_dispel_evil(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_dispel_evil(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_dispel_evil, level, 0);
+      break;
+  }
+}
+
+void cast_dispel_good(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_dispel_good(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_dispel_good, level, 0);
+      break;
   }
 }
 
 
-
-void cast_invisibility( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
+void cast_enchant_weapon(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (tar_obj) {
-      if ( IS_SET(tar_obj->obj_flags.extra_flags, ITEM_INVISIBLE) )
-	send_to_char("Nothing new seems to happen.\n\r", ch);
-      else
-	spell_invisibility(level, ch, 0, tar_obj);
-    } else { /* tar_ch */
-      if ( IS_AFFECTED(tar_ch, AFF_INVISIBLE) )
-	send_to_char("Nothing new seems to happen.\n\r", ch);
-      else
-	spell_invisibility(level, ch, tar_ch, 0);
-    }
-    break;
-  case SPELL_TYPE_POTION:
-    if (!IS_AFFECTED(ch, AFF_INVISIBLE) )
-      spell_invisibility(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if (tar_obj) {
-      if (!(IS_SET(tar_obj->obj_flags.extra_flags, ITEM_INVISIBLE)) )
-	spell_invisibility(level, ch, 0, tar_obj);
-    } else { /* tar_ch */
-      if (!tar_ch) tar_ch = ch;
-
-      if (!( IS_AFFECTED(tar_ch, AFF_INVISIBLE)) )
-	spell_invisibility(level, ch, tar_ch, 0);
-    }
-    break;
-  case SPELL_TYPE_WAND:
-    if (tar_obj) {
-      if (!(IS_SET(tar_obj->obj_flags.extra_flags, ITEM_INVISIBLE)) )
-	spell_invisibility(level, ch, 0, tar_obj);
-    } else { /* tar_ch */
-      if (!( IS_AFFECTED(tar_ch, AFF_INVISIBLE)) )
-	spell_invisibility(level, ch, tar_ch, 0);
-    }
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (!( IS_AFFECTED(tar_ch, AFF_INVISIBLE)) )
-	spell_invisibility(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in invisibility!");
-    break;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_enchant_weapon(level, ch, 0, obj);
+      break;
   }
 }
 
-
-void cast_imp_invisibility( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 */
-{
+void cast_heal(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( IS_AFFECTED(tar_ch, AFF_IMINV) )
-      send_to_char("Nothing new seems to happen.\n\r", ch);
-    else
-      spell_improved_invisibility(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    if(ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))
-      send_to_char("The forces of chaos negate your potion!\n\r",ch);
-    else
-      spell_improved_invisibility (level, ch, ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in imp-invisibility!");
-    break;
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You heal yourself.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n heals $mself.", FALSE, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You heal $N.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n heals $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_heal(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_heal(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_heal, level, 0);
+      break;
   }
 }
 
-void cast_remove_improved_invis( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_mana_heal(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    if (!IS_AFFECTED(tar_ch, AFF_IMINV) )
-      send_to_char("Nothing new seems to happen.\n\r", ch);
-    else
-      spell_remove_improved_invis(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in imp-invisibility!");
-    break;
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You restore yourself slightly.", 0, victim, 0, 0, TO_CHAR);
+        act("$n restores $mself slightly.", 0, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You restore $N slightly.", 0, ch, 0, victim, TO_CHAR);
+        act("$n restores $N slightly.", 0, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_mana_heal(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_mana_heal(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_mana_heal, level, 0);
+      break;
   }
 }
 
-
-
-void cast_locate_object( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
+void cast_regeneration(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_locate_object(level, ch, 0, tar_obj);
-    break;
-  default :
-    log_f("Wrong type called in locate object!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_regeneration(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_regeneration, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_paralyze( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
+void cast_lay_hands(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_paralyze(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_paralyze(level,ch,ch,0);
-    break;
-  default :
-    log_f("Wrong type called in paralyze!");
-    break;
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You lay your hands on yourself.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n lays $s hands on $mself.", FALSE, ch, 0, victim, TO_ROOM);
+      }
+      else {
+        act("You lay your hands on $N.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n lays $s hands on $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_lay_hands(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_lay_hands(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_lay_hands, level, 0);
+      break;
   }
 }
 
-
-void cast_poison( ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 10 */
-{
+void cast_hold(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_poison(level, ch, tar_ch, tar_obj);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_poison(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-            if (tar_ch != ch)
-	      spell_poison(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in poison!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_hold(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_hold, level, 0);
+      break;
   }
 }
 
-
-void cast_protection_from_evil( ubyte level, CHAR *ch, char *arg, int type,
-			       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 */
-{
+void cast_invisibility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_protection_from_evil(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_protection_from_evil(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if(!tar_ch) tar_ch = ch;
-    spell_protection_from_evil(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_protection_from_evil(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in protection from evil!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_invisibility(level, ch, victim, obj);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_invisibility, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-
-void cast_protection_from_good( ubyte level, CHAR *ch, char *arg, int type,
-			       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 */
-{
+void cast_imp_invisibility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_protection_from_good(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_protection_from_good(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if(!tar_ch) tar_ch = ch;
-    spell_protection_from_good(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_protection_from_good(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in protection from good!");
-    break;
+    case SPELL_TYPE_POTION:
+      if (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) {
+        send_to_char("The forces of chaos negate your potion!\n\r", ch);
+
+        return;
+      }
+
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_improved_invisibility(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_improved_invisibility, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_remove_curse( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
+void cast_remove_improved_invis(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_remove_curse(level, ch, tar_ch, tar_obj);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_remove_curse(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) {
-      spell_remove_curse(level, ch, 0, tar_obj);
-      return;
-    }
-    if(!tar_ch) tar_ch = ch;
-    spell_remove_curse(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_remove_curse(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in remove curse!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_remove_improved_invis(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_remove_improved_invis, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_remove_paralysis( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 35 */
-{
+void cast_locate_object(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_remove_paralysis(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_remove_paralysis(level, ch, ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in remove paralysis!");
-    break;
+    case SPELL_TYPE_SPELL:
+      spell_locate_object(level, ch, 0, obj);
+      break;
   }
 }
 
-
-void cast_remove_poison( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
+void cast_paralyze(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_remove_poison(level, ch, tar_ch, tar_obj);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_remove_poison(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_remove_poison(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in remove poison!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_paralyze(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_paralyze, level, 0);
+      break;
   }
 }
 
-
-
-void cast_sanctuary( ubyte level, CHAR *ch, char *arg, int type,
-		    CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
+void cast_poison(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_sanctuary(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_sanctuary(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj)
-      return;
-    if(!tar_ch) tar_ch = ch;
-    spell_sanctuary(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_sanctuary(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in sanctuary!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_poison(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_poison, level, 0);
+      break;
   }
 }
 
-
-void cast_sphere( ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
+void cast_protection_from_evil(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_sphere(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_sphere(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj)
-      return;
-    if(!tar_ch) tar_ch = ch;
-    spell_sphere(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_sphere(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in sphere!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_protection_from_evil(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_protection_from_evil, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_invulnerability( ubyte level, CHAR *ch, char *arg, int type,
-			  CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
+void cast_protection_from_good(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    spell_invulnerability(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_invulnerability(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj)
-      return;
-    if(!tar_ch) tar_ch = ch;
-    spell_invulnerability(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_invulnerability(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in invulnerability!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_protection_from_good(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_protection_from_good, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_sleep( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
+void cast_remove_curse(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_sleep(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_sleep(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_sleep(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_WAND:
-    if(tar_obj) return;
-    spell_sleep(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if (tar_ch != ch)
-	spell_sleep(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in sleep!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_remove_curse(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_remove_curse, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-
-void cast_strength( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 10 */
-{
+void cast_remove_paralysis(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_strength(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_strength(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_strength(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_strength(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in strength!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_remove_paralysis(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_remove_paralysis, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
+void cast_remove_poison(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_remove_poison(level, ch, victim, 0);
+      break;
 
-void cast_ventriloquate( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 5 */
-{
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_remove_poison, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_sanctuary(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_sanctuary(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_sanctuary, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_sphere(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_sphere(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_sphere, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_invulnerability(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_invulnerability(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_invulnerability, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_sleep(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_sleep(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_sleep, level, 0);
+      break;
+  }
+}
+
+void cast_strength(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_strength(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_strength, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_ventriloquate(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj) {
   CHAR *tmp_ch;
   char buf1[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH];
@@ -2387,531 +1728,332 @@ void cast_ventriloquate( ubyte level, CHAR *ch, char *arg, int type,
     log_f("Attempt to ventriloquate by non-cast-spell.");
     return;
   }
-  for(; *arg && (*arg == ' '); arg++);
+
+  for (; *arg && (*arg == ' '); arg++);
+
   if (tar_obj) {
     sprintf(buf1, "The %s says '%s'\n\r", fname(OBJ_NAME(tar_obj)), arg);
     sprintf(buf2, "Someone makes it sound like the %s says '%s'.\n\r",
-	    fname(OBJ_NAME(tar_obj)), arg);
+      fname(OBJ_NAME(tar_obj)), arg);
     sprintf(buf4, "%s makes it sound like the %s says '%s'.\n\r", GET_NAME(ch),
-            fname(OBJ_NAME(tar_obj)), arg);
-  }	else {
-    sprintf(buf1, "%s says '%s'\n\r", PERS(tar_ch,tar_ch), arg);
+      fname(OBJ_NAME(tar_obj)), arg);
+  }
+  else {
+    sprintf(buf1, "%s says '%s'\n\r", PERS(tar_ch, tar_ch), arg);
     sprintf(buf2, "Someone makes it sound like %s says '%s'\n\r",
-	    GET_NAME(tar_ch), arg);
+      GET_NAME(tar_ch), arg);
     sprintf(buf4, "%s makes it sound like %s says '%s'.\n\r", GET_NAME(ch),
-            GET_NAME(tar_ch), arg);
+      GET_NAME(tar_ch), arg);
   }
 
   sprintf(buf3, "Someone says, '%s'\n\r", arg);
 
   for (tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch;
-       tmp_ch = tmp_ch->next_in_room) {
+    tmp_ch = tmp_ch->next_in_room) {
 
     if ((tmp_ch != ch) && (tmp_ch != tar_ch)) {
       if (!IS_MORTAL(tmp_ch)) {
         send_to_char(buf4, tmp_ch);
-      } else {
-      if ( saves_spell(tmp_ch, SAVING_SPELL,level) )
-	send_to_char(buf2, tmp_ch);
-      else
-	send_to_char(buf1, tmp_ch);
       }
-    } else {
+      else {
+        if (saves_spell(tmp_ch, SAVING_SPELL, level))
+          send_to_char(buf2, tmp_ch);
+        else
+          send_to_char(buf1, tmp_ch);
+      }
+    }
+    else {
       if (tmp_ch == tar_ch) {
         if (!IS_MORTAL(tmp_ch)) {
           sprintf(buf3, "%s makes you say '%s'\n\r", GET_NAME(ch), arg);
           send_to_char(buf3, tar_ch);
-    } else {
-	send_to_char(buf3, tar_ch);
+        }
+        else {
+          send_to_char(buf3, tar_ch);
+        }
+      }
     }
   }
 }
-  }
-}
 
-
-
-void cast_word_of_recall( ubyte level, CHAR *ch, char *arg, int type,
-			 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  CHAR *temp;
+void cast_word_of_recall(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_word_of_recall(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_word_of_recall(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_word_of_recall(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_WAND:
-    if(tar_obj) return;
-    spell_word_of_recall(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF: /* Added temp - Ranger June 96 */
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ; tar_ch ; tar_ch = temp) {
-      temp = tar_ch->next_in_room;
-      if (tar_ch != ch) spell_word_of_recall(level,ch,tar_ch,0);
-    }
-    spell_word_of_recall(level,ch,ch,0);
-    break;
-  default :
-    log_f("Wrong type called in word of recall!");
-    break;
-  }
-}
-
-
-void cast_total_recall( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_STAFF:
-    spell_total_recall(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_total_recall(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in word of recall!");
-    break;
-  }
-}
-
-
-void cast_summon( ubyte level, CHAR *ch, char *arg, int type,
-		 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_summon(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in summon!");
-    break;
-  }
-}
-
-void cast_locate_character( ubyte level, CHAR *ch, char *arg, int type,
-			   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_locate_character(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in locate character!");
-    break;
-  }
-}
-
-
-void cast_charm_person( ubyte level, CHAR *ch, char *arg, int type,
-		       CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 50 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_charm_person(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_SCROLL:
-    if(!tar_ch) return;
-    spell_charm_person(level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      if ((tar_ch != ch) && (IS_NPC(tar_ch)))
-	spell_charm_person(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in charm person!");
-    break;
-  }
-}
-
-void cast_sense_life( ubyte level, CHAR *ch, char *arg, int type,
-		     CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 20 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_sense_life(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_sense_life(level, ch, ch, 0);
-    break;
-  case SPELL_TYPE_STAFF:
-    for (tar_ch = world[CHAR_REAL_ROOM(ch)].people ;
-	 tar_ch ; tar_ch = tar_ch->next_in_room)
-      spell_sense_life(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in sense life!");
-    break;
-  }
-}
-
-
-void cast_identify( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 25 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_identify(level,ch,tar_ch,tar_obj);
-    break;
-
-  case SPELL_TYPE_SCROLL:
-    spell_identify(level, ch, tar_ch, tar_obj);
-    break;
-  default :
-    log_f("Wrong type called in identify!");
-    break;
-  }
-}
-
-
-void cast_legend_lore( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_legend_lore(level,ch,tar_ch,tar_obj);
-    break;
-
-  case SPELL_TYPE_SCROLL:
-    spell_legend_lore(level, ch, tar_ch, tar_obj);
-    break;
-  default :
-    log_f("Wrong type called in legend lore!");
-    break;
-  }
-}
-
-
-void cast_recharge( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 30 */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_recharge(level,ch,tar_ch,tar_obj);
-    break;
-
-  default :
-    log_f("Wrong type called in recharge!");
-    break;
-  }
-}
-
-/* Dispel sanct - Ranger Sept 96 */
-void cast_dispel_sanct( ubyte level, CHAR *ch, char *arg, int type,
-		   CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_WAND:
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_SPELL:
-    spell_dispel_sanct(level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in dispel_sanct!");
-    break;
-  }
-}
-void cast_disenchant( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_disenchant (level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_disenchant (level, ch, ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in Disenchant!");
-    break;
-  }
-}
-
-
-void cast_petrify( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-{
-  if(!IS_NPC(ch) && GET_LEVEL(ch)<LEVEL_WIZ) {
-    send_to_char("Your level isn't high enough to cast this spell.\n\r",ch);
-    return;
-  }
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_petrify (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in Petrify!");
-    break;
-  }
-}
-
-
-void cast_haste(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj)
-{
-  switch (type)
-  {
-    case SPELL_TYPE_SPELL:
-      spell_haste (level, ch, tar_ch, 0);
-      break;
     case SPELL_TYPE_POTION:
-      spell_haste(level, ch, ch,0);
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_word_of_recall(level, ch, victim, 0);
       break;
-    default:
-      log_f("Wrong type called in haste!");
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_word_of_recall, level, AOE_TAR_CH | AOE_TAR_PCS_ONLY);
       break;
   }
 }
 
-void cast_great_mana( ubyte level, CHAR *ch, char *arg, int type,
-			CHAR *victim, OBJ *tar_obj )
-/* Mana: 10 - God Spell Only*/
-{
-  if(GET_LEVEL(ch)<LEVEL_IMM) {
-    send_to_char("This spell is for gods only!\n\r",ch);
+void cast_total_recall(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_total_recall(level, ch, 0, 0);
+      break;
+  }
+}
+
+void cast_summon(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_summon(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_locate_character(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_locate_character(level, ch, victim, 0);
+      break;
+  }
+}
+
+void cast_charm_person(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_charm_person(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_charm_person, level, AOE_TAR_NPCS_ONLY);
+      break;
+  }
+}
+
+void cast_sense_life(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_sense_life(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_sense_life, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_identify(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_identify(level, ch, victim, obj);
+      break;
+  }
+}
+
+void cast_recharge(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_recharge(level, ch, 0, obj);
+      break;
+  }
+}
+
+void cast_dispel_sanct(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_dispel_sanct(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_dispel_sanct, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_disenchant(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_disenchant(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_disenchant, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
+void cast_petrify(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  if (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_WIZ)) {
+    send_to_char("Your level isn't high enough to cast this spell.\n\r", ch);
+
     return;
   }
+
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_great_mana(level,ch,0,0);
-    break;
-  default :
-    log_f("Wrong type called in great mana!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_petrify(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_petrify, level, 0);
+      break;
   }
 }
 
-/*
-void cast_spiritwrack( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_haste(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_STAFF:
-  case SPELL_TYPE_SPELL:
-    spell_spiritwrack (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in spiritwrack!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_haste(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_haste, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_spectral_blade( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_great_mana(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj) {
+  if (IS_MORTAL(ch)) {
+    send_to_char("This spell is for gods only!\n\r", ch);
+
+    return;
+  }
+
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_spectral_blade (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in Spectral Blade!");
-    break;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_great_mana(level, ch, 0, 0);
+      break;
   }
 }
 
-
-void cast_doppelganger( ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_perceive(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_doppelganger (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in Doppelganger!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_perceive(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_perceive, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-
-void cast_armageddon( ubyte level, CHAR *ch, char *arg, int type,
-		      CHAR *victim, OBJ *tar_obj )
-{
+void cast_quick(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-  case SPELL_TYPE_WAND:
-    if(victim)
-      spell_armageddon(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in armageddon!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_quick(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_quick, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-
-void cast_tranquility( ubyte level, CHAR *ch, char *arg, int type,
-                   CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_divine_intervention(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_tranquility (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in tranquility!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_divine_intervention(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_divine_intervention, level, AOE_TAR_CH | AOE_TAR_PCS_ONLY);
+      break;
   }
 }
 
-
-void cast_leech( ubyte level, CHAR *ch, char *arg, int type,
-                   CHAR *tar_ch, OBJ *tar_obj )
-{
+void cast_rush(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_leech (level, ch, tar_ch, 0);
-    break;
-  default :
-    log_f("Wrong type called in Leech!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_rush(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_rush, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
-*/
-void cast_perceive(ubyte level, CHAR *ch, char *arg, int type,CHAR *victim, OBJ *tar_obj ) {
+
+void cast_blood_lust(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_perceive(level, ch, victim, 0);
-    break;
-  default :
-    log_f("Wrong type called in perceive!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_blood_lust(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_blood_lust, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_quick(ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100 allows to cast twice in 1 round */
-{
+void cast_mystic_swiftness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_quick (level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    spell_quick(level,ch,ch,0);
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    if (tar_obj) return;
-    if (!tar_ch) tar_ch = ch;
-    spell_quick(level,ch,tar_ch,0);
-    break;
-  default :
-    log_f("Wrong type called in quick!");
-    break;
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_mystic_swiftness(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_mystic_swiftness, level, AOE_TAR_ALL_CHARS);
+      break;
   }
 }
 
-void cast_divine_intervention( ubyte level, CHAR *ch, char *arg, int type,
-			      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 500 */
-{
+void cast_wind_slash(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
-  case SPELL_TYPE_SPELL:
-    if ( affected_by_spell(tar_ch, SPELL_DIVINE_INTERVENTION) ){
-      send_to_char("Nothing seems to happen.\n\r", tar_ch);
-      return;
-    }
-    spell_divine_intervention(level,ch,tar_ch,0);
-    break;
-  case SPELL_TYPE_POTION:
-    break;
-  case SPELL_TYPE_STAFF:
-    break;
-  default :
-    log_f("Wrong type called in divine intervention!");
-    break;
-  }
-}
-
-void cast_rush(ubyte level, CHAR *ch, char *arg, int type,
-		CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100  */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_rush (level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    break;
-  default :
-    log_f("Wrong type called in rush!");
-    break;
-  }
-}
-
-void cast_blood_lust(ubyte level, CHAR *ch, char *arg, int type,
-                      CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100  */
-{
-  switch (type) {
-  case SPELL_TYPE_SPELL:
-    spell_blood_lust (level, ch, tar_ch, 0);
-    break;
-  case SPELL_TYPE_POTION:
-    break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-    break;
-  default :
-    log_f("Wrong type called in blood lust!");
-    break;
-  }
-}
-
-void cast_mystic_swiftness(ubyte level, CHAR *ch, char *arg, int type,
-                 CHAR *tar_ch, OBJ *tar_obj )
-/* Mana: 100  */
-{
- switch (type) {
-  case SPELL_TYPE_SPELL:
-     spell_mystic_swiftness (level, ch, tar_ch, 0);
-     break;
-  case SPELL_TYPE_POTION:
-     break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-     break;
-  default :
-    log_f("Wrong type called in mystic_swiftness!");
-    break;
-  }
-}
-
-/* Mana: 100  */
-void cast_wind_slash(ubyte level, CHAR *ch, char *arg, int type, CHAR *tar_ch, OBJ *tar_obj)
-{
- switch (type) {
-  case SPELL_TYPE_SPELL:
-     spell_wind_slash(level, ch, tar_ch, 0);
-     break;
-  case SPELL_TYPE_POTION:
-     break;
-  case SPELL_TYPE_SCROLL:
-  case SPELL_TYPE_WAND:
-     break;
-  default :
-    log_f("Wrong type called in wind_slash!");
-    break;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SCROLL:
+    case SPELL_TYPE_STAFF:
+      spell_wind_slash(level, ch, 0, 0);
+      break;
   }
 }

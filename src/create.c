@@ -2827,11 +2827,11 @@ RANDOM_0, RANDOM_1, RANDOM_2.\n\r", ch);
          if(tmp==-1)
            {
            send_to_char("edit object <#> subclass_res <add|remove> all, or a list of the following:\r\n\
-ANTI_ENCHANTER, ANTI_ARCHMAGE, ANTI_DRUID, ANTI_TEMPLAR, ANTI_ROGUE,\n\r\
-ANTI_BANDIT, ANTI_WARLORD, ANTI_GLADIATOR, ANTI_RONIN, ANTI_MYSTIC,\n\r\
-ANTI_RANGER, ANTI_TRAPPER, ANTI_CAVALIER, ANTI_CRUSADER, ANTI_DEFILER,\n\r\
-ANTI_INFIDEL, ANTI_BLADESINGER, ANTI_CHANTER, ANTI_LEGIONNAIRE,\n\r\
-ANTI_MERCENARY.\n\r", ch);
+ANTI_SC_ENCHANTER, ANTI_SC_ARCHMAGE, ANTI_SC_DRUID, ANTI_SC_TEMPLAR, ANTI_SC_ROGUE,\n\r\
+ANTI_SC_BANDIT, ANTI_SC_WARLORD, ANTI_SC_GLADIATOR, ANTI_SC_RONIN, ANTI_SC_MYSTIC,\n\r\
+ANTI_SC_RANGER, ANTI_SC_TRAPPER, ANTI_SC_CAVALIER, ANTI_SC_CRUSADER, ANTI_SC_DEFILER,\n\r\
+ANTI_SC_INFIDEL, ANTI_SC_BLADESINGER, ANTI_SC_CHANTER, ANTI_SC_LEGIONNAIRE,\n\r\
+ANTI_SC_MERCENARY.\n\r", ch);
            }
          else
            {
@@ -2844,7 +2844,7 @@ ANTI_MERCENARY.\n\r", ch);
                  obj_proto_table[object].obj_flags.subclass_res = 0;
                }
                else {
-                 obj_proto_table[object].obj_flags.subclass_res = (ITEM_ANTI_MERCENARY<<1) -1;
+                 obj_proto_table[object].obj_flags.subclass_res = (ITEM_ANTI_SC_MERCENARY<<1) -1;
                }
                send_to_char("Done.\n\r",ch);
              }

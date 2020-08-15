@@ -52,7 +52,6 @@ extern struct con_app_type con_app[];
 
 extern struct dex_skill_type dex_app_skill[];
 
-extern const char * const spells[];
 extern const char * const songs[];
 extern const char * const spell_wear_off_msg[];
 
@@ -80,7 +79,6 @@ extern char *mob_id_spec[];
 
 extern struct message_list fight_messages[MAX_MESSAGES];
 
-extern int thaco[11][58];
 extern byte backstab_mult[58];
 extern byte circle_mult[58];
 extern byte ambush_mult[58];

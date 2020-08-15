@@ -3333,13 +3333,13 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
                 strcat(buf,buf2);
                 if(k->specials.att_type[i]==ATT_SPELL_CAST) {
                //sprinttype(k->specials.att_spell[i]-1,spells,buf2);
-               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, spells);
+               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, (const char * const * const)spells);
                   strcat(buf,CAP(buf2));
             strcat(buf," (cast)");
                 }
                 if(k->specials.att_type[i]==ATT_SPELL_SKILL) {
                //sprinttype(k->specials.att_spell[i]-1,spells,buf2);
-               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, spells);
+               snprint_type(buf2, sizeof(buf2), k->specials.att_spell[i] - 1, (const char * const * const)spells);
                   strcat(buf,CAP(buf2));
             strcat(buf," (skill)");
                 }
@@ -5693,13 +5693,13 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
   case ITEM_POTION :
     if(flags->value[1] > 0)
       //sprinttype(flags->value[1]-1, spells, buf1);
-      snprint_type(buf1, sizeof(buf1), flags->value[1] - 1, spells);
+      snprint_type(buf1, sizeof(buf1), flags->value[1] - 1, (const char * const * const)spells);
     if(flags->value[2] > 0)
       //sprinttype(flags->value[2]-1, spells, buf2);
-      snprint_type(buf2, sizeof(buf2), flags->value[2] - 1, spells);
+      snprint_type(buf2, sizeof(buf2), flags->value[2] - 1, (const char * const * const)spells);
     if(flags->value[3] > 0)
       //sprinttype(flags->value[3]-1, spells, buf3);
-      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, spells);
+      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, (const char * const * const)spells);
     sprintf(str, "Level: %d\n\rSpells : %d (%s)\n\r         %d (%s)\n\r         %d (%s)\n\r",
          flags->value[0],
          flags->value[1],
@@ -5713,7 +5713,7 @@ void item_type_flag_to_string(struct obj_flag_data *flags, char *str)
   case ITEM_STAFF :
     if(flags->value[3] > 0)
       //sprinttype(flags->value[3]-1, spells, buf3);
-      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, spells);
+      snprint_type(buf3, sizeof(buf3), flags->value[3] - 1, (const char * const * const)spells);
     sprintf(str, "Level : %d\n\rMax Charges : %d\n\rCharges Left: %d\n\rSpell: %d (%s)\n\r",
          flags->value[0],
          flags->value[1],
@@ -6604,13 +6604,13 @@ Usage: mstat ac(t) <ACT>\n\r\
           strcat(buf,buf2);
           if(proto->att_type[i]==ATT_SPELL_CAST) {
             //sprinttype(proto->att_spell[i]-1,spells,buf2);
-            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, spells);
+            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, (const char * const * const)spells);
             strcat(buf,CAP(buf2));
          strcat(buf," (cast)");
           }
           if(proto->att_type[i]==ATT_SPELL_SKILL) {
             //sprinttype(proto->att_spell[i]-1,spells,buf2);
-            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, spells);
+            snprint_type(buf2, sizeof(buf2), proto->att_spell[i] - 1, (const char * const * const)spells);
             strcat(buf,CAP(buf2));
          strcat(buf," (skill)");
           }

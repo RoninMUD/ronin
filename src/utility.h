@@ -137,8 +137,8 @@ bool in_int_array(const int array[], const size_t num_elems, const int value);
 void shuffle_int_array(int array[], const size_t num_elems);
 void shuffle_2d_int_array(int array[][2], const size_t num_elems);
 
-int get_random_eligible_effect(CHAR *ch, const int eligible_effect_types[]);
-int get_random_set_effect(CHAR *ch, const int eligible_effect_types[]);
+int get_random_eligible_affect(CHAR *ch, const int eligible_affect_list[], const size_t list_size);
+int get_random_set_affect(CHAR *ch, const int eligible_affect_list[], const size_t list_size);
 int get_random_set_bit_from_mask(const int32_t mask);
 
 #define RND_RND 0
@@ -176,7 +176,7 @@ int strn_cmp(char *str1, char *str2, size_t n);
 char *string_to_lower(char *str);
 char *string_to_upper(char *str);
 
-void snprint_bits(char *dest, size_t dest_size, long bitvector, const char *const list[]);
-void snprint_type(char *dest, size_t dest_size, int type, const char *const list[]);
+void snprint_bits(char *dest, size_t dest_size, long bits, const char * const list[]);
+void snprint_type(char *dest, size_t dest_size, int type, const char * const list[]);
 
 #endif

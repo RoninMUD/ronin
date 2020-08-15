@@ -15,17 +15,17 @@
 
 char *fread_string(FILE *f1);
 void stop_follower(struct char_data *ch);
-void do_flee(struct char_data *ch, char *argument, int cmd);
+void do_flee(CHAR *ch, char *argument, int cmd);
 void die(struct char_data *ch);
 void appear(struct char_data *ch);
-void load_messages(void);
-void update_pos( struct char_data *victim );
-void set_fighting(struct char_data *ch, struct char_data *vict);
-void stop_fighting(struct char_data *ch);
+void update_pos(CHAR *victim );
+void set_fighting(CHAR *ch, struct char_data *vict);
+void stop_fighting(CHAR *ch);
 void make_corpse(struct char_data *ch);
 void change_alignment(struct char_data *ch, struct char_data *victim);
 void death_cry(struct char_data *ch);
-void raw_kill(struct char_data *ch);
+void raw_kill_ex(CHAR *ch, bool statue);
+void raw_kill(CHAR *ch);
 void divide_experience(struct char_data *ch, struct char_data *victim, int none);
 void gain_exp(struct char_data *ch, int gain);
 char *replace_string(char *str, char *weapon);

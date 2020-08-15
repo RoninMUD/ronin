@@ -29,12 +29,16 @@ April 30/01
 #include "reception.h"
 
 int shop_keeper(CHAR *keeper,CHAR *ch,int cmd,char *arg);
+
 #define HESTIA_PASS   28761
 #define PAN           28506
 #define CRUCIFIX      28600
 #define PLUTO         28703
 #define ATHENA        28600
 #define GATEKEEPER    28507
+
+#define DISCORD       28763
+#define DISSONANCE    28764
 
 /*
 mob 28701 cant be attacked
@@ -1639,12 +1643,41 @@ int ench_gatekeeper(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
-int check_for_level_32(OBJ *obj, CHAR *ch,int cmd, char *argument) {
-  if(cmd==MSG_OBJ_WORN) {
-    if(GET_LEVEL(ch)<32 || IS_NPC(ch)) {
-      act("You are too inexperienced to use this.",0,ch,0,0,TO_CHAR);
+int ench_rings(OBJ *obj, CHAR *ch, int cmd, char *argument) {
+  if (cmd == MSG_OBJ_WORN) {
+    if (!obj || !ch || !OBJ_CARRIED_BY(obj) || (ch != OBJ_CARRIED_BY(obj)) || !AWAKE(ch) || IS_IMMORTAL(ch)) return FALSE;
+
+    bool zap = FALSE;
+
+    switch (V_OBJ(obj)) {
+      case DISCORD:
+        if (GET_CLASS(ch) != CLASS_PALADIN) {
+          zap = TRUE;
+        }
+        break;
+
+      case DISSONANCE:
+        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
+          zap = TRUE;
+        }
+        break;
+    }
+
+    if (IS_NPC(ch)) {
+      zap = TRUE;
+    }
+
+    if (zap) {
+      act("You attempt to wear $p around your finger.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n attempts to wear $p around $s finger.", FALSE, ch, obj, 0, TO_ROOM);
+
+      act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
+
       return TRUE;
     }
+
+    return FALSE;
   }
   return FALSE;
 }
@@ -2018,8 +2051,9 @@ void assign_enchanted(void) {
   assign_room(28574,  ench_thorn_room);
   assign_room(28575,  ench_thorn_room);
 
-  assign_obj(28763, check_for_level_32);
-  assign_obj(28764, check_for_level_32);
+  assign_obj(DISCORD, ench_rings);
+  assign_obj(DISSONANCE, ench_rings);
+
   assign_obj(28721, blade_unholy_sacrifice);
   assign_obj(28745, ench_crown_kings);
   assign_obj(28750, ench_pandora_box);

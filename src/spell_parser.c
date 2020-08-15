@@ -24,354 +24,124 @@
 #include "fight.h"
 #include "cmd.h"
 #include "limits.h"
+#include "aff_ench.h"
+
+struct spell_info_t spell_info[MAX_SPL_LIST + 1];
+struct spell_text_t spell_text[MAX_SPL_LIST + 1];
+char *spells[MAX_SPL_LIST];
 
 #define \
-SPELLO(nr, beat, pos, mlev, clev, nlev, plev, aplev, avlev, blev, colev, mana, tar, func) { \
-  spell_info[nr].spell_pointer = (func);           \
-  spell_info[nr].beats = (beat);                   \
-  spell_info[nr].minimum_position = (pos);         \
-  spell_info[nr].min_usesmana = (mana);            \
-  spell_info[nr].min_level_cleric = (clev);        \
-  spell_info[nr].min_level_magic = (mlev);         \
-  spell_info[nr].min_level_ninja = (nlev);         \
-  spell_info[nr].min_level_paladin = (plev);       \
-  spell_info[nr].min_level_anti_paladin = (aplev); \
-  spell_info[nr].min_level_avatar = (avlev);       \
-  spell_info[nr].min_level_bard = (blev);          \
-  spell_info[nr].min_level_commando = (colev);     \
-  spell_info[nr].targets = (tar);                  \
+SPELLO(_spell, _beats, _min_pos, _mu_lvl, _cl_lvl, _ni_lvl, _pa_lvl, _ap_lvl, _av_lvl, _ba_lvl, _co_lvl, _mana, _tar, _func) { \
+  if (_spell < MAX_SPL_LIST) { \
+    spell_info[_spell].beats                  = (_beats);   \
+    spell_info[_spell].minimum_position       = (_min_pos); \
+    spell_info[_spell].min_level_magic        = (_mu_lvl);  \
+    spell_info[_spell].min_level_cleric       = (_cl_lvl);  \
+    spell_info[_spell].min_level_ninja        = (_ni_lvl);  \
+    spell_info[_spell].min_level_paladin      = (_pa_lvl);  \
+    spell_info[_spell].min_level_anti_paladin = (_ap_lvl);  \
+    spell_info[_spell].min_level_avatar       = (_av_lvl);  \
+    spell_info[_spell].min_level_bard         = (_ba_lvl);  \
+    spell_info[_spell].min_level_commando     = (_co_lvl);  \
+    spell_info[_spell].min_usesmana           = (_mana);    \
+    spell_info[_spell].targets                = (_tar);     \
+    spell_info[_spell].spell_pointer          = (_func);    \
+  } \
+  else { \
+    log_f("WARNING: Spell %d out of range.", _spell); \
+  } \
 }
 
-/* Extern procedures */
-void set_fighting(CHAR *ch, CHAR *vict);
-
-/* Global Data */
-struct spell_info_type spell_info[MAX_SPL_LIST + 1];
-
-const char * const spells[] = {
-  "armor",                        /*   1 */
-  "teleport",                     /*   2 */
-  "bless",                        /*   3 */
-  "blindness",                    /*   4 */
-  "burning hands",                /*   5 */
-  "call lightning",               /*   6 */
-  "charm person",                 /*   7 */
-  "chill touch",                  /*   8 */
-  "clone",                        /*   9 */
-  "colour spray",                 /*  10 */
-  "control weather",              /*  11 */
-  "create food",                  /*  12 */
-  "create water",                 /*  13 */
-  "cure blind",                   /*  14 */
-  "cure critic",                  /*  15 */
-  "cure light",                   /*  16 */
-  "curse",                        /*  17 */
-  "detect alignment",             /*  18 */
-  "detect invisibility",          /*  19 */
-  "detect magic",                 /*  20 */
-  "detect poison",                /*  21 */
-  "dispel evil",                  /*  22 */
-  "earthquake",                   /*  23 */
-  "enchant weapon",               /*  24 */
-  "energy drain",                 /*  25 */
-  "fireball",                     /*  26 */
-  "harm",                         /*  27 */
-  "heal",                         /*  28 */
-  "invisibility",                 /*  29 */
-  "lightning bolt",               /*  30 */
-  "locate object",                /*  31 */
-  "magic missile",                /*  32 */
-  "poison",                       /*  33 */
-  "protection from evil",         /*  34 */
-  "remove curse",                 /*  35 */
-  "sanctuary",                    /*  36 */
-  "shocking grasp",               /*  37 */
-  "sleep",                        /*  38 */
-  "strength",                     /*  39 */
-  "summon",                       /*  40 */
-  "ventriloquate",                /*  41 */
-  "word of recall",               /*  42 */
-  "remove poison",                /*  43 */
-  "sense life",                   /*  44 */
-  "sneak",                        /*  45 */
-  "hide",                         /*  46 */
-  "steal",                        /*  47 */
-  "backstab",                     /*  48 */
-  "pick",                         /*  49 */
-  "kick",                         /*  50 */
-  "bash",                         /*  51 */
-  "rescue",                       /*  52 */
-  "block",                        /*  53 */
-  "knock",                        /*  54 */
-  "punch",                        /*  55 */
-  "parry",                        /*  56 */
-  "dual",                         /*  57 */
-  "throw",                        /*  58 */
-  "dodge",                        /*  59 */
-  "peek",                         /*  60 */
-  "butcher",                      /*  61 */
-  "trap",                         /*  62 */
-  "disarm",                       /*  63 */
-  "subdue",                       /*  64 */
-  "circle",                       /*  65 */
-  "triple",                       /*  66 */
-  "ambush",                       /*  67 */
-  "spin",                         /*  68 */
-  "assault",                      /*  69 */
-  "disembowel",                   /*  70 */
-  "identify",                     /*  71 */
-  "cure serious",                 /*  72 */
-  "infravision",                  /*  73 */
-  "regeneration",                 /*  74 */
-  "vitality",                     /*  75 */
-  "cure light spray",             /*  76 */
-  "cure serious spray",           /*  77 */
-  "cure critic spray",            /*  78 */
-  "heal spray",                   /*  79 */
-  "death spray",                  /*  80 */
-  "holy word",                    /*  81 */
-  "iceball",                      /*  82 */
-  "total recall",                 /*  83 */
-  "recharge",                     /*  84 */
-  "miracle",                      /*  85 */
-  "fly",                          /*  86 */
-  "mana transfer",                /*  87 */
-  "holy bless",                   /*  88 */
-  "evil bless",                   /*  89 */
-  "satiate",                      /*  90 */
-  "animate dead",                 /*  91 */
-  "great miracle",                /*  92 */
-  "flamestrike",                  /*  93 */
-  "spirit levy",                  /*  94 */
-  "lethal fire",                  /*  95 */
-  "hold",                         /*  96 */
-  "sphere",                       /*  97 */
-  "improved invisibility",        /*  98 */
-  "invulnerability",              /*  99 */
-  "fear",                         /* 100 */
-  "forget",                       /* 101 */
-  "fury",                         /* 102 */
-  "endure",                       /* 103 */
-  "blindness dust",               /* 104 */
-  "poison smoke",                 /* 105 */
-  "hell fire",                    /* 106 */
-  "hypnotize",                    /* 107 */
-  "recover mana",                 /* 108 */
-  "thunderball",                  /* 109 */
-  "electric shock",               /* 110 */
-  "paralyze",                     /* 111 */
-  "remove paralysis",             /* 112 */
-  "dispel good",                  /* 113 */
-  "evil word",                    /* 114 */
-  "reappear",                     /* 115 */
-  "reveal",                       /* 116 */
-  "relocation",                   /* 117 */
-  "locate character",             /* 118 */
-  "super harm",                   /* 119 */
-  "pummel",                       /* 120 */
-  "coin-toss",                    /* 121 */
-  "great mana",                   /* 122 */
-  "fartmouth",                    /* 123 */
-  "perceive",                     /* 124 */
-  "pray",                         /* 125 */
-  "assassinate",                  /* 126 */
-  "haste",                        /* 127 */
-  "power word kill",              /* 128 */
-  "dispel magic",                 /* 129 */
-  "conflagration",                /* 130 */
-  "",                             /* 131 */
-  "convergence",                  /* 132 */
-  "enchant armour",               /* 133 */
-  "disintegrate",                 /* 134 */
-  "hidden-blade",                 /* 135 */
-  "vampiric touch",               /* 136 */
-  "searing orb",                  /* 137 */
-  "clairvoyance",                 /* 138 */
-  "firebreath",                   /* 139 */
-  "lay hands",                    /* 140 */
-  "dispel sanctuary",             /* 141 */
-  "disenchant",                   /* 142 */
-  "petrify",                      /* 143 */
-  "taunt",                        /* 144 */
-  "protection from good",         /* 145 */
-  "remove improved invisibility", /* 146 */
-  "",                             /* 147 */
-  "quad",                         /* 148 */
-  "quick",                        /* 149 */
-  "divine intervention",          /* 150 */
-  "rush",                         /* 151 */
-  "blood lust",                   /* 152 */
-  "scan",                         /* 153 */
-  "mystic swiftness",             /* 154 */
-  "",                             /* 155 */
-  "",                             /* 156 */
-  "",                             /* 157 */
-  "",                             /* 158 */
-  "",                             /* 159 */
-  "",                             /* 160 */
-  "",                             /* 161 */
-  "",                             /* 162 */
-  "twist",                        /* 163 */
-  "cunning",                      /* 164 */
-  "wind slash",                   /* 165 */
-  /* Subclass Skills Start Here */
-  "",                             /* 166 */
-  "",                             /* 167 */
-  "",                             /* 168 */
-  "",                             /* 169 */
-  "",                             /* 170 */
-  "",                             /* 171 */
-  "debilitate",                   /* 172 */
-  "mana heal",                    /* 173 */
-  "clobber",                      /* 174 */
-  "blur",                         /* 175 */
-  "",                             /* 176 */
-  "tranquility",                  /* 177 */
-  "vehemence",                    /* 178 */
-  "tremor",                       /* 179 */
-  "shadow wraith",                /* 180 */
-  "devastation",                  /* 181 */
-  "!incendiary cloud!",           /* 182 Old Version */
-  "snipe",                        /* 183 */
-  "riposte",                      /* 184 */
-  "trophy",                       /* 185 */
-  "frenzy",                       /* 186 */
-  "power of faith",               /* 187 */
-  "incendiary cloud",             /* 188 New Version */
-  "power of devotion",            /* 189 */
-  "wrath of god",                 /* 190 */
-  "disrupt sanctuary",            /* 191 */
-  "fortification",                /* 192 */
-  "degenerate",                   /* 193 */
-  "magic armament",               /* 194 */
-  "ethereal nature",              /* 195 */
-  "engage",                       /* 196 */
-  "mantra",                       /* 197 */
-  "banzai",                       /* 198 */
-  "headbutt",                     /* 199 */
-  "",                             /* 200 Reserved */
-  "maim",                         /* 201 */
-  "aid",                          /* 202 */
-  "",                             /* 203 */
-  "shadowstep",                   /* 204 */
-  "batter",                       /* 205 */
-  "desecrate",                    /* 206 */
-  "defend",                       /* 207 */
-  "hostile",                      /* 208 */
-  "rimefang",                     /* 209 */
-  "wither",                       /* 210 */
-  "blackmantle",                  /* 211 */
-  "divine wind",                  /* 212 */
-  "zeal",                         /* 213 */
-  "",                             /* 214 */
-  "flank",                        /* 215 */
-  "rejuvenation",                 /* 216 */
-  "wall of thorns",               /* 217 */
-  "meteor",                       /* 218 */
-  "berserk",                      /* 219 */
-  "awareness",                    /* 220 */
-  "feint",                        /* 221 */
-  "smite",                        /* 222 */
-  "camp",                         /* 223 */
-  "luck",                         /* 224 */
-  "warchant",                     /* 225 */
-  "rally",                        /* 226 */
-  "evasion",                      /* 227 */
-  "tigerkick",                    /* 228 */
-  "trip",                         /* 229 */
-  "dirty-tricks",                 /* 230 */
-  "switch",                       /* 231 */
-  "trusty-steed",                 /* 232 */
-  "backfist",                     /* 233 */
-  "",                             /* 234 */
-  "",                             /* 235 */
-  "cloud of confusion",           /* 236 */
-  "lunge",                        /* 237 */
-  "rage",                         /* 238 */
-  "righteousness",                /* 239 */
-  "protect",                      /* 240 */
-  "wrath of ancients",            /* 241 */
-  "victimize",                    /* 242 */
-  "meditate",                     /* 243 */
-  "sanctify",                     /* 244 */
-  "camaraderie",                  /* 245 */
-  "orb of protection",            /* 246 */
-  "dusk requiem",                 /* 247 */
-  "frost bolt",                   /* 248 */
-  "iron skin",                    /* 249 */
-  "distortion",                   /* 250 */
-  "passdoor",                     /* 251 */
-  "blade barrier",                /* 252 */
-  "might",                        /* 253 */
-  "clarity",                      /* 254 */
-  "\n"
-};
+#define \
+SPLTXTO(_spell, _name, _to_char_msg, _to_room_msg, _wear_off_msg) { \
+  if (_spell < MAX_SPL_LIST) { \
+    spell_text[_spell].name         = (_name);         \
+    spell_text[_spell].to_char_msg  = (_to_char_msg);  \
+    spell_text[_spell].to_room_msg  = (_to_room_msg);  \
+    spell_text[_spell].wear_off_msg = (_wear_off_msg); \
+  } \
+  else { \
+    log_f("WARNING: Spell message %d out of range.", _spell); \
+  } \
+}
 
 void affect_update() {
-  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
-    next_ch = ch->next;
+  for (CHAR *ch = character_list; ch; ch = ch->next) {
+    for (AFF *aff = ch->affected, *next_aff; aff; aff = next_aff) {
+      next_aff = aff->next;
 
-    for (AFF *af = ch->affected, *next_af; af; af = next_af) {
-      next_af = af->next;
+      if ((aff->type <= 0) || (aff->type >= MAX_SPL_LIST) || (aff->duration < 0)) continue;
 
-      if ((af->type > 0) && (af->type < MAX_SPL_LIST)) {
-        if (af->duration > 0) {
-          af->duration--;
+      if (aff->duration == 0) {
+        if (!aff->next || (aff->next->type != aff->type) || (aff->next->duration > 0)) {
+          print_spell_wear_off_message(ch, aff->type);
         }
-        else if (af->duration == 0) {
-          if (!af->next || (af->next->type != af->type) || (af->next->duration > 0)) {
-            if (*spell_wear_off_msg[af->type]) {
-              printf_to_char(ch, "%s\n\r", spell_wear_off_msg[af->type]);
-            }
-          }
 
-          affect_remove(ch, af);
-        }
+        aff_remove(ch, aff);
+      }
+      else {
+        aff->duration--;
       }
     }
   }
 }
 
-int SPELL_LEVEL(struct char_data *ch, int spell_number)
-{
-  switch (GET_CLASS(ch)) {
-  case CLASS_MAGIC_USER:
-    return (spell_info[spell_number].min_level_magic);
-  case CLASS_CLERIC:
-    return (spell_info[spell_number].min_level_cleric);
-  case CLASS_NINJA:
-    return (spell_info[spell_number].min_level_ninja);
-  case CLASS_PALADIN:
-    return (spell_info[spell_number].min_level_paladin);
-  case CLASS_ANTI_PALADIN:
-    return (spell_info[spell_number].min_level_anti_paladin);
-  case CLASS_AVATAR:
-    return (spell_info[spell_number].min_level_avatar);
-  case CLASS_BARD:
-    return (spell_info[spell_number].min_level_bard);
-  case CLASS_COMMANDO:
-    return (spell_info[spell_number].min_level_commando);
-  default:
-    return LEVEL_ETE;
+int SPELL_LEVEL(CHAR *ch, int spell_nr) {
+  int level = LEVEL_IMP;
+
+  if (ch && spell_nr) {
+    switch (GET_CLASS(ch)) {
+      case CLASS_MAGIC_USER:
+        level = spell_info[spell_nr].min_level_magic;
+        break;
+
+      case CLASS_CLERIC:
+        level = spell_info[spell_nr].min_level_cleric;
+        break;
+
+      case CLASS_NINJA:
+        level = spell_info[spell_nr].min_level_ninja;
+        break;
+
+      case CLASS_PALADIN:
+        level = spell_info[spell_nr].min_level_paladin;
+        break;
+
+      case CLASS_ANTI_PALADIN:
+        level = spell_info[spell_nr].min_level_anti_paladin;
+        break;
+
+      case CLASS_AVATAR:
+        level = spell_info[spell_nr].min_level_avatar;
+        break;
+
+      case CLASS_BARD:
+        level = spell_info[spell_nr].min_level_bard;
+        break;
+
+      case CLASS_COMMANDO:
+        level = spell_info[spell_nr].min_level_commando;
+        break;
+    }
   }
+
+  return level;
 }
 
-void say_spell(struct char_data *ch, int si)
-{
-  char buf[MAX_STRING_LENGTH];
-  char buf2[MAX_STRING_LENGTH * 2];
-  char splwd[240];
+void say_spell(CHAR *ch, int spell) {
+  if (!ch || !spell || !(*spell_text[spell].name)) return;
 
-  int j = 0;
-  int offset = 0;
-  CHAR *temp_char = NULL;
-
-  struct syllable {
-    char org[10];
-    char new[10];
+  struct say_spell_msg_t {
+    char to_same_class[MSL];
+    char to_other_class[MSL];
   };
 
-  struct syllable syls[] = {
+  struct spell_syllable_t {
+    char *org;
+    char *new;
+  };
+
+  struct spell_syllable_t spell_syllable_table[] = {
     { " ", " " },
     { "ar", "abra" },
     { "au", "kada" },
@@ -395,49 +165,49 @@ void say_spell(struct char_data *ch, int si)
     { "tect", "infra" },
     { "tri", "cula" },
     { "ven", "nofo" },
-    { "a", "a" },{ "b", "b" },{ "c", "q" },{ "d", "e" },{ "e", "z" },
-    { "f", "y" },{ "g", "o" },{ "h", "p" },{ "i", "u" },{ "j", "y" },
-    { "k", "t" },{ "l", "r" },{ "m", "w" },{ "n", "i" },{ "o", "a" },
-    { "p", "s" },{ "q", "d" },{ "r", "f" },{ "s", "g" },{ "t", "h" },
-    { "u", "j" },{ "v", "z" },{ "w", "x" },{ "x", "n" },{ "y", "l" },
-    { "z", "k" },
-    { "", "" }
+    { "a", "a" }, { "b", "b" }, { "c", "q" }, { "d", "e" }, { "e", "z" },
+    { "f", "y" }, { "g", "o" }, { "h", "p" }, { "i", "u" }, { "j", "y" },
+    { "k", "t" }, { "l", "r" }, { "m", "w" }, { "n", "i" }, { "o", "a" },
+    { "p", "s" }, { "q", "d" }, { "r", "f" }, { "s", "g" }, { "t", "h" },
+    { "u", "j" }, { "v", "z" }, { "w", "x" }, { "x", "n" }, { "y", "l" },
+    { "z", "k" }
   };
 
-  strcpy(buf, "");
-  strcpy(splwd, spells[si - 1]);
+  char mystic_words[MIL * 4] = "";
 
-  while (*(splwd + offset)) {
-    for (j = 0; *(syls[j].org); j++) {
-      if (strncmp(syls[j].org, (splwd + offset), strlen(syls[j].org)) == 0) {
-        strcat(buf, syls[j].new);
-        if (strlen(syls[j].org)) {
-          offset += strlen(syls[j].org);
-        }
-        else {
-          offset++;
-        }
+  for (size_t offset = 0, syl_len = 1; syl_len && (offset < strlen(spell_text[spell].name)); offset += syl_len) {
+    for (int syl = 0; syl < NUMELEMS(spell_syllable_table); syl++) {
+      syl_len = strlen(spell_syllable_table[syl].org);
+
+      if (strncmp(spell_syllable_table[syl].org, (spell_text[spell].name + offset), syl_len) == 0) {
+        str_cat(mystic_words, sizeof(mystic_words), spell_syllable_table[syl].new);
       }
     }
   }
 
-  if (GET_CLASS(ch) != CLASS_NINJA) {
-    sprintf(buf2, "$n utters the words, '%s'", buf);
-    sprintf(buf, "$n utters the words, '%s'", spells[si - 1]);
+  struct say_spell_msg_t say_spell_msg = { 0 };
+
+  if (GET_CLASS(ch) == CLASS_NINJA) {
+    snprintf(say_spell_msg.to_same_class, sizeof(say_spell_msg.to_same_class),
+      "$n makes a mystic hand position and utters the words, '%s'.", spell_text[spell].name);
+    snprintf(say_spell_msg.to_other_class, sizeof(say_spell_msg.to_other_class),
+      "$n makes a mystic hand position and utters the words, '%s'.", mystic_words);
   }
   else {
-    sprintf(buf2, "$n makes a mystic hand position and utters the words, '%s'", buf);
-    sprintf(buf, "$n makes a mystic hand position and utters the words, '%s'", spells[si - 1]);
+    snprintf(say_spell_msg.to_same_class, sizeof(say_spell_msg.to_same_class),
+      "$n utters the words, '%s'.", spell_text[spell].name);
+    snprintf(say_spell_msg.to_other_class, sizeof(say_spell_msg.to_other_class),
+      "$n utters the words, '%s'.", mystic_words);
   }
 
-  for (temp_char = world[CHAR_REAL_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-    if (temp_char == ch) continue;
-
-    if (GET_CLASS(ch) == GET_CLASS(temp_char)) {
-      act(buf, FALSE, ch, 0, temp_char, TO_VICT);
-    }
-    else {
-      act(buf2, FALSE, ch, 0, temp_char, TO_VICT);
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
+    if (temp_ch != ch) {
+      if (((GET_CLASS(temp_ch) == GET_CLASS(ch)) && !IS_IMMORTAL(ch)) || IS_IMMORTAL(temp_ch)) {
+        act(say_spell_msg.to_same_class, FALSE, ch, 0, temp_ch, TO_VICT);
+      }
+      else {
+        act(say_spell_msg.to_other_class, FALSE, ch, 0, temp_ch, TO_VICT);
+      }
     }
   }
 }
@@ -485,27 +255,30 @@ bool saves_spell(struct char_data *ch, sh_int type, int level)
   return (MAX(2, saving_throw) < number(1, 20));
 }
 
-int USE_MANA(CHAR *ch, int spell_number)
-{
+int USE_MANA(CHAR *ch, int spell_number) {
   int mana = 0;
 
   switch (spell_number) {
-  case SPELL_METEOR:
-    /* Shouldn't be subject to caster level calculation. */
-    mana = spell_info[spell_number].min_usesmana;
-    break;
-  case SPELL_VAMPIRIC:
-    mana = 40 + (GET_LEVEL(ch) * 2);
-    break;
-  case SPELL_FURY:
-    mana = ((GET_CLASS(ch) == CLASS_PALADIN) && (GET_LEVEL(ch) == 50) && !CHAOSMODE) ? 120 : spell_info[spell_number].min_usesmana;
-    break;
-  case SPELL_DEGENERATE:
-    mana = 0;
-    break;
-  default:
-    mana = MAX(spell_info[spell_number].min_usesmana, 100 / (2 + GET_LEVEL(ch) - SPELL_LEVEL(ch, spell_number)));
-    break;
+    case SPELL_METEOR:
+      mana = spell_info[spell_number].min_usesmana;
+      break;
+
+    case SPELL_VAMPIRIC:
+      mana = 40 + (GET_LEVEL(ch) * 2);
+      break;
+
+    case SPELL_FURY:
+      mana = ((GET_CLASS(ch) == CLASS_PALADIN) && (GET_LEVEL(ch) == 50) && !CHAOSMODE) ? 120 : spell_info[spell_number].min_usesmana;
+      break;
+
+    default:
+      mana = MAX(spell_info[spell_number].min_usesmana, 100 / (2 + GET_LEVEL(ch) - SPELL_LEVEL(ch, spell_number)));
+      break;
+  }
+
+  /* Druid SC4: Elemental Form - Spells cost 10% less mana to cast. */
+  if (IS_MORTAL(ch) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+    mana = MAX(mana * 0.9, 1);
   }
 
   return mana;
@@ -513,6 +286,8 @@ int USE_MANA(CHAR *ch, int spell_number)
 
 /* Assumes that *argument does start with first letter of chopped string */
 void do_cast(struct char_data *ch, char *argument, int cmd) {
+  void set_fighting(CHAR *ch, CHAR *vict);
+
   struct obj_data *tar_obj;
   struct char_data *tar_char;
   char name[MAX_STRING_LENGTH],buf[MAX_INPUT_LENGTH];
@@ -585,7 +360,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
     spl = MAX_SPL_LIST + 1;
   }
   else {
-    spl = old_search_block(argument, 1, qend - 1, spells, 0);
+    spl = old_search_block(argument, 1, qend - 1, (const char * const * const)spells, 0);
   }
 
   if (!spl) {
@@ -814,8 +589,6 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,DOUBLE_MANA)) mult=20;
   else mult=10;
 
-  if(affected_by_spell(ch, SPELL_CLARITY)) mult=mult*9/10;
-
   if (GET_LEVEL(ch) < LEVEL_IMM) {
     if (GET_MANA(ch) < USE_MANA(ch, spl)*mult/10) {
       send_to_char("You can't summon enough energy to cast the spell.\n\r",ch);
@@ -837,49 +610,52 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
     WAIT_STATE(ch, PULSE_VIOLENCE/2); /* If affected by Quick cast twice in 1 round - wrath cannot be quickened */
   else WAIT_STATE(ch, PULSE_VIOLENCE);
 
-  con_amt=0;
-  if (GET_CLASS(ch)==CLASS_PALADIN ||
-      GET_CLASS(ch)==CLASS_NINJA ||
-      GET_CLASS(ch)==CLASS_COMMANDO ||
-      GET_CLASS(ch)==CLASS_ANTI_PALADIN ||
-      GET_CLASS(ch)==CLASS_BARD) {
-     if (enchanted_by_type(ch, ENCHANT_SHOGUN) ||
-         enchanted_by_type(ch, ENCHANT_COMMANDER) ||
-         enchanted_by_type(ch, ENCHANT_DARKLORDLADY) ||
-         enchanted_by_type(ch, ENCHANT_LORDLADY) ||
-         enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
-        con_amt+=50;
-     }
-  }
-
-  /* Inner Peace */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
-
-  /* Focus */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) con_amt += 50;
-
-  percent=number(1,1001);
-  conc=1;
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,HALF_CONC)) conc=2;
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,QRTR_CONC)) conc=4;
-
-  con_amt+=(int)(int_app[GET_INT(ch)].conc+wis_app[GET_WIS(ch)].conc);
-  con_amt+=(int)ch->skills[spl].learned*10;
-  con_amt/=conc;
-  if(con_amt>100 && affected_by_spell(ch, SPELL_CLARITY)) {
-    con_amt=1002;
-  }
-  if (percent > con_amt) { /* 100.1% is failure */
-    if(castlog) {
-      fl=fopen("castlog","a+");
-      fprintf(fl,"%s,%d,%d,%d,%d,0\n\r",GET_NAME(ch),percent,con_amt,GET_WIS(ch),GET_INT(ch));
-      fclose(fl);
+  /* Druid SC4: Elemental Form - Bypasses concentration check. */
+  if (!ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+    con_amt = 0;
+    if (GET_CLASS(ch) == CLASS_PALADIN ||
+      GET_CLASS(ch) == CLASS_NINJA ||
+      GET_CLASS(ch) == CLASS_COMMANDO ||
+      GET_CLASS(ch) == CLASS_ANTI_PALADIN ||
+      GET_CLASS(ch) == CLASS_BARD) {
+      if (enchanted_by_type(ch, ENCHANT_SHOGUN) ||
+        enchanted_by_type(ch, ENCHANT_COMMANDER) ||
+        enchanted_by_type(ch, ENCHANT_DARKLORDLADY) ||
+        enchanted_by_type(ch, ENCHANT_LORDLADY) ||
+        enchanted_by_type(ch, ENCHANT_CONDUCTOR)) {
+        con_amt += 50;
+      }
     }
-    send_to_char("You lost your concentration!\n\r", ch);
-    if(GET_LEVEL(ch) < LEVEL_IMM) GET_MANA(ch) -= ((USE_MANA(ch, spl))>>1)*mult/10;
-    else GET_MANA(ch) -= ((spell_info[spl].min_usesmana)>>1)*mult/10;
-    return;
+
+    /* Inner Peace */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) con_amt += 50;
+
+    /* Focus */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) con_amt += 50;
+
+    percent = number(1, 1001);
+    conc = 1;
+    if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, HALF_CONC)) conc = 2;
+    if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, QRTR_CONC)) conc = 4;
+
+    con_amt += (int)(int_app[GET_INT(ch)].conc + wis_app[GET_WIS(ch)].conc);
+    con_amt += (int)ch->skills[spl].learned * 10;
+    con_amt /= conc;
+
+
+    if (percent > con_amt) { /* 100.1% is failure */
+      if (castlog) {
+        fl = fopen("castlog", "a+");
+        fprintf(fl, "%s,%d,%d,%d,%d,0\n\r", GET_NAME(ch), percent, con_amt, GET_WIS(ch), GET_INT(ch));
+        fclose(fl);
+      }
+      send_to_char("You lost your concentration!\n\r", ch);
+      if (GET_LEVEL(ch) < LEVEL_IMM) GET_MANA(ch) -= ((USE_MANA(ch, spl)) >> 1) * mult / 10;
+      else GET_MANA(ch) -= ((spell_info[spl].min_usesmana) >> 1) * mult / 10;
+      return;
+    }
   }
+
   if(castlog) {
     fl=fopen("castlog","a+");
     fprintf(fl,"%s,%d,%d,%d,%d,1\n\r",GET_NAME(ch),percent,con_amt,GET_WIS(ch),GET_INT(ch));
@@ -1048,7 +824,7 @@ void do_mob_cast(CHAR *ch, char *argument, int spell) {
     return;
   }
 
-  spl = old_search_block(argument, 1, qend-1,spells, 0);
+  spl = old_search_block(argument, 1, qend-1, (const char * const * const)spells, 0);
 
   if (!spl) {
     send_to_char("Your lips do not move, no magic appears.\n\r",ch);
@@ -1240,215 +1016,479 @@ void do_mob_cast(CHAR *ch, char *argument, int spell) {
   return;
 }
 
-void assign_spell_pointers(void)
-{
-  int i = 0;
+void assign_spell_pointers(void) {
+  for (int i = 0; i < MAX_SPL_LIST + 1; i++) {
+    spell_info[i].spell_pointer = NULL;
+  }
 
-  for (i = 0; i < MAX_SPL_LIST + 1; i++)
-    spell_info[i].spell_pointer = 0;
-
-  /*                                 Minimum Class Level Required
-   * Spell #, BT, Minimum Position,  MU, CL, NI, PA, AP, AV, BA, CO, MANA, Target Types,                                                                 Cast Function
-   */
-  SPELLO(  1, 30, POSITION_STANDING,  5,  1, 51,  2, 51,  1, 51, 51,    5, TAR_CHAR_ROOM,                                                                cast_armor);
-  SPELLO(  2, 30, POSITION_FIGHTING,  8, 51, 51, 51, 51,  7, 51, 51,   25, TAR_SELF_ONLY,                                                                cast_teleport);
-  SPELLO(  3, 30, POSITION_FIGHTING, 51,  5, 51,  6, 51,  3, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_CHAR_ROOM,                                  cast_bless);
-  SPELLO(  4, 30, POSITION_STANDING,  8,  6,  6, 51,  7,  4, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_blindness);
-  SPELLO(  5, 30, POSITION_FIGHTING,  5, 51, 51, 51, 51,  1, 51,  3,   17, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_burning_hands);
-  SPELLO(  6, 30, POSITION_FIGHTING, 51, 12, 51, 51, 51, 51, 51, 12,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_call_lightning);
-  SPELLO(  7, 30, POSITION_STANDING, 14, 51, 51, 51, 51, 12, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
-  SPELLO(  8, 30, POSITION_FIGHTING,  3, 51, 51, 51,  3, 51, 51,  2,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_chill_touch);
-  SPELLO(  9, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 27, 51, 51,  100, TAR_OBJ_INV,                                                                  cast_clone);
-  SPELLO( 10, 30, POSITION_FIGHTING, 11, 51, 51, 51, 51, 51, 51, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_colour_spray);
-  SPELLO( 11, 30, POSITION_STANDING, 10, 13, 11, 51, 51, 51, 51, 51,   25, TAR_IGNORE,                                                                   cast_control_weather);
-  SPELLO( 12, 30, POSITION_STANDING, 51,  3, 51,  3, 51, 51, 51, 51,    5, TAR_IGNORE,                                                                   cast_create_food);
-  SPELLO( 13, 30, POSITION_STANDING, 51,  2, 51,  4, 51, 51, 51, 51,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_create_water);
-  SPELLO( 14, 30, POSITION_STANDING, 51,  4,  9,  7, 51,  5, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_blind);
-  SPELLO( 15, 30, POSITION_FIGHTING, 51,  9, 51, 10, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
-  SPELLO( 16, 30, POSITION_FIGHTING, 51,  1,  4,  1, 51,  1, 51, 51,   15, TAR_CHAR_ROOM,                                                                cast_cure_light);
-  SPELLO( 17, 30, POSITION_STANDING, 12, 51, 51, 51,  8, 51, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_ROOM | TAR_OBJ_INV,                  cast_curse);
-  SPELLO( 18, 30, POSITION_STANDING,  4,  4, 51,  4,  4,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_alignment);
-  SPELLO( 19, 30, POSITION_STANDING,  2,  5,  1,  5,  5,  3, 51, 51,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
-  SPELLO( 20, 30, POSITION_STANDING,  2,  3, 51, 51, 51, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_magic);
-  SPELLO( 21, 30, POSITION_STANDING,  4,  2, 51, 51,  2, 51, 51, 51,    5, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP,                                  cast_detect_poison);
-  SPELLO( 22, 30, POSITION_FIGHTING, 51, 10, 51, 19, 51, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_evil);
-  SPELLO( 23, 30, POSITION_FIGHTING, 51,  7, 51, 51, 51, 51, 51,  6,   15, TAR_IGNORE,                                                                   cast_earthquake);
-  SPELLO( 24, 30, POSITION_STANDING, 12, 51, 51, 51, 51, 18, 51, 51,   50, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_enchant_weapon);
-  SPELLO( 25, 30, POSITION_FIGHTING, 13, 51, 51, 51, 15, 14, 51, 51,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_energy_drain);
-  SPELLO( 26, 30, POSITION_FIGHTING, 15, 51, 51, 51, 20, 15, 51, 15,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fireball);
-  SPELLO( 27, 30, POSITION_FIGHTING, 51, 15, 51, 51, 51, 51, 51, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_harm);
-  SPELLO( 28, 30, POSITION_FIGHTING, 51, 14, 29, 21, 51, 15, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_heal);
-  SPELLO( 29, 30, POSITION_STANDING,  4, 51,  7, 51,  9,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
-  SPELLO( 30, 30, POSITION_FIGHTING,  9, 51, 51, 51, 12, 51, 51,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lightning_bolt);
-  SPELLO( 31, 30, POSITION_STANDING,  6, 10, 14, 17, 51,  8, 10, 51,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
-  SPELLO( 32, 30, POSITION_FIGHTING,  1, 51, 51, 51,  1, 51, 51,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_magic_missile);
-  SPELLO( 33, 30, POSITION_STANDING, 51,  8, 12, 51,  6, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_EQUIP, cast_poison);
-  SPELLO( 34, 30, POSITION_STANDING, 51,  6, 51, 24, 51, 20, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_evil);
-  SPELLO( 35, 30, POSITION_STANDING, 13, 12, 51, 51, 51, 21, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP | TAR_OBJ_ROOM,                   cast_remove_curse);
-  SPELLO( 36, 30, POSITION_STANDING, 51, 13, 51, 20, 51, 12, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
-  SPELLO( 37, 30, POSITION_FIGHTING,  7, 51, 51, 51, 51, 51, 51,  5,   19, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_shocking_grasp);
-  SPELLO( 38, 30, POSITION_STANDING, 14, 51, 51, 51, 19, 11, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_sleep);
-  SPELLO( 39, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_strength);
-  SPELLO( 40, 30, POSITION_STANDING, 51,  8, 51, 18, 51, 12, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_summon);
-  SPELLO( 41, 30, POSITION_STANDING,  1, 51, 51, 51, 51, 51, 5,  51,    5, TAR_CHAR_ROOM | TAR_OBJ_ROOM | TAR_SELF_NONO,                                 cast_ventriloquate);
-  SPELLO( 42, 30, POSITION_STANDING, 13, 11, 19, 51, 51,  6, 51, 19,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_word_of_recall);
-  SPELLO( 43, 30, POSITION_STANDING, 51,  9, 12, 14, 51,  5, 51, 51,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_remove_poison);
-  SPELLO( 44, 30, POSITION_STANDING, 51,  7, 10,  6, 13,  8, 51, 51,   20, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sense_life);
-  SPELLO( 71, 30, POSITION_STANDING,  7, 51, 51, 51, 51, 10,  9, 51,   25, TAR_OBJ_INV,                                                                  cast_identify);
-  SPELLO( 72, 30, POSITION_FIGHTING, 51,  6, 16,  5, 51,  4, 51, 51,   18, TAR_CHAR_ROOM,                                                                cast_cure_serious);
-  SPELLO( 73, 30, POSITION_STANDING,  5, 51,  5, 51, 11,  4, 51, 51,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
-  SPELLO( 74, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_regeneration);
-  SPELLO( 75, 30, POSITION_FIGHTING,  8, 16, 51, 14, 51, 10, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
-  SPELLO( 76, 30, POSITION_FIGHTING, 51,  4, 51, 51, 51, 51, 51, 51,   23, TAR_IGNORE,                                                                   cast_cure_light_spray);
-  SPELLO( 77, 30, POSITION_FIGHTING, 51, 10, 51, 51, 51, 51, 51, 51,   27, TAR_IGNORE,                                                                   cast_cure_serious_spray);
-  SPELLO( 78, 30, POSITION_FIGHTING, 51, 13, 51, 51, 51, 16, 51, 51,   38, TAR_IGNORE,                                                                   cast_cure_critic_spray);
-  SPELLO( 79, 30, POSITION_FIGHTING, 51, 22, 51, 51, 51, 27, 51, 51,  100, TAR_IGNORE,                                                                   cast_heal_spray);
-  SPELLO( 80, 30, POSITION_FIGHTING, 23, 51, 51, 51, 51, 17, 51, 24,   80, TAR_IGNORE,                                                                   cast_death_spray);
-  SPELLO( 81, 30, POSITION_FIGHTING, 51, 23, 51, 25, 51, 51, 51, 51,   80, TAR_IGNORE,                                                                   cast_holy_word);
-  SPELLO( 82, 30, POSITION_FIGHTING, 19, 51, 51, 51, 23, 18, 51, 20,   30, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_iceball);
-  SPELLO( 83, 30, POSITION_STANDING, 51, 18, 51, 51, 51, 13, 51, 51,   30, TAR_IGNORE,                                                                   cast_total_recall);
-  SPELLO( 84, 30, POSITION_STANDING, 17, 20, 51, 51, 51, 16, 51, 51,   30, TAR_OBJ_INV,                                                                  cast_recharge);
-  SPELLO( 85, 30, POSITION_FIGHTING, 51, 25, 51, 51, 51, 22, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
-  SPELLO( 86, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  7, 51, 51,   25, TAR_CHAR_ROOM,                                                                cast_fly);
-  SPELLO( 87, 30, POSITION_FIGHTING, 18, 18, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM,                                                                cast_mana_transfer);
-  SPELLO( 88, 30, POSITION_STANDING, 51, 19, 51, 51, 51, 17, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_holy_bless);
-  SPELLO( 89, 30, POSITION_STANDING, 51, 20, 51, 51, 51, 18, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_evil_bless);
-  SPELLO( 90, 30, POSITION_STANDING, 51, 15, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
-  SPELLO( 91, 30, POSITION_STANDING, 22, 24, 51, 51, 51, 20, 51, 51,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
-  SPELLO( 92, 30, POSITION_STANDING, 51, 30, 51, 51, 51, 30, 51, 51,  200, TAR_IGNORE,                                                                   cast_great_miracle);
-  SPELLO( 93, 30, POSITION_FIGHTING, 51, 11, 51, 10, 51,  6, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_flamestrike);
-  SPELLO( 94, 30, POSITION_FIGHTING, 20, 51, 51, 51, 25, 10, 51, 51,   15, TAR_OBJ_ROOM,                                                                 cast_spirit_levy);
-  SPELLO( 95, 30, POSITION_FIGHTING, 24, 51, 51, 51, 51, 20, 51, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_lethal_fire);
-  SPELLO( 96, 30, POSITION_STANDING, 21, 51, 24, 26, 51, 19, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_hold);
-  SPELLO( 97, 30, POSITION_STANDING, 18, 51, 51, 51, 51, 17, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_sphere);
-  SPELLO( 98, 30, POSITION_STANDING, 25, 51, 51, 51, 29, 22, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_imp_invisibility);
-  SPELLO( 99, 30, POSITION_STANDING, 29, 28, 51, 51, 51, 25, 51, 51,   50, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_invulnerability);
-  SPELLO(100, 30, POSITION_FIGHTING,  9, 51, 51, 51, 10,  9, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fear);
-  SPELLO(101, 30, POSITION_FIGHTING, 11, 51, 51, 51, 14, 10, 51, 51,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_forget);
-  SPELLO(102, 30, POSITION_FIGHTING, 51, 51, 51, 21, 51, 23, 51, 51,   60, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_fury);
-  SPELLO(103, 30, POSITION_STANDING, 51, 51,  3, 51, 51,  3, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_endure);
-  SPELLO(104, 30, POSITION_FIGHTING, 51, 51, 16, 51, 17, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
-  SPELLO(105, 30, POSITION_FIGHTING, 51, 51, 17, 51, 16, 19, 51, 51,   20, TAR_IGNORE,                                                                   cast_poison_smoke);
-  SPELLO(107, 30, POSITION_STANDING, 51, 51, 22, 51, 27, 51, 51, 51,   40, TAR_CHAR_ROOM,                                                                cast_hypnotize);
-  SPELLO(108, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_recover_mana);
-  SPELLO(109, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 27, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_thunderball);
-  SPELLO(110, 30, POSITION_FIGHTING, 26, 51, 51, 51, 51, 25, 51, 29,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_electric_shock);
-  SPELLO(111, 30, POSITION_STANDING, 29, 51, 51, 51, 21, 28, 51, 51,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_paralyze);
-  SPELLO(112, 30, POSITION_STANDING, 51, 14, 51, 51, 51,  9, 51, 51,   35, TAR_CHAR_ROOM,                                                                cast_remove_paralysis);
-  SPELLO(113, 30, POSITION_FIGHTING, 51, 11, 51, 51, 22, 51, 51, 51,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_good);
-  SPELLO(114, 30, POSITION_FIGHTING, 51, 23, 51, 51, 26, 51, 51, 51,   80, TAR_IGNORE,                                                                   cast_evil_word);
-  SPELLO(115, 30, POSITION_STANDING, 10, 51, 51, 51, 51,  9, 51, 51,   20, TAR_OBJ_INV,                                                                  cast_reappear);
-  SPELLO(116, 30, POSITION_STANDING,  6, 51, 51, 51, 51,  5, 51, 51,   30, TAR_CHAR_ROOM,                                                                cast_reveal);
-  SPELLO(117, 30, POSITION_STANDING, 27, 51, 51, 51, 51, 16, 51, 51,   50, TAR_CHAR_WORLD,                                                               cast_relocation);
-  SPELLO(118, 30, POSITION_STANDING, 11, 14, 51, 51, 51, 11, 13, 51,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
-  SPELLO(119, 30, POSITION_FIGHTING, 51, 27, 51, 32, 51, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_super_harm);
-  SPELLO(124, 30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
-  SPELLO(127, 30, POSITION_FIGHTING, 55, 40, 55, 55, 55, 26, 55, 55,  120, TAR_SELF_ONLY,                                                                cast_haste);
-  SPELLO(128, 30, POSITION_FIGHTING, 26, 51, 51, 51, 30, 51, 51, 51,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_power_word_kill);
-  SPELLO(129, 30, POSITION_STANDING, 19, 17, 51, 51, 51, 51, 51, 51,   50, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_dispel_magic);
-  SPELLO(130, 30, POSITION_FIGHTING, 30, 51, 51, 51, 51, 51, 51, 51,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_conflagration);
-  SPELLO(132, 30, POSITION_FIGHTING, 21, 51, 27, 51, 51, 51, 51, 51,   20, TAR_CHAR_ROOM | TAR_FIGHT_SELF,                                               cast_convergence);
-  SPELLO(133, 30, POSITION_STANDING, 21, 51, 51, 51, 51, 51, 51, 51,  100, TAR_OBJ_INV,                                                                  cast_enchant_armour);
-  SPELLO(134, 30, POSITION_FIGHTING, 27, 51, 51, 51, 51, 51, 51, 28,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_OBJ_INV | TAR_OBJ_ROOM,                  cast_disintegrate);
-  SPELLO(136, 30, POSITION_FIGHTING, 18, 51, 51, 51, 24, 51, 51, 32,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_vampiric_touch);
-  SPELLO(137, 30, POSITION_FIGHTING, 51, 16, 51, 51, 51, 51, 51, 51,   60, TAR_IGNORE,                                                                   cast_searing_orb);
-  SPELLO(138, 30, POSITION_STANDING, 18, 16, 21, 51, 51, 51, 51, 51,   35, TAR_CHAR_WORLD,                                                               cast_clairvoyance);
-  SPELLO(139, 30, POSITION_FIGHTING, 28, 51, 51, 51, 51, 27, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_firebreath);
-  SPELLO(141, 30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_dispel_sanct);
-  SPELLO(142, 30, POSITION_FIGHTING, 52, 52, 52, 52, 52, 52, 52, 52,   50, TAR_CHAR_WORLD,                                                               cast_disenchant);
-  SPELLO(143, 30, POSITION_FIGHTING, 55, 55, 55, 55, 55, 55, 55, 55,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_petrify);
-  SPELLO(145, 30, POSITION_STANDING, 51,  6, 51, 51, 18, 51, 51, 51,   30, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_protection_from_good);
-  SPELLO(146, 30, POSITION_STANDING, 25, 51, 51, 51, 29, 22, 51, 51,   20, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_remove_improved_invis);
-
-  // Mage
-  SPELLO(SPELL_QUICK,                 30, POSITION_FIGHTING, 50, 51, 51, 51, 51, 51, 51, 51,  100, TAR_SELF_ONLY,                                                                cast_quick);
-
+  //                                                        Minimum Class Level Required
+  /*     Spell #,                   BT, Minimum Position,  MU, CL, NI, PA, AP, AV, BA, CO, Mana, Target Types,                                                                 Spell Function */
+  SPELLO(SPELL_ANIMATE_DEAD,        30, POSITION_STANDING, 22, 24, 57, 57, 57, 20, 57, 57,   50, TAR_OBJ_ROOM,                                                                 cast_animate_dead);
+  SPELLO(SPELL_ARMOR,               30, POSITION_STANDING,  5,  1, 57,  2, 57,  1, 57, 57,    5, TAR_CHAR_ROOM,                                                                cast_armor);
+  SPELLO(SPELL_BLESS,               30, POSITION_FIGHTING, 57,  5, 57,  6, 57,  3, 57, 57,    5, TAR_CHAR_ROOM,                                                                cast_bless);
+  SPELLO(SPELL_BLINDNESS,           30, POSITION_STANDING,  8,  6,  6, 57,  7,  4, 57, 57,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_blindness);
+  SPELLO(SPELL_BLINDNESS_DUST,      30, POSITION_FIGHTING, 57, 57, 16, 57, 17, 19, 57, 57,   20, TAR_IGNORE,                                                                   cast_blindness_dust);
+  SPELLO(SPELL_BLOOD_LUST,          30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blood_lust);
+  SPELLO(SPELL_BURNING_HANDS,       30, POSITION_FIGHTING,  5, 57, 57, 57, 57,  1, 57,  3,   17, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_burning_hands);
+  SPELLO(SPELL_CALL_LIGHTNING,      30, POSITION_FIGHTING, 57, 12, 57, 57, 57, 57, 57, 12,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_call_lightning);
+  SPELLO(SPELL_CHARM_PERSON,        30, POSITION_STANDING, 14, 57, 57, 57, 57, 12, 57, 57,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_charm_person);
+  SPELLO(SPELL_CHILL_TOUCH,         30, POSITION_FIGHTING,  3, 57, 57, 57,  3, 57, 57,  2,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_chill_touch);
+  SPELLO(SPELL_CLAIRVOYANCE,        30, POSITION_STANDING, 18, 16, 21, 57, 57, 57, 57, 57,   35, TAR_CHAR_WORLD,                                                               cast_clairvoyance);
+  SPELLO(SPELL_CLONE,               30, POSITION_STANDING, 27, 57, 57, 57, 57, 27, 57, 57,  100, TAR_OBJ_INV,                                                                  cast_clone);
+  SPELLO(SPELL_COLOR_SPRAY,         30, POSITION_FIGHTING, 11, 57, 57, 57, 57, 57, 57, 10,   23, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_color_spray);
+  SPELLO(SPELL_CONFLAGRATION,       30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_conflagration);
+  SPELLO(SPELL_CONTROL_WEATHER,     30, POSITION_STANDING, 10, 13, 11, 57, 57, 57, 57, 57,   25, TAR_IGNORE,                                                                   cast_control_weather);
+  SPELLO(SPELL_CONVERGENCE,         30, POSITION_FIGHTING, 21, 57, 27, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM,                                                                cast_convergence);
+  SPELLO(SPELL_CREATE_FOOD,         30, POSITION_STANDING, 57,  3, 57,  3, 57, 57, 57, 57,    5, TAR_IGNORE,                                                                   cast_create_food);
+  SPELLO(SPELL_CREATE_WATER,        30, POSITION_STANDING, 57,  2, 57,  4, 57, 57, 57, 57,    5, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_create_water);
+  SPELLO(SPELL_CURE_BLIND,          30, POSITION_STANDING, 57,  4,  9,  7, 57,  5, 57, 57,   15, TAR_CHAR_ROOM,                                                                cast_cure_blind);
+  SPELLO(SPELL_CURE_CRITIC,         30, POSITION_FIGHTING, 57,  9, 57, 10, 57,  7, 57, 57,   25, TAR_CHAR_ROOM,                                                                cast_cure_critic);
+  SPELLO(SPELL_CURE_CRITIC_SPRAY,   30, POSITION_FIGHTING, 57, 13, 57, 57, 57, 16, 57, 57,   38, TAR_IGNORE,                                                                   cast_cure_critic_spray);
+  SPELLO(SPELL_CURE_LIGHT,          30, POSITION_FIGHTING, 57,  1,  4,  1, 57,  1, 57, 57,   15, TAR_CHAR_ROOM,                                                                cast_cure_light);
+  SPELLO(SPELL_CURE_LIGHT_SPRAY,    30, POSITION_FIGHTING, 57,  4, 57, 57, 57, 57, 57, 57,   23, TAR_IGNORE,                                                                   cast_cure_light_spray);
+  SPELLO(SPELL_CURE_SERIOUS,        30, POSITION_FIGHTING, 57,  6, 16,  5, 57,  4, 57, 57,   18, TAR_CHAR_ROOM,                                                                cast_cure_serious);
+  SPELLO(SPELL_CURE_SERIOUS_SPRAY,  30, POSITION_FIGHTING, 57, 10, 57, 57, 57, 57, 57, 57,   27, TAR_IGNORE,                                                                   cast_cure_serious_spray);
+  SPELLO(SPELL_CURSE,               30, POSITION_STANDING, 12, 57, 57, 57,  8, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_ROOM,  cast_curse);
+  SPELLO(SPELL_DEATH_SPRAY,         30, POSITION_FIGHTING, 23, 57, 57, 57, 57, 17, 57, 24,   80, TAR_IGNORE,                                                                   cast_death_spray);
+  SPELLO(SPELL_DETECT_ALIGNMENT,    30, POSITION_STANDING,  4,  4, 57,  4,  4,  3, 57, 57,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_alignment);
+  SPELLO(SPELL_DETECT_INVISIBLE,    30, POSITION_STANDING,  2,  5,  1,  5,  5,  3, 57, 57,   25, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_invisibility);
+  SPELLO(SPELL_DETECT_MAGIC,        30, POSITION_STANDING,  2,  3, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_detect_magic);
+  SPELLO(SPELL_DETECT_POISON,       30, POSITION_STANDING,  4,  2, 57, 57,  2, 57,  4, 57,    5, TAR_CHAR_ROOM,                                                                cast_detect_poison);
+  SPELLO(SPELL_DISINTEGRATE,        30, POSITION_FIGHTING, 27, 57, 57, 57, 57, 57, 57, 28,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV | TAR_OBJ_ROOM,  cast_disintegrate);
+  SPELLO(SPELL_DISPEL_EVIL,         30, POSITION_FIGHTING, 57, 10, 57, 19, 57, 57, 57, 57,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_evil);
+  SPELLO(SPELL_DISPEL_GOOD,         30, POSITION_FIGHTING, 57, 11, 57, 57, 22, 57, 57, 57,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dispel_good);
+  SPELLO(SPELL_DISPEL_MAGIC,        30, POSITION_STANDING, 19, 17, 57, 57, 57, 57, 57, 57,   50, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM,                                   cast_dispel_magic);
+  SPELLO(SPELL_DISPEL_SANCT,        30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_CHAR_ROOM,                                                                cast_dispel_sanct);
+  SPELLO(SPELL_DIVINE_INTERVENTION, 30, POSITION_STANDING, 57, 50, 57, 57, 57, 57, 57, 57,  500, TAR_CHAR_ROOM,                                                                cast_divine_intervention);
+  SPELLO(SPELL_DIVINE_WIND,         30, POSITION_FIGHTING, 57, 57, 40, 57, 57, 57, 57, 57,   65, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_divine_wind);
+  SPELLO(SPELL_EARTHQUAKE,          30, POSITION_FIGHTING, 57,  7, 57, 57, 57, 57, 57,  6,   15, TAR_IGNORE,                                                                   cast_earthquake);
+  SPELLO(SPELL_ELECTRIC_SHOCK,      30, POSITION_FIGHTING, 26, 57, 57, 57, 57, 25, 57, 29,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_electric_shock);
+  SPELLO(SPELL_ENCHANT_ARMOR,       30, POSITION_STANDING, 21, 57, 57, 57, 57, 57, 57, 57,  100, TAR_OBJ_INV,                                                                  cast_enchant_armor);
+  SPELLO(SPELL_ENCHANT_WEAPON,      30, POSITION_STANDING, 12, 57, 57, 57, 57, 18, 57, 57,   50, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_enchant_weapon);
+  SPELLO(SPELL_ENDURE,              30, POSITION_STANDING, 57, 57,  3, 57, 57,  3, 57, 57,   10, TAR_CHAR_ROOM,                                                                cast_endure);
+  SPELLO(SPELL_ENERGY_DRAIN,        30, POSITION_FIGHTING, 13, 57, 57, 57, 15, 14, 57, 57,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_energy_drain);
+  SPELLO(SPELL_EVIL_BLESS,          30, POSITION_STANDING, 57, 20, 57, 57, 57, 18, 57, 57,   30, TAR_CHAR_ROOM,                                                                cast_evil_bless);
+  SPELLO(SPELL_EVIL_WORD,           30, POSITION_FIGHTING, 57, 23, 57, 57, 26, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_evil_word);
+  SPELLO(SPELL_FEAR,                30, POSITION_FIGHTING,  9, 57, 57, 57, 10,  9, 57, 57,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_fear);
+  SPELLO(SPELL_FIREBALL,            30, POSITION_FIGHTING, 15, 57, 57, 57, 20, 15, 57, 15,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_fireball);
+  SPELLO(SPELL_FIREBREATH,          30, POSITION_FIGHTING, 28, 57, 57, 57, 57, 27, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_firebreath);
+  SPELLO(SPELL_FLAMESTRIKE,         30, POSITION_FIGHTING, 57, 11, 57, 10, 57,  6, 57, 57,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_flamestrike);
+  SPELLO(SPELL_FLY,                 30, POSITION_STANDING, 10, 57, 57, 57, 57,  7, 57, 57,   25, TAR_CHAR_ROOM,                                                                cast_fly);
+  SPELLO(SPELL_FORGET,              30, POSITION_FIGHTING, 11, 57, 57, 57, 14, 10, 57, 57,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_forget);
+  SPELLO(SPELL_FURY,                30, POSITION_FIGHTING, 57, 57, 57, 21, 57, 23, 57, 57,   60, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_fury);
+  SPELLO(SPELL_GREAT_MIRACLE,       30, POSITION_STANDING, 57, 30, 57, 57, 57, 30, 57, 57,  200, TAR_IGNORE,                                                                   cast_great_miracle);
+  SPELLO(SPELL_HARM,                30, POSITION_FIGHTING, 57, 15, 57, 57, 57, 57, 57, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_harm);
+  SPELLO(SPELL_HASTE,               30, POSITION_FIGHTING, 57, 45, 57, 57, 57, 26, 57, 57,  120, TAR_SELF_ONLY,                                                                cast_haste);
+  SPELLO(SPELL_HEAL,                30, POSITION_FIGHTING, 57, 14, 29, 21, 57, 15, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_heal);
+  SPELLO(SPELL_HEAL_SPRAY,          30, POSITION_FIGHTING, 57, 22, 57, 57, 57, 27, 57, 57,  100, TAR_IGNORE,                                                                   cast_heal_spray);
+  SPELLO(SPELL_HELL_FIRE,           30, POSITION_FIGHTING, 57, 57, 57, 57, 28, 24, 57, 57,  100, TAR_IGNORE,                                                                   cast_hell_fire);
+  SPELLO(SPELL_HOLD,                30, POSITION_STANDING, 21, 57, 24, 26, 57, 19, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_hold);
+  SPELLO(SPELL_HOLY_BLESS,          30, POSITION_STANDING, 57, 19, 57, 57, 57, 17, 57, 57,   30, TAR_CHAR_ROOM,                                                                cast_holy_bless);
+  SPELLO(SPELL_HOLY_WORD,           30, POSITION_FIGHTING, 57, 23, 57, 25, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_holy_word);
+  SPELLO(SPELL_HYPNOTIZE,           30, POSITION_STANDING, 57, 57, 22, 57, 27, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_hypnotize);
+  SPELLO(SPELL_ICEBALL,             30, POSITION_FIGHTING, 19, 57, 57, 57, 23, 18, 57, 20,   30, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_iceball);
+  SPELLO(SPELL_IDENTIFY,            30, POSITION_STANDING,  7, 57, 57, 57, 57, 10,  9, 57,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_identify);
+  SPELLO(SPELL_IMP_INVISIBLE,       30, POSITION_STANDING, 25, 57, 57, 57, 29, 22, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_imp_invisibility);
+  SPELLO(SPELL_INFRAVISION,         30, POSITION_STANDING,  5, 57,  5, 57, 11,  4, 57, 57,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
+  SPELLO(SPELL_INVISIBLE,           30, POSITION_STANDING,  4, 57,  7, 57,  9,  6, 57, 57,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
+  SPELLO(SPELL_INVUL,               30, POSITION_STANDING, 29, 28, 57, 57, 57, 25, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_invulnerability);
+  SPELLO(SPELL_IRON_SKIN,           30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
+  SPELLO(SPELL_LAY_HANDS,           30, POSITION_FIGHTING, 57, 57, 57, 15, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_lay_hands);
+  SPELLO(SPELL_LETHAL_FIRE,         30, POSITION_FIGHTING, 24, 57, 57, 57, 57, 20, 57, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_lethal_fire);
+  SPELLO(SPELL_LIGHTNING_BOLT,      30, POSITION_FIGHTING,  9, 57, 57, 57, 12, 57, 57,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_lightning_bolt);
+  SPELLO(SPELL_LOCATE_CHARACTER,    30, POSITION_STANDING, 11, 14, 57, 57, 57, 11, 13, 57,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
+  SPELLO(SPELL_LOCATE_OBJECT,       30, POSITION_STANDING,  6, 10, 14, 17, 57,  8, 10, 57,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
+  SPELLO(SPELL_MAGIC_MISSILE,       30, POSITION_FIGHTING,  1, 57, 57, 57,  1, 57, 57,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_magic_missile);
+  SPELLO(SPELL_MANA_TRANSFER,       30, POSITION_FIGHTING, 18, 18, 57, 57, 57, 57, 57, 57,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_mana_transfer);
+  SPELLO(SPELL_MIRACLE,             30, POSITION_FIGHTING, 57, 25, 57, 57, 57, 22, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
+  SPELLO(SPELL_MYSTIC_SWIFTNESS,    30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 42, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
+  SPELLO(SPELL_PARALYSIS,           30, POSITION_STANDING, 29, 57, 57, 57, 21, 28, 57, 57,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_paralyze);
+  SPELLO(SPELL_PERCEIVE,            30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
+  SPELLO(SPELL_POISON,              30, POSITION_STANDING, 57,  8, 12, 57,  6, 57, 57, 57,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV,                 cast_poison);
+  SPELLO(SPELL_POISON_SMOKE,        30, POSITION_FIGHTING, 57, 57, 17, 57, 16, 19, 57, 57,   20, TAR_IGNORE,                                                                   cast_poison_smoke);
+  SPELLO(SPELL_PROTECT_FROM_EVIL,   30, POSITION_STANDING, 57,  6, 57, 24, 57, 20, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_protection_from_evil);
+  SPELLO(SPELL_PROTECT_FROM_GOOD,   30, POSITION_STANDING, 57,  6, 57, 57, 18, 57, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_protection_from_good);
+  SPELLO(SPELL_PW_KILL,             30, POSITION_FIGHTING, 26, 57, 57, 57, 30, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_power_word_kill);
+  SPELLO(SPELL_QUICK,               30, POSITION_FIGHTING, 50, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_quick);
+  SPELLO(SPELL_RAGE,                30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  130, TAR_SELF_ONLY,                                                                cast_rage);
+  SPELLO(SPELL_REAPPEAR,            30, POSITION_STANDING, 10, 57, 57, 57, 57,  9, 57, 57,   20, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_reappear);
+  SPELLO(SPELL_RECHARGE,            30, POSITION_STANDING, 17, 20, 57, 57, 57, 16, 57, 57,   30, TAR_OBJ_INV | TAR_OBJ_EQUIP,                                                  cast_recharge);
+  SPELLO(SPELL_REGENERATION,        30, POSITION_FIGHTING, 28, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_regeneration);
+  SPELLO(SPELL_REJUVENATION,        30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
+  SPELLO(SPELL_RELOCATION,          30, POSITION_STANDING, 27, 57, 57, 57, 57, 16, 57, 57,   50, TAR_CHAR_WORLD,                                                               cast_relocation);
+  SPELLO(SPELL_REMOVE_CURSE,        30, POSITION_STANDING, 13, 12, 57, 57, 57, 21, 57, 57,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_remove_curse);
+  SPELLO(SPELL_REMOVE_IMP_INVIS,    30, POSITION_STANDING, 25, 57, 57, 57, 29, 22, 57, 57,   20, TAR_SELF_ONLY,                                                                cast_remove_improved_invis);
+  SPELLO(SPELL_REMOVE_PARALYSIS,    30, POSITION_STANDING, 57, 14, 57, 57, 57,  9, 57, 57,   35, TAR_CHAR_ROOM,                                                                cast_remove_paralysis);
+  SPELLO(SPELL_REMOVE_POISON,       30, POSITION_STANDING, 57,  9, 12, 14, 57,  5, 57, 57,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_remove_poison);
+  SPELLO(SPELL_REVEAL,              30, POSITION_STANDING,  6, 57, 57, 57, 57,  5, 57, 57,   30, TAR_CHAR_ROOM,                                                                cast_reveal);
+  SPELLO(SPELL_RUSH,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
+  SPELLO(SPELL_SANCTUARY,           30, POSITION_STANDING, 57, 13, 57, 20, 57, 12, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_sanctuary);
+  SPELLO(SPELL_SATIATE,             30, POSITION_STANDING, 57, 15, 57, 57, 57, 57, 57, 57,   10, TAR_CHAR_ROOM,                                                                cast_satiate);
+  SPELLO(SPELL_SEARING_ORB,         30, POSITION_FIGHTING, 57, 16, 57, 57, 57, 57, 57, 57,   60, TAR_IGNORE,                                                                   cast_searing_orb);
+  SPELLO(SPELL_SENSE_LIFE,          30, POSITION_STANDING, 57,  7, 10,  6, 13,  8, 57, 57,   20, TAR_SELF_ONLY,                                                                cast_sense_life);
+  SPELLO(SPELL_SHOCKING_GRASP,      30, POSITION_FIGHTING,  7, 57, 57, 57, 57, 57, 57,  5,   19, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_shocking_grasp);
+  SPELLO(SPELL_SLEEP,               30, POSITION_STANDING, 14, 57, 57, 57, 19, 11, 57, 57,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_sleep);
+  SPELLO(SPELL_SPHERE,              30, POSITION_STANDING, 18, 57, 57, 57, 57, 17, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_sphere);
+  SPELLO(SPELL_SPIRIT_LEVY,         30, POSITION_FIGHTING, 20, 57, 57, 57, 25, 10, 57, 57,   15, TAR_OBJ_ROOM,                                                                 cast_spirit_levy);
+  SPELLO(SPELL_STRENGTH,            30, POSITION_STANDING,  7, 57, 57, 57, 57, 57, 57, 57,   10, TAR_SELF_ONLY,                                                                cast_strength);
+  SPELLO(SPELL_SUMMON,              30, POSITION_STANDING, 57,  8, 57, 18, 57, 12, 57, 57,   50, TAR_CHAR_WORLD,                                                               cast_summon);
+  SPELLO(SPELL_SUPER_HARM,          30, POSITION_FIGHTING, 57, 27, 57, 32, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_super_harm);
+  SPELLO(SPELL_TELEPORT,            30, POSITION_FIGHTING,  8, 57, 57, 57, 57,  7, 57, 57,   25, TAR_SELF_ONLY,                                                                cast_teleport);
+  SPELLO(SPELL_THUNDERBALL,         30, POSITION_FIGHTING, 28, 57, 57, 57, 57, 27, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_thunderball);
+  SPELLO(SPELL_TOTAL_RECALL,        30, POSITION_STANDING, 57, 18, 57, 57, 57, 13, 57, 57,   30, TAR_IGNORE,                                                                   cast_total_recall);
+  SPELLO(SPELL_VAMPIRIC,            30, POSITION_FIGHTING, 18, 57, 57, 57, 24, 57, 57, 32,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_vampiric_touch);
+  SPELLO(SPELL_VENTRILOQUATE,       30, POSITION_STANDING,  1, 57, 57, 57, 57, 57, 5,  57,    5, TAR_CHAR_ROOM | TAR_SELF_NONO | TAR_OBJ_ROOM,                                 cast_ventriloquate);
+  SPELLO(SPELL_VITALITY,            30, POSITION_FIGHTING,  8, 16, 57, 14, 57, 10, 57, 57,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
+  SPELLO(SPELL_WIND_SLASH,          30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   85, TAR_IGNORE,                                                                   cast_wind_slash);
+  SPELLO(SPELL_WORD_OF_RECALL,      30, POSITION_STANDING, 13, 11, 19, 57, 57,  6, 57, 19,   25, TAR_SELF_ONLY,                                                                cast_word_of_recall);
   // Enchanter
-  SPELLO(SPELL_BLADE_BARRIER,         30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blade_barrier);
-  SPELLO(SPELL_PASSDOOR,              30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_IGNORE,                                                                   cast_passdoor);
-  SPELLO(SPELL_ENGAGE,                30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_engage);
-  SPELLO(SPELL_ETHEREAL_NATURE,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_ethereal_nature);
-  SPELLO(SPELL_DISRUPT_SANCT,         30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_disrupt_sanct);
-
+  SPELLO(SPELL_BLADE_BARRIER,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blade_barrier);
+  SPELLO(SPELL_PASSDOOR,            30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_IGNORE,                                                                   cast_passdoor);
+  SPELLO(SPELL_ENGAGE,              30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_engage);
+  SPELLO(SPELL_ETHEREAL_NATURE,     30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_ethereal_nature);
+  SPELLO(SPELL_DISRUPT_SANCT,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_disrupt_sanct);
   // Archmage
-  SPELLO(SPELL_METEOR,                30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_meteor);
-  SPELLO(SPELL_ORB_PROTECTION,        30, POSITION_STANDING, 30, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_orb_protection);
-  SPELLO(SPELL_FROSTBOLT,             30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_frostbolt);
-  SPELLO(SPELL_WRATH_ANCIENTS,        30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_ancients);
-  SPELLO(SPELL_DISTORTION,            30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_distortion);
-
-  // Cleric
-  SPELLO(SPELL_DIVINE_INTERVENTION,   30, POSITION_STANDING, 51, 50, 51, 51, 51, 51, 51, 51,  500, TAR_CHAR_ROOM,                                                                cast_divine_intervention);
-
+  SPELLO(SPELL_METEOR,              30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_meteor);
+  SPELLO(SPELL_ORB_PROTECTION,      30, POSITION_STANDING, 30, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_orb_protection);
+  SPELLO(SPELL_FROSTBOLT,           30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_frostbolt);
+  SPELLO(SPELL_WRATH_ANCIENTS,      30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_wrath_ancients);
+  SPELLO(SPELL_DISTORTION,          30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_distortion);
   // Druid
-  SPELLO(SPELL_CLARITY,               30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_clarity);
-  SPELLO(SPELL_WALL_THORNS,           30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_wall_thorns);
-  SPELLO(SPELL_MAGIC_ARMAMENT,        30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_magic_armament);
-  SPELLO(SPELL_DEGENERATE,            30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,    0, TAR_SELF_ONLY,                                                                cast_degenerate);
-
+  SPELLO(SPELL_WALL_THORNS,         30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_wall_thorns);
   // Templar
-  SPELLO(SPELL_SANCTIFY,              30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_IGNORE,                                                                   cast_sanctify);
-  SPELLO(SPELL_FORTIFICATION,         30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
-
-  // Ninja
-  SPELLO(SPELL_WIND_SLASH,            30, POSITION_FIGHTING, 51, 51, 30, 51, 51, 51, 51, 51,   85, TAR_IGNORE,                                                                   cast_wind_slash);
-  SPELLO(SPELL_DIVINE_WIND,           30, POSITION_FIGHTING, 57, 57, 40, 57, 57, 57, 57, 57,   65, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_divine_wind);
-  SPELLO(SPELL_MYSTIC_SWIFTNESS,      30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 42, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
-
+  SPELLO(SPELL_MAGIC_ARMAMENT,      30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   75, TAR_SELF_ONLY,                                                                cast_magic_armament);
+  SPELLO(SPELL_FORTIFICATION,       30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
+  SPELLO(SPELL_DIVINE_HAMMER,       30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,  250, TAR_SELF_ONLY,                                                                cast_divine_hammer);
   // Ronin
-  SPELLO(SPELL_BLUR,                  30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_blur);
-
+  SPELLO(SPELL_BLUR,                30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_blur);
   // Mystic
-  SPELLO(SPELL_DEBILITATE,            30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_debilitate);
-  SPELLO(SPELL_TRANQUILITY,           30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  150, TAR_IGNORE,                                                                   cast_tranquility);
-
-  // Paladin
-  SPELLO(SPELL_LAY_HANDS,             30, POSITION_FIGHTING, 51, 51, 51, 15, 51, 51, 51, 51,  100, TAR_CHAR_ROOM,                                                                cast_lay_hands);
-
+  SPELLO(SPELL_DEBILITATE,          30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_debilitate);
+  SPELLO(SPELL_TRANQUILITY,         30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  150, TAR_IGNORE,                                                                   cast_tranquility);
   // Cavalier
-  SPELLO(SPELL_MIGHT,                 30, POSITION_FIGHTING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
-  SPELLO(SPELL_WRATH_OF_GOD,          30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wrath_of_god);
-  SPELLO(SPELL_POWER_OF_DEVOTION,     30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
-
+  SPELLO(SPELL_MIGHT,               30, POSITION_FIGHTING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
+  SPELLO(SPELL_WRATH_OF_GOD,        30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_wrath_of_god);
+  SPELLO(SPELL_POWER_OF_DEVOTION,   30, POSITION_STANDING, 57, 57, 57, 30, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_power_of_devotion);
   // Crusader
-  SPELLO(SPELL_RIGHTEOUSNESS,         30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_righteousness);
-  SPELLO(SPELL_POWER_OF_FAITH,        30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
-
-  // Anti-Paladin
-  SPELLO(SPELL_HELL_FIRE,             30, POSITION_FIGHTING, 51, 51, 51, 51, 28, 24, 51, 51,  100, TAR_IGNORE,                                                                   cast_hell_fire);
-  SPELLO(SPELL_BLOOD_LUST,            30, POSITION_FIGHTING, 57, 57, 57, 57, 45, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blood_lust);
-  SPELLO(SPELL_RAGE,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 50, 57, 57, 57,  130, TAR_SELF_ONLY,                                                                cast_rage);
-
+  SPELLO(SPELL_RIGHTEOUSNESS,       30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   30, TAR_SELF_ONLY,                                                                cast_righteousness);
+  SPELLO(SPELL_POWER_OF_FAITH,      30, POSITION_FIGHTING, 57, 57, 57, 30, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_power_of_faith);
   // Defiler
-  SPELLO(SPELL_DESECRATE,             30, POSITION_STANDING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_OBJ_ROOM,                                                                 cast_desecrate);
-  SPELLO(SPELL_BLACKMANTLE,           30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blackmantle);
-
+  SPELLO(SPELL_DESECRATE,           30, POSITION_STANDING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_OBJ_ROOM,                                                                 cast_desecrate);
+  SPELLO(SPELL_BLACKMANTLE,         30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_SELF_ONLY,                                                                cast_blackmantle);
   // Infidel
-  SPELLO(SPELL_SHADOW_WRAITH,         30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_shadow_wraith);
-  SPELLO(SPELL_DUSK_REQUIEM,          30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_dusk_requiem);
-  SPELLO(SPELL_WITHER,                30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_wither);
-
-  // Bard
-  SPELLO(SPELL_REJUVENATION,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   80, TAR_CHAR_ROOM,                                                                cast_rejuvenation);
-
-  // Chanter
-  SPELLO(SPELL_LUCK,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_luck);
-  SPELLO(SPELL_CAMARADERIE,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  150, TAR_CHAR_ROOM,                                                                cast_camaraderie);
-
-  // Commando
-  SPELLO(SPELL_IRON_SKIN,             30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
-  SPELLO(SPELL_RUSH,                  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 40, 57, 50,  100, TAR_SELF_ONLY,                                                                cast_rush);
-
+  SPELLO(SPELL_SHADOW_WRAITH,       30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_shadow_wraith);
+  SPELLO(SPELL_DUSK_REQUIEM,        30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_dusk_requiem);
+  SPELLO(SPELL_WITHER,              30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_wither);
   // Mercenary
-  SPELLO(SPELL_TREMOR,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  130, TAR_IGNORE,                                                                   cast_tremor);
-  SPELLO(SPELL_CLOUD_CONFUSION,       30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
-  SPELLO(SPELL_INCENDIARY_CLOUD_NEW,  30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_incendiary_cloud);
-
+  SPELLO(SPELL_TREMOR,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  130, TAR_IGNORE,                                                                   cast_tremor);
+  SPELLO(SPELL_CLOUD_CONFUSION,     30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
+  SPELLO(SPELL_INCENDIARY_CLOUD,    30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_incendiary_cloud);
   // Legionnaire
-  SPELLO(SPELL_RIMEFANG,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  115, TAR_IGNORE,                                                                   cast_rimefang);
-  SPELLO(SPELL_DEVASTATION,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT,                                               cast_devastation);
+  SPELLO(SPELL_RIMEFANG,            30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  115, TAR_IGNORE,                                                                   cast_rimefang);
+  SPELLO(SPELL_DEVASTATION,         30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  150, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_devastation);
 
   // Other
-  SPELLO(SPELL_MANA_HEAL,             30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
-  SPELLO(SPELL_GREAT_MANA,            30, POSITION_STANDING, 51, 51, 51, 51, 51, 51, 51, 51,   10, TAR_CHAR_ROOM,                                                                cast_great_mana);
+  SPELLO(SPELL_DISENCHANT,          30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   50, TAR_CHAR_ROOM,                                                                cast_disenchant);
+  SPELLO(SPELL_GREAT_MANA,          30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_CHAR_ROOM,                                                                cast_great_mana);
+  SPELLO(SPELL_MANA_HEAL,           30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_SELF_ONLY,                                                                cast_mana_heal);
+  SPELLO(SPELL_PETRIFY,             30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_petrify);
+  SPELLO(SPELL_RECOVER_MANA,        30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 57,   10, TAR_CHAR_ROOM,                                                                cast_recover_mana);
+}
+
+/**
+ * @brief Assigns text to the spell_text[] array, which contains the spell's
+ *   name, message printed to a character when the spell is cast upon them,
+ *   message printed to the room when a spell is cast upon another character,
+ *   and the spell's wear-off message. The spell names are copied into the
+ *   standard spells[] array, for legacy code purposes.
+ */
+void assign_spell_text(void) {
+  for (int spell_nr = 0; spell_nr < NUMELEMS(spell_text); spell_nr++) {
+    spell_text[spell_nr].name = "";
+    spell_text[spell_nr].to_char_msg = "";
+    spell_text[spell_nr].to_room_msg = "";
+    spell_text[spell_nr].wear_off_msg = "";
+  }
+
+  /* spell_text[].to_char_msg and spell_text[].to_room_msg should be specified
+   * only for spells which apply an affect (e.g. sanctuary), or that have some
+   * kind of instantaneous effect that does not cause damage (e.g. cure blind).
+   * These messages are also intended only for 'simple' affects where what you
+   * see is what you get. Implement more complex messages directly in the spell
+   * function(s). Damage spells and most skills (including toggles) should have
+   * their messages coded in their functions, or sent via lib/messages as usual.
+   */
+
+  /*      Spell #                     name                            to_char_msg                                                            to_room_msg                                                                  wear_off_msg */
+  SPLTXTO(SPELL_ANIMATE_DEAD,         "animate dead",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ARMOR,                "armor",                        "You are protected by magical armor.",                                 "$n is protected by magical armor.",                                         "You feel less protected.");
+  SPLTXTO(SPELL_BLESS,                "bless",                        "You feel blessed.",                                                   "$n glows faintly.",                                                         "Your divine favor fades.");
+  SPLTXTO(SPELL_BLINDNESS,            "blindness",                    "You have been blinded!",                                              "$n has been blinded!",                                                      "Your vision returns.");
+  SPLTXTO(SPELL_BLINDNESS_DUST,       "blindness dust",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_BLOOD_LUST,           "blood lust",                   "Your body writhes with a gnawing hunger for blood!",                  "$n's body writhes with a gnawing hunger for blood!",                        "The gnawing hunger for blood slowly fades.");
+  SPLTXTO(SPELL_BURNING_HANDS,        "burning hands",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CALL_LIGHTNING,       "call lightning",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CHARM_PERSON,         "charm person",                 "",                                                                    "",                                                                          "You come to your senses.");
+  SPLTXTO(SPELL_CHILL_TOUCH,          "chill touch",                  "You are chilled to the bone.",                                        "$n is chilled to the bone.",                                                "You feel warm again.");
+  SPLTXTO(SPELL_CLAIRVOYANCE,         "clairvoyance",                 "You close your eyes and concentrate...",                              "$n closes $s eyes and concentrates...",                                     "");
+  SPLTXTO(SPELL_CLONE,                "clone",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_COLOR_SPRAY,          "color spray",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CONFLAGRATION,        "conflagration",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CONTROL_WEATHER,      "control weather",              "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CONVERGENCE,          "convergence",                  "You feel energized.",                                                 "",                                                                          "");
+  SPLTXTO(SPELL_CREATE_FOOD,          "create food",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CREATE_WATER,         "create water",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_BLIND,           "cure blind",                   "Your vision returns!",                                                "$n's eyes become unclouded.",                                               "");
+  SPLTXTO(SPELL_CURE_CRITIC,          "cure critic",                  "You feel better!",                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_CRITIC_SPRAY,    "cure critic spray",            "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_LIGHT,           "cure light",                   "You feel better!",                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_LIGHT_SPRAY,     "cure light spray",             "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_SERIOUS,         "cure serious",                 "You feel better!",                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURE_SERIOUS_SPRAY,   "cure serious spray",           "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CURSE,                "curse",                        "You feel very uncomfortable.",                                        "$n looks very uncomfortable.",                                              "Your discomfort subsides.");
+  SPLTXTO(SPELL_DEATH_SPRAY,          "death spray",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DETECT_ALIGNMENT,     "detect alignment",             "Your eyes glow white.",                                               "$n's eyes glow white.",                                                     "The white glow in your eyes fades.");
+  SPLTXTO(SPELL_DETECT_INVISIBLE,     "detect invisibility",          "Your eyes glow violet.",                                              "$n's eyes glow violet.",                                                    "The violet glow in your eyes fades.");
+  SPLTXTO(SPELL_DETECT_MAGIC,         "detect magic",                 "Your eyes glow blue.",                                                "$n's eyes glow blue.",                                                      "The blue glow in your eyes fades.");
+  SPLTXTO(SPELL_DETECT_POISON,        "detect poison",                "Your eyes glow green.",                                               "$n's eyes glow green.",                                                     "The green glow in your eyes fades.");
+  SPLTXTO(SPELL_DISINTEGRATE,         "disintegrate",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DISPEL_EVIL,          "dispel evil",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DISPEL_GOOD,          "dispel good",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DISPEL_MAGIC,         "dispel magic",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DISPEL_SANCT,         "dispel sanctuary",             "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DIVINE_INTERVENTION,  "divine intervention",          "You are protected by the gods.",                                      "$n is protected by the gods.",                                              "You feel as if the gods have forsaken you!");
+  SPLTXTO(SPELL_DIVINE_WIND,          "divine wind",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_EARTHQUAKE,           "earthquake",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ELECTRIC_SHOCK,       "electric shock",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ENCHANT_ARMOR,        "enchant armor",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ENCHANT_WEAPON,       "enchant weapon",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ENDURE,               "endure",                       "You are shielded by protective magic.",                               "$n is shielded by protective magic.",                                       "You feel less shielded.");
+  SPLTXTO(SPELL_ENERGY_DRAIN,         "energy drain",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_EVIL_BLESS,           "evil bless",                   "You feel evil!",                                                      "",                                                                          "");
+  SPLTXTO(SPELL_EVIL_WORD,            "evil word",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_FEAR,                 "fear",                         "You are scared!",                                                     "$n is scared!",                                                             "");
+  SPLTXTO(SPELL_FIREBALL,             "fireball",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_FIREBREATH,           "firebreath",                   "Your eyes burn red and smoke rises from the ground.",                 "$n's eyes burn red and smoke rises from the ground.",                       "");
+  SPLTXTO(SPELL_FLAMESTRIKE,          "flamestrike",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_FLY,                  "fly",                          "You start to fly.",                                                   "$n starts to fly.",                                                         "You landed down on the ground successfully.");
+  SPLTXTO(SPELL_FORGET,               "forget",                       "You seem to forget something.",                                       "$n seems to forget something.",                                             "");
+  SPLTXTO(SPELL_FURY,                 "fury",                         "You feel very angry.",                                                "$n starts snarling and fuming with fury.",                                  "You calm down.");
+  SPLTXTO(SPELL_GREAT_MIRACLE,        "great miracle",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_HARM,                 "harm",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_HASTE,                "haste",                        "Suddenly everything around you seems to slow down to a crawl.",       "$n starts moving with blinding speed.",                                     "The speed of your movements slows down to normal.");
+  SPLTXTO(SPELL_HEAL,                 "heal",                         "A warm feeling fills your body.",                                     "",                                                                          "");
+  SPLTXTO(SPELL_HEAL_SPRAY,           "heal spray",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_HELL_FIRE,            "hell fire",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_HOLD,                 "hold",                         "You are rooted to the ground.",                                       "$n is rooted to the ground.",                                               "You can move again.");
+  SPLTXTO(SPELL_HOLY_BLESS,           "holy bless",                   "You feel holy!",                                                      "",                                                                          "");
+  SPLTXTO(SPELL_HOLY_WORD,            "holy word",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_HYPNOTIZE,            "hypnotize",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ICEBALL,              "iceball",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_IDENTIFY,             "identify",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_IMP_INVISIBLE,        "improved invisibility",        "You vanish.",                                                         "$n vanishes into thin air.",                                                "You appear out of thin air.");
+  SPLTXTO(SPELL_INFRAVISION,          "infravision",                  "Your eyes glow crimson.",                                             "$n's eyes glow crimson.",                                                   "The crimson glow in your eyes fades.");
+  SPLTXTO(SPELL_INVISIBLE,            "invisibility",                 "You slowly fade out of existence.",                                   "$n slowly fades out of existence.",                                         "You slowly fade into existence.");
+  SPLTXTO(SPELL_INVUL,                "invulnerability",              "You are surrounded by a powerful sphere.",                            "$n is surrounded by a powerful sphere.",                                    "Your powerful sphere disappears.");
+  SPLTXTO(SPELL_IRON_SKIN,            "iron skin",                    "You feel your skin harden.",                                          "$n's skin hardens and turns dark iron in color.",                           "Your skin turns softer.");
+  SPLTXTO(SPELL_LAY_HANDS,            "lay hands",                    "A healing power flows into your body.",                               "",                                                                          "");
+  SPLTXTO(SPELL_LETHAL_FIRE,          "lethal fire",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_LIGHTNING_BOLT,       "lightning bolt",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_LOCATE_CHARACTER,     "locate character",             "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_LOCATE_OBJECT,        "locate object",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_MAGIC_MISSILE,        "magic missile",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_MANA_TRANSFER,        "mana transfer",                "You feel energy surging into you!",                                   "",                                                                          "");
+  SPLTXTO(SPELL_MIRACLE,              "miracle",                      "Your life has been restored.",                                        "",                                                                          "");
+  SPLTXTO(SPELL_MYSTIC_SWIFTNESS,     "mystic swiftness",             "Your hands blur with mystical speed!",                                "$n's hands blur with mystical speed!",                                      "Your hands slow down.");
+  SPLTXTO(SPELL_PARALYSIS,            "paralyze",                     "You are paralyzed!",                                                  "$n is paralyzed!",                                                          "Your paralysis wears off and you can move again.");
+  SPLTXTO(SPELL_PERCEIVE,             "perceive",                     "Your eyes glow with unearthly light.",                                "$n's eyes glow with unearthly light.",                                      "Your depth of perception diminishes.");
+  SPLTXTO(SPELL_POISON,               "poison",                       "You feel very sick.",                                                 "$n looks very sick.",                                                       "You feel better.");
+  SPLTXTO(SPELL_POISON_SMOKE,         "poison smoke",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_PROTECT_FROM_EVIL,    "protection from evil",         "A cloak of radiant energy surrounds you.",                            "A cloak of radiant energy surrounds $n.",                                   "The radiant aura around your body begins to weaken.");
+  SPLTXTO(SPELL_PROTECT_FROM_GOOD,    "protection from good",         "A cloak of chaotic energy surrounds you.",                            "A cloak of chaotic energy surrounds $n.",                                   "The chaotic aura around your body begins to weaken.");
+  SPLTXTO(SPELL_PW_KILL,              "power word kill",              "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_QUICK,                "quick",                        "Your mind begins to race.",                                           "$n's mind begins to race.",                                                 "Your thoughts slow.");
+  SPLTXTO(SPELL_RAGE,                 "rage",                         "Rage courses through your body!",                                     "Rage courses through $n's body!",                                           "The rage coursing through your body subsides.");
+  SPLTXTO(SPELL_REAPPEAR,             "reappear",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_RECHARGE,             "recharge",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_REGENERATION,         "regeneration",                 "Your skin turns green and you feel an affinity for the shining sun.", "$n's skin turns green and $e seems to bend toward the sun.",                "Your regenerative power fades.");
+  SPLTXTO(SPELL_REJUVENATION,         "rejuvenation",                 "You feel much better!",                                               "",                                                                          "");
+  SPLTXTO(SPELL_RELOCATION,           "relocation",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_REMOVE_CURSE,         "remove curse",                 "You feel a great sense of relief.",                                   "$n looks less uncomfortable.",                                              "");
+  SPLTXTO(SPELL_REMOVE_IMP_INVIS,     "remove improved invisibility", "You become visible to the world.",                                    "$n slowly fades into existence.",                                           "");
+  SPLTXTO(SPELL_REMOVE_PARALYSIS,     "remove paralysis",             "You can move again!",                                                 "$n's body grows less rigid.",                                               "");
+  SPLTXTO(SPELL_REMOVE_POISON,        "remove poison",                "A warm feeling runs through your body.",                              "$n looks less pale and sickly.",                                            "");
+  SPLTXTO(SPELL_REVEAL,               "reveal",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_RUSH,                 "rush",                         "Your pulse begins to race!",                                          "$n's veins bulge and twist as $s movement speeds up!",                      "Your pulse slows.");
+  SPLTXTO(SPELL_SANCTUARY,            "sanctuary",                    "You start glowing.",                                                  "$n is surrounded by a white aura.",                                         "The white aura around your body fades.");
+  SPLTXTO(SPELL_SATIATE,              "satiate",                      "You are full.",                                                       "",                                                                          "");
+  SPLTXTO(SPELL_SEARING_ORB,          "searing orb",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_SENSE_LIFE,           "sense life",                   "Your feel your awareness improve.",                                   "$n looks more aware of $s surroundings.",                                   "You feel less aware of your surroundings.");
+  SPLTXTO(SPELL_SHOCKING_GRASP,       "shocking grasp",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_SLEEP,                "sleep",                        "You feel very sleepy... ZZZzzz...",                                   "$n falls asleep.",                                                          "You feel less tired.");
+  SPLTXTO(SPELL_SPHERE,               "sphere",                       "You are surrounded by a golden sphere.",                              "$n is surrounded by a golden sphere.",                                      "Your golden sphere disappears.");
+  SPLTXTO(SPELL_SPIRIT_LEVY,          "spirit levy",                  "You absorb life energy from the dead.",                               "$n absorbs life energy from the dead.",                                     "The dark energy within you fades, diminishing your power.");
+  SPLTXTO(SPELL_STRENGTH,             "strength",                     "You feel stronger.",                                                  "",                                                                          "You feel weaker.");
+  SPLTXTO(SPELL_SUMMON,               "summon",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_SUPER_HARM,           "super harm",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_TELEPORT,             "teleport",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_THUNDERBALL,          "thunderball",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_TOTAL_RECALL,         "total recall",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_VAMPIRIC,             "vampiric touch",               "You feel the drained energy flowing into you.",                       "",                                                                          "");
+  SPLTXTO(SPELL_VENTRILOQUATE,        "ventriloquate",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_VITALITY,             "vitality",                     "You feel refreshed!",                                                 "",                                                                          "");
+  SPLTXTO(SPELL_WIND_SLASH,           "wind slash",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_WORD_OF_RECALL,       "word of recall",               "",                                                                    "",                                                                          "");
+  // Enchanter
+  SPLTXTO(SPELL_BLADE_BARRIER,        "blade barrier",                "You summon thousands of tiny whirling blades to envelope you!",       "The air hums as thousands of tiny whirling blades appear and envelope $n!", "One by one, the blades in your barrier fall to the ground.");
+  SPLTXTO(SPELL_PASSDOOR,             "passdoor",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ENGAGE,               "engage",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ETHEREAL_NATURE,      "ethereal nature",              "You slowly fade into an alternate plane of existence.",               "$n slowly fades into an alternate plane of existence.",                     "You feel strong enough to leave the physical plane.");
+  SPLTXTO(SPELL_DISRUPT_SANCT,        "disrupt sanctuary",            "Your white aura seems to fade a little.",                             "$n's white aura seems to fade a little.",                                   "The force disrupting your white aura disappears.");
+  // Archmage
+  SPLTXTO(SPELL_METEOR,               "meteor",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_ORB_PROTECTION,       "orb of protection",            "A golden orb appears over your head.",                                "A golden orb appears over $n's head.",                                      "Your golden orb disappears.");
+  SPLTXTO(SPELL_FROSTBOLT,            "frost bolt",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_WRATH_ANCIENTS,       "wrath of ancients",            "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DISTORTION,           "distortion",                   "Your sphere appears to blur and distort.",                            "$n's sphere appears to blur and distort.",                                  "Your sphere returns to normal.");
+  // Druid
+  SPLTXTO(SPELL_WALL_THORNS,          "wall of thorns",               "",                                                                    "",                                                                          "");
+  // Templar
+  SPLTXTO(SPELL_MAGIC_ARMAMENT,       "magic armament",               "You channel magic energy around yourself to augment your attacks.",   "$n channels magic energy around $eself to augment $s attacks.",             "The magic energy surrounding you dissipates.");
+  SPLTXTO(SPELL_FORTIFICATION,        "fortification",                "You feel able to withstand any attack.",                              "$n seems able to withstand any attack.",                                    "Your feeling of fortification diminishes.");
+  SPLTXTO(SPELL_DIVINE_HAMMER,        "divine hammer",                "You reach to the heavens and call down a hammer of divine power!",    "$n reaches to the heavens and calls down a hammer of divine power!",        "");
+  // Ronin
+  SPLTXTO(SPELL_BLUR,                 "blur",                         "Your movements become a blur.",                                       "$n's movements become a blur.",                                             "Your movements become less of a blur.");
+  // Mystic
+  SPLTXTO(SPELL_DEBILITATE,           "debilitate",                   "You are enveloped by a greenish smoke - you feel weaker.",            "$n is enveloped by a greenish smoke.",                                      "You feel a little less weak.");
+  SPLTXTO(SPELL_TRANQUILITY,          "tranquility",                  "You suddenly feel awash in a sense of tranquility.",                  "$n is suddenly awash in a sense of tranquility.",                           "Your sense of tranquility fades away.");
+  // Cavalier
+  SPLTXTO(SPELL_MIGHT,                "might",                        "You feel more powerful.",                                             "$n looks more powerful.",                                                   "You feel less powerful.");
+  SPLTXTO(SPELL_WRATH_OF_GOD,         "wrath of god",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_POWER_OF_DEVOTION,    "power of devotion",            "You are enveloped in a bright white aura.",                           "$n is enveloped in a bright white aura.",                                   "The bright white aura around your body fades.");
+  // Crusader
+  SPLTXTO(SPELL_RIGHTEOUSNESS,        "righteousness",                "You feel righteous!",                                                 "$n exerts a sense of righteousness.",                                       "Your sense of righteousness disappears.");
+  SPLTXTO(SPELL_POWER_OF_FAITH,       "power of faith",               "",                                                                    "",                                                                          "");
+  // Defiler
+  SPLTXTO(SPELL_DESECRATE,            "desecrate",                    "",                                                                    "",                                                                          "You feel the insatiable urge to desecrate another corpse.");
+  SPLTXTO(SPELL_BLACKMANTLE,          "blackmantle",                  "You are surrounded by an eerie mantle of darkness.",                  "$n is surrounded by an eerie mantle of darkness.",                          "Your mantle of darkness fades away.");
+  // Infidel
+  SPLTXTO(SPELL_SHADOW_WRAITH,        "shadow wraith",                "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_DUSK_REQUIEM,         "dusk requiem",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_WITHER,               "wither",                       "",                                                                    "",                                                                          "The pain coursing through your withered body recedes.");
+  // Bladesinger
+  SPLTXTO(SPELL_RALLY,                "rally",                        "You feel rallied!",                                                   "",                                                                          "Your sense of unity disappears.");
+  // Chanter
+  SPLTXTO(SPELL_WAR_CHANT,            "war chant",                    "You feel safer!",                                                     "",                                                                          "You don't feel as safe.");
+  SPLTXTO(SPELL_WAR_CHANT_DEBUFF,     "!war chant!",                  "You grow weak with panic!",                                           "$n grows weak with panic!",                                                 "You stop panicking.");
+  SPLTXTO(SPELL_LUCK,                 "luck",                         "You feel lucky!",                                                     "",                                                                          "You don't feel as lucky.");
+  SPLTXTO(SPELL_AID,                  "aid",                          "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_CAMARADERIE,          "camaraderie",                  "You feel safety in numbers.",                                         "",                                                                          "Your kinship fades.");
+  // Legionnaire
+  SPLTXTO(SPELL_RIMEFANG,             "rimefang",                     "",                                                                    "",                                                                          "You begin to thaw.");
+  SPLTXTO(SPELL_DEVASTATION,          "devastation",                  "",                                                                    "",                                                                          "");
+  // Mercenary
+  SPLTXTO(SPELL_TREMOR,               "tremor",                       "",                                                                    "",                                                                          "Your tremors subside.");
+  SPLTXTO(SPELL_CLOUD_CONFUSION,      "cloud of confusion",           "You feel disoriented.",                                               "$n looks disoriented.",                                                     "You feel less disoriented.");
+  SPLTXTO(SPELL_INCENDIARY_CLOUD,     "incendiary cloud",             "",                                                                    "",                                                                          "The cloud of fire surrounding you dies out.");
+
+  /*      Skill #                     name                            to_char_msg                                                            to_room_msg                                                                  wear_off_msg */
+  SPLTXTO(SKILL_AMBUSH,               "ambush",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_ASSASSINATE,          "assassinate",                  "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_ASSAULT,              "assault",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_BACKFIST,             "backfist",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_BACKSTAB,             "backstab",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_BASH,                 "bash",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_BLOCK,                "block",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_BUTCHER,              "butcher",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_CAMP,                 "camp",                         "You quickly set up a camp here, then sit down and rest.",             "$n quickly sets up a camp here, then sits down and rests.",                 "You break camp.");
+  SPLTXTO(SKILL_CIRCLE,               "circle",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_COIN_TOSS,            "coin-toss",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_CUNNING,              "cunning",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_DISARM,               "disarm",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_DISEMBOWEL,           "disembowel",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_DODGE,                "dodge",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_DUAL,                 "dual",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_HIDDEN_BLADE,         "hidden-blade",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_HIDE,                 "hide",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_KICK,                 "kick",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_KNOCK,                "knock",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_MEDITATE,             "meditate",                     "You gaze inward and focus on healing.",                               "$n enters a deep trance.",                                                  "You feel less focused.");
+  SPLTXTO(SKILL_PARRY,                "parry",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_PEEK,                 "peek",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_PICK_LOCK,            "pick",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_PRAY,                 "pray",                         "You bow your head and begin your prayer.",                            "$n bows $s head and begins praying.",                                       "You finish your prayers.");
+  SPLTXTO(SKILL_PUMMEL,               "pummel",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_PUNCH,                "punch",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_QUAD,                 "quad",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_RESCUE,               "rescue",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SCAN,                 "scan",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SNEAK,                "sneak",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SPIN_KICK,            "spin",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_STEAL,                "steal",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SUBDUE,               "subdue",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TAUNT,                "taunt",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_THROW,                "throw",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TRAP,                 "trap",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TRIPLE,               "triple",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TWIST,                "twist",                        "",                                                                    "",                                                                          "");
+  // Druid
+  SPLTXTO(SKILL_DEGENERATE,           "degenerate",                   "You eat away at your life force for a few precious mana points.",     "$n eats away at $s life force for a few precious mana points.",             "");
+  SPLTXTO(SKILL_SHAPESHIFT,           "shapeshift",                   "",                                                                    "",                                                                          "");
+  // Rogue
+  SPLTXTO(SKILL_DIRTY_TRICKS,         "dirty-tricks",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TROPHY,               "trophy",                       "",                                                                    "",                                                                          "You feel less inspired.");
+  SPLTXTO(SKILL_VEHEMENCE,            "vehemence",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_TRIP,                 "trip",                         "",                                                                    "",                                                                          "");
+  // Bandit
+  SPLTXTO(SKILL_EVASION,              "evasion",                      "",                                                                    "",                                                                          "");
+  // Warlord
+  SPLTXTO(SKILL_AWARENESS,            "awareness",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_PROTECT,              "protect",                      "",                                                                    "",                                                                          "");
+  // Gladiator
+  SPLTXTO(SKILL_FLANK,                "flank",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_MAIM,                 "maim",                         "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_HEADBUTT,             "headbutt",                     "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_HOSTILE,              "hostile",                      "",                                                                    "",                                                                          "");
+  // Ronin
+  SPLTXTO(SKILL_BANZAI,               "banzai",                       "",                                                                    "",                                                                          "");
+  // Mystic
+  SPLTXTO(SKILL_TIGERKICK,            "tigerkick",                    "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_MANTRA,               "mantra",                       "",                                                                    "",                                                                          "");
+  // Ranger
+  SPLTXTO(SKILL_BERSERK,              "berserk",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_DEFEND,               "defend",                       "",                                                                    "",                                                                          "");
+  // Trapper
+  SPLTXTO(SKILL_BATTER,               "batter",                       "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_FRENZY,               "frenzy",                       "",                                                                    "",                                                                          "");
+  // Cavalier
+  SPLTXTO(SKILL_TRUSTY_STEED,         "trusty-steed",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SMITE,                "smite",                        "",                                                                    "",                                                                          "");
+  // Crusader
+  SPLTXTO(SKILL_ZEAL,                 "zeal",                         "",                                                                    "",                                                                          "");
+  // Defiler
+  SPLTXTO(SKILL_FEINT,                "feint",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SHADOWSTEP,           "shadowstep",                   "",                                                                    "",                                                                          "");
+  // Infidel
+  SPLTXTO(SKILL_VICTIMIZE,            "victimize",                    "",                                                                    "",                                                                          "");
+  // Legionnaire
+  SPLTXTO(SKILL_LUNGE,                "lunge",                        "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_CLOBBER,              "clobber",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SKILL_SNIPE,                "snipe",                        "",                                                                    "",                                                                          "");
+  // Mercenary
+  SPLTXTO(SKILL_RIPOSTE,              "riposte",                      "",                                                                    "",                                                                          "");
+
+  /*      Other #                     name                            to_char_msg                                                            to_room_msg                                                                  wear_off_msg */
+  SPLTXTO(SPELL_DISENCHANT,           "disenchant",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_GREAT_MANA,           "great mana",                   "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_MANA_HEAL,            "mana heal",                    "You feel slightly regenerated.",                                      "",                                                                          "");
+  SPLTXTO(SPELL_PETRIFY,              "petrify",                      "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_RECOVER_MANA,         "recover mana",                 "Your mana has been restored.",                                        "",                                                                          "");
+  SPLTXTO(SMELL_FARTMOUTH,            "fartmouth",                    "You have a poopy mouth.",                                             "$n has a poopy mouth.",                                                     "You finally get your hands on some mouthwash!");
+
+  /* Copy spell_text[spell_nr].name to spells[spell_nr - 1] for legacy code purposes. */
+  for (int spell_nr = 1; (spell_nr - 1 < NUMELEMS(spells)) && (spell_nr < NUMELEMS(spell_text)); spell_nr++) {
+    spells[spell_nr - 1] = spell_text[spell_nr].name;
+  }
+
+  /* This is required; don't remove it. */
+  spells[NUMELEMS(spells) - 1] = "\n";
 }

@@ -620,14 +620,14 @@ int trysta_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         /* Don't warchant immortals or mobs that aren't attackers. */
         if (IS_IMMORTAL(vict) || (IS_NPC(vict) && (GET_OPPONENT(vict) != mob))) continue;
 
-        affect_apply(vict, SPELL_WARCHANT, 5, -4, APPLY_HITROLL, 0, 0);
+        affect_apply(vict, SPELL_WAR_CHANT_DEBUFF, 5, -4, APPLY_HITROLL, 0, 0);
 
         act("$n grows weak with panic!", FALSE, vict, 0, 0, TO_ROOM);
         printf_to_char(vict, "You grow weak with panic!\n\r");
       }
 
-      enchantment_apply(mob, FALSE, "War Chant (Save Bonus)", 0, 5, 0, -2, APPLY_SAVING_ALL, 0, 0, 0);
-      enchantment_apply(mob, FALSE, "War Chant (Damroll Bonus)", 0, 5, 0, GET_DAMROLL(mob) * 0.3, APPLY_DAMROLL, 0, 0, 0);
+      affect_apply(mob, SPELL_WAR_CHANT, 5, -2, APPLY_SAVING_ALL, 0, 0);
+      affect_apply(mob, SPELL_WAR_CHANT, 5, GET_DAMROLL(mob) * 0.3, APPLY_DAMROLL, 0, 0);
 
       return FALSE;
     }
@@ -1612,6 +1612,8 @@ int horn_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     /* 90% No spec. */
     if (chance(90)) return FALSE;
 
+    printf_to_room(CHAR_REAL_ROOM(owner), "The tranquil music of the sea fills the air!\n\r");
+
     int rnd = number(1, 10);
 
     /* 1% Miracle */
@@ -1686,8 +1688,6 @@ int horn_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
         spell_bless(GET_LEVEL(owner), owner, vict, 0);
       }
     }
-
-    printf_to_room(CHAR_REAL_ROOM(owner), "The tranquil music of the sea fills the air!\n\r");
 
     return FALSE;
   }

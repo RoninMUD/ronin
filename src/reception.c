@@ -494,7 +494,7 @@ void load_char(CHAR *ch) {
       if (*avatar_skills[i] == '\n') done = TRUE;
       else
       {
-        number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), spells, TRUE);
+        number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), (const char * const * const)spells, TRUE);
 
         if (number == 0) continue;
         else if (!check_sc_access(ch, number)) continue;

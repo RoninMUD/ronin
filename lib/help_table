@@ -674,7 +674,7 @@ reimbursement, you'll get one.
 "HASTE"
 
 Usage       : cast 'haste' (self only)
-Level       : level 40 cleric
+Level       : level 45 cleric
 Accumulative: no
 Save        : -
 Duration    : 5 ticks
@@ -4780,54 +4780,55 @@ Example:
    will match 'mage' or 'magic missile' depending on first
    occurrence in the help file.
 #
-SONG SONGS  "BARD SONGS"
+SONG SONGS "BARD SONGS"
 
-Usage : song 'name of the song'
+Usage: song 'name of the song'
 
-Songs will affect the whole room including players and monsters.
-Songs work in NOMAGIC rooms also.
+Most songs will affect the whole room, including players and monsters.
+Songs work in NO_MAGIC rooms.
 
-Level Song's Name                       Mana    Spell
--------------------------------------------------------------------
- (5)  Seal with a Kiss                   5      (armor)
-   or Love is a Battlefield
- (7)  I Can See Clearly Now              15     (cure blindness)
- (9)  One Day I will Fly Away            25     (fly)
-   or Come Fly With Me
-(11)  We Don't Need Another Hero         25     (cure critic)
-(12)  Forget You                         15     (forget)
-(13)  Smoke Gets In Your Eyes            15     (blindness)
-   or Blinded by the Light
-(14)  Enter Sandman                      25     (sleep)
-(15)  Best Of Me                         10     (satiate)
-   or Hungry Like the Wolf
-(16)  I'm Taking a Walk                  25     (vitality)
-(17)  Dangerous                          25     (colour spray)
-   or Purple Rain
-(18)  Somebody's Watching Me             25     (detect invisibility)
-(19)  We Are the World                   30     (total recall)
-   or Mama, I'm Coming Home
-(20)  Don't Fear the Reaper              15     (fear)
-(21)  Moonlight Shadow                   20     (infravision)
-   or I Wear My Sunglasses at Night
-(22)  This Charming Man                  50     (charm person)
-(23)  Nothing Compares to You            50     (sanctuary)
-   or Safety Dance
-(25)  Toy Soldier                        50     (animate-dead)
-   or Thriller
-(26)  Everything I Do I Do It For You    50     (heal)
-   or Comfortably Numb
-(27)  Hold On                            15     (hold)
-(28)  A View to a Kill                   50     (lethal fire)
-   or Ring of Fire
-(36)  Lifting Shadows of a Dream         25     (remove poison)
-   or Every Rose Has Its Thorn
-(42)  Canned Heat                        120    (haste)*
-(46)  There is No Heart That Won't Heal  80     (rejuvenation)
-   or Forever Young
-(50)  Come Together                      100    (group summon)
+Level  Song's Name                        Mana  Spell
+---------------------------------------------------------------------
+ (3)   Toxic                              5     (detect poison)
+ (5)   Seal with a Kiss                   5     (armor)
+    or Love is a Battlefield
+ (7)   I Can See Clearly Now              15    (cure blindness)
+ (9)   One Day I will Fly Away            25    (fly)
+    or Come Fly With Me
+(11)   We Don't Need Another Hero         25    (cure critic)
+(12)   Forget You                         15    (forget)
+(13)   Smoke Gets In Your Eyes            15    (blindness)
+    or Blinded by the Light
+(14)   Enter Sandman                      25    (sleep)
+(15)   Best Of Me                         10    (satiate)
+    or Hungry Like the Wolf
+(16)   I'm Taking a Walk                  25    (vitality)
+(17)   Dangerous                          25    (colour spray)
+    or Purple Rain
+(18)   Somebody's Watching Me             25    (detect invisibility)
+(19)   We Are the World                   30    (total recall)
+    or Mama, I'm Coming Home
+(20)   Don't Fear the Reaper              15    (fear)
+(21)   Moonlight Shadow                   20    (infravision)
+    or I Wear My Sunglasses at Night
+(22)   This Charming Man                  50    (charm person)
+(23)   Nothing Compares to You            50    (sanctuary)
+    or Safety Dance
+(25)   Toy Soldier                        50    (animate-dead)
+    or Thriller
+(26)   Everything I Do I Do It For You    50    (heal)
+    or Comfortably Numb
+(27)   Hold On                            15    (hold)
+(28)   A View to a Kill                   50    (lethal fire)
+    or Ring of Fire
+(36)   Lifting Shadows of a Dream         25    (remove poison)
+    or Every Rose Has Its Thorn
+(42)   Canned Heat                        120   (haste)*
+(46)   There is No Heart That Won't Heal  80    (rejuvenation)
+    or Forever Young
+(50)   Come Together                      100   (group summon)
 
-* Haste song has guaranteed effect on clerics and bards, other classes
+* Haste song has guaranteed effect on clerics and bards; other classes
 have a 5% chance to be affected.
 #
 SPELL SPELLS
@@ -7421,7 +7422,6 @@ See Also: SUBCLASSES ARCHMAGE
 "ORB OF PROTECTION"
 
 Subclass Archmage: Level 2 (Mage)
-Subclass Templar: Level 4 (Cleric)
 
 Usage       : cast 'orb of protection' (self only)
 Accumulative: no
@@ -7429,13 +7429,13 @@ Duration    : 10
 Save        : -
 Mana Cost   : 50
 
-This is the ultimate spell to prevent an Archmage's or Templar's untimely death
-due to low hit points.  While protected by this spell and taking damage, the
-Archmage's/Templar's hit points will only be able to go as low as 200.  Then,
-instead of removing hit points for damage, the Archmage's/Templar's mana will
-be removed at a rate of 1 mana point for every 2 damage taken.
+This is the ultimate spell to prevent an Archmage's untimely death due to low
+hit points.  While protected by this spell and taking damage, the Archmage's
+hit points will only be able to go as low as 200.  Then, instead of removing
+hit points for damage, the Archmage's mana will be removed at a rate of 1 mana
+point for every 2 damage taken.
 
-See Also: SUBCLASSES ARCHMAGE TEMPLAR
+See Also: SUBCLASSES ARCHMAGE
 #
 "FROST BOLT"
 
@@ -8157,7 +8157,6 @@ See Also: SUBCLASSES CAVALIER PALADIN
 MIGHT
 
 Subclass Cavalier: Level 1 (Paladin)
-Subclass Templar: Level 2 (Cleric)
 
 Usage       : cast 'might' (self only)
 Accumulative: no
@@ -8165,10 +8164,10 @@ Duration    : 20
 Save        : -
 Mana Cost   : 50
 
-The Cavalier or Templar draws strength from his/her faith, granting them +1
-hitroll and +3 damroll on all melee attacks.
+The Cavalier draws strength from his/her faith, granting them +1 hitroll and +3
+damroll on all melee attacks.
 
-See Also: SUBCLASSES CAVALIER TEMPLAR
+See Also: SUBCLASSES CAVALIER
 #
 "TRUSTY STEED"
 
@@ -8329,157 +8328,349 @@ can do is 1500 hit points for 125 mana.
 
 See Also: SUBCLASSES CRUSADER
 #
-DRUID
+MEDITATE
 
-Druid is one of the Cleric subclasses and is broken up into 5 levels.  At each
-level, the Druid receives a new or improved skill or spell.  For help on each
-skill or spell, just type HELP <skill/spell name>
+Level:     Cleric, Level 40
 
-Level         Skill/Spell
-  1           MEDITATE
-  2           CLARITY
-  3           WALL OF THORNS
-  4           MAGIC ARMAMENT
-  5           DEGENERATE
+Usage:     meditate (self only)
 
-See Also: SUBCLASSES TEMPLAR CLERIC
+During meditation, the Cleric looks inward and focuses on recovering lost hit
+points and mana.  This places the Cleric into a deep sleep, which allows them to
+recover two times the normal amount of hit points, mana, and movement each tick
+for a duration of 2 ticks.
+
+Meditation can be interrupted by entering the 'wake' command, immediately
+cancelling the regenerative effect.  Characters that are meditating cannot be
+awoken by other players, though any damage taken by the druid will wake them up
+immediately.
+
+Once meditation is complete (or interrupted), it cannot be achieved for another
+10 ticks.
+
+See Also: REGENERATION SLEEP
 #
 TEMPLAR
 
-Templar is one of the Cleric subclasses and is broken up into 5 levels.  At
-each level, the Templar receives a new or improved skill or spell.  For help on
-each skill or spell, just type HELP <skill/spell name>
+Templar is one of the Cleric subclasses and is broken up into 5 levels.
+At each level, the Templar receives a new or improved skill or spell.
+For help on a skill or spell, just type: HELP <skill/spell name>
 
 Level         Skill/Spell
-  1           MEDITATE
-  2           MIGHT
-  3           SANCTIFY
-  4           ORB OF PROTECTION
-  5           FORTIFICATION
+  1           CONVICTION
+  2           MARTIAL TRAINING
+  3           MAGIC ARMAMENT
+  4           FORTIFICATION
+  5           DIVINE HAMMER
 
 See Also: SUBCLASSES DRUID CLERIC
 #
-MEDITATE
+CONVICTION
 
-Subclass Druid: Level 1 (Cleric)
-Subclass Templar: Level 1 (Cleric)
+Subclass: Templar, Level 1 (Cleric)
 
-During meditation, the Druid or Templar look inward and focus on healing.
-This prevents any commands from being processed for a duration of 2 ticks,
-but will give an additional 60 hit points and 60 mana per tick for those 2
-ticks.  Once meditation is complete, it cannot be achieved for another 30
-ticks.
+The Templar's Dispel Evil, Dispel Good, Holy Word, and Evil Word spells inflict
+three times the normal damage.  Also, the Harm and Super Harm spells no longer
+have a saving throw for half damage when cast by the Templar.
 
-See Also: SUBCLASSES DRUID TEMPLAR
+Additionally, the Holy Bless and Evil Bless spells shift the Templar's alignment
+by two times the normal value when cast on themselves.
+
+Finally, the Templar can cast the Holy Bless and Evil Bless spells on other
+characters.  These spells shift the target's alignment by 50% of the normal
+amount provided by the spell.
+
+See Also: SUBCLASS TEMPLAR "DISPEL EVIL" "DISPEL GOOD" "HOLY WORD" "EVIL WORD"
+          "HOLY BLESS" "EVIL BLESS" HARM "SUPER HARM"
 #
-SANCTIFY
+"MARTIAL TRAINING"
 
-Subclass Templar: Level 3 (Cleric)
+Subclass: Templar, Level 2 (Cleric)
 
-Usage       : cast 'sanctify'
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 100
+Through intense combat training, Templars have mastered the art of wielding all
+forms of weapons, including those normally forbidden by the clergy.  This
+ability allows the Templar to wield all weapons, regardless of damage type or
+class restrictions.  However, alignment, and any other restrictions still apply.
 
-If there are no ungrouped creatures in the same
-room as the Templar, this spell will make the room
-safe for resting.
+Additionally, the Templar gains a bonus to their Bash skill equal to their level
+divided by 5 (up to +10 at level 50).
 
-See Also: SUBCLASSES TEMPLAR
-#
-FORTIFICATION
-
-Subclass Templar: Level 5 (Cleric)
-
-Usage       : cast 'fortification' <victim>
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 100
-
-This affect works in conjunction with sanctuary to give the victim even more
-protection from damage. If affected by both sanctuary and fortification, the
-victim will receive a damage reduction of 65%.
-
-See Also: SUBCLASSES TEMPLAR SANCTUARY
-#
-CLARITY
-
-Subclass Druid: Level 2 (Cleric)
-
-Usage       : cast 'clarity' (self only)
-Accumulative: no
-Duration    : 10
-Save        : -
-Mana Cost   : 50
-
-The Druid is able to focus his/her thoughts and concentrate
-completely on spell casting.  This gives the Druid perfect
-concentration on anything they would normally be able to cast
-(no sanct while fighting) and a reduction in mana cost of 10%.
-However, this inward concentration comes at a cost.  The Druid
-cannot hit anything during combat, their physical attacks will
-always miss.
-
-See Also: SUBCLASSES DRUID
-#
-"WALL OF THORNS"
-
-Subclass Druid: Level 3 (Cleric)
-
-Usage       : cast 'wall of thorns'
-Accumulative: no
-Duration    : 5
-Save        : -
-Mana Cost   : 80
-
-The Druid conjures up a handful of seeds which quickly grow to block all
-exits.  Any creatures in the room will be trapped, unable to flee. The wall
-isn't permanent and will dissolve in a short span of time.
-
-If cast while an existing wall is in the room, the Druid will use their
-powers of botanical pursuasion to encourage the wall to recede and dissolve
-immediately.
-
-See Also: SUBCLASSES DRUID
+See Also: SUBCLASS TEMPLAR CLERIC BASH
 #
 "MAGIC ARMAMENT"
 
-Subclass Druid: Level 4 (Cleric)
+Subclass: Templar, Level 3 (Cleric)
 
-Usage       : cast 'magic armament' (self only)
-Accumulative: no
-Duration    : 3
-Save        : -
-Mana Cost   : 60
+Usage:        cast 'magic armament' (self only)
+Mana Cost:    75
+Duration:     5
 
-Where as Clarity prevents the Druid from landing any
-physical attacks, this spell will enhance the Druid's
-damage by 2d5.  This gives a maximum possible damage
-bonus of 10.
+The Templar is capable of harnessing great spiritual power and infusing it into
+their weapon, causing each blow to deal extra damage.
 
-See Also: SUBCLASSES DRUID
+This powerful spell grants a bonus of 2d5 damage to each of the Templar's melee
+attacks.  If the dice roll from this bonus damage is equal to 8 or higher, the
+caster gains mana equal to the value of the roll.
+
+While Magic Armament is active, the damage inflicted by the Templar's Bash skill
+is increased by 50%.
+
+See Also: SUBCLASS TEMPLAR BASH
+#
+FORTIFICATION
+
+Subclass: Templar, Level 4 (Cleric)
+
+Usage:        cast 'fortification' <target>
+Mana Cost:    100
+Duration:     Level / 4
+
+This spell is similar to Sanctuary, but provides even more powerful damage
+reduction.  A creature affected by Fortification takes 65% less damage from all
+sources.  If the target is affected by both the Sanctuary and Fortification
+spells, the protection provided by Fortification is used.  The effects of these
+two spells do not stack.  The Disrupt Sanctuary spell will decrease the
+protection offered by Fortification to 15%.
+
+See Also: SUBCLASS TEMPLAR SANCTUARY
+#
+"DIVINE HAMMER"
+
+Subclass: Templar, Level 5 (Cleric)
+
+Usage:        cast 'divine hammer' (self only)
+Mana Cost:    250
+Duration:     60 attacks (equal to 3 minutes of continuous combat)
+
+The most pious of Templars can manifest a weapon of pure holy energy in the form
+of a massive divine hammer.  For the duration of the spell, the Templar makes
+attacks with this rod automatically each round that they are engaged in combat,
+as if they were wielding it directly.  The Templar still maintains control of
+their wielded weapon and makes normal melee attacks, can cast spells, and can
+use skills as usual.
+
+The hammer inflicts damage as if it were a two-handed weapon wielded by the
+Templar and can never miss.  This holy weapon deals crushing, piercing, or
+hacking damage, depending on the opponent's damage immunities; if the opponent
+is immune to all of these weapon types, damage is inflicted via magical means
+instead.
+
+The weapon's damage is equal to 7d7+7 during the first 20 attacks, 8d8+8
+during the next 20 attacks, and 9d9+9 damage during the final 20 attacks.
+
+After the hammer has made 60 attacks, it ceases its attacks and looms above the
+caster's head, ready for one final strike.  The Templar has 20 rounds (1 minute)
+decide when and where the hammer shall strike.  To unleash this final strike,
+they must enter the 'judgement-strike' command.
+
+If the Templar does not specify a target (and is not in combat), or uses the
+optional 'area' or 'room' argument, the strike will heal all mortals in the
+room for 500 hit points.
+
+If the Templar targets a friendly player, the strike will heal the target
+for 1,500 hit points as it bathes them in holy light; the Templar can target
+themself with this command if desired.
+
+If the Templar instead targets an opponent or a non-player character, the hammer
+crashes into them with the full force of the heavens, inflicting a massive
+2,000 damage in a single blow.
+
+Finally, if the effect expires without being used, its energy dissipates and it
+restores 200 health and 50 mana to the Templar.
+
+The 'judgement-strike' command accepts the following optional arguments:
+area/room, opponent/victim, and self/me.
+
+See Also: SUBCLASS TEMPLAR SANCTUARY
+#
+DRUID
+
+Druid is one of the Cleric subclasses and is broken up into 5 levels.
+At each level, the Druid receives a new or improved skill or spell.
+For help on a skill or spell, just type: HELP <skill/spell name>
+
+Level         Skill/Spell
+  1           DEGENERATE
+  2           ADAPTATION
+  3           WALL OF THORNS
+  4           SHAPESHIFT: ELEMENTAL FORM
+  5           SHAPESHIFT: DRAGON FORM
+
+See Also: SUBCLASSES TEMPLAR CLERIC
 #
 DEGENERATE
 
-Subclass Druid: Level 5 (Cleric)
+Subclass: Druid, Level 1 (Cleric)
 
-Usage       : cast 'degenerate' (self only)
-Accumulative: no
-Duration    : -
-Save        : -
-Mana Cost   : 0
+Usage: degenerate (self only)
 
-The Druid is able to sacrifice his/her health by absorbing hitpoints
-and converting them to mana at a 1-2 ratio.  All but 10 hitpoints
-may be converted depending on how much mana the Druid needs restored.
-However, the Druid is unable to be healed by any means for a duration
-of 2 ticks after the cast and cannot use degenerate again for 30
-ticks. While this spell can give the Druid much more available
-mana, there is a large risk of death.
+By using this skill, the Druid can sacrifice health by absorbing hit points and
+converting them to mana at a 1:2 ratio.  All but 10 hit points can be converted,
+depending on how much mana the Druid needs restored.
+
+For the next 5 ticks after using Degenerate, the Druid can only heal to 25% of
+their maximum hit points.  Additionally, all healing from spells or from
+regeneration is also reduced to 25% of normal during this period.
+
+The Druid must spend 20 ticks recovering after using Degenerate before they can
+use the skill again.
+
+While this skill can give the Druid much more available mana, there is a large
+risk of death if used carelessly.
 
 See Also: SUBCLASSES DRUID
+#
+ADAPTATION
+
+Subclass: Druid, Level 2 (Cleric)
+
+Years of learning to adapt to the ever-changing nature of the land and the
+environment that surrounds them grants the Druid unique insights into the use
+of all forms of equipment and gear.  This allows them to wear any piece of
+equipment, regardless of its usual class or alignment restrictions.  Adaptation
+does not apply to wielded or held weapons, and as such does not eliminate their
+prohibition of wielding sharp weapons.
+
+Additionally, equipment that decays while equipped by the Druid decays at half
+the normal rate.  Objects still decay at the normal rate when simply being
+carried by the player, as the Druid's adaptable nature is limited to actively
+worn items.
+
+See Also: SUBCLASS DRUID ANTI CLERIC
+#
+"WALL OF THORNS"
+
+Subclass: Druid, Level 3 (Cleric)
+
+Usage:        cast 'wall of thorns'
+Mana Cost:    100
+Duration:     5 ticks
+Accumulative: No
+
+The Druid conjures up a handful of seeds which quickly grow to block all exits.
+
+Any non-player characters in the room will be trapped, unable to move or flee.
+Such creatures are also blocked from entering the room while the wall is in
+place.  A creature that attempts to flee while the wall is present will suffer
+damage equal to the level of the caster, though this damage will never cause the
+creature to die.
+
+Normal player character movement is not blocked by the wall, except in Arena and
+Chaotic rooms; however, players are still blocked from fleeing through a wall of
+thorns and will take damage if they attempt to do so.
+
+All player characters not engaged in combat that are sitting, resting, or
+sleeping in a room in which a wall of thorns is present regenerate hit points
+and mana 33% faster than normal.
+
+A wall of thorns in a Safe room inflicts no damage, but otherwise works as
+normal.
+
+The wall is not permanent and will wilt and recede when the spell expires.
+
+See Also: SUBCLASS DRUID ARENA CHAOS FLEE REGENERATION
+#
+"ELEMENTAL FORM"
+
+Subclass: Druid, Level 4 (Cleric)
+
+Advantages:
+- Concentration rate becomes 100%, even in half or quarter concentration rooms.
+- All spells cost 10% less mana to cast.
+- Healing and damage spells cure or inflict 10% more damage, respectively.
+- Permanent Fortification, as per the spell.
+- Immunity to the skill lag caused by some skills and special attacks, such as
+  from pummel, bash, tailslam, etc.  This does not affect damage or position.
+
+The affects, spell access, and immunities listed above are lost immediately when
+the Druid shapeshifts to another form.
+
+Allows the Druid to use the 'entropy' command when in Elemental form, causing
+them to envelop the specified target with a bubble of entropy that saps them of
+their energy.  Entropy applies a negative effect to the target which causes a 5%
+reduced chance to: hit with their standard melee attacks, use special attacks
+(e.g. bite, claw, tailslam, etc.), and/or cast a spell.  Other special abilities
+that the target might use (i.e. from special procedures) are unaffected.
+
+This ability has a cost of 50 mana and imposes a 1 round skill lag on the Druid
+when it is used.  This effect can stack up to 3 times (up to 15% reduced chance)
+and has a duration of 10 combat rounds (30 seconds).  The effect caused by
+Entropy attacks from multiple Druids stack with each other and toward the limit
+of 3 total stacks.  Each Entropy attack refreshes the duration of the effect to
+its maximum of 10 combat rounds.
+
+Disadvantage:
+- Physical damage inflicted by melee attacks and skills used by a Druid in
+elemental form is reduced by 50%, due to their less corporeal nature.
+
+See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" CONCENTRATION FORTIFICATION
+#
+"DRAGON FORM"
+
+Subclass: Druid, Level 5 (Cleric)
+
+Advantages:
+- Permanent Fly, as per the spell.
+- Permanent Infravision, as per the spell.
+- Access to the Fear spell.
+- Access to the Perceive spell.
+- Immunity to the Fear spell.
+- The Druid's Wisdom modifier is added as a bonus to all physical damage
+  inflicted by melee attacks and skills (up to +10 at 25 Wisdom).
+
+The affects, spell access, and immunities listed above are lost immediately when
+the Druid shapeshifts to another form.
+
+Allows the Druid to use the 'dragonfire' command when in Dragon form, causing
+them to breathe a plume of deadly flame at the specified target.  This attack
+inflicts 10 times the caster's level in damage (up to 500 damage at level 50),
+with no chance for a saving throw.  Dragon fire is a unique form of magical
+energy and is not classified as fire for the purposes of damage resistance or
+immunity.
+
+This ability has a cost of 75 mana and imposes a 1 round skill lag on the Druid
+when it is used.  Each breath attack applies a negative effect on the target,
+causing it to take 2% more damage from all sources.  This effect can stack up to
+3 times (up to 6% increased damage) and has a duration of 10 combat rounds (30
+seconds).  This damage increase is applied before damage reduction affects are
+considered, such as Sanctuary or Fortification.  The effect caused by breath
+attacks from multiple Druids stack with each other and toward the limit of 3
+total stacks.  Each breath attack refreshes the duration of the effect to its
+maximum of 10 combat rounds.
+
+During combat, the Druid will automatically bite, claw, or tail slam their
+opponent, inflicting damage equal to their level that breaks through the
+protection of Invulnerability.  This attack has a 15% chance of occurring every
+combat round, increased by the Druid's Wisdom modifier (up to 25% at 25 Wisdom).
+
+Disadvantage:
+- Healing and damage spells cast by a Druid in dragon form cure or inflict 20%
+less damage respectively, due to their more primal nature.
+
+See Also: SUBCLASS DRUID SHAPESHIFT "ELEMENTAL FORM" FLY INFRAVISION FEAR
+          PERCEIVE WISDOM
+#
+SHAPESHIFT
+
+Subclass: Druid, Level 4 and 5 (Cleric)
+
+Usage:     shapeshift <dragon/elemental/normal>
+Mana Cost: 100 (Dragon/Elemental Form) / 0 (Normal Form)
+
+This ability allows the Druid to transform into a non-humanoid creature,
+granting them special powers, spells, and skills.  Each form brings with it
+certain advantages and disadvantages, allowing the Druid to fill specific niches
+by trading some powers for others.
+
+The Druid maintains their chosen form until they choose a new one, they die, or
+they otherwise leave the game.
+
+Using the shapeshift command with the "normal" option causes the Druid to revert
+to their natural humanoid form.
+
+See the help entries for "DRAGON FORM" and "ELEMENTAL FORM" for more information
+about how each form affects the Druid.
+
+See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" "ELEMENTAL FORM"
 #
 BLADESINGER
 

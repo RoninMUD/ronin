@@ -340,7 +340,7 @@ void do_donate(CHAR *ch, char *arg, int cmd)
     return;
   }
 
-  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NODROP))
+  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP))
   {
     send_to_char("You can't let go of it, it must be CURSED!\n\r", ch);
     return;
@@ -436,7 +436,7 @@ void do_junk(CHAR *ch, char *arg, int cmd)
     return;
   }
 
-  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NODROP))
+  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP))
   {
     send_to_char("You can't let go of it, it must be CURSED!\n\r", ch);
     return;
@@ -1221,8 +1221,7 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
   /* Check if we can wield the object. */
   if (eq_slot == ITEM_WIELD) {
-    bool can_dual_wield = FALSE;
-    bool can_wield_2h_and_1h = FALSE;
+    bool can_dual_wield = FALSE, can_wield_2h_and_1h = FALSE;
 
     /* Mage weapon handling. */
     if (GET_CLASS(ch) == CLASS_MAGIC_USER) {
@@ -1242,12 +1241,15 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot) {
 
     /* Cleric weapon handling. */
     if (GET_CLASS(ch) == CLASS_CLERIC) {
-      /* Disallow sharp weapons. */
-      if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
-          ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
-        printf_to_char(ch, "You can't wield that, it's SHARP! Your religion forbids the use of sharp weapons!\n\r");
+      /* Templar SC2: Martial Training - Bypass sharp weapon check. */
+      if (!check_subclass(ch, SC_TEMPLAR, 2)) {
+        /* Disallow sharp weapons. */
+        if (((OBJ_TYPE(obj) == ITEM_WEAPON) || (OBJ_TYPE(obj) == ITEM_2H_WEAPON)) &&
+            ((OBJ_VALUE(obj, 3) == 3) || (OBJ_VALUE(obj, 3) > 8))) {
+          printf_to_char(ch, "You can't wield that, it's SHARP!  Your religion forbids the use of sharp weapons!\n\r");
 
-        return;
+          return;
+        }
       }
     }
 

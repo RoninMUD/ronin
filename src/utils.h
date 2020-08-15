@@ -264,6 +264,9 @@ do {                   \
 
 #define GET_EMAIL(ch)           (ch->ver3.email_addr)
 
+#define GET_POOFIN(ch)          (ch->player.poofin)
+#define GET_POOFOUT(ch)         (ch->player.poofout)
+
 #define GET_CLAN_NUM(ch)        (ch->ver3.clan_num)
 #define GET_CLAN(ch)            (clan_list[(int)GET_CLAN_NUM(ch)])
 #define GET_CLAN_NAME(ch)       ((GET_CLAN_NUM(ch) && GET_CLAN(ch).name) ? GET_CLAN(ch).name : "None")

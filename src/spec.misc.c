@@ -832,7 +832,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
    case 15:
    case 16:
      act("$n utters the words 'nasson hof'.", 1, mob, 0, 0, TO_ROOM);
-     cast_colour_spray(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, vict, 0);
+     cast_color_spray(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, vict, 0);
      break;
    case 17:
    case 18:
@@ -854,7 +854,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
      break;
    default:
      act("$n utters the words 'mummy duck'.", 1, mob, 0, 0, TO_ROOM);
-     cast_colour_spray(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, vict, 0);
+     cast_color_spray(GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL, vict, 0);
      break;
 
 

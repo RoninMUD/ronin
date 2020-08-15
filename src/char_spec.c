@@ -211,7 +211,7 @@ void blood_lust_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
           damage(ch, victim, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
 
-          magic_heal(ch, SPELL_BLOOD_LUST, dmg, TRUE);
+          magic_heal(ch, ch, SPELL_BLOOD_LUST, dmg, TRUE);
 
           GET_ALIGNMENT(ch) = MAX(-1000, GET_ALIGNMENT(ch) - dmg);
           break;

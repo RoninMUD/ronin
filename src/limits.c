@@ -25,7 +25,7 @@
 #include "reception.h"
 #include "subclass.h"
 #include "enchant.h"
-
+#include "aff_ench.h"
 
 /* Defines */
 
@@ -36,9 +36,7 @@
 
 #define MAX_TITLE_LENGTH   80
 
-#define READ_TITLE(ch) (GET_SEX(ch) == SEX_MALE ? \
-    titles[GET_CLASS(ch)-1][GET_LEVEL(ch)].title_m : \
-    titles[GET_CLASS(ch)-1][GET_LEVEL(ch)].title_f)
+#define READ_TITLE(ch) (GET_SEX(ch) == SEX_MALE ? titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_m :  titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_f)
 
 
 /* Externs */
@@ -76,22 +74,21 @@ void gain_condition(CHAR *ch, int condition, int value);
 void check_idling(CHAR *ch);
 void point_update(void);
 
-
 /* Constants */
+
 const int optimal_age = 45;
 
 const double rank_regen_non_caster[] = {
-      1.15,  /* Rank 1 */
-      1.075, /* Rank 2 */
-      1.075  /* Rank 3 */
+  1.15,  /* Rank 1 */
+  1.075, /* Rank 2 */
+  1.075  /* Rank 3 */
 };
 
 const double rank_regen_caster[] = {
-      1.1,  /* Rank 1 */
-      1.05, /* Rank 2 */
-      1.05  /* Rank 3 */
+  1.1,  /* Rank 1 */
+  1.05, /* Rank 2 */
+  1.05  /* Rank 3 */
 };
-
 
 /* Functions */
 
@@ -117,60 +114,61 @@ int graf(int age, int p0, int p1, int p2, int p3, int p4, int p5, int p6)
     return p6;                                           /* >= 80  */
 }
 
-
-/* The three MAX functions define a character's Effective maximum, */
-/* which is NOT the same as ch->points.max_xxxx !!!                */
+/**
+* @brief Get character's effective maximum hit points.
+*
+* @param[in] ch The character.
+*
+* @return The character's effective maximum hit points.
+*/
 int hit_limit(CHAR *ch) {
-  int max_hit = GET_MAX_HIT_POINTS(ch);
-
-  return max_hit;
+  return GET_MAX_HIT_POINTS(ch);
 }
 
+/**
+* @brief Get character's effective maximum mana points.
+*
+* Note: Not the same as ch->points.max_mana for players!
+*
+* @param[in] ch The character.
+*
+* @return The character's effective maximum mana points.
+*/
 int mana_limit(CHAR *ch) {
-  int max_mana = GET_MAX_MANA_POINTS(ch);
-
-  if (!IS_NPC(ch)) max_mana += 100;
-
-  return max_mana;
+  return GET_MAX_MANA_POINTS(ch) + (!IS_NPC(ch) ? 100 : 0);
 }
 
+/**
+ * @brief Get character's effective maximum movement points.
+ *
+ * Note: Not the same as ch->points.max_move for players!
+ *
+ * @param[in] ch The character.
+ *
+ * @return The character's effective maximum movement points.
+ */
 int move_limit(CHAR *ch) {
-  int max_move = GET_MAX_MOVE_POINTS(ch);
-
-  if (!IS_NPC(ch)) max_move += 100;
-
-  return max_move;
+  return GET_MAX_MOVE_POINTS(ch) + (!IS_NPC(ch) ? 100 : 0);
 }
 
-int equipment_regen(CHAR *ch, int type)
-{
-  int i = 0;
-  int obj = 0;
+int equipment_regen(CHAR *ch, int type) {
+  if (!ch) return 0;
+
   int gain = 0;
 
-  for (i = 0; i < MAX_WEAR; i++)
-  {
-    if (ch->equipment[i])
-    {
-      for (obj = 0; obj < MAX_OBJ_AFFECT; obj++)
-      {
-        switch (type)
-        {
+  for (int eq_pos = 0; eq_pos < MAX_WEAR; eq_pos++) {
+    if (EQ(ch, eq_pos)) {
+      for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
+        switch (type) {
           case MANA_REGEN:
-            if (ch->equipment[i]->affected[obj].location == APPLY_MANA_REGEN)
-            {
-              gain += ch->equipment[i]->affected[obj].modifier;
-
-              continue;
+            if (OBJ_AFF_LOC(EQ(ch, eq_pos), i) == APPLY_MANA_REGEN) {
+              gain += OBJ_AFF_MOD(EQ(ch, eq_pos), i);
             }
             break;
 
           case HP_REGEN:
-            if (ch->equipment[i]->affected[obj].location == APPLY_HP_REGEN)
-            {
-              gain += ch->equipment[i]->affected[obj].modifier;
-
-              continue;
+            if (OBJ_AFF_LOC(EQ(ch, eq_pos), i) == APPLY_HP_REGEN) {
+              gain += OBJ_AFF_MOD(EQ(ch, eq_pos), i);
             }
             break;
         }
@@ -181,40 +179,36 @@ int equipment_regen(CHAR *ch, int type)
   return gain;
 }
 
-int spell_regen(CHAR *ch, int type)
-{
-  AFF *af = NULL;
+int spell_regen(CHAR *ch, int type) {
+  if (!ch) return 0;
+
   int gain = 0;
 
-  for (af = ch->affected; af; af = af->next)
-  {
-    switch (type)
-    {
+  for (AFF *aff = ch->affected; aff; aff = aff->next) {
+    switch (type) {
       case MANA_REGEN:
-        if (af->location == APPLY_MANA_REGEN) gain += af->modifier;
+        if (aff->location == APPLY_MANA_REGEN) {
+          gain += aff->modifier;
+        }
         break;
 
       case HP_REGEN:
-        if (af->location == APPLY_HP_REGEN) gain += af->modifier;
+        if (aff->location == APPLY_HP_REGEN) {
+          gain += aff->modifier;
+        }
         break;
     }
   }
 
-  if (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (((duration_of_spell(ch, SKILL_MEDITATE) > 9) && CHAOSMODE) || duration_of_spell(ch, SKILL_MEDITATE) > 29))
-  {
-    gain += 60;
-  }
-
-  if (affected_by_spell(ch, SPELL_LUCK))
-  {
+  if (affected_by_spell(ch, SPELL_LUCK)) {
     switch (type) {
-    case MANA_REGEN:
-      gain += 15;
-      break;
-    case HP_REGEN:
-      gain += 75;
-      break;
+      case MANA_REGEN:
+        gain += 15;
+        break;
+
+      case HP_REGEN:
+        gain += 75;
+        break;
     }
   }
 
@@ -222,10 +216,14 @@ int spell_regen(CHAR *ch, int type)
 }
 
 int point_update_mana(CHAR *ch) {
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return 0;
+
   return mana_gain(ch);
 }
 
 int point_update_hit(CHAR *ch) {
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return 0;
+
   if (IS_AFFECTED(ch, AFF_POISON))   {
     damage(ch, ch, 2, SPELL_POISON, DAM_POISON);
 
@@ -245,33 +243,36 @@ int point_update_hit(CHAR *ch) {
 }
 
 int point_update_move(CHAR *ch) {
-  if (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_ARCTIC) {
-    if (GET_MOVE(ch) <= 0) {
-      send_to_char("The bitter cold chills you to the bone.\n\r", ch);
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return 0;
 
-      if (GET_HIT(ch) > 4) {
-        damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+  switch (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch))) {
+    case SECT_ARCTIC:
+      if (GET_MOVE(ch) <= 0) {
+        send_to_char("The bitter cold chills you to the bone.\n\r", ch);
+
+        if (GET_HIT(ch) > 4) {
+          damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+        }
       }
-    }
-  }
-  else if (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_DESERT) {
-    if (GET_COND(ch, THIRST) >= 0) {
-      send_to_char("You suffer dehydration from the heat.\n\r", ch);
+      break;
 
-      if (GET_HIT(ch) > 4) {
-        damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    case SECT_DESERT:
+      if (GET_COND(ch, THIRST) >= 0) {
+        send_to_char("You suffer dehydration from the heat.\n\r", ch);
+
+        if (GET_HIT(ch) > 4) {
+          damage(ch, ch, number(1, 4), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+        }
       }
-    }
 
-    gain_condition(ch, THIRST, -2);
+      gain_condition(ch, THIRST, -2);
+      break;
   }
 
   return move_gain(ch);
 }
 
 int mana_gain(CHAR *ch) {
-  const int optimal_age = 45;
-
   if (!ch) return 0;
 
   int gain = 0;
@@ -279,15 +280,13 @@ int mana_gain(CHAR *ch) {
   if (IS_NPC(ch)) {
     gain = GET_LEVEL(ch);
 
-    gain += equipment_regen(ch, MANA_REGEN);
-
-    gain += spell_regen(ch, MANA_REGEN);
-
     if (IS_AFFECTED(ch, AFF_POISON)) {
       gain /= 16;
     }
 
-    return gain;
+    gain += equipment_regen(ch, MANA_REGEN);
+
+    gain += spell_regen(ch, MANA_REGEN);
   }
   else {
     if (IS_NPC(ch)) return GET_LEVEL(ch);
@@ -302,44 +301,6 @@ int mana_gain(CHAR *ch) {
       }
       else {
         return -5;
-      }
-    }
-
-    /* Dark Pact - Bypasses hunger-based regen. */
-    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
-        gain = 1 - GET_MANA(ch);
-
-        int loss = 0;
-
-        if (age(ch).year > 49)
-          loss = -5;
-        else if (age(ch).year > 45)
-          loss = -4;
-        else if (age(ch).year > 41)
-          loss = -3;
-        else if (age(ch).year > 37)
-          loss = -2;
-        else if (age(ch).year > 33)
-          loss = -1;
-        else
-          loss = 0;
-
-        gain = MIN(MAX(gain, loss), 0);
-
-        /* Constitution modifier. */
-        gain += con_app[GET_CON(ch)].regen;
-
-        gain += equipment_regen(ch, HP_REGEN);
-
-        gain += spell_regen(ch, HP_REGEN);
-
-        /* Inner Peace */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-          gain += 10;
-        }
-
-        return gain;
       }
     }
 
@@ -474,8 +435,26 @@ int mana_gain(CHAR *ch) {
       }
     }
 
-    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+    /* Meditate */
+    if (affected_by_spell(ch, SKILL_MEDITATE) && (duration_of_spell(ch, SKILL_MEDITATE) >= 10)) {
       gain *= 2;
+    }
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 15))) {
+      gain *= 2;
+    }
+
+    /* Druid SC3: Wall of Thorns - Increases regeneration by 1/3rd when sitting, resting, or sleeping. */
+    if (!GET_OPPONENT(ch) && (GET_POS(ch) <= POSITION_SITTING) && (GET_POS(ch) >= POSITION_SLEEPING) && get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch))) {
+      gain *= 1.3333;
+    }
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      /* Hunger reduces positive gain to 1/10th normal. */
+      if ((gain > 0) && ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0))) {
+        gain /= 10;
+      }
     }
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -545,29 +524,33 @@ int mana_gain(CHAR *ch) {
 }
 
 int hit_gain(CHAR *ch) {
+  if (!ch) return 0;
+
   int gain = 0;
 
   /* NPCs */
   if (IS_NPC(ch)) {
+    gain = GET_LEVEL(ch);
+
     switch (GET_POS(ch)) {
       case POSITION_STANDING:
       case POSITION_FLYING:
       case POSITION_RIDING:
       case POSITION_SWIMMING:
-        gain = MIN(GET_LEVEL(ch) * 4, 120);
+        gain = MIN(gain * 4, 120);
         break;
 
       case POSITION_RESTING:
       case POSITION_SITTING:
-        gain = MIN(GET_LEVEL(ch) * 5, 150);
+        gain = MIN(gain * 5, 150);
         break;
 
       case POSITION_SLEEPING:
-        gain = MIN(GET_LEVEL(ch) * 6, 180);
+        gain = MIN(gain * 6, 180);
         break;
 
       default:
-        gain = MIN(GET_LEVEL(ch), 30);
+        gain = MIN(gain, 30);
         break;
     }
 
@@ -578,11 +561,8 @@ int hit_gain(CHAR *ch) {
     gain += equipment_regen(ch, HP_REGEN);
 
     gain += spell_regen(ch, HP_REGEN);
-
   }
   else {
-    if (IS_NPC(ch)) return GET_LEVEL(ch);
-
     if (!GET_DESCRIPTOR(ch)) return 0;
 
     if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
@@ -593,45 +573,6 @@ int hit_gain(CHAR *ch) {
       }
       else {
         return -5;
-      }
-    }
-
-    /* Dark Pact - Bypasses hunger-based regen. */
-    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-      /* Hunger-based regen. */
-      if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
-        gain = 1 - GET_HIT(ch);
-
-        int loss = 0;
-
-        if (age(ch).year > 49)
-          loss = -5;
-        else if (age(ch).year > 45)
-          loss = -4;
-        else if (age(ch).year > 41)
-          loss = -3;
-        else if (age(ch).year > 37)
-          loss = -2;
-        else if (age(ch).year > 33)
-          loss = -1;
-        else
-          loss = 0;
-
-        gain = MIN(MAX(gain, loss), 0);
-
-        gain += equipment_regen(ch, HP_REGEN);
-
-        gain += spell_regen(ch, HP_REGEN);
-
-        /* Constitution modifier. */
-        gain += con_app[GET_CON(ch)].regen;
-
-        /* Awareness */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
-          gain += 2 * GET_LEVEL(ch);
-        }
-
-        return gain;
       }
     }
 
@@ -749,8 +690,50 @@ int hit_gain(CHAR *ch) {
       gain *= 1.25;
     }
 
-    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
+    if (gain > 0) {
+      /* Calculate regeneration from ranks. */
+      if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
+          gain *= rank_regen_non_caster[i];
+        }
+      }
+      else {
+        for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
+          gain *= rank_regen_caster[i];
+        }
+      }
+
+      // Prestige Perk 8
+      if (GET_PRESTIGE_PERK(ch) >= 8) {
+        gain *= 1.05;
+      }
+    }
+
+    /* Meditate */
+    if (affected_by_spell(ch, SKILL_MEDITATE) && (duration_of_spell(ch, SKILL_MEDITATE) >= 10)) {
       gain *= 2;
+    }
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 15))) {
+      gain *= 2;
+    }
+
+    /* Druid SC3: Wall of Thorns - Increases regeneration by 1/3rd when sitting, resting, or sleeping. */
+    if (!GET_OPPONENT(ch) && (GET_POS(ch) <= POSITION_SITTING) && (GET_POS(ch) >= POSITION_SLEEPING) && get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch))) {
+      gain *= 1.3333;
+    }
+
+    /* Druid SC1: Degenerate - 1/4 hit point regen for 5 ticks after using Degenerate. */
+    if ((ench_enchanted_by(ch, 0, ENCHANT_DEGENERATE) && (ench_duration(ch, 0, ENCHANT_DEGENERATE) >= 15))) {
+      gain /= 4;
+    }
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      /* Hunger reduces positive gain to 1/10th normal. */
+      if ((gain > 0) && ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0))) {
+        gain /= 10;
+      }
     }
 
     if (IS_AFFECTED(ch, AFF_POISON)) {
@@ -761,6 +744,79 @@ int hit_gain(CHAR *ch) {
       else {
         gain /= 8;
       }
+    }
+
+    /* Constitution modifier. */
+    gain += 4 * con_app[GET_CON(ch)].regen;
+
+    gain += equipment_regen(ch, HP_REGEN);
+
+    gain += spell_regen(ch, HP_REGEN);
+
+    /* Awareness */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
+      gain += 2 * GET_LEVEL(ch);
+    }
+  }
+
+  return gain;
+}
+
+int move_gain(CHAR *ch) {
+  if (!ch) return 0;
+
+  int gain = 0;
+
+  if (IS_NPC(ch)) {
+    gain = GET_LEVEL(ch);
+  }
+  else {
+    if (!GET_DESCRIPTOR(ch)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
+      if (GET_LEVEL(ch) <= 15) {
+        return 0;
+      }
+      else {
+        return -5;
+      }
+    }
+
+    int year = age(ch).year;
+
+    /* Dark Pact - Increases age-based regen. */
+    if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      year = optimal_age;
+    }
+
+    /* Age-based regen. */
+    gain = graf(year, 18, 21, 24, 27, 24, 21, 18);
+
+    /* Dark Pact - Increases base class regen. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
+      if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
+        gain += 10;
+      }
+      else {
+        gain += 5;
+      }
+    }
+
+    /* Position-based modifier. */
+    switch (GET_POS(ch)) {
+      case POSITION_SLEEPING:
+        gain += gain / 2;
+        break;
+
+      case POSITION_RESTING:
+        gain += gain / 4;
+        break;
+
+      case POSITION_SITTING:
+        gain += gain / 8;
+        break;
     }
 
     if (gain > 0) {
@@ -782,129 +838,44 @@ int hit_gain(CHAR *ch) {
       }
     }
 
+    /* Meditate */
+    if (affected_by_spell(ch, SKILL_MEDITATE) && (duration_of_spell(ch, SKILL_MEDITATE) >= 10)) {
+      gain *= 2;
+    }
+
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 15))) {
+      gain *= 2;
+    }
+
+    /* Druid SC3: Wall of Thorns - Increases regeneration by 1/3rd when sitting, resting, or sleeping. */
+    if (!GET_OPPONENT(ch) && (GET_POS(ch) <= POSITION_SITTING) && (GET_POS(ch) >= POSITION_SLEEPING) && get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch))) {
+      gain *= 1.3333;
+    }
+
+    /* Dark Pact - Bypasses hunger-based regen. */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
+      /* Hunger reduces positive gain to 1/10th normal. */
+      if ((gain > 0) && ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0))) {
+        gain /= 10;
+
+        /* Gain a small amount of movement points, even if hungry, as long as the pre-hunger gain was positive. */
+        gain = MAX(gain, 5);
+      }
+    }
+
+    if (IS_AFFECTED(ch, AFF_POISON)) {
+      /* Combat Zen */
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
+        gain /= 2;
+      }
+      else {
+        gain /= 4;
+      }
+    }
+
     /* Constitution modifier. */
-    gain += 4 * con_app[GET_CON(ch)].regen;
-
-    gain += equipment_regen(ch, HP_REGEN);
-
-    gain += spell_regen(ch, HP_REGEN);
-
-    /* Awareness */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 1)) {
-      gain += 2 * GET_LEVEL(ch);
-    }
+    gain += con_app[GET_CON(ch)].regen;
   }
-
-  return gain;
-}
-
-int move_gain(CHAR *ch) {
-  int gain = 0;
-
-  if (!ch) return 0;
-
-  if (IS_NPC(ch)) return GET_LEVEL(ch);
-
-  if (!GET_DESCRIPTOR(ch)) return 0;
-
-  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_REGEN)) return 0;
-
-  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), REV_REGEN)) {
-    if (GET_LEVEL(ch) <= 15) {
-      return 0;
-    }
-    else {
-      return -5;
-    }
-  }
-
-  /* Dark Pact - Bypasses hunger-based regen. */
-  if (!(IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch))) {
-    /* Hunger-based regen. */
-    if ((GET_COND(ch, FULL) == 0 || GET_COND(ch, THIRST) == 0)) {
-      if ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_ARCTIC) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_DESERT)) {
-        if (GET_LEVEL(ch) <= 15) {
-          return 0;
-        }
-        else {
-          return GET_CON(ch) - 20;
-        }
-      }
-
-      return gain;
-    }
-  }
-
-  int year = age(ch).year;
-
-  /* Dark Pact - Increases age-based regen. */
-  if (check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    year = optimal_age;
-  }
-
-  /* Age-based regen. */
-  gain = graf(year, 18, 21, 24, 27, 24, 21, 18);
-
-  /* Dark Pact - Increases base class regen. */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
-    if (IS_NIGHT || IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) {
-      gain += 10;
-    }
-    else {
-      gain += 5;
-    }
-  }
-
-  /* Position-based modifier. */
-  switch (GET_POS(ch)) {
-    case POSITION_SLEEPING:
-      gain += gain / 2;
-      break;
-
-    case POSITION_RESTING:
-      gain += gain / 4;
-      break;
-
-    case POSITION_SITTING:
-      gain += gain / 8;
-      break;
-  }
-
-  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CLUB) || ((CHAR_VIRTUAL_ROOM(ch) == CLUB_GRUNTING_BOAR) && (GET_LEVEL(ch) <= 20))) {
-    gain *= 2;
-  }
-
-  if (IS_AFFECTED(ch, AFF_POISON)) {
-    /* Combat Zen */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
-      gain /= 2;
-    }
-    else {
-      gain /= 4;
-    }
-  }
-
-  if (gain > 0) {
-    /* Calculate regeneration from ranks. */
-    if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_non_caster)); i++) {
-        gain *= rank_regen_non_caster[i];
-      }
-    }
-    else {
-      for (int i = 0; (i < get_rank(ch)) && (i < NUMELEMS(rank_regen_caster)); i++) {
-        gain *= rank_regen_caster[i];
-      }
-    }
-
-    // Prestige Perk 8
-    if (GET_PRESTIGE_PERK(ch) >= 8) {
-      gain *= 1.05;
-    }
-  }
-
-  /* Constitution modifier. */
-  gain += con_app[GET_CON(ch)].regen;
 
   return gain;
 }

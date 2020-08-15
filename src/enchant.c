@@ -58,6 +58,23 @@ int red_death(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int lizard_bite(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int greasy_palms(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 
+#define ENCHANTO(_name, _type, _duration, _interval, _modifier, _location, _bitvector, _bitvector2, _func) { \
+  if (_type < TOTAL_ENCHANTMENTS) { \
+    enchantments[_type].name       = strdup(_name); \
+    enchantments[_type].type       = _type;         \
+    enchantments[_type].duration   = _duration;     \
+    enchantments[_type].interval   = _interval;     \
+    enchantments[_type].modifier   = _modifier;     \
+    enchantments[_type].location   = _location;     \
+    enchantments[_type].bitvector  = _bitvector;    \
+    enchantments[_type].bitvector2 = _bitvector2;   \
+    enchantments[_type].func       = _func;         \
+  } \
+  else { \
+    log_f("WARNING: Enchantment %s out of range (%d).", _name, _type); \
+  } \
+}
+
 
 #ifdef TEST_SITE
 /* Digsite Enchantments */
@@ -83,22 +100,6 @@ int imm_grace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, in
 }
 
 
-int cold_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-{
-  char buf[MIL];
-
-  if (cmd != CMD_CAST && cmd != CMD_RECITE) return FALSE;
-
-  if (!number(0, 5))
-  {
-    snprintf(buf, sizeof(buf), "cough");
-    command_interpreter(enchanted_ch, buf);
-  }
-
-  return FALSE;
-}
-
-
 int regeneration_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char*arg)
 {
   OBJ *flower = NULL;
@@ -118,8 +119,7 @@ int regeneration_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room,
 
     heal = 14 - abs(14 - time_info.hours);
 
-    //GET_HIT(enchanted_ch) = MIN(GET_HIT(enchanted_ch) + heal, hit_limit(enchanted_ch));
-    magic_heal(enchanted_ch, SPELL_REGENERATION, heal, FALSE);
+    magic_heal(0, enchanted_ch, SPELL_REGENERATION, heal, FALSE);
 
     update_pos(enchanted_ch);
 
@@ -1549,6 +1549,28 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
   return FALSE;
 }
 
+int degenerate_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg) {
+  if (cmd == MSG_ROUND) {
+    if (!ench || !ch) return FALSE;
+
+    if ((ench->duration >= 15) && (GET_HIT(ch) > GET_MAX_HIT(ch) / 4)) {
+      send_to_char("Your health suffers from your degenerated condition.\n\r", ch);
+
+      GET_HIT(ch) = MAX(GET_MAX_HIT(ch) / 4, 1);
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("You feel strong enough to sacrifice your health for mana.\n\r", ch);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 
 void assign_enchantments(void) {
   log_s("Defining Enchantments");
@@ -1559,9 +1581,10 @@ void assign_enchantments(void) {
   ENCHANTO("Remort"                         , ENCHANT_REMORTV2    ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, remortv2_enchantment);
   ENCHANTO("Immortalis' Grace"              , ENCHANT_IMM_GRACE   ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, imm_grace_enchantment);
 
-  ENCHANTO("Common Cold"                    , ENCHANT_COLD        ,  20,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, cold_enchantment);
-  ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,   6,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
-  ENCHANTO("Regeneration"                   , ENCHANT_REGENERATION,  24,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, regeneration_enchantment);
+  ENCHANTO("Degenerate"                     , ENCHANT_DEGENERATE  ,  19,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, degenerate_enchantment);
+
+  ENCHANTO("Fire Breath"                    , ENCHANT_FIREBREATH  ,   5,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, firebreath_enchantment);
+  ENCHANTO("Regeneration"                   , ENCHANT_REGENERATION,  23,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, regeneration_enchantment);
 
   ENCHANTO("The title of Apprentice"        , ENCHANT_APPRENTICE  ,  -1,   0,   0, APPLY_NONE            , AFF_DETECT_INVISIBLE, AFF_NONE, apprentice_enchantment);
   ENCHANTO("The title of Warlock"           , ENCHANT_WARLOCK     ,  -1,   0,   1, APPLY_HITROLL         , AFF_DETECT_MAGIC    , AFF_NONE, warlock_enchantment);
@@ -1645,14 +1668,18 @@ void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find) {
   ENCH *ench = NULL;
 
   if (must_find) {
-    ench = ench_get_from_global(enchantment->name, enchantment->type);
+    ench = ench_dup(ench_get_from_global(enchantment->name, enchantment->type));
+
+    if (ench) {
+      ench->duration = enchantment->duration;
+
+      ench_to_char(victim, ench, TRUE);
+
+      DESTROY(ench);
+    }
   }
   else {
-    ench = enchantment;
-  }
-
-  if (ench) {
-    ench_to_char(victim, ench, TRUE);
+    ench_to_char(victim, enchantment, TRUE);
   }
 }
 

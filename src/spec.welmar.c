@@ -243,7 +243,7 @@
    case 3:
      act("You raise your hand in a dramatic gesture.", 1, ch, 0, 0, TO_CHAR);
      act("$n raises $s hand in a dramatic gesture.", 1, ch, 0, 0, TO_ROOM);
-     cast_colour_spray (GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, tch, 0) ;
+     cast_color_spray (GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, tch, 0) ;
      break;
    case 4:
    case 5:

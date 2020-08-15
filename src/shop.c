@@ -563,7 +563,9 @@ void read_shop(FILE *shop_f)
 
       shop_nr = allocate_shop(shop->keeper);
 
-      shop_index[shop_nr] = *shop;
+      if (shop_nr >= 0) {
+        shop_index[shop_nr] = *shop;
+      }
     }
   }
 }

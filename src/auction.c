@@ -998,3 +998,17 @@ void auction_recover(CHAR *auctioneer, CHAR *ch, char *arg)
   save_auction();
   save_char(ch, NOWHERE);
 }
+
+bool auction_obj_is_in_auction(OBJ *obj) {
+  if (!obj) return FALSE;
+
+  bool obj_is_in_auction = FALSE;
+
+  for (int i = 0; !obj_is_in_auction && (i < NUMELEMS(A_Board.auc)); i++) {
+    if (A_Board.auc[i].obj == obj) {
+      obj_is_in_auction = TRUE;
+    }
+  }
+
+  return obj_is_in_auction;
+}
