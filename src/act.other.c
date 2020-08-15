@@ -1445,7 +1445,7 @@ void do_recite(struct char_data *ch, char *argument, int cmd) {
 
   for (int i = 1; i < MAX_OBJ_VALUE; i++) {
     if ((OBJ_VALUE(scroll, i) > 0) && (OBJ_VALUE(scroll, i) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(scroll, i)].spell_pointer) {
-      (*spell_info[OBJ_VALUE(scroll, i)].spell_pointer)((byte)OBJ_VALUE(scroll, 0), ch, "", SPELL_TYPE_POTION, victim, tar_obj);
+      (*spell_info[OBJ_VALUE(scroll, i)].spell_pointer)((byte)OBJ_VALUE(scroll, 0), ch, "", SPELL_TYPE_SCROLL, victim, tar_obj);
     }
   }
 
