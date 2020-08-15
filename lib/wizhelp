@@ -654,7 +654,8 @@ WF
 
  This is just like typing a social action except the action occurs on the
  wizard social channel.  Only IMM+ see the action.
-#WEMOTE
+#
+WEMOTE
 
  Level: IMM+
 
@@ -1117,32 +1118,43 @@ See also: FLAGS VALUES DRINKTYPES
  ANTI_MERCENARY      524288
 
 #
-"VALUES"
+VALUES
 
- Type Flag      (4) Value 0     (5) Value 1     (6) Value 2     (7) Value 3
-------------------------------------------------------------------------------
- 1 LIGHT           colour          type            hours   
- 2 SCROLL          spell 1         spell 2         spell 3         spell 4 
- 3 WAND            spell           mana            charges         spell (for text)
- 4 STAFF           spell           mana
- 5 WEAPON          tohit           #          D    #               type
- 6 FIREWEAPON      license         # bullets       #         D     #
- 7 MISSILE         #         D     #
+Object Type  (4) Value 0  (5) Value 1  (6) Value 2  (7) Value 3
+-----------------------------------------------------------------
+ 1 LIGHT         color*       type*        hours
+ 2 SCROLL        spell 1      spell 2      spell 3      spell 4
+ 3 WAND          level        max          charges      spell
+ 4 STAFF         level        max          charges      spell
+ 5 WEAPON        wpn_extra    num_dice     size_dice    dmg_type
+ 6 FIREARM       license #    bullets      num_dice     size_dice
+ 7 MISSILE       num_dice     size_dice
  8 TREASURE
- 9 ARMOR           ac apply  
-10 POTION          spell 1         spell 2         spell 3         spell 4  
-11 WORN      
-12 OTHER     
-13 TRASH     
-14 TRAP            spell           hps  
-15 CONTAINER       max             lock                            corpse
-16 NOTE            touge
-17 DRINKCON        max             contains        poision         liquid
-18 KEY             key type
-19 FOOD            makes full      poisoned
-20 MONEY     
-21 PEN       
-22 BOAT      
-23 BULLET          license #
-24 MUSICAL   
-#~ 
+ 9 ARMOR         ac_apply
+10 POTION        spell 1      spell 2      spell 3      spell 4
+11 WORN
+12 OTHER
+13 TRASH
+14 TRAP          spell        damage
+15 CONTAINER     max          locked                    is_corpse
+16 NOTE          language*
+17 DRINKCON      max          contains     poisoned     liquid
+18 KEY           key type
+19 FOOD          fullness     poisoned
+20 MONEY         coins
+21 PEN
+22 BOAT
+23 BULLET        license #
+24 MUSICAL
+25 LOCKPICK
+26 2H_WEAPON     wpn_extra    num_dice     size_dice    dmg_type
+27 BOARD
+28 TICKET
+29 SC_TOKEN
+30 SKIN
+31 TROPHY
+32 RECIPE
+36 AQ_ORDER
+
+Note: * indicates a (currently) unused value.
+#~

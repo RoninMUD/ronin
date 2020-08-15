@@ -1,12 +1,12 @@
 #ifndef __ENCHANT_H__
 #define __ENCHANT_H__
 
-#define ENCHANT_COLD          1
+#define ENCHANT_DEGENERATE    1
 #define ENCHANT_FIREBREATH    2
 #define ENCHANT_REGENERATION  3
 #define ENCHANT_SQUIRE        4
 #define ENCHANT_FIRSTSWORD    5
-/* Was: ENCHANT_ALCOLYTE      6 */
+#define ENCHANT_UNUSED_6      6
 #define ENCHANT_APPRENTICE    7
 #define ENCHANT_TSUME         8
 #define ENCHANT_WANDERER      9
@@ -35,9 +35,6 @@
 #define ENCHANT_TAMER        32
 #define ENCHANT_POET         33
 #define ENCHANT_CONDUCTOR    34
-
-#define MAX_RANK              3
-
 #define ENCHANT_WRATH        35
 #define ENCHANT_ENVY         36
 #define ENCHANT_LUST         37
@@ -48,42 +45,31 @@
 #define ENCHANT_REDDEATH     42
 #define ENCHANT_GREASY       43
 #define ENCHANT_LIZARD       44
-
 #define ENCHANT_TOXICFUMES   45
-
 #define ENCHANT_FRIGHTFUL    46
-
 #define ENCHANT_LICH         47
-
 #define ENCHANT_REMORTV2     48
 #define ENCHANT_IMM_GRACE    49
 
+#define TOTAL_ENCHANTMENTS   50
+
 #define ENCH_MANTRA_HEAL     "ENCH_MANTRA_HEAL"
 #define ENCH_APPLY_DMG_PCT   "ENCH_APPLY_DMG_PCT"
+
+#define ENCH_NAME_DIVINE_HAMMER    "Divine Hammer"
+#define ENCH_NAME_JUDGEMENT_STRIKE "Judgement Strike"
+#define ENCH_NAME_ENTROPY          "Entropy"
+#define ENCH_NAME_DRAGONFIRE       "Dragonfire"
+#define ENCH_NAME_ELEMENTAL_FORM   "Shapeshift: Elemental Form"
+#define ENCH_NAME_DRAGON_FORM      "Shapeshift: Dragon Form"
+#define ENCH_NAME_MAIM             "Maim"
+#define ENCH_NAME_TREMOR           "Tremor"
+#define ENCH_NAME_INCENDIARY_CLOUD "Incendiary Cloud"
 
 #define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (MSG_TICK)
 #define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (MSG_MOBACT)
 #define ENCH_INTERVAL_ROUND  2 // Decrements every 3 seconds  (MSG_ROUND)
 #define ENCH_INTERVAL_USER   3 // User-defined interval; must be handled by spec.
-
-#define TOTAL_ENCHANTMENTS   50
-
-#define ENCHANTO(_name, _type, _duration, _interval, _modifier, _location, _bitvector, _bitvector2, _func) { \
-  if (_type < TOTAL_ENCHANTMENTS) { \
-    enchantments[_type].name       = strdup(_name); \
-    enchantments[_type].type       = _type;         \
-    enchantments[_type].duration   = _duration;     \
-    enchantments[_type].interval   = _interval;     \
-    enchantments[_type].modifier   = _modifier;     \
-    enchantments[_type].location   = _location;     \
-    enchantments[_type].bitvector  = _bitvector;    \
-    enchantments[_type].bitvector2 = _bitvector2;   \
-    enchantments[_type].func       = _func;         \
-  } \
-  else { \
-    log_f("WARNING: Enchantment %s out of range (%d).", _name, _type); \
-  } \
-}
 
 void assign_enchantments(void);
 
@@ -93,7 +79,7 @@ int enchanted_by(CHAR *victim, const char *name);
 int enchanted_by_type(CHAR *victim, int type);
 void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find);
 void enchantment_remove(CHAR *victim, ENCH *enchantment, int to_log);
-void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg));
+void enchantment_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bitvector2, int (*func)(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *arg));
 
 int get_rank(CHAR *ch);
 char *get_rank_name(CHAR *ch);

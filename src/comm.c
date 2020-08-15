@@ -1015,24 +1015,18 @@ void heartbeat(int pulse) {
   /* 2 hours */
   if ((pulse % (120 * PULSE_TICK) == 0) && !GAMEHALT) {
 #ifndef TEST_SITE
-    if (!CHAOSMODE) {
-      log_s("Re-distributing subclass tokens.");
+    log_s("SUBLOG: Re-distributing subclass tokens.");
 
-      int num_tokens = 0;
+    /* Extract existing tokens. */
+    for (OBJ *token = object_list, *next_token; token; token = next_token) {
+      next_token = token->next;
 
-      /* Extract existing tokens. */
-      for (OBJ *token = object_list, *next_token; token; token = next_token) {
-        next_token = token->next;
-
-        if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
-          extract_obj(token);
-
-          num_tokens++;
-        }
+      if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
+        extract_obj(token);
       }
-
-      distribute_tokens(num_tokens);
     }
+
+    distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT, FALSE);
 #endif
   }
 }

@@ -4561,7 +4561,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
 
     if (*(tmp_string+qend) != '\'') return FALSE;
 
-    spl = old_search_block(tmp_string, 1, qend-1,spells, 0);
+    spl = old_search_block(tmp_string, 1, qend-1,(const char * const * const)spells, 0);
 
     switch(spl) {
 
@@ -5233,7 +5233,7 @@ int ouchie_flakes(int room, CHAR *ch, int cmd, char *arg) {
 
     if (*(tmp_string+qend) != '\'') return FALSE;
 
-    spl = old_search_block(tmp_string, 1, qend-1,spells, 0);
+    spl = old_search_block(tmp_string, 1, qend-1,(const char * const * const)spells, 0);
 
     switch(spl) {
 

@@ -26,22 +26,34 @@
 #include "mob.spells.h"
 #include "subclass.h"
 #include "enchant.h"
+#include "aff_ench.h"
 
 void raw_kill(struct char_data *ch);
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
 
 
-/* Note: Do not use this function on victims; it is designed for skill users only. */
-void skill_wait(CHAR *ch, int skill, int wait) {
-  if (IS_IMPLEMENTOR(ch) || (CHAR_REAL_ROOM(ch) == NOWHERE) || !wait) return;
+void skill_wait_user(CHAR *ch, int skill, int wait) {
+  if (!ch || IS_IMPLEMENTOR(ch) || (CHAR_REAL_ROOM(ch) == NOWHERE) || !wait) return;
 
   /* Quick Recovery */
-  if ((wait > 1) && (IS_MORTAL(ch) && check_subclass(ch, SC_ROGUE, 5)) && chance(number(50, 75))) {
-    wait -= 1;
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_ROGUE, 5) && chance(number(50, 75))) {
+    wait = MAX(wait - 1, 1);
   }
 
   WAIT_STATE(ch, (PULSE_VIOLENCE * wait));
+}
+
+
+void skill_wait_victim(CHAR *victim, int skill, int wait) {
+  if (!victim || IS_IMPLEMENTOR(victim) || (CHAR_REAL_ROOM(victim) == NOWHERE) || !wait) return;
+
+  /* Druid SC5: Shapeshift: Elemental Form */
+  if (ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+    wait = 0;
+  }
+
+  WAIT_STATE(victim, (PULSE_VIOLENCE * wait));
 }
 
 
@@ -369,7 +381,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
       set_wait = 2;
     }
 
-    skill_wait(ch, SKILL_SPIN_KICK, set_wait);
+    skill_wait_user(ch, SKILL_SPIN_KICK, set_wait);
 
     return;
   }
@@ -406,7 +418,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
     set_wait = 2;
   }
 
-  skill_wait(ch, SKILL_SPIN_KICK, set_wait);
+  skill_wait_user(ch, SKILL_SPIN_KICK, set_wait);
 }
 
 
@@ -505,7 +517,7 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
   if ((AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_BACKSTAB))) || IS_IMMUNE(victim, IMMUNE_BACKSTAB)) {
     damage(ch, victim, 0, SKILL_BACKSTAB, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_BACKSTAB, 2);
+    skill_wait_user(ch, SKILL_BACKSTAB, 2);
 
     return;
   }
@@ -529,11 +541,11 @@ void do_backstab(CHAR *ch, char *argument, int cmd) {
 
   /* Close Combat */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4) && chance(50 + GET_DEX_APP(ch))) {
-    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
-    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
   }
 
-  skill_wait(ch, SKILL_BACKSTAB, 3);
+  skill_wait_user(ch, SKILL_BACKSTAB, 3);
 }
 
 
@@ -611,7 +623,7 @@ void do_assassinate(CHAR *ch, char *argument, int cmd) {
   if (check > GET_LEARNED(ch, SKILL_ASSASSINATE)) {
     send_to_char("You fail your assassination attempt.\n\r", ch);
 
-    skill_wait(ch, SKILL_ASSASSINATE, 2);
+    skill_wait_user(ch, SKILL_ASSASSINATE, 2);
 
     return;
   }
@@ -632,6 +644,7 @@ void do_ambush(struct char_data *ch, char *arg, int cmd) {
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_NOMAD)) {
     send_to_char("You don't know this skill.\n\r", ch);
+
     return;
   }
 
@@ -690,7 +703,7 @@ void do_ambush(struct char_data *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_AMBUSH, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_AMBUSH, 2);
+    skill_wait_user(ch, SKILL_AMBUSH, 2);
 
     return;
   }
@@ -699,7 +712,7 @@ void do_ambush(struct char_data *ch, char *arg, int cmd) {
 
   hit(ch, victim, SKILL_AMBUSH);
 
-  skill_wait(ch, SKILL_AMBUSH, 3);
+  skill_wait_user(ch, SKILL_AMBUSH, 3);
 }
 
 
@@ -769,7 +782,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_ASSAULT, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_ASSAULT, 3);
+    skill_wait_user(ch, SKILL_ASSAULT, 3);
 
     return;
   }
@@ -778,7 +791,7 @@ void do_assault(CHAR *ch, char *arg, int cmd) {
 
   hit(ch, victim, SKILL_ASSAULT);
 
-  skill_wait(ch, SKILL_ASSAULT, 3);
+  skill_wait_user(ch, SKILL_ASSAULT, 3);
 }
 
 
@@ -869,7 +882,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
     damage(ch, victim, 0, SKILL_CIRCLE, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_CIRCLE, 2);
+    skill_wait_user(ch, SKILL_CIRCLE, 2);
 
     return;
   }
@@ -904,11 +917,11 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   /* Close Combat */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4) && chance(50 + GET_DEX_APP(ch))) {
-    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_HITROLL, 0, 0, 0);
-    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, 3, APPLY_DAMROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Hitroll (Close Combat)", 0, 3, 0, 3, APPLY_HITROLL, 0, 0, 0);
+    enchantment_apply(ch, FALSE, "+3 Damroll (Close Combat)", 0, 3, 0, 3, APPLY_DAMROLL, 0, 0, 0);
   }
 
-  skill_wait(ch, SKILL_CIRCLE, 3);
+  skill_wait_user(ch, SKILL_CIRCLE, 3);
 }
 
 
@@ -981,227 +994,187 @@ void do_order(struct char_data *ch, char *argument, int cmd) {
 }
 
 
-#define WALL_THORNS 34
-void do_flee(struct char_data *ch, char *argument, int cmd) {
-  int i, attempt, loose, die, diff;
-  struct char_data *victim = NULL, *vict, *vict_n;
-  int org_room;
-  bool rider, mount;
-  OBJ *wall = 0;
+void lose_exp_for_fleeing(CHAR *ch) {
+  if (!ch || !IS_MORTAL(ch) || !GET_OPPONENT(ch) || !IS_NPC(GET_OPPONENT(ch)) || ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) || (GET_LEVEL(ch) <= 15)) return;
 
-  void gain_exp(struct char_data *ch, int gain);
-  int special(struct char_data *ch, int cmd, char *arg);
+  int exp_to_lose = 0;
 
-  rider = FALSE;
-  mount = FALSE;
-
-  if (IS_AFFECTED(ch, AFF_PARALYSIS) || (IS_AFFECTED(ch, AFF_HOLD) && chance(25))) {
-    act("You try to flee, but are paralyzed and can't move!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to flee, but seems to be unable to move.", TRUE, ch, 0, 0, TO_ROOM);
-
-    return;
+  if (GET_LEVEL(ch) < GET_LEVEL(GET_OPPONENT(ch))) {
+    /* Lose 1/10th of the opponent's total experience value. */
+    exp_to_lose = GET_EXP(GET_OPPONENT(ch)) / 10;
+  }
+  else {
+    switch (lround((GET_LEVEL(ch) - GET_LEVEL(GET_OPPONENT(ch))) / 10)) {
+      case 0: /* 0-4 levels below, lose 1/5 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 50);
+        break;
+      case 1: /* 5-14 levels below, lose 1/10 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 100);
+        break;
+      case 2: /* 15-24 levels below, lose 1/50 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 500);
+        break;
+      case 3: /* 25-34 levels below, lose 1/100 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 1000);
+        break;
+      case 4: /* 35-44 levels below, lose 1/500 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 5000);
+        break;
+      case 5: /* 45+ levels below, lose 1/1000 normal */
+        exp_to_lose = (GET_EXP(GET_OPPONENT(ch)) / 10000);
+        break;
+    }
   }
 
-  if (enchanted_by(ch, "Tremor") && chance(95)) {
-    act("You try to flee, but your tremoring causes you to stumble and stagger!", FALSE, ch, 0, 0, TO_CHAR);
-    act("$n tries to flee, but $s tremoring causes $m to stumble and stagger.", TRUE, ch, 0, 0, TO_ROOM);
+  if (exp_to_lose > 0) {
+    /* Limit the experience loss to 1/2 the character's total experience. */
+    exp_to_lose = MIN(GET_EXP(ch) / 2, exp_to_lose);
 
-    return;
+    /* Subtract the lost experience from the character. */
+    gain_exp(ch, -exp_to_lose);
+
+    /* Add the lost experience to the opponent. */
+    gain_exp(GET_OPPONENT(ch), exp_to_lose);
+  }
+}
+
+void do_flee(CHAR *ch, char *argument, int cmd) {
+  if (!ch) return;
+
+  /* Paralyze / Hold */
+  if (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)) {
+    /* Combat Zen */
+    if (!(IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3) && chance(50))) {
+      send_to_char("You try to flee, but are paralyzed and can't move!\n\r", ch);
+      act("$n tries to flee, but seems to be unable to move.", TRUE, ch, 0, 0, TO_ROOM);
+
+      return;
+    }
   }
 
+  /* Berserk / Frenzy */
   if (affected_by_spell(ch, SKILL_BERSERK) || affected_by_spell(ch, SKILL_FRENZY)) {
-    act("You try to flee, but fail!", FALSE, ch, 0, 0, TO_CHAR);
+    send_to_char("You try to flee, but fail!\n\r", ch);
     act("$n tries to flee, but fails.", TRUE, ch, 0, 0, TO_ROOM);
 
     return;
   }
 
-  if ((wall = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)))) {
-    act("A wall of thorns blocks your way.  Ouch!", FALSE, ch, 0, 0, TO_CHAR);
-
-    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+  /* Tremor */
+  if (enchanted_by(ch, ENCH_NAME_TREMOR) && chance(95)) {
+    send_to_char("You try to flee, but your tremoring causes you to stumble and stagger!\n\r", ch);
+    act("$n tries to flee, but $s tremoring causes $m to stumble and stagger.", TRUE, ch, 0, 0, TO_ROOM);
 
     return;
   }
 
-  if (!(ch->specials.fighting)) {
-    for (i = 0; i < 6; i++) {
-      attempt = number(0, 5);  /* Select a random direction */
-      if (CAN_GO(ch, attempt) &&
-          !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH)) {
-        act("$n panics, and attempts to flee.", TRUE, ch, 0, 0, TO_ROOM);
-        org_room = CHAR_REAL_ROOM(ch);
-        mount = FALSE;
-        rider = FALSE;
-        victim = NULL;
-        if (ch->specials.riding) {
-          if (org_room == CHAR_REAL_ROOM(ch->specials.riding)) {
-            victim = ch->specials.riding;
-            mount = TRUE;
-          }
-        }
-        if (ch->specials.rider) {
-          victim = ch->specials.rider;
-          rider = TRUE;
-        }
+  /* Make one attempt for each possible direction. */
+  for (int dir = NORTH; dir <= DOWN; dir++) {
+    /* Pick a random direction to try fleeing to. */
+    int flee_dir = number(NORTH, DOWN);
 
-        if ((die = do_simple_move(ch, attempt, 1)) == 1) {
-          /* The escape has succeded */
-          send_to_char("You flee head over heels.\n\r", ch);
-          if ((rider) || (mount)) {
-            char_from_room(victim);
-            char_to_room(victim, CHAR_REAL_ROOM(ch));
-            do_look(victim, "\0", 15);
-            if (victim->specials.fighting) {
-              if (victim->specials.fighting->specials.fighting == victim)
-                stop_fighting(victim->specials.fighting);
-              stop_fighting(victim);
-            }
-          }
-          if (!IS_NPC(ch) && IS_SET(world[org_room].room_flags, CHAOTIC)) {
-            drain_mana_hit_mv(ch, ch, GET_MANA(ch) / 10, GET_HIT(ch) / 10, GET_MOVE(ch) / 10, FALSE, FALSE, FALSE);
-            send_to_char("The gods of Chaos rip some of your lifeforce from you!\n\r", ch);
-          }
-          return;
-        }
-        else {
-          if (!die) act("$n tries to flee, but is too exhausted!",
-                        TRUE, ch, 0, 0, TO_ROOM);
-          return;
-        }
-      }
-    } /* for */
-    /* No exits was found */
-    send_to_char("PANIC! You couldn't escape!\n\r", ch);
-    return;
-  }
+    /* Record the destination room. */
+    int dest_room_rnum = EXIT(ch, flee_dir) ? EXIT(ch, flee_dir)->to_room_r : NOWHERE;
 
-  /* FIGHTING */
-  for (i = 0; i < 6; i++) {
-    attempt = number(0, 5);
-
-    if (CAN_GO(ch, attempt) &&
-        !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, DEATH) &&
-        (!IS_NPC(ch) || (IS_NPC(ch) && !IS_SET(world[EXIT(ch, attempt)->to_room_r].room_flags, NO_MOB)))) {
-      CHAR *blocker = GET_OPPONENT(ch);
-
-      if (!GET_RIDER(ch) && !IS_NPC(blocker) && IS_SET(GET_TOGGLES(blocker), TOG_BLOCK)) {
+    /* Check if the direction chosen is valid to flee to. */
+    if (CAN_GO(ch, flee_dir) && !IS_SET(ROOM_FLAGS(dest_room_rnum), DEATH) && (!IS_NPC(ch) || !IS_SET(ROOM_FLAGS(dest_room_rnum), NO_MOB))) {
+      /* Check for a blocking opponent. */
+      if (GET_OPPONENT(ch) && !IS_NPC(GET_OPPONENT(ch)) && IS_SET(GET_TOGGLES(GET_OPPONENT(ch)), TOG_BLOCK)) {
         int block_check = number(1, 111);
-        int block_skill = GET_LEARNED(blocker, SKILL_BLOCK) + GET_DEX_APP(blocker);
+        int block_skill = GET_LEARNED(GET_OPPONENT(ch), SKILL_BLOCK) + GET_DEX_APP(GET_OPPONENT(ch));
         int auto_block_chance = 0;
 
         /* Iron Fist */
-        if (IS_MORTAL(blocker) && check_subclass(blocker, SC_WARLORD, 3)) {
-          block_skill += (GET_LEVEL(blocker) / 5);
+        if (IS_MORTAL(GET_OPPONENT(ch)) && check_subclass(GET_OPPONENT(ch), SC_WARLORD, 3)) {
+          block_skill += (GET_LEVEL(GET_OPPONENT(ch)) / 5);
           auto_block_chance = 90;
         }
 
-        if ((block_check <= block_skill) || (auto_block_chance && chance(auto_block_chance))) {
-          act("You tried to flee, but $N blocked your way!", FALSE, ch, 0, blocker, TO_CHAR);
-          act("$n tried to flee, but you blocked $s way!", FALSE, ch, 0, blocker, TO_VICT);
-          act("$n tried to flee, but $N blocked $s way!", FALSE, ch, 0, blocker, TO_NOTVICT);
+        /* Did the block check succeed? */
+        if ((block_check <= block_skill) || chance(auto_block_chance)) {
+          act("You tried to flee, but $N blocked your way!", FALSE, ch, 0, GET_OPPONENT(ch), TO_CHAR);
+          act("$n tried to flee, but you blocked $s way!", FALSE, ch, 0, GET_OPPONENT(ch), TO_VICT);
+          act("$n tried to flee, but $N blocked $s way!", FALSE, ch, 0, GET_OPPONENT(ch), TO_NOTVICT);
 
           return;
         }
       }
 
-      act("$n panics and attempts to flee.", TRUE, ch, 0, 0, TO_ROOM);
+      /* Druid SC3: Wall of Thorns - Blocks all characters from fleeing. */
+      if (!IS_IMMORTAL(ch)) {
+        OBJ *thorns_here = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch));
+        OBJ *thorns_there = get_obj_room(WALL_THORNS, ROOM_VNUM(dest_room_rnum));
 
-      org_room = CHAR_REAL_ROOM(ch);
-      mount = FALSE;
-      rider = FALSE;
-      victim = NULL;
+        if (thorns_here || thorns_there) {
+          OBJ *thorns = thorns_here ? thorns_here : thorns_there;
 
-      if (ch->specials.riding) {
-        if (org_room == CHAR_REAL_ROOM(ch->specials.riding)) {
-          victim = ch->specials.riding;
-          mount = TRUE;
+          if (ROOM_SAFE(OBJ_IN_ROOM(thorns))) {
+            send_to_char("A wall of thorns blocks your way.\n\r", ch);
+          }
+          else {
+            send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
+
+            damage(ch, ch, MIN(GET_HIT(ch) - 1, OBJ_SPEC(thorns)), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+          }
+
+          return;
         }
       }
-      if (ch->specials.rider) {
-        victim = ch->specials.rider;
-        rider = TRUE;
+
+      /* Print an appropriate message to the room. */
+      act("$n panics, and attempts to flee.", TRUE, ch, 0, 0, TO_ROOM);
+
+      /* Record the character's original room. */
+      int original_room_rnum = CHAR_REAL_ROOM(ch);
+
+      /* Attempt to move. */
+      int result = move_char(ch, flee_dir, TRUE);
+
+      /* Couldn't get away. */
+      if (result == FALSE) {
+        act("$n tries to flee, but was unable to get away!", TRUE, ch, 0, 0, TO_ROOM);
       }
 
-      /* Liner Jan 03, adding flee exp loss tables to vary exp loss depending on level
-      differences in ch and ch->specials.fighting */
-
-      if ((die = do_simple_move(ch, attempt, 1)) == 1) {
-        /* The escape has succeeded */
-        if (ch->specials.fighting) { /* Another check */
-          if (GET_LEVEL(ch) > GET_LEVEL(ch->specials.fighting)) {
-            diff = (GET_LEVEL(ch) - GET_LEVEL(ch->specials.fighting));
-            diff = diff / 10; /* gives integer from 0-5 of difference in levels */
-            switch (diff) {
-              case 0: /* 1-4 levels below, lose 1/5 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 50);
-                break;
-              case 1: /* 5-14 levels below, lose 1/10 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 100);
-                break;
-              case 2: /* 15-24 levels below, lose 1/50 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 500);
-                break;
-              case 3: /* 25-34 levels below, lose 1/100 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 1000);
-                break;
-              case 4: /* 35-44 levels below, lose 1/500 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 5000);
-                break;
-              case 5: /* 45-49 levels below, lose 1/1000 normal */
-                loose = (GET_EXP(ch->specials.fighting) / 10000);
-                break;
-              default:
-                loose = 0;
-                break;
-            }
-          }
-          else loose = (GET_EXP(ch->specials.fighting) / 10);
-          if (IS_SET(world[org_room].room_flags, CHAOTIC)) loose = 0;
-          if (GET_LEVEL(ch) < 15) loose = 0;   /* flee below level 15, no exp loss */
-
-          if (!IS_NPC(ch) && IS_NPC(ch->specials.fighting)) {
-            if (loose > (GET_EXP(ch) / 2)) { /* if loss is greater than half of ch's xp */
-              loose = MIN(loose, GET_EXP(ch) / 2);
-              gain_exp(ch, -loose); /* loss is now no greater than half of ch's xp */
-            }
-            else {
-              gain_exp(ch, -loose); /* loss is less than half of ch's xp, no worries */
-            }
-            gain_exp(ch->specials.fighting, loose); /* exp is now retainable */
-          }
-
-          /* Insert later when using hunting system       */
-          /* ch->specials.fighting->specials.hunting = ch */
-
-          for (vict = world[org_room].people; vict; vict = vict_n) {
-            vict_n = vict->next_in_room;
-            if (vict->specials.fighting == ch)
-              stop_fighting(vict);
-          }
-          stop_fighting(ch);
-        }
+      /* Check for success. */
+      if (result == TRUE) {
         send_to_char("You flee head over heels.\n\r", ch);
 
-        if ((rider) || (mount)) {
-          char_from_room(victim);
-          char_to_room(victim, CHAR_REAL_ROOM(ch));
-          do_look(victim, "\0", 15);
-          if (victim->specials.fighting) {
-            if (victim->specials.fighting->specials.fighting == victim)
-              stop_fighting(victim->specials.fighting);
-            stop_fighting(victim);
+        /* Drain stats if the room the character fled from was chaotic. */
+        if (IS_MORTAL(ch) && IS_SET(ROOM_FLAGS(original_room_rnum), CHAOTIC)) {
+          drain_mana_hit_mv(ch, ch, GET_MANA(ch) / 10, GET_HIT(ch) / 10, GET_MOVE(ch) / 10, FALSE, FALSE, FALSE);
+
+          send_to_char("The gods of chaos rip some of your lifeforce away!\n\r", ch);
+        }
+
+        /* Determine experience loss for fleeing from combat. */
+        lose_exp_for_fleeing(ch);
+
+        if (GET_OPPONENT(ch) || (GET_MOUNT(ch) && GET_OPPONENT(GET_MOUNT(ch)))) {
+          /* If the characer is fighting, stop the combat. */
+          if (GET_OPPONENT(ch)) {
+            stop_fighting(ch);
+          }
+
+          /* If the character has a mount and it's fighting, stop the combat. */
+          if (GET_MOUNT(ch) && GET_OPPONENT(GET_MOUNT(ch))) {
+            stop_fighting(GET_MOUNT(ch));
+          }
+
+          /* Stop everyone in the room from fighting the character and/or their mount. */
+          for (CHAR *temp_ch = ROOM_PEOPLE(original_room_rnum), *next_ch; temp_ch; temp_ch = next_ch) {
+            next_ch = temp_ch->next_in_room;
+
+            if ((GET_OPPONENT(temp_ch) == ch) || (GET_OPPONENT(temp_ch) == GET_MOUNT(ch))) {
+              stop_fighting(temp_ch);
+            }
           }
         }
-        return;
       }
-      else {
-        if (!die) act("$n tries to flee, but is too exhausted!", TRUE, ch, 0, 0, TO_ROOM);
-        return;
-      }
+
+      return;
     }
-  } /* for */
-  /* No exits was found */
+  }
+
   send_to_char("PANIC! You couldn't escape!\n\r", ch);
 }
 
@@ -1210,7 +1183,6 @@ void do_flee(struct char_data *ch, char *argument, int cmd) {
 #define JEAROM_GRUUMSH 29374
 
 void do_pummel(CHAR *ch, char *arg, int cmd) {
-
   if (!ch || !GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) &&
@@ -1277,7 +1249,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_PUMMEL, 2);
+    skill_wait_user(ch, SKILL_PUMMEL, 2);
 
     return;
   }
@@ -1289,7 +1261,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_PUMMEL, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_PUMMEL, 2);
+    skill_wait_user(ch, SKILL_PUMMEL, 2);
 
     return;
   }
@@ -1328,7 +1300,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
   }
 
   /* Trusty Steed */
@@ -1350,7 +1322,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
     }
   }
 
-  skill_wait(ch, SKILL_PUMMEL, 2);
+  skill_wait_user(ch, SKILL_PUMMEL, 2);
 }
 
 
@@ -1419,10 +1391,20 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
 
   int check = number(1, 101) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
+  /* Templar SC2: Martial Training - Bonus to Bash skill check. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 2)) {
+    check -= GET_LEVEL(ch) / 5;
+  }
+
+  /* Blur */
+  if (affected_by_spell(ch, SPELL_BLUR)) {
+    check -= GET_LEVEL(ch) / 7;
+  }
+
   if ((check > GET_LEARNED(ch, SKILL_BASH)) || IS_IMMUNE2(victim, IMMUNE2_BASH) || !breakthrough(ch, victim, SKILL_BASH, BT_INVUL)) {
     damage(ch, victim, 0, SKILL_BASH, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_BASH, 2);
+    skill_wait_user(ch, SKILL_BASH, 2);
 
     return;
   }
@@ -1431,15 +1413,22 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
 
   int set_pos = stack_position(victim, POSITION_RESTING);
 
-  damage(ch, victim, calc_position_damage(GET_POS(victim), number(1, GET_LEVEL(ch))), SKILL_BASH, DAM_PHYSICAL);
+  int dam = number(1, GET_LEVEL(ch));
+
+  /* Templar SC3: Magic Armament - Increases Bash damage by 50%. */
+  if (affected_by_spell(ch, SPELL_MAGIC_ARMAMENT)) {
+    dam = lround(dam * 1.5);
+  }
+
+  damage(ch, victim, calc_position_damage(GET_POS(victim), dam), SKILL_BASH, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
   }
 
-  skill_wait(ch, SKILL_BASH, 2);
+  skill_wait_user(ch, SKILL_BASH, 2);
 }
 
 
@@ -1493,7 +1482,7 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
   if (check > GET_LEARNED(ch, SKILL_PUNCH) || IS_IMMUNE(victim, IMMUNE_PUNCH) || !breakthrough(ch, victim, SKILL_PUNCH, BT_INVUL)) {
     damage(ch, victim, 0, SKILL_PUNCH, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_PUNCH, 2);
+    skill_wait_user(ch, SKILL_PUNCH, 2);
 
     return;
   }
@@ -1520,10 +1509,10 @@ void do_punch(CHAR *ch, char *arg, int cmd) {
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
   }
 
-  skill_wait(ch, SKILL_PUNCH, 2);
+  skill_wait_user(ch, SKILL_PUNCH, 2);
 }
 
 
@@ -1739,7 +1728,7 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
   if ((check > GET_LEARNED(ch, SKILL_KICK)) || IS_IMMUNE(victim, IMMUNE_KICK) || !breakthrough(ch, victim, SKILL_KICK, BT_INVUL)) {
     damage(ch, victim, 0, SKILL_KICK, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_KICK, 2);
+    skill_wait_user(ch, SKILL_KICK, 2);
 
     return;
   }
@@ -1749,10 +1738,10 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
   damage(ch, victim, calc_position_damage(GET_POS(victim), (GET_LEVEL(ch) * 2)), SKILL_KICK, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(2, 3) : 3));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(2, 3) : 3);
   }
 
-  skill_wait(ch, SKILL_KICK, 2);
+  skill_wait_user(ch, SKILL_KICK, 2);
 }
 
 
@@ -1934,7 +1923,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_DISEMBOWEL, DAM_PHYSICAL);
 
-    skill_wait(ch, SKILL_DISEMBOWEL, 3);
+    skill_wait_user(ch, SKILL_DISEMBOWEL, 3);
 
     return;
   }
@@ -1948,7 +1937,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_DISEMBOWEL, DAM_PHYSICAL);
 
-    skill_wait(ch, SKILL_DISEMBOWEL, 3);
+    skill_wait_user(ch, SKILL_DISEMBOWEL, 3);
 
     return;
   }
@@ -1961,7 +1950,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
 
   damage(ch, victim, dam, SKILL_DISEMBOWEL, DAM_PHYSICAL);
 
-  skill_wait(ch, SKILL_DISEMBOWEL, 3);
+  skill_wait_user(ch, SKILL_DISEMBOWEL, 3);
 }
 
 
@@ -2025,7 +2014,7 @@ void do_backflip(CHAR *ch, char *arg, int cmd) {
     act("As $n springs, you knock $m down!", FALSE, ch, 0, victim, TO_VICT);
     act("$n tries to spring over $N, but is knocked hard on $s back.", FALSE, ch, 0, victim, TO_NOTVICT);
 
-    skill_wait(ch, SKILL_BACKFLIP, 2);
+    skill_wait_user(ch, SKILL_BACKFLIP, 2);
 
     return;
   }
@@ -2038,7 +2027,7 @@ void do_backflip(CHAR *ch, char *arg, int cmd) {
 
   hit(ch, victim, SKILL_BACKFLIP);
 
-  skill_wait(ch, SKILL_BACKFLIP, 2);
+  skill_wait_user(ch, SKILL_BACKFLIP, 2);
 }
 */
 
@@ -2151,7 +2140,7 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
       send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
     }
 
-    skill_wait(ch, SKILL_COIN_TOSS, 2);
+    skill_wait_user(ch, SKILL_COIN_TOSS, 2);
 
     return;
   }
@@ -2188,5 +2177,5 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
     send_to_char("Nobody was hit by your coins and they are hopelessly lost in the chaos.\n\r", ch);
   }
 
-  skill_wait(ch, SKILL_COIN_TOSS, 2);
+  skill_wait_user(ch, SKILL_COIN_TOSS, 2);
 }

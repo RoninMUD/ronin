@@ -40,7 +40,9 @@
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
 void do_move(struct char_data *ch, char *argument, int cmd);
-void skill_wait(CHAR *ch, int skill, int wait);
+
+void skill_wait_user(CHAR *ch, int skill, int wait);
+void skill_wait_victim(CHAR *victim, int skill, int wait);
 
 
 void do_awareness(CHAR *ch, char *arg, int cmd) {
@@ -77,8 +79,14 @@ void do_awareness(CHAR *ch, char *arg, int cmd) {
 void do_meditate(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
-  if (!check_sc_access(ch, SKILL_MEDITATE)) {
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_CLERIC)) {
     send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) == CLASS_CLERIC) && (GET_LEVEL(ch) < 40)) {
+    send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;
   }
@@ -101,10 +109,12 @@ void do_meditate(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  affect_apply(ch, SKILL_MEDITATE, (CHAOSMODE ? 12 : 32), 0, 0, 0, 0);
+  affect_apply(ch, SKILL_MEDITATE, 12, 0, 0, 0, 0);
 
   send_to_char("You gaze inward and focus on healing.\n\r", ch);
   act("$n enters a deep trance.", TRUE, ch, 0, 0, TO_ROOM);
+
+  GET_POS(ch) = POSITION_SLEEPING;
 }
 
 
@@ -262,7 +272,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_BACKFIST, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_BACKFIST, 2);
+    skill_wait_user(ch, SKILL_BACKFIST, 2);
 
     return;
   }
@@ -280,10 +290,10 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
   }
 
-  skill_wait(ch, SKILL_BACKFIST, 2);
+  skill_wait_user(ch, SKILL_BACKFIST, 2);
 }
 
 
@@ -385,7 +395,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_TIGERKICK, 2);
+    skill_wait_user(ch, SKILL_TIGERKICK, 2);
 
     return;
   }
@@ -397,7 +407,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_TIGERKICK, 2);
+    skill_wait_user(ch, SKILL_TIGERKICK, 2);
 
     return;
   }
@@ -415,10 +425,10 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+    skill_wait_victim(victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
   }
 
-  skill_wait(ch, SKILL_TIGERKICK, 2);
+  skill_wait_user(ch, SKILL_TIGERKICK, 2);
 }
 
 
@@ -669,14 +679,14 @@ void do_lunge(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_LUNGE, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_LUNGE, 2);
+    skill_wait_user(ch, SKILL_LUNGE, 2);
 
     return;
   }
 
   hit(ch, victim, SKILL_LUNGE);
 
-  skill_wait(ch, SKILL_LUNGE, 2);
+  skill_wait_user(ch, SKILL_LUNGE, 2);
 }
 
 
@@ -773,7 +783,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_SMITE, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_SMITE, 2);
+    skill_wait_user(ch, SKILL_SMITE, 2);
 
     return;
   }
@@ -817,14 +827,22 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
     }
   }
 
-  skill_wait(ch, SKILL_SMITE, 2);
+  skill_wait_user(ch, SKILL_SMITE, 2);
 }
 
 
 int maim_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  if (!ench || !ch) return FALSE;
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+
+    act("......$n has been horribly maimed!", FALSE, ch, 0, signaler, TO_VICT);
+
+    return FALSE;
+  }
 
   if (cmd == MSG_DAMAGED) {
+    if (!ench || !ch) return FALSE;
+
     if (arg && strcasecmp(arg, "SKILL_MAIM")) {
       send_to_char("You cry out in pain as your maimed body suffers another blow!\n\r", ch);
       act("$n cries out in pain as $s maimed body suffers another blow!", FALSE, ch, 0, 0, TO_ROOM);
@@ -890,7 +908,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_FLANK, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_FLANK, 2);
+    skill_wait_user(ch, SKILL_FLANK, 2);
 
     return;
   }
@@ -923,7 +941,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
 
       ENCH maim_ench = { 0 };
 
-      maim_ench.name = "Maimed";
+      maim_ench.name = ENCH_NAME_MAIM;
       maim_ench.duration = -1;
       maim_ench.temp[0] = GET_LEVEL(ch) / 4;
       maim_ench.func = maim_enchantment;
@@ -932,7 +950,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
     }
   }
 
-  skill_wait(ch, SKILL_FLANK, 2);
+  skill_wait_user(ch, SKILL_FLANK, 2);
 }
 
 
@@ -963,7 +981,7 @@ void do_zeal(CHAR *ch, char *arg, int cmd) {
     act("You fail in your attempt to invoke divine wrath upon your foes.", FALSE, ch, 0, 0, TO_CHAR);
     act("$n fails in an attempt to invoke divine wrath upon $s foes.", FALSE, ch, 0, 0, TO_ROOM);
 
-    skill_wait(ch, SKILL_ZEAL, 2);
+    skill_wait_user(ch, SKILL_ZEAL, 2);
 
     return;
   }
@@ -982,11 +1000,11 @@ void do_zeal(CHAR *ch, char *arg, int cmd) {
     hit(ch, temp_victim, SKILL_ZEAL);
 
     if (CHAR_REAL_ROOM(temp_victim) != NOWHERE) {
-      WAIT_STATE(temp_victim, PULSE_VIOLENCE * (CHAOSMODE ? number(1, 2) : 2));
+      skill_wait_victim(temp_victim, SKILL_PUMMEL, CHAOSMODE ? number(1, 2) : 2);
     }
   }
 
-  skill_wait(ch, SKILL_ZEAL, 2);
+  skill_wait_user(ch, SKILL_ZEAL, 2);
 }
 
 
@@ -1214,7 +1232,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_HEADBUTT, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_HEADBUTT, 2);
+    skill_wait_user(ch, SKILL_HEADBUTT, 2);
 
     return;
   }
@@ -1226,7 +1244,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_HEADBUTT, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_HEADBUTT, 2);
+    skill_wait_user(ch, SKILL_HEADBUTT, 2);
 
     return;
   }
@@ -1243,7 +1261,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
     GET_POS(victim) = set_pos;
   }
 
-  skill_wait(ch, SKILL_HEADBUTT, 2);
+  skill_wait_user(ch, SKILL_HEADBUTT, 2);
 }
 
 
@@ -1316,7 +1334,7 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
       GET_MANA(ch) -= mana_cost / 2;
     }
 
-    skill_wait(ch, SKILL_BANZAI, 1);
+    skill_wait_user(ch, SKILL_BANZAI, 1);
 
     return;
   }
@@ -1349,25 +1367,26 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     GET_MANA(ch) -= mana_cost;
   }
 
-  skill_wait(ch, SKILL_BANZAI, 1);
+  skill_wait_user(ch, SKILL_BANZAI, 1);
 }
 
 
 int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
-  if (!ench || !ch) return FALSE;
-
   if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+
     send_to_char("You slowly slip out of your regenerative trance.\n\r", ch);
 
     return FALSE;
   }
 
   if (cmd == MSG_ROUND) {
+    if (!ench || !ch) return FALSE;
+
     const int mantra_dispel_types[] = {
     SPELL_BLINDNESS,
     SPELL_POISON,
-    SPELL_PARALYSIS,
-    -1
+    SPELL_PARALYSIS
     };
 
     /* Pulse every 3 rounds. */
@@ -1384,12 +1403,12 @@ int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
     }
 
     if ((heal > 0) && (GET_HIT(ch) < GET_MAX_HIT(ch))) {
-      magic_heal(ch, SKILL_MANTRA, heal, FALSE);
+      magic_heal(0, ch, SKILL_MANTRA, heal, FALSE);
 
       send_to_char("Your healing trance regenerates some of your wounds.\n\r", ch);
     }
 
-    int dispel_type = get_random_set_effect(ch, mantra_dispel_types);
+    int dispel_type = get_random_set_affect(ch, mantra_dispel_types, NUMELEMS(mantra_dispel_types));
 
     if ((dispel_type > 0) && chance(25)) {
       switch (dispel_type) {
@@ -1481,8 +1500,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   /* Take 50% of the mana cost before skill check. */
   GET_MANA(ch) -= mana_cost / 2;
 
-  if ((check > GET_LEARNED(ch, SKILL_MANTRA)) ||
-      (aff_affected_by(victim, SPELL_DEGENERATE) && (aff_duration(victim, SPELL_DEGENERATE) > (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 9 : 27)))) {
+  if (check > GET_LEARNED(ch, SKILL_MANTRA)) {
     if (victim != ch) {
       act("You chant your mantra to $N, but nothing happens.", FALSE, ch, 0, victim, TO_CHAR);
       act("$n chants $s mantra to you, but nothing happens.", FALSE, ch, 0, victim, TO_VICT);
@@ -1493,7 +1511,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
       act("$n chants softly to $mself with no noticeable effect.", FALSE, ch, 0, 0, TO_ROOM);
     }
 
-    skill_wait(ch, SKILL_MANTRA, 1);
+    skill_wait_user(ch, SKILL_MANTRA, 1);
 
     return;
   }
@@ -1511,7 +1529,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     act("$n chants softly, healing $s spirit and giving $mself life.", FALSE, ch, 0, 0, TO_ROOM);
   }
 
-  magic_heal(victim, SKILL_MANTRA, initial_heal, FALSE);
+  magic_heal(ch, victim, SKILL_MANTRA, initial_heal, FALSE);
 
   int heal = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.5);
 
@@ -1529,7 +1547,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     ENCH mantra_ench = { 0 };
 
     mantra_ench.name = "Mantra";
-    mantra_ench.duration = duration; /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
+    mantra_ench.duration = duration;
     mantra_ench.interval = ENCH_INTERVAL_ROUND;
     mantra_ench.temp[0] = heal;
     mantra_ench.metadata = ENCH_MANTRA_HEAL;
@@ -1538,7 +1556,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     ench_to_char(victim, &mantra_ench, FALSE);
   }
 
-  skill_wait(ch, SKILL_MANTRA, 1);
+  skill_wait_user(ch, SKILL_MANTRA, 1);
 }
 
 
@@ -1547,7 +1565,7 @@ void do_frenzy(CHAR *ch, char *argument, int cmd) {
   if (!ch->skills) return;
 
   if (!check_sc_access(ch, SKILL_FRENZY)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You do not know this skill.\n\r", ch);
     return;
   }
   if (ch->specials.fighting) {
@@ -1585,7 +1603,7 @@ void do_berserk(CHAR *ch, char *argument, int cmd) {
   if (!ch->skills) return;
 
   if (!check_sc_access(ch, SKILL_BERSERK)) {
-    send_to_char("You do not have this skill.\n\r", ch);
+    send_to_char("You do not know this skill.\n\r", ch);
     return;
   }
   if (ch->specials.fighting) {
@@ -1712,7 +1730,7 @@ void do_trophy(CHAR *ch, char *arg, int cmd) {
   act("You craft a trophy from the $p.", FALSE, ch, corpse, 0, TO_CHAR);
   act("$n crafts a trophy from the $p.", FALSE, ch, corpse, 0, TO_ROOM);
 
-  skill_wait(ch, SKILL_TROPHY, 1);
+  skill_wait_user(ch, SKILL_TROPHY, 1);
 
   /* Apply the affects to the player. */
   if (!affected_by_spell(ch, SKILL_TROPHY)) {
@@ -1819,7 +1837,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
 
     damage(ch, victim, 0, SKILL_CLOBBER, DAM_NO_BLOCK);
 
-    skill_wait(ch, SKILL_CLOBBER, 2);
+    skill_wait_user(ch, SKILL_CLOBBER, 2);
 
     return;
   }
@@ -1853,7 +1871,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
     GET_POS(victim) = set_pos;
   }
 
-  skill_wait(ch, SKILL_CLOBBER, 2);
+  skill_wait_user(ch, SKILL_CLOBBER, 2);
 }
 
 
@@ -2071,4 +2089,641 @@ void do_snipe(CHAR *ch, char *arg, int cmd) {
   SET_BIT(GET_TOGGLES(ch), TOG_SNIPE);
 
   send_to_char("You'll now take advantage of your opponents weakness and attempt to snipe.\n\r", ch);
+}
+
+
+void do_degenerate(CHAR *ch, char *arg, int cmd) {
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_DEGENERATE)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (ench_enchanted_by(ch, 0, ENCHANT_DEGENERATE)) {
+    send_to_char("Your life force is too weak to be converted to mana right now.\n\r", ch);
+
+    return;
+  }
+
+  if (GET_MANA(ch) >= GET_MAX_MANA(ch)) {
+    send_to_char("Your mana is already full.\n\r", ch);
+
+    return;
+  }
+
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_DEGENERATE)) {
+    send_to_char("You fail to convert your life force to mana.\n\r", ch);
+
+    return;
+  }
+
+  send_to_char("You eat away at your life force for a few precious mana points.\n\r", ch);
+  act("$n eats away at $s life force for a few precious mana points.", TRUE, ch, 0, 0, TO_ROOM);
+
+  int hp_to_convert = MIN(MAX(GET_HIT(ch) - 10, 0), (GET_MAX_MANA(ch) - GET_MANA(ch)) / 2);
+
+  GET_HIT(ch) -= hp_to_convert;
+  GET_MANA(ch) = MIN(GET_MANA(ch) + (hp_to_convert * 2), GET_MAX_MANA(ch));
+
+  ench_to_char(ch, ench_get_from_global(0, ENCHANT_DEGENERATE), FALSE);
+}
+
+
+int entropy_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+
+    const int entropy_modifier = 5;
+    const int entropy_max_stacks = 3;
+
+    const char *entropy_stack_text[] = {
+      "veiled", "shrouded", "completely enveloped"
+    };
+
+    int num_stacks = ench->temp[0] / entropy_modifier;
+
+    if ((num_stacks > 0) && (num_stacks <= entropy_max_stacks)) {
+      char buf[MSL];
+
+      snprintf(buf, sizeof(buf), "......$n is %s in entropic energy!", entropy_stack_text[num_stacks - 1]);
+
+      act(buf, FALSE, ch, 0, signaler, TO_VICT);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+int shapeshift_elemental_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == CMD_UNKNOWN) {
+    if (!ench || !ch || (ch != signaler) || IS_NPC(ch)) return FALSE;
+
+    const int entropy_mana_cost = 50;
+    const int entropy_duration = 20;
+    const int entropy_modifier = 5;
+    const int entropy_max_stacks = 3;
+
+    const char *entropy_stack_text[] = {
+      "veiled", "shrouded", "completely enveloped"
+    };
+
+    char command[MIL], command_arg[MIL];
+
+    arg = one_argument(arg, command);
+    arg = one_argument(arg, command_arg);
+
+    int cmd_idx = determine_command(command, strlen(command));
+
+    if (cmd_idx < 0) {
+      if (is_abbrev(command, "entropy")) {
+        char *victim_name = command_arg;
+
+        if (GET_MANA(ch) < entropy_mana_cost) {
+          send_to_char("You can't summon enough energy to channel entropy.\n\r", ch);
+
+          return TRUE;
+        }
+
+        CHAR *victim = get_char_room_vis(ch, victim_name);
+
+        if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
+          victim = GET_OPPONENT(ch);
+        }
+        else if (victim == ch) {
+          send_to_char("You briefly cloud your mind and actions with a shroud of entropic energy.\n\r", ch);
+          act("$n looks confused for a moment, $s actions sluggish and incoherent.", FALSE, ch, 0, 0, TO_ROOM);
+
+          skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+          return TRUE;
+        }
+
+        if (!victim) {
+          send_to_char("Channel entropy at whom?\n\r", ch);
+
+          return TRUE;
+        }
+
+        GET_MANA(ch) -= entropy_mana_cost;
+
+        act("You envelop $N with a cloud of entropic energy, sapping $S strength!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n envelops you with a cloud of entropic energy, sapping your strength!", FALSE, ch, 0, victim, TO_VICT);
+        act("$n envelops $N with a cloud of entropic energy, sapping $S strength!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+        damage(ch, victim, 0, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+
+        ENCH *entropy_ench = ench_get_from_char(victim, ENCH_NAME_ENTROPY, 0);
+
+        int num_stacks = 0;
+
+        if (entropy_ench) {
+          num_stacks = MIN((entropy_ench->temp[0] / entropy_modifier) + 1, entropy_max_stacks);
+
+          entropy_ench->duration = entropy_duration;
+          entropy_ench->temp[0] = entropy_modifier * num_stacks;
+        }
+        else {
+          num_stacks = 1;
+
+          CREATE(entropy_ench, ENCH, 1);
+
+          entropy_ench->name = strdup(ENCH_NAME_ENTROPY);
+          entropy_ench->duration = entropy_duration;
+          entropy_ench->interval = ENCH_INTERVAL_ROUND;
+          entropy_ench->func = entropy_enchantment;
+          entropy_ench->temp[0] = entropy_modifier;
+
+          ench_to_char(victim, entropy_ench, FALSE);
+
+          DESTROY(entropy_ench->name);
+          DESTROY(entropy_ench);
+        }
+
+        if ((num_stacks > 0) && (num_stacks <= entropy_max_stacks) && IS_ALIVE(victim)) {
+          printf_to_char(victim, "You are %s in entropic energy!\n\r", entropy_stack_text[num_stacks - 1]);
+          printf_to_room(CHAR_REAL_ROOM(victim), "%s is %s in entropic energy!\n\r", GET_DISP_NAME(victim), entropy_stack_text[num_stacks - 1]);
+        }
+
+        skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+        return TRUE;
+      }
+    }
+  }
+
+  if (cmd == MSG_TICK) {
+    if (!ench || !ch) return FALSE;
+
+    act("A swarm of charged particles circles your form, resonating with energy.", FALSE, ch, 0, 0, TO_CHAR);
+    act("A swarm of charged particles circles $n's form, resonating with energy.", TRUE, ch, 0, 0, TO_ROOM);
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    act("......$n has taken the form of a powerful elemental!", FALSE, ch, 0, signaler, TO_VICT);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+
+int dragonfire_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+
+    const int dragon_breath_modifier = 2;
+    const int dragon_breath_max_stacks = 3;
+
+    const char *dragon_breath_stack_text[] = {
+      "wreathed", "bathed", "completely engulfed"
+    };
+
+    int num_stacks = ench->temp[0] / dragon_breath_modifier;
+
+    if ((num_stacks > 0) && (num_stacks <= dragon_breath_max_stacks)) {
+      char buf[MSL];
+
+      snprintf(buf, sizeof(buf), "......$n is %s in blazing dragonfire!", dragon_breath_stack_text[num_stacks - 1]);
+
+      act(buf, FALSE, ch, 0, signaler, TO_VICT);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  void say_spell(CHAR *ch, int spell);
+
+  if (cmd == CMD_UNKNOWN) {
+    if (!ench || !ch || (ch != signaler) || IS_NPC(ch)) return FALSE;
+
+    const int dragon_breath_mana_cost = 75;
+    const int dragon_breath_duration = 10;
+    const int dragon_breath_modifier = 2;
+    const int dragon_breath_max_stacks = 3;
+
+    const char *dragon_breath_stack_text[] = {
+      "wreathed", "bathed", "completely engulfed"
+    };
+
+    char command[MIL], command_arg[MIL];
+
+    arg = one_argument(arg, command);
+    one_argument(arg, command_arg);
+
+    int cmd_idx = determine_command(command, strlen(command));
+
+    if (cmd_idx >= 0) {
+      int cmd = cmd_info[cmd_idx].num;
+
+      if ((cmd == CMD_CAST) && IS_MORTAL(ch)) {
+        char spell_name[MIL];
+
+        int spell_words_len = str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
+
+        int spell = old_search_block(spell_name, 0, strlen(spell_name), (const char * const * const)spells, FALSE);
+
+        if (spell == SPELL_FEAR) {
+          char *victim_name = command_arg + spell_words_len + 2;
+
+          if (!(*victim_name)) {
+            send_to_char("Who should the spell be cast upon?\n\r", ch);
+
+            return TRUE;
+          }
+
+          CHAR *victim = get_char_room_vis(ch, victim_name);
+
+          if (!victim) {
+            send_to_char("Nobody here by that name.\n\r", ch);
+
+            return TRUE;
+          }
+
+          int mana_cost = spell_info[SPELL_FEAR].min_usesmana;
+
+          if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DOUBLE_MANA)) {
+            mana_cost *= 2;
+          }
+
+          if ((GET_MANA(ch) < mana_cost)) {
+            send_to_char("You can't summon enough energy to cast the spell.\n\r", ch);
+
+            return TRUE;
+          }
+
+          if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+            send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
+
+            return TRUE;
+          }
+
+          GET_MANA(ch) -= mana_cost;
+
+          send_to_char("Ok.\n\r", ch);
+          say_spell(ch, SPELL_FEAR);
+
+          spell_fear(GET_LEVEL(ch), ch, victim, 0);
+
+          skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+          return TRUE;
+        }
+
+        if (spell == SPELL_PERCEIVE) {
+          int mana_cost = spell_info[SPELL_PERCEIVE].min_usesmana;
+
+          if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), DOUBLE_MANA)) {
+            mana_cost *= 2;
+          }
+
+          if ((GET_MANA(ch) < mana_cost)) {
+            send_to_char("You can't summon enough energy to cast the spell.\n\r", ch);
+
+            return TRUE;
+          }
+
+          if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+            send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
+
+            return TRUE;
+          }
+
+          GET_MANA(ch) -= mana_cost;
+
+          send_to_char("Ok.\n\r", ch);
+          say_spell(ch, SPELL_PERCEIVE);
+
+          spell_perceive(GET_LEVEL(ch), ch, ch, 0);
+
+          skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+          return TRUE;
+        }
+
+        return FALSE;
+      }
+    }
+    else {
+      if (is_abbrev(command, "dragonfire")) {
+        char *victim_name = command_arg;
+
+        if (GET_MANA(ch) < dragon_breath_mana_cost) {
+          send_to_char("You can't summon enough energy to breathe your dragon fire.\n\r", ch);
+
+          return TRUE;
+        }
+
+        CHAR *victim = get_char_room_vis(ch, victim_name);
+
+        if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
+          victim = GET_OPPONENT(ch);
+        }
+        else if (victim == ch) {
+          send_to_char("You belch up a puff of smoke and flame, scorching your nostrils.\n\r", ch);
+          act("$n belches up a puff of smoke and flame, scorching $s nostrils.", FALSE, ch, 0, 0, TO_ROOM);
+
+          skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+          return TRUE;
+        }
+
+        if (!victim) {
+          send_to_char("Breathe your dragon fire at whom?\n\r", ch);
+
+          return TRUE;
+        }
+
+        GET_MANA(ch) -= dragon_breath_mana_cost;
+
+        act("You breathe a massive plume of dragon fire at $N, immolating $M!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n breathes a massive plume of dragon fire at you, immolating you!", FALSE, ch, 0, victim, TO_VICT);
+        act("$n breathes a massive plume of dragon fire at $n, immolating $M!", FALSE, ch, 0, victim, TO_NOTVICT);
+
+        damage(ch, victim, GET_LEVEL(ch) * 10, TYPE_UNDEFINED, DAM_MAGICAL);
+
+        ENCH *dragonfire_ench = ench_get_from_char(victim, ENCH_NAME_DRAGONFIRE, 0);
+
+        int num_stacks = 0;
+
+        if (dragonfire_ench) {
+          num_stacks = MIN((dragonfire_ench->temp[0] / dragon_breath_modifier) + 1, dragon_breath_max_stacks);
+
+          dragonfire_ench->duration = dragon_breath_duration;
+          dragonfire_ench->temp[0] = dragon_breath_modifier * num_stacks;
+        }
+        else {
+          num_stacks = 1;
+
+          CREATE(dragonfire_ench, ENCH, 1);
+
+          dragonfire_ench->name = strdup(ENCH_NAME_DRAGONFIRE);
+          dragonfire_ench->duration = dragon_breath_duration;
+          dragonfire_ench->interval = ENCH_INTERVAL_ROUND;
+          dragonfire_ench->func = dragonfire_enchantment;
+          dragonfire_ench->temp[0] = dragon_breath_modifier;
+
+          ench_to_char(victim, dragonfire_ench, FALSE);
+
+          DESTROY(dragonfire_ench->name);
+          DESTROY(dragonfire_ench);
+        }
+
+        if ((num_stacks > 0) && (num_stacks <= dragon_breath_max_stacks) && IS_ALIVE(victim)) {
+          printf_to_char(victim, "You are %s in blazing dragonfire!\n\r", dragon_breath_stack_text[num_stacks - 1]);
+          printf_to_room(CHAR_REAL_ROOM(victim), "%s is %s in blazing dragonfire!\n\r", GET_DISP_NAME(victim), dragon_breath_stack_text[num_stacks - 1]);
+        }
+
+        skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+        return TRUE;
+      }
+    }
+  }
+
+  if (cmd == MSG_VIOLENCE_POST_HIT) {
+    if (!ench || !ch || !signaler || (ch == signaler) || IS_NPC(ch)) return FALSE;
+
+    if (chance(15 + wis_app[GET_WIS(ch)].bonus)) {
+      switch (number(1, 3)) {
+        case 1:
+          act("You sink your sword-like teeth into $N, crushing $M in your maw!", FALSE, ch, 0, signaler, TO_CHAR);
+          act("$n sinks $s sword-like teeth into you, crushing you in $s maw!", FALSE, ch, 0, signaler, TO_VICT);
+          act("$n sinks $s sword-like teeth into $N, crushing $M in $s maw!", FALSE, ch, 0, signaler, TO_NOTVICT);
+          break;
+
+        case 2:
+          act("You tear into $N with your razor-sharp claws, cutting $M to ribbons!", FALSE, ch, 0, signaler, TO_CHAR);
+          act("$n tears into you with $s razor-sharp claws, cutting you to ribbons!", FALSE, ch, 0, signaler, TO_VICT);
+          act("$n tears into $N with $s razor-sharp claws, cutting $M to ribbons!", FALSE, ch, 0, signaler, TO_NOTVICT);
+          break;
+
+        case 3:
+          act("You thrash $N with your wickedly-barbed tail, beating $M to the ground!", FALSE, ch, 0, signaler, TO_CHAR);
+          act("$n thrashes you with $s wickedly-barbed tail, beating you to the ground!", FALSE, ch, 0, signaler, TO_VICT);
+          act("$n thrashes $N with $s wickedly-barbed tail, beating $M to the ground!", FALSE, ch, 0, signaler, TO_NOTVICT);
+          break;
+      }
+
+      damage(ch, signaler, GET_LEVEL(ch), TYPE_UNDEFINED, DAM_NO_BLOCK);
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_TICK) {
+    if (!ench || !ch) return FALSE;
+
+    if (!GET_OPPONENT(ch) && !number(0, 2)) {
+      switch (number(1, 3)) {
+        case 1:
+          act("You flare your nostrils and puff out a cloud of smoke and flame.", FALSE, ch, 0, 0, TO_CHAR);
+          act("$n flares $s nostrils and puffs out a cloud of smoke and flame.", TRUE, ch, 0, 0, TO_ROOM);
+          break;
+
+        case 2:
+          act("You flex your massive claws, corded muscles rippling across your draconic form.", FALSE, ch, 0, 0, TO_CHAR);
+          act("$n flexes $s massive claws, corded muscles rippling across $s draconic form.", TRUE, ch, 0, 0, TO_ROOM);
+          break;
+
+        case 3:
+          act("You idly swing your tail from side to side in a ponderous motion.", FALSE, ch, 0, 0, TO_CHAR);
+          act("$n idly swings $s tail from side to side in a ponderous motion.", TRUE, ch, 0, 0, TO_ROOM);
+          break;
+      }
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+
+    act("......$n has taken the form of a mighty dragon!", FALSE, ch, 0, signaler, TO_VICT);
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+
+void do_shapeshift(CHAR *ch, char *arg, int cmd) {
+  const int shapeshift_hp_cost = 100;
+
+  if (!GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_SHAPESHIFT)) {
+    send_to_char("You do not know this skill.\n\r", ch);
+
+    return;
+  }
+
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  if (!(*buf) || (!is_abbrev(buf, "normal") && !is_abbrev(buf, "elemental") && !is_abbrev(buf, "dragon"))) {
+    printf_to_char(ch, "You must specify one of the following forms: Normal, Elemental%s\n\r", check_subclass(ch, SC_DRUID, 5) ? ", Dragon" : "");
+  }
+
+  if (is_abbrev(buf, "normal")) {
+    ENCH *elemental_ench = ench_get_from_char(ch, ENCH_NAME_ELEMENTAL_FORM, 0);
+    ENCH *dragon_ench = ench_get_from_char(ch, ENCH_NAME_DRAGON_FORM, 0);
+
+    if (!elemental_ench && !dragon_ench) {
+      send_to_char("You are not currently shapeshifted.\n\r", ch);
+
+      return;
+    }
+
+    send_to_char("You shapeshift back to your normal form.\n\r", ch);
+    act("$n shapeshifts back to $s normal form.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (elemental_ench) {
+      ench_remove(ch, elemental_ench, FALSE);
+
+      if (!IS_AFFECTED(ch, AFF_DETECT_INVISIBLE)) {
+        print_spell_wear_off_message(ch, SPELL_DETECT_INVISIBLE);
+      }
+
+      if (!IS_AFFECTED2(ch, AFF2_FORTIFICATION)) {
+        print_spell_wear_off_message(ch, SPELL_FORTIFICATION);
+      }
+    }
+
+    if (dragon_ench) {
+      ench_remove(ch, dragon_ench, FALSE);
+
+      if (!IS_AFFECTED(ch, AFF_INFRAVISION)) {
+        print_spell_wear_off_message(ch, SPELL_INFRAVISION);
+      }
+
+      if (!IS_AFFECTED(ch, AFF_FLY)) {
+        print_spell_wear_off_message(ch, SPELL_FLY);
+      }
+    }
+
+    update_pos(ch);
+
+    skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+    return;
+  }
+
+  if (number(1, SKILL_MAX_PRAC) > GET_LEARNED(ch, SKILL_SHAPESHIFT)) {
+    send_to_char("You have trouble shifting your body from its current form and remain unchanged.\n\r", ch);
+
+    return;
+  }
+
+  if (is_abbrev(buf, "elemental")) {
+    if (!check_subclass(ch, SC_DRUID, 4)) {
+      send_to_char("You have must train further in the arts of the Druid to unlock this form.\n\r", ch);
+
+      return;
+    }
+
+    if (ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+      send_to_char("You are already in elemental form.\n\r", ch);
+
+      return;
+    }
+
+    if (GET_HIT(ch) <= shapeshift_hp_cost) {
+      send_to_char("You can't summon enough energy to shapeshift to that form.\n\r", ch);
+
+      return;
+    }
+
+    GET_HIT(ch) -= shapeshift_hp_cost;
+
+    send_to_char("You shapeshift into a being of primarodial elemental energy!\n\r", ch);
+    act("$n shapeshifts into a being of primordial elemental energy!", TRUE, ch, 0, 0, TO_ROOM);
+
+    ENCH *dragon_ench = ench_get_from_char(ch, ENCH_NAME_DRAGON_FORM, 0);
+
+    ench_apply(ch, FALSE, ENCH_NAME_ELEMENTAL_FORM, 0, -1, 0, 0, 0, AFF_DETECT_INVISIBLE | AFF_SANCTUARY, AFF2_FORTIFICATION, shapeshift_elemental_enchantment);
+
+    print_spell_messages(ch, SPELL_DETECT_INVISIBLE);
+    print_spell_messages(ch, SPELL_FORTIFICATION);
+
+    if (dragon_ench) {
+      ench_remove(ch, dragon_ench, FALSE);
+
+      if (!IS_AFFECTED(ch, AFF_INFRAVISION)) {
+        print_spell_wear_off_message(ch, SPELL_INFRAVISION);
+      }
+
+      if (!IS_AFFECTED(ch, AFF_FLY)) {
+        print_spell_wear_off_message(ch, SPELL_FLY);
+      }
+    }
+
+    update_pos(ch);
+
+    skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+    return;
+  }
+
+  if (is_abbrev(buf, "dragon")) {
+    if (!check_subclass(ch, SC_DRUID, 5)) {
+      send_to_char("You have must train further in the arts of the Druid to unlock this form.\n\r", ch);
+
+      return;
+    }
+
+    if (ench_enchanted_by(ch, ENCH_NAME_DRAGON_FORM, 0)) {
+      send_to_char("You are already in dragon form.\n\r", ch);
+
+      return;
+    }
+
+    if (GET_HIT(ch) <= shapeshift_hp_cost) {
+      send_to_char("You can't summon enough energy to shapeshift to that form.\n\r", ch);
+
+      return;
+    }
+
+    GET_HIT(ch) -= shapeshift_hp_cost;
+
+    send_to_char("You shapeshift into a mighty dragon and flex your powerful wings!\n\r", ch);
+    act("$n shapeshifts into a mighty dragon and flexes $s powerful wings!", TRUE, ch, 0, 0, TO_ROOM);
+
+    ENCH *elemental_ench = ench_get_from_char(ch, ENCH_NAME_ELEMENTAL_FORM, 0);
+
+    ench_apply(ch, FALSE, ENCH_NAME_DRAGON_FORM, 0, -1, 0, 0, 0, AFF_INFRAVISION | AFF_FLY, 0, shapeshift_dragon_enchantment);
+
+    print_spell_messages(ch, SPELL_INFRAVISION);
+    print_spell_messages(ch, SPELL_FLY);
+
+    if (elemental_ench) {
+      ench_remove(ch, elemental_ench, FALSE);
+
+      if (!IS_AFFECTED(ch, AFF_DETECT_INVISIBLE)) {
+        print_spell_wear_off_message(ch, SPELL_DETECT_INVISIBLE);
+      }
+
+      if (!IS_AFFECTED2(ch, AFF2_FORTIFICATION)) {
+        print_spell_wear_off_message(ch, SPELL_FORTIFICATION);
+      }
+    }
+
+    update_pos(ch);
+
+    skill_wait_user(ch, SKILL_SHAPESHIFT, 1);
+
+    return;
+  }
 }

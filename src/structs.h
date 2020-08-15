@@ -100,9 +100,10 @@ typedef struct social_messg       SOC;
 
 /* Object Data */
 
-/* Subclass Object VNUMs */
-#define STATUE_PEACE          9
+/* Special Object VNUMs */
 #define WALL_THORNS           34
+#define ICE_WALL              27750
+#define ICE_BLOCK             27751
 
 /* Subclass Token and Token Mob */
 #define TOKEN_OBJ_VNUM        5
@@ -156,95 +157,95 @@ typedef struct social_messg       SOC;
 #define ITEM_AQ_ORDER         36
 
 /* Object bit flags-- used in 'wear_flags' */
-#define ITEM_TAKE             1
-#define ITEM_WEAR_FINGER      2
-#define ITEM_WEAR_NECK        4
-#define ITEM_WEAR_BODY        8
-#define ITEM_WEAR_HEAD        16
-#define ITEM_WEAR_LEGS        32
-#define ITEM_WEAR_FEET        64
-#define ITEM_WEAR_HANDS       128
-#define ITEM_WEAR_ARMS        256
-#define ITEM_WEAR_SHIELD      512
-#define ITEM_WEAR_ABOUT       1024
-#define ITEM_WEAR_WAIST       2048
-#define ITEM_WEAR_WRIST       4096
-#define ITEM_WIELD            8192
-#define ITEM_HOLD             16384
-#define ITEM_THROW            32768
-#define ITEM_LIGHT_SOURCE     65536
-#define ITEM_NO_REMOVE        131072
-#define ITEM_NO_SCAVENGE      262144
-#define ITEM_QUESTWEAR        524288
-#define ITEM_WEAR_2NECK       1048576
+#define ITEM_TAKE             (1 << 0)  /* 1 */
+#define ITEM_WEAR_FINGER      (1 << 1)  /* 2 */
+#define ITEM_WEAR_NECK        (1 << 2)  /* 4 */
+#define ITEM_WEAR_BODY        (1 << 3)  /* 8 */
+#define ITEM_WEAR_HEAD        (1 << 4)  /* 16 */
+#define ITEM_WEAR_LEGS        (1 << 5)  /* 32 */
+#define ITEM_WEAR_FEET        (1 << 6)  /* 64 */
+#define ITEM_WEAR_HANDS       (1 << 7)  /* 128 */
+#define ITEM_WEAR_ARMS        (1 << 8)  /* 256 */
+#define ITEM_WEAR_SHIELD      (1 << 9)  /* 512 */
+#define ITEM_WEAR_ABOUT       (1 << 10) /* 1024 */
+#define ITEM_WEAR_WAIST       (1 << 11) /* 2048 */
+#define ITEM_WEAR_WRIST       (1 << 12) /* 4096 */
+#define ITEM_WIELD            (1 << 13) /* 8192 */
+#define ITEM_HOLD             (1 << 14) /* 16384 */
+#define ITEM_THROW            (1 << 15) /* 32768 */
+#define ITEM_LIGHT_SOURCE     (1 << 16) /* 65536 */
+#define ITEM_NO_REMOVE        (1 << 17) /* 131072 */
+#define ITEM_NO_SCAVENGE      (1 << 18) /* 262144 */
+#define ITEM_QUESTWEAR        (1 << 19) /* 524288 */
+#define ITEM_WEAR_2NECK       (1 << 20) /* 1048576 */
 
 /* Object bit flags -- used in 'extra_flags' */
-#define ITEM_GLOW             1
-#define ITEM_HUM              2
-#define ITEM_DARK             4
-#define ITEM_CLONE            8
-#define ITEM_EVIL             16
-#define ITEM_INVISIBLE        32
-#define ITEM_MAGIC            64
-#define ITEM_NODROP           128
-#define ITEM_BLESS            256
-#define ITEM_ANTI_GOOD        512
-#define ITEM_ANTI_EVIL        1024
-#define ITEM_ANTI_NEUTRAL     2048
-#define ITEM_ANTI_WARRIOR     4096
-#define ITEM_ANTI_THIEF       8192
-#define ITEM_ANTI_CLERIC      16384
-#define ITEM_ANTI_MAGIC_USER  32768
-#define ITEM_ANTI_MORTAL      65536
-#define ITEM_EXTRA_131072     131072
-#define ITEM_EXTRA_262144     262144
-#define ITEM_ANTI_RENT        524288
-#define ITEM_ANTI_NINJA       1048576
-#define ITEM_ANTI_NOMAD       2097152
-#define ITEM_ANTI_PALADIN     4194304
-#define ITEM_ANTI_ANTIPALADIN 8388608
-#define ITEM_ANTI_AVATAR      16777216
-#define ITEM_ANTI_BARD        33554432
-#define ITEM_ANTI_COMMANDO    67108864
-#define ITEM_LIMITED          134217728
-#define ITEM_ANTI_AUCTION     268435456
-#define ITEM_CHAOTIC          536870912
+#define ITEM_GLOW             (1 << 0)  /* 1 */
+#define ITEM_HUM              (1 << 1)  /* 2 */
+#define ITEM_DARK             (1 << 2)  /* 4 */
+#define ITEM_CLONE            (1 << 3)  /* 8 */
+#define ITEM_EVIL             (1 << 4)  /* 16 */
+#define ITEM_INVISIBLE        (1 << 5)  /* 32 */
+#define ITEM_MAGIC            (1 << 6)  /* 64 */
+#define ITEM_NO_DROP          (1 << 7)  /* 128 */
+#define ITEM_BLESS            (1 << 8)  /* 256 */
+#define ITEM_ANTI_GOOD        (1 << 9)  /* 512 */
+#define ITEM_ANTI_EVIL        (1 << 10) /* 1024 */
+#define ITEM_ANTI_NEUTRAL     (1 << 11) /* 2048 */
+#define ITEM_ANTI_WARRIOR     (1 << 12) /* 4096 */
+#define ITEM_ANTI_THIEF       (1 << 13) /* 8192 */
+#define ITEM_ANTI_CLERIC      (1 << 14) /* 16384 */
+#define ITEM_ANTI_MAGIC_USER  (1 << 15) /* 32768 */
+#define ITEM_ANTI_MORTAL      (1 << 16) /* 65536 */
+#define ITEM_NO_DISINTEGRATE  (1 << 17) /* 131072 */
+#define ITEM_DISPELLED        (1 << 18) /* 262144 */
+#define ITEM_ANTI_RENT        (1 << 19) /* 524288 */
+#define ITEM_ANTI_NINJA       (1 << 20) /* 1048576 */
+#define ITEM_ANTI_NOMAD       (1 << 21) /* 2097152 */
+#define ITEM_ANTI_PALADIN     (1 << 22) /* 4194304 */
+#define ITEM_ANTI_ANTIPALADIN (1 << 23) /* 8388608 */
+#define ITEM_ANTI_AVATAR      (1 << 24) /* 16777216 */
+#define ITEM_ANTI_BARD        (1 << 25) /* 33554432 */
+#define ITEM_ANTI_COMMANDO    (1 << 26) /* 67108864 */
+#define ITEM_LIMITED          (1 << 27) /* 134217728 */
+#define ITEM_ANTI_AUCTION     (1 << 28) /* 268435456 */
+#define ITEM_CHAOTIC          (1 << 29) /* 536870912 */
 
 /* Object bit flags -- used in 'extra_flags2' */
-#define ITEM_RANDOM           1
-#define ITEM_ALL_DECAY        2
-#define ITEM_EQ_DECAY         4
-#define ITEM_NO_GIVE          8
-#define ITEM_NO_GIVE_MOB      16
-#define ITEM_NO_PUT           32
-#define ITEM_NO_TAKE_MOB      64
-#define ITEM_EXTRA2_128       128
-#define ITEM_NO_LOCATE        256
-#define ITEM_RANDOM_AFF0      512
-#define ITEM_RANDOM_AFF1      1024
-#define ITEM_RANDOM_AFF2      2048
+#define ITEM_RANDOM           (1 << 0)  /* 1 */
+#define ITEM_ALL_DECAY        (1 << 1)  /* 2 */
+#define ITEM_EQ_DECAY         (1 << 2)  /* 4 */
+#define ITEM_NO_GIVE          (1 << 3)  /* 8 */
+#define ITEM_NO_GIVE_MOB      (1 << 4)  /* 16 */
+#define ITEM_NO_PUT           (1 << 5)  /* 32 */
+#define ITEM_NO_TAKE_MOB      (1 << 6)  /* 64 */
+#define ITEM_EXTRA2_128       (1 << 7)  /* 128 */
+#define ITEM_NO_LOCATE        (1 << 8)  /* 256 */
+#define ITEM_RANDOM_AFF0      (1 << 9)  /* 512 */
+#define ITEM_RANDOM_AFF1      (1 << 10) /* 1024 */
+#define ITEM_RANDOM_AFF2      (1 << 11) /* 2048 */
 
 /* Object bit flags -- used in 'subclass_res' */
-#define ITEM_ANTI_ENCHANTER   1
-#define ITEM_ANTI_ARCHMAGE    2
-#define ITEM_ANTI_DRUID       4
-#define ITEM_ANTI_TEMPLAR     8
-#define ITEM_ANTI_ROGUE       16
-#define ITEM_ANTI_BANDIT      32
-#define ITEM_ANTI_WARLORD     64
-#define ITEM_ANTI_GLADIATOR   128
-#define ITEM_ANTI_RONIN       256
-#define ITEM_ANTI_MYSTIC      512
-#define ITEM_ANTI_RANGER      1024
-#define ITEM_ANTI_TRAPPER     2048
-#define ITEM_ANTI_CAVALIER    4096
-#define ITEM_ANTI_CRUSADER    8192
-#define ITEM_ANTI_DEFILER     16384
-#define ITEM_ANTI_INFIDEL     32768
-#define ITEM_ANTI_BLADESINGER 65536
-#define ITEM_ANTI_CHANTER     131072
-#define ITEM_ANTI_LEGIONNAIRE 262144
-#define ITEM_ANTI_MERCENARY   524288
+#define ITEM_ANTI_SC_ENCHANTER   (1 << 0)  /* 1 */
+#define ITEM_ANTI_SC_ARCHMAGE    (1 << 1)  /* 2 */
+#define ITEM_ANTI_SC_DRUID       (1 << 2)  /* 4 */
+#define ITEM_ANTI_SC_TEMPLAR     (1 << 3)  /* 8 */
+#define ITEM_ANTI_SC_ROGUE       (1 << 4)  /* 16 */
+#define ITEM_ANTI_SC_BANDIT      (1 << 5)  /* 32 */
+#define ITEM_ANTI_SC_WARLORD     (1 << 6)  /* 64 */
+#define ITEM_ANTI_SC_GLADIATOR   (1 << 7)  /* 128 */
+#define ITEM_ANTI_SC_RONIN       (1 << 8)  /* 256 */
+#define ITEM_ANTI_SC_MYSTIC      (1 << 9)  /* 512 */
+#define ITEM_ANTI_SC_RANGER      (1 << 10) /* 1024 */
+#define ITEM_ANTI_SC_TRAPPER     (1 << 11) /* 2048 */
+#define ITEM_ANTI_SC_CAVALIER    (1 << 12) /* 4096 */
+#define ITEM_ANTI_SC_CRUSADER    (1 << 13) /* 8192 */
+#define ITEM_ANTI_SC_DEFILER     (1 << 14) /* 16384 */
+#define ITEM_ANTI_SC_INFIDEL     (1 << 15) /* 32768 */
+#define ITEM_ANTI_SC_BLADESINGER (1 << 16) /* 65536 */
+#define ITEM_ANTI_SC_CHANTER     (1 << 17) /* 131072 */
+#define ITEM_ANTI_SC_LEGIONNAIRE (1 << 18) /* 262144 */
+#define ITEM_ANTI_SC_MERCENARY   (1 << 19) /* 524288 */
 
 /* Corpse and Statue flags -- used in 'cost' */
 #define PC_CORPSE             1
@@ -304,11 +305,18 @@ typedef struct social_messg       SOC;
 /* Room Data */
 
 /* Reserved Room VNUMs */
-#define ROOM_TEMPLE_MIDGAARD  3001
-#define ROOM_MARKET_SQUARE    3014
-#define ROOM_MORGUE           3088
-#define ROOM_DONATION         3084
-#define ROOM_SCRAPYARD        3030
+#define ROOM_VOID                0
+#define ROOM_LIMBO               1
+#define ROOM_PRISON              10
+#define ROOM_CHAT_ROOM           1200
+#define ROOM_LOST_TREASURE_TROVE 1201
+#define ROOM_QUESTERS_FORUM      1204
+#define ROOM_TEMPLE_OF_MIDGAARD  3001
+#define ROOM_MARKET_SQUARE       3014
+#define ROOM_SCRAPYARD           3030
+#define ROOM_AUCTION_HALL        3072
+#define ROOM_MORGUE              3088
+#define ROOM_DONATION            3084
 
 
 struct string_block {
@@ -565,7 +573,7 @@ struct room_data
 #define AFF_HOLD             64
 #define AFF_SANCTUARY        128
 #define AFF_GROUP            256
-#define AFF_512              512 /* Unused */
+#define AFF_DETECT_POISON    512
 #define AFF_CURSE            1024
 #define AFF_SPHERE           2048
 #define AFF_POISON           4096
@@ -900,6 +908,7 @@ struct room_data
 #define IMMUNE2_TAUNT         (1 << 8)  /* 256 */
 #define IMMUNE2_STEAL         (1 << 9)  /* 512 */
 #define IMMUNE2_CURSE         (1 << 10) /* 1024 */
+#define IMMUNE2_HOLD          (1 << 11) /* 2048 */
 
 /* Player flags -- used in specials.pflag */
 #define PLR_BRIEF             (1 << 0)  /* 1 */
@@ -1778,28 +1787,26 @@ struct descriptor_data
   struct descriptor_data *next; /* link to next descriptor    */
 };
 
-struct msg_type
-{
-  char *attacker_msg;  /* message to attacker */
-  char *victim_msg;    /* message to victim   */
-  char *room_msg;      /* message to room     */
+struct msg_type {
+  char *attacker_msg;
+  char *victim_msg;
+  char *room_msg;
 };
 
-struct message_type
-{
-  struct msg_type die_msg;      /* messages when death            */
-  struct msg_type miss_msg;     /* messages when miss             */
-  struct msg_type hit_msg;      /* messages when hit              */
-  struct msg_type sanctuary_msg;/* messages when hit on sanctuary */
-  struct msg_type god_msg;      /* messages when hit on god       */
-  struct message_type *next;/* to next messages of this kind.*/
+struct message_type {
+  struct msg_type die_msg;
+  struct msg_type miss_msg;
+  struct msg_type hit_msg;
+  struct msg_type god_msg;
+
+  struct message_type *next;
 };
 
-struct message_list
-{
-  int a_type;               /* Attack type              */
-  int number_of_attacks;    /* How many attack messages to chose from. */
-  struct message_type *msg; /* List of messages.         */
+struct message_list {
+  int attack_type;
+  int number_of_attacks;
+
+  struct message_type *msg;
 };
 
 struct dex_skill_type

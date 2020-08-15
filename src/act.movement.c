@@ -37,7 +37,7 @@ void dt_cry(CHAR *ch) {
 
   for (int dir = NORTH; dir <= DOWN; dir++) {
     if (CAN_GO(ch, dir)) {
-      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r", world[CHAR_REAL_ROOM(ch)].dir_option[dir]->to_room_r);
+      send_to_room("Your body stiffens as you hear someone scream in agony.\n\r", EXIT(ch, dir)->to_room_r);
     }
   }
 }
@@ -112,213 +112,213 @@ int dt_or_hazard(CHAR *ch) {
   return FALSE;
 }
 
-int special(struct char_data *ch, int cmd, char *arg);
-int signal_room(int room, CHAR *ch, int cmd, char *arg);
-int do_simple_move(struct char_data *ch, int cmd, int spec_check) {
 /*
-Assumes:
-  1. That there is no master and no followers.
-  2. That the direction exists.
+Move a character (and their mount) in the direction specified; does not move followers.
 
-Returns:
-  1 : If success.
-  0 : If failure.
- -1 : If dead.
+Returns 1 if movement succeeded, 0 if movement failed, -1 if movement killed the character.
 */
+int move_char(CHAR *ch, int dir, bool spec_check) {
   char buf[MSL];
 
-  /* Check for special routines (North is 1) */
-  if (spec_check && special(ch, cmd + 1, "")) {
-    return FALSE;
-  }
+  /* Sanity checks. */
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE) || (dir < NORTH) || (dir > DOWN) || !world[CHAR_REAL_ROOM(ch)].dir_option[dir]) return FALSE;
 
-  /* Check for Pray. */
-  if (!IS_IMMORTAL(ch) &&
-      affected_by_spell(ch, SKILL_PRAY)) {
-    send_to_char("You are deep in prayer, unable to follow.\n\r", ch);
+  /* Record the destination room. */
+  int dest_room_rnum = EXIT(ch, dir)->to_room_r;
 
-    return FALSE;
-  }
+  /* Check that the exit leads to a valid room. */
+  if ((dest_room_rnum == NOWHERE) || (dest_room_rnum == real_room(0))) return FALSE;
 
-  /* Check for Meditation. */
-  if (!IS_IMMORTAL(ch) &&
-      (affected_by_spell(ch, SKILL_MEDITATE) &&
-      (duration_of_spell(ch, SKILL_MEDITATE) > (CHAOSMODE ? 9 : 29)))) {
-    send_to_char("You are deep in meditation, unable to follow.\n\r", ch);
+  /* Check for invalid movement positions. */
+  if (GET_POS(ch) <= POSITION_STUNNED) {
+    send_to_char("You are in pretty bad shape, unable to do anything!\n\r", ch);
 
     return FALSE;
   }
+  else if (GET_POS(ch) == POSITION_SLEEPING) {
+    send_to_char("In your dreams, or what?\n\r", ch);
 
-  if (!world[CHAR_REAL_ROOM(ch)].dir_option[cmd] ||
-       (world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == NOWHERE) ||
-       (world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r == real_room(0))) return FALSE;
-
-  /* Check for tunnel flee escape. */
-  if (IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, TUNNEL) &&
-      IS_MORTAL(ch) &&
-      (count_mortals_real_room(world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r) > 0) &&
-      !CHAOSMODE) {
-    send_to_char("It's too narrow to go there.\n\r", ch);
+    return FALSE;
+  }
+  else if (GET_POS(ch) == POSITION_RESTING) {
+    send_to_char("Nah... You feel too relaxed to do that...\n\r", ch);
 
     return FALSE;
   }
 
-  /* Check if mount can move. */
-  if (GET_MOUNT(ch) &&
-      (GET_POS(GET_MOUNT(ch)) != POSITION_FLYING) &&
-      (GET_POS(GET_MOUNT(ch)) != POSITION_STANDING) &&
-      (GET_POS(GET_MOUNT(ch)) != POSITION_SWIMMING)) {
-    send_to_char("Your mount is unable to move.\n\r", ch);
+  if (!IS_IMMORTAL(ch)) {
+    /* Check for Pray. */
+    if (affected_by_spell(ch, SKILL_PRAY)) {
+      send_to_char("You are deep in prayer, unable to follow.\n\r", ch);
 
-    return FALSE;
-  }
+      return FALSE;
+    }
 
-  /* Check if exit is a flying room. */
-  if (IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, FLYING) &&
-      !IS_IMMORTAL(ch)) {
-    if (cmd == UP) {
-      if (GET_MOUNT(ch)) {
-        if (!IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_FLY)) {
-          send_to_char("Your mount isn't capable of flight.\n\r", ch);
+    /* Check for Meditation. */
+    if (affected_by_spell(ch, SKILL_MEDITATE) && (duration_of_spell(ch, SKILL_MEDITATE) >= 10)) {
+      send_to_char("You are deep in meditation, unable to follow.\n\r", ch);
 
-          return FALSE;
-        }
-        if (!IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
-          send_to_char("Your mount isn't flying.\n\r", ch);
+      return FALSE;
+    }
 
-          return FALSE;
-        }
-      }
-      else if (IS_MORTAL(ch)) {
-        send_to_char("You need a flying mount to gain altitude.\n\r", ch);
+    /* Check for Paralaysis and Hold Person. */
+    if (!GET_MOUNT(ch) && (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD))) {
+      /* Ronin SC3: Combat Zen - 50% chance to be able to move, even if paralyzed or held. */
+      if (!(IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3) && chance(50))) {
+        send_to_char("You are paralyzed!  You can't move!\n\r", ch);
 
         return FALSE;
       }
     }
 
-    if (GET_MOUNT(ch) && !IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
-      send_to_char("Your mount isn't flying.\n\r", ch);
+    /* Check if mount can move. */
+    if (GET_MOUNT(ch) && ((GET_POS(GET_MOUNT(ch)) < POSITION_STANDING) || (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)))) {
+      send_to_char("Your mount is unable to move.\n\r", ch);
 
       return FALSE;
     }
-    else if (!IS_AFFECTED(ch, AFF_FLY)) {
-      send_to_char("You are not flying.\n\r", ch);
+
+    /* Check for tunnel. */
+    if (IS_SET(ROOM_FLAGS(dest_room_rnum), TUNNEL) && (count_mortals_real_room(dest_room_rnum) > 0) && !CHAOSMODE) {
+      send_to_char("It's too narrow to go there.\n\r", ch);
 
       return FALSE;
     }
-  }
 
-  /* Check to see if they have a boat, or can swim. */
-  if (((world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM) ||
-       (world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type == SECT_WATER_NOSWIM)) &&
-      !IS_IMMORTAL(ch)) {
-    if (GET_MOUNT(ch) && !HAS_BOAT(GET_MOUNT(ch))) {
-      send_to_char("Your mount needs a boat to go there.\n\r", ch);
+    /* Check if exit is a flying room. */
+    if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), FLYING) || IS_SET(ROOM_FLAGS(dest_room_rnum), FLYING)) {
+      if (dir == UP) {
+        if (GET_MOUNT(ch)) {
+          if (!IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_FLY)) {
+            send_to_char("Your mount isn't capable of flight.\n\r", ch);
+
+            return FALSE;
+          }
+          else if (!IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
+            send_to_char("Your mount isn't flying.\n\r", ch);
+
+            return FALSE;
+          }
+        }
+        else if (IS_MORTAL(ch)) {
+          send_to_char("You need a flying mount to gain altitude.\n\r", ch);
+
+          return FALSE;
+        }
+      }
+      else {
+        if (GET_MOUNT(ch) && !IS_AFFECTED(GET_MOUNT(ch), AFF_FLY)) {
+          send_to_char("Your mount isn't flying.\n\r", ch);
+
+          return FALSE;
+        }
+        else if (!IS_AFFECTED(ch, AFF_FLY)) {
+          send_to_char("You are not flying.\n\r", ch);
+
+          return FALSE;
+        }
+      }
     }
-    else if (!HAS_BOAT(ch)) {
-      send_to_char("You need a boat to go there.\n\r", ch);
 
-      return FALSE;
+    /* Check to see if they have a boat, or can swim. */
+    if (!IS_IMMORTAL(ch) && ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_NOSWIM) || (ROOM_SECTOR_TYPE(dest_room_rnum) == SECT_WATER_NOSWIM))) {
+      if (GET_MOUNT(ch) && !HAS_BOAT(GET_MOUNT(ch))) {
+        send_to_char("Your mount needs a boat to go there.\n\r", ch);
+
+        return FALSE;
+      }
+      else if (!HAS_BOAT(ch)) {
+        send_to_char("You need a boat to go there.\n\r", ch);
+
+        return FALSE;
+      }
     }
   }
 
-  /* Calculate encumberance modifier. */
-  int carrying_weight = IS_CARRYING_W(ch);
-  int can_carry_weight = CAN_CARRY_W(ch);
+  /* Calculate encumberance factor. */
+  int encumberance_factor = 1, carry_weight = IS_CARRYING_W(ch), max_carry_weight = CAN_CARRY_W(ch);
 
-  int encumb_modifier = 1;
-
-  if (carrying_weight >= 3 * can_carry_weight) {
-    encumb_modifier = 6;
+  if (carry_weight >= (3 * max_carry_weight)) {
+    encumberance_factor = 6;
   }
-  else if (carrying_weight >= 5 * can_carry_weight / 2) {
-    encumb_modifier = 5;
+  else if (carry_weight >= (5 * max_carry_weight) / 2) {
+    encumberance_factor = 5;
   }
-  else if (carrying_weight >= 2 * can_carry_weight) {
-    encumb_modifier = 4;
+  else if (carry_weight >= (2 * max_carry_weight)) {
+    encumberance_factor = 4;
   }
-  else if (carrying_weight >= 3 * can_carry_weight / 2) {
-    encumb_modifier = 3;
+  else if (carry_weight >= (3 * max_carry_weight) / 2) {
+    encumberance_factor = 3;
   }
-  else if (carrying_weight >= can_carry_weight) {
-    encumb_modifier = 2;
+  else if (carry_weight >= max_carry_weight) {
+    encumberance_factor = 2;
   }
 
-  int need_movement = encumb_modifier * (movement_loss[world[CHAR_REAL_ROOM(ch)].sector_type] +
-                      movement_loss[world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].sector_type]) / 2;
+  int move_points_needed = encumberance_factor * (movement_loss[ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch))] + movement_loss[ROOM_SECTOR_TYPE(dest_room_rnum)]) / 2;
 
   /* Handle riding. */
   if (GET_MOUNT(ch)) {
-    need_movement = 1;
+    move_points_needed = 3;
 
-    if (IS_SET(GET_ACT(GET_MOUNT(ch)), ACT_MOUNT)) {
-      need_movement = 3;
+    const int BRIDLE = 3900, SADDLE = 3904;
 
-      const int BRIDLE = 3900;
-      const int SADDLE = 3904;
-
-      /* Check for bridle. */
-      if (EQ(GET_MOUNT(ch), WEAR_NECK_1)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_1)) == BRIDLE) need_movement--;
-      }
-      else if (EQ(GET_MOUNT(ch), WEAR_NECK_2)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_2)) == BRIDLE) need_movement--;
-      }
-
-      /* Check for saddle. */
-      if (EQ(GET_MOUNT(ch), WEAR_BODY)) {
-        if (V_OBJ(EQ(GET_MOUNT(ch), WEAR_BODY)) == SADDLE) need_movement--;
-      }
+    /* Check for bridle. */
+    if ((EQ(GET_MOUNT(ch), WEAR_NECK_1) && (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_1)) == BRIDLE)) || (EQ(GET_MOUNT(ch), WEAR_NECK_2) && (V_OBJ(EQ(GET_MOUNT(ch), WEAR_NECK_2)) == BRIDLE))) {
+      move_points_needed--;
     }
 
-    need_movement = MAX(need_movement, 1);
-  }
+    /* Check for saddle. */
+    if (EQ(GET_MOUNT(ch), WEAR_BODY) && (V_OBJ(EQ(GET_MOUNT(ch), WEAR_BODY)) == SADDLE)) {
+      move_points_needed--;
+    }
 
-  /* Check for Paralaysis and Hold Person. */
-  if (!IS_IMMORTAL(ch) &&
-      !GET_MOUNT(ch) &&
-      (IS_AFFECTED(ch, AFF_PARALYSIS) || IS_AFFECTED(ch, AFF_HOLD)) &&
-      /* Combat Zen */
-      !(IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3) && chance(50))) {
-    send_to_char("You are paralyzed!  You can't move!\n\r", ch);
-
-    return FALSE;
+    move_points_needed = MAX(move_points_needed, 1);
   }
 
   // Prestige Perk 23
   if (GET_PRESTIGE_PERK(ch) >= 23) {
-    need_movement = MAX(need_movement - 1, 1);
+    move_points_needed = MAX(move_points_needed - 1, 1);
   }
 
   /* Check for exhaustion. */
-  if (IS_MORTAL(ch) && (GET_MOVE(ch) < need_movement)) {
+  if (IS_MORTAL(ch) && (GET_MOVE(ch) < move_points_needed)) {
     if (GET_MASTER(ch)) {
       send_to_char("You are too exhausted to follow.\n\r", ch);
+
+      return FALSE;
     }
     else {
       send_to_char("You are too exhausted.\n\r", ch);
-    }
 
-    return FALSE;
+      return FALSE;
+    }
   }
 
-  /* Wall of Thorns */
-  if (!IS_IMMORTAL(ch) &&
-    (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) ||
-      get_obj_room(WALL_THORNS, world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].number))) {
-    send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
+  /* Druid SC3: Wall of Thorns - Blocks NPC movement and PC movement in chaotic rooms. */
+  if (IS_NPC(ch) || (IS_MORTAL(ch) && (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) || ROOM_CHAOTIC(dest_room_rnum)))) {
+    OBJ *thorns_here = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch));
+    OBJ *thorns_there = get_obj_room(WALL_THORNS, ROOM_VNUM(dest_room_rnum));
 
-    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    if (thorns_here || thorns_there) {
+      OBJ *thorns = thorns_here ? thorns_here : thorns_there;
 
-    return FALSE;
+      if (ROOM_SAFE(OBJ_IN_ROOM(thorns))) {
+        send_to_char("A wall of thorns blocks your way.\n\r", ch);
+      }
+      else {
+        send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
+
+        damage(ch, ch, MIN(GET_HIT(ch) - 1, OBJ_SPEC(thorns)), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+      }
+
+      return FALSE;
+    }
   }
 
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
-    if ((IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, HAZARD) ||
-         IS_SET(world[world[CHAR_REAL_ROOM(ch)].dir_option[cmd]->to_room_r].room_flags, DEATH)) &&
-        chance(50)) {
-      send_to_char("You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r", ch);
+    if (IS_MORTAL(ch) && (IS_SET(ROOM_FLAGS(dest_room_rnum), HAZARD) || IS_SET(ROOM_FLAGS(dest_room_rnum), DEATH)) && chance(50)) {
+      send_to_char("You avoid certain death at the last instant and are momentarily paralyzed with fear.\n\r", ch);
 
       GET_MOVE(ch) = 0;
 
@@ -326,110 +326,84 @@ Returns:
     }
   }
 
+  /* Call room special prior to movement. */
+  if (spec_check) {
+    /* Check room special result. */
+    if (special(ch, dir + 1, "")) return FALSE;
+
+    /* Check if the room special killed the character. */
+    if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return -1;
+  }
+
+  /* Deduct movement points from character. */
   if (IS_MORTAL(ch)) {
-    GET_MOVE(ch) -= need_movement;
+    GET_MOVE(ch) -= move_points_needed;
   }
 
-  if (world[CHAR_REAL_ROOM(ch)].sector_type == SECT_WATER_NOSWIM &&
-      !IS_IMMORTAL(ch) &&
-      GET_CLASS(ch) == CLASS_NINJA &&
-      !IS_AFFECTED(ch, AFF_FLY) &&
-      GET_POS(ch) != POSITION_RIDING) {
-    GET_POS(ch) = POSITION_SWIMMING;
-  }
-
-  if (IS_AFFECTED(ch, AFF_FLY)) {
-    if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-      snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
-    }
-    else {
-      snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
-    }
-
-    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
-  }
-  else if (GET_POS(ch) == POSITION_SWIMMING) {
-    if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-      snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
-    }
-    else {
-      snprintf(buf, sizeof(buf), "$n swims %s.", dirs[cmd]);
-    }
-
-    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
-  }
-  else if (GET_MOUNT(ch)) {   
-    if (GET_POS(GET_MOUNT(ch)) == POSITION_FLYING) {
-      snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
-    }
-    else {
-      snprintf(buf, sizeof(buf), "$n rides %s.", dirs[cmd]);
-    }
-
-    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, TO_ROOM);
-  }
-  else if (GET_RIDER(ch)) {
-    for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
-      if (CAN_SEE(tmp_ch, GET_RIDER(ch)) && (tmp_ch != GET_RIDER(ch))) {
-        if (GET_POS(ch) == POSITION_FLYING) {
-          snprintf(buf, sizeof(buf), "$n flies %s.", dirs[cmd]);
-        }
-        else {
-          snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
-        }
-
-        act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, tmp_ch, TO_VICT);
-      }
-    }
+  /* Determine movement text. */
+  if (GET_POOFOUT(ch) && !IS_IMMORTAL(ch)) {
+    snprintf(buf, sizeof(buf), "%s", GET_POOFOUT(ch));
   }
   else {
-    if (!IS_IMMORTAL(ch) && (GET_HIT(ch) < (hit_limit(ch) / 10))) {
-      snprintf(buf, sizeof(buf), "$n crawls %s.", dirs[cmd]);
-    }
-    else {
-      if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-        snprintf(buf, sizeof(buf), "%s", ch->player.poofout);
-      }
-      else {
-        snprintf(buf, sizeof(buf), "$n leaves %s.", dirs[cmd]);
-      }
+    char verb[MIL];
+
+    switch (GET_POS(ch)) {
+      case POSITION_FLYING:
+        snprintf(verb, sizeof(verb), "flies");
+        break;
+
+      case POSITION_RIDING:
+        snprintf(verb, sizeof(verb), "rides");
+        break;
+
+      case POSITION_SWIMMING:
+        snprintf(verb, sizeof(verb), "swims");
+        break;
+
+      default:
+        if (!IS_IMMORTAL(ch) && (GET_HIT(ch) < (hit_limit(ch) / 10))) {
+          snprintf(verb, sizeof(verb), "crawls");
+        }
+        else {
+          snprintf(verb, sizeof(verb), "leaves");
+        }
+        break;
     }
 
-    /* If sneaking, only send movement text to group. Otherwise, send to room. */
-    act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
+    snprintf(buf, sizeof(buf), "$n %s %s.", verb, dirs[dir]);
   }
 
-  /* If adding hunting, or scanning, or blood trail, etc.,
-     it should probably be added here. */
+  /* If sneaking, only send movement text to group; otherwise, send to room. */
+  act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM);
 
   /* Signal the room the character is moving from. */
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_LEAVE, "")) return FALSE;
 
-  /* In case MSG_LEAVE kills. */
-  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
-
-  int was_in = CHAR_REAL_ROOM(ch);
+  /* In case MSG_LEAVE kills the character. */
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return -1;
 
   /* Move the character. */
   char_from_room(ch);
-  char_to_room(ch, world[was_in].dir_option[cmd]->to_room_r);
+  char_to_room(ch, dest_room_rnum);
 
-  /* Move their mount. */
+  do_look(ch, "", CMD_LOOK);
+
+  /* Move their mount, if they have one. */
   if (GET_MOUNT(ch)) {
     char_from_room(GET_MOUNT(ch));
-    char_to_room(GET_MOUNT(ch), world[was_in].dir_option[cmd]->to_room_r);
+    char_to_room(GET_MOUNT(ch), dest_room_rnum);
   }
 
   /* Show arrival message, as approrpriate. */
-  if (ch->player.poofout && (GET_LEVEL(ch) < LEVEL_IMM)) {
-    snprintf(buf, sizeof(buf), "%s", ch->player.poofin);
+  if (GET_POOFIN(ch) && (GET_LEVEL(ch) < LEVEL_IMM)) {
+    snprintf(buf, sizeof(buf), "%s", GET_POOFIN(ch));
   }
   else {
     snprintf(buf, sizeof(buf), "$n has arrived.");
   }
 
   if (GET_RIDER(ch)) {
-    for (CHAR *tmp_ch = world[CHAR_REAL_ROOM(ch)].people; tmp_ch; tmp_ch = tmp_ch->next_in_room) {
+    for (CHAR *tmp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); tmp_ch; tmp_ch = tmp_ch->next_in_room) {
       if (CAN_SEE(tmp_ch, GET_RIDER(ch)) && (tmp_ch != GET_RIDER(ch))) {
         act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, tmp_ch, TO_VICT);
       }
@@ -440,46 +414,41 @@ Returns:
     act(buf, COMM_ACT_HIDE_SUPERBRF, ch, 0, 0, (IS_AFFECTED(ch, AFF_SNEAK) ? TO_GROUP : TO_ROOM));
   }
 
-  /* Do look for the character. */
-  do_look(ch, "", CMD_LOOK);
-
-  /* Do look for the mount. */
-  if (GET_MOUNT(ch)) {
-    do_look(GET_MOUNT(ch), "", CMD_LOOK);
-  }
-
   /* Signal the room the character just moved to. */
   if (signal_room(CHAR_REAL_ROOM(ch), ch, MSG_ENTER, "")) return FALSE;
 
-  /* In case MSG_ENTER kills. */
+  /* Check if signal_room killed the character.  */
   if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return FALSE;
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MOVE_TRAP) && !IS_IMMORTAL(ch)) {
+  /* Check for move trap. */
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), MOVE_TRAP) && !IS_IMMORTAL(ch)) {
     send_to_char("\n\rYour movement points have been drained by the surroundings.\n\r", ch);
 
     GET_MOVE(ch) = 0;
   }
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, MANA_DRAIN) && !IS_IMMORTAL(ch)) {
+  /* Check for mana drain. */
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), MANA_DRAIN) && !IS_IMMORTAL(ch)) {
     send_to_char("\n\rYour mana has been drained by the surroundings.\n\r", ch);
 
     GET_MANA(ch) = 0;
   }
 
+  /* Check for death trap/hazard. */
   if (dt_or_hazard(ch)) return -1;
 
   /* Check for trap rooms. */
   int trap_check = number(1, 110);
 
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP) &&
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), TRAP) &&
       (GET_POS(ch) != POSITION_FLYING) &&
       ((IS_NPC(ch) && (trap_check > (GET_LEVEL(ch) * 2))) ||
-       (IS_MORTAL(ch) && IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) && (trap_check > (GET_LEVEL(ch) * 2))) ||
+       (IS_MORTAL(ch) && IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC) && (trap_check > (GET_LEVEL(ch) * 2))) ||
        (IS_MORTAL(ch) && CHAOSMODE && (trap_check > GET_LEVEL(ch))))) {
     send_to_char("You fell into a trap!\n\r", ch);
     act("$n fell into a trap!", FALSE, ch, 0, 0, TO_ROOM);
 
-    REMOVE_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
+    REMOVE_BIT(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), TRAP);
 
     GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
 
@@ -490,38 +459,43 @@ Returns:
 }
 
 
-void do_move(struct char_data *ch, char *argument, int cmd) {
-  --cmd;
+void do_move(CHAR *ch, char *argument, int cmd) {
+  if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
 
+  /* Directions are 1 less than their respective commands. */
+  int dir = cmd - 1;
+
+  /* Sanity check. */
+  if ((dir < NORTH) || (dir > DOWN)) return;
+
+  /* Check for severed. */
   if (IS_SET(GET_AFF2(ch), AFF2_SEVERED)) {
     send_to_char("Move without legs?  How!?\n\r", ch);
 
     return;
   }
 
+  /* Check for death timer. */
   if (GET_DEATH_TIMER(ch) == 2) {
     send_to_char("You are near certain death; you can't move!\n\r", ch);
 
     return;
   }
 
-  if (!world[CHAR_REAL_ROOM(ch)].dir_option[cmd] ||
-      EXIT(ch, cmd)->to_room_r == NOWHERE ||
-      EXIT(ch, cmd)->to_room_r == real_room(0)) {
+  /* Check that the exit leads to a valid room, and that it's not a special exit type. */
+  if (!EXIT(ch, dir) ||
+      EXIT(ch, dir)->to_room_r == NOWHERE ||
+      EXIT(ch, dir)->to_room_r == real_room(0) ||
+      IS_SET(EXIT(ch, dir)->exit_info, EX_CLIMB) ||
+      IS_SET(EXIT(ch, dir)->exit_info, EX_JUMP) ||
+      IS_SET(EXIT(ch, dir)->exit_info, EX_CRAWL) ||
+      IS_SET(EXIT(ch, dir)->exit_info, EX_ENTER)) {
     send_to_char("Alas, you cannot go that way...\n\r", ch);
 
     return;
   }
 
-  if (IS_SET(EXIT(ch, cmd)->exit_info, EX_CLIMB) ||
-      IS_SET(EXIT(ch, cmd)->exit_info, EX_JUMP) ||
-      IS_SET(EXIT(ch, cmd)->exit_info, EX_CRAWL) ||
-      IS_SET(EXIT(ch, cmd)->exit_info, EX_ENTER)) {
-    send_to_char("Alas, you cannot go that way...\n\r", ch);
-
-    return;
-  }
-
+  /* Check for charm. */
   if (IS_AFFECTED(ch, AFF_CHARM) && GET_MASTER(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_MASTER(ch))) {
     send_to_char("The thought of leaving your master makes you weep.\n\r", ch);
     act("$n bursts into tears.", FALSE, ch, 0, 0, TO_ROOM);
@@ -529,23 +503,17 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
+  /* Check for mount. */
   if (IS_NPC(ch) && GET_RIDER(ch) && CHAR_REAL_ROOM(ch) == CHAR_REAL_ROOM(GET_RIDER(ch))) {
     send_to_char("You don't want to leave your master.\n\r", ch);
 
     return;
   }
 
-  if (!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch) || get_obj_room(WALL_THORNS, EXIT(ch, cmd)->to_room_v)))) {
-    send_to_char("A wall of thorns blocks your way. Ouch!\n\r", ch);
-
-    damage(ch, ch, 30, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
-
-    return;
-  }
-
-  if (IS_SET(EXIT(ch, cmd)->exit_info, EX_CLOSED)) {
-    if (EXIT(ch, cmd)->keyword) {
-      printf_to_char(ch, "The %s seems to be closed.\n\r", fname(EXIT(ch, cmd)->keyword));
+  /* Check if the exit is closed. */
+  if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)) {
+    if (EXIT(ch, dir)->keyword) {
+      printf_to_char(ch, "The %s seems to be closed.\n\r", fname(EXIT(ch, dir)->keyword));
     }
     else {
       send_to_char("It seems to be closed.\n\r", ch);
@@ -554,34 +522,27 @@ void do_move(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if (IS_SET(ROOM_FLAGS(EXIT(ch, cmd)->to_room_r), TUNNEL) &&
-      IS_MORTAL(ch) &&
-      (count_mortals_real_room(EXIT(ch, cmd)->to_room_r) > 0) &&
-      !CHAOSMODE) {
+  /* Check for tunnel. */
+  if (IS_MORTAL(ch) && IS_SET(ROOM_FLAGS(EXIT(ch, dir)->to_room_r), TUNNEL) && (count_mortals_real_room(EXIT(ch, dir)->to_room_r) > 0) && !CHAOSMODE) {
     send_to_char("It's too narrow to go there.\n\r", ch);
 
     return;
   }
 
-  int was_in = CHAR_REAL_ROOM(ch);
+  /* Record the original room. */
+  int orig_room_rnum = CHAR_REAL_ROOM(ch);
 
   /* Move the character. */
-  if (do_simple_move(ch, cmd, 1) == 1) {
-    if (!ch) {
-      log_f("WARNING: ch doesn't exist after movement");
-
-      return;
-    }
-
-    /* If success, move followers. */
-    for (struct follow_type *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
+  if (move_char(ch, dir, TRUE) == TRUE) {
+    /* Move the character's followers. */
+    for (FOL *temp_follower = ch->followers, *next_follower = NULL; temp_follower; temp_follower = next_follower) {
       next_follower = temp_follower->next;
 
-      if ((was_in != CHAR_REAL_ROOM(temp_follower->follower)) || (GET_POS(temp_follower->follower) < POSITION_STANDING)) continue;
+      if ((CHAR_REAL_ROOM(temp_follower->follower) == orig_room_rnum) && (GET_POS(temp_follower->follower) >= POSITION_STANDING)) {
+        act("You follow $N.\n\r", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
 
-      act("You follow $N.\n\r", FALSE, temp_follower->follower, 0, ch, TO_CHAR);
-
-      do_move(temp_follower->follower, argument, cmd + 1);
+        do_move(temp_follower->follower, argument, cmd);
+      }
     }
   }
 }
@@ -1652,62 +1613,80 @@ void do_sleep(struct char_data *ch, char *argument, int cmd) {
 }
 
 
-void do_wake(struct char_data *ch, char *argument, int cmd)
-{
-  struct char_data *tmp_char;
-  char arg[MAX_STRING_LENGTH];
+void do_wake(struct char_data *ch, char *argument, int cmd) {
+  char buf[MIL];
 
-  one_argument(argument, arg);
+  one_argument(argument, buf);
 
-  if (*arg) {
-    if (GET_POS(ch) == POSITION_SLEEPING) {
-      act("You can't wake people up if you are asleep yourself!",
-        FALSE, ch, 0, 0, TO_CHAR);
-    }
-    else {
-      tmp_char = get_char_room_vis(ch, arg);
-      if (tmp_char) {
-        if (tmp_char == ch) {
-          act("If you want to wake yourself up, just type 'wake'",
-            FALSE, ch, 0, 0, TO_CHAR);
-        }
-        else {
-          if (GET_POS(tmp_char) == POSITION_SLEEPING) {
-            if (IS_AFFECTED(tmp_char, AFF_SLEEP) && !ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
-              act("You can not wake $M up!", FALSE, ch, 0, tmp_char, TO_CHAR);
-            }
-            else {
-              if (IS_AFFECTED(tmp_char, AFF_SLEEP)) {
-                affect_from_char(tmp_char, SPELL_SLEEP);
-              }
-              act("You wake $M up.", FALSE, ch, 0, tmp_char, TO_CHAR);
-              GET_POS(tmp_char) = POSITION_SITTING;
-              act("You are awakened by $n.", FALSE, ch, 0, tmp_char, TO_VICT);
-            }
-          }
-          else {
-            act("$N is already awake.", FALSE, ch, 0, tmp_char, TO_CHAR);
-          }
-        }
-      }
-      else {
-        send_to_char("You do not see that person here.\n\r", ch);
-      }
-    }
-  }
-  else {
+  if (!(*buf)) {
     if (IS_AFFECTED(ch, AFF_SLEEP)) {
       send_to_char("You can't wake up!\n\r", ch);
+
+      return;
+    }
+
+    if (GET_POS(ch) != POSITION_SLEEPING) {
+      send_to_char("You are already awake...\n\r", ch);
+
+      return;
+    }
+
+    AFF *meditate = get_affect_from_char(ch, SKILL_MEDITATE);
+
+    if (meditate && meditate->duration >= 10) {
+      meditate->duration = 9;
+
+      send_to_char("You wake from your meditation, and sit up.\n\r", ch);
+      act("$n awakens from $s meditation.", TRUE, ch, 0, 0, TO_ROOM);
     }
     else {
-      if (GET_POS(ch) > POSITION_SLEEPING)
-        send_to_char("You are already awake...\n\r", ch);
-      else {
-        send_to_char("You wake, and sit up.\n\r", ch);
-        act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
-        GET_POS(ch) = POSITION_SITTING;
-      }
+      send_to_char("You wake, and sit up.\n\r", ch);
+      act("$n awakens.", TRUE, ch, 0, 0, TO_ROOM);
     }
+
+    GET_POS(ch) = POSITION_SITTING;
+  }
+  else {
+    CHAR *victim = get_char_room_vis(ch, buf);
+
+    if (victim != ch && GET_POS(ch) == POSITION_SLEEPING) {
+      send_to_char("You can't wake someone up if you are asleep yourself!\n\r", ch);
+
+      return;
+    }
+
+    if (victim == ch) {
+      do_wake(ch, "", CMD_WAKE);
+
+      return;
+    }
+
+    if (!victim) {
+      send_to_char("You do not see that person here.\n\r", ch);
+
+      return;
+    }
+
+    if (!IS_IMMORTAL(ch) && ((IS_AFFECTED(victim, AFF_SLEEP) && !ROOM_SAFE(CHAR_REAL_ROOM(ch))) || (affected_by_spell(victim, SKILL_MEDITATE) && (duration_of_spell(victim, SKILL_MEDITATE) >= 10)))) {
+      act("You can't wake $M up!", FALSE, ch, 0, victim, TO_CHAR);
+
+      return;
+    }
+
+    if (GET_POS(victim) != POSITION_SLEEPING) {
+      act("$N is already awake.", FALSE, ch, 0, victim, TO_CHAR);
+
+      return;
+    }
+
+    if (IS_AFFECTED(victim, AFF_SLEEP)) {
+      affect_from_char(victim, SPELL_SLEEP);
+    }
+
+    act("You wake $M up.", FALSE, ch, 0, victim, TO_CHAR);
+    act("You are awakened by $n.", FALSE, ch, 0, victim, TO_VICT);
+
+    GET_POS(victim) = POSITION_SITTING;
   }
 }
 
@@ -1838,14 +1817,17 @@ void do_subdue(struct char_data *ch, char *argument, int cmd)
 }
 
 
-void stop_riding(struct char_data *ch,struct char_data *vict) {
-  GET_POS(ch)=POSITION_STANDING;
-  ch->specials.riding=0;
-  if(vict) {
-    vict->specials.rider=0;
-    if(IS_AFFECTED(vict, AFF_CHARM))
-    { } /* Perhaps some descript for stables here later - Ranger */
-    else stop_follower(vict);
+void stop_riding(CHAR *ch, CHAR *victim) {
+  GET_POS(ch) = POSITION_STANDING;
+
+  GET_MOUNT(ch) = 0;
+
+  if (victim) {
+    GET_RIDER(victim) = 0;
+
+    if (!IS_AFFECTED(victim, AFF_CHARM)) {
+      stop_follower(victim);
+    }
   }
 }
 
@@ -2352,19 +2334,31 @@ void do_special_move(struct char_data *ch, char *arg, int cmd) {
     return;
   }
 
-  /* Wall of Thorns */
-  if ((!IS_IMMORTAL(ch) && (get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch)) || get_obj_room(WALL_THORNS, EXIT(ch, door)->to_room_v)))) {
-    printf_to_char(ch, "A wall of thorns blocks your way.  Ouch!\n\r");
+  /* Druid SC3: Wall of Thorns - Blocks NPC movement and PC movement in chaotic rooms. */
+  if (IS_NPC(ch) || (IS_MORTAL(ch) && (ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) || ROOM_CHAOTIC(EXIT(ch, door)->to_room_r)))) {
+    OBJ *thorns_here = get_obj_room(WALL_THORNS, CHAR_VIRTUAL_ROOM(ch));
+    OBJ *thorns_there = get_obj_room(WALL_THORNS, ROOM_VNUM(EXIT(ch, door)->to_room_r));
 
-    damage(ch, ch, MIN(GET_HIT(ch) - 1, 30), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+    if (thorns_here || thorns_there) {
+      OBJ *thorns = thorns_here ? thorns_here : thorns_there;
 
-    return;
+      if (ROOM_SAFE(OBJ_IN_ROOM(thorns))) {
+        send_to_char("A wall of thorns blocks your way.\n\r", ch);
+      }
+      else {
+        send_to_char("A wall of thorns blocks your way.  Ouch!\n\r", ch);
+
+        damage(ch, ch, MIN(GET_HIT(ch) - 1, OBJ_SPEC(thorns)), TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
+      }
+
+      return;
+    }
   }
 
   // Prestige Perk 7
   if (GET_PRESTIGE_PERK(ch) >= 7) {
     if ((IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, HAZARD) || IS_SET(world[EXIT(ch, door)->to_room_r].room_flags, DEATH)) && chance(50)) {
-      printf_to_char(ch, "You avoid certain death at the last moment and are momentarily paralyzed with fear.\n\r");
+      printf_to_char(ch, "You avoid certain death at the last instant and are momentarily paralyzed with fear.\n\r");
 
       GET_MOVE(ch) = 0;
 

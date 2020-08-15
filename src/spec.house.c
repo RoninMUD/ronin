@@ -779,7 +779,7 @@ int uber_dream_shadow(CHAR *uber, CHAR *ch, int cmd, char *arg) {
             af.bitvector2 = 0;
             affect_to_char(tch, &af);
             break;
-          } // carry on to SPELL_CLOUD_CONFUSION if affected by SPELL_INCENDIARY_CLOUD
+          } // carry on to SPELL_CLOUD_CONFUSION if affected by SPELL_INCENDIARY_CLOUD_OLD
         case 2:
           if(!affected_by_spell( tch, SPELL_CLOUD_CONFUSION )) {
             af.type = SPELL_CLOUD_CONFUSION;

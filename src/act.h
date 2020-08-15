@@ -36,6 +36,8 @@ void do_headbutt(CHAR *ch, char *argument, int cmd);
 void do_frenzy(CHAR *ch, char *argument, int cmd);
 void do_berserk(CHAR *ch, char *argument, int cmd);
 void do_evasion(CHAR *ch, char *argument, int cmd);
+void do_degenerate(CHAR *ch, char *argument, int cmd);
+void do_shapeshift(CHAR *ch, char *argument, int cmd);
 /* End Subclass skill commands */
 
 /* New olc commands */
@@ -206,12 +208,13 @@ void do_email(CHAR *ch, char *argument, int cmd);
 void do_idname(CHAR *ch, char *argument, int cmd);
 void do_gf(CHAR *ch, char *argument, int cmd);
 void do_identify(CHAR *ch, char *arg, int cmd);
+void look_in_room(CHAR *ch, int vnum);
 
 void do_special_move(struct char_data *ch, char *arg, int cmd);
 
 /* Utility things */
 
-int do_simple_move(CHAR *ch, int cmd, int spec_check);
+int move_char(CHAR *ch, int dir, bool spec_check);
 void do_move(CHAR *ch, char *argument, int cmd);
 void do_peek(CHAR *ch, char *argument, int cmd);
 int find_door(CHAR *ch, char *type, char *dir);
@@ -435,8 +438,11 @@ void wear(CHAR *ch, OBJ *obj, int eq_slot);
 void do_cunning(CHAR *ch, char *argument, int cmd);
 void do_coin_toss(CHAR *ch, char *arg, int cmd);
 void do_movestat(CHAR *ch, char *arg, int cmd);
+void do_succumb(CHAR *ch, char *arg, int cmd);
 void do_locate(CHAR *ch, char *arg, int cmd);
 void do_nop(CHAR *ch, char *arg, int cmd);
+void make_statue(CHAR *ch);
+void stop_riding(CHAR *ch, CHAR *victim);
 
 int calc_death_exp_mult(CHAR *ch);
 

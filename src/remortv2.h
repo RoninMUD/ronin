@@ -35,8 +35,8 @@
 #define RV2_TOKEN_MIN_VNUM         86
 #define RV2_TOKEN_MAX_VNUM         99
 
-#define RV2_MIN_EXP_COST           700000000
-#define RV2_MAX_EXP_COST           8000000000
+#define RV2_MIN_EXP_COST           1500000000
+#define RV2_MAX_EXP_COST           15000000000
 #define RV2_MAX_QP_COST            200
 #define RV2_MAX_SCP_COST           70
 

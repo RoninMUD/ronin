@@ -266,7 +266,7 @@
 #define CMD_LOGON              232
 #define CMD_LOGOFF             233
 #define CMD_CLAN               234
-#define CMD_SKILL235           235 /* Hemp - removed Backflip */
+#define CMD_DEGENERATE         235 /* Hemp - Removed Backflip */
 #define CMD_REINDEX            236 /* Ranger - March 2000 */
 #define CMD_SNOOPLIST          237 /* Quack - Jan 99 - To list active snoops */
 #define CMD_ZRATE              238 /* Ranger - Oct 2000 */
@@ -281,12 +281,13 @@
 #define CMD_PRAY               247
 #define CMD_COIN_TOSS          248
 #define CMD_LOCATE             249
+#define CMD_SUCCUMB            250
 
 /* Subclasses */
 #define CMD_MEDITATE           300
 #define CMD_PROTECT            301
 #define CMD_SUBCLASS           302
-#define CMD_303                303
+#define CMD_SHAPESHIFT         303
 #define CMD_DIRTY_TRICKS       304 
 #define CMD_BACKFIST           305
 #define CMD_AWARENESS          306

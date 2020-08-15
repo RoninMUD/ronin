@@ -317,12 +317,12 @@ int tweef_king(CHAR *king, CHAR *ch, int cmd, char *arg)
         act("The queen moans softly as she flashes a knowing glance towards the king.",0,temp,0,0,TO_ROOM);
         affect_from_char(temp,SPELL_BLINDNESS);
       }
-      if(affected_by_spell(temp,SPELL_WARCHANT) && chance(33))
+      if(affected_by_spell(temp,SPELL_WAR_CHANT_DEBUFF) && chance(33))
       {
         act("The king tries to heal Queen Larienne with an obscene gesture.",0,king,0,0,TO_ROOM);
         do_say(king,"We can speak of unspeakable acts later..",CMD_SAY);
         act("The queen cackles with glee as she flashes a knowing glance towards the king.",0,temp,0,0,TO_ROOM);
-        affect_from_char(temp,SPELL_WARCHANT);
+        affect_from_char(temp, SPELL_WAR_CHANT_DEBUFF);
       }
       if(affected_by_spell(temp,SPELL_CLOUD_CONFUSION) && chance(33))
       {

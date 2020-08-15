@@ -31,6 +31,7 @@
 #include "enchant.h"
 #include "quest.h"
 #include "char_spec.h"
+#include "aff_ench.h"
 
 /* Structures */
 
@@ -50,8 +51,12 @@ void brag(struct char_data *ch, struct char_data *victim);
 int hit_limit(CHAR * ch);
 
 /* Weapon attack texts. */
-struct attack_hit_type attack_hit_text[] =
-{
+struct attack_hit_type {
+  char *singular;
+  char *plural;
+};
+
+struct attack_hit_type attack_hit_text[] = {
   {"hit", "hits"},       /* TYPE_HIT      */
   {"pound", "pounds"},   /* TYPE_BLUDGEON */
   {"pierce", "pierces"}, /* TYPE_PIERCE   */
@@ -68,6 +73,12 @@ struct attack_hit_type attack_hit_text[] =
 
 /* The Fight related routines */
 
+int get_fight_message_index(int attack_type) {
+  if (attack_type < 0) return -1;
+
+  return search_fight_messages_list(0, top_of_fight_messages_list, attack_type);
+}
+
 
 void appear(CHAR *ch) {
   act("$n slowly fades into existence.", FALSE, ch, 0, 0, TO_ROOM);
@@ -79,99 +90,44 @@ void appear(CHAR *ch) {
   REMOVE_BIT(GET_AFF(ch), AFF_INVISIBLE);
 }
 
-
-void load_messages(void)
-{
-  FILE *f1;
-  int i, type;
-  struct message_type *messages;
-  char chk[100];
-
-  if (!(f1 = fopen(MESS_FILE, "r"))) {
-    log_f("read messages");
-    produce_core();
-  }
-
-  for (i = 0; i < MAX_MESSAGES; i++) {
-     fight_messages[i].a_type = 0;
-     fight_messages[i].number_of_attacks = 0;
-     fight_messages[i].msg = 0;
-  }
-
-  fscanf(f1, " %s \n", chk);
-
-  while (*chk == 'M') {
-    fscanf(f1," %d\n", &type);
-
-    for (i = 0; (i < MAX_MESSAGES) && (fight_messages[i].a_type != type) && (fight_messages[i].a_type); i++);
-
-    if (i >= MAX_MESSAGES) {
-      log_f("Too many combat messages.");
-      produce_core();
-    }
-
-    CREATE(messages, struct message_type, 1);
-    fight_messages[i].number_of_attacks++;
-    fight_messages[i].a_type = type;
-    messages->next = fight_messages[i].msg;
-    fight_messages[i].msg  =messages;
-
-    messages->die_msg.attacker_msg  = fread_string(f1);
-    messages->die_msg.victim_msg    = fread_string(f1);
-    messages->die_msg.room_msg      = fread_string(f1);
-    messages->miss_msg.attacker_msg = fread_string(f1);
-    messages->miss_msg.victim_msg   = fread_string(f1);
-    messages->miss_msg.room_msg     = fread_string(f1);
-    messages->hit_msg.attacker_msg  = fread_string(f1);
-    messages->hit_msg.victim_msg    = fread_string(f1);
-    messages->hit_msg.room_msg      = fread_string(f1);
-    messages->god_msg.attacker_msg  = fread_string(f1);
-    messages->god_msg.victim_msg    = fread_string(f1);
-    messages->god_msg.room_msg      = fread_string(f1);
-
-    fscanf(f1, " %s \n", chk);
-  }
-
-  fclose(f1);
-}
-
-
 void update_pos(CHAR *ch) {
   if (GET_MOUNT(ch) && !SAME_ROOM(GET_MOUNT(ch), ch)) {
     stop_riding(ch, GET_MOUNT(ch));
   }
 
-  if (GET_RIDER(ch) && !SAME_ROOM(GET_RIDER(ch), ch)) {
-    stop_riding(GET_RIDER(ch), ch);
+  if (GET_HIT(ch) < -10) {
+    GET_POS(ch) = POSITION_DEAD;
   }
-
-  if (GET_HIT(ch) > 0) {
-    if (GET_POS(ch) <= POSITION_STUNNED) {
-      if (GET_OPPONENT(ch) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
-        GET_POS(ch) = POSITION_FIGHTING;
-      }
-      else {
-        if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
-          GET_POS(ch) = POSITION_FLYING;
-        }
-        else {
-          GET_POS(ch) = POSITION_STANDING;
-        }
-      }
-    }
+  else if (GET_HIT(ch) < -5) {
+    GET_POS(ch) = POSITION_MORTALLYW;
   }
-  else {
-    if (GET_HIT(ch) < -10) {
-      GET_POS(ch) = POSITION_DEAD;
-    }
-    else if (GET_HIT(ch) < -5) {
-      GET_POS(ch) = POSITION_MORTALLYW;
-    }
-    else if (GET_HIT(ch) < -2) {
-      GET_POS(ch) = POSITION_INCAP;
+  else if (GET_HIT(ch) < -2) {
+    GET_POS(ch) = POSITION_INCAP;
+  }
+  else if (GET_HIT(ch) < 1) {
+    GET_POS(ch) = POSITION_STUNNED;
+  }
+  else if ((GET_POS(ch) <= POSITION_STUNNED) || (GET_POS(ch) == POSITION_FIGHTING)) {
+    if (GET_OPPONENT(ch) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
+      GET_POS(ch) = POSITION_FIGHTING;
     }
     else {
-      GET_POS(ch) = POSITION_STUNNED;
+      GET_POS(ch) = POSITION_STANDING;
+    }
+  }
+
+  if (GET_POS(ch) >= POSITION_STANDING) {
+    if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
+      GET_POS(ch) = POSITION_FLYING;
+    }
+    else if ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_SWIM) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_NOSWIM)) {
+      GET_POS(ch) = POSITION_SWIMMING;
+    }
+    else if (GET_MOUNT(ch)) {
+      GET_POS(ch) = POSITION_RIDING;
+    }
+    else {
+      GET_POS(ch) = POSITION_STANDING;
     }
   }
 }
@@ -273,18 +229,6 @@ void stop_fighting(CHAR *ch) {
 
   ch->next_fighting = 0;
   ch->specials.fighting = 0;
-
-  if (GET_MOUNT(ch) && SAME_ROOM(ch, GET_MOUNT(ch))) {
-    GET_POS(ch) = POSITION_RIDING;
-  }
-  else {
-    GET_POS(ch) = POSITION_STANDING;
-  }
-
-  /* make sure player doesn't automatically fall in a must-fly area */
-  if (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY)) {
-    GET_POS(ch) = POSITION_FLYING;
-  }
 
   update_pos(ch);
 }
@@ -493,16 +437,13 @@ void change_alignment(CHAR *ch, CHAR *victim) {
 
 
 void death_cry(CHAR *ch) {
-  if (!ch) return;
-
-  if ((CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
+  if (!ch || (CHAR_REAL_ROOM(ch) < 0) || (CHAR_REAL_ROOM(ch) > top_of_world)) return;
 
   act("Your blood freezes as you hear $n's death cry.", FALSE, ch, 0, 0, TO_ROOM);
 
   for (int dir = NORTH; dir <= DOWN; dir++) {
     if (CAN_GO(ch, dir)) {
-      send_to_room("Your blood freezes as you hear someone's death cry.\n\r",
-        world[CHAR_REAL_ROOM(ch)].dir_option[dir]->to_room_r);
+      send_to_room("Your blood freezes as you hear someone's death cry.\n\r", EXIT(ch, dir)->to_room_r);
     }
   }
 }
@@ -651,37 +592,42 @@ void death_list(CHAR *ch)
   fclose(fl);
 }
 
+void raw_kill_ex(CHAR *victim, bool statue) {
+  if (!IS_NPC(victim)) {
+    if (GET_QUEST_MOB(victim)) GET_QUEST_OWNER(GET_QUEST_MOB(victim)) = 0;
+    if (GET_QUEST_OBJ(victim)) OBJ_OWNED_BY(GET_QUEST_OBJ(victim)) = 0;
 
-void raw_kill(CHAR *ch) {
-  if (ch->specials.fighting) {
-    stop_fighting(ch);
+    GET_QUEST_STATUS(victim) = QUEST_NONE;
+    GET_QUEST_GIVER(victim) = 0;
+    GET_QUEST_MOB(victim) = 0;
+    GET_QUEST_OBJ(victim) = 0;
+    GET_QUEST_LEVEL(victim) = 0;
+    GET_QUEST_TIMER(victim) = MAX(GET_QUEST_TIMER(victim) - 40, 5);
+  }
+  else if (IS_NPC(victim) && GET_QUEST_OWNER(victim)) {
+    GET_QUEST_STATUS(GET_QUEST_OWNER(victim)) = QUEST_FAILED;
+    GET_QUEST_GIVER(GET_QUEST_OWNER(victim)) = 0;
+    GET_QUEST_MOB(GET_QUEST_OWNER(victim)) = 0;
+    GET_QUEST_OBJ(GET_QUEST_OWNER(victim)) = 0;
+    GET_QUEST_LEVEL(GET_QUEST_OWNER(victim)) = 0;
+    GET_QUEST_TIMER(GET_QUEST_OWNER(victim)) = 2;
+
+    printf_to_char(GET_QUEST_OWNER(victim),
+      "Your quest target has been killed, you have failed your quest! You can start another in %d ticks.\n\r",
+      GET_QUEST_TIMER(GET_QUEST_OWNER(victim)));
+
+    GET_QUEST_OWNER(victim) = 0;
   }
 
-  death_cry(ch);
+  stop_fighting(victim);
+  death_cry(victim);
+  statue ? make_statue(victim) : make_corpse(victim);
+  save_char(victim, NOWHERE);
+  extract_char(victim);
+}
 
-  make_corpse(ch);
-
-  if (ch->questobj) {
-    ch->questobj->owned_by = 0;
-  }
-
-  if (ch->questmob) {
-    ch->questmob->questowner = 0;
-  }
-
-  if ((ch->quest_status == QUEST_RUNNING) || (ch->quest_status == QUEST_COMPLETED)) {
-    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
-  }
-
-  ch->questgiver = 0;
-  ch->questobj = 0;
-  ch->questmob = 0;
-  ch->quest_level = 0;
-  ch->quest_status = QUEST_NONE;
-
-  save_char(ch, NOWHERE);
-
-  extract_char(ch);
+void raw_kill(CHAR *victim) {
+  raw_kill_ex(victim, FALSE);
 }
 
 
@@ -1052,21 +998,6 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
         }
       break;
     }
-  }
-
-  /* wasn't killed by owner in the group */
-  if (victim->questowner)
-  {
-    victim->questowner->questmob = NULL;
-    victim->questowner->questgiver = NULL;
-    victim->questowner->quest_status = QUEST_FAILED;
-    victim->questowner->quest_level = 0;
-    victim->questowner->ver3.time_to_quest = 2;
-
-    printf_to_char(victim->questowner, "Someone has killed your victim; you have failed your quest! You can start another in %d tick(s).\n\r",
-      victim->questowner->ver3.time_to_quest);
-
-    victim->questowner = NULL;
   }
 }
 
@@ -1480,7 +1411,7 @@ void process_death(CHAR *ch, CHAR *victim) {
     log_s(buf);
     deathlog(buf);
 
-    if ((CHAOSMODE || (IS_NPC(ch) && GET_LEVEL(victim) > 14)) && ch != victim) {
+    if ((CHAOSMODE || (IS_NPC(ch) && GET_LEVEL(victim) > 15)) && ch != victim) {
       brag(ch, victim);    /* Mob brag - Ranger Aug 00 - Added player brag in Chaos Oct 00*/
     }
 
@@ -1661,11 +1592,9 @@ double apply_dmg_bonus(CHAR *ch) {
 }
 
 /* Returns the amount of damage done after any/all mitigation. */
-int get_attack_type(CHAR *ch, OBJ *weapon);
 int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   char buf[MSL];
-  CHAR* tmp_victim = NULL;
-  CHAR* next_victim = NULL;
+
   int original_damage = dmg;
 
   if (!ch || !victim || !IS_ALIVE(victim) || !SAME_ROOM(victim, ch) || (dmg < 0)) return 0;
@@ -1682,66 +1611,67 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = 0;
   }
 
-  /* Adjust for APPLY_DMG_BONUS_PCT */
+  /* No damage dealt by a player to another character if they are sleeping, resting or sitting. */
+  if ((victim != ch) && !IS_NPC(ch) && ((GET_POS(ch) == POSITION_SLEEPING) || (GET_POS(ch) == POSITION_RESTING) || (GET_POS(ch) == POSITION_SITTING))) {
+    dmg = 0;
+  }
+
+  /* Adjust for APPLY_DMG_BONUS_PCT. */
   if (IS_MORTAL(ch)) {
     dmg = lround(dmg * apply_dmg_bonus(ch));
   }
 
   /* Adjust for shadow damage. */
   int shadow_damage = FALSE;
-  if (attack_type == TYPE_SHADOW) {
-    attack_type = get_attack_type(ch, GET_WEAPON(ch));
 
+  if (attack_type == TYPE_SHADOW) {
     shadow_damage = TRUE;
+
+    attack_type = get_attack_type(ch, GET_WEAPON(ch));
   }
 
   /* Camaraderie */
-  if (affected_by_spell(victim, SPELL_CAMARADERIE) &&
-      damage_type != DAM_CAMARADERIE &&
-      dmg > 0 &&
-      IS_MORTAL(victim) &&
-      ch != victim) {
+  if ((dmg > 0) && (victim != ch) && IS_MORTAL(victim) && (damage_type != DAM_CAMARADERIE) && affected_by_spell(victim, SPELL_CAMARADERIE)) {
+    int victim_dmg = MAX(lround(dmg * 0.6), 1);
+
     int comrades = 0;
-    int comrade_dmg = 0;
-    int sixtypct_dmg = MAX(1, lround(dmg * 0.6));
 
-    for (tmp_victim = world[CHAR_REAL_ROOM(victim)].people; tmp_victim; tmp_victim = next_victim) {
-      next_victim = tmp_victim->next_in_room;
+    for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(victim)), *next_victim; temp_victim; temp_victim = next_victim) {
+      next_victim = temp_victim->next_in_room;
 
-      if (victim != tmp_victim &&
-          SAME_GROUP(victim, tmp_victim) &&
-          IS_MORTAL(tmp_victim) &&
-          affected_by_spell(tmp_victim, SPELL_CAMARADERIE)) {
-        comrades += 1;
+      if ((victim != temp_victim) && IS_MORTAL(temp_victim) && SAME_GROUP(victim, temp_victim) && affected_by_spell(temp_victim, SPELL_CAMARADERIE)) {
+        comrades++;
       }
     }
-    /* Deal 60% original dmg to victim, then 100% spread among comrades (yes, 160% total) */
-    /* Proceed to normal processing of damage() if comrades = 0 */
-    if (comrades > 0) {
-        comrade_dmg = MAX(1, lround(dmg / comrades));
 
-      damage(ch, victim, sixtypct_dmg, attack_type, DAM_CAMARADERIE);
-      act("Some of the damage intended for $n is reflected to $s comrades!", FALSE, victim, NULL, NULL, TO_ROOM);
-      act("Some of the damage intended for you is reflected to your comrades!", FALSE, victim, NULL, NULL, TO_CHAR);
+    /* Deal 60% original dmg to victim, then 100% spread among comrades in the same room; yes, 160% total damage. */
+    if (comrades > 0) {
+      int comrade_dmg = MAX(lround(dmg / comrades), 1);
+
+      int victim_orig_room = CHAR_REAL_ROOM(victim);
+
+      act("Some of the damage intended for $n is reflected to $s comrades!", FALSE, victim, 0, 0, TO_ROOM);
+      act("Some of the damage intended for you is reflected to your comrades!", FALSE, victim, 0, 0, TO_CHAR);
+
+      damage(ch, victim, victim_dmg, attack_type, DAM_CAMARADERIE);
 
       if (IS_ALIVE(victim)) {
-        for (tmp_victim = world[CHAR_REAL_ROOM(victim)].people; tmp_victim; tmp_victim = next_victim) {
-          next_victim = tmp_victim->next_in_room;
+        for (CHAR *temp_victim = ROOM_PEOPLE(victim_orig_room), *next_victim; temp_victim; temp_victim = next_victim) {
+          next_victim = temp_victim->next_in_room;
 
-          if (victim != tmp_victim &&
-              SAME_GROUP(victim, tmp_victim) &&
-              IS_MORTAL(tmp_victim) &&
-              affected_by_spell(tmp_victim, SPELL_CAMARADERIE)) {
-            act("You are hit by $N's reflected damage!", FALSE, tmp_victim, NULL, ch, TO_CHAR);
-            damage(ch, tmp_victim, comrade_dmg, TYPE_UNDEFINED, DAM_CAMARADERIE);
+          if ((victim != temp_victim) && IS_MORTAL(temp_victim) && SAME_GROUP(victim, temp_victim) && affected_by_spell(temp_victim, SPELL_CAMARADERIE)) {
+            damage(ch, temp_victim, comrade_dmg, TYPE_UNDEFINED, DAM_CAMARADERIE);
+
+            act("You are hit by $N's reflected damage!", FALSE, temp_victim, NULL, ch, TO_CHAR);
           }
         }
       }
+
       return 0;
     }
   }
 
-  /* Protect */
+  /* Warlord SC2 and Ranger SC2: Protect */
   if (!IS_NPC(victim) &&
       GET_PROTECTOR(victim) &&
       !IS_NPC(GET_PROTECTOR(victim)) &&
@@ -1758,23 +1688,29 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     victim = GET_PROTECTOR(victim);
   }
 
-  /* If the victim is praying, interrupt them and apply a 2 round input lag. */
-  if (affected_by_spell(victim, SKILL_PRAY)) {
-    affect_from_char(victim, SKILL_PRAY);
+  if (!IS_NPC(ch)) {
+    /* If the victim is praying, interrupt them and apply a 2 round input lag. */
+    if (aff_affected_by(victim, SKILL_PRAY)) {
+      aff_from_char(victim, SKILL_PRAY);
 
-    send_to_char("Your prayers are interrupted and you are slightly confused.\n\r", ch);
+      send_to_char("Your prayers are interrupted and you are slightly confused.\n\r", ch);
 
-    WAIT_STATE(victim, PULSE_VIOLENCE * 2);
+      WAIT_STATE(victim, PULSE_VIOLENCE * 2);
+    }
+
+    /* If the victim is meditating, interrupt them and apply a 2 round input lag. */
+    AFF *meditate_aff = get_affect_from_char(victim, SKILL_MEDITATE);
+
+    if (meditate_aff && meditate_aff->duration >= 10) {
+      meditate_aff->duration = 9;
+
+      send_to_char("Your meditation is interrupted and you are slightly confused.\n\r", ch);
+
+      WAIT_STATE(victim, PULSE_VIOLENCE * 2);
+    }
   }
 
-  /* No damage dealt by a player to another character if they are sleeping, resting or sitting. */
-  if (!IS_NPC(ch) &&
-      (victim != ch) &&
-      ((GET_POS(ch) == POSITION_SLEEPING) || (GET_POS(ch) == POSITION_RESTING) || (GET_POS(ch) == POSITION_SITTING))) {
-    dmg = 0;
-  }
-
-  /* Adjust for immunities and resistances. */
+  /* Adjust for NPC immunities and resistances. */
   if (IS_NPC(victim)) {
     dmg = resist_damage(victim, dmg, attack_type, damage_type);
   }
@@ -1805,17 +1741,17 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
       return 0;
     }
+
     /* Flag the attacker as a killer if PKing. */
-    else {
-      send_to_char("You are a killer!\n\r", ch);
+    SET_BIT(GET_PFLAG(ch), PLR_KILL);
 
-      SET_BIT(GET_PFLAG(ch), PLR_KILL);
+    send_to_char("You are a killer!\n\r", ch);
 
-      snprintf(buf, sizeof(buf), "PLRINFO: %s just attacked %s. Killer flag set. (Room %d)",
-               GET_NAME(ch), GET_NAME(victim), world[CHAR_REAL_ROOM(ch)].number);
-      wizlog(buf, LEVEL_SUP, 4);
-      log_s(buf);
-    }
+    snprintf(buf, sizeof(buf), "PLRINFO: %s just attacked %s. Killer flag set. (Room %d)",
+             GET_NAME(ch), GET_NAME(victim), ROOM_VNUM(CHAR_REAL_ROOM(ch)));
+
+    wizlog(buf, LEVEL_SUP, 4);
+    log_s(buf);
   }
 
   /* Prevent players from attacking player mounts if PLR_NOKILL is turned on. */
@@ -1898,6 +1834,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       /* NPCs have a chance to switch to a mount's rider. */
       if (IS_NPC(ch) &&
           IS_NPC(victim) &&
+          IS_MOUNT(victim) &&
           GET_RIDER(victim) &&
           (CHAR_REAL_ROOM(GET_RIDER(victim)) == CHAR_REAL_ROOM(ch)) &&
           chance(10)) {
@@ -1914,8 +1851,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Stop victim following its master if the master attacks it.
      Unmount the attacker they attack their mount.*/
-  if (GET_MASTER(victim) == ch) {
-    if (GET_RIDER(victim)) {
+  if (IS_NPC(victim) && (GET_MASTER(victim) == ch)) {
+    if (IS_MOUNT(victim) && GET_RIDER(victim)) {
       stop_riding(ch, victim);
     }
 
@@ -1934,15 +1871,24 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Process damage improving skills/spells. */
-  if (dmg && IS_WEAPON_ATTACK(attack_type)) {
+  if ((dmg > 0) && IS_WEAPON_ATTACK(attack_type)) {
+    /* Templar SC3: Magic Armament */
+    if (affected_by_spell(ch, SPELL_MAGIC_ARMAMENT)) {
+      /* 2d5 bonus damage. */
+      int mag_arm_dmg = dice(2, 5);
+
+      /* Restore mana equal to the bonus damage if 8+ was rolled. */
+      if (mag_arm_dmg >= 8) {
+        GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + mag_arm_dmg);
+      }
+
+      dmg += mag_arm_dmg;
+    }
+
     /* Fury */
     if (IS_AFFECTED(ch, AFF_FURY)) {
-      /* Paladin Level 50 */
-      if (IS_MORTAL(ch) &&
-          (GET_CLASS(ch) == CLASS_PALADIN) &&
-          (GET_LEVEL(ch) >= 50) &&
-          (GET_ALIGNMENT(ch) > 500) &&
-          !CHAOSMODE) {
+      /* Paladin Level 50 Fury */
+      if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_PALADIN) && (GET_LEVEL(ch) >= 50) && (GET_ALIGNMENT(ch) > 500) && !CHAOSMODE) {
         dmg = lround(dmg * ((double)(25 - ((1000 - GET_ALIGNMENT(ch)) / 100)) / 10.0));
       }
       /* Normal Fury */
@@ -1950,52 +1896,76 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         dmg *= 2;
       }
     }
-
     /* Rage */
-    if (!IS_AFFECTED(ch, AFF_FURY) &&
-        IS_AFFECTED2(ch, AFF2_RAGE)) {
+    else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
       dmg = lround(dmg * 1.5);
     }
-
     /* Frenzy */
-    if (!IS_AFFECTED(ch, AFF_FURY) &&
-        !IS_AFFECTED2(ch, AFF2_RAGE) &&
-        affected_by_spell(ch, SKILL_FRENZY)) {
+    else if (affected_by_spell(ch, SKILL_FRENZY)) {
       dmg = lround(dmg * 1.5);
     }
 
-    /* War Chant */
-    if (affected_by_spell(ch, SPELL_WARCHANT) &&
-        check_subclass(ch, SC_CHANTER, 2)) {
-      if (!affected_by_spell(victim, SPELL_WARCHANT)) {
-        dmg = lround(dmg * 1.2);
-      }
-      else { /* Victim is War Chanted */
+    /* Chanter SC2: War Chant - Increases the Chanter's damage. */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_CHANTER, 2) && affected_by_spell(ch, SPELL_WAR_CHANT)) {
+      if (affected_by_spell(victim, SPELL_WAR_CHANT)) {
         dmg = lround(dmg * 1.3);
       }
+      else {
+        dmg = lround(dmg * 1.2);
+      }
     }
 
-    /* Showmanship */
-    if (IS_MORTAL(ch) &&
-        check_subclass(ch, SC_BLADESINGER, 2)) {
+    /* Bladesinger SC2: Showmanship */
+    if (IS_MORTAL(ch) && check_subclass(ch, SC_BLADESINGER, 2)) {
       float showman_multi = 1;
 
-      for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim) {
-        next_victim = tmp_victim->next_in_room;
+      for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_victim; temp_victim; temp_victim = next_victim) {
+        next_victim = temp_victim->next_in_room;
 
-        if (ch != tmp_victim &&
-            SAME_GROUP(ch, tmp_victim) &&
-            IS_MORTAL(tmp_victim)) {
+        if ((temp_victim != ch) && IS_MORTAL(temp_victim) && SAME_GROUP(ch, temp_victim)) {
           showman_multi += 0.05;
         }
       }
-      if (showman_multi > 3 ||
-          (IS_AFFECTED(ch, AFF2_RAGE) && showman_multi > 2) ||
-          (IS_AFFECTED(ch, AFF_FURY) && showman_multi > 1.5)) {
-        dmg = dmg * 3;
+
+      if ((showman_multi > 3.0) || (IS_AFFECTED2(ch, AFF2_RAGE) && (showman_multi > 2.0)) || (IS_AFFECTED(ch, AFF_FURY) && (showman_multi > 1.5))) {
+        dmg *= 3;
       }
       else {
         dmg = lround(dmg * showman_multi);
+      }
+    }
+  }
+
+  if (!IS_IMMORTAL(victim)) {
+    /* Druid SC5: Shapeshift: Dragon - All damage taken by a character enchanted by Dragonfire is increased. */
+    ENCH *dragonfire_ench = ench_get_from_char(victim, ENCH_NAME_DRAGONFIRE, 0);
+
+    if (dragonfire_ench) {
+      dmg = lround(dmg * ((100.0 + dragonfire_ench->temp[0]) / 100.0));
+    }
+  }
+
+  if (!IS_NPC(ch)) {
+    /* Druid SC4: Shapeshift: Elemental Form */
+    if (check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+      if (IS_WEAPON_ATTACK(attack_type) || IS_SKILL_ATTACK(attack_type, damage_type)) {
+        /* Physical damage inflicted by the Druid is reduced by 50%. */
+        dmg = lround(dmg * 0.5);
+      }
+      else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
+        /* Spell damage inflicted by the Druid is increased by 10%. */
+        dmg = lround(dmg * 1.2);
+      }
+    }
+    /* Druid SC5: Shapeshift: Dragon Form */
+    else if (check_subclass(ch, SC_DRUID, 5) && ench_enchanted_by(ch, ENCH_NAME_DRAGON_FORM, 0)) {
+      if (IS_WEAPON_ATTACK(attack_type) || IS_SKILL_ATTACK(attack_type, damage_type)) {
+        /* Physical damage inflicted by the Druid is increased by their Wisdom modifier. */
+        dmg += GET_WIS_APP(ch);
+      }
+      else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
+        /* Spell damage inflicted by the Druid is reduced by 20%. */
+        dmg = lround(dmg * 0.8);
       }
     }
   }
@@ -2005,12 +1975,13 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg *= 2;
   }
 
-  /* Maim */
+  /* Gladiator SC3: Maim */
   int maim_damage = 0;
-  if (dmg && IS_SKILL_ATTACK(attack_type, damage_type)) {
-    ENCH *maim_ench = get_enchantment_by_name(victim, "Maimed");
 
-    if (maim_ench && maim_ench->temp[0] > 0) {
+  if ((dmg > 0) && IS_SKILL_ATTACK(attack_type, damage_type)) {
+    ENCH *maim_ench = ench_get_from_char(victim, ENCH_NAME_MAIM, 0);
+
+    if (maim_ench && (maim_ench->temp[0] > 0)) {
       maim_damage = resist_damage(victim, maim_ench->temp[0], TYPE_UNDEFINED, DAM_PHYSICAL);
 
       if (maim_damage) {
@@ -2019,31 +1990,22 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Invulnerability */
-  if (IS_AFFECTED(victim, AFF_INVUL)) {
-    /* Reduce DAM_PHYSICAL damage less than 20 to 0. */
-    if ((dmg < 20) &&
-        IS_PHYSICAL_DAMAGE(damage_type) &&
-        (!IS_AFFECTED(victim, AFF_FURY) || IS_NPC(victim))) {
-      dmg = 0;
-    }
-  }
-
-  /* Enchanter SC4: Ethereal Nature */
-  if (IS_PHYSICAL_DAMAGE(damage_type) &&
-      (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
+  /* Invulnerability - Reduce DAM_PHYSICAL damage less than 20 to 0, unless the victim is a player affected by fury.*/
+  if (IS_AFFECTED(victim, AFF_INVUL) && IS_PHYSICAL_DAMAGE(damage_type) && (dmg < 20) && (!IS_AFFECTED(victim, AFF_FURY) || IS_NPC(victim))) {
     dmg = 0;
   }
 
+  /* Enchanter SC4: Ethereal Nature */
+  if (IS_PHYSICAL_DAMAGE(damage_type) && (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
+    dmg = 0;
+  }
+
+  /* Handle damage reflection. */
   int reflect = 0, max_reflect = 0;
 
   /* Juggernaut */
-  if ((reflect <= 0) &&
-      IS_WEAPON_ATTACK(attack_type) &&
-      (IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4)) &&
-      EQ(victim, WEAR_BODY) &&
-      chance(10 + (GET_DEX_APP(victim) / 2))) {
-    reflect = MIN(40, MAX(0, (-calc_ac(victim) + 100) / 10));
+  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4) && EQ(victim, WEAR_BODY) && chance(10 + (GET_DEX_APP(victim) / 2))) {
+    reflect = MIN(MAX(0, (-calc_ac(victim) + 100) / 10), 40);
 
     act("$n is cut by the jagged spikes protruding from your armor.", FALSE, ch, 0, victim, TO_VICT);
     act("$n is cut by the jagged spikes protruding from $N's armor.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -2051,12 +2013,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Defiler SC1: Blackmantle */
-  if ((reflect <= 0) &&
-      IS_WEAPON_ATTACK(attack_type) &&
-      affected_by_spell(victim, SPELL_BLACKMANTLE)) {
+  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && affected_by_spell(victim, SPELL_BLACKMANTLE)) {
     /* Blackmantle inflicts some damage even if the attacker misses. */
     if (dmg <= 0) {
-      reflect = MIN(original_damage, GET_LEVEL(victim) / 5);
+      reflect = MIN(GET_LEVEL(victim) / 5, original_damage);
 
       act("$n is scorched by your mantle of darkness as $e gets too close.", FALSE, ch, 0, victim, TO_VICT);
       act("$n is scorched by $N's mantle of darkness as $e gets too close.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -2077,10 +2037,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         max_reflect *= 4;
       }
 
-      reflect = MIN(max_reflect, lround(dmg * 0.1));
-      reflect = MAX(reflect, GET_LEVEL(victim) / 5);
+      reflect = MAX(MIN(max_reflect, lround(dmg * 0.1)), GET_LEVEL(victim) / 5);
 
-      dmg = MAX(0, dmg - reflect);
+      dmg = MAX(dmg - reflect, 0);
 
       act("Your mantle of darkness reflects some of $n's damage back to $m.", FALSE, ch, 0, victim, TO_VICT);
       act("$N's mantle of darkness reflects some of $n's damage back to $m.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -2089,60 +2048,49 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Enchanter SC1: Blade Barrier */
-  if ((reflect <= 0) &&
-      (dmg > 0) &&
-      IS_WEAPON_ATTACK(attack_type) &&
-      affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
-    max_reflect = calc_hit_damage(victim, ch, EQ(victim, WIELD), 0, RND_MAX);
+  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) &&  affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
+    if (dmg > 0) {
+      max_reflect = calc_hit_damage(victim, ch, EQ(victim, WIELD), 0, RND_MAX);
 
-    if (IS_AFFECTED(victim, AFF_FURY)) {
-      max_reflect *= 2;
+      if (IS_AFFECTED(victim, AFF_FURY)) {
+        max_reflect *= 2;
+      }
+      else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
+        max_reflect = lround(max_reflect * 1.5);
+      }
+
+      /* NPCs can reflect more damage, to add an element of challenge. */
+      if (IS_NPC(victim)) {
+        max_reflect *= 4;
+      }
+
+      reflect = MIN(lround(dmg * 0.25), max_reflect);
+
+      dmg = MAX(dmg - reflect, 0);
+
+      act("Some of $n's damage is reflected to $m.", FALSE, ch, 0, 0, TO_ROOM);
+      act("Some of your damage is reflected back to you!", FALSE, ch, 0, 0, TO_CHAR);
     }
-    else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
-      max_reflect = lround(max_reflect * 1.5);
-    }
-
-    /* NPCs can reflect more damage, to add an element of challenge. */
-    if (IS_NPC(victim)) {
-      max_reflect *= 4;
-    }
-
-    reflect = MIN(max_reflect, lround(dmg * 0.25));
-
-    dmg = MAX(0, dmg - reflect);
-
-    act("Some of $n's damage is reflected to $m.", FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("Some of your damage is reflected to you!\n\r", ch);
   }
 
-  /* Vehemence penalty. */
-  if (IS_MORTAL(victim) &&
-      IS_SET(GET_TOGGLES(victim), TOG_VEHEMENCE)) {
+  /* Rogue SC3: Vehemence - Increases damage taken by 10%. */
+  if (IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_VEHEMENCE) && check_subclass(victim, SC_ROGUE, 3)) {
     dmg = lround(dmg * 1.1);
   }
 
   /* Protection from Evil */
-  if ((dmg > 0) &&
-      IS_AFFECTED(victim, AFF_PROTECT_EVIL) &&
-      IS_EVIL(ch) &&
-      (!IS_EVIL(victim) || IS_NPC(victim))) {
-    dmg = MAX(0, dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)));
+  if ((dmg > 0) && IS_AFFECTED(victim, AFF_PROTECT_EVIL) && IS_EVIL(ch) && (!IS_EVIL(victim) || IS_NPC(victim))) {
+    dmg = MAX(dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)), 0);
   }
 
   /* Protection from Good */
-  if ((dmg > 0) &&
-      IS_AFFECTED(victim, AFF_PROTECT_GOOD) &&
-      IS_GOOD(ch) &&
-      (!IS_GOOD(victim) || IS_NPC(victim))) {
-    dmg = MAX(0, dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)));
+  if ((dmg > 0) && IS_AFFECTED(victim, AFF_PROTECT_GOOD) && IS_GOOD(ch) && (!IS_GOOD(victim) || IS_NPC(victim))) {
+    dmg = MAX(dmg - MIN(10, (GET_LEVEL(victim) + 10) - GET_LEVEL(ch)), 0);
   }
 
   /* Sphere */
-  if ((dmg > 0) &&
-      IS_MAGICAL_DAMAGE(damage_type) &&
-      IS_AFFECTED(victim, AFF_SPHERE) &&
-      !breakthrough(ch, victim, attack_type, BT_SPHERE)) {
-    /* Archmage SC5: Distortion allows 50% of DAM_MAGICAL damage through Sphere. */
+  if ((dmg > 0) && IS_AFFECTED(victim, AFF_SPHERE) && IS_MAGICAL_DAMAGE(damage_type) && !breakthrough(ch, victim, attack_type, BT_SPHERE)) {
+    /* Archmage SC5: Distortion - Allows 50% of DAM_MAGICAL damage through Sphere. */
     if (affected_by_spell(victim, SPELL_DISTORTION)) {
       dmg = lround(dmg * 0.5);
     }
@@ -2156,77 +2104,73 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * (1.0 - (GET_CON_DAM_REDUCT(victim) / 100.0)));
   }
 
+  /* Handle damage reduction. */
   double damage_reduction = 0.0;
 
   /* Sanctuary */
-  if (IS_AFFECTED(victim, AFF_SANCTUARY) &&
-      !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
     damage_reduction += 0.5;
   }
 
   /* Fortification */
-  if (affected_by_spell(victim, SPELL_FORTIFICATION)) {
+  if (IS_AFFECTED2(victim, AFF2_FORTIFICATION)) {
     damage_reduction += 0.15;
   }
 
-  /* Damage Reduction Effects */
-  dmg = lround(dmg * (1.0 - damage_reduction));
+  /* Apply damage reduction from affects. */
+  dmg = MAX(lround(dmg * (1.0 - damage_reduction)), 0);
 
-  /* Evasion */
-  if (IS_PHYSICAL_DAMAGE(damage_type) &&
-      IS_SET(GET_TOGGLES(victim), TOG_EVASION)) {
+  /* Bandit SC5: Evasion (and Nomad Level 50) */
+  if (IS_PHYSICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_EVASION) && (check_subclass(victim, SC_BANDIT, 5) || ((GET_CLASS(victim) == CLASS_NOMAD) && (GET_LEVEL(victim) >= 50)))) {
     dmg = lround(dmg * 0.75);
   }
 
-  /* Bullwark */
-  if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_WARLORD, 5) &&
-      IS_PHYSICAL_DAMAGE(damage_type) &&
-      (calc_ac(victim) < -250)) {
-    dmg = lround(dmg * (1.0 - (((abs(calc_ac(victim)) - 250.0) / 3.0) / 100.0)));
+  /* Warlord SC5: Bullwark - Damage reduction based on AC. */
+  int victim_ac = calc_ac(victim);
+
+  if (IS_PHYSICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 5) && (victim_ac < -250)) {
+    dmg = lround(dmg * (1.0 - (((abs(victim_ac) - 250.0) / 3.0) / 100.0)));
   }
 
-  /* Combat Zen */
-  if (IS_MORTAL(victim) &&
-      check_subclass(victim, SC_RONIN, 3) &&
-      (damage_type == DAM_POISON)) {
+  /* Ronin SC3: Combat Zen - Reduces poison damage by 50%. */
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_RONIN, 3) && (damage_type == DAM_POISON)) {
     dmg = lround(dmg * 0.5);
   }
 
   /* Limit total damage. */
-  dmg = MAX(0, MIN(30000, dmg));
+  dmg = MAX(MIN(30000, dmg), 0);
 
-  /* Limit PvP damage in chaotic rooms and during Chaos. */
-  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) &&
-      IS_MORTAL(ch) &&
-      IS_MORTAL(victim)) {
+  /* Limit PvP damage in chaotic rooms. */
+  if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(ch) && IS_MORTAL(victim)) {
     dmg = MIN(600, dmg);
   }
 
   /* Record damage for use later when printing damage text. */
   int dmg_text = dmg;
 
-  /* Archmage SC2/Templar SC4: Orb of Protection */
-  if ((dmg > 0) &&
-      affected_by_spell(victim, SPELL_ORB_PROTECTION)) {
+  /* Archmage SC2: Orb of Protection */
+  if ((dmg > 0) && affected_by_spell(victim, SPELL_ORB_PROTECTION)) {
     int mana_shield = ((200 + dmg) - GET_HIT(victim)) / 2;
 
     if (mana_shield > 0) {
-      mana_shield = MIN(mana_shield, GET_MANA(victim));
+      mana_shield = MIN(GET_MANA(victim), mana_shield);
+
       GET_MANA(victim) -= mana_shield;
-      dmg = MAX(0, dmg - (mana_shield * 2));
+
+      dmg = MAX(dmg - (mana_shield * 2), 0);
     }
   }
 
   /* No damage to immortals. */
   if (IS_IMMORTAL(victim)) {
     dmg = 0;
+    maim_damage = 0;
   }
 
-  /* Shadow Wraith */
+  /* Infidel SC3: Shadow Wraith */
   if (shadow_damage) {
-    shadow_damage = number(2, 6);
-    dmg /= shadow_damage;
+    shadow_damage = number(2, 6) / shadow_damage;
+
     dmg_text /= shadow_damage;
   }
 
@@ -2236,7 +2180,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   update_pos(victim);
 
   /* Grant hit EXP. */
-  if (ch != victim) {
+  if (victim != ch) {
     gain_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
 
     if (GET_REMORT_EXP(ch)) {
@@ -2248,9 +2192,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Cleric Level 50: Divine Intervention */
-  if (affected_by_spell(victim, SPELL_DIVINE_INTERVENTION) &&
-      (GET_POS(victim) <= POSITION_INCAP)) {
+  /* Divine Intervention */
+  if ((GET_POS(victim) <= POSITION_INCAP) && affected_by_spell(victim, SPELL_DIVINE_INTERVENTION)) {
     GET_HIT(victim) = GET_MAX_HIT(victim);
 
     act("Your life has been restored by divine forces.", FALSE, victim, 0, 0, TO_CHAR);
@@ -2261,25 +2204,22 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     update_pos(victim);
   }
 
-  /* Chanter SC3: Lucky Break */
-  if (affected_by_spell(victim, SPELL_LUCK) &&
-      IS_MORTAL(victim) &&
-      (GET_POS(victim) <= POSITION_INCAP) &&
-      !IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, CHAOTIC) &&
-      chance(20)) {
-    CHAR* tmp = NULL;
-
-    for (tmp = world[CHAR_REAL_ROOM(victim)].people; tmp; tmp = tmp->next_in_room)
-    {
-      if (GET_OPPONENT(tmp) == victim) stop_fighting(tmp);
+  /* Chanter SC3: Luck - Rescue character from death. */
+  if ((GET_POS(victim) <= POSITION_INCAP) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(victim) && affected_by_spell(victim, SPELL_LUCK) && chance(20)) {
+    for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(victim)); temp_ch; temp_ch = temp_ch->next_in_room) {
+      if (GET_OPPONENT(temp_ch) == victim) {
+        stop_fighting(temp_ch);
+      }
     }
 
-    GET_HIT(victim) = 1;
     stop_fighting(victim);
+
+    GET_HIT(victim) = 1;
+
     update_pos(victim);
 
-    act("An echo of bards past whisks you away from certain death.", FALSE, victim, 0, 0, TO_CHAR);
     act("A faint echo is the only sound you hear as a nearly lifeless $n disappears suddenly.", FALSE, victim, 0, 0, TO_ROOM);
+    act("An echo of bards past whisks you away from certain death.", FALSE, victim, 0, 0, TO_CHAR);
 
     spell_word_of_recall(GET_LEVEL(victim), victim, victim, 0);
   }
@@ -2294,84 +2234,79 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     update_pos(victim);
   }
 
-  /* Print messages for physical attacks. */
-  if (attack_type >= TYPE_HIT &&
-      attack_type <= TYPE_SLICE &&
-      GET_POS(victim) != POSITION_DEAD) {
-    if (dmg_text) {
+  if (attack_type != TYPE_UNDEFINED) {
+    /* Print messages for weapon attacks. */
+    if (IS_WEAPON_ATTACK(attack_type) && (GET_POS(victim) != POSITION_DEAD)) {
+      if (dmg_text) {
+        if (!IS_NPC(ch)) {
+          COLOR(ch, 11);
+        }
+
+        if (!IS_NPC(victim)) {
+          COLOR(victim, 12);
+        }
+      }
+
+      dam_message(dmg_text, ch, victim, attack_type, shadow_damage);
+
       if (!IS_NPC(ch)) {
-        COLOR(ch, 11);
+        ENDCOLOR(ch);
       }
 
       if (!IS_NPC(victim)) {
-        COLOR(victim, 12);
+        ENDCOLOR(victim);
       }
     }
+    /* Print messages for skills, spells, and weapon kill messages. */
+    else {
+      int fight_message_list_index = get_fight_message_index(attack_type);
 
-    dam_message(dmg_text, ch, victim, attack_type, shadow_damage);
+      if (fight_message_list_index >= 0) {
+        struct message_type *messages = fight_messages_list[fight_message_list_index].msg;
 
-    if (!IS_NPC(ch)) {
-      ENDCOLOR(ch);
-    }
+        if (fight_messages_list[fight_message_list_index].number_of_attacks > 1) {
+          int message_nr = number(1, fight_messages_list[fight_message_list_index].number_of_attacks);
 
-    if (!IS_NPC(victim)) {
-      ENDCOLOR(victim);
-    }
-  }
-  /* Print messages for skills and spells. */
-  else {
-    for (int i = 0; i < MAX_MESSAGES; i++) {
-      if (fight_messages[i].a_type == attack_type) {
-        int nr = dice(1, fight_messages[i].number_of_attacks);
-        struct message_type *messages = fight_messages[i].msg;
-
-        for (int j = 1; (j < nr) && messages; j++) {
-          messages = messages->next;
+          for (int msg_idx = 1; (msg_idx < message_nr) && messages; msg_idx++) {
+            messages = messages->next;
+          }
         }
 
-        if (IS_IMMORTAL(victim)) {
+        if (!IS_IMMORTAL(victim)) {
+          if ((dmg > 0) || ((original_damage > 0) && ((attack_type == SKILL_PUNCH) || (attack_type == SKILL_BASH) || (attack_type == SKILL_KICK)))) {
+            if (GET_POS(victim) == POSITION_DEAD) {
+              act(messages->die_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
+              act(messages->die_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
+              act(messages->die_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+
+            }
+            else {
+              act(messages->hit_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
+              act(messages->hit_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
+              act(messages->hit_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+            }
+          }
+          else {
+            act(messages->miss_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
+            act(messages->miss_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
+            act(messages->miss_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+          }
+        }
+        else {
           act(messages->god_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
           act(messages->god_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
           act(messages->god_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
-          break;
         }
-
-        /* Damage > 0 (Hit) */
-        if (dmg > 0 ||
-            (original_damage > 0 &&
-             (attack_type == SKILL_PUNCH ||
-              attack_type == SKILL_BASH ||
-              attack_type == SKILL_KICK))) {
-          /* Death Messages */
-          if (GET_POS(victim) == POSITION_DEAD) {
-            act(messages->die_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-            act(messages->die_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-            act(messages->die_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
-          }
-          /* Damage Messages */
-          else {
-            act(messages->hit_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-            act(messages->hit_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-            act(messages->hit_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
-          }
-        }
-        /* Damage <= 0 (Miss) */
-        else {
-          act(messages->miss_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-          act(messages->miss_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-          act(messages->miss_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
-        }
-        break;
       }
     }
   }
 
-  /* Maim */
-  if (maim_damage) {
+  /* Signal Maim. */
+  if ((maim_damage > 0) && (GET_POS(ch) != POSITION_DEAD)) {
     signal_char(victim, ch, MSG_DAMAGED, "SKILL_MAIM");
-  }
 
-  update_pos(victim);
+    update_pos(victim);
+  }
 
   /* Print position messages. */
   switch (GET_POS(victim)) {
@@ -2391,10 +2326,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       break;
 
     case POSITION_DEAD:
-      /* Handle MSG_DEAD in case it was intercepted. */
-      if (signal_char(victim, ch, MSG_DEAD, "")) {
-        return dmg;
-      }
+      /* Signal MSG_DEAD. */
+      if (signal_char(victim, ch, MSG_DEAD, "")) return dmg;
 
       /* Disembowel */
       if (attack_type == SKILL_DISEMBOWEL) {
@@ -2412,8 +2345,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) &&
           (damage_type != DAM_NO_BLOCK_NO_FLEE) &&
           (GET_HIT(victim) < GET_WIMPY(victim)) &&
-          (!affected_by_spell(victim, SPELL_ORB_PROTECTION) || (affected_by_spell(victim, SPELL_ORB_PROTECTION) && (GET_MANA(victim) < 1))) &&
-          !affected_by_spell(victim, SPELL_DIVINE_INTERVENTION)) {
+          !affected_by_spell(victim, SPELL_DIVINE_INTERVENTION) &&
+          (!affected_by_spell(victim, SPELL_ORB_PROTECTION) || (affected_by_spell(victim, SPELL_ORB_PROTECTION) && (GET_MANA(victim) <= 0)))) {
         do_flee(victim, "", CMD_FLEE);
 
         if (!SAME_ROOM(ch, victim)) return dmg;
@@ -2425,16 +2358,13 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
 
       /* Handle bleed limit. NPCs flee when under 20% of their maximum HP. */
-      if ((IS_NPC(victim) && (GET_HIT(victim) < (hit_limit(victim) / 5))) ||
-          (!IS_NPC(victim) && (!GET_BLEED(victim) && (GET_HIT(victim) < (hit_limit(victim) / 5)))) ||
+      if ((IS_NPC(victim) && (GET_HIT(victim) < (GET_MAX_HIT(victim) / 5))) ||
+          (!IS_NPC(victim) && (!GET_BLEED(victim) && (GET_HIT(victim) < (GET_MAX_HIT(victim) / 5)))) ||
           (!IS_NPC(victim) && (GET_BLEED(victim) && (GET_HIT(victim) < GET_BLEED(victim))))) {
         send_to_char("You wish that your wounds would stop BLEEDING that much!\n\r", victim);
 
         /* Handle NPC wimpy. */
-        if (IS_NPC(victim) &&
-            IS_SET(GET_ACT(victim), ACT_WIMPY) &&
-            GET_POS(victim) > POSITION_STUNNED &&
-            damage_type != DAM_NO_BLOCK_NO_FLEE) {
+        if (IS_NPC(victim) && IS_SET(GET_ACT(victim), ACT_WIMPY) && (damage_type != DAM_NO_BLOCK_NO_FLEE)) {
           do_flee(victim, "", CMD_FLEE);
 
           if (!SAME_ROOM(ch, victim)) return dmg;
@@ -2444,9 +2374,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Handle link-dead players. */
-  if (!IS_NPC(victim) &&
-      !GET_DESCRIPTOR(victim) &&
-      (damage_type != DAM_NO_BLOCK_NO_FLEE)) {
+  if (!IS_NPC(victim) && !GET_DESCRIPTOR(victim) && (damage_type != DAM_NO_BLOCK_NO_FLEE)) {
     do_flee(victim, "", 0);
 
     if (!GET_OPPONENT(victim)) {
@@ -2470,13 +2398,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Stop fighting, as appropriate. */
   if (!GET_HIT(victim) && (GET_OPPONENT(ch) == victim) && (GET_POS(victim) < POSITION_STUNNED)) {
-    if (IS_SET(GET_PFLAG(ch), PLR_VICIOUS)) {
-      if (!IS_ALIVE(victim)) {
-        stop_fighting(ch);
-      }
-      else if (IS_GOOD(ch)) {
-        GET_ALIGNMENT(ch) -= 5;
-      }
+    /* Handle vicious. */
+    if (!IS_NPC(ch) && IS_SET(GET_PFLAG(ch), PLR_VICIOUS) && IS_ALIVE(victim)) {
+      GET_ALIGNMENT(ch) -= 5;
     }
     else {
       stop_fighting(ch);
@@ -2906,11 +2830,6 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       dam = 1;
     }
-
-    /* Clarity */
-    if (affected_by_spell(ch, SPELL_CLARITY)) {
-      dam = 0;
-    }
   }
 
   return dam;
@@ -2954,7 +2873,7 @@ int hit_success(int attack_roll, int attacker_thaco, int attacker_hitroll, int d
 }
 
 int try_hit(CHAR *attacker, CHAR *defender) {
-  if (!attacker || !defender) return FALSE;
+  if (!attacker || !defender) return HIT_FAILURE;
 
   /* The following conditions always result in a hit. */
   if (!AWAKE(defender) ||
@@ -2982,6 +2901,15 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     /* Critical hit if the initial attack was a success and was a 17+. */
     else if ((success == HIT_SUCCESS) && (attack_roll >= 17)) {
       success = HIT_CRITICAL;
+    }
+  }
+
+  if (!IS_IMMORTAL(attacker)) {
+    /* Druid SC4: Elemental Form - Chance to miss if affected by Entropy. */
+    ENCH *entropy_ench = ench_get_from_char(attacker, ENCH_NAME_ENTROPY, 0);
+
+    if (entropy_ench && chance(entropy_ench->temp[0])) {
+      success = HIT_FAILURE;
     }
   }
 
@@ -3180,12 +3108,12 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
             ENCH *cc_ench = NULL;
 
             if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
-              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
+              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
             }
             else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
               enchantment_remove(defender, cc_ench, FALSE);
 
-              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", SKILL_CLOSE_COMBAT, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
             }
           }
 
@@ -3450,7 +3378,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
             !IS_IMMUNE(defender, IMMUNE_PARALYSIS) &&
             chance(50 + GET_DEX_APP(attacker))) {
-          enchantment_apply(defender, FALSE, "Paralyzed (Impair)", SKILL_IMPAIR, (ROOM_CHAOTIC(CHAR_REAL_ROOM(attacker)) ? 0 : 2), 0, 0, 0, AFF_PARALYSIS, 0, 0);
+          enchantment_apply(defender, FALSE, "Paralyzed (Impair)", 0, (ROOM_CHAOTIC(CHAR_REAL_ROOM(attacker)) ? 0 : 2), 0, 0, 0, AFF_PARALYSIS, 0, 0);
 
           special_message = TRUE;
         }
@@ -3482,8 +3410,8 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (SAME_ROOM(attacker, defender) &&
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
             chance(30 + GET_DEX_APP(attacker))) {
-          enchantment_apply(defender, FALSE, "+30 AC (Impair)", SKILL_IMPAIR, 1, 0, 30, APPLY_AC, 0, 0, 0);
-          enchantment_apply(defender, FALSE, "-2 Hitroll (Impair)", SKILL_IMPAIR, 1, 0, -2, APPLY_HITROLL, 0, 0, 0);
+          enchantment_apply(defender, FALSE, "+30 AC (Impair)", 0, 1, 0, 30, APPLY_AC, 0, 0, 0);
+          enchantment_apply(defender, FALSE, "-2 Hitroll (Impair)", 0, 1, 0, -2, APPLY_HITROLL, 0, 0, 0);
 
           special_message = TRUE;
         }

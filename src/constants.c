@@ -72,291 +72,7 @@ const char *month_name[] = {
   "Month of Bones"
 };
 
-const char * const spell_wear_off_msg[] = {
-  "RESERVED DB.C",
-  "You feel less protected.",
-  "!Teleport!",
-  "Your divine favor fades.",
-  "You feel a cloak of blindness disolve.",
-  "!Burning Hands!",
-  "!Call Lightning",
-  "You feel more self-confident.",
-  "You feel warm again.",
-  "!Clone!",
-  "!Color Spray!",
-  "!Control Weather!",
-  "!Create Food!",
-  "!Create Water!",
-  "!Cure Blind!",
-  "!Cure Critic!",
-  "!Cure Light!",
-  "You feel better.",
-  "You sense the red in your vision disappear.",
-  "The detect invisible wears off.",
-  "The detect magic wears off.",
-  "The detect poison wears off.",
-  "!Dispel Evil!",
-  "!Earthquake!",
-  "!Enchant Weapon!",
-  "!Energy Drain!",
-  "!Fireball!",
-  "!Harm!",
-  "!Heal",
-  "You feel yourself exposed.",
-  "!Lightning Bolt!",
-  "!Locate Object!",
-  "!Magic Missile!",
-  "You feel less sick.",
-  "You feel less protected from evil.",
-  "!Remove Curse!",
-  "The white aura around your body fades.",
-  "!Shocking Grasp!",
-  "You feel less tired.",
-  "You feel weaker.",
-  "!Summon!",
-  "!Ventriloquate!",
-  "!Word of Recall!",
-  "!Remove Poison!",
-  "You feel less aware of your surroundings.",
-  "!Sneak!",
-  "!Hide!",
-  "!Steal!",
-  "!Backstab!",
-  "!Pick Lock!",
-  "!Kick!",
-  "!Bash!",
-  "!Rescue!",
-  "!Block!",
-  "!Knock!",
-  "!Punch!",
-  "!Parry!",
-  "!Dual!",
-  "!Throw!",
-  "!Dodge!",
-  "!Peek!",
-  "!Butcher!",
-  "!Trap!",
-  "!Disarm!",
-  "!Subdue!",
-  "!Circle!",
-  "!Triple!",
-  "!Ambush!",
-  "!Spin Kick!",
-  "!Assault!",
-  "!Disembowel!",
-  "!Identify!",
-  "!Cure Serious!",
-  "Your eyes stop glowing red.",
-  "Your regenerative power fades.", /* Regeneration (Not used by Spell: Regeneration) */
-  "!Vitality!",
-  "!Cure Light Spray!",
-  "!Cure Serious Spray!",
-  "!Cure Critic Spray!",
-  "!Heal Spray!",
-  "!Death Spray!",
-  "!Holy Word!",
-  "!IceBall!",
-  "!Total Recall!",
-  "!Recharge!",
-  "!Miracle!",
-  "You landed down on the ground successfully.",
-  "!Mana Transfer!",
-  "!Holy Bless!",
-  "!Evil Bless!",
-  "!Satiate!",
-  "!Animate Dead!",
-  "!Great Miracle",
-  "!Flamestrike!",
-  "The dark energy within you fades, diminishing your power.",
-  "!Lethal Fire!",
-  "You can move quickly now.",
-  "Your golden sphere disappears.",
-  "You appear out of thin air.",
-  "Your powerful sphere disappears.",
-  "!Fear!",
-  "!Forget!",
-  "You calm down.",
-  "You feel less shielded.",
-  "!blindness dust!",
-  "!poison smoke!",
-  "!hell fire!",
-  "!hypnotize!",
-  "!recover mana!",
-  "!thunderball!",
-  "!electric shock!",
-  "The paralyzation wears off and you can move again.",
-  "!remove paralysis!",
-  "!dispel good!",
-  "!evil word!",
-  "!reappear!",
-  "!reveal!",
-  "!relocation!",
-  "!locate character!",
-  "!super harm!",
-  "!pummel!",
-  "!coin-toss!",
-  "!great mana!",
-  "You finally get your hands on some mouthwash!",
-  "Your depth of perception diminishes.",
-  "You finish your prayers.",
-  "!assassinate!",
-  "The speed of your movements slows down to normal.",
-  "!power word kill!",
-  "!dispel magic!",
-  "!conflagration!",
-  "",
-  "!convergence!",
-  "!enchant armour!",
-  "!disintegrate!",
-  "!hidden blade!",
-  "!vampiric touch!",
-  "!searing orb!",
-  "!clairvoyance!",
-  "!firebreath!",
-  "!lay hands!",
-  "!dispel sanctuary!",
-  "!disenchant!",
-  "!petrify!",
-  "!taunt!",
-  "The chaotic aura around your body begins to weaken.",
-  "!remove improved invisibility!",
-  "", /* 147 */
-  "!quad!",
-  "Your thoughts slow.",
-  "You feel as if the gods have forsaken you!",
-  "Your pulse slows.",
-  "The gnawing hunger slowly fades.",
-  "!scan!",
-  "Your hands slow down.",
-  "", /* 155 */
-  "", /* 156 */
-  "", /* 157 */
-  "", /* 158 */
-  "", /* 159 */
-  "", /* 160 */
-  "", /* 161 */
-  "", /* 162 */
-  "!twist!",
-  "!cunning!",
-  "!wind slash!",
-  "", /* 166 */
-  "", /* 167 */
-  "", /* 168 */
-  "", /* 169 */
-  "", /* 170 */
-  "", /* 171 */
-  "You feel a little less weak.", /* 172 Debilitate */
-  "!mana heal!",
-  "",/*174*/
-  "Your movements become less of a blur.", /* 175 Blur */
-  "",/*176*/
-  "Your sense of tranquility fades away.", /* 177 Tranquility */
-  "!execute!",/*178*/
-  "!tremor!", /*179*/
-  "", /* 180 Shadow Wraith */
-  "!devastation!",/*181*/
-  "The cloud of fire surrounding you dies out.",/*182*/
-  "!snipe!",/*183*/
-  "!riposte!",/*184*/
-  "You feel less inspired.",/*185*/
-  "!frenzy!",/*186*/
-  "!power of faith!",/*187*/
-  "The blistering waves of heat subside.", /* 188 Incendiary Cloud (New) */
-  "The bright white aura around your body fades.",/*189*/
-  "!wrath of god!",/*190*/
-  "The force disrupting your white aura disappears.",/*191*/
-  "Your feeling of fortification diminishes.",/*192*/
-  "You feel strong enough to sacrifice your health for mana.",/*193*/
-  "Your magic armament fades.",/*194*/
-  "You feel strong enough to leave the physical plane.",/*195*/
-  "!engage!",/*196*/
-  "!mantra!",/*197*/
-  "!banzai!", /*198*/
-  "!headbutt!",/* 199 */
-  "",/*200*/
-  "!maim!", /* 201 */
-  "You don't feel as powerful.",/*202*/
-  "!demonic thunder!",/*203*/
-  "!shadowstep!", /* 204 Used to be Shadow-Walk */
-  "!batter!",/*205*/
-  "You feel the insatiable urge to desecrate another corpse.",/*206*/
-  "You place yourself in a normal stance.", /*207 - defend*/
-  "You place yourself in a normal stance.", /*208 - hostile*/
-  "The paralyzation wears off, you can move again.", /*209 - rimefang*/
-  "!wither!", /* 210 Wither */
-  "Your mantle of darkness fades away.",/*211*/
-  "!divine wind!",/*212*/
-  "!zeal!",/*213*/
-  "!impair!",/*214*/
-  "!flank!",/*215*/
-  "!rejuvenation!",/*216*/
-  "!wall of thorns!",/*217*/
-  "!meteor!",/*218*/
-  "!berserk!",/*219*/
-  "!awareness!",/*220*/
-  "!feint!",/*221*/
-  "!smite!",/*222*/
-  "You break camp.",/*223*/
-  "You don't feel as lucky.",/*224*/
-  "You don't feel as safe.",/*225*/
-  "Your sense of unity disappears.",/*226*/
-  "!scan!",/*227*/
-  "!tigerkick!",/*228*/
-  "!trip!",/*229*/
-  "!dirty tricks!",/*230*/
-  "!switch!",/*231*/
-  "!trusty steed!",/*232*/
-  "!backfist!",/*233*/
-  "",/*234*/
-  "",/*235*/
-  "You feel less disoriented.",/*236*/
-  "!lunge!",/*237*/
-  "You calm down and feel less angry.",/*238*/
-  "Your sense of righteousness disappears.",/*239*/
-  "!protect!",/*240*/
-  "!wrath of ancients!",/*241*/
-  "!victimize!", /*242*/
-  "You feel less focused.",/*243*/
-  "!sanctify!",/*244*/
-  "Your kinship fades.",/*245*/
-  "Your little orb disappears.",/*246*/
-  "!dusk requiem!", /* 247 Dusk Requiem */
-  "!frostbolt!",/*248*/
-  "Your skin turns softer.",/*249*/
-  "Your sphere returns to normal.",/*250*/
-  "!passdoor!",/*251*/
-  "One by one, the blades in your barrier fall to the ground.",/*252*/
-  "You feel less powerful.",/*253*/
-  "Your sense of precision disappears.",/*254*/
-  "\n",
-};
-
-const int rev_dir[] =
-{
-  2,
-  3,
-  0,
-  1,
-  5,
-  4
-};
-
-const int movement_loss[]=
-{
-  1,  /* Inside     */
-  2,  /* City       */
-  2,  /* Field      */
-  3,  /* Forest     */
-  4,  /* Hills      */
-  6,  /* Mountains  */
-  4,  /* Swimming   */
-  1,  /* Unswimmable */
-  2,  /* Desert      */
-  5   /* Arctic      */
-};
-
-const char *dirs[] =
-{
+const char *dirs[] = {
   "north",
   "east",
   "south",
@@ -364,6 +80,28 @@ const char *dirs[] =
   "up",
   "down",
   "\n"
+};
+
+const int rev_dir[] = {
+  SOUTH,
+  WEST,
+  NORTH,
+  EAST,
+  DOWN,
+  UP
+};
+
+const int movement_loss[] = {
+  1, /* Inside         */
+  2, /* City           */
+  2, /* Field          */
+  3, /* Forest         */
+  4, /* Hills          */
+  6, /* Mountains      */
+  4, /* Water (Swim)    */
+  1, /* Water (No Swim) */
+  2, /* Desert          */
+  5  /* Arctic          */
 };
 
 const char *wpn_spc[] = {
@@ -639,8 +377,7 @@ const int drink_aff[][3] = {
   { 3,2,2 } /* lager */
 };
 
-const char *color_liquid[]=
-{
+const char *color_liquid [] = {
   "clear",
   "brown",
   "clear",
@@ -681,7 +418,6 @@ const char *color_liquid[]=
   "gold",
   "\n"
 };
-
 
 const char *fullness[] = {
   "less than half ",
@@ -1484,7 +1220,7 @@ const char *extra_bits[] = {
   "EVIL",
   "INVISIBLE",
   "MAGICAL",
-  "NODROP",
+  "NO_DROP",
   "BLESSED",
   "ANTI-GOOD",
   "ANTI-EVIL",
@@ -1494,8 +1230,8 @@ const char *extra_bits[] = {
   "ANTI-CLERIC",
   "ANTI-MAGIC_USER",
   "ANTI-MORTAL",
-  "ITEM_EXTRA_131072",
-  "ITEM_EXTRA_262144",
+  "NO_DISINTEGRATE",
+  "DISPELLED",
   "ANTI-RENT",
   "ANTI-NINJA",
   "ANTI-NOMAD",
@@ -1527,26 +1263,26 @@ const char *extra_bits2[] = {
 };
 
 const char *subclass_res_bits[] = {
-  "ANTI_ENCHANTER",
-  "ANTI_ARCHMAGE",
-  "ANTI_DRUID",
-  "ANTI_TEMPLAR",
-  "ANTI_ROGUE",
-  "ANTI_BANDIT",
-  "ANTI_WARLORD",
-  "ANTI_GLADIATOR",
-  "ANTI_RONIN",
-  "ANTI_MYSTIC",
-  "ANTI_RANGER",
-  "ANTI_TRAPPER",
-  "ANTI_CAVALIER",
-  "ANTI_CRUSADER",
-  "ANTI_DEFILER",
-  "ANTI_INFIDEL",
-  "ANTI_BLADESINGER",
-  "ANTI_CHANTER",
-  "ANTI_LEGIONNAIRE",
-  "ANTI_MERCENARY",
+  "ANTI_SC_ENCHANTER",
+  "ANTI_SC_ARCHMAGE",
+  "ANTI_SC_DRUID",
+  "ANTI_SC_TEMPLAR",
+  "ANTI_SC_ROGUE",
+  "ANTI_SC_BANDIT",
+  "ANTI_SC_WARLORD",
+  "ANTI_SC_GLADIATOR",
+  "ANTI_SC_RONIN",
+  "ANTI_SC_MYSTIC",
+  "ANTI_SC_RANGER",
+  "ANTI_SC_TRAPPER",
+  "ANTI_SC_CAVALIER",
+  "ANTI_SC_CRUSADER",
+  "ANTI_SC_DEFILER",
+  "ANTI_SC_INFIDEL",
+  "ANTI_SC_BLADESINGER",
+  "ANTI_SC_CHANTER",
+  "ANTI_SC_LEGIONNAIRE",
+  "ANTI_SC_MERCENARY",
   "\n"
 };
 
@@ -1691,17 +1427,17 @@ const char * const apply_types[] = {
   "INT",
   "WIS",
   "CON",
-  "!APPLY_6!",
-  "!APPLY_7!",
-  "!APPLY_8!",
+  "APPLY_6",
+  "APPLY_7",
+  "APPLY_8",
   "AGE",
-  "!APPLY_10!",
-  "!APPLY_10!",
+  "APPLY_10",
+  "APPLY_10",
   "MANA",
   "HIT",
   "MOVE",
   "SAVING_ALL",
-  "!APPLY_16!",
+  "APPLY_16",
   "ARMOR",
   "HITROLL",
   "DAMROLL",
@@ -1975,6 +1711,7 @@ const char *immune_bits2[] =  {
   "TAUNT",
   "STEAL",
   "CURSE",
+  "HOLD",
   "\n"
 };
 
@@ -2111,335 +1848,48 @@ const char * const connected_types[] = {
   "\n"
 };
 
-/* [class], [level] (all) */
-const int thaco[11][58] = {
-  { 100, /* Mage */
-  20,20,20,19,19,19,18,18,18,17,
-  17,17,16,16,16,15,15,15,14,14,
-  14,13,13,13,12,12,12,11,11,10,
-  10,10,10,10, 9, 9, 9, 9, 9, 8,
-  8, 8, 8, 8, 7, 7, 7, 7, 7, 6,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Cleric */
-  20,20,20,19,19,19,18,18,18,17,
-  17,17,16,16,16,15,15,15,14,14,
-  14,13,13,13,12,12,12,11,11,10,
-  10,10,10,10, 9, 9, 9, 9, 9, 8,
-  8, 8, 8, 8, 7, 7, 7, 7, 7, 6,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Thief */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,12,11,11,11,10,10,
-  10, 9, 9, 9, 8, 8, 8, 8, 8, 7,
-  7, 7, 7, 7, 6, 6, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Warrior */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,12,11,11,11,10,10,
-  10, 9, 9, 9, 8, 8, 8, 8, 8, 7,
-  7, 7, 7, 7, 6, 6, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Ninja */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,11,11,10,10, 9, 9,
-  8, 8, 8, 7, 7, 7, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Nomad */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,12,11,11,11,10,10,
-  10, 9, 9, 9, 8, 8, 8, 8, 8, 7,
-  7, 7, 7, 7, 6, 6, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Paladin */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,11,11,10,10, 9, 9,
-  8, 8, 8, 7, 7, 7, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Antipaladin */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,11,11,10,10, 9, 9,
-  8, 8, 8, 7, 7, 7, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Avatar */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,11,11,10,10, 9, 9,
-  8, 8, 8, 7, 7, 7, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Bard */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,12,11,11,11,10,10,
-  10, 9, 9, 9, 8, 8, 8, 7, 7, 6,
-  6, 6, 6, 6, 5, 5, 5, 5, 5, 4,
-  3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
-  1,1,1,1,1,1,1}, /*51-57*/
-  { 100, /* Commando */
-  20,20,20,18,18,18,16,16,16,14,
-  14,14,12,12,11,11,10,10, 9, 9,
-  8, 8, 8, 7, 7, 7, 6, 6, 6, 5,
-  5, 5, 5, 5, 4, 4, 4, 4, 4, 3,
-  3, 3, 3, 3, 2, 2, 2, 2, 2, 1,
-  1,1,1,1,1,1,1} /*51-57*/
-};
-
 /* Backstab Multiplyer  */
-const byte backstab_mult[] =
-{
-  1,  /* 0 */
-  2,  /* 1 */
-  2,
-  2,
-  2,
-  2,  /* 5 */
-  2,
-  2,
-  3,
-  3,
-  3,  /* 10 */
-  3,
-  3,
-  3,
-  4,
-  4,  /* 15 */
-  4,
-  4,
-  4,
-  4,
-  5,  /* 20 */
-  5,
-  5,
-  5,
-  6,
-  6,  /* 25 */
-  6,
-  7,
-  7,
-  7,
-  8,  /* 30 */
-  8,
-  8,
-  8,
-  8,
-  8,  /* 35 */
-  8,
-  8,
-  8,
-  8,
-  9,  /* 40 */
-  9,
-  9,
-  9,
-  9,
-  9,  /* 45 */
-  9,
-  9,
-  9,
-  9,
-  10,  /* 50 */
-  10,
-  10,
-  10,
-  10,
-  10,
-  10,
-  10   /* 57 */
+const byte backstab_mult[] = {
+  1,                            /* 0 */
+  2, 2, 2, 2, 2, 2, 2, 3, 3, 3, /* 10 */
+  3, 3, 3, 4, 4, 4, 4, 4, 4, 5, /* 20 */
+  5, 5, 5, 6, 6, 6, 7, 7, 7, 8, /* 30 */
+  8, 8, 8, 8, 8, 8, 8, 8, 8, 9, /* 40 */
+  9, 9, 9, 9, 9, 9, 9, 9, 9, 10,/* 50 */
+  10, 10, 10, 10, 10, 10, 10    /* 57 */
 };
 
 /* Ambush Multiplyer */
-const byte ambush_mult[] =
-{
-  1,  /* 0 */
-  2,  /* 1 */
-  2,
-  2,
-  2,
-  2,  /* 5 */
-  2,
-  2,
-  3,
-  3,
-  3,  /* 10 */
-  3,
-  3,
-  3,
-  3,
-  4,  /* 15 */
-  4,
-  4,
-  4,
-  4,
-  4,  /* 20 */
-  4,
-  4,
-  4,
-  5,
-  5,  /* 25 */
-  5,
-  5,
-  5,
-  5,
-  6,  /* 30 */
-  6,
-  6,
-  6,
-  6,
-  6,  /* 35 */
-  6,
-  6,
-  6,
-  6,
-  6,  /* 40 */
-  6,
-  6,
-  6,
-  6,
-  7,  /* 45 */
-  7,
-  7,
-  7,
-  7,
-  8,  /* 50 */
-  8,
-  8,
-  8,
-  8,
-  8,
-  8,
-  8   /* 57 */
+const byte ambush_mult[] = {
+  1,                            /* 0 */
+  2, 2, 2, 2, 2, 2, 2, 3, 3, 3, /* 10 */
+  3, 3, 3, 3, 4, 4, 4, 4, 4, 4, /* 20 */
+  4, 4, 4, 5, 5, 5, 5, 5, 5, 6, /* 30 */
+  6, 6, 6, 6, 6, 6, 6, 6, 6, 6, /* 40 */
+  6, 6, 6, 6, 7, 7, 7, 7, 7, 8, /* 50 */
+  8, 8, 8, 8, 8, 8, 8           /* 57 */
 };
 
 /* Assault Multiplyer */
 const byte assault_mult[] = {
-  1,  /* 0 */
-  2,  /* 1 */
-  2,
-  2,
-  2,
-  2,  /* 5 */
-  2,
-  2,
-  3,
-  3,
-  3,  /* 10 */
-  3,
-  3,
-  3,
-  3,
-  3,  /* 15 */
-  4,
-  4,
-  4,
-  4,
-  4,  /* 20 */
-  4,
-  4,
-  4,
-  4,
-  5,  /* 25 */
-  5,
-  5,
-  5,
-  5,
-  5,  /* 30 */
-  5,
-  5,
-  5,
-  5,
-  5,  /* 35 */
-  5,
-  5,
-  5,
-  5,
-  6,  /* 40 */
-  6,
-  6,
-  6,
-  6,
-  6,  /* 45 */
-  6,
-  6,
-  6,
-  6,
-  7,  /* 50 */
-  7,
-  7,
-  7,
-  7,
-  7,
-  7,
-  7   /* 57 */
+  1,                            /* 0 */
+  2, 2, 2, 2, 2, 2, 2, 3, 3, 3, /* 10 */
+  3, 3, 3, 3, 3, 4, 4, 4, 4, 4, /* 20 */
+  4, 4, 4, 4, 5, 5, 5, 5, 5, 5, /* 30 */
+  5, 5, 5, 5, 5, 5, 5, 5, 5, 6, /* 40 */
+  6, 6, 6, 6, 6, 6, 6, 6, 6, 7, /* 50 */
+  7, 7, 7, 7, 7, 7, 7           /* 57 */
 };
 
 /* Circle Multiplier */
 const byte circle_mult[] = {
-  1,  /* 0 */
-  2,  /* 1 */
-  2,
-  2,
-  2,
-  2,  /* 5 */
-  2,
-  2,
-  2,
-  2,
-  2,  /* 10 */
-  2,
-  2,
-  2,
-  2,
-  3,  /* 15 */
-  3,
-  3,
-  3,
-  3,
-  4,  /* 20 */
-  4,
-  4,
-  4,
-  4,
-  4,  /* 25 */
-  4,
-  4,
-  4,
-  4,
-  4,  /* 30 */
-  4,
-  4,
-  4,
-  4,
-  4,  /* 35 */
-  4,
-  4,
-  4,
-  4,
-  5,  /* 40 */
-  5,
-  5,
-  5,
-  5,
-  5,  /* 45 */
-  5,
-  5,
-  5,
-  5,
-  5,  /* 50 */
-  7,
-  7,
-  7,
-  7,
-  7,
-  7,
-  7   /* 57 */
+  1,                            /* 0 */
+  2, 2, 2, 2, 2, 2, 2, 2, 2, 2, /* 10 */
+  2, 2, 2, 2, 3, 3, 3, 3, 3, 4, /* 20 */
+  4, 4, 4, 4, 4, 4, 4, 4, 4, 4, /* 30 */
+  4, 4, 4, 4, 4, 4, 4, 4, 4, 5, /* 40 */
+  5, 5, 5, 5, 5, 5, 5, 5, 5, 5, /* 50 */
+  7, 7, 7, 7, 7, 7, 7           /* 57 */
 };
 
 /* Strength Apply */
@@ -2470,7 +1920,7 @@ const struct str_app_type str_app[] = {
   {  4, 10,  970, 34 },
   {  5, 11, 1130, 35 },
   {  6, 12, 1440, 36 },
-  {  7, 14, 1750, 37 }, /* 25  */
+  {  7, 14, 1750, 37 }, /* 25       */
   {  1,  3,  280, 22 }, /* 18/01-50 */
   {  2,  3,  305, 24 }, /* 18/51-75 */
   {  2,  4,  330, 26 }, /* 18/76-90 */
@@ -2636,7 +2086,9 @@ struct wis_app_type wis_app[] = {
 /* Cleric Skills */
 const char * const cleric_skills[] = {
   "bash",         /* Level 35 */
-  "meditate",     /* Druid/Templar SC1 */
+  "meditate",     /* Level 40 */
+  "degenerate",   /* Druid SC1 */
+  "shapeshift",   /* Druid SC4 and SC5 */
   "\n"
 };
 
@@ -2871,8 +2323,7 @@ const int mob_id_hp_int[] =
   0,100,250,500,1000,3000,7000,15000,35000,75000
 };
 
-const char *mob_id_hp_text[] =
-{
+const char *mob_id_hp_text[] = {
   "microscopic",
   "miniscule",
   "puny",
@@ -2886,13 +2337,11 @@ const char *mob_id_hp_text[] =
 };
 
 /* #define MOB_ID_DMG_ARRAY_MAX 9 - in magic.c */
-const int mob_id_dmg_int[] =
-{
+const int mob_id_dmg_int[] = {
   0,15,30,60,100,200,500,1000,1800
 };
 
-const char *mob_id_dmg_text[] =
-{
+const char *mob_id_dmg_text[] = {
   "friendly",
   "gentle",
   "feeble",
@@ -2905,13 +2354,11 @@ const char *mob_id_dmg_text[] =
 };
 
 /* #define MOB_ID_LEVEL_ARRAY_MAX 6 - in magic.c */
-const int mob_id_level_int[] =
-{
+const int mob_id_level_int[] = {
   0,15,32,42,53,65
 };
 
-const char *mob_id_level_text[] =
-{
+const char *mob_id_level_text[] = {
   "newbish",
   "sophomoric",
   "inexperienced",
@@ -2921,13 +2368,11 @@ const char *mob_id_level_text[] =
 };
 
 /* #define MOB_ID_MATT_ARRAY_MAX 4 - in magic.c */
-const int mob_id_matt_int[] =
-{
+const int mob_id_matt_int[] = {
   0,1,3,5
 };
 
-const char *mob_id_matt_text[] =
-{
+const char *mob_id_matt_text[] = {
   "",
   "crafty, ",
   "shrewd, ",
@@ -2935,8 +2380,7 @@ const char *mob_id_matt_text[] =
 };
 
 /* #define MOB_ID_SPEC_ARRAY_MAX 2 - in magic.c */
-const char *mob_id_spec[] =
-{
+const char *mob_id_spec[] = {
   "",
   "extraordinary, "
 };

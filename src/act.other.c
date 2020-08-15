@@ -786,7 +786,7 @@ void do_practice(CHAR *ch, char *arg, int cmd) {
     case CLASS_CLERIC:
       showSpells = TRUE;
 
-      if (GET_LEVEL(ch) >= 35 || check_sc_access(ch, SKILL_MEDITATE)) {
+      if (GET_LEVEL(ch) >= 35) {
         showSkills = TRUE;
       }
       break;
@@ -1335,216 +1335,214 @@ void do_group(struct char_data *ch, char *argument, int cmd)
 }
 
 
+void do_quaff(struct char_data *ch, char *argument, int cmd) {
+  char buf[MIL];
 
-void do_quaff(struct char_data *ch, char *argument, int cmd)
-{
-  char buf[100];
-  struct obj_data *temp;
-  int i;
-     bool equipped;
+  one_argument(argument, buf);
 
-     equipped = FALSE;
+  OBJ *potion = get_obj_in_list_vis(ch, buf, GET_CARRYING(ch));
 
-  one_argument(argument,buf);
+  if (!potion && EQ(ch, HOLD) && isname(buf, OBJ_NAME(EQ(ch, HOLD)))) {
+    potion = EQ(ch, HOLD);
+  }
 
-     if(!(temp = get_obj_in_list_vis(ch,buf,ch->carrying))) {
-          temp = ch->equipment[HOLD];
-          equipped = TRUE;
-       if((temp==0) || !isname(buf, OBJ_NAME(temp))) {
-               act("You do not have that item.",FALSE,ch,0,0,TO_CHAR);
-         return;
-       }
-     }
+  if (!potion) {
+    send_to_char("You do not have that item.\n\r", ch);
 
-  if(temp->obj_flags.type_flag!=ITEM_POTION)
-  {
-    act("You can only quaff potions.",FALSE,ch,0,0,TO_CHAR);
     return;
   }
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_QUAFF)) {
-    send_to_char("Something prevents you from putting the potion to your lips!\n\r",ch);
+  if (OBJ_TYPE(potion) != ITEM_POTION) {
+    send_to_char("You can only quaff potions.\n\r", ch);
+
     return;
   }
 
-  if((GET_COND(ch,QUAFF)>5)/*||GET_COND(ch,THIRST)>23*/)
-    {
-    act("You are too full to drink any more.",FALSE,ch,0,0,TO_CHAR);
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_QUAFF)) {
+    send_to_char("Something prevents you from putting the potion to your lips!\n\r", ch);
+
     return;
+  }
+
+  if (GET_COND(ch, QUAFF) > 5) {
+    send_to_char("You are too full to drink any more.\n\r", ch);
+
+    return;
+  }
+
+  act("You quaff $p which dissolves.", FALSE, ch, potion, 0, TO_CHAR);
+  act("$n quaffs $p.", TRUE, ch, potion, 0, TO_ROOM);
+
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+    send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
+
+    extract_obj(potion);
+
+    return;
+  }
+
+  gain_condition(ch, QUAFF, 1);
+
+  for (int i = 1; i < MAX_OBJ_VALUE; i++) {
+    if ((OBJ_VALUE(potion, i) > 0) && (OBJ_VALUE(potion, i) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(potion, i)].spell_pointer) {
+      (*spell_info[OBJ_VALUE(potion, i)].spell_pointer)((byte)OBJ_VALUE(potion, 0), ch, "", SPELL_TYPE_POTION, ch, 0);
     }
+  }
 
-  act("$n quaffs $p.", TRUE, ch, temp, 0, TO_ROOM);
-  act("You quaff $p which dissolves.",FALSE,ch,temp,0,TO_CHAR);
-
-        if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_MAGIC))
-        {       send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
-          if(equipped)
-               unequip_char(ch, HOLD);
-
-          extract_obj(temp);
-                return;
-        }
-
-  gain_condition(ch,QUAFF,1);
-  //gain_condition(ch,THIRST,5);
-
-  for (i=1; i<4; i++)
-    if(temp->obj_flags.value[i] >= 1)
-      ((*spell_info[temp->obj_flags.value[i]].spell_pointer)
-        ((byte) temp->obj_flags.value[0], ch, "", SPELL_TYPE_POTION, ch, 0));
-
-     if(equipped)
-          unequip_char(ch, HOLD);
-
-  extract_obj(temp);
+  extract_obj(potion);
 }
 
 
-void do_recite(struct char_data *ch, char *argument, int cmd)
-{
-  char buf[100];
-  struct obj_data *scroll, *obj;
-  struct char_data *victim;
-  int i, bits;
-  bool equipped;
+void do_recite(struct char_data *ch, char *argument, int cmd) {
+  char buf[MIL], name[MIL];
 
-  equipped = FALSE;
-  obj = 0;
-  victim = 0;
+  two_arguments(argument, buf, name);
 
-  argument = one_argument(argument,buf);
+  OBJ *scroll = get_obj_in_list_vis(ch, buf, GET_CARRYING(ch));
 
-  if(!(scroll = get_obj_in_list_vis(ch,buf,ch->carrying))) {
-    scroll = ch->equipment[HOLD];
-    equipped = TRUE;
-    if((scroll==0) || !isname(buf, OBJ_NAME(scroll))) {
-      act("You do not have that item.",FALSE,ch,0,0,TO_CHAR);
-      return;
-    }
+  if (!scroll && EQ(ch, HOLD) && isname(buf, OBJ_NAME(EQ(ch, HOLD)))) {
+    scroll = EQ(ch, HOLD);
   }
 
-  if(scroll->obj_flags.type_flag!=ITEM_SCROLL)
-    {
-      act("Recite is normally used for scroll's.",FALSE,ch,0,0,TO_CHAR);
-      return;
-    }
+  if (!scroll) {
+    send_to_char("You do not have that item.\n\r", ch);
 
-  if(*argument) {
-    bits = generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM |
-               FIND_OBJ_EQUIP | FIND_CHAR_ROOM, ch, &victim, &obj);
-    if(bits == 0) {
-      send_to_char("No such thing around to recite the scroll on.\n\r", ch);
-      return;
-    }
-  } else {
+    return;
+  }
+
+  if (OBJ_TYPE(scroll) != ITEM_SCROLL) {
+    send_to_char("You can only recite scrolls.\n\r", ch);
+
+    return;
+  }
+
+  CHAR *victim = NULL;
+  OBJ *tar_obj = NULL;
+
+  if (*name) {
+    generic_find(name, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &victim, &tar_obj);
+  }
+  else {
     victim = ch;
   }
 
+  if (!victim && !tar_obj) {
+    act("No such thing around to recite $p on.", FALSE, ch, scroll, 0, TO_CHAR);
+
+    return;
+  }
+
+  act("You recite $p which dissolves.", FALSE, ch, scroll, 0, TO_CHAR);
   act("$n recites $p.", TRUE, ch, scroll, 0, TO_ROOM);
-  act("You recite $p which dissolves.",FALSE,ch,scroll,0,TO_CHAR);
 
-  if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_MAGIC))
-    {
-      send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
-      if(equipped)
-     unequip_char(ch, HOLD);
+  if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+    send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
 
-      extract_obj(scroll);
-      return;
+    extract_obj(scroll);
+
+    return;
+  }
+
+  for (int i = 1; i < MAX_OBJ_VALUE; i++) {
+    if ((OBJ_VALUE(scroll, i) > 0) && (OBJ_VALUE(scroll, i) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(scroll, i)].spell_pointer) {
+      (*spell_info[OBJ_VALUE(scroll, i)].spell_pointer)((byte)OBJ_VALUE(scroll, 0), ch, "", SPELL_TYPE_POTION, victim, tar_obj);
     }
-
-  /* Addition: To fix person targetting spells from crashing ...
-     03-12-1995  -Kafka
-  */
-  if(!victim)
-    victim = ch;
-
-  for (i=1; i<4; i++)
-    if(scroll->obj_flags.value[i] >= 1)
-      ((*spell_info[scroll->obj_flags.value[i]].spell_pointer)
-       ((byte) scroll->obj_flags.value[0], ch, "", SPELL_TYPE_SCROLL, victim, obj));
-
-  if(equipped)
-    unequip_char(ch, HOLD);
+  }
 
   extract_obj(scroll);
 }
 
+
 void do_use(struct char_data *ch, char *argument, int cmd) {
-  char buf[100];
-  struct char_data *tmp_char=0;
-  struct obj_data *tmp_object=0, *stick=0;
-  int bits=0;
+  char buf[MIL], name[MIL];
 
-  argument = one_argument(argument,buf);
+  two_arguments(argument, buf, name);
 
-  if(ch->equipment[HOLD] == 0 ||
-     !isname(buf, OBJ_NAME(ch->equipment[HOLD]))) {
-    act("You do not hold that item in your hand.",FALSE,ch,0,0,TO_CHAR);
+  OBJ *obj = EQ(ch, HOLD);
+
+  if (!obj|| !isname(buf, OBJ_NAME(obj))) {
+    send_to_char("You do not hold that item in your hand.\n\r", ch);
+
     return;
   }
 
-  stick = ch->equipment[HOLD];
+  if (IS_NPC(ch) && (IS_AFFECTED(ch, AFF_CHARM) || IS_SET(GET_ACT(ch), ACT_MOUNT))) return;
 
-  if(IS_NPC(ch) &&
-     (IS_AFFECTED(ch, AFF_CHARM) || IS_SET(ch->specials.act, ACT_MOUNT))) return;
+  CHAR *victim = NULL;
+  OBJ *tar_obj = NULL;
 
-  if(stick->obj_flags.type_flag == ITEM_STAFF) {
-    act("$n taps $p three times on the ground.",TRUE, ch, stick, 0,TO_ROOM);
-    act("You tap $p three times on the ground.",FALSE,ch, stick, 0,TO_CHAR);
-    if(stick->obj_flags.value[2] > 0) {  /* Are there any charges left? */
-      stick->obj_flags.value[2]--;
-      if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_MAGIC)) {
-        send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
-        return;
-      }
-      ((*spell_info[stick->obj_flags.value[3]].spell_pointer)
-      ((byte) stick->obj_flags.value[0], ch, "", SPELL_TYPE_STAFF, 0, 0));
-    } else {
-      send_to_char("The staff seems powerless.\n\r", ch);
-    }
-  }
-  else if(stick->obj_flags.type_flag == ITEM_WAND) {
-    one_argument(argument,buf);
-    if(*buf) { /*parse the argument, grab the target*/
-       bits = generic_find(buf, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM |
-                           FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
-    }
-    else {
-      if((tmp_char=ch->specials.fighting))
-        bits = FIND_CHAR_ROOM;
-    }
-    if(bits) {
-      if(bits == FIND_CHAR_ROOM) {
-        act("$n point $p at $N.", TRUE, ch, stick, tmp_char, TO_ROOM);
-        act("You point $p at $N.",FALSE,ch, stick, tmp_char, TO_CHAR);
-      } else {
-        act("$n point $p at $P.", TRUE, ch, stick, tmp_object, TO_ROOM);
-        act("You point $p at $P.",FALSE,ch, stick, tmp_object, TO_CHAR);
-      }
-      if(stick->obj_flags.value[2] > 0) { /* Is there any charges left? */
-        stick->obj_flags.value[2]--;
-         if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, NO_MAGIC)) {
-          send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
-          return;
-        }
-        ((*spell_info[stick->obj_flags.value[3]].spell_pointer)
-        ((byte) stick->obj_flags.value[0], ch, "", SPELL_TYPE_WAND, tmp_char, tmp_object));
+  switch (OBJ_TYPE(obj)) {
+    case ITEM_WAND:
+      if (*name) {
+        generic_find(buf, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &victim, &tar_obj);
       }
       else {
-        send_to_char("The wand seems powerless.\n\r", ch);
+        victim = GET_OPPONENT(ch);
       }
-    }
-    else {
-      send_to_char("What should the wand be pointed at?\n\r", ch);
-    }
+
+      if (!victim && !tar_obj) {
+        act("What should $p be pointed at?", FALSE, ch, obj, 0, TO_CHAR);
+
+        return;
+      }
+
+      if (victim) {
+        act("You point $p at $N.", FALSE, ch, obj, tar_obj, TO_CHAR);
+        act("$n point $p at $N.", TRUE, ch, obj, tar_obj, TO_ROOM);
+      }
+      else {
+        act("You point $p at $P.", FALSE, ch, obj, tar_obj, TO_CHAR);
+        act("$n point $p at $P.", TRUE, ch, obj, tar_obj, TO_ROOM);
+      }
+
+      if (OBJ_VALUE(obj, 2) > 0) {
+        OBJ_VALUE(obj, 2)--;
+
+        if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+          send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
+
+          return;
+        }
+
+        if ((OBJ_VALUE(obj, 3) > 0) && (OBJ_VALUE(obj, 3) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(obj, 3)].spell_pointer) {
+          (*spell_info[OBJ_VALUE(obj, 3)].spell_pointer)((byte)OBJ_VALUE(obj, 0), ch, "", SPELL_TYPE_WAND, victim, tar_obj);
+        }
+      }
+      else {
+        act("$p seems powerless.", FALSE, ch, obj, 0, TO_CHAR);
+      }
+
+      WAIT_STATE(ch, PULSE_VIOLENCE);
+      break;
+
+    case ITEM_STAFF:
+      act("You tap $p three times on the ground.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n taps $p three times on the ground.", TRUE, ch, obj, 0, TO_ROOM);
+
+      if (OBJ_VALUE(obj, 2) > 0) {
+        if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
+          send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
+
+          return;
+        }
+
+        if ((OBJ_VALUE(obj, 3) > 0) && (OBJ_VALUE(obj, 3) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(obj, 3)].spell_pointer) {
+          (*spell_info[OBJ_VALUE(obj, 3)].spell_pointer)((byte)OBJ_VALUE(obj, 0), ch, "", SPELL_TYPE_WAND, 0, 0);
+        }
+      }
+      else {
+        act("$p seems powerless.", FALSE, ch, obj, 0, TO_CHAR);
+      }
+
+      WAIT_STATE(ch, PULSE_VIOLENCE);
+      break;
+
+    default:
+      send_to_char("Use is normally only for a wand or a staff.\n\r", ch);
+      break;
   }
-  else {
-    send_to_char("Use is normally only for a wand or a staff.\n\r", ch);
-    return; // avoid lag for non-wand/staff objects
-  }
-  WAIT_STATE(ch, PULSE_VIOLENCE);
 }
+
 
 void do_nokill(struct char_data *ch, char *argument, int cmd)
 {
@@ -2341,9 +2339,9 @@ void do_identify(CHAR *ch, char *arg, int cmd) {
 void do_home(CHAR *ch, char *arg, int cmd) {
   if (!ch || IS_NPC(ch)) return;
 
-  if (world[CHAR_REAL_ROOM(ch)].number == 10 ||
-      world[CHAR_REAL_ROOM(ch)].number == 1200) {
+  if ((ROOM_VNUM(CHAR_REAL_ROOM(ch)) == ROOM_PRISON) || (ROOM_VNUM(CHAR_REAL_ROOM(ch)) == ROOM_CHAT_ROOM)) {
     send_to_char("You can't escape!\n\r", ch);
+
     return;
   }
 
@@ -2353,33 +2351,25 @@ void do_home(CHAR *ch, char *arg, int cmd) {
 
     if (GET_GOLD(ch) < gold_cost) {
       send_to_char("You don't have enough gold; the gods don't work for free!\n\r", ch);
+
       return;
     }
-    else {
-      GET_GOLD(ch) -= gold_cost;
-    }
+
+    GET_GOLD(ch) -= gold_cost;
 
     if (IS_SET(CHAR_ROOM_FLAGS(ch), NO_MAGIC)) {
       send_to_char("The magic has been absorbed by your surroundings.\n\r", ch);
+
       return;
     }
-
-    spell_word_of_recall(GET_LEVEL(ch), ch, ch, 0);
-
-    return;
   }
+  else if (GET_LEVEL(ch) > 15) {
+    send_to_char("Sorry, you cannot use this command.\n\r", ch);
 
-  if (GET_LEVEL(ch) > 9) {
-    send_to_char("Sorry, you are too experienced to use this command.\n\rBuy scrolls of recall at the magic shop.\n\r", ch);
     return;
   }
 
   spell_word_of_recall(GET_LEVEL(ch), ch, ch, 0);
-
-  if (GET_LEVEL(ch) <10) {
-    send_to_char("\n\rPlease remember, you can only use this command if you're below level 10.\n\rIn the future, you'll need to buy scrolls of recall from the magic shop.\n\r", ch);
-    return;
-  }
 }
 
 void do_skin(struct char_data *ch, char *argument, int cmd)
@@ -2541,6 +2531,34 @@ copying to that address.\n\r\n\r\
     send_to_char(usage, ch);
     return;
   }
+}
+
+void do_succumb(CHAR *ch, char *arg, int cmd) {
+  if (!ch || IS_NPC(ch)) return;
+
+  if (IS_IMMORTAL(ch)) {
+    printf_to_char(ch, "Just ask an%s IMP to shoot you instead, chucklehead.\n\r", IS_IMPLEMENTOR(ch) ? "other" : "");
+
+    return;
+  }
+
+  if (GET_HIT(ch) > 0) {
+    send_to_char("Suicide is not the answer!\n\r", ch);
+
+    return;
+  }
+
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  if (!(*buf) || strcmp(buf, "confirm")) {
+    send_to_char("You must type 'succumb confirm' to shuffle off of your mortal coil.\n\r", ch);
+
+    return;
+  }
+
+  damage(ch, ch, 30000, TYPE_UNDEFINED, DAM_NO_BLOCK_NO_FLEE);
 }
 
 

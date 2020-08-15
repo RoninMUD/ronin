@@ -40,8 +40,8 @@ int check_sc_access(CHAR *ch, int skill) {
 
   if (IS_NPC(ch) || IS_IMMORTAL(ch)) return TRUE;
 
+  if ((skill == SKILL_MEDITATE) && (GET_CLASS(ch) == CLASS_CLERIC)) return TRUE;
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
-  if ((skill == SPELL_REJUVENATION) && (GET_CLASS(ch) == CLASS_BARD)) return TRUE;
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
   if ((skill == SPELL_IRON_SKIN) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
 
@@ -71,7 +71,6 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
     case SPELL_ORB_PROTECTION:
       if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
-      if (check_subclass(ch, SC_TEMPLAR, 4)) return TRUE;
       break;
     case SPELL_FROSTBOLT:
       if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
@@ -84,28 +83,24 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Druid */
-    case SKILL_MEDITATE:
+    case SKILL_DEGENERATE:
       if (check_subclass(ch, SC_DRUID, 1)) return TRUE;
-      if (check_subclass(ch, SC_TEMPLAR, 1)) return TRUE;
-      break;
-    case SPELL_CLARITY:
-      if (check_subclass(ch, SC_DRUID, 2)) return TRUE;
       break;
     case SPELL_WALL_THORNS:
       if (check_subclass(ch, SC_DRUID, 3)) return TRUE;
       break;
-    case SPELL_MAGIC_ARMAMENT:
+    case SKILL_SHAPESHIFT:
       if (check_subclass(ch, SC_DRUID, 4)) return TRUE;
-      break;
-    case SPELL_DEGENERATE:
-      if (check_subclass(ch, SC_DRUID, 5)) return TRUE;
       break;
 
     /* Templar */
-    case SPELL_SANCTIFY:
+    case SPELL_MAGIC_ARMAMENT:
       if (check_subclass(ch, SC_TEMPLAR, 3)) return TRUE;
       break;
     case SPELL_FORTIFICATION:
+      if (check_subclass(ch, SC_TEMPLAR, 4)) return TRUE;
+      break;
+    case SPELL_DIVINE_HAMMER:
       if (check_subclass(ch, SC_TEMPLAR, 5)) return TRUE;
       break;
 
@@ -202,7 +197,6 @@ int check_sc_access(CHAR *ch, int skill) {
     /* Cavalier */
     case SPELL_MIGHT:
       if (check_subclass(ch, SC_CAVALIER, 1)) return TRUE;
-      if (check_subclass(ch, SC_TEMPLAR, 2)) return TRUE;
       break;
     case SKILL_TRUSTY_STEED:
       if (check_subclass(ch, SC_CAVALIER, 2)) return TRUE;
@@ -283,7 +277,7 @@ int check_sc_access(CHAR *ch, int skill) {
     case SKILL_RIPOSTE:
       if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
       break;
-    case SPELL_INCENDIARY_CLOUD_NEW:
+    case SPELL_INCENDIARY_CLOUD:
       if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
       break;
   }
@@ -452,36 +446,12 @@ Subclasses are: (Mu) ENCHANTER    ARCHMAGE\n\r\
 
 /* Any special objects used in subclasses - in zone LIMBO */
 
-#define STATUE_PEACE 9
-int statue_peace(OBJ *obj, CHAR *ch, int cmd, char *argument) {
-  if (cmd == MSG_TICK) {
-    OBJ_SPEC(obj) -= 1;
-
-    if (OBJ_SPEC(obj) <= 0) {
-      printf_to_room(OBJ_REAL_ROOM(obj), "The statue of peace crumbles to dust.\n\r");
-
-      REMOVE_BIT(ROOM_FLAGS(OBJ_REAL_ROOM(obj)), NO_MOB);
-
-      extract_obj(obj);
-
-      return FALSE;
-    }
-
-    return FALSE;
-  }
-
-  return FALSE;
-}
-
-#define WALL_THORNS 34
 int wall_thorns(OBJ *obj, CHAR *ch, int cmd, char *argument) {
   if (cmd == MSG_TICK) {
-    OBJ_SPEC(obj) -= 1;
+    OBJ_TIMER(obj) -= 1;
 
-    if (OBJ_SPEC(obj) <= 0) {
-      printf_to_room(OBJ_REAL_ROOM(obj), "The wall of thorns slowly wilts and disappears.\n\r");
-
-      REMOVE_BIT(ROOM_FLAGS(OBJ_REAL_ROOM(obj)), NO_MOB);
+    if (OBJ_TIMER(obj) <= 0) {
+      printf_to_room(OBJ_REAL_ROOM(obj), "The wall of thorns slowly wilts and crumbles to dust.\n\r");
 
       extract_obj(obj);
 
@@ -640,7 +610,19 @@ int sc_master(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     extract_obj(obj);
 
-    distribute_tokens(CHAOSMODE ? 0 : (TOKENCOUNT - obj_proto_table[real_object(5)].number));
+    int num_tokens = 0;
+
+    for (OBJ *token = object_list, *next_token; token; token = next_token) {
+      next_token = token->next;
+
+      if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
+        num_tokens++;
+      }
+    }
+
+    if (num_tokens < TOKENCOUNT) {
+      distribute_tokens(CHAOSMODE ? 0 : 1, FALSE);
+    }
 
     return TRUE;
   }
@@ -1231,7 +1213,6 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
 
 
 void assign_subclass(void) {
-  assign_obj(STATUE_PEACE, statue_peace);
   assign_obj(WALL_THORNS, wall_thorns);
 
   assign_mob(TOKEN_MOB, token_mob);

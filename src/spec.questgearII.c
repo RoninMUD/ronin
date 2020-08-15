@@ -256,7 +256,7 @@ crimson gas, suffusing your body as your wounds seal shut.\n\r", PERS(owner,owne
               next_vict = vict->next_in_room;
               if(IS_NPC(vict) || !IS_MORTAL(vict))
                 continue; /* no affect on mobs/gods */
-              magic_heal(vict, SPELL_MIRACLE, 2000, FALSE);
+              magic_heal(0, vict, SPELL_MIRACLE, 2000, FALSE);
             }
             /* reset the charge counter */
             shabtis->obj_flags.value[i] = shabtis_charge_nums[i][0];

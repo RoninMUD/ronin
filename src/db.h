@@ -24,7 +24,7 @@
 #define IDEA_FILE         "ideas"         /* for the 'idea'-command     */
 #define TYPO_FILE         "typos"         /*         'typo'             */
 #define BUG_FILE          "bugs"          /*         'bug'              */
-#define MESS_FILE         "messages"      /* damage message             */
+#define MESSAGES_FILE     "messages"      /* damage messages            */
 #define SOCMESS_FILE      "actions"       /* messgs for social acts     */
 #define HELP_KWRD_FILE    "help_table"    /* for HELP <keywrd>          */
 #define HELP_PAGE_FILE    "help"          /* for HELP <CR>              */
@@ -36,7 +36,7 @@
 #define MAX_ID            15000 /* Maximum number of id's stored in name/id list */
 
 /* public procedures in db.c */
-void distribute_tokens(const int num_tokens);
+void distribute_tokens(const int num_tokens, bool rebuild_table);
 int inzone(int);
 void boot_db(void);
 void save_char(struct char_data *ch, sh_int load_room);
@@ -55,11 +55,14 @@ int search_world_table(int l, int r, int vnum);
 int search_mob_table(int l, int r, int vnum);
 int search_obj_table(int l, int r, int vnum);
 int search_shop_table(int l, int r, int vnum);
+int search_fight_messages_list(int l, int r, int attack_type);
 int allocate_zone(int vnum);
 int allocate_room(int vnum);
 int allocate_mob(int vnum);
 int allocate_obj(int vnum);
 int allocate_shop(int vnum);
+int allocate_fight_message(int attack_type);
+void load_messages(void);
 void renum_world(void);
 void reset_zone(int zone, int full);
 int real_zone(int vnum);
@@ -263,6 +266,9 @@ extern struct obj_data  *object_list;
 
 extern int number_of_shops;
 extern struct shop_data *shop_index;
+
+extern int top_of_fight_messages_list;
+extern struct message_list *fight_messages_list;
 
 extern struct time_info_data time_info;
 extern struct weather_data weather_info;

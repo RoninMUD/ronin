@@ -58,11 +58,13 @@ void append_to_string_block(struct string_block *sb, char *str);
 /* ******** objects *********** */
 void adjust_obj_list(struct obj_data *object,struct obj_data *list);
 
-void obj_to_char(struct obj_data *object, struct char_data *ch);
-struct obj_data *obj_from_char(struct obj_data *object);
+void obj_to_char(OBJ *object, CHAR *ch);
+OBJ *obj_from_char(OBJ *object);
 
-void equip_char(struct char_data *ch, struct obj_data *obj, int pos);
-struct obj_data *unequip_char(struct char_data *ch, int pos);
+bool equip_char_ex(CHAR *ch, OBJ *obj, int pos, bool zap);
+void equip_char(CHAR *ch, OBJ *obj, int pos);
+bool rent_equip_char(CHAR *ch, OBJ *obj, int pos);
+OBJ *unequip_char(CHAR *ch, int pos);
 
 struct obj_data *get_obj_in_list(char *name, struct obj_data *list);
 struct obj_data *get_obj_in_list_num(int num, struct obj_data *list);
@@ -79,14 +81,12 @@ void extract_obj(struct obj_data *obj);
 
 /* ******* characters ********* */
 
-bool rent_equip_char(struct char_data *ch, struct obj_data *obj, int pos);
-
 struct char_data *get_char_room(char *name, int room);
 struct char_data *get_char_num(int nr);
 struct char_data *get_char(char *name);
 
-void char_from_room(struct char_data *ch);
-void char_to_room(struct char_data *ch, int room);
+void char_from_room(CHAR *ch);
+void char_to_room(CHAR *ch, int room);
 
 /* find if character can see */
 struct char_data *get_mortal_room_vis(struct char_data *ch, char *name);

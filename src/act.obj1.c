@@ -763,7 +763,7 @@ int drop_object(CHAR *ch, OBJ *obj)
 {
   char buf[MSL] = "";
 
-  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NODROP))
+  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP))
   {
     send_to_char("You can't drop it, it must be CURSED!\n\r", ch);
     return 0;
@@ -1200,7 +1200,7 @@ bool give_object_to(CHAR *ch, OBJ *obj, CHAR *vict, int show)
 {
   char buf[MSL] = "";
 
-  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NODROP))
+  if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP))
   {
     if (show) send_to_char("You can't let go of it! Yeech!\n\r", ch);
     return FALSE;

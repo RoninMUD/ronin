@@ -212,22 +212,24 @@ int search_block(const char *string, const char * const *list, bool exact_match)
 
 /* Return index of string matched in a given list of strings. */
 int old_search_block(const char *string, int begin, int length, const char * const *list, int mode) {
-  size_t index = 0;
-  bool found = FALSE;
+  if (!string || !list) return -1;
 
-  if (length < 1)
+  if (length < 1) {
     return 0;
+  }
+
+  size_t index = 0;
 
   while (*(list[index]) != '\n') {
-    found = (mode ? (length == strlen(list[index])) : TRUE);
+    bool found = (mode ? (length == strlen(list[index])) : TRUE);
 
-    for (int i = 0; ((i < length) && found); i++)
+    for (int i = 0; ((i < length) && found); i++) {
       found = (*(string + begin + i) == *(list[index] + i));
+    }
 
     index++;
 
-    if (found)
-      return index;
+    if (found) return index;
   }
 
   return -1;
@@ -313,113 +315,135 @@ int determine_command(char *command, int length) {
   return -1;
 }
 
-void command_interpreter(CHAR *ch, char *argument)
-{
+void command_interpreter(CHAR *ch, char *argument) {
   int index;
-  char *command,*args;
+  char *command, *args;
 #ifndef TEST_SITE
   char buf[MAX_STRING_LENGTH];
 #endif
 
-  if(ch->desc) {
-    if(!ch->desc->original)
-      REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
+  assert(ch);
+
+  if (!GET_DESCRIPTOR(ch) || !DESC_ORIGINAL(GET_DESCRIPTOR(ch))) {
+    REMOVE_BIT(GET_AFF(ch), AFF_HIDE);
   }
-  else
-    REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
 
   update_pos(ch);
 
-  if(CHAR_REAL_ROOM(ch)==NOWHERE) return;
+  if (CHAR_REAL_ROOM(ch) == NOWHERE) return;
 
-  /* Freeze extension to mortals - Ranger March 2000 */
-  if(IS_MORTAL(ch) && IS_SET(ch->new.imm_flags, WIZ_FREEZE)) {
-    send_to_char("You are completely frozen, unable to do anything.\n\r",ch);
+  /* Skip spaces. */
+  for (command = argument; *command == ' '; command++);
+
+  /* Make all letters lower case AND find length. */
+  for (args = command; *args > ' '; args++) {
+    *(args) = LOWER(*args);
+  }
+
+  /* Frozen */
+  if (IS_MORTAL(ch) && IS_SET(GET_IMM_FLAGS(ch), WIZ_FREEZE)) {
+    send_to_char("You are completely frozen, unable to do anything.\n\r", ch);
+
     return;
   }
 
-  if(affected_by_spell(ch, SKILL_MEDITATE) && GET_LEVEL(ch)<LEVEL_IMM) {   /* Chaos03 */
-    if((CHAOSMODE && duration_of_spell(ch,SKILL_MEDITATE)>9) ||
-     duration_of_spell(ch,SKILL_MEDITATE)>29) {
-      send_to_char("You are in a deep healing trance, unable to do anything.\n\r",ch);
+  /* Signal the "command" to the room. */
+  if (signal_room(CHAR_REAL_ROOM(ch), ch, CMD_UNKNOWN, command)) return;
+
+  /* Get the index of the command. */
+  index = determine_command(command, args - command);
+
+  /* Pray */
+  if (IS_MORTAL(ch) && affected_by_spell(ch, SKILL_PRAY)) {
+    send_to_char("You are deep in prayer, unable to do anything.\n\r", ch);
+
+    return;
+  }
+
+  /* Meditate */
+  if (IS_MORTAL(ch) && affected_by_spell(ch, SKILL_MEDITATE) && (duration_of_spell(ch, SKILL_MEDITATE) >= 10)) {
+    if ((index < 0) || ((index >= 0) && ((cmd_info[index].num != CMD_WAKE) && (cmd_info[index].num != CMD_AFFECT)))) {
+      send_to_char("You are in a deep healing trance, unable to do anything.\n\r", ch);
+
       return;
     }
   }
 
-  if(affected_by_spell(ch, SKILL_PRAY) && GET_LEVEL(ch)<LEVEL_IMM) {
-    send_to_char("You are deep in prayer, unable to do anything.\n\r",ch);
-    return;
-  }
+  /* If the command was not found, check for a social. */
+  if (index < 0) {
+    /* Get the index of the social. */
+    index = find_action(command, args - command);
 
-  /* Find first non blank */
-  for (command = argument ; *command == ' '  ; command++ );
-
-  /* Find length of first word */
-  for (args=command; *args > ' ' ; args++)
-     *(args) = LOWER(*args);/* Make all letters lower case AND find length */
-
-  if(signal_room(CHAR_REAL_ROOM(ch),ch, CMD_UNKNOWN, command)) return;
-  index = determine_command(command,args-command);
-  if (index <0 ) {
-    index = find_action(command,args-command);
-    if(index >-1) {
-      switch(GET_POS(ch)) {
+    /* If a social was found, perform it. */
+    if (index >= 0) {
+      /* Check the character's position. */
+      switch (GET_POS(ch)) {
         case POSITION_DEAD:
-          send_to_char("Lie still; you are DEAD!!! :-( \n\r", ch);
+          send_to_char("Lie still; you are DEAD!!! :-(\n\r", ch);
           return;
           break;
+
         case POSITION_INCAP:
         case POSITION_MORTALLYW:
-          send_to_char("You are in a pretty bad shape, unable to do anything!\n\r", ch);
+          send_to_char("You are in pretty bad shape, unable to do anything!\n\r", ch);
           return;
           break;
+
         case POSITION_STUNNED:
-          send_to_char("All you can do right now, is think about the stars!\n\r", ch);
+          send_to_char("All you can do right now is think about the stars!\n\r", ch);
           return;
           break;
+
         case POSITION_SLEEPING:
           send_to_char("In your dreams, or what?\n\r", ch);
           return;
           break;
       }
 
-      do_action(ch,args,find_action(command,args-command));
-      if( signal_room( CHAR_REAL_ROOM( ch ), ch, MSG_UNKNOWN, command ) )
-        return;
-      index = -1;     /*Set it like nothing happened */
-      args = command;
+      /* Perform the social. */
+      do_action(ch, args, find_action(command, args - command));
+
+      return;
     }
   }
 
-  if (index >=0 && GET_LEVEL(ch)>=cmd_info[index].minimum_level ) {
+  /* If the command was found and the character is high enough level, perform it. */
+  if ((index >= 0) && (GET_LEVEL(ch) >= cmd_info[index].minimum_level)) {
+    /* Check the character's position. */
     if (cmd_info[index].command_pointer != 0) {
-      if ( GET_POS(ch) < cmd_info[index].minimum_position ) {
-        switch(GET_POS(ch)) {
+      if (GET_POS(ch) < cmd_info[index].minimum_position) {
+        switch (GET_POS(ch)) {
           case POSITION_DEAD:
-            send_to_char("Lie still; you are DEAD!!! :-( \n\r", ch);
+            send_to_char("Lie still; you are DEAD!!! :-(\n\r", ch);
             return;
             break;
+
           case POSITION_INCAP:
           case POSITION_MORTALLYW:
-            send_to_char("You are in a pretty bad shape, unable to do anything!\n\r", ch);
+            send_to_char("You are in pretty bad shape, unable to do anything!\n\r", ch);
             return;
             break;
+
           case POSITION_STUNNED:
-            send_to_char("All you can do right now, is think about the stars!\n\r", ch);
+            send_to_char("All you can do right now is think about the stars!\n\r", ch);
             return;
             break;
+
           case POSITION_SLEEPING:
             send_to_char("In your dreams, or what?\n\r", ch);
             return;
             break;
+
           case POSITION_RESTING:
-            send_to_char("Nah... You feel too relaxed to do that..\n\r", ch);
+            send_to_char("Nah... You feel too relaxed to do that...\n\r", ch);
             return;
             break;
+
           case POSITION_SITTING:
-            send_to_char("Maybe you should get on your feet first?\n\r",ch);
+            send_to_char("Maybe you should get on your feet first?\n\r", ch);
             return;
             break;
+
           case POSITION_FIGHTING:
             send_to_char("No way! You are fighting for your life!\n\r", ch);
             return;
@@ -427,68 +451,79 @@ void command_interpreter(CHAR *ch, char *argument)
         }
       }
       else {
-        if(cmd_info[index].minimum_position>POSITION_FIGHTING &&
-           ch->specials.fighting) {
-          send_to_char("No way! You are fighting for your life!\n\r",ch);
+        /* Check the character's position. */
+        if ((cmd_info[index].minimum_position > POSITION_FIGHTING) && GET_OPPONENT(ch)) {
+          send_to_char("No way! You are fighting for your life!\n\r", ch);
           return;
         }
 
-/* Log the command for output at crash - Ranger Jan 2001*/
-        sprintf(last_command, "[%5d] %s in [%5d] %s: %s",
-                IS_NPC(ch) ? V_MOB(ch): 0, GET_NAME(ch),
-                CHAR_REAL_ROOM(ch)!=NOWHERE ? CHAR_VIRTUAL_ROOM(ch):0,
-                CHAR_REAL_ROOM(ch)!=NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)",command);
+        /* Log the command for output at crash. */
+        snprintf(last_command, sizeof(last_command), "[%5d] %s in [%5d] %s: %s",
+          IS_NPC(ch) ? V_MOB(ch) : 0,
+          GET_NAME(ch),
+          CHAR_REAL_ROOM(ch) != NOWHERE ? CHAR_VIRTUAL_ROOM(ch) : 0,
+          CHAR_REAL_ROOM(ch) != NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)", command);
 
-        if (!no_specials && signal_room(CHAR_REAL_ROOM(ch),ch, cmd_info[index].num, args)) {
-          sprintf(last_command, "(Finished) [%5d] %s in [%5d] %s: %s",
-                  IS_NPC(ch) ? V_MOB(ch): 0, GET_NAME(ch),
-                  CHAR_REAL_ROOM(ch)!=NOWHERE ? CHAR_VIRTUAL_ROOM(ch):0,
-                  CHAR_REAL_ROOM(ch)!=NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)",command);
+        /* Signal the command to the room and log if we need to return. */
+        if (!no_specials && signal_room(CHAR_REAL_ROOM(ch), ch, cmd_info[index].num, args)) {
+          snprintf(last_command, sizeof(last_command), "(Finished) [%5d] %s in [%5d] %s: %s",
+            IS_NPC(ch) ? V_MOB(ch) : 0,
+            GET_NAME(ch),
+            CHAR_REAL_ROOM(ch) != NOWHERE ? CHAR_VIRTUAL_ROOM(ch) : 0,
+            CHAR_REAL_ROOM(ch) != NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)", command);
           return;
         }
 
-        if(CHAR_REAL_ROOM(ch)==NOWHERE) {
-          sprintf(last_command, "(Finished) [%5d] %s in [%5d] %s: %s",
-                  IS_NPC(ch) ? V_MOB(ch): 0, GET_NAME(ch),
-                  CHAR_REAL_ROOM(ch)!=NOWHERE ? CHAR_VIRTUAL_ROOM(ch):0,
-                  CHAR_REAL_ROOM(ch)!=NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)",command);
+        /* Log the last command again if the character ended up in NOWHERE. */
+        if (CHAR_REAL_ROOM(ch) == NOWHERE) {
+          snprintf(last_command, sizeof(last_command), "(Finished) [%5d] %s in [%5d] %s: %s",
+            IS_NPC(ch) ? V_MOB(ch) : 0,
+            GET_NAME(ch),
+            CHAR_REAL_ROOM(ch) != NOWHERE ? CHAR_VIRTUAL_ROOM(ch) : 0,
+            CHAR_REAL_ROOM(ch) != NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)", command);
           return;
         }
 
-       ((*cmd_info[index].command_pointer) (ch, args, cmd_info[index].num));
+        /* Call the command pointer. */
+        ((*cmd_info[index].command_pointer)(ch, args, cmd_info[index].num));
+
 #ifndef TEST_SITE
-       if(cmd_info[index].num==CMD_NEWOLCM ||
-          cmd_info[index].num==CMD_NEWOLCO ||
-          cmd_info[index].num==CMD_NEWOLCZ ||
-          cmd_info[index].num==CMD_NEWOLCR) {
-          sprintf(buf,"WIZINFO: %s %s",GET_NAME(ch),command);
-          wizlog(buf,GET_LEVEL(ch)+1,5);
+        /* Log OLC commands. */
+        if (cmd_info[index].num == CMD_NEWOLCM ||
+            cmd_info[index].num == CMD_NEWOLCO ||
+            cmd_info[index].num == CMD_NEWOLCZ ||
+            cmd_info[index].num == CMD_NEWOLCR) {
+          snprintf(buf, sizeof(buf), "WIZINFO: %s %s", GET_NAME(ch), command);
+          wizlog(buf, GET_LEVEL(ch) + 1, 5);
           log_s(buf);
-       }
+        }
 #endif
-       sprintf(last_command, "(Finished) [%5d] %s in [%5d] %s: %s",
-               IS_NPC(ch) ? V_MOB(ch): 0, GET_NAME(ch),
-               CHAR_REAL_ROOM(ch)!=NOWHERE ? CHAR_VIRTUAL_ROOM(ch):0,
-               CHAR_REAL_ROOM(ch)!=NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)",command);
+
+        /* Log the command for output at crash. */
+        snprintf(last_command, sizeof(last_command), "(Finished) [%5d] %s in [%5d] %s: %s",
+          IS_NPC(ch) ? V_MOB(ch) : 0,
+          GET_NAME(ch),
+          CHAR_REAL_ROOM(ch) != NOWHERE ? CHAR_VIRTUAL_ROOM(ch) : 0,
+          CHAR_REAL_ROOM(ch) != NOWHERE ? world[CHAR_REAL_ROOM(ch)].name : "(nowhere)", command);
       }
     }
   }
   else {
-    if (args-command) { /* i.e. the command has a length, not just a return */
-       if(!signal_room(CHAR_REAL_ROOM(ch),ch, CMD_UNKNOWN, command)) {
-         if(GET_LEVEL(ch)>2) {
-           send_to_char(unknownCMD[number(0, 47)], ch);
-         }
-         else {
-           send_to_char("\
-Sorry, that command doesn't exist, try typing HELP or\n\r\
-HELP INDEX to see a list of available commands.\n\r\
-Also, HELP COMPARISON may help if you are use\n\r\
-to a different type of mud.\n\r\n\r",ch);
-         }
-       }
+    if (args - command) { /* i.e. the command has a length, not just a return */
+      if (!signal_room(CHAR_REAL_ROOM(ch), ch, CMD_UNKNOWN, command)) {
+        if (GET_LEVEL(ch) > 2) {
+          send_to_char(unknownCMD[number(0, NUMELEMS(unknownCMD) - 2)], ch);
+        }
+        else {
+          send_to_char("Sorry, that command doesn't exist, try typing HELP or\n\r"
+                       "HELP INDEX to see a list of available commands.\n\r"
+                       "Also, HELP COMPARISON may help if you are used to a\n\r"
+                       "different type of mud.\n\r\n\r", ch);
+        }
+      }
     }
   }
+
   return;
 }
 
@@ -775,7 +810,6 @@ void assign_command_pointers ( void )
   COMMANDO("subdue"   ,CMD_SUBDUE     ,POSITION_STANDING ,do_subdue,1);
   COMMANDO("ride"     ,CMD_RIDE       ,POSITION_STANDING ,do_ride,1);
   COMMANDO("dismount" ,CMD_DISMOUNT   ,POSITION_FIGHTING ,do_dismount,1);
-  /* Free for mounts - Ranger April 96 */
   COMMANDO("free"     ,CMD_FREE       ,POSITION_FIGHTING ,do_free,1);
   COMMANDO("punch"    ,CMD_PUNCH      ,POSITION_FIGHTING ,do_punch,1);
   COMMANDO("disarm"   ,CMD_DISARM     ,POSITION_FIGHTING ,do_disarm,1);
@@ -833,12 +867,12 @@ void assign_command_pointers ( void )
   COMMANDO("collect"  ,CMD_COLLECT    ,POSITION_STANDING ,do_not_here,1);
   COMMANDO("donate"   ,CMD_DONATE     ,POSITION_DEAD     ,do_donate, 1);
   COMMANDO("home"     ,CMD_HOME       ,POSITION_RESTING  ,do_home, 1);
+  COMMANDO("succumb"  ,CMD_SUCCUMB    ,POSITION_DEAD     ,do_succumb, 1);
   COMMANDO("wemote"   ,CMD_WEMOTE     ,POSITION_DEAD     ,do_wemote, LEVEL_IMM);
   COMMANDO("wf"       ,CMD_WIZACT     ,POSITION_DEAD     ,do_wizact, LEVEL_IMM);
   COMMANDO("color"    ,CMD_COLOR      ,POSITION_DEAD     ,do_setcolor, 1);
   COMMANDO("breath"   ,CMD_FIREBREATH ,POSITION_FIGHTING ,do_unknown, 1);
   COMMANDO("clan"     ,CMD_CLAN       ,POSITION_SLEEPING ,do_clan, 1); /* Linerfix 02, clan cmd while sleep */
-  //COMMANDO("backflip" ,CMD_BACKFLIP   ,POSITION_FIGHTING ,do_backflip, 1); /* Hemp - removed Backflip, replaced with taunt 2020 */
   COMMANDO("snooplist",CMD_SNOOPLIST  ,POSITION_FIGHTING ,do_snooplist,LEVEL_WIZ);
   COMMANDO("description",CMD_DESCRIPT ,POSITION_FIGHTING ,do_descr, 1);
   COMMANDO("vote"     ,CMD_VOTE       ,POSITION_FIGHTING ,do_not_here, 1);
@@ -921,6 +955,8 @@ void assign_command_pointers ( void )
   COMMANDO("clobber", CMD_CLOBBER, POSITION_FIGHTING, do_clobber, 30);
   COMMANDO("victimize", CMD_VICTIMIZE, POSITION_FIGHTING, do_victimize, 30);
   COMMANDO("snipe", CMD_SNIPE, POSITION_FIGHTING, do_snipe, 30);
+  COMMANDO("degenerate", CMD_DEGENERATE, POSITION_FIGHTING, do_degenerate, 30);
+  COMMANDO("shapeshift", CMD_SHAPESHIFT, POSITION_FIGHTING, do_shapeshift, 30);
   
   COMMANDO("rip"      ,CMD_RIP       ,POSITION_DEAD      ,do_rip,LEVEL_IMP ); /* Ranger - Feb 29,2000 */
 

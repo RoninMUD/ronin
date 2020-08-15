@@ -56,6 +56,9 @@
 #define CAVERNA    12839
 #define CAVERNB    12842
 
+#define MANACLE_PA 12829
+#define MANACLE_AP 12831
+
 int tc_sign(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
   int a=FALSE, b=FALSE, c=FALSE, d=FALSE, e=FALSE, f=FALSE, g=FALSE;
   int h=FALSE, j=FALSE, k=FALSE, l=FALSE, m=FALSE, n=FALSE, o=FALSE;
@@ -1048,16 +1051,16 @@ int tc_lair_spec(int room, CHAR *ch, int cmd, char *arg) {
             break;
           case POSITION_INCAP:
           case POSITION_MORTALLYW:
-            send_to_char("You are in a pretty bad shape, unable to do anything!\n\r", ch);
+            send_to_char("You are in pretty bad shape, unable to do anything!\n\r", ch);
             break;
           case POSITION_STUNNED:
-            send_to_char("All you can do right now, is think about the stars!\n\r", ch);
+            send_to_char("All you can do right now is think about the stars!\n\r", ch);
             break;
           case POSITION_SLEEPING:
             send_to_char("In your dreams, or what?\n\r", ch);
             break;
           case POSITION_RESTING:
-            send_to_char("Nah... You feel too relaxed to do that..\n\r", ch);
+            send_to_char("Nah... You feel too relaxed to do that...\n\r", ch);
             break;
           case POSITION_SITTING:
             send_to_char("Maybe you should get on your feet first?\n\r",ch);
@@ -1066,7 +1069,7 @@ int tc_lair_spec(int room, CHAR *ch, int cmd, char *arg) {
             send_to_char("No way! You are fighting for your life!\n\r", ch);
             break;
           default:
-            do_simple_move(ch,dir,0);
+            move_char(ch, dir, 0);
             return TRUE;
             break;
         }
@@ -1127,6 +1130,46 @@ int tc_decay_items(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
   return FALSE;
 }
 
+int tc_manacles(OBJ *obj, CHAR *ch, int cmd, char *argument) {
+  if (cmd == MSG_OBJ_WORN) {
+    if (!obj || !ch || !OBJ_CARRIED_BY(obj) || (ch != OBJ_CARRIED_BY(obj)) || !AWAKE(ch) || IS_IMMORTAL(ch)) return FALSE;
+
+    bool zap = FALSE;
+
+    switch (V_OBJ(obj)) {
+      case MANACLE_PA:
+        if (GET_CLASS(ch) != CLASS_PALADIN) {
+          zap = TRUE;
+        }
+        break;
+
+      case MANACLE_AP:
+        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
+          zap = TRUE;
+        }
+        break;
+    }
+
+    if (IS_NPC(ch)) {
+      zap = TRUE;
+    }
+
+    if (zap) {
+      act("You attempt to wear $p around your wrist.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n attempts to wear $p around $s wrist.", FALSE, ch, obj, 0, TO_ROOM);
+
+      act("You are zapped by $p and instantly drop it.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n is zapped by $p and instantly drops it.", FALSE, ch, obj, 0, TO_ROOM);
+
+      return TRUE;
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 void assign_tarioncity(void) {
   int i;
   assign_obj(SIGN, tc_sign);
@@ -1142,6 +1185,8 @@ void assign_tarioncity(void) {
   for(i = 12800; i < 12808; i++) assign_mob(i, tc_paktat_spec);
   for(i = 12812; i < 12829; i++) assign_mob(i, tc_paktat_spec);
   for(i = 12800; i < 12816; i++) assign_obj(i, tc_decay_items);
+  assign_obj(MANACLE_PA, tc_manacles);
+  assign_obj(MANACLE_AP, tc_manacles);
   assign_room(ALTAR, tc_altar_spec);
   assign_room(CAVERNA, tc_cavern_spec);
   assign_room(CAVERNB, tc_cavern_spec);
@@ -1151,5 +1196,3 @@ void assign_tarioncity(void) {
   assign_room(12847, tc_lair_spec);
   assign_room(CLEANSING, tc_cleansing_spec);
 }
-
-
