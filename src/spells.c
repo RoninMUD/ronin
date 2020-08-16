@@ -210,7 +210,7 @@ int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal) {
   int hp_limit = GET_MAX_HIT(victim);
 
   if (ch) {
-    /* Druid SC4: Shapeshift: Elemental Form - Magical healing caused by the Druid is increased by 10%. */
+    /* Druid SC4: Shapeshift: Elemental Form - Magical healing caused by the Druid is increased by 20%. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
       heal *= 1.2;
     }

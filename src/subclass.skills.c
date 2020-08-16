@@ -2258,8 +2258,10 @@ int shapeshift_elemental_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int c
   if (cmd == MSG_TICK) {
     if (!ench || !ch) return FALSE;
 
-    act("A swarm of charged particles circles your form, resonating with energy.", FALSE, ch, 0, 0, TO_CHAR);
-    act("A swarm of charged particles circles $n's form, resonating with energy.", TRUE, ch, 0, 0, TO_ROOM);
+    if (IS_MORTAL(ch)) {
+      act("A swarm of charged particles circles your form, resonating with energy.", FALSE, ch, 0, 0, TO_CHAR);
+      act("A swarm of charged particles circles $n's form, resonating with energy.", TRUE, ch, 0, 0, TO_ROOM);
+    }
 
     return FALSE;
   }
@@ -2319,7 +2321,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
     char command[MIL], command_arg[MIL];
 
     arg = one_argument(arg, command);
-    one_argument(arg, command_arg);
+    arg = one_argument(arg, command_arg);
 
     int cmd_idx = determine_command(command, strlen(command));
 
@@ -2329,12 +2331,14 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
       if ((cmd == CMD_CAST) && IS_MORTAL(ch)) {
         char spell_name[MIL];
 
-        int spell_words_len = str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
+        str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
 
         int spell = old_search_block(spell_name, 0, strlen(spell_name), (const char * const * const)spells, FALSE);
 
         if (spell == SPELL_FEAR) {
-          char *victim_name = command_arg + spell_words_len + 2;
+          char victim_name[MIL];
+
+          one_argument(arg, victim_name);
 
           if (!(*victim_name)) {
             send_to_char("Who should the spell be cast upon?\n\r", ch);
@@ -2524,7 +2528,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
   if (cmd == MSG_TICK) {
     if (!ench || !ch) return FALSE;
 
-    if (!GET_OPPONENT(ch) && !number(0, 2)) {
+    if (IS_MORTAL(ch) && !GET_OPPONENT(ch) && !number(0, 2)) {
       switch (number(1, 3)) {
         case 1:
           act("You flare your nostrils and puff out a cloud of smoke and flame.", FALSE, ch, 0, 0, TO_CHAR);

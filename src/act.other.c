@@ -1527,7 +1527,7 @@ void do_use(struct char_data *ch, char *argument, int cmd) {
         }
 
         if ((OBJ_VALUE(obj, 3) > 0) && (OBJ_VALUE(obj, 3) < MAX_SPL_LIST) && spell_info[OBJ_VALUE(obj, 3)].spell_pointer) {
-          (*spell_info[OBJ_VALUE(obj, 3)].spell_pointer)((byte)OBJ_VALUE(obj, 0), ch, "", SPELL_TYPE_WAND, 0, 0);
+          (*spell_info[OBJ_VALUE(obj, 3)].spell_pointer)((byte)OBJ_VALUE(obj, 0), ch, "", SPELL_TYPE_STAFF, 0, 0);
         }
       }
       else {
