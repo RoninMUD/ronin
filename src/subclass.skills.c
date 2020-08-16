@@ -2321,7 +2321,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
     char command[MIL], command_arg[MIL];
 
     arg = one_argument(arg, command);
-    one_argument(arg, command_arg);
+    arg = one_argument(arg, command_arg);
 
     int cmd_idx = determine_command(command, strlen(command));
 
@@ -2331,12 +2331,14 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
       if ((cmd == CMD_CAST) && IS_MORTAL(ch)) {
         char spell_name[MIL];
 
-        int spell_words_len = str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
+        str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
 
         int spell = old_search_block(spell_name, 0, strlen(spell_name), (const char * const * const)spells, FALSE);
 
         if (spell == SPELL_FEAR) {
-          char *victim_name = command_arg + spell_words_len + 2;
+          char victim_name[MIL];
+
+          one_argument(arg, victim_name);
 
           if (!(*victim_name)) {
             send_to_char("Who should the spell be cast upon?\n\r", ch);

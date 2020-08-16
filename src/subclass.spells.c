@@ -870,7 +870,7 @@ void cast_magic_armament(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 }
 
 void spell_magic_armament(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_MAGIC_ARMAMENT)) {
+  if (!affected_by_spell(victim, SPELL_MAGIC_ARMAMENT)) {
     print_spell_messages(victim, SPELL_MAGIC_ARMAMENT);
 
     aff_apply(victim, SPELL_MAGIC_ARMAMENT, 5, 0, 0, 0, 0);
