@@ -2258,8 +2258,10 @@ int shapeshift_elemental_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int c
   if (cmd == MSG_TICK) {
     if (!ench || !ch) return FALSE;
 
-    act("A swarm of charged particles circles your form, resonating with energy.", FALSE, ch, 0, 0, TO_CHAR);
-    act("A swarm of charged particles circles $n's form, resonating with energy.", TRUE, ch, 0, 0, TO_ROOM);
+    if (IS_MORTAL(ch)) {
+      act("A swarm of charged particles circles your form, resonating with energy.", FALSE, ch, 0, 0, TO_CHAR);
+      act("A swarm of charged particles circles $n's form, resonating with energy.", TRUE, ch, 0, 0, TO_ROOM);
+    }
 
     return FALSE;
   }
@@ -2524,7 +2526,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
   if (cmd == MSG_TICK) {
     if (!ench || !ch) return FALSE;
 
-    if (!GET_OPPONENT(ch) && !number(0, 2)) {
+    if (IS_MORTAL(ch) && !GET_OPPONENT(ch) && !number(0, 2)) {
       switch (number(1, 3)) {
         case 1:
           act("You flare your nostrils and puff out a cloud of smoke and flame.", FALSE, ch, 0, 0, TO_CHAR);

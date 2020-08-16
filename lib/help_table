@@ -8576,7 +8576,7 @@ Subclass: Druid, Level 4 (Cleric)
 Advantages:
 - Concentration rate becomes 100%, even in half or quarter concentration rooms.
 - All spells cost 10% less mana to cast.
-- Healing and damage spells cure or inflict 10% more damage, respectively.
+- Healing and damage spells cure or inflict 20% more damage, respectively.
 - Permanent Fortification, as per the spell.
 - Immunity to the skill lag caused by some skills and special attacks, such as
   from pummel, bash, tailslam, etc.  This does not affect damage or position.

@@ -1955,7 +1955,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           dmg = lround(dmg * 0.5);
         }
         else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
-          /* Spell damage inflicted by the Druid is increased by 10%. */
+          /* Spell damage inflicted by the Druid is increased by 20%. */
           dmg = lround(dmg * 1.2);
         }
       }
