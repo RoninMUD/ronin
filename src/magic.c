@@ -1553,6 +1553,12 @@ void spell_relocation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
+  if (victim == ch) {
+    send_to_char("This isn't going to work, you know!\n\r", ch);
+
+    return;
+  }
+
   if (IS_NPC(victim) ||
       (CHAR_REAL_ROOM(victim) == NOWHERE) ||
       (ROOM_ZONE(CHAR_REAL_ROOM(victim)) == 0) ||
