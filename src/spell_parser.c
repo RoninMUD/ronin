@@ -1158,7 +1158,7 @@ void assign_spell_pointers(void) {
   // Templar
   SPELLO(SPELL_MAGIC_ARMAMENT,      30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,   75, TAR_SELF_ONLY,                                                                cast_magic_armament);
   SPELLO(SPELL_FORTIFICATION,       30, POSITION_STANDING, 57, 30, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_fortification);
-  SPELLO(SPELL_DIVINE_HAMMER,       30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,  250, TAR_SELF_ONLY,                                                                cast_divine_hammer);
+  SPELLO(SPELL_DIVINE_HAMMER,       30, POSITION_FIGHTING, 57, 30, 57, 57, 57, 57, 57, 57,  200, TAR_SELF_ONLY,                                                                cast_divine_hammer);
   // Ronin
   SPELLO(SPELL_BLUR,                30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_blur);
   // Mystic

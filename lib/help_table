@@ -2381,16 +2381,22 @@ AFFECT
 
 Shows all skills, spells, and enchantments that are affecting you.
 
-Usage : affect <brief|old>
+Usage: affects [set] <normal/old/brief/verbose>
 
-The arguments 'brief' and 'old' are optional. The command 'affect' without
-either argument will display the most information and in a newer format.
+The command 'affect normal' will show a moderate amount of information, while
+"compressing" multiple entries of the same affect into one line.
+
+The command 'affect old' will show information in the legacy style formatting,
+with less information about the affects.
 
 The command 'affect brief' will show only affects with a duration and will
 have a reduced amount of whitespace.
 
-The command 'affect old' will show the older style formatting with less
-information.
+The command 'affect verbose' will show verbose information about affects,
+including what modifiers and permanent spell effects are being applied.
+
+Including the optional 'set' parameter will save the specified style as the
+default that is used when you type 'affect' without any additional parameters.
 #
 ASSIST
 
@@ -8438,7 +8444,7 @@ See Also: SUBCLASS TEMPLAR SANCTUARY
 Subclass: Templar, Level 5 (Cleric)
 
 Usage:        cast 'divine hammer' (self only)
-Mana Cost:    250
+Mana Cost:    200
 Duration:     60 attacks (equal to 3 minutes of continuous combat)
 
 The most pious of Templars can manifest a weapon of pure holy energy in the form
@@ -8454,7 +8460,7 @@ hacking damage, depending on the opponent's damage immunities; if the opponent
 is immune to all of these weapon types, damage is inflicted via magical means
 instead.
 
-The weapon's damage is equal to 7d7+7 during the first 20 attacks, 8d8+8
+The weapon's damage is equal to 5d5+5 during the first 20 attacks, 7d7+7
 during the next 20 attacks, and 9d9+9 damage during the final 20 attacks.
 
 After the hammer has made 60 attacks, it ceases its attacks and looms above the
@@ -8467,15 +8473,15 @@ optional 'area' or 'room' argument, the strike will heal all mortals in the
 room for 500 hit points.
 
 If the Templar targets a friendly player, the strike will heal the target
-for 1,500 hit points as it bathes them in holy light; the Templar can target
+for 1,000 hit points as it bathes them in holy light; the Templar can target
 themself with this command if desired.
 
 If the Templar instead targets an opponent or a non-player character, the hammer
 crashes into them with the full force of the heavens, inflicting a massive
-2,000 damage in a single blow.
+1,000 damage in a single blow.
 
 Finally, if the effect expires without being used, its energy dissipates and it
-restores 200 health and 50 mana to the Templar.
+restores 250 health and 50 mana to the Templar.
 
 The 'judgement-strike' command accepts the following optional arguments:
 area/room, opponent/victim, and self/me.
@@ -8653,8 +8659,8 @@ SHAPESHIFT
 
 Subclass: Druid, Level 4 and 5 (Cleric)
 
-Usage:     shapeshift <dragon/elemental/normal>
-Mana Cost: 100 (Dragon/Elemental Form) / 0 (Normal Form)
+Usage:   shapeshift <dragon/elemental/normal>
+HP Cost: 100 (Dragon/Elemental Form) / 0 (Normal Form)
 
 This ability allows the Druid to transform into a non-humanoid creature,
 granting them special powers, spells, and skills.  Each form brings with it

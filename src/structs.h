@@ -1191,7 +1191,8 @@ struct char_ver3_data {
   char email_addr[80]; /* Ranger Dec 03 */
   unsigned long long toggles; /* Toggles */
   unsigned long extra_bitvect; /* Not used yet */
-  byte extra_byte[6]; /* Not used yet */
+  byte extra_byte[5]; /* Not used yet */
+  byte affect_style;
   ubyte rank;
   ubyte prestige;
   ubyte who_filter; /* Filters specified for 'who' output. */
@@ -1754,7 +1755,6 @@ struct snoop_data
 #define PROMPT_VICTIM_A   00020000
 #define PROMPT_VICTIM_TEX 00040000
 #define PROMPT_NAME       00100000
-#define PROMPT_SPELLS     00200000
 
 struct descriptor_data
 {

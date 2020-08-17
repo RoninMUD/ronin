@@ -2274,6 +2274,8 @@ void do_display(CHAR *ch, char *arg, int cmd) {
                  "               buffer|victim [on|off|always|auto|text]  | [###]\n\r"\
                  "               newline       [on|off]                   | [#]\n\r", ch);
   }
+
+  save_char(ch, NOWHERE);
 }
 
 
