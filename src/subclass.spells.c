@@ -1604,7 +1604,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
         act("You channel the energy from your divine hammer into $N's soul, healing $M!", FALSE, ch, 0, victim, TO_CHAR);
       }
 
-      magic_heal(ch, victim, SPELL_DIVINE_HAMMER, 1500, FALSE);
+      magic_heal(ch, victim, SPELL_DIVINE_HAMMER, 1000, FALSE);
     }
     else {
       if (!IS_IMMORTAL(ch) && IS_IMMORTAL(victim)) {
@@ -1619,7 +1619,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
       act("$n smites you with $s divine hammer, crushing you into the earth!", FALSE, ch, 0, victim, TO_VICT);
       act("You smite $N with your divine hammer, crushing $M into the earth!", FALSE, ch, 0, victim, TO_CHAR);
 
-      damage(ch, victim, 2000, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage(ch, victim, 1000, TYPE_UNDEFINED, DAM_MAGICAL);
     }
 
     ench_from_char(ch, ENCH_NAME_JUDGEMENT_STRIKE, 0, FALSE);
@@ -1659,7 +1659,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
     act("$n's divine hammer fades, restoring some of $s energy.", TRUE, ch, 0, 0, TO_ROOM);
     act("Your divine hammer fades, restoring some of your energy.", FALSE, ch, 0, 0, TO_CHAR);
 
-    magic_heal(ch, ch, SPELL_DIVINE_HAMMER, 200, FALSE);
+    magic_heal(ch, ch, SPELL_DIVINE_HAMMER, 250, FALSE);
 
     GET_MANA(ch) = MIN(GET_MANA(ch) + 50, GET_MAX_MANA(ch));
 
@@ -1695,14 +1695,14 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
       OBJ_GET_SHORT(hammer) = strdup("Divine Hammer");
     }
 
-    int num_dice = 7;
-    int size_dice = 7;
-    int dam_bonus = 7;
+    int num_dice = 5;
+    int size_dice = 5;
+    int dam_bonus = 5;
 
     if ((ench->duration == 40) || (ench->duration == 20)) {
-      num_dice += 1;
-      size_dice += 1;
-      dam_bonus += 1;
+      num_dice += 2;
+      size_dice += 2;
+      dam_bonus += 2;
     }
 
     int attack_type = TYPE_UNDEFINED;

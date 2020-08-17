@@ -1951,22 +1951,22 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       /* Druid SC4: Shapeshift: Elemental Form */
       if (check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
         if (IS_WEAPON_ATTACK(attack_type) || IS_SKILL_ATTACK(attack_type, damage_type)) {
-          /* Physical damage inflicted by the Druid is reduced by 50%. */
+          /* Physical damage inflicted while in Element Form is reduced by 50%. */
           dmg = lround(dmg * 0.5);
         }
         else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
-          /* Spell damage inflicted by the Druid is increased by 20%. */
+          /* Spell damage inflicted while in Elemental Form is increased by 20%. */
           dmg = lround(dmg * 1.2);
         }
       }
       /* Druid SC5: Shapeshift: Dragon Form */
       else if (check_subclass(ch, SC_DRUID, 5) && ench_enchanted_by(ch, ENCH_NAME_DRAGON_FORM, 0)) {
         if (IS_WEAPON_ATTACK(attack_type) || IS_SKILL_ATTACK(attack_type, damage_type)) {
-          /* Physical damage inflicted by the Druid is increased by their Wisdom modifier. */
+          /* Physical damage inflicted while in Dragon Form is increased by the Druid's Wisdom modifier. */
           dmg += GET_WIS_APP(ch);
         }
         else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
-          /* Spell damage inflicted by the Druid is reduced by 20%. */
+          /* Spell damage inflicted while in Dragon Form is reduced by 20%. */
           dmg = lround(dmg * 0.8);
         }
       }

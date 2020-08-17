@@ -49,7 +49,7 @@ void page_string(struct descriptor_data *d, char *str, int keep_internal);
 void make_chaos_corpse(struct char_data *ch);
 void create_wizlist (FILE *wizlist);
 void create_inactive_wizlist (FILE *wizlist);
-void give_prompt(struct descriptor_data *point);
+void give_prompt(DESC *desc);
 void death_list(CHAR *ch);
 
 /* intern functions */
@@ -1940,9 +1940,10 @@ have lost in death. Redeem yourself and you shall return to your former glory!'\
 }
 
 
-#define AFF_MODE_N 0
-#define AFF_MODE_O 1
-#define AFF_MODE_B 2
+#define AFFECT_STYLE_NORMAL  0
+#define AFFECT_STYLE_OLD     1
+#define AFFECT_STYLE_BRIEF   2
+#define AFFECT_STYLE_VERBOSE 3
 
 #define AFF_SRC_AF 1
 #define AFF_SRC_EN 2
@@ -1950,12 +1951,14 @@ have lost in death. Redeem yourself and you shall return to your former glory!'\
 
 struct affect_info_t {
   char name[MIL];
+  int source;
   int type;
   int duration;
   int interval;
+  int location;
+  int modifier;
   long bits;
   long bits2;
-  int source;
 };
 
 int compare_affects(const void *affect1, const void *affect2) {
@@ -1970,21 +1973,75 @@ spells, and enchantments. */
 void do_affect(CHAR *ch, char *arg, int cmd) {
   char buf[MIL * 2], buf2[MIL];
 
-  one_argument(arg, buf);
+  arg = one_argument(arg, buf);
 
-  int mode = AFF_MODE_N;
+  int style = GET_AFFECT_STYLE(ch);
 
   if (*buf) {
-    if (is_abbrev(buf, "old")) {
-      mode = AFF_MODE_O;
+    bool set = FALSE, print_usage = FALSE;
+
+    if (is_abbrev(buf, "set")) {
+      set = TRUE;
+
+      one_argument(arg, buf);
     }
-    else if (is_abbrev(buf, "brief")) {
-      mode = AFF_MODE_B;
+
+    if (*buf) {
+      if (is_abbrev(buf, "normal")) {
+        style = AFFECT_STYLE_NORMAL;
+      }
+      else if (is_abbrev(buf, "old")) {
+        style = AFFECT_STYLE_OLD;
+      }
+      else if (is_abbrev(buf, "brief")) {
+        style = AFFECT_STYLE_BRIEF;
+      }
+      else if (is_abbrev(buf, "verbose")) {
+        style = AFFECT_STYLE_VERBOSE;
+      }
+      else {
+        print_usage = TRUE;
+      }
+    }
+    else {
+      print_usage = TRUE;
+    }
+
+    if (print_usage) {
+      send_to_char("Usage: affect [set] <normal/old/brief/verbose>\n\r", ch);
+
+      return;
+    }
+
+    if (set) {
+      switch (style) {
+        case AFFECT_STYLE_NORMAL:
+          snprintf(buf, sizeof(buf), "Normal");
+          break;
+
+        case AFFECT_STYLE_OLD:
+          snprintf(buf, sizeof(buf), "Old");
+          break;
+
+        case AFFECT_STYLE_BRIEF:
+          snprintf(buf, sizeof(buf), "Brief");
+          break;
+
+        case AFFECT_STYLE_VERBOSE:
+          snprintf(buf, sizeof(buf), "Verbose");
+          break;
+      }
+
+      printf_to_char(ch, "Affect style set to %s.\n\r", buf);
+
+      GET_AFFECT_STYLE(ch) = style;
+
+      return;
     }
   }
 
   /* Old do_affect for those that still want it. */
-  if (mode == AFF_MODE_O) {
+  if (style == AFFECT_STYLE_OLD) {
     if (ch->affected || ch->enchantments) {
       if (ch->affected) {
         printf_to_char(ch, "\n\rAffecting Spells/Skills:\n\r-----------------------\n\r");
@@ -1999,7 +2056,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         printf_to_char(ch, "\n\rEnchantments:\n\r------------\n\r");
 
         for (ENCH *temp_ench = ch->enchantments; temp_ench; temp_ench = temp_ench->next) {
-          printf_to_char(ch, "    '%s'\n\r", temp_ench->name);
+          printf_to_char(ch, "      '%s'\n\r", temp_ench->name);
         }
       }
     }
@@ -2085,9 +2142,13 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   if (ch->affected) {
     for (AFF *temp_aff = ch->affected; temp_aff && (aff_list_idx < NUMELEMS(aff_list)); temp_aff = temp_aff->next) {
       snprintf(aff_list[aff_list_idx].name, sizeof(aff_list[aff_list_idx].name), "%s", *spell_text[temp_aff->type].name ? spell_text[temp_aff->type].name : "Unknown");
+      aff_list[aff_list_idx].source = AFF_SRC_AF;
       aff_list[aff_list_idx].type = temp_aff->type;
       aff_list[aff_list_idx].duration = temp_aff->duration;
-      aff_list[aff_list_idx].source = AFF_SRC_AF;
+      aff_list[aff_list_idx].location = temp_aff->location;
+      aff_list[aff_list_idx].modifier = temp_aff->modifier;
+      aff_list[aff_list_idx].bits = temp_aff->bitvector;
+      aff_list[aff_list_idx].bits2 = temp_aff->bitvector2;
 
       /* Record the longest string for use in printing. */
       if (strlen(aff_list[aff_list_idx].name) > longest_str) {
@@ -2107,11 +2168,13 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   if (ch->enchantments) {
     for (ENCH *temp_ench = ch->enchantments; temp_ench && (aff_list_idx < NUMELEMS(aff_list)); temp_ench = temp_ench->next) {
       snprintf(aff_list[aff_list_idx].name, sizeof(aff_list[aff_list_idx].name), "%s", temp_ench->name && *(temp_ench->name) ? temp_ench->name : "Unknown");
+      aff_list[aff_list_idx].source = AFF_SRC_EN;
       aff_list[aff_list_idx].duration = temp_ench->duration;
       aff_list[aff_list_idx].interval = temp_ench->interval;
+      aff_list[aff_list_idx].location = temp_ench->location;
+      aff_list[aff_list_idx].modifier = temp_ench->modifier;
       aff_list[aff_list_idx].bits = temp_ench->bitvector;
       aff_list[aff_list_idx].bits2 = temp_ench->bitvector2;
-      aff_list[aff_list_idx].source = AFF_SRC_EN;
 
       /* Record the longest string for use in printing. */
       if (strlen(aff_list[aff_list_idx].name) > longest_str) {
@@ -2132,9 +2195,9 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     for (int type = 1; (type < NUMELEMS(eq_aff)) && (aff_list_idx < NUMELEMS(aff_list)); type++) {
       if (eq_aff[type]) {
         snprintf(aff_list[aff_list_idx].name, sizeof(aff_list[aff_list_idx].name), "%s", *spell_text[type].name ? spell_text[type].name : "Unknown");
+        aff_list[aff_list_idx].source = AFF_SRC_EQ;
         aff_list[aff_list_idx].type = type;
         aff_list[aff_list_idx].duration = -1;
-        aff_list[aff_list_idx].source = AFF_SRC_EQ;
 
         /* Record the longest string for use in printing. */
         if (strlen(aff_list[aff_list_idx].name) > longest_str) {
@@ -2157,14 +2220,20 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   /* Sort the list of applied affects alphabetically. */
   qsort((void *)&aff_list, aff_list_idx + 1, sizeof(struct affect_info_t), compare_affects);
 
-  bool aff_printed = FALSE, ench_printed = FALSE;
+  bool aff_printed = FALSE, ench_printed = FALSE, eq_printed = FALSE;
 
   send_to_char("\n\rAffected by:\n\r-----------\n\r", ch);
 
   if (ch->affected) {
     for (int i = 0; i <= aff_list_idx; i++) {
-      if ((aff_list[i].source != AFF_SRC_AF) || ((aff_list[i].duration < 0) && (mode == AFF_MODE_B))) {
+      if ((aff_list[i].source != AFF_SRC_AF) ||
+          ((style == AFFECT_STYLE_BRIEF) && (aff_list[i].duration < 0)) ||
+          ((style != AFFECT_STYLE_VERBOSE) && (i > 0) && (aff_list[i].type == aff_list[i - 1].type))) {
         continue;
+      }
+
+      if ((style == AFFECT_STYLE_VERBOSE) && aff_printed && (i > 0) && (aff_list[i].type && (aff_list[i].type != aff_list[i - 1].type))) {
+        send_to_char("\n\r", ch);
       }
 
       snprintf(buf, sizeof(buf), "'%s'", aff_list[i].name);
@@ -2179,18 +2248,59 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
       printf_to_char(ch, "Skill/Spell: %-*s %s\n\r", longest_str + 2, buf, buf2);
 
+      long bits = aff_list[i].bits, bits2 = aff_list[i].bits2;
+
+      if ((style == AFFECT_STYLE_VERBOSE) && aff_list[i].location) {
+        printf_to_char(ch, "             [ %s by %d ]\n\r",
+          apply_types[aff_list[i].location], aff_list[i].modifier);
+      }
+
+      if ((style == AFFECT_STYLE_VERBOSE) && (bits || bits2)) {
+        send_to_char("             [ ", ch);
+
+        if (bits) {
+          for (int j = 0; j < NUMELEMS(aff_bits_map); j++) {
+            if (IS_SET(bits, aff_bits_map[j][0]) && IS_SET(GET_AFF(ch), aff_bits_map[j][0])) {
+              REMOVE_BIT(bits, aff_bits_map[j][0]);
+
+              snprintf(buf, sizeof(buf), "%s", spell_text[aff_bits_map[j][1]].name);
+
+              printf_to_char(ch, "%s%s", str_upper(buf, sizeof(buf), buf), (bits || bits2) ? " | " : " ]\n\r");
+            }
+          }
+        }
+
+        if (bits2) {
+          for (int j = 0; j < NUMELEMS(aff_bits2_map); j++) {
+            if (IS_SET(bits2, aff_bits2_map[j][0]) && IS_SET(GET_AFF2(ch), aff_bits2_map[j][0])) {
+              REMOVE_BIT(bits2, aff_bits2_map[j][0]);
+
+              snprintf(buf, sizeof(buf), "%s", spell_text[aff_bits_map[j][1]].name);
+
+              printf_to_char(ch, "%s%s", str_upper(buf, sizeof(buf), buf), bits2 ? " | " : " ]\n\r");
+            }
+          }
+        }
+      }
+
       aff_printed = TRUE;
     }
   }
 
   if (ch->enchantments) {
-    if (aff_printed && (mode != AFF_MODE_B)) {
+    if (aff_printed && (style != AFFECT_STYLE_BRIEF)) {
       send_to_char("\n\r", ch);
     }
 
     for (int i = 0; i <= aff_list_idx; i++) {
-      if ((aff_list[i].source != AFF_SRC_EN) || ((aff_list[i].duration == -1) && (mode == AFF_MODE_B))) {
+      if ((aff_list[i].source != AFF_SRC_EN) ||
+          ((style == AFFECT_STYLE_BRIEF) && (aff_list[i].duration < 0)) ||
+          ((style != AFFECT_STYLE_VERBOSE) && (i > 0) && ((aff_list[i].type && (aff_list[i].type == aff_list[i - 1].type)) || (aff_list[i].name && !strcmp(aff_list[i].name, aff_list[i - 1].name))))) {
         continue;
+      }
+
+      if ((style == AFFECT_STYLE_VERBOSE) && ench_printed && (i > 0) && ((aff_list[i].type && (aff_list[i].type != aff_list[i - 1].type)) || (aff_list[i].name && strcmp(aff_list[i].name, aff_list[i - 1].name)))) {
+        send_to_char("\n\r", ch);
       }
 
       snprintf(buf, sizeof(buf), "'%s'", aff_list[i].name);
@@ -2218,26 +2328,39 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
         buf2[0] = '\0';
       }
 
+      printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
+
       long bits = aff_list[i].bits, bits2 = aff_list[i].bits2;
 
-      printf_to_char(ch, "Enchantment: %-*s %s\n\r%s", longest_str + 2, buf, buf2, (bits || bits2) ? "             [ " : "");
-
-      if (bits) {
-        for (int j = 0; j < NUMELEMS(aff_bits_map); j++) {
-          if (IS_SET(bits, aff_bits_map[j][0]) && IS_SET(GET_AFF(ch), aff_bits_map[j][0])) {
-            REMOVE_BIT(bits, aff_bits_map[j][0]);
-
-            printf_to_char(ch, "%s%s", spell_text[aff_bits_map[j][1]].name, (bits || bits2) ? " | " : " ]\n\r");
-          }
-        }
+      if ((style == AFFECT_STYLE_VERBOSE) && aff_list[i].location) {
+        printf_to_char(ch, "             [ %s by %d ]\n\r",
+          apply_types[aff_list[i].location], aff_list[i].modifier);
       }
 
-      if (bits2) {
-        for (int j = 0; j < NUMELEMS(aff_bits2_map); j++) {
-          if (IS_SET(bits2, aff_bits2_map[j][0]) && IS_SET(GET_AFF2(ch), aff_bits2_map[j][0])) {
-            REMOVE_BIT(bits2, aff_bits2_map[j][0]);
+      if ((style == AFFECT_STYLE_VERBOSE) && (bits || bits2)) {
+        send_to_char("             [ ", ch);
 
-            printf_to_char(ch, "%s%s", spell_text[aff_bits2_map[j][1]].name, bits2 ? " | " : " ]\n\r");
+        if (bits) {
+          for (int j = 0; j < NUMELEMS(aff_bits_map); j++) {
+            if (IS_SET(bits, aff_bits_map[j][0]) && IS_SET(GET_AFF(ch), aff_bits_map[j][0])) {
+              REMOVE_BIT(bits, aff_bits_map[j][0]);
+
+              snprintf(buf, sizeof(buf), "%s", spell_text[aff_bits_map[j][1]].name);
+
+              printf_to_char(ch, "%s%s", str_upper(buf, sizeof(buf), buf), (bits || bits2) ? " | " : " ]\n\r");
+            }
+          }
+        }
+
+        if (bits2) {
+          for (int j = 0; j < NUMELEMS(aff_bits2_map); j++) {
+            if (IS_SET(bits2, aff_bits2_map[j][0]) && IS_SET(GET_AFF2(ch), aff_bits2_map[j][0])) {
+              REMOVE_BIT(bits2, aff_bits2_map[j][0]);
+
+              snprintf(buf, sizeof(buf), "%s", spell_text[aff_bits_map[j][1]].name);
+
+              printf_to_char(ch, "%s%s", str_upper(buf, sizeof(buf), buf), bits2 ? " | " : " ]\n\r");
+            }
           }
         }
       }
@@ -2247,7 +2370,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
   }
 
   if (eq_aff[0]) {
-    if ((aff_printed || ench_printed) && (mode != AFF_MODE_B)) {
+    if ((aff_printed || ench_printed) && (style != AFFECT_STYLE_BRIEF)) {
       send_to_char("\n\r", ch);
     }
 
@@ -2258,7 +2381,13 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
 
       printf_to_char(ch, "Equipment:%s %-*s\n\r",
         (ch->affected || ch->enchantments) ? "  " : "", longest_str + 2, buf);
+
+      eq_printed = TRUE;
     }
+  }
+
+  if (!aff_printed && !ench_printed && !eq_printed) {
+    send_to_char("[Hidden by Affect Style: Brief]\n\r", ch);
   }
 }
 

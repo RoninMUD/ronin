@@ -452,6 +452,7 @@ do {                   \
 #define GET_FOLLOWERS(ch) (ch->followers)
 #define GET_SWITCHED(ch) (ch->switched)
 #define GET_TIMER(ch) (ch->specials.timer)
+#define GET_AFFECT_STYLE(ch) (ch->ver3.affect_style)
 
 #define GET_SAVING_THROW(ch, save) (ch->specials.apply_saving_throw[save])
 
