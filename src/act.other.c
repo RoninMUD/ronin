@@ -1474,7 +1474,7 @@ void do_use(struct char_data *ch, char *argument, int cmd) {
   switch (OBJ_TYPE(obj)) {
     case ITEM_WAND:
       if (*name) {
-        generic_find(buf, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &victim, &tar_obj);
+        generic_find(name, FIND_CHAR_ROOM | FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &victim, &tar_obj);
       }
       else {
         victim = GET_OPPONENT(ch);
@@ -1487,8 +1487,8 @@ void do_use(struct char_data *ch, char *argument, int cmd) {
       }
 
       if (victim) {
-        act("You point $p at $N.", FALSE, ch, obj, tar_obj, TO_CHAR);
-        act("$n point $p at $N.", TRUE, ch, obj, tar_obj, TO_ROOM);
+        act("You point $p at $N.", FALSE, ch, obj, victim, TO_CHAR);
+        act("$n point $p at $N.", TRUE, ch, obj, victim, TO_ROOM);
       }
       else {
         act("You point $p at $P.", FALSE, ch, obj, tar_obj, TO_CHAR);
