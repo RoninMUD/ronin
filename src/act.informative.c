@@ -3655,35 +3655,17 @@ void do_where(struct char_data *ch, char *argument, int cmd)
   destroy_string_block(&sb);
 }
 
-void do_levels(struct char_data *ch, char *argument, int cmd)
-{
-  int i;
-  char buf[MSL*2];
+void do_levels(CHAR *ch, char *argument, int cmd) {
+  if (!ch || IS_NPC(ch)) return;
 
-  if (IS_NPC(ch)) {
-    send_to_char("You ain't nothin' but a hound-dog.\n\r", ch);
-    return;
+  for (int i = 1; i <= LEVEL_MORT; i++) {
+    printf_to_char(ch, "[%2d] %9d : %s\n\r", i, exp_table[i], GET_SEX(ch) == SEX_FEMALE ? titles[GET_CLASS(ch) - 1][i].title_f : titles[GET_CLASS(ch) - 1][i].title_m);
   }
-
-  *buf = '\0';
-  for (i = 1; i < LEVEL_IMM; i++) {
-    sprintf(buf + strlen(buf), "[%2d] %10d : ", i, exp_table[i]);
-    switch(GET_SEX(ch)) {
-    case SEX_MALE:
-      strcat(buf, titles[GET_CLASS(ch) - 1][i].title_m); break;
-    case SEX_FEMALE:
-      strcat(buf, titles[GET_CLASS(ch) - 1][i].title_f); break;
-    default:
-      send_to_char("Oh dear.\n\r", ch); break;
-    }
-    strcat(buf, "\n\r");
-  }
-  send_to_char(buf, ch);
 }
 
 
 
-void do_consider(struct char_data *ch, char *argument, int cmd)
+void do_consider(CHAR *ch, char *argument, int cmd)
 {
   struct char_data *victim;
   char name[256];
@@ -3738,7 +3720,7 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
     send_to_char("You're either insane or suicidal!\n\r", ch);
 }
 
-void do_whois(struct char_data *ch, char *argument, int cmd) {
+void do_whois(CHAR *ch, char *argument, int cmd) {
   struct descriptor_data *d;
   FILE *fl;
   char buf[MSL], buf2[MSL];
@@ -3935,10 +3917,7 @@ void do_whois(struct char_data *ch, char *argument, int cmd) {
   }
 
   printf_to_char(ch, "Last on %d days, %d hours, %d minute, and %d seconds ago.\n\r",
-    days,
-    hours,
-    mins,
-    secs);
+    days, hours, mins, secs);
 }
 
 /* For future use.
