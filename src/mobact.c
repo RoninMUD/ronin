@@ -101,10 +101,10 @@ void mobile_activity(CHAR *mob) {
       !GET_RIDER(mob) &&
       !IS_AFFECTED(mob, AFF_HOLD) &&
       (GET_MOVE(mob) > 0) &&
-      ((GET_POS(mob) == POSITION_STANDING) || (GET_POS(mob) == POSITION_RIDING) || (GET_POS(mob) == POSITION_FLYING))) {
+      (GET_POS(mob) >= POSITION_STANDING)) {
     int dir = number(0, 45);
 
-    if ((dir  <= DOWN) &&
+    if ((dir <= DOWN) &&
         CAN_GO(mob, dir) &&
         !IS_SET(world[EXIT(mob, dir)->to_room_r].room_flags, NO_MOB) &&
         !IS_SET(world[EXIT(mob, dir)->to_room_r].room_flags, SAFE) &&
