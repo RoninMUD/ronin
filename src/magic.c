@@ -47,13 +47,13 @@ void spell_reveal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_paralyze(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (IS_AFFECTED(victim, AFF_PARALYSIS) || affected_by_spell(victim, SPELL_PARALYSIS)) {
+  if (IS_AFFECTED(victim, AFF_PARALYSIS) || aff_affected_by(victim, SPELL_PARALYSIS)) {
     act("$N is already paralyzed!", FALSE, ch, 0, victim, TO_CHAR);
 
     return;
   }
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE(victim, IMMUNE_PARALYSIS) && !saves_spell(victim, SAVING_PARA, level)) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE(victim, IMMUNE_PARALYSIS) && !saves_spell(victim, SAVING_PARA, level)) {
     if (GET_LEVEL(victim) - 10 <= GET_LEVEL(ch)) {
       print_spell_messages(victim, SPELL_PARALYSIS);
 
@@ -61,18 +61,12 @@ void spell_paralyze(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
       aff_apply(victim, SPELL_PARALYSIS, duration, 100, APPLY_AC, AFF_PARALYSIS, 0);
       aff_apply(victim, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
-
-      if (IS_NPC(victim) && (victim != ch) && !GET_OPPONENT(victim) && SAME_ROOM(victim, ch) && CAN_SEE(victim, ch)) {
-        act("$N gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
-
-        hit(victim, ch, TYPE_UNDEFINED);
-      }
     }
   }
 }
 
 void spell_remove_paralysis(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_PARALYSIS) || affected_by_spell(victim, SPELL_HOLD)) {
+  if (aff_affected_by(victim, SPELL_PARALYSIS) || aff_affected_by(victim, SPELL_HOLD)) {
     aff_from_char(victim, SPELL_PARALYSIS);
     aff_from_char(victim, SPELL_HOLD);
 
@@ -125,7 +119,7 @@ void spell_death_spray(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_chill_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE2(victim, IMMUNE2_COLD) && !saves_spell(victim, SAVING_SPELL, level)) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE2(victim, IMMUNE2_COLD) && !saves_spell(victim, SAVING_SPELL, level)) {
     print_spell_messages(victim, SPELL_CHILL_TOUCH);
 
     AFF aff = { 0 };
@@ -176,8 +170,8 @@ void spell_energy_drain(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   GET_ALIGNMENT(ch) = MAX(GET_ALIGNMENT(ch) - 200, -1000);
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE(victim, IMMUNE_DRAIN) && !saves_spell(victim, SAVING_SPELL, level) &&
-    (!IS_AFFECTED(victim, AFF_SPHERE) || breakthrough(ch, victim, SPELL_ENERGY_DRAIN, BT_SPHERE))) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE(victim, IMMUNE_DRAIN) && !saves_spell(victim, SAVING_SPELL, level) &&
+      (!IS_AFFECTED(victim, AFF_SPHERE) || breakthrough(ch, victim, SPELL_ENERGY_DRAIN, BT_SPHERE))) {
     int exp = number(level >> 1, level) * 500;
 
     gain_exp(victim, -exp);
@@ -212,7 +206,7 @@ void spell_fireball(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_iceball(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE2(victim, IMMUNE2_COLD) && !saves_spell(victim, SAVING_SPELL, level)) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE2(victim, IMMUNE2_COLD) && !saves_spell(victim, SAVING_SPELL, level)) {
     GET_MOVE(victim) = MAX(GET_MOVE(victim) - 30, 0);
   }
 
@@ -399,7 +393,7 @@ void spell_super_harm(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_ARMOR)) {
+  if (!aff_affected_by(victim, SPELL_ARMOR)) {
     print_spell_messages(victim, SPELL_ARMOR);
 
     aff_apply(victim, SPELL_ARMOR, 24, -10, APPLY_AC, 0, 0);
@@ -454,7 +448,7 @@ void spell_teleport(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_BLESS)) {
+  if (!aff_affected_by(victim, SPELL_BLESS)) {
     print_spell_messages(victim, SPELL_BLESS);
 
     int duration = MAX(GET_LEVEL(ch) / 4, 6);
@@ -467,23 +461,17 @@ void spell_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_blindness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (IS_AFFECTED(victim, AFF_BLIND) || affected_by_spell(victim, SPELL_BLINDNESS)) {
+  if (IS_AFFECTED(victim, AFF_BLIND) || aff_affected_by(victim, SPELL_BLINDNESS)) {
     act("$N is already blind!", FALSE, ch, 0, victim, TO_CHAR);
 
     return;
   }
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE(victim, IMMUNE_BLINDNESS) && !saves_spell(victim, SAVING_SPELL, level)) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE(victim, IMMUNE_BLINDNESS) && !saves_spell(victim, SAVING_SPELL, level)) {
     print_spell_messages(victim, SPELL_BLINDNESS);
 
     aff_apply(victim, SPELL_BLINDNESS, 2, -4, APPLY_HITROLL, AFF_BLIND, 0);
     aff_apply(victim, SPELL_BLINDNESS, 2, 40, APPLY_AC, AFF_BLIND, 0);
-
-    if (IS_NPC(victim) && (victim != ch) && !GET_OPPONENT(victim) && SAME_ROOM(victim, ch) && CAN_SEE(victim, ch)) {
-      act("$N gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
-
-      hit(victim, ch, TYPE_UNDEFINED);
-    }
   }
 }
 
@@ -521,7 +509,6 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     return;
   }
-
 
   if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_LIMITED) ||
       IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_RENT) ||
@@ -648,8 +635,8 @@ void spell_create_water(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_cure_blind(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_BLINDNESS)) {
-    affect_from_char(victim, SPELL_BLINDNESS);
+  if (aff_affected_by(victim, SPELL_BLINDNESS)) {
+    aff_from_char(victim, SPELL_BLINDNESS);
 
     if (!IS_AFFECTED(victim, AFF_BLIND)) {
       print_spell_messages(victim, SPELL_CURE_BLIND);
@@ -714,27 +701,10 @@ void spell_evil_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_curse(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (obj) {
-    REMOVE_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_BLESS);
-
-    SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_EVIL);
-    SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP);
-
-    /* Lower attack dice by -1. */
-    if (OBJ_TYPE(obj) == ITEM_WEAPON) {
-      OBJ_VALUE(obj, 2) = MAX(OBJ_VALUE(obj, 2) - 1, 0);
-    }
-
-    act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
-    act("$p glows red.", FALSE, ch, obj, 0, TO_ROOM);
-
-    return;
-  }
-
   if (victim) {
     if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-    if (IS_AFFECTED(victim, AFF_CURSE) || affected_by_spell(victim, SPELL_CURSE)) {
+    if (IS_AFFECTED(victim, AFF_CURSE) || aff_affected_by(victim, SPELL_CURSE)) {
       act("$N is already cursed!", FALSE, ch, 0, victim, TO_CHAR);
 
       return;
@@ -748,15 +718,21 @@ void spell_curse(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
       aff_apply(victim, SPELL_CURSE, duration, modifier, APPLY_HITROLL, AFF_CURSE, 0);
       aff_apply(victim, SPELL_CURSE, duration, modifier, APPLY_SAVING_PARA, AFF_CURSE, 0);
+    }
+  }
+  else if (obj) {
+    REMOVE_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_BLESS);
 
-      if (IS_NPC(victim) && (victim != ch) && !GET_OPPONENT(victim) && SAME_ROOM(victim, ch) && CAN_SEE(victim, ch)) {
-        act("$N gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
+    SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_EVIL);
+    SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP);
 
-        hit(victim, ch, TYPE_UNDEFINED);
-      }
+    /* Lower attack dice by -1. */
+    if (OBJ_TYPE(obj) == ITEM_WEAPON) {
+      OBJ_VALUE(obj, 2) = MAX(OBJ_VALUE(obj, 2) - 1, 0);
     }
 
-    return;
+    act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p glows red.", FALSE, ch, obj, 0, TO_ROOM);
   }
 }
 
@@ -860,7 +836,7 @@ void spell_enchant_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     };
 
     if (NUMELEMS(enchant_weapon_table) < 3) {
-      log_f("WARNING :: spell_enchant_weapon() :: enchant_weapon_table[] has too few elements  (%d)", NUMELEMS(enchant_weapon_table));
+      log_f("WARNING :: spell_enchant_weapon() :: enchant_weapon_table[] has too few elements (%d)", NUMELEMS(enchant_weapon_table));
 
       return;
     }
@@ -956,7 +932,7 @@ void spell_enchant_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_endure(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_ENDURE)) {
+  if (!aff_affected_by(victim, SPELL_ENDURE)) {
     print_spell_messages(victim, SPELL_ENDURE);
 
     aff_apply(victim, SPELL_ENDURE, 24, -15, APPLY_AC, 0, 0);
@@ -970,16 +946,10 @@ void spell_fear(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     act("$N doesn't seem to notice your attempt to frighten $M.", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to frighten you, but you're not afraid.", FALSE, ch, 0, victim, TO_VICT);
 
-    if (IS_NPC(victim) && (victim != ch) && !GET_OPPONENT(victim) && SAME_ROOM(victim, ch) && CAN_SEE(victim, ch)) {
-      act("$N gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
-
-      hit(victim, ch, TYPE_UNDEFINED);
-    }
-
     return;
   }
 
-  if (!IS_IMMORTAL(victim) && !IS_IMMUNE2(victim, IMMUNE2_FEAR) && !saves_spell(victim, SAVING_PARA, level)) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE2(victim, IMMUNE2_FEAR) && !saves_spell(victim, SAVING_PARA, level)) {
     print_spell_messages(victim, SPELL_FEAR);
 
     do_flee(victim, "", 0);
@@ -1000,7 +970,7 @@ void spell_forget(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_fly(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_FLY)) {
+  if (!aff_affected_by(victim, SPELL_FLY)) {
     print_spell_messages(victim, SPELL_FLY);
 
     aff_apply(victim, SPELL_FLY, 12, 0, 0, AFF_FLY, 0);
@@ -1010,7 +980,7 @@ void spell_fly(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_fury(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_FURY)) {
+  if (!aff_affected_by(victim, SPELL_FURY)) {
     print_spell_messages(victim, SPELL_FURY);
 
     aff_apply(victim, SPELL_FURY, (level >= 50) ? 4 : 2, 0, 0, AFF_FURY, 0);
@@ -1026,7 +996,7 @@ void spell_mana_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_hold(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (IS_AFFECTED(victim, AFF_HOLD) || affected_by_spell(victim, SPELL_HOLD)) {
+  if (IS_AFFECTED(victim, AFF_HOLD)) {
     act("$N is already rooted to the ground.", FALSE, ch, 0, victim, TO_CHAR);
 
     return;
@@ -1036,40 +1006,29 @@ void spell_hold(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     print_spell_messages(victim, SPELL_HOLD);
 
     aff_apply(victim, SPELL_HOLD, ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : GET_LEVEL(ch), 0, 0, AFF_HOLD, 0);
-
-    if (IS_NPC(victim) && !GET_OPPONENT(victim) && SAME_ROOM(victim, ch) && CAN_SEE(victim, ch)) {
-      act("$N gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
-
-      hit(victim, ch, TYPE_UNDEFINED);
-    }
   }
 }
 
 void spell_invisibility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (victim) {
-    if (!affected_by_spell(victim, SPELL_INVISIBLE)) {
+    if (!aff_affected_by(victim, SPELL_INVISIBLE)) {
       print_spell_messages(victim, SPELL_INVISIBLE);
 
       aff_apply(victim, SPELL_INVISIBLE, 24, -40, APPLY_AC, AFF_INVISIBLE, 0);
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (!IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE)) {
       act("$p turns invisible.", FALSE, ch, obj, 0, TO_CHAR);
       act("$p turns invisible.", TRUE, ch, obj, 0, TO_ROOM);
 
       SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_INVISIBLE);
     }
-
-    return;
   }
 }
 
 void spell_improved_invisibility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_IMP_INVISIBLE)) {
+  if (!aff_affected_by(victim, SPELL_IMP_INVISIBLE)) {
     print_spell_messages(victim, SPELL_IMP_INVISIBLE);
 
     aff_apply(victim, SPELL_IMP_INVISIBLE, level / 10, -40, APPLY_AC, AFF_IMINV, 0);
@@ -1077,7 +1036,7 @@ void spell_improved_invisibility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) 
 }
 
 void spell_remove_improved_invis(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_INVISIBLE) || affected_by_spell(victim, SPELL_IMP_INVISIBLE)) {
+  if (aff_affected_by(victim, SPELL_INVISIBLE) || aff_affected_by(victim, SPELL_IMP_INVISIBLE)) {
     aff_from_char(victim, SPELL_INVISIBLE);
     aff_from_char(victim, SPELL_IMP_INVISIBLE);
 
@@ -1153,7 +1112,7 @@ void spell_locate_character(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       wizlog_f(LEVEL_IMM, 7, "QSTINFO: %s casts 'locate character' %s", GET_DISP_NAME(ch), GET_DISP_NAME(victim));
     }
 
-    if (!IS_IMMORTAL(victim) && !IS_IMMUNE2(victim, IMMUNE2_LOCATE) && !(CHAOSMODE && IS_MORTAL(ch) && IS_AFFECTED(victim, AFF_IMINV))) {
+    if ((!IS_IMMORTAL(victim) || (GET_LEVEL(ch) >= GET_LEVEL(victim))) && !IS_IMMUNE2(victim, IMMUNE2_LOCATE) && !(CHAOSMODE && IS_MORTAL(ch) && IS_AFFECTED(victim, AFF_IMINV))) {
       printf_to_char(ch, "%s in %s\n\r", GET_DISP_NAME(victim), ROOM_NAME(CHAR_REAL_ROOM(victim)));
 
       count++;
@@ -1169,23 +1128,18 @@ void spell_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (victim) {
     if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-    if (!IS_IMMORTAL(victim) && !IS_IMMUNE(victim, IMMUNE_POISON) && !saves_spell(victim, SAVING_PARA, level)) {
+    if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !IS_IMMUNE(victim, IMMUNE_POISON) && !saves_spell(victim, SAVING_PARA, level)) {
       print_spell_messages(victim, SPELL_POISON);
 
       aff_apply(victim, SPELL_POISON, ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level * 2, -3, APPLY_STR, AFF_POISON, 0);
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (((OBJ_TYPE(obj) == ITEM_DRINKCON) || (OBJ_TYPE(obj) == ITEM_FOOD)) && (OBJ_VALUE(obj, 3) != 1)) {
       OBJ_VALUE(obj, 3) = 1;
 
       act("$p turns green!", FALSE, ch, obj, 0, TO_CHAR);
     }
-
-    return;
   }
 }
 
@@ -1207,7 +1161,7 @@ void spell_poison_smoke(ubyte level, CHAR *ch,CHAR *victim, OBJ *obj) {
 }
 
 void spell_protection_from_evil(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_PROTECT_FROM_EVIL)) {
+  if (!aff_affected_by(victim, SPELL_PROTECT_FROM_EVIL)) {
     print_spell_messages(victim, SPELL_PROTECT_FROM_EVIL);
 
     aff_apply(victim, SPELL_PROTECT_FROM_EVIL, 12, 0, 0, AFF_PROTECT_EVIL, 0);
@@ -1215,7 +1169,7 @@ void spell_protection_from_evil(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_protection_from_good(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_PROTECT_FROM_GOOD)) {
+  if (!aff_affected_by(victim, SPELL_PROTECT_FROM_GOOD)) {
     print_spell_messages(victim, SPELL_PROTECT_FROM_GOOD);
 
     aff_apply(victim, SPELL_PROTECT_FROM_GOOD, 12, 0, 0, AFF_PROTECT_GOOD, 0);
@@ -1255,18 +1209,15 @@ void spell_recharge(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_remove_curse(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (victim) {
-    if (affected_by_spell(victim, SPELL_CURSE)) {
-      affect_from_char(victim, SPELL_CURSE);
+    if (aff_affected_by(victim, SPELL_CURSE)) {
+      aff_from_char(victim, SPELL_CURSE);
 
       if (!IS_AFFECTED(victim, AFF_CURSE)) {
         print_spell_messages(victim, SPELL_REMOVE_CURSE);
       }
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_EVIL) || IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP)) {
       act("$p briefly glows blue.", TRUE, ch, obj, 0, TO_CHAR);
       act("$p briefly glows blue.", TRUE, ch, obj, 0, TO_ROOM);
@@ -1274,35 +1225,28 @@ void spell_remove_curse(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       REMOVE_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_EVIL);
       REMOVE_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DROP);
     }
-
-    return;
   }
 }
 
 void spell_remove_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (victim) {
-    if (affected_by_spell(victim, SPELL_POISON)) {
-      affect_from_char(victim, SPELL_POISON);
+    if (aff_affected_by(victim, SPELL_POISON)) {
+      aff_from_char(victim, SPELL_POISON);
 
       print_spell_messages(victim, SPELL_REMOVE_POISON);
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (((OBJ_TYPE(obj) == ITEM_DRINKCON) || (OBJ_TYPE(obj) == ITEM_FOOD)) && (OBJ_VALUE(obj, 3) == 1)) {
       OBJ_VALUE(obj, 3) = 0;
 
-      act("$p glows briefly.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$p briefly glows green.", FALSE, ch, obj, 0, TO_CHAR);
     }
-
-    return;
   }
 }
 
 void spell_sanctuary(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_SANCTUARY)) {
+  if (!aff_affected_by(victim, SPELL_SANCTUARY)) {
     print_spell_messages(victim, SPELL_SANCTUARY);
 
     aff_apply(victim, SPELL_SANCTUARY, level / 5, 0, 0, AFF_SANCTUARY, 0);
@@ -1333,24 +1277,20 @@ void spell_satiate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_sleep(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  bool save = saves_spell(victim, SAVING_SPELL, level);
-
-  if (IS_NPC(victim) && (save || (IS_IMMUNE(victim, IMMUNE_SLEEP) || (GET_CLASS(victim) == CLASS_LESSER_UNDEAD) || (GET_CLASS(victim) == CLASS_GREATER_UNDEAD)))) {
-    act("$n gets angry and attacks...", FALSE, ch, 0, victim, TO_CHAR);
-
-    hit(victim, ch, TYPE_UNDEFINED);
+  if (IS_AFFECTED(victim, AFF_SLEEP) && (GET_POS(victim) == POSITION_SLEEPING)) {
+    act("$N is already affected by magical slumber.", FALSE, ch, 0, victim, TO_CHAR);
 
     return;
   }
 
-  if (!save) {
+  if ((!IS_IMMORTAL(victim) || IS_IMMORTAL(ch)) && !saves_spell(victim, SAVING_SPELL, level)) {
     AFF aff = { 0 };
 
     aff.type = SPELL_SLEEP;
     aff.duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : 4 + level;
     aff.bitvector = AFF_SLEEP;
 
-    affect_join(victim, &aff, FALSE, FALSE);
+    aff_join(victim, &aff, FALSE, FALSE);
 
     if (GET_POS(victim) > POSITION_SLEEPING) {
       GET_POS(victim) = POSITION_SLEEPING;
@@ -1379,7 +1319,7 @@ void spell_hypnotize(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_sphere(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_SPHERE)) {
+  if (!aff_affected_by(victim, SPELL_SPHERE)) {
     print_spell_messages(victim, SPELL_SPHERE);
 
     aff_apply(victim, SPELL_SPHERE, level / 2, 0, 0, AFF_SPHERE, 0);
@@ -1387,7 +1327,7 @@ void spell_sphere(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_invulnerability(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_INVUL)) {
+  if (!aff_affected_by(victim, SPELL_INVUL)) {
     print_spell_messages(victim, SPELL_INVUL);
 
     aff_apply(victim, SPELL_INVUL, level / 2, 0, 0, AFF_INVUL, 0);
@@ -1405,10 +1345,6 @@ void spell_strength(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   aff.location = APPLY_STR;
 
   aff_join(victim, &aff, TRUE, FALSE);
-}
-
-void spell_ventriloquate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  /* Not possible!! No argument! */
 }
 
 void spell_word_of_recall(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
@@ -1497,8 +1433,8 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   int percent = 100 - (5 * (GET_LEVEL(victim) - GET_LEVEL(ch)));
 
-  if (affected_by_spell(victim, SPELL_BLESS)) percent += 5;
-  if (affected_by_spell(victim, SPELL_CURSE)) percent -= 5;
+  if (aff_affected_by(victim, SPELL_BLESS)) percent += 5;
+  if (aff_affected_by(victim, SPELL_CURSE)) percent -= 5;
 
   percent = MAX(MIN(percent, 100), 0);
 
@@ -1637,7 +1573,7 @@ void spell_charm_person(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_sense_life(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_SENSE_LIFE)) {
+  if (!aff_affected_by(victim, SPELL_SENSE_LIFE)) {
     aff_apply(victim, SPELL_SENSE_LIFE, 5 * level, 0, 0, AFF_SENSE_LIFE, 0);
 
     print_spell_messages(victim, SKILL_AWARENESS);
@@ -2181,7 +2117,6 @@ void spell_power_word_kill(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-
 void spell_vampiric_touch(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_SELF | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
@@ -2223,7 +2158,6 @@ void spell_conflagration(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ((temp_victim == ch) || IS_IMMORTAL(temp_victim)) continue;
     if (IS_NPC(temp_victim) && IS_NPC(ch) && (!IS_AFFECTED(temp_victim, AFF_CHARM) || (GET_MASTER(temp_victim) == ch))) continue;
     if (!IS_NPC(temp_victim) && !IS_NPC(ch) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) continue;
-    if (IS_IMMUNE(temp_victim, IMMUNE_FIRE)) continue;
 
     act("The fires raging around $n burn you as well.", FALSE, victim, 0, temp_victim, TO_VICT);
 
@@ -2303,19 +2237,19 @@ void spell_enchant_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_MAGIC);
 
   if (IS_GOOD(ch)) {
-    act("$p glows yellow.", FALSE, ch, obj, 0, TO_CHAR);
-
     SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_EVIL | ITEM_ANTI_NEUTRAL);
+
+    act("$p glows yellow.", FALSE, ch, obj, 0, TO_CHAR);
   }
   else if (IS_EVIL(ch)) {
-    act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
-
     SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD | ITEM_ANTI_NEUTRAL);
+
+    act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
   }
   else {
-    act("$p glows orange.", FALSE, ch, obj, 0, TO_CHAR);
-
     SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_GOOD | ITEM_ANTI_EVIL);
+
+    act("$p glows orange.", FALSE, ch, obj, 0, TO_CHAR);
   }
 }
 
@@ -2372,11 +2306,8 @@ void spell_dispel_magic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         }
       }
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_DISPELLED) || IS_SET(OBJ_WEAR_FLAGS(obj), ITEM_QUESTWEAR) || !number(0, 1)) {
       send_to_char("Nothing happens.\n\r", ch);
 
@@ -2405,14 +2336,10 @@ void spell_dispel_magic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     REMOVE_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_MAGIC);
 
     SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_DISPELLED);
-
-    return;
   }
 }
 
 void spell_disintegrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  char buf[MSL];
-
   if (victim) {
     if (!spell_check_cast_ok(ch, 0, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC)) return;
 
@@ -2468,6 +2395,8 @@ void spell_disintegrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         GET_QUEST_OWNER(victim) = 0;
       }
 
+      char buf[MSL];
+
       snprintf(buf, sizeof(buf), "%s disintegrates %s.", GET_DISP_NAME(ch), GET_DISP_NAME(victim));
       wizlog(buf, LEVEL_WIZ, 6);
       log_s(buf);
@@ -2477,11 +2406,8 @@ void spell_disintegrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     else {
       damage(ch, victim, number(10, 20) * level, SPELL_DISINTEGRATE, DAM_MAGICAL);
     }
-
-    return;
   }
-
-  if (obj) {
+  else if (obj) {
     if (!spell_check_cast_ok(ch, 0, NO_CAST_SAFE_ROOM)) return;
 
     if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_NO_DISINTEGRATE) || (OBJ_TYPE(obj) == ITEM_CONTAINER) || (OBJ_TYPE(obj) == ITEM_AQ_ORDER)) {
@@ -2493,13 +2419,13 @@ void spell_disintegrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     act("You look at $p, and it crumbles to dust.", FALSE, ch, obj, 0, TO_CHAR);
     act("$n looks at $p, and it crumbles to dust.", FALSE, ch, obj, 0, TO_ROOM);
 
+    char buf[MSL];
+
     snprintf(buf, sizeof(buf), "%s just destroyed %s at %s.", GET_NAME(ch), OBJ_SHORT(obj), ROOM_NAME(CHAR_REAL_ROOM(ch)));
     wizlog(buf, LEVEL_WIZ, 6);
     log_s(buf);
 
     extract_obj(obj);
-
-    return;
   }
 }
 
@@ -2509,7 +2435,6 @@ void spell_searing_orb(ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
   send_to_char("You throw a flaming orb in the air, and the orb explodes...", ch);
   act("$n throws a flaming orb in the air, and the orb explodes...", FALSE, ch, 0, 0, TO_ROOM);
 
-  /* Burn up stuff on the ground. */
   for (OBJ *temp_obj = ROOM_CONTENTS(CHAR_REAL_ROOM(ch)), *next_obj; temp_obj; temp_obj = next_obj) {
     next_obj = temp_obj->next_content;
 
@@ -2528,7 +2453,6 @@ void spell_searing_orb(ubyte lvl, CHAR *ch, CHAR *vict, OBJ *obj) {
     }
   }
 
-  /* Burn up stuff in people's inventory, and burn them too for good measure. */
   for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_victim; temp_victim; temp_victim = next_victim) {
     next_victim = temp_victim->next_in_room;
 
@@ -2568,10 +2492,15 @@ void spell_clairvoyance(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     print_spell_messages(victim, SPELL_CLAIRVOYANCE);
 
-    if (!IS_IMMORTAL(victim) && !IS_IMMUNE(victim, IMMUNE_CLAIR) && CAN_SEE(ch, victim)) {
-      send_to_char("You see the world through a hazy mist...\n\r", ch);
+    if (!IS_IMMORTAL(victim) && CAN_SEE(ch, victim)) {
+      if (IS_IMMUNE(victim, IMMUNE_CLAIR)) {
+        act("The world around $N is shrouded in mist...", FALSE, ch, 0, victim, TO_CHAR);
+      }
+      else {
+        send_to_char("You see the world through a hazy mist...\n\r", ch);
 
-      look_in_room(ch, ROOM_VNUM(CHAR_REAL_ROOM(victim)));
+        look_in_room(ch, ROOM_VNUM(CHAR_REAL_ROOM(victim)));
+      }
 
       count++;
     }
@@ -2595,30 +2524,19 @@ void spell_regeneration(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_dispel_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (affected_by_spell(victim, SPELL_SANCTUARY)) {
-    affect_from_char(victim, SPELL_SANCTUARY);
+  if (aff_affected_by(victim, SPELL_SANCTUARY)) {
+    aff_from_char(victim, SPELL_SANCTUARY);
   }
 }
 
 void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!victim->affected) {
-    if (victim == ch) {
-      send_to_char("You aren't affected by any magic.\n\r", ch);
-    }
-    else {
-      send_to_char("That person isn't affected by any magic.\n\r", ch);
-    }
-
-    return;
-  }
-
   bool disenchanted = FALSE;
 
   for (AFF *temp_aff = victim->affected, *next_aff; temp_aff; temp_aff = next_aff) {
     next_aff = temp_aff->next;
 
     if (temp_aff->duration >= 0) {
-      affect_from_char(victim, temp_aff->type);
+      aff_from_char(victim, temp_aff->type);
 
       disenchanted = TRUE;
     }
@@ -2631,6 +2549,14 @@ void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     else {
       act("You disenchant $N.", FALSE, ch, 0, victim, TO_CHAR);
       act("You have been disenchanted by $n!", FALSE, ch, 0, victim, TO_VICT);
+    }
+  }
+  else {
+    if (victim == ch) {
+      send_to_char("You aren't affected by any magic.\n\r", ch);
+    }
+    else {
+      act("$N isn't affected by any magic.", FALSE, ch, 0, victim, TO_CHAR);
     }
   }
 }
@@ -2670,10 +2596,10 @@ void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_haste(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_HASTE)) {
+  if (!aff_affected_by(victim, SPELL_HASTE)) {
     print_spell_messages(victim, SPELL_HASTE);
 
-    affect_apply(victim, SPELL_HASTE, 5, 0, 0, 0, 0);
+    aff_apply(victim, SPELL_HASTE, 5, 0, 0, 0, 0);
   }
 }
 
@@ -2686,7 +2612,7 @@ void spell_great_mana(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_PERCEIVE)) {
+  if (!aff_affected_by(victim, SPELL_PERCEIVE)) {
     print_spell_messages(victim, SPELL_PERCEIVE);
 
     aff_apply(victim, SPELL_PERCEIVE, level * 2, 0, 0, 0, AFF2_PERCEIVE);
@@ -2694,7 +2620,7 @@ void spell_perceive(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_QUICK)) {
+  if (!aff_affected_by(victim, SPELL_QUICK)) {
     print_spell_messages(victim, SPELL_QUICK);
 
     aff_apply(victim, SPELL_QUICK, 5, 0, 0, 0, 0);
@@ -2702,7 +2628,7 @@ void spell_quick(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_divine_intervention(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_DIVINE_INTERVENTION)) {
+  if (!aff_affected_by(victim, SPELL_DIVINE_INTERVENTION)) {
     print_spell_messages(victim, SPELL_DIVINE_INTERVENTION);
 
     aff_apply(victim, SPELL_DIVINE_INTERVENTION, 8, 0, 0, 0, 0);
@@ -2710,7 +2636,7 @@ void spell_divine_intervention(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_RUSH)) {
+  if (!aff_affected_by(victim, SPELL_RUSH)) {
     print_spell_messages(victim, SPELL_RUSH);
 
     aff_apply(victim, SPELL_RUSH, 3, 5, APPLY_DAMROLL, 0, 0);
@@ -2718,7 +2644,7 @@ void spell_rush(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_BLOOD_LUST)) {
+  if (!aff_affected_by(victim, SPELL_BLOOD_LUST)) {
     print_spell_messages(victim, SPELL_BLOOD_LUST);
 
     aff_apply(victim, SPELL_BLOOD_LUST, 5, 0, 0, 0, 0);
@@ -2726,9 +2652,7 @@ void spell_blood_lust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_mystic_swiftness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!spell_check_cast_ok(ch, victim, NO_CAST_OTHER_PC_IN_CHAOTIC_ROOM)) return;
-
-  if (!affected_by_spell(victim, SPELL_MYSTIC_SWIFTNESS)) {
+  if (!aff_affected_by(victim, SPELL_MYSTIC_SWIFTNESS)) {
     print_spell_messages(victim, SPELL_MYSTIC_SWIFTNESS);
 
     aff_apply(victim, SPELL_MYSTIC_SWIFTNESS, 4, 0, 0, 0, 0);
@@ -2852,8 +2776,9 @@ void spell_lay_hands(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
     /* Remove up to two ailments from the lay_hands_dispel_types array, in order. */
     for (int type_idx = 0, count = 0; (type_idx < NUMELEMS(lay_hands_dispel_types)) && (count < 2); type_idx++) {
-      if (affected_by_spell(victim, lay_hands_dispel_types[type_idx])) {
-        affect_from_char(victim, lay_hands_dispel_types[type_idx]);
+      if (aff_affected_by(victim, lay_hands_dispel_types[type_idx])) {
+        aff_from_char(victim, lay_hands_dispel_types[type_idx]);
+
         count++;
       }
     }

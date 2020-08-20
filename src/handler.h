@@ -31,17 +31,17 @@ $State: Exp $
 
 
 /* handling the affected-structures */
-void affect_total(struct char_data *ch);
-void remove_all_affects(struct char_data *ch);
-void affect_modify(struct char_data *ch, int loc, int mod, long bitv,long bitv2, bool add);
-void affect_to_char( struct char_data *ch, struct affected_type_5 *af );
-void affect_remove( struct char_data *ch, struct affected_type_5 *af );
-void affect_from_char( struct char_data *ch, int skill);
-bool affected_by_spell( struct char_data *ch, int skill );
-int duration_of_spell( struct char_data *ch, int skill );
-void affect_join( struct char_data *ch, struct affected_type_5 *af, bool avg_dur, bool avg_mod );
+void affect_total(CHAR *ch);
+void remove_all_affects(CHAR *ch);
+void affect_modify(CHAR *ch, int loc, int mod, long bitv, long bitv2, bool add);
+void affect_to_char(CHAR *ch, AFF *af);
+void affect_remove(CHAR *ch, AFF *af);
+void affect_from_char(CHAR *ch, int skill);
+bool affected_by_spell(CHAR *ch, int skill);
+int duration_of_spell(CHAR *ch, int skill);
+void affect_join(CHAR *ch, AFF *af, bool avg_dur, bool avg_mod);
 AFF *get_affect_from_char(CHAR *ch, int type);
-void affect_apply(struct char_data *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2);
+void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2);
 
 /* utility */
 struct obj_data *create_money( int amount );

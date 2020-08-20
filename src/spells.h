@@ -814,9 +814,6 @@ void spell_invulnerability(ubyte level, struct char_data *ch,
 void spell_strength(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
-void spell_ventriloquate(ubyte level, struct char_data *ch,
-  struct char_data *victim, struct obj_data *obj);
-
 void spell_word_of_recall(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
