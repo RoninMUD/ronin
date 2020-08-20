@@ -1629,10 +1629,10 @@ void spell_charm_person(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   if (!IS_IMMUNE(victim, IMMUNE_CHARM) && !saves_spell(victim, SAVING_SPELL, level)) {
-    aff_apply(victim, SPELL_CHARM_PERSON, (24 * 18) / (GET_INT(victim) > 0 ? GET_INT(victim) : 1), 0, 0, AFF_CHARM, 0);
-
     stop_follower(victim);
     add_follower(victim, ch);
+
+    aff_apply(victim, SPELL_CHARM_PERSON, (24 * 18) / (GET_INT(victim) > 0 ? GET_INT(victim) : 1), 0, 0, AFF_CHARM, 0);
   }
 }
 
