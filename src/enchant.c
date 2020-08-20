@@ -1663,23 +1663,8 @@ int enchanted_by_type(CHAR *ch, int type) {
 }
 
 void enchantment_to_char(CHAR *victim, ENCH *enchantment, int must_find) {
-  if (!victim || !enchantment) return;
-
-  ENCH *ench = NULL;
-
-  if (must_find) {
-    ench = ench_dup(ench_get_from_global(enchantment->name, enchantment->type));
-
-    if (ench) {
-      ench->duration = enchantment->duration;
-
-      ench_to_char(victim, ench, TRUE);
-
-      DESTROY(ench);
-    }
-  }
-  else {
-    ench_to_char(victim, enchantment, TRUE);
+  if (enchantment) {
+    ench_to_char(victim, must_find ? ench_get_from_global(enchantment->name, enchantment->type) : enchantment, TRUE);
   }
 }
 
