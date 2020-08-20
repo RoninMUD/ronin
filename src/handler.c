@@ -773,7 +773,7 @@ struct char_data *get_char_num(int nr)
 }
 
 /* put an object in a room */
-void obj_to_room(struct obj_data *object, int room)
+void obj_to_room(OBJ *object, int room)
 {
   int fall_room,v_room;
   char buf[MSL];

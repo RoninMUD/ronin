@@ -37,7 +37,7 @@
 #include "aff_ench.h"
 
 void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_RALLY)) {
+  if (!aff_affected_by(victim, SPELL_RALLY)) {
     print_spell_messages(victim, SPELL_RALLY);
 
     aff_apply(victim, SPELL_RALLY, 5, 5, APPLY_HITROLL, 0, 0);
@@ -45,7 +45,7 @@ void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_LUCK)) {
+  if (!aff_affected_by(victim, SPELL_LUCK)) {
     print_spell_messages(victim, SPELL_LUCK);
 
     aff_apply(victim, SPELL_LUCK, 5, 0, 0, 0, 0);
@@ -53,13 +53,15 @@ void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_WAR_CHANT)) {
-    if (SAME_GROUP(victim, ch)) {
+  if (SAME_GROUP_EX(victim, ch, TRUE)) {
+    if (!aff_affected_by(victim, SPELL_WAR_CHANT)) {
       print_spell_messages(victim, SPELL_WAR_CHANT);
 
       aff_apply(victim, SPELL_WAR_CHANT, 5, -2, APPLY_SAVING_ALL, 0, 0);
     }
-    else {
+  }
+  else {
+    if ((IS_NPC(victim) || (IS_MORTAL(victim) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))) && !aff_affected_by(victim, SPELL_WAR_CHANT_DEBUFF)) {
       print_spell_messages(victim, SPELL_WAR_CHANT_DEBUFF);
 
       aff_apply(victim, SPELL_WAR_CHANT_DEBUFF, 5, -4, APPLY_HITROLL, 0, 0);
@@ -68,7 +70,7 @@ void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_camaraderie(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_CAMARADERIE)) {
+  if (!aff_affected_by(victim, SPELL_CAMARADERIE)) {
     print_spell_messages(victim, SPELL_CAMARADERIE);
 
     aff_apply(victim, SPELL_CAMARADERIE, 5, 0, 0, 0, 0);
@@ -128,7 +130,7 @@ void cast_rage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *ob
 }
 
 void spell_rage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_RAGE)) {
+  if (!aff_affected_by(victim, SPELL_RAGE)) {
     print_spell_messages(victim, SPELL_RAGE);
 
     aff_apply(victim, SPELL_RAGE, 5, 0, 0, 0, AFF2_RAGE);
@@ -152,7 +154,7 @@ void cast_righteousness(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 }
 
 void spell_righteousness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_RIGHTEOUSNESS)) {
+  if (!aff_affected_by(victim, SPELL_RIGHTEOUSNESS)) {
     print_spell_messages(victim, SPELL_RIGHTEOUSNESS);
 
     aff_apply(victim, SPELL_RIGHTEOUSNESS, 10, 0, 0, 0, 0);
@@ -178,7 +180,7 @@ void cast_debilitate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 void spell_debilitate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM)) return;
 
-  if (!affected_by_spell(victim, SPELL_DEBILITATE)) {
+  if (!aff_affected_by(victim, SPELL_DEBILITATE)) {
     print_spell_messages(victim, SPELL_DEBILITATE);
 
     aff_apply(victim, SPELL_DEBILITATE, 5, -5, APPLY_HITROLL, 0, 0);
@@ -225,7 +227,7 @@ void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *o
 }
 
 void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_MIGHT)) {
+  if (!aff_affected_by(victim, SPELL_MIGHT)) {
     print_spell_messages(victim, SPELL_MIGHT);
 
     affect_apply(victim, SPELL_MIGHT, 20, 1, APPLY_HITROLL, 0, 0);
@@ -250,7 +252,7 @@ void cast_blade_barrier(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 }
 
 void spell_blade_barrier(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
+  if (!aff_affected_by(victim, SPELL_BLADE_BARRIER)) {
     print_spell_messages(victim, SPELL_BLADE_BARRIER);
 
     aff_apply(victim, SPELL_BLADE_BARRIER, 5, 0, 0, 0, 0);
@@ -276,7 +278,7 @@ void cast_distortion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 void spell_distortion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (IS_AFFECTED(victim, AFF_SPHERE) && !affected_by_spell(victim, SPELL_DISTORTION)) {
+  if (IS_AFFECTED(victim, AFF_SPHERE) && !aff_affected_by(victim, SPELL_DISTORTION)) {
     print_spell_messages(victim, SPELL_DISTORTION);
 
     aff_apply(victim, SPELL_DISTORTION, 2, 0, 0, 0, 0);
@@ -300,7 +302,7 @@ void cast_iron_skin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
 }
 
 void spell_iron_skin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_IRON_SKIN)) {
+  if (!aff_affected_by(victim, SPELL_IRON_SKIN)) {
     print_spell_messages(victim, SPELL_IRON_SKIN);
 
     aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -20 : -10, APPLY_AC, 0, 0);
@@ -350,7 +352,7 @@ void cast_orb_protection(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 }
 
 void spell_orb_protection(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(ch, SPELL_ORB_PROTECTION)) {
+  if (!aff_affected_by(ch, SPELL_ORB_PROTECTION)) {
     print_spell_messages(victim, SPELL_ORB_PROTECTION);
 
     aff_apply(victim, SPELL_ORB_PROTECTION, 10, 0, 0, 0, 0);
@@ -486,7 +488,7 @@ void cast_blackmantle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 }
 
 void spell_blackmantle(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(ch, SPELL_BLACKMANTLE)) {
+  if (!aff_affected_by(ch, SPELL_BLACKMANTLE)) {
     print_spell_messages(victim, SPELL_BLACKMANTLE);
 
     aff_apply(victim, SPELL_BLACKMANTLE, 9, 0, 0, 0, 0);
@@ -525,6 +527,8 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   send_to_char("An aura of frost starts to form around you.\n\r", ch);
   act("An aura of frost starts to form around $n.", FALSE, ch, 0, 0, TO_ROOM);
 
+  int duration = GET_LEVEL(ch) / 10;
+
   for (CHAR *temp_vict = world[CHAR_REAL_ROOM(ch)].people, *next_vict; temp_vict; temp_vict = next_vict) {
     next_vict = temp_vict->next_in_room;
 
@@ -537,8 +541,8 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
           !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
           ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
           !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
-        affect_apply(temp_vict, SPELL_PARALYSIS, GET_LEVEL(ch) / 10, 100, APPLY_AC, AFF_PARALYSIS, 0);
-        affect_apply(temp_vict, SPELL_PARALYSIS, GET_LEVEL(ch) / 10, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
+        aff_apply(temp_vict, SPELL_PARALYSIS, duration, 100, APPLY_AC, AFF_PARALYSIS, 0);
+        aff_apply(temp_vict, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
         send_to_char("Your limbs freeze in place.\n\r", temp_vict);
         act("$n is paralyzed!", FALSE, temp_vict, 0, 0, TO_ROOM);
@@ -640,11 +644,16 @@ void spell_passdoor(ubyte level, CHAR *ch, int door)
 }
 
 void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
-  if (type == SPELL_TYPE_SPELL) {
-    spell_desecrate(level, ch, victim, obj);
-  }
-  else {
-    log_f("Wrong 'type' called in: cast_desecrate()");
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_desecrate(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_desecrate, level, AOE_TAR_OBJS);
+      break;
   }
 }
 
@@ -663,9 +672,9 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   int mob_level = OBJ_VALUE2(obj);
 
-  if (!affected_by_spell(ch, SPELL_DESECRATE)) {
-    affect_apply(ch, SPELL_DESECRATE, 7, -(mob_level / 2), APPLY_AC, 0, 0);
-    affect_apply(ch, SPELL_DESECRATE, 7, mob_level, APPLY_HP_REGEN, 0, 0);
+  if (!aff_affected_by(ch, SPELL_DESECRATE)) {
+    aff_apply(ch, SPELL_DESECRATE, 7, -(mob_level / 2), APPLY_AC, 0, 0);
+    aff_apply(ch, SPELL_DESECRATE, 7, mob_level, APPLY_HP_REGEN, 0, 0);
   }
 
   act("You perform vile acts upon $p, desecrating it.", FALSE, ch, obj, 0, TO_CHAR);
@@ -707,7 +716,7 @@ void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   snprintf(buf, sizeof(buf), "%s's Aid", GET_DISP_NAME(ch));
 
-  if (!enchanted_by(victim, buf)) {
+  if (!ench_enchanted_by(victim, buf, 0)) {
     ENCH aid_ench = { 0 };
 
     aid_ench.name = buf;
@@ -717,13 +726,13 @@ void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     aid_ench.metadata = ENCH_APPLY_DMG_PCT;
     aid_ench.func = aid_enchantment;
 
-    enchantment_to_char(victim, &aid_ench, FALSE);
+    ench_to_char(victim, &aid_ench, FALSE);
 
     if (ch == victim) {
       send_to_char("You feel inspired by your words!\n\r", victim);
     }
     else {
-      printf_to_char(victim, "You feel inspired by %s's words!\n\r", GET_DISP_NAME(ch));
+      act("You feel inspired by $n's words!", FALSE, ch, 0, victim, TO_VICT);
     }
   }
 }
@@ -846,7 +855,7 @@ void cast_ethereal_nature(ubyte level, CHAR *ch, char *arg, int type, CHAR *vict
 }
 
 void spell_ethereal_nature(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_ETHEREAL_NATURE)) {
+  if (!aff_affected_by(victim, SPELL_ETHEREAL_NATURE)) {
     print_spell_messages(victim, SPELL_ETHEREAL_NATURE);
 
     aff_apply(victim, SPELL_ETHEREAL_NATURE, 30, 0, 0, 0, 0);
@@ -870,7 +879,7 @@ void cast_magic_armament(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 }
 
 void spell_magic_armament(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_MAGIC_ARMAMENT)) {
+  if (!aff_affected_by(victim, SPELL_MAGIC_ARMAMENT)) {
     print_spell_messages(victim, SPELL_MAGIC_ARMAMENT);
 
     aff_apply(victim, SPELL_MAGIC_ARMAMENT, 5, 0, 0, 0, 0);
@@ -894,7 +903,7 @@ void cast_fortification(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 }
 
 void spell_fortification(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_FORTIFICATION)) {
+  if (!aff_affected_by(victim, SPELL_FORTIFICATION)) {
     print_spell_messages(victim, SPELL_FORTIFICATION);
 
     aff_apply(victim, SPELL_FORTIFICATION, level / 5, 0, 0, AFF_SANCTUARY, AFF2_FORTIFICATION);
@@ -920,7 +929,7 @@ void cast_disrupt_sanct(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 void spell_disrupt_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (!affected_by_spell(victim, SPELL_DISRUPT_SANCT) && IS_AFFECTED(victim, AFF_SANCTUARY)) {
+  if (!aff_affected_by(victim, SPELL_DISRUPT_SANCT) && IS_AFFECTED(victim, AFF_SANCTUARY)) {
     print_spell_messages(victim, SPELL_DISRUPT_SANCT);
 
     aff_apply(victim, SPELL_DISRUPT_SANCT, 0, 0, 0, 0, 0);
@@ -1217,7 +1226,7 @@ void cast_blur(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *ob
 }
 
 void spell_blur(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!affected_by_spell(victim, SPELL_BLUR)) {
+  if (!aff_affected_by(victim, SPELL_BLUR)) {
     print_spell_messages(victim, SPELL_BLUR);
 
     aff_apply(victim, SPELL_BLUR, level / 5, 0, 0, 0, 0);
@@ -1292,7 +1301,7 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
     int num_applied_effects = 0;
 
     for (int i = 0; i < NUMELEMS(wither_affect_types) - 1; i++) {
-      if (affected_by_spell(ch, wither_affect_types[i])) {
+      if (aff_affected_by(ch, wither_affect_types[i])) {
         num_applied_effects++;
       }
     }
@@ -1311,9 +1320,9 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
             else {
               int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : 2;
 
-              affect_apply(ch, SPELL_BLINDNESS, duration, 0, 0, AFF_BLIND, 0);
-              affect_apply(ch, SPELL_BLINDNESS, duration, -4, APPLY_HITROLL, 0, 0);
-              affect_apply(ch, SPELL_BLINDNESS, duration, 40, APPLY_AC, 0, 0);
+              aff_apply(ch, SPELL_BLINDNESS, duration, 0, 0, AFF_BLIND, 0);
+              aff_apply(ch, SPELL_BLINDNESS, duration, -4, APPLY_HITROLL, 0, 0);
+              aff_apply(ch, SPELL_BLINDNESS, duration, 40, APPLY_AC, 0, 0);
 
               act("You have been blinded!", FALSE, ch, 0, 0, TO_CHAR);
               act("$n seems to be blinded!", TRUE, ch, 0, 0, TO_ROOM);
@@ -1327,9 +1336,9 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
             else {
               int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : 2;
 
-              affect_apply(ch, SPELL_CURSE, duration, 0, 0, AFF_CURSE, 0);
-              affect_apply(ch, SPELL_CURSE, duration, -((caster_level - 3) / 9), APPLY_HITROLL, 0, 0);
-              affect_apply(ch, SPELL_CURSE, duration, ((caster_level - 3) / 9), APPLY_SAVING_PARA, 0, 0);
+              aff_apply(ch, SPELL_CURSE, duration, 0, 0, AFF_CURSE, 0);
+              aff_apply(ch, SPELL_CURSE, duration, -((caster_level - 3) / 9), APPLY_HITROLL, 0, 0);
+              aff_apply(ch, SPELL_CURSE, duration, ((caster_level - 3) / 9), APPLY_SAVING_PARA, 0, 0);
 
               act("You feel very uncomfortable.", FALSE, ch, 0, 0, TO_CHAR);
               act("$n briefly reveals a red aura!", TRUE, ch, 0, 0, TO_ROOM);
@@ -1343,9 +1352,9 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
             else {
               int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : caster_level;
 
-              affect_apply(ch, SPELL_PARALYSIS, duration, 0, 0, AFF_PARALYSIS, 0);
-              affect_apply(ch, SPELL_PARALYSIS, duration, -2, APPLY_HITROLL, 0, 0);
-              affect_apply(ch, SPELL_PARALYSIS, duration, 20, APPLY_AC, 0, 0);
+              aff_apply(ch, SPELL_PARALYSIS, duration, 0, 0, AFF_PARALYSIS, 0);
+              aff_apply(ch, SPELL_PARALYSIS, duration, -2, APPLY_HITROLL, 0, 0);
+              aff_apply(ch, SPELL_PARALYSIS, duration, 20, APPLY_AC, 0, 0);
 
               act("Your limbs freeze in place!", FALSE, ch, 0, 0, TO_CHAR);
               act("$n is paralyzed!", TRUE, ch, 0, 0, TO_ROOM);
@@ -1359,7 +1368,7 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
             else {
               int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) ? 1 : caster_level;
 
-              affect_apply(ch, SPELL_POISON, duration, -3, APPLY_STR, AFF_POISON, 0);
+              aff_apply(ch, SPELL_POISON, duration, -3, APPLY_STR, AFF_POISON, 0);
 
               act("You feel very sick.", FALSE, ch, 0, 0, TO_CHAR);
               act("$n looks very sick.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1456,11 +1465,11 @@ void spell_shadow_wraith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   aff.type = SPELL_SHADOW_WRAITH;
   aff.duration = 10;
 
-  affect_join(ch, &aff, FALSE, FALSE);
+  aff_join(ch, &aff, FALSE, FALSE);
 
-  if (!affected_by_spell(ch, SPELL_SHADOW_WRAITH)) return;
+  if (!aff_affected_by(ch, SPELL_SHADOW_WRAITH)) return;
 
-  num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
+  num_shadows = (MAX(1, (aff_duration(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
 
   switch (num_shadows) {
     case 1:
@@ -1501,7 +1510,7 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  int num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
+  int num_shadows = (MAX(1, (aff_duration(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
 
   int dam = MIN(350 * 4, 350 * num_shadows);
 
