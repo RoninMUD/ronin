@@ -1520,6 +1520,8 @@ void do_use(struct char_data *ch, char *argument, int cmd) {
       act("$n taps $p three times on the ground.", TRUE, ch, obj, 0, TO_ROOM);
 
       if (OBJ_VALUE(obj, 2) > 0) {
+        OBJ_VALUE(obj, 2)--;
+
         if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), NO_MAGIC)) {
           send_to_char("Your magic has been absorbed by the surroundings.\n\r", ch);
 
