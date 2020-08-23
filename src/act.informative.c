@@ -451,7 +451,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
         }
       }
 
-      if (!IS_NPC(target) || !MOB_LONG(target) || (GET_POS(target) != GET_DEFAULT_POSITION(target))) {
+      if (!IS_NPC(target) || !MOB_LONG(target) || ((GET_POS(target) != GET_DEFAULT_POSITION(target)) && (GET_POS(target) < POSITION_STANDING))) {
         if (!IS_NPC(target)) {
           str_cat(buf, sizeof(buf), PERS(target, ch));
 

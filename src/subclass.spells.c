@@ -1701,7 +1701,8 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
       clear_object(hammer);
 
       OBJ_GET_NAME(hammer) = strdup("hammer");
-      OBJ_GET_SHORT(hammer) = strdup("Divine Hammer");
+      OBJ_GET_SHORT(hammer) = strdup("a divine hammer");
+      OBJ_TYPE(hammer) = ITEM_WEAPON;
     }
 
     int num_dice = 5;

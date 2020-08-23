@@ -1966,7 +1966,11 @@ int frostbrand_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       act("$n's $f drains the warmth from you as it strikes you!", TRUE, owner, OBJ_NAME(obj), vict, TO_VICT);
       act("Your $f drains the warmth from $N as it strikes $M!", TRUE, owner, OBJ_NAME(obj), vict, TO_CHAR);
 
+      int set_pos = GET_POS(vict);
+
       damage(owner, vict, 100, TYPE_UNDEFINED, DAM_COLD);
+
+      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
 
       if (!affected_by_spell(vict, SPELL_CHILL_TOUCH)) {
         affect_apply(vict, SPELL_CHILL_TOUCH, 1, -2, APPLY_STR, 0, 0);
