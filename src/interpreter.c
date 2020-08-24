@@ -1382,7 +1382,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       CREATE(d->character->player.name, char, strlen(tmp_name) + 1);
       strcpy(d->character->player.name, CAP(tmp_name));
       for(e=descriptor_list;e;e=e->next) {
-        if(e->character &&
+        if(e->character && GET_NAME(e->character) &&
            !str_cmp(GET_NAME(e->character), GET_NAME(d->character)) &&
            (d->character != e->character)) {
           SEND_TO_Q("Please choose a new name!\n\r", d);

@@ -2278,27 +2278,27 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         if (!IS_IMMORTAL(victim)) {
           if ((dmg > 0) || ((original_damage > 0) && ((attack_type == SKILL_PUNCH) || (attack_type == SKILL_BASH) || (attack_type == SKILL_KICK)))) {
             if (GET_POS(victim) == POSITION_DEAD) {
-              act(messages->die_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-              act(messages->die_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-              act(messages->die_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+              act(messages->die_msg.attacker_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_CHAR);
+              act(messages->die_msg.victim_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_VICT);
+              act(messages->die_msg.room_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_NOTVICT);
 
             }
             else {
-              act(messages->hit_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-              act(messages->hit_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-              act(messages->hit_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+              act(messages->hit_msg.attacker_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_CHAR);
+              act(messages->hit_msg.victim_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_VICT);
+              act(messages->hit_msg.room_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_NOTVICT);
             }
           }
           else {
-            act(messages->miss_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-            act(messages->miss_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-            act(messages->miss_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+            act(messages->miss_msg.attacker_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_CHAR);
+            act(messages->miss_msg.victim_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_VICT);
+            act(messages->miss_msg.room_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_NOTVICT);
           }
         }
         else {
-          act(messages->god_msg.attacker_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_CHAR);
-          act(messages->god_msg.victim_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_VICT);
-          act(messages->god_msg.room_msg, FALSE, ch, GET_WEAPON(ch), victim, TO_NOTVICT);
+          act(messages->god_msg.attacker_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_CHAR);
+          act(messages->god_msg.victim_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_VICT);
+          act(messages->god_msg.room_msg, FALSE, ch, EQ(ch, WIELD), victim, TO_NOTVICT);
         }
       }
     }

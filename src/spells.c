@@ -1548,7 +1548,7 @@ void cast_poison(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_poison(level, ch, victim, 0);
+      spell_poison(level, ch, victim, obj);
       break;
 
     case SPELL_TYPE_STAFF:
@@ -1596,7 +1596,7 @@ void cast_remove_curse(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim,
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_remove_curse(level, ch, victim, 0);
+      spell_remove_curse(level, ch, victim, obj);
       break;
 
     case SPELL_TYPE_STAFF:
@@ -1628,7 +1628,7 @@ void cast_remove_poison(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_remove_poison(level, ch, victim, 0);
+      spell_remove_poison(level, ch, victim, obj);
       break;
 
     case SPELL_TYPE_STAFF:
