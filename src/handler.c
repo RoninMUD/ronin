@@ -1700,9 +1700,8 @@ int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ 
       return FIND_OBJ_INV;
     }
 
-    if (IS_SET(bitvector, FIND_OBJ_EQUIP))
+    if (IS_SET(bitvector, FIND_OBJ_EQUIP) && (*target_obj = get_obj_equipped_by_name(ch, name)))
     {
-      *target_obj = get_obj_equipped_by_name(ch, name);
       return FIND_OBJ_EQUIP;
     }
 
