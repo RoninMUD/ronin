@@ -118,6 +118,8 @@ struct obj_data *get_obj_by_vnum_in_room(int obj_vnum, int rm);
 
 OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see);
 OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list);
+OBJ *get_obj_equipped_by_name(CHAR* ch, char* obj_name);
+
 
 CHAR *get_char_room_ex(CHAR *ch, char *name, bool must_see);
 CHAR *get_char_room_vis(CHAR *ch, char *name);

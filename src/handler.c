@@ -1639,7 +1639,33 @@ struct obj_data *create_money( int amount )
   return(obj);
 }
 
+OBJ* get_obj_equipped_by_name(CHAR *ch, char *obj_name)
+{
+  int number = 0;
+  int item_count = 1;
+  char* sub_ptr = NULL;
+  OBJ* target_obj = NULL;
 
+  if ((number = dot_number(obj_name, &sub_ptr)))
+  {
+    for (int i = 0; i < MAX_WEAR; i++)
+    {
+      if (EQ(ch, i) && isname(sub_ptr, OBJ_NAME(EQ(ch, i))))
+      {
+        if (item_count == number)
+        {
+          target_obj = EQ(ch, i);
+          break;
+        }
+        else
+        {
+          ++item_count;
+        }
+      }
+    }
+  }
+  return target_obj;
+}
 
 /* Generic Find, designed to find any object/character                    */
 /* Calling :                                                              */
@@ -1674,14 +1700,9 @@ int generic_find(char *argument, int bitvector, CHAR *ch, CHAR **target_ch, OBJ 
       return FIND_OBJ_INV;
     }
 
-    if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
-      for (int i = 0; i < MAX_WEAR; i++) {
-        if (EQ(ch, i) && isname(name, OBJ_NAME(EQ(ch, i)))) {
-          *target_obj = EQ(ch, i);
-
-          return FIND_OBJ_EQUIP;
-        }
-      }
+    if (IS_SET(bitvector, FIND_OBJ_EQUIP) && (*target_obj = get_obj_equipped_by_name(ch, name)))
+    {
+      return FIND_OBJ_EQUIP;
     }
 
     if (IS_SET(bitvector, FIND_OBJ_ROOM) && (*target_obj = get_obj_in_list_vis(ch, name, world[CHAR_REAL_ROOM(ch)].contents))) {
