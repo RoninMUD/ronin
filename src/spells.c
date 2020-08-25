@@ -849,7 +849,7 @@ void cast_create_water(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim,
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_create_food(level, ch, 0, obj);
+      spell_create_water(level, ch, 0, obj);
       break;
   }
 }
