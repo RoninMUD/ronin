@@ -291,7 +291,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   struct obj_data *tar_obj;
   struct char_data *tar_char;
   char name[MAX_STRING_LENGTH],buf[MAX_INPUT_LENGTH];
-  int qend, spl, i,percent,con_amt,mult,conc,mana_cost;
+  int qend, spl, percent,con_amt,mult,conc,mana_cost;
   static int castlog=0;
   bool target_ok;
   FILE *fl;
@@ -491,12 +491,12 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
         if ((tar_obj = get_obj_vis(ch, name)))
           target_ok = TRUE;
 
-      if (!target_ok && IS_SET(spell_info[spl].targets, TAR_OBJ_EQUIP)) {
-        for(i=0; i<MAX_WEAR && !target_ok; i++)
-          if (ch->equipment[i] && str_cmp(name, ch->equipment[i]->name) == 0) {
-            tar_obj = ch->equipment[i];
+      if (!target_ok && IS_SET(spell_info[spl].targets, TAR_OBJ_EQUIP))
+      {
+        if ((tar_obj = get_obj_equipped_by_name(ch, name)))
+        {
             target_ok = TRUE;
-          }
+        }
       }
 
       if (!target_ok && IS_SET(spell_info[spl].targets, TAR_SELF_ONLY))
