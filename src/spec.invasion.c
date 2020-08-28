@@ -1941,11 +1941,11 @@ int frostbrand_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
       damage(ch, vict, 100, TYPE_UNDEFINED, DAM_COLD);
 
-      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
-
       if (!affected_by_spell(vict, SPELL_CHILL_TOUCH)) {
         affect_apply(vict, SPELL_CHILL_TOUCH, 1, -2, APPLY_STR, 0, 0);
       }
+
+      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
     }
 
     return FALSE;
@@ -1970,11 +1970,11 @@ int frostbrand_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
       damage(owner, vict, 100, TYPE_UNDEFINED, DAM_COLD);
 
-      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
-
       if (!affected_by_spell(vict, SPELL_CHILL_TOUCH)) {
         affect_apply(vict, SPELL_CHILL_TOUCH, 1, -2, APPLY_STR, 0, 0);
       }
+
+      GET_POS(vict) = MIN(GET_POS(vict), set_pos);
     }
 
     return FALSE;
