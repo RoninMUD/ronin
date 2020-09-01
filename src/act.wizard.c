@@ -5024,7 +5024,7 @@ void do_reroll(struct char_data *ch, char *argument, int cmd)
 
   one_argument(argument,buf);
   if (!*buf)
-    send_to_char("Who do you wich to reroll?\n\r",ch);
+    send_to_char("Who do you wish to reroll?\n\r",ch);
   else
     if (!(victim = get_char(buf)))
       send_to_char("No-one by that name in the world.\n\r",ch);
