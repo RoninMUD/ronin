@@ -1671,6 +1671,12 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     strcat(buf, "\n\r");
     send_to_char(buf, ch);
 
+    sprintf(buf, "Can be worn: ");
+    snprint_bits(buf2, sizeof(buf2), OBJ_WEAR_FLAGS(obj), wear_bits);
+    strcat(buf, buf2);
+    strcat(buf, "\n\r");
+    send_to_char(buf, ch);
+
     send_to_char("Item is: ", ch);
     //sprintbit(obj->obj_flags.extra_flags,extra_bits,buf);
     snprint_bits(buf, sizeof(buf), obj->obj_flags.extra_flags, extra_bits);
