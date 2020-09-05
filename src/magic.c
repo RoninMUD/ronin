@@ -1605,7 +1605,7 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
-  print_spell_messages(victim, SPELL_SPIRIT_LEVY);
+  print_spell_messages(ch, SPELL_SPIRIT_LEVY);
 
   int mob_level = OBJ_VALUE2(obj);
 
@@ -1631,7 +1631,7 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     next_obj = temp_obj->next_content;
 
     obj_from_obj(temp_obj);
-    obj_to_room(temp_obj, CHAR_REAL_ROOM(victim));
+    obj_to_room(temp_obj, CHAR_REAL_ROOM(ch));
   }
 
   extract_obj(obj);
