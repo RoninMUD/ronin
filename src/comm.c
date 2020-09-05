@@ -2678,6 +2678,7 @@ void give_prompt(DESC *desc) {
     write_to_descriptor(desc->descriptor, "] ");
     desc->prompt_mode = 0;
 
+    // When writing on a board or postcard, we only want the ]
     return;
   }
 
