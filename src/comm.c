@@ -2677,6 +2677,8 @@ void give_prompt(DESC *desc) {
   if (desc->str) {
     write_to_descriptor(desc->descriptor, "] ");
     desc->prompt_mode = 0;
+
+    return;
   }
 
   if (desc->connected) return;
