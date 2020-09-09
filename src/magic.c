@@ -1350,6 +1350,11 @@ void spell_strength(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_word_of_recall(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_OTHER_PC_IN_CHAOTIC_ROOM)) return;
 
+  if (!victim) {
+    send_to_char("Your attempt to recall an inanimate object succeeds at nothing.\n\r", ch);
+    return;
+  }
+
   if ((IS_IMMORTAL(victim) && !IS_IMMORTAL(ch)) || (IS_NPC(victim) && (!IS_AFFECTED(victim, AFF_CHARM) || GET_RIDER(victim)))) return;
 
   if (IS_MORTAL(victim) && ench_enchanted_by(victim, 0, ENCHANT_PRIDE)) {
