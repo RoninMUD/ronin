@@ -3615,14 +3615,14 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     }
   }
 
-  /* Ensure ch engages victim if not already fighting someone. */
-  if (!GET_OPPONENT(ch)) {
-    set_fighting(ch, victim);
-  }
-
   /* Ensure victim engages ch if not already fighting someone. */
   if (!GET_OPPONENT(victim)) {
     set_fighting(victim, ch);
+  }
+
+  /* Ensure ch engages victim if not already fighting someone. */
+  if (!GET_OPPONENT(ch)) {
+    set_fighting(ch, victim);
   }
 
   /* Perform the attack, returning if it is avoided or misses. */
