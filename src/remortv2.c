@@ -29,6 +29,7 @@
 #include "spells.h"
 #include "time.h"
 #include "remortv2.h"
+#include "aff_ench.h"
 
 /* Externs */
 extern void advance_level(CHAR *ch);
@@ -884,26 +885,13 @@ void rv2_appraise_message(CHAR *ch, struct rv2_remort_info remort_info)
 /* Remove the remort v2 enchant. */
 void rv2_remove_enchant(CHAR *ch)
 {
-  ENCH *ench = NULL;
-
-  for (ench = ch->enchantments; ench; ench = ench->next)
-  {
-    if (ench->type == ENCHANT_REMORTV2)
-    {
-      enchantment_remove(ch, ench, FALSE);
-    }
-  }
+  ench_from_char(ch, "Remort", 0, FALSE);
 }
 
 /* Add the remort v2 enchant. */
 void rv2_add_enchant(CHAR *ch)
 {
-  char buf[MSL];
-  ENCH ench;
-
-  sprintf(buf, "Remort");
-  ench.name = buf;
-  enchantment_to_char(ch, &ench, TRUE);
+  ench_apply(ch, TRUE, "Remort", 0, -1, 0, 0, 0, 0, 0, NULL);
 }
 
 /* Mobile Specs */

@@ -26,6 +26,7 @@
 #include "fight.h"
 #include "spec_assign.h"
 #include "enchant.h"
+#include "aff_ench.h"
 
 /* Zone */
 #define DIGSITE				185
@@ -72,15 +73,10 @@ int toxic_fumes_ench(ENCH *ench, CHAR *ench_ch, CHAR *char_in_room, int cmd, cha
 int dig_archaeologist_room(int room, CHAR *ch, int cmd, char *arg)
 {
   char buf[MIL];
-  ENCH *tmp_enchantment;
 
   if(cmd==MSG_ENTER && V_ROOM(ch)==ARCHAEOLOGIST_ROOM && IS_MORTAL(ch) && !IS_NPC(ch) && !enchanted_by(ch,"Toxic Fumes"))
   {
-    CREATE(tmp_enchantment, ENCH, 1);
-    tmp_enchantment->name     = str_dup("Toxic Fumes");
-    tmp_enchantment->duration = -1;
-    tmp_enchantment->func     = toxic_fumes_ench;
-    enchantment_to_char(ch, tmp_enchantment, FALSE);
+    ench_apply(ch, TRUE, "Toxic Fumes", 0, -1, 0, 0, 0, 0, 0, toxic_fumes_ench);
     act("$n gags as the toxic fumes begin to suffocate $m!",0,ch,0,0,TO_ROOM);
     act("\n\rYou gag as the toxic fumes begin to suffocate you!",0,ch,0,0,TO_CHAR);
     sprintf(buf,"Digsite Log Ench: [ %s is breathing TOXIC_FUMES at %d ]",GET_NAME(ch),world[CHAR_REAL_ROOM(ch)].number);
