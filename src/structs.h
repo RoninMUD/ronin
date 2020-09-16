@@ -26,6 +26,9 @@ typedef struct affected_type_5    AFF;
 typedef struct enchantment_t      ENCH;
 typedef struct social_messg       SOC;
 
+typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
+
+
 /* Time Data */
 
 #define OPT_USEC              100000
@@ -1144,7 +1147,7 @@ struct enchantment_t {
   /* Stored to pfile as AFF. */
   int    type;       /* SPELL_* and SKILL_* - AFF->type */
   sh_int duration;   /* Duration            - AFF->duration */
-  sbyte  modifier;   /* Modifier            - AFF->duration */
+  int    modifier;   /* Modifier            - AFF->duration (truncated to sbyte) */
   byte   location;   /* APPLY_*             - AFF->location */
   long   bitvector;  /* AFF_*               - AFF->bitvector */
   long   bitvector2; /* AFF2_*              - AFF->bitvector2 */
@@ -1157,7 +1160,7 @@ struct enchantment_t {
   int    temp[4];   /* Temporary integer storage. */
   char   *metadata; /* Temporary string storage. */
 
-  int    (*func)(struct enchantment_t *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
+  ENCH_FUNC func;
 };
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
@@ -1209,24 +1212,6 @@ struct char_ver3_data {
 };
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
-
-struct enchantment_type_5 /* pfile versions 5 */
-{
-  char   *name;        /* Used to keep track of the enchantment.
-                        * required to match a name in the 'enchantment'
-                        * list in order to associate a function with
-                        * it.                                     */
-  int temps[4];           /* Temporary storage */
-  sh_int interval;        /* Duration interval type; 0 defaults to ticks, see enchant.h for details */
-  int    type;            /* The type of spell that caused this      */
-  sh_int duration;        /* For how long its effects will last      */
-  int    modifier;        /* This is added to apropriate ability     */
-  byte   location;        /* Tells which ability to change(APPLY_XXX)*/
-  long   bitvector;       /* Tells which bits to set (AFF_XXX)       */
-  long   bitvector2;      /* Tells which bits to set (AFF_XXX)       */
-  int    (*func)(struct enchantment_type_5 *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
-  ENCH *next;
-};
 
 struct enchantment_type_4 /* All pfile versions up to 4 */
 {

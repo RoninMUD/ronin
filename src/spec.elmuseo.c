@@ -35,6 +35,7 @@
 #include "act.h"
 #include "mob.spells.h"
 #include "interpreter.h"
+#include "aff_ench.h"
 
 //
 // External prototypes
@@ -406,26 +407,23 @@ int ench_truelove(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg )
 }
 
 // Applies one of the enchantments related to Jenny.
-void jenny_enchant( CHAR *ch, char *enchantment_name )
-{
-  ENCH *tmp_enchantment;
-  CREATE(tmp_enchantment, ENCH, 1);
-  tmp_enchantment->name     = str_dup( enchantment_name );
-  tmp_enchantment->duration = 30;            /* Define the enchantment */
+void jenny_enchant( CHAR *ch, char *enchantment_name ) {
 
-  if(!strcmp(enchantment_name, ENCH_TRUELOVE ) )
-    tmp_enchantment->func     = ench_truelove;
+  ENCH_FUNC func = NULL;
+
+  if(!strcmp(enchantment_name, ENCH_TRUELOVE))
+    func = ench_truelove;
 
   if(!strcmp(enchantment_name, ENCH_LOVELORN))
-    tmp_enchantment->func     = ench_lovelorn;
+    func = ench_lovelorn;
 
   if(!strcmp(enchantment_name, ENCH_LOVESTRUCK))
-    tmp_enchantment->func     = ench_lovestruck;
+    func = ench_lovestruck;
 
   if(!strcmp(enchantment_name, ENCH_FOREST_FRIEND))
-    tmp_enchantment->func     = ench_forest_friend;
+    func = ench_forest_friend;
 
-  enchantment_to_char(ch, tmp_enchantment, FALSE);
+  ench_apply(ch, TRUE, enchantment_name, 0, 30, 0, 0, 0, 0, 0, func);
 }
 
 // Removes a waxified item from the list of waxified items.
@@ -1545,21 +1543,10 @@ void mus_enfeeble( CHAR *vict )
   if(!IS_NPC(vict) && vict->ver3.death_limit) vict->ver3.death_limit++;
   death_list(vict);
   log_f("ELWAXO: Enfeebling %s, %d hp (was %d: nat %d), %d mana (was %d: nat %d)", vict->player.name, new_hp, orig_hp, nat_hp, new_mana, orig_mana, nat_mana );
-  ENCH *tmp_enchantment;
-  CREATE(tmp_enchantment, ENCH, 1);
-  tmp_enchantment->name     = str_dup( ENCH_FEEBLE1 );
-  tmp_enchantment->duration = 720;            /* Define the enchantment */
-  tmp_enchantment->func     = ench_feeble;
-  tmp_enchantment->modifier = new_hp;
-  tmp_enchantment->location = APPLY_HIT;
-  enchantment_to_char(vict, tmp_enchantment, FALSE);
-  CREATE(tmp_enchantment, ENCH, 1);
-  tmp_enchantment->name     = str_dup( ENCH_FEEBLE2 );
-  tmp_enchantment->duration = 720;            /* Define the enchantment */
-  tmp_enchantment->func     = ench_feeble;
-  tmp_enchantment->modifier = new_mana;
-  tmp_enchantment->location = APPLY_MANA;
-  enchantment_to_char(vict, tmp_enchantment, FALSE);
+
+  ench_apply(vict, TRUE, ENCH_FEEBLE1, 0, 720, 0, new_hp,   APPLY_HIT,  0, 0, ench_feeble);
+  ench_apply(vict, TRUE, ENCH_FEEBLE2, 0, 720, 0, new_mana, APPLY_MANA, 0, 0, ench_feeble);
+
   //Skeena 6/12/11: Enfeeblement should take effect immediately, not at tick
   GET_MANA (vict) = MIN (GET_MAX_MANA (vict), GET_MANA (vict));
   GET_HIT (vict) = MIN (GET_MAX_HIT (vict), GET_HIT (vict));
@@ -3266,12 +3253,7 @@ int mus_lem(CHAR *mob, CHAR* ch, int cmd, char *arg )
           char buf[512];
           sprintf(buf, "Fight me like a man, not a cowering wimp, %s!", vict->player.name );
           do_say( lem_instance, buf, MSG_RECONNECT );
-          ENCH *tmp_enchantment;
-          CREATE(tmp_enchantment, ENCH, 1);
-          tmp_enchantment->name     = str_dup( ENCH_NAIAD_COWARDICE );
-          tmp_enchantment->duration = 2;            /* Define the enchantment */
-          tmp_enchantment->func     = ench_naiad_cowardice;
-          enchantment_to_char(vict, tmp_enchantment, FALSE);
+          ench_apply(vict, TRUE, ENCH_NAIAD_COWARDICE, 0, 2, 0, 0, 0, 0, 0, ench_naiad_cowardice);
           send_to_char( "You feel ashamed at your cowardice.\r\n", vict );
       }
     }
@@ -4472,12 +4454,7 @@ int mus_naiad(CHAR *mob, CHAR* ch, int cmd, char *arg )
         if( CHAR_REAL_ROOM(d->character) != CHAR_REAL_ROOM(mob) )
         {
           send_to_char("You are filled with shame at your cowardice.\r\n", d->character );
-          ENCH *tmp_enchantment;
-          CREATE(tmp_enchantment, ENCH, 1);
-          tmp_enchantment->name     = str_dup( ENCH_NAIAD_COWARDICE );
-          tmp_enchantment->duration = 30;            /* Define the enchantment */
-          tmp_enchantment->func     = ench_naiad_cowardice;
-          enchantment_to_char(d->character, tmp_enchantment, FALSE);
+          ench_apply(d->character, TRUE, ENCH_NAIAD_COWARDICE, 0, 30, 0, 0, 0, 0, 0, ench_naiad_cowardice);
         }
         else
         {
@@ -4497,12 +4474,7 @@ int mus_naiad(CHAR *mob, CHAR* ch, int cmd, char *arg )
     {
       if( !IS_NPC(vict) && !enchanted_by( vict, ENCH_NAIAD_CHILLING ) )
       {
-          ENCH *tmp_enchantment;
-          CREATE(tmp_enchantment, ENCH, 1);
-          tmp_enchantment->name     = str_dup( ENCH_NAIAD_CHILLING );
-          tmp_enchantment->duration = 20;            /* Define the enchantment */
-          tmp_enchantment->func = ench_naiad_chilling;
-          enchantment_to_char(vict, tmp_enchantment, FALSE);
+          ench_apply(vict, TRUE, ENCH_NAIAD_CHILLING, 0, 20, 0, 0, 0, 0, 0, ench_naiad_chilling);
       }
     }
   }
@@ -4532,12 +4504,7 @@ int mus_naiad(CHAR *mob, CHAR* ch, int cmd, char *arg )
           act ("You breathe frost all over $N, freezing them in place!",
                FALSE, mob, 0, victim, TO_CHAR);
 
-          ENCH *tmp_enchantment;
-          CREATE(tmp_enchantment, ENCH, 1);
-          tmp_enchantment->name     = str_dup( ENCH_NAIAD_FROZEN );
-          tmp_enchantment->duration = 2;            /* Define the enchantment */
-          tmp_enchantment->func     = ench_naiad_frozen;
-          enchantment_to_char(victim, tmp_enchantment, FALSE);
+          ench_apply(vict, TRUE, ENCH_NAIAD_FROZEN, 0, 2, 0, 0, 0, 0, 0, ench_naiad_frozen);
         }
       }
     }
