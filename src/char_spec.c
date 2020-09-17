@@ -793,7 +793,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         GET_POS(victim) = MIN(GET_POS(ch), set_pos);
       break;
 
-    case CLASS_BARD: /* taunt + dual + heal song */
+    case CLASS_BARD: /* taunt + dual + heal song + throw mimicee bard at the mob for an extra hit*/
       if (chance(50)) {
         act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
         act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
@@ -806,11 +806,11 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       taunt_spec(ch, victim, 0, "NO_SKILL_CHECK"); // auto success
 
       /* dual + haste */
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        /* haste */
-        if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
-          perform_hit(ch, victim, TYPE_UNDEFINED, 1);
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      /* haste */
+      if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+        perform_hit(ch, victim, TYPE_UNDEFINED, 1);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
       act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
@@ -825,6 +825,23 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       }
 
       spell_heal(GET_LEVEL(ch), ch, ch, NULL);
+
+      /* order a hit */
+
+      act("$N jumps into $n's waiting hands who throws $M up in the air!", FALSE, ch, NULL, mimicee, TO_NOTVICT);
+      act("You take a running jump into $n's waiting hands who throws you up in the air!", FALSE, ch, NULL, mimicee, TO_VICT);
+      act("$N jumps into your waiting hands so you can throw $M up in the air!", FALSE, ch, NULL, mimicee, TO_CHAR);
+
+      act("$n comes down on top of $N!", FALSE, mimicee, NULL, victim, TO_NOTVICT);
+      act("$n lands on top of you!", FALSE, mimicee, NULL, victim, TO_VICT);
+      act("You land on top of $N!", FALSE, mimicee, NULL, victim, TO_CHAR);
+
+      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
+      {
+        GET_POS(victim) = stack_position(victim, POSITION_MORTALLYW);
+      }
+      perform_hit(mimicee, victim, TYPE_UNDEFINED, 0);
+
       break;
 
     case CLASS_COMMANDO: /* triple + eshock + disarm */
