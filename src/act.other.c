@@ -2288,7 +2288,7 @@ void do_identify(CHAR *ch, char *arg, int cmd) {
 
   arg = one_argument(arg, buf);
 
-  if (isdigit(*buf) || (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) < 9))) {
+  if (is_number(buf) || (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) < 9))) {
     auction_identify(ch, buf, cmd);
 
     return;
