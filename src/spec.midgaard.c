@@ -5385,8 +5385,8 @@ int newbie_hospital(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     return TRUE;
   }
 
-  if(GET_LEVEL(ch)>15 && !CHAOSMODE) {
-    send_to_char("Doctor Naikrovek says 'This hospital is for level 15 and under only.'\n\r",ch);
+  if(GET_LEVEL(ch)> 25 && !CHAOSMODE) {
+    send_to_char("Doctor Naikrovek says 'This hospital is for level 25 and under only.'\n\r",ch);
     return TRUE;
   }
     arg=one_argument(arg, buf);
