@@ -1,32 +1,3 @@
-#27519~
--1
-27523
-27522
-27521
-3052
-1.000000
-1.000000
-0
-0
-0
-0
-0
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here I'll give you %d coins for that.~
-0
-0
-27519
-0
-27523
-0
-28
-0
-28
 #27516~
 3052
 27526
@@ -52,6 +23,35 @@
 27516
 0
 27517
+0
+28
+0
+28
+#27519~
+-1
+27523
+27522
+27521
+3052
+1.000000
+1.000000
+0
+0
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins.~
+%s Here I'll give you %d coins for that.~
+0
+0
+27519
+0
+27523
 0
 28
 0

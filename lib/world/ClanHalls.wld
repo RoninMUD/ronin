@@ -130,18 +130,6 @@ D5
 ~
 0 -1 27501
 E
-sword~
-Standing with the points buried a few feet into the thick oaken floor,
-these swords look almost too large for even a frost giant to handle, yet
-there are six of them here supporting the roof above your head.
-~
-E
-fireplace~
-Logs much thicker then your waist lie in the massive hewn stone fireplace, 
-making for a roaring fire that fills the room with a sense of warmth and
-joviality.
-~
-E
 banners~
 Tacked high up on the rafters, many different banners are raised here to
 honor the clans from which a great many of our members hailed from.
@@ -152,6 +140,18 @@ clenched fist which belongs to DAMAGE INC, and finally a simply designed
 banner bearing a shield with the letters LV upon it. On the other side of 
 the room, nearly out of view, is tacked an unusual looking yellow and red 
 banner with a 5 leafed plant as its emblem.
+~
+E
+fireplace~
+Logs much thicker then your waist lie in the massive hewn stone fireplace, 
+making for a roaring fire that fills the room with a sense of warmth and
+joviality.
+~
+E
+sword~
+Standing with the points buried a few feet into the thick oaken floor,
+these swords look almost too large for even a frost giant to handle, yet
+there are six of them here supporting the roof above your head.
 ~
 S
 #27504
@@ -202,15 +202,10 @@ D1
 ~
 0 -1 27503
 E
-weapons~
-Nailed to the wall are legendary weapons used in combat to slay monsters
-of this world.  Amoung them: The black sting of the queen, Axe of Justice, 
-silver katana, Hammer of Sun, Huge Spear and a diamond scythe.
-~
-E
-mantle~
-This marble mantle is finely made, smooth edges and quality material.
-Upon the mantle are pictures, and a huge Diabolik crest.
+pictures~
+There are several group pictures of the clan.  Amoung them are
+Jarldian, Piggy, Sumo, Nosferatu, Liner, Addict, Jacob, Sane, Reaper,
+Louis, Kirk, Doobie, Balinor, Cobra and Kalentra..
 ~
 E
 crest~
@@ -218,10 +213,15 @@ A golden symbol of the Diabolik clan.  It glems proudly in your eyes and
 represents the hard work of it's members.
 ~
 E
-pictures~
-There are several group pictures of the clan.  Amoung them are
-Jarldian, Piggy, Sumo, Nosferatu, Liner, Addict, Jacob, Sane, Reaper,
-Louis, Kirk, Doobie, Balinor, Cobra and Kalentra..
+mantle~
+This marble mantle is finely made, smooth edges and quality material.
+Upon the mantle are pictures, and a huge Diabolik crest.
+~
+E
+weapons~
+Nailed to the wall are legendary weapons used in combat to slay monsters
+of this world.  Amoung them: The black sting of the queen, Axe of Justice, 
+silver katana, Hammer of Sun, Huge Spear and a diamond scythe.
 ~
 S
 #27510
@@ -297,12 +297,9 @@ The cavern is rather dark and gloomy, with little sound that you can make out.
 ~
 0 -1 27513
 E
-clothes~
-Ooooo!  A g-string bottom!  Maybe it'll fit!
-~
-E
-bacon~
-Hey!  Is that a porkbutt print on the far wall?!
+spring~
+The lava springs form a natural, hot bath where all the evil denizens can
+soak, relax, and ... do other things ;)
 ~
 E
 succubi~
@@ -310,9 +307,12 @@ Now, now, would you like someone gaping at you like that if you were having
 sex in public?
 ~
 E
-spring~
-The lava springs form a natural, hot bath where all the evil denizens can
-soak, relax, and ... do other things ;)
+bacon~
+Hey!  Is that a porkbutt print on the far wall?!
+~
+E
+clothes~
+Ooooo!  A g-string bottom!  Maybe it'll fit!
 ~
 S
 #27512
@@ -336,15 +336,15 @@ direction... smells tasty!
 ~
 0 0 27511
 E
+animals~
+Hey -- it looks like the sexy pig in the corner likes you, too!
+~
+E
 succubi~
 Whoa!  Will you look at that!  You're actually drooling, you pervert!  Put
 your tongue back in your mouth and get yourself some of your own action --
 the lovely demoness over there will lead you to a private chamber of your
 very own...
-~
-E
-animals~
-Hey -- it looks like the sexy pig in the corner likes you, too!
 ~
 S
 #27513
@@ -371,13 +371,13 @@ direction... mmmm... smells tasty!
 ~
 0 -1 27511
 E
-27511~
-Hot steam and the smell of sizzling bacon come from the east.~
-E
 pool~
 That doesn't look like water you'd want to really stick your fingers into...
 more or less drink ...
 ~
+E
+27511~
+Hot steam and the smell of sizzling bacon come from the east.~
 S
 #27514
 The Boudoir~
@@ -1347,14 +1347,14 @@ D2
 keg~
 8 -1 27591
 E
-oil~
-You pick up one of the small bottles.  It appears to be full of 
-massage oil that smells of some exotic fruit.
-~
-E
 pillow~
 Several pillows lie in a small pile creating a comfortable place
 to sleep, rest or just padding for who knows what else...
+~
+E
+oil~
+You pick up one of the small bottles.  It appears to be full of 
+massage oil that smells of some exotic fruit.
 ~
 S
 #27591
@@ -1427,6 +1427,12 @@ D3
 ~
 0 -1 27593
 E
+log~
+As you turn the pages of this tremendously old log, you see the
+names of long lost legends of the Ronin world.  Tears well up in
+your eyes as you read over the names and their accomplisments.
+~
+E
 fountain~
 A grand marble fountain lies in the center of the Twon Square.
 Jets of water shoot high into the air, forming mystical patterns
@@ -1434,12 +1440,6 @@ of faces in its mist. The marble is of the deepest black with white
 swirls of random patterns within its depths.  In the center of
 the fountain stands the legendary Saber-Tooth Tiger that guards
 the town.
-~
-E
-log~
-As you turn the pages of this tremendously old log, you see the
-names of long lost legends of the Ronin world.  Tears well up in
-your eyes as you read over the names and their accomplisments.
 ~
 S
 #27593
