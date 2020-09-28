@@ -35,7 +35,7 @@ extern void mob_do(CHAR* mob, char *arg);
 
 int check_guildmaster(CHAR *ch, CHAR *mob) {
   if(!ch) return TRUE;
-  if(!IS_NPC(ch) && GET_CLASS(ch)==GET_CLASS(mob)) return TRUE;
+  if(!IS_NPC(ch) && ((GET_CLASS(mob)==CLASS_AVATAR) || (GET_CLASS(ch)==GET_CLASS(mob)))) return TRUE;
   act("$N tells you 'Go Away! I don't deal with your type!'",FALSE,ch,0,mob,TO_CHAR);
   return FALSE;
 }

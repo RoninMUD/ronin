@@ -38,10 +38,11 @@
 
 int do_vault(CHAR *mob,CHAR *ch,int cmd,char *arg);
 int receptionist(CHAR *mob, CHAR *ch, int cmd, char *arg);
+int guild(CHAR *mob, CHAR *ch, int cmd, char *arg);
 void do_look(struct char_data *ch, char *argument, int cmd);
 int meta(CHAR *mob,CHAR *ch, int cmd, char *arg);
 void store_to_char_5(struct char_file_u_5 *st, CHAR *ch); /* Latest version is 5 */
-void store_to_char_4(struct char_file_u_4 *st, CHAR *ch); 
+void store_to_char_4(struct char_file_u_4 *st, CHAR *ch);
 void store_to_char_2(struct char_file_u_2 *st, CHAR *ch);
 void auto_rent(CHAR *ch);
 int char_version(FILE *fl);
@@ -2417,6 +2418,8 @@ void assign_clan(void) {
   assign_room(BUD_ACCESS, bud_entrance);
   assign_mob(27517, receptionist);
   assign_mob(27518, do_vault);
+  assign_mob(27598, guild);
+  assign_mob(27599, meta);
   //assign_obj(27526, bloodmoon_orb);
   //assign_room(27520, bloodmoon_tub);
   //assign_room(27517, bloodmoon_main);

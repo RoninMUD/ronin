@@ -144,7 +144,7 @@ wouldn't dream of telling to your mother.  From the looks of the way she's
 coyly smiling at you, it seems as if she can read your mind like an open
 book...  She doesn't look as if she minds in the slightest, the vixen...
 ~
-8 0 0 Y
+10 0 0 Y
 51 9 0 100d10+100 0d0+0
 0 0
 11 11 2
@@ -665,6 +665,46 @@ Is that blood on his hands? Where are his gloves??
 8 8 1
 72 0 1d1+9999 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
+#27598
+dude~
+The Dude~
+The chillest dude ever sits quietly at the counter, sipping from a small cup.~
+Resplendent in fresh flannel pajama bottoms and a chunky sweater, a
+middle-aged man sits here, pondering the vastness of exsitence. His
+wisdom, certainly beyond his years, attracts you to interrupt his
+excogiation and ask for guidance, or more certainly a task to bring
+enlightenment.
+~
+10 0 0 Y
+70 20 10 1d1+69419 1d1+0
+0 0
+8 6 1
+9 0 420d69+0 0
+0 0 0 0
+T
+......The Dude abides!~
+K
+0 0 0 0 0 0 0
+#27599
+red~
+Red~
+A man with an impressive red mullet is practicing intently here.
+~
+A somewhat terrifying, but strangely friendly figure stands here. His hair is
+cropped short at the top, but falls into a long tail at the back. He seems to be
+pre-occupied with performing what appear to be "martial arts" moves, but upon seeing
+you, prepares himself for training...
+~
+10 0 0 Y
+70 20 10 1d1+42068 1d1+0
+0 0
+8 8 1
+9 0 420d1+69 0
+0 0 0 0
+T
+......Red beckons you to "try him"!~
 K
 0 0 0 0 0 0 0
 #0
