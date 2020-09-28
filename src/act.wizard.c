@@ -7588,7 +7588,7 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
   struct string_block sb;
   int i,x,zone,rzone;
   long int tmp1,tmp2;
-  char buf[MAX_INPUT_LENGTH],buf2[MSL], buf3[MAX_INPUT_LENGTH],buf4[MAX_INPUT_LENGTH],buf5[MSL*2],buf6[MSL];
+  char buf[MAX_INPUT_LENGTH],buf2[MSL],buf4[MAX_INPUT_LENGTH],buf5[MSL*2],buf6[MSL];
   char num[100],type[100];
   struct extra_descr_data *desc;
   char usage_text[] = "Usage: zbrief <zone #> <mobile/object/room> <all mobile> (IMP Only).\n\r";
@@ -7739,21 +7739,21 @@ void do_zbrief(struct char_data *ch, char *argument, int cmd) {
      sprintf(sh,"N");
      sprintf(pe,"N");
      sprintf(in,"N");
-        sprintf(buf3," ");
-        for(x = 0; x < MAX_OBJ_AFFECT; x++) {
-          //sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
-          snprint_type(buf2, sizeof(buf2), obj_proto_table[i].affected[x].location, apply_types);
-          if(strstr(buf2,"SKILL_")) {
-            str_tail(buf4, sizeof(buf4), buf2, strlen("SKILL_"));
-            snprintf(buf2, sizeof(buf2), "%s", buf4);
-          }
-          if (strstr(buf2, "SAVING_")) {
-            str_tail(buf4, sizeof(buf4), buf2, strlen("SAVING_"));
-            snprintf(buf2, sizeof(buf2), "%s", buf4);
-          }
-          sprintf(buf5, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
-          strcat(buf6, buf);
-        }
+     sprintf(buf6," ");
+     for(x = 0; x < MAX_OBJ_AFFECT; x++) {
+       //sprinttype(obj_proto_table[i].affected[x].location, apply_types, buf2);
+       snprint_type(buf2, sizeof(buf2), obj_proto_table[i].affected[x].location, apply_types);
+       if(strstr(buf2,"SKILL_")) {
+         str_tail(buf4, sizeof(buf4), buf2, strlen(buf2)-strlen("SKILL_"));
+         snprintf(buf2, sizeof(buf2), "%s", buf4);
+       }
+       if (strstr(buf2, "SAVING_")) {
+         str_tail(buf4, sizeof(buf4), buf2, strlen(buf2)-strlen("SAVING_"));
+         snprintf(buf2, sizeof(buf2), "%s", buf4);
+       }
+       sprintf(buf5, "%-9s %3d  ", buf2, obj_proto_table[i].affected[x].modifier);
+       strcat(buf6, buf5);
+     }
      sprintf(buf," ");
      strncat(buf,item_types[obj_proto_table[i].obj_flags.type_flag],9);
      if(obj_proto_table[i].obj_flags.bitvector!=0) sprintf(fu,"Y");
