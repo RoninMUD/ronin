@@ -77,8 +77,11 @@ int tajjo_ring(OBJ *ring, CHAR *ch, int cmd, char *arg) {
 int cs_room_spec(int room, CHAR *ch, int cmd, char *arg) {
 
   if(!ch) return FALSE;
+  static bool modifyingExits = FALSE;
 
-  if(cmd==CMD_DOWN && !ch->master) {
+  if(!modifyingExits && cmd==CMD_DOWN && !ch->master) {
+    modifyingExits = TRUE;
+
     switch(number(0,3))
     {
     case 0:
@@ -98,7 +101,9 @@ int cs_room_spec(int room, CHAR *ch, int cmd, char *arg) {
       break;
 
     }
-
+    do_move(ch, "", CMD_DOWN);
+    modifyingExits = FALSE;
+    return TRUE;
   }
   return FALSE;
 }
