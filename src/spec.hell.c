@@ -5750,6 +5750,7 @@ int woods_a_spec(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *obj, *next_obj;
   char buf[MIL];
   int vroom;
+  static bool mod_exits = FALSE;
 
   if(cmd==MSG_TICK) {
     if(world[room].contents) {
@@ -5776,7 +5777,9 @@ int woods_a_spec(int room, CHAR *ch, int cmd, char *arg) {
 
   if(IS_NPC(ch)) return FALSE;
 
-  if(cmd==CMD_NORTH && !ch->master) {
+  if(cmd==CMD_NORTH && !mod_exits) {
+    mod_exits = TRUE;
+
     switch(number(0,3))
     {
     case 0:
@@ -5794,9 +5797,15 @@ int woods_a_spec(int room, CHAR *ch, int cmd, char *arg) {
     default:
       break;
     }
+
+    do_move(ch, "", CMD_NORTH);
+    mod_exits = FALSE;
+    return TRUE;
   }
 
-  if(cmd==CMD_EAST && !ch->master) {
+  if(cmd==CMD_EAST && !mod_exits) {
+    mod_exits = TRUE;
+
     switch(number(0,2))
     {
     case 0:
@@ -5811,6 +5820,10 @@ int woods_a_spec(int room, CHAR *ch, int cmd, char *arg) {
     default:
       break;
     }
+
+    do_move(ch, "", CMD_EAST);
+    mod_exits = FALSE;
+    return TRUE;
   }
 
   return FALSE;
@@ -5821,6 +5834,7 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *obj, *next_obj;
   char buf[MIL];
   int vroom;
+  static bool mod_exits = FALSE;
 
   if(cmd==MSG_TICK) {
     if(world[room].contents) {
@@ -5848,7 +5862,9 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
   if(IS_NPC(ch)) return FALSE;
 
   if(world[CHAR_REAL_ROOM(ch)].number==25379) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,1))
       {
       case 0:
@@ -5860,12 +5876,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25367) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,2))
       {
       case 0:
@@ -5880,12 +5902,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25355) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,1))
       {
       case 0:
@@ -5897,12 +5925,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25456) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,2))
       {
       case 0:
@@ -5917,12 +5951,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25459) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,2))
       {
       case 0:
@@ -5937,12 +5977,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25361) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,1))
       {
       case 0:
@@ -5954,12 +6000,18 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
 
   if(world[CHAR_REAL_ROOM(ch)].number==25373) {
-    if(cmd==CMD_DOWN && !ch->master) {
+    if(cmd==CMD_DOWN && !mod_exits) {
+      mod_exits = TRUE;
+
       switch(number(0,1))
       {
       case 0:
@@ -5971,6 +6023,10 @@ int woods_b_spec(int room, CHAR *ch, int cmd, char *arg) {
       default:
         break;
       }
+
+      do_move(ch, "", CMD_DOWN);
+      mod_exits = FALSE;
+      return TRUE;
     }
     return FALSE;
   }
@@ -5983,6 +6039,7 @@ int woods_c_spec(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *obj, *next_obj;
   char buf[MIL];
   int vroom;
+  static bool mod_exits = FALSE;
 
   if(cmd==MSG_TICK) {
     if(world[room].contents) {
@@ -6009,7 +6066,9 @@ int woods_c_spec(int room, CHAR *ch, int cmd, char *arg) {
 
   if(IS_NPC(ch)) return FALSE;
 
-  if(cmd==CMD_UP && !ch->master) {
+  if(cmd==CMD_UP && !mod_exits) {
+    mod_exits = TRUE;
+
     switch(number(0,6))
     {
     case 0:
@@ -6036,6 +6095,10 @@ int woods_c_spec(int room, CHAR *ch, int cmd, char *arg) {
     default:
       break;
     }
+
+    do_move(ch, "", CMD_UP);
+    mod_exits = FALSE;
+    return TRUE;
   }
 
   return FALSE;
@@ -6046,6 +6109,7 @@ int woods_d_spec(int room, CHAR *ch, int cmd, char *arg) {
   OBJ *obj, *next_obj;
   char buf[MIL];
   int vroom;
+  static bool mod_exits = TRUE;
 
   if(cmd==MSG_TICK) {
     if(world[room].contents) {
@@ -6072,7 +6136,9 @@ int woods_d_spec(int room, CHAR *ch, int cmd, char *arg) {
 
   if(IS_NPC(ch)) return FALSE;
 
-  if(cmd==CMD_EAST && !ch->master) {
+  if(cmd==CMD_EAST && !mod_exits) {
+    mod_exits = TRUE;
+
     switch(number(0,4))
     {
     case 0:
@@ -6093,6 +6159,10 @@ int woods_d_spec(int room, CHAR *ch, int cmd, char *arg) {
     default:
       break;
     }
+
+    do_move(ch, "", CMD_EAST);
+    mod_exits = FALSE;
+    return TRUE;
   }
 
   return FALSE;
