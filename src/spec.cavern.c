@@ -79,7 +79,7 @@ int cs_room_spec(int room, CHAR *ch, int cmd, char *arg) {
   if(!ch) return FALSE;
   static bool modifyingExits = FALSE;
 
-  if(!modifyingExits && cmd==CMD_DOWN && !ch->master) {
+  if(!modifyingExits && cmd==CMD_DOWN) {
     modifyingExits = TRUE;
 
     switch(number(0,3))
