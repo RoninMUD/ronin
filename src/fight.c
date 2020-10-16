@@ -1685,6 +1685,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     act("You take the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_VICT);
     act("$N takes the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_NOTVICT);
 
+    if (victim == ch)
+    {
+      // Damage self should remain damage self
+      ch = GET_PROTECTOR(victim);
+    }
     victim = GET_PROTECTOR(victim);
   }
 
