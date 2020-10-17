@@ -1444,8 +1444,8 @@ void spell_summon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   percent = MAX(MIN(percent, 100), 0);
 
   if ((CHAR_REAL_ROOM(victim) == NOWHERE) ||
-      IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(victim)), LAWFUL | PRIVATE | LOCK | CHAOTIC | SAFE) ||
-      IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), LAWFUL | PRIVATE | LOCK | CHAOTIC | ARENA | NO_SUM) ||
+      IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(victim)), PRIVATE | LOCK | CHAOTIC | SAFE) ||
+      IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), PRIVATE | LOCK | CHAOTIC | ARENA | NO_SUM) ||
       (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), TUNNEL) && !CHAOSMODE) ||
       (IS_IMMORTAL(victim) && (GET_LEVEL(ch) < GET_LEVEL(victim))) ||
       (IS_MORTAL(victim) && IS_SET(GET_PFLAG(victim), PLR_NOSUMMON)) ||
