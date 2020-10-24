@@ -637,7 +637,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         damage(ch, victim, 2 * GET_LEVEL(ch), TYPE_UNDEFINED, DAM_PHYSICAL);
 
         if (CHAR_REAL_ROOM(victim) != NOWHERE)
-          GET_POS(victim) = MIN(GET_POS(ch), set_pos);
+          GET_POS(victim) = MIN(GET_POS(victim), set_pos);
 
         /* quad - no more no less */
           perform_hit(ch, victim, TYPE_UNDEFINED, 0);
