@@ -752,7 +752,7 @@ if(IS_DAY && chance(9)) {
 
   if(count_mortals_real_room(real_room(12848))==1) return FALSE;
 
-  if(IS_NIGHT && chance(10)) {
+  if((weather_info.sunlight == SUN_DARK) && chance(10)) {
     if(!(vict=get_random_victim_fighting(paktat))) return FALSE;
     if(IS_NPC(vict)) return FALSE;
 
