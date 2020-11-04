@@ -2012,13 +2012,13 @@ struct con_app_type con_app[] = {
   { 2,  4,  0},
   { 3,  5,  0},
   { 3,  6,  0}, /* 18 */
-  { 4,  7,  2},
-  { 4,  9,  4}, /* 20 - 4% damage reduction before Sancutary/etc. */
-  { 5, 11,  6},
-  { 5, 14,  8},
-  { 6, 17, 12},
-  { 6, 21, 16},
-  { 7, 25, 20}  /* 25 - 20% damage reduction before Sancutary/etc. */
+  { 4,  9,  2},
+  { 4, 12,  4}, /* 20 - 4% damage reduction before Sancutary/etc. */
+  { 5, 15,  6},
+  { 5, 19,  8},
+  { 6, 23, 12},
+  { 6, 27, 16},
+  { 7, 31, 20}  /* 25 - 20% damage reduction before Sancutary/etc. */
 };
 
 /* Intelligence Apply */
