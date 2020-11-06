@@ -802,7 +802,7 @@ void cast_clone(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *o
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_blindness(level, ch, victim, 0);
+      spell_clone(level, ch, victim, obj);
       break;
 
   }
