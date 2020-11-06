@@ -495,6 +495,11 @@ void spell_blindness_dust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   const int max_clone_count = 8;
 
+  if (!obj) {
+    send_to_char("Nothing like that exists.\n\r", ch);
+    return;
+  }
+
   if (IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_CLONE)) {
     act("$p exploded.", FALSE, ch, obj, 0, TO_CHAR);
     act("$p exploded.", FALSE, ch, obj, 0, TO_ROOM);
