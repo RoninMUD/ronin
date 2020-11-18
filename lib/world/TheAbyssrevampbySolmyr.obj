@@ -611,14 +611,14 @@ A large fountain stands in the center of the courtyard.~
 10000 10 10
 100
 E
-statue~
-The statue is placed in the center of the fountain. Clear
-water flows from this beautiful crafted statue.
-~
-E
 fountain~
 Clear water streams from a small statue placed in the center
 of this dilapidated fountain.
+~
+E
+statue~
+The statue is placed in the center of the fountain. Clear
+water flows from this beautiful crafted statue.
 ~
 X
 ~
@@ -823,7 +823,7 @@ window~
 A Black Window~
 A large black window is standing in the center of the room.~
 ~
-12 134217728 1
+12 134217728 0
 0 0 0 0
 10000 10 10
 100
@@ -1301,47 +1301,5 @@ M
 ~
 T
 100
-#25090
-slashweapon~
-a bit of nothing~
-There is a bit of nothing sitting here.~
-~
-5 0 8193
-0 5 7 3
-10 10 10
-10
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 60
-A
-18 35
-#25091
-crushweapon~
-a bit of nothing~
-There is a bit of nothing sitting here.~
-~
-5 0 8193
-0 5 7 0
-10 10 10
-10
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-18 35
 #0
 $~

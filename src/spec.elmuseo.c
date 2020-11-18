@@ -3748,23 +3748,23 @@ int mus_elar_skull(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 }
 
 // Tomtom has a small chance to sing haste song (guaranteed) on MSG_MOBACT
-int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg)
-{
-  if(!obj->equipped_by) return FALSE;
-  if(ch != obj->equipped_by) return FALSE;
-  CHAR *holder = obj->equipped_by;
+int mus_tomtom(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   CHAR *tmp_victim = NULL;
   CHAR *temp = NULL;
-  if(cmd != MSG_MOBACT) return FALSE;
-  if(GET_CLASS(holder)!=CLASS_BARD) return FALSE;
-  if(!holder->specials.fighting) return FALSE;
+
+  if (ch) return FALSE; // MOBACT has a null signaler, so sanity check
+  if (!obj || !obj->equipped_by) return FALSE;
+  ch = obj->equipped_by;
+  if (cmd != MSG_MOBACT) return FALSE;
+  if (GET_CLASS(ch) != CLASS_BARD) return FALSE;
+  if (!ch->specials.fighting) return FALSE;
 
   // Roughly once every 1.5 hours
-  if(number(0,500) != 1) return FALSE;
+  if (number(0,500) != 1) return FALSE;
 
-  act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_CHAR);
-  act("$n beats you senseless with $s tomtom!", 1, ch, 0, holder->specials.fighting, TO_VICT);
-  act("$n uses $s tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, holder->specials.fighting, TO_NOTVICT);
+  act("You use your tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, ch->specials.fighting, TO_CHAR);
+  act("$n beats you senseless with $s tomtom!", 1, ch, 0, ch->specials.fighting, TO_VICT);
+  act("$n uses $s tomtom to beat out an invigorating tattoo on $N's head.", 1, ch, 0, ch->specials.fighting, TO_NOTVICT);
   for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
     temp=tmp_victim->next_in_room;
     if (ch != tmp_victim)

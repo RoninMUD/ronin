@@ -210,7 +210,7 @@ if (GET_POS(typik)!=POSITION_FIGHTING) {
 	 {
        act("$n waves his arms in a strange motion.",FALSE,typik,0,victim,TO_ROOM);
        act("A heavy glob of mud falls from the ceiling onto your head!",1,typik,0,victim,TO_VICT);
-       act("A large glob of mub falls from the ceiling onto $N's head!",1,typik,0,victim,TO_NOTVICT);
+       act("A large glob of mud falls from the ceiling onto $N's head!",1,typik,0,victim,TO_NOTVICT);
        damage(typik,victim,(number(7,15)*7),TYPE_UNDEFINED,DAM_NO_BLOCK);
        /* stun/pummel vitvim here */
        GET_POS(victim)=POSITION_STUNNED;
