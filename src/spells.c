@@ -1370,7 +1370,7 @@ void cast_heal(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *ob
       break;
 
     case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_heal, level, 0);
+      aoe_spell(ch, spell_heal, level, AOE_TAR_ALL_CHARS);
       break;
   }
 }
@@ -1398,7 +1398,7 @@ void cast_mana_heal(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
       break;
 
     case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_mana_heal, level, 0);
+      aoe_spell(ch, spell_mana_heal, level, AOE_TAR_ALL_CHARS);
       break;
   }
 }
@@ -1442,7 +1442,7 @@ void cast_lay_hands(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
       break;
 
     case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_lay_hands, level, 0);
+      aoe_spell(ch, spell_lay_hands, level, AOE_TAR_ALL_CHARS);
       break;
   }
 }

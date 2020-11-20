@@ -1153,14 +1153,17 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
       /* Log the remort. */
       sprintf(buf,
-        "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort exp (Total: %lld) in (#%d).",  
+        "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort exp (Total: %lld) in (#%d) for %d aqp and %d scp.",
         GET_NAME(ch),
         GET_NAT_HIT(ch),
         GET_NAT_MANA(ch),
         GET_NAT_MOVE(ch),
         remort_info.exp,
         remort_info.exp + GET_REMORT_EXP(ch),
-        CHAR_VIRTUAL_ROOM(ch));
+        CHAR_VIRTUAL_ROOM(ch),
+        remort_info.qp_fee,
+        remort_info.scp_fee
+      );
       wizlog(buf, LEVEL_SUP, 5);
       log_f("%s", buf);
       death_list(ch);
