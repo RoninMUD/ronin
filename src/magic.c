@@ -493,7 +493,7 @@ void spell_blindness_dust(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  const int max_clone_count = 8;
+  // const int max_clone_count = 8; // remove clone limit
 
   if (!obj) {
     send_to_char("Nothing like that exists.\n\r", ch);
@@ -534,11 +534,16 @@ void spell_clone(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     return;
   }
 
+  /*
+  ** Remove clone limit - Shun 20201214
+
   if (obj_proto_table[OBJ_RNUM(obj)].number >= max_clone_count) {
     printf_to_char(ch, "Only %d clones of this object can be created.\n\r", max_clone_count);
 
     return;
   }
+
+  */
 
   OBJ *clone = read_object(OBJ_RNUM(obj), REAL);
 
