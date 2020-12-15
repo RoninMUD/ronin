@@ -370,16 +370,10 @@ A red sparring gauntlet lies here.~
 125 25000 3750
 0
 E
-wrist~
-This wrist guard once belonged to Ryu, the World Champion. When
-he retired, he sealed his things in a cave. Only one of these wrist
-guards have been found.   
-~
-E
-guard~
-This wrist guard once belonged to Ryu, the World Champion. When
-he retired, he sealed his things in a cave. Only one of these wrist
-guards have been found.
+ryu~
+down, down+forward, forward+punch
+forward, down, down+forward+punch
+down, down+back, back+kick
 ~
 E
 padded~
@@ -388,10 +382,16 @@ he retired, he sealed his things in a cave. Only one of these wrist
 guards have been found.
 ~
 E
-ryu~
-down, down+forward, forward+punch
-forward, down, down+forward+punch
-down, down+back, back+kick
+guard~
+This wrist guard once belonged to Ryu, the World Champion. When
+he retired, he sealed his things in a cave. Only one of these wrist
+guards have been found.
+~
+E
+wrist~
+This wrist guard once belonged to Ryu, the World Champion. When
+he retired, he sealed his things in a cave. Only one of these wrist
+guards have been found.   
 ~
 X
 ~
@@ -417,10 +417,6 @@ A shimmering belt of iridescent blue-green feathers floats above the ground.~
 10 1000000 25000
 0
 E
-night quest~
-`pNight was here.`q
-~
-E
 belt angel feathers shimmering iridescent~
 The belt is crafted from fine, iridescent blue-green feathers that have been
 woven together in an intricate, interlaced pattern.  The feathers are long,
@@ -432,6 +428,10 @@ gift an archangel may give to a mortal, being made from the angel's own
 feathers.  They are only given in times of great need or great celebration to
 one the angel deems worthy enough to wear it.  The owner of the belt must be
 powerful indeed and held in the highest of graces to posses such an item.
+~
+E
+night quest~
+`pNight was here.`q
 ~
 X
 ~
@@ -457,15 +457,15 @@ $r Electric Welder sparks violently as it strikes $V!~
 13 100000 30000
 0
 E
-night quest~
-`pNight was here.`q
-~
-E
 welder electric broken sparking crackling artoo~
 The welder is of a two-pronged design meant for quick repairs to damaged metal
 objects.  A crackling arc of electric-blue energy jumps between the tips of the
 device, providing a little illumination and much noise.  Though not originally
 intended for use as a weapon, it serves well as such.
+~
+E
+night quest~
+`pNight was here.`q
 ~
 X
 $r Electric Welder crackles with energy!~
@@ -1290,10 +1290,6 @@ A sturdy-looking bandoleer, crafted from black anodized aluminum, lies here.~
 10 10000 10000
 0
 E
-night quest~
-`pNight was here.`q
-~
-E
 bandoleer black anodized aluminum sturdy~
 This large metal bandoleer seems to be designed as an ornamental piece of
 equipment, a mark of some type of rank or status that its wearer holds.  It is
@@ -1305,6 +1301,10 @@ is comfortable to wear for extended periods.  The hardness and durability of
 the metal is remarkable, and offers a good amount of protection for the regions
 it covers.  The bandoleer hums with magical energy, another testament to its
 importance.
+~
+E
+night quest~
+`pNight was here.`q
 ~
 X
 ~
@@ -1568,9 +1568,8 @@ A heart-shaped amulet is here, glowing in soft reddish light.~
 10 50000 10000
 10
 E
-amulet heart~
-This amulet has two spaces to keep photos of loved ones. It's golden
-casing glistens and shines in the light.
+heart amulet frigga~
+heart amulet frigga
 ~
 E
 heart amulet~
@@ -1578,8 +1577,9 @@ This amulet has two spaces to keep photos of loved ones. It's golden
 casing glistens and shines in the light.(glowing)
 ~
 E
-heart amulet frigga~
-heart amulet frigga
+amulet heart~
+This amulet has two spaces to keep photos of loved ones. It's golden
+casing glistens and shines in the light.
 ~
 X
 ~
@@ -1989,31 +1989,6 @@ A
 53 10
 B
 524296
-#29475
-sabatons pewter boots soot~
-Burnished Pewter Sabatons~
-A polished set of metal boots glint dully from the floor.~
-~
-9 134217728 524353
-3 0 0 0
-10 10 10
-10
-X
-~
-0 0 0
-M
-You draw sparks as you stamp your feet into the boots.~
-$n draws sparks as $e stamps $s feet into the boots.~
-You remove the heavy boots from your feet.~
-$n slowly removes the heavy boots from $s feet.~
-A
-19 5
-A
-18 5
-A
-53 15
-B
-128
 #29476
 kombat mortal helm trenn~
 The Kombat Helm~
@@ -2161,12 +2136,12 @@ A grotesquely carved icon of a demon on a loop of string lies on the ground.~
 125 57500 3750
 4
 E
-possession~
+icon~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
 E
-icon~
+possession~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
@@ -2425,12 +2400,12 @@ a bloody cufflink is pulsating~
 125 57500 3750
 4
 E
-possession~
+icon~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
 E
-icon~
+possession~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
@@ -2460,12 +2435,12 @@ a bloody cufflink is pulsating~
 125 57500 3750
 4
 E
-icon~
+possession~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
 E
-possession~
+icon~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
@@ -2506,32 +2481,6 @@ A
 19 1
 A
 18 1
-#29495
-scratched gold shield aegis soot~
-Lightly Scratched Gold-Inlaid Aegis~
-A lightly scratched gold-patterned shield brilliantly reflects the
-sunlight.~
-~
-9 250621953 513
-5 0 0 0
-10 450670 8575
-0
-X
-~
-0 0 0
-M
-You raise a shining golden shield to protect yourself.~
-$n raises a shining golden shield to protect $mself.~
-~
-~
-A
-12 20
-A
-3 2
-A
-53 15
-B
-20
 #29496
 armor ablative shadow tepir~
 Ablative Shadow Armor~

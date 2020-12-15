@@ -16,15 +16,15 @@ You see a small path leading to the lake-side path.~
 ~
 0 -1 10909
 E
+door main wooden~
+The large wooden doors that close off the main entrance to the house gleam
+in the light and strange shadows play on the door's polished surface.
+~
+E
 window upstairs upper~
 As you look up to the window, you could swear that there was someone standing
 in the window, but there's no-one there now. Only the darkness of the house
 remains.
-~
-E
-door main wooden~
-The large wooden doors that close off the main entrance to the house gleam
-in the light and strange shadows play on the door's polished surface.
 ~
 S
 #14001
@@ -1095,14 +1095,37 @@ name, indicating that the plagues might act as tombstones for the deceased
 family members.
 ~
 S
+#14065
+Through the Looking Glass~
+You are standing in a room completely enshrouded in shadows. Although there is
+After passing through the looking glass, you stand in a bizarro reflection of
+the room you just vacated.  The omnipresent shadows remain. But where the
+previous room had straight, defined walls and tight corners, the walls of this
+room waver and warp in front of you.  It is impossible to focus, as any point
+of reference intermittently disappears and reappears in another location.  The
+only constant is the doorway, now leading to the previous mirror room. The lines
+of the doorway join together at impossible angles in some grotesque imitation
+of natural geometry.
+~
+140 32777 0
+D2
+~
+~
+0 -1 14070
+S
 #14070
 In the Room beyond the Mirror~
 You are standing in a room completely enshrouded in shadows. Although there is
-a little of light here, the constant playing of shadows on all surfaces makes
-your head spin. The only actual light coming from elsewhere is coming from a
-doorway in the south.
+a little light here, the constant playing of shadows on all surfaces makes your
+head spin. The only actual light coming from elsewhere is coming from a doorway
+in the south. An antique looking glass shrouded in an utterly malevolent aura
+stands in the corner.
 ~
 140 9 0
+D0
+~
+glass~
+12 -1 14065
 D2
 You see some light coming from south.~
 ~
