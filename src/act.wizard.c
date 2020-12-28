@@ -906,6 +906,10 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_SKILL_TRIPLE;
         obj->affected[i].modifier = num2;
       }
+      else if (!strcmp(buf, "none")) {
+        obj->affected[i].location = APPLY_NONE;
+        obj->affected[i].modifier = num2;
+      }
       else {
         send_to_char("Sorry not on that field!\n\r", ch);
         return;
