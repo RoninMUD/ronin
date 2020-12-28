@@ -1936,7 +1936,7 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
 int ubers[][2] = {
   // {mob VNUM, room VNUM} // <spec file>
   {12027, 12063}, // Queen Ant - <none>
-  {14014, 14070}, // Dream Shadow - spec.house.c
+  {14014, 14065}, // Dream Shadow - spec.house.c
   {21220, 21275}, // Huge Stone Dragon - spec.moria.c
   {26585, 26582}, // Enlightened One - spec.pagoda.c
   {20109, 20109}, // Musashi - spec.daimyo.c
