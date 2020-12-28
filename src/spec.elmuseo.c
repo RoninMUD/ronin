@@ -1185,7 +1185,7 @@ int mus_tomek (CHAR *tom, CHAR *ch, int cmd, char *arg) {
 
 int mus_gorgo (CHAR *gor, CHAR *ch, int cmd, char *arg) {
   CHAR *vict;
-  if (cmd || !gor )
+  if ((cmd != MSG_MOBACT) || !gor )
     return FALSE;
 
   if(!(gor->specials.fighting)) {
@@ -1194,7 +1194,7 @@ int mus_gorgo (CHAR *gor, CHAR *ch, int cmd, char *arg) {
       return FALSE;
 
     if(vict == gor) return FALSE;
-    if(!IS_NPC(vict) && GET_LEVEL(vict)>=LEVEL_IMM) return FALSE;
+    if(IS_NPC(vict) || GET_LEVEL(vict)>=LEVEL_IMM) return FALSE;
 
     act ("$n whirls at you in a ball of teeth, fur, and fury!",
          FALSE, gor, 0, vict, TO_VICT);

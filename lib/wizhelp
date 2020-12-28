@@ -1042,7 +1042,7 @@ SOS SETOBJSTAT
 
     str         height      assault     parry
     dex         weight      backflip    triple
-    int         hp          backstab
+    int         hp          backstab    none
     wis         mana        bash
     con         hit         block
     age         dam         circle
