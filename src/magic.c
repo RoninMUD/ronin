@@ -2511,7 +2511,7 @@ void spell_clairvoyance(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       wizlog_f(LEVEL_IMM, 7, "QSTINFO: %s casts 'clairvoyance' %s", GET_DISP_NAME(ch), GET_DISP_NAME(victim));
     }
 
-    print_spell_messages(victim, SPELL_CLAIRVOYANCE);
+    print_spell_messages(ch, SPELL_CLAIRVOYANCE);
 
     if (!IS_IMMORTAL(victim) && CAN_SEE(ch, victim)) {
       if (IS_IMMUNE(victim, IMMUNE_CLAIR)) {
