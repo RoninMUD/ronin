@@ -47,7 +47,7 @@ bool is_caster (CHAR *ch);
 #define PAINTKEY         14030
 #define ETHER_POWER      600
 #define ETHER_POWER_NEW  900
-#define HP_POWER_NEW     1000
+#define HP_POWER_NEW     500
 
 
 void drain_mana_hp(struct char_data *ch, struct char_data *vict, int mana, int hit, bool add_m, bool
@@ -291,9 +291,12 @@ ShadowOrb(OBJ *orb, CHAR *ch,int cmd,char *arg) {
 
     for(v = world[CHAR_REAL_ROOM(ch)].people;v;v = v->next_in_room)
       if(ch != v && IS_MORTAL(v) && !IS_NPC(v))
-     drain_mana_hit_mv(ch,v,drain,0,0,TRUE,FALSE,FALSE);
-    if(!ch->specials.fighting || ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) num = 2;  /* Default 2 round lag in chaos or out of fight */
-      WAIT_STATE(ch, PULSE_VIOLENCE*num);
+        drain_mana_hit_mv(ch,v,drain,0,0,TRUE,FALSE,FALSE);
+
+    num = 2;
+    /* Always incur a half pulse wait */
+    WAIT_STATE(ch, PULSE_VIOLENCE/2);
+
     if(IS_DAY) {
       num=48+num;
       orb->obj_flags.value[3]=num;
@@ -363,7 +366,8 @@ int New_Orb_Spec(OBJ *orb, CHAR *ch,int cmd,char *arg) {
         drain_mana_hp(ch,v,0,hpdrain,FALSE,TRUE);
     }
     num=number(2,5);
-    WAIT_STATE(ch, PULSE_VIOLENCE*num);
+    /* Always incur a half pulse wait */
+    WAIT_STATE(ch, PULSE_VIOLENCE/2);
     if(IS_DAY) {
       num=38+num;
       orb->obj_flags.value[3]=num;

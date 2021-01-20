@@ -2926,6 +2926,10 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
   for (CHAR *temp_ch = world[room_rnum].people, *next_ch; !stop && temp_ch; temp_ch = next_ch) {
     next_ch = temp_ch->next_in_room;
 
+    if ((cmd == MSG_TICK) && !IS_NPC(temp_ch) && IS_SET(GET_PFLAG(temp_ch), PLR_TICKER)) {
+      send_to_char("TICK!\n\r", temp_ch);
+    }
+
     stop = signal_char(temp_ch, signaler, cmd, arg);
   }
 
@@ -2935,7 +2939,7 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
     stop = signal_object(temp_obj, signaler, cmd, arg);
   }
 
-  if (stop && (cmd == MSG_MOBACT || cmd == MSG_TICK || cmd == MSG_ZONE_RESET)) {
+  if (stop && ((cmd == MSG_MOBACT) || (cmd == MSG_TICK) || (cmd == MSG_ZONE_RESET))) {
     char buf[MSL];
 
     snprintf(buf, sizeof(buf), "WIZINFO: signal_room(%d, %s, %d, %s) returned TRUE.",

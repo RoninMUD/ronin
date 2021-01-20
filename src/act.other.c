@@ -2257,7 +2257,7 @@ void do_display(CHAR *ch, char *arg, int cmd) {
     }
   }
   else if (is_abbrev(option, "newline")) {
-  if ((!*setting && !IS_SET(GET_PFLAG(ch), PLR_PROMPT_NEWLINE)) || (is_abbrev(setting, "on") || (*setting == '1'))) {
+    if ((!*setting && !IS_SET(GET_PFLAG(ch), PLR_PROMPT_NEWLINE)) || (is_abbrev(setting, "on") || (*setting == '1'))) {
       SET_BIT(GET_PFLAG(ch), PLR_PROMPT_NEWLINE);
       send_to_char("Newline display on.\n\r", ch);
     }
@@ -2269,12 +2269,26 @@ void do_display(CHAR *ch, char *arg, int cmd) {
       send_to_char("Usage: display newline [on|off]\n\r", ch);
     }
   }
+  else if (is_abbrev(option, "ticker")) {
+    if ((!*setting && !IS_SET(GET_PFLAG(ch), PLR_TICKER)) || (is_abbrev(setting, "on") || (*setting == '1'))) {
+      SET_BIT(GET_PFLAG(ch), PLR_TICKER);
+      send_to_char("Ticker display on.\n\r", ch);
+    }
+    else if ((!*setting && IS_SET(GET_PFLAG(ch), PLR_TICKER)) || (is_abbrev(setting, "off") || (*setting == '0'))) {
+      REMOVE_BIT(GET_PFLAG(ch), PLR_TICKER);
+      send_to_char("Ticker display off.\n\r", ch);
+    }
+    else {
+      send_to_char("Usage: display ticker [on|off]\n\r", ch);
+    }
+  }
   else {
     send_to_char("Usage: display [auto|all|off]\n\r"\
                  "               name          [on|off]                   | [#]\n\r"\
                  "               hit|mana|move [current|max|text|all|off] | [###]\n\r"\
                  "               buffer|victim [on|off|always|auto|text]  | [###]\n\r"\
-                 "               newline       [on|off]                   | [#]\n\r", ch);
+                 "               newline       [on|off]                   | [#]\n\r"\
+                 "               ticker        [on|off]                   | [#]\n\r", ch);
   }
 
   save_char(ch, NOWHERE);

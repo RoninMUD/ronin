@@ -87,7 +87,7 @@ bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags) {
   }
   else if (IS_SET(spl_chk_flags, NO_CAST_OTHER_PC_NOKILL_FLAG_ON) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && !ROOM_ARENA(CHAR_REAL_ROOM(ch)) &&
     victim && !IS_NPC(victim) && !IS_NPC(ch) && (victim != ch) &&
-    (IS_SET(GET_PFLAG(ch), PLR_NOKILL) || !IS_SET(GET_PFLAG(victim), PLR_KILL) || !IS_SET(GET_PFLAG(victim), PLR_THIEF))) {
+    (IS_SET(GET_PFLAG(ch), PLR_NOKILL) && !IS_SET(GET_PFLAG(victim), PLR_KILL) && !IS_SET(GET_PFLAG(victim), PLR_THIEF))) {
     send_to_char("You can't attack other players.\n\r", ch);
 
     cast_ok = FALSE;
