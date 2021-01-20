@@ -1010,6 +1010,10 @@ bool show_object_extra_desc(OBJ *obj, CHAR *ch, char *arg) {
   return TRUE;
 }
 
+#define LOOK_IN    6
+#define LOOK_AT    7
+#define LOOK_ROOM  8
+#define LOOK_RDESC 9
 
 void do_look(CHAR *ch, char *argument, int cmd) {
   if (!ch || !GET_DESCRIPTOR(ch)) return;
@@ -1059,7 +1063,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
   /* Default to "look at" if no keyword was found. */
   if (keyword_idx < 0) {
-    keyword_idx = 7;
+    keyword_idx = LOOK_AT;
 
     /* Copy arg1 to arg2 because arg1 would normally be "at". */
     strcpy(arg2, arg1);
@@ -1067,7 +1071,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
   /* Allow explicitly looking at the room's description (e.g. to see it when brief mode is enabled). */
   if (strcasecmp(arg2, "rdesc") == 0) {
-    keyword_idx = 9;
+    keyword_idx = LOOK_RDESC;
   }
 
   switch (keyword_idx) {
@@ -1086,20 +1090,17 @@ void do_look(CHAR *ch, char *argument, int cmd) {
         }
 
         if (EXIT(ch, keyword_idx)->keyword) {
-          if (IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLOSED)) {
-            printf_to_char(ch, "The %s is closed.\n\r", fname(EXIT(ch, keyword_idx)->keyword));
-          }
-          else {
-            printf_to_char(ch, "The %s is open.\n\r", fname(EXIT(ch, keyword_idx)->keyword));
-          }
+          printf_to_char(ch, "The %s is %s.\n\r",
+            fname(EXIT(ch, keyword_idx)->keyword),
+            IS_SET(EXIT(ch, keyword_idx)->exit_info, EX_CLOSED) ? "closed" : "open");
         }
       }
       else {
         send_to_char("Nothing special there...\n\r", ch);
       }
-    break;
+      break;
 
-    case 6: /* look in */
+    case LOOK_IN:
     {
       if (!*arg2) {
         send_to_char("Look in what?\n\r", ch);
@@ -1120,9 +1121,11 @@ void do_look(CHAR *ch, char *argument, int cmd) {
                 case FIND_OBJ_INV:
                   printf_to_char(ch, "%s (carried):\n\r", fname(OBJ_NAME(temp_obj)));
                   break;
+
                 case FIND_OBJ_ROOM:
                   printf_to_char(ch, "%s (here):\n\r", fname(OBJ_NAME(temp_obj)));
                   break;
+
                 case FIND_OBJ_EQUIP:
                   printf_to_char(ch, "%s (equipped):\n\r", fname(OBJ_NAME(temp_obj)));
                   break;
@@ -1158,9 +1161,9 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
       send_to_char("You do not see that here.\n\r", ch);
     }
-    break;
+      break;
 
-    case 7: /* look at */
+    case LOOK_AT:
     {
       if (!*arg2) {
         send_to_char("Look at what?\n\r", ch);
@@ -1246,15 +1249,15 @@ void do_look(CHAR *ch, char *argument, int cmd) {
 
       send_to_char("You do not see that here.\n\r", ch);
     }
-    break;
+      break;
 
-    case 8: /* look in room */
+    case LOOK_ROOM:
       look_in_room(ch, V_ROOM(ch));
-    break;
+      break;
 
-    case 9: /* show room description */
+    case LOOK_RDESC:
       send_to_char(ROOM_DESC(CHAR_REAL_ROOM(ch)), ch);
-    break;
+      break;
   }
 }
 
