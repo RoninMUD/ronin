@@ -1065,6 +1065,11 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     strcpy(arg2, arg1);
   }
 
+  /* Allow explicitly looking at the room's description (e.g. to see it when brief mode is enabled). */
+  if (strcasecmp(arg2, "rdesc") == 0) {
+    keyword_idx = 9;
+  }
+
   switch (keyword_idx) {
     case NORTH:
     case EAST:
@@ -1243,8 +1248,12 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     }
     break;
 
-    case 8:
+    case 8: /* look in room */
       look_in_room(ch, V_ROOM(ch));
+    break;
+
+    case 9: /* show room description */
+      send_to_char(ROOM_DESC(CHAR_REAL_ROOM(ch)), ch);
     break;
   }
 }

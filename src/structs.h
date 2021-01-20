@@ -944,6 +944,7 @@ struct room_data
 #define PLR_EMAIL             (1 << 27) /* 134217728 */
 #define PLR_TAGBRF            (1 << 28) /* 268435456 */
 #define PLR_PROMPT_NEWLINE    (1 << 29) /* 536870912 */
+#define PLR_TICKER            (1 << 30) /* 1073741824 */
 
 /* Toggles -- used in ver3.toggles */
 #define TOG_BLOCK             (1 << 0)  /* 1 */
