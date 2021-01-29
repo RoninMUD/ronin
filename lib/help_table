@@ -34,6 +34,18 @@ Hills, Inside, Mountains, and Water.
 
 You can hide the sector type by turning on the sector brief mode.
 
+Movement Loss based on Sector
+ Sector   Movement Loss
+ Inside        1
+ City          2
+ Field         2
+ Desert        2
+ Forest        3
+ Swimming      4
+ Hills         4
+ Arctic        5
+ Mountains     6
+ 
 See Also: "MOVEMENT POINTS" BRIEF
 #
 SKIN
@@ -42,7 +54,8 @@ A skin can be made from a corpse using the SKIN command.  All classes
 have this ability.
 
 Some skins may be valuable and be exchanged for cash at the fur
-trader just north of Midgaard.
+trader just north of Midgaard. Grobyan can be found 3n, open
+gate, and then 2n2e.
 
 In addition, when skinning a corpse, it is possible to find and
 extract some useful items out of the corpse.  This is done
@@ -116,6 +129,16 @@ DAM    1   1    3    4    4    6    7    9   10   12   13   15   16   18   21
 HIT    0   1    1    1    3    3    3    4    4    4    6    6    7    9   10
 -------------------------------------------------------------------------------
 
+
+Certain weapons also require a minimum level of strength to be wielded. 
+It will also influence your carry weight.
+
+Str   Carry Weight    Weapon Weight
+16         195             16
+18         255             20
+18/100     480             30
+20         700             32
+25         1750            37
 
 SEE ALSO: STATS META AQUEST WIELD
           INTELLIGENCE WISDOM CONSTITUTION DEXTERITY
@@ -315,8 +338,9 @@ RASHGUGH
 Rashgugh is a mob on RoninMud, but he is special.  He always
 loads a subclass token, and yells about his location.  This way
 everyone has a chance to kill him for his token.  Once you have
-this token you can sell it or turn it in for a subclass point,
-just be careful not to rent with it!
+this token you can sell it, mail it to yourself or turn it in for a subclass point.
+
+Just be careful not to rent with it!
 
 SEE ALSO: SUBCLASSES, SUBCLASS TOKEN
 #
@@ -674,10 +698,9 @@ reimbursement, you'll get one.
 "HASTE"
 
 Usage       : cast 'haste' (self only)
-Level       : level 45 cleric
-Accumulative: no
-Save        : -
+Accumulative: No
 Duration    : 5 ticks
+Level       : Level 45 Cleric
 Mana cost   : 120
 
 When affected by haste, the player is moving fairly quickly,
@@ -854,7 +877,6 @@ Some highlights about RoninMUD.
   - Meta system to improve stats.       (META EXP)
   - Multiplaying to a max of 5 characters.   (MULTI)
   - Many communication channels.             (GOSSIP, AUCTION, CHAOS, QUEST)
-  - Helpful friendly players.           (DEPUTY)
   - Extensive help file.                (HELP, HELP INDEX)
   - Configurable ANSI Color system.     (COLOR)
   - Easy way to trade equipment.        (AUCTION TRADE)
@@ -862,6 +884,8 @@ Some highlights about RoninMUD.
   - Ranking Abilities                   (RANKS)
   - Hospital for low level players      (HOSPITAL)
   - Subclass System                     (SUBCLASSES)
+  - Prestige System                     (PRESTIGE)
+  - Remort System                       (REMORT)
 
 A few rules to remember
   - Character sharing is not permitted.
@@ -877,6 +901,7 @@ Useful links
   - RoninMUD      http://www.roninmud.org
   - Mud clients   http://www.roninmud.org/downloads.html
   - Tintin help   http://www.roninmud.org/tt-help.html
+  - Wiki          http://ronin-mud.fandom.com
 
 HELP INDEX will provide you with all the available help topics.
 #
@@ -1077,18 +1102,6 @@ equipment for real life items.  Players caught doing this will be locked.
 Trading or selling characters is also illegal.  Any character that has been
 traded to another player will be purged.
 #
-DEPUTY
-
-A Midgaard Deputy is given extra abilities and benefits to aid them
-in helping new citizens of Midgaard.  They will show new players the tips
-and tricks of mudding at Ronin, and help them gain valuable experience
-and equipment.
-
-Currently Deputies have the ability to rescue anyone below level 15,
-regardless of the Deputy's class.
-
-See Also: RESCUE
-#
 GOSSIP
 
 Usage: gossip - turns gossip channel on/off
@@ -1139,7 +1152,14 @@ limit given below.
    Bard               300             400
    Commando           400             350
 
-You will also lose 1/2 of your accumulated experience when you die.
+You will also lose 1/2 of your accumulated experience when you die. 10% of that is lost
+permanently.  The rest is added to a Death XP Pool which can be seen in your score.
+This is a seperate pool of experience that will be earned back at an accelerated rate
+along with your normal experience.
+
+If you die again before you have gained back all of the death xp, you will simply lose 
+experience as stated above and your death xp pool grows.
+
 #
 JUMP
 
@@ -1237,8 +1257,23 @@ ALIGNMENT EVIL-ALIGNMENT GOOD-ALIGNMENT NEUTRAL-ALIGNMENT
 Your alignment reflects your behaviour in the world.  By doing heroic deeds and
 slaying evil monsters your alignment tends to rise towards good.  Someone who
 continually slays innocents and wreaks havoc on the forces of law and order
-will gradually turn towards evil.  All characters (Except Anti-Paladin/Paladin)
-start out neutral and will only be judged by their actions.
+will gradually turn towards evil.  
+All characters (Except Anti-Paladin/Paladin) start out neutral and will 
+only be judged by their actions.
+
+Gear may have Anti-Alignment modifiers, and certain mobs may also become
+aggressive towards certain alignments.
+
+Paladins and Anti-Paladins must be Good/Evil respectively to cast their spells. 
+If they stray from the path, all spells are permanently locked.
+
+Alignment
+Range from -1000 to 1000
+
+  >= 350         Good
+-350 to 350      Neutral
+  <-350          Evil
+  
 #
 TANK BUFFER
 
@@ -1362,7 +1397,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
 
     Ninja Spells
 ----------------------------------------------------------------------
-     (1) Detect Invisible               (2) -
+     (1) Detect Invisibility            (2) -
      (3) Endure                         (4) Cure Light
      (5) Infravision                    (6) Blindness
      (7) Invisibility                   (9) Cure Blind
@@ -1410,8 +1445,8 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
      (9) -                             (10) Cure Critic
     (10) Flamestrike                   (11) -
     (11) -                             (12) -
-    (14) Vitality, Remove Poison       (15) Lay Hands
-    (16) -                             (17) Locate Object
+    (14) Vitality                      (15) Remove Poison
+    (15) Lay Hands                     (17) Locate Object
     (18) Summon                        (19) Dispel Evil
     (20) Sanctuary                     (21) Heal
     (21) Fury                          (22) -
@@ -1425,7 +1460,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     Anti-Paladin Spells
 ----------------------------------------------------------------------
      (1) Magic Missile                  (2) Detect Poison
-     (3) Chill Touch                    (4) Detect Alignment
+     (3) Chill Touch                    (5) Detect Alignment
      (5) Detect Invisibility            (6) Poison
      (7) Blindness                      (8) Curse
      (9) Invisibility                  (10) Fear
@@ -1447,12 +1482,12 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
 
     Cleric Spells
 ----------------------------------------------------------------------
-     (1) Cure Light Wounds              (1) Armor
+     (1) Cure Light                     (1) Armor
      (2) Create Water                   (2) Detect Poison
      (3) Create Food                    (3) Detect Magic
      (4) Cure Blind                     (4) Detect Alignment
      (4) Cure Light Spray
-     (5) Bless                          (5) Detect Invisible
+     (5) Bless                          (5) Detect Invisibility
      (6) Blindness                      (6) Protection from Evil
      (6) Cure Serious                   (6) Protection from Good
      (7) Earthquake                     (7) Sense Life
@@ -1490,7 +1525,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     Mage Spells
 ----------------------------------------------------------------------
      (1) Magic Missile                  (1) Ventriloquate
-     (2) Detect Magic                   (2) Detect Invisible
+     (2) Detect Magic                   (2) Detect Invisibility
      (3) Chill Touch
      (4) Invisibility                   (4) Detect Alignment
      (4) Detect Poison
@@ -1499,7 +1534,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
      (6) Locate Object                  (6) Reveal
      (7) Shocking Grasp                 (7) Strength (SPELL STRENGTH)
      (7) Identify
-     (8) Blindness                      (8) Teleport with Error
+     (8) Blindness                      (8) Teleport
      (8) Vitality
      (9) Lightning Bolt                 (9) Fear
     (10) Control Weather               (10) Fly
@@ -1681,7 +1716,7 @@ You can improve your spells by using the practice command.
 
 Use HELP CLERIC SPELLS to see the spells of the cleric class.
 
-Skills: bash
+Skills: bash, meditate
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1901,12 +1936,21 @@ success or failure.
 #
 PICK
 
-Class: Thief Bard Nomad Anti-Paladin
+Class: Anti-Paladin Bard Nomad Thief 
 
-For picking locks. Not all locks can be picked. Example:
+For picking locks. Not all locks can be picked. You will sometimes need a lockpick in order
+to get through a door.
+
+You can acquire one from The Waiter in The Thieves Bar. Which is SESE from MS. 
+You will need to "bypass" the Assassin first.
+
+If there are multiple doors in the same room, you will need to specify your direction.
+
+Example:
 
 > pick door
 > pick safe
+> pick trapdoor d
 
 See Also: OPEN, CLOSE, LOCK, UNLOCK
 #
@@ -1928,7 +1972,7 @@ Successful use of this skill costs 30 movement points.
 #
 SPIN
 
-Class: Nomad Ninja Paladin Warrior
+Class: Ninja Nomad Paladin Warrior
 
 A skill which will kick all the mobs in the same room as you. The damage
 of your kick is (your level * 2). You must learn how to kick first!
@@ -1951,7 +1995,9 @@ BACKSTAB. The chance of a successful ASSAULT depends on how well you learn it.
 #
 BLOCK
 
-Class: Warrior Paladin Nomad (Ranger SC3)
+Class: Paladin Warrior
+
+Subclass: Ranger: Level 3 (Nomad)
 
 BLOCK will toggle block on and off.  When block is on you will attempt to block
 your target and keep it from fleeing.  The chance of its success depends on how
@@ -1959,7 +2005,7 @@ well you learn it, and your Dexterity modifier.
 #
 DUAL
 
-Class: Warrior Commando Bard
+Class: Bard Commando Warrior
 
 A skill which gives an automatic second attack during the fight. The chance of
 its success depends on how well you learn it.
@@ -1968,7 +2014,7 @@ See Also: TRIPLE
 #
 TRIPLE
 
-Class: Warrior (Level 20), Commando (Level 20)
+Class: Commando (Level 20), Warrior (Level 20)
 
 A skill which gives an automatic third attack the during fight. The chance of its
 success depends on how well you learn it.
@@ -1977,7 +2023,7 @@ See Also: DUAL
 #
 PARRY
 
-Class: Warrior Paladin
+Class: Paladin Warrior 
 
 A skill which gives an automatic PARRY attempt during a fight.  The
 chance of success depends on how well you learn it.
@@ -1994,8 +2040,8 @@ SNEAK
 Class: Anti-Paladin Ninja Thief
 
 Used for sneaking (moving in and out of rooms without anyone taking
-notice). If you successfully sneak, you'll continue to sneak for a
-little while.
+notice). This means no messages will be seen on screen as you enter/leave.
+If you successfully sneak, you'll continue to sneak for a little while.
 
 Example:
 
@@ -2024,7 +2070,7 @@ See Also: SNEAK
 #
 THROW
 
-Class: Bard Commando Nomad Ninja Thief Warrior
+Class: Bard Commando Ninja Nomad Thief Warrior
 
 There are some items (ITEM_MISSILE) which can be thrown. The chance of
 success depends on how well you learn this skill. If you miss the victim
@@ -2076,6 +2122,8 @@ how well you learn BASH.
 Pummeling a person who is resting or stunned will cause them to become
 incapacitated, receiving 2.33x damage on the next attack.
 
+You can also pummel your party members to get them out of combat.
+
 Be forewarned...
 
 If you pummel a mobile that dodges, the mobile will switch from the tank to the
@@ -2099,7 +2147,7 @@ A punch makes you unable to type commands for 2 rounds of violence.
 #
 RESCUE
 
-Class: Nomad Paladin Warrior Commando
+Class: Commando Nomad Paladin Warrior 
 
 A rescue is an attempt to jump in front of your target, causing the monster
 to hit you instead.  You can only shield your target from one monster per
@@ -2541,6 +2589,9 @@ Used to donate equipment to other players.  The item donated ends up in the
 Donation Room.  Note that taking items from there and auctioning them will get
 you into trouble with the gods.  You can also donate corpses, which will go to
 the morgue instead of the donation room.
+
+The donation room is located 2nw from Market Square or West from The Temple.
+
 #
 SAVE
 
@@ -3241,12 +3292,12 @@ ARMOR
 
 Usage       : cast 'armor' <victim>
 Accumulative: No
-Level       : Level 5 mage, 1 cleric, 2 paladin
-Duration    : 24 ticks
+Duration    : 24 Ticks
+Level       : Level 1 Cleric, 5 Mage, 2 Paladin
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 The spellcaster calls upon the powers of the gods to protect the victim.  If
-successful, the gods will provide protection improving the victim's AC by 10
+successful, the gods will provide protection improving the victim's AC by 10.
 
 See Also: AC SONGS
 #
@@ -3267,12 +3318,12 @@ TELEPORT
 
 Usage       : cast 'teleport' [self]
 Accumulative: -
-Level       : Level 8 mage.
-Duration    : Instant
+Duration    : Instantaneous
+Level       : Level 8 Mage
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 The caster opens a portal to another location in the world. The caster
-will then be instantly transfered to this location. The location that
+will then be instantly transferred to this location. The location that
 the portal transfers you to is random and thus there will always be a
 risk of landing in a fatal location.
 
@@ -3282,8 +3333,8 @@ BLESS
 
 Usage       : cast 'bless' <victim or object>
 Accumulative: No
-Level       : Level 5 cleric, 6 paladin.
-Duration    : level/5 (6 ticks minimum), permanent for objects.
+Level       : Level 5 Cleric, 6 Paladin.
+Duration    : Caster Level/5 (6 ticks minimum), permanent for objects
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 The caster calls upon the powers of the gods to give their blessing
@@ -3300,9 +3351,9 @@ See Also: SONGS
 BLINDNESS
 
 Usage       : cast 'blindness' <victim>
-Accumulative: No.
-Level       : Level 8 mage, 6 cleric, 6 ninja, 7 anti-paladin
-Duration    : 2 ticks.
+Accumulative: No
+Duration    : 2 Ticks
+Level       : Level 7 Anti-Paladin, 6 Cleric, 8 Mage, 6 Ninja 
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Blindness will blind a victim if it fails its saving throw. A blinded person
@@ -3312,10 +3363,11 @@ See Also: AC SONGS
 #
 "POWER WORD KILL"
 
-Usage      : cast 'power word kill' <victim>
-Level      : Level 26 mage, 30 anti-paladin.
-Save       : none
-Mana cost  : 100
+Usage       : cast 'power word kill' <victim>
+Duration    : Instantaneous
+Level       : Level 30 Anti-Paladin, 26 Mage.
+Save        : None
+Mana cost   : 100
 
 A powerful and deadly spell using negative energy focused by the caster
 to destroy the life energy of weaker victims.  This spell will kill any
@@ -3325,9 +3377,10 @@ lower-level victims.
 #
 "SPELL REGENERATION"
 
-Usage      : cast 'regeneration' <victim>
-Level      : 28 mage.
-Mana cost  : 100
+Usage       : cast 'regeneration' <victim>
+Duration    : Instantaneous
+Level       : Level 28 Mage
+Mana cost   : 100
 
 Upon casting Regeneration, the caster fills the blood of the victim with
 chlorophyll. The victim's skin will turn green and will be affected by
@@ -3336,10 +3389,11 @@ The maximum amount gained would be 100.
 #
 "DISPEL MAGIC"
 
-Usage      : cast 'dispel magic' <victim/object>
-Level      : level 19 mage, level 17 cleric.
-Save       : none
-Mana cost  : 20
+Usage       : cast 'dispel magic' <victim/object>
+Duration    : Instantaneous
+Level       : Level 17 Cleric, 19 Mage 
+Save        : None
+Mana cost   : 20
 
 This spell can be cast either on objects of magical power such as potions,
 scrolls and wands, which it will most certainly render powerless. The
@@ -3353,11 +3407,12 @@ the spell.
 #
 CONFLAGRATION
 
-Usage      : cast 'conflagration' <victim>
-Level      : level 30 mage
-Save       : none
-Mana cost  : 200
-Damage done: 1500
+Usage       : cast 'conflagration' <victim>
+Duration    : Instantaneous
+Level       : Level 30 Mage
+Save        : None
+Mana cost   : 200
+Damage done : 1500
 
 With this spell, the caster conjures the essence of elemental fire into
 that area. The raging fires will be much more heavily concentrated in the
@@ -3367,19 +3422,25 @@ hit for 200 hitpoints and the caster hit for 300.
 #
 CONVERGENCE
 
-Usage      : cast 'convergence' <victim>
-Level      : level 21 mage, level 27 ninja.
-Mana cost  : variable (at least 20)
+Usage       : cast 'convergence' <victim>
+Duration    : Instantaneous
+Level       : Level 21 Mage, 27 Ninja
+Mana cost   : 20 to Casters Max HP
 
-Uses the target's own mana to heal him or her.
+The caster utilizes their own mana to heal themselves. Mana will be converted
+at a rate of 1 to 1. You will heal yourself to full unless you run out of mana.
+
 #
 "ENCHANT ARMOUR"
 
-Usage      : cast 'enchant armour'
-Level      : level 21 mage
-Mana cost  : 100
+Usage       : cast 'enchant armour' <object>
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 21 Mage
+Mana cost   : 100
 
-Will enchant non-magical piece of armour with a protective aura, as follows:
+Will enchant non-magical piece of armour with a protective aura that increases
+your armor class (AC), as follows:
 
    level 21 - 25            +2
    level 26 - 29            +3
@@ -3388,14 +3449,16 @@ Will enchant non-magical piece of armour with a protective aura, as follows:
    level IMP                +6
 
 The alignment of the armor will be that of the caster.
+
 #
 DISINTEGRATE
 
-Usage      : cast 'disintegrate' <victim/object>
-Level      : level 27 mage, level 28 commando
-Save       : objects none, victims yes
-Mana cost  : 150
-Damage done: 10-20*(Level of caster)
+Usage       : cast 'disintegrate' <victim/object>
+Duration    : Instantaneous
+Level       : Level 28 Commando, 27 Mage
+Save        : Objects none, victims yes
+Mana cost   : 150
+Damage done : 10-20*(Caster Level)
 
 The caster will use his or her willpower to damage the target completely.
 Caution!  All possessions of the victim will also be disintegrated! There is
@@ -3404,11 +3467,12 @@ completely.
 #
 "VAMPIRIC TOUCH"
 
-Usage      : cast 'vampiric touch' <victim>
-Level      : level 18 mage, level 24 anti-paladin, level 32 commando
-Save       : none
-Mana cost  : 40 + (2 * level of caster)
-Damage     : 9 * level of caster (up to 450 at level 50)
+Usage       : cast 'vampiric touch' <victim>
+Duration    : Instantaneous
+Level       : Level 24 Anti-Paladin, 32 Commando, 18 Mage
+Save        : None
+Mana cost   : 40 + (2 * Caster Level)
+Damage      : 9 * level of caster (up to 450 at level 50)
 
 The caster inflicts damage to the victim and drains hit points from
 them, transferring these hit points back to themself.
@@ -3430,35 +3494,45 @@ or Sphere spells.
 #
 "SEARING ORB"
 
-Usage      : cast 'searing orb'
-Level      : level 16 cleric
-Save       : none
-Mana cost  : 60
+Usage       : cast 'searing orb'
+Duration    : Instantaneous
+Level       : Level 16 Cleric
+Save        : None
+Mana cost   : 60
 
 A fairly powerful area effect spell which will destroy almost all flammable
 objects in the area of the spell.
 #
 CLAIRVOYANCE
 
-Usage      : cast 'clairvoyance' <victim>
-Level      : level 18 mage, level 16 cleric, level 21 ninja
-Save       : none
-Mana cost  : 35
+Usage       : cast 'clairvoyance' <victim>
+Duration    : Instantaneous
+Level       : Level 16 Cleric, 18 Mage, 21 Ninja
+Save        : none
+Mana cost   : 35
 
 This spell will enable the caster to transfer his or her eyes to another
 place in the world, and view it for a brief moment.
+
+Note: Some mobs are immune to this.
+
 #
 CLONE
 
 Usage       : cast 'clone' <object>
 Accumulative: -
-Level       : Level 27 mage.
 Duration    : Instantaneous
+Level       : Level 27 Mage
 Mana Cost   : 100
 
 Clone allows the caster to make a copy of an object. As with genetic
-degeneration in living things, the clone is not a perfect copy. Clone has
-its limitations.
+degeneration in living things, the clone is not a perfect copy. 
+
+Clone has its limitations.
+
+1. These are temporary items.
+2. Some objects cant be cloned.
+3. Certain Items can have limited clones.
 
 See Also: -
 #
@@ -3466,8 +3540,7 @@ See Also: -
 
 Usage       : cast 'control weather' ('better' | 'worse')
 Accumulative: Yes
-Level       : Level 10 mage, 13 cleric, 11 ninja.
-Duration    : -
+Level       : Level 13 Cleric, 10 Mage, 11 Ninja
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell gives the caster control over the elements. This spell will change
@@ -3480,9 +3553,9 @@ See Also: -
 "CREATE FOOD"
 
 Usage       : cast 'create food'
-Accumulative: -
-Level       : Level 3 cleric, 3 paladin.
+Accumulative: No
 Duration    : Instantaneous
+Level       : Level 3 Cleric, 3 Paladin
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 This spell instantly creates an edible magic mushroom. The mushroom
@@ -3495,8 +3568,8 @@ See Also: -
 
 Usage       : cast 'create water' <drink container>
 Accumulative: No
-Level       : Level 2 cleric, 4 paladin.
 Duration    : Instantaneous
+Level       : Level 2 Cleric, 4 Paladin
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 Expect disastrous results if cast upon a drink container which contains
@@ -3511,8 +3584,8 @@ See Also: -
 
 Usage       : cast 'cure blind' <victim>
 Accumulative: No
-Level       : Level 4 cleric, 9 ninja, 7 paladin.
 Duration    : Instantaneous
+Level       : Level 4 Cleric, 9 Ninja, 7 Paladin
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 This spell will cure a person blinded by the "blindness" spell.  It
@@ -3524,8 +3597,8 @@ See Also: -
 
 Usage       : cast 'cure critic' <victim>
 Accumulative: -
-Level       : Level 9 cleric, 10 paladin
 Duration    : Instantaneous
+Level       : Level 9 Cleric, 10 Paladin
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell cures 10+5*level of caster hit points of damage, for a
@@ -3537,8 +3610,8 @@ See Also: SONGS
 
 Usage       : cast 'cure critic spray'
 Accumulative: -
-Level       : Level 13 cleric.
 Duration    : Instantaneous
+Level       : Level 13 Cleric
 Mana Cost   : 38 (cost will be higher at lower levels)
 
 This spell heals all in the room for 10+5*level of caster hit
@@ -3550,8 +3623,8 @@ See Also: Cure Critic
 
 Usage       : cast 'cure light' <victim>
 Accumulative: -
-Level       : Level 1 cleric, 4 ninja, 1 paladin
 Duration    : Instantaneous
+Level       : Level 1 Cleric, 4 Ninja, 1 Paladin
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 This spell cures 10+5*level of caster hit points of damage, for a
@@ -3563,8 +3636,8 @@ See Also: Cure Light Spray
 
 Usage       : cast 'cure light spray'
 Accumulative: -
-Level       : Level 4 cleric.
 Duration    : Instantaneous
+Level       : Level 4 Cleric
 Mana Cost   : 23 (cost will be higher at lower levels)
 
 This spell heals all in the room for 10+5*level of caster hit
@@ -3576,7 +3649,8 @@ See Also: Cure Light
 
 Usage       : cast 'cure serious' <victim>
 Accumulative:-
-Level       : Level 6 cleric, 16 ninja, 5 paladin.
+Duration    : Instantaneous
+Level       : Level 6 Cleric, 16 Ninja, 5 Paladin
 Mana Cost   : 18 (cost will be higher at lower level)
 
 This spell cures 10+5*level of caster hit points of damage, for a
@@ -3588,26 +3662,28 @@ See Also: Cure Serious Spray
 
 Usage       : cast 'cure serious spray'
 Accumulative:-
-Level       : Level 10 cleric.
+Duration    : Instantaneous
+Level       : Level 10 Cleric
 Mana Cost   : 27 (cost will be higher at lower level)
 
-This spell heals all in the room for 10+5*level of caster hit
-points, for a maximum of 45 hit points.
+This spell casts Cure Serious on all characters in the room.
 
 See Also: Cure Serious
 #
 CURSE
 
 Usage       : cast 'curse' (victim | object)
-Level       : Level 12 mage, 8 anti-paladin.
-Save        : Negates
 Accumulative: No
 Duration    : 7 Days, permanent on objects.
+Level       : Level 8 Anti-Paladin, 12 Mage
+Save        : Negates
 Mana Cost   : 20 (cost will be higher at lower levels)
 
-Curse, when cast on a person that fails the saving throw, will reduce the
+When cast on a person that fails the saving throw, will reduce the
 hitroll by one for every ten levels and reduce the saving throw versus
-paralysation by one for every ten levels.
+paralyzation by one for every ten levels.
+
+When cast on an object, whomever picks it up will be unable to drop it.
 
 See Also: -
 #
@@ -3615,8 +3691,8 @@ See Also: -
 
 Usage       : cast 'detect alignment' [self]
 Accumulative: No
-Level       : Level 4 mage, 4 cleric, 4 paladin, 5 anti-paladin.
-Duration    : level * 5 ticks.
+Duration    : Caster Level * 5 Ticks
+Level       : Level 5 Anti-Paladin, 4 Cleric, 4 Mage, 4 Paladin
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 Detect alignment will enable you to see the red aura surrounding evil persons
@@ -3628,8 +3704,8 @@ See Also: -
 
 Usage       : cast 'detect invisibility' [self]
 Accumulative: No
-Level       : Level 2 mage, 5 cleric, 1 ninja, 5 paladin, 5 anti-paladin
-Duration    : level * 5 ticks.
+Level       : Level 5 Anti-Paladin, 5 Cleric, 2 Mage, 1 Ninja, 5 Paladin
+Duration    : Caster Level * 5 Ticks
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell enables you to see invisible items and players.
@@ -3640,8 +3716,8 @@ See Also: SONGS
 
 Usage       : cast 'detect magic' [self]
 Accumulative: No
-Level       : Level 2 mage,3 cleric.
-Duration    : level * 5 ticks
+Level       : Level 3 Cleric, 2 Mage 
+Duration    : Caster Level * 5 Ticks
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 This spell will let you see the magical aura surrounding magical objects.
@@ -3652,8 +3728,8 @@ See Also: -
 
 Usage       : cast 'detect poison' (victim | food | drink)
 Accumulative: No
-Level       : Level 4 mage,2 cleric.
 Duration    : Instantaneous
+Level       : Level 2 Anti-Paladin, 2 Cleric, 4 Mage
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 If cast on food or drinks (drink containers) you will be able to sense if
@@ -3666,7 +3742,7 @@ See Also: -
 
 Usage       : cast 'enchant weapon' <weapon>
 Accumulative: No
-Level       : Level 12 mage.
+Level       : Level 12 Mage.
 Duration    : Permanent
 Mana Cost   : 50
 
@@ -3700,14 +3776,13 @@ HEAL
 
 Usage       : cast 'heal' <victim>
 Accumulative: No
-Level       : Level 14 cleric, 29 ninja, 21 paladin
 Duration    : Instantaneous
+Level       : Level 14 Cleric, 29 Ninja, 21 Paladin
 Mana Cost   : 50
 
-Heal will heal all the hit points from a person. A maximum of 200 points can be
-healed. 
+This spell will heal up to a maximum of 200 points on the <victim>
 
-A victim who is blinded or stunned will also be cured by the heal spell.
+A victim who is blinded or stunned will also be cured.
 
 See Also: "Cure Blindness" "Heal Spray" SONGS
 #
@@ -3715,21 +3790,19 @@ See Also: "Cure Blindness" "Heal Spray" SONGS
 
 Usage       : cast 'heal spray'
 Accumulative: No
-Level       : Level 22 cleric.
 Duration    : Instantaneous
+Level       : Level 22 Cleric
 Mana Cost   : 100
 
-Heal will heal all in the room for a maximum of 200 hit points.
-
-Any victim who is blinded or stunned will also be cured by the heal spell.
+This spell will cast Heal on each character that is in the room. 
 
 See Also: "Cure Blindness" "Heal"
 #
 FORGET
 
 Usage       : cast 'forget' <victim>
-Level       : Level 11 mage, 14 anti-paladin
 Duration    : Instantaneous
+Level       : Level 14 Anti-Paladin, 11 Mage 
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Some monsters have a good memory and if a person were to leave a fight
@@ -3741,9 +3814,9 @@ See Also: SONGS
 "HOLD PERSON"
 
 Usage       : cast 'hold' <victim>
-Level       : Level 21 mage, 24 ninja, 26 paladin
+Duration    : Caster Level Ticks
+Level       : Level 21 Mage, 24 Ninja, 26 Paladin
 Save        : SAVE PARALYSIS
-Duration    : Level of the caster ticks
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Holds a person.  If the monster is aggressive, it will not attack other
@@ -3756,11 +3829,12 @@ INVISIBILITY
 
 Usage       : cast 'invisibility' <victim | object>
 Accumulative: No
-Level       : Level 4 mage, 7 ninja, 9 anti-paladin
-Duration    : 24 ticks, permanent on objects.
+Duration    : 24 Ticks, permanent on objects.
+Level       : Level 9 Anti-Paladin, 4 Mage, 7 Ninja, 
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-Self Explanatory.
+Makes the object of chracter invisible.
+
 Attacking while invisible will immediately break the spell.
 
 See Also: "DETECT INVISIBILITY" SONGS
@@ -3769,8 +3843,8 @@ See Also: "DETECT INVISIBILITY" SONGS
 
 Usage       : cast 'improved invisibility' (self only)
 Accumulative: No
-Level       : Level 25 mage, 29 anti-paladin.
-Duration    : Level/10 ticks
+Duration    : Caster Level/10 ticks
+Level       : Level 29 Anti-Paladin, 25 Mage 
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 You will not appear even if you are attacking.  Anyone who is less than level
@@ -3784,7 +3858,8 @@ See Also: INVISIBILITY PERCEIVE
 
 Usage       : cast 'remove improved invisibility' (self only)
 Accumulative: No
-Level       : Level 25 mage, 29 anti-paladin.
+Duration    : Instantaneous
+Level       : Level 29 Anti-Paladin, 25 Mage 
 Mana Cost   : 20
 
 This removes your improved invisibility and is only castable on yourself.
@@ -3795,7 +3870,8 @@ FEAR
 
 Usage       : cast 'fear' <victim>
 Accumulative: -
-Level       : Level 9 mage, 10 anti-paladin
+Duration    : Instantaneous
+Level       : Level 10 Anti-Paladin, 9 Mage 
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 If you cast this spell on someone then the victim may become scared
@@ -3807,8 +3883,8 @@ See Also: SONGS
 
 Usage       : cast 'locate object' <keyword>
 Accumulative: -
-Level       : Level 6 mage, 10 cleric, 14 ninja, 17 paladin, 10 bard.
 Duration    : Instantaneous
+Level       : Level 10 Bard, 10 Cleric, 6 Mage, 14 Ninja, 17 Paladin
 Mana Cost   : 50 (cost will be higher at lower levels)
 
 Casting this spell will give you a chance of determining whether any specific
@@ -3822,8 +3898,8 @@ See Also: -
 
 Usage       : cast 'locate character' <character>
 Accumulative: -
-Level       : Level 11 mage, 14 cleric, 13 bard.
 Duration    : Instantaneous
+Level       : Level 13 Bard, 14 Cleric, 11 Mage
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 This spell enables the caster to locate where a character is. <character> can
@@ -3832,10 +3908,10 @@ be either a PC or NPC.
 POISON
 
 Usage       : cast 'poison' <victim | food | drink>
-Accumulative: Yes on persons.
-Level       : Level 8 cleric, 12 ninja, 6 anti-paladin.
+Accumulative: Yes on persons
+Duration    : (Caster Level *2) Ticks, permanent on food and drinks
+Level       : Level 6 Anti-Paladin, 8 Cleric, 12 Ninja
 Save        : Negates
-Duration    : 2*level ticks, or permanent on food and drinks.
 Mana Cost   : 10 (cost will be higher at lower levels)
 
 Casting poison on food or drink (containers) will poison it. Eating poisoned
@@ -3850,11 +3926,11 @@ See Also: "detect poison" or "remove poison"
 
 Usage       : cast 'protection from evil' [self]
 Accumulative: No
-Level       : Level 6 cleric, 24 paladin.
-Duration    : 12 ticks
+Duration    : 12 Ticks
+Level       : Level 6 Cleric, 24 Paladin
 Mana Cost   : 30 (cost will be higher at lower levels)
 
-The the monster is evil and you are not, the damage of the
+If the monster is evil aligned and you are not, the damage of the
 mob will be decreased by: (10 + level self - level mob) with
 a maximum decrease of 10. This is an extremely powerful
 protection.
@@ -3865,11 +3941,11 @@ See Also: "PROTECTION FROM GOOD"
 
 Usage       : cast 'protection from good' [self]
 Accumulative: No
-Level       : Level 6 cleric, Level 18 anti-paladin.
-Duration    : 12 ticks
+Duration    : 12 Ticks
+Level       : Level 18 Anti-Paladin, 6 Cleric
 Mana Cost   : 30 (cost will be higher at lower levels)
 
-If the monster is good and you are not, the damage of the mob will be
+If the monster is good aligned and you are not, the damage of the mob will be
 decreased by (10 + level self - level mob) with a maximum decrease of 10.
 This is an extremely powerful protection.
 
@@ -3879,11 +3955,13 @@ See Also: "PROTECTION FROM EVIL"
 
 Usage       : cast 'remove curse' <person | object>
 Accumulative: No
-Level       : Level 13 mage, 12 cleric.
 Duration    : Instantaneous
+Level       : Level 12 Cleric, 13 Mage
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-Will remove a curse on carried objects or any persons in the room.
+Will remove the effects curse on carried objects or any persons in the room.
+
+You must remove Curse from an object before you can drop it.
 
 See Also: -
 #
@@ -3891,8 +3969,8 @@ See Also: -
 
 Usage       : cast 'remove poison' <victim | food | drink>
 Accumulative: No
-Level       : Level 9 cleric, 12 ninja, 14 paladin.
 Duration    : Instantaneous
+Level       : Level 9 Cleric, 12 Ninja, 14 Paladin.
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 Will remove poison from the target.
@@ -3903,8 +3981,8 @@ SANCTUARY
 
 Usage       : cast 'sanctuary' <victim>
 Accumulative: No
-Level       : Level 13 cleric, 20 paladin
-Duration    : Level/5 ticks
+Duration    : Caster Level/5 Ticks
+Level       : Level 13 Cleric, 20 Paladin
 Mana Cost   : 50
 
 When protected by sanctuary, all damage afflicted on you by weapons or spells
@@ -3916,8 +3994,8 @@ SPHERE
 
 Usage       : cast 'sphere' [self]
 Accumulative: No
-Level       : Level 18 mage.
-Duration    : level / 2
+Duration    : Caster Level / 2 Ticks
+Level       : Level 18 Mage
 Mana Cost   : 50
 
 When protected by sphere, any aggressive monster that is 5 levels lower than
@@ -3945,8 +4023,8 @@ INVULNERABILITY
 
 Usage       : cast 'invulnerability' [self]
 Accumulative: No
-Level       : Level 29 mage, 28 cleric.
-Duration    : level / 2
+Duration    : Caster Level / 2 Ticks
+Level       : Level 28 Cleric, 29 Mage
 Mana Cost   : 50
 
 When protected by this sphere no one can steal from you.  Any physical attack
@@ -3976,8 +4054,8 @@ See Also: SPHERE
 
 Usage       : cast 'sleep' <person>
 Accumulative: Yes (duration)
-Level       : Level 14 mage, 19 anti-paladin
-Duration    : 4 ticks + one hour per level
+Duration    : 4 Ticks + one hour per level
+Level       : Level 19 Anti-Paladin, 14 Mage 
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 If the victim fails a saving throw versus spell he or she will fall asleep.
@@ -3989,8 +4067,8 @@ See Also: SONGS
 
 Usage       : cast 'strength' (self only)
 Accumulative: Yes (strength)
-Level       : Level 7 mage.
-Duration    : Level ticks
+Duration    : Caster Level Ticks
+Level       : Level 7 Mage
 Mana Cost   : 10 (cost will be higher at lower levels)
 
 A person will gain 1 strength point per spell (2 points if level of caster is
@@ -4002,8 +4080,8 @@ VENTRILOQUATE
 
 Usage       : cast 'ventriloquate' <victim | object> <text>
 Accumulative: -
-Level       : Level 1 mage.
 Duration    : Instantaneous
+Level       : Level 5 Bard, 1 Mage
 Mana Cost   : 5 (cost will be higher at lower levels)
 
 For all people in the same room as the caster that fail a saving throw,
@@ -4019,10 +4097,10 @@ See Also: -
 #
 "WORD OF RECALL"
 
-Usage       : cast 'word of recall'
+Usage       : cast 'word of recall' (self only)
 Accumulative: -
-Level       : Level 13 mage, 11 cleric, 19 ninja, 19 commando
 Duration    : Instantaneous
+Level       : Level 11 Cleric, 19 Commando, 13 Mage, 19 Ninja
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 The caster will be transferred back to his sanctuary (presently the
@@ -4034,8 +4112,8 @@ SUMMON
 
 Usage       : cast 'summon' <victim>
 Accumulative: -
-Level       : Level 8 cleric, 18 paladin.
 Duration    : Instantaneous
+Level       : Level 8 Cleric, 18 Paladin
 Mana Cost   : 50
 
 Will summon a person of the name spoken. It is possible to summon someone of
@@ -4049,13 +4127,13 @@ See Also: "GROUP SUMMON"
 
 Usage       : cast 'charm person' <victim>
 Accumulative: No
-Level       : Level 14 mage
-Duration    : (432/Intelligence points of victim) ticks
+Duration    : (432/Intelligence points of victim) Ticks
+Level       : Level 14 Mage
 Mana Cost   : 50
 
 It is not possible to charm anyone that is already charmed, if you're charmed
 yourself, or if the person is higher level than you are. The person will get a
-saving throw versus "paralysation". It is also not possible to charm anyone
+saving throw versus "paralyzation". It is also not possible to charm anyone
 over level 30.
 
 A charmed person will follow you and not be able to attack you.  You can give
@@ -4067,15 +4145,15 @@ See Also: FOLLOW ORDER SONGS
 
 Usage       : cast 'animate dead' <corpse>
 Accumulative: No
-Level       : level 22 mage and level 24 cleric
-Duration    : (level of the caster) ticks
+Duration    : Caster Level Ticks
+Level       : Level 24 Cleric, 22 Mage
 Save        : -
 Mana Cost   : 50
 
 The caster invokes the powers of ancient voodoo practices in an attempt to
 raise the dead. If successful, the corpse will come back to life with (level of
 the monster * 30) hp, and max damage per round will be (level of the monster +
-5).  The undead monster will follow the caster in (level of the caster) ticks.
+5).  The undead monster will follow the caster for (Caster Level) Ticks.
 
 See Also: FOLLOW ORDER CHARM
 #
@@ -4083,8 +4161,8 @@ See Also: FOLLOW ORDER CHARM
 
 Usage       : cast 'sense life' [self]
 Accumulative: No
-Level       : Level 7 cleric, 10 ninja, 6 paladin, 13 anti-paladin.
-Duration    : 5 * level
+Duration    : (Caster Level * 5) Ticks
+Level       : Level 13 Anti-Paladin, 7 Cleric, 10 Ninja, 6 Paladin 
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 This spell will enable you to sense hidden life forms in a room. Invisible
@@ -4097,11 +4175,11 @@ See Also: HIDE
 Usage       : cast 'magic missile' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 1 mage, 1 anti-paladin, 1 commando.
-Save        : Versus spell for half damage.
+Level       : Level 1 Anti-Paladin, 1 Mage, 1 Commando.
+Save        : Versus spell for half damage
 Mana Cost   : 5 (cost will be higher at lower levels)
-Old Damage done : 10 to 6
-New Damage done : level/2 + (5 to 10)
+Old Damage done : 6 to 10
+New Damage done : Caster Level/2 + (5 to 10)
 
 The caster magically conjures a missile and sends it flying at the victim. This
 is the least powerful offensive mage spell. This spell does more damage at
@@ -4114,11 +4192,11 @@ See Also:
 Usage       : cast 'chill touch' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 3 mage, 3 anti-paladin, 2 commando.
-Save        : Versus spell for half damage.
+Level       : Level 3 Anti-Paladin, 3 Mage, 2 Commando.
+Save        : Versus spell for half damage
 Mana Cost   : 15 (cost will be higher at lower levels)
 Old Damage done : 11 to 16
-New Damage done : level/2 + (10 to 40)
+New Damage done : Caster Level/2 + (10 to 40)
 
 Cold hands, warm heart? The caster touches the victim sending an icy chill.
 This spell is more powerful than the magic missile spell.  A victim failing
@@ -4131,10 +4209,9 @@ See Also: MAGIC MISSILE
 Usage       : cast 'identify' <item>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 7 mage, level 9 bard
-Save        : -
+Level       : Level 9 Bard, 7 Mage
 Mana Cost   : 10
-Damage Done : -
+
 
 This spell is used to gain knowledge about the targeted item.
 
@@ -4147,11 +4224,11 @@ See Also: IDENTIFY
 Usage       : cast 'burning hands' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 5 mage, 3 commando.
-Save        : Versus spell for half damage.
+Level       : Level 3 Commando, 5 Mage 
+Save        : Versus spell for half damage
 Mana Cost   : 17 (cost will be higher at lower levels)
 Old Damage done : 18 to 25
-New Damage done : level/2 + (15 to 50)
+New Damage done : Caster Level/2 + (15 to 50)
 
 The caster's hands become aflame and will burn the victim when it is touched.
 This spell is more powerful than the chill touch spell.
@@ -4163,11 +4240,11 @@ See Also: CHILL TOUCH
 Usage       : cast 'shocking grasp' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 7 mage, 5 commando.
-Save        : Versus spell for half damage.
+Level       : Level 5 Commando, 7 Mage
+Save        : Versus spell for half damage
 Mana Cost   : 19 (cost will be higher at lower levels)
 Old Damage done : 33 to 40
-New Damage done : level/2 + (20 to 80)
+New Damage done : Caster Level/2 + (20 to 80)
 
 The caster generates an enormous static charge and imparts a shock to the
 victim. This spell is more powerful than the burning hands spell.
@@ -4179,11 +4256,11 @@ See Also: BURNING HANDS
 Usage       : cast 'lightning bolt' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 9 mage, 12 anti-paladin, 7 commando.
-Save        : Versus spell for half damage.
+Level       : Level 12 Anti-Paladin, 7 Commando, 9 Mage 
+Save        : Versus spell for half damage
 Mana Cost   : 20 (cost will be higher at lower levels)
 Old Damage done : 50 to 60
-New Damage done : level/2 + (30 to 120)
+New Damage done : Caster Level/2 + (30 to 120)
 
 The caster calls upon the powers of the Norse god Thor to use his powers to
 hurl lightning at the victim. This spell is more powerful than the shocking
@@ -4196,11 +4273,11 @@ See Also: SHOCKING GRASP
 Usage       : cast 'colour spray' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 11 mage, 10 commando
-Save        : Versus spell for half damage.
+Level       : Level 10 Commando, 11 Mage
+Save        : Versus spell for half damage
 Mana Cost   : 23 (cost will be higher at lower levels)
 Old Damage done : 80
-New Damage done : level/2 + (35 to 100)
+New Damage done : Caster Level/2 + (35 to 100)
 
 The caster throws beams of colours at the victim causing damage.
 
@@ -4211,8 +4288,8 @@ See Also: "LIGHTNING BOLT" SONGS
 Usage       : cast 'energy drain' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 13 mage, 15 anti-paladin.
-Save        : Versus spell for half damage.
+Level       : Level 15 Anti-Paladin, 13 Mage 
+Save        : Versus spell for half damage
 Mana Cost   : 35 (cost will be higher at lower levels)
 
 The caster uses wraith-like powers to drain the life-force from the victim.
@@ -4228,11 +4305,11 @@ FIREBALL
 Usage       : cast 'fireball' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 15 mage, 20 anti-paladin, 15 commando.
-Save        : Versus spell for half damage.
+Level       : Level 20 Anti-Paladin, 15 Commando, 15 Mage 
+Save        : Versus spell for half damage
 Mana Cost   : 25 (cost will be higher at lower levels)
 Old Damage done : About 100
-New Damage done : level/2 + (80 to 140)
+New Damage done : Caster Level/2 + (80 to 140)
 
 The caster conjures up a ball of flame from the elemental plane of fire and
 sends it hurtling towards the victim.
@@ -4244,11 +4321,11 @@ ICEBALL
 Usage       : cast 'iceball' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 19 mage, 23 anti-paladin, 20 commando.
-Save        : Versus spell for half damage.
+Level       : Level 23 Anti-Paladin, 20 Commando, 19 Mage
+Save        : Versus spell for half damage
 Mana Cost   : 30 (cost will be higher at lower levels)
 Old Damage done : About 130
-New Damage done : level/2 + (100 to 160)
+New Damage done : Caster Level/2 + (100 to 160)
 
 The caster calls upon the elements to conjure a huge ball of ice to freeze the
 victim. This spell is more powerful than fireball and it will decrease the
@@ -4259,7 +4336,7 @@ REAPPEAR
 Usage       : cast 'reappear' <object>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 10 mage.
+Level       : Level 10 Mage
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 Reappear allows the caster to return invisible objects back to the visible
@@ -4270,7 +4347,7 @@ REVEAL
 Usage       : cast 'reveal' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 6 mage.
+Level       : Level 6 Mage
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Reveal allows the caster to return invisible people back to the visible world.
@@ -4280,11 +4357,11 @@ Reveal allows the caster to return invisible people back to the visible world.
 Usage       : cast 'lethal fire' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 24 mage, 27 commando
-Save        : Versus spell for half damage.
+Level       : Level 27 Commando, 24 Mage
+Save        : Versus spell for half damage
 Mana Cost   : 50
 Old Damage done : 180 to 230
-New Damage done : level/2 + (180 to 230)
+New Damage done : Caster Level/2 + (180 to 230)
 
 Lethal fire sets the victim afire in burning blue flames.  This spell
 is much more powerful than iceball and there will be no saving throw
@@ -4297,8 +4374,8 @@ See also: SONGS
 Usage       : cast 'thunderball' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 28 mage.
-Save        : No saving throw.
+Level       : Level 28 Mage
+Save        : None
 Mana Cost   : 200
 Damage done : 800 to 1100
 
@@ -4312,10 +4389,10 @@ victim.
 Usage       : cast 'electric shock' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 26 mage, 29 commando.
-Save        : Versus spell for half damage.
+Level       : Level 29 Commando, 26 Mage
+Save        : Versus spell for half damage
 Mana Cost   : 100
-Damage done : 450 to 500
+Damage Done : 450 to 500
 
 The caster of this spell channels a powerful jolt of electricity through
 himself and sends it coursing through the body of the victim.  This spell
@@ -4326,12 +4403,14 @@ EARTHQUAKE
 Usage       : cast 'earthquake'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 7 cleric, 6 commando.
-Save        : -
+Level       : Level 7 Cleric, 6 Commando
 Mana Cost   : 15 (cost will be higher at lower levels)
+Damage Done : 1d8 + Caster Level (Max 58)
 
 The caster sends the earth shaking, causing damage to everyone in the room
-except the caster by 1d8+level_of_caster hit points.
+except the caster.
+
+This includes all other party members.
 
 See Also: -
 #
@@ -4339,7 +4418,8 @@ See Also: -
 
 Usage       : cast 'total recall'
 Accumulative: -
-Level       : Level 18 cleric.
+Duration    : Instantaneous
+Level       : Level 18 Cleric
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 Set in the future on the planet Mars, a man has his memory altered in order to
@@ -4355,7 +4435,7 @@ See Also: "WORD OF RECALL" SONGS
 Usage       : cast 'death spray'
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 23 mage, 24 commando.
+Level       : Level 24 Commando, 23 Mage 
 Save        : -
 Mana Cost   : 80
 
@@ -4368,8 +4448,8 @@ hit points.
 Usage       : cast 'holy word'
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 23 cleric, 25 paladin.
-Save        : Same as dispel evil
+Level       : level 23 Cleric, 25 Paladin
+Save        : Special
 Mana Cost   : 80
 Damage Done : 130
 
@@ -4384,8 +4464,8 @@ See Also: Dispel Evil
 Usage       : cast 'evil word'
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 23 cleric, 26 anti-paladin
-Save        : Same as dispel good
+Level       : level 26 Anti-Paladin, 23 Cleric
+Save        : Special
 Mana Cost   : 80
 Damage Done : 130
 
@@ -4400,7 +4480,8 @@ See Also: "DISPEL GOOD"
 
 Usage       : cast 'lay hands' <victim>
 Accumulative: -
-Level       : Level 15 paladin
+Duration    : Instantaneous
+Level       : Level 15 Paladin
 Mana Cost   : 100
 
 Upon touching the victim the caster uses the power of faith to heal
@@ -4410,7 +4491,8 @@ MIRACLE
 
 Usage       : cast 'miracle' <victim>
 Accumulative: -
-Level       : Level 25 cleric.
+Duration    : Instantaneous
+Level       : Level 25 Cleric
 Mana Cost   : 100
 
 The caster calls upon the mercy of the gods for a miracle. If the gods
@@ -4420,12 +4502,12 @@ hit points.
 "GREAT MIRACLE"
 
 Usage       : cast 'great miracle'
-Level       : level 30 cleric.
+Duration    : Instantaneous
+Level       : Level 30 Cleric
 Mana Cost   : 200
 
 The caster begs the merciful gods for a miracle.  If they deem the caster
-worthy the hit points of all PCs in the room will be restored for a
-maximum of 2000 hit points.
+worthy this spell casts Miracle on every chracter in the room.
 
 See Also: MIRACLE
 #
@@ -4433,7 +4515,8 @@ VITALITY
 
 Usage       : cast 'vitality' <victim>
 Accumulative: -
-Level       : Level 8 mage, 16 cleric, 14 paladin
+Duration    : Instantaneous
+Level       : Level 16 Cleric, 8 Mage, 14 Paladin
 Mana cost   : 25 (cost will be higher at lower levels)
 
 The caster gives a refreshing pick-me-up to the tired victim, restoring
@@ -4443,9 +4526,10 @@ See also: SONGS
 #
 "MANA TRANSFER"
 
-Usage      : cast 'mana transfer' <victim>
-Accumulative: yes
-Level       : Level 18 mage, 18 cleric.
+Usage       : cast 'mana transfer' <victim>
+Accumulative: Yes
+Duration    : Instantaneous
+Level       : Level 18 Cleric, 18 Mage
 Mana Cost   : 50
 
 By casting this spell you can attempt to channel your mana into
@@ -4454,23 +4538,29 @@ lost during the process of transferring.
 #
 "HOLY BLESS"
 
-Usage      : cast 'holy bless' (self only)
-Accumulative: yes
+Usage       : cast 'holy bless' (self only)
+Accumulative: Yes
 Duration    : Instantaneous
-Level       : Level 19 cleric.
+Level       : Level 19 Cleric
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 The caster asks for the blessing of the One True God to return his/her
 soul to the path of righteousness.
+
+When you cast this spell, you move your alignment closer to 1000 (Saintly).
+
 #
 SATIATE
 
 Usage       : cast 'satiate' <victim>
+Duration    : 24 Ticks
 Level       : Level 15 cleric
 Mana Cost   : 10 (cost will be higher at lower levels)
 
 This spell can fill your stomach to full for 24 ticks, and you can cast
 this spell on other players too.
+
+Casting this again simply resets the duration to 24 Ticks.
 
 See also: SONGS
 #
@@ -4478,8 +4568,8 @@ FURY
 
 Usage       : cast 'fury' (self only)
 Accumulative: -
-Duration    : 2 ticks, 4 ticks at level 50
-Level       : Level 21 paladin.
+Duration    : 2 Ticks, 4 Ticks at level 50
+Level       : Level 21 Paladin.
 Mana Cost   : 60, 120 at level 50
 
 This spell will fill your soul with fire and rage and will double your
@@ -4493,20 +4583,24 @@ a maximum of 2.5.
 #
 "EVIL BLESS"
 
-Usage      : cast 'evil bless' (self only)
-Accumulative: yes
-Level       : Level 20 cleric.
+Usage       : cast 'evil bless' (self only)
+Accumulative: Yes
+Duration    : Instantaneous
+Level       : Level 20 Cleric
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 The caster asks for the blessing of the Dark Unmentionable One to
 return his/her soul back to the path of the damned.
+
+When you cast this spell, you move your alignment closer to -1000 (Prime Evil).
+
 #
 "DISPEL EVIL"
 
 Usage       : cast 'dispel evil' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 10 cleric, 19 paladin.
+Level       : Level 10 Cleric, 19 Paladin
 Save        : Special
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -4525,7 +4619,7 @@ See Also: Holy Word
 Usage       : cast 'dispel good' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 11 cleric, 22 anti-paladin.
+Level       : Level 22 Anti-Paladin, 11 Cleric
 Save        : Special
 Mana Cost   : 25 (cost will be higher at lower levels)
 
@@ -4543,17 +4637,15 @@ See Also: -
 
 Usage       : cast 'call lightning' <victim>
 Accumulative: -
-Duration    : Instant
-Level       : Level 12 cleric, 12 commando.
-Save        : Versus spell for half damage.
+Duration    : Instantaneous
+Level       : Level 12 Cleric, 12 Commando
+Save        : Versus spell for half damage
 Mana Cost   : 20 (cost will be higher at lower levels)
+Damage Done :(Casters Level)d8  (Max 30d8)
 
-This spell will use the "force of nature" to make a lightning
+This spell will use the force of nature to make a lightning
 strike the victim. It is therefore only possible to call lightning
 outside and it has to be raining (or worse).
-
-The lightning will inflict (level)d8 points of damage, up to a
-maximum of 30d8 damage points.
 
 See Also: WEATHER and CONTROL WEATHER
 #
@@ -4562,8 +4654,7 @@ See Also: WEATHER and CONTROL WEATHER
 Usage       : cast 'spirit levy' <corpse>
 Accumulative: -
 Duration    : Instantaneous
-Level       : level 20 mage, 25 anti-paladin.
-Save        : -
+Level       : Level 25 Anti-Paladin, 20 Mage 
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 This spell can absorb the life energy from a corpse.  The hit points that are
@@ -4579,13 +4670,15 @@ HARM
 Usage       : cast 'harm' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 15 cleric, 14 commando.
-Save        : Versus spell for half damage.
+Level       : Level 15 Cleric, 14 Commando
+Save        : Versus spell for half damage
 Mana Cost   : 35 (cost will be higher at lower levels)
+Damage Done : 100 + Caster Level/2 (Max 125)
 
 This spell causes bruises and small wounds to appear all over the body of
-the victim, removing all but 1d4 hitpoints. The maximum number of damage
-points are 100 + level/2. It is not possible to kill using this spell (but almost).
+the victim, removing all but 1d4 hitpoints. 
+
+It is not possible to kill using this spell (but almost).
 
 See Also: -
 #
@@ -4594,12 +4687,14 @@ See Also: -
 Usage       : cast 'super harm' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 27 cleric, 32 paladin.
-Save        : Versus spell for half damage.
+Level       : Level 27 Cleric, 32 Paladin
+Save        : Versus spell for half damage
 Mana Cost   : 100
+Damage Done : Max (600)
 
 This spell causes bleeding wounds to appear all over the body of the victim,
-removing all but 1d4 hit points. The maximum number of damage points is 600.
+removing all but 1d4 hit points.
+
 It is not possible to kill using this spell (but almost).
 
 See Also: -
@@ -4609,10 +4704,10 @@ See Also: -
 Usage       : cast 'hell fire'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 28 anti-paladin.
+Level       : Level 28 Anti-Paladin
 Save        : -
 Mana Cost   : 110
-Damage Done : 200 (plus level / 2 damage to non-evil victims)
+Damage Done : 200 (plus Caster Level / 2 damage to non-evil victims)
 
 The caster calls upon the Dark Unmentionable One to open the gates
 of hell and send forth the flames of despair to burn all victims in
@@ -4624,26 +4719,27 @@ See Also: -
 PERCEIVE
 
 Usage       : cast 'perceive' (self only)
-Accumulative: no
-Duration    : 2*level
-Level       : Level 40 Mage, Level 40 Anti-Paladin
+Accumulative: No
+Duration    : Caster Level * 2
+Level       : Level 40 Anti-Paladin, 40 Mage
 Save        : -
 Mana Cost   : 40
 
 While affected by this spell, the character is able to see
-hidden creatures in the room and impy characters that are
-a lower level.
+hidden creatures in the room and characters that are
+a lower level and affected by Imrpoved Invisibility.
 #
 FIREBREATH
 
 Usage       : cast 'firebreath'
 Accumulative: -
-Level       : Level 28 mage
+Duration    : Six Breaths of Six Rounds
+Level       : Level 28 Mage
 Mana Cost   : 100
 
 The caster will receive a severe case of heartburn enabling the caster to
 breathe fire at victims. Each breath will do the damage of approximately one
-Fireball. The spell will last for six breaths or six rounds.
+Fireball. 
 
 See Also: FIREBALL
 #
@@ -4652,7 +4748,7 @@ See Also: FIREBALL
 Usage       : cast 'blindness dust'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 16 ninja, 17 anti-paladin.
+Level       : Level 17 Anti-Paladin, 16 Ninja
 Save        : -
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -4666,7 +4762,7 @@ See Also: Poison Smoke, Blindness
 Usage       : cast 'poison smoke'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 17 ninja, 16 anti-paladin.
+Level       : Level 16 Anti-Paladin, 17 Ninja
 Save        : -
 Mana Cost   : 20 (cost will be higher at lower levels)
 
@@ -4680,7 +4776,7 @@ See Also: Blindness dust, Poison
 Usage       : cast 'hypnotize' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 22 ninja, 27 anti-paladin.
+Level       : Level 27 Anti-Paladin, 22 Ninja 
 Save        : -
 Mana Cost   : 40 (cost will be higher at lower levels)
 
@@ -4694,8 +4790,8 @@ INFRAVISION
 
 Usage       : cast 'infravision' <victim>
 Accumulative: -
-Duration    : 30 + Level of Caster ticks
-Level       : Level 5 Mage, 5 Ninja, 11 Anti-Paladin
+Duration    : 30 + Caster Level Ticks
+Level       : Level 11 Anti-Paladin, 5 Mage, 5 Ninja
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 The victim of this spell gains the ability to see in the dark without
@@ -4707,29 +4803,31 @@ PARALYZE
 
 Usage       : cast 'paralyze' <victim>
 Accumulative: -
-Duration    : Level of the caster
-Level       : Level 29 Mage, level 21 anti-paladin
+Duration    : Caster Level
+Level       : Level 21 Anti-Paladin, 29 Mage
 Save        : SAVE PARALYSIS
 Mana Cost   : 50
 
-A paralysed person will be affected by +100 ARMOR and -5 HITROLL.
+A paralyzed person will be affected by +100 ARMOR and -5 HITROLL.
 You can paralyze a mob up to 10 levels greater than your level.
 #
 FLAMESTRIKE
 
 Usage       : cast 'flamestrike' <victim>
-Level       : Level 11 cleric, 10 paladin.
+Duration    : Instantaneous
+Level       : Level 11 Cleric, 10 Paladin
 Mana Cost   : 25 (cost will be higher at lower levels)
 Save        : Half damage
 Old Damage done : 80
-New Damage done : level/2 + (50 to 120)
+New Damage done : Caster Level/2 + (50 to 120)
 
 The caster calls down a column of fire that engulfs the victim.
 #
 RECHARGE
 
-Usage       : cast 'recharge' <obj>
-Level       : Level 17 mage, 20 cleric.
+Usage       : cast 'recharge' <object>
+Duration    : Instantaneous
+Level       : Level 20 Cleric, 17 Mage
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 
@@ -4741,8 +4839,9 @@ will explode.
 FLY
 
 Usage       : cast 'fly' <victim>
-Duration    : 12 ticks
-Level       : Level 10 mage
+Accumulative: No
+Duration    : 12 Ticks
+Level       : Level 10 Mage
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 This spell allows players to fly over water and some other obstructions.
@@ -4754,8 +4853,8 @@ See also: SONGS
 "REMOVE PARALYSIS"
 
 Usage       : cast 'remove paralysis' <victim>
-Duration    : instantaneous
-Level       : Level 14 cleric
+Duration    : Instantaneous
+Level       : Level 14 Cleric
 Mana Cost   : 35
 
 The caster summons the power of the Supreme Being and cleanses the body
@@ -4820,11 +4919,11 @@ Level  Song's Name                        Mana  Spell
 (22)   This Charming Man                  50    (charm person)
 (23)   Nothing Compares to You            50    (sanctuary)
     or Safety Dance
-(25)   Toy Soldier                        50    (animate-dead)
+(25)   Toy Soldier                        50    (animate dead)
     or Thriller
 (26)   Everything I Do I Do It For You    50    (heal)
     or Comfortably Numb
-(27)   Hold On                            15    (hold)
+(27)   Hold On                            15    (hold person)
 (28)   A View to a Kill                   50    (lethal fire)
     or Ring of Fire
 (36)   Lifting Shadows of a Dream         25    (remove poison)
@@ -5005,8 +5104,9 @@ also considered pstealing.
 #
 SQUIRE
 
-Spell Affects  -  none
+Spell Affects  -  None
 Other Affects  -  +5 Block
+Required Rank  -  None
 
 With the rank listed above, you will also get a 15% regeneration rate bonus on
 hit points and movement. To obtain this rank you must earn 5000000 experience
@@ -5020,7 +5120,7 @@ See Also: RANKS
 #
 SWASHBUCKLER
 
-Spell Affects  -  none
+Spell Affects  -  None
 Other Affects  -  +5 Dual
 Required Rank  -  SQUIRE
 
@@ -5036,7 +5136,7 @@ See Also: RANKS
 #
 KNIGHT
 
-Spell Affects  -  sense life
+Spell Affects  -  Sense Life
 Other Affects  -  +5 Triple
 Required Rank  -  SWASHBUCKLER
 
@@ -5053,7 +5153,8 @@ See Also: RANKS
 "FIRST SWORD"
 
 Spell Affects  -  Detect Alignment
-Other Affects  -  HITROLL +1
+Other Affects  -  +1 Hitroll
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5068,7 +5169,7 @@ See Also: RANKS
 #
 JUSTICIAR
 
-Spell Affects  -  none
+Spell Affects  -  None
 Other Affects  -  +5 Block
 Required Rank  -  FIRST SWORD
 
@@ -5085,7 +5186,7 @@ See Also: RANKS
 #
 LORD LADY
 
-Spell Affects  -  +5 concentration
+Spell Affects  -  +5 Concentration
 Other Affects  -  +5 Pummel
 Required Rank  -  JUSTICIAR
 
@@ -5103,7 +5204,8 @@ See Also: RANKS
 APPRENTICE
 
 Spell Affects  -  Detect Invisible
-Other Affects  -  none
+Other Affects  -  None
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5118,8 +5220,8 @@ See Also: RANKS
 #
 WARLOCK
 
-Spell Affects  -  detect magic
-Other Affects  -  +1 hitroll
+Spell Affects  -  Detect Magic
+Other Affects  -  +1 Hitroll
 Required Rank  -  APPRENTICE
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5135,8 +5237,8 @@ See Also: RANKS
 #
 SORCERER
 
-Spell Affects  -  fly
-Other Affects  -  +1 damroll
+Spell Affects  -  Fly
+Other Affects  -  +1 Damroll
 Required Rank  -  WARLOCK
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5152,8 +5254,9 @@ See Also: RANKS
 #
 PRIVATE
 
-Spell Affects  -  none
-Other Affects  -  SKILL_DUAL +5
+Spell Affects  -  None
+Other Affects  -  +5 Dual
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5168,8 +5271,8 @@ See Also: RANKS
 #
 COMMODORE
 
-Spell Affects  -  none
-Other Affects  -  +5 assault
+Spell Affects  -  None
+Other Affects  -  +5 Assault
 Required Rank  -  PRIVATE
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5185,7 +5288,7 @@ See Also: RANKS
 #
 COMMANDER
 
-Spell Affects  -  +5 concentration
+Spell Affects  -  +5 Concentration
 Other Affects  -  +5 Triple
 Required Rank  -  COMMODORE
 
@@ -5203,7 +5306,8 @@ See Also: RANKS
 WANDERER
 
 Spell Affects  -  Detect Magic
-Other Affects  -  SKILL_AMBUSH +5
+Other Affects  -  +5 Ambush
+Required Rank  -  None
 
 With the rank listed above, you will also get a 15% regeneration rate bonus on
 hit points and movement. To obtain this rank you must earn 5000000 experience
@@ -5217,8 +5321,8 @@ See Also: RANKS
 #
 FORESTER
 
-Spell Affects  -  infravision
-Other Affects  -  +1 damroll
+Spell Affects  -  Infravision
+Other Affects  -  +1 Damroll
 Required Rank  -  WANDERER
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -5234,7 +5338,7 @@ See Also: RANKS
 TAMER
 
 Spell Affects  -  Detect Invisible
-Other Affects  -  +5 disembowel
+Other Affects  -  +5 Disembowel
 Required Rank  -  FORESTER
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -5250,7 +5354,8 @@ See Also: RANKS
 TSUME
 
 Spell Affects  -  Infravision
-Other Affects  -  none
+Other Affects  -  None
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5265,7 +5370,7 @@ See Also: RANKS
 #
 SHINOBI
 
-Spell Affects  -  sense life
+Spell Affects  -  Sense Life
 Other Affects  -  +5 Pummel
 Required Rank  -  TSUME
 
@@ -5282,8 +5387,8 @@ See Also: RANKS
 #
 SHOGUN
 
-Spell Affects  -  +5 concentration
-Other Affects  -  +5 assault
+Spell Affects  -  +5 Concentration
+Other Affects  -  +5 Assault
 Required Rank  -  SHINOBI
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5299,8 +5404,9 @@ See Also: RANKS
 #
 MINSTREL
 
-Spell Affects  -  none
-Other Affects  -  HITROLL +1
+Spell Affects  -  None
+Other Affects  -  +1 Hitroll
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5315,8 +5421,8 @@ See Also: RANKS
 #
 POET
 
-Spell Affects  -  sense life
-Other Affects  -  +1 damroll
+Spell Affects  -  Sense Life
+Other Affects  -  +1 Damroll
 Required Rank  -  MINSTREL
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5332,8 +5438,8 @@ See Also: RANKS
 #
 CONDUCTOR
 
-Spell Affects  -  infravision
-Other Affects  -  +5 taunt
+Spell Affects  -  Infravision
+Other Affects  -  +5 Taunt
 Required Rank  -  POET
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5349,8 +5455,9 @@ See Also: RANKS
 #
 "EVIL MINION"
 
-Spell Affects  -  none
-Other Affects  -  SKILL_BACKSTAB +5
+Spell Affects  -  None
+Other Affects  -  +5 Backstab
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5365,8 +5472,8 @@ See Also: RANKS
 #
 "DARK WARDER"
 
-Spell Affects  -  infravision
-Other Affects  -  none
+Spell Affects  -  Infravision
+Other Affects  -  None
 Required Rank  -  EVIL MINION
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5382,8 +5489,8 @@ See Also: RANKS
 #
 "DARK LORD" "DARK LADY"
 
-Spell Affects  -  +5 concentration
-Other Affects  -  +1 damroll
+Spell Affects  -  +5 Concentration
+Other Affects  -  +1 Damroll
 Required Rank  -  DARK WARDER
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5400,7 +5507,8 @@ See Also: RANKS
 ACOLYTE
 
 Spell Affects  -  Sphere
-Other Affects  -  none
+Other Affects  -  None
+Required Rank  -  None
 
 With the rank listed above, you will also get a 10% regeneration rate bonus on
 hit points, mana, and movement. To obtain this rank you must earn 5000000
@@ -5415,8 +5523,8 @@ See Also: RANKS
 #
 BISHOP
 
-Spell Affects  -  detect alignment
-Other Affects  -  +1 hitroll
+Spell Affects  -  Detect Alignment
+Other Affects  -  +1 Hitroll
 Required Rank  -  ACOLYTE
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5432,8 +5540,8 @@ See Also: RANKS
 #
 PROPHET
 
-Spell Affects  -  sense life
-Other Affects  -  +1 damroll
+Spell Affects  -  Sense Life
+Other Affects  -  +1 Damroll
 Required Rank  -  BISHOP
 
 With the rank listed above, you will also get a 5% regeneration rate bonus on
@@ -5449,8 +5557,9 @@ See Also: RANKS
 #
 HIGHWAYMAN
 
-Spell Affects  -  none
-Other Affects  -  +5 backstab
+Spell Affects  -  None
+Other Affects  -  +5 Backstab
+Required Rank  -  None
 
 With the rank listed above, you will also get a 15% regeneration rate bonus on
 hit points and movement. To obtain this rank you must earn 5000000 experience
@@ -5464,8 +5573,8 @@ See Also: RANKS
 #
 BRIGAND
 
-Spell Affects  -  sense life
-Other Affects  -  +1 hitroll
+Spell Affects  -  Sense Life
+Other Affects  -  +1 Hitroll
 Required Rank  -  HIGHWAYMAN
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -5480,8 +5589,8 @@ See Also: RANKS
 #
 ASSASSIN
 
-Spell Affects  -  infravision
-Other Affects  -  +5 circle
+Spell Affects  -  Infravision
+Other Affects  -  +5 Circle
 Required Rank  -  BRIGAND
 
 With the rank listed above, you will also get a 7.5% regeneration rate bonus on
@@ -5515,10 +5624,12 @@ Cost: 1st    5M exp   1M coins
       2nd   10M exp   5M coins
       3rd   15M exp  10M coins
 
-All ranks give a 10% regen bonus for the first rank, an additional
-5% bonus for the second rank, and an additional 5% bonus for the
-third rank. So someone with the third rank will get a total regen
-bonus of 20%.
+In total you can earn a 20% buff to regeneration on hp, mana and movement. If
+your class doesn't use mana, this is increased 30% for hp and movement.
+
+1st Rank - 10% hp, mana and movement or 15% hp and movement.
+2nd Rank - 5% hp, mana and movement or 7.5% hp and movement.
+3rd Rank - 5% hp, mana and movement or 7.5% hp and movement.
 
 To obtain a rank you approach the Mayor of Midgaard, and ask him
 to promote you.
@@ -6029,8 +6140,8 @@ RELOCATION RELOCATE
 
 Usage       : cast 'relocation' <target>
 Accumulative: -
-Level       : Level 27 mage
 Duration    : Instantaneous
+Level       : Level 27 Mage
 Mana Cost   : 50
 
 This will allow the caster to magically teleport directly to the person
@@ -6051,15 +6162,13 @@ See Also: -
 MEMBERSHIP CLUB
 
 In the town of Midgaard there are five different clubs a player can join to
-gain added bonuses to regeneration of hit points and/or mana.  Club Grunting
+gain added bonuses to regeneration of hit points and mana.  Club Grunting
 Boar is a free club for new players up the 20th level.
 
 There are also 4 other clubs one can join for a 500,000 coins fee.
 
-For extra mana bonuses you can join Caster's Fan Club or Azoun's Fan Club.
-
-For extra hit point bonuses you can join NoName's Fan Club or Deathadder's Fan
-Club.
+The four clubs are Liner's Lounge, Lem's Liquor Lounge, Ranger's Reliquary
+and Sane's Vocal Club.  All provide the same benefit to regeneration.
 
 See Also: REGENERATION
 #
@@ -6644,7 +6753,7 @@ The subclass for each class are as follows.  Type
 HELP <subclass name> for further information.
 
 Cleric            DRUID           TEMPLAR
-Magic User        ENCHANTER       ARCHMAGE
+Mage              ENCHANTER       ARCHMAGE
 Thief             ROGUE           BANDIT
 Warrior           WARLORD         GLADIATOR
 Ninja             RONIN           MYSTIC
@@ -6673,7 +6782,7 @@ to obtain the second 2, and level 45 to obtain the last.
 To gain a subclass go to your subclass master and
 say "choose <subclass name>".
 
-Subclasses are not yet fully implemented and are subject to possible change.
+Subclasses are fully implemented and are subject to possible change.
 As a result, when there is a major change to a subclass, for a limited time
 players will be given the opportunity to switch to or from that subclass
 without loss of level.
@@ -6694,14 +6803,17 @@ Level       Points
   4           280
   5           350
 
-One way to obtain subclass points is to trade in subclass tokens.
+Ways To Obtain Subclass Points
+1. Turn in Subclass Tokens to your Subclass Master
+2. Convert Quest Points to Subclass Points
+3. Win Subclass points from quests or events run by the Gods.
 
 See Also: SUBCLASSES "SUBCLASS TOKENS"
 #
 "SUBCLASS TOKENS" TOKENS
 
 Subclass tokens can be given to the appropriate subclass master in return for
-subclass points.  Tokens can be given away and traded but cannot be rented or
+subclass points.  Tokens can be given away, mailed and traded but cannot be rented or
 stored.  You must make use of the token before you rent or before there is a
 reboot.
 
@@ -6709,8 +6821,8 @@ Tokens are normally randomly distributed on creatures at the beginning of every
 reboot, and redistributed 5 times every 22 hours.  These tokens are unable to
 be located by magic or gods. They are found by pure luck.
 
-Every now and then, a creature will be given a token, and the creature will
-yell that it has one.  The first character to kill the creature owns the token.
+Every now and then, Rashgugh will be given a token, and will yell that it has one.  
+The first character to kill the creature owns the token.
 
 To reimburse a token for subclass points, go to your subclass master and type
 one of the following:
@@ -6719,12 +6831,12 @@ give token master / <name of master>
 give all.token master / <name of master>
 give 5 token master / <name of master>
 
-See Also: SUBCLASSES "SUBCLASS POINTS" "SUBCLASS MASTERS"
+See Also: SUBCLASSES "SUBCLASS POINTS" "SUBCLASS MASTERS" "RASHGUGH"
 #
 "SUBCLASS MASTERS" MASTERS
 
 To advance into the subclass specialty and to practice
-newly aquired subclass skills and spells, the player must
+newly acquired subclass skills and spells, the player must
 seek out the appropriate subclass master.
 
 The subclass master for each player class is as follows:
@@ -6791,7 +6903,7 @@ Subclass Ranger: Level 2 (Nomad)
 
 Usage: protect <target/self>
 
-The Warlord gains the Protect skill, which allows them to protect one member
+The Warlord/Ranger gains the Protect skill, which allows them to protect one member
 of their group from receiving damage, taking the damage themselves instead.  To
 stop protecting someone, choose a different target by using this skill again, or
 target yourself to cease protecting anyone.
@@ -6891,13 +7003,14 @@ DEFEND
 
 Subclass Ranger: Level 5 (Nomad)
 
-While in complete defensive mode, the Ranger or Warlord completely focuses his
+While in complete defensive mode, the Ranger completely focuses his
 mind on the movements of the creatures attacking him. This prevents the
-Ranger/Warlord from doing anything but weak hits against the opponent, but
+Ranger from doing anything but weak hits against the opponent, but
 gives him an extra -100 armor and the ability to dodge or parry attacks with
-more success.  With defend, the Ranger/Warlord can get up to -300 armor. This
-is the ultimate tanking ability.  While fighting, the tank cannot change this
-mode.
+more success.  With defend, the Ranger can get up to -300 armor. This
+is the ultimate tanking ability.  
+
+While fighting, the tank cannot change this mode.
 
 See Also: SUBCLASSES RANGER WARLORD
 #
@@ -6947,10 +7060,13 @@ See Also: SUBCLASSES TRAPPER BERSERK
 #
 TRAPPER
 
-Trapper is one of the Nomad subclasses and is broken up
-into 5 levels.  At each level, the Trapper receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
+The Trapper has wandered the world and learned to live off the land. 
+Learning how to hunt and use their fists to survive. As they grow
+stronger, you can see what years living off the land can teach you.
+
+The Trapper is a subclass of the Nomad.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           SCAN
@@ -6963,10 +7079,14 @@ See Also: SUBCLASSES RANGER NOMAD
 #
 RANGER
 
-Ranger is one of the Nomad subclasses and is broken up
-into 5 levels.  At each level, the Ranger receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
+The Ranger has roamed the highlands and fought skirmishes large and small.
+Being aware of your surroundings and being able to survive the toughest 
+encounters is what they strive for. As they grow stronger, the ultimate 
+survival skills manifest themselves.
+
+The Ranger is a subclass of the Nomad.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           AWARENESS
@@ -7001,12 +7121,18 @@ This attack is used to quickly sneak into a room and perform a backstab attack
 on an unsuspecting victim.  An aggressive victim doesn't have a chance to
 attack first.
 
-The Anti-Paladin must be sneaking, or invisible, to use this attack and the
-success is dependent on how well the skill is practiced and the character's
+The Anti-Paladin must be using the skill Sneak, or the spell Invisibility or 
+Improved Invisibility to use this attack.
+
+The success is dependent on how well the skill is practiced and the character's
 dexterity.
 
+Passive Bonus.
 This skill also allows a sufficiently hidden, or invisible, Anti-Paladin to use
 the Backstab skill against a victim already in combat.
+
+Example:
+>assassinate guard north
 
 See Also: BACKSTAB DEXTERITY
 #
@@ -7014,7 +7140,7 @@ RAGE
 
 Usage       : cast 'rage' (self only)
 Accumulative: No
-Duration    : 5
+Duration    : 5 Ticks
 Level       : Level 50 Anti-Paladin
 Mana Cost   : 130
 
@@ -7031,10 +7157,14 @@ See Also: SUBCLASSES INFIDEL FURY "BLOOD LUST"
 #
 DEFILER
 
-Defiler is one of the Anti-Paladin subclasses and is broken up
-into 5 levels.  At each level, the Defiler receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+The Defiler is obsessed with blood, corpses and death. Deriving its powers
+from the blood it spills and the corpses it gets to dissect. As it grows 
+in power, the dead and the dying truly enhance the torture given to 
+its victims. 
+
+The Defiler is a subclass of the Anti-Paladin.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DESECRATE
@@ -7047,11 +7177,10 @@ See Also: SUBCLASSES INFIDEL ANTI-PALADIN
 #
 DESECRATE
 
-Subclass Defiler: Level 1 (Anti-Paladin)
-
 Usage       : cast 'desecrate' <corpse>
 Accumulative: No
-Duration    : 7
+Duration    : 7 Ticks
+Level       : Level 1 Defiler (Anti-Paladin Subclass)
 Save        : None
 Mana Cost   : 70
 
@@ -7079,11 +7208,10 @@ See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
 #
 BLACKMANTLE
 
-Subclass Defiler: Level 2 (Anti-Paladin)
-
 Usage       : cast 'blackmantle' (self only)
 Accumulative: No
-Duration    : 9
+Duration    : 9 Ticks
+Level       : Level 2 Defiler (Anti-Paladin Subclass)
 Mana Cost   : 70
 
 While affected by this spell, up to 10% of all physical attack damage
@@ -7184,10 +7312,13 @@ See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
 #
 INFIDEL
 
-Infidel is one of the Anti-Paladin subclasses and is broken up
-into 5 levels.  At each level, the Infidel receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+The Infidel lurks in the shadows and prays to the dark. They work to be one
+with the dark and turn it into allies of its own. As they grow in power, 
+the dark is able to manifest into more horrific abilities.
+
+The Infidel is a subclass of the Anti-Paladin.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DARK PACT
@@ -7252,11 +7383,10 @@ See Also: SUBCLASSES INFIDEL "ARMOR CLASS" HITROLL DAMROLL TICK
 #
 "SHADOW WRAITH"
 
-Subclass Infidel: Level 3 (Anti-Paladin)
-
 Usage       : cast 'shadow wraith' (self only)
 Accumulative: Yes (up to 4 shadows at Subclass Level 5)
-Duration    : 10 / shadow
+Duration    : 10 / Shadow
+Level       : Level 3 Infidel (Anti-Paladin Subclass)
 Mana Cost   : 100 (1st Shadow) / 120 (2nd) / 140 (3rd) / 160 (4th)
 
 The Infidel can manifest shadow wraiths by harnessing their own dark energy.
@@ -7278,13 +7408,13 @@ See Also: SUBCLASSES INFIDEL RAGE FURY
 #
 "DUSK REQUIEM"
 
-Subclass Infidel: Level 4 (Anti-Paladin)
-
 Usage       : cast 'dusk requiem' <victim>
 Accumulative: No
 Duration    : Instantaneous
+Level       : Level 4 Infidel (Anti-Paladin Subclass)
 Save        : None
 Mana Cost   : 20
+Damage Done : 350 x (Number of Shadows)
 
 The Infidel may "collapse" a shadow wraith, expending its existence to inflict
 massive damage against a foe.
@@ -7307,11 +7437,10 @@ See Also: SUBCLASSES INFIDEL "SHADOW WRAITH"
 #
 WITHER
 
-Subclass Infidel: Level 5 (Anti-Paladin)
-
 Usage       : cast 'wither' <victim>
 Accumulative: Yes
-Duration    : Instantaneous / 36 seconds (DoT) / Special (Negative Effects)
+Duration    : Instantaneous / 36 Seconds (DoT) / Special (Negative Effects)
+Level       : Level 5 Infidel (Anti-Paladin Subclass)
 Save        : None vs. Damage / Immunity Negates (Negative Effects)
 Mana Cost   : 75
 Damage Done : 350 / Special
@@ -7345,7 +7474,7 @@ See Also: SUBCLASSES INFIDEL BLINDNESS "CHILL TOUCH" CURSE PARALYSIS POISON
 
 Usage       : cast 'demonic thunder' <victim>
 Accumulative: No
-Duration    : Instantaneous (Damage) / 7 days (Curse)
+Duration    : Instantaneous (Damage) / 7 Days (Curse)
 Save        : None (Damage) / Versus spell negates (Curse)
 Mana Cost   : 100
 
@@ -7359,11 +7488,10 @@ See Also: CURSE
 #
 "BLADE BARRIER"
 
-Subclass Enchanter: Level 1 (Mage)
-
 Usage       : cast 'blade barrier' (self only)
-Accumulative: no
-Duration    : 5
+Accumulative: No
+Duration    : 5 Ticks
+Level       : Level 1 Enchanter (Mage Subclass)
 Save        : -
 Mana Cost   : 50
 
@@ -7376,11 +7504,10 @@ See Also: SUBCLASSES ENCHANTER
 #
 METEOR
 
-Subclass Archmage: Level 1 (Mage)
-
 Usage       : cast 'meteor' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 1 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 5
 
@@ -7392,11 +7519,10 @@ See Also: SUBCLASSES ARCHMAGE
 #
 "WRATH OF ANCIENTS"
 
-Subclass Archmage: Level 4 (Mage)
-
 Usage       : cast 'wrath of ancients' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 4 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 250
 
@@ -7409,11 +7535,10 @@ See Also: SUBCLASSES ARCHMAGE
 #
 DISTORTION
 
-Subclass Archmage: Level 5 (Mage)
-
 Usage       : cast 'distortion' <victim>
-Accumulative: no
-Duration    : 2
+Accumulative: No
+Duration    : 2 Ticks
+Level       : Level 5 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 100
 
@@ -7427,11 +7552,10 @@ See Also: SUBCLASSES ARCHMAGE
 #
 "ORB OF PROTECTION"
 
-Subclass Archmage: Level 2 (Mage)
-
 Usage       : cast 'orb of protection' (self only)
-Accumulative: no
-Duration    : 10
+Accumulative: No
+Duration    : 10 Ticks
+Level       : Level 2 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 50
 
@@ -7445,11 +7569,10 @@ See Also: SUBCLASSES ARCHMAGE
 #
 "FROST BOLT"
 
-Subclass Archmage: Level 3 (Mage)
-
 Usage       : cast 'frost bolt' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 3 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 50
 Damage      : 350
@@ -7462,11 +7585,10 @@ See Also: SUBCLASSES ARCHMAGE
 #
 ENGAGE
 
-Subclass Enchanter: Level 3 (Mage)
-
 Usage       : cast 'engage' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 3 Enchanter (Mage Subclass)
 Save        : -
 Mana Cost   : 40
 
@@ -7478,11 +7600,10 @@ See Also: SUBCLASSES ENCHANTER
 #
 "DISRUPT SANCTUARY"
 
-Subclass Enchanter: Level 5 (Mage)
-
 Usage       : cast 'disrupt sanctuary' <victim>
-Accumulative: no
+Accumulative: No
 Duration    : 0-57 seconds (depends on timing)
+Level       : Level 5 Enchanter (Mage Subclass)
 Save        : -
 Mana Cost   : 250
 
@@ -7494,11 +7615,10 @@ See Also: SUBCLASSES ENCHANTER
 #
 "ETHEREAL NATURE"
 
-Subclass Enchanter: Level 4 (Mage)
-
 Usage       : cast 'ethereal nature' (self only)
 Accumulative: no
-Duration    : 30 ticks (only 1st tick is effective)
+Duration    : 30 Ticks (only 1st tick is effective)
+Level       : Level 4 Enchanter (Mage Subclass)
 Save        : -
 Mana Cost   : 100
 
@@ -7514,9 +7634,13 @@ See Also: SUBCLASSES ENCHANTER
 #
 ENCHANTER
 
-Enchanter is one of the Mage subclasses and is broken up into 5 levels.  At
-each level, the Enchanter receives a new or improved spell.  For help on each
-spell, just type HELP <spell name>
+The Enchanter has spent many years manifesting the ethereal power and works
+to become with Magic.  As they grow in power, they achieve their goal and 
+learn to merge with magic. 
+
+The Enchanter is a subclass of the Mage.
+
+For help on each spell, just type HELP <spell name>
 
 Level         Spell
   1           BLADE BARRIER
@@ -7529,9 +7653,13 @@ See Also: SUBCLASSES ARCHMAGE MAGE
 #
 ARCHMAGE
 
-Archmage is one of the Mage subclasses and is broken up into 5 levels.  At each
-level, the Archmage receives a new or improved spell.  For help on each spell,
-just type HELP <spell name>
+The Archmage only cares about one thing. Amassing magical power and using
+it to destroy everything that stands before them. As they grow in
+power, they can show true power to their enemies.
+
+The Archmage is a subclass of the Mage.
+
+For help on each spell, just type HELP <spell name>
 
 Level         Spell
   1           METEOR
@@ -7544,11 +7672,10 @@ See Also: SUBCLASSES ENCHANTER MAGE
 #
 PASSDOOR
 
-Subclass Enchanter: Level 2 (Mage)
-
 Usage       : cast 'passdoor' <direction>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 2 Enchanter (Mage Subclass)
 Save        : -
 Mana Cost   : 50
 
@@ -7561,10 +7688,13 @@ See Also: SUBCLASSES ENCHANTER
 #
 ROGUE
 
-Rogue is one of the Thief subclasses and is broken up
-into 5 levels.  At each level, the rogue receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
+The Rogue is a fighter and has honed skills to fight down and dirty.
+As they grow in power, they look to achieve top fighting prowess
+to always be at the top.
+
+The Rogue is a subclass of the Thief.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           DIRTY TRICKS
@@ -7582,7 +7712,7 @@ Subclass Rogue: Level 1 (Thief)
 Usage: dirty-tricks (toggles on/off)
 
 When active, this skill is used automatically during combat.  Randomly
-throught out each fight, the Rogue does things like throwing dirt in
+through out each fight, the Rogue does things like throwing dirt in
 the victim's eyes for blindness, kicking in sensitive areas to knock
 them to the ground, and inflicting grievous wounds that cause them to
 bleed profusely, causing damage over time.
@@ -7644,10 +7774,13 @@ See Also: SUBCLASSES ROGUE
 #
 BANDIT
 
-Bandit is one of the Thief subclasses and is broken up
-into 5 levels.  At each level, the bandit receives a
-new or improved skill.  For help on each skill, just type
-HELP <name of skill>
+The Bandit is a wanderer that has seen a fair share of combat. They look
+to acquire skills that aid in their survival. As they grow in strength
+they will develop the skills to truly save their skin.
+
+The Bandit is a subclass of the Thief.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           IMPAIR
@@ -7731,16 +7864,22 @@ physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 25%.
 
 Unfortunately, since the Bandit/Nomad is so intent on protecting themselves,
-they will miss more often.  If the Bandit is in combat, this skill cannot be
-toggled on or off.
+they will miss more often.  
+
+This skill cannot be toggled on or off in combat.
 
 See Also: SUBCLASSES BANDIT NOMAD
 #
 GLADIATOR
 
-Gladiator is one of the Warrior subclasses and is broken up into 5 levels.  At
-each level, the gladiator receives a new or improved skill.  For help on each
-skill, just type HELP <name of skill>
+The Gladiator has spent many years training hard in the arena. The skills
+and experience they have earned have given them the edge in combat. As
+they grow in power, they strive to deliver an unending series of blows
+against the opponent.  
+
+The Gladiator is a subclass of the Warrior.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           FLANK
@@ -7753,9 +7892,13 @@ See Also: SUBCLASSES WARLORD WARRIOR
 #
 WARLORD
 
-Warlord is one of the Warrior subclasses and is broken up into 5 levels.  At
-each level, the warlord receives a new or improved skill.  For help on each
-skill, just type HELP <name of skill>
+The Warlord has seen a fair share of combat and survived many life or death
+situations. As they grow in power, they develop skills to protect 
+themselves and others. 
+
+The Warlord is a subclass of the Warrior.
+
+For help on each skill, just type HELP <name of skill>
 
 Level         Skill
   1           AWARENESS
@@ -7847,16 +7990,22 @@ MAIM
 
 Subclass Gladiator: Level 3 (Warrior)
 
-Maim applies a debuff to the target of the Gladiator's Flank attack.  This
-debuff will cause the target to take extra damage equal to 1/4 the Gladiator's
+Maim applies a debuff to the target of the Gladiator's Flank attack.  
+
+This debuff will cause the target to take extra damage equal to 1/4 the Gladiator's
 class level, rounded down, (12 damage at lvl 48+) after being hit by a
-successful physical attack skill (pummel, punch, etc.).  This bonus damage is
-applied separately from the damage inflicted by the triggering skill and
-cannot be increased (such as by position, spell effects like Fury, etc.).
-Smite and Zeal will also trigger this bonus damage.  Other bonus attacks that
-are triggered by skills (such as Hidden Blade and Trusty Steed, etc.) do not
-cause extra damage from the Maim effect (e.g. they do not "double dip").  This
-damage is subject to normal physical damage resistance or immunity.  The Maim
+successful physical attack skill (pummel, punch, etc.). 
+ 
+This bonus damage is applied separately from the damage inflicted by the 
+triggering skill and cannot be increased such as by position, spell effects 
+like Fury, etc.
+
+Smite and Zeal will also trigger this bonus damage.  
+
+Other bonus attacks that are triggered by skills such as Hidden Blade and Trusty Steed 
+do not cause extra damage from the Maim effect (e.g. they do not "double dip").  
+
+This damage is subject to normal physical damage resistance or immunity.  The Maim
 effect lasts until the affected creature dies.
 
 See Also: SUBCLASSES GLADIATOR
@@ -7910,10 +8059,13 @@ See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD DEXTERITY AC RESCUE
 #
 MERCENARY
 
-Mercenary is one of the Commando subclasses and is broken up
-into 5 levels.  At each level, the Mercenary receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+The Mercenary is a fighter for hire. They only care about money and doing
+their job well. As they grow in power, you can see how well they can confuse 
+opponents and utilize their trusty sidearm to devastate them.
+
+The Mercenary is a subclass of the Commando.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           TREMOR
@@ -7926,10 +8078,13 @@ See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
 LEGIONNAIRE
 
-Legionnaire is one of the Commando subclasses and is broken up
-into 5 levels.  At each level, the Legionnaire receives a
-new or improved skill or spell.  For help on each skill
-or spell, just type HELP <skill/spell name>
+The Legionnaire has spent many years training in combat techniques. While
+having access to some magic, they specialize in single target attacks. As
+they grow in strength their ability to focus down a foe becomes more apparent.
+
+The Legionnaire is a subclass of the Commando.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           LUNGE
@@ -7960,14 +8115,13 @@ See Also: SUBCLASSES LEGIONNAIRE
 #
 RIMEFANG
 
-Subclass Legionnaire: Level 2 (Commando)
-
 Usage       : cast 'rimefang'
 Accumulative: No
-Duration    : -
+Duration    : Instantaneous
+Level       : Level 2 Legionnaire (Commando Subclass)
 Save        : Save vs. Paralysis: Negates Paralysis
 Mana Cost   : 115
-Damage      : (5 to 7) * (caster level) (up to 350 at level 50)
+Damage      : (5 to 7) * (Caster Level) (up to 350 at level 50)
 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
@@ -8009,11 +8163,10 @@ See Also: SUBCLASSES LEGIONNAIRE
 #
 DEVASTATION
 
-Subclass Legionnaire: Level 4 (Commando)
-
 Usage       : cast 'devastation' <victim>
 Accumulative: No
-Duration    : -
+Duration    : Instantaneous
+Level       : Level 4 Legionnaire (Commando Subclass)
 Save        : -
 Mana Cost   : 150
 Damage      : 1000
@@ -8044,11 +8197,10 @@ See Also: SUBCLASSES LEGIONNAIRE
 #
 TREMOR
 
-Subclass Mercenary: Level 1 (Commando)
-
 Usage       : cast 'tremor'
 Accumulative: No
-Duration    : -
+Duration    : Instantaneous
+Level       : Level 1 Mercenary (Commando Subclass)
 Save        : -
 Mana Cost   : 130
 Damage      : 400
@@ -8063,11 +8215,10 @@ See Also: SUBCLASSES MERCENARY
 #
 "CLOUD OF CONFUSION"
 
-Subclass Mercenary: Level 2 (Commando)
-
 Usage       : cast 'cloud of confusion'
 Accumulative: No
-Duration    : 1d5 + 1
+Duration    : 1d5 + 1 Ticks
+Level       : Level 2 Mercenary (Commando Subclass)
 Save        : -
 Mana Cost   : 100
 
@@ -8099,11 +8250,10 @@ See Also: SUBCLASSES MERCENARY
 #
 "INCENDIARY CLOUD"
 
-Subclass Mercenary: Level 4 (Commando)
-
 Usage       : cast 'incendiary cloud' <target>
-Accumulative: no
+Accumulative: No
 Duration    : Instantaneous / 10 rounds (damage over time)
+Level       : Level 4 Mercenary (Commando Subclass)
 Save        : -
 Mana Cost   : 200
 Damage      : 500 + 150 per combat round for 10 rounds
@@ -8132,9 +8282,13 @@ See Also: SUBCLASSES MERCENARY
 #
 CAVALIER
 
-Cavalier is one of the Paladin subclasses and is broken up into 5 levels.  At
-each level, the Cavalier receives a new or improved skill or spell.  For help
-on each skill or spell, just type HELP <skill/spell name>
+The Cavalier is a noble warrior with divine power. They strive to be a noble
+figure and use their holy powers to punish enemies. As they grow stronger
+their true devotion can be seen.
+
+The Cavalier is a subclass of the Paladin.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           MIGHT
@@ -8147,9 +8301,14 @@ See Also: SUBCLASSES CRUSADER PALADIN
 #
 CRUSADER
 
-Crusader is one of the Paladin subclasses and is broken up in to 5 levels.  At
-each level, the Crusader receives a new or improved skill or spell.  For help
-on each skill or spell, just type HELP <skill/spell name>
+The Crusader has studied healing through prayer and divine worship. Their
+abilities are enchanced by their beliefs, providing very potent healing
+abilities. as they grow in power, they are able to convert their holy energy
+directly into healing and other beneficial effects.
+
+The Crusader is a subclass of the Paladin.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           RIGHTEOUSNESS
@@ -8162,11 +8321,10 @@ See Also: SUBCLASSES CAVALIER PALADIN
 #
 MIGHT
 
-Subclass Cavalier: Level 1 (Paladin)
-
 Usage       : cast 'might' (self only)
-Accumulative: no
-Duration    : 20
+Accumulative: No
+Duration    : 20 Ticks
+Level       : Level 1 Cavalier (Paladin Subclass)
 Save        : -
 Mana Cost   : 50
 
@@ -8198,11 +8356,10 @@ See Also: SUBCLASSES CAVALIER PUMMEL SMITE WISDOM
 #
 "WRATH OF GOD"
 
-Subclass Cavalier: Level 3 (Paladin)
-
 Usage       : cast 'wrath of god' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 3 Cavalier (Paladin Subclass)
 Save        : -
 Mana Cost   : 100
 Damage Done : 600
@@ -8216,11 +8373,10 @@ See Also: SUBCLASSES CAVALIER
 #
 "POWER OF DEVOTION"
 
-Subclass Cavalier: Level 4 (Paladin)
-
 Usage       : cast 'power of devotion' <victim> <victim2> ... <victimN>
 Accumulative: No
-Duration    : Level / 4
+Duration    : Caster Level / 4 Ticks
+Level       : Level 4 Cavalier (Paladin Subclass)
 Save        : -
 Mana Cost   : 100
 
@@ -8256,16 +8412,15 @@ See Also: SUBCLASSES CAVALIER "TRUSTY STEED"
 #
 RIGHTEOUSNESS
 
-Subclass Crusader: Level 1 (Paladin)
-
 Usage       : cast 'righteousness' (self only)
 Accumulative: No
-Duration    : 10
+Duration    : 10 Ticks
+Level       : Level 1 Crusader (Paladin Subclass)
 Save        : -
 Mana Cost   : 30
 
 This spell grants the Crusader a 1d2 bonus damroll to all weapon attacks.  This
-bonus increases to 1d4 damage when targetting a neutral opponent, and 1d6 damage
+bonus increases to 1d4 damage when targeting a neutral opponent, and 1d6 damage
 when targetting an evil opponent.
 
 Additionally, each standard melee attack will recover 1d3 points of the
@@ -8318,13 +8473,12 @@ See Also: SUBCLASSES CRUSADER
 #
 "POWER OF FAITH"
 
-Subclass Crusader: Level 5 (Paladin)
-
 Usage       : cast 'power of faith' <victim>
-Accumulative: no
-Duration    : -
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 5 Crusader (Paladin Subclass)
 Save        : -
-Mana Cost   : varies
+Mana Cost   : 50 to 125
 
 The Crusader uses his power of divine faith to cure the most serious wounds of
 the victim.  The cost of this spell varies depending on the amount of hit
@@ -8357,8 +8511,13 @@ See Also: REGENERATION SLEEP
 #
 TEMPLAR
 
-Templar is one of the Cleric subclasses and is broken up into 5 levels.
-At each level, the Templar receives a new or improved skill or spell.
+The Templar has become closer to the divine power. Using their connection to their 
+deities, they are able to bring divine powers to bear against their enemies. As
+they grow in power, they are able to wield a fraction of this gift against
+their foes.
+
+The Templar is a subclass of the Cleric
+
 For help on a skill or spell, just type: HELP <skill/spell name>
 
 Level         Skill/Spell
@@ -8404,11 +8563,11 @@ See Also: SUBCLASS TEMPLAR CLERIC BASH
 #
 "MAGIC ARMAMENT"
 
-Subclass: Templar, Level 3 (Cleric)
-
-Usage:        cast 'magic armament' (self only)
-Mana Cost:    75
-Duration:     5
+Usage       : cast 'magic armament' (self only)
+Accumulative: No
+Duration    : 5 Ticks
+Level       : Level 3 Templar (Cleric Subclass)
+Mana Cost   : 75
 
 The Templar is capable of harnessing great spiritual power and infusing it into
 their weapon, causing each blow to deal extra damage.
@@ -8424,11 +8583,11 @@ See Also: SUBCLASS TEMPLAR BASH
 #
 FORTIFICATION
 
-Subclass: Templar, Level 4 (Cleric)
-
-Usage:        cast 'fortification' <target>
-Mana Cost:    100
-Duration:     Level / 4
+Usage       : cast 'fortification' <target>
+Accumulative: No
+Duration    : Caster Level / 4
+Level       : Level 4 Templar (Cleric Subclass)
+Mana Cost   : 100
 
 This spell is similar to Sanctuary, but provides even more powerful damage
 reduction.  A creature affected by Fortification takes 65% less damage from all
@@ -8441,11 +8600,11 @@ See Also: SUBCLASS TEMPLAR SANCTUARY
 #
 "DIVINE HAMMER"
 
-Subclass: Templar, Level 5 (Cleric)
-
-Usage:        cast 'divine hammer' (self only)
-Mana Cost:    200
-Duration:     60 attacks (equal to 3 minutes of continuous combat)
+Usage       : cast 'divine hammer' (self only)
+Accumulative: No
+Duration    : 60 attacks (equal to 3 minutes of continuous combat)
+Level       : Level 5 Templar (Cleric Subclass)
+Mana Cost   : 200
 
 The most pious of Templars can manifest a weapon of pure holy energy in the form
 of a massive divine hammer.  For the duration of the spell, the Templar makes
@@ -8465,8 +8624,9 @@ during the next 20 attacks, and 9d9+9 damage during the final 20 attacks.
 
 After the hammer has made 60 attacks, it ceases its attacks and looms above the
 caster's head, ready for one final strike.  The Templar has 20 rounds (1 minute)
-decide when and where the hammer shall strike.  To unleash this final strike,
-they must enter the 'judgement-strike' command.
+to decide when and where the hammer shall strike.  
+
+To unleash this final strike, they must enter the 'judgement-strike' command.
 
 If the Templar does not specify a target (and is not in combat), or uses the
 optional 'area' or 'room' argument, the strike will heal all mortals in the
@@ -8490,8 +8650,13 @@ See Also: SUBCLASS TEMPLAR SANCTUARY
 #
 DRUID
 
-Druid is one of the Cleric subclasses and is broken up into 5 levels.
-At each level, the Druid receives a new or improved skill or spell.
+The Druid has become one with nature. Using the environment and being able to
+commune with the wild, the druid is able to bring the full wrath of nature down
+upon its enemies. As they grow in power, they get closer to becoming one with
+nature.
+
+The Druid is a subclass of the Cleric
+
 For help on a skill or spell, just type: HELP <skill/spell name>
 
 Level         Skill/Spell
@@ -8545,12 +8710,11 @@ See Also: SUBCLASS DRUID ANTI CLERIC
 #
 "WALL OF THORNS"
 
-Subclass: Druid, Level 3 (Cleric)
-
-Usage:        cast 'wall of thorns'
-Mana Cost:    100
-Duration:     5 ticks
+Usage       : cast 'wall of thorns'
 Accumulative: No
+Duration    : 5 Ticks
+Level       : Level 3 Druid (Cleric Subclass)
+Mana Cost   : 100
 
 The Druid conjures up a handful of seeds which quickly grow to block all exits.
 
@@ -8680,10 +8844,13 @@ See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" "ELEMENTAL FORM"
 #
 BLADESINGER
 
-Bladesinger is one of the Bard subclasses and is broken up
-into 5 levels.  At each level, the Bladesinger receives a
-new or improved skill or song.  For help on each skill
-or song, just type HELP <skill/song>
+The Bladesinger performs with flair and enthusiasm. They look to put on the best
+show and to enchance their own abilities by mimicking others. AS they grow in 
+power, you can see how far their abilities have come.
+
+The Bladesinger is a subclass of the Bard.
+
+For help on each skill or song, just type HELP <skill/song>
 
 Level  Song/Skill                          Mana
   1    "brightest flame burns quickest"     50     (RALLY)
@@ -8697,10 +8864,13 @@ See Also: SUBCLASSES CHANTER SONGS BARD
 #
 CHANTER
 
-Chanter is one of the Bard subclasses and is broken up
-into 5 levels.  At each level, the Chanter receives a
-new or improved song.  For help on each song, just
-type HELP <song>
+The Chanter loves to be a team player. The songs warm the heart, boosts the
+spirit and ecourages teamwork. As they grow in power their songs provide even
+greater inspiration and allow parties to tackle challenges together.
+
+The Chanter is a subclass of the Bard.
+
+For help on each song, just type HELP <song>
 
 Level  Song                              Mana
   1    "bridge over troubled water"       40         (RESPITE)
@@ -8724,7 +8894,7 @@ and amuse, buoying the spirits of their fellows.  Unfortunately, at
 times this amusement comes at the expense of others, as is the case
 with their taunt skill.
 Taunt is an automatic skill which has a chance of triggering every
-round in combat.  The bard will distract the enemy with embarassing
+round in combat.  The bard will distract the enemy with embarrassing
 stories, mischaracterizations, and general depravity, causing them
 to lose their focus.  A taunted enemy will experience a 10% reduction
 in their DAMROLL for 3 rounds.  The taunt effect does not stack, but
@@ -8756,8 +8926,8 @@ See Also: SUBCLASSES BLADESINGER SONGS BARD
 "BLADE DANCE"
 
 Usage       : song 'ballroom blitz'
-Level       : Bladesinger SC4
 Duration    : Instantaneous
+Level       : Level 4 Bladesinger (Bard Subclass)
 Damage      : 350
 Mana        : 80
 
@@ -8793,8 +8963,8 @@ See Also: SUBCLASSES BLADESINGER BARD
 RESPITE
 
 Usage       : song 'bridge over troubled water'
-Level       : Chanter SC1
 Duration    : Instantaneous
+Level       : Level 1 Chanter (Bard Subclass)
 Mana        : 40
 
 This song is the ultimate in party status protection. With it the
@@ -8820,8 +8990,8 @@ See Also: SUBCLASSES CHANTER SONGS BARD
 "GROUP SUMMON"
 
 Usage       : song 'come together'
-Level       : 50
 Duration    : Instantaneous
+Level       : 50
 Mana        : 100
 
 This song will summon all PC group members to the bards location,
@@ -8834,8 +9004,8 @@ RALLY
 
 Usage       : song 'brightest flame burns quickest'
               song 'bulls on parade'
-Level       : Bladesinger SC1
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 1 Bladesinger (Bard Subclass)
 Mana        : 50
 
 This song increases the hitroll of all characters in the room by 5.
@@ -8861,9 +9031,11 @@ REJUVENATION
 
 Usage       : song 'there is no heart'
             : song 'forever young'
-Level       : 46
 Duration    : Instantaneous
+Level       : Level 46 Bard (Song)
 Mana        : 80
+
+The bard plays a soothing tune that revives the souls of all party members.
 
 This song will heal all of the bard's group members for 400 hit points.
 
@@ -8873,8 +9045,8 @@ See Also: SONGS
 
 Usage       : song 'something takes a part of me'
             : song 'war'
-Level       : Chanter SC2
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 2 Chanter (Bard Subclass)
 Mana        : 60
 
 This song has three effects.  First, it increases all group member saving throws
@@ -8889,8 +9061,8 @@ See Also: SUBCLASSES CHANTER
 CAMARADERIE
 
 Usage       : song 'we are family'
-Level       : Chanter SC5
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 5 Chanter (Bard Subclass)
 Mana        : 150
 
 This song binds the fate of the affected characters to one another. Whenever
@@ -8907,8 +9079,8 @@ LUCK
 
 Usage       : song 'if i could change the world'
             : song 'lucky'
-Level       : Chanter SC3
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 3 Chanter (Bard Subclass)
 Mana        : 100
 
 This song increases the party regen by 75 hit points and 15 mana each tick for
@@ -8921,8 +9093,8 @@ AID
 
 Usage       : song 'hero of the day'
               song 'power of love'
-Level       : Chanter SC4
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 4 Chanter (Bard Subclass)
 Mana        : 150
 
 This song increases the damage of all characters in the room by 10%, applied
@@ -8949,9 +9121,14 @@ Divine Wind is a direct translation of the phrase "kamikaze."
 #
 RONIN
 
-Ronin is one of the Ninja subclasses and is broken up into 5 levels.  At each
-level, the Ronin receives a new or improved skill or spell.  For help on each
-skill or spell, just type HELP <skill/spell name>.
+The Ronin studied with the most secretive sects of the ninja world. Strenuous
+training has lead them to combat bliss, and the skills that allow them to flow 
+through the combat are learned. as they grow in power, the full range of their 
+abilities will be unleashed.  
+
+The Ronin is a suclass of the Ninja.
+
+For help on each skill or spell, just type HELP <skill/spell name>.
 
 Level         Skill/Spell
   1           BLUR
@@ -8964,9 +9141,13 @@ See Also: SUBCLASSES MYSTIC NINJA
 #
 MYSTIC
 
-Mystic is one of the Ninja subclasses and is broken up into 5 levels.  At each
-level, the Mystic receives a new or improved skill or spell.  For help on each
-skill or spell, just type HELP <skill/spell name>
+The Mystic aims to achieve pure englightenment. Through meditation, balance
+ and steadying of the mind they look for answers. As they grow in power
+ they move closer and closer to that goal.
+
+The Mystic is a subclass of the Ninja.
+
+For help on each skill or spell, just type HELP <skill/spell name>
 
 Level         Skill/Spell
   1           DEBILITATE
@@ -8979,11 +9160,10 @@ See Also: SUBCLASSES RONIN NINJA
 #
 BLUR
 
-Subclass Ronin: Level 1 (Ninja)
-
 Usage       : cast 'blur' (self only)
 Accumulative: No
-Duration    : Level / 5
+Duration    : Caster Level / 5 Ticks
+Level       : Level 1 Ronin (Ninja Subclass)
 Mana Cost   : 80
 
 The Ronin blurs out of reality, making them not only harder to hit, but harder
@@ -9106,11 +9286,10 @@ See Also: SUBCLASSES RONIN
 #
 DEBILITATE
 
-Subclass Mystic: Level 1 (Ninja)
-
 Usage       : cast 'debilitate' <victim>
 Accumulative: No
-Duration    : 5
+Duration    : 5 Ticks
+Level       : Level 1 Mystic (Ninja Subclass)
 Save        : None
 Mana Cost   : 20
 
@@ -9160,11 +9339,10 @@ See Also: SUBCLASSES MYSTIC
 #
 MANTRA
 
-Subclass Mystic: Level 4 (Ninja)
-
 Usage       : mantra <target>
 Accumulative: No
 Duration    : Instantaneous + 90 seconds
+Level       : Level 4 Mystic (Ninja Subclass)
 Mana Cost   : 120
 
 The Mystic channels his/her spiritual energy into a target, which
@@ -9197,7 +9375,8 @@ Subclass Mystic: Level 5 (Ninja)
 
 Usage       : cast 'tranquility'
 Accumulative: -
-Duration    : 6
+Duration    : 6 Ticks
+Level       : Level 5 Mystic (Ninja Subclass)
 Mana Cost   : 150
 
 This is a group-wide spell that affects all members of the Mystic's
@@ -9277,15 +9456,19 @@ See Also: RECIPES
 #
 "DIVINE INTERVENTION"
 
-Usage      : cast 'divine intervention' <victim>
-Level      : level 50 cleric
-Save       : none
-Duration   : 8 ticks
-Mana cost  : 500
+Usage       : cast 'divine intervention' <victim>
+Accumulative: No
+Duration    : 8 Ticks
+Level       : Level 50 Cleric
+Mana cost   : 500
 
-The caster prays for divine protection for the target, while affected
-if at any time the protected character would die, they are instead
-immediately miracle'd and the spell affect is removed.
+The caster prays for divine protection for the target.
+
+While affected if at any time the protected character would die, they are instead
+immediately healed with Miracle and the spell affect is removed.
+
+Note: This cannot be cast in battle.
+
 #
 QUAD
 
@@ -9298,20 +9481,18 @@ See Also: DUAL TRIPLE
 #
 "QUICK"
 
-Usage      : cast 'quick' (self only)
-Level      : level 50 mage
-Save       : none
-Duration   : 5 ticks
-Mana cost  : 100
+Usage       : cast 'quick' (self only)
+Duration    : 5 Ticks
+Level       : Level 50 Mage
+Mana cost   : 100
 
 While affected by Quick, the caster can cast twice in the same combat round.
 #
 "RUSH"
 
 Usage       : cast 'rush' (self only)
-Level       : level 50 commando
-Save        : -
-Duration    : 3 ticks
+Duration    : 3 Ticks
+Level       : Level 50 Commando
 Mana cost   : 100
 
 When the Commando is affected by Rush, they will have their number of
@@ -9323,20 +9504,19 @@ See Also: DUAL TRIPLE DAMROLL
 #
 "TWIST"
 
-Class: Thief (Level 45, Automatic)
+Class: Thief (Level 45)
 
-This skill gives the thief a chance to inflict 250 extra damage after a
+This automatic skill gives the thief a chance to inflict 250 extra damage after a
 successful Circle.
 
 See Also: CIRCLE
 #
 "BLOOD LUST"
 
-Usage      : cast 'blood lust' (self only)
-Level      : level 45 anti-paladin
-Save       : none
-Duration   : 5
-Mana cost  : 70
+Usage       : cast 'blood lust' (self only)
+Duration    : 5 Ticks
+Level       : Level 45 Anti-Paladin
+Mana cost   : 70
 
 While affected by Blood Lust, the Anti-Paladin hungers for blood, and will
 randomly bite their victims during combat.  Each bite has the chance to cause
@@ -9353,26 +9533,28 @@ See Also: "BLOOD LEVEL" RAGE
 #
 "MYSTIC SWIFTNESS"
 
-Usage      : cast 'mystic swiftness' (self only)
-Level      : level 50 ninja
-Save       : none
-Duration   : 4 ticks
-Mana cost  : 100
+Usage       : cast 'mystic swiftness' (self only)
+Duration    : 4 Ticks
+Level       : Level 50 Ninja
+Save        : none
+Mana cost   : 100
 
 While affected by mystic swiftness the ninja has a chance of landing
 a third hit on the target.
+
 #
 "WIND SLASH"
 
-Usage      : cast 'wind slash' <victim>
-Level      : level 30 ninja
-Save       : none
-Duration   : -
-Mana cost  : 85
-Damage     : level/2 + (140 to 180)
+Usage       : cast 'wind slash' <victim>
+Duration    : Instantaneous
+Level       : Level 30 Ninja
+Save        : None
+Mana cost   : 85
+Damage      : Caster Level/2 + (140 to 180)
 
 The caster strikes the air rapidly in all directions, creating magical waves
 of force that blast all other victims in the room.
+
 #
 REMORT
 
@@ -9466,7 +9648,7 @@ The multiple starts at 5x and increases as the player increases in power.  To
 be specific, the multiplier increases when:
 
 1. Stats hit 18
-2. Strength hits 51 and 100
+2. Strength hits 18/51 and 18/100
 3. Level hits 30, 40, 45 and 50
 
 See also: STATS REMORT
@@ -9506,10 +9688,9 @@ See Also: REMORT
 "IRON SKIN"
 
 Usage       : cast 'iron skin' <target>
-Level       : Level 40 commando
 Accumulative: No
 Duration    : 10
-Save        : -
+Level       : Level 40 Commando
 Mana Cost   : 50
 
 When self-cast upon the Mercenary, this defensive spell will modify their AC by
@@ -9517,4 +9698,454 @@ When self-cast upon the Mercenary, this defensive spell will modify their AC by
 less effective, granting only -10 AC instead.
 
 See Also: SUBCLASSES COMMANDO
+#
+"REWARD POINTS" RP
+
+Reward Points (RP) are points awarded for winning quests and contributing
+to the development of the MUD - whether that's creating zones, reviewing, 
+writing documentation, etc.)  
+
+Reward Points can also be purchased from Quest Points at a rate of 15 to 1.
+To learn more, visit the Hall of Rewards - 3n2e from Market Square.  
+
+Reward Points may be used to add to existing affects to an item, or to add
+an affect to an item with an open slot.
+
+To use RP, please contact a IMP.
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" "RP RULES"
+
+#
+"RP RULES"
+
+--Cost Tables are Cumulative 
+
+To to add 3 Damroll to an item that startswith 0, you will need to pay 
+the price for 1 (10) + 2 (20) + 3 (30) = 60.  
+
+All items improved with RP will become LIMITED (if they aren't already) 
+and will have QUESTWEAR flag added (only owners listed can use).
+
+All items made QUESTWEAR or purchased will get one ownership flags added,
+each owner after that costs an additional QT.
+
+RP cannot be used to: remove antis from gear, remove the decay flag, nor 
+remove an existing affect to make room for a new one.
+
+RP cannot be used to add additional wear positions.
+
+RPs cannot be traded from player to another; you earned it, use it!
+
+No refunds, all upgrades are final.
+
+If upgrading an item that has a value that doesn't perfectly sync up with
+the price structure (for example item has +5 to a Skill already, or 
++5 mana-regen) you would price the next upgrade as if it already had 
+the level above:
+
+i.e. +6 in both these cases.
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP 
+
+#
+"QUEST TOKEN" QT
+
+Quest Tokens (QT) are special items that are handed out for winning quests. 
+
+These can be exchanged for special rewards from the gods.  They are also 
+useful with RP to exchange for gear.
+
+QT can be acquired for 100 RP.
+
+See Also: RP "REWARD POINTS"
+#
+"RP LIST PRICES"
+
+RP can be used to increase the stats of certain gear or to add new stats 
+to existing gear.
+
+Each piece of gear can have up to three different stats as affects on them.
+
+You can also add certain spells to gear, such as Sanctuary.
+
+Here are the following categories that can be updated.
+
+Skills:     "RP SKILLS"
+Spells:     "RP SPELLS"
+Damroll:    "RP DAMAGE"
+Hitroll:    "RP HITROLL"
+Mana-Regen: "RP MANA REGEN"
+HP-Regen:   "RP HP REGEN"
+Armor:      "RP ARMOR"
+
+See Also: RP "REWARDS POINTS"
+#
+"RP SKILLS"
+
+You can increase the bonus to the skills in the gain up to +20.
+
+These costs are cumulative. 
+
+--Skills-------Cost--
+======================
+     2          10
+     4          20
+     6          30
+     8          45
+    10          60
+    12          75
+    14         100
+    16         125
+    18         150
+    20         175
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP SPELLS"
+
+There are 3 tiers of spells which can be purchased:
+
+--Top-- (cost 250 RP each)
+=======
+Sanctuary
+Invulnerability
+Sphere
+
+--Mid-- (cost 100 RP each)
+=======
+Protect-Good
+Protect-Evil
+
+--Bot-- (cost 25 RP each)
+Fly
+Infravision
+Sense-Life
+Detect-Invis
+Detect-Magic
+Detect-Align
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP DAMAGE"
+
+You can increase you bonus to damage.
+
+These costs are cumulative. 
+
+-Damroll-------Cost--
+======================
+     1           10
+     2           20
+     3           30
+     4           45
+     5           60
+     6           75
+     7          100
+     8          125
+     9          150
+    10          175
+
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP HITROLL"
+
+You can increase you bonus to hitroll.
+
+These costs are cumulative. 
+
+-Hitroll-------Cost--
+======================
+     1            5
+     2           10
+     3           15
+     4           25
+     5           35
+     6           45
+     7           60
+     8           75
+     9           90
+    10          105
+	
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP MANA REGEN"
+
+You can increase you bonus to mana regen.
+
+These costs are cumulative. 
+
+--ManaRegen-----Cost--
+======================
+     3           10
+     6           20
+     9           30
+    12           45
+    15           60
+    18           75
+    21          100
+    24          125
+    27          150
+    30          175
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP HP REGEN"
+
+You can increase you bonus to hp regen.
+
+These costs are cumulative. 
+
+-HPRegen-------Cost--
+======================
+    15            5
+    30           10
+    45           15
+    60           25
+    75           35
+    90           45
+   105           60
+   120           75
+   135           90
+   150          105
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP ARMOR"
+
+You can increase you bonus to armor.
+
+These costs are cumulative. 
+
+--Armor--------Cost--
+======================
+      5           5
+     10          10
+     15          15
+     20          25
+     25          35
+     30          45
+     35          60
+     40          75
+     45          90
+     50         105
+
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
+
+#
+"RP LIST GEAR"
+
+There are four tiers of gear that can be purchased for RP and Quest Tokens (QT).
+
+Each tier has a different cost for their items.
+
+Please see each list for their costs.
+
+Special     - "RP SPECIAL"
+Top Tier    - "RP TOP"
+Middle Tier - "RP MIDDLE"
+Bottom Tier - "RP BOTTOM"
+
+See Also: "QUEST TOKEN" RP
+
+#
+"RP TOP"
+
+Each of these items may be purchased for 450 RP + 1 QT
+
+They have no class or alignment restrictions.
+
+Item Name : Wear Location
+
+Specs:
+
+The shell of a carved pumpkin : body
+
+ 30 AC-apply, +33 HP_REGEN, +5 DAMROLL, SANC
+
+ no specs
+
+giant's-hide greaves: legs
+
+ 25 AC-apply, +5 DAMROLL, +50 HP, +25 HP_REGEN, SPHERE
+
+ no specs
+
+See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP MIDDLE" "RP BOTTOM" "RP SPECIAL"
+
+#
+"RP MIDDLE"
+
+Each of these items may be purchased for 300 RP + 1 QT
+
+They have no class or alignment restrictions.
+
+Item Name : Wear Location
+
+Specs:
+
+The pelt of a black cat: neck, about, clonable
+
+ 20 AC-apply, +6 SAVING_SPELL, +6 HITROLL, +6 MANA_REGEN, PROTECT_GOOD, PROTECT_EVIL
+
+ no specs
+
+A witch's broom: hold, boat
+
+ -33 ARMOR, +19 MANA_REGEN, +6 DAMROLL
+
+ no specs
+
+ a lance tipped with a mammoth's tusk: wield, pierce, 8d5
+
+ +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-EVIL
+
+ no specs
+
+ Note: Mages and Clerics cannot use this sharp weapon.
+
+Leviathan's scale vambraces: arms
+
+ 25 AC-apply, +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-GOOD
+
+ no specs
+
+See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP BOTTOM" "RP SPECIAL"
+
+#
+"RP BOTTOM"
+
+Each of these items may be purchased for 150 RP 
+
+They have no class or alignment restrictions.
+
+Item Name : Wear Location
+
+Specs:
+
+Winner's Necklace: neck, 15 AC-apply, +5 HITROLL, +50 HP
+
+Schynbalds of the Kobold Lord: legs, 20 AC-apply, +4 DAMROLL, +1 HITROLL, INFRAVISION
+
+Spaulders of the Gargoyles: arms, 15 AC-apply, +4 DAMROLL, +2 HITROLL, FLY
+
+a ghost glaive: hold (type THROW),+6 DAMROLL, +6 HITROLL, +15 SKILL_THROW, 6d66
+
+a Giant Armadillo Hauberk: body, 23 AC-apply, +2 DAMROLL, +50 HP, +50 MANA, SENSE-LIFE
+
+a hedgehog-hide skullcap: helm, 15 AC-apply, +3 DAMROLL, +3 HITROLL, DETECT-ALIGN
+
+a plated belt of platypus bills: waist, 25 AC-apply, +3 DAMROLL, -100 HP, FLY
+
+a crucified nomad: shield, 25 AC-apply, +2 DAMROLL, +100 HP, +50 HP_REGEN 
+
+Dalmatic of the bloodthirsty voivode: about, 40, AC-apply +3 HITROLL, +4 DAMROLL, DETECT-INVIS
+
+See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP MIDDLE" "RP SPECIAL"
+
+#
+"RP SPECIAL"
+
+Each of these items are special and have multiple specs.
+
+They each have their own cost but have no other restrictions.
+
+Cowl of the Shadowmage
+
+worn on head
+
+5 AC-Apply
++5 DAMROLL
++5 HITROLL
++5 MANA_REGEN (or +25 HP_REGEN)
+
+SENSE LIFE, DETECT ALIGN
+
+Spec: stores up to 3 charges for "bite" command
+......harvest <target> (PC): steals 200 mana
+......harvest <target> (NPC): mira self, 500dmg to target (uses all 3 charges)
+......Charges each take 1/2 mud day to recharge
+
+Cost: 250 RP + 2 QT
+
+
+The Spiked Gauntlet of Gruumsh
+
+worn on hands
+
+25 AC-Apply
++6 DAMROLL
++6 HITROLL
++5 MANA_REGEN (or +25 HP_REGEN)
+DETECT-INVISIBLE
+
+Spec: 15% chance on successful pummel to set victim's position to
+......mortally wounded instead of stunned, meaning the following
+......hit has a 2.5x multiplier instead of just 2x
+
+Cost: 350 RP + 2 QT
+
+Phylactery of the Bean-Sidhe
+
+worn about waist
+
+10 AC-apply
++4 DAMROLL
++2 HITROLL
++5 MANA_REGEN (or +25 HP_REGEN)
+INFRAVISION, FLY
+
+Spec: stores up to 3 charges for "wail" command
+......wail: hits all mobs in room for 333dmg and makes wailer tank
+......Charges each take 1/2 mud day to recharge
+
+Cost: 250 RP + 2 QT
+
+The Desiccated Proximal Phalanx of Enlil
+  OR
+The Desiccated Proximal Phalanx of Anu
+
+Worn on finger
+
++5 DAMROLL
++5 HITROLL
++5 MANA_REGEN (or +25 HP_REGEN)
+FLY
+
+Spec: has 3 charges, on 'twist' a charge is expended and each character
+......in the room has a random one of the following spells cast on
+......them (PCs only): haste, fury (2 tick), miracle, 3x heal.
+......Charges take one mud day to replenish.
+
+Cost: 150 RP + 2 QT
+
+
+Shabtis of the mummified pharoah
+
+worn about waist
+
+0 AC-Apply
++5 DAMROLL
++5 HITROLL
+-20 AC-AFFECT
+DETECT INVIS, SENSE LIFE, INFRAVISION
+
+Specs: Four shabti figures that each perform a specific task (triggered on use)
+......Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
+......Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
+......Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
+......Soldier (Waw): Summons an army that does 6,000 damage to current target 
+	- Takes 1 mud week to recharge
+
+Cost: 450 RP + 2 QT
+
+See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP MIDDLE" "RP BOTTOM"
 #~
+
