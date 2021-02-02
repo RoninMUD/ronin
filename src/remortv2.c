@@ -532,7 +532,7 @@ long long int rv2_meta_sim(CHAR *ch)
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Remort v2 EXP Pool....... %lld\n\r", GET_REMORT_EXP(sim));
+  sprintf(buf, "Remort v2 EXP Pool....... %ld\n\r", GET_REMORT_EXP(sim));
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
