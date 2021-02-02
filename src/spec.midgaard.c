@@ -5250,7 +5250,7 @@ int teller(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       GET_GOLD(ch) -= coins;
       GET_BANK(ch) += coins;
 
-      printf_to_char(ch, "You deposit %lld coins.\n\r", coins);
+      printf_to_char(ch, "You deposit %ld coins.\n\r", coins);
     }
 
     return TRUE;
@@ -5270,7 +5270,7 @@ int teller(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       GET_BANK(ch) -= coins;
       GET_GOLD(ch) += coins;
 
-      printf_to_char(ch, "You withdraw %lld coins.\n\r", coins);
+      printf_to_char(ch, "You withdraw %ld coins.\n\r", coins);
     }
 
     return TRUE;

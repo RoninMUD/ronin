@@ -237,6 +237,8 @@ int test_char(char *name, char *pwd) {
   char tmp_name[50];
   int version;
 
+  size_t sz = 0;
+
   snprintf(tmp_name,sizeof(tmp_name),"%s",name);
   string_to_lower(tmp_name);
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
@@ -253,28 +255,30 @@ int test_char(char *name, char *pwd) {
   switch(version) {
     case 2:
       if((fread(&char_data_2,sizeof(struct char_file_u_2),1,fl))!=1)
-      {log_s("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading (test_char)");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_2.pwd);
       fclose(fl);
       return(char_data_2.level);
       break;
     case 3:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_s("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading (test_char)");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_4.pwd);
       fclose(fl);
       return(char_data_4.level);
       break;
     case 4:
       if((fread(&char_data_4,sizeof(struct char_file_u_4),1,fl))!=1)
-      {log_s("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading (test char)");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_4.pwd);
       fclose(fl);
       return(char_data_4.level);
       break;
     case 5:
+      sz = sizeof(struct char_file_u_5);
+      log_f("Size of char_file_u_5 = %zx", sz);
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
-      {log_s("Error Reading");fclose(fl);return (-1);}
+      {log_s("Error Reading (test char)");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_5.pwd);
       fclose(fl);
       return(char_data_5.level);
@@ -1815,8 +1819,8 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
 
   for(af = ch->affected, i = 0; i<MAX_AFFECT; i++) {
     if (af) {
-      st->affected[i] = *af;
-      st->affected[i].next = 0;
+      st->affected[i] = *((struct affected_type_5_pfile*)af);
+      st->affected[i].dummy = 0;
       /* subtract effect of the spell or the effect will be doubled */
       affect_modify( ch, st->affected[i].location,
                          st->affected[i].modifier,
@@ -1830,7 +1834,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
       st->affected[i].location = 0;
       st->affected[i].bitvector = 0;
       st->affected[i].bitvector2 = 0;
-      st->affected[i].next = 0;
+      st->affected[i].dummy = 0;
     }
   }
 
@@ -1842,7 +1846,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
       st->enchantments[i].location = af2->location;
       st->enchantments[i].bitvector = af2->bitvector;
       st->enchantments[i].bitvector2 = af2->bitvector2;
-      st->enchantments[i].next = 0;
+      st->enchantments[i].dummy = 0;
       /* subtract effect of the spell or the effect will be doubled */
       affect_modify( ch, st->enchantments[i].location,
                          st->enchantments[i].modifier,
@@ -1856,7 +1860,7 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
       st->enchantments[i].location = 0;
       st->enchantments[i].bitvector = 0;
       st->enchantments[i].bitvector2 = 0;
-      st->enchantments[i].next = 0;
+      st->enchantments[i].dummy = 0;
     }
   }
 

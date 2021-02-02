@@ -6,16 +6,19 @@
 #ifndef __STRUCTS_H__
 #define __STRUCTS_H__
 
-#include <sys/types.h>
-#include <dmalloc.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <time.h>
+
+#pragma pack (push, 4)
 
 /* Typedefs */
-typedef char bool;
-typedef char byte;
-typedef signed char sbyte;
-typedef unsigned char ubyte;
-typedef signed short int sh_int;
-typedef unsigned short int ush_int;
+typedef int8_t bool;
+typedef int8_t byte;
+typedef int8_t sbyte;
+typedef uint8_t ubyte;
+typedef int16_t sh_int;
+typedef uint16_t ush_int;
 
 typedef struct descriptor_data    DESC;
 typedef struct follow_type        FOL;
@@ -1030,7 +1033,6 @@ struct char_player_data
   ubyte height;       /* PC / NPC s height                    */
 };
 
-
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_ability_data
 {
@@ -1053,9 +1055,9 @@ struct char_point_data_pfile
   sh_int max_move;     /* Max move for NPC                        */
 
   sh_int armor;        /* Internal -100..100, external -10..10 AC */
-  int gold;            /* Money carried                           */
-  int exp;             /* The experience of the player            */
-  int bank;
+  int32_t gold;            /* Money carried                           */
+  int32_t exp;             /* The experience of the player            */
+  int32_t bank;
 
   sbyte hitroll;       /* Any bonus or penalty to the hit roll    */
   sbyte damroll;       /* Any bonus or penalty to the damage roll */
@@ -1173,47 +1175,48 @@ struct char_skill_data
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_new_data
 {
-  int wizinv;
-  int wimpy;
-  int killed;
-  int been_killed;
+  int32_t wizinv;
+  int32_t wimpy;
+  int32_t  killed;
+  int32_t been_killed;
   char host[50];
-  unsigned long prompt;
-  int imm_flags;
+  uint32_t prompt;
+  int32_t imm_flags;
 };
 
 /* As these get used, update to store_to_char_2 in reception */
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_ver3_data {
-  int death_limit;
-  int bleed_limit;
-  int ranking; /* How char compares with others */
-  int quest_points;
+  int32_t death_limit;
+  int32_t bleed_limit;
+  int32_t ranking; /* How char compares with others */
+  int32_t quest_points;
   byte clan_num;
   byte house_num; /* Not used yet */
   byte race; /* Not used yet */
   char email_addr[80]; /* Ranger Dec 03 */
-  unsigned long long toggles; /* Toggles */
-  unsigned long extra_bitvect; /* Not used yet */
+  uint64_t toggles; /* Toggles */
+  uint32_t extra_bitvect; /* Not used yet */
   byte extra_byte[5]; /* Not used yet */
   byte affect_style;
   ubyte rank;
   ubyte prestige;
   ubyte who_filter; /* Filters specified for 'who' output. */
   byte sc_style; /* Which score style to display - Ranger Sept 2000 */
-  int created; /* Date of creation mmddyyyy - Ranger June 98 */
-  int subclass;
-  int subclass_level;
-  int subclass_points;
-  int time_to_quest; /* Ranger Feb 99 */
-  int id; /* Ranger - Sep 00 */
-  int death_timer; /* Used for imminent death */
-  long long remort_exp; /* Remort EXP Pool */
-  unsigned long death_exp; /* Death Pool */
+  int32_t created; /* Date of creation mmddyyyy - Ranger June 98 */
+  int32_t subclass;
+  int32_t subclass_level;
+  int32_t subclass_points;
+  int32_t time_to_quest; /* Ranger Feb 99 */
+  int32_t id; /* Ranger - Sep 00 */
+  int32_t death_timer; /* Used for imminent death */
+  int64_t remort_exp; /* Remort EXP Pool */
+  uint32_t death_exp; /* Death Pool */
 };
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 
+#if 0
 struct enchantment_type_4 /* All pfile versions up to 4 */
 {
   char   *name;        /* Used to keep track of the enchantment.
@@ -1229,6 +1232,7 @@ struct enchantment_type_4 /* All pfile versions up to 4 */
   int    (*func)(struct enchantment_type_4 *enchantment,struct char_data *ch, struct char_data *other, int CMD, char* arg);
   struct enchantment_type_4 *next;
 };
+#endif
 
 /* Version 5 pfile */
 struct affected_type_5
@@ -1242,6 +1246,17 @@ struct affected_type_5
   struct affected_type_5 *next;
 };
 
+struct affected_type_5_pfile
+{
+  int32_t type;            /* The type of spell that caused this      */
+  sh_int duration;      /* For how long its effects will last      */
+  sbyte modifier;       /* This is added to apropriate ability     */
+  byte location;        /* Tells which ability to change(APPLY_XXX)*/
+  int32_t bitvector;       /* Tells which bits to set (AFF_XXX)       */
+  int32_t bitvector2;       /* Tells which bits to set (AFF_XXX)       */
+  uint32_t dummy;
+};
+
 /* Version 3 & 4 pfile - current affected type */
 struct affected_type_4
 {
@@ -1250,7 +1265,7 @@ struct affected_type_4
   sbyte modifier;       /* This is added to apropriate ability     */
   byte location;        /* Tells which ability to change(APPLY_XXX)*/
   long bitvector;       /* Tells which bits to set (AFF_XXX)       */
-  struct affected_type_4 *next;
+  uint32_t dummy; //  struct affected_type_4 *next;
 };
 
 /* Version 2 pfile affected type */
@@ -1261,8 +1276,9 @@ struct affected_type_2
   sbyte modifier;       /* This is added to apropriate ability     */
   byte location;        /* Tells which ability to change(APPLY_XXX)*/
   long bitvector;       /* Tells which bits to set (AFF_XXX)       */
-  struct affected_type_2 *next;
+  uint32_t dummy; //struct affected_type_2 *next;
 };
+
 
 /* ================== Structure for player/non-player ===================== */
 
@@ -1371,13 +1387,13 @@ struct death_file_check {
 
 struct death_file_u
 {
-  int number;
+  int32_t number;
   char name[20];
-  long time_death;
-  sh_int location;
+  int32_t time_death;
+  int16_t location;
   byte level;
-  int gold;
-  int exp;
+  int32_t gold;
+  int32_t exp;
   sh_int hp;
   sh_int mana;
   sh_int move;
@@ -1436,11 +1452,11 @@ struct obj_file_elem_ver0
 {
   sh_int item_number;
 
-  int value[MAX_OBJ_VALUE];
-  int extra_flags;
-  int weight;
-  int timer;
-  long bitvector;
+  int32_t value[MAX_OBJ_VALUE];
+  int32_t extra_flags;
+  int32_t weight;
+  int32_t timer;
+  int32_t bitvector;
   struct obj_affected_type_ver0 affected[OFILE_MAX_OBJ_AFFECT];
   byte position;
 };
@@ -1451,16 +1467,16 @@ struct obj_file_elem_ver1
   sh_int item_number;
 
   ubyte type_flag; /* new saveable */
-  int value[MAX_OBJ_VALUE];
-  int wear_flags; /* new saveable */
-  int extra_flags;
-  int extra_flags2; /* new saveable */
-  int subclass_res; /* new saveable */
-  int weight;
-  int timer;
-  int material; /* new saveable */
-  long bitvector;
-  int spec_value; /* new saveable OBJ_SPEC() */
+  int32_t value[MAX_OBJ_VALUE];
+  int32_t wear_flags; /* new saveable */
+  int32_t extra_flags;
+  int32_t extra_flags2; /* new saveable */
+  int32_t subclass_res; /* new saveable */
+  int32_t weight;
+  int32_t timer;
+  int32_t material; /* new saveable */
+  int32_t bitvector;
+  int32_t spec_value; /* new saveable OBJ_SPEC() */
   struct obj_affected_type affected[MAX_OBJ_AFFECT]; /* new saveable */
   byte position;
 };
@@ -1471,17 +1487,17 @@ struct obj_file_elem_ver2
   sh_int item_number;
 
   ubyte type_flag; /* new saveable */
-  int value[MAX_OBJ_VALUE];
-  int ownerid[8];  /* Owner Ids */
-  int wear_flags; /* new saveable */
-  int extra_flags;
-  int extra_flags2; /* new saveable */
-  int subclass_res; /* new saveable */
-  int weight;
-  int timer;
-  int material; /* new saveable */
-  long bitvector;
-  int spec_value; /* new saveable OBJ_SPEC() */
+  int32_t value[MAX_OBJ_VALUE];
+  int32_t ownerid[8];  /* Owner Ids */
+  int32_t wear_flags; /* new saveable */
+  int32_t extra_flags;
+  int32_t extra_flags2; /* new saveable */
+  int32_t subclass_res; /* new saveable */
+  int32_t weight;
+  int32_t timer;
+  int32_t material; /* new saveable */
+  int32_t bitvector;
+  int32_t spec_value; /* new saveable OBJ_SPEC() */
   struct obj_affected_type affected[MAX_OBJ_AFFECT]; /* new saveable */
   byte position;
 };
@@ -1492,20 +1508,20 @@ struct obj_file_elem_ver3 /* Addition of bitvector2  */
   sh_int item_number;
 
   ubyte type_flag;
-  int value[MAX_OBJ_VALUE];
-  int ownerid[MAX_OBJ_OWNER_ID];
-  int wear_flags;
-  int extra_flags;
-  int extra_flags2;
-  int subclass_res;
-  int weight;
-  int timer;
-  int material;
-  long bitvector;
-  long bitvector2;
-  int spec_value;
+  int32_t value[MAX_OBJ_VALUE];
+  int32_t ownerid[MAX_OBJ_OWNER_ID];
+  int32_t wear_flags;
+  int32_t extra_flags;
+  int32_t extra_flags2;
+  int32_t subclass_res;
+  int32_t weight;
+  int32_t timer;
+  int32_t material;
+  int32_t bitvector;
+  int32_t bitvector2;
+  int32_t spec_value;
   struct obj_affected_type affected[MAX_OBJ_AFFECT];
-  int popped;
+  int32_t popped;
   byte unused[116];
   byte position;
 };
@@ -1535,8 +1551,8 @@ struct char_file_u_5
   byte sex;
   byte class;
   byte level;
-  time_t birth;  /* Time of birth of character     */
-  int played;    /* Number of secs played in total */
+  uint32_t birth; //time_t birth;  /* Time of birth of character     */
+  int32_t played;    /* Number of secs played in total */
 
   ubyte weight;
   ubyte height;
@@ -1547,7 +1563,7 @@ struct char_file_u_5
   char poofin[150];
   char poofout[150];
   bool talks[MAX_TONGUE];
-  int colors[MAX_COLORS];
+  int32_t colors[MAX_COLORS];
   sh_int load_room;            /* Which room to place char in           */
 
   struct char_ability_data abilities;
@@ -1559,24 +1575,24 @@ struct char_file_u_5
 
   struct char_skill_data skills[MAX_SKILLS5];
 
-  struct affected_type_5 affected[MAX_AFFECT];
-  struct affected_type_5 enchantments[MAX_AFFECT];
+  struct affected_type_5_pfile affected[MAX_AFFECT];
+  struct affected_type_5_pfile enchantments[MAX_AFFECT];
   /* specials */
 
   byte spells_to_learn;
-  int alignment;
+  int32_t alignment;
 
-  time_t last_logon;  /* Time (in secs) of last logon */
-  unsigned long pflag;          /* PLR Flags                    */
+  int32_t last_logon; //time_t last_logon;  /* Time (in secs) of last logon */
+  uint32_t pflag;          /* PLR Flags                    */
 
   /* char data */
   char name[20];
   char pwd[11];
   sh_int apply_saving_throw[5];
-  int conditions[3];
+  int32_t conditions[3];
 
-  int total_cost;    /* The cost for all items, per day    */
-  long last_update;  /* Time in seconds, when last updated */
+  int32_t total_cost;    /* The cost for all items, per day    */
+  int32_t last_update;  /* Time in seconds, when last updated */
 };
 
 /* Versions 3 & 4 */
@@ -1586,8 +1602,8 @@ struct char_file_u_4
   byte sex;
   byte class;
   byte level;
-  time_t birth;  /* Time of birth of character     */
-  int played;    /* Number of secs played in total */
+  int32_t birth; //time_t birth;  /* Time of birth of character     */
+  int32_t played;    /* Number of secs played in total */
 
   ubyte weight;
   ubyte height;
@@ -1598,7 +1614,7 @@ struct char_file_u_4
   char poofin[150];
   char poofout[150];
   bool talks[MAX_TONGUE];
-  int colors[MAX_COLORS];
+  int32_t colors[MAX_COLORS];
   sh_int load_room;            /* Which room to place char in           */
 
   struct char_ability_data abilities;
@@ -1615,19 +1631,19 @@ struct char_file_u_4
   /* specials */
 
   byte spells_to_learn;
-  int alignment;
+  int32_t alignment;
 
-  time_t last_logon;  /* Time (in secs) of last logon */
-  unsigned long pflag;          /* PLR Flags                    */
+  int32_t last_logon;  //time_t last_logon;  /* Time (in secs) of last logon */
+  uint32_t pflag;          /* PLR Flags                    */
 
   /* char data */
   char name[20];
   char pwd[11];
   sh_int apply_saving_throw[5];
-  int conditions[3];
+  int32_t conditions[3];
 
-  int total_cost;    /* The cost for all items, per day    */
-  long last_update;  /* Time in seconds, when last updated */
+  int32_t total_cost;    /* The cost for all items, per day    */
+  int32_t last_update;  /* Time in seconds, when last updated */
 };
 
 /* Char file version 2 - Superceeded May 97 - Ranger */
@@ -1636,8 +1652,8 @@ struct char_file_u_2
   byte sex;
   byte class;
   byte level;
-  time_t birth;  /* Time of birth of character     */
-  int played;    /* Number of secs played in total */
+  int32_t birth; //time_t birth;  /* Time of birth of character     */
+  int32_t played;    /* Number of secs played in total */
 
   ubyte weight;
   ubyte height;
@@ -1648,8 +1664,8 @@ struct char_file_u_2
   char poofin[150];
   char poofout[150];
   bool talks[MAX_TONGUE];
-  int colors[MAX_COLORS];
-  int special[10];
+  int32_t colors[MAX_COLORS];
+  int32_t special[10];
 
   sh_int load_room;            /* Which room to place char in           */
 
@@ -1667,19 +1683,19 @@ struct char_file_u_2
   /* specials */
 
   byte spells_to_learn;
-  int alignment;
+  int32_t alignment;
 
-  time_t last_logon;  /* Time (in secs) of last logon */
-  unsigned long pflag;          /* PLR Flags                    */
+  int32_t last_logon; //time_t last_logon;  /* Time (in secs) of last logon */
+  uint32_t pflag;          /* PLR Flags                    */
 
   /* char data */
   char name[20];
   char pwd[11];
   sh_int apply_saving_throw[5];
-  int conditions[3];
+  int32_t conditions[3];
 
-  int total_cost;    /* The cost for all items, per day    */
-  long last_update;  /* Time in seconds, when last updated */
+  int32_t total_cost;    /* The cost for all items, per day    */
+  int32_t last_update;  /* Time in seconds, when last updated */
 };
 
 /* ***********************************************************
@@ -1915,5 +1931,7 @@ struct mob_proto
   int loads; /* # items loaded */
   int (*func)(struct char_data*, struct char_data*, int, char*);
 };
+
+#pragma pack (pop)
 
 #endif /* __STRUCTS_H__ */

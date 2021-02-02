@@ -846,7 +846,7 @@ void spell_enchant_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     };
 
     if (NUMELEMS(enchant_weapon_table) < 3) {
-      log_f("WARNING :: spell_enchant_weapon() :: enchant_weapon_table[] has too few elements (%d)", NUMELEMS(enchant_weapon_table));
+      log_f("WARNING :: spell_enchant_weapon() :: enchant_weapon_table[] has too few elements (%lu)", NUMELEMS(enchant_weapon_table));
 
       return;
     }

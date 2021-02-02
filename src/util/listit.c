@@ -19,12 +19,13 @@ $State: Exp $
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void display_usage(void);
 
 int line;
 
-main( int argc, char *argv[] )
+int main( int argc, char *argv[] )
 {
   char buf[256];
   FILE *fp;

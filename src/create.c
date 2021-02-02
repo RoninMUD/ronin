@@ -8060,7 +8060,7 @@ void do_cmdlist(CHAR *ch, char *argument, int cmd) {
         break;
 
       default:
-        sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",(int)zone, (int)cmd_no);
+        sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",zone->virtual, (int)cmd_no);
         append_to_string_block(&sb,buf);
         break;
     }
