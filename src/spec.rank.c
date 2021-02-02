@@ -25,19 +25,23 @@
 
 #define RANK_BOARD_DAYS  (365*SECS_PER_REAL_DAY)
 
+#pragma pack (push, 4)
+
 struct rank_struct
 {
   char name[20];
-  int ranking;
+  int32_t ranking;
   byte level;
   byte sc_level;
   sh_int hp;
   sh_int mana;
-  long update_time;
-  int clan;
+  int32_t update_time;
+  int32_t clan;
 };
 
 struct rank_struct rank_board[11][15];
+
+#pragma pack (pop)
 
 void reset_rank_boards (void) {
   int i,j;

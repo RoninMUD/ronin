@@ -3246,13 +3246,13 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 
      if (GET_REMORT_EXP(k))
      {
-       sprintf(buf, "Remort Exp: [%lld]\n\r", GET_REMORT_EXP(k));
+       sprintf(buf, "Remort Exp: [%ld]\n\r", GET_REMORT_EXP(k));
        send_to_char(buf, ch);
      }
 
      if (GET_DEATH_EXP(k))
      {
-       sprintf(buf, "Death Exp: [%lu]\n\r", GET_DEATH_EXP(k));
+       sprintf(buf, "Death Exp: [%u]\n\r", GET_DEATH_EXP(k));
        send_to_char(buf, ch);
      }
 
@@ -6441,7 +6441,7 @@ void show_zone_to_char(CHAR *ch, int zoneNum)
 
        default:
          sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",
-              (int)zone, (int)cmd_no);
+              zone->virtual, (int)cmd_no);
          append_to_string_block(&sb,buf);
          break;
        }
@@ -7098,6 +7098,7 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
   char name[30],deaths[50];
   int num,dflag,fail=0,found=0;
   char *tmstr;
+  time_t time_temp;
 
   if(!check_god_access(ch,FALSE)) return;
 
@@ -7157,7 +7158,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
             fclose(fl);
             return;
           }
-          tmstr = asctime(localtime(&dfile.time_death));
+          time_temp = (time_t)dfile.time_death;
+          tmstr = asctime(localtime(&time_temp));
           *(tmstr + strlen(tmstr) - 1) = '\0';
           if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
           else strncpy(buf2,"Unknown",sizeof(buf2));
@@ -7234,7 +7236,8 @@ Usage: `kdlist`q <name> <death #> or.\n\r\
         }
         if(num==dfile.number) {
           found=TRUE;
-          tmstr = asctime(localtime(&dfile.time_death));
+          time_temp = (time_t)dfile.time_death;
+          tmstr = asctime(localtime(&time_temp));
           *(tmstr + strlen(tmstr) - 1) = '\0';
           if(real_room(dfile.location)!=-1) strncpy(buf2,world[real_room(dfile.location)].name,sizeof(buf2));
           else strncpy(buf2,"Unknown",sizeof(buf2));

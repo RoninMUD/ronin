@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
           sprintf(filename,"%s.name",name);
           if(!(fd2=fopen(filename,"r"))) {
             sprintf(buf,"Error: %s doesn't exist.\n\r",filename);
-            printf(buf);
+            printf("%s",buf);
             exit(0);
           }
           changed=0;

@@ -43,15 +43,16 @@ $State: Exp $
 #include <sys/signal.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 extern	char **environ;
 extern	int errno;
 char	*Name;			/* name of this program for error messages */
 char	msg[2048];
 
-int
-  main(argc, argv)
-char *argv[];
+int main(int argc, char* argv[])
 {
   int s, ns, foo, opt, n;
   static struct sockaddr_in sin = { AF_INET };
@@ -70,7 +71,7 @@ char *argv[];
   strcpy(msg, "");
   strcpy(tmp, "");
   while (1) {
-    if ((gets(tmp)) == NULL) break;
+    if ((fgets(tmp, sizeof(tmp), stdin)) == NULL) break;
     strcat(tmp, "\r\n");
     strcat(msg, tmp);
   }
@@ -83,7 +84,7 @@ char *argv[];
   }
   opt = 1;
   setsockopt(s,SOL_SOCKET, SO_REUSEADDR, (char *) &opt, sizeof(opt));
-  if (bind(s, &sin, sizeof sin) < 0) {
+  if (bind(s, (struct sockaddr *)&sin, sizeof sin) < 0) {
     perror("bind");
     exit(1);
   }
@@ -102,7 +103,7 @@ char *argv[];
   }
   foo = sizeof sin;
   for(;;) {	/* loop forever, accepting requests & printing msg */
-    ns = accept(s, &sin, &foo);
+    ns = accept(s, (struct sockaddr *)&sin, &foo);
     if (ns < 0) {
       perror("announce: accept");
       exit(1);

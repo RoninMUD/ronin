@@ -212,7 +212,7 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
   char tmp_str[MSL];
 
   if (board->vnumber == FEEDBACK_BOARD)
-    snprintf(tmp_str, sizeof(tmp_str), "(%*c) %s : %s", strlen(ch_name), ' ', tm_str, arg);
+    snprintf(tmp_str, sizeof(tmp_str), "(%*c) %s : %s", (int)strlen(ch_name), ' ', tm_str, arg);
   else
     snprintf(tmp_str, sizeof(tmp_str), "(%s) %s : %s", ch_name, tm_str, arg);
 

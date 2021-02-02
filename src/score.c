@@ -438,7 +438,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
         CHCLR(ch, 7), ENDCHCLR(ch));
     break;
   case SCQ_REMORT_EXP:
-    sprintf(buf, "%sRemort XP:%s %-13lld",
+    sprintf(buf, "%sRemort XP:%s %-13ld",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_REMORT_EXP(ch));
     break;
   case SCQ_REMORT_MULT:
@@ -446,7 +446,7 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
       CHCLR(ch, 7), ENDCHCLR(ch), rv2_calc_remort_mult(ch));
     break;
   case SCQ_DEATH_EXP:
-    sprintf(buf, "%sDeath XP:%s %-13lu",
+    sprintf(buf, "%sDeath XP:%s %-13u",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch));
     break;
   case SCQ_GOLD:
@@ -938,12 +938,12 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, " %sArmor Class:%s %+-13d ",
       CHCLR(ch, 7), ENDCHCLR(ch), calc_ac(ch));
-    printf_to_char(ch, "     %sRemort XP:%s %lld (%dx)\n\r",
+    printf_to_char(ch, "     %sRemort XP:%s %ld (%dx)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
 
     printf_to_char(ch, " %sWimpy Limit:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_WIMPY(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu (%dx)\n\r",
+    printf_to_char(ch, "%sDeath XP:%s %u (%dx)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch), calc_death_exp_mult(ch));
 
     printf_to_char(ch, " %sBleed Limit:%s %-13d   ",
@@ -1221,13 +1221,13 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     if (GET_REMORT_EXP(ch))
     {
-      printf_to_char(ch, "You have %lld remort experience to re-earn at a %dx multiplier.\n\r",
+      printf_to_char(ch, "You have %ld remort experience to re-earn at a %dx multiplier.\n\r",
         GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
     }
 
     if (GET_DEATH_EXP(ch))
     {
-      printf_to_char(ch, "You have %lu death experience to re-earn at a %dx multiplier.\n\r",
+      printf_to_char(ch, "You have %u death experience to re-earn at a %dx multiplier.\n\r",
         GET_DEATH_EXP(ch), calc_death_exp_mult(ch));
     }
 
@@ -1432,12 +1432,12 @@ void do_score(CHAR *ch, char *argument, int cmd)
 
     printf_to_char(ch, "%sSubclass Pts:%s %-13d      ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_SCP(ch));
-    printf_to_char(ch, "%sRemort XP:%s %lld (%dx)\n\r",
+    printf_to_char(ch, "%sRemort XP:%s %ld (%dx)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_REMORT_EXP(ch), rv2_calc_remort_mult(ch));
 
     printf_to_char(ch, "%sQuest Points:%s %-13d       ",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_QP(ch));
-    printf_to_char(ch, "%sDeath XP:%s %lu (%dx)\n\r",
+    printf_to_char(ch, "%sDeath XP:%s %u (%dx)\n\r",
       CHCLR(ch, 7), ENDCHCLR(ch), GET_DEATH_EXP(ch), calc_death_exp_mult(ch));
 
     printf_to_char(ch, "%sAge in Years:%s %-13d ",

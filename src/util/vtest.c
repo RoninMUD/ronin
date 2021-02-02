@@ -75,11 +75,11 @@ void read_obj_store_ver0 (FILE *fl,char *name) {
   /* Print out the object stats and free the memory */
 
   if (object.item_number)
-    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10ld\tAP(%-2d %d/%-2d %d)\r\n",
+    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10d\tAP(%-2d %d/%-2d %d)\r\n",
 	    name,object.item_number,
 	    object.value[0],object.value[1],object.value[2],object.value[3],
 	    object.extra_flags,
-	    (long)object.bitvector,
+	    object.bitvector,
 	    object.affected[0].location,
 	    object.affected[0].modifier,
 	    object.affected[1].location,
@@ -95,11 +95,11 @@ void read_obj_store_ver1(FILE *fl,char *name) {
   /* Print out the object stats and free the memory */
 
   if (object.item_number)
-    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10ld\tAP(%-2d %d/%-2d %d)\r\n",
+    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10d\tAP(%-2d %d/%-2d %d)\r\n",
 	    name,object.item_number,
 	    object.value[0],object.value[1],object.value[2],object.value[3],
 	    object.extra_flags,
-	    (long)object.bitvector,
+	    object.bitvector,
 	    object.affected[0].location,
 	    object.affected[0].modifier,
 	    object.affected[1].location,
@@ -115,11 +115,11 @@ void read_obj_store_ver2(FILE *fl,char *name) {
   /* Print out the object stats and free the memory */
 
   if (object.item_number)
-    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10ld\tAP(%-2d %d/%-2d %d)\r\n",
+    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10d\tAP(%-2d %d/%-2d %d)\r\n",
 	    name,object.item_number,
 	    object.value[0],object.value[1],object.value[2],object.value[3],
 	    object.extra_flags,
-	    (long)object.bitvector,
+	    object.bitvector,
 	    object.affected[0].location,
 	    object.affected[0].modifier,
 	    object.affected[1].location,
@@ -135,11 +135,11 @@ void read_obj_store_ver3(FILE *fl,char *name) {
   /* Print out the object stats and free the memory */
 
   if (object.item_number)
-    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10ld\tAP(%-2d %d/%-2d %d)\r\n",
+    printf ("(%s) #%-5d V(%d %d %d %d)\tE%-10d\tB%-10d%-10d\tAP(%-2d %d/%-2d %d)\r\n",
 	    name,object.item_number,
 	    object.value[0],object.value[1],object.value[2],object.value[3],
 	    object.extra_flags,
-	    (long)object.bitvector,(long)object.bitvector2,
+	    object.bitvector,object.bitvector2,
 	    object.affected[0].location,
 	    object.affected[0].modifier,
 	    object.affected[1].location,

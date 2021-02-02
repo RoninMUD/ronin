@@ -60,7 +60,6 @@ $State: Exp $
 #include <arpa/inet.h>
 #include <string.h>
 #include <sys/types.h>
-#include <dmalloc.h>
 #define MAX_STRING 4096
 
 pid_t child_PID;

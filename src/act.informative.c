@@ -2255,10 +2255,10 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       }
       else {
         snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-          longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
+          (int)longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
       }
 
-      printf_to_char(ch, "Skill/Spell: %-*s %s\n\r", longest_str + 2, buf, buf2);
+      printf_to_char(ch, "Skill/Spell: %-*s %s\n\r", (int)(longest_str + 2), buf, buf2);
 
       long bits = aff_list[i].bits, bits2 = aff_list[i].bits2;
 
@@ -2322,25 +2322,25 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       }
       else if (aff_list[i].interval == ENCH_INTERVAL_TICK) {
         snprintf(buf2, sizeof(buf2), "Expires in: %*d Tick%s",
-          longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
+          (int)longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
       }
       else if (aff_list[i].interval == ENCH_INTERVAL_MOBACT) {
         snprintf(buf2, sizeof(buf2), "Expires in: ~%*d Seconds",
-          longest_dur < 2 ? longest_dur : longest_dur - 1, aff_list[i].duration * 10);
+          (int)(longest_dur < 2 ? longest_dur : longest_dur - 1), aff_list[i].duration * 10);
       }
       else if (aff_list[i].interval == ENCH_INTERVAL_ROUND) {
         snprintf(buf2, sizeof(buf2), "Expires in: %*d Round%s",
-          longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
+          (int)longest_dur, aff_list[i].duration, ((aff_list[i].duration != 1) ? "s" : ""));
       }
       else if (aff_list[i].interval == ENCH_INTERVAL_USER) {
         snprintf(buf2, sizeof(buf2), "Expires in: %*d",
-          longest_dur, aff_list[i].duration);
+          (int)longest_dur, aff_list[i].duration);
       }
       else {
         buf2[0] = '\0';
       }
 
-      printf_to_char(ch, "Enchantment: %-*s %s\n\r", longest_str + 2, buf, buf2);
+      printf_to_char(ch, "Enchantment: %-*s %s\n\r", (int)(longest_str + 2), buf, buf2);
 
       long bits = aff_list[i].bits, bits2 = aff_list[i].bits2;
 
@@ -2392,7 +2392,7 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
       snprintf(buf, sizeof(buf), "'%s'", aff_list[i].name);
 
       printf_to_char(ch, "Equipment:%s %-*s\n\r",
-        (ch->affected || ch->enchantments) ? "  " : "", longest_str + 2, buf);
+        (ch->affected || ch->enchantments) ? "  " : "", (int)(longest_str + 2), buf);
 
       eq_printed = TRUE;
     }
@@ -3037,7 +3037,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
       p = strchr(who_switch, '-');
 
       if (p) {
-        snprintf(buf2, sizeof(buf2), "%.*s", strcspn(who_switch, "-"), who_switch);
+        snprintf(buf2, sizeof(buf2), "%.*s", (int)strcspn(who_switch, "-"), who_switch);
 
         min_level = MAX(1, atoi(buf2));
         max_level = MIN(LEVEL_IMP, atoi(p + 1));
