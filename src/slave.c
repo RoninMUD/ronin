@@ -193,7 +193,7 @@ int query( char *orig_arg )
 
 int iptoname( char *arg )
 {
-    unsigned long addr;
+    uint32_t addr;
     struct hostent *hp;
     char buf[ MAX_STRING ];
 

@@ -1766,7 +1766,7 @@ struct descriptor_data
   char host[50];                /* hostname                   */
   char userid[50];              /* hostname                   */
   int  port;
-  int  addr;
+  uint32_t addr;
   char pwd[12];                 /* password                   */
   char wizinfo;                 /* wizinfo level              */
   int free_rent;
