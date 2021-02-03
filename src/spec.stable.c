@@ -176,11 +176,13 @@ int stable_boy(CHAR *stboy, CHAR *ch, int cmd, char *arg) {
      if (*mount_name) {
         sprintf(buf,"%s %s", MOB_NAME(mount),mount_name);
         free(mount->player.name);
+        mount->player.name = NULL;
         mount->player.name = str_dup(buf);
 
         sprintf(buf, "%sA tag on the collar says 'My Name is %s'.\n\r",
                MOB_DESCRIPTION(mount),CAP(mount_name));
         free(mount->player.description);
+        mount->player.description = NULL;
         mount->player.description = str_dup(buf);
      }
 

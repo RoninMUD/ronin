@@ -968,6 +968,7 @@ void set_title(CHAR * ch, char *title) {
 
   if (GET_TITLE(ch)) {
     free(GET_TITLE(ch));
+    GET_TITLE(ch) = NULL;
   }
 
   GET_TITLE(ch) = str_dup(title);

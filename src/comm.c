@@ -1341,7 +1341,7 @@ void copyover_recover(void) {
 
 int get_from_q(struct txt_q *queue, char *dest)
 {
-  struct txt_block *tmp;
+  struct txt_block *tmp = NULL;
 
   /* Q empty? */
   if (!queue->head)
@@ -1351,14 +1351,18 @@ int get_from_q(struct txt_q *queue, char *dest)
   tmp = queue->head;
   queue->head = queue->head->next;
 
-  if (tmp->text) free(tmp->text);
+  if (tmp->text) {
+    free(tmp->text);
+    tmp->text = NULL;
+  }
   free(tmp);
+  tmp = NULL;
 
   return(1);
 }
 
 void write_to_q(char *txt, struct txt_q *queue) {
-  struct txt_block *new;
+  struct txt_block *new = NULL;
 
   CREATE(new, struct txt_block, 1);
   CREATE(new->text, char, strlen(txt) + 1);
@@ -1887,10 +1891,13 @@ void close_socket(struct descriptor_data *d)
    tmp->next = d->next;
   }
 
-  if (d->showstr_head)
-   free(d->showstr_head);
+  if (d->showstr_head) {
+    free(d->showstr_head);
+    d->showstr_head = NULL;
+  }
 
   free(d);
+  d = NULL;
 }
 
 void nonblock(int s)
