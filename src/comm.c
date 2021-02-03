@@ -1516,7 +1516,7 @@ int new_connection(int s) {
     char *ascii_addr;
     int remote_port;
     struct descriptor_data *d;
-    long addr;
+    uint32_t addr;
     int len;
 
     len = read(slave_socket, buf, 100);
