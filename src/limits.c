@@ -1176,7 +1176,7 @@ void check_idling(CHAR *ch) {
  */
 void point_update(void) {
   /* PCs/NPCs */
-  for (CHAR *ch = character_list, *next_ch; ch; ch = next_ch) {
+  for (CHAR *ch = character_list, *next_ch = NULL; ch; ch = next_ch) {
     next_ch = ch->next;
 
     if (IS_SET(GET_AFF2(ch), AFF2_SEVERED)) {
@@ -1235,9 +1235,12 @@ void point_update(void) {
 
     if (GET_POS(ch) == POSITION_INCAP) {
       damage(ch, ch, 1, TYPE_UNDEFINED, DAM_NO_BLOCK);
+      if (DISPOSED(ch)) continue;
+
     }
     else if (GET_POS(ch) == POSITION_MORTALLYW) {
       damage(ch, ch, 2, TYPE_UNDEFINED, DAM_NO_BLOCK);
+      if (DISPOSED(ch)) continue;
     }
 
     if (!IS_NPC(ch)) {

@@ -74,6 +74,8 @@ do {                   \
   }                    \
 } while (0)
 
+#define DISPOSED(p)              (p->disposed)
+
 #define IS_NIGHT                 (weather_info.sunlight != SUN_LIGHT)
 #define IS_DAY                   !IS_NIGHT
 

@@ -1349,6 +1349,8 @@ struct char_data {
   char pwd[11];                            /* Player Password */
 
   int (*func)(CHAR *, CHAR *, int, const char *); /* Special character function. */
+
+  bool disposed;                           /* flag indicating struct disposed */
 };
 
 

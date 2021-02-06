@@ -1504,7 +1504,9 @@ void process_death(CHAR *ch, CHAR *victim) {
   }
 
   die(victim);
-  signal_char(ch, ch, MSG_DEATHCRY, "");
+  if (victim != ch) {
+    signal_char(ch, ch, MSG_DEATHCRY, "");
+  }
 }
 
 bool is_immune(CHAR *ch, int attack_type, int damage_type) {
@@ -2389,7 +2391,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       act("$n is rescued by divine forces.", FALSE, victim, 0, 0, TO_ROOM);
 
       GET_WAS_IN_ROOM(victim) = CHAR_REAL_ROOM(victim);
-     
+
       char_from_room(victim);
       char_to_room(victim, 1);
 

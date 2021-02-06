@@ -43,6 +43,7 @@ int top_of_olchelpt;
 int rebooting_check;
 struct obj_data  *object_list = 0;    /* the global linked list of obj's */
 struct char_data *character_list = 0; /* global l-list of chars          */
+struct char_data *disposed_list = 0; /* global list of dispose chars */
 
 struct zone_data *zone_table;         /* table of reset data             */
 
@@ -1832,6 +1833,7 @@ struct char_data *read_mobile(int nr, int type)
   mob->specials.position    = mob_proto_table[nr].position;
   mob->specials.default_pos = mob_proto_table[nr].default_pos;
   if(GET_POS(mob)==POSITION_INCAP) GET_HIT(mob)=-3;
+  if(GET_POS(mob)==POSITION_MORTALLYW) GET_HIT(mob)=-8;
 
   mob->player.sex = mob_proto_table[nr].sex;
 
@@ -2977,18 +2979,25 @@ char *fread_string(FILE *fl)
 /* release memory allocated for a char struct */
 void free_char(struct char_data *ch)
 {
-     struct affected_type_5 *af;
+  struct affected_type_5 *af;
+
+#ifdef TEST_SITE
+  log_f("free_char(): Freeing char %s", GET_DISP_NAME(ch));
+#endif
 
   if (ch->player.name)        free(ch->player.name);
-     if (ch->player.title)       free(ch->player.title);
-     if (ch->player.short_descr) free(ch->player.short_descr);
-     if (ch->player.long_descr)  free(ch->player.long_descr);
-     if(ch->player.description)  free(ch->player.description);
+  if (ch->player.title)       free(ch->player.title);
+  if (ch->player.short_descr) free(ch->player.short_descr);
+  if (ch->player.long_descr)  free(ch->player.long_descr);
+  if (ch->player.description) free(ch->player.description);
 
-     for (af = ch->affected; af; af = af->next)
-          affect_remove(ch, af);
+  for (af = ch->affected; af; af = af->next) {
+    affect_remove(ch, af);
+  }
 
-     free(ch);
+  ch->disposed = TRUE;
+  ch->next = disposed_list;
+  disposed_list = ch;
 }
 
 /* release memory allocated for an obj struct */

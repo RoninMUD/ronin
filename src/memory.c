@@ -91,7 +91,7 @@ void forget (struct char_data *ch, struct char_data *mob)
 
 void clearMemory(struct char_data *ch)
 {
-   memory_record_t *curr, *prev;
+   memory_record_t *curr = NULL, *prev = NULL;
 
    prev = (memory_record_t *)ch->specials.memory;
 
