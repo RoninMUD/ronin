@@ -250,6 +250,7 @@ extern int CHAOSDEATH;
 extern struct idname_struct idname[MAX_ID];
 
 extern struct char_data *character_list;
+extern struct char_data *disposed_list;
 
 extern int top_of_zone_table;
 extern struct zone_data *zone_table;

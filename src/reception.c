@@ -237,8 +237,6 @@ int test_char(char *name, char *pwd) {
   char tmp_name[50];
   int version;
 
-  size_t sz = 0;
-
   snprintf(tmp_name,sizeof(tmp_name),"%s",name);
   string_to_lower(tmp_name);
   sprintf(buf,"rent/%c/%s.dat",UPPER(tmp_name[0]),tmp_name);
@@ -275,8 +273,6 @@ int test_char(char *name, char *pwd) {
       return(char_data_4.level);
       break;
     case 5:
-      sz = sizeof(struct char_file_u_5);
-      log_f("Size of char_file_u_5 = %zx", sz);
       if((fread(&char_data_5,sizeof(struct char_file_u_5),1,fl))!=1)
       {log_s("Error Reading (test char)");fclose(fl);return (-1);}
       sprintf(pwd,"%s",char_data_5.pwd);
@@ -1244,7 +1240,10 @@ void auto_rent(CHAR *ch) {
     close_socket(ch->desc);
     ch->desc = 0;
   }
-  else free(ch);
+  else {
+    log_f("Freeing char %s without removing from list", ch->player.name);
+    free(ch);
+  }
   return;
 }
 

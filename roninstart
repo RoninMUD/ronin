@@ -2,6 +2,7 @@
 
 set max=200
 set counter=0
+#limit coredumpsize unlimited
 tail -3 syslog.last >> runlog
 echo "*** Started by $user at: `date`" >> runlog
 
@@ -34,4 +35,4 @@ while 1
   echo "* Restarting game ($user) at `date`, status $tmp." >> runlog
   sleep 20
 end
-   
+

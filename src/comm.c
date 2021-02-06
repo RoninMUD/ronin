@@ -49,6 +49,7 @@
 #include "enchant.h"
 #include "aff_ench.h"
 #include "char_spec.h"
+#include "mcheck.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -263,6 +264,8 @@ int main(int argc, char **argv)
   GAMEHALT=0;
   disablereboot=0;
 #endif
+
+  if(mcheck(0)) fprintf(stderr, "Cannot set mcheck");
 
   memset(CREATEIMP, 0, sizeof(CREATEIMP));
 
@@ -1029,6 +1032,13 @@ void heartbeat(int pulse) {
     distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT, FALSE);
 #endif
   }
+
+  /* free disposed characters */
+  for (CHAR* ch = disposed_list, *next = NULL; ch; ch = next) {
+    next = ch->next;
+    free(ch);
+  }
+  disposed_list = NULL;
 }
 
 void timediff(struct timeval *rslt, struct timeval *a, struct timeval *b)
@@ -1871,6 +1881,17 @@ void close_socket(struct descriptor_data *d)
       sprintf(buf, "Losing player: %s[%s].", GET_NAME(d->character), (d->host && d->host[0] != '\0') ? d->host : inet_ntoa(isa.sin_addr));
       log_s(buf);
       wizlog(buf, GET_LEVEL(d->character), 1);
+
+      if (d->character == character_list) {
+        character_list = d->character;
+      }
+      else {
+        CHAR *ch = NULL;
+        for (ch = character_list; ch && ch->next != d->character; ch = ch->next);
+        if (ch) {
+          ch->next = d->character->next;
+        }
+      }
       free_char(d->character);
     }
   }
