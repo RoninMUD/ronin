@@ -607,7 +607,7 @@ int get_number(char **name)
     *ppos++ = '\0';
 
     strcpy(number, *name);
-    strcpy(*name, ppos);
+    memmove(*name, ppos, strlen(ppos)+1);
 
     for (i = 0; *(number + i); i++)
     {
