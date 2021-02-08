@@ -1034,11 +1034,18 @@ void heartbeat(int pulse) {
   }
 
   /* free disposed characters */
-  for (CHAR* ch = disposed_list, *next = NULL; ch; ch = next) {
+  for (CHAR* ch = disposed_chars, *next = NULL; ch; ch = next) {
     next = ch->next;
     free(ch);
   }
-  disposed_list = NULL;
+  disposed_chars = NULL;
+
+  /* free disposed objs */
+  for (OBJ* obj = disposed_objs, *next = NULL; obj; obj = next) {
+    next = obj->next;
+    free(obj);
+  }
+  disposed_objs = NULL;
 }
 
 void timediff(struct timeval *rslt, struct timeval *a, struct timeval *b)
@@ -2961,7 +2968,7 @@ int signal_room(int room_rnum, CHAR *signaler, int cmd, char *arg) {
     stop = signal_char(temp_ch, signaler, cmd, arg);
   }
 
-  for (OBJ *temp_obj = world[room_rnum].contents, *next_obj; !stop && temp_obj; temp_obj = next_obj) {
+  for (OBJ *temp_obj = world[room_rnum].contents, *next_obj = NULL; !stop && temp_obj; temp_obj = next_obj) {
     next_obj = temp_obj->next_content;
 
     stop = signal_object(temp_obj, signaler, cmd, arg);

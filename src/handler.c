@@ -1095,7 +1095,10 @@ void extract_obj(struct obj_data *obj) {
 
   if(obj->item_number>=0)
     (obj_proto_table[obj->item_number].number)--;
-  free_obj(obj);
+
+  obj->disposed = TRUE;
+  obj->next = disposed_objs;
+  disposed_objs = obj;
 }
 
 
