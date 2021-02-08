@@ -43,7 +43,8 @@ int top_of_olchelpt;
 int rebooting_check;
 struct obj_data  *object_list = 0;    /* the global linked list of obj's */
 struct char_data *character_list = 0; /* global l-list of chars          */
-struct char_data *disposed_list = 0; /* global list of dispose chars */
+struct char_data *disposed_chars = 0; /* global list of disposed chars */
+struct obj_data  *disposed_objs = 0;  /* global list of disposed objs */
 
 struct zone_data *zone_table;         /* table of reset data             */
 
@@ -2996,8 +2997,8 @@ void free_char(struct char_data *ch)
   }
 
   ch->disposed = TRUE;
-  ch->next = disposed_list;
-  disposed_list = ch;
+  ch->next = disposed_chars;
+  disposed_chars = ch;
 }
 
 /* release memory allocated for an obj struct */
