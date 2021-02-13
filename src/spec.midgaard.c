@@ -6054,7 +6054,7 @@ int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     "1% increased chance for half-price metas.",                                                      // Prestige Perk 3
     "10% experience and gold discount on rank purchases.",                                            // Prestige Perk 4
     "10% discount on rent cost.",                                                                     // Prestige Perk 5
-    "1x increased maximum death experience multiplier.",                                              // Prestige Perk 6
+    "1x increased maximum death experience multiplier.(3x instead of 2x)",                                              // Prestige Perk 6
     "50% chance to avoid entering a death trap or hazard, setting your movement to zero.",            // Prestige Perk 7
     "5% increased hit point, mana, and movement regeneration rate.",                                  // Prestige Perk 8
     "Identify command now available for 5,000 coins; acts as if you recited a scroll.",               // Prestige Perk 9
@@ -6072,7 +6072,7 @@ int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     "Home command now available for 20,000 coins; acts as if you recited a scroll.",                  // Prestige Perk 21
     "10% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 22
     "1 less movement point required to traverse all sector types (minimum of 1 point).",              // Prestige Perk 23
-    "2% chance when purchasing a normal meta to receieve a bribe meta instead.",                      // Prestige Perk 24
+    "2% chance when purchasing a normal meta to receive a bribe meta instead.",                      // Prestige Perk 24
     "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
     "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
   };

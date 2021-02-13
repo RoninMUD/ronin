@@ -906,7 +906,7 @@ void spell_fortification(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_FORTIFICATION)) {
     print_spell_messages(victim, SPELL_FORTIFICATION);
 
-    aff_apply(victim, SPELL_FORTIFICATION, level / 5, 0, 0, AFF_SANCTUARY, AFF2_FORTIFICATION);
+    aff_apply(victim, SPELL_FORTIFICATION, level / 4, 0, 0, AFF_SANCTUARY, AFF2_FORTIFICATION);
   }
 }
 
