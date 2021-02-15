@@ -4960,7 +4960,7 @@ Any existing exits to the room being deleted will be removed.\n\r";
 
   /* Clear and free the top room element. */
   memset(&world[top_of_world], 0, sizeof(struct room_data));
-  free(&world[top_of_world]);
+  //free(&world[top_of_world]); // we cannot do this because room table is pre-allocated
 
   /* Decrement the count of rooms by one. */
   top_of_world--;
@@ -5012,7 +5012,7 @@ but will not be deleted from the zone.\n\r";
   for (CHAR *mob = character_list, *next_mob = NULL; mob; mob = next_mob) {
     next_mob = mob->next;
 
-    if (IS_NPC(mob) && V_MOB(mob) == mob_zone) {
+    if (IS_NPC(mob) && (mob->nr == mob_rnum)) {
       for (OBJ *obj = mob->carrying, *next_obj = NULL; obj; obj = next_obj) {
         next_obj = obj->next_content;
 
@@ -5047,7 +5047,7 @@ but will not be deleted from the zone.\n\r";
 
   /* Clear and free the top mob element. */
   memset(&mob_proto_table[top_of_mobt], 0, sizeof(struct char_data));
-  free(&mob_proto_table[top_of_mobt]);
+  //free(&mob_proto_table[top_of_mobt]);  // cannot do this because mob table is pre-allocated
 
   /* Decrement the count of mobs by one. */
   top_of_mobt--;
@@ -5133,7 +5133,7 @@ but will not be deleted from the zone.\n\r";
 
   /* Clear and free the top object element. */
   memset(&obj_proto_table[top_of_objt], 0, sizeof(struct obj_data));
-  free(&obj_proto_table[top_of_objt]);
+  //free(&obj_proto_table[top_of_objt]); // cannot do that because obj table is preallocated
 
   /* Decrement the count of objects by one. */
   top_of_objt--;
@@ -5207,7 +5207,7 @@ This command is used to delete a shop from a zone.\n\r\
 
   /* Clear and free the top shop element. */
   memset(&shop_index[number_of_shops], 0, sizeof(struct shop_data));
-  free(&shop_index[number_of_shops]);
+  //free(&shop_index[number_of_shops]); // cannot do this because shop table is preallocated
 
   /* Decrement the count of shops by one. */
   number_of_shops--;
