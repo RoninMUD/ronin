@@ -45,7 +45,7 @@ Movement Loss based on Sector
  Hills         4
  Arctic        5
  Mountains     6
- 
+
 See Also: "MOVEMENT POINTS" BRIEF
 #
 SKIN
@@ -76,7 +76,7 @@ CONSTITUTION
 Constitution stands for health, physique and stamina.  A high
 constitution score increases your regeneration (see REGENERATION)
 rate.
- 
+
 After reaching 18 constitution (see META), you can gain even more
 constitution from your guildmaster with quest points (see AQUEST).
 Constitution of 19 and above will increase the number of hit points
@@ -130,7 +130,7 @@ HIT    0   1    1    1    3    3    3    4    4    4    6    6    7    9   10
 -------------------------------------------------------------------------------
 
 
-Certain weapons also require a minimum level of strength to be wielded. 
+Certain weapons also require a minimum level of strength to be wielded.
 It will also influence your carry weight.
 
 Str   Carry Weight    Weapon Weight
@@ -335,10 +335,10 @@ SEE ALSO: MULTI RULES INFO
 #
 RASHGUGH
 
-Rashgugh is a mob on RoninMud, but he is special.  He always
-loads a subclass token, and yells about his location.  This way
-everyone has a chance to kill him for his token.  Once you have
-this token you can sell it, mail it to yourself or turn it in for a subclass point.
+Rashgugh is a mob on RoninMud, but he is special.  He always loads a subclass
+token, and yells about his location.  This way everyone has a chance to kill him
+for his token.  Once you have this token you can sell it, mail it to yourself or
+turn it in for a subclass point.
 
 Just be careful not to rent with it!
 
@@ -840,7 +840,7 @@ Once you finish these grueling tasks, you have started on your
 path to becoming a fine young adventurer.  You must converse with
 other adventurers, young and old alike.  You can share stories
 and learn of new experiences, as well as of different places to
-take your fighting skills. Enjoy your adventures, friend, and 
+take your fighting skills. Enjoy your adventures, friend, and
 may the Gods be with you.
 #
 "INFORMATION"
@@ -874,8 +874,8 @@ Some highlights about RoninMUD.
   - Challenging original areas.         (AREAS MAP)
   - 50 levels with 10 classes.          (LEVELS CLASSES)
   - Meta system to improve stats.       (META EXP)
-  - Multiplaying to a max of 5 characters.   (MULTI)
-  - Many communication channels.             (GOSSIP, AUCTION, CHAOS, QUEST)
+  - Multiplaying up to 5 characters.    (MULTI)
+  - Many communication channels.        (GOSSIP, AUCTION, CHAOS, QUEST)
   - Extensive help file.                (HELP, HELP INDEX)
   - Configurable ANSI Color system.     (COLOR)
   - Easy way to trade equipment.        (AUCTION TRADE)
@@ -889,7 +889,7 @@ Some highlights about RoninMUD.
 A few rules to remember
   - Character sharing is not permitted.
   - Player killing only allowed in special areas.  (PKILL)
-  - Looting another player's corpse is illegal.     (PKILL PSTEAL)
+  - Looting another player's corpse is illegal.    (PKILL PSTEAL)
   - Botting is strictly forbidden.                 (BOTTING)
   - Highly offensive language is not permitted on public channels.
 
@@ -1156,7 +1156,7 @@ permanently.  The rest is added to a Death XP Pool which can be seen in your sco
 This is a seperate pool of experience that will be earned back at an accelerated rate
 along with your normal experience.
 
-If you die again before you have gained back all of the death xp, you will simply lose 
+If you die again before you have gained back all of the death xp, you will simply lose
 experience as stated above and your death xp pool grows.
 
 #
@@ -1256,14 +1256,14 @@ ALIGNMENT EVIL-ALIGNMENT GOOD-ALIGNMENT NEUTRAL-ALIGNMENT
 Your alignment reflects your behaviour in the world.  By doing heroic deeds and
 slaying evil monsters your alignment tends to rise towards good.  Someone who
 continually slays innocents and wreaks havoc on the forces of law and order
-will gradually turn towards evil.  
-All characters (Except Anti-Paladin/Paladin) start out neutral and will 
+will gradually turn towards evil.
+All characters (Except Anti-Paladin/Paladin) start out neutral and will
 only be judged by their actions.
 
 Gear may have Anti-Alignment modifiers, and certain mobs may also become
 aggressive towards certain alignments.
 
-Paladins and Anti-Paladins must be Good/Evil respectively to cast their spells. 
+Paladins and Anti-Paladins must be Good/Evil respectively to cast their spells.
 If they stray from the path, all spells are permanently locked.
 
 Alignment
@@ -1272,7 +1272,7 @@ Range from -1000 to 1000
   >= 350         Good
 -350 to 350      Neutral
   <-350          Evil
-  
+
 #
 TANK BUFFER
 
@@ -1692,17 +1692,17 @@ Skills: bash, block, disarm, dual, kick, knock, parry, punch, rescue,
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 THIEF
- 
+
 Thieves are known to have some special skills that no other class
 offers. These skills can come in handy in many situations, such as
 picking locks and 'acquiring' things.  Thieves also get 2 natural
 armor points for every 5 levels.
- 
+
 You can improve your skills by using the practice command.
- 
+
 Skills: backstab, circle, dodge, hide, kick, sneak, steal, peek, pick, throw,
         coin toss, scan (level 35), twist (level 45), cunning (level 50)
- 
+
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
 CLERIC
@@ -1935,15 +1935,16 @@ success or failure.
 #
 PICK
 
-Class: Anti-Paladin Bard Nomad Thief 
+Class: Anti-Paladin Bard Nomad Thief
 
-For picking locks. Not all locks can be picked. You will sometimes need a lockpick in order
-to get through a door.
+For picking locks. Not all locks can be picked. You will sometimes need a
+lockpick in order to get through a door.
 
-You can acquire one from The Waiter in The Thieves Bar. Which is SESE from MS. 
+You can acquire one from The Waiter in The Thieves Bar. Which is "sese" from MS.
 You will need to "bypass" the Assassin first.
 
-If there are multiple doors in the same room, you will need to specify your direction.
+If there are multiple doors in the same room, you will need to specify your
+direction.
 
 Example:
 
@@ -2015,14 +2016,14 @@ TRIPLE
 
 Class: Commando (Level 20), Warrior (Level 20)
 
-A skill which gives an automatic third attack the during fight. The chance of its
-success depends on how well you learn it.
+A skill which gives an automatic third attack the during fight. The chance of
+its success depends on how well you learn it.
 
 See Also: DUAL
 #
 PARRY
 
-Class: Paladin Warrior 
+Class: Paladin Warrior
 
 A skill which gives an automatic PARRY attempt during a fight.  The
 chance of success depends on how well you learn it.
@@ -2141,12 +2142,12 @@ A successful punch can 'knock' that person over. The damage of the punch is
 
 If you miss you lose your balance and fall, you will have to stand up before
 you can move or do any other actions, unless you are tanking.
- 
+
 A punch makes you unable to type commands for 2 rounds of violence.
 #
 RESCUE
 
-Class: Commando Nomad Paladin Warrior 
+Class: Commando Nomad Paladin Warrior
 
 A rescue is an attempt to jump in front of your target, causing the monster
 to hit you instead.  You can only shield your target from one monster per
@@ -3224,7 +3225,7 @@ If you are a group member, then you will share experience points for killing
 monsters equally among the group. Experience points will only be shared among
 group members that are in the same location at the time of the killing blow.
 Sharing is regardless of whether the group members have been participating in
-the fight. 
+the fight.
 
 <GROUP [player}, GROUP ALL>
 To make a group, a "leader" must be selected. All members of the group must
@@ -3352,7 +3353,7 @@ BLINDNESS
 Usage       : cast 'blindness' <victim>
 Accumulative: No
 Duration    : 2 Ticks
-Level       : Level 7 Anti-Paladin, 6 Cleric, 8 Mage, 6 Ninja 
+Level       : Level 7 Anti-Paladin, 6 Cleric, 8 Mage, 6 Ninja
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Blindness will blind a victim if it fails its saving throw. A blinded person
@@ -3390,7 +3391,7 @@ The maximum amount gained would be 100.
 
 Usage       : cast 'dispel magic' <victim/object>
 Duration    : Instantaneous
-Level       : Level 17 Cleric, 19 Mage 
+Level       : Level 17 Cleric, 19 Mage
 Save        : None
 Mana cost   : 20
 
@@ -3525,7 +3526,7 @@ Level       : Level 27 Mage
 Mana Cost   : 100
 
 Clone allows the caster to make a copy of an object. As with genetic
-degeneration in living things, the clone is not a perfect copy. 
+degeneration in living things, the clone is not a perfect copy.
 
 Clone has its limitations.
 
@@ -3715,7 +3716,7 @@ See Also: SONGS
 
 Usage       : cast 'detect magic' [self]
 Accumulative: No
-Level       : Level 3 Cleric, 2 Mage 
+Level       : Level 3 Cleric, 2 Mage
 Duration    : Caster Level * 5 Ticks
 Mana Cost   : 5 (cost will be higher at lower levels)
 
@@ -3793,7 +3794,7 @@ Duration    : Instantaneous
 Level       : Level 22 Cleric
 Mana Cost   : 100
 
-This spell will cast Heal on each character that is in the room. 
+This spell will cast Heal on each character that is in the room.
 
 See Also: "Cure Blindness" "Heal"
 #
@@ -3801,7 +3802,7 @@ FORGET
 
 Usage       : cast 'forget' <victim>
 Duration    : Instantaneous
-Level       : Level 14 Anti-Paladin, 11 Mage 
+Level       : Level 14 Anti-Paladin, 11 Mage
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 Some monsters have a good memory and if a person were to leave a fight
@@ -3829,7 +3830,7 @@ INVISIBILITY
 Usage       : cast 'invisibility' <victim | object>
 Accumulative: No
 Duration    : 24 Ticks, permanent on objects.
-Level       : Level 9 Anti-Paladin, 4 Mage, 7 Ninja, 
+Level       : Level 9 Anti-Paladin, 4 Mage, 7 Ninja,
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 Makes the object of chracter invisible.
@@ -3843,7 +3844,7 @@ See Also: "DETECT INVISIBILITY" SONGS
 Usage       : cast 'improved invisibility' (self only)
 Accumulative: No
 Duration    : Caster Level/10 ticks
-Level       : Level 29 Anti-Paladin, 25 Mage 
+Level       : Level 29 Anti-Paladin, 25 Mage
 Mana Cost   : 30 (cost will be higher at lower levels)
 
 You will not appear even if you are attacking.  Anyone who is less than level
@@ -3858,7 +3859,7 @@ See Also: INVISIBILITY PERCEIVE
 Usage       : cast 'remove improved invisibility' (self only)
 Accumulative: No
 Duration    : Instantaneous
-Level       : Level 29 Anti-Paladin, 25 Mage 
+Level       : Level 29 Anti-Paladin, 25 Mage
 Mana Cost   : 20
 
 This removes your improved invisibility and is only castable on yourself.
@@ -3870,7 +3871,7 @@ FEAR
 Usage       : cast 'fear' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 10 Anti-Paladin, 9 Mage 
+Level       : Level 10 Anti-Paladin, 9 Mage
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 If you cast this spell on someone then the victim may become scared
@@ -4054,7 +4055,7 @@ See Also: SPHERE
 Usage       : cast 'sleep' <person>
 Accumulative: Yes (duration)
 Duration    : 4 Ticks + one hour per level
-Level       : Level 19 Anti-Paladin, 14 Mage 
+Level       : Level 19 Anti-Paladin, 14 Mage
 Mana Cost   : 25 (cost will be higher at lower levels)
 
 If the victim fails a saving throw versus spell he or she will fall asleep.
@@ -4136,7 +4137,7 @@ saving throw versus "paralyzation". It is also not possible to charm anyone
 over level 30.
 
 A charmed person will follow you and not be able to attack you.  You can give
-commands to a charmed person using the order command. 
+commands to a charmed person using the order command.
 
 See Also: FOLLOW ORDER SONGS
 #
@@ -4161,7 +4162,7 @@ See Also: FOLLOW ORDER CHARM
 Usage       : cast 'sense life' [self]
 Accumulative: No
 Duration    : (Caster Level * 5) Ticks
-Level       : Level 13 Anti-Paladin, 7 Cleric, 10 Ninja, 6 Paladin 
+Level       : Level 13 Anti-Paladin, 7 Cleric, 10 Ninja, 6 Paladin
 Mana Cost   : 20 (cost will be higher at lower levels)
 
 This spell will enable you to sense hidden life forms in a room. Invisible
@@ -4223,7 +4224,7 @@ See Also: IDENTIFY
 Usage       : cast 'burning hands' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 3 Commando, 5 Mage 
+Level       : Level 3 Commando, 5 Mage
 Save        : Versus spell for half damage
 Mana Cost   : 17 (cost will be higher at lower levels)
 Old Damage done : 18 to 25
@@ -4255,7 +4256,7 @@ See Also: BURNING HANDS
 Usage       : cast 'lightning bolt' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 12 Anti-Paladin, 7 Commando, 9 Mage 
+Level       : Level 12 Anti-Paladin, 7 Commando, 9 Mage
 Save        : Versus spell for half damage
 Mana Cost   : 20 (cost will be higher at lower levels)
 Old Damage done : 50 to 60
@@ -4287,7 +4288,7 @@ See Also: "LIGHTNING BOLT" SONGS
 Usage       : cast 'energy drain' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 15 Anti-Paladin, 13 Mage 
+Level       : Level 15 Anti-Paladin, 13 Mage
 Save        : Versus spell for half damage
 Mana Cost   : 35 (cost will be higher at lower levels)
 
@@ -4304,7 +4305,7 @@ FIREBALL
 Usage       : cast 'fireball' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 20 Anti-Paladin, 15 Commando, 15 Mage 
+Level       : Level 20 Anti-Paladin, 15 Commando, 15 Mage
 Save        : Versus spell for half damage
 Mana Cost   : 25 (cost will be higher at lower levels)
 Old Damage done : About 100
@@ -4434,7 +4435,7 @@ See Also: "WORD OF RECALL" SONGS
 Usage       : cast 'death spray'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 24 Commando, 23 Mage 
+Level       : Level 24 Commando, 23 Mage
 Save        : -
 Mana Cost   : 80
 
@@ -4653,7 +4654,7 @@ See Also: WEATHER and CONTROL WEATHER
 Usage       : cast 'spirit levy' <corpse>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 25 Anti-Paladin, 20 Mage 
+Level       : Level 25 Anti-Paladin, 20 Mage
 Mana Cost   : 15 (cost will be higher at lower levels)
 
 This spell can absorb the life energy from a corpse.  The hit points that are
@@ -4675,7 +4676,7 @@ Mana Cost   : 35 (cost will be higher at lower levels)
 Damage Done : 100 + Caster Level/2 (Max 125)
 
 This spell causes bruises and small wounds to appear all over the body of
-the victim, removing all but 1d4 hitpoints. 
+the victim, removing all but 1d4 hitpoints.
 
 It is not possible to kill using this spell (but almost).
 
@@ -4738,7 +4739,7 @@ Mana Cost   : 100
 
 The caster will receive a severe case of heartburn enabling the caster to
 breathe fire at victims. Each breath will do the damage of approximately one
-Fireball. 
+Fireball.
 
 See Also: FIREBALL
 #
@@ -4775,7 +4776,7 @@ See Also: Blindness dust, Poison
 Usage       : cast 'hypnotize' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 27 Anti-Paladin, 22 Ninja 
+Level       : Level 27 Anti-Paladin, 22 Ninja
 Save        : -
 Mana Cost   : 40 (cost will be higher at lower levels)
 
@@ -6820,8 +6821,8 @@ Tokens are normally randomly distributed on creatures at the beginning of every
 reboot, and redistributed 5 times every 22 hours.  These tokens are unable to
 be located by magic or gods. They are found by pure luck.
 
-Every now and then, Rashgugh will be given a token, and will yell that it has one.  
-The first character to kill the creature owns the token.
+Every now and then, Rashgugh will be given a token, and will yell that it has
+one.  The first character to kill the creature owns the token.
 
 To reimburse a token for subclass points, go to your subclass master and type
 one of the following:
@@ -6856,9 +6857,9 @@ The subclass master for each player class is as follows:
 See Also: SUBCLASSES
 #
 SCAN
- 
+
 Class: Thief (Level 35)
- 
+
 This skill allows the character to see who may be in surrounding
 rooms.
 #
@@ -6902,10 +6903,10 @@ Subclass Ranger: Level 2 (Nomad)
 
 Usage: protect <target/self>
 
-The Warlord/Ranger gains the Protect skill, which allows them to protect one member
-of their group from receiving damage, taking the damage themselves instead.  To
-stop protecting someone, choose a different target by using this skill again, or
-target yourself to cease protecting anyone.
+The Warlord/Ranger gains the Protect skill, which allows them to protect one
+member of their group from receiving damage, taking the damage themselves
+instead.  To stop protecting someone, choose a different target by using this
+skill again, or target yourself to cease protecting anyone.
 
 Additionally, the Warlord can never fail when using the Rescue skill.
 
@@ -7007,7 +7008,7 @@ mind on the movements of the creatures attacking him. This prevents the
 Ranger from doing anything but weak hits against the opponent, but
 gives him an extra -100 armor and the ability to dodge or parry attacks with
 more success.  With defend, the Ranger can get up to -300 armor. This
-is the ultimate tanking ability.  
+is the ultimate tanking ability.
 
 While fighting, the tank cannot change this mode.
 
@@ -7059,7 +7060,7 @@ See Also: SUBCLASSES TRAPPER BERSERK
 #
 TRAPPER
 
-The Trapper has wandered the world and learned to live off the land. 
+The Trapper has wandered the world and learned to live off the land.
 Learning how to hunt and use their fists to survive. As they grow
 stronger, you can see what years living off the land can teach you.
 
@@ -7079,8 +7080,8 @@ See Also: SUBCLASSES RANGER NOMAD
 RANGER
 
 The Ranger has roamed the highlands and fought skirmishes large and small.
-Being aware of your surroundings and being able to survive the toughest 
-encounters is what they strive for. As they grow stronger, the ultimate 
+Being aware of your surroundings and being able to survive the toughest
+encounters is what they strive for. As they grow stronger, the ultimate
 survival skills manifest themselves.
 
 The Ranger is a subclass of the Nomad.
@@ -7120,7 +7121,7 @@ This attack is used to quickly sneak into a room and perform a backstab attack
 on an unsuspecting victim.  An aggressive victim doesn't have a chance to
 attack first.
 
-The Anti-Paladin must be using the skill Sneak, or the spell Invisibility or 
+The Anti-Paladin must be using the skill Sneak, or the spell Invisibility or
 Improved Invisibility to use this attack.
 
 The success is dependent on how well the skill is practiced and the character's
@@ -7157,9 +7158,9 @@ See Also: SUBCLASSES INFIDEL FURY "BLOOD LUST"
 DEFILER
 
 The Defiler is obsessed with blood, corpses and death. Deriving its powers
-from the blood it spills and the corpses it gets to dissect. As it grows 
-in power, the dead and the dying truly enhance the torture given to 
-its victims. 
+from the blood it spills and the corpses it gets to dissect. As it grows
+in power, the dead and the dying truly enhance the torture given to
+its victims.
 
 The Defiler is a subclass of the Anti-Paladin.
 
@@ -7312,7 +7313,7 @@ See Also: SUBCLASSES DEFILER BACKSTAB "BLOOD LEVEL" "BLOOD LUST"
 INFIDEL
 
 The Infidel lurks in the shadows and prays to the dark. They work to be one
-with the dark and turn it into allies of its own. As they grow in power, 
+with the dark and turn it into allies of its own. As they grow in power,
 the dark is able to manifest into more horrific abilities.
 
 The Infidel is a subclass of the Anti-Paladin.
@@ -7634,8 +7635,8 @@ See Also: SUBCLASSES ENCHANTER
 ENCHANTER
 
 The Enchanter has spent many years manifesting the ethereal power and works
-to become with Magic.  As they grow in power, they achieve their goal and 
-learn to merge with magic. 
+to become with Magic.  As they grow in power, they achieve their goal and
+learn to merge with magic.
 
 The Enchanter is a subclass of the Mage.
 
@@ -7863,7 +7864,7 @@ physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 25%.
 
 Unfortunately, since the Bandit/Nomad is so intent on protecting themselves,
-they will miss more often.  
+they will miss more often.
 
 This skill cannot be toggled on or off in combat.
 
@@ -7874,7 +7875,7 @@ GLADIATOR
 The Gladiator has spent many years training hard in the arena. The skills
 and experience they have earned have given them the edge in combat. As
 they grow in power, they strive to deliver an unending series of blows
-against the opponent.  
+against the opponent.
 
 The Gladiator is a subclass of the Warrior.
 
@@ -7892,8 +7893,8 @@ See Also: SUBCLASSES WARLORD WARRIOR
 WARLORD
 
 The Warlord has seen a fair share of combat and survived many life or death
-situations. As they grow in power, they develop skills to protect 
-themselves and others. 
+situations. As they grow in power, they develop skills to protect
+themselves and others.
 
 The Warlord is a subclass of the Warrior.
 
@@ -7989,23 +7990,24 @@ MAIM
 
 Subclass Gladiator: Level 3 (Warrior)
 
-Maim applies a debuff to the target of the Gladiator's Flank attack.  
+Maim applies a debuff to the target of the Gladiator's Flank attack.
 
-This debuff will cause the target to take extra damage equal to 1/4 the Gladiator's
-class level, rounded down, (12 damage at lvl 48+) after being hit by a
-successful physical attack skill (pummel, punch, etc.). 
- 
-This bonus damage is applied separately from the damage inflicted by the 
-triggering skill and cannot be increased such as by position, spell effects 
+This debuff will cause the target to take extra damage equal to 1/4 the
+Gladiator's class level, rounded down, (12 damage at lvl 48+) after being hit by
+a successful physical attack skill (pummel, punch, etc.).
+
+This bonus damage is applied separately from the damage inflicted by the
+triggering skill and cannot be increased such as by position, spell effects
 like Fury, etc.
 
-Smite and Zeal will also trigger this bonus damage.  
+Smite and Zeal will also trigger this bonus damage.
 
-Other bonus attacks that are triggered by skills such as Hidden Blade and Trusty Steed 
-do not cause extra damage from the Maim effect (e.g. they do not "double dip").  
+Other bonus attacks that are triggered by skills such as Hidden Blade and
+Trusty Steed do not cause extra damage from the Maim effect (e.g. they do not
+"double dip").
 
-This damage is subject to normal physical damage resistance or immunity.  The Maim
-effect lasts until the affected creature dies.
+This damage is subject to normal physical damage resistance or immunity.  The
+Maim effect lasts until the affected creature dies.
 
 See Also: SUBCLASSES GLADIATOR
 #
@@ -8059,7 +8061,7 @@ See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD DEXTERITY AC RESCUE
 MERCENARY
 
 The Mercenary is a fighter for hire. They only care about money and doing
-their job well. As they grow in power, you can see how well they can confuse 
+their job well. As they grow in power, you can see how well they can confuse
 opponents and utilize their trusty sidearm to devastate them.
 
 The Mercenary is a subclass of the Commando.
@@ -8340,7 +8342,8 @@ Usage: trusty-steed (toggles on/off)
 
 When using Pummel or Smite against an enemy, the Crusader has a chance to follow
 up their attack by summoning an ethereal steed that charges into their target
-dealing 1.5 times the Cavalier's level in damage and knocking them to the ground.
+dealing 1.5 times the Cavalier's level in damage and knocking them to the
+ground.
 
 Charging a target who is sitting or resting will cause them to become stunned,
 receiving 2x damage on the next attack.
@@ -8510,7 +8513,7 @@ See Also: REGENERATION SLEEP
 #
 TEMPLAR
 
-The Templar has become closer to the divine power. Using their connection to their 
+The Templar has become closer to the divine power. Using their connection to their
 deities, they are able to bring divine powers to bear against their enemies. As
 they grow in power, they are able to wield a fraction of this gift against
 their foes.
@@ -8623,7 +8626,7 @@ during the next 20 attacks, and 9d9+9 damage during the final 20 attacks.
 
 After the hammer has made 60 attacks, it ceases its attacks and looms above the
 caster's head, ready for one final strike.  The Templar has 20 rounds (1 minute)
-to decide when and where the hammer shall strike.  
+to decide when and where the hammer shall strike.
 
 To unleash this final strike, they must enter the 'judgement-strike' command.
 
@@ -8844,7 +8847,7 @@ See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" "ELEMENTAL FORM"
 BLADESINGER
 
 The Bladesinger performs with flair and enthusiasm. They look to put on the best
-show and to enchance their own abilities by mimicking others. AS they grow in 
+show and to enchance their own abilities by mimicking others. AS they grow in
 power, you can see how far their abilities have come.
 
 The Bladesinger is a subclass of the Bard.
@@ -9121,9 +9124,9 @@ Divine Wind is a direct translation of the phrase "kamikaze."
 RONIN
 
 The Ronin studied with the most secretive sects of the ninja world. Strenuous
-training has lead them to combat bliss, and the skills that allow them to flow 
-through the combat are learned. as they grow in power, the full range of their 
-abilities will be unleashed.  
+training has lead them to combat bliss, and the skills that allow them to flow
+through the combat are learned. as they grow in power, the full range of their
+abilities will be unleashed.
 
 The Ronin is a suclass of the Ninja.
 
@@ -9222,7 +9225,7 @@ See Also: SUBCLASSES RONIN
 BANZAI
 
 Subclass Ronin: Level 4 (Ninja)
- 
+
 Usage       : banzai <victim>
 Mana Cost   : 75
 Damage      : 200 to 300
@@ -9463,8 +9466,8 @@ Mana cost   : 500
 
 The caster prays for divine protection for the target.
 
-While affected if at any time the protected character would die, they are instead
-immediately healed with Miracle and the spell affect is removed.
+While affected if at any time the protected character would die, they are
+instead immediately healed with Miracle and the spell affect is removed.
 
 Note: This cannot be cast in battle.
 
@@ -9505,8 +9508,8 @@ See Also: DUAL TRIPLE DAMROLL
 
 Class: Thief (Level 45)
 
-This automatic skill gives the thief a chance to inflict 250 extra damage after a
-successful Circle.
+This automatic skill gives the thief a chance to inflict 250 extra damage after
+a successful Circle.
 
 See Also: CIRCLE
 #
@@ -9669,7 +9672,7 @@ PRESTIGE
 
 Players looking for an enduring degree of fame and fortune can earn prestige.
 By visiting Saga in the Grunting Boar Inn, a player can 'earn prestige' by
-spending 100 million experience points and 20 million gold.  
+spending 100 million experience points and 20 million gold.
 
 Each level of prestige earned will increase a player's hit points by 8 and mana
 by 4 (or 12 hit points for non spell-casting classes).  At the fifth level of
@@ -9701,11 +9704,11 @@ See Also: SUBCLASSES COMMANDO
 "REWARD POINTS" RP
 
 Reward Points (RP) are points awarded for winning quests and contributing
-to the development of the MUD - whether that's creating zones, reviewing, 
-writing documentation, etc.)  
+to the development of the MUD - whether that's creating zones, reviewing,
+writing documentation, etc.)
 
 Reward Points can also be purchased from Quest Points at a rate of 15 to 1.
-To learn more, visit the Hall of Rewards - 3n2e from Market Square.  
+To learn more, visit the Hall of Rewards - 3n2e from Market Square.
 
 Reward Points may be used to add to existing affects to an item, or to add
 an affect to an item with an open slot.
@@ -9717,18 +9720,18 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" "RP RULES"
 #
 "RP RULES"
 
---Cost Tables are Cumulative 
+--Cost Tables are Cumulative
 
-To to add 3 Damroll to an item that startswith 0, you will need to pay 
-the price for 1 (10) + 2 (20) + 3 (30) = 60.  
+To to add 3 Damroll to an item that startswith 0, you will need to pay
+the price for 1 (10) + 2 (20) + 3 (30) = 60.
 
-All items improved with RP will become LIMITED (if they aren't already) 
+All items improved with RP will become LIMITED (if they aren't already)
 and will have QUESTWEAR flag added (only owners listed can use).
 
 All items made QUESTWEAR or purchased will get one ownership flags added,
 each owner after that costs an additional QT.
 
-RP cannot be used to: remove antis from gear, remove the decay flag, nor 
+RP cannot be used to: remove antis from gear, remove the decay flag, nor
 remove an existing affect to make room for a new one.
 
 RP cannot be used to add additional wear positions.
@@ -9738,20 +9741,20 @@ RPs cannot be traded from player to another; you earned it, use it!
 No refunds, all upgrades are final.
 
 If upgrading an item that has a value that doesn't perfectly sync up with
-the price structure (for example item has +5 to a Skill already, or 
-+5 mana-regen) you would price the next upgrade as if it already had 
+the price structure (for example item has +5 to a Skill already, or
++5 mana-regen) you would price the next upgrade as if it already had
 the level above:
 
 i.e. +6 in both these cases.
 
-See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP 
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP
 
 #
 "QUEST TOKEN" QT
 
-Quest Tokens (QT) are special items that are handed out for winning quests. 
+Quest Tokens (QT) are special items that are handed out for winning quests.
 
-These can be exchanged for special rewards from the gods.  They are also 
+These can be exchanged for special rewards from the gods.  They are also
 useful with RP to exchange for gear.
 
 QT can be acquired for 100 RP.
@@ -9760,7 +9763,7 @@ See Also: RP "REWARD POINTS"
 #
 "RP LIST PRICES"
 
-RP can be used to increase the stats of certain gear or to add new stats 
+RP can be used to increase the stats of certain gear or to add new stats
 to existing gear.
 
 Each piece of gear can have up to three different stats as affects on them.
@@ -9783,7 +9786,7 @@ See Also: RP "REWARDS POINTS"
 
 You can increase the bonus to the skills in the gain up to +20.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 --Skills-------Cost--
 ======================
@@ -9831,7 +9834,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
 You can increase you bonus to damage.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 -Damroll-------Cost--
 ======================
@@ -9854,7 +9857,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
 You can increase you bonus to hitroll.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 -Hitroll-------Cost--
 ======================
@@ -9868,7 +9871,7 @@ These costs are cumulative.
      8           75
      9           90
     10          105
-	
+
 
 See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
@@ -9877,7 +9880,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
 You can increase you bonus to mana regen.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 --ManaRegen-----Cost--
 ======================
@@ -9899,7 +9902,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
 You can increase you bonus to hp regen.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 -HPRegen-------Cost--
 ======================
@@ -9921,7 +9924,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
 You can increase you bonus to armor.
 
-These costs are cumulative. 
+These costs are cumulative.
 
 --Armor--------Cost--
 ======================
@@ -9962,20 +9965,13 @@ Each of these items may be purchased for 450 RP + 1 QT
 They have no class or alignment restrictions.
 
 Item Name : Wear Location
-
-Specs:
+  Details
 
 The shell of a carved pumpkin : body
-
  30 AC-apply, +33 HP_REGEN, +5 DAMROLL, SANC
 
- no specs
-
 giant's-hide greaves: legs
-
  25 AC-apply, +5 DAMROLL, +50 HP, +25 HP_REGEN, SPHERE
-
- no specs
 
 See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP MIDDLE" "RP BOTTOM" "RP SPECIAL"
 
@@ -9987,65 +9983,60 @@ Each of these items may be purchased for 300 RP + 1 QT
 They have no class or alignment restrictions.
 
 Item Name : Wear Location
-
-Specs:
+  Details
 
 The pelt of a black cat: neck, about, clonable
-
- 20 AC-apply, +6 SAVING_SPELL, +6 HITROLL, +6 MANA_REGEN, PROTECT_GOOD, PROTECT_EVIL
-
- no specs
+  20 AC-apply, +6 SAVING_SPELL, +6 HITROLL, +6 MANA_REGEN, PROTECT_GOOD,
+  PROTECT_EVIL
 
 A witch's broom: hold, boat
+  -33 ARMOR, +19 MANA_REGEN, +6 DAMROLL
 
- -33 ARMOR, +19 MANA_REGEN, +6 DAMROLL
-
- no specs
-
- a lance tipped with a mammoth's tusk: wield, pierce, 8d5
-
- +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-EVIL
-
- no specs
-
- Note: Mages and Clerics cannot use this sharp weapon.
+a lance tipped with a mammoth's tusk: wield, pierce, 8d5
+  +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-EVIL
+  Note: Mages and Clerics cannot use this sharp weapon.
 
 Leviathan's scale vambraces: arms
-
- 25 AC-apply, +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-GOOD
-
- no specs
+  25 AC-apply, +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-GOOD
 
 See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP BOTTOM" "RP SPECIAL"
 
 #
 "RP BOTTOM"
 
-Each of these items may be purchased for 150 RP 
+Each of these items may be purchased for 150 RP
 
 They have no class or alignment restrictions.
 
 Item Name : Wear Location
+  Details
 
-Specs:
+Winner's Necklace: neck
+  15 AC-apply, +5 HITROLL, +50 HP
 
-Winner's Necklace: neck, 15 AC-apply, +5 HITROLL, +50 HP
+Schynbalds of the Kobold Lord: legs
+  20 AC-apply, +4 DAMROLL, +1 HITROLL,INFRAVISION
 
-Schynbalds of the Kobold Lord: legs, 20 AC-apply, +4 DAMROLL, +1 HITROLL, INFRAVISION
+Spaulders of the Gargoyles: arms
+  15 AC-apply, +4 DAMROLL, +2 HITROLL, FLY
 
-Spaulders of the Gargoyles: arms, 15 AC-apply, +4 DAMROLL, +2 HITROLL, FLY
+a ghost glaive: hold (type THROW)
+  +6 DAMROLL, +6 HITROLL, +15 SKILL_THROW, 6d66
 
-a ghost glaive: hold (type THROW),+6 DAMROLL, +6 HITROLL, +15 SKILL_THROW, 6d66
+a Giant Armadillo Hauberk: body
+  23 AC-apply, +2 DAMROLL, +50 HP, +50 MANA,SENSE-LIFE
 
-a Giant Armadillo Hauberk: body, 23 AC-apply, +2 DAMROLL, +50 HP, +50 MANA, SENSE-LIFE
+a hedgehog-hide skullcap: helm
+  15 AC-apply, +3 DAMROLL, +3 HITROLL, DETECT-ALIGN
 
-a hedgehog-hide skullcap: helm, 15 AC-apply, +3 DAMROLL, +3 HITROLL, DETECT-ALIGN
+a plated belt of platypus bills: waist
+  25 AC-apply, +3 DAMROLL, -100 HP, FLY
 
-a plated belt of platypus bills: waist, 25 AC-apply, +3 DAMROLL, -100 HP, FLY
+a crucified nomad: shield
+  25 AC-apply, +2 DAMROLL, +100 HP, +50 HP_REGEN
 
-a crucified nomad: shield, 25 AC-apply, +2 DAMROLL, +100 HP, +50 HP_REGEN 
-
-Dalmatic of the bloodthirsty voivode: about, 40, AC-apply +3 HITROLL, +4 DAMROLL, DETECT-INVIS
+Dalmatic of the bloodthirsty voivode: about
+  40, AC-apply +3 HITROLL, +4 DAMROLL, DETECT-INVIS
 
 See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP MIDDLE" "RP SPECIAL"
 
@@ -10056,92 +10047,81 @@ Each of these items are special and have multiple specs.
 
 They each have their own cost but have no other restrictions.
 
-Cowl of the Shadowmage
+Cowl of the Shadowmage: head
 
-worn on head
+  5 AC-Apply
+  +5 DAMROLL
+  +5 HITROLL
+  +5 MANA_REGEN (or +25 HP_REGEN)
 
-5 AC-Apply
-+5 DAMROLL
-+5 HITROLL
-+5 MANA_REGEN (or +25 HP_REGEN)
+  SENSE LIFE, DETECT ALIGN
 
-SENSE LIFE, DETECT ALIGN
-
-Spec: stores up to 3 charges for "bite" command
-......harvest <target> (PC): steals 200 mana
-......harvest <target> (NPC): mira self, 500dmg to target (uses all 3 charges)
-......Charges each take 1/2 mud day to recharge
+  Spec: stores up to 3 charges for "bite" command
+    harvest <target> (PC): steals 200 mana
+    harvest <target> (NPC): mira self, 500dmg to target (uses all 3 charges)
+    Charges each take 1/2 mud day to recharge
 
 Cost: 250 RP + 2 QT
 
 
-The Spiked Gauntlet of Gruumsh
+The Spiked Gauntlet of Gruumsh: hands
 
-worn on hands
+  25 AC-Apply
+  +6 DAMROLL
+  +6 HITROLL
+  +5 MANA_REGEN (or +25 HP_REGEN)
+  DETECT-INVISIBLE
 
-25 AC-Apply
-+6 DAMROLL
-+6 HITROLL
-+5 MANA_REGEN (or +25 HP_REGEN)
-DETECT-INVISIBLE
-
-Spec: 15% chance on successful pummel to set victim's position to
-......mortally wounded instead of stunned, meaning the following
-......hit has a 2.5x multiplier instead of just 2x
+  Spec: 15% chance on successful pummel to set victim's position to mortally
+    wounded instead of stunned, meaning the following hit has a 2.5x multiplier
+    instead of just 2x
 
 Cost: 350 RP + 2 QT
 
-Phylactery of the Bean-Sidhe
+Phylactery of the Bean-Sidhe: waist
 
-worn about waist
+  10 AC-apply
+  +4 DAMROLL
+  +2 HITROLL
+  +5 MANA_REGEN (or +25 HP_REGEN)
+  INFRAVISION, FLY
 
-10 AC-apply
-+4 DAMROLL
-+2 HITROLL
-+5 MANA_REGEN (or +25 HP_REGEN)
-INFRAVISION, FLY
-
-Spec: stores up to 3 charges for "wail" command
-......wail: hits all mobs in room for 333dmg and makes wailer tank
-......Charges each take 1/2 mud day to recharge
+  Spec: stores up to 3 charges for "wail" command
+     wail: hits all mobs in room for 333dmg and makes wailer tank
+     Charges each take 1/2 mud day to recharge
 
 Cost: 250 RP + 2 QT
 
-The Desiccated Proximal Phalanx of Enlil
-  OR
-The Desiccated Proximal Phalanx of Anu
+The Desiccated Proximal Phalanx of Enlil/Anu: finger
 
-Worn on finger
+  +5 DAMROLL
+  +5 HITROLL
+  +5 MANA_REGEN (or +25 HP_REGEN)
+  FLY
 
-+5 DAMROLL
-+5 HITROLL
-+5 MANA_REGEN (or +25 HP_REGEN)
-FLY
-
-Spec: has 3 charges, on 'twist' a charge is expended and each character
-......in the room has a random one of the following spells cast on
-......them (PCs only): haste, fury (2 tick), miracle, 3x heal.
-......Charges take one mud day to replenish.
+  Spec: has 3 charges, on 'twist' a charge is expended and each character in the
+    room has a random one of the following spells cast on them (PCs only):
+    haste, fury (2 tick), miracle, 3x heal.
+    Charges take one mud day to replenish.
 
 Cost: 150 RP + 2 QT
 
 
-Shabtis of the mummified pharoah
+Shabtis of the mummified pharoah: waist
 
-worn about waist
+  0 AC-Apply
+  +5 DAMROLL
+  +5 HITROLL
+  -20 AC-AFFECT
+  DETECT INVIS, SENSE LIFE, INFRAVISION
 
-0 AC-Apply
-+5 DAMROLL
-+5 HITROLL
--20 AC-AFFECT
-DETECT INVIS, SENSE LIFE, INFRAVISION
-
-Specs: Four shabti figures that each perform a specific task (triggered on use)
-......Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
-......Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
-......Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
-......Soldier (Waw): Summons an army that does 6,000 damage to current target 
-	- Takes 1 mud week to recharge
+  Specs: Four shabti figures that each perform a specific task (triggered on
+    use)
+    Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
+    Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
+    Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
+    Soldier (Waw): Summons an army that does 6,000 damage to current target
+    - Takes 1 mud week to recharge.
 
 Cost: 450 RP + 2 QT
 
