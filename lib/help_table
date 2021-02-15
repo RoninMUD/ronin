@@ -651,7 +651,7 @@ The stats on Anti-Rents are as follows:
 
 Rusty Spoon: 6D6 +9 +9, Fury Wield
 
-Ubertank Plate: Body 70 AC App 500 HP 100 HP regen Sanc/Dodge
+Ubertank Plate: Body 70 AC Apply 500 HP 100 HP regen Sanc/Dodge
 
 Crash Helmet: Sanc/Invul/Sphere/Prot Good&Evil 30 AC 10 Dam
 
@@ -1151,13 +1151,13 @@ limit given below.
    Bard               300             400
    Commando           400             350
 
-You will also lose 1/2 of your accumulated experience when you die. 10% of that is lost
-permanently.  The rest is added to a Death XP Pool which can be seen in your score.
-This is a seperate pool of experience that will be earned back at an accelerated rate
-along with your normal experience.
+You will also lose 1/2 of your accumulated experience when you die. 10% of that
+is lost permanently.  The rest is added to a Death XP Pool which can be seen in
+your score.  This is a separate pool of experience that will be earned back at
+an accelerated rate along with your normal experience.
 
-If you die again before you have gained back all of the death xp, you will simply lose
-experience as stated above and your death xp pool grows.
+If you die again before you have gained back all of the death xp, you will
+simply lose experience as stated above and your death xp pool grows.
 
 #
 JUMP
@@ -2255,7 +2255,7 @@ SHOOT
 
 Usage : shoot <victim>
 
-You need a fireweapon that is held to use shoot. The fireweapon also needs
+You need a fire weapon that is held to use shoot. The fire weapon also needs
 bullets. Use reload to load the bullets into the gun.
 
 See Also: RELOAD
@@ -2763,7 +2763,7 @@ Example : cast 'burning hands' <player>
    Note that the name of the spell must be enclosed by "'"s.
 
 See Also: help on each individual spell, for example:
-  > help cure ligh
+  > help cure light
   > help ventri
   > help energy drain
 #
@@ -3833,7 +3833,7 @@ Duration    : 24 Ticks, permanent on objects.
 Level       : Level 9 Anti-Paladin, 4 Mage, 7 Ninja,
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-Makes the object of chracter invisible.
+Makes the object of character invisible.
 
 Attacking while invisible will immediately break the spell.
 
@@ -4507,7 +4507,7 @@ Level       : Level 30 Cleric
 Mana Cost   : 200
 
 The caster begs the merciful gods for a miracle.  If they deem the caster
-worthy this spell casts Miracle on every chracter in the room.
+worthy this spell casts Miracle on every character in the room.
 
 See Also: MIRACLE
 #
@@ -4727,7 +4727,7 @@ Mana Cost   : 40
 
 While affected by this spell, the character is able to see
 hidden creatures in the room and characters that are
-a lower level and affected by Imrpoved Invisibility.
+a lower level and affected by Improved Invisibility.
 #
 FIREBREATH
 
@@ -5853,7 +5853,7 @@ See Also: GODS IMMORTAL DEITY WIZARD ETERNAL SUPREME IMPLEMENTOR IMMORTING
 #
 WIZARD WIZ
 
-The middle level of the god ranks, Wizards are knowledgable about the
+The middle level of the god ranks, Wizards are knowledgeable about the
 mud, and are skilled in building, administrative tasks, or coding.
 
 See also: IMMORTAL DEITY TEMPORAL ETERNAL SUPREME IMPLEMENTOR GODS IMMORTING
@@ -7303,7 +7303,7 @@ Also, the Defiler's Backstab skill has a 10% chance on success to trigger a
 Vampiric Touch cast automatically at the target, with zero mana cost, with a 1%
 chance increase for each blood level in the room, to a maximum of 20% chance.
 
-Finally, the damage inflicted by Shadowstep attacks is increased to a minumum of
+Finally, the damage inflicted by Shadowstep attacks is increased to a minimum of
 1.5x a normal hit for the least favorable conditions, to 3.0x a normal hit for
 the most favorable.
 
@@ -7859,7 +7859,7 @@ Class: Nomad (Level 50)
 
 Usage: evasion (toggles on/off)
 
-When the Bandit/Nomad is in this protective postion, all damage inflicted by
+When the Bandit/Nomad is in this protective position, all damage inflicted by
 physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 25%.
 
@@ -8303,7 +8303,7 @@ See Also: SUBCLASSES CRUSADER PALADIN
 CRUSADER
 
 The Crusader has studied healing through prayer and divine worship. Their
-abilities are enchanced by their beliefs, providing very potent healing
+abilities are enhanced by their beliefs, providing very potent healing
 abilities. as they grow in power, they are able to convert their holy energy
 directly into healing and other beneficial effects.
 
@@ -8423,7 +8423,7 @@ Mana Cost   : 30
 
 This spell grants the Crusader a 1d2 bonus damroll to all weapon attacks.  This
 bonus increases to 1d4 damage when targeting a neutral opponent, and 1d6 damage
-when targetting an evil opponent.
+when targeting an evil opponent.
 
 Additionally, each standard melee attack will recover 1d3 points of the
 Crusader's mana points.  Melee hits caused by skills (such as Zeal) do not
@@ -8847,7 +8847,7 @@ See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" "ELEMENTAL FORM"
 BLADESINGER
 
 The Bladesinger performs with flair and enthusiasm. They look to put on the best
-show and to enchance their own abilities by mimicking others. AS they grow in
+show and to enhance their own abilities by mimicking others. AS they grow in
 power, you can see how far their abilities have come.
 
 The Bladesinger is a subclass of the Bard.
@@ -8867,7 +8867,7 @@ See Also: SUBCLASSES CHANTER SONGS BARD
 CHANTER
 
 The Chanter loves to be a team player. The songs warm the heart, boosts the
-spirit and ecourages teamwork. As they grow in power their songs provide even
+spirit and encourages teamwork. As they grow in power their songs provide even
 greater inspiration and allow parties to tackle challenges together.
 
 The Chanter is a subclass of the Bard.
@@ -9128,7 +9128,7 @@ training has lead them to combat bliss, and the skills that allow them to flow
 through the combat are learned. as they grow in power, the full range of their
 abilities will be unleashed.
 
-The Ronin is a suclass of the Ninja.
+The Ronin is a subclass of the Ninja.
 
 For help on each skill or spell, just type HELP <skill/spell name>.
 
@@ -9143,9 +9143,9 @@ See Also: SUBCLASSES MYSTIC NINJA
 #
 MYSTIC
 
-The Mystic aims to achieve pure englightenment. Through meditation, balance
- and steadying of the mind they look for answers. As they grow in power
- they move closer and closer to that goal.
+The Mystic aims to achieve pure enlightenment. Through meditation, balance and
+steadying of the mind they look for answers. As they grow in power they move
+closer and closer to that goal.
 
 The Mystic is a subclass of the Ninja.
 
@@ -9608,7 +9608,7 @@ remort process:
 5) Cancel - Will cancel the remort process, removing any tokens the player has
    acquired from their inventory and essentially erase any intention the
    player has to remort. This can be used to opt out of the remort process
-   prior to committing the decison or to clean the slate of token choices the
+   prior to committing the decision or to clean the slate of token choices the
    player has already made
 
 Once a player has acquired the two tokens needed to remort and committed that
@@ -9722,7 +9722,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" "RP RULES"
 
 --Cost Tables are Cumulative
 
-To to add 3 Damroll to an item that startswith 0, you will need to pay
+To to add 3 Damroll to an item that starts with 0, you will need to pay
 the price for 1 (10) + 2 (20) + 3 (30) = 60.
 
 All items improved with RP will become LIMITED (if they aren't already)
@@ -10107,7 +10107,7 @@ The Desiccated Proximal Phalanx of Enlil/Anu: finger
 Cost: 150 RP + 2 QT
 
 
-Shabtis of the mummified pharoah: waist
+Shabtis of the mummified pharaoh: waist
 
   0 AC-Apply
   +5 DAMROLL
@@ -10118,7 +10118,7 @@ Shabtis of the mummified pharoah: waist
   Specs: Four shabti figures that each perform a specific task (triggered on
     use)
     Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
-    Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
+    Shepherd (Neru): Total Recall - Takes 60 ticks to recharge
     Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
     Soldier (Waw): Summons an army that does 6,000 damage to current target
     - Takes 1 mud week to recharge.
