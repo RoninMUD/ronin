@@ -1818,7 +1818,12 @@ void char_to_store(CHAR *ch, struct char_file_u_5 *st)
 
   for(af = ch->affected, i = 0; i<MAX_AFFECT; i++) {
     if (af) {
-      st->affected[i] = *((struct affected_type_5_pfile*)af);
+      st->affected[i].type       = af->type;
+      st->affected[i].duration   = af->duration;
+      st->affected[i].modifier   = af->modifier;
+      st->affected[i].location   = af->location;
+      st->affected[i].bitvector  = (int32_t)af->bitvector;
+      st->affected[i].bitvector2 = (int32_t)af->bitvector2;
       st->affected[i].dummy = 0;
       /* subtract effect of the spell or the effect will be doubled */
       affect_modify( ch, st->affected[i].location,
