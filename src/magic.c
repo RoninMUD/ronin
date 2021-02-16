@@ -2553,7 +2553,7 @@ void spell_dispel_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   bool disenchanted = FALSE;
 
-  for (AFF *temp_aff = victim->affected, *next_aff; temp_aff; temp_aff = next_aff) {
+  for (AFF *temp_aff = victim->affected, *next_aff = NULL; temp_aff; temp_aff = next_aff) {
     next_aff = temp_aff->next;
 
     if (temp_aff->duration >= 0) {
