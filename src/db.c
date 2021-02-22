@@ -3038,7 +3038,9 @@ void free_obj(struct obj_data *obj)
     obj->ex_description = NULL;
   }
 
-  free(obj);
+  obj->disposed = TRUE;
+  obj->next = disposed_objs;
+  disposed_objs = obj;
 }
 
 /* read contents of a text file, and place in buf */
