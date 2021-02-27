@@ -921,7 +921,9 @@ void heartbeat(int pulse) {
     perform_mob_attack();
   }
 
-  for (DESC *desc = descriptor_list; desc; desc = desc->next) {
+  for (DESC *desc = descriptor_list, *next = NULL; desc; desc = next) {
+    next = desc->next;
+
     if (DESC_PROMPT_MODE(desc)) {
       give_prompt(desc);
     }
