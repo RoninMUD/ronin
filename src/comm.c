@@ -1023,7 +1023,7 @@ void heartbeat(int pulse) {
     log_s("SUBLOG: Re-distributing subclass tokens.");
 
     /* Extract existing tokens. */
-    for (OBJ *token = object_list, *next_token; token; token = next_token) {
+    for (OBJ *token = object_list, *next_token = NULL; token; token = next_token) {
       next_token = token->next;
 
       if ((V_OBJ(token) == TOKEN_OBJ_VNUM) && OBJ_CARRIED_BY(token) && IS_NPC(OBJ_CARRIED_BY(token)) && (V_MOB(OBJ_CARRIED_BY(token)) != TOKEN_MOB_VNUM)) {
