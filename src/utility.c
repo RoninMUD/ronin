@@ -1196,10 +1196,12 @@ int V_ROOM(CHAR *ch) {
 
 struct obj_data
 *get_obj_room (int virtual, int loc) {
-  struct obj_data *tmp, *next;
+  struct obj_data *tmp = NULL, *next = NULL;
+  int room = NOWHERE;
 
-  if(loc==NOWHERE) return NULL;
-  for (tmp=world[real_room(loc)].contents;tmp;tmp=next) {
+  if (loc == NOWHERE) return NULL;
+  if ((room = real_room(loc)) == NOWHERE) return NULL;
+  for (tmp=world[room].contents;tmp;tmp=next) {
     if( V_OBJ(tmp) == virtual ) return (tmp);
     next = tmp->next_content;
   }

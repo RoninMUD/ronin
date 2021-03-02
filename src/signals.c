@@ -28,6 +28,7 @@ void hupsig(int x);
 void handler_sigsegv (int signum, siginfo_t *info, void *context) {
   void *array[10];
   size_t size = 0;
+/*
   struct sigaction action = {
     .sa_handler = SIG_DFL,
     .sa_sigaction = NULL,
@@ -35,7 +36,7 @@ void handler_sigsegv (int signum, siginfo_t *info, void *context) {
     .sa_flags = 0,
     .sa_restorer = NULL
   };
-
+*/
   fprintf(stderr, "SIGSEGV received at address: %p - ", info->si_addr);
 
   switch (info->si_code) {
@@ -48,7 +49,7 @@ void handler_sigsegv (int signum, siginfo_t *info, void *context) {
       break;
 
     default:
-      fprintf(stderr, "Unknown reason.\n");
+      fprintf(stderr, "Unknown reason = %d.\n", info->si_code);
       break;
   }
 
@@ -58,7 +59,9 @@ void handler_sigsegv (int signum, siginfo_t *info, void *context) {
   write_last_command();
 
   /* unregister and let the default action occur */
-  sigaction(SIGSEGV, &action, NULL);
+  //sigaction(SIGSEGV, &action, NULL);
+  signal(signum, SIG_DFL);
+  kill(getpid(), signum);
 }
 
 
