@@ -1183,6 +1183,10 @@ int V_OBJ(OBJ *obj) {
     return 0;
   }
 
+  if (obj->item_number < 0 || obj->item_number > top_of_objt) {
+    return 0;
+  }
+
   return obj_proto_table[obj->item_number].virtual;
 }
 
