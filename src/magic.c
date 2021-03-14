@@ -1895,7 +1895,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     }
 
     if (IS_SET(obj->obj_flags.extra_flags2, ITEM_ALL_DECAY) || IS_SET(obj->obj_flags.extra_flags2, ITEM_EQ_DECAY)) {
-      max_time = obj_proto_table[obj->item_number].obj_flags.timer;
+      max_time = obj->item_number >= 0 ? obj_proto_table[obj->item_number].obj_flags.timer : 0;
       if (max_time)
         val3 = 9 - 10 * obj->obj_flags.timer / max_time;
       else val3 = 9;
