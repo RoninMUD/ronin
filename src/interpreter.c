@@ -1387,6 +1387,7 @@ void nanny(struct descriptor_data *d, char *arg) {
            (d->character != e->character)) {
           SEND_TO_Q("Please choose a new name!\n\r", d);
           close_socket(d);
+          return;
         }
       }
       sprintf(buf, "Did I get that right, %s (Y/N)? ",tmp_name);

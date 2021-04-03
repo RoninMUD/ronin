@@ -1902,6 +1902,7 @@ void close_socket(struct descriptor_data *d)
         }
       }
       free_char(d->character);
+      d->character = NULL;
     }
   }
   else
