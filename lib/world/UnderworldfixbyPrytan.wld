@@ -460,9 +460,9 @@ A similar terrain lies south.
 S
 #11027
 In The Cavern~
-  You are in the caverns of the UnderWorld.  It seams quite a lonely
+  You are in the caverns of the Underworld.  It seems quite a lonely
 place.  As you walk you hear the echo of your footsteps...or are they
-someone elses?
+someone else's?
 ~
 110 8 2
 D0
@@ -478,9 +478,9 @@ To the west, the lower cavern begins.
 S
 #11028
 In The Cavern~
-   You are in the caverns of the UnderWorld.  It seams quite a lonely
+   You are in the caverns of the Underworld.  It seems quite a lonely
 place.  As you walk you hear the echo or your footsteps..or are they
-someone elses?
+someone else's?
 ~
 110 8 2
 D0
@@ -962,7 +962,7 @@ S
 #11052
 The Lit Trail~
    You are in the middle of a short, straight path under the city of
-MidGaard.  The path is brightly lit.
+Midgaard.  The path is brightly lit.
 ~
 110 8 2
 D1
@@ -1065,14 +1065,14 @@ D1
 ~
 0 -1 11057
 D3
-The damp path. 
+The damp path.
 ~
 ~
 0 -1 11067
 S
 #11059
 Wet Path~
-   You are on a wet path far below the city of MidGaard.  Your feet
+   You are on a wet path far below the city of Midgaard.  Your feet
 are getting soaked, and you hope that you don't get pneumonia!
 ~
 110 8 3
@@ -1093,7 +1093,7 @@ D2
 S
 #11060
 Wet Path~
-  You are on a wet path far below the city of MidGaard.  The water is
+  You are on a wet path far below the city of Midgaard.  The water is
 now up to you knees...maybe you should turn back.
 ~
 110 9 6

@@ -125,10 +125,12 @@ void assign_WOT(void);
 void assign_ecanyon(void);
 //void assign_wbw(void);
 #ifdef TEST_SITE
+void assign_ubers(void);
 void assign_questyvaderIV(void);
 void assign_digsite(void);
 void assign_luthienIV(void);
 void assign_workbench(void);
+
 #endif
 
 void assign_mobiles(void)
@@ -216,6 +218,7 @@ void assign_mobiles(void)
   assign_ecanyon();
 //  assign_wbw();
 #ifdef TEST_SITE
+  assign_ubers();
   assign_digsite();
   assign_luthienIV();
   assign_workbench();

@@ -1517,7 +1517,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (27) Super Harm
     (28) Invulnerability
     (30) Great Miracle
-    (40) Haste                         (50) Divine Intervention
+    (45) Haste                         (50) Divine Intervention
 #
 "MAGE SPELLS"
 
@@ -2491,7 +2491,7 @@ look IN the bag
 look to the south   (or just: look south)
 
 Note that if you LOOK AT CORPSE you will not see its inventory.
-To see what's inside a container (e.i. Corpse) use LOOK IN <OBJECT>.
+To see what's inside a container (i.e. Corpse) use LOOK IN <OBJECT>.
 
 See Also: EXAMINE or READ
 #
@@ -4981,7 +4981,7 @@ See also: BRIEF
 META
 
 Meta allows you to increase your statistics. You can Meta at the
-Metaphysycian. Use list to see a listing of Meta costs for you. All
+Metaphysician. Use list to see a listing of Meta costs for you. All
 costs are in experience points. These points will be subtracted from
 your accumulated experience points.
 
@@ -5746,7 +5746,7 @@ VAULTS STORAGE
 Location: East of reception.
 
 Buying:  To buy a vault, you go to the vault guard and type 'buy vault'.
-         This will allocate you a vault capable of holding 500 items.  As
+         This will allocate you a vault capable of holding 1000 items.  As
          the vault owner you have control over the vault and can give
          access to other players.
 
@@ -7948,7 +7948,7 @@ Class: Warrior (Level 40) Nomad (Level 40)
 Usage: disembowel <victim>
 
 Disembowel is a vicious attack that deals a single melee hit against the target,
-multiplied by between the user's level divided by 10, up to to their level
+multiplied by between the user's level divided by 10, up to their level
 divided by 5 (between a 5x to a 10x multiplier at level 50).
 
 This attack can only be successful when performed against a target that is
@@ -9685,7 +9685,7 @@ can be viewed by visiting Saga and typing 'list'.
 Prestige levels, stats, and perks are unaffected by the remort process; once
 earned, prestige and its benefits are permanent.
 
-See Also: REMORT
+See Also: REMORT "PRESTIGE LIST"
 #
 "IRON SKIN"
 
@@ -9722,7 +9722,7 @@ See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" "RP RULES"
 
 --Cost Tables are Cumulative
 
-To to add 3 Damroll to an item that starts with 0, you will need to pay
+To add 3 Damroll to an item that starts with 0, you will need to pay
 the price for 1 (10) + 2 (20) + 3 (30) = 60.
 
 All items improved with RP will become LIMITED (if they aren't already)
@@ -9985,7 +9985,7 @@ They have no class or alignment restrictions.
 Item Name : Wear Location
   Details
 
-The pelt of a black cat: neck, about, clonable
+The pelt of a black cat: neck, about, cloneable
   20 AC-apply, +6 SAVING_SPELL, +6 HITROLL, +6 MANA_REGEN, PROTECT_GOOD,
   PROTECT_EVIL
 
@@ -10126,5 +10126,26 @@ Shabtis of the mummified pharaoh: waist
 Cost: 450 RP + 2 QT
 
 See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP TOP" "RP MIDDLE" "RP BOTTOM"
+#
+UBER UBERS
+Ubers are modified versions of mobs that already are in the game. They load
+endgame gear, grant large amounts of gold and experience and provide the
+extra challenge for those looking for something new to do.
+
+When an Uber spawns into the world, Franz will send a message to the server
+in the quest channel indicate that uber versions of a creature have appeared.
+
+The Ubers that appear are random and not all are guaranteed to spawn at the
+same time.
+
+However - They do not make things easy.  Some helpful tips are below.
+
+1. They will spawn in the same room as their normal selves. This means you
+   may have to fight the normal and Uber versions at the same time.
+2. They will grant AQUEST points to each member of the group when killed.
+   The reward is different for each Uber.
+
+See Also:
+
 #~
 

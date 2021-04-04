@@ -3,7 +3,7 @@ Alabaster Chamber~
 At this end of the hall, a pair of massive thrones regally watch over the manor.
 The pearly glow of the crystalline chandelier illuminates the opaque seashell
 curtains behind the thrones and the open arch to the balcony. The dazzling
-white tiles are interruped by the occasional silver-grey tile. Huge silver
+white tiles are interrupted by the occasional silver-grey tile. Huge silver
 curtains are drawn away from the balcony door, that are obviously closed when
 the King wishes to have privacy. A soothing breeze drifts in from the balcony,
 and the chirping birds beckon you to come outside to enjoy the sunshine.
@@ -14,7 +14,7 @@ D0
 curtain~
 8 -1 20945
 D1
-The sunny balcony is made of pure marble, and the small green plants 
+The sunny balcony is made of pure marble, and the small green plants
 that decorate it grow lively, the sunshine is their whole being.
 ~
 ~
@@ -31,7 +31,7 @@ D3
 0 -1 0
 E
 chandelier~
-The blazing white light that comes from the star shaped chandlier
+The blazing white light that comes from the star shaped chandelier
 dazzles you as you count 19 flaming candles.
 ~
 S
@@ -44,7 +44,7 @@ make up the majority of the outer two or three rings, the inner rings being
 blue, peach, white varieties with color on just the edges of the petals, and
 even pure white.  The main attraction, though, at the center of all this
 finery, is the most beautiful shade of deep blue you've ever seen. It is
-almost purple in its depth of color, and it makes all other things in the 
+almost purple in its depth of color, and it makes all other things in the
 room seem slightly less beautiful.
 ~
 209 0 2
@@ -88,7 +88,7 @@ vines~
 11 -1 20907
 E
 chandelier~
-The lovely piece of glasswork is shaped like a turtle, with 7 
+The lovely piece of glasswork is shaped like a turtle, with 7
 firey candles.  There seems to be a hole near the roof, large enough
 for a person to fit through. The vines that hang from the ceiling
 appear to grow from that hole.
@@ -114,11 +114,11 @@ S
 A Marble Balcony~
 The dazzling blue sky greets your eyes, and a fresh breeze blows over the
 various flora that surrounds you, pleasing your senses. Ebony window boxes line
-the edge of the terrace, containing beautiful and sweetly scented flowers.  
+the edge of the terrace, containing beautiful and sweetly scented flowers.
 The trees that grow up to edge of the balcony are laden with fruit, and tempt
 you to pick a few from each tree.  The limbs look strong enough to hold your
-weight, but when you look over the edge, a large guard dog begins barking 
-ferociously up at you. 
+weight, but when you look over the edge, a large guard dog begins barking
+ferociously up at you.
 ~
 209 67108864 1
 D3
@@ -141,10 +141,10 @@ S
 #20904
 Dank Cellar Stairs~
 Descending into the hidden depths of Tweefsmanor Hall, light
-seems to flee into the unreachable realms of silence. In contrast to 
-the colors of the world above, the only thing here is an inhuman 
-melancholia that spreads like a disease as thick as fog. Depressed 
-by the current atmosphere, your mind begins to wander to fanatical 
+seems to flee into the unreachable realms of silence. In contrast to
+the colors of the world above, the only thing here is an inhuman
+melancholia that spreads like a disease as thick as fog. Depressed
+by the current atmosphere, your mind begins to wander to fanatical
 thoughts of assassination.
 ~
 209 9 0
@@ -160,16 +160,16 @@ trapdoor~
 S
 #20905
 Azure Hall~
-Under the pale nimbus of the powder blue chandelier you notice a marvelous 
+Under the pale nimbus of the powder blue chandelier you notice a marvelous
 fresco covering the east wall from ceiling to floor. The magnificent painting
 depicts a wedding ceremony, probably of the King and Queen here at the Manor.
 Plush blue carpet stretches all around you, sinking slightly beneath your
-weight. A large couch is to your left, along with a small potted plant on 
+weight. A large couch is to your left, along with a small potted plant on
 an end table.
 ~
 209 67108872 0
 D0
-Such an extraordinary green haze right in front of your eyes, you'd 
+Such an extraordinary green haze right in front of your eyes, you'd
 like to take a closer look.
 ~
 ~
@@ -183,8 +183,8 @@ and this one.
 0 -1 20906
 E
 couch~
-The comfortable looking couch beckons you, tempting you with soft cushions 
-and fluffy pillows.  The sides of the couch are torn to shreds, probably from 
+The comfortable looking couch beckons you, tempting you with soft cushions
+and fluffy pillows.  The sides of the couch are torn to shreds, probably from
 a pet's zealous nail-sharpening exercise.
 ~
 E
@@ -200,14 +200,14 @@ a mushroom.
 ~
 E
 painting~
-This mural is celebrating the joy-filled wedding of the Tweef King and 
+This mural is celebrating the joy-filled wedding of the Tweef King and
 Queen, a great day in Tweef history.  The happy tweefs that stand around are
 enjoying this wonderful occasion, and even the ever-present guardian blarfs
 look like they're having a good time.
 ~
 E
 fresco~
-This mural is celebrating the joy-filled wedding of the Tweef King and 
+This mural is celebrating the joy-filled wedding of the Tweef King and
 Queen, a great day in Tweef history.  The happy tweefs that stand around are
 enjoying this wonderful occasion, and even the ever-present guardian blarfs
 look like they're having a good time.
@@ -216,10 +216,10 @@ S
 #20906
 Royal Hall~
 The hall to the north extends so far you can barely see all the
-way down. It's lighted by four extraordinary chandeliers, not one 
-alike. Each is different in every aspect, even color. You stand in the 
+way down. It's lighted by four extraordinary chandeliers, not one
+alike. Each is different in every aspect, even color. You stand in the
 pale glow of a lavender chandelier, but blue intertwines and becomes
-prominent about twenty steps ahead. Past the blue is an opalescent 
+prominent about twenty steps ahead. Past the blue is an opalescent
 green, followed by an intense crystalline white at the end of the hall
 where you can almost make out two large thrones.
 ~
@@ -293,7 +293,7 @@ Teinfort's Dungeon~
 A hideous throne of solid onyx with a blood red cloth draped casually
 across it is on a raised dais in the center of the room. All along the
 blood-spattered walls hangs a gruesome display of broken swords, mangled
-shields, and twisted armor belonging, possibly, to the warriors you've 
+shields, and twisted armor belonging, possibly, to the warriors you've
 seen attached to the walls in other rooms.
 ~
 209 73 0
@@ -302,7 +302,7 @@ D3
 door~
 1 -1 20913
 D4
-Above the throne is a small opening, bigenough for a person to climb through,
+Above the throne is a small opening, big enough for a person to climb through,
 it could be a way out. You would have to climb the throne.
 ~
 throne~
@@ -318,7 +318,7 @@ S
 The Blarf Orchestra Pit~
 Through the hanging bead curtain you can see a multitude of blarfs happily
 making music on their tiny instruments. The green haze that settles around
-the band is almost like a portal, like the band is not mortal but emphemeral.
+the band is almost like a portal, like the band is not mortal but ephemeral.
 Emerald green chairs are set up facing the orchestra, but you find one in a
 corner, where you can observe the happenings around you. The crowd dances
 excitedly, as if being closer to the music somehow makes it better.
@@ -350,10 +350,10 @@ door~
 S
 #20914
 Les Jardins Belle~
-The flora that grows here astonishes you. Never before have you seen such 
+The flora that grows here astonishes you. Never before have you seen such
 beautiful arrangements. The peace that exudes from this quiet garden embraces
-your whole being, encourages your soul, and calms your mind. A small stone 
-bench rests nearby, underneath a weeping willow. Yellow climbing rose vines 
+your whole being, encourages your soul, and calms your mind. A small stone
+bench rests nearby, underneath a weeping willow. Yellow climbing rose vines
 cling to an ivory trellis that leads the way to the pond. Another tree stands
 tall and proud near the wall of the palace, reaching towards the sky with
 sturdy limbs.
@@ -373,7 +373,7 @@ D2
 0 -1 20901
 E
 tree~
-A sturdy peach tree, with a knothole where a squirrel has attempted 
+A sturdy peach tree, with a knothole where a squirrel has attempted
 to make its home.
 ~
 E
@@ -421,7 +421,7 @@ D3
 0 -1 20919
 E
 swan~
-A stunningly beautiful swan, so pure white, there is not even a 
+A stunningly beautiful swan, so pure white, there is not even a
 single mark of discolor. She swims across the pond, as if patrolling,
 ever alert for any kind of danger.
 ~
@@ -444,7 +444,7 @@ The wooden floors are beautifully carved, each plank shows a different scene of
 Blarf daily life.  It's as if the Blarfs come here to dance and stomp on all the
 worries and hardships they're here to forget.  The music can be heard throughout
 the hall, amplified by tunnel-like exits. The shade cast by the green chandelier
-gives the room an aura of growth and life, and by the looks of the dancers the 
+gives the room an aura of growth and life, and by the looks of the dancers the
 light also provides unreserved stamina.
 ~
 209 67108872 0
@@ -474,7 +474,7 @@ D2
 0 -1 20914
 E
 snapdragons~
-    A bright array of red, orange, yellow and even a few purple 
+    A bright array of red, orange, yellow and even a few purple
 snapdragons are scattered through the garden.
 ~
 E
@@ -485,23 +485,23 @@ through the canopy of trees.
 ~
 E
 gladiolus~
-   Lovely, tall gladiolus form rings around the base of the trees, 
+   Lovely, tall gladiolus form rings around the base of the trees,
 pretty yellows and pinks add color to the brown tree trunks.
 ~
 E
 poppies~
-   Bright red poppies are interspersed amoung tall green bushes that 
+   Bright red poppies are interspersed among tall green bushes that
 enclose this garden away from the world outside.
 ~
 E
 trees~
    Large weeping willows grace the garden with refreshing shade, and
-there is a comfortable looking tire-swing hanging from a strong 
+there is a comfortable looking tire-swing hanging from a strong
 branch.
 ~
 E
 poppy~
-Bright red poppies are interspersed amoung tall green bushes that 
+Bright red poppies are interspersed among tall green bushes that
 enclose this garden away from the world outside.
 ~
 S
@@ -511,8 +511,8 @@ After being in the oasis, the harsh desert sun has finally disappeared to but
 a memory of what was. You have managed to wander into a beautiful garden that
 is astonishing, you can't imagine how something this amazing could survive
 so close to a place like the desert you just experienced.  There is something
-magical about this garden that relaxes you, and calms your senses, so you can 
-feel the harmony even within your soul. The small path continues north and 
+magical about this garden that relaxes you, and calms your senses, so you can
+feel the harmony even within your soul. The small path continues north and
 south.
 ~
 209 0 2
@@ -529,10 +529,10 @@ S
 #20919
 Les Jardins Miniature~
 This part of the garden is full of small ground-cover flowers, violas and
-clover abound. There are a few miniature roses, and grape hyacinths that 
+clover abound. There are a few miniature roses, and grape hyacinths that
 flourish under small green bushes. Tiny pansies peek their faces out from under
-some overly-protective chrysanthemums, and a few baby irises spread their 
-sophistication and loveliness thoroughout the garden.
+some overly-protective chrysanthemums, and a few baby irises spread their
+sophistication and loveliness throughout the garden.
 ~
 209 0 2
 D0
@@ -566,7 +566,7 @@ leaves.
 E
 clover~
      The whole ground is carpeted with green clover leaves, white and
-purple flowers peek out, though rare. Luck strikes, and you see a 
+purple flowers peek out, though rare. Luck strikes, and you see a
 four leaf clover sticking out from under your shoe. You reach for it,
 but it suddenly isn't there...
 ~
@@ -581,7 +581,7 @@ chrysanthemums~
      Very abundant, and only about those flowers with no natural
 protection, these large flowers seem out of place in this area of the
 garden, standing watch over the small flowers. They do, however, in
-their orange and white homeliness, stay away from the more beautiful 
+their orange and white homeliness, stay away from the more beautiful
 roses, not wishing to be upstaged.
 ~
 E
@@ -593,7 +593,7 @@ green vines.
 E
 roses~
      Sharp thorns protect the mini rose bushes that dot the garden. A
-few colors catch your eye, but the most beautiful in the garden is a 
+few colors catch your eye, but the most beautiful in the garden is a
 small plant with a light blue color.
 ~
 S
@@ -603,7 +603,7 @@ In the perpetual winter of this garden, snow covered fir trees have been decked
 out with red bows. Magical lights blink red, yellow, and blue in between the
 green branches. Leafless maples are outlined against the dark sky, matches by
 the tall evergreens in their star-like splendor. Delicate snowflakes float down
-froma cloudless sky, coming to rest on earth and on your eyelashes, making it
+from a cloudless sky, coming to rest on earth and on your eyelashes, making it
 difficult to see.
 ~
 209 0 9
@@ -636,7 +636,7 @@ In the Pond~
 As you splash under the cool surface of the pond you begin to wonder why you
 hadn't noticed the serenity of this world that is underwater. The muddy ground
 serves as a refuge for crabs and other shellfish. A nip at one of your toes
-tells you that you must have just stepped on someone's home. Ducks paddle 
+tells you that you must have just stepped on someone's home. Ducks paddle
 happily above your head, while birds swoop low and break the surface with their
 feet in hopes of catching their dinner. All in all it is a peaceful place, but
 as your lungs contract, burning for air, you feel you'd better return to land.
@@ -679,7 +679,7 @@ around you without a second glance.
 S
 #20922
 Manor Halls~
-The walls are bare and plain--it appears that anything that wasn't securely 
+The walls are bare and plain--it appears that anything that wasn't securely
 bolted down has been stolen, unless this is the way the family chose to have
 their decor. There are no plants, and even the windows are bare, there are no
 curtains. There are a few places on the carpet that appear to have indents from
@@ -708,8 +708,8 @@ S
 Through the Manor~
 An ordinary hallway, with high walls and a cathedral-like ceiling. The light
 cedar tones of the paneling reflect the light from the banquet hall to the
-south, and  the large hallway continues to the east. The plush silver carpet 
-sinks beneath your feet, and you notice a few thinly-leaved bushes growing out 
+south, and  the large hallway continues to the east. The plush silver carpet
+sinks beneath your feet, and you notice a few thinly-leaved bushes growing out
 of brown planters that are randomly scattered down the hall.
 ~
 209 67108872 0
@@ -735,7 +735,7 @@ The walls are bare and plain--it appears that anything that wasn't securely
 bolted down has been stolen, unless this is the way the family chose to have
 their decor. There are no plants, although there are a few places in the carpet
 that appear to have indents from where plants used to stand. Even the windows
-are bare, there are no curtains. The servants go about their routine, 
+are bare, there are no curtains. The servants go about their routine,
 unconcerned about the missing items, they don't even appear to notice that
 anything is peculiar.
 ~
@@ -757,7 +757,7 @@ There are no eye catching decorations to this room, except for a fairly large,
 completely closed door to the east.  The intricate design on the door has no
 rhyme or reason to it, but it is beautiful.  The gold inlay is stunning and
 it accents the gold threads through the ivory carpet. The sounds of clinking
-glasses and silverware on porcelain can be heard through the doors, but you 
+glasses and silverware on porcelain can be heard through the doors, but you
 don't feel like you should intrude upon dinner.
 ~
 209 67108872 0
@@ -774,7 +774,7 @@ door~
 S
 #20926
 Manor Banquet Hall~
-A long table with many seats for many guests, and filled to overflowing with 
+A long table with many seats for many guests, and filled to overflowing with
 food that brings tears to the eyes to see. Each chair is made of solid gold,
 while the table is gold with jewels inlaid in the top. The plates are pure
 white china, with a leaf pattern made of platinum, and the cutlery is made of
@@ -805,10 +805,10 @@ S
 Outside the Banquet Hall~
 The swinging doors to the west have not stopped since you entered the room.
 Although you haven't seen anyone go in or come out, the doors continue to swing
-in perpetual motion. The poor carpet has a track walked into it, with bare 
-spots from the north to the west doors, where servants have walked constantly, 
-either bringing food in or taking scraps out. The sounds of feasting tweefs 
-comes from behind the doors, and the smell of delicious food entices you to 
+in perpetual motion. The poor carpet has a track walked into it, with bare
+spots from the north to the west doors, where servants have walked constantly,
+either bringing food in or taking scraps out. The sounds of feasting tweefs
+comes from behind the doors, and the smell of delicious food entices you to
 join their meal.
 ~
 209 67108872 0
@@ -853,7 +853,7 @@ door~
 1 -1 20933
 E
 tree~
-The tree is very branchy, but the low branches have been trimmed so noone can
+The tree is very branchy, but the low branches have been trimmed so no one can
 climb it. The bark on the lower part of the tree appears to have been stripped
 away by a pair of massive claws and you pray that anything big enough to do that
 kind of damage that lives inside is friendly.
@@ -862,7 +862,7 @@ S
 #20929
 Manor Halls~
 The stairs up lead to the tower of the tweef observatory. The room is fairly
-round, with the staircase shape being a typical spiral. There is a pole that 
+round, with the staircase shape being a typical spiral. There is a pole that
 runs through the center of the stairwell. Diamond shaped windows lead the path
 along the stairs, and plants hang from the stairs above your head. If you
 accidentally hit one, you might upset some dirt which would lead to the house-
@@ -870,7 +870,7 @@ keeper being very upset with you.
 ~
 209 67108872 0
 D0
-You can see the bejewelled ivory columns to the north.
+You can see the bejeweled ivory columns to the north.
 ~
 ~
 0 -1 20961
@@ -987,7 +987,7 @@ S
 #20935
 Manor Library~
 Cathedral style ceilings are the first thing to catch your eye in this room,
-followed closely by the rows and rows of shelves. There is a round table near 
+followed closely by the rows and rows of shelves. There is a round table near
 the door piled with books and a few comfortable chairs strategically placed
 nearby. As you wander down the aisles you almost trip over the books that have
 no place on the overflowing shelves. You feel completely at ease in this room,
@@ -1032,7 +1032,7 @@ The hallway for the rest of the manor lies to the west.
 0 -1 20928
 E
 doors~
-Large french doors with decorative gold handles separate the library from 
+Large french doors with decorative gold handles separate the library from
 the hallway.
 ~
 S
@@ -1040,9 +1040,9 @@ S
 Through the Manor~
 The swinging door at the east end is in constant motion, with servants bustling
 in and out in preparation for a feast. This sparsely decorated room has a few
-planters with some green bushes, and the large windows on the south wall let in 
-light that almost blinds you as it reflects off the dazzling white walls. There 
-are hexagonal black tiles interspersed with the small white squares, creating a 
+planters with some green bushes, and the large windows on the south wall let in
+light that almost blinds you as it reflects off the dazzling white walls. There
+are hexagonal black tiles interspersed with the small white squares, creating a
 nice effect. A few stains are visible, since food obviously travels through this
 room on the way to the banquet hall.
 ~
@@ -1109,13 +1109,13 @@ S
 Manor Kitchen~
 A steamy, smoky, smell-filled, and almost perfectly clean kitchen, with a
 massive oven, and other various kitchen affects. Pots and pans hang from the
-ceiling above the stove, while utensils are hanging from nails on the wall 
-next to it. White-with-blue-flecked tiles are embedded in the floor, and 
+ceiling above the stove, while utensils are hanging from nails on the wall
+next to it. White-with-blue-flecked tiles are embedded in the floor, and
 complimenting blue curtains decorate the huge windows, that are all open
 to aid in ventilation of this well-used room. What appears to be a pantry
 connects to this room to the west, and the door to the south is in perpetual
 motion, while servants bustle in and out to be the perfect attendants for
-a feast. Something in a pot on the stove is bubbling over, but noone seems
+a feast. Something in a pot on the stove is bubbling over, but no one seems
 to notice, except you--you're beginning to be affected by the wonderful smells,
 and your stomach grumbles in anticipation.
 ~
@@ -1136,7 +1136,7 @@ The kitchen pantry lies to the west.
 0 -1 20941
 E
 pot~
-A large batch of noodles seem to be boiling over, but nobody notices or 
+A large batch of noodles seem to be boiling over, but nobody notices or
 attempts to correct the problem.
 ~
 E
@@ -1148,9 +1148,9 @@ quantities of food.
 S
 #20940
 Wine Cellar~
-After your eyes become accustomed to the dim light from a few lanterns that 
-amazingly burn cool, you see row upon row of huge kegs. Most of them are 
-labelled, and those are the ones that you take the most interest in. There are 
+After your eyes become accustomed to the dim light from a few lanterns that
+amazingly burn cool, you see row upon row of huge kegs. Most of them are
+labelled, and those are the ones that you take the most interest in. There are
 a few unfamiliar names, but most you recognize. The dirt floor is cool and the
 air is moist. You notice a small bench to the left and a set of stairs that
 seem to an even lower level of the manor. The stairway looks dark and you
@@ -1180,9 +1180,9 @@ S
 #20941
 Manor Kitchen~
 A stocked pantry, with shelves lining the entire perimeter of the walls. Food
-seems to spill off the shelves, but there is no mess on the floor.  In the 
+seems to spill off the shelves, but there is no mess on the floor.  In the
 center of the floor is a trapdoor, probably leading to the wine cellar, or more
-food. The room has no windows, but a ventilation fan whirrs quietly from the 
+food. The room has no windows, but a ventilation fan whirrs quietly from the
 ceiling, to keep the room cool and the food from spoiling.
 ~
 209 67108872 0
@@ -1200,7 +1200,7 @@ S
 #20942
 Manor Stairs~
 The base of a set of stairs that apparently leads up to the residence of the
-family. The stairs are covered with a dark burgundy carpeting, probably to 
+family. The stairs are covered with a dark burgundy carpeting, probably to
 minimize stains from dropped food. These are the stairs the ones the cooks
 use to serve private meals to the family in their rooms. To the south, all
 the sounds of a busy kitchen are quite audible, but the stillness of
@@ -1224,7 +1224,7 @@ each wall and an open skylight above you. The walls have been freshly painted,
 and the wood floor replaced, since this room takes much more traffic than most
 others in the manor. There is a ring of stones embedded in the floor in the
 center of the room, large grey stones accenting the light colored wood floor.
-eInside the circle, covered with glass, is turbulent water splashing and
+Inside the circle, covered with glass, is turbulent water splashing and
 churning, making a beautiful centerpiece.
 ~
 209 67108872 0
@@ -1250,7 +1250,7 @@ This is the outer waiting room to the royal chambers.  The cream and pastel pink
 decor is almost repulsive, making you think perhaps the royals don't want to be
 visited. The cream colored couch looks too clean to sit on, and the pink
 cushions are positively repugnant. There are a few amiable plants decorating the
-lounge area, and the wide windows let in plenty of light. Rosy pink walls 
+lounge area, and the wide windows let in plenty of light. Rosy pink walls
 brighten the room, and there are a few paintings by famous tweef artists that
 hang with cream frames. The heavy cream curtain at the east end of this hall has
 not moved one inch, but you know that if you are to see the royals they are
@@ -1298,7 +1298,7 @@ well used, he must have more important things to do, like run the manor.
 S
 #20945
 Manor Halls~
-The pale carpet has been freshly cleaned by busy servants whose whole existance
+The pale carpet has been freshly cleaned by busy servants whose whole existence
 is to clean up after other people. There are a few lovely paintings hanging
 on the wall, and a potted plant or two placed intermittently down the hall. A
 wonderfully clean smell emanates from the walls that have been washed at least
@@ -1338,9 +1338,9 @@ S
 Outside Larandi's Boudoir~
 The inside waiting room of Princess Larandi's chamber, there is a blue-tinted
 curtain hanging in the east doorway.  A midnight blue couch and loveseat set
-decorates this room, and a cedar coffee table with a glass tabletop is the 
+decorates this room, and a cedar coffee table with a glass tabletop is the
 centerpiece. The carpet is a plush cream color with a hint of blue that meshes
-nicely with the color of the furniture. There is a skylight in the roof that 
+nicely with the color of the furniture. There is a skylight in the roof that
 lets in plenty of daylight when the sun is up, and all the moonlight she needs
 when it's not.
 ~
@@ -1447,7 +1447,7 @@ door~
 1 -1 20950
 E
 doors~
-Expert workmanship has carved beautiful figures into the wood of the 
+Expert workmanship has carved beautiful figures into the wood of the
 doors. The animals are so lifelike you could almost believe they were
 real.
 ~
@@ -1466,20 +1466,20 @@ S
 #20950
 Guest Quarters~
 A large room with bay style windows that open over the beautiful Manor Gardens.
-The canopied bed that stands against one wall is lavishly decorated with ivory 
-and burgundy pillows, with a freshly changed look, as if the house was 
-expecting a visitor. A polished silver tea service waits on the nightstand, 
+The canopied bed that stands against one wall is lavishly decorated with ivory
+and burgundy pillows, with a freshly changed look, as if the house was
+expecting a visitor. A polished silver tea service waits on the nightstand,
 with fruit and toast placed on the tray. A cedar hope chest stands at the foot
-of the bed, intricately carved with a floral design.  An identically carved 
+of the bed, intricately carved with a floral design.  An identically carved
 chest of drawers leans against another wall, and there is a color schemed ivory
 and burgundy screen placed facing the door to shield guests, as they dress, from
-unannounced visitors to their room. To the north you can see into the private 
+unannounced visitors to their room. To the north you can see into the private
 bathroom provided for the manor guests.
 ~
 209 67108872 0
 D0
 Through swinging doors, made of desert ironwood, you can see the
-extention of the carpet and the ivory walls of the guest bathroom.
+extension of the carpet and the ivory walls of the guest bathroom.
 ~
 ~
 0 -1 20999
@@ -1495,7 +1495,7 @@ seeing the beauty of the land why the tweefs are a content people.
 ~
 E
 screen~
-A beautiful ivory screen with burgundy stiching, the designs on both
+A beautiful ivory screen with burgundy stitching, the designs on both
 sides are different and make no sense. Vertical lines here, stars
 there, and there doesn't appear to be any sort of pattern.
 ~
@@ -1506,7 +1506,7 @@ room, but it is surprisingly empty.
 ~
 E
 chest~
-This hope chest is probably full of family memories and is just set 
+This hope chest is probably full of family memories and is just set
 here for decoration. It is locked closed, and you're pretty sure that
 there is no key.
 ~
@@ -1529,7 +1529,7 @@ items, if a guest were staying in this room.
 ~
 E
 bed~
-The canopy is pulled back, since there is noone sleeping in the bed,
+The canopy is pulled back, since there is no one sleeping in the bed,
 but the fluffy pillows and warm blankets are a blatant invitation
 to rest your weary feet from your search.
 ~
@@ -1551,7 +1551,7 @@ or plants.
 D1
 The doors are extraordinarily decorative, although it is not unusual for
 royalty like the King and Queen to afford such luxuries in their private
-appartments.
+apartments.
 ~
 doors~
 1 -1 20952
@@ -1568,7 +1568,7 @@ E
 doors~
 The doors are extraordinarily decorative, although it is not unusual for
 royalty like the King and Queen to afford such luxuries in their private
-appartments.
+apartments.
 ~
 S
 #20952
@@ -1606,12 +1606,12 @@ S
 Royal Balcony~
 The private balcony of the King and Queen overlooks the entire tweef province.
 From here they can make their announcements, proclaim their holidays, or just
-plain watch their subjects. There are flower beds on this square marble 
+plain watch their subjects. There are flower beds on this square marble
 balcony, that the queen has decorated with marigolds and chrysanthemums for
-their bright yellow and orange to liven up the cold white marble. Artistically 
-created wrought iron chairs are placed close to the thin veil that separates 
-the balcony from the royal bedroom, so that early in the morning, the king and 
-queen can sit in the shade of their magnificent palace, but still in the 
+their bright yellow and orange to liven up the cold white marble. Artistically
+created wrought iron chairs are placed close to the thin veil that separates
+the balcony from the royal bedroom, so that early in the morning, the king and
+queen can sit in the shade of their magnificent palace, but still in the
 daylight to read the morning reports and drink their coffee.
 ~
 209 67108864 1
@@ -1641,7 +1641,7 @@ and lace pillows. Her massive cedar closet stands open, clothes torn out and
 lying everywhere but inside.  Much like any teenaged girl's room, her vanity
 is cluttered with makeup and hair accessories, notes "To Self", and other
 prioritized junk. An unusually large cushion is set next to the head of
-Larandi's bed, and a bowl with separate compartments for food and water is 
+Larandi's bed, and a bowl with separate compartments for food and water is
 on the floor nearby.
 ~
 209 67108872 0
@@ -1651,7 +1651,7 @@ curtain~
 1 -1 20946
 E
 bed~
-The sheets and bed coverings have been recently uesd, they are twisted and
+The sheets and bed coverings have been recently used, they are twisted and
 half of them are hanging over the side. Pillows have been thrown haphazardly
 back onto the bed, to keep the floor clean.
 ~
@@ -1677,7 +1677,7 @@ S
 #20955
 Garden Path~
 There is a red brick path running through the garden. It ends at the north by
-the glass door, and continues to the south and east through thick green 
+the glass door, and continues to the south and east through thick green
 foliage. There are a few greystone benches, but there are so many trees that
 you couldn't sit in the sun. There is a mossy ground cover off the path, with
 light purple flowers that grow sporadically.
@@ -1704,7 +1704,7 @@ flowers.
 ~
 E
 bench~
-A bench carved from a solid piece of stone, it's wide enough for two 
+A bench carved from a solid piece of stone, it's wide enough for two
 people to sit on.
 ~
 S
@@ -1740,7 +1740,7 @@ well used, by the devoted tweefs who come to pray.  The handrail is a carved
 chain of hearts, and the solid wall that connects the handrail to the stairs
 has gold, silver, and jewels inlaid in a repetitive heart pattern. A sweet
 flute melody with a piano counterpoint can be heard emanating from the temple.
-Understanding the peaceloving attitude of the tweefs, it is only natural that
+Understanding the peace-loving attitude of the tweefs, it is only natural that
 their god, or goddess, is one of love and harmony.
 ~
 209 67108864 0
@@ -1762,7 +1762,7 @@ well used, by the devoted tweefs who come to pray.  The handrail is a carved
 chain of hearts, and the solid wall that connects the handrail to the stairs
 has gold, silver, and jewels inlaid in a repetitive heart pattern. A sweet
 flute melody with a piano counterpoint can be heard emanating from the temple.
-Understanding the peaceloving attitude of the tweefs, it is only natural that
+Understanding the peace-loving attitude of the tweefs, it is only natural that
 their god, or goddess, is one of love and harmony.
 ~
 209 67108864 0
@@ -1824,7 +1824,7 @@ S
 #20961
 Grand Entrance~
 The cool marble tiles greet your hot, weary feet, and a fountain in the entry is
-a temptation for your thirsty body. There are large windows high above you, but 
+a temptation for your thirsty body. There are large windows high above you, but
 the harsh heat you left outside does not penetrate them. Marvelous ivory columns
 stand beside the fountain, holding up nothing. Standing there, they display not
 only the beauty of their craftsmanship, but also the exotic wealth of the people
@@ -2191,10 +2191,10 @@ ground beside the well, so you can draw water up to drink.
 S
 #20978
 Mirage or Miracle?~
-The scorching heat from the neverending sand makes waves in the distance
+The scorching heat from the never-ending sand makes waves in the distance
 wherever you look. Feeling light-headed, you stumble along until, once again,
 you see an oasis. The vision of cool water and surrounding trees wavers in the
-heat. Struggling to maintain control, you focus on the trees, almost daring 
+heat. Struggling to maintain control, you focus on the trees, almost daring
 them to disappear. Hope grips you when you reach out and snatch a leaf off a
 tree.
 ~
@@ -2270,13 +2270,13 @@ D3
 S
 #20981
 Blarf Dance Hall~
-The green glow fades to blacklighting creating a softer, more romantic mood. 
+The green glow fades to black lighting creating a softer, more romantic mood.
 Couples waltz around the room, a sea of movement, to the music being played a
-few rooms away. The cavernous rooms have incredible acoustics, so even the 
-quietest pieces can be heard. The far wall is covered by a large piece of 
-carpeting, to dampen sound and reduce echos. Upon closer inspection, the 
-carpeting reveals small clues of the Blarf lifestyle. The other walls are 
-decorated with wallpaper, a thick white stripe with gold embossed maple leaves, 
+few rooms away. The cavernous rooms have incredible acoustics, so even the
+quietest pieces can be heard. The far wall is covered by a large piece of
+carpeting, to dampen sound and reduce echos. Upon closer inspection, the
+carpeting reveals small clues of the Blarf lifestyle. The other walls are
+decorated with wallpaper, a thick white stripe with gold embossed maple leaves,
 bordered by two medium thick green stripes.
 ~
 209 67108872 0
@@ -2460,14 +2460,14 @@ S
 Guest Bathroom~
 In keeping with the same color scheme, the marvelous ivory bath is actually
 cut into the floor, and there is a compartment with bath supplies cut away right
-next to the spa. The floor is covered with the same burgundy carpet from the 
-bedroom. The sink and toilet are of the same ivory porcelain as the tub, and 
-are set with silver accessories.  There is a small medicine cabinet near the 
-sink, with a mirror on the wall close by. Right next to the mirror is a window 
-with a frosted effect, for privacy. It lets in enough natural light to see, but 
+next to the spa. The floor is covered with the same burgundy carpet from the
+bedroom. The sink and toilet are of the same ivory porcelain as the tub, and
+are set with silver accessories.  There is a small medicine cabinet near the
+sink, with a mirror on the wall close by. Right next to the mirror is a window
+with a frosted effect, for privacy. It lets in enough natural light to see, but
 keeps out unwanted eyes. The walls are ivory with a burgundy pearl splashed over
-the top, not covering the base coat, but accenting it.  There is a shower in a 
-corner, away from the massive spa-bath, and it sparkles clean like the rest of 
+the top, not covering the base coat, but accenting it.  There is a shower in a
+corner, away from the massive spa-bath, and it sparkles clean like the rest of
 the room, prepared for the next guest.
 ~
 209 67108872 0
@@ -2492,7 +2492,7 @@ herbs of all kinds.
 E
 mirror~
 A hideous shape confronts you as you look into the mirror, but then you
-realize it's just your reflection. You can see the whole room in the mirror, 
+realize it's just your reflection. You can see the whole room in the mirror,
 and the evil looking guy with the large butcher knife behind you.
 ~
 E

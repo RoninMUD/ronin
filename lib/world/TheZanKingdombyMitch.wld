@@ -54,9 +54,9 @@ S
 Inside the Doors~
 This is a large, dark hallway.  The sound of chanting grows through this hallway
 and is definitely coming from the northern room.  Small glints of gold and other
-precious metals can be seen through the walls as light moves over them.  This 
+precious metals can be seen through the walls as light moves over them.  This
 hallway must be wonderfully adorned, although it is hard to see from the lack of
-light in this place.  There is a small wooden door to the west and one to the 
+light in this place.  There is a small wooden door to the west and one to the
 east, while to the north the hallway opens up into a large room.
 ~
 9 9 0
@@ -123,10 +123,10 @@ door~
 S
 #907
 Sleeping chamber~
-This is a small room that looks like it was once used for sleeping in, 
-but now it has been forgotten.  There is a thick layer of dust that has 
+This is a small room that looks like it was once used for sleeping in,
+but now it has been forgotten.  There is a thick layer of dust that has
 accumulated on the floor of this room, seemingly from years of not being
-used. There is a dark hole that is in the upper corner of the the room,
+used. There is a dark hole that is in the upper corner of the room,
 that looks like it has formed only recently, probably caused from the lack
 of upkeep done in this room.
 ~
@@ -138,7 +138,7 @@ temple.
 door~
 1 -1 904
 D4
-A small hole is in the upper corner of the room.  
+A small hole is in the upper corner of the room.
 Perhaps you could squeeze through.
 ~
 hole corner~
@@ -175,7 +175,7 @@ Outside~
 This is a very small forest clearing, with thick growth on all sides of it.
 Below here is a small entrance to a cave, covered up a little by grass.
 There are bushes to the west with a small hole in them, perhaps big enough
-to crawl through.  Otherwise it looks as though there is no way through 
+to crawl through.  Otherwise it looks as though there is no way through
 the thick vegetation lining this clearing.
 ~
 9 0 0
@@ -220,7 +220,7 @@ D3
 0 -1 913
 D4
 As you look above the altar you see a dark swirling vortex with
-a bright red center which seems to glow ominously.  You 
+a bright red center which seems to glow ominously.  You
 might be able to enter the vortex if you wanted to.
 ~
 vortex~
@@ -231,7 +231,7 @@ Looking further up the mountain of steps you see the altar.  On
 top of the altar you can watch as the god Urynder is slowly
 taking a more and more definite shape.  As you look closer you
 notice the existence of large amounts of clay pots filled with
-a dark crimson color.  Suddenly you realize that this must be 
+a dark crimson color.  Suddenly you realize that this must be
 blood required to complete the summoning, and that it is all
 over the altar, and the high priest was adding more as the
 ritual continued.  Maybe you have a chance to stop this thing
@@ -305,7 +305,7 @@ S
 North-West Corner of a Huge Room~
 There is another corner to this room here, and it looks much the same as the
 rest of the room.  The cold stone walls and floor seem to be laughing as they
-echo every sound made.  The center of the room emits a red glow but is 
+echo every sound made.  The center of the room emits a red glow but is
 blocked slightly from a large pillar in the way.
 ~
 9 9 0
@@ -388,7 +388,7 @@ D3
 S
 #918
 Urynder's Plane of Existence~
-This place seems to have no bounds, just a swirling red and black sea 
+This place seems to have no bounds, just a swirling red and black sea
 unfurl around here.  Although it doesn't seem that there are any bounds
 there is a force to the north, east, and west that is preventing moving
 those directions.  There is no noise at all here, and none can be made.
@@ -411,7 +411,7 @@ S
 Urynder's Throne~
 A large black throne is positioned to the south, facing the north.  It looks as
 though it is alive, possibly made from the souls of those that Urynder has
-killed. The area surrounding here is almost completely black, although there 
+killed. The area surrounding here is almost completely black, although there
 is enough light to see by.  A deep laughter can be felt while standing here,
 which seems to come from everywhere and nowhere at the same time.  Oddly enough
 though there is still no sound coming from anything.
@@ -441,9 +441,9 @@ D2
 S
 #921
 Inside the Entrance to an Underground City~
-The area that this city occupies is enormous in size.  The top of this 
+The area that this city occupies is enormous in size.  The top of this
 expansive cavern is way out of sight through the gloom, but most of the city
-is visible from here.  To the south it looks as though there is a large castle 
+is visible from here.  To the south it looks as though there is a large castle
 standing alone after a maze of tunnels.  To the east it looks like a large day
 care is set up, and you can hear a lot of noise coming from that direction.  To
 the west there are many small, dirty looking huts, it seems that most of the
@@ -522,7 +522,7 @@ S
 #925
 Entrance to a Large Hall~
 By the look of this hall these creatures must be rich beyond your wildest
-dreams. The pillars holding the ceiling up are carved out of beuatiful
+dreams. The pillars holding the ceiling up are carved out of beautiful
 marble with wonderful gold designs on them.  Upon the ceiling is a large
 mural that must've taken years to paint.  The entire hall is beautifully
 adorned and there doesn't appear to be any flaws with anything in this
@@ -566,7 +566,7 @@ S
 Dining Room~
 This is the king and queen's dining room.  It seems small for a castle dining
 room, but it probably reflects the king and queen's feeling about visitors
-within their castle.  This room is not nearly as decorated as the other 
+within their castle.  This room is not nearly as decorated as the other
 places in the castle, which probably mean the king and queen do not spend too
 much time in here.
 ~
@@ -599,8 +599,8 @@ S
 #929
 The Lounge~
 This is where the king and queen come to relax after a hard day of giving
-orders. This room is furnished with some of the most beautiful things that 
-have ever been made, and it seems that the tables are made of pure gold, while 
+orders. This room is furnished with some of the most beautiful things that
+have ever been made, and it seems that the tables are made of pure gold, while
 the couches are overstuffed with some of the most comfortable feathers in
 existence. To the east it looks as though there is a bedroom of the king and
 queen.
@@ -619,7 +619,7 @@ S
 #930
 Royal Sleeping Chamber~
 This looks like the place the king and queen come to sleep.  It looks as though
-they aren't expecting to get any heirs any time soon as there are two seperate
+they aren't expecting to get any heirs any time soon as there are two separate
 beds here.  Surprisingly the room is very simply decorated, which, although very
 pleasing to the eye, it does not match the rest of the castle very well.
 Under the bed on the south side of the room there is a small handle on the floor
@@ -647,7 +647,7 @@ A Large Kitchen~
 This looks to be a large kitchen that seems to be in an uproar.  Cooks run
 quickly back and forth trying to ensure everything will be perfect for the next
 meal. This place is in quite a disarray but that is understandable after looking
-at the king and queen.  Nobody would want to make those two mad, and they are 
+at the king and queen.  Nobody would want to make those two mad, and they are
 quite picky when it comes to their food it seems.
 ~
 9 8 0
@@ -695,7 +695,7 @@ This is the entrance to a grand castle.  This place looks absolutely
 enormous, completely different than the surrounding area.  The castle is also
 gorgeously adorned with decorations that are unlike anything you have ever
 seen before.  The castle seems to be the only decorated thing in this entire
-place, and is sure to be heavily guarded.  The castle doors are wide open to 
+place, and is sure to be heavily guarded.  The castle doors are wide open to
 the south, inviting everyone in, although it does not seem like anything is
 going to enter it, for fear of what may lie ahead.
 ~
@@ -711,7 +711,7 @@ D2
 S
 #935
 The Breeding Chamber~
-You have just walked into the breeding chamber.  This is where all of the 
+You have just walked into the breeding chamber.  This is where all of the
 creatures come from.  The room is covered with slime, it looks like the
 birth of these creatures is not exactly a clean process, although it
 does seem that the nurses at least try to clean up after it a little bit,
@@ -725,8 +725,8 @@ D3
 S
 #936
 Dirty Slums~
-This is a cramped, dirty little street, surrounded on all sides by small 
-disgusting little huts.  This must be where the general populous of this 
+This is a cramped, dirty little street, surrounded on all sides by small
+disgusting little huts.  This must be where the general populous of this
 civilization lives.  It seems terrible but it doesn't look like anyone is
 complaining. It could be because everyone is afraid of their oppressors.
 ~
@@ -762,8 +762,8 @@ D2
 S
 #938
 Dirty Slums~
-This dreary street is packed with small little shacks all along it.  
-They seem to be the living space of these creatures.  Strangely 
+This dreary street is packed with small little shacks all along it.
+They seem to be the living space of these creatures.  Strangely
 enough it looks as though they could hardly fit into these shacks,
 maybe they are only used as a place to sleep and nothing more.
 ~
@@ -780,7 +780,7 @@ S
 #939
 Entrance to the Caves~
 This is the entrance to a vast series of caves underneath the city.  You
-remeber hearing once about the riches contained in the caves underneath a
+remember hearing once about the riches contained in the caves underneath a
 place like this.  Looking around it seems that all the creatures work down
 in these caves, and by the look of the surrounding slums, they don't get to
 keep much of their earnings, if any.
@@ -802,7 +802,7 @@ S
 #940
 The Caves~
 The caves down here help to illuminate the situation of the poor worker Zans.
-It looks as though they are merely slave labourers for the king and queen.
+It looks as though they are merely slave laborers for the king and queen.
 There is a guard post to the south where the creatures must go to get their
 measly one meal a day, while to the north the caves expand into what looks
 like a crossroads.
@@ -825,7 +825,7 @@ S
 Guard Post~
 There is a large guard post in the beginning of these caves here.  It looks as
 though this is where the workers have to come to get all of their food, but
-it does not look as though they are fed very much.  There is a large fire 
+it does not look as though they are fed very much.  There is a large fire
 burning in the center of the room, with a pot that is creating an awful smell
 sitting on top of it.  To the east there is a doorway to the inside of a small
 house for the guards while they are on break, while to the north is the
@@ -847,8 +847,8 @@ S
 Crossroads~
 The cave branches off in many directions here.  Seeing this it becomes hard to
 imagine how the creatures know which way they are going when travelling through
-these caves.  All the directions from here seem to lead deeper into the mines, 
-none of them look particularily outstanding.
+these caves.  All the directions from here seem to lead deeper into the mines,
+none of them look particularly outstanding.
 ~
 9 9 0
 D0
@@ -891,7 +891,7 @@ S
 #944
 A split in the Tunnel~
 The tunnel branches two ways from here, one to the north and one to the south.
-It looks as though it opens up to the north, but the south seems as narrow as 
+It looks as though it opens up to the north, but the south seems as narrow as
 ever.
 ~
 9 9 0
@@ -924,7 +924,7 @@ S
 #946
 A Dark Tunnel~
 The tunnel bends to the east here, getting ever smaller as it does.  This
-part of the cave must have just recently opened.  Judging by the size of 
+part of the cave must have just recently opened.  Judging by the size of
 the tunnel this part has not been fully explored or excavated yet.
 ~
 9 9 0
@@ -973,7 +973,7 @@ S
 #949
 The Hideout~
 This appears to be the hideout of a secret group of workers.  It seems
-they are fed up with the oppressive rule of the king and queen and 
+they are fed up with the oppressive rule of the king and queen and
 they are determined to do something about it.  There looks to be a
 storage room to the west, and to the south it looks like there are
 many bunk beds.  The east opens up into a hallway.
@@ -1014,8 +1014,8 @@ S
 A Beautiful Hall~
 This is a nice roomy hallway, that is beautifully decorated.  These
 rebels really know how to live!  It seems that given a break from
-their excessive labor the Zan's have an easy time being artistic.  
-It is surprising that such a group of creatures could be so 
+their excessive labor the Zan's have an easy time being artistic.
+It is surprising that such a group of creatures could be so
 sophisticated underneath.
 ~
 9 9 0
@@ -1044,7 +1044,7 @@ S
 #953
 The Conference Room~
 This is a large chamber with a table in the center.  This looks to be the
-place where the rebel Zans hold their meetings.  A large chair sits at 
+place where the rebel Zans hold their meetings.  A large chair sits at
 the eastern side of this table, that must be where the leader sits
 when he talks.  At the current time no meeting is happening so this room
 is rather empty.
@@ -1065,7 +1065,7 @@ D2
 S
 #954
 The End of the Hideout~
-This part of the hideout is definitely under construction.  It is not 
+This part of the hideout is definitely under construction.  It is not
 decorated at all, and most of the walls are just bare rocks.  The tunnel
 looks secure enough, but it could prove to be dangerous if the Zans are
 not quite as skilled as they seem to be.
@@ -1091,7 +1091,7 @@ D3
 S
 #956
 Across the Conference Room~
-The other side of the conference room looks to be under construction.  This 
+The other side of the conference room looks to be under construction.  This
 side of the rebels' hideout looks a lot less interesting.  It seems like
 some work is being done on the tunnels to the west, which hopefully explains
 the immense amount of dirt piled around this hall.
@@ -1110,10 +1110,10 @@ S
 A Clay Spattered Room~
 This room has clay everywhere.  There are random body parts made out of clay all
 over. It is suddenly very apparent why the king and queen look so different from
-the general populous of this land.  All the Zans have been created by the 
-rulers, out of clay.  They must be some pretty powerful mages to be able to 
-create an entire race out of clay.  This room looks as if it hasn't been used 
-for quite some time, which could mean that they found a way to get more servants 
+the general populous of this land.  All the Zans have been created by the
+rulers, out of clay.  They must be some pretty powerful mages to be able to
+create an entire race out of clay.  This room looks as if it hasn't been used
+for quite some time, which could mean that they found a way to get more servants
 without actually molding them themselves.
 ~
 9 9 0
@@ -1126,7 +1126,7 @@ S
 #958
 A Cramped Room~
 This tunnel leads to a very cramped little room.  It seems that this room is
-largely ignored, and that nothing of value is here.  With a closer look the 
+largely ignored, and that nothing of value is here.  With a closer look the
 ground appears as if there were a struggle here at some point.  It could be
 that the workers are not quite as wonderfully behaved as you might like to
 believe, looking closely it appears that the scuffle moved from near the center
@@ -1151,10 +1151,10 @@ Judging by its size you might be able to crawl through it.
 S
 #959
 A Wide Room~
-After crawling through a tiny tunnel it suddenly opens up into 
-a very expansive room. There are mining tools littering the ground 
+After crawling through a tiny tunnel it suddenly opens up into
+a very expansive room. There are mining tools littering the ground
 in here, as well as some in large bins.  It looks as if this is the
-true center of the mines.  A quick glance around shows no hints at 
+true center of the mines.  A quick glance around shows no hints at
 anything being found at the moment though, which could explain why
 the guards were in such a sour mood.
 ~
@@ -1179,7 +1179,7 @@ S
 #960
 A Wide Tunnel Through The Mines~
 This tunnel is a quite comfortable place to be.  The walls and ceiling are
-nicely spaced which makes it a decent area for a human to occupy. 
+nicely spaced which makes it a decent area for a human to occupy.
 Maybe this tunnel leads to somewhere important down in these mines.
 ~
 9 9 0
@@ -1327,7 +1327,7 @@ S
 #968
 Storage Caves~
 The caves on this side of the wide room look as though they are completely
-naturally occuring, there has been little or no refining to these caves at
+naturally occurring. There has been little or no refining to these caves at
 all because they seem to fit the purposes of the Zans.  It looks as though
 they use these natural caves to store a lot of the mining equipment in.
 ~
@@ -1385,7 +1385,7 @@ S
 A Small Tunnel~
 It looks as though these parts of the caves are not mined as much as they
 definitely could be.  It looks like most of these caves are completely
-natural with only a little bit of digging added to them.  Maybe they 
+natural with only a little bit of digging added to them.  Maybe they
 decided that the better riches were deeper within the mines.
 ~
 9 9 0
@@ -1472,8 +1472,8 @@ D3
 S
 #976
 The Conference Room~
-This room looks as if it is the place for these rebels to hold their 
-meetings. Glancing at the table you notice a small book entitled "The 
+This room looks as if it is the place for these rebels to hold their
+meetings. Glancing at the table you notice a small book entitled "The
 Modern Day Communist", it seems that these Zans want to build a utopian
 society, with true communism holding everything together.
 ~
@@ -1593,7 +1593,7 @@ S
 A Dark Tunnel~
 The tunnel branches here in two ways.  Both options are a little more
 comforting than some could be, because they are wider than most down here,
-but they still offer no help in finding the way out of these maddening 
+but they still offer no help in finding the way out of these maddening
 caves.
 ~
 9 9 0
@@ -1698,7 +1698,7 @@ By a Hole in a Small Farm Field~
 A large hole is in the ground here.  It looks as though whoever plowed this
 field stopped when this hole opened up.  The field is neatly plowed until
 the very edge of the hole, and then the earth looks dry and cracked.  Upon
-closer inspection there does not seem to be any bottom to this hole, it 
+closer inspection there does not seem to be any bottom to this hole, it
 could go on forever for all that can be told from standing up here.  Who
 knows if there is even a bottom to this hole?
 ~
@@ -1718,9 +1718,9 @@ D5
 S
 #990
 On a Small Farm Field~
-The dry, cracked earth bakes under the sun, looking as though no life 
+The dry, cracked earth bakes under the sun, looking as though no life
 could live here.  The field looks horribly neglected, and there are almost
-no signs of any plants growing here, however, around the edge of the 
+no signs of any plants growing here, however, around the edge of the
 field it looks as though the plants are doing quite well, blocking any
 and all traffic that is going in those directions.  It seems the only way
 out of this field would be to the west or south.

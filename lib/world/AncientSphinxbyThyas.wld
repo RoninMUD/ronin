@@ -121,8 +121,8 @@ door~
 S
 #807
 The room of Decision~
-      You are standing in the room of decision, it is here that you must 
-make the choice to move on forward or go back. As of now your journey has 
+      You are standing in the room of decision, it is here that you must
+make the choice to move on forward or go back. As of now your journey has
 been easier than what awaits you. To the south you notice a room different
 than you have seen.
 ~
@@ -144,7 +144,7 @@ door~
 S
 #808
 The First Tomb~
-      Here is the tomb of some Egyptian Pharaoh. The tomb is not glamorous 
+      Here is the tomb of some Egyptian Pharaoh. The tomb is not glamorous
 enough to suggest a great Pharaoh, but a Pharaoh non the less. All about
 the walls and floor are jewels and gold. The remains of those who came before
 you lie scattered about the floor. Wonder what KILLED them!!
@@ -175,7 +175,7 @@ S
 #810
 End of the Passage~
       You have reached the end of the passage through the wall. To the west
-there is a room that looks large enough to stand in. 
+there is a room that looks large enough to stand in.
 ~
 8 9 0
 D1
@@ -288,8 +288,8 @@ D2
 S
 #817
 End of the Golden Hall~
-     You have reached the end of the Golden Hallway. To the east there is an 
-exit. To the north there is a set of stone stairs leading up to what you 
+     You have reached the end of the Golden Hallway. To the east there is an
+exit. To the north there is a set of stone stairs leading up to what you
 assume to be the second level of this ancient Sphinx.
 ~
 8 9 0
@@ -344,7 +344,7 @@ S
 The Third Tomb~
     This is the third and final tomb on this floor of the Sphinx.  Another
 average tomb that has gotten your hopes up, where is it, where is the tomb
-of Tutankhaman?
+of Tutankhamen?
 ~
 8 9 0
 D2
@@ -554,7 +554,7 @@ D4
 S
 #833
 Tut's Tomb~
-   You have found it ! This is the tomb of Tutankhaman, the great Egyptian
+   You have found it ! This is the tomb of Tutankhamen, the great Egyptian
 Pharaoh. All about the room are scattered artifacts that his family believed
 he would need in his journey to the next life. In the corner there are
 some jars and next to them are some tiny statues. It would be wise not to

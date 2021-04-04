@@ -2,12 +2,12 @@
 Newbie Builder Base Camp~
    Below the mountain side stretches a vast plains as far as you can see.
 The wind swirls and picks up around you, kicking dust and errant tree
-branches.  Many small tents are pitched in a tight circle forming the 
+branches.  Many small tents are pitched in a tight circle forming the
 base camp you are in.  In the center of the circle is a blazing firepit
-that burns day and night for the workers to gather around and discuss 
-how they want to create an area that will shape the newbies of tommorrow.
-This area is is empty and in need of a creative force.  As you look off to
-the north you see.. erm.. nothing.  To the east... um.. nothing there 
+that burns day and night for the workers to gather around and discuss
+how they want to create an area that will shape the newbies of tomorrow.
+This area is empty and in need of a creative force.  As you look off to
+the north you see.. erm.. nothing.  To the east... um.. nothing there
 either...
 ~
 66 0 0
@@ -98,9 +98,9 @@ S
 #6605
 Wield and Hold~
   There are many types of weapons and held items in RoninMud. Weapons
-increase your hitting ability and power, while held items can have 
+increase your hitting ability and power, while held items can have
 various affects, such as increasing your maximum mana, granting you
-more damage, or a special ability. To wield a weapon, type 'wield 
+more damage, or a special ability. To wield a weapon, type 'wield
 <object>', and to hold an item, type 'hold <object>'. Once again, using
 keywords can help you wield or hold easier. Proceed North to continue
 your quest for knowledge.
@@ -219,8 +219,8 @@ S
 #6612
 Room Exit Types~
   These are similar to normal movement, except that you first need to
-figure out certain keywords, often hinted at in the room's description. 
-Typing things such as jump river, open door (the direction of door is 
+figure out certain keywords, often hinted at in the room's description.
+Typing things such as jump river, open door (the direction of door is
 sometimes required in the case of multiple doors, ex: open door south),
 crawl hole, climb ladder, and move <object> (such as block, vines, etc.)
 are examples of some of the many different types of room exits. Try a
@@ -264,12 +264,12 @@ easily jump over the shallow end.
 ~
 E
 river~
-A smal river blocks your advance toward the east.  One could
+A small river blocks your advance toward the east.  One could
 easily jump over the shallow end.
 ~
 E
 ladder~
-A knotted rope ladder is hanging from the short roof above. 
+A knotted rope ladder is hanging from the short roof above.
 It looks like you could climb it with very little effort.
 ~
 E
@@ -362,12 +362,12 @@ Donos
 ~
 E
 ladder~
-A hole in the floor has a rope ladder hanging from it.  That 
+A hole in the floor has a rope ladder hanging from it.  That
 must be how you exit from this cramped clubhouse!
 ~
 E
 ladder~
-A hole in the floor has a rickety ladder hanging from it. 
+A hole in the floor has a rickety ladder hanging from it.
 That must be how you exit from this cramped clubhouse!
 ~
 S
@@ -438,7 +438,7 @@ You see the "Fight Time!" room.
 door~
 7 6623 6618
 D5
-There seems to be a concealed passage under the desk, and you're 
+There seems to be a concealed passage under the desk, and you're
 almost sure you can hear the sounds of a city from beyond it.
 ~
 desk~

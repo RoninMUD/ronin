@@ -3,7 +3,7 @@ squirrel~
 The squirrel~
 A small squirrel jumps from tree to tree.
 ~
-The squirrel freeze his moves as you look at him. He seems to be VERY upset at
+The squirrel freezes his moves as you look at him. He seems to be VERY upset at
 you, you'd better leave quick to avoid getting killed by it.
 ~
 140 524288 0 Y
@@ -17,9 +17,9 @@ K
 #11602
 guard elven sentry outpost~
 The elven guard~
-The elven guard stands here protecting his forest
+The elven guard stands here protecting his forest.
 ~
-He wouldnt hesitate a second to get a chance defending his forest against
+He wouldn't hesitate a second to get a chance defending his forest against
 unwanted visitors. Although tall and slender you realize that he has more
 power than what is shown by just looking at him.
 ~
@@ -34,9 +34,9 @@ K
 #11603
 guardian master~
 Guardian training master~
-The Guardian training master is here waiting eagerly for his trainees to come
+The Guardian training master is here waiting eagerly for his trainees to come.
 ~
-You see a tall and well-built man in his best years. You see by the scares
+You see a tall and well-built man in his best years. You see by the scars
 that he must have been in many battles. He seems like he's wanting to make
 a fight with you, teaching you his techniques, just by wellmean.
 ~
@@ -54,7 +54,7 @@ The Elven pupil~
 The Elven fighting pupil is here watching his masters every move.
 ~
 The pupil hasn't noticed your appearance yet, his attention is completely
-drawn to his master. Although he is just a pupil he doesn't seem to be
+drawn to his master. Although he is just a pupil, he doesn't seem to be
 totally helpless.
 ~
 10 262144 1000 Y
@@ -70,8 +70,8 @@ head craftsman~
 The head of the craftsmen~
 The head of the craftsmen is standing here, carving some wood.
 ~
-He looks very confident and concentrated and as you look at him he lifts his
-head and looks at you. By the look at his face he doesnt seem to enjoy being
+He looks very confident and concentrated and as you look at him, he lifts his
+head and looks at you. By the look at his face he doesn't seem to enjoy being
 disturbed by some barbarian like you.
 ~
 16394 262144 1000 Y
@@ -117,7 +117,7 @@ elven sewing pupil~
 The Elven sewing pupil~
 The Elven sewing pupil is here sewing frenetically.
 ~
-The pupils attention is completely drawn to his works and doesn't notice you.
+The pupil's attention is completely drawn to his works and doesn't notice you.
 ~
 138 262144 1000 Y
 10 10 8 1d1+110 4d4+2
@@ -132,7 +132,7 @@ master singer elven~
 The master-singer~
 The master-singer is standing here, practicing his singing.
 ~
-He looks as if he has some problems with his throat, harkling and coughing.
+He looks as if he has some problems with his throat, hacking and coughing.
 ~
 16394 262144 1000 Y
 24 -3 1 1d1+1100 2d8+12
@@ -284,7 +284,7 @@ Celeborn, the king of Lorien is sitting here on his throne.
 ~
 He is completely dressed in white, with hair as shining silver. The time
 doesn't seem to have made any marks on the face, but the eyes are glowing
-like the tip of a lance but never the less with a boundless depth.
+like the tip of a lance but nevertheless with a boundless depth.
 ~
 131082 268697736 1000 Y
 32 -10 -7 4d50+5000 20d2+24
@@ -297,7 +297,7 @@ K
 #11620
 galadriel queen~
 Galadriel~
-Galadriel is sitting here by Celeborns side.
+Galadriel is sitting here by Celeborn's side.
 ~
 She is completely dressed in white. Her hair gleaming as dark gold and
 eyes with an intense, piercing look. She looks very sad and thinking,
@@ -317,7 +317,7 @@ elven citizen~
 the elven citizen~
 The Elven citizen is strolling around in the city.
 ~
-The Elf's face is split in a wide grin and you cant help smile.
+The Elf's face is split in a wide grin and you can't help smile.
 ~
 14 0 1000 Y
 16 4 0 1d40+320 7d3+1

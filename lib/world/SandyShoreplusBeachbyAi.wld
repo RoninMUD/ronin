@@ -13,11 +13,11 @@ D5
 S
 #8501
 Edge of the Sandy Shore~
-	You are standing at the end of the sandy shore of the Sea of 
+	You are standing at the end of the sandy shore of the Sea of
 Love. Here, the red granite cliffs meet the sea. A narrow strip of
 beach between the Sea and the granite cliffs allows passage to the
-west here. The beach here is outlined by the cliffs as they drop farther 
-to the south. A small beach of pink pebbles lies around the edge of the 
+west here. The beach here is outlined by the cliffs as they drop farther
+to the south. A small beach of pink pebbles lies around the edge of the
 cliffs to the east.
 ~
 85 0 8
@@ -674,7 +674,7 @@ D3
 S
 #8526
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -774,7 +774,7 @@ D3
 S
 #8530
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -800,7 +800,7 @@ D3
 S
 #8531
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -826,7 +826,7 @@ D3
 S
 #8532
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -852,7 +852,7 @@ D3
 S
 #8533
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -878,7 +878,7 @@ D3
 S
 #8534
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -904,7 +904,7 @@ D3
 S
 #8535
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -930,7 +930,7 @@ D3
 S
 #8536
 Sandy Shore~
-	You are completely lost. You see some half-obscured footprints 
+	You are completely lost. You see some half-obscured footprints
 in the sand. The wind is blowing so hard, you can't tell how long ago
 they were made. This place is starting to sicken you, a change of
 scene is the only thing you want now. A leaf blows past you through
@@ -956,8 +956,8 @@ D3
 S
 #8537
 Sandy Shore~
-	There is a lagoon to the south. Trees and other assorted flora 
-surround the area, it seems to be a pleasant change from the mundane 
+	There is a lagoon to the south. Trees and other assorted flora
+surround the area, it seems to be a pleasant change from the mundane
 shore.
 ~
 85 0 2
@@ -1031,7 +1031,7 @@ Lagoon~
 	As you swim through the water, you realize that it is not as
 welcoming as you thought. The lagoon is slimy and murky. You can see
 what appears to be the spine of an alligator move through the water
-a few feet in front of you. Swimming faster would be a good idea right 
+a few feet in front of you. Swimming faster would be a good idea right
 about now.
 ~
 85 0 6
@@ -1081,7 +1081,7 @@ S
 #8542
 Lagoon~
 	The lagoon water is slimy and murky. The more you think about
-it, the more disgusting it seems. 
+it, the more disgusting it seems.
 ~
 85 0 6
 D0
@@ -1132,7 +1132,7 @@ Lagoon~
 	As you swim through the water, you realize that it is not as
 welcoming as you thought. The lagoon is slimy and murky. You must have
 been imagining the alligator, because it is nowhere to be seen. However,
-in the excitement, you appear to have lost your direction in the thick 
+in the excitement, you appear to have lost your direction in the thick
 vegetation floating on the surface of the lagoon.
 ~
 85 0 6
@@ -1159,7 +1159,7 @@ Lagoon~
 welcoming as you thought. The lagoon is slimy and murky. You must have
 been imagining the alligator, because it is nowhere to be seen. However,
 in the excitement, you appear to have lost your direction in the thick
-vegetation floating on the surface of the lagoon. 
+vegetation floating on the surface of the lagoon.
 ~
 85 0 6
 D0
@@ -1233,7 +1233,7 @@ D3
 S
 #8548
 Center of the Lagoon~
-	You have reached what appears to the the center of the lagoon.
+	You have reached what appears to the center of the lagoon.
 The vegetation has thinned here, revealing open water.
 ~
 85 0 6
@@ -1334,7 +1334,7 @@ D3
 S
 #8552
 Center of the Lagoon~
-	You have reached what appears to the the center of the lagoon.
+	You have reached what appears to the center of the lagoon.
 The vegetation has thinned here, revealing open water.
 ~
 85 0 6
@@ -1357,7 +1357,7 @@ D3
 S
 #8553
 Center of the Lagoon~
-	You have reached what appears to the the center of the lagoon.
+	You have reached what appears to the center of the lagoon.
 The vegetation has thinned here, revealing open water. It's actually
 quite pleasant.
 ~
@@ -1517,7 +1517,7 @@ S
 #8561
 Very Long Vine~
 	The Banyan Tree is taller than you thought, you seem to have
-been climbing forever, you can barely see the ground below you through 
+been climbing forever, you can barely see the ground below you through
 the immense branches.
 ~
 85 4 3
@@ -1532,8 +1532,8 @@ D5
 S
 #8562
 Very Long Vine~
-	The Banyan Tree is taller than you thought, you seem to have 
-been climbing forever. You can't see the ground below you, nor can you 
+	The Banyan Tree is taller than you thought, you seem to have
+been climbing forever. You can't see the ground below you, nor can you
 see an end to the vine as it reaches far up into the branches of the
 tree.
 ~
@@ -1550,7 +1550,7 @@ S
 #8563
 Very Long Vine~
 	The Banyan Tree is taller than you thought, you seem to have
-been climbing forever. You can't see the ground below you, nor can you 
+been climbing forever. You can't see the ground below you, nor can you
 see an end to the vine as it reaches far up into the branches of the
 tree.
 ~

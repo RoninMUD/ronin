@@ -90,7 +90,7 @@ anyone that they don't approve of.
 E
 sign~
 Mount commands are:
- List - To get a list of available mounts 
+ List - To get a list of available mounts
  Buy <mount> <name> - To buy a mount
  Ride <mount/name> - To ride your mount
  Dismount - To stop riding your mount
@@ -107,7 +107,7 @@ S
 Stable Cellar~
   This dank old cellar seems to have been used for wine storage in the past, but
 it has been modified extensively to cater for its new occupants. Several large
-cages in here contain spiders, scorpions, and even a few large snails.  A huge 
+cages in here contain spiders, scorpions, and even a few large snails.  A huge
 kennel against the west wall houses a couple of enormous lizards.  Beside
 it on a granite slab lies a motionless, bulky humanoid seemingly made from
 whatever body parts were available to its creator at the time.
@@ -172,7 +172,7 @@ the streets bustle with activity as people go about their daily business.  From
 up here you can see for miles around.  To the north the majestic snow-covered
 peaks of the Helventia mountains dominate the landscape.  To the south you can
 see the docks of Midgaard and the Middern river as it twists and turns on its
-way to the sea.  Several laden barges are sailing upstream with precious 
+way to the sea.  Several laden barges are sailing upstream with precious
 cargo in their holds.  To the west lies the forest of Haon-Dor where the elven
 druids hold sway and to the east is the small forest.  Due south from here are
 the Midgaard stables and the landing platform.
@@ -226,8 +226,8 @@ S
 Narrow tunnel~
   You travel along an old tunnel carved from the harsh granite.  As you glance
 around you notice some vague scrawling on the wall to your east.  In the
-faint light it appears to glow with and eerie radiance.  To the north you hear 
-the echos of movement and the sound of trickling water.
+faint light it appears to glow with and eerie radiance.  To the north you hear
+the echoes of movement and the sound of trickling water.
 ~
 39 8 0
 D0
@@ -245,7 +245,7 @@ D3
 E
 scrawling~
 Some of the letters have faded away with the passage of time but you make
-out: 'T ie es uil'  On further examination it looks like it was written in 
+out: 'T ie es uil'  On further examination it looks like it was written in
 blood!!
 ~
 S
@@ -253,7 +253,7 @@ S
 Narrow tunnel under Market Square~
   You come to a junction in the tunnel.  Above you can be heard the muted
 sounds of people going about their daily business, blissfully ignorant of your
-passage beneath their feet.  Fresh air can be felt coming from the east and 
+passage beneath their feet.  Fresh air can be felt coming from the east and
 west passages.
 ~
 39 8 0
@@ -272,8 +272,8 @@ D3
 S
 #3913
 Narrow tunnel~
-  You travel along an old tunnel carved from the harsh granite.  The walls all  around you are 
-covered with some sort of luminous fungi which gives off just    
+  You travel along an old tunnel carved from the harsh granite.  The walls all  around you are
+covered with some sort of luminous fungi which gives off just
 enough light for you to able to make out your surroundings.  To your east the
 faint murmur of distant voices can be heard as well as the steady trickle of
 running water.
@@ -291,8 +291,8 @@ S
 #3914
 Narrow tunnel~
   You travel along an old tunnel carved from the harsh granite.  The walls all
-round you are covered with some sort of luminous fungi which gives off just 
-enough light for you to able to make out your surroundings.  On the wall to 
+round you are covered with some sort of luminous fungi which gives off just
+enough light for you to able to make out your surroundings.  On the wall to
 your north is a large ironbound door.  It is covered with strange symbols that
 seem to radiate a powerful demeanor even to the naked eye.
 ~
@@ -324,9 +324,9 @@ seems to speak of imprisonment, diabolical forces and great danger.
 S
 #3915
 Narrow tunnel~
-  You travel along an old tunnel carved from the harsh granite.  The walls all 
+  You travel along an old tunnel carved from the harsh granite.  The walls all
 around you are covered with some sort of luminous fungi which gives off just
-enough light for you to able to make out your surroundings.  On the wall to 
+enough light for you to able to make out your surroundings.  On the wall to
 your south can be seen crude drawings of warriors and large animals (possibly
 bears) locked in battle.  It is hard to make out who is winning since the
 drawings are stationary.
@@ -419,7 +419,7 @@ D3
 E
 hole~
 You put a hand into it and grope around.  There is something in there that feels
-slimy to the touch and when you withdraw your hand you find that it is covered 
+slimy to the touch and when you withdraw your hand you find that it is covered
 in some green-brownish sticky stuff that you can't begin to imagine the origins
 of.
 ~
@@ -428,7 +428,7 @@ S
 Narrow tunnel~
   You travel along an old tunnel carved from the harsh granite.  The walls all
 around you are covered with some sort of luminous fungi which gives off just
-enough light for you to able to make out your surroundings.  The tunnel 
+enough light for you to able to make out your surroundings.  The tunnel
 gradually becomes narrower to the point where you have to stoop down so as not
 bang your head on the ceiling.  To the east the tunnel begins a slow ascent
 upwards while to the west it becomes level and smooth.
@@ -566,7 +566,7 @@ D2
 S
 #3928
 Flying over the small forest~
-  You soar over the forest.  The smell of delicious pies makes you realize 
+  You soar over the forest.  The smell of delicious pies makes you realize
 that you are near the village of the halflings.  To the north beside a frozen
 lake you can just make out the frigid city of Cornelius.  Even further north
 the peaks of the Helventia mountains make further passage difficult.  To the
@@ -652,7 +652,7 @@ S
 #3933
 Flying over Stables~
   You fly in slow circles around the landing platform.  Beggars and street
-urchins can be seen in the streets below.  To your north the Anti Paladin guild 
+urchins can be seen in the streets below.  To your north the Anti Paladin guild
 stands with its cold grey walls.  Next to it the Ninja's have set up their
 guild, practicing martial arts and ancient fighting styles.  A steady rivalry
 between the two guilds keeps the grave diggers of Midgaard in steady business

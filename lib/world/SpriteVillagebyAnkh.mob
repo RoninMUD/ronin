@@ -33,8 +33,8 @@ banker sprite~
 the banker~
 The banker is here, counting his money.
 ~
-  The banker is a small little sprite, his little hands sure can hold a lot 
-money. He is wearing an odd pair of glasses.
+  The banker is a small little sprite, his little hands sure can hold a lot
+of money. He is wearing an odd pair of glasses.
 ~
 200 0 100 Y
 3 18 -2 3d10+1 1d4+1
@@ -49,7 +49,7 @@ repairman sprite~
 the repairman~
 The repairman is here fixing something.
 ~
-  The repairman seems to know how to fix everything, make no wounder the 
+  The repairman seems to know how to fix everything. No wonder the
 village is running so smoothly.
 ~
 200 0 100 Y
@@ -63,9 +63,9 @@ K
 #105
 baker sprite~
 the baker~
-The baker is here makeing tasty delights.
+The baker is here making tasty delights.
 ~
-  The baker is a small sprite, his face is covered in flower, and a small
+  The baker is a small sprite, his face is covered in flour, and a small
 apron covers his body.
 ~
 200 0 100 Y
@@ -82,7 +82,7 @@ the blacksmith~
 The blacksmith is here pounding on some iron.
 ~
   The blacksmith is a hefty looking sprite, his forearms are huge. He is one
-of the more powerfull sprites you have encountered.
+of the more powerful sprites you have encountered.
 ~
 200 0 100 Y
 3 18 -2 3d10+1 1d5+9
@@ -111,9 +111,9 @@ K
 #108
 toymaker sprite~
 the toymaker~
-An old sprite is here carveing a piece of wood.
+An old sprite is here carving a piece of wood.
 ~
-  This old sprite gets great pleasure from makeing others happy, he has been
+  This old sprite gets great pleasure from making others happy, he has been
 around for a while and his work is outstanding.
 ~
 200 0 100 Y
@@ -129,7 +129,7 @@ nurse sprite~
 the nurse~
 A cute little nurse is here trying to heal the sick.
 ~
-  This cute little number makes sure all of the sprites are healthy. If
+  This cute little number makes sure all the sprites are healthy. If
 I were a sprite I think I'd be glad to have a nurse of such beauty at my
 bedside.
 ~
@@ -146,7 +146,7 @@ chief sprite~
 the chief of the sprites~
 The sprite chief is here suffering from an ailment.
 ~
-  The chief of the sprites is an old fella, he looks realy sick at the 
+  The chief of the sprites is an old fella, he looks really sick at the
 moment. The nurse is trying her best to save him, but it looks like he
 hasn't much time left. Lets hope you have your sprite shot.
 ~
@@ -164,8 +164,8 @@ the wizard~
 There is a great sprite here surrounded by smoke.
 ~
   The great wizard is not a very big troll, but from the searing look of
-his eyes you know you should fear him. He must have been baished from the
-village for some reason or another, I guess thats why the chief had him
+his eyes you know you should fear him. He must have been banished from the
+village for some reason or another, I guess that's why the chief had him
 under lock and key.
 ~
 138 0 -100 Y
@@ -181,7 +181,7 @@ trained spider~
 the trained spider~
 A spider is here following the wizard.
 ~
-  The spider is nothing to be scared of, yes it is a big spider, but you
+  The spider is nothing to be scared of, yes, it is a big spider, but you
 are still bigger than it. It's the wizard you should worry about, and not
 his followers.
 ~

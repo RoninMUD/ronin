@@ -48,7 +48,7 @@ gila monster~
 A gila monster~
 A gila monster is slithering around here.
 ~
-Big, green and scaly.  His toungue flickers in and out as he tastes the
+Big, green and scaly.  His tongue flickers in and out as he tastes the
 breeze.  He eyes you hungrily.
 ~
 8 0 0 Y
@@ -96,7 +96,7 @@ tiger bengal~
 A bengal tiger~
 A bengal tiger is prowling silently here.
 ~
-The king of the jungle, he prowls in silence and strikes at will. 
+The king of the jungle, he prowls in silence and strikes at will.
 ~
 8 1572864 0 Y
 16 10 1 1d75+650 2d5+12
@@ -173,7 +173,7 @@ spider monkey~
 A spider monkey~
 A spider monkey is monkeying around here.
 ~
-A small monkey with sharp claws and teeth.  He might be tougher than you 
+A small monkey with sharp claws and teeth.  He might be tougher than you
 think!
 ~
 10 0 0 Y
@@ -280,9 +280,9 @@ you.  He depends on his mom to protect him.
 K
 0 0 0 0 0 0 0
 #27643
-stegasaurus~
-The stegasaurus~
-A stegasaurus quietly chews the foliage here.
+stegosaurus~
+The stegosaurus~
+A stegosaurus quietly chews the foliage here.
 ~
 He pays no attention to you at all.  He only wants to be left alone so he
 can graze.
@@ -328,11 +328,11 @@ Maybe he's just curious about this stranger in his valley.
 K
 0 0 0 0 0 0 0
 #27648
-mastadon mammoth~
-The mastadon~
-A mastadon wanders lost.
+mastodon mammoth~
+The mastodon~
+A mastodon wanders lost.
 ~
-The mastadon is lost.  In his thick fur coat he is very uncomfortable in 
+The mastodon is lost.  In his thick fur coat he is very uncomfortable in
 this jungle heat.
 ~
 136 0 0 Y
@@ -394,11 +394,11 @@ you in her fit of bloodlust.
 K
 0 0 0 0 0 0 0
 #27668
-pteradactyl~
-The Pteradactyl~
-A pteradactyl watches you closely here.
+pterodactyl~
+The Pterodactyl~
+A pterodactyl watches you closely here.
 ~
-Leathern wings spread out several meters in either direction.  The pteradactyl
+Leathern wings spread out several meters in either direction.  The pterodactyl
 seems committed to some purpose you cannot guess.
 ~
 10 0 0 Y
@@ -429,7 +429,7 @@ dog pit bull terrier~
 a pit bull~
 A fat pit bull gnaws on some bones here.
 ~
-The pit bull terrier gnaws greedily at a corpse.  Maybe he will be gnawing 
+The pit bull terrier gnaws greedily at a corpse.  Maybe he will be gnawing
 yours soon.
 ~
 4110 0 0 Y

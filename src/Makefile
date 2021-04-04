@@ -181,6 +181,7 @@ OBJS_RONIN_SPEC = \
 	spec.trollcastle-moat.o \
 	spec.trollvillage.o \
 	spec.tweefmanor.o \
+	spec.ubers.o \
 	spec.underworld.o \
 	spec.vagabond.o \
 	spec.vanity.o \

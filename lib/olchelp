@@ -118,7 +118,7 @@ hitroll/damroll could load with -1 to +3 hitroll
 and -1 to +3 damroll.
 
 #
-DECAY
+DECAY "OTIMER"
 
 Any object with the DECAY flag will slowly decay
 over time until its timer his 0, then the object
@@ -143,9 +143,36 @@ editting objects.
 
   edit o <obj#> <options...> - old style obj commands.  All commands
                                below can be used instead.
+  oname            - set the object's name
+  oshort           - set the object's short description
+  olong            - set the object's long description
 
-  oclone  - clone an object
-  odelete - delete an object
+  oaction          - sets the kill target action
+  oaction_nt       - sets the kill not target action
+  ochar_wear_desc  - sets the description for wearing
+  oroom_wear_desc  - sets the room wear desc
+  ochar_rem_desc   - sets the remove description
+  oroom_rem_desc   - sets the room remove desc
+  oextra           - sets the description for keywords
+
+  otype            - sets the type of object
+  oweight          - sets the weight of the object
+  ocost            - sets the cost of the item
+  orent            - sets the rent cost of the item
+  otimer           - sets the decay time
+  orepop           - sets the repop percentage
+  oflags           - sets the flags on the items
+  owear            - sets the wear location of the object
+  obitvect         - sets the bit vector of the object
+  osubclass_res    - sets the object subclass restrictions
+  omaterial        - sets the material of the object
+  oaffects         - sets the object affects
+  ovalues          - sets the values of the object
+
+
+  oreset      - reset the object to all default values
+  oclone      - clone an object
+  odelete     - delete an object
 
   All commands when typed by themselves offer additional help.
 
@@ -333,7 +360,7 @@ arctic sector will give damage if a character's movement points are 0.
 SEE ALSO: "EDIT ROOM" "ROOM FLAGS" ROOMS
 
 #
-"ROOM FLAGS"
+"ROOM FLAGS" "RFLAG"
 
 Usage: edit room <#> flags <add|remove> <all/flag/flags>
    or  rflag
@@ -410,7 +437,7 @@ See ROOMS for a list of alternate direction editting commands.
 SEE ALSO: "EDIT ROOM" "LOCK LEVELS" ROOMS
 
 #
-"MOB AFFECTS"
+"MOB AFFECTS" "MAFF"
 
 edit mob <#> affect <add|remove> all, or a list of the following:
 
@@ -447,7 +474,7 @@ edit mob <#> affect <add|remove> all, or a list of the following:
 SEE ALSO: "EDIT MOB" "MOB ACTIONS" MOBS
 
 #
-"MOB ACTIONS"
+"MOB ACTIONS" "MACT"
 
 edit mob <#> action <add|remove> all, or a list of the following:
 
@@ -485,7 +512,7 @@ The AGG-priority is as follows:
 SEE ALSO: "EDIT MOB" "MOB AFFECTS" MOBS
 
 #
-"MOB IMMUNITIES"
+"MOB IMMUNITIES" "MIMMUNE"
 
 A mob with the given immunity will take 0
 damage from any attack with that type of damage.
@@ -513,7 +540,7 @@ EXECUTE
 
 SEE ALSO: "EDIT MOB" "MOB RESISTANCES" MOBS
 #
-"MOB RESISTANCES"
+"MOB RESISTANCES" "MRESIST"
 
 A mob with the given resistance will take
 25% to 75% of any attack with that type of
@@ -603,7 +630,7 @@ Mob positions possible are:
  3)  Stunned           7)  Fighting   11)  Swimming
 
 #
-"OBJECT EXTRADESC"
+"OBJECT EXTRADESC" "OEXTRA"
 
 Usage: edit obj <#> extra <add|remove> <keyword>
 
@@ -611,7 +638,7 @@ Usage: edit obj <#> extra <add|remove> <keyword>
  a player types 'examine <keyword>'.
 
 #
-"ROOM EXTRADESC"
+"ROOM EXTRADESC" "REXTRA"
 
 Usage: edit room <#> extra <add|remove> <keyword>
 
@@ -619,7 +646,7 @@ Usage: edit room <#> extra <add|remove> <keyword>
  a player types 'examine <keyword>'.
 
 #
-"ACTIONDESC"
+"ACTIONDESC" "OACTION"
 
 Usage: edit object <#> extra <add|remove> <keyword>
 
@@ -627,7 +654,7 @@ Usage: edit object <#> extra <add|remove> <keyword>
  a player types 'kill <keyword>'.
 
 #
-"VALUES" "OBJECT VALUES"
+"VALUES" "OBJECT VALUES" "OVALUES"
 
 Usage: edit object <#> values <n1> <n2> <n3> <n4>
 
@@ -656,7 +683,7 @@ Usage: edit object <#> values <n1> <n2> <n3> <n4>
 SEE ALSO: "EDIT OBJECT" "OBJECT TYPE" "OBJECT FLAGS" BITVECTORS OBJS
 
 #
-"TYPE" "OBJECT TYPE"
+"TYPE" "OBJECT TYPE" "OTYPE"
 
 Syntax: edit object <#> type <type> where <type>:
 
@@ -666,7 +693,7 @@ Syntax: edit object <#> type <type> where <type>:
  BOARD, SC_TOKEN, SKIN.
 
 #
-"OBJECT AFFECTS"
+"OBJECT AFFECTS" "OAFFECTS"
 
 An object can affect stats or skills.  If a negative number is desired just
 subtract the desired amount from 256.
@@ -685,7 +712,7 @@ There is a maximum of 2 affects on each object.
 
 SEE ALSO: OBJS
 #
-"OBJECT FLAGS"
+"OBJECT FLAGS" "OFLAGS"
 
 Usage: edit object <#> flags <add|remove> all, or a list of the following:
  GLOW, HUM, DARK, CLONE, EVIL, INVISIBLE, MAGIC, NODROP, BLESS, ANTI-GOOD,
@@ -699,7 +726,7 @@ Usage: edit object <#> flags <add|remove> all, or a list of the following:
 SEE ALSO: "EDIT OBJECT" BITVECTORS "OBJECT AFFECTS" "OBJECT TYPE" OBJS
 
 #
-"BITVECTORS"
+"BITVECTORS" "OBITVECT"
 
 A player or mob using an item with bitvectors will be affected by it.
 
@@ -759,7 +786,7 @@ Usage:
 SEE ALSO: "OBJECT WEIGHT" "OBJECT FLAGS" "OBJECT AFFECTS" BITVECTORS
        "OBJECT TYPES" "OBJECT EXTRADESC" ACTIONDESC WEAR
 #
-"SUBCLASS RESTRICTIONS"
+"SUBCLASS RESTRICTIONS" "OSUBCLASS_RES" "OSUBCLASS RES" "OSUBCLASS"
 
  edit object <#> subclass_res <add|remove> all, or a list of the following
 
@@ -771,7 +798,7 @@ ANTI_MERCENARY.
 
 SEE ALSO: "EDIT OBJECT"
 #
-"WEAR"
+"WEAR" "OWEAR"
 
 Used to determine where an item can be worn.  A TAKE flag is added by default
 to all objects.  Remove this if you do not want players to be able to pick up
@@ -891,7 +918,7 @@ lockpicks, just move points.
 
 
 #
-"OBJECT WEIGHT"
+"OBJECT WEIGHT" "OWEIGHT"
 
 Each object has a weight value.  It is used to determine how much a character
 is carrying and if he is strong enough to wield a weapon of a certain weight.
@@ -1215,7 +1242,7 @@ SEE ALSO: OSTAT ZSHOW
      total_recall                    83
      recharge                        84
      miracle                         85
-     levitate                        86
+     fly                             86
      mana_transfer                   87
      holy_bless                      88
      evil_bless                      89
@@ -1249,14 +1276,15 @@ SEE ALSO: OSTAT ZSHOW
      relocation                      117
      locate_character                118
      super_harm                      119
+     great mana		      122
+     perceive			      124
+     haste			      127
      power_word_kill                 128
      dispel_magic                    129
      conflagration                   130
-     mass_invisibility               131
      convergence                     132
      enchant_armour                  133
      disintegrate                    134
-     confusion                       135
      vampiric_touch                  136
      searing_orb                     137
      clairvoyance                    138
@@ -1267,12 +1295,19 @@ SEE ALSO: OSTAT ZSHOW
      petrify                         143
      protection from good            145
      remove improved invisibility    146
+     quick			      149
+     divine intervention	      150
+     rush			      151
+     blood lust		      152
+     mystic swiftness		      154
+     wind slash		      165
+     debilitate		      172
+     blur			      175
      tremor                          179
      shadow wraith                   180
      devastation                     181
-     incendiary cloud                182
      power of faith                  187
-     focus                           188
+     incdendiary cloud               188
      power of devotion               189
      wrath of god                    190
      disrupt sanctuary               191
@@ -1282,10 +1317,9 @@ SEE ALSO: OSTAT ZSHOW
      ethereal nature                 195
      engage                          196
      aid                             202
-     demonic thunder                 203
      desecrate                       206
      rimefang                        209
-     dark ritual                     210
+     wither                          210
      blackmantle                     211
      divine wind                     212
      rejuvenation                    216
@@ -1293,14 +1327,15 @@ SEE ALSO: OSTAT ZSHOW
      meteor                          218
      luck                            224
      warchant                        225
-     rally                           228
+     rally                           226
      cloud of confusion              236
      rage                            238
      righteousness                   239
      wrath of ancients               241
-     wither                          242
-     sanctify                        244
+     divine hammer                   244
+     camaraderie                     245
      orb of protection               246
+     dusk requiem                    247
      frost bolt                      248
      iron skin                       249
      distortion                      250
@@ -1336,7 +1371,16 @@ SEE ALSO: OSTAT ZSHOW
      SKILL_AMBUSH                 67
      SKILL_SPIN_KICK              68
      SKILL_ASSAULT                69
-
+     SKILL_DISEMBOWEL             70
+     SKILL_PUMMEL                 120
+     SKILL_TAUNT                  144
+     SKILL_QUAD	           148
+     SKILL_SNIPE                  183
+     SKILL_RIPOSTE	           184
+     SKILL_FRENZY	           186
+     SKILL_BANZAI                 198
+     SKILL_HEADBUTT               199
+     SKILL_LUNGE                  237
 #
 "WEAPON TYPES"
 

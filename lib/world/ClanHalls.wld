@@ -27,10 +27,10 @@ weed~
 S
 #27501
 Inside the Iron Tower of Diabolik~
-   You stand inside a vast cylindrical structure made entirely of one 
-piece of solid iron. Torchlight eerily plays about the walls and many 
-tapestries that adorn the walls creating flittering shadows that jump 
-about the walls almost as if they were alive.  A dark sense of forboding 
+   You stand inside a vast cylindrical structure made entirely of one
+piece of solid iron. Torchlight eerily plays about the walls and many
+tapestries that adorn the walls creating flittering shadows that jump
+about the walls almost as if they were alive.  A dark sense of forboding
 grips your chest as footfalls echo throughout the chamber, reverberating
 endlessly off the thick walls.
 ~
@@ -66,22 +66,22 @@ You see the portrait of a mighty warrior in a battle-stance.
                    {z, ,__/__,__/\__,_ )__(   z}
                     \>'   (            \_ `--c/
                        _.-'\_      ,   / \_
-  
+
                        \   ,   \    ( __     )
                         \   )-'-\__/-'  |   /
                          |  |          /  .'
                         /  ,)         (   \_
-                       oooO'           '--Ooo             
+                       oooO'           '--Ooo
 ~
 S
 #27502
 A Crystal-Domed Armory~
    You are inside a massively constructed vault and armory complex, weapons
-and armors the like of which you've never seen line the walls in special 
-racks, many of them glowing with mystical dweomers.  The crystal dome 
-overhead also appears to me quite magical in nature, its facets breaking 
-up the sunlight into tiny rainbows as you look at it. As the massive vault 
-door thuds shut behind you, you feel somewhat safe even though there's a 
+and armors the like of which you've never seen line the walls in special
+racks, many of them glowing with mystical dweomers.  The crystal dome
+overhead also appears to me quite magical in nature, its facets breaking
+up the sunlight into tiny rainbows as you look at it. As the massive vault
+door thuds shut behind you, you feel somewhat safe even though there's a
 brute of a guard who'll kill you in a heartbeat if you dont belong here.
 ~
 275 33288 0
@@ -98,17 +98,17 @@ S
 The Rusty Sword~
   As you top the stairs, your eyes behold a wondrous sight. Before you is a
 large hall filled with long tables that are surrounded by comfortable chairs.
-The Hall's walls are covered with the banners of each individual clan that 
+The Hall's walls are covered with the banners of each individual clan that
 makes up the entirety of Diabolik. The floor is made of solid, well-worn oak
 that has been stained by ale being repeatedly spilled on its surface by
 joyful members of the elite club. The pillars holding up the roof are shaped
-like giant swords. They are made of solid iron and, as a result, are slightly 
-rusting from years of exposure. It is obvious where the name for this famous 
-tavern came from.  On top of each table are places set with the names of 
+like giant swords. They are made of solid iron and, as a result, are slightly
+rusting from years of exposure. It is obvious where the name for this famous
+tavern came from.  On top of each table are places set with the names of
 Diabolik Members in front of each. Around the fireplaces, there are more chairs
 drawn together so that these professional killers can share tales of the
-adventures with one another. On one side of the hall is a bar, behind which 
-are several shelves lined with every alcoholic beverage you could imagine... 
+adventures with one another. On one side of the hall is a bar, behind which
+are several shelves lined with every alcoholic beverage you could imagine...
 and some beyond your imagination. Thick oaken stairs wind around the
 circumference of the room, leading down and also up to yet another level.
 ~
@@ -137,7 +137,7 @@ there are six of them here supporting the roof above your head.
 ~
 E
 fireplace~
-Logs much thicker then your waist lie in the massive hewn stone fireplace, 
+Logs much thicker then your waist lie in the massive hewn stone fireplace,
 making for a roaring fire that fills the room with a sense of warmth and
 joviality.
 ~
@@ -149,18 +149,18 @@ Amongst the many banners you see A totally black flag which must belong to
 DARK, another right beside it bearing a shield crossed with a sword, spear
 and mace with the word HELLIONS emblazoned beneath it, another with a
 clenched fist which belongs to DAMAGE INC, and finally a simply designed
-banner bearing a shield with the letters LV upon it. On the other side of 
-the room, nearly out of view, is tacked an unusual looking yellow and red 
+banner bearing a shield with the letters LV upon it. On the other side of
+the room, nearly out of view, is tacked an unusual looking yellow and red
 banner with a 5 leafed plant as its emblem.
 ~
 S
 #27504
 Diabolik Room of Ancient Knowledge~
    You stand inside a vast libram of ancient texts, many of which scrawled
-in tongues which you havent the slightest grasp of understanding. The shelves 
+in tongues which you havent the slightest grasp of understanding. The shelves
 reach far far above you, nearly three times your height they stretch until
-they finally abut a metal ceiling. On a great many of the shelves tomes, 
-scrolls and other works radiate soft auras, giving away at least a tiny hint 
+they finally abut a metal ceiling. On a great many of the shelves tomes,
+scrolls and other works radiate soft auras, giving away at least a tiny hint
 of their arcane nature.
 ~
 275 33288 0
@@ -177,7 +177,7 @@ threatened.  The flames will harm no one that belongs, yet will do
 sustainable damage to those who do not. A hooded receptionist stands
 before the flaming opening, head hidden underneath his guise, and slightly
 tilted as if he was staring at the floor.  He motions his hands in your
-direction as if he were trying to get your to come closer. 
+direction as if he were trying to get your to come closer.
 ~
 275 33352 0
 D3
@@ -194,7 +194,7 @@ are heads of the various mobs killed in battle, ranging from the Queen
 Ant, the Warden, and Dagoor.  Looking far across the room is a marble
 mantle, with pictures of Diabolik members and a huge crest of the Diabolik
 Clan.  A training dummy stands meekly in the center of the training hall,
-cringing away from your approach. 
+cringing away from your approach.
 ~
 275 33288 0
 D1
@@ -204,7 +204,7 @@ D1
 E
 weapons~
 Nailed to the wall are legendary weapons used in combat to slay monsters
-of this world.  Amoung them: The black sting of the queen, Axe of Justice, 
+of this world.  Amoung them: The black sting of the queen, Axe of Justice,
 silver katana, Hammer of Sun, Huge Spear and a diamond scythe.
 ~
 E
@@ -229,7 +229,7 @@ The Gateway to Hell~
    A powerful force pulls you towards the whirling vortex in the center of
 this incredibly hot cavern.  A large pentagram has been crudely etched into
 the floor, still wet with fresh blood.  The smells of sulfur, fire, and
-brimstone are strong here, suggesting that the vortex is a one way ticket 
+brimstone are strong here, suggesting that the vortex is a one way ticket
 to the dominions of the devils, succubi, and incubi who are lazily lounging
 about, beckoning with leering grins and half bare bodies shiny with sweat.
 ~
@@ -270,12 +270,12 @@ walls, glowing red coals hiss and crackle, as if possessed with a life of
 their own.  The floor curves slightly downwards, towards the bubbling lava
 spring in the center of the antechamber, where buxom succubi and naughty
 incubi are sporting away, in full view.  The tantalizing smell of sizzling
-bacon and the scattered bits of clothing strewn all about the chamber 
+bacon and the scattered bits of clothing strewn all about the chamber
 suggest that this is the place to be.
 ~
 275 40968 0
 D0
-The sound of pitiful sobbing can be heard, in addition to other pathetic 
+The sound of pitiful sobbing can be heard, in addition to other pathetic
 cries of misery.
 ~
 ~
@@ -415,7 +415,7 @@ maximum pain...
 ~
 275 40968 0
 D2
-The hiss of hot coals and the scent of sizzling bacon is coming from the 
+The hiss of hot coals and the scent of sizzling bacon is coming from the
 south ... mmmmm...  smells tasty!
 ~
 ~
@@ -528,16 +528,16 @@ S
 #27521
 Castle Dark Legion~
    You enter into the Grand Foyer of the Castle of the Dark Legion.
-You stare in awe at the intensity of the room.  The walls are 
+You stare in awe at the intensity of the room.  The walls are
 made of pure black ebon.  Curtains leading to your private chambers
-line the east and west ends of the room.  Ornate tapestrys of past 
+line the east and west ends of the room.  Ornate tapestrys of past
 adventures adorn the walls, hanging in solemn beauty.  They tell the
 tales of the heroic Legioneers who dared risk their lives destroying
-the feared monsters of Ronin.  You gaze up at a crystal chandalier 
+the feared monsters of Ronin.  You gaze up at a crystal chandalier
 hanging from the oaken ceiling.  It covers the room in an eerie dark
-light. The room is also glowing with strange candles that burn with 
-blue flame.  Chills run down your spine as you hear your footsteps 
-echoing off the castle walls.  Though this is your home, you still 
+light. The room is also glowing with strange candles that burn with
+blue flame.  Chills run down your spine as you hear your footsteps
+echoing off the castle walls.  Though this is your home, you still
 get a strange feeling of fear burning within your soul.
 ~
 275 32776 0
@@ -552,11 +552,11 @@ The Grand Conservatory~
 Ancient paintings and tapestrys hang from the walls and a beautiful
 mural of ancient gods adorn the ceiling.  As you look from painting
 to painting you get a glimpse into the past and it is as if you had
-just revisited each time in a flashback.  Huge torches burn a bright 
+just revisited each time in a flashback.  Huge torches burn a bright
 blue flame in each of the corners, they cast an eerie glow on the
-strange statues of demons and people that are cast into alcoves along 
-the walls.  You recognize some of the faces on the statues to be that 
-of your own.  A fireplace burns brightly on the north end of the room, 
+strange statues of demons and people that are cast into alcoves along
+the walls.  You recognize some of the faces on the statues to be that
+of your own.  A fireplace burns brightly on the north end of the room,
 though the fire rages you feel no heat eminating from it.  However, the
 room is not cold at all.  With each footstep you take it feels as if for
 a moment you are in a different world, revisiting the past places that
@@ -592,7 +592,7 @@ mist hangs heavy about the room.  The mist does not however block
 your view of the room, it just creates an eerie atmosphere.  There
 is a large stone counter in the centre of the room, and behind it
 stirring a strange mixture in her cauldron is the old witch Greedle.
-She glares up at you with her milky white eyes and smiles.  This 
+She glares up at you with her milky white eyes and smiles.  This
 would be a good place to pick up some supplies that Greedle may have
 sitting around.
 ~
@@ -612,11 +612,11 @@ old motheds of protection and destroying the Legion has used in the past
 to defeat and destroy their enemies.  Some of these chaos and torture
 devices scare you as you look at them.  Just picturing yourself in one
 of them causes you to cringe in fear.  You can only imagine the horror
-some of your enemies faced as the Legion captured and destroyed them.  
+some of your enemies faced as the Legion captured and destroyed them.
 Huge metals vaults adorn the walls here, this is where the Dark Legion
-stores its extra items of value.  Raven, the guardian of this room is 
+stores its extra items of value.  Raven, the guardian of this room is
 here mending and testing the weapons that need to be fixed, she glances
-up at you and welcomes you to enter.  This would be a good place to 
+up at you and welcomes you to enter.  This would be a good place to
 lighten your load and hand some of your things over to Raven.
 ~
 275 32776 0
@@ -636,8 +636,8 @@ out over the country you can see the various wildlife taking care
 of business, the rabbits hopping around, chewing on leaves, you
 see foxes playing in a meadow, and a wonderous Elk jumping through
 its domain.  From here you truly appreciate the beauty of nature.
-The Legion has used this room in mental and physical training.  
-The Legion always had respect for nature and its powers, and 
+The Legion has used this room in mental and physical training.
+The Legion always had respect for nature and its powers, and
 sometimes nature has been used by the Legion to channel their
 powers. In this room you feel at peace, and in touch with yourself
 and your environment.
@@ -656,12 +656,12 @@ S
 The Dark Altar of Power~
    You follow the staircase into this dark and powerful room.  This is
 the Altar of Sacrifice, where the Legion gives offerings and prayers
-to the gods.  The room is lit by more blue flames and there are 
+to the gods.  The room is lit by more blue flames and there are
 various torches and candleabras adorning the room.  On the north wall
 there is the actualy altar of the gods.  It is tremendous in size
 and is adorned with candles, and treasures.  Carved into the dark
 structure are the faces of angels and demons, thier faces twisted into
-positions of agony.  This symbolizes the power of the gods.  As you 
+positions of agony.  This symbolizes the power of the gods.  As you
 gaze up you find that this room has no ceiling, but it is a twisting
 portal of blue, violet, and pink clouds in a swirling mass.  You see
 the outline of spirits flying amidst the mass, they are chanting and
@@ -685,7 +685,7 @@ you. There are statues and plaques lining the walls of the hallway to
 the main room.  Each has a small inscription in it, telling about who it
 goes out in honor to.  In the distance you can see a very dim light coming
 from underneath one of the doors, on the door reads 'Board Room'. As you
-peer around, you also see something that looks like main room of 
+peer around, you also see something that looks like main room of
 the complex.
 ~
 275 0 0
@@ -704,7 +704,7 @@ S
 The `o[`iMid`bni`ight `lMar`eaud`lers`o] `eBoard Room`q~
 There are tables and chairs lining the walls of this room, and at the
 far wall a bulletin board stands with blank paper ready to be used. The
-bulletin board is covered with small notes and messages.  As you look closer, 
+bulletin board is covered with small notes and messages.  As you look closer,
 you see a sign hanging over it labeled "Midnight Marauders".
 ~
 275 8192 0
@@ -1291,7 +1291,7 @@ S
 #27577
 The Brethil Tham Laboratory~
   Strange fumes fill your nostrils as you draw your breath in this cramped
-laboratory.  There are jars, bottles and urns carefully labeled and 
+laboratory.  There are jars, bottles and urns carefully labeled and
 categorized on fine oaken shelves along the walls, containing Sane knows
 what kind of physically enhancing liquids, powders and ointments. There is
 a large operating table in the middle of the room, with leather straps on
@@ -1314,7 +1314,7 @@ the room you realise it is much larger than it first appeared.  As
 you feel around the room, you pass over a pile of pillows to your left
 and a shelf with small bottles next to it.  You find a small table
 toward the far end of the room with a couple chairs sitting along the
-wall.  Feeling along the wall, you finally come upon a torch that you 
+wall.  Feeling along the wall, you finally come upon a torch that you
 quickly light to become more familliar with your surroundings.  Letting
 your eyes become used to the low light of the torch, you see that this
 small room had been used by "special" patrons of the tavern for what
@@ -1329,7 +1329,7 @@ keg~
 8 -1 27591
 E
 oil~
-You pick up one of the small bottles.  It appears to be full of 
+You pick up one of the small bottles.  It appears to be full of
 massage oil that smells of some exotic fruit.
 ~
 E
@@ -1340,21 +1340,21 @@ to sleep, rest or just padding for who knows what else...
 S
 #27591
 The Witch and Whistle Tavern~
-   Upon entering this grand old tavern, the chants of drinking songs 
-that tell the tales of legendary heroes rattle through your head. 
-The chants are in tune to mugs of ale swinging in the air as the 
-hero slays the mighty beast.  As you look around the tavern, you see 
-bards, mages and warriors singing alike.  It seems as if everyone is 
-welcome at this festive meeting place.  A roaring fireplace flickers 
-light and shadows upon the walls almost as if it were dancing with 
-the song.  The tavern owner can be seen keeping mugs and tankards 
-full, sending each pint of ale to its doom in the belly of traveler 
-after traveler.  Above the tavern is built an extravagant inn.  
-Travelers often rest here after too much of a good night in the 
-tavern below.  Long term boarding is also available if you ever 
-planned to explore this grand town or the areas around it.  The 
-Innkeeper welcomes each new guest as they enter the tavern to offer 
-room and board to the weary adventurer.  Back to the south is the 
+   Upon entering this grand old tavern, the chants of drinking songs
+that tell the tales of legendary heroes rattle through your head.
+The chants are in tune to mugs of ale swinging in the air as the
+hero slays the mighty beast.  As you look around the tavern, you see
+bards, mages and warriors singing alike.  It seems as if everyone is
+welcome at this festive meeting place.  A roaring fireplace flickers
+light and shadows upon the walls almost as if it were dancing with
+the song.  The tavern owner can be seen keeping mugs and tankards
+full, sending each pint of ale to its doom in the belly of traveler
+after traveler.  Above the tavern is built an extravagant inn.
+Travelers often rest here after too much of a good night in the
+tavern below.  Long term boarding is also available if you ever
+planned to explore this grand town or the areas around it.  The
+Innkeeper welcomes each new guest as they enter the tavern to offer
+room and board to the weary adventurer.  Back to the south is the
 town square.
 ~
 275 67665944 0
@@ -1375,17 +1375,17 @@ extra supplies of food, plates, glasses etc...
 S
 #27592
 Everglade Town Square~
-   You are standing in the heart of the lost town of Everglade. 
-Legends and myths have been told about this mysterious town. 
-As a child, you recall falling asleep, hoping to dream of this 
-mystical town where anything can happen.  A tingle of wonderment 
-sends chills down your spine as you stroll down this busy street. 
-In the center, you stand before a grand polished-black marble 
-statue that rests in the center of a spectacular fountain.  The 
-marble statue is of the famed Saber-Tooth Tiger which was created 
-by a traveling mage to protect this magical town.  At the left of 
-the statue sits a small onyx pedestal that holds a rather large 
-log book.  To the north is the Witch and Whistle Tavern, to the 
+   You are standing in the heart of the lost town of Everglade.
+Legends and myths have been told about this mysterious town.
+As a child, you recall falling asleep, hoping to dream of this
+mystical town where anything can happen.  A tingle of wonderment
+sends chills down your spine as you stroll down this busy street.
+In the center, you stand before a grand polished-black marble
+statue that rests in the center of a spectacular fountain.  The
+marble statue is of the famed Saber-Tooth Tiger which was created
+by a traveling mage to protect this magical town.  At the left of
+the statue sits a small onyx pedestal that holds a rather large
+log book.  To the north is the Witch and Whistle Tavern, to the
 east is the town's bank, to the west is the general store.
 ~
 275 67665944 0
@@ -1433,7 +1433,7 @@ From the wet smell of the warg fur and the unmistakable smell of
 the newt toes, a new batch of cure poison is being made.  Shelves
 line each wall full of foods and potions, scrolls and books.
 Anything you could possibly imagine, and some things you couldn't,
-are sold here. 
+are sold here.
 ~
 275 67665944 0
 D1
@@ -1450,15 +1450,15 @@ the room with scents.
 S
 #27594
 The Everglade Depository~
-   As you enter this cozy building, you feel the warmth of a 
+   As you enter this cozy building, you feel the warmth of a
 greenish-blue flame that burns from the torches on the walls.
-A small desk blocks your view of a short, fat dwarf sleeping 
+A small desk blocks your view of a short, fat dwarf sleeping
 under what looks to be his day's paperwork.  You hope he's not
-in charge of guarding your things.  Looking past the desk, you 
-see an endless hallway lined with platinum doors on each side 
-as far as your eyes can see.  You realize the great magical 
-forces at work in this town as you thought you were entering a 
-small cottage.  Such a grand power must be used to be guarding 
+in charge of guarding your things.  Looking past the desk, you
+see an endless hallway lined with platinum doors on each side
+as far as your eyes can see.  You realize the great magical
+forces at work in this town as you thought you were entering a
+small cottage.  Such a grand power must be used to be guarding
 something important.  Back to the west, you see the town's square.
 ~
 275 67665944 0

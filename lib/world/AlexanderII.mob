@@ -1,7 +1,7 @@
 #1500
 shadow~
 A dead black shadow~
-A long shadow streches over the floor in front of you.
+A long shadow stretches over the floor in front of you.
 ~
 The shadow has no visible features other that a manlike outline.
 ~
@@ -16,7 +16,7 @@ K
 #1501
 shadow~
 A dead black shadow~
-A long shadow streches over the floor in front of you.
+A long shadow stretches over the floor in front of you.
 ~
 The shadow has no visible features other that a manlike outline.
 ~
@@ -31,7 +31,7 @@ K
 #1502
 shadow~
 A dead black shadow~
-A long shadow streches over the floor in front of you.
+A long shadow stretches over the floor in front of you.
 ~
 The shadow has no visible features other that a manlike outline.
 ~
@@ -46,7 +46,7 @@ K
 #1503
 shadow~
 A dead black shadow~
-A long shadow streches over the floor in front of you.
+A long shadow stretches over the floor in front of you.
 ~
 The shadow has no visible features other that a manlike outline.
 ~
@@ -64,7 +64,7 @@ The black stallion~
 A large powerful black horse is blowing fumes from its nostrils.
 ~
 The black stallion is massive and twice the size of a regular horse. Its powerful
-legs and hooves will deal fierceful damamge to whomever gets in its way. 
+legs and hooves will deal fierceful damage to whomever gets in its way.
 ~
 16777258 8390696 -500 Y
 60 -20 -17 10d10+40000 10d10+2800
@@ -83,7 +83,7 @@ A fungus-covered tentacle~
 A long fungus-covered tentacle is writhing on the ground.
 ~
 The tentacle has a sicky green color and it stinks of death. Its fungus pores
-give off grey smoke and leaves the room in a thin grey mist. 
+give off grey smoke and leaves the room in a thin grey mist.
 ~
 16793642 8390696 0 Y
 60 -18 -10 10d10+10000 10d10+1000
@@ -101,8 +101,8 @@ The Terror Toad~
 A gigantic toad is lurking in a corner.
 ~
 The toad is huge and with its big mouth, it could easily eat a man whole. With
-its sharp teeth, it would no be a plesant experience. The skin looks though
-and not easy to penetrate. 
+its sharp teeth, it would no be a pleasant experience. The skin looks though
+and not easy to penetrate.
 ~
 16793642 8390696 0 Y
 65 -18 -30 10d10+1000000 10d10+3000
@@ -119,7 +119,7 @@ toad rib~
 A Rib~
 A large rib is sticking out of the inside of the toad.
 ~
-Destroying the rib, might be painful to the toad. 
+Destroying the rib, might be painful to the toad.
 ~
 16793642 8390696 0 Y
 50 -10 0 10d10+2500 1d10+100
@@ -135,7 +135,7 @@ Three headed Viper~
 A golden scaled viper is slithering around the hall.
 ~
 With golden scales the viper looks as if it's made of gold. Deep red eyes
-looks at you hungrily, its fangs dripping poison ready to tear. 
+looks at you hungrily, its fangs dripping poison ready to tear.
 ~
 16793642 8390696 0 Y
 70 -23 -20 10d10+130000 10d10+2300
@@ -153,8 +153,8 @@ demon carpenter~
 The Demon Carpenter~
 The Demon Carpenter is standing at a table smiling with glee.
 ~
-The demon is larger that any ogre and has dark red skin. In his right hand he 
-holds his mighty hammer. Two large wings strech out from his back casting 
+The demon is larger that any ogre and has dark red skin. In his right hand he
+holds his mighty hammer. Two large wings stretch out from his back casting
 looming shadows on the walls.
 ~
 16777258 276826152 -1000 Y
@@ -171,7 +171,7 @@ The frozen horror~
 A beast covered with thick white fur and icy scales look around the cavern in search of food.
 ~
 The monster has thick white fur and white icy scales cover its belly. The long head
-is basicly a huge mouth set with sharp point fangs of what looks like ice. The dead
+is basically a huge mouth set with sharp point fangs of what looks like ice. The dead
 black eyes glare back at you.
 ~
 16777258 8390696 0 Y
@@ -190,7 +190,7 @@ The Bone Dragon~
 The Bone Dragon is standing in a nest of bones.
 ~
 The dragon is made of shiny white bone and even if its wings are only bone, it
-can still fly. On the long tail a long sharp bone spike quivers with a desire 
+can still fly. On the long tail a long sharp bone spike quivers with a desire
 to kill.
 ~
 16777258 276826152 0 Y

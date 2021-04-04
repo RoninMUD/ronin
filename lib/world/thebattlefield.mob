@@ -3,7 +3,7 @@ scavenger~
 A dirty Scavenger~
 A very dirty Scavenger is here digging in the ruined earth.
 ~
-The filthy Scavenger is here digging in the dirt for lost treasures.  Around 
+The filthy Scavenger is here digging in the dirt for lost treasures.  Around
 you are holes dug by the Scavenger.
 ~
 16396 262144 0 Y
@@ -19,7 +19,7 @@ scavenger~
 A dirty Scavenger~
 A very dirty Scavenger is here digging in the ruined earth.
 ~
-The filthy Scavenger is here digging in the dirt for lost treasures.  Around 
+The filthy Scavenger is here digging in the dirt for lost treasures.  Around
 you are holes dug by the Scavenger.
 ~
 16396 262144 0 Y
@@ -35,7 +35,7 @@ rat~
 A dirty Rat~
 A dirty Rat is running around here.
 ~
-A dirty Rat is running around at your feet, its eyes are red and its feet 
+A dirty Rat is running around at your feet, its eyes are red and its feet
 clawed, it boldly takes a bite out from your shoe.
 ~
 16392 0 -100 Y
@@ -51,7 +51,7 @@ rat~
 A dirty Rat~
 A dirt Rat is running around here.
 ~
-A dirty Rat is running around at your feet, its eyes are red and its feet 
+A dirty Rat is running around at your feet, its eyes are red and its feet
 clawed, it boldly takes a bite out from your shoe.
 ~
 16392 0 -100 Y
@@ -67,7 +67,7 @@ rat~
 A dirty Rat~
 A dirty Rat is running around here.
 ~
-A dirty Rat is running around at your feet, its eyes are red and its feet 
+A dirty Rat is running around at your feet, its eyes are red and its feet
 clawed, it boldly takes a bite out from your shoe.
 ~
 16394 0 -100 Y
@@ -83,7 +83,7 @@ rat~
 A dirty Rat~
 A dirty Rat is running around here.
 ~
-A dirty Rat is running around at your feet, its eyes are red and its feet 
+A dirty Rat is running around at your feet, its eyes are red and its feet
 clawed, it boldly takes a bite out from your shoe.
 ~
 16394 0 -100 Y
@@ -99,8 +99,8 @@ dawnman~
 the dawnman~
 A Dawnman is here lumbering towards you.
 ~
-A Dawnman for times lost is here groping its way towards your life force, 
-its arms outstreched and reaching for your throat.
+A Dawnman for times lost is here groping its way towards your life force,
+its arms outstretched and reaching for your throat.
 ~
 16430 262184 -200 Y
 13 10 20 10d10+400 2d6+5
@@ -113,9 +113,9 @@ K
 #7308
 undead~
 the Undead~
-One of the Undead is here seaking solace somewhere, somehow.
+One of the Undead is here seeking solace somewhere, somehow.
 ~
-A semivisible Undead is slowly moving around, its gaunt eyes roving the 
+A semi visible Undead is slowly moving around, its gaunt eyes roving the
 landscape for something.
 ~
 16392 0 -200 Y
@@ -129,9 +129,9 @@ K
 #7309
 undead~
 the undead~
-One of the Undead is here seaking solace somewhere, somehow.
+One of the Undead is here seeking solace somewhere, somehow.
 ~
-A semivisible Undead is slowly moving around, its gaunt eyes roving the 
+A semi visible Undead is slowly moving around, its gaunt eyes roving the
 landscape for something.
 ~
 16426 262152 -200 Y
@@ -145,10 +145,10 @@ K
 #7310
 undead animal~
 the undead animal~
-An undead animal is here seaking solace somewhere, somehow.
+An undead animal is here seeking solace somewhere, somehow.
 ~
-One of the Undead creatures of the field is loping accross the landscape,
-its hooves making strangly little sound.
+One of the Undead creatures of the field is loping across the landscape,
+its hooves making strangely little sound.
 ~
 17032 0 -200 Y
 10 15 30 10d10+600 3d5+3
@@ -161,9 +161,9 @@ K
 #7311
 undead~
 the undead~
-One of the Undead is here seaking solace somewhere, somehow.
+One of the Undead is here seeking solace somewhere, somehow.
 ~
-One of the Undead is wandering aimlessly around here, its guant eyes 
+One of the Undead is wandering aimlessly around here, its gaunt eyes
 roving the landscape looking for something.
 ~
 16394 262152 -100 Y
@@ -177,9 +177,9 @@ K
 #7312
 raven~
 a raven~
-A huge Raven is circling close over head, its beedy eyes mocking you.
+A huge Raven is circling close over head, its beady eyes mocking you.
 ~
-The Raven is larger and blacker than any you have ever seen. Its beady 
+The Raven is larger and blacker than any you have ever seen. Its beady
 red eyes watching you with an unnerving intensity.
 ~
 16520 17039360 -200 Y
@@ -193,7 +193,7 @@ K
 #7313
 raven~
 a raven~
-A huge raven is circling close over head, its beedy eyes mocking you.
+A huge raven is circling close over head, its beady eyes mocking you.
 ~
 The raven is larger and blacker than any you have ever seen. Its beady
 red eyes watching you with an unnerving intensity.
@@ -211,7 +211,7 @@ bandit~
 the bandit~
 An over eager Bandit sees you as its next mark.
 ~
-A filthy well armed Bandit is here with sword drawn, its greed little 
+A filthy well armed Bandit is here with sword drawn, its greed little
 eyes flicking over you equipment and money pouch.
 ~
 174 262144 -200 Y
@@ -227,7 +227,7 @@ bandit leader~
 The Bandit leader~
 The large Bandit leader regards you, all the while fingering his sword.
 ~
-The Bandit leader is filthy beyond belief, the smell from him is almost 
+The Bandit leader is filthy beyond belief, the smell from him is almost
 to much. He eyes your cloths with great interest.
 ~
 16396 262144 -400 Y
@@ -243,7 +243,7 @@ bandit~
 A Bandit~
 The dirty Bandit is here tossing its sword from hand to hand, waiting for you.
 ~
-The filthy Bandit is here eyeing your equipment with greedy eyes, its 
+The filthy Bandit is here eyeing your equipment with greedy eyes, its
 eyes fastening upon your pouch of gold.
 ~
 140 262144 -200 Y
@@ -259,7 +259,7 @@ adventurer~
 An Adventurer~
 A fellow Adventurer passes by to lands unknown.
 ~
-The dwarven Adventurer looks very seasoned and experienced.  He passes 
+The dwarven Adventurer looks very seasoned and experienced.  He passes
 you with a nod, hand on weapon.... just in case.
 ~
 16524 262152 200 Y
@@ -273,9 +273,9 @@ K
 #7318
 spirit~
 the spirit~
-A translucent Spirit wanders accross the landscape.
+A translucent Spirit wanders across the landscape.
 ~
-The Spirit drifts silently accross the landscape bearly visible in the gloom.
+The Spirit drifts silently across the landscape barely visible in the gloom.
 ~
 16520 17039400 0 Y
 10 10 10 10d10+800 1d7+4
@@ -286,11 +286,11 @@ The Spirit drifts silently accross the landscape bearly visible in the gloom.
 K
 0 0 0 0 0 0 0
 #7319
-etheral spirit~
-an etheral spirit~
-An Etheral Spirit drifts past, oblivious to you.
+ethereal spirit~
+an ethereal spirit~
+An Ethereal Spirit drifts past, oblivious to you.
 ~
-The Etheral Spirit is just visible to you in your hightened state.  It is 
+The Ethereal Spirit is just visible to you in your heightened state.  It is
 utterly formless in shape, just a patch of grey.
 ~
 16392 84148352 0 Y
@@ -306,8 +306,8 @@ hag~
 the old hag~
 An old Hag is here puttering around in her hut.
 ~
-The Hag is dressed in scraps of armor and raw cloth.  She grins at you 
-toothlesly, raises her stick and advances on you.
+The Hag is dressed in scraps of armor and raw cloth.  She grins at you
+toothlessly, raises her stick and advances on you.
 ~
 16430 262144 -300 Y
 13 10 20 10d7+800 2d9+6
@@ -320,10 +320,10 @@ K
 #7321
 agb blob gelatinous~
 The Agb~
-What you can only describe as a an Amorphous Gelatinous Blob is restrained 
+What you can only describe as a an Amorphous Gelatinous Blob is restrained
 in one corner of the room.
 ~
-The 'Amorphous Gelatinous Blob is restrained by something. It's frantic 
+The 'Amorphous Gelatinous Blob is restrained by something. It's frantic
 attempts to 'bounce' your way fall short.
 ~
 138 33554432 0 Y
@@ -355,7 +355,7 @@ assistant~
 The cowering Assistant~
 The assistant cowers in a dark corner far away from you.
 ~
-The Assistant is dressed in sruffy, sooty cloths torn in many places, 
+The Assistant is dressed in scruffy, sooty cloths torn in many places,
 cowering in a corner he clutches a wicked looking dagger.
 ~
 16526 262144 -200 Y
@@ -369,9 +369,9 @@ K
 #7324
 nomad male~
 The nomad~
-A Nomad wanders accross your path, on a jouney to nowhere inparticular.
+A Nomad wanders across your path, on a journey to nowhere in particular.
 ~
-The Nomad is grey with dust from the surrounding lands, his face hidden 
+The Nomad is grey with dust from the surrounding lands, his face hidden
 in the folds of a hood, a hand hovers near his sword.
 ~
 16398 262144 0 Y
@@ -385,10 +385,10 @@ K
 #7325
 nomad woman~
 The nomad woman~
-A Nomads woman follow her man at a distance, she casts you a strange look 
-from beneth her dusty mantle, she suffles on silently.
+A Nomads woman follow her man at a distance, she casts you a strange look
+from beneath her dusty mantle, she shuffles on silently.
 ~
-The Nomad woman is grey with dust from the surrounding lands, her face 
+The Nomad woman is grey with dust from the surrounding lands, her face
 hidden in the folds of a hood, hands buried deep within her dusty robes.
 ~
 16398 537133056 0 Y
@@ -404,7 +404,7 @@ brat~
 The Brat~
 The scruffy Brat takes an interest in your cloths.
 ~
-The thieving little Brat sneaks close to you, he is covered more with dirt 
+The thieving little Brat sneaks close to you, he is covered more with dirt
 than cloths.  He attempts to steal a penny from you.
 ~
 16524 786432 0 Y
@@ -420,7 +420,7 @@ commoner~
 A Commoner~
 A hard working Commoner eyes the new stranger in the village, YOU!.
 ~
-The Commoner is here cuffing brats over the head for their mischeif.  
+The Commoner is here cuffing brats over the head for their mischief.
 He eyes you suspiciously then reluctantly moves on.
 ~
 16396 262144 100 Y
@@ -436,7 +436,7 @@ commoner wife~
 A Commoners Wife~
 A hard working Commoners Wife is here tending to household chores.
 ~
-She looks up from her work and makes 'shooing' gestures out the door.  
+She looks up from her work and makes 'shooing' gestures out the door.
 She then turns back to her task at hand.
 ~
 16398 262144 100 Y
@@ -450,10 +450,10 @@ K
 #7333
 old man~
 An Old man~
-An Old man is here hobbling along with the aid of a stick.  He looks up, 
+An Old man is here hobbling along with the aid of a stick.  He looks up,
 greets you and continues on his way.
 ~
-The Old man is very thin, hair is whispy white and his cloths are ragged, 
+The Old man is very thin, hair is wispy white and his cloths are ragged,
 his stick is gnarled and flecked with dried blood.
 ~
 16524 537133056 200 Y
@@ -469,7 +469,7 @@ fido dog~
 A scruffy Fido~
 A scruffy Fido is sniffing at the ground here.
 ~
-The scruffy Fido sniffs around your feet, you kick it as it raises a leg 
+The scruffy Fido sniffs around your feet, you kick it as it raises a leg
 to take a leak on your leg.
 ~
 16524 262144 0 Y
@@ -481,12 +481,12 @@ to take a leak on your leg.
 K
 0 0 0 0 0 0 0
 #7335
-etheral guard~
-The Etheral guard~
-The Etheral guards senses you and jumps towards you, shimmering sword glittering.
+ethereal guard~
+The Ethereal guard~
+The Ethereal guards senses you and jumps towards you, shimmering sword glittering.
 ~
-The Etheral guard shimmers with a bright light, human form bearly visible 
-behind a corrona of light, its eye pin pricks of light.
+The Ethereal guard shimmers with a bright light, human form barely visible
+behind a corona of light, its eye pin pricks of light.
 ~
 16430 16777216 300 Y
 12 10 30 10d9+600 2d8+5
@@ -498,11 +498,11 @@ K
 0 0 0 0 0 0 0
 #7336
 master light~
-The Etheral Master~
-The Etheral Master takes an interest in you, its eyes burning through you 
-concience.
+The Ethereal Master~
+The Ethereal Master takes an interest in you, its eyes burning through you
+conscience.
 ~
-The Master is seated on a ghostly throne of light, the Master gathers his 
+The Master is seated on a ghostly throne of light, the Master gathers his
 robes to rise and.... and deal with you.
 ~
 147470 150995072 700 Y
@@ -514,12 +514,12 @@ robes to rise and.... and deal with you.
 K
 0 0 0 0 0 0 0
 #7337
-etheral guard~
-The Etheral guard~
-The Etheral guard sees you and jumps towards you, shimmering sword glittering.
+ethereal guard~
+The Ethereal guard~
+The Ethereal guard sees you and jumps towards you, shimmering sword glittering.
 ~
-The Etheral guard shimmers with a bright light, human form bearly visible 
-behind a corrona of light, its eye pin pricks of light.
+The Ethereal guard shimmers with a bright light, human form barely visible
+behind a corona of light, its eye pin pricks of light.
 ~
 16398 17039360 300 Y
 12 8 20 10d9+600 2d7+8

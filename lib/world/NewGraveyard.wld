@@ -68,7 +68,7 @@ D3
 S
 #2505
 The corner of the graveyard~
-	You are surrounded by a lot of tombs. You cannot hear anything, just a deathlike silence.  To the north is a small, unkempt estate. 
+	You are surrounded by a lot of tombs. You cannot hear anything, just a deathlike silence.  To the north is a small, unkempt estate.
 ~
 25 0 2
 D2
@@ -213,7 +213,7 @@ D3
 S
 #2513
 A path to the devil's home~
-	You see a collapsed tumulus in front of you, you feel a slight chill in the wind.  
+	You see a collapsed tumulus in front of you, you feel a slight chill in the wind.
 ~
 25 0 2
 D1
@@ -228,7 +228,7 @@ S
 #2514
 Tumulus~
 	You are standing on some broken pieces of the tumulus.
- There is big hole on the ground, you can hear a haunting echo coming out from it. 
+ There is big hole on the ground, you can hear a haunting echo coming out from it.
 ~
 25 0 2
 D0
@@ -376,7 +376,7 @@ D2
 S
 #2524
 At the graveyard~
-        You are surrounded by a lot of tombs.You cannot hear anything, just a deathlike silence.
+        You are surrounded by a lot of tombs. You cannot hear anything, just a deathlike silence.
 ~
 25 0 2
 D0
@@ -541,7 +541,7 @@ D2
 S
 #2535
 South-western part of the graveyard~
-        You are standing on some deep mud. The stale air around has left you feeling nauseous. 
+        You are standing on some deep mud. The stale air around has left you feeling nauseous.
 This place is chilly and spooky, you certainly dislike it here.
 ~
 25 0 2
@@ -560,7 +560,7 @@ D3
 S
 #2536
 The end of the graveyard~
-	This is the end of the road. The only way is to go back here, the only exit is to the east. 
+	This is the end of the road. The only way is to go back here, the only exit is to the east.
 ~
 25 1 2
 D1

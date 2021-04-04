@@ -1,0 +1,1569 @@
+#14400
+Entrance to Random Trials~
+   A large room stretches out before you. To the north, east and south are
+large wooden double doors. Bound in iron they appear quite well made.
+Exquisite stained glass windows line the walls and ceiling, illuminate the
+entrance with rays of multi-colored light.
+~
+144 0 0
+D0
+A large iron bound double door.
+~
+double~
+1 -1 14401
+D1
+~
+~
+0 -1 14429
+D2
+~
+~
+0 -1 14445
+S
+#14401
+Entrance to the Lab~
+   The room is filled with eerie light. Signs cover the walls documenting all
+of the experiments that have been performed. Bizarre sounds seem to echo off
+the walls and random lights flicker on the ceiling.
+~
+144 67108932 0
+D0
+~
+~
+0 -1 14402
+D2
+~
+~
+0 -1 14400
+S
+#14402
+Prep Room One~
+   A random assortment of masks and surgical equipment lie scattered on the
+various tables and chairs. Gowns are draped over makeshift lines forming
+crude curtains. Shadows dance and appear to be screaming faces. A small
+form sits on a chair in the corner. Apparently waiting for a doctor that
+will never come.
+~
+144 67108864 0
+D0
+~
+~
+0 -1 14403
+D2
+~
+~
+0 -1 14401
+S
+#14403
+Prep Room Two~
+   Random equipment is buzzing and beeping as you enter the room. Flashing red
+and yellow lights add glimpses to the darkened room. Alarms buzz and blare
+as the single attendant in the room rushes around trying to stop the infernal
+noise.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14404
+D2
+~
+~
+0 -1 14402
+S
+#14404
+Prep Room Three~
+   A single gurney sits in the middle of the room. A large object writhes in
+pain as lights flash from the ceiling. The patient screams in agony although
+upon closer inspection nothing appears wrong. There doesnt appear to be any
+other exits from the room, though there is a strange looking hole on the
+western wall of the room.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14403
+D3
+A small hole sits in the middle of the wall. You may be able to crawl through it.
+~
+hole~
+9 -1 14405
+S
+#14405
+A Giant Teacup~
+   As you exit the hole, you are inside what appears to be a giant porcelain
+bowl. A dark liquid sloshes at the bottom and an odd aroma billows up.
+A string is descending from above and seems to extend up into the
+darkness. As the string begins to ascend, a large mesh bag appears
+from underneath the liquid.
+~
+144 1140850688 0
+D1
+A small hole sits in the middle of the wall. You may be able to crawl through it.
+~
+hole~
+9 -1 14404
+D3
+~
+~
+0 -1 14406
+S
+#14406
+Fluffy Wool Chairs~
+   Giant Wool chairs are scattered around the room. Multi Colored sheep can be
+seen sleeping or munching of little tufts of grass that never seem to shrink.
+Sitting on a large chair in the center is a very large muscular sheep looking
+for a fight.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14405
+D2
+~
+~
+0 -1 14407
+S
+#14407
+Model of a Clock Tower~
+   Inside the large arched tower, giant stained-glass windows gleam in the
+light, though it is unknown if the light is natural or not.  Up above in the
+rafters, reverberations echo down and large sounds are almost deafening. A very
+large bell is banging against the walls as it descends from above. Attached
+to the wall is a warning saying "Unique Undead Ahead".
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14406
+D2
+~
+~
+0 -1 14408
+S
+#14408
+Zombie Graveyard~
+   Large tombstones jut out of the uneven ground and tattered clothing lies
+scattered around.  Some graves are obscured due to cracks, moss or the
+simple passage of time. An odd hum is coming from a large metal object
+jutting out of the ground and lights start to appear from underneath
+a metal door as it starts to open.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14407
+D2
+~
+~
+0 -1 14409
+S
+#14409
+Smashing Compartment~
+   Large conveyer belts carrying everything from body parts to metal objects
+moves along the middle of the room. Every few feet a giant smasher or stone
+slab smashes down, reducing the material into mush. A large creature can be
+seen carrying a very large hammer. It occasionally will swing at the belt giggling as it crushes even further. A ladder can be seen on a side wall
+leading up to the floor above.
+~
+144 1141899264 0
+D0
+~
+~
+0 -1 14408
+D4
+A large steel ladder descends from above. The rattle of something
+mechanical eminates down.
+~
+ladder~
+11 -1 14410
+S
+#14410
+Moving Walls~
+   As you enter the room, walls shift behind you and the entryway disappears
+from view. The walls continue to shift, the ceiling rotates in
+counterclockwise circles. Lights dance around the room causing odd shadows to appear. A brief blur of something can be seen moving about the room.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14411
+D5
+A large steel ladder descends to the lower floor.
+~
+ladder~
+11 -1 14409
+S
+#14411
+The Secret Gym~
+   Weights sit on the floor, on bars or are just suspended from the ceiling.
+Ripped and tattered clothing sits in a large pile in the corner. A very
+large muscular creature sits in the corner lifting tree trunks. It appears
+to take no notice of you.
+~
+144 1140850688 0
+D3
+~
+~
+0 -1 14412
+S
+#14412
+Forgotten Gods Corner~
+   A small beam of light shines into the room from a lone window
+high on the ceiling. Wooden desks and metal chairs are placed
+evenly around the room. In the corner of the room is a creature
+wearing a tall white hat, softly sobbing to itself.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14411
+D4
+~
+~
+0 -1 14413
+S
+#14413
+Transition Room - Rainbow Swirl~
+  A plethora of bright colors cover every wall. Comfy chairs and beds
+are available, and a large table has a large array of food on it.  As
+you move closer to the table though, an odd realization sets in. There
+is no food, it is just pictures of food.
+~
+144 67108932 0
+D1
+~
+~
+0 -1 14414
+D5
+~
+~
+0 -1 14412
+S
+#14414
+The Bramble Patch~
+14414The Bramble Patch
+   Large vines cover the floor and walls. Rough tangled prickly shrubs
+sprout from the vines producing delicious looking berries. Large sharp
+thorns glisten as light bounces off them. There is a carefully carved
+path through the room. The vines seem to move out of the way as you
+move forward.
+~
+144 1140850688 0
+D0
+A large bramble bush sits on the floor. Its' razor sharp thorns
+gleam in the darkness. They dont see natural.
+~
+bramble~
+10 -1 14415
+D3
+~
+~
+0 -1 14413
+S
+#14415
+The Produce Section~
+   Calming music is emanating from the walls as you enter tiled room. The
+floor is ice cold and the air has a frigid quality to it.  As you breathe,
+you can see your breath.  A large orange bundle of carrots sits on its
+display in the middle of the room.  There is a small sign that says
+"Dont eat the samples".
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14416
+D2
+~
+~
+0 -1 14414
+S
+#14416
+The Bright Light~
+   As you enter the room a very large bright light activates and begins to shine
+at your face. Smaller blinking lights of varying colors appear to the sides,
+but the giant yellow light dominates your attention. As you approach the
+center of the room, a cracked lightbulb appears to be following your
+movements.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14417
+D2
+~
+~
+0 -1 14415
+S
+#14417
+The Cabbage Patch~
+   Cabbages of all sizes are strewn across a large dirt patch. Some appear to
+have been torn to shreds, while others remain nestled within their very large
+leafy beds. Amidst the rows and rows of leafy greens stands a very large
+cabbage surrounded by a pepper and a giant piece of broccoli.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14418
+D3
+~
+~
+0 -1 14416
+S
+#14418
+The Ocean...Sized Kiddie Pool~
+   As you walk into the room, water splashes around and a cold wind blows from
+above you. Nothing can be seen in the distance except the walls of the
+room. As you enter the room, a plastic ring inflates partially cover the
+door. A wooden object approaches from the center of the room muttering a
+brbrbrbrbrbrbrbrbrbbrr sound.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14417
+D3
+~
+~
+0 -1 14419
+S
+#14419
+Neon Purple Forest~
+   The grass glows a soft shade of purple, the vines grow darker as they ascend
+into the dark purple canopy. Fluffy purple balls bounce around the room while
+others are curled up underneath fluorescent purple flowers. A creature perks
+its head up and notices your presence. It starts to make a sound the seems
+to be between a roar and a squeak.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14420
+D1
+~
+~
+0 -1 14418
+S
+#14420
+Mixing Machine~
+   Large wooden panels of peg board cover the wall. Many hooks contain random
+tools, some of which you don't even recognize. As you enter the room a man
+walks away from behind the counter into the backroom and the door disappears.
+A large machine on the back counter begins to rattle and shake, its engine
+spinning faster and faster. The bolts holding down the machine snap off
+and the machine spins towards you.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14421
+D2
+~
+~
+0 -1 14419
+S
+#14421
+Ice Cream Mountain~
+   As you enter the room, there is a slight chill in the air. In the center of
+the room is a giant mountain of ice cream. The scents of ice cream permeate
+through the air. A large blob monster emerges from the pile and slowly
+glides down the melting pile towards you.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14422
+D3
+~
+~
+0 -1 14420
+S
+#14422
+Elevator Car~
+   A broken down elevator car sits wedged in the elevator shaft. Lights flicker
+on and off and electricity sparks from lose frayed wires. A red light is
+rhythmically flashing at a very slow pace, bathing the car in a dull light.
+A jagged hole can be seen in the middle of the car.
+~
+144 67108932 0
+D0
+~
+~
+0 -1 14421
+D5
+A large steel cable descends out the bottom of the car.
+~
+cable~
+11 -1 14423
+S
+#14423
+The Bird Gun Room~
+   A sparrow wearing a beret marches around the room. One, Two, Three, Four,
+March with me or hit the floor. Five Six Seven Eight, fight with me,
+get turned to bait. Numerous medals line countless display cases on the
+wall.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14424
+D4
+A large steel cable descends from the car above.
+~
+cable~
+11 -1 14422
+S
+#14424
+Bufflalo?~
+   There is a chalk board here. It only has one thing written on it.
+"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo."
+A very perplexed creature is sitting in the corner staring at the
+board and muttering to itself.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14425
+D3
+~
+~
+0 -1 14423
+S
+#14425
+The Tool Depot~
+   Large revolving metal display cases turn on mechanical pedestals.
+Shields, hammers, swords, and assorted weapons are a part of the
+displays. A large animated hammer slowly hops around the room,
+its head low as it tries to fit a spot on the shelves to fit.
+As it sees you, it seems to lift its head to scream, but
+no noise is emitted.
+~
+144 1140850816 0
+D0
+~
+~
+0 -1 14424
+D2
+~
+~
+0 -1 14426
+S
+#14426
+Evil Spider Web~
+   Large thick strands of spider silk are arranged in symmetric parallel lines
+around the room. A spider can be seen slowly and meticulously adding more
+strands to the room. As it nears you, it carefully steps around you and
+continues with its work.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14425
+D2
+~
+~
+0 -1 14427
+S
+#14427
+End of the Descent~
+   This room seems oddly out of place. It is plain white marble everywhere.
+Columns line the walls and one large pillar stands in the center of the
+room. Wails and screams can be heard from the door to the west. As you
+approach the door, you hear a loud thumping noise. Footsteps approach
+from behind you.  Before you can react, something jumps out of the
+darkness and attacks you.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14426
+D3
+~
+~
+0 -1 14428
+S
+#14428
+Mad Wizard Cloning Lab~
+   Beakers, vials, bubbling cauldrons and other odd lab equipment are all
+over the place. Pieces of the ceiling are hanging down, the wall
+has gigantic chunks missing with what appear to be burn marks around
+them. The smell of burning flesh fills the air, as cadavers sit on
+tables with IV lines plugged into them. In the middle of the room,
+a man with hair standing straight up cackles to himself, as he grabs
+a portable hand saw and turns to his newest creation.
+~
+144 1159725056 0
+D1
+~
+~
+0 -1 14427
+S
+#14429
+Shadowed Cloister~
+   The room is lightly lit with stained glass windows adorning the walls.It
+opens into a larger area of this old church.  Shadows play along the walls and
+array of colors dance in the air. Towards the back of the church, a wall of
+light softly glows and thrums with a low monotonous tone.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14430
+D3
+~
+~
+0 -1 14400
+S
+#14430
+Shadowed Cloister~
+   The room is lightly lit with stained glass windows adorning the walls.It
+opens into a larger area of this old church.  Shadows play along the walls and
+array of colors dance in the air. Towards the back of the church, a wall of
+light softly glows and thrums with a low monotonous tone.
+~
+144 67108864 0
+D1
+~
+~
+0 -1 14431
+D3
+~
+~
+0 -1 14429
+S
+#14431
+Shadowed Cloister~
+   The room is lightly lit with stained glass windows adorning the walls.It
+opens into a larger area of this old church.  Shadows play along the walls and
+array of colors dance in the air. Towards the back of the church, a wall of
+light softly glows and thrums with a low monotonous tone.
+~
+144 67108864 0
+D0
+~
+~
+0 -1 14432
+D1
+~
+~
+0 -1 14438
+D2
+~
+~
+0 -1 14435
+D3
+~
+~
+0 -1 14430
+S
+#14432
+Shadowed Cloister~
+   The northern part of the church is adorned with more stained glass windows.
+The windows only have the darker colors and they emit a dark ominous aura.  The
+east and west rooms have large stone pedestals adorned with a large black gem.
+The monk in the room looks at you with a blank expression.
+~
+144 67108864 0
+D1
+~
+~
+0 -1 14434
+D2
+~
+~
+0 -1 14431
+D3
+~
+~
+0 -1 14433
+S
+#14433
+Northwest Pedestal~
+   The stone pedestal and large black gem sit in the center of the room.
+The large triangle cut stone demands your attention are is glows with a
+hellish aura. It has a low hum which echoes through the room.
+~
+144 67108864 0
+D1
+~
+~
+0 -1 14432
+S
+#14434
+Northeast Pedestal~
+   The stone pedestal and large black gem sit in the center of the room. The
+large cushion cut stone demands your attention are is glows with a
+hellish aura. It has a low hum which echoes through the room.
+~
+144 67108864 0
+D3
+~
+~
+0 -1 14432
+S
+#14435
+Shadowed Cloister~
+   The southern part of the church is adorned with more stained glass windows.
+The windows only have the lighter colors and they emit a bright happy aura.
+The east and west rooms have large stone pedestals adorned with a large
+red gem. The monk in the room looks at you with a slight smile.
+~
+144 67108864 0
+D0
+~
+~
+0 -1 14431
+D1
+~
+~
+0 -1 14437
+D3
+~
+~
+0 -1 14436
+S
+#14436
+Southwest Pedestal~
+   The stone pedestal and large red gem sit in the center of the room. The large
+square cut stone demands your attention are is glows with a holy aura. It
+has a high hum which echoes through the room.
+~
+144 67108864 0
+D1
+~
+~
+0 -1 14435
+S
+#14437
+Southeast Pedestal~
+   The stone pedestal and large red gem sit in the center of the room. The large
+octagon cut stone demands your attention are is glows with a holy aura. It
+has a high hum which echoes through the room.
+~
+144 67108864 0
+D3
+~
+~
+0 -1 14435
+S
+#14438
+Wall Of Light~
+   A blinding wall of light rises into the ceiling.  Beyond the glowing haze
+you see the interior of a church and figures in the aisle. A large glass
+window lets light it from the ceiling, torches on the wall illuminate the
+shadows and the air becomes warmer.
+~
+144 0 0
+D3
+~
+~
+0 -1 14431
+S
+#14439
+Past the Wall of Light~
+   The room past the wall looks slightly more ornate that the previous part of
+the church. The tile floor becomes more apparent, while metal torches line the
+walls.
+~
+144 4 0
+D1
+~
+~
+0 -1 14440
+S
+#14440
+The Nave~
+   The center part of the church.  Benches are arranged in rows to both sides
+as you walk down the aisle.  A low ranking member of the church walks
+the aisle looking at you with a distrustful eye. She is muttering random
+prayers to herself.
+~
+144 1073741824 0
+D1
+~
+~
+0 -1 14441
+D3
+~
+~
+0 -1 14439
+S
+#14441
+The Pulpit~
+   A wooden pulpit stands in the center of the room. A woman clad in robes of
+gold and red reads from a book.  Her hands wave around gesturing at no one
+as she proclaims the glory to the glorious leader.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14442
+D1
+~
+~
+0 -1 14444
+D2
+~
+~
+0 -1 14443
+D3
+~
+~
+0 -1 14440
+S
+#14442
+The Northern Transept~
+   The transept forms part of the cross when you look at the building as
+a whole. The north side of the building once again hums with a low sound
+and a more hellish aura emanates from the walls.  A higher ranking female
+of the church sits in silent contemplation.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14441
+S
+#14443
+The Southern Transept~
+   The transept forms part of the cross when you look at the building as
+a whole. The south side of the building once again hums with a high pitched
+hum and a more holy aura emanates from the walls.  A higher ranking female
+of the church stands looking at holy runes written on the walls.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14441
+S
+#14444
+The Sacred Altar~
+   A marble altar stands above the tiled floor. A holy leader stands with her
+hands to the sky praying and asking for more guidance. A platinum cross
+glows around her neck.  Holy energy and hellish energy pours into the room.
+An odd smile crosses her face as the energies meet her at the altar.
+
+~
+144 1140850688 0
+D3
+~
+~
+0 -1 14441
+S
+#14445
+The Path to the Pop Up Mountain~
+  A very uneven and rocky path runs alongside a very suspicious mountain. While
+the cliff face appears to be real, there is a fake sheen that glistens in the
+sun and the smell of paint permeates the air. Plants, shrubs and grass poke up
+from the ground, adding a little color to the otherwise brown environment.  The
+mountain extends up into the sky but its peak is visible and drooping.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14400
+D2
+~
+~
+0 -1 14446
+S
+#14446
+The Path to the Pop Up Mountain~
+  The uneven path continues on and opens up to a very square and boring
+opening to the west.  The entrance is well lit with many lights and light pours
+from the inside of the mountain. The plant life is lusher and more abundant.
+The smell of paint, sawdust and other materials forms a unique smell as the
+entrance gets closer. A methodic metallic sound can be heard in standard
+intervals, ringing in your ears.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14445
+D3
+~
+~
+0 -1 14447
+S
+#14447
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14448
+D1
+~
+~
+0 -1 14446
+D2
+~
+~
+0 -1 14455
+D3
+~
+~
+0 -1 14452
+S
+#14448
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14447
+D3
+~
+~
+0 -1 14449
+S
+#14449
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14448
+D2
+~
+~
+0 -1 14452
+D3
+~
+~
+0 -1 14450
+S
+#14450
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14449
+D2
+~
+~
+0 -1 14451
+S
+#14451
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14450
+D1
+~
+~
+0 -1 14452
+D2
+~
+~
+0 -1 14453
+S
+#14452
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14449
+D1
+~
+~
+0 -1 14447
+D2
+~
+~
+0 -1 14454
+D3
+~
+~
+0 -1 14451
+S
+#14453
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14451
+D1
+~
+~
+0 -1 14454
+S
+#14454
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14452
+D1
+~
+~
+0 -1 14455
+D3
+~
+~
+0 -1 14453
+S
+#14455
+Inside the Pop Up Mountain~
+  The room is quite sparse except for a few different stripes of paint on the
+walls. Multiple colors are randomly splashed around the walls which have
+started to wilt due to them being cardboard and absorbing the paint.  The
+random streaks of gray and brown show a poor effort to hide the shoddiness
+of the construction. In the center of the room a metallic slime creature
+rhythmically jumps up and down in the same spot.  The floor is forming a small
+divot as it is constantly struck again and again.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14447
+D1
+~
+~
+0 -1 14456
+D3
+~
+~
+0 -1 14454
+S
+#14456
+Top of a Wooden Palisade~
+  The room is slightly different then the rest of the facade that is the
+"mountain". The walls are made of actual stone and while the stone is smooth
+the walls are still bumpy. The more nature look of the walls and ceiling are
+contrasted against the giant wooden wall that is jutting up from an opening
+in the floor. It is a very odd place to put a palisade but it sturdy and
+has stood the test of time.
+~
+144 1140850688 0
+D3
+~
+~
+0 -1 14455
+D5
+A large wooden palisade descends into the depths. You
+can climb down it.
+~
+palisade~
+11 -1 14457
+S
+#14457
+Bottom of a Wooden Palisade~
+  The wood is lashed together with braided rope with stones at its base.
+Random gouges and cuts can be seen scattered across the wooden beams.
+Other boards are nailed into it to reinforce it even further.  Broken
+and bloody stakes poke out of the ground and random bones are strewn
+throughout the room.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14458
+D4
+A large wood palisade ascends up towards the surface. You
+can see handholds to climb up.
+~
+palisade~
+11 -1 14456
+S
+#14458
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 67108932 0
+D1
+~
+~
+0 -1 14459
+D3
+~
+~
+0 -1 14457
+S
+#14459
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D1
+~
+~
+0 -1 14460
+D2
+~
+~
+0 -1 14461
+D3
+~
+~
+0 -1 14458
+S
+#14460
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14462
+D3
+~
+~
+0 -1 14459
+S
+#14461
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14459
+D1
+~
+~
+0 -1 14462
+D2
+~
+~
+0 -1 14463
+S
+#14462
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14460
+D2
+~
+~
+0 -1 14464
+D3
+~
+~
+0 -1 14461
+S
+#14463
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14461
+D1
+~
+~
+0 -1 14464
+S
+#14464
+An Ore Rich Cavern~
+  Iron, obsidian, copper and tin cover the walls. The Veins stretch into the
+ceiling and below the floor. They zigzag through each other as they spread
+like spider webs through the rock.  Precious gems of all shapes and sizes
+glint in your eyes, the green glow of emeralds, the subtle red hue of a ruby
+and the sparkle of a diamond all catch your eye. The riches in this cavern
+don't seem to add up with the defensive structure that lead to this area.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14462
+D3
+~
+~
+0 -1 14463
+S
+#14465
+A Room of Overflowing Coins~
+  A room filled from floor to ceiling with all manner of coins. Coins both
+large and small, made from bronze, silver, copper, gold, and even random
+rocks are all a part of this massive pile of money. No other signs of life
+can be seen. No tools, no bones, nothing.  Just a giant fortune that no one
+ever claimed.  In the center of the pile is a large metal pot with coins
+flowing from the top.  As you look closer, it almost looks like it
+is smiling at you.
+~
+144 1140850692 0
+S
+#14466
+A Glimpse of Omniscience~
+  As you enter the room, your mind seems to expand infinitely and you can
+feel yourself gaining knowledge about everything.  However, the feeling
+was ephemeral and quickly recedes from your mind. In the center of the
+room a giant glowing mass with no real form. The room itself is all
+white and has a light glow that isn't quite blinding.
+~
+144 1140850692 0
+S
+#14467
+A Tiled Casino Room~
+  Flashing lights and loud sounds bombard you are you enter the room. The
+neon glow of fluorescent lights emit a constant hum. The sound of coins
+hitting metal echoes throughout the room and the sound of random levers
+can be heard. In the center of the room is a giant slot machine that is
+rocking back and forth, with a sign above it pointing down that simply
+states "Jackpot Here".
+~
+144 1140850692 0
+S
+#14468
+A Sealed Miners Hut~
+  The wooden walls are damp but in decent condition. The ramshackle
+appearance is typical for a Miner's standard living conditions.  The
+dirt and grim that cover the floor to the ceiling give the impression
+that it hasn't been visited in a very long time. Something very odd
+sits at the center of the room though. Unlike the rest of the drab
+old hut, a shiny chrome hot tub is sitting out for all to use, the
+water still bubbling and steaming.
+~
+144 1140850692 0
+S
+#14469
+A Winged Marshmallow's Cage~
+  A pink and yellow room, with all walls covered in fine steel mesh. The mesh
+contains a large marshmallow with wings standing in the room. Its adorable
+squeaks and whimpers echo through the room. The air is warm but stale, with
+small heating elements imbedded in the walls. They glow but emit no smoke.
+~
+144 1140850692 0
+S
+#14470
+Entrance to the Sherbet Kingdom~
+  Warm rays of sunshine splash your face as you stand amongst the clouds. A warm
+and gentle breeze blows past you as you enjoy the serene view and beautiful
+tranquility of the kingdom you have arrived in.  A path of clouds leads
+off to the east as a row of blinking lights guide you along the way. On each
+cloud that is visible you can see a small object bouncing up and down.
+~
+144 1140850692 2
+D1
+~
+~
+0 -1 14471
+S
+#14471
+A Pink Cotton Candy Cloud~
+  As you arrive at the first cloud, a small quadruped greets you with a loud
+"bahhhhhh" and then continues to bounce around the cloud. The entire cloud
+is a pink color and the sheep seems to be eating it which is only more
+bizarre. Outside of the cloud, there is not much else to see, though you
+can gaze below and see the world unfold before you.
+~
+144 1140850688 2
+D1
+~
+~
+0 -1 14472
+D3
+~
+~
+0 -1 14470
+S
+#14472
+A Mauve Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D2
+~
+~
+0 -1 14473
+D3
+~
+~
+0 -1 14471
+S
+#14473
+A Baby Blue Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D0
+~
+~
+0 -1 14472
+D1
+~
+~
+0 -1 14474
+S
+#14474
+A Magic Mint Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D0
+~
+~
+0 -1 14475
+D3
+~
+~
+0 -1 14473
+S
+#14475
+A Peach Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D0
+~
+~
+0 -1 14476
+D2
+~
+~
+0 -1 14474
+S
+#14476
+A Periwinkle Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D1
+~
+~
+0 -1 14477
+D2
+~
+~
+0 -1 14475
+S
+#14477
+A Lavender Cotton Candy Cloud~
+  The path of clouds continue, their different colors glow in the sun.
+Each cloud has a small creature that is behaving in its own unique way
+and enjoys taking bites of its colorful home. The view below is awe
+inspiring and terrifying all at the same time. Even flying, it is a very
+long way down.
+~
+144 1140850688 2
+D3
+~
+~
+0 -1 14476
+D4
+~
+~
+0 -1 14478
+S
+#14478
+A Whimsy Yellow Cotton Candy Cloud~
+  The last cloud on the path is once again a magical place. The bright colors
+twinkle in the sun. The creature that roams around here seems to be humming a
+jaunty tune. To the east the clouds a solid road of platinum appears, adorned
+on each side by glowing purple torches.
+~
+144 1140850688 2
+D1
+~
+~
+0 -1 14479
+D5
+~
+~
+0 -1 14477
+S
+#14479
+Approaching a Magical Throne~
+  The purple torches light the path and the light produced reflects off of the
+shiny floor. To the south a gigantic throne can be seen ascending into the sky
+and a tall woman sits there ever so silently watching. The air is still warm
+as the breeze blows through the area.
+~
+144 1140850688 0
+D2
+~
+~
+0 -1 14480
+D3
+~
+~
+0 -1 14478
+S
+#14480
+Throne of the Sherbert Queen~
+  The throne extends up into a layer of clouds that only light passes through.
+The large throne is made of metal and wood expertly put together with
+precision and skill. A large purple cushion extends from the seat to the back
+of the throne to provide extra comfort and two large purple torches are set
+to each side to provide the extra light needed. A tall woman sits upon the
+throne, gazing down at you as you enter the room. Looking more annoyed that
+you have interrupted her then anything, she simply waits for you to make
+an action.
+~
+144 1140850688 0
+D0
+~
+~
+0 -1 14479
+S
+#14481
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14482
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14483
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14484
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14485
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14486
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14487
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14488
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14489
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14490
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14491
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14492
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14493
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14494
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14495
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14496
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14497
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14498
+Temporary Room~
+Temporary description.
+~
+144 0 0
+S
+#14499
+A temporary name~
+A temporary description
+~
+144 0 0
+S
+#0
+$~

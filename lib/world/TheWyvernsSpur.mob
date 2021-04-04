@@ -3,8 +3,8 @@ zombie~
 the zombie~
 A zombie shuffles about.
 ~
-The zombie seems to have been living recently, as bits of rotten flesh still 
-fall from its limbs. It is a creature raised from the dead by an evil cleric, 
+The zombie seems to have been living recently, as bits of rotten flesh still
+fall from its limbs. It is a creature raised from the dead by an evil cleric,
 bound to do that one's bidding.
 ~
 10 32 -1000 Y
@@ -20,7 +20,7 @@ skeleton~
 the skeleton~
 A skeleton stands here silently.
 ~
-The skeleton is made from nothing but bleach-white bones. It was once a 
+The skeleton is made from nothing but bleach-white bones. It was once a
 humanoid, as far as you can tell.
 ~
 10 0 0 Y
@@ -38,7 +38,7 @@ A holy ghost stands watch over the resting place of the dead.
 ~
 The Holy Ghost is a spirit who was granted the right to stay in the prime
 material plane, existing as a ghost and protecting the interests of the gods
-of its alignmental plane.
+of its elemental plane.
 ~
 10 128 1000 Y
 20 8 3 200d2+200 2d6+15
@@ -104,7 +104,7 @@ chih sung-tzu sung tzu~
 Chih Sung-Tzu~
 Chih Sung-Tzu is standing here.
 ~
-Chih Sung-Tzu is Lord of Rain. He is a vewry muscular man, wearing a blue war
+Chih Sung-Tzu is Lord of Rain. He is a very muscular man, wearing a blue war
 helm. He rides a huge storm cloud, and is wearing a suit of terribly rusted
 scale mail.
 ~
@@ -121,7 +121,7 @@ shang-ti shang ti~
 Shang-Ti~
 Shang-Ti is standing here.
 ~
-Shang-Ti appears to be an aged man with a long white beard, dressed in 
+Shang-Ti appears to be an aged man with a long white beard, dressed in
 tattered robes.
 ~
 147499 268437664 0 Y
@@ -215,7 +215,7 @@ K
 #11513
 guardian~
 the Guardian~
-The Guardian of Lawful Neutralilty stands here.
+The Guardian of Lawful Neutrality stands here.
 ~
 This vague figure watches over the prime material plane, reporting back to
 the gods of Nirvana.

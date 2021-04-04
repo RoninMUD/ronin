@@ -1,5 +1,5 @@
 #11050
-rabit bat~
+rabid bat~
 the Rabid Bat~
 A nasty-looking, Rabid Bat stands here, ready to spread its disease.
 ~
@@ -37,7 +37,7 @@ the Small Demon~
 A small, red demon grins evilly at you.
 ~
 The demon, while only two feet tall, looks incredibly ferocious.  He
-glows red and nad sharp claws, nearly as long as his entire body.  His
+glows red and has sharp claws, nearly as long as his entire body.  His
 feet, also, are long and pointy, and he large, powerful legs.
 ~
 67109004 0 -800 Y
@@ -54,7 +54,7 @@ the Huge Slug~
 A large, white slug oozes before you, blocking your path.
 ~
 The slug is about 12 feet in diameter and must weigh over fifty tons.
-It's body pulsates, and it sort of just rolls as it moves.  Aparrently
+It's body pulsates, and it sort of just rolls as it moves.  Apparently
 it doesn't want you to continue down this path.
 ~
 106 8 0 Y
@@ -88,7 +88,7 @@ The large, nasty-looking leech pokes his razor sharp tongue at you.
 ~
 The leech is much larger than the others, maybe 4 feet long and a one
 foot in diameter.  It is a murky reddish-brown.  It could probably
-suck you dry withine minutes.
+suck you dry within minutes.
 ~
 106 8 -500 Y
 9 12 30 555d1+120 3d8+4
@@ -105,7 +105,7 @@ A snarling hell hound prepares to lunge at you.
 ~
 The hell hound looks like a cross-breed between a rottweiler and a
 wolverine.  It has round, muscular legs and a broad chest.  It lips
-are pulled back in a permanant snarl and its fur it matted with blood.
+are pulled back in a permanent snarl and its fur it matted with blood.
 ~
 104 262144 -200 Y
 12 8 20 555d1+120 2d8+4
@@ -212,11 +212,11 @@ you when he notices you, and you feel faint.
 K
 0 0 0 0 0 0 0
 #11076
-mosquito bug inscect~
+mosquito bug insect~
 the Mosquito~
 A large mosquito buzzes around your head.
 ~
-The mosquite has a long pointed sucker in the middle of his face.
+The mosquito has a long pointed sucker in the middle of his face.
 ~
 92 0 -1000 Y
 1 20 90 2d7+8 1d5+0
@@ -263,8 +263,8 @@ A ferocious Scorpat spins his tail towards you.
 ~
 The Scorpat was an attempt at a guardian, by the Dark Knight.  The
 experiment failed...what you see before you is the result...a mix
-between a scorpian and a bat...it has small sharp fangs and a thin,
-whispy tail with a stinger on the end.
+between a scorpion and a bat...it has small sharp fangs and a thin,
+wispy tail with a stinger on the end.
 ~
 104 0 -500 Y
 1 19 100 12d75+150 3d6+10
@@ -295,8 +295,8 @@ moredhel~
 the moredhel~
 A moredhel, evil cousin to the dwarf, is here.
 ~
-The moredhel is a fierce fighter.  It looks nearly identicle to a
-dwarve, except for the darker skin, but unlike a dwarf, its first
+The moredhel is a fierce fighter.  It looks nearly identical to a
+dwarf, except for the darker skin, but unlike a dwarf, its first
 instinct upon seeing you is to destroy you.
 ~
 109 262152 -1000 Y
@@ -332,10 +332,10 @@ The Dark Knight is standing here, eyeing you carefully.
 ~
 The Dark Knight seems to be shrouded in a cloak of darkness, or perhaps he just
 draws all the surrounding light into his being, leaving an empty void. The
-only truely remarkable thing you can seem to focus on are his eyes. His eyes
-leave you feeling as though he has looked into your soul and found the 
-darkness that you are hiding even from yourself. As if from a trance, you 
-start back to reality just in time to see the Dark Knight descend apon you.
+only truly remarkable thing you can seem to focus on are his eyes. His eyes
+leave you feeling as though he has looked into your soul and found the
+darkness that you are hiding even from yourself. As if from a trance, you
+start back to reality just in time to see the Dark Knight descend upon you.
 ~
 134217738 262272 0 Y
 60 -4 -10 2350d1+120 5d5+20

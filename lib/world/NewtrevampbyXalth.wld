@@ -56,7 +56,7 @@ The hills are a very shiny black color.
 ~
 E
 shards~
-There are shards of obsidian displayed all about here.  They are sharp and 
+There are shards of obsidian displayed all about here.  They are sharp and
 could be potentially dangerous.
 ~
 S
@@ -142,11 +142,11 @@ The smoke is grey and puffs out of the top of the mountain.
 S
 #2905
 Mountain top~
-   You have reached the top of the mountain.  An overpowering odor fills the 
+   You have reached the top of the mountain.  An overpowering odor fills the
 air.  Smoke accumulates from the active volcano to the south.  Scattered all
 over are rocks and bones.  Many bones lie under large boulders crushed by the
 massive weight.  Broken pieces of weapons and armor which would be useless to
-you lie around collecting dirt and will soon either be covered in soil or 
+you lie around collecting dirt and will soon either be covered in soil or
 burned.  You hear some scuffling about but there happens to be nothing visible
 around here.  To the south is the volcano.
 ~
@@ -264,8 +264,8 @@ Mountain top~
 lava into the side of the mountain.  They dig deep into the side creating a
 rippled texture on the ground.  Sulfuric fumes and smoke float all around up
 here.  They really do stink but make a very nice sunset from a distance.  No
-wildlife is able to be seen for it may have all been killed or scared off by 
-the last eruption.  Many femur and skull bones lie about waiting to be picked 
+wildlife is able to be seen for it may have all been killed or scared off by
+the last eruption.  Many femur and skull bones lie about waiting to be picked
 up.  Bones on the ground indicate that something other than a lava flow has
 killed animals up here... The only exit is north from where you can enter
 the volcano.
@@ -294,9 +294,9 @@ S
 #2910
 Inside the mountain~
    You are standing in a somewhat small room that appears to have four exits.
-Many dirty and oily rags lie spread about this room.  There are a lot of 
+Many dirty and oily rags lie spread about this room.  There are a lot of
 broken bones strewn about as well.  To the west and east runs a lava tube which
-you can enter if desired.  You can also go up to get out of this room.  Down 
+you can enter if desired.  You can also go up to get out of this room.  Down
 goes farther into the earth from where the sulfuric fumes and smoke seem to be
 arriving.
 ~
@@ -333,9 +333,9 @@ Broken rib cages and cracked skulls are all over the floor here.
 S
 #2911
 Guard room~
-   You have entered the fire newt guard room.  Many tapestries are draped over 
-the furniture here and there is a big and stained carpet in the middle of the 
-floor.  This isn't a very safe room in which to be; it looks as if it could 
+   You have entered the fire newt guard room.  Many tapestries are draped over
+the furniture here and there is a big and stained carpet in the middle of the
+floor.  This isn't a very safe room in which to be; it looks as if it could
 collapse any minute.  Better head back west from where you can go another
 direction.
 ~
@@ -364,7 +364,7 @@ These tapestries are hand-woven and have pictures of dragons on them.
 ~
 E
 carpet~
-This carpet is stained blood red and is cinged on all sides.
+This carpet is stained blood red and is singed on all sides.
 ~
 S
 #2912
@@ -501,8 +501,8 @@ S
 The tunnel~
    This dark, dry tunnel is covered in ash.  You can hear your footsteps echo
 through the tunnel and they seem to go on forever.  It is very dark in here
-even with a light.  The tunnel is very large and the ceiling is too far up to 
-see from here.  From here you can either go back towards the exit of the 
+even with a light.  The tunnel is very large and the ceiling is too far up to
+see from here.  From here you can either go back towards the exit of the
 volcano or you could try to venture north.
 ~
 29 9 0
@@ -521,7 +521,7 @@ S
 Bend in the tunnel~
    You enter a bend in the tunnel.  It is extremely hot in here and you see
 yellow and green traces of sulfuric acid on the ground.  You'd better hope that
-you don't run into any more.  Furthermore, you'd better hope this volcano 
+you don't run into any more.  Furthermore, you'd better hope this volcano
 doesn't erupt.  Small fire newts crawl about and laugh at you for no apparent
 reason.  They don't seem to mind the heat or the sulfuric smell.  From here
 you may journey east or back south to the tunnel's beginning.
@@ -539,14 +539,14 @@ You see that the tunnel leads back.
 0 0 2917
 E
 acid~
-Yellow and green acid drips from the ceiling and lands on the floor here. 
+Yellow and green acid drips from the ceiling and lands on the floor here.
 Soon there may be no floor left if this keeps up.
 ~
 S
 #2919
 The tunnel~
    You come to a fork in the tunnel.  It continues to the north, which you can't
-see much of as of now.  All you see is darkness in that direction.  To the 
+see much of as of now.  All you see is darkness in that direction.  To the
 east is a very small house.  It might not even be considered a house.  More
 like a garage.  Fire comes out of the windows and door yet the wood does not
 seem to be at all charred.  You may enter the house if desired, take the path
@@ -570,7 +570,7 @@ You see a bend in the tunnel.
 0 0 2918
 E
 house~
-  Flames burst from the windows and door.  Fire newts are happily running all 
+  Flames burst from the windows and door.  Fire newts are happily running all
 about in there.
 ~
 S
@@ -579,7 +579,7 @@ Fire Newt House~
    You enter the shack and find a nice and cozy spot to spawn a family.
 Pictures on the wall and a bed in the corner show signs of civilization.  The
 floor boards creak as you walk on them and feel as if they could break at any
-time.  The windows have no glass in them, they're just holes in the side of 
+time.  The windows have no glass in them, they're just holes in the side of
 the building.  Perhaps you should depart back west... intruding is a very
 serious crime amongst fire newts.
 ~
@@ -635,7 +635,7 @@ Fire Newt House~
 is very hot.  This inferno seems to have no affect on the house nor does it
 have any on the inhabitants.  The nearly-immolated fire newts who live here
 must have some resistance to this heat, or at least have grown accustomed to
-it.  You may leave back east, or stay in the house a bit longer if you so 
+it.  You may leave back east, or stay in the house a bit longer if you so
 desire.
 ~
 29 9 0
@@ -685,7 +685,7 @@ You see the dark tunnel.
 ~
 0 0 2923
 D3
-You see a waiting room. 
+You see a waiting room.
 ~
 ~
 0 0 2925
@@ -696,7 +696,7 @@ great pride in every battle which has been won no matter how big or small.
 ~
 E
 ceiling~
-This blackened ceiling is charred and burned.  Steam and sulfuric acid traces 
+This blackened ceiling is charred and burned.  Steam and sulfuric acid traces
 are stained on it.
 ~
 S
@@ -763,7 +763,7 @@ lizards and hooded men are drawn all over the walls here.  Enormous stalactites
 and stalagmites create a massive temple to the east.  This temple dwarves all
 which surrounds it.  Smoke steams out from the windows on the top floor.  The
 pressure is extremely high all the way down here.  It is truly a magnificent
-geological structure.  You can either leave back west or enter the temple to 
+geological structure.  You can either leave back west or enter the temple to
 the east... if you feel worthy.
 ~
 29 9 0
@@ -796,8 +796,8 @@ magic. The scenario seems to nearly come to life.
 S
 #2928
 Entrance to the temple~
-   Many marvelous structures are all around you as you enter the temple.  
-Beams that hold the building up have many engravings and famous scenes from 
+   Many marvelous structures are all around you as you enter the temple.
+Beams that hold the building up have many engravings and famous scenes from
 fire newt victories on them.  It is so very hot and dense in here.  Fire and
 smoke blaze and swirl all around you.  This is a very sacred structure and
 you should treat it with the respect which it deserves.  It appears that the
@@ -816,7 +816,7 @@ You see the outside of the temple.
 0 0 2927
 E
 door~
-This enormous door is made from iron.  It looks extremely heavy for it is 
+This enormous door is made from iron.  It looks extremely heavy for it is
 about 20 feet tall and probably several feet thick.
 ~
 E
@@ -869,7 +869,7 @@ and look to be extremely heavy.  They are about ten feet tall and have a metal
 handle which may be used to open them.  Keep in mind to enter might be a bit
 foolish.  This is a small room just large enough to hold you, a few others,
 and maybe... some monsters!  This is a perfect habitat for fire lizards which
-could be the parents of the brigade of fire newts which you faced to get this 
+could be the parents of the brigade of fire newts which you faced to get this
 far.  You should either leave back up or venture through the large doors to
 the east.
 ~
@@ -897,7 +897,7 @@ The Egg Room~
 broken shells, and some are still whole.  This must be the nest of the fire
 lizards.  Many newts too small to kill run about down here.  They seem to be
 heading for a small hole in the northern wall.  Wind whistles in and out of
-the hole and a very strong odor comes from it as well.  A large roaring 
+the hole and a very strong odor comes from it as well.  A large roaring
 arrives from the north.  You probably shouldn't stay here long for the lizards
 may be coming back any minute to check on their young.  You would be in a very
 bad position if they walked in while you were standing here.
@@ -945,8 +945,8 @@ door~
 1 -1 2933
 E
 fire~
-The fire in the center of the island glows bright white.  It's so hot fusion 
-must be occurring within.  However you still seem to be able to stand and 
+The fire in the center of the island glows bright white.  It's so hot fusion
+must be occurring within.  However you still seem to be able to stand and
 watch it somehow...
 ~
 E

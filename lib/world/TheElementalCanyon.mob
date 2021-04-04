@@ -3,7 +3,7 @@ mountain climber mountainclimber~
 the mountainclimber~
 A mountain climber is making the same trek that you are.
 ~
-He wants to see whats on the other side of the mountain too.
+He wants to see what's on the other side of the mountain too.
 ~
 76 0 500 Y
 3 17 10 10d5+15 1d6+1
@@ -18,7 +18,7 @@ cyclops~
 The Cyclops~
 A hungry cyclops snarls at you!
 ~
-He looks like hes about to have dinner(maybe its you?).
+He looks like he's about to have dinner(maybe its you?).
 ~
 46 128 -700 Y
 29 -4 -2 1d1+3799 2d4+15
@@ -75,7 +75,7 @@ A small elemental, a resident of the canyon.
 K
 0 0 0 0 0 0 0
 #9406
-mediun elemental~
+medium elemental~
 A medium elemental~
 A medium-sized elemental presence can be felt here.
 ~
@@ -109,8 +109,8 @@ earth elemental ruler~
 The Earth Ruler~
 The Ruler of the Earth elementals is blocking earth.
 ~
-He looks as old as the earth itself.  He seems to know all the 
-secrets and knowledge of the Earth.  You cant really tell where 
+He looks as old as the earth itself.  He seems to know all the
+secrets and knowledge of the Earth.  You cant really tell where
 he begins and the rock wall ends.
 ~
 10 128 0 Y
@@ -158,7 +158,7 @@ The Ruler of the Lightning elementals.
 ~
 As you examine him there is a blinding flash of light and a deafening
 boom!  You rub your eyes and look and the ruler is there grinning
-at you. 
+at you.
 ~
 10 128 0 Y
 35 -8 -6 1d1+4200 4d6+15
@@ -369,8 +369,8 @@ blue flame~
 The Blue Flame~
 The Blue Flame burns mysteriously here.
 ~
-As you look you see what seems to be a face and almost a 
-huminoid figure somehow trapped in the fire.
+As you look you see what seems to be a face and almost a
+humanoid figure somehow trapped in the fire.
 ~
 74 0 -100 Y
 26 -6 -4 1d100+1550 6d3+12
@@ -400,7 +400,7 @@ ice bandit~
 The Ice Bandit~
 The Ice Bandit strikes cold fear in your heart.
 ~
-A huminoid figure encased in ice but still apparently alive.
+A humanoid figure encased in ice but still apparently alive.
 ~
 74 524288 -250 Y
 24 -4 -4 2d10+980 2d8+13
@@ -413,9 +413,9 @@ K
 #9429
 rock monster~
 The Rock Monster~
-The Rock Monster considers you in stoney silence.
+The Rock Monster considers you in stony silence.
 ~
-A huminoid figure trapped in stone seems alive.
+A humanoid figure trapped in stone seems alive.
 ~
 74 0 -310 Y
 23 -2 -5 4d10+850 3d8+4
@@ -430,7 +430,7 @@ hurricane~
 The Hurricane~
 A Hurricane rages across the sky.
 ~
-A huminoid figure seems to be trapped in the rushing wind.
+A humanoid figure seems to be trapped in the rushing wind.
 ~
 74 524288 -10 Y
 28 -8 -7 1d1+3700 4d6+6
@@ -446,7 +446,7 @@ An elemental magician~
 An elemental magician seeks magical stones for a spell.
 ~
 The elemental magician has come here in search of the fabled
-Stone of Surrender which can be used to render opponents 
+Stone of Surrender which can be used to render opponents
 senseless.
 ~
 74 2 -50 Y
@@ -462,7 +462,7 @@ rainbow warrior~
 A rainbow warrior~
 A warrior of the Rainbow Cult  swears his loyalty.
 ~
-The Rainbow Cult has recieved special powers for their service to 
+The Rainbow Cult has received special powers for their service to
 the elemental forces.
 ~
 72 0 150 Y

@@ -33,7 +33,7 @@ Southwest corner of the graveyard~
 north and east.  The charred-black fence radiates evil, obliterating any hope
 of escape.  From a distance a soft moaning is heard.  Your once-silent
 footsteps become audible when the wet ground beneath them sinks after stepping
-upon it.  The wind howls through the tombstones and bears a melodic, yet erie
+upon it.  The wind howls through the tombstones and bears a melodic, yet eerie
 whistle.  A small bush rustles but just as quickly as it started, it becomes
 still.  The moon is so large here it looks close enough to almost touch.  From
 here the path leads east and north.
@@ -116,7 +116,7 @@ Bodies lie here, some dead, some barely alive.
 S
 #21104
 The entrance to the graveyard~
-   This first step into the graveyward is a chilling one.  Bones lie sprawled
+   This first step into the graveyard is a chilling one.  Bones lie sprawled
 about on the ground, tombstones stand upright despite being bloody and cracked.
 The soft, blood soaked earth seems to moan and groan as if it were alive and
 could feel your every step.  There is dead silence and to the north above
@@ -844,7 +844,7 @@ S
 #21128
 A grassy path~
    The grass on this path is nice and plush.  It's refreshing to see
-some color in this otherwise dark cemetary.  The moon's shine is
+some color in this otherwise dark cemetery.  The moon's shine is
 incredible, illuminating everything around you.  Critters scutter all
 over the ground here, while bats fly above you.  As odd as it may seem,
 this part of the graveyard is one that actually doesn't look at all
@@ -915,7 +915,7 @@ S
 #21131
 Dead end~
    To the west stands an enormous iron fence.  Charred from many fires and
-scratched by many claws, it looms over the graveyard, indestructable.  Graves
+scratched by many claws, it looms over the graveyard, indestructible.  Graves
 to the north and south of here block the path in those directions.  The only
 direction exiting the area is back east.
 ~
@@ -1032,7 +1032,7 @@ A few small, dead bushes and some small, round pebbles are here.
 S
 #21135
 A river of blood~
-   The howl of a wolf echos through the cemetary as you enter this section of
+   The howl of a wolf echoes through the cemetery as you enter this section of
 the path.  The blood on the path flows like a river.  As it runs, this small
 stream of blood carries fragments of bones and appendages with it.  Small,
 dead bushes line the sides of the path, and a large tree juts up from the
@@ -1239,7 +1239,7 @@ S
 #21142
 A burnt path~
    The ground here has been very recently burned.  Sticks and small patches of
-grass are still smouldering, basking in the smoke-filled air.  It is
+grass are still smoldering, basking in the smoke-filled air.  It is
 impossible to see more than three feet ahead of your light source because of
 the thick, black air.  You can't help but cough as you walk through this
 black patch.  Although the smoke here is so thick, it's still possible to
@@ -1382,7 +1382,7 @@ A path of stone~
    The path here takes a different course.  Instead of dirt, gravel, and grass,
 the path is made of stone.  The scene hasn't changed much though.  Tombstones
 have been placed on their sides here, carelessly abandoned.  The stone on the
-path is stained with blood and scratches from many differntly sized claws and
+path is stained with blood and scratches from many differently sized claws and
 talons scar it.  Tombstones block the path to the west.
 ~
 211 1 2
@@ -1468,7 +1468,7 @@ Deeper into the cave~
    This section of the cave is really damp.  Water drips from the ceiling and
 collects in a small pool on the west side.  The pool is so clear that you can
 see your reflection in it.  Bats hang upside down overhead, sleeping.
-Occationally one will quietly fly in or out, being careful not to wake the
+Occasionally one will quietly fly in or out, being careful not to wake the
 others.  The eastern wall has a large crack in the side of it, allowing hot
 air to rush in.
 ~
@@ -1519,7 +1519,7 @@ S
 #21152
 A burnt path~
    The path is badly burned here.  Although the fire doesn't seem to have been
-too recent, the entire area has been seared, allowing nothing to grow back.  
+too recent, the entire area has been seared, allowing nothing to grow back.
 There is no plant life here, no wood, just a vast landscape of charred
 headstones, rocks, and dirt.  A few bones lie scattered about, also burned.
 The moon seems utterly powerful, unscathed by any of this scalding.
@@ -1704,7 +1704,7 @@ A path of stone~
    The path of stones suddenly becomes a bit dirty here.  Mud covers the
 headstones that line the sides of the path.  Rats run around with nothing
 apparent in mind.  Blood stains the ground and many of the stones have been
-smashed.  An erie aroma hangs in this room, perhaps it's the smell of death.
+smashed.  An eerie aroma hangs in this room, perhaps it's the smell of death.
 A few bones have been scattered across the walkway, most of them half-buried
 and the others, shattered.
 ~
@@ -1762,7 +1762,7 @@ A body lies here, freshly torn in half, dripping blood.
 S
 #21160
 Entrance to a cave~
-   The entrace to the cave looks like a huge mouth.  Stalactites and
+   The entrance to the cave looks like a huge mouth.  Stalactites and
 stalagmites grow from the roof and floor of the mouth, creating an image
 of sharp teeth.  The path into the cave is elevated slightly, creating a
 tongue.  Finally, two alcoves above the mouth contain torches, looking like
@@ -2261,7 +2261,7 @@ S
 A river of blood~
    The blood on this part of the path isn't very deep, but it evidently has
 soaked deep into the earth by its mollescence.  The ground squishes with
-every step, leaving an indentation where the step occured.  Walking softly
+every step, leaving an indentation where the step occurred.  Walking softly
 is impossible here.  The ground seems to moan with every step and squish, as
 if it were alive.
 ~
@@ -2340,7 +2340,7 @@ D3
 0 -1 21178
 E
 tree~
-The tree takes up most of the spaec in this area, standing at about fifty feet.
+The tree takes up most of the space in this area, standing at about fifty feet.
 ~
 S
 #21180
@@ -2411,7 +2411,7 @@ A soft breeze enters the room from the window to the south.
 ~
 E
 mirror~
-It's not posible to get much of a reflection from this shattered mirror.
+It's not possible to get much of a reflection from this shattered mirror.
 ~
 E
 skin~
@@ -2694,7 +2694,7 @@ D3
 0 -1 21191
 E
 fence~
-The fence here keeps everything inside and outside seperate.
+The fence here keeps everything inside and outside separate.
 ~
 E
 trees~
@@ -2755,7 +2755,7 @@ The enormous fence looms over you, expelling the outside.
 ~
 E
 animals wood~
-Animal corpses float by among the wood, occationally bumping in to your legs.
+Animal corpses float by among the wood, occasionally bumping in to your legs.
 ~
 S
 #21195

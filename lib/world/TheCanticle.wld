@@ -2,8 +2,8 @@
 The Moor~
 The road dips down into the swampy moor that extends to the northeast
 from the Shire.  The smell of decaying foliage is cloying, and makes
-you want to move along as quickly as possible.  In the distance to 
-the north you can see the faint outlines of some kind of fotress.
+you want to move along as quickly as possible.  In the distance to
+the north you can see the faint outlines of some kind of fortress.
 ~
 13 4 2
 D0
@@ -36,7 +36,7 @@ S
 Iron Gate~
 Standing before you is a pair of enormous blue-steel gates.  Closed
 against the evil of the world, this gate is both inspiring and
-daunting. A sunburst design has been engraved on the surfact, a 
+daunting. A sunburst design has been engraved on the surface, a
 sigil of the inhabitants of the keep beyond.
 ~
 13 0 2
@@ -53,7 +53,7 @@ S
 #1304
 Courtyard before the Canticle~
 You stand in the courtyard before the Canticle.  The walls around
-you are made entirely of perfectly cut and fitted granite.  All 
+you are made entirely of perfectly cut and fitted granite.  All
 is silent around you, and yet you can almost feel the vibration
 of music in your bones.
 ~
@@ -109,7 +109,7 @@ S
 #1307
 Rook Hall~
 The Hall of Rooks ends here with a stairwell leading up to the ramparts
-above. Peering back to to the west, the far end of the hall almost
+above. Peering back to the west, the far end of the hall almost
 disappears in the distance.  To the north of you, the room is dark,
 and you can pick up a faint smell of decay.
 ~
@@ -146,19 +146,19 @@ stone~
 E
 puddle liquid~
 This unpleasant looking fluid on the floor has a slight green glow
-to it, and as you take a closer look, the smell of it almost 
+to it, and as you take a closer look, the smell of it almost
 overwhelms you.
 ~
 E
 stone floor stones~
 As you look down at the scratched and scuffed floor, it appears
-that you might be able to move one of these stones, unveling a
+that you might be able to move one of these stones, unveiling a
 hidden mystery.
 ~
 S
 #1309
 Light Blue Hall~
-You are traversing a well decorated passgeway, all in blue.  Out of the 
+You are traversing a well decorated passageway, all in blue.  Out of the
 corner of you eye, you see movement, but when you turn, there is nothing
 to be seen.  You have the feeling that you are being watched.
 ~
@@ -178,9 +178,9 @@ The Scullery~
 S
 #1310
 Scullery~
-You are standing in the chaotic kitchens of the Canticle.  In the 
+You are standing in the chaotic kitchens of the Canticle.  In the
 middle of the room is a large table that is covered with a pile
-of dirty pots and pans.  Scullery maids scamper about the room, 
+of dirty pots and pans.  Scullery maids scamper about the room,
 hauling these dishes off to the wash basins in another part of the
 kitchen.
 ~
@@ -212,8 +212,8 @@ Scullery~
 S
 #1312
 Altar Room~
-A darkened room with raised structures used for sacrifice.  The floor is 
-stained blood red and the smell is horrendous.  Mice are everywhere 
+A darkened room with raised structures used for sacrifice.  The floor is
+stained blood red and the smell is horrendous.  Mice are everywhere
 scampering around.
 ~
 13 8 0
@@ -257,7 +257,7 @@ S
 Deep Blue Hall~
 The hallway here is much like the others, in that they are completely blue,
 with one lone exception.  A fine tapestry on the wall displays a scene of the
-Knights of the Order in battle with the dragons of the north.  
+Knights of the Order in battle with the dragons of the north.
 ~
 13 12 0
 D0
@@ -271,7 +271,7 @@ Light Blue Hall~
 S
 #1316
 Dark Blue Hall~
-You are traversing a well decorated passgeway, all in blue.  Out of the 
+You are traversing a well decorated passageway, all in blue.  Out of the
 corner of you eye, you see movement, but when you turn, there is nothing
 to be seen.  You have the feeling that you are being watched.
 ~
@@ -383,7 +383,7 @@ S
 #1322
 Upper Parapet~
 The upper parapet has been used over the centuries to house the guardians
-of the watchers of the Order.  Openings in the all allow you to see the 
+of the watchers of the Order.  Openings in the all allow you to see the
 forbidding darkness to the north.
 ~
 13 8 0
@@ -402,7 +402,7 @@ The Crystal Parapet~
 S
 #1323
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle. 
+You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
 many bloody and storied battles.
 ~
@@ -439,7 +439,7 @@ S
 #1325
 Edificant Library~
 The walls around you are made completely of bookshelves.  Each
-of these shelves are stacked deep with piles of books, scrolls, 
+of these shelves are stacked deep with piles of books, scrolls,
 parchments and various artifacts of architectural interest.
 This is the one room in the entire Canticle that exudes any
 semblance of peace.  You feel that you could rest here quite
@@ -471,7 +471,7 @@ S
 Mirror Room~
 As you enter the room, you see a party of warriors walking towards you.
 Drawing you weapons quickly, you realize that you are looking at a mirror
-image of yourself.  Looking around, you realize that every surface of this 
+image of yourself.  Looking around, you realize that every surface of this
 room is actually a mirror.  Through the doorway to the south, you can see
 a staircase ascending.
 ~
@@ -489,7 +489,7 @@ S
 Bottom of Staircase~
 A circular flowing granite staircase ascends the walls and leads into an
 ominous darkness.  Blood stains litter the stairs, and you can see deep
-gouges torn from the woodwork of the stairs.  
+gouges torn from the woodwork of the stairs.
 ~
 13 8 0
 D0
@@ -503,8 +503,8 @@ Entrance to the Keep~
 S
 #1329
 Entrance to the Keep~
-A strange foyer with satanic carvings on the wall.  The floor creaks 
-beneath your feet.  Strange noises and flashes of light come from the door 
+A strange foyer with satanic carvings on the wall.  The floor creaks
+beneath your feet.  Strange noises and flashes of light come from the door
 to the south.
 ~
 13 8 0
@@ -520,9 +520,9 @@ S
 #1330
 The Keep~
 The Keep of Canticle, home of the Dark Overlord.  This huge throne room is
-filled with the odor of sulphur.  The floor is made of pure silver tile, 
+filled with the odor of sulphur.  The floor is made of pure silver tile,
 laid perfectly into the shape of a dragon.  The heat in this room is over-
-powering, and sweat drips off your brow.  
+powering, and sweat drips off your brow.
 ~
 13 8 0
 D0
@@ -532,7 +532,7 @@ door~
 S
 #1331
 Beneath the dungeon~
-You are in a small chamber beneath the Bastille.  Created by 
+You are in a small chamber beneath the Bastille.  Created by
 prisoners that have escaped in the past, this chamber has been worn
 smooth by the countless hands that have worked this place over the
 years.
@@ -550,7 +550,7 @@ S
 #1332
 The rock strewn passageway~
 This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is 
+unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
 13 0 0
@@ -566,7 +566,7 @@ S
 #1333
 The rock strewn passageway~
 This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is 
+unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
 13 0 0
@@ -582,7 +582,7 @@ S
 #1334
 The rock strewn passageway~
 This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is 
+unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
 13 0 0
@@ -597,9 +597,9 @@ D3
 S
 #1335
 The rock strewn passageway~
-   This tunnel has been hewn from the rock beneath the Canticle 
-over and unknown number of years.  The crude workmanship of this 
-passage is indicative of the primitive tools that must have been 
+   This tunnel has been hewn from the rock beneath the Canticle
+over and unknown number of years.  The crude workmanship of this
+passage is indicative of the primitive tools that must have been
 used.
 ~
 13 0 0
@@ -614,9 +614,9 @@ D3
 S
 #1336
 The rock strewn passageway~
-   This tunnel has been hewn from the rock beneath the Canticle 
-over and unknown number of years.  The crude workmanship of this 
-passage is indicative of the primitive tools that must have been 
+   This tunnel has been hewn from the rock beneath the Canticle
+over and unknown number of years.  The crude workmanship of this
+passage is indicative of the primitive tools that must have been
 used.
 ~
 13 0 0
@@ -632,7 +632,7 @@ S
 #1337
 The rock strewn passageway~
 This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is 
+unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
 13 0 0
@@ -648,7 +648,7 @@ S
 #1338
 The rock strewn passageway~
 This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is 
+unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
 13 0 0
@@ -727,7 +727,7 @@ D2
 S
 #1343
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle. 
+You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
 many bloody and storied battles.
 ~
@@ -743,10 +743,10 @@ D2
 S
 #1344
 Tower of the Order~
-You have ascended the very heights of the Keep of the Canticle.  
+You have ascended the very heights of the Keep of the Canticle.
 You can see for thirty leagues in all directions, from the dark
 forests of the north to the mountains in the east.  This room has
-been used for centuries as the lookout for the Order.  Annointed
+been used for centuries as the lookout for the Order.  Anointed
 Knights throughout history have kept watch for the enemies of
 the light.
 ~

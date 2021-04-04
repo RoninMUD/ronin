@@ -86,7 +86,7 @@ S
 The Kitchen~
    You are in the Kitchen. Lots of helpers hurry to do the Chief Cook's
 bidding, and there is a wonderful smell that makes you feel very hungry.
-All around the room, there are shelves with different kinds of cooking 
+All around the room, there are shelves with different kinds of cooking
 gear stacked on them. There is an exit to the north, and one to the east;
 both leading to small passages.
 ~
@@ -185,7 +185,7 @@ The stairs are old, but in good repair. They lead up into the tower.
 S
 #8910
 The Small Passage~
-   You are standing in a small passage, that is clearly intended 
+   You are standing in a small passage, that is clearly intended
 mainly for the servants of the Castle. The passage leads north
 and south.
 ~
@@ -203,7 +203,7 @@ You hear the clanging of pots, and smell cooking meat.
 S
 #8911
 The Great Hall~
-   You are standing in the south-west end of the Great Hall. It 
+   You are standing in the south-west end of the Great Hall. It
 is truly vast; the roof is so high above your head, that it seems no
 closer than the clouds outside. The roof is beautifully painted, by
 someone who must have been a true master. The hall is very large,
@@ -222,7 +222,7 @@ You see the King's Great Hall.
 0 -1 8912
 E
 roof paintings paint~
-The paintings on the roof depict the great heroes and gods. One of 
+The paintings on the roof depict the great heroes and gods. One of
 the gods is fairly heavy-bellied and incredibly hairy, with a massive beard.
 Also among them are the great enemies and wrongdoers, such as the evil
 Goddess Yochlol and the powerful evil Wizard Tharoecon.
@@ -230,7 +230,7 @@ Goddess Yochlol and the powerful evil Wizard Tharoecon.
 S
 #8912
 The Great Hall~
-   You are standing in the southern end of the Great Hall. It 
+   You are standing in the southern end of the Great Hall. It
 is truly vast; the roof is so high above your head, that it seems no
 closer than the clouds outside. The roof is beautifully painted, by
 someone who must have been a true master. The hall is very large,
@@ -261,7 +261,7 @@ You see the King's Great Hall.
 0 -1 8911
 E
 roof paintings paint~
-The paintings on the roof depict the great heroes and gods. One of 
+The paintings on the roof depict the great heroes and gods. One of
 the gods is fairly heavy-bellied and incredibly hairy, with a massive beard.
 Also among them are the great enemies and wrongdoers, such as the evil
 Goddess Yochlol and the powerful evil Wizard Tharoecon.
@@ -269,7 +269,7 @@ Goddess Yochlol and the powerful evil Wizard Tharoecon.
 S
 #8913
 The Great Hall~
-   You are standing in the south-east end of the Great Hall. It 
+   You are standing in the south-east end of the Great Hall. It
 is truly vast; the roof is so high above your head, that it seems no
 closer than the clouds outside. The roof is beautifully painted, by
 someone who must have been a true master. The hall is very large,
@@ -334,7 +334,7 @@ You see the passage continue.
 S
 #8916
 The Great Hall~
-   You are standing in the north-west end of the Great Hall. It 
+   You are standing in the north-west end of the Great Hall. It
 is truly vast; the roof is so high above your head, that it seems no
 closer than the clouds outside. The roof is beautifully painted, by
 someone who must have been a true master. The hall is very large,
@@ -360,7 +360,7 @@ You see a passage.
 0 -1 8915
 E
 roof paintings paint~
-The paintings on the roof depict the great heroes and gods. One of 
+The paintings on the roof depict the great heroes and gods. One of
 the gods is fairly heavy-bellied and incredibly hairy, with a massive beard.
 Also among them are the great enemies and wrongdoers, such as the evil
 Goddess Yochlol and the powerful evil Wizard Tharoecon.
@@ -370,7 +370,7 @@ S
 By the Throne in the Great Hall~
    You are standing by the King's huge ivory throne. The throne is, to
 an even greater degree than the Hall itself, a masterpiece. It is
-intricately and beautifully carved, and it seems to be made out of a 
+intricately and beautifully carved, and it seems to be made out of a
 single block of ivory, though you shiver at the thought of meeting
 the animal that died to yield a piece of that size. The Hall continues
 to the east, west and south.
@@ -393,7 +393,7 @@ You see the King's Great Hall.
 0 -1 8916
 E
 roof paintings paint~
-The paintings on the roof depict the great heroes and gods. One of 
+The paintings on the roof depict the great heroes and gods. One of
 the gods is fairly heavy-bellied and incredibly hairy, with a massive beard.
 Also among them are the great enemies and wrongdoers, such as the evil
 Goddess Yochlol and the powerful evil Wizard Tharoecon.
@@ -406,7 +406,7 @@ magic beasts.
 S
 #8918
 The Great Hall~
-   You are standing in the north-east end of the Great Hall. It 
+   You are standing in the north-east end of the Great Hall. It
 is truly vast; the roof is so high above your head, that it seems no
 closer than the clouds outside. The roof is beautifully painted, by
 someone who must have been a true master. The hall is very large,
@@ -432,7 +432,7 @@ You see the part of the Great Hall where the throne is.
 0 -1 8917
 E
 roof paintings paint~
-The paintings on the roof depict the great heroes and gods. One of 
+The paintings on the roof depict the great heroes and gods. One of
 the gods is fairly heavy-bellied and incredibly hairy, with a massive beard.
 Also among them are the great enemies and wrongdoers, such as the evil
 Goddess Yochlol and the powerful evil Wizard Tharoecon.
@@ -525,8 +525,8 @@ You see the corridor continue.
 S
 #8923
 The Training Room~
-   This is the Training Room of the men of the Castle guard. It is 
-very large, with 
+   This is the Training Room of the men of the Castle guard. It is
+very large, with
 weapons standing in racks by all the walls. Most
 of the weapons seem to be intended for training only, with blunt
 edges and the like, but there are some that might be useful for
@@ -547,7 +547,7 @@ S
 #8924
 The small passage~
    You are standing in a small passage leading north and south. There
-is also an exit to the west, from which grunts, cheers and heavy 
+is also an exit to the west, from which grunts, cheers and heavy
 blows can be heard.
 ~
 89 8 0
@@ -782,7 +782,7 @@ S
 #8936
 By the treasure room~
    You are standing by a great iron door. The door is very large, and
-seems very solid indeed. There is a sign posted by it. 
+seems very solid indeed. There is a sign posted by it.
 ~
 89 8 0
 D1
@@ -829,7 +829,7 @@ S
 The Guest Wing~
    You have arrived at the part of the Castle where prominent
 guests are housed. To the east there is a large, ornamented
-door, and a somewhat smaller one leads north. 
+door, and a somewhat smaller one leads north.
 ~
 89 8 0
 D0
@@ -852,8 +852,8 @@ S
 The Guest Suite~
    This must be where only the most highly regarded guests stay, since
 it is luxurious beyond your wildest imagination. This is only the living
-room of the suite, but it is huge and tastefully decorated. All the 
-furniture is not only beautiful, but also made for comfort. To the 
+room of the suite, but it is huge and tastefully decorated. All the
+furniture is not only beautiful, but also made for comfort. To the
 north, there is an exit to the bedroom, and there is a door to the west.
 ~
 89 8 0
@@ -904,7 +904,7 @@ To the east you see the stage.
 S
 #8942
 By the stage~
-   Before you, you see the stage. It is large enough for some 40 
+   Before you, you see the stage. It is large enough for some 40
 musicians to play on at the same time. The Ball Room continues
 to the west and north.
 ~
@@ -1044,7 +1044,7 @@ The stairs are made out of granite, and seem solid enough.
 S
 #8949
 The Grand Staircase~
-   You are standing on a great staircase, that leads up and down. To 
+   You are standing on a great staircase, that leads up and down. To
 the east, there is a large oak door, and a corridor leads south.
 ~
 89 8 0
@@ -1093,7 +1093,7 @@ door large oak~
 1 8914 8949
 E
 fire fireplace~
-The fire is built out of logs, and seems to be able to burn for 
+The fire is built out of logs, and seems to be able to burn for
 quite a while longer.
 ~
 E
@@ -1165,8 +1165,8 @@ S
 #8953
 The Top of the Tower~
    You have arrived at the top of the tower. This tower is pretty
-uninteresting, and seems made purely for reasons of defense and 
-guarding. The windows are slits for bowmen, very narrow on the 
+uninteresting, and seems made purely for reasons of defense and
+guarding. The windows are slits for bowmen, very narrow on the
 outward side and broad inwards to allow a wide shooting angle.
 The only evident exit is down the stairs again.
 ~
@@ -1184,7 +1184,7 @@ S
 #8954
 The Top of the Tower~
 This is the highest of all the towers, and is obviously used for lookout
-purpo ses. The view is splendid in all four directions. All around you, the
+purposes. The view is splendid in all four directions. All around you, the
 rich countryside spreads out to the horizon. To the north and east you see a
 vast mountain range, and far to the west a beautiful lake. A bit closer, the
 town of Midgaard lies at the end of the King's Road. The only exit you can

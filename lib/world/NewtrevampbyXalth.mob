@@ -6,7 +6,7 @@ A mountain goat is standing here.
 Searching for food, the mountain goat looks very hungry.  He slowly moves
 along while trying to find something on which to nibble to ease his stomach
 pain.  Finding nothing here to eat, he lies down as if giving up.  He looks at
-you with sheepish eyes and begs for some food.  He then sighs and puts his 
+you with sheepish eyes and begs for some food.  He then sighs and puts his
 head in between his front legs.
 ~
 10 0 -100 Y
@@ -81,7 +81,7 @@ a fire newt guard~
 A fire newt guard is standing here.
 ~
    This is a fire newt.  He has orange skin and is about four feet tall.  His
-muscular structure is quite impressive.  He wears brown pants and a white 
+muscular structure is quite impressive.  He wears brown pants and a white
 vest.  His job is to guard against intruders like you.  His long snout sticks
 out about a foot long and his tail drags about two feet behind him.
 ~
@@ -101,7 +101,7 @@ A fire newt worker~
 A fire newt worker is standing here.
 ~
    This fire newt is very tired and sweaty.  Her shirt is totally drenched
-and she pants like a very hot dog.  She still continues on for fire newts are 
+and she pants like a very hot dog.  She still continues on for fire newts are
 known not for their strength but for their endurance and self-discipline.  She
 sees you and decides after she puts this bag of grain down you're gonna get
 hurt...
@@ -178,7 +178,7 @@ fire newt sergeant~
 A fire newt sergeant~
 A fire newt sergeant patrols this area.
 ~
-  This is a fire newt sergeant.  He controls the fire newt guards and 
+  This is a fire newt sergeant.  He controls the fire newt guards and
 workers. He is controlled by the fire newt generals.  His main priority is
 to make sure the guards and workers are doing their jobs and to make sure that
 someone doesn't get as far as you have.  Unfortunately they didn't do their
@@ -221,7 +221,7 @@ A fire newt leader is standing here.
 ~
   This is the leader of the fire newts.  He looks very sternly at you.  He
 awaits you in a very finely-crafted chair made from solid oak.  This is the big
-boss. If you mess up and the general finds you guilty, you are sent here.  
+boss. If you mess up and the general finds you guilty, you are sent here.
 The fire newt leader kills and eats the bad fire newts.  This is probably why
 they are so endured.  Resistance is futile for you can not run away from him..
 his men would catch you if he didn't.
@@ -287,7 +287,7 @@ The Legendary Phoenix is here, rising from the ashes.
    This large, flaming bird stares at you with burning eyes.  It's pupils are
 hot embers and its feathers are engulfed in flames.  It's 18-decimeter long
 claws are covered with blood.  It has a wingspan of about 10 meters.  Its
-two meter long beak is razor sharp and it opens its mouth and leads out a 
+two meter long beak is razor sharp and it opens its mouth and leads out a
 shriek as you stare at it.
 ~
 42 32768 100 Y
@@ -325,7 +325,7 @@ club guard~
 the Club Guard~
 A Club Guard is here guarding the club.
 ~
-He will not let any non-memeber to get into the club.
+He will not let any non-member to get into the club.
 No matter who you are, he can kill you with a needle.
 ~
 11 128 1000 Y

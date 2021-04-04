@@ -76,9 +76,11 @@ K
 #2006
 white dwarf~
 A white dwarf~
-A white,but tiny dwarf is trying to sneak away from duty. 
+A white, but tiny dwarf is trying to sneak away from duty.
 ~
-Like the red giant,he is also appointed to stand guard for the galaxy.But somehow he manages to escape. Though tiny,it looks as if it can take a lot of hits!
+Like the red giant, he is also appointed to stand guard for the galaxy. But
+somehow he manages to escape. Though tiny,it looks as if it can take a
+lot of hits!
 ~
 76 33554432 0 Y
 15 8 3 8d5+300 4d2+2
@@ -91,9 +93,10 @@ K
 #2007
 horsehead nebula~
 A horsehead nebula~
-A huge nebula is here,its shape resembles a horsehead.
+A huge nebula is here, its shape resembles a horsehead.
 ~
-You can only make out its shape from the darkness.He was cursed to stay in here and his face may never be seen by anyone again.
+You can only make out its shape from the darkness. He was cursed to stay in
+here and his face may never be seen by anyone again.
 ~
 74 1048576 -1000 Y
 18 2 0 8d5+600 4d5+1
@@ -123,7 +126,7 @@ hercules~
 The mighty Hercules~
 The Mighty Hercules is working hard for his extra Labours for the Gods.
 ~
-He has been put to do the Ten Labours-Ten immpossible tasks, by Hera, the queen goddess, who disliked him. But he finished them all and at the end was granted immortality. He is a very brave and strong fighter...don't mess with him.
+He has been put to do the Ten Labours-Ten impossible tasks, by Hera, the queen goddess, who disliked him. But he finished them all and at the end was granted immortality. He is a very brave and strong fighter...don't mess with him.
 ~
 75 128 1000 Y
 25 -4 -3 6d5+3000 10d2+7
@@ -155,7 +158,7 @@ orion~
 Orion the hunter~
 Orion is still hunting for Scorpio.
 ~
-He is the lengendary hunter who almost defeated Taurus the bull, but got killed by Scorpio. The gods put them both up as constellations but one appears on one side of the sky and the other the other side so they will never meet. 
+He is the legendary hunter who almost defeated Taurus the bull, but got killed by Scorpio. The gods put them both up as constellations but one appears on one side of the sky and the other the other side so they will never meet.
 ~
 74 128 300 Y
 25 -4 0 6d3+3000 4d4+2
@@ -168,9 +171,11 @@ K
 #2012
 pleiades~
 The Pleiades~
-The Pleiades are here,weeping for the loss of their sisters.
+The Pleiades are here, weeping for the loss of their sisters.
 ~
-These are the seven sisters of the Myths, and as for why they are here, noone knows; even the writer himself has forgotten (couldn't be bothered to look it up).
+These are the seven sisters of the Myths, and as for why they are here,
+no one knows; even the writer himself has forgotten
+(couldn't be bothered to look it up).
 ~
 74 0 300 Y
 11 9 3 3d4+220 2d7+2
@@ -228,9 +233,10 @@ K
 #2016
 taurus~
 Taurus~
-Taurus wants to leave,but has been forced to stay as a guardian here.
+Taurus wants to leave, but has been forced to stay as a guardian here.
 ~
-You see a wild-looking bull with a bad temper. He is well-built and looks like he can fight well..Indeed he has fought with Orion before and survived.
+You see a wild-looking bull with a bad temper. He is well-built and looks like
+he can fight well. Indeed, he has fought with Orion before and survived.
 ~
 106 136 -100 Y
 26 -4 0 5d3+3000 20d1+5
@@ -273,9 +279,11 @@ K
 #2019
 cancer~
 Cancer~
-Cancer the crab is here,hoarding the treasure away from you.
+Cancer the crab is here, hoarding the treasure away from you.
 ~
-You see a gigantic crab(YES, it is bigger than you!) with a crushed shell. Legend has it that he was crushed by Hercules when he was sent by Hera to kill him. So Hera made Cancer a constellation for his work. 
+You see a gigantic crab(YES, it is bigger than you!) with a crushed shell.
+Legend has it that he was crushed by Hercules when he was sent by Hera to
+kill him. So Hera made Cancer a constellation for his work.
 ~
 74 128 0 Y
 25 -4 -5 2d10+3000 20d1+5
@@ -290,7 +298,7 @@ leo~
 Leo~
 Leo the lion is roaring at you, he is ready for a strike!
 ~
-His metallic skin means that he could be the one which was killed by Hercules during his first Labour. His skin is so weapon-proof that Hercules had to use his bare hands to tear the lion into two from itsmouth!  
+His metallic skin means that he could be the one which was killed by Hercules during his first Labour. His skin is so weapon-proof that Hercules had to use his bare hands to tear the lion into two from its mouth!
 ~
 106 136 -100 Y
 25 -4 -7 2d20+3000 20d1+15
@@ -348,9 +356,10 @@ K
 #2024
 sagittarius~
 Sagittarius~
-Sagittarius the centaur is waiting to let go of his well aimed arrow...  
+Sagittarius the centaur is waiting to let go of his well aimed arrow...
 ~
-He is a centaur and more, he is a well trained archer. Noone can escape his arrows.
+He is a centaur and more, he is a well trained archer.
+No one can escape his arrows.
 ~
 74 128 1000 Y
 30 -8 -5 5d6+3000 20d1+5
@@ -380,7 +389,7 @@ aquarius~
 Aquarius~
 The beautiful Aquarius is standing here, holding THE vessel.
 ~
-The pretty Water Bearer is smiling at you, you think you'd better give her a hand with holding the vessel. 
+The pretty Water Bearer is smiling at you, you think you'd better give her a hand with holding the vessel.
 ~
 74 128 1000 Y
 25 -4 -5 3d5+2500 10d2+1
@@ -408,7 +417,7 @@ K
 #2028
 pisces fish~
 Pisces the fish~
-Pisces the fish,is jealous of your approach...
+Pisces the fish, is jealous of your approach...
 ~
 He was once a very handsome man but now has turned into an ugly big fish. So he becomes jealous of any living thing which is more handsome than him. So maybe he is not jealous of you?
 ~
@@ -423,7 +432,7 @@ K
 #2029
 bear ursa major~
 Ursa Major the bear~
-Ursa Major the bear is the last defence against any intruders..
+Ursa Major the bear is the last defense against any intruders..
 ~
 The Huge Bear which resides in the northern skies is here. You think you'd better turn back. At least you have got a chance of survival.
 ~
@@ -470,7 +479,7 @@ K
 #2032
 polaris polar star~
 Polaris, the polar star~
-Polaris,the polar star, who commands the whole Universe, stands before you!
+Polaris, the polar star, who commands the whole Universe, stands before you!
 ~
 He is the Master of the Universe, the most powerful!  Even the King and the Queen obey him. As you look at him you notice he is actually a STAR, with dazzling bright light... Maybe you shouldn't have come here at all?
 ~

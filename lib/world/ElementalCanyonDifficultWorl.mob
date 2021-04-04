@@ -133,7 +133,7 @@ ruler earth elemental~
 the earth ruler~
 The Ruler of the Earth elementals stands before you.
 ~
-He looks as old as the earth itself. He seems to know all the knowlege and
+He looks as old as the earth itself. He seems to know all the knowledge and
 secrets of the Earth. You can't really tell where he begins and the rock wall
 ends.
 ~
@@ -474,7 +474,7 @@ bandit ice~
 the ice bandit~
 The Ice Bandit strikes cold fear in your heart.
 ~
-A huminoid figure encased in ice but still apparently alive.
+A humanoid figure encased in ice but still apparently alive.
 ~
 16458 786432 -250 Y
 65 -9 -22 10d200+15500 15d15+150
@@ -490,9 +490,9 @@ K
 #19529
 rock monster~
 the rock monster~
-The Rock Monster considers you in stoney silence.
+The Rock Monster considers you in stony silence.
 ~
-A huminoid figure trapped in stone seems alive.
+A humanoid figure trapped in stone seems alive.
 ~
 16458 0 -310 Y
 65 -9 -26 10d200+20000 15d15+140
@@ -511,7 +511,7 @@ hurricane~
 the hurricane~
 A Hurricane rages across the sky.
 ~
-A huminoid figure seems to be trapped in the rushing wind.
+A humanoid figure seems to be trapped in the rushing wind.
 ~
 16458 786432 -10 Y
 65 -8 -25 15d200+16000 15d12+200
@@ -553,7 +553,7 @@ warrior rainbow~
 a rainbow warrior~
 A warrior of the Rainbow Cult  swears his loyalty.
 ~
-The Rainbow Cult has recieved special powers for their service to the elemental
+The Rainbow Cult has received special powers for their service to the elemental
 forces.
 ~
 16456 134482048 150 Y

@@ -358,7 +358,7 @@ A
 #5117
 pants black~
 a pair of black pants~
-a pair of black pants lie here disgarded.~
+a pair of black pants lie here discarded.~
 ~
 9 0 33
 3 0 0 0
@@ -524,7 +524,7 @@ mists~
 Crackling Purple Haze and sparks of light flares from this rift in time and
 space. Looking in, you can almost see the other side of it, but you can
 make out what and where it is.  The portal looks stable enough to cross, maybe
-you should jump in? 
+you should jump in?
 ~
 E
 portal~
@@ -561,7 +561,7 @@ M
 #5150
 table~
 A Round Table Printed With Runes~
-A round stone table with arcane runes chiselled into its surface rests here.~
+A round stone table with arcane runes chiseled into its surface rests here.~
 ~
 12 524288 0
 0 0 0 0
@@ -606,7 +606,7 @@ gazing at.  The stone looks extremely heavy and fixed into the ground.
 ~
 E
 gem~
-A sparkling piece of rock catches your eye as it shines an azure light. 
+A sparkling piece of rock catches your eye as it shines an azure light.
 Though it is only a broken fragment, it still has a visual appeal worth
 gazing at.  The stone looks extremely heavy and fixed into the ground.
 ~
@@ -662,7 +662,7 @@ DROW ACTIVITY HAVE BEEN REPORTED IN THIS VICINITY AND IT IS FOR YOUR
 SAFETY THAT WE ABANDON THE RICHES IN THESE WALLS.  ANY INCIDENTS
 BEYOND THIS POINT IS NOT OUR CONCERN.  PLEASE BE ADVISED IF YOU CHOOSE
 TO GO BEYOND THIS POINT, YOU TRAVEL AT YOUR OWN RISK.
- 
+
 - Vrilishloparis, Mining Coordinator
 ~
 X
@@ -710,22 +710,22 @@ A Towering Onyx Pillar stands here, emitting a beam of orange haze.~
 100
 E
 pillar~
-This tower pillar glows with brilliance and can be seen in any point of the 
-city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
+This tower pillar glows with brilliance and can be seen in any point of the
+city. It is the timeclock of Eryndlyn, the only way the dark elves mark
 the passage of time in a world that otherwise knew no days and no seasons.
-A city appointed mage casts his magical fires into the base of this 
-pillar and there, the spell lingers throughout the cycle -- a full day 
-on the surface.  At the end of each day, the mage repeats this process 
+A city appointed mage casts his magical fires into the base of this
+pillar and there, the spell lingers throughout the cycle -- a full day
+on the surface.  At the end of each day, the mage repeats this process
 -- beginning the cycle anew.
 ~
 E
 narbondel~
-This tower pillar glows with brilliance and can be seen in any point of the 
-city. It is the timeclock of Eryndlyn, the only way the dark elves mark 
+This tower pillar glows with brilliance and can be seen in any point of the
+city. It is the timeclock of Eryndlyn, the only way the dark elves mark
 the passage of time in a world that otherwise knew no days and no seasons.
-A city appointed mage casts his magical fires into the base of this 
-pillar and there, the spell lingers throughout the cycle -- a full day 
-on the surface.  At the end of each day, the mage repeats this process 
+A city appointed mage casts his magical fires into the base of this
+pillar and there, the spell lingers throughout the cycle -- a full day
+on the surface.  At the end of each day, the mage repeats this process
 -- beginning the cycle anew.
 ~
 X
@@ -750,7 +750,7 @@ black~
 Swirling clouds and mists fill this black globe.  It rotates clockwise
 consistently and seems to come alive the closer you get.  You can feel the
 power of this object radiate forward, however, not sure on how to harness
-it's power.  Evidently, this was meant for drow spellcasting and not meant 
+it's power.  Evidently, this was meant for drow spellcasting and not meant
 for anyone else.
 ~
 E
@@ -759,7 +759,7 @@ Swirling clouds and mists fill this black globe.  It rotates clockwise
 consistently and seems to come alive the closer you get.  You can feel the
 power of this object radiate forward, however, not sure on how to harness
 it's power.  Evidently, this was meant for drow spellcasting and not meant
-for anyone else.  
+for anyone else.
 ~
 X
 ~
@@ -821,16 +821,16 @@ You are standing in a pool of bubbling dark water.~
 E
 pool~
 Dark in color and illuminating in microcrystalline allure, this pool bubbles
-hungrily. Looking at the water, you can see lizards and all sorts of stuff 
-swimming in it, trying to avoid your outstretched hands.  There is a large 
+hungrily. Looking at the water, you can see lizards and all sorts of stuff
+swimming in it, trying to avoid your outstretched hands.  There is a large
 whirlpool in the center of the waters that looks very inviting...
 ~
 E
 water~
 Dark in color and illuminating in microcrystalline allure, this pool bubbles
 hungrily. Looking at the water, you can see lizards and all sorts of stuff
-swimming in it, trying to avoid your outstretched hands.  There is a large 
-whirlpool in the center of the waters that looks very inviting... 
+swimming in it, trying to avoid your outstretched hands.  There is a large
+whirlpool in the center of the waters that looks very inviting...
 ~
 X
 ~

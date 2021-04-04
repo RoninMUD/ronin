@@ -410,13 +410,13 @@ A dusty sign hangs from the ceiling beams.~
 100
 E
 sign dusty~
-   Welcome Adventurers! Our little shop has lots to offer the curious 
+   Welcome Adventurers! Our little shop has lots to offer the curious
 wanderer. If you are looking for a quest, or just something to do please
 feel free to talk to Dorje the map maker, and see what he has to offer by
 requesting a list. If you are so inclined please choose the quest number
 you would like and good luck with your adventures!
    If you are just wondering where things might be in this wonderous world,
-the cartographer in the library might be able to help you out. 
+the cartographer in the library might be able to help you out.
    Our prices are reasonable and the rewards are great, thank you for stopping
 by our shop.
 ~
@@ -440,7 +440,7 @@ a roll of yellowed parchment lies here.~
              helping the unwary traveler.
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
                     Market Square
                           |
                           |
@@ -472,7 +472,7 @@ a roll of yellowed parchment lies here.~
              south across the bridge and over the concourse;
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
     West Gate--------------------Market Square
         |
         |
@@ -499,17 +499,17 @@ a roll of yellowed parchment lies here.~
       N
     \ | /      The sprite village is to the west just outside
   W -   - E  of town. They can be a tricky folk small and easy
-    / | \    to miss so don't get to frustrated if they are not 
+    / | \    to miss so don't get to frustrated if they are not
       S      easily found.
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
      Start looking carefully!
                |
                |
        Follow the dim path
                |
-               | 
+               |
      The edge of the forest----------------Market Square
        (look for a sign)~
 16 0 1
@@ -528,20 +528,20 @@ M
 map newt newts mountain roll~
 a map to Newt Mountain~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      I had heard that there was a mountain in the south
   W -   - E  east that was inhabited by creatures of flame. I am
     / | \    quite sure there are even darker denizens there deeper
-      S      underground. If you are going to venture to the mountain 
+      S      underground. If you are going to venture to the mountain
              be careful. I've heard there is a dangerous mist that
              can trap the unsuspecting adventurer in the area!
                I've drawn a small map below to give you a better
              idea, good luck!
- 
+
         Market Square-----------------A turning point
                                             |
                                              \
-                                      Head southeast 
+                                      Head southeast
                                     towards the mountain
                                          |            \
                                          |           There is an entrance
@@ -562,15 +562,15 @@ M
 map orshingal enfan roll~
 a map to Orshingal~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      There is a peaceful town of humanoid creatures to
-  W -   - E  the east. The town of Orshingal is populated with 
+  W -   - E  the east. The town of Orshingal is populated with
     / | \    a people slightly larger then halflings who are filled
       S      with laughter and fun. Have a nice visit!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
- 
+
+
            Orshingal is north
                   |
         Look for a rope bridge--------Find a turn west
@@ -578,7 +578,7 @@ a roll of yellowed parchment lies here.~
                                          Ershteep Road
                                                 \
                                                  |
-                                                 | 
+                                                 |
                     Market Square----East Gate------A turning point~
 16 0 1
 0 0 0 0
@@ -596,15 +596,15 @@ M
 map griffon village roll~
 a map to the Griffon's Lair~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      The wild griffons have a mountain in the west
-  W -   - E  where they have built their roost. It's a small place 
+  W -   - E  where they have built their roost. It's a small place
     / | \    but i've heard there are many dangers there, please
       S      be careful.
              I've drawn a small map below to give you a better
              idea, good luck!
- 
- 
+
+
         Edge of the forest----Western Gate---Market Square
         (look for a sign)
               |
@@ -629,17 +629,17 @@ M
 map elven lorien roll~
 a map to the Elven village of Lorien~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      A wanderer recently told me about a mysterious
-  W -   - E  city of elves. Elves are naturally reclusive folks 
+  W -   - E  city of elves. Elves are naturally reclusive folks
     / | \    so I was very excited to be able to get hints as to
       S      the location of one of their cities. Be careful of the
              mountains though!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
- 
-    
+
+
+
                                                             Look carefully here!
                                                                     |
                                       Deep Caves            North along a river
@@ -663,23 +663,23 @@ M
 map chess board roll~
 a map to the chess board~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      I've heard of this oddly mysterious place but never
-  W -   - E  made the trek there myself. Apparently there is an 
+  W -   - E  made the trek there myself. Apparently there is an
     / | \    area that is laid out in a perfect grid of black and
-      S      white squares! Not only that but the creatures here 
+      S      white squares! Not only that but the creatures here
              seem to be animated statues of some sort and mirror
              each other one in black, one in white. So strange!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
- 
-    
+
+
+
                    Look for a large Tree------Western Gate--Market Square
                             |
     Should be a way--------Quick jog south
      down nearby
-         | 
+         |
  Explore carefully!~
 16 0 1
 0 0 0 0
@@ -730,9 +730,9 @@ M
 map canticle roll~
 a map to the Canticle~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      I heard a rumor of a mysterious building that
-  W -   - E  has fallen into disrepair. Strange things have 
+  W -   - E  has fallen into disrepair. Strange things have
     / | \    been said to happen there late at night. Bright
       S      lights and strange noises coming from the towers.
              It was thought abandoned long ago, but the news
@@ -740,13 +740,13 @@ a roll of yellowed parchment lies here.~
              I've drawn a small map below to give you a better
              idea, good luck!
          The Canticle
-        / 
+        /
  Across the moor
        |
-       |        
+       |
     A bend---------Dim path
               (look carefully)
-                      | 
+                      |
    Edge of the forest----Western Gate---Market Square~
 16 0 1
 0 0 0 0
@@ -764,13 +764,13 @@ M
 map ivory tower roll~
 a map to an Ivory Tower~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      Far away, across the Sea of Love, (don't get your
-  W -   - E  hopes up, its not that kind of love) there is an  
+  W -   - E  hopes up, its not that kind of love) there is an
     / | \    ancient tower of pure white. Tall and tower above
       S      pink hued cliffs this is a bastion of peace and
              quiet. Be careful crossing that sea though its easy
-             to get lost. 
+             to get lost.
              I've drawn a small map below to give you a better
              idea, good luck!
                                  |---------Market Square
@@ -800,7 +800,7 @@ M
 map mayor's manor roll~
 a map to the Mayor's Manor~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      The mayor has a house he doesn't tell anyone about!
       W -   - E  Midgaard's Mayor is keeping a dwelling to himself and
         / | \    not telling the tax payers about it. If you want to
@@ -808,9 +808,9 @@ a roll of yellowed parchment lies here.~
                  tax dollars be my guest!
                  I've drawn a small map below to give you a better
                  idea, good luck!
-    
+
                     Ignore warnings
-                          | 
+                          |
                           --Western Gate---Market Square~
 16 0 1
 0 0 0 0
@@ -828,7 +828,7 @@ M
 map goblin marsh cave roll~
 a map to the Goblin and Marsh caves~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      Goblins are filthy creatures. I've never had much
       W -   - E  use for them myself, last time I saw one his head
         / | \    exploded all over my smock! I won't be going back there
@@ -836,11 +836,11 @@ a roll of yellowed parchment lies here.~
                  to the west.
                  I've drawn a small map below to give you a better
                  idea, good luck!
-   
-         Approaching a dark 
+
+         Approaching a dark
               Cave
                 |
-                | 
+                |
       Edge of the forest----Western Gate---Market Square~
 16 0 1
 0 0 0 0
@@ -858,7 +858,7 @@ M
 map sewers roll~
 a map to the sewers~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      King Welmar has things under his Castle that I am
       W -   - E  sure have never seen the light of day! It is common
         / | \    knowledge, but slugs, zombies, fungus, ewwww.
@@ -871,7 +871,7 @@ a roll of yellowed parchment lies here.~
                                                                 \
                                                                  |
                                                            Welmar's Castle
-                                                                 |   
+                                                                 |
           Market Square--------Bunch of short people--------End of the road~
 16 0 1
 0 0 0 0
@@ -886,18 +886,18 @@ M
 ~
 ~
 #3166
-map halfing's village roll~
+map halfling's village roll~
 a map to the Halfling's Village~
 a roll of yellowed parchment lies here.~
-          N           
-        \ | /      Halfing's are industrious folks. Their crews are
+          N
+        \ | /      Halfling's are industrious folks. Their crews are
       W -   - E  always working on roads or in the forest it's hard
         / | \    not to find them! But if you just have no confidence
           S      in yourself and your ability to head east,
                  I've drawn a small map below to give you a better
                  idea, good luck!
-                                                  
-                  
+
+
           Market Square--------Bunch of short people--------End of the road
                                  (can't miss em)~
 16 0 1
@@ -916,15 +916,15 @@ M
 map haon-dor forest roll~
 a map to the Haon-dor forests~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      There are a lot of forests in the world, but one
-      W -   - E  of the more interesting ones is to the west. It is 
+      W -   - E  of the more interesting ones is to the west. It is
         / | \    the forest of Haon-dor and it conceals many hidden
           S      cities and creatures in its depths. Explore carefully!
                  I've drawn a small map below to give you a better
                  idea, good luck!
-                                                  
-                  
+
+
      Forest edge-----Edge of the forest---Market Square
       |    |     |    (look for sign)
  Forest is here to the south~
@@ -944,7 +944,7 @@ M
 map evil outpost roll~
 a map to the Evil Outpost~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      Beyond the Griffon's lair, high in the mountains,
   W -   - E  there is a village nestled deep amongst the peaks.
     / | \    A large group of humanoids have settled there, ugly
@@ -952,7 +952,7 @@ a roll of yellowed parchment lies here.~
              bit dangerous.
              I've drawn a small map below to give you a better
              idea, good luck!
-   
+
         Edge of the forest----Western Gate---Market Square
         (look for a sign)
               |
@@ -981,7 +981,7 @@ M
 map battlefield roll~
 a map to the Battlefield~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      To the southeast lies a desolate area scarred by
   W -   - E  battle. A desolate plain filled with the debris of
     / | \    long forgotten wars, it is not a place to venture to
@@ -989,7 +989,7 @@ a roll of yellowed parchment lies here.~
              armor. I've heard a dangerous mist lies to the south!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
         Market Square----------A turning point
                                       |         battlefield
                                       |            |
@@ -997,7 +997,7 @@ a roll of yellowed parchment lies here.~
                                 Head southeast ---/
                               towards the mountain
                                    |
-                                   | 
+                                   |
                             dangerous mist~
 16 0 1
 0 0 0 0
@@ -1015,15 +1015,15 @@ M
 map sea love roll~
 a map to the Sea of Love~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      You want a day by the beach eh? Off to the south
   W -   - E  west is a vast sea, the Sea of Love they call it,
-    / | \    God only knows why, I've never found any love there. 
+    / | \    God only knows why, I've never found any love there.
       S      Be careful exploring out there, it's easy to get
              disoriented at sea!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
                                    Jog south------Market Square
                  Center of town---------|
                       |
@@ -1048,14 +1048,14 @@ M
 map beach roll~
 a map to the Beach~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      The beach is across the vast and dizzying Sea
-  W -   - E  of Love. God knows why you want to cross that 
+  W -   - E  of Love. God knows why you want to cross that
     / | \    infuriating mess of water, but if you do be careful
       S      and try and keep track of where you are going!
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
                                    Jog south------Market Square
                  Center of town---------|
                       |
@@ -1092,7 +1092,7 @@ a roll of yellowed parchment lies here.~
       S      redicu..err hopele...ahem, glorious search well then,
              I've drawn a small map below to give you a better
              idea, good luck!
-   
+
  Look carefully!
         |
   The HOLY GRAIL!
@@ -1116,19 +1116,19 @@ M
 map king welmar's castle roll~
 a map to King Welmar's Castle~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      King Welmar has built himself a Castle! Now to some
       W -   - E  this is common knowledge, but I had no idea anyone
         / | \    had given that uppity little snot a kingdom!
-          S      I don't know why he has one, no one ever gave me a 
+          S      I don't know why he has one, no one ever gave me a
                  kingdom! psssh if you insist on visiting his giant ego,
                  I've drawn a small map below to give you a better
                  idea, good luck!
-    
+
                                                     It probably isn't very big
                                                                  |
                                                            Welmar's Castle
-                                                                 |   
+                                                                 |
           Market Square--------Bunch of short people--------End of the road~
 16 0 1
 0 0 0 0
@@ -1146,14 +1146,14 @@ M
 map morgoth roll~
 a map to Morgoth~
 a roll of yellowed parchment lies here.~
-          N           
+          N
         \ | /      The legendary lost city of Morgoth hmm, I have heard
       W -   - E  it existed but never found it myself. Legend has it that
         / | \    hidden in the mountains just east of town, there is an
           S      ancient human who might guard the secrets of Morgoth.
                  I've drawn a small map below to give you a better
                  idea, good luck!
-   
+
                         Be careful!
                                    \
                            Try and find a way up
@@ -1162,7 +1162,7 @@ a roll of yellowed parchment lies here.~
                               of Morgoth Mountains
                                     /
                                    /
-                                   |               
+                                   |
           Market Square--------Turning Point----End of the road~
 16 0 1
 0 0 0 0
@@ -1180,7 +1180,7 @@ M
 map village barovia roll~
 a map to the village of Barovia~
 a roll of yellowed parchment lies here.~
-      N           
+      N
     \ | /      The Village of Barovia is said to be hidden in the
   W -   - E  mists near Newt mountain. Shrouded in more then mystery
     / | \    travel carefully when looking for it. I don't personally
@@ -1188,14 +1188,14 @@ a roll of yellowed parchment lies here.~
              and don't travel to far into the mists.
              I've drawn a small map below to give you a better
              idea, good luck!
- 
+
         Market Square----------A turning point
                                      |
                                       \
-                               Head southeast 
+                               Head southeast
                              towards the mountain
-                                     |            
-                                     |          
+                                     |
+                                     |
                             dangerous mists----
                                                \___Road to the village~
 16 0 1
@@ -1240,7 +1240,7 @@ E
 sign take paper note~
    If you would like a map please ask for a list of available choices,
 and buy the map name that matches what you are looking for. If you are
-not here for a map then politely excuse yourself as I am very busy. 
+not here for a map then politely excuse yourself as I am very busy.
    Thank you for not disturbing me.
 ~
 X

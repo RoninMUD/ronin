@@ -3,7 +3,7 @@ serpent snake~
 A Serpent~
 A serpent slithers in the sand here.
 ~
-A magestical serpent slithers in the sand here.  You gaze into its black eyes
+A majestical serpent slithers in the sand here.  You gaze into its black eyes
 and find yourself entranced by them.  An echo sounds in your head, in between
 the hissing you make out the words "BEWARE".  You should be careful around this
 snake, it may be poisonous.
@@ -47,7 +47,7 @@ A guardian snake~
 A black snake is coiled here in the dirt.
 ~
    A snake sits here in the dirt, seemingly unmoved by its
-magical sorroundings.  The snake is rather large, and has
+magical surroundings.  The snake is rather large, and has
 long fangs.  Perhaps you should beware of this snake.
 ~
 47 0 -700 Y
@@ -91,8 +91,8 @@ A kobold~
 A Kobold is here trying to practice her magic.
 ~
    This Kobold looks as if she has weathered a thousand storms.  Her face
-is withered and frail.  A film of slime seems to cover her entire body. 
-What is left of her eyes seem to have sank back into her head.  She 
+is withered and frail.  A film of slime seems to cover her entire body.
+What is left of her eyes seem to have sank back into her head.  She
 seems harmless enough, but you do sense a powerful magic.
 ~
 108 268435456 -100 Y
@@ -107,7 +107,7 @@ A Proud Warrior~
 A Proud Warrior stands tall here.
 ~
    A tall and proud warrior stands tall in defiance here.  His
-flesh is wrinkled and aged from years of battle.  Despite 
+flesh is wrinkled and aged from years of battle.  Despite
 his old age he is still a notable opponent.
 ~
 108 0 -400 Y
@@ -162,7 +162,7 @@ An Orcish Cleric towers over you here.
 ~
 You gaze into the eyes of an evil old orc.  He grins evilly and utters some
 unknown words.  You wonder if he is channeling the power of his gods.
-You had better be very careful around this orc.  He is very dangerous 
+You had better be very careful around this orc.  He is very dangerous
 and powerful.
 ~
 10 134217728 0 Y
@@ -195,7 +195,7 @@ An Orcish Sorcerer stands here.
 ~
 You gaze into the eyes of an ugly Orcish Sorcerer.  Her teeth are
 all crooked and blood stained, and her eyes glow red.  Her hair
-is long and straw-like.  She utters a few enchantments and 
+is long and straw-like.  She utters a few enchantments and
 prepares herself to destroy you!
 ~
 10 0 -1000 Y
@@ -208,9 +208,9 @@ prepares herself to destroy you!
 #4060
 captain orc orcish~
 The Orcish Captain~
-The Orchish Captain stands here, arms folded.
+The Orcish Captain stands here, arms folded.
 ~
-Before you stands the Orcish Captain.  He has been assigned as Captain of 
+Before you stands the Orcish Captain.  He has been assigned as Captain of
 this mountain, and has command over almost all the Orcs in it.  He is a
 master of battle, you had better run, unless you want to be the next one
 the captain decides to mutilate.
