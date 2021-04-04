@@ -2,12 +2,12 @@
 Newbie Builder Base Camp~
    Below the mountain side stretches a vast plains as far as you can see.
 The wind swirls and picks up around you, kicking dust and errant tree
-branches.  Many small tents are pitched in a tight circle forming the 
+branches.  Many small tents are pitched in a tight circle forming the
 base camp you are in.  In the center of the circle is a blazing firepit
-that burns day and night for the workers to gather around and discuss 
-how they want to create an area that will shape the newbies of tommorrow.
-This area is is empty and in need of a creative force.  As you look off to
-the north you see.. erm.. nothing.  To the east... um.. nothing there 
+that burns day and night for the workers to gather around and discuss
+how they want to create an area that will shape the newbies of tomorrow.
+This area is empty and in need of a creative force.  As you look off to
+the north you see.. erm.. nothing.  To the east... um.. nothing there
 either...
 ~
 66 0 0
@@ -98,9 +98,9 @@ S
 #6605
 Wield and Hold~
   There are many types of weapons and held items in RoninMud. Weapons
-increase your hitting ability and power, while held items can have 
+increase your hitting ability and power, while held items can have
 various affects, such as increasing your maximum mana, granting you
-more damage, or a special ability. To wield a weapon, type 'wield 
+more damage, or a special ability. To wield a weapon, type 'wield
 <object>', and to hold an item, type 'hold <object>'. Once again, using
 keywords can help you wield or hold easier. Proceed North to continue
 your quest for knowledge.
@@ -219,8 +219,8 @@ S
 #6612
 Room Exit Types~
   These are similar to normal movement, except that you first need to
-figure out certain keywords, often hinted at in the room's description. 
-Typing things such as jump river, open door (the direction of door is 
+figure out certain keywords, often hinted at in the room's description.
+Typing things such as jump river, open door (the direction of door is
 sometimes required in the case of multiple doors, ex: open door south),
 crawl hole, climb ladder, and move <object> (such as block, vines, etc.)
 are examples of some of the many different types of room exits. Try a
@@ -258,42 +258,42 @@ You peer into a dark hole.
 hole~
 9 -1 6614
 E
-ladder~
-The ladder has been nailed helter-skelter to this tree, but it looks solid enough.
+river~
+A small river blocks your advance toward the east. One could
+easily jump over the shallow end.
+~
+E
+river~
+A small river blocks your advance toward the east.  One could
+easily jump over the shallow end.
 ~
 E
 ladder~
-The ladder has been nailed helter-skelter on this tree, but it looks solid enough.
+A knotted rope ladder is hanging from the short roof above.
+It looks like you could climb it with very little effort.
+~
+E
+block~
+A large block covers the doorway to the west.  It looks like
+it can be moved.~
+E
+block ladder river door~
+invalid~
+E
+river~
+A small river flows here, and it seems you can jump it to reach someplace.
 ~
 E
 block~
 You see a big block of stone that looks like it could be moved.
 ~
 E
-river~
-A small river flows here, and it seems you can jump it to reach someplace.
+ladder~
+The ladder has been nailed helter-skelter on this tree, but it looks solid enough.
 ~
-E
-block ladder river door~
-invalid~
-E
-block~
-A large block covers the doorway to the west.  It looks like
-it can be moved.~
 E
 ladder~
-A knotted rope ladder is hanging from the short roof above. 
-It looks like you could climb it with very little effort.
-~
-E
-river~
-A smal river blocks your advance toward the east.  One could
-easily jump over the shallow end.
-~
-E
-river~
-A small river blocks your advance toward the east. One could
-easily jump over the shallow end.
+The ladder has been nailed helter-skelter to this tree, but it looks solid enough.
 ~
 S
 #6613
@@ -357,18 +357,18 @@ A bit of vertigo hits you, as you realize you have to climb down that ladder.
 ladder~
 11 -1 6612
 E
-ladder~
-A hole in the floor has a rickety ladder hanging from it. 
-That must be how you exit from this cramped clubhouse!
+donos~
+Donos
 ~
 E
 ladder~
-A hole in the floor has a rope ladder hanging from it.  That 
+A hole in the floor has a rope ladder hanging from it.  That
 must be how you exit from this cramped clubhouse!
 ~
 E
-donos~
-Donos
+ladder~
+A hole in the floor has a rickety ladder hanging from it.
+That must be how you exit from this cramped clubhouse!
 ~
 S
 #6617
@@ -414,11 +414,11 @@ You see the "Combat Training Room".
 0 -1 6617
 E
 door~
-An imposing door stands between you and the continuation of your learning.
+This imposing door stands between you and the continuation of your learning.
 ~
 E
 door~
-This imposing door stands between you and the continuation of your learning.
+An imposing door stands between you and the continuation of your learning.
 ~
 S
 #6619
@@ -438,26 +438,14 @@ You see the "Fight Time!" room.
 door~
 7 6623 6618
 D5
-There seems to be a concealed passage under the desk, and you're 
+There seems to be a concealed passage under the desk, and you're
 almost sure you can hear the sounds of a city from beyond it.
 ~
 desk~
 8 -1 3001
 E
 desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
-~
-E
-desk~
-Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+Gauging the desk's size and your strength, you figure you could move it aside easily enough.
 ~
 E
 floor~
@@ -465,7 +453,19 @@ Looking down at the floor where the desk is, you could swear it's covering some 
 ~
 E
 desk~
-Gauging the desk's size and your strength, you figure you could move it aside easily enough.
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.@
+~
+E
+desk~
+Gauging the desk's size and your strength, you figure you could shove it aside easily enough.
 ~
 S
 #6699

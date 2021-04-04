@@ -3,7 +3,7 @@ crystal golem statue warrior~
 A Crystalline Golem~
 A Lifelike Crystalline Statue of a warrior stands here.
 ~
-A large statue of a well-muscled warrior, seemingly waiting patiently for 
+A large statue of a well-muscled warrior, seemingly waiting patiently for
 the next call to arms.
 ~
 11 2208 0 Y
@@ -21,7 +21,7 @@ phasteus cat tiger~
 Phasteus, the Siberian Tiger~
 A huge white and black cat is crouched and snarling here!
 ~
-Phasteus, Marcus' familiar and mount, is here. Fully 6' high at the 
+Phasteus, Marcus' familiar and mount, is here. Fully 6' high at the
 shoulder... not a beast to meet when he is hungry.... Speaking of which...
 ~
 42 805308544 0 Y
@@ -76,9 +76,9 @@ marcus wizard mage~
 Marcus~
 A man in dark robes is standing here.
 ~
-A relatively young man, Marcus is just beginning to show the signs of 
-age. Looking to be in his mid-thirties, it is hard to believe the stories 
-that he is actually centuries old. 
+A relatively young man, Marcus is just beginning to show the signs of
+age. Looking to be in his mid-thirties, it is hard to believe the stories
+that he is actually centuries old.
 ~
 16522 2176 0 Y
 55 -31 -15 10d100+20000 7d30+110
@@ -93,8 +93,8 @@ elite serpent guard soldier~
 An Elite Guard~
 A large, menacing, scaled warrior stands here, ready to defend his master.
 ~
-This Guard stands at least a foot taller than the largest one seen patrolling 
-the grounds. Another species, perhaps?  Whatever the case may be, judging from 
+This Guard stands at least a foot taller than the largest one seen patrolling
+the grounds. Another species, perhaps?  Whatever the case may be, judging from
 sheer size and build alone, this one looks much tougher than the ones outside.
 ~
 40 8683656 -350 Y
@@ -108,7 +108,7 @@ sheer size and build alone, this one looks much tougher than the ones outside.
 K
 0 0 0 0 0 0 0
 #17322
-highlord kiri torin dragin high lord~
+highlord kiri torin dragon high lord~
 Kiri-Torin, the Dragon Highlord~
 The master of the Fortress stands here, planning his next conquest.
 ~
@@ -149,8 +149,8 @@ dwarf smith prisoner ragar~
 Ragar, the Dwarf~
 A burly dwarf stands here chained to a stake.
 ~
-The many scars crossing this dwarf's back have daunted his spirit none at all. 
-He looks at you with sheer hatred and you are certain that, given a chance, 
+The many scars crossing this dwarf's back have daunted his spirit none at all.
+He looks at you with sheer hatred and you are certain that, given a chance,
 he'd kill you.
 ~
 16394 262272 0 Y
@@ -167,7 +167,7 @@ A Serpent Guard~
 A scaly green soldier of the high lord's armies is patrolling the grounds.
 ~
 This Large muscular lizard looks to be the cross between a monitor and a gnoll.
-It stands about 7 feet tall and has a massive tail dragging the ground behind 
+It stands about 7 feet tall and has a massive tail dragging the ground behind
 it.
 ~
 40 295048 -1000 Y
@@ -200,8 +200,8 @@ dragon baby red~
 A baby red dragon~
 A large, reddish-scaled lizard is roaming the volcano.
 ~
-While this lizard looks big to you, you realize that it is just a baby. 
-You also realize that if this is a baby, you might not want to meet the 
+While this lizard looks big to you, you realize that it is just a baby.
+You also realize that if this is a baby, you might not want to meet the
 parent.
 ~
 536870920 268697736 -1000 Y
@@ -218,7 +218,7 @@ dragon pyrak red ancient venerable~
 Pyrak, the Venerable Red~
 A huge, red dragon is here, licking his lips hungrily.
 ~
-You have heard legends of this beast!! Pyrak the Red! The deadliest 
+You have heard legends of this beast!! Pyrak the Red! The deadliest
 dragon that ever existed upon this world. Intelligent and cunning, he
 is considered to be the greatest menace to ever terrorize the innocent
 farmers and herders of the world. He is a scourge, but a scourge that
@@ -237,9 +237,9 @@ marcus wizard mage~
 Marcus~
 A man in dark robes is standing here.
 ~
-A relatively young man, Marcus is just beginning to show the signs of 
-age. Looking to be in his mid-thirties, it is hard to believe the stories 
-that he is actually centuries old. 
+A relatively young man, Marcus is just beginning to show the signs of
+age. Looking to be in his mid-thirties, it is hard to believe the stories
+that he is actually centuries old.
 ~
 16522 2176 0 Y
 55 -31 -15 25d100+28989 10d30+249
@@ -251,7 +251,7 @@ K
 0 0 0 0 0 0 0
 #17399
 skirmisher soldier serpent~
-Serpent Skirisher~
+Serpent Skirmisher~
 A lithe scaled warrior is sneaking around here.
 ~
 A lizard warrior who seems to be making maps of the region for his master.

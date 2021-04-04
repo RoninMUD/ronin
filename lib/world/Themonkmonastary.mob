@@ -70,7 +70,7 @@ A human monk is here going about his daily duties.
 ~
    From the way that this monk walks and carries himself you can tell that
 he is fairly new to being a monk as he seems too much like a normal person
-(excpet for the monk robes he is wearing).
+(except for the monk robes he is wearing).
 ~
 206 262144 0 Y
 4 18 9 2d5+10 1d6+0
@@ -133,9 +133,9 @@ K
 #10309
 monk human layman janitor~
 the human monk~
-A human monk is here cleaning up the monastary.
+A human monk is here cleaning up the monastery.
 ~
-   This poor guy gets the unenvied job of cleaning the monastary. Not only
+   This poor guy gets the unenvied job of cleaning the monastery. Not only
 does he have to clean the floors and walls, but he has to pick all of the
 loose trash and stuff that the occasional adventurer leaves lying around.
 ~
@@ -153,7 +153,7 @@ the female monk~
 A human female monk is resting here.
 ~
    A few human females just get fed up with the troubles that men cause them
-so they come to the monastary to find out how to defend themselves. This
+so they come to the monastery to find out how to defend themselves. This
 one is probably no exception to the majority.
 ~
 74 0 0 Y
@@ -186,7 +186,7 @@ the dwarven monk~
 A dwarven monk is here snoring loudly.
 ~
    This tough little guy is all tuckered out from a full day of being a
-monk. Though noone could probably sleep through his snores, it would not
+monk. Though no one could probably sleep through his snores, it would not
 be a good idea to wake him and tell him about it.
 ~
 74 32768 0 Y
@@ -217,7 +217,7 @@ K
 #10314
 monk human master librarian~
 the human monk~
-A human monk is sitting here going over new aquisitions and making notes.
+A human monk is sitting here going over new acquisitions and making notes.
 ~
    Though very skilled in the arts of unarmed combat, this quiet fellow
 likes to spend a lot of his time taking care of the library and trying to
@@ -269,7 +269,7 @@ monk human ron~
 Ron the monk~
 Ron the monk is sitting here drinking some beer and telling army stories.
 ~
-   This paticular fellow has close cropped hair that came from when he was
+   This particular fellow has close cropped hair that came from when he was
 serving in Midg17rd's Cityguards. He also seems to be able put down a good
 amount of beer as he is often draining his mug.
 ~
@@ -284,12 +284,12 @@ K
 #10318
 monk grand master human~
 the Grand Master of Monks~
-You see a human causually chopping up a few logs with.... HIS HANDS!
+You see a human casually chopping up a few logs with.... HIS HANDS!
 ~
    He calmly looks you over with a very impassive face. You also realize
 that this guy could easily rip you apart with his bare hands from the way
 that he can chop those logs. He also carries around a pouch with the money
-of the monastary (after all, can you think of a safer place?).
+of the monastery (after all, can you think of a safer place?).
 ~
 74 268435456 0 Y
 30 -8 -5 90d10+5000 8d4+0

@@ -85,7 +85,7 @@ Village, and probably sees the more foot traffic than any other area in town.
 A faint smell of cooked fruit and pastries wafts in from the west, and a large
 amount of commotion can be heard from the south.  The path eastward leads to
 the small forest, and continues on to various kingdoms and pagodas, and the
-north holds the halfling chapel, as well asits Tavern and Back Alleyways.
+north holds the halfling chapel, as well as its Tavern and Back Alleyways.
 ~
 48 67108864 1
 D0
@@ -161,7 +161,7 @@ D3
 S
 #4809
 Halfling Main Street~
-    This portion of the mainstreet is relatively abandoned, and only very
+    This portion of the main street is relatively abandoned, and only very
 mildly smells of cooked fruit and pastry (unlike the rest of the Halfling Main
 Street).  Immediately to the east there is a grand looking door, which leads to
 the Halfling Chapel.  To the north is the back alleyway.  Most locals avoid
@@ -223,10 +223,10 @@ S
 #4812
 Halfling Village Back Alley~
     The Back Alley is very dimly lit, though the fragrance in this section of
-the alley is moutwateringly unbearable.  The Halfling Bakery can be seen
+the alley is mouthwateringly unbearable.  The Halfling Bakery can be seen
 through some fences and trees to the south, and the various fragrances permeate
 this area with the sweet smells of cooked fruit and pastry.  Added to that is
-the supposedly closed Halfing Tavern located immedately to the west.  The alley
+the supposedly closed Halfing Tavern located immediately to the west.  The alley
 continues to the east.
 ~
 48 67108864 1
@@ -290,7 +290,7 @@ D3
 S
 #4815
 College Study~
-   Halfling pupils oftentime gather at the College Study, as well as others who
+   Halfling pupils oftentimes gather at the College Study, as well as others who
 may be interested in entering the college.  The place is relatively quiet, and
 organized.  There is a grey line that trails through the center of the room.
 Following the grey line to the west will lead to the College entrance.
@@ -380,7 +380,7 @@ S
 #4820
 Halfling General Store~
     The Halfling General Store was never quite a popular place.  They used to
-sell a whole variety of items, weapons, and various other goods.  HOwever, the
+sell a whole variety of items, weapons, and various other goods.  However, the
 only item they ever had any luck selling was leather backpacks.  As a result,
 that's all they are really known for carrying.  On certain days they will carry
 other objects; but leather backpacks are by far and a way their most popular
@@ -411,7 +411,7 @@ S
 #4822
 Bright Wizard's Study~
    Perhaps there was a small, localized earthquake, or a raging hurricane.
-Obvioiusly there must be an explanation; because there is no way that a person
+Obviously there must be an explanation; because there is no way that a person
 would allow a room to enter this state of chaos and dissolution by choice! There
 are papers, books, and furniture scattered around the room, as if someone had
 perpetually been searching for something they both needed, and had convinced
@@ -808,7 +808,7 @@ Back Office~
 been the phrase "Middenheim was here!" etched into it, and various other phrases
 that can't be repeated are carved into walls around the room in the same
 carvewriting.  All the furniture seems new, and it is well lit.  Obviously this
-is where the head hancho stays, and can apparently be located for the entire
+is where the head honcho stays, and can apparently be located for the entire
 day.  The only exit is back into the mysterious room to the west.
 ~
 48 67108864 0
@@ -881,7 +881,7 @@ S
 Northwest Corner of a Small Forest~
     The Northwest Corner of the Small Forest seems relatively empty.  Much like
 the rest of the forest, it seems the guards and patrols have done an excellent
-job at making sure the forest remains safe for travelers and passerbys.  The
+job at making sure the forest remains safe for travelers and passerby.  The
 forest continues to the east, as well as to the south.
 ~
 48 67108864 3
@@ -1136,7 +1136,7 @@ D0
 ~
 0 -1 4857
 D1
-You can probably jump this crag with enough of a headstart.
+You can probably jump this crag with enough of a head start.
 ~
 crag~
 10 -1 4874
@@ -1263,7 +1263,7 @@ S
 Southwest Corner of a Small Forest~
     The Southwest Corner of the Small Forest seems relatively empty.  Much like
 the rest of the forest, it seems the guards and patrols have done an excellent
-job at making sure the forest remains safe for travelers and passerbys.  The
+job at making sure the forest remains safe for travelers and passerby.  The
 forest continues to the north, as well as to the east.
 ~
 48 67108864 3
@@ -1332,7 +1332,7 @@ thicket~
 S
 #4869
 Thicketed Pathway~
-    The vines are annoying; but they are managable here.  However, the path
+    The vines are annoying; but they are manageable here.  However, the path
 seems to open up towards the southern side of the path.  A pleasant, and
 calming light radiates from the south and is, to say the least, very enticing.
 To the west there appears to be nothing but a larger thicket of vines.
@@ -1351,7 +1351,7 @@ S
 Averland's Sanctuary~
     The home of the legendary Averland, last remaining champion of the Halfling
 Goddess.  The sanctuary is illuminated with a calming light that is pleasant
-to the eyes.  The area is brustling with squirrels, rabbits, mice, and small
+to the eyes.  The area is bustling with squirrels, rabbits, mice, and small
 birds.  There are also signs of larger wildlife throughout the area.  The
 sanctuary continues to the east and south.  There is a pathway, thicketed with
 vines, located to the north.
@@ -1374,7 +1374,7 @@ S
 Averland's Sanctuary~
     The home of the legendary Averland, last remaining champion of the Halfling
 Goddess.  The sanctuary is illuminated with a calming light that is pleasant to
-the eyes.  The area is brustling with squirrels, rabbits, mice, and small
+the eyes.  The area is bustling with squirrels, rabbits, mice, and small
 birds.  There are also signs of larger wildlife throughout the area.  The
 sanctuary continues to the east and south.  There is a pathway, thicketed with
 vines, located to the south and west.
@@ -1393,7 +1393,7 @@ S
 Averland's Sanctuary~
     The home of the legendary Averland, last remaining champion of the Halfling
 Goddess.  The sanctuary is illuminated with a calming light that is pleasant to
-the eyes.  The area is brustling with squirrels, rabbits, mice, and small
+the eyes.  The area is bustling with squirrels, rabbits, mice, and small
 birds.  There are also signs of larger wildlife throughout the area.  The
 sanctuary continues to the east and south.  There is a pathway, thicketed with
 vines, located to the north and east.
@@ -1412,7 +1412,7 @@ S
 Averland's Sanctuary~
     The home of the legendary Averland, last remaining champion of the Halfling
 Goddess.  The sanctuary is illuminated with a calming light that is pleasant to
-the eyes.  The area is brustling with squirrels, rabbits, mice, and small
+the eyes.  The area is bustling with squirrels, rabbits, mice, and small
 birds.  There are also signs of larger wildlife throughout the area.  The
 sanctuary continues to the east and south.  There is a pathway, thicketed with
 vines, located to the north and west.
@@ -1441,7 +1441,7 @@ D2
 ~
 0 -1 4875
 D3
-You can probably jump this crag with enough of a headstart.
+You can probably jump this crag with enough of a head start.
 ~
 crag~
 10 -1 4858
@@ -1577,7 +1577,7 @@ society.  It is decorated with various halfling fruit pie wrappers and juice box
 containers.  The Altar currently appears to be housing romance novels and a
 small, multi-colored pool of solidified candle waxes.  Obviously, nobody was
 expecting guests...  There is a heavy, steel door with a giant lock on the floor
-behind thealtar.  The only obvious exit is to the west.
+behind the altar.  The only obvious exit is to the west.
 ~
 48 67108864 0
 D3
@@ -1596,7 +1596,7 @@ unremarkable it is.  From the looks of the trapdoor and the staircase leading
 into this room, this place hasn't been visited in at least a decade or two.
 However, the room itself is completely immaculate.  There is not a spot of
 dust on the floor, and there are absolutely no cracks, or markings anywhere
-in sight.  Save for one pedastal at the center of the room, there is no
+in sight.  Save for one pedestal at the center of the room, there is no
 furniture or furnishing to be found.  Yet somehow, the room radiates with
 a soft, humming light.  The only way out is upwards, to the Altar.
 ~

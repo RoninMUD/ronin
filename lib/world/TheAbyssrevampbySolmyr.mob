@@ -5,7 +5,7 @@ The Demi-Lich leaps from his throne as you enter the room, his evil eyes fixed d
 ~
    The Demi-Lich is, perhaps, the single, most powerful undead creature known
 to exist. Greatly resembling a wight or mummy, gaunt and skeletal in form,
-it is nevertheless a being of forboding might. Its eye sockets are black and
+it is nevertheless a being of foreboding might. Its eye sockets are black and
 empty, save for the fierce pinpoints of light which serve as eyes. An aura of
 cold and darkness radiates from it, which makes it an ominous and fearsome
 sight. Despite the wasted, rotten flesh, it is garbed in the rich clothes of
@@ -22,17 +22,17 @@ K
 #25001
 keftab~
 Keftab, the Ancient One~
-Keftab, the Ancient One stands here, calmly searching ceaslessly.
+Keftab, the Ancient One stands here, calmly searching ceaselessly.
 ~
    A writhing, quivering mass of horrific, unspeakable flesh-like
 material, this ancient one stares coldly about through its many
-multifacted eyes. Viscious, vile smelling liquid seeps through its
+multifaceted eyes. Viscous, vile smelling liquid seeps through its
 flesh in many places, originating from the ghastly, crater like
 pores which pepper his body. Disgustingly, large portions of its
 flesh seem to bubble with an alien life of their own. The surface
 of its body, where not oozing, is covered with mottled, grey, mossy
 protrusions, like some strange malignant blemishes. It emits low,
-gutteral mewlings from its fange, quivering orifice.
+guttural mewlings from its fange, quivering orifice.
 ~
 14 32904 -1000 Y
 55 -15 0 100d10+8000 30d8+0
@@ -229,7 +229,7 @@ Kalas, the knight and guardian of the castle, stands here
 preparing himself for battle.
 ~
    Kalas is a large, muscular man. He is clad in a magical
-suit of armour. His sword is burning fiercly.
+suit of armour. His sword is burning fiercely.
 ~
 43 268697728 -1000 Y
 52 -13 -10 10d100+5000 10d5+150
@@ -427,7 +427,7 @@ K
 #25026
 acid blob giant~
 A giant acid blob~
-A gaint acid blob is here
+A giant acid blob is here
 ~
   he looks like a huge blob of acid
 ~
@@ -556,8 +556,8 @@ killer bee~
 a Killer Bee~
 A tremendous Killer Bee buzzes in to stab you in the throat!
 ~
-Goddam, that stinger is huge!  Oh man, it's dripping poison, too...what 
-are these killer bees doing up here is your last thought as the bee 
+Goddam, that stinger is huge!  Oh man, it's dripping poison, too...what
+are these killer bees doing up here is your last thought as the bee
 stabs you in the throat with its stinger...
 ~
 524332 32768 0 Y

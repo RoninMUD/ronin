@@ -3,7 +3,7 @@ Dusty cellar~
    This is a dusty room that looks almost like a cellar but more like a corner
 of a passageway. Broken boards can be seen lying everywhere mostly covered in
 dirt and debris. Climbing over them proves to be an adventure in itself which
-makes you wonder why someone hasn't cleaned up the place. The passageway 
+makes you wonder why someone hasn't cleaned up the place. The passageway
 continues north while an old staircase leads back up.
 ~
 208 4 0
@@ -20,7 +20,7 @@ S
 #20801
 Damp corridor~
    This is a stone-lined corridor leading east and south. Algae and other lichen
-grow on the walls near the trickles of water flowing down from an unknown 
+grow on the walls near the trickles of water flowing down from an unknown
 source. On the wall is what appears to have been a sign at one point or another
 but time has eroded any clear words that might have warned wary travelers of
 the dangers up ahead. The corridor to the east looks damper and darker while
@@ -45,9 +45,9 @@ S
 Damp corridor~
    This is a damp stone-lined corridor running from west to east.  Algae and
 molds cover bits of the floor, making the surface pretty slippery. The entire
-corridor is lined with stone blocks covering the floors, walls and ceiling. 
-Pebbles and pieces of stone litter the ground, making it rather tedious to 
-keep your footing.  Not far away you hear running water and a constant 
+corridor is lined with stone blocks covering the floors, walls and ceiling.
+Pebbles and pieces of stone litter the ground, making it rather tedious to
+keep your footing.  Not far away you hear running water and a constant
 dripping noise.
 ~
 208 9 0
@@ -63,8 +63,8 @@ S
 #20803
 Damp corridor~
    This is a damp, long corridor running west to east. Large amounts of fungi
-cling to the stone like sweat on the inside of your boots while the sounds of 
-constant dripping can be heard off in the distance. You can see cracks on the 
+cling to the stone like sweat on the inside of your boots while the sounds of
+constant dripping can be heard off in the distance. You can see cracks on the
 wall as a result of erosion over long periods of time. Pebbles and pieces of
 stone sprawl on the ground -- casualties years of abuse.
 ~
@@ -83,17 +83,17 @@ These huge stones lie here covered in all sorts of vegetation.
 ~
 E
 pebbles~
-These pebbles are covered with fungi, small in size and found all over the 
+These pebbles are covered with fungi, small in size and found all over the
 ground.
 ~
 S
 #20804
 Damp corridor~
-   You seem to be mesmerized by the fungoid growth in these passageways. It 
-looks to be everywhere and some have even made their way onto your armour 
+   You seem to be mesmerized by the fungoid growth in these passageways. It
+looks to be everywhere and some have even made their way onto your armour
 as well. The walls here are totally covered in this widespread growth, giving
-off a soft green illumination that flickers in a distinct pattern.  The 
-air is dense with humidity, making breathing uncomfortable.  Drops of 
+off a soft green illumination that flickers in a distinct pattern.  The
+air is dense with humidity, making breathing uncomfortable.  Drops of
 sweat run freely from your forehead, adding to your discomfort.
 ~
 208 9 0
@@ -109,7 +109,7 @@ S
 #20805
 Burger World~
    This is where the gods come and devour their food when they get hungry.
-Chairs and tables are set up, along with televisions and radios for when 
+Chairs and tables are set up, along with televisions and radios for when
 they're bored.  Long lines stretch up to the counter where hired immorts make
 some spending cash on the side.  Always busy and always looking for hired help,
 busy cashiers feverishly try to keep up with customer demands and complaints.
@@ -123,11 +123,11 @@ S
 Damp corridor~
    This is a turn in the corridor with paths running south and west.  Algae
 and other fungi cover the stones lining this tunnel, making footing a little
-unsteady for you.  Looking up you see glowing plant life beating in an 
-irregular pattern -- pulling you into a trance whenever you stare too long. 
-Heavy erosion is evident on the walls as the vegetation grows completely 
-out of control, gripping firmly onto the rock of the tunnel.  From nearby 
-you hear sounds of running water. 
+unsteady for you.  Looking up you see glowing plant life beating in an
+irregular pattern -- pulling you into a trance whenever you stare too long.
+Heavy erosion is evident on the walls as the vegetation grows completely
+out of control, gripping firmly onto the rock of the tunnel.  From nearby
+you hear sounds of running water.
 ~
 208 9 0
 D2
@@ -144,9 +144,9 @@ Damp corridor~
    The stone-lined passage continues southward. Out of the corner of your eye,
 you notice small streams of water flowing down the west wall, creating a steady
 flow of water running south. Turning around, you make sure no one is watching
-as you playfully kick and roll in the body of water.  Getting up, you 
+as you playfully kick and roll in the body of water.  Getting up, you
 straighten your clothes and continue on.  Patches of lichen grow alongside
-the stream, as well as a few mushrooms and toadstools.   
+the stream, as well as a few mushrooms and toadstools.
 ~
 208 9 0
 D1
@@ -159,7 +159,7 @@ D2
 0 -1 20809
 E
 toadstools~
-Yummy! Fresh toadstools conveniently in your path waiting to be picked and 
+Yummy! Fresh toadstools conveniently in your path waiting to be picked and
 devoured by your drooling appetite.
 ~
 E
@@ -171,13 +171,13 @@ Damp corridor~
    A bleak light filters from some of the fungus and lichen, giving enough
 illumination to see by.  There are large cracks in the wall as the result of
 the combination of erosion and the power of vegetation.  Looking up, you see
-vines and other assorted plant life grabbing at the wall -- stretching all 
-over the ceiling like a glove.  Over time even the strongest of stone 
-would have given away to this kind of stress.  Pebbles and pieces of rock 
-lie on the ground as evidence of this kind of abuse.  Undoutably they 
-must have taken many years to weaken and not give away, because now these 
-tunnel walls turn to fine powder with a single touch.  Exits run north 
-and south here. 
+vines and other assorted plant life grabbing at the wall -- stretching all
+over the ceiling like a glove.  Over time even the strongest of stone
+would have given away to this kind of stress.  Pebbles and pieces of rock
+lie on the ground as evidence of this kind of abuse.  Undoubtably they
+must have taken many years to weaken and not give away, because now these
+tunnel walls turn to fine powder with a single touch.  Exits run north
+and south here.
 ~
 208 9 0
 D0
@@ -214,7 +214,7 @@ Damp corridor~
    The stream ends here with the water calmly flowing into the opening in the
 ground. Looking down into the hole you see the water cascading into a large
 pool and rusted iron ladder that leads below. A chill mist hangs in the air
-coating everything with a damp dew. 
+coating everything with a damp dew.
 ~
 208 13 0
 D1
@@ -229,9 +229,9 @@ You see a large body of water, with a ladder dangling below.
 S
 #20811
 Large pool~
-   This is a rounded chamber completely lined with stone blocks. A steady 
-stream of water flows down into this pool from the opening above -- with the 
-water extending right to your knees. A rough iron ladder hangs from the hole 
+   This is a rounded chamber completely lined with stone blocks. A steady
+stream of water flows down into this pool from the opening above -- with the
+water extending right to your knees. A rough iron ladder hangs from the hole
 above and swings freely just a few feet from the level of the pool. The only
 other exit appears to be a passageway travelling westward.
 ~
@@ -241,7 +241,7 @@ D3
 ~
 0 -1 20822
 D4
-A steady waterfall flows freely from the entryway, along with an adjacent 
+A steady waterfall flows freely from the entryway, along with an adjacent
 dangling ladder. It appears to be an exit from these deep caverns.
 ~
 ~
@@ -250,9 +250,9 @@ S
 #20812
 Damp corridor~
    This is a damp corridor lined with stone blocks from the ground up. Some
-lichen and algae cling to the walls -- giving you enough light to see, but 
-hardly enough to see farther than your own hands.  The humidity in the air 
-continues to be a nuisance as large amounts of sweat drip down your face.  
+lichen and algae cling to the walls -- giving you enough light to see, but
+hardly enough to see farther than your own hands.  The humidity in the air
+continues to be a nuisance as large amounts of sweat drip down your face.
 All you can do is wipe at it and continue on with your trek.  Puddles form
 on the floor here, making it rather tedious to keep your footing.
 ~
@@ -276,7 +276,7 @@ any better, you'd say it was trying to lead you somewhere...but judging from
 the wild growth of it, you quickly dismiss that idea.  Several mushrooms and
 toadstools grow alongside the path, with a large boulder standing right in
 the middle.  Looking at the rock, it seems to be nothing more than a nuisance
-and easily climbable without much effort. 
+and easily climbable without much effort.
 ~
 208 8 0
 D0
@@ -310,16 +310,16 @@ A large boulder stands in your path. At first you are puzzled as to how it got
 here, but judging from the big gap in the ceiling, you conclude it came from
 there. Various mushrooms and toadstools grow along side the massive obstacle
 and edged onto the rock itself are the words "Far beyond driven."  You wonder
-what that means.   
+what that means.
 ~
 S
 #20814
 Damp corridor~
    This is a long corridor running west to east. Damp fungus clings to the
 stone while dripping sounds reverberate from all around you.  A bleak light
-filters from some of the fungus and lichen, giving enough illumination to 
-travel in.  You can see the cracks on the wall as a result of erosion over 
-long periods of time.  Pebbles and pieces of stone lie on the ground, making 
+filters from some of the fungus and lichen, giving enough illumination to
+travel in.  You can see the cracks on the wall as a result of erosion over
+long periods of time.  Pebbles and pieces of stone lie on the ground, making
 the terrain difficult to walk on.
 ~
 208 9 0
@@ -336,9 +336,9 @@ S
 Damp corridor~
    This is a long corridor running west to east. Damp fungus clings to the
 stone while dripping sounds reverberate from all around you.  A bleak light
-filters from some of the fungus and lichen, giving enough illumination to 
-travel by.  You can see the cracks on the wall as a result of erosion over 
-long periods of time.  Pebbles and pieces of stone lie on the ground, making 
+filters from some of the fungus and lichen, giving enough illumination to
+travel by.  You can see the cracks on the wall as a result of erosion over
+long periods of time.  Pebbles and pieces of stone lie on the ground, making
 the terrain difficult to walk on.
 ~
 208 9 0
@@ -357,7 +357,7 @@ Damp corridor~
 Some lichen and algae cling to the walls, giving you enough light to see by.
 The humidity in the air continues to be a nuisance, as large amounts of sweat
 drips down your face.  All you can do is wipe at it and continue on with your
-trek. Puddles form on the floor, making it rather tedious to keep your 
+trek. Puddles form on the floor, making it rather tedious to keep your
 footing.
 ~
 208 9 0
@@ -373,7 +373,7 @@ S
 #20817
 Damp intersection~
    You are standing in a three-way intersection in the corridor. Stone-lined
-tunnels run off to the west, east and north. The air here is very humid, 
+tunnels run off to the west, east and north. The air here is very humid,
 causing beads of sweat to roll down your face. A slow dripping noise catches
 your attention and drills a beat into your mind.
 ~
@@ -449,11 +449,11 @@ D3
 S
 #20821
 Humble home of the Fungus King~
-   What a mess! This room couldn't be any more disorganized. Trash and all 
-other assortment of junk can be seen lying around on the floor.  Long vines 
-and other plants completely cover the walls and seemingly take on a life 
-of their own.  Ironically the only place not covered in plantlife is the 
-center of the room, where lies the inhabitant.  A loud belch comes from 
+   What a mess! This room couldn't be any more disorganized. Trash and all
+other assortment of junk can be seen lying around on the floor.  Long vines
+and other plants completely cover the walls and seemingly take on a life
+of their own.  Ironically the only place not covered in plant life is the
+center of the room, where lies the inhabitant.  A loud belch comes from
 within the shadows of the room, making you wonder if it's trying to say "hello"
 or just awaiting its next meal.
 ~
@@ -489,7 +489,7 @@ Circular tunnel~
    You continue to walk in a corridor filled with water.  The smell here is
 unbearable and something seems to be living in these waters.  A constant drip
 is heard off in the distance, punctuated now and then by a screeching wail.
-These tunnels seem to stretch out forever, apparently having no beginning 
+These tunnels seem to stretch out forever, apparently having no beginning
 or end.
 ~
 208 9 0
@@ -528,10 +528,10 @@ D2
 S
 #20825
 Oval intersection~
-   You are in a oval-shaped tunnel, six feet high and barely five feet wide. 
-It connects to three other rooms, and looks to be a pipe.  A heavy mist hangs 
+   You are in a oval-shaped tunnel, six feet high and barely five feet wide.
+It connects to three other rooms, and looks to be a pipe.  A heavy mist hangs
 in this room, limiting your vision. The water itself doesn't help much as
-you shiver from its chilling effects. There are some strange markings 
+you shiver from its chilling effects. There are some strange markings
 on the east wall...
 ~
 208 9 0
@@ -553,7 +553,7 @@ D3
 0 -1 20828
 E
 markings~
-They seem to be magical runes of some sort, but have lost all their arcane 
+They seem to be magical runes of some sort, but have lost all their arcane
 integrity.  They are now useless markings on the wall.
 ~
 E
@@ -563,13 +563,13 @@ but the ones that are still visible warn of great danger in the room beyond.~
 S
 #20826
 A small room~
-   You have stumbled upon a small room that resembles a closet. It is very  
+   You have stumbled upon a small room that resembles a closet. It is very
 small in size and the air here smells like vomit.  It seems like no one
 has been here for awhile since you see dust flying into the air as soon as you
-step in.  To the east you see a strange door with runes of warding meant to 
+step in.  To the east you see a strange door with runes of warding meant to
 keep anyone from going in and whatever on the other side from coming out.  Over
-the years however, the runes have lost their magical power and all that is 
-required now is...simply a key.   
+the years however, the runes have lost their magical power and all that is
+required now is...simply a key.
 ~
 208 13 0
 D1
@@ -585,10 +585,10 @@ S
 Circular tunnel~
    You are in a cramped, circular tunnel going north and south.  Closer
 examination of these waters show its unsanitary and murky state, with the
-contents not worth mentioning.  You try not to concentrate on the water and 
-focus on the path ahead, but you cannot keep the thought of vomiting out of 
+contents not worth mentioning.  You try not to concentrate on the water and
+focus on the path ahead, but you cannot keep the thought of vomiting out of
 your mind, considering the unbearable smell that reeks through your nostrils.
-Your only hope is that there is a way out of here...and fast.  
+Your only hope is that there is a way out of here...and fast.
 ~
 208 9 0
 D0
@@ -607,7 +607,7 @@ examination of these waters show its unsanitary and murky state, with the
 contents not worth mentioning.  You try not to concentrate on the water and
 focus on the road ahead, but you cannot keep the thought of vomiting out of
 your mind, considering the unbearable smell that reeks through your nostrils.
-Your only hope is that there is a way out of here...and fast.  These tunnels 
+Your only hope is that there is a way out of here...and fast.  These tunnels
 seem to stretch out forever, with no beginning or end.
 ~
 208 9 0
@@ -622,9 +622,9 @@ D3
 S
 #20829
 Circular tunnel~
-   In this room, the water seems to be flowing towards the east chamber. 
-Algae covers the walls, while strips of moss can be seen hanging from the 
-ceiling.  A thin mist hangs in the air making it difficult to breathe.  There 
+   In this room, the water seems to be flowing towards the east chamber.
+Algae covers the walls, while strips of moss can be seen hanging from the
+ceiling.  A thin mist hangs in the air making it difficult to breathe.  There
 are exits north, west, and east of here.
 ~
 208 9 0
@@ -689,10 +689,10 @@ S
 Circular tunnel~
    The water level here seems to rise here, coming up your thighs and slowing
 down your movement. Closer examination of these waters show its unsanitary and
-murky state, with the contents not worth mentioning.  You try not to 
-concentrate on the water and focus on the path ahead, but you cannot keep the 
-thought of vomiting out of your mind, considering the unbearable smell that 
-reeks through your nostrils.  Your only hope is that there is a way out of 
+murky state, with the contents not worth mentioning.  You try not to
+concentrate on the water and focus on the path ahead, but you cannot keep the
+thought of vomiting out of your mind, considering the unbearable smell that
+reeks through your nostrils.  Your only hope is that there is a way out of
 here...and fast.  The water seems to be flowing through a grate in the floor.
 ~
 208 9 0
@@ -712,11 +712,11 @@ S
 #20833
 Circular tunnel~
    You are standing in a 3-foot deep pool of sewage that seems to level off in
-the next room to the west.  Closer examination of these waters show its  
+the next room to the west.  Closer examination of these waters show its
 unsanitary and murky state, with the contents not worth mentioning.  You try
-not to concentrate on the water and focus on the road ahead, but you cannot 
-keep the thought of vomiting from your mind, considering the unbearable smell 
-that reeks through your nostrils.  Your only hope is that there is a way out 
+not to concentrate on the water and focus on the road ahead, but you cannot
+keep the thought of vomiting from your mind, considering the unbearable smell
+that reeks through your nostrils.  Your only hope is that there is a way out
 of here...and soon.  These tunnels seem to stretch on out, going forever,
 seemingly having no end and no beginning.
 ~
@@ -732,7 +732,7 @@ D3
 S
 #20834
 Sewers~
-   You step onto a muddy part of part of the ground.  Unfortunately for you, 
+   You step onto a muddy part of part of the ground.  Unfortunately for you,
 it gives way, swallowing you slowly to your demise.  You scream and wave
 frantically, but eventually your whimpering stops and black out...
 ~
@@ -746,9 +746,9 @@ S
 #20835
 Dead End~
    The cylindrical tunnel ends here.  Stalactites inhabit the ceiling,
-while fungi covers the walls, giving off a soft glow.  A metal plate lies 
-on one side of the tunnel, seemingly for no purpose at all.  You can only 
-guess it's for patching up holes and nothing else.  A whirlpool lies at the 
+while fungi covers the walls, giving off a soft glow.  A metal plate lies
+on one side of the tunnel, seemingly for no purpose at all.  You can only
+guess it's for patching up holes and nothing else.  A whirlpool lies at the
 center of the room engulfing water vigorously. An iron grate lies below.
 ~
 208 9 0
@@ -757,7 +757,7 @@ D1
 ~
 0 -1 20833
 D5
-You see water flowing into a heavy iron grate below. 
+You see water flowing into a heavy iron grate below.
 ~
 grate~
 1 -1 20860
@@ -771,10 +771,10 @@ Circular tunnel~
    You are in a cramped, circular tunnel going north to south.  Closer
 examination of these waters show its unsanitary and murky state, with the
 contents not worth mentioning.  You try not to concentrate on the water and
-focus on the road ahead, but you cannot keep the thought of vomiting from 
+focus on the road ahead, but you cannot keep the thought of vomiting from
 your mind, considering the unbearable smell that reeks through your nostrils.
-Your only hope is that there is a way out of here...and fast.  The tunnels 
-stretch out forever, seemingly having no end and no beginning. 
+Your only hope is that there is a way out of here...and fast.  The tunnels
+stretch out forever, seemingly having no end and no beginning.
 ~
 208 9 0
 D0
@@ -788,11 +788,11 @@ D2
 S
 #20837
 Circular tunnel~
-   Water flows from every direction and drains into an iron grate in the 
-ground. The room itself is lined with ancient stone blocks, with strands of 
-moss growing from the ceiling.  You continue to hold your nose and wipe away 
-the tears from your eyes created by the stench.  One wonders how anyone 
-can endure such punishment.  Being an adventurer, you shrug off such 
+   Water flows from every direction and drains into an iron grate in the
+ground. The room itself is lined with ancient stone blocks, with strands of
+moss growing from the ceiling.  You continue to hold your nose and wipe away
+the tears from your eyes created by the stench.  One wonders how anyone
+can endure such punishment.  Being an adventurer, you shrug off such
 unpleasantness and continue on.  Exits are available north and to the east.
 ~
 208 9 0
@@ -816,13 +816,13 @@ A rusty iron grate lies here collecting water.  It looks moveable.
 S
 #20838
 Circular tunnel~
-   You are in a cramped, circular tunnel going east to west.  Closer 
+   You are in a cramped, circular tunnel going east to west.  Closer
 examination of these waters show its unsanitary and murky state, with the
 contents not worth mentioning.  You try not to concentrate on the water and
-focus on the road ahead, but you cannot keep the thought of vomiting from 
+focus on the road ahead, but you cannot keep the thought of vomiting from
 your mind, considering the unbearable smell that reeks through your nostrils.
-Your only hope is that there is a way out of here...and fast.  These tunnels 
-stretch out forever, seemingly having no end and no beginning. 
+Your only hope is that there is a way out of here...and fast.  These tunnels
+stretch out forever, seemingly having no end and no beginning.
 ~
 208 9 0
 D1
@@ -836,9 +836,9 @@ D3
 S
 #20839
 Dry Tunnel~
-   This room looks to have been unused and abandoned for some time. Water 
-rushes into the room from the opening above - creating a small pool, but 
-judging from the tunnels ahead, it appears that this place is naturally 
+   This room looks to have been unused and abandoned for some time. Water
+rushes into the room from the opening above - creating a small pool, but
+judging from the tunnels ahead, it appears that this place is naturally
 dry.  Water continues to trickle down from above, and a path leads southward.
 ~
 208 13 0
@@ -858,7 +858,7 @@ Lair of the Cloaker Lord~
 about of those unfortunates who've wandered in here. Blood lines the walls
 and heads of mudders hang as ornaments, their faces locked in with horrific
 expressions. A shrieking laughter can be heard echoing the room and freezing
-your bones. Meet the Cloaker Lord, Lord of Death!!    
+your bones. Meet the Cloaker Lord, Lord of Death!!
 ~
 208 9 0
 D3
@@ -868,24 +868,24 @@ door~
 E
 bones~
 These human remains look to have been crushed by powerful blows. Skulls lie
-detacted from its bodies, showing the lack of compassion for these innocent 
-souls. Rib cages, parts of arms and legs lie about in such as fashion, you'd 
+detached from its bodies, showing the lack of compassion for these innocent
+souls. Rib cages, parts of arms and legs lie about in such as fashion, you'd
 swear its main purpose was to intimidate.~
 E
 heads~
 Blood drips from these heads, telling you that these are recent kills for the
 occupant. Their faces locked in a ghastly stare as if they were tortured.
 An iron nail is protruding from each of the skulls, a dim fate for these poor
-mudders. Will you become another mantle-piece for this monster? 
+mudders. Will you become another mantle-piece for this monster?
 ~
 S
 #20842
 Damp corridor~
    You are standing in a intersection, with paths that travel north, east and
 west.  Small amounts of lichen cover the rocks that lie on the ground, giving
-off sparse light--just enough light to see your way around.  Humidity 
+off sparse light--just enough light to see your way around.  Humidity
 continues to be a problem, making you tired and uneasy. Cursing under your
-breath you continue on, wondering why you're even in here to begin with. 
+breath you continue on, wondering why you're even in here to begin with.
 ~
 208 9 0
 D0
@@ -903,7 +903,7 @@ D3
 S
 #20843
 Damp corridor~
-   This is a corridor running north and south. Bare stone blocks cover the 
+   This is a corridor running north and south. Bare stone blocks cover the
 walls and floor while the ceiling is mostly covered with algae and lichen.
 You can see the cracks on the wall as a result of erosion over long periods
 of time.  Pebbles and pieces of stone lie on the ground, making the terrain
@@ -921,15 +921,15 @@ D2
 S
 #20844
 Damp corner~
-   You are standing at the turn of a long corridor.  It travels north and 
-turns to the west here.  Vines and assorted plant life grow on the walls and 
-extends to the ceiling as well.  Weird -- on the south wall, an outgrowth 
+   You are standing at the turn of a long corridor.  It travels north and
+turns to the west here.  Vines and assorted plant life grow on the walls and
+extends to the ceiling as well.  Weird -- on the south wall, an outgrowth
 of vines are arranged in odd patterns, circular and in distinct shapes --
-almost like pictures and hieroglyphics.  It is definitely not something of 
-a natural occurrence, and you suspect it is man-made or created by some 
-other form of life. Looking at these shapes, you determine that the vines 
-are guarding something or someone nearby...putting your hand on the south 
-wall, you feel a slight draft... 
+almost like pictures and hieroglyphics.  It is definitely not something of
+a natural occurrence, and you suspect it is man-made or created by some
+other form of life. Looking at these shapes, you determine that the vines
+are guarding something or someone nearby...putting your hand on the south
+wall, you feel a slight draft...
 ~
 208 9 0
 D0
@@ -946,7 +946,7 @@ D3
 0 -1 20818
 E
 vines~
-These vines are arranged in strange shapes--hexagon and squared.  They are 
+These vines are arranged in strange shapes--hexagon and squared.  They are
 probably guarding something or someone.
 ~
 E
@@ -960,7 +960,7 @@ Damp corridor~
 walls and floor while the ceiling is mostly covered with algae and lichen.
 You can see the cracks on the wall as a result of erosion over long periods
 of time.  Pebbles and pieces of stone lie on the ground, making the terrain
-difficult to walk on.    
+difficult to walk on.
 ~
 208 9 0
 D0
@@ -998,7 +998,7 @@ turns to the south here.  Lichen and algae cling to the walls, giving some
 light to your journey.  The humidity of the air continues to be a nuisance, as
 large amounts of sweat drip down your face.  All you can do is wipe at it and
 continue on.  Puddles form on the floor, making it rather tedious to keep
-your balance. 
+your balance.
 ~
 208 9 0
 D2
@@ -1012,15 +1012,15 @@ D3
 S
 #20848
 A Thick Vine-Covered Passage~
-   This room is completely covered with plant life; the room itself glows as 
-it senses your very presence.  Vines, mushroom-stalks and all assortment of 
+   This room is completely covered with plant life; the room itself glows as
+it senses your very presence.  Vines, mushroom-stalks and all assortment of
 vegetation gives a feeling of being in a jungle.  Somewhere in the shadows,
 you sense watchful eyes upon you, waiting possibly for a meal to jump into
 its lap.  However, you feel safe here, no matter the intimidating environment.
 The natives are heeding their warning "Stay out of my way, and we'll stay
-out of yours." You think it's on the safer side to comply with these simple 
-rules.  The air here feels humid and damp, making breathing erratic. This path 
-leads eastward, walking here is very precarious.  
+out of yours." You think it's on the safer side to comply with these simple
+rules.  The air here feels humid and damp, making breathing erratic. This path
+leads eastward, walking here is very precarious.
 ~
 208 13 0
 D0
@@ -1033,7 +1033,7 @@ D1
 0 -1 20820
 E
 vines~
-These vines cover the walls and almost all of the room.  Examining them 
+These vines cover the walls and almost all of the room.  Examining them
 closely, you swear you've seen them move about and around.
 ~
 E
@@ -1045,7 +1045,7 @@ S
 Dry Tunnel~
    This room looks as if it hasn't been explored in for quite some time. The
 walls here feel brittle and seems to crumble at your touch. Decay is strong in
-the air and holding your nose is the best thing you can do right now. You can 
+the air and holding your nose is the best thing you can do right now. You can
 hear a faint sound of dripping somewhere. Exits are north and south.
 ~
 208 9 0
@@ -1060,9 +1060,9 @@ D2
 S
 #20850
 Dry Tunnel~
-   This is the corner of the dry passage.  Dust filters into the air as you 
-walk, irritating your eyes and nostrils.  Crumbling walls line these passages, 
-giving you the distinct feeling that a touch can bring them down.  There are 
+   This is the corner of the dry passage.  Dust filters into the air as you
+walk, irritating your eyes and nostrils.  Crumbling walls line these passages,
+giving you the distinct feeling that a touch can bring them down.  There are
 exits leaving north and east.
 ~
 208 9 0
@@ -1082,7 +1082,7 @@ your enter the room, disturbing years of accumulation. The smell of decay
 lingers in the air.  Cracks line the walls, looking quite fragile and brittle.
 When you touch the wall, pieces of rock detach from it, falling to the ground.
 You try to pick up one of the pieces on the ground, but it instantly turns to
-dust in your hands. 
+dust in your hands.
 ~
 208 9 0
 D1
@@ -1098,8 +1098,8 @@ S
 Dry Tunnel~
    This is an intersection within these dry tunnels. There are visible cracks
 in the walls and the stench of rot fills your nostrils. You briefly try to hold
-your nose, but conclude there wouldn't be any point to it. Dust flys about,
-giving you trouble.  Exits leave north, south and west.   
+your nose, but conclude there wouldn't be any point to it. Dust flies about,
+giving you trouble.  Exits leave north, south and west.
 ~
 208 9 0
 D0
@@ -1120,9 +1120,9 @@ Dry Corner~
    This room appears to be occupied by someone. A bed lies in the corner of the
 room and a desk sits in the center. Papers cover the floor and walls, most of
 it newspaper clippings, but some of them not. Unlike the other rooms, this one
-is surprisingly dust free. Someone must clean this place on a daily basis 
-because dust flows freely into the room from the north. On the wall theres a 
-sign that reads "Money is everything." 
+is surprisingly dust free. Someone must clean this place on a daily basis
+because dust flows freely into the room from the north. On the wall there's a
+sign that reads "Money is everything."
 ~
 208 8 0
 D0
@@ -1136,8 +1136,8 @@ are drawn in with paint, how creative!
 ~
 E
 bed~
-A beaten-up old bed lies here on the floor, composed of 2 matresses and no
-wooden frame.  Springs can be seen poping out of the top matress.
+A beaten-up old bed lies here on the floor, composed of 2 mattresses and no
+wooden frame.  Springs can be seen popping out of the top mattress.
 ~
 E
 sign~
@@ -1150,7 +1150,7 @@ S
 Damp corridor~
    The stream of running water turns the corner here and continues to flow
 rapidly westward.  You walk along the wall, staying away from the main current
-thats running REAL fast right now.  You can hear the sounds of crashing waves,
+that's running REAL fast right now.  You can hear the sounds of crashing waves,
 the sound similar to an end of a stream...a waterfall.  Fungi and other
 vegetation line the ceiling, emitting a soft green glow.
 ~
@@ -1166,11 +1166,11 @@ D3
 S
 #20855
 Dry Tunnel~
-   This is a dry corridor running north and south. Clouds of dust fly in the 
-air making your eyes water. The smell of decay lingers in the air. Cracks 
-line the walls, looking quite fragile and brittle. When you touch the wall, 
-pieces of rock detach from it, falling to the ground.  You try to pick up one 
-of the pieces on the ground, but it instantly turns to dust in your hands. 
+   This is a dry corridor running north and south. Clouds of dust fly in the
+air making your eyes water. The smell of decay lingers in the air. Cracks
+line the walls, looking quite fragile and brittle. When you touch the wall,
+pieces of rock detach from it, falling to the ground.  You try to pick up one
+of the pieces on the ground, but it instantly turns to dust in your hands.
 ~
 208 13 0
 D0
@@ -1184,10 +1184,10 @@ D2
 S
 #20856
 Dry Corner~
-   You have reached a dead-end in these corridors.  Holes and cracks are 
-visible on the walls, results of time and conditioning.  Dust flies about, 
-continuing to irritate you.  From close by, you can hear the sounds of 
-running water and insistent splashing.  An exit leaves south, and a 
+   You have reached a dead-end in these corridors.  Holes and cracks are
+visible on the walls, results of time and conditioning.  Dust flies about,
+continuing to irritate you.  From close by, you can hear the sounds of
+running water and insistent splashing.  An exit leaves south, and a
 wooden door stands to the east.
 ~
 208 13 0
@@ -1204,7 +1204,7 @@ S
 A bathroom~
    This room is completely covered with sludge and slime. Thin metal pipes
 extend from the walls with green guck flowing out and into the bathtub which
-rests at the center of this chamber. Laughter and sounds of splashing can be 
+rests at the center of this chamber. Laughter and sounds of splashing can be
 heard from here, but you can't quite seem to make out who it is.
 ~
 208 9 0
@@ -1217,7 +1217,7 @@ S
 Down in a hole~
    You are standing in a huge body of water that comes right up to your chest.
 It looks completely dark and seems uninhabitable, but you could have sworn to
-have seen something moving about in this muck. A steady waterfall flows 
+have seen something moving about in this muck. A steady waterfall flows
 through the grate from above -- the only visible way out.
 ~
 208 13 0
@@ -1232,7 +1232,7 @@ S
 Down in a hole~
    You are standing in a huge body of water that comes right up to your chest.
 It looks completely dark and seems uninhabitable, but you could have sworn to
-have seen something moving about in this muck. A steady waterfall flows 
+have seen something moving about in this muck. A steady waterfall flows
 through the grate from above -- the only visible way out.
 ~
 208 13 0
@@ -1247,7 +1247,7 @@ S
 Down in a hole~
    You are standing in a huge body of water that comes right up to your chest.
 It looks completely dark and seems uninhabitable, but you could have sworn to
-have seen something moving about in this muck. A steady waterfall flows 
+have seen something moving about in this muck. A steady waterfall flows
 through a grate from above -- the only visible way out.
 ~
 208 13 0

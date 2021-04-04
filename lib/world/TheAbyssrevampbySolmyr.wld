@@ -1,7 +1,7 @@
 #25000
 The Mountain Path~
  You find yourself standing in a heavily wooded area, overgrown with brush,
-and gnarled trees. To the north, you see a neglected, twisted path, 
+and gnarled trees. To the north, you see a neglected, twisted path,
 disappearing far into the mountains.
 ~
 250 32772 5
@@ -18,7 +18,7 @@ S
 Lost in the Mountains~
  Numerous craggy mountains surround you. Twisted, deadened trees stare at
 you from all around. A neglected path, at your feet. You get an uneasy
-feeling of deja-vu. 
+feeling of deja-vu.
 ~
 250 32768 5
 D0
@@ -55,7 +55,7 @@ S
 #25003
 Below Ground~
    As you head down into the earth, some dirt falls into the hole
-above you, blocking your exit. There's a smothering sense of evil here, 
+above you, blocking your exit. There's a smothering sense of evil here,
 lurking amidst the faint darkness. You find yourself above a jagged
 opening leading further down into the earth.
 ~
@@ -197,7 +197,7 @@ The Gate~
 black object in the center of the room. After careful
 observation, you find that it resembles some sort of window and
 that the sounds you have been hearing appear to be coming from
-inside. You start to recall the crashing sound of the waves and 
+inside. You start to recall the crashing sound of the waves and
 suddenly realize that you've stumbled upon its source.
 ~
 250 32777 0
@@ -224,7 +224,7 @@ S
 #25013
 The Other Side~
    As you step through the window, you are instantly transported
-and find yourself here. Just to the north is what appears to be 
+and find yourself here. Just to the north is what appears to be
 the shore of a large ocean.
 ~
 250 32777 0
@@ -273,7 +273,7 @@ D3
 S
 #25016
 On the Ocean of Despair~
-   As you go further and further out into the sea, you lose sight of 
+   As you go further and further out into the sea, you lose sight of
 all land. You still have the sense of being watched, and you begin
 to second-guess the decision to tread these waters. You begin to
 wonder what lies ahead, and in which direction to proceed.
@@ -322,7 +322,7 @@ S
 #25018
 On the Shore~
    The shore is covered with the dead remains of many strange
-creatures. Bones line the shore, hundreds of them. Every wave 
+creatures. Bones line the shore, hundreds of them. Every wave
 seems to bring more of the eerie, decayed debris.
 ~
 250 32777 7
@@ -601,7 +601,7 @@ Inside a Small Stone Building~
 the walls. Just as you start to take some of the weapons, you
 notice that they have long since rusted and are of no use to you.
 At the far end of the room, you notice a small table. A closer
-look reveals the remains of what may have been a knight. The 
+look reveals the remains of what may have been a knight. The
 corpse, resting in a chair just behind the table, appears to be
 grasping something. Moving closer to the corpse, you notice a
 sword held tightly in the clutch of the skeletal figure. Looking
@@ -636,7 +636,7 @@ S
 Entrance to a Small Building~
    As you reach the top of the hill, you can see that
 that the shape you saw from below was a small building.
-The building appears empty, because the door stands open, 
+The building appears empty, because the door stands open,
 revealing a stairwell within.
 ~
 250 32777 4
@@ -805,7 +805,7 @@ D4
 S
 #25045
 On the Spiral Staircase~
-   As you begin to climb the staircase, you start to hear strange 
+   As you begin to climb the staircase, you start to hear strange
 noises from further up. The stairs creak as you set foot upon them
 and your light just barely penetrates the darkness, reducing your
 visibility to barely three feet.
@@ -909,7 +909,7 @@ The only exit is an ornate door set into the wall behind the throne.
 ~
 250 67141640 0
 D2
-A craftfully ornamented door is set into the wall here.
+A craftily ornamented door is set into the wall here.
 ~
 door
 ~
@@ -1023,7 +1023,7 @@ D3
 S
 #25057
 The Castle Store Room~
-   The room is dark and very damp and mould covers the goods stored
+   The room is dark and very damp and mold covers the goods stored
 here. There are many boxes and crates here, however most of them
 are empty. You manage to find an old box with a few remaining
 goods stored inside.
@@ -1084,7 +1084,7 @@ Base of the Tower~
    This room appears to be the base of a large watch tower. Stairs
 ascend towards the top of the tower, with several strange runes
 etched into each stair. The feeling of evil is strong in the air. You
-hear footsteps behind you as the door suddenly slams shut! The only 
+hear footsteps behind you as the door suddenly slams shut! The only
 exits, now that the door has been sealed, are a set of stairs going up
 to the top of the tower and a set of stairs descending into the
 darkness.
@@ -1160,7 +1160,7 @@ The Twisted Forest~
    Dark, damp and murky, this twisted forest is filled with moss.
 The branches of the trees move daftly and without a sound in the
 cold and moist winds that seem to come from none and every
-direction at the same time. The forest floor is spungy to tread on
+direction at the same time. The forest floor is spongy to tread on
 and one has to be cautious, not to be hit by the swinging branches.
 It almost seems as if they're deliberately swinging your way!
 It looks impossible to penetrate the forest to the north and east.
@@ -1182,7 +1182,7 @@ The Twisted Forest~
    Dark, damp and murky, this twisted forest is filled with moss.
 The branches of the trees move daftly and without a sound in the
 cold and moist winds that seem to come from none and every
-direction at the same time. The forest floor is spungy to tread on
+direction at the same time. The forest floor is spongy to tread on
 and one has to be cautious, not to be hit by the swinging branches.
 It almost seems as if they're deliberately swinging your way!
 The forest is too dense to penetrate except to the east and north.
@@ -1374,8 +1374,8 @@ S
 #25080
 The Sanctuary~
    As you enter this room, you get a feeling of safety. A large,
-ornate door lies directly to the west of you, a feeling of great 
-evil radiating from it. As you begin to look around the room, a 
+ornate door lies directly to the west of you, a feeling of great
+evil radiating from it. As you begin to look around the room, a
 strange red mist begins to seep through a crack beneath the door.
 ~
 250 32776 0
@@ -1458,7 +1458,7 @@ door~
 S
 #25085
 Chamber of Kalas~
-   You have entered the chambers of Kalas, the knight and 
+   You have entered the chambers of Kalas, the knight and
 defender of this castle. There is a large door set in the
 northern wall. A ladder is set against the western wall,
 leading up. A sturdy hatch lies on the other side of the room.
@@ -1514,8 +1514,8 @@ S
 #25088
 End of a Narrow Passage~
    At this end of the passage, the mist gets very thick and
-you can just barely make out the door to the west. You hear 
-a faint, ghost like voice float through the air, but you 
+you can just barely make out the door to the west. You hear
+a faint, ghost like voice float through the air, but you
 can't make out the words that are spoken.
 ~
 250 32776 0
@@ -1615,8 +1615,8 @@ solid iron door~
 S
 #25094
 A Small Alcove~
-   Upon entering this small alcove, you get a safe feeling 
-within its walls. The room is clean and several tapestries 
+   Upon entering this small alcove, you get a safe feeling
+within its walls. The room is clean and several tapestries
 hang upon the wall. The wall to the west appears to be moveable,
 because there are marks on the floor, where the wall may have
 scraped it.
@@ -1697,8 +1697,8 @@ D0
 S
 #25099
 Up in the Bee's Nest~
-   You've somehow found your way into a hive of killer bees.  
-There seems to be alot of them, as it's hard to see even a 
+   You've somehow found your way into a hive of killer bees.
+There seems to be a lot of them, as it's hard to see even a
 foot in front of your face as the hairy, black bees swarm in
 to blanket your body and feed.
 ~

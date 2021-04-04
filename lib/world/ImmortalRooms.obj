@@ -376,6 +376,171 @@ M
 ~
 ~
 ~
+#1220
+hammer l30~
+L30 Hammer~
+A L30 Hammer is here, pick it up.~
+~
+5 0 8193
+0 5 5 6
+2 1 1
+20
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+19 30
+A
+18 16
+A
+14 100
+#1221
+light l30~
+L30 Light~
+A L30 Light is here, pick it up.~
+~
+1 134217795 65537
+1 1 -1 0
+1 1 1
+10
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+17 -200
+A
+53 10
+A
+52 30
+#1222
+hammer l40~
+L40 Hammer~
+A L40 Hammer is here, pick it up.~
+~
+5 0 8193
+0 6 5 6
+2 1 1
+20
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+19 40
+A
+18 20
+A
+14 100
+#1223
+light l40~
+L40 Light~
+A L40 Light is here, pick it up.~
+~
+1 134217795 65537
+1 1 -1 0
+1 1 1
+10
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+17 -300
+A
+53 20
+A
+52 60
+B
+16777272
+#1224
+hammer l50~
+L50 Hammer~
+A L50 Hammer is here, pick it up.~
+~
+5 0 8193
+0 7 5 6
+2 1 1
+20
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+19 45
+A
+18 25
+A
+14 100
+#1225
+light l50~
+L50 Light~
+light l50~
+~
+1 134217795 65537
+1 1 -1 0
+1 1 1
+10
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+17 -320
+A
+53 50
+A
+52 100
+B
+16777272
+#1226
+l+~
+L+~
+An L+ is here, pick it up.~
+~
+9 0 7191
+2 -1 -1 -1
+1 1 1
+5
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+53 3
 #1227
 cool lighter~
 A Very Cool Lighter~
@@ -453,7 +618,7 @@ You see a torn and smelly Hairy Back Brothers T-Shirt here.
 10
 E
 shirt~
-You see three wierd dudes on the t-shirt falling all over each other and
+You see three weird dudes on the t-shirt falling all over each other and
 generally makin a mess out of the place. You'd think they need help killing
 even a small rat.
 ~
@@ -551,7 +716,7 @@ E
 glass~
 You see a small painting in the small glass showing three funny looking guys
 wearing strange clothes and dressed up to goto a fancy dress party. They
-look like they wanna be fighters, but you feel they're just foolin around out 
+look like they wanna be fighters, but you feel they're just foolin around out
 there.
 ~
 X
@@ -572,12 +737,12 @@ A pendant made of a strange looking crystal sits here.~
 10 100000 100000
 50
 E
-citrine~
+pendant~
 Formed from a single crystal fastened by a thin gold chain, the citrine
 catches the light and scatters it in a thousand directions.
 ~
 E
-pendant~
+citrine~
 Formed from a single crystal fastened by a thin gold chain, the citrine
 catches the light and scatters it in a thousand directions.
 ~
@@ -770,12 +935,12 @@ A Mahogany coffin is lying here with its lid open, beckoning invitingly.~
 10 10 10
 100
 E
-word~
-Chills run down your spine as you recognize your own name.~
-E
 coffin~
 A closer looks reveals the quality of this coffin. I looks like
 it could be around for years. There seems to be a `bword`h written upon it.~
+E
+word~
+Chills run down your spine as you recognize your own name.~
 X
 ~
 0 0 0

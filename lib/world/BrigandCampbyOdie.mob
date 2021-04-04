@@ -3,7 +3,7 @@ brigand~
 Brigand~
 A Brigand is standing here.
 ~
-The brigand standing before you has dark leatherer skin and built 
+The brigand standing before you has dark leatherer skin and built
 solidly.  His armor has seen it's day as has his sword.
 ~
 72 268435456 0 Y
@@ -17,12 +17,12 @@ K
 #2102
 calanar~
 Calanar~
-Calanar the brigand champion eyes you suspicously.
+Calanar the brigand champion eyes you suspiciously.
 ~
-A giant of a man that tanned skin seems as tough as the fine bronze 
-armor he wears on his body.  Looking into his eye you see the 
-piercing stare of a warrior, his very stare invokes fear in the 
-heart of his prey.  You have no doubt he would be a formidable 
+A giant of a man that tanned skin seems as tough as the fine bronze
+armor he wears on his body.  Looking into his eye you see the
+piercing stare of a warrior, his very stare invokes fear in the
+heart of his prey.  You have no doubt he would be a formidable
 foe.
 ~
 10 536870912 500 Y
@@ -57,11 +57,11 @@ sadyra master~
 Sadyra~
 Sadyra is here making strange gestures over a bubbling cauldron.
 ~
-You are unable to get any sense of relative age or appearance of this 
-woman. In fact you can't be sure she is in fact human due to the heavy 
+You are unable to get any sense of relative age or appearance of this
+woman. In fact you can't be sure she is in fact human due to the heavy
 red robe covering her from head to toe.  Her face too is heavily shadowed
-due to the hood pulled over her head.  A strange red aura engulfs her 
-adding to the sinister appearance of the Wizard.  She turns to you with 
+due to the hood pulled over her head.  A strange red aura engulfs her
+adding to the sinister appearance of the Wizard.  She turns to you with
 burning eyes.
 ~
 11 32896 -500 Y
@@ -77,7 +77,7 @@ spirit~
 Spirit~
 A Spirit is floating in front of you.
 ~
-This is an undead servant of Sadyra. 
+This is an undead servant of Sadyra.
 ~
 11 0 -360 Y
 10 10 30 10d2+100 2d5+3
@@ -92,9 +92,9 @@ aide~
 Aide~
 One of Kulzaren's Aides is standing here.
 ~
-You are looking at one of Kulzaren's aides.  He is dressed in 
+You are looking at one of Kulzaren's aides.  He is dressed in
 fine armor bearing the same coat of arms you noticed on the
-flag and door outside the house.  They are all extremely loyal 
+flag and door outside the house.  They are all extremely loyal
 to the brigand leader and would be honored to die for him.
 ~
 11 32768 400 Y
@@ -106,13 +106,13 @@ to the brigand leader and would be honored to die for him.
 K
 0 0 0 0 0 0 0
 #2107
-Kulzaren brigard leader master~
+Kulzaren brigand leader master~
 Kulzaren~
 Kulzaren the leader of the brigand glares at you from atop his throne.
 ~
 Kulzaren is surprisingly average build for a man of his position.
-He adorns himself in armor of the finest quality.  You have a hard 
-time believing this man would head such an untamed army.  He then 
+He adorns himself in armor of the finest quality.  You have a hard
+time believing this man would head such an untamed army.  He then
 turns your way and his piercing stare burns through you.
 ~
 11 134512768 400 Y
@@ -141,7 +141,7 @@ K
 #2109
 blacksmith~
 Blacksmith~
-A BlackSmith is here welcoming you to his shop.
+A Blacksmith is here welcoming you to his shop.
 ~
 The owner of the Armour/Weapon Shop.
 ~

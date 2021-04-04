@@ -1506,8 +1506,24 @@ void
 move_chars_to_room (int frm, int to) {
   struct char_data *ch, *tmp;
   void do_look(struct char_data *ch, char *arg, int cmd);
-  for (ch=world[frm].people;ch;ch=tmp){
+  for (ch=world[frm].people;ch;ch=tmp) {
     tmp = ch->next_in_room;
+    char_from_room(ch);
+    char_to_room(ch, to);
+    if (IS_MORTAL(ch)) do_look(ch,"",0);
+  }
+}
+
+
+void
+move_chars_to_room_ex(int frm, int to, bool mortals_only) {
+  struct char_data *ch, *tmp;
+  void do_look(struct char_data *ch, char *arg, int cmd);
+  for (ch=world[frm].people;ch;ch=tmp) {
+    tmp = ch->next_in_room;
+    if(mortals_only) {
+      if (!IS_MORTAL(ch)) continue;
+    }
     char_from_room(ch);
     char_to_room(ch, to);
     if (IS_MORTAL(ch)) do_look(ch,"",0);

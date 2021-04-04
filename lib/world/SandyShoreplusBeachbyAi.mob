@@ -3,8 +3,8 @@ pit viper~
 A pit viper~
 A pit viper is slithering here, waiting to attack.
 ~
-You see a slimy reptile, who scavenges for small animals and the 
-occasional adventurer. 
+You see a slimy reptile, who scavenges for small animals and the
+occasional adventurer.
 ~
 74 8 300 Y
 18 4 -1 10d10+600 2d6+8
@@ -35,7 +35,7 @@ shark land~
 The land shark~
 A land shark is swimming in the sand here.
 ~
-This is a small shark that swims through the sands of the shore, 
+This is a small shark that swims through the sands of the shore,
 hoping one day to find its way back to the sea.
 ~
 234 1048584 -500 Y
@@ -123,7 +123,7 @@ The Kingfisher is perched here.
 ~
 The Kingfisher is eyeing you and tracking your every movement with
 its powerful beak. An excellent fisher, this bird is one of the most
-maneuverable, most dextrous birds of prey.
+maneuverable, most dexterous birds of prey.
 ~
 74 8 1000 Y
 27 -3 -10 50d4+2200 6d5+22

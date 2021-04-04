@@ -86,6 +86,7 @@ void set_item_value (struct obj_data *o, int val, int new) ;
 
 void move_objs_to_room (int frm, int to) ;
 void move_chars_to_room (int frm, int to) ;
+void move_chars_to_room_ex(int frm, int to, bool mortals_only) ;
 
 int ISCARRYING_W(CHAR *ch);
 int GETOBJ_WEIGHT(OBJ *obj);

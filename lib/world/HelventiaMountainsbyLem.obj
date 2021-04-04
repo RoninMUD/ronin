@@ -162,8 +162,8 @@ A
 A
 18 1
 #6207
-Mandible Chitonous~
-Chitonous Mandible~
+Mandible Chitinous~
+Chitinous Mandible~
 Some careless individual has left his weapon here.~
 $r Mandible trembles violently, seeking to quell its bloodlust.~
 5 259054144 8193
@@ -172,7 +172,7 @@ $r Mandible trembles violently, seeking to quell its bloodlust.~
 7
 E
 mandible~
-Dripping with slimy and oil, this sharp chitonous mandible
+Dripping with slimy and oil, this sharp chitinous mandible
 comes from one of the sneakiest, deadliest creatures in
 the world -- and it can smack nearly anything, HARD.~
 X
@@ -189,7 +189,7 @@ A
 28 20
 #6208
 exoskeleton~
-a chitonous exoskeleton~
+a chitinous exoskeleton~
 An oily black exoskeleton lies on the ground here.~
 ~
 9 133216848 9
@@ -251,7 +251,7 @@ A dark-colored skirt has been left here.~
 E
 skirt~
 The skirt is made of a coarse, dark material...heavy waves of magic
-eminating from the garment set your armhairs on end.~
+emanating from the garment set your armhairs on end.~
 X
 ~
 0 0 0
@@ -275,7 +275,7 @@ Someone has left a pair of black cotton leggings here.~
 13
 E
 leggings~
-You see a pair of black cotton leggings, with a dark metal fiber 
+You see a pair of black cotton leggings, with a dark metal fiber
 woven into the cloth.~
 X
 ~
@@ -298,7 +298,7 @@ Some furry gloves have been left on the ground here.~
 10
 E
 paws~
-You see a pair of furry bear's paws which have been fasioned 
+You see a pair of furry bear's paws which have been fashioned
 into gloves.~
 X
 ~
@@ -365,7 +365,7 @@ A bear's hide has been left here.~
 10
 E
 hide~
-You see an unsewn, uncured bear hide --  looks like it'd make a 
+You see an unsewn, uncured bear hide --  looks like it'd make a
 good wrap.
 ~
 X

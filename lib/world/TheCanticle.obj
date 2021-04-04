@@ -1,23 +1,53 @@
 #1301
-ivory headband~
-An ivory headband~
-An ivory headband has been dropped here.~
+mask silver~
+A mask crafted from the purest silver.~
+Lying here on the ground is an exquisitely wrought mask of the finest silver.~
 ~
 9 0 17
 1 0 0 0
 5 20000 250
 50
+E
+mask silver~
+This is one of the finest pieces of dwarven craftmanship you have ever
+seen. Constructed of the purest silver, this mask reflects even the smallest
+of lights into a brilliant display.  Oddly enough though, the inside of the
+mask seems to emanate a subtle blue glow, almost as if it was exposed to some
+kind of radiation.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 12 10
 #1302
-ruby wand~
-A ruby wand~
-A ruby wand lies here.~
+wand ruby~
+A wand fashioned from a single enormous ruby~
+A flickering ruby wand lies here in the dust.~
 ~
 3 1 16385
-20 1 1 26
+30 3 3 39
 1 60000 500
 50
+E
+ruby red wand~
+This wand is a breathtaking example of the work of the mage guilds
+of old.  Magically crafted from a single enormous ruby, a fiery glow
+shines from deep within.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #1303
 cutlass~
 A cutlass~
@@ -27,21 +57,44 @@ A cutlass lies here.~
 0 1 8 3
 8 600 9
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #1304
-flaming broadsword~~
-flaming broadsword~
-A flaming broadsword lies here.~
+broadsword sword broad flame silver~
+A silver broadsword, engulfed in flames.~
+A silver broadsword, completely engulfed in blue flames is here on the ground.~
 ~
 5 1024 8193
 0 3 6 3
 17 1000 700
 50
+E
+sword silver broadsword flame~
+A fine example of elvish craftsmanship, this sword of silver is both
+elegant and deadly.  However, the entire length of the blade is 
+engulfed in a flickering blue flame, and that is definitely not the
+work of elves.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 18 1
 A
 19 1
 #1305
-keep key~
+key keep~
 The keep key~
 The keep key has been dropped here.~
 ~
@@ -49,8 +102,16 @@ The keep key has been dropped here.~
 2 0 0 0
 1 500 100
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #1306
-old leather collar~
+collar old leather~
 An old leather collar~
 An old leather collar lies here.~
 ~
@@ -58,5 +119,136 @@ An old leather collar lies here.~
 1 0 0 0
 1 10 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1307
+crack wall~
+crack in the wall~
+~
+~
+15 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1308
+skeleton human remains torso~
+The sawn off remains of a human torso lie here.~
+The decaying bones of a mutilated human torso are scattered here.~
+~
+15 0 1
+0 0 0 0
+10 10 10
+100
+E
+bone bones torso skeleton~
+                _.---._
+              .'       `.
+              :)       (:
+              \ (@) (@) /
+               \   A   /
+                )     (
+                \"""""/
+                 `._.'
+                  .=.
+          .---._.-.=.-._.---.
+         / ':-(_.-: :-._)-:` \
+        / /' (__.-: :-.__) `\ \
+       / /  (___.-` '-.___)  \ \
+      / /   (___.-'^`-.___)   \ \
+     / /    (___.-'=`-.___)    \ \
+    / /     (____.'=`.____)     \ \
+   / /       (___.'=`.___)       \ \
+  (_.;       `---'.=.`---'       ;._)
+             __  _.=._  __ 
+            (  `.-.=.-.'  )
+            \    `.=.'    /
+             \    .=.    /
+              `.`-._.-'.'
+
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#1309
+key blue~
+A dull, blue key~
+An ordinary blue key lies here.~
+~
+18 0 1
+0 0 0 0
+0 10 10
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#1310
+banner order light~
+A Banner of the Order of the Light~
+A Banner of the Order of the light 2~
+~
+1 1 65537
+0 0 0 0
+10 1000 1000
+20
+E
+banner order light~
+          |\`n--..____`q
+           \\       `n\-----,,,..`q
+            \\       `n\         \--,,..`q
+             \\       `n\         \  ,'`q
+              \\       `n\         \ ``..`q
+               \\       `n\         \-''`q
+                \\       `n\__,,--'''`q
+                 \\       `n\.`q
+                  \\      `n,/`q
+                   \\`n__..-`q
+                    \\
+                     \\
+                      \\   
+                       \\
+                        \\
+                         \\
+                          \\
+                           \\
+                            \\
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+5 1
+A
+4 1
+A
+17 -6
 #0
 $~

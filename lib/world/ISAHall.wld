@@ -1465,6 +1465,10 @@ D0
 ~
 ~
 0 -1 27821
+D4
+~
+~
+0 -1 27881
 S
 #27877
 Paladins Purgatory~
@@ -1531,6 +1535,30 @@ D0
 ~
 bars~
 8 -1 27857
+S
+#27881
+TK421's Com Room~
+A temporary description
+~
+278 0 0
+D4
+~
+~
+0 -1 27882
+D5
+~
+~
+0 -1 27876
+S
+#27882
+Command Deck of the Executor~
+A temporary description
+~
+278 0 0
+D5
+~
+~
+0 -1 27881
 S
 #27899
 The SS LadyMay~

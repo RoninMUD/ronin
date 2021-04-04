@@ -138,7 +138,7 @@ K
 #4808
 middenheim~
 The Middenheim~
-The Middenheim ist standing here.
+The Middenheim is standing here.
 ~
 The Middenheim was nobility of sorts once upon a time.  He
 dresses in blues and whites, with exotic and extravagant figures
@@ -209,7 +209,7 @@ The Grey Wizard is standing here.
 The Grey Wizard is a shady figure among the college.  He is
 highly respected for his magical competence.  Though he is
 also slightly removed from his colleagues due to his personal
-choices and mannerisms.  
+choices and mannerisms.
 ~
 75 0 0 Y
 30 -2 -3 200d2+1500 3d6+5
@@ -314,7 +314,7 @@ A halfling rogue~
 A halfling rogue is here, looking to pick a fight!
 ~
 Halfling rogues are the scum of the halfling village, and
-the footsoldiers of the infamous Thieves' Guild.
+the foot soldiers of the infamous Thieves' Guild.
 ~
 106 262144 -200 Y
 30 10 0 200d2+1300 2d4+10
@@ -365,7 +365,7 @@ manager general store halfling~
 The halfling general store manager~
 The halfling general store manager is here, sell goods.
 ~
-The halfling general store manager sells basic supplies to passer-bys
+The halfling general store manager sells basic supplies to passers-by
 and locals alike.
 ~
 74 0 0 Y

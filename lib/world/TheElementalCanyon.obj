@@ -20,8 +20,8 @@ A
 A
 4 1
 #9402
-plate stoney breastplate breast~
-a stoney breastplate~
+plate stony breastplate breast~
+a stony breastplate~
 A breastplate made of the stone from deep within the earth lies here.~
 ~
 9 0 9
@@ -197,7 +197,7 @@ A
 #9411
 amulet elemental~
 an elemental amulet~
-An amulet depicting fire,water,lightning,earth, and air lies here.~
+An amulet depicting fire, water, lightning, earth, and air lies here.~
 ~
 9 1 5
 5 0 0 0
@@ -422,7 +422,7 @@ M
 #9424
 water jug~
 a water jug~
-A large but suprisingly light jug of water stands here.~
+A large but surprisingly light jug of water stands here.~
 ~
 17 0 16385
 50 50 0 0
@@ -534,7 +534,7 @@ A
 #9430
 shock whip~
 The Shock Whip~
-A whip humms innocently too itself.~
+A whip hums innocently too itself.~
 ~
 5 2 8193
 0 4 4 2
@@ -555,7 +555,7 @@ A
 #9431
 elixir anti~
 anti-cyclops elixir~
-An elixir to ward off cyclopi has been bought then left behind here.~
+An elixir to ward off cyclops has been bought then left behind here.~
 ~
 10 0 16385
 15 29 -1 -1

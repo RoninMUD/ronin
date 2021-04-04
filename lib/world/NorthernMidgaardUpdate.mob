@@ -3,7 +3,7 @@ club guard~
 the Club Guard~
 A Club Guard is here guarding the club.
 ~
-He will not let any non-memeber to get into the club.
+He will not let any non-member to get into the club.
 No matter who you are, he can kill you with a needle.
 ~
 11 128 1000 Y
@@ -89,9 +89,9 @@ ullr weaponsmith smith~
 Ullr the weaponsmith~
 Thick corded arms heft a mighty hammer over a white hot rod of steel.
 ~
-   Sweat rolls down a high sculpted forehead, dripping through thick eyebrows 
-shading deepset eyes. A thick leather apron covers a formidable chest covered
-in coarse dark hair. Heavey trousers protect stout legs, while massive hands
+   Sweat rolls down a high sculpted forehead, dripping through thick eyebrows
+shading deep-set eyes. A thick leather apron covers a formidable chest covered
+in coarse dark hair. Heavy trousers protect stout legs, while massive hands
 dwarf the mighty hammer and pair of thick tongs he grasps as he works.
 ~
 11 134217856 900 Y
@@ -124,7 +124,7 @@ Hilda the perky blonde receptionist~
 A perky blonde receptionist named Hilda stands behind the counter.
 ~
    Long blonde hair drapes casually across a prim, well cut coat and blouse.
-Bright blue eyes twinkle over small, black rimmed glasses perched low on a 
+Bright blue eyes twinkle over small, black rimmed glasses perched low on a
 petite nose. Small red lips pout prettily in greeting.
 ~
 10 0 900 Y
@@ -171,7 +171,7 @@ the Auctioneer~
 The Auctioneer is standing here holding an auction board.
 ~
 He looks very old and tired, yet radiates an aura of strength.  His
-powerful voice echos through the room.
+powerful voice echoes through the room.
 ~
 11 0 900 Y
 51 -9 2 6d10+28890 99d50+100
@@ -251,7 +251,7 @@ The Guildmaster~
 A wide shouldered man, wearing a leather jerkin and pants, stands quiet here.
 ~
    This is your master. Big and strong with bulging muscles. Several
-scars across his body proves that he was using arms before you were 
+scars across his body proves that he was using arms before you were
 born. He is very old and tired. Once upon a time, he was the master
 of the forest.
 ~
@@ -296,8 +296,8 @@ The Guildmaster~
 Your guildmaster is standing here.
 ~
    Even though your guildmaster looks old and tired, you can clearly
-see the vast amount of knowledge she posesses. She is wearing fine 
-magic clothing, and you notice that she is surrounded by a blue 
+see the vast amount of knowledge she possesses. She is wearing fine
+magic clothing, and you notice that she is surrounded by a blue
 shimmering aura.
 ~
 10 128 1000 Y
@@ -326,7 +326,7 @@ Head bowed, the Guildmaster of the Clerical order, prays in the rooms center.
 ~
    Peace and calm radiate from the benevolent face of this master of the
 healing arts. Plain white robes hang from solid, wide shoulders, while a simple
-cord binds it close at his waist. 
+cord binds it close at his waist.
 ~
 10 128 1000 Y
 31 -8 0 999d888+1111111 3d8+4
@@ -350,8 +350,8 @@ guildmaster master~
 The Guildmaster~
 Your guildmaster is standing here.
 ~
-   You realize that whenever your guildmaster moves, you fail to notice 
-it - the way of the true thief. She is to be dressed in poor clothing, 
+   You realize that whenever your guildmaster moves, you fail to notice
+it - the way of the true thief. She is to be dressed in poor clothing,
 having the appearance of a beggar.
 ~
 131082 128 1000 Y
@@ -369,8 +369,8 @@ guildmaster master~
 The Guildmaster~
 Your guildmaster is standing here.
 ~
-   This is your master. Big and strong with bulging muscles. Several 
-scars across his body proves that he was using arms before you were 
+   This is your master. Big and strong with bulging muscles. Several
+scars across his body proves that he was using arms before you were
 born. He has a calm look on his face.
 ~
 10 262272 1000 Y
@@ -429,9 +429,9 @@ assassin~
 The Assassin~
 An assassin is guarding the entrance.
 ~
-   He is a thief who has specialized in killing others as effectively as 
+   He is a thief who has specialized in killing others as effectively as
 possible, using all sorts of weapons.  His superior knowledge of how and
-where to use them combined with his extraordinary stealth makes him a 
+where to use them combined with his extraordinary stealth makes him a
 deadly opponent.
 ~
 14 128 800 Y
@@ -635,10 +635,10 @@ saga bartender~
 Saga the bartender~
 Saga the bartender looks up with a knowing eye from behind the counter.
 ~
-   Twin braids of thick blonde hair cascade over wide shoulders. A small 
+   Twin braids of thick blonde hair cascade over wide shoulders. A small
 leather corset strains to cover an ample bosom that threatens to escape with
-every movement. Tight leggings reveal long legs and shapely calves. A large, 
-wicked looking axe hangs over her shoulder, while a massive drinking horn 
+every movement. Tight leggings reveal long legs and shapely calves. A large,
+wicked looking axe hangs over her shoulder, while a massive drinking horn
 hangs by her hip.
 ~
 10 128 900 Y
@@ -690,8 +690,8 @@ acolyte cleric waiter~
 A simple Acolyte~
 A robed Acolyte moves about, carefully tending to the needs of all who enter.
 ~
-   The Acolyte wears plain white robes which reach to the floor, long sleeves 
-covering even his hands, a simple cowel pulled up over his face shrouds his 
+   The Acolyte wears plain white robes which reach to the floor, long sleeves
+covering even his hands, a simple cowl pulled up over his face shrouds his
 face in deep shadow. Carefully tending to the patrons of the bar he serves with
 passion and tenderness everyone who enters.
 ~
@@ -755,7 +755,7 @@ Dorje the map maker sits here shuffling through a stack of dusty papers.
 The Map Maker is a hunched bespectacled old man, hands cramped
 with age and arthritis. His white shirt is covered in ink blotches while a
 flashy pair of red suspenders holds up his worn slacks. A bit absent minded
-he waves a hand toward the sign hanging from the ceiling.                          
+he waves a hand toward the sign hanging from the ceiling.
 ~
 74 402950272 0 Y
 50 19 -20 1000d1000+0 1d1+1
@@ -771,9 +771,9 @@ A wizened cartographer~
 A wizened cartographer is here pouring over his maps.
 ~
    Thick glasses frame the cartographers face as he peers down at his maps.
-Steady hands hold his tools as he mutters about north, east, up, boulders, 
+Steady hands hold his tools as he mutters about north, east, up, boulders,
 rotten logs and an underground river. Oblivious to the world he happily lives
-in the world of paper, lines and rulers. His hands are very steady as he 
+in the world of paper, lines and rulers. His hands are very steady as he
 carefully inks notes on the margins of his latest work.
 ~
 74 402950272 0 Y
@@ -820,7 +820,7 @@ A shaggy coated mutt sidles along the walls, alert for any scraps of food.
 ~
    Dark matted fur drips urine and chunks of feces on the ground. Decaying
 chunks of meat and intestine hang limply from broken and rotted teeth. Yellowed
-eyes roll wildly from beneath busy brows while the curved arch of sharp ribs 
+eyes roll wildly from beneath busy brows while the curved arch of sharp ribs
 poke up under thick skin.
 ~
 169 0 -200 Y
@@ -1044,7 +1044,7 @@ Freyja the Healer~
 Freyja the Healer stands tall and striking, watching over her wards.
 ~
    White robes hang delicately from delicate shoulders. Long dark hair hanging
-in long tresses from beneath a carefully pressed white cap. Thin lips twitch 
+in long tresses from beneath a carefully pressed white cap. Thin lips twitch
 upwards in a slight smile as bright blue eyes twinkle with hidden amusement.
 A soft light is ever present, carefully wrapping her in a warm golden glow.
 ~

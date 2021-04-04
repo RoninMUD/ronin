@@ -3,9 +3,9 @@ A Dark Forest~
    After what seems to be forever, you fall out from the
 swirling portal and land hard on the ground.  You find yourself
 ending up in an extremely dark forest.  Even the sun can't penetrate
-the dark, massive trees that tower before you.  The foliage 
+the dark, massive trees that tower before you.  The foliage
 here is so thick, walking through is nearly impossible.  It is very
-cold and damp here.  You hear rustling in the bushes around you, 
+cold and damp here.  You hear rustling in the bushes around you,
 followed by a chilling shriek.  Whatever animal made that noise
 you DON'T want to meet.  You barely make out an overgrown path
 leading south, and west.
@@ -23,7 +23,7 @@ S
 #21201
 A Dark Forest~
    You move rather slowly through this dense forest.  The cold is
-numbing your bones, and you feel very slow and tired.  You 
+numbing your bones, and you feel very slow and tired.  You
 think about taking a little break from your journey, but decide
 not to, as resting in this forest may very well prove fatal.  You
 feel as if the trees are watching you.  Despite the empty feeling
@@ -46,12 +46,12 @@ S
 #21202
 A Dark Forest~
    You manage to push your way into another part of this strange
-forest you find yourself in.  The plant growth here is not as 
+forest you find yourself in.  The plant growth here is not as
 immense as you first thought.  Taking a quick look around you
-see a huge crooked tree leaning to one side.  It looks as if 
+see a huge crooked tree leaning to one side.  It looks as if
 its almost dead.  There are huge chunks removed from the bark
 of the tree.  A closer inspection shows very large teeth marks
-carved in the trunk of the tree.  The animal that left the marks 
+carved in the trunk of the tree.  The animal that left the marks
 obviously has large teeth, and strong jaws.  You start to wonder
 if this forest is a safe place to be.  You can see that the path
 leads to the north and west.
@@ -70,10 +70,10 @@ S
 A Small Clearing in a Dark Forest~
    After struggling with the overgrown path, you come upon
 a small clearing in this dense forest.  The ground here is
-very rocky and solid.  You have a hard time standing up 
+very rocky and solid.  You have a hard time standing up
 normally on all of these rocks.  After such hard travel
-going through these cold forests you decide to rest your 
-weary bones.  You look around for a good place to sit and 
+going through these cold forests you decide to rest your
+weary bones.  You look around for a good place to sit and
 rest on a very large rock.  As you begin to relax you notice
 that there is an opening in the rock about the size of a door.
 The path down looks pretty steep and dangerous.  Do you dare to
@@ -94,23 +94,23 @@ rock~
 8 -1 21204
 E
 rock~
-You closely examine the hole in the rock.  You peer down into the opening 
-but it is too dark to see.  The opening is barely wide enough to fix one 
+You closely examine the hole in the rock.  You peer down into the opening
+but it is too dark to see.  The opening is barely wide enough to fix one
 person. It look rather interesting
 ~
 E
 rock~
-You closely examine the opening in the rock.  You peer down into the opening 
-but it is too dark to see anything.  The opening is barely wide enough to fix one 
+You closely examine the opening in the rock.  You peer down into the opening
+but it is too dark to see anything.  The opening is barely wide enough to fix one
 person. It look rather interesting.
 ~
 S
 #21204
 A Dark Passage~
    You find yourself in a narrow passage beneath the forest.  It is very
-damp here.  As you look around, you barely pick out the shape of a large 
-stone against the east wall of the tunnel.  It is very cold here.  You 
-hear creepy sounds echoing through the walls.  Maybe you should check it 
+damp here.  As you look around, you barely pick out the shape of a large
+stone against the east wall of the tunnel.  It is very cold here.  You
+hear creepy sounds echoing through the walls.  Maybe you should check it
 out... if you're brave enough.
 ~
 212 13 0
@@ -127,9 +127,9 @@ S
 A Dark Passage~
    You find yourself standing in a cramped, flawlessly carved passage.  The
 tunnel's craftsmanship is remarkable and very unfamiliar.  There is slime
-covering the floor which makes it difficult to walk.  The walls are 
-adorned with slippery green slime.  There are terrifying sounds echoing 
-through the passage.  You wonder what could be making such terrible 
+covering the floor which makes it difficult to walk.  The walls are
+adorned with slippery green slime.  There are terrifying sounds echoing
+through the passage.  You wonder what could be making such terrible
 noises. The passages continue east and west.
 ~
 212 265 0
@@ -144,11 +144,11 @@ stone~
 S
 #21206
 A Dark Passage~
-   You are standing in an incredibly small passage.  A cold chill is sent 
+   You are standing in an incredibly small passage.  A cold chill is sent
 down your spine as you feel a drop of icy cold water hit the back of your
 neck. In the distance, you see a solitary beam of light illuminating the
-wall to the east.  The bone-chilling sounds seem closer now.  Whatever is 
-making those dreadful noises sounds rather hungry.  The passage leads to 
+wall to the east.  The bone-chilling sounds seem closer now.  Whatever is
+making those dreadful noises sounds rather hungry.  The passage leads to
 the east and west.
 ~
 212 265 0
@@ -171,7 +171,7 @@ A Shadowy Passage~
    You are standing in a faintly lit passage.  There is a flickering
 light coming from the next room.  This place is carved out quite nicely,
 as if whomever did it certainly took their time.  The floor is covered
-in moss and slime, making it fairly slippery.  You wonder where this 
+in moss and slime, making it fairly slippery.  You wonder where this
 seemingly long passage leads to.  This entire place is totally unfamiliar
 to you.  The passage continues east and west.
 ~
@@ -210,8 +210,8 @@ A Spiraling Stone Staircase~
 be carved from granite.  They are quite beautiful and remarkably made.
 You wonder who would actually put such time and effort into carving
 out these underground tunnels.  Moisture seeps down from the walls
-allowing a growth of mold to partially cover the steps.  There are 
-torches here to help you find your way to the bottem safely.
+allowing a growth of mold to partially cover the steps.  There are
+torches here to help you find your way to the bottom safely.
 ~
 212 8 0
 D4
@@ -230,8 +230,8 @@ S
 #21210
 A Spiraling Stone Staircase~
    You are nearing the bottom of a spiraling stone staircase.  The
-steps here are very wide and made from granite.  The stairs are 
-slippery with moisture and mold that has grown here over time.  
+steps here are very wide and made from granite.  The stairs are
+slippery with moisture and mold that has grown here over time.
 The stairs are lit by blazing torches, providing a small amount
 of warmth to the place.  Gazing down you can see the bottom of the
 stairs.
@@ -249,11 +249,11 @@ S
 #21211
 At the Bottom of a Spiraling Stone Staircase~
    You are standing at the bottom of a spiraling staircase.  You look way
-up to the top of the staircase and realise that it is quite a ways to the
+up to the top of the staircase and realize that it is quite a ways to the
 very top.  The room is lighted by a few torches attached to the walls.  As
-you look around you see that this place is carved out of the rock and 
+you look around you see that this place is carved out of the rock and
 is quite smooth to the touch.  However, the dampness here makes you very
-uncomfortable. The place seems to open up to your west.  You realise
+uncomfortable. The place seems to open up to your west.  You realize
 that you are getting close to your destination.
 ~
 212 8 0
@@ -270,7 +270,7 @@ S
 Entrance to a cave~
    You are at an entrance to a cave.  The tunnels here seem to be quite
 larger than the ones you passed through before.  It is rather hot here
-and you wipe some sweat from your forehead.  The smell of mold here 
+and you wipe some sweat from your forehead.  The smell of mold here
 also begins to turn your stomach.  You dislike the atmosphere of this
 place. Off in the distance you hear some kind of noise.  You cannot
 determine what it is though.  Perhaps you should press on to find out.
@@ -315,8 +315,8 @@ surroundings and see that there is a lot of loose rock around the place.
 You notice that the walls here sparkle and glitter at certain points.
 Perhaps they contain some kind of mineral.  This place is rather damp
 and you feel a little bit sick. You dislike the idea of being this far
-underground. You still have the urge to keep going though.  There is a 
-bright light shining from the north. 
+underground. You still have the urge to keep going though.  There is a
+bright light shining from the north.
 ~
 212 8 0
 D0
@@ -332,7 +332,7 @@ S
 A Crystalline Cave~
    You are standing in a glittering crystal cave.  There are two huge
 balls of magic floating at the edges of the room making the glow of the
-crystals entice you.  You feel as though this place is heavenly.  The 
+crystals entice you.  You feel as though this place is heavenly.  The
 floor is smooth and slippery, and the walls are still jagged crystals.
 The sight here is utterly breathtaking.  The richness of this room is
 astounding. How anyone could afford to keep such a place is beyond
@@ -381,13 +381,13 @@ S
 #21217
 Entrance to the City~
    You are standing at the entrance to the beautiful Morian city.  You thought
-that such an underground city was only a rumour, but now that you are here you
+that such an underground city was only a rumor, but now that you are here you
 cannot believe your very eyes.  The entire city is built in a carved-out
 cavern. Everything you see is made from precious material and looks extremely
 beautiful. To either side of you are statues of nymphs and elves,  The street
 here is made of a beautiful blue stone that is unknown to you.  You can hear
 the bustling of the busy streets to your north.  To you're south is the grand
-gates to the city.  You feel as though this is a great place to enjoy 
+gates to the city.  You feel as though this is a great place to enjoy
 yourself.
 ~
 212 12 0
@@ -407,7 +407,7 @@ around the place is lit by bright balls of magic.  You gaze up at the
 underground cavern this city is built in.  As you look at the smoothly
 sanded rocks on the ceiling of this extremely high place, you wonder how
 much trouble it must have been to actually make this entire city
-underground. The beauty and sheer remarkabilty of this place is utterly
+underground. The beauty and sheer remarkability of this place is utterly
 stunning.  There are various streets leading off to the east and west of
 here. The entrance to the city lies south, and to the north is another
 city square.
@@ -432,11 +432,11 @@ D3
 S
 #21219
 A City Square~
-   You find yourself in the central city square.  The place glows with the 
+   You find yourself in the central city square.  The place glows with the
 rich colours of precious stones.  The streets are as smooth as ice, and
-are carved to perfection.  You can hear the busy streets around you, 
+are carved to perfection.  You can hear the busy streets around you,
 swarming life.  Strange balls of magic cast a bright light over the area.
-You find that is it quite humid and warm here, and find it slightly 
+You find that is it quite humid and warm here, and find it slightly
 uncomfortable. You notice a spiral staircase leading up to a floating
 magic shoppe.
 ~
@@ -457,10 +457,10 @@ S
 #21220
 A City Square~
    You are in the northern city square of the Morian city.  The street here has
-a patterned texture to it, and looks remarkable.  Ahead of you is a large 
+a patterned texture to it, and looks remarkable.  Ahead of you is a large
 granite wall with a carved tunnel leading into it.  You cannot make out what
 looms in its depths.  There are two large statues guarding each side of the
-entrance. It is really hot and humid here.  You notice perspiration on the 
+entrance. It is really hot and humid here.  You notice perspiration on the
 walls and street.  There are streets leading east and west of here.
 ~
 212 8 0
@@ -490,11 +490,11 @@ A Stairway to the Castle~
    You are on a long and wide staircase leading to the Morian Castle. The
 stairs are made from beautiful blue stones and there is a large black carpet
 running the entire stretch.  All along each side of the staircase is planted
-ferns and flowers.  You wonder how such beautiful things could grow in an 
+ferns and flowers.  You wonder how such beautiful things could grow in an
 underground place like this.  You guess that is must be magical.  There are
-strings of beautiful paper lanterns suspended on marble posts at certain 
+strings of beautiful paper lanterns suspended on marble posts at certain
 intervals along the stairs.  They cast a beautiful glow on your surroundings.
-This is a very magnigicent place.  Down from here lies the city, also 
+This is a very magnificent place.  Down from here lies the city, also
 slanting up to the north are more stairs.
 ~
 212 8 0
@@ -512,11 +512,11 @@ A Stairway to the Castle~
    You are on a long and wide staircase leading to the Morian Castle. The
 stairs are made from beautiful blue stones and there is a large black carpet
 running the entire stretch.  All along each side of the staircase is planted
-ferns and flowers.  You wonder how such beautiful things could grow in an 
+ferns and flowers.  You wonder how such beautiful things could grow in an
 underground place like this.  You guess that is must be magical.  There are
-strings of beautiful paper lanterns suspended on marble posts at certain 
+strings of beautiful paper lanterns suspended on marble posts at certain
 intervals along the stairs.  They cast a beautiful glow on your surroundings.
-This is a very magnigicent place.  The staircase continues north and south of
+This is a very magnificent place.  The staircase continues north and south of
 here.
 ~
 212 8 0
@@ -534,11 +534,11 @@ A Stairway to the Castle~
    You are on a long and wide staircase leading to the Morian Castle. The
 stairs are made from beautiful blue stones and there is a large black carpet
 running the entire stretch.  All along each side of the staircase is planted
-ferns and flowers.  You wonder how such beautiful things could grow in an 
+ferns and flowers.  You wonder how such beautiful things could grow in an
 underground place like this.  You guess that is must be magical.  There are
-strings of beautiful paper lanterns suspended on marble posts at certain 
+strings of beautiful paper lanterns suspended on marble posts at certain
 intervals along the stairs.  They cast a beautiful glow on your surroundings.
-This is a very magnigicent place.  The staircase slants back south from here,
+This is a very magnificent place.  The staircase slants back south from here,
 and to the north you gaze at a beautiful silver castle.
 ~
 212 12 0
@@ -557,7 +557,7 @@ Before the Grand Morian Castle~
 are constructed of pure shiny silver.  The glittering castle is one of the
 most amazing sights you have ever seen.  There are dual towers pillaring
 up almost to the top of the cavern on either side of the castle.  On top
-of each tower is a crystal dome.  There are fully bloomed rose bushes 
+of each tower is a crystal dome.  There are fully bloomed rose bushes
 climbing the walls of the castle on either side.  On either side of you
 is statues of the god Mykras.  This castle truly is a magnificent sight.
 You can only begin to imagine the kind of work that must have went into
@@ -581,7 +581,7 @@ here. The entire place is cast with a beautiful glow.  The floors
 are made from green marble and are carpeted with fluffy white
 rugs. There are statues of old kings and heroes here as well.
 A fountain flows in the center of the room here.  In the fountain
-are delicate lillies floating in the water.  The smell of incense
+are delicate lilies floating in the water.  The smell of incense
 wafts through the air.  Despite its size, this castle actually
 feels quite cozy and warm.  To the south is the Entrance, to the
 north are some palace hallways.
@@ -603,8 +603,8 @@ hung along the sides of the walls, casting a nice comfortable glow here.
 The crystal walls and floor glow from a cleaning job.  A huge burlap rug
 lines the floor as far along the hallways as you can see.  There are alcoves
 carved along at certain intervals in the wall.  There are various urns and
-statues placed in these alcoves.  The celings are high and arched about you.
-Your footsteps echo through the halls.  You find it odd that you haven't 
+statues placed in these alcoves.  The ceilings are high and arched about you.
+Your footsteps echo through the halls.  You find it odd that you haven't
 seen anyone around yet though.  North of here is you see a rather large room,
 to your east and west are more hallways.
 ~
@@ -630,12 +630,12 @@ S
 Entrance to the Throne Room~
    You are standing at the entrance to the Morian Throne Room.  The
 room is rather quite small.  There are a few very comfortable benches
-on each wall.  The floor is covered in a lush red carpet, and red 
+on each wall.  The floor is covered in a lush red carpet, and red
 sheers and drapes hang from each wall.  The curtain to your north
 particularly catches your eye.  Its is flaming red with a beautiful
 looking pattern stitched on to it.  The quality of these materials are
 excellent. This looks like a nice place to take a nap if you wanted
-to. There is no one around, and this place is really warm and 
+to. There is no one around, and this place is really warm and
 comfortable. You are guessing that the throne room lies past the
 curtain to the north.  To the south is a palace hallway.
 ~
@@ -651,14 +651,14 @@ D2
 S
 #21228
 Before the Grand Throne of Moria~
-   You are standing in the Morian Throne Room.  This place is massively 
-large and incredibly beautiful.  Crystal chandaliers hang from the
-high arched ceilings.  A red carpet leads its way up the the incredible
+   You are standing in the Morian Throne Room.  This place is massively
+large and incredibly beautiful.  Crystal chandeliers hang from the
+high arched ceilings.  A red carpet leads its way up to the incredible
 golden throne of Moria.  Silver tables and chairs furnish either side
 of the room and there are various harps and lutes waiting to entertain
 some of the Morian King's guests.  There are huge statues of Mykras
 on each side of the room.  Paintings of past Kings and Queens hang on
-the southern wall.  This place is very majestic, and is definatly fit
+the southern wall.  This place is very majestic, and is definitely fit
 for the King of this Realm.
 ~
 212 8 0
@@ -673,11 +673,11 @@ curtain~
 S
 #21229
 A Secret Room~
-   You are in a small stone room.  This place looks to be used as some 
+   You are in a small stone room.  This place looks to be used as some
 kind of prison cell.  There are shackles hanging from the northern wall
 and blood stains on the floor.  The entire room is made from a dark stone
 and the place is very cold.  You can't imagine having to stay in here for
-very long without either dying or going insane.  To leave somone here
+very long without either dying or going insane.  To leave someone here
 would be utter torture, no wonder this place was hidden.  Dripping water
 falls from the ceiling.  You find yourself feeling very uncomfortable
 here. Perhaps you should go back south to the Throne Room.
@@ -690,12 +690,12 @@ throne~
 S
 #21230
 A Palace Hallway~
-   You are standing in a western wing of the castle hallways.  The 
+   You are standing in a western wing of the castle hallways.  The
 halls generally seem to look alike.  More beautiful lanterns hang
 from the walls, and ancient paintings from times long ago adorn
 small alcoves.  You gaze up at the huge arched ceiling, it must
 have taken a lot of work to make this castle.  The artists who
-helped build this place definatly thought of every tiny detail.
+helped build this place definitely thought of every tiny detail.
 You can hear the sound of gently soothing music wafting from
 somewhere to the west.
 ~
@@ -713,10 +713,10 @@ S
 A Palace Hallway~
    You are in the western corner of the castle hallways.  At the far wall
 you see a majestic statue of a beautiful lady.  The glow from the lanterns
-casts an magnificent glow on her sad-looking face. The ceiling here is 
+casts an magnificent glow on her sad-looking face. The ceiling here is
 lower than the rest of the hallways.  You feel a blast of cold air from
 the north.  You can also hear beautiful music coming from one of the
-nearby rooms.  The music gently soothes your soul, making you feel 
+nearby rooms.  The music gently soothes your soul, making you feel
 very relaxed.
 ~
 212 8 0
@@ -737,7 +737,7 @@ S
 A Palace Hallway~
    You are standing in the eastern hallways of the morian castle.  Glancing
 around, you notice that the place looks much like the rest of the hallways.
-The paintings here are quite bright and colourful.  They do not seem to
+The paintings here are quite bright and colorful.  They do not seem to
 be faded, and you judge them to be rather recent.  However, you cannot
 say the same for the lanterns that light the hallway.  They appear rather
 dim, and shed little light.  You can hear the distant sound of clanging
@@ -759,7 +759,7 @@ A Palace Hallway~
 upon an immense statue of a cold looking man.  The light from the
 lanterns gives the statue an eerie glow.  The statues eyes seem to
 follow you, watching your every move.  The hair on your neck stands
-on end.  You feel a draft coming from the the north. You can hear
+on end.  You feel a draft coming from the north. You can hear
 the sound of clanging metal from the south.
 ~
 212 8 0
@@ -785,7 +785,7 @@ maces and other deadly looking weapons on it.  There are also many old suits
 or armor standing against the walls.  It seems that these weapons haven't
 been used in a long time.  To the southeastern corner of the room you see
 an area for practicing.  There are some weapons on the floor there.  You
-wonder how skills the Morians are at using these weapons.  The castle 
+wonder how skills the Morians are at using these weapons.  The castle
 hallways are to the north.
 ~
 212 8 0
@@ -798,12 +798,12 @@ S
 The Castle Music Room~
    You enter into a beautiful music room.  Everything in here seems to be
 constructed from glass.  Even the floor is glass!  Beautiful musical
-intruments hang from the walls.  You see an ancient set of drums and glocks
+instruments hang from the walls.  You see an ancient set of drums and glocks
 in a Corner, and a beautiful collection of lutes right by it. This place is
 really wonderous.  There are also a few tapestries and paintings adorning
 the walls.  They depict artistic looking people at banquets, and playing
-their intruments.  A huge grand piano contructed from glass catches your
-eye in the centre of the room.  This is every musicians heaven!  To the
+their instruments.  A huge grand piano constructed from glass catches your
+eye in the center of the room.  This is every musicians heaven!  To the
 north is the palace hallways.
 ~
 212 8 0
@@ -814,7 +814,7 @@ D0
 S
 #21236
 A Small Chamber~
-   You are standing in a dank and cold chamber.  This room is extremely 
+   You are standing in a dank and cold chamber.  This room is extremely
 tiny and you can barely move.  The walls are made from an old dark stone.
 The room smells of mold and decay.  Water seeps down the sides of the
 walls, and the floor is littered with dust and other dirt.  You feel
@@ -853,8 +853,8 @@ D5
 S
 #21238
 The Sage's Tower~
-   You find yourself at the top of the narrow tower.  This room is much 
-larger than the stairs to get up here.  As you look around you see 
+   You find yourself at the top of the narrow tower.  This room is much
+larger than the stairs to get up here.  As you look around you see
 bubbling beakers and burning braziers.  There are potion racks on the
 walls here containing liquids of various colours and containers of odd
 sizes. There are books everywhere here, shelves are covered with them
@@ -871,7 +871,7 @@ D5
 S
 #21239
 A Small Chamber~
-   You are standing in a very small and cramped chamber.  There is hardly 
+   You are standing in a very small and cramped chamber.  There is hardly
 enough room for you to move around in here.  The entire chamber has been
 made from dark stone.  This place sends chills down your spine.  Its very
 cold and damp.  Bits of moisture have gathered on the walls and some
@@ -916,7 +916,7 @@ nice and neatly organized.  There are many books and scrolls on the shelves
 here. A well used desk is in the corner of the room here, and a small bed
 is in another corner.  However, the room may look comfortable at first,
 but there is a freezing chill in the air, and there is very little warmth
-here. There is a long burned out fire pit in the centre of the room.  You
+here. There is a long burned out fire pit in the center of the room.  You
 get a strong sense of danger lurking around.  You don't feel safe standing
 in this room, perhaps you should leave.
 ~
@@ -979,9 +979,9 @@ D3
 S
 #21244
 A Street Corner~
-   You are standing on a beautiful street corner.  People are here in 
+   You are standing on a beautiful street corner.  People are here in
 the streets carrying out their daily tasks.  This place reminds you
-of any other normal, bustling city.  The people here seem to have 
+of any other normal, bustling city.  The people here seem to have
 adjusted to living underground just fine.  On the street corner you
 see a large diamond pole suspending a Morian flag.  A white light
 makes the street glow bright.  The ruby street reflects the light,
@@ -1022,8 +1022,8 @@ S
 A Poorly Lit Alley~
    You are in a very dark alley.  There is garbage lining the ground and
 it seems that there are blood stains on the ground and walls.  You find
-it suprising to find a place like this in such a beautiful city.  You 
-get a very uneasy feeling about standing in this place.  You should 
+it surprising to find a place like this in such a beautiful city.  You
+get a very uneasy feeling about standing in this place.  You should
 probably leave as fast as you can, otherwise you may have a scary battle
 at hand.  You can hear the noise of the busy streets to the north and
 south of here.
@@ -1040,9 +1040,9 @@ D2
 S
 #21247
 A Street Corner~
-   You are standing on a beautiful street corner.  People are here in 
+   You are standing on a beautiful street corner.  People are here in
 the streets carrying out their daily tasks.  This place reminds you
-of any other normal, bustling city.  The people here seem to have 
+of any other normal, bustling city.  The people here seem to have
 adjusted to living underground just fine.  On the street corner you
 see a large diamond pole suspending a Morian flag.  A white light
 makes the street glow bright.  The ruby street reflects the light,
@@ -1185,9 +1185,9 @@ D3
 S
 #21253
 A Street Corner~
-   You are standing on a beautiful street corner.  People are here in 
+   You are standing on a beautiful street corner.  People are here in
 the streets carrying out their daily tasks.  This place reminds you
-of any other normal, bustling city.  The people here seem to have 
+of any other normal, bustling city.  The people here seem to have
 adjusted to living underground just fine.  On the street corner you
 see a large diamond pole suspending a Morian flag.  A white light
 makes the street glow bright.  The ruby street reflects the light,
@@ -1210,8 +1210,8 @@ D3
 S
 #21254
 The Post Office of Moria~
-   You are standing in a very nice looking post office.  The floors are made 
-from precious ivory stones.  Suprisingly however, the place is in quite a 
+   You are standing in a very nice looking post office.  The floors are made
+from precious ivory stones.  Surprisingly however, the place is in quite a
 mess. There are old discarded postcards lying all around the floor, as well
 as some unfinished notes and papers scattered all over the place.  Standing
 behind the counter here is a confused looking man.  He must be the post
@@ -1227,8 +1227,8 @@ S
 A Poorly Lit Alley~
    You are in a very dark alley.  There is garbage lining the ground and
 it seems that there are blood stains on the ground and walls.  You find
-it suprising to find a place like this in such a beautiful city.  You 
-get a very uneasy feeling about standing in this place.  You should 
+it surprising to find a place like this in such a beautiful city.  You
+get a very uneasy feeling about standing in this place.  You should
 probably leave as fast as you can, otherwise you may have a scary battle
 at hand.  You can hear the noise of the busy streets to the north and
 south of here.
@@ -1245,7 +1245,7 @@ D2
 S
 #21256
 A Street Corner~
-   You are standing on a beautiful street corner.  You gaze around at the 
+   You are standing on a beautiful street corner.  You gaze around at the
 various activities the people carry on here.  It amazes you to think of
 how normal this city feels to you, despite the fact that you are actually
 very deep underground. The Morians carry on everyday life just like that
@@ -1323,8 +1323,8 @@ A Dark Tunnel of Stone~
 here. Its hard to determine where you are going.  All you can see is dark
 walls and the stone floor.  Upon closer inspection you see that the walls
 have runes and other carvings engraved upon them.  Off to the north you
-can hear a deep, loud echoing noise that sends a chill down your spine.  
-You can sense evil lurking nearby. 
+can hear a deep, loud echoing noise that sends a chill down your spine.
+You can sense evil lurking nearby.
 ~
 212 32780 1
 D0
@@ -1338,13 +1338,13 @@ D2
 S
 #21260
 A Dark Tunnel of Stone~
-   You are walking in an old stone tunnel that is fairly dark.  You can still 
+   You are walking in an old stone tunnel that is fairly dark.  You can still
 manage to see where you are going, but for the most part all you can see is
-dark stone walls and a stone floor.  The tunnel seems to be poorly contructed
-and the floor looks to have gotten a lot of use.  All along the walls here 
+dark stone walls and a stone floor.  The tunnel seems to be poorly constructed
+and the floor looks to have gotten a lot of use.  All along the walls here
 there are various carvings and runes depicting some Morian lore about the
 ancient god Mykras.  You can hear strange noises echoing off the walls here.
-It sounds loud, like that of thunder.  You can also feel the strong forces of 
+It sounds loud, like that of thunder.  You can also feel the strong forces of
 evil nearby.  The tunnel continues to the south and north.
 ~
 212 32780 1
@@ -1359,7 +1359,7 @@ D2
 S
 #21261
 A Dark Stone Tunnel~
-   You are standing in a very hot part of the tunnel.  The floor and 
+   You are standing in a very hot part of the tunnel.  The floor and
 walls here are covered with water, making things slippery.  The tunnel
 here seems to be falling apart.  Pieces of crumbled rock are scattered
 about, and the floor has huge cracks in it that glows with the red hot
@@ -1393,10 +1393,10 @@ The Chapel of Moria~
 around you.  The pews can hold thousands of people at a time, and the entire
 chapel is utterly huge.  The ceiling has a mural of pale dragons being tamed
 by the god Mykras.  There are giant statues of old Morian heroes, and also
-paintings of great wars.  There are thousands of candles lining the walls 
+paintings of great wars.  There are thousands of candles lining the walls
 from the back of the chapel up through to the front.  The walls and floor
 are constructed from an opal like stone.  There is a long stretch of green
-carpeting leading all the way up the the altar.  You can sense an evil
+carpeting leading all the way up to the altar.  You can sense an evil
 presence here.  There get a profound sense of danger.
 ~
 212 8 0
@@ -1412,10 +1412,10 @@ S
 #21263
 Before the Altar of Mykras~
    You are standing before the beautiful altar of Mkyras.  This huge altar
-soars to the very ceiling of the chapel.  It flows water, wine and blood 
+soars to the very ceiling of the chapel.  It flows water, wine and blood
 from various channels cut into the stone.  All along the altar there are
 flowers placed as an offering for the god.  You can hear faint music
-here, as if the altar is eminating the beautiful sound.  You can sense
+here, as if the altar is emanating the beautiful sound.  You can sense
 the power of Mykras here.  It is very prominent in this room.  You feel
 as if a great battle is about to take place.  You had better leave here
 unless you dare face the challenges you are about to encounter.
@@ -1442,13 +1442,13 @@ S
 A Floating Magic Shoppe~
    You are standing in a magic shoppe that is floating a ways above the ground.
 There are various potions and herbs of magical nature on the shelves in this
-room. It is actually quite warm and cozy, and is suprisingly bright and 
-friendly, not usually a trait for magic users.  There is a very large 
+room. It is actually quite warm and cozy, and is surprisingly bright and
+friendly, not usually a trait for magic users.  There is a very large
 cauldron bubbling away in the center of the room, no doubt some strange magical
-liquid created by the owner of this place.  As you gaze up there is a mass of 
+liquid created by the owner of this place.  As you gaze up there is a mass of
 clouds swirling all around the room.  In one corner you notice its raining...
-What an odd place this is.  You see a jolly looking mage standing behind a 
-counter here.  This place looks as if it should suit most of your magical 
+What an odd place this is.  You see a jolly looking mage standing behind a
+counter here.  This place looks as if it should suit most of your magical
 wants or needs!
 ~
 212 32780 0
@@ -1460,10 +1460,10 @@ S
 #21266
 The Morian Smithy~
    You enter into a large open shoppe filled with great armours and battle
-equipment. You gaze around at ancient suits of armored that are 
+equipment. You gaze around at ancient suits of armored that are
 constructed from gold, silver, and platinum.  This is some of the best
 armor you have ever seen.  All along the walls there are various types
-of chainmails, platemails, and other expensive things.  The Morians 
+of chainmails, platemails, and other expensive things.  The Morians
 seem to know what they are doing in constructing these type of things.
 You can tell that the quality of these things are exceptional.
 ~
@@ -1498,7 +1498,7 @@ pleasant. The smells of freshly baked bread and other pastries waft
 through the air.  Your mouth waters as you look at all the various candy,
 cakes, and other foods that line the racks around the room. This is
 definitely the place to buy some good eats.  You know that you could
-certainly enjoy yourself in a place like this!  You see a rather pretty 
+certainly enjoy yourself in a place like this!  You see a rather pretty
 lady standing behind a counter here.
 ~
 212 32780 0
@@ -1509,14 +1509,14 @@ D2
 S
 #21269
 The Morian Jewel Shoppe~
-   You enter into a very expensive looking shoppe.  The walls and floor are 
+   You enter into a very expensive looking shoppe.  The walls and floor are
 carved from beautiful exotic stones.  As you look around, you notice
-various cases that contain rare and precious jewels that were mined by 
+various cases that contain rare and precious jewels that were mined by
 the Morians, as well as some that have been imported here from far away
 lands. There are also various objects crafted here from certain stones.
 There is a huge statue of Mykras adorning the north wall of the room,
 constructed entirely of emerald.  You think of how rich the Morians must
-be to make normal shoppes look so beautiful.  
+be to make normal shoppes look so beautiful.
 ~
 212 32780 0
 D2
@@ -1526,15 +1526,15 @@ D2
 S
 #21270
 A Trembling Rock Tunnel~
-   You are standing in a trembling rock tunnel.  The walls and floor 
-shift and move under some great pressure.  It is very dark and hot 
-down here.  A red hot glow seems to eminate from cracks in the floor
+   You are standing in a trembling rock tunnel.  The walls and floor
+shift and move under some great pressure.  It is very dark and hot
+down here.  A red hot glow seems to emanate from cracks in the floor
 here. Small boulders and rocks shift about you uneasily.  You get
-the impressesion that is quite dangerous down here and its probably
+the impression that is quite dangerous down here and its probably
 best that you turn around to avoid being crushed by these huge rocks.
 The groan of the rocks echo through the tunnels.  There is no way
 anything human could survive down here for too long.  You already
-feel overcome by the heat.  The tunnel contiunes to the south.
+feel overcome by the heat.  The tunnel continues to the south.
 ~
 212 9 0
 D2
@@ -1546,12 +1546,12 @@ S
 A Trembling Rock Tunnel~
    You continue on deeper into the trembling tunnel.  The tremors that
 you felt earlier seem to be worsening.  You find that the heat is also
-getting worse and worse.  There is steam rising up from cracks in the 
+getting worse and worse.  There is steam rising up from cracks in the
 floor. You hear a strange sound echo through the tunnel, making the
 hair on your neck stand on end.  It is best to leave these tunnels
-as fast as you can.  To the south you can see that the tunnel has 
+as fast as you can.  To the south you can see that the tunnel has
 began to totally fall apart, to the north is where you came into this
-dreaful place.
+dreadful place.
 ~
 212 9 0
 D0
@@ -1565,13 +1565,13 @@ D2
 S
 #21272
 A Trembling Rock Tunnel~
-   You find yourself in a severly crumbled section of the tunnel.  Huge
+   You find yourself in a severely crumbled section of the tunnel.  Huge
 rocks and large deposits of sand make it really hard to walk here.  The
-tunnel here dips down into a large crevice that must have been made 
+tunnel here dips down into a large crevice that must have been made
 during all the tremors.  A wave of heat penetrates you as you gaze down
 into the dark crevice.  All you can see is the blackness of the tunnel,
 with the exception for the red hot rocks at the bottom.  It seems like
-a long and dangerous venture down into the crevice.  
+a long and dangerous venture down into the crevice.
 ~
 212 9 0
 D0
@@ -1585,12 +1585,12 @@ D5
 S
 #21273
 A Trembling Rock Tunnel~
-   After what seems to be a very long venture down the crevice you 
-finally make it to the bottom umharmed.  The heat from the tunnels
-becomes more and more apparent as you go deeper into the ground.  
+   After what seems to be a very long venture down the crevice you
+finally make it to the bottom unharmed.  The heat from the tunnels
+becomes more and more apparent as you go deeper into the ground.
 If you keep going, you feel certain that you will die.  You hear
 a monstrous echo boom through the tunnel.  You cringe in fear as
-you realise that there is definatly something living down here,
+you realize that there is definitely something living down here,
 and it sounds dreadful.  The only exit from here is to the north.
 ~
 212 9 0
@@ -1601,13 +1601,13 @@ D0
 S
 #21274
 A Trembling Rock Tunnel~
-   You come to a larger opening in the tunnel.  The room here is 
+   You come to a larger opening in the tunnel.  The room here is
 trembling violently.  Rocks and other gravel continuously drops
 from the walls and ceiling.  Once again you hear the horrifying
 sound thunder up from below you.  You can feel a monstrous presence
 nearby. Beads of sweat continue to roll down your face as you
 realize that you are about to encounter something truly foul.  A
-huge pit in the centre of the room consumes all the loose rock, you
+huge pit in the center of the room consumes all the loose rock, you
 had better be careful or you may get pulled in.
 ~
 212 9 0
@@ -1619,7 +1619,7 @@ S
 #21275
 A Deadly Rock Pit~
    You are standing in a deadly rock pit.  There are rocks and boulders
-crumbling from the ceiling and walls.  Your in great danger here of 
+crumbling from the ceiling and walls.  Your in great danger here of
 being flattened.  This place is extremely hot.  You feel very weak
 and tired.  You find yourself breathing very hard, and you are having
 trouble holding on to your equipment.  The room shakes and trembles

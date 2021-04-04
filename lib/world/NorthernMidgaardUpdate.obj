@@ -1196,11 +1196,11 @@ a bottle of white liquid has carelessly been left here ~
 100
 E
 potion~
-NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
+NoName's Shop Production -- Remove Curse, Remove Poison, Sense Life
 ~
 E
 white~
-NoName's Shop Production -- Remove Curse, Remove Posion, Sense Life
+NoName's Shop Production -- Remove Curse, Remove Poison, Sense Life
 ~
 X
 ~
@@ -1601,45 +1601,45 @@ of deliberation, the supreme council has effected the following changes:
 
 Healing:
 
-  - The amount healed from spells such as Cure, Lay Hands, and Heal has been 
+  - The amount healed from spells such as Cure, Lay Hands, and Heal has been
     increased, granting the wishes of many pious mortals.
 
   - Miracle will now have a cap of 2000 hit points, as no mortal's faith is
     limitless.
-    
+
   - Great miracle (and the golden stick) will now affect the whole room.
-  
+
   - Divine Intervention will still heal to full, as it is direct divine
     action, like the name implies.
-    
+
   - Spell costs have changed, refer to the help for details.
 
 Skills:
 
   - Bash and pummel now stack with the victim's current position, allowing
     for even greater damage on the next attack.
-    
+
   - All skills that deal damage will account for the victim's position,
     potentially multiplying their effectiveness.
-    
+
 Classes:
 
   - Bards shall now gain Haste at level 45, and learn the Rejuvenation song
     at level 50.
-    
+
   - Clerics shall now gain the Bash skill at level 35, and gain Haste at 40.
 
 Remorting:
- 
+
   - A new remort system is now in place.  The system is now automated, and
     will incur a cost depending on your current status.  For more information
     refer to 'help remort'.
-    
+
   - After reincarnation, you will be granted a bonus to experience until
     you reach your previous status.
-    
-  - The gods have chosen a representative, Immortalis, to perform 
-    reincarnation.  If you wish to follow this path, he sits to the west of 
+
+  - The gods have chosen a representative, Immortalis, to perform
+    reincarnation.  If you wish to follow this path, he sits to the west of
     the Temple Altar and Idea board.
 ~
 16 3 0
@@ -1666,22 +1666,22 @@ a large wooden display case has been placed at the back of the room.~
 E
 middle~
 As you gaze upon the middle shelf you feel informed...
- 
+
    Each of these items may be purchased for 300 RP + 1 QT and have no class or alignment restrictions.
- 
-The pelt of a black cat: neck, about, clonable
+
+The pelt of a black cat: neck, about, cloneable
  20 AC-apply, +6 SAVING_SPELL, +6 HITROLL, +6 MANA_REGEN, PROTECT_GOOD, PROTECT_EVIL
  no specs
- 
+
 A witch's broom: hold, boat
  -33 ARMOR, +19 MANA_REGEN, +6 DAMROLL
  no specs
- 
+
 a lance tipped with a mammoth's tusk: wield, pierce, 8d5
  +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-EVIL
  no specs
  Mages and Clerics cannot use this sharp weapon.
- 
+
 Leviathan's scale vambraces: arms
  25 AC-apply, +4 DAMROLL, +50 HP, +25 HP_REGEN, PROTECTION-GOOD
  no specs
@@ -1689,37 +1689,37 @@ Leviathan's scale vambraces: arms
 E
 bottom~
 As you gaze upon the bottom shelf you feel informed...
- 
+
    Each of these items may be purchased for 150 RP and have no class or alignment restrictions.
- 
+
 Winner's Necklace: neck, 15 AC-apply, +5 HITROLL, +50 HP, no specs
- 
+
 Schynbalds of the Kobold Lord: legs, 20 AC-apply, +4 DAMROLL, +1 HITROLL, INFRAVISION, no specs
- 
+
 Spaulders of the Gargoyles: arms, 15 AC-apply, +4 DAMROLL, +2 HITROLL, FLY, no specs
- 
+
 a ghost glaive: hold (type THROW),+6 DAMROLL, +6 HITROLL, +15 SKILL_THROW, 6d66, no specs
- 
+
 a Giant Armadillo Hauberk: body, 23 AC-apply, +2 DAMROLL, +50 HP, +50 MANA, SENSE-LIFE, no specs
- 
+
 a hedgehog-hide skullcap: helm, 15 AC-apply, +3 DAMROLL, +3 HITROLL, DETECT-ALIGN, no specs
- 
+
 a plated belt of platypus bills: waist, 25 AC-apply, +3 DAMROLL, -100 HP, FLY, no specs
- 
+
 a crucified nomad: shield, 25 AC-apply, +2 DAMROLL, +100 HP, +50 HP_REGEN, no specs
- 
+
 Dalmatic of the bloodthirsty voivode: about, 40, AC-apply +3 HITROLL, +4 DAMROLL, DETECT-INVIS, no specs
 ~
 E
 top~
 As you gaze upon the top shelf you feel informed...
- 
+
    Each of these items may be purchased for 450 RP + 1 QT and have no class or alignment restrictions.
- 
+
 The shell of a carved pumpkin : body
  30 AC-apply, +33 HP_REGEN, +5 DAMROLL, SANC
  no specs
- 
+
 giant's-hide greaves: legs
  25 AC-apply, +5 DAMROLL, +50 HP, +25 HP_REGEN, SPHERE
  no specs
@@ -1731,33 +1731,33 @@ constructed of the same wood, though unlike the others is lined on all sides
 with reddish metallic braces. A dim, eerie light creeps out from the joins
 between the wood and crimson metal, giving the impression of keeping something
 sealed in.
- 
+
 Splayed across the length of the shelf are an impressive array of items, various
 pieces of clothing, armor and pair of rings almost inextricably bound to each
 other.
- 
+
 On the far-left edge of the shelf is a light grey COWL, that while possessing
 no inherent skeletal structure, stands up on its own merit, rather than doing
 what you'd expect; crumpling into a pile. Compound that with what appears are
 thin wisps of darkness emanating from inside the hood and you're left with a
 rather unsettling feeling.
- 
+
 To its right is a battered and gore encrusted GAUNTLET, worn from an
 unfathomable number of battles. The underlying metallic structure is an
 unearthly brown ore, though it has been so dreadfully stained by dried blood
 that it almost appears obsidian at first glance.
- 
+
 Resting in a neat pile at the center of the shelf is a large metallic disc
 adorned with an array of glowing runes, surrounding a brilliant ruby set firmly
 into its surface. It appears that this gem serves as a PHYLACTERY and after
 holding your breath in stillness, you can hear a very faint moan bubbling up
 from within.
- 
+
 Stacked one onto another with unnaturally perfect alignment is a set of gleaming
 BONE rings. Almost identical at first glance, you notice a set of glyphs
 emblazoned upon the surface with some strange eldritch magic, one appears to be
 an representation of a mountain range, the other a lengthy span of clouds.
- 
+
 Lastly, at the far-right edge of the shelf are a set of ancient SHABTIS dolls,
 crafted from a variety of materials with unparalleled craftmanship. Each
 figurine is connected to a rudimentary cloth belt by a vicious metal hook,
@@ -1769,68 +1769,68 @@ This case is low-slung, only reaching waist high. It runs the length of the
 south wall and looks to be ancient. The wooden frame is constructed of the
 highest quality wood and the top, front and sides are finished with thick glass.
 An eclectic collection of items is placed on the shelves within the case. The
-shelves are labled BOTTOM, MIDDLE, TOP and SPECIAL.
+shelves are labeled BOTTOM, MIDDLE, TOP and SPECIAL.
 
 A small clipboard lies upon the case, it looks to be holding a PRICE LIST.
 ~
 E
 gauntlet~
- 
+
 The Spiked Gauntlet of Gruumsh
- 
+
 worn on hands
 25 AC-Apply
 +6 DAMROLL
 +6 HITROLL
 +5 MANA_REGEN (or +25 HP_REGEN)
 DETECT-INVISIBLE
- 
+
 Spec: 15% chance on successful pummel to set victim's position to
 ......mortally wounded instead of stunned, meaning the following
 ......hit has a 2.5x multiplier instead of just 2x
- 
+
 Cost: 350 RP + 2 QT
 ~
 E
 phylactery~
- 
+
 Phylactery of the Bean-Sidhe
- 
+
 worn about waist
 10 AC-apply
 +4 DAMROLL
 +2 HITROLL
 +5 MANA_REGEN (or +25 HP_REGEN)
 INFRAVISION, FLY
- 
+
 Spec: stores up to 3 charges for "wail" command
 ......wail: hits all mobs in room for 333dmg and makes wailer tank
 ......Charges each take 1/2 mud day to recharge
- 
+
 Cost: 250 RP + 2 QT
 ~
 E
 cowl~
- 
+
 cowl of the Shadowmage
- 
+
 worn on head
 5 AC-Apply
 +5 DAMROLL
 +5 HITROLL
 +5 MANA_REGEN (or +25 HP_REGEN)
 SENSE LIFE, DETECT ALIGN
- 
+
 Spec: stores up to 3 charges for "bite" command
 ......harvest <target> (PC): steals 200 mana
 ......harvest <target> (NPC): mira self, 500dmg to target (uses all 3 charges)
 ......Charges each take 1/2 mud day to recharge
- 
+
 Cost: 250 RP + 2 QT
 ~
 E
 shabtis~
-Shabtis of the mummified pharoah
+Shabtis of the mummified pharaoh
 
 worn about waist
 0 AC-Apply
@@ -1841,7 +1841,7 @@ DETECT INVIS, SENSE LIFE, INFRAVISION
 
 Specs: Four shabti figures that each perform a specific task (triggered on use)
 ......Doctor (Swnu): Great Mira - Takes 2 mud week to recharge
-......Sheperd (Neru): Total Recall - Takes 60 ticks to recharge
+......Shepherd (Neru): Total Recall - Takes 60 ticks to recharge
 ......Gardener (Kani): Great Mana - Takes 4 mud weeks to recharge
 ......Soldier (Waw): Summons an army that does 6,000 damage to current target - Takes 1 mud week to recharge
 
@@ -1891,8 +1891,8 @@ Type:
 
      Use vault <vaultname>- to switch the current vault.
 
-     Buy access <player name>- gives access to the current vault to the 
-     specified person- costs 100000 coins. 
+     Buy access <player name>- gives access to the current vault to the
+     specified person- costs 100000 coins.
 
      Buy view <player name> - gives view access of the current vault to
      the specified person - Free

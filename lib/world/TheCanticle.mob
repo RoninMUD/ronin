@@ -1,112 +1,185 @@
 #1301
 rook~
 The Rook~
-A Rook is standing here.
+A Rook, warrior of the light stands his guard.
 ~
-A tall knight of Canticle.  The Rook, a veteran of many holy wars is 
-dressed in golden armor.
+You stand in the presence of one of the storied heroes of the Light
+Crusades, of a time now vanished from our world.  This noble warrior
+wears his tarnished golden armor with pride, re-living the exploits
+of his past.  Banished now to patrol the halls of the Canticle, the
+Rook vigilantly performs his duty, protecting the overlord and the
+artifacts he protects.
 ~
-78 0 0 Y
-8 13 30 0d1+98 2d5+1
-300 6800
+76 0 0 Y
+12 13 5 10d45+120 3d4+3
+2400 43000
 8 8 0
 4 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #1302
 frump~
 The Old Frump~
-An Old Frump sweeps past you.
+An Old Frump hobbles past you, leaning heavily on her cane.
 ~
-An old Frump stands here cleaning up.  The ugly hag appears to be at least
-100 years old.  She looks at you with a scowl.
+This pitiful old maid hobbles around the kitchens on a cane.  Mumbling
+constantly under her breath, you wonder if she is talking to you, or the voices
+in her head.  This ancient woman appears to have seen many ages come and go,
+and as you walk by her, she looks up at you with a scowl.
 ~
 108 0 -750 Y
-10 11 20 0d1+125 2d6+1
-250 8500
+11 11 20 30d20+40 2d6+3
+1800 33000
 8 8 2
 75 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #1303
 gargon~
 The Gargon~
-The Gargon stands here mixing the brew.
+The Gargon, chained to the wall, is hunched over an evil looking brew.
 ~
-The kitchen witch is a horrible sight.  She is filthy and covered with 
-warts.  The witch looks ready to cast a spell.
+This ragged looking witch that is chained to the wall is truly a pitiful
+sight. She is filthy and covered from head to toe in warts.  Sweating and
+working over a foul looking brew (which you hope isn't someone's dinner),
+she is quite disgusting.
 ~
 74 0 -800 Y
-13 8 20 0d1+161 2d7+1
-1000 10000
+13 8 20 40d10+75 2d7+1
+3000 33000
 8 8 2
 68 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #1304
 blue rook~
 The Blue Rook~
-The Blue Rook is sitting here at this desk.
+The Blue Rook is standing quietly, eyes closed, and arms raised to the heavens.
 ~
-A grand knight.  He looks extremely strong, and glows with a blue haze.
+The Blue Rook stands before you clad in the trappings of his fellow
+knights, with the lone exception that his is painted a brilliant blue.
+The lieutenant of the other troops in the Canticle, the Blue Rook
+passes his time in deep meditation here in his isolated chamber.  While
+he does not immediately acknowledge your presence, you know instinctively
+that he is watching your every move very carefully.
 ~
 74 0 0 Y
-19 2 0 0d1+240 3d6+3
-2500 15000
+13 7 5 1d20+380 3d6+3
+2500 35000
 6 6 1
 4 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #1305
-sentinel~
-The Sentinel~
-The Sentinel stands at his post.
+sentinel watch guard~
+Sentinel of the Guard~
+The Sentinel of the Guard stands here at his post.
 ~
-A stolid, stoic soldier.  He glares icily at the surrounding area.
+The knights chosen for the Sentinel of the Guard are truly the elite
+of the Order.  Weapons ever at the ready, these knights have been 
+chosen for their blind allegiance to the order.  Standing here to guard
+the Tower, and it's inhabitant Ustan, these men are not to be trifled
+with.
 ~
-74 0 0 Y
-9 12 30 0d1+115 2d5+1
-600 9000
+74 0 450 Y
+12 12 4 170d3+50 2d7+1
+2000 30000
 8 8 1
 4 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #1306
-demiwolf~
-The Demiwolf~
-A Demiwolf skulks here, guarding the entrance.
+demi wolf demiwolf~
+The Demi-Wolf~
+A Demi-Wolf sits in the shadows, guarding the door.
 ~
-A viscious wolf grinds its teeth and growls at you.
+The Demi-Wolf is a dangerous animal born of magic and darkness.  Half
+demon and half wolf, this evil creature has been bent to the will of
+the master of the Canticle.  Loyal to none but the Overlord, this
+creature makes the perfect protector.
 ~
 106 0 -400 Y
-12 9 20 0d1+400 2d7+1
+13 9 20 0d1+400 2d7+1
 0 42000
 8 8 0
 60 0 0d0+0 0
 0 0 0 0
 K
-60 0 0 0 0 0
+60 0 0 0 0 0 0
 #1307
-overlord~
-The Overlord~
-The Overlord stands here.
+overlord order light canticle~
+The Overlord of the Canticle~
+The Overlord of the Canticle stands before you.
 ~
-A great Demi-God, the Overlord.  His eyes flicker gold and his face is pure
-bronze.  He tells you it would be wise to leave now.
+The Overlord is here dressed in a full suit of bronze battle armor.  His
+face is covered with a mask of the purest silver.  From the edges of the
+mask you can see a blue light emanate, bringing to mind the rumors of
+the origins of this creature.  Is it true that the Overlord is the spawn
+of some demon?  Could this explain the Demi-Wolves that guard these 
+chambers? Whatever it's origins, this creature is enormous, standing well
+over seven feet tall.  His glowing eyes penetrate you as you try to 
+determine your next move.
 ~
 110 134480008 0 Y
-31 -8 -11 0d1+1245 7d6+4
-200000 100000
+16 5 -5 35d25+100 5d5+1
+20000 58000
 8 8 1
 66 0 0d0+0 1
 7 3 15 0
 0 0 0 0
+T
+......An aura of power surrounds the Overlord.~
+T
+......Searing heat pours out from the cracks in the armor.~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
+#1308
+ustan knight~
+Ustan, Knight of the Order of the Light~
+Ustan, the revered Knight of the Order of the Light stands here.
+~
+Ustan the Just.  Ustan the Holy.  Ustan the Righteous.  These are all
+names that have been associated with this powerful knight that you see
+before you.  Now in his declining years, you can see that this man
+was once a powerful warrior.  Ustan spends the golden years of his
+service here in the Tower, keeping his eyes on the horizon at all times,
+ever vigilant of the forces of evil.
+~
+10 0 400 Y
+14 12 6 20d35+100 1d10+7
+3000 37000
+8 8 1
+0 0 1d1+1 1
+9 2 15 0
+0 0 0 0
+T
+..... Ustan emanates a powerful force.~
+T
+..... Ustan glows with a holy light.~
+K
+0 0 0 0 0 0 0
+#1309
+knight fallen prisoner~
+The fallen knight of the order.~
+The fallen knight of the order crouches here in the darkness.
+~
+This former knight is now a prisoner in disgrace.  Stripped of all his armor
+and trappings of the Order, he now wanders these tunnels in search of food,
+water, and a way to restore his honor in the eyes of Ustan and the Overlord.
+~
+44 268959744 0 Y
+14 8 3 40d11+75 2d8+1
+3333 40000
+8 8 1
+4 0 1d1+1 1
+2 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~
