@@ -1,0 +1,880 @@
+#28800
+armor enlightenment~
+Armor of Enlightenment~
+Some armor that radiates with sheer energy was foolishly dropped here.~
+~
+9 134218050 9
+30 0 0 0
+27 750000 100000
+5
+E
+armor~
+This armor was crafted by the great Hephaestus himself. Working tirelessly
+atop the peaks of Mount Olympus, he created an armor of such a high standard
+as to be worn by the God of gods, Zeus. The armor gleams with a quiksilver
+brightness rivaled by none. The center is forged with the symbol of the
+Great God, a hand clutching a lightning bolt.
+~
+X
+~
+0 0 0
+M
+Your armor gleams in the sunlight as you strap it over your chest.~
+$n's armor gleams in the sunlight as $e straps it onto $s chest.~
+Your feel less prepared for battle without the armor.~
+$n seems less prepared to wage a war as $e removes the armor.~
+A
+19 4
+A
+18 4
+A
+13 30
+B
+28
+#28801
+wand magic~
+A Wand of Magic~
+A wand with amazing magical properties was forgotten here.~
+$n sweeps $s Wand of Magic in a high arc directly at $V.~
+5 267415616 8193
+1 0 0 5
+1 1 75100
+6
+E
+wand~
+This is the all-powerful Wand of Magic once used by the ultimate
+Magic User, Hera, Wife of the God of Gods. The wand has strange
+magical qualities and unknown power, but to the untrained
+eye it looks like a twisted stick you might find under
+an old tree.
+~
+X
+$n weaves an intricate pattern in the air with $s Wand of Magic.~
+0 0 0
+M
+You clutch the Wand of Magic and feel its power pulse through you.~
+$n grabs a small stick and begins cackling and waving it menacingly.~
+You feel your power drain as you drop the Wand of Magic.~
+$n seems to droop after releasing $s stick.~
+#28802
+boots tidal seaweed~
+The Tidal Boots~
+Some boots made of seaweed were dropped here.~
+~
+9 199290881 65
+10 0 0 0
+8 677525 56750
+8
+E
+boots~
+These boots, once worn by the great God of the Seas, Poseidon,
+are made of seaweed that never dries up, no matter how long
+they are away from the water. They are rather slippery to walk on
+on the land, so watch your step.
+~
+X
+~
+0 0 0
+M
+Your feet make wet squelching noises as you plunge them into the boots.~
+$n's feet make wet squelching noises as $e plunges them into $s boots.~
+You pull your feet from the boots with wet plopping sounds.~
+$n pulls $s feet from $s boots with loud, wet, plopping sounds.~
+A
+19 3
+A
+18 3
+A
+52 15
+B
+524288
+#28803
+lyre caller~
+The Lyre of the Caller~
+A lyre that glows with magical qualities was left behind here.~
+~
+24 233895170 16385
+0 0 0 0
+25 6000 50777
+8
+E
+lyre~
+This is the famed Lyre of the Caller used by the Master Musician of the
+Gods, Apollo, to tame many a savage beast. The Lyre will only
+play for a great musician, and when it does play the sound is
+indescribably beautiful.
+~
+X
+~
+0 0 0
+M
+The world around you seems to grow brighter and more alive when you strum the lyre.~
+The room seems to brighten as $n strums $s lyre.~
+The light in the room fades slightly as you drop the lyre.~
+The light in the room fades slightly as $n drops $s lyre.~
+A
+19 5
+A
+12 20
+A
+18 5
+B
+16777216
+#28804
+cloak crescent moon~
+The Cloak of the Crescent Moon~
+A long, flowing cloak lies crumpled in a pile here.~
+~
+9 265351170 1025
+15 0 0 0
+3 5000100 100575
+9
+E
+cloak~
+This is the hunting cloak of the goddess of the crescent moon and
+of the hunt, Artemis. She has always been known to be the most
+at one with nature of any of the gods. The cloak itself seems
+to swirl and twist magically in the design. It makes you dizzy just
+to look at it.
+~
+X
+~
+0 0 0
+M
+You wear the swirling cloak and your hunting senses seem to improve.~
+$n's senses seem to heighten as $e throws the cloak over $s shoulders.~
+Your hunting senses wane as you remove the cloak.~
+$n's senses seem to wane as $h removes $s cloak.~
+A
+19 3
+A
+13 35
+A
+52 20
+B
+40
+#28805
+eye world ring~
+The Eye of the World~
+A ring that glows with the unknown power of ages was forgotten here.~
+~
+9 134218049 3
+10 0 0 0
+33 1000000 76000
+5
+E
+eye~
+This disturbing ring is made up of an immaculate golden band with
+what appears to be a large eye mounted on it. The eye ranges around,
+seeming to see and know things that you do not. This powerful
+glam once sat on the finger of the God of gods himself, Zeus.
+~
+X
+~
+0 0 0
+M
+You feel yourself filling with the wisdom of ages as you slide on the ring.~
+$n glows with untold wisdom and might as $e slides on the Eye of the World.~
+Your heightened sense of might and wisdom vanishes as you remove the ring.~
+The glow of wisdom and might fades from $n's countenance as $e removes the ring.~
+A
+19 4
+A
+18 4
+A
+13 15
+B
+8192
+#28806
+gloves human skin~
+Gloves Fashioned from Human Skin~
+Some gloves fashioned from human skin were dropped here.~
+~
+11 267401216 129
+0 0 0 0
+6 666666 66666
+6
+E
+gloves~
+These gloves are indeed creates from the skin of humans. Stories
+say that they are made from the skin of powerful wizards who
+were destroyed by Hera's wrath. The tapestry created by their
+skin woven together makes these items very powerful, and very
+disturbing.
+~
+X
+~
+0 0 0
+M
+Your stomach lurches as you slide on the tight-fitting gloves.~
+$n looks a little sick as $e pulls on some odd-looking gloves.~
+You feel less powerful but somehow... cleaner... without the gloves.~
+$n appears to brighten in relief as $e pulls off $s gloves.~
+A
+19 4
+A
+18 4
+A
+12 25
+B
+1024
+#28807
+ring battle~
+The Ring of Battle~
+Ares' battle ring was forgotten here.~
+~
+9 134807556 3
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 10
+B
+134217728
+#28808
+ring treachery~
+The Ring of Treachery~
+One of Ares' powerful rings rests here.~
+~
+9 134807556 3
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+2048
+#28809
+gauntlets stained butcher~
+Stained Gauntlets of the Butcher~
+Some well made gauntlets stained with blood are here.~
+~
+9 259049984 129
+12 0 0 0
+16 783666 27639
+7
+E
+gauntlets~
+These gauntlets are stained with the blood of countless
+historic battle in which the god of war Ares took part.
+They appear to be very well made, and are engraved with
+a wolf on one hand and a vulture on the other.~
+X
+~
+0 0 0
+M
+You are filled with anger and despair as you put on the gauntlets.~
+$n's countenance darkens noticably as $e puts on $s gauntlets.~
+You feel the anger and despair fade as you remove the gauntlets.~
+$n brightens noticably as $e removes $s gauntlets.~
+A
+19 4
+A
+18 4
+A
+35 10
+B
+1024
+#28810
+bracers revenge~
+The Bracers of Revenge~
+Some bloody, battle-worn bracers are heaped here.~
+~
+9 134807556 257
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+268435456
+#28811
+circlet destiny~
+The Circlet of Destiny~
+A bloody crown has been forgotten here.~
+~
+9 134807556 17
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+128
+#28812
+dagger betrayal ares~
+The Dagger of Betrayal~
+A bloody dagger rests on the ground here.~
+~
+5 134807556 8193
+1 30 30 9
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+B
+536870912
+#28813
+boots cowardice~
+The Boots of Cowardice~
+Some boots were long-forgotten in the corner here.~
+~
+9 134807556 65
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+8658944
+#28814
+blade olympus forge~
+A Blade of Olympian Forge~
+A blade of immaculate design and structure was left behind here.~
+$r blade swings in a rising arc toward $V's throat.~
+26 263253249 8193
+0 8 7 12
+30 200000000 100100
+1
+E
+blade~
+This sword was fashioned on the high peaks of Mount Olympus
+by the master of all craftsmen, the artisan of the gods,
+Hephaestus. The blade can only be used by great Leaders who are
+pure of heart. It gleams with a stunning brilliance as you
+turn it in your hands. Clearly, this is an amazing weapon.
+~
+X
+Blinding light glares from the blade as $n raises it menacingly.~
+0 0 0
+M
+As you raise the blade at your side, it begins to hum in anticipation.~
+$n's blade begins humming with anticipation as $e raises it in preparation.~
+Your blade returns to silence as you lower it to your side.~
+$n's blade grows silent as $e lowers it to $s side.~
+A
+18 4
+A
+17 -10
+B
+16777216
+#28815
+skin yeti cloak~
+A Yeti-Skin Cloak~
+There is a bit of nothing sitting here.~
+~
+11 134217728 1025
+0 0 0 0
+100 17500 16125
+1
+E
+cloak~
+This is a ratty, matted chunk of fur from a
+Mountain Yeti, one of the most vile and dangerous
+creatures in existance. It has a very sharp odor
+that singes your nostrils.
+~
+X
+~
+257 0 0
+M
+You impress the room by donning your exotic Yeti-Fur Cloak.~
+$n proudly throws a scrap of ratty-looking fur over $s shoulders.~
+You breathe a sigh of regret as you remove your cloak.~
+You breathe a sigh of relief as $n removes $s disgusting cloak.~
+A
+19 1
+A
+18 1
+A
+13 15
+#28816
+slag metal grey~
+a handful of grey metal slag~
+A small handful of metal slag lies here.~
+~
+9 0 16385
+0 0 0 0
+2 20000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28817
+steel short length~
+A short length of steel~
+A tarnished length of steel lies here.~
+~
+5 0 8193
+0 1 1 7
+20 40000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28818
+pliers fire-blackened fire blackened~
+a pair of fire-blackened pliers~
+A pair of fire-blackened pliers lies here.~
+~
+5 0 8193
+0 1 1 7
+20 60000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28819
+mold ingot simple~
+a simple ingot mold~
+A simple ingot mold lies here.~
+~
+5 0 8193
+0 1 1 7
+20 80000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28820
+hammer small ball peen~
+a small ball peen hammerarrow platinum swan~
+A small used ball peen hammer lies here.~
+~
+5 0 8193
+0 1 1 7
+20 100000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28821
+tongs metal long~
+a pair of long handled metal tongs~
+Some long handled metal tongs lie here.~
+~
+5 0 8193
+0 1 1 7
+20 120000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28822
+chisel crude~
+a crude chisel~
+A crude chisel lies here.~
+~
+5 0 8193
+0 1 1 7
+20 140000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28823
+sledgehammer hammer sledge heavy~
+a heavy sledgehammer~
+A heavy sledgehammer lies here.~
+~
+5 0 8193
+0 1 1 7
+20 160000 10000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28824
+wolf grey altar sacrifice corpse~
+a wolf corpse~
+The corpse of a mangy grey wolf lies on the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+The corpse of a mangy grey wolf lies on the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28825
+dolphin altar sacrifice corpse~
+a dolphin corpse~
+The slippery corpse of a grey dolphin lies in a pool of blood upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+The slippery corpse of a grey dolphin lies in a pool of blood upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28826
+swan altar sacrifice corpse~
+a member of Ares' elite guard~
+Even graceful in death a large white swan lies draped across the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+Even graceful in death a large white swan lies draped across the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28827
+raven altar sacrifice corpse~
+a raven corpse~
+The still form of black raven lies in the center of the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+The still form of black raven lies in the center of the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28828
+hawk altar sacrifice corpse~
+a hawk corpse~
+The sharp talons of a hawk twitch idly as it dies upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+The sharp talons of a hawk twitch idly as it dies upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28829
+cicada altar sacrifice corpse~
+a cicada corpse~
+A large, green winged cicada lies crushed upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+A large, green winged cicada lies crushed upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28830
+snake altar sacrifice corpse~
+a snake corpse~
+A green and brown snake lies bent and twisted unnaturally upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+A green and brown snake lies bent and twisted unnaturally upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28831
+mouse altar sacrifice corpse~
+a mouse corpse~
+Grotesquely cut open, the corpse of a small grey mouse lies upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+Grotesquely cut open, the corpse of a small grey mouse lies upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28832
+griffon altar sacrifice corpse~
+a griffon corpse~
+The feathery corpse of a griffon lies in a bloody jumble upon the altar.~
+~
+13 0 0
+0 0 0 0
+1 1 1
+10
+E
+altar~
+The feathery corpse of a griffon lies in a bloody jumble upon the altar.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28833
+chest wooden strong purple trim~
+a strong wooden chest with purple trim~
+There is a bit of nothing sitting here.~
+~
+15 0 0
+10 15 28834 0
+1 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28834
+key purple trimmed brass~
+a purple-trimmed, brass key~
+There is a bit of nothing sitting here.~
+~
+18 0 1
+0 0 0 0
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28835
+trebuchet abandoned wood~
+an abandoned trebuchet~
+There is a bit of nothing sitting here.~
+~
+13 0 0
+0 0 0 0
+10 10 10
+10
+X
+~
+256 0 0
+M
+~
+~
+~
+~
+#28836
+arrow platinum swan feather~
+a platinum tipped, swan fleather fletched arrow~
+Lost or forgotten, a platinum tipped, swan fleather fletched arrow lies here.~
+~
+5 0 8193
+0 1 1 9
+10 250000 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28837
+arrow gold raven feather~
+a gold tipped, raven fleather fletched arrow~
+Lost or forgotten, a gold tipped, raven fleather fletched arrow lies here.~
+~
+5 0 8193
+0 1 1 9
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28838
+arrow silver hawk feather~
+a silver tipped, hawk fleather fletched arrow~
+Lost or forgotten, a silver tipped, hawk feather fletched arrow lies here.~
+~
+5 0 8193
+0 1 1 9
+10 10 10
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~
