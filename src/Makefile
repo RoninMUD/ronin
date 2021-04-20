@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -Wno-unused-result -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
+CFLAGS += -g -Wall -Wno-unused-result -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
 LFLAGS = -lm -lcrypt -rdynamic -lsodium
 OBJDIR = ../obj
 BINDIR = ../bin
@@ -7,12 +7,12 @@ TYPE ?= $(shell basename $$(dirname $$PWD))
 
 $(info Making ${TYPE}...)
 
-ifeq ($(TYPE), test)
-	CFLAGS += -DTEST_SITE
-endif
-
+ifneq ($(TYPE), live)
 ifeq ($(TYPE), chaos)
 	CFLAGS += -DCHAOS2017
+else
+	CFLAGS += -DTEST_SITE
+endif
 endif
 
 #
@@ -202,10 +202,13 @@ OBJS_RONIN_SPEC = \
 OBJS_RONIN_SPEC_TEST = \
 	spec.digsite.o \
 	spec.luthienIV.o \
+	spec.happybob.o \
 	spec.workbench.o
 
-ifeq ($(TYPE), test)
+ifneq ($(TYPE), live)
+ifneq ($(TYPE), chaos)
 	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
+endif
 endif
 
 OBJS_RONIN_BASE := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_BASE))

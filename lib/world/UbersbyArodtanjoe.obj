@@ -9,7 +9,7 @@ A cloak made of pure spidersilk lays here.~
 55
 E
 spidersilk cloak~
-Spidersilk woven together in a tight cross-stitch. It provide flexibility, while not hampering your agility. The strands absorb pressure to provide great protection.
+Spidersilk woven together in a tight cross-stitch. It provide flexibility, while not hampering your agility. The strands absorb pressure to provide great protection.  
 ~
 X
 ~
@@ -106,5 +106,86 @@ A
 18 0
 A
 17 3
+#14605
+bracelet phoenix claw~
+Phoenix Claw Bracelet~
+A bracelet made of phoenix claws.~
+~
+9 134217792 4097
+5 0 0 0
+5 50000 28500
+35
+E
+bracelet phoenix claw~
+The pale white claws of the phoenix emit a dim light and still radiate a small amount of her energy.
+~
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#14606
+mask ritual fire newt~
+Fire Newt Ritual Mask~
+A colorful mask made of newt scales.~
+~
+9 134217792 17
+10 0 0 0
+5 68450 33000
+42
+E
+mask ritual fire newt~
+A large mask made from overlapping scales that have fallen from the newt god's body. Adorned with jewels and rare metals, they form an intricate mask worn by all that worship her.
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+13 10
+A
+12 10
+B
+40
+#14607
+sabaton sabatons order light~
+Order of the Light Sabatons~
+A white and shiny pair of sabatons~
+~
+9 134217792 65
+12 0 0 0
+3 79000 48000
+29
+E
+sabaton sabatons order light~
+A pair of white metallic boots worn by all members of the Order of the Light. Its sigil is carved into the side of each.
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+17 -5
+A
+52 7
 #0
 $~

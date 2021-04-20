@@ -11,9 +11,9 @@ Rook vigilantly performs his duty, protecting the overlord and the
 artifacts he protects.
 ~
 76 0 0 Y
-12 13 5 10d45+120 3d4+3
-2400 43000
-8 8 0
+14 13 5 10d45+120 3d4+3
+3200 46000
+8 8 1
 4 0 0d0+0 0
 0 0 0 0
 K
@@ -28,9 +28,9 @@ constantly under her breath, you wonder if she is talking to you, or the voices
 in her head.  This ancient woman appears to have seen many ages come and go,
 and as you walk by her, she looks up at you with a scowl.
 ~
-108 0 -750 Y
-11 11 20 30d20+40 2d6+3
-1800 33000
+108 0 -375 Y
+14 11 20 30d20+40 2d6+3
+3600 37500
 8 8 2
 75 0 0d0+0 0
 0 0 0 0
@@ -46,9 +46,9 @@ sight. She is filthy and covered from head to toe in warts.  Sweating and
 working over a foul looking brew (which you hope isn't someone's dinner),
 she is quite disgusting.
 ~
-74 0 -800 Y
-13 8 20 40d10+75 2d7+1
-3000 33000
+74 0 -375 Y
+16 8 20 40d10+75 2d7+1
+4000 38500
 8 8 2
 68 0 0d0+0 0
 0 0 0 0
@@ -67,8 +67,8 @@ he does not immediately acknowledge your presence, you know instinctively
 that he is watching your every move very carefully.
 ~
 74 0 0 Y
-13 7 5 1d20+380 3d6+3
-2500 35000
+16 7 5 1d20+380 3d6+3
+3750 36200
 6 6 1
 4 0 0d0+0 0
 0 0 0 0
@@ -85,9 +85,9 @@ chosen for their blind allegiance to the order.  Standing here to guard
 the Tower, and it's inhabitant Ustan, these men are not to be trifled
 with.
 ~
-74 0 450 Y
-12 12 4 170d3+50 2d7+1
-2000 30000
+74 0 350 Y
+15 12 4 170d3+50 2d7+1
+3500 38490
 8 8 1
 4 0 0d0+0 0
 0 0 0 0
@@ -103,14 +103,14 @@ demon and half wolf, this evil creature has been bent to the will of
 the master of the Canticle.  Loyal to none but the Overlord, this
 creature makes the perfect protector.
 ~
-106 0 -400 Y
-13 9 20 0d1+400 2d7+1
-0 42000
+106 0 -350 Y
+16 9 20 0d1+400 2d7+1
+0 45000
 8 8 0
 60 0 0d0+0 0
 0 0 0 0
 K
-60 0 0 0 0 0 0
+6500 0 0 0 0 0 0
 #1307
 overlord order light canticle~
 The Overlord of the Canticle~
@@ -127,15 +127,15 @@ determine your next move.
 ~
 110 134480008 0 Y
 16 5 -5 35d25+100 5d5+1
-20000 58000
+20000 63000
 8 8 1
 66 0 0d0+0 1
 7 3 15 0
 0 0 0 0
 T
-......An aura of power surrounds the Overlord.~
-T
 ......Searing heat pours out from the cracks in the armor.~
+T
+......An aura of power surrounds the Overlord.~
 K
 0 0 0 0 0 0 0
 #1308
@@ -150,17 +150,17 @@ was once a powerful warrior.  Ustan spends the golden years of his
 service here in the Tower, keeping his eyes on the horizon at all times,
 ever vigilant of the forces of evil.
 ~
-10 0 400 Y
+10 0 350 Y
 14 12 6 20d35+100 1d10+7
-3000 37000
+3500 37000
 8 8 1
-0 0 1d1+1 1
+69 0 1d1+1 1
 9 2 15 0
 0 0 0 0
 T
-..... Ustan emanates a powerful force.~
-T
 ..... Ustan glows with a holy light.~
+T
+..... Ustan emanates a powerful force.~
 K
 0 0 0 0 0 0 0
 #1309
@@ -174,11 +174,53 @@ water, and a way to restore his honor in the eyes of Ustan and the Overlord.
 ~
 44 268959744 0 Y
 14 8 3 40d11+75 2d8+1
-3333 40000
+3900 40000
 8 8 1
 4 0 1d1+1 1
 2 2 10 0
 0 0 0 0
+K
+0 0 0 0 0 0 0
+#1310
+troll witch vulzala~
+Vulzala, Troll Witch of the Canticle~
+Vulzala, the troll witch of the canticle skulks in the shadows.
+~
+An old yet still large troll stands next to the fire. She has been a
+servant of the Canticle for a very long time. Why she was relegated to
+living under a bridge is unknown, but she continues to listen for signs
+of those returning to the fortress. She calmly stirs the contents of 
+the cauldron and barely registers your presence.
+~
+10 128 -400 Y
+20 6 -1 4d25+1200 1d1+25
+8000 80000
+8 8 2
+75 0 1d1+1 0
+0 0 0 0
+T
+.... mixes potions in her cauldron.~
+K
+0 0 0 0 0 0 0
+#1311
+captain knight humfridus~
+Humfridus, Captain of the Order of the Light~
+Humfridus, the Last Captain of the Order waits for the next challenger.
+~
+A large muscular man sits here. He is the captain of the Order 
+of the Light and he is the last of his command. Just like his 
+comrades in arms, he has survived many encounters and continues
+to do his duty. Guard the keep and protect it against evil. He 
+looks at you with a blank yet serious stare.
+~
+10 128 400 Y
+20 6 -1 4d25+1250 1d1+28
+9500 85000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+T
+.... glows with an intense holy light.~
 K
 0 0 0 0 0 0 0
 #0

@@ -69,12 +69,64 @@ The Uber Zyca Prince stands and smirks at those that are beneath him.
 The Uber Zyca Prince gleams with a huge smile across his face. This man is no longer bound to be married and can live a life he wants.
 ~
 16458 0 -150 Y
-35 -2 -5 90d30+8350 12d10+30
+35 -15 -5 90d30+8350 12d10+30
 500000 2500000
 8 8 1
 69 23176 1d1+0 0
 0 1 0 160
 K
 0 14604 0 0 0 0 0
+#14605
+uber newt phoenix~
+The Uber Fire Newt Phoenix~
+The Uber Fire Newt Phoenix is engulfed in a cloud of ash.
+~
+She towers above her male counterpart.  A wingspan that easily reaches 25 meters, it brushes against the edges of the cavern. He vibrant colors exude a radiance not seen with the fire newts.  She is truly the leader of the group and has the beautiful te
+~
+16490 0 150 Y
+60 -25 -18 560d40+89000 25d25+410
+0 75000000
+8 8 2
+83 23176 200d4+10000 3
+1 4 15 106
+1 4 10 130
+1 4 8 188
+0 1 0 160
+K
+27500000 14605 0 0 0 0 0
+#14606
+uber fire newt god true~
+The True Fire Newt God~
+The True Fire Newt God basks in the pale light of lava.
+~
+The large newt stands thirty feet in the air. She opens her gaping maw to show numerous rows of jagged white teeth. Thin lines of lava descend down her back, as her scales move to the sway of her gigantic form. The black, red and orange scales shimmer i
+~
+16490 268435584 -120 Y
+64 -24 -22 24d24+98654 18d19+208
+0 68500000
+8 8 2
+81 23176 20d20+6500 0
+0 1 0 160
+K
+19750000 14606 0 0 0 0 0
+#14607
+uber blue rook~
+The Uber Blue Rook~
+The Uber Blue Rook is standing tall, and fiercely looking at you as you intrude upon her domain.
+~
+The Uber Blue Rook stands before you clad in magnificent blue armor. She is 
+a rarity amongst the knights of this order due to the fact that she is a 
+woman. No other member of the order dared to challenge her because of her 
+immense strength, cunning and finesse. She is the reason why the fortress 
+has not yet fallen to the darkness that lies to the north.
+~
+16458 268435584 0 Y
+63 -20 -15 10d10+67500 15d15+306
+17500000 58000000
+8 8 2
+4 23176 1d1+1 0
+0 1 1 160
+K
+0 14607 0 0 0 0 0
 #0
 $~

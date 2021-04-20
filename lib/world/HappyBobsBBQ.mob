@@ -1,0 +1,223 @@
+#14900
+bob happy owner~
+Happy Bob, Owner of Happy Bob's BBQ~
+The owner of the restaurant paces back and forth
+~
+ A large and slightly overweight man stands behind his desk holding
+a phone and yelling into it. His balding head and beer belly jut out
+of his shirt which is way too tight for him. Hints of BBQ sauce can 
+be seen smeared down the front of his shirt. He looks up at you and
+then continues chatting on the phone.
+~
+536870954 402720896 0 Y
+51 -23 0 200d15+16845 20d2+85
+689542 4200000
+8 8 1
+69 0 1d1+1 3
+10 4 17 0
+3 2 28 0
+4 1 22 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#14901
+hostess mean employee~
+A Mean Hostess~
+A hostess is ignoring your attempts to be seated.
+~
+ A tall woman stands before you giving you the side eye as she calmly
+stares at her clipboard ignoring the requests from the many people
+waiting for seats.  The rowdy patrons yelling for help are ignored
+as she sings a tune in her head.
+~
+108 0 0 Y
+47 -16 -5 22d23+7600 11d11+11
+25000 1500000
+8 8 0
+69 16384 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14902
+patron rowdy guest~
+A Rowdy Patron~
+A patron is yelling and screaming about the long wait.
+~
+ An angry patron is banging his hands on the table and foaming at the
+mouth. They demand service and demand that everything be here when
+they want it.  They see themselves as the most important person 
+and simply treat all the employees like trash.
+~
+108 0 0 Y
+47 -16 -5 24d20+7352 10d10+14
+86520 1500000
+8 8 0
+69 16384 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14903
+waiter overworked employee~
+An Overworked Waiter~
+An overworked waiter hurriedly rushes back and forth.
+~
+ This young boy looks flustered and panicked. Tears stream down his 
+face as they take a constant plethora of verbal and physical abuse 
+from the many rowdy patrons. The rush to the front and back of the 
+restaurant carrying numerous plates of food for the many tables
+that all want service.
+~
+108 0 0 Y
+47 -17 -5 18d30+8100 17d5+17
+46812 1650000
+8 8 0
+69 16384 1d1+1 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14904
+pig angry~
+An Angry Pig~
+A bbq sauce covered pig walks back and forth
+~
+ A very large and fat pig oinks and grunts at you. For whatever mind 
+boggling reason, it is also covered in barbeque sauce. It moves around
+in a back and forth motion, ramming and headbutting whatever is in its
+path. This pig is very angry and is determined to not be turned into 
+some tasty ribs.
+~
+44 0 0 Y
+47 -18 -4 280d4+9200 50d2+0
+30000 1750000
+8 8 1
+86 0 20d20+50 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14905
+cow rampaging bovine~
+A Rampaging Cow~
+A mad bovine is going berserk
+~
+ A large brown and white quadruped is seen attempting to buck and kick 
+its legs and to smash its body into those who are close to it. Its large
+black hooves smash and dent the stainless-steel floor. Its body is taut
+with bulging muscles making this cow much more aggressive and larger than
+what you would expect.
+~
+44 0 0 Y
+47 -18 -4 180d6+10150 50d2+5
+30000 1700000
+8 8 1
+91 0 20d20+50 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14906
+pitboss sweaty employee~
+A Sweaty Pitboss~
+An employee swears as he drops with sweat, seasoning and sauce
+~
+ A very greasy man leans to the side stretching his back. The long days 
+in front of the smokers really does take its toll, due to the heavy
+slabs of meat, the sauces, spices, heat, and smoke. Spice can be seen in his
+hair, sauce running down his apron and heat has burned his eyebrows and
+eyelashes off.  The Happy Bob's BBQ apron can still be seen wrapped around
+his waist.
+~
+44 0 0 Y
+47 -19 -4 240d4+8950 50d2+8
+35849 1800000
+8 8 1
+69 0 20d20+50 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14907
+potatoes mashed plate~
+A Giant Plate of Mashed Potatoes~
+A giant plate wobbles around the room.
+~
+This large plate of mashed potatoes covers its entire surface.  The center
+of the pile is full of dark brown gravy that falls over the sides. The mound
+moves itself around, and forms eye sockets and a very crude mouth. It rushes
+at you to devour you, to return the favor that Happy Bob gave to it numerous
+times before.
+~
+40 277350400 0 Y
+53 -27 0 28d28+28000 38d10+48
+5000000 16666666
+8 8 1
+67 55424 55d55+555 0
+0 1 0 864
+R
+6
+K
+0 0 0 0 0 0 0
+#14908
+cornbread butter dripping~
+Anthropomorphic Cornbread Dripping with Butter~
+A giant piece of cornbread with arms and legs walks around.
+~
+This piece of cornbread has taken on the characteristics of the man that has
+made its life a living hell. Forever cursed to walk this world after being 
+eaten by a balding fat man who couldn't care less. It looks to take out its
+anger and rage on all that remind him of Happy Bob, that cursed owner of
+the Barbeque restaurant.
+
+~
+40 277350400 0 Y
+53 -26 0 29d29+29000 37d11+58
+4500000 15564025
+8 8 1
+67 55424 55d55+555 0
+0 1 0 864
+R
+6
+K
+0 0 0 0 0 0 0
+#14909
+rusty cant baked beans~
+A Rusty Can of Baked Beans~
+A rusty tin can waddles back and forth along the ground.
+~
+A half mangled can stands four and a half feet off the ground. Its top is 
+pried open and bean juice drips out of the top. The edges of the can are 
+showing signs of rust, and the small holes poked into the side ooze even
+more juice. The mid section is crumpled, like someone wanted to be like
+Popeye. Happy Bob should have never done that.
+~
+40 277350400 0 Y
+53 -27 0 24d24+24000 12d6+177
+3687144 14587222
+8 8 1
+67 55424 55d55+555 0
+0 1 0 864
+R
+6
+K
+0 0 0 0 0 0 0
+#14910
+large angry chicken~
+A Very Large Angry Chicken~
+An enraged chicken squawks and flutters.
+~
+This giant chicken has a red and black beak, black and white feathers
+and fluffy body. Its eye glow a dark red as it intensely focuses on you.
+It is not angry because it got turned into food, it is angry because it 
+didnt get chosen to join Happy Bob's wonderful menu. Happy Bob had once
+told the chicken "BBQ sauce and chicken are the best together". But it 
+was all a lie.
+~
+40 277350400 0 Y
+53 -33 0 31d31+31000 53d10+53
+1111111 33333333
+8 8 1
+67 55424 55d55+555 0
+0 1 0 864
+R
+6
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -1,6 +1,6 @@
 #1301
 The Moor~
-The road dips down into the swampy moor that extends to the northeast
+  The road dips down into the swampy moor that extends to the northeast
 from the Shire.  The smell of decaying foliage is cloying, and makes
 you want to move along as quickly as possible.  In the distance to
 the north you can see the faint outlines of some kind of fortress.
@@ -17,16 +17,17 @@ You see a road in the Shire.~
 S
 #1302
 Moor~
-The brackish waters surrounding you here swirl with movement as hidden
+  The brackish waters surrounding you here swirl with movement as hidden
 creatures move beneath the surface.  It is eerily silent here, as you
-cannot hear any birds or insects.  To the north you can see the gates
-of the keep.
+cannot hear any birds or insects.  Heath grass slowly emerges from 
+the watery soil and only helps muffle any form of movement along 
+the ground. 
 ~
 13 4 2
 D0
-You see a great iron gate.~
 ~
-0 0 1303
+~
+0 -1 1349
 D2
 You see a foggy moor.~
 ~
@@ -34,10 +35,11 @@ You see a foggy moor.~
 S
 #1303
 Iron Gate~
-Standing before you is a pair of enormous blue-steel gates.  Closed
+  Standing before you is a pair of enormous blue-steel gates.  Closed
 against the evil of the world, this gate is both inspiring and
 daunting. A sunburst design has been engraved on the surface, a
-sigil of the inhabitants of the keep beyond.
+sigil of the inhabitants of the keep beyond. Many scars of battle can
+be seen along the stone walls and on the iron bars themselves.
 ~
 13 0 2
 D0
@@ -46,22 +48,22 @@ The massive steel gates stand closed before you.
 gate gates~
 1 0 1304
 D2
-A foggy, misty moor~
 ~
-0 0 1302
+~
+0 -1 1354
 S
 #1304
 Courtyard before the Canticle~
-You stand in the courtyard before the Canticle.  The walls around
-you are made entirely of perfectly cut and fitted granite.  All
-is silent around you, and yet you can almost feel the vibration
-of music in your bones.
+  You are now in the ruined courtyard before the fortress known as the 
+Canticle.  The walls around you are made entirely of perfectly cut 
+and fitted granite.  All is silent around you, and yet you can almost 
+feel the vibration of music in your bones.
 ~
 13 8 0
 D0
-A beautiful blue hall~
 ~
-0 0 1305
+~
+0 -1 1356
 D2
 The wrought Iron Gate~
 ~
@@ -69,10 +71,11 @@ The wrought Iron Gate~
 S
 #1305
 Blue Hall~
-The cavernous hallway you now stand in has been dyed a deep, royal blue.
+  The cavernous hallway you now stand in has been dyed a deep, royal blue.
 All of the decorations that adorn the wall are of the same color, to the
-point that you can barely discern them from the walls themselves.  This
-hall stretches beyond your vision to the east.
+point that you can barely discern them from the walls themselves.  The 
+different blues lull you into a peaceful trance as they adorn your eyes
+in their blue wonder. 
 ~
 13 8 0
 D0
@@ -84,17 +87,16 @@ The Hall of the Rooks~
 ~
 0 0 1306
 D2
-A great stone entryway~
 ~
-0 0 1304
+~
+0 -1 1356
 S
 #1306
 Rook Hall~
-The blue hallway extends further to the east, and looking back,
-you feel as if someone is following you.  Your senses begin to
-numb from all of the blue, and you feel that you are beginning
-to hallucinate.  Images of knights clad in blue are dancing
-through your head.
+  The blue hallway extends further to the east, and looking back, you feel 
+as if someone is following you.  Your senses begin to numb from all of the 
+blue, and you feel that you are beginning to hallucinate.  Images of 
+knights clad in blue are dancing through your head.
 ~
 13 8 0
 D1
@@ -108,16 +110,13 @@ Blue Hall~
 S
 #1307
 Rook Hall~
-The Hall of Rooks ends here with a stairwell leading up to the ramparts
+  The Hall of Rooks ends here with a stairwell leading up to the ramparts
 above. Peering back to the west, the far end of the hall almost
-disappears in the distance.  To the north of you, the room is dark,
-and you can pick up a faint smell of decay.
+disappears in the distance.  Below you is another stairwell descending
+into the blackness of the underground. The musty smell of decay wafts
+up from the floor.
 ~
 13 8 0
-D0
-The Bastille~
-~
-0 0 1308
 D3
 Rook Hall~
 ~
@@ -126,10 +125,14 @@ D4
 ~
 ~
 0 -1 1340
+D5
+~
+~
+0 -1 1359
 S
 #1308
 Bastille~
-You have just entered a damp, dingy prison devoid of windows. A small,
+  You have just entered a damp, dingy prison devoid of windows. A small,
 unpleasant looking puddle of some liquid is pooled in the corner of
 the room.  Your footsteps echo on the scuffed and worn stones of the floor
 as you turn to leave this dank room.  However, as you reach for the door,
@@ -144,23 +147,25 @@ underneath.
 stone~
 8 1309 1331
 E
-puddle liquid~
-This unpleasant looking fluid on the floor has a slight green glow
-to it, and as you take a closer look, the smell of it almost
-overwhelms you.
-~
-E
 stone floor stones~
 As you look down at the scratched and scuffed floor, it appears
 that you might be able to move one of these stones, unveiling a
 hidden mystery.
 ~
+E
+puddle liquid~
+This unpleasant looking fluid on the floor has a slight green glow
+to it, and as you take a closer look, the smell of it almost
+overwhelms you.
+~
 S
 #1309
 Light Blue Hall~
-You are traversing a well decorated passageway, all in blue.  Out of the
+  You are traversing a well decorated passageway, all in blue.  Out of the
 corner of you eye, you see movement, but when you turn, there is nothing
-to be seen.  You have the feeling that you are being watched.
+to be seen.  You have the feeling that you are being watched. The hall
+continues to the west, and the smell of something cooking alerts your nose
+to what may be ahead.
 ~
 13 12 0
 D0
@@ -172,27 +177,28 @@ A hall decorated totally in blue~
 ~
 0 0 1305
 D3
-The Scullery~
+A beautiful hall colored Light Blue
 ~
-1 -1 1310
+~
+0 -1 1361
 S
 #1310
 Scullery~
-You are standing in the chaotic kitchens of the Canticle.  In the
-middle of the room is a large table that is covered with a pile
-of dirty pots and pans.  Scullery maids scamper about the room,
-hauling these dishes off to the wash basins in another part of the
-kitchen.
+  You are standing in the chaotic kitchens of the Canticle.  In the middle 
+of the room is a large table that is covered with a pile of dirty pots 
+and pans.  Scullery maids scamper about the room, hauling these dishes off 
+to the wash basins in another part of the kitchen.
 ~
 13 8 0
 D0
 Frump's Den~
 ~
 0 0 1311
-D1
-Light Blue Hall~
+D2
+A beautiful hall colored Light Blue
 ~
-0 0 1309
+~
+0 -1 1362
 D3
 Scullery~
 ~
@@ -200,7 +206,7 @@ Scullery~
 S
 #1311
 Frump's Den~
-You are in a small room just off of the kitchens.  This is obviously
+  You are in a small room just off of the kitchens.  This is obviously
 a gathering place for the Frumps, a place where they can rest their
 weary bones in between shifts spent serving the masters of the Canticle.
 ~
@@ -212,9 +218,11 @@ Scullery~
 S
 #1312
 Altar Room~
-A darkened room with raised structures used for sacrifice.  The floor is
-stained blood red and the smell is horrendous.  Mice are everywhere
-scampering around.
+  A darkened room with raised structures used for sacrifice.  The floor is
+stained blood red and the smell is horrendous.  Chunks of rotted flesh are 
+piled in one corner and small furry blobs can be seen scampering around it.
+The mice bare their small teeth at you as their blood soaked faces smash 
+back into the rotted flesh pile.
 ~
 13 8 0
 D0
@@ -224,10 +232,10 @@ D0
 S
 #1313
 Scullery~
-You are standing in the far end of the kitchen.  Spice jars line the
-shelves against the wall, and the floor is littered with bags of food.
-Flour has been spilled on the floor, and you can see enormous canine
-footprints scampering back the way you came.
+  You are standing in the far end of the kitchen.  Spice jars line the shelves 
+against the wall, and the floor is littered with bags of food. Flour has been 
+spilled on the floor, and you can see enormous canine footprints scampering 
+back the way you came.
 ~
 13 8 0
 D1
@@ -241,11 +249,11 @@ The Jitney~
 S
 #1314
 The Jitney~
-This is the kitchen of the keep.  Counter to the tidiness and order that exists
-elsewhere, this place is a chaotic jumble of pots and pans.  People are running
-around, paying little attention to the vile creature in the corner.  Against the
-wall from you is an enormous cauldron, boiling over a fire and emitting an
-overpowering odor of garlic and onions.
+  This is the kitchen of the keep.  Counter to the tidiness and order that
+exists elsewhere, this place is a chaotic jumble of pots and pans. People
+are running around, paying little attention to the vile creature in the 
+corner.  Against the wall from you is an enormous cauldron, boiling over 
+a fire and emitting an overpowering odor of garlic and onions.
 ~
 13 8 0
 D0
@@ -255,15 +263,16 @@ Scullery~
 S
 #1315
 Deep Blue Hall~
-The hallway here is much like the others, in that they are completely blue,
+  The hallway here is much like the others, in that they are completely blue,
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the dragons of the north.
 ~
 13 12 0
-D0
-Dark Blue Hall~
+D1
+A beautiful blue hall
 ~
-0 0 1316
+~
+0 -1 1363
 D2
 Light Blue Hall~
 ~
@@ -271,9 +280,10 @@ Light Blue Hall~
 S
 #1316
 Dark Blue Hall~
-You are traversing a well decorated passageway, all in blue.  Out of the
-corner of you eye, you see movement, but when you turn, there is nothing
-to be seen.  You have the feeling that you are being watched.
+  The lighter blues you have been used to seeing have all dissapeared. They 
+have been replaced by dark blues that have begun mixing with black. A large
+wooden door lies to your east, adorned with the crest of the Order of the
+Light. 
 ~
 13 8 0
 D0
@@ -286,20 +296,16 @@ only thing that catches your eye is the fact that it has been painted
 a brilliant cobalt blue.
 ~
 door~
-1 1309 1317
-D2
-Deep Blue Hall~
-~
-0 0 1315
+2 1309 1317
 S
 #1317
 Blue Cube~
-Stepping into this room, you feel an ancient power flowing from
-every wall, each of which has been painted the same brilliant
-blue as the door.  Upon close inspection, you are able to determine
-that this room is in the form of a perfect cube.  Bare of any
-decorations, you are impressed and overwhelmed by the sheer genius
-it must have taken to create this space.
+  Stepping into this room, you feel an ancient power flowing from every 
+wall, each of which has been painted the same brilliant blue as the 
+door.  Upon close inspection, you are able to determine that this room 
+is in the form of a perfect cube.  Bare of any decorations, you are 
+impressed and overwhelmed by the sheer genius it must have taken to 
+create this space.
 ~
 13 8 0
 D3
@@ -309,9 +315,11 @@ door~
 S
 #1318
 Black Corridor~
-This hall is completely finished in a dark ebony marble.  The walls are
+  This hall is completely finished in a dark ebony marble.  The walls are
 so dark that light seems to be drawn out of the room.  A bone chilling
-cold emanates from the walls, setting your teeth on edge.
+cold emanates from the walls, setting your teeth on edge.  The floors 
+have a small layer of frost accumulating on them and your breath can
+be seen as you take a frigid breath.
 ~
 13 8 0
 D0
@@ -325,11 +333,18 @@ Dark Blue Hall~
 S
 #1319
 Glass Walk~
-As you enter the Walk, you have to squint your eyes as the light from your
+  As you enter the Walk, you have to squint your eyes as the light from your
 torch reflects off the walls in infinite directions.  Constructed entirely
 of glass, this walkway appears both fragile and malicious at the same time.
+Looking at any of the surfaces, you can see yourself reflect in many 
+directions. Looking for too long causes some disorientation.
 ~
 13 8 0
+D0
+Glass Walk
+~
+~
+0 -1 1324
 D1
 Glass Walk~
 ~
@@ -338,16 +353,14 @@ D2
 Black Corridor~
 ~
 0 0 1318
-D3
-Glass Walk~
-~
-0 0 1324
 S
 #1320
 Glass Walk~
-As you enter the Walk, you have to squint your eyes as the light from your
+  As you enter the Walk, you have to squint your eyes as the light from your
 torch reflects off the walls in infinite directions.  Constructed entirely
 of glass, this walkway appears both fragile and malicious at the same time.
+Looking at any of the surfaces, you can see yourself reflect in many 
+directions. Looking for too long causes some disorientation.
 ~
 13 8 0
 D1
@@ -365,12 +378,17 @@ The Glass Walk~
 S
 #1321
 Crystal Parapet~
-This eastern end of the Glass Walk ends in a pure crystal wall, glowing
-with an inner translucent beauty. In fact, the parapet is so clear
-that you can see the forests to the north, and in fact, you can see
-a family of deer cavorting in the distance.
+  This eastern end of the Glass Walk ends in a pure crystal wall, glowing
+with an inner translucent beauty. In fact, the parapet is so clear that 
+you can see the forests to the north, and in fact, you can see a family 
+of deer cavorting in the distance.
 ~
 13 8 0
+D2
+A beautiful blue hall
+~
+~
+0 -1 1366
 D3
 The Glass Walk~
 ~
@@ -382,9 +400,10 @@ The Upper Parapet~
 S
 #1322
 Upper Parapet~
-The upper parapet has been used over the centuries to house the guardians
-of the watchers of the Order.  Openings in the all allow you to see the
-forbidding darkness to the north.
+  The upper parapet has been used over the centuries to house the guardians
+of the watchers of the Order.  Openings in the wall allow you to see the
+forbidding darkness to the north. A brisk wind blows through the openings
+and billows the banners and torches along the wall.
 ~
 13 8 0
 D2
@@ -402,9 +421,10 @@ The Crystal Parapet~
 S
 #1323
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle.
+  You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
-many bloody and storied battles.
+many bloody and storied battles. The darkness in the north and the
+surrounding forests both seem foreboding.
 ~
 13 8 0
 D0
@@ -418,84 +438,99 @@ D2
 S
 #1324
 Glass Walk~
-As you enter the Walk, you have to squint your eyes as the light from your
+  As you enter the Walk, you have to squint your eyes as the light from your
 torch reflects off the walls in infinite directions.  Constructed entirely
 of glass, this walkway appears both fragile and malicious at the same time.
+Looking at any of the surfaces, you can see yourself reflect in many 
+directions. Looking for too long causes some disorientation.
 ~
 13 8 0
-D1
-The Glass Walk~
-~
-0 0 1319
 D2
-Edificant Library~
+Glass Walk
 ~
-0 0 1325
+~
+0 -1 1319
 D3
-The Mirror Room~
+The Edificant Library
 ~
-0 0 1326
+~
+0 -1 1325
 S
 #1325
 Edificant Library~
-The walls around you are made completely of bookshelves.  Each
-of these shelves are stacked deep with piles of books, scrolls,
-parchments and various artifacts of architectural interest.
-This is the one room in the entire Canticle that exudes any
-semblance of peace.  You feel that you could rest here quite
-comfortably for the rest of your days.
+  The walls around you are made completely of bookshelves.  Each of these 
+shelves are stacked deep with piles of books, scrolls, parchments and 
+various artifacts of architectural interest. This is the one room in the 
+entire Canticle that exudes any semblance of peace.  You feel that you 
+could rest here quite comfortably for the rest of your days.
 ~
 13 8264 0
 D0
-The Glass Walk~
+A bookshelf covered in books, random statues acting as bookends
+and numerous other treasures. You can feel a slight draft
+coming from behind the bookcase. Perhaps you can move it
+out of your way.
 ~
-0 0 1324
+bookcase~
+8 -1 1326
+D1
+Glass Walk
+~
+~
+0 -1 1324
 S
 #1326
 Glass Walk~
-As you enter the Walk, you have to squint your eyes as the light from your
+  As you enter the Walk, you have to squint your eyes as the light from your
 torch reflects off the walls in infinite directions.  Constructed entirely
 of glass, this walkway appears both fragile and malicious at the same time.
+Looking at any of the surfaces, you can see yourself reflect in many 
+directions. Looking for too long causes some disorientation.
 ~
 13 8 0
-D1
-The Glass Walk~
+D0
+Mirror Room
 ~
-0 0 1324
+~
+0 -1 1327
 D2
-In the Mirror~
 ~
-0 0 1327
+bookcase~
+8 -1 1325
 S
 #1327
 Mirror Room~
-As you enter the room, you see a party of warriors walking towards you.
+  As you enter the room, you see a party of warriors walking towards you.
 Drawing you weapons quickly, you realize that you are looking at a mirror
 image of yourself.  Looking around, you realize that every surface of this
-room is actually a mirror.  Through the doorway to the south, you can see
+room is actually a mirror.  Through the doorway to the east, you can see
 a staircase ascending.
 ~
 13 8 0
-D0
-The Mirror Room~
+D1
+A granite staircase
 ~
-0 0 1326
+~
+0 -1 1328
 D2
-Bottom of Staircase~
+Glass Walk
 ~
-0 0 1328
+~
+0 -1 1326
 S
 #1328
 Bottom of Staircase~
-A circular flowing granite staircase ascends the walls and leads into an
+  A circular flowing granite staircase ascends the walls and leads into an
 ominous darkness.  Blood stains litter the stairs, and you can see deep
-gouges torn from the woodwork of the stairs.
+gouges torn from the wood railings and baseboards. Metal scones, some empty
+and some filled with lit torches guide your way. 
 ~
 13 8 0
-D0
-In the Mirror~
+D3
+A room full of mirrors
 ~
-0 0 1327
+~
+0 -1 1327
 D4
 Entrance to the Keep~
 ~
@@ -503,13 +538,16 @@ Entrance to the Keep~
 S
 #1329
 Entrance to the Keep~
-A strange foyer with satanic carvings on the wall.  The floor creaks
+  A strange foyer with satanic carvings on the wall.  The floor creaks
 beneath your feet.  Strange noises and flashes of light come from the door
-to the south.
+to the south. This is the highest tower in the fortress, with larger
+windows in the walls to give unimpeded views of the domain it needs to
+guard and protect.
 ~
 13 8 0
 D2
-The Keep~
+The Keep
+~
 door~
 2 1305 1330
 D5
@@ -519,10 +557,12 @@ Bottom of Staircase~
 S
 #1330
 The Keep~
-The Keep of Canticle, home of the Dark Overlord.  This huge throne room is
+  The Keep of Canticle, home of the Dark Overlord.  This huge throne room is
 filled with the odor of sulphur.  The floor is made of pure silver tile,
 laid perfectly into the shape of a dragon.  The heat in this room is over-
-powering, and sweat drips off your brow.
+powering, and sweat drips off your brow. The large sconces on the wall
+hold large torches burning brightly, illuminating the monstrous form
+sitting on the throne.
 ~
 13 8 0
 D0
@@ -531,11 +571,13 @@ door~
 2 1305 1329
 S
 #1331
-Beneath the dungeon~
-You are in a small chamber beneath the Bastille.  Created by
+Beneath the Dungeon~
+  You are in a small chamber beneath the Bastille.  Created by
 prisoners that have escaped in the past, this chamber has been worn
 smooth by the countless hands that have worked this place over the
-years.
+years. The walls are rough and random rocks and pebbles litter the 
+floor. Scratch marks can been seen on the walls and the tunnel 
+continues to the west.
 ~
 13 0 0
 D2
@@ -548,10 +590,10 @@ stone~
 8 1309 1308
 S
 #1332
-The rock strewn passageway~
-This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is
-indicative of the primitive tools that must have been used.
+The Rock Strewn Passageway~
+  This tunnel has been hewn from the rock beneath the Canticle over an
+unknown number of years. More scratch marks can been see as the uneven 
+passage grows and shrinks, making forward progress slower.
 ~
 13 0 0
 D0
@@ -564,8 +606,8 @@ D3
 0 -1 1333
 S
 #1333
-The rock strewn passageway~
-This tunnel has been hewn from the rock beneath the Canticle over an
+The Rock Strewn Passageway~
+ This tunnel has been hewn from the rock beneath the Canticle over an
 unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
@@ -580,8 +622,8 @@ D3
 0 -1 1334
 S
 #1334
-The rock strewn passageway~
-This tunnel has been hewn from the rock beneath the Canticle over an
+The Rock Strewn Passageway~
+  This tunnel has been hewn from the rock beneath the Canticle over an
 unknown number of years.  The crude workmanship of this passage is
 indicative of the primitive tools that must have been used.
 ~
@@ -596,11 +638,12 @@ D3
 0 -1 1335
 S
 #1335
-The rock strewn passageway~
-   This tunnel has been hewn from the rock beneath the Canticle
-over and unknown number of years.  The crude workmanship of this
-passage is indicative of the primitive tools that must have been
-used.
+The Rock Strewn Passageway~
+  The tunnel has now grown larger and allows you to stand up without
+hitting your head on the ceiling. The walls are smoother and you can 
+see some small roots snaking their wall through the walls and hanging
+from the ceiling. The cave is damp and small drips of water hit your 
+head as you walk.
 ~
 13 0 0
 D1
@@ -613,11 +656,12 @@ D3
 0 -1 1336
 S
 #1336
-The rock strewn passageway~
-   This tunnel has been hewn from the rock beneath the Canticle
-over and unknown number of years.  The crude workmanship of this
-passage is indicative of the primitive tools that must have been
-used.
+The Rock Strewn Passageway~
+  The tunnel has now grown larger and allows you to stand up without
+hitting your head on the ceiling. The walls are smoother and you can 
+see some small roots snaking their wall through the walls and hanging
+from the ceiling. The cave is damp and small drips of water hit your 
+head as you walk.
 ~
 13 0 0
 D1
@@ -630,10 +674,12 @@ D2
 0 -1 1337
 S
 #1337
-The rock strewn passageway~
-This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is
-indicative of the primitive tools that must have been used.
+The Rock Strewn Passageway~
+  The tunnel has now grown larger and allows you to stand up without
+hitting your head on the ceiling. The walls are smoother and you can 
+see some small roots snaking their wall through the walls and hanging
+from the ceiling. The cave is damp and small drips of water hit your 
+head as you walk.
 ~
 13 0 0
 D0
@@ -646,10 +692,10 @@ D2
 0 -1 1338
 S
 #1338
-The rock strewn passageway~
-This tunnel has been hewn from the rock beneath the Canticle over an
-unknown number of years.  The crude workmanship of this passage is
-indicative of the primitive tools that must have been used.
+The Rock Strewn Passageway~
+  You approach the end of the tunnel and the walls are squared off
+with improved skill. Handholds are carved into the walls, and rough
+carvings of the Sigil used by the Order of the Light can now be seen.
 ~
 13 0 0
 D0
@@ -663,9 +709,10 @@ D2
 S
 #1339
 Beneath the Moor~
-The walls of the tunnel here have turned from rock into a loamy soil.
+  The walls of the tunnel here have turned from rock into a loamy soil.
 Above you can be seen the roots of the cypress trees in the Moor up
-above.
+above. A lashed wooden ladder extends upwards, giving you a glimpse of
+the sky above and a breath of fresh air.
 ~
 13 0 0
 D0
@@ -675,19 +722,25 @@ D0
 D4
 ~
 ~
-0 -1 1302
+0 -1 1347
 S
 #1340
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle.
+  You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
-many bloody and storied battles.
+many bloody and storied battles.  The walls have gouges in them from random
+weapons and chunks are missing with giant claw marks indicating the type of
+battles that have been seen. 
 ~
 13 0 0
 D0
 ~
 ~
 0 -1 1341
+D2
+~
+~
+0 -1 1357
 D5
 ~
 ~
@@ -695,9 +748,11 @@ D5
 S
 #1341
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle.
+  You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
-many bloody and storied battles.
+many bloody and storied battles.  The walls have gouges in them from random
+weapons and chunks are missing with giant claw marks indicating the type of
+battles that have been seen. 
 ~
 13 0 0
 D0
@@ -711,9 +766,11 @@ D2
 S
 #1342
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle.
+  You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
-many bloody and storied battles.
+many bloody and storied battles.  The walls have gouges in them from random
+weapons and chunks are missing with giant claw marks indicating the type of
+battles that have been seen. 
 ~
 13 0 0
 D0
@@ -727,9 +784,11 @@ D2
 S
 #1343
 Rampart~
-You walk the battlements high upon the walls of the Keep of the Canticle.
+  You walk the battlements high upon the walls of the Keep of the Canticle.
 Used for centuries by the defenders of the Light, these ramparts have seen
-many bloody and storied battles.
+many bloody and storied battles.  The walls have gouges in them from random
+weapons and chunks are missing with giant claw marks indicating the type of
+battles that have been seen. 
 ~
 13 4 1
 D0
@@ -743,18 +802,439 @@ D2
 S
 #1344
 Tower of the Order~
-You have ascended the very heights of the Keep of the Canticle.
-You can see for thirty leagues in all directions, from the dark
-forests of the north to the mountains in the east.  This room has
-been used for centuries as the lookout for the Order.  Anointed
-Knights throughout history have kept watch for the enemies of
-the light.
+  You have ascended the very heights of the Keep of the Canticle. You can see 
+for thirty leagues in all directions, from the dark forests of the north to 
+the mountains in the east.  This room has been used for centuries as the 
+lookout for the Order.  Anointed Knights throughout history have kept watch 
+for the enemies of the light.
 ~
 13 8 0
 D5
 ~
 ~
 0 -1 1322
+S
+#1345
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D0
+~
+~
+0 -1 1346
+S
+#1346
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D1
+~
+~
+0 -1 1352
+D2
+~
+~
+0 -1 1345
+D3
+~
+~
+0 -1 1347
+S
+#1347
+Edge of the Moor~
+  The edge of the moor is slightly firmer ground. The roots of small trees
+are seen breaking the surface and the breeze is more crisp instead of the
+musty and damp air. The grass is longer here and more signs of life are 
+heard. Birds sing, insects buzz and the world seems more alive.  To the 
+east the dark moor calls to you, beckoning you to return.
+~
+13 4 2
+D1
+~
+~
+0 -1 1346
+S
+#1348
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D0
+~
+~
+0 -1 1350
+D2
+~
+~
+0 -1 1349
+D3
+~
+~
+0 -1 1352
+S
+#1349
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D0
+~
+~
+0 -1 1348
+D2
+~
+~
+0 -1 1302
+S
+#1350
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D2
+~
+~
+0 -1 1348
+D3
+~
+~
+0 -1 1353
+S
+#1351
+Beneath the Collapsed Wall~
+  Above you, the broken rampart partially protects you from the sky, whether
+it is sun or rain. Debris clutters the ground, along with random iron weapons.
+Some are broken and others intact, scorch marks appear against the rock and 
+soot accumulates on your as you move through the area. To the north, you see
+a small fire and a shape standing next to it.
+~
+13 0 0
+D0
+A Shelter under the wall
+~
+~
+0 -1 1358
+D3
+A very steep hill covered in mud and broken stones. Your only
+chance is to crawl up the hill.
+~
+hill~
+9 -1 1350
+S
+#1352
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D0
+~
+~
+0 -1 1353
+D1
+~
+~
+0 -1 1348
+D3
+~
+~
+0 -1 1346
+S
+#1353
+Moor~
+  The brackish waters surrounding you here swirl with movement as hidden
+creatures move beneath the surface.  It is eerily silent here, as you
+cannot hear any birds or insects.  To the north you can see a half crumbled
+fortress, though some of its towers still stand defiantly against the sky.
+~
+13 4 2
+D0
+~
+~
+0 -1 1354
+D1
+~
+~
+0 -1 1350
+D2
+~
+~
+0 -1 1352
+S
+#1354
+A Cracked Stone Bridge~
+  The stones of the bridge are tightly packed together forming a sturdy 
+floor to walk on.  There are a few holes in the bridge, but its main 
+structure still stands. The west edge of the bridge is in decent condition
+considering the signs of battle. The east side is in quite the opposite
+state. Its entire ledge that prevents those from falling over the sides
+has either been worn or hacked away. Looking over the edge, the moat below
+is partially full of water and other remains.
+~
+13 4 2
+D0
+~
+~
+0 -1 1303
+D1
+A broken rock ledge that partially prevents you from falling off the
+bridge. Below you see a partially filled moat that could cushion
+your fall if you jump.
+~
+ledge~
+10 -1 1355
+D2
+~
+~
+0 -1 1353
+S
+#1355
+Partially Filled Moat~
+  The stagnant and putrid water floods your nose with noxious smells. The gas
+is almost overpowering but the slight breeze off the moor makes it tolerable.
+Random decaying masses can be seen slightly above the water that has pooled
+here. Spears and spikes stick out of the mud and water. To the west you can 
+see a fire under the bridge and a cloaked figure standing around it.
+~
+13 0 0
+D3
+A home under the bridge
+~
+~
+0 -1 1367
+D4
+A crumbling bridge but the stone supports still hold strong. 
+Random stones protrude that you can use to get back up.
+~
+bridge~
+11 -1 1354
+S
+#1356
+Half Collapsed Entryway~
+  The magnificent archway of this fortress has partially collapsed, leaving
+debris and stones on the floor. To the north of you, you can see a blue
+hallway that leads further in. The magnificent designs on the door have
+been worn with age, but the sigil used by the Order of the Light is still
+visible.
+~
+13 0 0
+D0
+~
+~
+0 -1 1305
+D2
+~
+~
+0 -1 1304
+S
+#1357
+Hall Collapsed Wall~
+  The once proud rampart has now collapsed and a jagged rock edge extends 
+out into the air. Looking down, the pieces form a nice ledge to jump down
+on but it is a one way trip. Other then a single burned chunk of rock, there
+is no other indication about what took place here to cause this sort of 
+damage to such a well built structure.
+~
+13 0 0
+D0
+The Rampart of the Fortress
+~
+~
+0 -1 1340
+D5
+There are multiple stone ledges that once formed the solid
+rock wall that you can jump on.
+~
+ledge~
+10 -1 1351
+S
+#1358
+Sheltered Under The Wall~
+  A fire sits in the corner and a cloaked figure stand arounds it for warmth.
+He is a tall muscular man wearing a bright white and red cape with a unique
+sigil on it. The walls are somewhat clean and a small bedroll sits next to
+the fire. As you approach, he stares at you but makes no other movement.
+~
+13 0 0
+D2
+Underneath the broken wall
+~
+~
+0 -1 1351
+S
+#1359
+Descending Into The Dungeon~
+  You walk down some stone stairs with wooden railings into nothing but
+blackness. At the bottom the tunnel continues to your north, lit by
+a single torch resting halfway out of a scone. You can see a door in the
+east wall that it illuminates.
+~
+13 0 0
+D0
+~
+~
+0 -1 1360
+D4
+~
+~
+0 -1 1307
+S
+#1360
+Outside the Bastille~
+  You are outside the dungeon and an awful smell emanates from the doorframe.
+As you look at the ground, you can see drag and scratch marks on the floor. 
+This was clearly a place where those who would never see the light of day
+again were taken.
+~
+13 0 0
+D1
+~
+~
+0 -1 1308
+D2
+~
+~
+0 -1 1359
+S
+#1361
+Light Blue Hall~
+  You are traversing a well decorated passageway, all in blue.  Out of the
+corner of you eye, you see movement, but when you turn, there is nothing
+to be seen.  You have the feeling that you are being watched.
+~
+13 12 0
+D1
+A beautiful hall colored Light Blue
+~
+~
+0 -1 1309
+D3
+A beautiful hall colored Light Blue
+~
+~
+0 -1 1362
+S
+#1362
+Light Blue Hall~
+  You are traversing a well decorated passageway, all in blue.  Out of the
+corner of you eye, you see movement, but when you turn, there is nothing
+to be seen.  You have the feeling that you are being watched.
+~
+13 12 0
+D0
+Scullery
+~
+~
+0 -1 1310
+D1
+~
+~
+0 -1 1361
+S
+#1363
+Deep Blue Hall~
+  The hallway here is much like the others, in that they are completely blue,
+with one lone exception.  A fine tapestry on the wall displays a scene of the
+Knights of the Order in battle with the ogres of the west.
+~
+13 12 0
+D1
+A beautiful blue hall
+~
+~
+0 -1 1364
+D3
+A beautiful blue hall
+~
+~
+0 -1 1315
+S
+#1364
+Deep Blue Hall~
+  The hallway here is much like the others, in that they are completely blue,
+with one lone exception.  A fine tapestry on the wall displays a scene of the
+Knights of the Order in battle with the harpies of the south.
+~
+13 12 0
+D0
+A beautiful blue hall
+~
+~
+0 -1 1365
+D3
+A beautiful blue hall
+~
+~
+0 -1 1363
+S
+#1365
+Deep Blue Hall~
+  The hallway here is much like the others, in that they are completely blue,
+with one lone exception.  A fine tapestry on the wall displays a scene of the
+Knights of the Order in battle with the demons of hell.
+~
+13 12 0
+D0
+A beautiful blue hall
+~
+~
+0 -1 1366
+D2
+A beautiful blue hall
+~
+~
+0 -1 1364
+S
+#1366
+Deep Blue Hall~
+  The hallway here is much like the others, in that they are completely blue,
+with one lone exception.  A fine tapestry on the wall displays a scene of the
+Knights of the Order in battle with the brigands of the east.
+~
+13 12 0
+D0
+The Crystal Parapet
+~
+~
+0 -1 1321
+D2
+A beautiful blue hall
+~
+~
+0 -1 1365
+S
+#1367
+Bridge Hermit's Home~
+  The space underneath the bridge is packed with different trinkets and a 
+small canvas tent with a bedroll.  Despite the amount of junk scattered about
+it is still quite spacious. A ragged old troll stands next to the cauldron
+slowly stirring a mixture of....something that can't quite be identified.
+~
+13 0 0
+D1
+A half filled moat
+~
+~
+0 -1 1355
 S
 #1399
 Hall of Kludges~
