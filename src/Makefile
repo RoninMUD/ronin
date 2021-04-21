@@ -124,6 +124,7 @@ OBJS_RONIN_SPEC = \
 	spec.cafeteria.o \
 	spec.cavern.o \
 	spec.chaos.o \
+	spec.chess.o \
 	spec.clan.o \
 	spec.ctower.o \
 	spec.daimyo.o \

@@ -64,6 +64,7 @@ int allocate_shop(int vnum);
 int allocate_fight_message(int attack_type);
 void load_messages(void);
 void renum_world(void);
+void clean_zone(int r_zone);
 void reset_zone(int zone, int full);
 int real_zone(int vnum);
 int real_room(int vnum);
