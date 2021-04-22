@@ -1,3 +1,11 @@
+/*spec.chess.c - Specs for Chess 
+
+     Written by Sane for RoninMUD
+     Last Modification Date: 4/21/2021
+	 Modified by Fisher.
+
+     Basic Specs for the mobs and rooms in the zone.
+*/
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -60,7 +68,12 @@
 || V_MOB(mob) == WHITE_QUEEN_BISHOP \
 || V_MOB(mob) == WHITE_KING_BISHOP \
 || V_MOB(mob) == WHITE_QUEEN \
-|| V_MOB(mob) == WHITE_KING)
+|| V_MOB(mob) == WHITE_KING \
+|| V_MOB(mob) == UBER_WHITE_QUEEN \
+|| V_MOB(mob) == UBER_WHITE_BISHOP \
+|| V_MOB(mob) == UBER_WHITE_KNIGHT \
+|| V_MOB(mob) == UBER_WHITE_ROOK \
+)
 
 #define IS_BLACK_CHESS(mob) (V_MOB(mob) == BLACK_PAWN \
 || V_MOB(mob) == BLACK_QUEEN_ROOK \
@@ -70,7 +83,12 @@
 || V_MOB(mob) == BLACK_QUEEN_BISHOP \
 || V_MOB(mob) == BLACK_KING_BISHOP \
 || V_MOB(mob) == BLACK_QUEEN \
-|| V_MOB(mob) == BLACK_KING)
+|| V_MOB(mob) == BLACK_KING \
+|| V_MOB(mob) == UBER_BLACK_QUEEN \
+|| V_MOB(mob) == UBER_BLACK_BISHOP \
+|| V_MOB(mob) == UBER_BLACK_KNIGHT \
+|| V_MOB(mob) == UBER_BLACK_ROOK \
+)
 
 #define IS_WHITE_PAWN(mob) (V_MOB(mob) == WHITE_PAWN)
 #define IS_BLACK_PAWN(mob) (V_MOB(mob) == BLACK_PAWN)
@@ -78,7 +96,7 @@
 #define IS_BLACK_KING(mob) (V_MOB(mob) == BLACK_KING)
 
 #define IS_WHITE_LAST_RANK(room) (room >= 2301 && room <= 2308)
-#define IS_BLACK_LAST_RANK(room) (room >= 2301 && room <= 2364)
+#define IS_BLACK_LAST_RANK(room) (room >= 2357 && room <= 2364)
 
 int get_uber_chess(int color)
 {
@@ -146,18 +164,22 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
 
         // Not on the last rank.
         // Is there an opposite color chess mob in the same room?
-        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = victim->next_in_room)
-        {
-            if (!victim) return FALSE;
-            if (!IS_NPC(victim)) return FALSE;
-            if ((IS_WHITE_CHESS(mob) && IS_BLACK_CHESS(victim))
-             || (IS_BLACK_CHESS(mob) && IS_WHITE_CHESS(victim)))
-            {
-                do_say(mob, "GOD SAVE THE KING!\n", CMD_SAY);
-                hit(mob, victim, TYPE_UNDEFINED);
-                return FALSE;
-            }
-        }
+		
+		//Make sure the mobs aren't fighting.
+		if(!mob->specials.fighting){
+			for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = victim->next_in_room)
+			{
+				if (!victim) return FALSE;
+				if (!IS_NPC(victim)) return FALSE;
+				if ((IS_WHITE_CHESS(mob) && IS_BLACK_CHESS(victim))
+				 || (IS_BLACK_CHESS(mob) && IS_WHITE_CHESS(victim)))
+				{
+					do_say(mob, "GOD SAVE THE KING!\n", CMD_SAY);
+					hit(mob, victim, TYPE_UNDEFINED);
+					return FALSE;
+				}
+			}
+		}
         break;
     case MSG_DIE:
         if (IS_WHITE_KING(mob) || IS_BLACK_KING(mob))
@@ -186,8 +208,12 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     return FALSE;
 }
 
+
+
+
 void assign_chess(void)
 {
+	//Assign Spec to All White Chess Pieces
 assign_mob(WHITE_PAWN, chess_mob);
 assign_mob(WHITE_QUEEN_ROOK, chess_mob);
 assign_mob(WHITE_QUEEN_KNIGHT, chess_mob);
@@ -197,6 +223,13 @@ assign_mob(WHITE_KING, chess_mob);
 assign_mob(WHITE_KING_ROOK, chess_mob);
 assign_mob(WHITE_KING_KNIGHT, chess_mob);
 assign_mob(WHITE_KING_BISHOP, chess_mob);
+assign_mob(UBER_WHITE_QUEEN, chess_mob);
+assign_mob(UBER_WHITE_BISHOP, chess_mob);
+assign_mob(UBER_WHITE_KNIGHT, chess_mob);
+assign_mob(UBER_WHITE_ROOK, chess_mob);
+
+
+//Assign Spec to All Black Chess Pieces
 
 assign_mob(BLACK_PAWN, chess_mob);
 assign_mob(BLACK_QUEEN_ROOK, chess_mob);
@@ -207,4 +240,11 @@ assign_mob(BLACK_KING, chess_mob);
 assign_mob(BLACK_KING_ROOK, chess_mob);
 assign_mob(BLACK_KING_KNIGHT, chess_mob);
 assign_mob(BLACK_KING_BISHOP, chess_mob);
+assign_mob(UBER_BLACK_QUEEN, chess_mob);
+assign_mob(UBER_BLACK_BISHOP, chess_mob);
+assign_mob(UBER_BLACK_KNIGHT, chess_mob);
+assign_mob(UBER_BLACK_ROOK, chess_mob);
 }
+
+
+

@@ -673,6 +673,10 @@ window lets light it from the ceiling, torches on the wall illuminate the
 shadows and the air becomes warmer.
 ~
 144 0 0
+D1
+~
+~
+0 -1 14439
 D3
 ~
 ~
@@ -689,6 +693,10 @@ D1
 ~
 ~
 0 -1 14440
+D3
+~
+~
+0 -1 14438
 S
 #14440
 The Nave~
