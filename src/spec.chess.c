@@ -131,7 +131,12 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     CHAR* chess_king;
     char buf[MAX_STRING_LENGTH];
     int zone;
-
+	
+	
+	
+	//Calculate the Zone (Per Shun)
+	zone = MOB_VNUM(mob)/100;
+	
     switch (cmd)
     {
     case MSG_MOBACT:
@@ -185,8 +190,12 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
         if (IS_WHITE_KING(mob) || IS_BLACK_KING(mob))
         {
             // The king is dead, LONG LIVE THE KING!
-            zone = ROOM_ZONE(CHAR_REAL_ROOM(mob));
-            if (zone)
+			
+			//Cant use Char_REAL_ROOM because VNUM is already defined. 
+            //zone = ROOM_ZONE(CHAR_REAL_ROOM(mob));		
+		
+			
+            if (zone >= 0)
             {
                 clean_zone(zone);
                 reset_zone(zone, FALSE);
