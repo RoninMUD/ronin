@@ -123,6 +123,7 @@ void assign_aquest_special(void);
 void assign_swordoftruth(void);
 void assign_WOT(void);
 void assign_ecanyon(void);
+
 //void assign_wbw(void);
 #ifdef TEST_SITE
 void assign_ubers(void);
@@ -131,6 +132,8 @@ void assign_digsite(void);
 void assign_luthienIV(void);
 void assign_workbench(void);
 void assign_happybob(void);
+void assign_crazylab(void);
+void assign_chess(void);
 #endif
 
 void assign_mobiles(void)
@@ -216,8 +219,13 @@ void assign_mobiles(void)
   assign_swordoftruth();
   assign_WOT();
   assign_ecanyon();
+
+    
 //  assign_wbw();
 #ifdef TEST_SITE
+  assign_ubers();
+  assign_crazylab();
+  assign_chess();
   assign_ubers();
   assign_digsite();
   assign_luthienIV();
