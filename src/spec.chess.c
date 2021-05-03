@@ -60,6 +60,11 @@
 #define CHESS_WHITE 1
 #define CHESS_BLACK 2
 
+#define CHESS_ZONE 23
+#define CHESS_ZONE_BOTTOM 2301
+#define CHESS_ZONE_TOP 2364
+
+
 #define IS_WHITE_CHESS(mob) (V_MOB(mob) == WHITE_PAWN \
 || V_MOB(mob) == WHITE_QUEEN_ROOK \
 || V_MOB(mob) == WHITE_KING_ROOK \
@@ -124,6 +129,56 @@ int get_uber_chess(int color)
     return 0;
 }
 
+
+void reset_chess_board(CHAR* mob)
+{
+   int i;
+   //CHAR* mob_to_spawn;
+   CHAR *vict, *next_v;
+  
+  //Purge All Remaining Pieces
+  for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
+    
+      for (vict = world[real_room(i)].people; vict; vict = next_v) {
+        next_v = vict->next_in_room;
+		
+		//You have to ignore the king that died or else it will fail.
+		if (IS_WHITE_KING(mob) || IS_BLACK_KING(mob)) continue;
+		
+        if (IS_NPC(vict)){
+			extract_char(vict);
+		}
+      }
+	  
+	  //If needed, Can also purge objects
+	  /*
+      for (obj = world[i].contents; obj; obj = next_o) {
+        next_o = obj->next_content;
+        extract_obj(obj);
+      }*/    
+  }
+  
+  //Reset All Pieces
+  /*
+  //Load White Pieces
+  for(i=2349;i<=2356;i++) {
+	  
+	  mob_to_spawn = read_mobile(WHITE_PAWN, VIRTUAL);
+	  char_to_room(mob_to_spawn, real_room(i));
+	  
+  }
+  
+  //Load Black Pieces
+  for(i=2309;i<=2316;i++) {
+	 mob_to_spawn = read_mobile(BLACK_PAWN, VIRTUAL);
+	 char_to_room(mob_to_spawn, real_room(i));
+  }
+  */
+	
+}
+
+
+
 int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
 {
     CHAR* uber_chess;
@@ -133,20 +188,20 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     int zone;
 	
 	
+	//Set the Zone so it exists for the purge
+	//zone = world[CHAR_REAL_ROOM(mob)].zone;	
 	
-	//Calculate the Zone (Per Shun)
-	zone = MOB_VNUM(mob)/100;
-	
-    switch (cmd)
+	switch (cmd)
     {
     case MSG_MOBACT:
         uber_chess = NULL;
+		
         // Are we a pawn on the last rank?
-        if (IS_WHITE_PAWN(mob) && IS_WHITE_LAST_RANK(CHAR_REAL_ROOM(mob)))
+        if (IS_WHITE_PAWN(mob) && IS_WHITE_LAST_RANK(world[CHAR_REAL_ROOM(mob)].number))		
         {
             uber_chess = read_mobile(get_uber_chess(CHESS_WHITE), VIRTUAL);
         }
-        else if (IS_BLACK_PAWN(mob) && IS_BLACK_LAST_RANK(CHAR_REAL_ROOM(mob)))
+        else if (IS_BLACK_PAWN(mob) && IS_BLACK_LAST_RANK(world[CHAR_REAL_ROOM(mob)].number))
         {
             uber_chess = read_mobile(get_uber_chess(CHESS_BLACK), VIRTUAL);
         }
@@ -162,8 +217,9 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
                 sprintf(buf, "CHECK AND MATE! A pawn has advanced across the board!");
                 do_quest(chess_king, buf, CMD_QUEST);
             }
-            extract_char(mob);
+            
             char_to_room(uber_chess, CHAR_REAL_ROOM(mob));
+			extract_char(mob);
             return FALSE;
         }
 
@@ -191,14 +247,12 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
         {
             // The king is dead, LONG LIVE THE KING!
 			
-			//Cant use Char_REAL_ROOM because VNUM is already defined. 
-            //zone = ROOM_ZONE(CHAR_REAL_ROOM(mob));		
-		
+			zone = CHESS_ZONE;
 			
             if (zone >= 0)
             {
                 clean_zone(zone);
-                reset_zone(zone, FALSE);
+                reset_chess_board(mob);
                 chess_king = get_ch_world(WHITE_KING);
                 // He should exist now
                 if (chess_king)
