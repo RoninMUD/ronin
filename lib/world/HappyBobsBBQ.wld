@@ -40,12 +40,12 @@ D3
 S
 #14902
 A Dirty Waiting Room~
-  Unlike the room across the entryway, this room is filthy. The carpet 
-is tacky and stained.  There are numerous stains on the ceiling and walls
-which only look gross in the well lit area. Many patrons crowd the benches
-waiting for their turn at a table.  As you move through the room, the
-garbage on the floor is moved around, and while you could pick it up, 
-the trash can is overflowing.
+  Unlike the room across the entryway, this room is filthy. The animal fur 
+rugs are tacky and stained.  There are numerous stains on the ceiling
+and walls which only look gross in the well lit area. Many patrons crowd 
+the benches waiting for their turn at a table.  As you move through the 
+room, the garbage on the floor is moved around, and while you could pick 
+it up, the trash can is overflowing.
 ~
 149 67108872 0
 D0
@@ -61,9 +61,8 @@ S
 A Clean Waiting Room~
   Unlike the room across the entryway, this room is clean. And not just
 tidied up.  The benches, walls, ceiling and floor are all sparkling. 
-You get a slight whiff of the chemicals used to clean this room, but it
-does not overpower the wonderful fragrances of oak wood and popcorn 
-that is freshly popped.
+The fresh smell of flowers in their vases fills the air giving a nice
+calm and relaxing space to wait. 
 ~
 149 67108872 0
 D0
@@ -315,11 +314,13 @@ D3
 S
 #14916
 BBQ Table One~
-  One of many large tables in the restaurant, it is covered with a checkered
-tablecloth made out of paper. The wooden benches are large enough to seat four
-adults on each side.  The table is covered in silverware, multiple sauces, 
-and a bunch of paper towels.  The patrons here simply yell and scream at the
-waiters and demand their food now.
+  One of many large tables in the restaurant, this large wooden table is 
+rotting away. Small and large holes can be seen on the tables, some are empty
+and some have small glowing eyes. The bugs skitter across the table, looking
+to find the food scraps that patrons leave behind. The wooden benches are 
+large enough to seat four adults on each side.  The table is covered in 
+silverware, multiple sauces, random plates and cups. The patrons here simply 
+yell and scream at the waiters and demand their food now.
 ~
 149 67108872 0
 D1
@@ -371,11 +372,13 @@ D3
 S
 #14919
 BBQ Table Three~
-  One of many large tables in the restaurant, it is covered with a checkered
-tablecloth made out of paper. The wooden benches are large enough to seat four
-adults on each side.  The table is covered in silverware, multiple sauces, 
-and a bunch of paper towels.  The patrons here simply yell and scream at the
-waiters and demand their food now.
+  One of many large tables in the restaurant, this large wooden table is 
+rotting away. Small and large holes can be seen on the tables, some are empty
+and some have small glowing eyes. The bugs skitter across the table, looking
+to find the food scraps that patrons leave behind. The wooden benches are 
+large enough to seat four adults on each side.  The table is covered in 
+silverware, multiple sauces, random plates and cups. The patrons here simply 
+yell and scream at the waiters and demand their food now.
 ~
 149 67108872 0
 D1
@@ -402,11 +405,13 @@ D2
 S
 #14921
 BBQ Table Two~
-  One of many large tables in the restaurant, it is covered with a checkered
-tablecloth made out of paper. The wooden benches are large enough to seat four
-adults on each side.  The table is covered in silverware, multiple sauces, 
-and a bunch of paper towels.  The patrons here simply yell and scream at the
-waiters and demand their food now.
+  One of many large tables in the restaurant, this large wooden table is 
+rotting away. Small and large holes can be seen on the tables, some are empty
+and some have small glowing eyes. The bugs skitter across the table, looking
+to find the food scraps that patrons leave behind. The wooden benches are 
+large enough to seat four adults on each side.  The table is covered in 
+silverware, multiple sauces, random plates and cups. The patrons here simply 
+yell and scream at the waiters and demand their food now.
 ~
 149 67108872 0
 D3
@@ -441,11 +446,13 @@ D3
 S
 #14923
 BBQ Table Five~
-  One of many large tables in the restaurant, it is covered with a checkered
-tablecloth made out of paper. The wooden benches are large enough to seat four
-adults on each side.  The table is covered in silverware, multiple sauces, 
-and a bunch of paper towels.  The patrons here simply yell and scream at the
-waiters and demand their food now.
+  One of many large tables in the restaurant, this large wooden table is 
+rotting away. Small and large holes can be seen on the tables, some are empty
+and some have small glowing eyes. The bugs skitter across the table, looking
+to find the food scraps that patrons leave behind. The wooden benches are 
+large enough to seat four adults on each side.  The table is covered in 
+silverware, multiple sauces, random plates and cups. The patrons here simply 
+yell and scream at the waiters and demand their food now.
 ~
 149 67108872 0
 D1
@@ -455,11 +462,13 @@ D1
 S
 #14924
 BBQ Table Four~
-  One of many large tables in the restaurant, it is covered with a checkered
-tablecloth made out of paper. The wooden benches are large enough to seat four
-adults on each side.  The table is covered in silverware, multiple sauces, 
-and a bunch of paper towels.  The patrons here simply yell and scream at the
-waiters and demand their food now.
+  One of many large tables in the restaurant, this large wooden table is 
+rotting away. Small and large holes can be seen on the tables, some are empty
+and some have small glowing eyes. The bugs skitter across the table, looking
+to find the food scraps that patrons leave behind. The wooden benches are 
+large enough to seat four adults on each side.  The table is covered in 
+silverware, multiple sauces, random plates and cups. The patrons here simply 
+yell and scream at the waiters and demand their food now.
 ~
 149 67108872 0
 D3
@@ -647,13 +656,10 @@ D3
 S
 #14935
 Hallway to the Boss's Office~
-  The hallway to the bosses office is very plain. The shag carpet on the 
-floor, the plain white walls without trim.  Random streaks of caulk cover 
-the holes from when it was assembled.  The drop ceiling is missing tiles
-exposing the ugly metal roof of the building to everyone that looks up.
-As you look down the hallway, there is a single plain wooden door that 
-is visible. The walls are also covered with random pictures and framed
-newspaper clippings showing their numerous "awards" that have been won.
+  The hallway to the bosses office is very plain. The white and black stones
+on the floor, the plain white walls without trim. The walls have a few holes
+in them from when they were built. As you look down the hallway, there is a 
+single plain wooden door that is visible. 
 ~
 149 67108876 0
 D1
@@ -667,13 +673,10 @@ D3
 S
 #14936
 Hallway to the Boss's Office~
-  The hallway to the bosses office is very plain. The shag carpet on the 
-floor, the plain white walls without trim.  Random streaks of caulk cover 
-the holes from when it was assembled.  The drop ceiling is missing tiles
-exposing the ugly metal roof of the building to everyone that looks up.
-As you look down the hallway, there is a single plain wooden door that 
-is visible. The walls are also covered with random pictures and framed
-newspaper clippings showing their numerous "awards" that have been won.
+  The hallway to the bosses office is very plain. The white and black stones
+on the floor, the plain white walls without trim. The walls have a few holes
+in them from when they were built. As you look down the hallway, there is a 
+single plain wooden door that is visible. 
 ~
 149 67108872 0
 D2
@@ -723,13 +726,13 @@ D3
 0 -1 14939
 S
 #14939
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D1
@@ -746,13 +749,13 @@ D3
 0 -1 14942
 S
 #14940
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D0
@@ -765,13 +768,13 @@ D3
 0 -1 14941
 S
 #14941
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D0
@@ -792,13 +795,13 @@ D3
 0 -1 14944
 S
 #14942
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D0
@@ -819,13 +822,13 @@ D3
 0 -1 14943
 S
 #14943
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D0
@@ -842,13 +845,13 @@ D2
 0 -1 14944
 S
 #14944
-The Stainless Steel BBQ Kitchen~
-  The kitchens of the restaurant are nothing but stainless steel. The 
-floor is white tile as seen before, but the tables, knives, appliances
-and all the other equipment is all shiny stainless steel. Only the best
-apparently for this restaurant. You can see the pit bosses running 
-around making sure everything is cooking, and you can hear and smell
-the animals as they are slaughtered on site for the freshest experience.
+Rotted Wood Kitchen~
+  The walls, roof and floor of the kitchen are full of thick planks of wood
+stained dark with blood, mud and grime that has come through the place.  The
+wood has begun to rot and pieces of it hang from the ceiling. The smell of
+meat, both raw and cooked permeates the air along with numerous other flavors
+from the sauce and spice used.  The metal and wood tables, stoves and 
+knives are seen throughout the room. 
 ~
 149 67108872 0
 D0
@@ -870,12 +873,12 @@ D3
 S
 #14945
 Pit Boss Smoker~
-  This giant machine stands eight feet tall and feature twenty stainless
-steel racks rotating around a giant central wheel.  The oak and cherry 
-wood chips at the bottom give off a pleasant aroma as the slabs of pork 
-and beef slowly make their rotations around. The pit bosses are in charge
-of watching temperature and smoke levels to get the perfect crust on the 
-delicious meat. 
+  This giant machine is full of irod rods strapped to two hand cranked wheels
+on either side. A pitboss must manually spin these giant contraptions to cook
+the meat in a grueling process. The oak and cherry  wood chips at the bottom 
+give off a pleasant aroma as the slabs of pork and beef slowly make their
+rotations around. The pit bosses are in charge of watching temperature and 
+smoke levels to get the perfect crust on the delicious meat. 
 ~
 149 67108872 0
 D1
@@ -935,9 +938,8 @@ D2
 S
 #14949
 BBQ Pig Pen~
-  Unlike the cow pen, this room is surrounded by stainless steel bars.  
-There is no benefit to a shiny pen, but everything has to be shiny. The
-pigs here are milling around, making an absurd amount of noise. Oink 
+  Unlike the cow pen, this room is surrounded by steel bars.  
+The pigs here are milling around, making an absurd amount of noise. Oink 
 Oink here and an Oink Oink there is written on a sign that is placed
 in the pen.  There is another note scribbled below this. "Happy Bob
 has probably lost his mind."
@@ -956,7 +958,7 @@ very disturbing images of food that have formed in his head. Be careful,
 the beings that dwell in here are nothing like his restaurant.  At the same
 time though, this place does seem to make you hungry for some reason.
 ~
-149 67108872 0
+149 67108876 0
 D1
 ~
 ~

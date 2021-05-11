@@ -9,7 +9,7 @@ of his shirt which is way too tight for him. Hints of BBQ sauce can
 be seen smeared down the front of his shirt. He looks up at you and
 then continues chatting on the phone.
 ~
-536870954 402720896 0 Y
+536871018 402720896 0 Y
 51 -23 0 200d15+16845 20d2+85
 689542 4200000
 8 8 1
@@ -30,7 +30,7 @@ stares at her clipboard ignoring the requests from the many people
 waiting for seats.  The rowdy patrons yelling for help are ignored
 as she sings a tune in her head.
 ~
-108 0 0 Y
+44 0 0 Y
 47 -16 -5 22d23+7600 11d11+11
 25000 1500000
 8 8 0
@@ -48,7 +48,7 @@ mouth. They demand service and demand that everything be here when
 they want it.  They see themselves as the most important person 
 and simply treat all the employees like trash.
 ~
-108 0 0 Y
+44 0 0 Y
 47 -16 -5 24d20+7352 10d10+14
 86520 1500000
 8 8 0
@@ -61,13 +61,13 @@ waiter overworked employee~
 An Overworked Waiter~
 An overworked waiter hurriedly rushes back and forth.
 ~
- This young boy looks flustered and panicked. Tears stream down his 
+  This young boy looks flustered and panicked. Tears stream down his 
 face as they take a constant plethora of verbal and physical abuse 
-from the many rowdy patrons. The rush to the front and back of the 
+from the many rowdy patrons. They rush to the front and back of the 
 restaurant carrying numerous plates of food for the many tables
 that all want service.
 ~
-108 0 0 Y
+44 0 0 Y
 47 -17 -5 18d30+8100 17d5+17
 46812 1650000
 8 8 0
@@ -86,7 +86,7 @@ in a back and forth motion, ramming and headbutting whatever is in its
 path. This pig is very angry and is determined to not be turned into 
 some tasty ribs.
 ~
-44 0 0 Y
+108 0 0 Y
 47 -18 -4 280d4+9200 50d2+0
 30000 1750000
 8 8 1
@@ -105,7 +105,7 @@ black hooves smash and dent the stainless-steel floor. Its body is taut
 with bulging muscles making this cow much more aggressive and larger than
 what you would expect.
 ~
-44 0 0 Y
+108 0 0 Y
 47 -18 -4 180d6+10150 50d2+5
 30000 1700000
 8 8 1
@@ -125,7 +125,7 @@ hair, sauce running down his apron and heat has burned his eyebrows and
 eyelashes off.  The Happy Bob's BBQ apron can still be seen wrapped around
 his waist.
 ~
-44 0 0 Y
+108 0 0 Y
 47 -19 -4 240d4+8950 50d2+8
 35849 1800000
 8 8 1
@@ -144,7 +144,7 @@ moves itself around, and forms eye sockets and a very crude mouth. It rushes
 at you to devour you, to return the favor that Happy Bob gave to it numerous
 times before.
 ~
-40 277350400 0 Y
+104 277350400 0 Y
 53 -27 0 28d28+28000 38d10+48
 5000000 16666666
 8 8 1
@@ -166,7 +166,7 @@ anger and rage on all that remind him of Happy Bob, that cursed owner of
 the Barbeque restaurant.
 
 ~
-40 277350400 0 Y
+104 277350400 0 Y
 53 -26 0 29d29+29000 37d11+58
 4500000 15564025
 8 8 1
@@ -187,7 +187,7 @@ showing signs of rust, and the small holes poked into the side ooze even
 more juice. The mid section is crumpled, like someone wanted to be like
 Popeye. Happy Bob should have never done that.
 ~
-40 277350400 0 Y
+104 277350400 0 Y
 53 -27 0 24d24+24000 12d6+177
 3687144 14587222
 8 8 1
@@ -209,7 +209,7 @@ didnt get chosen to join Happy Bob's wonderful menu. Happy Bob had once
 told the chicken "BBQ sauce and chicken are the best together". But it 
 was all a lie.
 ~
-40 277350400 0 Y
+104 277350400 0 Y
 53 -33 0 31d31+31000 53d10+53
 1111111 33333333
 8 8 1
