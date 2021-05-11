@@ -223,5 +223,98 @@ T
 .... glows with an intense holy light.~
 K
 0 0 0 0 0 0 0
+#1312
+skylark short~
+Short-Eared Skylark~
+A small lark flutters through the moor.
+~
+A small and dull brown bird flutters from spot to spot around the moor. The
+small eyes on its head dart back and forth. Its numerous feathers on its short
+wings stretch out wide as it gathers the wind underneath.  The short tail 
+goes back and forth as it looks for a direction of flight. 
+~
+76 0 0 Y
+14 11 3 30d20+40 2d6+3
+3600 37500
+8 8 2
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1313
+owl moorland~
+A Moorland Owl~
+A tiny owl swivels its head from side to side.
+~
+A small owl moves its head back and forth looking for small prey to consume.
+Its large eyes allow it to see even the tiniest movement and its pupils dial
+in as it focuses.  Large talons protrude from its feet, ready to crush its 
+target rendering it helpless.
+~
+76 0 0 Y
+14 11 3 30d20+40 2d6+3
+3600 37500
+8 8 2
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1314
+snipe~
+A Mischievous Snipe~
+A tiny snipe hops around the moor.
+~
+A small bird with longer legs slowly walks through the small pools of water
+slowly scanning the water for smaller prey. A long narrow beak darts into 
+the water and retrieves a small frog or lizard that it quickly consumes. 
+As it stands still, it barely moves but still notices your presence.
+~
+76 0 0 Y
+14 11 4 30d20+40 2d6+3
+3600 37500
+8 8 2
+83 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1315
+small adder~
+A Small Poisonous Adder~
+A black snake slithers through the muck.
+~
+A long black snack slithers through the mud and short grass. Its many
+small scales form an intricate pattern on its back that blend into its
+surroundings.  The small eyes on top of its head blink slowly as it 
+moves stealthily towards its prey. The nose has a small ridge at the
+front, adding a slight variation to the very flat head.
+~
+76 0 0 Y
+14 11 2 30d20+40 2d6+3
+3600 37500
+8 8 2
+80 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1316
+black rook~
+The Black Rook~
+The Black Rook stands at attention and watches over the halls.
+~
+The Black Rook stands before you clad in the trappings of his fellow
+knights, with the lone exception that his is painted a brilliant black.
+The black rook is the basic foot soldier of the Canticle, assigned to 
+all the basic and menial tasks. Their job is to protect the keep from
+all intruders and also maintain order amongst the other creatures 
+of the moor. 
+~
+72 0 0 Y
+16 7 5 1d20+380 3d6+3
+3750 36200
+6 6 1
+4 0 0d0+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
 #0
 $~

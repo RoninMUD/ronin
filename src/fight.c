@@ -2836,10 +2836,11 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
   dam = MAX(1, (victim) ? calc_position_damage(GET_POS(victim), dam) : dam);
 
   if (!IS_NPC(ch)) {
-    /* Defend Damage Penalty */
+    /* Defend Damage Penalty 
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       dam = 1;
     }
+    */
   }
 
   return dam;

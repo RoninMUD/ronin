@@ -20,11 +20,11 @@ M
 ~
 ~
 A
-13 50
+13 100
 A
 18 5
 A
-52 10
+19 2
 #14601
 armguards mystical armguard ~
 Mystical Armguards~
@@ -47,7 +47,7 @@ M
 ~
 ~
 A
-19 2
+19 1
 A
 18 2
 A
@@ -85,7 +85,7 @@ Zyca Steel Buckler~
 A Large Polished Steel Shield rests on the ground.~
 ~
 9 134217792 513
-11 0 0 0
+25 0 0 0
 12 36000 5000
 70
 E
@@ -101,9 +101,9 @@ M
 ~
 ~
 A
-19 0
+19 2
 A
-18 0
+18 2
 A
 17 3
 #14605
@@ -137,7 +137,7 @@ Fire Newt Ritual Mask~
 A colorful mask made of newt scales.~
 ~
 9 134217792 17
-10 0 0 0
+14 0 0 0
 5 68450 33000
 42
 E
@@ -153,11 +153,11 @@ M
 ~
 ~
 A
-19 1
+19 2
 A
-13 10
+53 4
 A
-12 10
+52 15
 B
 40
 #14607

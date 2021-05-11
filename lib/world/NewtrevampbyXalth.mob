@@ -325,14 +325,16 @@ fire newt brute~
 A Fire Newt Brute~
 A Large Brutish Newt glares menacingly. 
 ~
-This is a fire newt brute. A larger and stronger version of the newts encountered before. The harsher environment has lead to increased strength and mass. They wear assorted torn armor and wield a large rock club.
+This is a fire newt brute. A larger and stronger version of the newts 
+encountered before. The harsher environment has lead to increased strength
+and mass. They wear assorted torn armor and wield a large rock club.
 ~
-10 0 0 Y
+40 0 0 Y
 35 -10 -5 50d10+3300 5d7+18
 0 475000
 8 8 1
 81 0 50d10+3300 0
-0 0 0 0
+0 1 0 0
 K
 30000 0 0 0 0 0 0
 #2935
@@ -340,9 +342,12 @@ fire newt thief~
 A Fire Newt Thief~
 A Lanky Newt slinks into the shadows.
 ~
-This is a fire newt thief. A very tall and thin creature creeps on the walls. Their hands and feet have adapted to provide perfect grip on almost any surface. Their skin flickers between multiple colors as it attempted to blend into the background. 
+This is a fire newt thief. A very tall and thin creature creeps on the walls. 
+Their hands and feet have adapted to provide perfect grip on almost any surface. 
+Their skin flickers between multiple colors as it attempted to blend 
+into the background. 
 ~
-42 0 0 Y
+40 0 0 Y
 46 -13 -7 50d10+7700 5d7+42
 0 1000000
 8 8 1
@@ -355,13 +360,16 @@ fire newt ruffian~
 A Fire Newt Ruffian~
 A Muscular Newt paces the room looking for a fight.
 ~
-This is a fire newt ruffian. Another large variant that has evolved after being trapped underground for untold ages. Their scales have hardened and plates of obsidian and other volcanic materials coat their bodies providing additional protection.
+This is a fire newt ruffian. Another large variant that has evolved after
+being trapped underground for untold ages. Their scales have hardened and 
+plates of obsidian and other volcanic materials coat their bodies 
+providing additional protection.
 ~
 44 0 0 Y
 45 -10 -4 200d5+6350 50d2+0
 0 1100000
 8 8 1
-75 0 20d20+50 0
+81 0 20d20+50 0
 0 1 0 0
 K
 75000 0 0 0 0 0 0
@@ -370,11 +378,14 @@ elder fire lizard~
 A Elder Fire Lizard~
 A Giant Fire Lizard, basks in the heat of lava flows.
 ~
-A larger fire lizard skulks around the room. Its long tail swaying back and forth as its tongue flicks in and out of its mouth. The large orange scales that cover its body reflect the light in the room and glow to a certain degree after absorbing the he
+A larger fire lizard skulks around the room. Its long tail swaying back
+and forth as its tongue flicks in and out of its mouth. The large orange
+scales that cover its body reflect the light in the room and glow to a 
+certain degree after absorbing the heat emitted by the flowing lava.
 ~
-16458 0 10 Y
+16456 0 10 Y
 55 -14 -20 50d100+14000 10d10+100
-0 2700000
+0 2500000
 8 8 0
 81 0 10d10+1000 1
 1 2 15 26
@@ -386,7 +397,11 @@ fire newt god~
 The Fire Newt God~
 A Fat Newt lounges and breathes heavily.
 ~
-The supposed fire newt god stands before you. A large and fat newt lazily sits next to the throne, slime and spit running down its face. It breathes heavily as it simply eats what is within its reach. It emits weird noises from its large gaping mouth. S
+The supposed fire newt god stands before you. A large and fat newt lazily
+sits next to the throne, slime and spit running down its face. It breathes
+heavily as it simply eats what is within its reach. It emits weird noises 
+from its large gaping mouth. Small newts in the area hesitantly come 
+to fulfill their gods wishes.
 ~
 16394 134219904 0 Y
 70 -18 -18 10d200+15000 20d20+160

@@ -1070,11 +1070,12 @@ D2
 0 -1 2936
 S
 #2938
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Crusted Lava Dead End~
+  A solid wall of solidified magma marks the end of your path forward. The 
+rough and jagged edges of the tunnel melt into a smooth blob of magma
+at the end.  Random rocks jut from the wall and cooled magma has formed
+large smooth blobs on the ground. The air is not as stale as the tunnel
+and allows for a brief respite from the stale air.
 ~
 29 9 0
 D2
@@ -1083,11 +1084,13 @@ D2
 0 -1 2937
 S
 #2939
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
 ~
 29 9 0
 D0
@@ -1100,11 +1103,13 @@ D1
 0 -1 2935
 S
 #2940
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
 ~
 29 9 0
 D2
@@ -1117,11 +1122,13 @@ D3
 0 -1 2941
 S
 #2941
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
 ~
 29 9 0
 D0
@@ -1134,11 +1141,13 @@ D1
 0 -1 2940
 S
 #2942
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
 ~
 29 9 0
 D2
@@ -1206,11 +1215,12 @@ D2
 0 -1 2946
 S
 #2946
-Crusted Lava Tunnel~
-  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
-has partially cooled leaving jagged edges and small pockets of molten rock
-casting light into the tunnel. Although lava can be seen, there is a slight
-breeze coming from somewhere else in the mountain.
+Crusted Lava Dead End~
+  A solid wall of solidified magma marks the end of your path forward. The 
+rough and jagged edges of the tunnel melt into a smooth blob of magma
+at the end.  Random rocks jut from the wall and cooled magma has formed
+large smooth blobs on the ground. The air is not as stale as the tunnel
+and allows for a brief respite from the stale air.
 ~
 29 9 0
 D0
@@ -1236,12 +1246,12 @@ D4
 0 -1 2943
 S
 #2948
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
 ~
 29 9 0
 D0
@@ -1258,12 +1268,12 @@ D2
 0 -1 2947
 S
 #2949
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
 ~
 29 9 0
 D1
@@ -1276,12 +1286,12 @@ D3
 0 -1 2948
 S
 #2950
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
 ~
 29 9 0
 D1
@@ -1294,12 +1304,12 @@ D3
 0 -1 2949
 S
 #2951
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
 ~
 29 9 0
 D3
@@ -1308,12 +1318,12 @@ D3
 0 -1 2950
 S
 #2952
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
 ~
 29 9 0
 D0
@@ -1384,12 +1394,12 @@ D2
 0 -1 2954
 S
 #2956
-Solidified Lava Tunnel~
-  The lava has now completely cooled and the walls are now just rock. The 
-walls are still warm to the touch but nothing that would cause a burn. 
-Sections are even more jagged as lava dripped from the ceiling, and formed
-razor sharp edges along sections of the wall. Other parts are quite smooth
-and feel soothing to lean against.
+Solidified Lava Tunnel Outcropping~
+  A small room off to the side of the tunnel filled with random garbage.
+The newts that inhabit this level cast aside their scales and other
+junk into this room. The walls are still jagged and warm, but are also
+covered in many random gouges and scratches. The rocks are great for 
+sharpening your weapons and evidence of ash sits on the ground.
 ~
 29 9 0
 D3
@@ -1588,13 +1598,11 @@ D5
 0 -1 2973
 S
 #2967
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D1
@@ -1607,13 +1615,11 @@ D2
 0 -1 2968
 S
 #2968
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D0
@@ -1626,13 +1632,11 @@ D3
 0 -1 2970
 S
 #2969
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D0
@@ -1641,13 +1645,11 @@ D0
 0 -1 2970
 S
 #2970
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D1
@@ -1664,13 +1666,11 @@ D3
 0 -1 2971
 S
 #2971
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D0
@@ -1683,13 +1683,11 @@ D1
 0 -1 2970
 S
 #2972
-Crystallized Magma Tunnel~
-  The rock walls have now been converted to glowing crystal clusters and
-larger singular crystals can be seen in random increments. Their warm 
-glow grows brighter as you continue along the tunnel. The tunnel has 
-smoothed out even more, with no jagged edges or protrusions along the 
-wall. The crystals are clear and glow in soft shades of yellow, white 
-and gold. 
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
 ~
 29 9 0
 D2
@@ -1826,11 +1824,13 @@ D5
 0 -1 2986
 S
 #2980
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
 ~
 29 9 0
 D1
@@ -1843,11 +1843,13 @@ D3
 0 -1 2979
 S
 #2981
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
 ~
 29 9 0
 D1
@@ -1860,11 +1862,13 @@ D3
 0 -1 2980
 S
 #2982
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
 ~
 29 9 0
 D3
@@ -1873,11 +1877,12 @@ D3
 0 -1 2981
 S
 #2983
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
 ~
 29 9 0
 D1
@@ -1890,11 +1895,12 @@ D3
 0 -1 2984
 S
 #2984
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
 ~
 29 9 0
 D1
@@ -1907,11 +1913,12 @@ D3
 0 -1 2985
 S
 #2985
-A Geodesic Dome~
-  A massive cavern ascends up into the blackness. The roof of the dome
-is so high that it can't be seen from the ground. The Crystal's seen 
-earlier are now appearing in much larger clumps and are much larger in
-size, going from the size of a sword to the size of small trees.
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
 ~
 29 9 0
 D1

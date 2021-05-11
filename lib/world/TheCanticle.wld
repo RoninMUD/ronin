@@ -23,7 +23,7 @@ cannot hear any birds or insects.  Heath grass slowly emerges from
 the watery soil and only helps muffle any form of movement along 
 the ground. 
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -167,7 +167,7 @@ to be seen.  You have the feeling that you are being watched. The hall
 continues to the west, and the smell of something cooking alerts your nose
 to what may be ahead.
 ~
-13 12 0
+13 8 0
 D0
 A beautiful blue hall~
 ~
@@ -267,7 +267,7 @@ Deep Blue Hall~
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the dragons of the north.
 ~
-13 12 0
+13 8 0
 D1
 A beautiful blue hall
 ~
@@ -714,7 +714,7 @@ Above you can be seen the roots of the cypress trees in the Moor up
 above. A lashed wooden ladder extends upwards, giving you a glimpse of
 the sky above and a breath of fresh air.
 ~
-13 0 0
+13 4 0
 D0
 ~
 ~
@@ -790,7 +790,7 @@ many bloody and storied battles.  The walls have gouges in them from random
 weapons and chunks are missing with giant claw marks indicating the type of
 battles that have been seen. 
 ~
-13 4 1
+13 0 1
 D0
 ~
 ~
@@ -821,7 +821,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -834,7 +834,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D1
 ~
 ~
@@ -856,7 +856,7 @@ musty and damp air. The grass is longer here and more signs of life are
 heard. Birds sing, insects buzz and the world seems more alive.  To the 
 east the dark moor calls to you, beckoning you to return.
 ~
-13 4 2
+13 0 2
 D1
 ~
 ~
@@ -869,7 +869,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -890,7 +890,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -907,7 +907,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D2
 ~
 ~
@@ -945,7 +945,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -966,7 +966,7 @@ creatures move beneath the surface.  It is eerily silent here, as you
 cannot hear any birds or insects.  To the north you can see a half crumbled
 fortress, though some of its towers still stand defiantly against the sky.
 ~
-13 4 2
+13 0 2
 D0
 ~
 ~
@@ -1121,7 +1121,7 @@ Light Blue Hall~
 corner of you eye, you see movement, but when you turn, there is nothing
 to be seen.  You have the feeling that you are being watched.
 ~
-13 12 0
+13 8 0
 D1
 A beautiful hall colored Light Blue
 ~
@@ -1139,7 +1139,7 @@ Light Blue Hall~
 corner of you eye, you see movement, but when you turn, there is nothing
 to be seen.  You have the feeling that you are being watched.
 ~
-13 12 0
+13 8 0
 D0
 Scullery
 ~
@@ -1156,7 +1156,7 @@ Deep Blue Hall~
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the ogres of the west.
 ~
-13 12 0
+13 8 0
 D1
 A beautiful blue hall
 ~
@@ -1174,7 +1174,7 @@ Deep Blue Hall~
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the harpies of the south.
 ~
-13 12 0
+13 8 0
 D0
 A beautiful blue hall
 ~
@@ -1192,7 +1192,7 @@ Deep Blue Hall~
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the demons of hell.
 ~
-13 12 0
+13 8 0
 D0
 A beautiful blue hall
 ~
@@ -1210,7 +1210,7 @@ Deep Blue Hall~
 with one lone exception.  A fine tapestry on the wall displays a scene of the
 Knights of the Order in battle with the brigands of the east.
 ~
-13 12 0
+13 8 0
 D0
 The Crystal Parapet
 ~
