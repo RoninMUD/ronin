@@ -1,17 +1,18 @@
 #2301
 white pawn~
-white pawn~
+White Pawn~
 A white pawn is standing here.
 ~
-A protector of its own colour, also a very brave solider, one that never flee and walk away from away battle.
-It is waiting to be promoted to be a more important piece in its class.
+A protector of its own colour, also a very brave solider, one that never flee 
+and walk away from away battle. It is waiting to be promoted to be a more 
+important piece in its class.
 ~
-76 0 500 Y
-10 10 5 3d10+150 2d8+1
-1000 12000
-8 8 1
-87 0 0d0+0 0
-0 0 0 0
+16460 0 0 Y
+56 -14 -18 20d30+12000 10d8+130
+1500 1500
+8 8 0
+87 0 20d30+2000 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2302
@@ -19,387 +20,389 @@ white queen rook~
 White Queen's Rook~
 A white queen's castle is standing here.
 ~
-A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
-Its job is to protect the Queen.
+A creature which looks like a building against attack. There are two arms and
+two legs attached to this particular piece. Its job is to protect the Queen.
 ~
-76 0 500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
-8 8 1
-87 0 0d0+0 0
-0 0 0 0
+16460 0 0 Y
+53 -14 -12 20d100+12000 10d10+120
+1500 1500
+8 8 0
+87 0 50d100+0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2303
 white queen knight~
-white queen's knight~
+White Queen's Knight~
 A white queen's knight is standing here.
 ~
-The most powerful soilder of the white chess, it is responsible to the Queen's safety.
-It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
+The most powerful soilder of the white chess, it is responsible to the Queen's
+safety. It has a head of a horse and a body of mankind, it might be a relative
+of the centaur family.
 ~
-76 268697600 500 Y
-16 4 0 6d10+300 3d6+1
-1500 18000
-8 8 1
-87 0 0d0+0 0
-0 0 0 0
+16460 0 0 Y
+53 -14 -12 20d100+12000 10d10+120
+1500 1500
+8 8 0
+87 0 50d100+0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2304
 white queen bishop~
-white queen's bishop~
+White Queen's Bishop~
 A white queen's bishop is standing here.
 ~
 A happy bishop who can do everything in an incredibly quick motion.
 ~
-76 0 500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
-8 8 1
-87 0 0d0+0 0
-0 0 0 0
+16460 0 0 Y
+53 -14 -12 20d100+12000 10d10+120
+1500 1500
+8 8 0
+87 0 50d100+0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2305
 white queen~
-white queen~
+White Queen~
 The white queen is standing here
 ~
 She is the most respected and powerful figure in the white chess.
 She is bad-tempered and gets mad easily, watch out!
 ~
-76 0 500 Y
-20 0 0 10d10+600 10d2+4
-6000 60000
+76 0 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 2
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2306
 white king~
-white king~
+White King~
 The white king is standing here.
 ~
 Unlike most kings, he does not enjoy the feeling of being powerful.
 He gave all his power to the queen, yet he is still a very tough fighter.
 ~
-76 0 500 Y
-23 -1 -4 10d10+800 10d2+4
-10000 80000
+76 0 0 Y
+55 -20 -12 50d100+15500 10d12+150
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2307
-white king castle~
-white king's castle~
-A white king's castle is standing here.
+white king bishop~
+White King's Bishop~
+A white king's bishop is standing here.
 ~
-A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
-Its job is to protect the king.
+A happy bishop who can do everything in an incredibly quick motion.
 ~
-76 0 500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+76 0 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2308
 white king knight~
-white king's knight~
+White King's Knight~
 A white king's knight is standing here.
 ~
 The most powerful soilder of the white chess, it is responsible to the king's safety.
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
-76 268697600 500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+76 268697600 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2309
-white king bishop~
-white king's bishop~
-A white king's bishop is standing here.
+white king castle~
+White King's Rook~
+A white king's castle is standing here.
 ~
-A happy bishop who can do everything in an incredibly quick motion.
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the king.
 ~
-76 0 500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+76 0 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2310
 black pawn~
-black pawn~
+Black Pawn~
 A black pawn is standing here.
 ~
-A protector of its own colour, also a very brave solider, one that never flee and walk away from away battle.
-It is waiting to be promoted to be a more important piece in its class.
+A protector of its own colour, also a very brave solider, one that never flee
+and walk away from away battle. It is waiting to be promoted to be a more 
+important piece in its class.
 ~
-108 0 -500 Y
-10 10 5 3d10+150 2d8+1
-1000 12000
-8 8 1
-87 0 0d0+0 0
+16456 0 0 Y
+56 -14 -18 20d30+12000 10d8+130
+1500 1500
+8 8 0
+87 0 20d30+2000 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #2311
 black queen castle~
-black queen's castle~
+Black Queen's Rook~
 A black queen's castle is standing here.
 ~
 A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
 Its job is to protect the Queen.
 ~
-108 0 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+108 0 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2312
 black queen knight~
-black queen's knight~
+Black Queen's Knight~
 A black queen's knight is standing here.
 ~
 The most powerful soilder of the black chess, it is responsible to the Queen's safety.
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
-109 268697600 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+109 268697600 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2313
 black queen bishop~
-black queen's bishop~
+Black Queen's Bishop~
 A black queen's bishop is standing here.
 ~
 A happy bishop who can do everything in an incredibly quick motion.
 ~
-108 0 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+108 0 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2314
 black queen~
-black queen~
+Black Queen~
 The black queen is standing here
 ~
 She is the most respected and powerful figure in the black chess.
 She is bad-tempered and gets mad easily, watch out!
 ~
-108 8 -500 Y
-20 0 0 10d10+600 10d2+4
-6000 60000
+108 8 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 2
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2315
 black king~
-black king~
+Black King~
 The black king is standing here.
 ~
 Unlike most kings, he does not enjoy the feeling of being powerful.
 He gave all his power to the queen, yet he is still a very tough fighter.
 ~
-108 8 -500 Y
-23 -1 -4 10d10+800 10d2+4
-10000 80000
+108 8 0 Y
+55 -20 -12 50d100+15500 10d12+150
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2316
-black king castle~
-black king's castle~
-A black king's castle is standing here.
+black king bishop~
+Black King's Bishop~
+A black king's bishop is standing here.
 ~
-A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
-Its job is to protect the king.
+A happy bishop who can do everything in an incredibly quick motion.
 ~
-108 8 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+108 8 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2317
 black king knight~
-black king's knight~
+Black King's Knight~
 A black king's knight is standing here.
 ~
 The most powerful soilder of the black chess, it is responsible to the king's safety.
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
-109 268697608 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+109 268697608 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2318
-black king bishop~
-black king's bishop~
-A black king's bishop is standing here.
+black king castle~
+Black King's Rook~
+A black king's castle is standing here.
 ~
-A happy bishop who can do everything in an incredibly quick motion.
+A creature which looks like a building against attack. There are two arms and two legs attached to this particular piece.
+Its job is to protect the king.
 ~
-108 8 -500 Y
-16 4 0 6d10+300 8d2+2
-1500 18000
+108 8 0 Y
+53 -14 -12 20d100+12350 10d10+135
+1500 1500
 8 8 1
 87 0 0d0+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2319
 queen white super~
 The Super White Queen~
-The Super White Queen stands before you.
+The Super White Queen stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-55 -28 10 20d20+400 10d10+10
-1 1
+12 128 0 Y
+70 -21 -28 10d220+42000 20d12+190
+2000000 10500000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+5000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2320
 bishop white super~
 The Super White Bishop~
-A blank of primal clay stands here, waiting to be shaped
+The Super White Bishop stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -18 -24 10d220+38000 16d35+100
+1750000 9050000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+4000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2321
 knight white super~
 The Super White Knight~
-A blank of primal clay stands here, waiting to be shaped
+The Super White Knight stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -19 -23 10d220+34000 20d20+160
+1500000 8750000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+3000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2322
 rook white super~
 The Super White Rook~
-A blank of primal clay stands here, waiting to be shaped
+The Super White Rook stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -15 -20 10d220+30000 20d10+130
+1250000 7950000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+2000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2323
 queen black super~
 The Super Black Queen~
-A blank of primal clay stands here, waiting to be shaped
+The Super Black Queen stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -21 -28 10d220+42000 20d12+190
+2000000 10500000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+5000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2324
 bishop black super~
 The Super Black Bishop~
-A blank of primal clay stands here, waiting to be shaped
+The Super Black Bishop stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -18 -24 10d220+38000 16d35+100
+1750000 9050000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+4000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2325
 knight black super~
 The Super Black Knight~
-A blank of primal clay stands here, waiting to be shaped
+The Super Black Knight stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -19 -23 10d220+34000 20d20+160
+1500000 8750000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+3000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2326
 rook black super~
 The Super Black Rook~
-A blank of primal clay stands here, waiting to be shaped
+The Super Black Rook stands before you
 ~
 Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
 ~
-10 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+12 128 0 Y
+70 -15 -20 10d220+30000 20d10+130
+1250000 7950000
 8 8 1
-87 0 1d1+1 0
-0 0 0 0
+87 20480 3d1000+2000 0
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #0

@@ -1,29 +1,12 @@
 #2301
 white castle's vest~
-a white castle's vest~
+A White Castle's Vest~
 a white castle's vest is lying on the ground.~
 ~
-9 1026 9
-8 0 0 0
-40 10000 500
-50
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#2302
-white blade~
-white blade~
-a white blade is lying on the ground.~
-~
-5 1024 8193
-0 3 6 3
-10 6000 500
-50
+9 1091 9
+28 0 0 0
+22 38000 68400
+28
 X
 ~
 0 0 0
@@ -33,7 +16,34 @@ M
 ~
 ~
 A
-19 1
+17 -12
+A
+19 2
+A
+18 2
+#2302
+white blade~
+White Blade~
+A White Blade is lying on the ground.~
+~
+5 1091 8193
+0 6 7 3
+10 124900 75499
+28
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+52 15
 #2303
 white stole~
 a white stole~
@@ -42,7 +52,7 @@ a white stole is lying on the ground.~
 9 1024 5
 3 0 0 0
 5 1000 200
-50
+28
 X
 ~
 0 0 0
@@ -57,34 +67,34 @@ A
 13 5
 #2304
 white mitre~
-a white mitre~
-a white mitre is lying on the ground.~
+A White Mitre~
+A white mitre is lying on the ground.~
 ~
-9 132097 17
-3 0 0 0
-20 20000 3000
-50
+9 132161 17
+14 0 0 0
+7 102000 59000
+28
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-4 1
+53 1
 A
-12 10
+19 1
 #2305
 white crosier~
-a white crosier~
+A White Crosier~
 a white crosier is lying on the ground.~
 ~
-12 263168 16385
+12 263235 16385
 0 0 0 0
-30 10000 1000
-50
+22 175000 132875
+28
 X
 ~
 0 0 0
@@ -94,35 +104,20 @@ M
 ~
 ~
 A
-3 2
+19 -8
 A
-13 20
+52 20
+A
+53 20
 #2306
 black castle's vest~
-a black castle's vest~
+A Black Castle's Vest~
 a black castle's vest is lying on the ground.~
 ~
-9 514 9
-8 0 0 0
-40 10000 500
-50
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#2307
-black blade~
-black blade~
-a black blade is lying on the ground.~
-~
-5 512 8193
-0 3 6 3
-10 6000 500
-50
+9 579 9
+28 0 0 0
+22 38000 68400
+28
 X
 ~
 0 0 0
@@ -132,7 +127,34 @@ M
 ~
 ~
 A
-18 1
+17 -12
+A
+19 2
+A
+18 2
+#2307
+black blade~
+Black Blade~
+A Black Blade is lying on the ground.~
+~
+5 579 8193
+0 6 7 3
+10 124900 75499
+28
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+52 15
 #2308
 black stole~
 a black stole~
@@ -141,7 +163,7 @@ a black stole is lying on the ground.~
 9 512 5
 3 0 0 0
 5 1000 200
-50
+28
 X
 ~
 0 0 0
@@ -156,34 +178,34 @@ A
 13 5
 #2309
 black mitre~
-a black mitre~
+A Black Mitre~
 a black mitre is lying on the ground.~
 ~
-9 131585 17
-3 0 0 0
-20 20000 3000
-50
+9 131649 17
+14 0 0 0
+4 102000 59000
+28
 X
 ~
-0 0 0
+1536 0 0
 M
 ~
 ~
 ~
 ~
 A
-4 1
+53 1
 A
-12 10
+19 1
 #2310
 black crosier~
-a black crosier~
+A Black Crosier~
 a black crosier is lying on the ground.~
 ~
 12 262656 16385
 0 0 0 0
-30 10000 1000
-50
+22 175000 132875
+28
 X
 ~
 0 0 0
@@ -193,8 +215,170 @@ M
 ~
 ~
 A
-3 2
+19 -8
 A
-13 20
+52 20
+A
+53 20
+#2311
+belt mighty rooks~
+Rook's Mighty Belt~
+A mighty belt of the super rook.~
+~
+15 134218051 2049
+3000 0 0 0
+15 239000 140000
+0
+X
+~
+3648 0 0
+M
+~
+~
+~
+~
+A
+53 3
+A
+19 2
+A
+18 4
+#2312
+form recipe rooks requisition~
+Rook's Requisition Form~
+There is a bit of nothing here.~
+~
+32 0 1
+2311 20903 2102 7700
+0 250000 250000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2313
+ring holy bishop bishops~
+Bishop's Holy Ring~
+A holy ring of the super bishop.~
+~
+9 134218051 1
+5 0 0 0
+5 375982 287456
+0
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+A
+53 3
+A
+19 3
+A
+18 3
+#2314
+drawing drawings old chessboard~
+Drawings on an Old Chessboard~
+There is a bit of nothing here.~
+~
+32 0 1
+2313 21208 902 20902
+0 250000 250000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2315
+shield sturdy knight knight's~
+Knight's Sturdy Shield~
+The sturdy shield of the super knight.~
+~
+9 0 1
+23 0 0 0
+18 189304 166993
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+13 100
+A
+52 30
+#2316
+design first blacksmith~
+First Design of a Blacksmith~
+There is a bit of nothing here.~
+~
+32 0 1
+2315 8610 25007 2804
+0 250000 250000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#2317
+crown queen queen's stunning~
+Queen's Stunning Crown~
+The stunning crown of the super queen.~
+~
+9 0 1
+11 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 6
+A
+12 80
+#2318
+rite coronation~
+Rite of Coronation~
+There is a bit of nothing here.~
+~
+32 0 1
+2317 14512 4831 8923
+0 250000 250000
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
