@@ -220,7 +220,6 @@ void assign_mobiles(void)
   assign_WOT();
   assign_ecanyon();
 
-    
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_ubers();

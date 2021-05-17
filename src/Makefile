@@ -124,7 +124,6 @@ OBJS_RONIN_SPEC = \
 	spec.cafeteria.o \
 	spec.cavern.o \
 	spec.chaos.o \
-	spec.chess.o \
 	spec.clan.o \
 	spec.ctower.o \
 	spec.daimyo.o \
@@ -201,6 +200,8 @@ OBJS_RONIN_SPEC = \
 	subclass.skills.o
 
 OBJS_RONIN_SPEC_TEST = \
+	spec.chess.o \
+	spec.crazylab.o \
 	spec.digsite.o \
 	spec.luthienIV.o \
 	spec.happybob.o \

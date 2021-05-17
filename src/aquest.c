@@ -1014,12 +1014,12 @@ const int aq_mob_master_list[][2] = {
   { 26482, 5 }, /* magus */
   { 27712, 5 }, /* bebilith stalker purple spider insect */
   { 19403, 5 }, /* mountaninous grolem */
-  { 19508, 5 }, /* difficult world elemental earth ruler*/
-  { 19509, 5 }, /* difficult world elemental fire ruler */
-  { 19510, 5 }, /* difficult world elemental air ruler */
-  { 19511, 5 }, /* difficult world elemental lightning ruler */
-  { 19512, 5 }, /* difficult world elemental water ruler */
-  { 10502, 6 }, /*tarion cavalier*/
+//  { 19508, 5 }, /* difficult world elemental earth ruler*/
+//  { 19509, 5 }, /* difficult world elemental fire ruler */
+//  { 19510, 5 }, /* difficult world elemental air ruler */
+//  { 19511, 5 }, /* difficult world elemental lightning ruler */
+//  { 19512, 5 }, /* difficult world elemental water ruler */
+//  { 10502, 6 }, /*tarion cavalier*/
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */

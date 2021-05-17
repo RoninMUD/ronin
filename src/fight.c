@@ -2714,7 +2714,7 @@ int calc_ac(CHAR *ch) {
 
     /* Defend: AC Bonus and Max AC Adjustment */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
-      ac -= 100;
+      ac -= 20;
       min_pc_ac = -300;
     }
 
@@ -2834,14 +2834,6 @@ int calc_hit_damage(CHAR *ch, CHAR *victim, OBJ *weapon, int bonus, int mode) {
 
   /* Minimum damage is 1, unless modified below. */
   dam = MAX(1, (victim) ? calc_position_damage(GET_POS(victim), dam) : dam);
-
-  if (!IS_NPC(ch)) {
-    /* Defend Damage Penalty 
-    if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
-      dam = 1;
-    }
-    */
-  }
 
   return dam;
 }

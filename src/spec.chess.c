@@ -1,8 +1,8 @@
-/*spec.chess.c - Specs for Chess 
+/*spec.chess.c - Specs for Chess
 
      Written by Sane for RoninMUD
      Last Modification Date: 4/21/2021
-	 Modified by Fisher.
+   Modified by Fisher.
 
      Basic Specs for the mobs and rooms in the zone.
 */
@@ -172,85 +172,79 @@ int get_uber_chess(int color)
 
 void reset_chess_board(CHAR* mob)
 {
-   int i,j;
-   CHAR* mob_to_spawn;
-   CHAR *vict, *next_v;
-  
-  //Purge All Remaining Pieces
-  for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
-    
-      for (vict = world[real_room(i)].people; vict; vict = next_v) {
-        next_v = vict->next_in_room;
-		
-		//You have to ignore the king that died or else it will fail.
-		//Check against the mob passed in.
-	
-		if(V_MOB(mob) == V_MOB(vict)) continue;
-		
-		//If not a chess mob - continue	
-		if (!IS_CHESS_MOB(vict)) continue;
-		
-		//Double Check NPC Flag		
-        if (IS_NPC(vict)){
-			extract_char(vict);
-		}
-      }
-	  
-	  //Purge all the corpses and other objects
-	  
-	  //Can we protect against losing player items?
-	  /*
-      for (obj = world[real_room(i)].contents; obj; obj = next_o) {
-        next_o = obj->next_content;
-        extract_obj(obj);
-      }   
-	  */
-  }
-  
-  //Reset All Pieces
-  
-  //Load White Pieces
-  
-  //Load the Pawns
-  for(i=2349;i<=2356;i++) {
-	  
-	  mob_to_spawn = read_mobile(WHITE_PAWN, VIRTUAL);
-	  char_to_room(mob_to_spawn, real_room(i));
-	  
-  }
-  
-  //Load the Other Pieces
-  //Start with Queens Rook.  Increment Up.
-   j=2302;
-   for(i=2357;i<=2364;i++) {
-	  
-	  mob_to_spawn = read_mobile(j, VIRTUAL);
-	  char_to_room(mob_to_spawn, real_room(i));
-	  j++;
-  }
- 
-  
-  //Load Black Pieces
-  
-  //Load the Pawns
-  //Start with Queens Rook.  Increment Up.
-  
-  for(i=2309;i<=2316;i++) {  
-	  
-	 mob_to_spawn = read_mobile(BLACK_PAWN, VIRTUAL);
-	 char_to_room(mob_to_spawn, real_room(i));	 
-  }
-  
-  
-  //Start with Queens Rook.  Increment Up.
-   j=2311;
-   for(i=2301;i<=2308;i++) {
-	  
-	  mob_to_spawn = read_mobile(j, VIRTUAL);
-	  char_to_room(mob_to_spawn, real_room(i));
-	  j++;
-  }
-	
+    int i,j;
+    CHAR* mob_to_spawn;
+    CHAR *vict, *next_v;
+
+    //Purge All Remaining Pieces
+    for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
+
+        for (vict = world[real_room(i)].people; vict; vict = next_v) {
+            next_v = vict->next_in_room;
+
+            //You have to ignore the king that died or else it will fail.
+            //Check against the mob passed in.
+
+            if(V_MOB(mob) == V_MOB(vict)) continue;
+
+            //If not a chess mob - continue
+            if (!IS_CHESS_MOB(vict)) continue;
+
+            //Double Check NPC Flag
+            if (IS_NPC(vict)){
+                extract_char(vict);
+            }
+        }
+
+        //Purge all the corpses and other objects
+
+        //Can we protect against losing player items?
+        /*
+        for (obj = world[real_room(i)].contents; obj; obj = next_o) {
+            next_o = obj->next_content;
+            extract_obj(obj);
+        }
+        */
+    }
+
+    //Reset All Pieces
+
+    //Load White Pieces
+
+    //Load the Pawns
+    for(i=2349;i<=2356;i++) {
+        mob_to_spawn = read_mobile(WHITE_PAWN, VIRTUAL);
+        char_to_room(mob_to_spawn, real_room(i));
+    }
+
+    //Load the Other Pieces
+    //Start with Queens Rook.  Increment Up.
+    j=2302;
+    for(i=2357;i<=2364;i++) {
+        mob_to_spawn = read_mobile(j, VIRTUAL);
+        char_to_room(mob_to_spawn, real_room(i));
+        j++;
+    }
+
+
+     //Load Black Pieces
+
+     //Load the Pawns
+     //Start with Queens Rook.  Increment Up.
+
+     for(i=2309;i<=2316;i++) {
+         mob_to_spawn = read_mobile(BLACK_PAWN, VIRTUAL);
+         char_to_room(mob_to_spawn, real_room(i));
+     }
+
+
+     //Start with Queens Rook.  Increment Up.
+     j=2311;
+     for(i=2301;i<=2308;i++) {
+         mob_to_spawn = read_mobile(j, VIRTUAL);
+         char_to_room(mob_to_spawn, real_room(i));
+         j++;
+     }
 }
 
 
@@ -281,83 +275,77 @@ Load the items based on their repop rates
 */
 
 void load_mob_items(CHAR* mob){
-	//Declare Variables
-	OBJ *obj = NULL;
-	int object_to_load = 0;
-	int recipe = 0;
-	int rnum = 0;
-	
-	//Set the Item Values based on the Mob.  
-	
-	//Set Normal Item
-	
-	if(IS_SUPER_WHITE_ROOK(mob)){
-		object_to_load = WHITE_ROOK_ITEM;
-	}
-	else if (IS_SUPER_BLACK_ROOK(mob)){
-		object_to_load = BLACK_ROOK_ITEM;
-	}
-	else if (IS_SUPER_WHITE_KNIGHT(mob)){
-		object_to_load = WHITE_ROOK_ITEM;
-	}
-	else if (IS_SUPER_BLACK_KNIGHT(mob)){
-		object_to_load = BLACK_BISHOP_ITEM;
-	}
-	else if (IS_SUPER_WHITE_BISHOP(mob)){
-		object_to_load = WHITE_BISHOP_ITEM;
-	}
-	else if (IS_SUPER_BLACK_BISHOP(mob)){
-		object_to_load = BLACK_BISHOP_ITEM;
-	}
-	else if (IS_SUPER_WHITE_QUEEN(mob)){
-		object_to_load = WHITE_ROOK_ITEM;
-	}
-	else if (IS_SUPER_BLACK_QUEEN(mob)){
-		object_to_load = WHITE_ROOK_ITEM;
-	}
-	
-	
-	
-	
-	//Set Recipe
-	if(IS_SUPER_ROOK(mob)){
-		recipe = ROOK_RECIPE;
-	}
-	else if (IS_SUPER_KNIGHT(mob)){
-		recipe = KNIGHT_RECIPE;
-	}
-	else if(IS_SUPER_BISHOP(mob)){
-		recipe = BISHOP_RECIPE;
-	}
-	else if (IS_SUPER_QUEEN(mob)){
-		recipe = QUEEN_RECIPE;
-	}
-	
-	
-	
-	//Load Normal Item into inventory if its under its repop percent.
-	obj=read_object(object_to_load, VIRTUAL);
-	rnum=real_object(object_to_load);
-	if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent))
-	{
-		obj_to_char(obj,mob);
-	}
-    
-	
-	
-	//Load Recipe onto equip slot.
-	
-	obj=EQ(mob, HOLD);
-	rnum=real_object(recipe);
-	if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent))
-	{
-		if (obj && ( V_OBJ(obj) != recipe )) obj_to_char( unequip_char(mob, HOLD), mob );
-		else if (!obj) {
-		  obj=read_object(recipe, VIRTUAL);
-		  equip_char(mob, obj, HOLD);
-		}
-	}
-	
+    //Declare Variables
+    OBJ *obj = NULL;
+    int object_to_load = 0;
+    int recipe = 0;
+    int rnum = 0;
+
+    //Set the Item Values based on the Mob.
+
+    //Set Normal Item
+
+    if(IS_SUPER_WHITE_ROOK(mob)){
+        object_to_load = WHITE_ROOK_ITEM;
+    }
+    else if (IS_SUPER_BLACK_ROOK(mob)){
+        object_to_load = BLACK_ROOK_ITEM;
+    }
+    else if (IS_SUPER_WHITE_KNIGHT(mob)){
+        object_to_load = WHITE_ROOK_ITEM;
+    }
+    else if (IS_SUPER_BLACK_KNIGHT(mob)){
+        object_to_load = BLACK_BISHOP_ITEM;
+    }
+    else if (IS_SUPER_WHITE_BISHOP(mob)){
+        object_to_load = WHITE_BISHOP_ITEM;
+    }
+    else if (IS_SUPER_BLACK_BISHOP(mob)){
+        object_to_load = BLACK_BISHOP_ITEM;
+    }
+    else if (IS_SUPER_WHITE_QUEEN(mob)){
+        object_to_load = WHITE_ROOK_ITEM;
+    }
+    else if (IS_SUPER_BLACK_QUEEN(mob)){
+        object_to_load = WHITE_ROOK_ITEM;
+    }
+
+    //Set Recipe
+    if(IS_SUPER_ROOK(mob)){
+        recipe = ROOK_RECIPE;
+    }
+    else if (IS_SUPER_KNIGHT(mob)){
+        recipe = KNIGHT_RECIPE;
+    }
+    else if(IS_SUPER_BISHOP(mob)){
+        recipe = BISHOP_RECIPE;
+    }
+    else if (IS_SUPER_QUEEN(mob)){
+        recipe = QUEEN_RECIPE;
+    }
+
+
+    //Load Normal Item into inventory if its under its repop percent.
+    obj=read_object(object_to_load, VIRTUAL);
+    rnum=real_object(object_to_load);
+    if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent))
+    {
+        obj_to_char(obj,mob);
+    }
+
+
+    //Load Recipe onto equip slot.
+
+    obj=EQ(mob, HOLD);
+    rnum=real_object(recipe);
+    if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent))
+    {
+        if (obj && ( V_OBJ(obj) != recipe )) obj_to_char( unequip_char(mob, HOLD), mob );
+        else if (!obj) {
+            obj=read_object(recipe, VIRTUAL);
+            equip_char(mob, obj, HOLD);
+        }
+    }
 }
 
 
@@ -370,18 +358,18 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     CHAR* chess_king;
     char buf[MAX_STRING_LENGTH];
     int zone;
-	
-	
-	//Set the Zone so it exists for the purge
-	//zone = world[CHAR_REAL_ROOM(mob)].zone;	
-	
-	switch (cmd)
+
+
+    //Set the Zone so it exists for the purge
+    //zone = world[CHAR_REAL_ROOM(mob)].zone;
+
+    switch (cmd)
     {
     case MSG_MOBACT:
         uber_chess = NULL;
-		
+
         // Are we a pawn on the last rank?
-        if (IS_WHITE_PAWN(mob) && IS_WHITE_LAST_RANK(world[CHAR_REAL_ROOM(mob)].number))		
+        if (IS_WHITE_PAWN(mob) && IS_WHITE_LAST_RANK(world[CHAR_REAL_ROOM(mob)].number))
         {
             uber_chess = read_mobile(get_uber_chess(CHESS_WHITE), VIRTUAL);
         }
@@ -401,39 +389,39 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
                 sprintf(buf, "CHECK AND MATE! A pawn has advanced across the board!");
                 do_quest(chess_king, buf, CMD_QUEST);
             }
-            
+
             char_to_room(uber_chess, CHAR_REAL_ROOM(mob));
-			load_mob_items(uber_chess);
-			extract_char(mob);
+            load_mob_items(uber_chess);
+            extract_char(mob);
             return FALSE;
         }
 
         // Not on the last rank.
         // Is there an opposite color chess mob in the same room?
-		
-		//Make sure the mobs aren't fighting.
-		if(!mob->specials.fighting){
-			for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = victim->next_in_room)
-			{
-				if (!victim) return FALSE;
-				if (!IS_NPC(victim)) return FALSE;
-				if ((IS_WHITE_CHESS(mob) && IS_BLACK_CHESS(victim))
-				 || (IS_BLACK_CHESS(mob) && IS_WHITE_CHESS(victim)))
-				{
-					do_say(mob, "GOD SAVE THE KING!", CMD_SAY);
-					hit(mob, victim, TYPE_UNDEFINED);
-					return FALSE;
-				}
-			}
-		}
+
+        //Make sure the mobs aren't fighting.
+        if(!mob->specials.fighting){
+            for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = victim->next_in_room)
+            {
+                if (!victim) return FALSE;
+                if (!IS_NPC(victim)) return FALSE;
+                if ((IS_WHITE_CHESS(mob) && IS_BLACK_CHESS(victim))
+                    || (IS_BLACK_CHESS(mob) && IS_WHITE_CHESS(victim)))
+                {
+                    do_say(mob, "GOD SAVE THE KING!", CMD_SAY);
+                    hit(mob, victim, TYPE_UNDEFINED);
+                    return FALSE;
+                }
+            }
+        }
         break;
     case MSG_DIE:
         if (IS_WHITE_KING(mob) || IS_BLACK_KING(mob))
         {
             // The king is dead, LONG LIVE THE KING!
-			
-			zone = CHESS_ZONE;
-			
+
+            zone = CHESS_ZONE;
+
             if (zone >= 0)
             {
                 clean_zone(zone);
@@ -442,9 +430,8 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
                 // He should exist now
                 if (chess_king)
                 {
-					sprintf(buf, "How about a game of chess?");
+                    sprintf(buf, "How about a game of chess?");
                     do_quest(chess_king, buf, CMD_QUEST);
-                    
                 }
             }
             else
@@ -461,17 +448,17 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
 
 int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
 {
-  if(cmd != MSG_TICK)
-    return FALSE;
-  if(obj->equipped_by)
-    {     
-		GET_HIT(obj->equipped_by) = MIN( GET_MAX_HIT(obj->equipped_by),
-						 GET_HIT(obj->equipped_by)+10);
-		GET_MANA(obj->equipped_by) = MIN( GET_MAX_MANA(obj->equipped_by),
-						 GET_MANA(obj->equipped_by)+10);
-      
+    if(cmd != MSG_TICK)
+        return FALSE;
+    if(obj->equipped_by)
+    {
+        GET_HIT(obj->equipped_by) = MIN( GET_MAX_HIT(obj->equipped_by),
+             GET_HIT(obj->equipped_by)+10);
+        GET_MANA(obj->equipped_by) = MIN( GET_MAX_MANA(obj->equipped_by),
+             GET_MANA(obj->equipped_by)+10);
+
     }
-  return FALSE;
+     return FALSE;
 }
 
 
@@ -479,42 +466,42 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
 
 void assign_chess(void)
 {
-	
-  //Assing Objects	
-assign_obj(WHITE_BISHOP_ITEM, bishop_holy_ring);
-	
-	
-	//Assign Spec to All White Chess Pieces
-assign_mob(WHITE_PAWN, chess_mob);
-assign_mob(WHITE_QUEEN_ROOK, chess_mob);
-assign_mob(WHITE_QUEEN_KNIGHT, chess_mob);
-assign_mob(WHITE_QUEEN_BISHOP, chess_mob);
-assign_mob(WHITE_QUEEN, chess_mob);
-assign_mob(WHITE_KING, chess_mob);
-assign_mob(WHITE_KING_ROOK, chess_mob);
-assign_mob(WHITE_KING_KNIGHT, chess_mob);
-assign_mob(WHITE_KING_BISHOP, chess_mob);
-assign_mob(UBER_WHITE_QUEEN, chess_mob);
-assign_mob(UBER_WHITE_BISHOP, chess_mob);
-assign_mob(UBER_WHITE_KNIGHT, chess_mob);
-assign_mob(UBER_WHITE_ROOK, chess_mob);
+
+    //Assing Objects
+    assign_obj(WHITE_BISHOP_ITEM, bishop_holy_ring);
 
 
-//Assign Spec to All Black Chess Pieces
+    //Assign Spec to All White Chess Pieces
+    assign_mob(WHITE_PAWN, chess_mob);
+    assign_mob(WHITE_QUEEN_ROOK, chess_mob);
+    assign_mob(WHITE_QUEEN_KNIGHT, chess_mob);
+    assign_mob(WHITE_QUEEN_BISHOP, chess_mob);
+    assign_mob(WHITE_QUEEN, chess_mob);
+    assign_mob(WHITE_KING, chess_mob);
+    assign_mob(WHITE_KING_ROOK, chess_mob);
+    assign_mob(WHITE_KING_KNIGHT, chess_mob);
+    assign_mob(WHITE_KING_BISHOP, chess_mob);
+    assign_mob(UBER_WHITE_QUEEN, chess_mob);
+    assign_mob(UBER_WHITE_BISHOP, chess_mob);
+    assign_mob(UBER_WHITE_KNIGHT, chess_mob);
+    assign_mob(UBER_WHITE_ROOK, chess_mob);
 
-assign_mob(BLACK_PAWN, chess_mob);
-assign_mob(BLACK_QUEEN_ROOK, chess_mob);
-assign_mob(BLACK_QUEEN_KNIGHT, chess_mob);
-assign_mob(BLACK_QUEEN_BISHOP, chess_mob);
-assign_mob(BLACK_QUEEN, chess_mob);
-assign_mob(BLACK_KING, chess_mob);
-assign_mob(BLACK_KING_ROOK, chess_mob);
-assign_mob(BLACK_KING_KNIGHT, chess_mob);
-assign_mob(BLACK_KING_BISHOP, chess_mob);
-assign_mob(UBER_BLACK_QUEEN, chess_mob);
-assign_mob(UBER_BLACK_BISHOP, chess_mob);
-assign_mob(UBER_BLACK_KNIGHT, chess_mob);
-assign_mob(UBER_BLACK_ROOK, chess_mob);
+
+    //Assign Spec to All Black Chess Pieces
+
+    assign_mob(BLACK_PAWN, chess_mob);
+    assign_mob(BLACK_QUEEN_ROOK, chess_mob);
+    assign_mob(BLACK_QUEEN_KNIGHT, chess_mob);
+    assign_mob(BLACK_QUEEN_BISHOP, chess_mob);
+    assign_mob(BLACK_QUEEN, chess_mob);
+    assign_mob(BLACK_KING, chess_mob);
+    assign_mob(BLACK_KING_ROOK, chess_mob);
+    assign_mob(BLACK_KING_KNIGHT, chess_mob);
+    assign_mob(BLACK_KING_BISHOP, chess_mob);
+    assign_mob(UBER_BLACK_QUEEN, chess_mob);
+    assign_mob(UBER_BLACK_BISHOP, chess_mob);
+    assign_mob(UBER_BLACK_KNIGHT, chess_mob);
+    assign_mob(UBER_BLACK_ROOK, chess_mob);
 }
 
 
