@@ -190,6 +190,7 @@ void remeq(CHAR *victim, int pos) {
     o = EQ(victim, pos);
     if(!o) return;
     unequip_char (victim, pos);
+    obj_to_char(obj, victim);
     obj_to_room (o, CHAR_REAL_ROOM(victim));
     sprintf(buf,"Hell Log: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
     log_s(buf);
@@ -1104,8 +1105,8 @@ int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
       return FALSE;
     }
     if(OBJ_SPEC(ring) == 0 && vict->specials.fighting && !IS_NPC(vict)) {
-      act("Your $p falls to the ground, taking your severed digit with it!",0,vict,ring,0,TO_CHAR);
-      act("$n's $p falls to the ground taking $s finger with it!",0,vict,ring,0,TO_NOTVICT);
+      act("Your $p falls off, taking your severed digit with it!",0,vict,ring,0,TO_CHAR);
+      act("$n's $p falls off, taking $s finger with it!",0,vict,ring,0,TO_NOTVICT);
       damage(vict,vict,332,TYPE_UNDEFINED,DAM_NO_BLOCK);
       if(ring == EQ(vict,WEAR_FINGER_L)) remeq(vict,WEAR_FINGER_L);
       else if(ring == EQ(vict,WEAR_FINGER_R)) remeq(vict,WEAR_FINGER_R);
