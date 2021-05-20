@@ -8,7 +8,7 @@ and walk away from away battle. It is waiting to be promoted to be a more
 important piece in its class.
 ~
 16460 0 0 Y
-56 -14 -18 20d30+12000 10d8+130
+56 -14 -18 5d120+5000 10d4+70
 1500 1500
 8 8 0
 87 0 20d30+2000 0
@@ -24,7 +24,7 @@ A creature which looks like a building against attack. There are two arms and
 two legs attached to this particular piece. Its job is to protect the Queen.
 ~
 16460 0 0 Y
-53 -14 -12 20d100+12000 10d10+120
+53 -14 -12 5d140+9000 10d4+110
 1500 1500
 8 8 0
 87 0 50d100+0 0
@@ -41,7 +41,7 @@ safety. It has a head of a horse and a body of mankind, it might be a relative
 of the centaur family.
 ~
 16460 0 0 Y
-53 -14 -12 20d100+12000 10d10+120
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 0
 87 0 50d100+0 0
@@ -56,7 +56,7 @@ A white queen's bishop is standing here.
 A happy bishop who can do everything in an incredibly quick motion.
 ~
 16460 0 0 Y
-53 -14 -12 20d100+12000 10d10+120
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 0
 87 0 50d100+0 0
@@ -88,7 +88,7 @@ Unlike most kings, he does not enjoy the feeling of being powerful.
 He gave all his power to the queen, yet he is still a very tough fighter.
 ~
 76 0 0 Y
-55 -20 -12 50d100+15500 10d12+150
+55 -20 -12 10d20+3500 10d5+10
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -103,7 +103,7 @@ A white king's bishop is standing here.
 A happy bishop who can do everything in an incredibly quick motion.
 ~
 76 0 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -119,7 +119,7 @@ The most powerful soilder of the white chess, it is responsible to the king's sa
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
 76 268697600 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -135,7 +135,7 @@ A creature which looks like a building against attack. There are two arms and tw
 Its job is to protect the king.
 ~
 76 0 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d140+9000 10d4+110
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -152,7 +152,7 @@ and walk away from away battle. It is waiting to be promoted to be a more
 important piece in its class.
 ~
 16456 0 0 Y
-56 -14 -18 20d30+12000 10d8+130
+56 -14 -18 5d120+5000 10d4+70
 1500 1500
 8 8 0
 87 0 20d30+2000 0
@@ -168,7 +168,7 @@ A creature which looks like a building against attack. There are two arms and tw
 Its job is to protect the Queen.
 ~
 108 0 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d140+9000 10d4+110
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -184,7 +184,7 @@ The most powerful soilder of the black chess, it is responsible to the Queen's s
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
 109 268697600 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -199,7 +199,7 @@ A black queen's bishop is standing here.
 A happy bishop who can do everything in an incredibly quick motion.
 ~
 108 0 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -231,7 +231,7 @@ Unlike most kings, he does not enjoy the feeling of being powerful.
 He gave all his power to the queen, yet he is still a very tough fighter.
 ~
 108 8 0 Y
-55 -20 -12 50d100+15500 10d12+150
+55 -20 -12 10d20+3500 10d5+10
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -246,7 +246,7 @@ A black king's bishop is standing here.
 A happy bishop who can do everything in an incredibly quick motion.
 ~
 108 8 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -262,7 +262,7 @@ The most powerful soilder of the black chess, it is responsible to the king's sa
 It has a head of a horse and a body of mankind, it might be a relative of the centaur family.
 ~
 109 268697608 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d120+7500 10d5+90
 1500 1500
 8 8 1
 87 0 0d0+0 0
@@ -278,7 +278,7 @@ A creature which looks like a building against attack. There are two arms and tw
 Its job is to protect the king.
 ~
 108 8 0 Y
-53 -14 -12 20d100+12350 10d10+135
+53 -14 -12 5d140+9000 10d4+110
 1500 1500
 8 8 1
 87 0 0d0+0 0

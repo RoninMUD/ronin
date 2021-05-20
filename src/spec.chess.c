@@ -25,6 +25,7 @@
 #include "act.h"
 #include "fight.h"
 #include "spec_assign.h"
+#include "reception.h"
 #include "mob.spells.h"
 
 #define WHITE_PAWN          2301
@@ -132,7 +133,7 @@
 #define IS_BLACK_LAST_RANK(room) (room >= 2357 && room <= 2364)
 
 #define IS_CHESS_MOB(ch) (IS_WHITE_CHESS(ch) || IS_BLACK_CHESS(ch))
-
+#define IS_CHESS_OBJECT(obj) (V_OBJ(obj) >= 2300 && V_OBJ(obj) <= 2399)
 
 #define IS_SUPER_ROOK(ch)(IS_SUPER_WHITE_ROOK(ch) || IS_SUPER_BLACK_ROOK(ch))
 #define IS_SUPER_KNIGHT(ch)(IS_SUPER_WHITE_KNIGHT(ch) || IS_SUPER_BLACK_KNIGHT(ch))
@@ -175,9 +176,12 @@ void reset_chess_board(CHAR* mob)
     int i,j;
     CHAR* mob_to_spawn;
     CHAR *vict, *next_v;
+    //struct obj_data *obj, *next_o;
 
     //Purge All Remaining Pieces
     for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
+		
+		
 
         for (vict = world[real_room(i)].people; vict; vict = next_v) {
             next_v = vict->next_in_room;
@@ -192,21 +196,32 @@ void reset_chess_board(CHAR* mob)
 
             //Double Check NPC Flag
             if (IS_NPC(vict)){
+				strip_char(vict);
                 extract_char(vict);
             }
         }
 
-        //Purge all the corpses and other objects
+      
+        
+    }
+	
+	/*
+	  //Purge all the corpses and other objects
 
         //Can we protect against losing player items?
-        /*
+        
         for (obj = world[real_room(i)].contents; obj; obj = next_o) {
-            next_o = obj->next_content;
+			//Get Real Object Number
+			//If Not a Chess Item - Skip Item
+			next_o = obj->next_content;
+					
+			if(!IS_CHESS_OBJECT(obj)) continue;	
+			
+			//Remove Object.            
             extract_obj(obj);
         }
-        */
-    }
-
+	*/
+	
     //Reset All Pieces
 
     //Load White Pieces
@@ -226,7 +241,6 @@ void reset_chess_board(CHAR* mob)
         j++;
     }
 
-
      //Load Black Pieces
 
      //Load the Pawns
@@ -236,7 +250,6 @@ void reset_chess_board(CHAR* mob)
          mob_to_spawn = read_mobile(BLACK_PAWN, VIRTUAL);
          char_to_room(mob_to_spawn, real_room(i));
      }
-
 
      //Start with Queens Rook.  Increment Up.
      j=2311;
