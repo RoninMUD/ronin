@@ -36,6 +36,7 @@
 #define UBER_ULT_MYSTIC 14602
 #define UBER_HUGE_WHIRLWIND 14603
 #define UBER_ZYCA_PRINCE 14604
+#define UBER_FIRE_NEWT_PHOENIX 14605
 
 /*Miscellaneous strings */
 //Generic States that are shifted to indicate different stages.
@@ -82,7 +83,7 @@ int ub_uber_kingspider(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-				//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
 				//Each Case statement that has an action needs to break out at the end.
 				switch (number(0, 6))
 				{
@@ -206,7 +207,7 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-				//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
 				//Each Case statement that has an action needs to break out at the end.
 
 				switch (number(0, 6))
@@ -247,7 +248,6 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							hit(wind, tch, TYPE_UNDEFINED);
 
 							return FALSE;
-
 						}
 
 					case 4:
@@ -373,13 +373,13 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-				//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
 				//Each Case statement that has an action needs to break out at the end.
 
 				factor = 10* GET_HIT(uber) / GET_MAX_HIT(uber);
 				switch (factor)
 				{
-					//Stun a random victim.
+				 		//Stun a random victim.
 					case 9:
 
 						do_say(uber, "You do show some promise.", CMD_SAY);
@@ -432,7 +432,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 								//Check for more than 1 person in the room.
 								if (count_mortals_room(uber, TRUE) > 1)
 								{
-									//get 2nd victim that is still fighting
+								 						//get 2nd victim that is still fighting
 									vict2 = get_random_victim_fighting(uber);
 									if (!(vict) || IS_NPC(vict2) || !(IS_MORTAL(vict2))) return FALSE;
 									uber_um_stun(uber, vict2);
@@ -485,7 +485,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						break;
 
 					case 1:
-						do_say(uber, "Wonderful. Absolutley wonderful. Continue your development.", CMD_SAY);
+						do_say(uber, "Wonderful. Absolutely wonderful. Continue your development.", CMD_SAY);
 
 						switch (number(0, 1))
 						{
@@ -507,7 +507,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 								//Check for more than 1 person in the room.
 								if (count_mortals_room(uber, TRUE) > 1)
 								{
-									//get 2nd victim that is still fighting
+								 						//get 2nd victim that is still fighting
 									vict2 = get_random_victim_fighting(uber);
 									if (!(vict) || IS_NPC(vict2) || !(IS_MORTAL(vict2))) return FALSE;
 									uber_um_stun(uber, vict2);
@@ -519,7 +519,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			}
 			else
 			{
-				//Remove Existing States if not fighting.
+			 	//Remove Existing States if not fighting.
 
 				/*If not fighting, and wimpy, remove wimpy. */
 				if (!GET_OPPONENT(uber) && IS_SET(GET_BANK(uber), STATE1))
@@ -552,20 +552,22 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	return FALSE;
 }
 
-
 //Mob Number 14604
 //Load in Room 10969
 
- int ub_uber_zycaprince(CHAR *uber, CHAR *ch, int cmd, char *arg)
+int ub_uber_zycaprince(CHAR *uber, CHAR *ch, int cmd, char *arg)
 {
 	//These are default declarations to give variables to characters.
 	char buf[MAX_STRING_LENGTH];
 	CHAR *vict, *next_vict;
 
 	//You must declare the reward so you get AQP.
-	int reward = 2;
+	int reward = 1;
 
 	//Define any other variables
+
+	/*Don't waste any more CPU time if no one is in the room. */
+	if (count_mortals_room(uber, TRUE) < 1) return FALSE;
 
 	char *uber_zp_speak[4] = { "Jeez Dad, leave me alone.", "Don't tell me what to do. You're not my real dad.", "The bachelor life is the life for me.", "Bah...i don't wanna do anything." };
 
@@ -584,7 +586,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-				//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
 				//Each Case statement that has an action needs to break out at the end.
 
 				switch (number(0, 2))
@@ -603,9 +605,9 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						}
 						break;
 					case 1:
-					break;
+						break;
 					case 2:
-					break;
+						break;
 					default:
 						break;
 				}
@@ -633,11 +635,106 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	return FALSE;
 }
 
+//Mob Number 14605
+//Load in Room 2933
 
+int ub_uber_firenewtphoenix(CHAR *uber, CHAR *ch, int cmd, char *arg)
+{
+	//These are default declarations to give variables to characters.
+	char buf[MAX_STRING_LENGTH];
+	CHAR *vict, *next_vict;
+
+	//You must declare the reward so you get AQP.
+	int reward = 4;
+
+	//Define any other variables
+
+	/*Don't waste any more CPU time if no one is in the room. */
+	if (count_mortals_room(uber, TRUE) < 1) return FALSE;
+
+	switch (cmd)
+	{
+		case MSG_MOBACT:
+
+			//if fighting - spec different attacks
+			if (uber->specials.fighting)
+			{
+			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+				//Each Case statement that has an action needs to break out at the end.
+
+				switch (number(0, 3))
+				{
+				 		//Claws
+					case 0:
+						vict = get_random_victim_fighting(uber);
+						if (vict)
+						{
+							act("$n slashes wildly at $N with long sharp claws.", 0, uber, 0, vict, TO_NOTVICT);
+							act("$n slashes wildly at you with long sharp claws.", 0, uber, 0, vict, TO_VICT);
+							sprintf(buf, "%s is slashed with multiple sharp claws.", GET_NAME(vict));
+							act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
+							sprintf(buf, "You are slashed with multiple sharp claws.");
+							act(buf, FALSE, uber, NULL, vict, TO_VICT);
+							damage(uber, vict, 1700, TYPE_UNDEFINED, DAM_PHYSICAL);
+						}
+						break;
+						//Beak and Stun
+					case 1:
+						vict = get_random_victim_fighting(uber);
+						if (vict)
+						{
+							act("$n pierces $N with hear beak as blood squirts out.", 0, uber, 0, vict, TO_NOTVICT);
+							act("$n pierces you with her beak as blood squirts out.", 0, uber, 0, vict, TO_VICT);
+							sprintf(buf, "%s is pierced by the large polychromatic beak.", GET_NAME(vict));
+							act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
+							sprintf(buf, "You are pierced by the large polychromatic beak.");
+							act(buf, FALSE, uber, NULL, vict, TO_VICT);
+							damage(uber, vict, 1450, TYPE_UNDEFINED, DAM_PHYSICAL);
+							WAIT_STATE(vict, 2 *PULSE_VIOLENCE);
+						}
+						break;
+						//Wing And Group Stun.
+					case 2:
+						act("$n violently flaps her wings and tosses everyone against the walls. ", 0, uber, 0, 0, TO_ROOM);
+						for (vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+						{
+							next_vict = vict->next_in_room;
+							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
+							damage(uber, vict, 1300, TYPE_UNDEFINED, DAM_PHYSICAL);
+							WAIT_STATE(vict, PULSE_VIOLENCE *3);
+						}
+						break;
+					case 3:
+						break;
+					default:
+						break;
+				}
+			}
+
+			//can add an else branch here if you want them to act but not in combat.
+
+			break;
+
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+			send_to_room(buf, CHAR_REAL_ROOM(uber));
+			for (vict = world[CHAR_REAL_ROOM(uber)].people; vict; vict = next_vict)
+			{
+				next_vict = vict->next_in_room;
+				if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
+				sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
+				send_to_char(buf, vict);
+				vict->ver3.quest_points += reward;
+			}
+
+			break;
+	}
+
+	return FALSE;
+}
 
 //Assign Spec for the zone. Sets all other specs.
-//First Param - Object, Room or Mob Number.  Define it up above.
-//Second Param - the name of the function that is for the mob Usually a shorthand for your zone.
+
 void assign_ubers(void)
 {
 	/*Objects */
@@ -652,5 +749,6 @@ void assign_ubers(void)
 	assign_mob(UBER_GREAT_MYSTIC, ub_uber_greatmystic);
 	assign_mob(UBER_ULT_MYSTIC, ub_uber_ultmystic);
 	assign_mob(UBER_ZYCA_PRINCE, ub_uber_zycaprince);
+	assign_mob(UBER_FIRE_NEWT_PHOENIX, ub_uber_firenewtphoenix);
 
 }

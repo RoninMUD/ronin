@@ -3179,7 +3179,7 @@ void do_who(CHAR *ch, char *arg, int cmd) {
         strcat(buf, " (thief)");
       }
 
-      if (IS_SET(GET_PFLAG(c), PLR_KILL)) {
+      if (IS_SET(GET_PFLAG(c), PLR_DEPUTY)) {
         strcat(buf, " (deputy)");
       }
 

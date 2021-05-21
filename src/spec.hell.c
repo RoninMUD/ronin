@@ -178,7 +178,7 @@ void block(CHAR *ch, CHAR *mob) {
 
 
 void remeq(CHAR *victim, int pos) {
-  char buf[MAX_INPUT_LENGTH];
+  //char buf[MAX_INPUT_LENGTH];
   OBJ *o = NULL;
   struct descriptor_data *d;
 
@@ -190,11 +190,12 @@ void remeq(CHAR *victim, int pos) {
     o = EQ(victim, pos);
     if(!o) return;
     unequip_char (victim, pos);
-    obj_to_room (o, CHAR_REAL_ROOM(victim));
-    sprintf(buf,"Hell Log: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
-    log_s(buf);
-    o->log=1;
-    save_char(victim,NOWHERE);
+    obj_to_char(o, victim);
+    //obj_to_room (o, CHAR_REAL_ROOM(victim));
+    //sprintf(buf,"Hell Log: [ %s had %s removed at %d ]",GET_NAME(victim),OBJ_SHORT(o),world[CHAR_REAL_ROOM(victim)].number);
+    //log_s(buf);
+    //o->log=1;
+    //save_char(victim,NOWHERE);
   }
 }
 
@@ -1104,9 +1105,9 @@ int Ring_Agony (OBJ *ring, CHAR *ch, int cmd, char *arg) {
       return FALSE;
     }
     if(OBJ_SPEC(ring) == 0 && vict->specials.fighting && !IS_NPC(vict)) {
-      act("Your $p falls to the ground, taking your severed digit with it!",0,vict,ring,0,TO_CHAR);
-      act("$n's $p falls to the ground taking $s finger with it!",0,vict,ring,0,TO_NOTVICT);
-      damage(vict,vict,332,TYPE_UNDEFINED,DAM_NO_BLOCK);
+      act("Your $p falls off, taking your severed digit with it!",0,vict,ring,0,TO_CHAR);
+      act("$n's $p falls off, taking $s finger with it!",0,vict,ring,0,TO_NOTVICT);
+      damage(vict,vict,666,TYPE_UNDEFINED,DAM_NO_BLOCK);
       if(ring == EQ(vict,WEAR_FINGER_L)) remeq(vict,WEAR_FINGER_L);
       else if(ring == EQ(vict,WEAR_FINGER_R)) remeq(vict,WEAR_FINGER_R);
       OBJ_SPEC(ring)=counter;

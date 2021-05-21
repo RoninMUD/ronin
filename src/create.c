@@ -3180,7 +3180,6 @@ void edit_zone(CHAR *ch, char *fargs)
   int top, bottom, i,i2;
   int v_zone=-1,zone, iArg, iMaxCommands=0;
   void generate_zone_commands(int r_zone);
-  void clean_zone(int r_zone);
   int add_command(int r_zone, struct reset_com *cmd, int where);
 
   if(!check_olc_access(ch)) return;

@@ -926,6 +926,8 @@ const int aq_mob_master_list[][2] = {
   { 27102, 3 }, /* Damoclese the Gladiator */
   { 27106, 3 }, /* lord bundolo */
   { 27715, 3 }, /* gelugon guardian guard demon */
+  { 20923, 3 }, /* tweef king vandimar */
+  { 20924, 3 }, /* tweef queen larienne */
   { 209, 4 }, /* lookout vagabond scout leader */
   { 501, 4 }, /* Oni Greater */
   { 540, 4 }, /* Tanoshi Wrestler */
@@ -1011,6 +1013,13 @@ const int aq_mob_master_list[][2] = {
   { 26402, 5 }, /* emir malik */
   { 26482, 5 }, /* magus */
   { 27712, 5 }, /* bebilith stalker purple spider insect */
+  { 19403, 5 }, /* mountaninous grolem */
+//  { 19508, 5 }, /* difficult world elemental earth ruler*/
+//  { 19509, 5 }, /* difficult world elemental fire ruler */
+//  { 19510, 5 }, /* difficult world elemental air ruler */
+//  { 19511, 5 }, /* difficult world elemental lightning ruler */
+//  { 19512, 5 }, /* difficult world elemental water ruler */
+//  { 10502, 6 }, /*tarion cavalier*/
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */
@@ -1940,7 +1949,11 @@ int ubers[][2] = {
   {21220, 21275}, // Huge Stone Dragon - spec.moria.c
   {26585, 26582}, // Enlightened One - spec.pagoda.c
   {20109, 20109}, // Musashi - spec.daimyo.c
-  {11300, 11400} // Strahd - spec.barovia.c
+  {11300, 11400}, // Strahd - spec.barovia.c
+  {14600, 12094}, //King Spider - spec.ubers.c
+  {14601, 12931}, //Great Mystic - spec.ubers.c
+  {14602, 12904} //Ultimate Mystic - spec.ubers.c
+    
 };
 
 
