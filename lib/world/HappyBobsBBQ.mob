@@ -134,64 +134,60 @@ his waist.
 K
 0 0 0 0 0 0 0
 #14907
-potatoes mashed plate~
-A Giant Plate of Mashed Potatoes~
-A giant plate wobbles around the room.
+large angry cow~
+A Very Large Angry Cow~
+A bulky cow snorts and prepares to charge.
 ~
-This large plate of mashed potatoes covers its entire surface.  The center
-of the pile is full of dark brown gravy that falls over the sides. The mound
-moves itself around, and forms eye sockets and a very crude mouth. It rushes
-at you to devour you, to return the favor that Happy Bob gave to it numerous
-times before.
+A large black and white cow snorts in contempt. Its red eyes seethe with anger
+as it stares straight through you. It opens it mouth and its teeth are
+pointed, dripping with blood and it looks to make you its next meal.
 ~
 104 277350400 0 Y
-53 -27 0 28d28+28000 38d10+48
+53 -27 -15 28d28+28000 38d10+48
 5000000 16666666
 8 8 1
-67 55424 55d55+555 0
+91 55424 55d55+555 0
 0 1 0 864
 R
 6
 K
 0 0 0 0 0 0 0
 #14908
-cornbread butter dripping~
-Anthropomorphic Cornbread Dripping with Butter~
-A giant piece of cornbread with arms and legs walks around.
+large angry pig~
+A Very Large Angry Pig~
+A very fat pig oinks loudly.
 ~
-This piece of cornbread has taken on the characteristics of the man that has
-made its life a living hell. Forever cursed to walk this world after being 
-eaten by a balding fat man who couldn't care less. It looks to take out its
-anger and rage on all that remind him of Happy Bob, that cursed owner of
-the Barbeque restaurant.
-
+A large pink pig lumbers towards you. Its girth is so wide it can barely walk
+but it continues on. Numerous scars cover its skin as it has survived many
+attempts to be turned into dinner.  The smell is horrible, as it is covered
+in blood, mud and many other unsavory things.
 ~
 104 277350400 0 Y
-53 -26 0 29d29+29000 37d11+58
+53 -26 -14 29d29+29000 37d11+58
 4500000 15564025
 8 8 1
-67 55424 55d55+555 0
+86 55424 55d55+555 0
 0 1 0 864
 R
 6
 K
 0 0 0 0 0 0 0
 #14909
-rusty cant baked beans~
-A Rusty Can of Baked Beans~
-A rusty tin can waddles back and forth along the ground.
+large angry worker~
+A Very Large Angry Worker~
+A sweaty man is screaming and yelling profusely.
 ~
-A half mangled can stands four and a half feet off the ground. Its top is 
-pried open and bean juice drips out of the top. The edges of the can are 
-showing signs of rust, and the small holes poked into the side ooze even
-more juice. The mid section is crumpled, like someone wanted to be like
-Popeye. Happy Bob should have never done that.
+An angry man yells and screams, angry over being fired for something dumb. 
+The random excuses fly from his mouth, justifying his poor performance,
+lack of skills and ability to always cost the owner more money. Since
+it can't be his fault, he is going to take it out on you, as you are the 
+root cause of all his problems.
 ~
 104 277350400 0 Y
-53 -27 0 24d24+24000 12d6+177
+53 -27 -17 24d24+24000 12d6+177
 3687144 14587222
 8 8 1
-67 55424 55d55+555 0
+69 55424 55d55+555 0
 0 1 0 864
 R
 6
@@ -210,10 +206,10 @@ told the chicken "BBQ sauce and chicken are the best together". But it
 was all a lie.
 ~
 104 277350400 0 Y
-53 -33 0 31d31+31000 53d10+53
+53 -33 -18 31d31+31000 53d10+53
 1111111 33333333
 8 8 1
-67 55424 55d55+555 0
+86 55424 55d55+555 0
 0 1 0 864
 R
 6
