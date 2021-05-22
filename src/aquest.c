@@ -1950,10 +1950,11 @@ int ubers[][2] = {
   {26585, 26582}, // Enlightened One - spec.pagoda.c
   {20109, 20109}, // Musashi - spec.daimyo.c
   {11300, 11400}, // Strahd - spec.barovia.c
+#ifdef TEST_SITE
   {14600, 12094}, //King Spider - spec.ubers.c
   {14601, 12931}, //Great Mystic - spec.ubers.c
   {14602, 12904} //Ultimate Mystic - spec.ubers.c
-    
+#endif
 };
 
 
