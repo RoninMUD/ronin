@@ -8420,7 +8420,6 @@ void promote_bard(CHAR *promoter, CHAR *ch);
 void do_rank(struct char_data *ch, char *argument, int cmd) {
   int rank = 0, stop = 0;
   CHAR *vict = NULL;
-  ENCH *tmp_ench = NULL;
   char name[100], buf[MSL];
 
   if(!check_god_access(ch,TRUE)) return;
@@ -8445,7 +8444,8 @@ void do_rank(struct char_data *ch, char *argument, int cmd) {
   /* check for removal */
   one_argument(argument,name);
   if(*name && is_abbrev(name,"remove")) {
-    for(tmp_ench=vict->enchantments;!stop && tmp_ench;tmp_ench = tmp_ench->next) {
+    for(ENCH *tmp_ench=vict->enchantments, *next = NULL; !stop && tmp_ench; tmp_ench = next) {
+      next = tmp_ench->next;
       stop = enchantment_special(tmp_ench,vict,ch,MSG_DEAD,"");
     }
     sprintf(buf,"WIZLOG: %s has dropped %s a rank.",GET_NAME(ch),GET_NAME(vict));
