@@ -180,8 +180,8 @@ void reset_chess_board(CHAR* mob)
 
     //Purge All Remaining Pieces
     for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
-		
-		
+
+
 
         for (vict = world[real_room(i)].people; vict; vict = next_v) {
             next_v = vict->next_in_room;
@@ -196,32 +196,32 @@ void reset_chess_board(CHAR* mob)
 
             //Double Check NPC Flag
             if (IS_NPC(vict)){
-				strip_char(vict);
+                strip_char(vict);
                 extract_char(vict);
             }
         }
 
-      
-        
+
+
     }
-	
-	/*
-	  //Purge all the corpses and other objects
+
+    /*
+    //Purge all the corpses and other objects
 
         //Can we protect against losing player items?
-        
+
         for (obj = world[real_room(i)].contents; obj; obj = next_o) {
-			//Get Real Object Number
-			//If Not a Chess Item - Skip Item
-			next_o = obj->next_content;
-					
-			if(!IS_CHESS_OBJECT(obj)) continue;	
-			
-			//Remove Object.            
+            //Get Real Object Number
+            //If Not a Chess Item - Skip Item
+            next_o = obj->next_content;
+
+            if(!IS_CHESS_OBJECT(obj)) continue;
+
+            //Remove Object.
             extract_obj(obj);
         }
-	*/
-	
+    */
+
     //Reset All Pieces
 
     //Load White Pieces
