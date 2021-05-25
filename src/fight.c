@@ -3062,7 +3062,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
         /* Bullwark */
         if (IS_MORTAL(defender) && check_subclass(defender, SC_WARLORD, 5) && (defender_ac < -250)) {
-          check += (int)(700.0 * ((((double)defender_ac - 250.0) / 6.0) / 100.0));
+          check += (int)(700.0 * ((((double)(-defender_ac) - 250.0) / 6.0) / 100.0));
         }
 
         if (number(1, 700) <= check) {
