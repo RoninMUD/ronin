@@ -2585,9 +2585,9 @@ int calc_hitroll(CHAR *ch) {
     }
 
     /* Evasion: Hitroll Penalty */
-    if (IS_SET(GET_TOGGLES(ch), TOG_EVASION)) {
-      hitroll -= 5;
-    }
+    //if (IS_SET(GET_TOGGLES(ch), TOG_EVASION)) {
+    //  hitroll -= 5;
+    //}
 
     /* Frenzy: Hitroll Penalty */
     if (affected_by_spell(ch, SKILL_FRENZY)) {
@@ -3379,8 +3379,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         /* Impair */
         if (SAME_ROOM(attacker, defender) &&
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
-            !IS_IMMUNE(defender, IMMUNE_PARALYSIS) &&
-            chance(50 + GET_DEX_APP(attacker))) {
+            chance((50 + GET_DEX_APP(attacker)) / (IS_IMMUNE(defender, IMMUNE_PARALYSIS) ? 2 : 1))) {
           enchantment_apply(defender, FALSE, "Paralyzed (Impair)", 0, (ROOM_CHAOTIC(CHAR_REAL_ROOM(attacker)) ? 0 : 2), 0, 0, 0, AFF_PARALYSIS, 0, 0);
 
           special_message = TRUE;
