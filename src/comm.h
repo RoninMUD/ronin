@@ -111,5 +111,6 @@ extern int noroomdesc;
 extern int noextradesc;
 extern int slow_death;
 extern char CREATEIMP[];
+extern int FREEMORT;
 
 #endif /* _COMM_H_ */

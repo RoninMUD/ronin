@@ -820,33 +820,39 @@ struct rv2_remort_info rv2_appraise(CHAR *ch)
   remort_info.scp += GET_SCP(ch); /* Add in their current SCP pool. */
 
   /* Determine the fee to be charged for the remort process (if any). */
-  tmp = RV2_MIN_EXP_COST;
-  if (remort_info.exp > tmp)
-  {
-    tmp = RV2_MAX_EXP_COST;
+  if (FREEMORT) {
+    remort_info.qp_fee = 0;
+    remort_info.scp_fee = 0;
+  }
+  else {
+    tmp = RV2_MIN_EXP_COST;
     if (remort_info.exp > tmp)
     {
-      remort_info.qp_fee = RV2_MAX_QP_COST;
-      remort_info.scp_fee = RV2_MAX_SCP_COST;
+      tmp = RV2_MAX_EXP_COST;
+      if (remort_info.exp > tmp)
+      {
+        remort_info.qp_fee = RV2_MAX_QP_COST;
+        remort_info.scp_fee = RV2_MAX_SCP_COST;
+      }
+      else
+      {
+        tmp = (remort_info.exp - RV2_MIN_EXP_COST);
+        chunk = ((RV2_MAX_EXP_COST - RV2_MIN_EXP_COST) / RV2_MAX_QP_COST);
+
+        for (remort_info.qp_fee = 0; tmp > chunk; tmp -= chunk, remort_info.qp_fee++);
+
+        tmp = (remort_info.exp - RV2_MIN_EXP_COST);
+        chunk = ((RV2_MAX_EXP_COST - RV2_MIN_EXP_COST) / RV2_MAX_SCP_COST);
+
+        for (remort_info.scp_fee = 0; tmp > chunk; tmp -= chunk, remort_info.scp_fee++);
+      }
     }
-    else
-    {
-      tmp = (remort_info.exp - RV2_MIN_EXP_COST);
-      chunk = ((RV2_MAX_EXP_COST - RV2_MIN_EXP_COST) / RV2_MAX_QP_COST);
 
-      for (remort_info.qp_fee = 0; tmp > chunk; tmp -= chunk, remort_info.qp_fee++);
-
-      tmp = (remort_info.exp - RV2_MIN_EXP_COST);
-      chunk = ((RV2_MAX_EXP_COST - RV2_MIN_EXP_COST) / RV2_MAX_SCP_COST);
-
-      for (remort_info.scp_fee = 0; tmp > chunk; tmp -= chunk, remort_info.scp_fee++);
+    // Prestige Perk 13
+    if (GET_PRESTIGE_PERK(ch) >= 13) {
+      remort_info.qp_fee *= 0.9;
+      remort_info.scp_fee *= 0.9;
     }
-  }
-
-  // Prestige Perk 13
-  if (GET_PRESTIGE_PERK(ch) >= 13) {
-    remort_info.qp_fee *= 0.9;
-    remort_info.scp_fee *= 0.9;
   }
 
   return remort_info;
@@ -859,7 +865,13 @@ void rv2_appraise_message(CHAR *ch, struct rv2_remort_info remort_info)
   long long int tmp = 0;
 
   tmp = RV2_MIN_EXP_COST;
-  if (remort_info.exp > tmp)
+
+  if (FREEMORT) {
+    sprintf(buf, "Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee. To transcend this existence, I will require no level of compensation, as today celebrates the efforts of the fallen on behalf of us all. For my part however, I will return to you a sum of %lld experience points, %d quest points and %d subclass points.'\n\r",
+      remort_info.exp, remort_info.qp, remort_info.scp);
+    send_to_char(buf, ch);
+  }
+  else if (remort_info.exp > tmp)
   {
     if (remort_info.qp_fee > remort_info.qp || remort_info.scp_fee > remort_info.scp)
     {

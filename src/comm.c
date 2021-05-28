@@ -218,6 +218,7 @@ int TOKENCOUNT;
 int DOUBLEXP;
 #define SZ_OPT_CREATEIMP "CREATEIMP:"
 char CREATEIMP[21];
+int FREEMORT;
 
 void update_reboot(void) {
   FILE *fl;
@@ -253,6 +254,7 @@ int main(int argc, char **argv)
   CHAOSDEATH=0;
   TOKENCOUNT=0;
   DOUBLEXP=0;
+  FREEMORT=0;
 #ifdef TEST_SITE
   WIZLOCK=1;
   GAMELOCK=1;
@@ -288,6 +290,7 @@ int main(int argc, char **argv)
       if(!strcmp("CHAOSDEATH",tmp_txt))    CHAOSDEATH=tmp_num;
       if(!strcmp("TOKENCOUNT",tmp_txt))    TOKENCOUNT=tmp_num;
       if(!strcmp("DOUBLEXP",tmp_txt))      DOUBLEXP=tmp_num;
+      if(!strcmp("FREEMORT",tmp_txt))      FREEMORT=tmp_num;
 
       if(!strncmp(SZ_OPT_CREATEIMP, tmp_txt, sizeof(SZ_OPT_CREATEIMP) - 1)) {
         if (tmp_num) {
