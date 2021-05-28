@@ -9,5 +9,7 @@
 0 - CHAOSMODE
 0 - BOOTFULL
 40 - TOKENCOUNT
-0 - reboottype
+1 - reboottype
 0 - DOUBLEXP
+0 - CREATEIMP:imptest
+0 - FREEMORT

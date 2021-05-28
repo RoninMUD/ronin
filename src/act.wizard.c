@@ -1689,6 +1689,10 @@ void do_system(struct char_data *ch, char *argument, int cmd) {
   if (DOUBLEXP) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
 
+  send_to_char("FreeMort -- ",ch);
+  if (FREEMORT) send_to_char("Yes\n\r",ch);
+  else send_to_char("No\n\r",ch);
+
   send_to_char("GameHalt -- ", ch);
   if (GAMEHALT == 1) send_to_char("Yes\n\r", ch);
   else send_to_char("No\n\r", ch);
@@ -1799,6 +1803,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
       send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
       send_to_char("                halt            IMP  (time stops)\n\r",ch);
       send_to_char("                doublexp        IMP  (normal exp gain is doubled)\n\r",ch);
+      send_to_char("                freemort        IMP  (free remorts)\n\r",ch);
     }
     return;
   }
@@ -1940,6 +1945,25 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
         act(buf,0,ch,0,e->character,TO_VICT);
     return;
   }
+
+  if(is_abbrev(arg,"freemort") && GET_LEVEL(ch)>LEVEL_SUP) {
+    if (FREEMORT == 0) {
+      sprintf(buf,"`i***** FREEMORT MODE ENABLED!! *****`q\n\r");
+      FREEMORT = 1;
+    }
+    else {
+      sprintf(buf,"`i***** FREEMORT MODE DISABLED *****`q\n\r");
+      FREEMORT = 0;
+    }
+    send_to_char(buf,ch);
+    for (e=descriptor_list;e;e=e->next)
+      if (e->character !=ch && !e->connected)
+        act(buf,0,ch,0,e->character,TO_VICT);
+    return;
+  }
+
+
+
   /* invalid parameter */
   send_to_char("Usage: gamemode wizlock         WIZ+ (no new char creation)\n\r",ch);
   send_to_char("                lock            WIZ+ (no mortals allowed in)\n\r",ch);
