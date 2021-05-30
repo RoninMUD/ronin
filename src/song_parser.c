@@ -727,7 +727,7 @@ void do_song(CHAR* ch, char* arg, int cmd)
           }
           break;
         case TYPE_UNDEFINED:
-          if (ch != tmp_victim) {
+          if ((ch != tmp_victim) && GET_DESCRIPTOR(tmp_victim)) {
               send_to_char("You feel ready!\n\r", tmp_victim);
               GET_WAIT(tmp_victim) = 0;
           }
