@@ -415,6 +415,7 @@ struct obj_data
 
   struct obj_data *next_content; /* For 'contains' lists             */
   struct obj_data *next;         /* For the object list              */
+  struct obj_data *next_wear;    /* For internal wear list           */
   int (*func)(struct obj_data*, struct char_data*, int, char*);
   bool disposed;
 };
