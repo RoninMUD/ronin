@@ -1441,8 +1441,13 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
   }
 
   if (!strcmp(obj_name, "all")) {
-    for (OBJ *temp_obj = ch->carrying, *next_obj; temp_obj; temp_obj = next_obj) {
-      next_obj = temp_obj->next_content;
+    // copy original carrying list
+    for (OBJ *temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+      temp_obj->next_wear = temp_obj->next_content;
+    }
+
+    for (OBJ *temp_obj = ch->carrying, *next_obj = NULL; temp_obj; temp_obj = next_obj) {
+      next_obj = temp_obj->next_wear;
 
       int eq_slot = -1;
 
