@@ -2556,6 +2556,12 @@ void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   for (AFF *temp_aff = victim->affected, *next_aff = NULL; temp_aff; temp_aff = next_aff) {
     next_aff = temp_aff->next;
 
+    // skip over subsequent affs with same type, since these
+    // are all removed by aff_from_char at once
+    while (next_aff && next_aff->type == temp_aff->type) {
+      next_aff = next_aff->next;
+    }
+
     if (temp_aff->duration >= 0) {
       aff_from_char(victim, temp_aff->type);
 
