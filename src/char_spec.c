@@ -406,11 +406,11 @@ void shadow_wraith_spec(CHAR *ch, CHAR *signaler, int cmd, const char *arg) {
         int num_shadows = (MAX(1, (duration_of_spell(ch, SPELL_SHADOW_WRAITH) - 1)) / 10) + 1;
 
         if (GET_HIT(ch) < GET_MAX_HIT(ch)) {
-          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
+          GET_HIT(ch) = MIN(GET_MAX_HIT(ch), GET_HIT(ch) + ((100 + (20 * num_shadows)) / 2));
         }
 
         if (GET_MANA(ch) < GET_MAX_MANA(ch)) {
-          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((10 * (100 + (20 * num_shadows))) / 2));
+          GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + ((100 + (20 * num_shadows)) / 2));
         }
 
         send_to_char("One of your shadows fades from reality and recedes back into the void.\n\r", ch);
