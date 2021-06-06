@@ -1,0 +1,214 @@
+#19900
+Draagdim fo Elpmet Eht~
+   Broken and stained once-white tile covered with troughs and ruts where the
+gold scrollwork has been clawed and scratched out dot the otherwise barren land-
+scape of the temple floor. Columns extend upward, gnarled and shattered obelisks
+of a dark desolate stone. The eerie not-light of Draagdim gives a few splotchy
+patches of respite from the suffocating darkness of this place.
+   To the north, an uneven and cracked stair extends down to a empty square. To
+the south is a dilapidated and forgotten altar. To the west is an abandoned shop
+and to the east is the great pit where lost adventurers scrabble and fight for
+morsels.
+~
+199 0 0
+D0
+~
+~
+0 -1 19905
+D1
+~
+~
+0 -1 19902
+D2
+~
+~
+0 -1 19901
+D3
+~
+~
+0 -1 19903
+S
+#19901
+Ratla Elpmet Eth Yb~
+   The shattered remnants of a monument to some meaningless entity fill the
+room. Overhead, the not-sky is visible through the broken vaulted ceiling, held
+aloft by cracked and mangled columns of stone that appear ready to collapse. A
+single chandelier hangs askew, coated in shimmering blue-green cobwebs, its
+comrades in pieces upon the floor.
+   Dull, scuffed floors lead back north to the temple. In the other cardinal
+directions stand giant piles of stone, debris and thick cobwebs blocking all
+passage.
+~
+199 0 0
+D0
+~
+~
+0 -1 19900
+S
+#19902
+Moor Noitanod~
+   Dark dusty air hangs heavy in the muddy field, Draagdim's eerie not-light
+illuminates splotchy patches of the trodden ground. A series of upended boxes
+full of holes, claw marks, and bloodstains are all that's left from the latest
+offerings from above for poor stranded adventurers marooned here. 
+~
+199 0 0
+D1
+~
+~
+0 -1 19904
+D3
+~
+~
+0 -1 19900
+S
+#19903
+Llew S'rimim~
+   One shelf still hangs upon a wall, while every other wall is covered with
+empty hooks and broken shelving brackets. A wooden countertop rests upon the
+floor, rotted and molding. More Draagdim not-light illuminates patches of the
+dank shop, reflecting off clouded glass of shattered bottles.
+~
+199 0 0
+D1
+~
+~
+0 -1 19900
+S
+#19904
+Eugrom Draagdim Eht~
+  Here in the midst of a desolate muddy landscape, is a burial ground for the
+ravaged remains of many beast and man - though more appropriately it should be
+called a larder for the creatures that hunt here. Torn limbs and empty husks of
+torsos are strewn about, and any peace these corpses sought will not be found
+here.
+~
+199 0 0
+D3
+~
+~
+0 -1 19902
+S
+#19905
+Erausq Elpmet Eht~
+A temporary description
+~
+199 0 0
+D0
+~
+~
+0 -1 19906
+D2
+~
+~
+0 -1 19900
+S
+#19906
+Erausq Tekram~
+   There is an image of a warped, five-pointed compass embedded
+in the broken cobblestones of the square.  A short squat fountain
+belches forth brown, bile-like goop that cannot possibly be healthy
+to drink.  Somehow it's clear, this is the epicenter of this strange
+withered land of Draagdim.
+   To the east and west a jagged road leads through the forsaken
+town.  To the north and south, more abandoned squares like this
+one.
+~
+199 0 0
+D2
+~
+~
+0 -1 19905
+S
+#19907
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19908
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19909
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19910
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19911
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19912
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19913
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19914
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19915
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19916
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19917
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19918
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19919
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19920
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#19999
+A temporary name~
+A temporary description
+~
+199 0 0
+S
+#0
+$~

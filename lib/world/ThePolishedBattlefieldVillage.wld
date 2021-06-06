@@ -1,0 +1,423 @@
+#7401
+The dark gates.~
+You stand at the dark gates, beyond is a dim and hazy courtyard.  The gates
+feel cold to your touch and a sense of evil drifts through from the other side.
+The cobblestones are marked with deep gouges.
+~
+74 0 1
+D0
+A smelly alley.~
+~
+0 -1 7389
+D2
+Through the gates to a dim courtyard.~
+gate~
+1 -1 7402
+S
+#7402
+The courtyard.~
+The courtyard is dark, stuffy and extremely smelly.  The floor is littered
+with bones, pieces of armor and broken weapons.  The house surrounding you
+excludes darkness, drifting around you are dark formless shapes.  There are
+three door leading somewhere, each door covered in dark, sticky tar.
+~
+74 1 1
+D0
+You see the dark gates, outside is blindingly bright.~
+gate~
+1 -1 7401
+D1
+A tarred door leads into the house.~
+tarred door~
+1 -1 7412
+D2
+A large tarred door leads into the house, above is a dark window.~
+large door~
+1 -1 7403
+D3
+A tarred door leads into the house.~
+tarred door~
+1 -1 7405
+S
+#7403
+The hallway.~
+You enter a large dimly lit hallway with an impressive staircase leading
+upwards, dark passageways leading off in all direction, a heavy door coated in
+tar leads north.  The floor is covered in a maze of fine scratches, looking
+closely you see it is a scene from a battle.
+~
+74 1 0
+D0
+A tar covered door leads out of the house.~
+door~
+1 -1 7402
+D1
+A small dark passageway leads away somewhere.~
+~
+0 -1 7413
+D2
+A wide double door made of paneled wood leads somewhere.~
+door~
+1 -1 7410
+D3
+A small dark passageway leads away somewhere.~
+~
+0 -1 7404
+D4
+You see a winding staircase with dim light at the top.~
+~
+0 -1 7415
+S
+#7404
+A dark passageway.~
+Even your light has trouble making an impression here as the darkness seems to
+swamp it.  You make out a floor covered with slimy tiles.  East is a dark
+passageway, north looks like a set of stairs.
+~
+74 1 0
+D0
+You dimly see some stairs.~
+~
+0 -1 7405
+D1
+A small doorway.~
+~
+0 -1 7403
+S
+#7405
+The stone stairs.~
+A set of damp stone stairs leads downwards into darkness.  A chilling draft
+blows up from the stairs and you hear snuffling sounds from bellow.
+~
+74 1 0
+D2
+You see a dark passageway.~
+~
+0 -1 7404
+D5
+Stairs lead away into darkness.~
+~
+0 -1 7406
+S
+#7406
+The donjon.~
+The stairs end in a small room filled with rotting straw.  There are three
+very heavy bolted doors, all closed.  From one you clearly hear snuffling
+sounds from.  Making a move towards a low table you kick something,
+looking down you see that it is misshapen skull, you stop.
+~
+74 1 0
+D0
+You see a cell door.~
+cell door~
+1 -1 7407
+D1
+You see a cell door.~
+cell door~
+1 -1 7408
+D2
+You see a cell door.~
+cell door~
+1 -1 7409
+D4
+A set of slimy steps leads upwards.~
+~
+0 -1 7405
+S
+#7407
+The dirty cell.~
+You move around a small cell.  The floor is covered with rotting straw,
+littering the floor are rusty chains.  You make a move to get out of here.
+~
+74 1 0
+D2
+The way out!!~
+door~
+1 -1 7406
+E
+CHAINS~
+The chains look very well worn and very old, they are beginning to rust now 
+after a long time of disuse.~
+S
+#7408
+The dirty cell.~
+You move around a small cell.  The floor is covered with rotting straw,
+littering the floor are rusty chains.  Around you lie evidence of a recent
+occupant, a long time occupant by the looks of it.  It smell terrible in here.
+You make a move to get out of here.
+~
+74 1 0
+D3
+The way out!!~
+door~
+1 -1 7406
+S
+#7409
+The dirty cell.~
+You move around a small cell.  The floor is covered with rotting straw,
+littering the floor are rusty chains.  You make a move to get out of here.
+~
+74 1 0
+D0
+The way out!!~
+door~
+1 -1 7406
+E
+CHAINS~
+The chains look very well worn and very old, they are beginning to rust now   
+after a long time of disuse.~
+S
+#7410
+The Study.~
+You open the heavy doors and walk into a book filled room.  A large brooding
+table sits to one side, its top covered in open tomes.  The walls lined with
+shelves of ragged books, some tomes seem almost alive, some shiver, some twist
+your eyes in strange ways, some just appear as dark lines.  The air here is
+musty, but charged with magic.
+~
+74 1 0
+D0
+A set of Large double doors.~
+door~
+1 -1 7403
+D1
+A small door.~
+door~
+1 -1 7411
+E
+BOOKS~
+You reach for a small book, you jerk your fingers away as it burns your hand,
+you learn your lesson.~
+S
+#7411
+The room of casting.~
+You walk around a small bare room, the floor covered in a myriad of colored
+chalk markings, some shift and twist, others drawing you in, walls draped with
+heavy threadbare banners from eras long lost, burnt out tapers litter the
+edges of the floor.  A small flame flickers in the middle of the floor, you
+then notice a dim shadow shifting above it.  Your feet make a move to get out
+of here.
+~
+74 1 0
+D3
+The only door out of this strange place.~
+door~
+1 -1 7410
+E
+FLAME~
+The flame appears to be burning with no source, it gives out no heat, but its 
+dim flame penetrates the depths of the room.~
+S
+#7412
+The cage filled room.~
+You squeeze past the door and into what looks like a bizarre zoo.  The walls
+are lined with cages, all but 2 are empty, most not in use for a long, long
+time judging by the locks.  Two cages have screeching creatures from
+non-guess able origins.  You are drawn towards them.  Exits are two large doors,
+West and South, the South door is slightly ajar.
+~
+74 1 0
+D1
+A heavy wooden door.~
+wooden door~
+1 -1 7414
+D2
+A heavy metal door standing ajar.~
+metal door~
+1 -1 7413
+D3
+A heavy tarred door.~
+tarred door~
+1 -1 7402
+E
+CREATURES~
+The creatures look like harpies, as you are drawn towards them they screech 
+louder, with a jerk you realize what they are doing, you start to make an exit
+from the room.~
+S
+#7413
+A dark passageway.~
+Even your light has trouble making an impression here as the darkness seems to
+swamp it.  You make out a floor covered with slimy tiles.  West is a dark
+passageway, north is a huge rusty metal door, jammed open.
+~
+74 1 0
+D0
+You dimly make out a rusty metal door.~
+~
+0 -1 7412
+D3
+The main hallway.~
+~
+0 -1 7403
+S
+#7414
+The store room.~
+The room is lined with wrought wooden shelves, most are bare, some are filled 
+with what looks like iron rations.
+~
+74 9 0
+D3
+A solid wooden door.~
+door~
+1 0 7412
+E
+IRON RATIONS~
+They look very old, inedible by your guess.~
+S
+#7415
+A window lit landing.~
+The top of the stairs is graced with an impressive banister curving down
+into the darkness below.  A grubby bay window lets in dim light into the
+dim atmosphere at the head a staircase, spots in the window are clean, looking
+out you see an impressive view of the village, the dark courtyard seems to
+twist and turn in your vision.  South leads a dim corridor with doors
+leading off. The floor is covered with thread bare carpet spotted with blood.
+~
+74 1 0
+D2
+A dark hallway.~
+~
+0 -1 7416
+D5
+Down a winding staircase.~
+~
+0 -1 7403
+E
+WINDOW~
+The bay window is very grubby, a pane of glass has been kept clean, through 
+this you see the dim courtyard and a fogy village further to the north.  You
+climb off the window.~
+S
+#7416
+The damp corridor~
+The corridor is cold and damp, the threadbare carpet is torn to shreds, the
+wooden floor is charred and gouged.  Two grubby doors lead east and west.  The
+corridor continues southwards.
+~
+74 1 0
+D0
+The stair case.~
+~
+0 -1 7415
+D1
+A grubby door to a room.~
+door~
+1 -1 7418
+D2
+The dark corridor.~
+~
+0 -1 7417
+D3
+A grubby door to a room.~
+door~
+1 -1 7422
+E
+CARPET~
+The carpet looks torn to shreds by a clawed something, drops of blood are
+spattered everywhere.~
+S
+#7417
+The corridor's end.~
+The corridor comes to an abrupt end.  The door to south has been blown
+inwards, splinters litter the blackened floor boards, only the tattered
+remains of the hinges remain, the room is dark.  Two grubby tarred doors lead
+West and East. It is very cold here.  To the north is a dim light.
+~
+74 1 0
+D0
+The blackened corridor.~
+~
+0 -1 7416
+D1
+A grubby door to a room.~
+door~
+1 -1 7419
+D2
+A smashed door leading to a dark room.~
+door~
+1 -1 7420
+D3
+A grubby door to a room.~
+door~
+1 -1 7421
+S
+#7418
+A damp room.~
+You shiver in the cold and damp of the room. Against the far wall is dirty
+straw pallet, much used.  The walls are covered in a faded paint, here and
+there are bits of graffiti all in strange scripts.  The floor has been
+recently been swept clean showing the rough floor boards.  It has the air of
+recent occupancy.
+~
+74 1 0
+D3
+A dark corridor.~
+door~
+1 -1 7416
+S
+#7419
+An empty room.~
+The room is lit by a barred window, the floor echoing to your footsteps.  The
+walls are bare stone and the ceiling a mess of cobwebs running with huge
+spiders.  It reminds you of a prison.
+~
+74 1 0
+D3
+A dark corridor.~
+door~
+1 -1 7417
+S
+#7420
+The room without a door~
+To your amazement the far wall has a deep impression of a door in it, the door
+now a heap of rotting wood on the floor, looking closer you see the heavy iron
+lock and handle still stuck into the wall.  Around you the room is littered
+with splinters from the door, to one side of the rotting door is a small straw
+pallet, rough blanket pierced with splinters, there are the decaying remains
+of a body also covered in splinters on the pallet.
+~
+74 1 0
+D0
+A dark corridor.~
+door~
+1 -1 7417
+E
+ROTTING DOOR~
+What was once the door is now a heap of rotting splinters, its impression still
+clearly visible in the wall in front of you, the door knob and lock still 
+pressed into the wall.~
+E
+BODY~
+The body is pierced with splinters, what looks like the man died instantly
+because of a splinter through the head.  You look away to a brighter future.~
+S
+#7421
+An empty room.~
+You wince at your overly loud steps echoing off the floor, they seem to ring
+and reverberate in the musty air.  The walls are bare stone with large iron
+pins studding it, the ceiling a mess of cobwebs running with huge spiders.  It
+reminds you of a prison.
+~
+74 1 0
+D1
+A dark corridor.~
+door~
+1 -1 7417
+S
+#7422
+A damp room.~
+You shiver in the cold and damp of the room. To you left is a dirty straw
+pallet, much used.  The walls are bare wood, charred by something long
+ago.  The floor has a dirty rough carpet covering it, the pattern long
+faded.  The corners are littered with rusted junk. It has the air of recent
+occupancy.
+~
+74 1 0
+D1
+A door leading to the dark corridor.~
+door~
+1 -1 7416
+S
+#0
+$~

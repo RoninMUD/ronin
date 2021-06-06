@@ -1,0 +1,203 @@
+#4300
+corrupted replicator~
+The corrupted replicator~
+The corrupted replicator waits for input.~
+The machine race does not have parents strictly speaking.  Instead, they are
+born fully formed from the replicator.  This machine looks unlike anything
+you've ever seen before.  It's composed of metals similar to the prototypes,
+but in pattern and shape that is wholly different.  It doesn't appear to be
+able to move from where it sits.  It's body is covered in intricate script
+circles that glow with an unhealthy hew.  Perhaps it's the veins of organic
+matter growing throughout its body.  The replicator has a multitude of crimson
+eyes, all focusing on you.
+~
+10 134219912 0 Y
+50 -11 -20 1d1+100000 32d8+800
+8000000 2500000
+8 8 0
+0 0 1d1+2000 4
+1 2 33 119
+1 5 25 104
+1 5 25 105
+1 5 5 85
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4301
+major techno virus~
+A major techno virus~
+A major techno virus adapts before your eyes.~
+The source of the corruption.  The major techno virus assimilates everything it
+touches, subverting it's will, and converting it's being.  It's an amorphic
+being, capable of adapting on the fly to any situation it faces. It draws
+deeply from the surrounding power, using the energy funneled from the scripts
+in the ruins.  Perhaps, that is its weakness?
+~
+10 134482048 0 Y
+50 -9 -20 1d1+100000 7d6+1000
+8000000 2500000
+8 8 0
+0 0 1d1+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4302
+slight two buzzer~
+A slight two legged buzzer~
+A slight two legged buzzer tracks you.~
+This fragile looking machine is little more than a couple of legs attached to a
+pair of wings.  It has three eyes that glow crimson red.  Very little can
+escape it's detection.  It swivels back and forth as it's gaze sweeps across
+the area, looking for intruders.
+~
+42 2056 0 Y
+50 -5 -15 1d1+4000 12d12+128
+16000 650000
+8 8 0
+0 0 1d1+2000 2
+1 2 32 30
+6 2 33 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#4303
+menacing four buzzer~
+A menacing four legged buzzer~
+A menacing four legged buzzer scans the room.~
+This hunter killer acts as flying security.  It has four legs with razor sharp
+talons.  It flies in formation with the rest of its pack, buzzing aggressively
+towards any perceived intruders.  It has sturdy light armor about it's torso,
+but only has a single eye.  It's sensors are not as good as it's two legged
+cousin, but it packs more of a punch.
+~
+42 16779272 0 Y
+50 -5 -15 1d1+8000 16d12+192
+24000 1250000
+8 8 0
+0 0 1d1+2000 2
+6 2 66 0
+1 2 8 110
+0 0 8 0
+K
+0 0 0 0 0 0 0
+#4304
+buzzer prototype~
+The buzzer prototype~
+The buzzer prototype sees everything.~
+The original buzzer, birthed directly from the replicator.  Unlike the buzzers
+you've seen thus far, it's body isn't made from stone and earth.  It appears to
+be composed of metals not of this plane.  The scripts on it's body shine
+brightly.  It's a sleek, killing machine.
+~
+8 268699648 0 Y
+50 -11 -20 1d1+24000 16d16+256
+1600000 2500000
+8 8 0
+0 0 1d1+2000 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#4305
+industrious eight crawler~
+An industrious eight legged crawler~
+An industrious eight legged crawler is hard at work.~
+The machine workhorse.  This crawler is the most common machine to be found.
+It's versatile, moderately armored, but with limited senses.  It's entire
+purpose is to serve and fulfills its purpose without deviation.
+~
+10 268697600 0 Y
+50 -11 -20 1d1+12000 16d16+256
+30000 1800000
+8 8 0
+0 0 1d1+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4306
+sturdy sixteen crawler~
+A sturdy sixteen legged crawler~
+A sturdy sixteen legged crawler~
+Designed for a more demanding environment, this crawler has double the number
+of legs and is more heavily armored.  It's body shines with energy as it
+lumbers along moving burdens that are beyond its diminutive sisters.
+~
+8 268697600 0 Y
+50 -11 -25 1d1+16000 16d16+320
+36000 2100000
+8 8 0
+0 0 1d1+2000 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#4307
+crawler prototypes~
+The crawler prototype~
+The crawler prototype is a model worker.~
+The original crawler, birthed directly from the replicator.  Unlike the
+crawlers you've seen thus far, it's body isn't made from stone and earth.  It
+appears to be composed of heavy metals not found on this plane.  The script's
+on its body are almost blinding.  It's a vessel of barely contained potential
+energy.
+~
+8 268697600 0 Y
+50 -11 -20 1d1+30000 16d16+384
+2000000 2500000
+8 8 0
+0 0 1d1+2000 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#4308
+enormous thirty two digger~
+An enormous thirty two legged digger~
+An enormous thirty two legged digger works the ground.~
+This slow moving machine is massive.  It looks like a tangle of legs that is
+waging war on the earth itself.  It has no apparent sensors, but it's body is
+absolutely stacked with armor.  Each of its legs looks like a man sized incisor
+designed to pierce solid rock.
+~
+8 402915328 0 Y
+50 -11 -25 1d1+24000 20d16+384
+42000 2400000
+8 8 0
+0 0 1d1+2000 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#4309
+staggering sixty four digger~
+A staggering sixty four legged digger~
+A staggering sixty four legged digger tears the earth.~
+It's hard to grasp the scale of this machine.  You'd hurt your neck trying to
+pan your view from one side of its body to the other.  The armored plates on
+its side look like they'd function just well as castle walls.  The sheer number
+of legs is dizzying, each tearing the earth apart with each step. It's a
+terrifying large machine.  Luckily, it's paying absolutely no attention to you.
+~
+8 402915328 0 Y
+50 -11 -25 1d1+30000 20d16+512
+48000 2700000
+8 8 0
+0 0 1d1+2000 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#4310
+digger prototype~
+The digger prototype~
+The digger prototype is breaks the earth.~
+The original digger, birthed directly from the replicator. Unlike the diggers
+you've seen thus far, it's body isn't made from stone and earth.  It appears to
+be composed of dense metals unlike anything found on this plane.  The script on
+its body is blinding.  It's army of legs cut through the earth like water.
+~
+8 402915328 0 Y
+50 -11 -25 1d1+48000 24d16+640
+2400000 2500000
+8 8 0
+0 0 1d1+2000 0
+0 0 9 0
+K
+0 0 0 0 0 0 0
+#0
+$~

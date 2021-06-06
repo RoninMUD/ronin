@@ -1,0 +1,788 @@
+#26900
+A temporary name~
+A temporary description
+~
+269 9 0
+D0
+~
+crack~
+1 -1 26901
+D4
+~
+rope~
+11 -1 26885
+S
+#26901
+A temporary name~
+A temporary description
+~
+269 9 0
+D2
+~
+crack~
+1 -1 26900
+D3
+~
+crack~
+1 -1 26902
+S
+#26902
+A temporary name~
+A temporary description
+~
+269 8 0
+D0
+~
+~
+0 -1 26903
+D1
+~
+crack~
+1 -1 26901
+S
+#26903
+A temporary name~
+A temporary description
+~
+269 8 0
+D1
+~
+~
+0 -1 26904
+D2
+~
+~
+0 -1 26902
+D3
+~
+~
+0 -1 26907
+S
+#26904
+A temporary name~
+A temporary description
+~
+269 8 0
+D1
+~
+~
+0 -1 26905
+D3
+~
+~
+0 -1 26903
+S
+#26905
+A temporary name~
+A temporary description
+~
+269 8 0
+D0
+~
+~
+0 -1 26906
+D3
+~
+~
+0 -1 26904
+S
+#26906
+A temporary name~
+A temporary description
+~
+269 8 0
+D2
+~
+~
+0 -1 26905
+S
+#26907
+A temporary name~
+A temporary description
+~
+269 8 0
+D0
+~
+~
+0 -1 26908
+D1
+~
+~
+0 -1 26903
+S
+#26908
+A temporary name~
+A temporary description
+~
+269 8 0
+D2
+~
+~
+0 -1 26907
+D3
+~
+~
+0 -1 26909
+S
+#26909
+A temporary name~
+A temporary description
+~
+269 8 0
+D1
+~
+~
+0 -1 26908
+D2
+~
+door~
+1 -1 26910
+D3
+~
+~
+0 -1 26911
+S
+#26910
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+door~
+1 -1 26909
+S
+#26911
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26909
+D2
+~
+~
+0 -1 26912
+S
+#26912
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26911
+D2
+~
+~
+0 -1 26913
+S
+#26913
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26912
+D3
+~
+~
+0 -1 26914
+S
+#26914
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26916
+D1
+~
+~
+0 -1 26913
+D2
+~
+door~
+1 -1 26915
+S
+#26915
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+door~
+1 -1 26914
+S
+#26916
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26917
+D2
+~
+~
+0 -1 26914
+S
+#26917
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26918
+D2
+~
+~
+0 -1 26916
+D5
+~
+door~
+1 -1 26929
+S
+#26918
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+door~
+1 -1 26919
+D1
+~
+~
+0 -1 26920
+D3
+~
+~
+0 -1 26917
+S
+#26919
+A temporary name~
+A temporary description
+~
+269 0 0
+D2
+~
+door~
+1 -1 26918
+S
+#26920
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26921
+D3
+~
+~
+0 -1 26918
+S
+#26921
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+door~
+1 -1 26922
+D1
+~
+~
+0 -1 26923
+D3
+~
+~
+0 -1 26920
+S
+#26922
+A temporary name~
+A temporary description
+~
+269 0 0
+D2
+~
+door~
+1 -1 26921
+S
+#26923
+A temporary name~
+A temporary description
+~
+269 0 0
+D2
+~
+~
+0 -1 26924
+D3
+~
+~
+0 -1 26921
+D5
+~
+door~
+1 -1 26930
+S
+#26924
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26923
+D1
+~
+~
+0 -1 26925
+D3
+~
+~
+0 -1 26926
+S
+#26925
+A temporary name~
+A temporary description
+~
+269 0 0
+D3
+~
+~
+0 -1 26924
+S
+#26926
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26927
+D1
+~
+~
+0 -1 26924
+D2
+~
+~
+0 -1 26928
+S
+#26927
+A temporary name~
+A temporary description
+~
+269 0 0
+D2
+~
+~
+0 -1 26926
+S
+#26928
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26926
+S
+#26929
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26931
+D4
+~
+door~
+1 -1 26917
+S
+#26930
+A temporary name~
+A temporary description
+~
+269 0 0
+D3
+~
+~
+0 -1 26931
+D4
+~
+door~
+1 -1 26923
+S
+#26931
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26930
+D2
+~
+~
+0 -1 26932
+D3
+~
+~
+0 -1 26929
+S
+#26932
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26931
+D1
+~
+~
+0 -1 26934
+D2
+~
+door~
+1 -1 26935
+D3
+~
+~
+0 -1 26933
+S
+#26933
+A temporary name~
+A temporary description
+~
+269 0 0
+D1
+~
+~
+0 -1 26932
+S
+#26934
+A temporary name~
+A temporary description
+~
+269 0 0
+D3
+~
+~
+0 -1 26932
+S
+#26935
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+door~
+1 -1 26932
+D2
+~
+~
+0 -1 26937
+D5
+~
+~
+0 -1 26936
+S
+#26936
+A temporary name~
+A temporary description
+~
+269 0 0
+D4
+~
+~
+0 -1 26935
+S
+#26937
+A temporary name~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26935
+D2
+~
+~
+0 -1 26938
+S
+#26938
+The Other Side~
+A temporary description
+~
+269 0 0
+D0
+~
+~
+0 -1 26937
+S
+#26939
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26940
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26941
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26942
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26943
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26944
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26945
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26946
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26947
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26948
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26949
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26950
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26951
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26952
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26953
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26954
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26955
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26956
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26957
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26958
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26959
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26960
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26961
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26962
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26963
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26964
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26965
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26966
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26967
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26968
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26969
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26970
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26971
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26972
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26973
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26974
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26975
+A temporary name~
+A temporary description
+~
+269 0 0
+S
+#26999
+Kludgified Room~
+Scattered everywhere, willy nilly, are lots of strange gadgets that
+apparently do nothing. A sign on the wall catches your attention.
+               /----------------/
+               [   IMPORTANT:   ]
+               [                ]
+               [  DON'T TOUCH   ]
+               [   ANYTHING!    ]
+               [                ]
+               [----------------]/
+~
+269 0 0
+S
+#0
+$~

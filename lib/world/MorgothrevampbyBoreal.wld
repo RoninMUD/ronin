@@ -1,7 +1,8 @@
 #9600
 A mountain path~
-     Your on in a deep gully that passes between two hills.  To the northeast
-of you a tall mountainous spire can be seen.  Your footing here is precarious
+   You're walking in a deep gully that passes between two verdant hills.  To 
+the northeast, a tall mountainous spire can be seen.  The very height of this
+mountain vanishes into the clouds above you.  Your footing here is precarious
 at best and walking is a bit difficult.
 ~
 96 4 4
@@ -16,10 +17,10 @@ D3
 S
 #9601
 The base of Morgoth Mountain~
-     This is a small stone path that leads into the spires of the Morgoth
-Mountains.  Rumor has it that a lost city of healers lies somewhere within
-the vast expanse of rock and rubble and traveler's tales tell of monsters with
-huge fangs and acid dripping lips.  But these are just tales, right? RIGHT?
+  The path you are following continues onward towards the spire of the Morgoth
+Mountain. Rumors surrounding this mystical mountain have circulated for eons, 
+and tell the tale of a lost temple of healers lies somewhere within.  Dark and 
+ominous before you, the mountain beckons you onward.
 ~
 96 0 5
 D0
@@ -77,7 +78,7 @@ a dense mist rolling from above you obscures the way back.  Off
 in the distance below you, you can see a small village, full of tiny
 people that appear as ants from this distance.
 ~
-96 0 3
+96 0 5
 D0
 ~
 ~
@@ -98,7 +99,7 @@ of Morgoth Mountain.  The stone vibrates here, full of warmth and life
 that belies the cold nature of the rock.  Far off to the east you can see 
 a castle that surely belongs to a mighty King.
 ~
-96 0 3
+96 0 5
 D0
 ~
 ~
@@ -110,10 +111,11 @@ D2
 S
 #9606
 The base of Morgoth Mountain~
+
    You are standing here on a wide ledge that skirts the western face
 of Morgoth Mountain.  The stone vibrates here, full of warmth and life
-that belies the cold nature of the rock.  Far off to the east you can see
-a castle that surely belongs to a mighty King.
+that belies the cold nature of the rock. To your northeast, you can see a 
+small village with what appears to be a steel castle at it's center.
 ~
 96 0 5
 D0
@@ -149,7 +151,7 @@ full brunt of the harsh, northern wind.  Chilled to the bone, you look
 longingly on the forest of Mallorn trees that stretch before you to the
 north.
 ~
-96 0 3
+96 0 5
 D1
 ~
 ~
@@ -166,7 +168,7 @@ full brunt of the harsh, northern wind.  Chilled to the bone, you look
 longingly on the forest of Mallorn trees that stretch before you to the
 north.
 ~
-96 0 3
+96 0 5
 D1
 ~
 ~
@@ -198,10 +200,11 @@ D4
 S
 #9611
 The base of Morgoth Mountain~
-   As the sun sets in the west, the mountain is washed in a brilliant golden
+  As the sun sets in the west, the mountain is washed in a brilliant golden
 glow. The sun's warmth is even enough to cut the chill that fills the air.
-A spec against the horizon, you can just make out the rooftops of the city of
-Midgaard to the west.
+In the near distance to your west you can see the fabled city of the Enfans.
+Much fame and glory have been showered upon the heroes of that once
+great city.
 ~
 96 0 5
 D0
@@ -227,8 +230,8 @@ D0
 0 -1 9611
 D1
 ~
-nothing~
-8 -1 9613
+crevasse~
+12 -1 9613
 D2
 ~
 ~
@@ -248,13 +251,16 @@ D1
 0 -1 9614
 D3
 ~
-~
-0 -1 9612
+crevasse~
+11 -1 9612
 S
 #9614
 In the crevasse~
-     This path is hard and grueling.  The sharp rocks take their toll on
-your hands, feet, and face.  Is it really worth it to climb to the top?
+   The well manicured train becomes more and more gruelling as
+you wind your way further into the depts of the mountain above.
+Sharp rocks protruding from the walls on either side of you snatch
+at your clothing and cut into your hands as you struggle to maintain 
+your balance.
 ~
 96 0 5
 D0
@@ -268,11 +274,12 @@ D3
 S
 #9615
 Paradise~
-You are standing in paradise.  Nestled deep within the Mountain of Morgoth,
-this place fills you with a peace and tranquility unknown in the outside
-world. A brilliant beam of ligh shines down through a quartz shaft that
-seems to pierce the mountain all the way to the heavens.  Flowers bloom here
-in great profusion, and the smell of honey and blossomes fills your soul.
+   You are standing in paradise.  Nestled deep within the Mountain of 
+Morgoth, this place fills you with a peace and tranquility unknown in
+the outside world. A brilliant beam of light shines down through a quartz
+shaft that seems to pierce the mountain all the way to the heavens.  
+flowers bloom here in great profusion, and the smell of honey and 
+blossoms fills your soul.
 ~
 96 0 5
 D2
@@ -282,35 +289,28 @@ D2
 S
 #9616
 Morgoth Mountain~
-     Your progress upwards has been blocked by a huge avalanche.  Stones
-three times your weight and twice your size are the culprits.  Maybe you
-should try another face of the mountain.
+   Your progress upwards has been blocked by a huge avalanche.  Stones
+the size of small house or large elephant block your progress upwards.  The 
+wind whistling around the edges of the rocks create an eerie wailing noise 
+that sets your teeth on edge and raises your hackles.
 ~
 96 0 5
 D0
 ~
 ~
 0 -1 9623
-D1
-~
-~
-0 -1 9617
 S
 #9617
 Morgoth Mountain~
-     It appears someone has taken the time to cut stairs into this almost
-non-climbable part of the mountain.  They have had no upkeep for some time
-but do appear to be still of use.
+   The path around the east side of the mountain converges here on a
+single cleft in the rocks above.  A perfect place for an ambush, the narrow
+traverse gives you very little room to maneuver in the event of an ambush.
 ~
-96 0 4
+96 0 5
 D1
 ~
 ~
 0 -1 9618
-D3
-~
-~
-0 -1 9616
 D4
 ~
 ~
@@ -318,9 +318,10 @@ D4
 S
 #9618
 Morgoth Mountain~
-     The path continues up from here and a small hut can be seen to the
-west.  Climbing still seems easy but dark fog and cold winds make climbing
-a bit tougher.
+   The path gets rougher here as you climb higher up the eastern slope
+of Morgoth Mountain.  The wind is starting to pick up speed as you work
+your way up into the clouds, making your eyes water.  However, between 
+your closed eyes, you can see a shining golden tower far off to the southeast.
 ~
 96 0 5
 D0
@@ -349,7 +350,7 @@ world. A shaft of light beams down through a quartz shaft that seems to
 pierce the mountain all the way to the heavens.  Flowers bloom here in great
 profusion, and the smell of honey and blossoms fill your nose.  
 ~
-96 8 2
+96 0 5
 D0
 ~
 ~
@@ -361,9 +362,11 @@ D2
 S
 #9620
 Morgoth Mountain~
-     You have climbed to the highest plateau of Morgoth.  The air here is thin
-and you find breathing to be quite difficult.  The clouds hover below you
-and hide the ground.  You feel you must be miles up.
+   Standing here on the northeastern slopes of Morgoth, the world unfolds 
+below you.  Occasional mountain goats wander by, curious to see who has 
+intruded on the solitude of their domain.  Raising your eyes to the horizon,
+you can make out a shimmering desert in the distance, and what appears
+to be a grand pyramid rising out of the sea of sand.
 ~
 96 0 5
 D2
@@ -382,14 +385,10 @@ S
 #9621
 e
 Morgoth Mountain~
-    Well, your here.  The highest point in all of the land.  Nothing obstructs
-your grand view of the world and you can gaze forever in each direction.
-Nothing is alive up here, for this altitude cannot support life for very long.
-Maybe you should seek shelter?
-   As you enter the room, your nose wrinkles in disgust, and you almost
-vomit at the stench.  Blood coats ever wall in a thick, coppery blanket.
-Undying screams echo from the walls, and you feel that this is a plaec that
-has long been the home of torture and anguish.
+   Staring northwards so as not to be frightened by the towering mountain 
+above, you see across the open valley and into the foothills of the ancient
+northern mountain ranges of Helventia.  Nestled between an ermine river 
+and one of the hills is a small church, doors closed to all travelers.
 ~
 96 0 5
 D1
@@ -403,11 +402,13 @@ D3
 S
 #9622
 Morgoth Mountain~
-     This a very old tower smelling of dampness and mildew.  How long ago
-it was built im sure no one alive knows, except maybe Trien himself.  The
-place is completely barren of windows and seems to only moderately decorated.
+   Standing here on the northwestern slopes of Morgoth, the world unfolds 
+below you.  Occasional mountain goats wander by, curious to see who has 
+intruded on the solitude of their domain.  Raising your eyes to the horizon,
+you can make out a shimmering desert in the distance, and what appears
+to be a train of Bedouin travelers attempting a crossing.
 ~
-96 8 1
+96 0 5
 D1
 ~
 ~
@@ -416,16 +417,13 @@ D2
 ~
 ~
 0 -1 9623
-D5
-~
-~
-1 -1 9610
 S
 #9623
 Morgoth Mountain~
-     Along the path, here, lies a huge boulder with weird carvings in it.
-It looks like someone of absolutely no skill hacked away at it in a brave
-attempt to make art.  Or maybe that conclusion is way off.
+   As you climb ever higher up the mountain, the occasional boulder
+impedes your progress.  Right here in front of you, a large stone is
+lodged in the middle of the trail.  Cryptic warnings have been carved
+into the rock with the crude skill of a primitive people.
 ~
 96 0 5
 D0
@@ -463,9 +461,12 @@ boulder~
 S
 #9624
 Morgoth Mountain~
-     Ahead of you is the largest nest you have ever seen.  It is easily
-three times your size and made out of clothes, sticks, hay, and .... bones?
-Wonder what is in there.
+  The narrow path here is covered in what looks like bird droppings.  You
+do not see any birds in the area, but a few scattered remains of small 
+rodents and mammals are scattered here, with bits of fur and hair caught
+in some of the rocks.  Looking away from the filth at your feet, you can
+see a single lonely ship, miniscule in the distance on the ocean far to the
+south.
 ~
 96 0 5
 D1
@@ -479,11 +480,12 @@ D5
 S
 #9625
 Morgoth Mountain~
-     You have just stepped into the middle of a giant condor's nest.  It has
-taken years for the mother to build this nest and she isn't happy your here.
-This probably isn't a safe place be at dinner time.
+   The path around the mountain narrows to a razors edge here on the 
+east side.  Dislodged rocks echo down the open expanses below, and your
+fear of heights begins to cloud your mind.  Your boots trip over a set of 
+deep claw marks in the stone, and you almost tumble to your demise.
 ~
-96 0 2
+96 0 5
 D0
 ~
 ~
@@ -499,9 +501,10 @@ nest~
 S
 #9626
 Morgoth Mountain~
-     You have climbed to the farthest height possible on this side of Morgoth.
-It is slippery up here due to the ice and snow on the ground.  Far below you
-the timber line creates an interesting effect to the scenery.
+   You have climbed to the farthest height possible on this side of Morgoth.
+the trail slippery up here due to the ice and snow on the ground that has
+been increasing the higher up you climb.  Far below you the timber line 
+has hidden the roads leading to the mountain.
 ~
 96 0 5
 D2
@@ -515,11 +518,12 @@ D3
 S
 #9627
 Morgoth Mountain~
-     This doesn't feel to safe.  Evidence of rock slides lie strewn about.
-Peeking over the edge makes you feel queasy and lightheaded.  Time to go
-back down?
+   The trail is becoming more unsafe as you climb higher.  Evidence of 
+past rock slides are scattered in your path.  Peering over the edge from 
+such heights makes you feel queasy and lightheaded.  Perhaps you should 
+reconsider this quest for more leisurely pursuits.
 ~
-96 4 5
+96 0 5
 D1
 ~
 ~
@@ -531,13 +535,13 @@ D4
 S
 #9628
 The Lonely Tower~
-     You stand here at the top of the world.  The upper level
-of this tower atop Morgoth Mountain provides you with a 
-breathtaking view which can be found nowhere else.  A strong 
-wind blows in through windows set into each wall, through which
-you revel in the majesty of this place.
+   You've finally arrived at the top of the mountain, only to find an ominous
+tower reaching even more dizzying heights.  Hewn from what appears to be 
+a single large stone, there are no cracks, seams, or blemishes of any kind
+marring the surface of this magnificent tower.  A set of steps just inside the 
+doorway spirals its way to the top.
 ~
-96 8 0
+96 12 0
 D1
 ~
 ~
@@ -545,11 +549,12 @@ D1
 D4
 ~
 ~
-0 -1 9632
+0 -1 9699
 D5
+A golden, jewel inlaid orifice lies here imbedded in the ground
 ~
-floorboard~
-1 -1 9677
+orifice~
+9 9632 9677
 E
 wall~
 The walls have been constructed by expert craftsmen, with an
@@ -558,10 +563,11 @@ can be seen, and the walls have been polished a brillant luster.
 ~
 S
 #9629
-The snow covered peak of Morgoth Mountain~
-     A large growling sound can be hear from within the hole to the north
-serving as a lair to some wild creature.  Occasional flapping sounds can
-also be heard.
+The snow covered mountain peak~
+   You have reached the zenith of this magnificent mountain.  The snow
+covering the peak here drifts about in the wind, stinging your exposed face
+and blinding your vision.  The arduous journey has been worth your efforts, 
+as you can see an ominous spire up ahead, rising even higher to the heavens.
 ~
 96 0 5
 D0
@@ -574,13 +580,13 @@ D3
 0 -1 9628
 S
 #9630
-The snow covered peak of Morgoth Mountain~
-     This small cave has been inhabited by a large griffon.  Bones are 
-scattered across the floor and prove the creature's deadly ability to kill.
-A hole high above the cave provide an exit and entrance to this winged
-wonder.
+The snow covered mountain peak~
+   You have reached the zenith of this magnificent mountain.  The snow
+covering the peak here drifts about in the wind, stinging your exposed face
+and blinding your vision.  Imprinted in the snow you can see tracks of what
+seems to be a pack of very large canines.
 ~
-96 9 1
+96 1 5
 D2
 ~
 ~
@@ -591,12 +597,14 @@ D3
 0 -1 9631
 S
 #9631
-The snow covered peak of Morgoth Mountain~
-     It is a tight squeeze from the opening up top but once inside here, it
-is quite roomy.  Wine barrels, aged for many a millennia, are stacked neatly
-against the dark walls.
+The snow covered mountain peak~
+   Snow drifts pile higher than the tops of your head here on the sheltered
+side of the top of the mountain.  The stinging wind is lessened here, but the
+cold still seeps deeply into your bones anyway.  The trail you've been 
+Following vanishes around a particularly large drift, shutting off all sign of 
+what's ahead of you.
 ~
-96 9 1
+96 0 5
 D1
 ~
 ~
@@ -617,7 +625,7 @@ with magnificent tapestries hung between each one.
 D5
 ~
 ~
-0 -1 9628
+0 -1 9699
 E
 south~
 Far to the south, you can make out the lights of what must
@@ -670,14 +678,20 @@ illustrious travels here.
 ~
 S
 #9633
-The Lost Temple of Morgoth~
-invalid~
-96 8 2
+Temple Nave~
+   You are standing in the nave of the Lost Temple of Morgoth.  Rumors 
+throughout the ages have spoken of the beauty and majesty of this most
+holy place, but your breath has been taken away by the sheer opulence
+of your surroundings.  Fine tapestries and bejeweled statues adorn every
+space your eyes can see.  Surely if there was a place on this earth for the
+gods above, this must be it.
+~
+96 8 0
 D0
 A dark metal gate encased in the mountain stands before you.
 ~
 gate~
-1 -1 9679
+1 9632 9679
 D1
 A dimly lit hallway~
 ~
@@ -698,11 +712,7 @@ hang on the walls depicting deeds of healing and arcane lore long forgotten in
 this day and age.  In one particular picture you notice a man dressed in
 green caring for a wounded person with herbs and animal skins.
 ~
-96 8 2
-D1
-A dimly lit corridor~
-~
-0 0 9637
+96 8 0
 D3
 The entrance~
 ~
@@ -715,7 +725,7 @@ hang on the wall depicting deeds of healing and caring.  In one particular
 picture you notice a woman dressed in white caring for a wounded person 
 with love and kindness.
 ~
-96 8 2
+96 8 0
 D1
 The entrance~
 ~
@@ -726,13 +736,13 @@ A dimly lit hallway~
 0 0 9637
 S
 #9636
-The Foyer~
+Temple Nave~
   Cobwebs hang all around as you step into this dimly lit place made for
 gatherers.  An old table sets against the east wall and the rug here looks
 worn and faded.  Healing supplies such as cots, rags, and water basins 
 cover the foyer making it look like a hospital, which it is.
 ~
-96 8 2
+96 8 0
 D0
 The entrance~
 ~
@@ -744,11 +754,10 @@ drape
 ~
 1 -1 9641
 D2
-A large door leading into the sanctuary
+The Temple Nave is to the south.
 ~
-door
 ~
-2 0 9638
+0 0 9638
 D3
 A large drape
 ~
@@ -763,33 +772,28 @@ hang on the wall depicting deeds of healers, ancient arcane lore, and magic
 forgotten in the world.  In one particular painting you notice a man, wearing
 black, healing a person using the wounded man's own blood.
 ~
-96 8 2
+96 8 0
 D1
 A dimly lit corridor~
 ~
 0 0 9635
 D2
 A small room~
-~
-0 0 9639
-D3
-A dimly lit corridor~
-~
-0 0 9634
+door~
+1 0 9639
 S
 #9638
-The Northern Part of the Sanctuary~
+Temple Crossing~
   This is the north part of the sanctuary.  Above you chandeliers sway in
 a breeze that seems to come from the south.  This place seems peaceful, yet,
 something is amiss.
 ~
-96 8 2
+96 8 0
 D0
 A large door leading into the foyer
 ~
-door
 ~
-2 0 9636
+1 0 9636
 D1
 The sanctuary~
 ~
@@ -805,23 +809,25 @@ The Sanctuary~
 S
 #9639
 The Storage Room~
-  This is a small storage room that is designed to hold the cleaning goods
-of the temple.  Everything from Pledge to brooms to Mr. Clean is here adorning
-the shelves.
+   You are standing in a small storage room attached the Temple Nave.
+containing nothing more than a stack of old books, a pile of old robes
+and a large amount of rodent droppings, this is a very unpleasant place
+to be.  The opulence outside only makes this room feel more drab and
+depressing.
 ~
-96 8 2
+96 8 0
 D0
 A dimly lit corridor~
-~
-0 0 9637
+door~
+1 0 9637
 S
 #9640
-The West healing chamber~
+The healing chamber~
   This is a small cubicle used for private healing.  Candles along the walls
 give off an eerie light and make the shadows jump and flicker.  Clerics come and
 go while performing their duties.  A large drape covers the exit.
 ~
-96 8 2
+96 8 0
 D1
 A large heavy drape
 ~
@@ -830,12 +836,12 @@ drape
 2 0 9636
 S
 #9641
-The East healing chamber~
+The healing chamber~
   This is a small cubicle used for private healing.  Candles along the walls
 give off an eerie light and make the shadows jump and flicker.  Clerics come and
 go while performing their duties.  A large drape covers the exit.
 ~
-96 8 2
+96 8 0
 D3
 A large heavy drape
 ~
@@ -844,12 +850,12 @@ drape
 2 0 9636
 S
 #9642
-The North Eastern Part of the Sanctuary~
+Temple Ambulatory~
   This is the north eastern part of the sanctuary.  Above you chandeliers sway
 in a breeze that seems to come from the southern part of the sanctuary.  This
 place seems very peaceful, yet, something is amiss.
 ~
-96 8 2
+96 8 0
 D2
 The sanctuary~
 ~
@@ -860,12 +866,12 @@ The sanctuary~
 0 0 9638
 S
 #9643
-The southern Part of the Sanctuary~
+Temple Choir~
   This is the southern part of the sanctuary.  Above you chandeliers sway
 in a breeze that seems to emanate from the altar to the south.  This place
 seems very peaceful, yet, something is amiss.
 ~
-96 8 2
+96 8 0
 D0
 The sanctuary~
 ~
@@ -884,12 +890,12 @@ The sanctuary~
 0 0 9647
 S
 #9644
-The North Western Part of the Sanctuary~
+Temple Ambulatory~
   This is the north western part of the sanctuary.  Above you chandeliers sway
 in a breeze that seems to come from the southern part of the sanctuary.  This
 place seems very peaceful, yet, something is amiss.
 ~
-96 8 2
+96 8 0
 D1
 The sanctuary~
 ~
@@ -900,12 +906,12 @@ The sanctuary~
 0 0 9647
 S
 #9645
-The South Eastern Part of the Sanctuary~
+Temple Ambulatory~
   This is the south eastern part of the sanctuary.  Above you chandeliers sway
 in a breeze that seems to come from the southern part of the sanctuary.  This
 place seems very peaceful, yet, something is amiss.
 ~
-96 8 2
+96 8 0
 D0
 The sanctuary~
 ~
@@ -916,35 +922,20 @@ The sanctuary~
 0 0 9643
 S
 #9646
-The Altar~
-   You are standing next to a raised altar on a dais of steps.  Upon
-the altar, you see a book that has been stained darkly from years
-of use.  Preaching to his acolytes, the High Priest of Morgoth 
-espouses the holy word from here.
+Temple Apse~
+   Standing in the temple apse, you feel the weight of the heavens and earth
+focused on the right here and right now.  You are hushed into an awed silence
+by the mystical energies you feel vibrating in the air around you.  Pulling all
+Your focus however is drawn towards a large book resting on the altar in
+the center of the temple.  
 ~
-96 8 2
+96 8 0
 D0
 The sanctuary~
 ~
 0 0 9643
 D5
-___________________   ___________________
-  .-/|         **        \ /        **         |\-.
-  ||||                    :                    ||||
-  ||||   From whence did  :   No my children,  ||||
-  ||||   our Lord come?   :   he is not of     ||||
-  ||||   Did he spring    :   this earth, but  ||||
-  ||||   from the earth,  :   is in fact the   ||||
-  ||||   or was he born   :   fount of all of  ||||
-  ||||   of the sky?      :   creation.        ||||
-  ||||                    :                    ||||
-  ||||                    :                    ||||
-  ||||                    :                    ||||
-  ||||                    :                    ||||
-  ||||___________________ : ___________________||||
-  ||/====================\:/====================\||
-  `--------------------- ___ --------------------''
-~
+invalid~
 altar~
 8 9646 9648
 E
@@ -969,14 +960,32 @@ altar book ~
 E
 altar book ~
 invalid~
+E
+book~
+    ___________________   ___________________
+.-/|         **        \ /        **         |\-.
+||||                    :                    ||||
+||||   From whence did  :   No my children,  ||||
+||||   our Lord come?   :   he is not of     ||||
+||||   Did he spring    :   this earth, but  ||||
+||||   from the earth,  :   is in fact the   ||||
+||||   or was he born   :   fount of all of  ||||
+||||   of the sky?      :   creation.        ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||___________________ : ___________________||||
+||/====================\:/====================\||
+`--------------------- ___ --------------------''
+~
 S
 #9647
-The South Western Part of the Sanctuary~
+Temple Ambulatory~
   This is the south western part of the sanctuary.  Above you chandeliers sway
 in a breeze that seems to come from the southern part of the sanctuary.  This
 place seems very peaceful, yet, something is amiss.
 ~
-96 8 2
+96 8 0
 D0
 The sanctuary~
 ~
@@ -987,7 +996,7 @@ The sanctuary~
 0 0 9643
 S
 #9648
-A slave chamber~
+Hidden chamber beneath the altar~
      This is the holding place for the slaves to be executed.  Many of the
 slaves are human, but some are not.  They wear stupid looking collars that
 mark them as slaves.  These are the souls that drew the short lots in life.
@@ -1053,7 +1062,7 @@ A torchlit passage~
 can see a larger room opening away from you.  There is a faint coppery
 smell in the air, but you can't quite place it.
 ~
-96 4 1
+96 4 0
 D0
 ~
 ~
@@ -1356,8 +1365,8 @@ D2
 0 -1 9662
 D4
 ~
-~
-0 -1 9654
+symbol~
+8 -1 9654
 S
 #9662
 earthen decline~
@@ -1412,7 +1421,10 @@ D5
 S
 #9665
 muddy decline~
-A temporary description
+   A slippery tunnel leads you downwards, into the darkness below.  The
+mud lined tunnel is a mystery, as there is no water, nor have you seen 
+anything besides the hard stone walls since you sank below the surface
+so long ago.  The muddy declines leads south from here.
 ~
 96 0 0
 D2
@@ -1421,12 +1433,16 @@ D2
 0 -1 9666
 D4
 ~
-~
-1 -1 9658
+symbol~
+8 -1 9658
 S
 #9666
 muddy decline~
-A temporary description
+   A slippery tunnel leads you downwards, into the darkness below.  The
+mud lined tunnel is a mystery, as there is no water, nor have you seen 
+anything besides the hard stone walls since you sank below the surface
+so long ago.  The muddy decline turns to the west or north from where
+you came.
 ~
 96 0 0
 D0
@@ -1440,7 +1456,11 @@ D3
 S
 #9667
 muddy decline~
-A temporary description
+   A slippery tunnel leads you downwards, into the darkness below.  The
+mud lined tunnel is a mystery, as there is no water, nor have you seen
+anything besides the hard stone walls since you sank below the surface
+so long ago.  The muddy decline turns to the north or east from where
+you came.
 ~
 96 0 0
 D0
@@ -1454,7 +1474,10 @@ D1
 S
 #9668
 muddy decline~
-A temporary description
+   The muddy decline ends here at a blank stone wall.  The mud is pooling
+deeply here, reaching up past your thigh.  However, a the mud is vanishing 
+quickly into a dark vortex in the center of the room.  As you try to see down
+the hole, your vision is obscured by the darkness below.
 ~
 96 0 0
 D2
@@ -1468,7 +1491,11 @@ D5
 S
 #9669
 golgothan ruins~
-A temporary description
+   You have descended deep within the mountain into an ancient series 
+of burial chambers.  Built in ancient days, the decayed remains of heroes
+long past can be seen imbedded in the walls and sticking out of the ground.
+Unlike above, where the remains were identifiable, these poor souls names
+have been lost in time.
 ~
 96 0 0
 D1
@@ -1481,12 +1508,15 @@ D4
 0 -1 9668
 D5
 ~
-~
-1 -1 9690
+plate~
+8 -1 9690
 S
 #9670
 golgothan ruins~
-A temporary description
+   The cobblestone walls of the ruins continue lining the walls of the 
+passageway here. Cobwebs dangle from the ceiling, undisturbed by 
+man for what must be eons at this point.  Your lights reflecting off the
+Walls provide an eerie glow, lighting up scurrying creatures in the webs.
 ~
 96 0 0
 D1
@@ -1500,7 +1530,10 @@ D3
 S
 #9671
 golgothan ruins~
-A temporary description
+   The tunnels through the ruins converge here in a small chamber.  The
+floor here is covered in stone slabs, sealing the remains of lost heroes 
+into the ground below.  Echoes of distant screams echo from the passage
+to the south.  
 ~
 96 0 0
 D1
@@ -1517,8 +1550,11 @@ D3
 0 -1 9670
 S
 #9672
-golgothan ruins~
-invalid~
+undead bard~
+   The walls here are covered in cobblestones, hiding within the remains of
+the ancients who once roamed these hallowed grounds.  The musky scent 
+of death and decay permeate the air, and you struggle to contain your gorge.
+~
 96 0 0
 D1
 ~
@@ -1535,7 +1571,11 @@ plate~
 S
 #9673
 golgothan ruins~
-A temporary description
+   You have descended deep within the mountain into an ancient series 
+of burial chambers.  Built in ancient days, the decayed remains of heroes
+long past can be seen imbedded in the walls and sticking out of the ground.
+Unlike above, where the remains were identifiable, these poor souls names
+have been lost in time.
 ~
 96 0 0
 D3
@@ -1549,7 +1589,11 @@ D4
 S
 #9674
 golgothan ruins~
-A temporary description
+   The walls of the tunnels are squeezing you from the left and right,
+reminding you of how much mountain is all around you.  As the way 
+gets tighter, your shoulder brush against the skulls imbedded into the
+walls around you.  As you move to the south, the echoes and screams
+become louder and louder.
 ~
 96 0 0
 D0
@@ -1577,22 +1621,23 @@ D0
 0 -1 9674
 S
 #9677
-A dusty cellar~
-     You are standing here in the cellar of this tower.  A
-thick layer of dust covers everything, stirring in the 
-breeze created from the open doorway above.  In the dim light
-you can make out that this room was once used for aging 
-wine, as a pair of enormous barrels lines the east wall.
+A dusty cave~
+   Standing here in this small dusty cave, you revel in the silence now that 
+the ever-present winds from outside are subdued.  As your eyes adjust to 
+the darkness inside this cave, you notice a thick layer of dust coating the 
+floor and walls, with the lone exception being a fresh set of footprints on
+the stairs the lead downward into the murky depths below.
 ~
 96 9 0
 D4
+A golden, jewel inlaid orifice lies here imbedded in the ceiling.
 ~
-~
-0 -1 9628
+orifice~
+11 -1 9628
 D5
 ~
-winerack~
-1 -1 9678
+~
+0 -1 9678
 E
 barrel~
 An enormous wine barrel stands here before you.  Made of what
@@ -1608,11 +1653,10 @@ that such a thing is still here after all these years.
 S
 #9678
 A twisting staircase~
-     As you descend deeper and deeper into Morgoth Mountain,
-whispers of fairy tales come back to your mind, and spark 
-within your imagination images of darkness and terror.  Is
-it true, the old stories, or are you merely in an ancient
-place, forgotten by man and animal alike?
+   As you descend deeper and deeper into Morgoth Mountain, whispers of 
+fairy tales come back to your mind, and spark within your imagination images
+of darkness and terror.  Is it true, the old stories, or are you merely in an
+ancient tomb, forgotten by man and animal alike?
 ~
 96 9 0
 D4
@@ -1625,7 +1669,7 @@ D5
 0 -1 9679
 S
 #9679
-A twisting staircase~
+Temple Narthex~
      The twisting staircase above empties out into this room deep inside
 the mountain.  An unnatural warmth permeates the room, and you hear a low
 buzzing sound, barely more than a whisper, emanates from the walls.  Ignoring
@@ -1633,12 +1677,12 @@ this noise, which drills into your skull, you notice a truly enormous set
 of double doors o the south.  Sculpted from granite, these doors appear as
 immovable as the mountain itself.
 ~
-96 9 0
+96 137 0
 D2
-A dark metal gate encased in the mountain stands before you.
+A pair of delicately carved golden gates closes off the temple.
 ~
 gate~
-1 -1 9633
+1 9632 9633
 D4
 ~
 ~
@@ -1646,7 +1690,11 @@ D4
 S
 #9680
 The dirty mage's hut~
-A temporary description
+   The wind rips through the clapboard walls of this shambling, poorly
+constructed shelter.  This ramshackle building is home to a hermit with
+complete lack of organization and sanitation.  Tucked into various nooks
+and crannies are various implements of magic, including herbs, spices,
+minerals and even a few books written in some strange language.
 ~
 96 0 0
 D5
@@ -1669,21 +1717,28 @@ nest condor~
 S
 #9684
 an earthen tunnel~
-A temporary description
+   Descending beneath the ruins above, the tunnels here are growing more
+wild with each step.  The walls and floor are a softer, earthen material, 
+unlike the stone that has been surrounding you thus far.  The sounds of
+your passage are muffled by the earth, softening footsteps and silencing
+whispers.
 ~
-96 0 0
+96 4 0
 D0
 ~
 ~
 0 -1 9685
 D4
 ~
-~
-1 -1 9672
+plate~
+8 -1 9672
 S
 #9685
 an earthen tunnel~
-A temporary description
+   The tunnel continues on as you reach a turn, stretching to the east
+before you.  The silence continues here, and your heavy boots leave
+tracks for anyone to see.  The occasional spider crawls into your path
+and your eyes drift upwards, watchful for any spiderwebs.
 ~
 96 0 0
 D1
@@ -1697,7 +1752,11 @@ D2
 S
 #9686
 an earthen tunnel~
-A temporary description
+   Reaching yet another turn in the tunnel, you wonder if this path is
+turning back upon itself.  The walls are slightly damp here, perhaps 
+there is an underground river nearby causing the increase in humidity.
+ever mindful of the dangers you've already faced, you keep your mind
+focused on what's yet to come.
 ~
 96 0 0
 D0
@@ -1711,7 +1770,10 @@ D3
 S
 #9687
 an earthen tunnel~
-A temporary description
+   The pathway here takes a sudden dive downwards, and the ground 
+tries to give way beneath your feet.  You can see that someone long ago
+cut terraces into the decline, and you carefully wind your way from
+step to step as you sink ever deeper into the mountain.
 ~
 96 0 0
 D2
@@ -1725,10 +1787,13 @@ D5
 S
 #9688
 an earthen tunnel~
-A temporary description
+   The steep incline above flattens out here, and the earthen walls  
+continue. The path continues onwards to the west, and you try to
+shake the dirt from your feet as you walk.  The shadows play tricks 
+on your mind, and the shadows seem to coalesce into human shapes.
 ~
 96 0 0
-D1
+D3
 ~
 ~
 0 -1 9689
@@ -1739,23 +1804,34 @@ D4
 S
 #9689
 an earthen tunnel~
-A temporary description
+   The earth on the floor and walls begins to give way here to a more solid
+stone. Your footsteps begin to echo, and to the south you see a dim glow
+as your torches reflect off of a shiny material ahead.  Guttural voices drift
+to you, but surely nothing can be living so far beneath the mountain.
 ~
 96 0 0
-D3
+D1
 ~
 ~
 0 -1 9688
+D2
+~
+~
+0 -1 9696
 S
 #9690
 tunnel chiseled from granite~
-A temporary description
+   Moving deeper into the mountain, your sense of dread grows with each
+step. A palpable evil permeates the air, causing your skin to break out in
+goosebumps. The tunnel beneath the metal plate above you has been
+hewn into the granite of the mountain by ancient stonemasons of an age
+long gone.
 ~
-96 0 0
+96 4 0
 D4
 ~
-~
-0 -1 9669
+plate~
+8 -1 9669
 D5
 ~
 ~
@@ -1763,91 +1839,138 @@ D5
 S
 #9691
 tunnel chiseled from granite~
-A temporary description
+   The finely hewn granite tunnel ends here at a landing, opening up into
+a larger cavern to the east.  You hear strange shuffling noises in that
+direction, increasing the dread that you have already been feeling.  The 
+stale air and darkness of this place makes you wonder how anything can
+be alive in a place like this.
 ~
 96 0 0
+D1
+~
+~
+0 -1 9692
 D4
 ~
 ~
 0 -1 9690
-D5
-~
-~
-0 -1 9692
 S
 #9692
-tunnel chiseled from granite~
-A temporary description
+the dolmen~
+   You are standing in the west entrance to the ancient dolmen.  Dedicated
+to the kings of old, this place is ancient and awe-inspiring.  Shimmering
+marble columns ring this large memorial, supporting what appears to be a
+single massive slab of marble that makes up the ceiling.  What kind of 
+magic could have placed these massive pieces of stone down inside of the
+mountain?
 ~
 96 0 0
-D3
+D0
 ~
 ~
 0 -1 9693
-D4
+D1
+~
+~
+0 -1 9695
+D3
 ~
 ~
 0 -1 9691
 S
 #9693
-tunnel chiseled from granite~
-A temporary description
+the dolmen~
+   The vestiges of an ancient civilization adorn the walls of this opulent
+yet simple burial tomb.  The quality of the craftsmanship and the attention
+to details speaks to the love and care with which this place was built.  Unlike
+the slave built pyramids in the deserts of the eastern expanses, this place 
+brings you a sense of peace and well-being.
 ~
 96 0 0
 D1
 ~
 ~
-0 -1 9692
-D5
-~
-~
 0 -1 9694
-S
-#9694
-tunnel chiseled from granite~
-A temporary description
-~
-96 0 0
-D4
-~
-~
-0 -1 9693
-D5
-~
-~
-0 -1 9695
-S
-#9695
-tunnel chiseled from granite~
-A temporary description
-~
-96 0 0
 D2
 ~
 ~
-0 -1 9696
-D4
-~
-~
-0 -1 9694
+0 -1 9692
 S
-#9696
-tunnel chiseled from granite~
-A temporary description
+#9694
+the dolmen~
+   The ceiling above you continues to draw your eyes.  The almost glowing
+white marble is unlike any stone you've seen in the mountain so far.  The 
+stones in fact remind you of the quarries in the southern kingdoms, but 
+surely no stone of this size has ever been moved from such a distance.  
+~
+96 0 0
+D1
+~
+~
+0 -1 9696
+D2
+~
+~
+0 -1 9695
+D3
+~
+~
+0 -1 9693
+S
+#9695
+the dolmen~
+
+   Standing in the center of the burial chamber, your echoes bounce off 
+the wall in every direction.  From here you can see the ring of columns,
+carved to luck like ancient ironwood trees standing sentinel over the king
+or queen who was buried here ages ago.
 ~
 96 0 0
 D0
 ~
 ~
-0 -1 9695
+0 -1 9694
+D1
+~
+~
+0 -1 9697
+D2
+~
+~
+0 -1 9698
+D3
+~
+~
+0 -1 9692
+S
+#9696
+the dolmen~
+   Here in the corner of the dolmen, you can really admire the largesse
+of this ancient burial chamber.  The magnificent joinery of the marble
+slabs gives the appearance that the columns are in fact a part of the 
+ceiling, and that everything was hewn from a single piece of stone.
+~
+96 0 0
+D0
+~
+~
+0 -1 9689
 D2
 ~
 ~
 0 -1 9697
+D3
+~
+~
+0 -1 9694
 S
 #9697
-tunnel chiseled from granite~
-A temporary description
+the dolmen~
+   The majesty of this tomb is unlike anything you've seen in all of your 
+travels. Marble columns shaped into organic tree-like forms hold up 
+what feels like the entire weight of the mountain above you.  Carved
+from single slabs of stone, the effort that went into these magnificent
+edifices is unmatched in all the kingdoms.
 ~
 96 0 0
 D0
@@ -1857,31 +1980,38 @@ D0
 D3
 ~
 ~
-0 -1 9698
+0 -1 9695
 S
 #9698
-tunnel chiseled from ganite~
-A temporary description
-~
-96 0 0
-D1
-~
-~
-0 -1 9697
-D2
-~
-~
-0 -1 9699
-S
-#9699
-tunnel chiseled from granite~
-A temporary description
+the ante-chamber~
+   This secluded alcove sits just outside of the dolmen to the north.  The
+hushed reverence here speaks of ages passed, and times long gone.  On
+the walls are etched hieroglyphs that haven't seen the eyes of man in
+many a year.  Crude in their depictions, these pictures still possess an
+elegance of a practiced hand.
 ~
 96 0 0
 D0
 ~
 ~
-0 -1 9698
+0 -1 9695
+S
+#9699
+The Lonely Tower~
+   As you climb the spiral staircase up the inside of the lonely tower,
+you begin to pant with exertion.  The air is becoming thing up here, 
+yet you can't help but marvel at the scenic vistas that you glimpse 
+out of the windows.
+~
+96 0 0
+D4
+~
+~
+0 -1 9632
+D5
+~
+~
+0 -1 9628
 S
 #0
 $~

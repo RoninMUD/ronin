@@ -7,8 +7,8 @@ A large horned mountain goat is grazing peacefully here.
 
 ~
 204 33554432 100 Y
-11 9 0 3d80+20 3d4+0
-1000 6000
+50 -10 0 5d10+1000 5d20+0
+1000 280000
 8 8 1
 86 0 0d0+0 0
 0 0 0 0
@@ -26,8 +26,8 @@ leaves his hands.
 
 ~
 92 2 600 Y
-18 2 -10 3d20+400 2d10+5
-7000 18000
+18 2 -10 20d20+1000 10d10+10
+100000 300000
 8 8 1
 1 0 0d0+0 0
 0 0 0 0
@@ -72,31 +72,43 @@ keep paradise protected from the weather outside.  His horn shines bright
 with magical energy.
 
 ~
-10 33554432 1000 Y
-22 -2 -8 20d10+800 3d5+5
-15000 59000
+10 8388736 1000 Y
+52 -30 -17 500d40+4000 100d2+0
+15000 500000
 8 8 1
-86 0 0d0+0 0
+86 0 0d0+0 1
+1 6 33 195
 0 0 0 0
+T
+.....  the unicorn shines with a magical golden light.~
+T
+.....  the earth trembles beneath her hooves.~
 K
 0 0 0 0 0 0 0
 #9622
+trien cleric disgraced~
 Trien~
-Trien~
-Trien, the ancient keeper of Morgoth, stands here wondering why you came.
+Trien, guardian of the faith, keeper of the key, watches you closely.
 ~
-     Since the beginning of time (or close too) Trien has stood in this
-same tower guarding a long forgotten secret.  Made of cooled lava-rock
-Trien is almost impervious to the elements, although some cracking is
-evident.
+   Trien was the former high priest of the Temple of Morgoth.  Banished
+for crimes unspoken, he now spends his time watching the world turn
+from the top of the tower.  His one goal in life is to keep his former 
+Brotherhood safe from interlopers such as yourself.
 
 ~
-26 0 800 Y
-26 -3 -10 6d60+800 4d4+12
-800 120000
+16908314 0 0 Y
+50 -30 -25 75d75+15000 10d10+160
+800 1200000
 8 8 1
-64 0 0d0+0 0
-0 0 0 0
+2 0 0d0+0 5
+1 6 75 36
+1 6 75 249
+1 6 40 246
+1 6 40 192
+1 6 40 187
+0 2 0 0
+T
+..... the fallen priest is silent, thoughtful in his penance.~
 K
 0 0 0 0 0 0 0
 #9625
@@ -126,8 +138,8 @@ A giant mother condor is here tending to her young ones.
                       `--.__    `-.
 ~
 42 0 -200 Y
-17 3 -9 5d3+225 3d3+4
-2000 17000
+17 3 -9 150d75+3000 50d2+20
+500000 500000
 8 8 2
 83 0 0d0+0 0
 0 0 0 0
@@ -142,8 +154,8 @@ A small baby condor is here chirping for food.
 
 ~
 42 0 -200 Y
-7 13 0 5d2+50 1d5+1
-500 2000
+7 13 0 10d10+1000 6d15+30
+500 250000
 8 8 1
 83 0 0d0+0 0
 0 0 0 0
@@ -209,9 +221,9 @@ A hungry, mangy rat cringes in the corner.
 K
 0 0 0 0 0 0 0
 #9633
-cleric~
-A cleric of the white robes~
-A cleric, wearing white robes, is here chanting strange mantras to himself.
+zealot cleric white~
+A white robed zealot~
+A white robed zealot is here chanting strange matras.
 ~
      This cleric serves the white order of healing.  She uses all the good
 emotions to power her heals.  Love, Kindness, Compassion, Trust, all add
@@ -219,18 +231,18 @@ to this cleric's power.  Her love for the world and its companions carry
 her through to the end.
 
 ~
-76 524288 1000 Y
+76 524416 1000 Y
 13 7 0 5d5+150 2d3+2
 200 5000
 8 8 2
-2 0 0d0+0 0
+0 0 0d0+0 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #9635
-Green cleric~
-A cleric of the green robes~
-A cleric, wearing green robes, is here chanting strange mantras to himself.
+apostle green cleric~
+A green robed apostle~
+A green robed cleric is here, studying scriptures.
 ~
      This cleric serves the green order of healing.  He uses nature as his
 power source for his healing.  Birth, Death, Age, Time, all add to this
@@ -242,14 +254,14 @@ order grows in power.
 13 7 0 5d5+150 2d3+2
 200 5000
 8 8 1
-2 0 0d0+0 0
+0 0 0d0+0 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #9637
 Black cleric~
-A cleric of the black robes~
-A cleric, wearing black robes, is here chanting strange mantras to himself.
+A black robed fanatic~
+A black robed fanatic is looking at you with malicious intent.
 ~
     This cleric serves the black order of healing.  He uses all the bad 
 emotions to gain his energy for healing.  Guilt, Lust, Hate, Envy, all
@@ -257,11 +269,11 @@ add to this cleric's power.  Although in the end his result is just, his
 means are questionable.
 
 ~
-76 524288 -1000 Y
-13 7 0 5d5+150 2d3+2
-200 5000
+76 537659392 -1000 Y
+48 -25 -17 55d10+9000 10d20+25
+100000 5000
 8 8 1
-2 0 0d0+0 0
+0 0 0d0+0 0
 0 0 0 0
 K
 0 0 0 0 0 0 0
@@ -277,17 +289,18 @@ no qualms about his job, however, it was what he was raised to do.
 
 ~
 10 128 1000 Y
-60 -4 -9 2300d1+0 4d4+18
-10000 150000
+60 -40 -9 25000d2+10000 20d15+0
+10000 1750000
 8 8 1
-2 16512 0d0+0 0
+2 16512 20d500+0 1
+1 6 20 246
 0 0 0 0
 K
 0 0 0 0 0 0 0
 #9645
-Slave~
-A sacrificial slave~
-A sacrifical slave is here, screaming for mercy.
+proselyte slave follower~
+A groveling proselyte~
+A groveling proselyte is here, begging for mercy.
 ~
      He has been bathed, washed, and basically prepared, to be sacrificed
 at midnight to whatever god fits the mood.  His screams are loud and hoarse
@@ -320,6 +333,98 @@ him look alot more tame then he really is.
 0 0 0 0
 K
 0 0 0 0 0 0 0
+#9670
+undead cleric~
+An undead cleric~
+An undead cleric stands here, awaiting his masters' command.
+~
+The undead cleric has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+2 0 1d1+1 2
+1 6 30 85
+1 6 30 36
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9671
+undead mage~
+An undead mage~
+An undead mage stands here, awaiting his masters' command.
+~
+The undead mage has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+1 0 1d1+1 1
+1 2 90 218
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9672
+bard dancing~
+An undead bard~
+An undead bard stands here, awaiting his masters' command.
+~
+The undead bard has been summoned from the nether, here to 
+do the bidding of his master.
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+10 0 1d1+1 3
+1 5 40 95
+1 5 40 100
+1 5 40 225
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9673
+undead warrior~
+An undead warrior~
+An undead warrior stands here, awaiting his masters' command.
+~
+The undead warrior has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 268435456 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+4 0 1d1+1 1
+4 2 30 0
+0 1 9 0
+K
+20000 0 0 0 0 0 0
+#9674
+undead thief~
+An undead thief~
+An undead thief stands here, awaiting his masters' command.
+~
+The undead thief has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 1572864 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+3 0 1d1+1 1
+11 2 30 65
+0 1 0 0
+K
+20000 0 0 0 0 0 0
 #9675
 necromancer~
 The necromancer~
@@ -330,15 +435,274 @@ on his intricate conjuring.  Weaving his hands in intricate
 patterns, you are almost hypnotized be the ease and grace with
 which he moves.  
 ~
-8 0 0 Y
-1 19 10 1d1+1 1d1+1
-1 1
+16793610 0 -1000 Y
+55 -35 -20 8000d2+8500 10d10+200
+2000000 2000000
 8 8 1
-0 0 1d1+1 0
-0 0 0 0
+0 0 1d1+1 3
+1 1 20 130
+1 4 20 105
+1 4 20 236
+0 2 0 0
 T
- ..... The dark necromancer weaves his hands in intricate patterns.~
+..... The dark necromancer weaves his hands in intricate patterns.~
 K
 0 0 0 0 0 0 0
+#9676
+undead paladin~
+An undead paladin~
+a holy paladin glares at you, secure in his righteousness.
+~
+The undead paladin has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+7 0 1d1+1 2
+3 1 30 0
+1 6 50 102
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9677
+undead commando~
+An undead commando~
+An undead commando stands here, awaiting his masters' command.
+~
+The undead commando has been summoned from the nether, here to 
+do the bidding of his master.
+
+~
+8 268435456 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+11 0 1d1+1 2
+1 5 33 182
+11 2 33 63
+0 1 1 0
+K
+20000 0 0 0 0 0 0
+#9678
+anti paladin anti-paladin undead~
+An undead anti-paladin~
+An undead anti-paladin stands here, awaiting his masters' command.
+~
+The undead anti-paladin has been summoned from the nether, here
+to do the bidding of his master.
+
+~
+8 67108864 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+8 0 1d1+1 2
+11 2 33 48
+1 6 40 180
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9679
+undead ninja~
+An undead ninja~
+An undead ninja stands here, awaiting his masters' command.~
+The undead ninja has been summoned from the nether, here
+to do the bidding of his master.
+
+~
+8 268697600 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+5 0 1d1+1 1
+1 2 50 212
+0 1 0 0
+K
+20000 0 0 0 0 0 0
+#9680
+cleric~
+A humble cleric~
+The humble cleric wanders here, lost in his thoughts.
+~
+A cleric wanders the passages here, humble in his faith.  Tricked
+by the devious templar Felnor into a life of fear and uncertainty,
+this pious man wanders the darkness, lost and afraid.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+2 0 1d1+1 2
+1 6 30 85
+1 6 30 36
+0 1 0 0
+K
+20000 9680 0 0 0 0 0
+#9681
+devious mage~
+A devious mage~
+A devious mage is here, planning your doom.
+~
+The devious mage lurks in the darkness here.  As a student of the
+Necromancer, this dark mage practices unspeakable acts against
+nature.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+1 0 1d1+1 1
+1 2 90 218
+0 1 0 0
+K
+20000 9681 0 0 0 0 0
+#9682
+bard dancing~
+The dancing, singing bard~
+A bard is here, singing and dancing amongst the ruins.
+~
+The mirthful bard wanders the tombs here, searching for fun and
+adventure. Having followed some other heroes down here in a
+failed quest for redemption and glory, the bard nevertheless has
+high spirits.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+10 0 1d1+1 3
+1 5 40 95
+1 5 40 100
+1 5 40 225
+0 1 0 0
+K
+20000 9682 0 0 0 0 0
+#9683
+fierce warrior~
+The fierce warrior~
+A fierce warrior sits here, sharpening his blade.
+~
+The fierce warrior was lured down here in a quest for a hidden
+cache of mythical weapons.  The denizens of the mountain depths
+destroyed the rest of his party, leaving him to wander alone, lost
+high spirits.
+
+~
+8 268435456 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+4 0 1d1+1 1
+4 2 30 0
+0 1 9 0
+K
+20000 9683 0 0 0 0 0
+#9684
+cunning thief~
+The cunning thief~
+The cunning thief lingers in the corner, eying your valuables.
+~
+The cunning thief hides in the corner, eyeing your goods with a 
+mischievous look in his eyes.  Having been kidnapped in a failed
+attempt to steal a valuable book from the library of Midgaard, the
+thief was thrown in the mountain to die.
+
+~
+8 1572864 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+3 0 1d1+1 1
+11 2 30 65
+0 1 0 0
+K
+20000 9684 0 0 0 0 0
+#9685
+holy paladin~
+a holy paladin~
+a holy paladin glares at you, secure in his righteousness.
+~
+The holy paladin was on an adventure to purge the evil from the 
+mountain of Morgoth, when he was betrayed by the anti-paladin.
+stabbed in the back and thrown into the dungeons in the dark, the
+Paladin hopes to bring light to the darkness.
+
+~
+8 0 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+7 0 1d1+1 2
+3 1 30 0
+1 6 50 102
+0 1 0 0
+K
+20000 9685 0 0 0 0 0
+#9686
+burly commando~
+the burly commando~
+A burly commando stands here at attention, itching for a fight.~
+The burly commando took a commission from King Welmar to rid
+the kingdoms of the evil within the mountain.  Overcome by magic,
+the commando has failed in his task, and wanders the darkness
+with his reputation in tatters.
+
+~
+8 268435456 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+11 0 1d1+1 2
+1 5 33 182
+11 2 33 63
+0 1 1 0
+K
+20000 9686 0 0 0 0 0
+#9687
+anti paladin antipaladin~
+the murderous anti-paladin~
+a murderous anti-paladin hides here, planning your death.
+~
+The anti-paladin hides here, at home in the darkness.  Recruited by
+the dark necromancer to serve his nefarious purposes, the dark 
+thief instead is looking for ways to destroy the magician and usurp
+his power and position.
+
+~
+8 67108864 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+8 0 1d1+1 2
+11 2 33 48
+1 6 40 180
+0 1 0 0
+K
+20000 9687 0 0 0 0 0
+#9688
+ninja faithful~
+the faithful ninja~
+a ninja stands here, devoted to the ancient ways.
+~
+Drawn from across the ocean in a quest of good vs evil, the faithful
+Ninja is seeking his destiny beneath the mountain.  In search of
+righting the wrongs of this dark place, the ninja is steadfast in his
+pursuit.
+~
+8 268697600 0 Y
+50 -25 -20 50d50+16000 8d8+140
+0 2100000
+8 8 1
+5 0 1d1+1 1
+1 2 50 212
+0 1 0 0
+K
+20000 9688 0 0 0 0 0
 #0
 $~

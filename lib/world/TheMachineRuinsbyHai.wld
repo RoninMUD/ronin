@@ -1,0 +1,463 @@
+#4300
+A large nondescript rock face~
+You stand before a large wall of rock covered in a layer of thick dust.
+Disappointed -- you almost turn around to head back, but something catches
+your eye.  Peering closer, you see an intricate pattern of runes under the
+dust.  It looks like a series of increasingly large circles centered right
+in front of you.  Out of instinct, you unconsciously press your palm in the
+center of the smallest circle and the entire wall lights up in a dull, but
+undeniable, glow.  Surprised, you pull your hand back and the glow subsides,
+except for the smallest circle you just pressed.  It continues to glow,
+inviting you to press it again.
+~
+43 0 0
+D0
+~
+~
+0 -1 4301
+S
+#4301
+Inside a dimly lit tunnel~
+You warily make your way through a dim, dry tunnel.  There is a layer of dust
+on the floor upon which you leave a trail of footprints.  Clearly, no one has
+been here in a long time.   A line of fine script glows on either side of you,
+pulsating forward.  The air has a slightly burnt metal smell that you can
+almost taste.  In the distance, you see a brightly lit doorway.  There is not
+a sound to be heard.
+~
+43 0 0
+D0
+~
+~
+0 -1 4302
+D2
+~
+~
+0 -1 4300
+S
+#4302
+A brightly lit doorway~
+The runes on either side of the wall split to a circle, housing a wall of
+restless liquid.  Through the waves,  you see rough shapes moving through the
+wall, but little else.  The room is dead silent except a light buzz, drawing
+your attention.
+~
+43 0 0
+D0
+~
+~
+0 -1 4303
+D2
+~
+~
+0 -1 4301
+S
+#4303
+Into a rumbling cavern~
+As you cross a threshold, your senses are assaulted by an onslaught of light
+and sound.  Brilliant beacons of light pulse overhead.  Scattered runes on
+every surface are lit in a green, almost fiery glow.  Machines near and far
+are moving in a dizzying dance.  The air is filled with a high pitched whine.
+The ground periodically shakes as the larger of the machines moves in the
+distance.
+~
+43 0 0
+D1
+~
+~
+0 -1 4304
+S
+#4304
+Along the cavern perimeter overhang~
+You make your way along a narrow walkway hugging the cavern perimeter.  The
+cavern wall is artificially smooth, but is littered with tiny runes that seem
+to brighten in your presence, as if the cavern itself was tracking your
+position.  High above you is a large slit in the wall, teeming with crawlers
+and buzzers.
+~
+43 0 0
+D0
+~
+~
+0 -1 4305
+D3
+~
+~
+0 -1 4303
+D4
+~
+~
+0 -1 4324
+S
+#4305
+The walkway of death~
+Just kidding.  You wont die here.  Probably.  Youve seen and, presumably,
+handled the crawlers.  Whats left to worry about here, you wonder, right as
+youre buzzed by a fly-by of a flock of machines.  So those are buzzers.
+You wonder if theyre aggressive as the flock pivots through the air and
+starts heading towards you.
+~
+43 0 0
+D0
+~
+~
+0 -1 4306
+D2
+~
+~
+0 -1 4304
+S
+#4306
+An overflowing walkway~
+Water is running down the walls from the ceiling above.  The lit runes along
+the water, give the water an eerie glow.  As you carefully make, trying not to
+slip, youre stopped in your tracks by the scene in the cavern below you.
+How could machines so far below you look so large? The air echoes with the
+booming sounds of their heavy steps.
+~
+43 0 0
+D0
+~
+~
+0 -1 4307
+D1
+~
+~
+0 -1 4308
+D2
+~
+~
+0 -1 4305
+S
+#4307
+A break in the walkway~
+The walkway in front of you comes to an abrupt, jagged end.  The other side
+continues just a few meters away.  Youre tempted to jump, but that would be
+insane.  Talk about a death trap.  While turning back you notice an oddity in
+the wall.  Brushing away dust, you reveal a fissure in the rock just large
+enough to enter.
+~
+43 0 0
+D0
+~
+break~
+10 -1 4309
+D2
+~
+~
+0 -1 4306
+S
+#4308
+Inside a fissure~
+The room is almost completely dark.  The walls are full of small gouges, as if
+it was roughly and hastily dug out.  You can see bits of broken machines and
+loose earth lying around.  In the corner, there looks to be a nest of wires
+and cables.  Before you take another step, youre brought to your knees by an
+earsplitting whine.
+~
+43 0 0
+D3
+~
+~
+0 -1 4306
+S
+#4309
+Mind the gap~
+How did you make that jump?  Thats insane.  There is a fine line between
+fearless and suicidal.  You landed on the right side of that line today.
+Glancing around, you notice that the wall on this side is in much better
+shape.  There is no water and scripts on the wall are brightly lit.  Peering
+closer, you can help but marvel at the level of detail.  Its beautiful in a
+way.
+~
+43 0 0
+D0
+~
+~
+0 -1 4310
+D2
+~
+break~
+10 -1 4307
+S
+#4310
+Walkway's end~
+The scripts on the wall grow brighter as you continue on.  It might be a trick
+of the eyes, but it's almost as if the scripts on the wall and ceiling pulse
+in a wave when you're not looking directly at them.  The noise from the larger
+machines done below are down right deafening.  You can more clearly see them
+now.  They're right below as you look over the edge of the walkway.  Maybe you
+can head done by climbing along the wall.  But you've had your fill of
+foolishness for one day, right?
+~
+43 0 0
+D2
+~
+~
+0 -1 4309
+D5
+~
+~
+0 -1 4311
+S
+#4311
+In the midst of giants~
+The air is thick with dust and the ground is littered with debris, some half
+again larger than you. It looks like mining on a scale that's hard to imagine.
+The largest of the machines break the earth.  Progressively smaller machines
+work the breaks, processing them somehow.  The smallest of them transport
+small chunks deeper into the cavern.  What are they doing and why?
+~
+43 0 0
+D0
+~
+~
+0 -1 4314
+D1
+~
+~
+0 -1 4315
+D3
+~
+~
+0 -1 4312
+D4
+~
+~
+0 -1 4310
+S
+#4312
+Torn asunder~
+The giant machines leave devastation in their wake.  With each strike, the
+ground rumbles as it's torn into towering chunks, leaving divots that are
+several times deeper than you are tall.  Working your way through the chaos
+proves challenging, but manageable.  Straining your vision, you can see,
+through the clogged air, the far walls of the cavern.
+~
+43 0 0
+D1
+~
+~
+0 -1 4311
+D3
+~
+~
+0 -1 4313
+S
+#4313
+Inside a massive divot~
+The air is slightly clearer and the noise isn't as overwhelming down here.
+You still feel the periodic thumps before the earth shakes, but it's muted by
+the walls of earth to either side of you.  This is one of the few areas absent
+of scripts.  Instead, you see trails along the floor and walls.  On closer
+inspection, it looks like the trails were made by many, many crawlers.
+~
+43 0 0
+D1
+~
+~
+0 -1 4312
+S
+#4314
+Between towering chunks~
+You stand in the shadow of a pair of towers dug from the earth, and carelessly
+piled high.  The largest of the machines deftly bove around the towers.  A
+line of crawlers slowly move about, leaving scripts in their wake.  It's like
+a line demarcating lifeless rock and geo-luminescence.  You can almost feel
+the tower growing in power as the machines work.
+~
+43 0 0
+D2
+~
+~
+0 -1 4311
+S
+#4315
+Along the cavern wall~
+The entire wall as far as you can see is covered in intricate script.  Light
+flows along the wall in slow, irregular pulses.  The ground is relatively
+clear except for a deep layer of fine dust.  It's no surprise given the
+amount of debris in the air.  The echoes from the giant machines can still be
+felt, but it doesn't feel as overwhelming from this distance.  The towers of
+earth look like a forest of stone surrounded by a faint glow through the hazy
+air.
+~
+43 0 0
+D0
+~
+~
+0 -1 4316
+D3
+~
+~
+0 -1 4311
+S
+#4316
+A large depression in the wall~
+From what you can tell, the wall along this entire span of the cavern is
+completely flat with the exception of this rather large depression in the
+wall.  It's absent from any script and floor in the depression is clear of
+even dust.  What can have made it?  In the shadows, you notice a large
+opening.  It looks like a tunnel.
+~
+43 0 0
+D2
+~
+~
+0 -1 4315
+D5
+~
+~
+0 -1 4317
+S
+#4317
+A descending tunnel~
+The tunnel angles steeply, plunging deeper into the earth.  The runes are
+still lit, but more faintly.  Periodically, a pulse of light flows from the
+cavern into the tunnel.  The walls, floor and ceiling all look unnaturally
+smooth here.  As you continue you on, you notice an absence of dust on the
+surfaces around you, or in the air for that matter.
+~
+43 0 0
+D4
+~
+~
+0 -1 4316
+D5
+~
+~
+0 -1 4318
+S
+#4318
+Deep into the earth~
+You've lost track of how long you've been heading down this tunnel, let alone
+how far.  There are still groups of crawlers moving about, but otherwise the
+air has an eerily stillness about it.  You continue to see period pulses along
+the scripts on the walls.  The walls themselves look similar to earlier in the
+tunnel, but somehow older.  Even the air itself feels indescribably old,
+giving the feeling as if you were walking into the far flung past.
+~
+43 0 0
+D0
+~
+~
+0 -1 4319
+D4
+~
+~
+0 -1 4317
+S
+#4319
+First signs of corruption~
+You stop in your tracks at the first signs of wrongness.  On the walls around
+you, there are dark blotches of organic matter.  It's almost as if they're
+growing into the earth itself.  At first, the corruption was small and spread
+out.  But as you continue on, it covers an increasing amount of every surface
+around you, save for the lighted scripts.  The corruption looks thickest near
+the scripts, but doesn't grow on the scripts themselves.
+~
+43 0 0
+D0
+~
+~
+0 -1 4320
+D2
+~
+~
+0 -1 4318
+S
+#4320
+A stifling pungent expanse~
+The tunnels open into a vast expanse.  You can see into the infinite beyond on
+either side and above you.  The ground beneath your feed is littered with
+circles upon circles of script.  Each script is elegantly and cleanly
+imprinted in the earth.  The ground glows with energy that you can almost
+feel.  The air is absolutely still and smells of organic corruption.  The
+feeling of age is even more pronounced here, almost like time has stopped.
+You continue walking a path of corruption coming from the tunnel to a
+construct ahead.
+~
+43 0 0
+D0
+~
+~
+0 -1 4321
+D2
+~
+~
+0 -1 4319
+S
+#4321
+Origin~
+As you step in the construct, you see the most complex machine yet.  No, not
+a machine -- a machine extension, that gives the impression of a throne. It's
+a place that resonates with power and control.  Every surface blazes with
+barely contained energy.  This place is where all the energy from the cavern
+has been gathered and stored.  But to what end?  The corruption leads from the
+entrance to the throne, before continuing on.
+~
+43 0 0
+D0
+~
+~
+0 -1 4323
+D2
+~
+~
+0 -1 4320
+D5
+~
+~
+0 -1 4322
+S
+#4322
+Infestation ground zero~
+You make your way below the machine throne into a dark, dank hole.  This place
+is completely absent of scripts that have been present everywhere else in the
+ruins.  There are organic growths everywhere you look, each moving as if they
+were alive.  The air tastes of copper, and there is no light other than what
+you brought with you.
+~
+43 0 0
+D4
+~
+~
+0 -1 4321
+S
+#4323
+Pulsating portal~
+The path of corruption leads to a huge portal.  Each pulse of energy on the
+floor of scripts flows into the origin behind you, where most of it is
+stored, but a small trickle continues on to the portal before you.  Each
+pulse of energy can be traced to the portal, as if it itself were pulsing with
+energy.  You walk behind the portal on the floor of scripts, only to see it
+end abruptly.  The infinite expanse continues as far as you can see.
+~
+43 0 0
+D2
+~
+~
+0 -1 4321
+S
+#4324
+Perched above it all~
+The vantage point up here allows you to see most of the cavern, from the
+portal entrance, across the walkway, and down to cavern floor.  The height
+is a little dizzyig.  You're even above most of the buzzers flying. There
+is script even up here, but it's far less dense.  What uses this spot?  It
+can't just be the view.
+~
+43 0 0
+D5
+~
+~
+0 -1 4304
+S
+#4399
+Temporary Room~
+Temporary description.
+~
+43 0 0
+S
+#0
+$~

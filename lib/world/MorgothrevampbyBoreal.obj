@@ -1,28 +1,26 @@
 #9600
-dirk platinum~
-A platinum dirk~
-A very sharp dirk, made of pure platinum, is stuck in the ground here.~
+platinum cruciate idol~
+A platinum cruciate idol~
+A cruciate idol, made of pure platinum, shines here with a holy light.~
 ~
-5 3072 8193
-0 3 5 11
+3 3072 8193
+40 100 100 36
 9 10000 10
-50
+15
 X
 ~
-0 0 0
+2 0 0
 M
 ~
 ~
 ~
 ~
-A
-18 2
-A
-12 -20
+T
+43200
 #9601
-. corpse~
-an ancient, decaying skeleton~
-an ancient, decaying skeleton~
+carved marble zemi~
+a carved marble zemi~
+A small marble statue lies here on the ground, straining to contain some internal force.~
 ~
 15 0 0
 100 1 -1 0
@@ -50,9 +48,9 @@ the horn of a unicorn~
 The horn of a unicorn is glowing on the ground.~
 ~
 4 2113 16385
-15 8 8 2
+50 1 1 117
 2 3000 10
-50
+33
 X
 ~
 64 0 0
@@ -61,6 +59,8 @@ M
 ~
 ~
 ~
+T
+86400
 #9620
 vial holy~
 A vial of Holy Water~
@@ -130,7 +130,7 @@ A stick that would make a good companion for walking was left here.~
 ~
 8 65 16385
 0 0 0 0
-3 7000 50
+3 200000 50
 50
 X
 ~
@@ -140,10 +140,6 @@ M
 ~
 ~
 ~
-A
-14 10
-A
-17 -2
 #9650
 sash white~
 A white sash~
@@ -168,8 +164,8 @@ altar skull bloody horror~
 An altar made of skulls.~
 A hideous altar, formed from a beastly, blood stained skull sits here.~
 ~
-0 0 1
-0 0 0 0
+15 0 1
+100 0 0 0
 10 10 10
 10
 E
@@ -200,6 +196,23 @@ M
 ~
 ~
 ~
+#9675
+book dead~
+The book of the dead~
+A dark, ominous book emits a fould and pernicious energy.~
+~
+8 0 1
+0 0 0 0
+0 100000 100000
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #9677
 wine barrel winerack barrels~
 An ancient ironwood wine barrel.
@@ -214,6 +227,159 @@ E
 rat'hcor rathcor~
   AH HA! a hidden compartment!!!!
 ~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9680
+cleric torn robes~
+torn robes of the cleric~
+The torn shreds of the clerics clothing lie here in a heap.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9681
+dirty mage robe robes~
+dirty mage robes~
+Some dirty robes here, belonging to a mage of the dark arts.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9682
+smashed guitar bard~
+smashed and broken guitar~
+A fine guitar, broken and smashed to pieces.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9683
+broken sword hilt~
+the gilded hilt of a broken sword~
+The gilded hilt of a broken, once magnificent sword sits abandoned here.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9684
+purse coin thief~
+a shabby purse filled with coins~
+A shabby coin purse, once belonging to a thief, lies here forgotten.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9685
+cross silver paladin~
+a tarnished silver cross~
+A silver cross, tarnished from much use, shines here in the dark.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9686
+worn gloves commando~
+a worn pair of battle gloves~
+A worn pair of gloves that have seen much battle, are crumped in a heap.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9687
+dagger poison anti anti-paladin~
+a sharp, poisoned dagger~
+A wickedly sharp dagger, coated in a thick poison, has been tossed aside here.~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9688
+rusty katana ninja~
+a dull, rusty katana~
+A long rusty katana, dulled with much use, lies here in disgrace~
+~
+8 0 1
+0 0 0 0
+1 50000 50000
+33
 X
 ~
 0 0 0

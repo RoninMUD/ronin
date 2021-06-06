@@ -1,0 +1,353 @@
+#1400
+wanderer man~
+A wanderer~
+A man wanders here, aimlessly.
+~
+The man looks as if he's been wandering without
+direction for quite some time.  He is covered with
+mud, and dirt.  His hair is unkempt, and gross.  It
+should be noted, he appears more than capable of 
+defending himself.
+~
+16456 268697600 0 Y
+45 -10 -19 10d10+5000 5d5+10
+12000 400000
+8 8 1
+69 0 50d10+0 1
+2 2 10 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1401
+knight corpse corpse-knight~
+A corpse-knight~
+A walking corpse, dressed as a knight, is wandering here.
+~
+A lifeless husk roams the battlefield.  Looking to finish a
+fight that likely ended long ago.
+~
+16488 268697600 0 Y
+50 -10 -20 10d10+2500 5d5+15
+5000 200000
+8 8 0
+52 16384 50d10+0 4
+2 2 5 0
+4 2 5 0
+5 2 5 0
+6 2 5 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1402
+corpse shambling~
+A shambling corpse~
+A hulking, shambling corpse wanders the immediate area.
+~
+A large, hulking body wanders with a purpose that is
+likely lost, even upon itself.
+~
+16488 142614656 0 Y
+50 -10 -24 10d10+2500 5d5+55
+3000 220000
+8 8 0
+52 16384 50d10+0 2
+5 2 5 0
+7 2 10 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1403
+spirit wandering~
+A wandering spirit~
+A spirit wanders here, looking for battle.
+~
+An spirit, covered in ectoplasmic armor and weaponry,
+wanders the battlefield.
+~
+16488 402917376 0 Y
+50 -15 -10 10d10+2000 5d5+65
+5000 200000
+8 8 0
+95 16384 50d10+0 3
+11 2 5 68
+7 2 5 0
+4 2 5 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1404
+wisp orb~
+A wisp~
+A glowing, white orb hovers around the room chaotically.
+~
+The spirit of some, long dead being darts around the room
+in no real, discernable pattern.  It gives off an almost,
+supernatural aura.
+~
+1077320 152832042 0 Y
+50 -5 -15 10d10+1500 5d5+10
+12500 250000
+8 8 0
+95 0 50d10+0 3
+1 2 40 23
+1 2 40 32
+1 2 20 30
+0 1 0 0
+K
+0 1401 0 0 0 0 0
+#1405
+warhorse decaying~
+A decaying warhorse~
+A decaying warhorse is trotting here.
+~
+A decayed warhorse trots the battlefield.  The decayed remains
+of its former rider have either disintegrated in time, or have
+melded with the remains of the undead mount.
+~
+16488 134479872 0 Y
+50 -15 -25 10d10+2000 5d5+45
+0 250000
+8 8 0
+53 16384 50d10+0 3
+10 2 5 0
+5 2 5 0
+2 2 5 0
+0 1 0 0
+K
+10000 0 0 0 0 0 0
+#1406
+lich wizard undead~
+The Lich~
+An undead wizard hovers here, muttering to itself.
+~
+The Lich is a powerful, undead wizard.  It's decayed features prevent
+any form of identification as to who or what it was in it's former
+life.
+~
+16488 428091528 0 Y
+55 -15 -25 10d10+9000 5d5+85
+300000 1000000
+8 8 0
+51 16384 50d10+0 6
+9 2 10 0
+1 2 20 248
+1 4 20 80
+1 4 20 209
+3 2 10 0
+1 2 20 136
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1407
+crocodile reptile monster giant~
+A giant crocodile~
+A large, reptilian monster stalks the waters here.
+~
+The crocodiles of this marsh have grown extremely large due
+to a lack of any sort of predator.  It is an apex, and will
+likely continue to hunt this marsh for quite some time.
+~
+16488 270008320 0 Y
+50 -10 -25 10d10+7000 10d5+85
+0 900000
+8 8 0
+82 16384 50d10+0 3
+5 2 10 0
+8 2 10 0
+10 4 5 0
+0 1 0 0
+K
+75000 0 0 0 0 0 0
+#1408
+bullywug frogman frog~
+A bullywug~
+A frogman stands here, on alert and ready to attack!
+~
+The bullywug are a primitive race.  Often living in
+caves and marshes.  It is said their meat is slightly
+poisonous, and thus they roam free around large, natural
+predators without fear of attack.  They are herbivores,
+but they are aggressive towards most humanoids.
+~
+16488 270270464 0 Y
+50 -10 -15 10d10+5000 10d5+50
+20000 600000
+8 8 0
+81 16384 50d10+0 3
+4 2 10 0
+5 2 10 0
+7 4 5 0
+0 1 1 0
+K
+0 0 0 0 0 0 0
+#1409
+beholder~
+A Beholder~
+A large orb with several, stalked eyes is floating here.
+~
+The behold hovers here, with nine, tendril-like stalks
+protruding from it's orb-shaped body.  In the center
+of it's body is one, large, eye and a mouth.
+~
+16490 427829400 0 Y
+55 -13 -25 10d10+12000 10d10+75
+500000 2000000
+8 8 0
+67 20544 50d10+0 10
+1 2 10 136
+1 2 10 109
+1 2 10 111
+1 6 10 85
+1 4 10 80
+1 4 10 104
+1 4 10 105
+1 4 10 131
+1 2 10 119
+1 2 10 100
+0 1 1 32
+K
+0 1403 1404 0 0 0 0
+#1410
+dragon black ahardenauk~
+Ahardenauk, the Black~
+Ahardenauk, the ancient, black dragon, is resting here.
+~
+Ahardenauk surrounds himself in gold, jewels, and treasures as
+much as he surrounds himself in rotting, putrid, decaying flesh.
+He is a black dragon, and the king of his region.  Few would dare
+challenge such a creature on their terms, and certainly only a
+fool would challenge him on his terms.
+~
+16490 427829400 -350 Y
+60 -25 -30 100d20+22000 10d10+400
+1500000 5000000
+4 8 1
+57 939544576 50d10+0 7
+1 2 20 136
+1 2 5 130
+1 2 5 181
+1 2 5 182
+5 2 20 0
+8 2 10 0
+10 2 10 0
+0 1 1 32
+R
+509
+K
+0 1406 1407 1408 1409 0 0
+#1411
+nymph~
+A Nymph~
+A wood nymph is here, inspecting the area.
+~
+Wood Nymphs are tricksters and powerful magic users.  They
+are known for guarding their kin, and tricking lessering
+beings with their cunning and beauty.
+~
+16456 270008320 0 Y
+50 -10 -18 10d10+6500 5d10+85
+100000 900000
+8 8 2
+72 16384 50d10+0 4
+1 4 10 23
+1 2 10 111
+1 4 5 135
+1 2 10 141
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1412
+dryad~
+A Dryad~
+A dryad is here, inspecting the area.
+~
+Dryads are known for the frivolous nature, and lack
+of attention span.  They are known to guard their
+homelands, as much as they are known for wandering 
+off and seeking entertainment elsewhere.
+~
+16456 270008320 0 Y
+50 -10 -18 10d10+6500 5d10+85
+100000 900000
+8 8 1
+72 16384 50d10+0 5
+1 2 10 100
+1 4 10 104
+1 4 5 105
+1 4 10 212
+3 2 10 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#1413
+tree hamadryad~
+The Hamadryad~
+A large, ancient tree stands here, watching over the grove.
+~
+Hamadryad's are ancient beings.  They are said to be the product of an
+ancient nymph or dyrad, possessing an ancient tree in an area containing
+strong, natural magics.  They often guard over groves, druidic circles,
+or any forest containing the fae and their kin.
+~
+16458 411052200 0 Y
+60 -28 -35 20d120+23000 10d10+200
+1800000 900000
+8 8 0
+0 939546560 50d10+0 7
+1 4 5 236
+1 2 10 190
+1 4 10 179
+1 2 5 109
+1 6 5 85
+10 4 5 0
+3 2 10 0
+0 1 9 32
+R
+511
+K
+0 1414 0 0 0 0 0
+#1414
+nymph sproutling~
+A nymph sproutling~
+A nymph sproutling is here, inspecting the area.
+~
+A freshly born nymph.  These beings are born with century's
+worth of knowledge, and are nearly as strong as their older
+kin.
+~
+16458 270008320 0 Y
+48 -9 -18 10d10+5500 5d10+65
+50000 500000
+8 8 2
+72 16384 50d10+0 4
+1 4 10 23
+1 2 10 111
+1 4 5 135
+1 2 10 141
+0 1 0 0
+K
+0 1415 0 0 0 0 0
+#1415
+dryad sproutling~
+A dryad sproutling~
+A dryad sproutling is here, inspecting the area.
+~
+A freshly born dryad.  These beings are born with century's
+worth of knowledge, and are nearly as strong as their older
+kin.
+~
+16456 270008320 0 Y
+48 0 -18 10d10+5500 5d10+65
+50000 500000
+8 8 1
+72 16384 50d10+0 5
+1 2 10 100
+1 4 10 104
+1 4 5 105
+1 4 10 212
+3 2 10 0
+0 1 0 0
+K
+0 1416 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,1622 @@
+#1400
+The Hamadryad's Grove~
+A faint, magical aura surrounds the entirety of this area.  A few
+trees and flowers fluorish among the landscape, and brighten the
+area with hughs of red, purple, green, and white.  Glowing bugs,
+both flying and non, decorate the environment.  A soft hum can
+be heard in the background.  Whether it is from the wind, a
+plant, or some unseen force, one cannot tell.
+~
+14 524288 3
+D0
+~
+thicket~
+12 -1 1413
+D2
+~
+~
+0 -1 1499
+S
+#1401
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the south.
+~
+14 0 3
+D0
+~
+~
+0 -1 3142
+D2
+~
+~
+0 -1 1402
+S
+#1402
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1401
+D2
+~
+~
+0 -1 1403
+S
+#1403
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1402
+D2
+~
+~
+0 -1 1404
+S
+#1404
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1405
+S
+#1405
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1404
+D2
+~
+~
+0 -1 1406
+S
+#1406
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1405
+D2
+~
+~
+0 -1 1407
+S
+#1407
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1406
+D2
+~
+~
+0 -1 1408
+S
+#1408
+Standing above the valley~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  To the east
+lies a carved valley.  Legends say that nearly a dozen armies
+converged into the valley and waged battle for several days.  Now,
+the valley is simply an ancient boneyards, where the dead gather,
+and the living shun.  The pathway continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1407
+D2
+~
+~
+0 -1 1409
+D5
+There are a few good foot, and handholds carved into the side of
+the valley, it would not take much to climb the cliff's ledge.
+~
+cliff ledge~
+11 -1 1479
+S
+#1409
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1410
+S
+#1410
+An intersection~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south, as well as to the west.
+~
+14 0 3
+D0
+~
+~
+0 -1 1409
+D2
+~
+~
+0 -1 1411
+D3
+~
+~
+0 -1 1438
+S
+#1411
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1410
+D2
+~
+~
+0 -1 1412
+S
+#1412
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1411
+D2
+~
+~
+0 -1 1413
+S
+#1413
+An overgrown intersection.~
+The pathway comes to an intersection.  To the south is a large,
+thicket of tangled vines, roots, and weeds.  The pathway to the
+east seems deep, muddy, and a little wet.  To the west are the 
+making of some kind of road.  Finally, to the northern, the
+overgrown pathway seems to continue.
+~
+14 0 3
+D0
+~
+~
+0 -1 1412
+D1
+~
+~
+0 -1 1414
+D2
+~
+thicket~
+12 -1 1400
+D3
+~
+~
+0 -1 1439
+S
+#1414
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east.  To the west is an overgrown 
+intersection.
+~
+14 0 3
+D1
+~
+~
+0 -1 1417
+D3
+~
+~
+0 -1 1413
+S
+#1415
+A sunken intersection~
+The pathways come to a an intersection in this area.  The overused,
+and undertreated path continues to the east and south.
+~
+14 0 3
+D1
+~
+~
+0 -1 1426
+D2
+~
+~
+0 -1 1416
+S
+#1416
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1415
+D2
+~
+~
+0 -1 1417
+S
+#1417
+A sunken intersection~
+The pathways come to a an intersection in this area.  The overused,
+and undertreated path continues to the north, south, and west.
+~
+14 0 3
+D0
+~
+~
+0 -1 1416
+D2
+~
+~
+0 -1 1418
+D3
+~
+~
+0 -1 1414
+S
+#1418
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1417
+D2
+~
+~
+0 -1 1419
+S
+#1419
+A sunket intersection~
+The pathways come to a an intersection in this area.  The overused,
+and undertreated path continues to the north, east, and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1418
+D1
+~
+~
+0 -1 1430
+D2
+~
+~
+0 -1 1420
+S
+#1420
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1419
+D2
+~
+~
+0 -1 1421
+S
+#1421
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1420
+D2
+~
+~
+0 -1 1422
+S
+#1422
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1421
+D2
+~
+~
+0 -1 1423
+S
+#1423
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1422
+D2
+~
+~
+0 -1 1424
+S
+#1424
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1423
+D2
+~
+~
+0 -1 1425
+S
+#1425
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the north.
+~
+14 0 3
+D0
+~
+~
+0 -1 1424
+S
+#1426
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1427
+D3
+~
+~
+0 -1 1415
+S
+#1427
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1428
+D3
+~
+~
+0 -1 1426
+S
+#1428
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1429
+D3
+~
+~
+0 -1 1427
+S
+#1429
+Before the Shimmering Waters~
+The waters to the east glisten and shimmer.  In the distance
+a bay can be seen.  It is far from unreachable at this vantage.
+point.  The path continues to back to the west, and it seems as
+though one could jump into the waters with ease to the east.
+~
+14 0 3
+D1
+A shimmering bay lies a short swim from the waters edge.
+~
+waters~
+10 -1 7118
+D3
+~
+~
+0 -1 1428
+S
+#1430
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1431
+D3
+~
+~
+0 -1 1419
+S
+#1431
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1432
+D3
+~
+~
+0 -1 1430
+S
+#1432
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1433
+D3
+~
+~
+0 -1 1431
+S
+#1433
+A sunken path~
+There is almost no vegetation along the pathway.  Repeated use with
+little to no maintenance has left deep wells within the pathway.  A
+few of which have become flooded with bits of water.  The sunken
+path continues to the west.
+~
+14 0 3
+D3
+~
+~
+0 -1 1432
+S
+#1434
+Standing before a cliff~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the east.  To the west there appears to be...something
+else...
+~
+14 0 3
+D1
+~
+~
+0 -1 1435
+D3
+~
+~
+0 -1 6801
+S
+#1435
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1436
+D3
+~
+~
+0 -1 1434
+S
+#1436
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1437
+D3
+~
+~
+0 -1 1435
+S
+#1437
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1438
+D3
+~
+~
+0 -1 1436
+S
+#1438
+An overgrown pathway~
+Tall weeds blanket the area.  The walkway is basically just a patch of
+weeds slightly less thick than the thicket weeds around the area. 
+Regardless, a walkway does, in fact, present itself.  The pathway
+continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1410
+D3
+~
+~
+0 -1 1437
+S
+#1439
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  To the east lies an overgrown intersection.  The
+walkway continues to the west.
+~
+14 0 1
+D1
+~
+~
+0 -1 1413
+D3
+~
+~
+0 -1 1440
+S
+#1440
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  To the west there appears to be some sort of
+resting place.  The walkway continues to the east.
+~
+14 0 1
+D1
+~
+~
+0 -1 1439
+D3
+~
+~
+0 -1 1441
+S
+#1441
+An old, cobbled intersection~
+This intersection is marked by some sort of ancient, warrior statue.
+Perhaps it is a god of old, or simply a powerful ward against the
+monsters that plague the land.  Regardless, the intersection appears
+to be a safe place to rest.  To the west is lies a deep marsh, and
+a cobbled walkway continues to the south.
+~
+14 68 1
+D1
+~
+~
+0 -1 1440
+D2
+~
+~
+0 -1 1442
+D3
+~
+~
+0 -1 1461
+S
+#1442
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  To the north there appears to be some resting
+grounds, and the walkway continues to the south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1441
+D2
+~
+~
+0 -1 1443
+S
+#1443
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1442
+D2
+~
+~
+0 -1 1444
+S
+#1444
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1443
+D2
+~
+~
+0 -1 1445
+S
+#1445
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1444
+D2
+~
+~
+0 -1 1446
+S
+#1446
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1445
+D2
+~
+~
+0 -1 1447
+S
+#1447
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1446
+D2
+~
+~
+0 -1 1448
+S
+#1448
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1447
+D2
+~
+~
+0 -1 1449
+S
+#1449
+An old, cobbled walkway~
+Stones have been built into the terrain here, to create some sort
+of road or walkway.  However, it does appear to have been tended
+to in quite some time.  Bits of grass and weeds have grown upwards,
+through the road.  The walkway continues to the north and south.
+~
+14 0 1
+D0
+~
+~
+0 -1 1448
+D2
+~
+~
+0 -1 1450
+S
+#1450
+An old intersection~
+The walkway appears to come to an abrupt end.  To the east, there
+is a set of massive, iron gates marked "Adenia Grove".  A pathway
+also appears to the south and north, entering into a forested
+area.
+~
+14 0 3
+D0
+~
+~
+0 -1 1449
+D2
+~
+~
+0 -1 1451
+D3
+~
+~
+0 -1 1453
+S
+#1451
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the south, to the north lies a cobbled pathway.
+~
+14 0 3
+D0
+~
+~
+0 -1 1450
+D2
+~
+~
+0 -1 1452
+S
+#1452
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the north.
+~
+14 0 3
+D0
+~
+~
+0 -1 1451
+S
+#1453
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the west, to the east lies a cobbled walkway.
+~
+14 0 3
+D1
+~
+~
+0 -1 1450
+D3
+~
+~
+0 -1 1454
+S
+#1454
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the east and west.
+~
+14 0 3
+D1
+~
+~
+0 -1 1453
+D3
+~
+~
+0 -1 1455
+S
+#1455
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the east and west.
+~
+14 0 0
+D1
+~
+~
+0 -1 1454
+D3
+~
+~
+0 -1 1456
+S
+#1456
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the north and east.
+~
+14 0 3
+D0
+~
+~
+0 -1 1457
+D1
+~
+~
+0 -1 1455
+S
+#1457
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1458
+D2
+~
+~
+0 -1 1456
+S
+#1458
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the north and south.
+~
+14 0 3
+D0
+~
+~
+0 -1 1459
+D2
+~
+~
+0 -1 1457
+S
+#1459
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the south and west.
+~
+14 0 3
+D2
+~
+~
+0 -1 1458
+D3
+~
+~
+0 -1 1460
+S
+#1460
+A forested pathway~
+A path carves itself into the heavily wooded area here.  The woods
+stand remarkably, unremarkable.  There are a few signs of wildlife,
+but nothing in particular stands out in any direction.  The forested
+path continues to the east.
+~
+14 0 3
+D1
+~
+~
+0 -1 1459
+S
+#1461
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the south and west.  To the east is some sort of
+cobbled intersection.
+~
+14 0 6
+D1
+~
+~
+0 -1 1441
+D2
+~
+~
+0 -1 1464
+D3
+~
+~
+0 -1 1462
+S
+#1462
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the east, south, and west.
+~
+14 0 6
+D1
+~
+~
+0 -1 1461
+D2
+~
+~
+0 -1 1465
+D3
+~
+~
+0 -1 1463
+S
+#1463
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the east and south.
+~
+14 0 6
+D1
+~
+~
+0 -1 1462
+D2
+~
+~
+0 -1 1466
+S
+#1464
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the north, south, and west.
+~
+14 0 6
+D0
+~
+~
+0 -1 1461
+D2
+~
+~
+0 -1 1467
+D3
+~
+~
+0 -1 1465
+S
+#1465
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues in all directions.
+~
+14 0 6
+D0
+~
+~
+0 -1 1462
+D1
+~
+~
+0 -1 1464
+D2
+~
+~
+0 -1 1468
+D3
+~
+~
+0 -1 1466
+S
+#1466
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the east, south, and north.
+~
+14 0 6
+D0
+~
+~
+0 -1 1463
+D1
+~
+~
+0 -1 1465
+D2
+~
+~
+0 -1 1469
+S
+#1467
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the north and west.
+~
+14 0 6
+D0
+~
+~
+0 -1 1464
+D3
+~
+~
+0 -1 1468
+S
+#1468
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the east and west.  A cave lies to the south.
+~
+14 0 6
+D0
+~
+~
+0 -1 1465
+D1
+~
+~
+0 -1 1467
+D2
+~
+~
+0 -1 1470
+D3
+~
+~
+0 -1 1469
+S
+#1469
+A Deep Marsh~
+The thick, muddy waters here stand knee deep or more.  It is tough
+trying to work through it.  The waters stand too deep to reasonably
+see through; but things can be felt moving beneath the waters.  The
+marsh continues to the north and east.
+~
+14 0 6
+D0
+~
+~
+0 -1 1466
+D1
+~
+~
+0 -1 1468
+S
+#1470
+Entrance to the Marsh Cave~
+Torches have been set up here, and remain lit.  Which means something
+must be living within the cave.  However, there are no torches further
+in, only darkness.  The cave continues to the south.
+~
+14 67108876 0
+D0
+~
+~
+0 -1 1468
+D2
+~
+~
+0 -1 1471
+S
+#1471
+Within the Marsh Cave~
+The cave is shrouded with darkness.  The walls, and ceiling appear to
+be mostly natural, though parts of it seem to have been widened by 
+tools of some kind.  A wretched stench wafts in from the south.  The
+cave continues to the west.
+~
+14 9 0
+D0
+~
+~
+0 -1 1470
+D2
+~
+~
+0 -1 1472
+D3
+~
+~
+0 -1 1473
+S
+#1472
+The Dragon's Lair~
+This portion of the cave is teeming with carcasses of Bullywug, 
+crocodiles, humanoids, and pretty much whatever else was unfortunate
+enough to come across the pile's maker.  The humidity and richness
+of the soil has putrified most of the bodies, and attractive all
+sorts of insects and vermin.  The marsh cave continues to the 
+north.
+~
+14 13 0
+D0
+~
+~
+0 -1 1471
+S
+#1473
+Within the Marsh Cave~
+The cave is shrouded with darkness.  The walls, and ceiling appear to
+be mostly natural, though parts of it seem to have been widened by 
+tools of some kind.  The cave continues to the east and west.
+~
+14 9 0
+D1
+~
+~
+0 -1 1471
+D3
+~
+~
+0 -1 1474
+S
+#1474
+Within the Marsh Cave~
+The cave is shrouded with darkness.  The walls, and ceiling appear to
+be mostly natural, though parts of it seem to have been widened by 
+tools of some kind.  The cave continues to the east.
+~
+14 0 0
+D1
+~
+~
+0 -1 1473
+S
+#1475
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D1
+~
+~
+0 -1 1476
+D2
+~
+~
+0 -1 1479
+S
+#1476
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D1
+~
+~
+0 -1 1477
+D2
+~
+~
+0 -1 1480
+D3
+~
+~
+0 -1 1475
+S
+#1477
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D1
+~
+~
+0 -1 1478
+D2
+~
+~
+0 -1 1481
+D3
+~
+~
+0 -1 1476
+S
+#1478
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D2
+~
+~
+0 -1 1482
+D3
+~
+~
+0 -1 1477
+S
+#1479
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1475
+D1
+~
+~
+0 -1 1480
+D2
+~
+~
+0 -1 1483
+D4
+There are a few good foot, and handholds carved into the side of
+the valley, it would not take much to climb the cliff's ledge.
+~
+cliff ledge~
+11 -1 1408
+S
+#1480
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1476
+D1
+~
+~
+0 -1 1481
+D2
+~
+~
+0 -1 1484
+D3
+~
+~
+0 -1 1479
+S
+#1481
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1477
+D1
+~
+~
+0 -1 1482
+D2
+~
+~
+0 -1 1485
+D3
+~
+~
+0 -1 1480
+S
+#1482
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.  Here, one can see
+a crater to the east.  The crater is nearly a hundred meters wide,
+and looks to be almost a perfect, half-sphere.  No doubt, this was
+caused by some, ancient magic.
+~
+14 0 2
+D0
+~
+~
+0 -1 1478
+D2
+~
+~
+0 -1 1486
+D3
+~
+~
+0 -1 1481
+S
+#1483
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1479
+D1
+~
+~
+0 -1 1484
+S
+#1484
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1480
+D1
+~
+~
+0 -1 1485
+D3
+~
+~
+0 -1 1483
+S
+#1485
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1481
+D1
+~
+~
+0 -1 1486
+D3
+~
+~
+0 -1 1484
+S
+#1486
+An Ancient Battlefield~
+Rusted, ancient arms and armors decorate the battlefield.  Some
+bare the remains of their ancient owners, others appear to be
+empty or filled with dust.  No vermin, or raptor approaches the
+desecated remains of the sun-bleached bones of the long dead.  It
+is said that some mystical force drives the dead here to come back
+to the plane of the living again, and again.
+~
+14 0 2
+D0
+~
+~
+0 -1 1482
+D3
+~
+~
+0 -1 1485
+S
+#1499
+The Hamadryad's Grove~
+A faint, magical aura surrounds the entirety of this area.  A few
+trees and flowers fluorish among the landscape, and brighten the
+area with hughs of red, purple, green, and white.  Glowing bugs,
+both flying and non, decorate the environment.  A soft hum can
+be heard in the background.  Whether it is from the wind, a
+plant, or some unseen force, one cannot tell.
+~
+14 0 3
+D0
+~
+~
+0 -1 1400
+S
+#0
+$~

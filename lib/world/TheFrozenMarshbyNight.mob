@@ -1,0 +1,68 @@
+#26800
+troll undead swamp~
+An Undead Swamp Troll~
+The zombie form of an undead troll shambles about, looking for victims.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+106 32800 -850 Y
+48 -18 -17 40d4+12400 50d5+50
+0 1575000
+8 8 0
+52 19392 1d1+1 1
+5 1 10 0
+0 1 0 352
+K
+0 0 0 0 0 0 0
+#26801
+nightstalker night stalker undead beast~
+A Nightstalker~
+A terrifying undead beast is here, searching for victims.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+72 0 -950 Y
+50 -20 -18 30d60+16000 100d3+30
+0 1395000
+8 8 0
+52 19392 1d1+1 2
+1 2 5 242
+1 2 10 8
+0 0 0 352
+K
+0 0 0 0 0 0 0
+#26802
+nightcrawler night crawler grey centipede creature~
+A Nightcrawler~
+A grey centipede-like creature crawls about the ground, seeking prey.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+72 268468256 -950 Y
+50 -20 -18 60d30+16000 30d10+30
+0 1395000
+8 8 0
+52 19392 1d1+1 2
+10 2 5 0
+5 2 10 0
+0 0 1 352
+K
+0 0 0 0 0 0 0
+#26803
+hag night nelgatha disfigured female humanoid~
+Nelgatha the Night Hag~
+A hideously ugly and disfigured female humanoid is here, grooming herself.
+~
+Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+~
+17004 296124 -975 Y
+55 -30 -19 100d50+50500 80d2+400
+300 6750000
+8 8 2
+68 16580 1d1+1 1
+5 2 10 0
+0 0 0 544
+K
+0 0 0 0 0 0 0
+#0
+$~

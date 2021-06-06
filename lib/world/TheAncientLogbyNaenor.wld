@@ -1,0 +1,486 @@
+#1400
+Temporary Room~
+Temporary description.
+~
+14 0 0
+S
+#1401
+In front of the old decaying log~
+invalid~
+14 0 3
+D0
+~
+mossybark~
+1 -1 1402
+S
+#1402
+Inside a murky huge log~
+invalid~
+14 1 0
+D1
+~
+~
+0 -1 1406
+D2
+~
+murkylog~
+1 -1 1401
+D4
+~
+~
+0 -1 1403
+S
+#1403
+At the southern end of the log~
+invalid~
+14 1 0
+D0
+~
+~
+0 -1 1407
+D3
+~
+~
+0 -1 1404
+D5
+~
+~
+0 -1 1402
+S
+#1404
+A murky room~
+invalid~
+14 1 0
+D1
+~
+~
+0 -1 1403
+D4
+~
+~
+0 -1 1405
+S
+#1405
+Under the mosscovered bark~
+invalid~
+14 1 0
+D5
+~
+~
+0 -1 1404
+S
+#1406
+A dark somber corner in the log~
+invalid~
+14 1 0
+D3
+~
+~
+0 -1 1402
+S
+#1407
+Through a log~
+invalid~
+14 0 0
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1403
+S
+#1408
+Through an ancient log~
+invalid~
+14 0 0
+D0
+~
+~
+0 -1 1409
+D2
+~
+~
+0 -1 1407
+D3
+The structure of the log is somewhat thinner here.
+~
+rottingwood~
+1 -1 1431
+S
+#1409
+Inside a Huge log~
+invalid~
+14 0 0
+D0
+~
+~
+0 -1 1410
+D1
+A mosscovered mossydoor
+~
+mossydoor~
+12 -1 1433
+D2
+~
+~
+0 -1 1408
+S
+#1410
+A decaying dark log~
+invalid~
+14 0 0
+D0
+~
+~
+0 -1 1411
+D2
+~
+~
+0 -1 1409
+D4
+~
+~
+0 -1 1434
+S
+#1411
+Through a decaying log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1412
+D2
+~
+~
+0 -1 1410
+S
+#1412
+A dim dark log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1413
+D2
+~
+~
+0 -1 1411
+S
+#1413
+An ancient log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1414
+D2
+~
+~
+0 -1 1412
+S
+#1414
+A gloomy passage through the log~
+invalid~
+14 0 0
+D0
+~
+~
+0 -1 1415
+D2
+~
+~
+0 -1 1413
+S
+#1415
+A passage through the log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1416
+D2
+~
+~
+0 -1 1414
+S
+#1416
+A decaying passage~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1417
+D2
+~
+~
+0 -1 1415
+S
+#1417
+Through a decaying passage~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1418
+D2
+~
+~
+0 -1 1416
+S
+#1418
+Before a decaying thick mass~
+Temporary description.
+~
+14 0 0
+D2
+~
+~
+0 -1 1417
+D4
+~
+~
+0 -1 1419
+S
+#1419
+Under the bark~
+Temporary description.
+~
+14 0 0
+D3
+~
+~
+0 -1 1420
+D5
+~
+~
+0 -1 1418
+S
+#1420
+Bend under the bark~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1421
+D1
+~
+~
+0 -1 1419
+S
+#1421
+Under the bark~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1422
+D2
+~
+~
+0 -1 1420
+S
+#1422
+Under the bark~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1423
+D2
+~
+~
+0 -1 1421
+S
+#1423
+Under the bark~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1424
+D2
+~
+~
+0 -1 1422
+S
+#1424
+Under the bark~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1425
+D2
+~
+~
+0 -1 1423
+S
+#1425
+Bend under the bark~
+Temporary description.
+~
+14 0 0
+D1
+~
+~
+0 -1 1426
+D2
+~
+~
+0 -1 1424
+S
+#1426
+In the northern upper part of the log~
+Temporary description.
+~
+14 0 0
+D3
+~
+~
+0 -1 1425
+D5
+~
+~
+0 -1 1427
+S
+#1427
+In a murky log~
+Temporary description.
+~
+14 0 0
+D1
+~
+~
+0 -1 1428
+D4
+~
+~
+0 -1 1426
+S
+#1428
+Bend in the log~
+Temporary description.
+~
+14 0 0
+D2
+~
+~
+0 -1 1429
+D3
+~
+~
+0 -1 1427
+S
+#1429
+Inside a dark log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1428
+D2
+~
+~
+0 -1 1430
+S
+#1430
+Temporary Room~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1429
+S
+#1431
+A small niche in the log~
+Temporary description.
+~
+14 0 0
+D0
+~
+~
+0 -1 1432
+D1
+~
+decayingwood~
+1 -1 1408
+S
+#1432
+Inside a rotting chamber~
+Temporary description.
+~
+14 0 0
+D2
+~
+~
+0 -1 1431
+S
+#1433
+A damp and moisty part in the log~
+invalid~
+14 0 0
+D3
+~
+~
+0 -1 1409
+S
+#1434
+Under the mouldering bark~
+Temporary description.
+~
+14 0 0
+D3
+~
+~
+0 -1 1435
+D5
+~
+~
+0 -1 1410
+S
+#1435
+A heavy smelling chamber~
+Temporary description.
+~
+14 0 0
+D1
+~
+~
+0 -1 1434
+S
+#1499
+Temporary Room~
+Temporary description.
+~
+14 0 0
+S
+#0
+$~

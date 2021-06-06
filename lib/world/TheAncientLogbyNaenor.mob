@@ -1,0 +1,76 @@
+#1400
+fairy-bonnet fungus~
+A fairy bonnet fungus~
+A small fairy-bonnet fungus is here looking for similiar mushrooms.
+~
+A blank of primal clay, waiting to be shaped.
+~
+10 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1401
+A fat wood-borer beetle~
+A fat dark-colored beetle~
+A fat dark-colored beetle is here drilling through the wood.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+35 20 10 1d10+3000 1d1+0
+0 30000
+8 8 0
+76 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1402
+centipede~
+a fungi-infested centipede~
+A grotesque fungi-infested centipede is here hunting through the log.
+~
+A blank of primal clay, waiting to be shaped.
+~
+40 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1403
+nematode~
+a parasitic nematode~
+a parastic nematode is here digesting something unspeakable.~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#1404
+browncap fungus~
+A browncap fungus~
+A Heavy browncap fungus is here decomposing the log.
+~
+A blank of primal clay, waiting to be shaped.
+~
+1073741823 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 1073741823 0 0
+K
+0 0 0 0 0 0 0
+#0
+$~
