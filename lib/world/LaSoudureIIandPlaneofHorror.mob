@@ -1,5 +1,5 @@
 #7200
-soul hemp~
+soul hemp corrupt~
 the corrupted soul of Hemp~
 A hideously evil and foul soul floats here, eager to kill.
 ~
@@ -16,7 +16,7 @@ ever to have walked the planes of existence.
 8 8 1
 67 55424 55d55+555 2
 1 2 56 136
-1 6 56 180
+1 2 19 181
 0 1 0 864
 R
 6
@@ -93,6 +93,53 @@ mother.
 1 5 53 104
 1 2 53 132
 0 1 0 864
+R
+6
+K
+0 7201 0 0 0 0 0
+#7204
+soul lem impotent~
+the impotent soul of Lem~
+A covetous, mistrustful wretch limps along feebly.
+~
+This manifestation of megalomania and paranoia is more terrifying and
+repulsive than you could have possibly imagined. Whatever universally
+despised humonculus fell to maroon this putrescent abomination here in
+this purgatory must have been truly foul. Amorphous, fleshy lumps lurch
+forth from the hideous mass, emitting horrendous squelching noises as
+it tries desperately to grasp onto anything it can.
+~
+40 277350402 -1000 Y
+57 -22 -10 57d57+57057 57d11+157
+0 66666666
+8 8 1
+67 55424 57d57+575 1
+1 5 57 8
+0 1 0 864
+R
+6
+K
+0 7201 0 0 0 0 0
+#7205
+soul night torpid~
+the torpid soul of Night~
+A grotesque soul with distended abscesses moves about haphazardly.
+~
+Maker of Worlds, Breaker of Realms: a paradox of a being heralded as both
+a creator and a destroyer.  But that was in life; here in this frozen desert
+stuck between death and the beyond it is a frumpy, miserably oafish thing.
+A wastrel, somehow both emaciated and fat, foolishly young yet frightfully
+old.  An odious loner, shuffling aimlessly without purpose or meaning; a
+fitting eternity after a life of unrealized potential and squandered power.
+~
+40 277350402 0 Y
+57 -37 -23 57d57+57575 33d11+157
+1575757 35757575
+8 8 1
+67 55424 57d57+575 2
+1 2 57 210
+1 5 7 236
+0 1 1 864
 R
 6
 K
