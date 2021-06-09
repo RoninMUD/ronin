@@ -99,6 +99,7 @@ void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ((temp_victim == ch) || IS_IMMORTAL(temp_victim)) continue;
     if (IS_NPC(temp_victim) && IS_NPC(ch) && (!IS_AFFECTED(temp_victim, AFF_CHARM) || (GET_MASTER(temp_victim) == ch))) continue;
     if (!IS_NPC(temp_victim) && !IS_NPC(ch) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) continue;
+    if (aff_affected_by(temp_victim, SPELL_CLOUD_CONFUSION)) continue;
 
     print_spell_messages(temp_victim, SPELL_CLOUD_CONFUSION);
 
