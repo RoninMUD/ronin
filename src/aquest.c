@@ -1435,8 +1435,8 @@ const int aq_obj_master_list[][2] = {
   {7522, 4}, // a pair of white, flowing silk pants 10
   {8362, 4}, // dusty pants 20
   {10015, 4}, // an Ethereal Sash 3
-  {10022, 4}, // Obsidian Ring 5
-  {10027, 4}, // cloudy glass circlet 0
+  {10022, 4}, // Obsidian Ring 30
+  {10028, 4}, // worn hickory cane 32
   {10905, 4}, // a pair of Zyca arm plates 10
   {10907, 4}, // a Zyca ring 10
   {11506, 4}, // the Wyvernspur 50
