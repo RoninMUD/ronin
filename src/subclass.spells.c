@@ -44,6 +44,22 @@ void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
+void cast_luck(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_POTION:
+      victim = ch;
+    case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_WAND:
+    case SPELL_TYPE_SCROLL:
+      spell_luck(level, ch, victim, 0);
+      break;
+
+    case SPELL_TYPE_STAFF:
+      aoe_spell(ch, spell_luck, level, AOE_TAR_ALL_CHARS);
+      break;
+  }
+}
+
 void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_LUCK)) {
     print_spell_messages(victim, SPELL_LUCK);

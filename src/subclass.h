@@ -20,6 +20,7 @@ void remove_subclass(CHAR *ch);
 void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_luck(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_rejuvenation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
