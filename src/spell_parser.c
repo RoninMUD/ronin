@@ -1098,6 +1098,7 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_LIGHTNING_BOLT,      30, POSITION_FIGHTING,  9, 57, 57, 57, 12, 57, 57,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_lightning_bolt);
   SPELLO(SPELL_LOCATE_CHARACTER,    30, POSITION_STANDING, 11, 14, 57, 57, 57, 11, 13, 57,   20, TAR_CHAR_WORLD,                                                               cast_locate_character);
   SPELLO(SPELL_LOCATE_OBJECT,       30, POSITION_STANDING,  6, 10, 14, 17, 57,  8, 10, 57,   50, TAR_OBJ_WORLD,                                                                cast_locate_object);
+  SPELLO(SPELL_LUCK,                30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 57,   100, TAR_CHAR_ROOM,                                                                cast_luck);
   SPELLO(SPELL_MAGIC_MISSILE,       30, POSITION_FIGHTING,  1, 57, 57, 57,  1, 57, 57,  1,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_magic_missile);
   SPELLO(SPELL_MANA_TRANSFER,       30, POSITION_FIGHTING, 18, 18, 57, 57, 57, 57, 57, 57,   50, TAR_CHAR_ROOM | TAR_SELF_NONO,                                                cast_mana_transfer);
   SPELLO(SPELL_MIRACLE,             30, POSITION_FIGHTING, 57, 25, 57, 57, 57, 22, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
