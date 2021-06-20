@@ -2350,7 +2350,10 @@ void spell_dispel_magic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     }
 
     for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
-      OBJ_AFF_LOC(obj, i) = 0;
+      if ((OBJ_AFF_LOC(obj, i) != APPLY_HITROLL) && (OBJ_AFF_LOC(obj, i) != APPLY_DAMROLL)) {
+        OBJ_AFF_LOC(obj, i) = 0;
+      }
+
       OBJ_AFF_MOD(obj, i) = 0;
     }
 
