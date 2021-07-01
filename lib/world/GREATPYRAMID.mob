@@ -12,7 +12,7 @@ He is large, and metallic.
 79 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5701
 golem clay~
 The clay golem~
@@ -27,7 +27,7 @@ He is large, and ceramic.
 79 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5702
 golem stone~
 The stone golem~
@@ -42,7 +42,7 @@ He looks large and granite.
 79 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5703
 spectre~
 The spectre~
@@ -57,7 +57,7 @@ He looks sad.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5704
 mummy akinra~
 The mummy~
@@ -72,7 +72,7 @@ He looks like he wants to change your luck.
 52 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5705
 golem statue stone akinra~
 The statue~
@@ -87,7 +87,7 @@ He looks really mean.
 79 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5706
 anubis~
 Anubis~
@@ -102,7 +102,7 @@ He has the body of a man, and the head of a jackal.
 68 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5707
 mimic chest~
 The mimic~
@@ -117,7 +117,7 @@ It looks well made.
 85 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5708
 rust monster~
 A rust monster~
@@ -132,7 +132,7 @@ It looks hungry.
 86 16384 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5709
 pudding black~
 A black pudding~
@@ -147,7 +147,7 @@ It is gelatinous and gooey.
 87 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5710
 crocodile nile~
 The nile crocodile~
@@ -162,7 +162,7 @@ I bet you're next!
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5711
 naga guardian~
 The guardian naga~
@@ -177,7 +177,7 @@ You are intruders, and you must die.
 86 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #5712
 rat~
 The rabid rat~
@@ -192,6 +192,6 @@ They scurry into the shadows and attack en-masse.
 93 0 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #0
 $~

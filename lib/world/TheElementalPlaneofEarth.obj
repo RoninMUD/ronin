@@ -11,6 +11,14 @@ E
 helmet crystalline~
 This helmet, although it looks very fragile, can be trusted to protect you in
 situations even more dire than you have probably faced before.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #13301
 heart stone lump~
 a heart of stone~
@@ -19,10 +27,18 @@ A pulsating lump of stone is lying here.~
 12 134217793 16385
 0 0 0 0
 5 100 10000
-15
+30
 E
 stone heart lump~
 The stone is a small dark lump of earth, warm to the touch and radiating with
 powerful pulses of strange energy.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

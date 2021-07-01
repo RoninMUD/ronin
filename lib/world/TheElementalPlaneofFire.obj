@@ -11,6 +11,14 @@ E
 torch iron~
 The flame on the tip of the torch seems strange. It looks like fire and feels
 warm to touch, but isn't using anything as its fuel.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #13101
 flame living piece~
 a living flame~
@@ -19,9 +27,17 @@ A swirling piece of flame is flying around.~
 12 134217793 16385
 0 0 0 0
 5 100 10000
-15
+30
 E
 flame living piece~
 The flame seems to be almost alive, as it flickers and flies around.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

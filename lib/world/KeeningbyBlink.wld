@@ -436,12 +436,12 @@ D3
 ~
 0 -1 14518
 E
-stool~
-A small stool rests beside the tree.
-~
-E
 bench~
 This bench offers shade from the hot sun.
+~
+E
+stool~
+A small stool rests beside the tree.
 ~
 S
 #14518
@@ -935,12 +935,12 @@ D3
 ~
 0 -1 14547
 E
-tree~
-This tree is very large, and prominent.
-~
-E
 bench~
 This small wooden bench would serve as a nice place to sit.
+~
+E
+tree~
+This tree is very large, and prominent.
 ~
 S
 #14537
@@ -1372,11 +1372,11 @@ These gates are made from the rib bones of some huge animal.
 gates~
 1 -1 14564
 E
-gates~
+gate~
 These huge gates were made from the ribs of some huge animal.
 ~
 E
-gate~
+gates~
 These huge gates were made from the ribs of some huge animal.
 ~
 S
@@ -1663,11 +1663,11 @@ D4
 ~
 0 -1 14577
 E
-gargoyles~
+gargoyle~
 Two hideous gargoyles stand guarding the staircase.
 ~
 E
-gargoyle~
+gargoyles~
 Two hideous gargoyles stand guarding the staircase.
 ~
 S
@@ -1832,32 +1832,13 @@ D4
 ~
 0 -1 14582
 E
-wheel~
-A huge torture rack, with a large wheel and leather straps is here.~
+iron~
+These are large metallic iron maidens.~
 E
-catherine~
-A huge torture rack, with a large wheel and leather straps is here.~
+maiden~
+These are large metallic iron maidens.~
 E
-rack~
-There are large wooden frames, with grotesque skin stretched on them.~
-E
-racks~
-There are large wooden frames, with grotesque skin stretched on them.~
-E
-spit~
-This large wooden spit rotates a human body slowly over the fire pit.~
-E
-fire~
-This is a large fire pit.~
-E
-pit~
-This is a large fire pit.~
-E
-demon~
-These ethereal spirits and demons cast shades of darkness
-throughout the room.~
-E
-spirits~
+demons~
 These ethereal spirits and demons cast shades of darkness
 throughout the room.~
 E
@@ -1865,15 +1846,34 @@ spirit~
 These ethereal spirits and demons cast shades of darkness
 throughout the room.~
 E
-demons~
+spirits~
 These ethereal spirits and demons cast shades of darkness
 throughout the room.~
 E
-maiden~
-These are large metallic iron maidens.~
+demon~
+These ethereal spirits and demons cast shades of darkness
+throughout the room.~
 E
-iron~
-These are large metallic iron maidens.~
+pit~
+This is a large fire pit.~
+E
+fire~
+This is a large fire pit.~
+E
+spit~
+This large wooden spit rotates a human body slowly over the fire pit.~
+E
+racks~
+There are large wooden frames, with grotesque skin stretched on them.~
+E
+rack~
+There are large wooden frames, with grotesque skin stretched on them.~
+E
+catherine~
+A huge torture rack, with a large wheel and leather straps is here.~
+E
+wheel~
+A huge torture rack, with a large wheel and leather straps is here.~
 S
 #14584
 A Huge Guest Room~

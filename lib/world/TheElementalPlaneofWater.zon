@@ -1,8 +1,10 @@
 #132
 The Elemental Plane of Water~
 13203 20 1
+X 0 Unknown 10Jun2021 Unknown
+Y 100 100 100 100 100 100 100 100
 M 0 13200 1 13200
 M 0 13201 1 13203
-E 1 13201 1 17
+E 1 13201 0 17
 S
 $~

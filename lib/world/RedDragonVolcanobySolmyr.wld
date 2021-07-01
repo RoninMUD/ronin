@@ -214,14 +214,14 @@ The cave is too dark to make out anything in particular.
 ~
 0 -1 17509
 E
-hole~
-The hole is too small to crawl but it might be possible to
-wedge something into it.
-~
-E
 crack~
 The crack in the floor runs for about two meters.  It isn't
 particularly wide except for a hole on one side.
+~
+E
+hole~
+The hole is too small to crawl but it might be possible to
+wedge something into it.
 ~
 S
 #17511

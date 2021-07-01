@@ -354,7 +354,7 @@ A wispy sash lies here, fading in and out of transparency.~
 11 205537376 2049
 0 0 0 0
 0 18253 1657
-3
+10
 E
 sash~
 
@@ -537,7 +537,7 @@ A jet-black ring sits here, reflecting the world on its glassy surface.~
 9 141603393 3
 3 -1 -1 -1
 37 426389 7351
-5
+30
 E
 ring~
 
@@ -657,7 +657,7 @@ A small glass vial containing a rolled up note.~
 32 0 1
 10027 12931 2805 104
 2 1471 71
-11
+35
 X
 ~
 0 0 0
@@ -697,7 +697,7 @@ $n swing$z $s hickory cane into $V's head with a satisfying 'THWACK!'~
 5 148910592 24577
 302 2 13 7
 7 9283 547
-11
+32
 X
 $n swing$z $s hickory cane around wildly and scream$z, "Get off my lawn!"~
 1 0 0

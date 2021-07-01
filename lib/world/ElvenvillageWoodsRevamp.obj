@@ -6,7 +6,7 @@ A greenish cloak is lying on the ground.~
 9 134219072 1025
 10 0 0 0
 20 35000 5000
-15
+48
 E
 cloak elven~
 The elven cloak is made of incredibly beautiful material.~
@@ -586,18 +586,18 @@ A mottled band of metal lies on the ground, a peculiar needle poking out of it.~
 6 23000 28000
 5
 E
+needle~
+
+  The point is extremely sharp, and you have little doubt it would
+pass through even tough leather armor with minimal difficulty.
+
+~
+E
 ring venom band metal~
 
   Upon closer examination of this ring, you notice that the interior
 of the band is hollow, apparently a reservoir for the slick black
 venom which drips from the needle's tip when you flex your knuckles.
-
-~
-E
-needle~
-
-  The point is extremely sharp, and you have little doubt it would
-pass through even tough leather armor with minimal difficulty.
 
 ~
 X

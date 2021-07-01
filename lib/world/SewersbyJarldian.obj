@@ -8,11 +8,11 @@ a rusted iron ladder dangles around here.~
 800 10 10
 100
 E
-ladder~
+rusted~
 this rusty ladder looks old and ready to fall apart if pressure is applied.
 ~
 E
-rusted~
+ladder~
 this rusty ladder looks old and ready to fall apart if pressure is applied.
 ~
 X
@@ -72,10 +72,10 @@ $r Mop cleans up the floor with a twist of a wrist!~
 10 10 10
 90
 E
-mop~
+wooden~
 a trustworthy mop that everyone should have by his side.~
 E
-wooden~
+mop~
 a trustworthy mop that everyone should have by his side.~
 X
 ~
@@ -117,10 +117,10 @@ A moldy looking set of leg plates lie here.~
 8 10 8000
 20
 E
-leg~
+moldy~
 Mold covers these old leg plates that once shined to the dimmest of light.~
 E
-moldy~
+leg~
 Mold covers these old leg plates that once shined to the dimmest of light.~
 X
 ~
@@ -170,9 +170,9 @@ a piece of rotting flesh lies here.~
 9 200331264 513
 4 0 0 0
 18 50000 30000
-12
+40
 E
-shield~
+flesh~
 This piece of gear looks like it was made out of scorched skin from some
 huge monster. It radiates with power and you can sense protective
 properties to those who bear this shield.
@@ -184,7 +184,7 @@ huge monster. It radiates with power and you can sense protective
 properties to those who bear this shield.
 ~
 E
-flesh~
+shield~
 This piece of gear looks like it was made out of scorched skin from some
 huge monster. It radiates with power and you can sense protective
 properties to those who bear this shield.
@@ -295,13 +295,13 @@ A pile of entrails sits here looking slimy.~
 10 10 5000
 30
 E
-bracelet~
+slug~
 Slimy, gooey and look! It fits perfectly on your wrist.~
 E
 entrails~
 Slimy, gooey and look! It fits perfectly on your wrist.~
 E
-slug~
+bracelet~
 Slimy, gooey and look! It fits perfectly on your wrist.~
 X
 ~

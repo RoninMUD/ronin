@@ -347,16 +347,16 @@ D3
 ~
 0 -1 24919
 E
-trees~
-A thick wall of trees interlaced with vines blocks your movement to the south.
+s~
+A massive wall of trees blocks your vision.
 ~
 E
 wall~
 A thick wall of trees interlaced with vines blocks your movement to the south.
 ~
 E
-s~
-A massive wall of trees blocks your vision.
+trees~
+A thick wall of trees interlaced with vines blocks your movement to the south.
 ~
 S
 #24918
@@ -379,9 +379,10 @@ D3
 ~
 0 -1 24920
 E
-lamp~
-The oil lamp looks as if it hasn't been used in years. The wick has been
-removed making its further use as a light source impossible.
+fireplace~
+The fireplace looks as if it hasn't been used in years.  Some odd-looking
+ashes in the bottom of it indicate that wood was not the last thing to be
+burned here.
 ~
 E
 rug~
@@ -389,10 +390,9 @@ The dust-covered rug has an intricate pattern of moons and stars woven into
 it. It seems to have been stitched from a plant material, not the usual wool.
 ~
 E
-fireplace~
-The fireplace looks as if it hasn't been used in years.  Some odd-looking
-ashes in the bottom of it indicate that wood was not the last thing to be
-burned here.
+lamp~
+The oil lamp looks as if it hasn't been used in years. The wick has been
+removed making its further use as a light source impossible.
 ~
 S
 #24919
@@ -412,11 +412,11 @@ D2
 ~
 0 -1 24921
 E
-wall~
+trees~
 A thick wall of trees interlaced with vines blocks your movement to the south.
 ~
 E
-trees~
+wall~
 A thick wall of trees interlaced with vines blocks your movement to the south.
 ~
 S
@@ -437,13 +437,13 @@ You see a trapdoor in the floor of the cabin.
 trapdoor~
 1 -1 24999
 E
+trapdoor~
+A trapdoor has been placed in the floor, you wonder where it leads.
+~
+E
 chair~
 The chair has a handsome pattern carved into its surface, but it doesn't seem
 sturdy enough to support the weight of a human anymore.
-~
-E
-trapdoor~
-A trapdoor has been placed in the floor, you wonder where it leads.
 ~
 S
 #24921
@@ -775,17 +775,17 @@ You see a jagged opening in the earth leading down into the unknown.
 ~
 0 -1 25003
 E
-rock~
-You see a large, rather ugly looking rock jutting from the ground with a
-jagged opening in it.
+jagged~
+You see a jagged opening in the earth leading down into the unknown.
 ~
 E
 opening~
 You see a jagged opening in the earth leading down into the unknown.
 ~
 E
-jagged~
-You see a jagged opening in the earth leading down into the unknown.
+rock~
+You see a large, rather ugly looking rock jutting from the ground with a
+jagged opening in it.
 ~
 S
 #24969

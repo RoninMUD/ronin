@@ -7,6 +7,14 @@ a roughly hewn stone key lies in the dust here.~
 0 0 0 0
 1 1000 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5701
 glowing key~
 A glowing key~
@@ -16,6 +24,14 @@ a glowing key emits a strange light.~
 0 0 0 0
 1 1000 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5702
 diamond key~
 a diamond key~
@@ -25,6 +41,14 @@ a diamond studded key has been left here.~
 0 0 0 0
 1 1000 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5703
 emerald key~
 an emerald key~
@@ -34,6 +58,14 @@ a gold key inlaid with emeralds has been left here.~
 0 0 0 0
 1 1000 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5704
 sapphire bracelet~
 a sapphire bracelet~
@@ -43,6 +75,14 @@ a large ring of gold mounted with sapphires remains unclaimed.~
 0 0 0 0
 1 500 1
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5705
 treasure~
 a huge treasure~
@@ -52,6 +92,14 @@ your eyes fall upon a large mound of coins.~
 3000 0 0 0
 1 3000 0
 100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5706
 sacrificial knife~
 a sacrificial knife~
@@ -61,6 +109,14 @@ a knife with holy symbols on the handle lies here.~
 0 1 4 11
 3 1300 120
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 3 -2
 A
@@ -74,6 +130,14 @@ a well used pair of bracers has been left behind.~
 2 0 0 0
 1 15000 750
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 17 -10
 A
@@ -86,7 +150,15 @@ the ancient medallion of Akinra has been removed from his neck.~
 9 134217793 5
 5 0 0 0
 5 15000 2000
-10
+42
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 12 25
 A
@@ -100,6 +172,14 @@ a pair of winged boots lies here.~
 8 0 0 0
 1 50000 2000
 10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 14 50
 A
@@ -113,6 +193,14 @@ a deadly dagger has been left here.~
 0 4 4 11
 1 9400 50
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 A
 2 3
 #5715
@@ -128,6 +216,14 @@ E
 coffin sarcophagus~
 Looking at Akinra's final resting place you see a small emerald lock.
 ~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5716
 coffin outer sarcophagus~
 The outer sarcophagus~
@@ -142,6 +238,14 @@ coffin sarcophagus~
 The beautiful design of this sarcophagus does not hide the small hidden diamond
 lock to your trained eye.
 ~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #5717
 wrapping tattered~
 A bit of wrapping~
@@ -151,5 +255,13 @@ A tattered bit of wrapping is lying here.~
 5 0 0 0
 1 0 5
 50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

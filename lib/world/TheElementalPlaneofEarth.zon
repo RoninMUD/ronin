@@ -1,8 +1,10 @@
 #133
 The Elemental Plane of Earth~
 13303 20 1
+X 0 Unknown 10Jun2021 Unknown
+Y 100 100 100 100 100 100 100 100
 M 0 13300 1 13300
 M 0 13301 1 13303
-E 1 13301 1 17
+E 1 13301 0 17
 S
 $~

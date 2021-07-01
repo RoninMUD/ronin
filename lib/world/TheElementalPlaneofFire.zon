@@ -1,8 +1,10 @@
 #131
 The Elemental Plane of Fire~
 13103 20 1
+X 0 Unknown 10Jun2021 Unknown
+Y 100 100 100 100 100 100 100 100
 M 0 13100 1 13100
 M 0 13101 1 13103
-E 1 13101 1 17
+E 1 13101 0 17
 S
 $~

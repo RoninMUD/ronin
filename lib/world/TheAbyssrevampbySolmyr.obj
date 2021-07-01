@@ -239,7 +239,7 @@ A pair of jewel encrusted gauntlets lie here.~
 9 134217729 129
 3 0 0 0
 1 8500 1000
-10
+46
 E
 gauntlets~
 They look very useful in combat. They are made of fine chain mail.
@@ -611,14 +611,14 @@ A large fountain stands in the center of the courtyard.~
 10000 10 10
 100
 E
-fountain~
-Clear water streams from a small statue placed in the center
-of this dilapidated fountain.
-~
-E
 statue~
 The statue is placed in the center of the fountain. Clear
 water flows from this beautiful crafted statue.
+~
+E
+fountain~
+Clear water streams from a small statue placed in the center
+of this dilapidated fountain.
 ~
 X
 ~
