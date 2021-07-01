@@ -1092,7 +1092,7 @@ void timeadd(struct timeval *rslt, struct timeval *a, struct timeval *b)
 
 void autosave_all(void);
 int copyover_write(int same_room) {
-  struct descriptor_data *d,*front,*middle,*back;
+  struct descriptor_data *front = NULL,*middle = NULL,*back = NULL;
   char buf[MAX_INPUT_LENGTH],buf2[MAX_INPUT_LENGTH];
   int room;
   CHAR *i;
@@ -1125,7 +1125,8 @@ int copyover_write(int same_room) {
     descriptor_list = middle;
   }
 
-  for (d = descriptor_list;d;d = d->next) {
+  for (DESC *d = descriptor_list, *next = NULL; d; d = next) {
+    next = d->next;
     i=d->character;
     if (!d->character || (d->connected > CON_PLYNG)) {
       write_to_descriptor(d->descriptor, "\r\nSorry, the world is being rebooted, Come back in a minute.\r\n");
