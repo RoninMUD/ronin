@@ -98,10 +98,9 @@ The dirt path leads back to Ershteep Road.
 ~
 0 -1 10003
 E
-fireplace~
-   It looks like an ordinary fireplace but then a lock on the
-grate catches your eye. You have a distinct feeling they key is
-not here!
+painting picture~
+   A wonderfully crafted oil which depicts a scene outside a
+jewelers in a busy city street.
 ~
 E
 lock grate~
@@ -109,9 +108,10 @@ lock grate~
 place.
 ~
 E
-painting picture~
-   A wonderfully crafted oil which depicts a scene outside a
-jewelers in a busy city street.
+fireplace~
+   It looks like an ordinary fireplace but then a lock on the
+grate catches your eye. You have a distinct feeling they key is
+not here!
 ~
 S
 #10005
@@ -198,12 +198,12 @@ The path comes to an abrupt end.
 0 -1 10009
 E
 shack~
+ A simple ~
+E
+shack~
  A simple wooden shanty rests at the base of some trees just
 to the side of Ershteep road.
 ~
-E
-shack~
- A simple ~
 S
 #10009
 Overgrown path~
@@ -681,8 +681,11 @@ Spiral stairs lead up to a balcony and hallway above the foyer.
 stairs~
 11 -1 10030
 E
-stairs~
-The spiraling wooden stairs lead up to office-level balcony.
+doors~
+ Sturdy wooden doors all of which read:
+
+     "Employees only - off limits to the public.
+        Thank you for your understanding."
 ~
 E
 bookcases~
@@ -690,11 +693,8 @@ Filled with books from numerous civilizations and books marking the
 history of enfans line the shelves of the wooden bookcases.
 ~
 E
-doors~
- Sturdy wooden doors all of which read:
-
-     "Employees only - off limits to the public.
-        Thank you for your understanding."
+stairs~
+The spiraling wooden stairs lead up to office-level balcony.
 ~
 S
 #10030
@@ -722,12 +722,12 @@ The spiraling stairs lead back down to the elegant foyer.
 stairs~
 11 -1 10029
 E
-stairs~
-The spiraling wooden stairs lead back down to the main foyer.
-~
-E
 bones~
 The last remains of the weapon smith.
+~
+E
+stairs~
+The spiraling wooden stairs lead back down to the main foyer.
 ~
 S
 #10031

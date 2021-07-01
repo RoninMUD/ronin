@@ -144,7 +144,7 @@ Left on the ground here you see a stick with a curved blade attached to it.~
 5 0 8193
 0 2 6 3
 10 2500 1250
-14
+44
 X
 ~
 0 0 0
@@ -350,7 +350,7 @@ A ragged looking cloak of straw lies on the ground here.~
 9 0 1025
 4 0 0 0
 10 75000 12500
-7
+37
 X
 ~
 0 0 0
@@ -433,7 +433,7 @@ A huge stonemade altar is here, covered with items of unspeakable evil.~
 9999 10 10
 100
 E
-stone~
+altar~
 Littering the top of the altars are many strange bottles containing many
 vile smelling liquids, a small cauldron which is being heated by an unseen
 source, and many other oddities.  A sharp and pointy dagger covered with
@@ -441,7 +441,7 @@ fresh blood appears to have been used recently in some sort of dark
 sacrificial ritual.
 ~
 E
-altar~
+stone~
 Littering the top of the altars are many strange bottles containing many
 vile smelling liquids, a small cauldron which is being heated by an unseen
 source, and many other oddities.  A sharp and pointy dagger covered with
@@ -548,13 +548,6 @@ You see a ring on the ground with a black center like you have never beheld.~
 1 17000 22000
 7
 E
-blackness~
-  It is so black your eyes are drawn in and you lose sense of yourself as
-you feel overwhelmed with evil.  You are sure that this blackness is the
-key to the demonic powers of this ring.
-
-~
-E
 portal evil ring~
 
   This ring is fashioned from a material of which you have not seen before.
@@ -563,6 +556,13 @@ flakes of charred skin.  You try and clean them off but they seem to have
 become part of the ring itself.  Other than that it is simple in appearance
 and you cannot see through the middle which is simply a Blackness like
 you have never before experienced.
+
+~
+E
+blackness~
+  It is so black your eyes are drawn in and you lose sense of yourself as
+you feel overwhelmed with evil.  You are sure that this blackness is the
+key to the demonic powers of this ring.
 
 ~
 X
@@ -591,14 +591,14 @@ A shiny black onyx portal stands against the northern wall.~
 10 10 10
 100
 E
-onyx~
+portal~
 Looking beyond the faint reflection of yourself, you see another much darker
 dimension beyond the solid slab of onyx.  Apparently this is the entrance into
 the demon's home plane of existence where shadow and darkness are the only 
 things that exist.
 ~
 E
-portal~
+onyx~
 Looking beyond the faint reflection of yourself, you see another much darker
 dimension beyond the solid slab of onyx.  Apparently this is the entrance into
 the demon's home plane of existence where shadow and darkness are the only 
@@ -622,12 +622,12 @@ A grotesquely carved icon of a demon on a loop of string lies on the ground.~
 125 57500 3750
 4
 E
-icon~
+possession~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
 E
-possession~
+icon~
 You see a small figurine carved from rainbow colored onyx of a horrible 
 looking demon crushing a human's head with its bare hands.
 ~
@@ -706,9 +706,25 @@ An ancient, weathered journal has been left here.~
 10 10 10
 100
 E
-journal~
-You see a weathered old manuscript, at the top of the only pages that the
-ink hasn't been smeared, you see the words Page1, Page2 and Page3.
+page3~
+A few months after he began his training with the monks, Seijiro learned that
+the demon had found out that he was indeed still alive and was intending to
+finish the job. Seijiro was prepared however, he had learned of a tunnel
+beneath the temple and had enlisted the help of the grandmaster in writing
+his scroll of binding. Once the demon reached the temple, Seijiro taunted
+him by throwing rocks and then quickly fled into the tunnels and waited for 
+him. When the demon arrived, Seijiro said 'I am Seijiro and you are dead.' With
+that, Seijiro uttered a holy mantra to the gods and brought down the tunnel
+behind them, trapping both inside forever.
+~
+E
+page2~
+It is not clear why the demon didn't finish off Seijiro, but the next day a
+group of sohei (warrior monks) happened upon him and took him back to their
+temple to nurse him back to health. It was only after talking with the monks
+did Seijiro learn that he could only stop the demon by using a magical scroll
+of binding to trap him underground. Shortly after this, Seijiro decided to
+join the monks' order and learn their mystical ways.
 ~
 E
 Page1~
@@ -722,25 +738,9 @@ you are dead.' This enraged Seijiro so much that he attacked Arago in a fit
 of rage and was horribly wounded by Arago.
 ~
 E
-page2~
-It is not clear why the demon didn't finish off Seijiro, but the next day a
-group of sohei (warrior monks) happened upon him and took him back to their
-temple to nurse him back to health. It was only after talking with the monks
-did Seijiro learn that he could only stop the demon by using a magical scroll
-of binding to trap him underground. Shortly after this, Seijiro decided to
-join the monks' order and learn their mystical ways.
-~
-E
-page3~
-A few months after he began his training with the monks, Seijiro learned that
-the demon had found out that he was indeed still alive and was intending to
-finish the job. Seijiro was prepared however, he had learned of a tunnel
-beneath the temple and had enlisted the help of the grandmaster in writing
-his scroll of binding. Once the demon reached the temple, Seijiro taunted
-him by throwing rocks and then quickly fled into the tunnels and waited for 
-him. When the demon arrived, Seijiro said 'I am Seijiro and you are dead.' With
-that, Seijiro uttered a holy mantra to the gods and brought down the tunnel
-behind them, trapping both inside forever.
+journal~
+You see a weathered old manuscript, at the top of the only pages that the
+ink hasn't been smeared, you see the words Page1, Page2 and Page3.
 ~
 X
 ~

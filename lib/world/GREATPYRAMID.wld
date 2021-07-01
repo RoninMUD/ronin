@@ -42,6 +42,11 @@ D5
 ~
 0 -1 5704
 E
+etchings~
+Unfortunately you can't read ancient Egyptian.... however a faded ink 
+translation, apparently left by the owners of the grappling hook, is here.
+~
+E
 translation~
 Great was the reign of Akinra. The ... God brought his empire much
 ... and power. Since you are reading these writings you have already
@@ -49,11 +54,6 @@ desecrated the ... of this holy place. So be warned: Leave now or be
 forever cursed. The greatest riches and relics of Akinra lay ... his tomb
 to be reclaimed in his ... reign. The Guardians of Akinra are not to be
 trifled with and will protect the tomb fiercely. Suffer defeat and ...
-~
-E
-etchings~
-Unfortunately you can't read ancient Egyptian.... however a faded ink 
-translation, apparently left by the owners of the grappling hook, is here.
 ~
 S
 #5703
@@ -118,13 +118,13 @@ D5
 Coffin~
 1 0 5701
 E
-up~
-Someone or something has magically blocked your way up.
-~
-E
 coffin~
 After brushing off some of the dust, a sapphire bracelet becomes visible
 engraved on the side of the coffin.
+~
+E
+up~
+Someone or something has magically blocked your way up.
 ~
 S
 #5705

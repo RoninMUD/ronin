@@ -618,17 +618,17 @@ You can see a path in the village.
 ~
 0 -1 13035
 E
-shelves~
-They are filled with strange and unique bottles, as well as other types of
-alchemy equipment. Powders, twigs, bits of dirt and dead animals fill the jars
-on the shelf next to the Alchemist.
-~
-E
 sign~
                   The sign says:    Buy  :  to buy items
                                     Sell :  to sell items
                                     Value:  to get the value of an item
                                     List :  to list the items for sale
+~
+E
+shelves~
+They are filled with strange and unique bottles, as well as other types of
+alchemy equipment. Powders, twigs, bits of dirt and dead animals fill the jars
+on the shelf next to the Alchemist.
 ~
 S
 #13051
@@ -679,17 +679,10 @@ You can see a path in the village.
 ~
 0 -1 13039
 E
-stand~
-A huge book lies open on a wooden stand in the middle of the room. It stands
-about waist high and has beautiful carvings going down its spine. Bits of dust
-waft down off the book as you walk by. It would seem that it hasn't been used 
-in quite some time.
-~
-E
-tapestry~
-The tapestry pictures an epic battle between a group of elves from all
-walks of life and a gigantic lizard man. The lizard eventually ends up
-being locked behind a pair of golden doors, or so the story goes.
+books~
+The books are ancient, from times when man couldn't even mouth the
+simplest words. You really shouldn't touch them, for they might crumble
+from the slightest touch.
 ~
 E
 globe~
@@ -698,10 +691,17 @@ the sun in this unique globe. It hangs on a long, golden cord that is attached
 to the ceiling above.
 ~
 E
-books~
-The books are ancient, from times when man couldn't even mouth the
-simplest words. You really shouldn't touch them, for they might crumble
-from the slightest touch.
+tapestry~
+The tapestry pictures an epic battle between a group of elves from all
+walks of life and a gigantic lizard man. The lizard eventually ends up
+being locked behind a pair of golden doors, or so the story goes.
+~
+E
+stand~
+A huge book lies open on a wooden stand in the middle of the room. It stands
+about waist high and has beautiful carvings going down its spine. Bits of dust
+waft down off the book as you walk by. It would seem that it hasn't been used 
+in quite some time.
 ~
 S
 #13055
@@ -1031,6 +1031,21 @@ You see the Druidic grove to the west.
 ~
 0 -1 13008
 E
+stones circle~
+These huge stones look so massive and powerful, that they must be out
+of this world. Maybe even from the elemental plane of earth itself.
+~
+E
+plants~
+The plants and flowers look strange here. You haven't seen these kinds
+of plants anywhere before.
+~
+E
+sky~
+The sky glows brightly with energy. Beautiful clouds stretch across the blue
+expanse. A few birds fly over head, going to places unknown.
+~
+E
 plate~
 There are symbols on the plate:                ù
 
@@ -1039,21 +1054,6 @@ There are symbols on the plate:                ù
                                                ∫
                                                
                                                ë
-~
-E
-sky~
-The sky glows brightly with energy. Beautiful clouds stretch across the blue
-expanse. A few birds fly over head, going to places unknown.
-~
-E
-plants~
-The plants and flowers look strange here. You haven't seen these kinds
-of plants anywhere before.
-~
-E
-stones circle~
-These huge stones look so massive and powerful, that they must be out
-of this world. Maybe even from the elemental plane of earth itself.
 ~
 S
 #0

@@ -10,6 +10,14 @@ A beautiful belt is lying here, studded with white pearls.~
 E
 bracelet pearl~
 The pearls in the bracelet seem to be radiating some sort of peaceful energy.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #13201
 shard water frozen~
 a shard of frozen water~
@@ -18,10 +26,18 @@ A shard of frozen water is lying on the ground.~
 12 134217793 16385
 0 0 0 0
 5 100 10000
-15
+30
 E
 shard water frozen~
 The shard is unbelievably cold to the touch, numbing your fingers as you touch
 it.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

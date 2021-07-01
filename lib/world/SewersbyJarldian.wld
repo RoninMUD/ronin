@@ -78,13 +78,13 @@ D3
 ~
 0 -1 20802
 E
-stones~
-These huge stones lie here covered in all sorts of vegetation.
-~
-E
 pebbles~
 These pebbles are covered with fungi, small in size and found all over the
 ground.
+~
+E
+stones~
+These huge stones lie here covered in all sorts of vegetation.
 ~
 S
 #20804
@@ -158,13 +158,13 @@ D2
 ~
 0 -1 20809
 E
+mushrooms~
+You see green and hairy mushrooms with pink spots.~
+E
 toadstools~
 Yummy! Fresh toadstools conveniently in your path waiting to be picked and
 devoured by your drooling appetite.
 ~
-E
-mushrooms~
-You see green and hairy mushrooms with pink spots.~
 S
 #20808
 Damp corridor~
@@ -296,8 +296,12 @@ D3
 ~
 0 -1 20815
 E
-mushrooms~
-These green mushrooms grow along side a massive boulder standing in your way.
+boulder~
+A large boulder stands in your path. At first you are puzzled as to how it got
+here, but judging from the big gap in the ceiling, you conclude it came from
+there. Various mushrooms and toadstools grow along side the massive obstacle
+and edged onto the rock itself are the words "Far beyond driven."  You wonder
+what that means.
 ~
 E
 toadstools~
@@ -305,12 +309,8 @@ Large toadstools grow alongside this huge boulder, collecting the dripping
 water from the ceiling.
 ~
 E
-boulder~
-A large boulder stands in your path. At first you are puzzled as to how it got
-here, but judging from the big gap in the ceiling, you conclude it came from
-there. Various mushrooms and toadstools grow along side the massive obstacle
-and edged onto the rock itself are the words "Far beyond driven."  You wonder
-what that means.
+mushrooms~
+These green mushrooms grow along side a massive boulder standing in your way.
 ~
 S
 #20814
@@ -552,14 +552,14 @@ D3
 ~
 0 -1 20828
 E
+wall~
+Some old runes are scratched onto the wall here.  Most of the runes have faded,
+but the ones that are still visible warn of great danger in the room beyond.~
+E
 markings~
 They seem to be magical runes of some sort, but have lost all their arcane
 integrity.  They are now useless markings on the wall.
 ~
-E
-wall~
-Some old runes are scratched onto the wall here.  Most of the runes have faded,
-but the ones that are still visible warn of great danger in the room beyond.~
 S
 #20826
 A small room~
@@ -660,10 +660,10 @@ grate~
 1 -1 20862
 E
 grate~
-A rusty iron grate lies here collecting water.  It looks moveable.
 ~
 E
 grate~
+A rusty iron grate lies here collecting water.  It looks moveable.
 ~
 S
 #20831
@@ -866,18 +866,18 @@ D3
 door~
 2 20857 20826
 E
-bones~
-These human remains look to have been crushed by powerful blows. Skulls lie
-detached from its bodies, showing the lack of compassion for these innocent
-souls. Rib cages, parts of arms and legs lie about in such as fashion, you'd
-swear its main purpose was to intimidate.~
-E
 heads~
 Blood drips from these heads, telling you that these are recent kills for the
 occupant. Their faces locked in a ghastly stare as if they were tortured.
 An iron nail is protruding from each of the skulls, a dim fate for these poor
 mudders. Will you become another mantle-piece for this monster?
 ~
+E
+bones~
+These human remains look to have been crushed by powerful blows. Skulls lie
+detached from its bodies, showing the lack of compassion for these innocent
+souls. Rib cages, parts of arms and legs lie about in such as fashion, you'd
+swear its main purpose was to intimidate.~
 S
 #20842
 Damp corridor~
@@ -945,14 +945,14 @@ D3
 ~
 0 -1 20818
 E
+wall~
+You have discovered a secret passageway! Why don't you open it up and see where
+it leads?~
+E
 vines~
 These vines are arranged in strange shapes--hexagon and squared.  They are
 probably guarding something or someone.
 ~
-E
-wall~
-You have discovered a secret passageway! Why don't you open it up and see where
-it leads?~
 S
 #20845
 Damp corridor~
@@ -1032,13 +1032,13 @@ D1
 ~
 0 -1 20820
 E
+mushroom~
+These mushroom stalks must be 10 feet tall! Their size makes you feel meager.
+~
+E
 vines~
 These vines cover the walls and almost all of the room.  Examining them
 closely, you swear you've seen them move about and around.
-~
-E
-mushroom~
-These mushroom stalks must be 10 feet tall! Their size makes you feel meager.
 ~
 S
 #20849
@@ -1130,9 +1130,10 @@ D0
 ~
 0 -1 20852
 E
-desk~
-This desk looks more like a paper box on legs...and look! the drawers here
-are drawn in with paint, how creative!
+sign~
+it reads:
+
+Money is Everything
 ~
 E
 bed~
@@ -1140,10 +1141,9 @@ A beaten-up old bed lies here on the floor, composed of 2 mattresses and no
 wooden frame.  Springs can be seen popping out of the top mattress.
 ~
 E
-sign~
-it reads:
-
-Money is Everything
+desk~
+This desk looks more like a paper box on legs...and look! the drawers here
+are drawn in with paint, how creative!
 ~
 S
 #20854

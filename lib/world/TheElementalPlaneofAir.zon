@@ -1,8 +1,10 @@
 #134
 The Elemental Plane of Air~
 13403 20 1
+X 0 Unknown 10Jun2021 Unknown
+Y 100 100 100 100 100 100 100 100
 M 0 13400 1 13400
 M 0 13401 1 13403
-E 1 13401 1 17
+E 1 13401 0 17
 S
 $~

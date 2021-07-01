@@ -11,6 +11,14 @@ E
 strip weed~
 The strip of weed has been off the waters of the sea for too long. The dried
 leaves look a bit dusty, but are still holding it together fairly well.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #13401
 cloud wispy~
 a wispy cloud~
@@ -19,9 +27,17 @@ A small wispy-looking cloud is floating here.~
 12 134217793 16385
 0 0 0 0
 5 100 10000
-15
+30
 E
 cloud wispy~
 The cloud is floating in mid-air, without anything holding it together.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
