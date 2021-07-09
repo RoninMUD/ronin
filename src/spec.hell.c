@@ -1914,26 +1914,40 @@ int Charon_Token(OBJ *token ,CHAR *ch, int cmd, char *argument) {
   int outTime = 0;
   char buf[MIL];
 
-  if(!ch || !token || IS_NPC(ch) || CHAOSMODE) return FALSE;
+  if(!token || IS_NPC(ch) || CHAOSMODE) return FALSE;
+
+  // make sure we're applying the spec to the assigned objects
+  if ((OBJ_VNUM(token) != TOKEN_A) &&
+      (OBJ_VNUM(token) != TOKEN_B) &&
+      (OBJ_VNUM(token) != TOKEN_C) &&
+      (OBJ_VNUM(token) != TOKEN_D)) {
+    return FALSE;
+  }
+
+  // if no character supplied, this is a timing  message
+  if (!ch) {
+    ch = token->equipped_by ? token->equipped_by : token->carried_by;
+    // ch can still be NULL here, but that's ok
+  }
 
   switch (cmd) {
   case CMD_EXAMINE:
     if ((ch == token->equipped_by || ch == token->carried_by) && ch && !IS_NPC(ch)) {
       one_argument(argument, buf);
 
-      if (AWAKE(ch) && token && (!strncmp(buf, "token", MIL) || !strncmp(buf, "charon", MIL) || !strncmp(buf, "coin", MIL))) {
+      if (AWAKE(ch) && token && isname(buf,OBJ_NAME(token))) {
         if (token->spec_value <= 0) {
           send_to_char("Charon's Token beckons you to call the ferryman.\n\r", ch);
         }
         else {
           send_to_char("Charon's Token is as lifeless and cold as death itself.\n\r", ch);
         }
+        return TRUE;
       }
     }
-    return TRUE;
     break;
   case MSG_TICK:
-    if ((ch == token->equipped_by || ch == token->carried_by) && token->spec_value > 0 && ch && !IS_NPC(ch)) {
+    if (token->spec_value > 0 && ch && !IS_NPC(ch)) {
       if (token->spec_value > TOKEN_COOLDOWN) {
         token->spec_value = TOKEN_COOLDOWN;
       }
@@ -1947,11 +1961,12 @@ int Charon_Token(OBJ *token ,CHAR *ch, int cmd, char *argument) {
     break;
 
   case MSG_OBJ_ENTERING_GAME:
-    if ((ch == token->equipped_by || ch == token->carried_by) && token->spec_value > 0 && ch && !IS_NPC(ch)) {
+    if (token->spec_value > 0) {
       if (is_number(argument)) {
         outTime = atoi(argument); /* outTime = time in seconds since last in-game */
         outTime /= 60; /* time in minutes since last in-game */
         token->spec_value -= outTime; /* update time until next recharge based on time since last in-game */
+        if (token->spec_value < 0) token->spec_value = 0;
       }
     }
     break;
