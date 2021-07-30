@@ -1,0 +1,1627 @@
+#14700
+Northern Shaft - 100 Level~
+  The entrance to this large mine is a vertical shaft leading down into the
+earth. The boards acting as braces stretch above your head though they 
+are few and far between.  The tunnel is about seven feet square allowing
+for the passage of larger elementals that have carved this.  To the east
+and west you can hear creatures moving about and mining activities
+happening. It echoes through the chamber and up through the shaft to the
+caverns above.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14701
+D3
+~
+~
+0 -1 14715
+S
+#14701
+Northeast Tunnel ~
+  This tunnel is very open and extends very far above your head.  Wooden beams
+are braced on the walls to stabilize the tunnel but no planks or nets are above
+your head to catch falling rocks. Elementals move amongst the tunnels, both
+large and small carrying equipment, rocks ore or other materials for the mine.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14702
+D3
+~
+~
+0 -1 14700
+S
+#14702
+Northeast Tunnel ~
+  This tunnel is very open and extends very far above your head.  Wooden beams
+are braced on the walls to stabilize the tunnel but no planks or nets are above
+your head to catch falling rocks. Elementals move amongst the tunnels, both
+large and small carrying equipment, rocks ore or other materials for the mine.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14701
+D1
+~
+~
+0 -1 14703
+S
+#14703
+Northeast Tunnel ~
+  This tunnel is very open and extends very far above your head.  Wooden beams
+are braced on the walls to stabilize the tunnel but no planks or nets are above
+your head to catch falling rocks. Elementals move amongst the tunnels, both
+large and small carrying equipment, rocks ore or other materials for the mine.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14704
+D3
+~
+~
+0 -1 14702
+S
+#14704
+Eastern Shaft - 100 Level~
+  The shaft to the east is in its infancy. It is a smaller tunnel that has
+started its descent into the mountain. The shaft entrance is framed with wood
+but the tunnel only extends around three feet up. The Tunnel heading down 
+is quite narrow, almost as if something was burrowing through the rock. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14703
+D2
+~
+~
+0 -1 14705
+S
+#14705
+Southeast Tunnel~
+  This shaft is also new to the mine. The ceilings are closer to your head and 
+chunks of rock still extend closer to the floor, adding many obstacles to your
+path. Chunks of rock, particles of dust and other gases fall from cracks in the
+ceiling and seep from cracks in the wall. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14704
+D3
+~
+~
+0 -1 14706
+S
+#14706
+Southeast Tunnel~
+  This shaft is also new to the mine. The ceilings are closer to your head and 
+chunks of rock still extend closer to the floor, adding many obstacles to your
+path. Chunks of rock, particles of dust and other gases fall from cracks in the
+ceiling and seep from cracks in the wall. 
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14705
+D2
+~
+~
+0 -1 14707
+S
+#14707
+Southeast Tunnel~
+  This shaft is also new to the mine. The ceilings are closer to your head and 
+chunks of rock still extend closer to the floor, adding many obstacles to your
+path. Chunks of rock, particles of dust and other gases fall from cracks in the
+ceiling and seep from cracks in the wall. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14706
+D3
+~
+~
+0 -1 14708
+S
+#14708
+Southern Shaft - 100 Level~
+  The mine shaft in this room is the most developed of this mine. It is properly
+squared off, large wooden beams secure the ceiling and floor and tracks have
+been laid and secured to the ground. Large elementals push carts back and
+forth, while others burrow and carve the tunnel. A larger elemental guards 
+the path down into the depths.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14707
+D3
+~
+~
+0 -1 14709
+D5
+~
+~
+0 -1 14716
+S
+#14709
+Southwest Tunnel~
+  Many small holes can be seen in the rock walls. These holes are of varying
+diameter and the remnants from each have been piled on the ground. Piles of 
+rock and ore are being loaded into carts running on parallel tracks, some
+heading towards the surface and some heading lower into the mine.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14710
+D1
+~
+~
+0 -1 14708
+S
+#14710
+Southwest Tunnel~
+  Many small holes can be seen in the rock walls. These holes are of varying
+diameter and the remnants from each have been piled on the ground. Piles of 
+rock and ore are being loaded into carts running on parallel tracks, some
+heading towards the surface and some heading lower into the mine.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14709
+D3
+~
+~
+0 -1 14711
+S
+#14711
+Southwest Tunnel~
+  Many small holes can be seen in the rock walls. These holes are of varying
+diameter and the remnants from each have been piled on the ground. Piles of 
+rock and ore are being loaded into carts running on parallel tracks, some
+heading towards the surface and some heading lower into the mine.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14712
+D1
+~
+~
+0 -1 14710
+S
+#14712
+Western Shaft - 100 Level~
+  The western shaft is showing the most promise after the southern gains
+already discovered. The walls show signs of numerous ore veins, and the slight
+trickle of water indicates underground streams or springs. A small pilot
+tunnel has been hewed through the rock exposing even more of the earthly
+bounties.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14713
+D2
+~
+~
+0 -1 14711
+S
+#14713
+Northwest Tunnel~
+  The newest addition to the 100 level of the mine. It completes the initial
+discovery tunnel and allows for multiple paths for workers, equipment, rock
+and ore to be moved. The rails for the carts are slowly being installed into 
+the rock floor and minimal braces have been placed to provide additional
+stability to the mine.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14714
+D2
+~
+~
+0 -1 14712
+S
+#14714
+Northwest Tunnel~
+  The newest addition to the 100 level of the mine. It completes the initial
+discovery tunnel and allows for multiple paths for workers, equipment, rock
+and ore to be moved. The rails for the carts are slowly being installed into 
+the rock floor and minimal braces have been placed to provide additional
+stability to the mine.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14715
+D3
+~
+~
+0 -1 14713
+S
+#14715
+Northwest Tunnel~
+  The newest addition to the 100 level of the mine. It completes the initial
+discovery tunnel and allows for multiple paths for workers, equipment, rock
+and ore to be moved. The rails for the carts are slowly being installed into 
+the rock floor and minimal braces have been placed to provide additional
+stability to the mine.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14700
+D2
+~
+~
+0 -1 14714
+S
+#14716
+Entrance to 200 Level~
+  Another one hundred feet down and you have reached the 200 level of the mine.
+The exploration for more ore veins and rarer minerals continues. The main shaft 
+for this level has been carved straight to the south, following natural cracks 
+in the earth. You can see tunnels splitting off to the east further down the
+pathway and noise coming from the west.
+~
+147 67108876 0
+D1
+~
+~
+0 -1 14724
+D2
+~
+~
+0 -1 14728
+D3
+~
+~
+0 -1 14717
+D4
+~
+~
+0 -1 14708
+S
+#14717
+Western Tunnel Split~
+  Large elementals work to carve away huge chunks of rock, ore and random
+stones to the west and south. Using the natural cracks these large creatures
+push further into the earth. Random sparkles from emit from the earth, the
+walls reflecting small portions of light that exist from a few torches.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14716
+D2
+~
+~
+0 -1 14720
+D3
+~
+~
+0 -1 14718
+S
+#14718
+Exploration Tunnel One~
+  The first exploration tunnel is more narrow and not as tall. You can see
+giant indentations in the walls as though it was being punched. Small rock
+chips and shattered gems are scattered around the floor, and embedded into
+the walls and ceiling. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14719
+D1
+~
+~
+0 -1 14717
+S
+#14719
+Exploration Tunnel One~
+  The first exploration tunnel is more narrow and not as tall. You can see
+giant indentations in the walls as though it was being punched. Small rock
+chips and shattered gems are scattered around the floor, and embedded into
+the walls and ceiling. 
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14718
+S
+#14720
+Exploration Tunnel Two~
+  The second exploration tunnel is wider and allows for creatures to passage
+by each other without having to hug the walls.  There are numerous smaller
+tunnels in all directions as the discovery of new veins is very important.
+Despite the larger tunnel, it is very clean and the floor is easy to navigate.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14717
+D2
+~
+~
+0 -1 14721
+S
+#14721
+Exploration Tunnel Two~
+  The second exploration tunnel is wider and allows for creatures to passage
+by each other without having to hug the walls.  There are numerous smaller
+tunnels in all directions as the discovery of new veins is very important.
+Despite the larger tunnel, it is very clean and the floor is easy to navigate.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14720
+D3
+~
+~
+0 -1 14722
+S
+#14722
+Exploration Tunnel Two~
+  The second exploration tunnel is wider and allows for creatures to passage
+by each other without having to hug the walls.  There are numerous smaller
+tunnels in all directions as the discovery of new veins is very important.
+Despite the larger tunnel, it is very clean and the floor is easy to navigate.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14721
+D3
+~
+~
+0 -1 14723
+S
+#14723
+Exploration Tunnel Two~
+  The second exploration tunnel is wider and allows for creatures to passage
+by each other without having to hug the walls.  There are numerous smaller
+tunnels in all directions as the discovery of new veins is very important.
+Despite the larger tunnel, it is very clean and the floor is easy to navigate.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14722
+S
+#14724
+Exploration Tunnel Three~
+  The third exploration tunnel is the largest tunnel on the 200 level.  It
+is very wide and is ready to accommodate hewers and loaders.  Crews have
+begun to stack building supplies for the frames and rails to increase
+stability and efficiency of the mine. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14725
+D3
+~
+~
+0 -1 14716
+S
+#14725
+Exploration Tunnel Three~
+  The third exploration tunnel is the largest tunnel on the 200 level.  It
+is very wide and is ready to accommodate hewers and loaders.  Crews have
+begun to stack building supplies for the frames and rails to increase
+stability and efficiency of the mine. 
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14726
+D2
+~
+~
+0 -1 14724
+S
+#14726
+Exploration Tunnel Three~
+  The third exploration tunnel is the largest tunnel on the 200 level.  It
+is very wide and is ready to accommodate hewers and loaders.  Crews have
+begun to stack building supplies for the frames and rails to increase
+stability and efficiency of the mine. 
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14727
+D3
+~
+~
+0 -1 14725
+S
+#14727
+Exploration Tunnel Three~
+  The third exploration tunnel is the largest tunnel on the 200 level.  It
+is very wide and is ready to accommodate hewers and loaders.  Crews have
+begun to stack building supplies for the frames and rails to increase
+stability and efficiency of the mine. 
+~
+147 67108872 0
+D3
+~
+~
+0 -1 14726
+S
+#14728
+Main Shaft - 200 Level~
+  This large shaft extends around twenty five feet into the air. Its walls are
+smooth and square with beams placed evenly along both sides. Torches are evenly
+spread to provide adequate lighting.  Metal rails run along the floor and large
+metal carts roll along to the north and south, each full of rocks or ores. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14716
+D2
+~
+~
+0 -1 14729
+S
+#14729
+Main Shaft - 200 Level~
+  This large shaft extends around twenty five feet into the air. Its walls are
+smooth and square with beams placed evenly along both sides. Torches are evenly
+spread to provide adequate lighting.  Metal rails run along the floor and large
+metal carts roll along to the north and south, each full of rocks or ores. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14728
+D1
+~
+~
+0 -1 14731
+D2
+~
+~
+0 -1 14730
+S
+#14730
+Main Shaft - 200 Level~
+  This large shaft extends around twenty five feet into the air. Its walls are
+smooth and square with beams placed evenly along both sides. Torches are evenly
+spread to provide adequate lighting.  Metal rails run along the floor and large
+metal carts roll along to the north and south, each full of rocks or ores. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14729
+D5
+~
+~
+0 -1 14735
+S
+#14731
+Exploration Tunnel Four~
+  The fourth exploration tunnel is covered in soot and black powder that covers
+everything in a fine film.  Long black streaks and huge black chunks adorn the 
+walls, ceiling and floor.  The giant coal vein extends in all directions. 
+Numerous lines of carts are lined up on the tracks, some empty and some full. 
+Many hewers hack away at the walls, mining up every ounce of coal that is found.
+It is all being funneled down to the next level, its purpose unclear.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14732
+D3
+~
+~
+0 -1 14729
+S
+#14732
+Exploration Tunnel Four~
+  The fourth exploration tunnel is covered in soot and black powder that covers
+everything in a fine film.  Long black streaks and huge black chunks adorn the 
+walls, ceiling and floor.  The giant coal vein extends in all directions. 
+Numerous lines of carts are lined up on the tracks, some empty and some full. 
+Many hewers hack away at the walls, mining up every ounce of coal that is found.
+It is all being funneled down to the next level, its purpose unclear.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14733
+D1
+~
+~
+0 -1 14734
+D3
+~
+~
+0 -1 14731
+S
+#14733
+Exploration Tunnel Four~
+  The fourth exploration tunnel is covered in soot and black powder that covers
+everything in a fine film.  Long black streaks and huge black chunks adorn the 
+walls, ceiling and floor.  The giant coal vein extends in all directions. 
+Numerous lines of carts are lined up on the tracks, some empty and some full. 
+Many hewers hack away at the walls, mining up every ounce of coal that is found.
+It is all being funneled down to the next level, its purpose unclear.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14732
+S
+#14734
+Exploration Tunnel Four~
+  The fourth exploration tunnel is covered in soot and black powder that covers
+everything in a fine film.  Long black streaks and huge black chunks adorn the 
+walls, ceiling and floor.  The giant coal vein extends in all directions. 
+Numerous lines of carts are lined up on the tracks, some empty and some full. 
+Many hewers hack away at the walls, mining up every ounce of coal that is found.
+It is all being funneled down to the next level, its purpose unclear.
+~
+147 67108872 0
+D3
+~
+~
+0 -1 14732
+S
+#14735
+Entrance to 300 Level~
+  The 300 level is very industrialized versus what has been seen above. The
+walls are lined with numerous hooks with shovels hanging from them. To the
+north you can see the main shaft and then the tunnel curving to the west. 
+The air is warmer than it has been and you can hear lots of banging
+echoing through the mine.
+~
+147 67108876 0
+D0
+~
+~
+0 -1 14736
+D4
+~
+~
+0 -1 14730
+S
+#14736
+Main Shaft - 300 Level~
+  This shaft continues on from the previous room. Numerous shelves and hooks
+line the walls.  Numerous other tools including shovels, pickaxes, and long
+iron bars are stacked in piles on the ground, pushed to the edges of the
+tunnel.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14735
+D3
+~
+~
+0 -1 14737
+D5
+~
+~
+0 -1 14747
+S
+#14737
+Main Shaft - 300 Level~
+  This shaft continues on from the previous room. Numerous shelves and hooks
+line the walls.  Numerous other tools including shovels, pickaxes, and long
+iron bars are stacked in piles on the ground, pushed to the edges of the
+tunnel.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14736
+D2
+~
+~
+0 -1 14738
+S
+#14738
+Main Shaft - 300 Level~
+  This shaft continues on from the previous room. Numerous shelves and hooks
+line the walls.  Numerous other tools including shovels, pickaxes, and long
+iron bars are stacked in piles on the ground, pushed to the edges of the
+tunnel.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14737
+D3
+~
+~
+0 -1 14739
+S
+#14739
+Main Shaft - 300 Level~
+  This shaft continues on from the previous room. Numerous shelves and hooks
+line the walls.  Numerous other tools including shovels, pickaxes, and long
+iron bars are stacked in piles on the ground, pushed to the edges of the
+tunnel.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14738
+D2
+~
+~
+0 -1 14740
+S
+#14740
+Entrance to the Furnaces~
+  A wave of sweltering heat rushes over you as you enter this room. As you
+look east, large holes are carved into the stone wall and a red and orange
+hue softly glows from the visible openings. The rocks are gray and have a 
+fine layer of ash that has accumulated over it. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14739
+D1
+~
+~
+0 -1 14741
+S
+#14741
+A Row of Sweltering Furnaces~
+  Large figures move throughout the section of rooms, feeding huge amounts of
+coal and ore into the giant stone furnaces carved into the walls. The 
+crackling of the fire and coals causes sparks to shoot out in random intervals.
+They hit the floor and scatter in random directions. 
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14742
+D3
+~
+~
+0 -1 14740
+S
+#14742
+A Row of Sweltering Furnaces~
+  Large figures move throughout the section of rooms, feeding huge amounts of
+coal and ore into the giant stone furnaces carved into the walls. The 
+crackling of the fire and coals causes sparks to shoot out in random intervals.
+They hit the floor and scatter in random directions. 
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14743
+D3
+~
+~
+0 -1 14741
+S
+#14743
+A Row of Sweltering Furnaces~
+  Large figures move throughout the section of rooms, feeding huge amounts of
+coal and ore into the giant stone furnaces carved into the walls. The 
+crackling of the fire and coals causes sparks to shoot out in random intervals.
+They hit the floor and scatter in random directions. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14746
+D1
+~
+~
+0 -1 14744
+D3
+~
+~
+0 -1 14742
+S
+#14744
+A Row of Sweltering Furnaces~
+  Large figures move throughout the section of rooms, feeding huge amounts of
+coal and ore into the giant stone furnaces carved into the walls. The 
+crackling of the fire and coals causes sparks to shoot out in random intervals.
+They hit the floor and scatter in random directions. 
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14745
+D3
+~
+~
+0 -1 14743
+S
+#14745
+A Giant Pile of Coal~
+  A large pile of black rocks sits in this room. The largest pile is stacked
+stacked against the wall, and smaller piles have begun to form at its base
+as it rolls down. Metal cart after metal cart rolls into the room from a
+smaller tunnel in the wall where the large elemental picks it up, dumps in on
+the pile and then puts it back down and pushes it on down the return track.
+As the coal is dumped, a giant plume of black dust fills the room.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14744
+D3
+~
+~
+0 -1 14746
+S
+#14746
+A Giant Pile of Ore~
+  Just like the pile to the west, another large pile of ore chunks sits against
+the wall. The ore is rough, ranging from the size of a human hand to the size
+of the mine carts that roll into the room. The large elementals that roam this 
+level unload the carts against the wall and send them back to the other levels
+of the mine.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14745
+D2
+~
+~
+0 -1 14743
+S
+#14747
+Entrance to 400 Level~
+  The 400 level of the mine is very well lit, with many torches covering the
+walls. A stone table sits off to the side covered in blueprints of the mine
+and its various levels. Other assorted exploration gear sits on the table
+and on the floor. You can hear banging against the walls as the exploration
+continues. A note on the table reads "We are now deep enough to find it!".
+~
+147 67108876 0
+D0
+~
+~
+0 -1 14748
+D4
+~
+~
+0 -1 14736
+S
+#14748
+Stabilized Tunnel~
+  Large wooden beams are evenly spaced along both walls providing support for
+hundreds of feet of rock that sit above you. Wooden beams extend from each wall
+at the top of the beams standing vertically.  They provide roof support and
+additional protection.  The earth trembles from the footsteps of the elementals
+roaming this level.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14749
+D2
+~
+~
+0 -1 14747
+S
+#14749
+Stabilized Tunnel~
+  Large wooden beams are evenly spaced along both walls providing support for
+hundreds of feet of rock that sit above you. Wooden beams extend from each wall
+at the top of the beams standing vertically.  They provide roof support and
+additional protection.  The earth trembles from the footsteps of the elementals
+roaming this level.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14750
+D2
+~
+~
+0 -1 14748
+S
+#14750
+Stabilized Tunnel~
+  Large wooden beams are evenly spaced along both walls providing support for
+hundreds of feet of rock that sit above you. Wooden beams extend from each wall
+at the top of the beams standing vertically.  They provide roof support and
+additional protection.  The earth trembles from the footsteps of the elementals
+roaming this level.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14751
+D3
+~
+~
+0 -1 14749
+S
+#14751
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14752
+D3
+~
+~
+0 -1 14750
+S
+#14752
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14755
+D2
+~
+~
+0 -1 14753
+D3
+~
+~
+0 -1 14751
+S
+#14753
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14752
+D3
+~
+~
+0 -1 14754
+S
+#14754
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14753
+S
+#14755
+Mine Tunnel Intersection~
+  A natural cave has helped form a wonderful junction for the numerous large
+and small tunnels that have been used to explore this level. Stalactites and
+stalagmites litter the ceiling and floor, their sharp points and steep edges
+providing contrast and relief to the room.  
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14759
+D2
+~
+~
+0 -1 14752
+D3
+~
+~
+0 -1 14756
+S
+#14756
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14757
+D1
+~
+~
+0 -1 14755
+S
+#14757
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14758
+D2
+~
+~
+0 -1 14756
+S
+#14758
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D3
+~
+~
+0 -1 14757
+S
+#14759
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14760
+D3
+~
+~
+0 -1 14755
+S
+#14760
+Branching Tunnel~
+  One of many branching tunnels on this level, its walls are black and grey
+rock. There are hints of sparkles and light reflecting and refracting off 
+other minerals and ores scattered throughout the walls and ceiling. Numerous
+markings are on the walls, some being symbols or icons and others being
+scratches in the rock. The tunnel height goes up and down as well as the walls
+seem to bow in and out. More exploratory in nature, these tunnels were hewed 
+somewhat quickly and when nothing was found, were abandoned.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14759
+D2
+~
+~
+0 -1 14761
+S
+#14761
+A Glowing Ore Vein~
+  A magnificent discovery lies in this room. One of the rarest substances 
+from the Plane of Elemental Earth can be see shining through the wall. The 
+wall, while still being solid, has been transformed by the ore that sits
+behind.  Now having a semi transparent property, it is a rock window. The
+glow of the ore vein behind it is beautiful and intense.  
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14760
+D2
+~
+~
+0 -1 14762
+S
+#14762
+Main Shaft - 400 Level~
+  The end of the 400 level is in sight. Another large elemental stands above
+the shaft that leads you further underground and further into the depths.
+The torches provide a warm light that pushes against the darkness, something
+that is ever present so far under the earth.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14761
+D1
+~
+~
+0 -1 14763
+S
+#14763
+Main Shaft - 400 Level~
+  The end of the 400 level is in sight. Another large elemental stands above
+the shaft that leads you further underground and further into the depths.
+The torches provide a warm light that pushes against the darkness, something
+that is ever present so far under the earth.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14764
+D3
+~
+~
+0 -1 14762
+S
+#14764
+Main Shaft - 400 Level~
+  The end of the 400 level is in sight. Another large elemental stands above
+the shaft that leads you further underground and further into the depths.
+The torches provide a warm light that pushes against the darkness, something
+that is ever present so far under the earth.
+~
+147 67108872 0
+D3
+~
+~
+0 -1 14763
+D5
+~
+~
+0 -1 14765
+S
+#14765
+Entrance to 500 Level~
+ The 500 level is the deepest part of these mines, more than five hundred feet
+underground with solid rock stretching far above and below. The walls are very
+well light and the floor has been cleaned down to the smallest specs of 
+rock, dirt or dust. Banners have been hung on the walls, showing the crest
+of the Great Dismal Delve. 
+~
+147 67108876 0
+D2
+~
+~
+0 -1 14766
+D4
+~
+~
+0 -1 14764
+S
+#14766
+Main Shaft - 500 Level~
+  The main shaft just like the entrance is very pristine when it comes to how
+clean and tidy it is and this continues on as far as you can see. You can hear
+louder noises that seem to be echoing as you walk along this tunnel. Random 
+large gems and ores are embedded into the walls, however they have been left
+untouched.  The walls are smoothly hewed and no additional exploratory 
+tunnels can be seen.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14765
+D2
+~
+~
+0 -1 14767
+S
+#14767
+Main Shaft - 500 Level~
+  The main shaft just like the entrance is very pristine when it comes to how
+clean and tidy it is and this continues on as far as you can see. You can hear
+louder noises that seem to be echoing as you walk along this tunnel. Random 
+large gems and ores are embedded into the walls, however they have been left
+untouched.  The walls are smoothly hewed and no additional exploratory 
+tunnels can be seen.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14766
+D1
+~
+~
+0 -1 14768
+S
+#14768
+Main Shaft - 500 Level~
+  The main shaft just like the entrance is very pristine when it comes to how
+clean and tidy it is and this continues on as far as you can see. You can hear
+louder noises that seem to be echoing as you walk along this tunnel. Random 
+large gems and ores are embedded into the walls, however they have been left
+untouched.  The walls are smoothly hewed and no additional exploratory 
+tunnels can be seen.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14769
+D3
+~
+~
+0 -1 14767
+S
+#14769
+A Wide Open Cavern~
+  This cavern is very tall and extends in all directions. The vast empty space
+above your head is the closet thing to the sky down in this abyss of
+rock, stone, and gems. A tent with the colors of the Great Dismal Delve has
+been setup and has become the forward operating post for the expedition. On
+the southern side of the cavern is a larger tunnel that continues down into
+the depths.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14771
+D2
+~
+~
+0 -1 14770
+D3
+~
+~
+0 -1 14768
+S
+#14770
+A Wide Open Cavern~
+  This cavern is very tall and extends in all directions. The vast empty space
+above your head is the closet thing to the sky down in this abyss of
+rock, stone, and gems. A tent with the colors of the Great Dismal Delve has
+been setup and has become the forward operating post for the expedition. On
+the southern side of the cavern is a larger tunnel that continues down into
+the depths.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14769
+D1
+~
+~
+0 -1 14772
+S
+#14771
+A Wide Open Cavern~
+  This cavern is very tall and extends in all directions. The vast empty space
+above your head is the closet thing to the sky down in this abyss of
+rock, stone, and gems. A tent with the colors of the Great Dismal Delve has
+been setup and has become the forward operating post for the expedition. On
+the southern side of the cavern is a larger tunnel that continues down into
+the depths.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14772
+D3
+~
+~
+0 -1 14769
+S
+#14772
+A Wide Open Cavern~
+  This cavern is very tall and extends in all directions. The vast empty space
+above your head is the closet thing to the sky down in this abyss of
+rock, stone, and gems. A tent with the colors of the Great Dismal Delve has
+been setup and has become the forward operating post for the expedition. On
+the southern side of the cavern is a larger tunnel that continues down into
+the depths.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14771
+D2
+~
+~
+0 -1 14773
+D3
+~
+~
+0 -1 14770
+S
+#14773
+Current End of the Mining Expedition~
+  The tunnel is short and narrow, but as the rock has been chipped away it
+reveals rock walls that are covered in many runes and symbols. These symbols 
+extend from floor to ceiling, and spread all along the all.  It continues off
+to the east where you can see these walls covering the floor and ceiling. 
+As light hits the runes on the wall, they begin to glow and generate a slight 
+hum that rumbles through the cavern.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14772
+D1
+~
+~
+0 -1 14774
+S
+#14774
+Entrance to the Plane of Elemental Earth~
+  An intense wave of pressure overwhelms you as you enter the room. The runes
+on the ceiling glow with an intense light and larger runes appear on the ground
+surrounding a gateway that leads down. While there are no lights or torches on
+the walls, the cavern is illuminated with an earthly glow.
+~
+147 67108872 0
+D3
+~
+~
+0 -1 14773
+D5
+~
+~
+0 -1 14780
+S
+#14775
+An Underground Spring~
+  A tranquil and serene room with a pool of clean water in the middle. The 
+water is crisp and cool, and could easily quench any amount of thirst. Small
+amounts of life can be seen pushing through the rocks, moss growing on the
+rocks, small insects and tiny rock creatures crawl around the room and some
+even swim in the water.
+~
+147 67108872 0
+S
+#14776
+An Underground Spring~
+  A tranquil and serene room with a pool of clean water in the middle. The 
+water is crisp and cool, and could easily quench any amount of thirst. Small
+amounts of life can be seen pushing through the rocks, moss growing on the
+rocks, small insects and tiny rock creatures crawl around the room and some
+even swim in the water.
+~
+147 67108872 0
+S
+#14777
+An Underground Spring~
+  A tranquil and serene room with a pool of clean water in the middle. The 
+water is crisp and cool, and could easily quench any amount of thirst. Small
+amounts of life can be seen pushing through the rocks, moss growing on the
+rocks, small insects and tiny rock creatures crawl around the room and some
+even swim in the water.
+~
+147 67108872 0
+S
+#14778
+An Underground Spring~
+  A tranquil and serene room with a pool of clean water in the middle. The 
+water is crisp and cool, and could easily quench any amount of thirst. Small
+amounts of life can be seen pushing through the rocks, moss growing on the
+rocks, small insects and tiny rock creatures crawl around the room and some
+even swim in the water.
+~
+147 67108872 0
+S
+#14779
+An Underground Spring~
+  A tranquil and serene room with a pool of clean water in the middle. The 
+water is crisp and cool, and could easily quench any amount of thirst. Small
+amounts of life can be seen pushing through the rocks, moss growing on the
+rocks, small insects and tiny rock creatures crawl around the room and some
+even swim in the water.
+~
+147 67108872 0
+S
+#14780
+The Plane of Elemental Earth~
+  This infinite expanse of solid matter extends in all directions. Its floors
+walls and ceiling are pockmarked by bubbles of many different elements. The
+walls and floors are riddled with fissures, tunnels and random gemstones.
+Numerous creatures burrow through the rock here, or from a mining operation
+taking place. Random pockets of magma, ooze, ash or dust are seen billowing
+in random areas, making it beautiful and treacherous at the same time.
+~
+147 67108876 0
+D2
+~
+~
+0 -1 14781
+D4
+~
+~
+0 -1 14774
+S
+#14781
+The Plane of Elemental Earth~
+  This infinite expanse of solid matter extends in all directions. Its floors
+walls and ceiling are pockmarked by bubbles of many different elements. The
+walls and floors are riddled with fissures, tunnels and random gemstones.
+Numerous creatures burrow through the rock here, or from a mining operation
+taking place. Random pockets of magma, ooze, ash or dust are seen billowing
+in random areas, making it beautiful and treacherous at the same time.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14780
+D2
+~
+~
+0 -1 14782
+S
+#14782
+The Plane of Elemental Earth~
+  This infinite expanse of solid matter extends in all directions. Its floors
+walls and ceiling are pockmarked by bubbles of many different elements. The
+walls and floors are riddled with fissures, tunnels and random gemstones.
+Numerous creatures burrow through the rock here, or from a mining operation
+taking place. Random pockets of magma, ooze, ash or dust are seen billowing
+in random areas, making it beautiful and treacherous at the same time.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14781
+D1
+~
+~
+0 -1 14786
+D2
+~
+~
+0 -1 14789
+D3
+~
+~
+0 -1 14783
+S
+#14783
+A Vast Mesa~
+  This vast and isolated hill stretches in all directions.  The edges to either
+side of the path descend straight down. There are scarce forms of life that can 
+be seen, including a few scrub bushes and some green and brown grass. The land
+is desolate outside of these few signs of life.  To the west you can see a
+giant pile of bodies forming a plateau, rising as a message to all that
+approach.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14782
+D3
+~
+~
+0 -1 14784
+S
+#14784
+A Vast Mesa~
+  This vast and isolated hill stretches in all directions.  The edges to either
+side of the path descend straight down. There are scarce forms of life that can 
+be seen, including a few scrub bushes and some green and brown grass. The land
+is desolate outside of these few signs of life.  To the west you can see a
+giant pile of bodies forming a plateau, rising as a message to all that
+approach.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14785
+D1
+~
+~
+0 -1 14783
+S
+#14785
+The Dead Body Plateau~
+  A large plateau made entirely of rotting and recently deceased corpses.
+Random weapons, both broken and whole jut from the corpses, as maggots and
+worms squirm from the blood soaked ground and corpses.  Blood trickles
+over the rocks and pools in the low ground.  The stench is almost unbearable
+due to the sheer number of corpses that exist in these piles. Ahead is a 
+tall elemental swinging his hands back and forth waiting for his next addition
+to the pile.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14784
+S
+#14786
+A Rocky and Sandy Trail~
+  A rough path of rocks, pebbles and sand cover the landscape. Off to each side
+are large piles of sand rolling off in every direction. The sand is very fine
+and smooth to the touch, and settles on every part of you as you move through 
+the fine particle mist. The sand hides the more hidden dangers of this calm
+and peaceful area.
+~
+147 67108872 0
+D1
+~
+~
+0 -1 14787
+D3
+~
+~
+0 -1 14782
+S
+#14787
+A Rocky and Sandy Trail~
+  A rough path of rocks, pebbles and sand cover the landscape. Off to each side
+are large piles of sand rolling off in every direction. The sand is very fine
+and smooth to the touch, and settles on every part of you as you move through 
+the fine particle mist. The sand hides the more hidden dangers of this calm
+and peaceful area.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14788
+D3
+~
+~
+0 -1 14786
+S
+#14788
+A Cave of Perpetually Falling Sand~
+  Sand falls forever in this room. A sacred place on this plane, known as the
+Sandfall.  Home to the Good Princess of the realm, she forever watches over
+Grumbar, and he evil brother Ogremoch. The sand is smooth, and almost 
+soothing to the touch.  The sand creates an ever enveloping mist of fine 
+particles that settle onto everything.
+~
+147 67108872 0
+D2
+~
+~
+0 -1 14787
+S
+#14789
+The Plane of Elemental Earth~
+  This infinite expanse of solid matter extends in all directions. Its floors
+walls and ceiling are pockmarked by bubbles of many different elements. The
+walls and floors are riddled with fissures, tunnels and random gemstones.
+Numerous creatures burrow through the rock here, or from a mining operation
+taking place. Random pockets of magma, ooze, ash or dust are seen billowing
+in random areas, making it beautiful and treacherous at the same time.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14782
+D2
+~
+~
+0 -1 14790
+S
+#14790
+The Earth Deity's Home~
+  The living mountain, the mighty deity of this plane makes his home here. The
+Massive cavern and its size are unfathomable. A massive chunk of rock can be
+seen slowly pulsing.  Rocks small from the walls and ceiling, and large gems
+can be seen everywhere. The rocks are smooth in some areas and rough in others.
+No sign of life outside of this deity can be seen, no sounds are heard outside
+of the rocks falling. An magical essence can be felt in the air, as this
+creature is not entirely of this world.
+~
+147 67108872 0
+D0
+~
+~
+0 -1 14789
+S
+#14799
+Temporary Room~
+Temporary description.
+~
+147 0 0
+S
+#0
+$~
