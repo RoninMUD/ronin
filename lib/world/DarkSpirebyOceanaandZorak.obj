@@ -217,6 +217,381 @@ A
 1 1
 B
 8192
+#30116
+fangs vampire set~
+Set of Vampire Fangs~
+A Set of very pointy teeth arranged on a string.~
+~
+9 134217792 5
+6 0 0 0
+6 68632 48325
+32
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 3
+A
+52 5
+#30117
+cap bird feather frozen~
+Frozen Bird Feather Cap~
+A bunch of frozen feathers lay thawing on the ground.~
+~
+9 134217792 17
+3 0 0 0
+4 45689 37852
+28
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+13 100
+A
+12 100
+A
+14 200
+#30118
+tail dragon miniature~
+Miniature Dragon Tail~
+A tiny and firm tail of a dragon.~
+~
+5 134217792 8193
+0 3 9 9
+28 69547 56314
+24
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 12
+A
+12 150
+A
+53 2
+#30119
+fur werewolf tuft~
+Tuft of Werewolf Fur~
+A large patch of scratchy fur.~
+~
+9 134217792 273
+9 0 0 0
+9 54236 55486
+18
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#30120
+gargoyle ring~
+Ring of the Gargoyle~
+A Ring made of solid stone set with a single gem.~
+~
+9 134217792 3
+4 0 0 0
+7 79546 59481
+17
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+17 -5
+A
+52 7
+#30121
+wings demon pair~
+A Pair of Demon Wings~
+A Pair of Black and Red Wings adorned in Fire.~
+~
+9 134217792 9
+18 0 0 0
+18 30564 63475
+16
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+17 -5
+#30122
+lizard horn~
+Horn of a Lizard~
+A Long White and Brown Horn~
+~
+9 134217792 16401
+7 0 0 0
+11 26489 67470
+28
+X
+~
+512 0 0
+M
+~
+~
+~
+~
+A
+19 2
+#30123
+vial alchemic~
+Alchemic Vial~
+A Large Glass Alchemic Vial~
+~
+17 0 1
+0 0 0 0
+3 46250 71464
+36
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30124
+crystal void~
+Void Crystal~
+A Crystal with Purple and Black Swirling Magic~
+~
+12 0 1
+0 0 0 0
+20 89500 75489
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30125
+phantom shard~
+Shard of a Phantom~
+A Glowing Purple Transparent Shard~
+~
+12 0 1
+0 0 0 0
+20 86000 79453
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30126
+pearl large~
+A Large Pearl~
+A Large Round Pearl~
+~
+8 0 1
+0 0 0 0
+40 524000 98422
+8
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30127
+pearl small~
+A Small Pearl~
+A Small but Shiny Pearl~
+~
+8 0 1
+0 0 0 0
+20 175000 77542
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30128
+pearl medium~
+A Medium Pearl~
+A Medium and Dull Pearl~
+~
+8 0 1
+0 0 0 0
+30 358000 83468
+17
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30129
+writings onyx spire recipe~
+Writings of the Onyx Spire~
+An Onyx Sheet with Intricate Writings~
+~
+32 0 1
+30130 30124 30125 30125
+0 150000 150000
+9
+E
+writings onyx spire recipe~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30130
+paper void onyx~
+Onyx Void Paper~
+A Sheet of Pitch Black Paper~
+~
+12 0 1
+0 0 0 0
+0 75000 75000
+0
+E
+paper void onyx~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30131
+formula alchemic dark spire~
+Dark Spire Alchemic Formula~
+Unique Formulas and Runes cover the parchment~
+~
+32 0 1
+30132 30126 30123 30124
+0 150000 150000
+9
+E
+formula alchemic dark spire~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30132
+ink dark spire~
+Ink of the Dark Spire~
+A Vial of Dark Spire Ink~
+~
+12 0 1
+0 0 0 0
+0 75000 75000
+0
+E
+ink dark spire~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30133
+instructions ritual dark spire recipe~
+Dark Spire Ritual Instructions~
+A Set of Writings for a Dark Spire Ritual~
+~
+32 0 1
+30134 30130 30132 -1
+0 150000 150000
+9
+E
+instructions ritual dark spire recipe~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#30134
+sigil dark spire~
+Dark Spire Sigil~
+The Symbol of the Dark Spire Faction~
+~
+12 0 1
+0 0 0 0
+0 75000 75000
+0
+E
+sigil dark spire~
+invalid~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #30197
 red skullcap cap~
 A small red skullcap~
