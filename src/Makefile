@@ -203,6 +203,7 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.chess.o \
 	spec.crazylab.o \
 	spec.digsite.o \
+	spec.elementalmines.o \
 	spec.luthienIV.o \
 	spec.happybob.o \
 	spec.workbench.o
