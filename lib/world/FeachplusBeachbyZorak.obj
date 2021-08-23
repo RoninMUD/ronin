@@ -9,11 +9,11 @@ A sign sticks out of the pebbles here.~
 100
 E
 sign~
-   Theez eez Awr beech, do nawt coam hear!
+    Theez is Awr Beech, go hoam!
 ~
 E
 sign~
-    Theez is Awr Beech, go hoam!
+   Theez eez Awr beech, do nawt coam hear!
 ~
 X
 ~
@@ -96,12 +96,12 @@ A tricorn hat lies in the dust here.~
 6 1000 1000
 15
 E
-tricorn~
+hat~
 A skull and crossbones are embroidered on the front of this tricorn
 pirate captain's hat.
 ~
 E
-hat~
+tricorn~
 A skull and crossbones are embroidered on the front of this tricorn
 pirate captain's hat.
 ~
@@ -148,10 +148,10 @@ A pig's head on a stick is sticking out of the ground here.~
 14 10 10
 10
 E
-pig~
+head~
 Flies buzz around this, the idol of the children of the bluffs.~
 E
-head~
+pig~
 Flies buzz around this, the idol of the children of the bluffs.~
 X
 ~
@@ -433,7 +433,7 @@ A pair of dusty pants lie here, collecting dust.~
 9 13631490 33
 4 0 0 0
 1 20 2000
-20
+45
 X
 ~
 0 0 0
