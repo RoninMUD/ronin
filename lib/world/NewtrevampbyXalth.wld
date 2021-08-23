@@ -22,14 +22,14 @@ You see a path leading back towards the Turning Point.
 ~
 0 0 3505
 E
-hills~
-The hills are a very shiny black color.
-~
-E
 plate~
 This large plate of glass on which you stand is very slippery.  It reflects
 the bright sun and it hurts to watch.  It looks as though it could break if
 you weren't careful.
+~
+E
+hills~
+The hills are a very shiny black color.
 ~
 S
 #2901
@@ -51,13 +51,13 @@ You see some more hills to the south.
 ~
 0 0 2902
 E
-hills~
-The hills are a very shiny black color.
-~
-E
 shards~
 There are shards of obsidian displayed all about here.  They are sharp and
 could be potentially dangerous.
+~
+E
+hills~
+The hills are a very shiny black color.
 ~
 S
 #2902
@@ -162,21 +162,21 @@ You see a hole to the south. It looks like an entrance.
 ~
 0 0 2906
 E
-top of mountain~
-The top of the mountain is a large area with a hole in the middle.
-~
-E
-smoke~
-The smoke is grey and is coming from the hole.
+bones~
+There are a few bones that lie on the ground bleaching in the sun.  A skull
+sitting behind a small stone seems to be grinning at you.
 ~
 E
 rocks~
 Thrown upon the ground are massive piles of rocks, and minerals.
 ~
 E
-bones~
-There are a few bones that lie on the ground bleaching in the sun.  A skull
-sitting behind a small stone seems to be grinning at you.
+smoke~
+The smoke is grey and is coming from the hole.
+~
+E
+top of mountain~
+The top of the mountain is a large area with a hole in the middle.
 ~
 S
 #2906
@@ -248,14 +248,14 @@ You see the entrance to the mountain to the north.
 ~
 0 0 2906
 E
-smoke~
-Dark, black smoke combines with sulfuric fumes to create a very nauseating
-smell combined with eye-watering vapors.
-~
-E
 paths~
 These paths have been created by lava flows.  They are deep and cause the
 mountain look striped from a distance.
+~
+E
+smoke~
+Dark, black smoke combines with sulfuric fumes to create a very nauseating
+smell combined with eye-watering vapors.
 ~
 S
 #2909
@@ -277,8 +277,9 @@ You see the entrance to the mountain to the north.
 ~
 0 0 2906
 E
-smoke~
-Blinding smoke rises from the volcano and hurts your eyes.
+paths~
+These are paths that have been cleared out from previous lava flows.  Some
+are shallow and some are deep.  You should keep away from them.
 ~
 E
 bones~
@@ -286,9 +287,8 @@ Many broken bones lie on the ground; not many of which are whole.  In fact,
 you can't find a whole bone up here!  Something must have happened...
 ~
 E
-paths~
-These are paths that have been cleared out from previous lava flows.  Some
-are shallow and some are deep.  You should keep away from them.
+smoke~
+Blinding smoke rises from the volcano and hurts your eyes.
 ~
 S
 #2910
@@ -322,13 +322,13 @@ The shaft continues down.
 ~
 0 0 2913
 E
+bones~
+Broken rib cages and cracked skulls are all over the floor here.
+~
+E
 rags~
 These rags must have been brought from outsiders for nothing down here could
 have created them... right?
-~
-E
-bones~
-Broken rib cages and cracked skulls are all over the floor here.
 ~
 S
 #2911
@@ -346,12 +346,12 @@ You see the dark tunnel shaft.
 ~
 0 0 2910
 E
-beds~
-The beds are made of metal and rock.
+carpet~
+This carpet is stained blood red and is singed on all sides.
 ~
 E
-chairs~
-The chairs are made of stone and look very heavy.
+tapestries~
+These tapestries are hand-woven and have pictures of dragons on them.
 ~
 E
 tables~
@@ -359,12 +359,12 @@ The tables are long and wide.  They are made of stone and obviously too heavy
 to move.
 ~
 E
-tapestries~
-These tapestries are hand-woven and have pictures of dragons on them.
+chairs~
+The chairs are made of stone and look very heavy.
 ~
 E
-carpet~
-This carpet is stained blood red and is singed on all sides.
+beds~
+The beds are made of metal and rock.
 ~
 S
 #2912
@@ -381,17 +381,8 @@ You see the shaft in the mountain.
 ~
 0 0 2910
 E
-beds~
-The beds are made of metal and rock.
-~
-E
-chairs~
-The chairs are made of stone and look very heavy.
-~
-E
-tables~
-The tables are long and wide.  They are made of stone and are obviously to
-heavy to move.
+rocks~
+Many piles of rocks surround a few pieces of stacked wood.
 ~
 E
 logs~
@@ -399,8 +390,17 @@ Many black and brown logs are placed carefully in stacks surrounded by piles
 of rocks.
 ~
 E
-rocks~
-Many piles of rocks surround a few pieces of stacked wood.
+tables~
+The tables are long and wide.  They are made of stone and are obviously to
+heavy to move.
+~
+E
+chairs~
+The chairs are made of stone and look very heavy.
+~
+E
+beds~
+The beds are made of metal and rock.
 ~
 S
 #2913
@@ -468,13 +468,13 @@ You see the dark mountain shaft.
 ~
 0 0 2913
 E
-walls~
-The walls are covered in ashes and food.
-~
-E
 food~
 Cake and bread smothered in tomato sauce along with pasta and many other foods
 are stuck to the floor and walls here.
+~
+E
+walls~
+The walls are covered in ashes and food.
 ~
 S
 #2916
@@ -620,13 +620,13 @@ You see a fire newt house.
 ~
 0 0 2922
 E
+crack~
+A very large crack in the wall gives view to a house off in the distance.
+~
+E
 house~
 Through the crack you see an inflamed house.  Screams and laughter come from
 within.
-~
-E
-crack~
-A very large crack in the wall gives view to a house off in the distance.
 ~
 S
 #2922
@@ -694,14 +694,14 @@ You see a waiting room.
 ~
 0 0 2925
 E
-engravings~
-Many engravings on the walls depict fire newt battles.  The fire newts take
-great pride in every battle which has been won no matter how big or small.
-~
-E
 ceiling~
 This blackened ceiling is charred and burned.  Steam and sulfuric acid traces
 are stained on it.
+~
+E
+engravings~
+Many engravings on the walls depict fire newt battles.  The fire newts take
+great pride in every battle which has been won no matter how big or small.
 ~
 S
 #2925
@@ -746,18 +746,18 @@ You see the waiting room.
 door~
 1 0 2925
 E
-spikes~
-Large metal spikes are mounted on the walls.  Mounted upon them are many small
-heads which were received in battle.
+heads~
+Many small heads are posted upon the spikes here and most of them have been
+shrunken down to the size of a baseball.
 ~
 E
 stains~
 Many bloody stains are permanently bonded to the walls.
 ~
 E
-heads~
-Many small heads are posted upon the spikes here and most of them have been
-shrunken down to the size of a baseball.
+spikes~
+Large metal spikes are mounted on the walls.  Mounted upon them are many small
+heads which were received in battle.
 ~
 S
 #2927
@@ -782,9 +782,10 @@ You see the dark tunnel.
 ~
 0 0 2923
 E
-stalagmites~
-Large stalagmites point towards the ceiling from the ground and could be
-hazardous if you fell upon them.
+engravings~
+These are pictures of gargantuous lizards in battle with men wearing hooded
+robes. The men seem to have books in their hands and are using some sort of
+magic. The scenario seems to nearly come to life.
 ~
 E
 stalactites~
@@ -792,10 +793,9 @@ Large stalactites point towards the ground from the ceiling as water slowly
 drips from their tips.
 ~
 E
-engravings~
-These are pictures of gargantuous lizards in battle with men wearing hooded
-robes. The men seem to have books in their hands and are using some sort of
-magic. The scenario seems to nearly come to life.
+stalagmites~
+Large stalagmites point towards the ceiling from the ground and could be
+hazardous if you fell upon them.
 ~
 S
 #2928
@@ -819,9 +819,9 @@ You see the outside of the temple.
 ~
 0 0 2927
 E
-door~
-This enormous door is made from iron.  It looks extremely heavy for it is
-about 20 feet tall and probably several feet thick.
+beams~
+The beams hold up the entire temple.  Without the beams the temple and most
+likely the whole mountain would collapse.
 ~
 E
 engravings~
@@ -830,9 +830,9 @@ themselves but rather of after the battles while the fire newts dragged their
 dead victims behind their chariots of fire.
 ~
 E
-beams~
-The beams hold up the entire temple.  Without the beams the temple and most
-likely the whole mountain would collapse.
+door~
+This enormous door is made from iron.  It looks extremely heavy for it is
+about 20 feet tall and probably several feet thick.
 ~
 S
 #2929
@@ -856,14 +856,14 @@ You see a large trap door.
 ~
 0 0 2930
 E
-door~
-The door to the east through which you just entered creaks on its hinges and
-sends a draft into the room.  It looks very sturdy.
-~
-E
 torches~
 A few torches are burning here leaving you with a little light with which to
 see. They are dim yet somewhat effective.
+~
+E
+door~
+The door to the east through which you just entered creaks on its hinges and
+sends a draft into the room.  It looks very sturdy.
 ~
 S
 #2930
@@ -918,14 +918,14 @@ You see two large doors.
 doors~
 1 2917 2930
 E
-hole~
-The hole to the north is just small enough through which to crawl.  You could
-take a chance if you so desired.
-~
-E
 doors~
 The ornate doors are very large and sturdy.  They are very finely built and
 wouldn't fall apart in a thousand centuries.
+~
+E
+hole~
+The hole to the north is just small enough through which to crawl.  You could
+take a chance if you so desired.
 ~
 S
 #2932
@@ -948,20 +948,9 @@ D5
 door~
 1 -1 2933
 E
-fire~
-The fire in the center of the island glows bright white.  It's so hot fusion
-must be occurring within.  However you still seem to be able to stand and
-watch it somehow...
-~
-E
-pool~
-This pool is made from sulfuric acid and the scent is just about killing you.
-You perish the though of falling in...
-~
-E
-path~
-A small path leads to the middle of the pool where the island sits.  Dancing
-in the middle of that island is a fire.  The path is made of sand and dirt.
+hole~
+The hole to the south is still small enough through which to crawl.  You may
+leave back if you'd like, and that might not be such a bad idea.
 ~
 E
 island~
@@ -969,9 +958,20 @@ A small island in the center of the room seems to call your name.  A small
 fire burns in the middle of it.
 ~
 E
-hole~
-The hole to the south is still small enough through which to crawl.  You may
-leave back if you'd like, and that might not be such a bad idea.
+path~
+A small path leads to the middle of the pool where the island sits.  Dancing
+in the middle of that island is a fire.  The path is made of sand and dirt.
+~
+E
+pool~
+This pool is made from sulfuric acid and the scent is just about killing you.
+You perish the though of falling in...
+~
+E
+fire~
+The fire in the center of the island glows bright white.  It's so hot fusion
+must be occurring within.  However you still seem to be able to stand and
+watch it somehow...
 ~
 S
 #2933
