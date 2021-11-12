@@ -754,8 +754,8 @@ M
 ~
 ~
 #86
-token remort name~
-A Remort Token (Name) - Not Used~
+token remort alignment good~
+A Remort Token (Alignment: Good)~
 A remort token has been dropped here carelessly.~
 ~
 12 134742016 1
@@ -771,6 +771,23 @@ M
 ~
 ~
 #87
+token remort alignment evil~
+A Remort Token (Alignment: Evil)~
+A remort token has been dropped here carelessly.~
+~
+12 134742016 1
+0 0 0 0
+1 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#88
 token remort gender male~
 A Remort Token (Gender: Male)~
 A remort token has been dropped here carelessly.~
@@ -787,27 +804,10 @@ M
 ~
 ~
 ~
-#88
+#89
 token remort gender female~
 A Remort Token (Gender: Female)~
 A remort token has been dropped here carelessly.~
-~
-12 134742016 1
-0 0 0 0
-1 0 0
-0
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-#89
-remort token class avatar~
-A Remort Token (Class: Avatar) - Not Used~
-There is a bit of nothing sitting here.~
 ~
 12 134742016 1
 0 0 0 0
