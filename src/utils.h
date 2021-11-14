@@ -429,7 +429,7 @@ do {                   \
 #define IS_ALIVE(ch) (ch && (CHAR_REAL_ROOM(ch) != NOWHERE) && (GET_POS(ch) > POSITION_DEAD) ? TRUE : FALSE)
 #define IS_DEAD(ch) (!IS_ALIVE(ch))
 #define SAME_ROOM(ch1, ch2) ((CHAR_REAL_ROOM(ch1) != NOWHERE) && (CHAR_REAL_ROOM(ch1) == CHAR_REAL_ROOM(ch2)))
-#define SAME_ZONE(ch1, ch2) (GET_ZONE(ch1) == GET_ZONE(ch2))
+#define SAME_ZONE(ch1, ch2) ((CHAR_REAL_ROOM(ch1) != NOWHERE) && (GET_ZONE(ch1) == GET_ZONE(ch2)))
 #define GET_PROTECTOR(ch) (ch->specials.protect_by)
 #define GET_PROTECTEE(ch) (ch->specials.protecting)
 #define GET_IMMUNE(ch) (ch->specials.immune)

@@ -1648,7 +1648,7 @@ int read_zone(FILE *fl)
 
                if(zone_table[zon].cmd[cmd_no].command == 'X') {
                  fscanf(fl," %d %s %s %s\n",&zone_table[zon].climate,date1,date2,names);
-	           zone_table[zon].create_date = str_dup(date1);
+             zone_table[zon].create_date = str_dup(date1);
                  zone_table[zon].mod_date    = str_dup(date2);
                  zone_table[zon].creators    = str_dup(names);
                  continue;
@@ -2918,63 +2918,63 @@ int is_empty(int zone_nr) {
 
 
 /* read and allocate space for a '~'-terminated string from a given file */
-char *fread_string(FILE *fl)
-{
-     char buf[MSL], tmp[500];
-     char *rslt;
-     register char *point;
-     int flag;
+char *fread_string(FILE *fl) {
+  char buf[MSL] = { 0 }, tmp[MSL / 8] = { 0 };
+  bool flag = FALSE;
 
-     bzero(buf, MSL);
+  do {
+    if (!fgets(tmp, sizeof(tmp), fl)) {
+      log_f("fread_string: fgets");
+      break;
+    }
 
-     do
-     {
-          if (!fgets(tmp, 500, fl))
-          {
-               log_f("fread_str");
-               break;
-/*               produce_core();
-*/
-          }
+    if (strlen(buf) + strlen(tmp) > sizeof(buf) - 1) {
+      log_f("fread_string: string too large");
+      break;
+    }
 
-          if (strlen(tmp) + strlen(buf) > MSL)
-          {
-               log_f("fread_string: string too large (db.c)");
-               break;
-/*               produce_core();
-*/
-          }
-          else
-               strcat(buf, tmp);
+    strcat(buf, tmp);
 
-          for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
-               point--);
-          if ((flag = (*point == '~')))
-               if (*(buf + strlen(buf) - 3) == '\n')
-               {
-                    *(buf + strlen(buf) - 2) = '\r';
-                    *(buf + strlen(buf) - 1) = '\0';
-               }
-               else
-                    *(buf + strlen(buf) -2) = '\0';
-          else
-          {
-               *(buf + strlen(buf) + 1) = '\0';
-               *(buf + strlen(buf)) = '\r';
-          }
-     }
-     while (!flag);
+    size_t len = strlen(buf);
 
-     /* do the allocate boogie  */
+    char *point = buf;
 
-     if (strlen(buf) > 0)
-     {
-          CREATE(rslt, char, strlen(buf) + 1);
-          strcpy(rslt, buf);
-     }
-     else
-          rslt = 0;
-     return(rslt);
+    if (len > 2) {
+      point = buf + len - 2;
+
+      while (point > buf && isspace(*point)) {
+        point--;
+      }
+    }
+
+    flag = (*point == '~');
+
+    if (flag) {
+      if (len >= 3 && *(buf + len - 3) == '\n') {
+        *(buf + len - 2) = '\r';
+        *(buf + len - 1) = '\0';
+      }
+      else {
+        *(buf + len - 2) = '\0';
+      }
+    }
+    else {
+      *(buf + len) = '\r';
+      *(buf + len + 1) = '\0';
+    }
+  } while (!flag);
+
+  size_t len = strlen(buf);
+
+  char *rslt = NULL;
+
+  if (strlen(buf) > 0) {
+    CREATE(rslt, char, len + 1);
+
+    strcpy(rslt, buf);
+  }
+
+  return rslt;
 }
 
 /* release memory allocated for a char struct */
