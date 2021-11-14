@@ -36,13 +36,13 @@
 // Have the room close the new area off on reset.
 int newt_tunnel_room(int room, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_ZONE_RESET) {
-    if (world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
+    if (real_room(TUNNEL_ROOM) != NOWHERE && world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
       world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r = NOWHERE;
 
       send_to_room("Boulders collapse and seal the tunnel to the north.\n\r", real_room(TUNNEL_ROOM));
     }
 
-    if (world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
+    if (real_room(NEW_TUNNEL_ROOM) != NOWHERE && world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
       world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]->to_room_r = NOWHERE;
 
       send_to_room("Boulders collapse and seal the tunnel to the south.\n\r", real_room(NEW_TUNNEL_ROOM));
@@ -59,13 +59,13 @@ int newt_leader(CHAR *leader, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_DIE) {
     send_to_room("A rumbling can be heard from inside the tunnel.\n\r", real_room(LEADER_ROOM));
 
-    if (world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
+    if (real_room(TUNNEL_ROOM) != NOWHERE && world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
       world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r = real_room(NEW_TUNNEL_ROOM);
 
       send_to_room("A magical force removes some boulders and a new tunnel appears to the north.\n\r", real_room(TUNNEL_ROOM));
     }
 
-    if (world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
+    if (real_room(NEW_TUNNEL_ROOM) != NOWHERE && world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
       world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]->to_room_r = real_room(TUNNEL_ROOM);
 
       send_to_room("A magical force removes some boulders and a new tunnel appears to the south.\n\r", real_room(NEW_TUNNEL_ROOM));

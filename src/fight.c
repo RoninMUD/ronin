@@ -120,7 +120,7 @@ void update_pos(CHAR *ch) {
     if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
       GET_POS(ch) = POSITION_FLYING;
     }
-    else if ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_SWIM) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_NOSWIM)) {
+    else if ((CHAR_REAL_ROOM(ch) != NOWHERE) && ((ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_SWIM) || (ROOM_SECTOR_TYPE(CHAR_REAL_ROOM(ch)) == SECT_WATER_NOSWIM))) {
       GET_POS(ch) = POSITION_SWIMMING;
     }
     else if (GET_MOUNT(ch)) {
