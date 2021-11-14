@@ -291,7 +291,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   struct obj_data *tar_obj;
   struct char_data *tar_char;
   char name[MAX_STRING_LENGTH],buf[MAX_INPUT_LENGTH];
-  int qend, spl, percent,con_amt,mult,conc,mana_cost;
+  int qend, spl, percent = 0,con_amt = 0,mult,conc,mana_cost;
   static int castlog=0;
   bool target_ok;
   FILE *fl;

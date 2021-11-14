@@ -821,7 +821,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
         printf_to_char(leader_of_killer, "You gained %d extra special bonus xp!\n\r", experience);
       }
 
-      if (GET_REMORT_EXP(leader_of_killer))
+      if (GET_REMORT_EXP(leader_of_killer) && !IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
       {
         remort_exp = rv2_gain_remort_exp(leader_of_killer, experience);
 
@@ -908,7 +908,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
           printf_to_char(tmp_char, "You gained %d extra special bonus xp!\n\r", experience);
         }
 
-        if (GET_REMORT_EXP(tmp_char))
+        if (GET_REMORT_EXP(tmp_char) && !IS_SET(GET_PFLAG(tmp_char), PLR_REMORT_DISABLED))
         {
           remort_exp = rv2_gain_remort_exp(tmp_char, experience);
 
@@ -2193,7 +2193,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (victim != ch) {
     gain_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
 
-    if (GET_REMORT_EXP(ch)) {
+    if (GET_REMORT_EXP(ch) && !IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED)) {
       rv2_gain_remort_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
     }
 

@@ -520,6 +520,8 @@ void score_query(CHAR *ch, int query, bool opt_text, bool new_line)
         strcat(buf, " Q-PLAYER");
       if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
         strcat(buf, " Q-QUIET");
+      if (IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
+        strcat(buf, " REMORT_DISABLED");
     }
     else
       strcat(buf, " None");
@@ -1025,6 +1027,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
           send_to_char(" Q-PLAYER", ch);
         if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
           send_to_char(" Q-QUIET", ch);
+        if (IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
+          send_to_char(" REMORT_DISABLED", ch);
         send_to_char("\n\r", ch);
       }
       else
@@ -1253,6 +1257,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
         send_to_char("You are a killer.\n\r", ch);
       if (IS_SET(GET_PFLAG(ch), PLR_THIEF))
         send_to_char("You are a thief.\n\r", ch);
+      if (IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
+        send_to_char("You are not earning remort experience.\n\r", ch);
     }
 
     switch (GET_POS(ch))
@@ -1353,6 +1359,8 @@ void do_score(CHAR *ch, char *argument, int cmd)
             send_to_char("Q-PLAYER ", ch);
           if (IS_SET(GET_PFLAG(ch), PLR_QUIET))
             send_to_char("Q-QUIET ", ch);
+          if (IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
+            send_to_char(" REMORT_DISABLED", ch);
           send_to_char(" \n\r", ch);
         }
       }

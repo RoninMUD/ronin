@@ -24,6 +24,7 @@ void stop_fighting(CHAR *ch);
 void make_corpse(struct char_data *ch);
 void change_alignment(struct char_data *ch, struct char_data *victim);
 void death_cry(struct char_data *ch);
+void death_list(CHAR *ch);
 void raw_kill_ex(CHAR *ch, bool statue);
 void raw_kill(CHAR *ch);
 void divide_experience(struct char_data *ch, struct char_data *victim, int none);

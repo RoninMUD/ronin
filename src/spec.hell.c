@@ -299,7 +299,7 @@ void Slice(CHAR *s, CHAR *victim) {
 
    /* Hell Object Specs */
 
-int is_shop(CHAR *mob);
+int is_shopkeeper(CHAR *mob);
 
 
 int Unguis (OBJ *dagger, CHAR *ch, int cmd, char *arg) {
@@ -494,7 +494,7 @@ int Night_Sword (OBJ *sword, CHAR *ch, int cmd, char *arg) {
         send_to_char("Your sword refuses to attack other players!\n\r",owner);
         return TRUE;
       }
-      if(is_shop(victim)) break;
+      if(is_shopkeeper(victim)) break;
 
       if(IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags,SAFE) || GET_POS(owner)!=POSITION_STANDING || victim==owner->specials.fighting || !IS_NPC(victim)) break;
       if(GET_ALIGNMENT(owner) <= -950 && GET_ALIGNMENT(victim) >= 750) chance = 66;

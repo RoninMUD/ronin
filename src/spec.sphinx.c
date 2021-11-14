@@ -33,7 +33,7 @@
 #include "spec_assign.h"
 
 /* Sword of Healing */
-int is_shop(CHAR *mob);
+int is_shopkeeper(CHAR *mob);
 
 int sword_of_healing(OBJ *obj,CHAR *ch, int cmd, char *argument)
 {
@@ -66,7 +66,7 @@ int sword_of_healing(OBJ *obj,CHAR *ch, int cmd, char *argument)
     /* Cast the spell on him */
 
     if(number(0,20) != 0) return FALSE;
-    if(is_shop(vic)) return FALSE;
+    if(is_shopkeeper(vic)) return FALSE;
 
     act("A briliant flash of light envelops $n !",FALSE,ch,0,0,TO_ROOM);
     send_to_char("A brilliant flash of light envelopes you !\n\r",ch);

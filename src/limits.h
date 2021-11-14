@@ -7,14 +7,14 @@
 #define _LIMITS_H_
 
 /* Public Procedures */
-int mana_limit(struct char_data *ch);
-int hit_limit(struct char_data *ch);
-int move_limit(struct char_data *ch);
-void set_title(struct char_data *ch, char *title);
-void gain_condition(struct char_data *ch, int condition, int value);
+int mana_limit(CHAR *ch);
+int hit_limit(CHAR *ch);
+int move_limit(CHAR *ch);
+void advance_level(CHAR *ch);
+void set_title(CHAR *ch, char *title);
+void gain_condition(CHAR *ch, int condition, int value);
 
-struct title_type
-{
+struct title_type {
 	char *title_m;
 	char *title_f;
 };

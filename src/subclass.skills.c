@@ -2452,7 +2452,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
 
         act("You breathe a massive plume of dragon fire at $N, immolating $M!", FALSE, ch, 0, victim, TO_CHAR);
         act("$n breathes a massive plume of dragon fire at you, immolating you!", FALSE, ch, 0, victim, TO_VICT);
-        act("$n breathes a massive plume of dragon fire at $n, immolating $M!", FALSE, ch, 0, victim, TO_NOTVICT);
+        act("$n breathes a massive plume of dragon fire at $N, immolating $M!", FALSE, ch, 0, victim, TO_NOTVICT);
 
         damage(ch, victim, GET_LEVEL(ch) * 10, TYPE_UNDEFINED, DAM_MAGICAL);
 
@@ -2484,8 +2484,8 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
         }
 
         if ((num_stacks > 0) && (num_stacks <= dragon_breath_max_stacks) && IS_ALIVE(victim)) {
-          printf_to_char(victim, "You are %s in blazing dragonfire!\n\r", dragon_breath_stack_text[num_stacks - 1]);
-          printf_to_room(CHAR_REAL_ROOM(victim), "%s is %s in blazing dragonfire!\n\r", GET_DISP_NAME(victim), dragon_breath_stack_text[num_stacks - 1]);
+          printf_to_char(victim, "You are %s in blazing dragon fire!\n\r", dragon_breath_stack_text[num_stacks - 1]);
+          printf_to_room(CHAR_REAL_ROOM(victim), "%s is %s in blazing dragon fire!\n\r", GET_DISP_NAME(victim), dragon_breath_stack_text[num_stacks - 1]);
         }
 
         skill_wait_user(ch, SKILL_SHAPESHIFT, 1);

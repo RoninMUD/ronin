@@ -25,6 +25,8 @@ void argument_interpreter(char *string, char *arg1, char *arg2);
 void chop_string(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len);
 void half_chop(char *string, char *arg, size_t arg_len, char *sub, size_t sub_len);
 
+int enchantment_special(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg);
+
 struct command_info {
   void(*command_pointer) (struct char_data *ch, char *argument, int cmd);
   ubyte minimum_position;
