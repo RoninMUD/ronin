@@ -40,7 +40,6 @@
 
 
 /* Externs */
-
 extern struct time_info_data age(CHAR *ch);
 
 extern void auto_rent(CHAR *ch);
@@ -68,6 +67,7 @@ int mana_gain(CHAR *ch);
 int hit_gain(CHAR *ch);
 int move_gain(CHAR *ch);
 void advance_level(CHAR *ch);
+void set_title(CHAR *ch, char *title);
 void gain_exp(CHAR *ch, int gain);
 void gain_exp_regardless(CHAR *ch, int gain);
 void gain_condition(CHAR *ch, int condition, int value);
@@ -75,7 +75,6 @@ void check_idling(CHAR *ch);
 void point_update(void);
 
 /* Constants */
-
 const int optimal_age = 45;
 
 const double rank_regen_non_caster[] = {

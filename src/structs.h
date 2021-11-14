@@ -562,6 +562,7 @@ struct room_data
 #define MAX_WEAR    18
 #define MAX_AFFECT  40  /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 #define MAX_COND    4
+#define MAX_SAVE    5
 
 /* Predifined conditions */
 #define DRUNK  0
@@ -950,6 +951,7 @@ struct room_data
 #define PLR_TAGBRF            (1 << 28) /* 268435456 */
 #define PLR_PROMPT_NEWLINE    (1 << 29) /* 536870912 */
 #define PLR_TICKER            (1 << 30) /* 1073741824 */
+#define PLR_REMORT_DISABLED   (1 << 31) /* 2147483648 */
 
 /* Toggles -- used in ver3.toggles */
 #define TOG_BLOCK             (1 << 0)  /* 1 */
@@ -1119,8 +1121,8 @@ struct char_special_data
   ubyte carry_items;        /* Number of items carried                 */
   int timer;               /* Timer for update                        */
   sh_int was_in_room;      /* storage of location for linkdead people */
-  sh_int apply_saving_throw[5]; /* Saving throw (Bonuses)             */
-  sbyte conditions[4];      /* Drunk full etc.                        */
+  sh_int apply_saving_throw[MAX_SAVE]; /* Saving throw (Bonuses)             */
+  sbyte conditions[MAX_COND];      /* Drunk full etc.                        */
 
   byte damnodice;           /* The number of damage dice's            */
   byte damsizedice;         /* The size of the damage dice's          */
@@ -1592,8 +1594,8 @@ struct char_file_u_5
   /* char data */
   char name[20];
   char pwd[11];
-  sh_int apply_saving_throw[5];
-  int32_t conditions[3];
+  sh_int apply_saving_throw[MAX_SAVE];
+  int32_t conditions[MAX_COND - 1];
 
   int32_t total_cost;    /* The cost for all items, per day    */
   int32_t last_update;  /* Time in seconds, when last updated */

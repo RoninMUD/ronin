@@ -12,11 +12,10 @@
 
 /* Ronin Includes */
 #include "structs.h"
-#include "constants.h"
-#include "utils.h"
-#include "act.h"
+#include "aff_ench.h"
 #include "cmd.h"
 #include "comm.h"
+#include "constants.h"
 #include "db.h"
 #include "enchant.h"
 #include "fight.h"
@@ -25,15 +24,9 @@
 #include "limits.h"
 #include "meta.h"
 #include "spec_assign.h"
-#include "spells.h"
-#include "time.h"
-#include "remortv2.h"
-#include "aff_ench.h"
+#include "utils.h"
 
-/* Externs */
-extern void advance_level(CHAR *ch);
-extern void death_list(CHAR *ch);
-extern void imm_grace_remove_enchant(CHAR *ch);
+#include "remortv2.h"
 
 /* Simulate a character advancing levels and gaining average hit/mana/move points every time. */
 void rv2_sim_advance_level(CHAR *ch) {
@@ -83,10 +76,6 @@ void rv2_sim_advance_level(CHAR *ch) {
     case CLASS_COMMANDO:
       gain = 9;
       break;
-
-    default:
-      gain = 0;
-      break;
   }
 
   adjust_hit_mana_move(ch, META_HIT, gain);
@@ -107,10 +96,6 @@ void rv2_sim_advance_level(CHAR *ch) {
     case CLASS_COMMANDO:
       gain = 3;
       break;
-
-    default:
-      gain = 0;
-      break;
   }
 
   adjust_hit_mana_move(ch, META_MANA, gain);
@@ -130,7 +115,7 @@ int rv2_adjust_remort_exp(CHAR *ch, int exp) {
 
     send_to_char("Congratulations! You have completed the remort process!\n\r", ch);
 
-    printf_to_world_except(ch, "%s has completed the remort process! All hail %s!\n\r", PERS(ch, ch), PERS(ch, ch));
+    printf_to_world_except(ch, "%s has completed the remort process! All hail %s!\n\r", GET_DISP_NAME(ch), GET_DISP_NAME(ch));
 
     rv2_remove_enchant(ch);
   }
@@ -211,37 +196,48 @@ int rv2_calc_remort_mult(CHAR *ch) {
   mult = MAX(MIN(mult, RV2_MAX_EXP_MULTIPLIER), RV2_EXP_MULTIPLIER);
 
   // Prestige Perk 1
-  if (GET_PRESTIGE_PERK(ch) >= 1) mult += 1;
+  if (GET_PRESTIGE_PERK(ch) >= 1) {
+    mult += 1;
+  }
 
   return mult;
 }
 
-/* Give the player remort experience if they deserve it and return how much experience was given. */
+/* Give the character remort experience if they deserve it and return how much experience was given. */
 int rv2_gain_remort_exp(CHAR *ch, int exp) {
   if (GET_REMORT_EXP(ch) <= 0) return 0;
 
-  if (exp > RV2_MAX_EXP_GAIN) exp = RV2_MAX_EXP_GAIN;
+  /* Limit the experience gain. */
+  if (exp > RV2_MAX_EXP_GAIN) {
+    exp = RV2_MAX_EXP_GAIN;
+  }
 
+  /* Multiply the experience gained by the character's remort multiplier. */
   exp *= rv2_calc_remort_mult(ch);
 
-  if (exp > GET_REMORT_EXP(ch)) exp = (int)GET_REMORT_EXP(ch);
+  /* Limit experience gain to the character's available remort experience pool. */
+  if (exp > GET_REMORT_EXP(ch)) {
+    exp = (int)GET_REMORT_EXP(ch);
+  }
 
-  rv2_adjust_remort_exp(ch, -exp); /* Deduct the experience from the character's remort experience pool. */
-  gain_exp(ch, exp); /* Give the experience to the player. */
+  /* Deduct the experience from the character's remort experience pool. */
+  rv2_adjust_remort_exp(ch, -exp);
+
+  /* Give the experience to the character. */
+  gain_exp(ch, exp);
 
   return exp;
 }
 
 /* Return the remort experience pool of a character, based on multiple factors. */
 long long int rv2_meta_sim(CHAR *ch) {
+  CHAR *sim = NULL;
+  int i = 0, j = 0, stat_total = 0;
+  long long int exp = 0;
+
 #ifdef TEST_SITE
   char buf[MSL];
 #endif
-  CHAR *sim = NULL;
-  int i = 0;
-  int j = 0;
-  int stat_total = 0;
-  long long int exp = 0;
 
   if (GET_LEVEL(ch) < 6) return 0;
 
@@ -288,12 +284,12 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Level EXP to Pool........ %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Level EXP to Pool........ %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
 
-  sprintf(buf, "Base Hit:  %5d, Target Hit:  %5d\n\r",
+  snprintf(buf, sizeof(buf), "Base Hit:  %5d, Target Hit:  %5d\n\r",
     get_max_stat(sim, META_HIT), get_max_stat(ch, META_HIT));
   send_to_char(buf, ch);
 
@@ -319,15 +315,15 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Avg. No. of Hit Metas.... %d\n\r", i);
+  snprintf(buf, sizeof(buf), "Avg. No. of Hit Metas.... %d\n\r", i);
   send_to_char(buf, ch);
 
-  sprintf(buf, "Hit Meta EXP to Pool..... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Hit Meta EXP to Pool..... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
 
-  sprintf(buf, "Base Mana: %5d, Target Mana: %5d\n\r",
+  snprintf(buf, sizeof(buf), "Base Mana: %5d, Target Mana: %5d\n\r",
     get_max_stat(sim, META_MANA), get_max_stat(ch, META_MANA));
   send_to_char(buf, ch);
 
@@ -353,15 +349,15 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Avg. No. of Mana Metas... %d\n\r", i);
+  snprintf(buf, sizeof(buf), "Avg. No. of Mana Metas... %d\n\r", i);
   send_to_char(buf, ch);
 
-  sprintf(buf, "Mana Meta EXP to Pool.... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Mana Meta EXP to Pool.... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
 
-  sprintf(buf, "Base Move: %5d, Target Move: %5d\n\r",
+  snprintf(buf, sizeof(buf), "Base Move: %5d, Target Move: %5d\n\r",
     get_max_stat(sim, META_MOVE), get_max_stat(ch, META_MOVE));
   send_to_char(buf, ch);
 
@@ -389,7 +385,7 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Move Meta EXP to Pool.... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Move Meta EXP to Pool.... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -406,7 +402,7 @@ long long int rv2_meta_sim(CHAR *ch) {
   /* Calculate the number of metas required to match the character's stats if their stat total is above 65. */
   i = 0;
   exp = 0;
-  if (stat_total > (RV2_SIM_AVG_STAT * 5) || get_ability(ch, META_STR_ADD)) {
+  if (stat_total > (RV2_SIM_AVG_STAT * 5) || get_ability(ch, META_STR_ADD) > 0) {
     for (i = META_STR; i <= META_CON; i++) {
       if (get_ability(sim, i) < RV2_SIM_AVG_STAT) {
         for (j = 0; get_ability(sim, i) < RV2_SIM_AVG_STAT; j++) {
@@ -429,7 +425,7 @@ long long int rv2_meta_sim(CHAR *ch) {
     }
 
     /* Calculate the amount of experience invested in STR_ADD metas. */
-    if (get_ability(ch, META_STR_ADD)) {
+    if (get_ability(ch, META_STR_ADD) > 0) {
       for (i = 0; get_ability(sim, META_STR_ADD) < get_ability(ch, META_STR_ADD); i++) {
         exp += rv2_adjust_remort_exp(sim, meta_cost(sim, META_STR_ADD));
 
@@ -442,7 +438,7 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Stat Meta EXP to Pool.... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Stat Meta EXP to Pool.... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -452,7 +448,7 @@ long long int rv2_meta_sim(CHAR *ch) {
   /* Calculate the amount of experience invested in ranks. */
   i = 0;
   exp = 0;
-  if (get_rank(ch)) {
+  if (get_rank(ch) > 0) {
     for (i = 0; i < get_rank(ch); i++) {
       exp += rv2_adjust_remort_exp(sim, 5000000 * (i + 1));
     }
@@ -460,7 +456,7 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Rank EXP to Pool......... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Rank EXP to Pool......... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -469,13 +465,13 @@ long long int rv2_meta_sim(CHAR *ch) {
 
   /* Add the character's current experience pool to the remort experience pool. */
   exp = 0;
-  if (GET_EXP(ch)) {
+  if (GET_EXP(ch) > 0) {
     exp = rv2_adjust_remort_exp(sim, GET_EXP(ch));
   }
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Normal EXP to Pool....... %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Normal EXP to Pool....... %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -484,13 +480,13 @@ long long int rv2_meta_sim(CHAR *ch) {
 
   /* Add the character's current death experience pool to the remort experience pool. */
   exp = 0;
-  if (GET_DEATH_EXP(ch)) {
+  if (GET_DEATH_EXP(ch) > 0) {
     exp = rv2_adjust_remort_exp(sim, GET_DEATH_EXP(ch));
   }
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Death EXP to Pool........ %lld\n\r", exp);
+  snprintf(buf, sizeof(buf), "Death EXP to Pool........ %lld\n\r", exp);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -499,41 +495,41 @@ long long int rv2_meta_sim(CHAR *ch) {
 
 #ifdef TEST_SITE
 
-  sprintf(buf, "Remort v2 EXP Pool....... %ld\n\r", GET_REMORT_EXP(sim));
+  snprintf(buf, sizeof(buf), "Remort v2 EXP Pool....... %ld\n\r", GET_REMORT_EXP(sim));
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
 
-  sprintf(buf, "Avg. Stat Used........... %d\n\r", RV2_SIM_AVG_STAT);
+  snprintf(buf, sizeof(buf), "Avg. Stat Used........... %d\n\r", RV2_SIM_AVG_STAT);
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
 
   send_to_char("Simulated Final Stats\n\r", ch);
   send_to_char("---------------------\n\r", ch);
-  sprintf(buf, "Level... %d\n\r", GET_LEVEL(sim));
+  snprintf(buf, sizeof(buf), "Level... %d\n\r", GET_LEVEL(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Class... %s\n\r", GET_CLASS_NAME(ch));
+  snprintf(buf, sizeof(buf), "Class... %s\n\r", GET_CLASS_NAME(ch));
   send_to_char(buf, ch);
-  sprintf(buf, "Rank.... %d\n\r", get_rank(ch));
+  snprintf(buf, sizeof(buf), "Rank.... %d\n\r", get_rank(ch));
   send_to_char(buf, ch);
-  sprintf(buf, "Hit..... %d\n\r", GET_MAX_HIT(sim));
+  snprintf(buf, sizeof(buf), "Hit..... %d\n\r", GET_MAX_HIT(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Mana.... %d\n\r", GET_MAX_MANA(sim));
+  snprintf(buf, sizeof(buf), "Mana.... %d\n\r", GET_MAX_MANA(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Move.... %d\n\r", GET_MAX_MOVE(sim));
+  snprintf(buf, sizeof(buf), "Move.... %d\n\r", GET_MAX_MOVE(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Str..... %d\n\r", GET_OSTR(sim));
+  snprintf(buf, sizeof(buf), "Str..... %d\n\r", GET_OSTR(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Int..... %d\n\r", GET_OINT(sim));
+  snprintf(buf, sizeof(buf), "Int..... %d\n\r", GET_OINT(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Wis..... %d\n\r", GET_OWIS(sim));
+  snprintf(buf, sizeof(buf), "Wis..... %d\n\r", GET_OWIS(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Dex..... %d\n\r", GET_ODEX(sim));
+  snprintf(buf, sizeof(buf), "Dex..... %d\n\r", GET_ODEX(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Con..... %d\n\r", GET_OCON(sim));
+  snprintf(buf, sizeof(buf), "Con..... %d\n\r", GET_OCON(sim));
   send_to_char(buf, ch);
-  sprintf(buf, "Add..... %d\n\r", GET_OADD(sim));
+  snprintf(buf, sizeof(buf), "Add..... %d\n\r", GET_OADD(sim));
   send_to_char(buf, ch);
 
   send_to_char("\n\r", ch);
@@ -580,39 +576,29 @@ int rv2_get_ability_by_apply(CHAR *ch, int ability_apply) {
 
 /* Extract remort token. */
 void rv2_extract_token(OBJ *obj) {
-  char buf[MSL];
+  if (!obj) return;
 
-  sprintf(buf, "%s vanishes from existence.\n\r", OBJ_SHORT(obj));
-
-  if (obj->carried_by) {
-    send_to_char(buf, obj->carried_by);
+  if (OBJ_CARRIED_BY(obj)) {
+    printf_to_char(OBJ_CARRIED_BY(obj), "%s vanishes from existence.\n\r", OBJ_SHORT(obj));
 
     obj_from_char(obj);
-    extract_obj(obj);
   }
-  else if (obj->in_room) {
-    send_to_room(buf, obj->in_room);
+  else if (OBJ_IN_ROOM(obj)) {
+    printf_to_room(OBJ_IN_ROOM(obj), "%s vanishes from existence.\n\r", OBJ_SHORT(obj));
 
     obj_from_room(obj);
-    extract_obj(obj);
   }
+
+  extract_obj(obj);
 }
 
-/* Determines what remort tokens, if any, a player has and what their choices are based on those tokens. */
+/* Determines what remort tokens, if any, a character has and what their choices are based on those tokens. */
 struct rv2_token_info rv2_get_token_info(CHAR *ch) {
-  struct rv2_token_info token_info;
+  struct rv2_token_info token_info = { 0 };
 
-  token_info.alignment_token = NULL;
-  token_info.gender_token = NULL;
-  token_info.class_token = NULL;
-  token_info.alignment = 0;
-  token_info.gender = 0;
   token_info.class_num = GET_CLASS(ch);
-  strncpy(token_info.alignment_name, "", sizeof(token_info.alignment_name));
-  strncpy(token_info.gender_name, "", sizeof(token_info.gender_name));
-  strncpy(token_info.class_name, "", sizeof(token_info.class_name));
 
-  for (OBJ *tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+  for (OBJ *tmp_obj = GET_CARRYING(ch); tmp_obj; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
     if (V_OBJ(tmp_obj) < RV2_TOKEN_MIN_VNUM || V_OBJ(tmp_obj) > RV2_TOKEN_MAX_VNUM) continue;
     if (OBJ_VALUE0(tmp_obj) != GET_ID(ch)) continue;
     if (token_info.alignment_token && (V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_GOOD || V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_EVIL)) continue;
@@ -632,11 +618,11 @@ struct rv2_token_info rv2_get_token_info(CHAR *ch) {
 
   if (token_info.alignment_token) {
     if (V_OBJ(token_info.alignment_token) == RV2_OBJ_TOKEN_GOOD) {
-      token_info.alignment = 1000;
+      token_info.alignment = 500;
       strncpy(token_info.alignment_name, "good", sizeof(token_info.gender_name));
     }
     else if (V_OBJ(token_info.alignment_token) == RV2_OBJ_TOKEN_EVIL) {
-      token_info.alignment = -1000;
+      token_info.alignment = -500;
       strncpy(token_info.alignment_name, "evil", sizeof(token_info.gender_name));
     }
   }
@@ -702,14 +688,18 @@ struct rv2_token_info rv2_get_token_info(CHAR *ch) {
 int rv2_token_check(CHAR *ch, struct rv2_token_info token_info) {
   if (!token_info.gender_token || !token_info.class_token) {
     if (!token_info.gender_token && !token_info.class_token) {
-      send_to_char("`qA pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation without first making the necessary preparations. If you do wish to proceed, I humbly request you at least purchase `kgender`q and `nclass`q tokens of your own choosing.'\n\r", ch);
+      send_to_char("`qA pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+      send_to_char("He whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation without first making the necessary preparations.'\n\r", ch);
+      send_to_char("He continues, 'If you do wish to proceed, I humbly request you at least purchase `kgender`q and `nclass`q tokens of your own choosing.'\n\r", ch);
     }
     else if (token_info.gender_token && !token_info.class_token) {
-      printf_to_char(ch, "`qImmortalis gives you a pensive glance as he calmly places a token into the palm of your hand and whispers 'A `k%s`q it shall be, but what of the `nclass`q?'\n\r",
+      send_to_char("`qImmortalis gives you a pensive glance as he calmly places a token into the palm of your hand.\n\r", ch);
+      printf_to_char(ch, "He whispers, 'A `k%s`q it shall be, but what of the `nclass`q?'\n\r",
         token_info.gender_name);
     }
     else if (!token_info.gender_token && token_info.class_token) {
-      printf_to_char(ch, "`qImmortalis gives you a wistful smile as he gently places a token into the palm of your hand and whispers 'A `n%s`q it shall be, but what of the `kgender`q?'\n\r",
+      send_to_char("`qImmortalis gives you a wistful smile as he gently places a token into the palm of your hand.\n\r", ch);
+      printf_to_char(ch, "He whispers, 'A `n%s`q it shall be, but what of the `kgender`q?'\n\r",
         token_info.class_name);
     }
 
@@ -721,47 +711,34 @@ int rv2_token_check(CHAR *ch, struct rv2_token_info token_info) {
 
 /* Calculate the character's remort experience pool, their QP and SCP, and any fees they must pay in order to remort. */
 struct rv2_remort_info rv2_appraise(CHAR *ch) {
-  int i = 0;
-  int j = 0;
-  long long int tmp = 0;
-  long long int chunk = 0;
-  struct rv2_remort_info remort_info;
-
-  remort_info.exp = 0;
-  remort_info.qp = 0;
-  remort_info.scp = 0;
-  remort_info.qp_fee = 0;
-  remort_info.scp_fee = 0;
+  struct rv2_remort_info remort_info = { 0 };
 
   remort_info.exp = rv2_meta_sim(ch);
 
-  /* Calculate the amount of QP invested in the player's stats. */
-  for (i = APPLY_STR; i <= APPLY_CON; i++) {
+  /* Calculate the amount of QP invested in the character's stats. */
+  for (int i = APPLY_STR; i <= APPLY_CON; i++) {
     if (rv2_get_ability_by_apply(ch, i) < 19) continue;
 
-    for (j = 19; j <= rv2_get_ability_by_apply(ch, i); j++) {
+    for (int j = 19; j <= rv2_get_ability_by_apply(ch, i); j++) {
       remort_info.qp += (j - 18) * 200;
     }
   }
 
   remort_info.qp += GET_QP(ch); /* Add in their current QP pool. */
 
-  /* Calculate the amount of SCP invested in the player's subclass levels. */
-  for (i = 1; i <= GET_SC_LEVEL(ch); i++) {
+  /* Calculate the amount of SCP invested in the character's subclass levels. */
+  for (int i = 1; i <= GET_SC_LEVEL(ch); i++) {
     remort_info.scp += i * 70;
   }
 
   remort_info.scp += GET_SCP(ch); /* Add in their current SCP pool. */
 
   /* Determine the fee to be charged for the remort process (if any). */
-  if (FREEMORT) {
-    remort_info.qp_fee = 0;
-    remort_info.scp_fee = 0;
-  }
-  else {
-    tmp = RV2_MIN_EXP_COST;
-    if (remort_info.exp > tmp) {
-      tmp = RV2_MAX_EXP_COST;
+  if (!FREEMORT) {
+    if (remort_info.exp > RV2_MIN_EXP_COST) {
+      long long int tmp = RV2_MAX_EXP_COST;
+      int chunk = 0;
+
       if (remort_info.exp > tmp) {
         remort_info.qp_fee = RV2_MAX_QP_COST;
         remort_info.scp_fee = RV2_MAX_SCP_COST;
@@ -794,33 +771,51 @@ void rv2_appraise_message(CHAR *ch, struct rv2_remort_info remort_info) {
   long long int cost = RV2_MIN_EXP_COST;
 
   if (FREEMORT) {
-    printf_to_char(ch, "Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee. To transcend this existence, I will require no level of compensation, as today celebrates the efforts of the fallen on behalf of us all. For my part however, I will return to you a sum of %lld experience points, %d quest points and %d subclass points.'\n\r",
+    send_to_char("Immortalis whispers, 'To transcend this existence, I will require no level of compensation, as today celebrates the efforts of the fallen on behalf of us all.'\n\r", ch);
+    printf_to_char(ch, "He continues, 'For my part however, I will return to you a sum of %lld experience points, %d quest points, and %d subclass points.'\n\r",
       remort_info.exp, remort_info.qp, remort_info.scp);
   }
   else if (remort_info.exp > cost) {
+    send_to_char("Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee.'\n\r", ch);
+
     if (remort_info.qp_fee > remort_info.qp || remort_info.scp_fee > remort_info.scp) {
-      printf_to_char(ch, "Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee. To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points, which I see you do not possess. Were you to acquire it however, I would return to you a sum of %lld experience points.'\n\r",
-        remort_info.qp_fee, remort_info.scp_fee, remort_info.exp);
+      printf_to_char(ch, "Immortalis whispers, 'To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points, which I see you do not possess.'\n\r",
+        remort_info.qp_fee, remort_info.scp_fee);
+      printf_to_char(ch, "He continues, 'Were you to acquire it however, I would return to you a sum of %lld experience points.'\n\r",
+        remort_info.exp);
     }
     else {
-      printf_to_char(ch, "Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee. To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points. For my part, I will return to you a sum of %lld experience points, %d quest points and %d subclass points, for you to spend at your leisure.'\n\r",
-        remort_info.qp_fee, remort_info.scp_fee, remort_info.exp, MAX(0, remort_info.qp - remort_info.qp_fee), MAX(0, remort_info.scp - remort_info.scp_fee));
+      printf_to_char(ch, "Immortalis whispers, 'To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points.\n\r'",
+        remort_info.qp_fee, remort_info.scp_fee);
+      printf_to_char(ch, "He continues, 'For my part, I will return to you a sum of %lld experience points, %d quest points, and %d subclass points.'\n\r",
+        remort_info.exp, MAX(0, remort_info.qp - remort_info.qp_fee), MAX(0, remort_info.scp - remort_info.scp_fee));
     }
   }
   else {
-    printf_to_char(ch, "Immortalis whispers 'Commensurate to your achievements, so too shall be the measure of my fee. To transcend this existence, I will require no level of compensation, as your achievements do not yet merit excessive effort on my behalf. For my part however, I will return to you a sum of %lld experience points, %d quest points and %d subclass points.'\n\r",
+    send_to_char("Immortalis whispers, 'To transcend this existence, I will require no level of compensation, as your achievements do not yet merit excessive effort on my behalf.'\n\r", ch);
+    printf_to_char(ch, "He continues, 'For my part however, I will return to you a sum of %lld experience points, %d quest points, and %d subclass points.'\n\r",
       remort_info.exp, remort_info.qp, remort_info.scp);
   }
 }
 
-/* Add the remort v2 enchant. */
+/* Add the remort enchant. */
 void rv2_add_enchant(CHAR *ch) {
-  ench_apply(ch, TRUE, "Remort", 0, -1, 0, 0, 0, 0, 0, NULL);
+  ENCH remort_ench = { 0 };
+
+  remort_ench.type = ENCHANT_REMORTV2;
+
+  enchantment_to_char(ch, &remort_ench, TRUE);
 }
 
-/* Remove the remort v2 enchant. */
+/* Remove the remort enchant. */
 void rv2_remove_enchant(CHAR *ch) {
-  ench_from_char(ch, "Remort", 0, FALSE);
+  ENCH *remort_ench = ench_get_from_char(ch, NULL, ENCHANT_REMORTV2);
+
+  if (remort_ench) {
+    send_to_char("You are no longer affected by Remort.\n\r", ch);
+
+    ench_remove(ch, remort_ench, FALSE);
+  }
 }
 
 /* Mobile Specs */
@@ -828,18 +823,8 @@ void rv2_remove_enchant(CHAR *ch) {
 /* Responsible for the core of the remort system. */
 int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   char buf[MSL];
-  OBJ *token = NULL;
-  OBJ *tmp_obj = NULL;
-  OBJ *next_obj = NULL;
-  int vnum = 0;
-  int i = 0;
-  long age_year = 17;
   struct rv2_remort_info remort_info;
   struct rv2_token_info token_info;
-  ENCH *ench = NULL;
-  ENCH *ench_next = NULL;
-  AFF *aff = NULL;
-  AFF *aff_next = NULL;
 
   /* Buying tokens is handled as a spec due to shopkeeper limitations and a few other requirements. */
   if (cmd == CMD_BUY) {
@@ -848,17 +833,22 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     if (CHAR_VIRTUAL_ROOM(mob) != RV2_WLD_SANCTUM_ETERNITY) return FALSE;
 
     if (GET_LEVEL(ch) < 6) {
-      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste. If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
+      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.'\n\r", ch);
+      send_to_char("Immortalis whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste.'\n\r", ch);
+      send_to_char("He continues, 'If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
 
       return TRUE;
     }
-    else if (IS_IMMORTAL(ch)) {
-      send_to_char("Consult with a SUP+ about remorting as an immortal.\n\r", ch);
+
+    if (IS_IMMORTAL(ch)) {
+      send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
 
       return TRUE;
     }
 
     one_argument(arg, buf);
+
+    int vnum = -1;
 
     if (!str_cmp(buf, "good")) vnum = RV2_OBJ_TOKEN_GOOD;
     else if (!str_cmp(buf, "evil")) vnum = RV2_OBJ_TOKEN_EVIL;
@@ -875,93 +865,95 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     else if (!str_cmp(buf, "bard")) vnum = RV2_OBJ_TOKEN_BARD;
     else if (!str_cmp(buf, "commando")) vnum = RV2_OBJ_TOKEN_COMMANDO;
     else {
-      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot provide that which you request.'\n\r", ch);
+      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+      send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot provide that which you request.'\n\r", ch);
 
       return TRUE;
     }
 
-    /* Ensure that a player can't buy more than one of each type of token. */
-    for (tmp_obj = ch->carrying; tmp_obj; tmp_obj = tmp_obj->next_content) {
+    /* Ensure that a character can't buy more than one of each type of token. */
+    bool deny = FALSE;
+
+    for (OBJ *tmp_obj = GET_CARRYING(ch); tmp_obj && !deny; tmp_obj = OBJ_NEXT_CONTENT(tmp_obj)) {
       if (V_OBJ(tmp_obj) < RV2_TOKEN_MIN_VNUM || V_OBJ(tmp_obj) > RV2_TOKEN_MAX_VNUM) continue;
 
-      if ((vnum == RV2_OBJ_TOKEN_GOOD || vnum == RV2_OBJ_TOKEN_EVIL) &&
-        (V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_GOOD || V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_EVIL)) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you more than a single token of that variety.\n\r", ch);
-
-        return TRUE;
+      if (((vnum == RV2_OBJ_TOKEN_GOOD || vnum == RV2_OBJ_TOKEN_EVIL) && (V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_GOOD || V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_EVIL)) ||
+        ((vnum == RV2_OBJ_TOKEN_MALE || vnum == RV2_OBJ_TOKEN_FEMALE) && (V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_MALE || V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_FEMALE)) ||
+        ((vnum >= RV2_OBJ_TOKEN_MAGE && vnum <= RV2_OBJ_TOKEN_COMMANDO) && (V_OBJ(tmp_obj) >= RV2_OBJ_TOKEN_MAGE && V_OBJ(tmp_obj) <= RV2_OBJ_TOKEN_COMMANDO))) {
+        deny = TRUE;
       }
-      else if ((vnum == RV2_OBJ_TOKEN_MALE || vnum == RV2_OBJ_TOKEN_FEMALE) &&
-        (V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_MALE || V_OBJ(tmp_obj) == RV2_OBJ_TOKEN_FEMALE)) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you more than a single token of that variety.\n\r", ch);
-
-        return TRUE;
-      }
-      else
-        if ((vnum >= RV2_OBJ_TOKEN_MAGE && vnum <= RV2_OBJ_TOKEN_COMMANDO) &&
-          (V_OBJ(tmp_obj) >= RV2_OBJ_TOKEN_MAGE && V_OBJ(tmp_obj) <= RV2_OBJ_TOKEN_COMMANDO)) {
-          send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you more than a single token of that variety.\n\r", ch);
-
-          return TRUE;
-        }
     }
 
-    /* Load up a token to give to the player. */
-    if (!(token = read_object(vnum, VIRTUAL))) {
-      send_to_char("There was a problem loading the token. Please report this.\n\r", ch);
-      sprintf(buf, "WIZINFO: Error loading object (#%d) in rv2_mob_spec_immortalis(), cmd == CMD_LIST", vnum);
+    if (deny) {
+      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+      send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you more than a single token of that variety.\n\r", ch);
+
+      return TRUE;
+    }
+
+    /* Load up the token and give it the character. */
+    OBJ *token = read_object(vnum, VIRTUAL);
+
+    if (!token) {
+      snprintf(buf, sizeof(buf), "WIZINFO: Error loading object (#%d) in rv2_mob_spec_immortalis(), cmd == CMD_BUY.", vnum);
+
       wizlog(buf, LEVEL_SUP, 5);
       log_f("%s", buf);
 
       return TRUE;
     }
 
-    /* Set the token's Value 0 to the unique ID of the player (just a safety precaution), and set its timer to 10 ticks. */
+    /* Set the token's Value 0 to the unique ID of the character a safety precaution, and set its timer to 10. */
     OBJ_VALUE0(token) = GET_ID(ch);
     OBJ_TIMER(token) = 10;
 
     obj_to_char(token, ch);
 
-    /* Find out what tokens the player has now. */
+    /* Find out what tokens the character has now. */
     token_info = rv2_get_token_info(ch);
 
     if (token_info.alignment_token) {
-      printf_to_char(ch, "`qImmortalis gives you an understanding nod as he calmly places a token into the palm of your hand and whispers 'I see you have chosen the path of `l%s`q.'\n\r",
+      send_to_char("`qImmortalis gives you an understanding nod as he calmly places a token into the palm of your hand.\n\r", ch);
+      printf_to_char(ch, "He whispers, 'I see you have chosen the path of `l%s`q.'\n\r",
         token_info.alignment_name);
     }
 
-    /* If the player has the proper tokens for a remort, print out the next steps. */
+    /* If the character has the proper tokens for a remort, print out the next steps. */
     if (rv2_token_check(ch, token_info)) {
-      sprintf(buf, "Immortalis places yet another token into your hand and a faint clink is briefly heard as he clasps his hands over yours, sealing the glimmering metal inside. He whispers 'A `k%s`q `n%s`q is it? Consider wisely, for this path leads in only a singular direction.'\n\r",
+      send_to_char("Immortalis places yet another token into your hand and a faint clink is briefly heard as he clasps his hands over yours, sealing the glimmering metal inside.\n\r", ch);
+      printf_to_char(ch, "He whispers, 'A `k%s`q `n%s`q is it? Consider wisely, for this path leads in only a singular direction.'\n\r",
         token_info.gender_name, token_info.class_name);
-      send_to_char(buf, ch);
-      send_to_char("\n\r", ch);
 
       /* Calculate the player's remort info and print out some messages if needed. */
       remort_info = rv2_appraise(ch);
+
       rv2_appraise_message(ch, remort_info);
 
       /* The player can remort, so we'll tell them such. */
       if (remort_info.qp_fee <= remort_info.qp && remort_info.scp_fee <= remort_info.scp) {
-        send_to_char("\n\r", ch);
-        send_to_char("`qImmortalis whispers 'If you see merit in my offer, you need only issue the command `jremort commit`q and I shall see it done.'\n\r", ch);
-        send_to_char("\n\r", ch);
-        send_to_char("`qImmortalis whispers 'However, if you were mistaken in your choices and do not wish to undergo this transformation, you may simply walk away. Or, to make it more official, issue the command `iremort cancel`q and I will proceed as though this conversation never happened.'\n\r", ch);
+        send_to_char("Immortalis whispers, 'If you see merit in my offer, you need only issue the command `jremort commit`q and I shall see it done.'\n\r", ch);
+        send_to_char("He continues, 'However, if you were mistaken in your choices and do not wish to undergo this transformation, you may simply walk away.'\n\r", ch);
+        send_to_char("He concludes, 'Or, to make it more official, issue the command `iremort cancel`q and I will proceed as though this conversation never happened.'\n\r", ch);
       }
     }
 
     return TRUE;
   }
-  else if (cmd == CMD_LIST) {
+
+  if (cmd == CMD_LIST) {
     if (!ch || IS_NPC(ch)) return FALSE;
 
     if (CHAR_VIRTUAL_ROOM(mob) != RV2_WLD_SANCTUM_ETERNITY) return FALSE;
 
     if (GET_LEVEL(ch) < 6) {
-      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste. If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
+      send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+      send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste.'\n\r", ch);
+      send_to_char("He continues, 'If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
 
       return TRUE;
     }
-    else if (IS_IMMORTAL(ch)) {
+
+    if (IS_IMMORTAL(ch)) {
       send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
 
       return TRUE;
@@ -969,29 +961,35 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
     send_to_char("You can buy:\n\r", ch);
 
-    for (vnum = RV2_TOKEN_MIN_VNUM; vnum <= RV2_TOKEN_MAX_VNUM; vnum++) {
-      if (!(token = read_object(vnum, VIRTUAL))) {
-        send_to_char("There was a problem loading the token. Please report this.\n\r", ch);
-        sprintf(buf, "WIZINFO: Error loading object (#%d) in rv2_mob_spec_immortalis(), cmd == CMD_LIST", vnum);
+    int count = 0;
+
+    for (int vnum = RV2_TOKEN_MIN_VNUM; vnum <= RV2_TOKEN_MAX_VNUM; vnum++) {
+      OBJ *token = read_object(vnum, VIRTUAL);
+
+      if (!token) {
+        snprintf(buf, sizeof(buf), "WIZINFO: Error loading object (#%d) in rv2_mob_spec_immortalis(), cmd == CMD_LIST.", vnum);
+
         wizlog(buf, LEVEL_SUP, 5);
         log_f("%s", buf);
 
         return FALSE;
       }
 
-      sprintf(buf, "%s\n\r", OBJ_SHORT(token));
-      send_to_char(buf, ch);
+      count++;
+
+      printf_to_char(ch, "%s\n\r", OBJ_SHORT(token));
 
       extract_obj(token);
     }
 
-    if (!vnum) {
+    if (!count) {
       send_to_char("Nothing.\n\r", ch);
     }
 
     return TRUE;
   }
-  else if (cmd == CMD_UNKNOWN) {
+
+  if (cmd == CMD_UNKNOWN) {
     if (!ch || IS_NPC(ch)) return FALSE;
 
     if (CHAR_VIRTUAL_ROOM(mob) != RV2_WLD_SANCTUM_ETERNITY) return FALSE;
@@ -1003,11 +1001,14 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     /* The player can type "appraise" to see what their remort experience pool would be, and what it would cost them to remort. */
     if (!str_cmp(arg1, "appraise") || (!str_cmp(arg1, "remort") && !str_cmp(arg2, "appraise"))) {
       if (GET_LEVEL(ch) < 6) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste. If you do indeed endeavor to proceed further, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
+        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+        send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste.'\n\r", ch);
+        send_to_char("He continues, 'If you do indeed endeavor to proceed further, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
 
         return TRUE;
       }
-      else if (IS_IMMORTAL(ch)) {
+
+      if (IS_IMMORTAL(ch)) {
         send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
 
         return TRUE;
@@ -1015,6 +1016,7 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       /* Calculate the player's remort info and print out some messages if needed. */
       remort_info = rv2_appraise(ch);
+
       rv2_appraise_message(ch, remort_info);
 
       return TRUE;
@@ -1023,30 +1025,34 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     /* Cancel the player's intention of remorting by clearing their inventory of any remort tokens purchased. */
     if (!str_cmp(arg1, "cancel") || (!str_cmp(arg1, "remort") && !str_cmp(arg2, "cancel"))) {
       if (GET_LEVEL(ch) < 6) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste. If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
+        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+        send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste.'\n\r", ch);
+        send_to_char("He continues, 'If you do indeed endeavor to proceed further, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
 
         return TRUE;
       }
-      else if (IS_IMMORTAL(ch)) {
+
+      if (IS_IMMORTAL(ch)) {
         send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
 
         return TRUE;
       }
 
-      send_to_char("A slight nod of reverent understanding is made as Immortalis whispers 'As you wish. If you do endeavour to proceed down the path of transcendence in the future, you need only inquire.'\n\r", ch);
+      send_to_char("A slight nod of reverent understanding is made as \n\r", ch);
+      send_to_char("Immortalis whispers, 'As you wish. If you do endeavour to proceed down the path of transcendence in the future, you need only inquire.'\n\r", ch);
 
-      for (tmp_obj = ch->carrying; tmp_obj; tmp_obj = next_obj) {
-        next_obj = tmp_obj->next_content;
+      for (OBJ *temp_obj = GET_CARRYING(ch), *next_obj = NULL; temp_obj; temp_obj = next_obj) {
+        next_obj = OBJ_NEXT_CONTENT(temp_obj);
 
-        if (V_OBJ(tmp_obj) < RV2_TOKEN_MIN_VNUM || V_OBJ(tmp_obj) > RV2_TOKEN_MAX_VNUM) continue;
+        if (V_OBJ(temp_obj) < RV2_TOKEN_MIN_VNUM || V_OBJ(temp_obj) > RV2_TOKEN_MAX_VNUM) continue;
 
-        rv2_extract_token(tmp_obj);
+        rv2_extract_token(temp_obj);
       }
 
       return TRUE;
     }
 
-    /* Add or Remove the character's remort enchantment. */
+    /* Enable or Disable earning of remort experience. */
     if (!str_cmp(arg1, "remort") && (!str_cmp(arg2, "enable") || !str_cmp(arg2, "disable"))) {
       if (IS_IMMORTAL(ch)) {
         send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
@@ -1055,70 +1061,82 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
 
       if (GET_REMORT_EXP(ch) <= 0) {
-        send_to_char("Immortalis' brow furrows in obvious confusion and whispers 'Alas, any echoes of your past experiences have faded to but a memory. As such, I cannot grant your request.'\n\r", ch);
+        send_to_char("Immortalis' brow furrows in obvious confusion at your request.\n\r", ch);
+        send_to_char("He whispers, 'Alas, any echoes of your past experiences have faded to but a distant memory. As such, I cannot grant your request.'\n\r", ch);
+
+        return TRUE;
       }
-      else {
-        if (!str_cmp(arg2, "enable")) {
-          rv2_add_enchant(ch);
 
-          send_to_char("Immortalis nods and whispers 'As you wish. You will now gain additional experience augmented by the echos of your past.\n\r", ch);
-        }
-        else {
-          rv2_remove_enchant(ch);
+      if (!str_cmp(arg2, "enable")) {
+        REMOVE_BIT(GET_PFLAG(ch), PLR_REMORT_DISABLED);
 
-          send_to_char("Immortalis nods and whispers 'As you wish. You will no longer gain additional experience augmented by the echos of your past.\n\r", ch);
-        }
+        send_to_char("Immortalis nods and whispers, 'As you wish. You will now gain additional experience augmented by the echoes of your past.'\n\r", ch);
+
+        return TRUE;
+      }
+
+      if (!str_cmp(arg2, "disable")) {
+        SET_BIT(GET_PFLAG(ch), PLR_REMORT_DISABLED);
+
+        send_to_char("Immortalis nods and whispers, 'As you wish. You will no longer gain additional experience augmented by the echoes of your past.'\n\r", ch);
+
+        return TRUE;
       }
 
       return TRUE;
     }
 
-    /* The player is serious about remorting. Let's do it. */
+    /* The character is serious about remorting. Let's do it. */
     if (!str_cmp(arg1, "remort") && !str_cmp(arg2, "commit")) {
       if (GET_LEVEL(ch) < 6) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste. If you do indeed endeavor to transcend this existence and into the next, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
+        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+        send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation with such haste.'\n\r", ch);
+        send_to_char("He continues, 'If you do indeed endeavor to proceed further, return to me after you have achieved level 6 and we shall discuss these matters further.'\n\r", ch);
 
         return TRUE;
       }
-      else if (IS_IMMORTAL(ch)) {
+
+      if (IS_IMMORTAL(ch)) {
         send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
 
         return TRUE;
       }
 
-      /* Calculate the player's remort experience pool and what it's going to cost them to remort. */
+      /* Calculate the character's remort experience pool and what it's going to cost them to remort. */
       remort_info = rv2_appraise(ch);
 
       if (remort_info.qp_fee > remort_info.qp || remort_info.scp_fee > remort_info.scp) {
-        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request and then whispers 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation without the proper level of compensation for my efforts.'\n\r", ch);
+        send_to_char("A pensive frown is seen briefly on Immortalis' face as he considers your request.\n\r", ch);
+        send_to_char("Immortalis whispers, 'While I appreciate your enthusiasm, I simply cannot allow you to undergo this transformation without the proper level of compensation for my efforts.'\n\r", ch);
 
         return TRUE;
       }
 
-      /* Check the player's tokens and make sure they have the ones required for the remort process. */
+      /* Check the character's tokens and make sure they have the ones required for the remort process. */
       token_info = rv2_get_token_info(ch);
 
-      /* Did the player fail the token check? */
+      /* Did the character fail the token check? */
       if (!rv2_token_check(ch, token_info)) return TRUE;
 
+      /* Log the remort and record it as a death to save additional stats. */
       GET_BEEN_KILLED(ch)++;
       if (GET_DEATH_LIMIT(ch)) GET_DEATH_LIMIT(ch)++;
 
-      /* Log the remort. */
-      sprintf(buf,
-        "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort exp (Total: %lld) in (#%d) for %d aqp and %d scp.",
+      snprintf(buf, sizeof(buf),
+        "WIZINFO: Remort committed for %s with %dhp %dmn %dmv, granting %lld remort XP (total: %lld) for %d QP and %d SCP.",
         GET_NAME(ch),
         GET_NAT_HIT(ch),
         GET_NAT_MANA(ch),
         GET_NAT_MOVE(ch),
         remort_info.exp,
         remort_info.exp + GET_REMORT_EXP(ch),
-        CHAR_VIRTUAL_ROOM(ch),
         remort_info.qp_fee,
         remort_info.scp_fee
       );
+
       wizlog(buf, LEVEL_SUP, 5);
       log_f("%s", buf);
+
       death_list(ch);
 
       /* Junk the tokens, as we're good to go. */
@@ -1134,22 +1152,20 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         signal_object(token_info.class_token, ch, MSG_OBJ_JUNKED, "");
       }
 
-      /* Get rid of any remort enchant the player currently has. */
-      rv2_remove_enchant(ch);
+      /* Get rid of any remort enchant the character currently has. */
+      ench_from_char(ch, "Remort", 0, FALSE);
 
-      send_to_char("\n\r", ch);
-      send_to_char("Immortalis makes a simple gesture and your equipped items vanish, only to re-materialize in your hands!\n\r", ch);
+      send_to_char("Immortalis makes a simple gesture, and your equipped items vanish, only to re-materialize in your hands!\n\r", ch);
 
       /* Unequip the character to make sure worn items don't cause problems during the remort process. */
-      for (i = 0; i < MAX_WEAR; i++) {
-        if (ch->equipment[i]) {
-          obj_to_char(unequip_char(ch, i), ch);
+      for (int eq_pos = 0; eq_pos < MAX_WEAR; eq_pos++) {
+        if (EQ(ch, eq_pos)) {
+          obj_to_char(unequip_char(ch, eq_pos), ch);
         }
       }
 
-      /* Remove the player's rank enchantment, if they have one. */
-      for (ench = ch->enchantments; ench; ench = ench_next) {
-        ench_next = ench->next;
+      for (ENCH *ench = ch->enchantments, *next_ench = NULL; ench; ench = next_ench) {
+        next_ench = ench->next;
 
         switch (ench->type) {
           case ENCHANT_SQUIRE:
@@ -1182,41 +1198,42 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
           case ENCHANT_DARKLORDLADY:
           case ENCHANT_PROPHET:
           case ENCHANT_ASSASSIN:
-            enchantment_remove(ch, ench, FALSE);
+            ench_remove(ch, ench, FALSE);
             break;
         }
       }
 
-      /* Remove the player's affects. */
-      for (aff = ch->affected; aff; aff = aff_next) {
-        aff_next = aff->next;
-        affect_remove(ch, aff);
+      for (AFF *aff = ch->affected, *next_aff = NULL; aff; aff = next_aff) {
+        next_aff = aff->next;
+
+        aff_remove(ch, aff);
       }
 
       GET_TOGGLES(ch) = 0;
 
-      /* Set the player up as their chosen gender and class, and reset their vitals to that of a new player. */
       GET_ALIGNMENT(ch) = token_info.alignment;
       GET_SEX(ch) = token_info.gender;
       GET_CLASS(ch) = token_info.class_num;
-      age_year = 17;
-      age_year -= GET_AGE(ch);
-      ch->player.time.birth -= ((long)SECS_PER_MUD_YEAR * (long)age_year);
+
       GET_SC(ch) = 0;
       GET_SC_LEVEL(ch) = 0;
 
-      /* This section pulled (almost) directly from do_class() in act.wizard.c */
+      GET_BIRTH(ch) -= ((long)SECS_PER_MUD_YEAR * (long)(17 - GET_AGE(ch)));
 
       GET_LEVEL(ch) = 1;
-      GET_EXP(ch) = 1;
+      GET_EXP(ch) = 0;
 
       if (GET_DEATH_EXP(ch)) {
         GET_DEATH_EXP(ch) = 0;
 
-        imm_grace_remove_enchant(ch);
+        ENCH *imm_grace_ench = ench_get_from_char(ch, NULL, ENCHANT_IMM_GRACE);
+
+        if (imm_grace_ench) {
+          ench_remove(ch, imm_grace_ench, FALSE);
+        }
       }
 
-      if (!IS_SET(ch->specials.pflag, PLR_SKIPTITLE)) {
+      if (!IS_SET(GET_PFLAG(ch), PLR_SKIPTITLE)) {
         set_title(ch, NULL);
       }
 
@@ -1227,36 +1244,36 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       GET_OWIS(ch) = 13;
       GET_OADD(ch) = 0;
 
-      ch->points.max_hit = 10;
-      ch->points.max_mana = 0;
-      ch->points.max_move = 0;
+      GET_MAX_HIT_POINTS(ch) = 10;
+      GET_MAX_MANA_POINTS(ch) = 0;
+      GET_MAX_MOVE_POINTS(ch) = 0;
 
       affect_total(ch);
 
       if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-        ch->points.max_hit += GET_PRESTIGE(ch) * 12;
+        GET_MAX_HIT_POINTS(ch) += GET_PRESTIGE(ch) * 12;
       }
       else {
-        ch->points.max_hit += GET_PRESTIGE(ch) * 8;
+        GET_MAX_HIT_POINTS(ch) += GET_PRESTIGE(ch) * 8;
       }
 
       if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
-        ch->points.max_mana += GET_PRESTIGE(ch) * 4;
+        GET_MAX_MANA_POINTS(ch) += GET_PRESTIGE(ch) * 4;
       }
 
-      ch->specials.spells_to_learn = 0;
+      GET_PRAC(ch) = 0;
 
       advance_level(ch);
 
-      ch->specials.affected_by = 0;
-      ch->specials.affected_by2 = 0;
+      GET_AFF(ch) = 0;
+      GET_AFF2(ch) = 0;
 
-      for (i = 0; i <= (MAX_SKILLS5 - 1); i++) {
-        ch->skills[i].learned = 0;
+      for (int skill = 0; skill < MAX_SKILLS5; skill++) {
+        GET_LEARNED(ch, skill) = 0;
       }
 
-      for (i = 0; i < 5; i++) {
-        ch->specials.apply_saving_throw[i] = 0;
+      for (int save = 0; save < MAX_SAVE; save++) {
+        GET_SAVING_THROW(ch, save) = 0;
       }
 
       GET_HIT(ch) = hit_limit(ch);
@@ -1264,57 +1281,30 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       GET_MOVE(ch) = move_limit(ch);
 
       switch (GET_CLASS(ch)) {
-        case CLASS_MAGIC_USER:
-          break;
-
-        case CLASS_CLERIC:
-          break;
-
         case CLASS_THIEF:
-          ch->skills[SKILL_SNEAK].learned = 10;
-          ch->skills[SKILL_HIDE].learned = 5;
-          ch->skills[SKILL_STEAL].learned = 15;
-          ch->skills[SKILL_BACKSTAB].learned = 10;
-          ch->skills[SKILL_PICK_LOCK].learned = 10;
-          break;
-
-        case CLASS_WARRIOR:
-          break;
-
-        case CLASS_NINJA:
-          break;
-
-        case CLASS_NOMAD:
+          GET_LEARNED(ch, SKILL_SNEAK) = 10;
+          GET_LEARNED(ch, SKILL_HIDE) = 5;
+          GET_LEARNED(ch, SKILL_STEAL) = 15;
+          GET_LEARNED(ch, SKILL_BACKSTAB) = 10;
+          GET_LEARNED(ch, SKILL_PICK_LOCK) = 10;
           break;
 
         case CLASS_PALADIN:
-          GET_ALIGNMENT(ch) = 500;
+          if (token_info.alignment == 0) {
+            GET_ALIGNMENT(ch) = 500;
+          }
           break;
 
         case CLASS_ANTI_PALADIN:
-          GET_ALIGNMENT(ch) = -500;
-          break;
-
-        case CLASS_AVATAR:
-          break;
-
-        case CLASS_BARD:
-          break;
-
-        case CLASS_COMMANDO:
+          if (token_info.alignment == 0) {
+            GET_ALIGNMENT(ch) = -500;
+          }
           break;
       }
 
-      if (GET_CLASS(ch) == CLASS_AVATAR) {
-        GET_COND(ch, THIRST) = -1;
-        GET_COND(ch, FULL) = -1;
-        GET_COND(ch, DRUNK) = -1;
-      }
-      else {
-        GET_COND(ch, THIRST) = 24;
-        GET_COND(ch, FULL) = 24;
-        GET_COND(ch, DRUNK) = 0;
-      }
+      GET_COND(ch, THIRST) = 24;
+      GET_COND(ch, FULL) = 24;
+      GET_COND(ch, DRUNK) = 0;
 
       GET_QP(ch) = MAX(0, remort_info.qp - remort_info.qp_fee);
       GET_SCP(ch) = MAX(0, remort_info.scp - remort_info.scp_fee);
@@ -1324,7 +1314,8 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       if (GET_REMORT_EXP(ch) <= 0) {
         GET_REMORT_EXP(ch) = 0;
 
-        sprintf(buf, "WIZINFO: Remort EXP Overflow! [%s]", GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "WIZINFO: Remort EXP Overflow! [%s]", GET_NAME(ch));
+
         wizlog(buf, LEVEL_SUP, 5);
         log_f("%s", buf);
       }
@@ -1336,16 +1327,17 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
       save_char(ch, NOWHERE);
 
-      /* End do_class() section. */
-
-      send_to_char("\n\rYou feel an overwhelming sensation that can only be described as a troubling mix of death and new life. The entire force of your being is ripped seamlessly from within as a feeling of transcendence coarses through your entire body.\n\r", ch);
-      send_to_char("\n\rImmortalis' visage breaks into jubilance for but a brief moment as he smiles, whispering 'Your will is done. I wish you a pleasant journey and eagerly hope your new existence is a most fruitful endeavor.'\n\r", ch);
+      send_to_char("You feel an overwhelming sensation that can only be described as a troubling mix of death and new life.\n\r", ch);
+      send_to_char("The entire force of your being is ripped seamlessly from within as a feeling of transcendence courses through your entire body.\n\r", ch);
+      send_to_char("Immortalis' visage breaks into jubilance for but a brief moment as he smiles.\n\r", ch);
+      send_to_char("He whispers, 'Your will is done. I wish you a pleasant journey and eagerly hope your new existence is a most fruitful endeavor.'\n\r", ch);
 
       return TRUE;
     }
 
     if (!str_cmp(arg1, "remort")) {
-      send_to_char("Immortalis raises his eyebrow at you and whispers 'I think I misheard your request. I can help you with the following 'remort' commands: 'appraise', 'cancel', 'enable', 'disable', or 'commit'.\n\r", ch);
+      send_to_char("Immortalis raises his eyebrow at you questioningly.\n\r", ch);
+      send_to_char("He whispers, 'I think I misheard your request. I can help you with the following `jremort`q commands: appraise, cancel, enable, disable, commit.\n\r", ch);
 
       return TRUE;
     }
@@ -1358,24 +1350,21 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 
 /* Object Specs */
 
-/* Decrement the counter on tokens every tick and prevent the tokens from getting "lost" from a player's inventory. */
+/* Decrement the counter on tokens every tick and prevent the tokens from getting "lost" from a character's inventory. */
 int rv2_obj_spec_token(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_TICK) {
-    if (obj->obj_flags.timer) {
-      obj->obj_flags.timer--;
+    if (OBJ_TIMER(obj)) {
+      OBJ_TIMER(obj)--;
     }
 
-    if (!(obj->obj_flags.timer)) {
+    if (OBJ_TIMER(obj) <= 0) {
       rv2_extract_token(obj);
     }
 
     return FALSE;
   }
-  else if (cmd == MSG_OBJ_GIVEN ||
-    cmd == MSG_OBJ_DROPPED ||
-    cmd == MSG_OBJ_PUT ||
-    cmd == MSG_OBJ_DONATED ||
-    cmd == MSG_OBJ_JUNKED) {
+
+  if (cmd == MSG_OBJ_GIVEN || cmd == MSG_OBJ_DROPPED || cmd == MSG_OBJ_PUT || cmd == MSG_OBJ_DONATED || cmd == MSG_OBJ_JUNKED) {
     rv2_extract_token(obj);
 
     return TRUE;
@@ -1386,11 +1375,9 @@ int rv2_obj_spec_token(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 
 /* Assign Specs */
 void assign_remortv2(void) {
-  int vnum = 0;
-
   assign_mob(RV2_MOB_IMMORTALIS, rv2_mob_spec_immortalis);
 
-  for (vnum = RV2_TOKEN_MIN_VNUM; vnum <= RV2_TOKEN_MAX_VNUM; vnum++) {
+  for (int vnum = RV2_TOKEN_MIN_VNUM; vnum <= RV2_TOKEN_MAX_VNUM; vnum++) {
     assign_obj(vnum, rv2_obj_spec_token);
   }
 }

@@ -53,7 +53,7 @@
 #define DRAGON_TOOTH   17346
 
 void stop_riding(CHAR *ch,CHAR *vict);
-int is_shop(CHAR *mob);
+int is_shopkeeper(CHAR *mob);
 
 int pyrak_dragon (CHAR *pyrak, CHAR *ch, int cmd, char *arg) {
   CHAR *vict,*next_vict;
@@ -467,7 +467,7 @@ int pan(OBJ *obj,CHAR *ch, int cmd, char *argument) {
   if((GET_LEVEL(ch)-GET_LEVEL(vict)) > 2) return FALSE;
   if(IS_SET(ch->specials.pflag, PLR_NOKILL) && !IS_NPC(vict)) return FALSE;
   if (number(0,19)) return FALSE;
-  if(is_shop(vict)) return FALSE;
+  if(is_shopkeeper(vict)) return FALSE;
 
   act("$N's eyes cross  as $n's Frying Pan connects with $S head!",FALSE,ch,0,vict,TO_NOTVICT);
   act("Your eyes cross  as $n's Frying Pan connects with your head!",FALSE,ch,0,vict,TO_VICT);

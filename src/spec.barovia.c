@@ -463,7 +463,7 @@ int decaying_eq(OBJ *ob, CHAR *ch, int cmd, char *argument)
 
 
 /* Soth's sword */
-int is_shop(CHAR *mob);
+int is_shopkeeper(CHAR *mob);
 
 int black_rose_sword(OBJ *obj,CHAR *ch, int cmd, char *argument)
 {
@@ -507,7 +507,7 @@ int black_rose_sword(OBJ *obj,CHAR *ch, int cmd, char *argument)
 
     if((GET_LEVEL(ch)-GET_LEVEL(vic)) > 20) return FALSE;
 
-    if(is_shop(vic)) return FALSE;
+    if(is_shopkeeper(vic)) return FALSE;
     /* Cast the spell on him */
 
 #ifndef TEST_SITE

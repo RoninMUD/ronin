@@ -1,14 +1,10 @@
-/* *************************************************************************
- *Special Proceedures for Xalth's Revamp of the Newts? =b                 *
- *                        Written by DarkLeha
- *                        Modified by Fisher 04/11/2021
- *Small mod by Ranger                                                     *
- **************************************************************************/
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <unistd.h>
+/* ************************************************************************
+ * Special Procedures for Xalth's Revamp of the Newts                     *
+ *                        Written by DarkLeha                             *
+ *                        Modified by Ranger                              *
+ *                        Modified by Fisher                              *
+ ************************************************************************ */
+
 #include "structs.h"
 #include "utils.h"
 #include "comm.h"
@@ -23,94 +19,102 @@
 #include "act.h"
 #include "reception.h"
 #include "spec_assign.h"
+#include "shop.h"
 
-/*Rooms */
-#define TUNNEL_ROOM 2923
-#define NEW_TUNNEL_ROOM 2934
-#define LEADER_ROOM 2926
+/* Rooms */
+#define TUNNEL_ROOM      2923
+#define LEADER_ROOM      2926
+#define NEW_TUNNEL_ROOM  2934
 
-/*Mobs */
-#define FIRE_NEWT_LEADER 2912
+/* Mobs */
+#define NEWT_LEADER      2912
 
-//Have the room close the new area off on reset.
-int newt_tunnelroom(int room, CHAR *ch, int cmd, char *arg)
-{
-  if (cmd == MSG_ZONE_RESET)
-  {
+/* Objects */
+#define NEWT_AXE         2911
+#define NEWT_MACE        2913
 
-    if(world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r != -1){
+// Have the room close the new area off on reset.
+int newt_tunnel_room(int room, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_ZONE_RESET) {
+    if (world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
+      world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r = NOWHERE;
 
-      world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r = -1;
-      world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]->to_room_r = -1;
-      send_to_room("Boulders collapse and seal the tunnel.\n\r", real_room(TUNNEL_ROOM));
-      send_to_room("Boulders collapse and seal the tunnel.\n\r", real_room(NEW_TUNNEL_ROOM));
+      send_to_room("Boulders collapse and seal the tunnel to the north.\n\r", real_room(TUNNEL_ROOM));
     }
+
+    if (world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
+      world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]->to_room_r = NOWHERE;
+
+      send_to_room("Boulders collapse and seal the tunnel to the south.\n\r", real_room(NEW_TUNNEL_ROOM));
+    }
+
+    return FALSE;
   }
+
   return FALSE;
 }
 
-//Have the death of the newt leader, create the link to the new area.
-int newt_leader(CHAR *leader, CHAR *ch, int cmd, char *arg)
-{
-  /*Don't waste any more CPU time if no one is in the room. */
-  if (count_mortals_room(leader, TRUE) < 1) return FALSE;
+// Have the death of the newt leader, create a link to the new area.
+int newt_leader(CHAR *leader, CHAR *ch, int cmd, char *arg) {
+  if (cmd == MSG_DIE) {
+    send_to_room("A rumbling can be heard from inside the tunnel.\n\r", real_room(LEADER_ROOM));
 
-  switch (cmd)
-  {
-    case MSG_DIE:  // On Death - Create link to new XP area.
-      send_to_room("A rumbling can be heard from inside the tunnel.\n\r", real_room(LEADER_ROOM));
-      send_to_room("A magical force removes boulders and a new tunnel appears.\n\r", real_room(TUNNEL_ROOM));
-      send_to_room("A magical force removes boulders and a new tunnel appears.\n\r", real_room(NEW_TUNNEL_ROOM));
+    if (world[real_room(TUNNEL_ROOM)].dir_option[NORTH]) {
       world[real_room(TUNNEL_ROOM)].dir_option[NORTH]->to_room_r = real_room(NEW_TUNNEL_ROOM);
+
+      send_to_room("A magical force removes some boulders and a new tunnel appears to the north.\n\r", real_room(TUNNEL_ROOM));
+    }
+
+    if (world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]) {
       world[real_room(NEW_TUNNEL_ROOM)].dir_option[SOUTH]->to_room_r = real_room(TUNNEL_ROOM);
 
-      break;
+      send_to_room("A magical force removes some boulders and a new tunnel appears to the south.\n\r", real_room(NEW_TUNNEL_ROOM));
+    }
   }
 
   return FALSE;
 
 }
 
-int is_shop(CHAR *mob);
+// 5% chance to cast Cure Critic on wielder when using the kill command against a valid target.
+int newt_weapon_spec(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  if (cmd == CMD_KILL) {
+    if (!ch || IS_NPC(ch)) return FALSE;
 
-int newt_spec(OBJ *obj, CHAR *ch, int cmd, char *argument)
-{
-  CHAR * vict;
-  char arg[MAX_STRING_LENGTH];
+    if (OBJ_EQUIPPED_BY(obj) != ch || ROOM_SAFE(CHAR_REAL_ROOM(ch)) || GET_OPPONENT(ch)) return FALSE;
 
-  if (cmd != CMD_KILL) return FALSE;
-  if (IS_NPC(ch)) return FALSE;
+    char buf[MIL];
 
-  if (obj->equipped_by != ch) return FALSE;
-  if (ch->specials.fighting) return FALSE;
-  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE) && (!CHAOSMODE)) return FALSE;
+    one_argument(arg, buf);
 
-  one_argument(argument, arg);
-  if (! *arg) return FALSE;
-  if (!(vict = get_char_room_vis(ch, arg))) return FALSE;
-  if (is_shop(vict)) return FALSE;
-  if (ch == vict) return FALSE;
-  if ((GET_LEVEL(ch) - GET_LEVEL(vict)) > 20) return FALSE;
+    if (!*arg) return FALSE;
 
-  if (number(0, 20)) return FALSE;
-  if (is_shop(vict)) return FALSE;
+    CHAR *victim = get_char_room_vis(ch, buf);
 
-  act("$n is showered with a white holy light!", FALSE, ch, 0, 0, TO_ROOM);
-  act("You are showered with a white holy light!\n\r", FALSE, ch, 0, 0, TO_CHAR);
-  spell_cure_critic(GET_LEVEL(ch), ch, ch, 0);
+    if (!victim || victim == ch || is_shopkeeper(victim) || (GET_LEVEL(ch) - GET_LEVEL(victim)) > 20) return FALSE;
+
+    if (chance(5)) {
+      act("$n is showered with a white holy light!", FALSE, ch, 0, 0, TO_ROOM);
+      act("You are showered with a white holy light!", FALSE, ch, 0, 0, TO_CHAR);
+
+      spell_cure_critic(GET_LEVEL(ch), ch, ch, 0);
+    }
+
+    return FALSE;
+  }
+
   return FALSE;
 }
 
-void assign_newt()
-{
-  assign_obj(2911, newt_spec);
-  assign_obj(2913, newt_spec);
+void assign_newt() {
+  assign_obj(NEWT_AXE, newt_weapon_spec);
+  assign_obj(NEWT_MACE, newt_weapon_spec);
 
 #ifdef TEST_SITE
   /*Rooms */
-  assign_room(TUNNEL_ROOM, newt_tunnelroom);
-  /*Mobs */
-  assign_mob(FIRE_NEWT_LEADER, newt_leader);
-#endif
+  assign_room(TUNNEL_ROOM, newt_tunnel_room);
 
+  /*Mobs */
+  assign_mob(NEWT_LEADER, newt_leader);
+#endif
 }

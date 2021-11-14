@@ -5343,80 +5343,109 @@ clear_toggles, thirst, hunger, drunk\n\r";
     return;
   }
 
-  if (!str_cmp(class, "remort_exp"))
-  {
-    errno = 0;
-
-    big_value = strtoll(num, NULL, 10);
-
-    if ((errno == ERANGE && (big_value == LONG_MAX || big_value == LONG_MIN)) || (errno != 0 && big_value == 0) || big_value < -1)
-    {
+  if (!str_cmp(class, "remort_exp") || !str_cmp(class, "remort_xp")) {
+    if (*num == '-' && str_cmp(num, "-1")) {
       send_to_char("\
-Usage: -1  : Restore target's Remort v2 enchantment (if it's missing).\n\r\
-        0  : Disable target's Remort v2 EXP pool and enchantment.\n\r\
-        1+ : Enable target's Remort v2 EXP pool and enchantment.\n\r", ch);
+Usage: -1  : Toggle target's Remort enchantment on/off.\n\r\
+        0  : Clear target's Remort Experience pool and remove enchantment.\n\r\
+        1+ : Set target's Remort Experience pool and add enchantment.\n\r", ch);
 
       return;
     }
 
-    if (big_value >= 0)
-    {
-      sprintf(buf, "Target's Remort v2 EXP pool set to %lld.\n\r", big_value);
-      send_to_char(buf, ch);
+    if (!str_cmp(num, "-1")) {
+      if (!enchanted_by_type(vict, ENCHANT_REMORTV2)) {
+        rv2_add_enchant(vict);
+
+        send_to_char("Target's Remort enchantment turned ON.\n\r", ch);
+      }
+      else {
+        rv2_remove_enchant(vict);
+
+        send_to_char("Target's Remort enchantment turned OFF.\n\r", ch);
+      }
+
+      return;
+    }
+
+    errno = 0;
+    big_value = strtoll(num, NULL, 10);
+
+    if (errno != 0) {
+      send_to_char("Error parsing number.\n\r", ch);
+
+      return;
+    }
+
+    if (big_value >= 0) {
+      printf_to_char(ch, "Target's Remort Experience pool set to %lld.\n\r", big_value);
 
       GET_REMORT_EXP(vict) = big_value;
     }
 
-    if (big_value != 0 && GET_REMORT_EXP(vict) && !enchanted_by_type(vict, ENCHANT_REMORTV2))
-    {
-      send_to_char("Target's Remort v2 enchantment turned ON.\n\r", ch);
-
+    if (GET_REMORT_EXP(vict) > 0 && !enchanted_by_type(vict, ENCHANT_REMORTV2)) {
       rv2_add_enchant(vict);
-    }
-    else if (big_value == 0)
-    {
-      send_to_char("Target's Remort v2 enchantment turned OFF.\n\r", ch);
 
+      send_to_char("Target's Remort enchantment turned ON.\n\r", ch);
+    }
+    else if (big_value == 0) {
       rv2_remove_enchant(vict);
+
+      send_to_char("Target's Remort enchantment turned OFF.\n\r", ch);
     }
 
     return;
   }
 
-  if (!str_cmp(class, "death_exp"))
-  {
-    if (num[0] == '-')
-    {
-      if (str_cmp(num, "-1"))
-      {
-        send_to_char("\
-Usage: -1  : Restore target's Death Experience enchantment (if it's missing).\n\r\
-        0  : Disable target's Death Experience pool and enchantment.\n\r\
-        1+ : Enable target's Death Experience pool and enchantment.\n\r", ch);
-      }
-      else if (GET_DEATH_EXP(vict) && !enchanted_by_type(vict, ENCHANT_IMM_GRACE))
-      {
-        send_to_char("Target's Death Experience enchantment turned ON.\n\r", ch);
-        imm_grace_add_enchant(vict);
-      }
- 
+  if (!str_cmp(class, "death_exp") || !str_cmp(class, "death_xp")) {
+    if (*num == '-' && str_cmp(num, "-1")) {
+      send_to_char("\
+Usage: -1  : Toggle target's Death Experience enchantment on/off.\n\r\
+        0  : Clear target's Death Experience pool and remove enchantment.\n\r\
+        1+ : Set target's Death Experience pool and add enchantment.\n\r", ch);
+
       return;
     }
 
+    if (!str_cmp(num, "-1")) {
+      if (!enchanted_by_type(vict, ENCHANT_IMM_GRACE)) {
+        imm_grace_add_enchant(vict);
+
+        send_to_char("Target's Death Experience enchantment turned ON.\n\r", ch);
+      }
+      else {
+        imm_grace_remove_enchant(vict);
+
+        send_to_char("Target's Death Experience enchantment turned OFF.\n\r", ch);
+      }
+
+      return;
+    }
+
+    errno = 0;
     ulValue = strtoul(num, NULL, 10);
 
-    if (ulValue >= 0)
-    {
-      sprintf(buf, "Target's Death Experience pool set to %lu.\n\r", ulValue);
-      send_to_char(buf, ch);
+    if (errno != 0) {
+      send_to_char("Error parsing number.\n\r", ch);
+
+      return;
+    }
+
+    if (ulValue >= 0) {
+      printf_to_char(ch, "Target's Death Experience pool set to %lu.\n\r", ulValue);
 
       GET_DEATH_EXP(vict) = ulValue;
     }
 
-    if (value == 0)
-    {
-      send_to_char("Target's Death Experience enchantment turned OFF.\n\r", ch);
+    if (GET_DEATH_EXP(vict) > 0 && !enchanted_by_type(vict, ENCHANT_IMM_GRACE)) {
+      imm_grace_add_enchant(vict);
+
+      send_to_char("Target's Death Experience enchantment turned ON.\n\r", ch);
+    }
+    else if (big_value == 0) {
       imm_grace_remove_enchant(vict);
+
+      send_to_char("Target's Death Experience enchantment turned OFF.\n\r", ch);
     }
 
     return;

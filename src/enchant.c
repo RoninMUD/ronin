@@ -88,14 +88,12 @@ int frightful_presence(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 int lich_curse(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 
 
-int remortv2_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-{
+int remortv2_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
   return FALSE;
 }
 
 
-int imm_grace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg)
-{
+int imm_grace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
   return FALSE;
 }
 

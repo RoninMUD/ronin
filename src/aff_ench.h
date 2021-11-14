@@ -23,7 +23,7 @@ bool ench_enchanted_by(CHAR *ch, const char *name, int type);
 bool ench_enchanted_by_ench(CHAR *ch, ENCH *ench);
 int ench_duration(CHAR *ch, const char *name, int type);
 void ench_to_char(CHAR *ch, ENCH *ench, bool overwrite);
-void ench_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bivector2, ENCH_FUNC);
+void ench_apply(CHAR *ch, bool overwrite, const char *name, int type, sh_int duration, byte interval, int modifier, byte location, long bitvector, long bivector2, int(*func)(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg));
 void ench_remove(CHAR *ch, ENCH *ench, bool to_log);
 void ench_remove_all(CHAR *ch, bool to_log);
 void ench_from_char(CHAR *ch, const char *name, int type, bool to_log);

@@ -1608,23 +1608,23 @@ void do_exits(CHAR *ch, char *argument, int cmd) {
 }
 
 
-/* Add the Immortali's Grace enchant. */
+/* Add the Immortalis' Grace enchant. */
 void imm_grace_add_enchant(CHAR *ch) {
-  ENCH imm_grace = { 0 };
+  ENCH imm_grace_ench = { 0 };
 
-  imm_grace.type = ENCHANT_IMM_GRACE;
+  imm_grace_ench.type = ENCHANT_IMM_GRACE;
 
-  enchantment_to_char(ch, &imm_grace, TRUE);
+  enchantment_to_char(ch, &imm_grace_ench, TRUE);
 }
 
 /* Remove the Immortalis' Grace enchant. */
 void imm_grace_remove_enchant(CHAR *ch) {
-  ENCH *imm_grace = get_enchantment_by_type(ch, ENCHANT_IMM_GRACE);
+  ENCH *imm_grace_ench = ench_get_from_char(ch, NULL, ENCHANT_IMM_GRACE);
 
-  if (imm_grace) {
+  if (imm_grace_ench) {
     send_to_char("You are no longer affected by Immortalis' Grace.\n\r", ch);
 
-    enchantment_remove(ch, imm_grace, FALSE);
+    ench_remove(ch, imm_grace_ench, FALSE);
   }
 }
 
@@ -1653,7 +1653,6 @@ int adjust_death_exp(CHAR *ch, int exp) {
   if (exp > 0) {
     exp = MIN(INT_MAX - GET_DEATH_EXP(ch), exp);
   }
-  /* Ensure deducted exp is no greater than the amount of death exp the player has. */
   else {
     exp = MAX(-GET_DEATH_EXP(ch), exp);
   }

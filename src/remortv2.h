@@ -2,7 +2,6 @@
   remortv2.h - Specs for Remort v2, by Night
 
   Written by Alan K. Miles for RoninMUD
-  Last Modification Date: 2/5/2012
 */
 
 #ifndef __REMORTV2_H__

@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS += -g -Wall -Wno-unused-result -Og -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
-LFLAGS = -lm -lcrypt -rdynamic -lsodium
+CFLAGS += -g -Og -Wall -Wno-unused-result -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
+LFLAGS = -rdynamic -lm -lcrypt -lsodium
 OBJDIR = ../obj
 BINDIR = ../bin
 TYPE ?= $(shell basename $$(dirname $$PWD))
@@ -8,11 +8,11 @@ TYPE ?= $(shell basename $$(dirname $$PWD))
 $(info Making ${TYPE}...)
 
 ifneq ($(TYPE), live)
-ifeq ($(TYPE), chaos)
-	CFLAGS += -DCHAOS2017
-else
-	CFLAGS += -DTEST_SITE
-endif
+	ifeq ($(TYPE), chaos)
+		CFLAGS += -DCHAOS2017
+	else
+		CFLAGS += -DTEST_SITE
+	endif
 endif
 
 #
@@ -209,9 +209,9 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.workbench.o
 
 ifneq ($(TYPE), live)
-ifneq ($(TYPE), chaos)
-	OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
-endif
+	ifneq ($(TYPE), chaos)
+		OBJS_RONIN_SPEC += $(OBJS_RONIN_SPEC_TEST)
+	endif
 endif
 
 OBJS_RONIN_BASE := $(patsubst %, $(OBJDIR)/%, $(OBJS_RONIN_BASE))

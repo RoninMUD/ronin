@@ -51,7 +51,7 @@
 #define LEMON_BONG 29487
 #define MOG_MUFFLER 29488
 
-int is_shop(CHAR *mob);
+int is_shopkeeper(CHAR *mob);
 
 int boner (OBJ *sh, CHAR *ch, int cmd, char *arg)
 {
@@ -221,7 +221,7 @@ int v_pan(OBJ *obj,CHAR *ch, int cmd, char *argument) {
   if((GET_LEVEL(ch)-GET_LEVEL(vict)) > 2) return FALSE;
   if(IS_SET(ch->specials.pflag, PLR_NOKILL) && !IS_NPC(vict)) return FALSE;
   if (number(0,19)) return FALSE;
-  if(is_shop(vict)) return FALSE;
+  if(is_shopkeeper(vict)) return FALSE;
 
   act("$N's skull makes a crunchy noise as your $p connects with the side of $s head!",FALSE,ch,0,vict,TO_CHAR);
   act("$n's eyes glaze over, and $e suddenly crashes $s $p into your skull!",FALSE,ch,0,vict,TO_VICT);
@@ -269,7 +269,7 @@ int doobies_sobr(OBJ *obj,CHAR *ch, int cmd, char *argument)
 
     if((GET_LEVEL(ch)-GET_LEVEL(vic)) > 20) return FALSE;
 
-    if(is_shop(vic)) return FALSE;
+    if(is_shopkeeper(vic)) return FALSE;
     /* Cast the spell on him */
 
     if(number(0,40) != 0) return FALSE;
@@ -329,7 +329,7 @@ int jamie_sword(OBJ *obj,CHAR *ch, int cmd, char *argument)
 
 
     /* Cast the spell on him */
-    if(is_shop(vic)) return FALSE;
+    if(is_shopkeeper(vic)) return FALSE;
 
     if(number(0,20) != 0) return FALSE;
 
