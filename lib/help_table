@@ -3,9 +3,9 @@
 The "blood level" of a room is an indicator of the amount of fresh blood that
 has been spilled recently in the area.  Each creature that dies in a room
 generates one blood level.  This level increases by one for each additional
-creature that dies, up to a limit of ten blood levels.  The level of blood
-in a room is indicated by a message located at the bottom of the room's
-description.
+creature that dies, up to a limit of blood level ten.  If the blood level of a
+room is greater than zero, a message below the room's description indicates the
+degree of bloodiness.
 
 Some spells and skills can also increase the blood level of a room, under
 certain conditions.
@@ -32,44 +32,43 @@ skills/spells.
 The possible sector types are: Arctic, City, Desert, Field, Forest,
 Hills, Inside, Mountains, and Water.
 
-You can hide the sector type by turning on the sector brief mode.
+You can hide the sector type by turning on brief mode.
 
-Movement Loss based on Sector
- Sector   Movement Loss
- Inside        1
- City          2
- Field         2
- Desert        2
- Forest        3
- Swimming      4
- Hills         4
- Arctic        5
- Mountains     6
+Sector Type | Movement Points Required
+------------|-------------------------
+Inside      | 1
+City        | 2
+Desert      | 2
+Field       | 2
+Forest      | 3
+Hills       | 4
+Water       | 4
+Arctic      | 5
+Mountains   | 6
 
 See Also: "MOVEMENT POINTS" BRIEF
 #
 SKIN
 
-A skin can be made from a corpse using the SKIN command.  All classes
-have this ability.
+A skin can be made from a corpse using this command.
 
-Some skins may be valuable and be exchanged for cash at the fur
-trader just north of Midgaard. Grobyan can be found 3n, open
-gate, and then 2n2e.
+Some skins may be valuable and can be exchanged for coins at the fur trader
+north of Midgaard.  Grobyan can be found 3n, open gate, and then 2n2e from
+Market Square.
 
-In addition, when skinning a corpse, it is possible to find and
-extract some useful items out of the corpse.  This is done
-automatically.
+In addition, when skinning a corpse, it is possible to find and extract some
+useful items from the corpse.
 
 Skins are wearable, but do decay after a period of time.
 #
 BRIBE
 
-For the most part, the lands of Ronin are free of corruption, but
-with the recent decline in morality more and more creatures are
-becoming susceptible to bribery. It is said that both the
-restaurant bouncer and the metaphysician have been known to give
-you something for a little cash.
+For the most part, the lands of Ronin are free of corruption, but with the
+recent decline in morality more and more creatures are becoming susceptible to
+bribery.
+
+It is said that both the restaurant bouncer and the metaphysician have been
+known to give you something for a little cash.
 #
 CONSTITUTION
 
@@ -8609,10 +8608,10 @@ Mana Cost   : 200
 
 The most pious of Templars can manifest a weapon of pure holy energy in the form
 of a massive divine hammer.  For the duration of the spell, the Templar makes
-attacks with this rod automatically each round that they are engaged in combat,
-as if they were wielding it directly.  The Templar still maintains control of
-their wielded weapon and makes normal melee attacks, can cast spells, and can
-use skills as usual.
+attacks with this hammer automatically each round that they are engaged in
+combat, as if they were wielding it directly.  The Templar still maintains
+control of their wielded weapon and makes normal melee attacks, can cast spells,
+and can use skills as usual.
 
 The hammer inflicts damage as if it were a two-handed weapon wielded by the
 Templar and can never miss.  This holy weapon deals crushing, piercing, or
@@ -10149,4 +10148,3 @@ However - They do not make things easy.  Some helpful tips are below.
 See Also:
 
 #~
-
