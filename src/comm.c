@@ -1069,11 +1069,11 @@ void timediff(struct timeval *rslt, struct timeval *a, struct timeval *b)
   { 
     rslt->tv_sec = a->tv_sec - b->tv_sec;
     if (a->tv_usec < b->tv_usec) 
-	{
+  {
       rslt->tv_usec = a->tv_usec + 1000000 - b->tv_usec;
       rslt->tv_sec--;
     } 
-	else
+  else
       rslt->tv_usec = a->tv_usec - b->tv_usec;
   }
 }
@@ -3292,12 +3292,18 @@ void open_logfile() {
 
 void close_logfile() {
   fclose(logfile);
+
   backup_logfile();
 }
 
 void backup_logfile() {
-  system("cp syslog syslogs/syslog.`date +%y%m%d.%H%M%S`");
-  system("mv syslog syslog.last");
-  system("tail -2 syslog.last >> runlog");
-  system("mv lib/plrlog syslogs/plrlog.`date +%y%m%d.%H%M%S`");
+  if (access("syslog", F_OK) == 0) {
+    system("tail -2 syslog >> runlog");
+    system("cp syslog syslogs/syslog.`date +%y%m%d.%H%M%S`");
+    system("mv syslog syslog.last");
+  }
+
+  if (access("lib/plrlog", F_OK) == 0) {
+    system("mv lib/plrlog syslogs/plrlog.`date +%y%m%d.%H%M%S`");
+  }
 }

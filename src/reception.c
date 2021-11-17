@@ -359,174 +359,11 @@ void load_char(CHAR *ch) {
       return;
   }
 
-#ifdef CHAOS2017
-
-  if (CHAOSMODE && GET_LEVEL(ch)<LEVEL_IMM)
-  {
-    int max_hit = 1000, max_mana = 900, max_move = 900;
-    AFF *af = NULL;
-    ENCH *ench = NULL, *ench_next = NULL, **ench_prev = NULL;
-    int i = 0;
-
-    GET_LEVEL(ch) = 50;
-    GET_CLASS(ch) = CLASS_AVATAR;
-    GET_REMORT_EXP(ch) = 0LL;
-    GET_DEATH_EXP(ch) = 0;
-    GET_EXP(ch) = 0;
-    GET_SCP(ch) = 0;
-    GET_QP(ch) = 0;
-    GET_PRAC(ch) = 127;
-    GET_SC(ch) = 0;
-    GET_SC_LEVEL(ch) = 0;
-
-    /* Affects and enchantments have already been added by store_to_char */
-
-    /* No equipment has been processed yet, so ignore it. */
-
-    /* Unmodify all current affects */
-
-    for(af = ch->affected; af; af=af->next)
-      affect_modify(ch, af->location, af->modifier, af->bitvector, af->bitvector2, FALSE);
-
-    for(ench = ch->enchantments, ench_prev = &ch->enchantments; ench; ench=ench_next)
-    {
-      ench_next = ench->next;
-      affect_modify(ch, ench->location, ench->modifier, ench->bitvector,ench->bitvector2, FALSE);
-
-      if (((ENCHANT_SQUIRE <= ench->type) && (ENCHANT_CONDUCTOR >= ench->type)) ||
-          (ENCHANT_REMORTV2 == ench->type) ||
-          (ENCHANT_IMM_GRACE == ench->type))
-      {
-        *ench_prev = ench_next;
-        DESTROY(ench->name);
-        DESTROY(ench);
-      }
-      else
-      {
-        ench_prev = &ench->next;
-      }
-    }
-
-    /* Set all char attributes to 20 */
-
-    ch->abilities.str = 20;
-    ch->abilities.str_add = 100;
-    ch->abilities.intel = 20;
-    ch->abilities.wis = 20;
-    ch->abilities.dex = 20;
-    ch->abilities.con = 20;
-
-    ch->tmpabilities = ch->abilities;
-
-    /* Normalize all char points - 2017 not used */
-
-    switch (GET_CLASS(ch))
-    {
-      case CLASS_WARRIOR:
-        max_hit = 1750;
-        max_mana = 0;
-        break;
-
-      case CLASS_NOMAD:
-        max_hit = 2000;
-        max_mana = 0;
-        break;
-
-      case CLASS_THIEF:
-        max_hit = 1500;
-        max_mana = 0;
-        break;
-
-      case CLASS_CLERIC:
-      case CLASS_MAGIC_USER:
-      case CLASS_BARD:
-        max_hit = 750;
-        max_mana = 1150;
-
-      default:
-       break;
-    }
-
-    ch->points.mana      = max_mana;
-    ch->points.max_mana  = max_mana;
-    ch->points.hit       = max_hit;
-    ch->points.max_hit   = max_hit;
-    ch->points.move      = max_move;
-    ch->points.max_move  = max_move;
-
-    ch->specials.prev_max_mana = max_mana;
-    ch->specials.prev_max_hit  = max_hit;
-    ch->specials.prev_max_move = max_move;
-    ch->specials.org_mana      = max_mana;
-    ch->specials.org_hit       = max_hit;
-    ch->specials.org_move      = max_move;
-
-    /* Re-apply affects and enchantments */
-
-    for(af = ch->affected; af; af=af->next)
-      affect_modify(ch, af->location, af->modifier, af->bitvector,af->bitvector2, TRUE);
-
-    for(ench = ch->enchantments; ench; ench=ench->next)
-      affect_modify(ch, ench->location, ench->modifier, ench->bitvector,ench->bitvector2, TRUE);
-
-    /* Affects to not increase supernatural stats, pin them */
-
-    GET_CON(ch) = MAX(0,MIN(GET_CON(ch),GET_OCON(ch)));
-    GET_INT(ch) = MAX(0,MIN(GET_INT(ch),GET_OINT(ch)));
-    GET_DEX(ch) = MAX(0,MIN(GET_DEX(ch),GET_ODEX(ch)));
-    GET_WIS(ch) = MAX(0,MIN(GET_WIS(ch),GET_OWIS(ch)));
-    GET_STR(ch) = MAX(0,MIN(GET_STR(ch),GET_OSTR(ch)));
-
-    if(GET_STR(ch)<18)
-    {
-      i=GET_ADD(ch)/10;
-      GET_STR(ch)+=i;
-      GET_ADD(ch)-=i*10;
-      if(GET_STR(ch)>18)
-      {
-        i=GET_ADD(ch)+((GET_STR(ch)-18)*10);
-        GET_ADD(ch)=MIN(i, 100);
-        GET_STR(ch)=18;
-      }
-    }
-    /* set skills to 100 */
-    for (int done = FALSE,number = 0,i = 0; !done; i++) {
-      if (*avatar_skills[i] == '\n') done = TRUE;
-      else
-      {
-        number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), (const char * const * const)spells, TRUE);
-
-        if (number == 0) continue;
-        else if (!check_sc_access(ch, number)) continue;
-        else
-        {
-          ch->skills[number].learned = 100;
-        }
-      }
-    }
-    /* set spells to 100 */
-    for (i = 0; *spells[i] != '\n'; i++)
-    {
-      if (!spell_info[i + 1].spell_pointer) continue;
-      else if ((ch->skills[i + 1].learned >= 85)) continue;
-      else
-      {
-        ch->skills[i+1].learned = 100;
-      }
-    }
-  }
-#endif
-
-
-
   if(GET_LEVEL(ch)<LEVEL_IMM) rank_char(ch);
 
   if(GET_LEVEL(ch)<LEVEL_SUP && IS_SET(ch->new.imm_flags, WIZ_QUEST_INFO))
     REMOVE_BIT(ch->new.imm_flags, WIZ_QUEST_INFO);
 
-/* CHAOS2017: no equipment */
-#ifndef CHAOS2017
-  
   while (!feof(fl)) {
     switch(obj_version(fl)) {
       case 3:
@@ -543,7 +380,7 @@ void load_char(CHAR *ch) {
         break;
     }
   }
-#endif
+
   fclose(fl);
 
 
@@ -1049,7 +886,7 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
   struct obj_cost cost;
   struct char_data *victim=NULL;
   struct follow_type *k,*next_fol;
-	OBJ *tmp_obj;
+  OBJ *tmp_obj;
 
   void do_action(CHAR *ch, char *argument, int cmd);
   int number(int from, int to);
@@ -1116,19 +953,19 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
 
       ch->questgiver=0;
       if(ch->questobj)
-  		{
-				if(V_OBJ(ch->questobj) == 35)
-				{
-					for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
-					{
-						if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
-						if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
-						extract_obj(tmp_obj);
-					}
-				}
-				else
-					ch->questobj->owned_by=0;
-			}
+      {
+        if(V_OBJ(ch->questobj) == 35)
+        {
+          for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
+          {
+            if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
+            if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
+            extract_obj(tmp_obj);
+          }
+        }
+        else
+          ch->questobj->owned_by=0;
+      }
       ch->questobj=0;
       if(ch->questmob) ch->questmob->questowner=0;
       ch->questmob=0;
@@ -1181,7 +1018,7 @@ void auto_rent(CHAR *ch) {
   int i;
   char buf[MAX_STRING_LENGTH];
   struct obj_cost cost;
-	OBJ *tmp_obj;
+  OBJ *tmp_obj;
 
   if (IS_NPC(ch)) return;
 
@@ -1212,18 +1049,18 @@ void auto_rent(CHAR *ch) {
   ch->questgiver=0;
   if(ch->questobj)
   {
-		if(V_OBJ(ch->questobj) == 35)
-		{
-			for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
-			{
-				if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
-				if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
-				extract_obj(tmp_obj);
-			}
-		}
-		else
-			ch->questobj->owned_by=0;
-	}
+    if(V_OBJ(ch->questobj) == 35)
+    {
+      for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
+      {
+        if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
+        if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
+        extract_obj(tmp_obj);
+      }
+    }
+    else
+      ch->questobj->owned_by=0;
+  }
   ch->questobj=0;
   if(ch->questmob) ch->questmob->questowner=0;
   ch->questmob=0;
