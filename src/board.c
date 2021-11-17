@@ -205,9 +205,10 @@ void write_msg(CHAR *ch, char *arg, struct struct_board *board) {
   long ct = time(NULL);
   struct tm *timeStruct = localtime(&ct);
 
-  char tm_str[6 + 1];
+  char tm_str[12 + 1];
 
-  snprintf(tm_str, sizeof(tm_str), "%3s %2d", Months[timeStruct->tm_mon], timeStruct->tm_mday);
+  /* Yes, the year will break in 2155 if we don't update the board code by then... */
+  snprintf(tm_str, sizeof(tm_str), "%3s %2d, %4d", Months[timeStruct->tm_mon], timeStruct->tm_mday, 1900 + (unsigned char)timeStruct->tm_year);
 
   char tmp_str[MSL];
 
@@ -627,7 +628,8 @@ void write_board(int vnum,char *heading,char *message) {
 
   ct=time(0);
   timeStruct = localtime(&ct);
-  sprintf(tmstr, "%s %2d ", Months[timeStruct->tm_mon], timeStruct->tm_mday);
+  /* Yes, the year will break in 2155 if we don't update the board code by then... */
+  snprintf(tmstr, sizeof(tmstr), "%s %2d, %4d", Months[timeStruct->tm_mon], timeStruct->tm_mday, 1900 + (unsigned char)timeStruct->tm_year);
   board->heading[board->msg_num] = (char *)malloc(strlen(tmstr) + strlen(heading) + 16 + 11);
 
   if (strlen(tmstr)+strlen(heading)+16+11 > 80) {
