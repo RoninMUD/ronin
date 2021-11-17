@@ -1,0 +1,7 @@
+#!/bin/sh
+find . -type f -print0 | xargs -0 chmod 644
+chmod +x ./setperms
+chmod +x ./util/announce
+chmod +x ./util/announce_start
+chmod +x ./vault/list_vaults
+
