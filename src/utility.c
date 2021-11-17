@@ -1873,24 +1873,6 @@ int CHAR_HAS_LEGS(CHAR *ch) {
   return TRUE;
 }
 
-int CORPSE_HAS_TROPHY(OBJ *obj) {
-  switch(OBJ_MATERIAL(obj)) {
-    case CLASS_LESSER_ELEMENTAL:
-    case CLASS_GREATER_ELEMENTAL:
-    case CLASS_LESSER_PLANAR:
-    case CLASS_GREATER_PLANAR:
-    case CLASS_FUNGUS:
-    case CLASS_FISH:
-    case CLASS_PLANT:
-    case CLASS_BLOB:
-    case CLASS_GHOST:
-      return FALSE;
-      break;
-  }
-
-  return TRUE;
-}
-
 CHAR *get_ch_by_id(int num) {
   for (struct descriptor_data *d = descriptor_list; d; d = d->next)
     if (d && !d->connected && d->character && (d->character->ver3.id == num))

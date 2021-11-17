@@ -1698,8 +1698,8 @@ void do_trophy(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (!CORPSE_HAS_TROPHY(corpse)) {
-    send_to_char("That corpse has no suitable 'parts' for a trophy.\n\r", ch);
+  if (OBJ_MATERIAL(corpse) == -1) {
+    send_to_char("That corpse has already been harvested for a trophy.\n\r", ch);
 
     return;
   }
@@ -1710,9 +1710,8 @@ void do_trophy(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  /* Change the material type to the hilariously appropriate CLASS_BLOB to
-     represent that its no longer suitable for making trophies. */
-  OBJ_MATERIAL(corpse) = CLASS_BLOB;
+  /* Change the material type to -1 to mark that it has already been harvested for a trophy. */
+  OBJ_MATERIAL(corpse) = -1;
 
   CHAR *group_leader = (GET_MASTER(ch) ? GET_MASTER(ch) : ch);
 
