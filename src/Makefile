@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS += -g -Og -Wall -Wno-unused-result -DLINUX -DENCHANT_KLUDGE -DLOSE_AT_DEATH -DTYPECOLOR
-LFLAGS = -rdynamic -lm -lcrypt -lsodium
+CFLAGS += -g -Og -std=gnu17 -Wall -Wno-unused-result -DLINUX -DTYPECOLOR
+LFLAGS = -lcrypt -lm -lsodium -rdynamic
 OBJDIR = ../obj
 BINDIR = ../bin
 TYPE ?= $(shell basename $$(dirname $$PWD))
@@ -8,11 +8,7 @@ TYPE ?= $(shell basename $$(dirname $$PWD))
 $(info Making ${TYPE}...)
 
 ifneq ($(TYPE), live)
-	ifeq ($(TYPE), chaos)
-		CFLAGS += -DCHAOS2017
-	else
-		CFLAGS += -DTEST_SITE
-	endif
+	CFLAGS += -DTEST_SITE
 endif
 
 #

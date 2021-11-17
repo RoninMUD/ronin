@@ -1,5 +1,0 @@
-rm gold.list
-rm gold.stat
-rm statlist.dat
-find ./* -name '*.dat*'  -exec statlist {} \;
-goldstats

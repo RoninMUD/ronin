@@ -1,3 +1,0 @@
-rm statlist.dat
-find ./* -name '*.dat*'  -exec statlist {} \;
-charstats
