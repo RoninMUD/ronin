@@ -2119,7 +2119,6 @@ const char * const thief_skills[] = {
 
 /* Warrior Skills */
 const char * const warrior_skills[] = {
-  "bash",
   "block",
   "disarm",
   "dual",

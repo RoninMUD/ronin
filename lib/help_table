@@ -1687,8 +1687,8 @@ practice % on parry for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: bash, block, disarm, dual, kick, knock, parry, punch, rescue,
-        spin, throw, triple (level 20), disembowel (level 40), quad (level 50)
+Skills: block, disarm, dual, kick, knock, parry, punch, rescue, spin, throw,
+        triple (level 20), disembowel (level 40), quad (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1716,7 +1716,7 @@ You can improve your spells by using the practice command.
 
 Use HELP CLERIC SPELLS to see the spells of the cleric class.
 
-Skills: bash, meditate
+Skills: bash (level 35), meditate (level 40)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
 #
@@ -1775,7 +1775,7 @@ additional practice % on dodge for every 10 levels.
 
 You can improve your skills by using the practice command.
 
-Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
+Skills: ambush, bash, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
         subdue, throw, trap, disembowel (level 40), evasion (level 50)
 
 See also: PRACTICE "CLASS PLACEMENT POINTS"
@@ -3596,14 +3596,14 @@ See Also: -
 #
 "CURE CRITIC"
 
-Usage       : cast 'cure critic' <victim>
+Usage       : cast 'cure critic' <target>
 Accumulative: -
 Duration    : Instantaneous
 Level       : Level 9 Cleric, 10 Paladin
 Mana Cost   : 25 (cost will be higher at lower levels)
 
-This spell cures 10+5*level of caster hit points of damage, for a
-maximum of 75 hit points.
+This spell cures 10+5*level of caster hit points of damage, up to a maximum of
+75 hit points.
 
 See Also: SONGS
 #
@@ -3615,21 +3615,20 @@ Duration    : Instantaneous
 Level       : Level 13 Cleric
 Mana Cost   : 38 (cost will be higher at lower levels)
 
-This spell heals all in the room for 10+5*level of caster hit
-points, for a maximum of 75 hit points.
+This spell casts Cure Critic on all characters in the room.
 
 See Also: Cure Critic
 #
 "CURE LIGHT"
 
-Usage       : cast 'cure light' <victim>
+Usage       : cast 'cure light' <target>
 Accumulative: -
 Duration    : Instantaneous
 Level       : Level 1 Cleric, 4 Ninja, 1 Paladin
 Mana Cost   : 15 (cost will be higher at lower levels)
 
-This spell cures 10+5*level of caster hit points of damage, for a
-maximum of 30 hit points.
+This spell cures 10+5*level of caster hit points of damage, up to a maximum of
+30 hit points.
 
 See Also: Cure Light Spray
 #
@@ -3641,21 +3640,20 @@ Duration    : Instantaneous
 Level       : Level 4 Cleric
 Mana Cost   : 23 (cost will be higher at lower levels)
 
-This spell heals all in the room for 10+5*level of caster hit
-points, for a maximum of 30 hit points.
+This spell casts Cure Light on all characters in the room.
 
 See Also: Cure Light
 #
 "CURE SERIOUS"
 
-Usage       : cast 'cure serious' <victim>
+Usage       : cast 'cure serious' <target>
 Accumulative:-
 Duration    : Instantaneous
 Level       : Level 6 Cleric, 16 Ninja, 5 Paladin
 Mana Cost   : 18 (cost will be higher at lower level)
 
-This spell cures 10+5*level of caster hit points of damage, for a
-maximum of 45 hit points.
+This spell cures 10+5*level of caster hit points of damage, up to a maximum of
+45 hit points.
 
 See Also: Cure Serious Spray
 #
@@ -3757,33 +3755,34 @@ The enchantment will modify the weapon as:
 
 Level    Hit Roll    Damage
 
-0..17      +1         +1
-18..19     +2         +1
-20+        +2         +2
-25+        +3         +2
-28+        +3         +3
-40+      random     random
-IMM+       +4         +4
-IMP        +5         +5
+0..17    +1          +1
+18..19   +2          +1
+20+      +2          +2
+25+      +3          +2
+28+      +3          +3
+40+      random      random
+IMM+     +4          +4
+IMP      +5          +5
 
 Between levels 40 and 50, there is the possibility of enchanting with all
-combinations between +3 +3 and +5 +5.  For example a +4 +3 enchant is possible,
-so is a +4 +5, etc.  The closer a character is to level 50, the better the
-chance of getting +5 +5.
+combinations between +3/+3 and +5/+5.  For example a +4/+3 enchant is possible,
+so is a +4/+5, etc.  The closer a character is to level 50, the better the
+chance of getting +5/+5.
 
 See Also: -
 #
 HEAL
 
-Usage       : cast 'heal' <victim>
+Usage       : cast 'heal' <target>
 Accumulative: No
 Duration    : Instantaneous
 Level       : Level 14 Cleric, 29 Ninja, 21 Paladin
 Mana Cost   : 50
 
-This spell will heal up to a maximum of 200 points on the <victim>
+This spell cures 10+5*level of caster hit points of damage, up to a maximum of
+200 hit points.
 
-A victim who is blinded or stunned will also be cured.
+A target who is blinded will also be cured of that ailment.
 
 See Also: "Cure Blindness" "Heal Spray" SONGS
 #
@@ -3795,7 +3794,7 @@ Duration    : Instantaneous
 Level       : Level 22 Cleric
 Mana Cost   : 100
 
-This spell will cast Heal on each character that is in the room.
+This spell casts Heal on all characters in the room.
 
 See Also: "Cure Blindness" "Heal"
 #
