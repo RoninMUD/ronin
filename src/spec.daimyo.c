@@ -1107,7 +1107,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
     obj=EQ(ch, WIELD);
     if (obj) {
       obj_to_room(unequip_char(ch, WIELD), real_room(576) );
-      sprintf(buf, "You attempt to disarm %s but find yourself the one left weaponless as %s casually tosses %s down the mountain.\n\r", GET_SHORT(uber), HSSH(uber), OBJ_SHORT(obj) );
+      sprintf(buf, "You attempt to disarm %s but find yourself the one left weaponless as %s casually tosses %s down the mountain.\n\r", GET_SHORT(uber), HESH(uber), OBJ_SHORT(obj) );
       send_to_char(buf, ch);
       sprintf(buf, "WIZINFO: %s lost %s in %d", GET_NAME(ch), OBJ_SHORT(obj), 576 );
       log_s(buf);

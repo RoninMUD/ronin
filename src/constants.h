@@ -9,7 +9,8 @@
 #include "structs.h"
 #include "limits.h"
 
-extern const int exp_table[58];
+extern const int exp_table[];
+extern const int rank_exp_table[];
 
 extern const char * const subclass_name[];
 extern const int subclass_master[11];

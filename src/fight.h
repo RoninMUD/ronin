@@ -28,7 +28,7 @@ void death_list(CHAR *ch);
 void raw_kill_ex(CHAR *ch, bool statue);
 void raw_kill(CHAR *ch);
 void divide_experience(struct char_data *ch, struct char_data *victim, int none);
-void gain_exp(struct char_data *ch, int gain);
+void gain_exp(CHAR *ch, int gain);
 char *replace_string(char *str, char *weapon);
 void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type, int shadow);
 void process_death(struct char_data *ch, struct char_data *victim);

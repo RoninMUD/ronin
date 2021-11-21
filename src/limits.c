@@ -880,80 +880,76 @@ int move_gain(CHAR *ch) {
 }
 
 void advance_level(CHAR *ch) {
-  int hit_gain = 0;
-  int mana_gain = 0;
-  int move_gain = 3;
-  int prac_gain = 1;
+  int hit_gain = con_app[MAX(GET_CON(ch), 18)].hitp;
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
-      hit_gain = number(3, 7);   /* average 5 */
+      hit_gain += number(3, 7);   /* average 5 */
       break;
 
     case CLASS_CLERIC:
-      hit_gain = number(5, 9);   /* average 7 */
+      hit_gain += number(5, 9);   /* average 7 */
       break;
 
     case CLASS_THIEF:
-      hit_gain = number(7, 11);  /* average 9 */
+      hit_gain += number(8, 12);  /* average 10 */
       break;
 
     case CLASS_WARRIOR:
-      hit_gain = number(10, 14); /* average 12 */
+      hit_gain += number(10, 14); /* average 12 */
       break;
 
     case CLASS_NINJA:
-      hit_gain = number(5, 9);   /* average 7 */
+      hit_gain += number(6, 10);  /* average 8 */
       break;
 
     case CLASS_NOMAD:
-      hit_gain = number(13, 17); /* average 15 */
+      hit_gain += number(13, 17); /* average 15 */
       break;
 
     case CLASS_PALADIN:
-      hit_gain = number(8, 12);  /* average 10 */
+      hit_gain += number(7, 11);  /* average 9 */
       break;
 
     case CLASS_ANTI_PALADIN:
-      hit_gain = number(6, 10);  /* average 8 */
+      hit_gain += number(6, 10);  /* average 8 */
       break;
 
     case CLASS_AVATAR:
-      hit_gain = number(15, 15); /* average 15 */
+      hit_gain += number(15, 15); /* average 15 */
       break;
 
     case CLASS_BARD:
-      hit_gain = number(6, 10);  /* average 8 */
+      hit_gain += number(5, 9);   /* average 7 */
       break;
 
     case CLASS_COMMANDO:
-      hit_gain = number(7, 11);  /* average 9 */
+      hit_gain += number(7, 11);  /* average 9 */
       break;
   }
+
+  int mana_gain = 0;
 
   switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER:
     case CLASS_CLERIC:
     case CLASS_AVATAR:
     case CLASS_BARD:
-      mana_gain = number(2, 6); /* average 4*/
+      mana_gain += number(2, 6); /* average 4 */
       break;
 
     case CLASS_NINJA:
     case CLASS_PALADIN:
     case CLASS_ANTI_PALADIN:
     case CLASS_COMMANDO:
-      mana_gain = number(1, 5); /* average 3 */
+      mana_gain += number(1, 5); /* average 3 */
       break;
   }
 
-  hit_gain += MAX(con_app[GET_CON(ch)].hitp, con_app[18].hitp);
-  prac_gain += MAX(wis_app[GET_WIS(ch)].bonus, wis_app[18].bonus);
-
   GET_MAX_HIT_POINTS(ch) = MIN(GET_MAX_HIT_POINTS(ch) + hit_gain, SHRT_MAX);
   GET_MAX_MANA_POINTS(ch) = MIN(GET_MAX_MANA_POINTS(ch) + mana_gain, SHRT_MAX);
-  GET_MAX_MOVE_POINTS(ch) = MIN(GET_MAX_MOVE_POINTS(ch) + move_gain, SHRT_MAX);
-  GET_PRAC(ch) = MIN(GET_PRAC(ch) + prac_gain, SCHAR_MAX);
+  GET_MAX_MOVE_POINTS(ch) = MIN(GET_MAX_MOVE_POINTS(ch) + 3, SHRT_MAX);
+  GET_PRAC(ch) = MIN(GET_PRAC(ch) + 1 + wis_app[MAX(GET_WIS(ch), 18)].bonus, SCHAR_MAX);
 }
 
 void set_title(CHAR * ch, char *title) {
@@ -973,25 +969,18 @@ void set_title(CHAR * ch, char *title) {
   GET_TITLE(ch) = str_dup(title);
 }
 
-void gain_exp(CHAR *ch, int gain)
-{
+void gain_exp(CHAR *ch, int gain) {
   char buf[MIL];
   int is_altered = FALSE;
 
-  if (IS_NPC(ch) ||
-      (GET_LEVEL(ch) < LEVEL_IMM && 
-       GET_LEVEL(ch) > 0))
-  {
-    if (gain > 0)
-    {
-      if (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
-      {
+  if (IS_NPC(ch) || (GET_LEVEL(ch) < LEVEL_IMM && GET_LEVEL(ch) > 0)) {
+    if (gain > 0) {
+      if (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC)) {
         GET_EXP(ch) += gain;
       }
 
       /* Log a warning if exp gain is over 25 million. */
-      if (gain > 25000000)
-      {
+      if (gain > 25000000) {
         sprintf(buf, "PLRINFO: WARNING %s's exp just increased by %d. (Room %d)",
           GET_NAME(ch), gain, world[CHAR_REAL_ROOM(ch)].number);
         wizlog(buf, LEVEL_SUP, 4);
@@ -999,10 +988,8 @@ void gain_exp(CHAR *ch, int gain)
       }
 
       if (!IS_NPC(ch) &&
-          GET_LEVEL(ch) < LEVEL_MORT)
-      {
-        while (GET_EXP(ch) >= exp_table[GET_LEVEL(ch) + 1])
-        {
+        GET_LEVEL(ch) < LEVEL_MORT) {
+        while (GET_EXP(ch) >= exp_table[GET_LEVEL(ch) + 1]) {
           if (GET_LEVEL(ch) >= LEVEL_MORT) break;
 
           send_to_char("You raise a level!\n\r", ch);
@@ -1015,16 +1002,14 @@ void gain_exp(CHAR *ch, int gain)
         }
       }
     }
-    else
-    {
+    else {
       GET_EXP(ch) += MAX(gain, -(GET_EXP(ch) / 2));
       GET_EXP(ch) = MAX(GET_EXP(ch), 0);
     }
 
     if (!IS_NPC(ch) &&
-        is_altered &&
-        !IS_SET(ch->specials.pflag, PLR_SKIPTITLE))
-    {
+      is_altered &&
+      !IS_SET(ch->specials.pflag, PLR_SKIPTITLE)) {
       set_title(ch, NULL);
     }
   }

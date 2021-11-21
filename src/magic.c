@@ -1961,7 +1961,7 @@ void spell_identify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       GET_SHORT(victim),
       mob_id_dmg_text[iDMG - 1],
       npc_class_types[GET_CLASS(victim)],
-      HSSH(victim),
+      HESH(victim),
       mob_id_matt_text[iMATT - 1],
       mob_id_spec[iSPEC],
       mob_id_hp_text[iHP - 1],
@@ -2767,13 +2767,13 @@ void spell_cure_critic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 void spell_heal(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   print_spell_messages(victim, SPELL_HEAL);
 
-  magic_heal(ch, victim, SPELL_HEAL, MIN(level * 5, 200), FALSE);
+  magic_heal(ch, victim, SPELL_HEAL, MIN(10 + (level * 5), 200), FALSE);
 
   spell_cure_blind(level, ch, victim, obj);
 
   /* Crusader SC2: Focus */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_CRUSADER, 2)) {
-    GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch) + 10, 1000);
+    GET_ALIGNMENT(ch) = MIN(10 + GET_ALIGNMENT(ch), 1000);
   }
 }
 

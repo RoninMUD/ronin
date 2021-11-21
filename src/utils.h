@@ -234,7 +234,7 @@ do {                   \
           "Superb")))))))
 
 #define HSHR(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "his" : "her") : "its")
-#define HSSH(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "he"  : "she") : "it")
+#define HESH(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "he"  : "she") : "it")
 #define HMHR(ch)  ((ch)->player.sex ? (((ch)->player.sex == SEX_MALE) ? "him" : "her") : "it")
 
 #define ANA(obj)       (index("aeiouyAEIOUY", *(obj)->name) ? "An" : "A")
