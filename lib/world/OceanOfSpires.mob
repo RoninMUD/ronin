@@ -1,0 +1,287 @@
+#30200
+lobster large spiny~
+A Large Spiny Lobster~
+A very large lobster with long black spines.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+52 -25 -17 50d100+13500 12d12+120
+0 2300000
+8 8 0
+0 20480 1d1+300 0
+0 1 0 32
+K
+90000 0 0 0 0 0 0
+#30201
+crab king giant~
+A Giant King Crab~
+A massive crab with a very large pincer.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+53 -27 -16 52d84+15600 11d11+110
+0 2300000
+8 8 0
+0 20480 1d1+300 0
+0 1 0 32
+K
+75000 0 0 0 0 0 0
+#30202
+crawfish pipsqueak~
+A Pipsqueak Crawfish~
+A tiny crawfish with little beady eyes.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+51 -31 -15 50d101+17700 10d10+150
+0 2650000
+8 8 0
+0 20480 1d1+300 0
+0 1 0 32
+K
+105000 0 0 0 0 0 0
+#30203
+humashi rakshasa~
+Humashi~
+A lone rakshahsa stands at the ready.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+54 -29 -19 80d85+19000 11d9+95
+0 2345000
+8 8 0
+60 20480 1d1+300 0
+0 1 0 32
+K
+480654 0 0 0 0 0 0
+#30204
+sharshuhr manticore~
+Sharshuhr~
+A three headed beast growls at itself.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+54 -29 -19 85d90+19500 10d10+105
+0 2345000
+8 8 0
+86 20480 1d1+300 0
+0 1 0 32
+K
+584621 0 0 0 0 0 0
+#30205
+iazzeggaj hydra~
+Iazzeggaj~
+Five Heads nip back and forth and each other.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+58 -29 -20 90d95+19750 12d9+115
+0 2345000
+8 8 0
+80 20480 1d1+300 0
+0 1 0 32
+K
+554862 0 0 0 0 0 0
+#30206
+ezith ruler azure wizard~
+Ezith, Ruler of the Azure Spires~
+A tall skinny woman stares into her spellbook.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 2176 650 Y
+60 -32 -23 100d9+26500 30d12+312
+225000 4000000
+8 8 2
+2 20480 100d9+15600 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30207
+negver giant~
+Negver~
+A Massive Lumbering Female stomps through the room.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+58 -28 -21 70d90+19750 11d12+106
+98750 2345000
+8 8 2
+59 20480 1d1+300 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30208
+deathspike basilisk~
+Deathspike~
+A large stone lizard glares intensely at you.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+57 -28 -21 75d85+19750 10d11+107
+0 2345000
+8 8 0
+80 20480 1d1+300 0
+0 1 0 32
+K
+684000 0 0 0 0 0 0
+#30209
+astraea griffin~
+Astraea~
+A winged lion roars in defiance of those that enter.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+57 -28 -22 65d75+19750 11d10+108
+0 2345000
+8 8 0
+83 20480 1d1+300 0
+0 1 0 32
+K
+759000 0 0 0 0 0 0
+#30210
+zuznu zaratan turtle~
+Zuznu~
+A gigantic turtle with a large green slowly moves around the room.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 0 Y
+56 -27 -22 75d86+19750 10d11+109
+0 2345000
+8 8 0
+80 20480 1d1+300 0
+0 1 0 32
+K
+850000 0 0 0 0 0 0
+#30211
+elemental lesser crimson~
+Lesson Crimson Elemental~
+A Small Flame of Red and black roams the plaforms
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+55 -25 -18 65d76+15000 9d13+115
+0 1800000
+8 8 0
+64 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30212
+elemental greater crimson~
+Greater Crimson Elemental~
+A Large Flame of Black and Red scorches the walls
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+56 -26 -20 75d87+16000 8d14+120
+0 1900000
+8 8 0
+65 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30213
+maven golem~
+Maven~
+A Large Golem of Black Stone stands and watches patiently
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+57 -28 -21 65d77+17000 7d15+125
+175000 2100000
+8 8 0
+79 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30214
+rhazzlon golem~
+Rhazzlon~
+A Large Golem of Crimson Stone lumbers around
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+57 -28 -21 75d88+18000 6d16+130
+175000 2100000
+8 8 0
+79 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30215
+sizor blob crimson~
+Sizor~
+A large Crimson Blob hops around.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16456 0 0 Y
+58 -29 -21 65d78+19000 9d18+135
+0 2600000
+8 8 0
+94 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30216
+sigmis elemental~
+Large Crimson Elemental~
+An Elemental Pulses in the Void.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 0 -500 Y
+58 -30 -22 75d89+20000 12d14+140
+0 3500000
+8 8 0
+65 20480 1d1+2000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30217
+cazahne leader ~
+Cazahne, Leader of the Crimson Spire~
+A Short female sits encased in crimson flames.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 2176 -700 Y
+60 -31 -23 100d9+26500 30d12+312
+225000 4000000
+8 8 2
+1 20480 100d9+15600 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30218
+basalt rok~
+Basalt Rok~
+A Large Bird with black feathers squawks at your intrusion.
+~
+A blank of primal clay, waiting to be shaped.
+~
+16490 128 0 Y
+65 -32 -22 2d15000+28000 -56d5+180
+0 6500000
+8 8 0
+80 20480 1d1+300 0
+0 1 0 32
+K
+7500000 0 0 0 0 0 0
+#0
+$~

@@ -1,0 +1,1484 @@
+#30200
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30201
+D2
+~
+~
+0 -1 30205
+D4
+~
+~
+0 -1 30225
+S
+#30201
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30202
+D2
+~
+~
+0 -1 30206
+D3
+~
+~
+0 -1 30200
+S
+#30202
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30203
+D2
+~
+~
+0 -1 30207
+D3
+~
+~
+0 -1 30201
+S
+#30203
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30204
+D2
+~
+~
+0 -1 30208
+D3
+~
+~
+0 -1 30202
+S
+#30204
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D2
+~
+~
+0 -1 30209
+D3
+~
+~
+0 -1 30203
+D4
+~
+~
+0 -1 30226
+S
+#30205
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30200
+D1
+~
+~
+0 -1 30206
+S
+#30206
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30201
+D1
+~
+~
+0 -1 30207
+D3
+~
+~
+0 -1 30205
+S
+#30207
+The Cyan Tower Entrance~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30202
+D1
+~
+~
+0 -1 30208
+D2
+~
+~
+0 -1 30212
+D3
+~
+~
+0 -1 30206
+D4
+~
+~
+0 -1 30229
+S
+#30208
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30203
+D1
+~
+~
+0 -1 30209
+D2
+~
+~
+0 -1 30213
+D3
+~
+~
+0 -1 30207
+S
+#30209
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30204
+D2
+~
+~
+0 -1 30214
+D3
+~
+~
+0 -1 30208
+S
+#30210
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30211
+S
+#30211
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30212
+D3
+~
+~
+0 -1 30210
+S
+#30212
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30207
+D1
+~
+~
+0 -1 30213
+D2
+~
+~
+0 -1 30217
+D3
+~
+~
+0 -1 30211
+S
+#30213
+Entrance to the Azure Spire~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30208
+D1
+~
+~
+0 -1 30214
+D2
+~
+~
+0 -1 30218
+D3
+~
+~
+0 -1 30212
+D4
+~
+~
+0 -1 30235
+S
+#30214
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30209
+D2
+~
+~
+0 -1 30219
+D3
+~
+~
+0 -1 30213
+S
+#30215
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30216
+D2
+~
+~
+0 -1 30220
+S
+#30216
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30217
+D2
+~
+~
+0 -1 30221
+D3
+~
+~
+0 -1 30215
+S
+#30217
+The Blue Tower Entrance~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30212
+D1
+~
+~
+0 -1 30218
+D2
+~
+~
+0 -1 30222
+D3
+~
+~
+0 -1 30216
+D4
+~
+~
+0 -1 30232
+S
+#30218
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30213
+D1
+~
+~
+0 -1 30219
+D2
+~
+~
+0 -1 30223
+D3
+~
+~
+0 -1 30217
+S
+#30219
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30214
+D2
+~
+~
+0 -1 30224
+D3
+~
+~
+0 -1 30218
+S
+#30220
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30215
+D1
+~
+~
+0 -1 30221
+D4
+~
+~
+0 -1 30227
+S
+#30221
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30216
+D1
+~
+~
+0 -1 30222
+D3
+~
+~
+0 -1 30220
+S
+#30222
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30217
+D1
+~
+~
+0 -1 30223
+D3
+~
+~
+0 -1 30221
+S
+#30223
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30218
+D1
+~
+~
+0 -1 30224
+D3
+~
+~
+0 -1 30222
+S
+#30224
+Jagged Spike Field~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30219
+D3
+~
+~
+0 -1 30223
+D4
+~
+~
+0 -1 30228
+S
+#30225
+Northwest Jagged Spiked Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30200
+S
+#30226
+Northeast Jagged Spiked Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30204
+S
+#30227
+Southwest Jagged Spiked Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30220
+S
+#30228
+Southeast Jagged Spiked Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30224
+S
+#30229
+Climbing the Cyan Tower~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30230
+D5
+~
+~
+0 -1 30207
+S
+#30230
+Climbing the Cyan Tower~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30231
+D5
+~
+~
+0 -1 30229
+S
+#30231
+Top of the Cyan Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30230
+S
+#30232
+Climbing the Blue Tower~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30233
+D5
+~
+~
+0 -1 30217
+S
+#30233
+Climbing the Blue Tower~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30234
+D5
+~
+~
+0 -1 30232
+S
+#30234
+Top of the Blue Tower~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30233
+S
+#30235
+Climbing the Azure Spire~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30236
+D5
+~
+~
+0 -1 30213
+S
+#30236
+Climbing the Azure Spire~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30237
+D5
+~
+~
+0 -1 30235
+S
+#30237
+Azure Hydra's Den~
+Temporary description.
+~
+302 67108872 0
+D4
+~
+~
+0 -1 30238
+D5
+~
+~
+0 -1 30236
+S
+#30238
+Top of the Azure Spire~
+Temporary description.
+~
+302 67108872 0
+D5
+~
+~
+0 -1 30237
+S
+#30239
+Entrance to the Crimson Spire~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30240
+S
+#30240
+A Crimson Walkway~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30239
+D3
+~
+~
+0 -1 30241
+S
+#30241
+A Crimson Walkway~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30243
+D1
+~
+~
+0 -1 30240
+D3
+~
+~
+0 -1 30242
+S
+#30242
+A Crimson Walkway~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30241
+S
+#30243
+Ledge over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D0
+A deep void full of red mist
+~
+void~
+10 -1 30244
+D2
+~
+~
+0 -1 30241
+S
+#30244
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30245
+D2
+A deep void full of red mist
+~
+void~
+10 -1 30243
+S
+#30245
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30244
+D3
+~
+~
+0 -1 30246
+S
+#30246
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30245
+D3
+~
+~
+0 -1 30247
+S
+#30247
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30251
+D1
+~
+~
+0 -1 30246
+D2
+~
+~
+0 -1 30248
+D3
+~
+~
+0 -1 30250
+S
+#30248
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30247
+D3
+~
+~
+0 -1 30249
+S
+#30249
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30250
+D1
+~
+~
+0 -1 30248
+S
+#30250
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30247
+D2
+~
+~
+0 -1 30249
+S
+#30251
+Interlocking Crimson Platforms~
+Temporary description.
+~
+302 67108872 0
+D1
+A deep void full of red mist
+~
+void~
+10 -1 30252
+D2
+~
+~
+0 -1 30247
+S
+#30252
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30253
+D1
+~
+~
+0 -1 30255
+D3
+A deep void full of red mist
+~
+void~
+10 -1 30251
+S
+#30253
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30254
+D2
+~
+~
+0 -1 30252
+S
+#30254
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30255
+D3
+~
+~
+0 -1 30253
+S
+#30255
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30254
+D1
+~
+~
+0 -1 30256
+D3
+~
+~
+0 -1 30252
+S
+#30256
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30257
+D3
+~
+~
+0 -1 30255
+S
+#30257
+Platforms Over the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30256
+D1
+A broken wall of red brick
+~
+wall~
+11 -1 30258
+S
+#30258
+Broken Parapet of the Crimson Tower~
+Temporary description.
+~
+302 67108872 0
+D0
+A deep void full of red mist
+~
+void~
+10 -1 30259
+D3
+A ledge over the red void
+~
+ledge~
+10 -1 30257
+S
+#30259
+Broken Wall of the Crimson Spire~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30260
+D2
+A deep void full of red mist
+~
+void~
+10 -1 30258
+S
+#30260
+Broken Wall of the Crimson Spire~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30261
+D2
+~
+~
+0 -1 30259
+S
+#30261
+Broken Wall of the Crimson Spire~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30260
+D3
+~
+~
+0 -1 30262
+S
+#30262
+Ornate Crimson Hallway~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30261
+D3
+~
+~
+0 -1 30263
+S
+#30263
+Ornate Crimson Hallway~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30262
+D3
+~
+~
+0 -1 30264
+S
+#30264
+Ornate Crimson Hallway~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30265
+D1
+~
+~
+0 -1 30263
+D3
+A deep void full of red mist
+~
+void~
+10 -1 30266
+S
+#30265
+Throne of the Crimson Spire~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30264
+S
+#30266
+Crimson Tower Walkway~
+Temporary description.
+~
+302 67108872 0
+D1
+A deep void full of red mist
+~
+void~
+10 -1 30264
+D3
+~
+~
+0 -1 30267
+S
+#30267
+Crimson Spire Exterior Wall~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30266
+D3
+~
+~
+0 -1 30268
+S
+#30268
+Crimson Spire Exterior Wall~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30267
+D2
+~
+~
+0 -1 30269
+D3
+~
+~
+0 -1 30270
+S
+#30269
+A Crimson Alcove~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30268
+S
+#30270
+Entrance to the Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D0
+~
+~
+0 -1 30271
+D1
+~
+~
+0 -1 30268
+S
+#30271
+Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D2
+~
+~
+0 -1 30270
+D3
+~
+~
+0 -1 30272
+S
+#30272
+Crimson Void~
+Temporary description.
+~
+302 67108872 0
+D1
+~
+~
+0 -1 30271
+S
+#30273
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30274
+S
+#30274
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30275
+D3
+~
+~
+0 -1 30273
+S
+#30275
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30276
+D3
+~
+~
+0 -1 30274
+S
+#30276
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30277
+D3
+~
+~
+0 -1 30275
+S
+#30277
+Basalt Delta~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30278
+D1
+~
+~
+0 -1 30293
+D3
+~
+~
+0 -1 30276
+S
+#30278
+Basalt Delta~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30279
+D2
+~
+~
+0 -1 30277
+S
+#30279
+Basalt Delta~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30284
+D2
+~
+~
+0 -1 30278
+D3
+~
+~
+0 -1 30280
+S
+#30280
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D1
+~
+~
+0 -1 30279
+D3
+~
+~
+0 -1 30281
+S
+#30281
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D1
+~
+~
+0 -1 30280
+S
+#30282
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D1
+~
+~
+0 -1 30283
+S
+#30283
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D3
+~
+~
+0 -1 30282
+S
+#30284
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30285
+D3
+~
+~
+0 -1 30279
+S
+#30285
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30286
+D3
+~
+~
+0 -1 30284
+S
+#30286
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D0
+~
+~
+0 -1 30287
+D3
+~
+~
+0 -1 30285
+S
+#30287
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D1
+~
+~
+0 -1 30288
+D2
+~
+~
+0 -1 30286
+S
+#30288
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D0
+~
+~
+0 -1 30289
+D3
+~
+~
+0 -1 30287
+S
+#30289
+Basalt Fjord~
+Temporary description.
+~
+302 0 6
+D2
+~
+~
+0 -1 30288
+D3
+~
+~
+0 -1 30299
+S
+#30290
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+S
+#30291
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D1
+~
+~
+0 -1 30292
+S
+#30292
+Basalt Cliffs~
+Temporary description.
+~
+302 0 5
+D3
+~
+~
+0 -1 30291
+S
+#30293
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30294
+D3
+~
+~
+0 -1 30277
+S
+#30294
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30295
+D2
+~
+~
+0 -1 30298
+D3
+~
+~
+0 -1 30293
+S
+#30295
+Basalt Plains~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30296
+D2
+~
+~
+0 -1 30297
+D3
+~
+~
+0 -1 30294
+S
+#30296
+Basalt Plains~
+Temporary description.
+~
+302 0 2
+D3
+~
+~
+0 -1 30295
+S
+#30297
+Basalt Plains~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30295
+D3
+~
+~
+0 -1 30298
+S
+#30298
+Shore of the Arbornora Sea~
+Temporary description.
+~
+302 0 2
+D0
+~
+~
+0 -1 30294
+D1
+~
+~
+0 -1 30297
+S
+#30299
+Lair of the Basalt Rok~
+Temporary description.
+~
+302 0 2
+D1
+~
+~
+0 -1 30289
+S
+#0
+$~
