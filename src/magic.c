@@ -1591,7 +1591,7 @@ void spell_sense_life(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_SENSE_LIFE)) {
     aff_apply(victim, SPELL_SENSE_LIFE, 5 * level, 0, 0, AFF_SENSE_LIFE, 0);
 
-    print_spell_messages(victim, SKILL_AWARENESS);
+    print_spell_messages(victim, SPELL_SENSE_LIFE);
   }
 }
 
