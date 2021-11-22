@@ -221,7 +221,7 @@ int zone_locked(CHAR *ch, int zone) {
 void do_warn(CHAR *ch, char *argument, int cmd) {
   struct tm *timeStruct;
   FILE *fl;
-  struct program_info dtail;
+  struct program_info dtail = { 0 };
   char usage_text[] = "\
 Usage: `kwarn`q <name> [warning] or\n\r\
        `kwarn`q <search word>or\n\r\

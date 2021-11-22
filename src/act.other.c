@@ -663,15 +663,15 @@ void do_steal(struct char_data *ch, char *argument, int cmd) {
         act("You can't tell if $E has that item.",FALSE,ch,0,victim,TO_CHAR);
         return;
       } 
-	  else /* It is equipment */
-	  { 
+    else /* It is equipment */
+    { 
         /*if((GET_POS(victim) > POSITION_STUNNED)) 
-		{*/
+    {*/
           send_to_char("Steal the equipment now? Impossible!\n\r", ch);
           return;
         /*} 
-		else 
-		{
+    else 
+    {
           act("You unequip $p and steal it.",FALSE, ch, obj ,0, TO_CHAR);
           act("$n steals $p from $N.",FALSE,ch,obj,victim,TO_NOTVICT);
           obj_to_char(unequip_char(victim, eq_pos), ch);

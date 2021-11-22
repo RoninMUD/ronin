@@ -249,7 +249,7 @@ to suffuse you as your wounds instantly seal themselves shut.\n\r");
 glazed over as %s mumbles in a forgotten language. An unexpected series of spasms\n\r\
 wracks %s body as %s falls to %s knees, a fountain of blood erupting from %s\n\r\
 gaping maw. Before it hits the ground, the blood bursts into an enormous cloud of\n\r\
-crimson gas, suffusing your body as your wounds seal shut.\n\r", PERS(owner,owner), HSHR(owner), HSSH(owner), HSHR(owner), HSSH(owner), HSHR(owner), HSHR(owner));
+crimson gas, suffusing your body as your wounds seal shut.\n\r", PERS(owner,owner), HSHR(owner), HESH(owner), HSHR(owner), HESH(owner), HSHR(owner), HSHR(owner));
             send_to_room_except(info_str, CHAR_REAL_ROOM(owner), owner);
             for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
             {
@@ -288,7 +288,7 @@ tremble as though subject to a chilling wind. A strange light seems to peek out\
 from %s mouth, dim at first but intensifying before suddenly erupting from both\n\r\
 eyes and consuming your entire vision with a brilliant radiance. As the light\n\r\
 diminishes, you see %s kneeling on the ground, panting, and your surroundings\n\r\
-changed to a more familiar place.\n\r", PERS(owner,owner), HSSH(owner), HSHR(owner), HMHR(owner));
+changed to a more familiar place.\n\r", PERS(owner,owner), HESH(owner), HSHR(owner), HMHR(owner));
             send_to_room_except(info_str, CHAR_REAL_ROOM(owner), owner);
             for(vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
             {
@@ -470,7 +470,7 @@ fabric of your cowl before you once more reassert control over the darkness with
               {
                 sprintf(info_str, "A dark tendril lashes out wildly from %s's cowl and %s appears\n\r\
 physically strained before the shadowy limb is absorbed once more into the now\n\r\
-%s fabric.\n\r", PERS(owner,owner), HSSH(owner), cowl_color[cowl->spec_value]);
+%s fabric.\n\r", PERS(owner,owner), HESH(owner), cowl_color[cowl->spec_value]);
                 send_to_char(info_str, vict);
               }
             }
@@ -554,7 +554,7 @@ of the corner of one eye, the fabric of the cowl has drained to a %s.\n\r", cowl
 A shadowy, sickle-wielding silhouette surges forward, engulfing %s,\n\r\
 harvesting %s lifeforce, before merging with %s. Though seemingly\n\r\
 restored, %s body is wracked by a brief spasm and as %s recovers you notice the\n\r\
-previously %s cowl has drained to a %s.\n\r", PERS(owner,owner), GET_SHORT(vict), HSHR(vict), PERS(owner,owner), HSHR(owner), HSSH(owner), cowl_color[cowl->spec_value], cowl_color[0]);
+previously %s cowl has drained to a %s.\n\r", PERS(owner,owner), GET_SHORT(vict), HSHR(vict), PERS(owner,owner), HSHR(owner), HESH(owner), cowl_color[cowl->spec_value], cowl_color[0]);
                 send_to_room_except_two(info_str, CHAR_REAL_ROOM(owner), owner, vict);
                 damage(owner, vict, 500, TYPE_UNDEFINED, DAM_NO_BLOCK);
                 GET_HIT(owner) = GET_MAX_HIT(owner);

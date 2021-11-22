@@ -2249,7 +2249,7 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
                 sub = "you";
               }
               else {
-                sub = HSSH(ch);
+                sub = HESH(ch);
               }
               break;
             case 'E':
@@ -2261,7 +2261,7 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
                   sub = "you";
                 }
                 else {
-                  sub = HSSH((CHAR *)vict_or_obj);
+                  sub = HESH((CHAR *)vict_or_obj);
                 }
               }
               break;

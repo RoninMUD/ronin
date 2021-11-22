@@ -1816,7 +1816,7 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
 
         obj_from_char(order);
         obj_to_room(order, CHAR_REAL_ROOM(ch));
-        sprintf(buf, "Just as %s expires, %s drops %s.\n\r", GET_DISP_NAME(ch), HSSH(ch), OBJ_SHORT(order));
+        sprintf(buf, "Just as %s expires, %s drops %s.\n\r", GET_DISP_NAME(ch), HESH(ch), OBJ_SHORT(order));
         send_to_room(buf, CHAR_REAL_ROOM(ch));
         log_f("QSTINFO: AQ Order for %s dropped from %s's corpse in room %d", name, GET_DISP_NAME(ch), CHAR_VIRTUAL_ROOM(ch));
       }
