@@ -44,7 +44,7 @@ bool check_aggro_target(CHAR *attacker, CHAR *defender) {
 
 int mob_act_test_object(OBJ *obj) {
   for (int i = 0; i < MAX_OBJ_AFFECT; i++) {
-    if (((OBJ_AFF(obj, i).location == APPLY_AC) && (OBJ_AFF(obj, i).modifier > 0)) ||
+    if (((OBJ_AFF(obj, i).location == APPLY_ARMOR) && (OBJ_AFF(obj, i).modifier > 0)) ||
         ((((OBJ_AFF(obj, i).location == APPLY_DAMROLL) || (OBJ_AFF(obj, i).location == APPLY_HITROLL))) && (OBJ_AFF(obj, i).modifier < 0))) {
       return FALSE;
     }

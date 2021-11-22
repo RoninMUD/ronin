@@ -76,7 +76,7 @@ void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long 
       GET_MAX_MOVE_POINTS(ch) += modifier;
       break;
 
-    case APPLY_AC:
+    case APPLY_ARMOR:
       GET_AC(ch) += modifier;
       break;
 

@@ -3111,12 +3111,12 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
             ENCH *cc_ench = NULL;
 
             if (!(cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)")) && !(cc_ench = get_enchantment_by_name(defender, "-20 AC (Close Combat)"))) {
-              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -10, APPLY_AC, 0, 0, 0);
+              enchantment_apply(defender, FALSE, "-10 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -10, APPLY_ARMOR, 0, 0, 0);
             }
             else if ((cc_ench = get_enchantment_by_name(defender, "-10 AC (Close Combat)"))) {
               enchantment_remove(defender, cc_ench, FALSE);
 
-              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -20, APPLY_AC, 0, 0, 0);
+              enchantment_apply(defender, FALSE, "-20 AC (Close Combat)", 0, 3, ENCH_INTERVAL_ROUND, -20, APPLY_ARMOR, 0, 0, 0);
             }
           }
 
@@ -3412,7 +3412,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         if (SAME_ROOM(attacker, defender) &&
             (IS_MORTAL(attacker) && check_subclass(attacker, SC_BANDIT, 1)) &&
             chance(30 + GET_DEX_APP(attacker))) {
-          enchantment_apply(defender, FALSE, "+30 AC (Impair)", 0, 1, 0, 30, APPLY_AC, 0, 0, 0);
+          enchantment_apply(defender, FALSE, "+30 AC (Impair)", 0, 1, 0, 30, APPLY_ARMOR, 0, 0, 0);
           enchantment_apply(defender, FALSE, "-2 Hitroll (Impair)", 0, 1, 0, -2, APPLY_HITROLL, 0, 0, 0);
 
           special_message = TRUE;

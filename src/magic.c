@@ -59,7 +59,7 @@ void spell_paralyze(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
       int duration = ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) ? 1 : level;
 
-      aff_apply(victim, SPELL_PARALYSIS, duration, 100, APPLY_AC, AFF_PARALYSIS, 0);
+      aff_apply(victim, SPELL_PARALYSIS, duration, 100, APPLY_ARMOR, AFF_PARALYSIS, 0);
       aff_apply(victim, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
     }
   }
@@ -396,7 +396,7 @@ void spell_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_ARMOR)) {
     print_spell_messages(victim, SPELL_ARMOR);
 
-    aff_apply(victim, SPELL_ARMOR, 24, -10, APPLY_AC, 0, 0);
+    aff_apply(victim, SPELL_ARMOR, 24, -10, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -471,7 +471,7 @@ void spell_blindness(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     print_spell_messages(victim, SPELL_BLINDNESS);
 
     aff_apply(victim, SPELL_BLINDNESS, 2, -4, APPLY_HITROLL, AFF_BLIND, 0);
-    aff_apply(victim, SPELL_BLINDNESS, 2, 40, APPLY_AC, AFF_BLIND, 0);
+    aff_apply(victim, SPELL_BLINDNESS, 2, 40, APPLY_ARMOR, AFF_BLIND, 0);
   }
 }
 
@@ -945,7 +945,7 @@ void spell_endure(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_ENDURE)) {
     print_spell_messages(victim, SPELL_ENDURE);
 
-    aff_apply(victim, SPELL_ENDURE, 24, -15, APPLY_AC, 0, 0);
+    aff_apply(victim, SPELL_ENDURE, 24, -15, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -1024,7 +1024,7 @@ void spell_invisibility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if (!aff_affected_by(victim, SPELL_INVISIBLE)) {
       print_spell_messages(victim, SPELL_INVISIBLE);
 
-      aff_apply(victim, SPELL_INVISIBLE, 24, -40, APPLY_AC, AFF_INVISIBLE, 0);
+      aff_apply(victim, SPELL_INVISIBLE, 24, -40, APPLY_ARMOR, AFF_INVISIBLE, 0);
     }
   }
   else if (obj) {
@@ -1041,7 +1041,7 @@ void spell_improved_invisibility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) 
   if (!aff_affected_by(victim, SPELL_IMP_INVISIBLE)) {
     print_spell_messages(victim, SPELL_IMP_INVISIBLE);
 
-    aff_apply(victim, SPELL_IMP_INVISIBLE, level / 10, -40, APPLY_AC, AFF_IMINV, 0);
+    aff_apply(victim, SPELL_IMP_INVISIBLE, level / 10, -40, APPLY_ARMOR, AFF_IMINV, 0);
   }
 }
 
@@ -2252,7 +2252,7 @@ void spell_enchant_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     ac = -5;
   }
 
-  OBJ_AFF_LOC(obj, ac_aff_idx) = APPLY_AC;
+  OBJ_AFF_LOC(obj, ac_aff_idx) = APPLY_ARMOR;
   OBJ_AFF_MOD(obj, ac_aff_idx) = ac;
 
   SET_BIT(OBJ_EXTRA_FLAGS(obj), ITEM_MAGIC);

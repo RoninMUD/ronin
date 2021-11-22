@@ -136,7 +136,7 @@ void dirty_tricks_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           act("$n seems to be blinded!", TRUE, victim, 0, 0, TO_ROOM);
           send_to_char("You have been blinded!\n\r", victim);
 
-          affect_apply(victim, SPELL_BLINDNESS, 0, 40, APPLY_AC, AFF_BLIND, 0);
+          affect_apply(victim, SPELL_BLINDNESS, 0, 40, APPLY_ARMOR, AFF_BLIND, 0);
           affect_apply(victim, SPELL_BLINDNESS, 0, -4, APPLY_HITROLL, AFF_BLIND, 0);
         }
         else if (trick == DT_KICK) {
@@ -313,7 +313,7 @@ void victimize_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
     {
       .name = "Victimized (AC Penalty)",
       .modifier = (GET_LEVEL(ch) / 4),
-      .location = APPLY_AC,
+      .location = APPLY_ARMOR,
     },
     {
       .name = "Victimized (Hitroll Penalty)",

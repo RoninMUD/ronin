@@ -407,7 +407,7 @@ int myrdon_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         act("$n kicks dirt in your eyes, effectively blinding you!", FALSE, mob, 0, vict, TO_VICT);
 
         affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_HITROLL, -4, AFF_BLIND, 0);
-        affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_AC, 40, AFF_BLIND, 0);
+        affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_ARMOR, 40, AFF_BLIND, 0);
       }
       else {
         act("$n kicks dirt in $N's eyes, but $E is already blind!", FALSE, mob, 0, vict, TO_NOTVICT);
@@ -646,7 +646,7 @@ int trysta_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         if (IS_SET(GET_AFF(vict), AFF_BLIND) || IS_IMMUNE(vict, IMMUNE_BLINDNESS)) continue;
 
         affect_apply(vict, SPELL_BLINDNESS, 2, -4, APPLY_HITROLL, AFF_BLIND, 0);
-        affect_apply(vict, SPELL_BLINDNESS, 2, 40, APPLY_AC, AFF_BLIND, 0);
+        affect_apply(vict, SPELL_BLINDNESS, 2, 40, APPLY_ARMOR, AFF_BLIND, 0);
 
         act("$n seems to be blinded!", TRUE, vict, 0, 0, TO_ROOM);
         printf_to_char(vict, "You have been blinded!\n\r");
@@ -1058,7 +1058,7 @@ int aniston_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         act("$n charges $N and crushes $S armor with a devastating blow!", TRUE, mob, 0, vict, TO_NOTVICT);
         act("$n charges you and crushes your armor with a devastating blow!", FALSE, mob, 0, vict, TO_VICT);
 
-        enchantment_apply(vict, TRUE, ANISTON_CRUSH_ENCH_NAME, TYPE_UNDEFINED, 20, ENCH_INTERVAL_ROUND, 150, APPLY_AC, 0, 0, 0);
+        enchantment_apply(vict, TRUE, ANISTON_CRUSH_ENCH_NAME, TYPE_UNDEFINED, 20, ENCH_INTERVAL_ROUND, 150, APPLY_ARMOR, 0, 0, 0);
 
         damage(mob, vict, number(300, 600), TYPE_UNDEFINED, DAM_NO_BLOCK);
 
