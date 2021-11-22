@@ -580,9 +580,9 @@ int enchantment_special(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg
 
 int special(CHAR *ch, int cmd, char *arg)
 {
-  register struct obj_data *i;
-  register ENCH *tmp_ench;
-  register CHAR *k,*temp;
+  register struct obj_data *i = NULL;
+  register ENCH *tmp_ench = NULL;
+  register CHAR *k = NULL, *temp = NULL;
   int j;
   if(CHAR_REAL_ROOM(ch) == NOWHERE)
      return(TRUE);
