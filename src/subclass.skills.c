@@ -1075,7 +1075,7 @@ void do_defend(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  affect_apply(ch, SKILL_DEFEND, -1, -100, APPLY_AC, 0, 0);
+  affect_apply(ch, SKILL_DEFEND, -1, -100, APPLY_ARMOR, 0, 0);
 
   send_to_char("You place yourself in a defensive stance.\n\r", ch);
   act("$n places $mself in a defensive stance.", TRUE, ch, 0, 0, TO_ROOM);

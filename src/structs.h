@@ -645,7 +645,6 @@ struct room_data
 #define APPLY_MOVE             14
 #define APPLY_SAVING_ALL       15
 #define APPLY_16               16
-#define APPLY_AC               17
 #define APPLY_ARMOR            17
 #define APPLY_HITROLL          18
 #define APPLY_DAMROLL          19

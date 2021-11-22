@@ -816,7 +816,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
         act("When you look into $S eyes, you feel your limbs slowly turning heavy like stone!\n\r", FALSE, ch, 0, target, TO_CHAR);
 
-        aff_apply(ch, SPELL_PARALYSIS, 4, 100, APPLY_AC, AFF_PARALYSIS, 0);
+        aff_apply(ch, SPELL_PARALYSIS, 4, 100, APPLY_ARMOR, AFF_PARALYSIS, 0);
         aff_apply(ch, SPELL_PARALYSIS, 4, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
       }
 

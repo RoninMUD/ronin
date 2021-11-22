@@ -201,7 +201,7 @@ void spell_debilitate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     print_spell_messages(victim, SPELL_DEBILITATE);
 
     aff_apply(victim, SPELL_DEBILITATE, 5, -5, APPLY_HITROLL, 0, 0);
-    aff_apply(victim, SPELL_DEBILITATE, 5, 10, APPLY_AC, 0, 0);
+    aff_apply(victim, SPELL_DEBILITATE, 5, 10, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -322,7 +322,7 @@ void spell_iron_skin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_IRON_SKIN)) {
     print_spell_messages(victim, SPELL_IRON_SKIN);
 
-    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -20 : -10, APPLY_AC, 0, 0);
+    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -20 : -10, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -558,7 +558,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
           !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
           ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
           !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
-        aff_apply(temp_vict, SPELL_PARALYSIS, duration, 100, APPLY_AC, AFF_PARALYSIS, 0);
+        aff_apply(temp_vict, SPELL_PARALYSIS, duration, 100, APPLY_ARMOR, AFF_PARALYSIS, 0);
         aff_apply(temp_vict, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
         send_to_char("Your limbs freeze in place.\n\r", temp_vict);
@@ -690,7 +690,7 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int mob_level = OBJ_VALUE2(obj);
 
   if (!aff_affected_by(ch, SPELL_DESECRATE)) {
-    aff_apply(ch, SPELL_DESECRATE, 7, -(mob_level / 2), APPLY_AC, 0, 0);
+    aff_apply(ch, SPELL_DESECRATE, 7, -(mob_level / 2), APPLY_ARMOR, 0, 0);
     aff_apply(ch, SPELL_DESECRATE, 7, mob_level, APPLY_HP_REGEN, 0, 0);
   }
 
@@ -1046,7 +1046,7 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_POWER_OF_DEVOTION)) {
     print_spell_messages(victim, SPELL_POWER_OF_DEVOTION);
 
-    aff_apply(victim, SPELL_POWER_OF_DEVOTION, level / 4, -15, APPLY_AC, AFF_SANCTUARY, 0);
+    aff_apply(victim, SPELL_POWER_OF_DEVOTION, level / 4, -15, APPLY_ARMOR, AFF_SANCTUARY, 0);
     aff_apply(victim, SPELL_POWER_OF_DEVOTION, level / 4, 3, APPLY_DAMROLL, AFF_SANCTUARY, 0);
     aff_apply(victim, SPELL_POWER_OF_DEVOTION, level / 4, 25, APPLY_HP_REGEN, AFF_SANCTUARY, 0);
     aff_apply(victim, SPELL_POWER_OF_DEVOTION, level / 4, 5, APPLY_MANA_REGEN, AFF_SANCTUARY, 0);
@@ -1339,7 +1339,7 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
               aff_apply(ch, SPELL_BLINDNESS, duration, 0, 0, AFF_BLIND, 0);
               aff_apply(ch, SPELL_BLINDNESS, duration, -4, APPLY_HITROLL, 0, 0);
-              aff_apply(ch, SPELL_BLINDNESS, duration, 40, APPLY_AC, 0, 0);
+              aff_apply(ch, SPELL_BLINDNESS, duration, 40, APPLY_ARMOR, 0, 0);
 
               act("You have been blinded!", FALSE, ch, 0, 0, TO_CHAR);
               act("$n seems to be blinded!", TRUE, ch, 0, 0, TO_ROOM);
@@ -1371,7 +1371,7 @@ int wither_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
               aff_apply(ch, SPELL_PARALYSIS, duration, 0, 0, AFF_PARALYSIS, 0);
               aff_apply(ch, SPELL_PARALYSIS, duration, -2, APPLY_HITROLL, 0, 0);
-              aff_apply(ch, SPELL_PARALYSIS, duration, 20, APPLY_AC, 0, 0);
+              aff_apply(ch, SPELL_PARALYSIS, duration, 20, APPLY_ARMOR, 0, 0);
 
               act("Your limbs freeze in place!", FALSE, ch, 0, 0, TO_CHAR);
               act("$n is paralyzed!", TRUE, ch, 0, 0, TO_ROOM);

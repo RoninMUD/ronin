@@ -6015,7 +6015,7 @@ int gear_gypsy(CHAR *mob, CHAR *ch, int cmd, char *arg)
                             af.bitvector = AFF_BLIND;
                             af.bitvector2 = 0;
                             affect_to_char(vict, &af);
-                            af.location = APPLY_AC;
+                            af.location = APPLY_ARMOR;
                             af.modifier = 40;
                             affect_to_char(vict, &af);
                         }

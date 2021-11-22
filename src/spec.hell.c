@@ -4480,7 +4480,7 @@ int Lucifer_spec (CHAR *lucifer, CHAR *ch, int cmd, char *arg) {
           af.type      = SPELL_POWER_OF_DEVOTION;
           af.duration  = 66;
           af.modifier  = -15;
-          af.location  = APPLY_AC;
+          af.location  = APPLY_ARMOR;
           af.bitvector = 0;
           af.bitvector2 = 0;
           affect_to_char(victim, &af);

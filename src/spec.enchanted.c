@@ -183,7 +183,7 @@ int ench_scratch_room(int room, CHAR *ch, int cmd, char *arg) {
         af.bitvector = AFF_BLIND;
         af.bitvector2 = 0;
         affect_to_char(ch, &af);
-        af.location = APPLY_AC;
+        af.location = APPLY_ARMOR;
         af.modifier = +40; /* Make AC Worse! */
         affect_to_char(ch, &af);
       }

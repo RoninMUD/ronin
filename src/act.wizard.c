@@ -847,7 +847,7 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].modifier = num2;
       }
       else if (!strcmp(buf, "ac") || !strcmp(buf, "armor")) {
-        obj->affected[i].location = APPLY_AC;
+        obj->affected[i].location = APPLY_ARMOR;
         obj->affected[i].modifier = num2;
       }
       else if (!strcmp(buf, "hit")) {

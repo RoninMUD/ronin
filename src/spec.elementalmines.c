@@ -326,7 +326,7 @@ int em_hurrier(CHAR *hurrier, CHAR *ch, int cmd, char *arg)
 							act("$n scatters coal dust in your eyes.", FALSE, hurrier, 0, vict, TO_VICT);
 
 							affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_HITROLL, -6, AFF_BLIND, 0);
-							affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_AC, 60, AFF_BLIND, 0);
+							affect_apply(vict, SPELL_BLINDNESS, 0, APPLY_ARMOR, 60, AFF_BLIND, 0);
 						}
 
 						break;
