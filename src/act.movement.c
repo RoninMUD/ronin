@@ -25,7 +25,7 @@
 /* external functs */
 
 int hit_limit(struct char_data *ch);
-int special(struct char_data *ch, int cmd, char *arg);
+int special(CHAR *ch, int cmd, char *arg);
 struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name, struct obj_data *list);
 void stop_follower(struct char_data *ch);
 void do_special_move(struct char_data *ch, char *arg, int cmd);

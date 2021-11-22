@@ -160,15 +160,15 @@ void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte loca
 
 
 void char_from_room(CHAR *ch) {
-  /* Keep this ordered so we can use a binary search on the list.*/
+  /* Keep the VNUMs in this list ordered so we can use a binary search.*/
   const int club_rooms[] = {
-    3076, 3079, 3081, 3083
+    ROOM_RESTING_ROOM_0, ROOM_RESTING_ROOM_1, ROOM_RESTING_ROOM_2, ROOM_RESTING_ROOM_3, ROOM_RESTING_ROOM_4
   };
 
   if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
 
   if (affected_by_spell(ch, SKILL_CAMP)) {
-    printf_to_char(ch, "You quickly break camp.\n\r");
+    send_to_char("You quickly break camp.\n\r", ch);
     act("$n quickly breaks camp.", TRUE, ch, 0, 0, TO_ROOM);
 
     affect_from_char(ch, SKILL_CAMP);
@@ -186,51 +186,46 @@ void char_from_room(CHAR *ch) {
     ROOM_PEOPLE(CHAR_REAL_ROOM(ch)) = CHAR_NEXT_IN_ROOM(ch);
   }
   else {
-    CHAR *tmp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch));
+    CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch));
 
-    while (tmp_ch && (CHAR_NEXT_IN_ROOM(tmp_ch) != ch)) {
-      tmp_ch = CHAR_NEXT_IN_ROOM(tmp_ch);
+    while (temp_ch && (CHAR_NEXT_IN_ROOM(temp_ch) != ch)) {
+      temp_ch = CHAR_NEXT_IN_ROOM(temp_ch);
     }
 
-    CHAR_NEXT_IN_ROOM(tmp_ch) = CHAR_NEXT_IN_ROOM(ch);
+    CHAR_NEXT_IN_ROOM(temp_ch) = CHAR_NEXT_IN_ROOM(ch);
   }
 
   CHAR_NEXT_IN_ROOM(ch) = NULL;
-  ch->in_room_r = NOWHERE;
-  ch->in_room_v = NOWHERE;
+  GET_IN_ROOM_R(ch) = NOWHERE;
+  GET_IN_ROOM_V(ch) = NOWHERE;
 }
 
 
 void char_to_room(CHAR *ch, int room) {
-  const int immortal_room_vnum = 1212;
-  const int mortal_room_vnum = 3054;
-
   if (!ch) return;
 
   if (room < 0) {
     room = 0;
   }
 
-  if (IS_SET(ROOM_FLAGS(room), LOCK) && (GET_LEVEL(ch) < LEVEL_SUP) && (room != real_room(immortal_room_vnum)) && (room != real_room(mortal_room_vnum)) && !isname(ROOM_NAME(room), GET_NAME(ch))) {
+  if (IS_SET(ROOM_FLAGS(room), LOCK) && (GET_LEVEL(ch) < LEVEL_SUP)) {
     printf_to_char(ch, "The room is locked.  There may be a private conversation there.\n\r");
 
-    IS_IMMORTAL(ch) ? char_to_room(ch, real_room(immortal_room_vnum)) : char_to_room(ch, real_room(mortal_room_vnum));
+    IS_IMMORTAL(ch) ? char_to_room(ch, real_room(ROOM_IMMORTAL_RECEPTION)) : char_to_room(ch, real_room(ROOM_TEMPLE_OF_MIDGAARD));
 
     return;
   }
 
   CHAR_NEXT_IN_ROOM(ch) = ROOM_PEOPLE(room);
   ROOM_PEOPLE(room) = ch;
-  ch->in_room_r = room;
-  ch->in_room_v = ROOM_VNUM(room);
+  GET_IN_ROOM_R(ch) = room;
+  GET_IN_ROOM_V(ch) = ROOM_VNUM(room);
 
   if (EQ(ch, WEAR_LIGHT) && (OBJ_TYPE(EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT) && (OBJ_VALUE(EQ(ch, WEAR_LIGHT), 2) != 0)) {
     ROOM_LIGHT(CHAR_REAL_ROOM(ch))++;
   }
 
-  if ((GET_CLASS(ch) == CLASS_NINJA) && (GET_POS(ch) == POSITION_SWIMMING) && (ROOM_SECTOR_TYPE(room) != SECT_WATER_NOSWIM)) {
-    GET_POS(ch) = POSITION_STANDING;
-  }
+  update_pos(ch);
 }
 
 
