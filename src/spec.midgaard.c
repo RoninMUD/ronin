@@ -2904,7 +2904,7 @@ switch (cmd) {
   } else {
     obj=get_obj_in_list_vis(ch,"postcard",ch->carrying);
     if(!obj){
-       act("$N tells you 'You don't have a postcard.",FALSE,ch,0,mob,TO_CHAR);
+       act("$N tells you 'You don't have a postcard.'",FALSE,ch,0,mob,TO_CHAR);
        return(TRUE);
     }
     while(*arg) {
@@ -2931,7 +2931,7 @@ switch (cmd) {
      fprintf(fd,"Date: %s %2d\n\r\n\r", Month[timeStruct->tm_mon], timeStruct->tm_mday);
      fprintf(fd,"%s~\n",obj->action_description);
      fclose(fd);
-     sprintf(test,"$N tells you 'Postcard to %s on its way'",CAP(name));
+     sprintf(test,"$N tells you 'Postcard to %s on its way.'",CAP(name));
      act(test,FALSE,ch,0,mob,TO_CHAR);
 
      send_email=0;
@@ -3075,7 +3075,7 @@ switch (cmd) {
     } else {
     obj=get_obj_in_list_vis(ch,"package",ch->carrying);
     if(!obj){
-       act("$N tells you 'You don't have a package.",FALSE,ch,0,mob,TO_CHAR);
+       act("$N tells you 'You don't have a package.'",FALSE,ch,0,mob,TO_CHAR);
        return(TRUE);
     }
     one_argument(arg,name);
@@ -3090,7 +3090,7 @@ switch (cmd) {
     }
     cost=total_cost_of_package(obj)*3/2;
     if(cost<0) {
-      act("$N tells you 'That package contains an item that can't be posted.",FALSE,ch,0,mob,TO_CHAR);
+      act("$N tells you 'That package contains an item that can't be posted.'",FALSE,ch,0,mob,TO_CHAR);
       return(TRUE);
     }
     sprintf(test,"$N tells you 'That will cost %d coins.'",cost);

@@ -785,7 +785,7 @@ void rv2_appraise_message(CHAR *ch, struct rv2_remort_info remort_info) {
         remort_info.exp);
     }
     else {
-      printf_to_char(ch, "Immortalis whispers, 'To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points.\n\r'",
+      printf_to_char(ch, "Immortalis whispers, 'To transcend this existence, I will require compensation in the form of %d quest points and %d subclass points.'\n\r",
         remort_info.qp_fee, remort_info.scp_fee);
       printf_to_char(ch, "He continues, 'For my part, I will return to you a sum of %lld experience points, %d quest points, and %d subclass points.'\n\r",
         remort_info.exp, MAX(0, remort_info.qp - remort_info.qp_fee), MAX(0, remort_info.scp - remort_info.scp_fee));
