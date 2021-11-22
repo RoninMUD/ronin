@@ -317,9 +317,15 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define ROOM_CHAT_ROOM           1200
 #define ROOM_LOST_TREASURE_TROVE 1201
 #define ROOM_QUESTERS_FORUM      1204
+#define ROOM_IMMORTAL_RECEPTION  1212
 #define ROOM_TEMPLE_OF_MIDGAARD  3001
 #define ROOM_MARKET_SQUARE       3014
 #define ROOM_SCRAPYARD           3030
+#define ROOM_RESTING_ROOM_0      3039 // Club Grunting Boar
+#define ROOM_RESTING_ROOM_1      3076 // Sane's Vocal Club
+#define ROOM_RESTING_ROOM_2      3079 // Liner's Lounge
+#define ROOM_RESTING_ROOM_3      3081 // Lem's Liqour Room
+#define ROOM_RESTING_ROOM_4      3083 // Ranger's Reliquary
 #define ROOM_AUCTION_HALL        3072
 #define ROOM_MORGUE              3088
 #define ROOM_DONATION            3084
