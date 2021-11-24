@@ -1129,15 +1129,23 @@ void cast_vitality(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ
 }
 
 void cast_miracle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  char faith[MIL] = { 0 }, buf[MSL] = { 0 };
+
   switch (type) {
     case SPELL_TYPE_SPELL:
+      snprintf(faith, sizeof(faith), "%s", IS_GOOD(ch) ? "holy" : IS_EVIL(ch) ? "unholy" : "divine");
+
       if (victim == ch) {
-        act("You pray for a miracle and heal your wounds.", FALSE, victim, 0, 0, TO_CHAR);
-        act("$n prays for a miracle and heals $s wounds.", FALSE, victim, 0, 0, TO_ROOM);
+        snprintf(buf, sizeof(buf), "Your %s miracle restores your life.", faith);
+        act(buf, FALSE, victim, 0, 0, TO_CHAR);
+        snprintf(buf, sizeof(buf), "$n's %s miracle restores $s life.", faith);
+        act(buf, FALSE, victim, 0, 0, TO_ROOM);
       }
       else {
-        act("You pray for a miracle and heal $N's wounds.", FALSE, ch, 0, victim, TO_CHAR);
-        act("$n prays for a miracle heals $N's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+        snprintf(buf, sizeof(buf), "Your %s miracle restores $N's life.", faith);
+        act(buf, FALSE, ch, 0, victim, TO_CHAR);
+        snprintf(buf, sizeof(buf), "$n's %s miracle restores $N's life.", faith);
+        act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
       }
 
       spell_miracle(level, ch, victim, 0);

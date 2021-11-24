@@ -1367,7 +1367,7 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_POWER_OF_DEVOTION,    "power of devotion",            "You are enveloped in a bright white aura.",                           "$n is enveloped in a bright white aura.",                                   "The bright white aura around your body fades.");
   // Crusader
   SPLTXTO(SPELL_RIGHTEOUSNESS,        "righteousness",                "You feel righteous!",                                                 "$n exerts a sense of righteousness.",                                       "Your sense of righteousness disappears.");
-  SPLTXTO(SPELL_POWER_OF_FAITH,       "power of faith",               "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_POWER_OF_FAITH,       "power of faith",               "", /* message in cast_power_of_faith() */                             "",                                                                          "");
   // Defiler
   SPLTXTO(SPELL_DESECRATE,            "desecrate",                    "",                                                                    "",                                                                          "You feel the insatiable urge to desecrate another corpse.");
   SPLTXTO(SPELL_BLACKMANTLE,          "blackmantle",                  "You are surrounded by an eerie mantle of darkness.",                  "$n is surrounded by an eerie mantle of darkness.",                          "Your mantle of darkness fades away.");
@@ -1381,7 +1381,7 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_WAR_CHANT,            "war chant",                    "You feel safer!",                                                     "",                                                                          "You don't feel as safe.");
   SPLTXTO(SPELL_WAR_CHANT_DEBUFF,     "!war chant!",                  "You grow weak with panic!",                                           "$n grows weak with panic!",                                                 "You stop panicking.");
   SPLTXTO(SPELL_LUCK,                 "luck",                         "You feel lucky!",                                                     "",                                                                          "You don't feel as lucky.");
-  SPLTXTO(SPELL_AID,                  "aid",                          "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_AID,                  "aid",                          "", /* message in song_parser.c */                                     "",                                                                          "");
   SPLTXTO(SPELL_CAMARADERIE,          "camaraderie",                  "You feel safety in numbers.",                                         "",                                                                          "Your kinship fades.");
   // Legionnaire
   SPLTXTO(SPELL_RIMEFANG,             "rimefang",                     "",                                                                    "",                                                                          "You begin to thaw.");
