@@ -1130,9 +1130,21 @@ void cast_vitality(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ
 
 void cast_miracle(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You pray for a miracle and heal your wounds.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n prays for a miracle and heals $s wounds.", FALSE, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You pray for a miracle and heal $N's wounds.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n prays for a miracle heals $N's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_miracle(level, ch, victim, 0);
+      break;
+
     case SPELL_TYPE_POTION:
       victim = ch;
-    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
       spell_miracle(level, ch, victim, 0);
