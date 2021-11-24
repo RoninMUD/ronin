@@ -1055,10 +1055,24 @@ void spell_power_of_devotion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void cast_power_of_faith(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  
   switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("The power of your faith heals your body.", FALSE, ch, 0, 0, TO_CHAR);
+        act("The power of $n's faith heals $s body.", FALSE, ch, 0, 0, TO_ROOM);
+      }
+      else {
+        act("The power of your faith heals $N's body.", FALSE, ch, 0, victim, TO_CHAR);
+        act("The power of $n's faith heals your body.", FALSE, ch, 0, victim, TO_VICT);
+        act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_power_of_faith(level, ch, victim, 0);
+      break;
+
     case SPELL_TYPE_POTION:
       victim = ch;
-    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
       spell_power_of_faith(level, ch, victim, 0);
@@ -1082,16 +1096,6 @@ void spell_power_of_faith(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 
   GET_MANA(ch) -= MIN(mana, MAX_MANA);
-
-  if (victim == ch) {
-    act("The power of your faith heals your body.", FALSE, ch, 0, 0, TO_CHAR);
-    act("The power of $n's faith heals $s body.", FALSE, ch, 0, 0, TO_ROOM);
-  }
-  else {
-    act("The power of your faith heals $N's body.", FALSE, ch, 0, victim, TO_CHAR);
-    act("The power of $n's faith heals your body.", FALSE, ch, 0, victim, TO_VICT);
-    act("The power of $n's faith heals $N's body.", FALSE, ch, 0, victim, TO_NOTVICT);
-  }
 
   magic_heal(ch, victim, SPELL_POWER_OF_FAITH, heal, FALSE);
 
