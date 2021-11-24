@@ -672,14 +672,9 @@ void spell_holy_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   int gain = 100;
 
-  /* Templar SC1: Conviction - Twice the alignment change for self, or half for others. */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 1)) {
-    if (victim == ch) {
-      gain *= 2;
-    }
-    else {
-      gain /= 2;
-    }
+  /* Templar SC1: Conviction - Half the alignment change for others. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 1) && (victim != ch)) {
+    gain /= 2;
   }
 
   GET_ALIGNMENT(victim) = MIN(GET_ALIGNMENT(victim) + gain, 1000);
@@ -697,14 +692,9 @@ void spell_evil_bless(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
   int gain = 100;
 
-  /* Templar SC1: Conviction - Twice the alignment change for self, or half for others. */
-  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 1)) {
-    if (victim == ch) {
-      gain *= 2;
-    }
-    else {
-      gain /= 2;
-    }
+  /* Templar SC1: Conviction - Half the alignment change for others. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 1) && (victim != ch)) {
+    gain /= 2;
   }
 
   GET_ALIGNMENT(victim) = MAX(GET_ALIGNMENT(victim) - gain, -1000);

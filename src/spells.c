@@ -215,9 +215,9 @@ int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal) {
       heal *= 1.2;
     }
 
-    /* Druid SC5: Shapeshift: Dragon Form - Magical healing caused by the Druid is reduced by 20%. */
+    /* Druid SC5: Shapeshift: Dragon Form - Magical healing caused by the Druid is reduced by 10%. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 5) && ench_enchanted_by(ch, ENCH_NAME_DRAGON_FORM, 0)) {
-      heal *= 0.8;
+      heal *= 0.9;
     }
   }
 
@@ -944,9 +944,21 @@ void cast_cure_blind(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 
 void cast_cure_critic(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You cure your wounds.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n cures $s wounds.", FALSE, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You cure $N's wounds.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n cures $N's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_cure_critic(level, ch, victim, 0);
+      break;
+
     case SPELL_TYPE_POTION:
       victim = ch;
-    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
       spell_cure_critic(level, ch, victim, 0);
@@ -1010,9 +1022,21 @@ void cast_cure_critic_spray(ubyte level, CHAR *ch, char *arg, int type, CHAR *vi
 
 void cast_cure_serious(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You cure your wounds.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n cures $s wounds.", FALSE, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You cure $N's wounds.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n cures $N's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_cure_serious(level, ch, victim, 0);
+      break;
+
     case SPELL_TYPE_POTION:
       victim = ch;
-    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
       spell_cure_serious(level, ch, victim, 0);
@@ -1194,9 +1218,21 @@ void cast_satiate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ 
 
 void cast_cure_light(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
+    case SPELL_TYPE_SPELL:
+      if (victim == ch) {
+        act("You cure your wounds.", FALSE, victim, 0, 0, TO_CHAR);
+        act("$n cures $s wounds.", FALSE, victim, 0, 0, TO_ROOM);
+      }
+      else {
+        act("You cure $N's wounds.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n cures $N's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      spell_cure_light(level, ch, victim, 0);
+      break;
+
     case SPELL_TYPE_POTION:
       victim = ch;
-    case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
       spell_cure_light(level, ch, victim, 0);

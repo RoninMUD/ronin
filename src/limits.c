@@ -746,7 +746,14 @@ int hit_gain(CHAR *ch) {
     }
 
     /* Constitution modifier. */
-    gain += 4 * con_app[GET_CON(ch)].regen;
+    int con_mod = con_app[GET_CON(ch)].regen;
+
+    /* Templar SC2: Martial Training - Doubles the hit point regen bonus from constitution. */
+    if ((con_mod > 0) && IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 2)) {
+      con_mod *= 2;
+    }
+
+    gain += 4 * con_mod;
 
     gain += equipment_regen(ch, HP_REGEN);
 

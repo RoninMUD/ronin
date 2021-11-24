@@ -1568,7 +1568,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
   if (cmd == CMD_UNKNOWN) {
     if (!ench || !ch || (ch != signaler) || IS_NPC(ch)) return FALSE;
 
-    char cmd[MIL], name[MIL];
+    char cmd[MIL] = { 0 }, name[MIL] = { 0 };
 
     argument_interpreter(arg, cmd, name);
 
@@ -1609,13 +1609,13 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
         GET_DISP_NAME(ch),
         IS_GOOD(ch) ? "radiant" : IS_EVIL(ch) ? "lambent" : "scintillating");
 
-      for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch; temp_ch; temp_ch = next_ch) {
+      for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch = NULL; temp_ch; temp_ch = next_ch) {
         next_ch = temp_ch->next_in_room;
 
         if ((temp_ch == ch) || ((temp_ch != GET_OPPONENT(ch)) && IS_MORTAL(temp_ch) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))) {
           send_to_char("Divine energy restores some of your health.\n\r", temp_ch);
 
-          magic_heal(ch, temp_ch, SPELL_DIVINE_HAMMER, 500, FALSE);
+          magic_heal(ch, temp_ch, SPELL_DIVINE_HAMMER, 450, FALSE);
         }
       }
     }
@@ -1630,7 +1630,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
         act("You channel the energy from your divine hammer into $N's soul, healing $M!", FALSE, ch, 0, victim, TO_CHAR);
       }
 
-      magic_heal(ch, victim, SPELL_DIVINE_HAMMER, 1000, FALSE);
+      magic_heal(ch, victim, SPELL_DIVINE_HAMMER, 900, FALSE);
     }
     else {
       if (!IS_IMMORTAL(ch) && IS_IMMORTAL(victim)) {
@@ -1645,7 +1645,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
       act("$n smites you with $s divine hammer, crushing you into the earth!", FALSE, ch, 0, victim, TO_VICT);
       act("You smite $N with your divine hammer, crushing $M into the earth!", FALSE, ch, 0, victim, TO_CHAR);
 
-      damage(ch, victim, 1000, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage(ch, victim, 900, TYPE_UNDEFINED, DAM_MAGICAL);
     }
 
     ench_from_char(ch, ENCH_NAME_JUDGEMENT_STRIKE, 0, FALSE);
@@ -1656,13 +1656,15 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
   if (cmd == MSG_ROUND) {
     if (!ench || !ch) return FALSE;
 
+    printf_to_char(ch, "DEBUG :: ench->duration = %d\n\r", ench->duration);
+
     switch (ench->duration) {
       case 3:
         send_to_char("The energy within your divine hammer ebbs as it begins to fade.\n\r", ch);
         break;
 
       case 2:
-        send_to_char("The energy within your divine hammer diminishes.\n\r", ch);
+        send_to_char("The energy within your divine hammer diminishes further.\n\r", ch);
         break;
 
       case 1:
@@ -1670,7 +1672,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
         break;
 
       default:
-        if (chance(25)) {
+        if (ench->duration % 5 == 0) {
           send_to_char("You are reminded of the great power of your divine hammer as it looms above you.\n\r", ch);
         }
         break;
@@ -1685,7 +1687,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
     act("$n's divine hammer fades, restoring some of $s energy.", TRUE, ch, 0, 0, TO_ROOM);
     act("Your divine hammer fades, restoring some of your energy.", FALSE, ch, 0, 0, TO_CHAR);
 
-    magic_heal(ch, ch, SPELL_DIVINE_HAMMER, 250, FALSE);
+    magic_heal(ch, ch, SPELL_DIVINE_HAMMER, 300, FALSE);
 
     GET_MANA(ch) = MIN(GET_MANA(ch) + 50, GET_MAX_MANA(ch));
 
@@ -1701,7 +1703,7 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
     int immunity;
   };
 
-  const struct attack_data_t rod_attack_data[] = {
+  const struct attack_data_t hammer_attack_data[] = {
     { TYPE_CRUSH, IMMUNE_CRUSH },
     { TYPE_HACK, IMMUNE_HACK },
     { TYPE_PIERCE, IMMUNE_PIERCE }
@@ -1710,7 +1712,7 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
   if (cmd == MSG_VIOLENCE) {
     if (!ench || !ch || !signaler || (ch == signaler)) return FALSE;
 
-    static OBJ *hammer;
+    static OBJ *hammer = NULL;
 
     if (!hammer) {
       CREATE(hammer, OBJ, 1);
@@ -1727,16 +1729,16 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
     int dam_bonus = 5;
 
     if ((ench->duration == 40) || (ench->duration == 20)) {
-      num_dice += 2;
-      size_dice += 2;
-      dam_bonus += 2;
+      num_dice += 1;
+      size_dice += 1;
+      dam_bonus += 1;
     }
 
     int attack_type = TYPE_UNDEFINED;
 
-    for (int i = 0; (attack_type <= 0) && (i < NUMELEMS(rod_attack_data)); i++) {
-      if (!IS_IMMUNE(signaler, rod_attack_data[i].immunity)) {
-        attack_type = rod_attack_data[i].attack_type;
+    for (int i = 0; (attack_type <= 0) && (i < NUMELEMS(hammer_attack_data)); i++) {
+      if (!IS_IMMUNE(signaler, hammer_attack_data[i].immunity)) {
+        attack_type = hammer_attack_data[i].attack_type;
       }
     }
 
@@ -1746,15 +1748,15 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
 
     int dam = calc_hit_damage(ch, GET_OPPONENT(ch), hammer, dam_bonus, RND_RND);
 
+    OBJ *temp_weapon = EQ(ch, WIELD);
+
+    EQ(ch, WIELD) = hammer;
+
     if (attack_type == TYPE_UNDEFINED) {
       act("$n smashes $N with a godly blow from $s divine hammer!", FALSE, ch, 0, signaler, TO_NOTVICT);
       act("$n smashes you with a godly blow from $s divine hammer!", FALSE, ch, 0, signaler, TO_VICT);
       act("You smash $N with a godly blow from your divine hammer!", FALSE, ch, 0, signaler, TO_CHAR);
     }
-
-    OBJ *temp_weapon = EQ(ch, WIELD);
-
-    EQ(ch, WIELD) = hammer;
 
     damage(ch, GET_OPPONENT(ch), dam, attack_type, DAM_PHYSICAL);
 
@@ -1768,7 +1770,7 @@ int divine_hammer_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, cha
       act("$n's divine hammer rises into the sky, fully charged for one final strike!", TRUE, ch, 0, 0, TO_ROOM);
       act("Your divine hammer rises into the sky, fully charged for one final strike!", FALSE, ch, 0, 0, TO_CHAR);
 
-      ench_apply(ch, FALSE, ENCH_NAME_JUDGEMENT_STRIKE, 0, 19, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, judgement_strike_enchantment);
+      ench_apply(ch, FALSE, ENCH_NAME_JUDGEMENT_STRIKE, 0, 20, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, judgement_strike_enchantment);
     }
     else if (ench->duration == 40) {
       act("$n's divine hammer glows bright, bathing $m in holy light.", TRUE, ch, 0, 0, TO_ROOM);

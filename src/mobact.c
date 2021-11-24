@@ -686,8 +686,8 @@ void mob_attack_skill_action(CHAR *mob, CHAR *victim, int attack_type, bool mult
     vict_wait_state = MAX(0, vict_wait_state - 1);
   }
 
-  /* Druid SC5: Shapeshift: Elemental Form */
-  if (ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+  /* Druid SC4: Shapeshift: Elemental Form */
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_DRUID, 4) && ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
     vict_wait_state = 0;
   }
 
