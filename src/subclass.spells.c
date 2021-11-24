@@ -1656,8 +1656,6 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
   if (cmd == MSG_ROUND) {
     if (!ench || !ch) return FALSE;
 
-    printf_to_char(ch, "DEBUG :: ench->duration = %d\n\r", ench->duration);
-
     switch (ench->duration) {
       case 3:
         send_to_char("The energy within your divine hammer ebbs as it begins to fade.\n\r", ch);
