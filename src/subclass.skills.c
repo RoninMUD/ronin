@@ -2144,7 +2144,7 @@ int entropy_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg
     int num_stacks = ench->temp[0] / entropy_modifier;
 
     if ((num_stacks > 0) && (num_stacks <= entropy_max_stacks)) {
-      char buf[MSL];
+      char buf[MSL] = { 0 };
 
       snprintf(buf, sizeof(buf), "......$n is %s in entropic energy!", entropy_stack_text[num_stacks - 1]);
 
@@ -2170,7 +2170,7 @@ int shapeshift_elemental_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int c
       "veiled", "shrouded", "completely enveloped"
     };
 
-    char command[MIL], command_arg[MIL];
+    char command[MIL] = { 0 }, command_arg[MIL] = { 0 };
 
     arg = one_argument(arg, command);
     arg = one_argument(arg, command_arg);
@@ -2289,7 +2289,7 @@ int dragonfire_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *
     int num_stacks = ench->temp[0] / dragon_breath_modifier;
 
     if ((num_stacks > 0) && (num_stacks <= dragon_breath_max_stacks)) {
-      char buf[MSL];
+      char buf[MSL] = { 0 };
 
       snprintf(buf, sizeof(buf), "......$n is %s in blazing dragonfire!", dragon_breath_stack_text[num_stacks - 1]);
 
@@ -2317,7 +2317,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
       "wreathed", "bathed", "completely engulfed"
     };
 
-    char command[MIL], command_arg[MIL];
+    char command[MIL] = { 0 }, command_arg[MIL] = { 0 };
 
     arg = one_argument(arg, command);
     arg = one_argument(arg, command_arg);
@@ -2328,14 +2328,14 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
       int cmd = cmd_info[cmd_idx].num;
 
       if ((cmd == CMD_CAST) && IS_MORTAL(ch)) {
-        char spell_name[MIL];
+        char spell_name[MIL] = { 0 };
 
         str_sub_delim(spell_name, sizeof(spell_name), command_arg, '\'', '\'');
 
         int spell = old_search_block(spell_name, 0, strlen(spell_name), (const char * const * const)spells, FALSE);
 
         if (spell == SPELL_FEAR) {
-          char victim_name[MIL];
+          char victim_name[MIL] = { 0 };
 
           one_argument(arg, victim_name);
 
@@ -2374,6 +2374,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
           GET_MANA(ch) -= mana_cost;
 
           send_to_char("Ok.\n\r", ch);
+
           say_spell(ch, SPELL_FEAR);
 
           spell_fear(GET_LEVEL(ch), ch, victim, 0);
@@ -2405,6 +2406,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
           GET_MANA(ch) -= mana_cost;
 
           send_to_char("Ok.\n\r", ch);
+
           say_spell(ch, SPELL_PERCEIVE);
 
           spell_perceive(GET_LEVEL(ch), ch, ch, 0);
@@ -2497,7 +2499,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
   if (cmd == MSG_VIOLENCE_POST_HIT) {
     if (!ench || !ch || !signaler || (ch == signaler) || IS_NPC(ch)) return FALSE;
 
-    if (chance(15 + wis_app[GET_WIS(ch)].bonus)) {
+    if (chance(20 + wis_app[GET_WIS(ch)].bonus)) {
       switch (number(1, 3)) {
         case 1:
           act("You sink your sword-like teeth into $N, crushing $M in your maw!", FALSE, ch, 0, signaler, TO_CHAR);
@@ -2562,7 +2564,7 @@ int shapeshift_dragon_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd,
 
 
 void do_shapeshift(CHAR *ch, char *arg, int cmd) {
-  const int shapeshift_hp_cost = 100;
+  const int shapeshift_hp_cost_percent = 10;
 
   if (!GET_SKILLS(ch)) return;
 
@@ -2643,13 +2645,13 @@ void do_shapeshift(CHAR *ch, char *arg, int cmd) {
       return;
     }
 
-    if (GET_HIT(ch) <= shapeshift_hp_cost) {
+    if (GET_HIT(ch) <= GET_HIT(ch) / shapeshift_hp_cost_percent) {
       send_to_char("You can't summon enough energy to shapeshift to that form.\n\r", ch);
 
       return;
     }
 
-    GET_HIT(ch) -= shapeshift_hp_cost;
+    GET_HIT(ch) -= GET_HIT(ch) / shapeshift_hp_cost_percent;
 
     send_to_char("You shapeshift into a being of primarodial elemental energy!\n\r", ch);
     act("$n shapeshifts into a being of primordial elemental energy!", TRUE, ch, 0, 0, TO_ROOM);
@@ -2693,13 +2695,13 @@ void do_shapeshift(CHAR *ch, char *arg, int cmd) {
       return;
     }
 
-    if (GET_HIT(ch) <= shapeshift_hp_cost) {
+    if (GET_HIT(ch) <= GET_HIT(ch) / shapeshift_hp_cost_percent) {
       send_to_char("You can't summon enough energy to shapeshift to that form.\n\r", ch);
 
       return;
     }
 
-    GET_HIT(ch) -= shapeshift_hp_cost;
+    GET_HIT(ch) -= GET_HIT(ch) / shapeshift_hp_cost_percent;
 
     send_to_char("You shapeshift into a mighty dragon and flex your powerful wings!\n\r", ch);
     act("$n shapeshifts into a mighty dragon and flexes $s powerful wings!", TRUE, ch, 0, 0, TO_ROOM);

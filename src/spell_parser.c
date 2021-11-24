@@ -277,7 +277,7 @@ int USE_MANA(CHAR *ch, int spell_number) {
   }
 
   /* Druid SC4: Elemental Form - Spells cost 10% less mana to cast. */
-  if (IS_MORTAL(ch) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
     mana = MAX(mana * 0.9, 1);
   }
 
@@ -611,7 +611,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
   else WAIT_STATE(ch, PULSE_VIOLENCE);
 
   /* Druid SC4: Elemental Form - Bypasses concentration check. */
-  if (!ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+  if (!(IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0))) {
     con_amt = 0;
     if (GET_CLASS(ch) == CLASS_PALADIN ||
       GET_CLASS(ch) == CLASS_NINJA ||

@@ -196,7 +196,7 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
     send_to_char("You turn ON the gossip channel.\n\r", ch);
   }
 
-  char action[MIL], name[MIL];
+  char action[MIL] = { 0 }, name[MIL] = { 0 };
 
   two_arguments(arg, action, name);
 
@@ -222,7 +222,7 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
     }
   }
 
-  char buf[MIL], message[MSL];
+  char buf[MIL] = { 0 }, message[MSL] = { 0 };
 
   int type = 0;
 
@@ -258,24 +258,24 @@ void do_gf(CHAR *ch, char *arg, int cmd) {
 
       snprintf(message, sizeof(message), "[gossip] %s", buf);
 
+      /* This is a hack to make act() show properly to sleeping players. */
+      bool sleeping = (GET_POS(ch) == POSITION_SLEEPING);
+
+      if (sleeping) GET_POS(ch) = POSITION_STANDING;
+
       COLOR(temp_ch, 5);
       if (type == TO_VICT) {
         act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, victim, TO_VICT);
       }
       else if (type == TO_OTHER) {
-        /* This is a hack to make act() TO_OTHER show to sleeping players. */
-        const bool sleeping = (GET_POS(ch) == POSITION_SLEEPING);
-
-        if (sleeping) GET_POS(ch) = POSITION_STANDING;
-
         act(message, COMM_ACT_HIDE_NON_MORT, ch, temp_ch, victim, TO_OTHER);
-
-        if (sleeping) GET_POS(ch) = POSITION_SLEEPING;
       }
       else {
         act(message, COMM_ACT_HIDE_NON_MORT, ch, 0, temp_ch, TO_VICT);
       }
       ENDCOLOR(temp_ch);
+
+      if (sleeping) GET_POS(ch) = POSITION_SLEEPING;
 
       type = 0;
     }
@@ -515,7 +515,7 @@ void do_action(struct char_data *ch, char *argument, int cmd)
 
   if (IS_SET(ch->specials.pflag,PLR_QUEST) && 
       IS_SET(ch->specials.pflag,PLR_QUIET) && 
-	  !IS_NPC(ch)) 
+    !IS_NPC(ch)) 
   {
     send_to_char("The Questmaster has taken away your ability to interrupt.\n\r",ch);
     return; /* For quests - Ranger June 96 */

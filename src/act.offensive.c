@@ -28,7 +28,7 @@
 #include "enchant.h"
 #include "aff_ench.h"
 
-void raw_kill(struct char_data *ch);
+void raw_kill(CHAR *ch);
 int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
 
@@ -48,8 +48,8 @@ void skill_wait_user(CHAR *ch, int skill, int wait) {
 void skill_wait_victim(CHAR *victim, int skill, int wait) {
   if (!victim || IS_IMPLEMENTOR(victim) || (CHAR_REAL_ROOM(victim) == NOWHERE) || !wait) return;
 
-  /* Druid SC5: Shapeshift: Elemental Form */
-  if (ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
+  /* Druid SC4: Shapeshift: Elemental Form */
+  if (IS_MORTAL(victim) && check_subclass(victim, SC_DRUID, 4) && ench_enchanted_by(victim, ENCH_NAME_ELEMENTAL_FORM, 0)) {
     wait = 0;
   }
 

@@ -95,17 +95,19 @@ void update_pos(CHAR *ch) {
     stop_riding(ch, GET_MOUNT(ch));
   }
 
-  if (GET_HIT(ch) < -10) {
-    GET_POS(ch) = POSITION_DEAD;
-  }
-  else if (GET_HIT(ch) < -5) {
-    GET_POS(ch) = POSITION_MORTALLYW;
-  }
-  else if (GET_HIT(ch) < -2) {
-    GET_POS(ch) = POSITION_INCAP;
-  }
-  else if (GET_HIT(ch) < 1) {
-    GET_POS(ch) = POSITION_STUNNED;
+  if (GET_HIT(ch) <= 0) {
+    if (GET_HIT(ch) < -10) {
+      GET_POS(ch) = POSITION_DEAD;
+    }
+    else if (GET_HIT(ch) < -5) {
+      GET_POS(ch) = POSITION_MORTALLYW;
+    }
+    else if (GET_HIT(ch) < -2) {
+      GET_POS(ch) = POSITION_INCAP;
+    }
+    else {
+      GET_POS(ch) = POSITION_STUNNED;
+    }
   }
   else if ((GET_POS(ch) <= POSITION_STUNNED) || (GET_POS(ch) == POSITION_FIGHTING)) {
     if (GET_OPPONENT(ch) && SAME_ROOM(GET_OPPONENT(ch), ch)) {
@@ -115,8 +117,7 @@ void update_pos(CHAR *ch) {
       GET_POS(ch) = POSITION_STANDING;
     }
   }
-
-  if (GET_POS(ch) >= POSITION_STANDING) {
+  else if (GET_POS(ch) >= POSITION_STANDING) {
     if (IS_AFFECTED(ch, AFF_FLY) || (IS_NPC(ch) && IS_SET(GET_ACT(ch), ACT_FLY))) {
       GET_POS(ch) = POSITION_FLYING;
     }
@@ -427,12 +428,14 @@ void change_alignment(CHAR *ch, CHAR *victim) {
 
   if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC)) return;
 
+  /* Templar SC1: Conviction - No alignment change on kill. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 1)) return;
+
   int align = -(GET_ALIGNMENT(victim) / 10);
 
   GET_ALIGNMENT(ch) += align / 2;
   GET_ALIGNMENT(ch) = MAX(GET_ALIGNMENT(ch), -1000);
   GET_ALIGNMENT(ch) = MIN(GET_ALIGNMENT(ch), 1000);
-
 }
 
 
@@ -1952,14 +1955,14 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  if (!IS_NPC(ch)) {
+  if (IS_MORTAL(ch)) {
     /* Handle Druid Shapeshift damage bonuses/penalties. */
     if (dmg > 0) {
       /* Druid SC4: Shapeshift: Elemental Form */
       if (check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
         if (IS_WEAPON_ATTACK(attack_type) || IS_SKILL_ATTACK(attack_type, damage_type)) {
-          /* Physical damage inflicted while in Element Form is reduced by 50%. */
-          dmg = lround(dmg * 0.5);
+          /* Physical damage inflicted while in Element Form is reduced by 20%. */
+          dmg = lround(dmg * 0.8);
         }
         else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
           /* Spell damage inflicted while in Elemental Form is increased by 20%. */
@@ -1973,8 +1976,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
           dmg += GET_WIS_APP(ch);
         }
         else if (IS_SPELL_ATTACK(attack_type, damage_type)) {
-          /* Spell damage inflicted while in Dragon Form is reduced by 20%. */
-          dmg = lround(dmg * 0.8);
+          /* Spell damage inflicted while in Dragon Form is reduced by 10%. */
+          dmg = lround(dmg * 0.9);
         }
       }
     }

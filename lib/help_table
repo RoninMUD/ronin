@@ -8532,16 +8532,16 @@ CONVICTION
 
 Subclass: Templar, Level 1 (Cleric)
 
-The Templar's Dispel Evil, Dispel Good, Holy Word, and Evil Word spells inflict
-three times the normal damage.  Also, the Harm and Super Harm spells no longer
-have a saving throw for half damage when cast by the Templar.
+Due to the Templar's unwavering belief in their divine order's cause, their
+alignment does not change when killing a creature.
 
-Additionally, the Holy Bless and Evil Bless spells shift the Templar's alignment
-by two times the normal value when cast on themselves.
-
-Finally, the Templar can cast the Holy Bless and Evil Bless spells on other
+Additionally, the Templar can cast the Holy Bless and Evil Bless spells on other
 characters.  These spells shift the target's alignment by 50% of the normal
 amount provided by the spell.
+
+Finally, the Templar's Dispel Evil, Dispel Good, Holy Word, and Evil Word spells
+inflict three times the normal damage.  Also, the Harm and Super Harm spells no
+longer have a saving throw for half damage when cast by the Templar.
 
 See Also: SUBCLASS TEMPLAR "DISPEL EVIL" "DISPEL GOOD" "HOLY WORD" "EVIL WORD"
           "HOLY BLESS" "EVIL BLESS" HARM "SUPER HARM"
@@ -8555,7 +8555,10 @@ forms of weapons, including those normally forbidden by the clergy.  This
 ability allows the Templar to wield all weapons, regardless of damage type or
 class restrictions.  However, alignment, and any other restrictions still apply.
 
-Additionally, the Templar gains a bonus to their Bash skill equal to their level
+Additionally, the Templar gains twice the normal bonus to hit point regeneration
+granted by their constitution score.
+
+Finally, the Templar gains a bonus to their Bash skill equal to their level
 divided by 5 (up to +10 at level 50).
 
 See Also: SUBCLASS TEMPLAR CLERIC BASH
@@ -8618,8 +8621,8 @@ hacking damage, depending on the opponent's damage immunities; if the opponent
 is immune to all of these weapon types, damage is inflicted via magical means
 instead.
 
-The weapon's damage is equal to 5d5+5 during the first 20 attacks, 7d7+7
-during the next 20 attacks, and 9d9+9 damage during the final 20 attacks.
+The weapon's damage is equal to 5d5+5 during the first 20 attacks, 6d6+6
+during the next 20 attacks, and 7d7+7 damage during the final 20 attacks.
 
 After the hammer has made 60 attacks, it ceases its attacks and looms above the
 caster's head, ready for one final strike.  The Templar has 20 rounds (1 minute)
@@ -8629,18 +8632,18 @@ To unleash this final strike, they must enter the 'judgement-strike' command.
 
 If the Templar does not specify a target (and is not in combat), or uses the
 optional 'area' or 'room' argument, the strike will heal all mortals in the
-room for 500 hit points.
+room for 450 hit points.
 
 If the Templar targets a friendly player, the strike will heal the target
-for 1,000 hit points as it bathes them in holy light; the Templar can target
+for 900 hit points as it bathes them in holy light; the Templar can target
 themself with this command if desired.
 
 If the Templar instead targets an opponent or a non-player character, the hammer
 crashes into them with the full force of the heavens, inflicting a massive
-1,000 damage in a single blow.
+900 damage in a single blow.
 
 Finally, if the effect expires without being used, its energy dissipates and it
-restores 250 health and 50 mana to the Templar.
+restores 300 health and 50 mana to the Templar.
 
 The 'judgement-strike' command accepts the following optional arguments:
 area/room, opponent/victim, and self/me.
@@ -8731,7 +8734,7 @@ All player characters not engaged in combat that are sitting, resting, or
 sleeping in a room in which a wall of thorns is present regenerate hit points
 and mana 33% faster than normal.
 
-A wall of thorns in a Safe room inflicts no damage, but otherwise works as
+A wall of thorns in a safe room inflicts no damage, but otherwise functions as
 normal.
 
 The wall is not permanent and will wilt and recede when the spell expires.
@@ -8758,7 +8761,7 @@ them to envelop the specified target with a bubble of entropy that saps them of
 their energy.  Entropy applies a negative effect to the target which causes a 5%
 reduced chance to: hit with their standard melee attacks, use special attacks
 (e.g. bite, claw, tailslam, etc.), and/or cast a spell.  Other special abilities
-that the target might use (i.e. from special procedures) are unaffected.
+that the target might use (e.g. from special procedures) are unaffected.
 
 This ability has a cost of 50 mana and imposes a 1 round skill lag on the Druid
 when it is used.  This effect can stack up to 3 times (up to 15% reduced chance)
@@ -8769,7 +8772,7 @@ its maximum of 10 combat rounds.
 
 Disadvantage:
 - Physical damage inflicted by melee attacks and skills used by a Druid in
-elemental form is reduced by 50%, due to their less corporeal nature.
+elemental form is reduced by 20%, due to their less corporeal nature.
 
 See Also: SUBCLASS DRUID SHAPESHIFT "DRAGON FORM" CONCENTRATION FORTIFICATION
 #
@@ -8808,11 +8811,11 @@ maximum of 10 combat rounds.
 
 During combat, the Druid will automatically bite, claw, or tail slam their
 opponent, inflicting damage equal to their level that breaks through the
-protection of Invulnerability.  This attack has a 15% chance of occurring every
-combat round, increased by the Druid's Wisdom modifier (up to 25% at 25 Wisdom).
+protection of Invulnerability.  This attack has a 20% chance of occurring every
+combat round, increased by the Druid's Wisdom modifier (up to 30% at 25 Wisdom).
 
 Disadvantage:
-- Healing and damage spells cast by a Druid in dragon form cure or inflict 20%
+- Healing and damage spells cast by a Druid in dragon form cure or inflict 10%
 less damage respectively, due to their more primal nature.
 
 See Also: SUBCLASS DRUID SHAPESHIFT "ELEMENTAL FORM" FLY INFRAVISION FEAR
@@ -8823,7 +8826,7 @@ SHAPESHIFT
 Subclass: Druid, Level 4 and 5 (Cleric)
 
 Usage:   shapeshift <dragon/elemental/normal>
-HP Cost: 100 (Dragon/Elemental Form) / 0 (Normal Form)
+HP Cost: 10% (Dragon/Elemental Form) / 0% (Normal Form)
 
 This ability allows the Druid to transform into a non-humanoid creature,
 granting them special powers, spells, and skills.  Each form brings with it
