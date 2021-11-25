@@ -1353,7 +1353,7 @@ void assign_spell_text(void) {
   // Druid
   SPLTXTO(SPELL_WALL_THORNS,          "wall of thorns",               "",                                                                    "",                                                                          "");
   // Templar
-  SPLTXTO(SPELL_MAGIC_ARMAMENT,       "magic armament",               "You channel magic energy around yourself to augment your attacks.",   "$n channels magic energy around $eself to augment $s attacks.",             "The magic energy surrounding you dissipates.");
+  SPLTXTO(SPELL_MAGIC_ARMAMENT,       "magic armament",               "You channel magic energy around yourself to augment your attacks.",   "$n channels magic energy around $mself to augment $s attacks.",             "The magic energy surrounding you dissipates.");
   SPLTXTO(SPELL_FORTIFICATION,        "fortification",                "You feel able to withstand any attack.",                              "$n seems able to withstand any attack.",                                    "Your feeling of fortification diminishes.");
   SPLTXTO(SPELL_DIVINE_HAMMER,        "divine hammer",                "You reach to the heavens and call down a hammer of divine power!",    "$n reaches to the heavens and calls down a hammer of divine power!",        "");
   // Ronin
