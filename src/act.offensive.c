@@ -1334,8 +1334,7 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
       (GET_CLASS(ch) != CLASS_NINJA) &&
       (GET_CLASS(ch) != CLASS_PALADIN) &&
       (GET_CLASS(ch) != CLASS_ANTI_PALADIN) &&
-      (GET_CLASS(ch) != CLASS_COMMANDO) &&
-      (GET_CLASS(ch) != CLASS_WARRIOR)) {
+      (GET_CLASS(ch) != CLASS_COMMANDO)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
