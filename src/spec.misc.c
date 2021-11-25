@@ -589,7 +589,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
       (number(0, 5) == 0) && !IS_NPC(mob->specials.fighting))
      {
        cast_death_spray( GET_LEVEL(mob), mob, "", SPELL_TYPE_SPELL,
-			mob->specials.fighting, 0);
+      mob->specials.fighting, 0);
        return FALSE;
      }
    return FALSE;
@@ -605,7 +605,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
 
    for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = victim->next_in_room )
      { if (number(0,1) == 0)
-	 break;
+   break;
      }
    if (!victim)
      return FALSE;
@@ -669,14 +669,14 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
 
    if (num == 0)
      {	damage(mob, vict, 0, SKILL_KICK,DAM_NO_BLOCK);
-	 WAIT_STATE(vict, PULSE_VIOLENCE*2);
-	 WAIT_STATE(mob, PULSE_VIOLENCE*2);
-	 return TRUE;
+   WAIT_STATE(vict, PULSE_VIOLENCE*2);
+   WAIT_STATE(mob, PULSE_VIOLENCE*2);
+   return TRUE;
        }
    else if (num == 1)
      {
        if (vict->equipment[WIELD])
-	 wield = vict->equipment[WIELD];
+   wield = vict->equipment[WIELD];
        else { return FALSE; }
 
        act("$N kicked off your weapon!", FALSE, vict, 0, mob, TO_CHAR);
@@ -688,10 +688,10 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
      }
    else
      {	damage(mob, vict, 0, SKILL_BASH,DAM_NO_BLOCK);
-	 GET_POS(vict) = POSITION_SITTING;
-	 WAIT_STATE(vict, PULSE_VIOLENCE*2);
-	 WAIT_STATE(mob, PULSE_VIOLENCE*2);
-	 return FALSE;
+   GET_POS(vict) = POSITION_SITTING;
+   WAIT_STATE(vict, PULSE_VIOLENCE*2);
+   WAIT_STATE(mob, PULSE_VIOLENCE*2);
+   return FALSE;
        }
 
  }
@@ -975,12 +975,12 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
    int key_room, gold;
    bool found;
    OBJ *tmp_obj, *obj;
-	 struct extra_descr_data *ext;
+   struct extra_descr_data *ext;
 
-	 if (cmd != MSG_DIE) /* You must pray to get the stuff */
-		 return FALSE;
+   if (cmd != MSG_DIE) /* You must pray to get the stuff */
+     return FALSE;
 
-	 key_room = 1+CHAR_REAL_ROOM(ch);
+   key_room = 1+CHAR_REAL_ROOM(ch);
 
    strcpy(buf, "item_for_");
    strcat(buf, GET_NAME(ch));
@@ -991,19 +991,19 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
    for (tmp_obj = world[key_room].contents; tmp_obj; tmp_obj = tmp_obj->next_content)
      for(ext = tmp_obj->ex_description; ext; ext = ext->next)
        if (str_cmp(buf, ext->keyword) == 0) {
-		   if (gold == 0) {
-		      gold = 1;
-			    act("$n kneels and at the altar and chants a prayer to Odin.",
-					  FALSE, ch, 0, 0, TO_ROOM);
-				 act("You notice a faint light in Odin's eye.",
-					  FALSE, ch, 0, 0, TO_CHAR);
-		   }
-	 obj = read_object(tmp_obj->item_number, REAL);
-	 obj_to_room(obj, CHAR_REAL_ROOM(ch));
-		   act("$p slowly fades into existence.",FALSE,ch,obj,0,TO_ROOM);
-		   act("$p slowly fades into existence.",FALSE,ch,obj,0,TO_CHAR);
-	 gold += obj->obj_flags.cost;
-	 found = TRUE;
+       if (gold == 0) {
+          gold = 1;
+          act("$n kneels and at the altar and chants a prayer to Odin.",
+            FALSE, ch, 0, 0, TO_ROOM);
+         act("You notice a faint light in Odin's eye.",
+            FALSE, ch, 0, 0, TO_CHAR);
+       }
+   obj = read_object(tmp_obj->item_number, REAL);
+   obj_to_room(obj, CHAR_REAL_ROOM(ch));
+       act("$p slowly fades into existence.",FALSE,ch,obj,0,TO_ROOM);
+       act("$p slowly fades into existence.",FALSE,ch,obj,0,TO_CHAR);
+   gold += obj->obj_flags.cost;
+   found = TRUE;
        }
 
 
@@ -1011,7 +1011,7 @@ int chaos_gun_spec(OBJ *gun, CHAR *ch, int cmd, char *argument) {
      GET_GOLD(ch) -= gold;
      GET_GOLD(ch) = MAX(0, GET_GOLD(ch));
      return TRUE;
-	 }
+   }
 
    return FALSE;
  }
@@ -1048,55 +1048,55 @@ After a time, a new reality comes into focus... you are elsewhere.\n\r"
      {
      case CMD_GET:    /* get */
        if (!(chalice = get_obj_in_list_num(chl,
-					   world[CHAR_REAL_ROOM(ch)].contents))
-	   && CAN_SEE_OBJ(ch, chalice))
-	 if (!(chalice = get_obj_in_list_num(achl,
-					     world[CHAR_REAL_ROOM(ch)].contents)) && CAN_SEE_OBJ(ch, chalice))
-	   return(0);
+             world[CHAR_REAL_ROOM(ch)].contents))
+     && CAN_SEE_OBJ(ch, chalice))
+   if (!(chalice = get_obj_in_list_num(achl,
+               world[CHAR_REAL_ROOM(ch)].contents)) && CAN_SEE_OBJ(ch, chalice))
+     return(0);
 
        /* we found a chalice.. now try to get us */
        do_get(ch, arg, cmd);
        /* if got the altar one, switch her */
        if (chalice == get_obj_in_list_num(achl, ch->carrying))
-	 {
-				 extract_obj(chalice);
-				 chalice = read_object(chl, VIRTUAL);
-				 obj_to_char(chalice, ch);
-			 }
-			 return(1);
-		 break;
-		 case CMD_PUT: /* put */
-			 if (!(chalice = get_obj_in_list_num(chl, ch->carrying)))
-				 return(0);
+   {
+         extract_obj(chalice);
+         chalice = read_object(chl, VIRTUAL);
+         obj_to_char(chalice, ch);
+       }
+       return(1);
+     break;
+     case CMD_PUT: /* put */
+       if (!(chalice = get_obj_in_list_num(chl, ch->carrying)))
+         return(0);
 
-			 argument_interpreter(arg, buf1, buf2);
-			 if (!str_cmp(buf1, "chalice") && !str_cmp(buf2, "altar"))
-			 {
-				 extract_obj(chalice);
-				 chalice = read_object(achl, VIRTUAL);
-				 obj_to_room(chalice, CHAR_REAL_ROOM(ch));
-				 send_to_char("Ok.\n\r", ch);
-			 }
-			 return(1);
-		 break;
-		 case 192: /* pray */
-			 if (!(chalice = get_obj_in_list_num(achl,
-				 world[CHAR_REAL_ROOM(ch)].contents)))
-				 return(0);
+       argument_interpreter(arg, buf1, buf2);
+       if (!str_cmp(buf1, "chalice") && !str_cmp(buf2, "altar"))
+       {
+         extract_obj(chalice);
+         chalice = read_object(achl, VIRTUAL);
+         obj_to_room(chalice, CHAR_REAL_ROOM(ch));
+         send_to_char("Ok.\n\r", ch);
+       }
+       return(1);
+     break;
+     case 192: /* pray */
+       if (!(chalice = get_obj_in_list_num(achl,
+         world[CHAR_REAL_ROOM(ch)].contents)))
+         return(0);
 
-			 /*do_action(ch, arg, cmd);*/  /* pray */
-			 send_to_char(CHAL_ACT, ch);
-			 extract_obj(chalice);
-			 act("$n is torn out of existence!", TRUE, ch, 0, 0, TO_ROOM);
-			 char_from_room(ch);
-			 char_to_room(ch, real_room(2500));   /* before the fiery gates */
-			 do_look(ch, "", 15);
-			 return(1);
-		 break;
-		 default:
-			 return(0);
-		 break;
-	 }
+       /*do_action(ch, arg, cmd);*/  /* pray */
+       send_to_char(CHAL_ACT, ch);
+       extract_obj(chalice);
+       act("$n is torn out of existence!", TRUE, ch, 0, 0, TO_ROOM);
+       char_from_room(ch);
+       char_to_room(ch, real_room(2500));   /* before the fiery gates */
+       do_look(ch, "", 15);
+       return(1);
+     break;
+     default:
+       return(0);
+     break;
+   }
  }
 
  int kings_hall(CHAR *mob,CHAR *ch, int cmd, char *arg)
@@ -1116,26 +1116,26 @@ After a time, a new reality comes into focus... you are elsewhere.\n\r"
    return(1);
  }
 
- int mobrescue(CHAR *mob,CHAR *ch, int cmd, char *arg)
- {
-   CHAR *tch;
+ int mobrescue(CHAR *mob, CHAR *ch, int cmd, char *arg) {
+   if (cmd == MSG_MOBACT) {
+     if (!AWAKE(mob) || (GET_POS(mob) == POSITION_FIGHTING)) return FALSE;
 
-   if (cmd || !AWAKE(mob) || (GET_POS(mob) == POSITION_FIGHTING))
-     return (FALSE);
+     for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch = NULL; temp_ch; temp_ch = next_ch) {
+       next_ch = temp_ch->next_in_room;
 
+       if (GET_OPPONENT(temp_ch) && (GET_OPPONENT(temp_ch) != mob) && !IS_NPC(temp_ch)) {
+         act("$n screams 'I'll save you!'", FALSE, mob, 0, 0, TO_ROOM);
 
-   for (tch=world[CHAR_REAL_ROOM(mob)].people; tch; tch = tch->next_in_room)
-     {
-       if (tch->specials.fighting && !IS_NPC(tch))
-	 {
+         hit(mob, temp_ch, TYPE_UNDEFINED);
 
-	   act("$n screams 'I'll save you!'", FALSE, mob, 0, 0, TO_ROOM);
-	   hit(mob, tch, TYPE_UNDEFINED);
-	   return(FALSE);
-	 }
+         return FALSE;
+       }
      }
 
-   return(FALSE);
+     return FALSE;
+   }
+
+   return FALSE;
  }
 
 int death(CHAR *mob,CHAR *ch, int cmd, char *arg)
@@ -1185,73 +1185,73 @@ int hospital(int room,CHAR *ch, int cmd, char *arg)
 
     if (!*buf)
       {
-	send_to_char("Buy what?\n\r",ch);
-	return(TRUE);
+  send_to_char("Buy what?\n\r",ch);
+  return(TRUE);
       }
     if (!strcmp(buf,"heal"))
       {
-	if (GET_GOLD(ch)<50000)
-	  {
-	    send_to_char("You dont have enough money.\n\r",ch);
-	    return(TRUE);
-	  }
-	else
-	  {
-	    cast_heal(35,ch,"",SPELL_TYPE_SPELL,ch,0);
-	    GET_GOLD(ch)-=50000;
-	    send_to_char("That will cost you 50000.\n\r",ch);
-	    return(TRUE);
-	  }
+  if (GET_GOLD(ch)<50000)
+    {
+      send_to_char("You dont have enough money.\n\r",ch);
+      return(TRUE);
+    }
+  else
+    {
+      cast_heal(35,ch,"",SPELL_TYPE_SPELL,ch,0);
+      GET_GOLD(ch)-=50000;
+      send_to_char("That will cost you 50000.\n\r",ch);
+      return(TRUE);
+    }
       }
     if (!strcmp(buf,"poison"))
       {
-	if (GET_GOLD(ch)<4000)
-	  {
-	    send_to_char("You dont have enough money.\n\r",ch);
-	    return(TRUE);
-	  }
-	else
-	  {
-	    cast_remove_poison(35,ch,"",SPELL_TYPE_SPELL,ch,0);
-	    GET_GOLD(ch)-=4000;
-	    send_to_char("Thats 4000 coins.  Thanks for your support.\n\r",ch);
-	    return(TRUE);
-	  }
+  if (GET_GOLD(ch)<4000)
+    {
+      send_to_char("You dont have enough money.\n\r",ch);
+      return(TRUE);
+    }
+  else
+    {
+      cast_remove_poison(35,ch,"",SPELL_TYPE_SPELL,ch,0);
+      GET_GOLD(ch)-=4000;
+      send_to_char("Thats 4000 coins.  Thanks for your support.\n\r",ch);
+      return(TRUE);
+    }
       }
     if (!strcmp(buf,"serious"))
       {
-	if (GET_GOLD(ch)<5000)
-	  {
-	    send_to_char("You dont have enough money.\n\r",ch);
-	    return(TRUE);
-	  }
-	else
-	  {
-	    cast_cure_serious(35,ch,"",SPELL_TYPE_SPELL,ch,0);
-	    GET_GOLD(ch)-=5000;
-	    send_to_char("You spend 5000 for a cure serious.\n\r",ch);
-	    return(TRUE);
-	  }
+  if (GET_GOLD(ch)<5000)
+    {
+      send_to_char("You dont have enough money.\n\r",ch);
+      return(TRUE);
+    }
+  else
+    {
+      cast_cure_serious(35,ch,"",SPELL_TYPE_SPELL,ch,0);
+      GET_GOLD(ch)-=5000;
+      send_to_char("You spend 5000 for a cure serious.\n\r",ch);
+      return(TRUE);
+    }
       }
     if (!strcmp(buf,"armor"))
       {
-	if (GET_GOLD(ch)<1000)
-	  {
-	    send_to_char("You dont have enough money.\n\r",ch);
-	    return(TRUE);
-	  }
-	else
-	  {
-	    cast_armor(35,ch,"",SPELL_TYPE_SPELL,ch,0);
-	    GET_GOLD(ch)-=1000;
-	    send_to_char("Thats 1000 coins.\n\r",ch);
-	    return(TRUE);
-	  }
+  if (GET_GOLD(ch)<1000)
+    {
+      send_to_char("You dont have enough money.\n\r",ch);
+      return(TRUE);
+    }
+  else
+    {
+      cast_armor(35,ch,"",SPELL_TYPE_SPELL,ch,0);
+      GET_GOLD(ch)-=1000;
+      send_to_char("Thats 1000 coins.\n\r",ch);
+      return(TRUE);
+    }
       }
     else
       {
-	send_to_char("You cant buy that.\n\r",ch);
-	return(TRUE);
+  send_to_char("You cant buy that.\n\r",ch);
+  return(TRUE);
       }
   }
   /* All commands except list and buy */
