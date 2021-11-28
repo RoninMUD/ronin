@@ -174,6 +174,7 @@ OBJS_RONIN_SPEC = \
 	spec.tarioncity.o \
 	spec.theldon.o \
 	spec.topknot.o \
+	spec.turkeytakeover.o \
 	spec.trollcastle-moat.o \
 	spec.trollvillage.o \
 	spec.tweefmanor.o \

@@ -1,0 +1,844 @@
+#18100
+Throne of Grace~
+  An altar made of pure platinum stands glows in the pure light of the torches
+hanging in golden scones.  The entire room is adorned in expensive fabrics
+and rugs cover the floor. Flowers fill the numerous vases that emit a soothing
+floral scent. A single priest kneels on the ground and continues to offer
+thanks to the gods.
+~
+181 67108936 0
+D2
+~
+~
+0 -1 18101
+S
+#18101
+Hallway to Grace~
+  A long corridor of gold and silver causes beautiful shadows to cascade along
+the floor to the east and the west. A faint floral smell drifts down the
+corridor from the west. As you move west, the glow increases and a holy
+presence can be felt pushing against you.
+~
+181 67108872 0
+D0
+~
+~
+0 -1 18100
+D1
+~
+~
+0 -1 18102
+S
+#18102
+Hallway to Grace~
+  A long corridor of gold and silver causes beautiful shadows to cascade along
+the floor to the east and the west. A faint floral smell drifts down the
+corridor from the west. As you move west, the glow increases and a holy
+presence can be felt pushing against you.
+~
+181 67108872 0
+D1
+~
+~
+0 -1 18103
+D2
+~
+~
+0 -1 18107
+D3
+~
+~
+0 -1 18101
+S
+#18103
+Portal of Turkey Terror~
+  A large black portal stands twenty feet in the air. Covering all sides of 
+the large black pillars that support it are red and black runes that glow
+intermittently. Emerging from the portal is a horrifying black beak and horns
+coming from its head. Large, feathered wings begin to emerge and open, revealing
+the true horror of Thanksgiving.
+~
+181 67108872 0
+D1
+~
+~
+0 -1 18104
+D2
+~
+~
+0 -1 18107
+D3
+~
+~
+0 -1 18102
+S
+#18104
+Hallway to Faith~
+ A long corridor of granite and marble extend to the east and west. Its
+intricate patterns form hypnotizing lines and shapes as the light from torches
+lights the path forward. A faint floral smell drifts down the corridor from 
+the west.
+~
+181 67108872 0
+D1
+~
+~
+0 -1 18105
+D2
+~
+~
+0 -1 18107
+D3
+~
+~
+0 -1 18103
+S
+#18105
+Hallway to Faith~
+ A long corridor of granite and marble extend to the east and west. Its
+intricate patterns form hypnotizing lines and shapes as the light from torches
+lights the path forward. A faint floral smell drifts down the corridor from 
+the west.
+~
+181 67108872 0
+D0
+~
+~
+0 -1 18106
+D3
+~
+~
+0 -1 18104
+S
+#18106
+Throne of Faith~
+ An altar made of numerous rare gems gleams a rainbow glow. The rubies and
+emeralds form the base and walls of the altar, while sapphires and diamonds
+create a shimmering blue and white top. Flowers are placed around the room
+producing a floral scent to calm the nerves. A priestess stands in the room
+continuing to offer thanks for the sacrifices that those must make
+for Thanksgiving.
+~
+181 67108936 0
+D2
+~
+~
+0 -1 18105
+S
+#18107
+The Temple of Thanks and Sacrifice~
+  The temple walls are made of granite and stone and extend thirty feet into
+the air. The gigantic structure has stood the test of time and was built to 
+continue an unspeakable evil.  Numerous sigils and runes from all races and
+religions can be seen glowing on the pillars, doors, and windows of the
+building. An ominous presence can be felt coming from inside the doors.
+~
+181 67108876 0
+D0
+~
+~
+0 -1 18103
+D1
+~
+~
+0 -1 18104
+D2
+~
+~
+0 -1 18108
+D3
+~
+~
+0 -1 18102
+S
+#18108
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18107
+D1
+~
+~
+0 -1 18116
+D3
+~
+~
+0 -1 18109
+S
+#18109
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18108
+D2
+~
+~
+0 -1 18110
+S
+#18110
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18109
+D2
+~
+~
+0 -1 18111
+S
+#18111
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18110
+D2
+~
+~
+0 -1 18129
+D3
+~
+~
+0 -1 18112
+S
+#18112
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18111
+S
+#18113
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18114
+D2
+~
+~
+0 -1 18128
+S
+#18114
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18115
+D3
+~
+~
+0 -1 18113
+S
+#18115
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18116
+D1
+~
+~
+0 -1 18117
+D2
+~
+~
+0 -1 18114
+S
+#18116
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D2
+~
+~
+0 -1 18115
+D3
+~
+~
+0 -1 18108
+S
+#18117
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18118
+D3
+~
+~
+0 -1 18115
+S
+#18118
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D2
+~
+~
+0 -1 18119
+D3
+~
+~
+0 -1 18117
+S
+#18119
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18118
+D2
+~
+~
+0 -1 18120
+S
+#18120
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18119
+D3
+~
+~
+0 -1 18121
+S
+#18121
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18120
+D2
+~
+~
+0 -1 18122
+S
+#18122
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18121
+D2
+~
+~
+0 -1 18123
+S
+#18123
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18122
+D1
+~
+~
+0 -1 18124
+D3
+~
+~
+0 -1 18125
+S
+#18124
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D3
+~
+~
+0 -1 18123
+S
+#18125
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18123
+D3
+~
+~
+0 -1 18126
+S
+#18126
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18127
+D1
+~
+~
+0 -1 18125
+S
+#18127
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18128
+D2
+~
+~
+0 -1 18126
+S
+#18128
+Field of Thanks~
+  Large fields full of golden wheat, green plants growing towards the sky 
+producing many vegetables, and wooden fences acting as dividers spread out
+before you. Black figures with feathers can be seen swarming through the
+fields. A large portal can see to the northeast and an ominous black
+cloud is forming above the building to the north.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18113
+D2
+~
+~
+0 -1 18127
+D3
+~
+~
+0 -1 18129
+S
+#18129
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18111
+D1
+~
+~
+0 -1 18128
+D3
+~
+~
+0 -1 18130
+S
+#18130
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18129
+D2
+~
+~
+0 -1 18132
+D3
+~
+~
+0 -1 18131
+S
+#18131
+A Solitary Overlook~
+  A single ray of sunshine shines down on this overlook.  To the west, a vast
+empty sky extends beyond the horizon. The majestic landscape shows a world
+yet to be explored. A few wooden benches sit under a tall oak tree to provide
+a tranquil place to rest and relax.
+~
+181 67108864 2
+D1
+~
+~
+0 -1 18130
+S
+#18132
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18130
+D2
+~
+~
+0 -1 18133
+S
+#18133
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18132
+D2
+~
+~
+0 -1 18134
+S
+#18134
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 2
+D0
+~
+~
+0 -1 18133
+D1
+~
+~
+0 -1 18135
+S
+#18135
+Road to the Temple~
+  Well laid stones line the road forming a flat and direct path to the north.
+A large building can be seen standing triumphantly against the sky, made out
+of stone and marble. The fields extend in all directions, with fields of
+different vegetables and wheat which are used as offerings for thanks. A small 
+village with a few huts lies to the south.  Scanning the fields, you can make
+out numerous black shapes covered in feathers roaming the fields.
+~
+181 67108864 1
+D2
+~
+~
+0 -1 18136
+D3
+~
+~
+0 -1 18134
+S
+#18136
+On the Road to Thanks~
+ Leaving the village, a road extends to the north, winding around the fields of
+golden wheat and green vegetable plants reaching to the sky. A large building
+can be seen far to the north with a black cloud forming above it. 
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18135
+D2
+~
+~
+0 -1 18137
+S
+#18137
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18136
+D1
+~
+~
+0 -1 18139
+D2
+~
+~
+0 -1 18141
+D3
+~
+~
+0 -1 18138
+S
+#18138
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D1
+~
+~
+0 -1 18137
+D2
+~
+~
+0 -1 18142
+S
+#18139
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D2
+~
+~
+0 -1 18140
+D3
+~
+~
+0 -1 18137
+S
+#18140
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18139
+D3
+~
+~
+0 -1 18141
+S
+#18141
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18137
+D1
+~
+~
+0 -1 18140
+D2
+~
+~
+0 -1 18143
+D3
+~
+~
+0 -1 18142
+S
+#18142
+The Village of Thanks~
+  The village of thanks is in the midst of a thanksgiving celebration. Joyful
+laughter and hardy cheers can be heard from the townspeople as they gather food
+together to say thanks. To the north a black cloud can be seen appearing over
+the large stone building. Soldiers can be seen milling around and preparing to 
+march north.
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18138
+D1
+~
+~
+0 -1 18141
+S
+#18143
+Entrance to the Village of Thanks~
+  To the north is a quaint little village made of wood and stone. People can be
+seen bustling back and forth, carrying food to tables in the center of town. 
+The atmosphere is joyous and happy though there is a serious undertone that can
+be seen upon the faces of the guards as they anxiously stare north at the 
+growing black cloud.
+~
+181 67108864 1
+D0
+~
+~
+0 -1 18141
+S
+#18199
+Temporary Room~
+Temporary description.
+~
+181 0 0
+S
+#0
+$~
