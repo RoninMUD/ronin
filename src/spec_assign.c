@@ -123,6 +123,7 @@ void assign_aquest_special(void);
 void assign_swordoftruth(void);
 void assign_WOT(void);
 void assign_ecanyon(void);
+void assign_turkeytakeover(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -220,6 +221,7 @@ void assign_mobiles(void)
   assign_swordoftruth();
   assign_WOT();
   assign_ecanyon();
+  assign_turkeytakeover();
 
 //  assign_wbw();
 #ifdef TEST_SITE
