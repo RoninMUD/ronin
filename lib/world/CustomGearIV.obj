@@ -8,10 +8,10 @@ a pair of banshee skin leggings lie here.~
 8 10 8000
 20
 E
-leggings~
+banshee~
 They look like you would expect.  Disgusting.~
 E
-banshee~
+leggings~
 They look like you would expect.  Disgusting.~
 X
 ~
@@ -1594,5 +1594,80 @@ M
 ~
 A
 17 -5
+#29676
+vambraces vambrace platinum pilgrim thanksgiving~
+Platinum Vambraces of the Pilgrim Army~
+A pair of platinum vambraces glow with magical light.~
+~
+9 134217792 257
+15 0 0 0
+11 95468 54875
+35
+E
+vambraces vambrace platinum pilgrim thanksgiving~
+This pair of platinum vambraces is standard issue for all members of the pilgrim army. They help provide holy protection against the forces that want to ruin the festival of thanks.
+~
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+18 2
+A
+19 1
+#29677
+shawl thanksgiving~
+A Multi-Colored Thanksgiving Shawl~
+A shawl of multplie colors with the pilgrim's sigil on it.~
+~
+9 134217792 1025
+15 0 0 0
+7 76200 34586
+45
+E
+shawl thanksgiving~
+A shawl with the pilgrims sigil on it along with other runes to offer protection and thanks for the bountiful harvest.
+~
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+18 5
+A
+19 1
+#29678
+crown turkey feathers thanksgiving~
+A Crown of Turkey Feathers~
+A large crown made of turkey feathers~
+~
+9 134217792 17
+12 0 0 0
+5 125150 89500
+55
+E
+crown turkey feathers thanksgiving~
+A Platinum Crown with Multiple feathers from turkeys sits before you. A symbol of the pilgrims as they offer thanks for their bountiful harvests.
+~
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+53 4
+A
+52 30
 #0
 $~
