@@ -1,0 +1,96 @@
+#18000
+guise merchant man~
+Guise, The Black Market Merchant~
+A Small Man in a long Trench coat stands nonchalantly, and aimlessly stares.
+~
+  Gray, shoulder-length hair slightly covers a smiling face that peers out from
+his covered face.. Glittering hazel eyes, sit rooted within their sockets, gaze
+at you as you enter the camp. A tattoo of a skull is proudly worn just below
+his left eye shows the affiliation to the black market. Although his stature is
+short, his frame is tough and is ready for action at a moments notice.
+~
+74 134250504 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 1
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#18001
+spector trader man~
+Spector, A Man of Oddities~
+Spector, The Oddities Purveyor
+~
+An Important Member of the Black Market
+~
+74 2048 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 1
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#18002
+echo commander man~
+Echo, Black Market Commander~
+Echo, Commander of the Black Market
+~
+An Important Member of the Black Market
+~
+74 2048 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 1
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#18003
+mine female investigator~
+Mime, Black Market Investigator~
+Mime, the Black Market investigator
+~
+An Important Member of the Black Market
+~
+74 2048 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 2
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#18004
+fuse master female~
+Fuse, Armory Master of the Black Market~
+Fuse, Black Market Armorer
+~
+An Important Member of the Black Market
+~
+74 2048 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 2
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#18005
+feign operative female~
+Feign, Intelligence Operative~
+Feign, The Intelligence Operative
+~
+An Important Member of the Black Market
+~
+74 2048 0 Y
+70 -50 -30 1d1+400000 1d1+0
+0 0
+8 8 2
+1 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#0
+$~

@@ -124,6 +124,7 @@ void assign_swordoftruth(void);
 void assign_WOT(void);
 void assign_ecanyon(void);
 void assign_turkeytakeover(void);
+void assign_medievalblackmarket(void)
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -222,6 +223,7 @@ void assign_mobiles(void)
   assign_WOT();
   assign_ecanyon();
   assign_turkeytakeover();
+  assign_medievalblackmarket();
 
 //  assign_wbw();
 #ifdef TEST_SITE

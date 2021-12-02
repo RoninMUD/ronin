@@ -49,9 +49,9 @@
 #define BEAK 18105
 #define FEATHERS 18106
 #define CHEST 18107
-#define CROWN 18108
-#define SHAWL 18109
-#define VAMBRACES 18110
+#define CROWN 29678
+#define SHAWL 29677
+#define VAMBRACES 29676
 
 /*Mobs */
 #define TURKEY_TERROR 18100

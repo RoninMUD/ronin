@@ -151,6 +151,7 @@ OBJS_RONIN_SPEC = \
 	spec.lost.o \
 	spec.mapmaker.o \
 	spec.marikith.o \
+	spec.medievalblackmarket.o\
 	spec.midgaard.o \
 	spec.misc.o \
 	spec.monastery.o \
