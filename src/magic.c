@@ -2309,11 +2309,11 @@ void spell_dispel_magic(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
         printf_to_char(victim, "%s\n\r", spell_text[dispel_type].wear_off_msg);
       }
 
-      for (AFF *temp_aff = victim->affected, *next_aff; temp_aff; temp_aff = next_aff) {
-        next_aff = temp_aff->next;
-
+      for (AFF *temp_aff = victim->affected; temp_aff; temp_aff = temp_aff->next) {
         if (temp_aff->type == dispel_type) {
           aff_from_char(victim, dispel_type);
+
+          break;
         }
       }
     }
