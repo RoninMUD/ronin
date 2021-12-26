@@ -61,6 +61,8 @@ void look_in_room(CHAR *ch, int vnum);
 void show_char_to_char(struct char_data *i, struct char_data *ch, int mode);
 
 
+#define DEFAULT_DECAY_TIMER 120
+
 const char *object_decay_text[] = {
   "like new",
   "almost new",
@@ -243,8 +245,8 @@ void show_obj_to_char(OBJ *obj, CHAR *ch, int mode, int num) {
       }
       else if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) || IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
         const int decay_string_max_idx = NUMELEMS(object_decay_text) - 1;
-
-        int decay_level = OBJ_PROTO_TIMER(obj) ? decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / OBJ_PROTO_TIMER(obj)) : decay_string_max_idx;
+        int decay_timer = OBJ_HAS_PROTO(obj) ? OBJ_PROTO_TIMER(obj) : DEFAULT_DECAY_TIMER;
+        int decay_level = decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / decay_timer);
 
         decay_level = MIN(MAX(decay_level, 0), decay_string_max_idx);
 
@@ -999,7 +1001,8 @@ bool show_object_extra_desc(OBJ *obj, CHAR *ch, char *arg) {
     if (IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_ALL_DECAY) || IS_SET(OBJ_EXTRA_FLAGS2(obj), ITEM_EQ_DECAY)) {
       const int decay_string_max_idx = NUMELEMS(object_decay_text) - 1;
 
-      int decay_level = OBJ_PROTO_TIMER(obj) ? decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / OBJ_PROTO_TIMER(obj)) : decay_string_max_idx;
+      int decay_timer = OBJ_HAS_PROTO(obj) ? OBJ_PROTO_TIMER(obj) : DEFAULT_DECAY_TIMER;
+      int decay_level = decay_string_max_idx - ((10 * OBJ_TIMER(obj)) / decay_timer);
 
       decay_level = MIN(MAX(decay_level, 0), decay_string_max_idx);
 
