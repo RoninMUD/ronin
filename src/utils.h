@@ -128,7 +128,7 @@ do {                   \
 #define MOB_ATT_TARGET(mob, num) (mob->specials.att_target[num])
 #define MOB_ATT_SPELL(mob, num)  (mob->specials.att_spell[num])
 
-#define OBJ_HAS_PROTO(obj)       ((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) < top_of_objt))
+#define OBJ_HAS_PROTO(obj)       ((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) <= top_of_objt))
 #define OBJ_RNUM(obj)            (obj->item_number)
 #define OBJ_VNUM(obj)            (obj->item_number_v)
 #define OBJ_NAME(obj)            (obj->name ? obj->name : (OBJ_HAS_PROTO(obj) ? obj_proto_table[obj->item_number].name : "error"))
