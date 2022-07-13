@@ -422,7 +422,7 @@ trinkets, and baubles. Precious metals and other valuables are also on display.
 Inside the tent are upright lockers, their doors open displaying the numerous 
 scrolls and other more vulnerable treasures.
 ~
-180 0 3
+180 67108864 3
 D0
 ~
 ~
@@ -445,8 +445,8 @@ S
 #18024
 Back of the Commander's Wagon~
   The back of the large wagon contains numerous crates of food, while dried
-meat hangs from the ceiling. Chests bound with iron or steel, are also fitted
-with locks. Their ornate design shimmering as light from the lantern
+meat hangs from the ceiling. Chests bound with iron or steel are also fitted
+with locks. Their ornate design shimmers as light from the lantern
 hanging in the center brightens the area.  The wagon extends to the south
 where more boxes and supplies are stacked.
 ~
@@ -455,7 +455,7 @@ D0
 The canvas of the wagon is opened, showing the camp before it.
 ~
 wagon~
-10 -1 18017
+11 -1 18017
 D2
 ~
 ~
@@ -464,10 +464,10 @@ S
 #18025
 Back of the Commander's Wagon~
   The back of the large wagon contains numerous crates of food, while dried
-meat hangs from the ceiling. Chests bound with iron or steel, are also fitted
-with locks. Their ornate design shimmering as light from the lantern
-hanging in the center brightens the area.  The wagon extends to the north,
-with a cloth canvas obscuring the view of the camp.
+meat hangs from the ceiling. Chests bound with iron or steel are also fitted
+with locks. Their ornate design shimmers as light from the lantern
+hanging in the center brightens the area.  The wagon extends to the south
+where more boxes and supplies are stacked.
 ~
 180 0 0
 D0
