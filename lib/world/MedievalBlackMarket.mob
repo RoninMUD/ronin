@@ -1,7 +1,7 @@
 #18000
 guise merchant man~
 Guise, The Black Market Merchant~
-A Small Man in a long Trench coat stands nonchalantly, and aimlessly stares.
+A Small Man in a long trench coat stands nonchalantly, and aimlessly stares.
 ~
   Gray, shoulder-length hair slightly covers a smiling face that peers out from
 his covered face.. Glittering hazel eyes, sit rooted within their sockets, gaze
@@ -22,9 +22,13 @@ spector trader man~
 Spector, A Man of Oddities~
 Spector, The Oddities Purveyor
 ~
-An Important Member of the Black Market
+  A short and stout man sits on the ground intently staring through a
+magnifying glass at an unknown object that glows in the light. The aged lines
+on his face and head, along with the small tufts of gray hair show the age of
+this man. A tattoo of a lizard is seen surrounding the left ear, indicating 
+allegiance to this market.
 ~
-74 2048 0 Y
+74 34824 0 Y
 70 -50 -30 1d1+400000 1d1+0
 0 0
 8 8 1
@@ -37,9 +41,13 @@ echo commander man~
 Echo, Black Market Commander~
 Echo, Commander of the Black Market
 ~
-An Important Member of the Black Market
+  Brown, dreadlocks is pulled back to reveal a chiseled, menacing face. 
+Small green eyes, set deep within their sockets, watch vigorously over the 
+market they've protected for so long.  A tattoo of a fanged creature is seen 
+stretching from the bottom of the left cheekbone, running towards the tip
+of the nose and ending on his right cheek.
 ~
-74 2048 0 Y
+74 34824 0 Y
 70 -50 -30 1d1+400000 1d1+0
 0 0
 8 8 1
@@ -48,13 +56,16 @@ An Important Member of the Black Market
 K
 0 0 0 0 0 0 0
 #18003
-mine female investigator~
+mime female investigator~
 Mime, Black Market Investigator~
 Mime, the Black Market investigator
 ~
-An Important Member of the Black Market
+  White, curly hair slightly covers a chiseled, gloomy face. Lidded black eyes
+stare forward with a powerful and intense glare. A sword left a mark reaching 
+from just under the right eye, covered by a tattoo of fire.  It runs towards
+the tip of the nose and ending on her forehead.
 ~
-74 2048 0 Y
+74 34824 0 Y
 70 -50 -30 1d1+400000 1d1+0
 0 0
 8 8 2
@@ -67,9 +78,12 @@ fuse master female~
 Fuse, Armory Master of the Black Market~
 Fuse, Black Market Armorer
 ~
-An Important Member of the Black Market
+  Purple, shoulder-length hair tight in a bun reveals a cheerful face. 
+Glittering gray eyes watch cautiously over the market they've disassociated
+with for so long. Scars stretching from the top of the left cheek first running 
+towards thin lips are covered with a tattoo of a royal seal.
 ~
-74 2048 0 Y
+74 34824 0 Y
 70 -50 -30 1d1+400000 1d1+0
 0 0
 8 8 2
@@ -82,9 +96,13 @@ feign operative female~
 Feign, Intelligence Operative~
 Feign, The Intelligence Operative
 ~
-An Important Member of the Black Market
+  Blonde, curly hair clumsily hangs over a long, gloomy face. Bright golden
+eyes stare at nothing as they slowly pan from left to right. Fire has left 
+a mark stretching from the left side of the forehead , running towards her 
+left nostril and ending on her left nostril.  A larger tattoo of a cat is
+seen extending from the scar.
 ~
-74 2048 0 Y
+74 34824 0 Y
 70 -50 -30 1d1+400000 1d1+0
 0 0
 8 8 2

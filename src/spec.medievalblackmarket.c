@@ -241,10 +241,14 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				reward = number(10000, 40000);
 				GET_GOLD(ch) = GET_GOLD(ch) + reward;
 				break;
-				//Give SCP + 1
+				//Give AQP + 1
 			case 2:
-				do_say(mob, "Let me cash that for you.", CMD_SAY);
-				ch->ver3.subclass_points += 1;
+				//do_say(mob, "Let me cash that for you.", CMD_SAY);
+				//ch->ver3.subclass_points += 1;
+				
+				do_say(mob, "Use this point wisely.", CMD_SAY);
+				ch->ver3.quest_points += 1;
+				break;
 
 				break;
 				//Give Junk Item
@@ -341,6 +345,40 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		return FALSE;
 	}
 
+
+	if (cmd == MSG_OBJ_GIVEN)
+	{
+		char buf[MIL];
+
+		arg = one_argument(arg, buf);
+
+		OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		//OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+		if (!obj) return TRUE;
+		
+		if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
+		{
+			do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);			
+		}
+		else
+		{
+			do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+		}
+
+		bool give_back = TRUE;		
+
+		if (give_back)
+		{
+			
+			act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+			obj_from_char(obj);
+			obj_to_char(obj, ch);
+
+			return TRUE;
+		}
+	}
+	
 	return FALSE;
 }
 
@@ -398,6 +436,39 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		}
 
 		return FALSE;
+	}
+
+   if (cmd == MSG_OBJ_GIVEN)
+	{
+		char buf[MIL];
+
+		arg = one_argument(arg, buf);
+
+		OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		//OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+		if (!obj) return TRUE;
+		
+		if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
+		{
+			do_say(mob, "We trade for these here, but I am not the one to speak to.", CMD_SAY);			
+		}
+		else
+		{
+			do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+		}
+
+		bool give_back = TRUE;		
+
+		if (give_back)
+		{
+			
+			act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+			obj_from_char(obj);
+			obj_to_char(obj, ch);
+
+			return TRUE;
+		}
 	}
 
 	return FALSE;
@@ -458,6 +529,39 @@ int blackmarket_mime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 		return FALSE;
 	}
+	
+	if (cmd == MSG_OBJ_GIVEN)
+	{
+		char buf[MIL];
+
+		arg = one_argument(arg, buf);
+
+		OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		//OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+		if (!obj) return TRUE;
+		
+		if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
+		{
+			do_say(mob, "Guise is the one you want, not me.", CMD_SAY);			
+		}
+		else
+		{
+			do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+		}
+
+		bool give_back = TRUE;		
+
+		if (give_back)
+		{
+			
+			act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+			obj_from_char(obj);
+			obj_to_char(obj, ch);
+
+			return TRUE;
+		}
+	}
 
 	return FALSE;
 }
@@ -516,6 +620,38 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		}
 
 		return FALSE;
+	}
+	if (cmd == MSG_OBJ_GIVEN)
+	{
+		char buf[MIL];
+
+		arg = one_argument(arg, buf);
+
+		OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		//OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+		if (!obj) return TRUE;
+		
+		if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
+		{
+			do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);			
+		}
+		else
+		{
+			do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+		}
+
+		bool give_back = TRUE;		
+
+		if (give_back)
+		{
+			
+			act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+			obj_from_char(obj);
+			obj_to_char(obj, ch);
+
+			return TRUE;
+		}
 	}
 
 	return FALSE;
@@ -577,6 +713,39 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		return FALSE;
 	}
 
+	if (cmd == MSG_OBJ_GIVEN)
+	{
+		char buf[MIL];
+
+		arg = one_argument(arg, buf);
+
+		OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		//OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
+
+		if (!obj) return TRUE;
+		
+		if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
+		{
+			do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);			
+		}
+		else
+		{
+			do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+		}
+
+		bool give_back = TRUE;		
+
+		if (give_back)
+		{
+			
+			act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+			obj_from_char(obj);
+			obj_to_char(obj, ch);
+
+			return TRUE;
+		}
+	}
+	
 	return FALSE;
 }
 
