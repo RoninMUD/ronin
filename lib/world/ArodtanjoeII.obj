@@ -3,7 +3,7 @@ banner highland~
 Banner of the Highlands~
 A large orange and black banner waves in the breeze.~
 ~
-1 250798145 1
+1 250798145 65537
 0 0 -1 -1
 10 10 10
 10
@@ -1404,17 +1404,7 @@ A flat platinum disk stamped with ancient runes. It shimmers and glows in the li
 0
 E
 marker currency~
-This circular disk thrums with magic energy. Its platinum finish shows an ancient rune
-which glows black and blue.
-~
-E
-marker currency~
-This circular disk thrums with magic energy. Its platinum finish shows an ancient rune which glows black and blue.
-~
-E
-marker currency~
-A circular disk with jagged edges glows in a dull light. The ancient run in its center emits a black and blue hue
-
+A circular disk with jagged edges glows in a dull light. The ancient rune in its center emits a black and blue hue and slightly vibrates the air around it.
 ~
 E
 marker currency~
@@ -1423,7 +1413,17 @@ and blue hue and slightly vibrates the air around it.
 ~
 E
 marker currency~
-A circular disk with jagged edges glows in a dull light. The ancient rune in its center emits a black and blue hue and slightly vibrates the air around it.
+A circular disk with jagged edges glows in a dull light. The ancient run in its center emits a black and blue hue
+
+~
+E
+marker currency~
+This circular disk thrums with magic energy. Its platinum finish shows an ancient rune which glows black and blue.
+~
+E
+marker currency~
+This circular disk thrums with magic energy. Its platinum finish shows an ancient rune
+which glows black and blue.
 ~
 X
 ~

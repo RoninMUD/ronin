@@ -345,7 +345,13 @@ D3
 S
 #30118
 A Rocky Scarred Beach~
-A temporary description
+  Smooth and coarse sand stretch in both directions as the waves wash
+up and down the shore. To the west, a large Dark Spire ascends into
+the clouds threatening to block out the sun. To the north on the
+beach is a large wooden tower painted grey. Its' brilliant crest
+visible to all who approach. Small critters skitter around on the
+small dunes formed by the waves, and junk has started to wash 
+ashore from the turbulent seas.
 ~
 301 4 0
 D2
@@ -385,7 +391,12 @@ wading into raw sewage for.
 S
 #30120
 Room Past the Hidden Wall~
-Temporary description.
+  A dark and cold room is cramped, with rather smooth walls that are
+slimy to the touch. Moss, vines and slugs cover the wall. The stench
+from the previous room sticks to the walls and floor.  The floor is 
+smooth tile, varying from dark grey to light black. The tile
+continues to the south as the hallway narrows, vines hanging from 
+the ceilings.
 ~
 301 0 0
 D0
@@ -400,7 +411,11 @@ D2
 S
 #30121
 A Dark and Cold Passage~
-Temporary description.
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground.  As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
 ~
 301 0 0
 D0
@@ -414,7 +429,11 @@ D5
 S
 #30122
 A Dark and Cold Passage~
-Temporary description.
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground.  As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
 ~
 301 0 0
 D2
@@ -428,7 +447,11 @@ D4
 S
 #30123
 A Dark and Cold Passage~
-Temporary description.
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground.  As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
 ~
 301 0 0
 D0
@@ -442,7 +465,11 @@ D3
 S
 #30124
 A Dark and Cold Passage~
-Temporary description.
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground.  As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
 ~
 301 0 0
 D1
@@ -456,7 +483,10 @@ D3
 S
 #30125
 Submerged in Water~
-Temporary description.
+  The room is filled with dark, murky water leaving visibility at a
+bare minimum. The water slowly swirls in a clockwise direction and
+spirals down into the dark void below. Many small fins can be seen
+reflecting what small amounts of light remain in the room.
 ~
 301 0 0
 D1
@@ -466,7 +496,11 @@ D1
 S
 #30126
 Desolate Island Shore~
-Temporary description.
+  The shore is devoid of all life, including plants, animals and
+trees. The sand is coarse, and rocks just up from the ground
+providing a bleak look to the entire area.  To the south you see a
+small plateau rising up from the ocean. You can faintly make out
+what look to be stone pillars, standing up next to a large wall.
 ~
 301 0 0
 D2
@@ -476,7 +510,12 @@ D2
 S
 #30127
 A Rocky island Path~
-Temporary description.
+  Many sharp and jagged rocks cover the path as progress is made
+towards the pillars and the wall. The dirt is dark and there are
+small signs of life returning to this island. The edges of the path
+are lined with symmetrical round stones, black and blue in color and
+incredibly shiny. When light hits them from the correct angle, the 
+form an illuminated path.
 ~
 301 0 0
 D0
@@ -490,7 +529,13 @@ D2
 S
 #30128
 A Sharp Cliff Wall~
-Temporary description.
+  A large sheer wall of rock and vines looms as it draws closer and
+closer. The stone pillars are covered in intricate runes and symbols
+that pulse and and flicker with remnants of magic. The wall is
+covered in many holes and a few slightly frayed ropes still hang 
+down, attached to the top. The cliff itself is made of numerous
+layers of stone, rock, marble and other minerals that can't 
+be identified.
 ~
 301 0 0
 D0
@@ -505,7 +550,14 @@ Wall~
 S
 #30129
 On a Tiny Plateau~
-Temporary description.
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below.  The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
 ~
 301 0 4
 D1
@@ -520,7 +572,14 @@ ledge~
 S
 #30130
 On a Tiny Plateau~
-Temporary description.
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below.  The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
 ~
 301 0 4
 D1
@@ -538,7 +597,14 @@ D3
 S
 #30131
 On a Tiny Plateau~
-Temporary description.
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below.  The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
 ~
 301 0 4
 D2
@@ -552,7 +618,14 @@ D3
 S
 #30132
 On a Tiny Plateau~
-Temporary description.
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below.  The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
 ~
 301 0 4
 D0
@@ -570,7 +643,14 @@ D2
 S
 #30133
 On a Tiny Plateau~
-Temporary description.
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below.  The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
 ~
 301 0 4
 D0
@@ -588,7 +668,10 @@ D3
 S
 #30134
 An Overhang Over the Ocean~
-Temporary description.
+  A simple rock overhang, overlooking the vast ocean to the east
+giving you an expansive view of the world. The waves, both large
+and small can be seen  rolling across the light blue surface,
+crashing into obstructions and breaking against the reefs.
 ~
 301 0 0
 D1
@@ -603,7 +686,11 @@ D3
 S
 #30135
 A Large Sqaure Slab of Rock~
-Temporary description.
+  The black and blue magic gathers on top of a large square slab
+of pure marble. The magic dances back in forth in varying displays,
+forming shapes but normal and abstract. The edges of the stone are
+very smooth and light reflects off its semi-glossy surface. The
+ground has marks on it on the north side of the stone.
 ~
 301 0 0
 D0
@@ -618,7 +705,11 @@ slab~
 S
 #30136
 A Dark Room Below the Stone~
-Temporary description.
+  The room is barely lit, and a humanoid figure can be seen standing
+in the shadows. Trails of blue magic run down the east and west
+walls, while trails of black run down the north and south. Scattered
+all over the floor are the bones and remains of unfortunate creatures
+that ventured into the domain of a being more powerful than themselves.
 ~
 301 0 0
 D4
@@ -633,7 +724,13 @@ D5
 S
 #30137
 A Room of Iced Walls~
-Temporary description.
+  Blue and Black light is being refracted and reflected by all the
+ice that covers the room. The walls are frozen solid, while icicles
+have formed on the floor and ceiling, creating a labyrinth of sharp
+and pointy ice. A large bird roams around the room making low
+rumbling noises and it senses your presence. The magic around the
+room flows to its center, and illuminates a path leading
+down further into the plateau.
 ~
 301 0 0
 D4
@@ -647,7 +744,12 @@ D5
 S
 #30138
 A Room with a Melted Floor~
-Temporary description.
+  Unlike the room above, this room is quite hot, the air both warm
+and stale. The ground itself is melting into molten slag and then
+hardening again. A large creature roams around the room making
+indentations into the partially cooled floor.  As it roars, high
+pitched noises are heard bouncing off the warm walls and the walls
+shake as it extends its wings to impose its presence on you.
 ~
 301 0 0
 D4
@@ -661,7 +763,12 @@ D5
 S
 #30139
 A Room Illuminated with Blue Light~
-Temporary description.
+  Low light blue lights are embedded into each of the four walls
+right below the ceiling. The cast shadows around the room as there
+are numerous rocks and pillars spread throughout the room. A low howl
+can be heard echoing through this chamber, and rocks hitting the
+floor cause quick bursts of noise. The walls are covered in long, 
+deep scratches sitting in pairs of four lines each.
 ~
 301 0 0
 D4
@@ -675,7 +782,13 @@ D5
 S
 #30140
 A Room with Rock Parapets~
-Temporary description.
+  Pillars and stone walls for a long ring of inner and out walls.
+The outer walls for an outer walkway around three feet wide and the
+inner walls are three feet in from those. At the top of all of the
+walls and flat ledges with numerous stone statues on them. The
+statues are of the many varying species of the world including 
+dragons, fish, lizards and vampires. Blue and black mage continues
+to illuminate the walls but is much brighter now.
 ~
 301 0 0
 D4
@@ -689,7 +802,13 @@ D5
 S
 #30141
 A Room with a Metal Throne~
-Temporary description.
+  A large metal throne is the only object in this room.  The floor
+and walls are black and charred, with some of the rocks melted to
+each other. Sitting on the throne is a large creature that is ten
+feet tall, even when sitting. Its large horns gleam with the black
+and blue hue of the magic that pulses through the room, and its 
+large black wings unfold and fold reflexively as it sits there
+patiently watching you move through the room.
 ~
 301 0 0
 D4
@@ -703,7 +822,13 @@ D5
 S
 #30142
 A Room Overflowing with Plants and Bugs~
-Temporary description.
+  Plants, both large and small cover this room. Blue magic can be
+seen glowing in their veins and they seem to pulse over and over.
+Hundreds of bugs of all sizes are skittering over the floor, make a
+lot of different squeaks and skitter noises. A large lizard can be
+seen roaming around the room, its large tongue flicking in and out
+of its mouth.  It laps up scores of bugs, their bodies crunching
+together as they are devoured.
 ~
 301 0 0
 D4
@@ -717,7 +842,12 @@ D5
 S
 #30143
 A Room Filled With Lab Equipment~
-Temporary description.
+  Many large vials sit over small fires, their many colorful
+liquids boil and bubble and fill the room with many colorful clouds.
+A man runs around the room mumbling to himself as he examines the
+numerous vials. A large dark black mass swirls in the center of the
+room and you can see light and the colorful gasses being 
+sucked into it.
 ~
 301 0 0
 D4
@@ -732,7 +862,10 @@ void~
 S
 #30144
 A Room with a Small Void Portal~
-Temporary description.
+  The air is filled with a black mist as the walls swirl around you.
+There is so solid floor, walls or ceiling and yet nothing falls or
+floats up.  A massive elemental floats in the middle of the room, 
+its form slowly humming and moving along with the rest of the space.
 ~
 301 0 0
 D4
@@ -743,7 +876,10 @@ void~
 S
 #30145
 Approaching a Dark and Chaotic Sea~
-Temporary description.
+  The calm water beneath you begins to swirl and churn. Dark clouds
+fill the sky and the wind begins to pick up, causing a slight chill
+in the air.  The clouds are ominous and flash with sparks of blue
+and black light.
 ~
 301 4 7
 D1
@@ -753,7 +889,12 @@ D1
 S
 #30146
 A Dark Sea with Small Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
 ~
 301 0 7
 D1
@@ -771,7 +912,12 @@ D3
 S
 #30147
 A Dark Sea with Small Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
 ~
 301 0 7
 D1
@@ -789,7 +935,12 @@ D3
 S
 #30148
 A Dark Sea with Small Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
 ~
 301 0 7
 D1
@@ -807,7 +958,12 @@ D3
 S
 #30149
 A Dark Sea with Small Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
 ~
 301 0 7
 D1
@@ -821,7 +977,10 @@ D3
 S
 #30150
 Approaching a Dark and Chaotic Sea~
-Temporary description.
+  The calm water beneath you begins to swirl and churn. Dark clouds
+fill the sky and the wind begins to pick up, causing a slight chill
+in the air.  The clouds are ominous and flash with sparks of blue
+and black light.
 ~
 301 4 7
 D3
@@ -831,7 +990,11 @@ D3
 S
 #30151
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D0
@@ -849,7 +1012,11 @@ D5
 S
 #30152
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D0
@@ -871,7 +1038,11 @@ D3
 S
 #30153
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D0
@@ -889,7 +1060,11 @@ D3
 S
 #30154
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D0
@@ -903,7 +1078,11 @@ D1
 S
 #30155
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D0
@@ -925,7 +1104,11 @@ D3
 S
 #30156
 A Dark Sea with Large Waves~
-Temporary description.
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
 ~
 301 0 7
 D2
@@ -943,7 +1126,11 @@ D5
 S
 #30157
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D0
@@ -961,7 +1148,11 @@ D2
 S
 #30158
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D0
@@ -979,7 +1170,11 @@ D3
 S
 #30159
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D1
@@ -993,7 +1188,11 @@ D2
 S
 #30160
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D0
@@ -1015,7 +1214,11 @@ D3
 S
 #30161
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D0
@@ -1037,7 +1240,11 @@ D3
 S
 #30162
 A Chaotic Sea with Small Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves.  The phantoms continue to appear and float amongst 
+the churning waves.
 ~
 301 0 7
 D2
@@ -1051,7 +1258,12 @@ D3
 S
 #30163
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1069,7 +1281,12 @@ D2
 S
 #30164
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1091,7 +1308,12 @@ D3
 S
 #30165
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1113,7 +1335,12 @@ D3
 S
 #30166
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1135,7 +1362,12 @@ D5
 S
 #30167
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1153,7 +1385,12 @@ D2
 S
 #30168
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1175,7 +1412,12 @@ D3
 S
 #30169
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1193,7 +1435,12 @@ D3
 S
 #30170
 A Chaotic Sea with Large Waves~
-Temporary description.
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
 ~
 301 0 7
 D0
@@ -1207,7 +1454,12 @@ D3
 S
 #30171
 A Calm Sea by the Shore~
-Temporary description.
+  A very calm sea sits before you. No movement can be seen above or
+below the crystal clear water.  The breeze is calming and cooling as
+it gently wafts through the area. Phantoms can be seen off in the
+distance but rarely venture to the calmer waters. To the west a large
+cliff rises out of the ocean and to north a single dark tower rises 
+from the rock.
 ~
 301 0 7
 D0
@@ -1225,7 +1477,11 @@ D2
 S
 #30172
 A Gentler Sea with No Waves~
-Temporary description.
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as  it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
 ~
 301 0 7
 D0
@@ -1247,7 +1503,11 @@ D3
 S
 #30173
 A Gentler Sea with No Waves~
-Temporary description.
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as  it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
 ~
 301 0 7
 D0
@@ -1265,7 +1525,12 @@ D3
 S
 #30174
 A Calm Sea by the Shore~
-Temporary description.
+  A very calm sea sits before you. No movement can be seen above or
+below the crystal clear water.  The breeze is calming and cooling as
+it gently wafts through the area. Phantoms can be seen off in the
+distance but rarely venture to the calmer waters. To the west a large
+cliff rises out of the ocean and to north a single dark tower rises 
+from the rock.
 ~
 301 0 7
 D0
@@ -1279,7 +1544,11 @@ D1
 S
 #30175
 A Gentler Sea with No Waves~
-Temporary description.
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as  it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
 ~
 301 0 7
 D0
@@ -1297,7 +1566,11 @@ D3
 S
 #30176
 A Gentler Sea with No Waves~
-Temporary description.
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as  it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
 ~
 301 0 7
 D0
@@ -1319,7 +1592,11 @@ D3
 S
 #30177
 A Gentler Sea with No Waves~
-Temporary description.
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as  it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
 ~
 301 0 7
 D1
@@ -1333,7 +1610,10 @@ D3
 S
 #30178
 A Mild Sea with Mild Waves~
-Temporary description.
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
 ~
 301 0 7
 D1
@@ -1351,7 +1631,10 @@ D3
 S
 #30179
 A Mild Sea with Mild Waves~
-Temporary description.
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
 ~
 301 0 7
 D1
@@ -1365,7 +1648,10 @@ D3
 S
 #30180
 A Mild Sea with Mild Waves~
-Temporary description.
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
 ~
 301 4 7
 D3
@@ -1375,7 +1661,10 @@ D3
 S
 #30181
 A Mild Sea with No Waves~
-Temporary description.
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.  
 ~
 301 0 7
 D1
@@ -1389,7 +1678,10 @@ D2
 S
 #30182
 A Mild Sea with No Waves~
-Temporary description.
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.  
 ~
 301 0 7
 D1
@@ -1407,7 +1699,10 @@ D3
 S
 #30183
 A Mild Sea with No Waves~
-Temporary description.
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.  
 ~
 301 0 7
 D0
@@ -1421,7 +1716,12 @@ D3
 S
 #30184
 Approaching a Rocky Shore~
-Temporary description.
+  The blue water begins to recede as you approach a rocky brown
+shore. It is empty but not desolate as there are signs of life. The
+shore shows signs of movement and you can also make out a path
+leading up the hill towards the crimson spire. The magical presence
+felt on the sea is greater here, its presence creating a small 
+constant pressure on the air.
 ~
 301 0 7
 D1
@@ -1435,7 +1735,10 @@ D3
 S
 #30185
 A Mild Sea with No Waves~
-Temporary description.
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.  
 ~
 301 0 7
 D0
@@ -1453,7 +1756,10 @@ D3
 S
 #30186
 A Mild Sea with No Waves~
-Temporary description.
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.  
 ~
 301 0 7
 D0
@@ -1467,7 +1773,11 @@ D3
 S
 #30187
 A Rock Filled Underwater Cave~
-Temporary description.
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
 ~
 301 4 7
 D4
@@ -1477,7 +1787,11 @@ D4
 S
 #30188
 A Rock Filled Underwater Cave~
-Temporary description.
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
 ~
 301 4 7
 D4
@@ -1487,7 +1801,11 @@ D4
 S
 #30189
 A Rock Filled Underwater Cave~
-Temporary description.
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
 ~
 301 4 7
 D4
@@ -1497,7 +1815,10 @@ D4
 S
 #30190
 A Rocky Shore Covered in Red Rocks~
-Temporary description.
+  Red rocks, both large and small are scattered throughout the area.
+The path leading up the hill is lined on both sides with these rocks.
+Red particles of magic can be seen floating through the air, the 
+crimson ash of the spire covers the ground.
 ~
 301 4 0
 D1
@@ -1511,7 +1832,12 @@ D3
 S
 #30191
 A Path of Red Rock~
-Temporary description.
+  Numerous red rocks line each side of the path.  The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
 ~
 301 0 4
 D0
@@ -1529,7 +1855,12 @@ D3
 S
 #30192
 A Path of Red Rock~
-Temporary description.
+  Numerous red rocks line each side of the path.  The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
 ~
 301 0 4
 D0
@@ -1543,7 +1874,12 @@ D1
 S
 #30193
 A Path of Red Rock~
-Temporary description.
+  Numerous red rocks line each side of the path.  The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
 ~
 301 0 4
 D2
@@ -1557,7 +1893,12 @@ D3
 S
 #30194
 A Path of Red Rock~
-Temporary description.
+  Numerous red rocks line each side of the path.  The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
 ~
 301 0 4
 D0
@@ -1575,7 +1916,11 @@ D2
 S
 #30195
 Approaching the Crimson Spire~
-Temporary description.
+  A large and fracture spire rises up into a set of red clouds
+that obscure the top. Parts of the tower float in the void on top of
+crimson ash, with the platforms slowly swaying side to side but not 
+falling. A large bright red light can be seen pulsing at the top 
+of the tower.
 ~
 301 0 7
 D2
@@ -1585,7 +1930,11 @@ D2
 S
 #30196
 A Winding Path Between the Rocks~
-Temporary description.
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
 ~
 301 0 7
 D0
@@ -1599,7 +1948,11 @@ D2
 S
 #30197
 A Winding Path Between the Rocks~
-Temporary description.
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
 ~
 301 0 7
 D0
@@ -1613,7 +1966,11 @@ D3
 S
 #30198
 A Winding Path Between the Rocks~
-Temporary description.
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
 ~
 301 0 7
 D1
@@ -1627,7 +1984,11 @@ D2
 S
 #30199
 A Winding Path Between the Rocks~
-A temporary description
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
 ~
 301 4 7
 D0

@@ -69,13 +69,19 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	//char *mob_social_actions[4] = { "nudge ", "cough ", "cod ", "highfive " };	
 	char *cough = "cough";
 	char *nudge = "nudge";
-
+	OBJ *reward_object;
+	
 	/*
 	Random Item List
-	3013 - Bronze Tradebar
-	3014 - Silver Tradebar
-	3015 - Gold Tradebar
-
+	
+	
+	30017 - Easy Recipe for Rusty Spoon
+	30018 - Plain Recipe for Ubertank Plate
+	30019 - Uninvolved Recipe for Crash-Test Helmet
+	30020 - Straightforward Recipe for Regenerator
+	30021 - Piece of Cake Recipe for Can 
+	30022 - Basic Repice for Casters Cloak
+	30023 - Simple Recipe for Boots of Swiftness
 	30027 - Tricky Recipe for Spoon
 	30028 - Complicated Recipe for Ubertank Plate
 	30029 - Difficult Recipe for Crash Test Helmet
@@ -84,9 +90,10 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	30032 - Hard Recipe for Casters Cloak
 	30033 - Tough Recipe for Boots
 	30034 - Challenging Recipe for Chopsticks
+	30035 - Modest Recipe for Chopsticks
 	*/
 
-	int random_item_rewards[11] = { 3013, 3014, 3015, 30027, 30028, 30029, 30030, 30031, 30032, 30033, 30034 };
+	int random_item_rewards[16] = { 30017,30018,30019,30020,30021,30022,30023,30027, 30028, 30029, 30030, 30031, 30032, 30033, 30034,30035 };
 	//char socialAct;
 	int reward;
 
@@ -235,49 +242,72 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 				ch->ver3.quest_points += reward;
 				break;
-				//Give Random Gold
+			//Random Anti Rent Recipe
 			case 1:
-				do_say(mob, "Shiny shiny gold.", CMD_SAY);
-				reward = number(10000, 40000);
-				GET_GOLD(ch) = GET_GOLD(ch) + reward;
-				break;
-				//Give AQP + 1
-			case 2:
-				//do_say(mob, "Let me cash that for you.", CMD_SAY);
-				//ch->ver3.subclass_points += 1;
-				
-				do_say(mob, "Use this point wisely.", CMD_SAY);
-				ch->ver3.quest_points += 1;
-				break;
+				do_say(mob, "Enjoy this item, courtesy of us.", CMD_SAY);
 
+				reward = random_item_rewards[number(0, NUMELEMS(random_item_rewards) - 1)];
+
+				//Read the Item
+				reward_object = read_object(reward, VIRTUAL);
+				//Give Object to Char.
+				obj_to_char(reward_object, ch);
+				act("$N reaches into a box and gives you $p.", FALSE, ch, reward_object, mob, TO_CHAR);
 				break;
-				//Give Junk Item
-				//Pick from an array!
+				
+			//Random Anti Rent Recipe
+			case 2:
+				do_say(mob, "Enjoy this item, courtesy of us.", CMD_SAY);
+
+				reward = random_item_rewards[number(0, NUMELEMS(random_item_rewards) - 1)];
+
+				//Read the Item
+				reward_object = read_object(reward, VIRTUAL);
+				//Give Object to Char.
+				obj_to_char(reward_object, ch);
+				act("$N reaches into a box and gives you $p.", FALSE, ch, reward_object, mob, TO_CHAR);
+				break;
+			//Random Anti Rent Recipe
 			case 3:
 				do_say(mob, "Enjoy this item, courtesy of us.", CMD_SAY);
 
 				reward = random_item_rewards[number(0, NUMELEMS(random_item_rewards) - 1)];
 
 				//Read the Item
-				OBJ *reward_object = read_object(reward, VIRTUAL);
+				reward_object = read_object(reward, VIRTUAL);
 				//Give Object to Char.
 				obj_to_char(reward_object, ch);
 				act("$N reaches into a box and gives you $p.", FALSE, ch, reward_object, mob, TO_CHAR);
 				break;
-				//Give 1 Coin
+			//Random Anti Rent Recipe
 			case 4:
-				do_say(mob, "One measly coin...come try again.", CMD_SAY);
-				GET_GOLD(ch) = GET_GOLD(ch) + 1;
+				do_say(mob, "Enjoy this item, courtesy of us.", CMD_SAY);
+
+				reward = random_item_rewards[number(0, NUMELEMS(random_item_rewards) - 1)];
+
+				//Read the Item
+				reward_object = read_object(reward, VIRTUAL);
+				//Give Object to Char.
+				obj_to_char(reward_object, ch);
+				act("$N reaches into a box and gives you $p.", FALSE, ch, reward_object, mob, TO_CHAR);
 				break;
-				//1 AQP
+			//Random Anti Rent Recipe
 			case 5:
-				do_say(mob, "Use this point wisely.", CMD_SAY);
-				ch->ver3.quest_points += 1;
+				do_say(mob, "Enjoy this item, courtesy of us.", CMD_SAY);
+
+				reward = random_item_rewards[number(0, NUMELEMS(random_item_rewards) - 1)];
+
+				//Read the Item
+				reward_object = read_object(reward, VIRTUAL);
+				//Give Object to Char.
+				obj_to_char(reward_object, ch);
+				act("$N reaches into a box and gives you $p.", FALSE, ch, reward_object, mob, TO_CHAR);
+				
 				break;
-				//110k Gold Reward
+				//1.1 mil gold Gold Reward
 			case 6:
 				do_say(mob, "Gold rules this world.", CMD_SAY);
-				GET_GOLD(ch) = GET_GOLD(ch) + 110000;
+				GET_GOLD(ch) = GET_GOLD(ch) + 1100000;
 				break;
 			default:
 				break;
