@@ -165,20 +165,90 @@ int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg) {
 }
 
 
-int sot_michael(CHAR *michael, CHAR *ch, int cmd, char *arg) {
+int sot_michael(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	
+  //These are default declarations to give variables to characters.
+  char buf[MAX_STRING_LENGTH];
   CHAR *vict, *next_vict;
+  
+  int stun_delay;
 
-  if(cmd == MSG_MOBACT && michael->specials.fighting && chance(80))
+  //Define any other variables
+
+  /*Don't waste any more CPU time if no one is in the room. */
+  if (count_mortals_room(mob, TRUE) < 1) return FALSE;
+
+  char *michael_speak[4] = { "This domain is mine alone!", "Don't you dare and try to tell me what to do.","Just obey my commands!","Leave this domain at once." };
+
+  switch (cmd)
   {
-    act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,michael,0,0,TO_ROOM);
-    for(vict = world[CHAR_REAL_ROOM(michael)].people; vict; vict = next_vict)
-    {
-      next_vict = vict->next_in_room;
-      if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-      damage(michael,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
-      WAIT_STATE(vict,PULSE_VIOLENCE*4);
-    }
+    case MSG_MOBACT:
+
+     	//Have him to chat to you.
+      if (chance(35))
+      {
+        sprintf(buf, "%s", michael_speak[number(0, NUMELEMS(michael_speak) - 1)]);
+
+        do_say(mob, buf, CMD_SAY);
+      }
+
+     	//if fighting - spec different attacks
+      if (mob->specials.fighting)
+      {
+       	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+       	//Each Case statement that has an action needs to break out at the end.
+
+        switch (number(0, 5))
+        {
+          case 0:
+            stun_delay = number(1, 3);
+			act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,mob,0,0,TO_ROOM);
+			for(vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			{
+				next_vict = vict->next_in_room;
+				if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
+				damage(mob,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
+				WAIT_STATE(vict,PULSE_VIOLENCE*stun_delay);
+            }
+            break;
+          case 1:
+            break;
+          case 2:
+            vict = get_random_victim_fighting(mob);
+			if (vict)
+			{
+			  act("$n wields his sword and advances towards the enemy.",0,mob,0,0,TO_ROOM);
+			  act("A fine steel blade stabs into your chest.",0,mob,0,vict,TO_VICT);
+			  act("$N screams as the blade pierces $S chest.",0,mob,0,vict,TO_NOTVICT);
+			  damage(mob,vict,1450,TYPE_UNDEFINED,DAM_PHYSICAL);
+			}
+			break;
+		  case 3:
+			break;
+		  case 4:
+			break;
+		  case 5:
+			vict = get_random_victim_fighting(mob);
+			if (vict)
+			{
+			  act("$n wields his sword and jabs towards the enemy.",0,mob,0,0,TO_ROOM);
+			  act("A fine steel blade jabs into your chest.",0,mob,0,vict,TO_VICT);
+			  act("$N screams as the blade jabs $S chest.",0,mob,0,vict,TO_NOTVICT);
+			  damage(mob,vict,850,TYPE_UNDEFINED,DAM_PHYSICAL);
+			}
+			break;		  
+          default:
+            break;
+        }
+      }
+
+     	//can add an else branch here if you want them to act but not in combat.
+
+      break;
+   
   }
+
   return FALSE;
 }
 
