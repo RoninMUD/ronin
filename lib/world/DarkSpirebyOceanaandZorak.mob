@@ -172,11 +172,13 @@ theurgi leader ~
 Theurgi, Leader of the Dark Spire~
 A Man paces the room, holding a Dark Staff
 ~
-A large suave man paces around the room, dressed in pretty plain clothing outside of a rich and colorful cloak that descends to  the floor. 
+A large suave man paces around the room, dressed in pretty plain 
+clothing outside of a rich and colorful cloak that descends 
+to the floor.
 ~
 16490 2176 0 Y
 60 -28 -23 100d9+26500 30d12+312
-225000 4000000
+2250000 7500000
 8 8 1
 1 20480 100d9+15600 6
 1 1 33 82
@@ -217,7 +219,9 @@ septopoid sewage beast~
 Septopoid Sewage Beast~
 A Large Beast with Seven Tentacles
 ~
-A large slimy beast swims around in the sewage as its numerous tentacles roam float freely in the gunk. Its large pink body and curved beak make a disgusting sound as it screeches.
+A large slimy beast swims around in the sewage as its numerous tentacles 
+roam float freely in the gunk. Its large pink body and curved beak make 
+a disgusting sound as it screeches.
 ~
 16490 0 0 Y
 55 -14 -11 50d110+12000 10d12+112
@@ -235,7 +239,8 @@ swarm fish~
 Swarm of Hungry Fish~
 A Hungry Looking Swarm of Fish
 ~
-A large group of fish swim together, barring their tiny teeth. Their silvery scales shimmer in the light cast throughout the room.
+A large group of fish swim together, barring their tiny teeth. Their silvery
+scales shimmer in the light cast throughout the room.
 ~
 16490 0 0 Y
 45 -13 -8 25d9+3000 5d5+45
@@ -253,7 +258,10 @@ vampire~
 A Dead-Eyed Vampire~
 A Vampire stares blankly around the room.
 ~
-The vampire looks dead, its eyes hollow and head hanging low. However, it also just seems to mope around the room, barely looking at anything happening. Its fangs still glean in the light around the room, and it seems to twitch ever so slightly at the s
+The vampire looks dead, its eyes hollow and head hanging low. However, it also
+just seems to mope around the room, barely looking at anything happening. Its 
+fangs still glean in the light around the room, and it seems to twitch ever so
+slightly at the smell of fresh blood.
 ~
 16490 0 0 Y
 52 -18 -17 47d115+12400 10d11+108
@@ -271,7 +279,10 @@ ice bird cockatiel~
 The Ice Cockatiel~
 A bird with large feathers made of ice.
 ~
-A large blue and green bird stands seven feet into the air. Its large feathers on its back and tail are covered in a thin sheet of blue ice that glows in the blue light in the cavern. Its large black eyes stare at anything that moves in the room.
+A large blue and green bird stands seven feet into the air. Its large feathers 
+on its back and tail are covered in a thin sheet of blue ice that glows in the 
+blue light in the cavern. Its large black eyes stare at anything that moves 
+in the room.
 ~
 16490 0 0 Y
 52 -19 -18 46d108+12600 10d13+120
@@ -289,7 +300,10 @@ dragon tiny~
 A Minituarized Dragon~
 A Shrunken Dragon roars at the room.
 ~
-A black dragon paces around the room, its wings reaching around six feet in length when fully spread. Its large muscles flex and bulge as it stomps around on the ground, but it still only stands around four feet tall. It is cute and dangerous all at the
+A black dragon paces around the room, its wings reaching around six
+feet in length when fully spread. Its large muscles flex and bulge
+as it stomps around on the ground, but it still only stands around 
+four feet tall. It is cute and dangerous all at the same time.
 ~
 16490 0 500 Y
 53 -20 -19 47d116+12800 10d15+132
@@ -307,7 +321,12 @@ werewolf~
 A Half Changed Werewolf~
 A Half Furry Man Begins to Grow Fangs
 ~
-A large male stands almost seven feet in the air even though he is hunched over. His legs are bulging outwards as muscle tears through the pant legs and his shoes have been shredded by large feet and claws  that immerge from the ripped soles. Large gray
+A large male stands almost seven feet in the air even though he is hunched
+over. His legs are bulging outwards as muscle tears through the pant legs 
+and his shoes have been shredded by large feet and claws that emerge from 
+the ripped soles. Large gray hairs start poking out of the bottom half of 
+his body, covering his lower back, legs and feet with hair. The face begins 
+to elongate and small fangs start to make their frightful appearance.
 ~
 16490 0 0 Y
 53 -21 -19 46d109+13000 10d17+144
@@ -325,7 +344,9 @@ gargoyle tromod~
 Tromod, The Gargoyle~
 A Stone Statues sits staring at the ceiling
 ~
-Large stone ears sit on top of a stone face, forever stuck with the same forlorn expression.  The stone is smooth and has a gray matte color. It looks expertly carved as there are no cracks or blemishes on the stone.
+Large stone ears sit on top of a stone face, forever stuck with the same 
+forlorn expression.  The stone is smooth and has a gray matte color. It 
+looks expertly carved as there are no cracks or blemishes on the stone.
 ~
 16490 0 0 Y
 53 -21 -22 47d117+13200 10d19+156
@@ -343,7 +364,9 @@ xalgath demon underling~
 Xalgath, The Demon Underling~
 A Large Demon paces the room
 ~
-Black Horns cover his face as they extend upwards. The four separate points form an odd square in relation to the fangs jutting from his mouth. The red skin blends into the black skin covering his folded wings.
+Black Horns cover his face as they extend upwards. The four separate 
+points form an odd square in relation to the fangs jutting from his mouth. 
+The red skin blends into the black skin covering his folded wings.
 ~
 16490 128 -500 Y
 54 -22 -23 46d110+13400 10d21+168
@@ -361,7 +384,10 @@ giant horned lizard~
 A Giant Horned Lizard~
 A Scaled Lizard flicks its tongue
 ~
-A large orange and green lizard slowly moves about the room, flicking a forked tongue to and from all the other creatures in the room.  Its large, bulbous eyes rotate independently watching in all directions, watching for anything delicious to cross its
+A large orange and green lizard slowly moves about the room, flicking a 
+forked tongue to and from all the other creatures in the room.  Its large, 
+bulbous eyes rotate independently watching in all directions, watching for 
+anything delicious to cross its path.
 ~
 16490 0 0 Y
 54 -20 -19 47d118+13600 10d23+180
@@ -379,20 +405,22 @@ stefan sane alchemist~
 Stefan, The Sane Alchemist~
 A Robed man walks around the room.
 ~
-A tiny man covered in a standard white lab coat runs around the room in a hectic fashion. Holding both vials and jars of random ingredients, he tosses them into boiling pots as ramblings continue to spurt from his mouth. The areas around his face show t
+A tiny man covered in a standard white lab coat runs around the room in a 
+hectic fashion. Holding both vials and jars of random ingredients, he 
+tosses them into boiling pots as ramblings continue to spurt from his mouth. 
+The areas around his face show that goggles are used at times, as there are 
+rings of soot around them.
 ~
 16490 128 0 Y
 54 -20 -20 46d111+13800 10d25+192
 94112 1990000
 8 8 1
-1 20480 10d10+5000 9
+1 20480 10d10+5000 7
 4 3 40 0
 6 2 17 0
 4 4 17 0
-1 3 30 191
 1 3 13 236
 1 7 11 23
-1 1 8 191
 1 7 37 27
 1 1 10 95
 0 1 0 32
@@ -403,7 +431,9 @@ void elemental~
 The Void Elemental~
 A Large Purple Elemental pulses quickly.
 ~
-Purple energy pours out of the large pulsing ball of energy.  Light is absorbed into its all black core as its body takes form.  Hollow eyes, black as its core form in what appears to be its head. 
+Purple energy pours out of the large pulsing ball of energy.  Light is absorbed
+into its all black core as its body takes form.  Hollow eyes, black as its core 
+form in what appears to be its head. 
 ~
 16490 0 -50 Y
 55 -23 -22 47d119+14000 10d27+204
@@ -418,7 +448,9 @@ dark phantom~
 A Dark Phantom of the Seas~
 A Dark and Spooky Phantom of the Ocean
 ~
-An ethereal creature comprised of purple and black energy floats above the ocean. A subtle glow of energy and magic is emitting from the ghost like form. Its eyes glow dark red as it stares through you.
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
 ~
 16488 0 -400 Y
 52 -25 -19 46d112+9000 10d29+216
@@ -436,7 +468,9 @@ dark phantom~
 A Dark Phantom of the Seas~
 A Dark and Spooky Phantom of the Ocean
 ~
-An ethereal creature comprised of purple and black energy floats above the ocean. A subtle glow of energy and magic is emitting from the ghost like form. Its eyes glow dark blue as it stares through you.
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
 ~
 16488 0 -400 Y
 53 -25 -19 47d120+9100 10d31+228
@@ -454,7 +488,9 @@ dark phantom~
 A Dark Phantom of the Seas~
 A Dark and Spooky Phantom of the Ocean
 ~
-An ethereal creature comprised of purple and black energy floats above the ocean. A subtle glow of energy and magic is emitting from the ghost like form. Its eyes glow dark black as it stares through you.
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
 ~
 16488 0 -400 Y
 54 -26 -19 46d113+9050 10d33+240
@@ -472,7 +508,9 @@ dark phantom~
 A Dark Phantom of the Seas~
 A Dark and Spooky Phantom of the Ocean
 ~
-An ethereal creature comprised of purple and black energy floats above the ocean. A subtle glow of energy and magic is emitting from the ghost like form. Its eyes glow dark green as it stares through you.
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
 ~
 16488 0 -400 Y
 55 -27 -19 47d121+9100 10d35+252
@@ -490,7 +528,9 @@ dark phantom~
 A Dark Phantom of the Seas~
 A Dark and Spooky Phantom of the Ocean
 ~
-An ethereal creature comprised of purple and black energy floats above the ocean. A subtle glow of energy and magic is emitting from the ghost like form. Its eyes glow dark orange as it stares through you.
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
 ~
 16488 0 -400 Y
 56 -23 -19 46d114+9125 10d37+264
@@ -508,7 +548,8 @@ clam~
 An Open Mouthed Clam~
 A Large and Gray Giant Clam
 ~
-A large clam with a grey and white shell sits wide open as water flows through its mouth. It waits in anticipation for anything to crawl into its mouth.
+A large clam with a grey and white shell sits wide open as water flows through 
+its mouth. It waits in anticipation for anything to crawl into its mouth.
 ~
 16490 0 0 Y
 58 -22 -24 47d122+15200 10d39+276
@@ -527,7 +568,8 @@ clam~
 A Closed Mouthed Clam~
 A Large and Gray Giant Clam
 ~
-A large clam with a grey and white shell sits closed as you enter the room. Small streams of bubbles can be seen leaking from the edges of the shell.
+A large clam with a grey and white shell sits closed as you enter the room. 
+Small streams of bubbles can be seen leaking from the edges of the shell.
 ~
 16490 0 0 Y
 58 -22 -24 47d122+15200 10d39+276
@@ -546,7 +588,9 @@ clam~
 A Very Old Clam~
 A Large and Gray Giant Clam
 ~
-The white on the shell has mostly faded, leaving only a cracked gray shell before you.  It slowly opens its mouth letting out large streams of bubbles before slamming back shut. A shiny rock can be seen within its mouth as it opens and closes.
+The white on the shell has mostly faded, leaving only a cracked gray shell before you.  
+It slowly opens its mouth letting out large streams of bubbles before slamming 
+back shut. A shiny rock can be seen within its mouth as it opens and closes.
 ~
 16490 0 0 Y
 58 -22 -24 47d122+15200 10d39+276
