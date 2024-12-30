@@ -168,8 +168,10 @@ int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg) {
 int sot_michael(CHAR *michael, CHAR *ch, int cmd, char *arg) {
   CHAR *vict, *next_vict;
 
-  if(cmd == MSG_MOBACT && michael->specials.fighting && chance(80))
+  if(cmd == MSG_MOBACT && michael->specials.fighting && chance(67))
   {
+    
+      if(chance(42)) {
     act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,michael,0,0,TO_ROOM);
     for(vict = world[CHAR_REAL_ROOM(michael)].people; vict; vict = next_vict)
     {
@@ -177,6 +179,17 @@ int sot_michael(CHAR *michael, CHAR *ch, int cmd, char *arg) {
       if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
       damage(michael,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
       WAIT_STATE(vict,PULSE_VIOLENCE*4);
+    }
+    }else{
+    	vict = get_random_victim_fighting(michael);
+        if (vict)
+        {
+          act("$n wields his sword and advances towards the enemy.",0,michael,0,0,TO_ROOM);
+          act("A fine steel blade stabs into your chest.",0,michael,0,vict,TO_VICT);
+          act("$N screams as the blade pierces $S chest.",0,michael,0,vict,TO_NOTVICT);
+          damage(michael,vict,1450,TYPE_UNDEFINED,DAM_PHYSICAL);
+        }
+    
     }
   }
   return FALSE;
