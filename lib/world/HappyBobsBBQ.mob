@@ -3,14 +3,13 @@ bob happy owner~
 Happy Bob, Owner of Happy Bob's BBQ~
 The owner of the restaurant paces back and forth
 ~
- A large and slightly overweight man stands behind his desk holding
-a phone and yelling into it. His balding head and beer belly jut out
-of his shirt which is way too tight for him. Hints of BBQ sauce can 
-be seen smeared down the front of his shirt. He looks up at you and
-then continues chatting on the phone.
+A large and slightly overweight man stands behind his desk and
+is muttering under his breath. His balding head and beer belly 
+jut out of his shirt which is way too tight for him. Stains can be
+seen down the front of his shirt. 
 ~
 536871018 402720896 0 Y
-51 -23 0 200d15+16845 20d2+85
+51 -23 0 200d15+16845 32d8+189
 689542 4200000
 8 8 1
 69 0 1d1+1 3
@@ -31,7 +30,7 @@ waiting for seats.  The rowdy patrons yelling for help are ignored
 as she sings a tune in her head.
 ~
 44 0 0 Y
-47 -16 -5 22d23+7600 11d11+11
+47 -16 -5 22d23+9500 15d15+80
 25000 1500000
 8 8 0
 69 16384 1d1+1 0
@@ -49,7 +48,7 @@ they want it.  They see themselves as the most important person
 and simply treat all the employees like trash.
 ~
 44 0 0 Y
-47 -16 -5 24d20+7352 10d10+14
+47 -16 -5 24d20+9844 23d12+95
 86520 1500000
 8 8 0
 69 16384 1d1+1 0
@@ -68,7 +67,7 @@ restaurant carrying numerous plates of food for the many tables
 that all want service.
 ~
 44 0 0 Y
-47 -17 -5 18d30+8100 17d5+17
+47 -17 -5 18d35+11203 23d8+105
 46812 1650000
 8 8 0
 69 16384 1d1+1 0
@@ -78,16 +77,16 @@ K
 #14904
 pig angry~
 An Angry Pig~
-A bbq sauce covered pig walks back and forth
+A sauce covered pig walks back and forth
 ~
- A very large and fat pig oinks and grunts at you. For whatever mind 
-boggling reason, it is also covered in barbeque sauce. It moves around
+A very large and fat pig oinks and grunts at you. For whatever mind
+boggling reason, it is also covered in sauce. It moves around
 in a back and forth motion, ramming and headbutting whatever is in its
-path. This pig is very angry and is determined to not be turned into 
+path. This pig is very angry and is determined to not be turned into
 some tasty ribs.
 ~
 108 0 0 Y
-47 -18 -4 280d4+9200 50d2+0
+47 -18 -4 280d4+13444 50d7+87
 30000 1750000
 8 8 1
 86 0 20d20+50 0
@@ -99,14 +98,14 @@ cow rampaging bovine~
 A Rampaging Cow~
 A mad bovine is going berserk
 ~
- A large brown and white quadruped is seen attempting to buck and kick 
+A large brown and white quadraped is seen attempting to buck and kick
 its legs and to smash its body into those who are close to it. Its large
-black hooves smash and dent the stainless-steel floor. Its body is taut
+black hooves smash and dent the floor. Its body is taut
 with bulging muscles making this cow much more aggressive and larger than
 what you would expect.
 ~
 108 0 0 Y
-47 -18 -4 180d6+10150 50d2+5
+47 -18 -4 280d5+12445 50d8+75
 30000 1700000
 8 8 1
 91 0 20d20+50 0
@@ -126,7 +125,7 @@ eyelashes off.  The Happy Bob's BBQ apron can still be seen wrapped around
 his waist.
 ~
 108 0 0 Y
-47 -19 -4 240d4+8950 50d2+8
+47 -19 -4 240d4+12443 50d9+122
 35849 1800000
 8 8 1
 69 0 20d20+50 0
