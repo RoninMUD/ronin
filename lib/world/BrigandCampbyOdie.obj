@@ -1,22 +1,26 @@
 #2101
 cloak deception~
-a cloak of deception~
+A Cloak of Deception~
 A shimmering red cloak lies here on the ground~
 ~
-9 64 1025
+9 134217728 1025
 5 0 0 0
 3 2000 300
 25
 X
 ~
-0 0 0
+3584 0 0
 M
 ~
 ~
 ~
 ~
 A
-12 10
+53 0
+A
+19 1
+A
+12 20
 #2102
 belt holding~
 A belt of holding~
@@ -37,9 +41,9 @@ M
 A
 17 -5
 #2103
-rapier~
-rapier~
-A polished rapier lies here on the ground.~
+longsword shadowrend~
+Shadowrend~
+An Ornate Longsword with an Ebony Hilt~
 ~
 5 0 8193
 0 3 6 7
@@ -214,5 +218,74 @@ M
 ~
 ~
 ~
+#2113
+leggings relentless~
+Leggings Of Relentless Pursuit~
+A pair of Dark Steel Leggings~
+~
+9 134217792 33
+11 0 0 0
+8 1000 100
+22
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+52 5
+A
+19 1
+A
+13 30
+#2114
+sleeves enduring might~
+Sleeves of Enduring Might~
+A set of Treated Leather Sleeves~
+~
+9 134217792 257
+13 0 0 0
+8 1750 550
+23
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+18 1
+A
+52 15
+A
+19 1
+#2115
+gauntlets ironclad grasp~
+Gauntlets of Ironclad Grasp~
+A pair of Dark Iron Gauntlets~
+~
+9 134217792 129
+13 0 0 0
+8 1000 100
+24
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+13 40
+A
+52 5
+A
+18 3
 #0
 $~
