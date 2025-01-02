@@ -908,9 +908,19 @@ tk_symbol (OBJ *sym, CHAR *ch, int cmd, char *arg)
 	  return TRUE;
 	}
 
+/*1/2/2025 - Arodtanjoe - If the symbol is worn and their alignment hits 1000, the symbol detaches itself
+This is to help get around stoning not existing when looking at creatures.
+*/
+
   if(cmd == MSG_MOBACT) {
     if(!(vict=sym->equipped_by)) return FALSE;
     if(!IS_MORTAL(vict)) return FALSE;
+	if(GET_ALIGNMENT (vict)==1000){
+ 	  obj_to_char(unequip_char(vict, WEAR_LIGHT),vict);
+	  send_to_char ("The symbol peels away from your flesh.\n\r",vict);	
+	  return TRUE;
+	}
+	
     if(GET_ALIGNMENT (vict)>-1000) {
       GET_ALIGNMENT (vict) = MAX(-1000, GET_ALIGNMENT (vict) - 100);
       check_equipment(vict);
