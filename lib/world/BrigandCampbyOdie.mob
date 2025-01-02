@@ -3,36 +3,49 @@ brigand~
 Brigand~
 A Brigand is standing here.
 ~
-The brigand standing before you has dark leatherer skin and built
-solidly.  His armor has seen it's day as has his sword.
+The brigand is a wiry figure with a face hardened by years of living
+on the edge of the law. His patchy leather armor is mismatched and 
+poorly maintained, but it bears the marks of countless skirmishes. 
+A crooked grin reveals yellowed teeth as he sizes you up, a wickedly 
+sharp dagger glinting in his hand. His unkempt hair and the faint 
+smell of ale suggest a life of indulgence and desperation. Despite 
+his disheveled appearance, his movements are quick and calculated, 
+like a predator waiting for the perfect moment to strike.
 ~
-72 268435456 0 Y
-36 3 0 2d200+1100 1d25+25
-100 160341
+16392 268435456 0 Y
+55 -15 -20 55d105+15000 12d12+125
+0 2700500
 8 8 1
-3 0 0d0+0 0
-0 0 0 0
+3 0 10d10+400 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2102
 calanar~
 Calanar~
-Calanar the brigand champion eyes you suspiciously.
+Calanar the Brigand Champion eyes you suspiciously.
 ~
-A giant of a man that tanned skin seems as tough as the fine bronze
-armor he wears on his body.  Looking into his eye you see the
-piercing stare of a warrior, his very stare invokes fear in the
-heart of his prey.  You have no doubt he would be a formidable
-foe.
+A towering figure of muscle and menace, Calanar is Kulzarens right 
+hand and enforcer. His armor, a patchwork of salvaged plate and 
+chainmail, is battered but functional, and his greatsworda 
+brutal, jagged weaponrests against his back, its hilt wrapped in 
+worn leather. Calanars face is a mask of stoic resolve, his piercing 
+gaze betraying no emotion. Scars crisscross his arms and neck, each 
+a trophy from a battle hard-fought. In combat, Calanar is 
+relentless, his blows landing with terrifying precision and power. He 
+fights not for glory but for loyalty to Kulzaren, and his mere presence
+on the battlefield inspires fear and obedience in equal measure.
 ~
-10 536870912 500 Y
-45 1 0 10d100+800 2d20+30
-1900 325153
+16458 671090816 500 Y
+56 -18 -19 13d225+41332 19d25+190
+1100000 13000000
 8 8 1
-4 0 0d0+0 2
+4 20480 20d20+200 4
 7 1 10 0
 2 1 12 0
-0 0 0 0
+3 1 20 0
+11 2 35 199
+0 1 0 32
 K
 0 0 0 0 0 0 0
 #2103
@@ -40,9 +53,17 @@ merchant~
 Merchant~
 A travelling merchant standing here eyeing you fondly.
 ~
-This man's claim to fame is to trade to as many towns and villages all
-over the globe.  He begins to rummage through his belt making note of
-his current inventory.
+The merchant is a charismatic wanderer clad in vibrant
+garments adorned with trinkets from distant lands. His weathered 
+face is framed by a bushy beard, and his bright, mischievous eyes 
+sparkle with the promise of exotic wares. A large wagon, overflowing 
+with goods, follows him wherever he goes, its sides painted with bold
+patterns. He speaks with a lilting accent, spinning tales of adventure 
+and mystery as he showcases his wares
+everything from shimmering silks 
+and rare spices to peculiar relics and enchanted baubles. His charm is 
+infectious, and its hard to tell whether hes a cunning trader or 
+simply a man with a love for life and the open road.
 ~
 10 0 500 Y
 40 3 -1 10d100+500 10d10+2
@@ -57,19 +78,25 @@ sadyra master~
 Sadyra~
 Sadyra is here making strange gestures over a bubbling cauldron.
 ~
-You are unable to get any sense of relative age or appearance of this
-woman. In fact you can't be sure she is in fact human due to the heavy
-red robe covering her from head to toe.  Her face too is heavily shadowed
-due to the hood pulled over her head.  A strange red aura engulfs her
-adding to the sinister appearance of the Wizard.  She turns to you with
-burning eyes.
+Sadyra is a commanding figure draped in flowing robes of black and 
+crimson, embroidered with arcane symbols that seem to writhe and 
+shift when viewed from the corner of the eye. Her striking, pale
+face is framed by jet-black hair streaked with silver, and her 
+piercing eyes glow faintly with a violet hue, betraying the 
+immense magical power she wields. A gnarled staff topped with a 
+dark crystal rests in her hand, pulsating with an ominous energy. 
+The air around her is heavy with the scent of burnt herbs and the
+faint crackle of magical static. Sadyras voice is smooth and 
+commanding, each word imbued with the power to compel or destroy. 
+At her side, the spectral spirits serve as both advisors and 
+guardians, reinforcing her aura of eldritch authority.
 ~
-11 32896 -500 Y
-60 3 -3 2000d1+0 4d5+10
-6000 57000
+16457 134252544 -500 Y
+58 -19 -19 11d210+35422 20d23+180
+1200000 11250366
 8 8 2
-1 16512 0d0+0 0
-0 1 0 0
+1 4224 25d25+9000 0
+0 0 0 32
 K
 0 0 0 0 0 0 0
 #2105
@@ -77,32 +104,41 @@ spirit~
 Spirit~
 A Spirit is floating in front of you.
 ~
-This is an undead servant of Sadyra.
+These spectral beings radiate an unsettling, otherworldly presence. 
+Their forms are semi-transparent, shimmering faintly with hues of 
+blue and green. Their faces are obscured, as though shrouded in 
+mist, but their hollow eyes seem to pierce through to ones very soul.
+Their movements are slow and deliberate, as if weighed down by the 
+ethereal chains of their past lives. Faint whispers emanate from 
+them, fragments of language both haunting and unintelligible. They 
+sit silently beside Sadyra, their posture reverent yet 
+menacing, as if awaiting her command or observing with 
+otherworldly patience.
 ~
-11 0 -360 Y
-10 10 30 10d2+100 2d5+3
-100 4500
+16459 0 -360 Y
+55 -16 -18 55d105+15000 12d12+135
+0 3400000
 8 8 0
-52 0 0d0+0 0
-0 0 0 0
+52 0 10d10+400 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2106
-aide~
-Aide~
-One of Kulzaren's Aides is standing here.
+aide maverick~
+Marvick The Strategist~
+Maverick, Kulzaren's Aide is standing here.
 ~
-You are looking at one of Kulzaren's aides.  He is dressed in
-fine armor bearing the same coat of arms you noticed on the
-flag and door outside the house.  They are all extremely loyal
-to the brigand leader and would be honored to die for him.
+He is a wiry man with a sharp tongue and a sharper mind. His ink 
+stained fingers are always busy sketching battle plans or counting 
+stolen coin. Though unassuming, his piercing eyes miss nothing, and 
+his knowledge of the land makes him invaluable.
 ~
-11 32768 400 Y
-20 1 -10 100d2+800 6d4+8
-4000 60000
+16459 32768 400 Y
+55 -16 -18 55d105+15000 12d12+146
+600000 3400000
 8 8 1
-4 0 0d0+0 0
-0 0 0 0
+4 0 10d10+400 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #2107
@@ -110,17 +146,25 @@ Kulzaren brigand leader master~
 Kulzaren~
 Kulzaren the leader of the brigand glares at you from atop his throne.
 ~
-Kulzaren is surprisingly average build for a man of his position.
-He adorns himself in armor of the finest quality.  You have a hard
-time believing this man would head such an untamed army.  He then
-turns your way and his piercing stare burns through you.
+Kulzaren exudes a commanding presence, his tall, broad-shouldered 
+frame accentuated by a cloak of deep crimson edged with tarnished 
+thread. His sharp, angular face is shadowed by a perpetual scowl, 
+and a deep scar runs from his temple to his jaw, a grim reminder 
+of his ruthless rise to power. His voice carries an air of 
+authority, smooth yet edged with a venom that makes lesser men 
+tremble. He wields an ornate longsword with an ebony hilt, its 
+blade etched with faint, glowing runes. Despite his rough 
+surroundings, Kulzarens cunning and charisma set him apart, 
+and the air around him feels charged with the weight of his ambition.
 ~
-11 134512768 400 Y
-60 -5 -10 2500d1+0 6d6+15
-200000 120000
+16459 296960 400 Y
+58 -20 -19 15d190+38000 21d19+175
+1350000 12523336
 8 8 1
-3 16512 0d0+0 0
-0 1 0 0
+3 4224 25d25+4000 2
+11 1 30 65
+11 2 30 65
+0 0 0 32
 K
 0 0 0 0 0 0 0
 #2108
@@ -128,7 +172,19 @@ wizard~
 Wizard~
 A Wizard is standing here.
 ~
-The owner of the Magic Shop.
+The wizard is an elderly figure wrapped in layers of deep blue 
+and silver robes, each embroidered with intricate constellations 
+and arcane glyphs. His long, snowy beard cascades down his 
+chest, contrasting sharply with the sharp, lively glint in his 
+piercing grey eyes. A wide brimmed hat adorned with a single 
+raven feather rests atop his head, and a crystal topped staff 
+is always within reach, glowing faintly with an inner light. The 
+air around him crackles with latent energy, and the faint scent 
+of incense clings to his robes. Despite his age, his movements 
+are deliberate and precise, and his voice carries the weight of 
+centuries of knowledge. His shop is a labyrinth of 
+scrolls, tomes, and magical artifacts, all watched over by an
+ever present owl familiar perched on his shoulder.
 ~
 10 134217856 1000 Y
 51 -7 -100 9d10+15000 4d5+30
@@ -143,7 +199,17 @@ blacksmith~
 Blacksmith~
 A Blacksmith is here welcoming you to his shop.
 ~
-The owner of the Armour/Weapon Shop.
+The blacksmith is a burly man with arms as thick as tree trunks
+and a chest scarred by the stray sparks of his trade. His face 
+is tanned and weathered, framed by a short, bristly beard flecked 
+with soot. He wears a heavy leather apron over a simple linen 
+shirt, both darkened by years of forge work. His voice is deep 
+and gravelly, and his laugh, though rare, is hearty. The smithy 
+smells of hot iron and coal, and the rhythmic clang of his hammer 
+against anvil is a constant sound. Racks of weapons, armor, and 
+tools line the walls, each piece a testament to his craftsmanship. 
+Despite his gruff exterior, his sharp eyes reveal a keen mind and 
+a quiet pride in his work.
 ~
 10 134217856 1000 Y
 51 -7 -100 9d10+15000 4d5+30
@@ -158,8 +224,16 @@ baker~
 the Baker~
 The Baker is standing here.
 ~
-The Baker seems fat and complacent, making a living selling sweets
-to merchants of death.
+The baker is a plump, cheerful man with flour-dusted hands and a 
+perpetual smile. His face is round and ruddy, framed by a cropped 
+beard and a shock of unruly hair tucked beneath a well worn cap. 
+He moves with practiced ease between the ovens and the 
+counters, pulling trays of fresh bread, pies, and pastries that 
+fill the air with a heavenly aroma. The bakery itself is warm and 
+inviting, its wooden shelves laden with golden loaves and sweet 
+confections. A faint layer of flour seems to cover everything, from 
+the counters to the bakers apron. His hearty laugh is as welcoming 
+as the treats he sells, and he greets each customer like an old friend.
 ~
 10 134217856 1000 Y
 51 -7 -100 9d10+15000 4d5+30
@@ -171,16 +245,62 @@ K
 0 0 0 0 0 0 0
 #2111
 shopkeeper~
-ShopKeeper~
-A ShopKeeper is standing here.
+Shopkeeper~
+A Shopkeeper is standing here.
 ~
-The owner of the General Shop.
+The shopkeeper is a shrewd individual, always ready with a deal or a 
+clever remark. Dressed in simple but tidy clothes, his sharp eyes and
+quick hands make it clear that little escapes his notice. His general 
+store is a jumble of goods ranging from sacks of grain to bolts of 
+fabric, with shelves creaking under the weight of a hundred 
+small, essential items. A well-worn abacus sits on the counter, alongside
+a small box that clinks with coins as he deftly counts change. His voice 
+is smooth and persuasive, and he has a knack for convincing customers that 
+they need just one more item before they leave.
 ~
 10 134217856 1000 Y
 51 -7 -100 9d10+15000 4d5+30
 10000 66000
 8 8 1
 69 0 0d0+0 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#2112
+brigand~
+Brigand Guard~
+A Brigand Guard stands at his post.
+~
+The brigand guard is a hulking brute, clearly the muscle of the 
+operation. His armor is cobbled together from stolen chainmail 
+and dented iron plates, giving him a rough but formidable 
+appearance. A massive club rests across his shoulder, its surface 
+marred with dark stains from previous battles. His scarred face is 
+devoid of humor, and his eyes gleam with a mix of suspicion and 
+cruelty. The air around him feels heavy with menace, and his booming 
+voice barks commands to lesser brigands, ensuring they stay in line. 
+He stands ready to defend his crew with ruthless efficiency, daring 
+anyone to challenge him.
+~
+16392 268435456 0 Y
+55 -15 -20 55d105+15000 12d12+125
+0 2700500
+8 8 1
+3 0 10d10+400 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#2113
+aide vessara~
+Vessara The Shadow~
+Vessara, Kulzaren's Aide is standing here.
+~
+invalid~
+16459 32768 400 Y
+55 -16 -18 55d105+15000 12d12+146
+600000 3400000
+8 8 1
+4 0 10d10+400 0
 0 1 0 0
 K
 0 0 0 0 0 0 0
