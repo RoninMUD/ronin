@@ -1,9 +1,11 @@
 #9600
-A mountain path~
-   You're walking in a deep gully that passes between two verdant hills.  To 
-the northeast, a tall mountainous spire can be seen.  The very height of this
-mountain vanishes into the clouds above you.  Your footing here is precarious
-at best and walking is a bit difficult.
+A Mountain Path~
+This narrow path winds precariously along the rugged face of the 
+mountain, bordered by jagged rocks and sparse vegetation clinging 
+to life. A brisk wind howls through the air, carrying the scent 
+of pine and snow. The path is uneven, littered with loose gravel 
+that crunches underfoot, and the sound of distant birds of prey 
+echoes faintly from above.
 ~
 96 4 4
 D1
@@ -16,11 +18,14 @@ D3
 0 0 4000
 S
 #9601
-The base of Morgoth Mountain~
-  The path you are following continues onward towards the spire of the Morgoth
-Mountain. Rumors surrounding this mystical mountain have circulated for eons, 
-and tell the tale of a lost temple of healers lies somewhere within.  Dark and 
-ominous before you, the mountain beckons you onward.
+The Base of Morgoth Mountain~
+The base of Morgoth Mountain is a sprawling expanse of shadowed rock
+and dense forest. Towering cliffs rise ominously overhead, their 
+dark surfaces jagged and foreboding. Small streams trickle from cracks
+in the stone, pooling into crystal-clear basins that reflect the 
+imposing summit. The air is thick with a mix of earthy moss and cool 
+mountain breeze. Dark and ominous before you, the mountain beckons 
+you onward.
 ~
 96 0 5
 D0
@@ -37,11 +42,16 @@ D3
 0 0 9600
 S
 #9602
-The base of Morgoth Mountain~
-   You stand here on the south face of Morgoth Mountain, awed by the 
-majesty of this monument to the heavens.  A strong wind blows up the 
-mountain, bringing with it the faint scent of the ocean far, far to the
-south.
+The South Face of Morgoth Mountain~
+The south face of Morgoth Mountain is a sheer expanse of treacherous
+rock and crumbling ledges, bathed in the harsh light of the sun for 
+most of the day. The winds here are relentless, tugging at every step
+and whistling through narrow crevices in the stone. Sparse patches of 
+hardy moss cling stubbornly to the cliffs, and the occasional mountain 
+goat can be seen navigating the perilous terrain with surprising ease. 
+Below, the view stretches endlessly, revealing a sprawling valley 
+dotted with forests and shimmering rivers, while above, the 
+mountain's spire reaches skyward, veiled in swirling mist.
 ~
 96 0 5
 D1
@@ -54,11 +64,16 @@ D3
 0 -1 9601
 S
 #9603
-The base of Morgoth Mountain~
-   You stand here on the south face of Morgoth Mountain, awed by the
-majesty of this monument to the heavens.  A strong wind blows up the
-mountain, bringing with it the faint scent of the ocean far, far to the
-south.
+The South Face of Morgoth Mountain~
+The south face of Morgoth Mountain is a sheer expanse of treacherous
+rock and crumbling ledges, bathed in the harsh light of the sun for 
+most of the day. The winds here are relentless, tugging at every step
+and whistling through narrow crevices in the stone. Sparse patches of 
+hardy moss cling stubbornly to the cliffs, and the occasional mountain 
+goat can be seen navigating the perilous terrain with surprising ease. 
+Below, the view stretches endlessly, revealing a sprawling valley 
+dotted with forests and shimmering rivers, while above, the 
+mountain's spire reaches skyward, veiled in swirling mist.
 ~
 96 0 5
 D1
@@ -71,12 +86,14 @@ D3
 0 -1 9602
 S
 #9604
-The base of Morgoth Mountain~
-   You have come to a curve around the southeast corner of the giant
-mountain that looms above you.  You cannot see beyond this curve, and 
-a dense mist rolling from above you obscures the way back.  Off
-in the distance below you, you can see a small village, full of tiny
-people that appear as ants from this distance.
+The Lower Slopes of Morgoth Mountain~
+The lower slopes are a mix of dense, windswept forest and rocky 
+outcroppings. Pine trees tower overhead, their branches swaying 
+in the constant breeze. The ground is uneven, with roots snaking
+across the trail and patches of soft moss providing a rare moment
+of comfort. The air is filled with the scent of pine and damp 
+earth, and the occasional rustle of leaves hints at unseen wildlife.
+The path ahead is a curve to the eastern face, obscured by dense mist.
 ~
 96 0 5
 D0
@@ -93,11 +110,14 @@ D4
 0 -1 9618
 S
 #9605
-The base of Morgoth Mountain~
-   You are standing here on a wide ledge that skirts the western face
-of Morgoth Mountain.  The stone vibrates here, full of warmth and life
-that belies the cold nature of the rock.  Far off to the east you can see 
-a castle that surely belongs to a mighty King.
+The East Face of Morgoth Mountain~
+The east face is bathed in the golden light of dawn, revealing a 
+rugged wall of jagged stone and narrow ledges. Small streams 
+cascade down the cliffside, their waters glinting in the morning 
+sun and feeding into the verdant forest below. The climb here is 
+steep and unforgiving, with patches of loose shale making every 
+step precarious. Strange markings, perhaps from ancient 
+travelers, are faintly etched into the stone.
 ~
 96 0 5
 D0
@@ -110,12 +130,14 @@ D2
 0 -1 9604
 S
 #9606
-The base of Morgoth Mountain~
-
-   You are standing here on a wide ledge that skirts the western face
-of Morgoth Mountain.  The stone vibrates here, full of warmth and life
-that belies the cold nature of the rock. To your northeast, you can see a 
-small village with what appears to be a steel castle at it's center.
+The East Face of Morgoth Mountain~
+The east face is bathed in the golden light of dawn, revealing a 
+rugged wall of jagged stone and narrow ledges. Small streams 
+cascade down the cliffside, their waters glinting in the morning 
+sun and feeding into the verdant forest below. The climb here is 
+steep and unforgiving, with patches of loose shale making every 
+step precarious. Strange markings, perhaps from ancient 
+travelers, are faintly etched into the stone.
 ~
 96 0 5
 D0
@@ -128,11 +150,14 @@ D2
 0 -1 9605
 S
 #9607
-The base of Morgoth Mountain~
-   You are standing amidst the remains of an ancient landslide.  Your
-footing is slippery, yet you feel confident in your abilities to manuever
-the treacherous path.  To the northeast, you can see a mighty mountain
-range, that dwarfs even this great tower of stone.
+The Lower Slopes of Morgoth Mountain~
+The lower slopes are a mix of dense, windswept forest and rocky 
+outcroppings. Pine trees tower overhead, their branches swaying 
+in the constant breeze. The ground is uneven, with roots snaking
+across the trail and patches of soft moss providing a rare moment
+of comfort. The air is filled with the scent of pine and damp 
+earth, and the occasional rustle of leaves hints at unseen wildlife.
+Above you, a large stone tower ascends into the sky.
 ~
 96 0 5
 D2
@@ -145,11 +170,13 @@ D3
 0 -1 9608
 S
 #9608
-The base of Morgoth Mountain~
-   Standing here on the north side of Morgoth Mountain, you take the
-full brunt of the harsh, northern wind.  Chilled to the bone, you look
-longingly on the forest of Mallorn trees that stretch before you to the
-north.
+The North Face of Morgoth Mountain~
+The north face is cold and shadowed, even at midday, with frost 
+clinging stubbornly to the dark rock. Icicles dangle precariously 
+from overhangs, and the air carries a biting chill. The path here 
+is narrow and treacherous, winding along sheer drops that plunge 
+into unseen depths. The distant howls of mountain wolves echo 
+faintly, a reminder of the dangers lurking beyond the cliffs.
 ~
 96 0 5
 D1
@@ -162,11 +189,13 @@ D3
 0 -1 9609
 S
 #9609
-The base of Morgoth Mountain~
-   Standing here on the north side of Morgoth Mountain, you take the
-full brunt of the harsh, northern wind.  Chilled to the bone, you look
-longingly on the forest of Mallorn trees that stretch before you to the
-north.
+The North Face of Morgoth Mountain~
+The north face is cold and shadowed, even at midday, with frost 
+clinging stubbornly to the dark rock. Icicles dangle precariously 
+from overhangs, and the air carries a biting chill. The path here 
+is narrow and treacherous, winding along sheer drops that plunge 
+into unseen depths. The distant howls of mountain wolves echo 
+faintly, a reminder of the dangers lurking beyond the cliffs.
 ~
 96 0 5
 D1
@@ -179,10 +208,15 @@ D3
 0 -1 9610
 S
 #9610
-The base of Morgoth Mountain~
-   Staring off the northwest, you can see a monastery nestled in the
-hills. A longing for the peacefulness of of that holy place fills you
-with a need that makes you want to forgo your quest.
+The Base of Morgoth Mountain~
+The base of Morgoth Mountain is a sprawling expanse of shadowed rock
+and dense forest. Towering cliffs rise ominously overhead, their 
+dark surfaces jagged and foreboding. Small streams trickle from cracks
+in the stone, pooling into crystal-clear basins that reflect the 
+imposing summit. The air is thick with a mix of earthy moss and cool 
+mountain breeze. Dark and ominous before you, the mountain beckons 
+you onward. Off to the northwest, a monastery is nestled into the 
+hills, its bell echoing throughout the mountain range.
 ~
 96 0 5
 D1
@@ -199,12 +233,14 @@ D4
 0 -1 9622
 S
 #9611
-The base of Morgoth Mountain~
-  As the sun sets in the west, the mountain is washed in a brilliant golden
-glow. The sun's warmth is even enough to cut the chill that fills the air.
-In the near distance to your west you can see the fabled city of the Enfans.
-Much fame and glory have been showered upon the heroes of that once
-great city.
+The West Face of Morgoth Mountain~
+The west face catches the last light of the setting sun, its rocky 
+surface glowing with fiery hues before succumbing to darkness. The 
+climb here is a mixture of steep inclines and winding 
+switchbacks, punctuated by rocky outcroppings that offer breathtaking
+views of the surrounding lands. Occasional nests of large birds of 
+prey are tucked into crevices, their piercing cries adding to 
+the rugged atmosphere.
 ~
 96 0 5
 D0
@@ -217,11 +253,14 @@ D2
 0 -1 9612
 S
 #9612
-The base of Morgoth Mountain~
-   As the sun sets in the west, the mountain is washed in a brilliant golden
-glow. The sun's warmth is even enough to cut the chill that fills the air.
-A spec against the horizon, you can just make out the rooftops of the city of
-Midgaard to the west.
+The West Face of Morgoth Mountain~
+The west face catches the last light of the setting sun, its rocky 
+surface glowing with fiery hues before succumbing to darkness. The 
+climb here is a mixture of steep inclines and winding 
+switchbacks, punctuated by rocky outcroppings that offer breathtaking
+views of the surrounding lands. Occasional nests of large birds of 
+prey are tucked into crevices, their piercing cries adding to 
+the rugged atmosphere.
 ~
 96 0 5
 D0
@@ -229,6 +268,7 @@ D0
 ~
 0 -1 9611
 D1
+A small, open crevasse.
 ~
 crevasse~
 12 -1 9613
@@ -238,11 +278,12 @@ D2
 0 -1 9601
 S
 #9613
-In the crevasse~
-     Strangely enough, this path seems like it has actually been kept up.
-Who, or what may have taken the time to keep it so tidy?  Flowers grow
-all around and some strange plants you have never seen before grace your
-presence.
+In the Crevasse~
+The crevasse is a deep and shadowy chasm, its walls slick with moisture
+and covered in patches of glistening moss. The faint sound of dripping 
+water echoes eerily, while cold drafts weave through the narrow space. 
+Jagged shards of rock jut out at odd angles, making 
+navigation treacherous.
 ~
 96 0 4
 D1
@@ -250,17 +291,19 @@ D1
 ~
 0 -1 9614
 D3
+A small, open crevasse.
 ~
 crevasse~
 11 -1 9612
 S
 #9614
-In the crevasse~
-   The well manicured train becomes more and more gruelling as
-you wind your way further into the depts of the mountain above.
-Sharp rocks protruding from the walls on either side of you snatch
-at your clothing and cut into your hands as you struggle to maintain 
-your balance.
+In the Crevasse~
+The crevasse is a deep and shadowy chasm, its walls slick with moisture
+and covered in patches of glistening moss. The faint sound of dripping 
+water echoes eerily, while cold drafts weave through the narrow space. 
+Jagged shards of rock jut out at odd angles, making 
+navigation treacherous. To the north, a serence landscape appears 
+through the mist and snow.
 ~
 96 0 5
 D0
@@ -274,12 +317,13 @@ D3
 S
 #9615
 Paradise~
-   You are standing in paradise.  Nestled deep within the Mountain of 
-Morgoth, this place fills you with a peace and tranquility unknown in
-the outside world. A brilliant beam of light shines down through a quartz
-shaft that seems to pierce the mountain all the way to the heavens.  
-flowers bloom here in great profusion, and the smell of honey and 
-blossoms fills your soul.
+This serene, untouched valley lies hidden amidst the peaks, a lush and 
+verdant refuge. Vibrant wildflowers bloom across rolling meadows, while 
+a crystal-clear stream meanders lazily through the landscape. Birds sing 
+harmoniously in the trees, and the air is sweet and warm, untouched by 
+the mountain's harshness. A brilliant beam of light shines down through 
+a quartz shaft that seems to pierce the mountain all the way to the 
+heavens. 
 ~
 96 0 5
 D2
@@ -383,7 +427,6 @@ D4
 0 -1 9680
 S
 #9621
-e
 Morgoth Mountain~
    Staring northwards so as not to be frightened by the towering mountain 
 above, you see across the open valley and into the foothills of the ancient
@@ -495,6 +538,7 @@ D3
 ~
 0 -1 9624
 D4
+A large nest of wood and stone.
 ~
 nest~
 11 -1 9681
@@ -547,9 +591,10 @@ D1
 ~
 0 -1 9629
 D4
+A Wooden Doorway
 ~
-~
-0 -1 9699
+doorway~
+1 -1 9699
 D5
 A golden, jewel inlaid orifice lies here imbedded in the ground
 ~
@@ -563,7 +608,7 @@ can be seen, and the walls have been polished a brillant luster.
 ~
 S
 #9629
-The snow covered mountain peak~
+The Snow Covered Mountain Peak~
    You have reached the zenith of this magnificent mountain.  The snow
 covering the peak here drifts about in the wind, stinging your exposed face
 and blinding your vision.  The arduous journey has been worth your efforts, 
@@ -580,7 +625,7 @@ D3
 0 -1 9628
 S
 #9630
-The snow covered mountain peak~
+The Snow Covered Mountain Peak~
    You have reached the zenith of this magnificent mountain.  The snow
 covering the peak here drifts about in the wind, stinging your exposed face
 and blinding your vision.  Imprinted in the snow you can see tracks of what
@@ -597,7 +642,7 @@ D3
 0 -1 9631
 S
 #9631
-The snow covered mountain peak~
+The Snow Covered Mountain Peak~
    Snow drifts pile higher than the tops of your head here on the sheltered
 side of the top of the mountain.  The stinging wind is lessened here, but the
 cold still seeps deeply into your bones anyway.  The trail you've been 
@@ -627,7 +672,35 @@ D5
 ~
 0 -1 9699
 E
-south~
+n north ~
+To the north you see the Helventia Mountains.  Legend says that
+the mighty ninja Chud fought one of the most furious battles of his
+illustrious travels here. 
+~
+E
+n ~
+vTo the north you see the Helventia Mountains.  Legend says that
+the mighty ninja Chud fought one of the most furious battles of his
+illustrious travels here.
+~
+E
+n north mountain mountains helventia~
+Staring out the window to the north, you can make out the 
+craggy spires of the Helventia Mountains.  If legends are to be
+believed, these mountains are the very site that Chud, the 
+greatest ninja of his generation fought off the evil hordes
+of the commando legions.
+~
+E
+w west midgaard town~
+To the west, across a vast forest, and dim on the horizon,
+you can just make out the towers and walls of the city of
+Midgaard. Home to the bravest adventurers the world has 
+known, the city has withstood the tests of both time
+and man
+~
+E
+s south woods svalich strahd~
 Far to the south, you can make out the lights of what must
 surely be the Barovian revellers, carousing through the woods.
 A brave race of men, the Barovians brave the dangers of both
@@ -641,40 +714,12 @@ Welmar Castle.  The king there is one of the greatest rulers
 in the world, kindly upholding the laws and rituals of the lands.
 ~
 E
-s south woods svalich strahd~
+south~
 Far to the south, you can make out the lights of what must
 surely be the Barovian revellers, carousing through the woods.
 A brave race of men, the Barovians brave the dangers of both
 the nearby Svalich Woods, and the demonic master who inhabits
 the nearby castle.
-~
-E
-w west midgaard town~
-To the west, across a vast forest, and dim on the horizon,
-you can just make out the towers and walls of the city of
-Midgaard. Home to the bravest adventurers the world has 
-known, the city has withstood the tests of both time
-and man
-~
-E
-n north mountain mountains helventia~
-Staring out the window to the north, you can make out the 
-craggy spires of the Helventia Mountains.  If legends are to be
-believed, these mountains are the very site that Chud, the 
-greatest ninja of his generation fought off the evil hordes
-of the commando legions.
-~
-E
-n ~
-vTo the north you see the Helventia Mountains.  Legend says that
-the mighty ninja Chud fought one of the most furious battles of his
-illustrious travels here.
-~
-E
-n north ~
-To the north you see the Helventia Mountains.  Legend says that
-the mighty ninja Chud fought one of the most furious battles of his
-illustrious travels here. 
 ~
 S
 #9633
@@ -686,7 +731,7 @@ of your surroundings.  Fine tapestries and bejeweled statues adorn every
 space your eyes can see.  Surely if there was a place on this earth for the
 gods above, this must be it.
 ~
-96 8 0
+96 67108872 0
 D0
 A dark metal gate encased in the mountain stands before you.
 ~
@@ -712,7 +757,7 @@ hang on the walls depicting deeds of healing and arcane lore long forgotten in
 this day and age.  In one particular picture you notice a man dressed in
 green caring for a wounded person with herbs and animal skins.
 ~
-96 8 0
+96 67108872 0
 D3
 The entrance~
 ~
@@ -725,7 +770,7 @@ hang on the wall depicting deeds of healing and caring.  In one particular
 picture you notice a woman dressed in white caring for a wounded person 
 with love and kindness.
 ~
-96 8 0
+96 67108872 0
 D1
 The entrance~
 ~
@@ -742,7 +787,7 @@ gatherers.  An old table sets against the east wall and the rug here looks
 worn and faded.  Healing supplies such as cots, rags, and water basins 
 cover the foyer making it look like a hospital, which it is.
 ~
-96 8 0
+96 67108872 0
 D0
 The entrance~
 ~
@@ -772,7 +817,7 @@ hang on the wall depicting deeds of healers, ancient arcane lore, and magic
 forgotten in the world.  In one particular painting you notice a man, wearing
 black, healing a person using the wounded man's own blood.
 ~
-96 8 0
+96 67108872 0
 D1
 A dimly lit corridor~
 ~
@@ -784,11 +829,13 @@ door~
 S
 #9638
 Temple Crossing~
-  This is the north part of the sanctuary.  Above you chandeliers sway in
-a breeze that seems to come from the south.  This place seems peaceful, yet,
-something is amiss.
+The crossing is a wide, central space where the nave intersects with
+the transepts, forming a perfect cross. A shattered chandelier lies 
+sprawled on the floor, its jagged crystals glittering ominously. The 
+faint outline of an altar stands at one end, its surface worn smooth
+by countless hands.
 ~
-96 8 0
+96 67108872 0
 D0
 A large door leading into the foyer
 ~
@@ -815,17 +862,21 @@ and a large amount of rodent droppings, this is a very unpleasant place
 to be.  The opulence outside only makes this room feel more drab and
 depressing.
 ~
-96 8 0
+96 67108872 0
 D0
 A dimly lit corridor~
 door~
 1 0 9637
 S
 #9640
-The healing chamber~
-  This is a small cubicle used for private healing.  Candles along the walls
-give off an eerie light and make the shadows jump and flicker.  Clerics come and
-go while performing their duties.  A large drape covers the exit.
+The Healing Chamber~
+The chamber is a tranquil space with low, arched ceilings and smooth 
+stone walls. Simple wooden cots line the room, each adorned with 
+weathered linen and faint stains of past battles. A faint, soothing 
+glow emanates from a small altar in the corner, atop which rests an 
+intricately carved chalice. The air is heavy with the scent of herbs 
+and the faint whisper of old prayers. A heavy drape covers the 
+exit as clerics come and go performing their duties.
 ~
 96 8 0
 D1
@@ -836,12 +887,16 @@ drape
 2 0 9636
 S
 #9641
-The healing chamber~
-  This is a small cubicle used for private healing.  Candles along the walls
-give off an eerie light and make the shadows jump and flicker.  Clerics come and
-go while performing their duties.  A large drape covers the exit.
+The Healing Chamber~
+The chamber is a tranquil space with low, arched ceilings and smooth 
+stone walls. Simple wooden cots line the room, each adorned with 
+weathered linen and faint stains of past battles. A faint, soothing 
+glow emanates from a small altar in the corner, atop which rests an 
+intricately carved chalice. The air is heavy with the scent of herbs 
+and the faint whisper of old prayers. A heavy drape covers the 
+exit as clerics come and go performing their duties.
 ~
-96 8 0
+96 67108872 0
 D3
 A large heavy drape
 ~
@@ -851,11 +906,12 @@ drape
 S
 #9642
 Temple Ambulatory~
-  This is the north eastern part of the sanctuary.  Above you chandeliers sway
-in a breeze that seems to come from the southern part of the sanctuary.  This
-place seems very peaceful, yet, something is amiss.
+This circular walkway wraps around the temples apse, its walls adorned 
+with faded murals depicting divine tales. The floor is worn smooth from 
+centuries of pilgrims footsteps, and faint echoes carry the sound of 
+each step into the distant recesses of the temple.
 ~
-96 8 0
+96 67108872 0
 D2
 The sanctuary~
 ~
@@ -867,11 +923,13 @@ The sanctuary~
 S
 #9643
 Temple Choir~
-  This is the southern part of the sanctuary.  Above you chandeliers sway
-in a breeze that seems to emanate from the altar to the south.  This place
-seems very peaceful, yet, something is amiss.
+A raised platform at the rear of the temple, the choir area is marked by
+its intricate woodwork and scattered, splintered pews. A massive organ 
+looms in one corner, its pipes dented and silent. Faint carvings of 
+celestial beings are visible on the walls, though their faces have 
+been weathered away by time.
 ~
-96 8 0
+96 67108872 0
 D0
 The sanctuary~
 ~
@@ -891,11 +949,12 @@ The sanctuary~
 S
 #9644
 Temple Ambulatory~
-  This is the north western part of the sanctuary.  Above you chandeliers sway
-in a breeze that seems to come from the southern part of the sanctuary.  This
-place seems very peaceful, yet, something is amiss.
+This circular walkway wraps around the temples apse, its walls adorned 
+with faded murals depicting divine tales. The floor is worn smooth from 
+centuries of pilgrims footsteps, and faint echoes carry the sound of 
+each step into the distant recesses of the temple.
 ~
-96 8 0
+96 67108872 0
 D1
 The sanctuary~
 ~
@@ -907,11 +966,12 @@ The sanctuary~
 S
 #9645
 Temple Ambulatory~
-  This is the south eastern part of the sanctuary.  Above you chandeliers sway
-in a breeze that seems to come from the southern part of the sanctuary.  This
-place seems very peaceful, yet, something is amiss.
+This circular walkway wraps around the temples apse, its walls adorned 
+with faded murals depicting divine tales. The floor is worn smooth from 
+centuries of pilgrims footsteps, and faint echoes carry the sound of 
+each step into the distant recesses of the temple.
 ~
-96 8 0
+96 67108872 0
 D0
 The sanctuary~
 ~
@@ -923,13 +983,13 @@ The sanctuary~
 S
 #9646
 Temple Apse~
-   Standing in the temple apse, you feel the weight of the heavens and earth
-focused on the right here and right now.  You are hushed into an awed silence
-by the mystical energies you feel vibrating in the air around you.  Pulling all
-Your focus however is drawn towards a large book resting on the altar in
-the center of the temple.  
+The apse is a semicircular alcove bathed in an ethereal glow, its domed 
+ceiling adorned with faded frescoes. A weathered altar stands at its 
+center, its surface scarred and stained from years of use. 
+Candles, some long melted, are scattered around, their wax frozen in 
+chaotic drips down the stone.
 ~
-96 8 0
+96 67108872 0
 D0
 The sanctuary~
 ~
@@ -938,6 +998,27 @@ D5
 invalid~
 altar~
 8 9646 9648
+E
+book~
+    ___________________   ___________________
+.-/|         **        \ /        **         |\-.
+||||                    :                    ||||
+||||   From whence did  :   No my children,  ||||
+||||   our Lord come?   :   he is not of     ||||
+||||   Did he spring    :   this earth, but  ||||
+||||   from the earth,  :   is in fact the   ||||
+||||   or was he born   :   fount of all of  ||||
+||||   of the sky?      :   creation.        ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||___________________ : ___________________||||
+||/====================\:/====================\||
+`--------------------- ___ --------------------''
+~
+E
+altar book ~
+invalid~
 E
 altar book ~
       ___________________   ___________________
@@ -957,35 +1038,15 @@ altar book ~
   ||/====================\:/====================\||
   `--------------------- ___ --------------------''
 ~
-E
-altar book ~
-invalid~
-E
-book~
-    ___________________   ___________________
-.-/|         **        \ /        **         |\-.
-||||                    :                    ||||
-||||   From whence did  :   No my children,  ||||
-||||   our Lord come?   :   he is not of     ||||
-||||   Did he spring    :   this earth, but  ||||
-||||   from the earth,  :   is in fact the   ||||
-||||   or was he born   :   fount of all of  ||||
-||||   of the sky?      :   creation.        ||||
-||||                    :                    ||||
-||||                    :                    ||||
-||||                    :                    ||||
-||||___________________ : ___________________||||
-||/====================\:/====================\||
-`--------------------- ___ --------------------''
-~
 S
 #9647
 Temple Ambulatory~
-  This is the south western part of the sanctuary.  Above you chandeliers sway
-in a breeze that seems to come from the southern part of the sanctuary.  This
-place seems very peaceful, yet, something is amiss.
+This circular walkway wraps around the temples apse, its walls adorned 
+with faded murals depicting divine tales. The floor is worn smooth from 
+centuries of pilgrims footsteps, and faint echoes carry the sound of 
+each step into the distant recesses of the temple.
 ~
-96 8 0
+96 67108872 0
 D0
 The sanctuary~
 ~
@@ -996,10 +1057,13 @@ The sanctuary~
 0 0 9643
 S
 #9648
-Hidden chamber beneath the altar~
-     This is the holding place for the slaves to be executed.  Many of the
-slaves are human, but some are not.  They wear stupid looking collars that
-mark them as slaves.  These are the souls that drew the short lots in life.
+Hidden Chamber Beneath the Altar~
+Beneath the altar lies a hidden chamber, accessible via a rickety 
+ladder. The air here is thick and stale, heavy with the scent of 
+damp stone. Shelves filled with forbidden tomes and crumbling scrolls 
+line the walls, and a single, flickering torch barely illuminates 
+the rooms secrets. Emaciated figures are chained to the walls
+with iron chains and collars.
 ~
 96 9 2
 D4
@@ -1014,13 +1078,13 @@ ladder~
 11 -1 9649
 S
 #9649
-A torchlit cavern~
-   You are standing in a vaulted cavern that stretches above you beyond
-the light.  Low flickering torches encircle the room, illuminating the 
-hollowness of this place.  You can hear animal noises nearby, and screams
-of inhuman pain, but alas, there is nothing to be seen.
+A Torchlit Cavern~
+The cavern is vast and irregular, its rough stone walls illuminated
+by torches set in crude iron brackets. The flickering light casts 
+long shadows that shift and dance across the cavern floor, which 
+is littered with broken stalagmites and patches of uneven terrain.
 ~
-96 0 0
+96 67108864 0
 D0
 ~
 ~
@@ -1040,13 +1104,13 @@ ladder~
 11 -1 9648
 S
 #9650
-A torchlit passage~
-   A narrow hallway is carved through the stone of the mountain.  Torches 
-line both walls, dimly illuminating the passageway.  Very little can be
-seen other than the next torches, but a sense of dread seeps into your 
-very bones.
+A Torchlit Passage~
+This narrow passage is lit by a row of evenly spaced torches that 
+sputter and crackle, their flames fighting against the damp air. 
+The floor is uneven, and the scent of burning pitch mingles with 
+the earthy aroma of the surrounding stone.
 ~
-96 0 0
+96 67108864 0
 D0
 ~
 ~
@@ -1057,12 +1121,13 @@ D2
 0 -1 9649
 S
 #9651
-A torchlit passage~
-   The passageway continues in an unwavering line due north.  Up ahead you
-can see a larger room opening away from you.  There is a faint coppery
-smell in the air, but you can't quite place it.
+A Torchlit Passage~
+This narrow passage is lit by a row of evenly spaced torches that 
+sputter and crackle, their flames fighting against the damp air. 
+The floor is uneven, and the scent of burning pitch mingles with 
+the earthy aroma of the surrounding stone.
 ~
-96 4 0
+96 67108868 0
 D0
 ~
 ~
@@ -1073,13 +1138,15 @@ D2
 0 -1 9650
 S
 #9652
-The sacrificial altar~
-   As you enter the room, your nose wrinkles in digust and you almost vomit
-at the overpowering stench that permeates thee room.  There are bestial remains
-scattered about the altar in the middle of the floor, and the walls are
-coated with a thick blanket of blood.  
+The Sacrificial Altar~
+The altar is a grim, bloodstained slab of black stone, its surface
+carved with dark runes that seem to pulse faintly. Deep grooves run
+along its edges, forming channels that guide the blood of sacrifices
+into a basin below. The area is eerily silent, the oppressive 
+atmosphere broken only by faint whispers that seem to emanate from 
+the altar itself.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1094,13 +1161,14 @@ D3
 0 -1 9660
 S
 #9653
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
-96 0 0
+96 67108864 0
 D2
 ~
 ~
@@ -1116,14 +1184,14 @@ of an ancient time remind you of how the world has moved on.
 ~
 S
 #9654
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.  Set in the
-middle of the floor is a dark granite slab, engraved with an arcane symbol.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
-96 0 0
+96 67108864 0
 D0
 ~
 ~
@@ -1157,6 +1225,16 @@ D5
 symbol~
 8 -1 9661
 E
+slab~
+A large stone slab lies here, with a roughly hewn pentragam on its
+surface.
+~
+E
+corpse~
+The rotting bones of the legendary anti-paladin Ribald lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
+E
 symbol~
 .....
                    .d$$$$*$$$$$$bc
@@ -1179,25 +1257,16 @@ symbol~
                   "$$$ec.....ze$$$"
                       "**$$$**""
 ~
-E
-corpse~
-The rotting bones of the legendary anti-paladin Ribald lie here. Memories
-of an ancient time remind you of how the world has moved on.
-~
-E
-slab~
-A large stone slab lies here, with a roughly hewn pentragam on its
-surface.
-~
 S
 #9655
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
-96 0 0
+96 67108864 0
 D0
 ~
 ~
@@ -1213,11 +1282,12 @@ of an ancient time remind you of how the world has moved on.
 ~
 S
 #9656
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
 96 0 0
 D0
@@ -1235,11 +1305,12 @@ of an ancient time remind you of how the world has moved on.
 ~
 S
 #9657
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
 96 0 0
 D0
@@ -1257,12 +1328,12 @@ of an ancient time remind you of how the world has moved on.
 ~
 S
 #9658
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.  Set in the
-middle of the floor is a dark granite slab, engraved with an arcane symbol.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
 96 0 0
 D0
@@ -1298,22 +1369,23 @@ D5
 symbol~
 8 -1 9665
 E
-corpse~
-The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
-Memories of an ancient time remind you of how the world has moved on.
-~
-E
 slab~
 A large stone slab lies here, with a roughly hewn pentagram on its
 surface.
 ~
+E
+corpse~
+The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
+Memories of an ancient time remind you of how the world has moved on.
+~
 S
 #9659
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
 96 0 0
 D0
@@ -1331,13 +1403,14 @@ ancient time remind you of how the world has moved on.
 ~
 S
 #9660
-the necropolis~
-   You are wandering through the buried necropolis of the most glorious heroes
-of the realm.  Bones are piled in all of the corners, but in the middle of the
-room is a well preserved corpses of some ancient person.  Perhaps a closer 
-inspection can reveal clues as to the identity of this fallen hero.
+The Necropolis~
+A vast underground expanse, the necropolis is a city of the dead, with
+rows of crumbling stone tombs and mausoleums stretching into the darkness.
+Flickering lanterns cast a dim, eerie glow, revealing skeletal remains and
+broken headstones. The air is heavy with the scent of decay and the faint
+echo of whispered voices, as if the dead themselves are watching.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1353,7 +1426,7 @@ of an ancient time remind you of how the world has moved on.
 ~
 S
 #9661
-earthen decline~
+Earthen Decline~
    Descending beneath the necropolis, you find yourself in a wide earthen
 tunnel, descending steaidly downwards.  With each setp you take, you can feel
 the earth closing in on you, trapping you with a deepending sense of dread.
@@ -1369,11 +1442,12 @@ symbol~
 8 -1 9654
 S
 #9662
-earthen decline~
-   The earthen ramp continues downward, taking a slight turn to the east.  
-Echoing up the tunnel from ahead, you can hear the sounds of creatures moving.
-Echoes of screams reverbrate dully from the walls, and you wonder what you 
-will find at the end of the ramp.
+Earthen Decline~
+This steep, sloping path descends into the earth, its surface worn 
+smooth by years of use. Loose dirt and small rocks scatter with
+every step, and the walls on either side are packed tight with 
+roots that claw their way toward the surface. A faint breeze rises
+from below, carrying the smell of damp earth.
 ~
 96 0 0
 D0
@@ -1386,10 +1460,12 @@ D1
 0 -1 9663
 S
 #9663
-earthen decline~
-   The earthen ramp continues downward, continuing on from here to the north.  
-The echoes from earlier are louder here, and you wonder what kind of creatures
-lurk in the darkness ahead.
+Earthen Decline~
+This steep, sloping path descends into the earth, its surface worn 
+smooth by years of use. Loose dirt and small rocks scatter with
+every step, and the walls on either side are packed tight with 
+roots that claw their way toward the surface. A faint breeze rises
+from below, carrying the smell of damp earth.
 ~
 96 0 0
 D0
@@ -1402,12 +1478,12 @@ D3
 0 -1 9662
 S
 #9664
-earthen decline~
-   The earthen ramp ends here at a large hole in the ground.  No
-light penetrates the darkness below, but there is now an overpowering
-smell to go along with the noises you've been hearing.  The smell 
-of blood is quite clear, and you begin to second guess your decision 
-to venture onward.
+Earthen Decline~
+This steep, sloping path descends into the earth, its surface worn 
+smooth by years of use. Loose dirt and small rocks scatter with
+every step, and the walls on either side are packed tight with 
+roots that claw their way toward the surface. A faint breeze rises
+from below, carrying the smell of damp earth.
 ~
 96 0 0
 D2
@@ -1420,11 +1496,12 @@ D5
 0 -1 9673
 S
 #9665
-muddy decline~
-   A slippery tunnel leads you downwards, into the darkness below.  The
-mud lined tunnel is a mystery, as there is no water, nor have you seen 
-anything besides the hard stone walls since you sank below the surface
-so long ago.  The muddy declines leads south from here.
+Muddy Decline~
+The decline here is slick and treacherous, coated with a thick layer
+of wet mud that clings stubbornly to boots. Water seeps through the 
+walls, forming rivulets that trickle noisily into shallow pools. The 
+air is cool and heavy, and the sound of slipping feet is a 
+constant companion.
 ~
 96 0 0
 D2
@@ -1437,12 +1514,12 @@ symbol~
 8 -1 9658
 S
 #9666
-muddy decline~
-   A slippery tunnel leads you downwards, into the darkness below.  The
-mud lined tunnel is a mystery, as there is no water, nor have you seen 
-anything besides the hard stone walls since you sank below the surface
-so long ago.  The muddy decline turns to the west or north from where
-you came.
+Muddy Decline~
+The decline here is slick and treacherous, coated with a thick layer
+of wet mud that clings stubbornly to boots. Water seeps through the 
+walls, forming rivulets that trickle noisily into shallow pools. The 
+air is cool and heavy, and the sound of slipping feet is a 
+constant companion.
 ~
 96 0 0
 D0
@@ -1455,12 +1532,12 @@ D3
 0 -1 9667
 S
 #9667
-muddy decline~
-   A slippery tunnel leads you downwards, into the darkness below.  The
-mud lined tunnel is a mystery, as there is no water, nor have you seen
-anything besides the hard stone walls since you sank below the surface
-so long ago.  The muddy decline turns to the north or east from where
-you came.
+Muddy Decline~
+The decline here is slick and treacherous, coated with a thick layer
+of wet mud that clings stubbornly to boots. Water seeps through the 
+walls, forming rivulets that trickle noisily into shallow pools. The 
+air is cool and heavy, and the sound of slipping feet is a 
+constant companion.
 ~
 96 0 0
 D0
@@ -1473,11 +1550,13 @@ D1
 0 -1 9666
 S
 #9668
-muddy decline~
-   The muddy decline ends here at a blank stone wall.  The mud is pooling
-deeply here, reaching up past your thigh.  However, a the mud is vanishing 
-quickly into a dark vortex in the center of the room.  As you try to see down
-the hole, your vision is obscured by the darkness below.
+Muddy Decline~
+The decline here is slick and treacherous, coated with a thick layer
+of wet mud that clings stubbornly to boots. Water seeps through the 
+walls, forming rivulets that trickle noisily into shallow pools. The 
+air is cool and heavy, and the sound of slipping feet is a 
+constant companion. As you reach the bottom, the mud starts to drop
+through a hole in the center of the floor.
 ~
 96 0 0
 D2
@@ -1490,14 +1569,18 @@ D5
 0 -1 9669
 S
 #9669
-golgothan ruins~
-   You have descended deep within the mountain into an ancient series 
-of burial chambers.  Built in ancient days, the decayed remains of heroes
-long past can be seen imbedded in the walls and sticking out of the ground.
-Unlike above, where the remains were identifiable, these poor souls names
-have been lost in time.
+Golgothan Ruins~
+The Golgothan Ruins stand as a crumbling monument to an age long 
+past, their weathered stones intertwined with wild vines and 
+creeping moss. Scattered among the debris are ancient graves, each 
+marked with a simple stone slab etched with faded names of 
+long-dead heroes. Broken statues, once proud sentinels, now 
+lie in disrepair, their faces worn smooth by centuries of 
+wind and rain. The air here is heavy with reverence, as if 
+the spirits of the fallen still guard this place, whispering 
+their forgotten tales on the breeze.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1512,13 +1595,17 @@ plate~
 8 -1 9690
 S
 #9670
-golgothan ruins~
-   The cobblestone walls of the ruins continue lining the walls of the 
-passageway here. Cobwebs dangle from the ceiling, undisturbed by 
-man for what must be eons at this point.  Your lights reflecting off the
-Walls provide an eerie glow, lighting up scurrying creatures in the webs.
+Golgothan Ruins~
+The ruins are a solemn graveyard for legends, their broken arches and
+toppled towers overshadowing rows of ancient tombstones. Each grave is
+marked with a weathered epitaph, some bearing the names of heroes
+whose deeds were once sung across the land. Stone cairns and rusting
+relics rest atop the burial sites, silent reminders of the sacrifices 
+made here. Time has ravaged this once-hallowed ground, but the faint 
+hum of a forgotten hymn seems to rise from the earth, carried 
+by the wind.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1529,11 +1616,16 @@ D3
 0 -1 9669
 S
 #9671
-golgothan ruins~
-   The tunnels through the ruins converge here in a small chamber.  The
-floor here is covered in stone slabs, sealing the remains of lost heroes 
-into the ground below.  Echoes of distant screams echo from the passage
-to the south.  
+Golgothan Ruins~
+Beneath the fractured spires and crumbling walls of the Golgothan 
+Ruins lie the graves of those who once shaped the fate of empires. 
+These resting places, now overgrown with weeds and wildflowers, are 
+scattered haphazardly across the landscape. The faint carvings 
+of swords, shields, and crowns on the grave markers tell of 
+warriors, rulers, and sages who earned their eternal rest here. A 
+faint glow emanates from certain stones, as if the heroes spirits 
+still watch over the desolation, guarding the ruins from whatever forces
+would disturb their peace.
 ~
 96 0 0
 D1
@@ -1550,7 +1642,7 @@ D3
 0 -1 9670
 S
 #9672
-undead bard~
+Golgothan Ruins~
    The walls here are covered in cobblestones, hiding within the remains of
 the ancients who once roamed these hallowed grounds.  The musky scent 
 of death and decay permeate the air, and you struggle to contain your gorge.
@@ -1570,12 +1662,13 @@ plate~
 8 -1 9684
 S
 #9673
-golgothan ruins~
-   You have descended deep within the mountain into an ancient series 
-of burial chambers.  Built in ancient days, the decayed remains of heroes
-long past can be seen imbedded in the walls and sticking out of the ground.
-Unlike above, where the remains were identifiable, these poor souls names
-have been lost in time.
+Golgothan Ruins~
+These ancient ruins lie in eerie silence, their towering stone columns
+cracked and covered in dark moss. Faint traces of long-forgotten glyphs
+are etched into the crumbling walls, hinting at the dark rituals once
+performed here. The ground is uneven, strewn with rubble and broken 
+statues that seem to watch with empty eyes. The names on the graves
+have been lost to time.
 ~
 96 0 0
 D3
@@ -1588,12 +1681,16 @@ D4
 0 -1 9664
 S
 #9674
-golgothan ruins~
-   The walls of the tunnels are squeezing you from the left and right,
-reminding you of how much mountain is all around you.  As the way 
-gets tighter, your shoulder brush against the skulls imbedded into the
-walls around you.  As you move to the south, the echoes and screams
-become louder and louder.
+Golgothan Ruins~
+Amid the crumbled walls and toppled columns of the Golgothan Ruins
+lie the graves of heroes who fought their last battles in defense 
+of a forgotten kingdom. These burial mounds are adorned with 
+shattered weapons and rusting helms, tributes to those who rest 
+beneath. Weathered inscriptions, nearly illegible, tell fragments 
+of their valor. An eerie silence hangs over the site, broken only 
+by the soft rustle of wind through the sparse grass. The very air 
+here feels sacred, as though the bravery of the departed lingers 
+as an unseen presence.
 ~
 96 0 0
 D0
@@ -1606,27 +1703,26 @@ D2
 0 -1 9675
 S
 #9675
-the ossuary~
-   You stand in the middle of a room, surrounded by hundreds of 
-skeletons of various origins.  Some look human, others animal 
-and still others that resemble no creature you have ever seen.
-Piles of bones have been meticuously arranged in strange geometric 
-patterns which at first make no sense, but coalesce into a 
-meaningful form the longer you look.
+The Ossuary~
+This chamber is a grim testament to death, its walls lined with neatly
+stacked bones and skulls. The air is cool and still, carrying the faint
+scent of dry rot. In the center, a massive stone reliquary stands, its
+surface carved with macabre symbols and adorned with offerings of melted
+candles and coins.
 ~
-96 0 0
+96 67108864 0
 D0
 ~
 ~
 0 -1 9674
 S
 #9677
-A dusty cave~
-   Standing here in this small dusty cave, you revel in the silence now that 
-the ever-present winds from outside are subdued.  As your eyes adjust to 
-the darkness inside this cave, you notice a thick layer of dust coating the 
-floor and walls, with the lone exception being a fresh set of footprints on
-the stairs the lead downward into the murky depths below.
+A Dusty Cave~
+This dry, desolate cave is coated in a thick layer of dust that rises
+with every step, forming a choking haze. The air is stifling, and the
+walls are rough and barren, save for faint scratch marks that hint 
+at past inhabitants. Occasional gusts of wind disturb the 
+silence, carrying a faint whisper through the empty space.
 ~
 96 9 0
 D4
@@ -1639,24 +1735,25 @@ D5
 ~
 0 -1 9678
 E
-barrel~
-An enormous wine barrel stands here before you.  Made of what
-appears to be some kind of ages ironwood, you are impresse
-that such a thing is still here after all these years.
-~
-E
 wine~
 An enormous wine barrel stands here before you.  Made of what
 appears to be some kind of ages ironwood, you are impressed
 that such a thing is still here after all these years.
 ~
+E
+barrel~
+An enormous wine barrel stands here before you.  Made of what
+appears to be some kind of ages ironwood, you are impresse
+that such a thing is still here after all these years.
+~
 S
 #9678
-A twisting staircase~
-   As you descend deeper and deeper into Morgoth Mountain, whispers of 
-fairy tales come back to your mind, and spark within your imagination images
-of darkness and terror.  Is it true, the old stories, or are you merely in an
-ancient tomb, forgotten by man and animal alike?
+A Twisting Staircase~
+This spiraling staircase seems to go on endlessly, its stone steps
+worn smooth and uneven by countless travelers. The walls are narrow
+and claustrophobic, with only the occasional torch bracket providing 
+dim light. The faint sound of footsteps echoes up and down the 
+staircase, creating an unsettling illusion of company.
 ~
 96 9 0
 D4
@@ -1689,7 +1786,7 @@ D4
 0 -1 9678
 S
 #9680
-The dirty mage's hut~
+The Dirty Mage's Hut~
    The wind rips through the clapboard walls of this shambling, poorly
 constructed shelter.  This ramshackle building is home to a hermit with
 complete lack of organization and sanitation.  Tucked into various nooks
@@ -1703,7 +1800,7 @@ D5
 0 -1 9620
 S
 #9681
-The condor nest~
+The Condor Nest~
      You have just climbed into one of the largest birds nests that
 you have ever had the chance to see.  Unfortunately for you, there
 are three baby condors crouching at the feet of an enormous condor
@@ -1711,19 +1808,20 @@ that must surely be their mother.
 ~
 96 0 0
 D5
+A large nest of wood and stone.
 ~
 nest condor~
 11 -1 9625
 S
 #9684
-an earthen tunnel~
-   Descending beneath the ruins above, the tunnels here are growing more
-wild with each step.  The walls and floor are a softer, earthen material, 
-unlike the stone that has been surrounding you thus far.  The sounds of
-your passage are muffled by the earth, softening footsteps and silencing
-whispers.
+An Earthen Tunnel~
+The tunnel is rough-hewn, its walls packed with dirt and tangled roots
+that hang like natural curtains. The ground beneath is uneven and 
+damp, with occasional puddles reflecting the dim light from flickering
+torches. The earthy smell is strong, mingling with the faint 
+scent of decay.
 ~
-96 4 0
+96 67108868 0
 D0
 ~
 ~
@@ -1734,13 +1832,13 @@ plate~
 8 -1 9672
 S
 #9685
-an earthen tunnel~
+An Earthen Tunnel~
    The tunnel continues on as you reach a turn, stretching to the east
 before you.  The silence continues here, and your heavy boots leave
 tracks for anyone to see.  The occasional spider crawls into your path
 and your eyes drift upwards, watchful for any spiderwebs.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1751,7 +1849,7 @@ D2
 0 -1 9684
 S
 #9686
-an earthen tunnel~
+An Earthen Tunnel~
    Reaching yet another turn in the tunnel, you wonder if this path is
 turning back upon itself.  The walls are slightly damp here, perhaps 
 there is an underground river nearby causing the increase in humidity.
@@ -1769,7 +1867,7 @@ D3
 0 -1 9685
 S
 #9687
-an earthen tunnel~
+An Earthen Tunnel~
    The pathway here takes a sudden dive downwards, and the ground 
 tries to give way beneath your feet.  You can see that someone long ago
 cut terraces into the decline, and you carefully wind your way from
@@ -1786,7 +1884,7 @@ D5
 0 -1 9688
 S
 #9688
-an earthen tunnel~
+An Earthen Tunnel~
    The steep incline above flattens out here, and the earthen walls  
 continue. The path continues onwards to the west, and you try to
 shake the dirt from your feet as you walk.  The shadows play tricks 
@@ -1803,7 +1901,7 @@ D4
 0 -1 9687
 S
 #9689
-an earthen tunnel~
+An Earthen Tunnel~
    The earth on the floor and walls begins to give way here to a more solid
 stone. Your footsteps begin to echo, and to the south you see a dim glow
 as your torches reflect off of a shiny material ahead.  Guttural voices drift
@@ -1820,14 +1918,13 @@ D2
 0 -1 9696
 S
 #9690
-tunnel chiseled from granite~
-   Moving deeper into the mountain, your sense of dread grows with each
-step. A palpable evil permeates the air, causing your skin to break out in
-goosebumps. The tunnel beneath the metal plate above you has been
-hewn into the granite of the mountain by ancient stonemasons of an age
-long gone.
+Tunnel Chiseled from Granite~
+This narrow tunnel is meticulously carved, its granite walls polished
+smooth but marred by faint cracks. Occasional torch brackets illuminate 
+the path, casting long shadows that flicker ominously. The sound of 
+dripping water echoes faintly, and the air is cool and heavy.
 ~
-96 4 0
+96 67108868 0
 D4
 ~
 plate~
@@ -1838,14 +1935,13 @@ D5
 0 -1 9691
 S
 #9691
-tunnel chiseled from granite~
-   The finely hewn granite tunnel ends here at a landing, opening up into
-a larger cavern to the east.  You hear strange shuffling noises in that
-direction, increasing the dread that you have already been feeling.  The 
-stale air and darkness of this place makes you wonder how anything can
-be alive in a place like this.
+Tunnel Chiseled from Granite~
+This narrow tunnel is meticulously carved, its granite walls polished
+smooth but marred by faint cracks. Occasional torch brackets illuminate 
+the path, casting long shadows that flicker ominously. The sound of 
+dripping water echoes faintly, and the air is cool and heavy.
 ~
-96 0 0
+96 67108864 0
 D1
 ~
 ~
@@ -1856,13 +1952,14 @@ D4
 0 -1 9690
 S
 #9692
-the dolmen~
-   You are standing in the west entrance to the ancient dolmen.  Dedicated
-to the kings of old, this place is ancient and awe-inspiring.  Shimmering
-marble columns ring this large memorial, supporting what appears to be a
-single massive slab of marble that makes up the ceiling.  What kind of 
-magic could have placed these massive pieces of stone down inside of the
-mountain?
+The Dolemen~
+The southwest corner of the Dolmen feels darker and more foreboding.
+The marble here is black as night, veined with streaks of crimson 
+that seem to shimmer when viewed from the corner of your eye. The 
+air is heavy and still, and the carvings here depict jagged, claw-like
+shapes intertwined with scenes of destruction. A low, almost 
+imperceptible growl seems to emanate from the stone itself, as 
+though some ancient force is watching and waiting.
 ~
 96 0 0
 D0
@@ -1879,12 +1976,15 @@ D3
 0 -1 9691
 S
 #9693
-the dolmen~
-   The vestiges of an ancient civilization adorn the walls of this opulent
-yet simple burial tomb.  The quality of the craftsmanship and the attention
-to details speaks to the love and care with which this place was built.  Unlike
-the slave built pyramids in the deserts of the eastern expanses, this place 
-brings you a sense of peace and well-being.
+The Dolemen~
+The northwest corner is dominated by a broken stone pillar, its jagged
+edges jutting upward like a jagged fang. The floor here is littered 
+with fragments of marble, the largest piece bearing runes that glow 
+faintly blue. A strange chill permeates the air, and the faint scent 
+of frost lingers despite the stillness of the environment. The walls 
+are adorned with carvings of storms and swirling winds, their sharp 
+edges and chaotic lines contrasting starkly with the otherwise 
+orderly designs of the Dolmen.
 ~
 96 0 0
 D1
@@ -1897,11 +1997,15 @@ D2
 0 -1 9692
 S
 #9694
-the dolmen~
-   The ceiling above you continues to draw your eyes.  The almost glowing
-white marble is unlike any stone you've seen in the mountain so far.  The 
-stones in fact remind you of the quarries in the southern kingdoms, but 
-surely no stone of this size has ever been moved from such a distance.  
+The Dolemen~
+The walls here are lined with intricately carved niches, each containing
+a small marble urn engraved with strange symbols. The floor is composed 
+of polished stone tiles, some bearing deep cracks that reveal 
+faintly glowing veins of crystal beneath. At the far end of the 
+chamber, a large archway stands sealed by a massive slab of black 
+marble, its surface marked with a single glowing rune that 
+pulses rhythmically, as though waiting for a specific touch or 
+incantation to unlock its secrets.
 ~
 96 0 0
 D1
@@ -1918,12 +2022,16 @@ D3
 0 -1 9693
 S
 #9695
-the dolmen~
-
-   Standing in the center of the burial chamber, your echoes bounce off 
-the wall in every direction.  From here you can see the ring of columns,
-carved to luck like ancient ironwood trees standing sentinel over the king
-or queen who was buried here ages ago.
+The Dolemen~
+The heart of the Dolmen is an expansive chamber of polished 
+marble, its smooth surface gleaming faintly under the dim, magical 
+light that emanates from the walls. Massive stone pillars encircle 
+a central altar carved from a single block of pristine white 
+marble, its surface etched with intricate geometric patterns and 
+ancient runes. The air is cool and dry, carrying a faint, metallic 
+tang that hints at the latent power coursing through this place. The 
+silence here is almost oppressive, broken only by the occasional 
+echo of dripping water from somewhere deep within the stone.
 ~
 96 0 0
 D0
@@ -1944,11 +2052,15 @@ D3
 0 -1 9692
 S
 #9696
-the dolmen~
-   Here in the corner of the dolmen, you can really admire the largesse
-of this ancient burial chamber.  The magnificent joinery of the marble
-slabs gives the appearance that the columns are in fact a part of the 
-ceiling, and that everything was hewn from a single piece of stone.
+The Dolemen~
+The northeast corner is dominated by a tall marble monolith, its 
+surface inlaid with veins of shimmering silver that pulse faintly 
+in the still air. The floor here is uneven, the stone cracked and
+fractured as if by some ancient force. Tiny fragments of quartz 
+glimmer faintly in the crevices, catching the ambient light. The 
+carvings on the monolith depict celestial patterns, their precise 
+alignment suggesting a connection to long-forgotten 
+astronomical events.
 ~
 96 0 0
 D0
@@ -1965,12 +2077,14 @@ D3
 0 -1 9694
 S
 #9697
-the dolmen~
-   The majesty of this tomb is unlike anything you've seen in all of your 
-travels. Marble columns shaped into organic tree-like forms hold up 
-what feels like the entire weight of the mountain above you.  Carved
-from single slabs of stone, the effort that went into these magnificent
-edifices is unmatched in all the kingdoms.
+The Dolemen~
+This corner is illuminated by a faint golden glow emanating from 
+glyphs carved into the marble walls. The air is warmer here, carrying
+a faint vibration that can be felt through the soles of your boots. 
+The floor slopes gently downward toward a recessed basin, its edges 
+lined with intricate depictions of fire and molten streams. A faint 
+hum fills the space, as if the chamber itself were alive with 
+dormant energy.
 ~
 96 0 0
 D0
@@ -1983,12 +2097,12 @@ D3
 0 -1 9695
 S
 #9698
-the ante-chamber~
-   This secluded alcove sits just outside of the dolmen to the north.  The
-hushed reverence here speaks of ages passed, and times long gone.  On
-the walls are etched hieroglyphs that haven't seen the eyes of man in
-many a year.  Crude in their depictions, these pictures still possess an
-elegance of a practiced hand.
+The Antechamber~
+This small room is plain and unadorned, with smooth stone walls and a 
+low, arched ceiling. A single torch flickers in a bracket, its light 
+revealing a heavy, iron-bound door on one side and a faintly glowing
+rune etched into the floor. The air is thick with tension, as if 
+something ominous lies just beyond.
 ~
 96 0 0
 D0
@@ -2009,9 +2123,10 @@ D4
 ~
 0 -1 9632
 D5
+A Wooden Doorway
 ~
-~
-0 -1 9628
+doorway~
+1 -1 9628
 S
 #0
 $~
