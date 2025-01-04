@@ -27,13 +27,13 @@ A small marble statue lies here on the ground, straining to contain some interna
 10 10 10
 10
 E
+decaying corpse~
+decaying corpse~
+E
 skeleton~
 The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
 Memories of an ancient time remind you of how the world has moved on.
 ~
-E
-decaying corpse~
-decaying corpse~
 X
 ~
 64 0 0
@@ -108,13 +108,13 @@ a delicately forged platinum key lies here on the ground.~
 50
 E
 platinum key delicate~
-This key is truly the work of the dwarven masters of old.  Carved from
-brilliant platinum, it is a piece of art in it's own right.~
-E
-platinum key delicate~
 This key is truly the work of the dwarven masters of yore.  Carved from
 brilliant platinum, it is a piece of art in it's own right.
 ~
+E
+platinum key delicate~
+This key is truly the work of the dwarven masters of old.  Carved from
+brilliant platinum, it is a piece of art in it's own right.~
 X
 ~
 0 0 0
@@ -287,7 +287,7 @@ M
 ~
 ~
 #9683
-broken sword hilt~
+broken sword hilt warrior~
 the gilded hilt of a broken sword~
 The gilded hilt of a broken, once magnificent sword sits abandoned here.~
 ~
