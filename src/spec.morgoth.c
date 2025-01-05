@@ -201,12 +201,27 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
         }
 
       }
+	  
+	  // Now that we have all the items remove, we need to add in a random class ring.
+		
+		// There is a 10% chance that the Decay will be removed.
+		
+		ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];
+				
+		new_ring = read_object(ring_num,VIRTUAL);
+		
+		if(!new_ring){
+			send_to_char("Nothing seems to happen.\n\r", ch);
+			return TRUE;
+			
+		}
+	  
 
       //All items are in the Altar.   REmove them all and load the ring. 
       if (necromancer && paladin && antipaladin && mage && thief && ninja && cleric && commando && bard && warrior) {
 		
-        act("The altar glows red.", 1, ch, obj, 0, TO_CHAR);
-        act("The altar glows red.", 1, ch, obj, 0, TO_ROOM);
+        act("The altar glows red and blood drains on the floor.", 1, ch, obj, 0, TO_CHAR);
+        act("The altar glows red and blood drains on the floor.", 1, ch, obj, 0, TO_ROOM);
         
 
         for (obj = altar -> contains; obj; obj = next_obj) {
@@ -255,14 +270,8 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
 					
         }
 		
-		// Now that we have all the items remove, we need to add in a random class ring.
 		
-		// There is a 10% chance that the Decay will be removed.
-		
-		ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];
-		
-		new_ring = read_object(585,VIRTUAL);
-		if(chance(100)) REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
+		if(chance(10)) REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
 		
 		obj_to_obj(new_ring, altar);
 		return TRUE;
