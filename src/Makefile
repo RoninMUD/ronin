@@ -205,7 +205,8 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.luthienIV.o \
 	spec.happybob.o \
 	spec.workbench.o \
-	spec.darkspire.o
+	spec.darkspire.o \
+	spec.morgoth.o
 
 ifneq ($(TYPE), live)
 	ifneq ($(TYPE), chaos)
