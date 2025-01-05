@@ -328,7 +328,7 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	//Define all the undead mobs he can summon.
 	int undead_mobs[9] = {UNDEAD_CLERIC,UNDEAD_MAGE,UNDEAD_BARD,UNDEAD_WARRIOR,UNDEAD_THIEF,UNDEAD_PALADIN,UNDEAD_COMMANDO,UNDEAD_ANTI_PALADIN,UNDEAD_NINJA};
 	
-	char *necromanacer_speak[4] = { "Test1", "Test2", "Test3", "Test4" };
+	char *necromanacer_speak[4] = { "Rise again my servants.", "The undead feel no pain.", "True power only comes from death!", "No one can stop the undead." };
 
 	/*Don't waste any more CPU time if no one is in the room. */
 	if (count_mortals_room(mob, TRUE) < 1) return FALSE;
@@ -403,8 +403,8 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 						vict = get_random_victim_fighting(mob);
 						if (vict)
 						{
-							act("$n calmly touches $N with his gnarly.  You don't need this, do you?", 0, mob, 0, vict, TO_NOTVICT);
-							act("$n calmly touches you saying you don't need this, do you? ", 0, mob, 0, vict, TO_VICT);
+							act("$n calmly touches $N with his gnarly finger.  You don't need this lifeforce, do you?", 0, mob, 0, vict, TO_NOTVICT);
+							act("$n calmly touches you saying you don't need this lifeforce, do you? ", 0, mob, 0, vict, TO_VICT);
 							GET_HIT(vict) = GET_HIT(vict) *0.8;	//Remove 20% of Current HP
 						}
 
