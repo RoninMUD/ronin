@@ -138,6 +138,7 @@ void assign_crazylab(void);
 void assign_chess(void);
 void assign_elementalmines(void);
 void assign_darkspire(void);
+void assign_morgoth(void);
 #endif
 
 void assign_mobiles(void)
@@ -238,6 +239,7 @@ void assign_mobiles(void)
   assign_happybob();
   assign_elementalmines();
   assign_darkspire();
+  assign_morgoth();
 #endif
 }
 
