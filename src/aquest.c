@@ -1014,11 +1014,11 @@ const int aq_mob_master_list[][2] = {
   { 26482, 5 }, /* magus */
   { 27712, 5 }, /* bebilith stalker purple spider insect */
   { 19403, 5 }, /* mountaninous grolem */
-//  { 19508, 5 }, /* difficult world elemental earth ruler*/
-//  { 19509, 5 }, /* difficult world elemental fire ruler */
-//  { 19510, 5 }, /* difficult world elemental air ruler */
-//  { 19511, 5 }, /* difficult world elemental lightning ruler */
-//  { 19512, 5 }, /* difficult world elemental water ruler */
+  { 19508, 5 }, /* difficult world elemental earth ruler*/
+  { 19509, 5 }, /* difficult world elemental fire ruler */
+  { 19510, 5 }, /* difficult world elemental air ruler */
+  { 19511, 5 }, /* difficult world elemental lightning ruler */
+  { 19512, 5 }, /* difficult world elemental water ruler */
 //  { 10502, 6 }, /*tarion cavalier*/
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
@@ -1361,6 +1361,7 @@ const int aq_obj_master_list[][2] = {
   {4508, 3}, // Boots of Striding 10
   {4510, 3}, // A Mushroom-Top Loincloth 10
   {4604, 3}, // the Finger of Thievery 10
+  {5709, 3}, // The medallion of Akinra 10
   {6802, 3}, // leg plates of devotion 50
   {6803, 3}, // buckler of obeisance 50
   {7502, 3}, // a dueling pistol 50
@@ -1419,10 +1420,8 @@ const int aq_obj_master_list[][2] = {
   {27108, 3}, // a Staff of the Magi 78
   {27113, 3}, // the thick hide of a dinosaur 23
   {27116, 3}, // The Shadowblade 32
-  {28503, 3}, // Pan's Flute 15
   {204, 4}, // A gleaming spyglass 7
-  {3907, 4}, // The tail of the Celestial Dragon 10
-  {5709, 4}, // The medallion of Akinra 10
+  {3907, 4}, // The tail of the Celestial Dragon 10  
   //{5711, 4}, // mercury's boots 10
   {5804, 4}, // Pair of red lederhosen 20
   {6208, 4}, // a chitonous exoskeleton 10
@@ -1460,7 +1459,14 @@ const int aq_obj_master_list[][2] = {
   {17080, 4}, // a Silver Harmonica 20
   {17321, 4}, // Cube of Awareness 50
   {20840, 4}, // a shield of mottled flesh 12
+  {20901, 4},// Hero's Robe
+  {20903, 4},// A silver chainlink belt
+  {20904, 4},// Mismatched Slippers
+  {20906, 4},// fireblade
+  {20909, 4},// A foaming stein
   {21108, 4}, // A giant leaf shield 10
+  {21109, 4}, // An Ancient Torch  10
+  {21110, 4}, // A sword made from bone  10
   {21205, 4}, // Boots of Stealth 10
   {21217, 4}, // the Mallet of the Underworld 10
   {23008, 4}, // Pelt of the Glacial Polar Bear 5
@@ -1478,6 +1484,7 @@ const int aq_obj_master_list[][2] = {
   {27110, 4}, // a hunting knife 12
   {27123, 4}, // a wreath of true laurel 10
   {27721, 4}, // Wristband of the Assassin 10
+  {28503, 4}, // Pan's Flute 15
   {518, 5}, // a shinobigawa 14
   {802, 5}, // Sword of Healing 10
   {4608, 5}, // a Parasite's Fang 5
@@ -1493,12 +1500,15 @@ const int aq_obj_master_list[][2] = {
   {12211, 5}, // Ettins Cape 10
   //{12822, 5}, // the Scent of a Mankey 10
   {12827, 5}, // A bag of MankeyBits 10
+  {12908, 5}, //The Prismatic Star of Gemini
   {12928, 5}, // a silver katana 8
   {13001, 5}, // an Elven Cloak 15
   {14002, 5}, // The Shadow Cloak 15
   {14004, 5}, // The Shadow Plate 15
+  {14203, 5}, // A Boundary Warden Knife
   {16528, 5}, // A Stained Apron 20
   {17309, 5}, // Fiend's Girdle 30
+  {19512, 5}, // a rainbow buckler
   {20107, 5}, // Drums of Panic 35
   {21110, 5}, // A sword made from bone 10
   {21200, 5}, // Darkened Bone Ring 10
@@ -1513,6 +1523,8 @@ const int aq_obj_master_list[][2] = {
   {27106, 5}, // Gladius 9
   {27712, 5}, // Basilisk Blood Potion 10
   {27720, 5}, // Banded Mail of the Bandit 5
+  {28763, 5}, // The Ring of Discord
+  {28764, 5}, // The Ring of Dissonance
   {704, 6}, // Mask of Lizard Powers 10
   {707, 6}, // The Ring of Eternal Life 7
   {4704, 6}, // Werra's Belt of Garbage 5
@@ -1530,9 +1542,12 @@ const int aq_obj_master_list[][2] = {
   {17005, 6}, // Hood of Darkness 10
   {17371, 6}, // Dragon Horn 15
   {17396, 6}, // A mithril hammer 10
+  {19513, 6}, // heavy platinum arm bands
+  {19514, 6}, // heavy platinum leg bands
   {20145, 6}, // War Fan 17
   {21206, 6}, // Armlinks of Fire 15
   {21210, 6}, // a Dragon Scale Belt 17
+  {21212, 6}, // The Stone Dragon's Shield
   {21321, 6}, // A Pair of Gleaming Gauntlets 2
   {26406, 6}, // A Holey Majestic Cloak 12
   {26477, 6}, // The Mantle of Devotion 8
@@ -1542,7 +1557,14 @@ const int aq_obj_master_list[][2] = {
   {5546, 7}, // Long Spiked Whip 10
   {7700, 7}, // Typik's Bloody Entrails 17
   {11702, 7}, // A Silver Full Plate 11
+  {14213, 7},  //A Rose Pendant
+  {14214, 7},  //Emma's Shawl
   {17322, 7}, // Dragon Highlord's Shield 10
+  {19501, 7}, // The beloved ring of stone
+  {19503, 7}, // a blue flame dagger
+  {19506, 7}, // a raging hurricane helmet
+  {19508, 7}, // the electric shield
+  {19510, 7}, // a flowing cloak of water
   {21207, 7}, // Black Demon's Talon 10
   {21212, 7}, // The Stone Dragon's Shield 10
   {26478, 7}, // The Signet Ring of the Sultan 6
@@ -1582,6 +1604,8 @@ const int aq_obj_master_list[][2] = {
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
   {599, 20}, // The Gong of Unholy Wrath 8
+  {2721, 20}, // A glowing wristband of bone
+  {2722, 20}, // A giant globule of honey
   {5580, 20}, // Scorched Abdomen 8
   {5581, 20}, // Some Fine Elastic Cartilage 9
   {20132, 20}, // A Gleaming Jade Battlesuit 6
