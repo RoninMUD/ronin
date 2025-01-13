@@ -1648,16 +1648,17 @@ int ench_rings(OBJ *obj, CHAR *ch, int cmd, char *argument) {
     if (!obj || !ch || !OBJ_CARRIED_BY(obj) || (ch != OBJ_CARRIED_BY(obj)) || !AWAKE(ch) || IS_IMMORTAL(ch)) return FALSE;
 
     bool zap = FALSE;
-
+	//Fisher Fix - Switched Checks due to Item ANTIs
+	//Initially added because of Druid SC changes.
     switch (V_OBJ(obj)) {
       case DISCORD:
-        if (GET_CLASS(ch) != CLASS_PALADIN) {
+        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
           zap = TRUE;
         }
         break;
 
       case DISSONANCE:
-        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
+        if (GET_CLASS(ch) != CLASS_PALADIN) {
           zap = TRUE;
         }
         break;
