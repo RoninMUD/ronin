@@ -3034,11 +3034,13 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
 
   /* Signal NPCs. */
   if (IS_NPC(ch)) {
-    if (cmd == MSG_MOBACT) {
+    /* Run NPC activity routines. */
+    if ((cmd == MSG_MOBACT) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
       mobile_activity(ch);
     }
 
-    if (mob_proto_table[ch->nr].func) {
+    /* Call NPC special procedure if it exists. */
+    if (mob_proto_table[ch->nr].func && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
       stop = mob_special(ch, signaler, cmd, arg);
     }
   }
