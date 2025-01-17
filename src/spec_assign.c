@@ -137,6 +137,7 @@ void assign_happybob(void);
 void assign_crazylab(void);
 void assign_chess(void);
 void assign_elementalmines(void);
+void assign_darkspire(void);
 #endif
 
 void assign_mobiles(void)
@@ -236,6 +237,7 @@ void assign_mobiles(void)
   assign_workbench();
   assign_happybob();
   assign_elementalmines();
+  assign_darkspire();
 #endif
 }
 
