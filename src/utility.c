@@ -1346,7 +1346,15 @@ struct char_data * get_random_target(struct char_data *ch, bool see_invis, bool 
   struct char_data *vict = NULL;
   int num=0,target_num=0;
 
+	//Fisher - Adding Check for Eligible Room
+	//Night Discoved this bug 1/17/2025
+	
+	if(CHAR_REAL_ROOM(ch) < 0){
+		return NULL;
+	}
+
   /* count # eligible targets in room */
+  
   for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
     if (ch == vict) {
       /* can see yourself */
@@ -1414,6 +1422,13 @@ count_mortals_room_fighting (struct char_data *ch, bool see_invis) {
 struct char_data * get_random_target_fighting(struct char_data *ch, bool see_invis, bool vict_canbe_pc, bool vict_canbe_npc, bool vict_canbe_mount, bool see_imm) {
   struct char_data *vict = NULL;
   int num=0,target_num=0;
+  
+    //Fisher - Adding Check for Eligible Room
+	//Night Discoved this bug 1/17/2025
+	
+	if(CHAR_REAL_ROOM(ch) < 0){
+		return NULL;
+	}
 
   /* count # eligible targets in room */
   for(vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = vict->next_in_room) {
