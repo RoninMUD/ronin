@@ -1,8 +1,8 @@
 /*spec.chess.c - Specs for Chess
 
-     Written by Sane for RoninMUD
+     Written by Sane/Fisher for RoninMUD
      Last Modification Date: 4/21/2021
-   Modified by Fisher.
+     Modified 1/17/2025- Fisher
 
      Basic Specs for the mobs and rooms in the zone.
 */
@@ -142,8 +142,6 @@
 
 
 
-
-
 int get_uber_chess(int color)
 {
     switch (number(1, 10))
@@ -170,7 +168,6 @@ int get_uber_chess(int color)
     return 0;
 }
 
-
 void reset_chess_board(CHAR* mob)
 {
     int i,j;
@@ -181,8 +178,6 @@ void reset_chess_board(CHAR* mob)
     //Purge All Remaining Pieces
     for(i=CHESS_ZONE_BOTTOM;i<=CHESS_ZONE_TOP;i++) {
 
-
-
         for (vict = world[real_room(i)].people; vict; vict = next_v) {
             next_v = vict->next_in_room;
 
@@ -191,37 +186,16 @@ void reset_chess_board(CHAR* mob)
 
             if(V_MOB(mob) == V_MOB(vict)) continue;
 
-            //If not a chess mob - continue
-            if (!IS_CHESS_MOB(vict)) continue;
-
-            //Double Check NPC Flag
-            if (IS_NPC(vict)){
-                strip_char(vict);
-                extract_char(vict);
-            }
+            //If you find a chess mob - remove it.  
+            if (IS_CHESS_MOB(vict)){
+				//Double Check NPC Flag
+				if (IS_NPC(vict)){
+					strip_char(vict);
+					extract_char(vict);
+				}
+			}
         }
-
-
-
     }
-
-    /*
-    //Purge all the corpses and other objects
-
-        //Can we protect against losing player items?
-
-        for (obj = world[real_room(i)].contents; obj; obj = next_o) {
-            //Get Real Object Number
-            //If Not a Chess Item - Skip Item
-            next_o = obj->next_content;
-
-            if(!IS_CHESS_OBJECT(obj)) continue;
-
-            //Remove Object.
-            extract_obj(obj);
-        }
-    */
-
     //Reset All Pieces
 
     //Load White Pieces
@@ -240,7 +214,6 @@ void reset_chess_board(CHAR* mob)
         char_to_room(mob_to_spawn, real_room(i));
         j++;
     }
-
      //Load Black Pieces
 
      //Load the Pawns
@@ -259,34 +232,9 @@ void reset_chess_board(CHAR* mob)
          j++;
      }
 }
-
-
 /*
-
-
-//Items
-#define BLACK_ROOK_ITEM     2306
-#define WHITE_ROOK_ITEM     2301
-#define WHITE_BISHOP_ITEM   2304
-#define BLACK_BISHOP_ITEM   2309
-
-//Recipes
-
-#define ROOK_RECIPE         2312
-#define BISHOP_RECIPE       2314
-#define KNIGHT_RECIPE       2316
-#define QUEEN_RECIPE        2318
-
 Load the items based on their repop rates
-
-
-#define IS_SUPER_ROOK(ch)(IS_SUPER_WHITE_ROOK(ch) || IS_SUPER_BLACK_ROOK(ch))
-#define IS_SUPER_KNIGHT(ch)(IS_SUPER_WHITE_KNIGHT(ch) || IS_SUPER_BLACK_KNIGHT(ch))
-#define IS_SUPER_BISHOP(ch)(IS_SUPER_WHITE_BISHOP(ch) || IS_SUPER_BLACK_BISHOP(ch))
-#define IS_SUPER_QUEEN(ch)(IS_SUPER_WHITE_QUEEN(ch) || IS_SUPER_BLACK_QUEEN(ch))
-
 */
-
 void load_mob_items(CHAR* mob){
     //Declare Variables
     OBJ *obj = NULL;
@@ -337,7 +285,6 @@ void load_mob_items(CHAR* mob){
         recipe = QUEEN_RECIPE;
     }
 
-
     //Load Normal Item into inventory if its under its repop percent.
     obj=read_object(object_to_load, VIRTUAL);
     rnum=real_object(object_to_load);
@@ -346,9 +293,7 @@ void load_mob_items(CHAR* mob){
         obj_to_char(obj,mob);
     }
 
-
     //Load Recipe onto equip slot.
-
     obj=EQ(mob, HOLD);
     rnum=real_object(recipe);
     if(number(1,100)<=(obj_proto_table[rnum].obj_flags.repop_percent))
@@ -360,10 +305,6 @@ void load_mob_items(CHAR* mob){
         }
     }
 }
-
-
-
-
 int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
 {
     CHAR* uber_chess;
@@ -372,10 +313,8 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     char buf[MAX_STRING_LENGTH];
     int zone;
 
-
     //Set the Zone so it exists for the purge
     //zone = world[CHAR_REAL_ROOM(mob)].zone;
-
     switch (cmd)
     {
     case MSG_MOBACT:
@@ -432,9 +371,7 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
         if (IS_WHITE_KING(mob) || IS_BLACK_KING(mob))
         {
             // The king is dead, LONG LIVE THE KING!
-
             zone = CHESS_ZONE;
-
             if (zone >= 0)
             {
                 clean_zone(zone);
@@ -458,7 +395,6 @@ int chess_mob(CHAR* mob, CHAR* ch, int cmd, char* arg)
     return FALSE;
 }
 
-
 int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
 {
     if(cmd != MSG_TICK)
@@ -474,15 +410,10 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
      return FALSE;
 }
 
-
-
-
 void assign_chess(void)
 {
-
     //Assing Objects
     assign_obj(WHITE_BISHOP_ITEM, bishop_holy_ring);
-
 
     //Assign Spec to All White Chess Pieces
     assign_mob(WHITE_PAWN, chess_mob);
@@ -499,9 +430,7 @@ void assign_chess(void)
     assign_mob(UBER_WHITE_KNIGHT, chess_mob);
     assign_mob(UBER_WHITE_ROOK, chess_mob);
 
-
     //Assign Spec to All Black Chess Pieces
-
     assign_mob(BLACK_PAWN, chess_mob);
     assign_mob(BLACK_QUEEN_ROOK, chess_mob);
     assign_mob(BLACK_QUEEN_KNIGHT, chess_mob);
@@ -516,6 +445,3 @@ void assign_chess(void)
     assign_mob(UBER_BLACK_KNIGHT, chess_mob);
     assign_mob(UBER_BLACK_ROOK, chess_mob);
 }
-
-
-
