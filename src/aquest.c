@@ -1410,6 +1410,7 @@ const int aq_obj_master_list[][2] = {
   {17300, 3}, // Frosted Bracelet 55
   {20147, 3}, // a Ninjato 100
   {20825, 3}, // Wings of the Cloaker Lord 20
+  {20840, 3}, // a shield of mottled flesh 12
   {21215, 3}, // Golden Dagger 29
   {21305, 3}, // A broken sword 30
   {24904, 3}, // Bracelet made from roots 25
@@ -1450,6 +1451,7 @@ const int aq_obj_master_list[][2] = {
   {13401, 4}, // a wispy cloud 15
   {13506, 4}, // Glowing armbands of Creaz 20
   {13507, 4}, // Ornate platinum belt 20
+  {13508, 4}, // A scimitar of Flame
   {14503, 4}, // a Blood-Red Amulet 12
   {16512, 4}, // A Rusted Bucket 15
   {16513, 4}, // A rotting bridle 15
@@ -1457,8 +1459,7 @@ const int aq_obj_master_list[][2] = {
   {16530, 4}, // Filthy Slippers 75
   {17024, 4}, // A pointy wizard's hat 20
   {17080, 4}, // a Silver Harmonica 20
-  {17321, 4}, // Cube of Awareness 50
-  {20840, 4}, // a shield of mottled flesh 12
+  {17321, 4}, // Cube of Awareness 50 
   {20901, 4},// Hero's Robe
   {20903, 4},// A silver chainlink belt
   {20904, 4},// Mismatched Slippers
@@ -1596,18 +1597,30 @@ const int aq_obj_master_list[][2] = {
   {26711, 10}, // The Greatsword of the Guard 8
   {27711, 10}, // A Carapace Shield 7
   {4478, 15}, // A Pretty Noose 8
+  {4479, 15}, // A Translucent Helm 8
+  {4485, 15}, // Pearl-White Blindfold 15
+  {4486, 15}, // The Cross of Virtue 7
+  {4487, 15}, // Gown of Good Judgement 9
   {4488, 15}, // Axe of Justice 10
+  {4489, 15}, // Ornament of Righteousness  6 
   //{5807, 15}, // Silk Suit 20
+  {11700, 15}, // Soul Stealer
   {11712, 15}, // Armor of Dark Angels 8
   {19400, 15}, // An Extraordinarily Large Grolem Beak 10
   {26404, 15}, // The Dark Sphere of Ul 8
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
+  {587, 20}, // Icon of Possession
   {599, 20}, // The Gong of Unholy Wrath 8
   {2721, 20}, // A glowing wristband of bone
   {2722, 20}, // A giant globule of honey
   {5580, 20}, // Scorched Abdomen 8
   {5581, 20}, // Some Fine Elastic Cartilage 9
+  {5583, 20}, // Scorched Exoskeleton
+  {5584, 20}, // Belt of Spider Powers 9
+  {5585, 20}, // Scorched spider skin sleeves9
+  {5586, 20}, // Scorched spider skin leggings 9
+  {5587, 20}, // An ancient drow relic 
   {20132, 20}, // A Gleaming Jade Battlesuit 6
   {20138, 20}, // Helm of Lacquered Wood 8
   {21329, 20}, // a swarm of angry beetles 4
