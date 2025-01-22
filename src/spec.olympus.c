@@ -32,10 +32,11 @@
 
 #define WATERFALL_ROOM 28866
 #define OFF_MOUNTAIN 28801
-
+#define HEPHAESTUS_FORGE_ROOM 28880
 
 /*Objects */
 #define LARGE_ROCK 28840
+#define HEPHAESTUS_FORGE 28841
 
 
 /*Mobs */
@@ -70,6 +71,8 @@
 #define STATE2 (1 << 1)	//2
 #define STATE3 (1 << 2)	//4
 #define STATE4 (1 << 3)	//8
+#define STATE5 (1 << 4)	//32
+#define STATE6 (1 << 5)	//16
 
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
@@ -1749,14 +1752,131 @@ int olympus_artemis(CHAR *mob, CHAR *ch, int cmd, char *arg)
   return FALSE;
 }
 
+/*
+Check the state of the forge.
+Increment by 1 for each state that exists.
+
+
+*/
+
+int get_forge_state(CHAR *mob){
+	
+	int state = 0;
+	
+	if(IS_SET(GET_BANK(mob), STATE1)){
+		
+		state++;
+	}
+	if(IS_SET(GET_BANK(mob), STATE2)){
+		
+		state++;
+	}
+	if(IS_SET(GET_BANK(mob), STATE3)){
+		
+		state++;
+	}
+	if(IS_SET(GET_BANK(mob), STATE4)){
+		
+		state++;
+	}
+	if(IS_SET(GET_BANK(mob), STATE5)){
+		
+		state++;
+	}
+
+	return state;
+}
+// Increase the state of Forge by 1
+//If 1 bit is set, exit the function.
+void increment_forge_state(CHAR *mob){
+	
+	bool cont = TRUE;
+	
+	if(!IS_SET(GET_BANK(mob), STATE1) && cont){
+		
+		SET_BIT(GET_BANK(mob), STATE1);
+		cont = FALSE;
+	}
+	if(!IS_SET(GET_BANK(mob), STATE2) && cont){
+		
+		SET_BIT(GET_BANK(mob), STATE2);
+		cont = FALSE;
+	}
+	if(!IS_SET(GET_BANK(mob), STATE3) && cont){
+		
+		SET_BIT(GET_BANK(mob), STATE3);
+		cont = FALSE;
+	}
+	if(!IS_SET(GET_BANK(mob), STATE4) && cont){
+		
+		SET_BIT(GET_BANK(mob), STATE4);
+		cont = FALSE;
+	}
+	if(!IS_SET(GET_BANK(mob), STATE5) && cont){
+		
+		SET_BIT(GET_BANK(mob), STATE5);
+		cont = FALSE;
+	}
+	
+	
+	
+}
+
+//Decrement the state of the forge by 1
+//Once you have removed all 5, remove STATE6, so it can start over.
+void decrement_forge_state(CHAR *mob){
+	
+	bool cont = TRUE;
+	
+	
+	
+	if(IS_SET(GET_BANK(mob), STATE1) && cont){
+		act("The Forge starts to cool down.",0,mob,0,0,TO_ROOM);	
+		REMOVE_BIT(GET_BANK(mob), STATE1);
+		cont = FALSE;
+	}
+	if(IS_SET(GET_BANK(mob), STATE2) && cont){
+		act("The Forge starts to cool down.",0,mob,0,0,TO_ROOM);	
+		REMOVE_BIT(GET_BANK(mob), STATE2);
+		cont = FALSE;
+	}
+	if(IS_SET(GET_BANK(mob), STATE3) && cont){
+		act("The Forge starts to cool down.",0,mob,0,0,TO_ROOM);	
+		REMOVE_BIT(GET_BANK(mob), STATE3);
+		cont = FALSE;
+	}
+	if(IS_SET(GET_BANK(mob), STATE4) && cont){
+		act("The Forge starts to cool down.",0,mob,0,0,TO_ROOM);	
+		REMOVE_BIT(GET_BANK(mob), STATE4);
+		cont = FALSE;
+	}
+	if(IS_SET(GET_BANK(mob), STATE5) && cont){
+		act("The Forge starts to cool down.",0,mob,0,0,TO_ROOM);	
+		REMOVE_BIT(GET_BANK(mob), STATE5);
+		cont = FALSE;
+	}
+	
+	//If you have unset all 5 flags and cont is true, then lets reset STATE 6
+	//This will allow the forge to start charging again.
+	
+	if(cont){
+		REMOVE_BIT(GET_BANK(mob), STATE6);
+		act("The Forge has become cold and lifeless.",0,mob,0,0,TO_ROOM);	
+	}
+	
+	
+	
+}
+
 int olympus_hephaestus(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
 	
   //These are default declarations to give variables to characters.
   char buf[MAX_STRING_LENGTH];
-  CHAR *vict, *next_vict;
+  //CHAR *vict, *next_vict;
   
-  int stun_delay;
+  //int stun_delay;
+  int forge_state=0;
 
   //Define any other variables
 
@@ -1767,6 +1887,7 @@ int olympus_hephaestus(CHAR *mob, CHAR *ch, int cmd, char *arg)
   
   char *hephaestus_combat_speak[5] = { "Behold the strength of a god who builds and destroys!","Your armor will crumble under my strike!","My hammer forges not only weapons but destruction!","The flames of creation become your undoing!","Feel the weight of my forge's fury!"};
   
+  //char *missles[5] = {"Metal Tongs","A dense hammer","A sharp chisel","A flat file","A giant chunk of coal"};
   
   switch (cmd)
   {
@@ -1793,49 +1914,69 @@ int olympus_hephaestus(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			do_say(mob, buf, CMD_SAY);
 		  }
 
-
-        switch (number(0, 5))
+		
+		
+		
+        switch (number(0, 7))
         {
-          case 0:
-            stun_delay = number(1, 3);
-			act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,mob,0,0,TO_ROOM);
-			for(vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-			{
-				next_vict = vict->next_in_room;
-				if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-				damage(mob,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
-				WAIT_STATE(vict,PULSE_VIOLENCE*stun_delay);
-            }
-            break;
+          case 0: //Infuse the Forge.
           case 1:
-            break;
           case 2:
-            vict = get_random_victim_fighting(mob);
-			if (vict)
-			{
-			  act("$n wields his sword and advances towards the enemy.",0,mob,0,0,TO_ROOM);
-			  act("A fine steel blade stabs into your chest.",0,mob,0,vict,TO_VICT);
-			  act("$N screams as the blade pierces $S chest.",0,mob,0,vict,TO_NOTVICT);
-			  damage(mob,vict,1450,TYPE_UNDEFINED,DAM_PHYSICAL);
-			}
-			break;
 		  case 3:
-			break;
 		  case 4:
+		  case 5:		
+		  case 6:		
+		  case 7: // Increment the Forge	
+					if(!IS_SET(GET_BANK(mob), STATE6)){
+					  act("$n infuses the forge with magic.",0,mob,0,0,TO_ROOM);					
+					  increment_forge_state(mob);
+					}
 			break;
-		  case 5:
-			vict = get_random_victim_fighting(mob);
-			if (vict)
-			{
-			  act("$n wields his sword and jabs towards the enemy.",0,mob,0,0,TO_ROOM);
-			  act("A fine steel blade jabs into your chest.",0,mob,0,vict,TO_VICT);
-			  act("$N screams as the blade jabs $S chest.",0,mob,0,vict,TO_NOTVICT);
-			  damage(mob,vict,850,TYPE_UNDEFINED,DAM_PHYSICAL);
-			}
-			break;		  
           default:
             break;
         }
+		//Let the party know the state of the forge.
+		//State 6 means the spec fired, dont warn if this is set.
+		
+		forge_state = get_forge_state(mob);
+		
+		if(forge_state == 0 && !IS_SET(GET_BANK(mob), STATE6)){
+			send_to_room("The Forge stands cold and lifeless, its hearth devoid of any warmth.\n\r", real_room(HEPHAESTUS_FORGE_ROOM));
+		}
+		else if(forge_state == 1 && !IS_SET(GET_BANK(mob), STATE6)){
+			send_to_room("The Forge shows a slight flicker of life.\n\r", real_room(HEPHAESTUS_FORGE_ROOM));
+		}
+		else if(forge_state == 2 && !IS_SET(GET_BANK(mob), STATE6)){			
+			send_to_room("The Forge starts to radiate heat as the flames grow steadily.\n\r", real_room(HEPHAESTUS_FORGE_ROOM));
+		}
+		else if(forge_state == 3 && !IS_SET(GET_BANK(mob), STATE6)){			
+			send_to_room("The Forge roars to life, its core glowing brightly as intense heat fills the area.\n\r", real_room(HEPHAESTUS_FORGE_ROOM));
+		}
+		else if(forge_state == 4 && !IS_SET(GET_BANK(mob), STATE6)){			
+			send_to_room("The Forge maintains a consistent, powerful blaze, ready for any blacksmithing endeavor.\n\r", real_room(HEPHAESTUS_FORGE_ROOM));
+		}
+		else if(forge_state == 5 && !IS_SET(GET_BANK(mob), STATE6)){
+			act("The forge explodes into the room.",0,mob,0,0,TO_ROOM);	
+			
+			//Set State 6 to start the cooldown phase.
+			SET_BIT(GET_BANK(mob), STATE6);
+			
+			
+			//TODO: Add Full Room Damage Spec Here.
+		
+		}else if(IS_SET(GET_BANK(mob), STATE6)){
+			decrement_forge_state(mob);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
       }
 
      	//can add an else branch here if you want them to act but not in combat.
@@ -1856,8 +1997,6 @@ int olympus_hephaestus(CHAR *mob, CHAR *ch, int cmd, char *arg)
 void assign_olympus(void)
 {
 	/*Objects */
-	//assign_obj(BUCKET_EMPTY,          tweef_bucket_empty);
-	
 
 	/*Rooms */
 	assign_room(WATERFALL_ROOM, olympus_waterfallroom);
@@ -1868,6 +2007,7 @@ void assign_olympus(void)
 	assign_mob(OLYMPUS_HERA, olympus_hera);
 	assign_mob(OLYMPUS_POSEIDON, olympus_poseidon);
 	assign_mob(OLYMPUS_ARES, olympus_ares);
+	assign_mob(OLYMPUS_HEPHAESTUS, olympus_hephaestus);
 
 
 }
@@ -1875,52 +2015,6 @@ void assign_olympus(void)
 /*
 
 
-2. Zeus (Timed Burst Phases)
-Mechanics:
-Thunderbolt Barrage:
-Every 3 turns, Zeus randomly targets one player with a high-damage lightning strike. Players can dodge (agility check) or reflect with a magical shield.
-Storm Clouds:
-Zeus periodically reduces visibility by summoning clouds. Players must locate Zeus (perception check) to ensure their attacks hit.
-Wrath of Olympus:
-A scripted, timed event where Zeus charges an attack that deals massive damage. Players must perform combined actions like shield ally or interrupt Zeus (based on team coordination and cooldowns) to survive.
-Win Condition: Reduce Zeus' health below 20% to stop his wrath phase and trigger his surrender.
-
-5. Apollo (Skill Check and Debuffs)
-Mechanics:
-Solar Flare:
-Blinds players for 2 turns, reducing accuracy unless they close eyes or equip protective items.
-Golden Arrow Volley:
-Fires a volley of arrows that hits all players. Players can block (shield), evade (dexterity check), or absorb with magical wards.
-Harmonic Disruption:
-Disrupts spellcasters by increasing cooldowns and interrupting actions. Non-casters must silence Apollo (requires timing) to stop this.
-Win Condition: Use coordinated actions to overcome disruptions and land enough hits to defeat him.
-
-6. Artemis (Precision Combat)
-Mechanics:
-Moonlit Arrows:
-Artemis fires powerful arrows at players. Players can dodge (agility check) or parry with a weapon. Each miss reduces Artemis’ focus for a turn.
-Beast Call:
-Summons wolves or bears to attack the group. Players must prioritize killing beasts or risk being overwhelmed.
-Silent Stalker:
-Goes invisible for 2 turns and deals a critical hit to one random player. Players can use perception or area attack to counter her stealth.
-Win Condition: Deplete her health while managing beast summons.
-
-7. Hephaestus (Durability Test)
-Mechanics:
-Infernal Hammer:
-Deals massive single-target damage every 3 turns. Players must block, brace, or disarm Hephaestus (strength check) to mitigate damage.
-Flame Turrets:
-Turrets activate every 4 turns, dealing AoE fire damage. Players can disable turret (intelligence check) or use water-based items to reduce damage.
-Mechanical Constructs:
-Summons automatons to protect himself. Automatons can be hacked (intelligence) or destroyed through brute force.
-Win Condition: Disable turrets, destroy constructs, and deplete Hephaestus' health.
-MUD-Specific Implementation Notes:
-Combat Logs: Each ability should display vivid descriptions in combat logs (e.g., “Typhon's fire breath engulfs the room in a wave of searing heat!”).
-Commands: Ensure abilities are accessible with clear commands (dodge, block, counter, etc.).
-Cooldowns and Resources: Introduce cooldowns and resource management (e.g., stamina, mana) for players to make decisions matter.
-Team Coordination: Fights should reward team synergy (e.g., sharing threat, assisting cursed allies).
-Dynamic Messaging: Messages should adapt based on success or failure of player actions (e.g., "Your shield absorbs the impact!" vs. "The blast breaks through, dealing 50 damage.").
-Would you like detailed pseudo-code or specific mechanics for any particular MUD framework?
 
 Hemp (gossip) [ Cronus loads: bit of cloud (key) ]
 
