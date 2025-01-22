@@ -27,7 +27,7 @@ not to be trifled with.
 T
 ......Zeus exudes the power of eternity!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28805
 hera juno queen god~
 Hera~
@@ -39,21 +39,18 @@ toward Zeus' many mistresses. She is known for being very beautiful, dignified,
 and matronly. According to legend, however, when she gets angry she is capable
 of doing serious damage.
 ~
-335560762 272512 -1000 Y
-65 -30 -20 500d2+78000 10d10+1500
+335560730 272512 -1000 Y
+65 -30 -20 500d2+78000 10d10+600
 1800000 4550000
 8 8 2
-67 0 10000d1+30000 3
-1 3 8 241
-1 3 8 142
-1 6 5 252
+67 0 10000d1+30000 0
 0 0 0 0
 R
 4
 T
 ......Hera's eyes glint with evil intent!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28806
 poseidon neptune water god~
 Poseidon~
@@ -66,8 +63,8 @@ most worshipped and most feared of all the gods. Poseidon
 controls all of the waters of the world and all of the creatures
 who live within them.
 ~
-268451882 402925696 1000 Y
-67 -35 -50 60d60+137000 20d20+1275
+16394 402925696 1000 Y
+67 -35 -50 60d60+137000 1d1+1
 2678525 4100100
 8 8 1
 67 12288 50d50+30000 0
@@ -75,7 +72,7 @@ who live within them.
 T
 ......Poseidon summons the Ocean depths in a rushing boom!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28807
 ares mars war god~
 Ares~
@@ -90,22 +87,16 @@ are the amazons and his sons named Terror and Fear. He is known
 for his armor, his war dogs and vultures, and his unpredictable
 nature.
 ~
-42 0 -1000 Y
-67 -40 -38 50d50+115000 20d20+1400
-3414666 4250100
+10 2176 -1000 Y
+67 -40 -26 50d50+115000 11d5+600
+3414666 18900000
 8 8 1
-67 12288 1000d1+5000 6
-3 3 10 0
-4 3 10 0
-9 3 10 0
-1 3 10 182
-11 3 15 104
-11 3 15 105
+67 12288 1000d1+5000 0
 0 0 0 64
 T
 ......Ares sends you a glance full of pure hatred as he advances!~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28808
 apollo appollo phoebus sun god~
 Apollo~
@@ -127,7 +118,7 @@ purity. He is the god of the sun and of truth.
 T
 ......Apollo plays a sweet melody on his lyre even as he seals your fate.~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28809
 artemis diana moon god~
 Artemis~
@@ -149,7 +140,7 @@ by the crescent moon.
 T
 ......Artemis draws her bow with lightning speed and impossible accuracy.~
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28811
 hephaestus vulcan mulciber shop keeper~
 Hephaestus~
@@ -164,13 +155,13 @@ He is frequently the butt of the jokes of the Immortals. No one jokes
 about the quality of his work, however.
 ~
 16777226 805570592 0 Y
-40 -20 -100 32000d1+89 100d100+100
+40 -20 -100 20d20+57688 50d12+300
 5000000 1000000
 8 8 1
 67 4096 0d0+0 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28814
 yeti mountain hideous~
 a hideous mountain yeti~
@@ -195,7 +186,7 @@ white hair and very pointy teeth. He also looks hungry.
 T
 ......A hideous mountain yeti looses an earth-shaking roar.~
 K
-1000000 28815 0 0 0 0
+1000000 28815 0 0 0 0 0
 #28815
 stingray poseidon helper~
 an enormous stringray~
@@ -206,14 +197,13 @@ was summoned here at the behest of the master of the seas, Poseidon,
 to destroy you and your group.
 ~
 536887304 262144 0 Y
-50 -10 -18 30d30+55000 20d20+100
+50 -17 -18 30d30+55000 20d10+100
 0 0
 8 8 1
-88 4096 50d50+30000 1
-8 3 15 0
+86 4096 50d50+30000 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28816
 octopus poseidon helper~
 a monstrous octopus~
@@ -224,14 +214,13 @@ ocean depths. He was summoned here to protect the Ocean God,
 Poseidon, from those who would do him harm, you.
 ~
 536887304 262144 0 Y
-50 -10 -18 30d30+55000 10d10+75
+50 -17 -18 30d30+55000 10d10+75
 0 0
 8 8 1
-88 4096 50d50+30000 1
-3 3 15 0
+86 4096 50d50+30000 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28817
 hound sleek grey haired grey-haired~
 a sleek, grey-haired hound~
@@ -249,7 +238,7 @@ blah
 11 1 100 99
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28818
 hound wiry brindled brindle~
 a wiry, brindled hound~
@@ -265,7 +254,7 @@ blah
 5 4 15 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28819
 hound disheveled tan~
 a disheveled, tan hound~
@@ -287,7 +276,7 @@ a disheveled, tan hound~
 11 3 4 142
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28820
 hound golden haired golden-haired~
 a golden-haired hound~
@@ -303,7 +292,7 @@ blah
 5 4 15 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28821
 hound mangy black haired black-haired~
 a mangy, black-haired hound~
@@ -325,7 +314,7 @@ blah
 5 4 15 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28822
 hound mangy white haired white-haired~
 a mangy, white-haired hound~
@@ -348,7 +337,7 @@ blah
 5 4 15 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28823
 solider foot~
 a foot solider~
@@ -363,7 +352,7 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28824
 soldier foot horse mounted horse-mounted cavalry~
 a horse-mounted foot solider~
@@ -378,7 +367,7 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28825
 man man pike pikeman~
 a pike man~
@@ -393,7 +382,7 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28826
 lieutenant ares elite guard~
 a lieutenant in Ares' elite guard~
@@ -408,7 +397,7 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
 #28827
 general ares elite guard~
 a general in Ares' elite guard~
@@ -423,6 +412,160 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 69 0 1d1+1 0
 0 0 0 0
 K
-0 0 0 0 0 0
+0 0 0 0 0 0 0
+#28830
+typhon~
+Typhon~
+Typhon is standing here, blocking your path to Olympus.
+~
+    Typhon is a huge beastly creature who once defeated Zeus in combat.
+The legends say that Typhon defeated Zeus, severed his tendons so he
+couldn't walk, and left him to die. Zeus recovered over time and came
+back to beat Typhon by throwing a mountain on him. Typhon's fits from
+beneath the mountain caused an eruption of lava and ash. Now Typhon is
+back with a purpose, to keep the unworthy from entering the sacred path
+to Mount Olympus.
+~
+10 402917504 0 Y
+51 -20 10 100d100+25000 56d12+0
+1 1
+8 8 1
+66 1073741823 1d1+1 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#28831
+argus all seeing~
+Argus, the All Seeing~
+A massive guardian beast with shimmering, golden feathers.
+~
+Before you stands Argus Panoptes, a towering giant whose muscular
+frame is covered with a hundred ever-watchful eyes. Each eye glistens with an
+inner light, scanning the surroundings independently, ensuring nothing escapes
+his vigilance. His presence exudes an aura of unwavering guardianship.
+~
+16458 0 550 Y
+55 -19 -19 1d1+8000 1d1+300
+0 1250000
+8 8 0
+86 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28832
+peacock golden~
+The Golden Peacock~
+A majestic peacock with golden feathers.
+~
+A magnificent peacock struts gracefully here, its plumage a 
+dazzling array of iridescent gold and emerald hues. The expansive tail 
+feathers fan out behind it, each "eye" spot shimmering like a precious 
+gem, captivating all who behold its splendor. The bird's regal demeanor 
+reflects its divine association.
+~
+16458 0 550 Y
+55 -20 -18 1d1+7000 1d1+310
+0 1250000
+8 8 0
+83 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28833
+lion nemean~
+Nemean Lion~
+A colossal lion with a golden, impenetrable hide.
+~
+The Nemean Lion stands before you, an awe-inspiring beast of 
+immense size. Its fur glistens with a metallic golden sheen, appearing 
+both majestic and impervious. Muscles ripple beneath its impenetrable 
+hide, and its eyes burn with a fierce intensity, warning all of its 
+formidable strength.
+~
+16458 0 550 Y
+55 -22 -19 1d1+9000 1d1+315
+0 1250000
+8 8 0
+90 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28834
+eagle storm~
+Storm-Eagle~
+A thunderous eagle with storm-cloud wings.
+~
+Before you stands a majestic eagle, its feathers shimmering 
+with hues of deep blue and silver, reminiscent of stormy skies. Its 
+piercing eyes glow with an electric intensity, and as it spreads its 
+expansive wings, arcs of static electricity dance along the edges. The 
+air around it hums with energy, and the scent of ozone fills your 
+nostrils, signaling its command over the tempestuous forces of nature.
+~
+16458 0 550 Y
+55 -21 -18 1d1+9500 1d1+298
+0 1250000
+8 8 0
+83 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28835
+serpent vengence~
+Serpent of Vengence~
+A massive serpent with iridescent scales.
+~
+A formidable serpent coils here, its sleek body covered in 
+glossy, dark scales that shimmer with an iridescent sheen. Piercing 
+eyes, glowing with an inner fire, fixate on you, and its forked tongue 
+flickers in and out, sensing the air. The serpent's poised stance 
+suggests a readiness to strike, embodying the essence of retribution.
+~
+16458 0 550 Y
+55 -26 -19 1d1+8700 1d1+228
+0 1250000
+8 8 0
+80 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28836
+bull sacred~
+Sacred Bull~
+A gigantic, shimmering bull with horns tipped in gold.
+~
+A magnificent bull stands here, its muscular form exuding 
+both power and grace. Its coat is a pristine white, gleaming softly as 
+if illuminated from within. Large, expressive eyes convey a sense of 
+ancient wisdom, and its polished horns curve elegantly, catching the 
+light. The ground seems to reverberate subtly with each measured step 
+it takes, underscoring its divine significance.
+~
+16458 0 550 Y
+55 -23 -20 1d1+6800 1d1+250
+0 1250000
+8 8 0
+91 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#28837
+phoenix renewal~
+Phoenix of Renewal~
+A radiant phoenix with fiery wings and a crown of light.
+~
+Before you rises the Phoenix, a resplendent bird enveloped in 
+flames of red, orange, and gold. Its elegant form radiates warmth, and its 
+eyes gleam with ancient wisdom. As it spreads its wings, embers drift gently 
+to the ground, symbolizing the perpetual cycle of destruction and rebirth.
+~
+16458 0 550 Y
+55 -18 -22 1d1+3400 1d1+254
+0 1250000
+8 8 0
+83 20480 1d1+900 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
 #0
 $~

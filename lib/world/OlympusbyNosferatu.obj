@@ -876,5 +876,47 @@ M
 ~
 ~
 ~
+#28840
+rock large~
+A Large Sturdy Rock~
+A large grey rock~
+~
+12 0 1
+0 0 0 0
+0 0 0
+100
+E
+rock~
+A large rock that can stop water from flowing past.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28841
+forge~
+An old, charred iron forge.~
+A giant iron forge emitting massive waves of heat.~
+~
+0 0 0
+0 0 0 0
+4000 0 0
+100
+E
+forge~
+Hephaestus' forge is a marvel of divine craftsmanship, reflecting the god's unparalleled skill and ingenuity
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
 #0
 $~
