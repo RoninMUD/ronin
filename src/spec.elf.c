@@ -801,7 +801,7 @@ int
 Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
   CHAR *vict;
   OBJ *o;
-  char buf[MAX_INPUT_LENGTH];
+  //char buf[MAX_INPUT_LENGTH];
 
   if (cmd) {
     switch (cmd) {
@@ -875,11 +875,16 @@ Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
 	  FALSE,bm,o,vict,TO_NOTVICT);
       act("$N's weapon goes flying, as you hit it lightly.",
 	  FALSE,bm,o,vict,TO_CHAR);
-      unequip_char (vict, WIELD);
+      
+	  /*1/2/2025 - Arodtanjoe - Changing Disarm spec to send to inventory and not to the room.   */
+	  obj_to_char(unequip_char(vict, WIELD),vict);
+	  
+	  
+	  /*unequip_char (vict, WIELD);	  
       obj_to_room (o, CHAR_REAL_ROOM(vict));
 	    sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(bm), GET_NAME(vict), OBJ_SHORT(o), world[CHAR_REAL_ROOM(bm)].number);
 	    log_s(buf);
-	    o->log = TRUE;
+	    o->log = TRUE; */
     }
     break;
   }
