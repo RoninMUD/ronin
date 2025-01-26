@@ -46,7 +46,7 @@ int hb_happybob_office(int room, CHAR *ch, int cmd, char *arg)
         {
             world[real_room(HAPPY_BOB_OFFICE)].dir_option[DOWN]->to_room_r = -1;
             world[real_room(BATTERED_PSYCHE)].dir_option[UP]->to_room_r = -1;
-            send_to_room("That psychiatrist really worked her magic.", real_room(HAPPY_BOB_OFFICE));
+            send_to_room("That church really worked her magic.", real_room(HAPPY_BOB_OFFICE));
             send_to_room("Wow, Happy Bob's mind heals itself.", real_room(BATTERED_PSYCHE));
         }
     }
@@ -62,7 +62,7 @@ int hb_happybob(CHAR *happybob, CHAR *ch, int cmd, char *arg)
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(happybob, TRUE) < 1) return FALSE;
 
-    char *happybob_speak[5] = { "Welcome to Happy Bob's. The Best BBQ in the world.", "The sauce is finger licking good.", "Have you tried our ribs yet? The pigs are super fresh.", "BBQ Sauce is good for the soul", "Please go back to the front and wait for your table. Its worth the wait here." };
+    char *happybob_speak[5] = { "Welcome to Happy Bob's. The Best Tavern in the world.", "The sauce is finger licking good.", "Have you tried our ribs yet? The pigs are super fresh.", "Sauce is good for the soul", "Please go back to the front and wait for your table. Its worth the wait here." };
     char *happybob_death_speak[4] = { "No...dont eat me mashed potatoes", "Cornbread!  What did i ever do to you?", "Baked Beans are scary! Run if you can.", "Stupid chickens, i saved you. Dont peck my eyes out." };
 
     switch (cmd)
@@ -107,7 +107,7 @@ int hb_hostess(CHAR *hostess, CHAR *ch, int cmd, char *arg)
     if (count_mortals_room(hostess, TRUE) < 1) return FALSE;
 
     char *hostess_speak[4] = { "Please sit back down. We will call you when your table is ready.", "Sorry, your wait time is 60 minutes.", "Please enjoy this coloring book while you wait.", "The pitboss is super gross." };
-    char *hostess_death_speak[3] = { "Fine, you will never get a table.", "Enjoy your crap food!", "BBQ is the worst." };
+    char *hostess_death_speak[3] = { "Fine, you will never get a table.", "Enjoy your crap food!", "Meat is the worst." };
     switch (cmd)
     {
         case MSG_MOBACT:
@@ -142,7 +142,7 @@ int hb_patron(CHAR *patron, CHAR *ch, int cmd, char *arg)
     if (count_mortals_room(patron, TRUE) < 1) return FALSE;
 
     char *patron_speak[4] = { "Waiter..more beer please.", "Where is my food! I am hungry now.", "Oh yes, i love this sauce.", "Bah, waiting is so boring. " };
-    char *patron_death_speak[3] = { "Just...one..more..rib...", "Bury me with the pigs!", "I'll see you in BBQ heaven." };
+    char *patron_death_speak[3] = { "Just...one..more..rib...", "Bury me with the pigs!", "I'll see you in meat heaven." };
 
     switch (cmd)
     {
