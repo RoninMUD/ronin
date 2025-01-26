@@ -80,9 +80,9 @@ with magical energy.
 1 6 33 195
 0 0 0 0
 T
-.....  the unicorn shines with a magical golden light.~
-T
 .....  the earth trembles beneath her hooves.~
+T
+.....  the unicorn shines with a magical golden light.~
 K
 0 0 0 0 0 0 0
 #9622
@@ -335,7 +335,7 @@ K
 0 0 0 0 0 0 0
 #9670
 undead cleric~
-An undead cleric~
+An Undead Cleric~
 An undead cleric stands here, awaiting his masters' command.
 ~
 The undead cleric has been summoned from the nether, here to 
@@ -354,7 +354,7 @@ K
 20000 0 0 0 0 0 0
 #9671
 undead mage~
-An undead mage~
+An Undead Mage~
 An undead mage stands here, awaiting his masters' command.
 ~
 The undead mage has been summoned from the nether, here to 
@@ -372,7 +372,7 @@ K
 20000 0 0 0 0 0 0
 #9672
 bard dancing~
-An undead bard~
+An Undead Bard~
 An undead bard stands here, awaiting his masters' command.
 ~
 The undead bard has been summoned from the nether, here to 
@@ -391,7 +391,7 @@ K
 20000 0 0 0 0 0 0
 #9673
 undead warrior~
-An undead warrior~
+An Undead Warrior~
 An undead warrior stands here, awaiting his masters' command.
 ~
 The undead warrior has been summoned from the nether, here to 
@@ -409,7 +409,7 @@ K
 20000 0 0 0 0 0 0
 #9674
 undead thief~
-An undead thief~
+An Undead Thief~
 An undead thief stands here, awaiting his masters' command.
 ~
 The undead thief has been summoned from the nether, here to 
@@ -427,8 +427,8 @@ K
 20000 0 0 0 0 0 0
 #9675
 necromancer~
-The necromancer~
-The dark necromancer is here conjuring his foul horde.
+The Necromancer~
+The Dark Necromancer is here conjuring his foul horde.
 ~
 The master of the dark arts crouches here before you, working
 on his intricate conjuring.  Weaving his hands in intricate 
@@ -450,7 +450,7 @@ K
 0 0 0 0 0 0 0
 #9676
 undead paladin~
-An undead paladin~
+An Undead Paladin~
 a holy paladin glares at you, secure in his righteousness.
 ~
 The undead paladin has been summoned from the nether, here to 
@@ -469,7 +469,7 @@ K
 20000 0 0 0 0 0 0
 #9677
 undead commando~
-An undead commando~
+An Undead Commando~
 An undead commando stands here, awaiting his masters' command.
 ~
 The undead commando has been summoned from the nether, here to 
@@ -488,7 +488,7 @@ K
 20000 0 0 0 0 0 0
 #9678
 anti paladin anti-paladin undead~
-An undead anti-paladin~
+An Undead Anti-Paladin~
 An undead anti-paladin stands here, awaiting his masters' command.
 ~
 The undead anti-paladin has been summoned from the nether, here
@@ -507,7 +507,7 @@ K
 20000 0 0 0 0 0 0
 #9679
 undead ninja~
-An undead ninja~
+An Undead Ninja~
 An undead ninja stands here, awaiting his masters' command.~
 The undead ninja has been summoned from the nether, here
 to do the bidding of his master.
@@ -523,7 +523,7 @@ to do the bidding of his master.
 K
 20000 0 0 0 0 0 0
 #9680
-cleric~
+cleric humble~
 A humble cleric~
 The humble cleric wanders here, lost in his thoughts.
 ~
