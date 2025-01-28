@@ -111,7 +111,7 @@ int troll_lizardapprentice(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 int troll_lizardshaman(CHAR *typik, CHAR *ch, int cmd, char *arg) {
 
 CHAR *victim,*temp;
-int factor;
+int throw_hp_threshold;
 
 if (cmd)
   return FALSE;
@@ -148,8 +148,8 @@ if (GET_POS(typik)!=POSITION_FIGHTING) {
          spell_blindness(GET_LEVEL(typik), typik, victim, 0);
       }
 		// Adding check for HP greater than 20%.  This will help to ensure that players complete the AQuest
-	  factor=10*GET_HIT(typik)/GET_MAX_HIT(typik);
-	  if(factor > 2){
+	  throw_hp_threshold=10*GET_HIT(typik)/GET_MAX_HIT(typik);
+	  if(throw_hp_threshold > 2){
 		
 		  if(!number(0,2)) { /* mud forces victim out of room */
 			act("A massive wall of mud pushes $N out of the room.",1,typik,0,victim,TO_NOTVICT);

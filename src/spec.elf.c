@@ -455,7 +455,7 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
   int dir;
   char buf[MAX_INPUT_LENGTH];
   bool move_ch = FALSE;
-  int factor;
+  int throw_hp_threshold;
 
   if (cmd)
     return FALSE;
@@ -505,9 +505,9 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
     if (CAN_GO (demon, dir))
       move_ch = TRUE;
 	
-	factor=10*GET_HIT(demon)/GET_MAX_HIT(demon);
+	throw_hp_threshold=10*GET_HIT(demon)/GET_MAX_HIT(demon);
 	
-    if (move_ch && factor > 2) { // Adding a check for HP greater than 20%. 
+    if (move_ch && throw_hp_threshold > 2) { // Adding a check for HP greater than 20%. 
       act("With a swift snap of $s tail,\n\r$n sends $N flying...",
 	  FALSE,demon,0,vict,TO_NOTVICT);
       act("With a swift snap of $s tail,\n\r$n sends you flying...EEAOOWW!!",

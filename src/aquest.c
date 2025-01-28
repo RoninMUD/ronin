@@ -953,7 +953,7 @@ const int aq_mob_master_list[][2] = {
   { 12904, 4 }, /* mystic ultimate */
   { 13501, 4 }, /* oglozt greater */
   { 14205, 4 }, /* fred gatekeeper */
-  { 14508, 4 }, /* eduard magistrate wererat grotesque rat */
+  //{ 14507, 4 }, /* eduard magistrate wererat grotesque rat */
   { 16515, 4 }, /* gorgo fur beast */
   { 17005, 4 }, /* marten man */
   { 17006, 4 }, /* maerlyn sorcerer wizard */
