@@ -8,12 +8,6 @@ The Great Arch spans the path here, marking the entrance to these lands.~
 10000 10 10
 100
 E
-aperture~
-A small aperture can be seen at the base of one of the supporting columns of
-The Great Arch.  It looks to be just the right shape and size to store a
-scroll in.
-~
-E
 arch great mighty~
 This is a mighty arch indeed, constructed for the great Lord Emithoynarthe who
 ruled these lands in a time unknown.  It is inscribed with many beautiful
@@ -22,6 +16,12 @@ this world.  The Great Arch marks the entrance to Emithoynarthe's Realm and is
 an icon of his power.  Only the brave or the foolish would dare pass beneath it
 and into the lands beyond.  At the base of one of the supporting columns a
 small aperture can be seen.
+~
+E
+aperture~
+A small aperture can be seen at the base of one of the supporting columns of
+The Great Arch.  It looks to be just the right shape and size to store a
+scroll in.
 ~
 X
 ~
@@ -116,20 +116,13 @@ A black book covered in dust and faded with age rests here.~
 10 10 10
 100
 E
-page2~
-The prophecies tell of a time to come when this land shall once more exist in
-its former splendor.  The Empire shall grow from these forests and the mighty
-King Emithoynarthe shall once again rule all that exist within His realm.  For
-the current Lord Emithoynarthe is the son of the first Imperial that came to
-this land and built it into the Grand Empire of the Golden Age.  In this first
-age all was good until the Old King was deceived by one of his own followers
-and was forced to give his life to save his empire.  His son, Emithoynarthe
-took over the rulership but the Kingdom crumbled and he is now among the few
-that remain.  He lives here still, as he has for ages, sitting on his throne
-awaiting the day that His Empire will rise again.  Here He shall remain for
-ages to come, watching and waiting for His time to rule again.  All should fear
-the Mighty Emithoynarthe, for He is great and it is folly to underestimate the
-powers he exerts over His land.
+book black tower emithoynarthe~
+The book is crafted from a deep-black leather that is dusted and cracked with
+age.  It has several inscriptions written upon it in a language that once was
+used in the lands of its origin.  A closer look at it reveals the words to be
+written in gold leaf, though the exact designs are unclear because of the worn
+nature of the tome.
+It looks like page1 and page2 contain very important parts of the book.
 ~
 E
 page1~
@@ -145,13 +138,20 @@ that cannot be denied.  It is not advisable to go against His wishes when
 within this Empire, for to do so would be to invite death.
 ~
 E
-book black tower emithoynarthe~
-The book is crafted from a deep-black leather that is dusted and cracked with
-age.  It has several inscriptions written upon it in a language that once was
-used in the lands of its origin.  A closer look at it reveals the words to be
-written in gold leaf, though the exact designs are unclear because of the worn
-nature of the tome.
-It looks like page1 and page2 contain very important parts of the book.
+page2~
+The prophecies tell of a time to come when this land shall once more exist in
+its former splendor.  The Empire shall grow from these forests and the mighty
+King Emithoynarthe shall once again rule all that exist within His realm.  For
+the current Lord Emithoynarthe is the son of the first Imperial that came to
+this land and built it into the Grand Empire of the Golden Age.  In this first
+age all was good until the Old King was deceived by one of his own followers
+and was forced to give his life to save his empire.  His son, Emithoynarthe
+took over the rulership but the Kingdom crumbled and he is now among the few
+that remain.  He lives here still, as he has for ages, sitting on his throne
+awaiting the day that His Empire will rise again.  Here He shall remain for
+ages to come, watching and waiting for His time to rule again.  All should fear
+the Mighty Emithoynarthe, for He is great and it is folly to underestimate the
+powers he exerts over His land.
 ~
 X
 ~
@@ -389,7 +389,7 @@ An extraordinarily clean and vibrantly red cloak rests upon the ground here.~
 9 175127552 1025
 2 0 0 0
 15 120000 60000
-5
+9
 E
 cloak clean red~
 This is a beautify-colored red cloak made from the finest of fabric.  It has
@@ -418,7 +418,7 @@ A gnarled staff of wood rests here, glowing brightly with its own light.~
 1 134219777 65537
 0 0 -1 0
 8 150000 75000
-5
+10
 E
 staff glowing gnarled wood~
 This is a rather unremarkable staff made from some sort of gnarled wood which

@@ -357,15 +357,15 @@ You can see another slimy corridor.
 door stone~
 1 -1 13507
 E
+slime~
+The slime glows in a sickly green light, making you feel uneasy and
+gives you the goose bumps.
+~
+E
 podium~
 A huge block of some stone, that has sometime in the distant past been
 milky white. Now it's tainted with blood and gore, burned with acid-like
 marks.
-~
-E
-slime~
-The slime glows in a sickly green light, making you feel uneasy and
-gives you the goose bumps.
 ~
 S
 #0
