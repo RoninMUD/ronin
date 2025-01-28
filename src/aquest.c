@@ -953,7 +953,7 @@ const int aq_mob_master_list[][2] = {
   { 12904, 4 }, /* mystic ultimate */
   { 13501, 4 }, /* oglozt greater */
   { 14205, 4 }, /* fred gatekeeper */
-  //{ 14508, 4 }, /* eduard magistrate wererat grotesque rat */
+  { 14508, 4 }, /* eduard magistrate wererat grotesque rat */
   { 16515, 4 }, /* gorgo fur beast */
   { 17005, 4 }, /* marten man */
   { 17006, 4 }, /* maerlyn sorcerer wizard */
@@ -972,6 +972,7 @@ const int aq_mob_master_list[][2] = {
   { 25040, 4 }, /* death lord */
   { 26401, 4 }, /* vizier */
   { 26481, 4 }, /* healer */
+  { 26700, 4 }, /* Guard of the Gates */
   { 27105, 4 }, /* cannibal witchdoctor */
   { 27720, 4 }, /* myrdon thief rogue master */
   { 27721, 4 }, /* shadowraith ninja assassin jal pur */
@@ -986,7 +987,7 @@ const int aq_mob_master_list[][2] = {
   { 28718, 4 }, /* pandora immortal */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
-  { 5105, 5 }, /* drow apprentice */
+  //{ 5105, 5 }, /* drow apprentice */
   { 5106, 5 }, /* drow weaponmaster zarc */
   { 5107, 5 }, /* drow matron mother lower */
   { 5109, 5 }, /* illithid */
@@ -995,8 +996,10 @@ const int aq_mob_master_list[][2] = {
   { 5184, 5 }, /* spider sentry third */
   { 5189, 5 }, /* spider sentry fourth */
   { 5191, 5 }, /* spider sentry second */
+  { 5523, 5 }, /* An Eight Legged Drider */
   { 5596, 5 }, /* myconid king mushroom */
   { 11326, 5 }, /* vampire strahd count */
+  { 11700, 5 }, /* Rhoden */	  
   { 17004, 5 }, /* twixt bard man master */
   { 17010, 5 }, /* minion lesser */
   { 17308, 5 }, /* marcus wizard mage */
@@ -1019,18 +1022,22 @@ const int aq_mob_master_list[][2] = {
   { 19510, 5 }, /* difficult world elemental air ruler */
   { 19511, 5 }, /* difficult world elemental lightning ruler */
   { 19512, 5 }, /* difficult world elemental water ruler */
-//  { 10502, 6 }, /*tarion cavalier*/
+  { 10502, 6 }, /*tarion cavalier*/
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */
   { 5127, 6 }, /* drow matron mother second */
   { 5132, 6 }, /* drow leader varrn */
   { 5553, 6 }, /* Garaek drow drider overseer */
+  { 5556, 6 }, /* A deep Wyrm */
   { 5574, 6 }, /* colossal wyrm */
   { 5901, 6 }, /* drow leader rezik */
   { 7703, 6 }, /* typik lizard shaman reptile */
+  { 11703, 6 }, /* Ancient Flame Dragon */
   { 13502, 6 }, /* demon reptilian reptile */
   //{ 14501, 6 }, /* keira banshee ghost */
+  { 14201, 6 }, /* Jason*/
+  { 14210, 6 }, /* Emma */
   { 14503, 6 }, /* ardaan inquisitor warrior */
   //{ 11514, 6 }, /* wyvern */
   { 13019, 6 }, /* elf elven master beastmaster */
@@ -1041,10 +1048,14 @@ const int aq_mob_master_list[][2] = {
   //{ 23001, 6 }, /* remorhaz ice burrower */
   { 25001, 6 }, /* keftab */
   { 26583, 6 }, /* guru */
+  { 26584, 6 }, /* Enlightened One */
   { 26706, 6 }, /* creature large hideous mutated rat yeti human */
   { 26707, 6 }, /* observer tower mage old man */
+  { 27722, 6 }, /* shomed nomad hero tarion desert */
   { 28700, 6 }, /* icarus immortal */
-  //{ 27722, 6 }, /* shomed nomad hero tarion desert */
+  { 28704, 6 }, /* Charon */
+  { 28705, 6 }, /* Cerberus */
+  
 };
 
 static bool aq_calc_skip = FALSE;
@@ -1452,6 +1463,7 @@ const int aq_obj_master_list[][2] = {
   {13506, 4}, // Glowing armbands of Creaz 20
   {13507, 4}, // Ornate platinum belt 20
   {13508, 4}, // A scimitar of Flame
+  {14203, 4}, // Boundary Warden Knife
   {14503, 4}, // a Blood-Red Amulet 12
   {16512, 4}, // A Rusted Bucket 15
   {16513, 4}, // A rotting bridle 15
@@ -1460,11 +1472,11 @@ const int aq_obj_master_list[][2] = {
   {17024, 4}, // A pointy wizard's hat 20
   {17080, 4}, // a Silver Harmonica 20
   {17321, 4}, // Cube of Awareness 50 
-  {20901, 4},// Hero's Robe
-  {20903, 4},// A silver chainlink belt
-  {20904, 4},// Mismatched Slippers
-  {20906, 4},// fireblade
-  {20909, 4},// A foaming stein
+  {20901, 4}, // Hero's Robe
+  {20903, 4}, // A silver chainlink belt
+  {20904, 4}, // Mismatched Slippers
+  {20906, 4}, // fireblade
+  {20909, 4}, // A foaming stein
   {21108, 4}, // A giant leaf shield 10
   {21109, 4}, // An Ancient Torch  10
   {21110, 4}, // A sword made from bone  10
@@ -1593,6 +1605,10 @@ const int aq_obj_master_list[][2] = {
   {16806, 10}, // A Bladed Lash 8
   {21326, 10}, // The Left Gauntlet of Calaphas 10
   {26402, 10}, // The Wand of Watoomb 18
+  {26403, 10}, // The Mallet of Orcus 10	
+  {26404, 10}, // The Dark Sphere of Ul 8
+  {26405, 10}, // Coiled Tattoo
+  {26412, 10}, // Band of Demonic Aura
   {26579, 10}, // The Loincloth of Good Omens 8
   {26711, 10}, // The Greatsword of the Guard 8
   {27711, 10}, // A Carapace Shield 7
@@ -1606,8 +1622,7 @@ const int aq_obj_master_list[][2] = {
   //{5807, 15}, // Silk Suit 20
   {11700, 15}, // Soul Stealer
   {11712, 15}, // Armor of Dark Angels 8
-  {19400, 15}, // An Extraordinarily Large Grolem Beak 10
-  {26404, 15}, // The Dark Sphere of Ul 8
+  {19400, 15}, // An Extraordinarily Large Grolem Beak 10  
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
   {587, 20}, // Icon of Possession
@@ -1621,10 +1636,13 @@ const int aq_obj_master_list[][2] = {
   {5585, 20}, // Scorched spider skin sleeves9
   {5586, 20}, // Scorched spider skin leggings 9
   {5587, 20}, // An ancient drow relic 
+  {20130, 20}, // Armored Boots
   {20132, 20}, // A Gleaming Jade Battlesuit 6
   {20138, 20}, // Helm of Lacquered Wood 8
+  {20185, 20}, // Yawata's Ring of Power 
   {21329, 20}, // a swarm of angry beetles 4
   {21330, 20}, // a mass of black, glistening thorns 5
+  {21309, 20}, // A Rotting Otyugh Skin 8
   {25300, 20}, // Tail of Minos 8
   {26403, 20}, // The Mallet of Orcus 6
   {26709, 20}, // The Grand Cape of Emithoynarthe 15
@@ -1640,8 +1658,8 @@ const int aq_obj_master_list[][2] = {
   //{572, 25}, // An oaken root wand 3
   //{2716, 25}, // The black sting of the Queen 10
   //{6806, 25}, // Erishkigal's lash 9
-  {14208, 25}, // Councilor's Plate 10
-  {21309, 25}, // A Rotting Otyugh Skin 2
+  {14208, 25} // Councilor's Plate 10
+  
 };
 
 #define STORAGE_ROOM            5807
