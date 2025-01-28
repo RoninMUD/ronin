@@ -180,7 +180,7 @@ int troll_lizardassassin(CHAR *liz, CHAR *ch, int cmd, char *arg) {
     for(victim = world[CHAR_REAL_ROOM(liz)].people; victim;     victim = temp) {
       temp = victim->next_in_room;  /* Added temp - Ranger June 96 */
       if ((!number(0,9)) && (victim != liz->specials.fighting) && (IS_MORTAL(victim)) &&
-		  (((GET_HIT(liz) * 100) / GET_MAX_HIT(liz)) > 10)) {
+		  (((GET_HIT(liz) * 100) / GET_MAX_HIT(liz)) > 20)) { //Adjusting to 20% due to lost AQuests
         act("$n lets out a loud scream and pushes $N into the gusher.",1,liz,0,victim,TO_NOTVICT);
         act("$n lets out a loud scream and pushes you into the gusher.",1,liz,0,victim,TO_VICT);
         act("$N shoots out through the the hole in the ceiling!",1,liz,0,victim,TO_NOTVICT);
