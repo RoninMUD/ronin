@@ -243,6 +243,11 @@ this beautiful city. Beyond them is the pure white, fluffy tops of the
 clouds as far as the eye can see.
 ~
 287 32768 1
+D0
+A powerful seal radiates holy energy.
+~
+seal~
+1 28765 28801
 D2
 Ares Street continues to the South.
 ~
@@ -644,6 +649,11 @@ boundaries of  this beautiful city. Beyond them is the pure white, fluffy
 tops of the clouds as far as the eye can see.
 ~
 287 32768 1
+D0
+A powerful seal radiates holy energy.
+~
+seal~
+1 28766 28802
 D1
 Apollo Avenue continues to the East.
 ~
@@ -1498,6 +1508,11 @@ The rest of the business and the street lie to the South.
 ~
 ~
 0 -1 28753
+D3
+A powerful seal radiates holy energy.
+~
+seal~
+1 28767 28803
 S
 #28755
 Entrance to Epimethius' Tools of War~

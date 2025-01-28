@@ -13,17 +13,12 @@ and ruling all from his perch high on Mount Olympus. Zeus is known
 to all as a tempermental, strong, and vindictive god. He is definitely
 not to be trifled with.
 ~
-536870922 402917504 1000 Y
-70 -40 -50 75d75+217666 15d15+1500
+10 402917504 1000 Y
+70 -40 -50 75d75+145000 20d13+400
 3000000 5000000
 8 8 1
-67 6158 1000d1+3000 5
-11 3 15 241
-11 3 15 109
-11 3 8 130
-11 3 5 141
-11 6 1 252
-0 2 0 0
+67 6158 1000d1+3000 0
+0 0 0 0
 T
 ......Zeus exudes the power of eternity!~
 K
@@ -64,7 +59,7 @@ controls all of the waters of the world and all of the creatures
 who live within them.
 ~
 16394 402925696 1000 Y
-67 -35 -50 60d60+137000 1d1+1
+67 -35 -50 60d60+95444 15d12+398
 2678525 4100100
 8 8 1
 67 12288 50d50+30000 0
@@ -109,8 +104,8 @@ he can play his lyre so sweetly as to turn all anger away from him
 and to control mortal minds.  He is a symbol of peace, wisdom and
 purity. He is the god of the sun and of truth.
 ~
-268451850 264320 1000 Y
-62 -30 -28 30d30+65000 20d20+750
+16394 264320 1000 Y
+62 -30 -28 30d30+65000 20d20+350
 1875430 2500675
 8 8 1
 67 12288 50d50+30000 0
@@ -131,8 +126,8 @@ the moon.  She is prayed to by young maidens and hunters alike. She
 is both a beauty and a fierce killer. She is most often symbolized
 by the crescent moon.
 ~
-536887306 134480000 1000 Y
-62 -30 -18 30d30+55000 20d20+650
+16394 134480000 1000 Y
+62 -30 -18 30d30+55000 20d18+420
 1560725 2389765
 8 8 2
 67 1073723448 50d50+30000 0
@@ -155,7 +150,7 @@ He is frequently the butt of the jokes of the Immortals. No one jokes
 about the quality of his work, however.
 ~
 16777226 805570592 0 Y
-40 -20 -100 20d20+57688 50d12+300
+40 -20 -100 20d20+57688 40d12+300
 5000000 1000000
 8 8 1
 67 4096 0d0+0 0
@@ -427,7 +422,7 @@ back with a purpose, to keep the unworthy from entering the sacred path
 to Mount Olympus.
 ~
 10 402917504 0 Y
-51 -20 10 100d100+25000 56d12+0
+51 -20 10 200d200+47000 30d22+50
 1 1
 8 8 1
 66 1073741823 1d1+1 0
