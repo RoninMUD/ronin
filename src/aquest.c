@@ -1422,8 +1422,7 @@ const int aq_obj_master_list[][2] = {
   {20147, 3}, // a Ninjato 100
   {20825, 3}, // Wings of the Cloaker Lord 20
   {20840, 3}, // a shield of mottled flesh 12
-  {21215, 3}, // Golden Dagger 29
-  {21305, 3}, // A broken sword 30
+  {21215, 3}, // Golden Dagger 29  
   {24904, 3}, // Bracelet made from roots 25
   {25016, 3}, // a Silver Trident 50
   {25027, 3}, // The Silver Circlet of Concentration 50
@@ -1445,7 +1444,7 @@ const int aq_obj_master_list[][2] = {
   {7511, 4}, // a diamond bracelet 10
   {7522, 4}, // a pair of white, flowing silk pants 10
   {8362, 4}, // dusty pants 20
-  {10015, 4}, // an Ethereal Sash 3
+  {10015, 4}, // an Ethereal Sash 10
   {10022, 4}, // Obsidian Ring 30
   {10028, 4}, // worn hickory cane 32
   {10905, 4}, // a pair of Zyca arm plates 10
@@ -1482,6 +1481,8 @@ const int aq_obj_master_list[][2] = {
   {21110, 4}, // A sword made from bone  10
   {21205, 4}, // Boots of Stealth 10
   {21217, 4}, // the Mallet of the Underworld 10
+  {21305, 4}, // A broken sword 30
+  {21321, 4}, // A Pair of Gleaming Gauntlets 10
   {23008, 4}, // Pelt of the Glacial Polar Bear 5
   {24900, 4}, // druidic battle wrap 14
   {24901, 4}, // Dark Druid's buckler 15
@@ -1513,7 +1514,7 @@ const int aq_obj_master_list[][2] = {
   {12211, 5}, // Ettins Cape 10
   //{12822, 5}, // the Scent of a Mankey 10
   {12827, 5}, // A bag of MankeyBits 10
-  {12908, 5}, //The Prismatic Star of Gemini
+  {12908, 5}, //The Prismatic Star of Gemini 9
   {12928, 5}, // a silver katana 8
   {13001, 5}, // an Elven Cloak 15
   {14002, 5}, // The Shadow Cloak 15
@@ -1527,27 +1528,27 @@ const int aq_obj_master_list[][2] = {
   {21200, 5}, // Darkened Bone Ring 10
   {21201, 5}, // Darkened Bone Plate 8
   {21203, 5}, // The Mask of Concentration 18
-  {21314, 5}, // An Ornamental Belt 1
-  {21322, 5}, // A Suit of Red Scale Mail 1
+  {21314, 5}, // An Ornamental Belt 9
+  {21322, 5}, // A Suit of Red Scale Mail 9
   {24906, 5}, // Evil Avenger 11
   {25018, 5}, // A Crystal Ring 10
   {25026, 5}, // the Soul Amulet 10
   {27102, 5}, // A bone mace 12
   {27106, 5}, // Gladius 9
   {27712, 5}, // Basilisk Blood Potion 10
-  {27720, 5}, // Banded Mail of the Bandit 5
-  {28763, 5}, // The Ring of Discord
-  {28764, 5}, // The Ring of Dissonance
+  {27720, 5}, // Banded Mail of the Bandit 10
+  {28763, 5}, // The Ring of Discord 8
+  {28764, 5}, // The Ring of Dissonance 8
   {704, 6}, // Mask of Lizard Powers 10
   {707, 6}, // The Ring of Eternal Life 7
-  {4704, 6}, // Werra's Belt of Garbage 5
+  {4704, 6}, // Werra's Belt of Garbage 10
   {5105, 6}, // a jeweled scimitar 12
   {5197, 6}, // Ball of Faerie Fire 10
   {12001, 6}, // golden breastplate 10
   {12018, 6}, // golden leggings 10
   {12020, 6}, // golden shield 10
   {12901, 6}, // the Fung-Tai dagger 8
-  {12909, 6}, // a band of holy spirits 5
+  {12909, 6}, // a band of holy spirits 9
   {13509, 6}, // Black cloak of Darkness 15
   {14502, 6}, // The Hell Stick 10
   {16529, 6}, // Wax Ring 12
@@ -1555,29 +1556,29 @@ const int aq_obj_master_list[][2] = {
   {17005, 6}, // Hood of Darkness 10
   {17371, 6}, // Dragon Horn 15
   {17396, 6}, // A mithril hammer 10
-  {19513, 6}, // heavy platinum arm bands
-  {19514, 6}, // heavy platinum leg bands
+  {19513, 6}, // heavy platinum arm bands 65
+  {19514, 6}, // heavy platinum leg bands 50
   {20145, 6}, // War Fan 17
   {21206, 6}, // Armlinks of Fire 15
   {21210, 6}, // a Dragon Scale Belt 17
-  {21212, 6}, // The Stone Dragon's Shield
+  {21212, 6}, // The Stone Dragon's Shield 10
   {21321, 6}, // A Pair of Gleaming Gauntlets 2
   {26406, 6}, // A Holey Majestic Cloak 12
   {26477, 6}, // The Mantle of Devotion 8
   {700, 7}, // a dusty deck of Tarot Cards 10
   {702, 7}, // a pair of baggy pants 10
-  {4700, 7}, // a small voodoo doll 3
+  {4700, 7}, // a small voodoo doll 9
   {5546, 7}, // Long Spiked Whip 10
   {7700, 7}, // Typik's Bloody Entrails 17
   {11702, 7}, // A Silver Full Plate 11
-  {14213, 7},  //A Rose Pendant
-  {14214, 7},  //Emma's Shawl
+  {14213, 7},  //A Rose Pendant 38
+  {14214, 7},  //Emma's Shawl 53
   {17322, 7}, // Dragon Highlord's Shield 10
-  {19501, 7}, // The beloved ring of stone
-  {19503, 7}, // a blue flame dagger
-  {19506, 7}, // a raging hurricane helmet
-  {19508, 7}, // the electric shield
-  {19510, 7}, // a flowing cloak of water
+  {19501, 7}, // The beloved ring of stone 18
+  {19503, 7}, // a blue flame dagger 22
+  {19506, 7}, // a raging hurricane helmet 37
+  {19508, 7}, // the electric shield 24
+  {19510, 7}, // a flowing cloak of water 22
   {21207, 7}, // Black Demon's Talon 10
   {21212, 7}, // The Stone Dragon's Shield 10
   {26478, 7}, // The Signet Ring of the Sultan 6
@@ -1593,22 +1594,20 @@ const int aq_obj_master_list[][2] = {
   {14507, 8}, // Sandals of Sorrow 10
   {17306, 8}, // Fiend's Necklace 8
   {17372, 8}, // The Seal of the Drake 7
-  {20146, 8}, // shimmering band of Mokume Gane 5
-  {26713, 8}, // A Clean Red Cloak 5
-  {26714, 8}, // A Glowing Staff of Gnarled Wood 5
+  {20146, 8}, // shimmering band of Mokume Gane 10  
+  {26714, 8}, // A Glowing Staff of Gnarled Wood 10
   {28741, 8}, // The Coin of Fate 12
   {5198, 10}, // Flaming Mask 10
   {14212, 10}, // Boundary Warden Belt 45
   //{7201, 10}, // a soul shard fragment 10
-  {16503, 10}, // the Dagger of Segretto 5
+  {16503, 10}, // the Dagger of Segretto 9
   {16805, 10}, // Scythe of Execution 8
-  {16806, 10}, // A Bladed Lash 8
-  {21326, 10}, // The Left Gauntlet of Calaphas 10
+  {16806, 10}, // A Bladed Lash 8  
   {26402, 10}, // The Wand of Watoomb 18
   {26403, 10}, // The Mallet of Orcus 10	
-  {26404, 10}, // The Dark Sphere of Ul 8
-  {26405, 10}, // Coiled Tattoo
-  {26412, 10}, // Band of Demonic Aura
+  {26404, 10}, // The Dark Sphere of Ul 8  
+  {26405, 10}, // Coiled Tattoo 12
+  {26412, 10}, // Band of Demonic Aura 9
   {26579, 10}, // The Loincloth of Good Omens 8
   {26711, 10}, // The Greatsword of the Guard 8
   {27711, 10}, // A Carapace Shield 7
@@ -1620,33 +1619,34 @@ const int aq_obj_master_list[][2] = {
   {4488, 15}, // Axe of Justice 10
   {4489, 15}, // Ornament of Righteousness  6 
   //{5807, 15}, // Silk Suit 20
-  {11700, 15}, // Soul Stealer
+  {11700, 15}, // Soul Stealer 8
   {11712, 15}, // Armor of Dark Angels 8
   {19400, 15}, // An Extraordinarily Large Grolem Beak 10  
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
-  {587, 20}, // Icon of Possession
+  {587, 20}, // Icon of Possession 8
   {599, 20}, // The Gong of Unholy Wrath 8
-  {2721, 20}, // A glowing wristband of bone
-  {2722, 20}, // A giant globule of honey
+  {2721, 20}, // A glowing wristband of bone 20
+  {2722, 20}, // A giant globule of honey 83
   {5580, 20}, // Scorched Abdomen 8
   {5581, 20}, // Some Fine Elastic Cartilage 9
-  {5583, 20}, // Scorched Exoskeleton
+  {5583, 20}, // Scorched Exoskeleton 9
   {5584, 20}, // Belt of Spider Powers 9
-  {5585, 20}, // Scorched spider skin sleeves9
-  {5586, 20}, // Scorched spider skin leggings 9
-  {5587, 20}, // An ancient drow relic 
-  {20130, 20}, // Armored Boots
+  {5585, 20}, // Scorched spider skin sleeves 10
+  {5586, 20}, // Scorched spider skin leggings 10
+  {5587, 20}, // An ancient drow relic 10
+  {20130, 20}, // Armored Boots 12
   {20132, 20}, // A Gleaming Jade Battlesuit 6
   {20138, 20}, // Helm of Lacquered Wood 8
-  {20185, 20}, // Yawata's Ring of Power 
-  {21329, 20}, // a swarm of angry beetles 4
-  {21330, 20}, // a mass of black, glistening thorns 5
+  {20185, 20}, // Yawata's Ring of Power  12
+  {21326, 20}, // The Left Gauntlet of Calaphas 10
+  {21329, 20}, // a swarm of angry beetles 9
+  {21330, 20}, // a mass of black, glistening thorns 10
   {21309, 20}, // A Rotting Otyugh Skin 8
-  {25300, 20}, // Tail of Minos 8
-  {26403, 20}, // The Mallet of Orcus 6
+  {25300, 20}, // Tail of Minos 8  
   {26709, 20}, // The Grand Cape of Emithoynarthe 15
   {26712, 20}, // Heavy Red Gloves 15
+  {26713, 20}, // A Clean Red Cloak 9
   {26715, 20}, // Shimmering Metallic Greaves 15
   //{27724, 20}, // A Pair of Fine Leather Boots 3
   //{27726, 20}, // The Circlet of Devotion 4
@@ -1716,7 +1716,7 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     if ((lh_opt == 2) && (aq_obj_temp_value != 2)) continue;  // low
     if ((lh_opt == 3) && (aq_obj_temp_value != 3)) continue;  // mid
     if ((lh_opt == 4) && (aq_obj_temp_value != 4)) continue;  // high
-    if ((lh_opt == 5) && ((aq_obj_temp_value < 4) ||
+    if ((lh_opt == 5) && ((aq_obj_temp_value < 5) || //Updating Veteran Orders to Not Overlap Highs
                           (aq_obj_temp_value > 8))) continue; // veteran
     if ((lh_opt == 6) && (aq_obj_temp_value < 10)) continue;  // uber
 
