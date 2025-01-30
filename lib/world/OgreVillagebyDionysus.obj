@@ -160,7 +160,7 @@ A horrifically ugly and smelly skin sits here.~
 9 248574016 9217
 18 0 0 0
 30 2000 40000
-2
+8
 X
 ~
 4 0 0
@@ -257,7 +257,7 @@ A simple belt sits here, obviously intended for adornment.~
 9 16896 2049
 5 0 0 0
 10 10 10
-1
+9
 X
 ~
 1 0 0
@@ -386,7 +386,7 @@ A pair of gauntlets sits here, gleaming in the sunlight.~
 9 134234115 129
 0 0 0 0
 10 20000 5000
-2
+10
 X
 ~
 4 0 0
@@ -409,7 +409,7 @@ A large suit of red scalemail sits in a heap here.~
 9 183532032 9
 4 0 0 0
 10 40000 15000
-1
+9
 X
 ~
 0 0 0
@@ -610,7 +610,7 @@ A swarm of beetles buzzes angrily around, looking for something to envelop.~
 9 175143504 5
 0 0 0 0
 10 10 10
-4
+9
 E
 swarm beetles~
 These beetles seem to be possessed of some demonic energy, and are searching
@@ -639,7 +639,7 @@ A mass of black thorns is here, gleaming with an evil venom.~
 9 175143504 65
 0 0 0 0
 10 10 10
-5
+10
 E
 thorns black glistening~
 These thorns throb with a demonic energy, and you suspect if you could find a

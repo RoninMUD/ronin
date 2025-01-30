@@ -24,15 +24,15 @@ You can see the bottomless pit and the ropes and poles down there.
 ~
 0 -1 12901
 E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
+~
+E
 pit bottomless~
 The Pit below you extends downwards and downwards beyond the range of your
 eyes. From somewhere deep, a chilling and howling wind pulls you back and
 forth.
-~
-E
-poles ropes~
-The ropes and poles have been carefully positioned to allow movement in the
-pit. They look secure enough, if you just can get a hold of them.
 ~
 S
 #12901
@@ -54,15 +54,15 @@ You can see the bottomless pit and the ropes and poles down there.
 ~
 0 -1 12902
 E
-poles ropes~
-The ropes and poles have been carefully positioned to allow movement in the
-pit. They look secure enough, if you just can get a hold of them.
-~
-E
 pit bottomless~
 The Pit below you extends downwards and downwards beyond the range of your
 eyes. From somewhere deep, a chilling and howling wind pulls you back and
 forth.
+~
+E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
 ~
 S
 #12902
@@ -89,15 +89,15 @@ You can see the bottomless pit.
 ~
 0 -1 12903
 E
-poles ropes~
-The ropes and poles have been carefully positioned to allow movement in the
-pit. They look secure enough, if you just can get a hold of them.
-~
-E
 pit bottomless~
 The Pit below you extends downwards and downwards beyond the range of your
 eyes. From somewhere deep, a chilling and howling wind pulls you back and
 forth.
+~
+E
+poles ropes~
+The ropes and poles have been carefully positioned to allow movement in the
+pit. They look secure enough, if you just can get a hold of them.
 ~
 S
 #12903
@@ -174,16 +174,16 @@ You can see the mist.
 hatch floor silver~
 2 12900 12906
 E
-statue~
-The statue resembles a bald man wearing a violently fluttering robe. He
-stands in an alert position. While examining the statue, you notice a small
-hatch on the floor beside the statue's podium. It's made of pure silver.
-~
-E
 mist~
 The white mist fills the whole chamber, limiting the vision almost to nothing.
 The mist seems to irritates your eyes, and makes them watery. You see some
 vague shape in the mist, maybe a statue of some kind.
+~
+E
+statue~
+The statue resembles a bald man wearing a violently fluttering robe. He
+stands in an alert position. While examining the statue, you notice a small
+hatch on the floor beside the statue's podium. It's made of pure silver.
 ~
 S
 #12906
@@ -202,13 +202,13 @@ You can see the silver hatch on the ceiling.
 hatch floor silver~
 2 12900 12905
 E
+pile bones~
+The bones are obviously of human origin, but from where and whose ???
+~
+E
 pedestal~
 The pedestal is made of black stone, and has bloody splashes all over it.
 Maybe it has sometimes been used for sacrifices.
-~
-E
-pile bones~
-The bones are obviously of human origin, but from where and whose ???
 ~
 S
 #12910
@@ -307,15 +307,15 @@ You can see the western way.
 ~
 0 -1 12914
 E
-ropes poles~
-You can see ropes and poles hanging above the pit, to make it look like you
-could pass it by using them to help you. But the pit seems awfully deep...
-~
-E
 pit~
 You stare down the pit and you see no bottom. There are, however, some ropes
 and poles in the pit, hanging from the ceiling and walls. Climbers on them
 you don't see, but why ?
+~
+E
+ropes poles~
+You can see ropes and poles hanging above the pit, to make it look like you
+could pass it by using them to help you. But the pit seems awfully deep...
 ~
 S
 #12914
@@ -404,16 +404,16 @@ You can see the western end of the hall.
 ~
 0 -1 12918
 E
-symbols~
-You are not exactly sure what they might mean, but all the symbols on the
-walls, creating a huge pattern, come in pairs. The pattern looks like a
-huge dagger.
-~
-E
 charts~
 The charts are written in a language beyond your capabilities, but from the
 seals and their obvious style, you can guess them to be some kind of treaties
 or land grants.
+~
+E
+symbols~
+You are not exactly sure what they might mean, but all the symbols on the
+walls, creating a huge pattern, come in pairs. The pattern looks like a
+huge dagger.
 ~
 S
 #12918
@@ -636,10 +636,9 @@ You can see a bookcase with a mirror on the wall.
 mirror~
 2 12900 12938
 E
-bookcase~
-The bookcase on the southern wall is filled with mysterious scrolls and
-tomes, but the most interesting sight must be the large mirror in the middle
-of the bookcase.
+tome strange~
+The tome is opened on a page that bears a painting of a golden battle axe. The
+book says that the huge axe is made of Aurum, and that it was made by a god.
 ~
 E
 mirror~
@@ -648,9 +647,10 @@ yourself as you've always wanted to look. But there is something else...
 Is that a small keyhole in the mirror?
 ~
 E
-tome strange~
-The tome is opened on a page that bears a painting of a golden battle axe. The
-book says that the huge axe is made of Aurum, and that it was made by a god.
+bookcase~
+The bookcase on the southern wall is filled with mysterious scrolls and
+tomes, but the most interesting sight must be the large mirror in the middle
+of the bookcase.
 ~
 S
 #12932
