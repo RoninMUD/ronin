@@ -1464,8 +1464,8 @@ const int aq_obj_master_list[][2] = {
   {13401, 4}, // a wispy cloud 15
   {13506, 4}, // Glowing armbands of Creaz 20
   {13507, 4}, // Ornate platinum belt 20
-  {13508, 4}, // A scimitar of Flame
-  {14203, 4}, // Boundary Warden Knife
+  {13508, 4}, // A scimitar of Flame 15
+  {14203, 4}, // Boundary Warden Knife 33
   {14503, 4}, // a Blood-Red Amulet 12
   {16512, 4}, // A Rusted Bucket 15
   {16513, 4}, // A rotting bridle 15
@@ -1474,11 +1474,11 @@ const int aq_obj_master_list[][2] = {
   {17024, 4}, // A pointy wizard's hat 20
   {17080, 4}, // a Silver Harmonica 20
   {17321, 4}, // Cube of Awareness 50 
-  {20901, 4}, // Hero's Robe
-  {20903, 4}, // A silver chainlink belt
-  {20904, 4}, // Mismatched Slippers
-  {20906, 4}, // fireblade
-  {20909, 4}, // A foaming stein
+  {20901, 4}, // Hero's Robe 8
+  {20903, 4}, // A silver chainlink belt 22
+  {20904, 4}, // Mismatched Slippers 18
+  {20906, 4}, // fireblade 12
+  {20909, 4}, // A foaming stein 33
   {21108, 4}, // A giant leaf shield 10
   {21109, 4}, // An Ancient Torch  10
   {21110, 4}, // A sword made from bone  10
