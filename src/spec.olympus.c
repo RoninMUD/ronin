@@ -722,16 +722,9 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
-		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
-
+		send_to_room(buf, CHAR_REAL_ROOM(mob));		
+		mob_aq_reward(reward,mob);
+		
 		break;
 	}
 
@@ -974,14 +967,7 @@ int olympus_zeus(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
+		mob_aq_reward(reward,mob);
 
 		break;
 
@@ -1217,15 +1203,8 @@ int olympus_hera(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
-
+		mob_aq_reward(reward,mob);
+		
 		break;
 
 		//can add an else branch here if you want them to act but not in combat.
@@ -1506,14 +1485,7 @@ int olympus_poseidon(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
+		mob_aq_reward(reward,mob);
 
 		break;
 	}
@@ -2044,14 +2016,7 @@ int olympus_ares(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
+		mob_aq_reward(reward,mob);
 
 		break;
 
@@ -2231,14 +2196,7 @@ int olympus_apollo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
+		mob_aq_reward(reward,mob);
 
 		break;
 
@@ -2868,14 +2826,7 @@ int olympus_hephaestus(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	case MSG_DIE:	// on boss death reward AQP
 		sprintf(buf, "%s has been slain. Olympus Seeks Revenge!\n\r", GET_SHORT(mob));
 		send_to_room(buf, CHAR_REAL_ROOM(mob));
-		for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-		{
-			next_vict = vict->next_in_room;
-			if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-			sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", reward, reward> 1 ? "points" : "point");
-			send_to_char(buf, vict);
-			vict->ver3.quest_points += reward;
-		}
+		mob_aq_reward(reward,mob);
 
 		break;
 
