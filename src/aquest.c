@@ -1386,8 +1386,7 @@ const int aq_obj_master_list[][2] = {
   {8922, 3}, // a common recipe 3
   {10018, 3}, // lime-green jerkin 3
   {10021, 3}, // Wreath of Fire 13
-  {10409, 3}, // Colossal Claw of the Greater Lycanthrope 10
-  {10908, 3}, // a Zyca Orb 50
+  {10409, 3}, // Colossal Claw of the Greater Lycanthrope 10  
   {11316, 3}, // breast plate of Black rose 10
   {11507, 3}, // the Hammer of Lei Kung 10
   {11524, 3}, // The Plate Mail of Fei Lien 10
@@ -1451,7 +1450,9 @@ const int aq_obj_master_list[][2] = {
   {10022, 4}, // Obsidian Ring 30
   {10028, 4}, // worn hickory cane 32
   {10905, 4}, // a pair of Zyca arm plates 10
+  {10906, 4}, // a pair of Zyca leg plates 10
   {10907, 4}, // a Zyca ring 10
+  {10908, 4}, // a Zyca Orb 50
   {11506, 4}, // the Wyvernspur 50
   {12028, 4}, // Snakeskin Belt 10
   {12023, 4}, // Dark Banded Mail 25
