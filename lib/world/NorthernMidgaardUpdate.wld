@@ -2582,6 +2582,9 @@ Hitroll: 'look hitroll'
 Mana-Regen: 'look manaregen' or 'look mana'
 HP-Regen: 'look hpregen' or 'look hp'
 Armor: 'look armor'
+HP Stat: 'look hpstat'
+Mana Stat: 'look manastat'
+Stats: 'look stat'
 
 
 ~
@@ -2674,6 +2677,69 @@ hpregen hp~
    150          105
 
 
+~
+E
+hpstat~
+
+The Cost to Raise the HP stat.
+If the stats are in between each stat,
+the cost is 1RP for every 2 HP you add.
+
+You must increase to the next stat in one go.
+
+--STAT----------Cost--
+======================
+    50           25
+   100           50
+   150           75
+   200          100
+   250          125
+   300          150
+   350          175
+   400          200
+   450          225
+   500          250
+~
+E
+manastat~
+
+The Cost to Raise the Mana stat.
+If the stats are in between each stat,
+the cost is 1RP for every 2 Mana you add.
+
+You must increase to the next stat in one go.
+
+--STAT----------Cost--
+======================
+    50           25
+   100           50
+   150           75
+   200          100
+   250          125
+   300          150
+   350          175
+   400          200
+   450          225
+   500          250
+~
+E
+stat~
+
+The Cost to Raise Negative is the same cost as Positive.
+This applies to STR,CON,DEX,INT,WIS
+
+--STAT----------Cost--
+======================
+     1            5
+     2           10
+     3           15
+     4           20
+     5           25
+     6           30
+     7           35
+     8           40
+     9           45
+    10           50
 ~
 S
 #3093
