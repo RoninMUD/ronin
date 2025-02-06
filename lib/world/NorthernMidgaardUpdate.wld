@@ -2582,6 +2582,7 @@ Hitroll: 'look hitroll'
 Mana-Regen: 'look manaregen' or 'look mana'
 HP-Regen: 'look hpregen' or 'look hp'
 Armor: 'look armor'
+Stats: 'look stat'
 
 
 ~
@@ -2674,6 +2675,25 @@ hpregen hp~
    150          105
 
 
+~
+E
+stat~
+
+The Cost to Raise Negative is the same cost as Positive.
+This applies to STR,CON,DEX,INT,WIS
+
+--STAT----------Cost--
+======================
+     1           10
+     2           20
+     3           30
+     4           45
+     5           60
+     6           75
+     7          100
+     8          125
+     9          150
+    10          175
 ~
 S
 #3093
