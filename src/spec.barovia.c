@@ -770,10 +770,8 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
           if (obj && ( V_OBJ(obj) != UBER_BOM )) obj_to_char( unequip_char(uber, WEAR_WRIST_L), uber );
           else if (!obj) {
             obj=read_object(UBER_BOM, VIRTUAL);
-            if(chance(90)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_EVIL);
             if(chance(20)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_GOOD);
             if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_PALADIN);
-            if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_BARD);
             equip_char(uber, obj, WEAR_WRIST_L);
           }
         }
@@ -791,7 +789,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       }
       break;
     case CMD_SONG:
-      if (ch && IS_MORTAL(ch) && chance(20) && ch->equipment[HOLD]->obj_flags.type_flag == ITEM_MUSICAL) {
+      if (ch && IS_MORTAL(ch) && chance(20) && EQ(ch, HOLD) && OBJ_TYPE(EQ(ch, HOLD)) == ITEM_MUSICAL) {
         do_say(uber, "Tatyana, is that you!?! You always had the most beautiful voice; at last, time and circumstance have brought you back to me!", CMD_SAY);
         sprintf(buf, "%s swirls %s cloak around %s and %s disappears.", GET_SHORT(uber), HSHR(uber), GET_NAME(ch), HESH(ch) );
         act("$n swirls $s cloak around $N and they both disappear.  $n returns immediately, alone.",0,uber,0,ch,TO_NOTVICT);
@@ -1058,6 +1056,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
         send_to_char(buf, vict);
         vict->ver3.quest_points += reward;
       }
+      form = 0; //reset form
       break;
     default:
       break;
@@ -1150,20 +1149,19 @@ int super_zombie(CHAR *zombie, CHAR *ch, int cmd, char *arg)
 }
 
 
-int uber_bom(OBJ *obj, CHAR *ch, int cmd, char *argument)
+int uber_bom(OBJ *bom, CHAR *ch, int cmd, char *argument)
 {
-  if (cmd == MSG_TICK) {
-    if (obj->equipped_by) {
-      if (GET_HIT(obj->equipped_by)>-1) {
-        //bom: range of 10-15 "hidden" regen instead of flat 10, doubles in CLUB, +5 in DARK
-        int regen = number(10,15);
-        if (IS_SET(CHAR_ROOM_FLAGS(ch), CLUB)) regen*=2;
-        if (IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) regen+=5;
-        GET_HIT(obj->equipped_by) = MIN( GET_MAX_HIT(obj->equipped_by),
-        GET_HIT(obj->equipped_by)+regen);
-        GET_MANA(obj->equipped_by) = MIN( GET_MAX_MANA(obj->equipped_by),
-        GET_MANA(obj->equipped_by)+regen);
-      }
+  ch = bom->equipped_by;
+  if (cmd == MSG_TICK && ch) {
+    if (GET_HIT(ch)>-1) {
+      //bom: range of 10-15 "hidden" uncapped regen: +5 in DARK rooms, doubles in CLUB rooms
+      int regen = number(10,15);
+      if (IS_SET(CHAR_ROOM_FLAGS(ch), CLUB)) regen*=2;
+      if (IS_SET(CHAR_ROOM_FLAGS(ch), DARK)) regen+=5;
+      GET_HIT(ch) = MIN( GET_MAX_HIT(ch),
+      GET_HIT(ch)+regen);
+      GET_MANA(ch) = MIN( GET_MAX_MANA(ch),
+      GET_MANA(ch)+regen);
     }
   }
   return FALSE;
