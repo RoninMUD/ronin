@@ -789,7 +789,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       }
       break;
     case CMD_SONG:
-      if (ch && IS_MORTAL(ch) && chance(20) && EQ(ch, HOLD) && ch->equipment[HOLD]->obj_flags.type_flag == ITEM_MUSICAL) {
+      if (ch && IS_MORTAL(ch) && chance(20) && EQ(ch, HOLD) && OBJ_TYPE(EQ(ch, HOLD)) == ITEM_MUSICAL) {
         do_say(uber, "Tatyana, is that you!?! You always had the most beautiful voice; at last, time and circumstance have brought you back to me!", CMD_SAY);
         sprintf(buf, "%s swirls %s cloak around %s and %s disappears.", GET_SHORT(uber), HSHR(uber), GET_NAME(ch), HESH(ch) );
         act("$n swirls $s cloak around $N and they both disappear.  $n returns immediately, alone.",0,uber,0,ch,TO_NOTVICT);
