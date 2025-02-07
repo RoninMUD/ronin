@@ -202,42 +202,7 @@ int sot_michael(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 			switch (number(0, 5))
 			{
-			case 0:
-
-				act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,mob,0,0,TO_ROOM);
-				for(vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-				{
-					next_vict = vict->next_in_room;
-					if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-					damage(mob,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
-					stun_delay = number(1, 3);
-					WAIT_STATE(vict,PULSE_VIOLENCE*stun_delay);
-				}
-				break;
-			case 1:
-			case 2:
-				vict = get_random_victim_fighting(mob);
-				if (vict)
-				{
-					act("$n wields his sword and advances towards the enemy.",0,mob,0,0,TO_ROOM);
-					act("A fine steel blade stabs into your chest.",0,mob,0,vict,TO_VICT);
-					act("$N screams as the blade pierces $S chest.",0,mob,0,vict,TO_NOTVICT);
-					damage(mob,vict,1450,TYPE_UNDEFINED,DAM_PHYSICAL);
-				}
-				break;
-			case 3:
-				break;
-				act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,mob,0,0,TO_ROOM);
-				for(vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-				{
-					next_vict = vict->next_in_room;
-					if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-					damage(mob,vict,600,TYPE_UNDEFINED,DAM_PHYSICAL);
-					stun_delay = number(1, 3);
-					WAIT_STATE(vict,PULSE_VIOLENCE*stun_delay);
-				}
-			case 4:
-			case 5:
+			case 0:		
 				vict = get_random_victim_fighting(mob);
 				if (vict)
 				{
@@ -247,6 +212,31 @@ int sot_michael(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					damage(mob,vict,850,TYPE_UNDEFINED,DAM_PHYSICAL);
 				}
 				break;
+			case 1:
+			case 2:
+				act("$n shouts an oppressive order, causing your head to ache and your mind to wander.",0,mob,0,0,TO_ROOM);
+				for(vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+				{
+					next_vict = vict->next_in_room;
+					if(!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;					
+					damage(mob,vict,800,TYPE_UNDEFINED,DAM_PHYSICAL);
+					stun_delay = number(1, 3);
+					WAIT_STATE(vict,PULSE_VIOLENCE*stun_delay);
+				}
+				break;
+			case 3:				
+			case 4:
+				vict = get_random_victim_fighting(mob);
+				if (vict)
+				{
+					act("$n wields his sword and advances towards the enemy.",0,mob,0,0,TO_ROOM);
+					act("A fine steel blade stabs into your chest.",0,mob,0,vict,TO_VICT);
+					act("$N screams as the blade pierces $S chest.",0,mob,0,vict,TO_NOTVICT);
+					damage(mob,vict,1450,TYPE_UNDEFINED,DAM_PHYSICAL);
+				}
+				break;			
+			case 5:		
+				break;			
 			default:
 				break;
 			}
