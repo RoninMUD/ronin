@@ -78,7 +78,7 @@ on the land, so watch your step.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 Your feet make wet squelching noises as you plunge them into the boots.~
 $n's feet make wet squelching noises as $e plunges them into $s boots.~
@@ -790,6 +790,14 @@ stone~
 A carving can be seen inscribed in the stone.
 ~
 E
+stone~
+A carving can be seen inscribed in the stone.@
+~
+E
+pedastel~
+A carving can be seen inscribed in the stone.
+~
+E
 carving~
 In the halls where gods reside, a secret lies within,
 A seal that bars the way ahead, to those who seek to win.
@@ -797,14 +805,6 @@ To break this ancient barrier, a triad must align,
 In separate rooms they take their place, their presence the design.
 When each one stands upon their mark, in chambers set apart,
 The seal will shatter, path revealed, to those of noble heart.
-~
-E
-pedastel~
-A carving can be seen inscribed in the stone.
-~
-E
-stone~
-A carving can be seen inscribed in the stone.@
 ~
 E
 stone~
