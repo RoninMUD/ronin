@@ -760,9 +760,9 @@ forge~
 An old, charred iron forge.~
 A giant iron forge emitting massive waves of heat.~
 ~
-0 0 0
-0 0 0 0
-4000 0 0
+15 0 0
+5000 15 28843 0
+4000 1000000 0
 100
 E
 forge~
@@ -781,10 +781,10 @@ pedastel stone~
 A large stone pedastel~
 A large stone pedastel stands against the wall~
 ~
-0 1 1
+0 1 0
 0 0 0 0
 2000 0 0
-0
+100
 E
 stone~
 A carving can be seen inscribed in the stone.
@@ -813,6 +813,40 @@ A carving can be seen inscribed in the stone.
 X
 ~
 64 0 0
+M
+~
+~
+~
+~
+#28843
+key antiquated~
+A Tarnished Antiquated Key~
+A tarnished antiquated key dimly glows on the ground.~
+~
+0 0 1
+0 0 0 0
+1 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28844
+hammer antiquated~
+An Antiquated Forge Hammer~
+A large dented hammer rests on the floor.~
+~
+0 403177475 8193
+0 0 0 0
+0 0 0
+100
+X
+~
+0 0 0
 M
 ~
 ~
