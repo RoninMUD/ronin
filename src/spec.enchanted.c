@@ -1648,16 +1648,17 @@ int ench_rings(OBJ *obj, CHAR *ch, int cmd, char *argument) {
     if (!obj || !ch || !OBJ_CARRIED_BY(obj) || (ch != OBJ_CARRIED_BY(obj)) || !AWAKE(ch) || IS_IMMORTAL(ch)) return FALSE;
 
     bool zap = FALSE;
-
+	//Fisher Fix - Switched Checks due to Item ANTIs
+	//Initially added because of Druid SC changes.
     switch (V_OBJ(obj)) {
       case DISCORD:
-        if (GET_CLASS(ch) != CLASS_PALADIN) {
+        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
           zap = TRUE;
         }
         break;
 
       case DISSONANCE:
-        if (GET_CLASS(ch) != CLASS_ANTI_PALADIN) {
+        if (GET_CLASS(ch) != CLASS_PALADIN) {
           zap = TRUE;
         }
         break;
@@ -1901,9 +1902,20 @@ int ench_drunk(CHAR *mob, CHAR *ch, int cmd, char *arg)  {
   int drink_num[5]={0,28711,28712,28713,28714};
   CHAR *bouncer;
   OBJ *obj;
+  
+  //Missives About Olympus.
+  
+  char *drunk_dio_missives_speak[4] = {  \
+  "Dio, I can't believe you got away with that. You broke Zeus's crown in a drunken stupor, realized you'd be thrown out of Olympus, so snuck into Hephaestus' fiery mistress and reforged the thing before anyone was the wiser? This is why we're best mates!",\
+  "Dio, remember that time you wedged that boulder atop the waterfall? You were so tipsy, yet managed to stop us from tumbling down the mountain. Only you could turn a drunken stumble into a stroke of genius!", \
+  "Dio, remember that time you walked into the wrong temple and found Apollo and Artemis both there? You tried to challenge them to a drinking contest, but they just stared you down with those piercing eyes. You backed out slowly, muttering something about 'wrong party.' Even the god of revelry knows when he's outmatched!",\
+  "Dio, remember that time you stumbled into Hera's sacred grove? Suddenly, you were surrounded by her entourage: a peacock flaunting its feathers, a lion eyeing you hungrily, a bull blocking your path, amongst many others. You managed to charm them all with a song and a sip of your finest vintage. Only you could turn a divine ambush into an impromptu party!"
+  
+  }; 
+  
 
   if(cmd==MSG_MOBACT) {
-    if(chance(10)) { /* 10% random chance */
+    if(chance(40)) { /* 10% random chance */
       if(!(bouncer=get_random_victim(mob))) return FALSE;
       switch(number(1,4)) {
         case 1:
@@ -1921,7 +1933,16 @@ int ench_drunk(CHAR *mob, CHAR *ch, int cmd, char *arg)  {
       }
       command_interpreter(mob,buf);
       return FALSE;
-    }
+    }else {   //If he doesnt mumble.  Lets give some other exposition.
+	
+		if (chance(5) && (!mob->specials.fighting))
+		{
+			sprintf(buf, "%s", drunk_dio_missives_speak[number(0, NUMELEMS(drunk_dio_missives_speak) - 1)]);
+
+			do_say(mob, buf, CMD_SAY);
+		}	
+	}	
+	
     return FALSE;
   } /* end of if mobact */
 

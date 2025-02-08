@@ -268,7 +268,12 @@ int olympus_waterfallroom(int room, CHAR *ch, int cmd, char *arg)
 bool isSealRoomsOccupied()
 {
     // check all 3 rooms.  All 3 need a person in it to activate.
-
+    //Make sure the zone is loaded.
+    if(real_room(SEAL_ROOM_ONE) == NOWHERE || real_room(SEAL_ROOM_TWO)== NOWHERE || real_room(SEAL_ROOM_THREE)== NOWHERE){
+        return FALSE;
+    }
+    
+ 
     if (count_mortals_real_room(real_room(SEAL_ROOM_ONE)) < 1 ||
         count_mortals_real_room(real_room(SEAL_ROOM_TWO)) < 1 ||
         count_mortals_real_room(real_room(SEAL_ROOM_THREE)) < 1)
