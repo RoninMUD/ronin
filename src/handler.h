@@ -44,7 +44,8 @@ AFF *get_affect_from_char(CHAR *ch, int type);
 void affect_apply(CHAR *ch, int type, sh_int duration, sbyte modifier, byte location, long bitvector, long bitvector2);
 
 /* utility */
-struct obj_data *create_money( int amount );
+OBJ *create_gold(uint64_t amount);
+OBJ *create_money(int amount);
 int isname(char *str, char *namelist);
 char *fname(char *namelist);
 int get_number(char **name);

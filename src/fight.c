@@ -236,94 +236,90 @@ void stop_fighting(CHAR *ch) {
 
 
 void death_list(CHAR *ch);
-void make_corpse(CHAR *ch)
-{
-  struct obj_data *corpse, *o;
-  struct obj_data *money;
-  char buf[MAX_STRING_LENGTH];
-  int i;
 
-  char *str_dup(char *source);
-  struct obj_data *create_money( int amount );
+void make_corpse(CHAR *ch) {
+  OBJ *corpse, *gold;
+  char buf[MIL];
 
-  ch->new.been_killed += 1;
+  if (!ch) {
+    log_f("ERROR :: make_corpse :: character does not exist");
+    abort();
+  }
+
+  GET_BEEN_KILLED(ch) += 1;
   death_list(ch);
-  CREATE(corpse, struct obj_data, 1);
+
+  CREATE(corpse, OBJ, 1);
   clear_object(corpse);
 
-  corpse->item_number = NOWHERE;
-  corpse->in_room = NOWHERE;
-  if(!IS_NPC(ch)) {
-    sprintf(buf,"corpse pcorpse %s",GET_NAME(ch));
-    string_to_lower(buf);
-    corpse->name = str_dup(buf);
-  }
-  else
-    corpse->name = str_dup("corpse mcorpse");
-  sprintf(buf,"corpse of %s is lying here.",(IS_NPC(ch) ? MOB_SHORT(ch) : GET_NAME(ch)));
-  corpse->description = str_dup(buf);
-
-  sprintf(buf, "Corpse of %s",
-    (IS_NPC(ch) ? MOB_SHORT(ch) : GET_NAME(ch)));
-  corpse->short_description = str_dup(buf);
-
-  corpse->contains = ch->carrying;
-  if (GET_GOLD(ch)>0) {
-    money = create_money(GET_GOLD(ch));
-    GET_GOLD(ch)=0;
-    obj_to_obj(money,corpse);
-  }
-
-  corpse->obj_flags.type_flag = ITEM_CONTAINER;
-  corpse->obj_flags.wear_flags = ITEM_TAKE;
-  corpse->obj_flags.value[0] = 0; /* You can't store stuff in a corpse */
-  corpse->obj_flags.value[2] = GET_LEVEL(ch);
-  corpse->obj_flags.value[3] = 1; /* corpse identifyer */
-  corpse->obj_flags.weight = GET_WEIGHT(ch);
-  corpse->obj_flags.cost_per_day = 1;
   if (IS_NPC(ch)) {
-    corpse->obj_flags.cost = NPC_CORPSE;
-    corpse->obj_flags.timer = MAX_NPC_CORPSE_TIME;
-    corpse->obj_flags.material = mob_proto_table[ch->nr].class;
-    corpse->obj_flags.cost_per_day=mob_proto_table[ch->nr].skin_value;
-    corpse->obj_flags.skin_vnum[0]=mob_proto_table[ch->nr].skin_vnum[0];
-    corpse->obj_flags.skin_vnum[1]=mob_proto_table[ch->nr].skin_vnum[1];
-    corpse->obj_flags.skin_vnum[2]=mob_proto_table[ch->nr].skin_vnum[2];
-    corpse->obj_flags.skin_vnum[3]=mob_proto_table[ch->nr].skin_vnum[3];
-    corpse->obj_flags.skin_vnum[4]=mob_proto_table[ch->nr].skin_vnum[4];
-    corpse->obj_flags.skin_vnum[5]=mob_proto_table[ch->nr].skin_vnum[5];
-    /* some skins should be worthless based on mob class - those checks
-    added to do_skin */
+    OBJ_GET_NAME(corpse) = str_dup("corpse mcorpse");
   }
   else {
-    corpse->obj_flags.cost = PC_CORPSE;
-    corpse->obj_flags.timer = MAX_PC_CORPSE_TIME;
+    snprintf(buf, sizeof(buf), "corpse pcorpse %s", GET_NAME(ch));
+    OBJ_GET_NAME(corpse) = str_dup(str_lwr(buf));
   }
 
-  for (i=0; i<MAX_WEAR; i++)
-   if (ch->equipment[i])
-     obj_to_obj(unequip_char(ch, i), corpse);
+  snprintf(buf, sizeof(buf), "Corpse of %s", (IS_NPC(ch) ? MOB_SHORT(ch) : GET_NAME(ch)));
+  OBJ_GET_DESCRIPTION(corpse) = str_dup(buf);
 
-  ch->carrying = 0;
+  snprintf(buf, sizeof(buf), "%s is lying here.", OBJ_GET_DESCRIPTION(corpse));
+  *buf = LOWER(*buf);
+  OBJ_GET_SHORT(corpse) = str_dup(buf);
+
+  if (GET_GOLD(ch) > 0) {
+    gold = create_gold(GET_GOLD(ch));
+    obj_to_obj(gold, corpse);
+
+    GET_GOLD(ch) = 0;
+  }
+
+  OBJ_TYPE(corpse) = ITEM_CONTAINER;
+  OBJ_WEAR_FLAGS(corpse) = ITEM_TAKE;
+  OBJ_WEIGHT(corpse) = GET_WEIGHT(ch);
+  OBJ_VALUE(corpse, 2) = GET_LEVEL(ch);
+  OBJ_VALUE(corpse, 3) = 1; // Corpse Identifier
+  OBJ_COST(corpse) = IS_NPC(ch) ? NPC_CORPSE : PC_CORPSE;
+  OBJ_TIMER(corpse) = IS_NPC(ch) ? MAX_NPC_CORPSE_TIME : MAX_PC_CORPSE_TIME;
+
+  if (IS_NPC(ch)) {
+    OBJ_RENT_COST(corpse) = MOB_SKIN_VALUE(ch);
+
+    for (int i = 0; i < MAX_OBJ_SKIN; i++) {
+      OBJ_SKIN_VNUM(corpse, i) = MOB_SKIN_VNUM(ch, i);
+    }
+
+    OBJ_MATERIAL(corpse) = MOB_CLASS(ch);
+  }
+
+  OBJ_CONTAINS(corpse) = GET_CARRYING(ch);
+  ch->carrying = NULL;
+
+  for (int i = 0; (i < MAX_WEAR) && EQ(ch, i); i++) {
+    obj_to_obj(unequip_char(ch, i), corpse);
+  }
+
+  for (OBJ *temp_obj = OBJ_CONTAINS(corpse); temp_obj; OBJ_IN_OBJ(temp_obj) = corpse, temp_obj = OBJ_NEXT_CONTENT(temp_obj));
+
+  object_list_new_owner(corpse, NULL);
 
   corpse->next = object_list;
   object_list = corpse;
 
-  for(o = corpse->contains; o; o->in_obj = corpse, o = o->next_content);
-  object_list_new_owner(corpse, 0);
-
-  if(GET_LEVEL(ch)<10 && corpse->obj_flags.cost==PC_CORPSE &&
-     !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,DEATH) &&
-     !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,HAZARD) ) {
-    send_to_char("\n\rYour corpse is in the Midgaard Morgue 2 west from the Temple.\n\r\
-`iIMPT: When you reach level 10, your corpse will be where-ever you died.`q\n\r",ch);
-    obj_to_room(corpse,real_room(3088));
+  if ((GET_LEVEL(ch) < 10) && (OBJ_COST(corpse) == PC_CORPSE) && !ROOM_DEATH(CHAR_REAL_ROOM(ch)) && !ROOM_HAZARD(CHAR_REAL_ROOM(ch))) {
+    send_to_char("\n\r"\
+      "Your corpse has been sent to The Midgaard Morgue.\n\r"\
+      "The morgue is located two rooms west of The Temple Of Midgaard.\n\r"\
+      "`iNOTE: When you reach level 10, your corpse will be wherever you died.`q\n\r", ch);
+    obj_to_room(corpse, real_room(ROOM_MORGUE));
   }
   else {
     obj_to_room(corpse, CHAR_REAL_ROOM(ch));
   }
-  ch->points.hit  = MIN(ch->points.max_hit,1);
-  ch->points.mana = MIN(ch->points.max_mana,1);
+
+  GET_HIT(ch) = MIN(GET_MAX_HIT_POINTS(ch), 1);
+  GET_MANA(ch) = MIN(GET_MAX_MANA_POINTS(ch), 1);
+
   remove_all_affects(ch);
 }
 

@@ -1563,76 +1563,56 @@ struct obj_data *get_obj_vis_in_rooms(struct char_data *ch, char *name)
   return(0);
 }
 
+OBJ *create_gold(uint64_t amount) {
+  OBJ *obj;
+  EX_DESC *obj_ex_desc;
+  char buf[MIL];
 
-struct obj_data *create_money( int amount )
-{
-  struct obj_data *obj;
-  struct extra_descr_data *new_descr;
-  char buf[80];
-
-  if(amount<=0)
-  {
-    log_f("ERROR: Try to create negative money.");
-                str_dup(NULL);
+  if (!amount) {
+    log_f("ERROR: Trying to create non-positive gold.");
+    abort();
   }
 
-  if(real_object(33) > 0) {
-    obj = read_object(33,VIRTUAL);
+  CREATE(obj, OBJ, 1);
+  clear_object(obj);
+
+  OBJ_TYPE(obj) = ITEM_MONEY;
+  OBJ_WEAR_FLAGS(obj) = ITEM_TAKE;
+  OBJ_VALUE0(obj) = amount;
+  OBJ_COST(obj) = amount;
+
+  if (amount == 1) {
+    OBJ_GET_NAME(obj) = str_dup("coin gold");
+    OBJ_GET_SHORT(obj) = str_dup("a gold coin");
+    OBJ_GET_DESCRIPTION(obj) = str_dup("One miserable gold coin.");
   }
   else {
-    CREATE(obj, struct obj_data, 1);
-    clear_object(obj);
-    obj->item_number = -1;
-    obj->next = object_list;
-    object_list = obj;
-  }
-  CREATE(new_descr, struct extra_descr_data, 1);
-
-  if(amount==1)
-  {
-    obj->name = str_dup("coin gold");
-    obj->short_description = str_dup("a gold coin");
-    obj->description = str_dup("One miserable gold coin.");
-
-    new_descr->keyword = str_dup("coin gold");
-    new_descr->description = str_dup("One miserable gold coin.");
-  }
-  else
-  {
-    obj->name = str_dup("coins gold");
-    obj->short_description = str_dup("gold coins");
-    obj->description = str_dup("A pile of gold coins.");
-
-    new_descr->keyword = str_dup("coins gold");
-    if(amount<10) {
-      sprintf(buf,"There is %d coins.",amount);
-      new_descr->description = str_dup(buf);
-    }
-    else if (amount<100) {
-      sprintf(buf,"There is about %d coins",10*(amount/10));
-      new_descr->description = str_dup(buf);
-    }
-    else if (amount<1000) {
-      sprintf(buf,"It looks like something round %d coins",100*(amount/100));
-      new_descr->description = str_dup(buf);
-    }
-    else if (amount<100000) {
-      sprintf(buf,"You guess there is %d coins",1000*((amount/1000)+ number(0,(amount/1000))));
-      new_descr->description = str_dup(buf);
-    }
-    else
-      new_descr->description = str_dup("There is A LOT of coins");
+    OBJ_GET_NAME(obj) = str_dup("coins gold");
+    OBJ_GET_SHORT(obj) = str_dup("gold coins");
+    OBJ_GET_DESCRIPTION(obj) = str_dup("A pile of gold coins.");
   }
 
-  new_descr->next = 0;
-  obj->ex_description = new_descr;
+  CREATE(obj_ex_desc, EX_DESC, 1);
 
-  obj->obj_flags.type_flag = ITEM_MONEY;
-  obj->obj_flags.wear_flags = ITEM_TAKE;
-  obj->obj_flags.value[0] = amount;
-  obj->obj_flags.cost = amount;
+  EX_DESC_KEYWORD(obj_ex_desc) = OBJ_GET_NAME(obj);
+  snprintf(buf, sizeof(buf), "%"PRId64" gold coin%s.", amount, ((amount == 1) ? "" : "s"));
+  EX_DESC_DESCRIPTION(obj_ex_desc) = OBJ_GET_DESCRIPTION(obj);
 
-  return(obj);
+  OBJ_GET_EX_DESC(obj) = obj_ex_desc;
+
+  obj->next = object_list;
+  object_list = obj;
+
+  return obj;
+}
+
+OBJ *create_money(int amount) {
+  if (amount <= 0) {
+    log_f("ERROR: Trying to create non-positive money.");
+    abort();
+  }
+
+  create_gold(amount);
 }
 
 OBJ* get_obj_equipped_by_name(CHAR *ch, char *obj_name)

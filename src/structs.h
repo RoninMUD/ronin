@@ -6,6 +6,7 @@
 #ifndef __STRUCTS_H__
 #define __STRUCTS_H__
 
+#include <inttypes.h>
 #include <stdarg.h>
 #include <stdint.h>
 #include <time.h>
@@ -20,14 +21,15 @@ typedef uint8_t ubyte;
 typedef int16_t sh_int;
 typedef uint16_t ush_int;
 
-typedef struct descriptor_data    DESC;
-typedef struct follow_type        FOL;
-typedef struct char_data          CHAR;
-typedef struct obj_data           OBJ;
-typedef struct room_data          RM;
-typedef struct affected_type_5    AFF;
-typedef struct enchantment_t      ENCH;
-typedef struct social_messg       SOC;
+typedef struct descriptor_data  DESC;
+typedef struct follow_type      FOL;
+typedef struct char_data        CHAR;
+typedef struct obj_data         OBJ;
+typedef struct extra_descr_data EX_DESC;
+typedef struct room_data        RM;
+typedef struct affected_type_5  AFF;
+typedef struct enchantment_t    ENCH;
+typedef struct social_messg     SOC;
 
 typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_data *other, int cmd, char *arg);
 

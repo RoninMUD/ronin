@@ -986,7 +986,7 @@ void gain_exp(CHAR *ch, int gain)
   int is_altered = FALSE;
 
   if (IS_NPC(ch) ||
-      (GET_LEVEL(ch) < LEVEL_IMM && 
+      (GET_LEVEL(ch) < LEVEL_IMM &&
        GET_LEVEL(ch) > 0))
   {
     if (gain > 0)
@@ -1241,11 +1241,13 @@ void point_update(void) {
 
     if (GET_POS(ch) == POSITION_INCAP) {
       damage(ch, ch, 1, TYPE_UNDEFINED, DAM_NO_BLOCK);
+
       if (DISPOSED(ch)) continue;
 
     }
     else if (GET_POS(ch) == POSITION_MORTALLYW) {
       damage(ch, ch, 2, TYPE_UNDEFINED, DAM_NO_BLOCK);
+
       if (DISPOSED(ch)) continue;
     }
 
@@ -1310,7 +1312,7 @@ void point_update(void) {
   }
 
   /* Objects */
-  for (OBJ *obj = object_list, *next_obj; obj; obj = next_obj) {
+  for (OBJ *obj = object_list, *next_obj = NULL; obj; obj = next_obj) {
     next_obj = obj->next;
 
     bool extract = FALSE;
@@ -1387,7 +1389,7 @@ void point_update(void) {
 
     if (extract) {
       if ((OBJ_TYPE(obj) == ITEM_CONTAINER) || IS_STATUE(obj) || IS_CORPSE(obj)) {
-        for (OBJ *temp_obj = OBJ_CONTAINS(obj), *temp_obj_next; temp_obj; temp_obj = temp_obj_next) {
+        for (OBJ *temp_obj = OBJ_CONTAINS(obj), *temp_obj_next = NULL; temp_obj; temp_obj = temp_obj_next) {
           temp_obj_next = OBJ_NEXT_CONTENT(temp_obj);
 
           obj_from_obj(temp_obj);
@@ -1417,12 +1419,12 @@ void point_update(void) {
                 obj_to_char(temp_obj, temp_ch);
               }
             }
-            else if (OBJ_IN_ROOM(obj) != NOWHERE) {
-              obj_to_room(temp_obj, OBJ_IN_ROOM(obj));
-            }
             else {
-              if (!IS_STATUE(obj) && !IS_CORPSE(obj)) {
+              if ((OBJ_IN_ROOM(obj) == NOWHERE) && !IS_STATUE(obj) && !IS_CORPSE(obj)) {
                 log_f("WIZINFO: DECAY - Container decayed in NOWHERE.");
+              }
+              else {
+                obj_to_room(temp_obj, OBJ_IN_ROOM(obj));
               }
             }
           }

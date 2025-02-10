@@ -45,4 +45,3 @@ lib/*.log
 lib/zone_rating
 lib/world/*.bak
 src/util/announce
-.vscode/tasks.json

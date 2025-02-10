@@ -127,6 +127,9 @@ do {                   \
 #define MOB_ATT_TYPE(mob, num)   (mob->specials.att_type[num])
 #define MOB_ATT_TARGET(mob, num) (mob->specials.att_target[num])
 #define MOB_ATT_SPELL(mob, num)  (mob->specials.att_spell[num])
+#define MOB_CLASS(mob)           (mob_proto_table[mob->nr].class)
+#define MOB_SKIN_VALUE(mob)      (mob_proto_table[mob->nr].skin_value)
+#define MOB_SKIN_VNUM(mob, num)  (mob_proto_table[mob->nr].skin_vnum[num])
 
 #define OBJ_HAS_PROTO(obj)       ((OBJ_RNUM(obj) > -1) && (OBJ_RNUM(obj) <= top_of_objt))
 #define OBJ_RNUM(obj)            (obj->item_number)
@@ -187,6 +190,7 @@ do {                   \
 #define OBJ_LOG(obj)             (obj->log)
 #define OBJ_CONTAINS(obj)        (obj->contains)
 #define OBJ_NEXT_CONTENT(obj)    (obj->next_content)
+#define OBJ_SKIN_VNUM(obj, num)  (obj->obj_flags.skin_vnum[num])
 
 #define OBJ_PROTO_GET_EX_DESC(obj) (OBJ_HAS_PROTO(obj) ? obj_proto_table[OBJ_RNUM(obj)].ex_description : NULL)
 #define OBJ_PROTO_TIMER(obj)       (OBJ_HAS_PROTO(obj) ? obj_proto_table[OBJ_RNUM(obj)].obj_flags.timer : 0)
@@ -208,10 +212,15 @@ do {                   \
 #define ROOM_BLOOD(rm)           (world[rm].blood)
 #define ROOM_CONTENTS(rm)        (world[rm].contents)
 #define ROOM_ARENA(rm)           ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), ARENA) : FALSE)
+#define ROOM_DEATH(rm)           ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), DEATH) : FALSE)
+#define ROOM_HAZARD(rm)          ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), HAZARD) : FALSE)
 #define ROOM_CHAOTIC(rm)         (CHAOSMODE || ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), CHAOTIC) : FALSE))
 #define ROOM_SAFE(rm)            (!CHAOSMODE && ((rm != NOWHERE) ? IS_SET(ROOM_FLAGS(rm), SAFE) : FALSE))
 
 #define CHAR_ROOM_FLAGS(ch)      (ROOM_FLAGS(CHAR_REAL_ROOM(ch)))
+
+#define EX_DESC_KEYWORD(ex)      (ex->keyword)
+#define EX_DESC_DESCRIPTION(ex)  (ex->description)
 
 #define ITEM(zone, x)            ((zone) + (x))
 
@@ -446,7 +455,7 @@ do {                   \
 #define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? ((int)(GET_PRESTIGE(ch) + 5) / 10) : 0)
 #define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
 #define GET_WAIT(ch) (GET_DESCRIPTOR(ch)->wait)
-#define GET_DEFAULT_POSITION(ch) (ch->specials.default_pos)
+#define GET_DEFAULT_POS(ch) (ch->specials.default_pos)
 #define GET_DEATH_TIMER(ch) (ch->specials.death_timer)
 #define GET_REPLY_TO(ch) (ch->specials.reply_to)
 #define GET_TOGGLES(ch) (ch->ver3.toggles)

@@ -45,7 +45,7 @@ void zone_update(void);
 void init_char(struct char_data *ch);
 void clear_char(struct char_data *ch);
 void clear_skills(struct char_skill_data *skills);
-void clear_object(struct obj_data *obj);
+void clear_object(OBJ *obj);
 void reset_char(struct char_data *ch);
 void free_char(struct char_data *ch);
 char *fread_string(FILE *fl);

@@ -2040,7 +2040,7 @@ void spell_animate_dead(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     SET_BIT(GET_ACT(animate), ACT_FLY);
   }
 
-  GET_DEFAULT_POSITION(animate) = animate_data[animate_idx].floating ? POSITION_FLYING : POSITION_STANDING;
+  GET_DEFAULT_POS(animate) = animate_data[animate_idx].floating ? POSITION_FLYING : POSITION_STANDING;
   GET_POS(animate) = animate_data[animate_idx].floating ? POSITION_FLYING : POSITION_STANDING;
 
   for (int i = 0; i <= SAVING_SPELL; i++) {

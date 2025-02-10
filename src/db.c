@@ -3002,7 +3002,53 @@ void free_char(struct char_data *ch)
 }
 
 /* release memory allocated for an obj struct */
-void free_obj(struct obj_data *obj)
+void free_obj(OBJ *obj) {
+  if (!obj) {
+    log_f("ERROR :: free_obj() :: object does not exist");
+    abort();
+  }
+
+  if (obj->disposed) {
+    log_f("WARNING :: free_obj() :: object already disposed");
+  }
+
+  DESTROY(OBJ_GET_NAME(obj));
+  OBJ_GET_NAME(obj) = NULL;
+  DESTROY(OBJ_GET_SHORT(obj));
+  OBJ_GET_SHORT(obj) = NULL;
+  DESTROY(OBJ_GET_DESCRIPTION(obj));
+  OBJ_GET_DESCRIPTION(obj) = NULL;
+  DESTROY(OBJ_GET_ACTION(obj));
+  OBJ_GET_ACTION(obj) = NULL;
+  DESTROY(OBJ_GET_ACTION_NT(obj));
+  OBJ_GET_ACTION_NT(obj) = NULL;
+  DESTROY(OBJ_GET_CWEAR_DESC(obj));
+  OBJ_GET_CWEAR_DESC(obj) = NULL;
+  DESTROY(OBJ_GET_RWEAR_DESC(obj));
+  OBJ_GET_RWEAR_DESC(obj) = NULL;
+  DESTROY(OBJ_GET_CREM_DESC(obj));
+  OBJ_GET_CREM_DESC(obj) = NULL;
+  DESTROY(OBJ_GET_RREM_DESC(obj));
+  OBJ_GET_RREM_DESC(obj) = NULL;
+
+  for (EX_DESC *temp_ex_desc = OBJ_GET_EX_DESC(obj), *next_ex_desc = NULL; temp_ex_desc; temp_ex_desc = next_ex_desc) {
+    next_ex_desc = temp_ex_desc->next;
+
+    DESTROY(EX_DESC_KEYWORD(temp_ex_desc));
+    EX_DESC_KEYWORD(temp_ex_desc) = NULL;
+    DESTROY(EX_DESC_DESCRIPTION(temp_ex_desc));
+    EX_DESC_DESCRIPTION(temp_ex_desc) = NULL;
+
+    DESTROY(temp_ex_desc);
+  }
+  OBJ_GET_EX_DESC(obj) = NULL;
+
+  obj->disposed = TRUE;
+  obj->next = disposed_objs;
+  disposed_objs = obj;
+}
+
+void free_obj_old(struct obj_data *obj)
 {
   struct extra_descr_data *i_descr = NULL;
   struct extra_descr_data *n_descr = NULL;
@@ -3118,28 +3164,32 @@ void reset_char(struct char_data *ch)
           GET_MANA(ch) = 1;
 }
 
-/* clear ALL the working variables of a char and do NOT free any space alloc'ed*/
-void clear_char(struct char_data *ch) {
-  memset((char *)ch, '\0', sizeof(struct char_data));
+/* Clear ALL variables of a character and do NOT free allocated memory. */
+void clear_char(CHAR *ch) {
+  memset((char *)ch, '\0', sizeof(CHAR));
 
-  ch->in_room_r = NOWHERE;
-  ch->specials.was_in_room = NOWHERE;
-  ch->specials.position = POSITION_STANDING;
-  ch->specials.default_pos = POSITION_STANDING;
-  ch->skills = 0;
-  GET_AC(ch) = 100; /* Basic Armor */
-  ch->new.prompt = PROMPT_HP | PROMPT_HP_TEX | PROMPT_MANA | PROMPT_MANA_TEX | PROMPT_MOVE | PROMPT_MOVE_TEX | PROMPT_BUFFER | PROMPT_BUFFER_TEX | PROMPT_VICTIM | PROMPT_VICTIM_TEX;
+  GET_IN_ROOM_R(ch) = NOWHERE;
+  GET_WAS_IN_ROOM(ch) = NOWHERE;
+  GET_POS(ch) = POSITION_STANDING;
+  GET_DEFAULT_POS(ch) = POSITION_STANDING;
+  GET_AC(ch) = 100;
+  GET_SKILLS(ch) = NULL;
 }
 
 void clear_skills(struct char_skill_data *skills) {
   memset((char *)skills, '\0', sizeof(struct char_skill_data) * MAX_SKILLS5);
 }
 
-void clear_object(struct obj_data *obj) {
+void clear_object(OBJ *obj) {
+  if (!obj) {
+    log_f("ERROR: Character does not exist.");
+    abort();
+  }
+
   memset((char *)obj, '\0', sizeof(struct obj_data));
 
-  obj->item_number = -1;
-  obj->in_room = NOWHERE;
+  OBJ_RNUM(obj) = -1;
+  OBJ_IN_ROOM(obj) = NOWHERE;
 }
 
 int generate_id(void);
