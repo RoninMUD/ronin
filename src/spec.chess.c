@@ -72,6 +72,9 @@
 #define BLACK_BISHOP_ITEM 2309
 
 #define CHESS_RECIPE_RING 2313
+#define CHESS_RECIPE_BELT 2311
+#define CHESS_RECIPE_SHIELD 2315
+#define CHESS_RECIPE_CROWN 2317
 
 // Recipes
 
@@ -483,10 +486,29 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
     return FALSE;
 }
 
+//Refunds Movement points.
+int rook_mighty_belt(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+	CHAR *owner;      
+	
+	if (cmd == MSG_TICK && obj->equipped_by)
+    {
+		
+		if(!(owner=obj->equipped_by)) return FALSE;
+        GET_MOVE(owner) = MIN(GET_MOVE(owner) + 50,GET_MAX_MOVE(owner));
+    }
+	
+
+    return FALSE;
+}
+
+
 void assign_chess(void)
 {
     // Assing Objects
     assign_obj(CHESS_RECIPE_RING, bishop_holy_ring);
+	assign_obj(CHESS_RECIPE_BELT, rook_mighty_belt);
+	
 
     // Assign Spec to All White Chess Pieces
     assign_mob(WHITE_PAWN, chess_mob);
