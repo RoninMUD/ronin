@@ -127,7 +127,7 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 K
 0 0 0 0 0 0 0
 #2309
-white king castle~
+white king rook~
 White King's Rook~
 A white king's castle is standing here.
 ~
@@ -160,7 +160,7 @@ important piece in its class.
 K
 0 0 0 0 0 0 0
 #2311
-black queen castle~
+black queen rook~
 Black Queen's Rook~
 A black queen's castle is standing here.
 ~
@@ -270,7 +270,7 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 K
 0 0 0 0 0 0 0
 #2318
-black king castle~
+black king rook~
 Black King's Rook~
 A black king's castle is standing here.
 ~
@@ -347,11 +347,10 @@ rook white super~
 The Super White Rook~
 The Super White Rook stands before you
 ~
-The second most power member of the White Chess Army stands before
+The second most powerful member of the White Chess Army stands before
 you. He protects the flanks and forges a path ahead for the army.
 Proudly wearing the White Crest, he glares forward looking for the
 enemy.
-
 ~
 12 128 0 Y
 70 -15 -20 10d220+30000 20d10+130
@@ -368,7 +367,7 @@ The Super Black Queen stands before you
 ~
 A towering figure stands over you.  Her gaze is frantic as she  
 evaluates the battlefield.  All is not yet lost, as she moves 
-towards your position. Wielding a large mace, she looks to 
+towards your position. Standing stoically, she looks to 
 retake the advantage on the field. The Black Chess Army
 commander is an exemplar of tactical command even when
 the victory is uncertain.

@@ -265,7 +265,7 @@ ring holy bishop bishops~
 Bishop's Holy Ring~
 A holy ring of the super bishop.~
 ~
-9 134218051 1
+9 134218051 3
 5 0 0 0
 5 375982 287456
 0
@@ -305,7 +305,7 @@ shield sturdy knight knight's~
 Knight's Sturdy Shield~
 The sturdy shield of the super knight.~
 ~
-9 0 1
+9 0 513
 23 0 0 0
 18 189304 166993
 0
@@ -345,13 +345,13 @@ crown queen queen's stunning~
 Queen's Stunning Crown~
 The stunning crown of the super queen.~
 ~
-9 0 1
+9 134217731 17
 11 0 0 0
 0 0 0
 0
 X
 ~
-0 0 0
+2048 0 0
 M
 ~
 ~
