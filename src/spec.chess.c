@@ -394,7 +394,7 @@ int chess_mob(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
 {
-	CHAR *owner;
+    CHAR *owner;
 
     const int affect_dispel_types[] = {
         SPELL_CURSE,
@@ -413,9 +413,9 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
     // Give a 12% chance to also remove basic affects on TICK
     if (cmd == MSG_TICK && obj->equipped_by)
     {
-		
-		if(!(owner=obj->equipped_by)) return FALSE;
 
+        if (!(owner = obj->equipped_by))
+            return FALSE;
 
         if (GET_CLASS(owner) == CLASS_CLERIC || GET_CLASS(owner) == CLASS_PALADIN || GET_CLASS(owner) == CLASS_ANTI_PALADIN)
         { // Perma Infra
@@ -423,7 +423,7 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
             {
                 SET_BIT(obj->obj_flags.bitvector, AFF_INFRAVISION);
             }
-			OBJ_SPEC(obj)=1;
+            OBJ_SPEC(obj) = 1;
         }
 
         if (GET_CLASS(owner) == CLASS_COMMANDO || GET_CLASS(owner) == CLASS_NINJA)
@@ -435,7 +435,7 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
                 GET_MANA(obj->equipped_by) = MIN(GET_MAX_MANA(obj->equipped_by), GET_MANA(obj->equipped_by) + number(40, 70));
             }
         }
-		//70% chance to cure some basic status affects.  
+        // 70% chance to cure some basic status affects.
         if (chance(70))
         {
             affect_dispel = get_random_set_affect(owner, affect_dispel_types, NUMELEMS(affect_dispel_types));
@@ -486,29 +486,27 @@ int bishop_holy_ring(OBJ *obj, CHAR *ch, int cmd, char *argument)
     return FALSE;
 }
 
-//Refunds Movement points.
+// Refunds Movement points.
 int rook_mighty_belt(OBJ *obj, CHAR *ch, int cmd, char *argument)
 {
-	CHAR *owner;      
-	
-	if (cmd == MSG_TICK && obj->equipped_by)
+    CHAR *owner;
+
+    if (cmd == MSG_TICK && obj->equipped_by)
     {
-		
-		if(!(owner=obj->equipped_by)) return FALSE;
-        GET_MOVE(owner) = MIN(GET_MOVE(owner) + 50,GET_MAX_MOVE(owner));
+
+        if (!(owner = obj->equipped_by))
+            return FALSE;
+        GET_MOVE(owner) = MIN(GET_MOVE(owner) + 50, GET_MAX_MOVE(owner));
     }
-	
 
     return FALSE;
 }
-
 
 void assign_chess(void)
 {
     // Assing Objects
     assign_obj(CHESS_RECIPE_RING, bishop_holy_ring);
-	assign_obj(CHESS_RECIPE_BELT, rook_mighty_belt);
-	
+    assign_obj(CHESS_RECIPE_BELT, rook_mighty_belt);
 
     // Assign Spec to All White Chess Pieces
     assign_mob(WHITE_PAWN, chess_mob);
