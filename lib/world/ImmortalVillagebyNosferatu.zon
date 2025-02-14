@@ -1,7 +1,7 @@
 #287
 Immortal Village, by Nosferatu~
 28799 45 2
-X 0 Unknown 16Jun2021 Nosferatu
+X 0 Unknown 27Jan2025 Nosferatu
 Y 100 100 100 100 100 100 100 100
 M 0 28720 1 28742
 G 1 28703 0 0
@@ -146,5 +146,8 @@ D 0 28711 0 1
 D 0 28770 2 1
 D 0 28794 5 2
 D 0 28600 4 2
+D 0 28707 0 2
+D 0 28720 0 2
+D 0 28754 3 2
 S
 $~
