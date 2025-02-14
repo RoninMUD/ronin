@@ -50,6 +50,9 @@
 #define HEPHAESTUS_FORGE_KEY 28843
 #define HEPHAESTUS_FORGE_HAMMER 28844
 
+#define ZEUS_BOLT 28860
+
+
 /*Mobs */
 #define OLYMPUS_ZEUS 28804
 #define OLYMPUS_HERA 28805
@@ -86,9 +89,113 @@
 #define TYPHON_ICE_ENCH_NAME "Encased in Ice"
 #define TYPHON_FIRE_ENCH_NAME "On Fire!"
 
+#define ZEUS_BOLT_CHARGE_TIME       7 /*  */
+
+
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
 /*======================================================================== */
+
+//Grows in Power and Can be released with a CMD_USE.
+//If not used by 5X, hurt the holder.   Only happens in Combat.
+
+int zeus_bolt(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+	CHAR *vict;
+	
+	char buf[MIL];
+	char info_str[MSL];
+	char* bolt_state[] =
+	{/* indicates harvest charges */
+	  "The bolt is dormant, with no accumulated energy.", 		//0
+	  "The bolt has begun to gather power.",					//1
+	  "The bolt has accumulated minimal amounts of power.",		//2
+	  "The bolt has accumulated moderate amounts of power.",	//3
+	  "The bolt nearing its full power.",						//4
+	  "The bolt has reached its maximum capacity.",				//5
+	  "The bolt remained charged but has begun to destabalize.",//6
+	  "The bolt has become unstable."							//7
+	};	
+	
+  switch(cmd)
+  {
+    case MSG_TICK:
+      ch = obj->equipped_by;
+      if(!ch)
+        ch = obj->carried_by;
+	  //If they arent fighting, reset the timer to 0 and then return.
+	  if(!ch->specials.fighting){
+		  obj->obj_flags.timer = 0;
+		  act("The electricity disapates from the bolt.", FALSE, ch, NULL, NULL, TO_CHAR);		  
+		  return FALSE;
+	  }  
+	   
+	  
+	  //IF in combat, start counting out from 0.  After 5 rounds, you reach max damage.
+	  //If you reach 7 ticks it hurts the user.  Reset back to 0.
+      if(ch && !IS_NPC(ch) && ch->specials.fighting)
+      {
+		obj->obj_flags.timer++;
+	
+		sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
+		send_to_char(info_str, ch);
+	
+	
+        //THe bolt has gone past its limit and explodes.  
+		//Hurt the holder.
+		if(obj->obj_flags.timer > 7){
+			obj->obj_flags.timer = 0;
+			send_to_char("The bolt explodes its energy into your skin.", ch);
+			GET_HIT(ch) -= 400;	
+		}	
+      }
+      break;   
+    case CMD_EXAMINE:
+      if((ch==obj->equipped_by || ch==obj->carried_by) && ch && !IS_NPC(ch))
+      {
+        one_argument(argument, buf);
+        if(AWAKE(ch) && obj && V_OBJ(obj)==ZEUS_BOLT && !strncmp(buf, "bolt", MIL))
+        {
+			sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
+			send_to_char(info_str, ch);
+			return TRUE;
+        }
+      }
+      
+      break;
+	case CMD_USE:
+		
+		 ch = obj->equipped_by;
+		  if(!ch)
+			ch = obj->carried_by;
+		  //If they arent fighting, reset the timer to 0 and then return.
+		  if(!ch->specials.fighting){			  
+			  act("There is nothing to electrify.", FALSE, ch, NULL, NULL, TO_CHAR);		  
+			  return FALSE;
+		  }  
+		//If fighting and it has charges - Find whomever they are fighting and hit them and reduce charges to 0
+		if(ch && !IS_NPC(ch) && ch->specials.fighting){
+			 one_argument(argument, buf);
+			if(!strncmp(buf, "bolt", MIL)){
+				vict = ch->specials.fighting;
+				
+				if(vict){
+					obj->obj_flags.timer = 0;
+					act("i shoot you with lightning..", FALSE, ch, NULL, NULL, TO_CHAR);
+					act("Shoot you with lightning..", FALSE, ch, NULL, NULL, TO_ROOM);
+					//Use up to 5 Ticks.  It is possible that they use this on 6 or 7.
+					damage(ch, vict, (100* MIN(obj->obj_flags.timer,5)), TYPE_UNDEFINED, DAM_ELECTRIC);
+					
+				}				
+			}		
+		}		
+		break;
+    default:
+		break;
+  }
+  return FALSE;
+}
+
 
 /* The key needs to break on use. */
 int hephaestus_forge_key(OBJ *obj, CHAR *ch, int cmd, char *arg)
@@ -463,7 +570,7 @@ int typhon_fire_pillar_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *
     {
         if (ch != ench_ch)
             return FALSE;
-        send_to_char("Your frozen body cant move.\n\r", ench_ch);
+        send_to_char("Your body is on fire.....\n\r", ench_ch);
         return TRUE;
     }
 
@@ -495,7 +602,7 @@ int typhon_fire_pillar_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *
     {
         if (ch != ench_ch)
             return FALSE;
-        send_to_char("You can't do that right now, you're frozen in a pillar of ice!\n\r", ench_ch);
+        send_to_char("You can't do that right now, you are engulfed in flames!\n\r", ench_ch);
         return TRUE;
     }
     else
@@ -690,43 +797,47 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 {
 
                 case 0: //-- Freeze Random Characters - 2 Round Stun
-                case 1: // Ice Blast - 3 random characters
+                case 1: 
                     vict = get_random_victim_fighting(mob);
                     if (IS_NPC(vict) || !(IS_MORTAL(vict)))
                         return FALSE;
                     act("You are trapped in a pillar of ice.", 0, mob, 0, vict, TO_VICT);
                     act("$n traps $N in a pillar of ice.", 0, mob, 0, vict, TO_NOTVICT);
                     enchantment_apply(vict, TRUE, TYPHON_ICE_ENCH_NAME, TYPE_UNDEFINED, 5, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, typhon_ice_pillar_func);
+					stop_fighting(vict);
                     break;
                 case 2:
-                case 3:
+                case 3:// Ice Blast - Up To 3 random characters
                 case 4:
                 case 5:
 
                     mortal_count = count_mortals_room(mob, TRUE);
-                    if (mortal_count == 1)
-                    {
-
-                        vict1 = get_random_victim(mob);
-                        if (IS_NPC(vict1) || !(IS_MORTAL(vict1)))
-                            return FALSE;
-                        act("You are foolish to take me on alone!.\r\n", 0, mob, 0, 0, TO_ROOM);
-                        act("$n throws a large shard of ice at you.", 0, mob, 0, vict1, TO_VICT);
-                        act("$n throws a large shard of ice at $N.", 0, mob, 0, vict1, TO_NOTVICT);
-                        damage(mob, vict1, number(500, 620), TYPE_UNDEFINED, DAM_COLD);
-                        WAIT_STATE(vict1, PULSE_VIOLENCE * 1);
-                    }
-                    else if (mortal_count == 2)
-                    {
-                        vict1 = get_random_victim(mob);
-                        if (IS_NPC(vict1) || !(IS_MORTAL(vict1)))
-                            return FALSE;
-                        act("One of you will face my wrath!\r\n", 0, mob, 0, 0, TO_ROOM);
-                        act("$n throws a large shard of ice at you.", 0, mob, 0, vict1, TO_VICT);
-                        act("$n throws a large shard of ice at $N.", 0, mob, 0, vict1, TO_NOTVICT);
-                        damage(mob, vict1, number(500, 620), TYPE_UNDEFINED, DAM_COLD);
-                        WAIT_STATE(vict1, PULSE_VIOLENCE * 1);
-                    }
+                    if (mortal_count < 4)
+					{
+						switch(mortal_count)
+						{
+						case 1:
+							act("You are foolish to take me on alone!.\r\n", 0, mob, 0, 0, TO_ROOM);
+							break;
+						case 2:
+							act("One of you will face my wrath!\r\n", 0, mob, 0, 0, TO_ROOM);
+							break;
+						default:
+							break;
+						for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+						{
+							next_vict = vict->next_in_room;
+							if (IS_MORTAL(vict))
+							{
+								act("$n throws a large shard of ice at you.", 0, mob, 0, vict1, TO_VICT);
+								act("$n throws a large shard of ice at $N.", 0, mob, 0, vict1, TO_NOTVICT);
+								damage(mob, vict1, number(500, 620), TYPE_UNDEFINED, DAM_COLD);
+								WAIT_STATE(vict1, PULSE_VIOLENCE * 1);
+							}
+							if (IS_MORTAL(vict) && mortal_count == 2) break;
+						}
+						}
+					}
                     else
                     {
 
@@ -820,8 +931,8 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
                         return FALSE;
 
                     act("$n summons an volcanic eruption into the room.", 0, mob, 0, 0, TO_ROOM);
-                    act("$n is pushed out of the room by a wave of water.!", 0, vict, 0, 0, TO_ROOM);
-                    act("You are hit by a wall of water.", 0, vict, 0, 0, TO_CHAR);
+                    act("$n is pushed out of the room by a volcanic eruption.!", 0, vict, 0, 0, TO_ROOM);
+                    act("You are hit by a volcanic eruption.", 0, vict, 0, 0, TO_CHAR);
 
                     if (vict)
                     {
@@ -840,9 +951,10 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
                     vict = get_random_victim_fighting(mob);
                     if (IS_NPC(vict) || !(IS_MORTAL(vict)))
                         return FALSE;
-                    act("You are trapped in a pillar of ice.", 0, mob, 0, vict, TO_VICT);
-                    act("$n traps $N in a pillar of ice.", 0, mob, 0, vict, TO_NOTVICT);
+                    act("You are engulfed in a pillar of fire.", 0, mob, 0, vict, TO_VICT);
+                    act("$n engulfs $N in a pillar of fire.", 0, mob, 0, vict, TO_NOTVICT);
                     enchantment_apply(vict, TRUE, TYPHON_FIRE_ENCH_NAME, TYPE_UNDEFINED, 5, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, typhon_fire_pillar_func);
+					stop_fighting(vict);
                     break;
 
                     break;
