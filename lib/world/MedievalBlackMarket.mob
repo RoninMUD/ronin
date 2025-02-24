@@ -295,14 +295,21 @@ goblin gemfang loot~
 Gemfang Goblin~
 A wiry goblin with gemstone-studded teeth, its fingers twitching with greed.
 ~
-A blank of primal clay, waiting to be shaped.
+The larger goblin stares obseessivly at shiny stones, prying them from 
+rings, goblets, and even dungeon walls. Its jagged teeth are embedded 
+with colorful gems, a grotesque display of its obsession. It hoards 
+precious stones in a reinforced pouch tied tightly around its 
+waist, darting between shadows to snatch more whenever the opportunity 
+arises.
 ~
-8 0 0 Y
+8 134217728 0 Y
 30 -10 -14 1d1+0 1d1+0
 3000000 35000
 8 8 1
 74 0 1d1+0 0
 0 0 0 0
+T
+......Gemfang Goblin Stares at polished stones.~
 K
 0 0 0 0 0 0 0
 #18019
@@ -310,14 +317,19 @@ goblin gildpurse loot~
 Gildpurse Goblin~
 A plump goblin jingling with trade bars, its eyes alight with profit-driven mischief.
 ~
-A blank of primal clay, waiting to be shaped.
+This medium sized Goblin holds a tradebar close to its chest, softly
+caressing it like it was a child. Its fervor for having these within 
+its reach can be seen as it projects a creepy smile at all who dare 
+look at its treasure.
 ~
-8 0 0 Y
+8 134217728 0 Y
 40 -20 -15 1d1+0 1d1+0
 4000000 70000
 8 8 1
 74 0 1d1+0 0
 0 0 0 0
+T
+......Gildpurse Goblin caresses its tradebar.~
 K
 0 0 0 0 0 0 0
 #18020
@@ -325,14 +337,19 @@ goblin packmaster loot~
 Packmaster Goblin~
 A goblin nearly buried under an impossible number of sacks and satchels.
 ~
-A blank of primal clay, waiting to be shaped.
+This large goblin has a large sack over its shoulder as it calmly 
+looks around the room. Its larger green eyes darting back and forth 
+as it scans for any signs of treasure to add to its collection. Gold
+Coins can be seen within the open top of the sack.
 ~
-8 0 0 Y
+8 134217728 0 Y
 50 -30 -16 1d1+0 1d1+0
 5000000 105000
 8 8 1
 74 0 1d1+0 0
 0 0 0 0
+T
+......Packmaster Goblin lifts its giant sack of coins.~
 K
 0 0 0 0 0 0 0
 #18021
@@ -340,29 +357,38 @@ goblin mirage loot~
 Mirage Goblin~
 A translucent goblin flickering in and out of existence, its loot phasing with it.
 ~
-A blank of primal clay, waiting to be shaped.
+This small goblin seems to phase in and out of this current plane of 
+existence. Its piercing green eyes look towards anything of value and 
+cause it to emit a low groan of pleasure.  
 ~
-8 0 0 Y
+8 134217728 0 Y
 55 -35 -17 1d1+0 1d1+0
 6000000 175000
 8 8 1
 74 0 1d1+0 0
 0 0 0 0
+T
+......Mirage Goblin fades out of existence.~
 K
 0 0 0 0 0 0 0
 #18022
 goblin doomhoard loot~
 Doomhoard Goblin~
-A towering goblin wreathed in a chaotic aura, its treasures pulsing with malevolent energy.
+A towering goblin wreathed in a chaotic aura.
 ~
-A blank of primal clay, waiting to be shaped.
+A giant goblin adorned in all manner of treasures. Coins, gems, and 
+relics orbit it in a violent storm, bound by some dark power. A 
+ferocity can been seen in its green eyes that lash out towards anything
+that dares to take its treasures. 
 ~
-8 0 0 Y
+8 134217728 0 Y
 60 -40 -18 1d1+0 1d1+0
 7000000 280000
 8 8 2
 74 0 1d1+0 0
 0 0 0 0
+T
+......Doomhoard Goblin drools over all of his treasure.~
 K
 0 0 0 0 0 0 0
 #18023
@@ -370,14 +396,23 @@ goblin loot~
 Loot Goblin~
 A tiny little goblin with a small sack of gold on its back.
 ~
-A blank of primal clay, waiting to be shaped.
+This hunched, wiry goblin waddles beneath the weight of countless 
+bags, pouches, and satchels slung over its frail frame. Its gnarled 
+fingers clutch at its most recent acquisitions, stuffing trinkets 
+and coins into every available pocket. Though small, it moves with 
+surprising speed when its loot is threatened, yipping and shrieking 
+as it scurries away. 
 ~
-8 0 0 Y
+8 134217728 0 Y
 35 -5 -13 1d1+15000 1d1+70
 1000000 5000
 8 8 2
 74 0 1d1+15000 0
 0 1 0 0
+T
+......Loot Goblin Sits and Counts his Treasure Hoard~
+T
+~
 K
 0 0 0 0 0 0 0
 #18024
@@ -385,7 +420,13 @@ grintak hunter goblin~
 Grintak, the Goblin Hunter~
 Grintak the Fang, Hunter of the Loot Goblins
 ~
-A blank of primal clay, waiting to be shaped.
+Grintak the Fang is a goblin who thrives on the thrill of the hunt. 
+Unlike his kin, who prefer to steal and scurry away, he relishes the 
+chase, savoring the moment his quarry realizes escape is impossible. 
+His wiry frame is covered in scars, each a testament to a battle 
+survived, and his dark leathers are reinforced with sinew and bone. 
+Around his neck hangs a string of fangswolf, bear, and even 
+humanoid. Each one a memento of a worthy hunt.
 ~
 74 134219904 0 Y
 70 -50 -30 1d1+100000 1d1+500
@@ -393,6 +434,8 @@ A blank of primal clay, waiting to be shaped.
 8 8 1
 74 1073741823 1d1+15000 0
 0 1 0 1073741823
+T
+......Seethes with murderous rage for the traitor goblins.~
 K
 0 0 0 0 0 0 0
 #0
