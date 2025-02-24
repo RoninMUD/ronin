@@ -1489,7 +1489,7 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
             {
                 loot_goblin_coin_throw(mob, vict, 100000);
             }
-            else
+            else //THis accounts for the 4 different officers
             {
                 loot_goblin_coin_throw(mob, vict, 60000);
             }
@@ -1735,7 +1735,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
             {
 
                 // Only speak 60% of the time.
-                if (chance(100) && !IS_SET(GET_BANK(mob), STATE3))
+                if (chance(60) && !IS_SET(GET_BANK(mob), STATE3))
                 {
 
                     if (loot_goblins_left == 1)
