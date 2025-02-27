@@ -123,8 +123,6 @@ void assign_aquest_special(void);
 void assign_swordoftruth(void);
 void assign_WOT(void);
 void assign_ecanyon(void);
-void assign_turkeytakeover(void);
-void assign_medievalblackmarket(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -137,6 +135,8 @@ void assign_happybob(void);
 void assign_crazylab(void);
 void assign_chess(void);
 void assign_elementalmines(void);
+void assign_turkeytakeover(void);
+void assign_medievalblackmarket(void);
 #endif
 
 void assign_mobiles(void)
@@ -222,8 +222,6 @@ void assign_mobiles(void)
   assign_swordoftruth();
   assign_WOT();
   assign_ecanyon();
-  assign_turkeytakeover();
-  assign_medievalblackmarket();
 
 //  assign_wbw();
 #ifdef TEST_SITE
@@ -236,6 +234,8 @@ void assign_mobiles(void)
   assign_workbench();
   assign_happybob();
   assign_elementalmines();
+  assign_turkeytakeover();
+  assign_medievalblackmarket();
 #endif
 }
 
