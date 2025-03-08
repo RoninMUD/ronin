@@ -5338,7 +5338,7 @@ clear_toggles, thirst, hunger, drunk\n\r";
     return;
   }
 
-  if(GET_LEVEL(ch)<GET_LEVEL(vict)){
+  if((GET_LEVEL(ch)<GET_LEVEL(vict)) && !IS_NPC(vict)){
     send_to_char("Can't do it to a higher level.\n\r",ch);
     return;
   }
