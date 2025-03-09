@@ -854,7 +854,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       break;
     case MSG_MOBACT:
       if (!uber->specials.fighting) break;
-      if (uber && form == 0 && ( GET_HIT(uber) < ( GET_MAX_HIT(uber) / 20 ) ) ) {
+      if (uber && form == 0 && ( GET_HIT(uber) < ( GET_MAX_HIT(uber) / 10 ) ) ) {
         nameless = read_mobile(NAMELESS_ONE, VIRTUAL);
         if (nameless) {
           char_to_room(nameless, CHAR_REAL_ROOM(uber));
@@ -1174,7 +1174,6 @@ int strahd_pentacle(OBJ *pentacle, CHAR *ch, int cmd, char *argument)
   CHAR *zombie = NULL;
 
   //at sunset, iterate the OBJ_SPEC, mark that the sunset hour was already counted with obj_flags.timer boolean
-  ch = pentacle->equipped_by;
   if (cmd == MSG_TICK && ch) {
     if (time_info.hours == 21) {
       if (pentacle->obj_flags.timer == 0) {
@@ -1210,9 +1209,9 @@ int strahd_pentacle(OBJ *pentacle, CHAR *ch, int cmd, char *argument)
           add_follower(zombie, ch);
 
           af.type        = SPELL_CHARM_PERSON;
-          af.duration    = 5;
-          af.modifier    = 0;
-          af.location    = 0;
+          af.duration    = (IS_NIGHT ? 10 : 5);
+          af.modifier    = (IS_NIGHT ? 10 : 5);
+          af.location    = APPLY_HITROLL;
           af.bitvector   = AFF_CHARM;
           af.bitvector2  = 0;
           affect_to_char(zombie, &af);
