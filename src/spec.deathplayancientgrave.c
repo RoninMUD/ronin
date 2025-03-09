@@ -29,10 +29,14 @@
 #include "subclass.h"
 #include "utility.h"
 
+
 /*Rooms */
 
-
 #define SENTINEL_ROOM 21495
+
+#define GRAVESTONE_ONE_ROOM_START 21461
+#define GRAVESTONE_ONE_ROOM_END 21600
+
 
 /*Objects */
 
@@ -54,6 +58,8 @@
 
 /*Miscellaneous strings */
 // Generic States that are shifted to indicate different stages.
+
+#define CRYPT_ZONE 216
 
 #define STATE1 (1 << 0) // 1
 #define STATE2 (1 << 1) // 2
@@ -256,10 +262,21 @@ int dpag_gravestone_one(OBJ *obj, CHAR *ch, int cmd, char *arg)
     {
         one_argument(arg, buf);
         if (*buf && !strncmp(buf, "protrusion", MAX_INPUT_LENGTH))
-        {
+        {	
 			
-			act("The gravestone glows and shakes.", 0, ch, 0, 0, TO_ROOM);
-			act("The gravestone glows and shakes.", 0, ch, 0, 0, TO_CHAR);
+			send_to_room("The gravestone glows and shakes.\n\r", real_room(GRAVESTONE_ONE_ROOM_START));
+			
+			//Ensure the other zone is loaded before this is attempted.
+			if(real_zone(CRYPT_ZONE) != -1){		
+			
+				if (world[real_room(GRAVESTONE_ONE_ROOM_START)].dir_option[DOWN]->to_room_r == -1)
+				{
+				  world[real_room(GRAVESTONE_ONE_ROOM_START)].dir_option[DOWN]->to_room_r = real_room(GRAVESTONE_ONE_ROOM_END);
+				  world[real_room(GRAVESTONE_ONE_ROOM_END)].dir_option[UP]->to_room_r = real_room(GRAVESTONE_ONE_ROOM_START);
+				  send_to_room("The gravestone snaps open, revealing a path into the earth.\n\r", real_room(GRAVESTONE_ONE_ROOM_START));
+				  send_to_room("The ceiling opens revealing a path back outside.\n\r", real_room(GRAVESTONE_ONE_ROOM_END));				  
+				}			
+			}
 			
 			bReturn = TRUE;
 			
@@ -267,6 +284,34 @@ int dpag_gravestone_one(OBJ *obj, CHAR *ch, int cmd, char *arg)
     }
     return bReturn;
 }
+
+
+int dpag_gravestone_one_link(int room,CHAR *ch,int cmd,char *argument) {
+
+
+	if(cmd==CMD_WEST || cmd==CMD_NORTH || cmd==CMD_EAST) {
+		if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+		send_to_char("The greater tombstones block your way.\n\r",ch);
+		return TRUE;
+	  }
+
+
+   
+  if (cmd == MSG_ZONE_RESET)
+  {
+
+    if (world[real_room(GRAVESTONE_ONE_ROOM_START)].dir_option[DOWN]->to_room_r != -1)
+    {
+      world[real_room(GRAVESTONE_ONE_ROOM_START)].dir_option[DOWN]->to_room_r = -1;
+      world[real_room(GRAVESTONE_ONE_ROOM_END)].dir_option[UP]->to_room_r = -1;
+      send_to_room("The gravestone slams shut.\n\r", real_room(GRAVESTONE_ONE_ROOM_START));
+      send_to_room("The gravestone slams shut.\n\r", real_room(GRAVESTONE_ONE_ROOM_END));
+    }
+  }	
+	
+  return FALSE;
+}
+
 
 /* Special Gravestone 1 - Grants access to Deaths Playground Caves. */
 // Read or Examine the inscriptions to unlock the path to the caves.
@@ -360,7 +405,7 @@ assign_room(21457,dpag_block_we);
 assign_room(21458,dpag_block_wn);
 assign_room(21459,dpag_block_es);
 assign_room(21460,dpag_block_we);
-assign_room(21461,dpag_block_new);
+assign_room(21461,dpag_gravestone_one_link);
 assign_room(21462,dpag_block_wn);
 assign_room(21463,dpag_block_se);
 assign_room(21464,dpag_block_nws);
