@@ -1957,6 +1957,61 @@ int ubers[][2] = {
 #endif
 };
 
+int uber_objs[] = {
+  11300, // lover's charm bracelet
+  11301, // fine copper pentacle
+  12049, // gilded carapace collar
+//  12050, // a golden stick
+  14053, // Darkened Shadow Orb
+  20102, // gleaming katana of the Five Rings
+  21228, // Giant, Two-Handed Boulder Maul
+  26582  // Loincloth of Favorable Portents
+};
+
+char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
+  "Blame Sane","Damn you Lovecraft","It is the end times"};
+
+char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
+  "nitwit","nincompoop","imbecile","dullard",
+  "cotton-headed ninnymuggins","peabrain"};
+
+void spawn_uber (CHAR *franz, int tries) {
+  CHAR *vict, *next_vict, *uber_mob;
+  bool spawn = TRUE;
+  int uber_choice = 0, uber_room = 0, i = 0;
+  char buf[MAX_STRING_LENGTH];
+
+  // pick an Uber to load
+  while (i < tries) {
+    spawn = TRUE;
+    i++;
+    uber_choice = number(0, NUMELEMS(ubers)-1);
+    uber_room = ubers[uber_choice][1];
+    for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
+      // don't load if there already is one or a PC in room
+      next_vict = vict->next_in_room;
+      if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
+        spawn = FALSE;
+        break;
+      }
+    }
+
+    if (spawn) {
+      uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
+      char_to_room(uber_mob, real_room(uber_room));
+      sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
+      send_to_room(buf, real_room(uber_room));
+      if (tries > 5) { // SUP+ or tribute
+        sprintf(buf, "Call the police, there's a madman around! Some %s just called an Uber, run for your lives!",  kenderinsults[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+      }
+      else { // tick based spawn
+        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+      }
+      do_quest(franz, buf, CMD_QUEST);
+      break;
+    }
+  }
+}
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -1970,13 +2025,6 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
   char *collectoraction[8] = {"groan","frustration","cod","fume",
                               "blorf","roll","sneor","mumble"};
-  char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
-                            "nitwit","nincompoop","imbecile","dullard",
-                            "cotton-headed ninnymuggins","peabrain"};
-  CHAR *uber_mob = NULL;
-  char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
-                              "Blame Sane","Damn you Lovecraft","It is the end times"}; 
-  int uber_choice = 0, uber_room = 0;
 
   if (cmd == CMD_AQUEST) {
     // process order request
@@ -2024,6 +2072,10 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
           do_say(collector, buf, CMD_SAY);
         }
       return TRUE;
+      }
+      else if (is_abbrev(argument,"uber") && IS_SUPREME(ch)) {
+        spawn_uber(collector, 20);
+        return TRUE;
       }
     }
   } // end "request order"
@@ -2243,37 +2295,66 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       }
     }
     else { // given non-AQ_ORDER
-      do_say(collector, "Thanks, I guess?", CMD_SAY);
-    }
-  }
-
-  CHAR *vict, *next_vict;
-  bool spawn_uber = TRUE;
-  // dawn of the Ubers - Hemp 2017-07-07
-  if (cmd == MSG_ZONE_RESET) {
-    if (chance(10)) {
-      // pick an Uber to load
-      uber_choice = number(0, NUMELEMS(ubers)-1);
-      uber_room = ubers[uber_choice][1];
-
-      for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
-        // don't load if there already is one or a PC in room
-        next_vict = vict->next_in_room;
-        if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
-          spawn_uber = FALSE;
-          break;
+      char *tribute_responses[8] = {
+        "My heavens, do you know what this is?",
+        "Goodness me, a tribute? In this economy?",
+        "Oh no, not again...",
+        "Are you mad!? There's easier ways to die you know.",
+        "What sorcery is this? I don't want to be a part of it!",
+        "This isn't funny, lives are at stake!",
+        "What do you think you're playing at?",
+        "You'll kill us all!"
+      };
+      // check if given an obj ubers load - "tribute"
+      for (obj = GET_CARRYING(collector); obj; obj = OBJ_NEXT_CONTENT(obj)) {
+        bool tribute = FALSE;
+        for (int i = 0; i < NUMELEMS(uber_objs); i++) {
+          if (OBJ_VNUM(obj) == uber_objs[i]) {
+            if (chance(10)) mob_do(collector, "gasp");
+            sprintf(buf, "%s",
+              tribute_responses[number(0, NUMELEMS(tribute_responses)-1 )]);
+            do_say(collector, buf, CMD_SAY);
+            tribute = TRUE;
+            break;
+          }
         }
+        if (tribute) {
+          sprintf(buf, "Suddenly %s explodes in an opalescent fury of sound and color.\n\r", OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+          GET_DEATH_LIMIT(collector)++; //track number of objs given using deathlimit
+          if (GET_DEATH_LIMIT(collector) == 2) {
+            do_yell(collector, "Aaaaaaaaaaaaaah I want no part of this!", CMD_YELL);
+            do_flee(collector, "", CMD_FLEE);
+          }
+        }
+        else { // giving non-tribute obj
+          do_say(collector, "Thanks, I guess?", CMD_SAY);
+          sprintf(buf, "%s confusedly fires a strange pistol at %s\n\r...and it disappears before your very eyes!\n\r", GET_SHORT(collector), OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+        }
+        extract_obj(obj);
       }
-      if (spawn_uber) {
-        uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
-        char_to_room(uber_mob, real_room(uber_room));
-        sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
-        send_to_room(buf, real_room(uber_room));
-        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
-        do_quest(collector, buf, CMD_QUEST);
-       }
+      if (GET_DEATH_LIMIT(collector) >= 3) { // tribute complete: spawn uber
+        GET_DEATH_LIMIT(collector) = 0; // reset tribute counter
+        do_say(collector, "Don't say I didn't warn you. Beetlejuice, Beetlejuice... Beetlejuice.", CMD_SAY);
+        spawn_uber(collector, 20);
+        sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+        send_to_room(buf, CHAR_REAL_ROOM(collector));
+        char_from_room(collector);
+        char_to_room(collector, real_room(5806));
+      }
     }
   }
+
+  if (cmd == MSG_TICK) { // spawn ubers
+    if (chance(5)) {
+      if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) {
+        // scale uber spawn chance based on players online
+        spawn_uber(collector, 5);
+      }
+    }
+  }
+
   return FALSE;
 }
 
