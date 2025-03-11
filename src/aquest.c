@@ -48,6 +48,7 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define QUEST_BUY      6
 #define QUEST_CARD     7
 #define QUEST_ORDER    8
+#define QUEST_UBER     9
 
 #define AQCARDS_SPREAD 25
 
@@ -73,6 +74,8 @@ void aqcard_cleanup(int id)
   return;
 }
 
+int spawn_uber(CHAR *ch, int tries);
+
 void do_aquest(CHAR *ch, char *argument, int cmd) {
   char arg[MAX_INPUT_LENGTH];
   char usage[]="\
@@ -84,7 +87,8 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
                 quit     - quit your current quest\n\r\
                 order    - request an order (solo/low/mid/high optional)\n\r\
                 list     - list things to buy\n\r\
-                buy      - buy things with quest points\n\r";
+                buy      - buy things with quest points\n\r\
+                uber     - spawn an uber (if possible) SUP+\n\r";
 
   int option = 0;
 
@@ -103,6 +107,7 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
   if (is_abbrev(arg, "buy")) option = QUEST_BUY;
   if (is_abbrev(arg, "card")) option = QUEST_CARD;
   if (is_abbrev(arg, "order")) option = QUEST_ORDER;
+  if (is_abbrev(arg, "uber")) option = QUEST_UBER;
 
   switch (option) {
     case QUEST_STATUS:
@@ -198,6 +203,15 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
       send_to_char("You'll have to find someone who has those.\n\r", ch);
       return;
       break;
+    case QUEST_UBER:
+      if (!IS_SUPREME(ch)) {
+        send_to_char("Nope.\n\r", ch);
+        return;
+      }
+      else {
+        spawn_uber(ch, 10) ? send_to_char("Done.\n\r", ch) : send_to_char("Failed to spawn.\n\r", ch);
+        return;
+      }
     default:
       send_to_char(usage, ch);
       return;
@@ -1975,7 +1989,7 @@ char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
   "nitwit","nincompoop","imbecile","dullard",
   "cotton-headed ninnymuggins","peabrain"};
 
-void spawn_uber (CHAR *franz, int tries) {
+int spawn_uber (CHAR *spawner, int tries) {
   CHAR *vict, *next_vict, *uber_mob;
   bool spawn = TRUE;
   int uber_choice = 0, uber_room = 0, i = 0;
@@ -1996,21 +2010,22 @@ void spawn_uber (CHAR *franz, int tries) {
       }
     }
 
-    if (spawn) {
+    if (spawn && (real_room(uber_room) != -1)) {
       uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
       char_to_room(uber_mob, real_room(uber_room));
       sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
       send_to_room(buf, real_room(uber_room));
-      if (tries > 5) { // SUP+ or tribute
-        sprintf(buf, "Call the police, there's a madman around! Some %s just called an Uber, run for your lives!",  kenderinsults[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+      if (tries > 3) { // SUP+ or tribute
+        sprintf(buf, "Call the police, there's a madman around! Some %s just called an Uber, run for your lives!",  kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
       }
       else { // tick based spawn
         sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
       }
-      do_quest(franz, buf, CMD_QUEST);
-      break;
+      do_quest(spawner, buf, CMD_QUEST);
+      return TRUE;
     }
   }
+  return FALSE; // failed to spawn
 }
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
@@ -2065,17 +2080,17 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         } else if (lh_opt == 6 && GET_LEVEL(ch) < 45) {
           mob_do(collector, "rofl");
           do_say(collector, "Not bloody likely. You couldn't handle that level of order pipsqueak.", CMD_SAY);
+        } else if (lh_opt == 0) { // no proper order type chosen
+          sprintf(buf, "Try again. There's plenty of viable options and yet you still failed to pick one of them, you %s.", kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
+          do_say(collector, buf, CMD_SAY);
         } else if (!generate_aq_order(ch, collector, lh_opt)) {
           mob_do(collector, "shrug");
           sprintf(buf, "Sorry %s, guess I couldn't find an order for you.",
               GET_NAME(ch));
           do_say(collector, buf, CMD_SAY);
         }
+
       return TRUE;
-      }
-      else if (is_abbrev(argument,"uber") && IS_SUPREME(ch)) {
-        spawn_uber(collector, 20);
-        return TRUE;
       }
     }
   } // end "request order"
@@ -2296,7 +2311,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
     }
     else { // given non-AQ_ORDER
       char *tribute_responses[8] = {
-        "My heavens, do you know what this is?",
+        "My heavens, do you know what you've set in motion?",
         "Goodness me, a tribute? In this economy?",
         "Oh no, not again...",
         "Are you mad!? There's easier ways to die you know.",
@@ -2311,20 +2326,35 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         for (int i = 0; i < NUMELEMS(uber_objs); i++) {
           if (OBJ_VNUM(obj) == uber_objs[i]) {
             if (chance(10)) mob_do(collector, "gasp");
-            sprintf(buf, "%s",
-              tribute_responses[number(0, NUMELEMS(tribute_responses)-1 )]);
-            do_say(collector, buf, CMD_SAY);
             tribute = TRUE;
             break;
           }
         }
         if (tribute) {
+          GET_DEATH_LIMIT(collector)++; // track number of objs given using deathlimit
           sprintf(buf, "Suddenly %s explodes in an opalescent fury of sound and color.\n\r", OBJ_SHORT(obj));
           send_to_room(buf, CHAR_REAL_ROOM(collector));
-          GET_DEATH_LIMIT(collector)++; //track number of objs given using deathlimit
-          if (GET_DEATH_LIMIT(collector) == 2) {
+
+          if (GET_DEATH_LIMIT(collector) <= 1) {
+            sprintf(buf, "%s", tribute_responses[number(0, NUMELEMS(tribute_responses)-1 )]);
+            do_say(collector, buf, CMD_SAY);
+          }
+          else if (GET_DEATH_LIMIT(collector) == 2) {
             do_yell(collector, "Aaaaaaaaaaaaaah I want no part of this!", CMD_YELL);
             do_flee(collector, "", CMD_FLEE);
+          }
+          else { // tribute complete: spawn uber
+            GET_DEATH_LIMIT(collector) = 0; // reset tribute counter
+            do_say(collector, "Don't say I didn't warn you. Beetlejuice, Beetlejuice... Beetlejuice.", CMD_SAY);
+            if (spawn_uber(collector, 10)) {
+              sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+              send_to_room(buf, CHAR_REAL_ROOM(collector));
+              char_from_room(collector);
+              char_to_room(collector, real_room(5806));
+            }
+            else { // failed to spawn an uber, mock them after a brief pause
+              GET_DEATH_LIMIT(collector) = -1;
+            }
           }
         }
         else { // giving non-tribute obj
@@ -2334,23 +2364,20 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         }
         extract_obj(obj);
       }
-      if (GET_DEATH_LIMIT(collector) >= 3) { // tribute complete: spawn uber
-        GET_DEATH_LIMIT(collector) = 0; // reset tribute counter
-        do_say(collector, "Don't say I didn't warn you. Beetlejuice, Beetlejuice... Beetlejuice.", CMD_SAY);
-        spawn_uber(collector, 20);
-        sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
-        send_to_room(buf, CHAR_REAL_ROOM(collector));
-        char_from_room(collector);
-        char_to_room(collector, real_room(5806));
-      }
     }
+  }
+
+  if ((GET_DEATH_LIMIT(collector) == -1 && (cmd == MSG_MOBACT))) {
+    GET_DEATH_LIMIT(collector) = 0;
+    mob_do(collector, "blink");
+    do_say(collector, "Thank our lucky stars, your efforts were in vain.", CMD_SAY);
   }
 
   if (cmd == MSG_TICK) { // spawn ubers
     if (chance(5)) {
       if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) {
         // scale uber spawn chance based on players online
-        spawn_uber(collector, 5);
+        spawn_uber(collector, 3);
       }
     }
   }
