@@ -2367,7 +2367,7 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
     }
   }
 
-  if ((GET_DEATH_LIMIT(collector) == -1 && (cmd == MSG_MOBACT))) {
+  if ((GET_DEATH_LIMIT(collector) == -1) && (cmd == MSG_MOBACT)) {
     GET_DEATH_LIMIT(collector) = 0;
     mob_do(collector, "blink");
     do_say(collector, "Thank our lucky stars, your efforts were in vain.", CMD_SAY);
