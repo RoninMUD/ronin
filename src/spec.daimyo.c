@@ -1121,7 +1121,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
       switch ( number(0,4) ) {
         case 1:
           kick_room = number(1, top_of_world);
-          if ( chance(33) )  kick_room = real_room(DM_PORTAL_INSIDE);
+          if ( chance(33) || IS_SET(ROOM_FLAGS(kick_room), NO_MAGIC) || IS_SET(ROOM_FLAGS(kick_room), DEATH) ) kick_room = real_room(DM_PORTAL_INSIDE);
           vict = get_random_victim(uber);
           if (vict && kick_room) {
             //cut hole in space-time, kick someone through: 67% completely random spot on MUD, 33% Inky Blackness behind Arago
