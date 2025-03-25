@@ -299,5 +299,223 @@ M
 ~
 ~
 ~
+#21611
+relic gravepiercer~
+Gravepiercer, the Veil-Torn Relic~
+A relic of Phax Nisruth hums on the ground.~
+~
+5 134217792 8193
+0 1 6 11
+18 45021 55533
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#21612
+sepulcher~
+A Sacrificial Sepulcher~
+A Sacrificial Sepulcher sits on the ground~
+~
+15 0 0
+4000 0 0 0
+0 0 0
+100
+E
+sepulcher~
+A heavy stone sepulcher rests in the dim recess of the burial 
+chamber, its surface worn by the passage of centuries. Faint carvings
+of solemn figures in prayer adorn its sides, their faces eroded beyond 
+recognition. Dust and cobwebs cling to the edges of its lid, which bears 
+the sigil of a long forgotten lineage. The air is thick with the scent 
+of decay and lingering sorrow, as if the silence itself mourns those 
+entombed within. Whatever rests inside has not been disturbed for 
+ages or so it seems.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21613
+mask deathmask nerath~
+Nerath Deathmask~
+A tarnished silver mask lies half-buried in the dust~
+~
+9 163639360 17
+7 0 0 0
+0 70000 23333
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+52 10
+A
+53 3
+#21614
+signet bonewarden~
+Bonewarden's Signet~
+A tarnished bronze ring  lies stained with time-worn blood~
+~
+9 134217792 3
+5 0 0 0
+0 45000 15000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21615
+shroud forgotten~
+Shroud of the Forgotten~
+A tattered burial shroud is draped across the ground~
+~
+9 134217792 9
+6 0 0 0
+0 65220 21740
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21616
+reliquary box blackthorn~
+Blackthorn Reliquary~
+A dark wooden box, its iron bindings rusted shut~
+~
+15 134217792 16385
+0 0 0 0
+0 16255 5418
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21617
+heartstone hollowed~
+Hollowed Heartstone~
+A smooth, jet-black stone, shaped like a heart~
+~
+1 265310272 65537
+0 0 0 0
+0 50000 16667
+12
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 4
+#21618
+dagger last oath~
+Dagger of the Last Oath~
+A fractured obsidian dagger rests on the cold stone~
+~
+5 134217792 8193
+0 0 0 0
+0 36222 12074
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21619
+lute wailing dirgecaller~
+Dirgecaller, the Wailing Lute~
+A bone-crafted lute rests in the dust~
+~
+24 233893952 16385
+0 0 0 0
+0 12563 4188
+16
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+53 3
+#21620
+reliquary oath hollowed~
+Reliquary of the Hollowed Oath~
+A small, iron-bound reliquary lies motionless~
+~
+12 134217792 16385
+0 0 0 0
+0 25541 8514
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21621
+rite oathbinder~
+Oathbinders Rite~
+A piece of paper recounting the history of phax nisruth~
+~
+32 134217792 1
+21620 21616 21617 21614
+0 2036 679
+6
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
