@@ -227,7 +227,7 @@ each step that is taken and each pebble that is kicked along the surface.
 D2
 ~
 ~
-0 -1 14310
+0 -1 14314
 S
 #14310
 An intersection within the rocky tunnels below the Swamp~
@@ -244,18 +244,10 @@ each step that is taken and each pebble that is kicked along the surface.
 The tunnels appear to continue in all directions at this point.
 ~
 143 557065 5
-D0
-~
-~
-0 -1 14309
 D1
 ~
 ~
 0 -1 14314
-D2
-~
-~
-0 -1 14317
 D3
 ~
 ~
@@ -329,10 +321,18 @@ hollow echo for each step that is taken and each pebble that is kicked
 along the surface. The tunnel continues to the west and east...
 ~
 143 557065 5
+D0
+~
+~
+0 -1 14309
 D1
 ~
 ~
 0 -1 14315
+D2
+~
+~
+0 -1 14317
 D3
 ~
 ~
@@ -413,7 +413,7 @@ is completely blocked by a scree of mud and rocks...
 D0
 ~
 ~
-0 -1 14310
+0 -1 14314
 S
 #14318
 Within a Huge Subterranean Cavern~
@@ -456,7 +456,7 @@ D3
 ~
 0 -1 14325
 D5
-  The maelstrom beneath the huge waterfall
+The maelstrom beneath the huge waterfall
 swirls and twirls with a furious force! You
 wouldn't want to get to close to that thing,
 not unless you have absolutely no regard
@@ -473,8 +473,7 @@ swirls and twirls with a furious force! You
 wouldn't want to get to close to that thing,
 not unless you have absolutely no regard
 for your own well being of course! Jumping
-into that thing would be suicide, pure and
-simple...
+into that thing would be pure suicide...
 ~
 E
 maelstrom~
@@ -483,7 +482,8 @@ swirls and twirls with a furious force! You
 wouldn't want to get to close to that thing,
 not unless you have absolutely no regard
 for your own well being of course! Jumping
-into that thing would be pure suicide...
+into that thing would be suicide, pure and
+simple...
 ~
 S
 #14319
@@ -504,14 +504,14 @@ grass that looks almost like little straws of crystal clear grass to the
 north...
 ~
 143 67665928 5
-D0
-~
-~
-0 -1 14320
 D2
 ~
 ~
 0 -1 14318
+D3
+~
+~
+0 -1 14320
 S
 #14320
 Within a tunnel filled with Phosphorescent Fungi~
@@ -535,11 +535,11 @@ the south, and ahead there is nothing but a calm silence.
 D1
 ~
 ~
-0 -1 14321
-D2
-~
-~
 0 -1 14319
+D3
+~
+~
+0 -1 14321
 S
 #14321
 A sudden Dead end within a Phosphorescent Fungi tunnel~
@@ -558,7 +558,7 @@ underside of the petals. The cave tunnel ahead is suddenly interrupted by
 spiky translucent vines and thick impenetrable twining plants...
 ~
 143 67665928 5
-D3
+D1
 ~
 ~
 0 -1 14320
@@ -585,10 +585,6 @@ D0
 ~
 ~
 0 -1 14318
-D2
-~
-~
-0 -1 14323
 S
 #14323
 Within a tunnel filled with Phosphorescent Fungi~
@@ -609,10 +605,10 @@ The rumbling sound of the enormous waterfall is now but a faint murmur to
 the north, and ahead there is nothing but a calm silence.
 ~
 143 67665928 5
-D0
+D2
 ~
 ~
-0 -1 14322
+0 -1 14328
 D3
 ~
 ~
@@ -662,10 +658,10 @@ D1
 ~
 ~
 0 -1 14318
-D3
+D2
 ~
 ~
-0 -1 14326
+0 -1 14329
 S
 #14326
 Within a tunnel filled with Phosphorescent Fungi~
@@ -689,11 +685,11 @@ the east, and ahead there is nothing but a calm silence.
 D0
 ~
 ~
+0 -1 14328
+D3
+~
+~
 0 -1 14327
-D1
-~
-~
-0 -1 14325
 S
 #14327
 A sudden Dead end within a Phosphorescent Fungi tunnel~
@@ -712,7 +708,7 @@ underside of the petals. The cave tunnel ahead is suddenly interrupted by
 spiky translucent vines and thick impenetrable twining plants...
 ~
 143 67665928 5
-D2
+D1
 ~
 ~
 0 -1 14326
@@ -735,10 +731,14 @@ grass that looks almost like little straws of crystal clear grass to the
 east...
 ~
 143 67665928 5
-D1
+D0
 ~
 ~
-0 -1 14329
+0 -1 14323
+D2
+~
+~
+0 -1 14326
 D3
 ~
 ~
@@ -763,14 +763,14 @@ The rumbling sound of the enormous waterfall is now but a faint murmur to
 the west, and ahead there is nothing but a calm silence.
 ~
 143 67665928 5
-D2
+D0
+~
+~
+0 -1 14325
+D1
 ~
 ~
 0 -1 14330
-D3
-~
-~
-0 -1 14328
 S
 #14330
 A sudden Dead end within a Phosphorescent Fungi tunnel~
@@ -789,7 +789,7 @@ underside of the petals. The cave tunnel ahead is suddenly interrupted by
 spiky translucent vines and thick impenetrable twining plants...
 ~
 143 67665928 5
-D0
+D3
 ~
 ~
 0 -1 14329
@@ -818,22 +818,14 @@ magma-rock and is vaporized immediately upon entering this room through
 the old lava-tube above...
 ~
 143 67665928 5
-D0
-~
-~
-0 -1 14332
 D1
 ~
 ~
-0 -1 14334
+0 -1 14332
 D2
 ~
 ~
-0 -1 14336
-D3
-~
-~
-0 -1 14338
+0 -1 14343
 S
 #14332
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -851,22 +843,14 @@ bursts of flames. The sickening sulfur fumes burn in your lounges, and if
 you open your eyes too wide it feels as if acid has been poured into them.
 ~
 143 69767176 5
-D0
-~
-~
-0 -1 14340
 D1
 ~
 ~
 0 -1 14333
-D2
-~
-~
-0 -1 14331
 D3
 ~
 ~
-0 -1 14339
+0 -1 14331
 S
 #14333
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -884,6 +868,10 @@ bursts of flames. The sickening sulfur fumes burn in your lounges, and if
 you open your eyes too wide it feels as if acid has been poured into them.
 ~
 143 69767176 5
+D1
+~
+~
+0 -1 14338
 D2
 ~
 ~
@@ -916,15 +904,11 @@ D0
 D1
 ~
 ~
-0 -1 14343
+0 -1 14337
 D2
 ~
 ~
 0 -1 14335
-D3
-~
-~
-0 -1 14331
 S
 #14335
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -946,7 +930,7 @@ D0
 ~
 ~
 0 -1 14334
-D3
+D1
 ~
 ~
 0 -1 14336
@@ -970,19 +954,11 @@ you open your eyes too wide it feels as if acid has been poured into them.
 D0
 ~
 ~
-0 -1 14331
-D1
-~
-~
-0 -1 14335
-D2
-~
-~
-0 -1 14341
+0 -1 14337
 D3
 ~
 ~
-0 -1 14337
+0 -1 14335
 S
 #14337
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -1004,10 +980,14 @@ D0
 ~
 ~
 0 -1 14338
-D1
+D2
 ~
 ~
 0 -1 14336
+D3
+~
+~
+0 -1 14334
 S
 #14338
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -1025,14 +1005,10 @@ bursts of flames. The sickening sulfur fumes burn in your lounges, and if
 you open your eyes too wide it feels as if acid has been poured into them.
 ~
 143 69767176 5
-D0
-~
-~
-0 -1 14339
 D1
 ~
 ~
-0 -1 14331
+0 -1 14339
 D2
 ~
 ~
@@ -1040,7 +1016,7 @@ D2
 D3
 ~
 ~
-0 -1 14342
+0 -1 14333
 S
 #14339
 Within a Huge Burning Chamber deep beneath Earth's Crust~
@@ -1058,11 +1034,7 @@ bursts of flames. The sickening sulfur fumes burn in your lounges, and if
 you open your eyes too wide it feels as if acid has been poured into them.
 ~
 143 69767176 5
-D1
-~
-~
-0 -1 14332
-D2
+D3
 ~
 ~
 0 -1 14338
@@ -1083,10 +1055,10 @@ super hot here, it is like a wall of flames blocking off the rest of the
 tunnel...
 ~
 143 69767176 5
-D2
+D0
 ~
 ~
-0 -1 14332
+0 -1 14341
 S
 #14341
 Within a extremely Hot Lavatube~
@@ -1107,7 +1079,11 @@ tunnel...
 D0
 ~
 ~
-0 -1 14336
+0 -1 14342
+D2
+~
+~
+0 -1 14340
 S
 #14342
 Within a extremely Hot Lavatube~
@@ -1125,10 +1101,14 @@ super hot here, it is like a wall of flames blocking off the rest of the
 tunnel...
 ~
 143 69767176 5
-D1
+D0
 ~
 ~
-0 -1 14338
+0 -1 14343
+D2
+~
+~
+0 -1 14341
 S
 #14343
 Within a extremely Hot Lavatube~
@@ -1146,10 +1126,14 @@ super hot here, it is like a wall of flames blocking off the rest of the
 tunnel...
 ~
 143 69767176 5
-D3
+D0
 ~
 ~
-0 -1 14334
+0 -1 14331
+D2
+~
+~
+0 -1 14342
 S
 #14399
 A completely unedited room floating on the vacuum of space!~
