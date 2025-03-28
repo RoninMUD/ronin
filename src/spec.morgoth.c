@@ -29,13 +29,8 @@
 
 /*Rooms */
 
-
 /*Objects */
 #define MORGOTH_ALTAR 9652
-
-
-
-
 
 /*Mobs */
 #define MORGOTH_NECROMANCER 9675
@@ -77,66 +72,20 @@
 	Cleric - [9680 ] torn robes of the cleric
 	Commando - [9686 ] a worn pair of battle gloves 
 	Bard - [9682 ] smashed and broken guitar
-	Warrior - [9683 ] the gilded hilt of a broken sword 
-	
-
-	
-	Class RIng Entries are
-	
-	Paladin
-	[10500] Signet of the Tarion Cavaliers 
-	[12909] a band of holy spirits 
-	
-	Anti-Paladin
-	[16828] Sigil of the Speaking-Demon 
-	[6807 ] The Ring of the Conqueror (ring conqueror)
-	
-	Mage
-	[26413] Lost Signet of Mahamoti Djinn 
-	[17310] The Dark Seal of Illusions 
-	
-	Thief
-	[27124] A ring of tattered flesh 
-	[13026] Ring of Venom 
-	
-	
-	Ninja
-	[20146] shimmering band of Mokume Gane 
-	[20185] Yawata's Ring of Power 
-	
-	Cleric
-	[12908] The Prismatic Star of Gemini
-	[26412] A Band of Demonic Aura 
-	
-	Commando
-	[11327] a band of twisted veins 
-	[712  ] The Severed Talon of a Lizard 
-	
-	Bard
-	[12934] a glittering moonstone band 
-	[26478] The Signet Ring of the Sultan 
-	
-	Warrior
-	[26581] Ringlet of Coiled Bronze 
-	[585  ] Small Portal of Evil 
-	
-	Nomad
-	[4489 ] Ornament of Righteousness 
-	[17372] The Seal of the Drake 
-	
-
-
+	Warrior - [9683 ] the gilded hilt of a broken sword 	
 */
 int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
-  OBJ *obj, *next_obj,*new_ring;
+  OBJ *obj, *next_obj;
+  OBJ *new_ring = NULL;
+  
   char buf[MIL];
+  
   
   int ring_num;
   
   int necromancer = FALSE, paladin = FALSE, antipaladin = FALSE, mage = FALSE, thief = FALSE, ninja = FALSE, cleric = FALSE, commando = FALSE, bard = FALSE, warrior = FALSE;
 
-  int class_rings[20] = {10500,12909,16828,6807,26413,17310,27124,13026,20146,20185,12908,26412,11327,712,12934,26478,26581,585,4489,17372};
-
+  int class_rings[3] = {9670,9671,9672};
 
   if (cmd == CMD_UNKNOWN) {
 
@@ -149,80 +98,51 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
 
       for (obj = altar -> contains; obj; obj = next_obj) {
         next_obj = obj -> next_content;
-        if (V_OBJ(obj) == 9675) {
-          /* Necromanacer - [9675 ] The book of the dead  */
-          necromancer = TRUE;
-          
+        if (V_OBJ(obj) == 9675) {/* Necromanacer - [9675 ] The book of the dead  */
+          necromancer = TRUE;          
         }
-        if (V_OBJ(obj) == 9685) {
-          /* Paladin - [9685 ] a tarnished silver cross  */
-          paladin = TRUE;
-          
+        if (V_OBJ(obj) == 9685) {/* Paladin - [9685 ] a tarnished silver cross  */
+          paladin = TRUE;          
         }
-        if (V_OBJ(obj) == 9687) {
-          /* Anti-Paladin - [9687 ] a sharp, poisoned dagger   */
-          antipaladin = TRUE;
-          
+        if (V_OBJ(obj) == 9687) {/* Anti-Paladin - [9687 ] a sharp, poisoned dagger   */
+          antipaladin = TRUE;          
         }
-        if (V_OBJ(obj) == 9681) {
-          /* Mage - [9681 ] dirty mage robes  */
-          mage = TRUE;
-          
+        if (V_OBJ(obj) == 9681) {/* Mage - [9681 ] dirty mage robes  */
+          mage = TRUE;          
         }
-        if (V_OBJ(obj) == 9684) {
-          /* Thief - [9684 ] a shabby purse filled with coins   */
-          thief = TRUE;
-          
+        if (V_OBJ(obj) == 9684) {/* Thief - [9684 ] a shabby purse filled with coins   */
+          thief = TRUE;          
         }
-        if (V_OBJ(obj) == 9688) {
-          /* Ninja - [9688 ] a dull, rusty katana   */
-          ninja = TRUE;
-          
+        if (V_OBJ(obj) == 9688) {/* Ninja - [9688 ] a dull, rusty katana   */
+          ninja = TRUE;          
         }
-        if (V_OBJ(obj) == 9680) {
-          /* Cleric - [9680 ] torn robes of the cleric  */
-          cleric = TRUE;
-          
+        if (V_OBJ(obj) == 9680) {/* Cleric - [9680 ] torn robes of the cleric  */
+          cleric = TRUE;          
         }
-        if (V_OBJ(obj) == 9686) {
-          /* Commando - [9686 ] a worn pair of battle gloves   */
-          commando = TRUE;
-          
+        if (V_OBJ(obj) == 9686) {/* Commando - [9686 ] a worn pair of battle gloves   */
+          commando = TRUE;          
         }
-        if (V_OBJ(obj) == 9682) {
-          /* Bard - [9682 ] smashed and broken guitar  */
-          bard = TRUE;
-          
+        if (V_OBJ(obj) == 9682) {/* Bard - [9682 ] smashed and broken guitar  */
+          bard = TRUE;         
         }
-        if (V_OBJ(obj) == 9683) {
-          /* Warrior - [9683 ] the gilded hilt of a broken sword   */
-          warrior = TRUE;
-          
+        if (V_OBJ(obj) == 9683) {/* Warrior - [9683 ] the gilded hilt of a broken sword   */
+          warrior = TRUE;          
         }
-
       }
-	  
-	  // Now that we have all the items remove, we need to add in a random class ring.
+	  	  // Now that we have all the items remove, we need to add in a random class ring.
 		
-		// There is a 10% chance that the Decay will be removed.
-		
-		ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];
-				
-		new_ring = read_object(ring_num,VIRTUAL);
+		// There is a 10% chance that the Decay will be removed.		
 		
 		if(!new_ring){
 			send_to_char("Nothing seems to happen.\n\r", ch);
-			return TRUE;
-			
-		}
-	  
+			return TRUE;			
+		}  
 
       //All items are in the Altar.   REmove them all and load the ring. 
       if (necromancer && paladin && antipaladin && mage && thief && ninja && cleric && commando && bard && warrior) {
 		
         act("The altar glows red and blood drains on the floor.", 1, ch, obj, 0, TO_CHAR);
-        act("The altar glows red and blood drains on the floor.", 1, ch, obj, 0, TO_ROOM);
-        
+        act("The altar glows red and blood drains on the floor.", 1, ch, obj, 0, TO_ROOM);        
 
         for (obj = altar -> contains; obj; obj = next_obj) {
           next_obj = obj -> next_content;
@@ -265,23 +185,20 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
           if (V_OBJ(obj) == 9683){ /* Warrior - [9683 ] the gilded hilt of a broken sword   */
             obj_from_obj(obj);
 			extract_obj(obj);
-		  }
-			
-					
-        }
+		  }				
+        }		
+		ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];				
+		new_ring = read_object(ring_num,VIRTUAL);
 		
-		
-		if(chance(10)) REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
+		if(chance(5)) REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
 		
 		obj_to_obj(new_ring, altar);
 		return TRUE;
-
       } 
 	  else {
         send_to_char("Nothing seems to happen.\n\r", ch);
         return TRUE;
       }
-
     }
   }
   return FALSE;
@@ -309,10 +226,7 @@ THe necromancer will summon random mobs up to 4 when engaged to engage the party
 [9677 ] An undead commando (undead commando) - Commando
 [9678 ] An undead anti-paladin (anti paladin anti-paladin undead) - Anti-Paladin
 [9679 ] An undead ninja (undead ninja) - Ninja
-
-
 */
-
 
 int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
@@ -394,8 +308,7 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					
 						hit(undead, tch, TYPE_UNDEFINED);
 					}
-				}
-				
+				}				
 				
 				switch (number(0, 3))
 				{
@@ -407,7 +320,6 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 							act("$n calmly touches you saying you don't need this lifeforce, do you? ", 0, mob, 0, vict, TO_VICT);
 							GET_HIT(vict) = GET_HIT(vict) *0.8;	//Remove 20% of Current HP
 						}
-
 						break;
 					case 1:
 						break;
@@ -419,19 +331,13 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 						break;
 				}
 			}
-
 			//can add an else branch here if you want them to act but not in combat.
 
-			break;
-
-		case MSG_DIE:	// on boss death reward AQP
-
-			break;
+			break;		
 	}
 
 	return FALSE;
 }
-
 
 //Assign Spec for the zone. Sets all other specs. 
 //First Param - Object, Room or Mob Number.  Define it up above.
@@ -439,15 +345,8 @@ int morgoth_necromancer(CHAR *mob, CHAR *ch, int cmd, char *arg)
 void assign_morgoth(void)
 {
 	/*Objects */
-	//assign_obj(BUCKET_EMPTY,          tweef_bucket_empty);
 	assign_obj( MORGOTH_ALTAR, morgoth_altar );
-
-	/*Rooms */
-	//assign_room(LIGHTWALL,             	cl_LightWallLink);
-
+	/*Rooms */	
 	/*Mobs */
-
 	assign_mob(MORGOTH_NECROMANCER, morgoth_necromancer);
-
-
 }
