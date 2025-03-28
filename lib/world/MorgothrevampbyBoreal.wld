@@ -672,35 +672,7 @@ D5
 ~
 0 -1 9699
 E
-n north ~
-To the north you see the Helventia Mountains.  Legend says that
-the mighty ninja Chud fought one of the most furious battles of his
-illustrious travels here. 
-~
-E
-n ~
-vTo the north you see the Helventia Mountains.  Legend says that
-the mighty ninja Chud fought one of the most furious battles of his
-illustrious travels here.
-~
-E
-n north mountain mountains helventia~
-Staring out the window to the north, you can make out the 
-craggy spires of the Helventia Mountains.  If legends are to be
-believed, these mountains are the very site that Chud, the 
-greatest ninja of his generation fought off the evil hordes
-of the commando legions.
-~
-E
-w west midgaard town~
-To the west, across a vast forest, and dim on the horizon,
-you can just make out the towers and walls of the city of
-Midgaard. Home to the bravest adventurers the world has 
-known, the city has withstood the tests of both time
-and man
-~
-E
-s south woods svalich strahd~
+south~
 Far to the south, you can make out the lights of what must
 surely be the Barovian revellers, carousing through the woods.
 A brave race of men, the Barovians brave the dangers of both
@@ -714,12 +686,40 @@ Welmar Castle.  The king there is one of the greatest rulers
 in the world, kindly upholding the laws and rituals of the lands.
 ~
 E
-south~
+s south woods svalich strahd~
 Far to the south, you can make out the lights of what must
 surely be the Barovian revellers, carousing through the woods.
 A brave race of men, the Barovians brave the dangers of both
 the nearby Svalich Woods, and the demonic master who inhabits
 the nearby castle.
+~
+E
+w west midgaard town~
+To the west, across a vast forest, and dim on the horizon,
+you can just make out the towers and walls of the city of
+Midgaard. Home to the bravest adventurers the world has 
+known, the city has withstood the tests of both time
+and man
+~
+E
+n north mountain mountains helventia~
+Staring out the window to the north, you can make out the 
+craggy spires of the Helventia Mountains.  If legends are to be
+believed, these mountains are the very site that Chud, the 
+greatest ninja of his generation fought off the evil hordes
+of the commando legions.
+~
+E
+n ~
+vTo the north you see the Helventia Mountains.  Legend says that
+the mighty ninja Chud fought one of the most furious battles of his
+illustrious travels here.
+~
+E
+n north ~
+To the north you see the Helventia Mountains.  Legend says that
+the mighty ninja Chud fought one of the most furious battles of his
+illustrious travels here. 
 ~
 S
 #9633
@@ -999,27 +999,6 @@ invalid~
 altar~
 8 9646 9648
 E
-book~
-    ___________________   ___________________
-.-/|         **        \ /        **         |\-.
-||||                    :                    ||||
-||||   From whence did  :   No my children,  ||||
-||||   our Lord come?   :   he is not of     ||||
-||||   Did he spring    :   this earth, but  ||||
-||||   from the earth,  :   is in fact the   ||||
-||||   or was he born   :   fount of all of  ||||
-||||   of the sky?      :   creation.        ||||
-||||                    :                    ||||
-||||                    :                    ||||
-||||                    :                    ||||
-||||___________________ : ___________________||||
-||/====================\:/====================\||
-`--------------------- ___ --------------------''
-~
-E
-altar book ~
-invalid~
-E
 altar book ~
       ___________________   ___________________
   .-/|         **        \ /        **         |\-.
@@ -1037,6 +1016,27 @@ altar book ~
   ||||___________________ : ___________________||||
   ||/====================\:/====================\||
   `--------------------- ___ --------------------''
+~
+E
+altar book ~
+invalid~
+E
+book~
+    ___________________   ___________________
+.-/|         **        \ /        **         |\-.
+||||                    :                    ||||
+||||   From whence did  :   No my children,  ||||
+||||   our Lord come?   :   he is not of     ||||
+||||   Did he spring    :   this earth, but  ||||
+||||   from the earth,  :   is in fact the   ||||
+||||   or was he born   :   fount of all of  ||||
+||||   of the sky?      :   creation.        ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||                    :                    ||||
+||||___________________ : ___________________||||
+||/====================\:/====================\||
+`--------------------- ___ --------------------''
 ~
 S
 #9647
@@ -1225,16 +1225,6 @@ D5
 symbol~
 8 -1 9661
 E
-slab~
-A large stone slab lies here, with a roughly hewn pentragam on its
-surface.
-~
-E
-corpse~
-The rotting bones of the legendary anti-paladin Ribald lie here. Memories
-of an ancient time remind you of how the world has moved on.
-~
-E
 symbol~
 .....
                    .d$$$$*$$$$$$bc
@@ -1256,6 +1246,16 @@ symbol~
                 *$b.             .d$P"
                   "$$$ec.....ze$$$"
                       "**$$$**""
+~
+E
+corpse~
+The rotting bones of the legendary anti-paladin Ribald lie here. Memories
+of an ancient time remind you of how the world has moved on.
+~
+E
+slab~
+A large stone slab lies here, with a roughly hewn pentragam on its
+surface.
 ~
 S
 #9655
@@ -1369,14 +1369,14 @@ D5
 symbol~
 8 -1 9665
 E
-slab~
-A large stone slab lies here, with a roughly hewn pentagram on its
-surface.
-~
-E
 corpse~
 The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
 Memories of an ancient time remind you of how the world has moved on.
+~
+E
+slab~
+A large stone slab lies here, with a roughly hewn pentagram on its
+surface.
 ~
 S
 #9659
@@ -1735,15 +1735,15 @@ D5
 ~
 0 -1 9678
 E
-wine~
-An enormous wine barrel stands here before you.  Made of what
-appears to be some kind of ages ironwood, you are impressed
-that such a thing is still here after all these years.
-~
-E
 barrel~
 An enormous wine barrel stands here before you.  Made of what
 appears to be some kind of ages ironwood, you are impresse
+that such a thing is still here after all these years.
+~
+E
+wine~
+An enormous wine barrel stands here before you.  Made of what
+appears to be some kind of ages ironwood, you are impressed
 that such a thing is still here after all these years.
 ~
 S

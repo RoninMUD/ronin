@@ -27,13 +27,13 @@ A small marble statue lies here on the ground, straining to contain some interna
 10 10 10
 10
 E
-decaying corpse~
-decaying corpse~
-E
 skeleton~
 The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
 Memories of an ancient time remind you of how the world has moved on.
 ~
+E
+decaying corpse~
+decaying corpse~
 X
 ~
 64 0 0
@@ -108,13 +108,13 @@ a delicately forged platinum key lies here on the ground.~
 50
 E
 platinum key delicate~
+This key is truly the work of the dwarven masters of old.  Carved from
+brilliant platinum, it is a piece of art in it's own right.~
+E
+platinum key delicate~
 This key is truly the work of the dwarven masters of yore.  Carved from
 brilliant platinum, it is a piece of art in it's own right.
 ~
-E
-platinum key delicate~
-This key is truly the work of the dwarven masters of old.  Carved from
-brilliant platinum, it is a piece of art in it's own right.~
 X
 ~
 0 0 0
@@ -196,6 +196,75 @@ M
 ~
 ~
 ~
+#9670
+ring arcane nexus~
+Ring of the Arcane Nexus~
+A delicate ring of silver thrumming with raw magical energy.~
+~
+9 266350656 3
+4 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 6
+#9671
+ring crimson onslaught~
+Ring of the Crimson Onslaught~
+A jagged ring of crimson metal radiating bloodthirsty energy.~
+~
+9 221311040 3
+6 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 3
+#9672
+ring unyielding bastion~
+Ring of the Unyielding Bastion~
+A thick, rune-carved ring that pulses with unwavering power.~
+~
+9 198230080 3
+11 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+52 25
 #9675
 book dead~
 The book of the dead~
@@ -215,8 +284,7 @@ M
 ~
 #9677
 wine barrel winerack barrels~
-An ancient ironwood wine barrel.
-~
+An ancient ironwood wine barrel.~
 (null)~
 ~
 15 4 0
