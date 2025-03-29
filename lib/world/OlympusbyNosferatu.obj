@@ -160,33 +160,38 @@ B
 #28805
 eye world ring~
 The Eye of the World~
-A ring that glows with the unknown power of ages was forgotten here.~
+A ring with a polished celestial bronze band sits here.~
 ~
-9 169881921 3
-10 0 0 0
-33 1000000 76000
-17
+9 0 1
+12 0 0 0
+5 80443 71408
+11
 E
-eye~
-This disturbing ring is made up of an immaculate golden band with
-what appears to be a large eye mounted on it. The eye ranges around,
-seeming to see and know things that you do not. This powerful
-glam once sat on the finger of the God of gods himself, Zeus.
+eye world~
+This exquisite ring features a band of polished celestial bronze, renowned 
+for its divine luster and resilience. At its center, a perfectly spherical 
+sapphire is set, symbolizing the all-seeing eye of Zeus. The gem's deep 
+azure hue mirrors the boundless sky, and within its depths, one can 
+observe a subtle, swirling mist, reminiscent of the ever-watchful presence 
+of the god himself. Intricate engravings of thunderbolts and ancient runes 
+adorn the band, channeling Zeus's authority and wisdom. When activated, the 
+sapphire emits a gentle glow, enabling the wearer to scry and locate any 
+creature within the world, transcending physical and magical barriers.
 ~
 X
 ~
-3584 0 0
+0 0 0
 M
 You feel yourself filling with the wisdom of ages as you slide on the ring.~
 $n glows with untold wisdom and might as $e slides on the Eye of the World.~
 Your heightened sense of might and wisdom vanishes as you remove the ring.~
 The glow of wisdom and might fades from $n's countenance as $e removes the ring.~
 A
-19 2
+19 3
 A
-18 2
+18 3
 A
-13 15
+52 40
 B
 8192
 #28806
@@ -790,14 +795,6 @@ stone~
 A carving can be seen inscribed in the stone.
 ~
 E
-stone~
-A carving can be seen inscribed in the stone.@
-~
-E
-pedastel~
-A carving can be seen inscribed in the stone.
-~
-E
 carving~
 In the halls where gods reside, a secret lies within,
 A seal that bars the way ahead, to those who seek to win.
@@ -805,6 +802,14 @@ To break this ancient barrier, a triad must align,
 In separate rooms they take their place, their presence the design.
 When each one stands upon their mark, in chambers set apart,
 The seal will shatter, path revealed, to those of noble heart.
+~
+E
+pedastel~
+A carving can be seen inscribed in the stone.
+~
+E
+stone~
+A carving can be seen inscribed in the stone.@
 ~
 E
 stone~
@@ -1000,5 +1005,283 @@ A
 13 1000
 B
 536870912
+#28860
+bolt tormbringer~
+Bolt of the Stormbringer~
+A radiant bolt crackling with electric energy sits here.~
+~
+9 134217792 16385
+0 0 0 0
+5 0 55840
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28861
+diadem regal peacock~
+Diadem of the Queen of Heaven~
+A luxurious cloak adorned with iridescent peacock feathers~
+~
+9 134217792 17
+0 0 0 0
+5 54438 81194
+14
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28862
+cuirass divine matron~
+Cuirass of the Divine Matron~
+A Resplendent Cuirass adorned with regal motifs~
+~
+9 134217792 9
+0 0 0 0
+5 52912 83427
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28863
+greaves gleaming~
+Ares' Gleaming Greaves~
+A Pair of Radiant Golden Greaves~
+~
+9 134217792 33
+0 0 0 0
+5 46819 54708
+8
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28864
+battlefield bulwark~
+Bulwark of the Battlefield~
+A massive shield scarred from numerous conflicts~
+~
+9 134217792 513
+0 0 0 0
+5 49317 92079
+14
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28866
+trident sea lord~
+Tidal Trident of the Sea Lord~
+A grand trident, its prongs shimmering with the essence of the ocean,~
+~
+5 134217792 8193
+0 0 0 0
+5 94661 90073
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28867
+armbands bands~
+Poseidon's Oceanic Armbands~
+A Pair of Armbands shimmering with oceanic hues~
+~
+9 134217792 257
+0 0 0 0
+5 62670 86793
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28868
+quiver silent hunt~
+Quiver of the Silent Hunt~
+A sturdy leather quiver, adorned with forest motifs~
+~
+9 134217792 2049
+0 0 0 0
+5 86646 71953
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28869
+crown oracle~
+Crown of the Oracle~
+A delicate wreath woven from laurel leaves~
+~
+9 134217792 1025
+0 0 0 0
+5 55036 85884
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28870
+bow moonlit huntress~
+Bow of the Moonlit Huntress~
+A graceful silver bow, its surface reflecting the soft glow of the moon~
+~
+5 134217792 8193
+0 0 0 0
+5 64928 88709
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28871
+cloak crescent moon~
+Crescent Moon Cloak~
+A Cloak woven with the light of the Crescent Moon~
+~
+9 134217792 5
+0 0 0 0
+5 42902 55127
+9
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28872
+gloves forge hide olympian~
+Olympian Ox-Hide Forge Gloves~
+A pair of sturdy gloves fashioned from ox-hide~
+~
+9 134217792 129
+0 0 0 0
+5 52557 92591
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28873
+flame eternal~
+Flame of the Eternal Forge~
+A Perpetually burning forge flame encased in a crystal orb~
+~
+9 134217792 1
+0 0 0 0
+5 93122 82376
+9
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28874
+earthshaker coils~
+Coils of the Earthshaker~
+Massive, scaled coils pulsating with latent power~
+~
+9 134217792 4097
+0 0 0 0
+5 47618 86451
+8
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28875
+boots snakeskin~
+a Pair of Pitted Snakeskin Boots~
+A pair of rugged boots fashioned from dark snakeskin~
+~
+9 134217792 1
+0 0 0 0
+5 83958 64509
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28876
+lyre golden apollo~
+Apollo's Golden Lyre~
+A lyre made of gold shines in the light.~
+~
+24 134217792 16385
+13 0 0 0
+5 39787 85478
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 6
 #0
 $~
