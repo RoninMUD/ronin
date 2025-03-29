@@ -818,7 +818,6 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
     return bReturn;
 }
 
-// Tomtom has a small chance to sing haste song (guaranteed) on MSG_MOBACT
 int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
     CHAR *tmp_victim = NULL;
@@ -832,8 +831,7 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
     if (cmd == MSG_MOBACT)
     {
         /* Don't spec if no ch. */
-        if (ch)
-            return FALSE;
+        if (ch) return FALSE;
         if (!obj || !obj->equipped_by)
             return FALSE;
         ch = obj->equipped_by;
@@ -853,8 +851,7 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
             return FALSE;
         }
 
-        if (number(0, 550) != 1)
-            return FALSE;
+        if (number(0, 550) != 1) return FALSE;
 
         act("Your lute's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_CHAR);
         act("$n plays the lute and it's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_NOTVICT);
