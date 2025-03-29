@@ -62,7 +62,6 @@
 #define ITEM_SEPULCHER 21612
 #define SIGIL_NERATH_PRIEST 21609
 
-
 #define OATH_RELIQUARY 21620
 #define GRAVEPIERCER_RELIC 21611
 #define DIRGECALLER_LUTE 21619
@@ -76,7 +75,6 @@
 
 #define NERATH_PRIEST 21615
 #define NERATH_BONECLUTCH 21613
-
 
 /*Miscellaneous strings */
 // Generic States that are shifted to indicate different stages.
@@ -387,27 +385,28 @@ bool check_sepulchers()
 {
 
     bool allHaveSymbols = FALSE;
-    int sepulcher_room_number;	
+    int sepulcher_room_number;
     int sepulcher_rooms[5] = {SEPULCHER_ROOM_ONE, SEPULCHER_ROOM_TWO, SEPULCHER_ROOM_THREE, SEPULCHER_ROOM_FOUR, SEPULCHER_ROOM_FIVE};
     OBJ *sepulcher;
-	int total_count = 0;
-	
+    int total_count = 0;
+
     for (int i = 0; i < 5; i++)
     {
         // Grab the room and mob based on index value.
-        sepulcher_room_number = sepulcher_rooms[i];		
-        sepulcher = get_obj_by_vnum_in_room(SEPULCHER_ASCENSION, real_room(sepulcher_room_number));		
-		
-		if(!sepulcher) return FALSE;
-		
+        sepulcher_room_number = sepulcher_rooms[i];
+        sepulcher = get_obj_by_vnum_in_room(SEPULCHER_ASCENSION, real_room(sepulcher_room_number));
+
+        if (!sepulcher)
+            return FALSE;
+
         if (OBJ_CONTAINS(sepulcher))
         {
-			
+
             OBJ *temp_obj = OBJ_CONTAINS(sepulcher);
 
             if (V_OBJ(temp_obj) == SIGIL_NERATH_PRIEST)
-            {                
-				total_count += i;		
+            {
+                total_count += i;
             }
             else
             {
@@ -419,13 +418,12 @@ bool check_sepulchers()
             allHaveSymbols = FALSE;
         }
     }
-	
-	if(total_count == 10){
-		allHaveSymbols = TRUE;
-	}
-		
-	
-	
+
+    if (total_count == 10)
+    {
+        allHaveSymbols = TRUE;
+    }
+
     return allHaveSymbols;
 }
 
@@ -441,23 +439,22 @@ void extract_sigil_sepulchers()
         // Grab the room and mob based on index value.
         sepulcher_room_number = sepulcher_rooms[i];
         sepulcher = get_obj_by_vnum_in_room(SEPULCHER_ASCENSION, real_room(sepulcher_room_number));
-		
+
         if (OBJ_CONTAINS(sepulcher))
-        {         
-		
-			for (OBJ *temp_obj = OBJ_CONTAINS(sepulcher), *temp_obj_next; temp_obj; temp_obj = temp_obj_next)
+        {
+
+            for (OBJ *temp_obj = OBJ_CONTAINS(sepulcher), *temp_obj_next; temp_obj; temp_obj = temp_obj_next)
             {
-                temp_obj_next = OBJ_NEXT_CONTENT(temp_obj);                
+                temp_obj_next = OBJ_NEXT_CONTENT(temp_obj);
                 extract_obj(temp_obj);
             }
-			
         }
     }
 }
 
 int sepulcher_ascension(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
-  
+
     if (cmd == CMD_PUT)
     {
 
@@ -465,20 +462,18 @@ int sepulcher_ascension(OBJ *obj, CHAR *ch, int cmd, char *arg)
         {
             send_to_char("Only a single object can fit.\r\n", ch);
             return TRUE;
-        }        
+        }
     }
     return FALSE;
 }
-
 
 // Use a room to assign the function so on MSG_ZONE_RESET, they may get loaded.
 int dpc_check_sepulcher_loads(int room, CHAR *ch, int cmd, char *argument)
 {
 
-	bool summonUndead = FALSE;
-    CHAR *nerath_priest,*found_char;
+    bool summonUndead = FALSE;
+    CHAR *nerath_priest, *found_char;
     int nerath_priest_nr;
-	
 
     if (cmd == MSG_TICK)
     {
@@ -487,42 +482,44 @@ int dpc_check_sepulcher_loads(int room, CHAR *ch, int cmd, char *argument)
 
         if (summonUndead)
         {
-            
-			found_char = get_ch_world(NERATH_PRIEST);
-			
-			if(!found_char){
-				nerath_priest_nr = real_mobile(NERATH_PRIEST);
-				nerath_priest = read_mobile(nerath_priest_nr, REAL);
-				char_to_room(nerath_priest, real_room(SEPULCHER_SEAL_ROOM));
-				send_to_room("A mysterious figure appears in the middle of the room.\r\n", CHAR_REAL_ROOM(ch));
-				
-				
-				for (int i = 21645; i <= 21653; i++) {
-					
-					if(i == SEPULCHER_SEAL_ROOM){
-						send_to_room("A mysterious figure appears in front of you.\r\n", real_room(i));
-					}else{
-						send_to_room("A mysterious figure appears in the middle of the room.\r\n", real_room(i));
-					}				
-				}
-				
-			}
+
+            found_char = get_ch_world(NERATH_PRIEST);
+
+            if (!found_char)
+            {
+                nerath_priest_nr = real_mobile(NERATH_PRIEST);
+                nerath_priest = read_mobile(nerath_priest_nr, REAL);
+                char_to_room(nerath_priest, real_room(SEPULCHER_SEAL_ROOM));
+                send_to_room("A mysterious figure appears in the middle of the room.\r\n", CHAR_REAL_ROOM(ch));
+
+                for (int i = 21645; i <= 21653; i++)
+                {
+
+                    if (i == SEPULCHER_SEAL_ROOM)
+                    {
+                        send_to_room("A mysterious figure appears in front of you.\r\n", real_room(i));
+                    }
+                    else
+                    {
+                        send_to_room("A mysterious figure appears in the middle of the room.\r\n", real_room(i));
+                    }
+                }
+            }
 
             extract_sigil_sepulchers();
         }
     }
-	
-	if (cmd == MSG_ZONE_RESET)
+
+    if (cmd == MSG_ZONE_RESET)
     {
         found_char = get_ch_world(NERATH_PRIEST);
-			
-		if(found_char){
-			act("$n decays before you", 0, found_char, 0, 0, TO_ROOM);
-			extract_char(found_char);
-		}
+
+        if (found_char)
+        {
+            act("$n decays before you", 0, found_char, 0, 0, TO_ROOM);
+            extract_char(found_char);
+        }
     }
-	
-	
 
     return FALSE;
 }
@@ -545,8 +542,6 @@ int nareth_blessing_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg
         send_to_char("Your life is worth too much to quit.\n\r", ench_ch);
         return TRUE;
     }
-
-    // On Tick, lose 10% of your HP, but cant drop below 100 HP.
 
     if (ench_ch && cmd == MSG_TICK)
     {
@@ -648,8 +643,8 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             keyword_said = TRUE;
         }
-		//Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
-		if (*buf && is_abbrev(buf, "aurum"))
+        // Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
+        if (*buf && is_abbrev(buf, "aurum"))
         {
             act("$n says 'Ah, you dare speak of the King's lost treasure? Beware, for the golden realm is both a blessing and a curse. Only the worthy may claim its riches.", 0, mob, 0, 0, TO_ROOM);
 
@@ -657,9 +652,9 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             keyword_said = TRUE;
         }
-		
-		//Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
-		if (*buf && is_abbrev(buf, "elysium"))
+
+        // Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
+        if (*buf && is_abbrev(buf, "elysium"))
         {
             act("$n says 'Elysium... a place of endless trials, where only those who seek experience and power will find what they desire. But beware, it is not a place for the faint of heart.", 0, mob, 0, 0, TO_ROOM);
 
@@ -667,15 +662,15 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             keyword_said = TRUE;
         }
-		
+
         // Once a single keyword is said, extract the NPC.
         if (keyword_said)
         {
             act("$n says 'Farewell and good luck!.", 0, mob, 0, 0, TO_ROOM);
 
             act("$n decays before you", 0, mob, 0, 0, TO_ROOM);
-           
-			extract_char(mob);
+
+            extract_char(mob);
         }
 
         return TRUE;
@@ -823,24 +818,25 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
     return bReturn;
 }
 
-
-
 // Tomtom has a small chance to sing haste song (guaranteed) on MSG_MOBACT
-int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg) {
-  CHAR *tmp_victim = NULL;
-  CHAR *temp = NULL;  
-  CHAR *owner;
-  char buf[MAX_INPUT_LENGTH];
-  CHAR *found_char;
-  OBJ *tmp_relic;
-  
-  //Cast Rage on Everyone in the room.
-  if(cmd == MSG_MOBACT){	  
-		/* Don't spec if no ch. */
+int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
+{
+    CHAR *tmp_victim = NULL;
+    CHAR *temp = NULL;
+    CHAR *owner;
+    char buf[MAX_INPUT_LENGTH];
+    CHAR *found_char;
+    OBJ *tmp_relic;
+
+    // Cast Rage on Everyone in the room.
+    if (cmd == MSG_MOBACT)
+    {
+        /* Don't spec if no ch. */
         if (ch)
             return FALSE;
-		if (!obj || !obj->equipped_by) return FALSE;
-		ch = obj->equipped_by;
+        if (!obj || !obj->equipped_by)
+            return FALSE;
+        ch = obj->equipped_by;
         /* Don't spec if ch is not awake. */
         if (!AWAKE(ch))
             return FALSE;
@@ -850,115 +846,118 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg) {
         /* Don't spec if actor is not the owner. */
         if (ch != owner)
             return FALSE;
-	  if (!GET_OPPONENT(owner)) return FALSE;	  	  	  	  
-	  if (GET_CLASS(owner) != CLASS_BARD){ return FALSE; }
-	  
-	  if (number(0,550) != 1) return FALSE; 	  
-	  
-	  act("Your lute's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_CHAR);	  
-	  act("$n plays the lute and it's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_NOTVICT);
-	  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
-		temp=tmp_victim->next_in_room;
-		if (ch != tmp_victim){
-		  
-		  spell_rage(50, ch, tmp_victim, 0);		  
-	   }
-	  }
-	   spell_rage(50, ch, ch, 0);
-	  
-		return FALSE;
-  }
-  
-  
-  if(cmd == CMD_UNKNOWN){	  	  
-	  arg = one_argument(arg, buf);	  
-	  if(AWAKE(ch) && *buf && !strncmp(buf, "play", MAX_INPUT_LENGTH))
-	  {		
-		if (ch->specials.fighting){
-		  send_to_char("Its impossible to concentrate on playing right now.\n\r",ch);
-		  return TRUE;
-		  
-		}	
-		one_argument(arg, buf);
-        if(!*buf) send_to_char("What do you want to play?\n\r",ch);
-		else if(strncmp(buf, "lute", MAX_INPUT_LENGTH)) send_to_char("You can't play that.\n\r",ch);
-		else {
-			
-			//If in the throne room, place the relic on the boss
-			if(V_ROOM(ch)==PHAX_NISRUTH_THRONE_ROOM){
-				  
-				  
-				  //See if the Boss is alive, if he is, load the GRAVEPIERCER Relic onto him. 	
-					 for (tmp_victim = world[real_room(PHAX_NISRUTH_THRONE_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
-					{
-						if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_BONECLUTCH))
-							continue;
-						// If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
-						if (V_MOB(tmp_victim) == NERATH_BONECLUTCH)
-						{
-							
-							found_char = get_ch_world(NERATH_BONECLUTCH);							
-							tmp_relic = read_object(GRAVEPIERCER_RELIC, VIRTUAL);
-							
-							if(tmp_relic){
-								obj_to_char(tmp_relic, found_char);
-								send_to_room("Nerath glows as a relic appears around his neck.\n\r", real_room(PHAX_NISRUTH_THRONE_ROOM));
-							}
-							
-							
-						}
-					}
+        if (!GET_OPPONENT(owner))
+            return FALSE;
+        if (GET_CLASS(owner) != CLASS_BARD)
+        {
+            return FALSE;
+        }
 
+        if (number(0, 550) != 1)
+            return FALSE;
 
-				  
+        act("Your lute's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_CHAR);
+        act("$n plays the lute and it's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_NOTVICT);
+        for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp)
+        {
+            temp = tmp_victim->next_in_room;
+            if (ch != tmp_victim)
+            {
 
-			}		
-			//IF in the seal room - Have the mob respond talking about how boneclutch wants to hear music.
-			else if(V_ROOM(ch)==RITUAL_SEAL_ROOM){
-				
-				 for (tmp_victim = world[real_room(RITUAL_SEAL_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
-					{
-						if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_PRIEST))
-							continue;
-						// If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
-						if (V_MOB(tmp_victim) == NERATH_PRIEST)
-						{
-							found_char = get_ch_world(NERATH_PRIEST);
-							send_to_room("As the final notes hang in the air, the priest's hollow eyes glimmer with recognition.\n\r", real_room(RITUAL_SEAL_ROOM));
-							act("$n says 'The king stirs... He remembers this melody. You must go to him.'\r\n", 0, found_char, 0, 0, TO_ROOM);
-						}
-					}
-			}
-			else {
-				send_to_room("A mournful tune drifts through the air like a funeral hymn, its eerie resonance pulling at the Veil, causing distant whispers to rise and the restless dead to stir..\n\r", CHAR_REAL_ROOM(ch));
-				
-			}
-			
-		}
-		return TRUE;
-	  }
-	  return FALSE;
-		
-  }
-  
-  return FALSE;
+                spell_rage(50, ch, tmp_victim, 0);
+            }
+        }
+        spell_rage(50, ch, ch, 0);
+
+        return FALSE;
+    }
+
+    if (cmd == CMD_UNKNOWN)
+    {
+        arg = one_argument(arg, buf);
+        if (AWAKE(ch) && *buf && !strncmp(buf, "play", MAX_INPUT_LENGTH))
+        {
+            if (ch->specials.fighting)
+            {
+                send_to_char("Its impossible to concentrate on playing right now.\n\r", ch);
+                return TRUE;
+            }
+            one_argument(arg, buf);
+            if (!*buf)
+                send_to_char("What do you want to play?\n\r", ch);
+            else if (strncmp(buf, "lute", MAX_INPUT_LENGTH))
+                send_to_char("You can't play that.\n\r", ch);
+            else
+            {
+
+                // If in the throne room, place the relic on the boss
+                if (V_ROOM(ch) == PHAX_NISRUTH_THRONE_ROOM)
+                {
+
+                    // See if the Boss is alive, if he is, load the GRAVEPIERCER Relic onto him.
+                    for (tmp_victim = world[real_room(PHAX_NISRUTH_THRONE_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
+                    {
+                        if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_BONECLUTCH))
+                            continue;
+                        // If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
+                        if (V_MOB(tmp_victim) == NERATH_BONECLUTCH)
+                        {
+
+                            found_char = get_ch_world(NERATH_BONECLUTCH);
+                            tmp_relic = read_object(GRAVEPIERCER_RELIC, VIRTUAL);
+
+                            if (tmp_relic)
+                            {
+                                obj_to_char(tmp_relic, found_char);
+                                send_to_room("Nerath glows as a relic appears around his neck.\n\r", real_room(PHAX_NISRUTH_THRONE_ROOM));
+                            }
+                        }
+                    }
+                }
+                // IF in the seal room - Have the mob respond talking about how boneclutch wants to hear music.
+                else if (V_ROOM(ch) == RITUAL_SEAL_ROOM)
+                {
+
+                    for (tmp_victim = world[real_room(RITUAL_SEAL_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
+                    {
+                        if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_PRIEST))
+                            continue;
+                        // If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
+                        if (V_MOB(tmp_victim) == NERATH_PRIEST)
+                        {
+                            found_char = get_ch_world(NERATH_PRIEST);
+                            send_to_room("As the final notes hang in the air, the priest's hollow eyes glimmer with recognition.\n\r", real_room(RITUAL_SEAL_ROOM));
+                            act("$n says 'The king stirs... He remembers this melody. You must go to him.'\r\n", 0, found_char, 0, 0, TO_ROOM);
+                        }
+                    }
+                }
+                else
+                {
+                    send_to_room("A mournful tune drifts through the air like a funeral hymn, its eerie resonance pulling at the Veil, causing distant whispers to rise and the restless dead to stir..\n\r", CHAR_REAL_ROOM(ch));
+                }
+            }
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    return FALSE;
 }
-
 
 int dpc_oath_reliquary(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
 
-	CHAR *tmp_victim = NULL;	
-	CHAR *owner;
-  
-  CHAR *found_char;
+    CHAR *tmp_victim = NULL;
+    CHAR *owner;
+
+    CHAR *found_char;
 
     char buf[MAX_INPUT_LENGTH];
-    bool bReturn = FALSE;    
+    bool bReturn = FALSE;
 
     if (ch && cmd == CMD_USE)
     {
-		/* Don't spec if no ch. */
+        /* Don't spec if no ch. */
         if (!ch)
             return FALSE;
         /* Don't spec if ch is not awake. */
@@ -975,74 +974,66 @@ int dpc_oath_reliquary(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
         /* Return if no target. */
         if (!*buf)
-            return FALSE;	
-        
+            return FALSE;
+
         if (*buf && !strncmp(buf, "reliquary", MAX_INPUT_LENGTH))
         {
             bReturn = TRUE;
-            //If in the throne room, place the relic on the boss
-			if(V_ROOM(ch)==PHAX_NISRUTH_THRONE_ROOM){				  
-				  
-				  //See if the Boss is alive, if he is, load the GRAVEPIERCER Relic onto him. 	
-					 for (tmp_victim = world[real_room(PHAX_NISRUTH_THRONE_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
-					{
-						if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_BONECLUTCH))
-							continue;
-						// If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
-						if (V_MOB(tmp_victim) == NERATH_BONECLUTCH)
-						{
-							//The Boss is alive - Lets have him respond with words related to the keywords.   3 Options, 80% of the time its gibberish
-							found_char = get_ch_world(NERATH_BONECLUTCH);							
-							
-							if(found_char){
-								send_to_room("The reliquary glows in the presence of the ancient undead..\n\r", real_room(PHAX_NISRUTH_THRONE_ROOM));
-								act("$n says 'Give me the Relic. Ill trade you information'\r\n", 0, found_char, 0, 0, TO_ROOM);								
-							}
-							
-							
-							
-						}
-					}
+            // If in the throne room, place the relic on the boss
+            if (V_ROOM(ch) == PHAX_NISRUTH_THRONE_ROOM)
+            {
 
+                // See if the Boss is alive, if he is, load the GRAVEPIERCER Relic onto him.
+                for (tmp_victim = world[real_room(PHAX_NISRUTH_THRONE_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
+                {
+                    if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_BONECLUTCH))
+                        continue;
+                    // If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
+                    if (V_MOB(tmp_victim) == NERATH_BONECLUTCH)
+                    {
+                        // The Boss is alive - Lets have him respond with words related to the keywords.   3 Options, 80% of the time its gibberish
+                        found_char = get_ch_world(NERATH_BONECLUTCH);
 
-				  
+                        if (found_char)
+                        {
+                            send_to_room("The reliquary glows in the presence of the ancient undead..\n\r", real_room(PHAX_NISRUTH_THRONE_ROOM));
+                            act("$n says 'Give me the Relic. Ill trade you information'\r\n", 0, found_char, 0, 0, TO_ROOM);
+                        }
+                    }
+                }
+            }
+            // IF in the seal room - Have the mob respond talking about how boneclutch wants to hear music.
+            else if (V_ROOM(ch) == RITUAL_SEAL_ROOM)
+            {
 
-			}		
-			//IF in the seal room - Have the mob respond talking about how boneclutch wants to hear music.
-			else if(V_ROOM(ch)==RITUAL_SEAL_ROOM){
-				
-				 for (tmp_victim = world[real_room(RITUAL_SEAL_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
-					{
-						if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_PRIEST))
-							continue;
-						// If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
-						if (V_MOB(tmp_victim) == NERATH_PRIEST)
-						{
-							found_char = get_ch_world(NERATH_PRIEST);
-							send_to_room("The reliquary glows in the presence of the ancient undead..\n\r", real_room(RITUAL_SEAL_ROOM));
-							act("$n says 'I never thought I would see this relic again.  Thank you!'\r\n", 0, found_char, 0, 0, TO_ROOM);
-						}
-					}
-			}
-			else {
-				send_to_room("The reliquary faintly glows and then goes dark.\n\r", CHAR_REAL_ROOM(ch));
-				
-			}
-			
-			
-			
+                for (tmp_victim = world[real_room(RITUAL_SEAL_ROOM)].people; tmp_victim; tmp_victim = tmp_victim->next_in_room)
+                {
+                    if (!IS_NPC(tmp_victim) || (V_MOB(tmp_victim) != NERATH_PRIEST))
+                        continue;
+                    // If Typhon is found and the seals are occupied then we want to remove the sealed version and summon the real.
+                    if (V_MOB(tmp_victim) == NERATH_PRIEST)
+                    {
+                        found_char = get_ch_world(NERATH_PRIEST);
+                        send_to_room("The reliquary glows in the presence of the ancient undead..\n\r", real_room(RITUAL_SEAL_ROOM));
+                        act("$n says 'I never thought I would see this relic again.  Thank you!'\r\n", 0, found_char, 0, 0, TO_ROOM);
+                    }
+                }
+            }
+            else
+            {
+                send_to_room("The reliquary faintly glows and then goes dark.\n\r", CHAR_REAL_ROOM(ch));
+            }
         }
     }
     return bReturn;
 }
 
-
 int nerath_boneclutch(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
-	
-	int response_choice;
-	
-	if (cmd == MSG_OBJ_GIVEN)
+
+    int response_choice;
+
+    if (cmd == MSG_OBJ_GIVEN)
     {
         char buf[MIL];
 
@@ -1055,8 +1046,8 @@ int nerath_boneclutch(CHAR *mob, CHAR *ch, int cmd, char *arg)
             return TRUE;
 
         bool give_back = FALSE;
-		
-		//Check for the Reliquary - If not, return the item.
+
+        // Check for the Reliquary - If not, return the item.
         if (V_OBJ(obj) != OATH_RELIQUARY)
         {
             do_say(mob, "This serves no use to me, take it and begone.", CMD_SAY);
@@ -1073,28 +1064,27 @@ int nerath_boneclutch(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             return TRUE;
         }
-		
-		
-		// Remove the Token
-        extract_obj(obj);
-		
-		
-		response_choice = number(1,10);
-		
-		if(response_choice <= 8){
-			act("$N whispers at you, words offer the means to meaning.", FALSE, ch, 0, mob, TO_CHAR);
-		}
-		else if(response_choice == 9){ //Hidden Keyword Elysium
-			act("$N whispers at you, The king’s secrets are buried deep, but you have unearthed the truth. Speak ‘Aurum’ to walk among his gilded sins.", FALSE, ch, 0, mob, TO_CHAR);
-		}
-		else if(response_choice == 10){ // Hidden Keyword Aurum
-			act("$N whispers at you, For those who seek the trials of the lost, whisper ‘Elysium’ and walk the path of forsaken souls.", FALSE, ch, 0, mob, TO_CHAR);
-		}		
-	}
-	return FALSE;
-	
-}
 
+        // Remove the Token
+        extract_obj(obj);
+
+        response_choice = number(1, 10);
+
+        if (response_choice <= 8)
+        {
+            act("$N whispers at you, words offer the means to meaning.", FALSE, ch, 0, mob, TO_CHAR);
+        }
+        else if (response_choice == 9)
+        { // Hidden Keyword Elysium
+            act("$N whispers at you, The king’s secrets are buried deep, but you have unearthed the truth. Speak ‘Aurum’ to walk among his gilded sins.", FALSE, ch, 0, mob, TO_CHAR);
+        }
+        else if (response_choice == 10)
+        { // Hidden Keyword Aurum
+            act("$N whispers at you, For those who seek the trials of the lost, whisper ‘Elysium’ and walk the path of forsaken souls.", FALSE, ch, 0, mob, TO_CHAR);
+        }
+    }
+    return FALSE;
+}
 
 void assign_deathplaygroundcrypt(void)
 {
@@ -1104,23 +1094,18 @@ void assign_deathplaygroundcrypt(void)
     assign_obj(SEPULCHER_ASCENSION, sepulcher_ascension);
     assign_obj(SACRIFICIAL_JAR_TWO, sacrifical_jar_medium);
     assign_obj(GRAVEPIERCER_RELIC, gravepiercer_relic);
-	assign_obj(DIRGECALLER_LUTE, dpc_dirgecaller_lute);
-	assign_obj(OATH_RELIQUARY, dpc_oath_reliquary);
-	
-	
+    assign_obj(DIRGECALLER_LUTE, dpc_dirgecaller_lute);
+    assign_obj(OATH_RELIQUARY, dpc_oath_reliquary);
 
     /*Rooms*/
     assign_room(BUTTOM_ROOM_ONE_START, dpc_button_room_one);
     assign_room(SMASH_JAR_ROOM_ONE_START, dpc_smash_jar_room_one);
 
     assign_room(ITEM_SEPULCHER_ROOM_ONE, dpc_load_sepulchers_room);
-	
-	assign_room(RITUAL_SEAL_ROOM, dpc_check_sepulcher_loads);
-	
-	
+
+    assign_room(RITUAL_SEAL_ROOM, dpc_check_sepulcher_loads);
 
     /*Mobs*/
     assign_mob(NERATH_PRIEST, nerath_high_priest);
-	assign_mob(NERATH_BONECLUTCH, nerath_boneclutch);
-	
+    assign_mob(NERATH_BONECLUTCH, nerath_boneclutch);
 }
