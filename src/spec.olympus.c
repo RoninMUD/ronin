@@ -29,6 +29,7 @@
 #include "utility.h"
 
 /*Rooms */
+#define MARKET_SQUARE 3014
 
 #define WATERFALL_ROOM 28866
 #define OFF_MOUNTAIN 28801
@@ -50,8 +51,10 @@
 #define HEPHAESTUS_FORGE_KEY 28843
 #define HEPHAESTUS_FORGE_HAMMER 28844
 
+#define EYE_OF_THE_WORLD 28805
 #define ZEUS_BOLT 28860
-
+#define POSEIDON_ARMBANDS 28867
+#define APOLLO_LYRE 28876
 
 /*Mobs */
 #define OLYMPUS_ZEUS 28804
@@ -89,113 +92,300 @@
 #define TYPHON_ICE_ENCH_NAME "Encased in Ice"
 #define TYPHON_FIRE_ENCH_NAME "On Fire!"
 
-#define ZEUS_BOLT_CHARGE_TIME       7 /*  */
+#define ZEUS_BOLT_CHARGE_TIME 7 /*  */
+#define APOLLO_LYRE_BLESSING_NAME "Apollo's Musical Blessing"
 
 
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
 /*======================================================================== */
 
-//Grows in Power and Can be released with a CMD_USE.
-//If not used by 5X, hurt the holder.   Only happens in Combat.
 
-int zeus_bolt(OBJ *obj, CHAR *ch, int cmd, char *argument)
+int apollo_lyre_blessing_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg)
 {
-	CHAR *vict;
-	
-	char buf[MIL];
-	char info_str[MSL];
-	char* bolt_state[] =
-	{/* indicates harvest charges */
-	  "The bolt is dormant, with no accumulated energy.", 		//0
-	  "The bolt has begun to gather power.",					//1
-	  "The bolt has accumulated minimal amounts of power.",		//2
-	  "The bolt has accumulated moderate amounts of power.",	//3
-	  "The bolt nearing its full power.",						//4
-	  "The bolt has reached its maximum capacity.",				//5
-	  "The bolt remained charged but has begun to destabalize.",//6
-	  "The bolt has become unstable."							//7
-	};	
-	
-  switch(cmd)
-  {
-    case MSG_TICK:
-      ch = obj->equipped_by;
-      if(!ch)
-        ch = obj->carried_by;
-	  //If they arent fighting, reset the timer to 0 and then return.
-	  if(!ch->specials.fighting){
-		  obj->obj_flags.timer = 0;
-		  act("The electricity disapates from the bolt.", FALSE, ch, NULL, NULL, TO_CHAR);		  
-		  return FALSE;
-	  }  
-	   
-	  
-	  //IF in combat, start counting out from 0.  After 5 rounds, you reach max damage.
-	  //If you reach 7 ticks it hurts the user.  Reset back to 0.
-      if(ch && !IS_NPC(ch) && ch->specials.fighting)
-      {
-		obj->obj_flags.timer++;
-	
-		sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
-		send_to_char(info_str, ch);
-	
-	
-        //THe bolt has gone past its limit and explodes.  
-		//Hurt the holder.
-		if(obj->obj_flags.timer > 7){
-			obj->obj_flags.timer = 0;
-			send_to_char("The bolt explodes its energy into your skin.", ch);
-			GET_HIT(ch) -= 400;	
-		}	
-      }
-      break;   
-    case CMD_EXAMINE:
-      if((ch==obj->equipped_by || ch==obj->carried_by) && ch && !IS_NPC(ch))
-      {
-        one_argument(argument, buf);
-        if(AWAKE(ch) && obj && V_OBJ(obj)==ZEUS_BOLT && !strncmp(buf, "bolt", MIL))
+
+    int hp_gain;
+    int mana_gain;
+
+    if (cmd == MSG_REMOVE_ENCH)
+    {
+        send_to_char("You feel apollo's presence fade.\n\r", ench_ch);
+        return FALSE;
+    }
+    if (cmd == CMD_QUIT)
+    {
+        if (ch != ench_ch)
+            return FALSE;
+        send_to_char("Apollo won't let you leave.\n\r", ench_ch);
+        return TRUE;
+    }
+
+    //If skills are used, intercept and remove lag - restore mana.
+
+    if (ench_ch && (cmd == CMD_PUMMEL || cmd == CMD_CIRCLE || cmd == CMD_FIREBREATH || cmd == CMD_PUNCH || cmd == CMD_DISARM || cmd == CMD_BACKSTAB || cmd == CMD_BASH || cmd == CMD_RESCUE || cmd == CMD_KICK || cmd == CMD_SPIN || cmd == CMD_SONG || cmd == CMD_AMBUSH || cmd == CMD_DISEMBOWEL || cmd == CMD_BACKFIST || cmd == CMD_FLANK || cmd == CMD_TIGERKICK || cmd == CMD_LUNGE || cmd == CMD_SMITE || cmd == CMD_TRUSTY_STEED || cmd == CMD_ZEAL || cmd == CMD_ASSASSINATE || cmd == CMD_BATTER || cmd == CMD_SNIPE || cmd == CMD_HEADBUTT || cmd == CMD_MANTRA || cmd == CMD_BANZAI))
+    {
+        hp_gain = number(30, 50);
+        mana_gain = number(25, 50);
+
+        GET_HIT(ench_ch) = GET_HIT(ench_ch) + hp_gain;
+        GET_MANA(ench_ch) = GET_MANA(ench_ch) + mana_gain;
+		GET_WAIT(ench_ch) = 0;
+    }
+
+    return FALSE;
+}
+
+
+int olympus_apollo_lyre(OBJ *obj, CHAR *ch, int cmd, char *arg) {
+  CHAR *tmp_victim = NULL;
+  CHAR *temp = NULL;  
+  CHAR *owner;
+  
+  
+  //Cast a Buff on everyone that will check for a skill/spell and refund between 20-30 mana
+  if(cmd == MSG_MOBACT){	  
+		/* Don't spec if no ch. */
+        if (ch) return FALSE;
+        if (!obj || !obj->equipped_by)
+            return FALSE;
+        ch = obj->equipped_by;
+        /* Don't spec if ch is not awake. */
+        if (!AWAKE(ch))
+            return FALSE;
+        /* Don't spec if obj is not equipped by the actor. */
+        if (!(owner = obj->equipped_by))
+            return FALSE;
+        /* Don't spec if actor is not the owner. */
+        if (ch != owner)
+            return FALSE;
+        if (!GET_OPPONENT(owner))
+            return FALSE;
+        if (GET_CLASS(owner) != CLASS_BARD)
         {
-			sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
-			send_to_char(info_str, ch);
-			return TRUE;
+            return FALSE;
         }
-      }
-      
-      break;
-	case CMD_USE:
-		
-		 ch = obj->equipped_by;
-		  if(!ch)
-			ch = obj->carried_by;
-		  //If they arent fighting, reset the timer to 0 and then return.
-		  if(!ch->specials.fighting){			  
-			  act("There is nothing to electrify.", FALSE, ch, NULL, NULL, TO_CHAR);		  
-			  return FALSE;
-		  }  
-		//If fighting and it has charges - Find whomever they are fighting and hit them and reduce charges to 0
-		if(ch && !IS_NPC(ch) && ch->specials.fighting){
-			 one_argument(argument, buf);
-			if(!strncmp(buf, "bolt", MIL)){
-				vict = ch->specials.fighting;
-				
-				if(vict){
-					obj->obj_flags.timer = 0;
-					act("i shoot you with lightning..", FALSE, ch, NULL, NULL, TO_CHAR);
-					act("Shoot you with lightning..", FALSE, ch, NULL, NULL, TO_ROOM);
-					//Use up to 5 Ticks.  It is possible that they use this on 6 or 7.
-					damage(ch, vict, (100* MIN(obj->obj_flags.timer,5)), TYPE_UNDEFINED, DAM_ELECTRIC);
-					
-				}				
-			}		
-		}		
-		break;
-    default:
-		break;
+	  
+	  if (number(0,300) != 1) return FALSE; 	  
+	  
+	  act("The lyre plays radiant music of the gods", 1, ch, 0, owner, TO_CHAR);	  
+	  act("$n plays the lyre and the god's radiance descends upon you.", 1, ch, 0, owner, TO_NOTVICT);
+	  for(tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = temp) {
+		temp=tmp_victim->next_in_room;
+		if (IS_NPC(tmp_victim))
+			{
+				continue;
+			}
+
+			if (IS_MORTAL(tmp_victim))
+			{
+				enchantment_apply(tmp_victim, FALSE, APOLLO_LYRE_BLESSING_NAME, 0, 20, ENCH_INTERVAL_ROUND, 2, APPLY_HITROLL, 0, 0, apollo_lyre_blessing_func);
+			}
+	  }
+	   enchantment_apply(ch, FALSE, APOLLO_LYRE_BLESSING_NAME, 0, 20, ENCH_INTERVAL_ROUND, 2, APPLY_HITROLL, 0, 0, apollo_lyre_blessing_func);
+	  
+		return FALSE;
   }
+  
   return FALSE;
 }
 
+
+
+int poseidon_armbands(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+	char buf[MIL];
+	CHAR *owner;
+	
+	if (cmd == CMD_USE)
+    {
+        /* Don't spec if no ch. */
+        if (!ch)
+            return FALSE;
+        /* Don't spec if ch is not awake. */
+        if (!AWAKE(ch))
+            return FALSE;
+        /* Don't spec if obj is not equipped by the actor. */
+        if (!(owner = obj->equipped_by))
+            return FALSE;
+        /* Don't spec if actor is not the owner. */
+        if (ch != owner)
+            return FALSE;
+
+        one_argument(argument, buf);
+
+        /* Return if no target. */
+        if (!*buf)
+            return FALSE;
+        
+		//As long as it is equipped, TP the user to MS.
+		if (*buf && is_abbrev(buf, "armbands")){
+		
+			act("The armbands glow on $n's wrist as a whirlpool of water swallows them.", FALSE, owner, 0, 0, TO_ROOM);
+			
+			char_from_room(owner);
+			char_to_room(owner, real_room(MARKET_SQUARE)); /*move all chars to this room*/
+			do_look(owner, "", CMD_LOOK);
+			
+			
+			act("$n appears from a whirlpool of water.", FALSE, owner, 0, 0, TO_ROOM);
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+
+
+int eye_of_the_world(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+    
+    CHAR *tar_char;
+	char buf[MIL];
+	char name[MAX_STRING_LENGTH];
+	//bool target_ok;
+	
+
+    if (cmd == CMD_UNKNOWN)
+    {
+        argument = one_argument(argument, buf);
+        if (*buf && is_abbrev(buf, "scry") && !is_abbrev(buf, "south"))
+        {
+            argument = one_argument(argument, name);
+            if (*name)
+            {				 
+				tar_char = get_char_ex(ch, name,TRUE);
+		
+                if (tar_char)
+                {
+
+                    if (IS_IMMORTAL(tar_char))                    {
+                        send_to_char("Even the power of Zeus wont allow you to see those beings.\n\r", ch);
+                        return TRUE;
+                    }					
+					
+					send_to_char("The world becomes visible to you.\n\r", ch);
+					look_in_room(ch, ROOM_VNUM(CHAR_REAL_ROOM(tar_char)));	
+					return TRUE;
+                                       
+                }else{
+                    send_to_char("The one you seek is not within the mortal realm!\n\r", ch);
+					return TRUE;
+                }
+            }
+            else
+            {
+                send_to_char("What do you want to scry?!\n\r", ch);
+				return TRUE;
+            }
+        }
+    }
+    return FALSE;
+}
+
+
+// Grows in Power and Can be released with a CMD_USE.
+// If not used by 5X, hurt the holder.   Only happens in Combat.
+
+int zeus_bolt(OBJ *obj, CHAR *ch, int cmd, char *argument)
+{
+    CHAR *vict;
+
+    char buf[MIL];
+    char info_str[MSL];
+    char *bolt_state[] =
+        {
+            /* indicates harvest charges */
+            "The bolt is dormant, with no accumulated energy.",        // 0
+            "The bolt has begun to gather power.",                     // 1
+            "The bolt has accumulated minimal amounts of power.",      // 2
+            "The bolt has accumulated moderate amounts of power.",     // 3
+            "The bolt nearing its full power.",                        // 4
+            "The bolt has reached its maximum capacity.",              // 5
+            "The bolt remained charged but has begun to destabalize.", // 6
+            "The bolt has become unstable."                            // 7
+        };
+
+    switch (cmd)
+    {
+    case MSG_TICK:
+        ch = obj->equipped_by;
+        if (!ch)
+            ch = obj->carried_by;
+        // If they arent fighting, reset the timer to 0 and then return.
+        if (!ch->specials.fighting)
+        {
+            obj->obj_flags.timer = 0;
+            act("The electricity disapates from the bolt.", FALSE, ch, NULL, NULL, TO_CHAR);
+            return FALSE;
+        }
+
+        // IF in combat, start counting out from 0.  After 5 rounds, you reach max damage.
+        // If you reach 7 ticks it hurts the user.  Reset back to 0.
+        if (ch && !IS_NPC(ch) && ch->specials.fighting)
+        {
+            obj->obj_flags.timer++;
+
+            sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
+            send_to_char(info_str, ch);
+
+            // THe bolt has gone past its limit and explodes.
+            // Hurt the holder.
+            if (obj->obj_flags.timer > 7)
+            {
+                obj->obj_flags.timer = 0;
+                send_to_char("The bolt explodes its energy into your skin.", ch);
+                GET_HIT(ch) -= 400;
+            }
+        }
+        break;
+    case CMD_EXAMINE:
+        if ((ch == obj->equipped_by || ch == obj->carried_by) && ch && !IS_NPC(ch))
+        {
+            one_argument(argument, buf);
+            if (AWAKE(ch) && obj && V_OBJ(obj) == ZEUS_BOLT && !strncmp(buf, "bolt", MIL))
+            {
+                sprintf(info_str, "%s\n\r", bolt_state[obj->obj_flags.timer]);
+                send_to_char(info_str, ch);
+                return TRUE;
+            }
+        }
+
+        break;
+    case CMD_USE:
+
+        ch = obj->equipped_by;
+        if (!ch)
+            ch = obj->carried_by;
+        // If they arent fighting, reset the timer to 0 and then return.
+        if (!ch->specials.fighting)
+        {
+            act("There is nothing to electrify.", FALSE, ch, NULL, NULL, TO_CHAR);
+            return FALSE;
+        }
+        // If fighting and it has charges - Find whomever they are fighting and hit them and reduce charges to 0
+        if (ch && !IS_NPC(ch) && ch->specials.fighting)
+        {
+            one_argument(argument, buf);
+            if (!strncmp(buf, "bolt", MIL))
+            {
+                vict = ch->specials.fighting;
+
+                if (vict)
+                {
+                    obj->obj_flags.timer = 0;
+                    act("i shoot you with lightning..", FALSE, ch, NULL, NULL, TO_CHAR);
+                    act("Shoot you with lightning..", FALSE, ch, NULL, NULL, TO_ROOM);
+                    // Use up to 5 Ticks.  It is possible that they use this on 6 or 7.
+                    damage(ch, vict, (100 * MIN(obj->obj_flags.timer, 5)), TYPE_UNDEFINED, DAM_ELECTRIC);
+                }
+            }
+        }
+        break;
+    default:
+        break;
+    }
+    return FALSE;
+}
 
 /* The key needs to break on use. */
 int hephaestus_forge_key(OBJ *obj, CHAR *ch, int cmd, char *arg)
@@ -288,7 +478,7 @@ int hephaestus_forge_hammer(OBJ *obj, CHAR *ch, int cmd, char *arg)
         /* Return if no target. */
         if (!*buf)
             return FALSE;
-        /* Return if its not OAR. */
+        
         if (!isname(buf, OBJ_NAME(obj)))
             return FALSE;
 
@@ -375,12 +565,12 @@ int olympus_waterfallroom(int room, CHAR *ch, int cmd, char *arg)
 bool isSealRoomsOccupied()
 {
     // check all 3 rooms.  All 3 need a person in it to activate.
-    //Make sure the zone is loaded.
-    if(real_room(SEAL_ROOM_ONE) == NOWHERE || real_room(SEAL_ROOM_TWO)== NOWHERE || real_room(SEAL_ROOM_THREE)== NOWHERE){
+    // Make sure the zone is loaded.
+    if (real_room(SEAL_ROOM_ONE) == NOWHERE || real_room(SEAL_ROOM_TWO) == NOWHERE || real_room(SEAL_ROOM_THREE) == NOWHERE)
+    {
         return FALSE;
     }
-    
- 
+
     if (count_mortals_real_room(real_room(SEAL_ROOM_ONE)) < 1 ||
         count_mortals_real_room(real_room(SEAL_ROOM_TWO)) < 1 ||
         count_mortals_real_room(real_room(SEAL_ROOM_THREE)) < 1)
@@ -797,47 +987,48 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 {
 
                 case 0: //-- Freeze Random Characters - 2 Round Stun
-                case 1: 
+                case 1:
                     vict = get_random_victim_fighting(mob);
                     if (IS_NPC(vict) || !(IS_MORTAL(vict)))
                         return FALSE;
                     act("You are trapped in a pillar of ice.", 0, mob, 0, vict, TO_VICT);
                     act("$n traps $N in a pillar of ice.", 0, mob, 0, vict, TO_NOTVICT);
                     enchantment_apply(vict, TRUE, TYPHON_ICE_ENCH_NAME, TYPE_UNDEFINED, 5, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, typhon_ice_pillar_func);
-					stop_fighting(vict);
+                    stop_fighting(vict);
                     break;
                 case 2:
-                case 3:// Ice Blast - Up To 3 random characters
+                case 3: // Ice Blast - Up To 3 random characters
                 case 4:
                 case 5:
 
                     mortal_count = count_mortals_room(mob, TRUE);
                     if (mortal_count < 4)
-					{
-						switch(mortal_count)
-						{
-						case 1:
-							act("You are foolish to take me on alone!.\r\n", 0, mob, 0, 0, TO_ROOM);
-							break;
-						case 2:
-							act("One of you will face my wrath!\r\n", 0, mob, 0, 0, TO_ROOM);
-							break;
-						default:
-							break;
-						for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
-						{
-							next_vict = vict->next_in_room;
-							if (IS_MORTAL(vict))
-							{
-								act("$n throws a large shard of ice at you.", 0, mob, 0, vict1, TO_VICT);
-								act("$n throws a large shard of ice at $N.", 0, mob, 0, vict1, TO_NOTVICT);
-								damage(mob, vict1, number(500, 620), TYPE_UNDEFINED, DAM_COLD);
-								WAIT_STATE(vict1, PULSE_VIOLENCE * 1);
-							}
-							if (IS_MORTAL(vict) && mortal_count == 2) break;
-						}
-						}
-					}
+                    {
+                        switch (mortal_count)
+                        {
+                        case 1:
+                            act("You are foolish to take me on alone!.\r\n", 0, mob, 0, 0, TO_ROOM);
+                            break;
+                        case 2:
+                            act("One of you will face my wrath!\r\n", 0, mob, 0, 0, TO_ROOM);
+                            break;
+                        default:
+                            break;
+                            for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                            {
+                                next_vict = vict->next_in_room;
+                                if (IS_MORTAL(vict))
+                                {
+                                    act("$n throws a large shard of ice at you.", 0, mob, 0, vict1, TO_VICT);
+                                    act("$n throws a large shard of ice at $N.", 0, mob, 0, vict1, TO_NOTVICT);
+                                    damage(mob, vict1, number(500, 620), TYPE_UNDEFINED, DAM_COLD);
+                                    WAIT_STATE(vict1, PULSE_VIOLENCE * 1);
+                                }
+                                if (IS_MORTAL(vict) && mortal_count == 2)
+                                    break;
+                            }
+                        }
+                    }
                     else
                     {
 
@@ -954,7 +1145,7 @@ int olympus_typhon(CHAR *mob, CHAR *ch, int cmd, char *arg)
                     act("You are engulfed in a pillar of fire.", 0, mob, 0, vict, TO_VICT);
                     act("$n engulfs $N in a pillar of fire.", 0, mob, 0, vict, TO_NOTVICT);
                     enchantment_apply(vict, TRUE, TYPHON_FIRE_ENCH_NAME, TYPE_UNDEFINED, 5, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, typhon_fire_pillar_func);
-					stop_fighting(vict);
+                    stop_fighting(vict);
                     break;
 
                     break;
@@ -3110,6 +3301,11 @@ void assign_olympus(void)
     assign_obj(HEPHAESTUS_FORGE, hephaestus_forge);
     assign_obj(HEPHAESTUS_FORGE_KEY, hephaestus_forge_key);
     assign_obj(HEPHAESTUS_FORGE_HAMMER, hephaestus_forge_hammer);
+
+	assign_obj(EYE_OF_THE_WORLD, eye_of_the_world);
+	assign_obj(POSEIDON_ARMBANDS, poseidon_armbands);
+	assign_obj(APOLLO_LYRE, olympus_apollo_lyre);
+
 
     /*Rooms */
     assign_room(WATERFALL_ROOM, olympus_waterfallroom);
