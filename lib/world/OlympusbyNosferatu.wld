@@ -14,76 +14,62 @@ exist on the tops of the clouds.
 ~
 288 32768 5
 D0
-The massive rock that is Mount Olympus looms ahead.
 ~
 ~
-0 -1 28801
+0 -1 28804
 D2
 ~
 ~
 0 -1 28770
 S
 #28801
-A wide path~
-    The immense mountain continues to grow in your field
-of vision the closer you get to it. The gate and city are
-growing smaller to the South as you leave them behind. You
-have heard stories that this place is filled with deadly
-passes and treacherous cliffs, but from this point all you
-can see is the beauty and the size of the place.
+Chamber of Tempestuous Winds~
+As you step into this vast chamber, the howling of fierce winds 
+assaults your senses. The air is thick with the scent of 
+ozone, and swirling gusts create an almost tangible barrier. In 
+the center stands an ancient pedestal, upon which rests a glowing 
+sigil pulsating with energy. This is the first seal, embodying 
+Typhon's dominion over storms and tempests.
 ~
-288 32768 5
-D0
-The massive rock that is Mount Olympus looms ahead.
-~
-~
-0 -1 28802
+288 67108864 0
 D2
-The beauty and safety of the Immortal Village calls from the South.
+A powerful seal radiates holy energy.
 ~
-~
-0 -1 28800
+seal~
+1 -1 28707
 S
 #28802
-A wide path~
-    The hills continue to grow steeper as you proceed
-toward the great mountain. You can begin to see more clearly
-ahead where the hills meet the rock, and it appears this
-path forks and goes in multiple directions. A cold wind
-blows in your face from the North.
+Cavern of Molten Fury~
+The heat is overwhelming as you enter this cavern, with rivers 
+of molten lava casting an eerie glow on the jagged walls. The 
+ground trembles intermittently, and the roar of bubbling magma 
+fills the air. At the heart of the cavern lies a stone 
+dais, encircled by flowing lava, holding the second seal. 
+This seal represents Typhon's fiery wrath and his association 
+with volcanic forces.
 ~
-288 32768 5
-D0
-The massive rock that is Mount Olympus looms ahead.
-~
-~
-0 -1 28803
+288 67108864 0
 D2
-The beauty and safety of the Immortal Village calls from the South.
+A powerful seal radiates holy energy.
 ~
-~
-0 -1 28801
+seal~
+1 28766 28720
 S
 #28803
-A wide path~
-   The mountain is now much too large to be taken in with a
-single look. It fills your field of vision to the North
-completely. The rolling hills to the East and West are beginning
-to fall behind you and the trail is beginning to slope more
-severely as you continue. From somewhere above and far away,
-you hear an animal's dying scream.
+Abyss of Chthonic Shadows~
+Darkness envelops you in this subterranean abyss, where the only 
+light comes from bioluminescent fungi clinging to damp walls. The 
+air is thick with the scent of earth and decay. Deep within the 
+gloom, a monolithic altar carved from obsidian holds the third 
+seal. This final seal symbolizes Typhon's connection to the 
+underworld and the primordial depths.
 ~
-288 32768 5
-D0
-The massive rock that is Mount Olympus looms ahead.
+288 67108864 0
+D1
+A powerful seal radiates holy energy.
 ~
-~
-0 -1 28804
-D2
-The beauty and safety of the Immortal Village calls from the South.
-~
-~
-0 -1 28802
+seal~
+1 28767 28754
 S
 #28804
 A wide path~
@@ -102,10 +88,9 @@ The massive rock that is Mount Olympus looms ahead.
 ~
 0 -1 28805
 D2
-The beauty and safety of the Immortal Village calls from the South.
 ~
 ~
-0 -1 28803
+0 -1 28800
 S
 #28805
 Approaching Mount Olympus~
@@ -1299,7 +1284,7 @@ you should be able to climb over the pile. The walls here are inlaid
 with multi-colored gems that sparkle brilliantly in the glow of your
 light. You can return back to the South.
 ~
-288 32769 0
+288 32837 0
 D2
 ~
 ~
@@ -1531,7 +1516,7 @@ is coming both from the fire and from an amazing electric light hanging
 from the ceiling in a crystal chandelier. This would be a beautiful room
 in any palace, but at the end of this cave it is an oasis.
 ~
-288 32768 0
+288 67141632 0
 D2
 ~
 ~
@@ -1597,7 +1582,7 @@ theirs has for ages been 'This blade rivals those of Hephaestus
 himself!' The amazing works on the walls makes it clear why they
 wish to near his quality.
 ~
-288 32768 0
+288 67141632 0
 D3
 ~
 ~
@@ -1629,7 +1614,7 @@ below. Even if the spot you hit was perfectly flat and covered
 in snow it wouldn't save you from this height, but the jutting,
 spear-like rocks seem like insult to injury.
 ~
-288 32770 5
+288 98304 5
 D0
 ~
 ~
@@ -1645,7 +1630,7 @@ if you aren't already dead. You look around and it appears that you
 are still falling, and there dosent seem to be a floor below you to
 hit. This fall can't be bottomless can it? Can it?!
 ~
-288 32770 5
+288 98304 5
 D0
 ~
 ~
@@ -1723,7 +1708,7 @@ them have multiple heads. All wear frightening snarls on their
 dead faces. Some of the heads appear to be human. There is a
 large marble altar in front of the room.
 ~
-288 32768 0
+288 67141640 0
 D2
 ~
 ~
