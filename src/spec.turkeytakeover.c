@@ -49,9 +49,9 @@
 #define BEAK 18105
 #define FEATHERS 18106
 #define CHEST 18107
-#define CROWN 29678
-#define SHAWL 29677
-#define VAMBRACES 29676
+#define CROWN 18108
+#define SHAWL 18109
+#define VAMBRACES 18110
 
 /*Mobs */
 #define TURKEY_TERROR 18100
@@ -495,7 +495,7 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
     OBJ *che, *rewards;
     int chest, crown, shawl, vambraces;
 
-    //Purge All Remaining Pieces
+    //Purge All Remaining Turkeys
 
     for (i = ZONE_BOTTOM; i <= ZONE_TOP; i++)
     {
@@ -508,7 +508,7 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
             if (V_MOB(mob) == V_MOB(vict)) continue;
 
-            //If not a chess mob - continue
+            //If not a turkey mob - continue
             if (!IS_TURKEY_MOB(vict)) continue;
 
             //Double Check NPC Flag
@@ -537,7 +537,9 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
         che = read_object(chest, REAL);
         obj_to_room(che, real_room(TOWN_ENTRANCE));
-
+		
+		
+		
         //Load Items into Chest
 
         if (number(1, 100) <= (obj_proto_table[crown].obj_flags.repop_percent))
