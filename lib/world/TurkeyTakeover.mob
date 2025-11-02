@@ -133,8 +133,8 @@ A Berserking Turkey pecks wildly.
   A large turkey with steel welded onto its claws stalks towards you. Large
 red eyes stare at you intensely as it screeches wildly and lunges.
 ~
-536887368 0 -270 Y
-53 -21 -15 1d1+25000 15d15+680
+16456 0 -270 Y
+53 -21 -15 1d1+25000 15d15+240
 0 2100000
 8 8 0
 83 20480 1d1+1 3
@@ -153,8 +153,8 @@ A turkey flows with ethereal magic
 feathered body. Its red eyes stare ahead as it squawks in a series of 
 repeating clucks.
 ~
-536887368 0 -270 Y
-53 -25 -18 1d1+17500 17d17+720
+16456 0 -270 Y
+53 -25 -18 1d1+17500 17d17+230
 0 2050000
 8 8 0
 83 20480 1d1+15000 3
@@ -173,8 +173,8 @@ A turkey solider marches into battle
 red eyes. It squawks and marches another step forward. The feathers on its
 back ruffle and shake as it nears closer to you.
 ~
-536887368 0 -270 Y
-53 -25 -22 1d1+19000 19d19+760
+16456 0 -270 Y
+53 -25 -22 1d1+19000 19d19+220
 0 1850000
 8 8 0
 83 20480 1d1+1 3
@@ -194,8 +194,8 @@ soldiers march behind him and follow his squawks with a louder squawk each
 time. Large red eyes state forward with confidence, aiming to destroy the
 pilgrims and prevent thanks from being given.
 ~
-536887368 0 -270 Y
-57 -28 -26 1d1+36000 21d21+800
+16456 0 -270 Y
+57 -28 -26 1d1+36000 21d21+255
 0 2750000
 8 8 0
 83 20480 1d1+10000 3
@@ -213,8 +213,8 @@ A General of the Turkey Army
   A general of the turkey army stands before you. A large crest is emblazoned 
 on its chest, as large red eyes stare with murderous intent. 
 ~
-536887368 0 -270 Y
-60 -31 -27 1d1+42000 23d23+840
+16456 0 -270 Y
+60 -31 -27 1d1+42000 23d23+295
 0 3200000
 8 8 0
 83 20480 1d1+12500 3
