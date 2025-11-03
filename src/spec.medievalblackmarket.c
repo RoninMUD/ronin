@@ -32,6 +32,7 @@
 
 /*Rooms */
 #define JUNK_PILE 18010
+#define RUNEGATE 18029
 
 /*Objects */
 #define QUESTGIVER_TOKEN_HIGH_CARD 18000
@@ -84,6 +85,17 @@
 #define QUESTGIVER_DUMMY_MIN_VNUM 18007
 #define QUESTGIVER_DUMMY_MAX_VNUM 18017
 
+
+/* Zones */
+
+
+#define TURKEY_TAKEOVER_ZONE 181
+#define TURKEY_TAKEOVER_ROOM 18143
+
+
+#define CHRISTMAS_VILLAGE_ZONE 263
+#define CHRISTMAS_VILLAGE_ROOM 26301
+
 /*Miscellaneous strings */
 // Generic States that are shifted to indicate different stages.
 // Each Uber will use this differently.
@@ -95,6 +107,126 @@
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
 /*======================================================================== */
+
+
+int getCurrentMonth()
+{
+	//If its Christmas Time, dont remove the link
+	
+	
+	time_t t;
+    struct tm *current_time;
+
+    // Get the current system time
+    t = time(NULL);
+    current_time = localtime(&t);
+
+    int month = current_time->tm_mon + 1;  // tm_mon is 0–11, so add 1
+    //int day = current_time->tm_mday;       // tm_mday is 1–31
+
+	return month;
+}
+
+
+
+
+/* Teleport players into one of the elemental canyon zones randomly. */
+int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
+	
+  int currentMonth = getCurrentMonth();
+	
+  if (cmd == MSG_ENTER) {
+    if (!ch || !IS_MORTAL(ch)) return FALSE;
+
+    act("The forest opens into a wide clearing where a stone ring stands at its center, runes pulsing faintly in the soft light.", FALSE, ch, 0, 0, TO_CHAR);
+
+    return FALSE;
+  }
+
+  if (cmd == CMD_USE) {
+    char buf[MIL];
+
+    one_argument(arg, buf);
+
+    if (!*buf) return FALSE;
+
+    if (!isname(buf, "runegate rune")) return FALSE;
+
+    act("The runes along the gate ignite in a burst of blue light, tracing the full circle before the air within folds inward and pulls you through.", FALSE, ch, 0, 0, TO_CHAR);
+    act("The runes blaze to life as $n touches the Runegate. The air inside the circle collapses with a flash, and $n vanishes into the light.", TRUE, ch, 0, 0, TO_ROOM);
+	
+	int teleport_room = NOWHERE;
+
+      switch (currentMonth) {
+        case 1:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+        case 2:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 3:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 4:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 5:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 6:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 7:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 8:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 9:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 10:
+			//teleport_room = ECANYON_ROOM_DYING_ECANYON_PORTAL;          
+			break;
+		case 11:
+			//Validate the zone is loaded.
+			if(real_zone(TURKEY_TAKEOVER_ZONE) != -1){
+				teleport_room = TURKEY_TAKEOVER_ROOM;				
+			}
+			break;
+		case 12:
+			//Validate the zone is loaded.
+			if(real_zone(CHRISTMAS_VILLAGE_ZONE) != -1){
+				teleport_room = CHRISTMAS_VILLAGE_ROOM;				
+			}          
+			break;
+      }
+		
+	  //If there are no linked zones, dont do anything.
+      if (teleport_room == NOWHERE){
+		  act("The runes dimly glow and fade back to darkness.", TRUE, ch, 0, 0, TO_ROOM);
+		  
+		  return FALSE;
+		  
+	  }
+
+      for (CHAR *tel_ch = world[CHAR_REAL_ROOM(ch)].people, *tel_next = NULL; tel_ch; tel_ch = tel_next) {
+        tel_next = tel_ch->next_in_room;
+
+        if (IS_NPC(tel_ch)) continue;
+
+        char_from_room(tel_ch);
+        char_to_room(tel_ch, real_room(teleport_room));
+
+        do_look(tel_ch, "\0", CMD_LOOK);
+      }   
+   
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
 
 /*======================================================================== */
 /*================================ROOM SPECS============================== */
@@ -1848,7 +1980,7 @@ void assign_medievalblackmarket(void)
     // assign_obj(BUCKET_EMPTY,          tweef_bucket_empty);
 
     /*Rooms */
-    // assign_room(LIGHTWALL,             	cl_LightWallLink);
+    assign_room(RUNEGATE, blackmarket_runegate);
 
     /*Mobs */
 
