@@ -906,6 +906,62 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_SKILL_TRIPLE;
         obj->affected[i].modifier = num2;
       }
+	  else if (!strcmp(buf, "subdue")) {
+        obj->affected[i].location = APPLY_SKILL_SUBDUE;
+        obj->affected[i].modifier = num2;
+      }
+   	  else if (!strcmp(buf, "disarm")) {
+		obj->affected[i].location = APPLY_SKILL_DISARM;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "trap")) {
+		obj->affected[i].location = APPLY_SKILL_TRAP;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "punch")) {
+		obj->affected[i].location = APPLY_SKILL_PUNCH;
+		obj->affected[i].modifier = num2;
+	  }
+	 else if (!strcmp(buf, "knock")) {
+		obj->affected[i].location = APPLY_SKILL_KNOCK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "pummel")) {
+		obj->affected[i].location = APPLY_SKILL_PUMMEL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "rescue")) {
+		obj->affected[i].location = APPLY_SKILL_RESCUE;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "disembowel")) {
+		obj->affected[i].location = APPLY_SKILL_DISEMBOWEL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "kick")) {
+		obj->affected[i].location = APPLY_SKILL_KICK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "picklock")) {
+		obj->affected[i].location = APPLY_SKILL_PICK_LOCK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "throw")) {
+		obj->affected[i].location = APPLY_SKILL_THROW;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "steal")) {
+		obj->affected[i].location = APPLY_SKILL_STEAL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "hide")) {
+		obj->affected[i].location = APPLY_SKILL_HIDE;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "sneak")) {
+		obj->affected[i].location = APPLY_SKILL_SNEAK;
+		obj->affected[i].modifier = num2;
+      }
       else if (!strcmp(buf, "none")) {
         obj->affected[i].location = APPLY_NONE;
         obj->affected[i].modifier = num2;
