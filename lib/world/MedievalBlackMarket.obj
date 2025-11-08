@@ -1,2 +1,236 @@
+#18000
+token quest questgiver game~
+Game Token - High Card~
+A silver token with the word "High Card" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+E
+token~
+A game of high card. 52 cards will be scattered.  Bring them back to 
+me and give them to me.  Highest Card Wins.   1AQP per win
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18001
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18002
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18003
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18004
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18005
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18006
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18007
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18008
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18009
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18010
+token quest questgiver game~
+Game Token - ??????~
+A silver token with the word "??????" on it.~
+~
+12 268959744 1
+0 0 0 0
+5 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18011
+gold coins hoard treasure~
+A Small Pile of Goblin Treasure~
+A Small Pile of Goblin Treasure~
+~
+20 0 1
+200000 0 0 0
+1 1 1
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18012
+runegate gate rune~
+The Runegate~
+A Large Circular Stone Gate engraved with Runes~
+~
+12 269090883 1
+0 0 0 0
+5000 0 0
+100
+E
+runegate gate rune~
+A ring of stone stands upright at the edge of the clearing, its 
+surface covered in intricate runes that pulse with steady light. 
+Fine dust floats from the carved grooves each time a rune 
+flares. Within the ring, faint mist drifts lazily, never 
+crossing the boundary.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
 #0
 $~
