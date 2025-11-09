@@ -262,6 +262,10 @@ D0
 ~
 ~
 0 -1 18013
+D1
+~
+~
+0 -1 18027
 D2
 ~
 ~
@@ -487,11 +491,61 @@ D3
 ~
 0 -1 18015
 S
-#18099
-Temporary Room~
-Temporary description.
+#18027
+The Veiled Approach~
+A narrow trail winds through the forest, its edges lined with thick
+ferns and tangled roots. Shafts of pale light filter through the 
+canopy above, scattering across the moss-covered ground. The air 
+holds a faint shimmer where motes of drifting light weave between
+the trees. Faint runes are carved into a fallen log beside the 
+trail, glowing with a soft blue hue. The path continues 
+north, where the light grows steadily brighter.
 ~
-180 0 0
+180 0 3
+D1
+~
+~
+0 -1 18028
+D3
+~
+~
+0 -1 18014
+S
+#18028
+The Twilight Crossing~
+The trees open into a small clearing surrounded by high trunks 
+draped in silver-threaded vines. The ground here is smooth and 
+marked by circular patterns burned faintly into the soil. Light 
+flickers through the air like drifting embers, collecting near 
+the center of the hollow where the forest floor dips slightly. 
+Faint traces of energy hum along the outer roots, connecting 
+to an archway of twisted branches ahead.
+~
+180 0 3
+D1
+~
+~
+0 -1 18029
+D3
+~
+~
+0 -1 18027
+S
+#18029
+The Gate of Shards~
+A ring of dark stone rises from the forest floor, each segment
+set with a fragment of glass or crystal. The fragments float a 
+few inches above their sockets, spinning slowly in perfect 
+silence. The surrounding trees are bent outward, their branches 
+frozen mid-curve as though pushed aside by some invisible force. 
+At the center of the ring, a whirl of colored light forms a 
+shimmering vortex, twisting above a stone dais.
+~
+180 67108864 0
+D3
+~
+~
+0 -1 18028
 S
 #0
 $~

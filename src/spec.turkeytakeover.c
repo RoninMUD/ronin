@@ -49,9 +49,9 @@
 #define BEAK 18105
 #define FEATHERS 18106
 #define CHEST 18107
-#define CROWN 29678
-#define SHAWL 29677
-#define VAMBRACES 29676
+#define CROWN 18108
+#define SHAWL 18109
+#define VAMBRACES 18110
 
 /*Mobs */
 #define TURKEY_TERROR 18100
@@ -135,14 +135,51 @@
 /*===============================MOBILE SPECS============================= */
 /*======================================================================== */
 
+
+bool isThanksgivingTimeCheck()
+{
+	//If its Christmas Time, dont remove the link
+	
+	bool thanksgivingFlag = FALSE;
+	
+	time_t t;
+    struct tm *current_time;
+
+    // Get the current system time
+    t = time(NULL);
+    current_time = localtime(&t);
+
+    int month = current_time->tm_mon + 1;  // tm_mon is 0–11, so add 1
+    int day = current_time->tm_mday;       // tm_mday is 1–31
+	
+	if (month == 11 && day >= 1 && day <= 30) {
+		thanksgivingFlag = TRUE;
+		
+	}
+	
+	
+	
+	return thanksgivingFlag;
+}
+
+
+
+
+
 int turkeytakeover_issac(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     //Stores the random victim
     CHAR * summon = NULL;
     int summon_nr;
 
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
+	
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1) return FALSE;
+		
+	
 
     //Have the vendor talk.
     if (cmd == MSG_TICK)
@@ -256,9 +293,15 @@ int turkeytakeover_faith(CHAR *mob, CHAR *ch, int cmd, char *arg)
     //Stores the random victim
     CHAR * summon;
     int summon_nr;
-
-    /*Don't waste any more CPU time if no one is in the room. */
+    
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
+	
+	/*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1) return FALSE;
+	
+	
 
     //Have the vendor talk.
     if (cmd == MSG_TICK)
@@ -387,6 +430,11 @@ int turkeytakeover_faith(CHAR *mob, CHAR *ch, int cmd, char *arg)
 int turkeytakeover_summons(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     CHAR *victim, *next_victim;
+	
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
+	
     switch (cmd)
     {
         case MSG_MOBACT:
@@ -421,6 +469,11 @@ int turkeytakeover_army(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     CHAR *victim, *next_victim;
     OBJ * obj2;
+	
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
+	
     switch (cmd)
     {
         case MSG_MOBACT:
@@ -494,8 +547,8 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
     OBJ *che, *rewards;
     int chest, crown, shawl, vambraces;
-
-    //Purge All Remaining Pieces
+	
+	//Purge All Remaining Turkeys
 
     for (i = ZONE_BOTTOM; i <= ZONE_TOP; i++)
     {
@@ -508,7 +561,7 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
             if (V_MOB(mob) == V_MOB(vict)) continue;
 
-            //If not a chess mob - continue
+            //If not a turkey mob - continue
             if (!IS_TURKEY_MOB(vict)) continue;
 
             //Double Check NPC Flag
@@ -537,7 +590,9 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
         che = read_object(chest, REAL);
         obj_to_room(che, real_room(TOWN_ENTRANCE));
-
+		
+		
+		
         //Load Items into Chest
 
         if (number(1, 100) <= (obj_proto_table[crown].obj_flags.repop_percent))
@@ -572,6 +627,10 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
     int summon_nr;
 
     CHAR *victim, *next_vict;
+	
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
 
     switch (cmd)
     {
@@ -722,6 +781,12 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
     int summon_nr;
 
     CHAR *victim, *next_victim;
+	
+	bool isThanksgiving = isThanksgivingTimeCheck();
+	//If Not Month of November, dont spam anything.
+	if (isThanksgiving == FALSE) return FALSE;
+	
+	
     switch (cmd)
     {
         case MSG_MOBACT:
@@ -731,7 +796,6 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 switch (number(0, 5))
                 {
                     case (0):
-
                         do_quest(mob, "Champions - The Calamity is upon us. Please join our fight.", CMD_QUEST);
                         break;
                     case (1):
