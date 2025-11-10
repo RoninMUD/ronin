@@ -235,6 +235,9 @@ bool saves_spell(struct char_data *ch, sh_int type, int level)
   double diff = 0.0;
   double total = 0.0;
 
+  if (!ch)
+    return TRUE;
+
   /* For PCs, a negative apply_saving_throw makes the saving throw better! */
   /* For mobs, the saving throw is the mob's level; the higher the better. */
   saving_throw = ch->specials.apply_saving_throw[type];
