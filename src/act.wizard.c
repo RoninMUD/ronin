@@ -906,6 +906,62 @@ void do_setobjstat(struct char_data *ch, char *argument, int cmd)
         obj->affected[i].location = APPLY_SKILL_TRIPLE;
         obj->affected[i].modifier = num2;
       }
+	  else if (!strcmp(buf, "subdue")) {
+        obj->affected[i].location = APPLY_SKILL_SUBDUE;
+        obj->affected[i].modifier = num2;
+      }
+   	  else if (!strcmp(buf, "disarm")) {
+		obj->affected[i].location = APPLY_SKILL_DISARM;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "trap")) {
+		obj->affected[i].location = APPLY_SKILL_TRAP;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "punch")) {
+		obj->affected[i].location = APPLY_SKILL_PUNCH;
+		obj->affected[i].modifier = num2;
+	  }
+	 else if (!strcmp(buf, "knock")) {
+		obj->affected[i].location = APPLY_SKILL_KNOCK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "pummel")) {
+		obj->affected[i].location = APPLY_SKILL_PUMMEL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "rescue")) {
+		obj->affected[i].location = APPLY_SKILL_RESCUE;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "disembowel")) {
+		obj->affected[i].location = APPLY_SKILL_DISEMBOWEL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "kick")) {
+		obj->affected[i].location = APPLY_SKILL_KICK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "picklock")) {
+		obj->affected[i].location = APPLY_SKILL_PICK_LOCK;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "throw")) {
+		obj->affected[i].location = APPLY_SKILL_THROW;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "steal")) {
+		obj->affected[i].location = APPLY_SKILL_STEAL;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "hide")) {
+		obj->affected[i].location = APPLY_SKILL_HIDE;
+		obj->affected[i].modifier = num2;
+	  }
+	  else if (!strcmp(buf, "sneak")) {
+		obj->affected[i].location = APPLY_SKILL_SNEAK;
+		obj->affected[i].modifier = num2;
+      }
       else if (!strcmp(buf, "none")) {
         obj->affected[i].location = APPLY_NONE;
         obj->affected[i].modifier = num2;
@@ -1797,13 +1853,13 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     send_to_char("                check <reason>  WIZ+ (screens new chars)\n\r",ch);
     if(GET_LEVEL(ch)>LEVEL_ETE) {
       send_to_char("                bam             SUP+ (BAM rules)\n\r",ch);
+	  send_to_char("                chaos           SUP+  (chaos rules)\n\r",ch);
+	  send_to_char("                doublexp        SUP+  (normal exp gain is doubled)\n\r",ch);
+	  send_to_char("                freemort        SUP+  (free remorts)\n\r",ch);
     }
-    if(GET_LEVEL(ch)>LEVEL_SUP) {
-      send_to_char("                chaos           IMP  (chaos rules)\n\r",ch);
+    if(GET_LEVEL(ch)>LEVEL_SUP) {      
       send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
       send_to_char("                halt            IMP  (time stops)\n\r",ch);
-      send_to_char("                doublexp        IMP  (normal exp gain is doubled)\n\r",ch);
-      send_to_char("                freemort        IMP  (free remorts)\n\r",ch);
     }
     return;
   }
@@ -1885,7 +1941,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if(is_abbrev(arg,"chaos") && GET_LEVEL(ch)>LEVEL_SUP) {
+  if(is_abbrev(arg,"chaos") && GET_LEVEL(ch)>LEVEL_ETE) {
     if ( CHAOSMODE == 0 ) {
       sprintf(buf,"`i***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****\n\r\n\r***** ENTERING CHAOS MODE *****`q\n\r\n\r");
       CHAOSMODE = 1;
@@ -1930,7 +1986,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if(is_abbrev(arg,"doublexp") && GET_LEVEL(ch)>LEVEL_SUP) {
+  if(is_abbrev(arg,"doublexp") && GET_LEVEL(ch)>LEVEL_ETE) {
     if ( DOUBLEXP == 0 ) {
       sprintf(buf,"`i***** DOUBLE EXPERIENCE MODE ENABLED!! *****\n\r\n\r***** DOUBLE EXPERIENCE MODE ENABLED!! *****\n\r\n\r***** DOUBLE EXPERIENCE MODE ENABLED!! *****`q\n\r\n\r");
       DOUBLEXP = 1;
@@ -1946,7 +2002,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-  if(is_abbrev(arg,"freemort") && GET_LEVEL(ch)>LEVEL_SUP) {
+  if(is_abbrev(arg,"freemort") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (FREEMORT == 0) {
       sprintf(buf,"`i***** FREEMORT MODE ENABLED!! *****`q\n\r");
       FREEMORT = 1;
@@ -1969,14 +2025,15 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
   send_to_char("                lock            WIZ+ (no mortals allowed in)\n\r",ch);
   send_to_char("                check <reason>  WIZ+ (screens new chars)\n\r",ch);
   if(GET_LEVEL(ch)>LEVEL_ETE) {
-    send_to_char("                bam             SUP+ (BAM rules)\n\r",ch);
-  }
-  if(GET_LEVEL(ch)>LEVEL_SUP) {
-    send_to_char("                chaos           IMP  (chaos rules)\n\r",ch);
-    send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
-    send_to_char("                halt            IMP  (time stops)\n\r",ch);
-    send_to_char("                doublexp        IMP  (normal exp gain is doubled)\n\r",ch);
-  }
+      send_to_char("                bam             SUP+ (BAM rules)\n\r",ch);
+	  send_to_char("                chaos           SUP+  (chaos rules)\n\r",ch);
+	  send_to_char("                doublexp        SUP+  (normal exp gain is doubled)\n\r",ch);
+	  send_to_char("                freemort        SUP+  (free remorts)\n\r",ch);
+    }
+    if(GET_LEVEL(ch)>LEVEL_SUP) {      
+      send_to_char("                pulse           IMP  (measure of machine lag)\n\r",ch);
+      send_to_char("                halt            IMP  (time stops)\n\r",ch);
+    }
   return;
 }
 
@@ -5338,7 +5395,7 @@ clear_toggles, thirst, hunger, drunk\n\r";
     return;
   }
 
-  if((GET_LEVEL(ch)<GET_LEVEL(vict)) && !IS_NPC(vict)){
+  if(GET_LEVEL(ch)<GET_LEVEL(vict)){
     send_to_char("Can't do it to a higher level.\n\r",ch);
     return;
   }
