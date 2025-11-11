@@ -239,7 +239,7 @@ A suit of jade battle armor rests upon the ground here.~
 9 134217794 9
 24 0 0 0
 10 100000 40000
-6
+10
 E
 jade~
 Laid out on the floor before you is a very old and beautifully crafted suit
@@ -382,7 +382,7 @@ An ornately carved helm made from exotic wood lies on the ground, surrounded in 
 9 239133186 16
 10 0 0 0
 10 37500 66666
-8
+11
 X
 ~
 0 0 0
@@ -462,7 +462,7 @@ A band of metal made from laminated gold and silver lies on the ground, shimmeri
 11 266400768 3
 0 0 0 0
 1 25000 26000
-5
+10
 E
 band mokume ring~
 
@@ -617,7 +617,7 @@ A thick glowing chromium band has been foolishly abandoned here.~
 9 266400274 3
 3 0 0 0
 5 18000 24000
-5
+12
 E
 ring yawata band~
 
