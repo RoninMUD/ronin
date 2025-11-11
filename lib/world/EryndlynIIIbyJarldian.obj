@@ -61,15 +61,6 @@ Piles of corpses are here, limbs and fingers spread all over the ground.~
 10 10 10
 100
 E
-pile~
-You have come upon a pile of corpses resembling gnomes.  The seemed to be
-deliberately stacked up for some reason, however, you can see no purpose of it
-other than to mock.  Blood is all over the place, smeared on the walls, and
-all over the cavern ground.  Fingers and limbs are spread on the floor, with
-one noticeable decapitated head.  The stench here is unbearable and you just
-wonder who would ever commit such a cruel act and show no mercy.
-~
-E
 corpses~
 You have come upon a pile of corpses resembling gnomes.  The seemed to be 
 deliberately stacked up for some reason, however, you can see no purpose of it
@@ -77,6 +68,15 @@ other than to mock.  Blood is all over the place, smeared on the walls, and
 all over the cavern ground.  Fingers and limbs are spread on the floor, with
 one noticeable decapitated head.  The stench here is unbearable and you just
 wonder who would ever commit such a cruel act and show no mercy. 
+~
+E
+pile~
+You have come upon a pile of corpses resembling gnomes.  The seemed to be
+deliberately stacked up for some reason, however, you can see no purpose of it
+other than to mock.  Blood is all over the place, smeared on the walls, and
+all over the cavern ground.  Fingers and limbs are spread on the floor, with
+one noticeable decapitated head.  The stench here is unbearable and you just
+wonder who would ever commit such a cruel act and show no mercy.
 ~
 X
 ~
@@ -220,12 +220,12 @@ A corpse of a gnome lies here on his face, submerged in a pool of blood.~
 10 10 10
 100
 E
-corpse~
+gnome~
 a corpse of a svirfneblin is here, lying faced down in a pool of his own blood.
 On his back, neck and legs are several cuts from what appears to be fine weapons.
 ~
 E
-gnome~
+corpse~
 a corpse of a svirfneblin is here, lying faced down in a pool of his own blood.
 On his back, neck and legs are several cuts from what appears to be fine weapons.
 ~
@@ -247,14 +247,14 @@ Propped up against the wall is a gnome, his face white and throat slashed.~
 10 10 10
 100
 E
-gnome~
+corpse~
 The expression on this svirfneblin's face is of absolute terror.  His throat
 is ripped open, blood pouring out onto the ground, and his skin -- cold to the
 touch. Multiple cuts are all over his body, suggesting a powerful foe 
 may be in the area...
 ~
 E
-corpse~
+gnome~
 The expression on this svirfneblin's face is of absolute terror.  His throat
 is ripped open, blood pouring out onto the ground, and his skin -- cold to the
 touch. Multiple cuts are all over his body, suggesting a powerful foe 

@@ -51,6 +51,7 @@ void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long 
 
   switch (location) {
     case APPLY_STR:
+      if (GET_STR(ch) >= 30 && modifier > 0) {modifier = 0;}
       INC_SCHAR(GET_STR(ch), modifier);
       break;
     case APPLY_DEX:
