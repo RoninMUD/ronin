@@ -416,10 +416,29 @@ Level: DEI+
  game check
    This command forces newly created characters to wait for an immortal
    to "allowin" before being able to enter the game.
-
+   
+ game bam 
+  This enables BAM mode which increases the drop rate of all mobs. 
+  
  game chaos
-   This command is IMP only and will put the whole game in chaos mode.
+   This command is SUP+ only and will put the whole game in chaos mode.
    It was designed for the yearly Chaos Night quest.
+
+ game doublexp 
+ This command is SUP+ only and enables double experience.  This experience 
+ is not counted towards the remort pool.
+ 
+ game freemort 
+ This command is SUP+ only and will enable free remorts, removing the 
+ cost of AQP and SCP.
+
+ game pulse
+ This command measures the amount of machine lag on the system.
+ 
+ game halt 
+ This command is IMP+ stops time.
+ 
+
 
 #
 LECHO
@@ -1040,14 +1059,14 @@ SOS SETOBJSTAT
 
    Apply types max of 3/object postions 0, 1 and 2 (option 3)
 
-    str         height      assault     parry
-    dex         weight      backflip    triple
-    int         hp          backstab    none
-    wis         mana        bash
-    con         hit         block
-    age         dam         circle
-    move        ac          dodge
-    hp_regen    mana_regen  dual
+    str         height      ambush      disembowl   pummel      triple
+    dex         weight      assault     dodge       punch       none
+    int         hp          backflip    dual        rescue
+    wis         mana        backstab    hide        sneak
+    con         hit         bash        kick        steal
+    age         dam         block       knock       subdue
+    move        ac          circle      parry       throw
+    hp_regen    mana_regen  disarm      picklock    trap
  
 See also: FLAGS VALUES DRINKTYPES
 #
