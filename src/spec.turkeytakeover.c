@@ -60,7 +60,7 @@
 #define PILGRIM_LEADER 18103
 
 //Pilgrim Army
-#define PILGRIM_SOLIDER 18104
+#define PILGRIM_SOLDIER 18104
 #define PILGRIM_MAGE 18105
 #define PILGRIM_BARD 18106
 
@@ -90,7 +90,7 @@
 #define ZONE_TOP 18143
 
 //Functions
-#define IS_PILGRIM_ARMY(mob)(V_MOB(mob) == PILGRIM_SOLIDER\
+#define IS_PILGRIM_ARMY(mob)(V_MOB(mob) == PILGRIM_SOLDIER\
 ||    V_MOB(mob) == PILGRIM_MAGE\
 ||  V_MOB(mob) == PILGRIM_BARD\
 ||  V_MOB(mob) == PILGRIM_LEADER\
@@ -106,7 +106,7 @@
 ||    V_MOB(mob) == ISSAC_PRIEST\
 ||    V_MOB(mob) == FAITH_PRIESTESS\
 ||    V_MOB(mob) == PILGRIM_LEADER\
-||  V_MOB(mob) == PILGRIM_SOLIDER\
+||  V_MOB(mob) == PILGRIM_SOLDIER\
 ||  V_MOB(mob) == PILGRIM_MAGE\
 ||  V_MOB(mob) == PILGRIM_BARD\
 ||    V_MOB(mob) == TURKEY_TOT_BERSERKER\
@@ -177,10 +177,8 @@ int turkeytakeover_issac(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	if (isThanksgiving == FALSE) return FALSE;
 	
     /*Don't waste any more CPU time if no one is in the room. */
-    if (count_mortals_room(mob, TRUE) < 1) return FALSE;
-		
+    //if (count_mortals_room(mob, TRUE) < 1) return FALSE;
 	
-
     //Have the vendor talk.
     if (cmd == MSG_TICK)
     {
@@ -189,17 +187,17 @@ int turkeytakeover_issac(CHAR *mob, CHAR *ch, int cmd, char *arg)
             switch (number(0, 5))
             {
                 case (0):
-                    do_say(mob, "Hurry Champions. Bring me your offerings.", CMD_SAY);
+                    do_shout(mob, "Hurry Champions. Bring me the offerings the pilgrims have dropped.", CMD_SHOUT);
                     break;
                 case (1):
                     break;
                 case (2):
-                    do_say(mob, "The Terror must be contained", CMD_SAY);
+                    do_shout(mob, "Dont let the Plgrim's Sacrifices be in vain. Bring me their items.", CMD_SHOUT);
                     break;
                 case (3):
                     break;
                 case (4):
-                    do_say(mob, "Help me call upon our past warriors to fight the terror.", CMD_SAY);
+                    do_shout(mob, "Help me call upon our past warriors to fight the terror.", CMD_SHOUT);
                     break;
                 case (5):
                     break;
@@ -299,10 +297,8 @@ int turkeytakeover_faith(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	if (isThanksgiving == FALSE) return FALSE;
 	
 	/*Don't waste any more CPU time if no one is in the room. */
-    if (count_mortals_room(mob, TRUE) < 1) return FALSE;
+    //if (count_mortals_room(mob, TRUE) < 1) return FALSE;
 	
-	
-
     //Have the vendor talk.
     if (cmd == MSG_TICK)
     {
@@ -311,17 +307,17 @@ int turkeytakeover_faith(CHAR *mob, CHAR *ch, int cmd, char *arg)
             switch (number(0, 5))
             {
                 case (0):
-                    do_say(mob, "Hurry Champions. Bring me your offerings.", CMD_SAY);
+                    do_shout(mob, "Hurry Champions. Bring me proof that you killed the vile turkeys.", CMD_SHOUT);
                     break;
                 case (1):
                     break;
                 case (2):
-                    do_say(mob, "The Terror must be contained", CMD_SAY);
+                    do_shout(mob, "The Terror must be contained", CMD_SHOUT);
                     break;
                 case (3):
                     break;
                 case (4):
-                    do_say(mob, "Help me call upon those that want revenge.", CMD_SAY);
+                    do_shout(mob, "Help me call upon those that want revenge.", CMD_SHOUT);
                     break;
                 case (5):
                     break;
@@ -509,23 +505,22 @@ int turkeytakeover_army(CHAR *mob, CHAR *ch, int cmd, char *arg)
             //When a pilgrim dies - they need a chance to drop a summoning item.
             if (IS_PILGRIM_ARMY(mob))
             {
-                //60% chance to load a Basket
-
-                if (chance(45))
+                
+                if (chance(30))
                 {
                     do_say(mob, "Take this as an offering. It will help you.", CMD_SAY);
                     obj2 = read_object(BASKET, VIRTUAL);
                     obj_to_room(obj2, CHAR_REAL_ROOM(mob));
                 }
 
-                if (chance(25))
+                if (chance(20))
                 {
                     do_say(mob, "Take this as an offering. It will help you.", CMD_SAY);
                     obj2 = read_object(TURKEY, VIRTUAL);
                     obj_to_room(obj2, CHAR_REAL_ROOM(mob));
                 }
 
-                if (chance(15))
+                if (chance(10))
                 {
                     do_say(mob, "Take this as an offering. It will help you.", CMD_SAY);
                     obj2 = read_object(CRATE, VIRTUAL);
@@ -636,12 +631,12 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
     {
         case MSG_MOBACT:
             //Send All Players back to town so they arent fighting.
-
+			
             for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
             {
                 next_vict = vict->next_in_room;
 
-                /*Only teleport mortals. */
+                //Only teleport mortals.
                 if (!IS_MORTAL(vict)) continue;
 
                 act("$n is engulfed in a beam of holy light and vanishes.", FALSE, vict, 0, 0, TO_ROOM);
@@ -696,7 +691,7 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
                             if (IS_NPC(victim))
                             {
                                 damage(mob, victim, 20000, TYPE_UNDEFINED, DAM_PHYSICAL);
-                                GET_HIT(mob) = GET_HIT(mob) - 12000;
+                                GET_HIT(mob) = GET_HIT(mob) - 7500;
                             }
                         }
 
@@ -766,7 +761,7 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
             break;
 
         case MSG_DIE:
-
+			do_shout(mob, "Curse you pilgrims.  Ill come back.......", CMD_SHOUT);
             purge_turkey_takeover(mob, TRUE);
 
             break;
@@ -778,9 +773,12 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
 int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     CHAR * summon;
+	CHAR *vict;
     int summon_nr;
 
     CHAR *victim, *next_victim;
+	
+	int percent_left;
 	
 	bool isThanksgiving = isThanksgivingTimeCheck();
 	//If Not Month of November, dont spam anything.
@@ -790,7 +788,8 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
     switch (cmd)
     {
         case MSG_MOBACT:
-
+			
+			//Talk to the Entire Mud.   
             if (chance(3))
             {
                 switch (number(0, 5))
@@ -814,7 +813,33 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                         break;
                 }
             }
-
+			
+			//Talk to the Entire Mud.   
+            if (chance(60))
+            {
+                switch (number(0, 5))
+                {
+                    case (0):
+                        do_shout(mob, "Defeat the Turkeys and Skin them. Bring them to the priestess.", CMD_SHOUT);
+                        break;
+                    case (1):
+                        do_shout(mob, "Our noble pilgrims bring goods to the temple. Should they fall, the priest needs their items.", CMD_SHOUT);
+                        break;
+                    case (2):
+                        break;
+                    case (3):
+                        break;
+                    case (4):
+                        do_shout(mob, "Use the items found on the battlefield to defeat the vile Turkey Terror.", CMD_SHOUT);
+                        break;
+                    case (5):
+                        break;
+                    default:
+                        break;
+                }
+            }
+			
+			
             //If he is fighting - spec a few different attacks to murder the room.
             if (mob->specials.fighting)
             {
@@ -872,12 +897,41 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 }
             }
 
-            /*Check for losses in the Pilgrim Army.  Spawm More
+            //Check for Gobbles HP and Report the progress.
+			
+			
+			for (vict = world[real_room(TURKEY_PORTAL)].people; vict; vict = vict->next_in_room)
+			{
+				if (!IS_NPC(vict) || (V_MOB(vict) != TURKEY_TERROR))
+					continue;
+				// If Gobbles is found, lets check his HP and report at certain percentages
+				if (V_MOB(vict) == TURKEY_TERROR)
+				{
+					percent_left = ((GET_HIT(vict)*100)/GET_MAX_HIT(vict));
+					if(chance(30)){
+						if(percent_left > 90){
+							do_shout(mob, "The foul bird is still going strong. Continue to summon the warriors!", CMD_SHOUT);
+						}else if (percent_left > 70){
+							do_shout(mob, "The vile bird is feeling the pain now. Keep up the fight", CMD_SHOUT);
+						}else if (percent_left > 40){
+							do_shout(mob, "Gobbles is feeling the pain now.", CMD_SHOUT);
+						}else if (percent_left > 20){
+							do_shout(mob, "The Turkey Terror is going to be dinner", CMD_SHOUT);							
+						}else if (percent_left > 5){
+							do_shout(mob, "Once he falls, visit the town for a gift!", CMD_SHOUT);
+						}else if (percent_left > 1){
+							do_shout(mob, "One final push, the world is almost safe!", CMD_SHOUT);
+						}
+					}
+				}
+			}
+			
+			/*Check for losses in the Pilgrim Army.  Spawm More
 
             */
-            if (chance(45))
+            if (chance(55))
             {
-                summon_nr = real_mobile(PILGRIM_SOLIDER);
+                summon_nr = real_mobile(PILGRIM_SOLDIER);
                 if (mob_proto_table[summon_nr].number < 11)
                 {
                     summon = read_mobile(summon_nr, REAL);
@@ -928,7 +982,7 @@ void assign_turkeytakeover(void)
     assign_mob(PILGRIM_LEADER, turkeytakeover_pilgrimleader);
 
     //Pilgrim Army
-    assign_mob(PILGRIM_SOLIDER, turkeytakeover_army);
+    assign_mob(PILGRIM_SOLDIER, turkeytakeover_army);
     assign_mob(PILGRIM_MAGE, turkeytakeover_army);
     assign_mob(PILGRIM_BARD, turkeytakeover_army);
 
