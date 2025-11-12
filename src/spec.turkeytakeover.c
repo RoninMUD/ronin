@@ -814,8 +814,8 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 }
             }
 			
-			//Talk to the Entire Mud.   
-            if (chance(60))
+			//Talk to the zone
+            if (chance(40))
             {
                 switch (number(0, 5))
                 {
@@ -908,7 +908,7 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				if (V_MOB(vict) == TURKEY_TERROR)
 				{
 					percent_left = ((GET_HIT(vict)*100)/GET_MAX_HIT(vict));
-					if(chance(30)){
+					if(chance(25)){
 						if(percent_left > 90){
 							do_shout(mob, "The foul bird is still going strong. Continue to summon the warriors!", CMD_SHOUT);
 						}else if (percent_left > 70){
