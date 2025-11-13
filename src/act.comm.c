@@ -381,7 +381,7 @@ void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, cons
 
 
 /* Unified communication function. */
-void communicate(CHAR *ch, char *arg, const int comm) {
+void communicate(CHAR *ch, char *arg, const int comm, const int hide) {
   if (!ch || (comm < COMM_FIRST) || (comm > COMM_LAST)) return;
 
   arg = skip_spaces(arg);
@@ -581,8 +581,11 @@ void communicate(CHAR *ch, char *arg, const int comm) {
     case COMM_TO_ZONE:
       for (DESC* temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
+		
+		CHAR* temp_ch = temp_desc->character;
+		//Check if Hide Flag is Set to 1.  If 1, ignore Immortals.
+		if(hide == 1 && IS_IMMORTAL(temp_ch)) continue;
 
-        CHAR* temp_ch = temp_desc->character;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
@@ -598,6 +601,8 @@ void communicate(CHAR *ch, char *arg, const int comm) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
         CHAR* temp_ch = temp_desc->character;
+		//Check if Hide Flag is Set to 1.  If 1, ignore Immortals.
+		if(hide == 1 && IS_IMMORTAL(temp_ch)) continue;
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
@@ -634,48 +639,48 @@ void communicate(CHAR *ch, char *arg, const int comm) {
 
 /* Function called by the 'tell' command. */
 void do_tell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_TELL);
+  communicate(ch, arg, COMM_TELL,0);
 }
 
 
 /* Function called by the 'reply' command. */
 void do_reply(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_REPLY);
+  communicate(ch, arg, COMM_REPLY,0);
 }
 
 
 /* Function called by the 'ask' command. */
 void do_ask(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_ASK);
+  communicate(ch, arg, COMM_ASK,0);
 }
 
 
 /* Function called by the 'whisper' command. */
 void do_whisper(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_WHISPER);
+  communicate(ch, arg, COMM_WHISPER,0);
 }
 
 
 /* Function called by the 'gtell' command. */
 void do_gtell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_GTELL);
+  communicate(ch, arg, COMM_GTELL,0);
 }
 
 
 /* Function called by the 'say' command. */
 void do_say(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_SAY);
+  communicate(ch, arg, COMM_SAY,0);
 }
 
 
 /* Function called by the 'shout' command. */
 void do_shout(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_SHOUT);
+  communicate(ch, arg, COMM_SHOUT,0);
 }
 
 /* Function called by the 'yell' command. */
 void do_yell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_YELL);
+  communicate(ch, arg, COMM_YELL,0);
 }
 
 
@@ -691,7 +696,7 @@ void do_gossip(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_GOSSIP);
+  communicate(ch, arg, COMM_GOSSIP,0);
 }
 
 
@@ -707,7 +712,7 @@ void do_auction(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_AUCTION);
+  communicate(ch, arg, COMM_AUCTION,0);
 }
 
 
@@ -724,7 +729,7 @@ void do_chaos(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_CHAOS);
+  communicate(ch, arg, COMM_CHAOS,0);
 }
 
 
