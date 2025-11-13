@@ -6,7 +6,7 @@ A large basket of harvest vegetables sits on the ground.~
 12 268959744 1
 0 0 0 0
 10 0 0
-75
+24
 X
 ~
 2 0 0
@@ -16,7 +16,7 @@ M
 ~
 ~
 T
-600
+6
 #18101
 turkey plump~
 A Plump Turkey~
@@ -25,7 +25,7 @@ A large plump turkey ready to be roasted.~
 12 268959744 1
 0 0 0 0
 15 0 0
-75
+24
 X
 ~
 2 0 0
@@ -35,7 +35,7 @@ M
 ~
 ~
 T
-600
+6
 #18102
 cranberries fruit crate~
 A Crate of Cranberries~
@@ -44,7 +44,7 @@ A create of ripe red cranberries sits with its lid off.~
 12 268959744 1
 0 0 0 0
 8 0 0
-75
+24
 X
 ~
 2 0 0
@@ -54,7 +54,7 @@ M
 ~
 ~
 T
-600
+6
 #18103
 crest turkey~
 A Crest of the Turkey General~
@@ -73,7 +73,7 @@ M
 ~
 ~
 T
-600
+6
 #18104
 banner turkey army~
 A Banner of the Turkey Army~
@@ -92,7 +92,7 @@ M
 ~
 ~
 T
-600
+6
 #18105
 beak turkey shattered~
 A Shattered Turkey Beak~
@@ -111,7 +111,7 @@ M
 ~
 ~
 T
-600
+6
 #18106
 feather feathers colorful handful~
 A Handful of Colorful Feathers~
@@ -130,7 +130,7 @@ M
 ~
 ~
 T
-600
+6
 #18107
 chest wooden~
 A Steel Banded Wooden Chest~
@@ -142,12 +142,14 @@ A large wooden chest with bands of steel wrapped around it.~
 0
 X
 ~
-0 0 0
+2 0 0
 M
 ~
 ~
 ~
 ~
+T
+5
 #18108
 crown turkey feathers thanksgiving~
 A Crown of Turkey Feathers~
@@ -163,7 +165,7 @@ A Platinum Crown with Multiple feathers from turkeys sits before you. A symbol o
 ~
 X
 ~
-1536 0 0
+1600 0 0
 M
 ~
 ~
@@ -188,7 +190,7 @@ A shawl with the pilgrims sigil on it along with other runes to offer protection
 ~
 X
 ~
-1536 0 0
+1600 0 0
 M
 ~
 ~
@@ -213,7 +215,7 @@ This pair of platinum vambraces is standard issue for all members of the pilgrim
 ~
 X
 ~
-1536 0 0
+1600 0 0
 M
 ~
 ~

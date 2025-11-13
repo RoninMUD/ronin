@@ -138,7 +138,7 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
   if (cmd == MSG_ENTER) {
     if (!ch || !IS_MORTAL(ch)) return FALSE;
 
-    act("The forest opens into a wide clearing where a stone ring stands at its center, runes pulsing faintly in the soft light.", FALSE, ch, 0, 0, TO_CHAR);
+    act("The forest opens into a wide clearing where a stone ring stands at its center, the runegate pulses faintly in the soft light.", FALSE, ch, 0, 0, TO_CHAR);
 
     return FALSE;
   }
@@ -152,8 +152,8 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 
     if (!isname(buf, "runegate rune")) return FALSE;
 
-    act("The runes along the gate ignite in a burst of blue light, tracing the full circle before the air within folds inward and pulls you through.", FALSE, ch, 0, 0, TO_CHAR);
-    act("The runes blaze to life as $n touches the Runegate. The air inside the circle collapses with a flash, and $n vanishes into the light.", TRUE, ch, 0, 0, TO_ROOM);
+    act("The runes along the runegate ignite in a burst of blue light, tracing the full circle before the air within folds inward and pulls you through.", FALSE, ch, 0, 0, TO_CHAR);
+    act("The runegate blaze to life as $n touches the Runegate. The air inside the circle collapses with a flash, and $n vanishes into the light.", TRUE, ch, 0, 0, TO_ROOM);
 	
 	int teleport_room = NOWHERE;
 
@@ -204,10 +204,9 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 		
 	  //If there are no linked zones, dont do anything.
       if (teleport_room == NOWHERE){
-		  act("The runes dimly glow and fade back to darkness.", TRUE, ch, 0, 0, TO_ROOM);
+		  act("The runegate dimly glow and fade back to darkness.", TRUE, ch, 0, 0, TO_ROOM);
 		  
-		  return FALSE;
-		  
+		  return FALSE;		  
 	  }
 
       for (CHAR *tel_ch = world[CHAR_REAL_ROOM(ch)].people, *tel_next = NULL; tel_ch; tel_ch = tel_next) {
@@ -236,6 +235,7 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 /*===============================MOBILE SPECS============================= */
 /*======================================================================== */
 
+//Blackmarket NPC for Subclass Tokens
 int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     // Stores the random people to talk to.
@@ -496,6 +496,7 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return FALSE;
 }
 
+//Event Token Mob
 int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     /*Don't waste any more CPU time if no one is in the room. */

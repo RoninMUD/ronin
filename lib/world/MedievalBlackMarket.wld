@@ -6,6 +6,10 @@ help obscure it. Light can barely be seen through the thick foliage of the
 dark canopy. Faint sound can be heard upon the wind coming from the south.
 ~
 180 0 3
+D0
+~
+~
+0 -1 14209
 D2
 ~
 ~
@@ -494,12 +498,12 @@ S
 #18027
 The Veiled Approach~
 A narrow trail winds through the forest, its edges lined with thick
-ferns and tangled roots. Shafts of pale light filter through the 
-canopy above, scattering across the moss-covered ground. The air 
+ferns and tangled roots. Shafts of pale light filter through the
+canopy above, scattering across the moss-covered ground. The air
 holds a faint shimmer where motes of drifting light weave between
-the trees. Faint runes are carved into a fallen log beside the 
-trail, glowing with a soft blue hue. The path continues 
-north, where the light grows steadily brighter.
+the trees. Faint runes are carved into a fallen log beside the
+trail, glowing with a soft blue hue. The path continues
+east, where the light grows steadily brighter.
 ~
 180 0 3
 D1
