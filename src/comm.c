@@ -2124,6 +2124,8 @@ void act_by_type(char *message, int hide, CHAR *ch, void *other_or_obj, void *vi
   }
 
   for (; to_ch; to_ch = to_ch->next_in_room) {
+	  if (hide == COMM_ACT_HIDE_IMMORTAL && IS_IMMORTAL(to_ch)) continue;
+	  
     if ((GET_DESCRIPTOR(to_ch) &&
         ((hide < COMM_ACT_HIDE_CANT_SEE) || (IS_SET(hide, COMM_ACT_HIDE_NON_MORT)) || CAN_SEE(to_ch, ch)) &&
         ((!IS_SET(hide, COMM_ACT_HIDE_SUPERBRF)) || !IS_SET(GET_PFLAG(to_ch), PLR_SUPERBRF)) &&
@@ -3034,13 +3036,11 @@ int signal_char(CHAR *ch, CHAR *signaler, int cmd, char *arg) {
 
   /* Signal NPCs. */
   if (IS_NPC(ch)) {
-    /* Run NPC activity routines. */
-    if ((cmd == MSG_MOBACT) && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+    if (cmd == MSG_MOBACT) {
       mobile_activity(ch);
     }
 
-    /* Call NPC special procedure if it exists. */
-    if (mob_proto_table[ch->nr].func && (CHAR_REAL_ROOM(ch) != NOWHERE)) {
+    if (mob_proto_table[ch->nr].func) {
       stop = mob_special(ch, signaler, cmd, arg);
     }
   }

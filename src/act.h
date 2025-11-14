@@ -449,7 +449,7 @@ int calc_death_exp_mult(CHAR *ch);
 void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, const char *src, ...) __attribute__((format(printf, 4, 5)));
 void comm_special(CHAR *ch, CHAR *listener, const int comm, const char *message, ...) __attribute__((format(printf, 4, 5)));
 
-void communicate(CHAR *ch, char *arg, const int comm,const int hide);
+void communicate(CHAR *ch, char *arg, const int comm,const int hide_flag);
 
 #define COMM_TELL          0
 #define COMM_WHISPER       1
