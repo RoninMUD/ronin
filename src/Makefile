@@ -151,6 +151,7 @@ OBJS_RONIN_SPEC = \
 	spec.lost.o \
 	spec.mapmaker.o \
 	spec.marikith.o \
+	spec.medievalblackmarket.o\
 	spec.midgaard.o \
 	spec.misc.o \
 	spec.monastery.o \
@@ -174,6 +175,7 @@ OBJS_RONIN_SPEC = \
 	spec.tarioncity.o \
 	spec.theldon.o \
 	spec.topknot.o \
+	spec.turkeytakeover.o \
 	spec.trollcastle-moat.o \
 	spec.trollvillage.o \
 	spec.tweefmanor.o \
@@ -200,11 +202,14 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.crazylab.o \
 	spec.digsite.o \
 	spec.elementalmines.o \
-	spec.happybob.o \
 	spec.luthienIV.o \
-	spec.medievalblackmarket.o \
-	spec.turkeytakeover.o \
-	spec.workbench.o
+	spec.happybob.o \
+	spec.workbench.o \
+	spec.darkspire.o \
+	spec.morgoth.o \
+	spec.olympus.o \
+	spec.deathplayancientgrave.o \
+	spec.deathplaycrypt.o
 
 ifneq ($(TYPE), live)
 	ifneq ($(TYPE), chaos)
