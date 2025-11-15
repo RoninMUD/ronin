@@ -125,6 +125,7 @@ OBJS_RONIN_SPEC = \
 	spec.daimyo.o \
 	spec.dasharr.o \
 	spec.deathplay.o \
+	spec.deathplayancientgrave.o \
 	spec.desert.o \
 	spec.dionysus.o \
 	spec.dragonred.o \
@@ -208,8 +209,8 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.darkspire.o \
 	spec.morgoth.o \
 	spec.olympus.o \
-	spec.deathplayancientgrave.o \
-	spec.deathplaycrypt.o
+	spec.deathplaycrypt.o \
+	spec.christmasvillage.o\
 
 ifneq ($(TYPE), live)
 	ifneq ($(TYPE), chaos)
