@@ -14,7 +14,7 @@ D0
 0 -1 14901
 S
 #14901
-Welcome To Happy Bob's BBQ~
+Welcome to Happy Bob's Tavern~
   A large wooden sign welcomes you to the "Most Magical Place for Food".
 Below that are other wooden boards with bold letters showing you that 
 they serve Pork and Beef and of course, all the sides you could want 
@@ -97,12 +97,16 @@ D3
 S
 #14905
 A Hostess Stand~
-  A large wooden podium stands in the middle of the area. The hostesses 
-all stand in a little group like a clique of schoolgirls.  Constantly 
-ignoring the patrons that are patiently and impatiently waiting, or 
-simply dismissing them back to their endless cycle of waiting. The 
-other employees rush past in front and behind them, and yet they are
-in no hurry to seat or help anyone.
+  The hostess stand is a modest wooden podium, its surface worn smooth 
+by years of use. A small candle flickers beside a heavy leather-bound 
+ledger, where guests are meticulously recorded. The air around the 
+stand carries the warm, inviting scent of roasted meats and freshly 
+baked bread wafting from deeper within the tavern. Behind the 
+stand, a cheerful chalkboard displays the days offerings, 
+accompanied by a sprig of lavender tucked into the corner for a 
+touch of charm. A well-loved stool sits nearby, its cushion 
+flattened from hours of use, ready for the hostess to perch between 
+greeting patrons.
 ~
 149 67108872 0
 D0
@@ -178,7 +182,7 @@ D2
 0 -1 14907
 S
 #14909
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -203,7 +207,7 @@ D3
 0 -1 14908
 S
 #14910
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -220,7 +224,7 @@ D2
 0 -1 14909
 S
 #14911
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -237,7 +241,7 @@ D3
 0 -1 14910
 S
 #14912
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -258,7 +262,7 @@ D3
 0 -1 14909
 S
 #14913
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -275,7 +279,7 @@ D3
 0 -1 14914
 S
 #14914
-BBQ Banquet Hall~
+Tavern Banquet Hall~
   A large room opens in all directions. Large wooden tables stretch the
 length of the room and log benches are on each side of them. The tables 
 are covered in a checkered tablecloth, random silverware and multiple 
@@ -313,7 +317,7 @@ D3
 0 -1 14916
 S
 #14916
-BBQ Table One~
+Table One~
   One of many large tables in the restaurant, this large wooden table is 
 rotting away. Small and large holes can be seen on the tables, some are empty
 and some have small glowing eyes. The bugs skitter across the table, looking
@@ -371,7 +375,7 @@ D3
 0 -1 14919
 S
 #14919
-BBQ Table Three~
+Table Three~
   One of many large tables in the restaurant, this large wooden table is 
 rotting away. Small and large holes can be seen on the tables, some are empty
 and some have small glowing eyes. The bugs skitter across the table, looking
@@ -404,7 +408,7 @@ D2
 0 -1 14918
 S
 #14921
-BBQ Table Two~
+Table Two~
   One of many large tables in the restaurant, this large wooden table is 
 rotting away. Small and large holes can be seen on the tables, some are empty
 and some have small glowing eyes. The bugs skitter across the table, looking
@@ -445,7 +449,7 @@ D3
 0 -1 14923
 S
 #14923
-BBQ Table Five~
+Table Five~
   One of many large tables in the restaurant, this large wooden table is 
 rotting away. Small and large holes can be seen on the tables, some are empty
 and some have small glowing eyes. The bugs skitter across the table, looking
@@ -461,7 +465,7 @@ D1
 0 -1 14922
 S
 #14924
-BBQ Table Four~
+Table Four~
   One of many large tables in the restaurant, this large wooden table is 
 rotting away. Small and large holes can be seen on the tables, some are empty
 and some have small glowing eyes. The bugs skitter across the table, looking
@@ -600,11 +604,14 @@ D2
 0 -1 14905
 S
 #14932
-Tiled Kitchen Floor~
-  Plain white tiles are laid out in a basic grid pattern on the floor. 
-Their surface is slick, and quite dirty due to it being covered in its
-wax coating, along with the numerous sauces, and other scraps of food
-on the floor. 
+Compacted Dirt Floor~
+  This wide, open space is marked by a floor of densely packed 
+dirt, smoothed to a near-polished surface by countless boots. 
+Wooden beams crisscross overhead, supporting a low ceiling 
+darkened by years of smoke and soot. The room is illuminated 
+by flickering lanterns mounted on the walls, their warm light 
+casting soft shadows. The earthy scent of the dirt mingles with 
+the faint aroma of spilled ale and roasted meats.
 ~
 149 67108864 0
 D0
@@ -617,11 +624,14 @@ D2
 0 -1 14927
 S
 #14933
-Tiled Kitchen Floor~
-  Plain white tiles are laid out in a basic grid pattern on the floor. 
-Their surface is slick, and quite dirty due to it being covered in its
-wax coating, along with the numerous sauces, and other scraps of food
-on the floor. 
+Compacted Dirt Floor~
+  This wide, open space is marked by a floor of densely packed 
+dirt, smoothed to a near-polished surface by countless boots. 
+Wooden beams crisscross overhead, supporting a low ceiling 
+darkened by years of smoke and soot. The room is illuminated 
+by flickering lanterns mounted on the walls, their warm light 
+casting soft shadows. The earthy scent of the dirt mingles with 
+the faint aroma of spilled ale and roasted meats.
 ~
 149 67108864 0
 D0
@@ -634,11 +644,14 @@ D2
 0 -1 14932
 S
 #14934
-Tiled Kitchen Floor~
-  Plain white tiles are laid out in a basic grid pattern on the floor. 
-Their surface is slick, and quite dirty due to it being covered in its
-wax coating, along with the numerous sauces, and other scraps of food
-on the floor. 
+Compacted Dirt Floor~
+  This wide, open space is marked by a floor of densely packed 
+dirt, smoothed to a near-polished surface by countless boots. 
+Wooden beams crisscross overhead, supporting a low ceiling 
+darkened by years of smoke and soot. The room is illuminated 
+by flickering lanterns mounted on the walls, their warm light 
+casting soft shadows. The earthy scent of the dirt mingles with 
+the faint aroma of spilled ale and roasted meats.
 ~
 149 67108864 0
 D1
@@ -656,10 +669,16 @@ D3
 S
 #14935
 Hallway to the Boss's Office~
-  The hallway to the bosses office is very plain. The white and black stones
-on the floor, the plain white walls without trim. The walls have a few holes
-in them from when they were built. As you look down the hallway, there is a 
-single plain wooden door that is visible. 
+  The hallway is dimly lit by flickering torches set into iron sconces 
+along the stone walls. The floor beneath your feet is a mix of uneven 
+flagstones and well-worn rugs, muffling your footsteps in an eerie 
+silence. Faint sounds of activity from the main tavern grow distant 
+assist will you move deeper into the corridor, replaced by the occasional creak 
+of wood or the soft whisper of a draft. The air feels heavier 
+here, tinged with the faint scent of parchment and wax. At the far 
+end, a reinforced wooden door stands slightly ajar, its brass handle 
+gleaming faintly in the torchlight, hinting at the 
+authority that lies beyond.
 ~
 149 67108876 0
 D1
@@ -673,10 +692,16 @@ D3
 S
 #14936
 Hallway to the Boss's Office~
-  The hallway to the bosses office is very plain. The white and black stones
-on the floor, the plain white walls without trim. The walls have a few holes
-in them from when they were built. As you look down the hallway, there is a 
-single plain wooden door that is visible. 
+  The hallway is dimly lit by flickering torches set into iron sconces 
+along the stone walls. The floor beneath your feet is a mix of uneven 
+flagstones and well-worn rugs, muffling your footsteps in an eerie 
+silence. Faint sounds of activity from the main tavern grow distant 
+assist will you move deeper into the corridor, replaced by the occasional creak 
+of wood or the soft whisper of a draft. The air feels heavier 
+here, tinged with the faint scent of parchment and wax. At the far 
+end, a reinforced wooden door stands slightly ajar, its brass handle 
+gleaming faintly in the torchlight, hinting at the 
+authority that lies beyond.
 ~
 149 67108872 0
 D2
@@ -690,13 +715,14 @@ D3
 S
 #14937
 Happy Bob's Private Office~
-  Happy Bob's private office is a very different experience compared to 
-the rest of the restaurant. It is colorful, with the walls painted with
-reds, whites and blues. The ceiling is fully covered and the floor is 
-actually hardwood stained to look like oak. The walls have a few skulls
-from his hunting trips, other awards that he has personally won and many
-pictures of his meetings with other celebrities, such as Trysta, Pan,
-Vermillion and even Lucifer himself.
+  This modest office is a sanctuary of quiet amidst the chaos of the 
+tavern. Shelves packed with scrolls, ledgers, and odd trinkets line 
+the stone walls, while a sturdy oak desk dominates the center of 
+the room. The desk is cluttered with an assortment of ink-stained 
+quills, half-empty mugs, and stacks of papers covered in scrawled 
+notes. A thick, threadbare rug lies underfoot, its once-bright colors 
+faded with age. The scent of old parchment and candle wax fills the 
+air, while a single, narrow window lets in a sliver of light.
 ~
 149 67108872 0
 D0
@@ -709,11 +735,14 @@ D5
 0 -1 14950
 S
 #14938
-Tiled Kitchen Floor~
-  Plain white tiles are laid out in a basic grid pattern on the floor. 
-Their surface is slick, and quite dirty due to it being covered in its
-wax coating, along with the numerous sauces, and other scraps of food
-on the floor. 
+Compacted Dirt Floor~
+  This wide, open space is marked by a floor of densely packed 
+dirt, smoothed to a near-polished surface by countless boots. 
+Wooden beams crisscross overhead, supporting a low ceiling 
+darkened by years of smoke and soot. The room is illuminated 
+by flickering lanterns mounted on the walls, their warm light 
+casting soft shadows. The earthy scent of the dirt mingles with 
+the faint aroma of spilled ale and roasted meats.
 ~
 149 67108864 0
 D1
@@ -923,12 +952,17 @@ D1
 0 -1 14946
 S
 #14948
-BBQ Cow Pen~
-  This pen is lined with solid steel walls reaching five feet into the air.
-It is barely electrified to help keep the cows in the room. The cage door 
-has been pried open and you can see many dents and large holes.  The cows
-that are still in this room are foaming at the mouth and rush you as you 
-enter the room.
+Cow Pen~
+  The cow pen is a sturdy enclosure of rough-hewn wooden planks 
+reinforced with thick, iron-bound posts. The floor is a mix 
+of trampled dirt and scattered straw, softened by the occasional 
+pile of fresh hay. A low wooden trough runs along one 
+side, filled with water that ripples gently as the cows nudge it 
+with their muzzles. The earthy aroma of livestock hangs in the 
+air, mingling with the faint scent of clover and grass. In the 
+corner, a weathered milking stool and a battered bucket suggest 
+the space is not just a resting area but a place of 
+simple, daily labor.
 ~
 149 67108872 0
 D2
@@ -937,12 +971,16 @@ D2
 0 -1 14943
 S
 #14949
-BBQ Pig Pen~
-  Unlike the cow pen, this room is surrounded by steel bars.  
-The pigs here are milling around, making an absurd amount of noise. Oink 
-Oink here and an Oink Oink there is written on a sign that is placed
-in the pen.  There is another note scribbled below this. "Happy Bob
-has probably lost his mind."
+Pig Pen~
+  The pig pen is a muddy, lively enclosure surrounded by a crooked 
+wooden fence patched with salvaged boards. The ground is churned 
+into a thick mire by the hooves of contented pigs rooting about 
+for scraps. A makeshift trough filled with slop dominates one 
+corner, the feeding frenzy a symphony of grunts and squeals. 
+A rickety wooden gate swings precariously on its hinges, suggesting 
+more than one pig has tested its strength. The smell here is 
+pungent, earthy, and distinctly farm-like, softened slightly by 
+the occasional breeze carrying the scent of hay from nearby.
 ~
 149 67108872 0
 D2
