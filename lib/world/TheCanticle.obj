@@ -71,7 +71,7 @@ A silver broadsword, engulfed in flames.~
 A silver broadsword, completely engulfed in blue flames is here on the ground.~
 ~
 5 1024 8193
-0 3 6 3
+0 4 6 3
 17 1000 700
 50
 E
@@ -90,9 +90,9 @@ M
 ~
 ~
 A
-18 1
+18 3
 A
-19 1
+19 3
 #1305
 key keep~
 The keep key~
@@ -208,7 +208,7 @@ M
 #1310
 banner order light~
 A Banner of the Order of the Light~
-A Banner of the Order of the light 2~
+A Banner of the Order of the Light~
 ~
 1 1 65537
 0 0 0 0
@@ -245,10 +245,81 @@ M
 ~
 ~
 A
-5 1
+1 2
 A
-4 1
+13 30
 A
 17 -6
+B
+12
+#1311
+mark order ring~
+Mark of the Canticle Brotherhood~
+A silver ring of the Canticle~
+~
+9 0 3
+3 0 0 0
+0 0 0
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+13 50
+A
+19 2
+A
+1 2
+#1312
+shawl witch dusty~
+A Dusty Witch's Shawl~
+There is a bit of nothing here.~
+~
+9 0 3073
+7 0 0 0
+0 0 0
+40
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 40
+A
+53 3
+A
+19 1
+#1313
+plates legplates shiny canticle~
+Shiny Canticle Legplates~
+There is a bit of nothing here.~
+~
+9 0 33
+11 0 0 0
+0 0 0
+35
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 3
+A
+13 30
+A
+19 1
 #0
 $~
