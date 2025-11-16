@@ -135,7 +135,7 @@ void intialize_auction_board(void)
 	  obj->obj_flags.weight      = elem.obj_elem.weight;
 	  obj->obj_flags.bitvector   = elem.obj_elem.bitvector;
 
-	  for(j = 0; j < OFILE_MAX_OBJ_AFFECT; j++) {
+	  for(j = 0; j < MAX_OBJ_AFFECT; j++) {
       obj->affected[j].location = (int)elem.obj_elem.affected[j].location;
       obj->affected[j].modifier = (int)elem.obj_elem.affected[j].modifier;
     }
