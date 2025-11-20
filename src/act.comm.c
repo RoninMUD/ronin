@@ -443,7 +443,6 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
   CHAR *listener = NULL;
 
   char name[MIL];
-  int hide = (hide_flag > 0) ? hide_flag : comm_info[comm].hide;
 
   /* If direct communication, get the listening character, and verify they can be reached, etc. */
   if (comm_info[comm].direct) {
@@ -548,7 +547,7 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
     case COMM_TO_CHAR_ROOM:
     case COMM_TO_REPLY:
       if (comm_info[comm].color) COLOR(listener, comm_info[comm].color);
-      act(buf, hide, ch, 0, listener, TO_VICT);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_VICT);
       if (comm_info[comm].color) ENDCOLOR(listener);
       break; // COMM_TO_CHAR, COMM_TO_CHAR_ROOM
 
@@ -561,7 +560,7 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             SAME_GROUP(temp_ch, ch)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -573,7 +572,7 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
 
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -584,11 +583,11 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 		
 		CHAR* temp_ch = temp_desc->character;
-		
+		if (hide_flag == COMM_ACT_HIDE_IMMORTAL && IS_IMMORTAL(temp_ch)) continue;
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -599,10 +598,10 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
         CHAR* temp_ch = temp_desc->character;
-
+		if (hide_flag == COMM_ACT_HIDE_IMMORTAL && IS_IMMORTAL(temp_ch)) continue;
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
-          act(buf, hide, ch, 0, temp_ch, TO_VICT);
+          act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
           if (comm_info[comm].color) ENDCOLOR(temp_ch);
         }
       }
@@ -615,7 +614,7 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
     if (strlen(comm_info[comm].text_to_other)) {
       snprintf(buf, sizeof(buf), "%s", comm_info[comm].text_to_other);
 
-      act(buf, hide, ch, 0, listener, TO_NOTVICT);
+      act(buf, comm_info[comm].hide, ch, 0, listener, TO_NOTVICT);
     }
 
     /* Set the listener's reply_to value to the acting character's ID. */
