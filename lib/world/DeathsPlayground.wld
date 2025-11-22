@@ -20,11 +20,11 @@ D2
 0 -1 10988
 E
 gate~
-A rusty old gate stands here, just oxidizing more and more as time goes on.
+As you stare straight up, the gate doesn't seem to have an end.
 ~
 E
 gate~
-As you stare straight up, the gate doesn't seem to have an end.
+A rusty old gate stands here, just oxidizing more and more as time goes on.
 ~
 S
 #21101
@@ -48,12 +48,12 @@ D1
 ~
 0 -1 21102
 E
-fence~
-The black fence here is so tall you can't even see the top.
-~
-E
 bush~
 The bush sits here silently watching your every move.
+~
+E
+fence~
+The black fence here is so tall you can't even see the top.
 ~
 S
 #21102
@@ -79,13 +79,13 @@ D3
 ~
 0 -1 21101
 E
+blood~
+The blood here washes by your feet as you stand still.
+~
+E
 bones~
 Dirty, brownish rib cages and skulls lie stuck in the ground here, not very
 well buried.
-~
-E
-blood~
-The blood here washes by your feet as you stand still.
 ~
 S
 #21103
@@ -144,21 +144,21 @@ D3
 ~
 0 -1 21103
 E
-bones~
-Large and small bones lie sprawled all about in this room and you can't
-help but step on a few every now and again.
-~
-E
-oak~
-An old, dead oak tree stands here, gazing at you.
+owl~
+An owl is perched in the oak tree here, gazing solemnly at you.
 ~
 E
 tree~
 An old, dead oak tree stands here, gazing at you.
 ~
 E
-owl~
-An owl is perched in the oak tree here, gazing solemnly at you.
+oak~
+An old, dead oak tree stands here, gazing at you.
+~
+E
+bones~
+Large and small bones lie sprawled all about in this room and you can't
+help but step on a few every now and again.
 ~
 S
 #21105
@@ -184,12 +184,12 @@ D3
 ~
 0 -1 21104
 E
-ghosts spirits~
-Ghosts and spirits float by you, ignoring your presence.
-~
-E
 roots~
 The small roots growing up from the ground wiggle as you watch them.
+~
+E
+ghosts spirits~
+Ghosts and spirits float by you, ignoring your presence.
 ~
 S
 #21106
@@ -215,16 +215,16 @@ D3
 ~
 0 -1 21105
 E
-bones~
-Bones of all sorts lie here, some broken, some intact.
+graves coffins~
+Many coffins and graves are here, broken and unusable.
 ~
 E
 armor~
 A few pieces of useless rusty armor have been left here.
 ~
 E
-graves coffins~
-Many coffins and graves are here, broken and unusable.
+bones~
+Bones of all sorts lie here, some broken, some intact.
 ~
 S
 #21107
@@ -248,16 +248,16 @@ D3
 ~
 0 -1 21106
 E
-fence~
-The fence here stands taller than the eye can see.
+patches grass~
+A few patches of green grass grow here, one of the only living things around.
 ~
 E
 bones~
 Some leg and arm bones have been left here, many broken in half.
 ~
 E
-patches grass~
-A few patches of green grass grow here, one of the only living things around.
+fence~
+The fence here stands taller than the eye can see.
 ~
 S
 #21108
@@ -282,12 +282,12 @@ D3
 ~
 0 -1 21107
 E
-headstones~
-Headstones lie in many pieces here, completely destroyed.
-~
-E
 fence~
 The huge iron fence here looks more sturdy than anything else in the graveyard.
+~
+E
+headstones~
+Headstones lie in many pieces here, completely destroyed.
 ~
 S
 #21109
@@ -311,12 +311,12 @@ D3
 ~
 0 -1 21108
 E
-fence~
-The black fence here seems go straight up forever.
-~
-E
 skull~
 It stares at you, and seems to move as you move.
+~
+E
+fence~
+The black fence here seems go straight up forever.
 ~
 S
 #21110
@@ -360,12 +360,12 @@ D2
 ~
 0 -1 21101
 E
-graves~
-Dozens of small graves line the sides of the path here.
-~
-E
 fence~
 The fence seems to go on forever as you gaze at it.
+~
+E
+graves~
+Dozens of small graves line the sides of the path here.
 ~
 S
 #21112
@@ -422,12 +422,12 @@ D3
 ~
 0 -1 21112
 E
-skeletons skulls~
-These skeletons are interested in you.  Perhaps they're not dead afterall...
-~
-E
 rocks trees~
 Rocks and trees of many sizes make for a round landscape.
+~
+E
+skeletons skulls~
+These skeletons are interested in you.  Perhaps they're not dead afterall...
 ~
 S
 #21114
@@ -458,12 +458,12 @@ D3
 ~
 0 -1 21113
 E
-blood innards~
-Blood, intestines, stomachs, and other insides have been left here.
-~
-E
 headstones~
 Headstones stand here, some broken, some still intact.
+~
+E
+blood innards~
+Blood, intestines, stomachs, and other insides have been left here.
 ~
 S
 #21115
@@ -558,12 +558,12 @@ D3
 ~
 0 -1 21116
 E
-tree~
-This black, dead tree looks very old.
-~
-E
 bodies~
 Green, decaying bodies decorate the scene here.
+~
+E
+tree~
+This black, dead tree looks very old.
 ~
 S
 #21118
@@ -616,12 +616,12 @@ D3
 ~
 0 -1 21118
 E
-grass~
-The grass here is brown and dead.
-~
-E
 mushrooms~
 These mushrooms have red and white spotted tops.
+~
+E
+grass~
+The grass here is brown and dead.
 ~
 S
 #21120
@@ -1058,16 +1058,16 @@ D3
 ~
 0 -1 21134
 E
-bushes~
-The bushes here are all dead, branches sticking out in all directions, leafless.
+footprints prints~
+Footprints have been made here, not by anything human though.
 ~
 E
 tree~
 A large tree grows in the middle of the river here.
 ~
 E
-footprints prints~
-Footprints have been made here, not by anything human though.
+bushes~
+The bushes here are all dead, branches sticking out in all directions, leafless.
 ~
 S
 #21136
@@ -1128,12 +1128,12 @@ D3
 ~
 0 -1 21136
 E
-tree limbs~
-The limbs of the dead tree seem to be reaching out at you, asking for help.
-~
-E
 hole~
 A hole about six feet deep, seven feet tall, and five feet wide has been dug here.
+~
+E
+tree limbs~
+The limbs of the dead tree seem to be reaching out at you, asking for help.
 ~
 S
 #21138
@@ -1454,13 +1454,13 @@ D3
 ~
 0 -1 21148
 E
+shards~
+The shards here have many different shapes, some sharp, some rounded and dull.
+~
+E
 bushes~
 The bushes here are almost all dead.
 A few still have some brown leaves on them.
-~
-E
-shards~
-The shards here have many different shapes, some sharp, some rounded and dull.
 ~
 S
 #21150
@@ -1508,12 +1508,12 @@ D2
 ~
 0 -1 21141
 E
-skull~
-A human skull lies here, staring back at you.
-~
-E
 fence~
 The tall fence here stops the path from continuing on to the west.
+~
+E
+skull~
+A human skull lies here, staring back at you.
 ~
 S
 #21152
@@ -1569,12 +1569,12 @@ D3
 ~
 0 -1 21152
 E
-pool~
-The pool is about ten feet in diameter.
-~
-E
 tree~
 The tree stands about sixty feet tall and has many branches which stick out.
+~
+E
+pool~
+The pool is about ten feet in diameter.
 ~
 S
 #21154
@@ -1691,12 +1691,12 @@ D3
 ~
 0 -1 21156
 E
-coffins~
-These broken boxes hosting bodies look as if they are ready to fall apart.
-~
-E
 jewelry~
 Rusty necklaces and rings lie in the coffins here, worthless.
+~
+E
+coffins~
+These broken boxes hosting bodies look as if they are ready to fall apart.
 ~
 S
 #21158
@@ -1752,12 +1752,12 @@ D3
 ~
 0 -1 21158
 E
-body~
-A body lies here, freshly torn in half, dripping blood.
-~
-E
 blocks~
 Large cubes of rock have been used as path indicators.
+~
+E
+body~
+A body lies here, freshly torn in half, dripping blood.
 ~
 S
 #21160
@@ -1952,12 +1952,12 @@ D3
 ~
 0 -1 21165
 E
-shreds cloth~
-Small pieces of cloth float by you, soaked in blood.
-~
-E
 bodies heads arms legs torsos~
 Many different body parts float by in the river.
+~
+E
+shreds cloth~
+Small pieces of cloth float by you, soaked in blood.
 ~
 S
 #21167
@@ -2040,16 +2040,16 @@ D3
 ~
 0 -1 21168
 E
-bodies~
-Half-eaten bodies lie all over the area.
+boulders~
+Large blocks of rock dominate the area.
 ~
 E
 driftwood~
 The debris has been here for a while, rotting.
 ~
 E
-boulders~
-Large blocks of rock dominate the area.
+bodies~
+Half-eaten bodies lie all over the area.
 ~
 S
 #21170
@@ -2127,12 +2127,12 @@ D3
 ~
 0 -1 21171
 E
-bone~
-Small pieces of bone cover the ground.
-~
-E
 armor~
 Rust-eaten armor has been thrown away here.
+~
+E
+bone~
+Small pieces of bone cover the ground.
 ~
 S
 #21173
@@ -2162,12 +2162,12 @@ D3
 ~
 0 -1 21172
 E
-bushes~
-Dead branches extend from the bushes, clinging on to anything they can find.
-~
-E
 rocks~
 Very large boulders tower over you in the middle of the path here.
+~
+E
+bushes~
+Dead branches extend from the bushes, clinging on to anything they can find.
 ~
 S
 #21174
@@ -2384,12 +2384,12 @@ D2
 ~
 0 -1 21171
 E
-fence~
-The fence here is taller than you can see.
-~
-E
 tree~
 A large tree has fallen here, damming up the river.
+~
+E
+fence~
+The fence here is taller than you can see.
 ~
 S
 #21182
@@ -2406,28 +2406,28 @@ D1
 ~
 0 -1 21183
 E
-knives~
-Knives of many sizes line the walls on hooks.
-~
-E
-desk~
-A desk made from oak sits in the corner of the room.
-~
-E
-skull~
-A white, bleached skull sits on top of the desk.
-~
-E
-skin~
-A human skin with the head still intact has been stretches across the floor.
+window~
+A soft breeze enters the room from the window to the south.
 ~
 E
 mirror~
 It's not possible to get much of a reflection from this shattered mirror.
 ~
 E
-window~
-A soft breeze enters the room from the window to the south.
+skin~
+A human skin with the head still intact has been stretches across the floor.
+~
+E
+skull~
+A white, bleached skull sits on top of the desk.
+~
+E
+desk~
+A desk made from oak sits in the corner of the room.
+~
+E
+knives~
+Knives of many sizes line the walls on hooks.
 ~
 S
 #21183
@@ -2693,12 +2693,12 @@ D3
 ~
 0 -1 21191
 E
-trees~
-A few trees grow here, inhabited by vultures.
-~
-E
 fence~
 The fence here keeps everything inside and outside separate.
+~
+E
+trees~
+A few trees grow here, inhabited by vultures.
 ~
 S
 #21193
@@ -2750,12 +2750,12 @@ D3
 ~
 0 -1 21193
 E
-animals wood~
-Animal corpses float by among the wood, occasionally bumping in to your legs.
-~
-E
 fence~
 The enormous fence looms over you, expelling the outside.
+~
+E
+animals wood~
+Animal corpses float by among the wood, occasionally bumping in to your legs.
 ~
 S
 #21195
@@ -2781,12 +2781,12 @@ D3
 ~
 0 -1 21194
 E
-fence~
-The fence stands tall above you here, shunning the outside world.
-~
-E
 frogs~
 Frogs stained with blood hop to and fro on the embankments here.
+~
+E
+fence~
+The fence stands tall above you here, shunning the outside world.
 ~
 S
 #21196
@@ -2827,6 +2827,10 @@ Even the dead grass and tombstones on the northern embankment of the river
 look as if they be full of sorrow.
 ~
 211 1 7
+D0
+~
+~
+0 -1 21496
 D1
 ~
 ~
