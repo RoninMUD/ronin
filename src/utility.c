@@ -878,8 +878,8 @@ char *ENDCHCLR(CHAR *ch) {
 
 
 /* 50% chance when victim level is the same as the attacker.
-   100% chance when victim level is 10 levels or less than the attacker.
-   0% chance when victim level is 10 levels or higher than the attacker. */
+   1% change +/- based on level diff.
+   0% chance when victim level is 50 levels or higher than the attacker. */
 bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type) {
   if (((breakthrough_type == BT_INVUL) && !IS_AFFECTED(victim, AFF_INVUL)) ||
     ((breakthrough_type == BT_SPHERE) && !IS_AFFECTED(victim, AFF_SPHERE))) {
@@ -891,7 +891,7 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
     return TRUE;
   }
 
-  int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)) * 5);
+  int check = 50 + ((GET_LEVEL(ch) - GET_LEVEL(victim)));
 
   switch (GET_CLASS(ch)) {
     case CLASS_CLERIC:
@@ -916,7 +916,7 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       break;
     case CLASS_NINJA:
       if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check -= 5;
+      else if (breakthrough_type == BT_SPHERE) check += 0;
       break;
     case CLASS_ANTI_PALADIN:
       if (breakthrough_type == BT_INVUL) check += 5;
@@ -924,10 +924,10 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       break;
     case CLASS_PALADIN:
       if (breakthrough_type == BT_INVUL) check += 5;
-      else if (breakthrough_type == BT_SPHERE) check -= 5;
+      else if (breakthrough_type == BT_SPHERE) check += 0;
       break;
     case CLASS_BARD:
-      if (breakthrough_type == BT_INVUL) check += 5;
+      if (breakthrough_type == BT_INVUL) check += 0;
       else if (breakthrough_type == BT_SPHERE) check += 5;
       break;
     case CLASS_COMMANDO:
