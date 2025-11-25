@@ -1,0 +1,263 @@
+#21400
+sentinel obsidian gargoyle~
+Obsidian Sentinel~
+A Large Gargoyle made of Obsidian stands rigid
+~
+A hulking mass of blackened stone, its jagged wings glint like broken 
+glass. Eyes of molten amber flicker with eerie awareness as it watches 
+over the graves it was sworn to guard.
+~
+16458 134217728 0 Y
+63 -22 -22 55d120+23000 17d17+168
+0 4000000
+8 8 0
+97 20480 1d1+1000 3
+10 5 19 0
+3 3 22 0
+7 7 22 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21401
+reaver dreadhoof centaur~
+Dreadhoof Reaver~
+A Monstrous Centaur grunts and walks amongest the tombstones.
+~
+This towering, undead centaur is a nightmarish fusion of rotting 
+flesh and exposed bone, its equine body gaunt and sinewy, its humanoid 
+torso twisted with decay. Glowing embers flicker deep within the 
+sockets of its sunken eyes, and its breathing is a rasping, hollow 
+wheeze, as though it has long since forgotten what it means to be 
+alive. The earth beneath its hooves blackens with each step, as if 
+rejecting the unnatural horror it has become.
+~
+16456 0 -350 Y
+59 -16 -18 50d100+18500 13d13+150
+0 3300150
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21402
+warlord bloodfang hobgoblin~
+Bloodfang Warlord~
+A Large Hobgoblin snears and growls at the slightest movements.
+~
+A grotesque figure of battle-worn flesh and old scars, this monstrous 
+hobgoblin towers over its kin, its mottled skin stretched taut over 
+bulging, sinewy muscle. Its jagged maw is locked in a permanent 
+sneer, yellowed tusks jutting from cracked lips, and its breath 
+carries the acrid stench of old blood. Every twitch of its body is 
+brimming with violent energy, as if it is barely restraining the 
+savage instinct to tear apart anything that dares stand before it.
+~
+16456 0 -350 Y
+58 -16 -18 50d100+19000 14d14+130
+0 3450620
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21403
+horror mireborn troll~
+Mireborn Horror~
+An Undead Troll groans and growls as its flesh falls to ground.
+~
+A bloated, festering beast that reeks of decay, its sagging flesh 
+riddled with open sores. Its oversized limbs end in blackened 
+claws, perfect for rending both grave markers and flesh alike.
+~
+16456 0 -350 Y
+58 -17 -17 50d100+19500 15d15+120
+0 3500410
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21404
+revenant duskmare~
+Duskmare Revenant~
+A Spectral Unicorn exudes a decaying aura.
+~
+This spectral beast moves with an unnatural grace, its obsidian horn 
+dripping with a thick, cursed ichor. Where it steps, the grass 
+withers, and tombstones crack under the weight of its presence.
+~
+16456 0 -350 Y
+60 -18 -19 50d100+21000 13d13+120
+0 3605203
+8 8 0
+67 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21405
+harbinger veilborn shadow~
+Veilborn Harbinger~
+A Large Towering shadow flickers in the dark.
+~
+A towering specter draped in tattered funeral shrouds, its form 
+shifting like smoke caught in an unseen wind. Its hollow face is
+a void of swirling darkness, where faint echoes of the long 
+forgotten whisper in countless overlapping voices. The air around 
+it is unnaturally cold, and with every slow, deliberate 
+movement, the shadows beneath it stretch and writhe, reaching 
+hungrily toward the living.
+~
+16456 0 -350 Y
+59 -17 -19 50d100+21533 14d14+150
+0 3322001
+8 8 0
+63 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21406
+marquis crimson vampire ancient~
+Crimson Marquis~
+An Old Ancient Vampire flashes its fangs
+~
+An ancient noble clad in tattered regalia, his once golden eyes 
+now sunken pits of hunger. His fanged grin promises suffering, and 
+his skeletal fingers twitch with the desire to drain every last 
+drop of life from his prey.
+~
+16456 0 -350 Y
+58 -16 -20 50d100+20874 15d15+130
+0 3456230
+8 8 0
+55 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21407
+mourner hollowed undead~
+Hollowed Mourner~
+A Weak Undead is kneeling besides its gravestone.
+~
+A frail, shrouded figure kneels beside the lone gravestone, whispering 
+to something unseen. When disturbed, it rises, revealing a face devoid 
+of features. A smooth, empty void that exudes pure sorrow and despair
+can be seen beneath its tattered veil.
+~
+16458 134219904 -350 Y
+65 -24 -21 10d200+38000 22d22+160
+950000 8365211
+8 8 0
+53 20480 1d1+7500 2
+1 3 19 136
+1 3 22 119
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21408
+maw grave mass~
+The Grave Maw~
+A large mass of corpses writhes on the ground.
+~
+A writhing mass of skeletal arms and half-rotted torsos, bound 
+together by an unseen force. The creatures moan in unison, clawing 
+at the edges of the abyss, desperately trying to pull something up 
+from the depths.
+~
+16458 134219904 -350 Y
+65 -24 -22 10d200+37000 21d21+170
+875000 8236541
+8 8 0
+53 20480 1d1+7500 3
+1 6 18 238
+1 1 29 136
+1 3 14 106
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21409
+unspoken undead~
+The Unspoken~
+A large undead draped in cloth wanders through the gravestones
+~
+A humanoid figure draped in a tattered burial shroud, its body 
+shifting and distorting as if struggling to hold a solid form. 
+No one remembers its name, and that alone has cursed it to wander 
+this forgotten place, attacking any who might leave it behind again.
+~
+16458 134219904 -350 Y
+65 -24 -21 10d200+39000 20d20+180
+905222 8000450
+8 8 0
+53 20480 1d1+7500 2
+1 3 19 136
+1 1 19 136
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21410
+custodian ironbound metal figure~
+The Ironbound Custodian~
+A large metal figure standards guard over the Mausoleum
+~
+A blank of primal clay, waiting to be shaped.
+~
+16458 134219904 0 Y
+70 -26 -19 10d200+45000 25d24+205
+1200000 12350203
+8 8 0
+87 20480 1d1+7500 2
+1 5 20 179
+1 5 20 23
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21411
+dowager wailing undead figure~
+The Wailing Dowager~
+An undead figure is sobbing next to her tomb.
+~
+A spectral figure draped in mourning veils, her translucent hands 
+clutching an old, decayed locket. Though her face is hidden, the 
+sound of her grief is suffocating. An endless, heart-wrenching sob 
+that grows stronger the closer one approaches. When provoked, her 
+sorrow turns to rage, her veil lifting to reveal a skeletal visage 
+with an unhinged maw that screams with the fury of the abandoned dead.
+~
+16458 134219776 -350 Y
+70 -26 -19 10d200+47000 27d27+195
+1300000 13256332
+8 8 0
+53 20480 1d1+7500 4
+1 1 13 136
+1 3 13 136
+1 6 25 175
+1 3 23 165
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21412
+revenant shrouded corpse~
+The Shrouded Revenant~
+A corpse wrapped in bandages swiftly moves about the room.
+~
+A shriveled corpse wrapped tightly in burial wrappings, its movements
+unnaturally swift despite its decayed state. It does not walk but 
+glides across the mausoleum floor, its bandages unraveling like 
+grasping tendrils. The undead seems to whisper in dry, rasping 
+voices uttering fragmented prayers of those who were buried here long 
+ago. Those ensnared in its grasp risk joining them forever.
+~
+16458 134219776 -350 Y
+70 -26 -19 10d200+49000 25d25+180
+1400000 12245336
+8 8 0
+53 20480 1d1+7500 4
+1 1 18 136
+1 3 18 136
+1 3 21 82
+1 3 21 248
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#0
+$~
