@@ -158,6 +158,16 @@ int32_t MAX(int32_t a, int32_t b);
 
 int MAX_PRAC(CHAR *ch);
 
+//Quest Award Functions
+
+//Award Quest Points for Death
+//Used for Bosses and Ubers
+
+//Function to take a mob and reward AQP to all mortals in the room.
+void mob_aq_reward(int aqp_reward, CHAR *mob);
+
+
+
 size_t str_mrg(char *dest, size_t dest_size, ...);
 size_t str_cpy(char *dest, size_t dest_size, const char *src);
 size_t str_cat(char *dest, size_t dest_size, const char *src);
