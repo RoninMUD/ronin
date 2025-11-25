@@ -86,6 +86,22 @@
 #define QUESTGIVER_DUMMY_MAX_VNUM 18017
 
 
+/* Event Zone Items */
+
+#define EVENT_VOUCHER 18013
+
+
+//Christmas Village
+
+#define CV_GIFT1 26355
+#define CV_GIFT2 26356
+#define CV_GIFT3 26357
+#define CV_GIFT4 26358
+#define CV_GIFT5 26359
+#define CV_GIFT6 26360
+#define CV_GIFT7 26361
+
+
 /* Zones */
 
 
@@ -499,7 +515,10 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 //Event Token Mob
 int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
-    /*Don't waste any more CPU time if no one is in the room. */
+    
+	OBJ *reward_object;
+	
+	/*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1)
         return FALSE;
 
@@ -512,6 +531,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
             {
             case (0):
             case (1):
+				do_say(mob, "Bring me items from the events!  They are quite amusing.", CMD_SAY);
             case (2):
             case (3):
             case (4):
@@ -560,6 +580,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
         char buf[MIL];
 
         arg = one_argument(arg, buf);
+		bool give_back = FALSE;
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
         // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
@@ -570,13 +591,23 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
         if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
+			give_back = TRUE;
         }
+		//Section for each set of event items.  When an Event item is given, provide them with an Event Token.  
+		//Event Tokens will be given out for all event items.    
+		// A different vendor will trade them for AQP or RP Items.	
+		
+		else if (OBJ_TYPE(obj) == ITEM_EVENT_ITEM){			
+			do_say(mob, "Oh how i love these fleeting events.", CMD_SAY);	
+			give_back = FALSE;
+		}	
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+			give_back = TRUE;
         }
 
-        bool give_back = TRUE;
+        
 
         if (give_back)
         {
@@ -587,6 +618,22 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             return TRUE;
         }
+		
+		//If this is an event item, remove the object and give them an Event Voucher.
+		
+		
+		 // Remove the Event Item
+        extract_obj(obj);
+		
+		
+		reward_object = read_object(EVENT_VOUCHER, VIRTUAL);
+		// Give Object to Char.
+		obj_to_char(reward_object, ch);
+		act("$N reaches into a box and gives you a $p.", FALSE, ch, reward_object, mob, TO_CHAR);
+		
+		return TRUE;
+		
+		
     }
 
     return FALSE;
@@ -1862,6 +1909,9 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 sprintf(buf, "The Goblin Leader has been killed. Thank you for ridding the world of this scourge.");
                 do_quest(mob, buf, CMD_QUEST);
                 SET_BIT(GET_BANK(mob), STATE3);
+				sprintf(buf, "Thank you heros. I can rest in peace now!");
+				extract_char(mob);
+				
             }
             // If all of them arent dead, lets provide updates.
             else
