@@ -90,18 +90,6 @@
 
 #define EVENT_VOUCHER 18013
 
-
-//Christmas Village
-
-#define CV_GIFT1 26355
-#define CV_GIFT2 26356
-#define CV_GIFT3 26357
-#define CV_GIFT4 26358
-#define CV_GIFT5 26359
-#define CV_GIFT6 26360
-#define CV_GIFT7 26361
-
-
 /* Zones */
 
 
