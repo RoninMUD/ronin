@@ -182,6 +182,10 @@ D0
 ~
 ~
 0 -1 14210
+D2
+~
+~
+0 -1 18000
 D3
 ~
 ~
@@ -1727,7 +1731,7 @@ candle sits in the middle. Nine solid, sturdy wooden chairs are placed
 around the table. Seven of the chairs have names carved into the top.
 To the north lies the kitchen. To the east lies the Den.
 ~
-142 0 0
+142 67108864 0
 D0
 ~
 ~
@@ -1789,7 +1793,7 @@ for a growing family. Fresh flowers sit in a glass vase on the window
 sill. Their fragrance floats on the breeze, making the kitchen smell
 exquisite.
 ~
-142 0 0
+142 67108864 0
 D1
 ~
 ~
@@ -1807,7 +1811,7 @@ of blood. A large cleaver lays embedded in the rough timber. A large
 barrel lies in the corner. On the lid, you see small specs of clear
 crystals.
 ~
-142 0 0
+142 67108864 0
 D0
 ~
 ~
@@ -1825,7 +1829,7 @@ Paintings off nature's wonders hang on the wall. A chandelier hangs
 from the ceiling. It is made from black rocks, that seem to glow no
 matter how light hits them.
 ~
-142 0 0
+142 67108864 0
 D2
 ~
 ~
@@ -1927,7 +1931,7 @@ ceiling. The dresser along the wall has glass bottles with corked
 stoppers in them, containing different colored liquids. Large, wooden
 candle holders are bolted to each wall.
 ~
-142 0 0
+142 67108864 0
 D1
 A solid oak door.
 ~
@@ -1949,7 +1953,7 @@ of flowers or other items found in nature. The top drawer has knobs
 carved in the shape of hearts. On the top of the dresser, it reads
 "To my darling Emma.  Love Chase"
 ~
-142 0 0
+142 67108864 0
 D0
 ~
 ~
@@ -1967,7 +1971,7 @@ the bed. The Silk curtains around the bed are the only thing that
 is stunning within the room. Next to the bed is a wooden nightstand
 with a single drawer. To the north, a door sits in the wall.
 ~
-142 0 0
+142 67108864 0
 D0
 ~
 ~
@@ -1985,7 +1989,7 @@ The overwhelming smell of pine fills your senses. The cool
 breeze is fresh and is somewhat chilly. The wood boards beneath
 your fleet creak ever so slightly.
 ~
-142 0 0
+142 67108864 0
 D0
 A brown closet door.~
 closet~
