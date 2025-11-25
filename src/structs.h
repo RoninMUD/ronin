@@ -162,7 +162,6 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define ITEM_TYPE_35          35
 #define ITEM_AQ_ORDER         36
 
-
 /* Object bit flags-- used in 'wear_flags' */
 #define ITEM_TAKE             (1 << 0)  /* 1 */
 #define ITEM_WEAR_FINGER      (1 << 1)  /* 2 */
@@ -243,8 +242,8 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define ITEM_ANTI_SC_GLADIATOR   (1 << 7)  /* 128 */
 #define ITEM_ANTI_SC_RONIN       (1 << 8)  /* 256 */
 #define ITEM_ANTI_SC_MYSTIC      (1 << 9)  /* 512 */
-#define ITEM_ANTI_SC_WARDEN      (1 << 10) /* 1024 */
-#define ITEM_ANTI_SC_PATHFINDER     (1 << 11) /* 2048 */
+#define ITEM_ANTI_SC_RANGER      (1 << 10) /* 1024 */
+#define ITEM_ANTI_SC_TRAPPER     (1 << 11) /* 2048 */
 #define ITEM_ANTI_SC_CAVALIER    (1 << 12) /* 4096 */
 #define ITEM_ANTI_SC_CRUSADER    (1 << 13) /* 8192 */
 #define ITEM_ANTI_SC_DEFILER     (1 << 14) /* 16384 */
@@ -697,8 +696,8 @@ struct room_data
 #define SC_GLADIATOR   8
 #define SC_RONIN       9  /* ninja */
 #define SC_MYSTIC      10
-#define SC_WARDEN      11 /* nomad */
-#define SC_PATHFINDER  12
+#define SC_RANGER      11 /* nomad */
+#define SC_TRAPPER     12
 #define SC_CAVALIER    13 /* paladin */
 #define SC_CRUSADER    14
 #define SC_DEFILER     15 /* anti-paladin */
