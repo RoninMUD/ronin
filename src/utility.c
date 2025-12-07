@@ -2216,16 +2216,14 @@ void mob_aq_reward(int aqp_reward, CHAR *mob){
 	char buf[MAX_STRING_LENGTH];
 	CHAR *vict, *next_vict;
 	
-	for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+	for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 	{
-		next_vict = vict->next_in_room;
+		next_vict = CHAR_NEXT_IN_ROOM(vict); 
 		if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
-		sprintf(buf, "You are awarded with %d quest %s for the kill.\n\r", aqp_reward, aqp_reward> 1 ? "points" : "point");
+		snprintf(buf, sizeof(buf),"You are awarded with %d quest point%s for the kill.\n\r", aqp_reward, aqp_reward > 1 ? "s" : "");
 		send_to_char(buf, vict);
 		vict->ver3.quest_points += aqp_reward;
 	}
-	
-	
 }
 
 
