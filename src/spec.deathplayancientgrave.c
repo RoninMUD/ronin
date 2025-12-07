@@ -53,7 +53,6 @@
 /*Mobs */
 
 
-
 /*Miscellaneous strings */
 // Generic States that are shifted to indicate different stages.
 
@@ -66,11 +65,9 @@
 
 
 
-
-
 int dpag_block_e(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -79,7 +76,7 @@ int dpag_block_e(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_es(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_SOUTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -88,7 +85,7 @@ int dpag_block_es(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_esw(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_SOUTH || cmd==CMD_WEST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -97,7 +94,7 @@ int dpag_block_esw(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_n(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -106,7 +103,7 @@ int dpag_block_n(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_ne(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -115,7 +112,7 @@ int dpag_block_ne(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_nes(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_SOUTH || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -124,7 +121,7 @@ int dpag_block_nes(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_new(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_WEST || cmd==CMD_NORTH || cmd==CMD_EAST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -133,7 +130,7 @@ int dpag_block_new(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_ns(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_SOUTH || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -142,7 +139,7 @@ int dpag_block_ns(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_nws(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_WEST || cmd==CMD_SOUTH || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -151,7 +148,7 @@ int dpag_block_nws(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_s(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_SOUTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -160,7 +157,7 @@ int dpag_block_s(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_se(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_SOUTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -169,7 +166,7 @@ int dpag_block_se(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_w(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_WEST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -178,7 +175,7 @@ int dpag_block_w(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_we(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_WEST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -187,7 +184,7 @@ int dpag_block_we(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_wn(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_WEST || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -196,7 +193,7 @@ int dpag_block_wn(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_wne(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_WEST || cmd==CMD_NORTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -205,7 +202,7 @@ int dpag_block_wne(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_ws(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_WEST || cmd==CMD_SOUTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
@@ -214,23 +211,21 @@ int dpag_block_ws(int room,CHAR *ch,int cmd,char *argument) {
 
 int dpag_block_wse(int room,CHAR *ch,int cmd,char *argument) {
   if(cmd==CMD_EAST || cmd==CMD_WEST || cmd==CMD_SOUTH) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
     send_to_char("The greater tombstones block your way.\n\r",ch);
     return TRUE;
   }
   return FALSE;
 }
 
-
-
 int obsidian_sentinel_block(int room,CHAR *ch,int cmd,char *argument) {
   CHAR *tmp;
   int sentinel_num = 21400;
   
   if(cmd==CMD_NORTH || cmd==CMD_EAST) {
-    if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+    if(IS_IMMORTAL(ch)) return FALSE;
 	
-	 for (tmp = world[real_room(SENTINEL_ROOM)].people; tmp; tmp = tmp->next_in_room)
+	 for (tmp = ROOM_PEOPLE(real_room(SENTINEL_ROOM)); tmp; tmp = tmp->next_in_room)
 		{
 			if (IS_MOB(tmp))
 			{
@@ -288,12 +283,10 @@ int dpag_gravestone_one_link(int room,CHAR *ch,int cmd,char *argument) {
 
 
 	if(cmd==CMD_WEST || cmd==CMD_NORTH || cmd==CMD_EAST) {
-		if(GET_LEVEL(ch)>=LEVEL_IMM) return FALSE;
+		if(IS_IMMORTAL(ch)) return FALSE;
 		send_to_char("The greater tombstones block your way.\n\r",ch);
 		return TRUE;
 	  }
-
-
    
   if (cmd == MSG_ZONE_RESET)
   {
@@ -305,11 +298,9 @@ int dpag_gravestone_one_link(int room,CHAR *ch,int cmd,char *argument) {
       send_to_room("The gravestone slams shut.\n\r", real_room(GRAVESTONE_ONE_ROOM_START));
       send_to_room("The gravestone slams shut.\n\r", real_room(GRAVESTONE_ONE_ROOM_END));
     }
-  }	
-	
+  }		
   return FALSE;
 }
-
 
 /* Special Gravestone 1 - Grants access to Deaths Playground Caves. */
 // Read or Examine the inscriptions to unlock the path to the caves.
