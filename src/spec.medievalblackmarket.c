@@ -140,6 +140,7 @@
 /* Event Zone Items */
 
 #define EVENT_VOUCHER 18013
+#define AQP_VOUCHER 18030
 
 /* Zones */
 
@@ -437,8 +438,12 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         if (OBJ_TYPE(obj) != ITEM_SC_TOKEN)
         {
-            do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
-
+            if (V_OBJ(obj) == AQP_VOUCHER){
+				do_say(mob, "I haven't seen this in a while. Go see Spector.", CMD_SAY);
+			}else{
+				do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+			}
+			
             give_back = TRUE;
         }
 
@@ -642,7 +647,28 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		else if (OBJ_TYPE(obj) == ITEM_EVENT_ITEM){			
 			do_say(mob, "Oh how i love these fleeting events.", CMD_SAY);	
 			give_back = FALSE;
+			
+			//If this is an event item, remove the object and give them an Event Voucher.
+		
+			// Remove the Event Item
+			extract_obj(obj);
+			
+			reward_object = read_object(EVENT_VOUCHER, VIRTUAL);
+			// Give Object to Char.
+			obj_to_char(reward_object, ch);
+			act("$N reaches into a box and gives you a $p.", FALSE, ch, reward_object, mob, TO_CHAR);
 		}	
+		//If this is an AQP Voucher, award the AQP.
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			do_say(mob, "Redeeming a voucher is always good. Thank you for visiting the Black Market.", CMD_SAY);	
+			give_back = FALSE;
+			
+			// Remove the AQP Voucher
+			extract_obj(obj);
+			
+			ch->ver3.quest_points += 1;
+			
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -661,17 +687,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
             return TRUE;
         }
 		
-		//If this is an event item, remove the object and give them an Event Voucher.
 		
-		
-		 // Remove the Event Item
-        extract_obj(obj);
-		
-		
-		reward_object = read_object(EVENT_VOUCHER, VIRTUAL);
-		// Give Object to Char.
-		obj_to_char(reward_object, ch);
-		act("$N reaches into a box and gives you a $p.", FALSE, ch, reward_object, mob, TO_CHAR);
 		
 		return TRUE;
 		
@@ -755,6 +771,10 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "We trade for these here, but I am not the one to speak to.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "A voucher huh, go see Spector, he loves the paper.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -850,6 +870,10 @@ int blackmarket_mime(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Guise is the one you want, not me.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "Bother Spector and not me with this.......", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -944,6 +968,10 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "Why do you people always bring these things to me. Go bother Spector with this nonsense.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -1039,6 +1067,10 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "What use do you think paper has. Only Spector could love this junk.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -1140,6 +1172,10 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
             give_back = TRUE;
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			do_say(mob, "This isn't related to a quest. Go see spector", CMD_SAY);
+            give_back = TRUE;
+		}
 
         // Add a new check here for the Game Tokens.
         // TODO:  Set Bank Value corresponding to the Game.   STATE1 - STATE11
