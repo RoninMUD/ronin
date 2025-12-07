@@ -878,7 +878,7 @@ char *ENDCHCLR(CHAR *ch) {
 
 
 /* 50% chance when victim level is the same as the attacker.
-   1% change +/- based on level diff.
+   1% change +/- based on level difference.
    0% chance when victim level is 50 levels or higher than the attacker. */
 bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type) {
   if (((breakthrough_type == BT_INVUL) && !IS_AFFECTED(victim, AFF_INVUL)) ||
