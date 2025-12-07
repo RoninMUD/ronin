@@ -115,6 +115,7 @@ int sot_gatekeeper(CHAR *gatekeeper, CHAR *ch, int cmd, char *arg)
 int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg)
 {
     CHAR *vict, *next_vict;
+	OBJ *obj = NULL;
 
     if (cmd == MSG_MOBACT && chase->specials.fighting && chance(60))
     {
@@ -136,10 +137,10 @@ int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg)
         else
         {
             act("$n grabs a bunch of daggers and spins about the room.", 0, chase, 0, 0, TO_ROOM);
-            for (vict = world[CHAR_REAL_ROOM(chase)].people; vict; vict = next_vict)
+            for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(chase)); vict; vict = next_vict)
             {
                 // all chars for 300 through sanc
-                next_vict = vict->next_in_room;
+                next_vict = CHAR_NEXT_IN_ROOM(vict); 
                 if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                     continue;
                 act("$n throws daggers as he spins and you are hit hard!", 0, chase, 0, vict, TO_VICT);
@@ -147,7 +148,23 @@ int sot_chase(CHAR *chase, CHAR *ch, int cmd, char *arg)
             }
         }
     }
+	
+	  if (cmd==MSG_DIE) {
+   
+
+    //modify the katana: default is neutral ninja only
+    obj=EQ(chase, WIELD);
+    if (obj && ( V_OBJ(obj) == CHASE_MACE ) ) {
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_ANTIPALADIN);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_BARD);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_THIEF);
+      if(chance(33)) REMOVE_BIT(obj->obj_flags.extra_flags,ITEM_ANTI_PALADIN);
+    }
     return FALSE;
+  }
+	
+	
+   return FALSE;
 }
 
 int sot_emma(CHAR *emma, CHAR *ch, int cmd, char *arg)
@@ -224,9 +241,9 @@ int sot_michael(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 1:
             case 2:
                 act("$n shouts an oppressive order, causing your head to ache and your mind to wander.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict); ;
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     damage(mob, vict, 800, TYPE_UNDEFINED, DAM_PHYSICAL);
