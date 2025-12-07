@@ -339,7 +339,7 @@ D0
 0 0 2128
 S
 #2120
-A dirt path~
+A Dirt Path~
   This is a well traveled dirt path running north-south.  You can see
 two shops of some kind situated next to each other at the end of the road.
 ~
@@ -354,7 +354,7 @@ D2
 0 -1 2121
 S
 #2121
-A dirt path~
+A Dirt Path~
   This is a well-traveled dirt path running north-south.  You can see the
 armor and weapon supplier's shop at the end of the road.  To the west,
 you see the entrance to the camp's general store.
@@ -585,7 +585,7 @@ D3
 0 0 2132
 S
 #2134
-A dirt path~
+A Dirt Path~
 This a well-trodden path that links several buildings to the rest of the
 camp.  This is an intersection of sorts with paths leading south and west.
 You can also return to the plaza which is to the north.
@@ -876,7 +876,7 @@ D5
 0 0 2147
 S
 #2149
-A small road~
+A Small Road~
   This is a small road that leads to the corner of the camp.  A
 watchtower is directly above you.
 ~
@@ -906,7 +906,7 @@ D5
 0 0 2149
 S
 #2151
-A small road~
+A Small Road~
   This is a small well-traveled road running east-west that leads to a
 tower of some sort.
 ~
@@ -921,7 +921,7 @@ D3
 0 -1 2152
 S
 #2152
-A small road~
+A Small Road~
   You have come to the end of the road.  Above you, you can see the hatch
 and a ladder leading up to it.  You can also return to the plaza to the east.
 ~

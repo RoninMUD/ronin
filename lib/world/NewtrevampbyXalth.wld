@@ -22,14 +22,14 @@ You see a path leading back towards the Turning Point.
 ~
 0 0 3505
 E
-hills~
-The hills are a very shiny black color.
-~
-E
 plate~
 This large plate of glass on which you stand is very slippery.  It reflects
 the bright sun and it hurts to watch.  It looks as though it could break if
 you weren't careful.
+~
+E
+hills~
+The hills are a very shiny black color.
 ~
 S
 #2901
@@ -51,13 +51,13 @@ You see some more hills to the south.
 ~
 0 0 2902
 E
-hills~
-The hills are a very shiny black color.
-~
-E
 shards~
 There are shards of obsidian displayed all about here.  They are sharp and
 could be potentially dangerous.
+~
+E
+hills~
+The hills are a very shiny black color.
 ~
 S
 #2902
@@ -162,21 +162,21 @@ You see a hole to the south. It looks like an entrance.
 ~
 0 0 2906
 E
-top of mountain~
-The top of the mountain is a large area with a hole in the middle.
-~
-E
-smoke~
-The smoke is grey and is coming from the hole.
+bones~
+There are a few bones that lie on the ground bleaching in the sun.  A skull
+sitting behind a small stone seems to be grinning at you.
 ~
 E
 rocks~
 Thrown upon the ground are massive piles of rocks, and minerals.
 ~
 E
-bones~
-There are a few bones that lie on the ground bleaching in the sun.  A skull
-sitting behind a small stone seems to be grinning at you.
+smoke~
+The smoke is grey and is coming from the hole.
+~
+E
+top of mountain~
+The top of the mountain is a large area with a hole in the middle.
 ~
 S
 #2906
@@ -248,14 +248,14 @@ You see the entrance to the mountain to the north.
 ~
 0 0 2906
 E
-smoke~
-Dark, black smoke combines with sulfuric fumes to create a very nauseating
-smell combined with eye-watering vapors.
-~
-E
 paths~
 These paths have been created by lava flows.  They are deep and cause the
 mountain look striped from a distance.
+~
+E
+smoke~
+Dark, black smoke combines with sulfuric fumes to create a very nauseating
+smell combined with eye-watering vapors.
 ~
 S
 #2909
@@ -277,8 +277,9 @@ You see the entrance to the mountain to the north.
 ~
 0 0 2906
 E
-smoke~
-Blinding smoke rises from the volcano and hurts your eyes.
+paths~
+These are paths that have been cleared out from previous lava flows.  Some
+are shallow and some are deep.  You should keep away from them.
 ~
 E
 bones~
@@ -286,9 +287,8 @@ Many broken bones lie on the ground; not many of which are whole.  In fact,
 you can't find a whole bone up here!  Something must have happened...
 ~
 E
-paths~
-These are paths that have been cleared out from previous lava flows.  Some
-are shallow and some are deep.  You should keep away from them.
+smoke~
+Blinding smoke rises from the volcano and hurts your eyes.
 ~
 S
 #2910
@@ -322,13 +322,13 @@ The shaft continues down.
 ~
 0 0 2913
 E
+bones~
+Broken rib cages and cracked skulls are all over the floor here.
+~
+E
 rags~
 These rags must have been brought from outsiders for nothing down here could
 have created them... right?
-~
-E
-bones~
-Broken rib cages and cracked skulls are all over the floor here.
 ~
 S
 #2911
@@ -346,12 +346,12 @@ You see the dark tunnel shaft.
 ~
 0 0 2910
 E
-beds~
-The beds are made of metal and rock.
+carpet~
+This carpet is stained blood red and is singed on all sides.
 ~
 E
-chairs~
-The chairs are made of stone and look very heavy.
+tapestries~
+These tapestries are hand-woven and have pictures of dragons on them.
 ~
 E
 tables~
@@ -359,12 +359,12 @@ The tables are long and wide.  They are made of stone and obviously too heavy
 to move.
 ~
 E
-tapestries~
-These tapestries are hand-woven and have pictures of dragons on them.
+chairs~
+The chairs are made of stone and look very heavy.
 ~
 E
-carpet~
-This carpet is stained blood red and is singed on all sides.
+beds~
+The beds are made of metal and rock.
 ~
 S
 #2912
@@ -381,17 +381,8 @@ You see the shaft in the mountain.
 ~
 0 0 2910
 E
-beds~
-The beds are made of metal and rock.
-~
-E
-chairs~
-The chairs are made of stone and look very heavy.
-~
-E
-tables~
-The tables are long and wide.  They are made of stone and are obviously to
-heavy to move.
+rocks~
+Many piles of rocks surround a few pieces of stacked wood.
 ~
 E
 logs~
@@ -399,8 +390,17 @@ Many black and brown logs are placed carefully in stacks surrounded by piles
 of rocks.
 ~
 E
-rocks~
-Many piles of rocks surround a few pieces of stacked wood.
+tables~
+The tables are long and wide.  They are made of stone and are obviously to
+heavy to move.
+~
+E
+chairs~
+The chairs are made of stone and look very heavy.
+~
+E
+beds~
+The beds are made of metal and rock.
 ~
 S
 #2913
@@ -468,13 +468,13 @@ You see the dark mountain shaft.
 ~
 0 0 2913
 E
-walls~
-The walls are covered in ashes and food.
-~
-E
 food~
 Cake and bread smothered in tomato sauce along with pasta and many other foods
 are stuck to the floor and walls here.
+~
+E
+walls~
+The walls are covered in ashes and food.
 ~
 S
 #2916
@@ -620,13 +620,13 @@ You see a fire newt house.
 ~
 0 0 2922
 E
+crack~
+A very large crack in the wall gives view to a house off in the distance.
+~
+E
 house~
 Through the crack you see an inflamed house.  Screams and laughter come from
 within.
-~
-E
-crack~
-A very large crack in the wall gives view to a house off in the distance.
 ~
 S
 #2922
@@ -654,6 +654,10 @@ ancient temple.  You could either enter one of these or you could leave
 this place by going back south.
 ~
 29 9 0
+D0
+~
+~
+0 -1 2934
 D1
 You see a fire newt temple.
 ~
@@ -690,14 +694,14 @@ You see a waiting room.
 ~
 0 0 2925
 E
-engravings~
-Many engravings on the walls depict fire newt battles.  The fire newts take
-great pride in every battle which has been won no matter how big or small.
-~
-E
 ceiling~
 This blackened ceiling is charred and burned.  Steam and sulfuric acid traces
 are stained on it.
+~
+E
+engravings~
+Many engravings on the walls depict fire newt battles.  The fire newts take
+great pride in every battle which has been won no matter how big or small.
 ~
 S
 #2925
@@ -742,18 +746,18 @@ You see the waiting room.
 door~
 1 0 2925
 E
-spikes~
-Large metal spikes are mounted on the walls.  Mounted upon them are many small
-heads which were received in battle.
+heads~
+Many small heads are posted upon the spikes here and most of them have been
+shrunken down to the size of a baseball.
 ~
 E
 stains~
 Many bloody stains are permanently bonded to the walls.
 ~
 E
-heads~
-Many small heads are posted upon the spikes here and most of them have been
-shrunken down to the size of a baseball.
+spikes~
+Large metal spikes are mounted on the walls.  Mounted upon them are many small
+heads which were received in battle.
 ~
 S
 #2927
@@ -778,9 +782,10 @@ You see the dark tunnel.
 ~
 0 0 2923
 E
-stalagmites~
-Large stalagmites point towards the ceiling from the ground and could be
-hazardous if you fell upon them.
+engravings~
+These are pictures of gargantuous lizards in battle with men wearing hooded
+robes. The men seem to have books in their hands and are using some sort of
+magic. The scenario seems to nearly come to life.
 ~
 E
 stalactites~
@@ -788,10 +793,9 @@ Large stalactites point towards the ground from the ceiling as water slowly
 drips from their tips.
 ~
 E
-engravings~
-These are pictures of gargantuous lizards in battle with men wearing hooded
-robes. The men seem to have books in their hands and are using some sort of
-magic. The scenario seems to nearly come to life.
+stalagmites~
+Large stalagmites point towards the ceiling from the ground and could be
+hazardous if you fell upon them.
 ~
 S
 #2928
@@ -815,9 +819,9 @@ You see the outside of the temple.
 ~
 0 0 2927
 E
-door~
-This enormous door is made from iron.  It looks extremely heavy for it is
-about 20 feet tall and probably several feet thick.
+beams~
+The beams hold up the entire temple.  Without the beams the temple and most
+likely the whole mountain would collapse.
 ~
 E
 engravings~
@@ -826,9 +830,9 @@ themselves but rather of after the battles while the fire newts dragged their
 dead victims behind their chariots of fire.
 ~
 E
-beams~
-The beams hold up the entire temple.  Without the beams the temple and most
-likely the whole mountain would collapse.
+door~
+This enormous door is made from iron.  It looks extremely heavy for it is
+about 20 feet tall and probably several feet thick.
 ~
 S
 #2929
@@ -852,14 +856,14 @@ You see a large trap door.
 ~
 0 0 2930
 E
-door~
-The door to the east through which you just entered creaks on its hinges and
-sends a draft into the room.  It looks very sturdy.
-~
-E
 torches~
 A few torches are burning here leaving you with a little light with which to
 see. They are dim yet somewhat effective.
+~
+E
+door~
+The door to the east through which you just entered creaks on its hinges and
+sends a draft into the room.  It looks very sturdy.
 ~
 S
 #2930
@@ -914,14 +918,14 @@ You see two large doors.
 doors~
 1 2917 2930
 E
-hole~
-The hole to the north is just small enough through which to crawl.  You could
-take a chance if you so desired.
-~
-E
 doors~
 The ornate doors are very large and sturdy.  They are very finely built and
 wouldn't fall apart in a thousand centuries.
+~
+E
+hole~
+The hole to the north is just small enough through which to crawl.  You could
+take a chance if you so desired.
 ~
 S
 #2932
@@ -944,20 +948,9 @@ D5
 door~
 1 -1 2933
 E
-fire~
-The fire in the center of the island glows bright white.  It's so hot fusion
-must be occurring within.  However you still seem to be able to stand and
-watch it somehow...
-~
-E
-pool~
-This pool is made from sulfuric acid and the scent is just about killing you.
-You perish the though of falling in...
-~
-E
-path~
-A small path leads to the middle of the pool where the island sits.  Dancing
-in the middle of that island is a fire.  The path is made of sand and dirt.
+hole~
+The hole to the south is still small enough through which to crawl.  You may
+leave back if you'd like, and that might not be such a bad idea.
 ~
 E
 island~
@@ -965,9 +958,20 @@ A small island in the center of the room seems to call your name.  A small
 fire burns in the middle of it.
 ~
 E
-hole~
-The hole to the south is still small enough through which to crawl.  You may
-leave back if you'd like, and that might not be such a bad idea.
+path~
+A small path leads to the middle of the pool where the island sits.  Dancing
+in the middle of that island is a fire.  The path is made of sand and dirt.
+~
+E
+pool~
+This pool is made from sulfuric acid and the scent is just about killing you.
+You perish the though of falling in...
+~
+E
+fire~
+The fire in the center of the island glows bright white.  It's so hot fusion
+must be occurring within.  However you still seem to be able to stand and
+watch it somehow...
 ~
 S
 #2933
@@ -991,6 +995,1098 @@ chandelier~
 This is a diamond chandelier that would be worth a fortune if you could reach
 it. It is very pretty.
 ~
+S
+#2934
+Sealed Off Tunnel Entrance~
+  A previously sealed off tunnel covered in dust stretches out around you. 
+Rocks lay strewn across the floor though they haven't been disturbed in what
+seems like a long time. The room is hot and humid, the air stale 
+and funny tasting. The Tunnel continues on straight ahead and also branches 
+to the side.
+~
+29 77 0
+D0
+~
+~
+0 -1 2935
+D2
+~
+~
+0 -1 2923
+S
+#2935
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D0
+~
+~
+0 -1 2936
+D2
+~
+~
+0 -1 2934
+D3
+~
+~
+0 -1 2939
+S
+#2936
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D0
+~
+~
+0 -1 2937
+D2
+~
+~
+0 -1 2935
+S
+#2937
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D0
+~
+~
+0 -1 2938
+D2
+~
+~
+0 -1 2936
+S
+#2938
+Crusted Lava Dead End~
+  A solid wall of solidified magma marks the end of your path forward. The 
+rough and jagged edges of the tunnel melt into a smooth blob of magma
+at the end.  Random rocks jut from the wall and cooled magma has formed
+large smooth blobs on the ground. The air is not as stale as the tunnel
+and allows for a brief respite from the stale air.
+~
+29 9 0
+D2
+~
+~
+0 -1 2937
+S
+#2939
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
+~
+29 9 0
+D0
+~
+~
+0 -1 2940
+D1
+~
+~
+0 -1 2935
+S
+#2940
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
+~
+29 9 0
+D2
+~
+~
+0 -1 2939
+D3
+~
+~
+0 -1 2941
+S
+#2941
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
+~
+29 9 0
+D0
+~
+~
+0 -1 2942
+D1
+~
+~
+0 -1 2940
+S
+#2942
+Pulsating Lava Tunnel~
+  The walls of this tunnel bow in and out as you move through them. You can
+feel the intense heat from the walls and the air is quite hard to breath.
+Small trickles of lava can be seen breaking through small cracks and yet
+the tunnel does not break completely.  The walls are mostly smooth, yet
+glow with an intense red and orange light. Any moisture seems to sizzle 
+away as it meets the walls.
+~
+29 9 0
+D2
+~
+~
+0 -1 2941
+D3
+~
+~
+0 -1 2943
+S
+#2943
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D1
+~
+~
+0 -1 2942
+D2
+~
+~
+0 -1 2944
+D5
+~
+~
+0 -1 2947
+S
+#2944
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D0
+~
+~
+0 -1 2943
+D2
+~
+~
+0 -1 2945
+S
+#2945
+Crusted Lava Tunnel~
+  Partially flowing lava can be seen in the walls of the tunnel. Its' surface
+has partially cooled leaving jagged edges and small pockets of molten rock
+casting light into the tunnel. Although lava can be seen, there is a slight
+breeze coming from somewhere else in the mountain.
+~
+29 9 0
+D0
+~
+~
+0 -1 2944
+D2
+~
+~
+0 -1 2946
+S
+#2946
+Crusted Lava Dead End~
+  A solid wall of solidified magma marks the end of your path forward. The 
+rough and jagged edges of the tunnel melt into a smooth blob of magma
+at the end.  Random rocks jut from the wall and cooled magma has formed
+large smooth blobs on the ground. The air is not as stale as the tunnel
+and allows for a brief respite from the stale air.
+~
+29 9 0
+D0
+~
+~
+0 -1 2945
+S
+#2947
+Deeper Into The Volcano~
+  A solid rock passageway extends down, deeper into the volcano. The lava
+flowing behind the walls has solidified further, allowing very little light
+and heat to escape. The breeze continues to be a calm cooling presence
+as you descend further.
+~
+29 77 0
+D0
+~
+~
+0 -1 2948
+D4
+~
+~
+0 -1 2943
+S
+#2948
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
+~
+29 9 0
+D0
+~
+~
+0 -1 2952
+D1
+~
+~
+0 -1 2949
+D2
+~
+~
+0 -1 2947
+S
+#2949
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
+~
+29 9 0
+D1
+~
+~
+0 -1 2950
+D3
+~
+~
+0 -1 2948
+S
+#2950
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
+~
+29 9 0
+D1
+~
+~
+0 -1 2951
+D3
+~
+~
+0 -1 2949
+S
+#2951
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
+~
+29 9 0
+D3
+~
+~
+0 -1 2950
+S
+#2952
+Partially Cooling Lava Tunnel~
+  The lava from the volcano streams down the wall forming many streaks
+of molten rock and metals. They criss cross the walls and floor making
+movement treacherous. Random spots and splotches of the wall have begun
+the cooling process, crusting over and preventing the lava from going
+further. 
+~
+29 9 0
+D0
+~
+~
+0 -1 2953
+D2
+~
+~
+0 -1 2948
+S
+#2953
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D0
+~
+~
+0 -1 2954
+D1
+~
+~
+0 -1 2956
+D2
+~
+~
+0 -1 2952
+S
+#2954
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D0
+~
+~
+0 -1 2955
+D2
+~
+~
+0 -1 2953
+S
+#2955
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D1
+~
+~
+0 -1 2957
+D2
+~
+~
+0 -1 2954
+S
+#2956
+Solidified Lava Tunnel Outcropping~
+  A small room off to the side of the tunnel filled with random garbage.
+The newts that inhabit this level cast aside their scales and other
+junk into this room. The walls are still jagged and warm, but are also
+covered in many random gouges and scratches. The rocks are great for 
+sharpening your weapons and evidence of ash sits on the ground.
+~
+29 9 0
+D3
+~
+~
+0 -1 2953
+S
+#2957
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D1
+~
+~
+0 -1 2958
+D3
+~
+~
+0 -1 2955
+S
+#2958
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D1
+~
+~
+0 -1 2959
+D3
+~
+~
+0 -1 2957
+S
+#2959
+Solidified Lava Tunnel~
+  The lava has now completely cooled and the walls are now just rock. The 
+walls are still warm to the touch but nothing that would cause a burn. 
+Sections are even more jagged as lava dripped from the ceiling, and formed
+razor sharp edges along sections of the wall. Other parts are quite smooth
+and feel soothing to lean against.
+~
+29 9 0
+D3
+~
+~
+0 -1 2958
+D5
+~
+~
+0 -1 2960
+S
+#2960
+Even Deeper Into The Volcano~
+  Another solid rock passage way extends down once again, almost calling
+you towards the center of the earth. The walls are more smooth, 
+with the jagged edges disappearing almost completely. As you near the end
+of the tunnel, there is a warm glow of light, giving a start contrast 
+against the darker tunnel.
+~
+29 77 0
+D0
+~
+~
+0 -1 2961
+D4
+~
+~
+0 -1 2959
+S
+#2961
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D0
+~
+~
+0 -1 2962
+D2
+~
+~
+0 -1 2960
+S
+#2962
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D1
+~
+~
+0 -1 2963
+D2
+~
+~
+0 -1 2961
+D3
+~
+~
+0 -1 2965
+S
+#2963
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D0
+~
+~
+0 -1 2964
+D3
+~
+~
+0 -1 2962
+S
+#2964
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D2
+~
+~
+0 -1 2963
+S
+#2965
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D0
+~
+~
+0 -1 2966
+D1
+~
+~
+0 -1 2962
+S
+#2966
+Crystallized Magma Tunnel~
+  The rock walls have now been converted to glowing crystal clusters and
+larger singular crystals can be seen in random increments. Their warm 
+glow grows brighter as you continue along the tunnel. The tunnel has 
+smoothed out even more, with no jagged edges or protrusions along the 
+wall. The crystals are clear and glow in soft shades of yellow, white 
+and gold. 
+~
+29 9 0
+D2
+~
+~
+0 -1 2965
+D3
+~
+~
+0 -1 2967
+D5
+~
+~
+0 -1 2973
+S
+#2967
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D1
+~
+~
+0 -1 2966
+D2
+~
+~
+0 -1 2968
+S
+#2968
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D0
+~
+~
+0 -1 2967
+D3
+~
+~
+0 -1 2970
+S
+#2969
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D0
+~
+~
+0 -1 2970
+S
+#2970
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D1
+~
+~
+0 -1 2968
+D2
+~
+~
+0 -1 2969
+D3
+~
+~
+0 -1 2971
+S
+#2971
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D0
+~
+~
+0 -1 2972
+D1
+~
+~
+0 -1 2970
+S
+#2972
+Jagged Crystal Tunnel~
+  The crystals have grown in size and density. As they descend from the
+ceiling and jut up from the floor, they fill the large tunnel from all
+sides. The multi colored crystals reflect and refract all light sources
+and fill the tunnel with a plethora of beautiful colors.
+~
+29 9 0
+D2
+~
+~
+0 -1 2971
+S
+#2973
+Very Far Under The Volcano~
+  An all too familiar site appears again as yet another solid rock
+tunnel descends further and further down into the earth. The true 
+size and scope of this volcano is immense. As you approach the end
+the tunnel opens up into a giant dome that is much larger than the 
+tunnels you have passed through.
+~
+29 77 0
+D0
+~
+~
+0 -1 2974
+D4
+~
+~
+0 -1 2966
+S
+#2974
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D0
+~
+~
+0 -1 2975
+D2
+~
+~
+0 -1 2973
+S
+#2975
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D0
+~
+~
+0 -1 2976
+D2
+~
+~
+0 -1 2974
+S
+#2976
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D0
+~
+~
+0 -1 2977
+D2
+~
+~
+0 -1 2975
+S
+#2977
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D0
+~
+~
+0 -1 2978
+D2
+~
+~
+0 -1 2976
+S
+#2978
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D0
+~
+~
+0 -1 2979
+D2
+~
+~
+0 -1 2977
+S
+#2979
+A Geodesic Dome~
+  A massive cavern ascends up into the blackness. The roof of the dome
+is so high that it can't be seen from the ground. The Crystal's seen 
+earlier are now appearing in much larger clumps and are much larger in
+size, going from the size of a sword to the size of small trees.
+~
+29 9 0
+D1
+~
+~
+0 -1 2980
+D2
+~
+~
+0 -1 2978
+D3
+~
+~
+0 -1 2983
+D5
+~
+~
+0 -1 2986
+S
+#2980
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
+~
+29 9 0
+D1
+~
+~
+0 -1 2981
+D3
+~
+~
+0 -1 2979
+S
+#2981
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
+~
+29 9 0
+D1
+~
+~
+0 -1 2982
+D3
+~
+~
+0 -1 2980
+S
+#2982
+Eastern Cavernous Path~
+  The cavernous path to the east is more narrow and compact relative
+to the rest of the dome you have just come through. The ceiling is still 
+out of reach but is much closer, and the finer details of the rocks, 
+metals and gemstones embedded into the rock. Giant Lizards roam slowly 
+and methodically through the tunnels, gently rubbing against the walls
+for warmth and comfort.
+~
+29 9 0
+D3
+~
+~
+0 -1 2981
+S
+#2983
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
+~
+29 9 0
+D1
+~
+~
+0 -1 2979
+D3
+~
+~
+0 -1 2984
+S
+#2984
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
+~
+29 9 0
+D1
+~
+~
+0 -1 2983
+D3
+~
+~
+0 -1 2985
+S
+#2985
+Western Cavernous Path~
+  The cavernous path to the west is large, the ceiling extends
+high above your head. Small rivulets of lava can be seen on the walls
+helping to provide illumination to the massive rocks, boulders, and
+other protrusions. The ground is cracked yet firm and the only
+signs of life are the giant lizards that roam the tunnels.  
+~
+29 9 0
+D1
+~
+~
+0 -1 2984
+S
+#2986
+A Copper and Nickel Channel~
+  The dome converges to a more narrow tunnel made completely out of
+nickel and copper ore.  Its colors run in large veins throughout its 
+length and provide a unique ambiance to the room. The tunnel is rough 
+but nothing that is threatening. This room alone would be worth mountains
+of gold.
+~
+29 77 0
+D0
+~
+~
+0 -1 2987
+D4
+~
+~
+0 -1 2979
+S
+#2987
+Path to the Fire Newt Temple~
+  A simplistic stone temple extends about twenty feet into the air. The stone
+pillars are carved with runes and pictures displaying fire, large wings
+extended from numerous different lizards and newts. Other outlines have 
+been burned into the rock and ash can see resting on the floor. The ground
+around the temple has random plant life sprouting up between the hardened 
+rock and other minerals. 
+~
+29 77 0
+D1
+~
+~
+0 -1 2988
+D2
+~
+~
+0 -1 2986
+S
+#2988
+Path to the Fire Newt Temple~
+  A simplistic stone temple extends about twenty feet into the air. The stone
+pillars are carved with runes and pictures displaying fire, large wings
+extended from numerous different lizards and newts. Other outlines have 
+been burned into the rock and ash can see resting on the floor. The ground
+around the temple has random plant life sprouting up between the hardened 
+rock and other minerals. 
+~
+29 77 0
+D0
+~
+~
+0 -1 2989
+D3
+~
+~
+0 -1 2987
+S
+#2989
+Fire Newt Temple Entrance~
+  The grand entrance to the temple has large stone pillars extending to 
+an open ceiling. Stones have been laid horizontally across the pillars
+forming crude archways. The temple is lightly lit by sparsely spaced 
+torches. There are two flows of lava that can be seen beneath clear
+crystal pathways. The flow of the lava leads further into the temple.
+~
+29 77 0
+D0
+~
+~
+0 -1 2990
+D2
+~
+~
+0 -1 2988
+S
+#2990
+A Dim Temple Courtyard~
+  The crystal walkway becomes larger allowing the light from the lava
+flows to illuminate the room.  No torches exist to show any of the 
+surrounding area. The walls of the temple disappear as you walk forward
+along the path. The ground is bumpy but still smooth allowing 
+for an unimpeded trip.  An altar can be seen in the distance
+with a large creature sitting next to it.
+~
+29 77 0
+D2
+~
+~
+0 -1 2989
+D3
+~
+~
+0 -1 2991
+S
+#2991
+A Lava Infused Path To The Altar~
+  The crystalline ground is broken up into fractal patterns as small
+streams of lava snake their way through the ground at your feet. Although
+the altar is uphill the lava still flows towards it. The air is hot, but
+not sweltering or heavy, breathing is easy and the environment is not
+punishing.
+~
+29 77 0
+D0
+~
+~
+0 -1 2992
+D1
+~
+~
+0 -1 2990
+S
+#2992
+A Lava Infused Path To The Altar~
+  The crystalline ground is broken up into fractal patterns as small
+streams of lava snake their way through the ground at your feet. Although
+the altar is uphill the lava still flows towards it. The air is hot, but
+not sweltering or heavy, breathing is easy and the environment is not
+punishing.
+~
+29 77 0
+D0
+~
+~
+0 -1 2993
+D2
+~
+~
+0 -1 2991
+S
+#2993
+The Fake Fire Newt Altar~
+  The crude stone altar stands before you. Rising slightly off the ground
+it only stands about two feet tall.  Very little in terms of sacrifices 
+or offerings can be seen, except for a few random chunks of flesh and some
+plant life. A large fat newt sits next to the altar covered in a poorly
+made robe. Is this really the god of the newts?
+~
+29 9 0
+D1
+~
+~
+0 -1 2994
+D2
+~
+~
+0 -1 2992
+S
+#2994
+The True Fire Newt Altar~
+  This altar is covered in copper and nickel, making it shiny and durable.
+Other precious metals are inlaid in the alter, adding to the riches on 
+display in the room. Multiple iron rods extend up from the floor with large 
+flaming torches constantly burning at the top. The obsidian floor has 
+multiple layers as lava has been heated and cooled multiple times over
+its incredibly long lifespan.
+~
+29 9 0
+D3
+~
+~
+0 -1 2993
 S
 #2999
 A temporary name~

@@ -41,8 +41,8 @@ vile things coming from the boundary.  He rules with an
 honest and just hand.
 ~
 33570890 134252712 -350 Y
-60 -29 -17 40d115+37000 7d7+830
-10000000 7000000
+60 -36 -17 40d115+77000 7d7+830
+10000000 19000000
 8 8 1
 69 0 1d1+1 0
 0 0 0 0
@@ -75,7 +75,7 @@ does not want to be seen, then he is not
 ~
 16458 335579304 0 Y
 55 -20 -13 60d40+14000 6d4+350
-250000 1500000
+250000 3600000
 8 8 1
 69 0 1d1+1 0
 0 0 0 0
@@ -206,14 +206,14 @@ moving; his guard is always up, and you have no chance of catching
 him off it.
 ~
 8 268437632 0 Y
-58 -24 14 1d1+36000 6d6+680
-8500000 4000000
+58 -35 14 1d1+72000 6d6+680
+10000000 18000000
 8 8 1
-4 0 1d1+1 3
+4 939529096 1d1+1 3
 4 2 45 0
 2 3 60 0
 3 1 50 0
-0 0 9 0
+0 0 9 128
 R
 4
 K
@@ -226,8 +226,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+17000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
@@ -241,8 +241,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+16000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
@@ -256,8 +256,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+15000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
@@ -271,8 +271,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+12000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
@@ -286,8 +286,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+14000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
@@ -301,8 +301,8 @@ The Hartland Town Patrol is on the move!
 A grizzled veteran of the field, now protects his town from the evils beyond.
 ~
 74 268445696 250 Y
-55 -14 -6 50d40+8000 4d4+170
-100000 1500000
+55 -14 -6 50d40+13000 4d4+170
+100000 2000000
 8 8 1
 0 0 1d1+1 0
 0 1 0 0
