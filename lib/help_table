@@ -4004,18 +4004,18 @@ you will not attack you.  No one can steal from you.
 If you are magically attacked by something the same level as you, you have
 a 50% chance of blocking the attack.  This includes attacks of fire, cold,
 electricity, acid, etc. For every level the attacker is above you, your
-chance of blocking decreases by 5%.  For every level the attacker is below
-you, your chance of blocking increases by 5%. If the attacker is 10 levels
-above you, your sphere is useless, and if the attacker is 10 levels below you,
+chance of blocking decreases by 1%.  For every level the attacker is below
+you, your chance of blocking increases by 1%. If the attacker is 50 levels
+above you, your sphere is useless, and if the attacker is 50 levels below you,
 your sphere in impenetrable.
 
 Classes get percentage bonus or percentage penalties against sphere as follows.
 
-   Cleric        -5             Nomad        -10
-   Magic User   +10             Paladin       -5
+   Cleric        +5             Nomad        -10
+   Magic User   +10             Paladin        0
    Warrior      -10             Anti-Paladin  +5
-   Thief        -10             Bard           0
-   Ninja         -5             Commando      +5
+   Thief        -10             Bard          +5
+   Ninja          0             Commando      +5
 
 See Also: INVULNERABILITY
 #
@@ -4034,18 +4034,18 @@ monster that is 5 levels lower than you will not attack you.
 If you are physically attacked by something the same level as you, you have
 a 50% chance of blocking the attack.  This includes all skills such as
 bash, pummel, assault, circle, etc. For every level the attacker is above
-you, your chance of blocking decreases by 5%.  For every level the attacker
-is below you, your chance of blocking increases by 5%. If the attacker is
-10 levels above you, your sphere is useless, and if the attacker is 10 levels
+you, your chance of blocking decreases by 1%.  For every level the attacker
+is below you, your chance of blocking increases by 1%. If the attacker is
+50 levels above you, your sphere is useless, and if the attacker is 50 levels
 below you, your sphere in impenetrable.
 
 Classes get percentage bonus or percentage penalties against invulnerability as
 follows:
 
-   Cleric       -10             Nomad         +5
+   Cleric        -5             Nomad         +5
    Magic User   -10             Paladin       +5
    Warrior      +10             Anti-Paladin  +5
-   Thief        +10             Bard          +5
+   Thief        +10             Bard           0
    Ninja         +5             Commando      +5
 
 See Also: SPHERE
