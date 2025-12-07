@@ -4042,7 +4042,7 @@ below you, your sphere in impenetrable.
 Classes get percentage bonus or percentage penalties against invulnerability as
 follows:
 
-   Cleric        -6             Nomad         +5
+   Cleric        -5             Nomad         +5
    Magic User   -10             Paladin       +5
    Warrior      +10             Anti-Paladin  +5
    Thief        +10             Bard           0
