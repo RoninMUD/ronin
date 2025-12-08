@@ -186,9 +186,6 @@ int getCurrentMonth()
 	return month;
 }
 
-
-
-
 /* Teleport players into one of the elemental canyon zones randomly. */
 int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 	
@@ -268,8 +265,8 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 		  return FALSE;		  
 	  }
 
-      for (CHAR *tel_ch = world[CHAR_REAL_ROOM(ch)].people, *tel_next = NULL; tel_ch; tel_ch = tel_next) {
-        tel_next = tel_ch->next_in_room;
+      for (CHAR *tel_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *tel_next = NULL; tel_ch; tel_ch = tel_next) {
+        tel_next = CHAR_NEXT_IN_ROOM(tel_ch);
 
         if (IS_NPC(tel_ch)) continue;
 
@@ -391,9 +388,9 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -600,9 +597,9 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -675,8 +672,6 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			give_back = TRUE;
         }
 
-        
-
         if (give_back)
         {
 
@@ -687,10 +682,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
             return TRUE;
         }
 		
-		
-		
 		return TRUE;
-		
 		
     }
 
@@ -733,9 +725,9 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -762,7 +754,6 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -832,9 +823,9 @@ int blackmarket_mime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -931,9 +922,9 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -1029,9 +1020,9 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -1058,7 +1049,6 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -1100,8 +1090,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     char buf[MIL];
     bool give_back = FALSE;
-    /*Don't waste any more CPU time if no one is in the room. */
-    // if (count_mortals_room(mob, TRUE) < 1) return FALSE;
 
     // Have the vendor talk.
     if (cmd == MSG_TICK)
@@ -1133,9 +1121,9 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -1162,7 +1150,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -1282,12 +1269,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         if (!ch || IS_NPC(ch))
             return FALSE;
-
-        /* if (IS_IMMORTAL(ch)) {
-          send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
-
-          return TRUE;
-        }*/
 
         send_to_char("You can buy:\n\r", ch);
         int count = 0;
@@ -2097,7 +2078,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     case MSG_VIOLENCE:
 
-        for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room)
+        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = CHAR_NEXT_IN_ROOM(vict))
             if (vict->specials.fighting == mob)
                 stop_fighting(vict->specials.fighting);
         stop_fighting(mob);
@@ -2181,10 +2162,7 @@ Each slime has a chance to drop an item on death.
 
 Salute the huntress to get a recipe.  The recipe item will summon 1 of 4 boss slimes.
 
-
-
 */
-
 
 int metal_slime_fight_curse_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg)
 {
@@ -2282,9 +2260,6 @@ int metal_slime_curse_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *a
 		
 	}
 	
-	
-	
-	
     return FALSE;
 
 }
@@ -2330,9 +2305,9 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Each Case statement that has an action needs to break out at the end.
 			
 			
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 			
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
@@ -2366,9 +2341,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 						Liquid Metal Slime - Bathes the room in liquid metal
 						Metal King Slime - Body Slam and Stun or knocked out of fight. 
 						Metal Dragon Slime - Breath of Fire
-					
 					*/
-			
 			
 				if (V_MOB(mob) == metal_slime_number)
 				{
@@ -2385,9 +2358,9 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				else if (V_MOB(mob) == liquid_metal_slime_number)
 				{
 					act("$N sprays liquid metal into the room", 0, mob, 0, vict, TO_VICT);
-					for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+					for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 					{
-						next_vict = vict->next_in_room;
+						next_vict = CHAR_NEXT_IN_ROOM(vict);
 						if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 							continue;
 						act("A large stream of liquid metal burns you .", 0, mob, 0, vict, TO_VICT);
@@ -2422,9 +2395,9 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				else if (V_MOB(mob) == metal_dragon_number)
 				{
 					act("$N sprays flaming liquid metal into the room", 0, mob, 0, vict, TO_VICT);
-					for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+					for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 					{
-						next_vict = vict->next_in_room;
+						next_vict = CHAR_NEXT_IN_ROOM(vict);
 						if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 							continue;
 						act("A large stream of flaming liquid metal burns you.", 0, mob, 0, vict, TO_VICT);
@@ -2454,9 +2427,9 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
 				
@@ -2536,19 +2509,12 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				return TRUE;
 			}		
 			break;
-		
-		
-		
-		
-		
     }
 
     return FALSE;
 }
 
-
 //Functions to Spawn and Check for Slimes
-
 
 // See if all the loot goblins are dead.  If they are - on death, spawn the 4 lieutenants.
 // Return TRUE if all dead.
@@ -2584,9 +2550,6 @@ bool check_for_metal_slimes()
 
     return allDead;
 }
-
-
-
 
 // Use the same code of Teleport to spawn 30 goblins into the world.
 void spawn_metal_slimes(int max_slimes)
@@ -2638,12 +2601,10 @@ void spawn_metal_slimes(int max_slimes)
     }
 }
 
-
 /*
 XP Quest NPC.
 
 Not only starts the quest, but provides the recipes to summon elite XP mobs.
-
 */
 
 int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
@@ -2756,7 +2717,7 @@ int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     case MSG_VIOLENCE:
 
-        for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room)
+        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = CHAR_NEXT_IN_ROOM(vict))
             if (vict->specials.fighting == mob)
                 stop_fighting(vict->specials.fighting);
         stop_fighting(mob);
@@ -2771,7 +2732,6 @@ int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 		
 		/*
 		
@@ -2963,12 +2923,11 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
         if (mob->specials.fighting)
         {
             // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
-            // Each Case statement that has an action needs to break out at the end.
+            // Each Case statement that has an action needs to break out at the end.			
 			
-			
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 			
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
@@ -2999,9 +2958,9 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 2:
                 act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3038,16 +2997,14 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 5: 
 				act("$n shoots fragments of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
 					act("A fragment of liquid metal hits you hard.", 0, mob, 0, vict, TO_VICT);
 					damage(mob, vict, number(350,700), TYPE_UNDEFINED, DAM_PHYSICAL);
-						
-					
                 }
                 break;
             default:
@@ -3065,9 +3022,9 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
 				
@@ -3089,13 +3046,10 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				
 			}
 			
-			
 			break;
     }
 
     return FALSE;
-
-
 }
 
 int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
@@ -3125,9 +3079,9 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Each Case statement that has an action needs to break out at the end.
 			
 			
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 			
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
@@ -3158,9 +3112,9 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 2:
                 act("$n summons tendrils of liquid mercury.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3198,9 +3152,9 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 5: 
 				act("$n pulses and and detects the energy in the room.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3236,9 +3190,9 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
 				
@@ -3262,10 +3216,7 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			
 			break;
     }
-
     return FALSE;
-
-
 }
 
 //Summons Obsidian Slimes 
@@ -3283,7 +3234,6 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	
 	CHAR * tiny_slime;
 	
-
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1)
         return FALSE;
@@ -3301,9 +3251,9 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Each Case statement that has an action needs to break out at the end.
 			
 			
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 			
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
@@ -3348,9 +3298,9 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 2:
                 act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3382,8 +3332,8 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 5: 
 				if ( chance (20) )
 				  act("$n shoots numerous strands of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
-				for( vict = world[CHAR_REAL_ROOM(mob)].people; vict ; vict = next_vict ) {
-				  next_vict = vict->next_in_room;
+				for( vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict ; vict = next_vict ) {
+				  next_vict = CHAR_NEXT_IN_ROOM(vict);
 				  if(vict != mob && EQ(vict, WIELD) && IS_MORTAL(vict)) {
 					act("The strand of liquid metal knocks your weapon out of your hand.", 1, mob, 0, vict, TO_VICT);
 					obj_to_char( unequip_char(vict, WIELD), vict );
@@ -3404,9 +3354,9 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			mob_aq_reward(reward, mob);
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
 				
@@ -3432,9 +3382,7 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     return FALSE;
 
-
 }
-
 
 int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
@@ -3463,9 +3411,9 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Each Case statement that has an action needs to break out at the end.
 			
 			
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 			
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
@@ -3501,9 +3449,9 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 2:
                 act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3534,9 +3482,9 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 5: 
 				act("$n shoots fragments of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -3574,9 +3522,9 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			mob_aq_reward(reward, mob);
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
-			for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 					continue;
 				
