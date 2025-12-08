@@ -81,7 +81,7 @@ void do_quest(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_QUEST);
+  communicate(ch, arg, COMM_QUEST,0);
 }
 
 #define FUNCT_WHERE      1

@@ -87,6 +87,7 @@ int signal_object(struct obj_data *obj, struct char_data *signaler, int cmd, cha
 #define COMM_ACT_HIDE_SUPERBRF 2
 #define COMM_ACT_HIDE_NON_MORT 4 // Overrides CANT_SEE if combined with it.
 #define COMM_ACT_HIDE_PRETITLE 8
+#define COMM_ACT_HIDE_IMMORTAL 16
 
 int write_to_descriptor(int desc, char *txt);
 void write_to_q(char *txt, struct txt_q *queue);
