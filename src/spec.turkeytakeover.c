@@ -176,9 +176,6 @@ int turkeytakeover_issac(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	//If Not Month of November, dont spam anything.
 	if (isThanksgiving == FALSE) return FALSE;
 	
-    /*Don't waste any more CPU time if no one is in the room. */
-    //if (count_mortals_room(mob, TRUE) < 1) return FALSE;
-	
     //Have the vendor talk.
     if (cmd == MSG_TICK)
     {
@@ -438,9 +435,9 @@ int turkeytakeover_summons(CHAR *mob, CHAR *ch, int cmd, char *arg)
             //Have the summons attack the turkey
             if (!mob->specials.fighting)
             {
-                for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_victim)
+                for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_victim)
                 {
-                    next_victim = victim->next_in_room;
+                    next_victim = CHAR_NEXT_IN_ROOM(victim);
 
                     if (V_MOB(victim) == TURKEY_TERROR)
                     {
@@ -477,9 +474,9 @@ int turkeytakeover_army(CHAR *mob, CHAR *ch, int cmd, char *arg)
             //Have the summons attack the turkey
             if (!mob->specials.fighting)
             {
-                for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_victim)
+                for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_victim)
                 {
-                    next_victim = victim->next_in_room;
+                    next_victim = CHAR_NEXT_IN_ROOM(victim);
 
                     //If the pilgrim attacks.
                     if ((IS_PILGRIM_ARMY(mob) && IS_TURKEY_ARMY(victim)))
@@ -547,9 +544,9 @@ void purge_turkey_takeover(CHAR *mob, bool loadRewards)
 
     for (i = ZONE_BOTTOM; i <= ZONE_TOP; i++)
     {
-        for (vict = world[real_room(i)].people; vict; vict = next_v)
+        for (vict = ROOM_PEOPLE(real_room(i)); vict; vict = next_v)
         {
-            next_v = vict->next_in_room;
+            next_v = CHAR_NEXT_IN_ROOM(vict);
 
             //You have to ignore the king that died or else it will fail.
             //Check against the mob passed in.
@@ -632,9 +629,9 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
         case MSG_MOBACT:
             //Send All Players back to town so they arent fighting.
 			
-            for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+            for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
             {
-                next_vict = vict->next_in_room;
+                next_vict = CHAR_NEXT_IN_ROOM(vict);
 
                 //Only teleport mortals.
                 if (!IS_MORTAL(vict)) continue;
@@ -656,9 +653,9 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 {
                     case 0:
                         act("$n flaps his wings as rays of dark light hit everyone.", 0, mob, 0, 0, TO_ROOM);
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_vict)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_vict)
                         {
-                            next_vict = victim->next_in_room;
+                            next_vict = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_NPC(victim))
                             {
                                 damage(mob, victim, 9000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -671,9 +668,9 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
                     case 2:
                     case 3:
                         act("$n pecks everyone in the room.", 0, mob, 0, 0, TO_ROOM);
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_vict)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_vict)
                         {
-                            next_vict = victim->next_in_room;
+                            next_vict = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_NPC(victim))
                             {
                                 damage(mob, victim, 6000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -685,9 +682,9 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
                         break;
                     case 5:
                         act("$n scarifices his own health to harm its enemies.", 0, mob, 0, 0, TO_ROOM);
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_vict)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_vict)
                         {
-                            next_vict = victim->next_in_room;
+                            next_vict = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_NPC(victim))
                             {
                                 damage(mob, victim, 20000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -761,7 +758,7 @@ int turkeytakeover_gobbles(CHAR *mob, CHAR *ch, int cmd, char *arg)
             break;
 
         case MSG_DIE:
-			do_shout(mob, "Curse you pilgrims.  Ill come back.......", CMD_SHOUT);
+			do_shout(mob, "Curse you pilgrims.  I'll come back.......", CMD_SHOUT);
             purge_turkey_takeover(mob, TRUE);
 
             break;
@@ -848,9 +845,9 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                     case 0:
                         act("$n grabs his spear and spins in a circle.", 0, mob, 0, 0, TO_ROOM);
 
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_victim)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_victim)
                         {
-                            next_victim = victim->next_in_room;
+                            next_victim = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_TURKEY_ARMY(victim))
                             {
                                 damage(mob, victim, 16000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -866,9 +863,9 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                         break;
                     case 3:
                         act("$n deflects the turkies attacks back at them.", 0, mob, 0, 0, TO_ROOM);
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_victim)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_victim)
                         {
-                            next_victim = victim->next_in_room;
+                            next_victim = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_TURKEY_ARMY(victim))
                             {
                                 damage(mob, victim, 9000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -879,9 +876,9 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
                     case 4:
                     case 5:
                         act("$n calls upon the gods to banish the turkies.", 0, mob, 0, 0, TO_ROOM);
-                        for (victim = world[CHAR_REAL_ROOM(mob)].people; victim; victim = next_victim)
+                        for (victim = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); victim; victim = next_victim)
                         {
-                            next_victim = victim->next_in_room;
+                            next_victim = CHAR_NEXT_IN_ROOM(victim);
                             if (IS_TURKEY_ARMY(victim))
                             {
                                 damage(mob, victim, 30000, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -900,7 +897,7 @@ int turkeytakeover_pilgrimleader(CHAR *mob, CHAR *ch, int cmd, char *arg)
             //Check for Gobbles HP and Report the progress.
 			
 			
-			for (vict = world[real_room(TURKEY_PORTAL)].people; vict; vict = vict->next_in_room)
+			for (vict = ROOM_PEOPLE(real_room(TURKEY_PORTAL)); vict; vict = CHAR_NEXT_IN_ROOM(vict))
 			{
 				if (!IS_NPC(vict) || (V_MOB(vict) != TURKEY_TERROR))
 					continue;
