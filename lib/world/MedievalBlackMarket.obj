@@ -232,5 +232,387 @@ M
 ~
 ~
 ~
+#18013
+voucher event~
+Ronin Event Voucher~
+A shiny event voucher sits on the ground~
+~
+12 134217792 1
+0 0 0 0
+1 0 0
+0
+E
+voucher event~
+A voucher to thank you for participating in the seasonal events.
+
+Issued by the Black Market.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#18014
+core slime polished~
+Polished Slime Core~
+A polished slime core gleams on the ground~
+~
+12 134217731 1
+0 0 0 0
+2 15436 8444
+0
+E
+core slime polished~
+A tiny bead of hardened metal slime essence lies here, smoothed into flawless perfection.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18015
+droplet shiny~
+Shiny Droplet~
+A shiny droplet of liquid metal~
+~
+12 134217731 1
+0 0 0 0
+3 12972 12905
+0
+E
+droplet shiny~
+A single silver droplet sparkles with mirrored reflections, as if frozen at the moment a slime burst.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18016
+globule quickmelt~
+Quickmelt Globule~
+A globule of quickmelt slowly melts~
+~
+12 134217731 1
+0 0 0 0
+4 11456 7672
+0
+E
+globule quickmelt~
+A warm sphere of semi-liquid silver wobbles here, refusing to hold a solid shape for more than a heartbeat.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18017
+thread mercury~
+Mercury Thread~
+A long piece of thread made from mercury~
+~
+12 134217731 1
+0 0 0 0
+3 21562 9660
+0
+E
+thread mercury~
+A thin filament of flowing quicksilver coils softly, gliding through the air like a living piece of metal.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18018
+chunk alloy royal~
+Royal Alloy Chunk~
+A chunk of royal alloy~
+~
+12 134217731 1
+0 0 0 0
+2 15410 14153
+0
+E
+chunk alloy royal~
+A heavy, crown-shaped fragment of metal rests here, gleaming with unmistakable regal authority.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18019
+core king candescent~
+Kings Candescent Core~
+The candescent core of a metal king slime~
+~
+12 134217731 1
+0 0 0 0
+3 12725 13550
+0
+E
+core king candescent~
+This dense orb glows faintly from within, pulsing with the embers of a metallic kings lifeforce.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18020
+scale metal draconic~
+Draconic Metal Scale~
+A scale of liquid metal resembling a dragon's scale~
+~
+12 134217731 1
+0 0 0 0
+4 16407 14306
+0
+E
+scale metal draconic~
+A sharp silver scale forged from molten slime and draconic instinct glitters with razor-hard edges.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18021
+fang dragon chrome~
+Chrome Dragon Fang~
+A glowing fang of liquid metal sits on the ground~
+~
+12 134217731 1
+0 0 0 0
+4 22067 6616
+0
+E
+fang dragon chrome~
+A metallic fang, polished like a mirror yet sharp as a blade, lies here humming with residual energy.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18022
+crown steel liquid~
+Crown of Liquid Steel~
+A crown of liquid steel~
+~
+12 134217731 1
+0 0 0 0
+13 11832 8236
+0
+E
+crown steel liquid~
+A regal crown forged from molten silver drips endlessly, its shape fluxing like living metal though it remains perfectly intact.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18023
+mirror quicksilver emperor~
+Mirror of the Quicksilver Emperor~
+A foggy mirror of quicksilver~
+~
+12 134217731 1
+0 0 0 0
+12 14830 10501
+0
+E
+mirror quicksilver emperor~
+A polished plate of flowing silver forms a mirror that refuses to show a stable reflection, shifting as though alive.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18024
+keystone obsidian alloy~
+Obsidian Alloy Keystone~
+A chunk of pulsing obsidian alloy~
+~
+12 134217731 1
+0 0 0 0
+10 12761 12728
+0
+E
+keystone obsidian alloy~
+A jagged keystone forged from dark metal and draconic alloy pulses with violent energy, vibrating like a heartbeat.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18025
+sigil mercury temporal~
+Temporal Mercury Sigil~
+A sigil of mercury floats off the ground~
+~
+12 134217731 1
+0 0 0 0
+11 23684 7371
+0
+E
+sigil mercury temporal~
+A floating sigil carved into a suspended sheet of mercury loops endlessly through time, rewriting its runes as you watch.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18026
+scroll~
+Scroll of Liquid Sovereignty~
+A scroll titled Liquid Sovereignty~
+~
+32 403177475 1
+18022 18018 18019 18016
+1 23064 6516
+0
+E
+scroll~
+A tightly rolled scroll lies here, marked with flowing silver ink and the emblem of a molten crown.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18027
+scroll~
+Scroll of Reflected Dominion~
+A scroll labeled Reflected Dominion~
+~
+32 403177475 1
+18023 18017 18015 18014
+1 11588 12196
+0
+E
+scroll~
+A smooth silver parchment subtly ripples like a disturbed pond, its surface reflecting shapes that arent present.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18028
+scroll~
+Scroll of the Stonebound Forge~
+A heavy scroll marked Stonebound Forge~
+~
+32 403177475 1
+18024 18018 18020 18021
+1 22455 10087
+0
+E
+scroll~
+This thick scroll is reinforced with blackened metal and scale-lined edges, humming with brute forging power.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18029
+scroll~
+Scroll of the Eternal Current~
+A glowing scroll titled Eternal Current~
+~
+32 403177475 1
+18025 18019 18017 18014
+1 13581 6391
+0
+E
+scroll~
+A shimmering scroll pulses faintly, its silver ink shifting through patterns that seem to rewrite themselves.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#18030
+voucher aqp quest point~
+Ronin AQP Voucher~
+A voucher with the letters AQP on it sits gently on the ground.~
+~
+12 134217731 1
+0 0 0 0
+1 19809 9700
+0
+E
+voucher aqp quest point~
+A voucher for one AQP.
+
+Issued by the Black Market
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
 #0
 $~
