@@ -117,12 +117,12 @@ The QuestGiver glares intently, wanting to play a game.
 ~
 A blank of primal clay, waiting to be shaped.
 ~
-10 0 0 Y
+8 0 0 Y
 60 20 10 1d1+5000 1d1+0
 0 0
 8 8 0
 0 0 1d1+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18007
@@ -443,12 +443,12 @@ A tiny slime made of polished silver metal wobbles here, its
 surface reflecting every bit of light like a living mirror. 
 It trembles nervously, ready to dart away at the slightest threat.
 ~
-8 134217728 0 Y
+16392 134217728 0 Y
 55 -22 -30 10d10+14000 10d10+140
 0 14500000
 8 8 0
 98 0 10d10+200 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18026
@@ -460,12 +460,12 @@ A quick, mercury-slick slime ripples across the ground, its body
 flowing like a pool of molten silver struggling to hold shape. 
 Every movement sends a shimmer of light dancing across its shifting form.
 ~
-8 134217728 0 Y
+16392 134217728 0 Y
 58 -24 -30 10d10+14000 10d10+140
 0 14500000
 8 8 0
 98 0 10d10+200 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18027
@@ -478,12 +478,12 @@ tiny golden circlet perched proudly atop its polished bulk. Its
 weight makes the ground tremble as it jiggles with regal 
 authority, watching all intruders with uncanny intelligence.
 ~
-8 134217728 0 Y
+16392 134217728 0 Y
 62 -26 -30 10d10+14000 10d10+140
 0 14500000
 8 8 0
 98 0 10d10+200 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18028
@@ -496,12 +496,12 @@ sheen, its body forming draconic features that constantly shift and
 reform. Wings of reflective silver unfurl behind it, dripping molten 
 droplets that sizzle when they hit the stone.
 ~
-8 134217728 0 Y
+16392 134217728 0 Y
 66 -28 -30 10d10+14000 10d10+140
 0 14500000
 8 8 0
 98 0 10d10+200 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18029
@@ -514,12 +514,12 @@ with an ornate bow of polished alloy. Her movements are swift and
 precise, eyes scanning constantly for the telltale gleam of rare metal
 slimes. Every inch of her reflects the luminous sheen of her quarry.
 ~
-10 134219904 650 Y
+16394 134219904 650 Y
 70 -40 -30 1d1+450000 10d10+140
 0 0
 8 8 2
 72 0 1d1+15000 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18030
@@ -527,7 +527,12 @@ aurelion king lord liquid steel slime~
 King Aurelion, Lord of Liquid Steel~
 King Aurelion, Lord of Liquid Steel Wiggles Around
 ~
-A blank of primal clay, waiting to be shaped.
+A gargantuan metal king slime commands the chamber, its reflective
+body towering over you like a polished mountain. A crown of molten
+gold drips continuously yet never depletes, reforming itself atop
+his head. His voice booms like rolling thunder within a sealed 
+forge, and each pulse of his body sends shockwaves through the 
+metallic floor.
 ~
 74 134219776 0 Y
 70 -32 -30 60d60+98000 44d14+124
@@ -542,7 +547,11 @@ emperor quicksilver slime~
 The Quicksilver Emperor~
 The Quicksilver Emperor bobs back and forth
 ~
-A blank of primal clay, waiting to be shaped.
+A colossal humanoid figure of flowing silver dominates the
+area, shifting seamlessly between solid knight and amorphous
+slime. Long, liquid metal tendrils coil behind him like a cloak. 
+His face is expressionless yet powerful, and every step leaves 
+mirrored footprints that distort reality.
 ~
 74 134219776 0 Y
 70 -32 -30 60d60+98000 44d16+145
@@ -557,7 +566,11 @@ alloy obsidian breaker blades slime~
 Obsidian Alloy, Breaker of Blades~
 Obsidian Alloy, Breaker of Blades shifts back and forth
 ~
-A blank of primal clay, waiting to be shaped.
+Black metal plates jut from a swollen metallic body, each one swirling
+with a smoky sheen. Cracks of glowing silver pulse beneath the
+armor, giving it the appearance of living volcanic steel. Every 
+strike against Obsidian Alloy seems to rebound with doubled 
+force, as if the creature itself despises sharp weapons.
 ~
 74 134219776 0 Y
 70 -32 -30 60d60+98000 42d15+167
@@ -572,7 +585,11 @@ vyralux eternal mercury slime~
 Vyralux the Eternal Mercury~
 Vyralux the Eternal Mercury coalesces
 ~
-A blank of primal clay, waiting to be shaped.
+A vast orb of shimmering quicksilver levitates silently in the center
+of the room, casting distorted reflections across every surface. 
+Tendrils of liquid metal drift and curl like celestial ribbons, each 
+humming with ancient magic. The air around Vyralux is heavy and 
+slow, as though time itself bends to its will.
 ~
 74 134219776 0 Y
 70 -32 -30 60d60+98000 41d17+176
@@ -587,7 +604,12 @@ slime obsidian~
 Obsidian Slime~
 A tiny slime made of liquid of obsidian
 ~
-A blank of primal clay, waiting to be shaped.
+A mass of pitch-black slime heaves here, its surface hardened into 
+jagged obsidian plates that crack and reform with each sluggish 
+movement. Veins of molten silver glow faintly beneath the dark 
+shell, leaking heat and shadow with every pulse. The air around 
+the creature feels heavy and oppressive, as if its presence 
+alone weighs down the world.
 ~
 74 0 0 Y
 58 -28 -18 10d10+8000 10d10+575
