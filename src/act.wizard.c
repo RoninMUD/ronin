@@ -1753,19 +1753,19 @@ void do_system(struct char_data *ch, char *argument, int cmd) {
   if (BONUSAQP) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
   
-  send_to_char("DoubleSCP -- ",ch);
+  send_to_char("Double SCP -- ",ch);
   if (DOUBLESCP) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
   
-  send_to_char("DoubleSCP Value-- ",ch);
+  send_to_char("Double SCP Value-- ",ch);
   if (DOUBLESCPV) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
 
-  send_to_char("DoubleGold -- ",ch);
+  send_to_char("Double Gold -- ",ch);
   if (DOUBLEGOLD) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
   
-  send_to_char("BonusMeta -- ",ch);
+  send_to_char("Bonus Meta -- ",ch);
   if (BONUSMETA) send_to_char("Yes\n\r",ch);
   else send_to_char("No\n\r",ch);
 
@@ -2043,7 +2043,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
  
-   if(is_abbrev(arg,"bonusaqp") && GET_LEVEL(ch)>LEVEL_ETE) {
+  if(is_abbrev(arg,"bonusaqp") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (BONUSAQP == 0) {
       sprintf(buf,"`i***** BONUS AQP MODE ENABLED!! *****`q\n\r");
       BONUSAQP = 1;
@@ -2059,16 +2059,14 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
-   if(is_abbrev(arg,"doublescp") && GET_LEVEL(ch)>LEVEL_ETE) {
+  if(is_abbrev(arg,"doublescp") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (DOUBLESCP == 0) {
       sprintf(buf,"`i***** DOUBLE SCP MODE ENABLED!! *****`q\n\r");
       DOUBLESCP = 1;
 	  TOKENCOUNT=TOKENCOUNT*2;	  
-	  
 	  log_f("SUBLOG: Updating TOKENCOUNT to %d.", TOKENCOUNT);
-	  
+	  //Redistribute Tokens to match the new Token Count.   Dont rebuild the table.
 	  distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT, FALSE);
-	  
     }
     else {
       sprintf(buf,"`i***** DOUBLE SCP MODE DISABLED *****`q\n\r");	  
@@ -2083,7 +2081,7 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
- if(is_abbrev(arg,"doublescpv") && GET_LEVEL(ch)>LEVEL_ETE) {
+  if(is_abbrev(arg,"doublescpv") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (DOUBLESCPV == 0) {
       sprintf(buf,"`i***** DOUBLE SCP VALUE MODE ENABLED!! *****`q\n\r");
       DOUBLESCPV = 1;
@@ -2098,7 +2096,8 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
         act(buf,0,ch,0,e->character,TO_VICT);
     return;
   }
-   if(is_abbrev(arg,"doublegold") && GET_LEVEL(ch)>LEVEL_ETE) {
+  
+  if(is_abbrev(arg,"doublegold") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (DOUBLEGOLD == 0) {
       sprintf(buf,"`i***** DOUBLE GOLD MODE ENABLED!! *****`q\n\r");
       DOUBLEGOLD = 1;
@@ -2113,7 +2112,8 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
         act(buf,0,ch,0,e->character,TO_VICT);
     return;
   }
-   if(is_abbrev(arg,"bonusmeta") && GET_LEVEL(ch)>LEVEL_ETE) {
+  
+  if(is_abbrev(arg,"bonusmeta") && GET_LEVEL(ch)>LEVEL_ETE) {
     if (BONUSMETA == 0) {
       sprintf(buf,"`i***** BONUS META MODE ENABLED!! *****`q\n\r");
       BONUSMETA = 1;
@@ -2128,7 +2128,6 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
         act(buf,0,ch,0,e->character,TO_VICT);
     return;
   }
-
 
   /* invalid parameter */
   send_to_char("Usage: gamemode wizlock         WIZ+ (no new char creation)\n\r",ch);

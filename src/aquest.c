@@ -1193,7 +1193,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (GET_PRESTIGE_PERK(ch) >= 19) {
       double_point_chance += 2;
     }
-	
+	// Gamemode BonusAQP to add a 50% chance of double AQP.
 	if(BONUSAQP){
 		double_point_chance += 50;
 	}
