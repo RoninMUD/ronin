@@ -2063,14 +2063,18 @@ void do_gamemode(struct char_data *ch, char *argument, int cmd) {
     if (DOUBLESCP == 0) {
       sprintf(buf,"`i***** DOUBLE SCP MODE ENABLED!! *****`q\n\r");
       DOUBLESCP = 1;
-	  TOKENCOUNT=80;	  
+	  TOKENCOUNT=TOKENCOUNT*2;	  
+	  
+	  log_f("SUBLOG: Updating TOKENCOUNT to %d.", TOKENCOUNT);
+	  
 	  distribute_tokens(CHAOSMODE ? 0 : TOKENCOUNT, FALSE);
 	  
     }
     else {
-      sprintf(buf,"`i***** DOUBLE SCP MODE DISABLED *****`q\n\r");
+      sprintf(buf,"`i***** DOUBLE SCP MODE DISABLED *****`q\n\r");	  
       DOUBLESCP = 0;
-	  TOKENCOUNT=40;
+	  TOKENCOUNT=TOKENCOUNT/2;
+	  log_f("SUBLOG: Updating TOKENCOUNT to %d.", TOKENCOUNT);
     }
     send_to_char(buf,ch);
     for (e=descriptor_list;e;e=e->next)
