@@ -269,7 +269,12 @@ void make_corpse(CHAR *ch)
 
   corpse->contains = ch->carrying;
   if (GET_GOLD(ch)>0) {
-    money = create_money(GET_GOLD(ch));
+    //Gamemode for Double Gold.  
+	if(DOUBLEGOLD){
+	  money = create_money((GET_GOLD(ch) * 2));
+    }else{
+	  money = create_money(GET_GOLD(ch));
+    }	
     GET_GOLD(ch)=0;
     obj_to_obj(money,corpse);
   }

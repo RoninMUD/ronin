@@ -509,7 +509,13 @@ void distribute_tokens(int num_tokens, bool rebuild_table) {
       }
 
       /* The token is worth 1 or 2 subclass points. */
-      OBJ_VALUE(token, 0) = number(1, 2);
+	  
+	  /* Adding new Game Mode to Double SCP Token Values in the game.*/  
+	  if(DOUBLESCPV){
+		OBJ_VALUE(token, 0) = number(2, 4);
+	  }else{
+		OBJ_VALUE(token, 0) = number(1, 2);
+	  }
 
       /* Give the token to the mob. */
       obj_to_char(token, mob);

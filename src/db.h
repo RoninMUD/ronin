@@ -248,6 +248,13 @@ extern int BOOTFULL;
 extern int DOUBLEXP;
 extern int CHAOSDEATH;
 
+/* Gamemodes */
+extern int DOUBLESCP; //Doubles Tokens in the World
+extern int DOUBLESCPV; // Doubles Values of Tokens
+extern int BONUSAQP; // Adds a 50% chance to get a double AQP Quest
+extern int DOUBLEGOLD; // Doubles Gold Drops.
+extern int BONUSMETA; // Increases Meta Values for Regular/Bribes by +1 min
+
 extern struct idname_struct idname[MAX_ID];
 
 extern struct char_data *character_list;

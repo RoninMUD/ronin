@@ -219,6 +219,12 @@ int DOUBLEXP;
 #define SZ_OPT_CREATEIMP "CREATEIMP:"
 char CREATEIMP[21];
 int FREEMORT;
+int BONUSAQP;
+int DOUBLESCP;
+int DOUBLESCPV;
+int DOUBLEGOLD;
+int BONUSMETA;
+
 
 void update_reboot(void) {
   FILE *fl;
@@ -255,6 +261,11 @@ int main(int argc, char **argv)
   TOKENCOUNT=0;
   DOUBLEXP=0;
   FREEMORT=0;
+  BONUSAQP=0;
+  DOUBLESCP=0;
+  DOUBLESCPV=0;
+  DOUBLEGOLD=0;
+  BONUSMETA=0;
 #ifdef TEST_SITE
   WIZLOCK=1;
   GAMELOCK=1;
@@ -291,6 +302,11 @@ int main(int argc, char **argv)
       if(!strcmp("TOKENCOUNT",tmp_txt))    TOKENCOUNT=tmp_num;
       if(!strcmp("DOUBLEXP",tmp_txt))      DOUBLEXP=tmp_num;
       if(!strcmp("FREEMORT",tmp_txt))      FREEMORT=tmp_num;
+	  if(!strcmp("BONUSAQP",tmp_txt))      BONUSAQP=tmp_num;
+	  if(!strcmp("DOUBLESCP",tmp_txt))     DOUBLESCP=tmp_num;
+	  if(!strcmp("DOUBLESCPV",tmp_txt))    DOUBLESCPV=tmp_num;
+	  if(!strcmp("DOUBLEGOLD",tmp_txt))    DOUBLEGOLD=tmp_num;
+	  if(!strcmp("BONUSMETA",tmp_txt))     BONUSMETA=tmp_num;
 
       if(!strncmp(SZ_OPT_CREATEIMP, tmp_txt, sizeof(SZ_OPT_CREATEIMP) - 1)) {
         if (tmp_num) {
