@@ -227,9 +227,9 @@ int christmas_mechanical_familiar(OBJ *obj, CHAR *ch, int cmd, char *arg)
 			act("The familiar jumps from $n's hand onto the ground.", FALSE, owner, 0, 0, TO_ROOM);
 			act("The familiar jumps glows and spins scattering snow everywhere.", FALSE, owner, 0, 0, TO_ROOM);
 		
-			for (vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 
 				if (IS_NPC(vict))
 				{
@@ -366,9 +366,9 @@ int christmas_chime(OBJ *obj, CHAR *ch, int cmd, char *arg)
 			act("The chime glows as it is shaken.", FALSE, owner, 0, 0, TO_ROOM);
 			act("The chime glows as it is shaken.", FALSE, owner, 0, 0, TO_CHAR);
 		
-			for (vict = world[CHAR_REAL_ROOM(ch)].people; vict; vict = next_vict)
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); vict; vict = next_vict)
 			{
-				next_vict = vict->next_in_room;
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
 
 				if (IS_NPC(vict))
 				{
@@ -458,9 +458,9 @@ int christmas_crown(OBJ *obj, CHAR *ch, int cmd, char *arg)
 				act("The crown glows with red and green colors.", FALSE, owner, 0, vict, TO_ROOM);
 				act("The crown glows with red and green colors.", FALSE, owner, 0, vict, TO_CHAR);
 			
-				for (vict = world[CHAR_REAL_ROOM(owner)].people; vict; vict = next_vict)
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(owner)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 
 					if (IS_NPC(vict))
 					{
@@ -580,9 +580,9 @@ int christmas_wishbound_spirit(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 2:
                 act("$n shouts 'Unfurl, ribbons of promise!'", 0, mob, 0, 0, TO_ROOM);
 				
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     act("A large ribbon wraps around you and constricts you tightly.", 0, mob, 0, vict, TO_VICT);
@@ -606,9 +606,9 @@ int christmas_wishbound_spirit(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 break;
             case 5:
 				act("$n shouts 'Feel the burst of Joy mortals.'", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     GET_HIT(vict) = GET_HIT(vict) - (GET_HIT(vict) / 10);
@@ -683,9 +683,9 @@ int christmas_parcel_golem(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				break;
             case 2:
                 act("$n grabs parcels from around the room and throws them into the air. ", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                     
@@ -798,9 +798,9 @@ int christmas_guiding_light(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 1:
             case 2:
                 act("$n splits into hundreds of pieces and explodes in front of everyone.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
                    if(chance(65)){
@@ -904,9 +904,9 @@ int christmas_merrymaker_jester(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					case 2:  // Skull Card: AoE to the room.
 						act("$n pulls the Skull card from his deck.", 0, mob, 0, 0, TO_ROOM);
 						act("Rays of darkness bombard the room.", 0, mob, 0, 0, TO_ROOM);
-							for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+							for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 							{
-								next_vict = vict->next_in_room;
+								next_vict = CHAR_NEXT_IN_ROOM(vict);
 								if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 									continue;
 								damage(mob, vict, number(600,700), TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -953,9 +953,9 @@ int christmas_merrymaker_jester(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				
             case 1:
 				act("$n throws razor sharp cards at the room.", 0, mob, 0, 0, TO_ROOM);
-				for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 						continue;
 					
@@ -1099,9 +1099,9 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				
             case 6:
 				act("$n runs around the room with a roll of tape.", 0, mob, 0, 0, TO_ROOM);
-				for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 						continue;
 					
@@ -1174,9 +1174,9 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				
 			case 3:
 				act("$n strikes out with his legs.", 0, mob, 0, 0, TO_ROOM);
-				for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 						continue;
 					
@@ -1188,9 +1188,9 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				break;
 			case 2:
 				act("$n Screams 'Desperate Times mean Desperate Measures'.", 0, mob, 0, 0, TO_ROOM);
-				for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 						continue;
 					
@@ -1213,9 +1213,9 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				}
 			
 			
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
-					next_vict = vict->next_in_room;
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 						continue;
 					
@@ -1320,9 +1320,9 @@ int christmas_kringles_porter(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 2:
                 act("$n slams his hefty sack against the ground.", 0, mob, 0, 0, TO_ROOM);
 				act("$A large shockwave spreads out from the ground.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
 					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
 					
@@ -1350,9 +1350,9 @@ int christmas_kringles_porter(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 }
             case 4:
                 act("$n swings his hefty sack against the ground.", 0, mob, 0, 0, TO_ROOM);
-                for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
                 {
-                    next_vict = vict->next_in_room;
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
 				
                     if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
                         continue;
@@ -1544,9 +1544,9 @@ int christmas_wrapping_wraith(CHAR *mob, CHAR *ch, int cmd, char *arg)
 						break;
 					case 2:
 						act("$n manifests ribbons into the room.", 0, mob, 0, 0, TO_ROOM);
-						for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = next_vict)
+						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 						{
-							next_vict = vict->next_in_room;
+							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
 								continue;
 							
@@ -1674,7 +1674,7 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     case MSG_VIOLENCE:
 
-        for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room)
+        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = vict->next_in_room)
             if (vict->specials.fighting == mob)
                 stop_fighting(vict->specials.fighting);
         stop_fighting(mob);

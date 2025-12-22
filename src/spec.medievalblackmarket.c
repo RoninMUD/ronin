@@ -950,7 +950,6 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
