@@ -596,7 +596,7 @@ int christmas_wishbound_spirit(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 vict = get_random_victim_fighting(mob);
                 if (vict)
                 {
-                     act("$n grabs a wrapped present and throws it at the enemy.", 0, mob, 0, 0, TO_ROOM);
+                    act("$n grabs a wrapped present and throws it at the enemy.", 0, mob, 0, 0, TO_ROOM);
                     act("A large wrapped present hits you in the head.", 0, mob, 0, vict, TO_VICT);
                     act("$N is int shock as a present hits their head.", 0, mob, 0, vict, TO_NOTVICT);                    
                     damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -635,6 +635,7 @@ int christmas_wishbound_spirit(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     return FALSE;
 }
+
 int christmas_parcel_golem(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
 	    // These are default declarations to give variables to characters.
@@ -675,11 +676,8 @@ int christmas_parcel_golem(CHAR *mob, CHAR *ch, int cmd, char *arg)
             case 0:
             case 1:
 				act("$n beeps  Reinforced packing: engage!", 0, mob, 0, 0, TO_ROOM);
-				act("Layers of Cardboard appear around the Golem and fuse to the frame.", 0, mob, 0, 0, TO_ROOM);
-				
-				GET_HIT(mob) = GET_HIT(mob) + 1100;
-				
-				
+				act("Layers of Cardboard appear around the Golem and fuse to the frame.", 0, mob, 0, 0, TO_ROOM);				
+				GET_HIT(mob) = GET_HIT(mob) + 1100;				
 				break;
             case 2:
                 act("$n grabs parcels from around the room and throws them into the air. ", 0, mob, 0, 0, TO_ROOM);
@@ -742,17 +740,11 @@ int christmas_parcel_golem(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 }
 
-
-
 int christmas_guiding_light(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
 	    // These are default declarations to give variables to characters.
     char buf[MAX_STRING_LENGTH];
     CHAR *vict, *next_vict;
-	
-	bool isChristmas = check_is_christmas();
-	//If Not Month of November, dont spam anything.
-	if (isChristmas == FALSE) return FALSE;
 
     // Define any other variables
 	int reward = 3;
@@ -779,8 +771,6 @@ int christmas_guiding_light(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
             // Each Case statement that has an action needs to break out at the end.
-
-			
 
             switch (number(0, 5))
             {
@@ -842,13 +832,11 @@ int christmas_guiding_light(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return FALSE;
 }
 
-
 int christmas_merrymaker_jester(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
 	    // These are default declarations to give variables to characters.
     char buf[MAX_STRING_LENGTH];
     CHAR *tch, *vict, *next_vict, *current_tank;
-
 
     int stun_delay,card_number;
 	int reward = 5;
@@ -857,10 +845,6 @@ int christmas_merrymaker_jester(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	jester_clone_nr = real_mobile(MERRYMAKER_JESTER_CLONE);
 
     // Define any other variables
-	
-	bool isChristmas = check_is_christmas();
-	//If Not Month of November, dont spam anything.
-	if (isChristmas == FALSE) return FALSE;
 
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1)
@@ -947,10 +931,7 @@ int christmas_merrymaker_jester(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				}
 				
                 break;
-				
-				
-				
-				
+
             case 1:
 				act("$n throws razor sharp cards at the room.", 0, mob, 0, 0, TO_ROOM);
 				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
@@ -1078,8 +1059,6 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					
                 }
                 break;
-			
-			
             case 7:
                 vict = get_random_victim_fighting(mob);
 				act("Get out of my way, I have work to get done.", 0, mob, 0, 0, TO_ROOM);
@@ -1147,15 +1126,11 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 }
                 break;
             case 4:			
-				
-				
-				
 				vict = get_random_victim_fighting(mob);
                 if (vict)
                 {
                     act("$n throws glitter and packing materials into the air.", 0, mob, 0, 0, TO_ROOM);
                     
-					
 					if (GET_OPPONENT(mob) && GET_OPPONENT(mob) == vict){
 						act("A bunch of glowing glitter is scatted on you", 0, mob, 0, vict, TO_VICT);
 						act("$N is covered in glowing glitter.", 0, mob, 0, vict, TO_NOTVICT);						
@@ -1200,8 +1175,7 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					}else{
 						act("You are struck by a uppercut", 0, mob, 0, vict, TO_VICT);
 						stop_fighting(vict);
-						WAIT_STATE(vict, 2*PULSE_VIOLENCE);						
-						
+						WAIT_STATE(vict, 2*PULSE_VIOLENCE);
 					}
 				}
                 break;
@@ -1210,8 +1184,7 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				if(chance(10)){
 					 do_say(mob, "I love ovetime", CMD_SAY);
 					
-				}
-			
+				}			
 			
                 for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 				{
@@ -1252,7 +1225,6 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
         }
 
         // can add an else branch here if you want them to act but not in combat.
-
         break;
 		
 		case MSG_DIE:	// on boss death reward AQP
@@ -1261,7 +1233,6 @@ int christmas_yuletide_courier(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			mob_aq_reward(reward, mob);
 			break;
     }
-
     return FALSE;
 }
 
@@ -1395,8 +1366,6 @@ int christmas_kringles_porter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				   return TRUE;
 			   }
 			   break;
-		
-		
 		case CMD_KICK:
 		case CMD_AMBUSH:
 		case CMD_ASSAULT:
@@ -1412,19 +1381,14 @@ int christmas_kringles_porter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			return TRUE;
 			break;
 			
-			
 		case MSG_DIE:	// on boss death reward AQP
 			sprintf(buf, "%s has been slain, the joy of christmas has returned.\n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			mob_aq_reward(reward, mob);
 			break;
-		
     }
-
     return FALSE;
 }
-
-
 
 int wrapping_wraith_bleed_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg)
 {
@@ -1448,7 +1412,6 @@ int wrapping_wraith_bleed_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, cha
 
     if (ench_ch && cmd == MSG_TICK)
     {
-
         hp_loss = GET_MAX_HIT(ench_ch) * .025;
 
         if ((GET_HIT(ench_ch) - hp_loss) <= 100)
@@ -1462,7 +1425,6 @@ int wrapping_wraith_bleed_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, cha
     }
 
     return FALSE;
-
 }
 
 void wrapping_wraith_bleed_ench(CHAR *vict)
@@ -1487,9 +1449,9 @@ int christmas_wrapping_wraith(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	int reward = 4;
     // Define any other variables
 	
-	bool isChristmas = check_is_christmas();
+	//bool isChristmas = check_is_christmas();
 	//If Not Month of November, dont spam anything.
-	if (isChristmas == FALSE) return FALSE;
+	//if (isChristmas == FALSE) return FALSE;
 
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1)
@@ -1629,10 +1591,6 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
 	bool can_summon = FALSE;
 	
     // Define any other variables
-
-	bool isChristmas = check_is_christmas();
-	//If Not Month of November, dont spam anything.
-	if (isChristmas == FALSE) return FALSE;
 	
     /*Don't waste any more CPU time if no one is in the room. */
     //if (count_mortals_room(mob, TRUE) < 1)
@@ -1684,15 +1642,11 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         return FALSE;
 	
-    
-	
 	case MSG_OBJ_GIVEN:
 	
 	    arg = one_argument(arg, buf);
 		
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
-		
         
 		if (!obj)
             return TRUE;
@@ -1773,12 +1727,6 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     return FALSE;
 }
-
-
-
-
-
-
 
 void assign_christmasvillage(void) {
 
