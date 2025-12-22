@@ -126,6 +126,7 @@ OBJS_RONIN_SPEC = \
 	spec.daimyo.o \
 	spec.dasharr.o \
 	spec.deathplay.o \
+	spec.deathplayancientgrave.o \
 	spec.desert.o \
 	spec.dionysus.o \
 	spec.dragonred.o \

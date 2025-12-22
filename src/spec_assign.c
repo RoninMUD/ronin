@@ -126,6 +126,7 @@ void assign_ecanyon(void);
 void assign_turkeytakeover(void);
 void assign_medievalblackmarket(void);
 void assign_christmasvillage(void);
+void assign_deathplaygroundancientgrave(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -142,7 +143,6 @@ void assign_darkspire(void);
 void assign_morgoth(void);
 void assign_olympus(void);
 void assign_deathplaygroundcrypt(void);
-void assign_deathplaygroundancientgrave(void);
 #endif
 
 void assign_mobiles(void)
@@ -231,6 +231,7 @@ void assign_mobiles(void)
   assign_turkeytakeover();
   assign_medievalblackmarket();  
   assign_christmasvillage();
+  assign_deathplaygroundancientgrave();
 //  assign_wbw();
 #ifdef TEST_SITE
   assign_ubers();
@@ -246,7 +247,6 @@ void assign_mobiles(void)
   assign_morgoth();
   assign_olympus();
   assign_deathplaygroundcrypt();
-  assign_deathplaygroundancientgrave();
 #endif
 }
 
