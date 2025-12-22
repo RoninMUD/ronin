@@ -110,11 +110,14 @@ void assign_newt() {
   assign_obj(NEWT_AXE, newt_weapon_spec);
   assign_obj(NEWT_MACE, newt_weapon_spec);
 
-#ifdef TEST_SITE
   /*Rooms */
   assign_room(TUNNEL_ROOM, newt_tunnel_room);
 
   /*Mobs */
   assign_mob(NEWT_LEADER, newt_leader);
+
+
+#ifdef TEST_SITE
+
 #endif
 }
