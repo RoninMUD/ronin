@@ -1218,6 +1218,10 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (GET_PRESTIGE_PERK(ch) >= 19) {
       double_point_chance += 2;
     }
+	// Gamemode BonusAQP to add a 50% chance of double AQP.
+	if(BONUSAQP){
+		double_point_chance += 50;
+	}
 
     if (chance(double_point_chance)) {
       act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);

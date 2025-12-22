@@ -117,12 +117,12 @@ The QuestGiver glares intently, wanting to play a game.
 ~
 A blank of primal clay, waiting to be shaped.
 ~
-10 0 0 Y
+8 0 0 Y
 60 20 10 1d1+5000 1d1+0
 0 0
 8 8 0
 0 0 1d1+0 0
-0 0 0 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #18007
@@ -303,11 +303,11 @@ waist, darting between shadows to snatch more whenever the opportunity
 arises.
 ~
 8 134217728 0 Y
-30 -10 -14 1d1+0 1d1+0
-3000000 35000
+30 -10 -14 10d10+36000 10d10+140
+3000000 15000000
 8 8 1
-74 0 1d1+0 0
-0 0 0 0
+74 0 10d10+200 0
+0 1 0 0
 T
 ......Gemfang Goblin Stares at polished stones.~
 K
@@ -323,11 +323,11 @@ its reach can be seen as it projects a creepy smile at all who dare
 look at its treasure.
 ~
 8 134217728 0 Y
-40 -20 -15 1d1+0 1d1+0
-4000000 70000
+40 -20 -15 10d10+37000 11d11+160
+4000000 15000000
 8 8 1
-74 0 1d1+0 0
-0 0 0 0
+74 0 10d10+200 0
+0 1 0 0
 T
 ......Gildpurse Goblin caresses its tradebar.~
 K
@@ -343,11 +343,11 @@ as it scans for any signs of treasure to add to its collection. Gold
 Coins can be seen within the open top of the sack.
 ~
 8 134217728 0 Y
-50 -30 -16 1d1+0 1d1+0
-5000000 105000
+50 -30 -16 10d10+38000 12d12+180
+5000000 15000000
 8 8 1
-74 0 1d1+0 0
-0 0 0 0
+74 0 10d10+200 0
+0 1 0 0
 T
 ......Packmaster Goblin lifts its giant sack of coins.~
 K
@@ -362,11 +362,11 @@ existence. Its piercing green eyes look towards anything of value and
 cause it to emit a low groan of pleasure.  
 ~
 8 134217728 0 Y
-55 -35 -17 1d1+0 1d1+0
-6000000 175000
+55 -35 -17 10d10+39000 13d13+200
+6000000 15000000
 8 8 1
-74 0 1d1+0 0
-0 0 0 0
+74 0 10d10+200 0
+0 1 0 0
 T
 ......Mirage Goblin fades out of existence.~
 K
@@ -381,12 +381,12 @@ relics orbit it in a violent storm, bound by some dark power. A
 ferocity can been seen in its green eyes that lash out towards anything
 that dares to take its treasures. 
 ~
-8 134217728 0 Y
-60 -40 -18 1d1+0 1d1+0
-7000000 280000
+8 134217856 0 Y
+60 -40 -18 10d10+58000 14d14+220
+7000000 25000000
 8 8 2
-74 0 1d1+0 0
-0 0 0 0
+74 0 10d10+200 0
+0 1 0 0
 T
 ......Doomhoard Goblin drools over all of his treasure.~
 K
@@ -403,16 +403,12 @@ and coins into every available pocket. Though small, it moves with
 surprising speed when its loot is threatened, yipping and shrieking 
 as it scurries away. 
 ~
-8 134217728 0 Y
+8 0 0 Y
 35 -5 -13 1d1+15000 1d1+70
-1000000 5000
+1500000 3000000
 8 8 2
 74 0 1d1+15000 0
 0 1 0 0
-T
-~
-T
-......Loot Goblin Sits and Counts his Treasure Hoard~
 K
 0 0 0 0 0 0 0
 #18024
@@ -436,6 +432,191 @@ humanoid. Each one a memento of a worthy hunt.
 0 1 0 1073741823
 T
 ......Seethes with murderous rage for the traitor goblins.~
+K
+0 0 0 0 0 0 0
+#18025
+slime metal~
+Metal Slime~
+A shimmering metal slime hops on the ground
+~
+A tiny slime made of polished silver metal wobbles here, its
+surface reflecting every bit of light like a living mirror. 
+It trembles nervously, ready to dart away at the slightest threat.
+~
+16392 134217728 0 Y
+55 -22 -30 10d10+14000 10d10+140
+0 14500000
+8 8 0
+98 0 10d10+200 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18026
+slime metal liquid~
+Liquid Metal Slime~
+A liquid metal slime sites on the ground
+~
+A quick, mercury-slick slime ripples across the ground, its body
+flowing like a pool of molten silver struggling to hold shape. 
+Every movement sends a shimmer of light dancing across its shifting form.
+~
+16392 134217728 0 Y
+58 -24 -30 10d10+14000 10d10+140
+0 14500000
+8 8 0
+98 0 10d10+200 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18027
+slime metal king~
+Metal King Slime~
+A massive metal king slime wobbles on the ground
+~
+A colossal orb of gleaming metal dominates the area, crowned with a
+tiny golden circlet perched proudly atop its polished bulk. Its 
+weight makes the ground tremble as it jiggles with regal 
+authority, watching all intruders with uncanny intelligence.
+~
+16392 134217728 0 Y
+62 -26 -30 10d10+14000 10d10+140
+0 14500000
+8 8 0
+98 0 10d10+200 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18028
+slime metal dragon~
+Metal Dragon Slime~
+A metallic dragon slime growls on the ground
+~
+This strange fusion of slime and dragon coils with a liquid metallic
+sheen, its body forming draconic features that constantly shift and 
+reform. Wings of reflective silver unfurl behind it, dripping molten 
+droplets that sizzle when they hit the stone.
+~
+16392 134217728 0 Y
+66 -28 -30 10d10+14000 10d10+140
+0 14500000
+8 8 0
+98 0 10d10+200 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18029
+sylra huntress silver~
+Sylra the Silver Huntress~
+Sylra the Silver Huntress, Slime Assassin
+~
+A lithe woman clad in shimmering quicksilver armor stands poised 
+with an ornate bow of polished alloy. Her movements are swift and
+precise, eyes scanning constantly for the telltale gleam of rare metal
+slimes. Every inch of her reflects the luminous sheen of her quarry.
+~
+16394 134219904 650 Y
+70 -40 -30 1d1+450000 10d10+140
+0 0
+8 8 2
+72 0 1d1+15000 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18030
+aurelion king lord liquid steel slime~
+King Aurelion, Lord of Liquid Steel~
+King Aurelion, Lord of Liquid Steel Wiggles Around
+~
+A gargantuan metal king slime commands the chamber, its reflective
+body towering over you like a polished mountain. A crown of molten
+gold drips continuously yet never depletes, reforming itself atop
+his head. His voice booms like rolling thunder within a sealed 
+forge, and each pulse of his body sends shockwaves through the 
+metallic floor.
+~
+74 134219776 0 Y
+70 -32 -30 60d60+98000 44d14+124
+0 96000000
+8 8 0
+98 0 20d20+15600 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18031
+emperor quicksilver slime~
+The Quicksilver Emperor~
+The Quicksilver Emperor bobs back and forth
+~
+A colossal humanoid figure of flowing silver dominates the
+area, shifting seamlessly between solid knight and amorphous
+slime. Long, liquid metal tendrils coil behind him like a cloak. 
+His face is expressionless yet powerful, and every step leaves 
+mirrored footprints that distort reality.
+~
+74 134219776 0 Y
+70 -32 -30 60d60+98000 44d16+145
+0 96000000
+8 8 0
+98 0 20d20+15600 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18032
+alloy obsidian breaker blades slime~
+Obsidian Alloy, Breaker of Blades~
+Obsidian Alloy, Breaker of Blades shifts back and forth
+~
+Black metal plates jut from a swollen metallic body, each one swirling
+with a smoky sheen. Cracks of glowing silver pulse beneath the
+armor, giving it the appearance of living volcanic steel. Every 
+strike against Obsidian Alloy seems to rebound with doubled 
+force, as if the creature itself despises sharp weapons.
+~
+74 134219776 0 Y
+70 -32 -30 60d60+98000 42d15+167
+0 96000000
+8 8 0
+98 0 20d20+15600 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18033
+vyralux eternal mercury slime~
+Vyralux the Eternal Mercury~
+Vyralux the Eternal Mercury coalesces
+~
+A vast orb of shimmering quicksilver levitates silently in the center
+of the room, casting distorted reflections across every surface. 
+Tendrils of liquid metal drift and curl like celestial ribbons, each 
+humming with ancient magic. The air around Vyralux is heavy and 
+slow, as though time itself bends to its will.
+~
+74 134219776 0 Y
+70 -32 -30 60d60+98000 41d17+176
+0 96000000
+8 8 0
+98 0 20d20+15600 0
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#18034
+slime obsidian~
+Obsidian Slime~
+A tiny slime made of liquid of obsidian
+~
+A mass of pitch-black slime heaves here, its surface hardened into 
+jagged obsidian plates that crack and reform with each sluggish 
+movement. Veins of molten silver glow faintly beneath the dark 
+shell, leaking heat and shadow with every pulse. The air around 
+the creature feels heavy and oppressive, as if its presence 
+alone weighs down the world.
+~
+74 0 0 Y
+58 -28 -18 10d10+8000 10d10+575
+0 2000000
+8 8 0
+98 0 10d10+2000 0
+0 1 0 0
 K
 0 0 0 0 0 0 0
 #0

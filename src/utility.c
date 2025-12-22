@@ -2208,3 +2208,22 @@ int MAX_PRAC(CHAR *ch) {
 
   return 0;
 }
+
+
+//Function to give all mortals in the room of a MOB, an AQP reward.
+//Currently used for Ubers and End Game Bosses
+void mob_aq_reward(int aqp_reward, CHAR *mob){
+	char buf[MAX_STRING_LENGTH];
+	CHAR *vict, *next_vict;
+	
+	for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+	{
+		next_vict = CHAR_NEXT_IN_ROOM(vict); 
+		if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
+		snprintf(buf, sizeof(buf),"You are awarded with %d quest point%s for the kill.\n\r", aqp_reward, aqp_reward > 1 ? "s" : "");
+		send_to_char(buf, vict);
+		vict->ver3.quest_points += aqp_reward;
+	}
+}
+
+

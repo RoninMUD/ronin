@@ -1181,7 +1181,7 @@ const char * const item_types[] = {
   "SKIN",
   "TROPHY",
   "RECIPE",
-  "UNUSED",
+  "EVENT_ITEM",
   "UNUSED",
   "UNUSED",
   "AQ_ORDER",

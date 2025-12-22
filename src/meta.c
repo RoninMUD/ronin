@@ -296,11 +296,19 @@ int get_meta_adjust(int choice, int bribe)
   switch (choice)
   {
     case META_HIT:
-      adjust = bribe ? number(5, 10) : number(2, 7);
+		if(BONUSMETA){
+			adjust = bribe ? number(6, 11) : number(3, 8);
+		}else{
+			adjust = bribe ? number(5, 10) : number(2, 7);
+		}
       break;
 
     case META_MANA:
-      adjust = bribe ? number(5, 10) : number(2, 7);
+		if(BONUSMETA){
+			adjust = bribe ? number(6, 11) : number(3, 8);
+		}else{
+			adjust = bribe ? number(5, 10) : number(2, 7);
+		}
       break;
 
     case META_MOVE:
