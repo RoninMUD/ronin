@@ -120,6 +120,7 @@ OBJS_RONIN_SPEC = \
 	spec.cafeteria.o \
 	spec.cavern.o \
 	spec.chaos.o \
+	spec.christmasvillage.o \
 	spec.clan.o \
 	spec.ctower.o \
 	spec.daimyo.o \
@@ -195,7 +196,7 @@ OBJS_RONIN_SPEC = \
 	spec_assign.o \
 	subclass.o \
 	subclass.spells.o \
-	subclass.skills.o
+	subclass.skills.o 
 
 OBJS_RONIN_SPEC_TEST = \
 	spec.chess.o \
@@ -208,8 +209,7 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.darkspire.o \
 	spec.morgoth.o \
 	spec.olympus.o \
-	spec.deathplayancientgrave.o \
-	spec.deathplaycrypt.o
+	spec.deathplaycrypt.o \
 
 ifneq ($(TYPE), live)
 	ifneq ($(TYPE), chaos)

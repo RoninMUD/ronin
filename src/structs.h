@@ -157,7 +157,7 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define ITEM_SKIN             30
 #define ITEM_TROPHY           31
 #define ITEM_RECIPE           32
-#define ITEM_TYPE_33          33
+#define ITEM_EVENT_ITEM       33
 #define ITEM_TYPE_34          34
 #define ITEM_TYPE_35          35
 #define ITEM_AQ_ORDER         36

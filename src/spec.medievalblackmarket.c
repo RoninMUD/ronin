@@ -29,6 +29,7 @@
 #include "spells.h"
 #include "subclass.h"
 #include "utility.h"
+#include "aff_ench.h"
 
 /*Rooms */
 #define JUNK_PILE 18010
@@ -48,6 +49,34 @@
 #define QUESTGIVER_TOKEN_QUEST_TEN 18010
 #define LOOT_GOBLIN_GOLD 18011
 
+/* Goblin Death Rewards */
+
+#define SC_TOKEN 5
+#define AQP_VOUCHER 18030
+
+
+/* XP Quest Objects */
+
+#define POLISHED_SLIME_CORE 18014
+#define SHINY_DROPLET 18015
+#define QUICKMELT_GLOBULE 18016
+#define MERCURY_THREAD 18017
+#define ROAYL_ALLOY_CHUNK 18018
+#define KING_CANDESCENT_CORE 18019
+#define DRACONIC_METAL_SCALE 18020
+#define CRHOME_DRAGON_FANG 18021
+
+//Recipe Items for XP Quest
+
+#define CROWN_LIQUID 18022
+#define MIRROR_EMPEROR 18023
+#define KEYSTONE_OBSIDIAN 18024
+#define SIGIL_MERCURY 18025
+
+
+
+
+
 /*Mobs */
 #define GUISE_MERCHANT 18000
 #define SPECTOR_MERCHANT 18001
@@ -57,6 +86,7 @@
 #define FEIGN_MERCHANT 18005
 #define QUESTGIVER 18006
 
+//Gold Quest
 #define LOOT_GOBLIN_OFFICER_ONE 18018
 #define LOOT_GOBLIN_OFFICER_TWO 18019
 #define LOOT_GOBLIN_OFFICER_THREE 18020
@@ -64,6 +94,23 @@
 #define LOOT_GOBLIN_BOSS 18022
 #define LOOT_GOBLIN 18023
 #define GRINTAK_HUNTER 18024
+
+
+//XP Quest
+#define METAL_SLIME 18025
+#define LIQUID_METAL_SLIME 18026
+#define METAL_KING_SLIME 18027
+#define METAL_DRAGON_SLIME 18028
+#define SYLRA_HUNTRESS 18029
+
+//Mega Slimes
+
+#define SLIME_AURELION 18030
+#define SLIME_QUICKSILVER 18031
+#define SLIME_OBSIDIAN 18032
+#define SLIME_VYRALUX 18033
+#define SLIME_OBSIDIAN_TINY 18034
+
 
 /* Dummies for Quests */
 #define QUESTGIVER_DUMMY_HIGH_CARD 18007
@@ -78,6 +125,10 @@
 #define QUESTGIVER_DUMMY_QUEST_NINE 18016
 #define QUESTGIVER_DUMMY_QUEST_TEN 18017
 
+
+
+
+
 /* Misc */
 #define QUESTGIVER_TOKEN_MIN_VNUM 18000
 #define QUESTGIVER_TOKEN_MAX_VNUM 18010
@@ -85,6 +136,11 @@
 #define QUESTGIVER_DUMMY_MIN_VNUM 18007
 #define QUESTGIVER_DUMMY_MAX_VNUM 18017
 
+
+/* Event Zone Items */
+
+#define EVENT_VOUCHER 18013
+#define AQP_VOUCHER 18030
 
 /* Zones */
 
@@ -103,6 +159,9 @@
 #define STATE2 (1 << 1) // 2
 #define STATE3 (1 << 2) // 4
 #define STATE4 (1 << 3) // 8
+
+#define SLIME_ENCHANT_NAME "Curse of the Metal Slime"
+#define SLIME_FIGHT_ENCHANT_NAME "Burning Liquid Metal"
 
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
@@ -126,9 +185,6 @@ int getCurrentMonth()
 
 	return month;
 }
-
-
-
 
 /* Teleport players into one of the elemental canyon zones randomly. */
 int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
@@ -209,8 +265,8 @@ int blackmarket_runegate(int room, CHAR *ch, int cmd, char *arg) {
 		  return FALSE;		  
 	  }
 
-      for (CHAR *tel_ch = world[CHAR_REAL_ROOM(ch)].people, *tel_next = NULL; tel_ch; tel_ch = tel_next) {
-        tel_next = tel_ch->next_in_room;
+      for (CHAR *tel_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *tel_next = NULL; tel_ch; tel_ch = tel_next) {
+        tel_next = CHAR_NEXT_IN_ROOM(tel_ch);
 
         if (IS_NPC(tel_ch)) continue;
 
@@ -332,9 +388,9 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -379,8 +435,12 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         if (OBJ_TYPE(obj) != ITEM_SC_TOKEN)
         {
-            do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
-
+            if (V_OBJ(obj) == AQP_VOUCHER){
+				do_say(mob, "I haven't seen this in a while. Go see Spector.", CMD_SAY);
+			}else{
+				do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+			}
+			
             give_back = TRUE;
         }
 
@@ -499,7 +559,10 @@ int blackmarket_guise(CHAR *mob, CHAR *ch, int cmd, char *arg)
 //Event Token Mob
 int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
-    /*Don't waste any more CPU time if no one is in the room. */
+    
+	OBJ *reward_object;
+	
+	/*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1)
         return FALSE;
 
@@ -512,6 +575,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
             {
             case (0):
             case (1):
+				do_say(mob, "Bring me items from the events!  They are quite amusing.", CMD_SAY);
             case (2):
             case (3):
             case (4):
@@ -533,9 +597,9 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -560,6 +624,7 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
         char buf[MIL];
 
         arg = one_argument(arg, buf);
+		bool give_back = FALSE;
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
         // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
@@ -570,13 +635,42 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
         if (OBJ_TYPE(obj) == ITEM_SC_TOKEN)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
+			give_back = TRUE;
         }
+		//Section for each set of event items.  When an Event item is given, provide them with an Event Token.  
+		//Event Tokens will be given out for all event items.    
+		// A different vendor will trade them for AQP or RP Items.	
+		
+		else if (OBJ_TYPE(obj) == ITEM_EVENT_ITEM){			
+			do_say(mob, "Oh how i love these fleeting events.", CMD_SAY);	
+			give_back = FALSE;
+			
+			//If this is an event item, remove the object and give them an Event Voucher.
+		
+			// Remove the Event Item
+			extract_obj(obj);
+			
+			reward_object = read_object(EVENT_VOUCHER, VIRTUAL);
+			// Give Object to Char.
+			obj_to_char(reward_object, ch);
+			act("$N reaches into a box and gives you a $p.", FALSE, ch, reward_object, mob, TO_CHAR);
+		}	
+		//If this is an AQP Voucher, award the AQP.
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			do_say(mob, "Redeeming a voucher is always good. Thank you for visiting the Black Market.", CMD_SAY);	
+			give_back = FALSE;
+			
+			// Remove the AQP Voucher
+			extract_obj(obj);
+			
+			ch->ver3.quest_points += 1;
+			
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
+			give_back = TRUE;
         }
-
-        bool give_back = TRUE;
 
         if (give_back)
         {
@@ -587,6 +681,9 @@ int blackmarket_spector(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             return TRUE;
         }
+		
+		return TRUE;
+		
     }
 
     return FALSE;
@@ -628,9 +725,9 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -657,7 +754,6 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -666,6 +762,10 @@ int blackmarket_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "We trade for these here, but I am not the one to speak to.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "A voucher huh, go see Spector, he loves the paper.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -723,9 +823,9 @@ int blackmarket_mime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -761,6 +861,10 @@ int blackmarket_mime(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Guise is the one you want, not me.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "Bother Spector and not me with this.......", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -818,9 +922,9 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -846,7 +950,6 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -855,6 +958,10 @@ int blackmarket_fuse(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "Why do you people always bring these things to me. Go bother Spector with this nonsense.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -912,9 +1019,9 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -941,7 +1048,6 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -950,6 +1056,10 @@ int blackmarket_feign(CHAR *mob, CHAR *ch, int cmd, char *arg)
         {
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			
+			do_say(mob, "What use do you think paper has. Only Spector could love this junk.", CMD_SAY);
+		}
         else
         {
             do_say(mob, "I dont want this junk..take it back.", CMD_SAY);
@@ -979,8 +1089,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     char buf[MIL];
     bool give_back = FALSE;
-    /*Don't waste any more CPU time if no one is in the room. */
-    // if (count_mortals_room(mob, TRUE) < 1) return FALSE;
 
     // Have the vendor talk.
     if (cmd == MSG_TICK)
@@ -1012,9 +1120,9 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         act("$n draws a dagger and advances on the room.", TRUE, mob, 0, 0, TO_ROOM);
 
-        for (CHAR *vict = world[CHAR_REAL_ROOM(mob)].people, *next_vict; vict; vict = next_vict)
+        for (CHAR *vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)), *next_vict; vict; vict = next_vict)
         {
-            next_vict = vict->next_in_room;
+            next_vict = CHAR_NEXT_IN_ROOM(vict);
 
             /*Only teleport mortals. */
             if (!IS_MORTAL(vict))
@@ -1041,7 +1149,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
         arg = one_argument(arg, buf);
 
         OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
-        // OBJ *obj = get_obj_in_list_ex(mob, "token", mob->carrying, FALSE);
 
         if (!obj)
             return TRUE;
@@ -1051,6 +1158,10 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
             do_say(mob, "Go see Guise.. he loves these things.", CMD_SAY);
             give_back = TRUE;
         }
+		else if (V_OBJ(obj) == AQP_VOUCHER){
+			do_say(mob, "This isn't related to a quest. Go see spector", CMD_SAY);
+            give_back = TRUE;
+		}
 
         // Add a new check here for the Game Tokens.
         // TODO:  Set Bank Value corresponding to the Game.   STATE1 - STATE11
@@ -1157,12 +1268,6 @@ int blackmarket_questgiver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         if (!ch || IS_NPC(ch))
             return FALSE;
-
-        /* if (IS_IMMORTAL(ch)) {
-          send_to_char("Immortals will need to consult with an IMP in order to remort.\n\r", ch);
-
-          return TRUE;
-        }*/
 
         send_to_char("You can buy:\n\r", ch);
         int count = 0;
@@ -1359,6 +1464,73 @@ int determine_goblin_loot(int chance_adjust)
     return reward;
 }
 
+/*
+On Death of a loot goblin, we want to provide more goodies.
+Each is individual, so you can get lucky and get all 3.
+
+60% chance to get a voucher for AQP
+35% chance for an SC Token
+5% chance for an antirent
+
+
+
+*/
+
+void quest_mob_death_loot(CHAR *ch,char *loot_message){
+	//#define SC_TOKEN 5
+	//#define AQP_VOUCHER 18030
+	OBJ *tmp;
+	
+	int antirent_items[8] = {30007, 30008, 30009, 30010, 30011, 30012, 30013, 30050};
+	int reward_limit,chosen_antirent;
+	bool items_loaded = FALSE;
+	
+	//Load AQP Vouchers
+	if(chance(60)){
+		reward_limit = number(1,3);
+		items_loaded = TRUE;
+		
+		for (int i = 0; i < reward_limit; i++)
+		{
+			tmp = read_object(AQP_VOUCHER, VIRTUAL);
+			obj_to_room(tmp, CHAR_REAL_ROOM(ch));
+		}
+		
+	}
+	
+	//35% chance to load 1 SCP Token
+	if(chance(35)){
+		items_loaded = TRUE;
+		tmp = read_object(SC_TOKEN, VIRTUAL);
+		obj_to_room(tmp, CHAR_REAL_ROOM(ch));
+		
+	}
+	
+	//5% chance to load Anti Rent Item
+	if(chance(5)){
+		items_loaded = TRUE;
+		for (int i = NUMELEMS(antirent_items) - 1; i > 0; i--)
+		{
+			int j = rand() % (i + 1);
+			int temp = antirent_items[i];
+			antirent_items[i] = antirent_items[j];
+			antirent_items[j] = temp;
+		}
+		chosen_antirent = antirent_items[0];
+		
+		
+		tmp = read_object(chosen_antirent, VIRTUAL);
+		obj_to_room(tmp, CHAR_REAL_ROOM(ch));		
+	}
+	
+	if(items_loaded){
+		act(loot_message, TRUE, ch, 0, 0, TO_ROOM);
+	}
+		
+	
+}
+
+
 void loot_goblin_coin_throw(CHAR *ch, CHAR *vict, int max_gold)
 {
     int gold_number, gold_damage;
@@ -1373,19 +1545,18 @@ void loot_goblin_coin_throw(CHAR *ch, CHAR *vict, int max_gold)
     }
     else
     {
-        gold_number = number(10000, max_gold);
+        gold_number = number(30000, max_gold);
     }
 
-    gold_damage = (int)round(gold_number / 100);
+    gold_damage = (int)round(gold_number / 275);
 
     act("$n grabs a fistful of coins and throws them at you.", FALSE, ch, 0, vict, TO_VICT);
     act("$n grabs a fistful of coins and throws them at $N.", FALSE, ch, 0, vict, TO_NOTVICT);
 
-    if (GET_OPPONENT(ch) && GET_OPPONENT(ch) == vict)
-    {
-        damage(ch, vict, gold_damage, TYPE_UNDEFINED, DAM_PHYSICAL);
-        WAIT_STATE(vict, 1 * PULSE_VIOLENCE);
-    }
+    
+    damage(ch, vict, gold_damage, TYPE_UNDEFINED, DAM_PHYSICAL);
+    WAIT_STATE(vict, 1 * PULSE_VIOLENCE);
+    
 
     // Spawn that same amount of money on the ground.
 
@@ -1616,31 +1787,32 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Add checks for the different goblins. ADjust their ranges
             if (V_MOB(mob) == loot_goblin_number)
             {
-                loot_goblin_coin_throw(mob, vict, 10000);
+                loot_goblin_coin_throw(mob, vict, 100000);
             }
             else if (V_MOB(mob) == loot_goblin_boss_number)
             {
-                loot_goblin_coin_throw(mob, vict, 100000);
+                loot_goblin_coin_throw(mob, vict, 300000);
             }
             else //THis accounts for the 4 different officers
             {
-                loot_goblin_coin_throw(mob, vict, 60000);
+                loot_goblin_coin_throw(mob, vict, 200000);
             }
 
-            if (chance(80))
+            if (chance(20))
             {
-
-                goblin_loot_object = determine_goblin_loot(0);
-                goblin_loot = read_object(goblin_loot_object, VIRTUAL);
-                obj_to_room(goblin_loot, CHAR_REAL_ROOM(mob));
-                act("A glittery object drops from the Goblin's bag.", TRUE, mob, 0, 0, TO_ROOM);
-                act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
-                spell_teleport(50, mob, mob, 0);
+				
+				goblin_loot_object = determine_goblin_loot(0);
+				goblin_loot = read_object(goblin_loot_object, VIRTUAL);
+				obj_to_room(goblin_loot, CHAR_REAL_ROOM(mob));
+				act("A glittery object drops from the Goblin's bag.", TRUE, mob, 0, 0, TO_ROOM);
+				act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
+				spell_teleport(50, mob, mob, 0);
+				
             }
         }
         else
         {
-            if (chance(10))
+            if (chance(3))
             {
 
                 act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
@@ -1703,12 +1875,12 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
             if (mortal_count > 15)
             {
                 boss_treasure_death_item = 3146;
-                loot_mult = number(2, 3);
+                loot_mult = number(5, 7);
             }
             else if (mortal_count > 10)
             {
                 boss_treasure_death_item = 3146;
-                loot_mult = 1;
+                loot_mult = number(3,5);
             }
             else if (mortal_count > 5)
             {
@@ -1718,7 +1890,7 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
             else
             {
                 boss_treasure_death_item = 3018;
-                loot_mult = 1;
+                loot_mult = number(1,3);
             }
 
             for (int i = 0; i < loot_mult; i++)
@@ -1726,7 +1898,10 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 tmp = read_object(boss_treasure_death_item, VIRTUAL);
                 obj_to_room(tmp, CHAR_REAL_ROOM(mob));
             }
-        }
+        }else {
+			
+			quest_mob_death_loot(mob,"Shiny Objects drop from the Goblin's sack of loot.");
+		}
 
         break;
     }
@@ -1862,6 +2037,10 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 sprintf(buf, "The Goblin Leader has been killed. Thank you for ridding the world of this scourge.");
                 do_quest(mob, buf, CMD_QUEST);
                 SET_BIT(GET_BANK(mob), STATE3);
+				sprintf(buf, "Thank you heros. I can rest in peace now!");
+				do_quest(mob, buf, CMD_QUEST);
+				extract_char(mob);
+				
             }
             // If all of them arent dead, lets provide updates.
             else
@@ -1898,7 +2077,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
     case MSG_VIOLENCE:
 
-        for (vict = world[CHAR_REAL_ROOM(mob)].people; vict; vict = vict->next_in_room)
+        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = CHAR_NEXT_IN_ROOM(vict))
             if (vict->specials.fighting == mob)
                 stop_fighting(vict->specials.fighting);
         stop_fighting(mob);
@@ -1936,7 +2115,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
         // Set a bit to ensure you can only start the quest once.
 
         arg = one_argument(arg, buf);
-        if (*buf && is_abbrev(buf, "start"))
+        if (*buf && is_abbrev(buf, "startgold") && !is_abbrev(buf, "south"))
         {
             if (!IS_IMMORTAL(ch))
             {
@@ -1972,6 +2151,1407 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return FALSE;
 }
 
+
+/*
+
+XP Quest Specs
+
+Load The 4 Kinds of Slimes into the World
+Each slime has a chance to drop an item on death.
+
+Salute the huntress to get a recipe.  The recipe item will summon 1 of 4 boss slimes.
+
+*/
+
+int metal_slime_fight_curse_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg)
+{
+  int hp_loss;
+	
+  if (cmd == CMD_RENT || cmd == CMD_QUIT)
+  {
+    send_to_char("The liquid metal falls away from your body. \r\n", ench_ch);
+    enchantment_remove(ench_ch, ench, 0);
+    return FALSE;
+  }
+
+  if (cmd == MSG_DIE || cmd == MSG_AUTORENT || cmd == MSG_STONE || cmd == MSG_DEAD)
+  {
+    enchantment_remove(ench_ch, ench, 0);
+    return FALSE;
+  }
+  
+  if (ench_ch && cmd == MSG_TICK)
+    {
+
+        hp_loss = 200;
+
+        if ((GET_HIT(ench_ch) - hp_loss) <= 100)
+        {
+            GET_HIT(ench_ch) = 100;
+        }
+        else
+        {
+            GET_HIT(ench_ch) -= hp_loss;
+        }
+    }
+  
+  
+  return FALSE;
+}
+
+int get_slime_debuff_value(CHAR *ench_ch)
+{
+	int current_hitroll,debuff_value;
+	
+	current_hitroll = GET_HITROLL(ench_ch);
+	
+	if(current_hitroll <= 20){
+		debuff_value = -1;
+	}else if(current_hitroll <= 25){
+		debuff_value = -3;
+	}else if(current_hitroll <= 30){
+		debuff_value = -6;
+	}else if(current_hitroll <= 35){
+		debuff_value = -10;
+	}else if(current_hitroll <= 40){
+		debuff_value = -12;
+	}else if(current_hitroll <= 45){
+		debuff_value = -19;
+	}else{
+		debuff_value = -22;
+	}
+	
+	return debuff_value;
+}
+
+
+int metal_slime_curse_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg)
+{
+	int debuff_value;
+	
+    if (cmd == MSG_REMOVE_ENCH)
+    {
+        send_to_char("The liquid metal dissolves into nothing.\n\r", ench_ch);
+        return FALSE;
+    }
+    if (cmd == CMD_QUIT)
+    {
+        if (ch != ench_ch)
+            return FALSE;
+        send_to_char("The liquid metal prevents you from leaving.\n\r", ench_ch);
+        return TRUE;
+    }
+	
+	//The curse lowers your HR
+	//The initial Curse ensures you have a function that keeps your HR low, even with more buffs.
+	// Assign SLIME_FIGHT_ENCHANT_NAME as it evaluates.
+	
+	if(ench_ch->specials.fighting){
+
+		if (!enchanted_by(ench_ch, SLIME_FIGHT_ENCHANT_NAME))
+		{
+			//Get the Debuff value based on HR.   All characters should get the equal experience.
+			debuff_value = get_slime_debuff_value(ench_ch);
+			ench_apply(ench_ch, TRUE, SLIME_FIGHT_ENCHANT_NAME, 0, 10, 0, debuff_value, APPLY_HITROLL, 0, 0, metal_slime_fight_curse_func);
+			send_to_char("The liquid metal starts to burn.\n\r", ench_ch);
+		}		
+		return FALSE;
+		
+	}
+	
+    return FALSE;
+
+}
+
+void metal_slime_curse_ench(CHAR *vict)
+{
+    ENCH *tmp_enchantment;
+
+    CREATE(tmp_enchantment, ENCH, 1);
+    tmp_enchantment->name = str_dup(SLIME_ENCHANT_NAME);
+    tmp_enchantment->duration = 30;
+    tmp_enchantment->func = metal_slime_curse_func;
+    enchantment_to_char(vict, tmp_enchantment, FALSE);
+    send_to_char("A small amount of liquid metal covers your arm.\n\r", vict);
+}
+
+
+int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	    // These are default declarations to give variables to characters.
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict, *next_vict;
+	OBJ * obj2;
+	
+    // Define any other variables
+	
+	int metal_slime_number = 18025;
+    int liquid_metal_slime_number = 18026;
+	int metal_king_slime_number = 18027;
+	int metal_dragon_number = 18028;
+	int stun_delay;
+	
+
+    switch (cmd)
+    {
+    case MSG_MOBACT:
+	
+      
+        // if fighting - spec different attacks
+        if (mob->specials.fighting)
+        {
+            // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+            // Each Case statement that has an action needs to break out at the end.
+			
+			
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+			
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				if (!enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					metal_slime_curse_ench(vict);
+				}
+				
+			}
+			
+
+            switch (number(0, 5))
+            {
+            case 0:
+            case 1:
+            case 2:
+				vict = get_random_victim_fighting(mob);
+                if (vict)
+                {
+                    act("You are hit by the slimes body as it slams into you.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is hit by the slimes body.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+				break;
+            case 3:
+				break;
+            case 4:
+            case 5: // Each Slime gets a special attack.
+					/* 
+						Metal Slime - Slam and tiny stun.
+						Liquid Metal Slime - Bathes the room in liquid metal
+						Metal King Slime - Body Slam and Stun or knocked out of fight. 
+						Metal Dragon Slime - Breath of Fire
+					*/
+			
+				if (V_MOB(mob) == metal_slime_number)
+				{
+					vict = get_random_victim_fighting(mob);
+					if (vict)
+					{
+						act("You are hit by the slimes body as it slams into you.", 0, mob, 0, vict, TO_VICT);
+						act("$N is hit by the slimes body.", 0, mob, 0, vict, TO_NOTVICT);
+						damage(mob, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stun_delay = number(1, 3);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}
+				}
+				else if (V_MOB(mob) == liquid_metal_slime_number)
+				{
+					act("$N sprays liquid metal into the room", 0, mob, 0, vict, TO_VICT);
+					for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+					{
+						next_vict = CHAR_NEXT_IN_ROOM(vict);
+						if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+							continue;
+						act("A large stream of liquid metal burns you .", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 800, TYPE_UNDEFINED, DAM_FIRE);
+						stun_delay = number(1, 2);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}
+					break;
+				}
+				else if (V_MOB(mob) == metal_king_slime_number)
+				{
+					vict = get_random_victim_fighting(mob);
+					if (vict)
+					{
+						act("You are hit by the slimes body as it slams into you.", 0, mob, 0, vict, TO_VICT);
+						act("$N jumps into the air and slams into $n", 0, mob, 0, vict, TO_NOTVICT);
+						damage(mob, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
+						
+						if(chance(50)){
+							stop_fighting(vict);
+							stun_delay = number(1, 3);
+							WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+						}else{
+							
+							stun_delay = number(1, 3);
+							WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+						}
+						
+						
+					}
+				}
+				else if (V_MOB(mob) == metal_dragon_number)
+				{
+					act("$N sprays flaming liquid metal into the room", 0, mob, 0, vict, TO_VICT);
+					for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+					{
+						next_vict = CHAR_NEXT_IN_ROOM(vict);
+						if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+							continue;
+						act("A large stream of flaming liquid metal burns you.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_FIRE);
+					}
+					break;
+				}
+                break;
+            default:
+                break;
+            }
+			
+        }else{
+			
+			if (chance(10))
+            {
+
+                act("$n shimemrs and disapears.", TRUE, mob, 0, 0, TO_ROOM);
+                spell_teleport(50, mob, mob, 0);
+            }
+			
+		}
+		break;
+        // can add an else branch here if you want them to act but not in combat.
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s dissolves into nothing.\n\r", GET_SHORT(mob));
+			send_to_room(buf, CHAR_REAL_ROOM(mob));
+			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
+			//If they are cursed, remove the curse
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				
+				if (enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					
+					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
+
+					if (slime_enchant) {
+					  enchantment_remove(ch, slime_enchant, FALSE);
+					}
+					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
+					
+					if (slime_fight_enchant) {
+					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					}	
+					
+				}
+				
+			}
+			
+			//Each mob Can drop Items.   
+			if (chance(48) && V_MOB(mob) == metal_slime_number)
+			{
+				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				send_to_room(buf, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(POLISHED_SLIME_CORE, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(SHINY_DROPLET, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+				
+				
+			}
+			else if (chance(48) && V_MOB(mob) == liquid_metal_slime_number)
+			{
+				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				send_to_room(buf, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(QUICKMELT_GLOBULE, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(MERCURY_THREAD, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+			}
+			else if (chance(48) && V_MOB(mob) == metal_king_slime_number)
+			{
+				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				send_to_room(buf, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(ROAYL_ALLOY_CHUNK, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(KING_CANDESCENT_CORE, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+
+			}
+			else if (chance(48) && V_MOB(mob) == metal_dragon_number)
+			{
+				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				send_to_room(buf, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(DRACONIC_METAL_SCALE, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+				obj2 = read_object(CRHOME_DRAGON_FANG, VIRTUAL);
+				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
+			}
+			
+			
+        break;
+		
+		//Stop Random Skills in battle
+		case CMD_KICK:
+		case CMD_AMBUSH:
+		case CMD_ASSAULT:
+		case CMD_BACKSTAB:
+		case CMD_CIRCLE:
+		case CMD_LUNGE:
+		case CMD_PUMMEL:
+			//5% chance to hit the mob.
+			if(chance(95)){
+				act("The slime wiggles out of the way of your attack.", 0, mob, 0, ch, TO_VICT);
+				return TRUE;
+			}		
+			break;
+    }
+
+    return FALSE;
+}
+
+//Functions to Spawn and Check for Slimes
+
+// See if all the loot goblins are dead.  If they are - on death, spawn the 4 lieutenants.
+// Return TRUE if all dead.
+bool check_for_metal_slimes()
+{
+
+    bool allDead = FALSE;
+	int metal_slimes_left = 0;
+    int metal_slimes[4] = {18025, 18026, 18027, 18028};
+    int metal_slime_nr,metal_slime_number;
+
+	for (int i = 0; i < 4; i++)
+	{
+		// Grab the room and mob based on index value.
+		metal_slime_number = metal_slimes[i];
+
+		// Check if the room exists
+		if (!metal_slime_number)
+			continue;
+
+		metal_slime_nr = real_mobile(metal_slime_number);
+
+		if (mob_proto_table[metal_slime_nr].number > 0)
+		{
+			metal_slimes_left += mob_proto_table[metal_slime_nr].number;
+		}
+	}
+
+    if (metal_slimes_left < 1)
+    {
+        allDead = TRUE;
+    }
+
+    return allDead;
+}
+
+// Use the same code of Teleport to spawn 30 goblins into the world.
+void spawn_metal_slimes(int max_slimes)
+{
+
+    int to_room, metal_slime_nr, metal_slime_number;
+    int metal_slimes[4] = {18025, 18026, 18027, 18028};
+    CHAR *metal_slime;
+	
+
+    for (int min = 0; min < (max_slimes); min++)
+    {
+		 for (int i = NUMELEMS(metal_slimes) - 1; i > 0; i--)
+			{
+				int j = rand() % (i + 1);
+				int temp = metal_slimes[i];
+				metal_slimes[i] = metal_slimes[j];
+				metal_slimes[j] = temp;
+			}
+		
+			
+			metal_slime_number = metal_slimes[0];
+			metal_slime_nr = real_mobile(metal_slime_number); 
+			// After the shuffle, pick the first entry.
+        do
+        {
+            to_room = number(0, top_of_world);
+        } while (IS_SET(world[to_room].room_flags, PRIVATE) ||
+                 IS_SET(world[to_room].room_flags, NO_MAGIC) ||
+                 (IS_SET(world[to_room].room_flags, TUNNEL) && !CHAOSMODE) ||
+                 IS_SET(world[to_room].room_flags, CHAOTIC) ||
+                 IS_SET(world[to_room].room_flags, NO_BEAM) ||
+                 IS_SET(world[to_room].room_flags, SAFE) ||
+                 IS_SET(world[to_room].room_flags, DEATH) ||
+                 IS_SET(world[to_room].room_flags, HAZARD) ||
+                 IS_SET(world[to_room].room_flags, NO_MOB) ||
+                 IS_SET(world[to_room].room_flags, LOCK) ||
+                 real_room(to_room) == NOWHERE);
+
+        if (!to_room)
+            continue;
+        if (!metal_slime_nr)
+            continue;
+        if (real_room(to_room) == NOWHERE)
+            continue;
+
+        metal_slime = read_mobile(metal_slime_nr, REAL);
+        char_to_room(metal_slime, real_room(to_room));
+    }
+}
+
+/*
+XP Quest NPC.
+
+Not only starts the quest, but provides the recipes to summon elite XP mobs.
+*/
+
+int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+    // char buf2[MIL];
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict;
+	CHAR * slime_summon;
+
+    bool allDead = FALSE;
+    int metal_slimes_left = 0;
+    int metal_slimes[4] = {18025, 18026, 18027, 18028};
+    int metal_slime_nr,metal_slime_number;
+    int max_metal_slimes = 20;
+
+	int metal_slime_scrolls[4] = {18026, 18027, 18028,18029};
+	int scroll_number;
+	OBJ *scroll_object;
+	
+	int spawn_rooms[8] = {5320, 6284, 1142, 1319, 1652, 7417, 4511, 2136};
+	
+	bool can_summon = FALSE;
+	int summon_room;
+	int slime_summon_nr;
+
+	bool give_back = FALSE;
+
+    switch (cmd)
+    {
+    case MSG_TICK:
+        // Track this until this part of the quest is complete. THen ensure it doesnt fire again.
+        if (!IS_SET(GET_BANK(mob), STATE1) && IS_SET(GET_BANK(mob), STATE4))
+        {
+            allDead = check_for_metal_slimes();
+
+            // If all are dead, call the function to spawn the next 4.
+            if (allDead)
+            {
+                sprintf(buf, "Thank you for removing the slime menance from the world");
+                do_quest(mob, buf, CMD_QUEST);
+                SET_BIT(GET_BANK(mob), STATE1);
+            }
+            // If all of them arent dead, lets provide updates.
+            else
+            {
+                
+				//Count Remaining Metal Slimes
+				
+				for (int i = 0; i < 4; i++)
+				{
+					// Grab the room and mob based on index value.
+					metal_slime_number = metal_slimes[i];
+
+					// Check if the room exists
+					if (!metal_slime_number)
+						continue;
+
+					metal_slime_nr = real_mobile(metal_slime_number);
+
+					if (mob_proto_table[metal_slime_nr].number > 0)
+					{
+						metal_slimes_left += mob_proto_table[metal_slime_nr].number;
+					}
+				}
+				
+                // Only speak 60% of the time.
+                if (chance(60))
+                {
+
+                    if (metal_slimes_left == 1)
+                    {
+                        sprintf(buf, "Only one of the foul slimes are left!");
+                    }
+                    else if (metal_slimes_left == 8)
+                    {
+                        sprintf(buf, "Half of the slimes have been killed. Remove the slime menace.");
+                    }
+                    else if (metal_slimes_left == 16)
+                    {
+                        sprintf(buf, "Slimy Creatures have invaded. Please help me hunt them down.");
+                    }
+                    else if (metal_slimes_left > 0 && metal_slimes_left < 8)
+                    {
+                        sprintf(buf, "Only twenty five percent remain champions. Continue the Hunt");
+                    }
+                    else if (metal_slimes_left > 8 && metal_slimes_left < 16)
+                    {
+                        sprintf(buf, "You are starting to thin their numbers.  Continue to kill them");
+                    }
+                    else
+                    {
+                        sprintf(buf, "Help me hunt does the menance of the slimes");
+                    }
+
+                    do_quest(mob, buf, CMD_QUEST);
+                }
+            }
+        }
+        
+                break;
+
+    case CMD_KILL:
+    case CMD_HIT:
+    case CMD_KICK:
+    case CMD_AMBUSH:
+    case CMD_ASSAULT:
+    case CMD_BACKSTAB:
+        do_say(mob, "Stop That. Go kill the slimes.", CMD_SAY);
+        return TRUE;
+
+    case MSG_VIOLENCE:
+
+        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = CHAR_NEXT_IN_ROOM(vict))
+            if (vict->specials.fighting == mob)
+                stop_fighting(vict->specials.fighting);
+        stop_fighting(mob);
+        GET_HIT(mob) = GET_MAX_HIT(mob);
+
+        do_say(mob, "Stop That. Go kill the slimes.", CMD_SAY);
+
+        return FALSE;
+
+    case MSG_OBJ_GIVEN:
+
+        arg = one_argument(arg, buf);
+
+        OBJ *obj = get_obj_in_list_vis(mob, buf, mob->carrying);
+		
+		/*
+		
+		Load z TheGriffonAeriebyThyas
+		load z HelventiaMountainsbyLem
+		load z SHIRE
+		load z TheCanticle
+		load z StoneMonkeyIslandbyAnkh
+		load z BrigandCampbyOdie
+		load z GoblinKingdomandMarshCaveb
+		load z battlefieldvillage
+
+		*/
+		// Shuffle the rooms to ensure random room for spawning.
+		for (int i = NUMELEMS(spawn_rooms) - 1; i > 0; i--)
+			{
+				int j = rand() % (i + 1);
+				int temp = spawn_rooms[i];
+				spawn_rooms[i] = spawn_rooms[j];
+				spawn_rooms[j] = temp;
+			}
+		
+		summon_room = spawn_rooms[0];
+
+        if (!obj)
+            return TRUE;
+		
+		if ((V_OBJ(obj) >= CROWN_LIQUID && V_OBJ(obj) <= SIGIL_MERCURY))
+        {
+
+            if (V_OBJ(obj) == CROWN_LIQUID)
+            {
+                slime_summon_nr = real_mobile(SLIME_AURELION);
+				can_summon = TRUE;
+			}
+            else if (V_OBJ(obj) == MIRROR_EMPEROR)
+            {
+                slime_summon_nr = real_mobile(SLIME_QUICKSILVER);
+				can_summon = TRUE;
+			}
+            else if (V_OBJ(obj) == KEYSTONE_OBSIDIAN)
+            {
+                slime_summon_nr = real_mobile(SLIME_OBSIDIAN);
+				can_summon = TRUE;
+			}
+            else if (V_OBJ(obj) == SIGIL_MERCURY)
+            {
+                slime_summon_nr = real_mobile(SLIME_VYRALUX);
+				can_summon = TRUE;
+            }
+
+			if(can_summon){
+				//Check the Proto Table for the Mob.  If less than 1 exist, summon the mob.
+				if(mob_proto_table[slime_summon_nr].number < 1){
+					do_say(mob, "A powerful slime has been brought into the world. Slay it.", CMD_SAY);
+					//Remove the Object
+					give_back = FALSE;
+					extract_obj(obj);
+					//Summon the Mob.
+					slime_summon = read_mobile(slime_summon_nr, REAL);
+					char_to_room(slime_summon, real_room(summon_room));
+				
+				}else {
+					do_say(mob, "The slime already exists in the world. Slay it first.", CMD_SAY);
+					give_back = TRUE;
+				}
+			}
+		}
+		else
+		{
+			do_say(mob, "I have no use for this item, please take it back.", CMD_SAY);
+			give_back = TRUE;
+        
+		}
+		
+
+        if (give_back)
+        {
+            act("$N gives you $p.", FALSE, ch, obj, mob, TO_CHAR);
+            obj_from_char(obj);
+            obj_to_char(obj, ch);
+
+            return TRUE;
+        }
+		
+		
+        break;
+	case MSG_ENTER:
+        // If NPCs or they are already fighting, dont do anything else.
+        if (IS_NPC(ch) || IS_IMMORTAL(ch) || mob->specials.fighting)
+            return FALSE;
+
+        do_say(mob, "Salute me when you enter!", CMD_SAY);
+
+		break;
+    case CMD_UNKNOWN:
+        // Set a bit to ensure you can only start the quest once.
+
+        arg = one_argument(arg, buf);
+        if (*buf && is_abbrev(buf, "startxp") && !is_abbrev(buf, "south"))
+        {
+            if (!IS_IMMORTAL(ch))
+            {
+                do_say(mob, "Go find an IMMORT!", CMD_SAY);
+                return TRUE;
+            }
+
+            if (!IS_SET(GET_BANK(mob), STATE4))
+            {
+                spawn_metal_slimes(max_metal_slimes);
+                send_to_char("Starting XP Slime Quest.\n\r", ch);
+                SET_BIT(GET_BANK(mob), STATE4);
+                sprintf(buf, "Slimes have invaded the world.  Purge them!");
+                do_quest(mob, buf, CMD_QUEST);
+                return TRUE;
+            }
+            else
+            {
+                do_say(mob, "You can't start this again", CMD_SAY);
+                return TRUE;
+            }
+        }
+		else if (*buf && is_abbrev(buf, "salute") && !is_abbrev(buf, "south")){
+			  act("$n salutes $N and is giving a scroll!",0,ch,0,mob,TO_NOTVICT);
+			  act("You salute $N and get a scroll!",0,ch,0,mob,TO_CHAR);
+			  act("$n salutes you and gets a scroll!",0,ch,0,mob,TO_VICT);
+			  
+			for (int i = NUMELEMS(metal_slime_scrolls) - 1; i > 0; i--)
+			{
+				int j = rand() % (i + 1);
+				int temp = metal_slime_scrolls[i];
+				metal_slime_scrolls[i] = metal_slime_scrolls[j];
+				metal_slime_scrolls[j] = temp;
+			}
+			
+			
+			scroll_number = metal_slime_scrolls[0];
+			
+			
+			      // Read the Item
+            scroll_object = read_object(scroll_number, VIRTUAL);
+            // Give Object to Char.
+            obj_to_char(scroll_object, ch);
+            act("$N reaches into a bag and gives you $p.", FALSE, ch, scroll_object, mob, TO_CHAR);
+			return TRUE;
+		}
+        else
+        {
+            return FALSE;
+        }
+
+        break;
+
+    default:
+        break;
+    }
+    return FALSE;
+}
+
+
+/* Elite XP Slimes
+#define SLIME_AURELION 18030
+#define SLIME_QUICKSILVER 18031
+#define SLIME_OBSIDIAN 18032
+#define SLIME_VYRALUX 18033
+
+*/
+int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	    // These are default declarations to give variables to characters.
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict, *next_vict;
+
+    int stun_delay;
+	int reward = 4;
+    // Define any other variables
+
+    /*Don't waste any more CPU time if no one is in the room. */
+    if (count_mortals_room(mob, TRUE) < 1)
+        return FALSE;
+
+
+    switch (cmd)
+    {
+		
+    case MSG_MOBACT:
+
+        // if fighting - spec different attacks
+        if (mob->specials.fighting)
+        {
+            // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+            // Each Case statement that has an action needs to break out at the end.			
+			
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+			
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				if (!enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					metal_slime_curse_ench(vict);
+				}
+				
+			}
+			
+
+            switch (number(0, 5))
+            {
+            case 0:
+				if (!affected_by_spell(mob, SPELL_BLACKMANTLE)) {
+					  spell_blackmantle(GET_LEVEL(mob), mob, mob, 0);
+					}
+				break;
+            case 1:
+				vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are struck by $N in the side by liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+                break;
+            case 2:
+                act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					if(chance(44)){
+						
+						act("A shockwave hits you and you gasp for air.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 1050, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stun_delay = number(1, 3);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}else{ //If not stunned, then sit them down
+						act("A shockwave hits you and you are knocked to the ground.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 950, TYPE_UNDEFINED, DAM_PHYSICAL);
+						GET_POS(vict)=POSITION_SITTING;
+					}
+                }
+                break;
+            case 3:
+				act("$n pulses and the metallic structure hardens.", 0, mob, 0, 0, TO_ROOM);
+				affect_apply(mob, SPELL_ENDURE, 0, APPLY_HITROLL, 8, 0, 0);
+				affect_apply(mob, SPELL_ENDURE, 0, APPLY_DAMROLL, 8, 0, 0);
+				affect_apply(mob, SPELL_ENDURE, 0, APPLY_ARMOR, -80, 0, 0);
+				GET_HIT(mob) = GET_HIT(mob) + 600;
+				break;
+            case 4:
+                vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body into two strands.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are smashed between two arms of liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+					stop_fighting(vict);
+                }
+                break;
+            case 5: 
+				act("$n shoots fragments of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					act("A fragment of liquid metal hits you hard.", 0, mob, 0, vict, TO_VICT);
+					damage(mob, vict, number(350,700), TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+                break;
+            default:
+                break;
+            }
+        }
+
+        // can add an else branch here if you want them to act but not in combat.
+
+        break;
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			send_to_room(buf, CHAR_REAL_ROOM(mob));
+			mob_aq_reward(reward, mob);
+			
+			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
+			//If they are cursed, remove the curse
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				
+				if (enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					
+					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
+
+					if (slime_enchant) {
+					  enchantment_remove(ch, slime_enchant, FALSE);
+					}
+					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
+					
+					if (slime_fight_enchant) {
+					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					}	
+					
+				}
+				
+			}
+			
+			break;
+    }
+
+    return FALSE;
+}
+
+int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	// These are default declarations to give variables to characters.
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict, *next_vict;
+
+    int stun_delay;
+	int reward = 4;
+    // Define any other variables
+
+    /*Don't waste any more CPU time if no one is in the room. */
+    if (count_mortals_room(mob, TRUE) < 1)
+        return FALSE;
+
+
+    switch (cmd)
+    {
+		
+    case MSG_MOBACT:
+
+        // if fighting - spec different attacks
+        if (mob->specials.fighting)
+        {
+            // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+            // Each Case statement that has an action needs to break out at the end.
+			
+			
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+			
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				if (!enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					metal_slime_curse_ench(vict);
+				}
+				
+			}
+			
+
+            switch (number(0, 5))
+            {
+            case 0:
+				if (!affected_by_spell(mob, SPELL_BLACKMANTLE)) {
+					  spell_blade_barrier(GET_LEVEL(mob), mob, mob, 0);
+					}
+				break;
+            case 1:
+				vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are struck by $N in the side by liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+                break;
+            case 2:
+                act("$n summons tendrils of liquid mercury.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					if(chance(20)){
+						
+						act("A tendril of liquid mercury slams into you.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 950, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stun_delay = number(1, 3);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}else if (chance(30)){ //If not stunned, then sit them down
+						act("A tendril of covers your face and you blackout for a moment.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stop_fighting(vict);
+					}else{
+						act("Multiple tendrils repeatedly slam into you.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 1250, TYPE_UNDEFINED, DAM_PHYSICAL);
+						
+					}
+                }
+                break;
+            case 3:
+				act("Liquid mercury pooled on the ground and is absorbed back into $n.", 0, mob, 0, 0, TO_ROOM);
+				GET_HIT(mob) = GET_HIT(mob) + number(600,900);
+				break;
+            case 4:
+                vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body into two strands.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are smashed between two arms of liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+					stop_fighting(vict);
+                }
+                break;
+            case 5: 
+				act("$n pulses and and detects the energy in the room.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					if(chance(50)){	//Drain HP
+						act("Liquid Mercury envelops you and you feel your lifeforce drain away.", 0, mob, 0, vict, TO_VICT);
+						GET_HIT(vict) = GET_HIT(vict) - (GET_HIT(vict) / 12);
+					}else if (chance(40)){
+						
+						act("Liquid Mercury envelops you and you feel your magic power drain away.", 0, mob, 0, vict, TO_VICT);
+						GET_MANA(vict) = GET_MANA(vict) - (GET_MANA(vict) / 12);
+					
+					}else {
+						
+						act("Liquid Mercury envelops you but quickly falls away from your body.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, number(350,700), TYPE_UNDEFINED, DAM_PHYSICAL);
+						
+					}	
+					
+                }
+                break;
+            default:
+                break;
+            }
+        }
+
+        // can add an else branch here if you want them to act but not in combat.
+
+        break;
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			send_to_room(buf, CHAR_REAL_ROOM(mob));
+			mob_aq_reward(reward, mob);
+			
+			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
+			//If they are cursed, remove the curse
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				
+				if (enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					
+					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
+
+					if (slime_enchant) {
+					  enchantment_remove(ch, slime_enchant, FALSE);
+					}
+					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
+					
+					if (slime_fight_enchant) {
+					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					}	
+					
+				}
+				
+			}
+			
+			break;
+    }
+    return FALSE;
+}
+
+//Summons Obsidian Slimes 
+int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	// These are default declarations to give variables to characters.
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict, *next_vict;
+
+    int stun_delay;
+	int reward = 4; //You must declare the reward so you get AQP.
+    // Define any other variables
+	int tiny_slime_nr;	
+	tiny_slime_nr = real_mobile(SLIME_OBSIDIAN_TINY);
+	
+	CHAR * tiny_slime;
+	
+    /*Don't waste any more CPU time if no one is in the room. */
+    if (count_mortals_room(mob, TRUE) < 1)
+        return FALSE;
+
+
+    switch (cmd)
+    {
+		
+    case MSG_MOBACT:
+
+        // if fighting - spec different attacks
+        if (mob->specials.fighting)
+        {
+            // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+            // Each Case statement that has an action needs to break out at the end.
+			
+			
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+			
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				if (!enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					metal_slime_curse_ench(vict);
+				}
+				
+			}
+			
+
+            switch (number(0, 5))
+            {
+            case 0: //Summon Tiny Slimes
+			
+				if (mob_proto_table[tiny_slime_nr].number < 4)
+				{
+					tiny_slime = read_mobile(tiny_slime_nr, REAL);
+					char_to_room(tiny_slime, CHAR_REAL_ROOM(mob));
+
+					act("$n splits a chunk of itself off and a tiny slime appears on the ground.", FALSE, mob, 0, 0, TO_VICT);
+					act("$n splits a chunk of itself off and a tiny slime appears on the ground.", FALSE, mob, 0, 0, TO_NOTVICT);
+					act("$n appears from the liquid metal on the ground.", FALSE, mob, 0, 0, TO_ROOM);
+					
+					vict = get_random_victim_fighting(mob);					
+					hit(tiny_slime, vict, TYPE_UNDEFINED);
+					
+					return FALSE;
+				}
+				
+			
+				break;
+            case 1:
+				vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are struck by $N in the side by liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+                break;
+            case 2:
+                act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					if(chance(44)){
+						
+						act("A shockwave hits you and you gasp for air.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 1050, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stun_delay = number(1, 3);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}else{ //If not stunned, then sit them down
+						act("A shockwave hits you and you are knocked to the ground.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 950, TYPE_UNDEFINED, DAM_PHYSICAL);
+						GET_POS(vict)=POSITION_SITTING;
+					}
+                }
+                break;
+            case 3:
+            case 4:
+                vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body into two strands.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are smashed between two arms of liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+					stop_fighting(vict);
+                }
+                break;
+            case 5: 
+				if ( chance (20) )
+				  act("$n shoots numerous strands of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
+				for( vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict ; vict = next_vict ) {
+				  next_vict = CHAR_NEXT_IN_ROOM(vict);
+				  if(vict != mob && EQ(vict, WIELD) && IS_MORTAL(vict)) {
+					act("The strand of liquid metal knocks your weapon out of your hand.", 1, mob, 0, vict, TO_VICT);
+					obj_to_char( unequip_char(vict, WIELD), vict );
+				  }
+				}
+				break;
+            default:
+                break;
+            }
+        }
+
+        // can add an else branch here if you want them to act but not in combat.
+
+        break;
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			send_to_room(buf, CHAR_REAL_ROOM(mob));
+			mob_aq_reward(reward, mob);
+			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
+			//If they are cursed, remove the curse
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				
+				if (enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					
+					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
+
+					if (slime_enchant) {
+					  enchantment_remove(ch, slime_enchant, FALSE);
+					}
+					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
+					
+					if (slime_fight_enchant) {
+					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					}	
+					
+				}
+				
+			}
+			break;
+    }
+
+    return FALSE;
+
+}
+
+int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+	// These are default declarations to give variables to characters.
+    char buf[MAX_STRING_LENGTH];
+    CHAR *vict, *next_vict;
+
+    int stun_delay;
+	int reward = 4;
+    // Define any other variables
+
+    /*Don't waste any more CPU time if no one is in the room. */
+    if (count_mortals_room(mob, TRUE) < 1)
+        return FALSE;
+
+
+    switch (cmd)
+    {
+		
+    case MSG_MOBACT:
+
+        // if fighting - spec different attacks
+        if (mob->specials.fighting)
+        {
+            // Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+            // Each Case statement that has an action needs to break out at the end.
+			
+			
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+			
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				if (!enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					metal_slime_curse_ench(vict);
+				}
+				
+			}
+			
+
+            switch (number(0, 5))
+            {
+            case 0:
+				if (!affected_by_spell(mob, SPELL_BLACKMANTLE)) {
+					  spell_blackmantle(GET_LEVEL(mob), mob, mob, 0);
+					}
+				
+				if (!affected_by_spell(mob, SPELL_BLADE_BARRIER)) {
+					 act("$n projects swirling metal blades around its body.", 0, mob, 0, 0, TO_ROOM);
+					 spell_blade_barrier(GET_LEVEL(mob), mob, mob, 0);
+					}
+				break;
+            case 1:
+				vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are struck by $N in the side by liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+                }
+                break;
+            case 2:
+                act("$n jumps into the air and slams into the ground.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					if(chance(44)){
+						
+						act("A shockwave hits you and you gasp for air.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 1050, TYPE_UNDEFINED, DAM_PHYSICAL);
+						stun_delay = number(1, 3);
+						WAIT_STATE(vict, PULSE_VIOLENCE * stun_delay);
+					}else{ //If not stunned, then sit them down
+						act("A shockwave hits you and you are knocked to the ground.", 0, mob, 0, vict, TO_VICT);
+						damage(mob, vict, 950, TYPE_UNDEFINED, DAM_PHYSICAL);
+						GET_POS(vict)=POSITION_SITTING;
+					}
+                }
+                break;
+            case 3:
+            case 4:
+                vict = get_random_victim_fighting(mob);
+                if (vict) 	
+                {
+                    act("$n extends a part of its liquid metal body into two strands.", 0, mob, 0, 0, TO_ROOM);
+                    act("You are smashed between two arms of liquid metal.", 0, mob, 0, vict, TO_VICT);
+                    act("$N is struck by an arm of liquid metal.", 0, mob, 0, vict, TO_NOTVICT);
+                    damage(mob, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+					stop_fighting(vict);
+                }
+                break;
+            case 5: 
+				act("$n shoots fragments of liquid metal into the room.", 0, mob, 0, 0, TO_ROOM);
+                for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                {
+                    next_vict = CHAR_NEXT_IN_ROOM(vict);
+                    if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+                        continue;
+                    
+					act("A fragment of liquid metal hits you hard.", 0, mob, 0, vict, TO_VICT);
+					damage(mob, vict, number(350,700), TYPE_UNDEFINED, DAM_PHYSICAL);
+						
+					
+                }
+                break;
+            default:
+                break;
+            }
+        }
+
+        // can add an else branch here if you want them to act but not in combat.
+
+        break;
+		case CMD_KICK:
+		case CMD_AMBUSH:
+		case CMD_CIRCLE:
+		case CMD_ASSAULT:
+		case CMD_BACKSTAB:
+		case CMD_LUNGE:
+		case CMD_FLANK:
+		case CMD_PUMMEL:
+		case CMD_BASH:
+				act("A tentacle of liquid metal deflects your attempt.", 0, mob, 0, ch, TO_VICT);
+				damage(mob, ch, number(350,700), TYPE_UNDEFINED, DAM_PHYSICAL);
+		
+		break;
+		
+		case MSG_DIE:	// on boss death reward AQP
+			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			send_to_room(buf, CHAR_REAL_ROOM(mob));
+			mob_aq_reward(reward, mob);
+			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
+			//If they are cursed, remove the curse
+			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict)))
+					continue;
+				
+				if (enchanted_by(vict, SLIME_ENCHANT_NAME))
+				{
+					
+					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
+
+					if (slime_enchant) {
+					  enchantment_remove(ch, slime_enchant, FALSE);
+					}
+					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
+					
+					if (slime_fight_enchant) {
+					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					}	
+					
+				}
+				
+			}
+			break;
+    }
+
+    return FALSE;
+
+
+}
+
 // Assign Spec for the zone. Sets all other specs.
 // First Param - Object, Room or Mob Number.  Define it up above.
 // Second Param - the name of the function that is for the mob Usually a shorthand for your zone.
@@ -1984,21 +3564,36 @@ void assign_medievalblackmarket(void)
     assign_room(RUNEGATE, blackmarket_runegate);
 
     /*Mobs */
-
     assign_mob(GUISE_MERCHANT, blackmarket_guise);
     assign_mob(SPECTOR_MERCHANT, blackmarket_spector);
     assign_mob(ECHO_MERCHANT, blackmarket_echo);
     assign_mob(MIME_MERCHANT, blackmarket_mime);
     assign_mob(FUSE_MERCHANT, blackmarket_fuse);
     assign_mob(FEIGN_MERCHANT, blackmarket_feign);
+	
+	//Automated Quests
+	assign_mob(QUESTGIVER, blackmarket_questgiver);
 
-    assign_mob(QUESTGIVER, blackmarket_questgiver);
-
-    assign_mob(LOOT_GOBLIN_OFFICER_ONE, blackmarket_loot_goblin);
+    //Gold Quest
+	assign_mob(LOOT_GOBLIN_OFFICER_ONE, blackmarket_loot_goblin);
     assign_mob(LOOT_GOBLIN_OFFICER_TWO, blackmarket_loot_goblin);
     assign_mob(LOOT_GOBLIN_OFFICER_THREE, blackmarket_loot_goblin);
     assign_mob(LOOT_GOBLIN_OFFICER_FOUR, blackmarket_loot_goblin);
     assign_mob(LOOT_GOBLIN_BOSS, blackmarket_loot_goblin);
     assign_mob(LOOT_GOBLIN, blackmarket_loot_goblin);
     assign_mob(GRINTAK_HUNTER, blackmarket_grintak_hunter);
+	
+	//XP Quest
+	assign_mob(METAL_SLIME, blackmarket_metal_slime);
+	assign_mob(LIQUID_METAL_SLIME, blackmarket_metal_slime);
+	assign_mob(METAL_KING_SLIME, blackmarket_metal_slime);
+	assign_mob(METAL_DRAGON_SLIME, blackmarket_metal_slime);
+	assign_mob(SYLRA_HUNTRESS, blackmarket_sylra_huntress);
+	//Summoned Slimes
+	
+	assign_mob(SLIME_AURELION, blackmarket_slime_aurelion);
+	assign_mob(SLIME_QUICKSILVER, blackmarket_slime_quicksilver);
+	assign_mob(SLIME_OBSIDIAN, blackmarket_slime_obsidian);
+	assign_mob(SLIME_VYRALUX, blackmarket_slime_vyralux);
+	
 }
