@@ -48,6 +48,7 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define QUEST_BUY      6
 #define QUEST_CARD     7
 #define QUEST_ORDER    8
+#define QUEST_UBER     9
 
 #define AQCARDS_SPREAD 25
 
@@ -73,6 +74,8 @@ void aqcard_cleanup(int id)
   return;
 }
 
+int spawn_uber(CHAR *ch, int tries);
+
 void do_aquest(CHAR *ch, char *argument, int cmd) {
   char arg[MAX_INPUT_LENGTH];
   char usage[]="\
@@ -84,7 +87,8 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
                 quit     - quit your current quest\n\r\
                 order    - request an order (solo/low/mid/high optional)\n\r\
                 list     - list things to buy\n\r\
-                buy      - buy things with quest points\n\r";
+                buy      - buy things with quest points\n\r\
+                uber     - spawn an uber (if possible) SUP+\n\r";
 
   int option = 0;
 
@@ -103,6 +107,7 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
   if (is_abbrev(arg, "buy")) option = QUEST_BUY;
   if (is_abbrev(arg, "card")) option = QUEST_CARD;
   if (is_abbrev(arg, "order")) option = QUEST_ORDER;
+  if (is_abbrev(arg, "uber")) option = QUEST_UBER;
 
   switch (option) {
     case QUEST_STATUS:
@@ -198,6 +203,15 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
       send_to_char("You'll have to find someone who has those.\n\r", ch);
       return;
       break;
+    case QUEST_UBER:
+      if (!IS_SUPREME(ch)) {
+        send_to_char("Nope.\n\r", ch);
+        return;
+      }
+      else {
+        spawn_uber(ch, 10) ? send_to_char("Done.\n\r", ch) : send_to_char("Failed to spawn.\n\r", ch);
+        return;
+      }
     default:
       send_to_char(usage, ch);
       return;
@@ -881,9 +895,6 @@ const int aq_mob_master_list[][2] = {
   { 706, 3 }, /* juktoa troll foreman */
   //{ 1261, 3 }, /* salamander sal */
   //{ 2702, 3 }, /* marikith elder */
-  { 2106, 3 }, /* Maverick the Strategist */
-  { 2113, 3 }, /* Vessara the Shadow */
-  { 2938, 3 }, /* Fire Newt God */
   { 3919, 3 }, /* celestial dragon */
   { 4447, 3 }, /* Gentle ben filthy inmate */
   { 4463, 3 }, /* doctor jacobs */
@@ -931,7 +942,6 @@ const int aq_mob_master_list[][2] = {
   { 27715, 3 }, /* gelugon guardian guard demon */
   { 20923, 3 }, /* tweef king vandimar */
   { 20924, 3 }, /* tweef queen larienne */
-  
   { 209, 4 }, /* lookout vagabond scout leader */
   { 501, 4 }, /* Oni Greater */
   { 540, 4 }, /* Tanoshi Wrestler */
@@ -957,7 +967,7 @@ const int aq_mob_master_list[][2] = {
   { 12904, 4 }, /* mystic ultimate */
   { 13501, 4 }, /* oglozt greater */
   { 14205, 4 }, /* fred gatekeeper */
-  //{ 14507, 4 }, /* eduard magistrate wererat grotesque rat */
+  //{ 14508, 4 }, /* eduard magistrate wererat grotesque rat */
   { 16515, 4 }, /* gorgo fur beast */
   { 17005, 4 }, /* marten man */
   { 17006, 4 }, /* maerlyn sorcerer wizard */
@@ -967,14 +977,7 @@ const int aq_mob_master_list[][2] = {
   { 20129, 4 }, /* Spectral Warlord */
   { 20130, 4 }, /* warhorse skeletal */
   { 20165, 4 }, /* black panther */
-  { 21203, 4 }, /* king morian moria ruler mandrial */ 
-  { 21400, 4 }, /* Obsidian Sentinel  */ 
-  { 21407, 4 }, /* Hollowed Mourner */ 
-  { 21408, 4 }, /* The Grave Maw */ 	
-  { 21409, 4 }, /* The Unspoken */ 
-  { 21410, 4 }, /* The Ironbound Custodian */ 
-  { 21411, 4 }, /* The Wailing Dowager */ 
-  { 21412, 4 }, /* The Shrouded Revenant  */ 
+  { 21203, 4 }, /* king morian moria ruler mandrial */
   { 25018, 4 }, /* elemental water prince */
   { 25019, 4 }, /* earth elemental king */
   { 25020, 4 }, /* air elemental lord */
@@ -983,7 +986,6 @@ const int aq_mob_master_list[][2] = {
   { 25040, 4 }, /* death lord */
   { 26401, 4 }, /* vizier */
   { 26481, 4 }, /* healer */
-  { 26700, 4 }, /* Guard of the Gates */
   { 27105, 4 }, /* cannibal witchdoctor */
   { 27720, 4 }, /* myrdon thief rogue master */
   { 27721, 4 }, /* shadowraith ninja assassin jal pur */
@@ -998,7 +1000,7 @@ const int aq_mob_master_list[][2] = {
   { 28718, 4 }, /* pandora immortal */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
-  //{ 5105, 5 }, /* drow apprentice */
+  { 5105, 5 }, /* drow apprentice */
   { 5106, 5 }, /* drow weaponmaster zarc */
   { 5107, 5 }, /* drow matron mother lower */
   { 5109, 5 }, /* illithid */
@@ -1007,25 +1009,14 @@ const int aq_mob_master_list[][2] = {
   { 5184, 5 }, /* spider sentry third */
   { 5189, 5 }, /* spider sentry fourth */
   { 5191, 5 }, /* spider sentry second */
-  { 5523, 5 }, /* An Eight Legged Drider */
   { 5596, 5 }, /* myconid king mushroom */
   { 11326, 5 }, /* vampire strahd count */
-  { 11700, 5 }, /* Rhoden */	  
   { 17004, 5 }, /* twixt bard man master */
   { 17010, 5 }, /* minion lesser */
-  { 17308, 5 }, /* marcus wizard mage */  
-  { 17322, 5 }, /* Kiri-Torin highlord kiri torin dragon high lord  */
-  { 17342, 5 }, /* troll cook chef */
-  { 19403, 5 }, /* mountaninous grolem */
-  { 19508, 5 }, /* difficult world elemental earth ruler*/
-  { 19509, 5 }, /* difficult world elemental fire ruler */
-  { 19510, 5 }, /* difficult world elemental air ruler */
-  { 19511, 5 }, /* difficult world elemental lightning ruler */
-  { 19512, 5 }, /* difficult world elemental water ruler */ 
+  { 17308, 5 }, /* marcus wizard mage */
   { 20145, 5 }, /* Shogun Warlord Samurai */
   { 21204, 5 }, /* adrel sage magic */
   { 21205, 5 }, /* ulric advisor */
-  { 21206, 5 }, /* Griselda */
   { 21210, 5 }, /* priest high dark man */
   { 21323, 5 }, /* ogre sorcerer eowadriendir */
   { 21332, 5 }, /* otyugh stench garbage pile vines */
@@ -1035,41 +1026,39 @@ const int aq_mob_master_list[][2] = {
   { 25013, 5 }, /* kalas */
   { 26402, 5 }, /* emir malik */
   { 26482, 5 }, /* magus */
-  { 27712, 5 }, /* bebilith stalker purple spider insect */ 
-  { 27722, 5 }, /* shomed nomad hero tarion desert */
+  { 27712, 5 }, /* bebilith stalker purple spider insect */
+  { 19403, 5 }, /* mountaninous grolem */
+//  { 19508, 5 }, /* difficult world elemental earth ruler*/
+//  { 19509, 5 }, /* difficult world elemental fire ruler */
+//  { 19510, 5 }, /* difficult world elemental air ruler */
+//  { 19511, 5 }, /* difficult world elemental lightning ruler */
+//  { 19512, 5 }, /* difficult world elemental water ruler */
+//  { 10502, 6 }, /*tarion cavalier*/
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */
   { 5127, 6 }, /* drow matron mother second */
   { 5132, 6 }, /* drow leader varrn */
   { 5553, 6 }, /* Garaek drow drider overseer */
-  { 5556, 6 }, /* A deep Wyrm */
   { 5574, 6 }, /* colossal wyrm */
   { 5901, 6 }, /* drow leader rezik */
   { 7703, 6 }, /* typik lizard shaman reptile */
-  { 10502, 6 }, /*tarion cavalier*/
-  { 11703, 6 }, /* Ancient Flame Dragon */
   { 13502, 6 }, /* demon reptilian reptile */
   //{ 14501, 6 }, /* keira banshee ghost */
-  { 14201, 6 }, /* Jason*/
-  { 14210, 6 }, /* Emma */
   { 14503, 6 }, /* ardaan inquisitor warrior */
   //{ 11514, 6 }, /* wyvern */
   { 13019, 6 }, /* elf elven master beastmaster */
   { 17002, 6 }, /* vermilion king */
   { 17306, 6 }, /* pit fiend */
-  { 17371, 6 }, /* pyrak */
+  { 17342, 6 }, /* troll cook chef */
   { 20107, 6 }, /* Raiden */
   //{ 23001, 6 }, /* remorhaz ice burrower */
   { 25001, 6 }, /* keftab */
   { 26583, 6 }, /* guru */
-  { 26584, 6 }, /* Enlightened One */
   { 26706, 6 }, /* creature large hideous mutated rat yeti human */
-  { 26707, 6 }, /* observer tower mage old man */  
+  { 26707, 6 }, /* observer tower mage old man */
   { 28700, 6 }, /* icarus immortal */
-  { 28704, 6 }, /* Charon */
-  { 28705, 6 }, /* Cerberus */
-  
+  //{ 27722, 6 }, /* shomed nomad hero tarion desert */
 };
 
 static bool aq_calc_skip = FALSE;
@@ -1218,10 +1207,6 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (GET_PRESTIGE_PERK(ch) >= 19) {
       double_point_chance += 2;
     }
-	// Gamemode BonusAQP to add a 50% chance of double AQP.
-	if(BONUSAQP){
-		double_point_chance += 50;
-	}
 
     if (chance(double_point_chance)) {
       act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);
@@ -1382,10 +1367,6 @@ const int aq_obj_master_list[][2] = {
   {803, 3}, // Tattered Leggings 30
   {907, 3}, // A Set of Golden Bangles 40
   {910, 3}, // The Rebel's Breastplate 17
-  {2103, 3}, // Shadowrend 25
-  {2113, 3}, // Leggings of Relentess Pursuit 22
-  {2114, 3}, // Sleeves of Enduring Might 23
-  {2115, 3}, // Gauntlets of Ironclad Grasp 24  
   {4109, 3}, // A Belt of the Undergrounds 9
   {4448, 3}, // a shield made from solid oak 18
   {4464, 3}, // iron shackles and chains 20
@@ -1394,7 +1375,6 @@ const int aq_obj_master_list[][2] = {
   {4508, 3}, // Boots of Striding 10
   {4510, 3}, // A Mushroom-Top Loincloth 10
   {4604, 3}, // the Finger of Thievery 10
-  {5709, 3}, // The medallion of Akinra 10
   {6802, 3}, // leg plates of devotion 50
   {6803, 3}, // buckler of obeisance 50
   {7502, 3}, // a dueling pistol 50
@@ -1405,7 +1385,8 @@ const int aq_obj_master_list[][2] = {
   {8922, 3}, // a common recipe 3
   {10018, 3}, // lime-green jerkin 3
   {10021, 3}, // Wreath of Fire 13
-  {10409, 3}, // Colossal Claw of the Greater Lycanthrope 10  
+  {10409, 3}, // Colossal Claw of the Greater Lycanthrope 10
+  {10908, 3}, // a Zyca Orb 50
   {11316, 3}, // breast plate of Black rose 10
   {11507, 3}, // the Hammer of Lei Kung 10
   {11524, 3}, // The Plate Mail of Fei Lien 10
@@ -1442,14 +1423,8 @@ const int aq_obj_master_list[][2] = {
   {17300, 3}, // Frosted Bracelet 55
   {20147, 3}, // a Ninjato 100
   {20825, 3}, // Wings of the Cloaker Lord 20
-  {20840, 3}, // a shield of mottled flesh 12
-  {21215, 3}, // Golden Dagger 29  
-  {21400, 3}, // Veil of the Nameless 23
-  {21401, 3}, // Chattering Relic  27
-  {21402, 3}, // Shroud of Silence  30
-  {21403, 3}, // Rusted Oathplate 24
-  {21404, 3}, // Locket of Endless Sorrow   27
-  {21405, 3}, // Funeral Wrappings   31  
+  {21215, 3}, // Golden Dagger 29
+  {21305, 3}, // A broken sword 30
   {24904, 3}, // Bracelet made from roots 25
   {25016, 3}, // a Silver Trident 50
   {25027, 3}, // The Silver Circlet of Concentration 50
@@ -1458,8 +1433,10 @@ const int aq_obj_master_list[][2] = {
   {27108, 3}, // a Staff of the Magi 78
   {27113, 3}, // the thick hide of a dinosaur 23
   {27116, 3}, // The Shadowblade 32
+  {28503, 3}, // Pan's Flute 15
   {204, 4}, // A gleaming spyglass 7
-  {3907, 4}, // The tail of the Celestial Dragon 10  
+  {3907, 4}, // The tail of the Celestial Dragon 10
+  {5709, 4}, // The medallion of Akinra 10
   //{5711, 4}, // mercury's boots 10
   {5804, 4}, // Pair of red lederhosen 20
   {6208, 4}, // a chitonous exoskeleton 10
@@ -1471,13 +1448,11 @@ const int aq_obj_master_list[][2] = {
   {7511, 4}, // a diamond bracelet 10
   {7522, 4}, // a pair of white, flowing silk pants 10
   {8362, 4}, // dusty pants 20
-  {10015, 4}, // an Ethereal Sash 10
+  {10015, 4}, // an Ethereal Sash 3
   {10022, 4}, // Obsidian Ring 30
   {10028, 4}, // worn hickory cane 32
   {10905, 4}, // a pair of Zyca arm plates 10
-  {10906, 4}, // a pair of Zyca leg plates 10
   {10907, 4}, // a Zyca ring 10
-  {10908, 4}, // a Zyca Orb 50
   {11506, 4}, // the Wyvernspur 50
   {12028, 4}, // Snakeskin Belt 10
   {12023, 4}, // Dark Banded Mail 25
@@ -1490,8 +1465,6 @@ const int aq_obj_master_list[][2] = {
   {13401, 4}, // a wispy cloud 15
   {13506, 4}, // Glowing armbands of Creaz 20
   {13507, 4}, // Ornate platinum belt 20
-  {13508, 4}, // A scimitar of Flame 15
-  {14203, 4}, // Boundary Warden Knife 33
   {14503, 4}, // a Blood-Red Amulet 12
   {16512, 4}, // A Rusted Bucket 15
   {16513, 4}, // A rotting bridle 15
@@ -1499,19 +1472,11 @@ const int aq_obj_master_list[][2] = {
   {16530, 4}, // Filthy Slippers 75
   {17024, 4}, // A pointy wizard's hat 20
   {17080, 4}, // a Silver Harmonica 20
-  {17321, 4}, // Cube of Awareness 50 
-  {20901, 4}, // Hero's Robe 8
-  {20903, 4}, // A silver chainlink belt 22
-  {20904, 4}, // Mismatched Slippers 18
-  {20906, 4}, // fireblade 12
-  {20909, 4}, // A foaming stein 33
+  {17321, 4}, // Cube of Awareness 50
+  {20840, 4}, // a shield of mottled flesh 12
   {21108, 4}, // A giant leaf shield 10
-  {21109, 4}, // An Ancient Torch  10
-  {21110, 4}, // A sword made from bone  10
   {21205, 4}, // Boots of Stealth 10
   {21217, 4}, // the Mallet of the Underworld 10
-  {21305, 4}, // A broken sword 30
-  {21321, 4}, // A Pair of Gleaming Gauntlets 10
   {23008, 4}, // Pelt of the Glacial Polar Bear 5
   {24900, 4}, // druidic battle wrap 14
   {24901, 4}, // Dark Druid's buckler 15
@@ -1527,7 +1492,6 @@ const int aq_obj_master_list[][2] = {
   {27110, 4}, // a hunting knife 12
   {27123, 4}, // a wreath of true laurel 10
   {27721, 4}, // Wristband of the Assassin 10
-  {28503, 4}, // Pan's Flute 15
   {518, 5}, // a shinobigawa 14
   {802, 5}, // Sword of Healing 10
   {4608, 5}, // a Parasite's Fang 5
@@ -1543,41 +1507,36 @@ const int aq_obj_master_list[][2] = {
   {12211, 5}, // Ettins Cape 10
   //{12822, 5}, // the Scent of a Mankey 10
   {12827, 5}, // A bag of MankeyBits 10
-  {12908, 5}, //The Prismatic Star of Gemini 9
   {12928, 5}, // a silver katana 8
   {13001, 5}, // an Elven Cloak 15
   {14002, 5}, // The Shadow Cloak 15
   {14004, 5}, // The Shadow Plate 15
-  {14203, 5}, // A Boundary Warden Knife
   {16528, 5}, // A Stained Apron 20
   {17309, 5}, // Fiend's Girdle 30
-  {19512, 5}, // a rainbow buckler
   {20107, 5}, // Drums of Panic 35
   {21110, 5}, // A sword made from bone 10
   {21200, 5}, // Darkened Bone Ring 10
   {21201, 5}, // Darkened Bone Plate 8
   {21203, 5}, // The Mask of Concentration 18
-  {21314, 5}, // An Ornamental Belt 9
-  {21322, 5}, // A Suit of Red Scale Mail 9
+  {21314, 5}, // An Ornamental Belt 1
+  {21322, 5}, // A Suit of Red Scale Mail 1
   {24906, 5}, // Evil Avenger 11
   {25018, 5}, // A Crystal Ring 10
   {25026, 5}, // the Soul Amulet 10
   {27102, 5}, // A bone mace 12
   {27106, 5}, // Gladius 9
   {27712, 5}, // Basilisk Blood Potion 10
-  {27720, 5}, // Banded Mail of the Bandit 10
-  {28763, 5}, // The Ring of Discord 8
-  {28764, 5}, // The Ring of Dissonance 8
+  {27720, 5}, // Banded Mail of the Bandit 5
   {704, 6}, // Mask of Lizard Powers 10
   {707, 6}, // The Ring of Eternal Life 7
-  {4704, 6}, // Werra's Belt of Garbage 10
+  {4704, 6}, // Werra's Belt of Garbage 5
   {5105, 6}, // a jeweled scimitar 12
   {5197, 6}, // Ball of Faerie Fire 10
   {12001, 6}, // golden breastplate 10
   {12018, 6}, // golden leggings 10
   {12020, 6}, // golden shield 10
   {12901, 6}, // the Fung-Tai dagger 8
-  {12909, 6}, // a band of holy spirits 9
+  {12909, 6}, // a band of holy spirits 5
   {13509, 6}, // Black cloak of Darkness 15
   {14502, 6}, // The Hell Stick 10
   {16529, 6}, // Wax Ring 12
@@ -1585,29 +1544,19 @@ const int aq_obj_master_list[][2] = {
   {17005, 6}, // Hood of Darkness 10
   {17371, 6}, // Dragon Horn 15
   {17396, 6}, // A mithril hammer 10
-  {19513, 6}, // heavy platinum arm bands 65
-  {19514, 6}, // heavy platinum leg bands 50
   {20145, 6}, // War Fan 17
   {21206, 6}, // Armlinks of Fire 15
   {21210, 6}, // a Dragon Scale Belt 17
-  {21212, 6}, // The Stone Dragon's Shield 10
   {21321, 6}, // A Pair of Gleaming Gauntlets 2
   {26406, 6}, // A Holey Majestic Cloak 12
   {26477, 6}, // The Mantle of Devotion 8
   {700, 7}, // a dusty deck of Tarot Cards 10
   {702, 7}, // a pair of baggy pants 10
-  {4700, 7}, // a small voodoo doll 9
+  {4700, 7}, // a small voodoo doll 3
   {5546, 7}, // Long Spiked Whip 10
   {7700, 7}, // Typik's Bloody Entrails 17
   {11702, 7}, // A Silver Full Plate 11
-  {14213, 7},  //A Rose Pendant 38
-  {14214, 7},  //Emma's Shawl 53
   {17322, 7}, // Dragon Highlord's Shield 10
-  {19501, 7}, // The beloved ring of stone 18
-  {19503, 7}, // a blue flame dagger 22
-  {19506, 7}, // a raging hurricane helmet 37
-  {19508, 7}, // the electric shield 24
-  {19510, 7}, // a flowing cloak of water 22
   {21207, 7}, // Black Demon's Talon 10
   {21212, 7}, // The Stone Dragon's Shield 10
   {26478, 7}, // The Signet Ring of the Sultan 6
@@ -1623,59 +1572,40 @@ const int aq_obj_master_list[][2] = {
   {14507, 8}, // Sandals of Sorrow 10
   {17306, 8}, // Fiend's Necklace 8
   {17372, 8}, // The Seal of the Drake 7
-  {20146, 8}, // shimmering band of Mokume Gane 10  
-  {26714, 8}, // A Glowing Staff of Gnarled Wood 10
+  {20146, 8}, // shimmering band of Mokume Gane 5
+  {26713, 8}, // A Clean Red Cloak 5
+  {26714, 8}, // A Glowing Staff of Gnarled Wood 5
   {28741, 8}, // The Coin of Fate 12
   {5198, 10}, // Flaming Mask 10
   {14212, 10}, // Boundary Warden Belt 45
   //{7201, 10}, // a soul shard fragment 10
-  {16503, 10}, // the Dagger of Segretto 9
+  {16503, 10}, // the Dagger of Segretto 5
   {16805, 10}, // Scythe of Execution 8
-  {16806, 10}, // A Bladed Lash 8  
+  {16806, 10}, // A Bladed Lash 8
+  {21326, 10}, // The Left Gauntlet of Calaphas 10
   {26402, 10}, // The Wand of Watoomb 18
-  {26403, 10}, // The Mallet of Orcus 10	
-  {26404, 10}, // The Dark Sphere of Ul 8  
-  {26405, 10}, // Coiled Tattoo 12
-  {26412, 10}, // Band of Demonic Aura 9
   {26579, 10}, // The Loincloth of Good Omens 8
   {26711, 10}, // The Greatsword of the Guard 8
   {27711, 10}, // A Carapace Shield 7
   {4478, 15}, // A Pretty Noose 8
-  {4479, 15}, // A Translucent Helm 8
-  {4485, 15}, // Pearl-White Blindfold 15
-  {4486, 15}, // The Cross of Virtue 7
-  {4487, 15}, // Gown of Good Judgement 9
   {4488, 15}, // Axe of Justice 10
-  {4489, 15}, // Ornament of Righteousness  6 
   //{5807, 15}, // Silk Suit 20
-  {11700, 15}, // Soul Stealer 8
   {11712, 15}, // Armor of Dark Angels 8
-  {19400, 15}, // An Extraordinarily Large Grolem Beak 10  
+  {19400, 15}, // An Extraordinarily Large Grolem Beak 10
+  {26404, 15}, // The Dark Sphere of Ul 8
   {571, 20}, // Ebon Armguards 5
   {585, 20}, // Small Portal of Evil 7
-  {587, 20}, // Icon of Possession 8
   {599, 20}, // The Gong of Unholy Wrath 8
-  {2721, 20}, // A glowing wristband of bone 20
-  {2722, 20}, // A giant globule of honey 83
   {5580, 20}, // Scorched Abdomen 8
   {5581, 20}, // Some Fine Elastic Cartilage 9
-  {5583, 20}, // Scorched Exoskeleton 9
-  {5584, 20}, // Belt of Spider Powers 9
-  {5585, 20}, // Scorched spider skin sleeves 10
-  {5586, 20}, // Scorched spider skin leggings 10
-  {5587, 20}, // An ancient drow relic 10
-  {20130, 20}, // Armored Boots 12
   {20132, 20}, // A Gleaming Jade Battlesuit 6
   {20138, 20}, // Helm of Lacquered Wood 8
-  {20185, 20}, // Yawata's Ring of Power  12
-  {21326, 20}, // The Left Gauntlet of Calaphas 10
-  {21329, 20}, // a swarm of angry beetles 9
-  {21330, 20}, // a mass of black, glistening thorns 10
-  {21309, 20}, // A Rotting Otyugh Skin 8
-  {25300, 20}, // Tail of Minos 8  
+  {21329, 20}, // a swarm of angry beetles 4
+  {21330, 20}, // a mass of black, glistening thorns 5
+  {25300, 20}, // Tail of Minos 8
+  {26403, 20}, // The Mallet of Orcus 6
   {26709, 20}, // The Grand Cape of Emithoynarthe 15
   {26712, 20}, // Heavy Red Gloves 15
-  {26713, 20}, // A Clean Red Cloak 9
   {26715, 20}, // Shimmering Metallic Greaves 15
   //{27724, 20}, // A Pair of Fine Leather Boots 3
   //{27726, 20}, // The Circlet of Devotion 4
@@ -1687,8 +1617,8 @@ const int aq_obj_master_list[][2] = {
   //{572, 25}, // An oaken root wand 3
   //{2716, 25}, // The black sting of the Queen 10
   //{6806, 25}, // Erishkigal's lash 9
-  {14208, 25} // Councilor's Plate 10
-  
+  {14208, 25}, // Councilor's Plate 10
+  {21309, 25}, // A Rotting Otyugh Skin 2
 };
 
 #define STORAGE_ROOM            5807
@@ -1745,7 +1675,7 @@ int generate_aq_order(CHAR *requester, CHAR *ordergiver, int lh_opt) {
     if ((lh_opt == 2) && (aq_obj_temp_value != 2)) continue;  // low
     if ((lh_opt == 3) && (aq_obj_temp_value != 3)) continue;  // mid
     if ((lh_opt == 4) && (aq_obj_temp_value != 4)) continue;  // high
-    if ((lh_opt == 5) && ((aq_obj_temp_value < 5) || //Updating Veteran Orders to Not Overlap Highs
+    if ((lh_opt == 5) && ((aq_obj_temp_value < 4) ||
                           (aq_obj_temp_value > 8))) continue; // veteran
     if ((lh_opt == 6) && (aq_obj_temp_value < 10)) continue;  // uber
 
@@ -2041,6 +1971,62 @@ int ubers[][2] = {
 #endif
 };
 
+int uber_objs[] = {
+  11300, // lover's charm bracelet
+  11301, // fine copper pentacle
+  12049, // gilded carapace collar
+//  12050, // a golden stick
+  14053, // Darkened Shadow Orb
+  20102, // gleaming katana of the Five Rings
+  21228, // Giant, Two-Handed Boulder Maul
+  26582  // Loincloth of Favorable Portents
+};
+
+char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
+  "Blame Sane","Damn you Lovecraft","It is the end times"};
+
+char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
+  "nitwit","nincompoop","imbecile","dullard",
+  "cotton-headed ninnymuggins","peabrain"};
+
+int spawn_uber (CHAR *spawner, int tries) {
+  CHAR *vict, *next_vict, *uber_mob;
+  bool spawn = TRUE;
+  int uber_choice = 0, uber_room = 0, i = 0;
+  char buf[MAX_STRING_LENGTH];
+
+  // pick an Uber to load
+  while (i < tries) {
+    spawn = TRUE;
+    i++;
+    uber_choice = number(0, NUMELEMS(ubers)-1);
+    uber_room = ubers[uber_choice][1];
+    for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
+      // don't load if there already is one or a PC in room
+      next_vict = vict->next_in_room;
+      if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
+        spawn = FALSE;
+        break;
+      }
+    }
+
+    if (spawn && (real_room(uber_room) != -1)) {
+      uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
+      char_to_room(uber_mob, real_room(uber_room));
+      sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
+      send_to_room(buf, real_room(uber_room));
+      if (tries > 3) { // SUP+ or tribute
+        sprintf(buf, "Call the police, there's a madman around! Some %s just called an Uber, run for your lives!",  kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
+      }
+      else { // tick based spawn
+        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+      }
+      do_quest(spawner, buf, CMD_QUEST);
+      return TRUE;
+    }
+  }
+  return FALSE; // failed to spawn
+}
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -2054,13 +2040,6 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
   char *collectoraction[8] = {"groan","frustration","cod","fume",
                               "blorf","roll","sneor","mumble"};
-  char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
-                            "nitwit","nincompoop","imbecile","dullard",
-                            "cotton-headed ninnymuggins","peabrain"};
-  CHAR *uber_mob = NULL;
-  char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
-                              "Blame Sane","Damn you Lovecraft","It is the end times"}; 
-  int uber_choice = 0, uber_room = 0;
 
   if (cmd == CMD_AQUEST) {
     // process order request
@@ -2101,12 +2080,16 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         } else if (lh_opt == 6 && GET_LEVEL(ch) < 45) {
           mob_do(collector, "rofl");
           do_say(collector, "Not bloody likely. You couldn't handle that level of order pipsqueak.", CMD_SAY);
+        } else if (lh_opt == 0) { // no proper order type chosen
+          sprintf(buf, "Try again. There's plenty of viable options and yet you still failed to pick one of them, you %s.", kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
+          do_say(collector, buf, CMD_SAY);
         } else if (!generate_aq_order(ch, collector, lh_opt)) {
           mob_do(collector, "shrug");
           sprintf(buf, "Sorry %s, guess I couldn't find an order for you.",
               GET_NAME(ch));
           do_say(collector, buf, CMD_SAY);
         }
+
       return TRUE;
       }
     }
@@ -2327,37 +2310,78 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       }
     }
     else { // given non-AQ_ORDER
-      do_say(collector, "Thanks, I guess?", CMD_SAY);
-    }
-  }
-
-  CHAR *vict, *next_vict;
-  bool spawn_uber = TRUE;
-  // dawn of the Ubers - Hemp 2017-07-07
-  if (cmd == MSG_ZONE_RESET) {
-    if (chance(10)) {
-      // pick an Uber to load
-      uber_choice = number(0, NUMELEMS(ubers)-1);
-      uber_room = ubers[uber_choice][1];
-
-      for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
-        // don't load if there already is one or a PC in room
-        next_vict = vict->next_in_room;
-        if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
-          spawn_uber = FALSE;
-          break;
+      char *tribute_responses[8] = {
+        "My heavens, do you know what you've set in motion?",
+        "Goodness me, a tribute? In this economy?",
+        "Oh no, not again...",
+        "Are you mad!? There's easier ways to die you know.",
+        "What sorcery is this? I don't want to be a part of it!",
+        "This isn't funny, lives are at stake!",
+        "What do you think you're playing at?",
+        "You'll kill us all!"
+      };
+      // check if given an obj ubers load - "tribute"
+      for (obj = GET_CARRYING(collector); obj; obj = OBJ_NEXT_CONTENT(obj)) {
+        bool tribute = FALSE;
+        for (int i = 0; i < NUMELEMS(uber_objs); i++) {
+          if (OBJ_VNUM(obj) == uber_objs[i]) {
+            if (chance(10)) mob_do(collector, "gasp");
+            tribute = TRUE;
+            break;
+          }
         }
+        if (tribute) {
+          GET_DEATH_LIMIT(collector)++; // track number of objs given using deathlimit
+          sprintf(buf, "Suddenly %s explodes in an opalescent fury of sound and color.\n\r", OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+
+          if (GET_DEATH_LIMIT(collector) <= 1) {
+            sprintf(buf, "%s", tribute_responses[number(0, NUMELEMS(tribute_responses)-1 )]);
+            do_say(collector, buf, CMD_SAY);
+          }
+          else if (GET_DEATH_LIMIT(collector) == 2) {
+            do_yell(collector, "Aaaaaaaaaaaaaah I want no part of this!", CMD_YELL);
+            do_flee(collector, "", CMD_FLEE);
+          }
+          else { // tribute complete: spawn uber
+            GET_DEATH_LIMIT(collector) = 0; // reset tribute counter
+            do_say(collector, "Don't say I didn't warn you. Beetlejuice, Beetlejuice... Beetlejuice.", CMD_SAY);
+            if (spawn_uber(collector, 10)) {
+              sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+              send_to_room(buf, CHAR_REAL_ROOM(collector));
+              char_from_room(collector);
+              char_to_room(collector, real_room(5806));
+            }
+            else { // failed to spawn an uber, mock them after a brief pause
+              GET_DEATH_LIMIT(collector) = -1;
+            }
+          }
+        }
+        else { // giving non-tribute obj
+          do_say(collector, "Thanks, I guess?", CMD_SAY);
+          sprintf(buf, "%s confusedly fires a strange pistol at %s\n\r...and it disappears before your very eyes!\n\r", GET_SHORT(collector), OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+        }
+        extract_obj(obj);
       }
-      if (spawn_uber) {
-        uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
-        char_to_room(uber_mob, real_room(uber_room));
-        sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
-        send_to_room(buf, real_room(uber_room));
-        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
-        do_quest(collector, buf, CMD_QUEST);
-       }
     }
   }
+
+  if ((GET_DEATH_LIMIT(collector) == -1) && (cmd == MSG_MOBACT)) {
+    GET_DEATH_LIMIT(collector) = 0;
+    mob_do(collector, "blink");
+    do_say(collector, "Thank our lucky stars, your efforts were in vain.", CMD_SAY);
+  }
+
+  if (cmd == MSG_TICK) { // spawn ubers
+    if (chance(5)) {
+      if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) {
+        // scale uber spawn chance based on players online
+        spawn_uber(collector, 3);
+      }
+    }
+  }
+
   return FALSE;
 }
 
