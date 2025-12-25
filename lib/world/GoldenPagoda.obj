@@ -66,7 +66,7 @@ $r Mallet of Orcus shimmers and throbs with an evil glow.~
 5 242266626 8193
 0 5 7 6
 28 90000 150000
-6
+9
 X
 ~
 0 0 0
@@ -246,7 +246,7 @@ A band of swirling powers is hovering here, emanating a light purple glow.~
 11 267432529 3
 0 0 0 0
 2 20000 21000
-5
+9
 E
 band ring powers~
 
@@ -283,12 +283,6 @@ A mysterious glow emits from the jewel of a forgotten ring.~
 1 25000 31500
 8
 E
-jewel~
-
-  A sparkling sapphire winks at you from the head of a tiny ring.
-
-~
-E
 ring signet mahamoti djinn~
 
   This is the magical ring which once belonged to the great
@@ -297,6 +291,12 @@ known for his practical jokes and good humor as well as
 the awesome power he commanded.  This jewel represents a
 small part of that power imparted and passed down throughout
 the Sultanate.
+
+~
+E
+jewel~
+
+  A sparkling sapphire winks at you from the head of a tiny ring.
 
 ~
 X
