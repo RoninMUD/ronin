@@ -238,7 +238,8 @@ int christmas_mechanical_familiar(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 				if (IS_MORTAL(vict))
 				{
-					enchantment_apply(ch, FALSE, CHRISTMAS_FAMILIAR_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_HITROLL, 0, 0, christmas_mechanical_familiar_blessing_func);
+					enchantment_apply(vict, FALSE, CHRISTMAS_FAMILIAR_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_HITROLL, 0, 0, christmas_mechanical_familiar_blessing_func);
+					act("You are filled with Christmas Joy.", FALSE, vict, 0, 0, TO_CHAR);
 				}
 			}
 			act("The familiar breaks down and falls apart.", FALSE, owner, 0, 0, TO_CHAR);
@@ -377,11 +378,12 @@ int christmas_chime(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 				if (IS_MORTAL(vict))
 				{
-					enchantment_apply(ch, FALSE, CHRISTMAS_CHIME_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_DAMROLL, 0, 0, christmas_chime_blessing_func);
+					enchantment_apply(vict, FALSE, CHRISTMAS_CHIME_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_DAMROLL, 0, 0, christmas_chime_blessing_func);
+					act("You are filled with Christmas Cheer.", FALSE, vict, 0, 0, TO_CHAR);
 				}
 			}
 			
-			if(chance(30)){
+			if(chance(5)){
 				act("The chime breaks on in your hand and falls apart.", FALSE, owner, 0, 0, TO_CHAR);
 				act("The chime breaks in $n's hand and falls apart.", FALSE, owner, 0, 0, TO_ROOM);
 				extract_obj(obj);
@@ -1616,9 +1618,10 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
         break;
 	case MSG_ENTER:
         // If NPCs or they are already fighting, dont do anything else.        
-        
-        act("$n Smiles and extends his hand.", TRUE, mob, 0, 0, TO_ROOM);
-		act("Welcome travellers.  Please provide the proof of Christmas Joy.", TRUE, mob, 0, 0, TO_ROOM);
+        if(chance(35)){
+			act("$n Smiles and extends his hand.", TRUE, mob, 0, 0, TO_ROOM);
+			act("Welcome travellers.  Please provide the proof of Christmas Joy.", TRUE, mob, 0, 0, TO_ROOM);
+		}
         break;
 	
 	case CMD_KILL:
