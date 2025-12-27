@@ -237,7 +237,7 @@ int gp_lotus(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     act("Lotus slips behind $N and slices $S throat.",0,mob,0,vict,TO_NOTVICT);
     act("You slit $N's throat.",0,mob,0,vict,TO_CHAR);
     act("Lotus disappears for a moment.  You feel something slit your throat.",0,mob,0,vict,TO_VICT);
-    damage(mob,vict,10000,TYPE_UNDEFINED,DAM_NO_BLOCK);
+    damage(mob,vict,1000,TYPE_UNDEFINED,DAM_NO_BLOCK);
     return FALSE;
   }
   return FALSE;
