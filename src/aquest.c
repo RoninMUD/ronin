@@ -48,6 +48,7 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define QUEST_BUY      6
 #define QUEST_CARD     7
 #define QUEST_ORDER    8
+#define QUEST_UBER     9
 
 #define AQCARDS_SPREAD 25
 
@@ -73,6 +74,8 @@ void aqcard_cleanup(int id)
   return;
 }
 
+int spawn_uber(CHAR *ch, int tries);
+
 void do_aquest(CHAR *ch, char *argument, int cmd) {
   char arg[MAX_INPUT_LENGTH];
   char usage[]="\
@@ -84,7 +87,8 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
                 quit     - quit your current quest\n\r\
                 order    - request an order (solo/low/mid/high optional)\n\r\
                 list     - list things to buy\n\r\
-                buy      - buy things with quest points\n\r";
+                buy      - buy things with quest points\n\r\
+                uber     - spawn an uber (if possible) SUP+\n\r";
 
   int option = 0;
 
@@ -103,6 +107,7 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
   if (is_abbrev(arg, "buy")) option = QUEST_BUY;
   if (is_abbrev(arg, "card")) option = QUEST_CARD;
   if (is_abbrev(arg, "order")) option = QUEST_ORDER;
+  if (is_abbrev(arg, "uber")) option = QUEST_UBER;
 
   switch (option) {
     case QUEST_STATUS:
@@ -198,6 +203,15 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
       send_to_char("You'll have to find someone who has those.\n\r", ch);
       return;
       break;
+	case QUEST_UBER:
+      if (!IS_SUPREME(ch)) {
+        send_to_char("Nope.\n\r", ch);
+        return;
+      }
+      else {
+        spawn_uber(ch, 10) ? send_to_char("Done.\n\r", ch) : send_to_char("Failed to spawn.\n\r", ch);
+        return;
+      }
     default:
       send_to_char(usage, ch);
       return;
@@ -881,7 +895,7 @@ const int aq_mob_master_list[][2] = {
   { 706, 3 }, /* juktoa troll foreman */
   //{ 1261, 3 }, /* salamander sal */
   //{ 2702, 3 }, /* marikith elder */
-  { 2106, 3 }, /* Maverick the Strategist */
+  { 2106, 3 }, /* Marvick the Strategist */
   { 2113, 3 }, /* Vessara the Shadow */
   { 2938, 3 }, /* Fire Newt God */
   { 3919, 3 }, /* celestial dragon */
@@ -931,7 +945,6 @@ const int aq_mob_master_list[][2] = {
   { 27715, 3 }, /* gelugon guardian guard demon */
   { 20923, 3 }, /* tweef king vandimar */
   { 20924, 3 }, /* tweef queen larienne */
-  
   { 209, 4 }, /* lookout vagabond scout leader */
   { 501, 4 }, /* Oni Greater */
   { 540, 4 }, /* Tanoshi Wrestler */
@@ -968,13 +981,6 @@ const int aq_mob_master_list[][2] = {
   { 20130, 4 }, /* warhorse skeletal */
   { 20165, 4 }, /* black panther */
   { 21203, 4 }, /* king morian moria ruler mandrial */ 
-  { 21400, 4 }, /* Obsidian Sentinel  */ 
-  { 21407, 4 }, /* Hollowed Mourner */ 
-  { 21408, 4 }, /* The Grave Maw */ 	
-  { 21409, 4 }, /* The Unspoken */ 
-  { 21410, 4 }, /* The Ironbound Custodian */ 
-  { 21411, 4 }, /* The Wailing Dowager */ 
-  { 21412, 4 }, /* The Shrouded Revenant  */ 
   { 25018, 4 }, /* elemental water prince */
   { 25019, 4 }, /* earth elemental king */
   { 25020, 4 }, /* air elemental lord */
@@ -998,7 +1004,7 @@ const int aq_mob_master_list[][2] = {
   { 28718, 4 }, /* pandora immortal */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
-  //{ 5105, 5 }, /* drow apprentice */
+  { 5105, 5 }, /* drow apprentice */
   { 5106, 5 }, /* drow weaponmaster zarc */
   { 5107, 5 }, /* drow matron mother lower */
   { 5109, 5 }, /* illithid */
@@ -1029,6 +1035,13 @@ const int aq_mob_master_list[][2] = {
   { 21210, 5 }, /* priest high dark man */
   { 21323, 5 }, /* ogre sorcerer eowadriendir */
   { 21332, 5 }, /* otyugh stench garbage pile vines */
+  { 21400, 5 }, /* Obsidian Sentinel  */ 
+  { 21407, 5 }, /* Hollowed Mourner */ 
+  { 21408, 5 }, /* The Grave Maw */ 	
+  { 21409, 5 }, /* The Unspoken */ 
+  { 21410, 5 }, /* The Ironbound Custodian */ 
+  { 21411, 5 }, /* The Wailing Dowager */ 
+  { 21412, 5 }, /* The Shrouded Revenant  */ 
   { 25000, 5 }, /* demi lich */
   { 25002, 5 }, /* death crimson */
   { 25010, 5 }, /* kraken */
@@ -1218,10 +1231,11 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     if (GET_PRESTIGE_PERK(ch) >= 19) {
       double_point_chance += 2;
     }
-	// Gamemode BonusAQP to add a 50% chance of double AQP.
+
 	if(BONUSAQP){
 		double_point_chance += 50;
 	}
+
 
     if (chance(double_point_chance)) {
       act("$N tells you, 'Its your lucky day!  I'm going to double your quest point reward!'", 0, ch, 0, mob, TO_CHAR);
@@ -1444,12 +1458,6 @@ const int aq_obj_master_list[][2] = {
   {20825, 3}, // Wings of the Cloaker Lord 20
   {20840, 3}, // a shield of mottled flesh 12
   {21215, 3}, // Golden Dagger 29  
-  {21400, 3}, // Veil of the Nameless 23
-  {21401, 3}, // Chattering Relic  27
-  {21402, 3}, // Shroud of Silence  30
-  {21403, 3}, // Rusted Oathplate 24
-  {21404, 3}, // Locket of Endless Sorrow   27
-  {21405, 3}, // Funeral Wrappings   31  
   {24904, 3}, // Bracelet made from roots 25
   {25016, 3}, // a Silver Trident 50
   {25027, 3}, // The Silver Circlet of Concentration 50
@@ -1500,7 +1508,6 @@ const int aq_obj_master_list[][2] = {
   {17024, 4}, // A pointy wizard's hat 20
   {17080, 4}, // a Silver Harmonica 20
   {17321, 4}, // Cube of Awareness 50 
-  {20901, 4}, // Hero's Robe 8
   {20903, 4}, // A silver chainlink belt 22
   {20904, 4}, // Mismatched Slippers 18
   {20906, 4}, // fireblade 12
@@ -1512,6 +1519,12 @@ const int aq_obj_master_list[][2] = {
   {21217, 4}, // the Mallet of the Underworld 10
   {21305, 4}, // A broken sword 30
   {21321, 4}, // A Pair of Gleaming Gauntlets 10
+  {21400, 4}, // Veil of the Nameless 23
+  {21401, 4}, // Chattering Relic  27
+  {21402, 4}, // Shroud of Silence  30
+  {21403, 4}, // Rusted Oathplate 24
+  {21404, 4}, // Locket of Endless Sorrow   27
+  {21405, 4}, // Funeral Wrappings   31
   {23008, 4}, // Pelt of the Glacial Polar Bear 5
   {24900, 4}, // druidic battle wrap 14
   {24901, 4}, // Dark Druid's buckler 15
@@ -2041,6 +2054,69 @@ int ubers[][2] = {
 #endif
 };
 
+int uber_objs[] = {
+  11300, // lover's charm bracelet
+  11301, // fine copper pentacle
+  12049, // gilded carapace collar
+//  12050, // a golden stick
+  14053, // Darkened Shadow Orb
+  20102, // gleaming katana of the Five Rings
+  21228, // Giant, Two-Handed Boulder Maul
+  26582  // Loincloth of Favorable Portents
+};
+
+char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
+  "Blame Sane","Damn you Lovecraft","It is the end times"};
+
+char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
+  "nitwit","nincompoop","imbecile","dullard",
+  "cotton-headed ninnymuggins","peabrain"};
+
+int spawn_uber (CHAR *spawner, int tries) {
+  CHAR *vict, *next_vict, *uber_mob;
+  bool spawn = TRUE;
+  int uber_choice = 0, uber_room = 0, i = 0;
+  char buf[MAX_STRING_LENGTH];
+
+  // pick an Uber to load
+  while (i < tries) {
+    spawn = TRUE;
+    i++;
+    uber_choice = number(0, NUMELEMS(ubers)-1);
+    uber_room = ubers[uber_choice][1];
+	
+	//If the room doesnt exist, abort.
+	if(real_room(uber_room) == -1){
+		break;
+	}
+	
+	
+    for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
+      // don't load if there already is one or a PC in room
+      next_vict = vict->next_in_room;
+      if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
+        spawn = FALSE;
+        break;
+      }
+    }
+
+    if (spawn && (real_room(uber_room) != -1)) {
+      uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
+      char_to_room(uber_mob, real_room(uber_room));
+      sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
+      send_to_room(buf, real_room(uber_room));
+      if (tries > 3) { // SUP+ or tribute
+        sprintf(buf, "Call the police, there's a madman around! Some %s just called an Uber, run for your lives!",  kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
+      }
+      else { // tick based spawn
+        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
+      }
+      do_quest(spawner, buf, CMD_QUEST);
+      return TRUE;
+    }
+  }
+  return FALSE; // failed to spawn
+}
 
 int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   OBJ *order = NULL;
@@ -2054,13 +2130,6 @@ int aq_order_mob (CHAR *collector, CHAR *ch, int cmd, char *arg) {
   bool found[4] = {FALSE, FALSE, FALSE, FALSE};
   char *collectoraction[8] = {"groan","frustration","cod","fume",
                               "blorf","roll","sneor","mumble"};
-  char *kenderinsults[10] = {"fool","moron","idiot","bonehead",
-                            "nitwit","nincompoop","imbecile","dullard",
-                            "cotton-headed ninnymuggins","peabrain"};
-  CHAR *uber_mob = NULL;
-  char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
-                              "Blame Sane","Damn you Lovecraft","It is the end times"}; 
-  int uber_choice = 0, uber_room = 0;
 
   if (cmd == CMD_AQUEST) {
     // process order request
@@ -2101,6 +2170,9 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
         } else if (lh_opt == 6 && GET_LEVEL(ch) < 45) {
           mob_do(collector, "rofl");
           do_say(collector, "Not bloody likely. You couldn't handle that level of order pipsqueak.", CMD_SAY);
+		} else if (lh_opt == 0) { // no proper order type chosen
+          sprintf(buf, "Try again. There's plenty of viable options and yet you still failed to pick one of them, you %s.", kenderinsults[ number( 0, NUMELEMS( kenderinsults ) -1 ) ] );
+          do_say(collector, buf, CMD_SAY);
         } else if (!generate_aq_order(ch, collector, lh_opt)) {
           mob_do(collector, "shrug");
           sprintf(buf, "Sorry %s, guess I couldn't find an order for you.",
@@ -2327,35 +2399,75 @@ You're too experienced for that kind of order %s, and you know it.", GET_NAME(ch
       }
     }
     else { // given non-AQ_ORDER
-      do_say(collector, "Thanks, I guess?", CMD_SAY);
+	char *tribute_responses[8] = {
+        "My heavens, do you know what you've set in motion?",
+        "Goodness me, a tribute? In this economy?",
+        "Oh no, not again...",
+        "Are you mad!? There's easier ways to die you know.",
+        "What sorcery is this? I don't want to be a part of it!",
+        "This isn't funny, lives are at stake!",
+        "What do you think you're playing at?",
+        "You'll kill us all!"
+      };
+      // check if given an obj ubers load - "tribute"
+      for (obj = GET_CARRYING(collector); obj; obj = OBJ_NEXT_CONTENT(obj)) {
+        bool tribute = FALSE;
+        for (int i = 0; i < NUMELEMS(uber_objs); i++) {
+          if (OBJ_VNUM(obj) == uber_objs[i]) {
+            if (chance(10)) mob_do(collector, "gasp");
+            tribute = TRUE;
+            break;
+          }
+        }
+        if (tribute) {
+          GET_DEATH_LIMIT(collector)++; // track number of objs given using deathlimit
+          sprintf(buf, "Suddenly %s explodes in an opalescent fury of sound and color.\n\r", OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+
+          if (GET_DEATH_LIMIT(collector) <= 1) {
+            sprintf(buf, "%s", tribute_responses[number(0, NUMELEMS(tribute_responses)-1 )]);
+            do_say(collector, buf, CMD_SAY);
+          }
+          else if (GET_DEATH_LIMIT(collector) == 2) {
+            do_yell(collector, "Aaaaaaaaaaaaaah I want no part of this!", CMD_YELL);
+            do_flee(collector, "", CMD_FLEE);
+          }
+          else { // tribute complete: spawn uber
+            GET_DEATH_LIMIT(collector) = 0; // reset tribute counter
+            do_say(collector, "Don't say I didn't warn you. Beetlejuice, Beetlejuice... Beetlejuice.", CMD_SAY);
+            if (spawn_uber(collector, 10)) {
+              sprintf(buf, "%s disappears in a beam of bright light.\n\r", GET_SHORT(collector));
+              send_to_room(buf, CHAR_REAL_ROOM(collector));
+              char_from_room(collector);
+              char_to_room(collector, real_room(5806));
+            }
+            else { // failed to spawn an uber, mock them after a brief pause
+              GET_DEATH_LIMIT(collector) = -1;
+            }
+          }
+        }
+        else { // giving non-tribute obj
+          do_say(collector, "Thanks, I guess?", CMD_SAY);
+          sprintf(buf, "%s confusedly fires a strange pistol at %s\n\r...and it disappears before your very eyes!\n\r", GET_SHORT(collector), OBJ_SHORT(obj));
+          send_to_room(buf, CHAR_REAL_ROOM(collector));
+        }
+        extract_obj(obj);
+      }
     }
   }
 
-  CHAR *vict, *next_vict;
-  bool spawn_uber = TRUE;
-  // dawn of the Ubers - Hemp 2017-07-07
-  if (cmd == MSG_ZONE_RESET) {
-    if (chance(10)) {
-      // pick an Uber to load
-      uber_choice = number(0, NUMELEMS(ubers)-1);
-      uber_room = ubers[uber_choice][1];
+if ((GET_DEATH_LIMIT(collector) == -1) && (cmd == MSG_MOBACT)) {
+    GET_DEATH_LIMIT(collector) = 0;
+    mob_do(collector, "blink");
+    do_say(collector, "Thank our lucky stars, your efforts were in vain.", CMD_SAY);
+  }
 
-      for( vict = world[real_room(uber_room)].people; vict; vict = next_vict ) {
-        // don't load if there already is one or a PC in room
-        next_vict = vict->next_in_room;
-        if( V_MOB(vict) == ubers[uber_choice][0] || !IS_NPC(vict) ) {
-          spawn_uber = FALSE;
-          break;
-        }
+  if (cmd == MSG_TICK) { // spawn ubers
+    if (chance(5)) {
+      if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) {
+        // scale uber spawn chance based on players online
+        spawn_uber(collector, 3);
       }
-      if (spawn_uber) {
-        uber_mob = read_mobile(ubers[uber_choice][0], VIRTUAL);
-        char_to_room(uber_mob, real_room(uber_room));
-        sprintf(buf, "A dazzling light and ear-splitting sound warp the space around you as %s emerges from a Planar Gate.\n", GET_SHORT(uber_mob));
-        send_to_room(buf, real_room(uber_room));
-        sprintf(buf, "%s! Reports abound that an uber version of a creature from our realm has appeared - quick, to arms!",  collectorexclamation[ number( 0, NUMELEMS( collectorexclamation ) -1 ) ] );
-        do_quest(collector, buf, CMD_QUEST);
-       }
     }
   }
   return FALSE;

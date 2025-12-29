@@ -237,7 +237,7 @@ int gp_lotus(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     act("Lotus slips behind $N and slices $S throat.",0,mob,0,vict,TO_NOTVICT);
     act("You slit $N's throat.",0,mob,0,vict,TO_CHAR);
     act("Lotus disappears for a moment.  You feel something slit your throat.",0,mob,0,vict,TO_VICT);
-    damage(mob,vict,10000,TYPE_UNDEFINED,DAM_NO_BLOCK);
+    damage(mob,vict,10000,TYPE_UNDEFINED,DAM_NO_BLOCK);  
     return FALSE;
   }
   return FALSE;
@@ -356,10 +356,12 @@ int gp_mirror_make(OBJ *obj ,CHAR *ch, int cmd, char *argument) {
   OBJ *obj2 = NULL;
   char buf[MAX_INPUT_LENGTH];
 
+  if (cmd != CMD_DROP) return FALSE;  // Check for the Drop Command First.  If not, abort.
+  
   if(!ch) return FALSE;
+  if(CHAR_REAL_ROOM(ch) == NOWHERE ) return FALSE; // Validate that the CH isnt in NOWHERE, which will cause the next command to crash.
   if(V_ROOM(ch) !=MIRROR_ROOM) return FALSE;
 
-  if (cmd != CMD_DROP) return FALSE;
   if(obj->carried_by!=ch) return FALSE;
   one_argument (argument, buf);
   if (!isname(buf,OBJ_NAME(obj))) return FALSE;

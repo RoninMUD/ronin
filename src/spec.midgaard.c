@@ -5744,6 +5744,12 @@ int hide_buyer(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
 
       i=obj->obj_flags.cost;
+	  
+	  //Adding Check for Double Gold Gamemode for skin value.
+	  if(DOUBLEGOLD){
+		  i = i*2;
+	  }
+	  
       if(i<1) {
         act("$N tells you 'That skin is worthless!'",0,ch,0,mob,TO_CHAR);
       }
