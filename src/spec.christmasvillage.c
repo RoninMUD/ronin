@@ -488,9 +488,20 @@ int christmas_crown(OBJ *obj, CHAR *ch, int cmd, char *arg)
 				WAIT_STATE(vict,PULSE_VIOLENCE*1);
 				break;
 			case 3: //Freeze the Target for 2 rounds
-				act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_ROOM);
-				act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_CHAR);
-				enchantment_apply(vict, TRUE, "CROWN FROZEN", TYPE_UNDEFINED, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, christmas_crown_frozen_func);
+				
+				
+				//If the mob is frozen and dies, it provides a lot of bonus Death messages/XP.   
+				if(GET_HIT(vict) > (GET_MAX_HIT(vict)/5)){
+					act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_ROOM);
+					act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_CHAR);
+					enchantment_apply(vict, TRUE, "CROWN FROZEN", TYPE_UNDEFINED, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, christmas_crown_frozen_func);
+				}else{
+					act("The crown compels $n to strike their foe.", FALSE, owner, 0, vict, TO_ROOM);
+					act("The crown compels you to strike their foe.", FALSE, owner, 0, vict, TO_CHAR);
+					perform_hit(owner, vict, TYPE_UNDEFINED, 1); 
+				}
+				
+				
 				break;
 			case 4: //Restore a little Mana
 			
