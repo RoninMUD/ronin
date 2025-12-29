@@ -382,8 +382,8 @@ int christmas_chime(OBJ *obj, CHAR *ch, int cmd, char *arg)
 					act("You are filled with Christmas Cheer.", FALSE, vict, 0, 0, TO_CHAR);
 				}
 			}
-			
-			if(chance(5)){
+			//Since this is powerful, it needs to have a chance to break on use.   
+			if(chance(23)){
 				act("The chime breaks on in your hand and falls apart.", FALSE, owner, 0, 0, TO_CHAR);
 				act("The chime breaks in $n's hand and falls apart.", FALSE, owner, 0, 0, TO_ROOM);
 				extract_obj(obj);
