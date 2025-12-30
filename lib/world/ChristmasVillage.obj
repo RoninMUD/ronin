@@ -139,10 +139,10 @@ core frozen~
 Frozen Core~
 A pulsing shard of living ice~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-30 9139 7270
-17
+30 46314 7270
+12
 E
 core frozen~
 A shard of pure, translucent ice hums faintly in your hand, radiating
@@ -161,10 +161,10 @@ flame blue~
 Blue Lantern Flame~
 A flickering blue lantern flame in a glass vial~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-5 6858 5850
-16
+5 49032 5850
+13
 E
 flame blue~
 A tiny, suspended blue flame dances in a sealed glass globe. It sheds
@@ -184,10 +184,10 @@ chips shattered~
 Shattered Ice Chips~
 Scattered chips of crystal ice~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-6 8848 8060
-15
+6 42114 8060
+14
 E
 chips shattered~
 Irregular shards of glittering ice scatter like broken 
@@ -206,10 +206,10 @@ resin living~
 Living Pine Resin~
 A glob of warm, fragrant resin~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-10 9700 8926
-17
+10 36514 8926
+12
 E
 resin living~
 Amber green sap sits sticky and warm, exuding a steady pine scent
@@ -228,10 +228,10 @@ needles glittering~
 Glittering Needles~
 A handful of glittering pine needles~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-5 6759 7012
-16
+5 36377 7012
+13
 E
 needles glittering~
 Long, metallic tinged pine needles that glitter like spun 
@@ -250,10 +250,10 @@ heart wooden~
 Wooden Heart~
 A carved wooden heart the size of a fist~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-15 8326 7575
-17
+15 49094 7575
+14
 E
 heart wooden~
 A heart-shaped chunk of heartwood, polished smooth and warm despite the
@@ -272,10 +272,10 @@ eyes coal~
 Coal Eyes~
 A pair of small, glassy coal eyes~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-8 8903 7089
-16
+8 39824 7089
+12
 E
 eyes coal~
 Two smooth lumps of coal, rounded and black as midnight, with a faint
@@ -294,10 +294,10 @@ carrot frozen~
 Frozen Carrot~
 A perfectly preserved icy carrot~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-9 6039 7449
-15
+9 46523 7449
+13
 E
 carrot frozen~
 Encased in rime, this carrot is translucent orange and hard as crystal.
@@ -316,10 +316,10 @@ scarf tattered~
 Tattered Scarf~
 A windworn, tattered scarf~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-5 7981 8146
-17
+5 41284 8146
+14
 E
 scarf tattered~
 Threadbare fabric, once bright, now dulled and streaked with frost and
@@ -338,10 +338,10 @@ strand tinsel~
 Tinsel Strand~
 A length of metallic tinsel strand~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-1 7305 9814
-16
+1 40860 9814
+12
 E
 strand tinsel~
 A long strip of flexible metallic ribbon, braided with tiny
@@ -360,10 +360,10 @@ ribbon cracked~
 Cracked Ribbon~
 A faded, cracked ribbon bow~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-1 8018 8480
-17
+1 45208 8480
+13
 E
 ribbon cracked~
 Once-lustrous silk now split and crazed with age
@@ -382,10 +382,10 @@ tooth mimic~
 Mimic Tooth~
 A jagged, shifting tooth~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-3 8048 7836
-16
+3 43310 7836
+14
 E
 tooth mimic~
 A single tooth that writhes minutely, its enamel catching and
@@ -404,10 +404,10 @@ fragment frostscroll~
 Frostscroll Fragment~
 A scrap of ice-etched parchment~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-2 9641 8871
-15
+2 44576 8871
+12
 E
 fragment frostscroll~
 Slender, glassy paper writ with runes that seem carved from hoarfrost. 
@@ -426,10 +426,10 @@ wand icicle~
 Icicle Wand~
 A fragile wand of clear icicle~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-6 7697 9195
-17
+6 36572 9195
+13
 E
 wand icicle~
 A tapered wand of perfect glacial crystal, the tip faceted like a 
@@ -448,10 +448,10 @@ essence ghostly~
 Ghostly Essence~
 A vial of pale, swirling ectoplasm~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-10 9738 8032
-16
+10 44720 8032
+12
 E
 essence ghostly~
 Wisps of silver blue vapor spin slowly in a sealed phial, slipping
@@ -470,10 +470,10 @@ spring clockwork~
 Clockwork Spring~
 A small brass coil wound tight~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-16 8898 7098
-15
+16 40987 7098
+13
 E
 spring clockwork~
 A perfectly wound coil of brass that hums with stored 
@@ -492,10 +492,10 @@ gear whispering~
 Whispering Gear~
 A tiny gear etched with whispers~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-15 5952 9447
-16
+15 40064 9447
+14
 E
 gear whispering~
 A silvered gear with hairline etchings along its teeth
@@ -514,10 +514,10 @@ heart toy~
 Toy Heart~
 A tiny heart carved of rose quartz~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-22 6435 8765
-15
+22 49280 8765
+12
 E
 heart toy~
 A small, polished heart that pulses faintly with rosy light. It
@@ -536,10 +536,10 @@ ash ember~
 Ember Ash~
 A handful of glowing ember dust~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-2 8225 6947
-17
+2 46287 6947
+13
 E
 ash ember~
 Fine ash that glows with ember light, each grain warm and humming
@@ -558,10 +558,10 @@ warmstone warmstone~
 Warmstone~
 A smooth stone that radiates gentle heat~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-4 9354 9249
-16
+4 38908 9249
+14
 E
 warmstone warmstone~
 Polished to a soft sheen, the stone is warm to the touch and emits
@@ -580,10 +580,10 @@ fragment charred~
 Charred Log Fragment~
 A chunk of soot-blackened wood~
 ~
-13 0 1
+8 0 1
 0 0 0 0
-3 7035 7608
-15
+3 49005 7608
+12
 E
 fragment charred~
 A brittle piece of charred wood, its grain still visible under flaky
@@ -614,7 +614,7 @@ surface when held.
 ~
 X
 ~
-3584 0 0
+1536 0 0
 M
 ~
 ~

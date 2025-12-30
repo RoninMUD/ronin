@@ -238,7 +238,8 @@ int christmas_mechanical_familiar(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 				if (IS_MORTAL(vict))
 				{
-					enchantment_apply(ch, FALSE, CHRISTMAS_FAMILIAR_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_HITROLL, 0, 0, christmas_mechanical_familiar_blessing_func);
+					enchantment_apply(vict, FALSE, CHRISTMAS_FAMILIAR_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_HITROLL, 0, 0, christmas_mechanical_familiar_blessing_func);
+					act("You are filled with Christmas Joy.", FALSE, vict, 0, 0, TO_CHAR);
 				}
 			}
 			act("The familiar breaks down and falls apart.", FALSE, owner, 0, 0, TO_CHAR);
@@ -377,11 +378,12 @@ int christmas_chime(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 				if (IS_MORTAL(vict))
 				{
-					enchantment_apply(ch, FALSE, CHRISTMAS_CHIME_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_DAMROLL, 0, 0, christmas_chime_blessing_func);
+					enchantment_apply(vict, FALSE, CHRISTMAS_CHIME_BLESSING_NAME, 0, 60, ENCH_INTERVAL_TICK, 5, APPLY_DAMROLL, 0, 0, christmas_chime_blessing_func);
+					act("You are filled with Christmas Cheer.", FALSE, vict, 0, 0, TO_CHAR);
 				}
 			}
-			
-			if(chance(30)){
+			//Since this is powerful, it needs to have a chance to break on use.   
+			if(chance(23)){
 				act("The chime breaks on in your hand and falls apart.", FALSE, owner, 0, 0, TO_CHAR);
 				act("The chime breaks in $n's hand and falls apart.", FALSE, owner, 0, 0, TO_ROOM);
 				extract_obj(obj);
@@ -486,9 +488,16 @@ int christmas_crown(OBJ *obj, CHAR *ch, int cmd, char *arg)
 				WAIT_STATE(vict,PULSE_VIOLENCE*1);
 				break;
 			case 3: //Freeze the Target for 2 rounds
-				act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_ROOM);
-				act("The crown generates a freezes $N solid.", FALSE, owner, 0, vict, TO_CHAR);
-				enchantment_apply(vict, TRUE, "CROWN FROZEN", TYPE_UNDEFINED, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, christmas_crown_frozen_func);
+				// The freeze messes with deaths, so ensuring they are only frozen above 20%
+				if(GET_HIT(vict) > (GET_MAX_HIT(vict)/5)){
+					act("The crown generates an ice cold blast and freezes $N solid.", FALSE, owner, 0, vict, TO_ROOM);
+					act("The crown generates an ice cold blast and freezes $N solid.", FALSE, owner, 0, vict, TO_CHAR);
+					enchantment_apply(vict, TRUE, "CROWN FROZEN", TYPE_UNDEFINED, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, christmas_crown_frozen_func);
+				}else{
+					act("The crown compels $n to strike their foe.", FALSE, owner, 0, vict, TO_ROOM);
+					act("The crown compels you to strike their foe.", FALSE, owner, 0, vict, TO_CHAR);
+					perform_hit(owner, vict, TYPE_UNDEFINED, 1); 
+				}
 				break;
 			case 4: //Restore a little Mana
 			
@@ -1616,9 +1625,10 @@ int christmas_giftwarden(CHAR *mob, CHAR *ch, int cmd, char *arg)
         break;
 	case MSG_ENTER:
         // If NPCs or they are already fighting, dont do anything else.        
-        
-        act("$n Smiles and extends his hand.", TRUE, mob, 0, 0, TO_ROOM);
-		act("Welcome travellers.  Please provide the proof of Christmas Joy.", TRUE, mob, 0, 0, TO_ROOM);
+        if(chance(35)){
+			act("$n Smiles and extends his hand.", TRUE, mob, 0, 0, TO_ROOM);
+			act("Welcome travellers.  Please provide the proof of Christmas Joy.", TRUE, mob, 0, 0, TO_ROOM);
+		}
         break;
 	
 	case CMD_KILL:
