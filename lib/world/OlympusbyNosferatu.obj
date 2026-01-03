@@ -6,7 +6,7 @@ Some armor that radiates with sheer energy was foolishly dropped here.~
 9 134218050 9
 30 0 0 0
 27 750000 100000
-5
+17
 E
 armor~
 This armor was crafted by the great Hephaestus himself. Working tirelessly
@@ -17,7 +17,7 @@ Great God, a hand clutching a lightning bolt.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 Your armor gleams in the sunlight as you strap it over your chest.~
 $n's armor gleams in the sunlight as $e straps it onto $s chest.~
@@ -37,9 +37,9 @@ A Wand of Magic~
 A wand with amazing magical properties was forgotten here.~
 $n sweeps $s Wand of Magic in a high arc directly at $V.~
 5 267415616 8193
-1 0 0 5
+1 6 7 5
 1 1 75100
-6
+21
 E
 wand~
 This is the all-powerful Wand of Magic once used by the ultimate
@@ -50,12 +50,16 @@ an old tree.
 ~
 X
 $n weaves an intricate pattern in the air with $s Wand of Magic.~
-0 0 0
+1536 0 0
 M
 You clutch the Wand of Magic and feel its power pulse through you.~
 $n grabs a small stick and begins cackling and waving it menacingly.~
 You feel your power drain as you drop the Wand of Magic.~
 $n seems to droop after releasing $s stick.~
+A
+19 3
+A
+18 3
 #28802
 boots tidal seaweed~
 The Tidal Boots~
@@ -64,7 +68,7 @@ Some boots made of seaweed were dropped here.~
 9 199290881 65
 10 0 0 0
 8 677525 56750
-8
+19
 E
 boots~
 These boots, once worn by the great God of the Seas, Poseidon,
@@ -74,7 +78,7 @@ on the land, so watch your step.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 Your feet make wet squelching noises as you plunge them into the boots.~
 $n's feet make wet squelching noises as $e plunges them into $s boots.~
@@ -96,7 +100,7 @@ A lyre that glows with magical qualities was left behind here.~
 24 233895170 16385
 0 0 0 0
 25 6000 50777
-8
+22
 E
 lyre~
 This is the famed Lyre of the Caller used by the Master Musician of the
@@ -106,18 +110,18 @@ indescribably beautiful.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 The world around you seems to grow brighter and more alive when you strum the lyre.~
 The room seems to brighten as $n strums $s lyre.~
 The light in the room fades slightly as you drop the lyre.~
 The light in the room fades slightly as $n drops $s lyre.~
 A
-19 5
+19 4
 A
 12 20
 A
-18 5
+18 4
 B
 16777216
 #28804
@@ -125,10 +129,10 @@ cloak crescent moon~
 The Cloak of the Crescent Moon~
 A long, flowing cloak lies crumpled in a pile here.~
 ~
-9 265351170 1025
+9 198238210 1025
 15 0 0 0
 3 5000100 100575
-9
+18
 E
 cloak~
 This is the hunting cloak of the goddess of the crescent moon and
@@ -139,7 +143,7 @@ to look at it.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 You wear the swirling cloak and your hunting senses seem to improve.~
 $n's senses seem to heighten as $e throws the cloak over $s shoulders.~
@@ -156,18 +160,23 @@ B
 #28805
 eye world ring~
 The Eye of the World~
-A ring that glows with the unknown power of ages was forgotten here.~
+A ring with a polished celestial bronze band sits here.~
 ~
-9 134218049 3
-10 0 0 0
-33 1000000 76000
-5
+9 0 1
+12 0 0 0
+5 80443 71408
+11
 E
-eye~
-This disturbing ring is made up of an immaculate golden band with
-what appears to be a large eye mounted on it. The eye ranges around,
-seeming to see and know things that you do not. This powerful
-glam once sat on the finger of the God of gods himself, Zeus.
+eye world~
+This exquisite ring features a band of polished celestial bronze, renowned 
+for its divine luster and resilience. At its center, a perfectly spherical 
+sapphire is set, symbolizing the all-seeing eye of Zeus. The gem's deep 
+azure hue mirrors the boundless sky, and within its depths, one can 
+observe a subtle, swirling mist, reminiscent of the ever-watchful presence 
+of the god himself. Intricate engravings of thunderbolts and ancient runes 
+adorn the band, channeling Zeus's authority and wisdom. When activated, the 
+sapphire emits a gentle glow, enabling the wearer to scry and locate any 
+creature within the world, transcending physical and magical barriers.
 ~
 X
 ~
@@ -178,11 +187,11 @@ $n glows with untold wisdom and might as $e slides on the Eye of the World.~
 Your heightened sense of might and wisdom vanishes as you remove the ring.~
 The glow of wisdom and might fades from $n's countenance as $e removes the ring.~
 A
-19 4
+19 3
 A
-18 4
+18 3
 A
-13 15
+52 40
 B
 8192
 #28806
@@ -193,7 +202,7 @@ Some gloves fashioned from human skin were dropped here.~
 11 267401216 129
 0 0 0 0
 6 666666 66666
-6
+16
 E
 gloves~
 These gloves are indeed creates from the skin of humans. Stories
@@ -204,70 +213,20 @@ disturbing.
 ~
 X
 ~
-0 0 0
+3584 0 0
 M
 Your stomach lurches as you slide on the tight-fitting gloves.~
 $n looks a little sick as $e pulls on some odd-looking gloves.~
 You feel less powerful but somehow... cleaner... without the gloves.~
 $n appears to brighten in relief as $e pulls off $s gloves.~
 A
-19 4
+19 2
 A
-18 4
+18 2
 A
 12 25
 B
 1024
-#28807
-ring battle~
-The Ring of Battle~
-Ares' battle ring was forgotten here.~
-~
-9 134807556 3
-50 0 0 0
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-A
-18 10
-B
-134217728
-#28808
-ring treachery~
-The Ring of Treachery~
-One of Ares' powerful rings rests here.~
-~
-9 134807556 3
-50 0 0 0
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-A
-18 15
-B
-2048
 #28809
 gauntlets stained butcher~
 Stained Gauntlets of the Butcher~
@@ -276,7 +235,7 @@ Some well made gauntlets stained with blood are here.~
 9 259049984 129
 12 0 0 0
 16 783666 27639
-7
+19
 E
 gauntlets~
 These gauntlets are stained with the blood of countless
@@ -285,127 +244,29 @@ They appear to be very well made, and are engraved with
 a wolf on one hand and a vulture on the other.~
 X
 ~
-0 0 0
+3584 0 0
 M
 You are filled with anger and despair as you put on the gauntlets.~
 $n's countenance darkens noticably as $e puts on $s gauntlets.~
 You feel the anger and despair fade as you remove the gauntlets.~
 $n brightens noticably as $e removes $s gauntlets.~
 A
-19 4
+19 2
 A
-18 4
+18 2
 A
 35 10
 B
 1024
-#28810
-bracers revenge~
-The Bracers of Revenge~
-Some bloody, battle-worn bracers are heaped here.~
-~
-9 134807556 257
-50 0 0 0
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-A
-18 15
-B
-268435456
-#28811
-circlet destiny~
-The Circlet of Destiny~
-A bloody crown has been forgotten here.~
-~
-9 134807556 17
-50 0 0 0
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-A
-18 15
-B
-128
-#28812
-dagger betrayal ares~
-The Dagger of Betrayal~
-A bloody dagger rests on the ground here.~
-~
-5 134807556 8193
-1 30 30 9
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-B
-536870912
-#28813
-boots cowardice~
-The Boots of Cowardice~
-Some boots were long-forgotten in the corner here.~
-~
-9 134807556 65
-50 0 0 0
-10 100 250000
-75
-X
-~
-0 0 0
-M
-~
-~
-~
-~
-A
-19 50
-A
-13 1000
-A
-18 15
-B
-8658944
 #28814
 blade olympus forge~
 A Blade of Olympian Forge~
 A blade of immaculate design and structure was left behind here.~
 $r blade swings in a rising arc toward $V's throat.~
-26 263253249 8193
+26 261156097 8193
 0 8 7 12
 30 200000000 100100
-1
+22
 E
 blade~
 This sword was fashioned on the high peaks of Mount Olympus
@@ -416,16 +277,18 @@ turn it in your hands. Clearly, this is an amazing weapon.
 ~
 X
 Blinding light glares from the blade as $n raises it menacingly.~
-0 0 0
+3584 0 0
 M
 As you raise the blade at your side, it begins to hum in anticipation.~
 $n's blade begins humming with anticipation as $e raises it in preparation.~
 Your blade returns to silence as you lower it to your side.~
 $n's blade grows silent as $e lowers it to $s side.~
 A
-18 4
+18 3
 A
 17 -10
+A
+19 2
 B
 16777216
 #28815
@@ -436,7 +299,7 @@ There is a bit of nothing sitting here.~
 11 134217728 1025
 0 0 0 0
 100 17500 16125
-1
+27
 E
 cloak~
 This is a ratty, matted chunk of fur from a
@@ -876,5 +739,549 @@ M
 ~
 ~
 ~
+#28840
+rock large~
+A Large Sturdy Rock~
+A large grey rock~
+~
+12 0 1
+0 0 0 0
+0 0 0
+100
+E
+rock~
+A large rock that can stop water from flowing past.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28841
+forge~
+An old, charred iron forge.~
+A giant iron forge emitting massive waves of heat.~
+~
+15 0 0
+5000 15 28843 0
+4000 1000000 0
+100
+E
+forge~
+Hephaestus' forge is a marvel of divine craftsmanship, reflecting the god's unparalleled skill and ingenuity
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#28842
+pedastel stone~
+A large stone pedastel~
+A large stone pedastel stands against the wall~
+~
+0 1 0
+0 0 0 0
+2000 0 0
+100
+E
+stone~
+A carving can be seen inscribed in the stone.
+~
+E
+carving~
+In the halls where gods reside, a secret lies within,
+A seal that bars the way ahead, to those who seek to win.
+To break this ancient barrier, a triad must align,
+In separate rooms they take their place, their presence the design.
+When each one stands upon their mark, in chambers set apart,
+The seal will shatter, path revealed, to those of noble heart.
+~
+E
+pedastel~
+A carving can be seen inscribed in the stone.
+~
+E
+stone~
+A carving can be seen inscribed in the stone.@
+~
+E
+stone~
+A carving can be seen inscribed in the stone.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#28843
+key antiquated~
+A Tarnished Antiquated Key~
+A tarnished antiquated key dimly glows on the ground.~
+~
+0 0 1
+0 0 0 0
+1 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28844
+hammer antiquated~
+An Antiquated Forge Hammer~
+A large dented hammer rests on the floor.~
+~
+0 403177475 8193
+0 0 0 0
+0 0 0
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#28850
+ring battle~
+The Ring of Battle~
+Ares' battle ring was forgotten here.~
+~
+9 134807556 3
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 10
+B
+134217728
+#28851
+ring treachery~
+The Ring of Treachery~
+One of Ares' powerful rings rests here.~
+~
+9 134807556 3
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+2048
+#28852
+bracers revenge~
+The Bracers of Revenge~
+Some bloody, battle-worn bracers are heaped here.~
+~
+9 134807556 257
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+268435456
+#28853
+circlet destiny~
+The Circlet of Destiny~
+A bloody crown has been forgotten here.~
+~
+9 134807556 17
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+128
+#28854
+boots cowardice~
+The Boots of Cowardice~
+Some boots were long-forgotten in the corner here.~
+~
+9 134807556 65
+50 0 0 0
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+A
+18 15
+B
+8658944
+#28855
+dagger betrayal ares~
+The Dagger of Betrayal~
+A bloody dagger rests on the ground here.~
+~
+5 134807556 8193
+1 30 30 9
+10 100 250000
+75
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 50
+A
+13 1000
+B
+536870912
+#28860
+bolt tormbringer~
+Bolt of the Stormbringer~
+A radiant bolt crackling with electric energy sits here.~
+~
+9 134217792 16385
+0 0 0 0
+5 0 55840
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28861
+diadem regal peacock~
+Diadem of the Queen of Heaven~
+A luxurious cloak adorned with iridescent peacock feathers~
+~
+9 134217792 17
+0 0 0 0
+5 54438 81194
+14
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28862
+cuirass divine matron~
+Cuirass of the Divine Matron~
+A Resplendent Cuirass adorned with regal motifs~
+~
+9 134217792 9
+0 0 0 0
+5 52912 83427
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28863
+greaves gleaming~
+Ares' Gleaming Greaves~
+A Pair of Radiant Golden Greaves~
+~
+9 134217792 33
+0 0 0 0
+5 46819 54708
+8
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28864
+battlefield bulwark~
+Bulwark of the Battlefield~
+A massive shield scarred from numerous conflicts~
+~
+9 134217792 513
+0 0 0 0
+5 49317 92079
+14
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28866
+trident sea lord~
+Tidal Trident of the Sea Lord~
+A grand trident, its prongs shimmering with the essence of the ocean,~
+~
+5 134217792 8193
+0 0 0 0
+5 94661 90073
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28867
+armbands bands~
+Poseidon's Oceanic Armbands~
+A Pair of Armbands shimmering with oceanic hues~
+~
+9 134217792 257
+0 0 0 0
+5 62670 86793
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28868
+quiver silent hunt~
+Quiver of the Silent Hunt~
+A sturdy leather quiver, adorned with forest motifs~
+~
+9 134217792 2049
+0 0 0 0
+5 86646 71953
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28869
+crown oracle~
+Crown of the Oracle~
+A delicate wreath woven from laurel leaves~
+~
+9 134217792 1025
+0 0 0 0
+5 55036 85884
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28870
+bow moonlit huntress~
+Bow of the Moonlit Huntress~
+A graceful silver bow, its surface reflecting the soft glow of the moon~
+~
+5 134217792 8193
+0 0 0 0
+5 64928 88709
+13
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28871
+cloak crescent moon~
+Crescent Moon Cloak~
+A Cloak woven with the light of the Crescent Moon~
+~
+9 134217792 5
+0 0 0 0
+5 42902 55127
+9
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28872
+gloves forge hide olympian~
+Olympian Ox-Hide Forge Gloves~
+A pair of sturdy gloves fashioned from ox-hide~
+~
+9 134217792 129
+0 0 0 0
+5 52557 92591
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28873
+flame eternal~
+Flame of the Eternal Forge~
+A Perpetually burning forge flame encased in a crystal orb~
+~
+9 134217792 1
+0 0 0 0
+5 93122 82376
+9
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28874
+earthshaker coils~
+Coils of the Earthshaker~
+Massive, scaled coils pulsating with latent power~
+~
+9 134217792 4097
+0 0 0 0
+5 47618 86451
+8
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28875
+boots snakeskin~
+a Pair of Pitted Snakeskin Boots~
+A pair of rugged boots fashioned from dark snakeskin~
+~
+9 134217792 1
+0 0 0 0
+5 83958 64509
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+#28876
+lyre golden apollo~
+Apollo's Golden Lyre~
+A lyre made of gold shines in the light.~
+~
+24 134217792 16385
+13 0 0 0
+5 39787 85478
+10
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 3
+A
+53 6
 #0
 $~
