@@ -127,10 +127,10 @@ void assign_turkeytakeover(void);
 void assign_medievalblackmarket(void);
 void assign_christmasvillage(void);
 void assign_deathplaygroundancientgrave(void);
+void assign_ubers(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
-void assign_ubers(void);
 void assign_questyvaderIV(void);
 void assign_digsite(void);
 void assign_luthienIV(void);
@@ -232,9 +232,9 @@ void assign_mobiles(void)
   assign_medievalblackmarket();  
   assign_christmasvillage();
   assign_deathplaygroundancientgrave();
+  assign_ubers();
 //  assign_wbw();
 #ifdef TEST_SITE
-  assign_ubers();
   assign_crazylab();
   assign_chess();
   assign_ubers();
