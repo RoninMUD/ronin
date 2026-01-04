@@ -1016,7 +1016,7 @@ const int aq_mob_master_list[][2] = {
   { 5523, 5 }, /* An Eight Legged Drider */
   { 5596, 5 }, /* myconid king mushroom */
   { 11326, 5 }, /* vampire strahd count */
-  { 11700, 5 }, /* Rhoden */	  
+  { 11701, 5 }, /* Rhoden */	  
   { 17004, 5 }, /* twixt bard man master */
   { 17010, 5 }, /* minion lesser */
   { 17308, 5 }, /* marcus wizard mage */  
@@ -1050,6 +1050,7 @@ const int aq_mob_master_list[][2] = {
   { 26482, 5 }, /* magus */
   { 27712, 5 }, /* bebilith stalker purple spider insect */ 
   { 27722, 5 }, /* shomed nomad hero tarion desert */
+  { 28705, 5 }, /* Cerberus */
   { 5103, 6 }, /* drow arch-mage mage */
   { 5125, 6 }, /* drow matron mother third */
   { 5126, 6 }, /* drow matron mother fourth */
@@ -1061,7 +1062,7 @@ const int aq_mob_master_list[][2] = {
   { 5901, 6 }, /* drow leader rezik */
   { 7703, 6 }, /* typik lizard shaman reptile */
   { 10502, 6 }, /*tarion cavalier*/
-  { 11703, 6 }, /* Ancient Flame Dragon */
+  //{ 11703, 6 }, /* Ancient Flame Dragon */
   { 13502, 6 }, /* demon reptilian reptile */
   //{ 14501, 6 }, /* keira banshee ghost */
   { 14201, 6 }, /* Jason*/
@@ -1076,12 +1077,12 @@ const int aq_mob_master_list[][2] = {
   //{ 23001, 6 }, /* remorhaz ice burrower */
   { 25001, 6 }, /* keftab */
   { 26583, 6 }, /* guru */
-  { 26584, 6 }, /* Enlightened One */
+  //{ 26584, 6 }, /* Enlightened One */
   { 26706, 6 }, /* creature large hideous mutated rat yeti human */
   { 26707, 6 }, /* observer tower mage old man */  
   { 28700, 6 }, /* icarus immortal */
-  { 28704, 6 }, /* Charon */
-  { 28705, 6 }, /* Cerberus */
+  //{ 28704, 6 }, /* Charon */
+  
   
 };
 
@@ -2047,10 +2048,10 @@ int ubers[][2] = {
   {26585, 26582}, // Enlightened One - spec.pagoda.c
   {20109, 20109}, // Musashi - spec.daimyo.c
   {11300, 11400}, // Strahd - spec.barovia.c
-#ifdef TEST_SITE
   {14600, 12094}, //King Spider - spec.ubers.c
   {14601, 12931}, //Great Mystic - spec.ubers.c
-  {14602, 12904} //Ultimate Mystic - spec.ubers.c
+  {14602, 12904}  //Ultimate Mystic - spec.ubers.c
+#ifdef TEST_SITE
 #endif
 };
 
@@ -2059,10 +2060,15 @@ int uber_objs[] = {
   11301, // fine copper pentacle
   12049, // gilded carapace collar
 //  12050, // a golden stick
-  14053, // Darkened Shadow Orb
-  20102, // gleaming katana of the Five Rings
-  21228, // Giant, Two-Handed Boulder Maul
-  26582  // Loincloth of Favorable Portents
+  14053,  // Darkened Shadow Orb
+  20102,  // gleaming katana of the Five Rings
+  21228,  // Giant, Two-Handed Boulder Maul
+  26582,  // Loincloth of Favorable Portents
+  14600,  //Spidersilk Cloak
+  14601,  //Sleeves of Measured Thought
+  14602,  //Mantle of Enlightened Continuance
+  14603,  //Sandals of the Unshaken Path
+  14604   //Ring of Recursive Insight
 };
 
 char *collectorexclamation[7] = {"Attention","Zounds","Great Scott!","The Realm is doomed",
