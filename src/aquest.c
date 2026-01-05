@@ -1015,6 +1015,7 @@ const int aq_mob_master_list[][2] = {
   { 5191, 5 }, /* spider sentry second */
   { 5523, 5 }, /* An Eight Legged Drider */
   { 5596, 5 }, /* myconid king mushroom */
+  { 9675, 5 }, /* necromancer */
   { 11326, 5 }, /* vampire strahd count */
   { 11701, 5 }, /* Rhoden */	  
   { 17004, 5 }, /* twixt bard man master */
@@ -1552,6 +1553,7 @@ const int aq_obj_master_list[][2] = {
   {5175, 5}, // an eyepatch 19
   {5920, 5}, // Myconid blood 15
   {6217, 5}, // a flute made of bone 8
+  {9675, 5}, // The book of the dead 28
   {11327, 5}, // a band of twisted veins 7
   {12208, 5}, // Amulet of Ettins 10
   {12211, 5}, // Ettins Cape 10

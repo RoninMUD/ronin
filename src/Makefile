@@ -158,6 +158,7 @@ OBJS_RONIN_SPEC = \
 	spec.misc.o \
 	spec.monastery.o \
 	spec.monkey.o \
+	spec.morgoth.o \
 	spec.moria.o \
 	spec.nergal.o \
 	spec.newbie.o \
@@ -208,7 +209,6 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.happybob.o \
 	spec.workbench.o \
 	spec.darkspire.o \
-	spec.morgoth.o \
 	spec.olympus.o \
 	spec.deathplaycrypt.o \
 
