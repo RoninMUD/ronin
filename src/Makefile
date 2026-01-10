@@ -124,6 +124,7 @@ OBJS_RONIN_SPEC = \
 	spec.clan.o \
 	spec.ctower.o \
 	spec.daimyo.o \
+	spec.darkspire.o \
 	spec.dasharr.o \
 	spec.deathplay.o \
 	spec.deathplayancientgrave.o \
@@ -158,6 +159,7 @@ OBJS_RONIN_SPEC = \
 	spec.misc.o \
 	spec.monastery.o \
 	spec.monkey.o \
+	spec.morgoth.o \
 	spec.moria.o \
 	spec.nergal.o \
 	spec.newbie.o \
@@ -207,8 +209,6 @@ OBJS_RONIN_SPEC_TEST = \
 	spec.luthienIV.o \
 	spec.happybob.o \
 	spec.workbench.o \
-	spec.darkspire.o \
-	spec.morgoth.o \
 	spec.olympus.o \
 	spec.deathplaycrypt.o \
 

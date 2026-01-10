@@ -901,7 +901,7 @@ Useful links
   - RoninMUD      http://www.roninmud.org
   - Mud clients   http://www.roninmud.org/downloads.html
   - Tintin help   http://www.roninmud.org/tt-help.html
-  - Wiki          http://ronin-mud.fandom.com
+  - Wiki          https://ronin-mud.fandom.com/wiki/Ronin_Mud_Wiki
 
 HELP INDEX will provide you with all the available help topics.
 #
@@ -1430,7 +1430,7 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (24) Death Spray                   (25) -
     (27) Lethal Fire                   (28) Disintegrate
     (29) Electric Shock                (32) Vampiric Touch
-    (50) Rush
+    (40) Iron Skin                     (50) Rush
 #
 "PALADIN SPELLS"
 
@@ -2333,47 +2333,51 @@ EXPLORE CAREFULLY.  THE LACK OF A % DOES NOT GUARANTEE NO DEATH TRAP.
 +.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.+
 | %Abyss%                  |     High      |     High      | South        |
 | Ancient Sphinx           |     High      |     High      | Northeast    |
+| Archaic Caverns          |     High      |     High      | West    |
 | Battlefield              |     Mid       |     Mid       | East         |
 | Beach                    |     Low       |     Mid       | Southwest    |
 | Berbalang                |     Mid       |     High      | South        |
 | Bluffs                   |   Mid/High    |   Mid/High    | Southwest    |
 | Brigand Camp             |     Mid       |     High      | Northeast    |
 | Canticle                 |     Low       |     Mid       | West         |
-| Castle of Ravenloft      |     High      |     High      | East         |
 | Castle of Cantlin        |     Mid       |     High      | Southwest    |
+| Castle of Ravenloft      |     High      |     High      | East         |
 | %Cavern of Lost Souls%   |     High      |     High      | Northeast    |
 | Chess Kingdom            |   Low/Mid     |     Mid       | West         |
 | %City Of Cornelius%      | Low/Mid/High  | Low/Mid/High  | Northeast    |
+| City of Thalos           |     Low       |     Mid       | East         |
 | Crystal Tower            |     High      |   Not Recom.  | Northeast    |
 | Cthorr                   |     High      |   Not Recom.  | Southwest    |
 | Daimyo                   |     High      |   Not Recom.  | South        |
-| Death's Playground       |     High      |   Not Recom.  | West         |
-| %Demon Invasion%         |     High      |     High      | North        |
-| Druids                   |     High      |   Not Recom.  | South        |
 | Da'Sharr Prison          |     High      |     High      | East         |
+| Death's Playground       |     High      |   Not Recom.  | West         |
+| Death's Playground Graves|     High      |   Not Recom.  | West         |
+| %Demon Invasion%         |     High      |     High      | North        |
 | %Dreadful Swamp%         |   Mid/High    |     High      | West         |
+| Druids                   |     High      |   Not Recom.  | South        |
 | Dwarven Kingdom          |     Mid       |     Mid       | East         |
 | Elemental Canyon         |     Mid       |     Mid       | East         |
-| Elemental Caves          |     High      |     High      | South        |
+| Elemental Canyon Dying   |     High      |   Not Recom.  | East         |
+| Elemental Canyon Dead    |     High      |   Not Recom.  | East         |
 | %El Museo%               |   Very High   |   Not Recom.  | Map          |
 | Enchanted Forest         |   Mid/High    |     High      | North        |
 | Elven Woods Village      |     High      |     High      | West         |
 | Elven Town               |     Mid       |     High      | West         |
 | Ershteep Village         |   Low/Mid     |    Low/Mid    | Map          |
 | Eryndlyn                 |     High      |   Not Recom.  | Northeast    |
-| Evil Outpost             |   Low/Mid     |     Mid       | Map          |
 | Ettin Village            |     High      |     High      | West         |
+| Evil Outpost             |   Low/Mid     |     Mid       | Map          | 
 | Fire Newt Caves          |   Low/Mid     |     Mid       | East         |
 | Forbidden Maze           |     High      |   Not Recom.  | West         |
 | %Galaxy 1st level%       |   Low/Mid     |     Mid       | Map          |
 | Galaxy 2nd level         |   Mid/High    |     High      | Map          |
-| Griffon Village          |     Low       |     Low       | Map          |
 | Goblin Caves             |   Low/Mid     |   Mid/High    | West         |
 | Golden Pagoda            |     High      |   Not Recom.  | East         |
 | Golden Plaza             |     High      |   Not Recom.  | East         |
 | Graveyard                |   Low/Mid     |     Mid       | East         |
 | %Graveyard South%        |     Mid       |     High      | Map          |
 | %Great Pyramid%          |     Mid       |     Mid       | Northeast    |
+| Griffon Village          |     Low       |     Low       | Map          |
 | Halfling Village         |     Low       |     Low       | East         |
 | Haunted House            |     High      |     High      | West         |
 | Hell                     |  Very High    |   Not Recom.  | South        |
@@ -2381,39 +2385,48 @@ EXPLORE CAREFULLY.  THE LACK OF A % DOES NOT GUARANTEE NO DEATH TRAP.
 | %Holy Grail%             |     Mid       |    Mid/High   | West         |
 | Ivory Tower              |     Mid       |    Mid/High   | Southwest    |
 | Jal-Pur                  |     High      |     High      | Northeast    |
-| Jungle                   |   Mid/High    |     High      | West         |
+| Jungle of Despair        |   Mid/High    |     High      | West         |
 | King Welmar's Castle     |     Mid       |     Mid       | East         |
 | Kitzanti Invasion        |     High      |   Not Recom.  | South        |
 | Keening                  |     High      |   Not Recom.  | West         |
 | La Soudre                |     Mid       |     Mid       | South        |
 | Lorien                   |   Mid/High    |     High      | Northeast    |
 | Lost World               |   Mid/High    |     High      | West         |
+| Marikith                 |     Mid       |     High      | West         |
+| Medieval Black Market    |     Low       |     Low       | North        |
 | Monk Monastery           |     Mid       |     High      | West         |
 | %Morgoth%                |   Low/Mid     |     Mid       | East         |
 | Moria Level 1            |     Mid       |     Mid       | Northeast    |
 | Moria Level 2            |   Mid/High    |     High      | Northeast    |
 | Moria Level 3            |     High      |   Not Recom.  | Northeast    |
 | %Mystic Monastery%       |     High      |   Not Recom.  | Northeast    |
+| Norway                   |     Low       |     Low       | North        |
 | Ocean                    |   Low/Mid     |   Mid/High    | Map          |
-| Olympus Puzzles          |     High      |   Not Recom.  | North        |
+| Ogres                    |     High      |     High      | West         |
+| Olympus                  |     High      |   Not Recom.  | North        |
 | Pirate Ship              |     High      |     High      | South        |
+| Plane of Horrors         |     High      |   Not Recom.  | South        |
 | QuickLand                |     Low       |     Low       | West         |
+| Red Dragon Volcano       |     High      |   Not Recom.  | South        |
 | Sea Of Love              |   Low/Mid     |     Mid       |West/Southwest|
-| Shire                    |     Low       |     Mid       | West         |
 | Sewers                   |   Low/Mid     |   Mid/High    | East         |
-| Sprite Village           |     Low       |     Low       | Map          |
+| Shire                    |     Low       |     Mid       | West         |
 | Sonicity                 |   Low/Mid     |     Mid       | West         |
+| Sprite Village           |     Low       |     Low       | Map          |
 | Stone Monkey Island      |     Mid       |   Mid/High    | South        |
+| Sword of Truth           |     High      |   Not Recom.  | North        |
 | Tarion City              |     High      |   Not Recom.  | Northeast    |
 | Tarion Desert            |     Mid       |     Mid       | Northeast    |
 | The Lands                |     High      |     High      | East         |
 | Theldon's Crypt          |  ***********  |   Mid/High    | Map          |
 | Training Ground          |     Low       |     Low       | Map          |
 | Troll Village            |     High      |   Not Recom.  | East         |
+| Tweef Manor              |     High      |     High      | Northeast    |
 | Twisted Dwarves          |     Mid       |     Mid       | Southwest    |
 | Vermilion's Tower        |     High      |     High      | West         |
 | Village of Barovia       |     Mid       |     Mid       | East         |
 | Wasteland                |     High      |     High      | Map          |
+| Wheel of Time            |     High      |     High      | South        |
 | Wolf Cave                |   Mid/High    |     High      | South        |
 | Wyvern's Spur            |     High      |     High      | East         |
 | %Underworld%             |   Low/Mid     |     Mid       | Map          |
@@ -6014,7 +6027,9 @@ See Also: MAP NORTHEAST SOUTH NORTH EAST WEST AREAS
 WEST
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
          1         2         3         4         5         6         7         8
-
+                                                    
+              Death's Playground Ancient Graves
+                             |
                     Death's Playground
                              |
  Vermilion's                 |   Keening--Dreadful---Ettin
@@ -6087,13 +6102,13 @@ NORTH
                                       |
                                       |
                                Olympus Puzzles
-              Demon Invasion          |
-                            \         |
-                             +-Enchanted Forest
-                                      |
-                                      |
-                                      |
-                                      |
+              Demon Invasion          |           Norway
+                            \         |          /
+                             +-Enchanted Forest-+
+                                      |          \
+                                      |           Sword of Truth
+                                      |                  |
+                                      |          Medieval Black Market
                                       |
                                       |
                                       |
