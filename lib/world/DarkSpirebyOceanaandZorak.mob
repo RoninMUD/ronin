@@ -1,0 +1,609 @@
+#30101
+ogre~
+An Ogre~
+A filthy Ogre squats in a pile of his own waste here, scratching himself.
+~
+A tremendous Ogre scratches his furry head with a scabrous hand as you
+look at him. He seems very confused and very angry. You can tell this
+because he grunts, snarls, and attacks you!
+~
+2148394 262144 -50 Y
+45 -15 -17 260d5+12000 50d3+12
+65000 2450000
+8 8 2
+0 20484 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30102
+ratwolf rat wolf~
+Ratwolf~
+A strange creature skulks here, a cross between a rat and a wolf!
+~
+Huge yellow fangs, green, glowing eyes, and a naked tail. This lovely beast
+likes both fresh AND rotted meat, so he may save some of you for later.
+~
+46 268730410 -20 Y
+46 -15 -15 255d4+12500 52d4+16
+70000 2500000
+8 8 1
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30103
+mite bug~
+Bloodsucking Mite~
+A bloodthirsty mite is waiting to spring on its next victim.
+~
+This fattened mite has had many hosts for dinner, maybe you are next on
+his menu. It pauses only a moment before springing at your jugular.
+~
+20494 268795904 0 Y
+47 -15 -21 260d6+13000 50d4+20
+75000 2550000
+8 8 0
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30104
+banshee woman~
+The Banshee~
+A willowy woman stands here screaming, the mist visible behind her.
+~
+As you look at the Banshee, she turns her shriek directly at you!!!
+~
+16426 1409024 -50 Y
+48 -16 -18 255d5+13500 52d5+24
+80000 2600000
+8 8 2
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30105
+water muck monster bubble~
+Water Muck Monster~
+The water bubbles slightly as it feels your presence.
+~
+The watery muck monster mobilizes its body into a humanoid form to put an 
+end to this infernal intrusion. Large flowing hands reach out to grab and
+once again absorb the energy of foolish prey.
+~
+17422 268795906 0 Y
+49 -16 -15 260d7+14000 50d5+28
+85000 2650000
+8 8 0
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30106
+pookah horse demon~
+The Pookah~
+A demonic horse's head rises from the water here, red eyes gleaming.
+~
+The Pookah is a small horse, almost as small as a pony. However, it is
+covered by water plants, and it has very sharp teeth and glowing red eyes.
+You even notice that it has sharp claws on its paws, as it neighs a demonic
+sound and attacks you with them.
+~
+42 264202 20 Y
+50 -17 -19 255d6+14500 52d6+32
+90000 2700000
+8 8 2
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30107
+redcap dwarf~
+Redcap~
+A dwarf wearing a blood-red cap stands here, grinning.
+~
+A short, hunchbacked dwarf stands here, picking his sharp canines with
+a gleaming knife. He wears a red skullcap, dyed with human blood, and a
+necklace made of fingerbones.
+~
+42 268730370 -30 Y
+51 -17 -16 260d8+15000 50d6+36
+95000 2750000
+8 8 1
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30108
+suit living armor~
+A Suit of Living Armor~
+A suit of armor comes to life to guard the museum's treasures.
+~
+A classic suit of full steel platemail creaks forward from its eternal sleep
+to stop your thievery of the museum's treasures. A greenish glow radiates
+from behind the visor of his sturdy helm. The full length tower shield held
+by the armor has a beautiful crest of a locust etched into it.
+~
+17422 805404672 0 Y
+52 -18 -16 255d7+15500 52d7+40
+100000 2800000
+8 8 0
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30110
+gold~
+The Gold~
+[1] A massive pile of gold glitters alluringly here.
+~
+A massive pile of gold lies here, seemingly stuck together somehow...
+~
+18442 0 0 Y
+53 -18 -17 260d9+16000 50d7+44
+105000 2850000
+8 8 0
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30111
+tamur were beast~
+Tamur the Were-beast~
+A fearsome were-beast turns his head to look at you, yellow eyes gleaming...
+~
+Covered in short, sable fur, Tamur stands only slightly hunched over. His
+eyes gleam a fierce, mad yellow; the pupils narrow stripes of black
+running vertically. His huge canines jut out from under a large, black,
+damp nose. His whiskers quiver and a stream of drool dangles from his lower
+lip. Tamur's sharp claws make no sound as he erotically extends them from
+the tips of his furred fingers.
+~
+42 268470400 -100 Y
+55 -19 -23 255d8+16500 52d8+48
+110000 2900000
+8 8 1
+0 20480 20d20+4000 0
+0 0 0 32
+K
+0 0 0 0 0 0 0
+#30114
+theurgi leader ~
+Theurgi, Leader of the Dark Spire~
+A Man paces the room, holding a Dark Staff
+~
+A large suave man paces around the room, dressed in pretty plain 
+clothing outside of a rich and colorful cloak that descends 
+to the floor.
+~
+16490 2176 0 Y
+60 -28 -23 100d9+26500 30d12+234
+2250000 5600000
+8 8 1
+1 20480 100d9+15600 6
+1 1 33 82
+1 2 10 82
+1 2 22 236
+1 7 9 95
+1 3 21 190
+1 3 30 109
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30115
+domovoi troll~
+A Domovoi~
+A stumpy troll sits here, peacefully gazing at the small brook.
+~
+The Domovoi is a short troll, barely as tall as a young lad. Yet he is built
+very strongly, and his ropy muscles ripple beneath his ragged, dusty 
+clothing. His dull grey hair is tousled and cowlick-ridden, and it has never
+even heard tales of combs or their like. The Domovoi smiles peacefully
+as he takes a rest from his life's work of keeping his bridge tidy, and
+watches the glimmering surface of the small eddy of the brook which chuckles
+merrily beneath his bridge.
+~
+104 268705792 -120 Y
+55 -19 -22 260d10+17000 50d8+52
+115000 2350000
+6 6 0
+0 20480 20d20+4000 3
+8 4 28 0
+6 1 35 0
+4 3 37 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30116
+septopoid sewage beast~
+Septopoid Sewage Beast~
+A Large Beast with Seven Tentacles
+~
+A large slimy beast swims around in the sewage as its numerous tentacles 
+roam float freely in the gunk. Its large pink body and curved beak make 
+a disgusting sound as it screeches.
+~
+16490 0 0 Y
+55 -14 -11 50d110+12000 10d12+112
+50000 1950000
+8 8 0
+98 20480 20d20+4000 3
+9 5 25 0
+5 1 12 0
+9 2 39 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30117
+swarm fish~
+Swarm of Hungry Fish~
+A Hungry Looking Swarm of Fish
+~
+A large group of fish swim together, barring their tiny teeth. Their silvery
+scales shimmer in the light cast throughout the room.
+~
+16490 0 0 Y
+45 -13 -8 25d9+3000 5d5+45
+1000 150000
+8 8 0
+84 20480 5d5+5 3
+6 4 15 0
+8 4 23 0
+2 1 11 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30118
+vampire~
+A Dead-Eyed Vampire~
+A Vampire stares blankly around the room.
+~
+The vampire looks dead, its eyes hollow and head hanging low. However, it also
+just seems to mope around the room, barely looking at anything happening. Its 
+fangs still glean in the light around the room, and it seems to twitch ever so
+slightly at the smell of fresh blood.
+~
+16490 0 0 Y
+52 -18 -17 47d115+12400 10d11+108
+68954 2450000
+8 8 0
+55 20480 10d10+1000 3
+3 4 21 0
+5 7 38 0
+2 3 17 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30119
+ice bird cockatiel~
+The Ice Cockatiel~
+A bird with large feathers made of ice.
+~
+A large blue and green bird stands seven feet into the air. Its large feathers 
+on its back and tail are covered in a thin sheet of blue ice that glows in the 
+blue light in the cavern. Its large black eyes stare at anything that moves 
+in the room.
+~
+16490 0 0 Y
+52 -19 -18 46d108+12600 10d13+120
+72548 2500000
+8 8 0
+83 20480 10d10+1000 3
+5 4 11 0
+9 7 7 0
+5 7 24 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30120
+dragon tiny~
+A Minituarized Dragon~
+A Shrunken Dragon roars at the room.
+~
+A black dragon paces around the room, its wings reaching around six
+feet in length when fully spread. Its large muscles flex and bulge
+as it stomps around on the ground, but it still only stands around 
+four feet tall. It is cute and dangerous all at the same time.
+~
+16490 0 500 Y
+53 -20 -19 47d116+12800 10d15+132
+76142 2550000
+8 8 0
+57 20480 10d10+6000 3
+10 7 25 0
+7 4 24 0
+5 5 20 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30121
+werewolf~
+A Half Changed Werewolf~
+A Half Furry Man Begins to Grow Fangs
+~
+A large male stands almost seven feet in the air even though he is hunched
+over. His legs are bulging outwards as muscle tears through the pant legs 
+and his shoes have been shredded by large feet and claws that emerge from 
+the ripped soles. Large gray hairs start poking out of the bottom half of 
+his body, covering his lower back, legs and feet with hair. The face begins 
+to elongate and small fangs start to make their frightful appearance.
+~
+16490 0 0 Y
+53 -21 -19 46d109+13000 10d17+144
+79736 2600000
+8 8 1
+61 20480 10d10+1000 3
+9 4 18 0
+7 4 37 0
+7 1 42 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30122
+gargoyle tromod~
+Tromod, The Gargoyle~
+A Stone Statues sits staring at the ceiling
+~
+Large stone ears sit on top of a stone face, forever stuck with the same 
+forlorn expression. The stone is smooth and has a gray matte color. It 
+looks expertly carved as there are no cracks or blemishes on the stone.
+~
+16490 0 0 Y
+53 -21 -22 47d117+13200 10d19+156
+83330 2650000
+8 8 0
+97 20480 10d10+1000 3
+8 2 16 0
+7 4 8 0
+10 7 40 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30123
+xalgath demon underling~
+Xalgath, The Demon Underling~
+A Large Demon paces the room
+~
+Black Horns cover his face as they extend upwards. The four separate 
+points form an odd square in relation to the fangs jutting from his mouth. 
+The red skin blends into the black skin covering his folded wings.
+~
+16490 128 -500 Y
+54 -22 -23 46d110+13400 10d21+168
+86924 2700000
+8 8 1
+63 20480 10d10+5000 3
+8 1 9 0
+8 7 35 0
+7 4 40 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30124
+giant horned lizard~
+A Giant Horned Lizard~
+A Scaled Lizard flicks its tongue
+~
+A large orange and green lizard slowly moves about the room, flicking a 
+forked tongue to and from all the other creatures in the room. Its large, 
+bulbous eyes rotate independently watching in all directions, watching for 
+anything delicious to cross its path.
+~
+16490 0 0 Y
+54 -20 -19 47d118+13600 10d23+180
+90518 2750000
+8 8 0
+80 20480 10d10+1000 3
+4 7 19 0
+8 5 22 0
+3 3 29 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30125
+stefan sane alchemist~
+Stefan, The Sane Alchemist~
+A Robed man walks around the room.
+~
+A tiny man covered in a standard white lab coat runs around the room in a 
+hectic fashion. Holding both vials and jars of random ingredients, he 
+tosses them into boiling pots as ramblings continue to spurt from his mouth. 
+The areas around his face show that goggles are used at times, as there are 
+rings of soot around them.
+~
+16490 128 0 Y
+54 -20 -20 46d111+13800 10d25+192
+1500000 3650000
+8 8 1
+1 20480 10d10+5000 7
+4 3 40 0
+6 2 17 0
+4 4 17 0
+1 3 13 236
+1 7 11 23
+1 7 37 27
+1 1 10 95
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30126
+void elemental~
+The Void Elemental~
+A Large Purple Elemental pulses quickly.
+~
+Purple energy pours out of the large pulsing ball of energy. Light is absorbed
+into its all black core as its body takes form. Hollow eyes, black as its core 
+form in what appears to be its head. 
+~
+16490 0 -50 Y
+55 -23 -22 47d119+14000 10d27+204
+200000 4000000
+8 8 0
+59 20480 10d10+5000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30127
+dark phantom~
+A Dark Phantom of the Seas~
+A Dark and Spooky Phantom of the Ocean
+~
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
+~
+16488 0 -400 Y
+52 -25 -19 46d112+9000 10d29+216
+15000 3100000
+8 8 0
+66 20480 10d10+1000 1
+3 4 37 0
+0 1 0 32
+T
+.. floats above the dark ocean waves~
+K
+0 0 0 0 0 0 0
+#30128
+dark phantom~
+A Dark Phantom of the Seas~
+A Dark and Spooky Phantom of the Ocean
+~
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
+~
+16488 0 -400 Y
+53 -25 -19 47d120+9100 10d31+228
+15847 3200000
+8 8 0
+66 20480 10d10+1000 1
+3 4 37 0
+0 1 0 32
+T
+.. floats above the dark ocean waves~
+K
+0 0 0 0 0 0 0
+#30129
+dark phantom~
+A Dark Phantom of the Seas~
+A Dark and Spooky Phantom of the Ocean
+~
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
+~
+16488 0 -400 Y
+54 -26 -19 46d113+9050 10d33+240
+16694 3100000
+8 8 0
+66 20480 10d10+1000 1
+3 4 37 0
+0 1 0 32
+T
+.. floats above the dark ocean waves~
+K
+0 0 0 0 0 0 0
+#30130
+dark phantom~
+A Dark Phantom of the Seas~
+A Dark and Spooky Phantom of the Ocean
+~
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
+~
+16488 0 -400 Y
+55 -27 -19 47d121+9100 10d35+252
+17541 3100000
+8 8 0
+66 20480 10d10+1000 1
+3 4 37 0
+0 1 0 32
+T
+.. floats above the dark ocean waves~
+K
+0 0 0 0 0 0 0
+#30131
+dark phantom~
+A Dark Phantom of the Seas~
+A Dark and Spooky Phantom of the Ocean
+~
+An ethereal creature comprised of purple and black energy floats above the ocean. 
+A subtle glow of energy and magic is emitting from the ghost like form. 
+Its eyes glow dark red as it stares through you.
+~
+16488 0 -400 Y
+56 -23 -19 46d114+9125 10d37+264
+18388 3200000
+8 8 0
+66 20480 10d10+1000 1
+3 4 37 0
+0 1 0 32
+T
+.. floats above the dark ocean waves~
+K
+0 0 0 0 0 0 0
+#30132
+clam~
+An Open Mouthed Clam~
+A Large and Gray Giant Clam
+~
+A large clam with a grey and white shell sits wide open as water flows through 
+its mouth. It waits in anticipation for anything to crawl into its mouth.
+~
+16490 0 0 Y
+58 -22 -24 47d122+15200 10d39+276
+26800 2800000
+8 8 0
+98 20480 10d10+1000 4
+5 7 60 0
+9 3 40 0
+10 5 30 0
+3 4 20 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30133
+clam~
+A Closed Mouthed Clam~
+A Large and Gray Giant Clam
+~
+A large clam with a grey and white shell sits closed as you enter the room. 
+Small streams of bubbles can be seen leaking from the edges of the shell.
+~
+16490 0 0 Y
+58 -22 -24 47d122+15200 10d39+276
+26800 2800000
+8 8 0
+98 20480 10d10+1000 4
+5 7 60 0
+9 3 40 0
+10 5 30 0
+3 4 20 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#30134
+clam~
+A Very Old Clam~
+A Large and Gray Giant Clam
+~
+The white on the shell has mostly faded, leaving only a cracked gray
+shell before you. It slowly opens its mouth letting out large
+streams of bubbles before slamming back shut. A shiny rock can be 
+seen within its mouth as it opens and closes.
+~
+16490 0 0 Y
+58 -22 -24 47d122+15200 10d39+276
+26800 2800000
+8 8 0
+98 20480 10d10+1000 4
+3 4 20 0
+10 5 30 0
+9 3 40 0
+5 1 60 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#0
+$~
