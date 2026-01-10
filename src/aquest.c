@@ -1083,6 +1083,10 @@ const int aq_mob_master_list[][2] = {
   { 26707, 6 }, /* observer tower mage old man */  
   { 28700, 6 }, /* icarus immortal */
   //{ 28704, 6 }, /* Charon */
+  { 30114, 7 }, /* Theurgi */
+  { 30123, 7 }, /* xalgath demon underling */
+  { 30125, 7 }, /* stefan sane alchemist */
+  { 30126, 7 }, /* void elemental */
   
   
 };
@@ -1543,6 +1547,8 @@ const int aq_obj_master_list[][2] = {
   {27123, 4}, // a wreath of true laurel 10
   {27721, 4}, // Wristband of the Assassin 10
   {28503, 4}, // Pan's Flute 15
+  {30108, 4}, // The Tower Shield 30
+  {30121, 4}, // A pair of Demon Wings 16
   {518, 5}, // a shinobigawa 14
   {802, 5}, // Sword of Healing 10
   {4608, 5}, // a Parasite's Fang 5
@@ -1584,6 +1590,8 @@ const int aq_obj_master_list[][2] = {
   {27720, 5}, // Banded Mail of the Bandit 10
   {28763, 5}, // The Ring of Discord 8
   {28764, 5}, // The Ring of Dissonance 8
+  {30123, 5}, // Alchemic Vial 36
+  {30124, 5}, // Void Crystal 13
   {704, 6}, // Mask of Lizard Powers 10
   {707, 6}, // The Ring of Eternal Life 7
   {4704, 6}, // Werra's Belt of Garbage 10
