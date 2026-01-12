@@ -127,7 +127,7 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 K
 0 0 0 0 0 0 0
 #2309
-white king castle~
+white king rook~
 White King's Rook~
 A white king's castle is standing here.
 ~
@@ -160,7 +160,7 @@ important piece in its class.
 K
 0 0 0 0 0 0 0
 #2311
-black queen castle~
+black queen rook~
 Black Queen's Rook~
 A black queen's castle is standing here.
 ~
@@ -270,7 +270,7 @@ It has a head of a horse and a body of mankind, it might be a relative of the ce
 K
 0 0 0 0 0 0 0
 #2318
-black king castle~
+black king rook~
 Black King's Rook~
 A black king's castle is standing here.
 ~
@@ -290,7 +290,11 @@ queen white super~
 The Super White Queen~
 The Super White Queen stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A towering figure stands over you.  Her gaze is intense and calm as 
+she looks over the battlefield. You can feel her intense nobility
+from the aura she radiates around her. The White Chess Army 
+commander begins move towards you, an obstacle in the way
+of victory.
 ~
 12 128 0 Y
 70 -21 -28 10d220+42000 20d12+190
@@ -305,7 +309,12 @@ bishop white super~
 The Super White Bishop~
 The Super White Bishop stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A large man approaches you wearing robes that flow in the wind.
+Their soft glow emits a holy energy causing the ground to be
+illuminated beneath their feet. His face has many signs of age
+including the many wrinkles and scars.  As a bishop of the 
+White Chess Army, they look to advance in unknown ways
+to sway the tide.
 ~
 12 128 0 Y
 70 -18 -24 10d220+38000 16d35+100
@@ -320,7 +329,10 @@ knight white super~
 The Super White Knight~
 The Super White Knight stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A smaller woman sits looking at you with calm, stoic eyes.  Her years
+of experience on the battlefield show, as her stance changes to that
+of combat. She focus on the field and looks for a way to turn the 
+advantage to the White Chess Army.
 ~
 12 128 0 Y
 70 -19 -23 10d220+34000 20d20+160
@@ -335,7 +347,10 @@ rook white super~
 The Super White Rook~
 The Super White Rook stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+The second most powerful member of the White Chess Army stands before
+you. He protects the flanks and forges a path ahead for the army.
+Proudly wearing the White Crest, he glares forward looking for the
+enemy.
 ~
 12 128 0 Y
 70 -15 -20 10d220+30000 20d10+130
@@ -350,7 +365,12 @@ queen black super~
 The Super Black Queen~
 The Super Black Queen stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A towering figure stands over you.  Her gaze is frantic as she  
+evaluates the battlefield.  All is not yet lost, as she moves 
+towards your position. Standing stoically, she looks to 
+retake the advantage on the field. The Black Chess Army
+commander is an exemplar of tactical command even when
+the victory is uncertain.
 ~
 12 128 0 Y
 70 -21 -28 10d220+42000 20d12+190
@@ -365,7 +385,10 @@ bishop black super~
 The Super Black Bishop~
 The Super Black Bishop stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A small man approaches you wearing robes that adhere to his skin.
+Their dull colors appear to absorb the surrounding light. His eyes
+dart around, as he looks at the current state of the battlefield.
+The crest of the Black Chess Army sits proudly on his chest.
 ~
 12 128 0 Y
 70 -18 -24 10d220+38000 16d35+100
@@ -380,7 +403,10 @@ knight black super~
 The Super Black Knight~
 The Super Black Knight stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+A smaller woman sits looking at you with calm, stoic eyes.  Her years
+of experience on the battlefield show, as her stance changes to that
+of combat. She focus on the field and looks for a way to turn the 
+advantage to the Black Chess Army.
 ~
 12 128 0 Y
 70 -19 -23 10d220+34000 20d20+160
@@ -395,7 +421,10 @@ rook black super~
 The Super Black Rook~
 The Super Black Rook stands before you
 ~
-Featureless and non-descript, the blank of primal clay waits for someone to breath life into it.
+The second most power member of the Black Chess Army stands before
+you. He protects the flanks and forges a path ahead for the army.
+Proudly wearing the Black Crest, he intently watches the battlefield
+and waits for his queen to grace everyone with her presence.
 ~
 12 128 0 Y
 70 -15 -20 10d220+30000 20d10+130
