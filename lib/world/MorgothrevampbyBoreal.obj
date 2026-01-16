@@ -1,0 +1,490 @@
+#9600
+platinum cruciate idol~
+A platinum cruciate idol~
+A cruciate idol, made of pure platinum, shines here with a holy light.~
+~
+3 3072 8193
+40 100 100 36
+9 10000 10
+15
+X
+~
+2 0 0
+M
+~
+~
+~
+~
+T
+43200
+#9601
+carved marble zemi~
+a carved marble zemi~
+A small marble statue lies here on the ground, straining to contain some internal force.~
+~
+15 0 0
+100 1 -1 0
+10 10 10
+10
+E
+decaying corpse~
+decaying corpse~
+E
+skeleton~
+The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
+Memories of an ancient time remind you of how the world has moved on.
+~
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+#9610
+horn~
+the horn of a unicorn~
+The horn of a unicorn is glowing on the ground.~
+~
+4 2113 16385
+50 1 1 117
+2 3000 10
+33
+X
+~
+64 0 0
+M
+~
+~
+~
+~
+T
+86400
+#9620
+vial holy~
+A vial of Holy Water~
+A vial of clear liquid rests on the ground.~
+~
+10 0 1
+22 35 20 18
+1 12000 100
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9630
+wings~
+The wings of a griffin~
+A pair of large griffin wings have been discarded here.~
+~
+9 0 1025
+5 0 0 0
+6 8000 10
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+14 30
+#9632
+small platinum key~
+a delicately forged platinum key~
+a delicately forged platinum key lies here on the ground.~
+~
+18 0 16385
+2 0 0 0
+1 10 10000
+50
+E
+platinum key delicate~
+This key is truly the work of the dwarven masters of yore.  Carved from
+brilliant platinum, it is a piece of art in it's own right.
+~
+E
+platinum key delicate~
+This key is truly the work of the dwarven masters of old.  Carved from
+brilliant platinum, it is a piece of art in it's own right.~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9640
+stick walking~
+A walking stick~
+A stick that would make a good companion for walking was left here.~
+~
+8 65 16385
+0 0 0 0
+3 200000 50
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9650
+sash white~
+A white sash~
+A sash made of white silk lies rumpled in the dirt.~
+~
+9 3136 2049
+3 0 0 0
+5 10000 0
+50
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+12 5
+#9652
+altar skull bloody horror~
+An altar made of skulls.~
+A hideous altar, formed from a beastly, blood stained skull sits here.~
+~
+15 0 1
+100 0 0 0
+10 10 10
+10
+E
+altar beast skull demon~
+ `b                             ,-.
+       ___`b,---.__          /'|`\          __,---,_`o__
+  `o  ,-'    \`b`    `-.____,-'  |  `-.____,-'    /`o/   `-.
+`o  ,'        |`b            '\     /`            `o|        `.
+`o /      ___/`b/              `. ,'          ,  , `o\ ___      \
+`o|    ,-'   `b`-.__   _         |        ,    __,-' `o  `-.    |
+`o|   /        `b  /\_  `   .    |    ,      _/\        `o   \   |
+`o\  |         `b  \ \`-.___ \   |   / ___,-'/ /         `o  |  /
+`o \  \        `b   | `._   `\\  |  //'   _,' |           `o/  /
+`o  `-.\       `b  /'  _ `---'' , . ``---' _  `\         `o/,-'
+`o     ``      `b /     \    ,='/ \`=.    /     \       `o''
+             `b |__   /`b|\_,--.,-.--,--._/|\   `o__`b|
+             `o/  `./  `b\\`\ |  |  | /,//'`o \,'  \
+            `o/   /     `b||--+--|--+-/-|    `o \   \
+           `o|   |     `b/'\_\_\ | /_/_/`\   `o  |   |
+            `o\   \__, `b\_     ` '     _/ `o.__/   /
+             `o`-._,-'   `b`-._______,-'   `o`-._,-'
+~
+X
+~
+320 0 0
+M
+~
+~
+~
+~
+#9670
+ring arcane nexus~
+Ring of the Arcane Nexus~
+A delicate ring of silver thrumming with raw magical energy.~
+~
+9 266350656 3
+4 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 6
+A
+53 12
+T
+18000
+#9671
+ring crimson onslaught~
+Ring of the Crimson Onslaught~
+A jagged ring of crimson metal radiating bloodthirsty energy.~
+~
+9 221311040 3
+6 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+18 6
+A
+19 6
+A
+53 12
+T
+18000
+#9672
+ring unyielding bastion~
+Ring of the Unyielding Bastion~
+A thick, rune-carved ring that pulses with unwavering power.~
+~
+9 198230080 3
+11 0 0 0
+6 44444 22222
+0
+X
+~
+3588 0 0
+M
+~
+~
+~
+~
+A
+19 6
+A
+18 6
+A
+52 40
+T
+18000
+#9675
+book dead~
+The book of the dead~
+A dark, ominous book emits a fould and pernicious energy.~
+~
+8 0 1
+0 0 0 0
+0 100000 12345
+28
+E
+book~
+The page is fashioned from cured skin, its surface etched with ink the color of old blood.
+The script twists and crawls as you read, each rune heavy with funerary weight.
+
+The Ninth Silence is not broken by will alone.
+
+To awaken what lies beyond the veil, the tome must be made whole.
+
+Upon the Sacrificial Altar, lay the relics of the Nine Paths 
+The marks of Warrior and Cleric, Thief and Mage, Paladin 
+and Anti-Paladin,Ninja, Bard, and Commando each sacrifice 
+a memory of what once lived.
+
+Bind them to this grimoire, that their echoes may be stitched together
+in defiance of the grave.
+
+When the altar has drunk deeply, speak not a prayer, nor a plea,
+but a single command, uttered with purpose and finality:
+
+RISE
+
+Only then shall the dead remember how to obey.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9677
+wine barrel winerack barrels~
+An ancient ironwood wine barrel.~
+An ancient ironwood wine barrel.~
+~
+15 4 0
+10 5 -1 0
+10000 0 0
+50
+E
+rat'hcor rathcor~
+  AH HA! a hidden compartment!!!!
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9680
+cleric torn robes~
+torn robes of the cleric~
+The torn shreds of the clerics clothing lie here in a heap.~
+~
+8 0 1
+0 0 0 0
+1 16374 6930
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9681
+dirty mage robe robes~
+dirty mage robes~
+Some dirty robes here, belonging to a mage of the dark arts.~
+~
+8 0 1
+0 0 0 0
+1 16969 3439
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9682
+smashed guitar bard~
+smashed and broken guitar~
+A fine guitar, broken and smashed to pieces.~
+~
+8 0 1
+0 0 0 0
+1 14368 6563
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9683
+broken sword hilt warrior~
+the gilded hilt of a broken sword~
+The gilded hilt of a broken, once magnificent sword sits abandoned here.~
+~
+8 0 1
+0 0 0 0
+1 16566 2465
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9684
+purse coin thief~
+a shabby purse filled with coins~
+A shabby coin purse, once belonging to a thief, lies here forgotten.~
+~
+8 0 1
+0 0 0 0
+1 13352 6305
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9685
+cross silver paladin~
+a tarnished silver cross~
+A silver cross, tarnished from much use, shines here in the dark.~
+~
+8 0 1
+0 0 0 0
+1 16790 7570
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9686
+worn gloves commando~
+a worn pair of battle gloves~
+A worn pair of gloves that have seen much battle, are crumped in a heap.~
+~
+8 0 1
+0 0 0 0
+1 13952 7477
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9687
+dagger poison anti anti-paladin~
+a sharp, poisoned dagger~
+A wickedly sharp dagger, coated in a thick poison, has been tossed aside here.~
+~
+8 0 1
+0 0 0 0
+1 17142 6445
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#9688
+rusty katana ninja~
+a dull, rusty katana~
+A long rusty katana, dulled with much use, lies here in disgrace~
+~
+8 0 1
+0 0 0 0
+1 14381 5590
+33
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

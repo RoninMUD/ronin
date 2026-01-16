@@ -1,0 +1,2128 @@
+#21600
+Entrance Hall~
+A grand, echoing chamber with towering arches and faded frescoes
+depicting ancient battles and rituals. Dust hangs in the air, caught 
+in the dim light filtering through cracks in the ceiling. The marble 
+floor is cracked and worn, evidence of the countless footsteps that 
+have passed through this once-majestic entryway. The walls are 
+adorned with weathered tapestries that tell tales of the crypt's long
+forgotten history.
+~
+216 67108876 0
+D0
+~
+~
+0 -1 21601
+D4
+~
+~
+0 -1 21461
+S
+#21601
+Entrance Hall~
+A grand, echoing chamber with towering arches and faded frescoes
+depicting ancient battles and rituals. Dust hangs in the air, caught 
+in the dim light filtering through cracks in the ceiling. The marble 
+floor is cracked and worn, evidence of the countless footsteps that 
+have passed through this once-majestic entryway. The walls are 
+adorned with weathered tapestries that tell tales of the crypt's long
+forgotten history.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21602
+D2
+~
+~
+0 -1 21600
+S
+#21602
+Entrance Hall~
+A grand, echoing chamber with towering arches and faded frescoes
+depicting ancient battles and rituals. Dust hangs in the air, caught 
+in the dim light filtering through cracks in the ceiling. The marble 
+floor is cracked and worn, evidence of the countless footsteps that 
+have passed through this once-majestic entryway. The walls are 
+adorned with weathered tapestries that tell tales of the crypt's long
+forgotten history.
+~
+216 67108876 0
+D0
+A large ornate door made of marble.
+~
+marble door~
+1 -1 21603
+D2
+~
+~
+0 -1 21601
+S
+#21603
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21606
+D1
+~
+~
+0 -1 21604
+D2
+A large ornate door made of marble.
+~
+marble~
+1 -1 21602
+D3
+~
+~
+0 -1 21608
+S
+#21604
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21605
+D3
+~
+~
+0 -1 21603
+S
+#21605
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21612
+D2
+~
+~
+0 -1 21604
+D3
+~
+~
+0 -1 21606
+S
+#21606
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21605
+D2
+~
+~
+0 -1 21603
+D3
+~
+~
+0 -1 21607
+S
+#21607
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21606
+D2
+~
+~
+0 -1 21608
+S
+#21608
+Crypt Antechamber~
+A dimly lit room with walls adorned with faded tapestries depicting
+historical events. The air is musty, and the floor is covered in 
+cracked tiles. A large, ornate door leads to the back to the main
+corridor, and a smaller passage way leads deeper into the crypt.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21607
+D1
+~
+~
+0 -1 21603
+D3
+~
+~
+0 -1 21609
+S
+#21609
+Guard Chamber~
+A somber, narrow room lined with ancient, rusted weapons and armor. 
+Shadows flicker across the walls, cast by the dim torchlight. The 
+guards' posts remain, with wooden stools and small tables covered 
+in dust. Old, tattered banners hang from the ceiling, remnants of 
+a time when this chamber was bustling with activity.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21608
+D2
+~
+~
+0 -1 21610
+S
+#21610
+Guard Chamber~
+A somber, narrow room lined with ancient, rusted weapons and armor. 
+Shadows flicker across the walls, cast by the dim torchlight. The 
+guards' posts remain, with wooden stools and small tables covered 
+in dust. Old, tattered banners hang from the ceiling, remnants of 
+a time when this chamber was bustling with activity.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21609
+D3
+~
+~
+0 -1 21611
+S
+#21611
+Guard Chamber~
+A somber, narrow room lined with ancient, rusted weapons and armor. 
+Shadows flicker across the walls, cast by the dim torchlight. The 
+guards' posts remain, with wooden stools and small tables covered 
+in dust. Old, tattered banners hang from the ceiling, remnants of 
+a time when this chamber was bustling with activity.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21610
+S
+#21612
+Narrow Passageway~
+A small passage with rough carved stones leads deeper into the crypt.
+Torches line the walls covered in strange markings not written in
+any known language. The Marble floor is smooth and not many signs
+of use can be seen.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21613
+D3
+~
+~
+0 -1 21605
+S
+#21613
+Narrow Passageway~
+A small passage with rough carved stones leads deeper into the crypt.
+Torches line the walls covered in strange markings not written in
+any known language. The Marble floor is smooth and not many signs
+of use can be seen. A small button can be seen against the strange
+markings.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21612
+D5
+~
+~
+0 -1 21614
+E
+button~
+A small stone button is barely visible on the wall.
+~
+S
+#21614
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21630
+D3
+~
+~
+0 -1 21615
+D4
+~
+~
+0 -1 21613
+S
+#21615
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21614
+D3
+~
+~
+0 -1 21616
+S
+#21616
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21615
+D3
+~
+~
+0 -1 21617
+S
+#21617
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21616
+D3
+~
+~
+0 -1 21618
+S
+#21618
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21625
+D1
+~
+~
+0 -1 21617
+D3
+~
+~
+0 -1 21619
+S
+#21619
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21618
+D2
+~
+~
+0 -1 21620
+S
+#21620
+Crypt Hallway~
+A narrow, passage with cold, uneven stone on the floor. Small alcoves
+contain torches or relics from the past. To the south you can see a
+chamber with tombs on the floor. A chilling breeze can be felt from the
+main corridor and a shreik can be heard, breaking the eerie silence.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21619
+D1
+~
+~
+0 -1 21621
+S
+#21621
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21622
+D2
+~
+~
+0 -1 21623
+D3
+~
+~
+0 -1 21620
+S
+#21622
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21624
+D3
+~
+~
+0 -1 21621
+S
+#21623
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21621
+D1
+~
+~
+0 -1 21624
+S
+#21624
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21622
+D3
+~
+~
+0 -1 21623
+S
+#21625
+Crypt Hallway~
+A narrow, passage with cold, uneven stone on the floor. Small alcoves
+contain torches or relics from the past. To the south you can see a
+chamber with tombs on the floor. A chilling breeze can be felt from the
+main corridor and a shreik can be heard, breaking the eerie silence.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21626
+D2
+~
+~
+0 -1 21618
+S
+#21626
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21627
+D2
+~
+~
+0 -1 21625
+D3
+~
+~
+0 -1 21629
+S
+#21627
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21626
+D3
+~
+~
+0 -1 21628
+S
+#21628
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21627
+D2
+~
+~
+0 -1 21629
+S
+#21629
+Crypt Burial Chamber~
+A somber and solemn room with a high, vaulted ceiling and walls lined
+with intricately carved stone sarcophagi. The floor is covered in a 
+mosaic of cracked tiles, and the air is thick with the scent of dust 
+and decay. A grand, ornate stone altar stands in the center, covered 
+in cobwebs and ancient offerings, while flickering torchlight casts 
+long, wavering shadows, creating an atmosphere of quiet stillness 
+and contemplation.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21628
+D1
+~
+~
+0 -1 21626
+S
+#21630
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21631
+D3
+~
+~
+0 -1 21614
+S
+#21631
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21632
+D3
+~
+~
+0 -1 21630
+S
+#21632
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21633
+D2
+~
+~
+0 -1 21635
+D3
+~
+~
+0 -1 21631
+S
+#21633
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21634
+D3
+~
+~
+0 -1 21632
+S
+#21634
+Crypt Main Corridor~
+A long, straight passageway with uneven stone floors and walls 
+covered in moss. Faint, eerie whispers seem to echo from the 
+shadows, adding to the sense of unease. The corridor is lined with 
+alcoves containing statues of long forgotten deities and 
+heroes, their features worn away by time. The flickering torchlight 
+casts eerie shadows on the walls.
+~
+216 67108872 0
+D3
+~
+~
+0 -1 21633
+D5
+~
+~
+0 -1 21642
+S
+#21635
+Crypt Hallway~
+A long, narrow passage stretches ahead cloaked in shadows. The stone 
+walls are lined with ancient, weathered bookshelves, each filled
+with dusty tomes and forgotten scrolls. Flickering lanterns hang 
+from iron sconces, casting a dim, eerie light that dances across 
+the floor. The air is thick with the musty scent of old parchment 
+and the faint hint of decay. As you move through the corridor, the 
+soft rustle of pages and the distant whispers of long forgotten 
+scholars seem to echo from the depths of the library ahead.
+~
+216 67108876 0
+D0
+~
+~
+0 -1 21632
+D2
+~
+~
+0 -1 21638
+S
+#21636
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21638
+D2
+~
+~
+0 -1 21637
+S
+#21637
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21636
+D1
+~
+~
+0 -1 21639
+S
+#21638
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21635
+D1
+~
+~
+0 -1 21640
+D2
+~
+~
+0 -1 21639
+D3
+~
+~
+0 -1 21636
+S
+#21639
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21638
+D1
+~
+~
+0 -1 21641
+D3
+~
+~
+0 -1 21637
+S
+#21640
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21641
+D3
+~
+~
+0 -1 21638
+S
+#21641
+Library of the Dead~
+Shelves upon shelves of ancient, dust-covered tomes. The smell of 
+old parchment fills the air, and ghostly figures seem to linger in 
+the corners. The library is dimly lit by flickering candles, casting
+long shadows on the walls. Large wooden tables are scattered 
+throughout the room, covered in scrolls, books, and mysterious artifacts. 
+The silence is palpable, broken only by the occasional sound of a 
+page turning or a book falling to the floor.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21640
+D3
+~
+~
+0 -1 21639
+S
+#21642
+Hallway of Sacrifice~
+A dark, foreboding passage lined with ancient, rusted iron sconces 
+holding flickering torches. The air is thick with the scent of old 
+blood and decay, and the stone floor is stained with the remnants 
+of past rituals. The walls are covered in intricate carvings 
+depicting scenes of sacrifice and ancient ceremonies, their 
+details worn smooth by the passage of time. A cold, oppressive 
+atmosphere permeates the hallway, with faint, ghostly whispers 
+echoing from the shadows, guiding you forwards.
+~
+216 67108876 0
+D1
+~
+~
+0 -1 21643
+D4
+~
+~
+0 -1 21634
+S
+#21643
+Hallway of Sacrifice~
+A dark, foreboding passage lined with ancient, rusted iron sconces 
+holding flickering torches. The air is thick with the scent of old 
+blood and decay, and the stone floor is stained with the remnants 
+of past rituals. The walls are covered in intricate carvings 
+depicting scenes of sacrifice and ancient ceremonies, their 
+details worn smooth by the passage of time. A cold, oppressive 
+atmosphere permeates the hallway, with faint, ghostly whispers 
+echoing from the shadows, guiding you forwards.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21644
+D3
+~
+~
+0 -1 21642
+S
+#21644
+Hallway of Sacrifice~
+A dark, foreboding passage lined with ancient, rusted iron sconces 
+holding flickering torches. The air is thick with the scent of old 
+blood and decay, and the stone floor is stained with the remnants 
+of past rituals. The walls are covered in intricate carvings 
+depicting scenes of sacrifice and ancient ceremonies, their 
+details worn smooth by the passage of time. A cold, oppressive 
+atmosphere permeates the hallway, with faint, ghostly whispers 
+echoing from the shadows, guiding you forwards.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21648
+D3
+~
+~
+0 -1 21643
+S
+#21645
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21646
+D2
+~
+~
+0 -1 21648
+S
+#21646
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21647
+D2
+~
+~
+0 -1 21649
+D3
+~
+~
+0 -1 21645
+S
+#21647
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21650
+D3
+~
+~
+0 -1 21646
+S
+#21648
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21645
+D1
+~
+~
+0 -1 21649
+D2
+~
+~
+0 -1 21651
+D3
+~
+~
+0 -1 21644
+S
+#21649
+Sacrifical Chamber Ritual Seal~
+On the floor lies a massive, intricately carved stone circle embedded 
+in the floor. The seal is adorned with ancient, arcane symbols that 
+glow faintly with an otherworldly light, casting eerie shadows on the 
+surrounding walls. The stone itself is dark and smooth, its surface 
+worn down by countless rituals performed over the centuries. Channels 
+etched into the stone converge at the center, where a small, shallow 
+basin collects the offerings made during the ceremonies. The air 
+around the Ritual Seal is thick with the scent of incense and the 
+metallic tang of blood, creating an atmosphere of both reverence 
+and dread. Faint, ghostly whispers seem to emanate from the 
+seal, echoing the ancient chants of long-forgotten rituals.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21646
+D1
+~
+~
+0 -1 21650
+D2
+~
+~
+0 -1 21652
+D3
+~
+~
+0 -1 21648
+S
+#21650
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21647
+D2
+~
+~
+0 -1 21653
+D3
+~
+~
+0 -1 21649
+S
+#21651
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21648
+D1
+~
+~
+0 -1 21652
+S
+#21652
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21649
+D1
+~
+~
+0 -1 21653
+D3
+~
+~
+0 -1 21651
+S
+#21653
+Sacrifical Chamber~
+A large, ominous room that exudes an air of dread and malevolence. 
+Five Altars lie around the room, darkened by the stains of countless 
+sacrifices. The floor is covered in a mosaic of cracked, bloodstained 
+tiles, and the walls are adorned with sinister symbols and macabre 
+paintings. Flickering torches cast long, wavering shadows, creating 
+an atmosphere of unease and terror. The air is filled with the scent
+of incense and the faint, metallic tang of blood, and the silence is 
+only broken by the distant, echoing chants of long-forgotten rituals. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21650
+D3
+~
+~
+0 -1 21652
+S
+#21654
+Hall of Echoes~
+The room is a vast, eerie corridor where every sound is 
+amplified and distorted. The stone walls are adorned with intricate 
+carvings depicting scenes of ancient battles and rituals. The floor 
+is uneven and covered in a thin layer of dust, and every step echoes
+loudly, as if the hallway itself is alive. Whispers of long forgotten
+voices seem to reverberate through the air.
+~
+216 67108876 0
+D2
+~
+~
+0 -1 21655
+S
+#21655
+Hall of Echoes~
+The room is a vast, eerie corridor where every sound is 
+amplified and distorted. The stone walls are adorned with intricate 
+carvings depicting scenes of ancient battles and rituals. The floor 
+is uneven and covered in a thin layer of dust, and every step echoes
+loudly, as if the hallway itself is alive. Whispers of long forgotten
+voices seem to reverberate through the air.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21654
+D2
+~
+~
+0 -1 21656
+S
+#21656
+Hall of Echoes~
+The room is a vast, eerie corridor where every sound is 
+amplified and distorted. The stone walls are adorned with intricate 
+carvings depicting scenes of ancient battles and rituals. The floor 
+is uneven and covered in a thin layer of dust, and every step echoes
+loudly, as if the hallway itself is alive. Whispers of long forgotten
+voices seem to reverberate through the air.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21655
+D2
+~
+~
+0 -1 21657
+S
+#21657
+Hall of Echoes~
+The room is a vast, eerie corridor where every sound is 
+amplified and distorted. The stone walls are adorned with intricate 
+carvings depicting scenes of ancient battles and rituals. The floor 
+is uneven and covered in a thin layer of dust, and every step echoes
+loudly, as if the hallway itself is alive. Whispers of long forgotten
+voices seem to reverberate through the air.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21656
+D2
+~
+~
+0 -1 21660
+S
+#21658
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21663
+S
+#21659
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21664
+S
+#21660
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21657
+D2
+~
+~
+0 -1 21665
+S
+#21661
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21662
+D2
+~
+~
+0 -1 21666
+S
+#21662
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21667
+D3
+~
+~
+0 -1 21661
+S
+#21663
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21658
+D1
+~
+~
+0 -1 21664
+S
+#21664
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21659
+D1
+~
+~
+0 -1 21665
+D2
+~
+~
+0 -1 21669
+D3
+~
+~
+0 -1 21663
+S
+#21665
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21660
+D1
+~
+~
+0 -1 21666
+D3
+~
+~
+0 -1 21664
+S
+#21666
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21661
+D3
+~
+~
+0 -1 21665
+S
+#21667
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21662
+D2
+~
+~
+0 -1 21672
+S
+#21668
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21669
+D2
+~
+~
+0 -1 21673
+S
+#21669
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21664
+D1
+~
+~
+0 -1 21670
+D3
+~
+~
+0 -1 21668
+S
+#21670
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D3
+~
+~
+0 -1 21669
+S
+#21671
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21672
+D2
+~
+~
+0 -1 21676
+S
+#21672
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21667
+D2
+~
+~
+0 -1 21677
+D3
+~
+~
+0 -1 21671
+S
+#21673
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21668
+D1
+~
+~
+0 -1 21674
+S
+#21674
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21678
+D3
+~
+~
+0 -1 21673
+S
+#21675
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21676
+S
+#21676
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21671
+D2
+~
+~
+0 -1 21683
+D3
+~
+~
+0 -1 21675
+S
+#21677
+Grand Hall of Phaix Nishruth~
+A majestic chamber with towering columns and a high, vaulted ceiling 
+unfolds before you. The walls are adorned with opulent tapestries 
+and golden chandeliers that cast a warm, ethereal glow. The floor 
+is covered in a mosaic of polished marble tiles, reflecting the 
+grandeur of the room. At the far end of the hall is a 
+hallway, surrounded by intricate carvings and statues of mythical 
+creatures. However, collapsed debris litters the floor, creating 
+barriers that impede movement and add an air of danger.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21672
+S
+#21678
+Garden Oasis Path~
+A serene, winding walkway that leads towards a room that emits a smell
+of freshness in the air. The path is lined with lush, vibrant vegetation 
+and delicate, blooming flowers. The air is filled with the sweet 
+fragrance of blossoms and the soft hum of ghostly bees. Small, flickering
+lanterns light the way, casting a gentle, soothing glow. The sound of 
+trickling water can be heard coming from a nearby fountain
+~
+216 67108876 0
+D0
+~
+~
+0 -1 21674
+D2
+~
+~
+0 -1 21680
+S
+#21679
+Crypt Garden Oasis~
+The oasis is a hidden, enchanting sanctuary filled with lush greenery
+and vibrant, ghostly flowers. The air is fresh and fragrant, with the 
+soft rustle of leaves and the distant sound of ethereal birdsong. 
+Ancient, twisted trees provide shade, and the ground is covered in a 
+carpet of moss and flowers. A small, crystal-clear pond reflects the 
+soft, otherworldly light filtering through cracks in the ceiling. A 
+fountain sits in the corner.
+~
+216 67117064 0
+D1
+~
+~
+0 -1 21680
+D2
+~
+~
+0 -1 21681
+S
+#21680
+Crypt Garden Oasis~
+The oasis is a hidden, enchanting sanctuary filled with lush greenery
+and vibrant, ghostly flowers. The air is fresh and fragrant, with the 
+soft rustle of leaves and the distant sound of ethereal birdsong. 
+Ancient, twisted trees provide shade, and the ground is covered in a 
+carpet of moss and flowers. A small, crystal-clear pond reflects the 
+soft, otherworldly light filtering through cracks in the ceiling. A 
+fountain sits in the corner.
+~
+216 67117064 0
+D0
+~
+~
+0 -1 21678
+D2
+~
+~
+0 -1 21682
+D3
+~
+~
+0 -1 21679
+S
+#21681
+Crypt Garden Oasis~
+The oasis is a hidden, enchanting sanctuary filled with lush greenery
+and vibrant, ghostly flowers. The air is fresh and fragrant, with the 
+soft rustle of leaves and the distant sound of ethereal birdsong. 
+Ancient, twisted trees provide shade, and the ground is covered in a 
+carpet of moss and flowers. A small, crystal-clear pond reflects the 
+soft, otherworldly light filtering through cracks in the ceiling. A 
+fountain sits in the corner.
+~
+216 67117064 0
+D0
+~
+~
+0 -1 21679
+D1
+~
+~
+0 -1 21682
+S
+#21682
+Crypt Garden Oasis~
+The oasis is a hidden, enchanting sanctuary filled with lush greenery
+and vibrant, ghostly flowers. The air is fresh and fragrant, with the 
+soft rustle of leaves and the distant sound of ethereal birdsong. 
+Ancient, twisted trees provide shade, and the ground is covered in a 
+carpet of moss and flowers. A small, crystal-clear pond reflects the 
+soft, otherworldly light filtering through cracks in the ceiling. A 
+fountain sits in the corner.
+~
+216 67117064 0
+D0
+~
+~
+0 -1 21680
+D3
+~
+~
+0 -1 21681
+S
+#21683
+Gilded Crypt Hallway~
+A luxurious passage adorned with gold-leafed decorations and ornate 
+carvings. The walls are lined with polished, gilded sconces holding 
+flickering torches that cast a warm, golden glow. The floor is covered
+in rich, crimson carpets, and the air is filled with the faint scent 
+of incense. Intricate tapestries depicting scenes of grandeur and 
+power hang from the walls, adding to the opulent atmosphere. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21676
+D2
+~
+~
+0 -1 21684
+S
+#21684
+Gilded Crypt Hallway~
+A luxurious passage adorned with gold-leafed decorations and ornate 
+carvings. The walls are lined with polished, gilded sconces holding 
+flickering torches that cast a warm, golden glow. The floor is covered
+in rich, crimson carpets, and the air is filled with the faint scent 
+of incense. Intricate tapestries depicting scenes of grandeur and 
+power hang from the walls, adding to the opulent atmosphere. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21683
+D2
+~
+~
+0 -1 21685
+S
+#21685
+Gilded Crypt Hallway~
+A luxurious passage adorned with gold-leafed decorations and ornate 
+carvings. The walls are lined with polished, gilded sconces holding 
+flickering torches that cast a warm, golden glow. The floor is covered
+in rich, crimson carpets, and the air is filled with the faint scent 
+of incense. Intricate tapestries depicting scenes of grandeur and 
+power hang from the walls, adding to the opulent atmosphere. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21684
+D2
+~
+~
+0 -1 21686
+S
+#21686
+Gilded Crypt Hallway~
+A luxurious passage adorned with gold-leafed decorations and ornate 
+carvings. The walls are lined with polished, gilded sconces holding 
+flickering torches that cast a warm, golden glow. The floor is covered
+in rich, crimson carpets, and the air is filled with the faint scent 
+of incense. Intricate tapestries depicting scenes of grandeur and 
+power hang from the walls, adding to the opulent atmosphere. 
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21685
+D2
+~
+~
+0 -1 21688
+S
+#21687
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21688
+D2
+~
+~
+0 -1 21691
+S
+#21688
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21686
+D1
+~
+~
+0 -1 21689
+D2
+~
+~
+0 -1 21692
+D3
+~
+~
+0 -1 21687
+S
+#21689
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D1
+~
+~
+0 -1 21690
+D2
+~
+~
+0 -1 21693
+D3
+~
+~
+0 -1 21688
+S
+#21690
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D2
+~
+~
+0 -1 21694
+D3
+~
+~
+0 -1 21689
+S
+#21691
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21687
+D1
+~
+~
+0 -1 21692
+D2
+~
+~
+0 -1 21695
+S
+#21692
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21688
+D1
+~
+~
+0 -1 21693
+D2
+~
+~
+0 -1 21696
+D3
+~
+~
+0 -1 21691
+S
+#21693
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21689
+D1
+~
+~
+0 -1 21694
+D2
+~
+~
+0 -1 21697
+D3
+~
+~
+0 -1 21692
+S
+#21694
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21690
+D3
+~
+~
+0 -1 21693
+S
+#21695
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21691
+D1
+~
+~
+0 -1 21696
+S
+#21696
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21692
+D1
+~
+~
+0 -1 21697
+D3
+~
+~
+0 -1 21695
+S
+#21697
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21693
+D2
+~
+~
+0 -1 21698
+D3
+~
+~
+0 -1 21696
+S
+#21698
+Phaix Nishruth Throne Room~
+This room is a grand, awe inspiring chamber with a high, vaulted
+ceiling and towering columns. The walls are adorned with opulent 
+tapestries, golden chandeliers, and intricate carvings depicting 
+scenes of ancient glory. A grand, ornate throne stands at the 
+center of the room, surrounded by statues of mythical creatures 
+and legendary warriors. The floor is covered in polished marble 
+tiles that reflect the warm, ethereal light from the chandeliers. 
+The air is filled with a sense of reverence and power, as if the 
+very essence of Phaix Nishruth resides within these walls.
+~
+216 67108872 0
+D0
+~
+~
+0 -1 21697
+D1
+~
+~
+0 -1 21699
+S
+#21699
+Throne of Phax Nishruth~
+The throne is a magnificent seat of power, carved from dark, polished
+stone and adorned with gold and precious gems. The throne is 
+intricately designed, with detailed carvings of mythical creatures 
+and ancient symbols that seem to glow with an otherworldly light. The 
+seat is covered in rich, crimson velvet, and the high, arched backrest 
+is adorned with an elaborate, gilded crown
+~
+216 67108872 0
+D3
+~
+~
+0 -1 21698
+S
+#0
+$~

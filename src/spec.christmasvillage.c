@@ -349,6 +349,7 @@ int christmas_chime(OBJ *obj, CHAR *ch, int cmd, char *arg)
         if (!AWAKE(ch))
             return FALSE;
         /* Don't spec if obj is not equipped by the actor. */
+		
         if (!(owner = obj->equipped_by))
             return FALSE;
         /* Don't spec if actor is not the owner. */
@@ -417,7 +418,7 @@ int christmas_crown_frozen_func(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, ch
 
     /* The only thing you can do is look. Else, it will stop you from doing anything else. */
 
-    if (cmd != CMD_LOOK)
+    if (cmd != CMD_LOOK || cmd != MSG_DIE)
     {
         if (ch != ench_ch)
             return FALSE;        

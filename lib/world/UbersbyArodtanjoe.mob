@@ -1,0 +1,407 @@
+#14600
+uber king spider~
+The Uber King Spider~
+The Uber King Spider stares and bares its bloody fangs.
+~
+Huge, sleek and very tall, this large purple and black spider towers
+over you. The crown it commands sits at the bottom of one of its 
+legs, not large enough to go any further. The ground slightly 
+shakes as it steps delicately around the room.
+~
+16490 268435584 -1000 Y
+60 -32 -21 20d2000+75000 20d24+200
+0 50000000
+8 8 0
+77 23176 1d1+0 0
+0 1 0 160
+K
+12000000 0 0 0 0 0 0
+#14601
+uber great mystic~
+The Uber Great Mystic~
+The Uber Great Mystic stands studying the final records of recent history.
+~
+The Uber Great Mystic was not chosen, but has designated himself to
+be lead figure of this brotherhood. He refuses to do any day-to-day 
+activities and instead spends his time reading and furthering his 
+own mystical powers.
+~
+16490 128 0 Y
+60 -33 -19 125d475+95000 26d18+260
+15000000 85000000
+8 8 1
+5 23176 50d50+5000 0
+0 1 0 160
+K
+0 14601 0 0 0 0 0
+#14602
+uber ultimate mystic~
+The Uber Ultimate Mystic~
+The Uber Ultimate Mystic has unlocked the secrets of the universe.
+~
+The Uber Ultimate Mystic has attained what few ever have. The
+knowledge of the universe is a fearsome and powerful tool to have. 
+Looking slightly bored, he has decided to test out this new 
+knowledge on you.
+~
+16490 128 0 Y
+70 -34 -20 90d560+115000 17d28+310
+35000000 100000000
+8 8 1
+5 23176 50d50+5000 0
+0 1 0 160
+K
+0 14602 0 0 0 0 0
+#14603
+uber huge whirlwind~
+The Uber Huge Whirlwind~
+The Uber Huge Whirlwind is generating a squall at you.
+~
+Summoned from the deepest parts of its plane, it only answers the call of those that are truly powerful.  It only wants to complete the wish of the summoner so it can return to its domain, and that means murdering you.
+~
+16490 0 0 Y
+55 -24 -17 1d1+9876 5d5+250
+1000000 3000000
+8 8 0
+67 0 25d25+3000 3
+1 3 20 248
+3 1 25 0
+1 4 7 109
+0 1 0 0
+K
+0 0 0 0 0 0 0
+#14604
+uber zyca prince~
+The Uber Zyca Prince~
+The Uber Zyca Prince stands and smirks at those that are beneath him.
+~
+The Uber Zyca Prince gleams with a huge smile across his face. This man is no longer bound to be married and can live a life he wants.
+~
+16458 0 -150 Y
+60 -25 -19 90d30+59852 12d10+180
+3500000 45000000
+8 8 1
+69 23176 1d1+0 0
+0 1 0 160
+K
+0 14604 0 0 0 0 0
+#14605
+uber newt phoenix~
+The Uber Fire Newt Phoenix~
+The Uber Fire Newt Phoenix is engulfed in a cloud of ash.
+~
+She towers above her male counterpart.  A wingspan that easily reaches 25 meters, it brushes against the edges of the cavern. He vibrant colors exude a radiance not seen with the fire newts.  She is truly the leader of the group and has the beautiful te
+~
+16490 0 150 Y
+60 -25 -18 56d40+89000 25d25+410
+0 75000000
+8 8 2
+83 23176 200d4+10000 3
+1 4 15 106
+1 4 10 130
+1 4 8 188
+0 1 0 160
+K
+27500000 14605 0 0 0 0 0
+#14606
+uber fire newt god true~
+The True Fire Newt God~
+The True Fire Newt God basks in the pale light of lava.
+~
+The large newt stands thirty feet in the air. She opens her gaping maw to show numerous rows of jagged white teeth. Thin lines of lava descend down her back, as her scales move to the sway of her gigantic form. The black, red and orange scales shimmer i
+~
+16490 268435584 -120 Y
+64 -24 -22 24d24+98654 18d19+208
+0 68500000
+8 8 2
+81 23176 20d20+6500 0
+0 1 0 160
+K
+19750000 14606 0 0 0 0 0
+#14607
+uber blue rook~
+The Uber Blue Rook~
+The Uber Blue Rook is standing tall, and fiercely looking at you as you intrude upon her domain.
+~
+The Uber Blue Rook stands before you clad in magnificent blue armor. She is 
+a rarity amongst the knights of this order due to the fact that she is a 
+woman. No other member of the order dared to challenge her because of her 
+immense strength, cunning and finesse. She is the reason why the fortress 
+has not yet fallen to the darkness that lies to the north.
+~
+16458 268435584 0 Y
+63 -20 -15 10d10+67500 15d15+306
+17500000 58000000
+8 8 2
+4 23176 1d1+1 0
+0 1 1 160
+K
+0 14607 0 0 0 0 0
+#14608
+uber zyca guard~
+The Uber Zyca Guard~
+A Large guard stands alert, guarding the royalty.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 268435584 -100 Y
+55 -30 -22 10d10+67500 15d15+306
+2000000 4000000
+8 8 1
+69 0 1d1+1 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14609
+uber king welmar~
+The Uber King Welmar~
+The Uber King Welmar stands defiantly staring down from behind the throne.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 19 -19 10d10+67500 15d15+306
+1000000 75000000
+8 8 1
+69 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14610
+uber king tut tutankhamen~
+The Uber King Tutankhamen~
+The Uber Tutankhamen roars at those who trespass in his tomb.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 19 -18 10d10+67500 15d15+306
+2500000 75000000
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14611
+uber vermilion crimson king~
+The Uber Vermilion~
+The Uber Vermilion sits upon the scarlet eternal throne.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 19 -27 10d10+67500 15d15+306
+2500000 75000000
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14612
+uber mustafa~
+The Uber Mustafa~
+The Uber Mustafa sits and throws a pair of glowing blue dice.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 10d10+67500 15d15+306
+2500000 75000000
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14613
+uber crimson death~
+The Uber Crimson Death~
+The Uber Crimson Death manifests from the ether.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14614
+uber wyvern~
+The Uber Wyvern~
+A blank of primal clay stands here, waiting to be shaped.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14615
+uber rashgugh~
+The Uber Rashgugh~
+invalid~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14616
+uber king ancient emith~
+The Uber King of Ancient Emithoynarthe~
+The Uber King of Ancient Emithoynarthe sits calmly on the throne of bones.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14617
+uber el diablo~
+The Uber El Diablo~
+The Uber El Diablo opens its gigantic maw wide and lunges towards you.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14618
+uber rex tyrannosaurus~
+The Uber Tyrannosaurus Rex~
+A blank of primal clay stands here, waiting to be shaped.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14619
+uber witchdoctor~
+The Uber Witchdoctor~
+The Uber Witchdoctor twirls a skull staff chanting ancient arcane phrases.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 2
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14620
+uber pan~
+The Uber Pan~
+invalid~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14621
+uber twixt~
+The Uber Twixt~
+invalid~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14622
+uber slaphoff~
+The Uber Slaphoff~
+A blank of primal clay stands here, waiting to be shaped.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14623
+uber big stone~
+The Uber Big Stone~
+invalid~
+A blank of primal clay, waiting to be shaped.
+~
+8 0 0 Y
+1 20 10 1d1+0 1d1+0
+0 0
+8 8 1
+0 0 1d1+0 0
+0 0 0 0
+K
+0 0 0 0 0 0 0
+#14624
+uber shogun~
+The Uber Shogun~
+A blank of primal clay stands here, waiting to be shaped.
+~
+A blank of primal clay, waiting to be shaped.
+~
+8 268435456 0 Y
+1 20 10 1d1+0 3d2+10
+0 0
+8 8 1
+0 0 1d1+0 0
+0 0 1 0
+K
+0 0 0 0 0 0 0
+#14690
+uber clone ethereal mystic~
+Ehtereal Clone of Uber Mystic~
+A ethereal being stands ready to fight
+~
+The Uber Ultimate Mystic has attained what few ever have. The knowledge of the universe is a fearsome and powerful tool to have. Looking slightly bored, he has decided to test out this new knowledge on you.
+~
+16490 268435584 0 Y
+70 -34 -20 90d50+24500 17d28+310
+20000000 2000000
+8 8 1
+5 23176 50d50+5000 0
+0 1 0 160
+K
+0 14602 0 0 0 0 0
+#0
+$~

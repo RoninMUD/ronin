@@ -167,6 +167,8 @@ int MAX_PRAC(CHAR *ch);
 void mob_aq_reward(int aqp_reward, CHAR *mob);
 
 
+//Function to Randomly Remove Antis from Items
+void strip_object_antis(OBJ *obj, int min_percent, int max_percent);
 
 size_t str_mrg(char *dest, size_t dest_size, ...);
 size_t str_cpy(char *dest, size_t dest_size, const char *src);
