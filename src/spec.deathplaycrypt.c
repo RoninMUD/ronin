@@ -147,25 +147,25 @@ int determine_jar_loot(int chance_adjust)
 
     int reward;
     // 60% chance for Bronze Tradebar
-    if (adjusted_number <= 60)
+    if (adjusted_number <= 70)
     {
-        reward = 3013; // 60% [3013 ] a bronze tradebar -- 50k
+        reward = 3013; // 70% [3013 ] a bronze tradebar -- 50k
     }
-    else if (adjusted_number <= 80)
+    else if (adjusted_number <= 85)
     {
-        reward = 3014; // 20% [3014 ] a silver tradebar -- 100k
+        reward = 3014; // 15% [3014 ] a silver tradebar -- 100k
     }
     else if (adjusted_number <= 90)
     {
-        reward = 3015; // 10% [3015 ] a gold tradebar -- 200k
+        reward = 3015; // 7% [3015 ] a gold tradebar -- 200k
     }
-    else if (adjusted_number <= 95)
+    else if (adjusted_number <= 96)
     {
-        reward = 3016; // 5%  [3016 ] a platinum tradebar 500k
+        reward = 3016; // 2%  [3016 ] a platinum tradebar 500k
     }
     else if (adjusted_number <= 98)
     {
-        reward = 3017; // 3%  [3017 ] a mithril tradebar -- 1 Mil
+        reward = 3017; // 2%  [3017 ] a mithril tradebar -- 1 Mil
     }
     else
     {
