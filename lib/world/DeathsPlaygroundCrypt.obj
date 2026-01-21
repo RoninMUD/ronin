@@ -273,8 +273,26 @@ A small sigil of Phax Nisruth sits here.~
 100
 E
 sigil~
-One of the last remaining symbols of Phax Nisruth. The sigil has faded
-but you can still make out random lines and shapes.
+This heavy sigil is forged from blackened metal veined with dull
+crimson lines, each groove etched with careful, ritual precision.
+The symbol at its center depicts a robed figure standing before 
+a crowned skull, its hands raised in both supplication and command.
+
+The reverse side bears a ring of worn script, partially smoothed 
+by countless fingers. Though time has eroded the metal, the 
+meaning of the inscription lingers, pressing itself into 
+the mind of the reader:
+
+The faithful do not arrive as one.
+Each must be named. Each must be placed.
+Only when the sepulchers remember their priests
+shall the High Voice walk again.
+
+Near the bottom, a final line has been deeply scored, as if 
+carved in haste:
+
+Set the sigils where the dead are kept,
+and the path shall open.
 ~
 X
 ~
@@ -483,6 +501,23 @@ A bone-crafted lute rests in the dust~
 0 0 0 0
 0 12563 4188
 16
+E
+lute wailing dirgecaller~
+The lutes strings hum faintly even when untouched, resonating with a
+tone too low to hear but heavy enough to feel in your bones. Along
+the inside of the soundboard, barely visible beneath age-darkened
+wood, is a thin etching scratched by an unsteady hand.
+
+Not all dead sleep in silence.
+Some remember the songs of home.
+Play not for the living ear,
+but for those who linger,
+and they will answer in kind.
+
+A final line trails off, the letters warped and uneven
+
+Phax Nisruth yet listens.
+~
 X
 ~
 3584 0 0
@@ -506,6 +541,27 @@ A small, iron-bound reliquary lies motionless~
 0 0 0 0
 0 25541 8514
 0
+E
+reliquary~
+This reliquary is carved from funereal stone, its edges worn smooth
+by centuries of ritual handling. Shattered iconography of Nerath's
+priesthood spirals around its bodyeach sigil incomplete on its 
+own, yet unmistakably bound to a greater whole.
+
+Hairline fractures lace the reliquarys surface, glowing faintly as
+if remembering oaths once sworn and later forsaken. When held, it
+feels heavier than its size suggests, as though burdened by 
+unfulfilled duty.
+
+Along its base, a faded inscription repeats in a looping script:
+
+The oath was spoken before him. The oath must be returned to him.
+
+Beneath the inscription, a final etching stands apart and
+unmarred by age:
+
+Only in the presence of the betrayed may the hollow be made whole.
+~
 X
 ~
 0 0 0
