@@ -1,0 +1,433 @@
+#14600
+cloak spidersilk ~
+Spidersilk Cloak~
+A cloak made of pure spidersilk lays here.~
+~
+9 267450944 1
+21 0 0 0
+15 43854 18812
+55
+E
+spidersilk cloak~
+Spidersilk woven together in a tight cross-stitch. It provide flexibility, while not hampering your agility. The strands absorb pressure to provide great protection.  
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+13 100
+A
+18 5
+A
+19 2
+#14601
+sleeves measured thought~
+Sleeves of Measured Thought~
+A pair of silken sleeves embroidered with slowly shifting sigils lies here.~
+~
+9 266399808 257
+12 0 0 0
+10 43900 28874
+100
+E
+sleeves measured thought~
+These silken sleeves are impossibly light, yet when worn they carry
+the subtle weight of discipline and restraint. Fine threads of
+silver and indigo form intricate sigils along their length, each
+pattern flowing into the next with deliberate precision. When traced
+with the eye, the sigils seem to slow the world around 
+them, encouraging careful action and measured intent.
+~
+X
+~
+3584 0 0
+M
+As you don the sleeves, your movements slow and your thoughts become precise.~
+$n dons a pair of silken sleeves, moving with measured deliberation.~
+$s thoughts feel less restrained as you remove the sleeves.~
+$n removes $s silken sleeves, moving more freely once again.~
+A
+19 2
+A
+18 2
+A
+52 25
+#14602
+mantle enlightened~
+Mantle of Enlightened Continuance~
+A translucent mantle shimmers here, seeming half-present~
+~
+9 266399808 1025
+6 0 0 0
+8 42855 15634
+100
+E
+mantle enlightened~
+This translucent mantle appears only half bound to the physical
+world, its edges blurring softly as if reality itself hesitates to
+fully contain it. Woven from unknown fibers, the cloth shimmers
+faintly with pale light that ebbs and flows in time with your breath.
+~
+X
+~
+3584 0 0
+M
+The mantle settles over $n, anchoring your spirit firmly within your body.~
+A faint shimmer surrounds $n as a translucent mantle settles into place.~
+You feel more vulnerable as the mantle slips from $s shoulders.~
+The faint shimmer around $n fades as the mantle is removed.~
+A
+19 2
+A
+53 3
+#14603
+sandals unshaken path~
+Sandals of the Unshaken Path~
+A pair of worn yet immaculate sandals rests here~
+~
+9 266399808 65
+7 0 0 0
+7 44006 20032
+100
+E
+sandals unshaken path~
+These simple sandals bear the marks of countless journeys, yet show no
+sign of true wear. Their soles are etched with concentric circles that
+spiral inward, each groove worn smooth as though shaped by patient steps
+rather than tools. When you hold them, they feel neither heavy nor 
+light, but perfectly balanced.
+~
+X
+~
+3584 0 0
+M
+You feel firmly grounded as $n step into the sandals.~
+$n steps into a pair of worn sandals, $s stance becoming steady and assured.~
+$s footing feels less certain as $n remove the sandals.~
+$n removes $s sandals, shifting $s weight uneasily.~
+A
+19 2
+A
+18 2
+A
+52 30
+#14604
+ring recursive insight~
+Ring of Recursive Insight~
+A mirrored ring etched with fractal patterns glints softly here.~
+~
+9 266399808 3
+4 0 0 0
+2 46638 28018
+100
+E
+ring recursive insight~
+This mirrored ring reflects more than light, its polished surface
+etched with fractal patterns that repeat endlessly upon closer
+inspection. Each curve and angle folds back upon itself, forming a
+design that seems to contain its own beginning and end simultaneously.
+~
+X
+~
+3584 0 0
+M
+A quiet loop of insight forms within $s mind as $n wear the ring.~
+The mirrored surface of $n's ring glints softly as $s slips it on.~
+The recursive clarity fades as $n remove the ring.~
+The soft glint of $n's ring dulls as it is removed.~
+A
+19 2
+A
+53 3
+#14605
+shield zyca steel buckler ~
+Zyca Steel Buckler~
+A Large Polished Steel Shield rests on the ground.~
+~
+9 134217792 4609
+5 0 0 0
+12 50000 28500
+35
+E
+bracelet phoenix claw~
+The pale white claws of the phoenix emit a dim light and still radiate a small amount of her energy.
+~
+X
+~
+1536 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+18 1
+#14606
+bracelet phoenix claw~
+Phoenix Claw Bracelet~
+A bracelet made of phoenix claws.~
+~
+9 134217792 4113
+14 0 0 0
+5 68450 33000
+42
+E
+mask ritual fire newt~
+A large mask made from overlapping scales that have fallen from the newt god's body. Adorned with jewels and rare metals, they form an intricate mask worn by all that worship her.
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+53 4
+A
+52 15
+B
+40
+#14607
+mask ritual fire newt~
+Fire Newt Ritual Mask~
+A colorful mask made of newt scales.~
+~
+9 134217792 81
+12 0 0 0
+5 79000 48000
+29
+E
+sabaton sabatons order light~
+A pair of white metallic boots worn by all members of the Order of the Light. Its sigil is carved into the side of each.
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 1
+A
+17 -5
+A
+52 7
+#14608
+sabaton sabatons order light~
+Order of the Light Sabatons~
+A white and shiny pair of sabatons~
+~
+9 0 65
+0 0 0 0
+3 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14609
+breastplate welmar~
+Welmar's Breastplate~
+A king's gold and silver breastplate,~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14610
+wraps mummy tut~
+King Tut's Mummy Wraps~
+A long piece of ancient mummified fabric.~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14611
+cape crimson lord~
+Cape of the Crimson Lord~
+A Cape of Amaranth and Crimson Flame~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14612
+dice gambling loaded~
+Loaded Gambling Dice~
+A pair of glowing gambling dice~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14613
+bracelet blazing~
+Blazing Bracelet~
+invalid~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14614
+ring claw bone wyvern~
+Wyvern Claw Bone Ring~
+invalid~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14615
+strongbox armor infinite~
+Infinite Armor Strongbox~
+invalid~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14616
+gauntlets ancient king~
+Gauntlets of the Ancient King~
+invalid~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14617
+scales el diablo~
+Scales of El Diablo~
+A pile of large dinosaur scales.~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14618
+skull trex massive~
+Massive Trex Skull~
+A large helmet made from a dinosaur skull~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#14619
+staff arcane undeath~
+Staff of Arcane Undeath~
+invalid~
+~
+0 0 1
+0 0 0 0
+0 0 0
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -1,0 +1,591 @@
+#21600
+axe large rusted~
+A Large Rusted Axe~
+A large axe rusted over time.~
+~
+26 0 8193
+0 9 5 12
+23 0 98045
+100
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21601
+jar~
+A Large Sacrifical Jar~
+A Large Sacrifical Jar sits on the ground.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+E
+jar~
+This towering ceremonial jar is crafted from blackened clay, its 
+surface adorned with gilded etchings of skeletal priests offering
+tribute to an unseen power. Thick, waxen seals bind its lid 
+shut, each one marked with an ancient sigil of warding.
+
+These jars were not designed to be opened without being smashed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21602
+shelf bookshelf bookcase~
+An old decrepit bookcase~
+An old decrepit bookcase sits against the wall.~
+~
+15 0 0
+3000 0 0 0
+0 0 0
+100
+E
+bookcase~
+This once-grand bookcase has long since surrendered to time and
+neglect. Its wood is warped and splintered, swollen from
+centuries of damp air, and riddled with wormholes that trace
+aimless paths through its frame. Several shelves have 
+collapsed entirely, leaving only jagged stubs and a 
+drift of rotted parchment scattered across the floor.
+
+One shelf, however, still endures.
+
+Resting upon it is a single heavy tome, untouched by the decay
+around it. Its cover is dark and thick, bound in cracked leather
+etched with faint, almost imperceptible sigils. A thin layer of
+dust coats the bookcase itself, yet the tome appears oddly 
+clean, as though something has ensured it would not be 
+forgotten. The air around it feels heavy and still, carrying 
+the sense that disturbing the book may awaken knowledge 
+best left undisturbed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21603
+tome~
+A very old leather bound tome~
+A very old leather bound tome sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+tome~
+"The Fall of Neraths Order"
+When the moon wept its final light upon the valley, the Order of 
+Nerath fell, not by blade or siege, but by the slow, insidious 
+whispers of decay. What was once a grand sanctum of knowledge 
+and power became a tomb, its halls choked with the remnants of 
+a failed ascension. The acolytes, bound by their devotion, sealed 
+themselves away, their voices lost to time, yet their oaths still 
+linger, etched in stone and bone. Only those who dare speak 
+the word 'Oathbound' may step beyond the veil, treading the path 
+of the forgotten.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21604
+tome~
+A very old leather bound tome~
+A very old leather bound tome sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+tome~
+"The Nameless Rituals"
+Among the forbidden rites practiced in the crypts shadowed 
+depths, one stands above all in its terrible potency. The high 
+priests of Nerath, driven by their insatiable hunger for 
+eternity, wove their souls into the very stones, ensuring 
+their dominion long after flesh had failed them. It was not 
+death they embraced, but something far worse. A fate beyond 
+the reach of gods or mortals alike. To walk their path, one 
+must speak the word 'Eternal', for only then will the ancient 
+bindings loosen and the way forward reveal itself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21605
+tome~
+A very old leather bound tome~
+A very old leather bound tome sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+tome~
+"The Last Testament of Lord Vyrek"
+They told us the crypt was salvation. A sanctuary where the 
+worthy would be remade in undeath, our wills unshaken, our 
+bodies unbroken. But we were deceived. The ritual was 
+flawed, the promise a lie. We are not warriors reborn, we 
+are prisoners, shackled by our own arrogance, our minds 
+trapped in an endless cycle of waking death. If any soul 
+yet walks these halls, if any voice dares to defy the dark, 
+let them know this: The word 'Forsaken' is both our curse 
+our key. Speak it, and the path shall open but beware 
+what waits beyond.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21606
+tome~
+A very old leather bound tome~
+A very old leather bound tome sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+tome~
+"Echoes of the Deep Tomb"
+The crypt was not always a place of silence. Once, its halls 
+echoed with the footsteps of scholars and the hushed voices 
+of those who sought forbidden knowledge. The library, a 
+sanctum of learning, held texts so ancient that even the 
+gods had forgotten them. But knowledge is a treacherous 
+gift, and those who lingered too long among the pages 
+found their minds unraveling. The words whispered 
+back, twisting their thoughts, guiding their hands to 
+rites best left unspoken. Now, only dust remains on the 
+shelves, and the scholars who once read these books have 
+long since become part of the crypt itself.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21607
+tome~
+A very old leather bound tome~
+A very old leather bound tome sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+tome~
+"The Buried King"
+Beneath the grand sepulchers and crumbling halls, deeper than 
+any have dared to tread, lies the tomb of the one they called 
+the Buried King. His name has been lost to time, his deeds 
+erased from history, yet his presence lingers. They say the 
+crypt was not built to honor him, but to contain him. The 
+chains of bone and iron that bind his resting place are not 
+merely symbolic, but necessary. Some believe he still dreams 
+in the dark, waiting, listening, biding his time. And should 
+his name ever be spoken again, should his bones be 
+disturbed, then the dead who now serve as his jailers may 
+no longer be enough to keep him entombed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21608
+sepulcher~
+The Sepulcher of Ascension~
+A Sepulcher of Ascension rests on the ground~
+~
+15 0 0
+3000 0 0 0
+0 0 0
+100
+E
+sepulcher~
+A heavy stone sepulcher rests on the floor, its surface covered in 
+spiraling runes that pulse faintly with dormant power. At its 
+center, the sigil of the Nerath Priests, a skeletal hand 
+clutching a burning eye, stands out among the carvings, its edges 
+worn smooth by time. Faint indentations surround the emblem, as if 
+awaiting something to be placed within. An eerie stillness lingers 
+in the air, and as you gaze upon the ancient markings, an unsettling 
+realization takes hold, only by placing the proper symbol inside 
+can the ritual seal be awakened.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21609
+sigil~
+Sigil of the Nerath Priest~
+A small sigil of Phax Nisruth sits here.~
+~
+12 524288 1
+0 0 0 0
+2 0 0
+100
+E
+sigil~
+This heavy sigil is forged from blackened metal veined with dull
+crimson lines, each groove etched with careful, ritual precision.
+The symbol at its center depicts a robed figure standing before 
+a crowned skull, its hands raised in both supplication and command.
+
+The reverse side bears a ring of worn script, partially smoothed 
+by countless fingers. Though time has eroded the metal, the 
+meaning of the inscription lingers, pressing itself into 
+the mind of the reader:
+
+The faithful do not arrive as one.
+Each must be named. Each must be placed.
+Only when the sepulchers remember their priests
+shall the High Voice walk again.
+
+Near the bottom, a final line has been deeply scored, as if 
+carved in haste:
+
+Set the sigils where the dead are kept,
+and the path shall open.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21610
+jar~
+A Medium Sacrifical Jar~
+A Medium Sacrifical Jar sits on the ground.~
+~
+13 0 0
+0 0 0 0
+9999 10 10
+100
+E
+jar~
+Resting on a pedestal of crumbling stone, this medium sized jar 
+bears the markings of an ancient ritual, its surface cracked but
+still intact. Faint traces of dried blood stain its rim, suggesting 
+the offerings once made here were not only material. A simple lid 
+rests atop, unsealed, as if daring the curious to peer within. 
+Faint glimmers of something valuable flicker in the darkness 
+beyond the narrow opening.
+
+These jars were not designed to be opened without being smashed.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21611
+relic gravepiercer~
+Gravepiercer, the Veil-Torn Relic~
+A relic of Phax Nisruth hums on the ground.~
+~
+5 134217792 8193
+0 1 6 11
+18 45021 55533
+45
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+#21612
+sepulcher~
+A Sacrificial Sepulcher~
+A Sacrificial Sepulcher sits on the ground~
+~
+15 0 0
+4000 0 0 0
+0 0 0
+100
+E
+sepulcher~
+A heavy stone sepulcher rests in the dim recess of the burial 
+chamber, its surface worn by the passage of centuries. Faint carvings
+of solemn figures in prayer adorn its sides, their faces eroded beyond 
+recognition. Dust and cobwebs cling to the edges of its lid, which bears 
+the sigil of a long forgotten lineage. The air is thick with the scent 
+of decay and lingering sorrow, as if the silence itself mourns those 
+entombed within. Whatever rests inside has not been disturbed for 
+ages or so it seems.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21613
+mask deathmask nerath~
+Nerath Deathmask~
+A tarnished silver mask lies half-buried in the dust~
+~
+9 163639360 17
+7 0 0 0
+0 70000 23333
+11
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+52 10
+A
+53 3
+#21614
+signet bonewarden~
+Bonewarden's Signet~
+A tarnished bronze ring  lies stained with time-worn blood~
+~
+9 134217792 3
+5 0 0 0
+0 45000 15000
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21615
+shroud forgotten~
+Shroud of the Forgotten~
+A tattered burial shroud is draped across the ground~
+~
+9 134217792 9
+6 0 0 0
+0 65220 21740
+12
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21616
+reliquary box blackthorn~
+Blackthorn Reliquary~
+A dark wooden box, its iron bindings rusted shut~
+~
+15 134217792 16385
+30 0 0 0
+0 16255 5418
+13
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21617
+heartstone hollowed~
+Hollowed Heartstone~
+A smooth, jet-black stone, shaped like a heart~
+~
+1 265310272 65537
+0 0 0 0
+0 50000 16667
+12
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+18 4
+A
+19 4
+#21618
+dagger last oath~
+Dagger of the Last Oath~
+A fractured obsidian dagger rests on the cold stone~
+~
+5 134217792 8193
+0 2 6 11
+0 36222 12074
+11
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21619
+lute wailing dirgecaller~
+Dirgecaller, the Wailing Lute~
+A bone-crafted lute rests in the dust~
+~
+24 233893952 16385
+0 0 0 0
+0 12563 4188
+16
+E
+lute wailing dirgecaller~
+The lutes strings hum faintly even when untouched, resonating with a
+tone too low to hear but heavy enough to feel in your bones. Along
+the inside of the soundboard, barely visible beneath age-darkened
+wood, is a thin etching scratched by an unsteady hand.
+
+Not all dead sleep in silence.
+Some remember the songs of home.
+Play not for the living ear,
+but for those who linger,
+and they will answer in kind.
+
+A final line trails off, the letters warped and uneven
+
+Phax Nisruth yet listens.
+~
+X
+~
+3584 0 0
+M
+~
+~
+~
+~
+A
+19 2
+A
+18 2
+A
+53 3
+#21620
+reliquary oath hollowed~
+Reliquary of the Hollowed Oath~
+A small, iron-bound reliquary lies motionless~
+~
+12 134217792 16385
+0 0 0 0
+0 25541 8514
+0
+E
+reliquary~
+This reliquary is carved from funereal stone, its edges worn smooth
+by centuries of ritual handling. Shattered iconography of Nerath's
+priesthood spirals around its bodyeach sigil incomplete on its 
+own, yet unmistakably bound to a greater whole.
+
+Hairline fractures lace the reliquarys surface, glowing faintly as
+if remembering oaths once sworn and later forsaken. When held, it
+feels heavier than its size suggests, as though burdened by 
+unfulfilled duty.
+
+Along its base, a faded inscription repeats in a looping script:
+
+The oath was spoken before him. The oath must be returned to him.
+
+Beneath the inscription, a final etching stands apart and
+unmarred by age:
+
+Only in the presence of the betrayed may the hollow be made whole.
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#21621
+rite oathbinder~
+Oathbinders Rite~
+A piece of paper recounting the history of phax nisruth~
+~
+32 134217792 1
+21620 21616 21617 21614
+0 2036 679
+6
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#0
+$~

@@ -2224,6 +2224,42 @@ void mob_aq_reward(int aqp_reward, CHAR *mob){
 		send_to_char(buf, vict);
 		vict->ver3.quest_points += aqp_reward;
 	}
+	
 }
 
 
+void strip_object_antis(OBJ *obj, int min_percent, int max_percent)
+{
+    int i, roll;
+
+    static const int anti_flags[] = {
+		ITEM_ANTI_GOOD,
+		ITEM_ANTI_EVIL,
+		ITEM_ANTI_NEUTRAL,
+		ITEM_ANTI_WARRIOR,
+		ITEM_ANTI_THIEF,
+		ITEM_ANTI_CLERIC,
+		ITEM_ANTI_MAGIC_USER,
+		ITEM_ANTI_NINJA,
+		ITEM_ANTI_NOMAD,
+		ITEM_ANTI_PALADIN,
+        ITEM_ANTI_ANTIPALADIN,
+        ITEM_ANTI_BARD,
+		ITEM_ANTI_COMMANDO
+    };
+
+    if (!obj)
+        return;
+
+    if (min_percent < 0) min_percent = 0;
+    if (max_percent > 100) max_percent = 100;
+    if (min_percent > max_percent)
+        min_percent = max_percent;
+
+    for (i = 0; i < NUMELEMS(anti_flags); i++)
+    {
+        roll = number(min_percent, max_percent);
+        if (chance(roll))
+            REMOVE_BIT(obj->obj_flags.extra_flags, anti_flags[i]);
+    }
+}

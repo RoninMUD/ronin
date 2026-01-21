@@ -1,0 +1,360 @@
+#21600
+sentinel boneguard skeleton undead~
+Boneguard Sentinel~
+A rusted yet imposing skeletal knight stand here.
+~
+A sworn protector of the crypts sacred dead, but in undeath, it has
+become a relentless enforcer of its forgotten oath. Its hollow eyes 
+burn with faint blue embers, remnants of the soul that refuses to 
+rest, and the faded crest of a long extinct kingdom is barely visible 
+beneath the grime of centuries. It moves with slow, measured precision
+down the cold stone corridors. Though it no longer speaks, an eerie 
+clanking of its bones fills the air as it marches forward, ready 
+to strike down any who disturb the silence of the tomb.
+~
+16456 0 -350 Y
+55 -16 -13 55d120+27000 13d13+125
+0 2700000
+8 8 0
+52 20480 1d1+1000 2
+2 1 35 0
+3 2 26 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21601
+archer hollow skeleton undead~
+Hollow Archer~
+A tattered leather-clad skeleton holding a bow.
+~
+The silent executioner of the crypt, a lifeless 
+marksman who stalks the corridors in eternal vigilance. Though its 
+flesh has long decayed, its skeletal frame moves with the same 
+fluid grace it once had in life, drawing spectral arrows from a 
+quiver that never empties. Each shot carries the whispering voices
+of the dead, a haunting echo of the archers fallen comrades, and 
+wounds inflicted by its arrows fester with a necrotic curse. It does 
+not chase its preythere is no need. Once it has set its gaze 
+upon a target, the hunt is already over.
+~
+16456 0 -350 Y
+56 -16 -13 50d100+24000 13d13+130
+0 2850000
+8 8 0
+52 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21602
+legionnaire cursed skeleton undead~
+Cursed Legionnaire~
+The remnants of a disciplined warrior, clad in cracked and rusting plate.
+~
+The Legionnaire is the revenant of a long dead soldier, its oaths
+binding it to duty even beyond the grave. Though its bones are 
+brittle and its armor worn with age, it moves with the drilled 
+precision of an elite warrior, executing practiced formations as 
+though leading an invisible battalion. In battle, it strikes with 
+calculated aggression, blocking blows with its shield before 
+retaliating with brutal efficiency. A cursed sigil, etched into its 
+chest plate, radiates a sickly green glow, ensuring that even in 
+destruction, the Legionnaire may rise again, reforged in undeath 
+to fight once more.
+~
+16456 0 -350 Y
+57 -13 -14 50d100+24500 13d13+135
+0 3105000
+8 8 0
+52 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21603
+magus soulflame skeleton undead sorcerer~
+Soulflame Magus~
+A skeletal sorcerer wreathed in flickering blue fire.
+~
+Here stands a being of raw, lingering arcane power, its body 
+consumed by spectral fire that has long since replaced its 
+flesh. Though bound to the crypt by unseen forces, its magic 
+has not faded with time rather, it has grown more potent, its 
+mastery of necrotic sorcery now unhindered by the constraints 
+of mortality. With each flick of its bony fingers, ghostly fire 
+bursts forth, searing the soul rather than the flesh, leaving 
+behind wounds that cannot heal. It moves as though suspended 
+between realms, gliding just above the ground, its presence 
+warping the very air around it. Those who hear its whispered 
+spells often find themselves haunted long after they escape 
+its grasp.
+~
+16456 0 -350 Y
+58 -17 -14 50d100+19500 14d14+140
+0 3200000
+8 8 0
+53 20480 1d1+10000 2
+1 2 35 136
+1 6 15 149
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21604
+executioner revenant skeleton undead~
+Revenant Executioner~
+A towering, hooded skeletal figure.
+~
+This undead looks like death incarnate, a towering specter of 
+judgment and brutality. Draped in a tattered, bloodstained 
+cloak, it moves with slow, deliberate steps, its heavy axe 
+carving deep gouges into the stone floor as it advances. It 
+does not speak, nor hesitate with its movements.
+~
+16456 0 -350 Y
+59 -17 -15 50d100+24000 14d14+145
+0 3256000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21605
+phantom wailing undead specter~
+Wailing Phantom~
+A drifting, translucent specter of sorrow.
+~
+A tormented spirit, bound to the crypt by unfinished regrets and 
+unbearable loss. Though it barely resembles the form it had in 
+life, its agony is unmistakable. Its distorted visage constantly 
+twisting in an expression of endless despair. It floats silently 
+through the corridors until disturbed, at which point it releases 
+a wail so devastating that the very air seems to fracture under 
+its sorrow. 
+~
+16456 0 -350 Y
+60 -18 -15 50d100+25000 14d14+150
+0 3600000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21606
+ghoul tomb rot undead~
+Tomb Rot Ghoul~
+A hunched and festering monstrosity stares intently ahead.
+~
+The ghoul is a walking disease, a rotting nightmare cursed to endlessly 
+hunger for the flesh of the living. Its decayed body is swollen with 
+putrid filth, its skin peeling away in slick, necrotic layers that 
+ooze a bile so toxic that even the stone beneath its feet blackens 
+and crumbles. Despite its grotesque appearance, it moves with terrifying 
+speed, lunging at prey with claws that slice through armor like 
+paper, their wounds festering instantly with a sickness that spreads 
+through the body like wildfire. 
+~
+16456 0 -350 Y
+58 -20 -16 50d100+26000 15d15+155
+0 3700000
+8 8 0
+53 20480 1d1+1000 1
+1 4 40 105
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21607
+wraith bonewraith undead~
+Bonewraith~
+A ghostly entity bound to its own skeletal remains
+~
+The tormented remnant of a warrior who refused to leave its mortal 
+shell, its soul still tethered to its own remains by chains of grief 
+and fury. It shifts constantly between the realms of the living and 
+the dead, its body phasing in and out of existence as it hunts those 
+who dare to intrude upon its resting place. Its sharp claws flash in
+the light.  
+~
+16456 0 -350 Y
+59 -21 -16 10d200+27000 15d15+160
+0 3800000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21608
+priest mummy undead~
+Mummified High Priest~
+An ancient priest wrapped in decayed ceremonial robes.
+~
+Once a devoted servant of the divine, the priest has become a mockery
+of its former faith, its body preserved not by sacred rites, but by 
+the malevolent will of the crypt itself. Its hollow sockets glow with 
+a dim, unholy light as it mutters prayers in a language long lost to 
+time, each word laced with a curse that drains the strength of those 
+who hear it. The air around it is thick with the scent of ancient 
+incense, masking the underlying stench of decay. 
+~
+16456 0 -350 Y
+60 -18 -17 10d200+28000 15d15+165
+0 3900000
+8 8 0
+52 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21609
+revenant plague undead corpse~
+Plague Revenant~
+A wretched, disease ridden corpse
+~
+Once a victim of a terrible blight, the body has become something far 
+worse. An eternal carrier of undeaths most insidious affliction. Its
+rotting body is bloated with disease, pustules weeping dark ichor as 
+it moves with agonizing slowness. Where it treads, the ground itself 
+blackens and dies, the very air poisoned by the noxious fumes that 
+seep from its gaping mouth.
+~
+16456 0 -350 Y
+61 -23 -17 10d200+29000 16d16+170
+0 4300000
+8 8 0
+53 20480 1d1+1000 1
+1 4 40 105
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21610
+horror graveborn undead~
+Graveborn Horror~
+A monstrous fusion of skeletal remains and twisted sinew
+~
+A large eldritch abomination, a being of countless dead, fused 
+together by necromantic blasphemy. Its body is a writhing mass 
+of bones, sinew, and tattered flesh, its multiple skulls eternally 
+locked in silent screams. Each limb is an unnatural graft, stitched 
+together by something far older and crueler than mere mortal magic. 
+When it moves, it does so in fits and starts, as though struggling 
+to control its many parts, yet its attacks are devastatingly precise. 
+When it feeds, its body swells, incorporating the remains of the fallen 
+into its grotesque form, growing ever larger with each new victim.
+~
+16456 0 -350 Y
+66 -23 -18 10d200+30000 16d16+175
+0 4200000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21611
+acolyte lichbound undead~
+Lichbound Acolyte~
+A skeletal devotee clad in tattered ceremonial robes.
+~
+The undead was once a zealous disciple of a powerful necromancer, its 
+loyalty so absolute that even death could not sever its servitude. 
+Though its flesh has long rotted away, its mind remains intact, bound 
+to the arcane whispers of its eternal master. It moves with deliberate 
+purpose, chanting dark invocations in a dead tongue that causes the very 
+air to tremble. 
+~
+16456 0 -350 Y
+65 -23 -18 10d200+31000 16d16+180
+0 4100000
+8 8 0
+52 20480 1d1+10000 1
+1 2 30 209
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21612
+colossus ossified undead bones fused~
+Ossified Colossus~
+A towering mass of fused bones
+~
+Formed from the remains of countless fallen warriors, it is an 
+amalgamation of skulls, ribs, and broken limbs, held together by 
+sheer necromantic will. Standing over three times the height of a 
+man, it moves with terrifying inevitability, each footstep sending 
+tremors through the crypts ancient foundations. Its arms, formed 
+from the fused bones of dozens of limbs, swing like wrecking 
+balls, shattering stone and steel alike with raw, unrelenting 
+force. 
+~
+16456 134217728 -350 Y
+68 -25 -19 10d200+32000 17d17+185
+0 4978500
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21613
+nerath boneclutch undead ruler~
+Nerath Boneclutch~
+A nightmarish amalgamation of skeletal remains
+~
+Once a powerful necromancer, Nerath Boneclutch transcended death not 
+through mastery, but through grotesque obsession, his own decaying 
+body becoming the vessel for countless souls trapped in his insatiable 
+hunger. Now, he is a shifting horror of bone and shadow, his form ever
+changing, limbs stretching and twisting as though formed from the 
+remains of those he has consumed. His voice is a whisper of many 
+voices, each word laced with the suffering of the damned, taunting 
+intruders with knowledge they should never hear. The air around him 
+feels heavier, as though reality itself recoils from his 
+presence, and those who meet his gaze feel an unbearable chill 
+seep into their very souls. Few who encounter him escape, and those 
+who do are forever changed, haunted by the echoes of the crypt.
+~
+16458 134219904 -550 Y
+70 -25 -19 10d200+55000 17d17+190
+2125000 5200000
+8 8 0
+53 20480 1d1+1000 5
+1 6 20 238
+1 2 30 172
+1 2 15 209
+1 2 15 210
+1 2 40 136
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21614
+stalker tomb undead predator~
+Tomb Stalker~
+A skeletal predator with elongated limbs and piercing crimson eyes
+~
+A monstrous undead sits before you. Its skeletal form has been warped 
+by dark forces, its arms and legs stretched into unnatural lengths. 
+Its fingers ending in long, razor-like talons. It moves with a 
+disturbing, insect-like grace, crawling along walls and ceilings in 
+absolute silence. Its glowing red eyes fixed upon those who dare venture 
+too deep.
+~
+16456 134217728 -350 Y
+65 -24 -20 10d200+39000 17d17+195
+0 4682000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#21615
+priest nerath~
+High Priest of Nerath~
+A Skeletal Priest covered in Beautiful Robes.
+~
+An emaciated priest draped in rotted ceremonial robes stands before
+the altar, his eyes glowing faintly with the memory of 
+devotion long forgotten.
+~
+74 134219904 -550 Y
+70 -25 -19 10d200+120000 17d17+190
+2125000 5200000
+8 8 0
+53 20480 1d1+1000 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#0
+$~

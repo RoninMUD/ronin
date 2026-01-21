@@ -127,10 +127,13 @@ void assign_turkeytakeover(void);
 void assign_medievalblackmarket(void);
 void assign_christmasvillage(void);
 void assign_deathplaygroundancientgrave(void);
+void assign_ubers(void);
+void assign_morgoth(void);
+void assign_darkspire(void);
+void assign_deathplaygroundcrypt(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
-void assign_ubers(void);
 void assign_questyvaderIV(void);
 void assign_digsite(void);
 void assign_luthienIV(void);
@@ -139,10 +142,7 @@ void assign_happybob(void);
 void assign_crazylab(void);
 void assign_chess(void);
 void assign_elementalmines(void);
-void assign_darkspire(void);
-void assign_morgoth(void);
 void assign_olympus(void);
-void assign_deathplaygroundcrypt(void);
 #endif
 
 void assign_mobiles(void)
@@ -232,9 +232,13 @@ void assign_mobiles(void)
   assign_medievalblackmarket();  
   assign_christmasvillage();
   assign_deathplaygroundancientgrave();
+  assign_ubers();
+  assign_morgoth();
+  assign_darkspire();
+  assign_deathplaygroundcrypt();
+  
 //  assign_wbw();
 #ifdef TEST_SITE
-  assign_ubers();
   assign_crazylab();
   assign_chess();
   assign_ubers();
@@ -243,10 +247,7 @@ void assign_mobiles(void)
   assign_workbench();
   assign_happybob();
   assign_elementalmines();
-  assign_darkspire();
-  assign_morgoth();
-  assign_olympus();
-  assign_deathplaygroundcrypt();
+  assign_olympus();  
 #endif
 }
 

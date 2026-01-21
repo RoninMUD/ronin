@@ -1,0 +1,2024 @@
+#30100
+The Entrance to the Dark Spire~
+  A colossal tower rises up out of the foliage to the east. Its dirty
+blackened brick reflects the evil it contains. Off to the west a humble
+mango garden is visible. Depending on which direction you are facing, the
+air smells of sweet fruit or a run down overused privy.
+~
+301 0 0
+D1
+~
+~
+0 -1 30101
+D2
+~
+~
+0 -1 30113
+D3
+~
+~
+0 -1 0
+S
+#30101
+Inside The Dark Spire~
+  You can still see from the light coming from outside the Spire, but
+above you is complete blackness. An odor of decay and fresh dung pervades
+this room, and you can hear rustlings from all corners. The walls here are
+stained with a brown patina of dust and filth, and the floor is dirt.
+A large chain lies connected to the wall by a huge circle of metal, the
+other end a broken link, sadly limp on the ground.
+~
+301 8 0
+D3
+~
+~
+0 -1 30100
+D4
+~
+~
+0 -1 30102
+D5
+~
+~
+0 -1 30119
+S
+#30102
+The Second Floor of the Dark Spire~
+  You hear loud squeaks in this room, and green eyes peer out at you
+from the almost complete blackness near the walls. Strange symbols are
+painted on the wall with blood, they look similar to primitive cave-
+paintings. A small pile of old meat lies in the middle of the floor here,
+maggots squirming around in it and rats crawling all over it, fighting
+each other for better position.
+~
+301 9 0
+D4
+~
+~
+0 -1 30103
+D5
+~
+~
+0 -1 30101
+S
+#30103
+The Third Floor of the Dark Spire~
+  The sound of cracking shells is heard as you enter this chamber. The whole
+room seems alive, as millions of insects roam the floor and walls. It smells
+of rotting leaves, and you become sick to your stomach. Several insect 
+covered forms appear to have been furniture long since fallen into disuse.
+A large sofa in the corner of the room seems more popular with the present
+inhabitants, as they crawl in and out of its cushions.
+~
+301 9 0
+D4
+~
+~
+0 -1 30104
+D5
+~
+~
+0 -1 30102
+S
+#30104
+The Fourth Floor of the Dark Spire~
+  This room is shrouded in mist, and you can hardly see your hand at the
+end of your outstretched arm. Keening wails pierce your ears every time
+you make a motion, and you can hardly make head or tail of your own
+equipment, let alone the exits. A shadowy figure seems to be flitting
+around you, screeching.
+~
+301 4105 0
+D4
+~
+~
+0 -1 30105
+D5
+~
+~
+0 -1 30103
+S
+#30105
+The Fifth Floor of the Dark Spire~
+  A large number of bricked up windows fill the walls of this once beautiful
+atrium. Decayed and rotting plants fill the many sturdy granite planters
+around the chamber. An ornate fountain occupies the center of the atrium.
+Gorgon heads once spewed forth water, or some other liquid into its vast
+basin. Now, only a black foul smelling liquid fills the basin.
+~
+301 9 0
+D4
+~
+~
+0 -1 30106
+D5
+~
+~
+0 -1 30104
+S
+#30106
+The Sixth Floor of the Dark Spire~
+  You stand knee-deep in mucky, greenish water. Lily pads and tiny
+green disc-plants cover the surface, so that there is not even a ripple
+to be seen. The walls are covered in varicolored algae which give off
+a luminescent glow, lighting this room in an eerie way. You can
+feel small fish brushing against your legs, and the bottom of the pool
+is covered with what feel like broken bones.
+~
+301 8 0
+D4
+~
+~
+0 -1 30107
+D5
+~
+~
+0 -1 30105
+S
+#30107
+The Seventh Floor of the Dark Spire~
+  The world spins as you enter this room! When you regain your bearings, you
+notice that the way down is no longer there! There is now no going back,
+you are trapped inside the Dark Spire.
+  As you ponder your options, you hear a high-pitched giggle from behind
+you. As you turn to see what the source was, you hear another laugh. Soon,
+the entire room is a raucous symphony of cackling, and it doesn't seem
+to be a pleasant sort of laughter.
+~
+301 9 0
+D4
+~
+~
+0 -1 30108
+D5
+~
+~
+0 -1 30106
+S
+#30108
+The Eighth Floor of the Dark Spire~
+  A thick plush red carpet covers the floor of what appears to be a museum.
+A plethora of weapons and armor fill the walls and display cases about the
+room. A huge sword stands in a glass case in the center of the museum. The
+huge sword seems to glow a faint pink. You feel eyes watching you, the evil
+warriors that used these devices of war must still haunt them.
+~
+301 9 0
+D4
+~
+~
+0 -1 30109
+D5
+~
+~
+0 -1 30107
+E
+sword~
+The huge bastard sword in this glass case looks as if it ended the lives of
+thousands of warriors. From its sterling silver gold filigree hilt to its
+adamantite blade, this sword was crafted to perfection. Near the hilt on the
+blade is etched the name: Gideon. The blade glows a sullen pink and emits a
+faint hum, obviously there is more than simple physical power at work.
+~
+S
+#30109
+The Ninth Floor of the Dark Spire~
+  A vast circular chamber opens before you, its obsidian floor etched
+with faintly glowing runes that pulse in slow, measured rhythms. 
+The air here is unnaturally still, heavy with a silence so
+complete it swallows the echoes of your own movements. Towering
+pillars of black stone rise toward a ceiling lost in shadow, their
+surfaces polished smooth as if worn down by centuries of 
+unseen hands.
+~
+301 92 0
+D4
+~
+~
+0 -1 30110
+D5
+~
+~
+0 -1 30108
+S
+#30110
+The Tenth Floor of the Dark Spire~
+  The walls here are covered with beautiful paintings, and the floor is
+heaped with treasure. Strangely, no thieves have yet managed to steal
+anything, from the looks of it.
+  The stairs have completely crumbled behind you, and you are now stuck
+in this room. As you curse your stupidity, you notice a large form
+quivering in the corner. It whimpers as you turn your gaze on it, and you
+barely catch a glimpse of its huge form as it scurries up a ladder away
+from you.
+~
+301 9 0
+D4
+~
+~
+0 -1 30111
+D5
+~
+~
+0 -1 30109
+S
+#30111
+The Eleventh Floor of the Dark Spire~
+  The beast you saw scurry up the stairs to here lies huddled in a heap
+of sable fur in the middle of a large, glowing circle engraved in the floor.
+As you watch, he stands up very slowly, seemingly in great pain. The beast
+shrieks in torment as his pelt shifts around his body, and his fur recedes
+into his body. After his transformation is complete, he appears as half-man,
+half-beast.
+~
+301 9 0
+D4
+~
+~
+0 -1 30112
+D5
+~
+~
+0 -1 30110
+S
+#30112
+The Top Floor of the Dark Spire~
+  The ascent ends in a vast, cathedral-like chamber carved from pure
+black stone, its walls rising impossibly high before vanishing into
+swirling darkness. Jagged spires of obsidian thrust inward from the
+floor and ceiling alike, framing the room like the ribs of some 
+colossal, slumbering beast. The air hums with restrained 
+power, each breath tasting of ash and old magic.
+  At the chambers heart stands a raised dais etched with layers of 
+ancient sigils, their symbols shifting and reforming as if 
+resisting comprehension. Arcane energies coil lazily above 
+it, drawn toward a solitary figure who commands the space 
+without movement or word. Theurgi stands unmoving, draped 
+in shadow and authority, his presence alone bending the 
+light around him. This place is not his throne, it
+is his focus, his instrument.
+~
+301 9 0
+D5
+~
+~
+0 -1 30111
+S
+#30113
+A Planked Path~
+  You are walking along a path paved with large wooden planks sunk
+into a red, hardened mud. Telltale lines of wear show you that there is
+a fair amount of cart traffic along this little road. Directly northeast
+of here stands a tall, black spire. And, farther away to your east, a
+shorter tower made of wood rises.
+~
+301 0 0
+D0
+~
+~
+0 -1 30100
+D1
+~
+~
+0 -1 30114
+S
+#30114
+A Planked Path~
+  You fearfully skirt the southern wall of a tremendous black spire which
+rises directly to your north. A stink of sewage informs you that you stand
+to the leeward side of the sanitary system of that tower. The planked
+path continues to your east, and another tower seems to stand at the
+path's eastern end.
+~
+301 0 0
+D1
+~
+~
+0 -1 30115
+D3
+~
+~
+0 -1 30113
+S
+#30115
+A Small Bridge~
+  A small creek runs below you, and an appropriate bridge has been built
+over it, upon which you are now standing. The Dark Spire rises to your
+northwest, and a shorter, wooden tower stands nearby to your east. You can
+hear an animal growling and grunting under this bridge, and it looks like
+you can get underneath through a small trap door on the western end of the
+wooden bridge.
+~
+301 0 0
+D1
+~
+~
+0 -1 30117
+D3
+~
+~
+0 -1 30114
+D5
+A small wooden trap door has been built into the bridge here.
+~
+trap~
+1 -1 30116
+S
+#30116
+Underneath the Bridge~
+  A small landing juts out from the western bank of the brook, underneath
+the bridge. The landing, which you would expect to be dirty and cluttered
+from neglect, is surprisingly clean and neat. In fact, the entire under-
+side of the bridge is clear of cobwebs, dust, and pests, almost as though
+there is a regular caretaker. But then, who would bother to take care
+of the UNDERSIDE of a bridge?
+~
+301 0 0
+D4
+The underside of a wooden trap door.
+~
+trap~
+1 -1 30115
+S
+#30117
+Near the Wooden Tower~
+  A tall, ramshackle wooden tower rises to your east. It has been painted
+a demure ocean grey recently, and you can see small slits going up
+the side, one for each level, obviously used for sending arrows out at
+attackers. A large crest of a gauntleted hand grasping a bag of gold on
+a field of red with a utilitarian sword above it is visible on a huge
+wooden circle on the western wall of the tower.
+~
+301 0 0
+D1
+~
+~
+0 -1 30118
+D3
+~
+~
+0 -1 30115
+S
+#30118
+A Rocky Scarred Beach~
+  Smooth and coarse sand stretch in both directions as the waves wash
+up and down the shore. To the west, a large Dark Spire ascends into
+the clouds threatening to block out the sun. To the north on the
+beach is a large wooden tower painted grey. Its' brilliant crest
+visible to all who approach. Small critters skitter around on the
+small dunes formed by the waves, and junk has started to wash 
+ashore from the turbulent seas.
+~
+301 4 0
+D2
+~
+~
+0 -1 30171
+D3
+~
+~
+0 -1 30117
+S
+#30119
+The Basement Privy of the Dark Spire~
+  This foul smelling room is the epitome of filth and disease. You quickly
+become sick to your stomach as the sight of insects and excrement fill your
+vision. Several troughs for urination, as well as one large pit are the 
+main attractions of this chamber. The fecal pit seems to empty into another
+room below.
+~
+301 9 0
+D2
+An Odd Colored Stone Wall
+~
+wall~
+8 -1 30120
+D4
+~
+~
+0 -1 30101
+E
+pit~
+ This circular pit reeks of fecal matter. The brownish and blackish
+remains don't look very wholesome. As you peer into the pit you 
+notice something shiny in the chamber below. You wonder to yourself
+if any treasure could be worth wading into raw sewage for.
+~
+S
+#30120
+Room Past the Hidden Wall~
+  A dark and cold room is cramped, with rather smooth walls that are
+slimy to the touch. Moss, vines and slugs cover the wall. The stench
+from the previous room sticks to the walls and floor. The floor is 
+smooth tile, varying from dark grey to light black. The tile
+continues to the south as the hallway narrows, vines hanging from 
+the ceilings.
+~
+301 0 0
+D0
+An Odd Colored Stone Wall
+~
+wall~
+8 -1 30119
+D2
+~
+~
+0 -1 30121
+S
+#30121
+A Dark and Cold Passage~
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground. As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
+~
+301 0 0
+D0
+~
+~
+0 -1 30120
+D5
+~
+~
+0 -1 30122
+S
+#30122
+A Dark and Cold Passage~
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground. As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
+~
+301 0 0
+D2
+~
+~
+0 -1 30123
+D4
+~
+~
+0 -1 30121
+S
+#30123
+A Dark and Cold Passage~
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground. As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
+~
+301 0 0
+D0
+~
+~
+0 -1 30122
+D3
+~
+~
+0 -1 30124
+S
+#30124
+A Dark and Cold Passage~
+  Damp air clings to everything, including the walls, floor and skin.
+Droplets of water drip from hanging vines, and splatter against the
+ground. As the drops hit the ground, their sound echoes throughout
+the stone passage. The tiles on the floor have become coated in slime
+and are slippery.
+~
+301 0 0
+D1
+~
+~
+0 -1 30123
+D3
+~
+~
+0 -1 30125
+S
+#30125
+Submerged in Water~
+  The room is filled with dark, murky water leaving visibility at a
+bare minimum. The water slowly swirls in a clockwise direction and
+spirals down into the dark void below. Many small fins can be seen
+reflecting what small amounts of light remain in the room.
+~
+301 0 0
+D1
+~
+~
+0 -1 30124
+S
+#30126
+Desolate Island Shore~
+  The shore is devoid of all life, including plants, animals and
+trees. The sand is coarse, and rocks just up from the ground
+providing a bleak look to the entire area. To the south you see a
+small plateau rising up from the ocean. You can faintly make out
+what look to be stone pillars, standing up next to a large wall.
+~
+301 0 0
+D2
+~
+~
+0 -1 30127
+S
+#30127
+A Rocky island Path~
+  Many sharp and jagged rocks cover the path as progress is made
+towards the pillars and the wall. The dirt is dark and there are
+small signs of life returning to this island. The edges of the path
+are lined with symmetrical round stones, black and blue in color and
+incredibly shiny. When light hits them from the correct angle, the 
+form an illuminated path.
+~
+301 0 0
+D0
+~
+~
+0 -1 30126
+D2
+~
+~
+0 -1 30128
+S
+#30128
+A Sharp Cliff Wall~
+  A large sheer wall of rock and vines looms as it draws closer and
+closer. The stone pillars are covered in intricate runes and symbols
+that pulse and flicker with remnants of magic. The wall is
+covered in many holes and a few slightly frayed ropes still hang 
+down, attached to the top. The cliff itself is made of numerous
+layers of stone, rock, marble and other minerals that can't 
+be identified.
+~
+301 0 0
+D0
+~
+~
+0 -1 30127
+D4
+A Short Rock Wall
+~
+Wall~
+11 -1 30129
+S
+#30129
+On a Tiny Plateau~
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below. The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
+~
+301 0 4
+D1
+~
+~
+0 -1 30130
+D5
+A Small Ledge
+~
+ledge~
+10 -1 30128
+S
+#30130
+On a Tiny Plateau~
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below. The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
+~
+301 0 4
+D1
+~
+~
+0 -1 30131
+D2
+~
+~
+0 -1 30132
+D3
+~
+~
+0 -1 30129
+S
+#30131
+On a Tiny Plateau~
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below. The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
+~
+301 0 4
+D2
+~
+~
+0 -1 30133
+D3
+~
+~
+0 -1 30130
+S
+#30132
+On a Tiny Plateau~
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below. The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
+~
+301 0 4
+D0
+~
+~
+0 -1 30130
+D1
+~
+~
+0 -1 30133
+D2
+~
+~
+0 -1 30135
+S
+#30133
+On a Tiny Plateau~
+  The plateau is very flat and extends a small distance to each side.
+Each edge is a sheer drop down to the ocean below. The waves wash
+against the cliff walls and the salty air fills the senses. The
+plateau is covered in numerous stone pillars with the same markings
+as seen below. The blue and black hue of magic can still be seen
+fluttering over the top of the plateau. Looking at the smooth stones
+on the ground, the black and blue magic appears again leading towards
+the southwest corner of the plateau.
+~
+301 0 4
+D0
+~
+~
+0 -1 30131
+D1
+~
+~
+0 -1 30134
+D3
+~
+~
+0 -1 30132
+S
+#30134
+An Overhang Over the Ocean~
+  A simple rock overhang, overlooking the vast ocean to the east
+giving you an expansive view of the world. The waves, both large
+and small can be seen rolling across the light blue surface,
+crashing into obstructions and breaking against the reefs.
+~
+301 0 0
+D1
+A Rock Overhang over the Ocean.
+~
+overhang~
+10 -1 30174
+D3
+~
+~
+0 -1 30133
+S
+#30135
+A Large Square Slab of Rock~
+  The black and blue magic gathers on top of a large square slab
+of pure marble. The magic dances back in forth in varying displays,
+forming shapes but normal and abstract. The edges of the stone are
+very smooth and light reflects off its semi-glossy surface. The
+ground has marks on it on the north side of the stone.
+~
+301 0 0
+D0
+~
+~
+0 -1 30132
+D5
+A Large Square Slab of Rock
+~
+slab~
+8 -1 30136
+S
+#30136
+A Dark Room Below the Stone~
+  The room is barely lit, and a humanoid figure can be seen standing
+in the shadows. Trails of blue magic run down the east and west
+walls, while trails of black run down the north and south. Scattered
+all over the floor are the bones and remains of unfortunate creatures
+that ventured into the domain of a being more powerful than themselves.
+~
+301 0 0
+D4
+A Large Square Slab of Rock
+~
+slab~
+8 -1 30135
+D5
+~
+~
+0 -1 30137
+S
+#30137
+A Room of Iced Walls~
+  Blue and Black light is being refracted and reflected by all the
+ice that covers the room. The walls are frozen solid, while icicles
+have formed on the floor and ceiling, creating a labyrinth of sharp
+and pointy ice. A large bird roams around the room making low
+rumbling noises and it senses your presence. The magic around the
+room flows to its center, and illuminates a path leading
+down further into the plateau.
+~
+301 0 0
+D4
+~
+~
+0 -1 30136
+D5
+~
+~
+0 -1 30138
+S
+#30138
+A Room with a Melted Floor~
+  Unlike the room above, this room is quite hot, the air both warm
+and stale. The ground itself is melting into molten slag and then
+hardening again. A large creature roams around the room making
+indentations into the partially cooled floor. As it roars, high
+pitched noises are heard bouncing off the warm walls and the walls
+shake as it extends its wings to impose its presence on you.
+~
+301 0 0
+D4
+~
+~
+0 -1 30137
+D5
+~
+~
+0 -1 30139
+S
+#30139
+A Room Illuminated with Blue Light~
+  Low light blue lights are embedded into each of the four walls
+right below the ceiling. The cast shadows around the room as there
+are numerous rocks and pillars spread throughout the room. A low howl
+can be heard echoing through this chamber, and rocks hitting the
+floor cause quick bursts of noise. The walls are covered in long, 
+deep scratches sitting in pairs of four lines each.
+~
+301 0 0
+D4
+~
+~
+0 -1 30138
+D5
+~
+~
+0 -1 30140
+S
+#30140
+A Room with Rock Parapets~
+  Pillars and stone walls for a long ring of inner and out walls.
+The outer walls for an outer walkway around three feet wide and the
+inner walls are three feet in from those. At the top of all of the
+walls and flat ledges with numerous stone statues on them. The
+statues are of the many varying species of the world including 
+dragons, fish, lizards and vampires. Blue and black mage continues
+to illuminate the walls but it is much brighter now.
+~
+301 0 0
+D4
+~
+~
+0 -1 30139
+D5
+~
+~
+0 -1 30141
+S
+#30141
+A Room with a Metal Throne~
+  A large metal throne is the only object in this room. The floor
+and walls are black and charred, with some of the rocks melted to
+each other. Sitting on the throne is a large creature that is ten
+feet tall, even when sitting. Its large horns gleam with the black
+and blue hue of the magic that pulses through the room, and its 
+large black wings unfold and fold reflexively as it sits there
+patiently watching you move through the room.
+~
+301 0 0
+D4
+~
+~
+0 -1 30140
+D5
+~
+~
+0 -1 30142
+S
+#30142
+A Room Overflowing with Plants and Bugs~
+  Plants, both large and small, cover this room. Blue magic can be
+seen glowing in their veins and they seem to pulse over and over.
+Hundreds of bugs of all sizes are skittering over the floor, make a
+lot of different squeaks and skitter noises. A large lizard can be
+seen roaming around the room, its large tongue flicking in and out
+of its mouth. It laps up scores of bugs, their bodies crunching
+together as they are devoured.
+~
+301 0 0
+D4
+~
+~
+0 -1 30141
+D5
+~
+~
+0 -1 30143
+S
+#30143
+A Room Filled with Lab Equipment~
+  Many large vials sit over small fires, their many colorful
+liquids boil and bubble and fill the room with many colorful clouds.
+A man runs around the room mumbling to himself as he examines the
+numerous vials. A large dark black mass swirls in the center of the
+room and you can see light and the colorful gasses being 
+sucked into it.
+~
+301 0 0
+D4
+~
+~
+0 -1 30142
+D5
+A Small Purple Portal to the Void
+~
+void~
+12 -1 30144
+S
+#30144
+A Room with a Small Void Portal~
+  The air is filled with a black mist as the walls swirl around you.
+There is so solid floor, walls or ceiling and yet nothing falls or
+floats up. A massive elemental floats in the middle of the room, 
+its form slowly humming and moving along with the rest of the space.
+~
+301 0 0
+D4
+A Small Purple Portal to the Void
+~
+void~
+12 -1 30143
+S
+#30145
+Approaching a Dark and Chaotic Sea~
+  The calm water beneath you begins to swirl and churn. Dark clouds
+fill the sky and the wind begins to pick up, causing a slight chill
+in the air. The clouds are ominous and flash with sparks of blue
+and black light.
+~
+301 4 7
+D1
+~
+~
+0 -1 30146
+D3
+~
+~
+0 -1 8241
+S
+#30146
+A Dark Sea with Small Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
+~
+301 0 7
+D1
+~
+~
+0 -1 30147
+D2
+~
+~
+0 -1 30151
+D3
+~
+~
+0 -1 30145
+S
+#30147
+A Dark Sea with Small Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
+~
+301 0 7
+D1
+~
+~
+0 -1 30148
+D2
+~
+~
+0 -1 30152
+D3
+~
+~
+0 -1 30146
+S
+#30148
+A Dark Sea with Small Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
+~
+301 0 7
+D1
+~
+~
+0 -1 30149
+D2
+~
+~
+0 -1 30153
+D3
+~
+~
+0 -1 30147
+S
+#30149
+A Dark Sea with Small Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Small waves flow through the seas, pushed ever on
+by the wind that never ceases. Phantoms can be seen floating over the
+water, but are not affected by the water as it splashes right through
+them. To the south, large spires can be seen coming out of the water
+and land masses both large and small loom in the distance.
+~
+301 0 7
+D1
+~
+~
+0 -1 30150
+D3
+~
+~
+0 -1 30148
+S
+#30150
+Approaching a Dark and Chaotic Sea~
+  The calm water beneath you begins to swirl and churn. Dark clouds
+fill the sky and the wind begins to pick up, causing a slight chill
+in the air. The clouds are ominous and flash with sparks of blue
+and black light.
+~
+301 4 7
+D1
+~
+~
+0 -1 7210
+D3
+~
+~
+0 -1 30149
+S
+#30151
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D0
+~
+~
+0 -1 30146
+D1
+~
+~
+0 -1 30152
+D5
+~
+~
+0 -1 30187
+S
+#30152
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D0
+~
+~
+0 -1 30147
+D1
+~
+~
+0 -1 30153
+D2
+~
+~
+0 -1 30154
+D3
+~
+~
+0 -1 30151
+S
+#30153
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D0
+~
+~
+0 -1 30148
+D2
+~
+~
+0 -1 30155
+D3
+~
+~
+0 -1 30152
+S
+#30154
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D0
+~
+~
+0 -1 30152
+D1
+~
+~
+0 -1 30155
+S
+#30155
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D0
+~
+~
+0 -1 30153
+D1
+~
+~
+0 -1 30156
+D2
+~
+~
+0 -1 30157
+D3
+~
+~
+0 -1 30154
+S
+#30156
+A Dark Sea with Large Waves~
+  The water is dark and anything below the surface is masked by its
+lightless depths. Large waves crash back and forth, sending foam and
+spray into the air. Phantoms can be seen floating over the water and
+are annoyed at the spray. To the south, large spires can be seen 
+becoming larger but the skies only become more ominous.
+~
+301 0 7
+D2
+~
+~
+0 -1 30158
+D3
+~
+~
+0 -1 30155
+D5
+~
+~
+0 -1 30188
+S
+#30157
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30155
+D1
+~
+~
+0 -1 30158
+D2
+~
+~
+0 -1 30160
+S
+#30158
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30156
+D2
+~
+~
+0 -1 30161
+D3
+~
+~
+0 -1 30157
+S
+#30159
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D1
+~
+~
+0 -1 30160
+D2
+~
+~
+0 -1 30163
+S
+#30160
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30157
+D1
+~
+~
+0 -1 30161
+D2
+~
+~
+0 -1 30164
+D3
+~
+~
+0 -1 30159
+S
+#30161
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30158
+D1
+~
+~
+0 -1 30162
+D2
+~
+~
+0 -1 30165
+D3
+~
+~
+0 -1 30160
+S
+#30162
+A Chaotic Sea with Small Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the small
+waves. The phantoms continue to appear and float amongst 
+the churning waves.
+~
+301 0 7
+D2
+~
+~
+0 -1 30166
+D3
+~
+~
+0 -1 30161
+S
+#30163
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves.  The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30159
+D1
+~
+~
+0 -1 30164
+D2
+~
+~
+0 -1 30167
+S
+#30164
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30160
+D1
+~
+~
+0 -1 30165
+D2
+~
+~
+0 -1 30168
+D3
+~
+~
+0 -1 30163
+S
+#30165
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30161
+D1
+~
+~
+0 -1 30166
+D2
+~
+~
+0 -1 30169
+D3
+~
+~
+0 -1 30164
+S
+#30166
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30162
+D2
+~
+~
+0 -1 30170
+D3
+~
+~
+0 -1 30165
+D5
+~
+~
+0 -1 30189
+S
+#30167
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30163
+D1
+~
+~
+0 -1 30168
+D2
+~
+~
+0 -1 30172
+S
+#30168
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30164
+D1
+~
+~
+0 -1 30169
+D2
+~
+~
+0 -1 30173
+D3
+~
+~
+0 -1 30167
+S
+#30169
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30165
+D1
+~
+~
+0 -1 30170
+D3
+~
+~
+0 -1 30168
+S
+#30170
+A Chaotic Sea with Large Waves~
+  Waves are more chaotic here, moving in random directions and not
+influenced by the wind. Magical presence can be felt on the air,
+along with the blue and black particles that float amongst the large
+waves. The phantoms continue to appear and float amongst the
+churning waves and the large waves splash water and mist into the 
+air, angering the phantoms.
+~
+301 0 7
+D0
+~
+~
+0 -1 30166
+D3
+~
+~
+0 -1 30169
+S
+#30171
+A Calm Sea by the Shore~
+  A very calm sea sits before you. No movement can be seen above or
+below the crystal clear water. The breeze is calming and cooling as
+it gently wafts through the area. Phantoms can be seen off in the
+distance but rarely venture to the calmer waters. To the west a large
+cliff rises out of the ocean and to north a single dark tower rises 
+from the rock.
+~
+301 0 7
+D0
+~
+~
+0 -1 30118
+D1
+~
+~
+0 -1 30172
+D2
+~
+~
+0 -1 30174
+S
+#30172
+A Gentler Sea with No Waves~
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30167
+D1
+~
+~
+0 -1 30173
+D2
+~
+~
+0 -1 30175
+D3
+~
+~
+0 -1 30171
+S
+#30173
+A Gentler Sea with No Waves~
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30168
+D2
+~
+~
+0 -1 30176
+D3
+~
+~
+0 -1 30172
+S
+#30174
+A Calm Sea by the Shore~
+  A very calm sea sits before you. No movement can be seen above or
+below the crystal clear water. The breeze is calming and cooling as
+it gently wafts through the area. Phantoms can be seen off in the
+distance but rarely venture to the calmer waters. To the west a large
+cliff rises out of the ocean and to north a single dark tower rises 
+from the rock.
+~
+301 0 7
+D0
+~
+~
+0 -1 30171
+D1
+~
+~
+0 -1 30175
+S
+#30175
+A Gentler Sea with No Waves~
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30172
+D1
+~
+~
+0 -1 30176
+D3
+~
+~
+0 -1 30174
+S
+#30176
+A Gentler Sea with No Waves~
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
+~
+301 0 7
+D0
+~
+~
+0 -1 30173
+D1
+~
+~
+0 -1 30177
+D2
+~
+~
+0 -1 30183
+D3
+~
+~
+0 -1 30175
+S
+#30177
+A Gentler Sea with No Waves~
+  The gentle sea rocks back and forth in the breeze. Its slight 
+ripples produce the only movement that is seen. The breeze continues
+to be cooling and calm as it blows through the air. To the west, 
+there are large cliffs and to the east strange structures can be seen 
+rising out of the waves.
+~
+301 0 7
+D1
+~
+~
+0 -1 30178
+D3
+~
+~
+0 -1 30176
+S
+#30178
+A Mild Sea with Mild Waves~
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
+~
+301 0 7
+D1
+~
+~
+0 -1 30179
+D2
+~
+~
+0 -1 30196
+D3
+~
+~
+0 -1 30177
+S
+#30179
+A Mild Sea with Mild Waves~
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
+~
+301 0 7
+D1
+~
+~
+0 -1 30180
+D3
+~
+~
+0 -1 30178
+S
+#30180
+A Mild Sea with Mild Waves~
+  Waves begin to swell and cause the sea to become rougher as each
+wave rolls past. The sky is clear with small clumps of white fluffy
+clouds spreading out amongst it. As the light passes to the east,
+numerous spires can be seen jutting out of the ocean.
+~
+301 4 7
+D3
+~
+~
+0 -1 30179
+S
+#30181
+A Mild Sea with No Waves~
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.
+~
+301 0 7
+D1
+~
+~
+0 -1 30182
+D2
+~
+~
+0 -1 30185
+S
+#30182
+A Mild Sea with No Waves~
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.
+~
+301 0 7
+D1
+~
+~
+0 -1 30183
+D2
+~
+~
+0 -1 30186
+D3
+~
+~
+0 -1 30181
+S
+#30183
+A Mild Sea with No Waves~
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.
+~
+301 0 7
+D0
+~
+~
+0 -1 30176
+D3
+~
+~
+0 -1 30182
+S
+#30184
+Approaching a Rocky Shore~
+  The blue water begins to recede as you approach a rocky brown
+shore. It is empty but not desolate as there are signs of life. The
+shore shows signs of movement and you can also make out a path
+leading up the hill towards the crimson spire. The magical presence
+felt on the sea is greater here, its presence creating a small 
+constant pressure on the air.
+~
+301 0 7
+D1
+~
+~
+0 -1 30185
+D3
+~
+~
+0 -1 30190
+S
+#30185
+A Mild Sea with No Waves~
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.
+~
+301 0 7
+D0
+~
+~
+0 -1 30181
+D1
+~
+~
+0 -1 30186
+D3
+~
+~
+0 -1 30184
+S
+#30186
+A Mild Sea with No Waves~
+  A clear light blue sky spreads out to the west, illuminating the
+ruins of a large crimson spire. Waves don't form as the wind blows
+through the area, being suppressed by a small magic aura emanating
+from the rocky shore to the west.
+~
+301 0 7
+D0
+~
+~
+0 -1 30182
+D3
+~
+~
+0 -1 30185
+S
+#30187
+A Rock Filled Underwater Cave~
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
+~
+301 4 7
+D4
+~
+~
+0 -1 30151
+S
+#30188
+A Rock Filled Underwater Cave~
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
+~
+301 4 7
+D4
+~
+~
+0 -1 30156
+S
+#30189
+A Rock Filled Underwater Cave~
+  A large cave underwater filled with blue and black magic particles.
+The magic forms a barrier trapping air in the upper part of the cave
+but allowing water to stay at the bottom. A large clam sits in the
+cave slowly opening and closing its shell to breathe and feed on 
+particles in the water.
+~
+301 4 7
+D4
+~
+~
+0 -1 30166
+S
+#30190
+A Rocky Shore Covered in Red Rocks~
+  Red rocks, both large and small are scattered throughout the area.
+The path leading up the hill is lined on both sides with these rocks.
+Red particles of magic can be seen floating through the air, the 
+crimson ash of the spire covers the ground.
+~
+301 4 0
+D1
+~
+~
+0 -1 30184
+D3
+~
+~
+0 -1 30191
+S
+#30191
+A Path of Red Rock~
+  Numerous red rocks line each side of the path. The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
+~
+301 0 4
+D0
+~
+~
+0 -1 30193
+D1
+~
+~
+0 -1 30190
+D3
+~
+~
+0 -1 30192
+S
+#30192
+A Path of Red Rock~
+  Numerous red rocks line each side of the path. The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
+~
+301 0 4
+D0
+~
+~
+0 -1 30194
+D1
+~
+~
+0 -1 30191
+S
+#30193
+A Path of Red Rock~
+  Numerous red rocks line each side of the path. The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
+~
+301 0 4
+D2
+~
+~
+0 -1 30191
+D3
+~
+~
+0 -1 30194
+S
+#30194
+A Path of Red Rock~
+  Numerous red rocks line each side of the path. The crimson ash
+covers the ground and rocks, it obscures the way forward and clouds
+the air itself. The strong pull of magic can be felt along with an
+ever-increasing pressure pushing against you. The plants that do
+exist glow with the same red light as can be seen at the 
+top of the spire.
+~
+301 0 4
+D0
+~
+~
+0 -1 30195
+D1
+~
+~
+0 -1 30193
+D2
+~
+~
+0 -1 30192
+S
+#30195
+Approaching the Crimson Spire~
+  A large and fracture spire rises up into a set of red clouds
+that obscure the top. Parts of the tower float in the void on top of
+crimson ash, with the platforms slowly swaying side to side but not 
+falling. A large bright red light can be seen pulsing at the top 
+of the tower.
+~
+301 0 7
+D2
+~
+~
+0 -1 30194
+S
+#30196
+A Winding Path Between the Rocks~
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
+~
+301 0 7
+D0
+~
+~
+0 -1 30178
+D2
+~
+~
+0 -1 30197
+S
+#30197
+A Winding Path Between the Rocks~
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
+~
+301 0 7
+D0
+~
+~
+0 -1 30196
+D3
+~
+~
+0 -1 30198
+S
+#30198
+A Winding Path Between the Rocks~
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
+~
+301 0 7
+D1
+~
+~
+0 -1 30197
+D2
+~
+~
+0 -1 30199
+S
+#30199
+A Winding Path Between the Rocks~
+  Large rocks rise up out of the water forming a wall to both sides
+of the water. The waters speed off at quick speeds to the south,
+towards the larger unknown bodies of water. The chaotic waters, the 
+dark skies and the spires fade away as the path continues south, only
+to have other spires rise up over the horizon.
+~
+301 4 7
+D0
+~
+~
+0 -1 30198
+S
+#0
+$~
