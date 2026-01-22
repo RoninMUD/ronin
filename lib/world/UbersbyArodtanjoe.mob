@@ -8,7 +8,7 @@ over you. The crown it commands sits at the bottom of one of its
 legs, not large enough to go any further. The ground slightly 
 shakes as it steps delicately around the room.
 ~
-16490 268435584 -1000 Y
+16458 268435584 -1000 Y
 60 -32 -21 20d2000+75000 20d24+200
 0 50000000
 8 8 0
@@ -26,7 +26,7 @@ be lead figure of this brotherhood. He refuses to do any day-to-day
 activities and instead spends his time reading and furthering his 
 own mystical powers.
 ~
-16490 128 0 Y
+16458 128 0 Y
 60 -33 -19 125d475+95000 26d18+260
 15000000 85000000
 8 8 1
@@ -44,7 +44,7 @@ knowledge of the universe is a fearsome and powerful tool to have.
 Looking slightly bored, he has decided to test out this new 
 knowledge on you.
 ~
-16490 128 0 Y
+16458 128 0 Y
 70 -34 -20 90d560+115000 17d28+310
 35000000 100000000
 8 8 1
