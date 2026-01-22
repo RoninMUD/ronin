@@ -26,6 +26,16 @@
 #include "weather.h"
 #include "shop.h"
 
+/* These values are used to determine how much space to initially allocate
+ * to tables and also when expanding them. They are based on profiling in
+ * July/August of 2020 and should perhaps be updated. */
+#define ZONE_TABLE_INIT_SIZE    170
+#define ROOM_DATA_INIT_SIZE     8400
+#define MOB_PROTO_INIT_SIZE     2200
+#define OBJ_PROTO_INIT_SIZE     3600
+#define SHOP_DATA_INIT_SIZE     100
+#define FIGHT_MESSAGE_INIT_SIZE 60
+
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
 ************************************************************************ */
@@ -509,13 +519,7 @@ void distribute_tokens(int num_tokens, bool rebuild_table) {
       }
 
       /* The token is worth 1 or 2 subclass points. */
-	  
-	  /* Adding new Game Mode to Double SCP Token Values in the game.*/  
-	  if(DOUBLESCPV){
-		OBJ_VALUE(token, 0) = number(2, 4);
-	  }else{
-		OBJ_VALUE(token, 0) = number(1, 2);
-	  }
+      OBJ_VALUE(token, 0) = number(1, 2);
 
       /* Give the token to the mob. */
       obj_to_char(token, mob);
@@ -938,7 +942,7 @@ int allocate_zone(int vnum) {
   /* Create a new table if this is the first entry. */
   if (top_of_zone_table == 0) {
     /* Initial table size, based on profiling in August of 2020. */
-    allocated = 150;
+    allocated = ZONE_TABLE_INIT_SIZE;
 
     CREATE(zone_table, struct zone_data, allocated);
 
@@ -951,9 +955,10 @@ int allocate_zone(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_zone_table % allocated == 0) {
-    allocated += 5;
+    allocated += ZONE_TABLE_INIT_SIZE;
 
     RECREATE(zone_table, struct zone_data, allocated * sizeof(struct zone_data));
+    memset(zone_table + top_of_zone_table, 0, sizeof(struct zone_data) * ZONE_TABLE_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
@@ -1015,7 +1020,7 @@ int allocate_room(int vnum) {
   /* Create a new table if this is the first entry. */
   if (top_of_world == 0) {
     /* Initial table size, based on profiling in August of 2020. */
-    allocated = 8400;
+    allocated = ROOM_DATA_INIT_SIZE;
 
     CREATE(world, struct room_data, allocated);
 
@@ -1028,9 +1033,10 @@ int allocate_room(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_world % allocated == 0) {
-    allocated += 100;
+    allocated += ROOM_DATA_INIT_SIZE;
 
     RECREATE(world, struct room_data, allocated * sizeof(struct room_data));
+    memset(world + top_of_world, 0, sizeof(struct room_data) * ROOM_DATA_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
@@ -1126,7 +1132,7 @@ int allocate_mob(int vnum) {
   /* Create a new table if this is the first entry. */
   if (top_of_mobt == 0) {
     /* Initial table size, based on profiling in August of 2020. */
-    allocated = 2200;
+    allocated = MOB_PROTO_INIT_SIZE;
 
     CREATE(mob_proto_table, struct mob_proto, allocated);
 
@@ -1139,9 +1145,10 @@ int allocate_mob(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_mobt % allocated == 0) {
-    allocated += 100;
+    allocated += MOB_PROTO_INIT_SIZE;
 
     RECREATE(mob_proto_table, struct mob_proto, allocated * sizeof(struct mob_proto));
+    memset(mob_proto_table + top_of_mobt, 0, sizeof(struct mob_proto) * MOB_PROTO_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
@@ -1209,7 +1216,7 @@ int allocate_obj(int vnum) {
   /* Create a new table if this is the first entry. */
   if (top_of_objt == 0) {
     /* Initial table size, based on profiling in August of 2020. */
-    allocated = 3600;
+    allocated = OBJ_PROTO_INIT_SIZE;
 
     CREATE(obj_proto_table, struct obj_proto, allocated);
 
@@ -1222,9 +1229,10 @@ int allocate_obj(int vnum) {
 
   /* Increase table size if needed. */
   if (top_of_objt % allocated == 0) {
-    allocated += 100;
+    allocated += OBJ_PROTO_INIT_SIZE;
 
     RECREATE(obj_proto_table, struct obj_proto, allocated * sizeof(struct obj_proto));
+    memset(obj_proto_table + top_of_objt, 0, sizeof(struct obj_proto) * OBJ_PROTO_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
@@ -1294,7 +1302,7 @@ int allocate_shop(int vnum) {
   /* Create a new table if this is the first entry. */
   if (top_of_shop_table == 0) {
     /* Initial table size, based on profiling in August of 2020. */
-    allocated = 100;
+    allocated = SHOP_DATA_INIT_SIZE;
 
     CREATE(shop_index, struct shop_data, allocated);
 
@@ -1310,6 +1318,7 @@ int allocate_shop(int vnum) {
     allocated += 5;
 
     RECREATE(shop_index, struct shop_data, allocated * sizeof(struct shop_data));
+    memset(shop_index + top_of_shop_table, 0, sizeof(struct shop_data) * SHOP_DATA_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
@@ -1371,7 +1380,7 @@ int allocate_fight_message(int attack_type) {
   /* Create a new table if this is the first entry. */
   if (top_of_fight_messages_list == 0) {
     /* Initial table size, based on profiling in July of 2020. */
-    allocated = 60;
+    allocated = FIGHT_MESSAGE_INIT_SIZE;
 
     CREATE(fight_messages_list, struct message_list, allocated);
 
@@ -1384,9 +1393,10 @@ int allocate_fight_message(int attack_type) {
 
   /* Increase table size if needed. */
   if (top_of_fight_messages_list % allocated == 0) {
-    allocated += 5;
+    allocated += FIGHT_MESSAGE_INIT_SIZE;
 
     RECREATE(fight_messages_list, struct message_list, allocated * sizeof(struct message_list));
+    memset(fight_messages_list + top_of_fight_messages_list, 0, sizeof(struct message_list) * FIGHT_MESSAGE_INIT_SIZE);
   }
 
 #ifdef PROFILE_DB
