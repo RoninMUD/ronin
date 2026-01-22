@@ -953,7 +953,6 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							vict = get_random_victim_fighting(uber);
 							uber_um_stun(uber, vict);
 						}
-						break;
 
 					case 7:
 						
