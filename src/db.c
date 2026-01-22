@@ -1433,7 +1433,7 @@ void load_messages(void) {
     produce_core();
   }
 
-  char marker[1];
+  char marker[2];
 
   while ((fscanf(fl, "%1s\n", marker) > 0) && (*marker == 'M')) {
     int attack_type;
