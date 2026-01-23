@@ -618,7 +618,7 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 do_look(vict, "", CMD_LOOK);
             }
         }
-        if (*buf && is_abbrev(buf, "eternal"))
+        else if (*buf && is_abbrev(buf, "eternal"))
         {
             act("$n says 'You seek the gift of endurance, yet eternity is a burden few can bear. So be it—let the veil of undeath not claim you so easily. May your flesh resist decay, and your soul linger beyond its time.", 0, mob, 0, 0, TO_ROOM);
 
@@ -639,7 +639,7 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             keyword_said = TRUE;
         }
-        if (*buf && is_abbrev(buf, "forsaken"))
+        else if (*buf && is_abbrev(buf, "forsaken"))
         {
             act("$n says 'Ah… you have spoken the word of the lost. This place is not for you. The forsaken do not remain—they are cast into the void, beyond time and memory. So shall you be.", 0, mob, 0, 0, TO_ROOM);
 
@@ -648,7 +648,7 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
             keyword_said = TRUE;
         }
         // Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
-        if (*buf && is_abbrev(buf, "aurum"))
+        else if (*buf && is_abbrev(buf, "aurum"))
         {
             act("$n says 'Ah, you dare speak of the King's lost treasure? Beware, for the golden realm is both a blessing and a curse. Only the worthy may claim its riches.", 0, mob, 0, 0, TO_ROOM);
 
@@ -658,7 +658,7 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
         }
 
         // Hidden keyword obtained from Nerath using Oath Reliquary //10% to get this.
-        if (*buf && is_abbrev(buf, "elysium"))
+        else if (*buf && is_abbrev(buf, "elysium"))
         {
             act("$n says 'Elysium... a place of endless trials, where only those who seek experience and power will find what they desire. But beware, it is not a place for the faint of heart.", 0, mob, 0, 0, TO_ROOM);
 
@@ -666,6 +666,9 @@ int nerath_high_priest(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             keyword_said = TRUE;
         }
+		else{
+			return FALSE;
+		}
 
         // Once a single keyword is said, extract the NPC.
         if (keyword_said)
