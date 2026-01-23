@@ -1098,6 +1098,9 @@ void drain_mana_hit_mv(struct char_data *ch, struct char_data *vict, int mana, i
   int damage(struct char_data *ch, struct char_data *victim, int dmg, int attack_type, int damage_type);
 
   int mana_gained, hp_gained, mv_gained;
+  
+  //Adding null check for characters.  Return if either are null.
+  if(!(vict) || !(ch)) return;  
 
   if (mana) {
     mana_gained = MIN(mana, GET_MANA(vict));
