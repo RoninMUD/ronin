@@ -612,8 +612,10 @@ int ub_uber_kingspider(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						send_to_char("You feel your blood be sucked from you.\n", vict);
 						drain = number(400, 600);
 						//void drain_mana_hit_mv(struct char_data *ch, struct char_data *vict, int mana, int hit, int mv, bool add_m, bool add_hp, bool add_mv)
-						drain_mana_hit_mv(uber, vict, drain, 0, 0, FALSE, FALSE, FALSE);
-						GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (drain *5));
+						if(vict){
+							drain_mana_hit_mv(uber, vict, drain, 0, 0, FALSE, FALSE, FALSE);
+							GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (drain *5));
+						}
 						break;
 					default:
 						break;
@@ -967,7 +969,9 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							char_to_room(uber_mystic_clone, real_room(summon_room));
 							
 							vict = get_random_victim(uber_mystic_clone);
-							hit(uber_mystic_clone, vict, TYPE_UNDEFINED);
+							if(vict){
+								hit(uber_mystic_clone, vict, TYPE_UNDEFINED);
+							}
 							
 							//Remove the Uber from the Room.							
 							char_from_room(uber);
