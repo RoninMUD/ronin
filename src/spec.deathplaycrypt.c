@@ -144,6 +144,10 @@ int determine_jar_loot(int chance_adjust)
 
     int initial_number = number(0, 100);
     int adjusted_number = initial_number + chance_adjust;
+	
+	if(adjusted_number > 100){
+		adjusted_number = 100;
+	}
 
     int reward;
     // 60% chance for Bronze Tradebar
