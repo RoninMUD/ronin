@@ -281,6 +281,10 @@ D1
 ~
 ~
 0 -1 30114
+D2
+~
+~
+0 -1 30126
 S
 #30114
 A Planked Path~
@@ -519,6 +523,10 @@ small plateau rising up from the ocean. You can faintly make out
 what look to be stone pillars, standing up next to a large wall.
 ~
 301 0 0
+D0
+~
+~
+0 -1 30113
 D2
 ~
 ~
