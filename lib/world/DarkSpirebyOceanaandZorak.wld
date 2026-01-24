@@ -281,6 +281,10 @@ D1
 ~
 ~
 0 -1 30114
+D2
+~
+~
+0 -1 30126
 S
 #30114
 A Planked Path~
@@ -519,13 +523,17 @@ small plateau rising up from the ocean. You can faintly make out
 what look to be stone pillars, standing up next to a large wall.
 ~
 301 0 0
+D0
+~
+~
+0 -1 30113
 D2
 ~
 ~
 0 -1 30127
 S
 #30127
-A Rocky island Path~
+A Rocky Island Path~
   Many sharp and jagged rocks cover the path as progress is made
 towards the pillars and the wall. The dirt is dark and there are
 small signs of life returning to this island. The edges of the path
@@ -1973,9 +1981,9 @@ S
 #30197
 A Winding Path Between the Rocks~
   Large rocks rise up out of the water forming a wall to both sides
-of the water. The waters speed off at quick speeds to the south,
+of the water. The waters speed off at quick speeds to the west,
 towards the larger unknown bodies of water. The chaotic waters, the 
-dark skies and the spires fade away as the path continues south, only
+dark skies and the spires fade away as the path continues west, only
 to have other spires rise up over the horizon.
 ~
 301 0 7

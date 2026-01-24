@@ -1002,6 +1002,8 @@ const int aq_mob_master_list[][2] = {
   { 28716, 4 }, /* agamemnon king hero immortal */
   { 28717, 4 }, /* jason hero immortal */
   { 28718, 4 }, /* pandora immortal */
+  { 30125, 4 }, /* stefan sane alchemist */
+  { 30126, 4 }, /* void elemental */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
   { 5105, 5 }, /* drow apprentice */
@@ -1083,11 +1085,8 @@ const int aq_mob_master_list[][2] = {
   { 26707, 6 }, /* observer tower mage old man */  
   { 28700, 6 }, /* icarus immortal */
   //{ 28704, 6 }, /* Charon */
-  { 30114, 7 }, /* Theurgi */
-  { 30123, 7 }, /* xalgath demon underling */
-  { 30125, 7 }, /* stefan sane alchemist */
-  { 30126, 7 }, /* void elemental */
-  
+  { 30114, 6 }, /* Theurgi */
+  { 30123, 6 }, /* xalgath demon underling */
   
 };
 
