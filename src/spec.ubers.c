@@ -1264,7 +1264,6 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			
 			vict = get_random_victim(uber);
 			if(vict){
-			
 				hit(uber_mystic, vict, TYPE_UNDEFINED);
 			}
 			
