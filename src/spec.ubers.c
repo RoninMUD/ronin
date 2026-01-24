@@ -551,7 +551,8 @@ int ub_uber_kingspider(CHAR *uber, CHAR *ch, int cmd, char *arg)
 
 	//Define any other variables
 	OBJ *tmp;
-	int drain = 0;
+	int hpdrain = 0;
+	int manadrain = 0;
 
 	switch (cmd)
 	{
@@ -610,11 +611,12 @@ int ub_uber_kingspider(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						act("$n pierces $N with long dripping fangs and sucks out some blood.", FALSE, uber, 0, vict, TO_NOTVICT);
 						act("You pierce $N with long dripping fangs and suck out some blood.", FALSE, uber, 0, vict, TO_CHAR);
 						send_to_char("You feel your blood be sucked from you.\n", vict);
-						drain = number(400, 600);
+						hpdrain = number(400, 600);
+						manadrain = number(50, 200);
 						//void drain_mana_hit_mv(struct char_data *ch, struct char_data *vict, int mana, int hit, int mv, bool add_m, bool add_hp, bool add_mv)
 						if(vict){
-							drain_mana_hit_mv(uber, vict, drain, 0, 0, FALSE, FALSE, FALSE);
-							GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (drain *5));
+							drain_mana_hit_mv(uber, vict, manadrain, hpdrain, 0, FALSE, FALSE, FALSE);
+							GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (hpdrain *5));
 						}
 						break;
 					default:
@@ -726,7 +728,7 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						{
 							act("$n calmly touches $N with his palm.  You don't need this, do you?", 0, uber, 0, vict, TO_NOTVICT);
 							act("$n calmly touches you saying you don't need this, do you? ", 0, uber, 0, vict, TO_VICT);
-							GET_HIT(vict) = GET_HIT(vict) *0.9;	//Remove 20% of Current HP
+							GET_HIT(vict) = GET_HIT(vict) *0.8;	//Remove 20% of Current HP
 						}
 
 						break;
@@ -737,7 +739,7 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
 							
 							if (enchanted_by(vict, GREAT_MYSTIC_ENCH_NAME)){							
-								damage(uber, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+								damage(uber, vict, 1600, TYPE_UNDEFINED, DAM_PHYSICAL);
 								act("$N is hit again in their arms.", 0, uber, 0, vict, TO_NOTVICT);
 								act("You are hit again on your pressure points.", 0, uber, 0, vict, TO_VICT);
 							}else if (chance(40)){
@@ -748,7 +750,7 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							}else{
 								act("$n strikes $N in the arms with his fingers.", 0, uber, 0, vict, TO_NOTVICT);
 								act("$n strikes you in the arm, hitting your pressure points. ", 0, uber, 0, vict, TO_VICT);
-								damage(uber, vict, 400, TYPE_UNDEFINED, DAM_PHYSICAL);
+								damage(uber, vict, 1000, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
 							
 						}
@@ -798,7 +800,7 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 					case 6:
 						act("$n punches himself in the leg.", FALSE, uber, 0, 0, TO_ROOM);
 						do_say(uber, "Ahhh, feels so good.", CMD_SAY);
-						GET_HIT(uber) = GET_HIT(uber) + 4000;
+						GET_HIT(uber) = GET_HIT(uber) + 5000;
 						break;
 					default:
 						break;
@@ -824,9 +826,14 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 
 void uber_um_stun(CHAR *ch, CHAR *vict)
 {
+	//Final check for values.  Abort if they dont exist. 
+	 if(!(vict) || !(ch)) return; 
+	
 	act("$n stuns you with a mighty blow on the head.", FALSE, ch, 0, vict, TO_VICT);
 	act("$n stuns $N with a mighty blow on $S head.", FALSE, ch, 0, vict, TO_NOTVICT);
 	act("You hit $N with a stunning blow. $E will be out for a while.", FALSE, ch, 0, vict, TO_CHAR);
+
+
 
 	GET_POS(vict) = POSITION_STUNNED;
 
@@ -939,12 +946,13 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 
 						do_say(uber, "You do show some promise.", CMD_SAY);
 
-						if (!(vict = get_random_victim(uber)))
-						{
-							return FALSE;
+						vict = get_random_victim(uber);
+						
+						if(vict){
+							uber_um_stun(uber, vict);
 						}
-
-						uber_um_stun(uber, vict);
+						
+						
 						break;
 						//Vanish at 80% HP
 					case 8:
@@ -953,7 +961,10 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							uber_um_vanish(uber);
 						}else{
 							vict = get_random_victim_fighting(uber);
-							uber_um_stun(uber, vict);
+							
+							if(vict){
+								uber_um_stun(uber, vict);
+							}
 						}
 
 					case 7:
@@ -1089,7 +1100,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 								//Check for more than 1 person in the room.
 								if (count_mortals_room(uber, TRUE) > 1)
 								{
-								 						//get 2nd victim that is still fighting
+								 	//get 2nd victim that is still fighting
 									vict2 = get_random_victim_fighting(uber);
 									if (!(vict) || IS_NPC(vict2) || !(IS_MORTAL(vict2))) return FALSE;
 									uber_um_stun(uber, vict2);
@@ -1164,10 +1175,10 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							if (GET_OPPONENT(vict) == uber)
 							{
 								act("Mystic energy rebounds from $n back into you!", FALSE, uber, 0, vict, TO_VICT);
-								damage(uber, vict, 900, TYPE_UNDEFINED, DAM_PHYSICAL);
+								damage(uber, vict, 1400, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
 							else{
-								damage(uber, vict, 200, TYPE_UNDEFINED, DAM_PHYSICAL);
+								damage(uber, vict, 800, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
 						}
 						break;
@@ -1246,10 +1257,16 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			
 			//On Death, move the Uber back to the Room.
 			uber_mystic = get_ch_world(UBER_ULT_MYSTIC);
-			char_from_room(uber_mystic);
-			char_to_room(uber_mystic, real_room(UBER_MYSTIC_ROOM));
+			if(uber_mystic){
+				char_from_room(uber_mystic);
+				char_to_room(uber_mystic, real_room(UBER_MYSTIC_ROOM));
+			}
+			
 			vict = get_random_victim(uber);
-			hit(uber_mystic, vict, TYPE_UNDEFINED);
+			if(vict){
+			
+				hit(uber_mystic, vict, TYPE_UNDEFINED);
+			}
 			
 			break;
 	}
