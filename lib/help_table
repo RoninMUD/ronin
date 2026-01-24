@@ -10027,7 +10027,7 @@ Item Name : Wear Location
   Details
 
 Winner's Necklace: neck
-  15 AC-apply, +5 HITROLL, +50 HP
+  15 AC-apply, +5 HITROLL, +45 HP_REGEN
 
 Schynbalds of the Kobold Lord: legs
   20 AC-apply, +4 DAMROLL, +1 HITROLL,INFRAVISION
@@ -10039,13 +10039,13 @@ a ghost glaive: hold (type THROW)
   +6 DAMROLL, +6 HITROLL, +15 SKILL_THROW, 6d66
 
 a Giant Armadillo Hauberk: body
-  23 AC-apply, +2 DAMROLL, +50 HP, +50 MANA,SENSE-LIFE
+  16 AC-apply, +2 DAMROLL, +45 HP_REGEN, +6 MANA_REGEN,SENSE-LIFE
 
 a hedgehog-hide skullcap: helm
   15 AC-apply, +3 DAMROLL, +3 HITROLL, DETECT-ALIGN
 
 a plated belt of platypus bills: waist
-  25 AC-apply, +3 DAMROLL, -100 HP, FLY
+  12 AC-apply, +3 DAMROLL, FLY
 
 a crucified nomad: shield
   25 AC-apply, +2 DAMROLL, +100 HP, +50 HP_REGEN
