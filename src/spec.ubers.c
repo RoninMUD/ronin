@@ -1075,12 +1075,12 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-							if(chance(40)){
+							if(chance(30)){
 								damage(uber, vict, number(600,1200), TYPE_UNDEFINED, DAM_PHYSICAL);
 							}else{
 								damage(uber, vict, number(400,800), TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
-							WAIT_STATE(vict, PULSE_VIOLENCE *3);
+							WAIT_STATE(vict, PULSE_VIOLENCE * number(1,3));
 						}
 
 						break;
