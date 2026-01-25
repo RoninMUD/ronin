@@ -859,7 +859,9 @@ void uber_um_vanish(CHAR *ch)
 
 	for (t = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); t; t = CHAR_NEXT_IN_ROOM(t))
 	{
-		if (GET_OPPONENT(t) && GET_OPPONENT(t) == ch)
+		
+		
+		if (t && GET_OPPONENT(t) && GET_OPPONENT(t) == ch)
 		{
 			stop_fighting(t);
 			send_to_char("You can't fight someone that vanished into thin air.\n", t);
@@ -1050,13 +1052,15 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 					case 4:
 						do_say(uber, "Bathe in mystical flames.", CMD_SAY);
 						vict = get_random_victim_fighting(uber);
-						act("$n makes a complex hand gesture and engulfs $N in flames.", 0, uber, 0, vict, TO_NOTVICT);
-						act("$n makes a complex hand gesture and engulfs you in flames.", 0, uber, 0, vict, TO_VICT);
-						sprintf(buf, "%s is engulfed by %s!", GET_NAME(vict), "mystical flames.");
-						act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
-						sprintf(buf, "You are engulfed by mystical flames.");
-						act(buf, FALSE, uber, NULL, vict, TO_VICT);
-						GET_HIT(vict) = GET_HIT(vict) / 3;
+						if(vict){
+							act("$n makes a complex hand gesture and engulfs $N in flames.", 0, uber, 0, vict, TO_NOTVICT);
+							act("$n makes a complex hand gesture and engulfs you in flames.", 0, uber, 0, vict, TO_VICT);
+							snprintf(buf,sizeof(buf), "%s is engulfed by %s!", GET_NAME(vict), "mystical flames");
+							act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
+							sprintf(buf, "You are engulfed by mystical flames.");
+							act(buf, FALSE, uber, NULL, vict, TO_VICT);
+							GET_HIT(vict) = GET_HIT(vict) / 2;
+						}
 						break;
 
 						//Vanish Again.
@@ -1071,7 +1075,11 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-							damage(uber, vict, 1600, TYPE_UNDEFINED, DAM_PHYSICAL);
+							if(chance(40)){
+								damage(uber, vict, number(600,1200), TYPE_UNDEFINED, DAM_PHYSICAL);
+							}else{
+								damage(uber, vict, number(400,800), TYPE_UNDEFINED, DAM_PHYSICAL);
+							}
 							WAIT_STATE(vict, PULSE_VIOLENCE *3);
 						}
 
@@ -1194,8 +1202,9 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							if (!vict || IS_NPC(vict) || !IS_MORTAL(vict))
 								continue;
 
-							if (GET_HIT(vict) > GET_MAX_HIT(vict) / 2)
+							if (GET_HIT(vict) > GET_MAX_HIT(vict) / 2){
 								GET_HIT(vict) = GET_MAX_HIT(vict) / 2;
+							}
 						}
 						break;
 

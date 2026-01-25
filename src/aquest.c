@@ -989,7 +989,6 @@ const int aq_mob_master_list[][2] = {
   { 25040, 4 }, /* death lord */
   { 26401, 4 }, /* vizier */
   { 26481, 4 }, /* healer */
-  { 26700, 4 }, /* Guard of the Gates */
   { 27105, 4 }, /* cannibal witchdoctor */
   { 27720, 4 }, /* myrdon thief rogue master */
   { 27721, 4 }, /* shadowraith ninja assassin jal pur */
@@ -1002,8 +1001,6 @@ const int aq_mob_master_list[][2] = {
   { 28716, 4 }, /* agamemnon king hero immortal */
   { 28717, 4 }, /* jason hero immortal */
   { 28718, 4 }, /* pandora immortal */
-  { 30125, 4 }, /* stefan sane alchemist */
-  { 30126, 4 }, /* void elemental */
   { 700, 5 }, /* sakdul large troll gypsy */
   { 4600, 5 }, /* Neuron Beast Strands */
   { 5105, 5 }, /* drow apprentice */
@@ -1051,6 +1048,7 @@ const int aq_mob_master_list[][2] = {
   { 25013, 5 }, /* kalas */
   { 26402, 5 }, /* emir malik */
   { 26482, 5 }, /* magus */
+  { 26700, 5 }, /* Guard of the Gates */
   { 27712, 5 }, /* bebilith stalker purple spider insect */ 
   { 27722, 5 }, /* shomed nomad hero tarion desert */
   { 28705, 5 }, /* Cerberus */
@@ -1087,6 +1085,8 @@ const int aq_mob_master_list[][2] = {
   //{ 28704, 6 }, /* Charon */
   { 30114, 6 }, /* Theurgi */
   { 30123, 6 }, /* xalgath demon underling */
+  { 30125, 6 }, /* stefan sane alchemist */
+  { 30126, 6 }, /* void elemental */
   
 };
 
