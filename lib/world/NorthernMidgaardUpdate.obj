@@ -1721,7 +1721,7 @@ The shell of a carved pumpkin : body
  no specs
 
 giant's-hide greaves: legs
- 25 AC-apply, +5 DAMROLL, +50 HP, +25 HP_REGEN, SPHERE
+ 25 AC-apply, +5 DAMROLL, +25 HP_REGEN (or +5 Mana Regen), SPHERE
  no specs
 ~
 E
