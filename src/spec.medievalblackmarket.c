@@ -1931,7 +1931,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // If all are dead, call the function to spawn the next 4.
             if (allDead)
             {
-                sprintf(buf, "The Goblin Officers have appeared, you must kill them.");
+                snprintf(buf, sizeof(buf), "The Goblin Officers have appeared, you must kill them.");
                 do_quest(mob, buf, CMD_QUEST);
                 spawn_loot_goblin_officers();
                 SET_BIT(GET_BANK(mob), STATE1);
@@ -1948,31 +1948,31 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
                     if (loot_goblins_left == 1)
                     {
-                        sprintf(buf, "Only one of these traitor's remain. Hunt them down!");
+                        snprintf(buf, sizeof(buf),"Only one of these traitor's remain. Hunt them down!");
                     }
                     else if (loot_goblins_left == 15)
                     {
-                        sprintf(buf, "Half of the traitors have been killed. Continue hunting them down.");
+                        snprintf(buf, sizeof(buf),"Half of the traitors have been killed. Continue hunting them down.");
                     }
                     else if (loot_goblins_left == 30)
                     {
-                        sprintf(buf, "Those traitor goblins are out there with the loot. Kill them!");
+                        snprintf(buf, sizeof(buf),"Those traitor goblins are out there with the loot. Kill them!");
                     }
                     else if (loot_goblins_left > 0 && loot_goblins_left < 8)
                     {
-                        sprintf(buf, "Only a quarter of their ranks remain. Continue the hunt!");
+                        snprintf(buf, sizeof(buf),"Only a quarter of their ranks remain. Continue the hunt!");
                     }
                     else if (loot_goblins_left > 22 && loot_goblins_left < 30)
                     {
-                        sprintf(buf, "A few of the Goblins have been slain.  Keep up the good work");
+                        snprintf(buf, sizeof(buf),"A few of the Goblins have been slain.  Keep up the good work");
                     }
                     else if (loot_goblins_left > 8 && loot_goblins_left < 15)
                     {
-                        sprintf(buf, "Less than half of them remain, kill them all!");
+                        snprintf(buf, sizeof(buf),"Less than half of them remain, kill them all!");
                     }
                     else
                     {
-                        sprintf(buf, "Find the loot goblins and kill them!");
+                        snprintf(buf, sizeof(buf),"Find the loot goblins and kill them!");
                     }
 
                     do_quest(mob, buf, CMD_QUEST);
@@ -1988,7 +1988,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // If all are dead, call the function to spawn the next 4.
             if (loot_goblins_left == 0)
             {
-                sprintf(buf, "The Goblin Leader have appeared, you need to destroy him.");
+                snprintf(buf, sizeof(buf),"The Goblin Leader have appeared, you need to destroy him.");
                 do_quest(mob, buf, CMD_QUEST);
                 spawn_loot_goblin_leader();
                 SET_BIT(GET_BANK(mob), STATE2);
@@ -2003,19 +2003,19 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
                     if (loot_goblins_left == 1)
                     {
-                        sprintf(buf, "Find the final one and destroy them.");
+                        snprintf(buf, sizeof(buf),"Find the final one and destroy them.");
                     }
                     else if (loot_goblins_left == 2)
                     {
-                        sprintf(buf, "Two Down, Two to go!");
+                        snprintf(buf, sizeof(buf),"Two Down, Two to go!");
                     }
                     else if (loot_goblins_left == 3)
                     {
-                        sprintf(buf, "One of those officers has met their fate.");
+                        snprintf(buf, sizeof(buf),"One of those officers has met their fate.");
                     }
                     else if (loot_goblins_left == 4)
                     {
-                        sprintf(buf, "Find the officers and kill them!");
+                        snprintf(buf, sizeof(buf),"Find the officers and kill them!");
                     }
 
                     do_quest(mob, buf, CMD_QUEST);
@@ -2034,10 +2034,10 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // If all are dead, call the function to spawn the next 4.
             if (loot_goblins_left == 0 && !IS_SET(GET_BANK(mob), STATE3))
             {
-                sprintf(buf, "The Goblin Leader has been killed. Thank you for ridding the world of this scourge.");
+                snprintf(buf, sizeof(buf),"The Goblin Leader has been killed. Thank you for ridding the world of this scourge.");
                 do_quest(mob, buf, CMD_QUEST);
                 SET_BIT(GET_BANK(mob), STATE3);
-				sprintf(buf, "Thank you heros. I can rest in peace now!");
+				snprintf(buf, sizeof(buf),"Thank you heros. I can rest in peace now!");
 				do_quest(mob, buf, CMD_QUEST);
 				extract_char(mob);
 				
@@ -2052,11 +2052,11 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
                     if (loot_goblins_left == 1)
                     {
-                        sprintf(buf, "Find the final one and destroy them. They don't deserve treasure. They deserve DEATH!");
+                        snprintf(buf, sizeof(buf),"Find the final one and destroy them. They don't deserve treasure. They deserve DEATH!");
                     }
                     else
                     {
-                        sprintf(buf, "Those Pesky IMMORTS have spawned additional Bosses to kill!");
+                        snprintf(buf, sizeof(buf),"Those Pesky IMMORTS have spawned additional Bosses to kill!");
                     }
 
                     do_quest(mob, buf, CMD_QUEST);
@@ -2128,7 +2128,7 @@ int blackmarket_grintak_hunter(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 spawn_loot_goblns(max_loot_goblins);
                 send_to_char("Starting Loot Goblin Quest.\n\r", ch);
                 SET_BIT(GET_BANK(mob), STATE4);
-                sprintf(buf, "Loot Goblins have stolen my treasure. Go get it back!");
+                snprintf(buf, sizeof(buf),"Loot Goblins have stolen my treasure. Go get it back!");
                 do_quest(mob, buf, CMD_QUEST);
                 return TRUE;
             }
@@ -2375,7 +2375,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					if (vict)
 					{
 						act("You are hit by the slimes body as it slams into you.", 0, mob, 0, vict, TO_VICT);
-						act("$N jumps into the air and slams into $n", 0, mob, 0, vict, TO_NOTVICT);
+						act("$n jumps into the air and slams into $N", 0, mob, 0, vict, TO_NOTVICT);
 						damage(mob, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
 						
 						if(chance(50)){
@@ -2422,7 +2422,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		break;
         // can add an else branch here if you want them to act but not in combat.
 		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s dissolves into nothing.\n\r", GET_SHORT(mob));
+			snprintf(buf, sizeof(buf),"%s dissolves into nothing.\n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
 			//If they are cursed, remove the curse
@@ -2453,7 +2453,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			//Each mob Can drop Items.   
 			if (chance(48) && V_MOB(mob) == metal_slime_number)
 			{
-				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				snprintf(buf, sizeof(buf),"As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
 				send_to_room(buf, CHAR_REAL_ROOM(mob));
 				obj2 = read_object(POLISHED_SLIME_CORE, VIRTUAL);
 				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
@@ -2464,7 +2464,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			}
 			else if (chance(48) && V_MOB(mob) == liquid_metal_slime_number)
 			{
-				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				snprintf(buf, sizeof(buf),"As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
 				send_to_room(buf, CHAR_REAL_ROOM(mob));
 				obj2 = read_object(QUICKMELT_GLOBULE, VIRTUAL);
 				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
@@ -2473,7 +2473,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			}
 			else if (chance(48) && V_MOB(mob) == metal_king_slime_number)
 			{
-				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				snprintf(buf, sizeof(buf),"As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
 				send_to_room(buf, CHAR_REAL_ROOM(mob));
 				obj2 = read_object(ROAYL_ALLOY_CHUNK, VIRTUAL);
 				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
@@ -2483,7 +2483,7 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 			}
 			else if (chance(48) && V_MOB(mob) == metal_dragon_number)
 			{
-				sprintf(buf, "As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
+				snprintf(buf, sizeof(buf),"As %s dissolves, some objects are left behind.\n\r", GET_SHORT(mob));
 				send_to_room(buf, CHAR_REAL_ROOM(mob));
 				obj2 = read_object(DRACONIC_METAL_SCALE, VIRTUAL);
 				obj_to_room(obj2, CHAR_REAL_ROOM(mob));
@@ -2642,7 +2642,7 @@ int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // If all are dead, call the function to spawn the next 4.
             if (allDead)
             {
-                sprintf(buf, "Thank you for removing the slime menance from the world");
+                snprintf(buf, sizeof(buf),"Thank you for removing the slime menance from the world");
                 do_quest(mob, buf, CMD_QUEST);
                 SET_BIT(GET_BANK(mob), STATE1);
             }
@@ -2675,27 +2675,27 @@ int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
                     if (metal_slimes_left == 1)
                     {
-                        sprintf(buf, "Only one of the foul slimes are left!");
+                        snprintf(buf,sizeof(buf), "Only one of the foul slimes are left!");
                     }
                     else if (metal_slimes_left == 8)
                     {
-                        sprintf(buf, "Half of the slimes have been killed. Remove the slime menace.");
+                        snprintf(buf,sizeof(buf), "Half of the slimes have been killed. Remove the slime menace.");
                     }
                     else if (metal_slimes_left == 16)
                     {
-                        sprintf(buf, "Slimy Creatures have invaded. Please help me hunt them down.");
+                        snprintf(buf,sizeof(buf), "Slimy Creatures have invaded. Please help me hunt them down.");
                     }
                     else if (metal_slimes_left > 0 && metal_slimes_left < 8)
                     {
-                        sprintf(buf, "Only twenty five percent remain champions. Continue the Hunt");
+                        snprintf(buf,sizeof(buf), "Only twenty five percent remain champions. Continue the Hunt");
                     }
                     else if (metal_slimes_left > 8 && metal_slimes_left < 16)
                     {
-                        sprintf(buf, "You are starting to thin their numbers.  Continue to kill them");
+                        snprintf(buf,sizeof(buf), "You are starting to thin their numbers.  Continue to kill them");
                     }
                     else
                     {
-                        sprintf(buf, "Help me hunt does the menance of the slimes");
+                        snprintf(buf,sizeof(buf), "Help me hunt does the menance of the slimes");
                     }
 
                     do_quest(mob, buf, CMD_QUEST);
@@ -2843,7 +2843,7 @@ int blackmarket_sylra_huntress(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 spawn_metal_slimes(max_metal_slimes);
                 send_to_char("Starting XP Slime Quest.\n\r", ch);
                 SET_BIT(GET_BANK(mob), STATE4);
-                sprintf(buf, "Slimes have invaded the world.  Purge them!");
+                snprintf(buf,sizeof(buf),"Slimes have invaded the world.  Purge them!");
                 do_quest(mob, buf, CMD_QUEST);
                 return TRUE;
             }
@@ -3015,7 +3015,7 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         break;
 		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			snprintf(buf,sizeof(buf),"%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			mob_aq_reward(reward, mob);
 			
@@ -3183,7 +3183,7 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         break;
 		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			snprintf(buf, sizeof(buf),"%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			mob_aq_reward(reward, mob);
 			
@@ -3348,7 +3348,7 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         break;
 		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			snprintf(buf, sizeof(buf),"%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			mob_aq_reward(reward, mob);
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");
@@ -3516,7 +3516,7 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		break;
 		
 		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
+			snprintf(buf, sizeof(buf),"%s has been slain, a slime has been vanquished. \n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
 			mob_aq_reward(reward, mob);
 			quest_mob_death_loot(mob,"Shiny Objects appear from the dissolved metal.");

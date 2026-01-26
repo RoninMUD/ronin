@@ -759,7 +759,7 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
             break;
         case CLASS_PALADIN:
         case CLASS_THIEF:
-        case CLASS_BARD:
+        case CLASS_WARRIOR:
             obj->short_description = str_dup("Gravepiercer, the Soulfang");
             obj->obj_flags.value[3] = 13;
             CREATE(extradesc, struct extra_descr_data, 1);
@@ -769,7 +769,6 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
             send_to_char("The relic transforms into a metal blade!.\n\r", ch);
             break;
-
         case CLASS_NOMAD:
         case CLASS_ANTI_PALADIN:
         case CLASS_COMMANDO:
@@ -781,8 +780,8 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
             obj->ex_description = extradesc;
             send_to_char("The relic transforms into a massive axe!.\n\r", ch);
             break;
-        case CLASS_WARRIOR:
-        case CLASS_NINJA:
+        case CLASS_BARD:
+		case CLASS_NINJA:
             obj->short_description = str_dup("Gravepiercer, the Wraithclasp");
             obj->obj_flags.value[3] = 6;
             CREATE(extradesc, struct extra_descr_data, 1);
@@ -811,10 +810,10 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
         {
             send_to_char("The relic glows with power and energy!.\n\r", owner);
 			obj->spec_value = 30;
-            obj->obj_flags.value[1] = 7;   /*damnodice*/
-            obj->obj_flags.value[2] = 7;   /*damsizedice*/
-            obj->affected[0].modifier = 7; /* Location 0 should be set as DAMROLL */
-            obj->affected[1].modifier = 7; /* Location 0 should be set as HITROLL */
+            obj->obj_flags.value[1] = 8;   /*damnodice*/
+            obj->obj_flags.value[2] = 8;   /*damsizedice*/
+            obj->affected[0].modifier = 8; /* Location 0 should be set as DAMROLL */
+            obj->affected[1].modifier = 8; /* Location 0 should be set as HITROLL */
         }
         else if(zone != world[real_room(UNDEAD_CITY_ZONE_CHECK)].zone && obj->spec_value != 60)
         {
@@ -873,6 +872,12 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
         for (tmp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); tmp_victim; tmp_victim = temp)
         {
             temp = CHAR_NEXT_IN_ROOM(tmp_victim);
+			
+			//Null Check
+			if(!(temp)){ 
+				continue;
+			}
+			
             if (ch != tmp_victim)
             {
 

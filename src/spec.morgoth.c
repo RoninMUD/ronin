@@ -191,12 +191,10 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
         }  
         
         //Insanely Small Chance to Remove Decay Flag. 
-        /*
-        if(chance(1)){
-            if(chance(1)){
-                REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
-            }
-        }*/
+        
+        if(chance(5)){
+            REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
+        }
         
         obj_to_obj(new_ring, altar);
         return TRUE;
