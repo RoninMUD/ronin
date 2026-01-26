@@ -9986,7 +9986,7 @@ The shell of a carved pumpkin : body
  30 AC-apply, +33 HP_REGEN, +5 DAMROLL, SANC
 
 giant's-hide greaves: legs
- 25 AC-apply, +5 DAMROLL, +50 HP, +25 HP_REGEN, SPHERE
+ 25 AC-apply, +5 DAMROLL, +25 HP_REGEN (or +5 Mana Regen), SPHERE
 
 See Also: "QUEST TOKEN" RP "REWARD POINTS" "RP MIDDLE" "RP BOTTOM" "RP SPECIAL"
 
