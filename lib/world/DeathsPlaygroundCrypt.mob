@@ -1,5 +1,5 @@
 #21600
-sentinel boneguard skeleton undead~
+sentinel boneguard skeleton undead knight~
 Boneguard Sentinel~
 A rusted yet imposing skeletal knight stand here.
 ~
@@ -46,7 +46,7 @@ upon a target, the hunt is already over.
 K
 0 0 0 0 0 0 0
 #21602
-legionnaire cursed skeleton undead~
+legionnaire cursed skeleton undead warrior~
 Cursed Legionnaire~
 The remnants of a disciplined warrior, clad in cracked and rusting plate.
 ~
@@ -98,7 +98,7 @@ its grasp.
 K
 0 0 0 0 0 0 0
 #21604
-executioner revenant skeleton undead~
+executioner revenant skeleton undead hooded~
 Revenant Executioner~
 A towering, hooded skeletal figure.
 ~
@@ -161,7 +161,7 @@ through the body like wildfire.
 K
 0 0 0 0 0 0 0
 #21607
-wraith bonewraith undead~
+wraith bonewraith undead entity~
 Bonewraith~
 A ghostly entity bound to its own skeletal remains
 ~
@@ -223,7 +223,7 @@ seep from its gaping mouth.
 K
 0 0 0 0 0 0 0
 #21610
-horror graveborn undead~
+horror graveborn undead fusion~
 Graveborn Horror~
 A monstrous fusion of skeletal remains and twisted sinew
 ~
@@ -246,7 +246,7 @@ into its grotesque form, growing ever larger with each new victim.
 K
 0 0 0 0 0 0 0
 #21611
-acolyte lichbound undead~
+acolyte lichbound undead devotee~
 Lichbound Acolyte~
 A skeletal devotee clad in tattered ceremonial robes.
 ~
