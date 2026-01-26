@@ -2438,12 +2438,12 @@ int blackmarket_metal_slime(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
 
 					if (slime_enchant) {
-					  enchantment_remove(ch, slime_enchant, FALSE);
+					  enchantment_remove(vict, slime_enchant, FALSE);
 					}
 					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
 					
 					if (slime_fight_enchant) {
-					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					  enchantment_remove(vict, slime_fight_enchant, FALSE);
 					}	
 					
 				}
@@ -3033,12 +3033,12 @@ int blackmarket_slime_aurelion(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
 
 					if (slime_enchant) {
-					  enchantment_remove(ch, slime_enchant, FALSE);
+					  enchantment_remove(vict, slime_enchant, FALSE);
 					}
 					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
 					
 					if (slime_fight_enchant) {
-					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					  enchantment_remove(vict, slime_fight_enchant, FALSE);
 					}	
 					
 				}
@@ -3201,12 +3201,12 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
 
 					if (slime_enchant) {
-					  enchantment_remove(ch, slime_enchant, FALSE);
+					  enchantment_remove(vict, slime_enchant, FALSE);
 					}
 					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
 					
 					if (slime_fight_enchant) {
-					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					  enchantment_remove(vict, slime_fight_enchant, FALSE);
 					}	
 					
 				}
@@ -3365,12 +3365,12 @@ int blackmarket_slime_obsidian(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
 
 					if (slime_enchant) {
-					  enchantment_remove(ch, slime_enchant, FALSE);
+					  enchantment_remove(vict, slime_enchant, FALSE);
 					}
 					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
 					
 					if (slime_fight_enchant) {
-					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					  enchantment_remove(vict, slime_fight_enchant, FALSE);
 					}	
 					
 				}
@@ -3533,12 +3533,12 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
 					ENCH *slime_enchant = get_enchantment_by_name(vict, SLIME_ENCHANT_NAME);
 
 					if (slime_enchant) {
-					  enchantment_remove(ch, slime_enchant, FALSE);
+					  enchantment_remove(vict, slime_enchant, FALSE);
 					}
 					ENCH *slime_fight_enchant = get_enchantment_by_name(vict, SLIME_FIGHT_ENCHANT_NAME);
 					
 					if (slime_fight_enchant) {
-					  enchantment_remove(ch, slime_fight_enchant, FALSE);
+					  enchantment_remove(vict, slime_fight_enchant, FALSE);
 					}	
 					
 				}

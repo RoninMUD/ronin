@@ -718,7 +718,7 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
         }
         break;
     case CMD_PRACTICE:
-        /* with all the SKILL modifiers, this will prevent skill-looping with the beret */
+        /* with all the SKILL modifiers, this will prevent skill-looping with the relic */
         if (ch != obj->equipped_by)
             return bReturn;
         if (!ch)

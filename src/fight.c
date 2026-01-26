@@ -269,12 +269,12 @@ void make_corpse(CHAR *ch)
 
   corpse->contains = ch->carrying;
   if (GET_GOLD(ch)>0) {
-    //Gamemode for Double Gold.  
-	if(DOUBLEGOLD){
-	  money = create_money((GET_GOLD(ch) * 2));
-    }else{
-	  money = create_money(GET_GOLD(ch));
-    }	
+   if(DOUBLEGOLD){
+	 money = create_money((GET_GOLD(ch) * 2));
+   }else{
+	   money = create_money(GET_GOLD(ch));
+   }
+	
     GET_GOLD(ch)=0;
     obj_to_obj(money,corpse);
   }
@@ -834,6 +834,12 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
         remort_exp = rv2_gain_remort_exp(leader_of_killer, experience);
 
         printf_to_char(leader_of_killer, "You gained %d remort experience for the kill.\n\r", remort_exp);
+		
+		if (DOUBLEXP && GET_REMORT_EXP(leader_of_killer) && !IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED))
+		{
+		 remort_exp = rv2_gain_remort_exp(leader_of_killer, experience);
+		 printf_to_char(leader_of_killer, "You gained %d extra special remort experience for the kill.\n\r", remort_exp);
+		}
       }
 
       if (GET_DEATH_EXP(leader_of_killer))
@@ -841,6 +847,13 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
         death_exp = gain_death_exp(leader_of_killer, experience);
 
         printf_to_char(leader_of_killer, "You gained %d death experience for the kill.\n\r", death_exp);
+		
+		if (DOUBLEXP && GET_DEATH_EXP(leader_of_killer))
+		{
+		  death_exp = gain_death_exp(leader_of_killer, experience);
+          printf_to_char(leader_of_killer, "You gained %d extra special death experience for the kill.\n\r", death_exp);
+		}
+		
       }
 
       if (leader_of_killer->questmob == victim)
@@ -921,6 +934,13 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
           remort_exp = rv2_gain_remort_exp(tmp_char, experience);
 
           printf_to_char(tmp_char, "You gained %d remort experience for the kill.\n\r", remort_exp);
+		  
+		  if (DOUBLEXP && GET_REMORT_EXP(tmp_char) && !IS_SET(GET_PFLAG(tmp_char), PLR_REMORT_DISABLED))
+		  {
+			remort_exp = rv2_gain_remort_exp(tmp_char, experience);
+			printf_to_char(tmp_char, "You gained %d extra special remort experience for the kill.\n\r", remort_exp);
+		  }
+		  
         }
 
         if (GET_DEATH_EXP(tmp_char))
@@ -928,6 +948,12 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
           death_exp = gain_death_exp(tmp_char, experience);
 
           printf_to_char(tmp_char, "You gained %d death experience for the kill.\n\r", death_exp);
+		  
+		  if(DOUBLEXP && GET_DEATH_EXP(tmp_char)){
+			death_exp = gain_death_exp(tmp_char, experience);
+
+			printf_to_char(tmp_char, "You gained %d extra special death experience for the kill.\n\r", death_exp);
+		  }
         }
 
         if (tmp_char->questmob == victim)
@@ -1680,6 +1706,19 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       return 0;
     }
   }
+  
+	//Protect Chance  
+	//Nomad Warden Subclass, increases the chance to 100% for protect.
+	int protect_chance;
+	int protect_damage_reduction=1;  //Default to 1 for other classes.
+	//Confirm if the protector is a nomad and WARDEN SC >= 2
+	if (!IS_NPC(victim) && GET_PROTECTOR(victim) && (GET_CLASS(GET_PROTECTOR(victim)) == CLASS_NOMAD) && (check_subclass(GET_PROTECTOR(victim), SC_WARDEN, 2))) {
+		protect_chance = 100;	
+	}
+	else{
+		protect_chance = 90;
+	}
+
 
   /* Warlord SC2 and Ranger SC2: Protect */
   if (!IS_NPC(victim) &&
@@ -1690,7 +1729,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       (GET_PROTECTEE(GET_PROTECTOR(victim)) == victim) &&
       !IS_AFFECTED(GET_PROTECTOR(victim), AFF_FURY) &&
       (number(1, SKILL_MAX_PRAC) <= GET_LEARNED(GET_PROTECTOR(victim), SKILL_PROTECT)) &&
-      chance(90)) {
+      chance(protect_chance)) {
     act("$N takes the damage meant for you!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_CHAR);
     act("You take the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_VICT);
     act("$N takes the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_NOTVICT);
@@ -1701,6 +1740,12 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       ch = GET_PROTECTOR(victim);
     }
     victim = GET_PROTECTOR(victim);
+	
+	//Wardens reduce damage taken from protecting others by 20%
+	if (!IS_NPC(victim) && GET_PROTECTOR(victim) && (GET_CLASS(GET_PROTECTOR(victim)) == CLASS_NOMAD) && (check_subclass(GET_PROTECTOR(victim), SC_WARDEN, 2))) {
+		protect_damage_reduction = 0.8;
+	}
+	
   }
 
   if (!IS_NPC(ch)) {
@@ -1919,6 +1964,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     else if (affected_by_spell(ch, SKILL_FRENZY)) {
       dmg = lround(dmg * 1.5);
     }
+	//Berserk adds a small boost to damage
+	else if (affected_by_spell(ch, SKILL_BERSERK)) {
+		dmg = lround(dmg + (number(30,60)));
+	}
 
     /* Chanter SC2: War Chant - Increases the Chanter's damage. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_CHANTER, 2) && affected_by_spell(ch, SPELL_WAR_CHANT)) {
@@ -2138,10 +2187,29 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Apply damage reduction from affects. */
   dmg = MAX(lround(dmg * (1.0 - damage_reduction)), 0);
 
+
+  //Evasion Damage Redunction
+  //Set the defaults
+  int evasion_physical_multiplier = 0.75;
+  int evasion_magical_multiplier = 0.75;
+  //IF we have a level 5 warden - damage reduction is increased.
+  if(check_subclass(victim, SC_WARDEN, 5)){
+	  evasion_physical_multiplier = 0.6;
+	  evasion_magical_multiplier = 0.6;
+  }
+  //Wardens also reduce magic damage, but only by 25%
+  if (IS_MAGICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_EVASION) && (check_subclass(victim, SC_WARDEN, 5))){
+		dmg = lround(dmg * evasion_magical_multiplier);
+	}
+	
+
   /* Bandit SC5: Evasion (and Nomad Level 50) */
   if (IS_PHYSICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_EVASION) && (check_subclass(victim, SC_BANDIT, 5) || ((GET_CLASS(victim) == CLASS_NOMAD) && (GET_LEVEL(victim) >= 50)))) {
-    dmg = lround(dmg * 0.75);
+    dmg = lround(dmg * evasion_physical_multiplier);
   }
+
+  
+
 
   /* Warlord SC5: Bullwark - Damage reduction based on AC. */
   int victim_ac = calc_ac(victim);
@@ -2162,7 +2230,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(ch) && IS_MORTAL(victim)) {
     dmg = MIN(600, dmg);
   }
-
+	
+  //If a Warden is protecting, reduce the damage by 20%.
+  dmg = dmg*protect_damage_reduction;
+	
   /* Record damage for use later when printing damage text. */
   int dmg_text = dmg;
 
@@ -2434,6 +2505,9 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (GET_POS(victim) == POSITION_DEAD) {
     process_death(ch, victim);
   }
+	
+
+
 
   return dmg;
 }
@@ -2722,8 +2796,8 @@ int calc_ac(CHAR *ch) {
 
     /* Defend: AC Bonus and Max AC Adjustment */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
-      ac -= 20;
-      min_pc_ac = -300;
+      ac -= 50;
+      min_pc_ac = -350;
     }
 
     /* Blur: AC Bonus */
@@ -3834,6 +3908,8 @@ void qhit(CHAR *ch, CHAR *victim, int type) {
 void perform_violence(void) {
   for (CHAR *ch = combat_list, *victim = GET_OPPONENT(ch); ch && victim; ch = combat_next_dude, victim = GET_OPPONENT(ch)) {
     combat_next_dude = ch->next_fighting;
+	
+    if (DISPOSED(victim)) continue;
 
     if (!AWAKE(ch) || !SAME_ROOM(ch, victim)) {
       stop_fighting(ch);
