@@ -3834,6 +3834,8 @@ void qhit(CHAR *ch, CHAR *victim, int type) {
 void perform_violence(void) {
   for (CHAR *ch = combat_list, *victim = GET_OPPONENT(ch); ch && victim; ch = combat_next_dude, victim = GET_OPPONENT(ch)) {
     combat_next_dude = ch->next_fighting;
+    
+    if (DISPOSED(victim)) continue;
 
     if (!AWAKE(ch) || !SAME_ROOM(ch, victim)) {
       stop_fighting(ch);

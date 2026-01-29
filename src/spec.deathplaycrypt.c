@@ -203,7 +203,7 @@ int sacrifical_jar_large(OBJ *obj, CHAR *ch, int cmd, char *arg)
                 extract_obj(obj);
 
                 // Give a chance to open the path to the next part of the zone.
-                if (chance(40))
+                if (chance(50))
                 {
                     if (world[real_room(SMASH_JAR_ROOM_ONE_START)].dir_option[EAST]->to_room_r == -1)
                     {
@@ -714,11 +714,12 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
             obj->obj_flags.value[2] = 6;   /*damsizedice*/
             // OBJ_SPEC(obj)=0;
             obj->ex_description = 0;
+			obj->spec_value = 10; // Reset the spec value to ensure the specs fire again.
             send_to_char("The Relic shifts back to its original form.\n\r", ch);
         }
         break;
     case CMD_PRACTICE:
-        /* with all the SKILL modifiers, this will prevent skill-looping with the beret */
+        /* with all the SKILL modifiers, this will prevent skill-looping with the relic */
         if (ch != obj->equipped_by)
             return bReturn;
         if (!ch)
@@ -734,6 +735,7 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
 		 if (ch != obj->equipped_by){
 			 break;
 		 }
+		 obj->spec_value = 10; // Reset the spec value to ensure the specs fire again.
 	
     case MSG_OBJ_WORN:
 
@@ -759,7 +761,7 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
             break;
         case CLASS_PALADIN:
         case CLASS_THIEF:
-        case CLASS_BARD:
+        case CLASS_WARRIOR:
             obj->short_description = str_dup("Gravepiercer, the Soulfang");
             obj->obj_flags.value[3] = 13;
             CREATE(extradesc, struct extra_descr_data, 1);
@@ -769,7 +771,6 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
             send_to_char("The relic transforms into a metal blade!.\n\r", ch);
             break;
-
         case CLASS_NOMAD:
         case CLASS_ANTI_PALADIN:
         case CLASS_COMMANDO:
@@ -781,8 +782,8 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
             obj->ex_description = extradesc;
             send_to_char("The relic transforms into a massive axe!.\n\r", ch);
             break;
-        case CLASS_WARRIOR:
-        case CLASS_NINJA:
+        case CLASS_BARD:
+		case CLASS_NINJA:
             obj->short_description = str_dup("Gravepiercer, the Wraithclasp");
             obj->obj_flags.value[3] = 6;
             CREATE(extradesc, struct extra_descr_data, 1);
@@ -811,10 +812,10 @@ int gravepiercer_relic(OBJ *obj, CHAR *ch, int cmd, char *arg)
         {
             send_to_char("The relic glows with power and energy!.\n\r", owner);
 			obj->spec_value = 30;
-            obj->obj_flags.value[1] = 7;   /*damnodice*/
-            obj->obj_flags.value[2] = 7;   /*damsizedice*/
-            obj->affected[0].modifier = 7; /* Location 0 should be set as DAMROLL */
-            obj->affected[1].modifier = 7; /* Location 0 should be set as HITROLL */
+            obj->obj_flags.value[1] = 8;   /*damnodice*/
+            obj->obj_flags.value[2] = 8;   /*damsizedice*/
+            obj->affected[0].modifier = 8; /* Location 0 should be set as DAMROLL */
+            obj->affected[1].modifier = 8; /* Location 0 should be set as HITROLL */
         }
         else if(zone != world[real_room(UNDEAD_CITY_ZONE_CHECK)].zone && obj->spec_value != 60)
         {
@@ -837,55 +838,80 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
     CHAR *tmp_victim = NULL;
     CHAR *temp = NULL;
-    CHAR *owner;
+    CHAR *owner, *actor;
     char buf[MAX_INPUT_LENGTH];
     CHAR *found_char;
     OBJ *tmp_relic;
-
-    // Cast Rage on Everyone in the room.
-    if (cmd == MSG_MOBACT)
+	OBJ *obj2;
+	bool found_relic = FALSE;
+    
+	
+	// Cast Rage on Everyone in the room.
+	switch (cmd)
     {
-        /* Don't spec if no ch. */
-        if (ch) return FALSE;
-        if (!obj || !obj->equipped_by)
-            return FALSE;
-        ch = obj->equipped_by;
-        /* Don't spec if ch is not awake. */
-        if (!AWAKE(ch))
-            return FALSE;
-        /* Don't spec if obj is not equipped by the actor. */
-        if (!(owner = obj->equipped_by))
-            return FALSE;
-        /* Don't spec if actor is not the owner. */
-        if (ch != owner)
-            return FALSE;
-        if (!GET_OPPONENT(owner))
-            return FALSE;
-        if (GET_CLASS(owner) != CLASS_BARD)
-        {
-            return FALSE;
-        }
+		case MSG_MOBACT:
+		{
+			if (!obj || !obj->equipped_by)
+				return FALSE;
+			ch = obj->equipped_by;
+			/* Don't spec if ch is not awake. */
+			if (!AWAKE(ch))
+				return FALSE;
+			/* Don't spec if obj is not equipped by the actor. */
+			if (!(owner = obj->equipped_by))
+				return FALSE;
+			/* Don't spec if actor is not the owner. */
+			if (ch != owner)
+				return FALSE;
+			if (!GET_OPPONENT(owner))
+				return FALSE;
+			if (GET_CLASS(owner) != CLASS_BARD)
+			{
+				return FALSE;
+			}
 
-        if (number(0, 550) != 1) return FALSE;
+			if (number(0, 550) != 1) return FALSE;
 
-        act("Your lute's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_CHAR);
-        act("$n plays the lute and it's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_NOTVICT);
-        for (tmp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); tmp_victim; tmp_victim = temp)
-        {
-            temp = CHAR_NEXT_IN_ROOM(tmp_victim);
-            if (ch != tmp_victim)
-            {
+			act("Your lute's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_CHAR);
+			act("$n plays the lute and it's spectral strings shriek with a discordant wail.", 1, ch, 0, owner, TO_NOTVICT);
+			for (tmp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); tmp_victim; tmp_victim = temp)
+			{
+				temp = CHAR_NEXT_IN_ROOM(tmp_victim);
+				
+				//Null Check
+				if(!(temp)){ 
+					continue;
+				}
+				
+				if (ch != tmp_victim)
+				{
 
-                spell_rage(50, ch, tmp_victim, 0);
-            }
-        }
-        spell_rage(50, ch, ch, 0);
+					spell_rage(50, ch, tmp_victim, 0);
+				}
+			}
+			spell_rage(50, ch, ch, 0);
+		}
+		break;
 
-        return FALSE;
-    }
+    case CMD_UNKNOWN:
+    	
+		
+		actor = ch;
+		owner = obj->equipped_by;
 
-    if (cmd == CMD_UNKNOWN)
-    {
+		if (!owner)
+			return FALSE;
+
+		if (actor != owner)
+			return FALSE;
+
+		if (!AWAKE(actor))
+			return FALSE;
+
+		if (GET_CLASS(actor) != CLASS_BARD)
+			return FALSE;
+
+		
         arg = one_argument(arg, buf);
         if (AWAKE(ch) && *buf && !strncmp(buf, "play", MAX_INPUT_LENGTH))
         {
@@ -916,13 +942,25 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
                         {
 
                             found_char = get_ch_world(NERATH_BONECLUTCH);
+							//See if he already has the relic. Only load 1
+							
+							for(obj2 = found_char->carrying; obj2; obj2 = obj->next_content)
+							  {
+								if(obj2 && V_OBJ(obj2)==GRAVEPIERCER_RELIC){
+										found_relic = TRUE;
+								}
+
+							  }
+							
                             tmp_relic = read_object(GRAVEPIERCER_RELIC, VIRTUAL);
 
-                            if (tmp_relic)
+                            if (tmp_relic && !found_relic)
                             {
                                 obj_to_char(tmp_relic, found_char);
                                 send_to_room("Nerath glows as a relic appears around his neck.\n\r", real_room(PHAX_NISRUTH_THRONE_ROOM));
-                            }
+                            }else{
+								send_to_room("A chilling tune fills the air.....\n\r", CHAR_REAL_ROOM(ch));
+							}
                         }
                     }
                 }
@@ -950,9 +988,13 @@ int dpc_dirgecaller_lute(OBJ *obj, CHAR *ch, int cmd, char *arg)
             }
             return TRUE;
         }
-        return FALSE;
-    }
-
+        
+    break;
+	
+	default:
+        break;
+    } /* end switch(cmd) */
+    
     return FALSE;
 }
 
@@ -966,10 +1008,28 @@ int dpc_oath_reliquary(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
     char buf[MAX_INPUT_LENGTH];
     bool bReturn = FALSE;
-
-    if (ch && cmd == CMD_USE)
+	int zone;
+	
+	
+	switch (cmd)
     {
-        /* Don't spec if no ch. */
+    case MSG_OBJ_REMOVED:
+         if (ch != obj->equipped_by)
+            return bReturn;
+        if (!ch)
+            return bReturn;
+        if (obj == EQ(ch, WEAR_HOLD))
+        {
+            // Reset back to base stats.           
+            // unequip_char(ch,WEAR_WIELD);
+            obj->affected[0].modifier = 1; /* Location 0 should be set as DAMROLL */
+            obj->affected[1].modifier = 1; /* Location 1 should be set as HITROLL */ 
+			obj->spec_value = 10; // Reset the spec value to ensure the specs fire again.			
+            send_to_char("The Reliquary loses its brilliance.\n\r", ch);
+        }
+        break;
+   case CMD_USE:
+	/* Don't spec if no ch. */
         if (!ch)
             return FALSE;
         /* Don't spec if ch is not awake. */
@@ -1036,7 +1096,44 @@ int dpc_oath_reliquary(OBJ *obj, CHAR *ch, int cmd, char *arg)
                 send_to_room("The reliquary faintly glows and then goes dark.\n\r", CHAR_REAL_ROOM(ch));
             }
         }
-    }
+    
+   
+		break;
+	
+
+    case MSG_TICK:
+    // IF in Undead City Phas Nisruth - Damage is Upped.
+
+        if (!(owner = obj->equipped_by))
+            return FALSE;
+
+        zone = world[CHAR_REAL_ROOM(owner)].zone;
+        // char buf[MAX_STRING_LENGTH];
+        // sprintf(buf, "The zone is %d!", zone);
+        // send_to_room(buf, CHAR_REAL_ROOM(owner));
+
+        if (zone == world[real_room(UNDEAD_CITY_ZONE_CHECK)].zone && obj->spec_value != 30)
+        {
+            send_to_char("The reliquary gleams brightly!.\n\r", owner);
+			obj->spec_value = 30;
+            obj->affected[0].modifier = 8; /* Location 0 should be set as DAMROLL */
+            obj->affected[1].modifier = 2; /* Location 1 should be set as HITROLL */
+        }
+        else if(zone != world[real_room(UNDEAD_CITY_ZONE_CHECK)].zone && obj->spec_value != 60)
+        {
+            send_to_char("The reliquary slightly glows.\n\r", owner);
+			obj->spec_value = 60;            
+            obj->affected[0].modifier = 2; /* Location 0 should be set as DAMROLL */
+            obj->affected[1].modifier = 2; /* Location 1 should be set as HITROLL */
+        }
+	
+
+        break;
+	case MSG_OBJ_ENTERING_GAME:
+		 obj->spec_value = 10; // Reset the spec value to ensure the specs fire again.
+    default:
+        break;
+    } /* end switch(cmd) */
     return bReturn;
 }
 

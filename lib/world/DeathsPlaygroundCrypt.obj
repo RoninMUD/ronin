@@ -438,7 +438,7 @@ M
 ~
 ~
 #21616
-reliquary box blackthorn~
+reliquary blackthorn~
 Blackthorn Reliquary~
 A dark wooden box, its iron bindings rusted shut~
 ~
@@ -545,7 +545,7 @@ E
 reliquary~
 This reliquary is carved from funereal stone, its edges worn smooth
 by centuries of ritual handling. Shattered iconography of Nerath's
-priesthood spirals around its bodyeach sigil incomplete on its 
+priesthood spirals around its body each sigil incomplete on its 
 own, yet unmistakably bound to a greater whole.
 
 Hairline fractures lace the reliquarys surface, glowing faintly as
@@ -556,6 +556,7 @@ unfulfilled duty.
 Along its base, a faded inscription repeats in a looping script:
 
 The oath was spoken before him. The oath must be returned to him.
+Returned to the one who betrayed us all.
 
 Beneath the inscription, a final etching stands apart and
 unmarred by age:
@@ -570,6 +571,10 @@ M
 ~
 ~
 ~
+A
+19 1
+A
+18 1
 #21621
 rite oathbinder~
 Oathbinders Rite~
