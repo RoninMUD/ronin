@@ -85,7 +85,8 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
   
   int necromancer = FALSE, paladin = FALSE, antipaladin = FALSE, mage = FALSE, thief = FALSE, ninja = FALSE, cleric = FALSE, commando = FALSE, bard = FALSE, warrior = FALSE;
 
-  int class_rings[3] = {9670,9671,9672};
+  int decay_class_rings[3] = {9670,9671,9672};
+  int class_rings[3] = {9690,9691,9692};
 
   if (cmd == CMD_UNKNOWN) {
 
@@ -179,22 +180,22 @@ int morgoth_altar(OBJ * altar, CHAR * ch, int cmd, char * arg) {
         }		
         
           // Now that we have all the items remove, we need to add in a random class ring.
-        ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];				
+        				
+        //4% chance to spawn a non decay version.  Stats are reduced, but are powerful.
+        if(chance(4)){
+			
+			//REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
+			ring_num = class_rings[number(0, NUMELEMS(class_rings) - 1)];
+			send_to_char("The Altar glows and blood spews from the sides.\n\r", ch);
+			
+        }else {
+			ring_num = decay_class_rings[number(0, NUMELEMS(decay_class_rings) - 1)];			
+		}
         new_ring = read_object(ring_num,VIRTUAL);
-        
-        if(!new_ring){
+		if(!new_ring){
             send_to_char("Nothing seems to happen.\n\r", ch);
             return TRUE;			
         }  
-        
-        //Insanely Small Chance to Remove Decay Flag. 
-        
-        if(chance(1)){
-			if(chance(10)){
-				REMOVE_BIT(new_ring->obj_flags.extra_flags2,ITEM_EQ_DECAY);
-			}
-        }
-        
         obj_to_obj(new_ring, altar);
         return TRUE;
       } 
