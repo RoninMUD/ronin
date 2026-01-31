@@ -198,8 +198,8 @@ M
 ~
 #9670
 ring arcane nexus~
-Ring of the Arcane Nexus~
-A delicate ring of silver thrumming with raw magical energy.~
+Cracked Ring of the Arcane Nexus~
+A cracked ring of silver thrumming with raw magical energy.~
 ~
 9 266350656 3
 4 0 0 0
@@ -223,8 +223,8 @@ T
 18000
 #9671
 ring crimson onslaught~
-Ring of the Crimson Onslaught~
-A jagged ring of crimson metal radiating bloodthirsty energy.~
+Cracked Ring of the Crimson Onslaught~
+A cracked and jagged ring of crimson metal radiating bloodthirsty energy.~
 ~
 9 221311040 3
 6 0 0 0
@@ -248,8 +248,8 @@ T
 18000
 #9672
 ring unyielding bastion~
-Ring of the Unyielding Bastion~
-A thick, rune-carved ring that pulses with unwavering power.~
+Cracked Ring of the Unyielding Bastion~
+A cracked rune-carved ring that pulses with unwavering power.~
 ~
 9 198230080 3
 11 0 0 0
@@ -486,5 +486,80 @@ M
 ~
 ~
 ~
+#9690
+ring arcane nexus~
+Ring of the Arcane Nexus~
+A delicate ring of silver thrumming with raw magical energy.~
+~
+9 266350656 3
+4 0 0 0
+6 44444 22222
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+53 4
+T
+18000
+#9691
+ring crimson onslaught~
+Ring of the Crimson Onslaught~
+A jagged ring of crimson metal radiating bloodthirsty energy.~
+~
+9 221311040 3
+6 0 0 0
+6 44444 22222
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+53 4
+T
+18000
+#9692
+ring unyielding bastion~
+Ring of the Unyielding Bastion~
+A thick, rune-carved ring that pulses with unwavering power.~
+~
+9 198230080 3
+11 0 0 0
+6 44444 22222
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+19 4
+A
+18 4
+A
+52 20
+T
+18000
 #0
 $~
