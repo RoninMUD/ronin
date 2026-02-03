@@ -1238,7 +1238,7 @@ int generate_quest(CHAR *ch, CHAR *mob, int lh_opt) {
     }
 
 	if(BONUSAQP){
-		double_point_chance += 50;
+		double_point_chance += number(5,40);
 	}
 
 
