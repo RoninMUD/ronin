@@ -3192,6 +3192,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
 /* Returns TRUE if the hit succeeded, or FALSE if it was avoided or otherwise missed. */
 bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
+  if (DISPOSED(defender)) return FALSE;
   if (!attacker || !defender || !SAME_ROOM(attacker, defender)) return FALSE;
 
   int avoidance_skill = FALSE;
@@ -3574,6 +3575,8 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 void hit(CHAR *ch, CHAR *victim, int type) {
   char buf[MSL];
 
+
+  if (DISPOSED(victim)) return;
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   if (ROOM_SAFE(CHAR_REAL_ROOM(ch))) {
@@ -3730,6 +3733,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 }
 
 void dhit(CHAR *ch, CHAR *victim, int type) {
+  if (DISPOSED(victim)) return;
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   /* Perform the attack, returning if it is avoided or misses. */
@@ -3778,6 +3782,7 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
 }
 
 void thit(CHAR *ch, CHAR *victim, int type) {
+  if (DISPOSED(victim)) return;
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   /* Perform the attack, returning if it is avoided or misses. */
@@ -3820,6 +3825,7 @@ void thit(CHAR *ch, CHAR *victim, int type) {
 }
 
 void qhit(CHAR *ch, CHAR *victim, int type) {
+  if (DISPOSED(victim)) return;
   if (!ch || !victim || !SAME_ROOM(ch, victim)) return;
 
   /* Coerce attack type as needed. */
