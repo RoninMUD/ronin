@@ -102,10 +102,14 @@ int check_mystic_set_pieces(CHAR *ch)
 		}
 		  
 	}
+	//Account for people wearing 2 rings.   Make sure the cap is 4.  
+	if(count > 4){
+		count = 4;
+	}
+	
 	return count;
 }
 
-//Charm of the Snowbound Guardian	26344
 int uber_thought_sleeves (OBJ *obj,CHAR *ch,int cmd,char *arg) {
   char buf[MIL];
   int i,j,set_pieces;
@@ -185,7 +189,7 @@ int uber_thought_sleeves (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 		
         obj->obj_flags.value[3]=30;
       } else {
-        send_to_char ("The charm does nothing.\n",ch);
+        send_to_char ("The sleeves do nothing.\n",ch);
       }
       return TRUE;
     }
@@ -486,7 +490,7 @@ int uber_insight_ring(OBJ *obj, CHAR *ch, int cmd, char *arg)
 				break;			
 		}
 
-		return TRUE;
+		return FALSE;
 	}
 	
 	return FALSE;

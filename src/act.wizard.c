@@ -548,7 +548,7 @@ Usage: setflag <victim> <flag>\n\r", ch);
          (strcmp(GET_NAME(ch), "Lem") && strcmp(GET_NAME(ch), "Ranger") &&
           strcmp(GET_NAME(ch), "Sumo") && strcmp(GET_NAME(ch), "Liner") &&
           strcmp(GET_NAME(ch), "Sane") && strcmp(GET_NAME(ch), "Shun") &&
-          strcmp(GET_NAME(ch), "Night"))) {
+          strcmp(GET_NAME(ch), "Night") && strcmp(GET_NAME(ch), "Arodtanjoe"))) { 
         send_to_char("You cannot set an IMP active.\n\r", ch);
         return;
       }
@@ -1138,7 +1138,7 @@ void do_password(struct char_data *ch, char *argument, int cmdnum)
          if(!strcmp(GET_NAME(ch),"Nosferatu")) {
            argument = one_argument(argument, name);
            string_to_lower(name);
-           if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night")) {
+           if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night") || !strcmp(name, "arodtanjoe")) {
              send_to_char("You cannot change the password of the active IMPs.\n\r", ch);
              return;
            }
@@ -1162,7 +1162,8 @@ void do_password(struct char_data *ch, char *argument, int cmdnum)
            (strcmp(GET_NAME(ch), "Liner") && !strcmp(name, "liner")) ||
            (strcmp(GET_NAME(ch), "Sane") && !strcmp(name, "sane")) ||
            (strcmp(GET_NAME(ch), "Shun") && !strcmp(name, "shun")) ||
-           (strcmp(GET_NAME(ch), "Night") && !strcmp(name, "night"))) {
+           (strcmp(GET_NAME(ch), "Night") && !strcmp(name, "night")) ||
+		   (strcmp(GET_NAME(ch), "Arodtanjoe") && !strcmp(name, "arodtanjoe"))) {
            send_to_char("You cannot change the password of the active IMPs.\n\r", ch);
            return;
          }
@@ -1213,7 +1214,7 @@ void do_plock(struct char_data *ch, char *argument, int cmd)
   }
   string_to_lower(name);
 
-  if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night")) {
+  if (!strcmp(name, "ranger") || !strcmp(name, "sumo") || !strcmp(name, "lem") || !strcmp(name, "liner") || !strcmp(name, "sane") || !strcmp(name, "shun") || !strcmp(name, "night") || !strcmp(name, "arodtanjoe")) {
     send_to_char("You cannot lock the active IMPs.\n\r", ch);
     return;
   }
@@ -5145,7 +5146,8 @@ void do_demote(struct char_data *ch, char *argument, int cmd)
       !strcmp(GET_NAME(victim),"Liner") ||
       !strcmp(GET_NAME(victim),"Sane") ||
       !strcmp(GET_NAME(victim),"Shun") ||
-      !strcmp(GET_NAME(victim),"Night"))
+      !strcmp(GET_NAME(victim),"Night") ||
+	  !strcmp(GET_NAME(victim),"Arodtanjoe"))
   {
     send_to_char("You cannot demote the active IMPs.\n\r",ch);
     return;
