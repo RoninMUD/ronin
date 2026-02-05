@@ -1798,15 +1798,15 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
                 loot_goblin_coin_throw(mob, vict, 200000);
             }
 
-            if (chance(20))
+            if (chance(1))
             {
 				
 				goblin_loot_object = determine_goblin_loot(0);
 				goblin_loot = read_object(goblin_loot_object, VIRTUAL);
 				obj_to_room(goblin_loot, CHAR_REAL_ROOM(mob));
 				act("A glittery object drops from the Goblin's bag.", TRUE, mob, 0, 0, TO_ROOM);
-				act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
-				spell_teleport(50, mob, mob, 0);
+				//act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
+				//spell_teleport(50, mob, mob, 0);
 				
             }
         }
@@ -1829,7 +1829,7 @@ int blackmarket_loot_goblin(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         // 10% chance to teleport away as a MORT moves into the room
 
-        if (chance(10))
+        if (chance(1))
         {
 
             act("$n cackles in glee and disapears.", TRUE, mob, 0, 0, TO_ROOM);
