@@ -27,13 +27,13 @@ A small marble statue lies here on the ground, straining to contain some interna
 10 10 10
 10
 E
-decaying corpse~
-decaying corpse~
-E
 skeleton~
 The rotting bones of the legendary anti-paladin Anarchyintheuk lie here.  
 Memories of an ancient time remind you of how the world has moved on.
 ~
+E
+decaying corpse~
+decaying corpse~
 X
 ~
 64 0 0
@@ -108,13 +108,13 @@ a delicately forged platinum key lies here on the ground.~
 50
 E
 platinum key delicate~
+This key is truly the work of the dwarven masters of old.  Carved from
+brilliant platinum, it is a piece of art in it's own right.~
+E
+platinum key delicate~
 This key is truly the work of the dwarven masters of yore.  Carved from
 brilliant platinum, it is a piece of art in it's own right.
 ~
-E
-platinum key delicate~
-This key is truly the work of the dwarven masters of old.  Carved from
-brilliant platinum, it is a piece of art in it's own right.~
 X
 ~
 0 0 0
@@ -164,7 +164,7 @@ altar skull bloody horror~
 An altar made of skulls.~
 A hideous altar, formed from a beastly, blood stained skull sits here.~
 ~
-15 0 1
+15 0 0
 100 0 0 0
 10 10 10
 10
@@ -341,7 +341,7 @@ The torn shreds of the clerics clothing lie here in a heap.~
 8 0 1
 0 0 0 0
 1 16374 6930
-33
+19
 X
 ~
 0 0 0
@@ -358,7 +358,7 @@ Some dirty robes here, belonging to a mage of the dark arts.~
 8 0 1
 0 0 0 0
 1 16969 3439
-33
+19
 X
 ~
 0 0 0
@@ -375,7 +375,7 @@ A fine guitar, broken and smashed to pieces.~
 8 0 1
 0 0 0 0
 1 14368 6563
-33
+19
 X
 ~
 0 0 0
@@ -392,7 +392,7 @@ The gilded hilt of a broken, once magnificent sword sits abandoned here.~
 8 0 1
 0 0 0 0
 1 16566 2465
-33
+19
 X
 ~
 0 0 0
@@ -409,7 +409,7 @@ A shabby coin purse, once belonging to a thief, lies here forgotten.~
 8 0 1
 0 0 0 0
 1 13352 6305
-33
+19
 X
 ~
 0 0 0
@@ -426,7 +426,7 @@ A silver cross, tarnished from much use, shines here in the dark.~
 8 0 1
 0 0 0 0
 1 16790 7570
-33
+19
 X
 ~
 0 0 0
@@ -443,7 +443,7 @@ A worn pair of gloves that have seen much battle, are crumped in a heap.~
 8 0 1
 0 0 0 0
 1 13952 7477
-33
+19
 X
 ~
 0 0 0
@@ -460,7 +460,7 @@ A wickedly sharp dagger, coated in a thick poison, has been tossed aside here.~
 8 0 1
 0 0 0 0
 1 17142 6445
-33
+19
 X
 ~
 0 0 0
@@ -477,7 +477,7 @@ A long rusty katana, dulled with much use, lies here in disgrace~
 8 0 1
 0 0 0 0
 1 14381 5590
-33
+19
 X
 ~
 0 0 0
