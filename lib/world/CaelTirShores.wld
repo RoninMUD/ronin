@@ -1,0 +1,615 @@
+#24000
+The Broken Dock~
+The remains of a wooden dock stretch out over the surf, several
+planks missing and others lashed together with rope and desperation.
+Waves slap against the supports below, causing the entire structure
+to groan with each swell. Crates and loose boards lie scattered
+about, evidence of a hurried and imperfect landing. From here, the 
+island rises inland, its dense tree line watching in silence.
+~
+240 32768 2
+D2
+~
+~
+0 -1 24001
+S
+#24001
+Dockside Supply Pile~
+Stacks of weathered crates and bundled supplies have been dragged
+just far enough from the water to stay dry. Tarps flap loudly in
+the sea wind, barely secured with stones and rope. Some containers
+are clearly marked for construction, while others remain 
+unopened, as if no one dares inventory them yet.
+~
+240 32768 2
+D0
+~
+~
+0 -1 24000
+D2
+~
+~
+0 -1 24002
+S
+#24002
+Expedition Camp~
+A loose ring of tents and makeshift shelters forms the heart of the
+expedition. Cookfires smolder low, and the air smells of 
+smoke, salt, and damp canvas. Voices rise and fall in tired
+conversation, punctuated by the clink of tools and the scrape of
+boots on packed sand.
+~
+240 32768 2
+D0
+~
+~
+0 -1 24001
+D1
+~
+~
+0 -1 24003
+S
+#24003
+The Shallow Shore~
+Wet sand stretches along the waterline, littered with driftwood 
+and sea-tossed debris. The tide pulls rhythmically at the
+shoreline, exposing dark shapes beneath the foam before claiming
+them again. The island feels close here, its presence pressing
+inward from the jungle beyond the beach.
+~
+240 32768 2
+D1
+~
+~
+0 -1 24004
+D2
+~
+~
+0 -1 24006
+D3
+~
+~
+0 -1 24002
+S
+#24004
+The Shallow Shore~
+Wet sand stretches along the waterline, littered with driftwood 
+and sea-tossed debris. The tide pulls rhythmically at the
+shoreline, exposing dark shapes beneath the foam before claiming
+them again. The island feels close here, its presence pressing
+inward from the jungle beyond the beach.
+~
+240 32768 2
+D1
+~
+~
+0 -1 24005
+D2
+~
+~
+0 -1 24007
+D3
+~
+~
+0 -1 24003
+S
+#24005
+The Shallow Shore~
+Wet sand stretches along the waterline, littered with driftwood 
+and sea-tossed debris. The tide pulls rhythmically at the
+shoreline, exposing dark shapes beneath the foam before claiming
+them again. The island feels close here, its presence pressing
+inward from the jungle beyond the beach.
+~
+240 32768 2
+D3
+~
+~
+0 -1 24004
+S
+#24006
+The Shallow Shore~
+Wet sand stretches along the waterline, littered with driftwood 
+and sea-tossed debris. The tide pulls rhythmically at the
+shoreline, exposing dark shapes beneath the foam before claiming
+them again. The island feels close here, its presence pressing
+inward from the jungle beyond the beach.
+~
+240 32768 2
+D0
+~
+~
+0 -1 24003
+D2
+~
+~
+0 -1 24008
+S
+#24007
+The Rocky Strand~
+Jagged stone dominates this stretch of coast, forming uneven footing
+and shallow tide pools. Pale mineral veins run through the
+rocks, catching the light when the waves retreat. The sound of surf
+echoes sharply here, amplified by the stone walls rising inland.
+~
+240 32768 2
+D0
+~
+~
+0 -1 24004
+S
+#24008
+The Rocky Strand~
+Jagged stone dominates this stretch of coast, forming uneven footing
+and shallow tide pools. Pale mineral veins run through the
+rocks, catching the light when the waves retreat. The sound of surf
+echoes sharply here, amplified by the stone walls rising inland.
+~
+240 32768 2
+D0
+~
+~
+0 -1 24006
+D1
+A climbable ledge with handholds.
+~
+ledge~
+11 -1 24009
+S
+#24009
+The Rocky Strand~
+Jagged stone dominates this stretch of coast, forming uneven footing
+and shallow tide pools. Pale mineral veins run through the
+rocks, catching the light when the waves retreat. The sound of surf
+echoes sharply here, amplified by the stone walls rising inland.
+~
+240 32768 2
+D2
+~
+~
+0 -1 24010
+D3
+A ledge leading to the beach below.
+~
+ledge~
+10 -1 24008
+S
+#24010
+Camp Outskirts~
+The ordered chaos of the camp begins to thin here. Broken tools and
+discarded crates lie half-buried in the sand, abandoned rather than
+lost. Beyond this point, the land grows less forgiving, and the 
+sense of shelter fades quickly.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24009
+D1
+~
+~
+0 -1 24011
+D2
+~
+~
+0 -1 24013
+S
+#24011
+The Jungles Edge~
+Dense vegetation presses close, leaves broad and heavy with moisture.
+The air is warmer here, thick with the scent of earth and growing
+things. Vines coil around rocks and fallen branches, and the shadows
+beneath the canopy shift subtly when you linger too long.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24014
+D2
+~
+~
+0 -1 24012
+D3
+~
+~
+0 -1 24010
+S
+#24012
+The Jungles Edge~
+Dense vegetation presses close, leaves broad and heavy with moisture.
+The air is warmer here, thick with the scent of earth and growing
+things. Vines coil around rocks and fallen branches, and the shadows
+beneath the canopy shift subtly when you linger too long.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24011
+D3
+~
+~
+0 -1 24013
+S
+#24013
+The Jungles Edge~
+Dense vegetation presses close, leaves broad and heavy with moisture.
+The air is warmer here, thick with the scent of earth and growing
+things. Vines coil around rocks and fallen branches, and the shadows
+beneath the canopy shift subtly when you linger too long.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24010
+D1
+~
+~
+0 -1 24012
+S
+#24014
+Overgrown Trail~
+A narrow trail cuts into the jungle, hacked open by blades and
+persistence rather than design. Broken branches and trampled plants
+show signs of recent passage, though the undergrowth already strains
+to reclaim the path. Every sound seems louder beneath the canopy.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24015
+D3
+~
+~
+0 -1 24011
+S
+#24015
+Overgrown Trail~
+A narrow trail cuts into the jungle, hacked open by blades and
+persistence rather than design. Broken branches and trampled plants
+show signs of recent passage, though the undergrowth already strains
+to reclaim the path. Every sound seems louder beneath the canopy.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24016
+D3
+~
+~
+0 -1 24014
+S
+#24016
+Overgrown Trail~
+A narrow trail cuts into the jungle, hacked open by blades and
+persistence rather than design. Broken branches and trampled plants
+show signs of recent passage, though the undergrowth already strains
+to reclaim the path. Every sound seems louder beneath the canopy.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24017
+D2
+~
+~
+0 -1 24015
+S
+#24017
+Overgrown Trail~
+A narrow trail cuts into the jungle, hacked open by blades and
+persistence rather than design. Broken branches and trampled plants
+show signs of recent passage, though the undergrowth already strains
+to reclaim the path. Every sound seems louder beneath the canopy.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24018
+D3
+~
+~
+0 -1 24016
+S
+#24018
+Fallen Surveyors Clearing~
+This small clearing bears the marks of a failed effort to impose order.
+Wooden stakes lie snapped or pulled from the ground, and a collapsed
+tripod rests near a scatter of abandoned tools. Whatever measurements
+were taken here were never finished.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24026
+D2
+~
+~
+0 -1 24019
+D3
+~
+~
+0 -1 24017
+S
+#24019
+Tangled Brush~
+Thick foliage crowds this narrow space, forcing movement at awkward
+angles. Thorned vines and low branches snag clothing and gear, making
+progress slow and irritating. Visibility is poor, and the jungle
+feels uncomfortably close.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24018
+D2
+~
+~
+0 -1 24020
+S
+#24020
+Tangled Brush~
+Thick foliage crowds this narrow space, forcing movement at awkward
+angles. Thorned vines and low branches snag clothing and gear, making
+progress slow and irritating. Visibility is poor, and the jungle
+feels uncomfortably close.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24019
+D3
+~
+~
+0 -1 24021
+S
+#24021
+Tangled Brush~
+Thick foliage crowds this narrow space, forcing movement at awkward
+angles. Thorned vines and low branches snag clothing and gear, making
+progress slow and irritating. Visibility is poor, and the jungle
+feels uncomfortably close.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24020
+D2
+~
+~
+0 -1 24022
+S
+#24022
+Split Canopy Path~
+Here the jungle path divides, neither route clearly safer than the
+other. Overhead, the canopy thickens, blocking much of the light
+and casting the ground below in shifting shadow. The air is
+unnaturally still, as if the forest itself is waiting.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24021
+D1
+~
+~
+0 -1 24023
+D3
+~
+~
+0 -1 24025
+S
+#24023
+Ravine Overlook~
+The ground drops away suddenly into a deep ravine choked with mist
+and foliage. Far below, something movestoo large to identify clearly.
+The land beyond looks untouched and dangerous, promising discovery 
+at a steep cost.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24024
+D3
+~
+~
+0 -1 24022
+S
+#24024
+Ravine Overlook~
+The ground drops away suddenly into a deep ravine choked with mist
+and foliage. Far below, something movestoo large to identify clearly.
+The land beyond looks untouched and dangerous, promising discovery 
+at a steep cost.
+~
+240 32768 3
+D3
+~
+~
+0 -1 24023
+S
+#24025
+Abandoned Watch Marker~
+A simple wooden post stands here, leaning at an angle. Faded markings
+are carved into its surface, worn smooth by time and weather. Whoever
+placed it did not stay long enough to reinforce it or remove it.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24022
+S
+#24026
+Narrow Game Path~
+This barely-there trail winds through the undergrowth, clearly formed
+by repeated animal passage rather than deliberate clearing. Tracks 
+cross and recross the path, some disturbingly large. The jungle 
+seems more alert here.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24027
+D3
+~
+~
+0 -1 24018
+S
+#24027
+Narrow Game Path~
+This barely-there trail winds through the undergrowth, clearly formed
+by repeated animal passage rather than deliberate clearing. Tracks 
+cross and recross the path, some disturbingly large. The jungle 
+seems more alert here.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24028
+D3
+~
+~
+0 -1 24026
+S
+#24028
+Narrow Game Path~
+This barely-there trail winds through the undergrowth, clearly formed
+by repeated animal passage rather than deliberate clearing. Tracks 
+cross and recross the path, some disturbingly large. The jungle 
+seems more alert here.
+~
+240 32768 3
+D1
+~
+~
+0 -1 24029
+D2
+~
+~
+0 -1 24027
+S
+#24029
+The Breathing Grove~
+Tall plants ring this enclosed grove, their broad leaves rising and
+falling gently despite the lack of wind. The ground is soft
+underfoot, almost spongy, and the air feels warmer than it should. 
+Nothing openly threatens you here but the island is paying attention.
+~
+240 32768 3
+D0
+~
+~
+0 -1 24030
+D3
+~
+~
+0 -1 24028
+S
+#24030
+The Verdant Threshold~
+A curtain of intertwined vines and broad-leafed growth blocks the
+path forward, forming a living wall that rises from the forest floor
+to the canopy above. As you approach, the vegetation shifts 
+subtly, parting only slightly before settling back into place. The 
+air here is heavy with warmth and the slow rhythm of breathing plants.
+~
+240 1073774592 3
+D0
+~
+~
+0 -1 24031
+D2
+~
+~
+0 -1 24029
+S
+#24031
+Rootbound Passage~
+Beyond the living barrier, the ground dips into a narrow passage
+formed entirely of massive, exposed roots. They arch overhead like
+ribs, their surfaces smooth from ages of slow movement. A faint
+pulse can be felt through the soles of your feet, steady 
+and deliberate.
+~
+240 1073774592 3
+D0
+~
+~
+0 -1 24032
+D2
+~
+~
+0 -1 24030
+S
+#24032
+The Verdant Hollow~
+This wide hollow opens beneath the jungle canopy, its floor
+carpeted in thick moss and flowering growth that glows faintly with
+inner vitality. The sounds of the outer jungle are muted 
+here, replaced by a deep, resonant hum that seems to come 
+from the land itself.
+~
+240 1073774592 3
+D0
+~
+~
+0 -1 24033
+D2
+~
+~
+0 -1 24031
+S
+#24033
+The Sapwell Chamber~
+A natural basin lies at the heart of this chamber, filled with
+slowly circulating golden sap. Thick roots descend into the
+pool, drawing sustenance before retracting again. The air is 
+rich and cloying, and every breath feels weighted with unfamiliar life.
+~
+240 1073774592 3
+D2
+~
+~
+0 -1 24032
+D3
+~
+~
+0 -1 24034
+S
+#24034
+The Heartwardens Grove~
+This enclosed grove feels impossibly old. Towering growth rings
+the clearing, their trunks fused together in places, forming natural
+pillars and arches. At the center stands a massive figure of bark
+and sinew, motionless yet unmistakably aware.
+~
+240 1073774592 3
+D1
+~
+~
+0 -1 24033
+S
+#24099
+Temporary Room~
+Temporary description.
+~
+240 0 0
+S
+#0
+$~
