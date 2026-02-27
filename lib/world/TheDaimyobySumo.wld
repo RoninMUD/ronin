@@ -132,12 +132,12 @@ D5
 trapdoor~
 7 506 509
 E
-trapdoor~
-You see a well-camouflaged but not quite perfect trapdoor that leads below.
-~
-E
 stones~
 Through the pile of stone you spy a heavy trapdoor.
+~
+E
+trapdoor~
+You see a well-camouflaged but not quite perfect trapdoor that leads below.
 ~
 S
 #507
@@ -323,11 +323,10 @@ D1
 Stone~
 8 -1 516
 E
-firepit~
-Looking at the firepit, you see a small ring of stones built around a hollow
-in the floor, glowing embers still radiating a lot of heat.  A mesh of woven 
-bamboo strips holds a piece of venison just the right distance above the fire,
-the smell of the frying meat causes your stomach to growl at you.
+deer~
+You see a large wooden frame, to which has been lashed a tightly stretched
+deer hide.  The manner in which it has been skinned suggests the use of
+an extremely sharp blade used by a very skilled hunter.
 ~
 E
 hide~
@@ -336,10 +335,11 @@ deer hide.  The manner in which it has been skinned suggests the use of
 an extremely sharp blade used by a very skilled hunter.
 ~
 E
-deer~
-You see a large wooden frame, to which has been lashed a tightly stretched
-deer hide.  The manner in which it has been skinned suggests the use of
-an extremely sharp blade used by a very skilled hunter.
+firepit~
+Looking at the firepit, you see a small ring of stones built around a hollow
+in the floor, glowing embers still radiating a lot of heat.  A mesh of woven 
+bamboo strips holds a piece of venison just the right distance above the fire,
+the smell of the frying meat causes your stomach to growl at you.
 ~
 S
 #518
@@ -844,18 +844,18 @@ D4
 ladder wood~
 11 -1 550
 E
-ladder~
-It is about the same shape and size as a normal ladder, except that even though
-it is made from wood, it has the texture of something that was molded from clay.
-Every surface of it is rounded and smooth, adding greatly to the organic
-quality of this place.
-~
-E
 bark~
 The bark-made door seems much more alive on this side than it did outside,
 instead of the dry, lifeless bark that is hard as a rock, inside here it has
 a lovely whitish-brown color and feels quite damp.  When you press your hand
 against it, it holds the shape for a moment before resuming its old shape.
+~
+E
+ladder~
+It is about the same shape and size as a normal ladder, except that even though
+it is made from wood, it has the texture of something that was molded from clay.
+Every surface of it is rounded and smooth, adding greatly to the organic
+quality of this place.
 ~
 S
 #543
@@ -883,16 +883,16 @@ D3
 ~
 0 -1 538
 E
-gong~
-You see a small metal gong about the same size and shape as a small buckler,
-suspended from a heavy frame, which is used to signal the wrestlers to begin
-and stop fighting.
-~
-E
 bottle~
 It is a stout porcelain bottle, bright white in color and decorated with a 
 forest motif in a brilliant shade of blue. It is half full of sweet smelling 
 sake.
+~
+E
+gong~
+You see a small metal gong about the same size and shape as a small buckler,
+suspended from a heavy frame, which is used to signal the wrestlers to begin
+and stop fighting.
 ~
 S
 #544
@@ -1653,25 +1653,10 @@ D3
 ~
 0 -1 0
 E
-shelf~
-Resting upon the shelf is a short bamboo tube filled with several sweet
-smelling incense sticks burning silently.  They appear to have been lit 
-just recently, although there are no signs whatsoever of someone having 
-come here before you.
-~
-E
-runes~
-Imbedded in the surface of the wall's stone are many intricately carved
-runes, each with a unique glow of its own.  From the unusual aura they
-give off, there must be some powerful and ancient magic at work here.
-~
-E
-stone~
-Massive immovable blocks of stone make up this large section of wall, most
-however seem to be far to large to have been brought down through the
-tunnel.  Chiseled flawlessly into the surface of the stone are many
-unusual glowing runes which shine even brighter when you bring your hand
-near them.
+incense~
+You see several sweet smelling incense sticks burning here. They appear to
+have been lit just recently, although there are no signs whatsoever of someone
+having come here before you.
 ~
 E
 wall~
@@ -1682,10 +1667,25 @@ unusual glowing runes which shine even brighter when you bring your hand
 near them.
 ~
 E
-incense~
-You see several sweet smelling incense sticks burning here. They appear to
-have been lit just recently, although there are no signs whatsoever of someone
-having come here before you.
+stone~
+Massive immovable blocks of stone make up this large section of wall, most
+however seem to be far to large to have been brought down through the
+tunnel.  Chiseled flawlessly into the surface of the stone are many
+unusual glowing runes which shine even brighter when you bring your hand
+near them.
+~
+E
+runes~
+Imbedded in the surface of the wall's stone are many intricately carved
+runes, each with a unique glow of its own.  From the unusual aura they
+give off, there must be some powerful and ancient magic at work here.
+~
+E
+shelf~
+Resting upon the shelf is a short bamboo tube filled with several sweet
+smelling incense sticks burning silently.  They appear to have been lit 
+just recently, although there are no signs whatsoever of someone having 
+come here before you.
 ~
 S
 #585

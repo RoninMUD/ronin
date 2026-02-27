@@ -140,6 +140,7 @@ int
 Captain (CHAR *cap, CHAR *ch, int cmd, char *arg) {
   CHAR *vict,*temp;
   static char status = 0;
+  int throw_hp_threshold;
 
   if (cmd && !GET_OPPONENT(cap)) {
     for (vict=world[CHAR_REAL_ROOM(cap)].people;vict;vict=temp ) {
@@ -169,8 +170,11 @@ Captain (CHAR *cap, CHAR *ch, int cmd, char *arg) {
     switch (status) {
     case 0:
       status=1;
-      PirateAttack (cap, vict, ATTACK_WINDOW);
-      return FALSE;
+	  throw_hp_threshold=10*GET_HIT(cap)/GET_MAX_HIT(cap); // ADding Check for 20% HP.   Helps ensure that MOrts complete Aquest
+	  if(throw_hp_threshold > 2){
+		PirateAttack (cap, vict, ATTACK_WINDOW);
+      }
+	  return FALSE;
     case 1:
       status=2;
       PirateAttack (cap, vict, ATTACK_TABLE);
