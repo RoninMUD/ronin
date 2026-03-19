@@ -1348,6 +1348,10 @@ A tiny entry way looks out into a city.
 ~
 trapdoor~
 1 -1 12036
+D5
+~
+~
+0 -1 12097
 S
 #12064
 Outside the Ettin Village~
@@ -2077,6 +2081,10 @@ A silvery wisp of spider web path leading towards a door.
 ~
 door~
 1 -1 12089
+D5
+~
+~
+0 -1 12098
 S
 #12095
 Ant Town Armory~
@@ -2104,6 +2112,63 @@ D0
 ~
 ~
 0 -1 12038
+S
+#12097
+The Sovereign Brood Chamber~
+You descend into a cavern that dwarfs all others within the
+hive, a vast,cathedral-like chamber carved not by tools, but by 
+relentless, living will. The walls curve upward into darkness, 
+layered with hardened resin and veins of dull, tarnished gold
+that pulse faintly as if carrying life through the structure itself.
+Massive, swollen egg clusters cling to the walls and ceiling, some
+intact,others split open. From within, faint movement stirs. The
+floor is uneven, a grotesque mixture of gold, resin, and organic
+matter, shaped into a pulsing terrain that shifts subtly beneath
+your weight.
+Half-buried in the chamber are enormous husks of creatures that
+once challenged this domain. Their forms have been lacquered over
+in gold and resin, preserved as both nourishment and monument to 
+the hives dominance.
+At the center lies a colossal depression, a throne-like nesting
+pit layered with countless generations of hardened secretion. The
+ground here beats with a slow, deliberate rhythm as though the
+chamber itself shares a heartbeat with its sovereign.
+~
+120 0 0
+D4
+~
+~
+0 -1 12063
+S
+#12098
+The Throne of Silken Dominion~
+You step into a vast, suffocating chamber where light itself seems 
+to be caught and strangled by layers upon layers of webbing. Thick
+strands of ashen silk stretch from wall to wall, forming a tangled
+architecture that feels less like a nest and more like a 
+deliberate, calculated design.
+The walls give slightly under the weight of the webs, padded with 
+dense,sound-swallowing fibers. Every movement you make is
+muted, every breath absorbed. The silence here is unnatural.
+Curtains of silk hang in great veils along the chambers edges, shifting
+without wind, as though something unseen moves behind them. Interwoven
+throughout the webs are strands of gold and silver thread, glinting faintly
+like veins of trapped starlight. They are not decorationthey are
+reinforcement, stronger than steel, anchoring the entire structure.
+Shapes hang suspended in the upper reaches of the chambersome cocooned,
+some partially torn free. Within a few, something still moves. Others have
+split open, their contents long since drained.
+At the center of the chamber, the webbing thickens into a massive, layered
+platforma throne spun over countless cycles. The strands here are dense,
+darkened, and stained, forming a raised dominion that trembles ever so
+slightly, as if responding to a presence not yet seen.
+And somewhere within the web something is pulling the strings.
+~
+120 512 0
+D4
+~
+~
+0 -1 12094
 S
 #12099
 Inside the Broken Old Well~
