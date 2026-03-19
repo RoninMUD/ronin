@@ -2051,15 +2051,15 @@ hastily sewn lines of text detailing the kenders' wish list.\n\r\
 // list of VNUMs of Uber bosses, and associated room VNUM
 int ubers[][2] = {
   // {mob VNUM, room VNUM} // <spec file>
-  {12027, 12063}, // Queen Ant - <none>
+  {12027, 12097}, // Queen Ant - <none>
   {14014, 14065}, // Dream Shadow - spec.house.c
   {21220, 21275}, // Huge Stone Dragon - spec.moria.c
   {26585, 26582}, // Enlightened One - spec.pagoda.c
   {20109, 20109}, // Musashi - spec.daimyo.c
   {11300, 11400}, // Strahd - spec.barovia.c
-  {14600, 12094}, //King Spider - spec.ubers.c
-  {14601, 12931}, //Great Mystic - spec.ubers.c
-  {14602, 12904}  //Ultimate Mystic - spec.ubers.c
+  {14600, 12098}, //King Spider - spec.ubers.c
+  {14601, 12997}, //Great Mystic - spec.ubers.c
+  {14602, 12998}  //Ultimate Mystic - spec.ubers.c
 #ifdef TEST_SITE
 #endif
 };
@@ -2478,7 +2478,7 @@ if ((GET_DEATH_LIMIT(collector) == -1) && (cmd == MSG_MOBACT)) {
   }
 
   if (cmd == MSG_TICK) { // spawn ubers
-    if (chance(16)) { //First chance is 16% (4/25)
+    if (chance(8)) { //First chance is 16% (4/25)
       if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) { //Assuming no one/1 multi, its 1/20).
         // scale uber spawn chance based on players online
         spawn_uber(collector, 3);  //Default spawn chance is 1/125

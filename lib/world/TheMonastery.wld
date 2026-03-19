@@ -135,6 +135,10 @@ You can see the bottomless pit.
 ~
 ~
 0 -1 12902
+D5
+~
+~
+0 -1 12998
 E
 pit~
 The pit looks as deep from here, as it looks from the top. Still no sight
@@ -635,6 +639,10 @@ You can see a bookcase with a mirror on the wall.
 ~
 mirror~
 2 12900 12938
+D3
+~
+~
+0 -1 12997
 E
 tome strange~
 The tome is opened on a page that bears a painting of a golden battle axe. The
@@ -851,6 +859,50 @@ D3
 ~
 crevice~
 9 -1 17311
+S
+#12997
+The Ascendant Sanctum~
+You step into a chamber that feels impossibly vast, its boundaries
+obscured by drifting veils of light and shadow. The floor beneath you
+is smooth obsidian etched with intricate sigils that shift and reform
+when not directly observed.
+Floating above the ground are fragments of stone, tomes, and crystalline
+structures, all suspended in a slow, deliberate orbit around a central
+focus. Streams of arcane energy weave between them like threads, forming
+complex patterns that pulse with quiet, restrained power.
+Every movement here feels measured, as though the chamber itself enforces
+discipline upon all within it. Whispers of incantations echo faintly, though
+no clear source can be seen.
+At the center of the sanctum, a raised platform of interlocking glyphs
+glows with steady intensity. The symbols flare and dim in rhythmic
+succession, each pulse sending ripples through the floating structures
+above. This is not chaosthis is mastery.
+~
+129 0 0
+D1
+~
+~
+0 -1 12931
+S
+#12998
+The Paradox Nexus~
+The moment you cross the threshold, your senses betray you.
+The chamber fractures in every direction, angles bend where they
+should not, distances stretch and collapse without warning. What 
+appears near becomes unreachable, while distant shapes loom
+suddenly at your side. The ground shifts beneath your feet, yet 
+never moves.
+Fragments of reality drift through the space like broken glass, other
+moments bleeding into this one. You catch glimpses of impossible 
+landscapes, reversed shadows, and reflections that do not mimic
+your movements.
+Sound arrives before it happens. Light lingers after it should fade.
+~
+129 0 0
+D4
+~
+~
+0 -1 12904
 S
 #12999
 Plane of Mystic Meditation~
