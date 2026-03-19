@@ -28,7 +28,7 @@
 #include "enchant.h"
 
 /*Rooms */
-#define UBER_MYSTIC_ROOM 12904
+#define UBER_MYSTIC_ROOM 12998
 #define UBER_MYSTIC_HOLD_ROOM 12999
 #define ZYCA_PRINCE_ROOM 10969
 #define ZYCA_THROW_ROOM 10964
