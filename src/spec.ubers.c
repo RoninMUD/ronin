@@ -328,7 +328,7 @@ int uber_unshaken_sandals(OBJ *obj, CHAR *ch, int cmd, char *arg)
 		send_to_char("Your footing steadies as measured steps restore your strength.\n\r", owner);
 		act("$n's stance steadies, each step deliberate and controlled.",TRUE, owner, 0, 0, TO_ROOM);
 
-		return TRUE;
+		return FALSE;
 	}
 	
 	return FALSE;
