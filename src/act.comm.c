@@ -381,7 +381,7 @@ void drunkify_string(char *dst, const size_t dst_sz, const int drunk_level, cons
 
 
 /* Unified communication function. */
-void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
+void communicate(CHAR *ch, char *arg, const int comm) {
   if (!ch || (comm < COMM_FIRST) || (comm > COMM_LAST)) return;
 
   arg = skip_spaces(arg);
@@ -581,9 +581,9 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
     case COMM_TO_ZONE:
       for (DESC* temp_desc = descriptor_list; temp_desc; temp_desc = temp_desc->next) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
-		
-		CHAR* temp_ch = temp_desc->character;
-		if (hide_flag == COMM_ACT_HIDE_IMMORTAL && IS_IMMORTAL(temp_ch)) continue;
+
+        CHAR* temp_ch = temp_desc->character;
+
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear) &&
             ((GET_ZONE(temp_ch) == GET_ZONE(ch)) || IS_IMMORTAL(temp_ch))) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
@@ -598,7 +598,7 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
         if ((temp_desc->connected != CON_PLYNG) || !temp_desc->character) continue;
 
         CHAR* temp_ch = temp_desc->character;
-		if (hide_flag == COMM_ACT_HIDE_IMMORTAL && IS_IMMORTAL(temp_ch)) continue;
+
         if ((temp_ch != ch) && !IS_SET(GET_PFLAG(temp_ch), comm_info[comm].pflag_no_hear) && (GET_POS(temp_ch) >= comm_info[comm].min_pos_hear)) {
           if (comm_info[comm].color) COLOR(temp_ch, comm_info[comm].color);
           act(buf, comm_info[comm].hide, ch, 0, temp_ch, TO_VICT);
@@ -634,48 +634,48 @@ void communicate(CHAR *ch, char *arg, const int comm, const int hide_flag) {
 
 /* Function called by the 'tell' command. */
 void do_tell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_TELL,0);
+  communicate(ch, arg, COMM_TELL);
 }
 
 
 /* Function called by the 'reply' command. */
 void do_reply(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_REPLY,0);
+  communicate(ch, arg, COMM_REPLY);
 }
 
 
 /* Function called by the 'ask' command. */
 void do_ask(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_ASK,0);
+  communicate(ch, arg, COMM_ASK);
 }
 
 
 /* Function called by the 'whisper' command. */
 void do_whisper(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_WHISPER,0);
+  communicate(ch, arg, COMM_WHISPER);
 }
 
 
 /* Function called by the 'gtell' command. */
 void do_gtell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_GTELL,0);
+  communicate(ch, arg, COMM_GTELL);
 }
 
 
 /* Function called by the 'say' command. */
 void do_say(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_SAY,0);
+  communicate(ch, arg, COMM_SAY);
 }
 
 
 /* Function called by the 'shout' command. */
 void do_shout(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_SHOUT,0);
+  communicate(ch, arg, COMM_SHOUT);
 }
 
 /* Function called by the 'yell' command. */
 void do_yell(CHAR *ch, char *arg, int cmd) {
-  communicate(ch, arg, COMM_YELL,0);
+  communicate(ch, arg, COMM_YELL);
 }
 
 
@@ -691,7 +691,7 @@ void do_gossip(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_GOSSIP,0);
+  communicate(ch, arg, COMM_GOSSIP);
 }
 
 
@@ -707,7 +707,7 @@ void do_auction(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_AUCTION,0);
+  communicate(ch, arg, COMM_AUCTION);
 }
 
 
@@ -724,7 +724,7 @@ void do_chaos(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  communicate(ch, arg, COMM_CHAOS,0);
+  communicate(ch, arg, COMM_CHAOS);
 }
 
 
@@ -972,8 +972,7 @@ void do_setcolor(CHAR *ch, char *arg, int cmd) {
     for (int i = 0; i < NUMELEMS(color_field_info); i++) {
       longest_field_string = MAX(longest_field_string, strlen(color_field_info[i].name));
     }
-	
-	
+
     for (int i = 0; i < NUMELEMS(color_field_info); i++) {
         int color_val = GET_COMM_COLOR(ch, i + 1);
 
