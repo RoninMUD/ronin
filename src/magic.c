@@ -770,6 +770,13 @@ void spell_detect_poison(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_enchant_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int hitroll_aff_idx = -1, damroll_aff_idx = -1;
+  
+  //Validate if the object exists.
+  if (!obj) {
+    send_to_char("Nothing happens.\n\r", ch);
+
+    return;
+  }
 
   for (int i = 0; (hitroll_aff_idx < 0) && (i < MAX_OBJ_AFFECT); i++) {
     if (OBJ_AFF_LOC(obj, i) == 0) {
@@ -2211,6 +2218,13 @@ void spell_convergence(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 
 void spell_enchant_armor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   int ac_aff_idx = -1;
+  
+  //Validate if the object exists.
+  if (!obj) {
+    send_to_char("Nothing happens.\n\r", ch);
+
+    return;
+  }
 
   for (int i = 0; (ac_aff_idx < 0) && (i < MAX_OBJ_AFFECT); i++) {
     if (OBJ_AFF_LOC(obj, i) == 0) {

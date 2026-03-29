@@ -974,13 +974,23 @@ void do_setcolor(CHAR *ch, char *arg, int cmd) {
     }
 
     for (int i = 0; i < NUMELEMS(color_field_info); i++) {
-      printf_to_char(ch, "%s : %-*s : `%sSAMPLE`q %s\n\r",
-        color_field_info[i].field,
-        longest_field_string,
-        color_field_info[i].name,
-        color_info[GET_COMM_COLOR(ch, i + 1) - 1].key,
-        color_info[GET_COMM_COLOR(ch, i + 1) - 1].name);
-    }
+        int color_val = GET_COMM_COLOR(ch, i + 1);
+
+		const char *key = "q";        // default (reset)
+		const char *name = "Disabled";
+
+		if (color_val > 0 && color_val <= NUMELEMS(color_info)) {
+		  key = color_info[color_val - 1].key;
+		  name = color_info[color_val - 1].name;
+		}
+
+		printf_to_char(ch, "%s : %-*s : `%sSAMPLE`q %s\n\r",
+		  color_field_info[i].field,
+		  longest_field_string,
+		  color_field_info[i].name,
+		  key,
+		  name);
+    } 
 
     return;
   }
