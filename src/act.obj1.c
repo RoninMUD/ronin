@@ -276,6 +276,7 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct ob
               sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME( obj_object)));
               send_to_char( buffer, ch);
               fail = TRUE;
+			  break;
             }
           }
         } else {
@@ -283,12 +284,14 @@ int get_all_from_object(struct char_data *ch, char *name, bool alldot, struct ob
               fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
+		  break;
         }
       } else {
         sprintf(buffer,"%s : You can't carry that many items.\n\r",
               fname(OBJ_NAME(obj_object)));
         send_to_char(buffer, ch);
         fail = TRUE;
+		break;
       }
     }
     if (!total && !fail) {
@@ -362,16 +365,19 @@ int get_number_from_object(struct char_data *ch, char *name, int number, struct 
               sprintf(buffer, "You can't take %s!\n\r", fname(OBJ_NAME(obj_object)));
               send_to_char( buffer, ch);
               fail = TRUE;
+			  break;
             }
           } else {
             sprintf(buffer,"%s : You can't carry that much weight.\n\r", fname(OBJ_NAME(obj_object)));
             send_to_char(buffer, ch);
             fail = TRUE;
+			break;
           }
         } else {
           sprintf(buffer,"%s : You can't carry that many items.\n\r", fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
+		  break;
         }
       }
     }
@@ -484,18 +490,21 @@ void do_get(struct char_data *ch, char *argument, int cmd)
             sprintf(buffer, "You can't take %s\n\r", fname(OBJ_NAME(obj_object)));
             send_to_char( buffer, ch);
             fail = TRUE;
+			break;
             }
         } else {
           sprintf(buffer,"%s : You can't carry that much weight.\n\r",
                 fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
+		  break;
         }
       } else {
         sprintf(buffer,"%s : You can't carry that many items.\n\r",
               fname(OBJ_NAME(obj_object)));
         send_to_char(buffer, ch);
         fail = TRUE;
+		break;
       }
       }
     }
@@ -521,18 +530,21 @@ void do_get(struct char_data *ch, char *argument, int cmd)
             } else {
             send_to_char("You can't take that\n\r", ch);
             fail = TRUE;
+			break;
             }
         } else {
           sprintf(buffer,"%s : You can't carry that much weight.\n\r",
                 fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
           fail = TRUE;
+		  break;
         }
         } else {
         sprintf(buffer,"%s : You can't carry that many items.\n\r",
               fname(OBJ_NAME(obj_object)));
           send_to_char(buffer, ch);
         fail = TRUE;
+		break;
         }
       } else {
         sprintf(buffer,"You do not see a %s here.\n\r", arg1);
@@ -554,18 +566,21 @@ void do_get(struct char_data *ch, char *argument, int cmd)
               } else {
                 send_to_char("You can't take that\n\r", ch);
                 fail = TRUE;
+				break;
               }
               } else {
               sprintf(buffer,"%s : You can't carry that much weight.\n\r",
                   fname(OBJ_NAME(obj_object)));
               send_to_char(buffer, ch);
               fail = TRUE;
+			  break;
             }
             } else {
             sprintf(buffer,"%s : You can't carry that many items.\n\r",
                   fname(OBJ_NAME(obj_object)));
               send_to_char(buffer, ch);
             fail = TRUE;
+			break;
             }
           }
       }
