@@ -188,6 +188,7 @@ OBJS_RONIN_SPEC = \
 	spec.underworld.o \
 	spec.vagabond.o \
 	spec.vanity.o \
+	spec.veilofunspentfate.o\
 	spec.vermillion.o \
 	spec.welmar.o \
 	spec.wolf.o \
