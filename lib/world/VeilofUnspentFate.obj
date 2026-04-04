@@ -1,2 +1,46 @@
+#23900
+board quest large~
+A Large Quest Board~
+A Large Quest Board Hangs on the Wall~
+~
+12 0 0
+0 0 0 0
+200 0 0
+100
+E
+board quest large~
+`E--------------------------------------------------`Q
+`N Speak your desire plainly to the Broker.
+
+ Say the name of the path you wish to walk.`Q
+
+`I Each path may only be taken once per day.`Q
+
+`M The Veil measures all things. It does not forget.`Q
+`E--------------------------------------------------`Q
+
+`O Available Paths:
+
+   [`Kveil`Q]
+`H    A measured fragment of fate, controlled and finite.
+`H    Fifteen echoes linger within, each bound to a single reward.
+
+`N    Beware: Too many who enter will fracture the Veil—
+`N    and what lies beyond becomes far less certain.
+
+`O--------------------------------------------------`x
+
+`H The remaining entries are either faded beyond recognition...
+`H or have yet to be written.
+
+~
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~
