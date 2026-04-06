@@ -2155,7 +2155,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   
     //Evasion Damage Redunction
   //Set the defaults
-  double evasion_physical_multiplier = 0.75;
+  double evasion_physical_multiplier = 0.8;
   double evasion_magical_multiplier = 1;
   //IF we have a level 5 warden - damage reduction is increased.
   if(check_subclass(victim, SC_RANGER, 5)){
@@ -2949,15 +2949,22 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       success = HIT_CRITICAL;
     }
   }
-
-	/* Rangers with Awareness, get Critical's 10% of the time */
-  if (IS_MORTAL(attacker) && (success == HIT_SUCCESS) && IS_MORTAL(attacker) && IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1)) && chance(10)){
-	  success = HIT_CRITICAL;
-  }
-  
-	//Berserk Gives another 30% chance to crit.
-   if (IS_MORTAL(attacker) &&  (success == HIT_SUCCESS) && IS_MORTAL(attacker) && affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4)) && chance(30)){
-	  success = HIT_CRITICAL;
+  //Nomads get 50% chance to crit with all hits that are successes
+  int critical_chance = 50;
+  if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)){
+	
+	//Awareness adds 10% to the chance.
+	if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
+		critical_chance += 10;
+	}
+	//Berserk adds another 30% chance
+	
+	if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
+		critical_chance += 30;
+	}
+	if(number(1,100) < critical_chance){
+		success = HIT_CRITICAL;
+	}  
   }
 
 
@@ -3144,7 +3151,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
 
         /* Defend */
         if (affected_by_spell(defender, SKILL_DEFEND) && !affected_by_spell(defender, SKILL_BERSERK)) {
-          check += 50;
+          check += 75;
         }
 
         /* Fade */
@@ -3476,8 +3483,16 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
         act("$n plunges $p deep into $N's back.", FALSE, attacker, weapon, defender, TO_NOTVICT);
         act("$n plunges $p deep into your back.", FALSE, attacker, weapon, defender, TO_VICT);
         act("You plunge $p deep into $N's back.", FALSE, attacker, weapon, defender, TO_CHAR);
-
-        damage(attacker, defender, (dam * circle_mult[GET_LEVEL(attacker)]), SKILL_CIRCLE, DAM_PHYSICAL);
+		
+		int circle_damage = (dam * circle_mult[GET_LEVEL(attacker)]);
+		
+		//Evasion Lowers damage of skills by 25%
+		if(IS_SET(GET_TOGGLES(attacker), TOG_EVASION) && (check_subclass(attacker, SC_BANDIT, 5))){
+			circle_damage = (circle_damage * 0.75);
+		}
+		
+		
+        damage(attacker, defender, circle_damage, SKILL_CIRCLE, DAM_PHYSICAL);
 
         if ((CHAR_REAL_ROOM(defender) != NOWHERE) && special_message) {
           act("You strike a nerve in $N's back with your attack, severely weakening $M.", FALSE, attacker, 0, defender, TO_CHAR);
@@ -3739,11 +3754,11 @@ void hit(CHAR *ch, CHAR *victim, int type) {
 
     /* Juggernaut */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 259;
+      check = 249;
     }
     /* Hostile/Rush */
     else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
-      check = 213;
+      check = 203;
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {
@@ -3756,7 +3771,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   /* Berserk */
   if (affected_by_spell(ch, SKILL_BERSERK)) {
     int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
-    int percent = 40;
+    int percent = 60;
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);
