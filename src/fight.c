@@ -1680,7 +1680,16 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       return 0;
     }
   }
-
+  
+  //Protect Chance  
+	//Nomad Warden Subclass, increases the chance to 100% for protect.
+	int protect_chance = 80;
+	double protect_damage_reduction=1;  //Default to 1 for other classes.
+	//Confirm if the protector is a nomad and WARDEN SC >= 2
+	if (!IS_NPC(victim) && GET_PROTECTOR(victim) && (GET_CLASS(GET_PROTECTOR(victim)) == CLASS_NOMAD) && (check_subclass(GET_PROTECTOR(victim), SC_RANGER, 2))) {
+		protect_chance = 100;	
+	}
+  
   /* Warlord SC2 and Ranger SC2: Protect */
   if (!IS_NPC(victim) &&
       GET_PROTECTOR(victim) &&
@@ -1690,7 +1699,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       (GET_PROTECTEE(GET_PROTECTOR(victim)) == victim) &&
       !IS_AFFECTED(GET_PROTECTOR(victim), AFF_FURY) &&
       (number(1, SKILL_MAX_PRAC) <= GET_LEARNED(GET_PROTECTOR(victim), SKILL_PROTECT)) &&
-      chance(90)) {
+      chance(protect_chance)) {
     act("$N takes the damage meant for you!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_CHAR);
     act("You take the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_VICT);
     act("$N takes the damage meant for $n!", FALSE, victim, 0, GET_PROTECTOR(victim), TO_NOTVICT);
@@ -1701,6 +1710,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       ch = GET_PROTECTOR(victim);
     }
     victim = GET_PROTECTOR(victim);
+	
+	//Wardens reduce damage taken from protecting others by 20%
+	if (!IS_NPC(victim) && GET_PROTECTOR(victim) && (GET_CLASS(GET_PROTECTOR(victim)) == CLASS_NOMAD) && (check_subclass(GET_PROTECTOR(victim), SC_RANGER, 2))) {
+		protect_damage_reduction = 0.8;
+	}
   }
 
   if (!IS_NPC(ch)) {
@@ -2137,10 +2151,27 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Apply damage reduction from affects. */
   dmg = MAX(lround(dmg * (1.0 - damage_reduction)), 0);
-
-  /* Bandit SC5: Evasion (and Nomad Level 50) */
+  
+  
+    //Evasion Damage Redunction
+  //Set the defaults
+  double evasion_physical_multiplier = 0.75;
+  double evasion_magical_multiplier = 1;
+  //IF we have a level 5 warden - damage reduction is increased.
+  if(check_subclass(victim, SC_RANGER, 5)){
+	  evasion_physical_multiplier = 0.6;
+	  evasion_magical_multiplier = 0.9;
+  }
+  //Rangers also reduce magic damage, but only by 10%
+  if (IS_MAGICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_EVASION) && (check_subclass(victim, SC_RANGER, 5))){
+		dmg = lround(dmg * evasion_magical_multiplier);
+  }
+	
+  /* Bandit SC5: Evasion (and Nomad Level 50) 
+	Rangers get additional benefits at SC Rank 5
+  */
   if (IS_PHYSICAL_DAMAGE(damage_type) && IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_EVASION) && (check_subclass(victim, SC_BANDIT, 5) || ((GET_CLASS(victim) == CLASS_NOMAD) && (GET_LEVEL(victim) >= 50)))) {
-    dmg = lround(dmg * 0.75);
+    dmg = lround(dmg * evasion_physical_multiplier);
   }
 
   /* Warlord SC5: Bullwark - Damage reduction based on AC. */
@@ -2162,6 +2193,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(ch) && IS_MORTAL(victim)) {
     dmg = MIN(600, dmg);
   }
+
+  /*  SC Ranger 2 - Apply the damage reduction if you are protecting someone.*/
+  dmg = dmg*protect_damage_reduction;
+
 
   /* Record damage for use later when printing damage text. */
   int dmg_text = dmg;
@@ -2722,8 +2757,8 @@ int calc_ac(CHAR *ch) {
 
     /* Defend: AC Bonus and Max AC Adjustment */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
-      ac -= 20;
-      min_pc_ac = -300;
+      ac -= 30;
+      min_pc_ac = -330;
     }
 
     /* Blur: AC Bonus */
@@ -2914,6 +2949,17 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       success = HIT_CRITICAL;
     }
   }
+
+	/* Rangers with Awareness, get Critical's 10% of the time */
+  if (IS_MORTAL(attacker) && (success == HIT_SUCCESS) && IS_MORTAL(attacker) && IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1)) && chance(10)){
+	  success = HIT_CRITICAL;
+  }
+  
+	//Berserk Gives another 30% chance to crit.
+   if (IS_MORTAL(attacker) &&  (success == HIT_SUCCESS) && IS_MORTAL(attacker) && affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4)) && chance(30)){
+	  success = HIT_CRITICAL;
+  }
+
 
   if (!IS_IMMORTAL(attacker)) {
     /* Druid SC4: Elemental Form - Chance to miss if affected by Entropy. */
