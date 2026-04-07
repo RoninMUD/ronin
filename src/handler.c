@@ -321,8 +321,8 @@ int apply_ac(CHAR *ch, int pos) {
     case WEAR_BODY:
       multi = 3;
 	  
-	  /* Protect - Ranger SC */
-      if (IS_MORTAL(ch) && check_subclass(ch, SC_RANGER, 2)) {
+	  /* Block - Ranger SC 3*/
+      if (IS_MORTAL(ch) && check_subclass(ch, SC_RANGER, 3)) {
         multi += 1;
       }
 	  
