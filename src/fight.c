@@ -3758,7 +3758,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     }
     /* Hostile/Rush */
     else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
-      check = 203;
+      check = 174;
     }
 
     if (number(1, check) < (((skill + 150) / 2) + bonus)) {

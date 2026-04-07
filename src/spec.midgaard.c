@@ -33,6 +33,8 @@
 #include "subclass.h"
 #include "enchant.h"
 
+#define BUTCHER_STEAK_ENCHANT_NAME "Well Fed with Steak"
+
 char *Month[12]= {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 
 int USE_MANA(CHAR *ch, int sn);
@@ -6304,6 +6306,73 @@ int wesley_zeppelin(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   return FALSE;
 }
 
+//Nomad Butcher Steak Spec
+
+int butcher_steak (OBJ *obj,CHAR *ch,int cmd,char *arg) {
+	char buf[MAX_INPUT_LENGTH];
+	int mob_level_bonus;
+	CHAR *owner;
+	
+   switch (cmd)
+    {
+    case CMD_EAT:
+			
+			
+			owner = OBJ_CARRIED_BY(obj);
+			if (!ch || !owner || owner != ch) return FALSE;
+			
+			one_argument(arg, buf);
+
+		    if (get_obj_in_list_vis(ch, buf, ch->carrying) != obj) return FALSE;
+			
+			do_eat(owner, arg, cmd);
+			
+			//Upon Eating a steak - Restore 20% HP, 10% Mana and 30% Movement.
+			//If you are Well Fed - You dont get the healing.  That way you can eat to fill hunger.
+			//The Regen bonus is based on the level of the mob divided by 10
+			mob_level_bonus = obj->obj_flags.cost / 10;
+
+			snprintf(buf, sizeof(buf), "  %-22s : %d\n\r", "mob_level_bonus", mob_level_bonus);
+			send_to_char(buf, owner);
+			
+			
+			if (!enchanted_by(owner, BUTCHER_STEAK_ENCHANT_NAME)){
+				send_to_char("You feel very well fed.\n\r", owner);
+				
+				
+				int hp_gain   = GET_MAX_HIT(owner) / 10;
+				int mana_gain = GET_MAX_MANA(owner) / 10;
+				int move_gain = (GET_MAX_MOVE(owner) * 3) / 10;
+
+				if (hp_gain > 400){  hp_gain = 400;}
+				if (mana_gain > 100){ mana_gain = 100;}
+				if (move_gain > 600){ move_gain = 600;}
+
+				GET_HIT(owner)  += hp_gain;
+				GET_MANA(owner) += mana_gain;
+				GET_MOVE(owner) += move_gain;
+				
+				
+				//Provide bonus based on Mob Level.
+				if(GET_CLASS(owner) == CLASS_WARRIOR || GET_CLASS(owner) == CLASS_THIEF || GET_CLASS(owner) == CLASS_NOMAD){
+					enchantment_apply(owner, FALSE, BUTCHER_STEAK_ENCHANT_NAME, 0, 4, ENCH_INTERVAL_TICK, mob_level_bonus, APPLY_HP_REGEN, 0, 0, NULL);			
+				}
+				else{
+					enchantment_apply(owner, FALSE, BUTCHER_STEAK_ENCHANT_NAME, 0, 4, ENCH_INTERVAL_TICK, mob_level_bonus, APPLY_MANA_REGEN, 0, 0, NULL);						
+				}				
+			}
+			
+			
+			return TRUE;						
+		break;
+	default:
+		break;
+	}
+
+  return FALSE;
+}
+
+
  /**********************************************************************\
  |* End Of the Special procedures for Midgaard                         *|
  \**********************************************************************/
@@ -6312,6 +6381,10 @@ void assign_midgaard (void) {
 
   int spec_auctioneer(CHAR *mob, CHAR *ch, int cmd, char *arg); /* auction.c */
   int receptionist(CHAR *mob, CHAR *ch, int cmd, char *arg); /* reception.c */
+
+  //Steak Spec 
+  assign_obj(1,butcher_steak);
+
 
   assign_obj(2999,teller);
 /*  assign_obj(2998,insurance);*/
