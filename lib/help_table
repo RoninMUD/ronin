@@ -1771,7 +1771,8 @@ NOMAD
 Nomad is a strongly recommended class with good con, str and dex.  They usually
 have very good hit points too. They can't cast spells but they have good
 skills.  Nomads also get 5 natural armor points for every 5 levels, and an
-additional practice % on dodge for every 10 levels.
+additional practice % on dodge for every 10 levels. Nomads also get a 50% chance
+to critically hit the enemy.
 
 You can improve your skills by using the practice command.
 
@@ -2003,6 +2004,9 @@ Subclass: Ranger: Level 3 (Nomad)
 BLOCK will toggle block on and off.  When block is on you will attempt to block
 your target and keep it from fleeing.  The chance of its success depends on how
 well you learn it, and your Dexterity modifier.
+
+Rangers gain 4x AC from Chest pieces with this skill.
+
 #
 DUAL
 
@@ -2214,7 +2218,17 @@ BUTCHER
 
 Class: Nomad
 
-Butcher turns a corpse into a tasty steak.
+Butcher turns a corpse into a tasty steak.   This steak will now
+provide additional healing of hp, mana and movement.   
+
+It will also provide a Well Fed buff that provides bonus regen 
+based on the level of the mob that created the corpse.
+
+HP - 20% of Max HP (Max 400)
+Mana - 10% of Max Mana (Max 100)
+Movement - 30% of Max Movement (Max 600)
+
+Note: The healing only happens if you are not well Fed.
 #
 DISARM
 
@@ -6891,12 +6905,12 @@ alertness heightens the senses of the fighter and drives the rush of adrenaline
 pulsing through their veins.
 
 The active component of this subclass level is the Awareness skill, which allows
-the Warlord to always get the first hit against an opponent, even if the
+the Warlord or Ranger to always get the first hit against an opponent, even if the
 attacking creature targets another player.  This action will place the Warlord
 in the tank position automatically.  Awareness will only trigger if the Warlord
-is not already engaged in combat.  If multiple Warlords are active in the same
-room with the Awareness skill enabled, the last Warlord to enter the room will
-be the one to take action.  This ability can be toggled on/off.
+or Ranger is not already engaged in combat.  If multiple Warlords/Rangers are active
+in the same room with the Awareness skill enabled, the last Warlord or Ranger to enter
+the room will be the one to take action.  This ability can be toggled on/off.
 
 The success of this skill is increased by the user's Wisdom modifier.
 
@@ -6907,7 +6921,8 @@ per warrior class level, adding up to +100 hit point regeneration at level 50.
 Warlord subclass level 1 grants the warrior the capability of reaching -260
 Armor Class (AC), exceeding the normal limit of -250.
 
-Note: Ranger only gains access to the first component of this subclass level.
+Note: Ranger only gains access to the first component of this subclass level. They
+also receive a 10% boost to critical hit chances.
 
 See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 #
@@ -6931,8 +6946,11 @@ shield equipment slot, increasing it from a normal 2x multiplier to 3x.
 Warlord subclass level 2 grants the warrior the capability of reaching -270
 Armor Class (AC), exceeding the normal limit of -250.
 
+The Default success chance is 80%
+
 Note: Ranger and only gains access to the first component of this subclass
-level.
+level.   Rangers can never fail to protect a user.  They will also take 20%
+less damage from protecting their party.
 
 See Also: SUBCLASSES WARLORD RESCUE DEXTERITY AC RANGER CRUSADER
 #
@@ -7012,6 +7030,8 @@ Ranger isn't able to flee, protect or rescue but does retain the
 ability to dodge.  The greatest benefit is the ability to dual.
 The dual success is dependent on how well the skill is practiced.
 
+Critical Chance is increased by 30% with this skill.
+
 See Also: SUBCLASSES RANGER
 #
 DEFEND
@@ -7021,9 +7041,12 @@ Subclass Ranger: Level 5 (Nomad)
 While in complete defensive mode, the Ranger completely focuses his
 mind on the movements of the creatures attacking him. This prevents the
 Ranger from doing anything but weak hits against the opponent, but
-gives him an extra -20 armor and the ability to dodge or parry attacks with
-more success.  With defend, the Ranger can get up to -300 armor. This
+gives him an extra -30 armor and the ability to dodge or parry attacks with
+more success.  With defend, the Ranger can get up to -330 armor. This
 is the ultimate tanking ability.
+
+This also doubles the physical damage reduction of evasion.   You also 
+take 10% less damage from magic.  
 
 While fighting, the tank cannot change this mode.
 
@@ -7876,7 +7899,9 @@ Usage: evasion (toggles on/off)
 
 When the Bandit/Nomad is in this protective position, all damage inflicted by
 physical attacks (bare hand attacks, weapon attacks, and skills) will be
-reduced by 25%.
+reduced by 20%.
+
+Bandits are so focused on evading attacks, that circling is less effective.
 
 This skill cannot be toggled on or off in combat.
 
