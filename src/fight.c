@@ -1310,7 +1310,8 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
   /* act_by_type - for snoop brief only type so far is 1 - combat */
   for (tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char; tmp_char = tmp_char->next_in_room)
   {
-    if (tmp_char == ch || tmp_char == victim) continue;
+    //if (tmp_char == ch || tmp_char == victim) continue;
+	if (tmp_char == victim) continue;
 
     if (!IS_SET(tmp_char->specials.pflag, PLR_FIGHTBRF))
     {
@@ -1320,7 +1321,13 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
     {
       if (index)
       {
-        act_by_type("$n hits $N.", 0, ch, tmp_char, victim, TO_OTHER, 1);
+		 char buf[MAX_STRING_LENGTH];
+
+    	 snprintf(buf, sizeof(buf), "$n hits $N (%d).", dam);
+
+	     act_by_type(buf, 0, ch, tmp_char, victim, TO_OTHER, 1);
+		  
+        //act_by_type("$n hits $N.", 0, ch, tmp_char, victim, TO_OTHER, 1);
       }
       else
       {
@@ -2006,7 +2013,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   if (damage_type == DAM_PHYSICAL_CRITICAL) {
     dmg *= 2;
   }
-
+	
   /* Gladiator SC3: Maim */
   int maim_damage = 0;
 

@@ -2478,7 +2478,7 @@ if ((GET_DEATH_LIMIT(collector) == -1) && (cmd == MSG_MOBACT)) {
   }
 
   if (cmd == MSG_TICK) { // spawn ubers
-    if (chance(10)) { //First chance is 8%
+    if (chance(7)) { //First chance is 7%
       if (chance( MAX( 5, count_mortals_world(collector, TRUE) / 2) )) { //Assuming no one/1 multi, its 1/20).
         // scale uber spawn chance based on players online
         spawn_uber(collector, 3);  //Default spawn chance is 1/125
