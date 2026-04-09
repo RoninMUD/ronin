@@ -1310,7 +1310,7 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
   /* act_by_type - for snoop brief only type so far is 1 - combat */
   for (tmp_char = world[CHAR_REAL_ROOM(ch)].people; tmp_char; tmp_char = tmp_char->next_in_room)
   {
-    //if (tmp_char == ch || tmp_char == victim) continue;
+	//Brief fight will now show the characters hit.
 	if (tmp_char == victim) continue;
 
     if (!IS_SET(tmp_char->specials.pflag, PLR_FIGHTBRF))
@@ -1321,13 +1321,10 @@ void dam_message(int dam, CHAR *ch, CHAR *victim, int attack_type, int shadow)
     {
       if (index)
       {
+		 //Updating Fight Brief to add damage numbers.
 		 char buf[MAX_STRING_LENGTH];
-
     	 snprintf(buf, sizeof(buf), "$n hits $N (%d).", dam);
-
 	     act_by_type(buf, 0, ch, tmp_char, victim, TO_OTHER, 1);
-		  
-        //act_by_type("$n hits $N.", 0, ch, tmp_char, victim, TO_OTHER, 1);
       }
       else
       {
