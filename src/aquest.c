@@ -826,6 +826,10 @@ const int aq_mob_master_list[][2] = {
   { 716, 2 }, /* troll mother */
   { 804, 2 }, /* Tut */
   { 922, 2 }, /* leader rebel zan */
+  { 1307, 2 }, /* overlord order light canticle */
+  { 1308, 2 }, /* ustan knight */
+  { 1310, 2 }, /* troll witch vulzala */
+  { 1311, 2 }, /* captain knight humfridus */
   { 1915, 2 }, /* thrag beastman master */
   { 2029, 2 }, /* bear ursa major */
   { 2030, 2 }, /* cassiopeia queen */
@@ -892,7 +896,6 @@ const int aq_mob_master_list[][2] = {
   { 27700, 2 }, /* Mountain Yeti */
   { 28502, 2 }, /* minotaur bull man */
   { 701, 3 }, /* racti troll hermit */
-  { 706, 3 }, /* juktoa troll foreman */
   //{ 1261, 3 }, /* salamander sal */
   //{ 2702, 3 }, /* marikith elder */
   { 2106, 3 }, /* Marvick the Strategist */
@@ -911,7 +914,6 @@ const int aq_mob_master_list[][2] = {
   //{ 4706, 3 }, /* Garbage Golem */
   { 6201, 3 }, /* the Unholy Deacon */
   { 8361, 3 }, /* wind dust elemental */
-  { 11712, 3 }, /* master pagoda */
   { 12005, 3 }, /* dragon ancient huge dra anc */
   { 12009, 3 }, /* lost adventurer */
   { 12021, 3 }, /* ettin wizard mage ett */
@@ -935,7 +937,6 @@ const int aq_mob_master_list[][2] = {
   { 21334, 3 }, /* bugbear bug bear */
   //{ 23007, 3 }, /* hydra cryohydra snake */
   { 23009, 3 }, /* polar bear glacial */
-  { 24903, 3 }, /* druid protector */
   { 26403, 3 }, /* guide */
   { 26404, 3 }, /* seeress mistress */
   { 26702, 3 }, /* ghost prisoner */
@@ -951,6 +952,7 @@ const int aq_mob_master_list[][2] = {
   { 552, 4 }, /* Sojobo tengu king */
   { 598, 4 }, /* shukenja grand priest */
   { 703, 4 }, /* neyuv lizard assassin reptile */
+  { 706, 4 }, /* juktoa troll foreman */
   { 4469, 4 }, /* animate skeleton */
   { 4472, 4 }, /* Voldra Sage */
   { 4612, 4 }, /* Kitzanti Captain Dark Purple */
@@ -963,6 +965,7 @@ const int aq_mob_master_list[][2] = {
   { 7507, 4 }, /* cook old chinese */
   { 10907, 4 }, /* zyca */
   { 11702, 4 }, /* Chun Lui gong */
+  { 11712, 4 }, /* master pagoda */
   { 12012, 4 }, /* king spider spi */
   { 12202, 4 }, /* thief ettin th et */
   { 12203, 4 }, /* rat giant */
@@ -980,7 +983,8 @@ const int aq_mob_master_list[][2] = {
   { 20129, 4 }, /* Spectral Warlord */
   { 20130, 4 }, /* warhorse skeletal */
   { 20165, 4 }, /* black panther */
-  { 21203, 4 }, /* king morian moria ruler mandrial */ 
+  { 21203, 4 }, /* king morian moria ruler mandrial */
+  { 24903, 4 }, /* druid protector */  
   { 25018, 4 }, /* elemental water prince */
   { 25019, 4 }, /* earth elemental king */
   { 25020, 4 }, /* air elemental lord */
