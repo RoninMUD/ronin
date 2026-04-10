@@ -552,6 +552,12 @@ void do_butcher(struct char_data *ch, char *argument, int cmd) {
         steak->short_description = str_dup(buf);
       }
 
+	  //Nomads can use steaks to restore HP/MANA/MV based on mob level of corpse.
+      //Get mob level from corpse.
+	  int mob_level = OBJ_VALUE2(obj);
+	  
+	  steak->obj_flags.cost = mob_level;
+	  
       obj_to_room(steak, CHAR_REAL_ROOM(ch));
       extract_obj(obj);
     }

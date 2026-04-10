@@ -131,6 +131,7 @@ void assign_ubers(void);
 void assign_morgoth(void);
 void assign_deathplaygroundcrypt(void);
 void assign_darkspire(void);
+void assign_veilofunspentfate(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -236,6 +237,7 @@ void assign_mobiles(void)
   assign_morgoth();
   assign_deathplaygroundcrypt();
   assign_darkspire();
+  assign_veilofunspentfate();
   
 //  assign_wbw();
 #ifdef TEST_SITE

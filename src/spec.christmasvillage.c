@@ -490,7 +490,7 @@ int christmas_crown(OBJ *obj, CHAR *ch, int cmd, char *arg)
 				break;
 			case 3: //Freeze the Target for 2 rounds
 				// The freeze messes with deaths, so ensuring they are only frozen above 20%
-				if(GET_HIT(vict) > (GET_MAX_HIT(vict)/5)){
+				if(GET_HIT(vict) > (GET_MAX_HIT(vict)/2)){
 					act("The crown generates an ice cold blast and freezes $N solid.", FALSE, owner, 0, vict, TO_ROOM);
 					act("The crown generates an ice cold blast and freezes $N solid.", FALSE, owner, 0, vict, TO_CHAR);
 					enchantment_apply(vict, TRUE, "CROWN FROZEN", TYPE_UNDEFINED, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, christmas_crown_frozen_func);

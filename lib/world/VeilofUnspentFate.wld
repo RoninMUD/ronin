@@ -1,0 +1,395 @@
+#23900
+The Measured Veil~
+You stand within the Measured Veil, a place where fate itself is
+portioned and restrained. The air is unnaturally still, carrying
+a faint, luminous haze that softens the edges of everything it
+touches. Beneath your feet, smooth marble stretches outward in
+quiet perfection, unmarked by time yet subtly etched with fading
+impressions of steps that never fully formed.
+All around you, pale shapes drift at the edge of perception, echoes
+of moments that almost were, lingering just long enough to be
+noticed before dissolving into nothing. There is no chaos 
+here, no urgency only a quiet, deliberate balance, as though every
+possibility is being carefully measured and limited.
+Ahead, the Veil thins into a silent hall where those unrealized 
+paths begin to take form.
+~
+239 1140883460 0
+D2
+~
+~
+0 -1 23901
+S
+#23901
+Veil Threshold~
+A curtain of pale, unmoving mist hangs in the air before you, softly
+glowing with a light that has no source. The ground beneath your
+feet is smooth marble, untouched by time, yet faint impressions of
+footsteps drift across its surface, appearing and fading without pattern.
+The world behind you feels distant, as though you have stepped outside
+the natural flow of fate. Ahead, the mist parts just enough to reveal 
+a quiet hall waiting beyond.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23900
+D2
+~
+~
+0 -1 23902
+S
+#23902
+Hall of Echoed Steps~
+The hall stretches forward in muted stillness, yet each step you take
+is answered by anotherslightly delayed, slightly wrong. The sound does
+not belong to you.
+Tall mirrors line the walls, their surfaces cracked and clouded. Within
+them, reflections shift independently, showing fragments of lives not
+livedvictories never claimed, defeats never suffered. The air feels 
+heavy with possibilities that never came to pass.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23901
+D1
+~
+~
+0 -1 23904
+D3
+~
+~
+0 -1 23903
+S
+#23903
+Left Path Chamber~
+This chamber feels unstable, as though it cannot decide what it should
+be. Shapes flicker at the edges of your visionfigures forming and
+dissolving in an endless cycle of almost-existence.
+The walls ripple like disturbed water, briefly revealing glimpses of
+distant places before settling back into pale stone. Every moment here
+feels unfinished.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23902
+D2
+~
+~
+0 -1 23905
+S
+#23904
+Right Path Chamber~
+The marble floor here is split by thin, jagged cracks that glow
+faintly from within. Each fracture branches outward, forming
+patterns that resemble paths diverging and reconnecting.
+Standing still, you can almost feel the weight of decisions
+pressing in from all sideschoices made, choices avoided, and 
+choices never given.
+~
+239 1140883456 0
+D2
+~
+~
+0 -1 23906
+D3
+~
+~
+0 -1 23902
+S
+#23905
+Fractured Segment A~
+Time itself seems uneven here. Dust hangs motionless in some places 
+while drifting lazily in others. Sections of wall phase in and 
+out, revealing glimpses of battles, ruins, and empty fields before 
+vanishing again.
+The air hums faintly, as if the moment is tryingand failingto 
+move forward.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23903
+D2
+~
+~
+0 -1 23907
+S
+#23906
+Fractured Segment B~
+Portions of the room have broken free from the whole, floating
+silently in the air. Chunks of marble drift past one another in 
+slow, deliberate motion, occasionally aligning before separating 
+again.
+The space feels incomplete, as though it were once part of 
+something greater that was never allowed to finish forming.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23904
+D2
+~
+~
+0 -1 23907
+S
+#23907
+Convergence Room~
+Multiple broken pathways meet here, overlapping and intersecting in
+ways that should not be possible. The floor is layered with faint 
+outlines of steps taken and untaken, all leading through this single
+point.
+The air feels dense, charged with the weight of countless unrealized 
+outcomes pressing together into one space. It is difficult to tell 
+which direction truly leads forward.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23906
+D2
+~
+~
+0 -1 23908
+D3
+~
+~
+0 -1 23905
+S
+#23908
+Final Approach~
+The space tightens into a narrow corridor where the echoes grow faint
+and distant. The shifting reflections and fractured visions begin to
+fade, replaced by a growing stillness.
+Ahead, a soft, steady glow pulses rhythmically, drawing you forward
+toward something more definedmore certainthan anything you have 
+encountered so far.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23907
+D2
+~
+~
+0 -1 23909
+S
+#23909
+The Dividing Veil~
+A luminous barrier stretches across the chamber, its surface shimmering
+with layered light. Within it, faint shapes movefaster, more
+violent, less controlled than the quiet echoes behind you.
+The barrier pulses in response to presence, not just your own but others
+as well. It feels aware, as though measuring the weight of fate brought 
+before it.
+Beyond the veil lies something unrestrained but for now, it holds.
+~
+239 1140883460 0
+D0
+~
+~
+0 -1 23908
+D5
+~
+~
+0 -1 23910
+S
+#23910
+The Fractured Descent~
+You emerge onto fractured marble that barely holds together, suspended
+over a vast, shifting void. Pieces of the floor drift apart and grind
+back together in slow, jarring movements.
+The air here is no longer calmenergy crackles through the space, and
+distant shapes move with urgency and purpose. The Veil has changed or
+perhaps it has simply stopped holding itself together.
+~
+239 1140883456 0
+D2
+~
+~
+0 -1 23911
+D4
+~
+~
+0 -1 23909
+S
+#23911
+Central Convergence~
+This open expanse churns with motion. Fragments of architecture drift
+through the air while distorted figures move between them, colliding
+and reforming in unpredictable ways.
+The ground beneath you is unstable, marked by glowing fractures that
+pulse erratically. All paths seem to lead hereand away againas though
+fate itself has lost direction.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23910
+D1
+~
+~
+0 -1 23914
+D3
+~
+~
+0 -1 23913
+D4
+~
+~
+0 -1 23912
+D5
+~
+~
+0 -1 23915
+S
+#23912
+Upper Rift~
+A tear in the air itself stretches overhead, spilling harsh, flickering
+light into the space below. The edges of the rift twitch and
+distort, occasionally revealing glimpses of places that vanish before
+they can be understood.
+The energy here is volatile, pressing down with a weight that makes
+every movement feel significant.
+~
+239 1140883456 0
+D5
+~
+~
+0 -1 23911
+S
+#23913
+West Fragment~
+This section of the Veil has broken away from the rest, floating at a
+slight angle. The ground tilts unevenly beneath your feet, and distant
+sounds echo strangely, arriving too soon or too late.
+The space feels disconnectednot just physically, but from the flow of
+everything else around it.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23911
+S
+#23914
+East Fragment~
+Jagged edges define this broken outcrop, where chunks of marble have
+sheared away into open void. The air shimmers with unstable
+energy, distorting shapes and distances.
+Movement here feels uncertain, as though the ground itself might shift
+without warning.
+~
+239 1140883456 0
+D3
+~
+~
+0 -1 23911
+S
+#23915
+Lower Break~
+Cracks spread across the floor like lightning frozen in stone, glowing
+brighter with each passing moment. Small fragments break free and drift
+upward, vanishing into the surrounding chaos.
+The sense of instability is overwhelming, as though the entire area is
+moments away from falling apart completely.
+~
+239 1140883456 0
+D4
+~
+~
+0 -1 23911
+D5
+~
+~
+0 -1 23916
+S
+#23916
+Deep Fracture~
+A massive split runs through this area, dividing it into uneven
+sections connected by narrow, unstable paths. Light pours from the
+depths below, pulsing in irregular waves that distort everything
+above it.
+The fracture feels alive, reacting to movement with subtle shifts
+and tremors.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23918
+D2
+~
+~
+0 -1 23919
+D3
+~
+~
+0 -1 23917
+D4
+~
+~
+0 -1 23915
+S
+#23917
+West Depths~
+The light dims here, replaced by a heavy, oppressive darkness that
+clings to the edges of your vision. Shapes move within it, indistinct
+and constantly shifting.
+The air feels thick, making each breath slow and deliberate, as though
+the Veil itself resists your presence.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23916
+S
+#23918
+East Depths~
+In stark contrast, this area burns with cold, pale light. The
+brightness reveals too muchfractures, distortions, and movements
+that make little sense when fully seen.
+The longer you remain, the more the light feels intrusive, as though
+it is trying to expose something you were not meant to understand.
+~
+239 1140883456 0
+D3
+~
+~
+0 -1 23916
+S
+#23919
+Convergence Pit~
+This is the heart of the collapse. Reality folds inward here, layers of
+existence pressing together into a chaotic, shifting mass. Shapes form
+and break apart in rapid successionfigures, structures, entire moments
+reduced to fragments.
+The ground trembles constantly, unable to stabilize under the pressure.
+Whatever forms here does not remain for long but while it exists, it is
+dangerously real.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23916
+S
+#23999
+Temporary Room~
+Temporary description.
+~
+239 67108864 0
+S
+#0
+$~

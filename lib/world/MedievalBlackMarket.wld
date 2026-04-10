@@ -421,6 +421,10 @@ D2
 ~
 ~
 0 -1 18022
+D3
+~
+~
+0 -1 18030
 S
 #18022
 Spector's Oddities~
@@ -550,6 +554,21 @@ D3
 ~
 ~
 0 -1 18028
+S
+#18030
+Veil Brokers Corner~
+This corner of the market feels different, quieter, heavier, more
+deliberate. The shadows gather more thickly here, clinging to the
+walls and floor as though drawn inward.
+A faint, pale glow pulses intermittently in the air, like a heartbeat
+just out of sync with reality. Something about this place feels
+connected to forces beyond the market beyond the world itself.
+~
+180 0 0
+D1
+~
+~
+0 -1 18021
 S
 #18099
 Temporary Room~

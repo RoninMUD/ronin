@@ -1,0 +1,249 @@
+#23900
+echo almost~
+Echo of the Almost~
+An echo of the almost flickers here, struggling to take form.
+~
+The figure before you cannot decide what it is meant to be. Armor
+phases in and out of existence across its body, sometimes
+whole, sometimes shattered. Its face shifts 
+constantly hero, corpse, stranger never settling long enough to 
+recognize. Each movement leaves a faint afterimage that lingers 
+just a moment too long, like a memory that refuses to fade.
+~
+16456 0 0 Y
+66 -18 -15 50d40+12354 5d5+17
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23901
+regret whisper echo~
+Whisper of Regret~
+A whisper of regret drifts here, barely visible.
+~
+This entity is more sensation than form. The air bends subtly around
+it, carrying faint murmurs that brush against your thoughts. Words
+almost form warnings, pleas, apologies but dissolve before they can
+be understood. Its presence presses inward, cold and unwelcome, like
+remembering something you wish you had done differently.
+~
+16456 0 0 Y
+66 -18 -16 51d41+12360 6d6+18
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23902
+echo almost~
+Echo of the Almost~
+A flickering echo struggles to stabilize within the chamber.
+~
+This echo appears more unstable than the others, its form collapsing
+and reforming in rapid succession. Limbs stretch too far, armor
+twists unnaturally, and its movements lag behind intention. It seems 
+aware of its own incompleteness and enraged by it.
+~
+16456 0 0 Y
+66 -18 -15 50d41+12189 5d6+19
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23903
+fragment shardbound echo~
+Shardbound Fragment~
+A shardbound fragment drifts here, pieces grinding softly.
+~
+A cluster of jagged marble shards orbits a faint humanoid silhouette
+at its center. The fragments scrape against one another with a
+low, grinding sound, occasionally snapping into new positions. Within
+the core, something struggles trapped between moments, unable to 
+fully emerge.
+~
+16456 0 0 Y
+66 -18 -16 51d42+12759 6d7+20
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23904
+regret whisper echo~
+Whisper of Regret~
+A whisper of regret coils through the fractured chamber.
+~
+The presence here feels sharper, more focused. The murmurs are
+louder, closer almost intelligible. For brief moments, you hear
+your own voice among them, speaking words you never said but 
+perhaps should have.
+~
+16456 0 0 Y
+66 -18 -15 50d42+12515 5d7+21
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23905
+revenant fractured echo~
+Fractured Revenant~
+A fractured revenant lurches here, its form splitting and reforming.
+~
+Its body is cracked with glowing lines that pulse erratically. Each
+movement causes parts of it to separate and snap back into place, as
+if held together by unstable force. Light leaks from within the
+fractures, illuminating a hollow interior where something vital 
+should be.
+~
+16456 0 0 Y
+66 -18 -16 51d43+12928 6d8+22
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23906
+keeper shardbound echo~
+Shardbound Keeper~
+A shardbound keeper hovers here, fragments orbiting in slow rotation.
+~
+Larger and more stable than the lesser fragments, this construct
+maintains a deliberate shape. The shards move with purpose, forming
+limbs and armor before dissolving again into orbit. At its center, a
+dim figure watches silently, bound within the rotating prison.
+~
+16456 0 0 Y
+66 -18 -15 50d43+12400 5d8+23
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23907
+wraith convergence echo~
+Convergence Wraith~
+A convergence wraith coalesces here from drifting fragments.
+~
+Multiple faint forms overlap within this entity, phasing in and out
+of alignment. Faces, limbs, and armor pieces appear briefly before
+dissolving back into the whole. It is not one being, but many
+unfinished ones forced together.
+~
+16456 0 0 Y
+66 -18 -16 51d44+54126 6d9+24
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23908
+arbiter veilbound echo~
+Veilbound Arbiter~
+The veilbound arbiter stands before the barrier, unmoving.
+~
+Cloaked in layered light, this figure appears almost complete. More real
+than anything else within the Veil. Its form is steady, its presence
+absolute. Where others flicker and fracture, it remains whole.
+Its gaze is fixed upon the barrier behind it, as though it exists solely
+to measure who may pass and who must remain.
+~
+16456 0 0 Y
+67 -18 -15 50d44+52055 5d9+25
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23909
+drifter veil veil-torn echo~
+Veil-Torn Drifter~
+A veil-torn drifter stumbles through the chaos.
+~
+Its body stretches unnaturally, as though pulled in multiple
+directions at once. Pieces of it lag behind, then snap violently
+back into place. It moves without direction, driven by forces it
+cannot resist.
+~
+16456 0 0 Y
+67 -18 -16 51d45+57675 6d10+26
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23910
+warden fatebreaker echo~
+Fatebreaker Warden~
+A fatebreaker warden strides through the chaos, dragging chains of light.
+~
+Massive chains trail behind this towering figure, each link glowing
+and cracking with energy. As it moves, the chains lash outward, striking
+and snapping fragments of reality itself. It does not preserve fate, it
+destroys it.
+~
+16456 0 0 Y
+67 -18 -15 50d45+60995 5d10+27
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23911
+horror convergence echo~
+Convergence Horror~
+A convergence horror writhes here, barely contained.
+~
+This monstrosity is a fusion of countless forms, none fully aligned.
+Arms emerge and vanish, faces overlap and scream silently, and weapons
+phase in and out of existence. It is a violent collision of failed
+destinies given form.
+~
+16456 0 0 Y
+67 -18 -16 51d46+55333 6d11+28
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23912
+broker dealer hooded figure merchant~
+The Veil Broker~
+The Veil Broker lingers here, watching everything with quiet interest.
+~
+Draped in layered, dark robes that seem to absorb the surrounding
+light, the Veil Broker stands with unnatural stillness. His face
+is obscured beneath a deep hood, but faint glimmers of pale light
+flicker where his eyes should be.
+Thin, gloved fingers idly trace invisible patterns in the air, as
+though counting something only he can see. Small trinkets like 
+coins, shards, and fragments of unknown originhang from his
+belt, each giving off a faint, unnatural hum.
+When you draw near, his head tilts ever so slightly, acknowledging
+your presence before you speak. You get the sense he already knows
+why youre here and whether youre worth his time.
+~
+16458 0 0 Y
+70 -35 -30 300d300+165000 1d1+1
+0 0
+8 8 0
+67 1073741823 1d1+1 0
+0 1 0 1073741823
+K
+0 0 0 0 0 0 0
+#0
+$~
