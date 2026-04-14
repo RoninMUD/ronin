@@ -1020,6 +1020,26 @@ void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object) {
     send_to_char("You calm down and feel less angry.\n\r", ch);
     act("$n calms down and looks less angry.", TRUE, ch, 0, 0, TO_ROOM);
   }
+
+  if (!IS_AFFECTED2(ch, AFF2_ENDURE) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_ENDURE)) {
+    send_to_char("You feel less shielded.\n\r", ch);
+  }
+
+  if (!IS_AFFECTED2(ch, AFF2_BLESS) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_BLESS)) {
+    send_to_char("Your divine favor fades.\n\r", ch);
+  }
+
+  if (!IS_AFFECTED2(ch, AFF2_ARMOR) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_ARMOR)) {
+    send_to_char("You feel less protected.\n\r", ch);
+  }
+
+  if (!IS_AFFECTED2(ch, AFF2_DETECT_POISON) &&
+      IS_SET(OBJ_BITS2(obj_object), AFF2_DETECT_POISON)) {
+    send_to_char("The green glow in your eyes fades.\n\r", ch);
+  }
 }
 
 
