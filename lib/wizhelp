@@ -1071,20 +1071,20 @@ SOS SETOBJSTAT
 See also: FLAGS VALUES DRINKTYPES
 #
 "FLAGS" "EXTRA FLAGS" "WEAR FLAGS" "AFFECTED FLAGS"
-
- EXTRA (2)                 WEAR (3)             AFFECTED (11)              
+* - AFFECTED can only be added as a number. AFFECTED2 must be added by name
+ EXTRA (2)                 WEAR (3)             AFFECTED (11)              AFFECTED2 (16)
                                                                            
- GLOW            1         TAKE         1       BLIND            1         
- HUM             2         FINGER       2       INVISIBLE        2         
- DARK            4         NECK         4       DETECT-ALIGNMENT 4         
- CLONE           8         BODY         8       DETECT-INVISIBLE 8         
- EVIL            16        HEAD         16      DETECT-MAGIC     16        
- INVISIBLE       32        LEGS         32      SENSE-LIFE       32        
- MAGIC           64        FEET         64      SANCTUARY        128       
- NODROP          128       HANDS        128     CURSE            1024      
- BLESS           256       ARMS         256     SPHERE           2048      
- ANTI_GOOD       512       SHIELD       512     POISON           4096      
- ANTI_EVIL       1024      ABOUT        1024    PROTECT-EVIL     8192      
+ GLOW            1         TAKE         1       BLIND            1         TRIPLE         1
+ HUM             2         FINGER       2       INVISIBLE        2         IMMINENT_DEATH 2
+ DARK            4         NECK         4       DETECT-ALIGNMENT 4         SEVERED        4
+ CLONE           8         BODY         8       DETECT-INVISIBLE 8         QUAD           8
+ EVIL            16        HEAD         16      DETECT-MAGIC     16        FORTIFICATION  16
+ INVISIBLE       32        LEGS         32      SENSE-LIFE       32        PERCEIVE       32
+ MAGIC           64        FEET         64      SANCTUARY        128       RAGE           64
+ NODROP          128       HANDS        128     CURSE            1024      ENDURE         128
+ BLESS           256       ARMS         256     SPHERE           2048      BLESS          256
+ ANTI_GOOD       512       SHIELD       512     POISON           4096      ARMOR          512
+ ANTI_EVIL       1024      ABOUT        1024    PROTECT-EVIL     8192      DETECT_POISON  1024
  ANTI_NEUTRAL    2048      WAIST        2048    PARALYSIS        16384     
  ANTI_WARRIOR    4096      WRIST        4096    INFRAVISION      32768     
  ANTI_THIEF      8192      WIELD        8192    DODGE            262144    
