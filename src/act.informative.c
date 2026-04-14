@@ -2108,12 +2108,16 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     { AFF_FURY, SPELL_FURY}
   };
 
-  const long aff_bits2_map[][2] = {
+const long aff_bits2_map[][2] = {
     { AFF2_TRIPLE, SKILL_TRIPLE },
     { AFF2_QUAD, SKILL_QUAD },
     { AFF2_FORTIFICATION, SPELL_FORTIFICATION },
     { AFF2_PERCEIVE, SPELL_PERCEIVE },
     { AFF2_RAGE, SPELL_RAGE }
+    { AFF2_ENDURE, SPELL_ENDURE }
+    { AFF2_BLESS, SPELL_BLESS }
+    { AFF2_ARMOR, SPELL_ARMOR }
+    { AFF2_DETECT_POISON, SPELL_DETECT_POISON }
   };
 
   /* Check equipment for affects. */
