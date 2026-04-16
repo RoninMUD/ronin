@@ -1040,7 +1040,6 @@ void show_bitvector_remove(struct char_data *ch, struct obj_data *obj_object) {
       IS_SET(OBJ_BITS2(obj_object), AFF2_DETECT_POISON)) {
     send_to_char("The green glow in your eyes fades.\n\r", ch);
   }
-  
 }
 
 

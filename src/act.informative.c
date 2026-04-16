@@ -2895,8 +2895,8 @@ const char *subclass_abbrevs[] = {
   "Gl", /* Gladiator */
   "Rn", /* Ronin */
   "My", /* Mystic */
-  "Wd", /* Warden */
-  "Pt", /* Pathfinder */
+  "Ra", /* Ranger */
+  "Tr", /* Trapper */
   "Ca", /* Cavalier */
   "Cr", /* Crusader */
   "De", /* Defiler */
