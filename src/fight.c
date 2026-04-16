@@ -2163,7 +2163,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   double evasion_magical_multiplier = 1;
   //IF we have a level 5 warden - damage reduction is increased.
   if(check_subclass(victim, SC_RANGER, 5)){
-	  evasion_physical_multiplier = 0.6;
+	  evasion_physical_multiplier = 0.65;
 	  evasion_magical_multiplier = 0.9;
   }
   //Rangers also reduce magic damage, but only by 10%
