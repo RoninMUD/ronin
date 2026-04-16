@@ -2163,7 +2163,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   double evasion_magical_multiplier = 1;
   //IF we have a level 5 warden - damage reduction is increased.
   if(check_subclass(victim, SC_RANGER, 5)){
-	  evasion_physical_multiplier = 0.6;
+	  evasion_physical_multiplier = 0.65;
 	  evasion_magical_multiplier = 0.9;
   }
   //Rangers also reduce magic damage, but only by 10%
@@ -2759,9 +2759,18 @@ int calc_ac(CHAR *ch) {
       min_pc_ac -= GET_SC_LEVEL(ch) * 10;
     }
 
+	 /* Berserk Maxes AC at -200 */
+    if (affected_by_spell(ch, SKILL_BERSERK)) {
+      
+	  if(ac < -200){
+		  ac = -200;
+	  }
+	  min_pc_ac = -200;
+    }
+
     /* Defend: AC Bonus and Max AC Adjustment */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
-      ac -= 30;
+      //ac -= 30;
       min_pc_ac = -330;
     }
 
@@ -2954,17 +2963,23 @@ int try_hit(CHAR *attacker, CHAR *defender) {
     }
   }
   //Nomads get 50% chance to crit with all hits that are successes
-  int critical_chance = 50;
+  int critical_chance = 20;
   if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)){
+	
+	//Apply Dex Modifier to Boost Crit Chance  Take the difference between dex and 18 and add 2% for each value
+	int char_dex = GET_DEX(attacker);
+	int dex_diff = MAX(0, MIN(char_dex, 25) - 18);
+	
+	critical_chance += (dex_diff * 2);
 	
 	//Awareness adds 10% to the chance.
 	if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
 		critical_chance += 10;
 	}
-	//Berserk adds another 30% chance
+	//Berserk adds another 10% chance
 	
 	if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
-		critical_chance += 30;
+		critical_chance += 10;
 	}
 	if(number(1,100) < critical_chance){
 		success = HIT_CRITICAL;
@@ -3775,7 +3790,7 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   /* Berserk */
   if (affected_by_spell(ch, SKILL_BERSERK)) {
     int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
-    int percent = 60;
+    int percent = 40;
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);

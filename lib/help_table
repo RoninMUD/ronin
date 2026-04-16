@@ -1771,8 +1771,10 @@ NOMAD
 Nomad is a strongly recommended class with good con, str and dex.  They usually
 have very good hit points too. They can't cast spells but they have good
 skills.  Nomads also get 5 natural armor points for every 5 levels, and an
-additional practice % on dodge for every 10 levels. Nomads also get a 50% chance
+additional practice % on dodge for every 10 levels. Nomads also get a 20% chance
 to critically hit the enemy.
+
+Crit Chance is improved by Dex above 18.
 
 You can improve your skills by using the practice command.
 
@@ -7030,7 +7032,7 @@ Ranger isn't able to flee, protect or rescue but does retain the
 ability to dodge.  The greatest benefit is the ability to dual.
 The dual success is dependent on how well the skill is practiced.
 
-Critical Chance is increased by 30% with this skill.
+Critical Chance is increased by 10% with this skill.
 
 See Also: SUBCLASSES RANGER
 #
@@ -7039,18 +7041,17 @@ DEFEND
 Subclass Ranger: Level 5 (Nomad)
 
 While in complete defensive mode, the Ranger completely focuses his
-mind on the movements of the creatures attacking him. This prevents the
-Ranger from doing anything but weak hits against the opponent, but
-gives him an extra -30 armor and the ability to dodge or parry attacks with
-more success.  With defend, the Ranger can get up to -330 armor. This
-is the ultimate tanking ability.
+mind on the movements of the creatures attacking him. 
+This also gives the ranger the ability to dodge
+attacks with more success.  With defend, the Ranger can get up 
+to -330 armor. This is the ultimate tanking ability.
 
-This also doubles the physical damage reduction of evasion.   You also 
+This also Raises the physical damage reduction of evasion to 35%.   You also 
 take 10% less damage from magic.  
 
 While fighting, the tank cannot change this mode.
 
-See Also: SUBCLASSES RANGER WARLORD
+See Also: SUBCLASSES RANGER
 #
 CAMP
 
@@ -7897,7 +7898,7 @@ Class: Nomad (Level 50)
 
 Usage: evasion (toggles on/off)
 
-When the Bandit/Nomad is in this protective position, all damage inflicted by
+When the Bandit/Nomad is in this protective position, all damage taken by
 physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 20%.
 

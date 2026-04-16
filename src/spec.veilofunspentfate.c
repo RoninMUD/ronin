@@ -325,10 +325,10 @@ int calculate_mortal_reward(int num_mortals) {
 
 int veil_mob_echo_upgraded(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
-	    // These are default declarations to give variables to characters.
+	// These are default declarations to give variables to characters.
     char buf[MAX_STRING_LENGTH];
-	int reward = 1;
-	int mortal_count;
+	int reward = 2;
+	//int mortal_count;
     // Define any other variables
 
     /*Don't waste any more CPU time if no one is in the room. */
@@ -336,14 +336,10 @@ int veil_mob_echo_upgraded(CHAR *mob, CHAR *ch, int cmd, char *arg)
         return FALSE;
 	}
 
-	mortal_count = count_mortals_room(mob, TRUE);
-    reward = calculate_mortal_reward(mortal_count);
-	
-	
+	//mortal_count = count_mortals_room(mob, TRUE);
+    //reward = calculate_mortal_reward(mortal_count);
 	switch (cmd)
     {
-    
-		
 		case MSG_DIE:	// on boss death reward AQP
 			sprintf(buf, "%s has been slain, the veil rewards you.\n\r", GET_SHORT(mob));
 			send_to_room(buf, CHAR_REAL_ROOM(mob));
