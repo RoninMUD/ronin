@@ -1274,8 +1274,8 @@ const char *subclass_res_bits[] = {
   "ANTI_SC_GLADIATOR",
   "ANTI_SC_RONIN",
   "ANTI_SC_MYSTIC",
-  "ANTI_SC_RANGER",
-  "ANTI_SC_TRAPPER",
+  "ANTI_SC_WARDEN",
+  "ANTI_SC_PATHFINDER",
   "ANTI_SC_CAVALIER",
   "ANTI_SC_CRUSADER",
   "ANTI_SC_DEFILER",
@@ -1418,6 +1418,10 @@ const char * const affected_bits2[] =  {
   "FORTIFICATION",
   "PERCEIVE",
   "RAGE",
+  "ENDURE",
+  "BLESS",
+  "ARMOR",
+  "DETECT_POISON",
   "\n"
 };
 
@@ -2288,8 +2292,8 @@ const char * const subclass_name[] = {
   "Gladiator",
   "Ronin",
   "Mystic",
-  "Ranger",
-  "Trapper",
+  "Warden",
+  "Pathfinder",
   "Cavalier",
   "Crusader",
   "Defiler",

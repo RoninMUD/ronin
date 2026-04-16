@@ -620,7 +620,11 @@ struct room_data
 #define AFF2_FORTIFICATION   16
 #define AFF2_PERCEIVE        32
 #define AFF2_RAGE            64
-#define AFF2_FINAL           128
+#define AFF2_ENDURE          128
+#define AFF2_BLESS           256
+#define AFF2_ARMOR           512
+#define AFF2_DETECT_POISON   1024
+#define AFF2_FINAL           2048
 /* WIP - Night
 #define AFF2_RIPOSTE         128
 #define AFF2_FEINT           256
