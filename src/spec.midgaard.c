@@ -385,16 +385,49 @@ int practice_skill(CHAR *ch, int number) {
       }
       break;
   }
-
-  if (GET_LEARNED(ch, number) >= (MAX_PRAC(ch) + bonus)) {
+  
+  #define SKILL_GEM 23901
+  
+  //IF you have a skillgem you can practice up to 127.
+  int skillgem_int = real_object(SKILL_GEM);
+  OBJ *skillgem;
+  //See if there is a skillgem in inventory
+  skillgem = get_obj_in_list_num (skillgem_int, ch->carrying);
+  
+  
+  //If there user doesnt have a skillgem,and they are at the max practice amount, abort.
+  if (GET_LEARNED(ch, number) >= (MAX_PRAC(ch) + bonus) && !skillgem) {
     send_to_char("`iYou are already learned in this area.`q\n\r", ch);
+	send_to_char("`iAcquire Skillgems to go higher.`q\n\r", ch);
 
     return TRUE;
   }
+  
+  //Check if you are maxed and are going to use a skillgem.
+  if(GET_LEARNED(ch, number) >= MAX_PRAC(ch) && skillgem){
+	  //get the current level.  If its below 127, practice once and abort.
+	  int current_skill_level = GET_LEARNED(ch, number);
+	  
+	  if(current_skill_level < 127){
+		send_to_char("`iYou practice slightly more...`q\n\r", ch);
 
+		GET_PRAC(ch)--;
+		GET_LEARNED(ch, number) += 1;
+		
+		extract_obj(skillgem);
+		return TRUE;
+		 
+	  }else{
+		  send_to_char("`iYou have maxed the skill`q\n\r", ch);
+		  return TRUE;
+		  
+	  }  
+  }
+  
   send_to_char("`iYou practice for a while...`q\n\r", ch);
 
   GET_PRAC(ch)--;
+
 
   GET_LEARNED(ch, number) = MIN((GET_LEARNED(ch, number) + MIN(int_app[GET_INT(ch)].learn, 18)), (MAX_PRAC(ch) + bonus));
 
@@ -6332,8 +6365,8 @@ int butcher_steak (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 			//The Regen bonus is based on the level of the mob divided by 10
 			mob_level_bonus = obj->obj_flags.cost / 10;
 
-			snprintf(buf, sizeof(buf), "  %-22s : %d\n\r", "mob_level_bonus", mob_level_bonus);
-			send_to_char(buf, owner);
+			//snprintf(buf, sizeof(buf), "  %-22s : %d\n\r", "mob_level_bonus", mob_level_bonus);
+			//send_to_char(buf, owner);
 			
 			
 			if (!enchanted_by(owner, BUTCHER_STEAK_ENCHANT_NAME)){
