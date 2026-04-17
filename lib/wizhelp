@@ -1071,39 +1071,39 @@ SOS SETOBJSTAT
 See also: FLAGS VALUES DRINKTYPES
 #
 "FLAGS" "EXTRA FLAGS" "WEAR FLAGS" "AFFECTED FLAGS"
-
+* - AFFECTED can only be added as a number. AFFECTED2 must be added by name
  EXTRA (2)                 WEAR (3)             AFFECTED (11)              
-                                                                           
- GLOW            1         TAKE         1       BLIND            1         
- HUM             2         FINGER       2       INVISIBLE        2         
- DARK            4         NECK         4       DETECT-ALIGNMENT 4         
- CLONE           8         BODY         8       DETECT-INVISIBLE 8         
- EVIL            16        HEAD         16      DETECT-MAGIC     16        
- INVISIBLE       32        LEGS         32      SENSE-LIFE       32        
- MAGIC           64        FEET         64      SANCTUARY        128       
- NODROP          128       HANDS        128     CURSE            1024      
- BLESS           256       ARMS         256     SPHERE           2048      
- ANTI_GOOD       512       SHIELD       512     POISON           4096      
- ANTI_EVIL       1024      ABOUT        1024    PROTECT-EVIL     8192      
- ANTI_NEUTRAL    2048      WAIST        2048    PARALYSIS        16384     
- ANTI_WARRIOR    4096      WRIST        4096    INFRAVISION      32768     
- ANTI_THIEF      8192      WIELD        8192    DODGE            262144    
- ANTI_CLERIC     16384     HOLD         16384   SNEAK            524288    
- ANTI_MAGIC_USER 32768     THROW        32768   HIDE             1048576   
- ANTI_MORTAL     65536     LIGHT-SOURCE 65536   FLY              16777216  
- ANTI_MALE       131072    NO_REMOVE    131072  IMINV            67108864  
- ANTI_FEMALE     262144    NO_SCAVENGE  262144  INVUL            134217728 
- ANTI_RENT       524288    QUESTWEAR    524288  DUAL             268435456 
- ANTI_NINJA      1048576                        FURY             536870912 
- ANTI_NOMAD      2097152                                             
- ANTI_PALADIN    4194304                                             
- ANTI_ANTIPALADIN8388608                                             
- ANTI_AVATAR     16777216                                            
- ANTI_BARD       33554432                                            
- ANTI_COMMANDO   67108864                                            
- LIMITED         134217728                                           
- ANTI-AUCTION    268435456                                           
- CHAOTIC         536870912                                           
+                                                                      
+  GLOW            1         TAKE         1       BLIND            1        
+ HUM              2         FINGER       2       INVISIBLE        2
+ DARK             4         NECK         4       DETECT-ALIGNMENT 4 
+ CLONE            8         BODY         8       DETECT-INVISIBLE 8
+ EVIL             16        HEAD         16      DETECT-MAGIC     16        
+ INVISIBLE        32        LEGS         32      SENSE-LIFE       32        
+ MAGIC            64        FEET         64      SANCTUARY        128       
+ NODROP           128       HANDS        128     CURSE            1024      
+ BLESS            256       ARMS         256     SPHERE           2048      
+ ANTI_GOOD        512       SHIELD       512     POISON           4096      
+ ANTI_EVIL        1024      ABOUT        1024    PROTECT-EVIL     8192      
+ ANTI_NEUTRAL     2048      WAIST        2048    PARALYSIS        16384    
+ ANTI_WARRIOR     4096      WRIST        4096    INFRAVISION      32768     
+ ANTI_THIEF       8192      WIELD        8192    DODGE            262144    
+ ANTI_CLERIC      16384     HOLD         16384   SNEAK            524288    
+ ANTI_MAGIC_USER  32768     THROW        32768   HIDE             1048576   
+ ANTI_MORTAL      65536     LIGHT-SOURCE 65536   FLY              16777216  
+ ANTI_MALE        131072    NO_REMOVE    131072  IMINV            67108864 
+ ANTI_FEMALE      262144    NO_SCAVENGE  262144  INVUL            134217728
+ ANTI_RENT        524288    QUESTWEAR    524288  DUAL             268435456
+ ANTI_NINJA       1048576                        FURY             536870912
+ ANTI_NOMAD       2097152                                             
+ ANTI_PALADIN     4194304                                             
+ ANTI_ANTIPALADIN 8388608                                             
+ ANTI_AVATAR      16777216                                            
+ ANTI_BARD        33554432                                            
+ ANTI_COMMANDO    67108864                                            
+ LIMITED          134217728                                           
+ ANTI-AUCTION     268435456                                           
+ CHAOTIC          536870912                                           
  RANDOM 
  ALL_DECAY  
  EQ_DECAY 
@@ -1112,6 +1112,20 @@ See also: FLAGS VALUES DRINKTYPES
  NO_PUT 
  NO_TAKE_MOB 
 
+AFFECTED2 (11) 
+TRIPLE         1
+IMMINENT_DEATH 2
+SEVERED        4
+QUAD           8
+FORTIFICATION  16
+PERCEIVE       32
+RAGE           64
+ENDURE         128
+BLESS          256
+ARMOR          512
+DETECT_POISON  1024
+
+		 
 #
 "SUBCLASS RESTRICTIONS"
 

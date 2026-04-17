@@ -1418,6 +1418,10 @@ const char * const affected_bits2[] =  {
   "FORTIFICATION",
   "PERCEIVE",
   "RAGE",
+  "ENDURE",
+  "BLESS",
+  "ARMOR",
+  "DETECT_POISON",
   "\n"
 };
 

@@ -2113,7 +2113,11 @@ void do_affect(CHAR *ch, char *arg, int cmd) {
     { AFF2_QUAD, SKILL_QUAD },
     { AFF2_FORTIFICATION, SPELL_FORTIFICATION },
     { AFF2_PERCEIVE, SPELL_PERCEIVE },
-    { AFF2_RAGE, SPELL_RAGE }
+    { AFF2_RAGE, SPELL_RAGE },
+    { AFF2_ENDURE, SPELL_ENDURE },
+    { AFF2_BLESS, SPELL_BLESS },
+    { AFF2_ARMOR, SPELL_ARMOR },
+    { AFF2_DETECT_POISON, SPELL_DETECT_POISON }
   };
 
   /* Check equipment for affects. */
