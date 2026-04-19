@@ -1005,12 +1005,6 @@ void gain_exp(CHAR *ch, int gain)
 		
 		char buf2[MAX_STRING_LENGTH];
 
-		snprintf(buf2, sizeof(buf2),
-				 "DEBUG: old_exp=%d gain=%d new_total=%ld",
-				 current, gain, total);
-
-		send_to_char(buf2, ch); 
-		
 
 		/* Step 2: Handle overflow into remort pool */
 		if (total > MAX_CH_EXP) {

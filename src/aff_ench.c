@@ -37,57 +37,16 @@ const struct ench_priority_t ench_priority_table[] = {
   { "Mantra", SKILL_MANTRA }
 };
 
-//Set minimum and maximum values for skills.  This will stop looping with gear.  
-#define CLAMP(val, min, max) ((val) < (min) ? (min) : ((val) > (max) ? (max) : (val)))
-//GET_LEARNED(ch, SKILL_BACKSTAB) = CLAMP(GET_LEARNED(ch, SKILL_BACKSTAB) + modifier, 0, 127);
-
-
-int calculate_new_skill_value(int old_val,int modifier,bool wasNegative){
-	
-	int new_val = old_val + modifier;
-
-	/* Always cap upper bound */
-	if (new_val > 127)
-		new_val = 127;
-
-	/* Conditional floor logic */
-	if (old_val > 85 && new_val < 85){
-		new_val = 85;
-	}
-	else if (old_val < 85 && new_val < 0){
-		new_val = 0;
-	}
-	//Add a check to ensure that negative modifiers dont give additional boosts.
-	
-	//If was Negative is true, it means its trying to add values.   
-	//If the current value is 85, and the modifier puts it above, then cap to 85	
-	
-	if(wasNegative){
-		new_val = old_val;
-	}
-	return new_val;
-	
-}
-
 void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long bitvector2, bool add) {
-  bool wasNegative = FALSE;
   if (add) {
     SET_BIT(GET_AFF(ch), bitvector);
     SET_BIT(GET_AFF2(ch), bitvector2);
-	if(modifier < 0){
-		wasNegative = TRUE;
-	}
   }
   else {
     REMOVE_BIT(GET_AFF(ch), bitvector);
     REMOVE_BIT(GET_AFF2(ch), bitvector2);
-    
-    if(modifier < 0){
-		wasNegative = TRUE;
-	}
-	
-	modifier = -modifier;
 
+    modifier = -modifier;
   }
 
   switch (location) {
@@ -107,19 +66,15 @@ void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long 
     case APPLY_WIS:
       GET_WIS(ch) += modifier;
       break;
-    
-	//Clamping values to ensure we dont hit the max allowed value.
+
     case APPLY_MANA:
-      //GET_MAX_MANA_POINTS(ch) += modifier;
-	  GET_MAX_MANA_POINTS(ch) = CLAMP(GET_MAX_MANA_POINTS(ch) + modifier, 0, 32760);
+      GET_MAX_MANA_POINTS(ch) += modifier;
       break;
     case APPLY_HIT:
-      //GET_MAX_HIT_POINTS(ch) += modifier;
-	  GET_MAX_HIT_POINTS(ch) = CLAMP(GET_MAX_HIT_POINTS(ch) + modifier, 0, 32760);
+      GET_MAX_HIT_POINTS(ch) += modifier;
       break;
     case APPLY_MOVE:
-      //GET_MAX_MOVE_POINTS(ch) += modifier;
-	  GET_MAX_MOVE_POINTS(ch) = CLAMP(GET_MAX_MOVE_POINTS(ch)+ modifier, 0, 32760);
+      GET_MAX_MOVE_POINTS(ch) += modifier;
       break;
 
     case APPLY_ARMOR:
@@ -162,90 +117,90 @@ void aff_modify_char(CHAR *ch, int modifier, int location, long bitvector, long 
   }
 
   if (GET_SKILLS(ch)) {
-	  switch (location) {
-		case APPLY_SKILL_SNEAK:
-		  GET_LEARNED(ch, SKILL_SNEAK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_SNEAK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_HIDE:
-		  GET_LEARNED(ch, SKILL_HIDE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_HIDE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_STEAL:
-		  GET_LEARNED(ch, SKILL_STEAL) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_STEAL),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_BACKSTAB:
-		  GET_LEARNED(ch, SKILL_BACKSTAB) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_BACKSTAB),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_PICK_LOCK:
-		  GET_LEARNED(ch, SKILL_PICK_LOCK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_PICK_LOCK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_KICK:
-		  GET_LEARNED(ch, SKILL_KICK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_KICK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_BASH:
-		  GET_LEARNED(ch, SKILL_BASH) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_BASH),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_RESCUE:
-		  GET_LEARNED(ch, SKILL_RESCUE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_RESCUE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_BLOCK:
-		  GET_LEARNED(ch, SKILL_BLOCK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_BLOCK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_KNOCK:
-		  GET_LEARNED(ch, SKILL_KNOCK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_KNOCK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_PUNCH:
-		  GET_LEARNED(ch, SKILL_PUNCH) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_PUNCH),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_PARRY:
-		  GET_LEARNED(ch, SKILL_PARRY) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_PARRY),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_DUAL:
-		  GET_LEARNED(ch, SKILL_DUAL) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_DUAL),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_THROW:
-		  GET_LEARNED(ch, SKILL_THROW) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_THROW),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_DODGE:		  
-		   GET_LEARNED(ch, SKILL_DODGE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_DODGE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_PEEK:
-		  GET_LEARNED(ch, SKILL_PEEK) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_PEEK),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_BUTCHER:
-		  GET_LEARNED(ch, SKILL_BUTCHER) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_BUTCHER),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_TRAP:
-		  GET_LEARNED(ch, SKILL_TRAP) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_TRAP),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_DISARM:
-		  GET_LEARNED(ch, SKILL_DISARM) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_DISARM),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_SUBDUE:
-		  GET_LEARNED(ch, SKILL_SUBDUE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_SUBDUE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_CIRCLE:
-		  GET_LEARNED(ch, SKILL_CIRCLE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_CIRCLE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_TRIPLE:
-		  GET_LEARNED(ch, SKILL_TRIPLE) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_TRIPLE),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_PUMMEL:
-		  GET_LEARNED(ch, SKILL_PUMMEL) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_PUMMEL),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_AMBUSH:
-		  GET_LEARNED(ch, SKILL_AMBUSH) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_AMBUSH),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_ASSAULT:
-		  GET_LEARNED(ch, SKILL_ASSAULT) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_ASSAULT),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_DISEMBOWEL:
-		  GET_LEARNED(ch, SKILL_DISEMBOWEL) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_DISEMBOWEL),modifier,wasNegative);
-		  break;
-		case APPLY_SKILL_TAUNT:
-		  GET_LEARNED(ch, SKILL_TAUNT) = calculate_new_skill_value(GET_LEARNED(ch, SKILL_TAUNT),modifier,wasNegative);
-		  break;
-	  }
-	}
+    switch (location) {
+      case APPLY_SKILL_SNEAK:
+        GET_LEARNED(ch, SKILL_SNEAK) += modifier;
+        break;
+      case APPLY_SKILL_HIDE:
+        GET_LEARNED(ch, SKILL_HIDE) += modifier;
+        break;
+      case APPLY_SKILL_STEAL:
+        GET_LEARNED(ch, SKILL_STEAL) += modifier;
+        break;
+      case APPLY_SKILL_BACKSTAB:
+        GET_LEARNED(ch, SKILL_BACKSTAB) += modifier;
+        break;
+      case APPLY_SKILL_PICK_LOCK:
+        GET_LEARNED(ch, SKILL_PICK_LOCK) += modifier;
+        break;
+      case APPLY_SKILL_KICK:
+        GET_LEARNED(ch, SKILL_KICK) += modifier;
+        break;
+      case APPLY_SKILL_BASH:
+        GET_LEARNED(ch, SKILL_BASH) += modifier;
+        break;
+      case APPLY_SKILL_RESCUE:
+        GET_LEARNED(ch, SKILL_RESCUE) += modifier;
+        break;
+      case APPLY_SKILL_BLOCK:
+        GET_LEARNED(ch, SKILL_BLOCK) += modifier;
+        break;
+      case APPLY_SKILL_KNOCK:
+        GET_LEARNED(ch, SKILL_KNOCK) += modifier;
+        break;
+      case APPLY_SKILL_PUNCH:
+        GET_LEARNED(ch, SKILL_PUNCH) += modifier;
+        break;
+      case APPLY_SKILL_PARRY:
+        GET_LEARNED(ch, SKILL_PARRY) += modifier;
+        break;
+      case APPLY_SKILL_DUAL:
+        GET_LEARNED(ch, SKILL_DUAL) += modifier;
+        break;
+      case APPLY_SKILL_THROW:
+        GET_LEARNED(ch, SKILL_THROW) += modifier;
+        break;
+      case APPLY_SKILL_DODGE:
+        GET_LEARNED(ch, SKILL_DODGE) += modifier;
+        break;
+      case APPLY_SKILL_PEEK:
+        GET_LEARNED(ch, SKILL_PEEK) += modifier;
+        break;
+      case APPLY_SKILL_BUTCHER:
+        GET_LEARNED(ch, SKILL_BUTCHER) += modifier;
+        break;
+      case APPLY_SKILL_TRAP:
+        GET_LEARNED(ch, SKILL_TRAP) += modifier;
+        break;
+      case APPLY_SKILL_DISARM:
+        GET_LEARNED(ch, SKILL_DISARM) += modifier;
+        break;
+      case APPLY_SKILL_SUBDUE:
+        GET_LEARNED(ch, SKILL_SUBDUE) += modifier;
+        break;
+      case APPLY_SKILL_CIRCLE:
+        GET_LEARNED(ch, SKILL_CIRCLE) += modifier;
+        break;
+      case APPLY_SKILL_TRIPLE:
+        GET_LEARNED(ch, SKILL_TRIPLE) += modifier;
+        break;
+      case APPLY_SKILL_PUMMEL:
+        GET_LEARNED(ch, SKILL_PUMMEL) += modifier;
+        break;
+      case APPLY_SKILL_AMBUSH:
+        GET_LEARNED(ch, SKILL_AMBUSH) += modifier;
+        break;
+      case APPLY_SKILL_ASSAULT:
+        GET_LEARNED(ch, SKILL_ASSAULT) += modifier;
+        break;
+      case APPLY_SKILL_DISEMBOWEL:
+        GET_LEARNED(ch, SKILL_DISEMBOWEL) += modifier;
+        break;
+      case APPLY_SKILL_TAUNT:
+        GET_LEARNED(ch, SKILL_TAUNT) += modifier;
+        break;
+    }
+  }
 }
 
 void aff_total_char(CHAR *ch) {
