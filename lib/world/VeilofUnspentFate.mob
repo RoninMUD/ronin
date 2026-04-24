@@ -245,5 +245,107 @@ why youre here and whether youre worth his time.
 0 1 0 1073741823
 K
 0 0 0 0 0 0 0
+#23913
+wisp veil echo~
+Veil Wisp~
+A flickering veil wisp jitters here, phasing in and out of sight.
+~
+This small, unstable mote of pale light struggles to maintain a
+consistent form. It stretches and compresses erratically, as
+though caught between states of existence. Each flicker leaves 
+behind a faint afterimage that lingers just a moment too long.
+~
+16456 0 0 Y
+50 -18 -15 50d40+12740 7d7+18
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23914
+fragment echo~
+Echo Fragment~
+An echo fragment lingers here, mirroring movements it does not understand.
+~
+This distorted humanoid shape appears almost real at first glance, but
+its motions lag slightly behind reality. It mimics gestures with
+unsettling imprecision, as though copying from memory rather than
+observation. Its featureless face occasionally shifts, trying and failing
+to form identity.
+~
+16456 0 0 Y
+50 -18 -16 51d41+12268 8d8+19
+0 0
+8 8 0
+66 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23915
+horror shardbound echo~
+Shardbound Horror~
+A shardbound horror looms here, its body cracking and reforming.
+~
+This hulking mass of fractured crystal and flesh moves with
+grinding, uneven force. Jagged shards erupt from its form, breaking
+away and reforming as it shifts. Light bends sharply around it, and 
+each movement produces a harsh scraping sound like stone dragged 
+across glass.
+~
+16456 0 0 Y
+51 -18 -17 50d41+12075 7d8+20
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23916
+leech memory echo~
+Memory Leech~
+A memory leech clings nearby, pulsing with stolen thoughts.
+~
+A slick, shadowy mass with no fixed shape, the memory leech flows across
+surfaces with unsettling ease. Faint whispers emanate from within it.
+Fragments of voices, emotions, and half-remembered thoughts. Its presence
+leaves the mind feeling slightly hollow, as though something has been 
+quietly removed.
+~
+16458 0 0 Y
+51 -18 -15 51d42+12942 8d9+21
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#23917
+engine refraction echo~
+The Refraction Engine~
+The engine pulses with its crystalline form with energy
+~
+A towering lattice of shifting crystal floats at the center of the
+chamber, its many facets refracting light into impossible angles.
+Within its core, distorted shapes press outward. Faces frozen in silent
+screams, limbs reaching toward freedom, identities stripped of meaning.
+
+The structure hums with relentless purpose, drawing in fragments of 
+reality and compressing them into dense, radiant forms. Each pulse 
+tightens the lattice, refining what it has taken into something 
+tangible something valuable.
+
+It does not think.
+It does not feel.
+It only refines.
+~
+16458 134219776 0 Y
+51 -18 -16 50d42+30000 7d9+22
+0 0
+8 8 0
+67 20480 30d30+30 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
 #0
 $~

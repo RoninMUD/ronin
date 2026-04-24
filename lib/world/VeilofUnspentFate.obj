@@ -28,6 +28,12 @@ board quest large~
 `N    Beware: Too many who enter will fracture the Veil—
 `N    and what lies beyond becomes far less certain.
 
+   [`Kskills`Q]
+`H    A measured fragment of fate, controlled and finite.
+`H    Those that can condense skill exist within.
+
+
+
 `O--------------------------------------------------`x
 
 `H The remaining entries are either faded beyond recognition...
@@ -37,6 +43,27 @@ board quest large~
 X
 ~
 0 0 0
+M
+~
+~
+~
+~
+#23901
+skillgem gem translucent~
+A Translucent Skillgem~
+An oddly shaped gem sits on the ground~
+~
+12 134217729 1
+0 0 0 0
+1 1 1
+0
+E
+skillgem gem translucent~
+A translucent gem of condensed skill.  Can be used
+to train your skills above normal limits~
+X
+~
+64 0 0
 M
 ~
 ~
