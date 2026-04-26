@@ -1305,7 +1305,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
   /* Trusty Steed */
   if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRUSTY_STEED) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED)) {
-    check = number(1, 121) - GET_WIS_APP(ch);
+    check = number(1, 137) - GET_WIS_APP(ch);
 
     if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
       set_pos = stack_position(victim, POSITION_RESTING);
