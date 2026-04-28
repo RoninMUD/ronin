@@ -534,6 +534,15 @@ int practice_skill(CHAR *ch, int number) {
 	  //get the current level.  If its below 127, practice once and abort.
 	  int current_skill_level = GET_LEARNED(ch, number);
 	  
+	  //We need to cap skills that will break the game.
+	  // Cap, Throw, Pick, Knock, Disarm,Protect
+	  if(number == SKILL_PICK_LOCK || number == SKILL_DISARM || number == SKILL_THROW || number == SKILL_PROTECT || number == SKILL_KNOCK){
+		  send_to_char("`iYou have already mastered this skill.`q\n\r", ch);  
+		  return TRUE;
+	  }
+	  
+	  
+	  
 	  if(current_skill_level < 127){
 		send_to_char("`iYou practice slightly more...`q\n\r", ch);
 
@@ -6502,9 +6511,6 @@ int butcher_steak (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 			//If you are Well Fed - You dont get the healing.  That way you can eat to fill hunger.
 			//The Regen bonus is based on the level of the mob divided by 10
 			mob_level_bonus = obj->obj_flags.cost / 10;
-
-			//snprintf(buf, sizeof(buf), "  %-22s : %d\n\r", "mob_level_bonus", mob_level_bonus);
-			//send_to_char(buf, owner);
 			
 			
 			if (!enchanted_by(owner, BUTCHER_STEAK_ENCHANT_NAME)){
