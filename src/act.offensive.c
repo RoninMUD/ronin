@@ -353,8 +353,9 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
   int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Juggernaut */
+  //Should improve success to 
   if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-    check -= 10;
+    check -= 40;
   }
 
   /* Blur */

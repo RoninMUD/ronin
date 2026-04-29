@@ -542,7 +542,6 @@ int practice_skill(CHAR *ch, int number) {
 	  }
 	  
 	  
-	  
 	  if(current_skill_level < 127){
 		send_to_char("`iYou practice slightly more...`q\n\r", ch);
 
@@ -6517,7 +6516,7 @@ int butcher_steak (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 				send_to_char("You feel very well fed.\n\r", owner);
 				
 				
-				int hp_gain   = GET_MAX_HIT(owner) / 10;
+				int hp_gain   = GET_MAX_HIT(owner) / 5;
 				int mana_gain = GET_MAX_MANA(owner) / 10;
 				int move_gain = (GET_MAX_MOVE(owner) * 3) / 10;
 
