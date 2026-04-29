@@ -472,14 +472,13 @@ int veil_memory_leech(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
             act("$n collapses into a dim glow that condenses into a small gem in your inventory.",
                 0, mob, 0, 0, TO_ROOM);
-				
-			obj=read_object(SKILLGEM, VIRTUAL);
 
             for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
 				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
 				
+				obj=read_object(SKILLGEM, VIRTUAL);
 				obj_to_char(obj,vict);
 				
 			}
@@ -559,15 +558,14 @@ int veil_refraction_engine(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
         case MSG_DIE:
 
-            act("The Refraction Engine collapses inward, condensing into radiant crystalline gems!", 0, mob, 0, 0, TO_ROOM);
-
-           obj=read_object(SKILLGEM, VIRTUAL);
+            act("The Refraction Engine collapses inward, condensing into radiant crystalline gems!", 0, mob, 0, 0, TO_ROOM);          
 
             for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
 			{
 				next_vict = CHAR_NEXT_IN_ROOM(vict);
 				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
 				
+				obj=read_object(SKILLGEM, VIRTUAL);
 				obj_to_char(obj,vict);
 				
 			}
