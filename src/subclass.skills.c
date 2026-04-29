@@ -258,7 +258,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Blur*/
   if (affected_by_spell(ch, SPELL_BLUR)) {
@@ -386,7 +386,7 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   if (check > GET_LEARNED(ch, SKILL_TIGERKICK)) {
     act("You try to tigerkick $N, but miss.", FALSE, ch, 0, victim, TO_CHAR);
@@ -665,7 +665,7 @@ void do_lunge(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Bonus for lunging at a target already in combat. */
   if (GET_OPPONENT(victim)) {
@@ -774,7 +774,7 @@ void do_smite(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_WIS_APP(ch));
+  int check = number(1, 137) - MAX(GET_STR_TO_HIT(ch), GET_WIS_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_SMITE)) {
     act("You try to smite $N, but your concentration falters.", FALSE, ch, 0, victim, TO_CHAR);
@@ -899,7 +899,7 @@ void do_flank(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 131) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   if (AWAKE(victim) && (check > GET_LEARNED(ch, SKILL_FLANK))) {
     act("You try to flank $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1130,7 +1130,7 @@ void do_batter(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  check = number(1, 131) - GET_DEX_APP(ch);
+  check = number(1, 137) - GET_DEX_APP(ch);
 
   if (check > GET_LEARNED(ch, SKILL_BATTER))
   {
@@ -1223,7 +1223,7 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
+  int check = number(1, 137) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_HEADBUTT)) {
     act("You miss $N with your headbutt.", FALSE, ch, NULL, victim, TO_CHAR);
@@ -1316,12 +1316,18 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 101) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* The Shogun title increases "concentration" rate. */
   if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
     check -= 5;
   }
+  
+   /* Blur*/
+  if (affected_by_spell(ch, SPELL_BLUR)) {
+    check -= GET_LEVEL(ch) / 7;
+  }
+  
 
   if (check > GET_LEARNED(ch, SKILL_BANZAI)) {
     act("You try to banzai charge $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
@@ -1351,11 +1357,16 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
   damage(ch, victim, number(200, 300), SKILL_BANZAI, DAM_PHYSICAL);
 
   if (SAME_ROOM(victim, ch)) {
-    check = number(1, 101) - GET_DEX_APP(ch);
+    check = number(1, 137) - GET_DEX_APP(ch);
 
     /* The Shogun title increases "concentration" rate. */
     if (enchanted_by_type(ch, ENCHANT_SHOGUN)) {
       check -= 5;
+    }
+	
+	 /* Blur*/
+    if (affected_by_spell(ch, SPELL_BLUR)) {
+      check -= GET_LEVEL(ch) / 7;
     }
 
     if (check <= GET_LEARNED(ch, SKILL_BANZAI)) {
@@ -1485,7 +1496,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 101) - ((GET_INT_CONC(ch) + GET_WIS_CONC(ch)) / 10);
+  int check = number(1, 127) - ((GET_INT_CONC(ch) + GET_WIS_CONC(ch)) / 10);
 
   /* Inner Peace */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
@@ -1827,7 +1838,7 @@ void do_clobber(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
+  int check = number(1, 137) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   if (check > GET_LEARNED(ch, SKILL_CLOBBER)) {
     act("Your attempt to clobber $N misses everything but the air.", FALSE, ch, 0, victim, TO_CHAR);

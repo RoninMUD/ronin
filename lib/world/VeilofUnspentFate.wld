@@ -385,6 +385,241 @@ D0
 ~
 0 -1 23916
 S
+#23920
+Veil Threshold~
+A thin, shimmering membrane stretches across the space before you, rippling
+like oil across still water. Beyond it lies a fractured landscape of
+floating stone and warped light. The air here feels heavy, as though
+resisting your presence, and faint whispers brush against your thoughts 
+without forming words.
+Behind you, reality feels distantmuted and safe. Ahead, the Veil 
+distorts everything it touches.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23921
+S
+#23921
+Fractured Causeway~
+A narrow path of broken stone slabs floats in a void of pale gray
+nothingness. Each step sends faint ripples through the air, as if
+the ground itself were uncertain of your weight. Gaps between the
+stones reveal no bottom, only an endless, shifting haze.
+Some stones appear solid until you focus on them, at which point
+they subtly drift out of alignment.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23922
+D2
+~
+~
+0 -1 23920
+S
+#23922
+Echoing Vestibule~
+A circular chamber of smooth, colorless stone greets you. Every sound
+here repeats itself, but not quite correctly. Footsteps return a
+heartbeat too late, and your breathing seems to belong to someone else.
+The echoes overlap and distort, forming a low murmur that never
+settles into silence.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23923
+D2
+~
+~
+0 -1 23921
+S
+#23923
+Hall of Split Paths~
+The corridor splits into two identical passages, each lined with faintly
+glowing seams in the walls. Both directions feel equally real, yet
+something about them is wrong. Your vision flickers slightly when you
+try to focus on either path for too long.
+A faint sense of dj vu lingers here, as though youve already chosen
+and chosen incorrectly.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23923
+D1
+~
+~
+0 -1 23924
+D2
+~
+~
+0 -1 23922
+D3
+~
+~
+0 -1 23923
+S
+#23924
+Memory Bleed Chamber~
+The walls of this chamber ripple like liquid glass, forming fleeting
+images that vanish the moment you try to focus on them. Figures move
+within the surface. Adventurers perhaps, but their features are 
+blurred and indistinct.
+For a brief moment, one turns toward you, wearing your face. 
+Then it melts away.
+A faint pressure builds behind your eyes, as though something is 
+being quietly taken.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23925
+D3
+~
+~
+0 -1 23923
+S
+#23925
+Inverted Stairwell~
+A spiraling staircase stretches upward or downward. Its difficult to
+tell. The steps curve along the interior of a hollow shaft, but gravity
+feels inconsistent, shifting subtly with each movement.
+Looking up reveals darkness. Looking down reveals the same.
+Despite climbing, you feel as though you are descending 
+deeper into the Veil.
+~
+239 1140883456 0
+D3
+~
+~
+0 -1 23924
+D4
+~
+~
+0 -1 23926
+D5
+~
+~
+0 -1 23926
+S
+#23926
+Shardfall Corridor~
+Jagged crystal shards jut from the walls and ceiling, catching and
+bending light into blinding fragments. Colors split and scatter across
+every surface, creating the illusion of movement where there is none.
+
+Occasionally, a shard vibrates softly, producing a faint, glasslike 
+chime that resonates through the corridor.
+~
+239 1140883456 0
+D2
+~
+~
+0 -1 23927
+D5
+~
+~
+0 -1 23925
+S
+#23927
+The False Sanctuary~
+This chamber resembles a place of restsmooth floors, gentle light, and
+a quiet stillness that feels almost comforting. The air is warm, and
+the oppressive tension of the Veil seems to lessen here.
+But the longer you remain, the more the illusion cracks. Shadows
+stretch in the wrong direction. The light flickers without cause.
+This place is not what it pretends to be.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23926
+D2
+~
+~
+0 -1 23928
+S
+#23928
+Reflection Pool~
+A perfectly still pool of liquid glass fills the center of this room.
+Its surface reflects the chamber with unnatural clarity, but the figure
+staring back at you is not quite right.
+Your reflection lags behind your movements, smiles when you do not, and
+watches you with knowing intent.
+
+Ripples form without disturbance, distorting the image into
+something unrecognizable.
+~
+239 1140883456 0
+D0
+~
+~
+0 -1 23927
+D3
+~
+~
+0 -1 23929
+S
+#23929
+Hall of Unfinished Forms~
+Half-formed shapes protrude from the walls. Limbs without bodies, faces
+without features, torsos that end in jagged edges. They twitch
+occasionally, as though struggling to complete themselves.
+A low, wet sound echoes through the hall, like something trying 
+and failing to exist.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23928
+D3
+~
+~
+0 -1 23930
+S
+#23930
+Crystalline Conduit~
+Streams of faint energy flow through crystalline veins embedded in the
+walls, all converging toward a single direction. The air hums with
+intensity, and each breath carries a sharp, metallic taste.
+The Veil feels thinner here. Stretched to its limit as though something
+ahead is pulling everything inward.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23929
+D3
+~
+~
+0 -1 23931
+S
+#23931
+Heart of Refraction~
+The chamber opens into a vast void where a massive lattice of crystal
+floats in suspended stillness. Its many facets shift constantly, bending
+light into impossible geometries.
+Within its core, shapes press outward. Faces, limbs, fragments of beings
+trapped and compressed into raw essence.
+With every pulse, the structure hums, drawing in unseen energies and
+refining them into something denser more permanent.
+~
+239 1140883456 0
+D1
+~
+~
+0 -1 23930
+S
 #23999
 Temporary Room~
 Temporary description.

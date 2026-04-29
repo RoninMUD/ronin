@@ -166,6 +166,7 @@ OBJS_RONIN_SPEC = \
 	spec.newbie.o \
 	spec.newt.o \
 	spec.norway.o \
+	spec.ossuaryofthefallentitan.o\
 	spec.pagoda.o \
 	spec.pirate.o \
 	spec.questgearII.o \

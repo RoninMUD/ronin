@@ -350,7 +350,7 @@ void do_spin_kick(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  int check = number(1, 101) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Juggernaut */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
@@ -613,7 +613,7 @@ void do_assassinate(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  int check = number(1, 111) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Dark Pact */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_INFIDEL, 1) && IS_EVIL(ch)) {
@@ -853,7 +853,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  int check = number(1, 191) - GET_DEX_APP(ch);
+  int check = number(1, 197) - GET_DEX_APP(ch);
 
   /* Position bonus. */
   if (GET_POS(victim) < POSITION_FIGHTING) {
@@ -1080,7 +1080,7 @@ void do_flee(CHAR *ch, char *argument, int cmd) {
     if (CAN_GO(ch, flee_dir) && !IS_SET(ROOM_FLAGS(dest_room_rnum), DEATH) && (!IS_NPC(ch) || !IS_SET(ROOM_FLAGS(dest_room_rnum), NO_MOB))) {
       /* Check for a blocking opponent. */
       if (GET_OPPONENT(ch) && !IS_NPC(GET_OPPONENT(ch)) && IS_SET(GET_TOGGLES(GET_OPPONENT(ch)), TOG_BLOCK)) {
-        int block_check = number(1, 111);
+        int block_check = number(1, 137);
         int block_skill = GET_LEARNED(GET_OPPONENT(ch), SKILL_BLOCK) + GET_DEX_APP(GET_OPPONENT(ch));
         int auto_block_chance = 0;
 
@@ -1235,7 +1235,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 121) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Blur */
   if (affected_by_spell(ch, SPELL_BLUR)) {
@@ -1305,7 +1305,7 @@ void do_pummel(CHAR *ch, char *arg, int cmd) {
 
   /* Trusty Steed */
   if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRUSTY_STEED) && IS_SET(GET_TOGGLES(ch), TOG_TRUSTY_STEED)) {
-    check = number(1, 121) - GET_WIS_APP(ch);
+    check = number(1, 137) - GET_WIS_APP(ch);
 
     if ((check <= GET_LEARNED(ch, SKILL_TRUSTY_STEED)) && breakthrough(ch, victim, SKILL_TRUSTY_STEED, BT_INVUL)) {
       set_pos = stack_position(victim, POSITION_RESTING);
@@ -1388,7 +1388,7 @@ void do_bash(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 101) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
+  int check = number(1, 137) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   /* Templar SC2: Martial Training - Bonus to Bash skill check. */
   if (IS_MORTAL(ch) && check_subclass(ch, SC_TEMPLAR, 2)) {
@@ -1569,7 +1569,7 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  int check = number(1, 101);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Anyone can rescue a player that is level 15 or below. Protect grants automatic success. */
   if (IS_MORTAL(ch) && (GET_LEVEL(victim) > 15) && !check_subclass(ch, SC_WARLORD, 2)) {
@@ -1913,7 +1913,7 @@ void do_disembowel(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  int check = number(1, 131) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
+  int check = number(1, 137) - MAX(GET_STR_TO_HIT(ch), GET_DEX_APP(ch));
 
   if (IS_IMMUNE(victim, IMMUNE_DISEMBOWEL) || (check > GET_LEARNED(ch, SKILL_DISEMBOWEL))) {
     act("$N completely avoids your attempt to spill $S guts.", FALSE, ch, 0, victim, TO_CHAR);
@@ -2111,7 +2111,7 @@ void do_coin_toss(CHAR *ch, char *argument, int cmd) {
   int num_mobs = count_mobs_real_room(CHAR_REAL_ROOM(ch));
   int scattered_coins = ((wager * number(10, 25)) / 100);
 
-  int check = number(1, 101) - GET_DEX_APP(ch);
+  int check = number(1, 137) - GET_DEX_APP(ch);
 
   /* Vehemence */
   if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE)) {

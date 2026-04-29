@@ -292,6 +292,123 @@ void list_spells_to_prac(CHAR *ch, bool list_all) {
 }
 
 
+
+int calculate_natural_stat(CHAR *ch,int skill_number){
+
+	int affect_number;
+	int compare_number = 0;
+	int modifier_total = 0;
+	int modifier_number;
+	
+	for (int i = 0; i < MAX_WEAR; i++) {
+		if (EQ(ch, i)) {
+		  for (int j = 0; j < MAX_OBJ_AFFECT; j++) {
+			
+				modifier_number = OBJ_AFF_LOC(EQ(ch, i), j);
+				affect_number = OBJ_AFF_MOD(EQ(ch, i), j);
+				
+				switch (skill_number) {
+				  case SKILL_SNEAK:
+					  compare_number = APPLY_SKILL_SNEAK;
+					break;
+				  case SKILL_HIDE:
+					compare_number = APPLY_SKILL_HIDE;
+					break;
+				  case SKILL_STEAL:
+					compare_number = APPLY_SKILL_STEAL;
+					break;
+				  case SKILL_BACKSTAB:
+					compare_number = APPLY_SKILL_BACKSTAB;
+					break;
+				  case SKILL_PICK_LOCK:
+					compare_number = APPLY_SKILL_PICK_LOCK;
+					break;
+				  case SKILL_KICK:
+					compare_number = APPLY_SKILL_KICK;
+					break;
+				  case SKILL_BASH:
+					compare_number = APPLY_SKILL_BASH;
+					break;
+				  case SKILL_RESCUE:
+					compare_number = APPLY_SKILL_RESCUE;
+					break;
+				  case SKILL_BLOCK:
+					compare_number = APPLY_SKILL_BLOCK ;
+					break;
+				  case SKILL_KNOCK:
+					compare_number = APPLY_SKILL_KNOCK;
+					break;
+				  case SKILL_PUNCH:
+					compare_number = APPLY_SKILL_PUNCH;
+					break;
+				  case SKILL_PARRY:
+					compare_number = APPLY_SKILL_PARRY;
+					break;
+				  case SKILL_DUAL:
+					compare_number = APPLY_SKILL_DUAL;
+					break;
+				  case SKILL_THROW:
+					compare_number = APPLY_SKILL_THROW;
+					break;
+				  case SKILL_DODGE:
+					compare_number = APPLY_SKILL_DODGE;
+					break;
+				  case SKILL_PEEK:
+					compare_number = APPLY_SKILL_PEEK ;
+					break;
+				  case SKILL_BUTCHER:
+					compare_number = APPLY_SKILL_BUTCHER;
+					break;
+				  case SKILL_TRAP:
+					compare_number = APPLY_SKILL_TRAP;
+					break;
+				  case SKILL_DISARM:
+					compare_number = APPLY_SKILL_DISARM;
+					break;
+				  case SKILL_SUBDUE:
+					compare_number = APPLY_SKILL_SUBDUE;
+					break;
+				  case SKILL_CIRCLE:
+					compare_number = APPLY_SKILL_CIRCLE;
+					break;
+				  case SKILL_TRIPLE:
+					compare_number = APPLY_SKILL_TRIPLE;
+					break;
+				  case SKILL_PUMMEL:
+					compare_number = APPLY_SKILL_PUMMEL;
+					break;
+				  case SKILL_AMBUSH:
+					compare_number = APPLY_SKILL_AMBUSH;
+					break;
+				  case SKILL_ASSAULT:
+					compare_number = APPLY_SKILL_ASSAULT;
+					break;
+				  case SKILL_DISEMBOWEL:
+					compare_number = APPLY_SKILL_DISEMBOWEL;
+					break;
+				  case SKILL_TAUNT:
+					compare_number = APPLY_SKILL_TAUNT;
+					break;
+				}
+				
+				//If the affect matches the value we are searching for, count the affects.
+				if(modifier_number == compare_number){
+					modifier_total += affect_number;
+					
+				}			
+		  }
+		}
+	  }
+	
+	return modifier_total;
+}
+
+int wrap_skill(int value)
+{
+    return (int8_t)value;  // automatic wrap
+}
+
+
 int practice_skill(CHAR *ch, int number) {
   if (number == 0 || number == 200) {
     send_to_char("`iThat skill wasn't found.`q\n\r", ch);
@@ -385,18 +502,81 @@ int practice_skill(CHAR *ch, int number) {
       }
       break;
   }
+   
+  #define SKILL_GEM 23901
+  
+  
+  int natural_skill_modifier = calculate_natural_stat(ch,number);
+  
+   /* subtract modifier */
+   int raw_value = GET_LEARNED(ch, number) - natural_skill_modifier;
+    /* wrap into valid range */
+   int natural_skill = wrap_skill(raw_value);
 
-  if (GET_LEARNED(ch, number) >= (MAX_PRAC(ch) + bonus)) {
+  //IF you have a skillgem you can practice up to 127.
+  int skillgem_int = real_object(SKILL_GEM);
+  OBJ *skillgem;
+  //See if there is a skillgem in inventory
+  skillgem = get_obj_in_list_num (skillgem_int, ch->carrying);
+  
+  
+  //If there user doesnt have a skillgem,and they are at the max practice amount, abort.
+  //if (GET_LEARNED(ch, number) >= (MAX_PRAC(ch) + bonus) && !skillgem) {
+  if (natural_skill >= (MAX_PRAC(ch) + bonus) && !skillgem) {
     send_to_char("`iYou are already learned in this area.`q\n\r", ch);
+	send_to_char("`iAcquire Skillgems to go higher.`q\n\r", ch);
 
     return TRUE;
   }
+  
+  //Check if you are maxed and are going to use a skillgem.
+  if(GET_LEARNED(ch, number) >= MAX_PRAC(ch) && skillgem){
+	  //get the current level.  If its below 127, practice once and abort.
+	  int current_skill_level = GET_LEARNED(ch, number);
+	  
+	  //We need to cap skills that will break the game.
+	  // Cap, Throw, Pick, Knock, Disarm,Protect
+	  if(number == SKILL_PICK_LOCK || number == SKILL_DISARM || number == SKILL_THROW || number == SKILL_PROTECT || number == SKILL_KNOCK){
+		  send_to_char("`iYou have already mastered this skill.`q\n\r", ch);  
+		  return TRUE;
+	  }
+	  
+	  
+	  
+	  if(current_skill_level < 127){
+		send_to_char("`iYou practice slightly more...`q\n\r", ch);
 
+		GET_PRAC(ch)--;
+		GET_LEARNED(ch, number) += 1;
+		
+		extract_obj(skillgem);
+		return TRUE;
+		 
+	  }else{
+		  send_to_char("`iYou have maxed the skill`q\n\r", ch);
+		  return TRUE;
+		  
+	  }  
+  }
+  
   send_to_char("`iYou practice for a while...`q\n\r", ch);
 
   GET_PRAC(ch)--;
+  
+  //If the Natural Skill is greater than the practice cap, calcualte the difference and add to the skill  
+  int practice_cap = (MAX_PRAC(ch) + bonus) + natural_skill_modifier; //This is the max you can practice the skill with gear on!
 
-  GET_LEARNED(ch, number) = MIN((GET_LEARNED(ch, number) + MIN(int_app[GET_INT(ch)].learn, 18)), (MAX_PRAC(ch) + bonus));
+  if(natural_skill > practice_cap){ 
+	 //If its greater, then there is a small differnece to "max" the skill.  Calculate the difference.
+	 int difference = practice_cap -  GET_LEARNED(ch, number);
+	  
+	 GET_LEARNED(ch, number) += difference;
+	  
+  }
+  else{ 
+
+	GET_LEARNED(ch, number) = MIN(MIN((GET_LEARNED(ch, number) + MIN(int_app[GET_INT(ch)].learn, 18)), (MAX_PRAC(ch) + bonus)),practice_cap);
+  }
 
   if (GET_LEARNED(ch, number) >= MAX_PRAC(ch)) {
     send_to_char("`iYou are now learned in this area.`q\n\r", ch);
@@ -6331,9 +6511,6 @@ int butcher_steak (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 			//If you are Well Fed - You dont get the healing.  That way you can eat to fill hunger.
 			//The Regen bonus is based on the level of the mob divided by 10
 			mob_level_bonus = obj->obj_flags.cost / 10;
-
-			snprintf(buf, sizeof(buf), "  %-22s : %d\n\r", "mob_level_bonus", mob_level_bonus);
-			send_to_char(buf, owner);
 			
 			
 			if (!enchanted_by(owner, BUTCHER_STEAK_ENCHANT_NAME)){

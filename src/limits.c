@@ -980,6 +980,7 @@ void set_title(CHAR * ch, char *title) {
   GET_TITLE(ch) = str_dup(title);
 }
 
+#define MAX_CH_EXP 2100000000
 void gain_exp(CHAR *ch, int gain)
 {
   char buf[MIL];
@@ -993,7 +994,28 @@ void gain_exp(CHAR *ch, int gain)
     {
       if (!IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC))
       {
-        GET_EXP(ch) += gain;
+        //GET_EXP(ch) += gain;
+		
+		//Prevent looping of XP.  Cap at 2.1 Bil. Roll the rest into Remort
+		long total;
+		int current = GET_EXP(ch);
+		
+		 /* Step 1: Calculate safely using wider type */
+		total = (long)current + (long)gain;
+		
+		/* Step 2: Handle overflow into remort pool */
+		if (total > MAX_CH_EXP) {
+			int overflow = (int)(total - MAX_CH_EXP);
+
+			GET_EXP(ch) = MAX_CH_EXP;
+			GET_DEATH_EXP(ch) += overflow;
+		} else if (total < 0) {
+			/* Optional: prevent negative EXP */
+			GET_EXP(ch) = 0;
+		} else {
+			GET_EXP(ch) = (int)total;
+		}
+		
       }
 
       /* Log a warning if exp gain is over 25 million. */

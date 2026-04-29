@@ -32,11 +32,12 @@
 
 /*Rooms */
 #define DAILY_QP_ZONE_ROOM 23900
+#define DAILY_SKILLS_ZONE_ROOM 23920
 #define DIVIDING_VEIL_ROOM 23909
 
 
 /*Objects */
-
+#define SKILLGEM 23901
 
 
 /*Mobs */
@@ -56,6 +57,14 @@
 #define CONVERGENCE_HORROR 23911
 
 
+#define VEIL_WISP 23913
+#define ECHO_FRAGMENT 23914
+#define SHARDBOUND_HORROR 23915
+
+#define MEMORY_LEECH 23916
+#define REFRACTION_ENGINE 23917
+
+
 
 #define DAILY_QP_FILE "util/daily_qp_users.txt"
 
@@ -71,6 +80,11 @@
 #define VEIL_ROOM_START 23900
 #define VEIL_ROOM_END 23919
 #define VEIL_QUEST_NAME "VEIL"
+
+#define SKILL_ROOM_START 23920
+#define SKILL_ROOM_END 23931
+#define SKILLS_QUEST_NAME "SKILLS"
+
 
 
 /*======================================================================== */
@@ -216,56 +230,114 @@ int daily_qp_keeper(CHAR *mob, CHAR *ch, int cmd, char *arg){
 		case CMD_SAY:	
 		
 			one_argument(arg, keyword);		
+			
+			if (!str_cmp(keyword, "veil")) {
+				/* handle veil */
+				
+				mortal_count = count_mortals_room_range(VEIL_ROOM_START,VEIL_ROOM_END);
+			
+				if(mortal_count > 0){
+					act("Please wait until others have left the veil.\n\r", FALSE, mob, 0, 0, TO_ROOM);
+					return TRUE;
+				}
+				
+				
+				
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+				{
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
+					
+					if (!(vict) || IS_NPC(vict)){
+							continue;
+					}
+					
+					if(has_used_daily_qp(GET_NAME(vict),VEIL_QUEST_NAME)) {
+						if(IS_IMMORTAL(vict)){
+							act("Why you want to do this again is beyond my comprehension.....\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}else{
+							//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
+							act("You have already claimed your reward today.\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}	
+						
+					}else{
 
-			if(str_cmp(keyword, "veil")){ // your keyword here
-				return FALSE;
-			}		
-			
-			mortal_count = count_mortals_room_range(VEIL_ROOM_START,VEIL_ROOM_END);
-			
-			if(mortal_count > 0){
-				act("Please wait until others have left the veil.\n\r", FALSE, mob, 0, 0, TO_ROOM);
+						if(IS_IMMORTAL(ch)){
+							act("You shouldnt be exploring these areas as an immort.\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}else{
+							//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
+							//act("You have already claimed your reward today.\n\r", FALSE, mob, 0, ch, TO_CHAR);
+							send_to_char("The guardian nods and gestures. You are enveloped in mist...\n\r", vict);
+						}	
+
+						char_from_room(vict);
+						char_to_room(vict, real_room(DAILY_QP_ZONE_ROOM)); // define this
+
+						do_look(vict, "", 0);
+
+						add_daily_qp_user(GET_NAME(vict),VEIL_QUEST_NAME);
+					}
+					
+				}		
+				
+				
 				return TRUE;
 			}
 			
+			if (!str_cmp(keyword, "skills")) {
+				/* handle skills */
+				mortal_count = count_mortals_room_range(SKILL_ROOM_START,SKILL_ROOM_END);
 			
-			
-			for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
-			{
-				next_vict = CHAR_NEXT_IN_ROOM(vict);
-				
-				if (!(vict) || IS_NPC(vict)){
-                        continue;
+				if(mortal_count > 0){
+					act("Please wait until others have left the skills area.\n\r", FALSE, mob, 0, 0, TO_ROOM);
+					return TRUE;
 				}
 				
-				if(has_used_daily_qp(GET_NAME(vict),VEIL_QUEST_NAME)) {
-					if(IS_IMMORTAL(vict)){
-						act("Why you want to do this again is beyond my comprehension.....\n\r", FALSE, mob, 0, vict, TO_VICT);
-					}else{
-						//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
-						act("You have already claimed your reward today.\n\r", FALSE, mob, 0, vict, TO_VICT);
-					}	
+				
+				
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+				{
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
 					
-				}else{
-
-					if(IS_IMMORTAL(ch)){
-						act("You shouldnt be exploring these areas as an immort.\n\r", FALSE, mob, 0, vict, TO_VICT);
+					if (!(vict) || IS_NPC(vict)){
+							continue;
+					}
+					
+					if(has_used_daily_qp(GET_NAME(vict),SKILLS_QUEST_NAME)) {
+						if(IS_IMMORTAL(vict)){
+							act("Why you want to do this again is beyond my comprehension.....\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}else{
+							//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
+							act("You have already claimed your reward today.\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}	
+						
 					}else{
-						//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
-						//act("You have already claimed your reward today.\n\r", FALSE, mob, 0, ch, TO_CHAR);
-						send_to_char("The guardian nods and gestures. You are enveloped in mist...\n\r", vict);
-					}	
 
-					char_from_room(vict);
-					char_to_room(vict, real_room(DAILY_QP_ZONE_ROOM)); // define this
+						if(IS_IMMORTAL(ch)){
+							act("You shouldnt be exploring these areas as an immort.\n\r", FALSE, mob, 0, vict, TO_VICT);
+						}else{
+							//send_to_char("The guardian shakes its head. You have already claimed your reward today.\n\r", ch);
+							//act("You have already claimed your reward today.\n\r", FALSE, mob, 0, ch, TO_CHAR);
+							send_to_char("The guardian nods and gestures. You are enveloped in mist...\n\r", vict);
+						}	
 
-					do_look(vict, "", 0);
+						char_from_room(vict);
+						char_to_room(vict, real_room(DAILY_SKILLS_ZONE_ROOM)); // define this
 
-					add_daily_qp_user(GET_NAME(vict),VEIL_QUEST_NAME);
-				}
+						do_look(vict, "", 0);
+
+						add_daily_qp_user(GET_NAME(vict),SKILLS_QUEST_NAME);
+					}
+					
+				}		
+				
+				
+				return TRUE;
 				
 			}
-			return TRUE;
+			
+			
+			
+			return FALSE;
 			break;
 		case CMD_UNKNOWN:
 		
@@ -351,6 +423,179 @@ int veil_mob_echo_upgraded(CHAR *mob, CHAR *ch, int cmd, char *arg)
 
 
 
+int veil_memory_leech(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+    
+	OBJ *obj = NULL;
+	CHAR *vict, *next_vict;
+
+    switch (cmd)
+    {
+        case MSG_MOBACT:
+
+            if (mob->specials.fighting)
+            {
+                vict = get_random_victim_fighting(mob);
+                if (!vict) break;
+
+                switch (number(0, 3))
+                {
+                    case 0: /* Memory Drain (STR) */
+                        act("$n pulses and drains strength from $N!", 0, mob, 0, vict, TO_ROOM);
+                        damage(mob, vict, number(120, 220), TYPE_UNDEFINED, DAM_MAGICAL);
+                        affect_apply(vict, SPELL_CURSE, 0, APPLY_STR, -2, AFF_CURSE, 0);
+                        GET_HIT(mob) += number(40, 80);
+                        break;
+
+                    case 1: /* Memory Drain (DEX) */
+                        act("$n ripples and distorts $N's movements!", 0, mob, 0, vict, TO_ROOM);
+                        damage(mob, vict, number(120, 220), TYPE_UNDEFINED, DAM_MAGICAL);
+                        affect_apply(vict, SPELL_CURSE, 0, APPLY_DEX, -2, AFF_CURSE, 0);
+                        GET_HIT(mob) += number(40, 80);
+                        break;
+
+                    case 2: /* Mind Slip (INT) */
+                        act("$n seeps into $N's thoughts!", 0, mob, 0, vict, TO_ROOM);
+                        damage(mob, vict, number(100, 200), TYPE_UNDEFINED, DAM_MAGICAL);
+                        affect_apply(vict, SPELL_CURSE, 0, APPLY_INT, -2, AFF_CURSE, 0);
+                        break;
+
+                    default: /* Weak lash */
+                        act("$n lashes out weakly at $N.", 0, mob, 0, vict, TO_ROOM);
+                        damage(mob, vict, number(80, 160), TYPE_UNDEFINED, DAM_PHYSICAL);
+                        break;
+                }
+            }
+            break;
+
+        case MSG_DIE:
+
+            act("$n collapses into a dim glow that condenses into a small gem in your inventory.",
+                0, mob, 0, 0, TO_ROOM);
+				
+			obj=read_object(SKILLGEM, VIRTUAL);
+
+            for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
+				
+				obj_to_char(obj,vict);
+				
+			}
+
+            break;
+    }
+
+    return FALSE;
+}
+
+int veil_refraction_engine(CHAR *mob, CHAR *ch, int cmd, char *arg)
+{
+    CHAR *vict, *next_vict;   
+	OBJ *obj = NULL;
+	
+    switch (cmd)
+    {
+        case MSG_MOBACT:
+
+            if (mob->specials.fighting)
+            {
+               
+                switch (number(0, 4))
+                {
+                    case 0: /* Refraction Pulse (AoE) */
+                        act("$n releases a pulse of refracted energy!",
+                            0, mob, 0, 0, TO_ROOM);
+
+                        for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+                        {
+                            next_vict = CHAR_NEXT_IN_ROOM(vict);
+                            if (IS_NPC(vict) || !IS_MORTAL(vict)) continue;
+
+                            damage(mob, vict, number(180, 320),TYPE_UNDEFINED, DAM_MAGICAL);
+                        }
+                        break;
+
+                    case 1: /* Focused Beam */
+                        vict = get_random_victim_fighting(mob);
+                        if (vict)
+                        {
+                            act("$n focuses a beam of light into $N!",
+                                0, mob, 0, vict, TO_ROOM);
+
+                            damage(mob, vict, number(220, 380),  TYPE_UNDEFINED, DAM_MAGICAL);
+                        }
+                        break;
+
+                    case 2: /* Crystallize Defense */
+                        act("$n hardens into a dense crystalline form.",   0, mob, 0, 0, TO_ROOM);
+
+                        affect_apply(mob, SPELL_ARMOR, 0,  APPLY_ARMOR, -40, 2, 0);
+                        break;
+
+                    case 3: /* Shard Burst */
+                        vict = get_random_victim_fighting(mob);
+                        if (vict)
+                        {
+                            act("Shards erupt from $n and tear into $N!",  0, mob, 0, vict, TO_ROOM);
+
+                            damage(mob, vict, number(200, 340),  TYPE_UNDEFINED, DAM_PHYSICAL);
+                        }
+                        break;
+
+                    default: /* Basic attack */
+                        vict = get_random_victim_fighting(mob);
+                        if (vict)
+                        {
+                            act("$n lashes out with jagged crystal at $N!", 0, mob, 0, vict, TO_ROOM);
+
+                            damage(mob, vict, number(150, 260),  TYPE_UNDEFINED, DAM_PHYSICAL);
+                        }
+                        break;
+                }
+            }
+            break;
+
+        case MSG_DIE:
+
+            act("The Refraction Engine collapses inward, condensing into radiant crystalline gems!", 0, mob, 0, 0, TO_ROOM);
+
+           obj=read_object(SKILLGEM, VIRTUAL);
+
+            for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(mob)); vict; vict = next_vict)
+			{
+				next_vict = CHAR_NEXT_IN_ROOM(vict);
+				if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
+				
+				obj_to_char(obj,vict);
+				
+			}
+
+
+            break;
+    }
+
+    return FALSE;
+}
+
+int veil_echo_block(CHAR *gatekeeper, CHAR *ch, int cmd, char *arg)
+{
+    bool bReturn = FALSE;
+
+    if (cmd == MSG_MOBACT && chance(8))
+    {
+        do_say(gatekeeper, "The veil doesn't forget!.", CMD_SAY);
+    }
+
+    if (ch && (cmd == CMD_NORTH || cmd == CMD_EAST ||cmd == CMD_WEST ||cmd == CMD_SOUTH))
+    {
+        do_say(gatekeeper, "The veil won't let you leave.", CMD_SAY);
+        bReturn = TRUE;
+    }
+    return bReturn;
+}
+
 
 
 // Assign Spec for the zone. Sets all other specs.
@@ -380,7 +625,13 @@ void assign_veilofunspentfate(void)
    assign_mob(VEILTORN_DRIFTER, veil_mob_echo_upgraded);
    assign_mob(FATEBREAKER_WARDEN, veil_mob_echo_upgraded);
    assign_mob(CONVERGENCE_HORROR, veil_mob_echo_upgraded);
-	
+   
+   assign_mob(MEMORY_LEECH, veil_memory_leech);
+   assign_mob(REFRACTION_ENGINE, veil_refraction_engine);
+   
+   assign_mob(VEIL_WISP, veil_echo_block);
+   assign_mob(ECHO_FRAGMENT, veil_echo_block);
+   assign_mob(SHARDBOUND_HORROR, veil_echo_block);
 	
 	
 }
