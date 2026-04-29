@@ -1,0 +1,331 @@
+#19600
+The Titan's Maw~
+   You stand before the gaping maw of a fallen titan, its fossilized 
+jaw unhinged and fused to the cavern floor. Massive teeth jut from 
+the ground like jagged pillars of white stone. The air here is 
+stagnant and heavy with the scent of ancient dust and ozone. Deep 
+within the throat of the beast, you hear the skittering of claws 
+against bone. Bioluminescent crystals cling to the soft tissue 
+remnants lining the throat, casting a sickly violet glow that 
+illuminates the shadows where scavengers lurk.
+~
+196 32773 0
+D2
+~
+~
+0 -1 19601
+D4
+A small crack in the earth.
+~
+crack~
+9 -1 14339
+S
+#19601
+The Ribcage Cathedral~
+   You have entered the skeletal cathedral of the fallen god. Towering
+ribs, curved like mountain ranges, arch overhead to form a vaulted 
+ceiling miles above your head. The floor is a carpet of pulverized 
+bone dust that crunches softly beneath your boots. The space is 
+illuminated by massive geodes bursting from the stone walls, their 
+crystals pulsing with a rhythmic, magical energy. High up on the 
+vertebrae, you spot scavengers with crystalline carapaces darting
+between the bones, their movements silent and predatory. The sheer 
+scale of this place makes you feel insignificant, like an ant 
+crawling upon a corpse.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19600
+D1
+~
+~
+0 -1 19604
+D2
+~
+~
+0 -1 19605
+D3
+~
+~
+0 -1 19602
+S
+#19602
+The Spine Corridor~
+   This narrow path runs directly along the length of the titan's massive 
+spinal column. On either side, the vertebrae rise like jagged cliffs, 
+narrowing the walkway to a treacherous ledge. Below, you can see into the 
+abyssal depths of the cavern floor, far below where the crystals grow 
+thickest. The wind howls through the hollow holes in the spine, creating a 
+haunting, flute-like melody that is disorienting to the unprepared. Sharp 
+shards of crystal jut from the walls at irregular angles, resembling the 
+teeth of a trap. You notice deep gouges in the bone floor - scars left by 
+weapons far too large to belong to anything mortal.
+~
+196 32769 0
+D1
+~
+~
+0 -1 19601
+D3
+~
+~
+0 -1 19603
+S
+#19603
+The Ossuary Pit~
+    The corridor opens abruptly into a vast, vertical shaft that
+plunges deep into the earth. This is the titan's discarded waste -
+a chasm filled with shattered bone fragments and piles of calcified
+debris falling away into total darkness. Wind whips up from the
+depths, carrying shards of sharp crystal that sting your skin. The
+floor here is treacherous; loose vertebrae shift underfoot, threatening
+to send you sliding over the edge. Scavengers nest on the precarious
+ledges overlooking the abyss, their crystal-encrusted shells blending
+perfectly with the jagged surroundings.
+~
+196 32769 0
+D1
+~
+~
+0 -1 19602
+D2
+~
+~
+0 -1 19606
+S
+#19604
+Skull Sanctum~
+   You have breached the cranial cavity of the titan. The walls here
+are smooth and curved, resembling the inside of a massive skull.
+Two hollow sockets gaze out into the darkness, lined with jagged
+teeth that once served as filters for magical radiation. The air
+hums with raw arcane energy. Massive geodes have grown from the
+'brain matter' residue on the floor, pulsing with a rhythmic violet
+light that threatens to overload your senses. This was clearly a
+place of power for the entity in life; now it is a dangerous trap
+for those who seek to plunder its remains.
+~
+196 32769 0
+D1
+~
+~
+0 -1 19607
+D3
+~
+~
+0 -1 19601
+S
+#19605
+The Crystal Hive~
+   This chamber has been completely overtaken by a dense forest of
+jagged, violet crystals. They grow so thickly that there is barely
+room to walk without risking impalement. The ground is uneven and 
+slick with a translucent slime secreted by the massive growths. 
+You are not alone here. Dozens of Scavengers - massive arachnids
+with carapaces fused from shards of these very crystals - skitter 
+across the ceiling and walls, watching you with multifaceted eyes. 
+The air is thick with the sound of chittering claws and the low 
+thrum of crystal magic.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19601
+D3
+~
+~
+0 -1 19608
+S
+#19606
+The Titan's Pelvis~
+   You descend from the Ossuary Pit into a vast cavern at the base of
+the titan's spine. The floor is a jagged mosaic of shattered bones, 
+partially buried under drifts of dust. Massive crystals rise from the
+ground like dark stalagmites, pulsing with faint violet light that 
+casts long shadows across the desolate landscape.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19603
+S
+#19607
+The Ocular Chamber~
+   You stand within the massive eye socket of the titan, a hollow
+cavern lined with smooth, fossilized bone. Where the eye once was,
+a colossal geode has formed, its violet crystals pulsing with a 
+hypnotic rhythm. The air here is thick with magical radiation that
+causes your skin to tingle. Shadows dance along the walls, cast by
+the shifting light of the crystal heart within the socket.
+~
+196 32769 0
+D3
+~
+~
+0 -1 19604
+S
+#19608
+The Neural Nexus~
+   You find yourself in a junction where the titan's nervous system
+once pulsed with life. Massive bundles of fossilized nerves are now 
+overgrown with violet crystals, creating a chaotic web of stone and 
+magic. The air is charged with static electricity, making your hair 
+stand on end. Scavengers here seem to be drawn to the residual 
+magical energy, their crystalline shells reflecting the pulsing 
+light of the room.
+~
+196 32769 0
+D1
+~
+~
+0 -1 19605
+D2
+~
+~
+0 -1 19610
+D3
+~
+~
+0 -1 19609
+S
+#19609
+The Cerebellum Depths~
+   This chamber lies deep within the lower brain of the titan, a 
+cramped and twisting cavern where the bone walls are slick with a 
+black, oily residue. Massive crystals jut from every surface, 
+distorting your sense of direction. The air is thick and oppressive,
+heavy with the weight of dead magic that once sustained this colossal
+being. Scavengers have burrowed into the crystal formations here, their
+chittering echoes bouncing endlessly off the curved walls.
+~
+196 32769 0
+D1
+~
+~
+0 -1 19608
+S
+#19610
+The Gullet~
+   You find yourself in a narrow, twisting passage that once served
+as the titan's throat. The walls are slick with ancient fluids and 
+covered in jagged crystal growths that reflect your light strangely.
+The air is hot and humid here, smelling of decay and ozone. Strange
+sounds echo from deep within the tunnel ahead, sounding like the 
+grinding of massive bones.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19608
+D1
+~
+~
+0 -1 19611
+S
+#19611
+Titan's Stomach~
+   You stand in the vast, hollowed-out stomach of the titan. The 
+floor is a slurry of calcified remains and sharp crystal shards 
+that dissolved the organic matter over time. Massive geodes hang 
+from the ceiling, dripping a viscous fluid that sizzles on contact
+with the bone floor below. Heat radiates from the crystals deep in 
+the titan's chest.
+~
+196 32769 0
+D2
+~
+~
+0 -1 19612
+D3
+~
+~
+0 -1 19610
+S
+#19612
+The Diaphragm Shelf~
+   You stand upon a vast plateau of fossilized diaphragm, a shelf 
+of petrified muscle that once separated the titan's chest from its
+belly. Below this ledge, you can see the faint glow of the titan's 
+heart chamber deep in the cavern floor. Massive pillars of bone 
+support the ceiling above, and crystals grow thickly along the 
+edges of the shelf, casting long shadows into the abyss below.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19611
+D2
+~
+~
+0 -1 19613
+S
+#19613
+The Titan's Heart~
+   You stand in the center of the cavern, dominated by a massive 
+crystal formation that replaces the titan's heart. The air is 
+thick with magical pressure, making it difficult to breathe. 
+Scavengers are everywhere here, drawn to the energy source. They
+skitter over the jagged crystals and rest on the bone floor, their
+bodies glowing faintly in the dim light. This is the core of the 
+titan's power, now twisted into something dangerous and deadly.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19612
+D2
+~
+~
+0 -1 19614
+S
+#19614
+The Aorta Chamber~
+   You step into a massive circular chamber where a great artery once
+pulsed with life. The walls are lined with thick, petrified tubes of 
+bone and crystal that radiate intense heat. This is the final barrier
+before the core itself. The scavengers here are larger, their 
+carapaces thick enough to deflect blows from seasoned adventurers. A 
+low hum vibrates through the floor, signaling the proximity of the 
+titan's heart.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19613
+D2
+~
+~
+0 -1 19615
+S
+#19615
+Deeper into the Aorta Chamber~
+   You step into a massive circular chamber where a great artery 
+once pulsed with life. The walls are lined with thick, petrified
+tubes of bone and crystal that radiate intense heat. This is the 
+final barrier before the core itself. The scavengers here are larger,
+their carapaces thick enough to deflect blows from seasoned 
+adventurers. A low hum vibrates through the floor, signaling the 
+proximity of the titan's heart.
+~
+196 32769 0
+D0
+~
+~
+0 -1 19614
+S
+#19699
+Temporary Room~
+Temporary description.
+~
+196 0 0
+S
+#0
+$~

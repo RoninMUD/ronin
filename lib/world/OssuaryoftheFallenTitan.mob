@@ -1,0 +1,107 @@
+#19600
+crystal spider scavenger~
+a crystal-encrusted scavenger~
+A large spider-like scavenger skitters across the floor.
+~
+The scavenger turns its multifaceted eyes toward you, mandibles 
+clicking as it prepares to strike.
+~
+40 0 -50 Y
+55 -20 -23 100d100+390000 20d10+2000
+0 220000000
+8 8 0
+0 20480 1d1+0 2
+5 2 8 0
+5 1 15 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#19601
+titan bone construct~
+a titan bone construct~
+A hulking figure constructed from bones and crystal shards stands guard.
+~
+The construct raises a massive arm composed of vertebrae, poised to 
+crush your skull.
+~
+42 0 -10 Y
+60 -20 -23 100d20+700000 40d6+1900
+0 412500000
+8 8 0
+0 20480 1d1+0 1
+7 2 15 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#19602
+crystal golem~
+a crystalline golem~
+A golem of violet crystal and chunks of fossilized bone shambles about.
+~
+The golem raises a fist of jagged stone, preparing to bring it
+down upon your head.
+~
+8 0 -10 Y
+60 -20 -20 50d50+600000 20d4+1600
+0 300000000
+8 8 0
+0 20480 1d1+0 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#19603
+large crystal scarab~
+a crystal-backed scarab~
+A large scarab with a shell of bone and crystal protrusions crawls here.
+~
+The scarab scuttles forward, its mandibles clicking as it seeks fresh meat.
+~
+40 0 -5 Y
+50 -24 -25 40d40+300000 40d4+1400
+0 153000000
+8 8 0
+0 20480 1d1+0 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#19604
+carapace reclaimer~
+carapace reclaimer~
+A hulking, many-legged carapace reclaimer clings to the ground here.
+~
+Mandibles the size of swords grind constantly, reducing bone to paste as
+it feeds. Its body shifts with unsettling strength beneath the armor, 
+and faint cracks in its shell leak a dim, marrow-like glow.
+It barely acknowledges your presenceuntil you get too close.
+It scrapes and feeds, grinding bone beneath its mandibles.
+~
+8 0 -5 Y
+65 -22 -25 100d100+1000999 100d4+3000
+0 560000000
+8 8 0
+0 20480 1d1+0 1
+5 1 15 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#19605
+centipede apex devourer~
+the apex devourer~
+A colossal centipede with a carapace of crystal and bone skitters here.
+~
+Its many legs click against the stone floor, venom dripping 
+from massive mandibles.
+~
+42 0 -300 Y
+68 -18 -22 200d100+2000100 20d100+3000
+0 1600000000
+8 8 0
+0 20480 1d1+0 3
+5 2 5 0
+6 2 5 0
+10 2 5 0
+0 1 0 32
+K
+0 0 0 0 0 0 0
+#0
+$~
