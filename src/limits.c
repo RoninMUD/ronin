@@ -1003,9 +1003,6 @@ void gain_exp(CHAR *ch, int gain)
 		 /* Step 1: Calculate safely using wider type */
 		total = (long)current + (long)gain;
 		
-		char buf2[MAX_STRING_LENGTH];
-
-
 		/* Step 2: Handle overflow into remort pool */
 		if (total > MAX_CH_EXP) {
 			int overflow = (int)(total - MAX_CH_EXP);
