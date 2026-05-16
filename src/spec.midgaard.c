@@ -58,10 +58,44 @@ struct social_type {
  *  Special procedures for rooms                                       *
  ******************************************************************** */
 
+bool is_capped_skill(int skill)
+{
+    switch (skill) {
+        case SKILL_AWARENESS:
+        case SKILL_PROTECT:
+        case SKILL_KNOCK:
+        case SKILL_HOSTILE:
+		case SKILL_MEDITATE:
+		case SKILL_SNEAK:
+		case SKILL_HIDE:
+		case SKILL_PICK_LOCK:
+		case SKILL_DISARM:
+		case SKILL_THROW:
+		case SKILL_PRAY:
+		case SKILL_SCAN:
+		case SKILL_CAMP:
+		case SKILL_VEHEMENCE:
+		case SKILL_DEFEND:
+		case SKILL_FRENZY:
+		case SKILL_BERSERK:
+		case SKILL_TROPHY:
+		case SKILL_VICTIMIZE:
+		case SKILL_SHADOWSTEP:
+		case SKILL_EVASION:
+		case SKILL_DIRTY_TRICKS:		
+            return TRUE;
+
+        default:
+            return FALSE;
+    }
+}
+
+
 
 void list_skills_to_prac(CHAR *ch, bool list_all)
 {
   int number = 0;
+  int MAX_SKILL_VALUE = 127;
   char buf[MIL];
 
   send_to_char("\
@@ -82,10 +116,11 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(cleric_skills[i], 0, strlen(cleric_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_BASH) && (GET_LEVEL(ch) < 35)) continue;
           else if ((number == SKILL_MEDITATE) && (GET_LEVEL(ch) < 40)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", cleric_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
@@ -98,13 +133,14 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
         else
         {
           number = old_search_block(thief_skills[i], 0, strlen(thief_skills[i]), (const char * const * const)spells, TRUE);
-
+		  
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_SCAN) && (GET_LEVEL(ch) < 35)) continue;
           else if ((number == SKILL_TWIST) && (GET_LEVEL(ch) < 45)) continue;
           else if ((number == SKILL_CUNNING) && (GET_LEVEL(ch) < 50)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", thief_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -120,11 +156,12 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(warrior_skills[i], 0, strlen(warrior_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", warrior_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -140,8 +177,9 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(ninja_skills[i], 0, strlen(ninja_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", ninja_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
@@ -156,12 +194,13 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(nomad_skills[i], 0, strlen(nomad_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
           else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
           else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", nomad_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
             send_to_char(buf, ch);
@@ -176,9 +215,10 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(paladin_skills[i], 0, strlen(paladin_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_PRAY) && (GET_LEVEL(ch) < 40)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", paladin_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -194,10 +234,11 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(anti_paladin_skills[i], 0, strlen(anti_paladin_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_HIDDEN_BLADE) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_ASSASSINATE) && (GET_LEVEL(ch) < 45)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", anti_paladin_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -213,8 +254,9 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(avatar_skills[i], 0, strlen(avatar_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", avatar_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -230,9 +272,10 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(bard_skills[i], 0, strlen(bard_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TAUNT) && (GET_LEVEL(ch) < 20)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", bard_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -248,9 +291,10 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           number = old_search_block(commando_skills[i], 0, strlen(commando_skills[i]), (const char * const * const)spells, TRUE);
 
           if (number == 0) continue;
-          else if ((GET_LEARNED(ch, number) >= MAX_PRAC(ch)) && !list_all) continue;
+          else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
+		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
           {
             sprintf(buf, "`n%-30s `k%-14s `o(%3d)`q\n\r", commando_skills[i], how_good(GET_LEARNED(ch, number)), GET_LEARNED(ch, number));
@@ -535,8 +579,8 @@ int practice_skill(CHAR *ch, int number) {
 	  int current_skill_level = GET_LEARNED(ch, number);
 	  
 	  //We need to cap skills that will break the game.
-	  // Cap, Throw, Pick, Knock, Disarm,Protect
-	  if(number == SKILL_PICK_LOCK || number == SKILL_DISARM || number == SKILL_THROW || number == SKILL_PROTECT || number == SKILL_KNOCK){
+	  //Cap certain skills because they don't benefit from being leveled past 85.
+	  if(is_capped_skill(number)){
 		  send_to_char("`iYou have already mastered this skill.`q\n\r", ch);  
 		  return TRUE;
 	  }
