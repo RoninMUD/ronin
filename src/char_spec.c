@@ -537,7 +537,30 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   int dam = 0, set_pos = 0;
 
   switch (GET_CLASS(mimicee)) {
-    case CLASS_MAGIC_USER: /* thunderball + self perceive */
+    case CLASS_NOMAD: /* Batter and a hit along with a spoofed pummel*/
+	
+	  act("$n sings 'Pitter patter bitter ...batter!'", FALSE, ch, NULL, NULL, TO_ROOM);
+	  act("You sing 'Pitter patter bitter ...batter!'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+	  act("$N stumbles backward as $n barrels into $M with a crushing battering strike.", FALSE, ch, 0, victim, TO_NOTVICT);
+	  act("$n slams into you with a brutal battering strike that rattles your bones.", FALSE, ch, 0, victim, TO_VICT);
+	  act("You charge through $N's defenses and land a heavy follow-up hit.", FALSE, ch, 0, victim, TO_CHAR);
+		
+	  set_pos = stack_position(victim, POSITION_STUNNED);
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
+	  
+	  if (CHAR_REAL_ROOM(victim) != NOWHERE)
+          GET_POS(victim) = MIN(GET_POS(victim), set_pos);
+	  
+	  damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_BATTER, DAM_PHYSICAL);
+	  perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+	
+	  break;
+	
+	
+	
+	case CLASS_MAGIC_USER: /* thunderball + self perceive */
       act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_CHAR);
 
@@ -622,7 +645,7 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       }
       break;
 
-    case CLASS_WARRIOR: /* punch + quad OR disembowel (victimim hp dependent) */
+    case CLASS_WARRIOR: /* punch + quad OR disembowel (victim hp dependent) */
       if (GET_HIT(victim) > lround(GET_MAX_HIT(victim) * 0.3)) {
         act("$n sings 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_ROOM);
         act("You sing 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_CHAR);
