@@ -898,7 +898,7 @@ void do_circle(CHAR *ch, char *argument, int cmd) {
 
   /* Trip */
   if (SAME_ROOM(ch, victim) && check_sc_access(ch, SKILL_TRIP) && IS_SET(GET_TOGGLES(ch), TOG_TRIP)) {
-    check = number(1, 111) - GET_DEX_APP(ch);
+    check = number(1, 137) - GET_DEX_APP(ch);
 
     /* Vehemence */
     if (IS_SET(GET_TOGGLES(ch), TOG_VEHEMENCE) && check_sc_access(ch, SKILL_VEHEMENCE)) {

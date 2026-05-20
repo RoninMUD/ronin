@@ -682,6 +682,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
   int total_pcs = 0;
 
   total_exp = GET_EXP(victim) / 3;
+  
 
   /* Sometime in the future this will be set in mob stats - Aug 99 */
   if (victim->specials.max_num_fighting == 0)
@@ -785,10 +786,10 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
   {
     cummulative_levels = MAX(GET_LEVEL(ch), 1);
   }
-
   /* Add bonus to xp for groups */
   if (total_pcs >= 6) {
-    /* Group XP Bonus:
+    /*
+    ** Group XP Bonus:
     **
     **   6 or more = 10%
     **   11 or more = 20%
@@ -796,9 +797,17 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
     **   Every 5 players adds an extra 10%, up to a max of 100%
     */
 
-    total_exp = ((total_exp * (10 + MIN(10, (((total_pcs - 6) / 5) + 1)))) / 10);
-  }
+      int multiplier = (10 + MIN(10, (((total_pcs - 6) / 5) + 1)));
 
+      long long temp_exp = ((long long)total_exp * multiplier) / 10;
+
+    /* Clamp before casting back to int */
+      if (temp_exp > 2000000000LL)
+          temp_exp = 2000000000LL;
+
+      total_exp = (int)temp_exp; 
+  }
+  
   /* Distribute the exp, based on their level */
   /* First to the leader */
   if (CHAR_REAL_ROOM(leader_of_killer) == CHAR_REAL_ROOM(ch))
@@ -810,7 +819,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
     {
       experience = MAX(((experience * (6 - level_diff + allow_diff)) / 6), (experience / 10));
     }
-
+    
     if (leader_of_killer != victim)
     {
       if (none)
