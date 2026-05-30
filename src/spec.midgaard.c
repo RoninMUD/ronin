@@ -2005,15 +2005,16 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
         }
         else
         {
+		  
+			
           if ((OBJ_TYPE(temp_obj) == ITEM_CONTAINER) && (!*arg2 || str_cmp(arg2, "confirm")))
           {
             act("$n tells you 'You must type 'store x <container_keyword> confirm' to store multiple containers.'", FALSE, vault_guard, 0, ch, TO_VICT);
 
-            extract_obj(vault_obj);
-
-            return TRUE;
+            break; // Break the loop to ensure the rest get stored
+			extract_obj(vault_obj);
+			
           }
-
           vault_put(ch, temp_obj, vault_obj);
 
           total++;
