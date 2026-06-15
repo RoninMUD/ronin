@@ -444,7 +444,6 @@ int BottomlessPit (int room, CHAR *ch, int cmd, char *arg) {
  Like a wand of wonder, the shard will use one of its four powers randomly
  *************************************************************************
  */
-
 #ifndef MN_SHARD_MAX_POWER
 #define MN_SHARD_MAX_POWER   30
 #endif
@@ -452,71 +451,91 @@ int BottomlessPit (int room, CHAR *ch, int cmd, char *arg) {
 int
 Vulcanite (OBJ *shard, CHAR *ch, int cmd, char *arg) {
   char buf[MAX_INPUT_LENGTH];
-  int set, power[] = {7,7,5,20};
+  int set, i, charged_this_round;
+  int power[] = {7, 7, 5, 20};
 
   if (!shard) return FALSE;
 
-  if (cmd == MSG_TICK)
-  {
-    if ((OBJ_SPEC(shard) > 0) && chance(75))
-    {
-      OBJ_SPEC(shard) -= 1;
-    }
-  }
+  if (cmd == MSG_TICK) {
+    CHAR *vict;
 
-  if (!IS_MORTAL(ch))
+    if (!shard->equipped_by) {
+      if (OBJ_SPEC(shard) > 0) {
+        OBJ_SPEC(shard) -= 3;
+      }
+      if (OBJ_SPEC(shard) < 0) {
+        OBJ_SPEC(shard) = 0;
+      }
+      return FALSE;
+    }  
+    vict = shard->equipped_by;
+    
+    if (OBJ_SPEC(shard) < MN_SHARD_MAX_POWER) {
+        OBJ_SPEC(shard) += 9;
+        if (OBJ_SPEC(shard) > MN_SHARD_MAX_POWER) {
+          OBJ_SPEC(shard) = MN_SHARD_MAX_POWER;
+        }
+        if (vict) {
+         act("$p pulses with light as it draws energy from the air.",
+            FALSE, vict, shard, 0, TO_CHAR);
+         act("$p in $n's hand pulses with light.",
+            FALSE, vict, shard, 0, TO_ROOM);
+        }
+    } else {
+        if (vict && OBJ_SPEC(shard) == MN_SHARD_MAX_POWER) {
+          act("$p shakes violently, as it overflows with power.",
+            FALSE, vict, shard, 0, TO_CHAR);
+            OBJ_SPEC(shard) += 1;
+        }
+    } 
+   
+    return FALSE; 
+}
+
+  if (!ch || !IS_MORTAL(ch))
     return FALSE;
 
   if (!(shard == EQ(ch, HOLD)))
     return FALSE;
-
-  if(!number(0,44) && OBJ_SPEC(shard) < MN_SHARD_MAX_POWER) {
-    OBJ_SPEC(shard) += 1;
-    act ("You can see $p pulse once, like gaining new life.",
-	 FALSE,ch,shard,0,TO_ROOM);
-    act ("You can see $p pulse once, like gaining new life.",
-	 FALSE,ch,shard,0,TO_CHAR);
-  }
 
   if (cmd == CMD_USE) {
     one_argument(arg, buf);
     if (!isname(buf, OBJ_NAME(shard)))
       return FALSE;
 
-    set = number(0,3);
+    set = number(0, 3);
     if (OBJ_SPEC(shard) < power[set]) {
-      act ("$p doesn't show any signs of having any power at all.",
-	   FALSE,ch,shard,0,TO_CHAR);
+      act("$p doesn't show any signs of having any power at all.",
+          FALSE, ch, shard, 0, TO_CHAR);
       return TRUE;
     }
 
-    act("$n waves $p in front of $m in a large circle.",
-	FALSE,ch,shard,0,TO_ROOM);
-    act("You wave $p in front of you in a large circle.",
-	FALSE,ch,shard,0,TO_CHAR);
-    act("$p pulses, and a strange feeling spreads all over you.",
-	FALSE,ch,shard,0,TO_CHAR);
+    act("$n waves $p in front of $m in a large circle.", FALSE, ch, shard, 0, TO_ROOM);
+    act("You wave $p in front of you in a large circle.", FALSE, ch, shard, 0, TO_CHAR);
+    act("$p pulses, and a strange feeling spreads all over you.", FALSE, ch, shard, 0, TO_CHAR);
 
     OBJ_SPEC(shard) -= power[set];
 
     switch (set) {
-    case 0:
-      spell_heal(30,ch,ch,0);
-      spell_heal(30,ch,ch,0);
-      return TRUE;
-    case 1:
-      spell_sanctuary(30,ch,ch,0);
-      spell_armor(30,ch,ch,0);
-      return TRUE;
-    case 2:
-      spell_strength (30,ch,ch,0);
-      spell_strength (30,ch,ch,0);
-      return TRUE;
-    case 3:
-      spell_fury(30,ch,ch,0);
-      return TRUE;
+      case 0:
+        spell_heal(30, ch, ch, 0);
+        spell_heal(30, ch, ch, 0);
+        break;
+      case 1:
+        spell_sanctuary(30, ch, ch, 0);
+        spell_armor(30, ch, ch, 0);
+        break;
+      case 2:
+        spell_strength(30, ch, ch, 0);
+        spell_strength(30, ch, ch, 0);
+        break;
+      case 3:
+        spell_fury(30, ch, ch, 0);
+        break;
     }
+    return TRUE;
   }
+
   return FALSE;
 }
 
