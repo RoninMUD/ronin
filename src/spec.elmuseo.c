@@ -1294,7 +1294,10 @@ int hakeem_waxify( CHAR* hak, CHAR* victim )
 // Faze helps Bill if he gets attacked.
 int mus_faze( CHAR *faze, CHAR *ch, int cmd, char *arg )
 {
-  if( cmd == MSG_DIE ) faze_instance = NULL; else faze_instance = faze;
+  if( cmd == MSG_DIE || cmd == MSG_DEAD || cmd == MSG_CORPSE)
+    faze_instance = NULL;
+  else
+    faze_instance = faze;
   return FALSE;
 }
 
