@@ -558,7 +558,7 @@ void assign_ctower(void) {
   assign_mob(KIRI_TORIN,   kiri_torin);
   assign_room(MIRROR_ROOM, mirror);
   assign_obj(FANG,         fang);
-  assign_obj(KEY_DECAY,    key_decay);
+  //assign_obj(KEY_DECAY,    key_decay);
   assign_obj(HAMMER,       hammer);
   assign_obj(PAN,          pan);
   assign_obj(DRAGON_TOOTH, dragon_tooth);
