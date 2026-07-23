@@ -3514,12 +3514,6 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
 		
 		int circle_damage = (dam * circle_mult[GET_LEVEL(attacker)]);
 		
-		//Evasion Lowers damage of skills by 25%
-		if(IS_SET(GET_TOGGLES(attacker), TOG_EVASION) && (check_subclass(attacker, SC_BANDIT, 5))){
-			circle_damage = (circle_damage * 0.75);
-		}
-		
-		
         damage(attacker, defender, circle_damage, SKILL_CIRCLE, DAM_PHYSICAL);
 
         if ((CHAR_REAL_ROOM(defender) != NOWHERE) && special_message) {
