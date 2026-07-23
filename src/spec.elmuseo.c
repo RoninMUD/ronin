@@ -1301,16 +1301,16 @@ int mus_faze( CHAR *faze, CHAR *ch, int cmd, char *arg )
 // Bill, the Knight Janitor, periodically drops off new pots of wax for Hakeem until he has at least 5.
 int mus_bill( CHAR *bill, CHAR *ch, int cmd, char *arg )
 {
-  CHAR *faze_validation;
 	
+  CHAR *faze_validation;
+  
   if( !bill || cmd != MSG_MOBACT )
     return FALSE;
 
   // If fighting, Faze will try to come assist.
   if( GET_POS( bill ) == POSITION_FIGHTING && faze_instance && GET_POS( faze_instance ) == POSITION_STANDING )
   {
-	
-	//Validate that Faze still exists.
+   //Validate that Faze still exists.
 	faze_validation = get_ch_world(MUS_FAZE);
 	
 	if(faze_validation){	  
@@ -3573,6 +3573,19 @@ int ench_forest_friend(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char*arg ) 
   GET_HIT(ench_ch) = GET_MAX_HIT(ench_ch);
   //So, this kind of sucks, can't make them stop fighting, but we can make them miss maybe
   ench_ch->points.armor = -500;
+  //drop items in inventory
+  act("$n abandons all $s worldly possessions as it flees to freedom.", 1, ench_ch, 0, 0, TO_NOTVICT);
+  for (OBJ *temp_obj = GET_CARRYING(ench_ch), *next_obj; temp_obj; temp_obj = next_obj) {
+    next_obj = OBJ_NEXT_CONTENT(temp_obj);
+
+    obj_from_char(temp_obj);
+    obj_to_room(temp_obj, CHAR_REAL_ROOM(ench_ch));
+  }
+  //drop equipped items
+  for (int eq_slot = 0; eq_slot < MAX_WEAR; eq_slot++)
+    if (EQ(ench_ch,eq_slot))
+      obj_to_room(unequip_char(ench_ch,eq_slot), CHAR_REAL_ROOM(ench_ch));
+
   char_from_room(ench_ch);
   char_to_room(ench_ch,real_room(MUS_SANCTUARY));
 
@@ -3606,7 +3619,7 @@ int mus_black_leggings(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   CHAR *vict = owner->specials.fighting;
   if(CHAOSMODE) return FALSE;
   /* Find the person who is getting killed ... */
-  if(!IS_MOB(vict)) return FALSE;
+  if(!IS_MOB(vict) || GET_QUEST_OWNER(vict)) return FALSE;
   if(!(GET_CLASS(vict) == CLASS_AVIAN ||  GET_CLASS(vict) == CLASS_FISH || GET_CLASS(vict) == CLASS_ANIMAL || GET_CLASS(vict) == CLASS_SIMIAN || GET_CLASS(vict) == CLASS_CANINE || GET_CLASS(vict) == CLASS_FELINE || GET_CLASS(vict) == CLASS_RODENT))
     return FALSE;
   if(GET_LEVEL(vict) >= LEVEL_IMM-1) return FALSE;
@@ -3660,7 +3673,7 @@ int mus_antlers(OBJ *obj, CHAR *ch, int cmd, char *arg) {
     sprintf(buf, "As $n begins to %s, $s antlers tumble to the ground.", cmd == CMD_CLIMB ? "climb" : (cmd == CMD_CRAWL ? "crawl" : "jump"));
     act(buf, 1, ch, 0, 0, TO_ROOM);
     mus_remeq(ch, WEAR_SHIELD);
-    return TRUE;
+    return FALSE;
   }
 
   CHAR *wearer = obj->equipped_by;
