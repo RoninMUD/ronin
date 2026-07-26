@@ -1301,15 +1301,23 @@ int mus_faze( CHAR *faze, CHAR *ch, int cmd, char *arg )
 // Bill, the Knight Janitor, periodically drops off new pots of wax for Hakeem until he has at least 5.
 int mus_bill( CHAR *bill, CHAR *ch, int cmd, char *arg )
 {
+	
+  CHAR *faze_validation;
+  
   if( !bill || cmd != MSG_MOBACT )
     return FALSE;
 
   // If fighting, Faze will try to come assist.
   if( GET_POS( bill ) == POSITION_FIGHTING && faze_instance && GET_POS( faze_instance ) == POSITION_STANDING )
   {
-    mob_do( faze_instance, "op door" );
-    mob_do( faze_instance, "north" );
-    mob_do( faze_instance, "assist bill" );
+   //Validate that Faze still exists.
+	faze_validation = get_ch_world(MUS_FAZE);
+	
+	if(faze_validation){	  
+		mob_do( faze_instance, "op door" );
+		mob_do( faze_instance, "north" );
+		mob_do( faze_instance, "assist bill" );
+	}
   }
 
   // Sleeping or fighting => no wax for you!

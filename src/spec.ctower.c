@@ -45,7 +45,6 @@
 #define TOOTH          17395
 #define MITHRIL_BAR    17394
 #define ANVIL          17392
-#define KEY_DECAY      17316
 #define VAULT_ROOM     17338
 #define KIRI_VAULT     17339
 #define GOLEM          17300
@@ -289,36 +288,6 @@ int elf_maiden(CHAR *mob, CHAR *vict, int cmd, char *arg) {
    return FALSE;
 }
 
-int key_decay(OBJ *obj, CHAR *ch, int cmd, char *argument) {
-  bool carry=FALSE,wear=FALSE;
-  CHAR *vict;
-  int dam;
-
-  if(cmd!=MSG_TICK) return FALSE;
-
-  if (obj->equipped_by) {
-    wear=TRUE;
-    vict=obj->equipped_by;
-  }
-  else if (obj->carried_by) {
-    carry=TRUE;
-    vict=obj->carried_by;
-  }
-  else return FALSE;
-
-  if(IS_NPC(vict) && V_MOB(vict)==17322) return FALSE;
-
-  if(obj_proto_table[obj->item_number].number > 1) {
-    act("The $o explodes with fiery force!",FALSE,vict,obj,0,TO_CHAR);
-    act("$n's $o explodes with fiery force!",FALSE,vict,obj,0,TO_ROOM);
-    if(wear) extract_obj(unequip_char (vict, HOLD));
-    if(carry) extract_obj (obj);
-    dam=MIN(50,GET_HIT(vict)-1);
-    damage(vict,vict,dam,TYPE_UNDEFINED,DAM_NO_BLOCK);
-  }
-  return FALSE;
-}
-
 int volcano_rooms(int room, CHAR *ch, int cmd, char *arg)
 {
   OBJ *k;
@@ -558,7 +527,6 @@ void assign_ctower(void) {
   assign_mob(KIRI_TORIN,   kiri_torin);
   assign_room(MIRROR_ROOM, mirror);
   assign_obj(FANG,         fang);
-  assign_obj(KEY_DECAY,    key_decay);
   assign_obj(HAMMER,       hammer);
   assign_obj(PAN,          pan);
   assign_obj(DRAGON_TOOTH, dragon_tooth);
