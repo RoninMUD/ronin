@@ -1390,7 +1390,7 @@ bool keys_to_ring( OBJ* chain );
 //
 // This avoids the nightmare of parsing all.foo and whatnot, at the price of
 // some flexibility. It seems like a reasonable price to pay, though.
-int mus_keychain(OBJ *chain, CHAR *ch,int cmd,char *arg)
+int mus_keychain(OBJ *chain, CHAR *ch, int cmd, char *arg)
 {
   if( cmd == CMD_PRACTICE && ch == chain->equipped_by )
   {
@@ -1398,15 +1398,47 @@ int mus_keychain(OBJ *chain, CHAR *ch,int cmd,char *arg)
     return TRUE;
   }
 
+  // Jiggle keys to force keys_to_ring without waiting for tick
+  if (cmd == CMD_UNKNOWN) {
+    ch = chain->carried_by;
+    if (!ch || !OBJ_CARRIED_BY(chain) || !AWAKE(ch)) return FALSE;
+
+    char buf[MIL];
+
+    arg = one_argument(arg, buf);
+
+    if (!*buf || (strcmp(buf, "jiggle") != 0)) return FALSE;
+
+    one_argument(arg, buf);
+
+    if (!*buf || !isname(buf, OBJ_NAME(chain)))
+    {
+      printf_to_char(ch, "Jiggle what now?\n\r");
+    }
+    else
+    {
+      if( keys_to_ring( chain ) ) {
+        act ("$n jiggles $s keychain.", FALSE, ch, 0, 0, TO_ROOM);
+        send_to_char( "You jiggle your keychain jollily.\r\n", ch);
+      }
+      else {
+      //no keys to move
+        act ("$n jiggles $s keychain just to hear the sound it makes.", FALSE, ch, 0, 0, TO_ROOM);
+        send_to_char( "You jiggle your keychain just to hear the sound it makes.\r\n", ch);
+      }
+    }
+    return TRUE;
+  }
+
   if( !chain || cmd != MSG_TICK || (!chain->carried_by && !chain->equipped_by) )
     return FALSE;
 
-  CHAR *victim = chain->carried_by;
-  if( !victim ) victim = chain->equipped_by;
+  ch = chain->carried_by;
+  if( !ch ) ch = chain->equipped_by;
   if( keys_to_ring( chain ) )
   {
-    act ("$n fiddles with $s keys.\r\n", FALSE, victim, 0, 0, TO_ROOM);
-    send_to_char( "You fiddle idly with your keys.\r\n", victim );
+    act ("$n fiddles with $s keys.", FALSE, ch, 0, 0, TO_ROOM);
+    send_to_char( "You fiddle idly with your keys.\r\n", ch );
   }
 
   return FALSE;
