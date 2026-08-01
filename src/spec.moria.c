@@ -409,11 +409,11 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     REMOVE_BIT( uber->specials.act, ACT_AGGNO );
     sprintf( buf, "%s roars angrily, and a thundering crack of shattered stone echoes off the walls.\n\r", GET_SHORT(uber) );
     send_to_room(buf, CHAR_REAL_ROOM(uber) );
-    statues = MIN ( count_mortals_room(uber, TRUE), number(1,4) );
+    statues = MIN ( count_mortals_room(uber, TRUE), number(0,2) );
     for( i = 0; i < statues; i++ ) {
       vict = get_random_victim(uber);
       if( vict ) {
-         spell_petrify( GET_LEVEL(uber), uber, vict, 0);
+         spell_petrify( GET_LEVEL(uber), uber, vict, FALSE);
       }
     }
   }
@@ -422,11 +422,11 @@ int uber_stone_dragon(CHAR *uber, CHAR *ch, int cmd, char *arg) {
     SET_BIT( uber->specials.act, ACT_SHIELD );
     sprintf( buf, "%s roars loudly, causing the stone of the cavern and the earth to shiver and quake at its power.\n\r", GET_SHORT(uber) );
     send_to_room(buf, CHAR_REAL_ROOM(uber) );
-    statues = MIN ( count_mortals_room(uber, TRUE), number(2,5) );
+    statues = MIN ( count_mortals_room(uber, TRUE), number(1,3) );
     for( i = 0; i < statues; i++ ) {
       vict = get_random_victim(uber);
       if( vict ) {
-        spell_petrify( GET_LEVEL(uber), uber, vict, 0);
+        spell_petrify( GET_LEVEL(uber), uber, vict, FALSE);
       }
     }
   }

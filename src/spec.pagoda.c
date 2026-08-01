@@ -92,7 +92,7 @@ int p_tyrant(CHAR *mob, CHAR *ch, int cmd, char *arg) {
 /* Petrify any in room except tank */
   if(!number(0,4)) {
     if((vict=get_random_victim(mob))){
-      if (vict!=mob->specials.fighting) spell_petrify (LEVEL_IMM,mob,vict,0);
+      if (vict!=mob->specials.fighting) spell_petrify (LEVEL_IMM,mob,vict,FALSE);
       return FALSE;
     }
   }

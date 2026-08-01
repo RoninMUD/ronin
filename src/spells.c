@@ -1955,24 +1955,30 @@ void cast_disenchant(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 }
 
 void cast_petrify(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
-  if (!IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_WIZ)) {
+  if (type != SPELL_TYPE_POTION && !IS_NPC(ch) && (GET_LEVEL(ch) < LEVEL_WIZ)) {
     send_to_char("Your level isn't high enough to cast this spell.\n\r", ch);
-
     return;
   }
 
   switch (type) {
     case SPELL_TYPE_POTION:
-      victim = ch;
+      act("Your throat tightens and soon so does your whole body as you're turned to stone.", FALSE, ch, 0, ch, TO_CHAR);
+      act("You stare in horror as $N turns to solid stone from the inside out.", FALSE, ch, 0, ch, TO_NOTVICT);
+      spell_petrify(level, ch, ch, TRUE);
+      break;
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_petrify(level, ch, victim, 0);
+      spell_petrify(level, ch, victim, FALSE);
       break;
+/* removed support for STAFF type because aoe_spell() doesn't work with struct change to
+   spell_petrify, changed 4th arg from 'struct obj_data *obj' to 'bool skip_msg' - if
+   staff function needed later, can do a manual loop through the room
 
     case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_petrify, level, 0);
+      aoe_spell(ch, spell_petrify, level, FALSE);
       break;
+*/
   }
 }
 

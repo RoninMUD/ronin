@@ -156,7 +156,7 @@ int basilisk(CHAR *mob, CHAR *ch, int cmd, char *arg)
 		act("$n swings $s head around and makes eye contact with you, turning you to stone.",0,mob,0,vict,TO_VICT);
 		act("$n swings $s head around and makes eye contact with $N, turning $M to stone.",0,mob,0,vict,TO_NOTVICT);
 		act("You swing your head around and make eye contact with $N, turning $M to stone.",0,mob,0,vict,TO_CHAR);
-		spell_petrify(GET_LEVEL(mob), mob, vict, 0);		
+		spell_petrify(GET_LEVEL(mob), mob, vict, TRUE);		
 	}
 	return FALSE;
 }

@@ -191,7 +191,7 @@ int basilisk_spec(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       act("$n gazes deep into $N's eyes and turns $M to stone!", FALSE, mob, 0, vict, TO_NOTVICT);
       act("$n gazes deep into your eyes and turns you to stone!", FALSE, mob, 0, vict, TO_VICT);
 
-      spell_petrify(GET_LEVEL(mob), mob, vict, 0);
+      spell_petrify(GET_LEVEL(mob), mob, vict, TRUE);
     }
 
     return FALSE;
