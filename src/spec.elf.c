@@ -33,6 +33,7 @@
 #include "cmd.h"
 #include "spec_assign.h"
 #include "mob.spells.h"
+#include "enchant.h"
 
 /* Zones */
 
@@ -96,6 +97,7 @@
 void stop_fighting (CHAR *ch);
 void hit (CHAR *ch, CHAR *vict, int type);
 char *one_argument(char *arg, char *buf);
+extern int greasy_palms(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
 
 bool
 is_caster (CHAR *ch) {
@@ -455,6 +457,7 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
   int dir;
   char buf[MAX_INPUT_LENGTH];
   bool move_ch = FALSE;
+  ENCH *tmp_enchantment;
 
   if (cmd)
     return FALSE;
@@ -464,36 +467,27 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
 
   vict = GET_OPPONENT(demon);
 
-  if (EQ(vict,WIELD) && number(0,1)) {
-    ob = unequip_char (vict, WIELD);
-    act("With a swift snap of $s tail, $n sends\n\r$p flying from $N's hands.",
-	FALSE,demon,ob,vict,TO_NOTVICT);
-    act("With a swift snap of $s tail, $n sends\n\r$p flying from your hands.",
-	FALSE,demon,ob,vict,TO_VICT);
-    act("With a swift snap of your tail, you send\n$p flying from $N's hands.",
-	FALSE,demon,ob,vict,TO_CHAR);
-
-    dir = number (1,3);
-
-    if (CAN_GO (demon, dir))
-      move_ch = TRUE;
-
-    if (move_ch) {
-      act ("$p flies out of the Vault's door...",FALSE,demon,ob,0,TO_ROOM);
-      obj_to_room(ob,EXIT(demon,dir)->to_room_r);
-      /* Added disarm log, Solmyr - 2009 */
-      sprintf(buf, "WIZINFO: %s disarms %s's %s and puts it in room %d", GET_NAME(demon), GET_NAME(vict), OBJ_SHORT(ob), world[EXIT(demon,dir)->to_room_r].number);
+  if ((ob = EQ(vict,WIELD))) {
+    if (chance(50)) {
+      act("With a swift snap of $s tail, $n knocks $p from $N's hands.",FALSE,demon,ob,vict,TO_NOTVICT);
+      act("With a swift snap of $s tail, $n knocks $p from your hands.",FALSE,demon,ob,vict,TO_VICT);
+      act("With a swift snap of your tail, you knock $p from $N's hands.",FALSE,demon,ob,vict,TO_CHAR);
+    }
+    else { //greasy tongue slime
+      act("With a disgusting squelch, $n's greasy tongue wrenches $p from $N's grasp.",FALSE,demon,ob,vict,TO_NOTVICT);
+      act("With a disgusting squelch, $n's greasy tongue wrenches $p from your grasp.",FALSE,demon,ob,vict,TO_VICT);
+      act("With a satisfying squelch, your regal tongue wrenches $p from $N's grasp.",FALSE,demon,ob,vict,TO_CHAR);
+      CREATE(tmp_enchantment, ENCH, 1);
+      tmp_enchantment->name     = str_dup("Greasy Palms");
+      tmp_enchantment->duration = 1;
+      tmp_enchantment->func     = greasy_palms;
+      enchantment_to_char(vict, tmp_enchantment, FALSE);
+      sprintf(buf,"Hell Log Ench: [ %s just contracted Greasy Palms at %d ]",GET_NAME(vict),world[CHAR_REAL_ROOM(vict)].number);
       log_s(buf);
-      ob->log = TRUE;
-    } else
-    	{
-      	obj_to_room (ob, CHAR_REAL_ROOM(demon));
-      	/* Added disarm log, Solmyr - 2009 */
-      	sprintf(buf, "WIZINFO: %s disarms %s's %s in room %d", GET_NAME(demon), GET_NAME(vict), OBJ_SHORT(ob), world[CHAR_REAL_ROOM(demon)].number);
-      	log_s(buf);
-      	ob->log = TRUE;
-      }
-
+    }
+    //disarm to inventory
+    unequip_char(vict, WIELD);
+    obj_to_char(ob, vict);
     return FALSE;
   }
 
@@ -504,31 +498,23 @@ Demon (CHAR *demon, CHAR *ch, int cmd, char *arg) {
     if (CAN_GO (demon, dir))
       move_ch = TRUE;
 
-    if (move_ch) {
-      act("With a swift snap of $s tail,\n\r$n sends $N flying...",
-	  FALSE,demon,0,vict,TO_NOTVICT);
-      act("With a swift snap of $s tail,\n\r$n sends you flying...EEAOOWW!!",
-	  FALSE,demon,0,vict,TO_VICT);
-      act("With a swift snap of your tail,\n\ryou send $N flying...",
-	  FALSE,demon,0,vict,TO_CHAR);
+    if (move_ch && (10*GET_HIT(demon)/GET_MAX_HIT(demon) > 6)) {
+      act("With a swift snap of $s tail, $n sends $N flying...",FALSE,demon,0,vict,TO_NOTVICT);
+      act("With a swift snap of $s tail, $n sends you flying...EEAOOWW!!",FALSE,demon,0,vict,TO_VICT);
+      act("With a swift snap of your tail, you send $N flying...",FALSE,demon,0,vict,TO_CHAR);
 
       char_from_room(vict);
       char_to_room(vict,EXIT(demon,dir)->to_room_r);
 
-      act("$n arrives flying high, and crashes on the floor.",
-	  FALSE,vict,0,0,TO_ROOM);
+      act("$n arrives flying high, and crashes on the floor.",FALSE,vict,0,0,TO_ROOM);
       WAIT_STATE(vict,3*PULSE_VIOLENCE);
       return FALSE;
     } else {
-      act("With a swift snap of $s tail,\n$n sends $N flying to the wall.",
-	  FALSE,demon,0,vict,TO_NOTVICT);
-      act("With a swift snap of $s tail,\n$n sends you flying to the wall.",
-	  FALSE,demon,0,vict,TO_VICT);
-      act("With a swift snap of your tail,\nyou send $N flying to the wall.",
-	  FALSE,demon,0,vict,TO_CHAR);
+      act("With a swift snap of $s tail, $n sends $N flying to the wall.",FALSE,demon,0,vict,TO_NOTVICT);
+      act("With a swift snap of $s tail, $n sends you flying to the wall.",FALSE,demon,0,vict,TO_VICT);
+      act("With a swift snap of your tail, you send $N flying to the wall.",FALSE,demon,0,vict,TO_CHAR);
 
-      if (GET_OPPONENT (vict))
-	stop_fighting (vict);
+      if (GET_OPPONENT (vict)) stop_fighting (vict);
 
       GET_POS (vict) = POSITION_STUNNED;
       WAIT_STATE (vict, 3*PULSE_VIOLENCE);
@@ -801,19 +787,15 @@ int
 Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
   CHAR *vict;
   OBJ *o;
-  char buf[MAX_INPUT_LENGTH];
 
   if (cmd) {
     switch (cmd) {
     case CMD_CIRCLE:
-      act("$n quickly dodges your vain attempt and takes a wild swing at you.",
-	  FALSE,bm,0,ch,TO_VICT);
-      act("You quickly dodge $N's vain attempt and take a wild swing at $M.",
-	  FALSE,bm,0,ch,TO_CHAR);
-      act("$n quickly dodges $N's vain attempt and takes a wild swing at $M.",
-	  FALSE,bm,0,ch,TO_NOTVICT);
+      act("$n quickly dodges your vain attempt and takes a wild swing at you.",FALSE,bm,0,ch,TO_VICT);
+      act("You quickly dodge $N's vain attempt and take a wild swing at $M.",FALSE,bm,0,ch,TO_CHAR);
+      act("$n quickly dodges $N's vain attempt and takes a wild swing at $M.",FALSE,bm,0,ch,TO_NOTVICT);
       hit (bm,ch,TYPE_HIT);
-      return TRUE ;
+      return TRUE;
 
     case CMD_PUNCH:
     case CMD_PUMMEL:
@@ -821,24 +803,18 @@ Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
     case CMD_BASH:
     case CMD_HIT:
     case CMD_KILL:
-      act("$n notices your attempt and takes a wild swing at you.",
-	  FALSE,bm,0,ch,TO_VICT);
-      act("You notice $N's attempt and take a wild swing at $M.",
-	  FALSE,bm,0,ch,TO_CHAR);
-      act("$n notice $N's attempt and takes a wild swing at $M.",
-	  FALSE,bm,0,ch,TO_NOTVICT);
+      act("$n notices your attempt and takes a wild swing at you.",FALSE,bm,0,ch,TO_VICT);
+      act("You notice $N's attempt and take a wild swing at $M.",FALSE,bm,0,ch,TO_CHAR);
+      act("$n notice $N's attempt and takes a wild swing at $M.",FALSE,bm,0,ch,TO_NOTVICT);
       hit (bm,ch,TYPE_HIT);
       return FALSE;
 
     case CMD_CAST:
     case CMD_SONG:
     case CMD_RECITE:
-      act("$n notices your attempt to use magic and swings right at you.",
-	  FALSE,bm,0,ch,TO_VICT);
-      act("You notice $N's attempt to use magic and swing right at $M.",
-	  FALSE,bm,0,ch,TO_CHAR);
-      act("$n notice $N's attempt and swings right at $M.",
-	  FALSE,bm,0,ch,TO_NOTVICT);
+      act("$n notices your attempt to use magic and swings right at you.",FALSE,bm,0,ch,TO_VICT);
+      act("You notice $N's attempt to use magic and swing right at $M.",FALSE,bm,0,ch,TO_CHAR);
+      act("$n notice $N's attempt and swings right at $M.",FALSE,bm,0,ch,TO_NOTVICT);
       damage (bm, ch, number (100,200), TYPE_HIT,DAM_PHYSICAL);
       return FALSE;
 
@@ -850,7 +826,6 @@ Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
   if (!(vict = GET_OPPONENT(bm))) return FALSE;
 
   switch (number(0,2)) {
-
   case 0:
     act("$n takes a hefty swing with at your legs.",FALSE,bm,0,vict,TO_VICT);
     act("$n takes a hefty swing at $N's legs.",FALSE,bm,0,vict,TO_NOTVICT);
@@ -867,19 +842,12 @@ Beastmaster (CHAR *bm, CHAR *ch, int cmd, char *arg) {
     break;
 
   case 2:
-    if (EQ(vict,WIELD)) {
-      o = EQ(vict, WIELD);
-      act("Your weapon goes flying, as $n hits it lightly.",
-	  FALSE,bm,o,vict,TO_VICT);
-      act("$N's weapon goes flying, as $n hits it lightly.",
-	  FALSE,bm,o,vict,TO_NOTVICT);
-      act("$N's weapon goes flying, as you hit it lightly.",
-	  FALSE,bm,o,vict,TO_CHAR);
+    if ((o = EQ(vict,WIELD))) {
+      act("Your weapon is knocked from your grasp as $n hits it deftly.",FALSE,bm,o,vict,TO_VICT);
+      act("$N's weapon is knocked from $S grasp as $n hits it deftly.",FALSE,bm,o,vict,TO_NOTVICT);
+      act("$N's weapon is knocked from $S grasp as you hit it deftly.",FALSE,bm,o,vict,TO_CHAR);
       unequip_char (vict, WIELD);
-      obj_to_room (o, CHAR_REAL_ROOM(vict));
-	    sprintf(buf, "WIZINFO: %s disarms %s's %s at %d", GET_NAME(bm), GET_NAME(vict), OBJ_SHORT(o), world[CHAR_REAL_ROOM(bm)].number);
-	    log_s(buf);
-	    o->log = TRUE;
+      obj_to_char (o, vict);
     }
     break;
   }
