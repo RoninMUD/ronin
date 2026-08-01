@@ -396,75 +396,29 @@ tk_assist_random (CHAR *ch)
   return 0;
 }
 
-void
-tk_baron_drain (CHAR *ch, CHAR *v)
+void tk_baron_drain (CHAR *ch, CHAR *vict)
 {
   int chance = number (1,100);
 
-  if (chance < 60)
-    {
-      if(v->points.max_hit>0) {
-        v->points.max_hit = MAX (v->points.max_hit - number (1,4), 0);
-        GET_HIT (v) = MIN (GET_MAX_HIT (v), GET_HIT (v));
-      }
+  if (chance < 50) {
+    if(GET_MAX_MOVE(vict) > 0) {
+      GET_MAX_MOVE_POINTS(vict) = MAX (GET_MAX_MOVE_POINTS(vict) - number (1,30), 0);
+      GET_MOVE(vict) = MIN (GET_MAX_MOVE(vict), GET_MOVE(vict));
     }
-  else if (chance < 65)
-    {
-      if(v->points.max_mana>0) {
-        v->points.max_mana = MAX (v->points.max_mana - number (1,4), 0);
-        GET_MANA (v) = MIN (GET_MAX_MANA (v), GET_MANA (v));
-      }
+  }
+  else if (chance < 75) {
+    if(GET_MAX_MANA(vict) > 0) {
+      GET_MAX_MANA_POINTS(vict) = MAX (GET_MAX_MANA_POINTS(vict) - number (1,4), 0);
+      GET_MANA(vict) = MIN (GET_MAX_MANA(vict), GET_MANA(vict));
     }
-  else if (chance < 70)
-    {
-      if(v->points.max_move>0) {
-        v->points.max_move = MAX (v->points.max_move - number (1,10), 0);
-        GET_MOVE (v) = MIN (GET_MAX_MOVE (v), GET_MOVE (v));
-      }
+  }
+  else {
+    if(GET_MAX_HIT(vict) > 0) {
+      GET_MAX_HIT_POINTS(vict) = MAX (GET_MAX_HIT_POINTS(vict) - number (1,6), 0);
+      GET_HIT(vict) = MIN (GET_MAX_HIT(vict), GET_HIT(vict));
     }
-  else if (chance < 79)
-    {
-      if (v->abilities.str == 18 && v->abilities.str_add > 0)
-	{
-	  v->abilities.str_add = MAX (0,v->abilities.str_add - number (1,2));
-	  v->tmpabilities.str_add = v->abilities.str_add;
-	}
-      else
-	{
-	  v->abilities.str = MAX (3,v->abilities.str - 1);
-	  v->tmpabilities.str = v->abilities.str;
-	}
-    }
-  else if (chance < 80)
-    {
-      v->abilities.intel = MAX (3,v->abilities.intel - 1);
-      v->tmpabilities.intel = v->abilities.intel;
-    }
-  else if (chance < 85)
-    {
-      v->abilities.wis = MAX (3,v->abilities.wis - 1);
-      v->tmpabilities.wis = v->abilities.wis;
-    }
-  else if (chance < 90)
-    {
-      v->abilities.dex = MAX (3,v->abilities.dex - 1);
-      v->tmpabilities.dex = v->abilities.dex;
-    }
-  else if (chance < 95)
-    {
-      v->abilities.con = MAX (3,v->abilities.con - 1);
-      v->tmpabilities.con = v->abilities.con;
-    }
-  else if (chance < 99)
-    v->points.exp = MAX (0, v->points.exp * number (1,50) / 100);
-  else
-    {
-      GET_LEVEL (v) = GET_LEVEL (v) - 1;
-      GET_EXP (v) = 0;
-      v->points.max_hit -= ((v->points.max_hit)-10)/(GET_LEVEL (v));
-      v->points.max_mana -= ((v->points.max_mana)/GET_LEVEL (v));
-    }
-  affect_total (v);
+  }
+  affect_total (vict);
 }
 
 OBJ *tk_get_loot_inv(CHAR *k, CHAR *ch) {
