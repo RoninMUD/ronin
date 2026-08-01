@@ -1685,7 +1685,7 @@ void do_kick(CHAR *ch, char *arg, int cmd) {
 
   CHAR *victim = get_char_room_vis(ch, name);
 
-  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, victim)) {
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
     victim = GET_OPPONENT(ch);
   }
 
