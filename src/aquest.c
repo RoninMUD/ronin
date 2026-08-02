@@ -1751,7 +1751,7 @@ const int aq_obj_master_list[][2] = {
   {4487, 15}, // Gown of Good Judgement 9
   {4488, 15}, // Axe of Justice 10
   {4489, 15}, // Ornament of Righteousness  6 
-  //{5807, 15}, // Silk Suit 20
+  {5807, 15}, // Silk Suit 20
   {11700, 15}, // Soul Stealer 8
   {11712, 15}, // Armor of Dark Angels 8
   {19400, 15}, // An Extraordinarily Large Grolem Beak 10  
