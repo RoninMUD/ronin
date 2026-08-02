@@ -53,24 +53,25 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 #define AQCARDS_SPREAD 25
 
 /*
- * AQ_FAIL_DECAY_OFFSET / AQ_MIN_COOLDOWN define the single source of
- * truth for how long a player must wait before starting a new AQ
- * after their current one is interrupted for any reason (death, quit,
- * rent, natural expiry, quest mob/giver killed by someone else,
- * hotboot/crash recovery, etc).
- *
- * The cooldown scales with how much of the quest you'd already used:
- * fail almost immediately and you wait close to the max; fail near
- * the very end (or the timer expires naturally) and you only wait
- * the floor. Concretely: cooldown = MAX(ticks_remaining - 40, 5).
- * Since a quest starts with 60 ticks, that means at most 20 ticks
- * of cooldown (failing right away) down to a floor of 5 (failing
- * once you've already burned through most/all of the 60).
- *
- * Do NOT hand-roll this math at individual call sites -- route every
- * quest interruption through aq_fail_quest() below so the displayed
- * message and the stored timer can never disagree, and so the curve
- * can be re-tuned in exactly one place.
+ AQ_FAIL_DECAY_OFFSET / AQ_MIN_COOLDOWN define the decay curve used
+ for AQ interruptions that are within the player's control: quit,
+ rent, auto-rent, and natural expiry. (Interruptions that aren't
+ the player's fault -- death, quest mob/giver killed by someone else,
+ hotboot/crash recovery -- use the flat AQ_INNOCENT_COOLDOWN via
+ aq_fail_quest_flat() instead; see below.)
+
+ The cooldown scales with how much of the quest you'd already used:
+ fail almost immediately and you wait close to the max; fail near
+ the very end (or the timer expires naturally) and you only wait
+ the floor. Concretely: cooldown = MAX(ticks_remaining - 40, 5).
+ Since a quest starts with 60 ticks, that means at most 20 ticks
+ of cooldown (failing right away) down to a floor of 5 (failing
+ once you've already burned through most/all of the 60).
+
+ Do NOT hand-roll this math at individual call sites -- route every
+ quest interruption through aq_fail_quest() below so the displayed
+ message and the stored timer can never disagree, and so the curve
+ can be re-tuned in exactly one place.
  */
 #define AQ_FAIL_DECAY_OFFSET 40
 #define AQ_MIN_COOLDOWN       5
@@ -78,16 +79,20 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 void aqcard_cleanup(int id); /* defined below; forward-declared for aq_fail_quest() */
 
 /*
- * Ends ch's currently running/completed AQ (if any) and applies the
- * standard failure cooldown, scaled by how much of the quest's time
- * budget was already used (see AQ_FAIL_DECAY_OFFSET above).
- * `new_status` is normally QUEST_FAILED, but QUEST_NONE is also valid
- * for paths that don't want to track a distinct "failed" state (e.g.
- * voluntary quit).
- *
- * Safe to call even if ch has no active quest -- it will just reset
- * the (already-empty) quest fields; ticks_remaining will be whatever
- * time_to_quest already held (e.g. 0), so the floor cooldown applies.
+ Ends ch's currently running/completed AQ (if any) and applies the
+ decay-curve failure cooldown, scaled by how much of the quest's time
+ budget was already used (see AQ_FAIL_DECAY_OFFSET above).
+ Use this for interruptions within the player's control (quit, rent,
+ natural expiry); use aq_fail_quest_flat() instead for interruptions
+ that aren't the player's fault.
+
+ `new_status` is normally QUEST_FAILED, but QUEST_NONE is also valid
+ for paths that don't want to track a distinct "failed" state (e.g.
+ voluntary quit).
+
+ Safe to call even if ch has no active quest -- it will just reset
+ the (already-empty) quest fields; ticks_remaining will be whatever
+ time_to_quest already held (e.g. 0), so the floor cooldown applies.
  */
 void aq_fail_quest(CHAR *ch, int new_status) {
   const int aqcard_vnum = 35;
