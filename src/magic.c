@@ -2595,22 +2595,22 @@ void spell_disenchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+void spell_petrify(ubyte level, CHAR *ch, CHAR *victim, bool skip_msg) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM)) return;
 
   if (signal_char(victim, ch, MSG_STONE, "")) return;
 
   if (IS_IMMORTAL(victim) && (GET_LEVEL(victim) > GET_LEVEL(ch)) && IS_SET(GET_IMM_FLAGS(victim), WIZ_ACTIVE)) {
-    act("You gaze at $N and you turn to stone!", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n gazes at you and $e turn to stone!", FALSE, ch, 0, victim, TO_VICT);
-    act("$n gazes at $N and $e turns to stone.", FALSE, ch, 0, victim, TO_NOTVICT);
-
+    if (!skip_msg) { // show default petrify messages
+      act("You gaze at $N and you turn to stone!", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n gazes at you and $e turn to stone!", FALSE, ch, 0, victim, TO_VICT);
+      act("$n gazes at $N and $e turns to stone.", FALSE, ch, 0, victim, TO_NOTVICT);
+    }
     CHAR *temp = ch;
-
     ch = victim;
     victim = temp;
   }
-  else {
+  else if (!skip_msg) { // show default petrify messages
     act("You gaze at $N and $E turns to stone!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n gazes at you and you turn to stone!", FALSE, ch, 0, victim, TO_VICT);
     act("$n gazes at $N and $E turns to stone.", FALSE, ch, 0, victim, TO_NOTVICT);

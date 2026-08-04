@@ -20,6 +20,7 @@
 #include "utils.h"
 #include "spells.h"
 #include "cmd.h"
+#include "aquest.h"
 #include "utility.h"
 #include "reception.h"
 #include "enchant.h"
@@ -457,11 +458,14 @@ void load_char(CHAR *ch) {
   if(signal_char(ch,ch,MSG_OBJ_ENTERING_GAME,buf))
     log_s("Error: Return TRUE from MSG_OBJ_ENTERING_GAME");
 
-  if (ch->ver3.time_to_quest > 0) {
-    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
-  }
-  else {
-    ch->ver3.time_to_quest = 0;
+  /* If the player reconnects still mid-quest (e.g. they disconnected or
+     the server crashed without going through an explicit failure path),
+     treat it as an interrupted quest and apply the standard cooldown.
+     Otherwise leave time_to_quest exactly as it was already set by
+     aq_fail_quest() at whatever point the quest actually ended --
+     don't re-decay a value that's already final. */
+  if (ch->quest_status == QUEST_RUNNING || ch->quest_status == QUEST_COMPLETED) {
+    aq_fail_quest(ch, QUEST_FAILED);
   }
 
   /* Default all imms gold to 10000 coins - Ranger Sept 97 */
@@ -944,33 +948,37 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
       if(ch->quest_status==QUEST_FAILED) {
         printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
       }
-      if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
-        int ttq = MAX(ch->ver3.time_to_quest - 40, 5);
-        snprintf(buf, sizeof(buf), "Your quest has been automatically ended.  You can start another in %d ticks.\n\r", ttq);
-        send_to_char(buf, ch);
-        ch->ver3.time_to_quest=30;
-      }
 
-      ch->questgiver=0;
-      if(ch->questobj)
-      {
-        if(V_OBJ(ch->questobj) == 35)
-        {
-          for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
-          {
-            if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
-            if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
-            extract_obj(tmp_obj);
-          }
-        }
-        else
-          ch->questobj->owned_by=0;
+      if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
+        /* actually interrupting a quest -- apply the standard cooldown,
+           this also clears questgiver/questobj/questmob for us */
+        aq_fail_quest(ch, QUEST_NONE);
+        printf_to_char(ch, "Your quest has been automatically ended.  You can start another in %d ticks.\n\r", ch->ver3.time_to_quest);
       }
-      ch->questobj=0;
-      if(ch->questmob) ch->questmob->questowner=0;
-      ch->questmob=0;
-      ch->quest_status=QUEST_NONE;
-      ch->quest_level=0;
+      else {
+        /* already failed or no quest at all -- just clear any stale
+           pointers, don't touch the existing cooldown */
+        ch->questgiver=0;
+        if(ch->questobj)
+        {
+          if(V_OBJ(ch->questobj) == 35)
+          {
+            for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
+            {
+              if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
+              if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
+              extract_obj(tmp_obj);
+            }
+          }
+          else
+            ch->questobj->owned_by=0;
+        }
+        ch->questobj=0;
+        if(ch->questmob) ch->questmob->questowner=0;
+        ch->questmob=0;
+        ch->quest_status=QUEST_NONE;
+        ch->quest_level=0;
+      }
 
       act("$n stores your stuff in the safe, and helps you into your chamber.",
            FALSE, recep, 0, ch, TO_VICT);
@@ -1043,29 +1051,31 @@ void auto_rent(CHAR *ch) {
     log_s(buf);
   }
 
-  if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED)
-    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
-
-  ch->questgiver=0;
-  if(ch->questobj)
-  {
-    if(V_OBJ(ch->questobj) == 35)
-    {
-      for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
-      {
-        if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
-        if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
-        extract_obj(tmp_obj);
-      }
-    }
-    else
-      ch->questobj->owned_by=0;
+  if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
+    aq_fail_quest(ch, QUEST_NONE);
   }
-  ch->questobj=0;
-  if(ch->questmob) ch->questmob->questowner=0;
-  ch->questmob=0;
-  ch->quest_status=QUEST_NONE;
-  ch->quest_level=0;
+  else {
+    ch->questgiver=0;
+    if(ch->questobj)
+    {
+      if(V_OBJ(ch->questobj) == 35)
+      {
+        for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
+        {
+          if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
+          if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
+          extract_obj(tmp_obj);
+        }
+      }
+      else
+        ch->questobj->owned_by=0;
+    }
+    ch->questobj=0;
+    if(ch->questmob) ch->questmob->questowner=0;
+    ch->questmob=0;
+    ch->quest_status=QUEST_NONE;
+    ch->quest_level=0;
+  }
   signal_char(ch, ch, MSG_AUTORENT, "");
 
   save_char(ch, world[CHAR_REAL_ROOM(ch)].number);

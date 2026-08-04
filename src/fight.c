@@ -18,6 +18,7 @@
 #include "utils.h"
 #include "comm.h"
 #include "act.h"
+#include "aquest.h"
 #include "handler.h"
 #include "interpreter.h"
 #include "db.h"
@@ -602,29 +603,16 @@ void death_list(CHAR *ch)
 
 void raw_kill_ex(CHAR *victim, bool statue) {
   if (!IS_NPC(victim)) {
-    if (GET_QUEST_MOB(victim)) GET_QUEST_OWNER(GET_QUEST_MOB(victim)) = 0;
-    if (GET_QUEST_OBJ(victim)) OBJ_OWNED_BY(GET_QUEST_OBJ(victim)) = 0;
-
-    GET_QUEST_STATUS(victim) = QUEST_NONE;
-    GET_QUEST_GIVER(victim) = 0;
-    GET_QUEST_MOB(victim) = 0;
-    GET_QUEST_OBJ(victim) = 0;
-    GET_QUEST_LEVEL(victim) = 0;
-    GET_QUEST_TIMER(victim) = MAX(GET_QUEST_TIMER(victim) - 40, 5);
+    aq_fail_quest_flat(victim, QUEST_NONE, AQ_INNOCENT_COOLDOWN);
   }
   else if (IS_NPC(victim) && GET_QUEST_OWNER(victim)) {
-    GET_QUEST_STATUS(GET_QUEST_OWNER(victim)) = QUEST_FAILED;
-    GET_QUEST_GIVER(GET_QUEST_OWNER(victim)) = 0;
-    GET_QUEST_MOB(GET_QUEST_OWNER(victim)) = 0;
-    GET_QUEST_OBJ(GET_QUEST_OWNER(victim)) = 0;
-    GET_QUEST_LEVEL(GET_QUEST_OWNER(victim)) = 0;
-    GET_QUEST_TIMER(GET_QUEST_OWNER(victim)) = 2;
+    CHAR *owner = GET_QUEST_OWNER(victim);
 
-    printf_to_char(GET_QUEST_OWNER(victim),
+    aq_fail_quest_flat(owner, QUEST_FAILED, AQ_INNOCENT_COOLDOWN);
+
+    printf_to_char(owner,
       "Your quest target has been killed, you have failed your quest! You can start another in %d ticks.\n\r",
-      GET_QUEST_TIMER(GET_QUEST_OWNER(victim)));
-
-    GET_QUEST_OWNER(victim) = 0;
+      GET_QUEST_TIMER(owner));
   }
 
   stop_fighting(victim);
@@ -998,16 +986,7 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
           if (!IS_NPC(tmp_char) &&
             tmp_char->questgiver == victim)
           {
-            if (tmp_char->questmob)
-            {
-              tmp_char->questmob->questowner = NULL;
-            }
-
-            tmp_char->questmob = NULL;
-            tmp_char->questgiver = NULL;
-            tmp_char->quest_status = QUEST_FAILED;
-            tmp_char->quest_level = 0;
-            tmp_char->ver3.time_to_quest = 2;
+            aq_fail_quest_flat(tmp_char, QUEST_FAILED, AQ_INNOCENT_COOLDOWN);
 
             printf_to_char(tmp_char, "Someone has killed your guildmaster; you have failed your quest! You can start another in %d tick(s).\n\r",
               tmp_char->ver3.time_to_quest);

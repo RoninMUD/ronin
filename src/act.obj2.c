@@ -20,6 +20,7 @@
 #include "utility.h"
 #include "act.h"
 #include "limits.h"
+#include "aquest.h"
 #include "cmd.h"
 #include "subclass.h"
 
@@ -270,15 +271,7 @@ void do_tap(struct char_data *ch, char *argument, int cmd)
       death_list(vict);
       strip_char(vict);
 
-      if(vict->quest_status==QUEST_RUNNING || vict->quest_status==QUEST_COMPLETED)
-        vict->ver3.time_to_quest=30;
-      vict->questgiver=0;
-      if(vict->questobj) vict->questobj->owned_by=0;
-      vict->questobj=0;
-      if(vict->questmob) vict->questmob->questowner=0;
-      vict->questmob=0;
-      vict->quest_status=QUEST_NONE;
-      vict->quest_level=0;
+      aq_fail_quest(vict, QUEST_NONE);
 
       save_char(vict, NOWHERE);
       extract_char(vict);

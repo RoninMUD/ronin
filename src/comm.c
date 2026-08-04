@@ -50,6 +50,7 @@
 #include "aff_ench.h"
 #include "char_spec.h"
 #include "mcheck.h"
+#include "aquest.h"
 
 #define DFLT_PORT 5000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -1304,6 +1305,19 @@ void copyover_recover(void) {
         default:
           log_s("Version number corrupted? (copyover)");
           fOld=FALSE;
+      }
+
+      /* quest_status (and questgiver/questmob/questobj) are NOT part of
+         the char_file_u_5 save format, so they don't survive a hotboot
+         restore -- they silently reset to QUEST_NONE/NULL on the fresh
+         struct. time_to_quest DOES survive (it's inside ver3, which is
+         bulk-copied above). So we can't check status to see if a quest
+         was interrupted; instead, treat any nonzero leftover timer as
+         an interrupted quest. A hotboot/crash isn't the player's fault,
+         so use the flat mercy cooldown rather than the decay formula.
+         If the timer's already 0, there's nothing to penalize -- leave it. */
+      if (fOld && GET_QUEST_TIMER(d->character) > 0) {
+        aq_fail_quest_flat(d->character, QUEST_FAILED, AQ_INNOCENT_COOLDOWN);
       }
     }
 

@@ -789,6 +789,7 @@ const int no_teleport_zones[] = {
   260, // Questy Vader III
   261, // Questy Nosferatu
   262, // Quest by Hemp
+  263, // Christmas Village
   275, // Clan Halls
   278, // ISAHall
   285, // Enchanted Forest

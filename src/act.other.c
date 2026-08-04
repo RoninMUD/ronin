@@ -173,7 +173,6 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
   int i;
   int wearing = FALSE;
   char buf[MAX_STRING_LENGTH];
-  OBJ *tmp_obj;
 
   void die(struct char_data *ch);
   void strip_char(CHAR *ch);
@@ -219,39 +218,33 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
     stop_riding(ch,ch->specials.riding);
   }
 
-  if (IS_IMMORTAL(ch)) {
-    GET_QUEST_TIMER(ch) = 0;
-  }
-  else {
-    ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
-  }
-
-  if(ch->quest_status==QUEST_FAILED) {
-    printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
-  }
-  if(ch->quest_status==QUEST_RUNNING || ch->quest_status==QUEST_COMPLETED) {
-    printf_to_char(ch,"Your quest has been automatically ended, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
-  }
-  ch->questgiver=0;
-  if(ch->questobj)
   {
-    if(V_OBJ(ch->questobj) == 35)
-    {
-      for(tmp_obj = object_list; tmp_obj; tmp_obj = tmp_obj->next)
-      {
-        if(V_OBJ(tmp_obj) != 35) continue; //not a questcard? skip
-        if(OBJ_SPEC(tmp_obj) != ch->ver3.id) continue; //not the char's questcard? skip
-        extract_obj(tmp_obj);
+    int prev_quest_status = ch->quest_status;
+
+    if (prev_quest_status == QUEST_RUNNING || prev_quest_status == QUEST_COMPLETED) {
+      /* actually interrupting a quest -- apply the standard cooldown */
+      aq_fail_quest(ch, QUEST_NONE);
+      if (IS_IMMORTAL(ch))
+        GET_QUEST_TIMER(ch) = 0; /* imms aren't subject to the cooldown */
+
+      printf_to_char(ch,"Your quest has been automatically ended, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
+    }
+    else {
+      /* no active quest to fail -- just clear stale pointers, leave any
+         existing cooldown (from an earlier failure) ticking on its own */
+      ch->questgiver = 0;
+      if (ch->questobj) ch->questobj->owned_by = 0;
+      ch->questobj = 0;
+      if (ch->questmob) ch->questmob->questowner = 0;
+      ch->questmob = 0;
+      ch->quest_status = QUEST_NONE;
+      ch->quest_level = 0;
+
+      if (prev_quest_status == QUEST_FAILED) {
+        printf_to_char(ch,"You have failed your quest, you can start another in %d ticks.\n\r",ch->ver3.time_to_quest);
       }
     }
-    else
-      ch->questobj->owned_by=0;
   }
-  ch->questobj=0;
-  if(ch->questmob) ch->questmob->questowner=0;
-  ch->questmob=0;
-  ch->quest_status=QUEST_NONE;
-  ch->quest_level=0;
 
   if( (GET_LEVEL(ch) < LEVEL_IMM) && IS_SET(ch->specials.pflag, PLR_QUEST)) REMOVE_BIT(ch->specials.pflag, PLR_QUEST);
   /* Ranger - June 96 */

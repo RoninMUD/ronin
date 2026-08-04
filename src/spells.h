@@ -871,7 +871,7 @@ void spell_disenchant(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);
 
 void spell_petrify(ubyte level, struct char_data *ch,
-  struct char_data *victim, struct obj_data *obj);
+  struct char_data *victim, bool skip_msg);
 
 void spell_protection_from_good(ubyte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj);

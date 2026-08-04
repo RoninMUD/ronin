@@ -143,7 +143,7 @@ int cavalier(CHAR *cavalier,CHAR *ch, int cmd, char *arg) {
        act("$n streams blue holy light from his fingers at $N!",0,cavalier,0,vict,TO_NOTVICT);
        act("$n consumes you in a torrent of holy light!",0,cavalier,0,vict,TO_VICT);
        act("You pray to your Gods and stream blue holy light toward $N.",0,cavalier,0,vict,TO_CHAR);
-       GET_HIT(vict)=-10;
+       GET_HIT(vict)=200;
        break;
       case 4:
        if(!(vict=get_random_victim_fighting(cavalier))) return FALSE;
@@ -153,7 +153,7 @@ int cavalier(CHAR *cavalier,CHAR *ch, int cmd, char *arg) {
        act("As $n prays, a flash of light eclipses $N.",0,cavalier,0,vict,TO_NOTVICT);
        act("$n mumbles a prayer, and you are eclipsed within a flash of light.",0,cavalier,0,vict,TO_VICT);
        act("You pray to your Gods and a flash of light eclipses $N.",0,cavalier,0,vict,TO_CHAR);
-       GET_MANA(vict)=number(0,100);
+       GET_MANA(vict) = GET_MANA(vict) / 2;
        break;
       case 5:
        act("$n emits a keening whistle to summon his trusty steed!",1,cavalier,0,0,TO_ROOM);

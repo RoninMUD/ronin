@@ -52,6 +52,102 @@ int check_guildmaster(CHAR *ch, CHAR *mob) {
 
 #define AQCARDS_SPREAD 25
 
+/*
+ AQ_FAIL_DECAY_OFFSET / AQ_MIN_COOLDOWN define the decay curve used
+ for AQ interruptions that are within the player's control: quit,
+ rent, auto-rent, and natural expiry. (Interruptions that aren't
+ the player's fault -- death, quest mob/giver killed by someone else,
+ hotboot/crash recovery -- use the flat AQ_INNOCENT_COOLDOWN via
+ aq_fail_quest_flat() instead; see below.)
+
+ The cooldown scales with how much of the quest you'd already used:
+ fail almost immediately and you wait close to the max; fail near
+ the very end (or the timer expires naturally) and you only wait
+ the floor. Concretely: cooldown = MAX(ticks_remaining - 40, 5).
+ Since a quest starts with 60 ticks, that means at most 20 ticks
+ of cooldown (failing right away) down to a floor of 5 (failing
+ once you've already burned through most/all of the 60).
+
+ Do NOT hand-roll this math at individual call sites -- route every
+ quest interruption through aq_fail_quest() below so the displayed
+ message and the stored timer can never disagree, and so the curve
+ can be re-tuned in exactly one place.
+ */
+#define AQ_FAIL_DECAY_OFFSET 40
+#define AQ_MIN_COOLDOWN       5
+
+void aqcard_cleanup(int id); /* defined below; forward-declared for aq_fail_quest() */
+
+/*
+ Ends ch's currently running/completed AQ (if any) and applies the
+ decay-curve failure cooldown, scaled by how much of the quest's time
+ budget was already used (see AQ_FAIL_DECAY_OFFSET above).
+ Use this for interruptions within the player's control (quit, rent,
+ natural expiry); use aq_fail_quest_flat() instead for interruptions
+ that aren't the player's fault.
+
+ `new_status` is normally QUEST_FAILED, but QUEST_NONE is also valid
+ for paths that don't want to track a distinct "failed" state (e.g.
+ voluntary quit).
+
+ Safe to call even if ch has no active quest -- it will just reset
+ the (already-empty) quest fields; ticks_remaining will be whatever
+ time_to_quest already held (e.g. 0), so the floor cooldown applies.
+ */
+void aq_fail_quest(CHAR *ch, int new_status) {
+  const int aqcard_vnum = 35;
+  int ticks_remaining;
+
+  if (!ch || IS_NPC(ch)) return;
+
+  ticks_remaining = GET_QUEST_TIMER(ch); /* capture before we overwrite it below */
+
+  if (GET_QUEST_MOB(ch)) GET_QUEST_OWNER(GET_QUEST_MOB(ch)) = NULL;
+
+  if (GET_QUEST_OBJ(ch)) {
+    if (V_OBJ(GET_QUEST_OBJ(ch)) == aqcard_vnum)
+      aqcard_cleanup(GET_ID(ch));
+    else
+      OBJ_OWNED_BY(GET_QUEST_OBJ(ch)) = NULL;
+  }
+
+  GET_QUEST_GIVER(ch) = NULL;
+  GET_QUEST_MOB(ch)   = NULL;
+  GET_QUEST_OBJ(ch)   = NULL;
+  GET_QUEST_LEVEL(ch) = 0;
+  GET_QUEST_STATUS(ch) = new_status;
+  GET_QUEST_TIMER(ch)  = MAX(ticks_remaining - AQ_FAIL_DECAY_OFFSET, AQ_MIN_COOLDOWN);
+}
+
+/*
+ * Same cleanup as aq_fail_quest(), but for cases that aren't the
+ * player's fault (they died, or their quest mob/guildmaster was
+ * killed by someone else) -- applies a short flat mercy cooldown
+ * instead of the normal decay curve. See AQ_INNOCENT_COOLDOWN in
+ * aquest.h for the value used at most call sites.
+ */
+void aq_fail_quest_flat(CHAR *ch, int new_status, int cooldown) {
+  const int aqcard_vnum = 35;
+
+  if (!ch || IS_NPC(ch)) return;
+
+  if (GET_QUEST_MOB(ch)) GET_QUEST_OWNER(GET_QUEST_MOB(ch)) = NULL;
+
+  if (GET_QUEST_OBJ(ch)) {
+    if (V_OBJ(GET_QUEST_OBJ(ch)) == aqcard_vnum)
+      aqcard_cleanup(GET_ID(ch));
+    else
+      OBJ_OWNED_BY(GET_QUEST_OBJ(ch)) = NULL;
+  }
+
+  GET_QUEST_GIVER(ch) = NULL;
+  GET_QUEST_MOB(ch)   = NULL;
+  GET_QUEST_OBJ(ch)   = NULL;
+  GET_QUEST_LEVEL(ch) = 0;
+  GET_QUEST_STATUS(ch) = new_status;
+  GET_QUEST_TIMER(ch)  = cooldown;
+}
+
 const int aq_card[] = {//should this be in constants.c?
  2, /* 1 aq point */
  4, /* 2 aq point */
@@ -166,24 +262,10 @@ This command is used to handle automatic questing from guildmasters.\n\r\n\r\
         printf_to_char(ch, "You have failed your quest, you can start another in %d ticks.\n\r", ch->ver3.time_to_quest);
       }
       else {
-        ch->questgiver = 0;
-        if (ch->questobj) {
-          if (V_OBJ(ch->questobj) == 35)
-            aqcard_cleanup(ch->ver3.id);
-          else
-            ch->questobj->owned_by = 0;
-        }
-        ch->questobj = 0;
-        if (ch->questmob)
-          ch->questmob->questowner = 0;
-        ch->questmob = 0;
-        ch->quest_status = QUEST_NONE;
-        ch->quest_level = 0;
+        aq_fail_quest(ch, QUEST_NONE);
 #ifndef TESTSITE
-        if (GET_LEVEL(ch) < LEVEL_IMM)
-          ch->ver3.time_to_quest = MAX(ch->ver3.time_to_quest - 40, 5);
-        else
-          ch->ver3.time_to_quest = 0;
+        if (GET_LEVEL(ch) >= LEVEL_IMM)
+          ch->ver3.time_to_quest = 0; /* imms aren't subject to the cooldown */
 #else
         ch->ver3.time_to_quest = 0;
 #endif
@@ -1674,7 +1756,7 @@ const int aq_obj_master_list[][2] = {
   {4487, 15}, // Gown of Good Judgement 9
   {4488, 15}, // Axe of Justice 10
   {4489, 15}, // Ornament of Righteousness  6 
-  //{5807, 15}, // Silk Suit 20
+  {5807, 15}, // Silk Suit 20
   {11700, 15}, // Soul Stealer 8
   {11712, 15}, // Armor of Dark Angels 8
   {19400, 15}, // An Extraordinarily Large Grolem Beak 10  

@@ -2,9 +2,7 @@
   score.h - Improved do_score() and related functions
 
   Written by Alan K. Miles for RoninMUD
-  Last Modification Date: 10/21/2012
 */
-/* Project Epee */
 
 #ifndef _SCORE_H_
 #define _SCORE_H_
@@ -73,6 +71,12 @@
 #define SCQ_PRESTIGE       59
 #define SCQ_THAC0          60
 #define SCQ_GENDER         61
+#define SCQ_STR_ADD        62
+#define SCQ_STR_MOD        63
+#define SCQ_DEX_MOD        64
+#define SCQ_CON_MOD        65
+#define SCQ_INT_MOD        66
+#define SCQ_WIS_MOD        67
 
 void score_query(CHAR *ch, int query, bool opt_text, bool new_line);
 void do_score(CHAR *ch, char *argument, int cmd);

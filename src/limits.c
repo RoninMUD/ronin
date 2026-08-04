@@ -26,6 +26,7 @@
 #include "subclass.h"
 #include "enchant.h"
 #include "aff_ench.h"
+#include "aquest.h"
 
 /* Defines */
 
@@ -1283,27 +1284,7 @@ void point_update(void) {
         GET_QUEST_TIMER(ch) = 0;
 
         if (GET_QUEST_STATUS(ch) == QUEST_RUNNING) {
-          if (GET_QUEST_MOB(ch)) {
-            GET_QUEST_OWNER(GET_QUEST_MOB(ch)) = NULL;
-          }
-
-          if (GET_QUEST_OBJ(ch)) {
-            const int aqcard_vnum = 35;
-
-            if (V_OBJ(GET_QUEST_OBJ(ch)) == aqcard_vnum) {
-              aqcard_cleanup(GET_ID(ch));
-            }
-            else {
-              OBJ_OWNED_BY(GET_QUEST_OBJ(ch)) = NULL;
-            }
-          }
-
-          GET_QUEST_GIVER(ch) = NULL;
-          GET_QUEST_MOB(ch) = NULL;
-          GET_QUEST_OBJ(ch) = NULL;
-          GET_QUEST_LEVEL(ch) = 0;
-          GET_QUEST_STATUS(ch) = QUEST_FAILED;
-          GET_QUEST_TIMER(ch) = 1;
+          aq_fail_quest(ch, QUEST_FAILED);
 
           printf_to_char(ch, "Your time has expired, you have failed your quest! You can start another in %d ticks.\n\r", GET_QUEST_TIMER(ch));
         }
