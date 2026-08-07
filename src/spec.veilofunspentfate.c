@@ -193,18 +193,29 @@ int daily_qp_keeper(CHAR *mob, CHAR *ch, int cmd, char *arg){
 	CHAR *vict, *next_vict;
 	int mortal_count;
 	
+	time_t now = time(NULL);
+	struct tm *tm = localtime(&now);
+	
 	switch (cmd)
     {
 		
 		case MSG_MOBACT:
-		
-			//We need to reset the file at midnight, but only once a day.  So we will set the bank bit at midnight to reset the file.
-				if (!IS_SET(GET_BANK(mob), STATE1) && time_info.hours == 0)
-				{
-					do_say(mob, "File Reset", CMD_SAY);
-					SET_BIT(GET_BANK(mob), STATE1);
-					reset_daily_qp_file();
-				}
+			
+			/* Reset the bit at 3 AM so the midnight reset can happen again */
+			if (IS_SET(GET_BANK(mob), STATE1) && tm->tm_hour == 3)
+			{
+				do_say(mob, "Bit Reset", CMD_SAY);
+				REMOVE_BIT(GET_BANK(mob), STATE1);
+			}
+
+			/* Reset the file once each day at midnight */
+			if (!IS_SET(GET_BANK(mob), STATE1) && tm->tm_hour == 0)
+			{
+				do_say(mob, "File Reset", CMD_SAY);
+				SET_BIT(GET_BANK(mob), STATE1);
+				reset_daily_qp_file();
+			}
+			
 		
 			break;
 		case CMD_KILL:
@@ -342,12 +353,21 @@ int daily_qp_keeper(CHAR *mob, CHAR *ch, int cmd, char *arg){
 		case CMD_UNKNOWN:
 		
 			one_argument(arg, keyword);			
-			
-			if (IS_IMMORTAL(ch) && is_abbrev(keyword, "reset")){
+			//is_abbrev(keyword, "reset")
+			if (IS_IMMORTAL(ch) && strcmp(keyword, "reset") == 0 ){
 				send_to_char("File reset. \n\r", ch);
 				reset_daily_qp_file();
 				return TRUE;
 			}
+			//is_abbrev(keyword, "timeinfo")
+			if (IS_IMMORTAL(ch) && strcmp(keyword, "timeinfo") == 0){
+				char buf[MAX_STRING_LENGTH];
+				snprintf(buf, sizeof(buf), "Current hour is %d.\n\r", tm->tm_hour);
+				send_to_char(buf, ch);
+			
+				return TRUE;
+			}
+			
 			break;
 		default:
 			break;
