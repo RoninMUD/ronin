@@ -390,7 +390,7 @@ bulbous eyes rotate independently watching in all directions, watching for
 anything delicious to cross its path.
 ~
 16490 0 0 Y
-54 -20 -19 47d118+0 10d23+180
+54 -20 -19 47d118+13600 10d23+180
 90518 2750000
 8 8 0
 80 20480 10d10+1000 3
@@ -398,6 +398,8 @@ anything delicious to cross its path.
 8 5 22 0
 3 3 29 0
 0 1 0 32
+R
+2
 K
 0 0 0 0 0 0 0
 #30125
