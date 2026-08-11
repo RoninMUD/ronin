@@ -7,6 +7,7 @@
 */
 /*System Includes */
 #include <string.h>
+#include <stdlib.h>
 
 /*Ronin Includes */
 #include "structs.h"
@@ -33,16 +34,16 @@
 /*Objects */
 
 /*Mobs */
-#define GOLD_MOB 30110
-#define TAMUR_WERE_BESAT 30111
-#define THEURGI_LEADER 30114
-#define DEAD_EYE_VAMPIRE 30118
+#define GOLD_MOB              30110
+#define TAMUR_WERE_BESAT      30111
+#define THEURGI_LEADER        30114
+#define DEAD_EYE_VAMPIRE      30118
 #define HALF_CHANGED_WEREWOLF 30121
-#define TROMOD_GARGOYLE 30122
-#define XALGATH_DEMON 30123
-#define STEFAN_ALCHEMIST 30125
-#define VOID_ELEMENTAL 30126
-
+#define TROMOD_GARGOYLE       30122
+#define XALGATH_DEMON         30123
+#define STEFAN_ALCHEMIST      30125
+#define VOID_ELEMENTAL        30126
+#define LIZARD_HORN           30122
 /*Miscellaneous strings */
 // Generic States that are shifted to indicate different stages.
 #define STATE1 (1 << 0) // 1
@@ -53,6 +54,27 @@
 /*======================================================================== */
 /*===============================OBJECT SPECS============================= */
 /*======================================================================== */
+
+extern int lizard_bite(ENCH *ench, CHAR *ench_ch, CHAR *ch, int cmd, char *arg);
+
+int lizard_horn (OBJ *horn, CHAR *ch, int cmd, char *arg) {
+  ENCH *tmp_enchantment;
+  char buf[MAX_INPUT_LENGTH];
+
+  if((ch=horn->equipped_by) && cmd==MSG_TICK && IS_DAY && chance(16)) {
+    if (!(enchanted_by(ch, "Lizard Lycanthropy"))) {
+      send_to_char("You feel the urge to sun yourself on a rock.\n\r", ch);
+      CREATE(tmp_enchantment, ENCH, 1);
+      tmp_enchantment->name     = str_dup("Lizard Lycanthropy");
+      tmp_enchantment->duration = 24;
+      tmp_enchantment->func     = lizard_bite;
+      enchantment_to_char(ch, tmp_enchantment, FALSE);
+      sprintf(buf,"Hell Log Ench: [ %s just contracted Lizard Lycanthropy at %d ]",GET_NAME(ch),world[CHAR_REAL_ROOM(ch)].number);
+      log_s(buf);
+    }
+  }
+  return FALSE;
+}
 
 /*======================================================================== */
 /*================================ROOM SPECS============================== */
@@ -887,7 +909,7 @@ int darkspire_void_elemental(CHAR *mob, CHAR *ch, int cmd, char *arg)
 void assign_darkspire(void)
 {
   /*Objects */
-  // assign_obj(BUCKET_EMPTY,          tweef_bucket_empty);
+  assign_obj(LIZARD_HORN,          lizard_horn);
 
   /*Rooms */
   // assign_room(LIGHTWALL,             	cl_LightWallLink);

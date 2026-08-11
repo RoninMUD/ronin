@@ -5,6 +5,7 @@
 
      Basic Specs for the mobs and rooms in the zone.
 */
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -40,9 +41,6 @@
 #define UBER_UNSHAKEN_SANDALS 14603
 #define UBER_INSIGHT_RING 14604
 
-
-
-
 /*Mobs */
 #define UBER_KING_SPIDER 14600
 #define UBER_GREAT_MYSTIC 14601
@@ -54,9 +52,6 @@
 #define UBER_FIRE_NEWT_GOD 14606
 #define UBER_BLUE_ROOK 14607
 #define UBER_ZYCA_GUARD 14608
-
-
-
 
 /*Miscellaneous strings */
 //Generic States that are shifted to indicate different stages.
@@ -85,28 +80,27 @@ int check_mystic_set_pieces(CHAR *ch)
 	OBJ *obj;
 
 	if (!ch) return 0;
-	
-	for (int i = 0; i < MAX_WEAR; i++){
+
+	for (int i = 0; i < MAX_WEAR; i++) {
 		obj = ch->equipment[i];
 		
 		if(!obj) continue;
 		  
 		switch (V_OBJ(obj))
 		{
-			case UBER_THOUGHT_SLEEVES:
-			case UBER_ENLIGHTENED_MANTLE:
-			case UBER_UNSHAKEN_SANDALS:
-			case UBER_INSIGHT_RING:
-				count++;
-				break;
+		case UBER_THOUGHT_SLEEVES:
+		case UBER_ENLIGHTENED_MANTLE:
+		case UBER_UNSHAKEN_SANDALS:
+		case UBER_INSIGHT_RING:
+			count++;
+			break;
 		}
-		  
 	}
-	//Account for people wearing 2 rings.   Make sure the cap is 4.  
-	if(count > 4){
+	//Account for people wearing 2 rings. Make sure the cap is 4.
+	if(count > 4) {
 		count = 4;
 	}
-	
+
 	return count;
 }
 
@@ -149,54 +143,51 @@ int uber_thought_sleeves (OBJ *obj,CHAR *ch,int cmd,char *arg) {
 		if (!*buf)
 			return FALSE;
 
-    
-	if (*buf && is_abbrev(buf, "sleeves")){
+		if (*buf && is_abbrev(buf, "sleeves")) {
       if (!obj->obj_flags.value[3]) {
         
-		set_pieces = check_mystic_set_pieces(ch);
+		    set_pieces = check_mystic_set_pieces(ch);
 		
-		if(set_pieces == 4){			
-			act("$n has gained full knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);        
-			act("You have gained the full knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
-		}else if (set_pieces == 3){
-			act("$n has mostly gained the knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);        
-			act("You have mostly gained the knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
-		}else if (set_pieces == 2){
-			act("$n has partially gained the knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);        
-			act("You have partially gained the knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
-		}else if (set_pieces == 1){
-			act("$n has started to gain the full knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);        
-			act("You have started to gain the full knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
-		}
+		    if(set_pieces == 4) {
+			    act("$n has gained full knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);
+			    act("You have gained the full knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
+		    } else if (set_pieces == 3) {
+			    act("$n has mostly gained the knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);
+			    act("You have mostly gained the knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
+		    } else if (set_pieces == 2) {
+			    act("$n has partially gained the knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);
+			    act("You have partially gained the knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
+		    } else if (set_pieces == 1) {
+          act("$n has started to gain the full knowledge of the universe.",FALSE,ch,obj,0,TO_ROOM);
+          act("You have started to gain the full knowledge of the universe.",FALSE,ch,obj,0,TO_CHAR);
+		    }
 		
-		switch (set_pieces)
-		{
-			case 4:
-				spell_perceive(50, ch, ch, 0);
+		    switch (set_pieces)
+		    {
+			  case 4:
+				  spell_perceive(50, ch, ch, 0);
 				/* fall through */
-			case 3:
-				spell_detect_invisibility(50, ch, ch, 0);
+			  case 3:
+				  spell_detect_invisibility(50, ch, ch, 0);
 				/* fall through */
-			case 2:
-				spell_infravision(50, ch, ch, 0);
+			  case 2:
+          spell_infravision(50, ch, ch, 0);
 				/* fall through */
-			case 1:
-				spell_sense_life(50, ch, ch, 0);
-				break;
-			default:
-				break;
-		}
-		
+			  case 1:
+          spell_sense_life(50, ch, ch, 0);
+				  break;
+			  default:
+          break;
+		    }
         obj->obj_flags.value[3]=30;
       } else {
         send_to_char ("The sleeves do nothing.\n",ch);
       }
-      return TRUE;
+    return TRUE;
     }
   }
   return FALSE;
 }
-
 
 int uber_enlightened_mantle(OBJ *obj, CHAR *ch, int cmd, char *arg) {
   CHAR *owner,*tmp;
@@ -210,21 +201,21 @@ int uber_enlightened_mantle(OBJ *obj, CHAR *ch, int cmd, char *arg) {
       owner = obj->equipped_by;
       if(IS_MOB(owner)) return FALSE;
     }
-    else{
+    else {
       return FALSE;
-	}
+	  }
 	
-    if(IS_SET(world[CHAR_REAL_ROOM(owner)].room_flags, CHAOTIC)){
-		return FALSE;
-	}
+    if(IS_SET(world[CHAR_REAL_ROOM(owner)].room_flags, CHAOTIC)) {
+		  return FALSE;
+	  }
 	
-	set_pieces = check_mystic_set_pieces(owner);
+	  set_pieces = check_mystic_set_pieces(owner);
 	
-	act("$n's mantle flares with calm radiance, refusing to let death take hold.", TRUE, owner, 0, 0, TO_ROOM);
+	  act("$n's mantle flares with calm radiance, refusing to let death take hold.", TRUE, owner, 0, 0, TO_ROOM);
     send_to_char("Your mantle anchors you between moments, denying death.\n\r", owner);
 	
-	switch (set_pieces)
-	{
+	  switch (set_pieces)
+	  {
 		case 4: // If you have 4, retain more ability to keep fighting.
 			GET_HIT(owner) = (GET_MAX_HIT(owner)/2);
 			GET_MANA(owner) = (GET_MAX_MANA(owner)/2);
@@ -250,28 +241,26 @@ int uber_enlightened_mantle(OBJ *obj, CHAR *ch, int cmd, char *arg) {
 			break;
 		default:
 			break;
-	}
+	  }
 
     sprintf(buf,"%s rescued %s from %s [%d].", OBJ_SHORT(obj), GET_NAME(owner), world[CHAR_REAL_ROOM(owner)].name, CHAR_VIRTUAL_ROOM(owner));  wizlog(buf, LEVEL_WIZ, 6);
     log_s(buf);
-	if(set_pieces < 4){
-		for(tmp = world[CHAR_REAL_ROOM(owner)].people;tmp;tmp=tmp->next_in_room){
-		  if(GET_OPPONENT(tmp) == owner){
-			stop_fighting (tmp);
+
+    if(set_pieces < 4) {
+		  for(tmp = world[CHAR_REAL_ROOM(owner)].people;tmp;tmp=tmp->next_in_room) {
+		    if(GET_OPPONENT(tmp) == owner) {
+			  stop_fighting (tmp);
+		    }
 		  }
-		}
-		stop_fighting(owner);
-	}
+		  stop_fighting(owner);
+	  }
     unequip_char(owner, WEAR_ABOUT);
     obj_to_char(obj, owner);
     extract_obj(obj);
-
-    
     return TRUE;
   }
   return FALSE;
 }
-
 
 int uber_unshaken_sandals(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
@@ -279,13 +268,12 @@ int uber_unshaken_sandals(OBJ *obj, CHAR *ch, int cmd, char *arg)
 	int set_pieces;
 	int restore;
 
-	if (cmd == MSG_TICK){
+	if (cmd == MSG_TICK) {
 		/* Don't spec if no ch. */
 		ch = obj->equipped_by;
 		
 		if (!ch)
 			return FALSE;
-		
 		/* Don't spec if ch is not awake. */
 		if (!AWAKE(ch))
 			return FALSE;
@@ -300,40 +288,37 @@ int uber_unshaken_sandals(OBJ *obj, CHAR *ch, int cmd, char *arg)
 		
 		
 		/* Only help if movement is low */
-		if (GET_MOVE(owner) > GET_MAX_MOVE(owner) / 2){
+		if (GET_MOVE(owner) > GET_MAX_MOVE(owner) / 2) {
 			return FALSE;
 		}
 		set_pieces = check_mystic_set_pieces(owner);
 
 		switch (set_pieces)
 		{
-			case 4:
-				restore = GET_MAX_MOVE(owner) / 4;
-				break;
-			case 3:
-				restore = GET_MAX_MOVE(owner) / 6;
-				break;
-			case 2:
-				restore = GET_MAX_MOVE(owner) / 8;
-				break;
-			case 1:
-				restore = GET_MAX_MOVE(owner) / 10;
-				break;
-			default:
-				return FALSE;
+		case 4:
+			restore = GET_MAX_MOVE(owner) / 4;
+			break;
+		case 3:
+			restore = GET_MAX_MOVE(owner) / 6;
+			break;
+		case 2:
+			restore = GET_MAX_MOVE(owner) / 8;
+			break;
+		case 1:
+			restore = GET_MAX_MOVE(owner) / 10;
+			break;
+		default:
+			return FALSE;
 		}
 
 		GET_MOVE(owner) = MIN(GET_MOVE(owner) + restore, GET_MAX_MOVE(owner));
 
 		send_to_char("Your footing steadies as measured steps restore your strength.\n\r", owner);
 		act("$n's stance steadies, each step deliberate and controlled.",TRUE, owner, 0, 0, TO_ROOM);
-
 		return FALSE;
 	}
-	
 	return FALSE;
 }
-
 
 void remove_other_mystic_enlightenment(CHAR *ch, const char *keep)
 {
@@ -368,68 +353,58 @@ int mystic_enlightenment_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int c
 	  
 	  switch (set_pieces)
 		{
-			case 4:
-				remove_other_mystic_enlightenment(ch, MYSTIC_FULL_ENCH_NAME);
+		case 4:
+			remove_other_mystic_enlightenment(ch, MYSTIC_FULL_ENCH_NAME);
 
-				if (!enchanted_by(ch, MYSTIC_FULL_ENCH_NAME))
-				{
-					enchantment_apply(ch, FALSE, MYSTIC_FULL_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 4, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+			if (!enchanted_by(ch, MYSTIC_FULL_ENCH_NAME))
+			{
+				enchantment_apply(ch, FALSE, MYSTIC_FULL_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 4, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("Perfect clarity settles over you as enlightenment is fully realized.\n\r", ch);
+			}
+			break;
+		case 3:
+			remove_other_mystic_enlightenment(ch, MYSTIC_VISION_ENCH_NAME);
 
-					send_to_char("Perfect clarity settles over you as enlightenment is fully realized.\n\r", ch);
-				}
-				break;
+			if (!enchanted_by(ch, MYSTIC_VISION_ENCH_NAME))
+			{
+				enchantment_apply(ch, FALSE, MYSTIC_VISION_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 3, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("Your vision sharpens as deeper truths reveal themselves.\n\r", ch);
+			}
+			break;
+		case 2:
+			remove_other_mystic_enlightenment(ch, MYSTIC_PATH_ENCH_NAME);
 
-			case 3:
-				remove_other_mystic_enlightenment(ch, MYSTIC_VISION_ENCH_NAME);
+			if (!enchanted_by(ch, MYSTIC_PATH_ENCH_NAME))
+			{
+				enchantment_apply(ch, FALSE, MYSTIC_PATH_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 2, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("You feel steadier as you continue along the path of enlightenment.\n\r", ch);
+			}
+			break;
+		case 1:
+			remove_other_mystic_enlightenment(ch, MYSTIC_STIRRING_ENCH_NAME);
 
-				if (!enchanted_by(ch, MYSTIC_VISION_ENCH_NAME))
-				{
-					enchantment_apply(ch, FALSE, MYSTIC_VISION_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 3, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
-					send_to_char("Your vision sharpens as deeper truths reveal themselves.\n\r", ch);
-				}
-				break;
-
-			case 2:
-				remove_other_mystic_enlightenment(ch, MYSTIC_PATH_ENCH_NAME);
-
-				if (!enchanted_by(ch, MYSTIC_PATH_ENCH_NAME))
-				{
-					enchantment_apply(ch, FALSE, MYSTIC_PATH_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 2, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
-					send_to_char("You feel steadier as you continue along the path of enlightenment.\n\r", ch);
-				}
-				break;
-
-			case 1:
-				remove_other_mystic_enlightenment(ch, MYSTIC_STIRRING_ENCH_NAME);
-
-				if (!enchanted_by(ch, MYSTIC_STIRRING_ENCH_NAME))
-				{
-					enchantment_apply(ch, FALSE, MYSTIC_STIRRING_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 1, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
-					send_to_char("A faint awareness stirs within you.\n\r", ch);
-				}
-				break;
-			default:
-				remove_other_mystic_enlightenment(ch, NULL);
-				send_to_char("You are no longer on the path to enlightenment.\n\r", ch);		
-				break;
+			if (!enchanted_by(ch, MYSTIC_STIRRING_ENCH_NAME))
+			{
+				enchantment_apply(ch, FALSE, MYSTIC_STIRRING_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 1, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("A faint awareness stirs within you.\n\r", ch);
+			}
+			break;
+		default:
+			remove_other_mystic_enlightenment(ch, NULL);
+			send_to_char("You are no longer on the path to enlightenment.\n\r", ch);
+			break;
 		}
-    
     return FALSE;
   }
-
   return FALSE;
 }
-
 
 int uber_insight_ring(OBJ *obj, CHAR *ch, int cmd, char *arg)
 {
 	CHAR *owner;
 	int set_pieces;
 
-	if (cmd == MSG_TICK){
+	if (cmd == MSG_TICK) {
 		owner = obj->equipped_by;
 
 		if (!owner)
@@ -445,60 +420,47 @@ int uber_insight_ring(OBJ *obj, CHAR *ch, int cmd, char *arg)
 
 		switch (set_pieces)
 		{
-			case 4:
-				remove_other_mystic_enlightenment(owner, MYSTIC_FULL_ENCH_NAME);
+		case 4:
+			remove_other_mystic_enlightenment(owner, MYSTIC_FULL_ENCH_NAME);
 
-				if (!enchanted_by(owner, MYSTIC_FULL_ENCH_NAME))
-				{
-					enchantment_apply(owner, FALSE, MYSTIC_FULL_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 4, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+      if (!enchanted_by(owner, MYSTIC_FULL_ENCH_NAME))
+			{
+				enchantment_apply(owner, FALSE, MYSTIC_FULL_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 4, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("Perfect clarity settles over you as enlightenment is fully realized.\n\r", owner);
+			}
+			break;
+		case 3:
+			remove_other_mystic_enlightenment(owner, MYSTIC_VISION_ENCH_NAME);
 
-					send_to_char("Perfect clarity settles over you as enlightenment is fully realized.\n\r", owner);
-				}
-				break;
+      if (!enchanted_by(owner, MYSTIC_VISION_ENCH_NAME))
+			{
+				enchantment_apply(owner, FALSE, MYSTIC_VISION_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 3, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("Your vision sharpens as deeper truths reveal themselves.\n\r", owner);
+			}
+			break;
+		case 2:
+			remove_other_mystic_enlightenment(owner, MYSTIC_PATH_ENCH_NAME);
 
-			case 3:
-				remove_other_mystic_enlightenment(owner, MYSTIC_VISION_ENCH_NAME);
-
-				if (!enchanted_by(owner, MYSTIC_VISION_ENCH_NAME))
-				{
-					enchantment_apply(owner, FALSE, MYSTIC_VISION_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 3, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
-					send_to_char("Your vision sharpens as deeper truths reveal themselves.\n\r", owner);
-				}
-				break;
-
-			case 2:
-				remove_other_mystic_enlightenment(owner, MYSTIC_PATH_ENCH_NAME);
-
-				if (!enchanted_by(owner, MYSTIC_PATH_ENCH_NAME))
-				{
-					enchantment_apply(owner, FALSE, MYSTIC_PATH_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 2, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
+			if (!enchanted_by(owner, MYSTIC_PATH_ENCH_NAME))
+			{
+				enchantment_apply(owner, FALSE, MYSTIC_PATH_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 2, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
 					send_to_char("You feel steadier as you continue along the path of enlightenment.\n\r", owner);
-				}
-				break;
+			}
+			break;
+		case 1:
+			remove_other_mystic_enlightenment(owner, MYSTIC_STIRRING_ENCH_NAME);
 
-			case 1:
-				remove_other_mystic_enlightenment(owner, MYSTIC_STIRRING_ENCH_NAME);
-
-				if (!enchanted_by(owner, MYSTIC_STIRRING_ENCH_NAME))
-				{
-					enchantment_apply(owner, FALSE, MYSTIC_STIRRING_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 1, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
-
-					send_to_char("A faint awareness stirs within you.\n\r", owner);
-				}
-				break;			
+			if (!enchanted_by(owner, MYSTIC_STIRRING_ENCH_NAME))
+			{
+				enchantment_apply(owner, FALSE, MYSTIC_STIRRING_ENCH_NAME, 0, 60, ENCH_INTERVAL_TICK, 1, APPLY_DAMROLL, 0, 0, mystic_enlightenment_enchantment);
+				send_to_char("A faint awareness stirs within you.\n\r", owner);
+			}
+			break;
 		}
-
 		return FALSE;
 	}
-	
 	return FALSE;
 }
-
-
-
-
 
 /*======================================================================== */
 /*================================ROOM SPECS============================== */
@@ -508,39 +470,35 @@ int uber_insight_ring(OBJ *obj, CHAR *ch, int cmd, char *arg)
 /*===============================MOBILE SPECS============================= */
 /*======================================================================== */
 
-
 /*  Utility Specs */
 
 //Randomly Pick STR,DEX,INT,WIS or CON and lower the values
 void apply_random_stat_down(CHAR *vict, char *enchant_name, int duration, int min, int max)
 {
-    int stat_to_adjust;
-    int stat_adjustment;
+  int stat_to_adjust;
+  int stat_adjustment;
 
-    /* List of possible stats to reduce */
-    const int stat_list[] = {
-        APPLY_STR,
-        APPLY_DEX,
-        APPLY_INT,
-        APPLY_WIS,
-        APPLY_CON
-    };
+  /* List of possible stats to reduce */
+  const int stat_list[] = {
+    APPLY_STR,
+    APPLY_DEX,
+    APPLY_INT,
+    APPLY_WIS,
+    APPLY_CON
+  };
 
-    /* Pick a random stat */
-    stat_to_adjust = stat_list[number(0, NUMELEMS(stat_list) - 1)];
+  /* Pick a random stat */
+  stat_to_adjust = stat_list[number(0, NUMELEMS(stat_list) - 1)];
 
-    /* Roll a random value between min and max */
-    stat_adjustment = number(min, max);
+  /* Roll a random value between min and max */
+  stat_adjustment = number(min, max);
 
-    /* Make it negative */
-    stat_adjustment = stat_adjustment * -1;
+  /* Make it negative */
+  stat_adjustment = stat_adjustment * -1;
 
-    /* Apply the enchantment */
-    enchantment_apply(vict,TRUE,enchant_name,TYPE_UNDEFINED,duration,ENCH_INTERVAL_ROUND,stat_adjustment,stat_to_adjust,0, 0, 0);
+  /* Apply the enchantment */
+  enchantment_apply(vict,TRUE,enchant_name,TYPE_UNDEFINED,duration,ENCH_INTERVAL_ROUND,stat_adjustment,stat_to_adjust,0, 0, 0);
 }
-
-
-
 
 //Mob Number 14600
 //Load in Room 12094
@@ -560,101 +518,83 @@ int ub_uber_kingspider(CHAR *uber, CHAR *ch, int cmd, char *arg)
 
 	switch (cmd)
 	{
-		case MSG_MOBACT:
-
-			//if fighting - spec different attacks
-			if (uber->specials.fighting)
+	case MSG_MOBACT:
+		if (uber->specials.fighting)
+		{
+      //Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+			//Each Case statement that has an action needs to break out at the end.
+			switch (number(0, 6))
 			{
-			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
-				//Each Case statement that has an action needs to break out at the end.
-				switch (number(0, 6))
+			case 0:
+			case 1:
+				vict = get_random_victim_fighting(uber);
+				if (vict)
 				{
-					case 0:
-					case 1:
-						vict = get_random_victim_fighting(uber);
-						if (vict)
-						{
-							act("$n grabs $N and shoves a leg through their chest.", 0, uber, 0, vict, TO_NOTVICT);
-							act("$n grabs you and shoves a leg through your chest.", 0, uber, 0, vict, TO_VICT);
-							sprintf(buf, "%s is impaled by a giant leg.", GET_NAME(vict));
-							act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
-							sprintf(buf, "You are impaled by a giant leg.");
-							act(buf, FALSE, uber, NULL, vict, TO_VICT);
-							GET_HIT(vict) = GET_HIT(vict) - GET_HIT(vict) / 3;
-						}
-
-						break;
-					case 2:
-						vict = get_random_victim_fighting(uber);
-						if (vict)
-						{
-							act("$n spins and hits $N with his abdomen, knocking them out.", 0, uber, 0, vict, TO_NOTVICT);
-							act("$n spins and hits you with his abdomen, knocking you out.", 0, uber, 0, vict, TO_VICT);
-							damage(uber, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
-							WAIT_STATE(vict, PULSE_VIOLENCE *2);
-						}
-
-						break;
-					case 3:
-					case 4:
-
-						act("$n hisses loudly and covers everyone in spidersilk.", 0, uber, 0, 0, TO_ROOM);
-						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
-						{
-							next_vict = CHAR_NEXT_IN_ROOM(vict);
-							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-							damage(uber, vict, 900, TYPE_UNDEFINED, DAM_PHYSICAL);
-							WAIT_STATE(vict, PULSE_VIOLENCE *3);
-						}
-						break;
-					case 5:
-					case 6:
-						vict = get_random_victim_fighting(uber);
-						//This spec will heal the uber based on the random number. It will also drain stats from the vict (target character).  The Actions send different messages to the room.
-						act("$n pierces you with long dripping fangs and sucks out some blood.", FALSE, uber, 0, vict, TO_VICT);
-						act("$n pierces $N with long dripping fangs and sucks out some blood.", FALSE, uber, 0, vict, TO_NOTVICT);
-						act("You pierce $N with long dripping fangs and suck out some blood.", FALSE, uber, 0, vict, TO_CHAR);
-						send_to_char("You feel your blood be sucked from you.\n", vict);
-						hpdrain = number(400, 600);
-						manadrain = number(50, 200);
-						//void drain_mana_hit_mv(struct char_data *ch, struct char_data *vict, int mana, int hit, int mv, bool add_m, bool add_hp, bool add_mv)
-						if(vict){
-							drain_mana_hit_mv(uber, vict, manadrain, hpdrain, 0, FALSE, FALSE, FALSE);
-							GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (hpdrain *5));
-						}
-						break;
-					default:
-						break;
+					act("$n grabs $N and shoves a leg through their chest.", 0, uber, 0, vict, TO_NOTVICT);
+					act("$n grabs you and shoves a leg through your chest.", 0, uber, 0, vict, TO_VICT);
+					GET_HIT(vict) = (GET_HIT(vict) * 2) / 3;
 				}
-			}
-			else
-			{
-				if (chance(40))
+				break;
+			case 2:
+				vict = get_random_victim_fighting(uber);
+				if (vict)
 				{
-					do_say(uber, "Shakes its legs around the room and hisses.", CMD_SAY);
+					act("$n spins and hits $N with his abdomen, knocking them out.", 0, uber, 0, vict, TO_NOTVICT);
+					act("$n spins and hits you with his abdomen, knocking you out.", 0, uber, 0, vict, TO_VICT);
+					damage(uber, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
+					WAIT_STATE(vict, PULSE_VIOLENCE *2);
 				}
+				break;
+			case 3:
+			case 4:
+				act("$n hisses loudly and covers everyone in spidersilk.", 0, uber, 0, 0, TO_ROOM);
+				for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
+				{
+					next_vict = CHAR_NEXT_IN_ROOM(vict);
+					if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
+					damage(uber, vict, 900, TYPE_UNDEFINED, DAM_PHYSICAL);
+					WAIT_STATE(vict, PULSE_VIOLENCE *3);
+				}
+				break;
+			case 5:
+			case 6:
+				vict = get_random_victim_fighting(uber);
+				if (vict)
+				{
+          //This spec will heal the uber based on the random number. It will also drain stats from the vict (target character).  The Actions send different messages to the room.
+          act("$n pierces you with long dripping fangs and sucks out some blood.", FALSE, uber, 0, vict, TO_VICT);
+          act("$n pierces $N with long dripping fangs and sucks out some blood.", FALSE, uber, 0, vict, TO_NOTVICT);
+          act("You pierce $N with long dripping fangs and suck out some blood.", FALSE, uber, 0, vict, TO_CHAR);
+				  hpdrain = number(400, 600);
+				  manadrain = number(50, 200);
+					drain_mana_hit_mv(uber, vict, manadrain, hpdrain, 0, FALSE, FALSE, FALSE);
+					GET_HIT(uber) = MIN(GET_MAX_HIT(uber), GET_HIT(uber) + (hpdrain * 5));
+				}
+				break;
+			default:
+				break;
 			}
+		}
+		break;
+	case MSG_DIE:	// on boss death reward AQP
+		sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+		send_to_room(buf, CHAR_REAL_ROOM(uber));
+		mob_aq_reward(reward, uber);
 
-			break;
-		case MSG_DIE:	// on boss death reward AQP
-			sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
+		//loads based on obj repop value, strips antis
+		tmp = read_object(UBER_SPIDERSILK_CLOAK, VIRTUAL);
+    if(chance(OBJ_REPOP(tmp))) {
+			strip_object_antis(tmp,20,33);
+			obj_to_room(tmp, CHAR_REAL_ROOM(uber));
+
+			sprintf(buf, "A %s flutters to the floor!\n\r", OBJ_SHORT(tmp));
 			send_to_room(buf, CHAR_REAL_ROOM(uber));
-			mob_aq_reward(reward, uber);
-			
-			//55% chance to load the item.   Needed to remove Antis
-			
-			if(chance(55)){				
-				tmp = read_object(UBER_SPIDERSILK_CLOAK, VIRTUAL);
-				strip_object_antis(tmp,20,33);
-				obj_to_room(tmp, CHAR_REAL_ROOM(uber));				
-				
-				sprintf(buf, "A %s flutters to the floor!\n\r", OBJ_SHORT(tmp));
-				send_to_room(buf, CHAR_REAL_ROOM(uber));
-			}
-			
-			break;
+		}
+    else {
+      extract_obj(tmp);
+    }
+		break;
 	}
-
 	return FALSE;
 }
 
@@ -667,63 +607,27 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	//These are default declarations to give variables to characters.
 	char buf[MAX_STRING_LENGTH];
 	CHAR *tch, *vict, *next_vict;
-
+  OBJ *tmp;
 	CHAR * wind;
 	int uber_wind_nr;
 	//You must declare the reward so you get AQP.
-	int reward = 6;
+	int reward = 4;
 	uber_wind_nr = real_mobile(UBER_HUGE_WHIRLWIND);
-	//Define any other variables
-	OBJ *obj = NULL;
 	
 	char *uber_gm_speak[4] = { "Let me show you the power of enlightenment.", "Have you come for my teachings?", "Respect your Elders!", "Humility awaits you in this chamber." };
 
 	switch (cmd)
 	{
-		case MSG_TICK:
-		
-			if (cmd==MSG_TICK) {
-				// equip gear if he doesn't have it
-				
-				obj=EQ(uber, WEAR_ARMS);
-				if (obj && ( V_OBJ(obj) != UBER_THOUGHT_SLEEVES )){
-					obj_to_char( unequip_char(uber, WEAR_ARMS), uber );
-				}
-				else if (!obj) {
-				  obj=read_object(UBER_THOUGHT_SLEEVES, VIRTUAL);
-				  strip_object_antis(obj,20,33);
-				  equip_char(uber, obj, WEAR_ARMS);
-				}
-				obj=EQ(uber, WEAR_FEET);
-				if (obj && ( V_OBJ(obj) != UBER_UNSHAKEN_SANDALS )){
-					obj_to_char( unequip_char(uber, WEAR_FEET), uber );
-				}
-				else if (!obj) {
-				  obj=read_object(UBER_UNSHAKEN_SANDALS, VIRTUAL);
-				  strip_object_antis(obj,20,33);
-				  equip_char(uber, obj, WEAR_FEET);
-				}
-				
-				return FALSE;
-			}
-		
-			break;
 		case MSG_MOBACT:
-
 			//Have him to chat to you.
-			if (chance(40))
+			if (chance(20))
 			{
 				sprintf(buf, "%s", uber_gm_speak[number(0, NUMELEMS(uber_gm_speak) - 1)]);
-
 				do_say(uber, buf, CMD_SAY);
 			}
 
-			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
-				//Each Case statement that has an action needs to break out at the end.
-
 				switch (number(0, 6))
 				{
 					case 0:
@@ -731,8 +635,8 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						if (vict)
 						{
 							act("$n calmly touches $N with his palm.  You don't need this, do you?", 0, uber, 0, vict, TO_NOTVICT);
-							act("$n calmly touches you saying you don't need this, do you? ", 0, uber, 0, vict, TO_VICT);
-							GET_HIT(vict) = GET_HIT(vict) *0.8;	//Remove 20% of Current HP
+							act("$n calmly touches you saying 'You don't need this, do you?'", 0, uber, 0, vict, TO_VICT);
+							GET_HIT(vict) = GET_HIT(vict) * 0.8;	//Remove 20% of Current HP
 						}
 
 						break;
@@ -744,33 +648,29 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							
 							if (enchanted_by(vict, GREAT_MYSTIC_ENCH_NAME)){							
 								damage(uber, vict, 1600, TYPE_UNDEFINED, DAM_PHYSICAL);
-								act("$N is hit again in their arms.", 0, uber, 0, vict, TO_NOTVICT);
-								act("You are hit again on your pressure points.", 0, uber, 0, vict, TO_VICT);
-							}else if (chance(40)){
-								
-								act("$N looks weaker after being hit in the arms.", 0, uber, 0, vict, TO_NOTVICT);
-								act("You feel weaker after getting hit in the arms.", 0, uber, 0, vict, TO_VICT);
+								act("$n strikes $N's already devastated pressure point.", 0, uber, 0, vict, TO_NOTVICT);
+								act("$n strikes you again on your already devastated pressure point.", 0, uber, 0, vict, TO_VICT);
+							} else if (chance(40)) {
+                act("$n strikes $N adroitly on their pressure points.", 0, uber, 0, vict, TO_NOTVICT);
+								act("$n strikes you on your pressure points, you're weakened.", 0, uber, 0, vict, TO_VICT);
 								apply_random_stat_down(vict, GREAT_MYSTIC_ENCH_NAME, 10, 3, 6);
-							}else{
-								act("$n strikes $N in the arms with his fingers.", 0, uber, 0, vict, TO_NOTVICT);
-								act("$n strikes you in the arm, hitting your pressure points. ", 0, uber, 0, vict, TO_VICT);
+							} else {
+								act("$n precisely targeted fingers nearly cripple $N.", 0, uber, 0, vict, TO_NOTVICT);
+								act("$n precisely targeted fingers nearly cripple you. ", 0, uber, 0, vict, TO_VICT);
 								damage(uber, vict, 1000, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
-							
 						}
-						
 						break;
-
 					case 2:
 						vict = get_random_victim_fighting(uber);
 						if (vict)
 						{
-							act("$n yells at $N saying do my paperwork as a stack of papers hits them in the face.", 0, uber, 0, vict, TO_NOTVICT);
-							act("$n yells at you saying do my paperwork as a stack of papers hits you in the face.", 0, uber, 0, vict, TO_VICT);
+							do_yell(uber, "You're not busy, do my paperwork!", CMD_YELL);
+              act("$n throws a stack of papers at $N, smacking them in the face.", 0, uber, 0, vict, TO_NOTVICT);
+							act("$n throws a stack of papers in your face.", 0, uber, 0, vict, TO_VICT);
 							damage(uber, vict, 1500, TYPE_UNDEFINED, DAM_PHYSICAL);
 							WAIT_STATE(vict, PULSE_VIOLENCE *1);
 						}
-
 						break;
 					case 3:
 						// Spawn Uber Whirlwinds
@@ -778,20 +678,18 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						{
 							wind = read_mobile(uber_wind_nr, REAL);
 							char_to_room(wind, CHAR_REAL_ROOM(uber));
-
 							act("$n cackles gleefully and flashes a quick smirk at you.", FALSE, uber, 0, tch, TO_VICT);
 							act("$n cackle at $N and flashes them a quick smirk.", FALSE, uber, 0, tch, TO_NOTVICT);
 							act("$n appears in a huge gust of wind and water.", FALSE, wind, 0, 0, TO_ROOM);
 							hit(wind, tch, TYPE_UNDEFINED);
-
-							return FALSE;
 						}
-
-					case 4:
+            break;
+          case 4:
 						break;
 					case 5:
 						//Group Stun
-						act("$n screams 'Mystical Powers' and rants incoherently ", 0, uber, 0, 0, TO_ROOM);
+            do_shout(uber, "Mystical Powers!", CMD_SHOUT);
+						act("$n starts muttering incoherently while performing an intricate series of gestures.", 0, uber, 0, 0, TO_ROOM);
 						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
@@ -799,7 +697,6 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							damage(uber, vict, 1200, TYPE_UNDEFINED, DAM_PHYSICAL);
 							WAIT_STATE(vict, PULSE_VIOLENCE *2);
 						}
-
 						break;
 					case 6:
 						act("$n punches himself in the leg.", FALSE, uber, 0, 0, TO_ROOM);
@@ -810,9 +707,6 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 						break;
 				}
 			}
-
-			//can add an else branch here if you want them to act but not in combat.
-
 			break;
 
 		case MSG_DIE:	// on boss death reward AQP
@@ -820,24 +714,47 @@ int ub_uber_greatmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 			send_to_room(buf, CHAR_REAL_ROOM(uber));
 			mob_aq_reward(reward, uber);
 
-			break;
-	}
+		  //loads based on obj repop value, strips antis
+		  tmp = read_object(UBER_THOUGHT_SLEEVES, VIRTUAL);
+      if(chance(OBJ_REPOP(tmp))) {
+			  strip_object_antis(tmp,20,33);
+			  obj_to_room(tmp, CHAR_REAL_ROOM(uber));
 
+			  sprintf(buf, "The %s slides off %s's arms as %s falls to the floor.\n\r", OBJ_SHORT(tmp), GET_SHORT(uber), HESH(uber));
+			  send_to_room(buf, CHAR_REAL_ROOM(uber));
+		  }
+      else {
+        extract_obj(tmp);
+      }
+
+		  tmp = read_object(UBER_UNSHAKEN_SANDALS, VIRTUAL);
+      if(chance(OBJ_REPOP(tmp))) {
+			  strip_object_antis(tmp,20,33);
+			  obj_to_room(tmp, CHAR_REAL_ROOM(uber));
+
+			  sprintf(buf, "A pair of sandals flop onto the ground as %s collapses.\n\r", GET_SHORT(uber));
+			  send_to_room(buf, CHAR_REAL_ROOM(uber));
+		  }
+      else {
+        extract_obj(tmp);
+      }
+			break;
+    default:
+      break;
+  }
 	return FALSE;
 }
 
 //Uber Ultimate Mystic Extra Functions
 
-void uber_um_stun(CHAR *ch, CHAR *vict)
+void uber_um_stun(CHAR *uber, CHAR *vict)
 {
 	//Final check for values.  Abort if they dont exist. 
-	 if(!(vict) || !(ch)) return; 
-	
-	act("$n stuns you with a mighty blow on the head.", FALSE, ch, 0, vict, TO_VICT);
-	act("$n stuns $N with a mighty blow on $S head.", FALSE, ch, 0, vict, TO_NOTVICT);
-	act("You hit $N with a stunning blow. $E will be out for a while.", FALSE, ch, 0, vict, TO_CHAR);
+  if(!(vict) || !(uber)) return;
 
-
+	act("$n stuns you with a mighty blow to the head.", FALSE, uber, 0, vict, TO_VICT);
+	act("$n stuns $N with a mighty blow to $S head.", FALSE, uber, 0, vict, TO_NOTVICT);
+	act("You hit $N with a stunning blow. $E will be out for a while.", FALSE, uber, 0, vict, TO_CHAR);
 
 	GET_POS(vict) = POSITION_STUNNED;
 
@@ -846,39 +763,37 @@ void uber_um_stun(CHAR *ch, CHAR *vict)
 		stop_fighting(vict);
 	}
 
-	if (GET_OPPONENT(ch) && GET_OPPONENT(ch) == vict)
+	if (GET_OPPONENT(uber) && GET_OPPONENT(uber) == vict)
 	{
-		stop_fighting(ch);
-		damage(ch, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
+		stop_fighting(uber);
+		damage(uber, vict, 500, TYPE_UNDEFINED, DAM_PHYSICAL);
 		WAIT_STATE(vict, 2 *PULSE_VIOLENCE);
 	}
 }
 
-void uber_um_vanish(CHAR *ch)
+void uber_um_vanish(CHAR *uber)
 {
-	CHAR * t;
+	CHAR *ch;
 
-	act("$n vanishes into the shadows.", FALSE, ch, 0, 0, TO_ROOM);
-	stop_fighting(ch);
+	act("$n vanishes into the shadows.", FALSE, uber, 0, 0, TO_ROOM);
+	stop_fighting(uber);
 
-	for (t = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); t; t = CHAR_NEXT_IN_ROOM(t))
+	for (ch = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); ch; ch = CHAR_NEXT_IN_ROOM(ch))
 	{
-		
-		
-		if (t && GET_OPPONENT(t) && GET_OPPONENT(t) == ch)
+		if (ch && GET_OPPONENT(ch) && GET_OPPONENT(ch) == uber)
 		{
-			stop_fighting(t);
-			send_to_char("You can't fight someone that vanished into thin air.\n", t);
+			stop_fighting(ch);
+			send_to_char("You can't fight someone that vanished into thin air.\n\r", ch);
 		}
 	}
 
-	if (!(t = get_random_victim(ch)))
+	if (!(ch = get_random_victim(uber)))
 		return;
 
-	act("$n materializes behind you. $e hits you in the head with a heavy punch.", FALSE, ch, 0, t, TO_VICT);
-	act("$n materializes behind $N and hits them in the head with a heavy punch.", FALSE, ch, 0, t, TO_NOTVICT);
-	act("You appear behind your next victim.", FALSE, ch, 0, t, TO_CHAR);
-	hit(ch, t, TYPE_UNDEFINED);
+	act("$n materializes behind you. $e hits you in the head with a heavy punch.", FALSE, uber, 0, ch, TO_VICT);
+	act("$n materializes behind $N and hits them in the head with a heavy punch.", FALSE, uber, 0, ch, TO_NOTVICT);
+	act("You appear behind your next victim.", FALSE, uber, 0, ch, TO_CHAR);
+	hit(uber, ch, TYPE_UNDEFINED);
 }
 
 //Mob Number 14602
@@ -891,7 +806,7 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	//These are default declarations to give variables to characters.
 	char buf[MAX_STRING_LENGTH];
 	CHAR *vict, *next_vict, *vict2;
-
+  OBJ *tmp;
 	CHAR *uber_mystic_clone;
 	int uber_mystic_clone_nr,summon_room;
 
@@ -902,86 +817,43 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	int reward = 6;
 	int factor;
 
-	//Define any other variables
-	OBJ *obj = NULL;
-
 	switch (cmd)
 	{
-		case MSG_TICK:
-		
-			if (cmd==MSG_TICK) {
-				// equip gear if he doesn't have it
-				
-				obj=EQ(uber, WEAR_FINGER_R);
-				if (obj && ( V_OBJ(obj) != UBER_INSIGHT_RING )){
-					obj_to_char( unequip_char(uber, WEAR_FINGER_R), uber );
-				}
-				else if (!obj) {
-				  obj=read_object(UBER_INSIGHT_RING, VIRTUAL);
-				  strip_object_antis(obj,20,33);
-				  equip_char(uber, obj, WEAR_FINGER_R);
-				}
-				obj=EQ(uber, WEAR_ABOUT);
-				if (obj && ( V_OBJ(obj) != UBER_ENLIGHTENED_MANTLE )){
-					obj_to_char( unequip_char(uber, WEAR_ABOUT), uber );
-				}
-				else if (!obj) {
-				  obj=read_object(UBER_ENLIGHTENED_MANTLE, VIRTUAL);
-				  strip_object_antis(obj,20,33);
-				  equip_char(uber, obj, WEAR_ABOUT);
-				}
-				
-				return FALSE;
-			}
-		
-			break;
-		
 		case MSG_MOBACT:
-
-			//if fighting - spec different attacks
 			if (uber->specials.fighting)
 			{
-			 	//Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
+        //Go through different actions based on a switch case.   Adjust total number of actions to change percentages.
 				//Each Case statement that has an action needs to break out at the end.
-
 				factor = 10* GET_HIT(uber) / GET_MAX_HIT(uber);
 				switch (factor)
 				{
-				 		//Stun a random victim.
+          //Stun a random victim.
 					case 9:
-
 						do_say(uber, "You do show some promise.", CMD_SAY);
-
 						vict = get_random_victim(uber);
-						
-						if(vict){
+						if(vict) {
 							uber_um_stun(uber, vict);
 						}
-						
-						
 						break;
-						//Vanish at 80% HP
 					case 8:
-						do_say(uber, "If your eyes cant keep up with me, how do you expect to win?", CMD_SAY);
-						if(chance(50)){
+            //Vanish at 80% HP
+						do_say(uber, "If your eyes can't keep up with me, how do you expect to win?", CMD_SAY);
+						if(chance(50)) {
 							uber_um_vanish(uber);
-						}else{
+						} else {
 							vict = get_random_victim_fighting(uber);
-							
 							if(vict){
 								uber_um_stun(uber, vict);
 							}
 						}
-
+            break;
 					case 7:
-						
 						//Summon a Single Clone to Fight.
 						if (!IS_SET(GET_BANK(uber), STATE2))
 						{
-							do_say(uber, "Lets see how you handle true enlightenment.", CMD_SAY);
+							do_say(uber, "Let us see how you handle true enlightenment.", CMD_SAY);
 							SET_BIT(GET_BANK(uber), STATE2);
 							//Summon a Clone and have them attack.
-							
 							uber_mystic_clone = read_mobile(uber_mystic_clone_nr, REAL);
 							char_to_room(uber_mystic_clone, real_room(summon_room));
 							
@@ -989,15 +861,12 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							if(vict){
 								hit(uber_mystic_clone, vict, TYPE_UNDEFINED);
 							}
-							
 							//Remove the Uber from the Room.							
 							char_from_room(uber);
 							char_to_room(uber, real_room(UBER_MYSTIC_HOLD_ROOM));
-							
-						}else {
-						
+						} else {
 							//Group Stun
-							act("$n shouts Bow to the master of the mystical arts. ", 0, uber, 0, 0, TO_ROOM);
+							do_shout(uber, "Bow to the master of the mystical arts!", CMD_SHOUT);
 							for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 							{
 								next_vict = CHAR_NEXT_IN_ROOM(vict);
@@ -1006,147 +875,110 @@ int ub_uber_ultmystic(CHAR *uber, CHAR *ch, int cmd, char *arg)
 								WAIT_STATE(vict, PULSE_VIOLENCE *1);
 							}
 						}
-
 						break;
-						//50/50 chance of single stun or double stun.
 					case 6:
-						do_say(uber, "How many shall I target today?", CMD_SAY);
-						switch (number(0, 1))
-						{
-							case 0:
-								if (!(vict = get_random_victim(uber)))
-								{
-									return FALSE;
-								}
-
-								uber_um_stun(uber, vict);
-								break;
-
-							case 1:
-
-								vict = get_random_victim_fighting(uber);
-								if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) return FALSE;
-								uber_um_stun(uber, vict);
-
-								//Check for more than 1 person in the room.
-								if (count_mortals_room(uber, TRUE) > 1)
-								{
-								 						//get 2nd victim that is still fighting
-									vict2 = get_random_victim_fighting(uber);
-									if (!(vict) || IS_NPC(vict2) || !(IS_MORTAL(vict2))) return FALSE;
-									uber_um_stun(uber, vict2);
-								}
+            do_say(uber, "Wonderful. Absolutely wonderful. Continue your development.", CMD_SAY);
+          case 1:
+						if (factor == 1) {
+							do_say(uber, "How many shall I teach today?", CMD_SAY);
 						}
-
+            // stun 1, 50% chance to stun another
+            vict = get_random_victim(uber);
+            if (vict) {
+              uber_um_stun(uber, vict);
+              if (chance(50) && count_mortals_room(uber, TRUE) > 1) {
+                vict2 = get_random_victim_fighting(uber);
+                if (vict && vict2 && (vict != vict2)) {
+								  uber_um_stun(uber, vict2);
+                }
+              }
+						}
 						break;
-
-						//Heal for 10% of max hp. Only do it once, else this would be infinite loop.
 					case 5:
-
-						//STATE1 is Healed.  We will set the bit and then be done healing.
+						//Heal for 10% of max hp. Only do it once, else this would be infinite loop
+						//STATE1 is Healed.  We will set the bit and then be done healing
 						if (!IS_SET(GET_BANK(uber), STATE1))
 						{
 							do_say(uber, "May enlightenment one day also find you.", CMD_SAY);
 							SET_BIT(GET_BANK(uber), STATE1);
 							GET_HIT(uber) += (GET_MAX_HIT(uber) / 10);
 						}
-
 						break;
-
 					case 4:
 						do_say(uber, "Bathe in mystical flames.", CMD_SAY);
 						vict = get_random_victim_fighting(uber);
 						if(vict){
 							act("$n makes a complex hand gesture and engulfs $N in flames.", 0, uber, 0, vict, TO_NOTVICT);
 							act("$n makes a complex hand gesture and engulfs you in flames.", 0, uber, 0, vict, TO_VICT);
-							snprintf(buf,sizeof(buf), "%s is engulfed by %s!", GET_NAME(vict), "mystical flames");
+							snprintf(buf, sizeof(buf), "%s is engulfed by %s!", GET_NAME(vict), "mystical flames");
 							act(buf, FALSE, uber, NULL, vict, TO_NOTVICT);
 							sprintf(buf, "You are engulfed by mystical flames.");
 							act(buf, FALSE, uber, NULL, vict, TO_VICT);
 							GET_HIT(vict) = GET_HIT(vict) / 2;
 						}
 						break;
-
-						//Vanish Again.
 					case 3:
-						do_say(uber, "Once again you were too slow to keep up.", CMD_SAY);
+						//Vanish Again.
+            do_say(uber, "Once again you are too slow to keep up.", CMD_SAY);
 						uber_um_vanish(uber);
 						break;
-
 					case 2:
 						do_say(uber, "Time to end this charade. Stand there and die.", CMD_SAY);
 						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) continue;
-							if(chance(30)){
+							if(chance(30)) {
 								damage(uber, vict, number(600,1200), TYPE_UNDEFINED, DAM_PHYSICAL);
-							}else{
+							} else {
 								damage(uber, vict, number(400,800), TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
 							WAIT_STATE(vict, PULSE_VIOLENCE * number(1,3));
 						}
-
-						break;
-
-					case 1:
-						do_say(uber, "Wonderful. Absolutely wonderful. Continue your development.", CMD_SAY);
-
-						switch (number(0, 1))
-						{
-							case 0:
-								if (!(vict = get_random_victim(uber)))
-								{
-									return FALSE;
-								}
-
-								uber_um_stun(uber, vict);
-								break;
-
-							case 1:
-
-								vict = get_random_victim_fighting(uber);
-								if (!(vict) || IS_NPC(vict) || !(IS_MORTAL(vict))) return FALSE;
-								uber_um_stun(uber, vict);
-
-								//Check for more than 1 person in the room.
-								if (count_mortals_room(uber, TRUE) > 1)
-								{
-								 	//get 2nd victim that is still fighting
-									vict2 = get_random_victim_fighting(uber);
-									if (!(vict) || IS_NPC(vict2) || !(IS_MORTAL(vict2))) return FALSE;
-									uber_um_stun(uber, vict2);
-								}
-						}
-
 						break;
 				}
 			}
 			else
 			{
-			 	//Remove Existing States if not fighting.
-
-				/*If not fighting, remove the heal bit. */
+				// If not fighting, remove the heal bit.
 				if (!GET_OPPONENT(uber) && IS_SET(GET_BANK(uber), STATE1))
 				{
 					REMOVE_BIT(GET_BANK(uber), STATE1);
-
 					return FALSE;
 				}
 			}
-
-			//can add an else branch here if you want them to act but not in combat.
-
 			break;
-
 		case MSG_DIE:	// on boss death reward AQP
 			sprintf(buf, "%s has been slain, the realm has been saved!\n\r", GET_SHORT(uber));
 			send_to_room(buf, CHAR_REAL_ROOM(uber));
 			mob_aq_reward(reward, uber);
 
+      //loads based on obj repop value, strips antis
+      tmp = read_object(UBER_ENLIGHTENED_MANTLE, VIRTUAL);
+      if(chance(OBJ_REPOP(tmp))) {
+			  strip_object_antis(tmp,20,33);
+			  obj_to_room(tmp, CHAR_REAL_ROOM(uber));
+
+			  sprintf(buf, "The %s falls to the floor, covering %s's dead, shocked expression.\n\r", OBJ_SHORT(tmp), GET_SHORT(uber));
+			  send_to_room(buf, CHAR_REAL_ROOM(uber));
+		  }
+      else {
+        extract_obj(tmp);
+      }
+
+      tmp = read_object(UBER_INSIGHT_RING, VIRTUAL);
+      if(chance(OBJ_REPOP(tmp))) {
+			  strip_object_antis(tmp,20,33);
+			  obj_to_room(tmp, CHAR_REAL_ROOM(uber));
+
+			  sprintf(buf, "A small mirrored ring falls to the ground as %s collapses.\n\r", GET_SHORT(uber));
+			  send_to_room(buf, CHAR_REAL_ROOM(uber));
+		  }
+      else {
+        extract_obj(tmp);
+      }
 			break;
 	}
-
 	return FALSE;
 }
 
@@ -1156,8 +988,8 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	CHAR *vict, *next_vict;
 	int reward = 1;
 	int factor;
-	
-	CHAR * uber_mystic;
+
+	CHAR *uber_mystic;
 
 	/* Don't waste CPU if no mortals */
 	if (count_mortals_room(uber, TRUE) < 1)
@@ -1166,66 +998,56 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 	switch (cmd)
 	{
 		case MSG_MOBACT:
-
 			if (uber->specials.fighting)
 			{
 				factor = 10 * GET_HIT(uber) / GET_MAX_HIT(uber);
-
 				switch (factor)
 				{
-					/* High HP – Reflection lesson */
 					case 9:
 					case 8:
-						do_say(uber, "Power without awareness returns to its source.", CMD_SAY);
-
+            /* High HP – Reflection lesson */
+            do_say(uber, "Power without awareness returns to its source.", CMD_SAY);
 						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!vict || IS_NPC(vict) || !IS_MORTAL(vict))
 								continue;
-
 							if (GET_OPPONENT(vict) == uber)
 							{
 								act("Mystic energy rebounds from $n back into you!", FALSE, uber, 0, vict, TO_VICT);
 								damage(uber, vict, 1400, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
-							else{
+							else {
 								damage(uber, vict, 800, TYPE_UNDEFINED, DAM_PHYSICAL);
 							}
 						}
 						break;
-
-					/* Mid HP – Equalization */
 					case 7:
 					case 6:
-						do_say(uber, "Balance must be restored.", CMD_SAY);
-
+            /* Mid HP – Equalization */
+            do_say(uber, "Balance must be restored.", CMD_SAY);
 						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!vict || IS_NPC(vict) || !IS_MORTAL(vict))
 								continue;
-
 							if (GET_HIT(vict) > GET_MAX_HIT(vict) / 2){
 								GET_HIT(vict) = GET_MAX_HIT(vict) / 2;
 							}
 						}
 						break;
-
-					/* First Enlightenment Heal – once only */
 					case 5:
-						if (!IS_SET(GET_BANK(uber), STATE1))
+            /* First Enlightenment Heal – once only */
+            if (!IS_SET(GET_BANK(uber), STATE1))
 						{
 							do_say(uber, "Understanding precedes survival.", CMD_SAY);
 							SET_BIT(GET_BANK(uber), STATE1);
 							GET_HIT(uber) += GET_MAX_HIT(uber) / 5;
 						}
 						break;
-
-					/* Focus punishment */
 					case 4:
+            /* Focus punishment */
 						do_say(uber, "You cling too tightly to a single path.", CMD_SAY);
-
 						vict = get_random_victim_fighting(uber);
 						if (vict && !IS_NPC(vict))
 						{
@@ -1233,25 +1055,21 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 							WAIT_STATE(vict, PULSE_VIOLENCE * 2);
 						}
 						break;
-
-					/* Low HP – Test of restraint */
 					case 3:
 					case 2:
-						do_say(uber, "Strike without thought, and be unmade.", CMD_SAY);
-
+            /* Low HP – Test of restraint */
+            do_say(uber, "Strike without thought, and be unmade.", CMD_SAY);
 						for (vict = ROOM_PEOPLE(CHAR_REAL_ROOM(uber)); vict; vict = next_vict)
 						{
 							next_vict = CHAR_NEXT_IN_ROOM(vict);
 							if (!vict || IS_NPC(vict) || !IS_MORTAL(vict))
 								continue;
-
 							damage(uber, vict, 900, TYPE_UNDEFINED, DAM_PHYSICAL);
 						}
 						break;
-
-					/* Near death – calm acceptance */
 					case 1:
-						do_say(uber, "You have learned enough. Finish it.", CMD_SAY);
+            /* Near death – calm acceptance */
+            do_say(uber, "You have learned enough. Finish it.", CMD_SAY);
 						break;
 				}
 			}
@@ -1262,34 +1080,29 @@ int ub_uber_ultmystic_clone(CHAR *uber, CHAR *ch, int cmd, char *arg)
 					REMOVE_BIT(GET_BANK(uber), STATE1);
 			}
 			break;
-
 		case MSG_DIE:
 			sprintf(buf, "%s fades, leaving behind only understanding.\n\r", GET_SHORT(uber));
 			send_to_room(buf, CHAR_REAL_ROOM(uber));
 			mob_aq_reward(reward, uber);
-			
+
 			//On Death, move the Uber back to the Room.
 			uber_mystic = get_ch_world(UBER_ULT_MYSTIC);
 			if(uber_mystic){
 				char_from_room(uber_mystic);
 				char_to_room(uber_mystic, real_room(UBER_MYSTIC_ROOM));
 			}
-			
-			vict = get_random_victim(uber);
+
+      vict = get_random_victim(uber);
 			if(vict){
 				hit(uber_mystic, vict, TYPE_UNDEFINED);
 			}
-			
 			break;
 	}
-
 	return FALSE;
 }
 
-
 //Mob Number 14604
 //Load in Room 10969
-
 int ub_uber_zycaprince(CHAR *uber, CHAR *ch, int cmd, char *arg)
 {
     char buf[MAX_STRING_LENGTH];

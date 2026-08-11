@@ -12,8 +12,10 @@ shakes as it steps delicately around the room.
 60 -32 -21 20d2000+75000 20d24+200
 0 50000000
 8 8 0
-77 23176 1d1+0 0
-0 1 0 160
+77 23168 1d1+0 0
+0 1 0 32
+R
+2
 K
 12000000 0 0 0 0 0 0
 #14601
@@ -30,8 +32,10 @@ own mystical powers.
 60 -33 -19 125d475+115000 26d18+290
 15000000 85000000
 8 8 1
-5 23176 50d50+5000 0
-0 1 0 160
+5 23168 50d50+5000 0
+0 1 0 32
+R
+2
 K
 0 0 0 0 0 0 0
 #14602
@@ -48,8 +52,10 @@ knowledge on you.
 70 -34 -20 90d560+135000 17d28+310
 35000000 100000000
 8 8 1
-5 23176 50d50+5000 0
-0 1 0 160
+5 23168 50d50+5000 0
+0 1 0 32
+R
+2
 K
 0 0 0 0 0 0 0
 #14603
@@ -68,6 +74,8 @@ Summoned from the deepest parts of its plane, it only answers the call of those 
 3 1 25 0
 1 4 7 109
 0 1 0 0
+R
+2
 K
 0 0 0 0 0 0 0
 #14604
@@ -390,7 +398,7 @@ K
 0 0 0 0 0 0 0
 #14690
 uber clone ethereal mystic~
-Ehtereal Clone of Uber Mystic~
+Ethereal Clone of Uber Mystic~
 A ethereal being stands ready to fight
 ~
 The Uber Ultimate Mystic has attained what few ever have. The knowledge of the universe is a fearsome and powerful tool to have. Looking slightly bored, he has decided to test out this new knowledge on you.

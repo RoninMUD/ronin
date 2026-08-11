@@ -222,22 +222,22 @@ fangs vampire set~
 Set of Vampire Fangs~
 A Set of very pointy teeth arranged on a string.~
 ~
-9 134217792 5
+9 173032000 5
 6 0 0 0
 6 68632 48325
-32
+11
 X
 ~
-3584 0 0
+0 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 1
+19 2
 A
-18 3
+18 1
 A
 52 5
 #30117
@@ -251,7 +251,7 @@ A bunch of frozen feathers lay thawing on the ground.~
 28
 X
 ~
-3584 0 0
+1 0 0
 M
 ~
 ~
@@ -271,10 +271,10 @@ A tiny and firm tail of a dragon.~
 5 134217792 8193
 0 3 9 9
 28 69547 56314
-24
+11
 X
 ~
-3584 0 0
+0 0 0
 M
 ~
 ~
@@ -285,7 +285,7 @@ A
 A
 12 150
 A
-53 2
+53 5
 #30119
 fur werewolf tuft~
 Tuft of Werewolf Fur~
@@ -294,17 +294,17 @@ A large patch of scratchy fur.~
 9 134217792 273
 9 0 0 0
 9 54236 55486
-18
+9
 X
 ~
-1536 0 0
+1 0 0
 M
 ~
 ~
 ~
 ~
 A
-19 1
+19 2
 A
 18 1
 #30120
@@ -335,13 +335,13 @@ wings demon pair~
 A Pair of Demon Wings~
 A Pair of Black and Red Wings adorned in Fire.~
 ~
-9 134217792 9
+9 155208256 9
 18 0 0 0
 18 30564 63475
 16
 X
 ~
-1536 0 0
+0 0 0
 M
 ~
 ~
@@ -359,7 +359,7 @@ A Long White and Brown Horn~
 9 134217792 16401
 7 0 0 0
 11 26489 67470
-28
+12
 X
 ~
 512 0 0
