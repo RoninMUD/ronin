@@ -622,120 +622,65 @@ void do_song(CHAR* ch, char* arg, int cmd)
     }
     break;
 
-  case SONG_RESPITE:
-    snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
-    act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
-
+case SONG_RESPITE:
+  {
     const int respite_dispel_types[] = {
-      SPELL_CHARM_PERSON,
-      SPELL_INCENDIARY_CLOUD,
-      SPELL_CLOUD_CONFUSION,
-      SPELL_CURSE,
-      SPELL_CHILL_TOUCH,
-      SPELL_WITHER,
-      SPELL_RIMEFANG,
-      SPELL_BLINDNESS,
-      SPELL_POISON,
-      SPELL_PARALYSIS,
-      SPELL_SLEEP
+      SPELL_CHARM_PERSON, SPELL_INCENDIARY_CLOUD, SPELL_CLOUD_CONFUSION,
+      SPELL_CURSE, SPELL_CHILL_TOUCH, SPELL_WITHER, SPELL_RIMEFANG,
+      SPELL_BLINDNESS, SPELL_POISON, SPELL_PARALYSIS, SPELL_SLEEP, SPELL_HOLD
     };
     int respite_dispel = 0;
+
+    snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
+    act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
 
     for (tmp_victim = world[CHAR_REAL_ROOM(ch)].people; tmp_victim; tmp_victim = next_victim)
     {
       next_victim = tmp_victim->next_in_room;
 
-      if (!IS_NPC(tmp_victim))
+      if (IS_NPC(tmp_victim))
+        continue;
+
+      respite_dispel = get_random_set_affect(tmp_victim, respite_dispel_types, NUMELEMS(respite_dispel_types));
+      
+      if (respite_dispel == TYPE_UNDEFINED) 
       {
-        respite_dispel = get_random_set_affect(tmp_victim, respite_dispel_types, NUMELEMS(respite_dispel_types));
-        switch (respite_dispel) {
-        case SPELL_CHARM_PERSON:
-          if (affected_by_spell(tmp_victim, SPELL_CHARM_PERSON))
-          {
-            send_to_char("You feel more self-confident.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_CHARM_PERSON);
-          }
-          break;
-        case SPELL_INCENDIARY_CLOUD:
-          if (affected_by_spell(tmp_victim, SPELL_INCENDIARY_CLOUD))
-          {
-            send_to_char("The blistering waves of heat subside.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_INCENDIARY_CLOUD);
-          }
-          break;
-        case SPELL_CLOUD_CONFUSION:
-          if (affected_by_spell(tmp_victim, SPELL_CLOUD_CONFUSION))
-          {
-            send_to_char("You feel less disoriented.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_CLOUD_CONFUSION);
-          }
-          break;
-        case SPELL_CURSE:
-          if (affected_by_spell(tmp_victim, SPELL_CURSE))
-          {
-            send_to_char("You feel better.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_CURSE);
-          }
-          break;
-        case SPELL_CHILL_TOUCH:
-          if (affected_by_spell(tmp_victim, SPELL_CHILL_TOUCH))
-          {
-            send_to_char("You feel warm again.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_CHILL_TOUCH);
-          }
-          break;
-        case SPELL_WITHER:
-          if (affected_by_spell(tmp_victim, SPELL_WITHER))
-          {
-            send_to_char("The pain coursing through your withered body begins to recede.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_WITHER);
-          }
-          break;
-        case SPELL_RIMEFANG:
-          if (affected_by_spell(tmp_victim, SPELL_RIMEFANG))
-          {
-            send_to_char("The paralyzation wears off, you can move again.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_RIMEFANG);
-          }
-          break;
-        case SPELL_BLINDNESS:
-          if (affected_by_spell(tmp_victim, SPELL_BLINDNESS))
-          {
-            send_to_char("You can see again.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_BLINDNESS);
-          }
-          break;
-        case SPELL_POISON:
-          if (affected_by_spell(tmp_victim, SPELL_POISON))
-          {
-            send_to_char("You feel better.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_POISON);
-          }
-          break;
-        case SPELL_PARALYSIS:
-          if (affected_by_spell(tmp_victim, SPELL_PARALYSIS))
-          {
-            send_to_char("You can move again.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_PARALYSIS);
-          }
-          break;
-        case SPELL_SLEEP:
-          if (affected_by_spell(tmp_victim, SPELL_SLEEP))
-          {
-            send_to_char("You feel less tired.\n\r", tmp_victim);
-            affect_from_char(tmp_victim, SPELL_SLEEP);
-          }
-          break;
-        case TYPE_UNDEFINED:
-          if ((ch != tmp_victim) && GET_DESCRIPTOR(tmp_victim)) {
-              send_to_char("You feel ready!\n\r", tmp_victim);
-              GET_WAIT(tmp_victim) = 0;
-          }
-          break;
+        if ((ch != tmp_victim) && GET_DESCRIPTOR(tmp_victim)) {
+          send_to_char("You feel ready!\n\r", tmp_victim);
+          GET_WAIT(tmp_victim) = 0;
         }
+        continue; 
+      }
+
+      if (respite_dispel > 0 && affected_by_spell(tmp_victim, respite_dispel)) 
+      {
+        // REMOVED 'const' HERE -> Changed to a standard char array pointer
+        char *msg = NULL;
+
+        switch (respite_dispel) {
+          case SPELL_CHARM_PERSON:      msg = "You feel more self-confident.\n\r"; break;
+          case SPELL_INCENDIARY_CLOUD:  msg = "The blistering waves of heat subside.\n\r"; break;
+          case SPELL_CLOUD_CONFUSION:   msg = "You feel less disoriented.\n\r"; break;
+          case SPELL_CURSE:             msg = "You feel better.\n\r"; break;
+          case SPELL_CHILL_TOUCH:       msg = "You feel warm again.\n\r"; break;
+          case SPELL_WITHER:            msg = "The pain coursing through your withered body begins to recede.\n\r"; break;
+          case SPELL_RIMEFANG:          msg = "The paralyzation wears off, you can move again.\n\r"; break;
+          case SPELL_BLINDNESS:         msg = "You can see again.\n\r"; break;
+          case SPELL_POISON:            msg = "You feel better.\n\r"; break;
+          case SPELL_PARALYSIS:         msg = "You can move again.\n\r"; break;
+          case SPELL_SLEEP:             msg = "You feel less tired.\n\r"; break;
+          case SPELL_HOLD:              msg = "You can move again.\n\r"; break;
+        }
+
+        if (msg) {
+          send_to_char(msg, tmp_victim);
+        }
+        
+        affect_from_char(tmp_victim, respite_dispel);
       }
     }
     break;
+  }
 
   case SONG_WARCHANT:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
