@@ -297,7 +297,7 @@ K
 0 0 0 0 0 0 0
 #30120
 dragon tiny~
-A Minituarized Dragon~
+a Miniaturized Dragon~
 A Shrunken Dragon roars at the room.
 ~
 A black dragon paces around the room, its wings reaching around six
@@ -306,7 +306,7 @@ as it stomps around on the ground, but it still only stands around
 four feet tall. It is cute and dangerous all at the same time.
 ~
 16490 0 500 Y
-53 -20 -19 47d116+12800 10d15+132
+53 -20 -19 47d116+25000 10d15+132
 76142 2550000
 8 8 0
 57 20480 10d10+6000 3
@@ -318,8 +318,8 @@ K
 0 0 0 0 0 0 0
 #30121
 werewolf~
-A Half Changed Werewolf~
-A Half Furry Man Begins to Grow Fangs
+A Half-Changed Werewolf~
+A half-furry man beginning to grow fangs is lumbering about.
 ~
 A large male stands almost seven feet in the air even though he is hunched
 over. His legs are bulging outwards as muscle tears through the pant legs 
@@ -329,7 +329,7 @@ his body, covering his lower back, legs and feet with hair. The face begins
 to elongate and small fangs start to make their frightful appearance.
 ~
 16490 0 0 Y
-53 -21 -19 46d109+13000 10d17+144
+53 -21 -19 46d109+30000 10d17+144
 79736 2600000
 8 8 1
 61 20480 10d10+1000 3
@@ -398,6 +398,8 @@ anything delicious to cross its path.
 8 5 22 0
 3 3 29 0
 0 1 0 32
+R
+2
 K
 0 0 0 0 0 0 0
 #30125

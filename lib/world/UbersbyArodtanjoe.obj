@@ -6,14 +6,14 @@ A cloak made of pure spidersilk lays here.~
 9 267450944 1025
 21 0 0 0
 15 43854 18812
-55
+35
 E
 spidersilk cloak~
 Spidersilk woven together in a tight cross-stitch. It provide flexibility, while not hampering your agility. The strands absorb pressure to provide great protection.  
 ~
 X
 ~
-3584 0 0
+2560 0 0
 M
 ~
 ~
@@ -30,10 +30,10 @@ sleeves measured thought~
 Sleeves of Measured Thought~
 A pair of silken sleeves embroidered with slowly shifting sigils lies here.~
 ~
-9 266399808 257
+9 266400832 257
 12 0 0 0
 10 43900 28874
-100
+25
 E
 sleeves measured thought~
 These silken sleeves are impossibly light, yet when worn they carry
@@ -45,7 +45,7 @@ them, encouraging careful action and measured intent.
 ~
 X
 ~
-3584 0 0
+512 0 0
 M
 As you don the sleeves, your movements slow and your thoughts become precise.~
 $n dons a pair of silken sleeves, moving with measured deliberation.~
@@ -54,18 +54,16 @@ $n removes $s silken sleeves, moving more freely once again.~
 A
 19 2
 A
-18 2
-A
 52 25
 #14602
 mantle enlightened~
 Mantle of Enlightened Continuance~
 A translucent mantle shimmers here, seeming half-present~
 ~
-9 266399808 1025
+9 266400832 1025
 6 0 0 0
 8 42855 15634
-100
+55
 E
 mantle enlightened~
 This translucent mantle appears only half bound to the physical
@@ -75,7 +73,7 @@ faintly with pale light that ebbs and flows in time with your breath.
 ~
 X
 ~
-3584 0 0
+1 0 0
 M
 The mantle settles over $n, anchoring your spirit firmly within your body.~
 A faint shimmer surrounds $n as a translucent mantle settles into place.~
@@ -90,10 +88,10 @@ sandals unshaken path~
 Sandals of the Unshaken Path~
 A pair of worn yet immaculate sandals rests here~
 ~
-9 266399808 65
+9 266400832 65
 7 0 0 0
 7 44006 20032
-100
+25
 E
 sandals unshaken path~
 These simple sandals bear the marks of countless journeys, yet show no
@@ -104,7 +102,7 @@ light, but perfectly balanced.
 ~
 X
 ~
-3584 0 0
+1 0 0
 M
 You feel firmly grounded as $n step into the sandals.~
 $n steps into a pair of worn sandals, $s stance becoming steady and assured.~
@@ -113,7 +111,7 @@ $n removes $s sandals, shifting $s weight uneasily.~
 A
 19 2
 A
-18 2
+18 0
 A
 52 30
 #14604
@@ -121,10 +119,10 @@ ring recursive insight~
 Ring of Recursive Insight~
 A mirrored ring etched with fractal patterns glints softly here.~
 ~
-9 266399808 3
+9 266400832 3
 4 0 0 0
 2 46638 28018
-100
+30
 E
 ring recursive insight~
 This mirrored ring reflects more than light, its polished surface
@@ -134,7 +132,7 @@ design that seems to contain its own beginning and end simultaneously.
 ~
 X
 ~
-3584 0 0
+1 0 0
 M
 A quiet loop of insight forms within $s mind as $n wear the ring.~
 The mirrored surface of $n's ring glints softly as $s slips it on.~
