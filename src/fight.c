@@ -1634,8 +1634,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Camaraderie */
   if ((dmg > 0) && (victim != ch) && IS_MORTAL(victim) && (damage_type != DAM_CAMARADERIE) && affected_by_spell(victim, SPELL_CAMARADERIE)) {
-    int victim_dmg = MAX(lround(dmg * 0.6), 1);
-
     int comrades = 0;
 
     for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(victim)), *next_victim; temp_victim; temp_victim = next_victim) {
@@ -1646,10 +1644,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
     }
 
-    /* Deal 60% original dmg to victim, then 100% spread among comrades in the same room; yes, 160% total damage. */
     if (comrades > 0) {
-      int comrade_dmg = MAX(lround(dmg / comrades), 1);
-
+      /* deal 70% original dmg to victim */
+      int victim_dmg = MAX(lround(dmg * 0.7), 1);
+      /* leftover dmg split amongst comrades */
+      int comrade_dmg = MAX(lround((dmg - victim_dmg) / comrades), 1);
       int victim_orig_room = CHAR_REAL_ROOM(victim);
 
       act("Some of the damage intended for $n is reflected to $s comrades!", FALSE, victim, 0, 0, TO_ROOM);

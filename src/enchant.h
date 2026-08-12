@@ -65,6 +65,7 @@
 #define ENCH_NAME_MAIM             "Maim"
 #define ENCH_NAME_TREMOR           "Tremor"
 #define ENCH_NAME_INCENDIARY_CLOUD "Incendiary Cloud"
+#define ENCH_NAME_RESPITE_SINGER   "Weary Traveler"
 
 #define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (MSG_TICK)
 #define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (MSG_MOBACT)

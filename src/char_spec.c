@@ -537,30 +537,20 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
   int dam = 0, set_pos = 0;
 
   switch (GET_CLASS(mimicee)) {
-    case CLASS_NOMAD: /* Batter and a hit along with a spoofed pummel*/
-	
-	  act("$n sings 'Pitter patter bitter ...batter!'", FALSE, ch, NULL, NULL, TO_ROOM);
-	  act("You sing 'Pitter patter bitter ...batter!'", FALSE, ch, NULL, NULL, TO_CHAR);
+    case CLASS_NOMAD: /* disembowel */
+      act("$n sings 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_CHAR);
 
-	  act("$N stumbles backward as $n barrels into $M with a crushing battering strike.", FALSE, ch, 0, victim, TO_NOTVICT);
-	  act("$n slams into you with a brutal battering strike that rattles your bones.", FALSE, ch, 0, victim, TO_VICT);
-	  act("You charge through $N's defenses and land a heavy follow-up hit.", FALSE, ch, 0, victim, TO_CHAR);
-		
-	  set_pos = stack_position(victim, POSITION_STUNNED);
+      dam = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5) * calc_hit_damage(ch, victim, GET_WEAPON(ch), 0, RND_RND);
 
-      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
-	  
-	  if (CHAR_REAL_ROOM(victim) != NOWHERE)
-          GET_POS(victim) = MIN(GET_POS(victim), set_pos);
-	  
-	  damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_BATTER, DAM_PHYSICAL);
-	  perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-	
-	  break;
-	
-	
-	
-	case CLASS_MAGIC_USER: /* thunderball + self perceive */
+      act("$n's one-in-a-million attack causes $N's guts to spill out onto $s feet.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n's one-in-a-million attack causes your guts to spill out onto $s feet.", FALSE, ch, 0, victim, TO_VICT);
+      act("Your one-in-a-million attack causes $N's guts to spill out onto your feet.", FALSE, ch, 0, victim, TO_CHAR);
+
+      damage(ch, victim, dam, SKILL_DISEMBOWEL, DAM_PHYSICAL);
+      break;
+
+    case CLASS_MAGIC_USER: /* thunderball + self perceive */
       act("$n sings 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'You've been... Thunderstruck!'", FALSE, ch, NULL, NULL, TO_CHAR);
 
@@ -575,9 +565,26 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         spell_perceive(GET_LEVEL(ch), ch, ch, NULL);
       break;
 
-    case CLASS_CLERIC: /* miracle victimim's opponent (best approximation of tank) */
+    case CLASS_CLERIC: /* bash + hit + miracle victimim's opponent (best approximation of tank) */
       act("$n sings 'All I need is a miracle, all I need is you...'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'All I need is a miracle, all I need is you...'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      /* bash */
+      act("$n bashes $N with the tiny fist of a circus performer.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n bashes you with the tiny fist of a circus performer.", FALSE, ch, 0, victim, TO_VICT);
+      act("You bash $N with your tiny circus performer's fist.", FALSE, ch, 0, victim, TO_CHAR);
+
+      set_pos = stack_position(victim, POSITION_SITTING);
+
+      damage(ch, victim, number(1, GET_LEVEL(ch)), TYPE_UNDEFINED, DAM_PHYSICAL);
+
+      if (CHAR_REAL_ROOM(victim) != NOWHERE)
+        GET_POS(victim) = MIN(GET_POS(victim), set_pos);
+
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      /* haste */
+      if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
+        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       if (!GET_OPPONENT(victim) || IS_NPC(GET_OPPONENT(victim)) || GET_OPPONENT(victim) == ch) {
         act("$n sumptuous vocals heal $mself.", FALSE, ch, NULL, NULL, TO_ROOM);
@@ -645,47 +652,41 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       }
       break;
 
-    case CLASS_WARRIOR: /* punch + quad OR disembowel (victim hp dependent) */
-      if (GET_HIT(victim) > lround(GET_MAX_HIT(victim) * 0.3)) {
-        act("$n sings 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_ROOM);
-        act("You sing 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_CHAR);
+    case CLASS_WARRIOR: /* punch + quad */
+      act("$n sings 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_ROOM);
+      act("You sing 'I'm gonna knock you out, Mama said knock you out...'", FALSE, ch, NULL, NULL, TO_CHAR);
 
-        /* punch */
-        act("$n strikes $N with the feeble fist of a musician.", FALSE, ch, 0, victim, TO_NOTVICT);
-        act("$n strikes you with the feeble fist of a musician.", FALSE, ch, 0, victim, TO_VICT);
-        act("You strike $N with your feeble musician's fist.", FALSE, ch, 0, victim, TO_CHAR);
+      /* punch */
+      act("$n strikes $N with the feeble fist of a musician.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("$n strikes you with the feeble fist of a musician.", FALSE, ch, 0, victim, TO_VICT);
+      act("You strike $N with your feeble musician's fist.", FALSE, ch, 0, victim, TO_CHAR);
 
-        set_pos = stack_position(victim, POSITION_SITTING);
+      set_pos = stack_position(victim, POSITION_SITTING);
 
-        damage(ch, victim, 2 * GET_LEVEL(ch), TYPE_UNDEFINED, DAM_PHYSICAL);
+      damage(ch, victim, 2 * GET_LEVEL(ch), TYPE_UNDEFINED, DAM_PHYSICAL);
 
-        if (CHAR_REAL_ROOM(victim) != NOWHERE)
-          GET_POS(victim) = MIN(GET_POS(victim), set_pos);
+      if (CHAR_REAL_ROOM(victim) != NOWHERE)
+        GET_POS(victim) = MIN(GET_POS(victim), set_pos);
 
-        /* quad - no more no less */
-          perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-          perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-          perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-          perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-      }
-      else {
-        /* disembowel */
-        act("$n sings 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_ROOM);
-        act("You sing 'You better call me a doctor, feelin' no pain...'", FALSE, ch, NULL, NULL, TO_CHAR);
-
-        dam = number(GET_LEVEL(ch) / 10, GET_LEVEL(ch) / 5) * calc_hit_damage(ch, victim, GET_WEAPON(ch), 0, RND_RND);
-
-        act("$n's one-in-a-million attack causes $N's guts to spill out onto $s feet.", FALSE, ch, 0, victim, TO_NOTVICT);
-        act("$n's one-in-a-million attack causes your guts to spill out onto $s feet.", FALSE, ch, 0, victim, TO_VICT);
-        act("Your one-in-a-million attack causes $N's guts to spill out onto your feet.", FALSE, ch, 0, victim, TO_CHAR);
-
-        damage(ch, victim, dam, SKILL_DISEMBOWEL, DAM_PHYSICAL);
-      }
+      /* quad - no more no less */
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       break;
 
-    case CLASS_NINJA: /* pummel, dual hit, divine wind, spoofed kick */
+    case CLASS_NINJA: /* spoofed kick, pummel, dual hit, divine wind */
       act("$n sings 'Everybody is Kung Fu fighting!'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'Everybody is Kung Fu fighting!'", FALSE, ch, NULL, NULL, TO_CHAR);
+
+      /* spoof kick */
+      if (SAME_ROOM(ch, victim)) {
+        act("$n's graceful, balletic kick catches $N by surprise.", FALSE, ch, NULL, victim, TO_NOTVICT);
+        act("$n's graceful, balletic kick catches you by surprise.", FALSE, ch, NULL, victim, TO_VICT);
+        act("Your graceful, balletic kick catches $N by surprise.", FALSE, ch, NULL, victim, TO_CHAR);
+
+        damage(ch, victim, (GET_LEVEL(ch) * 2), TYPE_UNDEFINED, DAM_PHYSICAL);
+      }
 
       /* spoof pummel: smack with hold (instrument) */
       if (EQ(ch, HOLD)) {
@@ -707,8 +708,8 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         GET_POS(victim) = MIN(GET_POS(ch), set_pos);
 
       /* dual hit */
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       /* haste (in lieu mystic swiftness) */
       if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
         perform_hit(ch, victim, TYPE_UNDEFINED, 0);
@@ -726,18 +727,9 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         if (CHAR_REAL_ROOM(victim) != NOWHERE)
           GET_POS(victim) = MIN(GET_POS(ch), set_pos);
       }
-
-      /* spoof kick */
-      if (SAME_ROOM(ch, victim)) {
-        act("$n's graceful, balletic kick catches $N by surprise.", FALSE, ch, NULL, victim, TO_NOTVICT);
-        act("$n's graceful, balletic kick catches you by surprise.", FALSE, ch, NULL, victim, TO_VICT);
-        act("Your graceful, balletic kick catches $N by surprise.", FALSE, ch, NULL, victim, TO_CHAR);
-
-        damage(ch, victim, (GET_LEVEL(ch) * 2), TYPE_UNDEFINED, DAM_PHYSICAL);
-      }
       break;
 
-    case CLASS_PALADIN: /* self fury for 0 ticks, spoofed pummel */
+    case CLASS_PALADIN: /* self fury for 0 ticks, spoofed pummel + hit */
       act("$n sings 'But what makes a man decide, take the wrong or righteous road...'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'But what makes a man decide, take the wrong or righteous road...'", FALSE, ch, NULL, NULL, TO_CHAR);
 
@@ -767,9 +759,11 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE)
         GET_POS(victim) = MIN(GET_POS(ch), set_pos);
+
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       break;
 
-    case CLASS_ANTI_PALADIN: /* self blood lust & rage for 0 ticks, spoofed pummel + hidden-blade */
+    case CLASS_ANTI_PALADIN: /* self blood lust & rage for 0 ticks, spoofed pummel + hidden-blade + hit */
       act("$n sings 'Well, I'm hot blooded, check it and see...'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'Well, I'm hot blooded, check it and see...'", FALSE, ch, NULL, NULL, TO_CHAR);
 
@@ -814,9 +808,11 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
       if (CHAR_REAL_ROOM(victim) != NOWHERE)
         GET_POS(victim) = MIN(GET_POS(ch), set_pos);
+
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       break;
 
-    case CLASS_BARD: /* taunt + dual + heal song + throw mimicee bard at the mob for an extra hit*/
+    case CLASS_BARD: /* taunt + dual + heal song + throw mimicee bard who duals */
       if (chance(50)) {
         act("$n sings 'I'm a loser baby so why don't you kill me?' mockingly off-key and too loud.", FALSE, ch, NULL, NULL, TO_ROOM);
         act("You sing 'I'm a loser baby so why don't you kill me?' intentionally off-key and too loud.", FALSE, ch, NULL, NULL, TO_CHAR);
@@ -828,12 +824,12 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
 
       taunt_spec(ch, victim, 0, "NO_SKILL_CHECK"); // auto success
 
-      /* dual + haste */
+      /* dual */
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       perform_hit(ch, victim, TYPE_UNDEFINED, 0);
       /* haste */
       if (affected_by_spell(ch, SPELL_HASTE) && chance(30 + GET_DEX_APP(ch)))
         perform_hit(ch, victim, TYPE_UNDEFINED, 1);
-      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       act("$n sings 'There is no pain you are receding...', a much better rendition than $N ever managed.", FALSE, ch, NULL, mimicee, TO_NOTVICT);
       act("$n sings 'There is no pain you are receding...', a much better rendition than you ever could.", FALSE, ch, NULL, mimicee, TO_VICT);
@@ -846,14 +842,12 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           spell_heal(GET_LEVEL(ch), ch, temp_target, NULL);
         }
       }
-
       spell_heal(GET_LEVEL(ch), ch, ch, NULL);
 
       /* order a hit */
-
-      act("$N jumps into $n's waiting hands who throws $M up in the air!", FALSE, ch, NULL, mimicee, TO_NOTVICT);
-      act("You take a running jump into $n's waiting hands who throws you up in the air!", FALSE, ch, NULL, mimicee, TO_VICT);
-      act("$N jumps into your waiting hands so you can throw $M up in the air!", FALSE, ch, NULL, mimicee, TO_CHAR);
+      act("$N backflips into $n's waiting hands who throws $M up in the air!", FALSE, ch, NULL, mimicee, TO_NOTVICT);
+      act("You take a running backflip into $n's waiting hands who throws you up in the air!", FALSE, ch, NULL, mimicee, TO_VICT);
+      act("$N backflips into your waiting hands so you can throw $M up in the air!", FALSE, ch, NULL, mimicee, TO_CHAR);
 
       act("$n comes down on top of $N!", FALSE, mimicee, NULL, victim, TO_NOTVICT);
       act("$n lands on top of you!", FALSE, mimicee, NULL, victim, TO_VICT);
@@ -863,11 +857,17 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
       {
         GET_POS(victim) = stack_position(victim, POSITION_MORTALLYW);
       }
+
+      /* dual */
       perform_hit(mimicee, victim, TYPE_UNDEFINED, 0);
+      perform_hit(mimicee, victim, TYPE_UNDEFINED, 0);
+      /* haste */
+      if (affected_by_spell(mimicee, SPELL_HASTE) && chance(30 + GET_DEX_APP(mimicee)))
+        perform_hit(mimicee, victim, TYPE_UNDEFINED, 1);
 
       break;
 
-    case CLASS_COMMANDO: /* triple + eshock + disarm */
+    case CLASS_COMMANDO: /* pummel + triple + eshock + disarm */
       act("$n sings 'Disarm you with a smile, and cut you like you want me to...'", FALSE, ch, NULL, NULL, TO_ROOM);
       act("You sing 'Disarm you with a smile, and cut you like you want me to...'", FALSE, ch, NULL, NULL, TO_CHAR);
 
@@ -899,10 +899,29 @@ void mimicry_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
         }
       }
 
+      /* spoof pummel: smack with hold (instrument) */
+      if (EQ(ch, HOLD)) {
+        act("$n pummels $N with $p, and $N is stunned now!", FALSE, ch, EQ(ch, HOLD), victim, TO_NOTVICT);
+        act("$n pummels you with $p, and you are stunned now!", FALSE, ch, EQ(ch, HOLD), victim, TO_VICT);
+        act("You pummel $N with $p, and $N is stunned now!", FALSE, ch, EQ(ch, HOLD), victim, TO_CHAR);
+      }
+      else {
+        act("$n pummels $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_NOTVICT);
+        act("$n pummels you, and you are stunned now!", FALSE, ch, NULL, victim, TO_VICT);
+        act("You pummel $N, and $N is stunned now!", FALSE, ch, NULL, victim, TO_CHAR);
+      }
+
+      set_pos = stack_position(victim, POSITION_STUNNED);
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), 10), SKILL_PUMMEL, DAM_PHYSICAL);
+
+      if (CHAR_REAL_ROOM(victim) != NOWHERE)
+        GET_POS(victim) = MIN(GET_POS(ch), set_pos);
+
       /* triple - no more no less */
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
-        perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
+      perform_hit(ch, victim, TYPE_UNDEFINED, 0);
 
       /* eshock: we want this to ignore sphere/shield so spoof the message of the spell */
       if (SAME_ROOM(ch, victim)) {
