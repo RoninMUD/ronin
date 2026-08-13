@@ -61,12 +61,12 @@ int lizard_horn (OBJ *horn, CHAR *ch, int cmd, char *arg) {
   ENCH *tmp_enchantment;
   char buf[MAX_INPUT_LENGTH];
 
-  if((ch=horn->equipped_by) && cmd==MSG_TICK && IS_DAY && chance(16)) {
+  if((ch=horn->equipped_by) && cmd==MSG_TICK && IS_DAY && IS_OUTSIDE(ch) && chance(5)) {
     if (!(enchanted_by(ch, "Lizard Lycanthropy"))) {
       send_to_char("You feel the urge to sun yourself on a rock.\n\r", ch);
       CREATE(tmp_enchantment, ENCH, 1);
       tmp_enchantment->name     = str_dup("Lizard Lycanthropy");
-      tmp_enchantment->duration = 24;
+      tmp_enchantment->duration = 5;
       tmp_enchantment->func     = lizard_bite;
       enchantment_to_char(ch, tmp_enchantment, FALSE);
       sprintf(buf,"Hell Log Ench: [ %s just contracted Lizard Lycanthropy at %d ]",GET_NAME(ch),world[CHAR_REAL_ROOM(ch)].number);
