@@ -1897,6 +1897,38 @@ const byte circle_mult[] = {
   7, 7, 7, 7, 7, 7, 7           /* 57 */
 };
 
+/* stat bonus mapping for stats 0...25; values
+mirror the dex_app.prac_bonus mapping for 19...25
+and are 0 for 0..18. */
+const int stat_bonus[] = {
+0, /* 0 */
+0, /* 1 */
+0, /* 2 */
+0, /* 3 */
+0, /* 4 */
+0, /* 5 */
+0, /* 6 */
+0, /* 7 */
+0, /* 8 */
+0, /* 9 */
+0, /*10 */
+0, /*11 */
+0, /*12 */
+0, /*13 */
+0, /*14 */
+0, /*15 */
+0, /*16 */
+0, /*17 */
+0, /*18 */
+1, /*19 */
+2, /*20 */
+3, /*21 */
+4, /*22 */
+6, /*23 */
+8, /*24 */
+10 /*25 */
+};
+
 /* Strength Apply */
 /* tohit, todam, carry_w, wield_w */
 const struct str_app_type str_app[] = {

@@ -1157,7 +1157,7 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
               case 26:
                 sprintf(buf,"I know nooooothing!");break;
               case 27:
-                sprintf(buf,"Hemp for IMP!");break;
+                sprintf(buf,"Demote Hemp!");break;
               case 28:
                 sprintf(buf,"What are you gonna do, bleed on me?");break;
               case 29:

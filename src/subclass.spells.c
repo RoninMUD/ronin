@@ -665,7 +665,7 @@ void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_desecrate(level, ch, victim, 0);
+      spell_desecrate(level, ch, 0, obj);
       break;
 
     case SPELL_TYPE_STAFF:

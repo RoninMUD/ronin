@@ -189,10 +189,10 @@ void blood_lust_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           act("$n viciously bites at you with $s fangs!", FALSE, ch, 0, victim, TO_VICT);
           act("You bite at $N viciously with your fangs!", FALSE, ch, 0, victim, TO_CHAR);
 
-          dmg = 60;
+          dmg = 60 + 2*GET_STR_BONUS(ch);
 
           if (affected_by_spell(ch, SPELL_DESECRATE)) {
-            dmg *= 1.1;
+            dmg *= 1.25;
           }
 
           damage(ch, victim, dmg, TYPE_UNDEFINED, DAM_PHYSICAL);
@@ -203,10 +203,10 @@ void blood_lust_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           act("$n sinks $s fangs into your neck, draining your life!", FALSE, ch, 0, victim, TO_VICT);
           act("You sink your fangs into $N's neck, draining $S life!", FALSE, ch, 0, victim, TO_CHAR);
 
-          dmg = 40;
+          dmg = 40 + 2*GET_INT_BONUS(ch);
 
           if (affected_by_spell(ch, SPELL_DESECRATE)) {
-            dmg *= 1.1;
+            dmg *= 1.25;
           }
 
           damage(ch, victim, dmg, TYPE_UNDEFINED, DAM_MAGICAL);
@@ -221,10 +221,10 @@ void blood_lust_spec(CHAR *ch, CHAR *victim, int cmd, const char *arg) {
           act("$n bites at you savagely, draining your magical essence!", FALSE, ch, 0, victim, TO_VICT);
           act("You bite savagely at $N, draining $S magical essence!", FALSE, ch, 0, victim, TO_CHAR);
 
-          dmg = 20;
+          dmg = 20 + 2*GET_INT_BONUS(ch);
 
           if (affected_by_spell(ch, SPELL_DESECRATE)) {
-            dmg *= 1.1;
+            dmg *= 1.25;
           }
 
           GET_MANA(victim) = MAX(GET_MANA(victim) - dmg, 0);

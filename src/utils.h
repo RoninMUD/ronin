@@ -37,6 +37,9 @@ $State: Exp $
 
 extern char *index(const char *s, int c);
 
+/* externs for stat bonus table defined in constants.c */
+extern const int stat_bonus[];
+
 #define TRUE                    1
 #define FALSE                   0
 
@@ -471,10 +474,19 @@ do {                   \
 #define GET_DEX_AC(ch)         (dex_app[GET_DEX(ch)].defensive)
 #define GET_CON_REGEN(ch)      (con_app[GET_CON(ch)].regen)
 #define GET_CON_DAM_REDUCT(ch) (con_app[GET_CON(ch)].reduct)
-#define GET_INT_APP(ch)        (int_app[GET_WIS(ch)].learn)
-#define GET_INT_CONC(ch)       (int_app[GET_WIS(ch)].conc)
+#define GET_INT_APP(ch)        (int_app[GET_INT(ch)].learn)
+#define GET_INT_CONC(ch)       (int_app[GET_INT(ch)].conc)
 #define GET_WIS_APP(ch)        (wis_app[GET_WIS(ch)].bonus)
 #define GET_WIS_CONC(ch)       (wis_app[GET_WIS(ch)].conc)
+
+/* stat bonus mapping (for stats > 18). Use stat_bonus[index].
+  Macros for stats: STR, DEX, INT, WIS, CON. */
+#define GET_STAT_BONUS(stat) (stat_bonus[(stat)])
+#define GET_STR_BONUS(ch) GET_STAT_BONUS(GET_STR(ch))
+#define GET_DEX_BONUS(ch) GET_STAT_BONUS(GET_DEX(ch))
+#define GET_INT_BONUS(ch) GET_STAT_BONUS(GET_INT(ch))
+#define GET_WIS_BONUS(ch) GET_STAT_BONUS(GET_WIS(ch))
+#define GET_CON_BONUS(ch) GET_STAT_BONUS(GET_CON(ch))
 
 #define GET_LEARNED(ch, skill) (ch->skills[skill].learned)
 

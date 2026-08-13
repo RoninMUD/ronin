@@ -2213,9 +2213,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Infidel SC3: Shadow Wraith */
   if (shadow_damage) {
-    shadow_damage = number(2, 6) / shadow_damage;
+    shadow_damage = number(1, 4);
 
     dmg_text /= shadow_damage;
+    dmg /= shadow_damage;
   }
 
   /* It's so anticlimactic. */
