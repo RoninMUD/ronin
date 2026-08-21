@@ -322,7 +322,7 @@ void spell_iron_skin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_IRON_SKIN)) {
     print_spell_messages(victim, SPELL_IRON_SKIN);
 
-    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -20 : -10, APPLY_ARMOR, 0, 0);
+    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -30 : -30, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -555,9 +555,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_vict, TO_VICT);
 
       if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_PARALYSIS) &&
-          !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
-          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
-          !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
+          !IS_AFFECTED(temp_vict, AFF_PARALYSIS)) {
         aff_apply(temp_vict, SPELL_PARALYSIS, duration, 100, APPLY_ARMOR, AFF_PARALYSIS, 0);
         aff_apply(temp_vict, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
@@ -1125,6 +1123,46 @@ void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
   damage_spell(ch, victim, SPELL_DEVASTATION, level, 1000, DAM_MAGICAL, SAVING_NONE);
+
+  if (SAME_ROOM(ch, victim)) {
+    act("$n chases $s devastating spell with a deadly strike.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("Still reeling from the spell, you are caught off guard as $n strikes at you!", FALSE, ch, 0, victim, TO_VICT);
+    act("You chase your devastating spell with a deadly strike.", FALSE, ch, 0, victim, TO_CHAR);
+    hit(ch, victim, TYPE_UNDEFINED);
+    /* Only apply Exposed if the victim is still alive/active. */
+    if (GET_POS(victim) > POSITION_DEAD) {
+      /* Apply or refresh Exposed enchant: 10 + INT bonus rounds.
+         If already exposed with equal/longer duration, leave it alone. */
+      int new_dur = 10 + GET_INT_BONUS(ch);
+      int existing = ench_duration(victim, ENCH_NAME_EXPOSED, 0);
+
+      if (existing < new_dur) {
+        ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, new_dur, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
+      }
+    }
+  }
+}
+
+/* Exposed: Invul Breakthrough enchant handler */
+int exposed_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+    act("......$n is exposed!", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    /* No per-round action needed for the breakthrough enchant itself. */
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+    act("$n is no longer exposed.", FALSE, ch, 0, 0, TO_ROOM);
+    send_to_char("You feel invulnerable once more.\n\r", ch);
+    return FALSE;
+  }
+  return FALSE;
 }
 
 void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -1166,7 +1204,13 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
     send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
     act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
 
-    int dmg = 150;
+    int base = 150;
+    int int_bonus = 0;
+
+    /* If the caster stored their INT bonus on the enchant, use it to scale damage. */
+    if (ench) int_bonus = ench->temp[0];
+
+    int dmg = base + (int_bonus * 5); /* +5 damage per INT bonus point */
 
     /* Don't kill the character, otherwise EXP is lost. */
     if (GET_HIT(ch) <= dmg) {
@@ -1193,9 +1237,21 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
 void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  ench_apply(victim, TRUE, ENCH_NAME_INCENDIARY_CLOUD, SPELL_INCENDIARY_CLOUD, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
+  /* Double the initial damage if the target was already affected. */
+  if (ench_enchanted_by(victim, ENCH_NAME_INCENDIARY_CLOUD, 0)) {
+    damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 1000, DAM_FIRE, SAVING_NONE);
+  }
+  else {
+    damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 500, DAM_FIRE, SAVING_NONE);
+  }
 
-  damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 500, DAM_FIRE, SAVING_NONE);
+  ench_apply(victim, TRUE, ENCH_NAME_INCENDIARY_CLOUD, SPELL_INCENDIARY_CLOUD, 10, ENCH_INTERVAL_ROUND, -4, APPLY_HITROLL, AFF_BLIND, 0, incendiary_cloud_enchant);
+
+  /* Record the caster's INT bonus on the enchant so the enchant handler can use it each round. */
+  ENCH *e = ench_get_from_char(victim, ENCH_NAME_INCENDIARY_CLOUD, 0);
+  if (e) {
+    e->temp[0] = GET_INT_BONUS(ch);
+  }
 }
 
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {

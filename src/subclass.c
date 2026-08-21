@@ -43,7 +43,7 @@ int check_sc_access(CHAR *ch, int skill) {
   if ((skill == SKILL_MEDITATE) && (GET_CLASS(ch) == CLASS_CLERIC)) return TRUE;
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
-  if ((skill == SPELL_IRON_SKIN) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
+  if ((skill == SPELL_TREMOR) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
 
   if (skill <= 165) return TRUE;
 
@@ -268,14 +268,14 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Mercenary */
-    case SPELL_TREMOR:
+    case SPELL_IRON_SKIN:
       if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
       break;
     case SPELL_CLOUD_CONFUSION:
-      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
       break;
     case SKILL_RIPOSTE:
-      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
       break;
     case SPELL_INCENDIARY_CLOUD:
       if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;

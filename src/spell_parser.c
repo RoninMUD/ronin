@@ -1095,7 +1095,6 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_INFRAVISION,         30, POSITION_STANDING,  5, 57,  5, 57, 11,  4, 57, 57,   20, TAR_CHAR_ROOM,                                                                cast_infravision);
   SPELLO(SPELL_INVISIBLE,           30, POSITION_STANDING,  4, 57,  7, 57,  9,  6, 57, 57,   25, TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_EQUIP,                   cast_invisibility);
   SPELLO(SPELL_INVUL,               30, POSITION_STANDING, 29, 28, 57, 57, 57, 25, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_invulnerability);
-  SPELLO(SPELL_IRON_SKIN,           30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 40,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
   SPELLO(SPELL_LAY_HANDS,           30, POSITION_FIGHTING, 57, 57, 57, 15, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_lay_hands);
   SPELLO(SPELL_LETHAL_FIRE,         30, POSITION_FIGHTING, 24, 57, 57, 57, 57, 20, 57, 27,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_lethal_fire);
   SPELLO(SPELL_LIGHTNING_BOLT,      30, POSITION_FIGHTING,  9, 57, 57, 57, 12, 57, 57,  7,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_lightning_bolt);
@@ -1140,6 +1139,7 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_TELEPORT,            30, POSITION_FIGHTING,  8, 57, 57, 57, 57,  7, 57, 57,   25, TAR_SELF_ONLY,                                                                cast_teleport);
   SPELLO(SPELL_THUNDERBALL,         30, POSITION_FIGHTING, 28, 57, 57, 57, 57, 27, 57, 57,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_thunderball);
   SPELLO(SPELL_TOTAL_RECALL,        30, POSITION_STANDING, 57, 18, 57, 57, 57, 13, 57, 57,   30, TAR_IGNORE,                                                                   cast_total_recall);
+  SPELLO(SPELL_TREMOR,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 40,  130, TAR_IGNORE,                                                                   cast_tremor);
   SPELLO(SPELL_VAMPIRIC,            30, POSITION_FIGHTING, 18, 57, 57, 57, 24, 57, 57, 32,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_vampiric_touch);
   SPELLO(SPELL_VENTRILOQUATE,       30, POSITION_STANDING,  1, 57, 57, 57, 57, 57, 5,  57,    5, TAR_CHAR_ROOM | TAR_SELF_NONO | TAR_OBJ_ROOM,                                 cast_ventriloquate);
   SPELLO(SPELL_VITALITY,            30, POSITION_FIGHTING,  8, 16, 57, 14, 57, 10, 57, 57,   25, TAR_CHAR_ROOM,                                                                cast_vitality);
@@ -1183,7 +1183,7 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_DUSK_REQUIEM,        30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_dusk_requiem);
   SPELLO(SPELL_WITHER,              30, POSITION_FIGHTING, 57, 57, 57, 57, 30, 57, 57, 57,   70, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_wither);
   // Mercenary
-  SPELLO(SPELL_TREMOR,              30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  130, TAR_IGNORE,                                                                   cast_tremor);
+  SPELLO(SPELL_IRON_SKIN,           30, POSITION_STANDING, 57, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM,                                                                cast_iron_skin);
   SPELLO(SPELL_CLOUD_CONFUSION,     30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  100, TAR_IGNORE,                                                                   cast_cloud_confusion);
   SPELLO(SPELL_INCENDIARY_CLOUD,    30, POSITION_FIGHTING, 57, 57, 57, 57, 57, 57, 57, 30,  200, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_incendiary_cloud);
   // Legionnaire
@@ -1292,7 +1292,6 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_INFRAVISION,          "infravision",                  "Your eyes glow crimson.",                                             "$n's eyes glow crimson.",                                                   "The crimson glow in your eyes fades.");
   SPLTXTO(SPELL_INVISIBLE,            "invisibility",                 "You slowly fade out of existence.",                                   "$n slowly fades out of existence.",                                         "You slowly fade into existence.");
   SPLTXTO(SPELL_INVUL,                "invulnerability",              "You are surrounded by a powerful sphere.",                            "$n is surrounded by a powerful sphere.",                                    "Your powerful sphere disappears.");
-  SPLTXTO(SPELL_IRON_SKIN,            "iron skin",                    "You feel your skin harden.",                                          "$n's skin hardens and turns dark iron in color.",                           "Your skin turns softer.");
   SPLTXTO(SPELL_LAY_HANDS,            "lay hands",                    "A healing power flows into your body.",                               "",                                                                          "");
   SPLTXTO(SPELL_LETHAL_FIRE,          "lethal fire",                  "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_LIGHTNING_BOLT,       "lightning bolt",               "",                                                                    "",                                                                          "");
@@ -1336,6 +1335,7 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_TELEPORT,             "teleport",                     "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_THUNDERBALL,          "thunderball",                  "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_TOTAL_RECALL,         "total recall",                 "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_TREMOR,               "tremor",                       "",                                                                    "",                                                                          "Your tremors subside.");
   SPLTXTO(SPELL_VAMPIRIC,             "vampiric touch",               "You feel the drained energy flowing into you.",                       "",                                                                          "");
   SPLTXTO(SPELL_VENTRILOQUATE,        "ventriloquate",                "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_VITALITY,             "vitality",                     "You feel refreshed!",                                                 "",                                                                          "");
@@ -1390,7 +1390,7 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_RIMEFANG,             "rimefang",                     "",                                                                    "",                                                                          "You begin to thaw.");
   SPLTXTO(SPELL_DEVASTATION,          "devastation",                  "",                                                                    "",                                                                          "");
   // Mercenary
-  SPLTXTO(SPELL_TREMOR,               "tremor",                       "",                                                                    "",                                                                          "Your tremors subside.");
+  SPLTXTO(SPELL_IRON_SKIN,            "iron skin",                    "You feel your skin harden.",                                          "$n's skin hardens and turns dark iron in color.",                           "Your skin turns softer.");
   SPLTXTO(SPELL_CLOUD_CONFUSION,      "cloud of confusion",           "You feel disoriented.",                                               "$n looks disoriented.",                                                     "You feel less disoriented.");
   SPLTXTO(SPELL_INCENDIARY_CLOUD,     "incendiary cloud",             "",                                                                    "",                                                                          "The cloud of fire surrounding you dies out.");
 

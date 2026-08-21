@@ -2177,6 +2177,23 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = lround(dmg * 0.5);
   }
 
+  /* Mercenary SC1: Iron Skin - flat damage reduction while affected
+     Baseline 10% reduction; +10% if attacker is affected by Cloud of Confusion;
+     +10% if attacker is affected by Incendiary Cloud - 30% total possible
+     NOTE: non-mercenaries do not get the dmg reduction */
+  if (affected_by_spell(victim, SPELL_IRON_SKIN) && (dmg > 0) && check_subclass(victim, SC_MERCENARY, 1)) {
+    double reduction = 0.10; /* baseline 10% */
+
+    if (affected_by_spell(ch, SPELL_CLOUD_CONFUSION)) reduction += 0.10;
+    if (ench_enchanted_by(ch, ENCH_NAME_INCENDIARY_CLOUD, 0)) reduction += 0.10;
+
+    double mult = 1.0 - reduction;
+
+    if (mult < 0.0) mult = 0.0; //guardrail
+
+    dmg = lround(dmg * mult);
+  }
+
   /* Limit total damage. */
   dmg = MAX(MIN(30000, dmg), 0);
 
@@ -2760,6 +2777,11 @@ int calc_ac(CHAR *ch) {
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       //ac -= 30;
       min_pc_ac = -330;
+    }
+
+    /* Iron Skin: extend AC cap for Mercenaries */
+    if (affected_by_spell(ch, SPELL_IRON_SKIN) && IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 1)) {
+      min_pc_ac -= 30;
     }
 
     /* Blur: AC Bonus */
@@ -3587,6 +3609,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       break;
 
     case SKILL_LUNGE:
+      ench_apply(defender, TRUE, ENCH_NAME_EXPOSED, 0, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
       if (IS_AFFECTED(defender, AFF_INVUL) && !breakthrough(attacker, defender, type, BT_INVUL)) {
         act("$n tries to lunge at $N, but fails.", FALSE, attacker, 0, defender, TO_NOTVICT);
         act("$n tries to lunge at you, but fails.", FALSE, attacker, 0, defender, TO_VICT);

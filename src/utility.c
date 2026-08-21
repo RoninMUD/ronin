@@ -38,6 +38,8 @@
 #include "modify.h"
 #include "comm.h"
 #include "cmd.h"
+#include "aff_ench.h"
+#include "enchant.h"
 #include "spells.h"
 
 extern FILE *logfile;
@@ -888,6 +890,11 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
 
   /* Invulnerability never applies to Hostile victims. */
   if ((breakthrough_type == BT_INVUL) && IS_SET(GET_TOGGLES(victim), TOG_HOSTILE)) {
+    return TRUE;
+  }
+
+  /* If the victim has an Invul Breakthrough enchant, allow breakthrough. */
+  if ((breakthrough_type == BT_INVUL) && ench_enchanted_by(victim, ENCH_NAME_EXPOSED, 0)) {
     return TRUE;
   }
 
