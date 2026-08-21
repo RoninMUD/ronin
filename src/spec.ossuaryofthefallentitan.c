@@ -1,7 +1,7 @@
 /*spec.ossuaryoftheFallenTitan.c - Specs for Ossuary of the Fallen Titan by Geldrin
      Plagiarize from Fisher for RoninMUD
      Creation Date: 4/24/2026
-     
+
 */
 /*System Includes */
 #include <string.h>
@@ -53,29 +53,29 @@ int ossuary_mob_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 {
     char buf[MAX_STRING_LENGTH];
     int reward = 0; // Initialize reward
-    
+
     /*Don't waste any more CPU time if no one is in the room. */
     if (count_mortals_room(mob, TRUE) < 1){
         return FALSE;
     }
-    
+
     switch (cmd)
-    {	
+    {
         case MSG_DIE:	// on boss death reward AQP
             sprintf(buf, "%s has been slain.\n\r", GET_SHORT(mob));
             send_to_room(buf, CHAR_REAL_ROOM(mob));
-            
+
             // Set reward based on mob vnum
             switch (MOB_VNUM(mob)) {
                 case CRYSTAL_ENCRUSTED_SCAVENGER: reward = 3; break;
-                case TITAN_BONE_CONSTRUCT:      reward = 6; break;
-                case CRYSTALLINE_GOLEM:         reward = 5; break;
-                case CRYSTAL_BACKED_SCARAB:     reward = 2; break;
-                case CARAPACE_RECLAIMER:        reward = 7; break;
+                case TITAN_BONE_CONSTRUCT:      reward = 4; break;
+                case CRYSTALLINE_GOLEM:         reward = 4; break;
+                case CRYSTAL_BACKED_SCARAB:     reward = 3; break;
+                case CARAPACE_RECLAIMER:        reward = 5; break;
                 case APEX_DEVOURER:             reward = 10; break;
                 default:                        reward = 0; break; // Fallback for unknown mobs
             }
-            
+
             mob_aq_reward(reward, mob);
             break;
     }
@@ -86,10 +86,10 @@ int ossuary_mob_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
 void assign_ossuaryoftheFallenTitan(void)
 {
     /*Objects */
-  
+
 
     /*Rooms */
-	
+
 
     /*Mobs */
    assign_mob(CRYSTAL_ENCRUSTED_SCAVENGER, ossuary_mob_echo);
@@ -97,5 +97,5 @@ void assign_ossuaryoftheFallenTitan(void)
    assign_mob(CRYSTALLINE_GOLEM, ossuary_mob_echo);
    assign_mob(CRYSTAL_BACKED_SCARAB, ossuary_mob_echo); // Updated to match fixed define
    assign_mob(CARAPACE_RECLAIMER, ossuary_mob_echo);
-   assign_mob(APEX_DEVOURER, ossuary_mob_echo);	
+   assign_mob(APEX_DEVOURER, ossuary_mob_echo);
 }
