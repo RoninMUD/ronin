@@ -275,6 +275,8 @@ int point_update_move(CHAR *ch) {
 int mana_gain(CHAR *ch) {
   if (!ch) return 0;
 
+  ensure_inner_peace_enchant(ch);
+
   int gain = 0;
 
   if (IS_NPC(ch)) {
@@ -479,6 +481,11 @@ int mana_gain(CHAR *ch) {
       gain += 10;
     }
 
+    /* Tranquility - 25% mana regen boost only while not in combat. */
+    if (affected_by_spell(ch, SPELL_TRANQUILITY) && !GET_OPPONENT(ch)) {
+      gain *= 1.25;
+    }
+
     if (gain > 0) {
       /* Limit mana regen in combat. */
       if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
@@ -504,8 +511,18 @@ int mana_gain(CHAR *ch) {
         }
 
         /* Inner Peace */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-          mana_regen_cap += 10;
+        if (enchanted_by(ch, ENCH_NAME_INNER_PEACE)) {
+          int inner_peace_bonus = 0;
+          ENCH *inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+
+          if (inner_peace && (inner_peace->temp[0] > 0)) {
+            inner_peace_bonus = inner_peace->temp[0];
+          }
+          else if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+            inner_peace_bonus = GET_WIS_BONUS(ch);
+          }
+
+          mana_regen_cap += 10 + inner_peace_bonus;
         }
 
         // Prestige Perk 24

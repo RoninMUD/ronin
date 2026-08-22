@@ -248,6 +248,7 @@
 #define SPELL_MANA_HEAL             173
 #define SKILL_CLOBBER               174
 #define SPELL_BLUR                  175
+#define SKILL_DEBILITATE            176
 #define SPELL_TRANQUILITY           177
 #define SKILL_VEHEMENCE             178
 #define SPELL_TREMOR                179

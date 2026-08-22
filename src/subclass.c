@@ -161,7 +161,7 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Mystic */
-    case SPELL_DEBILITATE:
+    case SKILL_DEBILITATE:
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
     case SKILL_TIGERKICK:

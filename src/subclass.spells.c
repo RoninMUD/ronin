@@ -1321,6 +1321,8 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 }
 
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  const int tranquility_duration = 6;
+
   for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch; temp_ch; temp_ch = next_ch) {
     next_ch = temp_ch->next_in_room;
 
@@ -1328,9 +1330,8 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       print_spell_messages(temp_ch, SPELL_TRANQUILITY);
 
       aff_from_char(temp_ch, SPELL_TRANQUILITY);
-
-      aff_apply(temp_ch, SPELL_TRANQUILITY, 6, 3, APPLY_HITROLL, 0, 0);
-      aff_apply(temp_ch, SPELL_TRANQUILITY, 6, 3, APPLY_DAMROLL, 0, 0);
+      aff_apply(temp_ch, SPELL_TRANQUILITY, tranquility_duration, 0, 0, 0, 0);
+      apply_tranquility_inner_peace(temp_ch, ch, tranquility_duration);
     }
   }
 }

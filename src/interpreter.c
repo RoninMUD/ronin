@@ -931,6 +931,7 @@ void assign_command_pointers ( void )
   COMMANDO("meditate", CMD_MEDITATE, POSITION_RESTING, do_meditate, 30);
   COMMANDO("protect", CMD_PROTECT, POSITION_STANDING, do_protect, 30);
   COMMANDO("backfist", CMD_BACKFIST, POSITION_FIGHTING, do_backfist, 30);
+  COMMANDO("debilitate", CMD_DEBILITATE, POSITION_FIGHTING, do_debilitate, 30);
   COMMANDO("mantra", CMD_MANTRA, POSITION_FIGHTING, do_mantra, 30);
   COMMANDO("banzai", CMD_BANZAI, POSITION_FIGHTING, do_banzai, 30);
   COMMANDO("pray", CMD_PRAY, POSITION_RESTING, do_pray, 40);

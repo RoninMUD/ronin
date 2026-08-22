@@ -325,6 +325,7 @@
 
 #define CMD_CLOBBER            337
 #define CMD_VICTIMIZE          338
+#define CMD_DEBILITATE         339
 
 #define CMD_NEWOLC             400
 #define CMD_NEWOLCM            401

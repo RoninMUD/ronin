@@ -724,8 +724,9 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        /* Mystic SC2: Inner Peace - Ignore blindness. */
-        if (!(IS_MORTAL(target) && check_subclass(target, SC_MYSTIC, 3))) {
+        /* Inner Peace immunity applies to both the Mystic passive and the
+         * Tranquility-derived temporary effect. */
+        if (!has_inner_peace_immunity(target)) {
           if (IS_AFFECTED(target, AFF_BLIND) || af_list[SPELL_BLINDNESS]) {
             act("......$n stumbles about wildly!", FALSE, target, 0, ch, TO_VICT);
           }
@@ -1046,7 +1047,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) {
+  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND) && !has_inner_peace_immunity(ch)) {
     send_to_char("You can't see anything; you're blind!\n\r", ch);
 
     return;

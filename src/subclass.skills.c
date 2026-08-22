@@ -283,9 +283,7 @@ void do_backfist(CHAR *ch, char *arg, int cmd) {
   act("With a sickening crunch $n hits $N with a huge backfist.", FALSE, ch, 0, victim, TO_NOTVICT);
   act("With a sickening crunch $n hits you with a huge backfist.", FALSE, ch, 0, victim, TO_VICT);
 
-  double multi = number(150, 175) / 100;
-
-  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * multi)), SKILL_BACKFIST, DAM_PHYSICAL);
+  damage(ch, victim, calc_position_damage(GET_POS(victim), MAX(50, calc_damroll(ch))), SKILL_BACKFIST, DAM_PHYSICAL);
 
   if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
     GET_POS(victim) = set_pos;
@@ -342,6 +340,96 @@ void do_pray(CHAR *ch, char *arg, int cmd) {
   act("$n bows $s head and begins praying.", TRUE, ch, 0, 0, TO_ROOM);
 }
 
+
+void do_debilitate(CHAR *ch, char *arg, int cmd) {
+  const int mana_cost = 20;
+
+  if (!ch || !GET_SKILLS(ch)) return;
+
+  if (!check_sc_access(ch, SKILL_DEBILITATE)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) && (GET_MANA(ch) < mana_cost)) {
+    send_to_char("You can't summon enough energy to debilitate your target.\n\r", ch);
+
+    return;
+  }
+
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  CHAR *victim = get_char_room_vis(ch, buf);
+
+  if (!victim && IS_ALIVE(GET_OPPONENT(ch)) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    victim = GET_OPPONENT(ch);
+  }
+
+  if (!victim) {
+    send_to_char("Debilitate who?\n\r", ch);
+
+    return;
+  }
+
+  if (victim == ch) {
+    send_to_char("That would be self-defeating.\n\r", ch);
+
+    return;
+  }
+
+  if (ROOM_SAFE(CHAR_REAL_ROOM(victim))) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  if (IS_MORTAL(ch) && IS_IMMORTAL(victim)) {
+    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+
+    return;
+  }
+
+  int check = number(1, 127) - ((GET_INT_CONC(ch) + GET_WIS_CONC(ch)) / 10);
+
+  /* Inner Peace */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+    check -= 5;
+  }
+
+  /* The Shogun title increases "concentration" rate. */
+  if (ench_get_from_char(ch, 0, ENCHANT_SHOGUN)) {
+    check -= 5;
+  }
+
+  /* Take 50% of the mana cost before skill check. */
+  GET_MANA(ch) -= mana_cost / 2;
+
+  if (check > GET_LEARNED(ch, SKILL_DEBILITATE)) {
+    act("You try to debilitate $N, but fail.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n tries to debilitate you, but fails.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n tries to debilitate $N, but fails.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+    skill_wait_user(ch, SKILL_DEBILITATE, 1);
+
+    return;
+  }
+
+  /* Take 50% of the mana cost after skill check. */
+  GET_MANA(ch) -= mana_cost / 2;
+
+  int expose_duration = 5 + lround(GET_WIS_BONUS(ch) / 2.0);
+
+  ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, expose_duration, ENCH_INTERVAL_ROUND, 50, APPLY_ARMOR, 0, 0, exposed_enchant);
+
+  act("You focus your breath and shatter $N's defenses, revealing a weakness.", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n focuses $s breath and shatters your defenses, revealing a weakness.", FALSE, ch, 0, victim, TO_VICT);
+  act("$n focuses $s breath and shatters $N's defenses, revealing a weakness.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+  skill_wait_user(ch, SKILL_DEBILITATE, 1);
+}
 
 void do_tigerkick(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
@@ -400,12 +488,14 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  if (!breakthrough(ch, victim, SKILL_TIGERKICK, BT_INVUL)) {
-    act("$N seems completely unaffected by your beautiful tigerkick.", FALSE, ch, 0, victim, TO_CHAR);
-    act("You feel completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_VICT);
-    act("$N seems completely unaffected by $n's beautiful tigerkick.", FALSE, ch, 0, victim, TO_NOTVICT);
+  int tiger_magical = 3 * GET_WIS(ch);
 
-    damage(ch, victim, 0, SKILL_TIGERKICK, DAM_NO_BLOCK);
+  damage(ch, victim, tiger_magical, SKILL_TIGERKICK, DAM_MAGICAL);
+
+  if (!breakthrough(ch, victim, SKILL_TIGERKICK, BT_INVUL)) {
+    act("You drive your chi into $N's defenses, and the magical shockwave tears through despite $M absorbing the physical blow.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n drives $s chi into your defenses, and the magical shockwave tears through despite you absorbing the physical blow.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n drives $s chi into $N's defenses, and the magical shockwave tears through despite $M absorbing the physical blow.", FALSE, ch, 0, victim, TO_NOTVICT);
 
     skill_wait_user(ch, SKILL_TIGERKICK, 2);
 
@@ -414,11 +504,13 @@ void do_tigerkick(CHAR *ch, char *arg, int cmd) {
 
   int set_pos = stack_position(victim, POSITION_STUNNED);
 
-  act("You drive your foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_CHAR);
-  act("$n drives $s foot into your chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_VICT);
-  act("$n drives $s foot into $N's chest with the ferocity of a tiger!", FALSE, ch, 0, victim, TO_NOTVICT);
+  act("You drive your foot into $N's chest with the ferocity of a tiger, and your chi surges through the impact!", FALSE, ch, 0, victim, TO_CHAR);
+  act("$n drives $s foot into your chest with the ferocity of a tiger, and $s chi surges through the impact!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n drives $s foot into $N's chest with the ferocity of a tiger, and $s chi surges through the impact!", FALSE, ch, 0, victim, TO_NOTVICT);
 
-  damage(ch, victim, calc_position_damage(GET_POS(victim), lround(GET_LEVEL(ch) * 1.75)), SKILL_TIGERKICK, DAM_PHYSICAL);
+  int tiger_physical = calc_position_damage(GET_POS(victim), (3 * GET_STR(ch)));
+
+  damage(ch, victim, tiger_physical, SKILL_TIGERKICK, DAM_PHYSICAL);
 
   GET_MANA(ch) = MIN(GET_MAX_MANA(ch), (GET_MANA(ch) + MIN(MAX((GET_MAX_HIT(victim) / 5000), 2), 10)));
 
@@ -1400,9 +1492,6 @@ int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
     SPELL_PARALYSIS
     };
 
-    /* Pulse every 3 rounds. */
-    if (ench->duration % 3 != 0) return FALSE;
-
     int heal = 0;
 
     if (ench->metadata && !strcasecmp(ench->metadata, ENCH_MANTRA_HEAL) && (ench->temp[0] > 0)) {
@@ -1461,8 +1550,8 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   if (!ch) return;
 
   const int mana_cost = 120;
-  const int initial_heal = 500;
-  const int duration = 29;
+  const int initial_heal = 1000;
+  const int duration = 10;
 
   if (!GET_SKILLS(ch)) return;
 
@@ -1542,7 +1631,7 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
 
   magic_heal(ch, victim, SKILL_MANTRA, initial_heal, FALSE);
 
-  int heal = lround((GET_LEVEL(ch) + GET_WIS_APP(ch)) * 1.5);
+  int heal = 25 + (2 * GET_WIS_BONUS(ch));
 
   ENCH *existing_mantra = ench_get_from_char(victim, "Mantra", 0);
 

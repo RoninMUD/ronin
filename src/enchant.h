@@ -50,8 +50,9 @@
 #define ENCHANT_LICH         47
 #define ENCHANT_REMORTV2     48
 #define ENCHANT_IMM_GRACE    49
+#define ENCHANT_INNER_PEACE  50
 
-#define TOTAL_ENCHANTMENTS   50
+#define TOTAL_ENCHANTMENTS   51
 
 #define ENCH_MANTRA_HEAL     "ENCH_MANTRA_HEAL"
 #define ENCH_APPLY_DMG_PCT   "ENCH_APPLY_DMG_PCT"
@@ -67,6 +68,7 @@
 #define ENCH_NAME_INCENDIARY_CLOUD "Incendiary Cloud"
 #define ENCH_NAME_EXPOSED          "Exposed"
 #define ENCH_NAME_RESPITE_SINGER   "Weary Traveler"
+#define ENCH_NAME_INNER_PEACE      "Inner Peace"
 
 #define ENCH_INTERVAL_TICK   0 // Decrements every 60 seconds (MSG_TICK)
 #define ENCH_INTERVAL_MOBACT 1 // Decrements every 10 seconds (MSG_MOBACT)
@@ -87,5 +89,9 @@ int get_rank(CHAR *ch);
 char *get_rank_name(CHAR *ch);
 
 int exposed_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg);
+int inner_peace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg);
+bool has_inner_peace_immunity(CHAR *ch);
+void ensure_inner_peace_enchant(CHAR *ch);
+void apply_tranquility_inner_peace(CHAR *ch, CHAR *caster, int duration);
 
 #endif /* __ENCHANT_H__ */

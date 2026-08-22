@@ -1166,7 +1166,6 @@ void assign_spell_pointers(void) {
   // Ronin
   SPELLO(SPELL_BLUR,                30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_blur);
   // Mystic
-  SPELLO(SPELL_DEBILITATE,          30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   20, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_debilitate);
   SPELLO(SPELL_TRANQUILITY,         30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,  150, TAR_IGNORE,                                                                   cast_tranquility);
   // Cavalier
   SPELLO(SPELL_MIGHT,               30, POSITION_FIGHTING, 57, 30, 57, 30, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_might);
@@ -1362,7 +1361,6 @@ void assign_spell_text(void) {
   // Ronin
   SPLTXTO(SPELL_BLUR,                 "blur",                         "Your movements become a blur.",                                       "$n's movements become a blur.",                                             "Your movements become less of a blur.");
   // Mystic
-  SPLTXTO(SPELL_DEBILITATE,           "debilitate",                   "You are enveloped by a greenish smoke - you feel weaker.",            "$n is enveloped by a greenish smoke.",                                      "You feel a little less weak.");
   SPLTXTO(SPELL_TRANQUILITY,          "tranquility",                  "You suddenly feel awash in a sense of tranquility.",                  "$n is suddenly awash in a sense of tranquility.",                           "Your sense of tranquility fades away.");
   // Cavalier
   SPLTXTO(SPELL_MIGHT,                "might",                        "You feel more powerful.",                                             "$n looks more powerful.",                                                   "You feel less powerful.");
@@ -1455,6 +1453,7 @@ void assign_spell_text(void) {
   // Ronin
   SPLTXTO(SKILL_BANZAI,               "banzai",                       "",                                                                    "",                                                                          "");
   // Mystic
+  SPLTXTO(SKILL_DEBILITATE,           "debilitate",                   "",                                                                    "",                                                                          "");
   SPLTXTO(SKILL_TIGERKICK,            "tigerkick",                    "",                                                                    "",                                                                          "");
   SPLTXTO(SKILL_MANTRA,               "mantra",                       "",                                                                    "",                                                                          "");
   // Ranger
