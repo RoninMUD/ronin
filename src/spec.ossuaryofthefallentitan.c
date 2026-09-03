@@ -32,6 +32,7 @@
 /*Rooms */
 
 /*Objects */
+#define BROODSKULL_VNUM  ITEM(19600, 8)
 
 /*Mobs */
 #define CRYSTAL_ENCRUSTED_SCAVENGER 19600
@@ -68,10 +69,10 @@ int ossuary_mob_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
             // Set reward based on mob vnum
             switch (MOB_VNUM(mob)) {
                 case CRYSTAL_ENCRUSTED_SCAVENGER: reward = 3; break;
-                case TITAN_BONE_CONSTRUCT:      reward = 6; break;
-                case CRYSTALLINE_GOLEM:         reward = 5; break;
-                case CRYSTAL_BACKED_SCARAB:     reward = 2; break;
-                case CARAPACE_RECLAIMER:        reward = 7; break;
+                case TITAN_BONE_CONSTRUCT:      reward = 3; break;
+                case CRYSTALLINE_GOLEM:         reward = 3; break;
+                case CRYSTAL_BACKED_SCARAB:     reward = 3; break;
+                case CARAPACE_RECLAIMER:        reward = 5; break;
                 case APEX_DEVOURER:             reward = 10; break;
                 default:                        reward = 0; break; // Fallback for unknown mobs
             }
@@ -82,11 +83,87 @@ int ossuary_mob_echo(CHAR *mob, CHAR *ch, int cmd, char *arg)
     return FALSE;
 }
 
+/*
+ *************************************************************************
+ Like a wand of wonder, the Broodskull will use one of its four powers randomly
+ *************************************************************************
+ */
+#ifndef MN_Broodskull_MAX_POWER
+#define MN_Broodskull_MAX_POWER   30
+#endif
+
+int
+BroodskullSPEC (OBJ *Broodskull, CHAR *ch, int cmd, char *arg) {
+  int set;
+  int power[] = {7, 7, 5, 20};
+
+  if (!Broodskull) return FALSE;
+
+  if (cmd == MSG_TICK) {
+    CHAR *vict;
+
+    if (!Broodskull->equipped_by) {
+      if (OBJ_SPEC(Broodskull) > 0) {
+        OBJ_SPEC(Broodskull) -= 3;
+      }
+      if (OBJ_SPEC(Broodskull) < 0) {
+        OBJ_SPEC(Broodskull) = 0;
+      }
+      return FALSE;
+    }
+
+    vict = Broodskull->equipped_by;
+
+    if (OBJ_SPEC(Broodskull) < MN_Broodskull_MAX_POWER) {
+      /* Charging */
+      OBJ_SPEC(Broodskull) += 10;
+      if (OBJ_SPEC(Broodskull) > MN_Broodskull_MAX_POWER) {
+        OBJ_SPEC(Broodskull) = MN_Broodskull_MAX_POWER;
+      }
+    } else {
+      /* Fully charged — fire */
+      if (vict) {
+        set = number(0, 3);
+
+        act("$p erupts with holy energy!",
+            FALSE, vict, Broodskull, 0, TO_CHAR);
+        act("$n's $p erupts with holy energy!",
+            FALSE, vict, Broodskull, 0, TO_ROOM);
+
+        OBJ_SPEC(Broodskull) -= power[set];
+
+        switch (set) {
+          case 0:
+            spell_holy_bless(30, vict, vict, 0);
+            spell_bless(30, vict, vict, 0);
+            break;
+          case 1:
+            spell_holy_bless(30, vict, vict, 0);
+            spell_armor(30, vict, vict, 0);
+            break;
+          case 2:
+            spell_holy_bless(30, vict, vict, 0);
+            spell_vitality(30, vict, vict, 0);
+            break;
+          case 3:
+            spell_holy_bless(30, vict, vict, 0);
+            spell_holy_bless(30, vict, vict, 0);
+            break;
+        }
+      }
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 // Assign Spec for the zone. Sets all other specs.
 void assign_ossuaryoftheFallenTitan(void)
 {
     /*Objects */
-  
+    assign_obj(BROODSKULL_VNUM, BroodskullSPEC);
 
     /*Rooms */
 	
