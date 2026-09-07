@@ -230,7 +230,7 @@ int point_update_hit(CHAR *ch) {
     damage(ch, ch, 2, SPELL_POISON, DAM_POISON);
 
     if (CHAR_REAL_ROOM(ch) != NOWHERE) {
-      if (GET_POS(ch) < pos_before) {
+      if (GET_POS(ch) > pos_before) {
         GET_POS(ch) = pos_before;
       }
     }
