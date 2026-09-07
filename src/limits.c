@@ -224,7 +224,7 @@ int point_update_mana(CHAR *ch) {
 int point_update_hit(CHAR *ch) {
   if (!ch || (CHAR_REAL_ROOM(ch) == NOWHERE)) return 0;
 
-   if (IS_AFFECTED(ch, AFF_POISON)) {
+  if (IS_AFFECTED(ch, AFF_POISON)) {
     int pos_before = GET_POS(ch);
 
     damage(ch, ch, 2, SPELL_POISON, DAM_POISON);
@@ -233,6 +233,7 @@ int point_update_hit(CHAR *ch) {
       if (GET_POS(ch) < pos_before) {
         GET_POS(ch) = pos_before;
       }
+    }
 
     if (CHAR_REAL_ROOM(ch) == NOWHERE) return 0;
   }
