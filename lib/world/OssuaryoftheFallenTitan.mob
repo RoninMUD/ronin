@@ -1,11 +1,11 @@
 #19600
-crystal spider scavenger~~
-a crystal-encrusted scavenger~~
+crystal spider scavenger~
+a crystal-encrusted scavenger~
 A large spider-like scavenger skitters across the floor.
-~~
+~
 The scavenger turns its multifaceted eyes toward you, mandibles 
 clicking as it prepares to strike.
-~~
+~
 40 0 -50 Y
 55 -20 -23 100d100+390000 20d10+2000
 0 118515000
@@ -17,13 +17,13 @@ clicking as it prepares to strike.
 K
 0 19601 0 0 0 0 0
 #19601
-titan bone construct~~
-a titan bone construct~~
+titan bone construct~
+a titan bone construct~
 A hulking figure constructed from bones and crystal shards stands guard.
-~~
+~
 The construct raises a massive arm composed of vertebrae, poised to 
 crush your skull.
-~~
+~
 42 0 -10 Y
 60 -20 -23 100d20+700000 40d6+1900
 0 210315000
@@ -34,13 +34,13 @@ crush your skull.
 K
 0 19604 0 0 0 0 0
 #19602
-crystal golem~~
-a crystalline golem~~
+crystal golem~
+a crystalline golem~
 A golem of violet crystal and chunks of fossilized bone shambles about.
-~~
+~
 The golem raises a fist of jagged stone, preparing to bring it
 down upon your head.
-~~
+~
 8 0 -10 Y
 60 -20 -20 50d50+600000 20d4+1600
 0 241000000
@@ -50,10 +50,10 @@ down upon your head.
 K
 0 0 0 0 0 0 0
 #19603
-large crystal scarab~~
-a crystal-backed scarab~~
+large crystal scarab~
+a crystal-backed scarab~
 A large scarab with a shell of bone and crystal protrusions crawls here.
-~~
+~
 The scarab scuttles forward, its proboscis stabing wildly as it seeks fresh meat.
 ~
 40 0 -5 Y
@@ -65,16 +65,16 @@ The scarab scuttles forward, its proboscis stabing wildly as it seeks fresh meat
 K
 0 19602 0 0 0 0 0
 #19604
-carapace reclaimer~~
-carapace reclaimer~~
+carapace reclaimer~
+carapace reclaimer~
 A hulking, many-legged carapace reclaimer clings to the ground here.
-~~
+~
 Mandibles the size of swords grind constantly, reducing bone to paste as
 it feeds. Its body shifts with unsettling strength beneath the armor, 
 and faint cracks in its shell leak a dim, marrow-like glow.
 It barely acknowledges your presenceuntil you get too close.
 It scrapes and feeds, grinding bone beneath its mandibles.
-~~
+~
 8 0 -5 Y
 65 -22 -25 100d100+1000999 100d4+3000
 0 301814700
@@ -85,13 +85,13 @@ It scrapes and feeds, grinding bone beneath its mandibles.
 K
 0 19603 0 0 0 0 0
 #19605
-centipede apex devourer~~
-the apex devourer~~
+centipede apex devourer~
+the apex devourer~
 A colossal centipede with a carapace of crystal and bone skitters here.
-~~
+~
 Its many legs click against the stone floor, venom dripping 
 from massive mandibles.
-~~
+~
 42 0 -300 Y
 68 -18 -22 200d100+2000100 20d100+3000
 0 909045000
