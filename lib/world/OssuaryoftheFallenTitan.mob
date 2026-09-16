@@ -7,8 +7,8 @@ The scavenger turns its multifaceted eyes toward you, mandibles
 clicking as it prepares to strike.
 ~
 40 0 -50 Y
-55 -20 -23 100d100+390000 20d10+2000
-0 118515000
+55 -25 -23 100d100+390000 20d10+2000
+0 98762500
 8 8 0
 0 20480 1d1+0 2
 5 2 8 0
@@ -25,8 +25,8 @@ The construct raises a massive arm composed of vertebrae, poised to
 crush your skull.
 ~
 42 0 -10 Y
-60 -20 -23 100d20+700000 40d6+1900
-0 210315000
+60 -25 -23 100d20+700000 40d6+1900
+0 175262500
 8 8 0
 0 20480 1d1+0 1
 7 2 15 0
@@ -42,8 +42,8 @@ The golem raises a fist of jagged stone, preparing to bring it
 down upon your head.
 ~
 8 0 -10 Y
-60 -20 -20 50d50+600000 20d4+1600
-0 241000000
+60 -25 -20 50d50+600000 20d4+1600
+0 150318750
 8 8 0
 0 20480 1d1+0 0
 0 1 0 32
@@ -57,8 +57,8 @@ A large scarab with a shell of bone and crystal protrusions crawls here.
 The scarab scuttles forward, its proboscis stabing wildly as it seeks fresh meat.
 ~
 40 0 -5 Y
-50 -24 -25 40d40+300000 40d4+1400
-0 93254200
+50 -25 -25 40d40+300000 40d4+1400
+0 75205000
 8 8 0
 0 20480 1d1+0 0
 0 1 0 32
@@ -76,8 +76,8 @@ It barely acknowledges your presenceuntil you get too close.
 It scrapes and feeds, grinding bone beneath its mandibles.
 ~
 8 0 -5 Y
-65 -22 -25 100d100+1000999 100d4+3000
-0 301814700
+65 -25 -25 100d100+1000999 100d4+3000
+0 251512250
 8 8 0
 0 20480 1d1+0 1
 5 1 15 0
@@ -93,8 +93,8 @@ Its many legs click against the stone floor, venom dripping
 from massive mandibles.
 ~
 42 0 -300 Y
-68 -18 -22 200d100+2000100 20d100+3000
-0 909045000
+68 -25 -22 200d100+2000100 20d100+3000
+0 502550000
 8 8 0
 0 20480 1d1+0 3
 5 2 5 0
