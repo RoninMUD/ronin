@@ -446,6 +446,8 @@ do {                   \
 #define SET_PRESTIGE(ch, val) do { int __prestige_val = (val); if (__prestige_val < 0) __prestige_val = 0; else if (__prestige_val > 65535) __prestige_val = 65535; ch->ver3.prestige = (__prestige_val & 0xFF); ch->ver3.prestige_high = ((__prestige_val >> 8) & 0xFF); } while (0)
 #define GET_PRESTIGE_PERK(ch) ((GET_PRESTIGE(ch) >= 5) ? ((int)(GET_PRESTIGE(ch) + 5) / 10) : 0)
 #define PRESTIGE_MOVE_BONUS(prestige) (100 * (((prestige) >= 265) + ((prestige) >= 325) + ((prestige) >= 415) + ((prestige) >= 485) + ((prestige) >= 625) + ((prestige) >= 655))) // Prestige Perks 27, 33, 42, 49, 63, 66
+#define PRESTIGE_HALF_GAIN_LEVEL 255
+#define PRESTIGE_TOTAL_GAIN(prestige, gain) (((prestige) <= (PRESTIGE_HALF_GAIN_LEVEL)) ? ((prestige) * (gain)) : ((PRESTIGE_HALF_GAIN_LEVEL) * (gain) + (((prestige) - (PRESTIGE_HALF_GAIN_LEVEL)) * (gain)) / 2)) // Gains are halved for levels above 255
 #define PRESTIGE_RANK_DEATH_CHANCE(ch) ((GET_PRESTIGE_PERK(ch) >= 86) ? 20 : ((GET_PRESTIGE_PERK(ch) >= 44) ? 15 : ((GET_PRESTIGE_PERK(ch) >= 17) ? 10 : 0))) // Prestige Perks 17, 44, 86
 #define GET_WHO_FILTER(ch) (ch->ver3.who_filter)
 #define GET_WAIT(ch) (GET_DESCRIPTOR(ch)->wait)

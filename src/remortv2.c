@@ -155,12 +155,12 @@ int rv2_calc_remort_mult(CHAR *ch) {
   int prestige_hit = 0, prestige_mana = 0;
 
   if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-    prestige_hit = GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+    prestige_hit = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
     prestige_mana = 0;
   }
   else {
-    prestige_hit = GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
-    prestige_mana = GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+    prestige_hit = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN);
+    prestige_mana = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_MANA_GAIN);
   }
 
   int hp_min = 0, hp_step = 0, mana_min = 0, mana_step = 0;
@@ -1268,14 +1268,14 @@ int rv2_mob_spec_immortalis(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       affect_total(ch);
 
       if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-        GET_MAX_HIT_POINTS(ch) += GET_PRESTIGE(ch) * 12;
+        GET_MAX_HIT_POINTS(ch) += PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
       }
       else {
-        GET_MAX_HIT_POINTS(ch) += GET_PRESTIGE(ch) * 8;
+        GET_MAX_HIT_POINTS(ch) += PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN);
       }
 
       if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
-        GET_MAX_MANA_POINTS(ch) += GET_PRESTIGE(ch) * 4;
+        GET_MAX_MANA_POINTS(ch) += PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_MANA_GAIN);
       }
 
       // Prestige Perk 27, 33, 42, 49, 63, 66

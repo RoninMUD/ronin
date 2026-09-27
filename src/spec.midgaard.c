@@ -6505,13 +6505,21 @@ Lvl   Perk Description\n\r\
 
       SET_PRESTIGE(ch, GET_PRESTIGE(ch) + 1);
 
-      ch->points.max_hit += PRESTIGE_HIT_GAIN;
+      int prestige_hit_gain = PRESTIGE_HIT_GAIN;
+      int prestige_mana_gain = PRESTIGE_MANA_GAIN;
+
+      if (GET_PRESTIGE(ch) > PRESTIGE_HALF_GAIN_LEVEL) {
+        prestige_hit_gain /= 2;
+        prestige_mana_gain /= 2;
+      }
+
+      ch->points.max_hit += prestige_hit_gain;
 
       if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-        ch->points.max_hit += PRESTIGE_MANA_GAIN;
+        ch->points.max_hit += prestige_mana_gain;
       }
       else {
-        ch->points.max_mana += PRESTIGE_MANA_GAIN;
+        ch->points.max_mana += prestige_mana_gain;
       }
 
       // Prestige Perk 27, 33, 42, 49, 63, 66

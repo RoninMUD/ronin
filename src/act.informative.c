@@ -1783,7 +1783,7 @@ void die(CHAR *ch)
   int prestige_mana = 0;
 
   if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
-    prestige_mana = GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+    prestige_mana = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_MANA_GAIN);
   }
 
   if (!IS_NPC(ch) && ((GET_NAT_MANA(ch) - prestige_mana) > mana_loss_limit[GET_CLASS(ch) - 1]))
@@ -1794,10 +1794,10 @@ void die(CHAR *ch)
   int prestige_hit = 0;
 
   if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-    prestige_hit = GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+    prestige_hit = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
   }
   else {
-    prestige_hit = GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
+    prestige_hit = PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN);
   }
 
   if (!IS_NPC(ch) && ((GET_NAT_HIT(ch) - prestige_hit) > hit_loss_limit[GET_CLASS(ch) - 1]))
