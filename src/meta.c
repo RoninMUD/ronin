@@ -33,10 +33,10 @@ int get_max_stat(CHAR *ch, int stat)
 
       if (GET_PRESTIGE(ch)) {
         if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-          value -= GET_PRESTIGE(ch) * (PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
+          value -= PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN + PRESTIGE_MANA_GAIN);
         }
         else {
-          value -= GET_PRESTIGE(ch) * PRESTIGE_HIT_GAIN;
+          value -= PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_HIT_GAIN);
         }
       }
       break;
@@ -45,12 +45,16 @@ int get_max_stat(CHAR *ch, int stat)
       value = ch->specials.org_mana;
 
       if (!((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD))) {
-        value -= GET_PRESTIGE(ch) * PRESTIGE_MANA_GAIN;
+        value -= PRESTIGE_TOTAL_GAIN(GET_PRESTIGE(ch), PRESTIGE_MANA_GAIN);
       }
       break;
 
     case META_MOVE:
       value = ch->specials.org_move;
+
+      if (GET_PRESTIGE(ch)) {
+        value -= PRESTIGE_MOVE_BONUS(GET_PRESTIGE(ch));
+      }
       break;
   }
 

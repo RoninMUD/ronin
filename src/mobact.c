@@ -39,6 +39,11 @@ bool check_aggro_target(CHAR *attacker, CHAR *defender) {
     return FALSE;
   }
 
+  // Prestige Perk 71
+  if (IS_NPC(attacker) && IS_MORTAL(defender) && (GET_PRESTIGE_PERK(defender) >= 71) && (GET_LEVEL(attacker) <= (GET_LEVEL(defender) - 5))) {
+    return FALSE;
+  }
+
   return TRUE;
 }
 

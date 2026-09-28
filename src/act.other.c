@@ -2307,9 +2307,9 @@ void do_identify(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  // Prestige Perk 9
+  // Prestige Perk 9, 55
   if (IS_IMMORTAL(ch) || (GET_PRESTIGE_PERK(ch) >= 9)) {
-    const int gold_cost = 5000;
+    const int gold_cost = (GET_PRESTIGE_PERK(ch) >= 55) ? 0 : 5000;
 
     if (IS_MORTAL(ch)) {
       if (GET_GOLD(ch) < gold_cost) {
@@ -2362,9 +2362,9 @@ void do_home(CHAR *ch, char *arg, int cmd) {
     return;
   }
 
-  // Prestige Perk 21
+  // Prestige Perk 21, 53
   if (GET_PRESTIGE_PERK(ch) >= 21) {
-    const int gold_cost = 20000;
+    const int gold_cost = (GET_PRESTIGE_PERK(ch) >= 53) ? 0 : 20000;
 
     if (GET_GOLD(ch) < gold_cost) {
       send_to_char("You don't have enough gold; the gods don't work for free!\n\r", ch);

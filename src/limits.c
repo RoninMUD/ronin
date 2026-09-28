@@ -272,6 +272,29 @@ int point_update_move(CHAR *ch) {
   return move_gain(ch);
 }
 
+/* Return the total in combat mana regen cap bonus granted by prestige perks. */
+int prestige_mana_regen_cap_bonus(CHAR *ch) {
+  if (!ch || IS_NPC(ch)) return 0;
+
+  int bonus = 0;
+
+  // Prestige Perk 28, 34, 37, 40, 41, 45, 48, 52, 54, 56, 58, 60, 62, 64, 65, 67, 68, 69, 70, 72, 73, 74, 75, 77, 78, 79, 80, 82, 83, 84, 85, 87, 88, 89, 90, 92, 93
+  const int one_point_levels[] = { 275, 335, 365, 395, 405, 445, 475, 515, 535, 555, 575, 595, 615, 635, 645, 665, 675, 685, 695, 715, 725, 735, 745, 765, 775, 785, 795, 815, 825, 835, 845, 865, 875, 885, 895, 915, 925 };
+
+  for (int i = 0; i < NUMELEMS(one_point_levels); i++) {
+    if (GET_PRESTIGE(ch) >= one_point_levels[i]) bonus += 1;
+  }
+
+  // Prestige Perk 94, 95, 96, 97, 98, 99, 100
+  const int two_point_levels[] = { 935, 945, 955, 965, 975, 985, 995 };
+
+  for (int i = 0; i < NUMELEMS(two_point_levels); i++) {
+    if (GET_PRESTIGE(ch) >= two_point_levels[i]) bonus += 2;
+  }
+
+  return bonus;
+}
+
 int mana_gain(CHAR *ch) {
   if (!ch) return 0;
 
@@ -514,6 +537,9 @@ int mana_gain(CHAR *ch) {
             mana_regen_cap += 5;
           }
         }
+
+        // Prestige Perk 28 and beyond
+        mana_regen_cap += prestige_mana_regen_cap_bonus(ch);
 
         gain = MIN(gain, mana_regen_cap);
       }

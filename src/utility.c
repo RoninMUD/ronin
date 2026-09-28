@@ -936,6 +936,16 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       break;
   }
 
+  // Prestige Perk 50
+  if ((breakthrough_type == BT_SPHERE) && IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 50)) {
+    check += 5;
+  }
+
+  // Prestige Perk 57
+  if ((breakthrough_type == BT_INVUL) && IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 57)) {
+    check += 5;
+  }
+
   check = number(1, 100) <= check;
 
   /* Cunning */

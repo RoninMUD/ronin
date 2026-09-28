@@ -93,7 +93,7 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define LEVEL_MAX             70
 
 /* Prestige Data */
-#define PRESTIGE_MAX          255
+#define PRESTIGE_MAX          995
 #define PRESTIGE_HIT_GAIN     8
 #define PRESTIGE_MANA_GAIN    4
 
@@ -1210,10 +1210,11 @@ struct char_ver3_data {
   char email_addr[80]; /* Ranger Dec 03 */
   uint64_t toggles; /* Toggles */
   uint32_t extra_bitvect; /* Not used yet */
-  byte extra_byte[5]; /* Not used yet */
+  ubyte prestige_high; /* The high byte of prestige (see GET_PRESTIGE/SET_PRESTIGE in utils.h) */
+  byte extra_byte[4]; /* Not used yet */
   byte affect_style;
   ubyte rank;
-  ubyte prestige;
+  ubyte prestige; /* Low byte of prestige; the high byte is stored in prestige_high so prestige can exceed 255 without a char file format change */
   ubyte who_filter; /* Filters specified for 'who' output. */
   byte sc_style; /* Which score style to display - Ranger Sept 2000 */
   int32_t created; /* Date of creation mmddyyyy - Ranger June 98 */

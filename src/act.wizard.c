@@ -5646,7 +5646,7 @@ Usage: -1  : Toggle target's Death Experience enchantment on/off.\n\r\
   }
   if (strcmp(class, "prestige") == 0) {
     send_to_char("Warning: You probably want to adjust hit points/mana up or down commensurate to the adjustment you just made.\n\r", ch);
-    vict->ver3.prestige = value; return;
+    SET_PRESTIGE(vict, value); return;
   }
 
   if(strcmp(class,"xp")==0)

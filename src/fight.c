@@ -2638,6 +2638,16 @@ int calc_hitroll(CHAR *ch) {
         }
       }
     }
+
+    // Prestige Perk 30
+    if (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 30)) {
+      hitroll += 1;
+    }
+
+    // Prestige Perk 31
+    if (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 31) && IS_1H_WEAPON(GET_WEAPON(ch))) {
+      hitroll += 1;
+    }
   }
 
   return hitroll;
@@ -2661,6 +2671,11 @@ int calc_damroll(CHAR *ch) {
     /* Close Combat: Damroll Bonus */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_BANDIT, 4)) {
       damroll += 2;
+    }
+
+    // Prestige Perk 31
+    if (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 31) && IS_1H_WEAPON(GET_WEAPON(ch))) {
+      damroll += 1;
     }
   }
 
@@ -2971,7 +2986,12 @@ int try_hit(CHAR *attacker, CHAR *defender) {
 	}
 	if(number(1,100) < critical_chance){
 		success = HIT_CRITICAL;
-	}  
+	}
+  }
+
+  // Prestige Perk 29
+  if (IS_MORTAL(attacker) && (GET_PRESTIGE_PERK(attacker) >= 29) && (success == HIT_SUCCESS) && chance(1)) {
+    success = HIT_CRITICAL;
   }
 
 
