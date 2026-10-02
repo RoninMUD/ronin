@@ -928,6 +928,11 @@ int receptionist(CHAR *recep,CHAR *ch, int cmd, char *arg) {
   money_check(ch);
 
   if (cmd == CMD_RENT) { /* Rent  */
+    if (is_frenzy_locked(ch)) {
+      act("$n tells you, 'You're too keyed up to settle into a room right now.'", FALSE, recep, 0, ch, TO_VICT);
+      return(TRUE);
+    }
+
     if (recep_offer(ch, recep, &cost)) {
       for (k=ch->followers; k; k= next_fol) {
         next_fol = k->next;

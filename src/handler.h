@@ -115,6 +115,8 @@ int dot_number(char *str, char **sub_ptr);
 
 struct char_data *get_mob_by_vnum_in_room(int mob_vnum, int rm);
 struct obj_data *get_obj_by_vnum_in_room(int obj_vnum, int rm);
+struct obj_data *get_random_obj_by_vnum_list_in_room(const int *vnums, int num_vnums, int rm);
+struct char_data *get_random_npc_in_room(int room_rnum, bool prefer_fighting);
 
 OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see);
 OBJ *get_obj_in_list_vis(CHAR *ch, char *name, OBJ *list);

@@ -1920,10 +1920,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
       dmg = lround(dmg * 1.5);
     }
-    /* Frenzy */
-    else if (affected_by_spell(ch, SKILL_FRENZY)) {
-      dmg = lround(dmg * 1.5);
-    }
 
     /* Chanter SC2: War Chant - Increases the Chanter's damage. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_CHANTER, 2) && affected_by_spell(ch, SPELL_WAR_CHANT)) {
@@ -2641,11 +2637,6 @@ int calc_hitroll(CHAR *ch) {
     //  hitroll -= 5;
     //}
 
-    /* Frenzy: Hitroll Penalty */
-    if (affected_by_spell(ch, SKILL_FRENZY)) {
-      hitroll -= 10;
-    }
-
     /* Combat Zen: Blindness Hitroll Penalty Nullification */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       for (AFF *aff = ch->affected; aff; aff = aff->next) {
@@ -2947,9 +2938,12 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   /* The following conditions always result in a hit. */
   if (!AWAKE(defender) ||
       IS_AFFECTED(defender, AFF_FURY) ||
-      IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-      affected_by_spell(defender, SKILL_FRENZY)) {
+      IS_SET(GET_TOGGLES(defender), TOG_HOSTILE)) {
     return HIT_SUCCESS;
+  }
+
+  if (affected_by_spell(defender, SKILL_FRENZY)) {
+    return chance(70) ? HIT_SUCCESS : HIT_FAILURE;
   }
 
   /* Rage imposes a 50% chance of an automatic hit; Desecrate reduces this to 20%. */
@@ -2972,22 +2966,18 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       success = HIT_CRITICAL;
     }
   }
-  //Nomads get 50% chance to crit with all hits that are successes
+  /* Nomads get up to 40% chance to crit with all hits that are successes
+   * Ranger gets additional 20% between Awareness and Berserk */
   int critical_chance = 20;
   if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)){
 	
-	//Apply Dex Modifier to Boost Crit Chance  Take the difference between dex and 18 and add 2% for each value
-	int char_dex = GET_DEX(attacker);
-	int dex_diff = MAX(0, MIN(char_dex, 25) - 18);
-	
-	critical_chance += (dex_diff * 2);
+	critical_chance += (GET_DEX_BONUS(attacker) * 2);
 	
 	//Awareness adds 10% to the chance.
 	if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
 		critical_chance += 10;
 	}
 	//Berserk adds another 10% chance
-	
 	if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
 		critical_chance += 10;
 	}
@@ -3066,12 +3056,19 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     /* The following conditions always result in a failure. */
     if ((GET_POS(defender) <= POSITION_INCAP) ||
         IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-        affected_by_spell(defender, SKILL_FRENZY)) {
+        is_frenzy_locked(defender)) {
       return FALSE;
     }
 
     /* NPC Dodge - 20% chance.. */
-    if (IS_AFFECTED(defender, AFF_DODGE) && chance(20)) {
+    int npc_dodge_chance = 20;
+
+    /* Sluggishness reduces effective dodge chance by 20% (relative). */
+    if (ench_enchanted_by(defender, ENCH_NAME_SLUGGISHNESS, 0)) {
+      npc_dodge_chance = (int)(npc_dodge_chance * 0.8);
+    }
+
+    if (IS_AFFECTED(defender, AFF_DODGE) && chance(npc_dodge_chance)) {
       print_avoidance_messages(attacker, defender, SKILL_DODGE);
 
       return SKILL_DODGE;
@@ -3086,7 +3083,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     if ((GET_POS(defender) <= POSITION_STUNNED) ||
         IS_AFFECTED(defender, AFF_FURY) ||
         IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-        affected_by_spell(defender, SKILL_FRENZY)) {
+        is_frenzy_locked(defender)) {
       return FALSE;
     }
 
@@ -3749,6 +3746,20 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return;
   }
 
+  /* SC_TRAPPER Frenzy: independent roll per stack (50% max) stops once
+   * fatigue sets in (affected_by_spell(ch, SKILL_FRENZY) is false by
+   * then - see frenzy_fatigue_tick in subclass.skills.c). */
+  if (affected_by_spell(ch, SKILL_FRENZY)) {
+    ENCH *fatigue = ench_get_from_char(ch, ENCH_NAME_FRENZY_FATIGUE, 0);
+    int stacks = fatigue ? fatigue->temp[0] : 0;
+
+    for (int i = 0; i < stacks; i++) {
+      if (chance(40 + GET_DEX_BONUS(ch))) {
+        dhit(ch, victim, type);
+      }
+    }
+  }
+
   /* PC Ninja 2nd Hit */
   if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
     /* Force the appropriate weapon for Ninja 2nd attack. */
@@ -3796,18 +3807,6 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   if (affected_by_spell(ch, SKILL_BERSERK)) {
     int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
     int percent = 40;
-
-    if (chance(percent + bonus)) {
-      dhit(ch, victim, type);
-
-      return;
-    }
-  }
-
-  /* Frenzy */
-  if (affected_by_spell(ch, SKILL_FRENZY)) {
-    int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
-    int percent = 10;
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);

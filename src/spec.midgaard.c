@@ -198,7 +198,6 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
-          else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
           else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
 		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else {
@@ -971,6 +970,7 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       ((GET_CLASS(ch) != CLASS_CLERIC) || (spell != SKILL_MEDITATE)) &&
       ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_EVASION)) &&
       ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
+      ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_CAMP)) &&
       !check_sc_master(ch, mob)) {
     act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;

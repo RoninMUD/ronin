@@ -442,7 +442,7 @@ int move_char(CHAR *ch, int dir, bool spec_check) {
 
   if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), TRAP) &&
       (GET_POS(ch) != POSITION_FLYING) &&
-      ((IS_NPC(ch) && (trap_check > (GET_LEVEL(ch) * 2))) ||
+      ((IS_NPC(ch) && chance(130 - GET_LEVEL(ch))) ||
        (IS_MORTAL(ch) && IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), CHAOTIC) && (trap_check > (GET_LEVEL(ch) * 2))) ||
        (IS_MORTAL(ch) && CHAOSMODE && (trap_check > GET_LEVEL(ch))))) {
     send_to_char("You fell into a trap!\n\r", ch);
@@ -450,7 +450,7 @@ int move_char(CHAR *ch, int dir, bool spec_check) {
 
     REMOVE_BIT(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), TRAP);
 
-    GET_HIT(ch) = (4 * GET_HIT(ch)) / 5;
+    GET_HIT(ch) = (9 * GET_HIT(ch)) / 10;
 
     return TRUE;
   }

@@ -813,7 +813,7 @@ void assign_command_pointers ( void )
   COMMANDO("free"     ,CMD_FREE       ,POSITION_FIGHTING ,do_free,1);
   COMMANDO("punch"    ,CMD_PUNCH      ,POSITION_FIGHTING ,do_punch,1);
   COMMANDO("disarm"   ,CMD_DISARM     ,POSITION_FIGHTING ,do_disarm,1);
-  COMMANDO("trap"     ,CMD_TRAP       ,POSITION_STANDING ,do_trap,1);
+  COMMANDO("trap"     ,CMD_TRAP       ,POSITION_FIGHTING ,do_trap,1);
   COMMANDO("butcher"  ,CMD_BUTCHER    ,POSITION_STANDING ,do_butcher,1);
   COMMANDO("skin"     ,CMD_SKIN       ,POSITION_STANDING ,do_skin,1);
   COMMANDO("channel",  CMD_CHANNEL    ,POSITION_DEAD     ,do_channel,1);
@@ -919,10 +919,10 @@ void assign_command_pointers ( void )
   COMMANDO("crawl"    ,CMD_CRAWL     ,POSITION_STANDING  ,do_crawl,1);
 
   COMMANDO("assassinate", CMD_ASSASSINATE, POSITION_STANDING, do_assassinate, 45);
-  COMMANDO("camp", CMD_CAMP, POSITION_STANDING, do_camp, 30);
+  COMMANDO("camp", CMD_CAMP, POSITION_STANDING, do_camp, 35);
   COMMANDO("coin-toss", CMD_COIN_TOSS, POSITION_FIGHTING, do_coin_toss, 1);
   COMMANDO("cunning", CMD_CUNNING, POSITION_FIGHTING, do_cunning, 50);
-  COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 30);
+  COMMANDO("scan", CMD_SCAN, POSITION_STANDING, do_scan, 35);
 
   /* Subclass commands */
   COMMANDO("subclass", CMD_SUBCLASS, POSITION_DEAD, do_subclass, LEVEL_SUP);
@@ -947,7 +947,7 @@ void assign_command_pointers ( void )
   COMMANDO("trip  ", CMD_TRIP, POSITION_FIGHTING, do_trip, 30);
   COMMANDO("defend", CMD_DEFEND, POSITION_STANDING, do_defend, 30);
   COMMANDO("hostile", CMD_HOSTILE, POSITION_STANDING, do_hostile, 30);
-  COMMANDO("frenzy", CMD_FRENZY, POSITION_STANDING, do_frenzy, 30);
+  COMMANDO("frenzy", CMD_FRENZY, POSITION_FIGHTING, do_frenzy, 30);
   COMMANDO("berserk", CMD_BERSERK, POSITION_STANDING, do_berserk, 30);
   COMMANDO("batter", CMD_BATTER, POSITION_FIGHTING, do_batter, 30);
   COMMANDO("trophy", CMD_TROPHY, POSITION_STANDING, do_trophy, 30);
@@ -1571,7 +1571,7 @@ void nanny(struct descriptor_data *d, char *arg) {
           return;
           break;
       }
-      SEND_TO_Q("\n\rSelect a class:\n\r1) Cleric\n\r2) Thief\n\r3) Warrior\n\r4) Magic-user\n\r5) Ninja\n\r7) Paladin\n\r8) Anti-Paladin\n\r9) Bard\n\r0) Commando\n\r?) Help\n\r", d);
+      SEND_TO_Q("\n\rSelect a class:\n\r1) Cleric\n\r2) Thief\n\r3) Warrior\n\r4) Magic-user\n\r5) Ninja\n\r6) Nomad\n\r7) Paladin\n\r8) Anti-Paladin\n\r9) Bard\n\r0) Commando\n\r?) Help\n\r", d);
       SEND_TO_Q("\n\rClass :", d);
       STATE(d) = CON_QCLASS;
       break;
@@ -1611,10 +1611,10 @@ void nanny(struct descriptor_data *d, char *arg) {
           STATE(d) = CON_QCOLOR;
           break;
         case '6':
-          SEND_TO_Q("\n\rSorry that class is unavailble", d);
-          SEND_TO_Q(class_help, d);
-          SEND_TO_Q("\n\rSelect a class:\n\r", d);
-          SEND_TO_Q("\n\rClass :", d);
+          GET_CLASS(d->character) = CLASS_NOMAD;
+          init_char(d->character);
+          SEND_TO_Q(no_intro, d);
+          STATE(d) = CON_QCOLOR;
           break;
         case '7':
           GET_CLASS(d->character) = CLASS_PALADIN;

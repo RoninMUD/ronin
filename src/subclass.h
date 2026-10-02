@@ -16,6 +16,15 @@ int check_subclass(CHAR *ch, int sub, int lvl);
 int set_subclass(CHAR *ch, int sub, int lvl);
 void remove_subclass(CHAR *ch);
 
+/* SC_TRAPPER Frenzy: true for the whole frenzy/fatigue lifecycle (both
+ * the active ramp/peak AND the recovering phase), for anywhere
+ * Frenzy's defensive lockout (no dodge/rescue/blocking a fleeing
+ * opponent) should apply. Narrower "still actively frenzied, hit
+ * bonuses/vulnerability apply" checks should keep using
+ * affected_by_spell(ch, SKILL_FRENZY) instead -- that affect is only
+ * present during the active phase. See subclass.skills.c. */
+bool is_frenzy_locked(CHAR *ch);
+
 /* spells */
 void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);

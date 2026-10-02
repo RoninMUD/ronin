@@ -73,39 +73,6 @@ void do_descr(struct char_data *ch, char *argument, int cmd)
    ch->desc->max_str = 240;
    }
 }
-void do_trap(struct char_data *ch, char *argument, int cmd)
-{
-  int percent;
-
-  if(!ch->skills)
-    return;
-
-  if ((GET_CLASS(ch) != CLASS_NOMAD) &&
-      (GET_LEVEL(ch) < LEVEL_IMM)) {
-    send_to_char("You don't know this skill.\n\r", ch);
-    return;
-  }
-
-  percent = number(1, 101);
-
-  if(percent > ch->skills[SKILL_TRAP].learned)
-    {     send_to_char("You failed.\n\r", ch);
-     return;
-      }
-
-     if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE)&& (!CHAOSMODE))
-          send_to_char("Behave yourself here please!\n\r", ch);
-
-     if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP))
-          send_to_char("There is already a trap here.\n\r", ch);
-     else {
-          send_to_char("You have set up a trap here.\n\r", ch);
-          act("$n has set up a trap here.", TRUE, ch, 0, 0,TO_ROOM);
-
-          SET_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
-     }
-}
-
 void do_glance(struct char_data *ch, char *argument, int cmd)
 {
      int percent;

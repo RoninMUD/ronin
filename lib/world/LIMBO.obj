@@ -753,6 +753,80 @@ M
 ~
 ~
 ~
+#41
+ward bundle alert bone bramble~
+a bundled ward of bone and bramble~
+A small bundle of bone and bramble sits here, waiting patiently.~
+~
+12 0 0
+0 0 0 0
+3 0 0
+0
+E
+ward bundle bone bramble alert~
+Bone chimes and dried bramble are lashed tight into a fist-sized bundle,
+small enough to tuck into a pack or wedge into a crevice. It isn't strung
+to catch a footstep - it answers to something slower, some turning of the
+world it tracks on its own, ready to speak when the time is right.
+~
+X
+~
+192 0 0
+M
+~
+~
+~
+~
+#42
+trap thorn dart poison coil~
+a coiled thorn-dart trap~
+A tightly bound coil of stripped thorns sits cocked, ready to spring.~
+~
+12 0 0
+0 0 0 0
+3 0 0
+0
+E
+thorn dart trap coil poison~
+A short length of green wood has been bent double and lashed under
+tension, a fan of stripped thorns bound to its striking edge and coated
+in something dark and resinous. The whole rig is compact enough to set
+on a shelf, wedge in a doorway, or bury under a floor mat. It doesn't
+care where it rests, only what walks past.
+~
+X
+~
+192 0 0
+M
+~
+~
+~
+~
+#43
+snare root vine coil woven~
+a coiled root-and-vine snare~
+A tight coil of dried root and vine sits bundled, ready to spring loose.~
+~
+12 0 0
+0 0 0 0
+3 0 0
+0
+E
+snare root vine coil woven~
+Vine and root have been worked while green and left to dry into a
+springy, knotted coil, bound tight with a single slip-cord. Whatever
+coaxed them to hold this shape wasn't a spell so much as patience,
+and the finished snare travels just fine tucked in a bag. It doesn't
+need much encouragement to remember how to close.
+~
+X
+~
+192 0 0
+M
+~
+~
+~
+~
 #86
 token remort alignment good~
 A Remort Token (Alignment: Good)~

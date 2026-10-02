@@ -122,7 +122,11 @@ int graf(int age, int p0, int p1, int p2, int p3, int p4, int p5, int p6)
 * @return The character's effective maximum hit points.
 */
 int hit_limit(CHAR *ch) {
-  return GET_MAX_HIT_POINTS(ch);
+  /* SC_TRAPPER Frenzy: shrinks the effective ceiling without ever
+   * touching the persistent GET_MAX_HIT_POINTS field -- see
+   * ch->specials.frenzy_fatigue. Floored so this can reduce a
+   * character to critical but never to 0 or below. */
+  return MAX(GET_MAX_HIT_POINTS(ch) - ch->specials.frenzy_fatigue, 1);
 }
 
 /**

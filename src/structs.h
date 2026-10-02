@@ -111,6 +111,17 @@ typedef int (*ENCH_FUNC)(ENCH *enchantment, struct char_data *ch, struct char_da
 #define ICE_WALL              27750
 #define ICE_BLOCK             27751
 
+/* Trapper subclass marker traps
+ *
+ * Each of these is a real object placed in the trapper's current room,
+ * rather than the plain room-flag trap; spec_value on the placed instance
+ * is set to the owning trapper's GET_ID(ch), so the object's spec proc
+ * can identify (and message) its owner, and so do_trap can enforce "one
+ * of this type per trapper per room" */
+#define TRAP_OBJ_VNUM_ALERT_WARD     41
+#define TRAP_OBJ_VNUM_POISON_DART    42
+#define TRAP_OBJ_VNUM_BINDING_SNARE  43
+
 /* Subclass Token and Token Mob */
 #define TOKEN_OBJ_VNUM        5
 #define TOKEN_MOB_VNUM        11
@@ -1125,6 +1136,9 @@ struct char_special_data
   sh_int prev_max_mana;        /* Used for stat check in save_char */
   sh_int prev_max_hit;
   sh_int prev_max_move;
+
+  sh_int frenzy_fatigue;   /* SC_TRAPPER Frenzy: transient max-hit drain,
+                             * NOT saved -- resets to 0 on load, on purpose. */
 
 /*  int carry_weight;*/      /* Carried weight                          */
   ubyte carry_items;        /* Number of items carried                 */

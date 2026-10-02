@@ -722,6 +722,9 @@ void mob_attack_skill_multi_target(CHAR *mob, int attack_type, int target_type) 
 void mob_attack(CHAR *mob) {
   if (!mob || !IS_NPC(mob) || !MOB_ATT_NUM(mob) || !GET_OPPONENT(mob) || !SAME_ROOM(mob, GET_OPPONENT(mob)) || (GET_POS(mob) < POSITION_FIGHTING)) return;
 
+  /* Confusion: affected creature cannot use OLC spec attacks. */
+  if (ench_enchanted_by(mob, ENCH_NAME_CONFUSION, 0)) return;
+
   if (MOB_ATT_TIMER(mob)) {
     MOB_ATT_TIMER(mob)--;
 

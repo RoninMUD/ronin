@@ -110,7 +110,6 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
     case SKILL_TROPHY:
       if (check_subclass(ch, SC_ROGUE, 2)) return TRUE;
-      if (check_subclass(ch, SC_TRAPPER, 4)) return TRUE;
       break;
     case SKILL_VEHEMENCE:
       if (check_subclass(ch, SC_ROGUE, 3)) return TRUE;
@@ -184,7 +183,7 @@ int check_sc_access(CHAR *ch, int skill) {
 
     /* Trapper */
     case SKILL_CAMP:
-      if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
+      if ((GET_CLASS(ch) == CLASS_NOMAD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       break;
     case SKILL_BATTER:
@@ -1215,6 +1214,14 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
 
 void assign_subclass(void) {
   assign_obj(WALL_THORNS, wall_thorns);
+
+  int trap_alert_ward (OBJ*, CHAR*, int, char*);
+  int trap_poison_dart (OBJ*, CHAR*, int, char*);
+  int trap_binding_snare (OBJ*, CHAR*, int, char*);
+
+  assign_obj(TRAP_OBJ_VNUM_ALERT_WARD, trap_alert_ward);
+  assign_obj(TRAP_OBJ_VNUM_POISON_DART, trap_poison_dart);
+  assign_obj(TRAP_OBJ_VNUM_BINDING_SNARE, trap_binding_snare);
 
   assign_mob(TOKEN_MOB, token_mob);
 

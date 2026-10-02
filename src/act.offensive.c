@@ -1053,8 +1053,15 @@ void do_flee(CHAR *ch, char *argument, int cmd) {
     }
   }
 
-  /* Berserk / Frenzy */
-  if (affected_by_spell(ch, SKILL_BERSERK) || affected_by_spell(ch, SKILL_FRENZY)) {
+  /* SC_TRAPPER Frenzy: too consumed by the frenzy/fatigue to flee*/
+  if (is_frenzy_locked(ch)) {
+    send_to_char("You're too consumed by your frenzy to flee!\n\r", ch);
+
+    return;
+  }
+
+  /* Berserk */
+  if (affected_by_spell(ch, SKILL_BERSERK)) {
     send_to_char("You try to flee, but fail!\n\r", ch);
     act("$n tries to flee, but fails.", TRUE, ch, 0, 0, TO_ROOM);
 
@@ -1533,6 +1540,14 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
 
   if (!victim) {
     send_to_char("Who do you want to rescue?\n\r", ch);
+
+    return;
+  }
+
+  /* SC_TRAPPER Frenzy: too consumed by the frenzy/fatigue to act with
+   * that kind of presence of mind, in either phase. */
+  if (is_frenzy_locked(ch)) {
+    send_to_char("You're too consumed by your frenzy to think of rescuing anyone!\n\r", ch);
 
     return;
   }

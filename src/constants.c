@@ -2217,12 +2217,10 @@ const char * const nomad_skills[] = {
   "pick",
   "protect",
   "rescue",
-  "scan",
   "spin",
   "subdue",
   "throw",
   "trap",
-  "trophy",
   "\n"
 };
 

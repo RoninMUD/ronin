@@ -43,7 +43,7 @@ void do_move(struct char_data *ch, char *argument, int cmd);
 
 void skill_wait_user(CHAR *ch, int skill, int wait);
 void skill_wait_victim(CHAR *victim, int skill, int wait);
-
+int hit_gain(CHAR *ch);
 
 void do_awareness(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
@@ -595,8 +595,7 @@ void do_scan(CHAR *ch, char *arg, int cmd) {
   if (!GET_SKILLS(ch)) return;
 
   if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) != CLASS_THIEF) &&
-      !check_subclass(ch, SC_TRAPPER, 1)) {
+      (GET_CLASS(ch) != CLASS_THIEF)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
@@ -665,7 +664,8 @@ void do_camp(CHAR *ch, char *arg, int cmd) {
   }
 
   if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) == CLASS_BARD) &&
+      ((GET_CLASS(ch) == CLASS_BARD) ||
+      (GET_CLASS(ch) == CLASS_NOMAD)) &&
       (GET_LEVEL(ch) < 35)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
@@ -1099,7 +1099,6 @@ void do_zeal(CHAR *ch, char *arg, int cmd) {
   skill_wait_user(ch, SKILL_ZEAL, 2);
 }
 
-
 void do_hostile(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
@@ -1172,105 +1171,6 @@ void do_defend(CHAR *ch, char *arg, int cmd) {
   send_to_char("You place yourself in a defensive stance.\n\r", ch);
   act("$n places $mself in a defensive stance.", TRUE, ch, 0, 0, TO_ROOM);
 }
-
-
-void do_batter(CHAR *ch, char *arg, int cmd) {
-  char name[MIL];
-  CHAR *victim;
-  int check;
-
-  if (!ch->skills) return;
-
-  if (IS_MORTAL(ch) &&
-      !check_sc_access(ch, SKILL_BATTER))
-  {
-    send_to_char("You don't know this skill.\n\r", ch);
-    return;
-  }
-
-  one_argument(arg, name);
-
-  if (!(victim = get_char_room_vis(ch, name)))
-  {
-    if (ch->specials.fighting)
-    {
-      victim = ch->specials.fighting;
-    }
-    else
-    {
-      send_to_char("Batter who?\n\r", ch);
-      return;
-    }
-  }
-
-  if (victim == ch)
-  {
-    send_to_char("Aren't we funny today...\n\r", ch);
-    return;
-  }
-  else if (IS_MORTAL(ch) &&
-           !IS_NPC(victim) &&
-           GET_LEVEL(victim) >= LEVEL_IMM)
-  {
-    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
-    return;
-  }
-  else if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
-           !CHAOSMODE)
-  {
-    send_to_char("Behave yourself here please!\n\r", ch);
-    return;
-  }
-
-  check = number(1, 137) - GET_DEX_APP(ch);
-
-  if (check > GET_LEARNED(ch, SKILL_BATTER))
-  {
-    act("$n tried to batter $N, but misses.", FALSE, ch, NULL, victim, TO_NOTVICT);
-    act("$N tried to batter you, but misses.", FALSE, ch, NULL, victim, TO_VICT);
-    act("You try to batter $N, but miss.", FALSE, ch, NULL, victim, TO_CHAR);
-    damage(ch, victim, 0, SKILL_BATTER, DAM_NO_BLOCK);
-
-    if (IS_NPC(ch) ||
-        GET_LEVEL(ch) < LEVEL_IMP)
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
-  }
-  else
-  {
-    if ((IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, SKILL_BATTER, BT_INVUL)))
-    {
-      act("You pound on $N with your fists, but your battering has no effect.", FALSE, ch, 0, victim, TO_CHAR);
-      act("$N pounds on you with $s fists, but $s battering has no effect.", FALSE, ch, 0, victim, TO_VICT);
-      act("$n pounds on $N with $s fists, but $s battering has no effect.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-      damage(ch, victim, 0, SKILL_BATTER, DAM_NO_BLOCK);
-    }
-    else
-    {
-      act("You pound on $N with your fists.", FALSE, ch, 0, victim, TO_CHAR);
-      act("$N pounds on you with $s fists.", FALSE, ch, 0, victim, TO_VICT);
-      act("$n pounds on $N with $s fists.", FALSE, ch, 0, victim, TO_NOTVICT);
-
-      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) * 2), SKILL_BATTER, DAM_PHYSICAL);
-
-      if (CHAR_REAL_ROOM(victim) != NOWHERE && !IS_IMPLEMENTOR(victim))
-      {
-        if (GET_POS(victim) > POSITION_SITTING)
-        {
-          GET_POS(victim) = POSITION_SITTING;
-        }
-      }
-    }
-
-    if (!IS_IMPLEMENTOR(ch))
-    {
-      WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-    }
-  }
-}
-
 
 void do_headbutt(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
@@ -1355,7 +1255,6 @@ void do_headbutt(CHAR *ch, char *arg, int cmd) {
 
   skill_wait_user(ch, SKILL_HEADBUTT, 2);
 }
-
 
 void do_banzai(CHAR *ch, char *arg, int cmd) {
   const int mana_cost = 75;
@@ -1473,7 +1372,6 @@ void do_banzai(CHAR *ch, char *arg, int cmd) {
   skill_wait_user(ch, SKILL_BANZAI, 1);
 }
 
-
 int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
   if (cmd == MSG_REMOVE_ENCH) {
     if (!ench || !ch) return FALSE;
@@ -1544,7 +1442,6 @@ int mantra_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg)
 
   return FALSE;
 }
-
 
 void do_mantra(CHAR *ch, char *arg, int cmd) {
   if (!ch) return;
@@ -1659,6 +1556,110 @@ void do_mantra(CHAR *ch, char *arg, int cmd) {
   skill_wait_user(ch, SKILL_MANTRA, 1);
 }
 
+#define FRENZY_STACK_HP_PCT   10  /* % of true max HP lost per stack (also the floor: MAX(2*wimpy, this% of true max)) */
+
+/* SC_TRAPPER Frenzy fatigue. Ticks every MSG_MOBACT (PULSE_MOBILE,
+ * ~10s -- NOT every combat round) while attached.
+ *
+ * ench->temp[0] = current stack count.
+ * ench->temp[1] = phase: 0 = active (ramping toward, or holding at,
+ *                 peak stacks); 1 = recovering.
+ * ench->temp[2] = whether the one free MOB_ACT held at peak stacks
+ *                 has already been spent.
+ *
+ * Each stack is a flat FRENZY_STACK_HP_PCT of *true* max HP (not
+ * compounding), recomputed from the stack count each tick rather than
+ * accumulated, so there's no drift. The cap on stacks is recalculated
+ * fresh every tick as MAX(2 *GET_WIMPY(ch), true_max * PCT / 100) -- a
+ * player who sets a higher Wimpy caps out at fewer stacks.
+ *
+ * duration is -1 on this enchantment, so enchantment_special()'s
+ * default auto-decrement/auto-remove never touches it (see
+ * interpreter.c) -- this function is entirely responsible for its own
+ * lifecycle, including calling ench_remove() once fully recovered.
+ *
+ * Deliberately does NOT touch GET_MAX_HIT_POINTS/APPLY_HIT -- see the
+ * hit_limit() change in limits.c. ch->specials.frenzy_fatigue is a
+ * transient, unsaved counter, so there's nothing here for a mid-tick
+ * autosave to corrupt.
+ *
+ * Note: is_frenzy_locked(ch) (subclass.h) is true across BOTH phases
+ * of this enchantment's life, for the dodge/rescue lockout.
+ * affected_by_spell(ch, SKILL_FRENZY) is true only during the active
+ * phase, for the hit-bonus/vulnerability effects that go away once
+ * fatigue sets in. See fight.c / act.offensive.c. */
+int frenzy_fatigue_tick(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+
+    ch->specials.frenzy_fatigue = 0;
+    send_to_char("You feel fully recovered from your frenzy.\n\r", ch);
+
+    return FALSE;
+  }
+
+  if (cmd != MSG_MOBACT) return FALSE;
+  if (!ench || !ch) return FALSE;
+
+  int true_max = GET_MAX_HIT_POINTS(ch);
+  int step = MAX(1, (true_max * FRENZY_STACK_HP_PCT) / 100);
+  int floor_hp = MAX(2 * GET_WIMPY(ch), (true_max * FRENZY_STACK_HP_PCT) / 100);
+  int max_stacks = MAX(0, (true_max - floor_hp) / step);
+
+  if (ench->temp[1] == 0) {
+    /* Active: ramping toward, or holding at, peak stacks. */
+    if (ench->temp[0] < max_stacks) {
+      ench->temp[0]++;
+
+      printf_to_char(ch, "Your frenzy deepens. (stack %d)\n\r", ench->temp[0]);
+    }
+    else if (ench->temp[2] == 0) {
+      /* One free MOB_ACT held at peak before fatigue sets in. */
+      ench->temp[2] = 1;
+
+      send_to_char("Your frenzy peaks!\n\r", ch);
+    }
+    else {
+      /* Peak grace already spent; fatigue sets in. Hit bonuses and
+       * the vulnerability formula stop entirely; the defensive
+       * lockout (is_frenzy_locked) persists until fully recovered. */
+      ench->temp[1] = 1;
+
+      affect_from_char(ch, SKILL_FRENZY);
+
+      send_to_char("Your body can no longer sustain the frenzy; fatigue sets in.\n\r", ch);
+      act("$n's frenzy breaks, leaving $m exhausted.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+
+    ch->specials.frenzy_fatigue = ench->temp[0] * step;
+    GET_HIT(ch) = MIN(GET_HIT(ch), GET_MAX_HIT(ch));
+  }
+  else {
+    /* Recovering: stacks (and the HP debuff) bleed off at the same
+     * one-per-MOB_ACT pace they built up at -- at max stacks, that
+     * means you're only actively frenzying half the time you're
+     * "locked in," the other half spent recovering. */
+    if (ench->temp[0] > 0) {
+      ench->temp[0]--;
+
+      ch->specials.frenzy_fatigue = ench->temp[0] * step;
+    }
+
+    if (ench->temp[0] <= 0) {
+      frenzy_fatigue_tick(ench, ch, ch, MSG_REMOVE_ENCH, "");
+      ench_remove(ch, ench, FALSE);
+
+      return FALSE;
+    }
+  }
+
+  return FALSE;
+}
+
+/* See subclass.h. True across the whole frenzy/fatigue lifecycle. */
+bool is_frenzy_locked(CHAR *ch) {
+  return ch && (ench_get_from_char(ch, ENCH_NAME_FRENZY_FATIGUE, 0) != NULL);
+}
 
 void do_frenzy(CHAR *ch, char *argument, int cmd) {
   struct affected_type_5 af;
@@ -1668,33 +1669,559 @@ void do_frenzy(CHAR *ch, char *argument, int cmd) {
     send_to_char("You do not know this skill.\n\r", ch);
     return;
   }
-  if (ch->specials.fighting) {
-    send_to_char("You can't change your mindset while fighting.\n\r", ch);
-    return;
-  }
-  if (!affected_by_spell(ch, SKILL_FRENZY)) {
+
+  ENCH *fatigue = ench_get_from_char(ch, ENCH_NAME_FRENZY_FATIGUE, 0);
+
+  if (!fatigue) {
+    if (affected_by_spell(ch, SKILL_FRENZY)) {
+    /* Orphaned from a save that couldn't carry the fatigue ench - no
+     * bonuses, no lockout, just a stray flag. Clear it and let them
+     * try again clean, rather than layering a second affect on top. */
+      affect_from_char(ch, SKILL_FRENZY);
+      send_to_char("Your lingering frenzy finally fades.\n\r", ch);
+      return;
+    }
+    /* Starting a fresh frenzy. */
     if (number(0, 120) > ch->skills[SKILL_FRENZY].learned) {
       send_to_char("You failed to get into the frenzied mindset.\n\r", ch);
       WAIT_STATE(ch, PULSE_VIOLENCE);
       return;
     }
+
     af.type = SKILL_FRENZY;
     af.duration = -1;
     af.modifier = 0;
     af.location = 0;
-    af.bitvector = AFF_DUAL;
+    af.bitvector = 0;
     af.bitvector2 = 0;
     affect_to_char(ch, &af);
+
+    ENCH fatigue_ench = { 0 };
+
+    fatigue_ench.name = ENCH_NAME_FRENZY_FATIGUE;
+    fatigue_ench.duration = -1;
+    fatigue_ench.temp[0] = 0; /* stacks */
+    fatigue_ench.temp[1] = 0; /* phase: 0 active, 1 recovering */
+    fatigue_ench.temp[2] = 0; /* peak grace consumed */
+    fatigue_ench.func = frenzy_fatigue_tick;
+
+    ench_to_char(ch, &fatigue_ench, FALSE);
+
     act("You go into a frenzy.", 1, ch, 0, 0, TO_CHAR);
     act("$n goes into a frenzy.", 1, ch, 0, 0, TO_ROOM);
     WAIT_STATE(ch, PULSE_VIOLENCE);
+
+    return;
+  }
+
+  if (fatigue->temp[1] == 0) {
+    /* Active -- calling it off early. Stacks (and the HP debt) start
+     * bleeding back off from wherever they currently stand, same rate
+     * as they built up. */
+    affect_from_char(ch, SKILL_FRENZY);
+
+    fatigue->temp[1] = 1;
+
+    act("$n calms down, though $e still looks shaken.", 1, ch, 0, 0, TO_ROOM);
+    act("You calm down, though the frenzy has taken its toll.", 1, ch, 0, 0, TO_CHAR);
+    WAIT_STATE(ch, PULSE_VIOLENCE);
+
+    return;
+  }
+
+  /* Fatigue enchantment exists and is already in its recovering phase
+   * -- block re-entry until it fully clears, so this can't be spammed
+   * back-to-back. */
+  send_to_char("You're still recovering from your last frenzy.\n\r", ch);
+}
+
+/* Shared placement logic for the SC_TRAPPER marker-object traps (Alert
+ * Ward / Poison Dart / Magical Snare). Handles the subclass tier gate,
+ * the one-per-trapper-per-room duplicate check, the skill roll, and
+ * dropping the object into the room with ownership stamped on it. Any
+ * trap-specific behavior (damage cadence, affects applied, the zone
+ * reset message, etc.) belongs in that object's own special procedure,
+ * not here. */
+static void do_trap_place_marker(struct char_data *ch, const char *type_name, int required_tier, int obj_vnum) {
+  int percent, obj_rnum;
+  struct obj_data *obj, *existing;
+  const int mana_cost = 10;
+
+  if (!check_subclass(ch, SC_TRAPPER, required_tier)) {
+    send_to_char("You haven't trained far enough as a Trapper to set that kind of trap.\n\r", ch);
+
+    return;
+  }
+
+  if ((obj_rnum = real_object(obj_vnum)) < 0) {
+    send_to_char("That trap hasn't been built yet -- poke an immortal.\n\r", ch);
+    log_f("BUG: do_trap: no object prototype for vnum %d (%s trap).", obj_vnum, type_name);
+
+    return;
+  }
+
+  for (existing = world[CHAR_REAL_ROOM(ch)].contents; existing; existing = existing->next_content) {
+    if ((OBJ_VNUM(existing) == obj_vnum) && (OBJ_SPEC(existing) == GET_ID(ch))) {
+      printf_to_char(ch, "You already have a %s trap set here.\n\r", type_name);
+
+      return;
+    }
+  }
+
+  if (IS_MORTAL(ch) && (GET_MANA(ch) < mana_cost)) {
+    send_to_char("You lack the focus to coax that trap into shape.\n\r", ch);
+
+    return;
+  }
+
+  percent = number(1, 101);
+
+  if (percent > ch->skills[SKILL_TRAP].learned) {
+    GET_MANA(ch) -= (mana_cost / 2);
+    act("You rush the binding, and the trap unravels in your hands.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n rushes the binding on a trap, and it unravels in $s hands.", TRUE, ch, 0, 0, TO_ROOM);
+    skill_wait_user(ch, SKILL_TRAP, 1);
+    return;
+  }
+
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE) && (!CHAOSMODE)) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  obj = read_object(obj_vnum, VIRTUAL);
+  OBJ_SPEC(obj) = GET_ID(ch);
+
+  if (obj_vnum == TRAP_OBJ_VNUM_POISON_DART) {
+    /* used for trigger chance */
+    OBJ_VALUE(obj, 1) = GET_LEVEL(ch) + GET_DEX_BONUS(ch);
+    /* used for number of rounds the poison lasts */
+    OBJ_VALUE(obj, 2) = 10 + GET_WIS_BONUS(ch);
+    /* used for dmg calculations of trap */
+    OBJ_VALUE(obj, 3) = hit_gain(ch);
+  }
+  else if (obj_vnum == TRAP_OBJ_VNUM_BINDING_SNARE) {
+    /* used for trigger chance */
+    OBJ_VALUE(obj, 1) = GET_LEVEL(ch) + (2 * GET_WIS_BONUS(ch));
+    /* used for number of rounds the ench lasts */
+    OBJ_VALUE(obj, 2) = 5 + (GET_WIS_BONUS(ch));
+  }
+
+  GET_MANA(ch) -= mana_cost;
+
+  obj_to_room(obj, CHAR_REAL_ROOM(ch));
+  printf_to_char(ch, "You slip the %s trap into place here.\n\r", type_name);
+  act("$n slips something into place here.", TRUE, ch, 0, 0, TO_ROOM);
+
+  skill_wait_user(ch, SKILL_TRAP, 1);
+}
+
+/* trap object that notifies trapper when the zone its in resets */
+int trap_alert_ward(OBJ *ward, CHAR *ch, int cmd, char *arg)
+{
+  if (cmd == MSG_ZONE_RESET) {
+    if (OBJ_SPEC(ward) > 0) {
+      for (DESC *d = descriptor_list; d; d = d->next) {
+        if (d->connected != CON_PLYNG) continue;
+
+        ch = d->original ? d->original : d->character;
+
+        if (!IS_NPC(ch) && (GET_ID(ch) == OBJ_SPEC(ward))) {
+          printf_to_char(ch, "You sense your alert ward at %s has woken and spoken.\n\r", world[ward->in_room].name);
+          break;
+        }
+      }
+      extract_obj(ward);
+    }
+  }
+  return FALSE;
+}
+
+int poison_dart_tick(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (ch) send_to_char("The poison finally works its way out of your system.\n\r", ch);
+    return FALSE;
+  }
+
+  if (cmd != MSG_ROUND) return FALSE;
+  if (!ench || !ch) return FALSE;
+
+  send_to_char("The poison courses through your veins!\n\r", ch);
+  act("$n shudders as poison courses through $s veins.", TRUE, ch, 0, 0, TO_ROOM);
+
+  int dam = ench->temp[0];
+  if (dam >= GET_HIT(ch)) dam = MAX(0, GET_HIT(ch) - 1); /* never let poison itself free ch mid-signal */
+
+  damage(ch, ch, dam, TYPE_UNDEFINED, DAM_POISON);
+
+  return FALSE;
+}
+
+void apply_poison_dart_trap(CHAR *victim, OBJ *obj) {
+  if (!victim || !obj) return;
+
+  ENCH poison_ench = { 0 };
+
+  poison_ench.name = ENCH_NAME_POISON_DART_TRAP;
+  poison_ench.duration = OBJ_VALUE(obj, 2);
+  poison_ench.interval = ENCH_INTERVAL_ROUND;
+  poison_ench.temp[0] = OBJ_VALUE(obj, 3) / 3;
+  poison_ench.func = poison_dart_tick;
+
+  ench_to_char(victim, &poison_ench, TRUE);
+}
+
+int trap_poison_dart(OBJ *dart, CHAR *ch, int cmd, char *arg)
+{
+  char buf[MSL];
+
+  if ((cmd == MSG_MOBACT && chance(OBJ_VALUE(dart, 1))) || cmd == MSG_TRAP_TRIGGER) {
+    /* Only ever poison an NPC. ch is NULL on an ambient MSG_MOBACT tick, and may be
+       a PC if triggered via Batter - either way, fall back to scanning the room. */
+    CHAR *victim = (ch && IS_NPC(ch)) ? ch : get_random_npc_in_room(dart->in_room, TRUE);
+
+    if (!victim) return FALSE; /* No valid NPC target in the room - nothing to poison. */
+
+    apply_poison_dart_trap(victim, dart);
+
+    sprintf(buf, "A hidden mechanism snaps loose, driving a thorn deep into %s!\n\r", GET_SHORT(victim));
+    send_to_room(buf, CHAR_REAL_ROOM(victim));
+
+    extract_obj(dart);
+  }
+  return FALSE;
+}
+
+int trap_binding_snare(OBJ *snare, CHAR *ch, int cmd, char *arg)
+{
+  int snare_ench_duration = 0;
+  char buf[MAX_STRING_LENGTH];
+
+  if ((cmd == MSG_MOBACT && chance(OBJ_VALUE(snare, 1))) || cmd == MSG_TRAP_TRIGGER) {
+    /* Only ever snare an NPC. ch is NULL on an ambient MSG_MOBACT tick, and may be
+       a PC if triggered via Batter - either way, fall back to scanning the room */
+    CHAR *victim = (ch && IS_NPC(ch)) ? ch : get_random_npc_in_room(snare->in_room, TRUE);
+
+    if (!victim) return FALSE; /* No valid NPC target in the room - nothing to snare. */
+
+    snare_ench_duration = OBJ_VALUE(snare, 2);
+    switch (number(1, 3)) {
+    case 1: // expose
+      ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, snare_ench_duration, ENCH_INTERVAL_ROUND, 50, APPLY_ARMOR, 0, 0, exposed_enchant);
+      sprintf(buf, "The snare whips taut around %s, its woven thread flaring bright orange as %s stands exposed!\n\r", GET_SHORT(victim), HESH(victim));
+      send_to_room(buf, CHAR_REAL_ROOM(victim));
+      break;
+    case 2: // confusion
+      ench_apply(victim, TRUE, ENCH_NAME_CONFUSION, 0, snare_ench_duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, confusion_enchant);
+      sprintf(buf, "The snare whips taut around %s, its woven thread bursting into a purple haze as %s reels in confusion!\n\r", GET_SHORT(victim), HESH(victim));
+      send_to_room(buf, CHAR_REAL_ROOM(victim));
+      break;
+    case 3: // sluggishness
+      ench_apply(victim, TRUE, ENCH_NAME_SLUGGISHNESS, 0, snare_ench_duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, sluggishness_enchant);
+      sprintf(buf, "The snare whips taut around %s, its woven thread dimming to a heavy blue as %s grows sluggish!\n\r", GET_SHORT(victim), HESH(victim));
+      send_to_room(buf, CHAR_REAL_ROOM(victim));
+      break;
+    }
+    extract_obj(snare);
+  }
+  return FALSE;
+}
+
+/* Confusion: Cannot use OLC specs */
+int confusion_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+    act("......$n seems confused.", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    /* No per-round action needed for the enchant itself */
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+    act("$n's confusion wears off.", FALSE, ch, 0, 0, TO_ROOM);
+    send_to_char("You feel less confused.\n\r", ch);
+    return FALSE;
+  }
+  return FALSE;
+}
+
+/* Sluggishness: Dodge effectiveness reduction */
+int sluggishness_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+    act("......$n looks sluggish.", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    /* No per-round action needed for the enchant itself */
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+    act("$n's reflexes return to normal.", FALSE, ch, 0, 0, TO_ROOM);
+    send_to_char("You feel less sluggish.\n\r", ch);
+    return FALSE;
+  }
+  return FALSE;
+}
+
+void do_batter(CHAR *ch, char *arg, int cmd) {
+  char name[MIL];
+  CHAR *victim;
+  int check, set_pos;
+
+  if (!ch->skills) return;
+
+  if (IS_MORTAL(ch) &&
+      !check_sc_access(ch, SKILL_BATTER))
+  {
+    send_to_char("You don't know this skill.\n\r", ch);
+    return;
+  }
+
+  one_argument(arg, name);
+
+  if (!(victim = get_char_room_vis(ch, name)))
+  {
+    if (ch->specials.fighting)
+    {
+      victim = ch->specials.fighting;
+    }
+    else
+    {
+      send_to_char("Batter who?\n\r", ch);
+      return;
+    }
+  }
+
+  if (victim == ch)
+  {
+    send_to_char("Aren't we funny today...\n\r", ch);
+    return;
+  }
+  else if (IS_MORTAL(ch) &&
+           !IS_NPC(victim) &&
+           GET_LEVEL(victim) >= LEVEL_IMM)
+  {
+    send_to_char("It's not a good idea to attack an immortal!\n\r", ch);
+    return;
+  }
+  else if (IS_SET(world[CHAR_REAL_ROOM(victim)].room_flags, SAFE) &&
+           !CHAOSMODE)
+  {
+    send_to_char("Behave yourself here please!\n\r", ch);
+    return;
+  }
+
+  check = number(1, 137) - GET_DEX_APP(ch);
+
+  if (check > GET_LEARNED(ch, SKILL_BATTER))
+  {
+    act("$n tried to batter $N, but misses.", FALSE, ch, NULL, victim, TO_NOTVICT);
+    act("$N tried to batter you, but misses.", FALSE, ch, NULL, victim, TO_VICT);
+    act("You try to batter $N, but miss.", FALSE, ch, NULL, victim, TO_CHAR);
+    damage(ch, victim, 0, SKILL_BATTER, DAM_NO_BLOCK);
+  }
+  else
+  {
+    if ((IS_AFFECTED(victim, AFF_INVUL) && !breakthrough(ch, victim, SKILL_BATTER, BT_INVUL)))
+    {
+      act("You pound on $N with your fists, but your battering has no effect.", FALSE, ch, 0, victim, TO_CHAR);
+      act("$N pounds on you with $s fists, but $s battering has no effect.", FALSE, ch, 0, victim, TO_VICT);
+      act("$n pounds on $N with $s fists, but $s battering has no effect.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+      damage(ch, victim, 0, SKILL_BATTER, DAM_NO_BLOCK);
+    }
+    else
+    {
+      /* Batter trap triggers */
+      const int trap_vnums[] = { TRAP_OBJ_VNUM_POISON_DART, TRAP_OBJ_VNUM_BINDING_SNARE };
+
+      OBJ *trap = get_random_obj_by_vnum_list_in_room(trap_vnums, NUMELEMS(trap_vnums), CHAR_REAL_ROOM(ch));
+
+      if (trap && chance(OBJ_VALUE(trap,1))) {
+        act("You pound on $N with your fists, knocking them into a trap.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$N pounds on you with $s fists, knocking you into a trap.", FALSE, ch, 0, victim, TO_VICT);
+        act("$n pounds on $N with $s fists, knocking them into a trap.", FALSE, ch, 0, victim, TO_NOTVICT);
+
+        signal_object(trap, victim, MSG_TRAP_TRIGGER, "");
+      } else {
+        act("You pound on $N with your fists.", FALSE, ch, 0, victim, TO_CHAR);
+        act("$N pounds on you with $s fists.", FALSE, ch, 0, victim, TO_VICT);
+        act("$n pounds on $N with $s fists.", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+
+      damage(ch, victim, calc_position_damage(GET_POS(victim), GET_LEVEL(ch) + (3 * GET_STR_BONUS(ch))), SKILL_BATTER, DAM_PHYSICAL);
+
+      set_pos = stack_position(victim, POSITION_SITTING);
+
+      if ((CHAR_REAL_ROOM(victim) != NOWHERE) && !IS_IMPLEMENTOR(victim)) {
+        GET_POS(victim) = MIN(GET_POS(victim), set_pos);
+
+        skill_wait_victim(victim, SKILL_BATTER, CHAOSMODE ? number(1, 2) : 2);
+      }
+    }
+  }
+  skill_wait_user(ch, SKILL_BATTER, 2);
+}
+
+/* Plain directional trap: sets the classic TRAP room-flag in
+ * adj_room (an already-resolved, already-validated adjacent room --
+ * exit existence, the SC1 gate, and the closed-door check all happen
+ * in do_trap() before this is ever called, since that's where the raw
+ * direction lookup already lives). dir_desc is only used for the
+ * success message ("to the %s"). */
+static const char *trap_dir_phrase[] = {
+  "to the north",
+  "to the east",
+  "to the south",
+  "to the west",
+  "upward",
+  "downward"
+};
+
+static void do_trap_directional(struct char_data *ch, int adj_room, const char *dir_desc) {
+  int percent;
+  char buf[MAX_STRING_LENGTH];
+
+  percent = number(1, 101);
+
+  if (percent > ch->skills[SKILL_TRAP].learned) {
+    send_to_char("You failed.\n\r", ch);
+    skill_wait_user(ch, SKILL_TRAP, 1);
+    return;
+  }
+
+  if (IS_SET(world[adj_room].room_flags, SAFE) && (!CHAOSMODE)) {
+    send_to_char("Behave yourself there please!\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(world[adj_room].room_flags, TRAP)) {
+    send_to_char("There is already a trap set there.\n\r", ch);
   }
   else {
-    affect_from_char(ch, SKILL_FRENZY);
-    act("$n calms down.", 1, ch, 0, 0, TO_ROOM);
-    act("You calm down.", 1, ch, 0, 0, TO_CHAR);
-    WAIT_STATE(ch, PULSE_VIOLENCE);
+    printf_to_char(ch, "You set up a trap %s.\n\r", dir_desc);
+    snprintf(buf, sizeof(buf), "$n fiddles with something %s.", dir_desc);
+    act(buf, TRUE, ch, 0, 0, TO_ROOM);
+
+    SET_BIT(world[adj_room].room_flags, TRAP);
   }
+
+  skill_wait_user(ch, SKILL_TRAP, 1);
+}
+
+/* Classic trap: sets the TRAP room-flag underfoot. This is the base
+ * Nomad skill and is NOT subclass-gated -- preserved as-is from the
+ * original do_trap so non-Trapper Nomads keep their trap-here. */
+static void do_trap_here(struct char_data *ch) {
+  int percent;
+
+  percent = number(1, 101);
+
+  if (percent > ch->skills[SKILL_TRAP].learned) {
+    send_to_char("You failed.\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, SAFE) && (!CHAOSMODE)) {
+    send_to_char("Behave yourself here please!\n\r", ch);
+
+    return;
+  }
+
+  if (IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP)) {
+    send_to_char("There is already a trap here.\n\r", ch);
+  }
+  else {
+    send_to_char("You have set up a trap here.\n\r", ch);
+    act("$n has set up a trap here.", TRUE, ch, 0, 0, TO_ROOM);
+
+    SET_BIT(world[CHAR_REAL_ROOM(ch)].room_flags, TRAP);
+  }
+
+  skill_wait_user(ch, SKILL_TRAP, 1);
+}
+
+void do_trap(struct char_data *ch, char *argument, int cmd)
+{
+  char arg[MAX_INPUT_LENGTH];
+  int dir;
+
+  if(!ch->skills)
+    return;
+
+  if ((GET_CLASS(ch) != CLASS_NOMAD) &&
+      (GET_LEVEL(ch) < LEVEL_IMM)) {
+    send_to_char("You don't know this skill.\n\r", ch);
+    return;
+  }
+
+  one_argument(argument, arg);
+
+  if (!*arg) {
+    do_trap_here(ch);
+
+    return;
+  }
+
+  if ((dir = search_block(arg, (const char * const *)dirs, FALSE)) >= 0) {
+    if (!check_subclass(ch, SC_TRAPPER, 1)) {
+      send_to_char("You haven't trained enough as a Trapper to set a trap at a distance.\n\r", ch);
+
+      return;
+    }
+
+    if (!EXIT(ch, dir) || (EXIT(ch, dir)->to_room_r == NOWHERE)) {
+      send_to_char("There is no exit in that direction.\n\r", ch);
+
+      return;
+    }
+
+    if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)) {
+      if (EXIT(ch, dir)->keyword) {
+        printf_to_char(ch, "The %s seems to be closed.\n\r", fname(EXIT(ch, dir)->keyword));
+      }
+      else {
+        send_to_char("It seems to be closed.\n\r", ch);
+      }
+
+      return;
+    }
+
+    do_trap_directional(ch, EXIT(ch, dir)->to_room_r, trap_dir_phrase[dir]);
+
+    return;
+  }
+
+  if (is_abbrev(arg, "ward")) {
+    do_trap_place_marker(ch, "alert ward", 1, TRAP_OBJ_VNUM_ALERT_WARD);
+
+    return;
+  }
+
+  if (is_abbrev(arg, "poison")) {
+    do_trap_place_marker(ch, "poison dart", 2, TRAP_OBJ_VNUM_POISON_DART);
+
+    return;
+  }
+
+  if (is_abbrev(arg, "snare")) {
+    do_trap_place_marker(ch, "binding snare", 4, TRAP_OBJ_VNUM_BINDING_SNARE);
+
+    return;
+  }
+
+  send_to_char("Set a trap in which direction, or specify a trap type (ward, poison, snare)?\n\r", ch);
 }
 
 
