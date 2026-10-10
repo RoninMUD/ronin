@@ -41,8 +41,6 @@ int calc_position_damage(int position, int dam);
 int stack_position(CHAR *ch, int target_position);
 void do_move(struct char_data *ch, char *argument, int cmd);
 
-void skill_wait_user(CHAR *ch, int skill, int wait);
-void skill_wait_victim(CHAR *victim, int skill, int wait);
 int hit_gain(CHAR *ch);
 
 void do_awareness(CHAR *ch, char *arg, int cmd) {

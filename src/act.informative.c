@@ -634,7 +634,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (IS_AFFECTED(target, AFF_SANCTUARY)) {
-        if (af_list[SPELL_DISRUPT_SANCT]) {
+        if (ench_enchanted_by(target, ENCH_NAME_DISRUPT_SANCT, 0)) {
           act("......$n's protective aura has been disrupted!", FALSE, target, 0, ch, TO_VICT);
         }
         else {
@@ -690,10 +690,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
 
         if (af_list[SPELL_RUSH]) {
           act("......$n's pulse rushes with supernatural speed.", FALSE, target, 0, ch, TO_VICT);
-        }
-
-        if (af_list[SPELL_BLADE_BARRIER]) {
-          act("......$n is surrounded by a barrier of whirling blades.", FALSE, target, 0, ch, TO_VICT);
         }
 
         if (af_list[SPELL_DESECRATE]) {

@@ -589,6 +589,12 @@ void do_cast(struct char_data *ch, char *argument, int cmd) {
     return;
   }
 
+  /* Validate the elemental form before any wait state or mana is spent. */
+  if ((spl == SPELL_GREATER_ELEMENTAL) && (elemental_vnum_from_arg(argument) < 0)) {
+    send_to_char("Choose an elemental form: slime, earth, air, or void.\n\r", ch);
+    return;
+  }
+
   if(IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags,DOUBLE_MANA)) mult=20;
   else mult=10;
 
@@ -1078,6 +1084,7 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_FLAMESTRIKE,         30, POSITION_FIGHTING, 57, 11, 57, 10, 57,  6, 57, 57,   25, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_flamestrike);
   SPELLO(SPELL_FLY,                 30, POSITION_STANDING, 10, 57, 57, 57, 57,  7, 57, 57,   25, TAR_CHAR_ROOM,                                                                cast_fly);
   SPELLO(SPELL_FORGET,              30, POSITION_FIGHTING, 11, 57, 57, 57, 14, 10, 57, 57,   15, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_forget);
+  SPELLO(SPELL_FROSTBOLT,           30, POSITION_FIGHTING, 45, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_frostbolt);
   SPELLO(SPELL_FURY,                30, POSITION_FIGHTING, 57, 57, 57, 21, 57, 23, 57, 57,   60, TAR_CHAR_ROOM | TAR_SELF_ONLY,                                                cast_fury);
   SPELLO(SPELL_GREAT_MIRACLE,       30, POSITION_STANDING, 57, 30, 57, 57, 57, 30, 57, 57,  200, TAR_IGNORE,                                                                   cast_great_miracle);
   SPELLO(SPELL_HARM,                30, POSITION_FIGHTING, 57, 15, 57, 57, 57, 57, 57, 14,   35, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_harm);
@@ -1106,6 +1113,7 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_MIRACLE,             30, POSITION_FIGHTING, 57, 25, 57, 57, 57, 22, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_miracle);
   SPELLO(SPELL_MYSTIC_SWIFTNESS,    30, POSITION_FIGHTING, 57, 57, 50, 57, 57, 42, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_mystic_swiftness);
   SPELLO(SPELL_PARALYSIS,           30, POSITION_STANDING, 29, 57, 57, 57, 21, 28, 57, 57,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_paralyze);
+  SPELLO(SPELL_PASSDOOR,            30, POSITION_STANDING, 35, 57, 57, 57, 57, 57, 57, 57,   50, TAR_IGNORE,                                                                   cast_passdoor);
   SPELLO(SPELL_PERCEIVE,            30, POSITION_STANDING, 40, 57, 57, 57, 40, 40, 57, 57,   40, TAR_SELF_ONLY,                                                                cast_perceive);
   SPELLO(SPELL_POISON,              30, POSITION_STANDING, 57,  8, 12, 57,  6, 57, 57, 57,   10, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO | TAR_OBJ_INV,                 cast_poison);
   SPELLO(SPELL_POISON_SMOKE,        30, POSITION_FIGHTING, 57, 57, 17, 57, 16, 19, 57, 57,   20, TAR_IGNORE,                                                                   cast_poison_smoke);
@@ -1146,15 +1154,15 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_WIND_SLASH,          30, POSITION_FIGHTING, 57, 57, 30, 57, 57, 57, 57, 57,   85, TAR_IGNORE,                                                                   cast_wind_slash);
   SPELLO(SPELL_WORD_OF_RECALL,      30, POSITION_STANDING, 13, 11, 19, 57, 57,  6, 57, 19,   25, TAR_SELF_ONLY,                                                                cast_word_of_recall);
   // Enchanter
-  SPELLO(SPELL_BLADE_BARRIER,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_blade_barrier);
-  SPELLO(SPELL_PASSDOOR,            30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   50, TAR_IGNORE,                                                                   cast_passdoor);
-  SPELLO(SPELL_ENGAGE,              30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   40, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_engage);
-  SPELLO(SPELL_ETHEREAL_NATURE,     30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_ethereal_nature);
+  SPELLO(SPELL_MIRROR_IMAGE,        30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_mirror_image);
+  SPELLO(SPELL_FAMILIAR,            30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_familiar);
   SPELLO(SPELL_DISRUPT_SANCT,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_disrupt_sanct);
+  SPELLO(SPELL_MAGIC_WEAPON,        30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_magic_weapon);
+  SPELLO(SPELL_GREATER_ELEMENTAL,   30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  300, TAR_IGNORE,                                                                   cast_greater_elemental);
+  SPELLO(SPELL_TETHER,              30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,   20, TAR_IGNORE,                                                                   cast_tether);
   // Archmage
   SPELLO(SPELL_METEOR,              30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_meteor);
   SPELLO(SPELL_ORB_PROTECTION,      30, POSITION_STANDING, 30, 30, 57, 57, 57, 57, 57, 57,   50, TAR_SELF_ONLY,                                                                cast_orb_protection);
-  SPELLO(SPELL_FROSTBOLT,           30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 30,   50, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_frostbolt);
   SPELLO(SPELL_WRATH_ANCIENTS,      30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_wrath_ancients);
   SPELLO(SPELL_DISTORTION,          30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_distortion);
   // Druid
@@ -1341,11 +1349,13 @@ void assign_spell_text(void) {
   SPLTXTO(SPELL_WIND_SLASH,           "wind slash",                   "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_WORD_OF_RECALL,       "word of recall",               "",                                                                    "",                                                                          "");
   // Enchanter
-  SPLTXTO(SPELL_BLADE_BARRIER,        "blade barrier",                "You summon thousands of tiny whirling blades to envelope you!",       "The air hums as thousands of tiny whirling blades appear and envelope $n!", "One by one, the blades in your barrier fall to the ground.");
+  SPLTXTO(SPELL_MIRROR_IMAGE,         "mirror image",                 "You create a shifting illusion around yourself.",                     "$n creates a shifting illusion around $mself.",                             "The illusion around you fades.");
   SPLTXTO(SPELL_PASSDOOR,             "passdoor",                     "",                                                                    "",                                                                          "");
-  SPLTXTO(SPELL_ENGAGE,               "engage",                       "",                                                                    "",                                                                          "");
-  SPLTXTO(SPELL_ETHEREAL_NATURE,      "ethereal nature",              "You slowly fade into an alternate plane of existence.",               "$n slowly fades into an alternate plane of existence.",                     "You feel strong enough to leave the physical plane.");
+  SPLTXTO(SPELL_FAMILIAR,             "familiar",                     "",                                                                    "",                                                                          "Your familiar fades away.");
   SPLTXTO(SPELL_DISRUPT_SANCT,        "disrupt sanctuary",            "Your white aura seems to fade a little.",                             "$n's white aura seems to fade a little.",                                   "The force disrupting your white aura disappears.");
+  SPLTXTO(SPELL_MAGIC_WEAPON,         "magic weapon",                 "Your weapon crackles with arcane power.",                             "$n's weapon crackles with arcane power.",                                   "The arcane power surrounding your weapon fades.");
+  SPLTXTO(SPELL_GREATER_ELEMENTAL,    "greater elemental",            "",                                                                    "",                                                                          "");
+  SPLTXTO(SPELL_TETHER,               "tether",                       "",                                                                    "",                                                                          "");
   // Archmage
   SPLTXTO(SPELL_METEOR,               "meteor",                       "",                                                                    "",                                                                          "");
   SPLTXTO(SPELL_ORB_PROTECTION,       "orb of protection",            "A golden orb appears over your head.",                                "A golden orb appears over $n's head.",                                      "Your golden orb disappears.");

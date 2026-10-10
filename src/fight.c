@@ -671,6 +671,9 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
 
   total_exp = GET_EXP(victim) / 3;
   
+  /* Enchanter SC5: Binding Mastery - kills by charmed followers count as the Enchanter's. */
+  CHAR *binding_owner = binding_mastery_owner(ch);
+  if (binding_owner) ch = binding_owner;
 
   /* Sometime in the future this will be set in mob stats - Aug 99 */
   if (victim->specials.max_num_fighting == 0)
@@ -2014,9 +2017,30 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = 0;
   }
 
-  /* Enchanter SC4: Ethereal Nature */
-  if (IS_PHYSICAL_DAMAGE(damage_type) && (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
-    dmg = 0;
+  /* Mirror Image: each incoming hit has a chance to hit a duplicate image instead of the actual character. */
+  if ((dmg > 0) && (victim != ch)) {
+    ENCH *image_ench = ench_get_from_char(victim, ENCH_NAME_MIRROR_IMAGE, 0);
+    int image_count = image_ench ? MAX(0, image_ench->temp[0]) : 0;
+
+    if (image_count > 0) {
+      const int real_hit_chance = 100 / (image_count + 1);
+
+      if (!chance(real_hit_chance)) {
+        dmg = 0;
+
+        if (image_count > 1) {
+          image_ench->temp[0]--;
+        }
+        else {
+          ench_remove(victim, image_ench, FALSE);
+          image_ench = NULL;
+        }
+
+        act("$n's attack strikes an illusory double of $N, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_NOTVICT);
+        act("Your attack strikes an illusory double of $N, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n's attack strikes one of your illusory doubles, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_VICT);
+      }
+    }
   }
 
   /* Handle damage reflection. */
@@ -2066,32 +2090,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Enchanter SC1: Blade Barrier */
-  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) &&  affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
-    if (dmg > 0) {
-      max_reflect = calc_hit_damage(victim, ch, EQ(victim, WIELD), 0, RND_MAX);
-
-      if (IS_AFFECTED(victim, AFF_FURY)) {
-        max_reflect *= 2;
-      }
-      else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
-        max_reflect = lround(max_reflect * 1.5);
-      }
-
-      /* NPCs can reflect more damage, to add an element of challenge. */
-      if (IS_NPC(victim)) {
-        max_reflect *= 4;
-      }
-
-      reflect = MIN(lround(dmg * 0.25), max_reflect);
-
-      dmg = MAX(dmg - reflect, 0);
-
-      act("Some of $n's damage is reflected to $m.", FALSE, ch, 0, 0, TO_ROOM);
-      act("Some of your damage is reflected back to you!", FALSE, ch, 0, 0, TO_CHAR);
-    }
-  }
-
   /* Rogue SC3: Vehemence - Increases damage taken by 10%. */
   if (IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_VEHEMENCE) && check_subclass(victim, SC_ROGUE, 3)) {
     dmg = lround(dmg * 1.1);
@@ -2127,7 +2125,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   double damage_reduction = 0.0;
 
   /* Sanctuary */
-  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !ench_enchanted_by(victim, ENCH_NAME_DISRUPT_SANCT, 0)) {
     damage_reduction += 0.5;
   }
 
@@ -2138,8 +2136,28 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Apply damage reduction from affects. */
   dmg = MAX(lround(dmg * (1.0 - damage_reduction)), 0);
-  
-  
+
+  /* Familiar sentinel - absorb damage after sanctuary/fortification reduction. */
+  ENCH *familiar = ench_get_from_char(victim, ENCH_NAME_FAMILIAR, 0);
+  bool familiar_absorbed = FALSE;
+  bool familiar_broke = FALSE;
+  int familiar_absorbed_dmg = 0;
+
+  if (familiar && (familiar->temp[0] == 1) && (dmg > 0)) {
+    int absorb = MIN(dmg, MAX(1, familiar->temp[1]));
+
+    dmg -= absorb;
+    familiar->temp[1] -= absorb;
+    familiar_absorbed = TRUE;
+    familiar_absorbed_dmg = absorb;
+
+    if (familiar->temp[1] <= 0) {
+      /* ench_remove() doesn't signal the enchantment; the fade message is printed below, after the hit message. */
+      familiar_broke = TRUE;
+      ench_remove(victim, familiar, FALSE);
+    }
+  }
+
     //Evasion Damage Redunction
   //Set the defaults
   double evasion_physical_multiplier = 0.8;
@@ -2239,14 +2257,18 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Grant hit EXP. */
   if (victim != ch) {
-    gain_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    /* Enchanter SC5: Binding Mastery - hit EXP from charmed followers goes to the Enchanter. */
+    CHAR *exp_ch = binding_mastery_owner(ch);
+    if (!exp_ch) exp_ch = ch;
 
-    if (GET_REMORT_EXP(ch) && !IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED)) {
-      rv2_gain_remort_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    gain_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
+
+    if (GET_REMORT_EXP(exp_ch) && !IS_SET(GET_PFLAG(exp_ch), PLR_REMORT_DISABLED)) {
+      rv2_gain_remort_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
     }
 
-    if (GET_DEATH_EXP(ch)) {
-      gain_death_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    if (GET_DEATH_EXP(exp_ch)) {
+      gain_death_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
     }
   }
 
@@ -2305,7 +2327,26 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         }
       }
 
-      dam_message(dmg_text, ch, victim, attack_type, shadow_damage);
+      /* Show the hit as it would have landed (pre-absorb), so the damage tier is visible. */
+      int dmg_display = dmg_text + (shadow_damage ? (familiar_absorbed_dmg / shadow_damage) : familiar_absorbed_dmg);
+
+      dam_message(dmg_display, ch, victim, attack_type, shadow_damage);
+
+      if (familiar_absorbed) {
+        if (dmg_text <= 0) {
+          act("$n's sentinel familiar absorbs $N's attack.", FALSE, victim, 0, ch, TO_NOTVICT);
+          act("Your sentinel familiar absorbs $N's attack.", FALSE, victim, 0, ch, TO_CHAR);
+          act("$n's sentinel familiar absorbs your attack.", FALSE, victim, 0, ch, TO_VICT);
+        }
+        else {
+          act("$n's sentinel familiar absorbs part of the damage intended for $m.", FALSE, victim, 0, 0, TO_ROOM);
+          act("Your sentinel familiar absorbs part of the damage intended for you.", FALSE, victim, 0, 0, TO_CHAR);
+        }
+      }
+
+      if (familiar_broke) {
+        familiar_fade_message(victim, 1); /* FAMILIAR_SENTINEL */
+      }
 
       if (!IS_NPC(ch)) {
         ENDCOLOR(ch);

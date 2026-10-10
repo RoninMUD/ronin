@@ -480,6 +480,14 @@ int mana_gain(CHAR *ch) {
 
     gain += spell_regen(ch, MANA_REGEN);
 
+    if (IS_MORTAL(ch)) {
+      ENCH *fam = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+      if (fam && (fam->temp[0] == 2)) {
+        gain += 25;
+      }
+    }
+
     /* Inner Peace */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
       gain += 10;
@@ -494,6 +502,15 @@ int mana_gain(CHAR *ch) {
       /* Limit mana regen in combat. */
       if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
         int mana_regen_cap = 75;
+        int familiar_regen_bonus = 0;
+
+        if (IS_MORTAL(ch)) {
+          ENCH *fam = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+          if (fam && (fam->temp[0] == 2)) {
+            familiar_regen_bonus = 25;
+          }
+        }
 
         switch (GET_CLASS(ch)) {
           case CLASS_MAGIC_USER:
@@ -528,6 +545,8 @@ int mana_gain(CHAR *ch) {
 
           mana_regen_cap += 10 + inner_peace_bonus;
         }
+
+        mana_regen_cap += familiar_regen_bonus;
 
         // Prestige Perk 24
         if (GET_PRESTIGE_PERK(ch) >= 24) {

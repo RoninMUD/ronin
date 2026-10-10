@@ -195,5 +195,90 @@ Featureless and non-descript, the blank of primal clay waits for someone to brea
 0 0 0 1
 K
 0 0 0 0 0 0 0
+#20
+elemental greater slime~
+Greater Slime Elemental~
+A Greater Slime Elemental jiggles here, dripping caustic ooze.
+~
+ A hulking mass of sickly green gel heaves itself into a rough and
+hunched shape. Glowing glyphs of binding swirl constantly within
+its jiggling, gelatinous core. Wherever the foul beast burbles to,
+acidic ooze drips on the ground, instantly fizzling and smoking.
+~
+10 0 0 Y
+55 2 0 5d1+5000 3d3+33
+0 0
+8 8 0
+65 14909468 1d1+0 0
+0 0 0 24
+R
+6
+K
+0 0 0 0 0 0 0
+#21
+elemental greater earth~
+Greater Earth Elemental~
+A Greater Earth Elemental looms here, grinding like a landslide.
+~
+ This towering figure of fused rock and packed earth lumbers hunched
+under its own weight, every step shedding gravel and dust. Veins of
+glittering ore run through its boulder torso, and its heavy fists
+are blunt slabs of stone that could crush a wagon. Etched across its
+chest are glowing glyphs of binding.
+~
+10 0 0 Y
+55 -2 -20 10000d1+1111 4d44+44
+0 0
+8 8 0
+65 209324103 1d1+0 0
+0 0 0 128
+R
+4
+K
+0 0 0 0 0 0 0
+#22
+elemental greater air~
+Greater Air Elemental~
+A Greater Air Elemental swirls here in a column of howling wind.
+~
+ A spinning funnel of wind holds the vague outline of a tall, thin
+figure, its stormy edges constantly shredding and re-forming. Hail
+and bits of debris race around it as small arcs of static crackle
+along its length. Where its eyes should be are two bright pinpricks
+of white lightning, while faint glyphs of binding float within the
+heart of the storm.
+~
+10 0 0 Y
+55 -10 -8 8000d1+888 6d6+66
+0 0
+8 8 0
+65 139593788 1d1+0 0
+0 0 0 154
+R
+2
+K
+0 0 0 0 0 0 0
+#23
+elemental greater void~
+Greater Void Elemental~
+A Greater Void Elemental floats here, swallowing the light.
+~
+ This is less a creature than a black hole in the shape of one;
+a tall shifting silhouette of absolute darkness whose umbral
+edges trail like torn cloth. Light bends toward it and never
+returns, while the air around it is eerily silent. Thin lines
+of pale violet glyphs of binding hold the void's shape together,
+flickering as it moves.
+~
+10 0 0 Y
+55 -5 -12 8000d1+888 5d5+55
+0 0
+8 8 0
+65 14223168 1d1+0 0
+0 0 0 38
+R
+2
+K
+0 0 0 0 0 0 0
 #0
 $~

@@ -44,36 +44,35 @@ int check_sc_access(CHAR *ch, int skill) {
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
   if ((skill == SPELL_TREMOR) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
+  if ((skill == SPELL_PASSDOOR) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) return TRUE;
+  if ((skill == SPELL_FROSTBOLT) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) return TRUE;
 
   if (skill <= 165) return TRUE;
 
   switch (skill) {
     /* Enchanter */
-    case SPELL_BLADE_BARRIER:
+    case SPELL_MIRROR_IMAGE:
       if (check_subclass(ch, SC_ENCHANTER, 1)) return TRUE;
       break;
-    case SPELL_PASSDOOR:
+    case SPELL_MAGIC_WEAPON:
       if (check_subclass(ch, SC_ENCHANTER, 2)) return TRUE;
       break;
-    case SPELL_ENGAGE:
+    case SPELL_FAMILIAR:
       if (check_subclass(ch, SC_ENCHANTER, 3)) return TRUE;
       break;
-    case SPELL_ETHEREAL_NATURE:
+    case SPELL_DISRUPT_SANCT:
       if (check_subclass(ch, SC_ENCHANTER, 4)) return TRUE;
       break;
-    case SPELL_DISRUPT_SANCT:
+    case SPELL_GREATER_ELEMENTAL:
+    case SPELL_TETHER:
       if (check_subclass(ch, SC_ENCHANTER, 5)) return TRUE;
       break;
-
       /* Archmage */
     case SPELL_METEOR:
       if (check_subclass(ch, SC_ARCHMAGE, 1)) return TRUE;
       break;
     case SPELL_ORB_PROTECTION:
       if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
-      break;
-    case SPELL_FROSTBOLT:
-      if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
       break;
     case SPELL_WRATH_ANCIENTS:
       if (check_subclass(ch, SC_ARCHMAGE, 4)) return TRUE;
@@ -1224,6 +1223,11 @@ void assign_subclass(void) {
   assign_obj(TRAP_OBJ_VNUM_BINDING_SNARE, trap_binding_snare);
 
   assign_mob(TOKEN_MOB, token_mob);
+
+  assign_mob(GREATER_ELEMENTAL_SLIME, greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_EARTH, greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_AIR,   greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_VOID,  greater_elemental_spec);
 
   for (int i = 0; i < NUMELEMS(subclass_master); i++) {
     if (subclass_master[i] > 0) {

@@ -1443,6 +1443,11 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
     { "wrist",  ITEM_WEAR_WRIST  },
   };
 
+  if (is_greater_elemental(ch)) {
+    send_to_char("Your form can't hold equipment.\n\r", ch);
+    return;
+  }
+
   char obj_name[MIL], eq_slot_keyword[MIL];
 
   argument_interpreter(arg, obj_name, eq_slot_keyword);
@@ -1541,6 +1546,11 @@ void do_wear(CHAR *ch, char *arg, int cmd) {
 void do_wield(CHAR *ch, char *arg, int cmd) {
   char obj_name[MIL];
 
+  if (is_greater_elemental(ch)) {
+    send_to_char("Your form can't hold equipment.\n\r", ch);
+    return;
+  }
+
   one_argument(arg, obj_name);
 
   if (!*obj_name) {
@@ -1565,6 +1575,11 @@ void do_wield(CHAR *ch, char *arg, int cmd) {
 
 void do_grab(CHAR *ch, char *arg, int cmd) {
   char obj_name[MIL];
+
+  if (is_greater_elemental(ch)) {
+    send_to_char("Your form can't hold equipment.\n\r", ch);
+    return;
+  }
 
   one_argument(arg, obj_name);
 

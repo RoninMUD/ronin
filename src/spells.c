@@ -113,6 +113,9 @@ bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags) {
   return cast_ok;
 }
 
+/* Archmage SC3: Twinspell does not splash AoE casts; aoe_spell() raises this while it is running. */
+static int twinspell_aoe_depth = 0;
+
 /**
  * @brief Generic damage spell function.
  *
@@ -141,13 +144,23 @@ int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_
     dmg_type = TYPE_UNDEFINED;
   }
 
+  /* Remember the unsaved damage so a Twinspell copy can roll its own saving throw. */
+  const int base_dmg = dmg;
+
   /* Check saving throw, if any. Damage is reduced by 1/2 on a successful saving throw. */
   if ((dmg > 0) && (saving_throw >= SAVING_PARA) && (saving_throw <= SAVING_SPELL) && saves_spell(victim, saving_throw, level)) {
     dmg /= 2;
   }
 
   /* Call damage() to inflict the damage. */
-  return damage(ch, victim, dmg, spell, dmg_type);
+  int result = damage(ch, victim, dmg, spell, dmg_type);
+
+  /* Archmage SC3: Twinspell */
+  if (twinspell_aoe_depth <= 0) {
+    twinspell_splash(ch, victim, spell, level, base_dmg, dmg_type, saving_throw);
+  }
+
+  return result;
 }
 
 /**
@@ -155,6 +168,9 @@ int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_
  */
 void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *tar_obj), int level, int aoe_flags) {
   if (!ch || !func || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
+
+  /* Archmage SC3: Twinspell does not splash AoE casts. */
+  twinspell_aoe_depth++;
 
   if (!IS_SET(aoe_flags, AOE_TAR_OBJS_ONLY)) {
     for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_victim; temp_victim; temp_victim = next_victim) {
@@ -185,6 +201,8 @@ void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *
       func(level, ch, 0, temp_obj);
     }
   }
+
+  twinspell_aoe_depth--;
 }
 
 /**
