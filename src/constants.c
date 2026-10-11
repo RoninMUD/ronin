@@ -2166,7 +2166,6 @@ const char * const warrior_skills[] = {
   "spin",
   "throw",
   "triple",       /* Level 20 */
-  "disembowel",   /* Level 40 */
   "quad",         /* Level 50 */
   "awareness",    /* Warlord SC1 */
   "protect",      /* Warlord SC2 */

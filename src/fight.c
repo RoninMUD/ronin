@@ -2047,8 +2047,8 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   int reflect = 0, max_reflect = 0;
 
   /* Juggernaut */
-  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4) && EQ(victim, WEAR_BODY) && chance(10 + (GET_DEX_APP(victim) / 2))) {
-    reflect = MIN(MAX(0, (-calc_ac(victim) + 100) / 10), 40);
+  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4) && EQ(victim, WEAR_BODY) && chance(20 + (GET_DEX_APP(victim) / 2))) {
+    reflect = MIN(MAX(0, (-calc_ac(victim) + 100) / 4), 100);
 
     act("$n is cut by the jagged spikes protruding from your armor.", FALSE, ch, 0, victim, TO_VICT);
     act("$n is cut by the jagged spikes protruding from $N's armor.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -2796,16 +2796,7 @@ int calc_ac(CHAR *ch) {
       min_pc_ac -= GET_SC_LEVEL(ch) * 10;
     }
 
-	 /* Berserk Maxes AC at -200 */
-    if (affected_by_spell(ch, SKILL_BERSERK)) {
-      
-	  if(ac < -200){
-		  ac = -200;
-	  }
-	  min_pc_ac = -200;
-    }
-
-    /* Defend: AC Bonus and Max AC Adjustment */
+    /* Defend: AC Bonus and Max AC Adjustment (does not apply while Berserk; Berserk keeps the normal AC cap) */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       //ac -= 30;
       min_pc_ac = -330;
@@ -3828,12 +3819,8 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 298;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 249;
-    }
     /* Hostile/Rush */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 174;
     }
 
@@ -3889,12 +3876,8 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 283;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 246;
-    }
     /* Hostile/Rush */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 202;
     }
 
@@ -3932,12 +3915,8 @@ void thit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 269;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 234;
-    }
     /* Hostile */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
       check = 192;
     }
 

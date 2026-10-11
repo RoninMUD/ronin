@@ -1556,6 +1556,12 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
 
     return;
   }
+  /* SC_RANGER Berserk: too wild to rescue */
+  if (affected_by_spell(ch, SKILL_BERSERK)) {
+    send_to_char("You're too wild in your berserking state to rescue anyone.\n\r", ch);
+
+    return;
+  }
 
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_WARRIOR) &&
@@ -1868,17 +1874,13 @@ void do_disarm(struct char_data *ch, char *argument, int cmd) {
 void do_disembowel(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
-  if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) != CLASS_WARRIOR) &&
-      (GET_CLASS(ch) != CLASS_NOMAD)) {
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_NOMAD)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (IS_MORTAL(ch) &&
-      ((GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) &&
-      (GET_LEVEL(ch) < 40)) {
+  if (IS_MORTAL(ch) && (GET_LEVEL(ch) < 40)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;
