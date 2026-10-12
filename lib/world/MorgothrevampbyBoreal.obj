@@ -497,7 +497,7 @@ A delicate ring of silver thrumming with raw magical energy.~
 0
 X
 ~
-0 0 0
+1024 0 0
 M
 ~
 ~
@@ -506,11 +506,9 @@ M
 A
 19 4
 A
-18 4
+18 2
 A
 53 4
-T
-18000
 #9691
 ring crimson onslaught~
 Ring of the Crimson Onslaught~
@@ -522,7 +520,7 @@ A jagged ring of crimson metal radiating bloodthirsty energy.~
 0
 X
 ~
-0 0 0
+1024 0 0
 M
 ~
 ~
@@ -531,11 +529,9 @@ M
 A
 19 4
 A
-18 4
+18 2
 A
 53 4
-T
-18000
 #9692
 ring unyielding bastion~
 Ring of the Unyielding Bastion~
@@ -547,7 +543,7 @@ A thick, rune-carved ring that pulses with unwavering power.~
 0
 X
 ~
-0 0 0
+3072 0 0
 M
 ~
 ~
@@ -556,10 +552,8 @@ M
 A
 19 4
 A
-18 4
+18 2
 A
-52 20
-T
-18000
+52 15
 #0
 $~

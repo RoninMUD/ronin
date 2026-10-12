@@ -1,2 +1,271 @@
+#19600
+apex pearl~
+apex pearl~
+A dark, glassy pearl that pulses with a faint bioluminescence. 
+The pearl is cold and impossibly heavy, and those who hold it 
+too long report hearing the distant skittering of a thousand legs.~
+~
+8 207622146 16385
+0 0 0 0
+32 5000000 3000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+53 12
+A
+52 -45
+B
+8224
+#19601
+carapace plates~
+carapace plates~
+Broad, segmented plates torn from the dorsal ridges of a 
+giant beetle. Each plate is the size of a dinner plate, 
+ridged with raised nodes that interlock when fitted together.~
+~
+8 134217730 1
+0 0 0 0
+90 2000000 4000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19602
+hollow insect proboscis~
+a hollow insect proboscis~
+A hollow tube of crystallized chitin, curved 
+slightly as if frozen mid-drill. It is the 
+color of old honey, translucent enough that 
+light passes through it in a warm amber glow.~
+~
+8 134217730 1
+0 0 0 0
+40 1000000 5000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19603
+hardened insect wing~
+a hardened insect wing~
+A hardened wing the size of a small sail, its 
+surface so dense and dark it looks almost 
+metallic. The veins are thick as rope, 
+raised high enough to catch a blade's edge 
+and deflect it sideways.~
+~
+8 134217730 1
+0 0 0 0
+48 1000000 5000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19604
+skull titan bone construct~
+skull of the titan bone construct~
+A massive skull, clearly constructed rather 
+than natural. The individual bones are of 
+different sizes and species, fitted together 
+with iron clamps and a resin so old it has 
+turned to stone.~
+~
+8 134217730 1
+0 0 0 0
+28 800000 5000000
+10
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19605
+Unbroken Shell~
+The Unbroken Shell~
+A heavy shield made from layered insect carapace, 
+bound into a dark Adamantium frame. The surface 
+is ridged and faintly iridescent.~
+~
+9 134217730 513
+19 0 0 0
+28 90000 20000
+0
+X
+~
+2048 0 0
+M
+~
+~
+~
+~
+A
+19 3
+A
+18 2
+A
+53 -6
+#19606
+Broodhorn~
+Broodhorn~
+A long horn made from a hollow insect proboscis, 
+banded with dark Adamantium. The base is capped 
+with fused mandibles.~
+~
+24 217116674 16385
+0 0 0 0
+12 80000 22000
+0
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 8
+A
+53 9
+#19607
+Elytron Mace Fallen~
+Elytron Mace of the Fallen~
+A heavy mace with a head made from a single hardened 
+insect wing, its center faced with dark Adamantium. 
+The shaft is segmented bone-black chitin bound with 
+metal wire. It hums faintly when you grip it.~
+~
+5 137408514 8193
+0 19 2 6
+25 65000 12000
+0
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+A
+18 6
+#19608
+Broodskull Hammer~
+Broodskull Hammer~
+A massive two-handed war hammer. The face is a 
+slab of insect skull with compound eyes still 
+set into it. A long stinger protrudes from the 
+rear like a blade. Adamantium edges hold the 
+whole thing together.~
+~
+26 246460418 8193
+0 9 4 6
+30 165000 12000
+0
+X
+~
+1 0 0
+M
+~
+~
+~
+~
+A
+19 10
+A
+18 4
+#19609
+recipe Ossuary carapace plating~
+a recipe for Ossuary carapace plating~
+This seems to be a rather difficult recipe.~
+~
+32 0 1
+19605 3145 19600 19601
+3 600 1200
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19610
+recipe Ossuary proboscis fitting~
+a recipe for Ossuary proboscis fitting~
+This seems to be a rather difficult recipe.~
+~
+32 0 1
+19606 3145 19600 19602
+3 600 1200
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19611
+recipe Ossuary wing seating~
+a recipe for Ossuary wing seating~
+This seems to be a rather difficult recipe.~
+~
+32 0 1
+19607 3145 19600 19603
+3 600 1200
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
+#19612
+recipe Ossuary skull mounting~
+a recipe for Ossuary skull mounting~
+This seems to be a rather difficult recipe.~
+~
+32 0 1
+19608 3145 19600 19604
+3 600 1200
+5
+X
+~
+0 0 0
+M
+~
+~
+~
+~
 #0
 $~

@@ -943,6 +943,16 @@ bool breakthrough(CHAR *ch, CHAR *victim, int skill_spell, int breakthrough_type
       break;
   }
 
+  // Prestige Perk 50
+  if ((breakthrough_type == BT_SPHERE) && IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 50)) {
+    check += 5;
+  }
+
+  // Prestige Perk 57
+  if ((breakthrough_type == BT_INVUL) && IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 57)) {
+    check += 5;
+  }
+
   check = number(1, 100) <= check;
 
   /* Cunning */
@@ -2240,11 +2250,11 @@ void mob_aq_reward(int aqp_reward, CHAR *mob){
 
 void strip_object_antis(OBJ *obj, int min_percent, int max_percent)
 {
-    int i, roll;
+  int i, roll;
 
-    static const int anti_flags[] = {
-		ITEM_ANTI_GOOD,
-		ITEM_ANTI_EVIL,
+  static const int anti_flags[] = {
+    ITEM_ANTI_GOOD,
+    ITEM_ANTI_EVIL,
 		ITEM_ANTI_NEUTRAL,
 		ITEM_ANTI_WARRIOR,
 		ITEM_ANTI_THIEF,
@@ -2253,23 +2263,25 @@ void strip_object_antis(OBJ *obj, int min_percent, int max_percent)
 		ITEM_ANTI_NINJA,
 		ITEM_ANTI_NOMAD,
 		ITEM_ANTI_PALADIN,
-        ITEM_ANTI_ANTIPALADIN,
-        ITEM_ANTI_BARD,
+    ITEM_ANTI_ANTIPALADIN,
+    ITEM_ANTI_BARD,
 		ITEM_ANTI_COMMANDO
-    };
+  };
 
-    if (!obj)
-        return;
+  if (!obj)
+    return;
 
-    if (min_percent < 0) min_percent = 0;
-    if (max_percent > 100) max_percent = 100;
-    if (min_percent > max_percent)
-        min_percent = max_percent;
+  if (min_percent < 0)
+    min_percent = 0;
+  if (max_percent > 100)
+    max_percent = 100;
+  if (min_percent > max_percent)
+    min_percent = max_percent;
 
-    for (i = 0; i < NUMELEMS(anti_flags); i++)
-    {
-        roll = number(min_percent, max_percent);
-        if (chance(roll))
-            REMOVE_BIT(obj->obj_flags.extra_flags, anti_flags[i]);
-    }
+  for (i = 0; i < NUMELEMS(anti_flags); i++)
+  {
+    roll = number(min_percent, max_percent);
+    if (chance(roll))
+      REMOVE_BIT(obj->obj_flags.extra_flags, anti_flags[i]);
+  }
 }

@@ -424,7 +424,13 @@ int move_char(CHAR *ch, int dir, bool spec_check) {
   if (IS_SET(ROOM_FLAGS(CHAR_REAL_ROOM(ch)), MOVE_TRAP) && !IS_IMMORTAL(ch)) {
     send_to_char("\n\rYour movement points have been drained by the surroundings.\n\r", ch);
 
-    GET_MOVE(ch) = 0;
+    // Prestige Perk 59
+    if (IS_MORTAL(ch) && (GET_PRESTIGE_PERK(ch) >= 59)) {
+      GET_MOVE(ch) = (GET_MOVE(ch) * 5) / 100;
+    }
+    else {
+      GET_MOVE(ch) = 0;
+    }
   }
 
   /* Check for mana drain. */

@@ -230,7 +230,7 @@ int squire_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_SQUIRE) &&
         !enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       squire_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -275,7 +275,7 @@ int swashbuckler_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
     if (enchanted_by_type(ch, ENCHANT_SWASHBUCKLER) &&
         !enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       swashbuckler_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -316,7 +316,7 @@ int knight_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
   {
     if (enchanted_by_type(ch, ENCHANT_KNIGHT) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       knight_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -363,7 +363,7 @@ int firstsword_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_FIRSTSWORD) &&
         !enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       firstsword_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -408,7 +408,7 @@ int justiciar_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
     if (enchanted_by_type(ch, ENCHANT_JUSTICIAR) &&
         !enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       justiciar_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -451,7 +451,7 @@ int lordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_LORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       lordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -498,7 +498,7 @@ int wanderer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_WANDERER) &&
         !enchanted_by_type(ch, ENCHANT_FORESTER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       wanderer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -544,7 +544,7 @@ int forester_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_FORESTER) &&
         !enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       forester_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -584,7 +584,7 @@ int tamer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
   {
     if (enchanted_by_type(ch, ENCHANT_TAMER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       tamer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -631,7 +631,7 @@ int apprentice_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_APPRENTICE) &&
         !enchanted_by_type(ch, ENCHANT_WARLOCK) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       apprentice_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -677,7 +677,7 @@ int warlock_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_WARLOCK) &&
         !enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       warlock_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -718,7 +718,7 @@ int sorcerer_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_SORCERER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       sorcerer_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -764,7 +764,7 @@ int minstrel_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
     if (enchanted_by_type(ch, ENCHANT_MINSTREL) &&
         !enchanted_by_type(ch, ENCHANT_POET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       minstrel_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -810,7 +810,7 @@ int poet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *ar
     if (enchanted_by_type(ch, ENCHANT_POET) &&
         !enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       poet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -850,7 +850,7 @@ int conductor_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
   {
     if (enchanted_by_type(ch, ENCHANT_CONDUCTOR) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17)
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17)
     {
       conductor_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -898,7 +898,7 @@ int private_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_PRIVATE) &&
         !enchanted_by_type(ch, ENCHANT_COMMODORE) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       private_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -944,7 +944,7 @@ int commodore_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
     if (enchanted_by_type(ch, ENCHANT_COMMODORE) &&
         !enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       commodore_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -985,7 +985,7 @@ int commander_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, cha
   {
     if (enchanted_by_type(ch, ENCHANT_COMMANDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       commander_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1032,7 +1032,7 @@ int highwayman_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_HIGHWAYMAN) &&
         !enchanted_by_type(ch, ENCHANT_BRIGAND) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       highwayman_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1077,7 +1077,7 @@ int brigand_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_BRIGAND) &&
         !enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       brigand_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1118,7 +1118,7 @@ int assassin_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char
   {
     if (enchanted_by_type(ch, ENCHANT_ASSASSIN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       assassin_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1164,7 +1164,7 @@ int minion_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_MINION) &&
         !enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       minion_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1210,7 +1210,7 @@ int darkwarder_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
     if (enchanted_by_type(ch, ENCHANT_DARKWARDER) &&
         !enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       darkwarder_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1254,7 +1254,7 @@ int darklordlady_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, 
   {
     if (enchanted_by_type(ch, ENCHANT_DARKLORDLADY) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       darklordlady_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1301,7 +1301,7 @@ int tsume_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *a
     if (enchanted_by_type(ch, ENCHANT_TSUME) &&
         !enchanted_by_type(ch, ENCHANT_SHINOBI) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       tsume_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1347,7 +1347,7 @@ int shinobi_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_SHINOBI) &&
         !enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       shinobi_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1388,7 +1388,7 @@ int shogun_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
   {
     if (enchanted_by_type(ch, ENCHANT_SHOGUN) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       shogun_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1435,7 +1435,7 @@ int acolyte_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
     if (enchanted_by_type(ch, ENCHANT_ACOLYTE) &&
         !enchanted_by_type(ch, ENCHANT_BISHOP) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       acolyte_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1481,7 +1481,7 @@ int bishop_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char *
     if (enchanted_by_type(ch, ENCHANT_BISHOP) &&
         !enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       bishop_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);
@@ -1521,7 +1521,7 @@ int prophet_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, char 
   {
     if (enchanted_by_type(ch, ENCHANT_PROPHET) &&
         !IS_SET(world[CHAR_REAL_ROOM(ch)].room_flags, CHAOTIC) &&
-        (IS_IMMORTAL(char_in_room) || !((GET_PRESTIGE_PERK(ch) >= 17) && chance(10)))) // Prestige Perk 17
+        (IS_IMMORTAL(char_in_room) || !(chance(PRESTIGE_RANK_DEATH_CHANCE(ch))))) // Prestige Perk 17
     {
       prophet_enchantment(ench, ch, char_in_room, MSG_REMOVE_ENCH, NULL);
       enchantment_remove(ch, ench, TRUE);

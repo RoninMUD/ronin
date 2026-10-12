@@ -1404,8 +1404,11 @@ int vault_offer(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
   {
     int storage_price = (total_cost_of_obj(obj) * 3) / 2;
 
-    // Prestige Perk 18
-    if (GET_PRESTIGE_PERK(ch) >= 18) {
+    // Prestige Perk 18, 46
+    if (GET_PRESTIGE_PERK(ch) >= 46) {
+      storage_price *= 0.85;
+    }
+    else if (GET_PRESTIGE_PERK(ch) >= 18) {
       storage_price *= 0.9;
     }
 
@@ -2053,8 +2056,11 @@ int vault_store(CHAR *vault_guard, CHAR *ch, char *arg, int cmd)
 
   storage_price = (total_cost_of_obj(vault_obj) * 3) / 2;
 
-  // Prestige Perk 18
-  if (GET_PRESTIGE_PERK(ch) >= 18) {
+  // Prestige Perk 18, 46
+  if (GET_PRESTIGE_PERK(ch) >= 46) {
+    storage_price *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 18) {
     storage_price *= 0.9;
   }
 
@@ -3477,8 +3483,12 @@ void promote_mage(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -3578,8 +3588,12 @@ void promote_cleric(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -3685,8 +3699,12 @@ void promote_ninja(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -3797,8 +3815,12 @@ void promote_warrior(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -3911,8 +3933,12 @@ void promote_paladin(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -4036,8 +4062,12 @@ void promote_nomad(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -4150,8 +4180,12 @@ void promote_antipaladin(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -4260,8 +4294,12 @@ void promote_bard(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -4379,8 +4417,12 @@ void promote_commando(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -4497,8 +4539,12 @@ void promote_thief(CHAR *promoter, CHAR *ch)
     gold=1000000;
   }
 
-  // Prestige Perk 4
-  if (GET_PRESTIGE_PERK(ch) >= 4) {
+  // Prestige Perk 4, 39
+  if (GET_PRESTIGE_PERK(ch) >= 39) {
+    exp *= 0.85;
+    gold *= 0.85;
+  }
+  else if (GET_PRESTIGE_PERK(ch) >= 4) {
     exp *= 0.9;
     gold *= 0.9;
   }
@@ -6295,7 +6341,7 @@ int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     "10% chance that a 1 point token is worth 2 subclass points.",                                    // Prestige Perk 12
     "10% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 13
     "10% increase in number of items that can be carried.",                                           // Prestige Perk 14
-    "Instant passage to Daimyo on a new airship located above the Midgaard docks.",                   // Prestige Perk 15
+    "Instant passage to Daimyo on a new airship located above the Midgaard docks. Keyword: 'daimyo'", // Prestige Perk 15
     "5% discount on items purchased from shops.",                                                     // Prestige Perk 16
     "10% chance to maintain existing rank upon death.",                                               // Prestige Perk 17
     "10% discount on vault storage costs.",                                                           // Prestige Perk 18
@@ -6307,6 +6353,80 @@ int saga_prestige(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     "2% chance when purchasing a normal meta to receive a bribe meta instead.",                      // Prestige Perk 24
     "5 point increase to mana regen cap while engaged in combat.",                                    // Prestige Perk 25
     "You no longer require food or drink, and you can now quaff two potions per tick.",               // Prestige Perk 26
+    "+100 movement points.",                                                                          // Prestige Perk 27
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 28
+    "1% crit hit chance.",                                                                            // Prestige Perk 29
+    "+1 hitroll.",                                                                                    // Prestige Perk 30
+    "+1 hitroll, +1 damroll when using 1 handed weapons.",                                            // Prestige Perk 31
+    "15% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 32
+    "+100 movement points.",                                                                          // Prestige Perk 33
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 34
+    "15% increase in number of items that can be carried.",                                           // Prestige Perk 35
+    "1x increased remort experience multiplier (maximum of 26x).",                                    // Prestige Perk 36
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 37
+    "1x increased maximum death experience multiplier. (4x instead of 3x)",                           // Prestige Perk 38
+    "15% experience and gold discount on rank purchases.",                                            // Prestige Perk 39
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 40
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 41
+    "+100 movement points.",                                                                          // Prestige Perk 42
+    "1% less permanent experience loss upon death.",                                                  // Prestige Perk 43
+    "15% chance to maintain existing rank upon death.",                                               // Prestige Perk 44
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 45
+    "15% discount on vault storage costs.",                                                           // Prestige Perk 46
+    "20% chance per tick to maintain existing decay level on worn/held items.",                       // Prestige Perk 47
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 48
+    "+100 movement points.",                                                                          // Prestige Perk 49
+    "Additional 5% chance to break through sphere.",                                                  // Prestige Perk 50
+    "Instant passage to Olympus on the airship located above the Midgaard docks. Keyword: 'olympus'", // Prestige Perk 51
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 52
+    "Home command now available for 0 coins; acts as if you recited a scroll.",                       // Prestige Perk 53
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 54
+    "Identify command now available for 0 coins; acts as if you recited a scroll.",                   // Prestige Perk 55
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 56
+    "Additional 5% chance to break through invulnerability.",                                         // Prestige Perk 57
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 58
+    "Movement traps only take 95% of movement points instead of 100%.",                               // Prestige Perk 59
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 60
+    "Instant passage to Eryndlyn on the airship located above the Midgaard docks. Keyword 'eryndlyn'", // Prestige Perk 61
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 62
+    "+100 movement points.",                                                                          // Prestige Perk 63
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 64
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 65
+    "+100 movement points.",                                                                          // Prestige Perk 66
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 67
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 68
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 69
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 70
+    "Any aggressive monster that is 5 levels lower than you will not attack you.",                    // Prestige Perk 71
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 72
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 73
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 74
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 75
+    "20% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 76
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 77
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 78
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 79
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 80
+    "1x increased maximum death experience multiplier. (5x instead of 4x)",                           // Prestige Perk 81
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 82
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 83
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 84
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 85
+    "20% chance to maintain existing rank upon death.",                                               // Prestige Perk 86
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 87
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 88
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 89
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 90
+    "25% quest point and subclass point discount on remort cost.",                                    // Prestige Perk 91
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 92
+    "+1 to in combat mana regen cap.",                                                                // Prestige Perk 93
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 94
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 95
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 96
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 97
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 98
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 99
+    "+2 to in combat mana regen cap.",                                                                // Prestige Perk 100
   };
   const int EXP_REQUIRED = 100000000;
   const int GOLD_REQUIRED = 20000000;
@@ -6383,16 +6503,27 @@ Lvl   Perk Description\n\r\
       GET_EXP(ch) -= EXP_REQUIRED;
       GET_GOLD(ch) -= GOLD_REQUIRED;
 
-      GET_PRESTIGE(ch) += 1;
+      SET_PRESTIGE(ch, GET_PRESTIGE(ch) + 1);
 
-      ch->points.max_hit += PRESTIGE_HIT_GAIN;
+      int prestige_hit_gain = PRESTIGE_HIT_GAIN;
+      int prestige_mana_gain = PRESTIGE_MANA_GAIN;
+
+      if (GET_PRESTIGE(ch) > PRESTIGE_HALF_GAIN_LEVEL) {
+        prestige_hit_gain /= 2;
+        prestige_mana_gain /= 2;
+      }
+
+      ch->points.max_hit += prestige_hit_gain;
 
       if ((GET_CLASS(ch) == CLASS_THIEF) || (GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) {
-        ch->points.max_hit += PRESTIGE_MANA_GAIN;
+        ch->points.max_hit += prestige_mana_gain;
       }
       else {
-        ch->points.max_mana += PRESTIGE_MANA_GAIN;
+        ch->points.max_mana += prestige_mana_gain;
       }
+
+      // Prestige Perk 27, 33, 42, 49, 63, 66
+      ch->points.max_move += (PRESTIGE_MOVE_BONUS(GET_PRESTIGE(ch)) - PRESTIGE_MOVE_BONUS(GET_PRESTIGE(ch) - 1));
 
       snprintf(buf, sizeof(buf), "$n tells you 'Congratulations %s, your prestige has increased!  You've earned quite the reputation!'", GET_NAME(ch) ? GET_NAME(ch) : "(null)");
       act(buf, FALSE, mob, 0, ch, TO_VICT);
@@ -6433,7 +6564,7 @@ int wesley_zeppelin(CHAR *mob, CHAR *ch, int cmd, char *arg) {
     "scoffs",
   };
 
-  const int dest_room = 500;
+  int dest_room = NOWHERE;
 
   char buf[MIL];
 
@@ -6493,9 +6624,29 @@ int wesley_zeppelin(CHAR *mob, CHAR *ch, int cmd, char *arg) {
   if (cmd == CMD_SAY) {
     arg = one_argument(arg, buf);
 
-    if (strcmp(buf, "ready")) return FALSE;
+    int required_perk = 0;
 
-    if (GET_PRESTIGE_PERK(ch) >= 15) {
+    if (!strcmp(buf, "ready")) {
+      dest_room = 500;
+      required_perk = 15;
+    }
+	else if (!strcmp(buf, "daimyo")) {
+      dest_room = 500;
+      required_perk = 15;
+    }
+    else if (!strcmp(buf, "olympus")) {
+      dest_room = 28769;
+      required_perk = 51;
+    }
+    else if (!strcmp(buf, "eryndlyn")) {
+      dest_room = 5128;
+      required_perk = 61;
+    }
+    else {
+      return FALSE;
+    }
+
+    if (GET_PRESTIGE_PERK(ch) >= required_perk) {
       act("$n says 'Your wish is our command.  Enjoy your flight!'", FALSE, mob, 0, 0, TO_ROOM);
 
       for (CHAR *temp_ch = world[CHAR_REAL_ROOM(mob)].people, *next_ch; temp_ch; temp_ch = next_ch) {

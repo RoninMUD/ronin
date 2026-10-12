@@ -1126,8 +1126,8 @@ void update_object(OBJ *obj, bool equipped) {
       decay = FALSE;
     }
 
-    // Prestige Perk 22
-    if (ch && !IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_RENT) && ((GET_PRESTIGE_PERK(ch) >= 22) && chance(10))) {
+    // Prestige Perk 22, 47
+    if (ch && !IS_SET(OBJ_EXTRA_FLAGS(obj), ITEM_ANTI_RENT) && chance(((GET_PRESTIGE_PERK(ch) >= 47) ? 20 : ((GET_PRESTIGE_PERK(ch) >= 22) ? 10 : 0)))) {
       decay = FALSE;
     }
 

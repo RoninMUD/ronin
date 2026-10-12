@@ -9715,10 +9715,14 @@ Players looking for an enduring degree of fame and fortune can earn prestige.
 By visiting Saga in the Grunting Boar Inn, a player can 'earn prestige' by
 spending 100 million experience points and 20 million gold.
 
-Each level of prestige earned will increase a player's hit points by 8 and mana
-by 4 (or 12 hit points for non spell-casting classes).  At the fifth level of
-prestige, and every ten levels thereafter, players will also gain access to a
-perk.  There are 255 levels of prestige available, for a total of 26 perks.
+Each level of prestige earned up to level 255 will increase a player's hit 
+points by 8 and mana by 4 (or 12 hit points for non spell-casting classes).  
+Starting at level 256 gains will be half; 4 HP and 2 mana, or 6 for 
+non-casters. 
+
+At the fifth level of prestige, and every ten levels thereafter, players 
+will also gain access to a perk.  There are 995 levels of prestige available,
+for a total of 99 perks.
 
 A complete list of Perks, and the amount of prestige required to unlock them,
 can be viewed by visiting Saga and typing 'list'.

@@ -681,7 +681,6 @@ void do_song(CHAR* ch, char* arg, int cmd)
         if (msg) {
           send_to_char(msg, tmp_victim);
         }
-
         affect_from_char(tmp_victim, respite_dispel);
       }
     }

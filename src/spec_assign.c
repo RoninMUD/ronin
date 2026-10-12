@@ -133,6 +133,7 @@ void assign_deathplaygroundcrypt(void);
 void assign_darkspire(void);
 void assign_veilofunspentfate(void);
 void assign_ossuaryoftheFallenTitan(void);
+void assign_rpupgrade(void);
 
 //void assign_wbw(void);
 #ifdef TEST_SITE
@@ -240,6 +241,7 @@ void assign_mobiles(void)
   assign_darkspire();
   assign_veilofunspentfate();
   assign_ossuaryoftheFallenTitan();
+  assign_rpupgrade();
   
 //  assign_wbw();
 #ifdef TEST_SITE

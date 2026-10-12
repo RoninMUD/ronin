@@ -1392,16 +1392,22 @@ bool keys_to_ring( OBJ* chain );
 // some flexibility. It seems like a reasonable price to pay, though.
 int mus_keychain(OBJ *chain, CHAR *ch, int cmd, char *arg)
 {
+  if (!chain) return FALSE;
+
   if( cmd == CMD_PRACTICE && ch == chain->equipped_by )
   {
     send_to_char( "You feel a little funny practicing while holding that key chain.\r\n", ch );
     return TRUE;
   }
 
-  // Jiggle keys to force keys_to_ring without waiting for tick
+  // Jiggle keys to force keys_to_ring without waiting for tick.
+  // Only the keychain owner is allowed to trigger it.
   if (cmd == CMD_UNKNOWN) {
-    ch = chain->carried_by;
-    if (!ch || !OBJ_CARRIED_BY(chain) || !AWAKE(ch)) return FALSE;
+    CHAR *owner = chain->carried_by ? chain->carried_by : chain->equipped_by;
+
+    if (!owner || (owner != ch) || !AWAKE(owner)) return FALSE;
+
+    ch = owner;
 
     char buf[MIL];
 

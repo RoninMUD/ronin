@@ -174,6 +174,7 @@ OBJS_RONIN_SPEC = \
 	spec.questyvaderII.o \
 	spec.rank.o \
 	spec.remorhaz.o \
+	spec.rpupgrade.o \
 	spec.sphinx.o \
 	spec.stable.o \
 	spec.swamp.o \
