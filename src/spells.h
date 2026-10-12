@@ -978,6 +978,7 @@ void print_spell_messages(CHAR *victim, int spell);
 void print_spell_wear_off_message(CHAR *victim, int spell);
 bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags);
 int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_type, int saving_throw);
+double class_spell_multiplier(CHAR *ch, int spell, bool heal);
 int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal);
 void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *tar_obj), int level, int aoe_flags);
 

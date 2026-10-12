@@ -470,8 +470,8 @@ void cast_meteor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_meteor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  /* Archmage SC1: Meteor - 60 + (5 * INT mod) damage. */
-  damage_spell(ch, victim, SPELL_METEOR, level, 60 + (5 * GET_INT_BONUS(ch)), DAM_MAGICAL, SAVING_NONE);
+  /* Archmage SC1: Meteor - (50-60) + (5 * INT mod) damage. */
+  damage_spell(ch, victim, SPELL_METEOR, level, number(50, 60) + (5 * GET_INT_BONUS(ch)), DAM_MAGICAL, SAVING_NONE);
 }
 
 /* Archmage SC3: Twinspell. Passively splashes a copy of a damage spell onto a second nearby hostile that is already
@@ -2063,7 +2063,7 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  damage(ch, victim, 350, SPELL_WITHER, DAM_MAGICAL);
+  damage_spell(ch, victim, SPELL_WITHER, level, 350, DAM_MAGICAL, SAVING_NONE);
 
   if (IS_ALIVE(victim)) {
     /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
@@ -2166,7 +2166,7 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     dam *= 2;
   }
 
-  damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
+  damage_spell(ch, victim, SPELL_DUSK_REQUIEM, level, dam, DAM_MAGICAL, SAVING_NONE);
 
   /* We only want to reduce duration if the spell was cast, not if Shadow Wraith is expiring. */
   if (level > 0) {
@@ -2275,7 +2275,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
       act("$n smites you with $s divine hammer, crushing you into the earth!", FALSE, ch, 0, victim, TO_VICT);
       act("You smite $N with your divine hammer, crushing $M into the earth!", FALSE, ch, 0, victim, TO_CHAR);
 
-      damage(ch, victim, 900, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage_spell(ch, victim, SPELL_DIVINE_HAMMER, GET_LEVEL(ch), 900, DAM_MAGICAL, SAVING_NONE);
     }
 
     ench_from_char(ch, ENCH_NAME_JUDGEMENT_STRIKE, 0, FALSE);

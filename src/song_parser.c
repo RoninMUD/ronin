@@ -8,6 +8,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -786,7 +787,8 @@ void do_song(CHAR* ch, char* arg, int cmd)
       {
         send_to_char("The torrent of music overwhelms your senses and pierces your soul.\n\r", tmp_victim);
 
-        damage(ch, tmp_victim, 350, TYPE_UNDEFINED, DAM_SOUND);
+        /* Class spell power applies to Blade Dance's damage. */
+        damage(ch, tmp_victim, (int)lround(350 * class_spell_multiplier(ch, TYPE_UNDEFINED, FALSE)), TYPE_UNDEFINED, DAM_SOUND);
 
         if (SAME_ROOM(ch, tmp_victim)) {
           hit(ch, tmp_victim, TYPE_UNDEFINED);
