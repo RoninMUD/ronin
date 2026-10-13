@@ -3016,21 +3016,21 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   /* Nomads get up to 40% chance to crit with all hits that are successes
    * Ranger gets additional 20% between Awareness and Berserk */
   int critical_chance = 20;
-  if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)){
+  if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)) {
 	
-	critical_chance += (GET_DEX_BONUS(attacker) * 2);
+	  critical_chance += (GET_DEX_BONUS(attacker) * 2);
 	
-	//Awareness adds 10% to the chance.
-	if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
-		critical_chance += 10;
-	}
-	//Berserk adds another 10% chance
-	if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
-		critical_chance += 10;
-	}
-	if(number(1,100) < critical_chance){
-		success = HIT_CRITICAL;
-	}
+	  //Awareness adds 10% to the chance.
+	  if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
+		  critical_chance += 10;
+	  }
+	  //Berserk adds another 10% chance
+	  if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
+		  critical_chance += 10;
+	  }
+	  if(number(1,100) < critical_chance) {
+		  success = HIT_CRITICAL;
+	  }
   }
 
   // Prestige Perk 29

@@ -1906,7 +1906,7 @@ int trap_binding_snare(OBJ *snare, CHAR *ch, int cmd, char *arg)
     snare_ench_duration = OBJ_VALUE(snare, 2);
     switch (number(1, 3)) {
     case 1: // expose
-      ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, snare_ench_duration, ENCH_INTERVAL_ROUND, 50, APPLY_ARMOR, 0, 0, exposed_enchant);
+      ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, snare_ench_duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
       sprintf(buf, "The snare whips taut around %s, its woven thread flaring bright orange as %s stands exposed!\n\r", GET_SHORT(victim), HESH(victim));
       send_to_room(buf, CHAR_REAL_ROOM(victim));
       break;
