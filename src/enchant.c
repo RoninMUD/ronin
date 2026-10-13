@@ -33,6 +33,7 @@
 #include "spells.h"
 #include "fight.h"
 #include "aff_ench.h"
+#include "subclass.h"
 
 extern int hit_limit(CHAR *ch);
 extern int mana_limit(CHAR *ch);
@@ -1569,6 +1570,115 @@ int degenerate_enchantment(ENCH *ench, CHAR *ch, CHAR *char_in_room, int cmd, ch
   return FALSE;
 }
 
+bool has_inner_peace_immunity(CHAR *ch) {
+  if (!ch) return FALSE;
+
+  /* Mystic SC2 gains a permanent Inner Peace passive, while Tranquility grants a
+   * temporary equivalent to other mortals.  Both should be treated as the same
+   * immunity source for blindness checks. */
+  return (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) || enchanted_by(ch, ENCH_NAME_INNER_PEACE);
+}
+
+void ensure_inner_peace_enchant(CHAR *ch) {
+  if (!ch) return;
+
+  ENCH *inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+
+  /* Mystic SC2 keeps a permanent Inner Peace passive.  If a temporary Tranquility
+   * variant is present, it must not overwrite that persistent state. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+    if (inner_peace && (inner_peace->duration == -1)) {
+      /* Keep the permanent source bonus synced with the Mystic's current WIS. */
+      inner_peace->temp[0] = GET_WIS_BONUS(ch);
+      return;
+    }
+
+    if (inner_peace && (inner_peace->duration != -1)) {
+      enchantment_remove(ch, inner_peace, TRUE);
+    }
+
+    if (!inner_peace || (inner_peace->duration != -1)) {
+      ench_apply(ch, FALSE, ENCH_NAME_INNER_PEACE, ENCHANT_INNER_PEACE, -1, 0, 0, 0, 0, 0, inner_peace_enchantment);
+      inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+    }
+
+    if (inner_peace) {
+      inner_peace->temp[0] = GET_WIS_BONUS(ch);
+    }
+
+    return;
+  }
+
+  /* Non-Mystics can only have the temporary Tranquility-derived Inner Peace. */
+  if (inner_peace && (inner_peace->duration == -1)) {
+    enchantment_remove(ch, inner_peace, TRUE);
+  }
+}
+
+void apply_tranquility_inner_peace(CHAR *ch, CHAR *caster, int duration) {
+  if (!ch || (duration <= 0)) return;
+
+  CHAR *source = caster ? caster : ch;
+  ENCH *inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+
+  /* Mystics already get their passive from the permanent enchant; Tranquility just
+   * ensures that an equivalent effect exists without replacing the superior source. */
+  if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+    ensure_inner_peace_enchant(ch);
+    return;
+  }
+
+  /* The Tranquility spell is the authority for the temporary effect window.  If the
+   * spell has ended before the enchant timer expires, clear the wrapped Inner Peace so
+   * we do not leave a stale temporary effect hanging around. */
+  if (!affected_by_spell(ch, SPELL_TRANQUILITY)) {
+    if (inner_peace && (inner_peace->duration != -1)) {
+      enchantment_remove(ch, inner_peace, TRUE);
+    }
+    return;
+  }
+
+  if (inner_peace && (inner_peace->duration == -1)) {
+    return;
+  }
+
+  if (inner_peace && (inner_peace->duration != -1)) {
+    enchantment_remove(ch, inner_peace, TRUE);
+  }
+
+  /* Tranquility is measured in ticks, while the enchant timer is a round-based
+   * countdown.  A temp Inner Peace enchant must outlast the full spell window to
+   * avoid expiring before the spell does, so we give it a round buffer large enough
+   * to cover the full spell lifetime.  The spell-state guard below remains the final
+   * authority for removing it early if Tranquility drops. */
+  const int temp_inner_peace_duration = MAX(duration * 20, 140);
+  ench_apply(ch, TRUE, ENCH_NAME_INNER_PEACE, ENCHANT_INNER_PEACE, temp_inner_peace_duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, inner_peace_enchantment);
+
+  /* Store the caster's WIS bonus on the temporary enchant; the combat cap reads
+   * this value later instead of using the target's current WIS. */
+  inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+  if (inner_peace) {
+    inner_peace->temp[0] = GET_WIS_BONUS(source);
+  }
+}
+
+int inner_peace_enchantment(ENCH *ench, CHAR *enchanted_ch, CHAR *char_in_room, int cmd, char *arg) {
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !enchanted_ch) return FALSE;
+
+    if (IS_MORTAL(enchanted_ch) && check_subclass(enchanted_ch, SC_MYSTIC, 2)) {
+      ensure_inner_peace_enchant(enchanted_ch);
+    }
+    else {
+      send_to_char("Your sense of inner peace fades.\n\r", enchanted_ch);
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
 
 void assign_enchantments(void) {
   log_s("Defining Enchantments");
@@ -1640,6 +1750,7 @@ void assign_enchantments(void) {
 #endif
 
   ENCHANTO("Frightful Presence"             , ENCHANT_FRIGHTFUL   ,  10,   0,  -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, frightful_presence);
+  ENCHANTO("Inner Peace"                    , ENCHANT_INNER_PEACE ,  -1,   0,   0, APPLY_NONE            , AFF_NONE            , AFF_NONE, inner_peace_enchantment);
 
   ENCHANTO("The Curse of the Lich"          , ENCHANT_LICH        ,   5,   0,  -5, APPLY_HITROLL         , AFF_NONE            , AFF_NONE, lich_curse);
 }

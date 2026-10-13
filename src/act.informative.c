@@ -634,7 +634,7 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
       }
 
       if (IS_AFFECTED(target, AFF_SANCTUARY)) {
-        if (af_list[SPELL_DISRUPT_SANCT]) {
+        if (ench_enchanted_by(target, ENCH_NAME_DISRUPT_SANCT, 0)) {
           act("......$n's protective aura has been disrupted!", FALSE, target, 0, ch, TO_VICT);
         }
         else {
@@ -692,10 +692,6 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           act("......$n's pulse rushes with supernatural speed.", FALSE, target, 0, ch, TO_VICT);
         }
 
-        if (af_list[SPELL_BLADE_BARRIER]) {
-          act("......$n is surrounded by a barrier of whirling blades.", FALSE, target, 0, ch, TO_VICT);
-        }
-
         if (af_list[SPELL_DESECRATE]) {
           act("......$n's sinister presence desecrates the surroundings.", FALSE, target, 0, ch, TO_VICT);
         }
@@ -724,8 +720,9 @@ void show_char_to_char(CHAR *target, CHAR *ch, int mode) {
           }
         }
 
-        /* Mystic SC2: Inner Peace - Ignore blindness. */
-        if (!(IS_MORTAL(target) && check_subclass(target, SC_MYSTIC, 3))) {
+        /* Inner Peace immunity applies to both the Mystic passive and the
+         * Tranquility-derived temporary effect. */
+        if (!has_inner_peace_immunity(target)) {
           if (IS_AFFECTED(target, AFF_BLIND) || af_list[SPELL_BLINDNESS]) {
             act("......$n stumbles about wildly!", FALSE, target, 0, ch, TO_VICT);
           }
@@ -1046,7 +1043,7 @@ void do_look(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND) && !(IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2))) {
+  if (!IS_IMMORTAL(ch) && IS_AFFECTED(ch, AFF_BLIND) && !has_inner_peace_immunity(ch)) {
     send_to_char("You can't see anything; you're blind!\n\r", ch);
 
     return;

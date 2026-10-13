@@ -59,6 +59,7 @@ void qhit(CHAR *ch, CHAR *victim, int type);
 bool mob_disarm(struct char_data *mob, struct char_data *victim, bool to_ground);
 
 int get_attack_type(CHAR *ch, OBJ *weapon);
+void weapon_attack_proc(CHAR *ch, CHAR *victim, OBJ *weapon);
 
 extern struct char_data *combat_list;
 

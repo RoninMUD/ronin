@@ -438,8 +438,8 @@ static bool check_owner_gate(CHAR *ch, OBJ *item, int *extra_aqp_cost, char *err
 
     /* check if this specific co-owner */
     CHAR *existing_owner = find_online_char_by_id(item->ownerid[i]);
-    
-    if (!existing_owner || !ch->desc || !existing_owner->desc || 
+
+    if (!existing_owner || !ch->desc || !existing_owner->desc ||
         strcmp(ch->desc->host, existing_owner->desc->host) != 0) {
       all_owners_same_multi = FALSE;
       /* NOTE: don't break here, still need to check if later owner slot is requester */
@@ -836,7 +836,7 @@ static bool do_affect_purchase(CHAR *ch, OBJ *item, const char *affect_name, cha
             aqp_cost / RP_TO_AQP_RATIO, aqp_cost, def->canonical);
     }
     return TRUE;
-  }  
+  }
 
   if (!collect_payers(ch, payer_arg, aqp_cost, payers, &payer_count, err_buf)) {
     strcpy(result_buf, err_buf);

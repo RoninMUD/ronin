@@ -671,6 +671,9 @@ void divide_experience(CHAR *ch, CHAR *victim, int none)
 
   total_exp = GET_EXP(victim) / 3;
   
+  /* Enchanter SC5: Binding Mastery - kills by charmed followers count as the Enchanter's. */
+  CHAR *binding_owner = binding_mastery_owner(ch);
+  if (binding_owner) ch = binding_owner;
 
   /* Sometime in the future this will be set in mob stats - Aug 99 */
   if (victim->specials.max_num_fighting == 0)
@@ -1634,8 +1637,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Camaraderie */
   if ((dmg > 0) && (victim != ch) && IS_MORTAL(victim) && (damage_type != DAM_CAMARADERIE) && affected_by_spell(victim, SPELL_CAMARADERIE)) {
-    int victim_dmg = MAX(lround(dmg * 0.6), 1);
-
     int comrades = 0;
 
     for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(victim)), *next_victim; temp_victim; temp_victim = next_victim) {
@@ -1646,10 +1647,11 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
       }
     }
 
-    /* Deal 60% original dmg to victim, then 100% spread among comrades in the same room; yes, 160% total damage. */
     if (comrades > 0) {
-      int comrade_dmg = MAX(lround(dmg / comrades), 1);
-
+      /* deal 70% original dmg to victim */
+      int victim_dmg = MAX(lround(dmg * 0.7), 1);
+      /* leftover dmg split amongst comrades */
+      int comrade_dmg = MAX(lround((dmg - victim_dmg) / comrades), 1);
       int victim_orig_room = CHAR_REAL_ROOM(victim);
 
       act("Some of the damage intended for $n is reflected to $s comrades!", FALSE, victim, 0, 0, TO_ROOM);
@@ -1921,10 +1923,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
       dmg = lround(dmg * 1.5);
     }
-    /* Frenzy */
-    else if (affected_by_spell(ch, SKILL_FRENZY)) {
-      dmg = lround(dmg * 1.5);
-    }
 
     /* Chanter SC2: War Chant - Increases the Chanter's damage. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_CHANTER, 2) && affected_by_spell(ch, SPELL_WAR_CHANT)) {
@@ -2019,17 +2017,38 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     dmg = 0;
   }
 
-  /* Enchanter SC4: Ethereal Nature */
-  if (IS_PHYSICAL_DAMAGE(damage_type) && (affected_by_spell(victim, SPELL_ETHEREAL_NATURE) && (duration_of_spell(victim, SPELL_ETHEREAL_NATURE) == (CHAOSMODE ? 12 : 30)))) {
-    dmg = 0;
+  /* Mirror Image: each incoming hit has a chance to hit a duplicate image instead of the actual character. */
+  if ((dmg > 0) && (victim != ch)) {
+    ENCH *image_ench = ench_get_from_char(victim, ENCH_NAME_MIRROR_IMAGE, 0);
+    int image_count = image_ench ? MAX(0, image_ench->temp[0]) : 0;
+
+    if (image_count > 0) {
+      const int real_hit_chance = 100 / (image_count + 1);
+
+      if (!chance(real_hit_chance)) {
+        dmg = 0;
+
+        if (image_count > 1) {
+          image_ench->temp[0]--;
+        }
+        else {
+          ench_remove(victim, image_ench, FALSE);
+          image_ench = NULL;
+        }
+
+        act("$n's attack strikes an illusory double of $N, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_NOTVICT);
+        act("Your attack strikes an illusory double of $N, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$n's attack strikes one of your illusory doubles, which shimmers and vanishes!", FALSE, ch, 0, victim, TO_VICT);
+      }
+    }
   }
 
   /* Handle damage reflection. */
   int reflect = 0, max_reflect = 0;
 
   /* Juggernaut */
-  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4) && EQ(victim, WEAR_BODY) && chance(10 + (GET_DEX_APP(victim) / 2))) {
-    reflect = MIN(MAX(0, (-calc_ac(victim) + 100) / 10), 40);
+  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) && IS_MORTAL(victim) && check_subclass(victim, SC_WARLORD, 4) && EQ(victim, WEAR_BODY) && chance(20 + (GET_DEX_APP(victim) / 2))) {
+    reflect = MIN(MAX(0, (-calc_ac(victim) + 100) / 4), 100);
 
     act("$n is cut by the jagged spikes protruding from your armor.", FALSE, ch, 0, victim, TO_VICT);
     act("$n is cut by the jagged spikes protruding from $N's armor.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -2071,32 +2090,6 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
     }
   }
 
-  /* Enchanter SC1: Blade Barrier */
-  if ((reflect <= 0) && IS_WEAPON_ATTACK(attack_type) &&  affected_by_spell(victim, SPELL_BLADE_BARRIER)) {
-    if (dmg > 0) {
-      max_reflect = calc_hit_damage(victim, ch, EQ(victim, WIELD), 0, RND_MAX);
-
-      if (IS_AFFECTED(victim, AFF_FURY)) {
-        max_reflect *= 2;
-      }
-      else if (IS_AFFECTED2(ch, AFF2_RAGE)) {
-        max_reflect = lround(max_reflect * 1.5);
-      }
-
-      /* NPCs can reflect more damage, to add an element of challenge. */
-      if (IS_NPC(victim)) {
-        max_reflect *= 4;
-      }
-
-      reflect = MIN(lround(dmg * 0.25), max_reflect);
-
-      dmg = MAX(dmg - reflect, 0);
-
-      act("Some of $n's damage is reflected to $m.", FALSE, ch, 0, 0, TO_ROOM);
-      act("Some of your damage is reflected back to you!", FALSE, ch, 0, 0, TO_CHAR);
-    }
-  }
-
   /* Rogue SC3: Vehemence - Increases damage taken by 10%. */
   if (IS_MORTAL(victim) && IS_SET(GET_TOGGLES(victim), TOG_VEHEMENCE) && check_subclass(victim, SC_ROGUE, 3)) {
     dmg = lround(dmg * 1.1);
@@ -2132,7 +2125,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   double damage_reduction = 0.0;
 
   /* Sanctuary */
-  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !affected_by_spell(victim, SPELL_DISRUPT_SANCT)) {
+  if (IS_AFFECTED(victim, AFF_SANCTUARY) && !ench_enchanted_by(victim, ENCH_NAME_DISRUPT_SANCT, 0)) {
     damage_reduction += 0.5;
   }
 
@@ -2143,8 +2136,28 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Apply damage reduction from affects. */
   dmg = MAX(lround(dmg * (1.0 - damage_reduction)), 0);
-  
-  
+
+  /* Familiar sentinel - absorb damage after sanctuary/fortification reduction. */
+  ENCH *familiar = ench_get_from_char(victim, ENCH_NAME_FAMILIAR, 0);
+  bool familiar_absorbed = FALSE;
+  bool familiar_broke = FALSE;
+  int familiar_absorbed_dmg = 0;
+
+  if (familiar && (familiar->temp[0] == 1) && (dmg > 0)) {
+    int absorb = MIN(dmg, MAX(1, familiar->temp[1]));
+
+    dmg -= absorb;
+    familiar->temp[1] -= absorb;
+    familiar_absorbed = TRUE;
+    familiar_absorbed_dmg = absorb;
+
+    if (familiar->temp[1] <= 0) {
+      /* ench_remove() doesn't signal the enchantment; the fade message is printed below, after the hit message. */
+      familiar_broke = TRUE;
+      ench_remove(victim, familiar, FALSE);
+    }
+  }
+
     //Evasion Damage Redunction
   //Set the defaults
   double evasion_physical_multiplier = 0.8;
@@ -2176,6 +2189,23 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   /* Ronin SC3: Combat Zen - Reduces poison damage by 50%. */
   if (IS_MORTAL(victim) && check_subclass(victim, SC_RONIN, 3) && (damage_type == DAM_POISON)) {
     dmg = lround(dmg * 0.5);
+  }
+
+  /* Mercenary SC1: Iron Skin - flat damage reduction while affected
+     Baseline 10% reduction; +10% if attacker is affected by Cloud of Confusion;
+     +10% if attacker is affected by Incendiary Cloud - 30% total possible
+     NOTE: non-mercenaries do not get the dmg reduction */
+  if (affected_by_spell(victim, SPELL_IRON_SKIN) && (dmg > 0) && check_subclass(victim, SC_MERCENARY, 1)) {
+    double reduction = 0.10; /* baseline 10% */
+
+    if (affected_by_spell(ch, SPELL_CLOUD_CONFUSION)) reduction += 0.10;
+    if (ench_enchanted_by(ch, ENCH_NAME_INCENDIARY_CLOUD, 0)) reduction += 0.10;
+
+    double mult = 1.0 - reduction;
+
+    if (mult < 0.0) mult = 0.0; //guardrail
+
+    dmg = lround(dmg * mult);
   }
 
   /* Limit total damage. */
@@ -2214,9 +2244,10 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Infidel SC3: Shadow Wraith */
   if (shadow_damage) {
-    shadow_damage = number(2, 6) / shadow_damage;
+    shadow_damage = number(1, 4);
 
     dmg_text /= shadow_damage;
+    dmg /= shadow_damage;
   }
 
   /* It's so anticlimactic. */
@@ -2226,14 +2257,18 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
 
   /* Grant hit EXP. */
   if (victim != ch) {
-    gain_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    /* Enchanter SC5: Binding Mastery - hit EXP from charmed followers goes to the Enchanter. */
+    CHAR *exp_ch = binding_mastery_owner(ch);
+    if (!exp_ch) exp_ch = ch;
 
-    if (GET_REMORT_EXP(ch) && !IS_SET(GET_PFLAG(ch), PLR_REMORT_DISABLED)) {
-      rv2_gain_remort_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    gain_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
+
+    if (GET_REMORT_EXP(exp_ch) && !IS_SET(GET_PFLAG(exp_ch), PLR_REMORT_DISABLED)) {
+      rv2_gain_remort_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
     }
 
-    if (GET_DEATH_EXP(ch)) {
-      gain_death_exp(ch, (GET_LEVEL(victim) * dmg) / 4);
+    if (GET_DEATH_EXP(exp_ch)) {
+      gain_death_exp(exp_ch, (GET_LEVEL(victim) * dmg) / 4);
     }
   }
 
@@ -2292,7 +2327,26 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
         }
       }
 
-      dam_message(dmg_text, ch, victim, attack_type, shadow_damage);
+      /* Show the hit as it would have landed (pre-absorb), so the damage tier is visible. */
+      int dmg_display = dmg_text + (shadow_damage ? (familiar_absorbed_dmg / shadow_damage) : familiar_absorbed_dmg);
+
+      dam_message(dmg_display, ch, victim, attack_type, shadow_damage);
+
+      if (familiar_absorbed) {
+        if (dmg_text <= 0) {
+          act("$n's sentinel familiar absorbs $N's attack.", FALSE, victim, 0, ch, TO_NOTVICT);
+          act("Your sentinel familiar absorbs $N's attack.", FALSE, victim, 0, ch, TO_CHAR);
+          act("$n's sentinel familiar absorbs your attack.", FALSE, victim, 0, ch, TO_VICT);
+        }
+        else {
+          act("$n's sentinel familiar absorbs part of the damage intended for $m.", FALSE, victim, 0, 0, TO_ROOM);
+          act("Your sentinel familiar absorbs part of the damage intended for you.", FALSE, victim, 0, 0, TO_CHAR);
+        }
+      }
+
+      if (familiar_broke) {
+        familiar_fade_message(victim, 1); /* FAMILIAR_SENTINEL */
+      }
 
       if (!IS_NPC(ch)) {
         ENDCOLOR(ch);
@@ -2624,11 +2678,6 @@ int calc_hitroll(CHAR *ch) {
     //  hitroll -= 5;
     //}
 
-    /* Frenzy: Hitroll Penalty */
-    if (affected_by_spell(ch, SKILL_FRENZY)) {
-      hitroll -= 10;
-    }
-
     /* Combat Zen: Blindness Hitroll Penalty Nullification */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_RONIN, 3)) {
       for (AFF *aff = ch->affected; aff; aff = aff->next) {
@@ -2762,19 +2811,15 @@ int calc_ac(CHAR *ch) {
       min_pc_ac -= GET_SC_LEVEL(ch) * 10;
     }
 
-	 /* Berserk Maxes AC at -200 */
-    if (affected_by_spell(ch, SKILL_BERSERK)) {
-      
-	  if(ac < -200){
-		  ac = -200;
-	  }
-	  min_pc_ac = -200;
-    }
-
-    /* Defend: AC Bonus and Max AC Adjustment */
+    /* Defend: AC Bonus and Max AC Adjustment (does not apply while Berserk; Berserk keeps the normal AC cap) */
     if (affected_by_spell(ch, SKILL_DEFEND) && !affected_by_spell(ch, SKILL_BERSERK)) {
       //ac -= 30;
       min_pc_ac = -330;
+    }
+
+    /* Iron Skin: extend AC cap for Mercenaries */
+    if (affected_by_spell(ch, SPELL_IRON_SKIN) && IS_MORTAL(ch) && check_subclass(ch, SC_MERCENARY, 1)) {
+      min_pc_ac -= 30;
     }
 
     /* Blur: AC Bonus */
@@ -2940,9 +2985,12 @@ int try_hit(CHAR *attacker, CHAR *defender) {
   /* The following conditions always result in a hit. */
   if (!AWAKE(defender) ||
       IS_AFFECTED(defender, AFF_FURY) ||
-      IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-      affected_by_spell(defender, SKILL_FRENZY)) {
+      IS_SET(GET_TOGGLES(defender), TOG_HOSTILE)) {
     return HIT_SUCCESS;
+  }
+
+  if (affected_by_spell(defender, SKILL_FRENZY)) {
+    return chance(70) ? HIT_SUCCESS : HIT_FAILURE;
   }
 
   /* Rage imposes a 50% chance of an automatic hit; Desecrate reduces this to 20%. */
@@ -2965,28 +3013,24 @@ int try_hit(CHAR *attacker, CHAR *defender) {
       success = HIT_CRITICAL;
     }
   }
-  //Nomads get 50% chance to crit with all hits that are successes
+  /* Nomads get up to 40% chance to crit with all hits that are successes
+   * Ranger gets additional 20% between Awareness and Berserk */
   int critical_chance = 20;
-  if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)){
+  if(GET_CLASS(attacker) == CLASS_NOMAD && IS_MORTAL(attacker) && (success == HIT_SUCCESS)) {
 	
-	//Apply Dex Modifier to Boost Crit Chance  Take the difference between dex and 18 and add 2% for each value
-	int char_dex = GET_DEX(attacker);
-	int dex_diff = MAX(0, MIN(char_dex, 25) - 18);
+	  critical_chance += (GET_DEX_BONUS(attacker) * 2);
 	
-	critical_chance += (dex_diff * 2);
-	
-	//Awareness adds 10% to the chance.
-	if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
-		critical_chance += 10;
-	}
-	//Berserk adds another 10% chance
-	
-	if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
-		critical_chance += 10;
-	}
-	if(number(1,100) < critical_chance){
-		success = HIT_CRITICAL;
-	}
+	  //Awareness adds 10% to the chance.
+	  if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
+		  critical_chance += 10;
+	  }
+	  //Berserk adds another 10% chance
+	  if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
+		  critical_chance += 10;
+	  }
+	  if(number(1,100) < critical_chance) {
+		  success = HIT_CRITICAL;
+	  }
   }
 
   // Prestige Perk 29
@@ -3064,12 +3108,19 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     /* The following conditions always result in a failure. */
     if ((GET_POS(defender) <= POSITION_INCAP) ||
         IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-        affected_by_spell(defender, SKILL_FRENZY)) {
+        is_frenzy_locked(defender)) {
       return FALSE;
     }
 
     /* NPC Dodge - 20% chance.. */
-    if (IS_AFFECTED(defender, AFF_DODGE) && chance(20)) {
+    int npc_dodge_chance = 20;
+
+    /* Sluggishness reduces effective dodge chance by 20% (relative). */
+    if (ench_enchanted_by(defender, ENCH_NAME_SLUGGISHNESS, 0)) {
+      npc_dodge_chance = (int)(npc_dodge_chance * 0.8);
+    }
+
+    if (IS_AFFECTED(defender, AFF_DODGE) && chance(npc_dodge_chance)) {
       print_avoidance_messages(attacker, defender, SKILL_DODGE);
 
       return SKILL_DODGE;
@@ -3084,7 +3135,7 @@ int try_avoidance(CHAR *attacker, CHAR *defender) {
     if ((GET_POS(defender) <= POSITION_STUNNED) ||
         IS_AFFECTED(defender, AFF_FURY) ||
         IS_SET(GET_TOGGLES(defender), TOG_HOSTILE) ||
-        affected_by_spell(defender, SKILL_FRENZY)) {
+        is_frenzy_locked(defender)) {
       return FALSE;
     }
 
@@ -3607,6 +3658,7 @@ bool perform_hit(CHAR *attacker, CHAR *defender, int type, int hit_num) {
       break;
 
     case SKILL_LUNGE:
+      ench_apply(defender, TRUE, ENCH_NAME_EXPOSED, 0, 2, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
       if (IS_AFFECTED(defender, AFF_INVUL) && !breakthrough(attacker, defender, type, BT_INVUL)) {
         act("$n tries to lunge at $N, but fails.", FALSE, attacker, 0, defender, TO_NOTVICT);
         act("$n tries to lunge at you, but fails.", FALSE, attacker, 0, defender, TO_VICT);
@@ -3746,6 +3798,20 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     if (!perform_hit(ch, victim, TYPE_UNDEFINED, 1)) return;
   }
 
+  /* SC_TRAPPER Frenzy: independent roll per stack (50% max) stops once
+   * fatigue sets in (affected_by_spell(ch, SKILL_FRENZY) is false by
+   * then - see frenzy_fatigue_tick in subclass.skills.c). */
+  if (affected_by_spell(ch, SKILL_FRENZY)) {
+    ENCH *fatigue = ench_get_from_char(ch, ENCH_NAME_FRENZY_FATIGUE, 0);
+    int stacks = fatigue ? fatigue->temp[0] : 0;
+
+    for (int i = 0; i < stacks; i++) {
+      if (chance(40 + GET_DEX_BONUS(ch))) {
+        dhit(ch, victim, type);
+      }
+    }
+  }
+
   /* PC Ninja 2nd Hit */
   if (!IS_NPC(ch) && (GET_CLASS(ch) == CLASS_NINJA)) {
     /* Force the appropriate weapon for Ninja 2nd attack. */
@@ -3773,12 +3839,8 @@ void hit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 298;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 249;
-    }
     /* Hostile/Rush */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 174;
     }
 
@@ -3793,18 +3855,6 @@ void hit(CHAR *ch, CHAR *victim, int type) {
   if (affected_by_spell(ch, SKILL_BERSERK)) {
     int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
     int percent = 40;
-
-    if (chance(percent + bonus)) {
-      dhit(ch, victim, type);
-
-      return;
-    }
-  }
-
-  /* Frenzy */
-  if (affected_by_spell(ch, SKILL_FRENZY)) {
-    int bonus = !IS_NPC(ch) ? GET_DEX_APP(ch) : 0;
-    int percent = 10;
 
     if (chance(percent + bonus)) {
       dhit(ch, victim, type);
@@ -3846,12 +3896,8 @@ void dhit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 283;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 246;
-    }
     /* Hostile/Rush */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE) || affected_by_spell(ch, SPELL_RUSH)) {
       check = 202;
     }
 
@@ -3889,12 +3935,8 @@ void thit(CHAR *ch, CHAR *victim, int type) {
     int bonus = GET_DEX_APP(ch) * 5;
     int check = 269;
 
-    /* Juggernaut */
-    if (IS_MORTAL(ch) && check_subclass(ch, SC_WARLORD, 4)) {
-      check = 234;
-    }
     /* Hostile */
-    else if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
+    if (IS_SET(GET_TOGGLES(ch), TOG_HOSTILE)) {
       check = 192;
     }
 

@@ -159,7 +159,6 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           else if ((GET_LEARNED(ch, number) >= MAX_SKILL_VALUE) && !list_all) continue;
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) continue;
-          else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_QUAD) && (GET_LEVEL(ch) < 50)) continue;
 		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else
@@ -198,7 +197,6 @@ void list_skills_to_prac(CHAR *ch, bool list_all)
           else if (!check_sc_access(ch, number)) continue;
           else if ((number == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) continue;
           else if ((number == SKILL_EVASION) && (GET_LEVEL(ch) < 50)) continue;
-          else if ((number == SKILL_SCAN) && !check_subclass(ch, SC_TRAPPER, 1)) continue;
           else if ((number == SKILL_BLOCK) && !check_subclass(ch, SC_RANGER, 3)) continue;
 		  else if (is_capped_skill(number) && GET_LEARNED(ch, number) >= MAX_PRAC(ch) && !list_all){continue;}
           else {
@@ -820,7 +818,6 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       }
 
       if (((skill == SKILL_TRIPLE) && (GET_LEVEL(ch) < 20)) ||
-          ((skill == SKILL_DISEMBOWEL) && (GET_LEVEL(ch) < 40)) ||
           ((skill == SKILL_QUAD) && (GET_LEVEL(ch) < 50)))
       {
         index = -2;
@@ -941,7 +938,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
         check_sc_access(ch, spell) &&
         ((GET_CLASS(ch) != CLASS_NINJA) || (spell != SPELL_DIVINE_WIND)) &&
         ((GET_CLASS(ch) != CLASS_ANTI_PALADIN) || (spell != SPELL_RAGE)) &&
-        ((GET_CLASS(ch) != CLASS_COMMANDO) || (spell != SPELL_IRON_SKIN)) &&
+        ((GET_CLASS(ch) != CLASS_COMMANDO) || (spell != SPELL_TREMOR)) &&
+        ((GET_CLASS(ch) != CLASS_MAGIC_USER) || ((spell != SPELL_PASSDOOR) && (spell != SPELL_FROSTBOLT))) &&
         !check_sc_master(ch, mob)) {
       act("`i$N tells you 'Your subclass master is the only one who can teach that spell.'`q", FALSE, ch, 0, mob, TO_CHAR);
       return TRUE;
@@ -971,6 +969,8 @@ int guild(CHAR *mob, CHAR *ch, int cmd, char *arg) {
       ((GET_CLASS(ch) != CLASS_CLERIC) || (spell != SKILL_MEDITATE)) &&
       ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_EVASION)) &&
       ((GET_CLASS(ch) != CLASS_BARD) || (skill != SKILL_CAMP)) &&
+      ((GET_CLASS(ch) != CLASS_NOMAD) || (skill != SKILL_CAMP)) &&
+      ((GET_CLASS(ch) != CLASS_MAGIC_USER) || ((skill != SPELL_PASSDOOR) && (skill != SPELL_FROSTBOLT))) &&
       !check_sc_master(ch, mob)) {
     act("`i$N tells you 'Go see your subclass master to practice that.'`q", FALSE, ch, 0, mob, TO_CHAR);
     return TRUE;

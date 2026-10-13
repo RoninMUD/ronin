@@ -64,6 +64,46 @@ void auto_learn_skill(CHAR *ch, int skill) {
 }
 
 
+void weapon_attack_proc(CHAR *ch, CHAR *victim, OBJ *weapon) {
+  if (!ch || !victim || !weapon || !SAME_ROOM(ch, victim)) return;
+
+  if ((OBJ_VALUE(weapon, 0) == 0) || (OBJ_VALUE(weapon, 0) > 20)) return;
+
+  if (!((CHAOSMODE && !GET_OPPONENT(victim)) || IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) || IS_NPC(victim))) return;
+
+  switch (OBJ_VALUE0(weapon)) {
+    case 1:
+      spell_blindness(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 2:
+      if (!IS_NPC(ch)) break;
+      spell_poison(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 3:
+      spell_vampiric_touch(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 4:
+      spell_chill_touch(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 5:
+      spell_forget(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 6:
+      spell_curse(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 7:
+      spell_mana_transfer(GET_LEVEL(ch), victim, ch, 0);
+      break;
+    case 8:
+      spell_energy_drain(GET_LEVEL(ch), ch, victim, 0);
+      break;
+    case 9:
+      spell_power_word_kill(GET_LEVEL(ch), ch, victim, 0);
+      break;
+  }
+}
+
+
 void do_hit(CHAR *ch, char *argument, int cmd) {
   char name[MSL];
 
@@ -134,44 +174,9 @@ void do_hit(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
-  /* Magic Weapon */
-  if (GET_WEAPON(ch) &&
-      (OBJ_VALUE(GET_WEAPON(ch), 0) != 0) &&
-      (OBJ_VALUE(GET_WEAPON(ch), 0) <= 20) &&
-      ((CHAOSMODE && !GET_OPPONENT(victim)) || IS_SET(CHAR_ROOM_FLAGS(ch), CHAOTIC) || IS_NPC(victim)) &&
-      !number(0, 3)) {
-    switch (OBJ_VALUE0(GET_WEAPON(ch))) {
-      case 1:
-        spell_blindness(30, ch, victim, 0);
-        break;
-      case 2:
-        if (!IS_NPC(ch)) break;
-        spell_poison(30, ch, victim, 0);
-        break;
-      case 3:
-        if (chance(90)) break;
-        spell_vampiric_touch(30, ch, victim, 0);
-        break;
-      case 4:
-        spell_chill_touch(30, ch, victim, 0);
-        break;
-      case 5:
-        spell_forget(30, ch, victim, 0);
-        break;
-      case 6:
-        spell_curse(30, ch, victim, 0);
-        break;
-      case 7:
-        if (chance(96)) break;
-        spell_mana_transfer(30, victim, ch, 0);
-        break;
-      case 8: /* TODO: Add energy drain. */
-        break;
-      case 9:
-        if (chance(60)) break;
-        spell_power_word_kill(GET_LEVEL(ch), ch, victim, 0);
-        break;
-    }
+  /* Weapon attack (OLC weapon value 0): 25% on the opening hit. */
+  if (GET_WEAPON(ch) && !number(0, 3)) {
+    weapon_attack_proc(ch, victim, GET_WEAPON(ch));
   }
 
   hit(ch, victim, TYPE_UNDEFINED);
@@ -1053,8 +1058,15 @@ void do_flee(CHAR *ch, char *argument, int cmd) {
     }
   }
 
-  /* Berserk / Frenzy */
-  if (affected_by_spell(ch, SKILL_BERSERK) || affected_by_spell(ch, SKILL_FRENZY)) {
+  /* SC_TRAPPER Frenzy: too consumed by the frenzy/fatigue to flee*/
+  if (is_frenzy_locked(ch)) {
+    send_to_char("You're too consumed by your frenzy to flee!\n\r", ch);
+
+    return;
+  }
+
+  /* Berserk */
+  if (affected_by_spell(ch, SKILL_BERSERK)) {
     send_to_char("You try to flee, but fail!\n\r", ch);
     act("$n tries to flee, but fails.", TRUE, ch, 0, 0, TO_ROOM);
 
@@ -1537,6 +1549,20 @@ void do_rescue(CHAR *ch, char *argument, int cmd) {
     return;
   }
 
+  /* SC_TRAPPER Frenzy: too consumed by the frenzy/fatigue to act with
+   * that kind of presence of mind, in either phase. */
+  if (is_frenzy_locked(ch)) {
+    send_to_char("You're too consumed by your frenzy to think of rescuing anyone!\n\r", ch);
+
+    return;
+  }
+  /* SC_RANGER Berserk: too wild to rescue */
+  if (affected_by_spell(ch, SKILL_BERSERK)) {
+    send_to_char("You're too wild in your berserking state to rescue anyone.\n\r", ch);
+
+    return;
+  }
+
   if (IS_MORTAL(ch) &&
       (GET_CLASS(ch) != CLASS_WARRIOR) &&
       (GET_CLASS(ch) != CLASS_NOMAD) &&
@@ -1848,17 +1874,13 @@ void do_disarm(struct char_data *ch, char *argument, int cmd) {
 void do_disembowel(CHAR *ch, char *arg, int cmd) {
   if (!ch || !GET_SKILLS(ch)) return;
 
-  if (IS_MORTAL(ch) &&
-      (GET_CLASS(ch) != CLASS_WARRIOR) &&
-      (GET_CLASS(ch) != CLASS_NOMAD)) {
+  if (IS_MORTAL(ch) && (GET_CLASS(ch) != CLASS_NOMAD)) {
     send_to_char("You don't know this skill.\n\r", ch);
 
     return;
   }
 
-  if (IS_MORTAL(ch) &&
-      ((GET_CLASS(ch) == CLASS_WARRIOR) || (GET_CLASS(ch) == CLASS_NOMAD)) &&
-      (GET_LEVEL(ch) < 40)) {
+  if (IS_MORTAL(ch) && (GET_LEVEL(ch) < 40)) {
     send_to_char("You don't know this skill yet.\n\r", ch);
 
     return;

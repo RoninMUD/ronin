@@ -36,8 +36,8 @@
 
 #define RV2_MIN_EXP_COST           1500000000
 #define RV2_MAX_EXP_COST           15000000000
-#define RV2_MAX_QP_COST            200
-#define RV2_MAX_SCP_COST           70
+#define RV2_MAX_QP_COST            100
+#define RV2_MAX_SCP_COST           25
 
 #define RV2_SIM_AVG_STAT           13
 

@@ -32,6 +32,8 @@
 #include "act.h"
 #include "fight.h"
 #include "spec_assign.h"
+#include "aff_ench.h"
+#include "enchant.h"
 
 /* Make one npc rescue another */
 
@@ -881,7 +883,7 @@ int uber_strahd(CHAR *uber, CHAR *ch, int cmd, char *arg)
       num_specs = number(0,2);
       if (IS_NIGHT) num_specs++;
       if (form == 1) num_specs++;
-      if ((affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
+      if ((ench_enchanted_by(uber, ENCH_NAME_DISRUPT_SANCT, 0) || !IS_SET(uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
         sprintf(buf, "%s growls angrily, frustratingly exposed and vulnerable here in %s sanctuary.\n\r", GET_SHORT(uber), HSHR(uber));
         send_to_room(buf, CHAR_REAL_ROOM(uber));
         num_specs+=2;

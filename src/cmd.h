@@ -1,6 +1,7 @@
 #define MSG_VIOLENCE           -99 /* Signaled before hit() is called in perform_violence() in fight.c */
 #define MSG_VIOLENCE_POST_HIT  -98 /* Signaled after hit() is called in perform_violence() in fight.c */
 #define MSG_ROUND              -97 /* Signaled every 3 seconds. */
+#define MSG_TRAP_TRIGGER       -31 /* Signaled by successful batter triggering trap */
 #define MSG_DAMAGED            -30
 #define MSG_OBJ_DISARMED       -29
 #define MSG_OBJ_JUNKED         -28
@@ -325,6 +326,7 @@
 
 #define CMD_CLOBBER            337
 #define CMD_VICTIMIZE          338
+#define CMD_DEBILITATE         339
 
 #define CMD_NEWOLC             400
 #define CMD_NEWOLCM            401

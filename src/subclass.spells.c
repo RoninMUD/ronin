@@ -69,12 +69,22 @@ void spell_luck(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
 }
 
 void spell_warchant(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (SAME_GROUP_EX(victim, ch, TRUE)) {
+  /* A PC's charmed follower is treated as being on its master's side. */
+  CHAR *side_ch = victim;
+
+  if (IS_NPC(victim) && IS_AFFECTED(victim, AFF_CHARM) && GET_MASTER(victim) && !IS_NPC(GET_MASTER(victim))) {
+    side_ch = GET_MASTER(victim);
+  }
+
+  if (SAME_GROUP_EX(side_ch, ch, TRUE)) {
     if (!aff_affected_by(victim, SPELL_WAR_CHANT)) {
       print_spell_messages(victim, SPELL_WAR_CHANT);
 
       aff_apply(victim, SPELL_WAR_CHANT, 5, -2, APPLY_SAVING_ALL, 0, 0);
     }
+  }
+  else if (side_ch != victim) {
+    /* Another party's charmed follower: no effect. */
   }
   else {
     if ((IS_NPC(victim) || (IS_MORTAL(victim) && ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)))) && !aff_affected_by(victim, SPELL_WAR_CHANT_DEBUFF)) {
@@ -115,6 +125,7 @@ void spell_cloud_confusion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     if ((temp_victim == ch) || IS_IMMORTAL(temp_victim)) continue;
     if (IS_NPC(temp_victim) && IS_NPC(ch) && (!IS_AFFECTED(temp_victim, AFF_CHARM) || (GET_MASTER(temp_victim) == ch))) continue;
     if (!IS_NPC(temp_victim) && !IS_NPC(ch) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(ch))) continue;
+    if (IS_NPC(temp_victim) && !IS_NPC(ch) && ((GET_MASTER(temp_victim) == ch) || (IS_AFFECTED(temp_victim, AFF_CHARM) && GET_MASTER(temp_victim) && !IS_NPC(GET_MASTER(temp_victim))))) continue;
     if (aff_affected_by(temp_victim, SPELL_CLOUD_CONFUSION)) continue;
 
     print_spell_messages(temp_victim, SPELL_CLOUD_CONFUSION);
@@ -252,28 +263,92 @@ void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_blade_barrier(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+void cast_mirror_image(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
     case SPELL_TYPE_POTION:
       victim = ch;
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_blade_barrier(level, ch, victim, 0);
+      spell_mirror_image(level, ch, victim, 0);
       break;
 
     case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_blade_barrier, level, AOE_TAR_ALL_CHARS);
+      aoe_spell(ch, spell_mirror_image, level, AOE_TAR_ALL_CHARS);
       break;
   }
 }
 
-void spell_blade_barrier(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!aff_affected_by(victim, SPELL_BLADE_BARRIER)) {
-    print_spell_messages(victim, SPELL_BLADE_BARRIER);
+static int mirror_image_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
 
-    aff_apply(victim, SPELL_BLADE_BARRIER, 5, 0, 0, 0, 0);
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    int image_count = MAX(0, ench->temp[0]);
+
+    switch (image_count) {
+      case 0:
+      case 1:
+        act("......$n is surrounded by a shifting mirror image.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case 2:
+        act("......$n is surrounded by two shifting mirror images.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case 3:
+        act("......$n is surrounded by three shifting mirror images.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case 4:
+        act("......$n is surrounded by four shifting mirror images.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case 5:
+        act("......$n is surrounded by five shifting mirror images.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      default:
+        act("......$n is surrounded by shifting mirror images.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+    }
+
+    return FALSE;
   }
+
+  return FALSE;
+}
+
+void spell_mirror_image(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  int image_count = 1;
+
+  if (check_subclass(ch, SC_ENCHANTER, 5))      image_count = 5;
+  else if (check_subclass(ch, SC_ENCHANTER, 4)) image_count = 4;
+  else if (check_subclass(ch, SC_ENCHANTER, 3)) image_count = 3;
+  else if (check_subclass(ch, SC_ENCHANTER, 2)) image_count = 2;
+
+  ENCH *existing = ench_get_from_char(victim, ENCH_NAME_MIRROR_IMAGE, 0);
+
+  if (existing && (existing->temp[0] >= image_count)) {
+    existing->duration = 50;
+    if (victim == ch) {
+      act("Your mirror images shimmer and steady.", FALSE, victim, 0, 0, TO_CHAR);
+    }
+    else {
+      act("You weave a fresh set of mirror images around $N.", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n weaves a fresh set of mirror images around you.", FALSE, ch, 0, victim, TO_VICT);
+      act("$n weaves a fresh set of mirror images around $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+    }
+    return;
+  }
+
+  if (victim == ch) {
+    print_spell_messages(victim, SPELL_MIRROR_IMAGE);
+  }
+  else {
+    act("You weave a shifting illusion around $N.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n weaves a shifting illusion around you.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n weaves a shifting illusion around $N.", FALSE, ch, 0, victim, TO_NOTVICT);
+  }
+
+  ench_apply(victim, TRUE, ENCH_NAME_MIRROR_IMAGE, 0, 50, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, mirror_image_enchant);
+
+  ENCH *mirror_ench = ench_get_from_char(victim, ENCH_NAME_MIRROR_IMAGE, 0);
+  if (mirror_ench) mirror_ench->temp[0] = image_count;
 }
 
 void cast_distortion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -322,7 +397,7 @@ void spell_iron_skin(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!aff_affected_by(victim, SPELL_IRON_SKIN)) {
     print_spell_messages(victim, SPELL_IRON_SKIN);
 
-    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -20 : -10, APPLY_ARMOR, 0, 0);
+    aff_apply(victim, SPELL_IRON_SKIN, 10, ch == victim ? -30 : -30, APPLY_ARMOR, 0, 0);
   }
 }
 
@@ -395,7 +470,65 @@ void cast_meteor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_meteor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  damage_spell(ch, victim, SPELL_METEOR, level, number(40, 60), DAM_MAGICAL, SAVING_NONE);
+  /* Archmage SC1: Meteor - (50-60) + (5 * INT mod) damage. */
+  damage_spell(ch, victim, SPELL_METEOR, level, number(50, 60) + (5 * GET_INT_BONUS(ch)), DAM_MAGICAL, SAVING_NONE);
+}
+
+/* Archmage SC3: Twinspell. Passively splashes a copy of a damage spell onto a second nearby hostile that is already
+ * fighting the caster or another player. The copy rolls its own saving throw and goes through damage() normally.
+ * Called from damage_spell(), which skips it for AoE casts. */
+static bool twinspell_active = FALSE;
+
+void twinspell_splash(CHAR *ch, CHAR *victim, int spell, int level, int base_dmg, int dmg_type, int saving_throw) {
+  if (twinspell_active) return;
+
+  if (!IS_MORTAL(ch) || !check_subclass(ch, SC_ARCHMAGE, 3)) return;
+
+  /* The primary hit may have killed or moved the caster. */
+  if (!IS_ALIVE(ch) || (victim == ch) || (base_dmg <= 0)) return;
+
+  /* Pick one eligible hostile at random: in the room, not the primary victim, and already fighting the caster or
+   * any other player (Archmages are rarely the one being hit, so engagement with anyone's PC counts). */
+  CHAR *twin = NULL;
+  int candidates = 0;
+
+  for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); temp_ch; temp_ch = temp_ch->next_in_room) {
+    if ((temp_ch == ch) || (temp_ch == victim) || IS_IMMORTAL(temp_ch)) continue;
+    if (!IS_ALIVE(temp_ch) || SAME_GROUP(temp_ch, ch)) continue;
+
+    CHAR *opp = GET_OPPONENT(temp_ch);
+
+    if (!opp || IS_IMMORTAL(opp)) continue;
+
+    /* Never splash the caster's own charmed followers. */
+    if (IS_NPC(temp_ch) && IS_AFFECTED(temp_ch, AFF_CHARM) && GET_MASTER(temp_ch) && SAME_GROUP(GET_MASTER(temp_ch), ch)) continue;
+
+    if (IS_NPC(temp_ch)) {
+      /* An NPC is a valid twin if it is fighting the caster or any other player. */
+      if ((opp != ch) && IS_NPC(opp)) continue;
+    }
+    else {
+      /* Never splash onto players outside of chaotic/arena rooms; that would flag the caster as a killer. */
+      if (!ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) && !ROOM_ARENA(CHAR_REAL_ROOM(ch))) continue;
+
+      /* A player is only a valid twin if they are fighting the caster or the caster's group. */
+      if ((opp != ch) && !SAME_GROUP(opp, ch)) continue;
+    }
+
+    if (number(1, ++candidates) == 1) {
+      twin = temp_ch;
+    }
+  }
+
+  if (!twin) return;
+
+  act("Your spell splits in two, its twin hits $N!", FALSE, ch, 0, twin, TO_CHAR);
+  act("$n's spell splits in two, its twin hits you!", FALSE, ch, 0, twin, TO_VICT);
+  act("$n's spell splits in two, its twin hits $N!", FALSE, ch, 0, twin, TO_NOTVICT);
+
+  twinspell_active = TRUE;
+  damage_spell(ch, twin, spell, level, base_dmg, dmg_type, saving_throw);
+  twinspell_active = FALSE;
 }
 
 void cast_wall_thorns(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -555,9 +688,7 @@ void spell_rimefang(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       act("$n sends a wall of jagged ice cascading towards you!", FALSE, ch, 0, temp_vict, TO_VICT);
 
       if (!IS_SET(GET_IMMUNE(temp_vict), IMMUNE_PARALYSIS) &&
-          !IS_AFFECTED(temp_vict, AFF_PARALYSIS) &&
-          ((GET_LEVEL(ch) + 10) >= GET_LEVEL(temp_vict)) &&
-          !saves_spell(temp_vict, SAVING_PARA, (level + 10))) {
+          !IS_AFFECTED(temp_vict, AFF_PARALYSIS)) {
         aff_apply(temp_vict, SPELL_PARALYSIS, duration, 100, APPLY_ARMOR, AFF_PARALYSIS, 0);
         aff_apply(temp_vict, SPELL_PARALYSIS, duration, -5, APPLY_HITROLL, AFF_PARALYSIS, 0);
 
@@ -665,7 +796,7 @@ void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OB
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_desecrate(level, ch, victim, 0);
+      spell_desecrate(level, ch, 0, obj);
       break;
 
     case SPELL_TYPE_STAFF:
@@ -754,129 +885,563 @@ void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   }
 }
 
-void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
-  switch (type) {
-    case SPELL_TYPE_SPELL:
-      spell_engage(level, ch, victim, 0);
-      break;
-  }
-}
-
-void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj)
-{
-  int wpn_extra(OBJ *wielded, CHAR *ch, CHAR *victim, int mode);
-
-  int dam, w_type, str_index;
-  OBJ *wielded = NULL;
-
-  if (ROOM_SAFE(CHAR_REAL_ROOM(ch)))
-  {
-    send_to_char("Behave yourself here please!\n\r", ch);
-    return;
-  }
-  
-  if (!(wielded=ch->equipment[WIELD]))
-  {
-    send_to_char("You must wield a weapon.\n\r", ch);
-    return;
-  }
-
-  switch (wielded->obj_flags.value[3])
-  {
-    case 0 :
-    case 1 :
-    case 2 : w_type = TYPE_WHIP; break;
-    case 3 : w_type = TYPE_SLASH; break;
-    case 4 : w_type = TYPE_WHIP; break;
-    case 5 : w_type = TYPE_STING; break;
-    case 6 : w_type = TYPE_CRUSH; break;
-    case 7 : w_type = TYPE_BLUDGEON; break;
-    case 8 : w_type = TYPE_CLAW; break;
-    case 9 :
-    case 10:
-    case 11: w_type = TYPE_PIERCE; break;
-    case 12: w_type = TYPE_HACK; break;
-    case 13: w_type = TYPE_CHOP; break;
-    case 14: w_type = TYPE_SLICE; break;
-    default: w_type = TYPE_HIT; break;
-  }
-
-  /* magic weapon */
-  if((ROOM_CHAOTIC(CHAR_REAL_ROOM(ch)) || IS_NPC(victim)) &&
-     (wielded->obj_flags.value[0] != 0) && 
-     (wielded->obj_flags.value[0] <= 20) && 
-     !number(0,2)) {
-    switch((int)wielded->obj_flags.value[0]) {
-      case 1:
-        spell_blindness(30, ch, victim, 0);
-        break;
-      case 2:
-        if(!(IS_NPC(ch))) break;
-        spell_poison(30, ch, victim, 0);
-        break;
-      case 3:
-        spell_vampiric_touch(30, ch, victim, 0);
-        break;
-      case 4:
-        spell_chill_touch(30, ch, victim, 0);
-        break;
-      case 5:
-        spell_forget(30, ch, victim, 0);
-        break;
-      case 6:
-        spell_curse(30, ch, victim, 0);
-        break;
-      case 7:
-      case 8:
-      default:
-        break;
-    }
-  }
-  act("Your $p leaps from your hand and attacks $N before returning",0,ch,wielded,victim,TO_CHAR);
-  act("$n's $p leaps from $s hand and attacks $N before returning",0,ch,wielded,victim,TO_NOTVICT);
-  act("$n's $p leaps from $s hand and attacks you before returning",0,ch,wielded,victim,TO_VICT);
-
-  str_index=MIN(STRENGTH_APPLY_INDEX(ch),OSTRENGTH_APPLY_INDEX(ch));
-  dam = str_app[str_index].todam;
-  if (wielded->obj_flags.type_flag == ITEM_2H_WEAPON) dam = (dam*3)/2;
-  dam += GET_DAMROLL(ch);
-  dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
-  dam += wpn_extra(wielded,ch,victim,RND_RND);
-
-  if(GET_POS(victim) < POSITION_FIGHTING)
-    dam *= 1+(POSITION_FIGHTING-GET_POS(victim))/3;
-  dam = MAX(1, dam);  /* Not less than 0 damage */
-
-  dam*=5; /* 5x damage for engage */
-
-  if(affected_by_spell(ch, SKILL_DEFEND))
-    dam=1;
-
-  damage(ch, victim, dam, w_type,DAM_PHYSICAL);
-}
-
-void cast_ethereal_nature(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+void cast_magic_weapon(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
   switch (type) {
     case SPELL_TYPE_POTION:
       victim = ch;
     case SPELL_TYPE_SPELL:
     case SPELL_TYPE_WAND:
     case SPELL_TYPE_SCROLL:
-      spell_ethereal_nature(level, ch, victim, 0);
-      break;
-
-    case SPELL_TYPE_STAFF:
-      aoe_spell(ch, spell_ethereal_nature, level, AOE_TAR_ALL_CHARS);
+      spell_magic_weapon(level, ch, victim, 0);
       break;
   }
 }
 
-void spell_ethereal_nature(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
-  if (!aff_affected_by(victim, SPELL_ETHEREAL_NATURE)) {
-    print_spell_messages(victim, SPELL_ETHEREAL_NATURE);
+static int magic_weapon_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
 
-    aff_apply(victim, SPELL_ETHEREAL_NATURE, 30, 0, 0, 0, 0);
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    act("......$n's weapon crackles with arcane power.", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
   }
+  if (cmd == MSG_REMOVE_ENCH) {
+    send_to_char("The arcane power fades from your weapon.\n\r", ch);
+    return FALSE;
+  }
+  if (cmd == MSG_MOBACT) {
+    CHAR *opp = GET_OPPONENT(ch);
+
+    if (opp && SAME_ROOM(ch, opp) && GET_WEAPON(ch) && chance(10 + (2 * ench->temp[0]))) {
+      weapon_attack_proc(ch, opp, GET_WEAPON(ch));
+    }
+  }
+  return FALSE;
+}
+
+void spell_magic_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  if (!victim) victim = ch;
+
+  if (!GET_WEAPON(victim)) {
+    send_to_char("There's no wielded weapon to enchant.\n\r", ch);
+    return;
+  }
+
+  print_spell_messages(victim, SPELL_MAGIC_WEAPON);
+
+  /* Duration counts ticks; the proc runs off MSG_MOBACT, which every enchant function still receives. */
+  ench_apply(victim, TRUE, ENCH_NAME_MAGIC_WEAPON, 0, 50 + GET_WIS_BONUS(ch), ENCH_INTERVAL_ROUND,
+             10 + (2 * GET_INT_BONUS(ch)), APPLY_DAMROLL, 0, 0, magic_weapon_enchant);
+
+  ENCH *mw = ench_get_from_char(victim, ENCH_NAME_MAGIC_WEAPON, 0);
+  if (mw) mw->temp[0] = GET_WIS_BONUS(ch);
+}
+
+static int familiar_type_from_arg(char *arg) {
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  if (!*buf) return -1;
+  if (is_abbrev(buf, "sword")) return 0;
+  if (is_abbrev(buf, "sentinel")) return 1;
+  if (is_abbrev(buf, "homunculus")) return 2;
+
+  return -1;
+}
+
+#define FAMILIAR_SWORD       0
+#define FAMILIAR_SENTINEL    1
+#define FAMILIAR_HOMUNCULUS  2
+
+void familiar_fade_message(CHAR *ch, int type);
+static void familiar_summon_message(CHAR *ch, int type);
+static const char * const familiar_names[] = { "ethereal sword", "sentinel familiar", "tiny homunculus" };
+
+int familiar_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
+
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    switch (ench->temp[0]) {
+      case FAMILIAR_SWORD:
+        act("......an ethereal sword dances in the air around $n.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case FAMILIAR_SENTINEL:
+        act("......a sentinel familiar stands at the ready by $n's side.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+      case FAMILIAR_HOMUNCULUS:
+        act("......a tiny homunculus whispers and peers about from $n's shoulder.", FALSE, ch, 0, signaler, TO_VICT);
+        break;
+    }
+
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    familiar_fade_message(ch, ench->temp[0]);
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    CHAR *opp = GET_OPPONENT(ch);
+
+    if (!opp || !SAME_ROOM(ch, opp)) return FALSE;
+
+    switch (ench->temp[0]) {
+      case FAMILIAR_SWORD: {
+        int sword_dmg = MAX(1, GET_DAMROLL(ch));
+
+        /* Messages first: if the hit kills, opp is gone and $N would print literally. */
+        act("An ethereal sword slices across $N in a flashing arc!", FALSE, ch, 0, opp, TO_NOTVICT);
+        act("An ethereal sword slices across you in a flashing arc!", FALSE, ch, 0, opp, TO_VICT);
+        act("You send an ethereal sword slicing across $N in a flashing arc!", FALSE, ch, 0, opp, TO_CHAR);
+
+        damage(ch, opp, sword_dmg, TYPE_UNDEFINED, DAM_MAGICAL);
+        break;
+      }
+
+      case FAMILIAR_HOMUNCULUS: {
+        int spec_chance = number(5, MAX(5, GET_WIS_BONUS(ch)));
+        if (!chance(spec_chance)) return FALSE;
+
+        int mana_restore = number(5,20);
+        int pilfer_damage = 50 * (GET_INT_BONUS(ch) + 5);
+
+        act("A tiny homunculus darts up $N's back and plucks a glowing mote from $S aura, cackling shrilly!", FALSE, ch, 0, opp, TO_NOTVICT);
+        act("A tiny homunculus darts up your back and plucks a glowing mote from your aura, cackling shrilly!", FALSE, ch, 0, opp, TO_VICT);
+        act("Your homunculus darts up $N's back and plucks a glowing mote from $S aura, cackling shrilly!", FALSE, ch, 0, opp, TO_CHAR);
+
+        /* Restore mana to the group (SAME_GROUP is TRUE for ch itself). */
+        for (CHAR *room_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)); room_ch; room_ch = room_ch->next_in_room) {
+          if (IS_NPC(room_ch) || !IS_MORTAL(room_ch) || !SAME_GROUP(ch, room_ch)) continue;
+
+          int mana_gain = MIN(GET_MAX_MANA(room_ch) - GET_MANA(room_ch), mana_restore);
+
+          if (mana_gain > 0) {
+            GET_MANA(room_ch) += mana_gain;
+
+            send_to_char("The homunculus flicks the stolen mote into the air; it bursts over you, restoring some mana.\n\r", room_ch);
+          }
+        }
+
+        /* Damage last, so a kill can't affect anything above. */
+        damage(ch, opp, pilfer_damage, TYPE_UNDEFINED, DAM_MAGICAL);
+        break;
+      }
+    }
+
+    return FALSE;
+  }
+
+  return FALSE;
+}
+
+void cast_familiar(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_familiar(level, ch, arg, victim, 0);
+      break;
+  }
+}
+
+void familiar_fade_message(CHAR *ch, int type) {
+  switch (type) {
+    case FAMILIAR_SWORD:
+      act("The dancing sword around $n fades, then vanishes with a faint pop.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("Your dancing sword fades away.\n\r", ch);
+      break;
+    case FAMILIAR_SENTINEL:
+      act("The sentinel familiar around $n collapses into itself until nothing remains.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("Your sentinel familiar fades away.\n\r", ch);
+      break;
+    case FAMILIAR_HOMUNCULUS:
+      act("The homunculus hovering around $n squeaks once and dissolves into motes of light.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("Your homunculus familiar fades away.\n\r", ch);
+      break;
+  }
+}
+
+static void familiar_summon_message(CHAR *ch, int type) {
+  switch (type) {
+    case FAMILIAR_SWORD:
+      act("An ethereal sword blinks into being and begins to dance around $n.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("You conjure an ethereal sword, which begins to dance around you.\n\r", ch);
+      break;
+    case FAMILIAR_SENTINEL:
+      act("A sentinel familiar coalesces beside $n, standing at the ready.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("You call forth a sentinel familiar to stand guard at your side.\n\r", ch);
+      break;
+    case FAMILIAR_HOMUNCULUS:
+      act("A tiny homunculus pops into existence on $n's shoulder, peering about.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("You summon a tiny homunculus, which scrambles onto your shoulder.\n\r", ch);
+      break;
+  }
+}
+
+void spell_familiar(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj) {
+  if (!IS_ALIVE(ch)) return;
+
+  int familiar_type = familiar_type_from_arg(arg);
+
+  if (familiar_type < 0) {
+    send_to_char("Choose a familiar form: sword, sentinel, or homunculus.\n\r", ch);
+    return;
+  }
+
+  const int duration = 40 + GET_INT_BONUS(ch) + GET_WIS_BONUS(ch);
+  const int sentinel_hp = MAX(500, (GET_LEVEL(ch) * 20) + ((GET_INT_BONUS(ch) + GET_WIS_BONUS(ch)) * 40));
+
+  ENCH *existing = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+  /* Same familiar: renew it. */
+  if (existing && (existing->temp[0] == familiar_type)) {
+    char buf[256];
+
+    existing->duration = MAX(existing->duration, duration);
+
+    if (familiar_type == FAMILIAR_SENTINEL) {
+      existing->temp[1] = sentinel_hp;   /* recasting recharges a worn-down sentinel */
+    }
+
+    snprintf(buf, sizeof(buf), "You renew your %s.\n\r", familiar_names[familiar_type]);
+    send_to_char(buf, ch);
+    return;
+  }
+
+  /* Different familiar: dismiss the old one first. */
+  if (existing) {
+    familiar_fade_message(ch, existing->temp[0]);
+  }
+
+  print_spell_messages(ch, SPELL_FAMILIAR);
+
+  ench_apply(ch, TRUE, ENCH_NAME_FAMILIAR, SPELL_FAMILIAR, duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, familiar_enchantment);
+
+  ENCH *fam = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+  if (fam) {
+    fam->temp[0] = familiar_type;
+    fam->temp[1] = (familiar_type == FAMILIAR_SENTINEL) ? sentinel_hp : 0;
+  }
+
+  familiar_summon_message(ch, familiar_type);
+}
+
+/* A summon bound by magic (animated dead, greater elementals, Charm Person). Bought pets are charmed but not bound. */
+static bool is_bound_summon(CHAR *mob) {
+  if (!mob || !IS_NPC(mob) || !IS_AFFECTED(mob, AFF_CHARM)) return FALSE;
+
+  return IS_AFFECTED(mob, AFF_ANIMATE) || is_greater_elemental(mob) || affected_by_spell(mob, SPELL_CHARM_PERSON);
+}
+
+CHAR *binding_mastery_owner(CHAR *summon) {
+  if (!summon || !summon->master || !is_bound_summon(summon)) return NULL;
+
+  CHAR *owner = summon->master;
+
+  if (IS_NPC(owner) || !IS_MORTAL(owner) || !SAME_ROOM(summon, owner)) return NULL;
+  if (!check_subclass(owner, SC_ENCHANTER, 5)) return NULL;
+
+  return owner;
+}
+
+void cast_tether(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_tether(level, ch, arg, victim, obj);
+      break;
+  }
+}
+
+void spell_tether(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj) {
+  if (!IS_ALIVE(ch)) return;
+
+  int called = 0;
+
+  for (FOL *fol = ch->followers, *next_fol; fol; fol = next_fol) {
+    next_fol = fol->next;
+
+    CHAR *summon = fol->follower;
+
+    if (!summon || (summon->master != ch) || !is_bound_summon(summon)) continue;
+    if (SAME_ROOM(summon, ch) || (CHAR_REAL_ROOM(summon) == NOWHERE)) continue;
+
+    /* Disengage the summon and anything fighting it before it leaves. */
+    if (GET_OPPONENT(summon)) stop_fighting(summon);
+
+    for (CHAR *temp = ROOM_PEOPLE(CHAR_REAL_ROOM(summon)); temp; temp = temp->next_in_room) {
+      if (GET_OPPONENT(temp) == summon) stop_fighting(temp);
+    }
+
+    act("$n is yanked away along a glowing tether.", FALSE, summon, 0, 0, TO_ROOM);
+    char_from_room(summon);
+    char_to_room(summon, CHAR_REAL_ROOM(ch));
+    act("$n arrives, drawn along $N's tether.", FALSE, summon, 0, ch, TO_NOTVICT);
+
+    called++;
+  }
+
+  if (called)
+    send_to_char("Your bound servants are drawn to your side.\n\r", ch);
+  else
+    send_to_char("None of your bound servants are beyond your reach.\n\r", ch);
+}
+
+#define SLIME_MAX_STACKS        10
+
+bool is_greater_elemental(CHAR *ch) {
+  return ch && IS_NPC(ch) && ench_enchanted_by(ch, ENCH_NAME_GREATER_ELEMENTAL, 0);
+}
+
+static CHAR *find_greater_elemental(CHAR *ch) {
+  for (FOL *fol = ch->followers; fol; fol = fol->next) {
+    if (is_greater_elemental(fol->follower)) return fol->follower;
+  }
+
+  return NULL;
+}
+
+int elemental_vnum_from_arg(char *arg) {
+  char buf[MIL];
+
+  one_argument(arg, buf);
+
+  if (!*buf) return -1;
+  if (is_abbrev(buf, "slime")) return GREATER_ELEMENTAL_SLIME;
+  if (is_abbrev(buf, "earth")) return GREATER_ELEMENTAL_EARTH;
+  if (is_abbrev(buf, "air"))   return GREATER_ELEMENTAL_AIR;
+  if (is_abbrev(buf, "void"))  return GREATER_ELEMENTAL_VOID;
+
+  return -1;
+}
+
+/* Slime: stacking poison DoT on the victim, modeled on poison_dart_tick. */
+int corrosive_slime_tick(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (!ench || !ch) return FALSE;
+
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    act("......$n is coated in corrosive slime.", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    act("The slime coating $n sloughs away.", FALSE, ch, 0, 0, TO_ROOM);
+    return FALSE;
+  }
+
+  if (cmd != MSG_ROUND) return FALSE;
+
+  int dam = ench->temp[0] * ench->temp[1];                 /* stacks * per-stack damage */
+  if (dam >= GET_HIT(ch)) dam = MAX(0, GET_HIT(ch) - 1);   /* never kill (and extract) mid-signal, same as the dart */
+
+  if (dam > 0) {
+    act("Corrosive slime eats away at $n.", FALSE, ch, 0, 0, TO_ROOM);
+    act("The corrosive slime eats away at you!", FALSE, ch, 0, 0, TO_CHAR);
+    damage(ch, ch, dam, TYPE_UNDEFINED, DAM_POISON);
+  }
+
+  return FALSE;
+}
+
+static void apply_corrosive_slime(CHAR *victim, int per_stack) {
+  ENCH *slime = ench_get_from_char(victim, ENCH_NAME_CORROSIVE_SLIME, 0);
+
+  if (!slime) {
+    ench_apply(victim, TRUE, ENCH_NAME_CORROSIVE_SLIME, 0, 40, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, corrosive_slime_tick);
+    slime = ench_get_from_char(victim, ENCH_NAME_CORROSIVE_SLIME, 0);
+    if (slime) {
+      slime->temp[0] = 1;
+      slime->temp[1] = per_stack;
+    }
+    return;
+  }
+
+  int stacks = MIN(slime->temp[0] + 1, SLIME_MAX_STACKS);
+  slime->temp[0] = stacks;
+  slime->temp[1] = per_stack;
+}
+
+/* One ending for every case (expiry, orphaned, dismissed, destroyed).
+   extract_char() drops carried and worn items in the room and leaves no corpse. */
+static void elemental_end(CHAR *mob, bool destroyed) {
+  switch (V_MOB(mob)) {
+    case GREATER_ELEMENTAL_SLIME:
+      act(destroyed ? "$n is torn apart, its slime splattering and sizzling away to nothing."
+                    : "$n loses cohesion as the magic binding it fades, and the slime slumps into a puddle that quickly evaporates.",
+          FALSE, mob, 0, 0, TO_ROOM);
+      break;
+    case GREATER_ELEMENTAL_EARTH:
+      act(destroyed ? "The animated $n shatters and crumbles to the ground, its binding magic broken."
+                    : "The animated $n crumbles to the ground as the magic that supported it fades.",
+          FALSE, mob, 0, 0, TO_ROOM);
+      break;
+    case GREATER_ELEMENTAL_AIR:
+      act(destroyed ? "$n is shredded into scattered wisps that die away on the wind."
+                    : "$n unravels into a last, dying gust as the magic that bound it fades.",
+          FALSE, mob, 0, 0, TO_ROOM);
+      break;
+    case GREATER_ELEMENTAL_VOID:
+      act(destroyed ? "$n is ripped apart, its shadowy form dissolving into nothingness."
+                    : "$n folds in upon itself and is swallowed by shadow as the magic that sustains it fades.",
+          FALSE, mob, 0, 0, TO_ROOM);
+      break;
+  }
+
+  extract_char(mob);
+}
+
+/* Mob spec for all four vnums. Melee comes from the OLC stat block;
+   this only adds the form-specific extras while the elemental is fighting. */
+int greater_elemental_spec(CHAR *mob, CHAR *signaler, int cmd, char *arg) {
+  /* Destroyed: flavor text, no corpse. Must return TRUE so damage() skips normal death on a mob we just extracted. */
+  if (cmd == MSG_DEAD) {
+    elemental_end(mob, TRUE);
+    return TRUE;
+  }
+
+  if (cmd != MSG_ROUND) return FALSE;
+
+  ENCH *ench = ench_get_from_char(mob, ENCH_NAME_GREATER_ELEMENTAL, 0);
+  CHAR *master = mob->master;
+
+  /* Expired (temp[0] counts down rounds), or orphaned (master died / quit / charm broken). */
+  if (!ench || !master || !IS_AFFECTED(mob, AFF_CHARM) || (--ench->temp[0] <= 0)) {
+    elemental_end(mob, FALSE);
+    return FALSE;
+  }
+
+  /* temp[1] counts down rounds spent fighting without the master in the room; only matters while in combat. */
+  if (mob->specials.fighting) {
+    if (SAME_ROOM(mob, master)) {
+      ench->temp[1] = 5;   /* reset to 5 rounds if master is present */
+    }
+    else if (--ench->temp[1] <= 0) {
+      elemental_end(mob, FALSE);
+      return FALSE;
+    }
+  }
+
+  /* Supplement only: no free hits unless the elemental itself is in combat. NPC targets only. */
+  CHAR *opp = GET_OPPONENT(mob);
+
+  if (!opp || !SAME_ROOM(mob, opp) || !IS_NPC(opp)) return FALSE;
+
+  switch (V_MOB(mob)) {
+    case GREATER_ELEMENTAL_SLIME:
+      if (chance(40)) {
+        act("$n hurls a glob of caustic slime over $N!", FALSE, mob, 0, opp, TO_NOTVICT);
+        act("$n hurls a glob of caustic slime over you!", FALSE, mob, 0, opp, TO_VICT);
+        apply_corrosive_slime(opp, 10 + GET_INT_BONUS(master));
+
+        if (chance(20 + GET_WIS_BONUS(master)) && !ench_enchanted_by(opp, ENCH_NAME_SLUGGISHNESS, 0)) {
+          ench_apply(opp, TRUE, ENCH_NAME_SLUGGISHNESS, 0, 5, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, sluggishness_enchant);
+          act("The clinging slime slows $N's movements.", FALSE, mob, 0, opp, TO_NOTVICT);
+          act("The clinging slime slows your movements.", FALSE, mob, 0, opp, TO_VICT);
+        }
+      }
+      break;
+
+    case GREATER_ELEMENTAL_EARTH:   /* melee already does the damage; the spec is only the stun */
+      if (chance(15 + GET_WIS_BONUS(master))) {
+        GET_POS(opp) = stack_position(opp, POSITION_STUNNED);
+        skill_wait_victim(opp, SPELL_GREATER_ELEMENTAL, 1);
+
+        act("$n slams the ground, and the shockwave leaves $N reeling!", FALSE, mob, 0, opp, TO_NOTVICT);
+        act("$n slams the ground, and the shockwave leaves $N reeling!", FALSE, mob, 0, opp, TO_VICT);
+      }
+      break;
+
+    case GREATER_ELEMENTAL_AIR:
+      if (chance(35)) {
+        act("$n buffets $N with a torrent of icy winds!", FALSE, mob, 0, opp, TO_NOTVICT);
+        act("$n buffets you with a torrent of icy winds!", FALSE, mob, 0, opp, TO_VICT);
+        damage(mob, opp, GET_LEVEL(master) + (5 * GET_INT_BONUS(master)), TYPE_UNDEFINED, DAM_MAGICAL);
+
+        if ((CHAR_REAL_ROOM(opp) != NOWHERE) && chance(20 + GET_WIS_BONUS(master)) && !ench_enchanted_by(opp, ENCH_NAME_CONFUSION, 0)) {
+          ench_apply(opp, TRUE, ENCH_NAME_CONFUSION, 0, 8, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, confusion_enchant);
+          act("$N staggers, buffeted into confusion.", FALSE, mob, 0, opp, TO_NOTVICT);
+          act("You are staggered, buffeted into confusion.", FALSE, mob, 0, opp, TO_VICT);
+        }
+      }
+      break;
+
+    case GREATER_ELEMENTAL_VOID:
+      if (chance(30)) {
+        act("$n spears $N with a lance of living shadow!", FALSE, mob, 0, opp, TO_NOTVICT);
+        act("$n spears you with a lance of living shadow!", FALSE, mob, 0, opp, TO_VICT);
+        damage(mob, opp, GET_LEVEL(master) + (10 * GET_INT_BONUS(master)), TYPE_UNDEFINED, DAM_MAGICAL);
+
+        if ((CHAR_REAL_ROOM(opp) != NOWHERE) && chance(35 + GET_WIS_BONUS(master)) && !ench_enchanted_by(opp, ENCH_NAME_EXPOSED, 0)) {
+          ench_apply(opp, TRUE, ENCH_NAME_EXPOSED, 0, 4, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
+          act("The shadows strip away $N's protections!", FALSE, mob, 0, opp, TO_NOTVICT);
+          act("The shadows strip away your protections!", FALSE, mob, 0, opp, TO_VICT);
+        }
+      }
+      break;
+  }
+
+  return FALSE;
+}
+
+void cast_greater_elemental(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
+  switch (type) {
+    case SPELL_TYPE_SPELL:
+      spell_greater_elemental(level, ch, arg, victim, 0);
+      break;
+  }
+}
+
+void spell_greater_elemental(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj) {
+  if (!IS_ALIVE(ch)) return;
+
+  int vnum = elemental_vnum_from_arg(arg);
+
+  if (vnum < 0) {
+    send_to_char("Choose an elemental form: slime, earth, air, or void.\n\r", ch);
+    return;
+  }
+
+  const int duration = 80 + GET_INT_BONUS(ch) + GET_WIS_BONUS(ch);   /* rounds */
+
+  CHAR *existing = find_greater_elemental(ch);
+
+  if (existing) {
+    if (V_MOB(existing) == vnum) {    /* same form: renew */
+      ENCH *old = ench_get_from_char(existing, ENCH_NAME_GREATER_ELEMENTAL, 0);
+
+      if (old) {
+        old->temp[0] = MAX(old->temp[0], duration);
+        old->temp[1] = 5;   /* reset the combat-without-master counter */
+      }
+
+      act("Your elemental surges with renewed power.", FALSE, ch, 0, 0, TO_CHAR);
+      return;
+    }
+
+    elemental_end(existing, FALSE);  /* different form: dismiss the old one */
+  }
+
+  CHAR *elem = read_mobile(vnum, VIRTUAL);
+
+  if (!elem) {
+    log_f("BUG: spell_greater_elemental: missing mob prototype %d", vnum);
+    send_to_char("The elemental plane doesn't answer. Poke an immortal.\n\r", ch);
+    return;
+  }
+
+  char_to_room(elem, CHAR_REAL_ROOM(ch));
+  add_follower(elem, ch);
+  aff_apply(elem, SPELL_CHARM_PERSON, level, 0, 0, AFF_CHARM, 0);
+
+  ench_apply(elem, TRUE, ENCH_NAME_GREATER_ELEMENTAL, SPELL_GREATER_ELEMENTAL, -1, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+
+  ENCH *ench = ench_get_from_char(elem, ENCH_NAME_GREATER_ELEMENTAL, 0);
+  if (ench) {
+    ench->temp[0] = duration;
+    ench->temp[1] = 5;   /* reset the combat-without-master counter */
+  }
+
+  act("$n calls forth a $N!", FALSE, ch, 0, elem, TO_ROOM);
+  act("You call forth a $N!", FALSE, ch, 0, elem, TO_CHAR);
 }
 
 void cast_magic_armament(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -946,10 +1511,12 @@ void cast_disrupt_sanct(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim
 void spell_disrupt_sanct(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  if (!aff_affected_by(victim, SPELL_DISRUPT_SANCT) && IS_AFFECTED(victim, AFF_SANCTUARY)) {
+  if (!ench_enchanted_by(victim, ENCH_NAME_DISRUPT_SANCT, 0) && IS_AFFECTED(victim, AFF_SANCTUARY)) {
+    const int duration = 10 + GET_WIS_BONUS(ch);
+
     print_spell_messages(victim, SPELL_DISRUPT_SANCT);
 
-    aff_apply(victim, SPELL_DISRUPT_SANCT, 0, 0, 0, 0, 0);
+    ench_apply(victim, TRUE, ENCH_NAME_DISRUPT_SANCT, 0, duration, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
   }
 }
 
@@ -1125,6 +1692,46 @@ void spell_devastation(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
   damage_spell(ch, victim, SPELL_DEVASTATION, level, 1000, DAM_MAGICAL, SAVING_NONE);
+
+  if (SAME_ROOM(ch, victim)) {
+    act("$n chases $s devastating spell with a deadly strike.", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("Still reeling from the spell, you are caught off guard as $n strikes at you!", FALSE, ch, 0, victim, TO_VICT);
+    act("You chase your devastating spell with a deadly strike.", FALSE, ch, 0, victim, TO_CHAR);
+    hit(ch, victim, TYPE_UNDEFINED);
+    /* Only apply Exposed if the victim is still alive/active. */
+    if (GET_POS(victim) > POSITION_DEAD) {
+      /* Apply or refresh Exposed enchant: 10 + INT bonus rounds.
+         If already exposed with equal/longer duration, leave it alone. */
+      int new_dur = 10 + GET_INT_BONUS(ch);
+      int existing = ench_duration(victim, ENCH_NAME_EXPOSED, 0);
+
+      if (existing < new_dur) {
+        ench_apply(victim, TRUE, ENCH_NAME_EXPOSED, 0, new_dur, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, exposed_enchant);
+      }
+    }
+  }
+}
+
+/* Exposed: Invul Breakthrough enchant handler */
+int exposed_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg) {
+  if (cmd == MSG_SHOW_AFFECT_TEXT) {
+    if (!ench || !ch || !signaler) return FALSE;
+    act("......$n is exposed!", FALSE, ch, 0, signaler, TO_VICT);
+    return FALSE;
+  }
+
+  if (cmd == MSG_ROUND) {
+    /* No per-round action needed for the breakthrough enchant itself. */
+    return FALSE;
+  }
+
+  if (cmd == MSG_REMOVE_ENCH) {
+    if (!ench || !ch) return FALSE;
+    act("$n is no longer exposed.", FALSE, ch, 0, 0, TO_ROOM);
+    send_to_char("You feel invulnerable once more.\n\r", ch);
+    return FALSE;
+  }
+  return FALSE;
 }
 
 void cast_incendiary_cloud(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -1166,7 +1773,13 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
     send_to_char("The cloud of fire enveloping you burns you to the core...\n\r", ch);
     act("The cloud of fire enveloping $n burns $m to the core...", FALSE, ch, 0, 0, TO_ROOM);
 
-    int dmg = 150;
+    int base = 150;
+    int int_bonus = 0;
+
+    /* If the caster stored their INT bonus on the enchant, use it to scale damage. */
+    if (ench) int_bonus = ench->temp[0];
+
+    int dmg = base + (int_bonus * 5); /* +5 damage per INT bonus point */
 
     /* Don't kill the character, otherwise EXP is lost. */
     if (GET_HIT(ch) <= dmg) {
@@ -1193,9 +1806,21 @@ int incendiary_cloud_enchant(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char
 void spell_incendiary_cloud(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  ench_apply(victim, TRUE, ENCH_NAME_INCENDIARY_CLOUD, SPELL_INCENDIARY_CLOUD, 10, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, incendiary_cloud_enchant);
+  /* Double the initial damage if the target was already affected. */
+  if (ench_enchanted_by(victim, ENCH_NAME_INCENDIARY_CLOUD, 0)) {
+    damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 1000, DAM_FIRE, SAVING_NONE);
+  }
+  else {
+    damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 500, DAM_FIRE, SAVING_NONE);
+  }
 
-  damage_spell(ch, victim, SPELL_INCENDIARY_CLOUD, level, 500, DAM_FIRE, SAVING_NONE);
+  ench_apply(victim, TRUE, ENCH_NAME_INCENDIARY_CLOUD, SPELL_INCENDIARY_CLOUD, 10, ENCH_INTERVAL_ROUND, -4, APPLY_HITROLL, AFF_BLIND, 0, incendiary_cloud_enchant);
+
+  /* Record the caster's INT bonus on the enchant so the enchant handler can use it each round. */
+  ENCH *e = ench_get_from_char(victim, ENCH_NAME_INCENDIARY_CLOUD, 0);
+  if (e) {
+    e->temp[0] = GET_INT_BONUS(ch);
+  }
 }
 
 void cast_tremor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj) {
@@ -1265,6 +1890,8 @@ void cast_tranquility(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, 
 }
 
 void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
+  const int tranquility_duration = 6;
+
   for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_ch; temp_ch; temp_ch = next_ch) {
     next_ch = temp_ch->next_in_room;
 
@@ -1272,9 +1899,8 @@ void spell_tranquility(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
       print_spell_messages(temp_ch, SPELL_TRANQUILITY);
 
       aff_from_char(temp_ch, SPELL_TRANQUILITY);
-
-      aff_apply(temp_ch, SPELL_TRANQUILITY, 6, 3, APPLY_HITROLL, 0, 0);
-      aff_apply(temp_ch, SPELL_TRANQUILITY, 6, 3, APPLY_DAMROLL, 0, 0);
+      aff_apply(temp_ch, SPELL_TRANQUILITY, tranquility_duration, 0, 0, 0, 0);
+      apply_tranquility_inner_peace(temp_ch, ch, tranquility_duration);
     }
   }
 }
@@ -1437,7 +2063,7 @@ void cast_wither(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_wither(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  damage(ch, victim, 350, SPELL_WITHER, DAM_MAGICAL);
+  damage_spell(ch, victim, SPELL_WITHER, level, 350, DAM_MAGICAL, SAVING_NONE);
 
   if (IS_ALIVE(victim)) {
     /* Duration is 1 less than "expected" because we want the last pulse to happen when duration is 0. */
@@ -1540,7 +2166,7 @@ void spell_dusk_requiem(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     dam *= 2;
   }
 
-  damage(ch, victim, dam, SPELL_DUSK_REQUIEM, DAM_MAGICAL);
+  damage_spell(ch, victim, SPELL_DUSK_REQUIEM, level, dam, DAM_MAGICAL, SAVING_NONE);
 
   /* We only want to reduce duration if the spell was cast, not if Shadow Wraith is expiring. */
   if (level > 0) {
@@ -1649,7 +2275,7 @@ int judgement_strike_enchantment(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, 
       act("$n smites you with $s divine hammer, crushing you into the earth!", FALSE, ch, 0, victim, TO_VICT);
       act("You smite $N with your divine hammer, crushing $M into the earth!", FALSE, ch, 0, victim, TO_CHAR);
 
-      damage(ch, victim, 900, TYPE_UNDEFINED, DAM_MAGICAL);
+      damage_spell(ch, victim, SPELL_DIVINE_HAMMER, GET_LEVEL(ch), 900, DAM_MAGICAL, SAVING_NONE);
     }
 
     ench_from_char(ch, ENCH_NAME_JUDGEMENT_STRIKE, 0, FALSE);
