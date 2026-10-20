@@ -3020,10 +3020,6 @@ int try_hit(CHAR *attacker, CHAR *defender) {
 	
 	  critical_chance += (GET_DEX_BONUS(attacker) * 2);
 	
-	  //Awareness adds 10% to the chance.
-	  if(IS_SET(GET_TOGGLES(attacker), TOG_AWARENESS) && (check_subclass(attacker, SC_RANGER, 1))){
-		  critical_chance += 10;
-	  }
 	  //Berserk adds another 10% chance
 	  if(affected_by_spell(attacker, SKILL_BERSERK) && (check_subclass(attacker, SC_RANGER, 4))){
 		  critical_chance += 10;

@@ -470,8 +470,10 @@ void cast_meteor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *
 void spell_meteor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   if (!spell_check_cast_ok(ch, victim, NO_CAST_SAFE_ROOM | NO_CAST_OTHER_PC_NOKILL_FLAG_ON)) return;
 
-  /* Archmage SC1: Meteor - (50-60) + (5 * INT mod) damage. */
-  damage_spell(ch, victim, SPELL_METEOR, level, number(50, 60) + (5 * GET_INT_BONUS(ch)), DAM_MAGICAL, SAVING_NONE);
+  /* Archmage SC1: Meteor - (50-60) + (5 * INT mod) damage + DAMROLL/4 */
+  int meteor_dmg = (MAX(1, GET_DAMROLL(ch))/4) + (GET_INT_BONUS(ch) * 5) + number(50, 60);
+
+  damage_spell(ch, victim, SPELL_METEOR, level, meteor_dmg, DAM_MAGICAL, SAVING_NONE);
 }
 
 /* Archmage SC3: Twinspell. Passively splashes a copy of a damage spell onto a second nearby hostile that is already
@@ -834,12 +836,14 @@ void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
-  /* Get all the stuff from the corpse and put it on the ground. */
+  /* Spill all contents onto the floor instead of blocking the cast. */
+  int room = CHAR_REAL_ROOM(ch);
+
   for (OBJ *temp_obj = OBJ_CONTAINS(obj), *next_obj; temp_obj; temp_obj = next_obj) {
     next_obj = temp_obj->next_content;
 
     obj_from_obj(temp_obj);
-    obj_to_room(temp_obj, CHAR_REAL_ROOM(victim));
+    obj_to_room(temp_obj, room);
   }
 
   extract_obj(obj);
@@ -929,7 +933,7 @@ void spell_magic_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
   print_spell_messages(victim, SPELL_MAGIC_WEAPON);
 
   /* Duration counts ticks; the proc runs off MSG_MOBACT, which every enchant function still receives. */
-  ench_apply(victim, TRUE, ENCH_NAME_MAGIC_WEAPON, 0, 50 + GET_WIS_BONUS(ch), ENCH_INTERVAL_ROUND,
+  ench_apply(victim, TRUE, ENCH_NAME_MAGIC_WEAPON, 0, 70 + GET_WIS_BONUS(ch), ENCH_INTERVAL_ROUND,
              10 + (2 * GET_INT_BONUS(ch)), APPLY_DAMROLL, 0, 0, magic_weapon_enchant);
 
   ENCH *mw = ench_get_from_char(victim, ENCH_NAME_MAGIC_WEAPON, 0);
@@ -1400,7 +1404,7 @@ void spell_greater_elemental(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ
     return;
   }
 
-  const int duration = 80 + GET_INT_BONUS(ch) + GET_WIS_BONUS(ch);   /* rounds */
+  const int duration = 100 + GET_INT_BONUS(ch) + GET_WIS_BONUS(ch);   /* rounds */
 
   CHAR *existing = find_greater_elemental(ch);
 

@@ -7113,8 +7113,7 @@ per warrior class level, adding up to +100 hit point regeneration at level 50.
 Warlord subclass level 1 grants the warrior the capability of reaching -260
 Armor Class (AC), exceeding the normal limit of -250.
 
-Note: Ranger only gains access to the first component of this subclass level. They
-also receive a 10% boost to critical hit chances.
+Note: Ranger only gains access to the first component of this subclass level.
 
 See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 #
@@ -7730,7 +7729,7 @@ Duration    : Instantaneous
 Level       : Level 1 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 5
-Damage      : (50 to 60) + (5 * INT bonus)
+Damage      : (50 to 60) + (5 * INT bonus) + (DAMROLL/4)
  
 While this spell does very little damage on its own, its low mana cost makes
 it the largest damage/mana ratio spell in existence.  It scales with the
@@ -7823,10 +7822,10 @@ See Also: SUBCLASSES ENCHANTER "STAT BONUS" SANCTUARY
  
 Usage       : cast 'greater elemental' <slime|earth|air|void>
 Accumulative: No
-Duration    : 80 + INT bonus + WIS bonus Rounds
+Duration    : 100 + INT bonus + WIS bonus Rounds
 Level       : Level 5 Enchanter (Mage Subclass)
 Save        : -
-Mana Cost   : 300
+Mana Cost   : 200
  
 The Enchanter binds a greater elemental to their service as a charmed follower.
 The form is chosen when casting, casting the same form again renews it.
@@ -7954,10 +7953,10 @@ See Also: SUBCLASSES ENCHANTER
  
 Usage       : cast 'magic weapon' (self only)
 Accumulative: No
-Duration    : 50 + WIS bonus Rounds
+Duration    : 70 + WIS bonus Rounds
 Level       : Level 2 Enchanter (Mage Subclass)
 Save        : -
-Mana Cost   : 100
+Mana Cost   : 80
  
 The Enchanter infuses their wielded weapon with magic.  A weapon must be
 wielded to cast this spell.
@@ -8207,8 +8206,6 @@ Usage: evasion (toggles on/off)
 When the Bandit/Nomad is in this protective position, all damage taken by
 physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 20%.
-
-Bandits are so focused on evading attacks, that circling is less effective.
 
 This skill cannot be toggled on or off in combat.
 

@@ -1157,8 +1157,8 @@ void assign_spell_pointers(void) {
   SPELLO(SPELL_MIRROR_IMAGE,        30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_CHAR_ROOM,                                                                cast_mirror_image);
   SPELLO(SPELL_FAMILIAR,            30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,   80, TAR_IGNORE,                                                                   cast_familiar);
   SPELLO(SPELL_DISRUPT_SANCT,       30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  250, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_disrupt_sanct);
-  SPELLO(SPELL_MAGIC_WEAPON,        30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,  100, TAR_SELF_ONLY,                                                                cast_magic_weapon);
-  SPELLO(SPELL_GREATER_ELEMENTAL,   30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  300, TAR_IGNORE,                                                                   cast_greater_elemental);
+  SPELLO(SPELL_MAGIC_WEAPON,        30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,   80, TAR_SELF_ONLY,                                                                cast_magic_weapon);
+  SPELLO(SPELL_GREATER_ELEMENTAL,   30, POSITION_STANDING, 30, 57, 57, 57, 57, 57, 57, 57,  200, TAR_IGNORE,                                                                   cast_greater_elemental);
   SPELLO(SPELL_TETHER,              30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,   20, TAR_IGNORE,                                                                   cast_tether);
   // Archmage
   SPELLO(SPELL_METEOR,              30, POSITION_FIGHTING, 30, 57, 57, 57, 57, 57, 57, 57,    5, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_SELF_NONO,                               cast_meteor);

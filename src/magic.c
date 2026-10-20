@@ -1638,12 +1638,14 @@ void spell_spirit_levy(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj) {
     ROOM_BLOOD(CHAR_REAL_ROOM(ch)) = MIN(ROOM_BLOOD(CHAR_REAL_ROOM(ch)) + 1, 10);
   }
 
-  /* Get all the stuff from the corpse and put it on the ground. */
+  /* Spill all contents onto the floor instead of blocking the cast. */
+  int room = CHAR_REAL_ROOM(ch);
+
   for (OBJ *temp_obj = OBJ_CONTAINS(obj), *next_obj; temp_obj; temp_obj = next_obj) {
     next_obj = temp_obj->next_content;
 
     obj_from_obj(temp_obj);
-    obj_to_room(temp_obj, CHAR_REAL_ROOM(ch));
+    obj_to_room(temp_obj, room);
   }
 
   extract_obj(obj);
