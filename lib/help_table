@@ -9447,7 +9447,7 @@ Level       : Level 3 Chanter (Bard Subclass)
 Mana        : 100
 
 This song increases the party regen by 75 hit points and 15 mana each tick for
-5 ticks.  Additionally, characters affected by luck have a 20% chance to avoid
+5 ticks.  Additionally, characters affected by luck have a 7% chance to avoid
 death on an otherwise killing blow.
 
 See Also: SUBCLASSES CHANTER

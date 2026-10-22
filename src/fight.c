@@ -2285,7 +2285,7 @@ int damage(CHAR *ch, CHAR *victim, int dmg, int attack_type, int damage_type) {
   }
 
   /* Chanter SC3: Luck - Rescue character from death. */
-  if ((GET_POS(victim) <= POSITION_INCAP) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(victim) && affected_by_spell(victim, SPELL_LUCK) && chance(20)) {
+  if ((GET_POS(victim) <= POSITION_INCAP) && !ROOM_CHAOTIC(CHAR_REAL_ROOM(victim)) && IS_MORTAL(victim) && affected_by_spell(victim, SPELL_LUCK) && chance(7)) {
     for (CHAR *temp_ch = ROOM_PEOPLE(CHAR_REAL_ROOM(victim)); temp_ch; temp_ch = temp_ch->next_in_room) {
       if (GET_OPPONENT(temp_ch) == victim) {
         stop_fighting(temp_ch);
