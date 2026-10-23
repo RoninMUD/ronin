@@ -43,37 +43,36 @@ int check_sc_access(CHAR *ch, int skill) {
   if ((skill == SKILL_MEDITATE) && (GET_CLASS(ch) == CLASS_CLERIC)) return TRUE;
   if ((skill == SPELL_DIVINE_WIND) && (GET_CLASS(ch) == CLASS_NINJA)) return TRUE;
   if ((skill == SPELL_RAGE) && (GET_CLASS(ch) == CLASS_ANTI_PALADIN)) return TRUE;
-  if ((skill == SPELL_IRON_SKIN) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
+  if ((skill == SPELL_TREMOR) && (GET_CLASS(ch) == CLASS_COMMANDO)) return TRUE;
+  if ((skill == SPELL_PASSDOOR) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) return TRUE;
+  if ((skill == SPELL_FROSTBOLT) && (GET_CLASS(ch) == CLASS_MAGIC_USER)) return TRUE;
 
   if (skill <= 165) return TRUE;
 
   switch (skill) {
     /* Enchanter */
-    case SPELL_BLADE_BARRIER:
+    case SPELL_MIRROR_IMAGE:
       if (check_subclass(ch, SC_ENCHANTER, 1)) return TRUE;
       break;
-    case SPELL_PASSDOOR:
+    case SPELL_MAGIC_WEAPON:
       if (check_subclass(ch, SC_ENCHANTER, 2)) return TRUE;
       break;
-    case SPELL_ENGAGE:
+    case SPELL_FAMILIAR:
       if (check_subclass(ch, SC_ENCHANTER, 3)) return TRUE;
       break;
-    case SPELL_ETHEREAL_NATURE:
+    case SPELL_DISRUPT_SANCT:
       if (check_subclass(ch, SC_ENCHANTER, 4)) return TRUE;
       break;
-    case SPELL_DISRUPT_SANCT:
+    case SPELL_GREATER_ELEMENTAL:
+    case SPELL_TETHER:
       if (check_subclass(ch, SC_ENCHANTER, 5)) return TRUE;
       break;
-
       /* Archmage */
     case SPELL_METEOR:
       if (check_subclass(ch, SC_ARCHMAGE, 1)) return TRUE;
       break;
     case SPELL_ORB_PROTECTION:
       if (check_subclass(ch, SC_ARCHMAGE, 2)) return TRUE;
-      break;
-    case SPELL_FROSTBOLT:
-      if (check_subclass(ch, SC_ARCHMAGE, 3)) return TRUE;
       break;
     case SPELL_WRATH_ANCIENTS:
       if (check_subclass(ch, SC_ARCHMAGE, 4)) return TRUE;
@@ -110,7 +109,6 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
     case SKILL_TROPHY:
       if (check_subclass(ch, SC_ROGUE, 2)) return TRUE;
-      if (check_subclass(ch, SC_TRAPPER, 4)) return TRUE;
       break;
     case SKILL_VEHEMENCE:
       if (check_subclass(ch, SC_ROGUE, 3)) return TRUE;
@@ -161,7 +159,7 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Mystic */
-    case SPELL_DEBILITATE:
+    case SKILL_DEBILITATE:
       if (check_subclass(ch, SC_MYSTIC, 1)) return TRUE;
       break;
     case SKILL_TIGERKICK:
@@ -184,7 +182,7 @@ int check_sc_access(CHAR *ch, int skill) {
 
     /* Trapper */
     case SKILL_CAMP:
-      if (check_subclass(ch, SC_TRAPPER, 2)) return TRUE;
+      if ((GET_CLASS(ch) == CLASS_NOMAD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       if ((GET_CLASS(ch) == CLASS_BARD) && (GET_LEVEL(ch) >= 35)) return TRUE;
       break;
     case SKILL_BATTER:
@@ -268,14 +266,14 @@ int check_sc_access(CHAR *ch, int skill) {
       break;
 
     /* Mercenary */
-    case SPELL_TREMOR:
+    case SPELL_IRON_SKIN:
       if (check_subclass(ch, SC_MERCENARY, 1)) return TRUE;
       break;
     case SPELL_CLOUD_CONFUSION:
-      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
       break;
     case SKILL_RIPOSTE:
-      if (check_subclass(ch, SC_MERCENARY, 3)) return TRUE;
+      if (check_subclass(ch, SC_MERCENARY, 2)) return TRUE;
       break;
     case SPELL_INCENDIARY_CLOUD:
       if (check_subclass(ch, SC_MERCENARY, 4)) return TRUE;
@@ -1157,7 +1155,7 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
               case 26:
                 sprintf(buf,"I know nooooothing!");break;
               case 27:
-                sprintf(buf,"Hemp for IMP!");break;
+                sprintf(buf,"Demote Hemp!");break;
               case 28:
                 sprintf(buf,"What are you gonna do, bleed on me?");break;
               case 29:
@@ -1216,7 +1214,20 @@ int token_mob(CHAR *mob,CHAR *ch, int cmd, char *argument) {
 void assign_subclass(void) {
   assign_obj(WALL_THORNS, wall_thorns);
 
+  int trap_alert_ward (OBJ*, CHAR*, int, char*);
+  int trap_poison_dart (OBJ*, CHAR*, int, char*);
+  int trap_binding_snare (OBJ*, CHAR*, int, char*);
+
+  assign_obj(TRAP_OBJ_VNUM_ALERT_WARD, trap_alert_ward);
+  assign_obj(TRAP_OBJ_VNUM_POISON_DART, trap_poison_dart);
+  assign_obj(TRAP_OBJ_VNUM_BINDING_SNARE, trap_binding_snare);
+
   assign_mob(TOKEN_MOB, token_mob);
+
+  assign_mob(GREATER_ELEMENTAL_SLIME, greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_EARTH, greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_AIR,   greater_elemental_spec);
+  assign_mob(GREATER_ELEMENTAL_VOID,  greater_elemental_spec);
 
   for (int i = 0; i < NUMELEMS(subclass_master); i++) {
     if (subclass_master[i] > 0) {

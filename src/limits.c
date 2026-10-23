@@ -122,7 +122,11 @@ int graf(int age, int p0, int p1, int p2, int p3, int p4, int p5, int p6)
 * @return The character's effective maximum hit points.
 */
 int hit_limit(CHAR *ch) {
-  return GET_MAX_HIT_POINTS(ch);
+  /* SC_TRAPPER Frenzy: shrinks the effective ceiling without ever
+   * touching the persistent GET_MAX_HIT_POINTS field -- see
+   * ch->specials.frenzy_fatigue. Floored so this can reduce a
+   * character to critical but never to 0 or below. */
+  return MAX(GET_MAX_HIT_POINTS(ch) - ch->specials.frenzy_fatigue, 1);
 }
 
 /**
@@ -272,6 +276,27 @@ int point_update_move(CHAR *ch) {
   return move_gain(ch);
 }
 
+/* Archmage SC1: War Caster - In combat, adds (10 + WIS mod) mana regen per SC level to both the regen and the combat
+ * regen cap. Never applies out of combat. */
+static int war_caster_bonus(CHAR *ch) {
+  if (!ch || !IS_MORTAL(ch) || !check_subclass(ch, SC_ARCHMAGE, 1)) return 0;
+
+  if (!GET_OPPONENT(ch) || !SAME_ROOM(ch, GET_OPPONENT(ch))) return 0;
+
+  return (10 + GET_WIS_BONUS(ch)) * GET_SC_LEVEL(ch);
+}
+
+/* Regen position: a standing or flying character who still has an opponent in the room regens as if fighting. */
+static int regen_position(CHAR *ch) {
+  int pos = GET_POS(ch);
+
+  if (((pos == POSITION_STANDING) || (pos == POSITION_FLYING)) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
+    pos = POSITION_FIGHTING;
+  }
+
+  return pos;
+}
+
 /* Return the total in combat mana regen cap bonus granted by prestige perks. */
 int prestige_mana_regen_cap_bonus(CHAR *ch) {
   if (!ch || IS_NPC(ch)) return 0;
@@ -297,6 +322,8 @@ int prestige_mana_regen_cap_bonus(CHAR *ch) {
 
 int mana_gain(CHAR *ch) {
   if (!ch) return 0;
+
+  ensure_inner_peace_enchant(ch);
 
   int gain = 0;
 
@@ -381,7 +408,7 @@ int mana_gain(CHAR *ch) {
     }
 
     /* Position-based modifier. */
-    switch (GET_POS(ch)) {
+    switch (regen_position(ch)) {
       case POSITION_SLEEPING:
         gain *= 2;
         break;
@@ -497,29 +524,57 @@ int mana_gain(CHAR *ch) {
 
     gain += spell_regen(ch, MANA_REGEN);
 
+    if (IS_MORTAL(ch)) {
+      ENCH *fam = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+      if (fam && (fam->temp[0] == 2)) {
+        gain += 25;
+      }
+    }
+
+    /* Archmage SC1: War Caster - In-combat mana regen. */
+    gain += war_caster_bonus(ch);
+
     /* Inner Peace */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
       gain += 10;
+    }
+
+    /* Tranquility - 25% mana regen boost only while not in combat. */
+    if (affected_by_spell(ch, SPELL_TRANQUILITY) && !GET_OPPONENT(ch)) {
+      gain *= 1.25;
     }
 
     if (gain > 0) {
       /* Limit mana regen in combat. */
       if (IS_MORTAL(ch) && GET_OPPONENT(ch) && SAME_ROOM(ch, GET_OPPONENT(ch))) {
         int mana_regen_cap = 75;
+        int familiar_regen_bonus = 0;
+
+        if (IS_MORTAL(ch)) {
+          ENCH *fam = ench_get_from_char(ch, ENCH_NAME_FAMILIAR, 0);
+
+          if (fam && (fam->temp[0] == 2)) {
+            familiar_regen_bonus = 25;
+          }
+        }
 
         switch (GET_CLASS(ch)) {
           case CLASS_MAGIC_USER:
+            mana_regen_cap = 150;
+            break;
+
           case CLASS_CLERIC:
+          case CLASS_COMMANDO:
             mana_regen_cap = 120;
             break;
 
           case CLASS_AVATAR:
           case CLASS_BARD:
-          case CLASS_COMMANDO:
+          case CLASS_NINJA:
             mana_regen_cap = 100;
             break;
 
-          case CLASS_NINJA:
           case CLASS_PALADIN:
           case CLASS_ANTI_PALADIN:
             mana_regen_cap = 90;
@@ -527,9 +582,24 @@ int mana_gain(CHAR *ch) {
         }
 
         /* Inner Peace */
-        if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
-          mana_regen_cap += 10;
+        if (enchanted_by(ch, ENCH_NAME_INNER_PEACE)) {
+          int inner_peace_bonus = 0;
+          ENCH *inner_peace = get_enchantment_by_name(ch, ENCH_NAME_INNER_PEACE);
+
+          if (inner_peace && (inner_peace->temp[0] > 0)) {
+            inner_peace_bonus = inner_peace->temp[0];
+          }
+          else if (IS_MORTAL(ch) && check_subclass(ch, SC_MYSTIC, 2)) {
+            inner_peace_bonus = GET_WIS_BONUS(ch);
+          }
+
+          mana_regen_cap += 10 + inner_peace_bonus;
         }
+
+        mana_regen_cap += familiar_regen_bonus;
+
+        /* Archmage SC1: War Caster */
+        mana_regen_cap += war_caster_bonus(ch);
 
         // Prestige Perk 24
         if (GET_PRESTIGE_PERK(ch) >= 24) {
@@ -652,7 +722,7 @@ int hit_gain(CHAR *ch) {
     }
 
     /* Position-based modifier. */
-    switch (GET_POS(ch)) {
+    switch (regen_position(ch)) {
       case POSITION_SLEEPING:
         gain += gain / 2;
         break;

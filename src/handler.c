@@ -1734,6 +1734,34 @@ CHAR *get_mob_by_vnum_in_room(int mob_vnum, int rm) {
   return NULL;
 }
 
+/* Returns a random NPC in the given room. Prefers an NPC currently fighting if prefer_fighting is TRUE
+   and one exists; otherwise falls back to any NPC in the room. Returns NULL if the room has no NPCs. */
+CHAR *get_random_npc_in_room(int room_rnum, bool prefer_fighting) {
+  if ((room_rnum < 0) || (room_rnum > top_of_world)) return NULL;
+
+  CHAR *fighting_pick = NULL, *any_pick = NULL;
+  int fighting_matches = 0, any_matches = 0;
+
+  for (CHAR *temp_ch = world[room_rnum].people, *next_ch; temp_ch; temp_ch = next_ch) {
+    next_ch = temp_ch->next_in_room;
+
+    if (!IS_NPC(temp_ch)) continue;
+    if (temp_ch->master || IS_MOUNT(temp_ch)) continue; /* Skip followers, charmed/animated mobs, and mounts. */
+
+    any_matches++;
+    if (!number(0, any_matches - 1)) any_pick = temp_ch;
+
+    if (GET_OPPONENT(temp_ch)) {
+      fighting_matches++;
+      if (!number(0, fighting_matches - 1)) fighting_pick = temp_ch;
+    }
+  }
+
+  if (prefer_fighting && fighting_pick) return fighting_pick;
+
+  return any_pick;
+}
+
 /* Returns a pointer to the first OBJ in the specified room with the specified VNUM, or NULL if not found. */
 OBJ *get_obj_by_vnum_in_room(int obj_vnum, int rm) {
   if (((rm < 0) || (rm > top_of_world)) || (obj_vnum < 0)) return NULL;
@@ -1745,6 +1773,30 @@ OBJ *get_obj_by_vnum_in_room(int obj_vnum, int rm) {
   }
 
   return NULL;
+}
+
+/* Returns a pointer to a random OBJ in the specified room matching one of the given VNUMs, or NULL if none found. */
+OBJ *get_random_obj_by_vnum_list_in_room(const int *vnums, int num_vnums, int rm) {
+  if (((rm < 0) || (rm > top_of_world)) || !vnums || (num_vnums < 1)) return NULL;
+
+  OBJ *found = NULL;
+  int matches = 0;
+
+  for (OBJ *temp_obj = world[rm].contents, *next_content; temp_obj; temp_obj = next_content) {
+    next_content = temp_obj->next_content;
+
+    for (int i = 0; i < num_vnums; i++) {
+      if (V_OBJ(temp_obj) == vnums[i]) {
+        matches++;
+
+        if (!number(0, matches - 1)) found = temp_obj;
+
+        break; /* Don't double-count this object if it somehow matched more than once. */
+      }
+    }
+  }
+
+  return found;
 }
 
 OBJ *get_obj_in_list_ex(CHAR *ch, char *name, OBJ *list, bool must_see) {

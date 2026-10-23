@@ -3096,7 +3096,7 @@ int blackmarket_slime_quicksilver(CHAR *mob, CHAR *ch, int cmd, char *arg)
             {
             case 0:
 				if (!affected_by_spell(mob, SPELL_BLACKMANTLE)) {
-					  spell_blade_barrier(GET_LEVEL(mob), mob, mob, 0);
+					  spell_blackmantle(GET_LEVEL(mob), mob, mob, 0);
 					}
 				break;
             case 1:
@@ -3430,11 +3430,7 @@ int blackmarket_slime_vyralux(CHAR *mob, CHAR *ch, int cmd, char *arg)
 				if (!affected_by_spell(mob, SPELL_BLACKMANTLE)) {
 					  spell_blackmantle(GET_LEVEL(mob), mob, mob, 0);
 					}
-				
-				if (!affected_by_spell(mob, SPELL_BLADE_BARRIER)) {
-					 act("$n projects swirling metal blades around its body.", 0, mob, 0, 0, TO_ROOM);
-					 spell_blade_barrier(GET_LEVEL(mob), mob, mob, 0);
-					}
+
 				break;
             case 1:
 				vict = get_random_victim_fighting(mob);

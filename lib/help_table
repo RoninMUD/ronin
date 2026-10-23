@@ -1,3 +1,45 @@
+"STAT BONUS" "STAT BONUSES" BONUS
+Several skills and spells scale with a "stat bonus" rather than with the raw
+stat.  A stat bonus is a number from 0 to 10 that is earned by raising a core
+stat (STR, DEX, INT, WIS, CON) above 18.  Stats of 18 or lower give no bonus.
+
+  ------------------------------------------------------------------
+  | STAT  |  18  |  19  |  20  |  21  |  22  |  23  |  24  |  25  |
+  | BONUS |   0  |   1  |   2  |   3  |   4  |   6  |   8  |  10  |
+  ------------------------------------------------------------------
+
+Help files refer to these as the "INT bonus", "WIS bonus" and so on.  They are
+different from the older stat modifiers, which are used in other ways depending
+on the stat.
+
+See Also: STATS META AQUEST STRENGTH DEXTERITY INTELLIGENCE WISDOM CONSTITUTION
+#
+"SPELL POWER" "CLASS SPELL POWER"
+
+Mortal spellcasters gain extra power from the stat bonuses (HELP "STAT BONUS")
+that suit their class.  Damage and healing from spells increase by 1% for each
+point listed below:
+
+  Class         Damage                    Healing
+  ------------  ------------------------  ------------------------
+  Mage          INT + WIS                 -
+  Cleric        INT                       WIS
+  Paladin       (WIS + CON) / 2           (WIS + CON) / 2
+  Ninja         (WIS + CON) / 2           (WIS + CON) / 2
+  Anti-Paladin  (INT + CON) / 2           -
+  Commando      INT                       -
+  Bard          (INT + CON + WIS) / 2     (INT + CON + WIS) / 2
+
+Spells that already scale with INT or WIS of their own (such as Meteor and
+Mantra) do not receive this bonus, and neither do draining heals (Blood Lust,
+Vampiric Touch and Spirit Levy), so the bonuses never stack.
+
+A copy of a spell made by Twinspell is boosted once, on its own.  The Blade
+Dance song, and the damage from Wither, Dusk Requiem and Judgement Strike's
+smite, also receive the bonus.
+
+See Also: "STAT BONUS" SPELLS TWINSPELL
+#
 "BLOOD LEVEL"
 
 The "blood level" of a room is an indicator of the amount of fresh blood that
@@ -1565,7 +1607,9 @@ Mage          Powerful damage spells are the Mage's forte.  His low hit
     (28) Regeneration (SPELL REGENERATION)
     (29) Invulnerability               (29) Paralyze
     (30) Conflagration
-    (40) Perceive                      (50) Quick
+    (35) Passdoor
+    (40) Perceive
+    (45) Frost Bolt                    (50) Quick
 #
 STABLES
 
@@ -1774,14 +1818,14 @@ skills.  Nomads also get 5 natural armor points for every 5 levels, and an
 additional practice % on dodge for every 10 levels. Nomads also get a 20% chance
 to critically hit the enemy.
 
-Crit Chance is improved by Dex above 18.
+Crit Chance is improved by 2*DEX bonus above 18.
 
 You can improve your skills by using the practice command.
 
-Skills: ambush, bash, butcher, disarm, dodge, kick, peek, pick, rescue, spin,
-        subdue, throw, trap, disembowel (level 40), evasion (level 50)
+Skills: ambush, butcher, disarm, dodge, kick, peek, pick, rescue, spin, subdue,
+        throw, trap, camp (level 35), disembowel (level 40), evasion (level 50)
 
-See also: PRACTICE "CLASS PLACEMENT POINTS"
+See also: PRACTICE "CLASS PLACEMENT POINTS" "STAT BONUS"
 #
 PALADIN
 
@@ -2240,11 +2284,77 @@ Disarms the victim by kicking his weapon out of his hand. You cannot disarm
 a victim who is more than six levels higher than you.
 #
 TRAP
-
+ 
 Class: Nomad
-
-To set a trap in the room.  If a monster (non-pc) enters the room it may fall
-into it and cause 1/5 of its hit point damage.
+Subclass Trapper: Level 1 (direction), Level 1 (ward), Level 2 (poison),
+                  Level 4 (snare)
+ 
+Usage: trap
+       trap <direction>
+       trap ward
+       trap poison
+       trap snare
+ 
+"trap" with no argument sets a trap in the room.  If a monster (non-pc) enters
+the room it may fall into it.  The chance is (130 - the monster's level)% each
+time a monster enters, and a trapped monster loses 10% of its hit points.  The
+trap can be set while fighting.
+ 
+Trappers can do more:
+ 
+trap <direction>  Sets the room trap in the adjacent room instead.
+trap ward         Places an Alert Ward in the room.
+trap poison       Places a Poison Dart trap in the room.
+trap snare        Places a Binding Snare in the room.
+ 
+Each placed specialty trap costs 10 mana and uses the Trap skill roll. A Trapper
+may only have one of each type in a room.
+ 
+See Also: TRAPPER NOMAD "ALERT WARD" "POISON DART" "BINDING SNARE" BATTER
+#
+"ALERT WARD" "TRAP WARD"
+ 
+Subclass Trapper: Level 1 (Nomad)
+ 
+Usage: trap ward
+ 
+The Trapper places a ward in the room.  When the zone resets, the owner is told
+which room the ward was in, and then the ward is consumed.
+ 
+See Also: TRAP TRAPPER
+#
+"POISON DART" "TRAP POISON"
+ 
+Subclass Trapper: Level 2 (Nomad)
+ 
+Usage: trap poison
+ 
+The Trapper places a poison dart trap in the room.  It only triggers on NPCs.
+Every 10 seconds, the chance it triggers is (Trapper level + DEX bonus)%.
+ 
+A poisoned monster takes poison damage every round equal to one third of the
+Trapper's hit point regeneration, for 10 + WIS bonus rounds. This poison cannot
+kill.
+ 
+See Also: TRAP TRAPPER BATTER "STAT BONUS"
+#
+"BINDING SNARE" "TRAP SNARE"
+ 
+Subclass Trapper: Level 4 (Nomad)
+ 
+Usage: trap snare
+ 
+The Trapper places a snare in the room.  It only triggers on NPCs. Every 10
+seconds, the chance it triggers is (Trapper level + 2 * WIS bonus)%.
+ 
+When it triggers, one of the following enchantments is applied at random for
+5 + WIS bonus rounds:
+ 
+  Exposed       (invulnerability break)
+  Confusion     (cannot use special attacks)
+  Sluggishness  (reduced dodge chance)
+ 
+See Also: TRAP TRAPPER BATTER EXPOSED CONFUSION SLUGGISHNESS "STAT BONUS"
 #
 SUBDUE
 
@@ -2640,6 +2750,49 @@ EQUIPMENT
 When you want to know what armor, weapon, charms etc. you're wearing.
 
 See also: INVENTORY
+#
+RANDOM "RANDOM FLAG" "RANDOM AFFECTS" RANDOM_0 RANDOM_1 RANDOM_2
+ 
+Flags: RANDOM, RANDOM_0, RANDOM_1, RANDOM_2 (object extra flags)
+ 
+Objects with a random flag get a random bonus added to some of their affects
+each time a new copy of the object is created.  The roll is added on top of the
+modifier already set in the object's prototype, so the prototype value acts as
+the guaranteed minimum.
+ 
+  RANDOM    Rolls every affect slot on the object.
+  RANDOM_0  Rolls only the first affect slot.
+  RANDOM_1  Rolls only the second affect slot.
+  RANDOM_2  Rolls only the third affect slot.
+ 
+Each rolled slot looks at its apply type.  The chances for each are:
+ 
+  Apply         Roll added
+  ------------  ----------------------------------------------------------
+  MOVE          +1 to +100, equal chance (1%) of each value.
+  HIT, MANA     50%: +0.  Otherwise +1 to +50, equal chance (1%) of each.
+  ARMOR         20%: 0
+                10% each: -1, -2, -3, -4, -5
+                 8%: -6    7%: -7    6%: -8    5%: -9    4%: -10
+  HP_REGEN      55%: +0
+                10% each: +5, +10, +15
+                 5% each: +20, +25, +30
+  MANA_REGEN    55%: +0
+                10% each: +1, +2, +3
+                 5% each: +4, +5, +6
+  HITROLL       80%: +0    15%: +1    5%: +2
+  DAMROLL       80%: +0    15%: +1    5%: +2
+ 
+Any other apply type (STR, DEX, INT, WIS, CON, AGE, the skill applies, and so
+on) is not changed by the random flags, and keeps its prototype value.
+ 
+Average rolls: MOVE +50.5, HIT/MANA +12.75, ARMOR -3.8, HP_REGEN +6.75,
+MANA_REGEN +1.35, HITROLL/DAMROLL +0.25.
+ 
+Note: Armor rolls are negative because lower armor class is better.  The level
+of the object does not change any of these chances.
+ 
+See Also: OSET OSTAT FLAGS AFFECTS
 #
 KISS
 
@@ -4153,22 +4306,25 @@ saving throw. It is also not possible to summon anyone into arena zones.
 See Also: "GROUP SUMMON"
 #
 "CHARM PERSON"
-
+ 
 Usage       : cast 'charm person' <victim>
 Accumulative: No
 Duration    : (432/Intelligence points of victim) Ticks
 Level       : Level 14 Mage
 Mana Cost   : 50
-
+ 
 It is not possible to charm anyone that is already charmed, if you're charmed
 yourself, or if the person is higher level than you are. The person will get a
 saving throw versus "paralyzation". It is also not possible to charm anyone
 over level 30.
-
+ 
 A charmed person will follow you and not be able to attack you.  You can give
 commands to a charmed person using the order command.
-
-See Also: FOLLOW ORDER SONGS
+ 
+Skills and spells that distinguish friend from foe, such as War Chant and Cloud
+of Confusion, treat a player's charmed follower as being on its master's side.
+ 
+See Also: FOLLOW ORDER SONGS "BINDING MASTERY" TETHER
 #
 "ANIMATE DEAD"
 
@@ -6205,19 +6361,53 @@ See Also: REGENERATION
 #
 REGENERATION
 
+
 At every tick, or once per minute, a player recovers a certain percentage
 of his/her hit points, mana points, and move points.  The amount of points
 recovered depends on the players age and constitution.  Also, if a player
 is hungry or thirsty they will not regen as fast as normal.
-
+ 
 The maximum amount of mana points a player is able to regenerate while
 fighting is dependent on their class, and is capped as follows:
+ 
+Mage - 150/tick with all 3 ranks
+Cleric/Commando - 120/tick with all 3 ranks
+Bard/Ninja - 100/tick with all 3 ranks
+Paladin/Anti-Paladin - 90/tick with all 3 ranks
+ 
+Some subclass abilities raise these caps while in combat (see WAR CASTER and
+"INNER PEACE").
 
-Mage/Cleric - 120/tick with all 3 ranks
-Bard/Commando - 100/tick with all 3 ranks
-Ninja/Paladin/Anti-Paladin - 90/tick with all 3 ranks
-
-See also: AGE CONSTITUTION MEMBERSHIP CLUB HUNGER THIRST
+See also: AGE CONSTITUTION MEMBERSHIP CLUB HUNGER THIRST "WAR CASTER"
+          "INNER PEACE"
+#
+"WAR CASTER"
+ 
+Subclass Archmage: Level 1 (Mage)
+ 
+The Archmage is at their best in the thick of battle.  This is a passive
+ability that is only active while the Archmage is in combat.
+ 
+War Caster adds (10 + WIS bonus) * (Archmage subclass level) to the Archmage's
+mana regeneration, and raises the in-combat mana regeneration cap by the same
+amount.  At subclass level 5 with 25 Wisdom, the in-combat cap reaches 250 per
+tick.
+ 
+See Also: SUBCLASSES ARCHMAGE REGENERATION "STAT BONUS"
+#
+TWINSPELL
+ 
+Subclass Archmage: Level 3 (Mage)
+ 
+Twinspell is a passive ability.  When the Archmage casts a single-target damage
+spell, a copy of that spell is splashed onto one other hostile that is already
+fighting the Archmage or another player.
+ 
+The copy rolls its own saving throw.  Twinspell never splashes area-of-effect
+spells.  Players are only valid targets of the copy in chaotic or arena rooms,
+and only if they are fighting the Archmage's group.
+ 
+See Also: SUBCLASSES ARCHMAGE "SPELL POWER"
 #
 PROMOTE
 
@@ -6923,8 +7113,7 @@ per warrior class level, adding up to +100 hit point regeneration at level 50.
 Warlord subclass level 1 grants the warrior the capability of reaching -260
 Armor Class (AC), exceeding the normal limit of -250.
 
-Note: Ranger only gains access to the first component of this subclass level. They
-also receive a 10% boost to critical hit chances.
+Note: Ranger only gains access to the first component of this subclass level.
 
 See Also: SUBCLASSES WARLORD TANK REGENERATION AC RANGER
 #
@@ -6977,31 +7166,28 @@ Armor Class (AC), exceeding the normal limit of -250.
 
 See Also: SUBCLASSES WARLORD PUNCH BLOCK AC
 #
-"JUGGERNAUT"
-
+JUGGERNAUT
+ 
 Subclass Warlord: Level 4 (Warrior)
-
+ 
 The Warlord is a force to be reckoned with on the battlefield, a veritable
 juggernaut of whirling blades and thick, tank-like armor.
-
-As a passive bonus, the Warlord has their number of successful dual, triple,
-and quad attacks increased by up to 15%, based on the Warlord's skill and
-Dexterity modifier(s).
-
-Additionally, as a right of initiation into the ranks of the Juggernauts, the
-Warlord adorns their armor with jagged spikes, occasionally harming those that
-dare get too close.  This passive bonus is active so long as the warrior is
-wearing armor.  Damage is dealt whether an attack hits or misses, and the rate
-of success of this benefit is increased by the Warlord's Dexterity modifier.
-
+ 
+As a right of initiation into the ranks of the Juggernauts, the Warlord adorns
+their armor with jagged spikes, which can hurt those that attack them.  This
+passive bonus is active so long as the warrior is wearing armor.  Whenever the
+Warlord is attacked there is a 20% chance (+ half of the Warlord's Dexterity
+modifier) that the attacker is hurt, whether the attack hits or misses.  The
+damage dealt is (100 - the Warlord's AC) / 4, up to 100 damage.
+ 
 Finally, the Warlord's success rate when using the Kick and Spin Kick skills is
 improved, and the input lag from using either skill is reduced to two rounds,
 regardless of success or failure.
-
+ 
 Warlord subclass level 4 grants the warrior the capability of reaching -290
 Armor Class (AC), exceeding the normal limit of -250.
-
-See Also: SUBCLASSES WARLORD DUAL TRIPLE QUAD DEXTERITY SPIN AC
+ 
+See Also: SUBCLASSES WARLORD DEXTERITY SPIN AC
 #
 "BULWARK"
 
@@ -7054,66 +7240,76 @@ While fighting, the tank cannot change this mode.
 See Also: SUBCLASSES RANGER
 #
 CAMP
-
+ 
+Class: Nomad (Level 35)
 Class: Bard (Level 35)
-Subclass Trapper: Level 2 (Nomad)
-
-The Bard and Trapper have the ability to set up a camp with the same
+ 
+The Nomad and Bard have the ability to set up a camp with the same
 regeneration properties of a resting room.  Characters will still need to
 become members of a resting room to receive the benefits of resting in a camp.
-
+ 
 A camp cannot be set up in a room with a potentially deadly monster.
-
-See Also: BARD SUBCLASSES TRAPPER
+ 
+See Also: BARD NOMAD
 #
 BATTER
-
+ 
 Subclass Trapper: Level 3 (Nomad)
-
+ 
 Usage: batter <victim>
-
-The Trapper can use his/her fists in rapid succession
-to pound on the victim.  This skill can deal upwards
-of 2*Trapper level in damage.  After using this skill,
-the Trapper has to wait two rounds of violence.
-
-See Also: SUBCLASSES TRAPPER
+ 
+The Trapper can use his/her fists in rapid succession to pound on the victim.
+This skill deals damage equal to the Trapper's level + 3 * STR bonus, and
+knocks the victim down.  After using this skill, the Trapper has to wait two
+rounds of violence (one to two in chaotic rooms).
+ 
+If a Poison Dart or Binding Snare is in the room, Batter has a chance (the
+trap's own trigger chance) to knock the victim into it and set it off.
+ 
+See Also: SUBCLASSES TRAPPER "POISON DART" "BINDING SNARE" "STAT BONUS"
 #
 FRENZY
-
+ 
 Subclass Trapper: Level 5 (Nomad)
-
-The Trapper can work him/herself into a frenzy, focusing all
-efforts on hitting the creature over and over as hard and
-as fast as possible.  Of course, while in this state of
-mind, the Trapper cannot possibly rescue, dodge, flee, or
-do other defensive skills and may miss a little more often.
-
-The inability to dodge makes this skill much less defensive
-than the comparable Ranger subclass skill of berserk.  However,
-the benefits of getting 1.5x damage for every hit, and the
-possibility of a dual now and then make up for the reduction
-in defense.
-
-See Also: SUBCLASSES TRAPPER BERSERK
+ 
+The Trapper works him/herself into a frenzy, giving up all defense in order to
+strike over and over. While frenzied, attackers hit the Trapper 70% of the
+time, and every stack of Frenzy gives a (DEX bonus + 40)% chance of an extra
+hit each round.
+ 
+Stacks build by one on every 10 seconds. Each stack costs 10% of the Trapper's
+true maximum hit points (a temporary loss that is not saved). The maximum number
+of stacks depends on 2 * the Trapper's WIMPY setting, so a higher WIMPY setting
+results in fewer stacks.
+ 
+Frenzy follows a cycle: it ramps up, holds at its peak for 10 seconds, and then
+fatigue sets in. Once fatigued the bonuses end and the stacks bleed off by one
+on every monster action. Ending frenzy early skips straight to recovery. Frenzy
+cannot be started again until the Trapper has fully recovered. It can be started
+while fighting.
+ 
+While frenzied or fatigued the Trapper cannot dodge, flee, or rescue, and can
+not rent.
+ 
+See Also: SUBCLASSES TRAPPER BERSERK "STAT BONUS" WIMPY
 #
 TRAPPER
-
+ 
 The Trapper has wandered the world and learned to live off the land.
 Learning how to hunt and use their fists to survive. As they grow
 stronger, you can see what years living off the land can teach you.
-
+ 
 The Trapper is a subclass of the Nomad.
-
+ 
 For help on each skill, just type HELP <name of skill>
-
+ 
 Level         Skill
-  1           SCAN
-  2           CAMP
+  1           TRAP (direction and ward)
+  2           TRAP (poison)
   3           BATTER
-  4           TROPHY
+  4           TRAP (snare)
   5           FRENZY
-
+ 
 See Also: SUBCLASSES RANGER NOMAD
 #
 RANGER
@@ -7215,33 +7411,33 @@ Level         Skill/Spell
 See Also: SUBCLASSES INFIDEL ANTI-PALADIN
 #
 DESECRATE
-
+ 
 Usage       : cast 'desecrate' <corpse>
 Accumulative: No
 Duration    : 7 Ticks
 Level       : Level 1 Defiler (Anti-Paladin Subclass)
 Save        : None
 Mana Cost   : 70
-
+ 
 With this spell, the Defiler does the vilest thing imaginable with the corpse,
 desecrating it in horrific ways.
-
+ 
 This spell grants the Defiler a hit point regeneration bonus equal the level of
 the creature the corpse came from, and an armor bonus equal to half of its
 level.
-
+ 
 While affected by Desecrate, the Defiler's Vampiric Touch spell will inflict and
 drain 10% more damage.  Additionally, the damage and drains inflicted by the
-Blood Lust spell is also increased by 10%.
-
+Blood Lust spell is also increased by 25%.
+ 
 As an added bonus, the Defiler's Spirit Levy spell will restore up to 50% more
 hit points per cast.  This effect is active even when Desecrate is not.
-
+ 
 This spell will destroy the corpse and anything within it.
-
+ 
 When cast upon the corpse of a creature with a level of no less than 10 levels
 below the caster, this spell will increase the blood level of the room by one.
-
+ 
 See Also: SUBCLASSES DEFILER "VAMPIRIC TOUCH" "BLOOD LUST" "SPIRIT LEVY"
           "BLOOD LEVEL"
 #
@@ -7481,7 +7677,7 @@ Accumulative: Yes
 Duration    : Instantaneous / 36 Seconds (DoT) / Special (Negative Effects)
 Level       : Level 5 Infidel (Anti-Paladin Subclass)
 Save        : None vs. Damage / Immunity Negates (Negative Effects)
-Mana Cost   : 75
+Mana Cost   : 70
 Damage Done : 350 / Special
 
 Wither is a spell that desiccates the victim, inflicting harm, and weakening it.
@@ -7525,36 +7721,21 @@ This spell also will curse the victim on a failed saving throw vs. spell.
 
 See Also: CURSE
 #
-"BLADE BARRIER"
-
-Usage       : cast 'blade barrier' (self only)
-Accumulative: No
-Duration    : 5 Ticks
-Level       : Level 1 Enchanter (Mage Subclass)
-Save        : -
-Mana Cost   : 50
-
-The Enchanter produces a magic shield which has the ability to reflect up to
-25% of all hit type damage.  The Enchanter cannot reflect more damage than
-he/she could do in one hit.  This can be an extremely powerful protection
-as well as a useful offensive ability.
-
-See Also: SUBCLASSES ENCHANTER
-#
 METEOR
-
+ 
 Usage       : cast 'meteor' <victim>
 Accumulative: No
 Duration    : Instantaneous
 Level       : Level 1 Archmage (Mage Subclass)
 Save        : -
 Mana Cost   : 5
-
-While this spell does only gives 60 damage to the
-victim, its low mana cost makes it the largest
-damage/mana ratio spells in existence.
-
-See Also: SUBCLASSES ARCHMAGE
+Damage      : (50 to 60) + (5 * INT bonus) + (DAMROLL/4)
+ 
+While this spell does very little damage on its own, its low mana cost makes
+it the largest damage/mana ratio spell in existence.  It scales with the
+Archmage's INT bonus instead of receiving the normal class spell power bonus.
+ 
+See Also: SUBCLASSES ARCHMAGE "STAT BONUS"
 #
 "WRATH OF ANCIENTS"
 
@@ -7607,11 +7788,11 @@ point for every 2 damage taken.
 See Also: SUBCLASSES ARCHMAGE
 #
 "FROST BOLT"
-
+ 
 Usage       : cast 'frost bolt' <victim>
 Accumulative: No
 Duration    : Instantaneous
-Level       : Level 3 Archmage (Mage Subclass)
+Level       : Level 45 Mage
 Save        : -
 Mana Cost   : 50
 Damage      : 350
@@ -7619,111 +7800,235 @@ Damage      : 350
 This spell is similar to iceball, but the damage to casting cost ratio is much
 higher, making it a very mana-efficient attack spell.  A victim hit with Frost
 Bolt has their movement points reduced by 100.
-
-See Also: SUBCLASSES ARCHMAGE
-#
-ENGAGE
-
-Usage       : cast 'engage' <victim>
-Accumulative: No
-Duration    : Instantaneous
-Level       : Level 3 Enchanter (Mage Subclass)
-Save        : -
-Mana Cost   : 40
-
-This battle-starting spell causes the Enchanter to deal 5x his hit damage in
-the first hit.  The Enchanter's weapon will also have a better chance of
-specing.
-
-See Also: SUBCLASSES ENCHANTER
+ 
+See Also: "MAGE SPELLS" ICEBALL
 #
 "DISRUPT SANCTUARY"
-
+ 
 Usage       : cast 'disrupt sanctuary' <victim>
 Accumulative: No
-Duration    : 0-57 seconds (depends on timing)
-Level       : Level 5 Enchanter (Mage Subclass)
-Save        : -
-Mana Cost   : 250
-
-This spell temporarily removes the victim's sanctuary, allowing the entire
-group to deal full damage for the duration.  It can be cast on any victim but
-has a certain degree of failure.
-
-See Also: SUBCLASSES ENCHANTER
-#
-"ETHEREAL NATURE"
-
-Usage       : cast 'ethereal nature' (self only)
-Accumulative: no
-Duration    : 30 Ticks (only 1st tick is effective)
+Duration    : 10 + WIS bonus Rounds
 Level       : Level 4 Enchanter (Mage Subclass)
 Save        : -
-Mana Cost   : 100
-
-While affected by this spell, the Enchanter is not completely within the
-physical plane of existence and therefore can not receive any physical damage.
-However, the Enchanter can be damaged by spells and other special attacks.
-Conversely, the Enchanter can not inflict any physical damage while in this
-state and must depend on attack spells to kill.  It takes the Enchanter great
-effort to maintain this form and as a result can only cast ethereal nature once
-every 30 ticks.
-
-See Also: SUBCLASSES ENCHANTER
+Mana Cost   : 250
+ 
+This spell temporarily removes the victim's sanctuary, allowing the entire
+group to deal full damage for the duration. It can be cast on any victim but
+has a certain degree of failure.
+ 
+See Also: SUBCLASSES ENCHANTER "STAT BONUS" SANCTUARY
+#
+"GREATER ELEMENTAL"
+ 
+Usage       : cast 'greater elemental' <slime|earth|air|void>
+Accumulative: No
+Duration    : 100 + INT bonus + WIS bonus Rounds
+Level       : Level 5 Enchanter (Mage Subclass)
+Save        : -
+Mana Cost   : 200
+ 
+The Enchanter binds a greater elemental to their service as a charmed follower.
+The form is chosen when casting, casting the same form again renews it.
+ 
+The elemental vanishes if its master dies, if the charm breaks, or if it fights
+for 5 rounds without its master in the room.  It leaves no corpse, and cannot
+wear, wield or grab equipment.
+ 
+Each form has different mob stats (hitroll, hp, damage, resistances, etc.), and
+a special attack that only fires while the elemental is fighting an NPC:
+ 
+Slime : 40% chance to apply Corrosive Slime, and chance (improved by WIS bonus)
+        to add Sluggishness.
+Earth : (15 + WIS bonus)% chance to stun the target (position stacking).
+Air   : 35% chance to deal (level + 5 * INT bonus) magical damage, and chance
+        (improved by WIS bonus) to add Confusion.
+Void  : 30% chance to deal (level + 10 * INT bonus) magical damage, and chance
+        (improved by WIS bonus) to add Exposed.
+ 
+See Also: SUBCLASSES ENCHANTER TETHER "BINDING MASTERY" "CORROSIVE SLIME"
+          SLUGGISHNESS CONFUSION EXPOSED "STAT BONUS"
+#
+TETHER
+ 
+Usage       : cast 'tether'
+Accumulative: No
+Duration    : Instantaneous
+Level       : Level 5 Enchanter (Mage Subclass)
+Save        : -
+Mana Cost   : 20
+ 
+Tether pulls all of the caster's bound summons in other rooms to the caster's
+location.  Bound summons are creatures obtained from Charm Person, animated
+dead, and Greater Elemental.  Any fights they were engaged in are ended.
+ 
+See Also: SUBCLASSES ENCHANTER "GREATER ELEMENTAL" "CHARM PERSON"
+#
+"BINDING MASTERY"
+ 
+Subclass Enchanter: Level 5 (Mage)
+ 
+Binding Mastery is a passive ability.  Any hit experience and kill experience
+earned by the Enchanter's bound summons (Charm Person, animated dead, and
+Greater Elemental) while they are in the same room as the Enchanter is awarded
+to the Enchanter instead.
+ 
+See Also: SUBCLASSES ENCHANTER "GREATER ELEMENTAL" "CHARM PERSON"
+#
+"CORROSIVE SLIME"
+ 
+Corrosive Slime is an enchantment applied by the Slime form of Greater
+Elemental. It is a poison damage over time that stacks, up to 10 times. Each
+stack deals 10 + the caster's INT bonus damage per round.
+ 
+See Also: "GREATER ELEMENTAL" "STAT BONUS"
+#
+SLUGGISHNESS
+ 
+Sluggishness is an enchantment that reduces an NPC's chance to dodge by 20%
+(relative to their normal dodge chance). It is applied by effects such as the
+Binding Snare trap and the Slime Greater Elemental.
+ 
+See Also: "BINDING SNARE" "GREATER ELEMENTAL"
+#
+CONFUSION
+ 
+Confusion is an enchantment that prevents an NPC from using its special (OLC)
+attacks. It is applied by effects such as the Binding Snare trap and the Air
+Greater Elemental.
+ 
+Not to be confused with the spell "CLOUD OF CONFUSION".
+ 
+See Also: "BINDING SNARE" "GREATER ELEMENTAL" "CLOUD OF CONFUSION"
+#
+EXPOSED
+ 
+Exposed is an enchantment that strips away a target's defenses. While a target
+is exposed, attackers always break through its invulnerability. It is applied
+by effects such as Debilitate, Lunge, Devastation, the Binding Snare trap and
+the Void Greater Elemental.
+ 
+Depending on its source it may also increase the target's armor by 50.
+ 
+See Also: DEBILITATE LUNGE DEVASTATION "BINDING SNARE" "GREATER ELEMENTAL"
 #
 ENCHANTER
-
+ 
 The Enchanter has spent many years manifesting the ethereal power and works
 to become with Magic.  As they grow in power, they achieve their goal and
 learn to merge with magic.
-
+ 
 The Enchanter is a subclass of the Mage.
-
+ 
 For help on each spell, just type HELP <spell name>
-
+ 
 Level         Spell
-  1           BLADE BARRIER
-  2           PASSDOOR
-  3           ENGAGE
-  4           ETHEREAL NATURE
-  5           DISRUPT SANCTUARY
-
+  1           MIRROR IMAGE
+  2           MAGIC WEAPON
+  3           FAMILIAR
+  4           DISRUPT SANCTUARY
+  5           GREATER ELEMENTAL / TETHER / BINDING MASTERY
+ 
 See Also: SUBCLASSES ARCHMAGE MAGE
 #
+"MIRROR IMAGE"
+ 
+Usage       : cast 'mirror image' <target>
+Accumulative: No
+Duration    : 50 Rounds
+Level       : Level 1 Enchanter (Mage Subclass)
+Save        : -
+Mana Cost   : 100
+ 
+This spell surrounds the target with illusory duplicates. The number of images
+equals the Enchanter's subclass level (1 at level 1, up to 5 at level 5).  It
+may be cast on allies as well as on the Enchanter.
+ 
+Whenever someone strikes at the target, there may be a chance to hit an image
+instead of the real character. The real character is hit 100/(images + 1)% of
+the time.  Each image absorbs one hit and then vanishes.
+ 
+See Also: SUBCLASSES ENCHANTER
+#
+"MAGIC WEAPON"
+ 
+Usage       : cast 'magic weapon' (self only)
+Accumulative: No
+Duration    : 70 + WIS bonus Rounds
+Level       : Level 2 Enchanter (Mage Subclass)
+Save        : -
+Mana Cost   : 80
+ 
+The Enchanter infuses their wielded weapon with magic.  A weapon must be
+wielded to cast this spell.
+ 
+While the spell is active, the Enchanter gains 10 + (2 * INT bonus) damroll.
+In addition, if the wielded weapon has a special attack, that attack has a
+chance of 10 + (2 * WIS bonus) percent to go off on every 10 seconds.
+ 
+See Also: SUBCLASSES ENCHANTER "STAT BONUS" DAMROLL
+#
+FAMILIAR
+ 
+Usage       : cast 'familiar' <sword|sentinel|homunculus>
+Accumulative: No
+Duration    : 40 + INT bonus + WIS bonus Rounds
+Level       : Level 3 Enchanter (Mage Subclass)
+Save        : -
+Mana Cost   : 80
+ 
+The Enchanter conjures a magical familiar.  Only one familiar can exist at a
+time.  Casting the same form again renews it; casting a different form replaces
+it.  The form is chosen when casting:
+ 
+Sword      : Each round in combat, the sword strikes the Enchanter's opponent
+             for magical damage equal to the Enchanter's damroll (minimum 1).
+ 
+Sentinel   : Absorbs damage that would be taken by the Enchanter, after the
+             reductions from Sanctuary and Fortitude have been applied.  It can
+             absorb up to the greater of 500 and 20 * level + 40 * (INT bonus
+             + WIS bonus) damage.  Casting again recharges the sentinel.
+ 
+Homunculus : Each round in combat there is a chance (a random value from 5 to
+             WIS bonus, but at least 5%) that the homunculus restores 5 to 20
+             mana to the Enchanter's group and deals 50 * (INT bonus + 5)
+             magical damage.  It also grants +25 mana regeneration, and +25
+             to the in-combat mana regeneration cap.
+ 
+See Also: SUBCLASSES ENCHANTER "STAT BONUS" REGENERATION
+#
 ARCHMAGE
-
+ 
 The Archmage only cares about one thing. Amassing magical power and using
 it to destroy everything that stands before them. As they grow in
 power, they can show true power to their enemies.
-
+ 
 The Archmage is a subclass of the Mage.
-
+ 
 For help on each spell, just type HELP <spell name>
-
+ 
 Level         Spell
-  1           METEOR
+  1           METEOR / WAR CASTER
   2           ORB OF PROTECTION
-  3           FROST BOLT
+  3           TWINSPELL
   4           WRATH OF ANCIENTS
   5           DISTORTION
-
+ 
 See Also: SUBCLASSES ENCHANTER MAGE
 #
 PASSDOOR
-
+ 
 Usage       : cast 'passdoor' <direction>
 Accumulative: No
 Duration    : Instantaneous
-Level       : Level 2 Enchanter (Mage Subclass)
+Level       : Level 35 Mage
 Save        : -
 Mana Cost   : 50
-
-This spell allows the Enchanter to pass through any closed
-door, regardless of its locked state.  Passing through a
-physical barrier does however weaken the Enchanter, leaving
-him/her stunned for 2 rounds.
-
-See Also: SUBCLASSES ENCHANTER
+ 
+This spell allows the caster to pass through any closed door, regardless of
+its locked state.  Passing through a physical barrier does however weaken the
+caster, leaving him/her stunned for 2 rounds.
+ 
+See Also: "MAGE SPELLS"
 #
 ROGUE
 
@@ -7902,8 +8207,6 @@ When the Bandit/Nomad is in this protective position, all damage taken by
 physical attacks (bare hand attacks, weapon attacks, and skills) will be
 reduced by 20%.
 
-Bandits are so focused on evading attacks, that circling is less effective.
-
 This skill cannot be toggled on or off in combat.
 
 See Also: SUBCLASSES BANDIT NOMAD
@@ -7980,27 +8283,27 @@ Dexterity modifier.
 See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD PRACTICE DEXTERITY
 #
 DISEMBOWEL
-
-Class: Warrior (Level 40) Nomad (Level 40)
-
+ 
+Class: Nomad (Level 40)
+ 
 Usage: disembowel <victim>
-
+ 
 Disembowel is a vicious attack that deals a single melee hit against the target,
-multiplied by between the user's level divided by 10, up to their level
-divided by 5 (between a 5x to a 10x multiplier at level 50).
-
+multiplied by between the user's level divided by 10, up to their level divided
+by 5 (between a 5x to a 10x multiplier at level 50).
+ 
 This attack can only be successful when performed against a target that is
 close to death (30% hit points remaining, or less), or if the damage would cause
 the victim to die in one strike.  This ability is similar to Backstab, but is
 used at the end of combat, instead of the beginning.
-
+ 
 The user will experience 3 rounds of input lag after using Disembowel,
 regardless of success or failure.
-
+ 
 The success of this skill is based on how well it is practiced, and the user's
 Dexterity modifier.
-
-See Also: NOMAD PRACTICE DEXTERITY
+ 
+See Also: NOMAD PRACTICE DEXTERITY MIMICRY
 #
 TACTICIAN
 
@@ -8097,82 +8400,87 @@ Hostile can be toggled on/off, but cannot be toggled during combat.
 See Also: SUBCLASSES GLADIATOR DUAL TRIPLE QUAD DEXTERITY AC RESCUE
 #
 MERCENARY
-
+ 
 The Mercenary is a fighter for hire. They only care about money and doing
 their job well. As they grow in power, you can see how well they can confuse
 opponents and utilize their trusty sidearm to devastate them.
-
+ 
 The Mercenary is a subclass of the Commando.
-
+ 
 For help on each skill or spell, just type HELP <skill/spell name>
-
+ 
 Level         Skill/Spell
-  1           TREMOR
-  2           CLOUD OF CONFUSION
-  3           RIPOSTE
+  1           IRON SKIN
+  2           RIPOSTE
+  3           CLOUD OF CONFUSION
   4           INCENDIARY CLOUD
   5           SIDEARM
-
+ 
 See Also: SUBCLASSES LEGIONNAIRE COMMANDO
 #
 LEGIONNAIRE
-
+ 
 The Legionnaire has spent many years training in combat techniques. While
 having access to some magic, they specialize in single target attacks. As
 they grow in strength their ability to focus down a foe becomes more apparent.
-
+ 
 The Legionnaire is a subclass of the Commando.
-
+ 
 For help on each skill or spell, just type HELP <skill/spell name>
-
+ 
 Level         Skill/Spell
   1           LUNGE
   2           RIMEFANG
   3           CLOBBER
   4           DEVASTATION
   5           SNIPE
-
+ 
 See Also: SUBCLASSES MERCENARY COMMANDO
 #
 LUNGE
-
+ 
 Subclass Legionnaire: Level 1 (Commando)
-
+ 
 Usage: lunge <target>
-
+ 
 With this skill, the Legionnaire can lunge at their target to start
 or join a fight, dealing 25% more damage than an Assault.  The user
 will experience 2 rounds of lag, and the success of the lunge is
 dependent on how well the skill is practiced.
-
+ 
+A successful lunge leaves the target Exposed for 2 rounds, allowing attacks
+to break through its invulnerability.
+ 
 The success of this skill is based on how well it is practiced, and
 the character's Dexterity.
-
+ 
 Note: A weapon is required.
-
-See Also: SUBCLASSES LEGIONNAIRE
+ 
+See Also: SUBCLASSES LEGIONNAIRE EXPOSED
 #
 RIMEFANG
-
+ 
 Usage       : cast 'rimefang'
 Accumulative: No
 Duration    : Instantaneous
 Level       : Level 2 Legionnaire (Commando Subclass)
-Save        : Save vs. Paralysis: Negates Paralysis
+Save        : None for Paralysis (only IMMUNE_PARALYSIS stops it)
 Mana Cost   : 115
 Damage      : (5 to 7) * (Caster Level) (up to 350 at level 50)
-
+ 
 This extremely powerful room attack spell can cause serious damage to anything
 in the immediate vicinity.  This spell also has a higher than normal chance to
-paralyze those hit by it, as compared to the Paralyze spell.
-
+paralyze those hit by it, as compared to the Paralyze spell.  There is no saving
+throw against the paralysis; only creatures that are immune to paralysis resist
+it.
+ 
 Rimefang deals (level / 2 to level) additional damage at night or during the
 winter, and (level to level * 2) damage on a cold winter's eve.  After a
 creature has been damaged by Rimefang, it gains a 10 point penalty to its saving
 throws vs. spells for a duration of 20 rounds (60 seconds, or 1 tick); this
 penalty can be refreshed by additional casts of Rimefang, but does not stack
 with itself.
-
+ 
 See Also: SUBCLASSES LEGIONNAIRE
 #
 CLOBBER
@@ -8201,7 +8509,7 @@ mortally wounded position, making them temporarily rather defenseless.
 See Also: SUBCLASSES LEGIONNAIRE
 #
 DEVASTATION
-
+ 
 Usage       : cast 'devastation' <victim>
 Accumulative: No
 Duration    : Instantaneous
@@ -8209,11 +8517,12 @@ Level       : Level 4 Legionnaire (Commando Subclass)
 Save        : -
 Mana Cost   : 150
 Damage      : 1000
-
-This powerful spell is nearly as mana efficient as Frost Bolt, while being
-more time efficient.
-
-See Also: SUBCLASSES LEGIONNAIRE
+ 
+The spell is followed by a normal physical attack against the victim, with the
+usual chance of a dual or triple hit.  It also leaves the victim Exposed for
+10 + INT bonus rounds.
+ 
+See Also: SUBCLASSES LEGIONNAIRE EXPOSED "STAT BONUS"
 #
 SNIPE
 
@@ -8235,72 +8544,82 @@ each within the 7 round window.
 See Also: SUBCLASSES LEGIONNAIRE
 #
 TREMOR
-
+ 
 Usage       : cast 'tremor'
 Accumulative: No
 Duration    : Instantaneous
-Level       : Level 1 Mercenary (Commando Subclass)
+Level       : Level 40 Commando
 Save        : -
 Mana Cost   : 130
 Damage      : 400
-
-With this spell, the Mercenary causes the ground to shake and heave violently,
+ 
+With this spell, the caster causes the ground to shake and heave violently,
 inflicting 400 damage to every opponent in the room, and knocking them into the
 resting position.  Opponents affected by Tremor have a 95% chance of failing to
 flee from combat for a duration of 10 rounds (30 seconds).  This effect can be
 refreshed or re-applied by casting Tremor again.
-
-See Also: SUBCLASSES MERCENARY
+ 
+See Also: COMMANDO "COMMANDO SPELLS"
 #
 "CLOUD OF CONFUSION"
-
+ 
 Usage       : cast 'cloud of confusion'
 Accumulative: No
 Duration    : 1d5 + 1 Ticks
-Level       : Level 2 Mercenary (Commando Subclass)
+Level       : Level 3 Mercenary (Commando Subclass)
 Save        : -
 Mana Cost   : 100
-
+ 
 Cloud of confusion makes it hard for targets to focus, resulting in more misses
 when fighting, and missteps when feeling.
-
-This spell affects everyone in the room not grouped with the Mercenary.  All
-victims will have their Hitroll reduced by 5 to 8 during the day, or 6 to 9 at
-night.
-
-See Also: SUBCLASSES MERCENARY
+ 
+This spell affects everyone in the room not grouped with the Mercenary (a
+player's charmed followers count as grouped).  All victims will have their
+Hitroll reduced by 5 to 8 during the day, or 6 to 9 at night.
+ 
+Mercenaries protected by Iron Skin take less damage from attackers affected by
+this spell.
+ 
+See Also: SUBCLASSES MERCENARY "IRON SKIN"
 #
 RIPOSTE
-
-Subclass Mercenary: Level 3 (Commando)
-
+ 
+Subclass Mercenary: Level 2 (Commando)
+ 
 With this skill, the Mercenary has a chance to partially deflect incoming
 attacks made against them; the damage deflected is equal to 40% of the deflected
 attack.  Additionally, the Mercenary will strike back at their opponent,
 performing an attack with a normal chance of a Dual or Triple hit.
-
+ 
 When not tanking, the Mercenary has a chance of triggering an extra hit when
 their attack is avoided.
-
+ 
 The success of this skill is dependent on how well it is practiced, and the
 character's Dexterity modifier.
-
+ 
 See Also: SUBCLASSES MERCENARY
 #
 "INCENDIARY CLOUD"
-
+ 
 Usage       : cast 'incendiary cloud' <target>
 Accumulative: No
 Duration    : Instantaneous / 10 rounds (damage over time)
 Level       : Level 4 Mercenary (Commando Subclass)
 Save        : -
 Mana Cost   : 200
-Damage      : 500 + 150 per combat round for 10 rounds
-
+Damage      : 500 + (150 + 5 * INT bonus) per combat round for 10 rounds
+ 
 This powerful spell will inflict a large amount of up-front damage instantly,
-plus a smaller, but still potent burst, every combat round.
-
-See Also: SUBCLASSES MERCENARY
+plus a smaller, but still potent burst, every combat round.  The cloud also
+blinds the target and reduces its hitroll by 4.
+ 
+If the target is already affected by an Incendiary Cloud, the up-front damage
+is doubled to 1000.
+ 
+Mercenaries protected by Iron Skin take less damage from attackers affected by
+this spell.
+ 
+See Also: SUBCLASSES MERCENARY "IRON SKIN" "STAT BONUS"
 #
 SIDEARM
 
@@ -8949,21 +9268,24 @@ increased by the bard's Constitution.
 See Also: BARD
 #
 BLADESINGING
-
+ 
 Subclass Bladesinger: Level 3 (Bard)
-
-The Bladesinger has honed their voice to the highest tier, and
-their vocals have gained a degree of lethality. Their songs will
-imbue their blades with the powerful magic of music.
-When the Bladesinger sings a song, a "Bladesinging" enchantment
-is applied, granting them a bonus to their damage roll equal to
-half the mana cost of the song.  If another song is sung before
-the enchantment expires, it will overwrite the current one and
-apply a new one based on the latest song's mana cost.
-
+ 
+The Bladesinger has honed their voice to the highest tier, and their
+vocals have gained a degree of lethality. Their songs will imbue their
+blades with the powerful magic of music.
+When the Bladesinger sings a song, a "Bladesinging" enchantment is
+applied, granting them a bonus to their damage roll equal to half the
+mana cost of the song.  If another song is sung before the enchantment
+expires, it will overwrite the current one and apply a new one based
+on the latest song's mana cost.
+ 
 This is a passive ability, but the damage bonus enchantment lasts
 10 rounds.
-
+ 
+A Bladesinger wielding a weapon with the HUM (humming) property can also
+sing without an instrument.
+ 
 See Also: SUBCLASSES BLADESINGER SONGS BARD
 #
 "BLADE DANCE"
@@ -8982,52 +9304,53 @@ each target.
 See Also: SUBCLASSES BLADESINGER SONGS BARD
 #
 MIMICRY
-
+ 
 Subclass Bladesinger: Level 5 (Bard)
-
+ 
 The Bladesinger is a master of impersonations and mocking mimicry,
 and periodically demonstrates this prowess in combat with powerful
 results.  This is a passive skill that is always active, and the
 frequency of the bard's Mimicry is based on Dexterity.
-
+ 
 Mimicked actions:
-- Cleric: miracle (opponent of target)
+- Cleric: miracle (opponent of target) + bash + hit + haste check hit
 - Mage: perceive (self) + thunderball (ignores sphere/shield)
-- Warrior: punch + quad, or disembowel (target HP dependent)
+- Warrior: punch + quad
 - Thief: circle + twist
-- Paladin: pummel + fury (self 0 ticks)
-- Anti-Paladin: pummel w/ hidden-blade + rage/bloodlust (self 0 tick)
+- Nomad: disembowel
+- Paladin: pummel + fury (self 0 ticks) + hit
+- Anti-Paladin: pummel + hidden-blade + rage/bloodlust (0 tick) + hit
 - Ninja: pummel + dual + divine wind + kick
-- Bard: taunt + dual + heal song
-- Commando: triple + eshock + disarm
-
+- Bard: taunt + dual + heal song, mimicee dual + haste check hit
+- Commando: triple + eshock + disarm + pummel
+ 
 See Also: SUBCLASSES BLADESINGER BARD
 #
 RESPITE
-
+ 
 Usage       : song 'bridge over troubled water'
 Duration    : Instantaneous
 Level       : Level 1 Chanter (Bard Subclass)
 Mana        : 40
-
+ 
 This song is the ultimate in party status protection. With it the
 Chanter will remove one negative status ailment from each player
 character in the room from the following list:
 - cloud of confusion
-- incendiary cloud
 - paralyze
+- hold person
 - poison
 - charm person
 - blindness
 - chill touch
 - curse
-- wither
 - sleep
-
-If the PC is affected by none of these, it will set their wait
-(skill/spell lag etc.) to zero, though this wait reset does not
-apply to the Chanter.
-
+ 
+If the PC is affected by none of these, it will set their wait (skill/
+spell lag etc.) to zero, though this wait reset does not apply to the
+Chanter. Additionally, Chanters cannot Respite others and be Respited
+themselves within the same round.
+ 
 See Also: SUBCLASSES CHANTER SONGS BARD
 #
 "GROUP SUMMON"
@@ -9102,20 +9425,17 @@ The duration of the affect is 5, the mana cost is 60.
 See Also: SUBCLASSES CHANTER
 #
 CAMARADERIE
-
+ 
 Usage       : song 'we are family'
 Duration    : 5 Ticks
 Level       : Level 5 Chanter (Bard Subclass)
 Mana        : 150
-
+ 
 This song binds the fate of the affected characters to one another. Whenever
 any character affected by Camaraderie (in a room with others affected by
-Camaraderie) takes damage, they instead take only 60% of that damage. The
-other 40% of incoming damage is split amongst their other comrades-in-arms,
-with a penalty (2.5x) on the transfer due to complexities of the entanglement.
-This results in total incoming damage 1.6x original across comrades.
-The duration of the affect is 5, the mana cost is 150.
-
+Camaraderie) takes damage, they instead take only 70% of that damage. The
+other 30% of incoming damage is split amongst their other comrades-in-arms.
+ 
 See Also: SUBCLASSES CHANTER
 #
 LUCK
@@ -9127,7 +9447,7 @@ Level       : Level 3 Chanter (Bard Subclass)
 Mana        : 100
 
 This song increases the party regen by 75 hit points and 15 mana each tick for
-5 ticks.  Additionally, characters affected by luck have a 20% chance to avoid
+5 ticks.  Additionally, characters affected by luck have a 7% chance to avoid
 death on an otherwise killing blow.
 
 See Also: SUBCLASSES CHANTER
@@ -9183,22 +9503,22 @@ Level         Skill/Spell
 See Also: SUBCLASSES MYSTIC NINJA
 #
 MYSTIC
-
+ 
 The Mystic aims to achieve pure enlightenment. Through meditation, balance and
 steadying of the mind they look for answers. As they grow in power they move
 closer and closer to that goal.
-
+ 
 The Mystic is a subclass of the Ninja.
-
+ 
 For help on each skill or spell, just type HELP <skill/spell name>
-
+ 
 Level         Skill/Spell
   1           DEBILITATE
   2           INNER PEACE
   3           TIGERKICK
   4           MANTRA
   5           TRANQUILITY
-
+ 
 See Also: SUBCLASSES RONIN NINJA
 #
 BLUR
@@ -9220,22 +9540,23 @@ following benefits:
 See Also: SUBCLASSES RONIN
 #
 BACKFIST
-
+ 
 Subclass Ronin: Level 2 (Ninja)
-
+ 
 Usage: backfist <victim>
-
+ 
 With this attack, the Ronin drives the back of their fist into the victim with
-deadly force.  This skill inflicts damage equivalent to 1.50 to 1.75 times the
-Ronin's level, and knocks the victim into a stunned state.
-
+deadly force.  This skill inflicts damage equal to the Ronin's damroll (but at
+least 50), so it keeps pace as the Ronin's damage grows, and knocks the victim
+into a stunned state.
+ 
 Backfist is not subject to the effects of Invulnerability.
-
+ 
 This skill causes a 2 round input lag for the Ronin, regardless of success or
 failure.  A successful Backfist will stun the victim for 2 rounds.
-
+ 
 The success of Backfist is dependent on how well the skill is practiced.
-
+ 
 See Also: SUBCLASSES RONIN
 #
 "COMBAT ZEN"
@@ -9328,118 +9649,125 @@ type, that type will be chosen; if not, the original attack type will be used.
 See Also: SUBCLASSES RONIN
 #
 DEBILITATE
-
-Usage       : cast 'debilitate' <victim>
-Accumulative: No
-Duration    : 5 Ticks
-Level       : Level 1 Mystic (Ninja Subclass)
-Save        : None
-Mana Cost   : 20
-
-Anything affected by this spell has its hitroll reduced by 5, and its
-armor increased by 10, making it miss more often and easier to hit.
-
-See Also: SUBCLASSES MYSTIC
+ 
+Subclass Mystic: Level 1 (Ninja)
+ 
+Usage: debilitate <victim>
+Mana Cost   : 20 (10 if it fails)
+ 
+The Mystic strikes at a pressure point, leaving the victim vulnerable.  The
+victim's armor is increased by 50, and it becomes Exposed, so attacks break
+through its invulnerability.  The effect lasts 5 + (WIS bonus / 2) rounds.
+ 
+This is a skill rather than a spell.  Its success depends on how well it is
+practiced.
+ 
+See Also: SUBCLASSES MYSTIC EXPOSED "STAT BONUS"
 #
 "INNER PEACE"
-
+ 
 Subclass Mystic: Level 2 (Ninja)
-
+ 
 The winds of the gods blow through the Mystic's spirit, imparting a sense of
 Zen and tranquility upon their being.  A Mystic that has attained inner peace
 is unaffected by the visual impairment imposed by blindness.
-
+ 
 Inner Peace also provides the Mystic with +10 mana regeneration at all times.
-
-In addition, the Mystic's in-combat mana regeneration limit increases by 10, to
-a maximum of 100.
-
+ 
+In addition, the Mystic's in-combat mana regeneration limit increases by
+10 + WIS bonus.
+ 
 Finally, this ability increases the Mystic's concentration rate by 5%.
-
-See Also: SUBCLASSES MYSTIC REGENERATION
+ 
+Inner Peace is an enchantment.  Mystics always have it, and the Tranquility
+spell grants it to allies for the duration of the spell.
+ 
+See Also: SUBCLASSES MYSTIC TRANQUILITY REGENERATION "STAT BONUS"
 #
 TIGERKICK
-
+ 
 Subclass Mystic: Level 3 (Ninja)
-
+ 
 Usage: tigerkick <victim>
-
+ 
 The Mystic's powerful tigerkick causes a large amount of damage to the victim
 and knocks them into a stunned position.  A successful tigerkick allows the
 mystic to draw some of the target's life-force, restoring a small portion of
 their mana.  The greater the maximum health potential of the target, the
 greater the restoration.
-
-Tigerkick inflicts 1.75 times the Mystic's level in damage.  The maximum amount
-of mana that can be restored per successful kick is 10.
-
+ 
+Tigerkick inflicts both magical and physical damage.  The magical part is
+3 * the Mystic's Wisdom, and ignores Sphere and Invulnerability.  The physical
+part is 3 * the Mystic's Strength.  (Raw stat values, not stat bonuses.)  The
+maximum amount of mana that can be restored per successful kick is 10.
+ 
 This skill causes a 2 round input lag for the Mystic, regardless of success or
 failure.  A successful Tigerkick will stun the victim for 2 rounds.
-
+ 
 The success of Tigerkick is dependent on how well the skill is practiced.
-
+ 
 See Also: SUBCLASSES MYSTIC
 #
 MANTRA
-
+ 
 Usage       : mantra <target>
 Accumulative: No
-Duration    : Instantaneous + 90 seconds
+Duration    : Instantaneous + 10 rounds
 Level       : Level 4 Mystic (Ninja Subclass)
 Mana Cost   : 120
-
-The Mystic channels his/her spiritual energy into a target, which
-will regenerate the target's wounds for a period of time.
-
-The immediate amount healed will be 500 hit points.
-
+ 
+The Mystic channels his/her spiritual energy into a target, which will
+regenerate the target's wounds for a period of time.
+ 
+The immediate amount healed will be 1000 hit points.
+ 
 The target will become affected by the "Mantra" enchantment.  If the
 target is already affected by the enchantment, the duration will be
-extended to the maximum duration of 90 seconds (30 rounds).
-
+extended to the maximum duration of 10 rounds.
+ 
 If a more powerful Mystic applies mantra to a target already affected
-by the enchantment it will be replaced by the higher level
-enchantment and the duration will be refreshed.
-
+by the enchantment it will be replaced by the higher level enchantment
+and the duration will be refreshed.
+ 
 While affected by the "Mantra" enchantment, the character regains
-"(Level + Wisdom modifier) * 1.5" hit points every 9 seconds for a
-duration of 90 seconds (there will be 10 healing "pulses").  At 25
-Wisdom, the total amount of healing over time is 1400.
-
-Additionally, during each healing "pulse", there is a 25% chance to
-dispel any one of the following status ailments from the target:
-blindness, poison, or paralysis.
-
-See Also: SUBCLASSES MYSTIC
+25 + (2 * WIS bonus) hit points every pulse for a duration of 10 rounds
+(there will be 10 healing "pulses").  At 25 Wisdom, the total amount of
+healing over time is 450, in addition to the initial 1000.
+ 
+Lastly, during each healing "pulse", there is a 25% chance to dispel
+any one of the following status ailments from the target: blindness,
+poison, or paralysis.
+ 
+See Also: SUBCLASSES MYSTIC "STAT BONUS"
 #
 TRANQUILITY
-
+ 
 Subclass Mystic: Level 5 (Ninja)
-
+ 
 Usage       : cast 'tranquility'
 Accumulative: -
 Duration    : 6 Ticks
 Level       : Level 5 Mystic (Ninja Subclass)
 Mana Cost   : 150
-
+ 
 This is a group-wide spell that affects all members of the Mystic's
 group.  While under the effects of this spell, the Mystic channels
 their own enlightenment to others, radiating an aura of tranquility
 that increases the focus of those affected.
-
+ 
 Subsequent casts of this spell will reset the duration of its effects
 to the maximum.
-
+ 
 Each character affected by Tranquility will be immune to the effects
-of fear and will gain the following benefits while the spell is
-active:
-
+of fear and will gain the following benefits while the spell is active:
+ 
   +25% HP Regeneration Rate
+  +25% Mana Regeneration Rate while not fighting
   +25% Mantra Regeneration Rate (HELP MANTRA)
-  +3 Hitroll
-  +3 Damroll
-
-See Also: SUBCLASSES MYSTIC REGENERATION MANTRA HITROLL DAMROLL
+  The "Inner Peace" enchantment (HELP "INNER PEACE"): ignore blindness
+    and a higher in-combat mana regeneration limit
+ 
+See Also: SUBCLASSES MYSTIC REGENERATION MANTRA "INNER PEACE"
 #
 "AC Apply"
 
@@ -9555,24 +9883,28 @@ a successful Circle.
 See Also: CIRCLE
 #
 "BLOOD LUST"
-
+ 
 Usage       : cast 'blood lust' (self only)
 Duration    : 5 Ticks
 Level       : Level 45 Anti-Paladin
 Mana cost   : 70
-
+ 
 While affected by Blood Lust, the Anti-Paladin hungers for blood, and will
 randomly bite their victims during combat.  Each bite has the chance to cause
 damage, drain hit points, or drain mana.  This drain will cause the victim to
 lose the inflicted amount of points and for the caster to gain them.
-
+ 
+  50% - Damage bite: +2 * STR bonus damage
+  25% - Life bite:   +2 * INT bonus hit points drained
+  25% - Mana bite:   +2 * INT bonus mana drained
+ 
 There is a 20% chance of increasing the blood level of the room by one when a
 victim bitten.
-
+ 
 Note: The effects of this spell are automatically applied to Anti-Paladin
 characters when the Rage spell is successfully cast.
-
-See Also: "BLOOD LEVEL" RAGE
+ 
+See Also: "BLOOD LEVEL" RAGE "STAT BONUS"
 #
 "MYSTIC SWIFTNESS"
 
@@ -9610,7 +9942,9 @@ Based on the total amount of experience points that a player has invested into
 their character, a fee will be assessed and charged to them at the time of a
 successful remort. This fee is determined against a scale of 15 billion
 experience points, and is waived for players with 1.5 billion experience points
-or less. This fee is priced in quest and subclass points.
+or less. This fee is priced in quest and subclass points. 
+The fee is capped at a maximum of 100 quest points and 25 subclass points, no
+matter how much experience has been invested.
 
 The amount of experience points a player has spent is calculated based on
 average gains made during level-ups and hp/mana metas. Since there is a certain
@@ -9732,25 +10066,135 @@ earned, prestige and its benefits are permanent.
 
 See Also: REMORT "PRESTIGE LIST"
 #
-"IRON SKIN"
+"PRESTIGE LIST"
 
+Lvl   Perk Description
+---   ----------------
+  5   1x increased remort experience multiplier (maximum of 25x).
+ 15   5% chance for free rent, determined after logging in.
+ 25   1% increased chance for half-price metas.
+ 35   10% experience and gold discount on rank purchases.
+ 45   10% discount on rent cost.
+ 55   1x increased maximum death experience multiplier.(3x instead of 2x)
+ 65   50% chance to avoid entering a death trap or hazard, setting your movement to zero.
+ 75   5% increased hit point, mana, and movement regeneration rate.
+ 85   Identify command now available for 5,000 coins; acts as if you recited a scroll.
+ 95   5% discount on bribes at the metaphysician.
+105   1% less permanent experience loss upon death.
+115   10% chance that a 1 point token is worth 2 subclass points.
+125   10% quest point and subclass point discount on remort cost.
+135   10% increase in number of items that can be carried.
+145   Instant passage to Daimyo on a new airship located above the Midgaard docks. Keyword: 'daimyo'
+155   5% discount on items purchased from shops.
+165   10% chance to maintain existing rank upon death.
+175   10% discount on vault storage costs.
+185   2% increased chance for double-point auto quest.
+195   10% increase in amount of weight that can be carried.
+205   Home command now available for 20,000 coins; acts as if you recited a scroll.
+215   10% chance per tick to maintain existing decay level on worn/held items.
+225   1 less movement point required to traverse all sector types (minimum of 1 point).
+235   2% chance when purchasing a normal meta to receive a bribe meta instead.
+245   5 point increase to mana regen cap while engaged in combat.
+255   You no longer require food or drink, and you can now quaff two potions per tick.
+265   +100 movement points.
+275   +1 to in combat mana regen cap.
+285   1% crit hit chance.
+295   +1 hitroll.
+305   +1 hitroll, +1 damroll when using 1 handed weapons.
+315   15% quest point and subclass point discount on remort cost.
+325   +100 movement points.
+335   +1 to in combat mana regen cap.
+345   15% increase in number of items that can be carried.
+355   1x increased remort experience multiplier (maximum of 26x).
+365   +1 to in combat mana regen cap.
+375   1x increased maximum death experience multiplier. (4x instead of 3x)
+385   15% experience and gold discount on rank purchases.
+395   +1 to in combat mana regen cap.
+405   +1 to in combat mana regen cap.
+415   +100 movement points.
+425   1% less permanent experience loss upon death.
+435   15% chance to maintain existing rank upon death.
+445   +1 to in combat mana regen cap.
+455   15% discount on vault storage costs.
+465   20% chance per tick to maintain existing decay level on worn/held items.
+475   +1 to in combat mana regen cap.
+485   +100 movement points.
+495   Additional 5% chance to break through sphere.
+505   Instant passage to Olympus on the airship located above the Midgaard docks. Keyword: 'olympus'
+515   +1 to in combat mana regen cap.
+525   Home command now available for 0 coins; acts as if you recited a scroll.
+535   +1 to in combat mana regen cap.
+545   Identify command now available for 0 coins; acts as if you recited a scroll.
+555   +1 to in combat mana regen cap.
+565   Additional 5% chance to break through invulnerability.
+575   +1 to in combat mana regen cap.
+585   Movement traps only take 95% of movement points instead of 100%.
+595   +1 to in combat mana regen cap.
+605   Instant passage to Eryndlyn on the airship located above the Midgaard docks. Keyword 
+'eryndlyn'
+615   +1 to in combat mana regen cap.
+625   +100 movement points.
+635   +1 to in combat mana regen cap.
+645   +1 to in combat mana regen cap.
+655   +100 movement points.
+665   +1 to in combat mana regen cap.
+675   +1 to in combat mana regen cap.
+685   +1 to in combat mana regen cap.
+695   +1 to in combat mana regen cap.
+705   Any aggressive monster that is 5 levels lower than you will not attack you.
+715   +1 to in combat mana regen cap.
+725   +1 to in combat mana regen cap.
+735   +1 to in combat mana regen cap.
+745   +1 to in combat mana regen cap.
+755   20% quest point and subclass point discount on remort cost.
+765   +1 to in combat mana regen cap.
+775   +1 to in combat mana regen cap.
+785   +1 to in combat mana regen cap.
+795   +1 to in combat mana regen cap.
+805   1x increased maximum death experience multiplier. (5x instead of 4x)
+815   +1 to in combat mana regen cap.
+825   +1 to in combat mana regen cap.
+835   +1 to in combat mana regen cap.
+845   +1 to in combat mana regen cap.
+855   20% chance to maintain existing rank upon death.
+865   +1 to in combat mana regen cap.
+875   +1 to in combat mana regen cap.
+885   +1 to in combat mana regen cap.
+895   +1 to in combat mana regen cap.
+905   25% quest point and subclass point discount on remort cost.
+915   +1 to in combat mana regen cap.
+925   +1 to in combat mana regen cap.
+935   +2 to in combat mana regen cap.
+945   +2 to in combat mana regen cap.
+955   +2 to in combat mana regen cap.
+965   +2 to in combat mana regen cap.
+975   +2 to in combat mana regen cap.
+985   +2 to in combat mana regen cap.
+995   +2 to in combat mana regen cap.
+#
+"IRON SKIN"
+ 
 Usage       : cast 'iron skin' <target>
 Accumulative: No
 Duration    : 10
-Level       : Level 40 Commando
+Level       : Level 1 Mercenary (Commando Subclass)
 Mana Cost   : 50
-
-When self-cast upon the Mercenary, this defensive spell will modify their AC by
--20, making them harder to hit.  If cast upon a different target, the spell is
-less effective, granting only -10 AC instead.
-
-See Also: SUBCLASSES COMMANDO
+ 
+This defensive spell improves the target's AC by 30, making them harder to
+hit.  It can be cast on others.
+ 
+When it is on a Mercenary, the spell is stronger.  The Mercenary's AC cap
+increases by 30 (to a maximum of 280), and the Mercenary takes 10% less damage.
+An additional 10% reduction applies for each cloud (Cloud of Confusion or
+Incendiary Cloud) that the attacker is affected by.
+ 
+See Also: SUBCLASSES MERCENARY "CLOUD OF CONFUSION" "INCENDIARY CLOUD" AC
 #
 "REWARD POINTS" RP
 
 Reward Points (RP) are points awarded for winning quests and contributing
 to the development of the MUD - whether that's creating zones, reviewing,
-writing documentation, etc.)
+writing documentation, etc.
 
 Reward Points can also be purchased from Quest Points at a rate of 15 to 1.
 To learn more, visit the Hall of Rewards - 3n2e from Market Square.
@@ -9761,7 +10205,49 @@ an affect to an item with an open slot.
 To use RP, please contact a IMP.
 
 See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" "RP RULES"
+          "RP SELF SERVICE"
+#
+"RP SELF SERVICE" NUSHI
 
+Nushi the Master Tinker can convert RP to item bonuses.
+
+Commands:
+  offer upgrade <item> <stat or effect> [target] <payer> <amount>
+  buy upgrade <item> <stat or effect> [target] <payer> <amount>
+
+Offer for a quote, nothing is charged. Use buy to confirm. You must
+be standing, and the item must be on its owner. Multiple payers are
+supported.
+
+Stats:
+ Keyword     Gain
+  damroll     +1
+  hitroll     +1
+  armor       -5
+  mana_regen  +3
+  hp_regen    +15
+
+Effects:
+ Cost     Keywords
+  250      sanc
+  250      invul
+  250      sphere
+  250      perceive
+  100      protect-good
+  100      protect-evil
+  25       infravision
+  25       sense-life
+  25       detect-invis
+  25       detect-magic
+  25       detect-align
+  25       detect-poison
+  25       fly
+
+Skills (+2 per tier): 
+  sneak, hide, steal, backstab, picklock, kick, bash, rescue, 
+  block, knock, punch, parry, dual, throw, dodge, peek, butcher, 
+  trap, disarm, subdue, circle, triple, pummel, ambush, assault, 
+  disembowel, taunt
 #
 "RP RULES"
 
@@ -9846,8 +10332,8 @@ These costs are cumulative.
     18         150
     20         175
 
-See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 
+See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
 #
 "RP SPELLS"
 
@@ -9873,7 +10359,6 @@ Detect-Magic
 Detect-Align
 
 See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
-
 #
 "RP DAMAGE"
 
@@ -9896,7 +10381,6 @@ These costs are cumulative.
 
 
 See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
-
 #
 "RP HITROLL"
 
@@ -9919,7 +10403,6 @@ These costs are cumulative.
 
 
 See Also: "RP LIST PRICES"  "RP LIST GEAR" "QUEST TOKEN" RP "REWARD POINTS"
-
 #
 "RP MANA REGEN"
 

@@ -248,12 +248,13 @@
 #define SPELL_MANA_HEAL             173
 #define SKILL_CLOBBER               174
 #define SPELL_BLUR                  175
+#define SKILL_DEBILITATE            176
 #define SPELL_TRANQUILITY           177
 #define SKILL_VEHEMENCE             178
 #define SPELL_TREMOR                179
 #define SPELL_SHADOW_WRAITH         180
 #define SPELL_DEVASTATION           181
-#define SPELL_SKILL_182             182
+#define SPELL_MAGIC_WEAPON          182
 #define SKILL_SNIPE                 183
 #define SKILL_RIPOSTE               184
 #define SKILL_TROPHY                185
@@ -266,15 +267,15 @@
 #define SPELL_FORTIFICATION         192
 #define SKILL_DEGENERATE            193
 #define SPELL_MAGIC_ARMAMENT        194
-#define SPELL_ETHEREAL_NATURE       195
-#define SPELL_ENGAGE                196
+#define SPELL_GREATER_ELEMENTAL     195
+#define SPELL_FAMILIAR              196
 #define SKILL_MANTRA                197
 #define SKILL_BANZAI                198
 #define SKILL_HEADBUTT              199
 /* 200 is Reserved */
 #define SKILL_MAIM                  201
 #define SPELL_AID                   202
-#define SPELL_SKILL_203             203
+#define SPELL_TETHER                203
 #define SKILL_SHADOWSTEP            204
 #define SKILL_BATTER                205
 #define SPELL_DESECRATE             206
@@ -323,7 +324,7 @@
 #define SPELL_IRON_SKIN             249
 #define SPELL_DISTORTION            250
 #define SPELL_PASSDOOR              251
-#define SPELL_BLADE_BARRIER         252
+#define SPELL_MIRROR_IMAGE          252
 #define SPELL_MIGHT                 253
 #define SKILL_SHAPESHIFT            254
 
@@ -977,6 +978,7 @@ void print_spell_messages(CHAR *victim, int spell);
 void print_spell_wear_off_message(CHAR *victim, int spell);
 bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags);
 int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_type, int saving_throw);
+double class_spell_multiplier(CHAR *ch, int spell, bool heal);
 int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal);
 void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *tar_obj), int level, int aoe_flags);
 

@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 #include "constants.h"
 #include "structs.h"
@@ -113,6 +114,9 @@ bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags) {
   return cast_ok;
 }
 
+/* Archmage SC3: Twinspell does not splash AoE casts; aoe_spell() raises this while it is running. */
+static int twinspell_aoe_depth = 0;
+
 /**
  * @brief Generic damage spell function.
  *
@@ -130,6 +134,75 @@ bool spell_check_cast_ok(CHAR *ch, CHAR *victim, int spl_chk_flags) {
  *
  * @return The actual damage inflicted by the spell, or -1 if the cast was aborted.
  */
+/**
+ * @brief Stat-based spell power for classes without a dedicated stat scaling of their own.
+ *
+ * Every point of the listed stat modifiers adds CLASS_SPELL_MULT_PERCENT_PER_POINT percent to the caster's spell
+ * damage or healing. Spells that already carry a hardcoded INT/WIS scaling are skipped so the bonus never stacks on
+ * top of it (Meteor for damage; Mantra for healing), as are heals that are derived from damage already dealt.
+ *
+ *   Mage:        damage = INT + WIS
+ *   Cleric:      damage = INT,            heal = WIS
+ *   Paladin:     damage/heal = (WIS + CON) / 2
+ *   Ninja:       damage/heal = (WIS + CON) / 2
+ *   Anti-Paladin: damage = (INT + CON) / 2
+ *   Commando:    damage = INT
+ *   Bard:        damage/heal = (INT + CON + WIS) / 2
+ *
+ * @return The multiplier to apply (1.0 means no change).
+ */
+#define CLASS_SPELL_MULT_PERCENT_PER_POINT 1
+
+double class_spell_multiplier(CHAR *ch, int spell, bool heal) {
+  if (!ch || !IS_MORTAL(ch)) return 1.0;
+
+  if (heal) {
+    switch (spell) {
+      case SKILL_MANTRA:       /* Hardcoded WIS scaling. */
+      case SPELL_BLOOD_LUST:   /* Drain heals are based on damage already dealt. */
+      case SPELL_VAMPIRIC:
+      case SPELL_SPIRIT_LEVY:
+        return 1.0;
+    }
+  }
+  else if (spell == SPELL_METEOR) { /* Hardcoded INT scaling. */
+    return 1.0;
+  }
+
+  int points = 0;
+
+  switch (GET_CLASS(ch)) {
+    case CLASS_MAGIC_USER:
+      if (!heal) points = GET_INT_BONUS(ch) + GET_WIS_BONUS(ch);
+      break;
+
+    case CLASS_CLERIC:
+      points = heal ? GET_WIS_BONUS(ch) : GET_INT_BONUS(ch);
+      break;
+
+    case CLASS_PALADIN:
+    case CLASS_NINJA:
+      points = (GET_WIS_BONUS(ch) + GET_CON_BONUS(ch)) / 2;
+      break;
+
+    case CLASS_ANTI_PALADIN:
+      if (!heal) points = (GET_INT_BONUS(ch) + GET_CON_BONUS(ch)) / 2;
+      break;
+
+    case CLASS_COMMANDO:
+      if (!heal) points = GET_INT_BONUS(ch);
+      break;
+
+    case CLASS_BARD:
+      points = (GET_INT_BONUS(ch) + GET_CON_BONUS(ch) + GET_WIS_BONUS(ch)) / 2;
+      break;
+  }
+
+  if (points <= 0) return 1.0;
+
+  return 1.0 + ((double)(points * CLASS_SPELL_MULT_PERCENT_PER_POINT) / 100.0);
+}
+
 int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_type, int saving_throw) {
   if (!ch || !victim || !spell) return -1;
 
@@ -141,13 +214,28 @@ int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_
     dmg_type = TYPE_UNDEFINED;
   }
 
+  /* Remember the unsaved damage so a Twinspell copy can roll its own saving throw. */
+  const int base_dmg = dmg;
+
+  /* Class spell power. Applied after base_dmg is stored so a Twinspell copy is multiplied once, in its own call. */
+  if (dmg > 0) {
+    dmg = lround(dmg * class_spell_multiplier(ch, spell, FALSE));
+  }
+
   /* Check saving throw, if any. Damage is reduced by 1/2 on a successful saving throw. */
   if ((dmg > 0) && (saving_throw >= SAVING_PARA) && (saving_throw <= SAVING_SPELL) && saves_spell(victim, saving_throw, level)) {
     dmg /= 2;
   }
 
   /* Call damage() to inflict the damage. */
-  return damage(ch, victim, dmg, spell, dmg_type);
+  int result = damage(ch, victim, dmg, spell, dmg_type);
+
+  /* Archmage SC3: Twinspell */
+  if (twinspell_aoe_depth <= 0) {
+    twinspell_splash(ch, victim, spell, level, base_dmg, dmg_type, saving_throw);
+  }
+
+  return result;
 }
 
 /**
@@ -155,6 +243,9 @@ int damage_spell(CHAR *ch, CHAR *victim, int spell, int level, int dmg, int dmg_
  */
 void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *tar_obj), int level, int aoe_flags) {
   if (!ch || !func || (CHAR_REAL_ROOM(ch) == NOWHERE)) return;
+
+  /* Archmage SC3: Twinspell does not splash AoE casts. */
+  twinspell_aoe_depth++;
 
   if (!IS_SET(aoe_flags, AOE_TAR_OBJS_ONLY)) {
     for (CHAR *temp_victim = ROOM_PEOPLE(CHAR_REAL_ROOM(ch)), *next_victim; temp_victim; temp_victim = next_victim) {
@@ -185,6 +276,8 @@ void aoe_spell(CHAR *ch, void (*func)(ubyte level, CHAR *ch, CHAR *victim, OBJ *
       func(level, ch, 0, temp_obj);
     }
   }
+
+  twinspell_aoe_depth--;
 }
 
 /**
@@ -210,6 +303,11 @@ int magic_heal(CHAR *ch, CHAR *victim, int spell, int heal, bool overheal) {
   int hp_limit = GET_MAX_HIT(victim);
 
   if (ch) {
+    /* Class spell power. */
+    if (heal > 0) {
+      heal = lround(heal * class_spell_multiplier(ch, spell, TRUE));
+    }
+
     /* Druid SC4: Shapeshift: Elemental Form - Magical healing caused by the Druid is increased by 20%. */
     if (IS_MORTAL(ch) && check_subclass(ch, SC_DRUID, 4) && ench_enchanted_by(ch, ENCH_NAME_ELEMENTAL_FORM, 0)) {
       heal *= 1.2;

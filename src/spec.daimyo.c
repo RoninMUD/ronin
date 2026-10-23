@@ -25,6 +25,8 @@
 #include "utility.h"
 #include "act.h"
 #include "spec_assign.h"
+#include "aff_ench.h"
+#include "enchant.h"
 
 #define NEW_ROOM                  585
 #define SCROLL_ROOM               584
@@ -1137,8 +1139,8 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
             stop_fighting ( vict );
             char_from_room( vict );
             char_to_room ( vict, kick_room );
-            send_to_char("You look around but see no sign of the rip that brought you here.\n\r", vict);
             do_look( vict, "", CMD_LOOK );
+            send_to_char("You look around but see no sign of the rip that brought you here.\n\r", vict);
           }
           break;
         case 2:
@@ -1147,7 +1149,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
           // perform 8-13 attacks to random victims in room
           act("In the blink of an eye, $n scythes around the room with a series of quick, flashing strikes.", FALSE, uber, 0, vict, TO_ROOM);
           j = number(8,13);
-          if ((affected_by_spell(uber, SPELL_DISRUPT_SANCT) || !IS_SET( uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
+          if ((ench_enchanted_by(uber, ENCH_NAME_DISRUPT_SANCT, 0) || !IS_SET(uber->specials.affected_by, AFF_SANCTUARY)) && !affected_by_spell(uber, SPELL_SANCTUARY)) {
             sprintf(buf, "%s unleashes a fierce battlecry, pressing the attack in spite of %s lowered defenes.\n\r", GET_SHORT(uber), HSHR(uber));
             send_to_room(buf, CHAR_REAL_ROOM(uber));
             j+=6;
@@ -1164,7 +1166,7 @@ int dm_uber_musashi(CHAR *uber, CHAR *ch, int cmd, char *arg)
           break;
       }
 
-      if (tank) {
+      if (tank && SAME_ROOM(tank, uber)) {
         // strip tank and one random other of protective effects
         dm_katana_cleanse(uber, tank);
         // do damage - in essence to ignore impact of dodge/parry/AC and guarantee some dmg

@@ -8,6 +8,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "structs.h"
 #include "constants.h"
@@ -150,8 +151,11 @@ void do_song(CHAR* ch, char* arg, int cmd)
 
   if (IS_MORTAL(ch) && (!EQ(ch, HOLD) || OBJ_TYPE(EQ(ch, HOLD)) != ITEM_MUSICAL))
   {
-    send_to_char("You need to hold a musical instrument to sing a song.\n\r", ch);
-    return;
+    // if the character is not a bladesinger with a humming weapon, they must be holding a musical instrument to sing
+    if (!(check_subclass(ch, SC_BLADESINGER, 3) && EQ(ch, WEAR_WIELD) && IS_OBJ_STAT(EQ(ch, WEAR_WIELD), ITEM_HUM))) {
+      send_to_char("You need to hold a musical instrument to sing a song.\n\r", ch);
+      return;
+    }
   }
 
   arg = skip_spaces(arg);
@@ -622,11 +626,15 @@ void do_song(CHAR* ch, char* arg, int cmd)
     }
     break;
 
-case SONG_RESPITE:
-  {
+  case SONG_RESPITE:
+    // mark the singer for 1 round; if another chanter sings Respite back
+    // at them before this wears off, the wait-state reset below is skipped -
+    // this stops two chanters from ping-ponging each other's wait state to
+    // zero indefinitely multiple times per round
+    enchantment_apply(ch, TRUE, ENCH_NAME_RESPITE_SINGER, TYPE_UNDEFINED, 1, ENCH_INTERVAL_ROUND, 0, 0, 0, 0, 0);
+
     const int respite_dispel_types[] = {
-      SPELL_CHARM_PERSON, SPELL_INCENDIARY_CLOUD, SPELL_CLOUD_CONFUSION,
-      SPELL_CURSE, SPELL_CHILL_TOUCH, SPELL_WITHER, SPELL_RIMEFANG,
+      SPELL_CHARM_PERSON, SPELL_CLOUD_CONFUSION, SPELL_CURSE, SPELL_CHILL_TOUCH,
       SPELL_BLINDNESS, SPELL_POISON, SPELL_PARALYSIS, SPELL_SLEEP, SPELL_HOLD
     };
     int respite_dispel = 0;
@@ -642,29 +650,27 @@ case SONG_RESPITE:
         continue;
 
       respite_dispel = get_random_set_affect(tmp_victim, respite_dispel_types, NUMELEMS(respite_dispel_types));
-      
-      if (respite_dispel == TYPE_UNDEFINED) 
+
+      if (respite_dispel == TYPE_UNDEFINED)
       {
         if ((ch != tmp_victim) && GET_DESCRIPTOR(tmp_victim)) {
-          send_to_char("You feel ready!\n\r", tmp_victim);
-          GET_WAIT(tmp_victim) = 0;
+          if (!enchanted_by(tmp_victim, ENCH_NAME_RESPITE_SINGER)) {
+            send_to_char("You feel ready!\n\r", tmp_victim);
+            GET_WAIT(tmp_victim) = 0;
+          }
         }
-        continue; 
+        continue;
       }
 
-      if (respite_dispel > 0 && affected_by_spell(tmp_victim, respite_dispel)) 
+      if (respite_dispel > 0 && affected_by_spell(tmp_victim, respite_dispel))
       {
-        // REMOVED 'const' HERE -> Changed to a standard char array pointer
         char *msg = NULL;
 
         switch (respite_dispel) {
           case SPELL_CHARM_PERSON:      msg = "You feel more self-confident.\n\r"; break;
-          case SPELL_INCENDIARY_CLOUD:  msg = "The blistering waves of heat subside.\n\r"; break;
           case SPELL_CLOUD_CONFUSION:   msg = "You feel less disoriented.\n\r"; break;
           case SPELL_CURSE:             msg = "You feel better.\n\r"; break;
           case SPELL_CHILL_TOUCH:       msg = "You feel warm again.\n\r"; break;
-          case SPELL_WITHER:            msg = "The pain coursing through your withered body begins to recede.\n\r"; break;
-          case SPELL_RIMEFANG:          msg = "The paralyzation wears off, you can move again.\n\r"; break;
           case SPELL_BLINDNESS:         msg = "You can see again.\n\r"; break;
           case SPELL_POISON:            msg = "You feel better.\n\r"; break;
           case SPELL_PARALYSIS:         msg = "You can move again.\n\r"; break;
@@ -675,12 +681,10 @@ case SONG_RESPITE:
         if (msg) {
           send_to_char(msg, tmp_victim);
         }
-        
         affect_from_char(tmp_victim, respite_dispel);
       }
     }
     break;
-  }
 
   case SONG_WARCHANT:
     snprintf(buf, sizeof(buf), "$n sings '%s'", song_info.lyrics);
@@ -782,7 +786,8 @@ case SONG_RESPITE:
       {
         send_to_char("The torrent of music overwhelms your senses and pierces your soul.\n\r", tmp_victim);
 
-        damage(ch, tmp_victim, 350, TYPE_UNDEFINED, DAM_SOUND);
+        /* Class spell power applies to Blade Dance's damage. */
+        damage(ch, tmp_victim, (int)lround(350 * class_spell_multiplier(ch, TYPE_UNDEFINED, FALSE)), TYPE_UNDEFINED, DAM_SOUND);
 
         if (SAME_ROOM(ch, tmp_victim)) {
           hit(ch, tmp_victim, TYPE_UNDEFINED);

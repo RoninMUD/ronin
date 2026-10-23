@@ -16,6 +16,32 @@ int check_subclass(CHAR *ch, int sub, int lvl);
 int set_subclass(CHAR *ch, int sub, int lvl);
 void remove_subclass(CHAR *ch);
 
+void skill_wait_victim(CHAR *victim, int skill, int wait);
+void skill_wait_user(CHAR *ch, int skill, int wait);
+
+/* SC_TRAPPER Frenzy: true for the whole frenzy/fatigue lifecycle (both
+ * the active ramp/peak AND the recovering phase), for anywhere
+ * Frenzy's defensive lockout (no dodge/rescue/blocking a fleeing
+ * opponent) should apply. Narrower "still actively frenzied, hit
+ * bonuses/vulnerability apply" checks should keep using
+ * affected_by_spell(ch, SKILL_FRENZY) instead -- that affect is only
+ * present during the active phase. See subclass.skills.c. */
+bool is_frenzy_locked(CHAR *ch);
+
+/* SC_ENCHANTER Greater Elemental scaffolding */
+#define GREATER_ELEMENTAL_SLIME  20
+#define GREATER_ELEMENTAL_EARTH  21
+#define GREATER_ELEMENTAL_AIR    22
+#define GREATER_ELEMENTAL_VOID   23
+
+CHAR *binding_mastery_owner(CHAR *summon);
+bool is_greater_elemental(CHAR *ch);
+int elemental_vnum_from_arg(char *arg);
+int greater_elemental_spec(CHAR *mob, CHAR *signaler, int cmd, char *arg);
+int corrosive_slime_tick(ENCH *ench, CHAR *ch, CHAR *signaler, int cmd, char *arg);
+void cast_greater_elemental(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj);
+void spell_greater_elemental(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj);
+
 /* spells */
 void spell_aid(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void spell_rally(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
@@ -34,8 +60,8 @@ void cast_debilitate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, O
 void spell_debilitate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_might(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_might(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_blade_barrier(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_blade_barrier(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_mirror_image(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_mirror_image(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_distortion(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_distortion(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_iron_skin(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -48,6 +74,7 @@ void cast_wrath_ancients(ubyte level, CHAR *ch, char *arg, int type, CHAR *victi
 void spell_wrath_ancients(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_meteor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_meteor(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void twinspell_splash(CHAR *ch, CHAR *victim, int spell, int level, int base_dmg, int dmg_type, int saving_throw);
 void cast_wall_thorns(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_wall_thorns(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_rejuvenation(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
@@ -62,10 +89,13 @@ void cast_passdoor(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ
 void spell_passdoor(ubyte level, CHAR *ch, int direction);
 void cast_desecrate(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_desecrate(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_engage(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_engage(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
-void cast_ethereal_nature(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
-void spell_ethereal_nature(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_magic_weapon(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *obj);
+void spell_magic_weapon(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
+void cast_familiar(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_familiar(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj);
+void familiar_fade_message(CHAR *ch, int type);
+void cast_tether(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
+void spell_tether(ubyte level, CHAR *ch, char *arg, CHAR *victim, OBJ *obj);
 void cast_magic_armament(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
 void spell_magic_armament(ubyte level, CHAR *ch, CHAR *victim, OBJ *obj);
 void cast_fortification(ubyte level, CHAR *ch, char *arg, int type, CHAR *victim, OBJ *tar_obj);
