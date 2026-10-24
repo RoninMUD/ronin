@@ -125,11 +125,6 @@ BroodskullSPEC (OBJ *Broodskull, CHAR *ch, int cmd, char *arg) {
       if (vict) {
         set = number(0, 3);
 
-        act("$p erupts with holy energy!",
-            FALSE, vict, Broodskull, 0, TO_CHAR);
-        act("$n's $p erupts with holy energy!",
-            FALSE, vict, Broodskull, 0, TO_ROOM);
-
         OBJ_SPEC(Broodskull) -= power[set];
 
         switch (set) {
