@@ -1093,8 +1093,10 @@ void auto_rent(CHAR *ch) {
     ch->desc = 0;
   }
   else {
-    log_f("Freeing char %s without removing from list", ch->player.name);
-    free(ch);
+    /* extract_char() has already queued ch on disposed_chars, which is freed at the end of the
+       heartbeat. Do NOT free(ch) here: that is a use-after-free for callers still holding ch
+       (e.g. point_update) and a double free when the disposed list is flushed. */
+    log_f("Autorent: %s had no descriptor; char disposed via extract_char", ch->player.name);
   }
   return;
 }

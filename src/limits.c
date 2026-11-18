@@ -1389,6 +1389,9 @@ void point_update(void) {
       update_char_objects(ch);
 
       check_idling(ch);
+
+      /* check_idling() may auto_rent (extract) the char; don't touch it again. */
+      if (DISPOSED(ch)) continue;
     }
 
     gain_condition(ch, DRUNK, -1);
